@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie'
+
 import { createApp } from 'vue'
 import './assets/main.css'
 import App from './App.vue'
@@ -26,6 +28,20 @@ if (import.meta.hot) {
     router.replace('')
   })
 }
+
+const checkAuth = async () => {
+  if (Cookies.get('access_token')) return true
+}
+
+router.beforeEach(async (to, from, next) => {
+  if(to.meta.requiresAuth) {
+      if(!(await checkAuth())) {
+        console.log("checkAuth")
+        return next({name: 'login'})
+      }
+  }
+  next()
+})
 
 app.use(router)
 
