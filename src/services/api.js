@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie'
+
 export default {
   login(username, password) {
     let formData = new FormData();
@@ -8,5 +10,18 @@ export default {
       body: formData,
     })
     .then((response) => response.json())
+  },
+
+  logout() {
+    Cookies.remove('username')
+    Cookies.remove('access_token')
+  },
+
+  getUsername() {
+    return Cookies.get('username')
+  },
+
+  getToken() {
+    return Cookies.get('access_token')
   }
 }

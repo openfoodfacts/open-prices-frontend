@@ -5,7 +5,7 @@ import NotFound from './views/NotFound.vue'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export let routes = [
-  { path: '/', name: 'home', component: Home, meta: { title: 'Home' } },
+  { path: '/', name: 'home', component: Home, meta: { title: 'Welcome to Open Prices' } },
   { path: '/login', name: 'login', component: Login, meta: { title: 'Login' } },
   { path: '/add', name: 'add-price', component: AddPrice, meta: { title: 'Add a price', requiresAuth: true } },
   { path: '/:path(.*)', component: NotFound },

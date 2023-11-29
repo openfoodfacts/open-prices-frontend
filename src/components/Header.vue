@@ -82,10 +82,9 @@
     </div>
 
     <!--
-      Mobile menu, toggle classes based on menu state.
-
-      Open: "block", closed: "hidden"
-    -->
+    Mobile menu, toggle classes based on menu state.
+    Open: "block", closed: "hidden"
+-->
     <div class="md:hidden" :class="showMenu ? 'block' : 'hidden'">
       <div class="px-2 pt-2 pb-3 sm:px-3">
         <router-link
@@ -111,18 +110,29 @@
       </div>
     </div>
   </nav>
+
+  <header class="bg-white shadow" v-if="$route.meta.title">
+    <div class="max-w-screen-xl px-4 py-6 mx-auto sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold leading-tight text-gray-900">
+        {{ $route.meta.title }}
+      </h1>
+    </div>
+  </header>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
+import api from '../services/api';
+
+const username = computed(() => api.getUsername())
 
 export default defineComponent({
   data: () => ({
     showMenu: false,
     showProfileMenu: false,
     links: [
-    { text: 'Home', to: '/' },
-    { text: 'Add a price', to: '/add' },
+      { text: 'Home', to: '/' },
+      { text: 'Add a price', to: '/add' },
     ],
   }),
 })

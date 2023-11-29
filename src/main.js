@@ -1,8 +1,7 @@
-import Cookies from 'js-cookie'
-
 import { createApp } from 'vue'
 import './assets/main.css'
 import App from './App.vue'
+import api from './services/api';
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -29,10 +28,18 @@ if (import.meta.hot) {
   })
 }
 
+
+/**
+ * Method to check if the user is logged in
+ */
 const checkAuth = async () => {
-  if (Cookies.get('access_token')) return true
+  if (api.getToken()) return true
 }
 
+/**
+ * On each page change, check if it needs authentication.
+ * If required, but the user is not logged in (cookie not present), then redirect to 'login'
+ */
 router.beforeEach(async (to, from, next) => {
   if(to.meta.requiresAuth) {
       if(!(await checkAuth())) {
