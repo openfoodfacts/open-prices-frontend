@@ -1,0 +1,12 @@
+[build]
+  ignore = "git diff --quiet HEAD^ HEAD src index.html"
+  publish = "dist"
+  command = "yarn run build"
+
+[build.environment]
+  NODE_VERSION = "12"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
