@@ -1,4 +1,4 @@
-import Cookies from 'js-cookie'
+import { useCookies } from '@vueuse/integrations/useCookies'
 
 export default {
   signIn(username, password) {
@@ -13,15 +13,15 @@ export default {
   },
 
   signOut() {
-    Cookies.remove('username')
-    Cookies.remove('access_token')
+    useCookies().remove('username')
+    useCookies().remove('access_token')
   },
 
   getUsername() {
-    return Cookies.get('username')
+    return useCookies().get('username')
   },
 
   getToken() {
-    return Cookies.get('access_token')
+    return useCookies().get('access_token')
   }
 }

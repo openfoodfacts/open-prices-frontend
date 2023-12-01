@@ -9,9 +9,9 @@
         >
         <div class="mt-2">
           <input
-            type="text"
-            name="Username"
             id="Username"
+            name="Username"
+            type="text"
             v-model="signinForm.username"
             class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           />
@@ -26,9 +26,10 @@
         >
         <div class="mt-2">
           <input
-            type="password"
-            name="Password"
             id="Password"
+            name="Password"
+            type="password"
+            autocomplete="current-password"
             v-model="signinForm.password"
             class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           />
@@ -48,7 +49,7 @@
 </template>
 
 <script>
-import Cookies from 'js-cookie'
+import { useCookies } from '@vueuse/integrations/useCookies'
 import api from '../services/api'
 
 export default {
@@ -68,8 +69,8 @@ export default {
           .then((data) => {
             console.log(data);
             if (data['access_token']) {
-              Cookies.set('username', this.signinForm.username)
-              Cookies.set('access_token', data['access_token'])
+              useCookies().set('username', this.signinForm.username)
+              useCookies().set('access_token', data['access_token'])
               this.$router.push('/add')
             } else {
               alert('wrong credentials')
