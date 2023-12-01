@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie'
 
 export default {
-  login(username, password) {
+  signIn(username, password) {
     let formData = new FormData();
     formData.append('username', username);
     formData.append('password', password);
@@ -12,7 +12,7 @@ export default {
     .then((response) => response.json())
   },
 
-  logout() {
+  signOut() {
     Cookies.remove('username')
     Cookies.remove('access_token')
   },

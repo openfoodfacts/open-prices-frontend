@@ -30,7 +30,7 @@ if (import.meta.hot) {
 
 
 /**
- * Method to check if the user is logged in
+ * Method to check if the user is authenticated
  */
 const checkAuth = async () => {
   if (api.getToken()) return true
@@ -38,13 +38,13 @@ const checkAuth = async () => {
 
 /**
  * On each page change, check if it needs authentication.
- * If required, but the user is not logged in (cookie not present), then redirect to 'login'
+ * If required, but the user is not authenticated (cookie not present), then redirect to 'sign-in'
  */
 router.beforeEach(async (to, from, next) => {
   if(to.meta.requiresAuth) {
       if(!(await checkAuth())) {
         console.log("checkAuth")
-        return next({name: 'login'})
+        return next({name: 'sign-in'})
       }
   }
   next()

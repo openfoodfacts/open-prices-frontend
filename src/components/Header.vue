@@ -38,6 +38,16 @@
         <div class="hidden md:block">
           <div class="flex items-center ml-4 md:ml-6">
             <div class="relative ml-3">
+              <div>
+                <span>{{ username }}</span>
+                <button v-if="!username">
+                  <router-link
+                    to="/sign-in"
+                    class="px-3 py-2 text-sm font-medium rounded-md"
+                  >Sign in</router-link>
+                </button>
+                <button v-if="username">Sign out</button>
+              </div>
             </div>
           </div>
         </div>
@@ -121,19 +131,23 @@
 </template>
 
 <script>
-import { computed, defineComponent } from 'vue'
 import api from '../services/api';
 
-const username = computed(() => api.getUsername())
-
-export default defineComponent({
-  data: () => ({
-    showMenu: false,
-    showProfileMenu: false,
-    links: [
-      { text: 'Home', to: '/' },
-      { text: 'Add a price', to: '/add' },
-    ],
-  }),
-})
+export default {
+  computed: {
+    username() {
+      return api.getUsername()
+    },
+  },
+  data() {
+    return {
+      showMenu: false,
+      showProfileMenu: false,
+      links: [
+        { text: 'Home', to: '/' },
+        { text: 'Add a price', to: '/add' },
+      ],
+    }
+  },
+}
 </script>
