@@ -39,14 +39,18 @@
           <div class="flex items-center ml-4 md:ml-6">
             <div class="relative ml-3">
               <div>
-                <span>{{ username }}</span>
+                <span class="px-3 py-2 text-sm font-medium rounded-md text-gray-300">{{ username }}</span>
                 <button v-if="!username">
                   <router-link
                     to="/sign-in"
-                    class="px-3 py-2 text-sm font-medium rounded-md"
+                    class="px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
                   >Sign in</router-link>
                 </button>
-                <button v-if="username">Sign out</button>
+                <button
+                  v-if="username"
+                  @click="signOut"
+                  class="px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+                >Sign out</button>
               </div>
             </div>
           </div>
@@ -138,6 +142,12 @@ export default {
     username() {
       return api.getUsername()
     },
+  },
+  methods: {
+    signOut() {
+      api.signOut()
+      this.$router.push('/')
+    }
   },
   data() {
     return {

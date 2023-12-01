@@ -26,7 +26,7 @@
         >
         <div class="mt-2">
           <input
-            type="text"
+            type="password"
             name="Password"
             id="Password"
             v-model="signinForm.password"
