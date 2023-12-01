@@ -38,6 +38,20 @@
         <div class="hidden md:block">
           <div class="flex items-center ml-4 md:ml-6">
             <div class="relative ml-3">
+              <div>
+                <span class="px-3 py-2 text-sm font-medium rounded-md text-gray-300">{{ username }}</span>
+                <button v-if="!username">
+                  <router-link
+                    to="/sign-in"
+                    class="px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+                  >Sign in</router-link>
+                </button>
+                <button
+                  v-if="username"
+                  @click="signOut"
+                  class="px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+                >Sign out</button>
+              </div>
             </div>
           </div>
         </div>
@@ -82,10 +96,9 @@
     </div>
 
     <!--
-      Mobile menu, toggle classes based on menu state.
-
-      Open: "block", closed: "hidden"
-    -->
+    Mobile menu, toggle classes based on menu state.
+    Open: "block", closed: "hidden"
+-->
     <div class="md:hidden" :class="showMenu ? 'block' : 'hidden'">
       <div class="px-2 pt-2 pb-3 sm:px-3">
         <router-link
@@ -111,19 +124,40 @@
       </div>
     </div>
   </nav>
+
+  <header class="bg-white shadow" v-if="$route.meta.title">
+    <div class="max-w-screen-xl px-4 py-6 mx-auto sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold leading-tight text-gray-900">
+        {{ $route.meta.title }}
+      </h1>
+    </div>
+  </header>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import api from '../services/api';
 
-export default defineComponent({
-  data: () => ({
-    showMenu: false,
-    showProfileMenu: false,
-    links: [
-    { text: 'Home', to: '/' },
-    { text: 'Add a price', to: '/add' },
-    ],
-  }),
-})
+export default {
+  computed: {
+    username() {
+      return api.getUsername()
+    },
+  },
+  methods: {
+    signOut() {
+      api.signOut()
+      this.$router.push('/')
+    }
+  },
+  data() {
+    return {
+      showMenu: false,
+      showProfileMenu: false,
+      links: [
+        { text: 'Home', to: '/' },
+        { text: 'Add a price', to: '/add' },
+      ],
+    }
+  },
+}
 </script>
