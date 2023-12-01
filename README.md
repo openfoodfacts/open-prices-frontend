@@ -1,21 +1,18 @@
 # Open Prices frontend
 
-A Vue.js Frontend of the Open Prices application. Works with an Open Prices server, see https://github.com/openfoodfacts/open-prices
+A Vue.js frontend of the Open Prices application, to allow users to add prices.
 
-## Installation
+Works with an Open Prices server, see https://github.com/openfoodfacts/open-prices
 
-```sh
-yarn
-```
+## Dependencies
 
-## Development
+- npm
+- [Vue.js](https://vuejs.org) 3
 
-```sh
-yarn dev
-```
+## Contribute
 
-## Build
+See [CONTRIBUTING.md](https://github.com/openfoodfacts/open-prices-frontend/blob/main/CONTRIBUTING.md)
 
-```sh
-yarn build
-```
+<details><summary><h2>Weekly meetings</h2></summary>
+* see https://github.com/openfoodfacts/open-prices#weekly-meetings
+</details>
