@@ -11,7 +11,9 @@
     </header>
 
     <div class="max-w-screen-xl py-6 mx-auto sm:px-6 lg:px-8">
-      <router-view />
+      <main>
+        <router-view />
+      </main>
     </div>
   </div>
 </template>
