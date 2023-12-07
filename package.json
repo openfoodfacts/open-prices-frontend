@@ -1,5 +1,5 @@
 {
-  "name": "vite-tailwind-starter",
+  "name": "open-prices",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -21,7 +21,6 @@
     "autoprefixer": "^10.4.16",
     "cross-env": "^7.0.3",
     "postcss": "^8.4.31",
-    "tailwindcss": "^2.2.19",
     "vite": "^4.5.0"
   },
   "resolutions": {
