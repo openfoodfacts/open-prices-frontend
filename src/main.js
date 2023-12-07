@@ -4,6 +4,7 @@ import App from './App.vue'
 import api from './services/api';
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
+import { vuetify } from './plugins/vuetify.js'
 
 let app = createApp(App)
 let router = createRouter({
@@ -51,5 +52,5 @@ router.beforeEach(async (to, from, next) => {
 })
 
 app.use(router)
-
+app.use(vuetify)
 app.mount('#app')
