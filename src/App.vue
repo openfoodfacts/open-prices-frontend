@@ -1,11 +1,15 @@
 <template>
-  <Header />
+  <v-app>
+    <v-layout class="rounded rounded-md">
+      <Header />
 
-  <div class="max-w-screen-xl py-6 mx-auto sm:px-6 lg:px-8">
-    <main>
-      <router-view />
-    </main>
-  </div>
+      <v-main class="d-flex justify-center">
+        <v-container>
+          <router-view />
+        </v-container>
+      </v-main>
+    </v-layout>
+  </v-app>
 </template>
 
 <script>
