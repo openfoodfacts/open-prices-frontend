@@ -11,7 +11,8 @@
     "@vueuse/integrations": "^10.6.1",
     "universal-cookie": "^6.1.1",
     "vue": "^3.3.9",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vuetify": "^3.4.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.0",

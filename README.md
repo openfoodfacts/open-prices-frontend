@@ -6,7 +6,7 @@ Works with an Open Prices server, see https://github.com/openfoodfacts/open-pric
 
 ## Dependencies
 
-- npm
+- Node.js & yarn
 - [Vue.js](https://vuejs.org) 3
 
 ## Contribute

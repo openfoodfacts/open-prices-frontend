@@ -5,6 +5,17 @@ import api from './services/api';
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
 
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+const vuetify = createVuetify({
+  components,
+  directives,
+})
+
 let app = createApp(App)
 let router = createRouter({
   history: createWebHistory(),
@@ -51,5 +62,5 @@ router.beforeEach(async (to, from, next) => {
 })
 
 app.use(router)
-
+app.use(vuetify)
 app.mount('#app')
