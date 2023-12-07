@@ -1,56 +1,34 @@
 <template>
-  <form @submit.prevent="signIn">
-    <div class="grid grid-cols-1 gap-x-6 gap-y-8">
-      <div class="sm:col-span-3">
-        <label
-          for="Username"
-          class="block text-sm font-medium leading-6 text-gray-900"
-          >Username</label
-        >
-        <div class="mt-2">
-          <input
-            id="Username"
-            name="Username"
-            type="text"
-            v-model="signinForm.username"
-            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-          />
-        </div>
-      </div>
-
-      <div class="sm:col-span-3">
-        <label
-          for="Password"
-          class="block text-sm font-medium leading-6 text-gray-900"
-          >Password</label
-        >
-        <div class="mt-2">
-          <input
-            id="Password"
-            name="Password"
-            type="password"
-            autocomplete="current-password"
-            v-model="signinForm.password"
-            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-          />
-        </div>
-      </div>
-
-      <div class="sm:col-span-3">
-        <button
-          type="submit"
-          class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        >
-          Sign in
-        </button>
-      </div>
-    </div>
-  </form>
+  <v-alert
+    class="mb-2"
+    type="info"
+    variant="outlined"
+  >Use your Open Food Facts credentials to sign in.</v-alert>
+  <v-form @submit.prevent="signIn">
+    <v-text-field
+      v-model="signinForm.username"
+      label="Username"
+      type="text"
+      hint="Open Food Facts username"
+    ></v-text-field>
+    <v-text-field
+      v-model="signinForm.password"
+      label="Password"
+      type="password"
+      hint="Open Food Facts password"
+    ></v-text-field>
+    <v-btn
+      type="submit"
+      class="mt-2"
+      :loading="loading"
+      :disabled="!formFilled"
+    >Sign in</v-btn>
+  </v-form>
 </template>
 
 <script>
-import { useCookies } from '@vueuse/integrations/useCookies'
-import api from '../services/api'
+import { useCookies } from "@vueuse/integrations/useCookies";
+import api from "../services/api";
 
 export default {
   data() {
@@ -59,29 +37,34 @@ export default {
         username: "",
         password: "",
       },
+      loading: false,
     };
+  },
+  computed: {
+    formFilled() {
+      return this.signinForm.username && this.signinForm.password
+    }
   },
   methods: {
     signIn() {
-      if (this.signinForm.username != "" || this.signinForm.password != "") {
-        api
-          .signIn(this.signinForm.username, this.signinForm.password)
-          .then((data) => {
-            console.log(data);
-            if (data['access_token']) {
-              useCookies().set('username', this.signinForm.username)
-              useCookies().set('access_token', data['access_token'])
-              this.$router.push('/add')
-            } else {
-              alert('wrong credentials')
-            }
-          })
-          .catch((error) => {
-            console.log(error)
-            alert('server error')
-          })
-      }
+      this.loading = true
+      api
+        .signIn(this.signinForm.username, this.signinForm.password)
+        .then((data) => {
+          if (data["access_token"]) {
+            useCookies().set("username", this.signinForm.username)
+            useCookies().set("access_token", data["access_token"])
+            this.$router.push("/add")
+          } else {
+            alert("Error: wrong credentials")
+            this.loading = false
+          }
+        })
+        .catch((error) => {
+          alert("Error: server error")
+          this.loading = false
+        });
     },
   },
-}
+};
 </script>
