@@ -3,17 +3,16 @@
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu"></v-app-bar-nav-icon>
     <v-app-bar-title>Open Prices</v-app-bar-title>
     <template v-slot:append>
-      <v-btn v-if="!username" to="/sign-in" append-icon="mdi-login">
-        Sign in
-      </v-btn>
-      <v-btn v-if="username" icon="mdi-account-circle">
-        <v-menu activator="parent">
-          <v-list>
-            <v-list-item prepend-icon="mdi-person">{{  username }}</v-list-item>
-            <v-list-item prepend-icon="mdi-logout" @click="signOut">Sign out</v-list-item>
-          </v-list>
-        </v-menu>
-      </v-btn>
+      <v-btn v-if="!username" to="/sign-in" icon="mdi-login"></v-btn>
+      <v-menu>
+        <template v-slot:activator="{ props }">
+          <v-btn v-if="username" v-bind="props" icon="mdi-account-circle"></v-btn>
+        </template>
+        <v-list>
+          <v-list-item prepend-icon="mdi-account">{{  username }}</v-list-item>
+          <v-list-item prepend-icon="mdi-logout" @click="signOut">Sign out</v-list-item>
+        </v-list>
+      </v-menu>
     </template>
   </v-app-bar>
 
@@ -43,7 +42,7 @@ export default {
       showProfileMenu: false,
       drawerMenuItems: [
         { title: 'Home', props: { 'prepend-icon': 'mdi-home', to: '/' }},
-        { title: 'Add a price', props: { 'prepend-icon': 'mdi-add-circle', to: '/add' }},
+        { title: 'Add a price', props: { 'prepend-icon': 'mdi-plus', to: '/add' }},
       ],
     }
   },
