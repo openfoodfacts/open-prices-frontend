@@ -42,7 +42,7 @@ export default {
   },
   computed: {
     formFilled() {
-      return this.signinForm.username && this.signinForm.password
+      return Object.values(this.signinForm).every(x => !!x)
     }
   },
   methods: {
