@@ -45,7 +45,7 @@ router.beforeEach(async (to, from, next) => {
   if(to.meta.requiresAuth) {
       if(!(await checkAuth())) {
         console.log("checkAuth")
-        return next({name: 'sign-in'})
+        return next({ name: 'sign-in' })
       }
   }
   next()

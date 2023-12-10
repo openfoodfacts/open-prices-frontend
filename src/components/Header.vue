@@ -33,7 +33,7 @@ export default {
   methods: {
     signOut() {
       api.signOut()
-      this.$router.push('/')
+      this.$router.push({ path: '/' })
     }
   },
   data() {

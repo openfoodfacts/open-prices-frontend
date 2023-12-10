@@ -27,15 +27,15 @@
 </template>
 
 <script>
-import { useCookies } from "@vueuse/integrations/useCookies";
-import api from "../services/api";
+import { useCookies } from '@vueuse/integrations/useCookies'
+import api from '../services/api'
 
 export default {
   data() {
     return {
       signinForm: {
-        username: "",
-        password: "",
+        username: '',
+        password: '',
       },
       loading: false,
     };
@@ -51,12 +51,12 @@ export default {
       api
         .signIn(this.signinForm.username, this.signinForm.password)
         .then((data) => {
-          if (data["access_token"]) {
-            useCookies().set("username", this.signinForm.username)
-            useCookies().set("access_token", data["access_token"])
-            this.$router.push("/add")
+          if (data['access_token']) {
+            api.setUsernameCookie(this.signinForm.username)
+            api.setTokenCookie(data['access_token'])
+            this.$router.push({ path: '/add' })
           } else {
-            alert("Error: wrong credentials")
+            alert('Error: wrong credentials')
             this.loading = false
           }
         })
