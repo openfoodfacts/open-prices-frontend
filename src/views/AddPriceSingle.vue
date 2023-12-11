@@ -79,6 +79,7 @@
   <LocationSelector
     v-model="locationSelector"
     @location="setLocationData($event)"
+    @close="locationSelector = false"
   ></LocationSelector>
 </template>
 
@@ -135,7 +136,6 @@ export default {
       this.locationSelector = true
     },
     setLocationData(event) {
-      this.locationSelector = false
       this.locationSelectedDisplayName = event.display_name
       this.addPriceSingleForm.location_osm_id = event.osm_id
       this.addPriceSingleForm.location_osm_type = event.osm_type.toUpperCase()

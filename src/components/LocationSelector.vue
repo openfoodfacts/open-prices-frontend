@@ -2,7 +2,9 @@
   <v-dialog>
     <v-card>
       <v-card-title>Find your location</v-card-title>
+
       <v-divider></v-divider>
+
       <v-card-text>
         <v-form @submit.prevent="search">
           <v-row>
@@ -21,18 +23,43 @@
           </v-row>
         </v-form>
       </v-card-text>
+
       <v-divider></v-divider>
-      <v-card-text v-if="results && Array.isArray(results)" class="d-flex flex-wrap ga-3">
-        <v-card
-          v-for="result in results"
-          elevation="1"
-          @click="selectLocation(result)"
-        >
-          <v-card-text>📍 {{ result.display_name }}</v-card-text>
-        </v-card>
+
+      <v-card-text v-if="results && Array.isArray(results)">
+        <h3>Results <small>{{ results.length }}</small></h3>
+        <div class="d-flex flex-wrap ga-3">
+          <v-card
+            v-for="location in results"
+            elevation="1"
+            @click="selectLocation(location)"
+          >
+            <v-card-text>📍 {{ location.display_name }}</v-card-text>
+          </v-card>
+        </div>
       </v-card-text>
       <v-card-text v-if="results && (typeof results === 'string')">{{ results }}</v-card-text>
-      <v-divider></v-divider>
+
+      <v-divider v-if="results"></v-divider>
+
+      <v-card-text v-if="recentLocations.length">
+        <h3>
+          Recent locations <small>{{ recentLocations.length }}</small>
+          <v-btn class="ml-2" variant="outlined" size="small" @click="clearRecentLocations">Clear</v-btn>
+        </h3>
+        <div class="d-flex flex-wrap ga-3">
+          <v-card
+            v-for="location in recentLocations"
+            elevation="1"
+            @click="selectLocation(location)"
+          >
+            <v-card-text>📍 {{ location.display_name }}</v-card-text>
+          </v-card>
+        </div>
+      </v-card-text>
+
+      <v-divider v-if="recentLocations.length"></v-divider>
+
       <v-card-text>
         <div class="float-right">powered by <a href="https://nominatim.openstreetmap.org" target="_blank">OpenStreetMap Nominatim</a></div>
       </v-card-text>
@@ -50,13 +77,17 @@ export default {
         q: ''
       },
       loading: false,
-      results: null
+      results: null,
+      recentLocations: api.getRecentLocations()
     }
   },
   computed: {
     formFilled() {
       return Object.values(this.locationSearchForm).every(x => !!x)
-    }
+    },
+    // recentLocations() {  // TODO: make reactive
+    //   return api.getRecentLocations()
+    // },
   },
   methods: {
     fieldRequired(v) {
@@ -75,11 +106,17 @@ export default {
         }
       })
     },
+    clearRecentLocations() {
+      api.clearRecentLocations()
+      this.recentLocations = []
+    },
     selectLocation(location) {
-      this.$emit("location", location);
+      api.addRecentLocation(location)
+      this.$emit("location", location)
+      this.close()
     },
     close() {
-      this.$emit("close-dialog");
+      this.$emit("close")
     },
   },
 }
