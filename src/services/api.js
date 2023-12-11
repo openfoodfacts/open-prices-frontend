@@ -46,5 +46,12 @@ export default {
       body: JSON.stringify(priceData),
     })
     .then((response) => response.json())
+  },
+
+  openstreetmapNominatimSearch(q) {
+    return fetch(`https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=5`, {
+      method: 'GET',
+    })
+    .then((response) => response.json())
   }
 }

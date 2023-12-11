@@ -33,14 +33,18 @@
         </v-col>
       </v-row>
 
-      <h3>🌍 Location</h3>
+      <h3>
+        🌍 Location
+        <v-btn variant="outlined" size="small" @click="showLocationSelector">Find 🔎</v-btn>
+      </h3>
+      <p v-if="locationSelectedDisplayName"><i>{{ locationSelectedDisplayName }}</i></p>
       <v-row>
         <v-col cols="6">
           <v-text-field
             v-model="addPriceSingleForm.location_osm_id"
             label="OpenStreetMap ID"
             type="text"
-            disabled
+            readonly
           ></v-text-field>
         </v-col>
         <v-col cols="6">
@@ -48,7 +52,7 @@
             v-model="addPriceSingleForm.location_osm_type"
             label="OpenStreetMap type"
             :items="['NODE', 'WAY', 'RELATION']"
-            disabled
+            readonly
           ></v-select>
         </v-col>
       </v-row>
@@ -71,12 +75,21 @@
       </v-row>
     </v-container>
   </v-form>
+
+  <LocationSelector
+    v-model="locationSelector"
+    @location="setLocationData($event)"
+  ></LocationSelector>
 </template>
 
 <script>
 import api from '../services/api'
+import LocationSelector from '../components/LocationSelector.vue'
 
 export default {
+  components: {
+    LocationSelector
+  },
   data() {
     return {
       addPriceSingleForm: {
@@ -88,6 +101,8 @@ export default {
         date: new Date().toISOString().substr(0, 10)
       },
       loading: false,
+      locationSelector: false,
+      locationSelectedDisplayName: ''
     };
   },
   computed: {
@@ -115,6 +130,15 @@ export default {
           alert('Error: server error')
           this.loading = false
         })
+    },
+    showLocationSelector() {
+      this.locationSelector = true
+    },
+    setLocationData(event) {
+      this.locationSelector = false
+      this.locationSelectedDisplayName = event.display_name
+      this.addPriceSingleForm.location_osm_id = event.osm_id
+      this.addPriceSingleForm.location_osm_type = event.osm_type.toUpperCase()
     }
   }
 }
