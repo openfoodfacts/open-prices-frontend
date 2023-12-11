@@ -1,6 +1,7 @@
 <template>
   <v-form @submit.prevent="createPrice">
     <v-container>
+      <h3>🏷 Product details</h3>
       <v-row>
         <v-col>
           <v-text-field
@@ -13,15 +14,17 @@
           ></v-text-field>
         </v-col>
       </v-row>
+
+      <h3>💲 Price details</h3>
       <v-row>
-        <v-col cols="8">
+        <v-col cols="6">
           <v-text-field
             v-model="addPriceSingleForm.price"
             label="Price"
             type="number"
           ></v-text-field>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="6">
           <v-select
             v-model="addPriceSingleForm.currency"
             label="Currency"
@@ -29,22 +32,28 @@
           ></v-select>
         </v-col>
       </v-row>
+
+      <h3>🌍 Location</h3>
       <v-row>
-        <v-col cols="8">
+        <v-col cols="6">
           <v-text-field
             v-model="addPriceSingleForm.location_osm_id"
-            label="Location (OpenStreetMap ID)"
+            label="OpenStreetMap ID"
             type="text"
+            disabled
           ></v-text-field>
         </v-col>
-        <v-col cols="4">
+        <v-col cols="6">
           <v-select
             v-model="addPriceSingleForm.location_osm_type"
-            label="Location (OpenStreetMap type)"
+            label="OpenStreetMap type"
             :items="['NODE', 'WAY', 'RELATION']"
+            disabled
           ></v-select>
         </v-col>
       </v-row>
+
+      <h3>📅 Date</h3>
       <v-row>
         <v-col>
           <v-text-field
@@ -54,9 +63,10 @@
           ></v-text-field>
         </v-col>
       </v-row>
+
       <v-row>
         <v-col>
-          <v-btn type="submit" class="mt-2" :loading="loading" :disabled="!formFilled">Send</v-btn>
+          <v-btn type="submit" class="mt-2" :loading="loading" :disabled="!formFilled">🚀 Create</v-btn>
         </v-col>
       </v-row>
     </v-container>
