@@ -85,7 +85,7 @@ export default {
         currency: 'EUR',
         location_osm_id: null,
         location_osm_type: '',
-        date: ''
+        date: new Date().toISOString().substr(0, 10)
       },
       loading: false,
     };
