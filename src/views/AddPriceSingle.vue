@@ -1,7 +1,10 @@
 <template>
   <v-form @submit.prevent="createPrice">
     <v-container>
-      <h3>🏷 Product details</h3>
+      <h3>
+        🏷 Product details
+        <v-btn variant="outlined" size="small" @click="showBarcodeScanner">Scan a barcode 🔎</v-btn>
+      </h3>
       <v-row>
         <v-col>
           <v-text-field
@@ -76,7 +79,15 @@
     </v-container>
   </v-form>
 
+  <BarcodeScanner
+    v-if="barcodeScanner"
+    v-model="barcodeScanner"
+    @barcode="setProductCode($event)"
+    @close="barcodeScanner = false"
+  ></BarcodeScanner>
+
   <LocationSelector
+    v-if="locationSelector"
     v-model="locationSelector"
     @location="setLocationData($event)"
     @close="locationSelector = false"
@@ -85,10 +96,12 @@
 
 <script>
 import api from '../services/api'
+import BarcodeScanner from '../components/BarcodeScanner.vue'
 import LocationSelector from '../components/LocationSelector.vue'
 
 export default {
   components: {
+    BarcodeScanner,
     LocationSelector
   },
   data() {
@@ -102,6 +115,7 @@ export default {
         date: new Date().toISOString().substr(0, 10)
       },
       loading: false,
+      barcodeScanner: false,
       locationSelector: false,
       locationSelectedDisplayName: ''
     };
@@ -131,6 +145,12 @@ export default {
           alert('Error: server error')
           this.loading = false
         })
+    },
+    showBarcodeScanner() {
+      this.barcodeScanner = true
+    },
+    setProductCode(event) {
+      this.addPriceSingleForm.product_code = event
     },
     showLocationSelector() {
       this.locationSelector = true
