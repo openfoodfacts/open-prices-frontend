@@ -112,11 +112,11 @@ export default {
     },
     selectLocation(location) {
       api.addRecentLocation(location)
-      this.$emit("location", location)
+      this.$emit('location', location)
       this.close()
     },
     close() {
-      this.$emit("close")
+      this.$emit('close')
     },
   },
 }
