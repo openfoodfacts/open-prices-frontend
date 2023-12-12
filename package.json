@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "cross-env NODE_ENV=production vite build"
+    "build": "cross-env NODE_ENV=production vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@vueuse/core": "^10.6.1",
