@@ -1,7 +1,10 @@
 <template>
-  <v-dialog>
+  <v-dialog persistent="true">
     <v-card>
-      <v-card-title>Scan a barcode</v-card-title>
+      <v-card-title>
+        Scan a barcode
+        <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+      </v-card-title>
 
       <v-divider></v-divider>
 
@@ -19,29 +22,32 @@
 </template>
 
 <script>
-import { Html5QrcodeScanner, Html5QrcodeScanType, Html5QrcodeSupportedFormats } from 'html5-qrcode'
+import { Html5Qrcode, Html5QrcodeScanType, Html5QrcodeSupportedFormats } from 'html5-qrcode'
 
 const config = {
   fps: 10,
   qrbox: { width: 250, height: 150 },
-  rememberLastUsedCamera: true,
+  rememberLastUsedCamera: false,
   // Only support camera scan type.
-  supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA]
+  supportedScanTypes: [Html5QrcodeScanType.SCAN_TYPE_CAMERA],
+  // formatsToSupport: [Html5QrcodeSupportedFormats.QR_CODE, Html5QrcodeSupportedFormats.EAN_13],
 }
 
-const formatsToSupport = [
-  Html5QrcodeSupportedFormats.QR_CODE,
-  Html5QrcodeSupportedFormats.EAN_13,
-]
-
 export default {
+  data() {
+    return {
+      scanner: null,
+    }
+  },
   mounted() {
     this.createQrcodeScanner()
   },
   methods: {
     createQrcodeScanner() {
-      const html5QrcodeScanner = new Html5QrcodeScanner('reader', config, formatsToSupport, false)
-      html5QrcodeScanner.render(this.onScanSuccess, this.onScanFailure)
+      console.log('createQrcodeScanner')
+      this.scanner = new Html5Qrcode('reader')
+      console.log(this.scanner)
+      this.scanner.start({ facingMode: 'environment' }, config, this.onScanSuccess, this.onScanFailure)
     },
     onScanSuccess(decodedText, decodedResult) {
       this.$emit('barcode', decodedText)
@@ -51,6 +57,7 @@ export default {
       // console.warn(`Code scan error = ${error}`)
     },
     close() {
+      this.scanner.stop()
       this.$emit('close')
     },
   }
