@@ -8,7 +8,7 @@ import { vuetify } from './plugins/vuetify.js'
 
 let app = createApp(App)
 let router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: import.meta.hot ? [] : routes,
 })
 
