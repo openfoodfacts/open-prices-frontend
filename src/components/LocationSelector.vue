@@ -1,7 +1,10 @@
 <template>
-  <v-dialog>
+  <v-dialog persistent="true">
     <v-card>
-      <v-card-title>Find your location</v-card-title>
+      <v-card-title>
+        Find your location
+        <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+      </v-card-title>
 
       <v-divider></v-divider>
 
