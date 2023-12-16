@@ -16,8 +16,34 @@
         disabled></v-card>
     </v-col>
   </v-row>
+
+  <v-snackbar
+    v-model="signinSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >Signed in!</v-snackbar>
+  <v-snackbar
+    v-model="singleSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >Price created!</v-snackbar>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      singleSuccessMessage: false,
+      signinSuccessMessage: false,
+    }
+  },
+  mounted() {
+    if (this.$route.query.singleSuccess === 'true') {
+      this.singleSuccessMessage = true
+    }
+    if (this.$route.query.signinSuccess === 'true') {
+      this.signinSuccessMessage = true
+    }
+  }
+}
 </script>

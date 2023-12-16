@@ -3,19 +3,18 @@
     class="mb-2"
     type="info"
     variant="outlined"
-  >Use your Open Food Facts credentials to sign in.</v-alert>
+  >Use your <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a> credentials to sign in.</v-alert>
+
   <v-form @submit.prevent="signIn">
     <v-text-field
       v-model="signinForm.username"
       label="Username"
       type="text"
-      hint="Open Food Facts username"
     ></v-text-field>
     <v-text-field
       v-model="signinForm.password"
       label="Password"
       type="password"
-      hint="Open Food Facts password"
     ></v-text-field>
     <v-btn
       type="submit"
@@ -27,7 +26,6 @@
 </template>
 
 <script>
-import { useCookies } from '@vueuse/integrations/useCookies'
 import api from '../services/api'
 
 export default {
@@ -54,7 +52,7 @@ export default {
           if (data['access_token']) {
             api.setUsernameCookie(this.signinForm.username)
             api.setTokenCookie(data['access_token'])
-            this.$router.push({ path: '/add' })
+            this.$router.push({ path: '/add', query: { signinSuccess: 'true' } })
           } else {
             alert('Error: wrong credentials')
             this.loading = false
