@@ -137,7 +137,7 @@ export default {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
           } else {
-            this.$router.push({ path: '/add' })
+            this.$router.push({ path: '/add', query: { singleSuccess: 'true' } })
           }
           this.loading = false
         })

@@ -16,8 +16,25 @@
         disabled></v-card>
     </v-col>
   </v-row>
+
+  <v-snackbar
+    v-model="singleSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >Price created successfully!</v-snackbar>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      singleSuccessMessage: false,
+    }
+  },
+  mounted() {
+    if (this.$route.query.singleSuccess === 'true') {
+      this.singleSuccessMessage = true
+    }
+  }
+}
 </script>
