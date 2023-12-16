@@ -73,7 +73,7 @@
 
       <v-row>
         <v-col>
-          <v-btn type="submit" class="mt-2" :loading="loading" :disabled="!formFilled">🚀 Create</v-btn>
+          <v-btn type="submit" class="mt-2" :loading="loading" :disabled="!formFilled">Create</v-btn>
         </v-col>
       </v-row>
     </v-container>
