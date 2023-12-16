@@ -1,5 +1,5 @@
 <template>
-  <v-dialog persistent="true">
+  <v-dialog persistent>
     <v-card>
       <v-card-title>
         Scan a barcode
@@ -44,9 +44,7 @@ export default {
   },
   methods: {
     createQrcodeScanner() {
-      console.log('createQrcodeScanner')
       this.scanner = new Html5Qrcode('reader')
-      console.log(this.scanner)
       this.scanner.start({ facingMode: 'environment' }, config, this.onScanSuccess, this.onScanFailure)
     },
     onScanSuccess(decodedText, decodedResult) {

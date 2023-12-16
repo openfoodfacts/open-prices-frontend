@@ -1,4 +1,6 @@
 <template>
+  <h1 class="mb-1">Add a price</h1>
+
   <v-row>
     <v-col cols="12" md="6">
       <v-card

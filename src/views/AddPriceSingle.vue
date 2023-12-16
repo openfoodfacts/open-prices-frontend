@@ -1,8 +1,10 @@
 <template>
+  <h1 class="mb-1">Add a single price</h1>
+
   <v-form @submit.prevent="createPrice">
     <v-container>
       <h3>
-        🏷 Product details
+        🏷 Product
         <v-btn variant="outlined" size="small" @click="showBarcodeScanner">Scan a barcode 🔎</v-btn>
       </h3>
       <v-row>
@@ -18,7 +20,7 @@
         </v-col>
       </v-row>
 
-      <h3>💲 Price details</h3>
+      <h3>💲 Price</h3>
       <v-row>
         <v-col cols="6">
           <v-text-field

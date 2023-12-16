@@ -1,4 +1,6 @@
 <template>
+  <h1 class="mb-1">Sign in</h1>
+
   <v-alert
     class="mb-2"
     type="info"

@@ -1,5 +1,5 @@
 <template>
-  <v-dialog persistent="true">
+  <v-dialog persistent>
     <v-card>
       <v-card-title>
         Find your location
