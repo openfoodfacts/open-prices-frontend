@@ -17,33 +17,36 @@
   </v-app-bar>
 
   <v-navigation-drawer v-model="showDrawerMenu" temporary>
-    <v-list :items="drawerMenuItems"></v-list>
+    <v-list :items="getDrawerMenuItems"></v-list>
   </v-navigation-drawer>
 </template>
 
 <script>
-import api from '../services/api';
+import api from '../services/api'
+import { routes } from '../routes.js'
 
 export default {
+  data() {
+    return {
+      showDrawerMenu: false,
+      showProfileMenu: false,
+    }
+  },
   computed: {
     username() {
       return api.getUsername()
     },
+    getDrawerMenuItems() {
+      return routes
+        .filter(r => r.meta && r.meta.drawerMenu)
+        .filter(r => this.username ? r.meta.requiresAuth !== false : !r.meta.requiresAuth)
+        .map((r => ({ title: r.meta.title, props: { 'prepend-icon': r.meta.icon, to: r.path }})))
+    }
   },
   methods: {
     signOut() {
       api.signOut()
       this.$router.push({ path: '/' })
-    }
-  },
-  data() {
-    return {
-      showDrawerMenu: false,
-      showProfileMenu: false,
-      drawerMenuItems: [
-        { title: 'Home', props: { 'prepend-icon': 'mdi-home', to: '/' }},
-        { title: 'Add a price', props: { 'prepend-icon': 'mdi-plus', to: '/add' }},
-      ],
     }
   },
 }
