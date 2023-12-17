@@ -7,30 +7,21 @@
         <v-card
           title="Take a picture of the price tag"
           subtitle="We need this for proof :)"
-          prepend-icon="mdi-numeric-1-box-outline">
+          prepend-icon="mdi-numeric-1-box-outline"
+          height="100%">
           <v-divider></v-divider>
           <v-card-text>
-            <v-row>
-              <v-col cols="12" md="6">
-                <v-file-input
-                  show-size
-                  accept="image/*"
-                  label="Proof"
-                  v-model="proofImage"
-                  @change="uploadProof"
-                  @click:clear="clearProof"
-                  :loading="createProofLoading">
-                </v-file-input>
-              </v-col>
-              <v-col v-if="addPriceSingleForm.proof_id" cols="12" md="6">
-                <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
-              </v-col>
-            </v-row>
-            <v-row v-if="!addPriceSingleForm.proof_id" class="text-red">
-              <v-col>
-                <i>waiting for an image to be uploaded...</i>
-              </v-col>
-            </v-row>
+            <v-file-input
+              show-size
+              accept="image/*"
+              label="Proof"
+              v-model="proofImage"
+              @change="uploadProof"
+              @click:clear="clearProof"
+              :loading="createProofLoading">
+            </v-file-input>
+            <v-img v-if="addPriceSingleForm.proof_id" :src="proofImagePreview" style="max-height:200px"></v-img>
+            <i v-if="!addPriceSingleForm.proof_id" class="text-red">waiting for an image to be uploaded...</i>
           </v-card-text>
         </v-card>
       </v-col>
