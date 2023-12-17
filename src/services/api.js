@@ -35,9 +35,9 @@ function addObjectToLocalStorageItemList(itemKey, obj, avoidDuplicates=true) {
 
 export default {
   signIn(username, password) {
-    let formData = new FormData();
-    formData.append('username', username);
-    formData.append('password', password);
+    let formData = new FormData()
+    formData.append('username', username)
+    formData.append('password', password)
     return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/auth`, {
       method: 'POST',
       body: formData,
@@ -64,6 +64,19 @@ export default {
 
   getToken() {
     return useCookies().get(TOKEN_COOKIE_KEY)
+  },
+
+  createProof(proofImage) {
+    let formData = new FormData()
+    formData.append('file', proofImage)
+    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${this.getToken()}`
+      },
+      body: formData,
+    })
+    .then((response) => response.json())
   },
 
   createPrice(priceData) {

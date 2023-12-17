@@ -7,7 +7,8 @@
         title="Single product mode"
         subtitle="Get your camera ready :)"
         prepend-icon="mdi-barcode"
-        to="/add/single"></v-card>
+        to="/add/single">
+      </v-card>
     </v-col>
     <v-col cols="12" md="6">
       <v-card
