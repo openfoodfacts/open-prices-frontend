@@ -36,8 +36,15 @@ jobs:
     - name: Install dependencies
       run: yarn install --immutable
     
-    - name: Build
-      run: yarn build-staging
+    - name: Build (staging)
+      run: |
+        yarn build-staging
+      if: matrix.env == 'open-prices-net'
+
+    - name: Build (prod)
+      run: |
+        yarn build-prod
+      if: matrix.env == 'open-prices-org'
 
     # Deploy
     - name: Set common variables
