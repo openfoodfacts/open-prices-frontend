@@ -91,8 +91,9 @@ export default {
     .then((response) => response.json())
   },
 
-  getPrices() {
-    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices`, {
+  getPrices(params = {}) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${new URLSearchParams(params)}`
+    return fetch(url, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
