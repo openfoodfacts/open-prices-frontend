@@ -12,7 +12,6 @@
           <v-divider></v-divider>
           <v-card-text>
             <v-file-input
-              show-size
               accept="image/*"
               label="Proof"
               v-model="proofImage"
