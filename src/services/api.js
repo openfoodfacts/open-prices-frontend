@@ -91,6 +91,18 @@ export default {
     .then((response) => response.json())
   },
 
+  getPrices(params = {}) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${new URLSearchParams(params)}`
+    return fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.getToken()}`
+      },
+    })
+    .then((response) => response.json())
+  },
+
   openstreetmapNominatimSearch(q) {
     return fetch(`https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=5`, {
       method: 'GET',
