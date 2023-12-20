@@ -203,10 +203,15 @@ export default {
         api
           .createProof(proofImageCompressed)
           .then((data) => {
-            this.addPriceSingleForm.proof_id = data['id']
-            this.proofImagePreview = URL.createObjectURL(proofImageCompressed)
             this.createProofLoading = false
-            this.proofSuccessMessage = true
+            if (data['id']) {
+              this.addPriceSingleForm.proof_id = data['id']
+              this.proofImagePreview = URL.createObjectURL(proofImageCompressed)
+              this.proofSuccessMessage = true
+            } else {
+              alert('Error: server error')
+              console.log(data)
+            }
           })
           .catch((error) => {
             alert('Error: server error')
