@@ -12,7 +12,6 @@
           <v-divider></v-divider>
           <v-card-text>
             <v-file-input
-              show-size
               accept="image/*"
               label="Proof"
               v-model="proofImage"
@@ -136,9 +135,18 @@
 </template>
 
 <script>
+import Compressor from 'compressorjs'
 import api from '../services/api'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import LocationSelector from '../components/LocationSelector.vue'
+
+Compressor.setDefaults({
+  checkOrientation: true,  // default
+  retainExif: true,
+  quality: 0.6,
+  // mimeType: 'image/webp',
+  maxWidth: 3000
+})
 
 export default {
   components: {
@@ -185,19 +193,34 @@ export default {
     },
     uploadProof() {
       this.createProofLoading = true
-      api
-        .createProof(this.proofImage[0])
-        .then((data) => {
-          this.addPriceSingleForm.proof_id = data['id']
-          this.proofImagePreview = URL.createObjectURL(this.proofImage[0])
-          this.createProofLoading = false
-          this.proofSuccessMessage = true
-        })
-        .catch((error) => {
-          alert('Error: server error')
-          console.log(error)
-          this.createProofLoading = false
-        })
+      new Promise((resolve, reject) => {
+        new Compressor(this.proofImage[0], {
+          success: resolve,
+          error: reject
+        });
+      })
+      .then((proofImageCompressed) => {
+        api
+          .createProof(proofImageCompressed)
+          .then((data) => {
+            this.addPriceSingleForm.proof_id = data['id']
+            this.proofImagePreview = URL.createObjectURL(proofImageCompressed)
+            this.createProofLoading = false
+            this.proofSuccessMessage = true
+          })
+          .catch((error) => {
+            alert('Error: server error')
+            console.log(error)
+            this.createProofLoading = false
+          })
+      })
+      .catch((error) => {
+        alert('Error: compression')
+        console.log(error)
+      })
+      // .finally(() => {
+      //   console.log('Compress complete')
+      // })
     },
     createPrice() {
       this.createPriceLoading = true
