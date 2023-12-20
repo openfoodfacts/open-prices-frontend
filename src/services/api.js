@@ -69,6 +69,7 @@ export default {
   createProof(proofImage) {
     let formData = new FormData()
     formData.append('file', proofImage)
+    formData.append('type', 'PRICE_TAG')
     return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload`, {
       method: 'POST',
       headers: {
