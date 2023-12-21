@@ -129,7 +129,7 @@ export default {
   },
 
   getLastCurrencyUsed() {
-    return getParsedLocalStorageItem(LAST_CURRENCY_USED_LOCAL_STORAGE_KEY, 'EUR')
+    return getParsedLocalStorageItem(LAST_CURRENCY_USED_LOCAL_STORAGE_KEY, 'EUR')  // TODO: init with user locale?
   },
 
   setLastCurrencyUsed(currency) {
