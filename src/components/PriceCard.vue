@@ -20,8 +20,8 @@
     </v-card-item>
 
     <v-card-text>
-      <span>{{ price.price }} €</span>
-      <span v-if="price.price && price.product && price.product.product_quantity"> ({{  getPricePerKilo(price) }})</span>
+      <span>{{ getPriceValueDisplay(price.price, price.currency) }}</span>
+      <span v-if="price.product && price.product.product_quantity"> ({{  getPricePerKilo(price.price, price.currency, price.product.product_quantity) }})</span>
       <span> · </span>
       <span v-if="price.location">{{ price.location.osm_name }}, {{ price.location.osm_address_city }}</span>
       <span v-if="!price.location">{{ price.location_id }}</span>
@@ -40,10 +40,17 @@ export default {
     }
   },
   methods: {
-    getPricePerKilo(price) {
-      let pricePerKilo = (price.price / price.product.product_quantity) * 1000
-      let pricePerKiloRounded = Math.round(pricePerKilo * 100) / 100
-      return `${pricePerKiloRounded} € / kg`
+    getPriceValueDisplay(priceValue, priceCurrency) {
+      return priceValue.toLocaleString(navigator.language, {
+        style: 'currency',
+        currency: priceCurrency,
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2
+      })
+    },
+    getPricePerKilo(priceValue, priceCurrency, productQuantity) {
+      let pricePerKilo = (priceValue / productQuantity) * 1000
+      return `${this.getPriceValueDisplay(pricePerKilo, priceCurrency)} / kg`
     }
   }
 }
