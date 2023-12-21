@@ -3,26 +3,31 @@ import { useCookies } from '@vueuse/integrations/useCookies'
 const USERNAME_COOKIE_KEY = 'username'
 const TOKEN_COOKIE_KEY = 'access_token'
 const RECENT_LOCATIONS_LOCAL_STORAGE_KEY = 'recent_locations'
+const LAST_CURRENCY_USED_LOCAL_STORAGE_KEY = 'last_currency_used'
 
 
-function getOrCreateLocalStorageItem(itemKey, defaultValue=[]) {
+function getOrCreateLocalStorageItem(itemKey, defaultValue='') {
   if (!localStorage.getItem(itemKey)) {
       localStorage.setItem(itemKey, JSON.stringify(defaultValue));
   }
   return localStorage.getItem(itemKey);
 }
 
-function clearLocalStorageItem(itemKey, defaultValue=[]) {
+function clearLocalStorageItem(itemKey, defaultValue='') {
   return localStorage.setItem(itemKey, JSON.stringify(defaultValue));
 }
 
-function getParsedLocalStorageItem(itemKey) {
-  let item = getOrCreateLocalStorageItem(itemKey);
+function getParsedLocalStorageItem(itemKey, defaultValue='') {
+  let item = getOrCreateLocalStorageItem(itemKey, defaultValue);
   return JSON.parse(item);
 }
 
+function setValueToLocalStorageItem(itemKey, value) {
+  return localStorage.setItem(itemKey, JSON.stringify(value));
+}
+
 function addObjectToLocalStorageItemList(itemKey, obj, avoidDuplicates=true) {
-  let itemJSON = getParsedLocalStorageItem(itemKey);
+  let itemJSON = getParsedLocalStorageItem(itemKey, []);
   var existingItem = itemJSON.find(item => JSON.stringify(item) === JSON.stringify(obj));
   if (avoidDuplicates && existingItem) {
       return;
@@ -112,7 +117,7 @@ export default {
   },
 
   getRecentLocations() {
-    return getParsedLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY)
+    return getParsedLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, [])
   },
 
   addRecentLocation(location) {
@@ -121,5 +126,13 @@ export default {
 
   clearRecentLocations() {
     clearLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY)
-  }
+  },
+
+  getLastCurrencyUsed() {
+    return getParsedLocalStorageItem(LAST_CURRENCY_USED_LOCAL_STORAGE_KEY, 'EUR')
+  },
+
+  setLastCurrencyUsed(currency) {
+    return setValueToLocalStorageItem(LAST_CURRENCY_USED_LOCAL_STORAGE_KEY, currency)
+  },
 }
