@@ -59,11 +59,11 @@
                 ></v-text-field>
               </v-col>
               <v-col cols="6">
-                <v-select
+                <v-autocomplete
                   v-model="addPriceSingleForm.currency"
                   label="Currency"
-                  :items="['EUR']"
-                ></v-select>
+                  :items="currencyList"
+                ></v-autocomplete>
               </v-col>
             </v-row>
 
@@ -136,6 +136,7 @@
 
 <script>
 import Compressor from 'compressorjs'
+import constants from '../constants'
 import api from '../services/api'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import LocationSelector from '../components/LocationSelector.vue'
@@ -161,6 +162,7 @@ export default {
       createProofLoading: false,
       proofSuccessMessage: false,
       // price data
+      currencyList: constants.CURRENCY_LIST,
       addPriceSingleForm: {
         proof_id: null,
         product_code: '',
