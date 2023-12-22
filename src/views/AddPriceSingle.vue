@@ -102,8 +102,8 @@
                 {{ location.display_name }}
               </v-chip>
               <v-chip variant="outlined" size="small" @click="showLocationSelector">
-                <v-icon start icon="mdi-magnify"></v-icon>
                 Find
+                <v-icon end icon="mdi-magnify"></v-icon>
               </v-chip>
             </div>
             <p v-if="!locationFormFilled" class="text-red mt-2 mb-2"><i>Select your location</i></p>
