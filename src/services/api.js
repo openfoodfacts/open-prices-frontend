@@ -121,8 +121,12 @@ export default {
     .then((response) => response.json())
   },
 
-  getRecentLocations() {
-    return getParsedLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, [])
+  getRecentLocations(limit=null) {
+    let recentLocations = getParsedLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, [])
+    if (limit && recentLocations.length && recentLocations.length > limit) {
+      return recentLocations.slice(0, limit)
+    }
+    return recentLocations
   },
 
   addRecentLocation(location) {
