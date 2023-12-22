@@ -125,7 +125,7 @@ export default {
   },
 
   clearRecentLocations() {
-    clearLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY)
+    clearLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, [])
   },
 
   getLastCurrencyUsed() {
