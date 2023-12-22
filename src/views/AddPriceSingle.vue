@@ -25,8 +25,8 @@
                   @click:clear="clearProof"
                   :loading="createProofLoading">
                 </v-file-input>
-                <i v-if="proofFormFilled && !createProofLoading" class="text-green">Proof uploaded!</i>
-                <i v-if="!proofFormFilled && !createProofLoading" class="text-red">Proof missing...</i>
+                <p v-if="proofFormFilled && !createProofLoading" class="text-green"><i>Proof uploaded!</i></p>
+                <p v-if="!proofFormFilled && !createProofLoading" class="text-red"><i>Upload a proof</i></p>
               </v-col>
               <v-col v-if="proofFormFilled">
                 <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
@@ -45,7 +45,7 @@
           :style="productPriceFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
-            <h3>
+            <h3 class="mb-1">
               🏷 Product
               <v-btn variant="outlined" size="small" @click="showBarcodeScanner">Scan a barcode 🔎</v-btn>
             </h3>
@@ -62,7 +62,7 @@
               </v-col>
             </v-row>
 
-            <h3>💲 Price</h3>
+            <h3 class="mb-1">💲 Price</h3>
             <v-row>
               <v-col cols="6">
                 <v-text-field
@@ -92,31 +92,23 @@
           :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
-            <h3>
-              🌍 Location
-              <v-btn variant="outlined" size="small" @click="showLocationSelector">Find 🔎</v-btn>
-            </h3>
-            <p v-if="locationSelectedDisplayName"><i>{{ locationSelectedDisplayName }}</i></p>
-            <v-row>
-              <v-col cols="6">
-                <v-text-field
-                  v-model="addPriceSingleForm.location_osm_id"
-                  label="OpenStreetMap ID"
-                  type="text"
-                  readonly
-                ></v-text-field>
-              </v-col>
-              <v-col cols="6">
-                <v-select
-                  v-model="addPriceSingleForm.location_osm_type"
-                  label="OpenStreetMap type"
-                  :items="['NODE', 'WAY', 'RELATION']"
-                  readonly
-                ></v-select>
-              </v-col>
-            </v-row>
+            <h3 class="mb-1">🌍 Location</h3>
+            <div class="d-flex flex-wrap ga-2">
+              <v-chip
+                v-for="location in recentLocations"
+                :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+                @click="setLocationData(location)">
+                <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
+                {{ location.display_name }}
+              </v-chip>
+              <v-chip variant="outlined" size="small" @click="showLocationSelector">
+                Find
+                <v-icon end icon="mdi-magnify"></v-icon>
+              </v-chip>
+            </div>
+            <p v-if="!locationFormFilled" class="text-red mt-2 mb-2"><i>Select your location</i></p>
 
-            <h3>📅 Date</h3>
+            <h3 class="mt-4 mb-1">📅 Date</h3>
             <v-row>
               <v-col>
                 <v-text-field
@@ -155,7 +147,7 @@
     v-if="locationSelector"
     v-model="locationSelector"
     @location="setLocationData($event)"
-    @close="locationSelector = false"
+    @close="closeLocationSelector($event)"
   ></LocationSelector>
 </template>
 
@@ -181,13 +173,7 @@ export default {
   },
   data() {
     return {
-      // proof data
-      proofImage: null,
-      proofImagePreview: null,
-      createProofLoading: false,
-      proofSuccessMessage: false,
-      // price data
-      currencyList: constants.CURRENCY_LIST,
+      // price form
       addPriceSingleForm: {
         proof_id: null,
         product_code: '',
@@ -198,7 +184,17 @@ export default {
         date: new Date().toISOString().substr(0, 10)
       },
       createPriceLoading: false,
+      // proof data
+      proofImage: null,
+      proofImagePreview: null,
+      createProofLoading: false,
+      proofSuccessMessage: false,
+      // product data
       barcodeScanner: false,
+      // price data
+      currencyList: constants.CURRENCY_LIST,
+      // location data
+      recentLocations: api.getRecentLocations(3),
       locationSelector: false,
       locationSelectedDisplayName: ''
     };
@@ -210,6 +206,10 @@ export default {
     },
     productPriceFormFilled() {
       let keys = ['product_code', 'price', 'currency']
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
+    locationFormFilled() {
+      let keys = ['location_osm_id', 'location_osm_type']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     locationDateFormFilled() {
@@ -294,11 +294,21 @@ export default {
     showLocationSelector() {
       this.locationSelector = true
     },
+    closeLocationSelector(event) {
+      this.locationSelector = false
+      setTimeout(() => {  // TODO: replace with store (make recentLocations reactive)
+        this.recentLocations = api.getRecentLocations(3)
+      }, 50)
+    },
     setLocationData(event) {
+      api.addRecentLocation(event)
       this.locationSelectedDisplayName = event.display_name
       this.addPriceSingleForm.location_osm_id = event.osm_id
       this.addPriceSingleForm.location_osm_type = event.osm_type.toUpperCase()
-    }
+    },
+    isSelectedLocation(location) {
+      return this.locationSelectedDisplayName && this.locationSelectedDisplayName == location.display_name
+    },
   }
 }
 </script>
