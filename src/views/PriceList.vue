@@ -1,5 +1,8 @@
 <template>
-  <h1 class="mb-1">Last prices</h1>
+  <h1 class="mb-1">
+    Last prices
+    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+  </h1>
 
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="price in prices" :key="price">
@@ -19,6 +22,7 @@ export default {
   data() {
     return {
       prices: [],
+      loading: false,
     }
   },
   mounted() {
@@ -26,9 +30,11 @@ export default {
   },
   methods: {
     getPrices() {
-      return api.getPrices({ order_by: '-date' })
+      this.loading = true
+      return api.getPrices({ order_by: '-created' })
         .then((data) => {
           this.prices = data.items
+          this.loading = false
         })
     }
   }
