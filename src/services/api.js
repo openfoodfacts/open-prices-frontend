@@ -26,13 +26,18 @@ function setValueToLocalStorageItem(itemKey, value) {
   return localStorage.setItem(itemKey, JSON.stringify(value))
 }
 
-function addObjectToLocalStorageItemList(itemKey, obj, avoidDuplicates=true) {
+function addObjectToLocalStorageItemArray(itemKey, obj, unshift=false, avoidDuplicates=true) {
   let itemJSON = getParsedLocalStorageItem(itemKey, [])
   var existingItem = itemJSON.find(item => JSON.stringify(item) === JSON.stringify(obj))
   if (avoidDuplicates && existingItem) {
-      return
+    return
   }
-  itemJSON[itemJSON.length] = obj
+  // add obj to array
+  if (unshift) {
+    itemJSON.unshift(obj)
+  } else {
+    itemJSON.push(obj)
+  }
   return localStorage.setItem(itemKey, JSON.stringify(itemJSON))
 }
 
@@ -121,7 +126,7 @@ export default {
   },
 
   addRecentLocation(location) {
-    return addObjectToLocalStorageItemList(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, location)
+    return addObjectToLocalStorageItemArray(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, location, true)
   },
 
   clearRecentLocations() {
