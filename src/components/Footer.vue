@@ -6,6 +6,7 @@
       </v-col>
       <v-col cols="12" md="6" align="center">
         <v-btn class="mx-2" variant="text" href="https://prices.openfoodfacts.org" target="_blank">About</v-btn>
+        <v-btn class="mx-2" variant="text" to="/stats">Stats</v-btn>
         <v-btn class="mx-2" variant="text" href="https://github.com/openfoodfacts/open-prices-frontend" target="_blank">Github</v-btn>
       </v-col>
     </v-row>
