@@ -154,7 +154,7 @@ Compressor.setDefaults({
   checkOrientation: true,  // default
   retainExif: true,
   quality: 0.6,
-  // mimeType: 'image/webp',
+  mimeType: 'image/webp',
   maxWidth: 3000
 })
 
