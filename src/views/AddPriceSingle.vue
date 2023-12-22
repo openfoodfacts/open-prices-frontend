@@ -7,20 +7,30 @@
         <v-card
           title="Take a picture of the price tag"
           subtitle="We need this for proof :)"
-          prepend-icon="mdi-numeric-1-box-outline"
+          prepend-icon="mdi-numeric-1-circle-outline"
           height="100%">
           <v-divider></v-divider>
           <v-card-text>
-            <v-file-input
-              accept="image/*"
-              label="Proof"
-              v-model="proofImage"
-              @change="uploadProof"
-              @click:clear="clearProof"
-              :loading="createProofLoading">
-            </v-file-input>
-            <v-img v-if="addPriceSingleForm.proof_id" :src="proofImagePreview" style="max-height:200px"></v-img>
-            <i v-if="!addPriceSingleForm.proof_id" class="text-red">waiting for an image to be uploaded...</i>
+            <v-row>
+              <v-col>
+                <v-file-input
+                  class="overflow-hidden"
+                  prepend-icon=""
+                  :prepend-inner-icon="addPriceSingleForm.proof_id ? 'mdi-paperclip' : 'mdi-plus'"
+                  label="Picture of the price tag"
+                  v-model="proofImage"
+                  accept="image/*"
+                  @change="uploadProof"
+                  @click:clear="clearProof"
+                  :loading="createProofLoading">
+                </v-file-input>
+                <i v-if="addPriceSingleForm.proof_id && !createProofLoading" class="text-green">Proof uploaded!</i>
+                <i v-if="!addPriceSingleForm.proof_id && !createProofLoading" class="text-red">Proof missing...</i>
+              </v-col>
+              <v-col v-if="addPriceSingleForm.proof_id">
+                <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
+              </v-col>
+            </v-row>
           </v-card-text>
         </v-card>
       </v-col>
@@ -29,7 +39,7 @@
         <v-card
           title="Fill in the price details"
           subtitle="Almost there!"
-          prepend-icon="mdi-numeric-2-box-outline">
+          prepend-icon="mdi-numeric-2-circle-outline">
           <v-divider></v-divider>
           <v-card-text>
             <h3>
