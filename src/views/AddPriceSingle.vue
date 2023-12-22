@@ -93,12 +93,13 @@
           <v-divider></v-divider>
           <v-card-text>
             <h3 class="mb-1">🌍 Location</h3>
-            <p v-if="locationSelectedDisplayName"><i>{{ locationSelectedDisplayName }}</i></p>
             <div class="d-flex flex-wrap ga-2">
               <v-chip
                 v-for="location in recentLocations"
-                @click="selectLocation(location)">
-                {{ location.display_name.slice(0, 15) + '...' }}
+                :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+                @click="setLocationData(location)">
+                <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
+                {{ location.display_name }}
               </v-chip>
               <v-chip variant="outlined" @click="showLocationSelector">
                 <v-icon start icon="mdi-magnify"></v-icon>
@@ -146,7 +147,7 @@
     v-if="locationSelector"
     v-model="locationSelector"
     @location="setLocationData($event)"
-    @close="locationSelector = false"
+    @close="closeLocationSelector($event)"
   ></LocationSelector>
 </template>
 
@@ -193,7 +194,7 @@ export default {
       // price data
       currencyList: constants.CURRENCY_LIST,
       // location data
-      recentLocations: api.getRecentLocations(),
+      recentLocations: api.getRecentLocations(3),
       locationSelector: false,
       locationSelectedDisplayName: ''
     };
@@ -293,14 +294,20 @@ export default {
     showLocationSelector() {
       this.locationSelector = true
     },
+    closeLocationSelector(event) {
+      this.locationSelector = false
+      setTimeout(() => {  // TODO: replace with store (make recentLocations reactive)
+        this.recentLocations = api.getRecentLocations(3)
+      }, 50)
+    },
     setLocationData(event) {
+      api.addRecentLocation(event)
       this.locationSelectedDisplayName = event.display_name
       this.addPriceSingleForm.location_osm_id = event.osm_id
       this.addPriceSingleForm.location_osm_type = event.osm_type.toUpperCase()
     },
-    selectLocation(location) {
-      api.addRecentLocation(location)
-      this.setLocationData(location)
+    isSelectedLocation(location) {
+      return this.locationSelectedDisplayName && this.locationSelectedDisplayName == location.display_name
     },
   }
 }

@@ -46,19 +46,19 @@
       <v-divider v-if="results"></v-divider>
 
       <v-card-text v-if="recentLocations.length">
-        <h3>
+        <h3 class="mb-1">
+          <v-icon start icon="mdi-history"></v-icon>
           Recent locations <small>{{ recentLocations.length }}</small>
-          <v-btn class="ml-2" variant="outlined" size="small" @click="clearRecentLocations">Clear</v-btn>
         </h3>
-        <div class="d-flex flex-wrap ga-3">
-          <v-card
+        <div class="d-flex flex-wrap ga-2">
+          <v-chip
             v-for="location in recentLocations"
             elevation="1"
-            @click="selectLocation(location)"
-          >
-            <v-card-text>📍 {{ location.display_name }}</v-card-text>
-          </v-card>
+            @click="selectLocation(location)">
+            {{ location.display_name }}
+          </v-chip>
         </div>
+        <v-btn class="mt-2 ml-2" variant="outlined" size="small" @click="clearRecentLocations">Clear</v-btn>
       </v-card-text>
 
       <v-divider v-if="recentLocations.length"></v-divider>

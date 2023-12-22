@@ -42,7 +42,6 @@ function addObjectToLocalStorageItemArray(itemKey, obj, unshift=false, avoidDupl
 }
 
 
-
 export default {
   signIn(username, password) {
     let formData = new FormData()
