@@ -133,7 +133,7 @@
 
     <v-row>
       <v-col>
-        <v-btn type="submit" class="mt-2" :loading="createPriceLoading" :disabled="!formFilled">Create</v-btn>
+        <v-btn type="submit" :color="formFilled ? 'success' : ''" :loading="createPriceLoading" :disabled="!formFilled">Create</v-btn>
       </v-col>
     </v-row>
   </v-form>
