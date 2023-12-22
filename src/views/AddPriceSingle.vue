@@ -101,7 +101,7 @@
                 <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
                 {{ location.display_name }}
               </v-chip>
-              <v-chip variant="outlined" @click="showLocationSelector">
+              <v-chip variant="outlined" size="small" @click="showLocationSelector">
                 <v-icon start icon="mdi-magnify"></v-icon>
                 Find
               </v-chip>
