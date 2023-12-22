@@ -3,10 +3,10 @@
 
   <v-form @submit.prevent="createPrice">
     <v-row>
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" lg="4">
         <v-card
           title="Take a picture of the price tag"
-          subtitle="We need this for proof :)"
+          subtitle="We need this for proof"
           prepend-icon="mdi-numeric-1-circle-outline"
           height="100%">
           <v-divider></v-divider>
@@ -35,10 +35,10 @@
         </v-card>
       </v-col>
 
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" lg="4">
         <v-card
-          title="Fill in the price details"
-          subtitle="Almost there!"
+          title="Product & price details"
+          subtitle="The most important :)"
           prepend-icon="mdi-numeric-2-circle-outline">
           <v-divider></v-divider>
           <v-card-text>
@@ -76,7 +76,17 @@
                 ></v-autocomplete>
               </v-col>
             </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
 
+      <v-col cols="12" md="6" lg="4">
+        <v-card
+          title="Where & when?"
+          subtitle="Almost there!"
+          prepend-icon="mdi-numeric-3-circle-outline">
+          <v-divider></v-divider>
+          <v-card-text>
             <h3>
               🌍 Location
               <v-btn variant="outlined" size="small" @click="showLocationSelector">Find 🔎</v-btn>
