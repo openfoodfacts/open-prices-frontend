@@ -177,7 +177,7 @@ export default {
         proof_id: null,
         product_code: '',
         price: null,
-        currency: 'EUR',
+        currency: api.getLastCurrencyUsed(),
         location_osm_id: null,
         location_osm_type: '',
         date: new Date().toISOString().substr(0, 10)
@@ -247,6 +247,7 @@ export default {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
           } else {
+            api.setLastCurrencyUsed(this.addPriceSingleForm.currency)
             this.$router.push({ path: '/add', query: { singleSuccess: 'true' } })
           }
           this.createPriceLoading = false
