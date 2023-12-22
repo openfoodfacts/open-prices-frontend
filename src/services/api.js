@@ -8,32 +8,37 @@ const LAST_CURRENCY_USED_LOCAL_STORAGE_KEY = 'last_currency_used'
 
 function getOrCreateLocalStorageItem(itemKey, defaultValue='') {
   if (!localStorage.getItem(itemKey)) {
-      localStorage.setItem(itemKey, JSON.stringify(defaultValue));
+      localStorage.setItem(itemKey, JSON.stringify(defaultValue))
   }
-  return localStorage.getItem(itemKey);
+  return localStorage.getItem(itemKey)
 }
 
 function clearLocalStorageItem(itemKey, defaultValue='') {
-  return localStorage.setItem(itemKey, JSON.stringify(defaultValue));
+  return localStorage.setItem(itemKey, JSON.stringify(defaultValue))
 }
 
 function getParsedLocalStorageItem(itemKey, defaultValue='') {
-  let item = getOrCreateLocalStorageItem(itemKey, defaultValue);
-  return JSON.parse(item);
+  let item = getOrCreateLocalStorageItem(itemKey, defaultValue)
+  return JSON.parse(item)
 }
 
 function setValueToLocalStorageItem(itemKey, value) {
-  return localStorage.setItem(itemKey, JSON.stringify(value));
+  return localStorage.setItem(itemKey, JSON.stringify(value))
 }
 
-function addObjectToLocalStorageItemList(itemKey, obj, avoidDuplicates=true) {
-  let itemJSON = getParsedLocalStorageItem(itemKey, []);
-  var existingItem = itemJSON.find(item => JSON.stringify(item) === JSON.stringify(obj));
+function addObjectToLocalStorageItemArray(itemKey, obj, unshift=false, avoidDuplicates=true) {
+  let itemJSON = getParsedLocalStorageItem(itemKey, [])
+  var existingItem = itemJSON.find(item => JSON.stringify(item) === JSON.stringify(obj))
   if (avoidDuplicates && existingItem) {
-      return;
+    return
   }
-  itemJSON[itemJSON.length] = obj;
-  return localStorage.setItem(itemKey, JSON.stringify(itemJSON));
+  // add obj to array
+  if (unshift) {
+    itemJSON.unshift(obj)
+  } else {
+    itemJSON.push(obj)
+  }
+  return localStorage.setItem(itemKey, JSON.stringify(itemJSON))
 }
 
 
@@ -116,12 +121,16 @@ export default {
     .then((response) => response.json())
   },
 
-  getRecentLocations() {
-    return getParsedLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, [])
+  getRecentLocations(limit=null) {
+    let recentLocations = getParsedLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, [])
+    if (limit && recentLocations.length && recentLocations.length > limit) {
+      return recentLocations.slice(0, limit)
+    }
+    return recentLocations
   },
 
   addRecentLocation(location) {
-    return addObjectToLocalStorageItemList(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, location)
+    return addObjectToLocalStorageItemArray(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, location, true)
   },
 
   clearRecentLocations() {
