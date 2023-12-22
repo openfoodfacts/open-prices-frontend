@@ -3,12 +3,13 @@
 
   <v-form @submit.prevent="createPrice">
     <v-row>
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" lg="4">
         <v-card
           title="Take a picture of the price tag"
-          subtitle="We need this for proof :)"
+          subtitle="We need this for proof"
           prepend-icon="mdi-numeric-1-circle-outline"
-          height="100%">
+          height="100%"
+          :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
             <v-row>
@@ -16,7 +17,7 @@
                 <v-file-input
                   class="overflow-hidden"
                   prepend-icon=""
-                  :prepend-inner-icon="addPriceSingleForm.proof_id ? 'mdi-paperclip' : 'mdi-plus'"
+                  :prepend-inner-icon="proofFormFilled ? 'mdi-paperclip' : 'mdi-plus'"
                   label="Picture of the price tag"
                   v-model="proofImage"
                   accept="image/*"
@@ -24,10 +25,10 @@
                   @click:clear="clearProof"
                   :loading="createProofLoading">
                 </v-file-input>
-                <i v-if="addPriceSingleForm.proof_id && !createProofLoading" class="text-green">Proof uploaded!</i>
-                <i v-if="!addPriceSingleForm.proof_id && !createProofLoading" class="text-red">Proof missing...</i>
+                <i v-if="proofFormFilled && !createProofLoading" class="text-green">Proof uploaded!</i>
+                <i v-if="!proofFormFilled && !createProofLoading" class="text-red">Proof missing...</i>
               </v-col>
-              <v-col v-if="addPriceSingleForm.proof_id">
+              <v-col v-if="proofFormFilled">
                 <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
               </v-col>
             </v-row>
@@ -35,11 +36,13 @@
         </v-card>
       </v-col>
 
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" lg="4">
         <v-card
-          title="Fill in the price details"
-          subtitle="Almost there!"
-          prepend-icon="mdi-numeric-2-circle-outline">
+          title="Product & price details"
+          subtitle="The most important :)"
+          prepend-icon="mdi-numeric-2-circle-outline"
+          height="100%"
+          :style="productPriceFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
             <h3>
@@ -76,7 +79,19 @@
                 ></v-autocomplete>
               </v-col>
             </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
 
+      <v-col cols="12" md="6" lg="4">
+        <v-card
+          title="Where & when?"
+          subtitle="Almost there!"
+          prepend-icon="mdi-numeric-3-circle-outline"
+          height="100%"
+          :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
+          <v-divider></v-divider>
+          <v-card-text>
             <h3>
               🌍 Location
               <v-btn variant="outlined" size="small" @click="showLocationSelector">Find 🔎</v-btn>
@@ -118,7 +133,7 @@
 
     <v-row>
       <v-col>
-        <v-btn type="submit" class="mt-2" :loading="createPriceLoading" :disabled="!formFilled">Create</v-btn>
+        <v-btn type="submit" :color="formFilled ? 'success' : ''" :loading="createPriceLoading" :disabled="!formFilled">Create</v-btn>
       </v-col>
     </v-row>
   </v-form>
@@ -189,6 +204,18 @@ export default {
     };
   },
   computed: {
+    proofFormFilled() {
+      let keys = ['proof_id']
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
+    productPriceFormFilled() {
+      let keys = ['product_code', 'price', 'currency']
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
+    locationDateFormFilled() {
+      let keys = ['location_osm_id', 'location_osm_type', 'date']
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
     formFilled() {
       return Object.values(this.addPriceSingleForm).every(x => !!x)
     }
