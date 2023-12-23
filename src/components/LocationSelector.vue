@@ -35,15 +35,19 @@
                 elevation="1"
                 @click="selectLocation(location)"
               >
-                <v-card-text>{{ location.display_name }}</v-card-text>
+                <v-card-title>{{ getNominatimLocationTitle(location) }}</v-card-title>
+                <v-card-text>{{ location.display_name }} <strong>[{{ location.type }}]</strong></v-card-text>
               </v-card>
             </div>
           </v-col>
-          <v-col cols="12" sm="6" height="100%">
-            <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :bounds="mapBounds" :max-bounds="mapBounds" :use-global-leaflet="false" @ready="initMap">
+          <v-col cols="12" sm="6" style="min-height:200px">
+            <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
               <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
               <l-marker v-for="location in results" :lat-lng="[location.lat, location.lon]">
-                <l-popup>{{ location.display_name.slice(0, 20) + '...' }}</l-popup>
+                <l-popup>
+                  {{ getNominatimLocationTitle(location, true) }}<br />
+                  <strong>[{{ location.type }}]</strong>
+                </l-popup>
               </l-marker>
             </l-map>
           </v-col>
@@ -145,6 +149,21 @@ export default {
           this.results = 'No results found'
         }
       })
+    },
+    getNominatimLocationCity(location) {
+      if (location.address) {
+        return location.address.village || location.address.town || location.address.city || location.address.municipality
+      }
+    },
+    getNominatimLocationTitle(location, withRoad=false) {
+      let locationTitle = location.name
+      if (location.address) {
+        if (withRoad) {
+          locationTitle += `, ${location.address.road}`
+        }
+        locationTitle += `, ${this.getNominatimLocationCity(location)}`
+      }
+      return locationTitle
     },
     clearRecentLocations() {
       api.clearRecentLocations()
