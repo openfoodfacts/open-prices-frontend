@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vue-leaflet/vue-leaflet": "^0.10.1",
     "@vueuse/core": "^10.6.1",
     "@vueuse/integrations": "^10.6.1",
     "compressorjs": "^1.2.1",
     "html5-qrcode": "^2.3.8",
+    "leaflet": "^1.9.4",
     "universal-cookie": "^6.1.1",
     "vue": "^3.3.9",
     "vue-router": "^4.2.5",
