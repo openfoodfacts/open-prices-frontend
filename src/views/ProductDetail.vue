@@ -1,10 +1,12 @@
 <template>
   <h1 class="mb-1">
-    {{ product.product_name }}
+    {{ product ? product.product_name : '' }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h1>
 
-  <v-divider></v-divider>
+  <PriceCard v-if="product" :product="product" elevation="1"></PriceCard>
+
+  <br />
 
   <h2 class="mb-1">Last prices</h2>
 
