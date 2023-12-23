@@ -20,6 +20,7 @@
                   :prepend-inner-icon="proofFormFilled ? 'mdi-paperclip' : 'mdi-plus'"
                   label="Picture of the price tag"
                   v-model="proofImage"
+                  capture="environment"
                   accept="image/*"
                   @change="uploadProof"
                   @click:clear="clearProof"
