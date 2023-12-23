@@ -27,15 +27,27 @@
 
       <v-card-text v-if="results && Array.isArray(results)">
         <h3>Results <small>{{ results.length }}</small></h3>
-        <div class="d-flex flex-wrap ga-2">
-          <v-card
-            v-for="location in results"
-            elevation="1"
-            @click="selectLocation(location)"
-          >
-            <v-card-text>{{ location.display_name }}</v-card-text>
-          </v-card>
-        </div>
+        <v-row>
+          <v-col cols="12" sm="6">
+            <div class="d-flex flex-wrap ga-2">
+              <v-card
+                v-for="location in results"
+                elevation="1"
+                @click="selectLocation(location)"
+              >
+                <v-card-text>{{ location.display_name }}</v-card-text>
+              </v-card>
+            </div>
+          </v-col>
+          <v-col cols="12" sm="6" height="100%">
+            <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :bounds="mapBounds" :max-bounds="mapBounds" :use-global-leaflet="false" @ready="initMap">
+              <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
+              <l-marker v-for="location in results" :lat-lng="[location.lat, location.lon]">
+                <l-popup>{{ location.display_name.slice(0, 20) + '...' }}</l-popup>
+              </l-marker>
+            </l-map>
+          </v-col>
+        </v-row>
       </v-card-text>
       <v-card-text v-if="results && (typeof results === 'string')">{{ results }}</v-card-text>
 
@@ -69,17 +81,31 @@
 </template>
 
 <script>
+import "leaflet/dist/leaflet.css"
+import { LMap, LTileLayer, LMarker, LPopup } from "@vue-leaflet/vue-leaflet"
 import api from '../services/api'
 
 export default {
+  components: {
+    LMap,
+    LTileLayer,
+    LMarker,
+    LPopup,
+  },
   data() {
     return {
+      // location form
       locationSearchForm: {
         q: ''
       },
       loading: false,
       results: null,
-      recentLocations: api.getRecentLocations()
+      recentLocations: api.getRecentLocations(),
+      // map
+      map: null,
+      mapZoom: 5,
+      mapCenter: [45, 5],
+      mapBounds: null
     }
   },
   computed: {
@@ -94,6 +120,12 @@ export default {
     fieldRequired(v) {
       return !!v
     },
+    initMap() {  // TODO: improve map setup
+      this.map = this.$refs.map.leafletObject
+      if (this.mapBounds) {
+        this.map.fitBounds(this.mapBounds)
+      }
+    },
     search() {
       this.results = null
       this.loading = true
@@ -102,6 +134,13 @@ export default {
         this.loading = false
         if (data.length) {
           this.results = data
+          if (this.results.length > 1) {
+            this.mapBounds = this.results.map(l => [l.lat, l.lon])
+          } else {
+            this.mapCenter = this.results.map(l => [l.lat, l.lon])[0]
+            this.mapZoom = 12
+            this.mapBounds = null
+          }
         } else {
           this.results = 'No results found'
         }
