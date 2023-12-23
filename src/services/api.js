@@ -1,5 +1,6 @@
 import { useCookies } from '@vueuse/integrations/useCookies'
 
+const NOMINATIM_SEARCH_URL = 'https://nominatim.openstreetmap.org/search'
 const NOMINATIM_RESULT_TYPE_EXCLUDE_LIST = ['fuel', 'gas', 'casino']
 const USERNAME_COOKIE_KEY = 'username'
 const TOKEN_COOKIE_KEY = 'access_token'
@@ -108,7 +109,6 @@ export default {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.getToken()}`
       },
     })
     .then((response) => response.json())
@@ -120,14 +120,24 @@ export default {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.getToken()}`
+      },
+    })
+    .then((response) => response.json())
+  },
+
+  getLocationById(locationId) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/${locationId}`
+    return fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
       },
     })
     .then((response) => response.json())
   },
 
   openstreetmapNominatimSearch(q) {
-    return fetch(`https://nominatim.openstreetmap.org/search?q=${q}&addressdetails=1&format=json&limit=10`, {
+    return fetch(`${NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=10`, {
       method: 'GET',
     })
     .then((response) => response.json())

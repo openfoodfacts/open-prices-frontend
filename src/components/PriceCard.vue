@@ -24,8 +24,7 @@
       <span>{{ getPriceValueDisplay(price.price, price.currency) }}</span>
       <span v-if="product && product.product_quantity"> ({{  getPricePerKilo(price.price, price.currency, product.product_quantity) }})</span>
       <span> · </span>
-      <span v-if="price.location">{{ price.location.osm_name }}, {{ price.location.osm_address_city }}</span>
-      <span v-if="!price.location">{{ price.location_id }}</span>
+      <span @click="goToLocation(price.location_id)">{{ getPriceLocationTitle(price) }}</span>
       <span> · </span>
       <span>{{ price.date }}</span>
     </v-card-text>
@@ -53,8 +52,17 @@ export default {
       let pricePerKilo = (priceValue / productQuantity) * 1000
       return `${this.getPriceValueDisplay(pricePerKilo, priceCurrency)} / kg`
     },
+    getPriceLocationTitle(price) {
+      if (price.location) {
+        return `${price.location.osm_name}, ${price.location.osm_address_city}`
+      }
+      return price.location_id
+    },
     goToProduct(productId) {
       this.$router.push({ path: `/products/${productId}` })
+    },
+    goToLocation(locationId) {
+      this.$router.push({ path: `/locations/${locationId}` })
     }
   }
 }
