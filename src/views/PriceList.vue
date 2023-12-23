@@ -6,7 +6,7 @@
 
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="price in prices" :key="price">
-      <PriceCard :price="price" elevation="1" height="100%"></PriceCard>
+      <PriceCard :price="price" :product="price.product" elevation="1" height="100%"></PriceCard>
     </v-col>
   </v-row>
 </template>
