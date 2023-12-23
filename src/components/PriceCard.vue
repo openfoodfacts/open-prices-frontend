@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-item v-if="product">
+    <v-card-item v-if="product" @click="goToProduct(product.id)">
       <template v-slot:prepend>
         <v-avatar rounded="0">
           <v-img v-if="product && product.image_url" :src="product.image_url"></v-img>
@@ -52,6 +52,9 @@ export default {
     getPricePerKilo(priceValue, priceCurrency, productQuantity) {
       let pricePerKilo = (priceValue / productQuantity) * 1000
       return `${this.getPriceValueDisplay(pricePerKilo, priceCurrency)} / kg`
+    },
+    goToProduct(productId) {
+      this.$router.push({ path: `/products/${productId}` })
     }
   }
 }
