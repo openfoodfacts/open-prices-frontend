@@ -1,5 +1,6 @@
 import { useCookies } from '@vueuse/integrations/useCookies'
 
+const NOMINATIM_RESULT_TYPE_EXCLUDE_LIST = ['fuel', 'gas', 'casino']
 const USERNAME_COOKIE_KEY = 'username'
 const TOKEN_COOKIE_KEY = 'access_token'
 const RECENT_LOCATIONS_LOCAL_STORAGE_KEY = 'recent_locations'
@@ -130,6 +131,7 @@ export default {
       method: 'GET',
     })
     .then((response) => response.json())
+    .then((data) => data.filter(l => !NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
 
   getRecentLocations(limit=null) {
