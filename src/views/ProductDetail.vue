@@ -10,13 +10,7 @@
     </v-col>
   </v-row>
 
-  <br />
-
-  <h2 class="mb-1">
-    Product details
-  </h2>
-
-  <v-row>
+  <v-row class="mt-0">
     <v-col cols="12" sm="6">
       <v-btn v-if="product" size="small" append-icon="mdi-open-in-new" href="https://world.openfoodfacts.org/product/{{ product.code }}" target="_blank">
         Open Food Facts
