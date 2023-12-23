@@ -126,7 +126,7 @@ export default {
   },
 
   openstreetmapNominatimSearch(q) {
-    return fetch(`https://nominatim.openstreetmap.org/search?q=${q}&addressdetails=1&format=json&limit=5`, {
+    return fetch(`https://nominatim.openstreetmap.org/search?q=${q}&addressdetails=1&format=json&limit=10`, {
       method: 'GET',
     })
     .then((response) => response.json())
