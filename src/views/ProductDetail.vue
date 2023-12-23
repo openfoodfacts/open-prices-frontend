@@ -10,9 +10,9 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
+  <v-row class="mt-0" v-if="product && product.code">
     <v-col cols="12" sm="6">
-      <v-btn v-if="product" size="small" append-icon="mdi-open-in-new" href="https://world.openfoodfacts.org/product/{{ product.code }}" target="_blank">
+      <v-btn v-if="product" size="small" append-icon="mdi-open-in-new" :href="getProductOFFUrl(product)" target="_blank">
         Open Food Facts
       </v-btn>
     </v-col>
@@ -57,8 +57,10 @@ export default {
       this.loading = true
       return api.getProductById(this.$route.params.id)
         .then((data) => {
-          this.product = data
-          this.loading = false
+          if (data.id) {
+            this.product = data
+            this.loading = false
+          }
         })
     },
     getProductPrices() {
@@ -69,6 +71,9 @@ export default {
           this.productPriceCount = data.total
           this.loading = false
         })
+    },
+    getProductOFFUrl(product) {
+      return `https://world.openfoodfacts.org/product/${product.code}`
     }
   }
 }
