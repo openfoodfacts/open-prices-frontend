@@ -8,7 +8,7 @@
         </v-avatar>
       </template>
 
-      <v-card-title>{{ product.product_name || price.product_code }}</v-card-title>
+      <v-card-title>{{ getPriceProductTitle(product, price) }}</v-card-title>
 
       <v-card-subtitle>
         <span v-if="product.brands">{{ product.brands }}</span>
@@ -51,6 +51,16 @@ export default {
     getPricePerKilo(priceValue, priceCurrency, productQuantity) {
       let pricePerKilo = (priceValue / productQuantity) * 1000
       return `${this.getPriceValueDisplay(pricePerKilo, priceCurrency)} / kg`
+    },
+    getPriceProductTitle(product, price) {
+      if (product && product.product_name) {
+        return product.product_name
+      } else if (price && price.product_code) {
+        return price.product_code
+      } else if (price && price.category_tag) {
+        return price.category_tag
+      }
+      return 'undefined'
     },
     getPriceLocationTitle(price) {
       if (price.location) {
