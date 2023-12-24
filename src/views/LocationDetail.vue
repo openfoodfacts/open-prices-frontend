@@ -14,11 +14,14 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0" v-if="location && location.osm_id">
-    <v-col cols="12" sm="6">
+  <v-row class="mt-0" v-if="location">
+    <v-col cols="12" sm="6" v-if="location.osm_id">
       <v-btn size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
         OpenStreetMap
       </v-btn>
+      <p v-if="!location.osm_id" class="text-red">
+        <i>Location not found in OpenStreetMap... Don't hesitate to add it :)</i>
+      </p>
     </v-col>
   </v-row>
 
