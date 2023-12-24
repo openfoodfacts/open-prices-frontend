@@ -30,9 +30,10 @@ function setValueToLocalStorageItem(itemKey, value) {
 
 function addObjectToLocalStorageItemArray(itemKey, obj, unshift=false, avoidDuplicates=true) {
   let itemJSON = getParsedLocalStorageItem(itemKey, [])
-  var existingItem = itemJSON.find(item => JSON.stringify(item) === JSON.stringify(obj))
-  if (avoidDuplicates && existingItem) {
-    return
+  // look for duplicate
+  var duplicateItem = itemJSON.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
+  if (avoidDuplicates && duplicateItem >= 0) {
+    itemJSON.splice(duplicateItem, 1)
   }
   // add obj to array
   if (unshift) {
