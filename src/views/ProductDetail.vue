@@ -10,11 +10,14 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0" v-if="product && product.code">
+  <v-row class="mt-0" v-if="product">
     <v-col cols="12" sm="6">
-      <v-btn v-if="product" size="small" append-icon="mdi-open-in-new" :href="getProductOFFUrl(product)" target="_blank">
+      <v-btn v-if="product.code && product.source" size="small" append-icon="mdi-open-in-new" :href="getProductOFFUrl(product)" target="_blank">
         Open Food Facts
       </v-btn>
+      <p v-if="!product.code || !product.source" class="text-red">
+        <i>Product not found in Open Food Facts... Don't hesitate to add it :)</i>
+      </p>
     </v-col>
   </v-row>
 
