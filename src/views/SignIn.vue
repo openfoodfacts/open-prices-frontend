@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import api from '../services/api'
 
 export default {
@@ -41,6 +43,7 @@ export default {
     };
   },
   computed: {
+    ...mapStores(useAppStore),
     formFilled() {
       return Object.values(this.signinForm).every(x => !!x)
     }
@@ -52,8 +55,7 @@ export default {
         .signIn(this.signinForm.username, this.signinForm.password)
         .then((data) => {
           if (data['access_token']) {
-            api.setUsernameCookie(this.signinForm.username)
-            api.setTokenCookie(data['access_token'])
+            this.appStore.signIn(this.signinForm.username, data['access_token'])
             this.$router.push({ path: '/add', query: { signinSuccess: 'true' } })
           } else {
             alert('Error: wrong credentials')

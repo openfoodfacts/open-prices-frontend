@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import api from './services/api';
+import { useAppStore } from './store'
 import Home from './views/Home.vue'
 import SignIn from './views/SignIn.vue'
 import UserDashboard from './views/UserDashboard.vue'
@@ -31,22 +31,14 @@ const router = createRouter({
 })
 
 /**
- * Method to check if the user is authenticated
- */
-const checkAuth = async () => {
-  if (api.getToken()) return true
-}
-
-/**
  * On each page change, check if it needs authentication.
- * If required, but the user is not authenticated (cookie not present), then redirect to 'sign-in'
+ * If required, but the user is not authenticated (token unknown), then redirect to 'sign-in'
  */
 router.beforeEach(async (to, from, next) => {
-  if(to.meta.requiresAuth) {
-      if(!(await checkAuth())) {
-        console.log("checkAuth")
-        return next({ name: 'sign-in' })
-      }
+  const store = useAppStore()
+  if(to.meta.requiresAuth && !store.user.token) {
+      console.log("checkAuth")
+      return next({ name: 'sign-in' })
   }
   next()
 })

@@ -1,9 +1,7 @@
-import { useCookies } from '@vueuse/integrations/useCookies'
+import { useAppStore } from '../store'
 
 const NOMINATIM_SEARCH_URL = 'https://nominatim.openstreetmap.org/search'
 const NOMINATIM_RESULT_TYPE_EXCLUDE_LIST = ['fuel', 'gas', 'casino']
-const USERNAME_COOKIE_KEY = 'username'
-const TOKEN_COOKIE_KEY = 'access_token'
 const RECENT_LOCATIONS_LOCAL_STORAGE_KEY = 'recent_locations'
 const LAST_CURRENCY_USED_LOCAL_STORAGE_KEY = 'last_currency_used'
 
@@ -57,35 +55,15 @@ export default {
     .then((response) => response.json())
   },
 
-  signOut() {
-    useCookies().remove(USERNAME_COOKIE_KEY)
-    useCookies().remove(TOKEN_COOKIE_KEY)
-  },
-
-  setUsernameCookie(username) {
-    useCookies().set(USERNAME_COOKIE_KEY, username)
-  },
-
-  setTokenCookie(token) {
-    useCookies().set(TOKEN_COOKIE_KEY, token)
-  },
-
-  getUsername() {
-    return useCookies().get(USERNAME_COOKIE_KEY)
-  },
-
-  getToken() {
-    return useCookies().get(TOKEN_COOKIE_KEY)
-  },
-
   createProof(proofImage) {
+    const store = useAppStore()
     let formData = new FormData()
     formData.append('file', proofImage, proofImage.name)
     formData.append('type', 'PRICE_TAG')
     return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.getToken()}`
+        'Authorization': `Bearer ${store.user.token}`
       },
       body: formData,
     })
@@ -93,11 +71,12 @@ export default {
   },
 
   createPrice(priceData) {
+    const store = useAppStore()
     return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.getToken()}`
+        'Authorization': `Bearer ${store.user.token}`
       },
       body: JSON.stringify(priceData),
     })
