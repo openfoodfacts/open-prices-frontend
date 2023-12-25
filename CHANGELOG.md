@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.3.1...v1.4.0) (2023-12-25)
+
+
+### Features
+
+* **user page:** new basic Dashboard ([#63](https://github.com/openfoodfacts/open-prices-frontend/issues/63)) ([fe6d730](https://github.com/openfoodfacts/open-prices-frontend/commit/fe6d7305e8757c5e832c6693b5751a1446063451))
+
 ## [1.3.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.3.0...v1.3.1) (2023-12-24)
 
 
