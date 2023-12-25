@@ -52,8 +52,7 @@ export default {
         .signIn(this.signinForm.username, this.signinForm.password)
         .then((data) => {
           if (data['access_token']) {
-            api.setUsernameCookie(this.signinForm.username)
-            api.setTokenCookie(data['access_token'])
+            api.setAuth(this.signinForm.username, data['access_token'])
             this.$router.push({ path: '/add', query: { signinSuccess: 'true' } })
           } else {
             alert('Error: wrong credentials')

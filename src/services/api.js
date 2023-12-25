@@ -2,8 +2,8 @@ import { useCookies } from '@vueuse/integrations/useCookies'
 
 const NOMINATIM_SEARCH_URL = 'https://nominatim.openstreetmap.org/search'
 const NOMINATIM_RESULT_TYPE_EXCLUDE_LIST = ['fuel', 'gas', 'casino']
-const USERNAME_COOKIE_KEY = 'username'
-const TOKEN_COOKIE_KEY = 'access_token'
+const USERNAME_LOCAL_STORAGE_KEY = 'username'
+const TOKEN_LOCAL_STORAGE_KEY = 'access_token'
 const RECENT_LOCATIONS_LOCAL_STORAGE_KEY = 'recent_locations'
 const LAST_CURRENCY_USED_LOCAL_STORAGE_KEY = 'last_currency_used'
 
@@ -57,25 +57,22 @@ export default {
     .then((response) => response.json())
   },
 
+  setAuth(username, token) {
+    setValueToLocalStorageItem(USERNAME_LOCAL_STORAGE_KEY, username)
+    setValueToLocalStorageItem(TOKEN_LOCAL_STORAGE_KEY, token)
+  },
+
   signOut() {
-    useCookies().remove(USERNAME_COOKIE_KEY)
-    useCookies().remove(TOKEN_COOKIE_KEY)
-  },
-
-  setUsernameCookie(username) {
-    useCookies().set(USERNAME_COOKIE_KEY, username)
-  },
-
-  setTokenCookie(token) {
-    useCookies().set(TOKEN_COOKIE_KEY, token)
+    clearLocalStorageItem(USERNAME_LOCAL_STORAGE_KEY, null)
+    clearLocalStorageItem(TOKEN_LOCAL_STORAGE_KEY, null)
   },
 
   getUsername() {
-    return useCookies().get(USERNAME_COOKIE_KEY)
+    return getParsedLocalStorageItem(USERNAME_LOCAL_STORAGE_KEY, null)
   },
 
   getToken() {
-    return useCookies().get(TOKEN_COOKIE_KEY)
+    return getParsedLocalStorageItem(TOKEN_LOCAL_STORAGE_KEY, null)
   },
 
   createProof(proofImage) {
