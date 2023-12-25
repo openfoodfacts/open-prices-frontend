@@ -25,7 +25,6 @@
 
 <script>
 import api from '../services/api'
-import { routes } from '../routes.js'
 
 export default {
   data() {
@@ -39,7 +38,7 @@ export default {
       return api.getUsername()
     },
     getDrawerMenuItems() {
-      return routes
+      return this.$router.options.routes
         .filter(r => r.meta && r.meta.drawerMenu)
         .filter(r => this.username ? r.meta.requiresAuth !== false : !r.meta.requiresAuth)
         .map((r => ({ title: r.meta.title, props: { 'prepend-icon': r.meta.icon, to: r.path }})))
