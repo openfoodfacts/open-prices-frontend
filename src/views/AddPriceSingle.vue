@@ -154,6 +154,8 @@
 
 <script>
 import Compressor from 'compressorjs'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import constants from '../constants'
 import api from '../services/api'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
@@ -179,7 +181,7 @@ export default {
         proof_id: null,
         product_code: '',
         price: null,
-        currency: api.getLastCurrencyUsed(),
+        currency: null,  // see initPriceSingleForm
         location_osm_id: null,
         location_osm_type: '',
         date: new Date().toISOString().substr(0, 10)
@@ -201,6 +203,7 @@ export default {
     };
   },
   computed: {
+    ...mapStores(useAppStore),
     proofFormFilled() {
       let keys = ['proof_id']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
@@ -221,9 +224,15 @@ export default {
       return Object.values(this.addPriceSingleForm).every(x => !!x)
     }
   },
+  mounted() {
+    this.initPriceSingleForm()
+  },
   methods: {
     fieldRequired(v) {
       return !!v
+    },
+    initPriceSingleForm() {
+      this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
     },
     clearProof() {
       this.proofImage = null
@@ -275,7 +284,6 @@ export default {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
           } else {
-            api.setLastCurrencyUsed(this.addPriceSingleForm.currency)
             this.$router.push({ path: '/add', query: { singleSuccess: 'true' } })
           }
           this.createPriceLoading = false

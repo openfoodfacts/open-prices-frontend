@@ -3,7 +3,6 @@ import { useAppStore } from '../store'
 const NOMINATIM_SEARCH_URL = 'https://nominatim.openstreetmap.org/search'
 const NOMINATIM_RESULT_TYPE_EXCLUDE_LIST = ['fuel', 'gas', 'casino']
 const RECENT_LOCATIONS_LOCAL_STORAGE_KEY = 'recent_locations'
-const LAST_CURRENCY_USED_LOCAL_STORAGE_KEY = 'last_currency_used'
 
 
 function getOrCreateLocalStorageItem(itemKey, defaultValue='') {
@@ -72,6 +71,7 @@ export default {
 
   createPrice(priceData) {
     const store = useAppStore()
+    store.user.last_currency_used = priceData.currency
     return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices`, {
       method: 'POST',
       headers: {
@@ -138,13 +138,5 @@ export default {
 
   clearRecentLocations() {
     clearLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, [])
-  },
-
-  getLastCurrencyUsed() {
-    return getParsedLocalStorageItem(LAST_CURRENCY_USED_LOCAL_STORAGE_KEY, 'EUR')  // TODO: init with user locale?
-  },
-
-  setLastCurrencyUsed(currency) {
-    return setValueToLocalStorageItem(LAST_CURRENCY_USED_LOCAL_STORAGE_KEY, currency)
   },
 }
