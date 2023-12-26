@@ -53,6 +53,7 @@
                 <v-icon end icon="mdi-barcode-scan"></v-icon>
               </v-chip>
             </h3>
+            <PriceCard v-if="product" :product="product" elevation="1"></PriceCard>
             <v-row v-if="dev">
               <v-col>
                 <v-text-field
@@ -66,8 +67,14 @@
                 ></v-text-field>
               </v-col>
             </v-row>
-            <p v-if="productFormFilled" class="text-green mb-2"><i>Product set! code: {{ addPriceSingleForm.product_code }}</i></p>
-            <p v-if="!productFormFilled" class="text-red mb-2"><i>Product missing</i></p>
+            <p v-if="productFormFilled" class="text-green mt-2 mb-2">
+              <i>
+                Product set!
+                <span v-if="dev || !product">code: {{ addPriceSingleForm.product_code }}</span>
+                <span v-if="!product">(not found in Open Food Facts)</span>
+              </i>
+            </p>
+            <p v-if="!productFormFilled" class="text-red mt-2 mb-2"><i>Product missing</i></p>
 
             <h3 class="mb-1">Price</h3>
             <v-row>
@@ -166,6 +173,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
 import api from '../services/api'
+import PriceCard from '../components/PriceCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import LocationSelector from '../components/LocationSelector.vue'
 
@@ -179,6 +187,7 @@ Compressor.setDefaults({
 
 export default {
   components: {
+    PriceCard,
     BarcodeScanner,
     LocationSelector
   },
@@ -202,6 +211,7 @@ export default {
       createProofLoading: false,
       proofSuccessMessage: false,
       // product data
+      product: null,
       barcodeScanner: false,
       // price data
       currencyList: constants.CURRENCY_LIST,
@@ -241,7 +251,6 @@ export default {
   },
   mounted() {
     this.initPriceSingleForm()
-    console.log(import.meta.env)
   },
   methods: {
     fieldRequired(v) {
@@ -313,8 +322,14 @@ export default {
     showBarcodeScanner() {
       this.barcodeScanner = true
     },
-    setProductCode(event) {
-      this.addPriceSingleForm.product_code = event
+    setProductCode(code) {
+      this.addPriceSingleForm.product_code = code
+      this.product = null
+      api
+        .openfoodfactsProductSearch(code)
+        .then((data) => {
+          this.product = data['product']
+        })
     },
     showLocationSelector() {
       this.locationSelector = true
@@ -322,11 +337,11 @@ export default {
     closeLocationSelector(event) {
       this.locationSelector = false
     },
-    setLocationData(event) {
-      this.appStore.addRecentLocation(event)
-      this.locationSelectedDisplayName = event.display_name
-      this.addPriceSingleForm.location_osm_id = event.osm_id
-      this.addPriceSingleForm.location_osm_type = event.osm_type.toUpperCase()
+    setLocationData(location) {
+      this.appStore.addRecentLocation(location)
+      this.locationSelectedDisplayName = location.display_name
+      this.addPriceSingleForm.location_osm_id = location.osm_id
+      this.addPriceSingleForm.location_osm_type = location.osm_type.toUpperCase()
     },
     isSelectedLocation(location) {
       return this.locationSelectedDisplayName && this.locationSelectedDisplayName == location.display_name
