@@ -197,7 +197,6 @@ export default {
       // price data
       currencyList: constants.CURRENCY_LIST,
       // location data
-      recentLocations: api.getRecentLocations(3),
       locationSelector: false,
       locationSelectedDisplayName: ''
     };
@@ -212,6 +211,9 @@ export default {
       let keys = ['product_code', 'price', 'currency']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
+    recentLocations() {
+      return this.appStore.getRecentLocations(3)
+    },
     locationFormFilled() {
       let keys = ['location_osm_id', 'location_osm_type']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
@@ -222,7 +224,7 @@ export default {
     },
     formFilled() {
       return Object.values(this.addPriceSingleForm).every(x => !!x)
-    }
+    },
   },
   mounted() {
     this.initPriceSingleForm()
@@ -305,12 +307,9 @@ export default {
     },
     closeLocationSelector(event) {
       this.locationSelector = false
-      setTimeout(() => {  // TODO: replace with store (make recentLocations reactive)
-        this.recentLocations = api.getRecentLocations(3)
-      }, 50)
     },
     setLocationData(event) {
-      api.addRecentLocation(event)
+      this.appStore.addRecentLocation(event)
       this.locationSelectedDisplayName = event.display_name
       this.addPriceSingleForm.location_osm_id = event.osm_id
       this.addPriceSingleForm.location_osm_type = event.osm_type.toUpperCase()

@@ -2,45 +2,6 @@ import { useAppStore } from '../store'
 
 const NOMINATIM_SEARCH_URL = 'https://nominatim.openstreetmap.org/search'
 const NOMINATIM_RESULT_TYPE_EXCLUDE_LIST = ['fuel', 'gas', 'casino']
-const RECENT_LOCATIONS_LOCAL_STORAGE_KEY = 'recent_locations'
-
-
-function getOrCreateLocalStorageItem(itemKey, defaultValue='') {
-  if (!localStorage.getItem(itemKey)) {
-      localStorage.setItem(itemKey, JSON.stringify(defaultValue))
-  }
-  return localStorage.getItem(itemKey)
-}
-
-function clearLocalStorageItem(itemKey, defaultValue='') {
-  return localStorage.setItem(itemKey, JSON.stringify(defaultValue))
-}
-
-function getParsedLocalStorageItem(itemKey, defaultValue='') {
-  let item = getOrCreateLocalStorageItem(itemKey, defaultValue)
-  return JSON.parse(item)
-}
-
-function setValueToLocalStorageItem(itemKey, value) {
-  return localStorage.setItem(itemKey, JSON.stringify(value))
-}
-
-function addObjectToLocalStorageItemArray(itemKey, obj, unshift=false, avoidDuplicates=true) {
-  let itemJSON = getParsedLocalStorageItem(itemKey, [])
-  // look for duplicate
-  var duplicateItem = itemJSON.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
-  if (avoidDuplicates && duplicateItem >= 0) {
-    itemJSON.splice(duplicateItem, 1)
-  }
-  // add obj to array
-  if (unshift) {
-    itemJSON.unshift(obj)
-  } else {
-    itemJSON.push(obj)
-  }
-  return localStorage.setItem(itemKey, JSON.stringify(itemJSON))
-}
-
 
 export default {
   signIn(username, password) {
@@ -122,21 +83,5 @@ export default {
     })
     .then((response) => response.json())
     .then((data) => data.filter(l => !NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
-  },
-
-  getRecentLocations(limit=null) {
-    let recentLocations = getParsedLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, [])
-    if (limit && recentLocations.length && recentLocations.length > limit) {
-      return recentLocations.slice(0, limit)
-    }
-    return recentLocations
-  },
-
-  addRecentLocation(location) {
-    return addObjectToLocalStorageItemArray(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, location, true)
-  },
-
-  clearRecentLocations() {
-    clearLocalStorageItem(RECENT_LOCATIONS_LOCAL_STORAGE_KEY, [])
   },
 }

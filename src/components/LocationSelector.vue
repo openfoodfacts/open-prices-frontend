@@ -85,8 +85,10 @@
 </template>
 
 <script>
-import "leaflet/dist/leaflet.css"
-import { LMap, LTileLayer, LMarker, LPopup } from "@vue-leaflet/vue-leaflet"
+import 'leaflet/dist/leaflet.css'
+import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import api from '../services/api'
 
 export default {
@@ -104,7 +106,6 @@ export default {
       },
       loading: false,
       results: null,
-      recentLocations: api.getRecentLocations(),
       // map
       map: null,
       mapZoom: 5,
@@ -113,12 +114,13 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     formFilled() {
       return Object.values(this.locationSearchForm).every(x => !!x)
     },
-    // recentLocations() {  // TODO: make reactive
-    //   return api.getRecentLocations()
-    // },
+    recentLocations() {
+      return this.appStore.getRecentLocations()
+    },
   },
   methods: {
     fieldRequired(v) {
@@ -166,11 +168,10 @@ export default {
       return locationTitle
     },
     clearRecentLocations() {
-      api.clearRecentLocations()
-      this.recentLocations = []
+      this.appStore.clearRecentLocations()
     },
     selectLocation(location) {
-      api.addRecentLocation(location)
+      this.appStore.addRecentLocation(location)
       this.$emit('location', location)
       this.close()
     },
