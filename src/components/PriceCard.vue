@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-card-item v-if="product" @click="goToProduct(product.id)">
+    <v-card-item @click="goToProduct()">
       <template v-slot:prepend>
         <v-avatar rounded="0">
           <v-img v-if="product && product.image_url" :src="product.image_url"></v-img>
@@ -8,12 +8,12 @@
         </v-avatar>
       </template>
 
-      <v-card-title>{{ getPriceProductTitle(product, price) }}</v-card-title>
+      <v-card-title>{{ getPriceProductTitle() }}</v-card-title>
 
       <v-card-subtitle>
-        <span v-if="product.brands">{{ product.brands }}</span>
-        <span v-if="product.brands && product.product_quantity"> · </span>
-        <span v-if="product.product_quantity">{{ product.product_quantity }} g</span>
+        <span v-if="hasProductBrands">{{ product.brands }}</span>
+        <span v-if="hasProductBrands && hasProductQuantity"> · </span>
+        <span v-if="hasProductQuantity">{{ product.product_quantity }} g</span>
         <span v-if="!price && (product.brands || product.product_quantity)"> · </span>
         <span v-if="!price">{{ product.code }}</span>
       </v-card-subtitle>
@@ -21,10 +21,10 @@
     </v-card-item>
 
     <v-card-text v-if="price">
-      <span>{{ getPriceValueDisplay(price.price, price.currency) }}</span>
-      <span v-if="product && product.product_quantity"> ({{  getPricePerKilo(price.price, price.currency, product.product_quantity) }})</span>
+      <span>{{ getPriceValueDisplay() }}</span>
+      <span v-if="(hasProductQuantity)"> ({{  getPricePerKilo() }})</span>
       <span> · </span>
-      <span @click="goToLocation(price.location_id)">{{ getPriceLocationTitle(price) }}</span>
+      <span @click="goToLocation()">{{ getPriceLocationTitle() }}</span>
       <span> · </span>
       <span>{{ price.date }}</span>
     </v-card-text>
@@ -32,6 +32,16 @@
 </template>
 
 <script>
+// Import category tags static JSON file
+import CategoryTags from '../data/category-tags.json';
+
+// Transform category tags array into an object with 'id' as key
+const CategoryTagsByIndex = CategoryTags.reduce((acc, tag) => {
+  acc[tag.id] = tag;
+  return acc;
+}, {});
+
+
 export default {
   props: ['price', 'product'],
   data() {
@@ -40,7 +50,7 @@ export default {
     }
   },
   methods: {
-    getPriceValueDisplay(priceValue, priceCurrency) {
+    getPriceValue(priceValue, priceCurrency) {
       return priceValue.toLocaleString(navigator.language, {
         style: 'currency',
         currency: priceCurrency,
@@ -48,31 +58,70 @@ export default {
         maximumFractionDigits: 2
       })
     },
-    getPricePerKilo(priceValue, priceCurrency, productQuantity) {
-      let pricePerKilo = (priceValue / productQuantity) * 1000
-      return `${this.getPriceValueDisplay(pricePerKilo, priceCurrency)} / kg`
+    getPriceValueDisplay() {
+      if (this.hasCategoryTag) {
+        return `${this.getPriceValue(this.priceValue, this.priceCurrency)} / kg`
+      }
+      return this.getPriceValue(this.priceValue, this.priceCurrency);
     },
-    getPriceProductTitle(product, price) {
-      if (product && product.product_name) {
-        return product.product_name
-      } else if (price && price.product_code) {
-        return price.product_code
-      } else if (price && price.category_tag) {
-        return price.category_tag
+    getPricePerKilo() {
+      const productQuantity = this.price.product.product_quantity;
+      let pricePerKilo = (this.priceValue / productQuantity) * 1000
+      return `${this.getPriceValue(pricePerKilo, this.priceCurrency)} / kg`
+    },
+    getPriceProductTitle() {
+      if (this.hasProduct && this.product.product_name) {
+        return this.product.product_name
+      } else if (this.hasPrice && this.price.product_code) {
+        return this.price.product_code
+      } else if (this.hasPrice && this.hasCategoryTag) {
+        return this.getCategoryName(this.price.category_tag)
       }
       return 'undefined'
     },
-    getPriceLocationTitle(price) {
-      if (price.location) {
-        return `${price.location.osm_name}, ${price.location.osm_address_city}`
+    getPriceLocationTitle() {
+      if (this.price.location) {
+        return `${this.price.location.osm_name}, ${this.price.location.osm_address_city}`
       }
-      return price.location_id
+      return this.price.location_id
     },
-    goToProduct(productId) {
-      this.$router.push({ path: `/products/${productId}` })
+    goToProduct() {
+      if (!this.hasProduct) {
+        return
+      }
+      this.$router.push({ path: `/products/${this.product.id}` })
     },
-    goToLocation(locationId) {
-      this.$router.push({ path: `/locations/${locationId}` })
+    goToLocation() {
+      this.$router.push({ path: `/locations/${this.price.location_id}` })
+    },
+    getCategoryName(categoryTag) {
+      return CategoryTagsByIndex[categoryTag].name;
+    }
+  },
+  computed: {
+    priceValue() {
+      return this.price.price
+    },
+    priceCurrency() {
+      return this.price.currency
+    },
+    categoryTag() {
+      return this.price.category_tag
+    },
+    hasProduct() {
+      return !!this.product
+    },
+    hasPrice() {
+      return !!this.price
+    },
+    hasCategoryTag() {
+      return !!this.categoryTag
+    },
+    hasProductQuantity() {
+      return this.hasProduct && !!this.product.product_quantity
+    },
+    hasProductBrands() {
+      return this.hasProduct && !!this.product.brands
     }
   }
 }

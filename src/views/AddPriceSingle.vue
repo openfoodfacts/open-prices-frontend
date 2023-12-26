@@ -58,15 +58,32 @@
             <PriceCard v-if="product" :product="product" elevation="1"></PriceCard>
             <v-row v-if="dev">
               <v-col>
-                <v-text-field
-                  :prepend-inner-icon="productFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
-                  v-model="addPriceSingleForm.product_code"
-                  label="Product code"
-                  type="text"
-                  hint="EAN 13"
-                  :rules="[fieldRequired]"
-                  required
-                ></v-text-field>
+                <v-tabs
+                  :fixed-tabs="true"
+                  v-model="productTab">
+                  <v-tab value="barcode">By barcode</v-tab>
+                  <v-tab value="category">By category</v-tab>
+                </v-tabs>
+                <v-window v-model="productTab" style="padding-top: 0.5rem;">
+                  <v-window-item value="barcode">
+                    <v-btn variant="outlined" size="small" @click="showBarcodeScanner">Scan a barcode 🔎</v-btn>
+                    <v-text-field
+                      v-model="addPriceSingleForm.product_code"
+                      label="Product code"
+                      type="text"
+                      hint="EAN"
+                    ></v-text-field>
+                  </v-window-item>
+                <v-window-item value="category">
+                  <v-autocomplete
+                    v-model="addPriceSingleForm.category_tag"
+                    label="Category"
+                    :items="categoryTags"
+                    :item-title="item => item.name"
+                    :item-value="item => item.id"
+                  ></v-autocomplete>
+                </v-window-item>
+              </v-window>
               </v-col>
             </v-row>
             <p v-if="productFormFilled" class="text-green mt-2 mb-2">
@@ -79,6 +96,7 @@
             <p v-if="!productFormFilled" class="text-red mt-2 mb-2"><i>Product missing</i></p>
 
             <h3 class="mb-1">Price</h3>
+            <p v-if="productTab == 'category'" class="mt-2 mb-2"><i>The price per kg should be provided</i></p>
             <v-row>
               <v-col cols="6">
                 <v-text-field
@@ -177,6 +195,9 @@ import PriceCard from '../components/PriceCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import LocationSelector from '../components/LocationSelector.vue'
 
+// Import category tags static JSON file
+import CategoryTags from '../data/category-tags.json'
+
 Compressor.setDefaults({
   checkOrientation: true,  // default
   retainExif: true,
@@ -198,6 +219,7 @@ export default {
       addPriceSingleForm: {
         proof_id: null,
         product_code: '',
+        category_tag: null,
         price: null,
         currency: null,  // see initPriceSingleForm
         location_osm_id: null,
@@ -217,7 +239,11 @@ export default {
       currencyList: constants.CURRENCY_LIST,
       // location data
       locationSelector: false,
-      locationSelectedDisplayName: ''
+      locationSelectedDisplayName: '',
+      // used to display barcode/category tabs
+      productTab: null,
+      // list of category tags for autocomplete
+      categoryTags: CategoryTags,
     };
   },
   computed: {
@@ -231,8 +257,7 @@ export default {
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     productPriceFormFilled() {
-      let keys = ['product_code', 'price', 'currency']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+      return (!!this.addPriceSingleForm.category_tag || !!this.addPriceSingleForm.product_code) && !!this.addPriceSingleForm.price && !!this.addPriceSingleForm.currency;
     },
     recentLocations() {
       return this.appStore.getRecentLocations(3)
@@ -246,7 +271,7 @@ export default {
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     formFilled() {
-      return Object.values(this.addPriceSingleForm).every(x => !!x)
+      return this.proofFormFilled && this.productPriceFormFilled && this.locationDateFormFilled;
     },
   },
   mounted() {
@@ -303,6 +328,10 @@ export default {
     },
     createPrice() {
       this.createPriceLoading = true
+      if (!this.addPriceSingleForm.product_code) {
+        // if product_code is an empty string, set it to null
+        this.addPriceSingleForm.product_code = null;
+      }
       api
         .createPrice(this.addPriceSingleForm)
         .then((data) => {
@@ -346,6 +375,13 @@ export default {
     isSelectedLocation(location) {
       return this.locationSelectedDisplayName && this.locationSelectedDisplayName == location.display_name
     },
+  },
+  watch: {
+    productTab() {
+      // reset product_code and category_tag when switching tabs
+      this.addPriceSingleForm.product_code = ""
+      this.addPriceSingleForm.category_tag = null
+    }
   }
 }
 </script>
