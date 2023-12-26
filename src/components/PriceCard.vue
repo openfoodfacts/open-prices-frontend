@@ -33,20 +33,49 @@
 
 <script>
 // Import category tags static JSON file
-import CategoryTags from '../data/category-tags.json';
+import CategoryTags from '../data/category-tags.json'
 
 // Transform category tags array into an object with 'id' as key
 const CategoryTagsByIndex = CategoryTags.reduce((acc, tag) => {
-  acc[tag.id] = tag;
-  return acc;
-}, {});
+  acc[tag.id] = tag
+  return acc
+}, {})
 
 
 export default {
-  props: ['price', 'product'],
+  props: [
+    'price',
+    'product'
+  ],
   data() {
     return {
       defaultAvatar: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg'
+    }
+  },
+  computed: {
+    priceValue() {
+      return this.price.price
+    },
+    priceCurrency() {
+      return this.price.currency
+    },
+    categoryTag() {
+      return this.price.category_tag
+    },
+    hasProduct() {
+      return !!this.product
+    },
+    hasPrice() {
+      return !!this.price
+    },
+    hasCategoryTag() {
+      return !!this.categoryTag
+    },
+    hasProductQuantity() {
+      return this.hasProduct && !!this.product.product_quantity
+    },
+    hasProductBrands() {
+      return this.hasProduct && !!this.product.brands
     }
   },
   methods: {
@@ -62,10 +91,10 @@ export default {
       if (this.hasCategoryTag) {
         return `${this.getPriceValue(this.priceValue, this.priceCurrency)} / kg`
       }
-      return this.getPriceValue(this.priceValue, this.priceCurrency);
+      return this.getPriceValue(this.priceValue, this.priceCurrency)
     },
     getPricePerKilo() {
-      const productQuantity = this.price.product.product_quantity;
+      const productQuantity = this.price.product.product_quantity
       let pricePerKilo = (this.priceValue / productQuantity) * 1000
       return `${this.getPriceValue(pricePerKilo, this.priceCurrency)} / kg`
     },
@@ -95,34 +124,8 @@ export default {
       this.$router.push({ path: `/locations/${this.price.location_id}` })
     },
     getCategoryName(categoryTag) {
-      return CategoryTagsByIndex[categoryTag].name;
+      return CategoryTagsByIndex[categoryTag].name
     }
   },
-  computed: {
-    priceValue() {
-      return this.price.price
-    },
-    priceCurrency() {
-      return this.price.currency
-    },
-    categoryTag() {
-      return this.price.category_tag
-    },
-    hasProduct() {
-      return !!this.product
-    },
-    hasPrice() {
-      return !!this.price
-    },
-    hasCategoryTag() {
-      return !!this.categoryTag
-    },
-    hasProductQuantity() {
-      return this.hasProduct && !!this.product.product_quantity
-    },
-    hasProductBrands() {
-      return this.hasProduct && !!this.product.brands
-    }
-  }
 }
 </script>
