@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.5.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.4.0...v1.5.0) (2023-12-26)
+
+
+### Features
+
+* clicking on header goes to home page ([764357a](https://github.com/openfoodfacts/open-prices-frontend/commit/764357af575bf263ba47b2438f68aa4eb95aa9ec))
+* **price create form:** change proof upload icons (camera) ([137cec0](https://github.com/openfoodfacts/open-prices-frontend/commit/137cec0308fc0ebfec63d312e782a8d8ea2f7f5d))
+
+
+### Bug Fixes
+
+* rename Last to Latest (prices) ([8632b8e](https://github.com/openfoodfacts/open-prices-frontend/commit/8632b8e33ace1982a479d41820594962d2740e3f))
+
+
+### Technical
+
+* continue replacing current localStorage usage with new store ([#71](https://github.com/openfoodfacts/open-prices-frontend/issues/71)) ([2bbdd3c](https://github.com/openfoodfacts/open-prices-frontend/commit/2bbdd3cfacdb0747f2aef84655bb0dd67e511f67))
+* move router config to router.js ([8aa6c05](https://github.com/openfoodfacts/open-prices-frontend/commit/8aa6c0543bf2d5891e4a5c23ee9371e853e5d4e2))
+* persist store to localstorage ([#70](https://github.com/openfoodfacts/open-prices-frontend/issues/70)) ([9b44534](https://github.com/openfoodfacts/open-prices-frontend/commit/9b44534f5c3b4bff560860cf3d0f9c44de876ae3))
+* replace cookie storage with a store (pinia) ([#69](https://github.com/openfoodfacts/open-prices-frontend/issues/69)) ([39ffc25](https://github.com/openfoodfacts/open-prices-frontend/commit/39ffc25090e82ec817cc5cf93b8202e41e45e585))
+
 ## [1.4.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.3.1...v1.4.0) (2023-12-25)
 
 
