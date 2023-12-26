@@ -17,7 +17,7 @@
                 <v-file-input
                   class="overflow-hidden"
                   prepend-icon=""
-                  :prepend-inner-icon="proofFormFilled ? 'mdi-paperclip' : 'mdi-plus'"
+                  :prepend-inner-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
                   label="Picture of the price tag"
                   v-model="proofImage"
                   capture="environment"
