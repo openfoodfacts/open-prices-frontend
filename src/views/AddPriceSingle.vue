@@ -7,7 +7,7 @@
         <v-card
           title="Take a picture of the price tag"
           subtitle="We need this for proof"
-          prepend-icon="mdi-numeric-1-circle-outline"
+          :prepend-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
           height="100%"
           :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
@@ -41,18 +41,22 @@
         <v-card
           title="Product & price details"
           subtitle="The most important :)"
-          prepend-icon="mdi-numeric-2-circle-outline"
+          :prepend-icon="productPriceFormFilled ? 'mdi-tag-check-outline' : 'mdi-tag-outline'"
           height="100%"
           :style="productPriceFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
             <h3 class="mb-1">
-              🏷 Product
-              <v-btn variant="outlined" size="small" @click="showBarcodeScanner">Scan a barcode 🔎</v-btn>
+              Product
+              <v-chip variant="outlined" size="small" @click="showBarcodeScanner">
+                Scan a barcode
+                <v-icon end icon="mdi-barcode-scan"></v-icon>
+              </v-chip>
             </h3>
-            <v-row>
+            <v-row v-if="dev">
               <v-col>
                 <v-text-field
+                  :prepend-inner-icon="productFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
                   v-model="addPriceSingleForm.product_code"
                   label="Product code"
                   type="text"
@@ -62,8 +66,10 @@
                 ></v-text-field>
               </v-col>
             </v-row>
+            <p v-if="productFormFilled" class="text-green mb-2"><i>Product set! code: {{ addPriceSingleForm.product_code }}</i></p>
+            <p v-if="!productFormFilled" class="text-red mb-2"><i>Product missing</i></p>
 
-            <h3 class="mb-1">💲 Price</h3>
+            <h3 class="mb-1">Price</h3>
             <v-row>
               <v-col cols="6">
                 <v-text-field
@@ -87,13 +93,19 @@
       <v-col cols="12" md="6" lg="4">
         <v-card
           title="Where & when?"
-          subtitle="Almost there!"
-          prepend-icon="mdi-numeric-3-circle-outline"
+          subtitle="Final step!"
+          :prepend-icon="locationDateFormFilled ? 'mdi-map-marker-check-outline' : 'mdi-map-marker-outline'"
           height="100%"
           :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
-            <h3 class="mb-1">🌍 Location</h3>
+            <h3 class="mb-1">
+              Location
+              <v-chip variant="outlined" size="small" @click="showLocationSelector">
+                Find
+                <v-icon end icon="mdi-magnify"></v-icon>
+              </v-chip>
+            </h3>
             <div class="d-flex flex-wrap ga-2">
               <v-chip
                 v-for="location in recentLocations"
@@ -102,14 +114,10 @@
                 <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
                 {{ location.display_name }}
               </v-chip>
-              <v-chip variant="outlined" size="small" @click="showLocationSelector">
-                Find
-                <v-icon end icon="mdi-magnify"></v-icon>
-              </v-chip>
             </div>
             <p v-if="!locationFormFilled" class="text-red mt-2 mb-2"><i>Select your location</i></p>
 
-            <h3 class="mt-4 mb-1">📅 Date</h3>
+            <h3 class="mt-4 mb-1">Date</h3>
             <v-row>
               <v-col>
                 <v-text-field
@@ -176,6 +184,7 @@ export default {
   },
   data() {
     return {
+      dev: import.meta.env.DEV,
       // price form
       addPriceSingleForm: {
         proof_id: null,
@@ -207,6 +216,10 @@ export default {
       let keys = ['proof_id']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
+    productFormFilled() {
+      let keys = ['product_code']
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
     productPriceFormFilled() {
       let keys = ['product_code', 'price', 'currency']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
@@ -228,6 +241,7 @@ export default {
   },
   mounted() {
     this.initPriceSingleForm()
+    console.log(import.meta.env)
   },
   methods: {
     fieldRequired(v) {
