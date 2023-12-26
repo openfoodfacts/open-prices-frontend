@@ -17,5 +17,9 @@ export const useAppStore = defineStore('app', {
       this.user.username = null
       this.user.token = null
     }
+  },
+  // pinia-plugin-persistedstate
+  persist: {
+    storage: localStorage
   }
 })
