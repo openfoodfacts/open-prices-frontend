@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.5.0...v1.6.0) (2023-12-26)
+
+
+### Features
+
+* **price create form:** improve wording and layout. hide barcode field in non-dev ([88107db](https://github.com/openfoodfacts/open-prices-frontend/commit/88107db03a047fe5a649a5e586754bc4a82a2bfe))
+* **price create form:** on barcode scan, fetch product details from OFF ([#73](https://github.com/openfoodfacts/open-prices-frontend/issues/73)) ([923adeb](https://github.com/openfoodfacts/open-prices-frontend/commit/923adeb960639ae9f12dc2800a5c2e0fae89dccf))
+
 ## [1.5.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.4.0...v1.5.0) (2023-12-26)
 
 
