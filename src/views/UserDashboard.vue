@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import api from '../services/api'
 import PriceCard from '../components/PriceCard.vue'
 
@@ -40,8 +42,9 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     username() {
-      return api.getUsername()
+      return this.appStore.user.username
     },
   },
   mounted() {

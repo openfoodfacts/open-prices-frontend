@@ -24,7 +24,8 @@
 </template>
 
 <script>
-import api from '../services/api'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 
 export default {
   data() {
@@ -34,8 +35,9 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     username() {
-      return api.getUsername()
+      return this.appStore.user.username
     },
     getDrawerMenuItems() {
       return this.$router.options.routes
@@ -46,7 +48,7 @@ export default {
   },
   methods: {
     signOut() {
-      api.signOut()
+      this.appStore.signOut()
       this.$router.push({ path: '/' })
     }
   },

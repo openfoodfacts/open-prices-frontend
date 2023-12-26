@@ -15,6 +15,7 @@
     "compressorjs": "^1.2.1",
     "html5-qrcode": "^2.3.8",
     "leaflet": "^1.9.4",
+    "pinia": "^2.1.7",
     "universal-cookie": "^6.1.1",
     "vue": "^3.3.9",
     "vue-router": "^4.2.5",
