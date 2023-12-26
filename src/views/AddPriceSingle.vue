@@ -20,9 +20,7 @@
                 <v-file-input
                   class="overflow-hidden d-none"
                   ref="proof"
-                  prepend-icon=""
-                  :prepend-inner-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
-                  label="Picture of the price tag"
+                  :prepend-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
                   v-model="proofImage"
                   capture="environment"
                   accept="image/*"
@@ -62,40 +60,32 @@
                 </v-item>
               </v-item-group>
             </h3>
-            <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showBarcodeScanner">Scan a barcode</v-btn>
-            <PriceCard v-if="product" :product="product" elevation="1"></PriceCard>
-            <v-row v-if="dev">
-              <v-col>
-                <div v-if="productMode == 'barcode'">
-                  <v-btn variant="outlined" size="small" @click="showBarcodeScanner">Scan a barcode 🔎</v-btn>
-                  <v-text-field
-                    v-model="addPriceSingleForm.product_code"
-                    label="Product code"
-                    type="text"
-                    hint="EAN"
-                  ></v-text-field>
-                </div>
-                <div v-if="productMode == 'category'">
-                  <v-autocomplete
-                    v-model="addPriceSingleForm.category_tag"
-                    label="Category"
-                    :items="categoryTags"
-                    :item-title="item => item.name"
-                    :item-value="item => item.id"
-                  ></v-autocomplete>
-                </div>
-              </v-col>
-            </v-row>
-            <p v-if="productFormFilled" class="text-green mt-2 mb-2">
-              <i>
-                Product set!
-                <span v-if="dev || !product">code: {{ addPriceSingleForm.product_code }}</span>
-                <span v-if="!product">(not found in Open Food Facts)</span>
-              </i>
-            </p>
-            <p v-if="!productFormFilled" class="text-red mt-2 mb-2"><i>Product missing</i></p>
+            <v-sheet v-if="productMode === 'barcode'">
+              <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showBarcodeScanner">Scan a barcode</v-btn>
+              <v-text-field
+                v-if="dev"
+                :prepend-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
+                v-model="addPriceSingleForm.product_code"
+                label="Product code"
+                type="text"
+                hint="EAN"
+                @click:prepend="showBarcodeScanner"
+              ></v-text-field>
+              <PriceCard v-if="product" class="mb-4" :product="product" elevation="1"></PriceCard>
+            </v-sheet>
+            <v-sheet v-if="productMode === 'category'">
+              <v-autocomplete
+                :prepend-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
+                v-model="addPriceSingleForm.category_tag"
+                label="Category"
+                :items="categoryTags"
+                :item-title="item => item.name"
+                :item-value="item => item.id"
+              ></v-autocomplete>
+            </v-sheet>
+            <p v-if="(productMode === 'barcode' && !productBarcodeFormFilled) || (productMode === 'category' && !productCategoryFormFilled)" class="text-red mb-2"><i>Set a product</i></p>
 
-            <h3 class="mb-1">Price <span v-if="productMode == 'category'">per kg</span></h3>
+            <h3 class="mb-1">Price <span v-if="productMode === 'category'">per kg</span></h3>
             <v-row>
               <v-col cols="6">
                 <v-text-field
@@ -233,7 +223,7 @@ export default {
       proofSuccessMessage: false,
       // product data
       product: null,
-      productMode: 'barcode',  // 'category'
+      productMode: null,  // 'barcode' or 'category'  // see initPriceSingleForm
       categoryTags: CategoryTags,  // list of category tags for autocomplete
       barcodeScanner: false,
       // price data
@@ -249,12 +239,16 @@ export default {
       let keys = ['proof_id']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
-    productFormFilled() {
+    productBarcodeFormFilled() {
       let keys = ['product_code']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
+    productCategoryFormFilled() {
+      let keys = ['category_tag']
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
     productPriceFormFilled() {
-      return (!!this.addPriceSingleForm.category_tag || !!this.addPriceSingleForm.product_code) && !!this.addPriceSingleForm.price && !!this.addPriceSingleForm.currency
+      return (this.productBarcodeFormFilled || this.productCategoryFormFilled) && !!this.addPriceSingleForm.price && !!this.addPriceSingleForm.currency
     },
     recentLocations() {
       return this.appStore.getRecentLocations(3)
@@ -279,6 +273,7 @@ export default {
       return !!v
     },
     initPriceSingleForm() {
+      this.productMode = this.appStore.user.last_product_mode_used
       this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
     },
     clearProof() {
@@ -354,7 +349,10 @@ export default {
       api
         .openfoodfactsProductSearch(code)
         .then((data) => {
-          this.product = data['product']
+          this.product = data['product'] || {'code': code}
+        })
+        .catch((error) => {
+          alert("Error: Open Food Facts server error")
         })
     },
     showLocationSelector() {
@@ -370,7 +368,7 @@ export default {
       this.addPriceSingleForm.location_osm_type = location.osm_type.toUpperCase()
     },
     isSelectedLocation(location) {
-      return this.locationSelectedDisplayName && this.locationSelectedDisplayName == location.display_name
+      return this.locationSelectedDisplayName && this.locationSelectedDisplayName === location.display_name
     },
   },
   watch: {

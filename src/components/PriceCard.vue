@@ -106,7 +106,7 @@ export default {
       } else if (this.hasPrice && this.hasCategoryTag) {
         return this.getCategoryName(this.price.category_tag)
       }
-      return 'undefined'
+      return 'unknown'
     },
     getPriceLocationTitle() {
       if (this.price.location) {
