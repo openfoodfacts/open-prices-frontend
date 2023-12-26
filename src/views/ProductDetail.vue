@@ -24,7 +24,7 @@
   <br />
 
   <h2 class="mb-1">
-    Last prices
+    Latest prices
     <small>{{ productPriceCount }}</small>
   </h2>
 

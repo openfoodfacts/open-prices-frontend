@@ -1,6 +1,6 @@
 <template>
   <h1 class="mb-1">
-    Last prices
+    Latest prices
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h1>
 
