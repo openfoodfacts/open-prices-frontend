@@ -17,11 +17,13 @@
     <small>{{ userPriceCount }}</small>
   </h2>
 
-  <v-row>
-    <v-col cols="12" sm="6" md="4" v-for="price in userPriceList" :key="price">
-      <PriceCard :price="price" :product="price.product" elevation="1" height="100%"></PriceCard>
-    </v-col>
-  </v-row>
+  <v-infinite-scroll :items="userPriceList" @Load="getUserPrices">
+    <v-row>
+      <v-col cols="12" sm="6" md="4" v-for="price in userPriceList" :key="price">
+        <PriceCard :price="price" :product="price.product" elevation="1" height="100%"></PriceCard>
+      </v-col>
+    </v-row>
+  </v-infinite-scroll>
 </template>
 
 <script>
@@ -53,7 +55,8 @@ export default {
   methods: {
     getUserPrices() {
       this.loading = true
-      return api.getPrices({ owner: this.username, order_by: '-created' })
+      const page = this.userPriceList.length ? (Math.ceil(this.userPriceList.length / 10) + 1) : null
+      return api.getPrices({ owner: this.username, size: 10, page: page, order_by: '-created' })
         .then((data) => {
           this.userPriceList = data.items
           this.userPriceCount = data.total
