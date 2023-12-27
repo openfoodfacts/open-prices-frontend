@@ -3,6 +3,8 @@
 
   <v-form @submit.prevent="createPrice">
     <v-row>
+
+      <!-- Step 1: proof -->
       <v-col cols="12" md="6" lg="4">
         <v-card
           title="Take a picture of the price tag"
@@ -14,8 +16,10 @@
           <v-card-text>
             <v-row>
               <v-col>
+                <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click.prevent="$refs.proof.click()" :loading="createProofLoading" :disabled="createProofLoading">Proof</v-btn>
                 <v-file-input
-                  class="overflow-hidden"
+                  class="overflow-hidden d-none"
+                  ref="proof"
                   prepend-icon=""
                   :prepend-inner-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
                   label="Picture of the price tag"
@@ -26,8 +30,8 @@
                   @click:clear="clearProof"
                   :loading="createProofLoading">
                 </v-file-input>
-                <p v-if="proofFormFilled && !createProofLoading" class="text-green"><i>Proof uploaded!</i></p>
-                <p v-if="!proofFormFilled && !createProofLoading" class="text-red"><i>Upload a proof</i></p>
+                <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2"><i>Proof uploaded!</i></p>
+                <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2"><i>Upload a proof</i></p>
               </v-col>
               <v-col v-if="proofFormFilled">
                 <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
@@ -37,6 +41,7 @@
         </v-card>
       </v-col>
 
+      <!-- Step 2: product & price -->
       <v-col cols="12" md="6" lg="4">
         <v-card
           title="Product & price details"
@@ -48,11 +53,8 @@
           <v-card-text>
             <h3 class="mb-1">
               Product
-              <v-chip variant="outlined" size="small" @click="showBarcodeScanner">
-                Scan a barcode
-                <v-icon end icon="mdi-barcode-scan"></v-icon>
-              </v-chip>
             </h3>
+            <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showBarcodeScanner">Scan a barcode</v-btn>
             <PriceCard v-if="product" :product="product" elevation="1"></PriceCard>
             <v-row v-if="dev">
               <v-col>
@@ -97,6 +99,7 @@
         </v-card>
       </v-col>
 
+      <!-- Step 3: location & date -->
       <v-col cols="12" md="6" lg="4">
         <v-card
           title="Where & when?"
@@ -108,11 +111,8 @@
           <v-card-text>
             <h3 class="mb-1">
               Location
-              <v-chip variant="outlined" size="small" @click="showLocationSelector">
-                Find
-                <v-icon end icon="mdi-magnify"></v-icon>
-              </v-chip>
             </h3>
+            <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showLocationSelector">Find</v-btn>
             <div class="d-flex flex-wrap ga-2">
               <v-chip
                 v-for="location in recentLocations"
