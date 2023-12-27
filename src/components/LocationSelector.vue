@@ -12,13 +12,13 @@
         <v-form @submit.prevent="search">
           <v-text-field
             v-model="locationSearchForm.q"
-            label="Search for a place..."
+            label="Search by name and city"
             type="text"
+            append-inner-icon="mdi-magnify"
+            @click:append-inner="search"
             :rules="[fieldRequired]"
+            :loading="loading"
             required>
-            <template v-slot:append>
-              <v-btn type="submit" :loading="loading" :disabled="!formFilled">Search</v-btn>
-            </template>
           </v-text-field>
         </v-form>
       </v-card-text>
@@ -33,10 +33,14 @@
               <v-card
                 v-for="location in results"
                 elevation="1"
+                width="100%"
                 @click="selectLocation(location)"
               >
-                <v-card-title>{{ getNominatimLocationTitle(location) }}</v-card-title>
-                <v-card-text>{{ location.display_name }} <strong>[{{ location.type }}]</strong></v-card-text>
+                <v-card-text>
+                  <h4>{{ getNominatimLocationTitle(location) }}</h4>
+                  {{ getNominatimLocationDetails(location, true) }}<br />
+                  <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
+                </v-card-text>
               </v-card>
             </div>
           </v-col>
@@ -45,8 +49,9 @@
               <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
               <l-marker v-for="location in results" :lat-lng="[location.lat, location.lon]">
                 <l-popup>
-                  {{ getNominatimLocationTitle(location, true) }}<br />
-                  <strong>[{{ location.type }}]</strong>
+                  <h4>{{ getNominatimLocationTitle(location) }}</h4>
+                  {{ getNominatimLocationDetails(location, true) }}<br />
+                  <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
                 </l-popup>
               </l-marker>
             </l-map>
@@ -152,20 +157,25 @@ export default {
         }
       })
     },
+    getNominatimLocationTitle(location) {
+      return location.name
+    },
     getNominatimLocationCity(location) {
       if (location.address) {
         return location.address.village || location.address.town || location.address.city || location.address.municipality
       }
     },
-    getNominatimLocationTitle(location, withRoad=false) {
-      let locationTitle = location.name
+    getNominatimLocationDetails(location, withRoad=false) {
+      let locationDetails = ''
       if (location.address) {
         if (withRoad) {
-          locationTitle += `, ${location.address.road}`
+          locationDetails += location.address.house_number ? `${location.address.house_number} ` : ''
+          locationDetails += location.address.road || ''
         }
-        locationTitle += `, ${this.getNominatimLocationCity(location)}`
+        locationDetails += locationDetails.length ? ', ' : ''
+        locationDetails += this.getNominatimLocationCity(location)
       }
-      return locationTitle
+      return locationDetails
     },
     clearRecentLocations() {
       this.appStore.clearRecentLocations()

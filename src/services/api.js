@@ -2,7 +2,7 @@ import { useAppStore } from '../store'
 
 const OPENFOODFACTS_PRODUCT_URL = 'https://world.openfoodfacts.org/api/v2/product'
 const NOMINATIM_SEARCH_URL = 'https://nominatim.openstreetmap.org/search'
-const NOMINATIM_RESULT_TYPE_EXCLUDE_LIST = ['fuel', 'gas', 'casino']
+const NOMINATIM_RESULT_TYPE_EXCLUDE_LIST = ['fuel', 'gas', 'casino', 'parking', 'parking_space']
 
 export default {
   signIn(username, password) {
