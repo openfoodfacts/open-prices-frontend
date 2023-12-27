@@ -6,6 +6,7 @@ export const useAppStore = defineStore('app', {
     user: {
       username: null,
       token: null,
+      last_product_mode_used: 'barcode',
       last_currency_used: 'EUR',  // TODO: init with user locale ?
       recent_locations: [],
     },

@@ -20,9 +20,7 @@
                 <v-file-input
                   class="overflow-hidden d-none"
                   ref="proof"
-                  prepend-icon=""
-                  :prepend-inner-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
-                  label="Picture of the price tag"
+                  :prepend-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
                   v-model="proofImage"
                   capture="environment"
                   accept="image/*"
@@ -53,32 +51,41 @@
           <v-card-text>
             <h3 class="mb-1">
               Product
+              <v-item-group v-model="productMode" class="d-inline" mandatory>
+                <v-item v-for="pm in ['barcode', 'category']" :key="pm" :value="pm" v-slot="{ isSelected, toggle }">
+                  <v-chip class="mr-1" @click="toggle">
+                    <v-icon v-if="isSelected" start icon="mdi-checkbox-marked-circle"></v-icon>
+                    {{ pm }}
+                  </v-chip>
+                </v-item>
+              </v-item-group>
             </h3>
-            <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showBarcodeScanner">Scan a barcode</v-btn>
-            <PriceCard v-if="product" :product="product" elevation="1"></PriceCard>
-            <v-row v-if="dev">
-              <v-col>
-                <v-text-field
-                  :prepend-inner-icon="productFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
-                  v-model="addPriceSingleForm.product_code"
-                  label="Product code"
-                  type="text"
-                  hint="EAN 13"
-                  :rules="[fieldRequired]"
-                  required
-                ></v-text-field>
-              </v-col>
-            </v-row>
-            <p v-if="productFormFilled" class="text-green mt-2 mb-2">
-              <i>
-                Product set!
-                <span v-if="dev || !product">code: {{ addPriceSingleForm.product_code }}</span>
-                <span v-if="!product">(not found in Open Food Facts)</span>
-              </i>
-            </p>
-            <p v-if="!productFormFilled" class="text-red mt-2 mb-2"><i>Product missing</i></p>
+            <v-sheet v-if="productMode === 'barcode'">
+              <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showBarcodeScanner">Scan a barcode</v-btn>
+              <v-text-field
+                v-if="dev"
+                :prepend-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
+                v-model="addPriceSingleForm.product_code"
+                label="Product code"
+                type="text"
+                hint="EAN"
+                @click:prepend="showBarcodeScanner"
+              ></v-text-field>
+              <PriceCard v-if="product" class="mb-4" :product="product" elevation="1"></PriceCard>
+            </v-sheet>
+            <v-sheet v-if="productMode === 'category'">
+              <v-autocomplete
+                :prepend-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
+                v-model="addPriceSingleForm.category_tag"
+                label="Category"
+                :items="categoryTags"
+                :item-title="item => item.name"
+                :item-value="item => item.id"
+              ></v-autocomplete>
+            </v-sheet>
+            <p v-if="(productMode === 'barcode' && !productBarcodeFormFilled) || (productMode === 'category' && !productCategoryFormFilled)" class="text-red mb-2"><i>Set a product</i></p>
 
-            <h3 class="mb-1">Price</h3>
+            <h3 class="mb-1">Price <span v-if="productMode === 'category'">per kg</span></h3>
             <v-row>
               <v-col cols="6">
                 <v-text-field
@@ -177,6 +184,9 @@ import PriceCard from '../components/PriceCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import LocationSelector from '../components/LocationSelector.vue'
 
+// Import category tags static JSON file
+import CategoryTags from '../data/category-tags.json'
+
 Compressor.setDefaults({
   checkOrientation: true,  // default
   retainExif: true,
@@ -198,6 +208,7 @@ export default {
       addPriceSingleForm: {
         proof_id: null,
         product_code: '',
+        category_tag: null,
         price: null,
         currency: null,  // see initPriceSingleForm
         location_osm_id: null,
@@ -212,13 +223,15 @@ export default {
       proofSuccessMessage: false,
       // product data
       product: null,
+      productMode: null,  // 'barcode' or 'category'  // see initPriceSingleForm
+      categoryTags: CategoryTags,  // list of category tags for autocomplete
       barcodeScanner: false,
       // price data
       currencyList: constants.CURRENCY_LIST,
       // location data
       locationSelector: false,
-      locationSelectedDisplayName: ''
-    };
+      locationSelectedDisplayName: '',
+    }
   },
   computed: {
     ...mapStores(useAppStore),
@@ -226,13 +239,16 @@ export default {
       let keys = ['proof_id']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
-    productFormFilled() {
+    productBarcodeFormFilled() {
       let keys = ['product_code']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
-    productPriceFormFilled() {
-      let keys = ['product_code', 'price', 'currency']
+    productCategoryFormFilled() {
+      let keys = ['category_tag']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
+    productPriceFormFilled() {
+      return (this.productBarcodeFormFilled || this.productCategoryFormFilled) && !!this.addPriceSingleForm.price && !!this.addPriceSingleForm.currency
     },
     recentLocations() {
       return this.appStore.getRecentLocations(3)
@@ -246,7 +262,7 @@ export default {
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     formFilled() {
-      return Object.values(this.addPriceSingleForm).every(x => !!x)
+      return this.proofFormFilled && this.productPriceFormFilled && this.locationDateFormFilled
     },
   },
   mounted() {
@@ -257,6 +273,7 @@ export default {
       return !!v
     },
     initPriceSingleForm() {
+      this.productMode = this.appStore.user.last_product_mode_used
       this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
     },
     clearProof() {
@@ -271,7 +288,7 @@ export default {
         new Compressor(this.proofImage[0], {
           success: resolve,
           error: reject
-        });
+        })
       })
       .then((proofImageCompressed) => {
         api
@@ -303,6 +320,10 @@ export default {
     },
     createPrice() {
       this.createPriceLoading = true
+      if (!this.addPriceSingleForm.product_code) {
+        // if product_code is an empty string, set it to null
+        this.addPriceSingleForm.product_code = null
+      }
       api
         .createPrice(this.addPriceSingleForm)
         .then((data) => {
@@ -328,7 +349,10 @@ export default {
       api
         .openfoodfactsProductSearch(code)
         .then((data) => {
-          this.product = data['product']
+          this.product = data['product'] || {'code': code}
+        })
+        .catch((error) => {
+          alert("Error: Open Food Facts server error")
         })
     },
     showLocationSelector() {
@@ -344,8 +368,16 @@ export default {
       this.addPriceSingleForm.location_osm_type = location.osm_type.toUpperCase()
     },
     isSelectedLocation(location) {
-      return this.locationSelectedDisplayName && this.locationSelectedDisplayName == location.display_name
+      return this.locationSelectedDisplayName && this.locationSelectedDisplayName === location.display_name
     },
+  },
+  watch: {
+    productMode() {
+      // reset product_code and category_tag when switching mode
+      this.addPriceSingleForm.product_code = ""
+      this.addPriceSingleForm.category_tag = null
+      this.product = null
+    }
   }
 }
 </script>

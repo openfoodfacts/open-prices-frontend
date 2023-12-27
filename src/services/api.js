@@ -33,6 +33,7 @@ export default {
 
   createPrice(priceData) {
     const store = useAppStore()
+    store.user.last_product_mode_used = priceData.product_code ? 'barcode' : 'category'
     store.user.last_currency_used = priceData.currency
     return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices`, {
       method: 'POST',
