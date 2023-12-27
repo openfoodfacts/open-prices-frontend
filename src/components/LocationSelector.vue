@@ -29,20 +29,18 @@
         <h3>Results <small>{{ results.length }}</small></h3>
         <v-row>
           <v-col cols="12" sm="6">
-            <div class="d-flex flex-wrap ga-2">
-              <v-card
-                v-for="location in results"
-                elevation="1"
-                width="100%"
-                @click="selectLocation(location)"
-              >
-                <v-card-text>
-                  <h4>{{ getNominatimLocationTitle(location) }}</h4>
-                  {{ getNominatimLocationDetails(location, true) }}<br />
-                  <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
-                </v-card-text>
-              </v-card>
-            </div>
+            <v-card
+              class="mb-2"
+              width="100%"
+              v-for="location in results"
+              elevation="1"
+              @click="selectLocation(location)">
+              <v-card-text>
+                <h4>{{ getNominatimLocationTitle(location) }}</h4>
+                {{ getNominatimLocationDetails(location, true) }}<br />
+                <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
+              </v-card-text>
+            </v-card>
           </v-col>
           <v-col cols="12" sm="6" style="min-height:200px">
             <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
@@ -66,18 +64,18 @@
         <h3 class="mb-1">
           Recent locations <small>{{ recentLocations.length }}</small>
         </h3>
-        <div class="d-flex flex-wrap ga-2">
-          <v-chip
-            v-for="location in recentLocations"
-            elevation="1"
-            @click="selectLocation(location)">
-            <v-icon start icon="mdi-history"></v-icon>
-            {{ location.display_name }}
-          </v-chip>
-          <v-chip variant="outlined" size="small" @click="clearRecentLocations">
-            Clear
-          </v-chip>
-        </div>
+        <v-chip
+          class="mb-2"
+          v-for="location in recentLocations"
+          elevation="1"
+          @click="selectLocation(location)">
+          <v-icon start icon="mdi-history"></v-icon>
+          {{ location.display_name }}
+        </v-chip>
+        <br />
+        <v-chip variant="outlined" size="small" @click="clearRecentLocations">
+          Clear
+        </v-chip>
       </v-card-text>
 
       <v-divider v-if="recentLocations.length"></v-divider>

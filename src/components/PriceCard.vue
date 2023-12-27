@@ -43,10 +43,11 @@ const CategoryTagsByIndex = CategoryTags.reduce((acc, tag) => {
 
 
 export default {
-  props: [
-    'price',
-    'product'
-  ],
+  props: {
+    'price': null,
+    'product': null,
+    'readonly': false
+  },
   data() {
     return {
       defaultAvatar: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg'
@@ -115,12 +116,15 @@ export default {
       return this.price.location_id
     },
     goToProduct() {
-      if (!this.hasProduct) {
+      if (this.readonly || !this.hasProduct) {
         return
       }
       this.$router.push({ path: `/products/${this.product.id}` })
     },
     goToLocation() {
+      if (this.readonly) {
+        return
+      }
       this.$router.push({ path: `/locations/${this.price.location_id}` })
     },
     getCategoryName(categoryTag) {

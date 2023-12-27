@@ -28,8 +28,8 @@
                   @click:clear="clearProof"
                   :loading="createProofLoading">
                 </v-file-input>
-                <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2"><i>Proof uploaded!</i></p>
-                <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2"><i>Upload a proof</i></p>
+                <p v-if="proofFormFilled && !createProofLoading" class="text-green mb-2"><i>Proof uploaded!</i></p>
+                <p v-if="!proofFormFilled && !createProofLoading" class="text-red mb-2"><i>Upload a proof</i></p>
               </v-col>
               <v-col v-if="proofFormFilled">
                 <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
@@ -54,7 +54,7 @@
               <v-item-group v-model="productMode" class="d-inline" mandatory>
                 <v-item v-for="pm in ['barcode', 'category']" :key="pm" :value="pm" v-slot="{ isSelected, toggle }">
                   <v-chip class="mr-1" @click="toggle">
-                    <v-icon v-if="isSelected" start icon="mdi-checkbox-marked-circle"></v-icon>
+                    <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'"></v-icon>
                     {{ pm }}
                   </v-chip>
                 </v-item>
@@ -71,7 +71,7 @@
                 hint="EAN"
                 @click:prepend="showBarcodeScanner"
               ></v-text-field>
-              <PriceCard v-if="product" class="mb-4" :product="product" elevation="1"></PriceCard>
+              <PriceCard v-if="product" class="mb-4" :product="product" :readonly="true" elevation="1"></PriceCard>
             </v-sheet>
             <v-sheet v-if="productMode === 'category'">
               <v-autocomplete
@@ -120,16 +120,15 @@
               Location
             </h3>
             <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showLocationSelector">Find</v-btn>
-            <div class="d-flex flex-wrap ga-2">
-              <v-chip
-                v-for="location in recentLocations"
-                :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
-                @click="setLocationData(location)">
-                <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
-                {{ location.display_name }}
-              </v-chip>
-            </div>
-            <p v-if="!locationFormFilled" class="text-red mt-2 mb-2"><i>Select your location</i></p>
+            <v-chip
+              class="mb-2"
+              :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+              v-for="location in recentLocations"
+              @click="setLocationData(location)">
+              <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
+              {{ location.display_name }}
+            </v-chip>
+            <p v-if="!locationFormFilled" class="text-red mb-2"><i>Select your location</i></p>
 
             <h3 class="mt-4 mb-1">Date</h3>
             <v-row>
