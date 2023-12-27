@@ -1,33 +1,39 @@
 <template>
   <v-card>
-    <v-card-item @click="goToProduct()">
-      <template v-slot:prepend>
-        <v-avatar rounded="0">
-          <v-img v-if="product && product.image_url" :src="product.image_url"></v-img>
-          <v-img v-if="!product || !product.image_url" :src="defaultAvatar" style="filter:invert(.9);"></v-img>
-        </v-avatar>
-      </template>
+    <v-container class="pa-2">
+      <v-row>
+        <v-col style="max-width:25%">
+          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:150px;width:100px"></v-img>
+          <v-img v-if="!product || !product.image_url" :src="defaultAvatar" style="height:100px;width:100px;filter:invert(.9);"></v-img>
+        </v-col>
+        <v-col style="max-width:75%">
+          <h3 @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
-      <v-card-title>{{ getPriceProductTitle() }}</v-card-title>
+          <p class="mb-2">
+            <span v-if="hasProductBrands">
+              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.brands }}</v-chip>
+            </span>
+            <span v-if="hasProductQuantity">
+              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.product_quantity }} g</v-chip>
+            </span>
+            <span v-if="!price">
+              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.code }}</v-chip>
+            </span>
+          </p>
 
-      <v-card-subtitle>
-        <span v-if="hasProductBrands">{{ product.brands }}</span>
-        <span v-if="hasProductBrands && hasProductQuantity"> · </span>
-        <span v-if="hasProductQuantity">{{ product.product_quantity }} g</span>
-        <span v-if="!price && (product.brands || product.product_quantity)"> · </span>
-        <span v-if="!price">{{ product.code }}</span>
-      </v-card-subtitle>
-      <v-card-subtitle v-if="!product"></v-card-subtitle>
-    </v-card-item>
-
-    <v-card-text v-if="price">
-      <span>{{ getPriceValueDisplay() }}</span>
-      <span v-if="(hasProductQuantity)"> ({{  getPricePerKilo() }})</span>
-      <span> · </span>
-      <span @click="goToLocation()">{{ getPriceLocationTitle() }}</span>
-      <span> · </span>
-      <span>{{ price.date }}</span>
-    </v-card-text>
+          <v-sheet v-if="price">
+            <p class="mb-2">
+              <span>{{ getPriceValueDisplay() }}</span>
+              <span v-if="hasProductQuantity"> ({{  getPricePerKilo() }})</span>
+              <span> on <i>{{ getDateFormatted(price.date) }}</i></span>
+            </p>
+            <v-btn class="pa-0" style="justify-content:unset" variant="text" size="small" prepend-icon="mdi-map-marker-outline" @click="goToLocation()">
+              {{ getPriceLocationTitle() }}
+            </v-btn>
+          </v-sheet>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-card>
 </template>
 
@@ -114,6 +120,10 @@ export default {
         return `${this.price.location.osm_name}, ${this.price.location.osm_address_city}`
       }
       return this.price.location_id
+    },
+    getDateFormatted(dateString) {
+      const date = new Date(dateString)
+      return new Intl.DateTimeFormat('default').format(date)
     },
     goToProduct() {
       if (this.readonly || !this.hasProduct) {
