@@ -8,6 +8,7 @@ import AddPriceSingle from './views/AddPriceSingle.vue'
 import PriceList from './views/PriceList.vue'
 import ProductDetail from './views/ProductDetail.vue'
 import LocationDetail from './views/LocationDetail.vue'
+import UserDetail from './views/UserDetail.vue'
 import Stats from './views/Stats.vue'
 import NotFound from './views/NotFound.vue'
 
@@ -21,6 +22,7 @@ const routes = [
   { path: '/prices', name: 'prices', component: PriceList, meta: { title: 'Latest prices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
   { path: '/products/:id', name: 'product-detail', component: ProductDetail, meta: { title: 'Product detail' }},
   { path: '/locations/:id', name: 'location-detail', component: LocationDetail, meta: { title: 'Location detail' }},
+  { path: '/users/:username', name: 'user-detail', component: UserDetail, meta: { title: 'User detail' }},
   { path: '/stats', name: 'stats', component: Stats, meta: { title: 'Stats' }},
   { path: '/:path(.*)', component: NotFound },
 ]
