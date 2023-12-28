@@ -3,7 +3,7 @@
     <v-container class="pa-2">
       <v-row>
         <v-col style="max-width:25%">
-          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:150px;width:100px"></v-img>
+          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;width:100px"></v-img>
           <v-img v-if="!product || !product.image_url" :src="defaultAvatar" style="height:100px;width:100px;filter:invert(.9);"></v-img>
         </v-col>
         <v-col style="max-width:75%">
@@ -27,17 +27,27 @@
               <span v-if="hasProductQuantity"> ({{  getPricePerKilo() }})</span>
               <span> on <i>{{ getDateFormatted(price.date) }}</i></span>
             </p>
-            <v-btn class="pa-0" style="justify-content:unset" variant="text" size="small" prepend-icon="mdi-map-marker-outline" @click="goToLocation()">
-              {{ getPriceLocationTitle() }}
-            </v-btn>
           </v-sheet>
         </v-col>
       </v-row>
+
+      <div class="d-flex flex-wrap ga-1 mt-2" v-if="price">
+        <v-chip class="mr-1" label size="small" prepend-icon="mdi-map-marker-outline" @click="goToLocation()">
+          {{ getPriceLocationTitle() }}
+        </v-chip>
+        <v-chip class="mr-1" label size="small" prepend-icon="mdi-account">
+          {{ price.owner }}
+        </v-chip>
+        <v-chip label size="small" prepend-icon="mdi-clock-outline">
+          {{ getRelativeDateTimeFormatted(price.created) }}
+        </v-chip>
+      </div>
     </v-container>
   </v-card>
 </template>
 
 <script>
+import utils from '../utils.js'
 // Import category tags static JSON file
 import CategoryTags from '../data/category-tags.json'
 
@@ -122,8 +132,10 @@ export default {
       return this.price.location_id
     },
     getDateFormatted(dateString) {
-      const date = new Date(dateString)
-      return new Intl.DateTimeFormat('default').format(date)
+      return utils.prettyDate(dateString)
+    },
+    getRelativeDateTimeFormatted(dateTimeString) {
+      return utils.prettyRelativeDateTime(dateTimeString, true)
     },
     goToProduct() {
       if (this.readonly || !this.hasProduct) {
