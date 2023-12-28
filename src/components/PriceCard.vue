@@ -2,14 +2,14 @@
   <v-card>
     <v-container class="pa-2">
       <v-row>
-        <v-col style="max-width:25%">
+        <v-col v-if="!hideProductImage" style="max-width:25%">
           <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;width:100px"></v-img>
           <v-img v-if="!product || !product.image_url" :src="defaultAvatar" style="height:100px;width:100px;filter:invert(.9);"></v-img>
         </v-col>
         <v-col style="max-width:75%">
-          <h3 @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
+          <h3 v-if="!hideProductInfo" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
-          <p class="mb-2">
+          <p v-if="!hideProductInfo" class="mb-2">
             <span v-if="hasProductBrands">
               <v-chip label size="small" density="comfortable" class="mr-1">{{ product.brands }}</v-chip>
             </span>
@@ -32,7 +32,7 @@
       </v-row>
 
       <div class="d-flex flex-wrap ga-1 mt-2" v-if="price">
-        <v-chip class="mr-1" label size="small" prepend-icon="mdi-map-marker-outline" @click="goToLocation()">
+        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" prepend-icon="mdi-map-marker-outline" @click="goToLocation()">
           {{ getPriceLocationTitle() }}
         </v-chip>
         <v-chip class="mr-1" label size="small" prepend-icon="mdi-account">
@@ -62,6 +62,9 @@ export default {
   props: {
     'price': null,
     'product': null,
+    'hideProductImage': false,
+    'hideProductInfo': false,
+    'hidePriceLocation': false,
     'readonly': false
   },
   data() {

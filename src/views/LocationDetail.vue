@@ -9,7 +9,7 @@
       <v-card
         :title="getLocationTitle(location)"
         :subtitle="location ? location.osm_display_name : ''"
-        :prepend-icon="location ? 'mdi-map-marker' : 'mdi-map-marker-remove-variant'">
+        :prepend-icon="location ? 'mdi-map-marker-outline' : 'mdi-map-marker-remove-variant'">
       </v-card>
     </v-col>
   </v-row>
@@ -34,7 +34,7 @@
 
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="price in locationPriceList" :key="price">
-      <PriceCard :price="price" :product="price.product" elevation="1" height="100%"></PriceCard>
+      <PriceCard :price="price" :product="price.product" :hidePriceLocation="true" elevation="1" height="100%"></PriceCard>
     </v-col>
   </v-row>
 </template>
