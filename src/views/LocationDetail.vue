@@ -1,9 +1,4 @@
 <template>
-  <h1 class="mb-1">
-    {{ location ? location.location_name : '' }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-  </h1>
-
   <v-row>
     <v-col cols="12" sm="6">
       <v-card
@@ -30,6 +25,7 @@
   <h2 class="mb-1">
     Latest prices
     <small>{{ locationPriceCount }}</small>
+    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
   <v-row>

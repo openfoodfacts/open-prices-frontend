@@ -1,9 +1,4 @@
 <template>
-  <h1 class="mb-1">
-    {{ product ? product.product_name : '' }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-  </h1>
-
   <v-row>
     <v-col cols="12" sm="6">
       <PriceCard v-if="product" :product="product" :readonly="true" elevation="1"></PriceCard>
@@ -26,6 +21,7 @@
   <h2 class="mb-1">
     Latest prices
     <small>{{ productPriceCount }}</small>
+    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
   <v-row>
