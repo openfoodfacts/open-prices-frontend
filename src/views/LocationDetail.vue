@@ -78,7 +78,7 @@ export default {
     },
     getLocationTitle(location) {
       if (location) {
-        return `${location.osm_name}, ${location.osm_address_city} ${utils.getCountryEmojiFromName(location.osm_address_country)}`
+        return utils.getLocationTitle(location)
       }
       return this.$route.params.id
     },

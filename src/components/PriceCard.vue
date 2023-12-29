@@ -143,7 +143,7 @@ export default {
     },
     getPriceLocationTitle() {
       if (this.price.location) {
-        return `${this.price.location.osm_name}, ${this.price.location.osm_address_city}`
+        return utils.getLocationTitle(this.price.location)
       }
       return this.price.location_id
     },
