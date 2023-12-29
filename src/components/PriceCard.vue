@@ -16,6 +16,12 @@
             <span v-if="hasProductQuantity">
               <v-chip label size="small" density="comfortable" class="mr-1">{{ product.product_quantity }} g</v-chip>
             </span>
+            <span v-if="hasPriceLabels">
+              <v-chip v-for="pl in priceLabels" label size="small" density="comfortable" class="mr-1">
+                {{ pl.name }}
+                <v-icon v-if="pl.icon" end :icon="pl.icon"></v-icon>
+              </v-chip>
+            </span>
             <span v-if="!price">
               <v-chip label size="small" density="comfortable" class="mr-1">{{ product.code }}</v-chip>
             </span>
@@ -53,6 +59,7 @@
 <script>
 import utils from '../utils.js'
 import CategoryTags from '../data/category-tags.json'
+import LabelsTags from '../data/labels-tags.json'
 
 // Transform category tags array into an object with 'id' as key
 const CategoryTagsByIndex = CategoryTags.reduce((acc, tag) => {
@@ -73,6 +80,7 @@ export default {
   data() {
     return {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
+      priceLabels: [],
       priceLocationEmoji: null
     }
   },
@@ -103,11 +111,15 @@ export default {
     },
     hasProductBrands() {
       return this.hasProduct && !!this.product.brands
+    },
+    hasPriceLabels() {
+      return this.hasPrice && !!this.price.labels_tags
     }
   },
   methods: {
     initPriceCard() {
       this.priceLocationEmoji = this.getPriceLocationCountryEmoji()
+      this.priceLabels = this.getPriceLabelsTagsList()
     },
     getPriceProductTitle() {
       if (this.hasProduct && this.product.product_name) {
@@ -121,6 +133,11 @@ export default {
     },
     getCategoryName(categoryTag) {
       return CategoryTagsByIndex[categoryTag].name
+    },
+    getPriceLabelsTagsList() {
+      if (this.price && this.price.labels_tags) {
+        return LabelsTags.filter(lt => this.price.labels_tags.indexOf(lt.id) > -1)
+      }
     },
     getPriceValue(priceValue, priceCurrency) {
       return priceValue.toLocaleString(navigator.language, {
