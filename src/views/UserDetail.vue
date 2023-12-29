@@ -10,6 +10,7 @@
   <h2 class="mb-1">
     Latest prices
     <small>{{ userPriceCount }}</small>
+    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
   <v-row>

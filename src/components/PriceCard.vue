@@ -1,37 +1,53 @@
 <template>
   <v-card>
-    <v-card-item @click="goToProduct()">
-      <template v-slot:prepend>
-        <v-avatar rounded="0">
-          <v-img v-if="product && product.image_url" :src="product.image_url"></v-img>
-          <v-img v-if="!product || !product.image_url" :src="defaultAvatar" style="filter:invert(.9);"></v-img>
-        </v-avatar>
-      </template>
+    <v-container class="pa-2">
+      <v-row>
+        <v-col v-if="!hideProductImage" style="max-width:25%">
+          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;width:100px"></v-img>
+          <v-img v-if="!product || !product.image_url" :src="defaultAvatar" style="height:100px;width:100px;filter:invert(.9);"></v-img>
+        </v-col>
+        <v-col style="max-width:75%">
+          <h3 v-if="!hideProductInfo" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
-      <v-card-title>{{ getPriceProductTitle() }}</v-card-title>
+          <p v-if="!hideProductInfo" class="mb-2">
+            <span v-if="hasProductBrands">
+              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.brands }}</v-chip>
+            </span>
+            <span v-if="hasProductQuantity">
+              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.product_quantity }} g</v-chip>
+            </span>
+            <span v-if="!price">
+              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.code }}</v-chip>
+            </span>
+          </p>
 
-      <v-card-subtitle>
-        <span v-if="hasProductBrands">{{ product.brands }}</span>
-        <span v-if="hasProductBrands && hasProductQuantity"> · </span>
-        <span v-if="hasProductQuantity">{{ product.product_quantity }} g</span>
-        <span v-if="!price && (product.brands || product.product_quantity)"> · </span>
-        <span v-if="!price">{{ product.code }}</span>
-      </v-card-subtitle>
-      <v-card-subtitle v-if="!product"></v-card-subtitle>
-    </v-card-item>
+          <v-sheet v-if="price">
+            <p class="mb-2">
+              <span>{{ getPriceValueDisplay() }}</span>
+              <span v-if="hasProductQuantity"> ({{  getPricePerKilo() }})</span>
+              <span> on <i>{{ getDateFormatted(price.date) }}</i></span>
+            </p>
+          </v-sheet>
+        </v-col>
+      </v-row>
 
-    <v-card-text v-if="price">
-      <span>{{ getPriceValueDisplay() }}</span>
-      <span v-if="(hasProductQuantity)"> ({{  getPricePerKilo() }})</span>
-      <span> · </span>
-      <span @click="goToLocation()">{{ getPriceLocationTitle() }}</span>
-      <span> · </span>
-      <span>{{ price.date }}</span>
-    </v-card-text>
+      <div class="d-flex flex-wrap ga-1 mt-2" v-if="price">
+        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" prepend-icon="mdi-map-marker-outline" @click="goToLocation()">
+          {{ getPriceLocationTitle() }}
+        </v-chip>
+        <v-chip class="mr-1" label size="small" prepend-icon="mdi-account" @click="goToUser()">
+          {{ price.owner }}
+        </v-chip>
+        <v-chip label size="small" prepend-icon="mdi-clock-outline">
+          {{ getRelativeDateTimeFormatted(price.created) }}
+        </v-chip>
+      </div>
+    </v-container>
   </v-card>
 </template>
 
 <script>
+import utils from '../utils.js'
 // Import category tags static JSON file
 import CategoryTags from '../data/category-tags.json'
 
@@ -46,6 +62,9 @@ export default {
   props: {
     'price': null,
     'product': null,
+    'hideProductImage': false,
+    'hideProductInfo': false,
+    'hidePriceLocation': false,
     'readonly': false
   },
   data() {
@@ -115,6 +134,12 @@ export default {
       }
       return this.price.location_id
     },
+    getDateFormatted(dateString) {
+      return utils.prettyDate(dateString)
+    },
+    getRelativeDateTimeFormatted(dateTimeString) {
+      return utils.prettyRelativeDateTime(dateTimeString, true)
+    },
     goToProduct() {
       if (this.readonly || !this.hasProduct) {
         return
@@ -126,6 +151,12 @@ export default {
         return
       }
       this.$router.push({ path: `/locations/${this.price.location_id}` })
+    },
+    goToUser() {
+      if (this.readonly) {
+        return
+      }
+      this.$router.push({ path: `/users/${this.price.owner}` })
     },
     getCategoryName(categoryTag) {
       return CategoryTagsByIndex[categoryTag].name
