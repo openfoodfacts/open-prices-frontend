@@ -52,10 +52,10 @@
             <h3 class="mb-1">
               Product
               <v-item-group v-model="productMode" class="d-inline" mandatory>
-                <v-item v-for="pm in ['barcode', 'category']" :key="pm" :value="pm" v-slot="{ isSelected, toggle }">
+                <v-item v-for="pm in productModeList" :key="pm.key" :value="pm.key" v-slot="{ isSelected, toggle }">
                   <v-chip class="mr-1" @click="toggle">
                     <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'"></v-icon>
-                    {{ pm }}
+                    {{ pm.value }}
                   </v-chip>
                 </v-item>
               </v-item-group>
@@ -64,7 +64,7 @@
               <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showBarcodeScanner">Scan a barcode</v-btn>
               <v-text-field
                 v-if="dev"
-                :prepend-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
+                :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
                 v-model="addPriceSingleForm.product_code"
                 label="Product code"
                 type="text"
@@ -75,13 +75,17 @@
             </v-sheet>
             <v-sheet v-if="productMode === 'category'">
               <v-autocomplete
-                :prepend-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
+                :prepend-inner-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
                 v-model="addPriceSingleForm.category_tag"
                 label="Category"
                 :items="categoryTags"
                 :item-title="item => item.name"
                 :item-value="item => item.id"
+                hide-details="auto"
               ></v-autocomplete>
+              <div class="d-inline">
+                <v-checkbox v-for="lt in labelsTags" v-model="addPriceSingleForm.labels_tags" :label="lt.name" :value="lt.id" hide-details="auto"></v-checkbox>
+              </div>
             </v-sheet>
             <p v-if="(productMode === 'barcode' && !productBarcodeFormFilled) || (productMode === 'category' && !productCategoryFormFilled)" class="text-red mb-2"><i>Set a product</i></p>
 
@@ -182,9 +186,8 @@ import api from '../services/api'
 import PriceCard from '../components/PriceCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import LocationSelector from '../components/LocationSelector.vue'
-
-// Import category tags static JSON file
 import CategoryTags from '../data/category-tags.json'
+import LabelsTags from '../data/labels-tags.json'
 
 Compressor.setDefaults({
   checkOrientation: true,  // default
@@ -208,6 +211,7 @@ export default {
         proof_id: null,
         product_code: '',
         category_tag: null,
+        labels_tags: [],
         price: null,
         currency: null,  // see initPriceSingleForm
         location_osm_id: null,
@@ -222,8 +226,10 @@ export default {
       proofSuccessMessage: false,
       // product data
       product: null,
+      productModeList: [{key: 'barcode', value: 'Barcode', icon: 'mdi-barcode-scan'}, {key: 'category', value: 'Category', icon: 'mdi-basket-outline'}],
       productMode: null,  // 'barcode' or 'category'  // see initPriceSingleForm
       categoryTags: CategoryTags,  // list of category tags for autocomplete
+      labelsTags: LabelsTags,
       barcodeScanner: false,
       // price data
       currencyList: constants.CURRENCY_LIST,
@@ -319,9 +325,12 @@ export default {
     },
     createPrice() {
       this.createPriceLoading = true
+      // cleanup form
       if (!this.addPriceSingleForm.product_code) {
-        // if product_code is an empty string, set it to null
         this.addPriceSingleForm.product_code = null
+      }
+      if (this.addPriceSingleForm.labels_tags.length == 0) {
+        this.addPriceSingleForm.labels_tags = null
       }
       api
         .createPrice(this.addPriceSingleForm)
@@ -371,10 +380,11 @@ export default {
     },
   },
   watch: {
-    productMode() {
+    productMode(newProductMode, oldProductMode) {
       // reset product_code and category_tag when switching mode
       this.addPriceSingleForm.product_code = ""
       this.addPriceSingleForm.category_tag = null
+      this.addPriceSingleForm.labels_tags = []
       this.product = null
     }
   }
