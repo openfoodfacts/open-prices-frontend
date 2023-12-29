@@ -74,15 +74,29 @@
               <PriceCard v-if="product" class="mb-4" :product="product" :readonly="true" elevation="1"></PriceCard>
             </v-sheet>
             <v-sheet v-if="productMode === 'category'">
-              <v-autocomplete
-                :prepend-inner-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
-                v-model="addPriceSingleForm.category_tag"
-                label="Category"
-                :items="categoryTags"
-                :item-title="item => item.name"
-                :item-value="item => item.id"
-                hide-details="auto"
-              ></v-autocomplete>
+              <v-row>
+                <v-col cols="6">
+                  <v-autocomplete
+                    :prepend-inner-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
+                    v-model="addPriceSingleForm.category_tag"
+                    label="Category"
+                    :items="categoryTags"
+                    :item-title="item => item.name"
+                    :item-value="item => item.id"
+                    hide-details="auto"
+                  ></v-autocomplete>
+                </v-col>
+                <v-col cols="6">
+                  <v-autocomplete
+                    v-model="addPriceSingleForm.origins_tags"
+                    label="Origin"
+                    :items="originsTags"
+                    :item-title="item => item.name"
+                    :item-value="item => item.id"
+                    hide-details="auto"
+                  ></v-autocomplete>
+                </v-col>
+              </v-row>
               <div class="d-inline">
                 <v-checkbox v-for="lt in labelsTags" v-model="addPriceSingleForm.labels_tags" :label="lt.name" :value="lt.id" hide-details="auto"></v-checkbox>
               </div>
@@ -187,6 +201,7 @@ import PriceCard from '../components/PriceCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import LocationSelector from '../components/LocationSelector.vue'
 import CategoryTags from '../data/category-tags.json'
+import OriginsTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
 
 Compressor.setDefaults({
@@ -211,6 +226,7 @@ export default {
         proof_id: null,
         product_code: '',
         category_tag: null,
+        origins_tags: '',
         labels_tags: [],
         price: null,
         currency: null,  // see initPriceSingleForm
@@ -229,6 +245,7 @@ export default {
       productModeList: [{key: 'barcode', value: 'Barcode', icon: 'mdi-barcode-scan'}, {key: 'category', value: 'Category', icon: 'mdi-basket-outline'}],
       productMode: null,  // 'barcode' or 'category'  // see initPriceSingleForm
       categoryTags: CategoryTags,  // list of category tags for autocomplete
+      originsTags: OriginsTags,  // list of origins tags for autocomplete
       labelsTags: LabelsTags,
       barcodeScanner: false,
       // price data
@@ -249,7 +266,7 @@ export default {
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     productCategoryFormFilled() {
-      let keys = ['category_tag']
+      let keys = ['category_tag', 'origins_tags']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     productPriceFormFilled() {
@@ -329,6 +346,12 @@ export default {
       if (!this.addPriceSingleForm.product_code) {
         this.addPriceSingleForm.product_code = null
       }
+      console.log(this.addPriceSingleForm.origins_tags)
+      if ((typeof this.addPriceSingleForm.origins_tags === 'string') && (this.addPriceSingleForm.origins_tags.length)) {
+        this.addPriceSingleForm.origins_tags = [this.addPriceSingleForm.origins_tags]
+      } else {
+        this.addPriceSingleForm.origins_tags = null
+      }
       if (this.addPriceSingleForm.labels_tags.length == 0) {
         this.addPriceSingleForm.labels_tags = null
       }
@@ -384,6 +407,7 @@ export default {
       // reset product_code and category_tag when switching mode
       this.addPriceSingleForm.product_code = ""
       this.addPriceSingleForm.category_tag = null
+      this.addPriceSingleForm.origins_tags = ''
       this.addPriceSingleForm.labels_tags = []
       this.product = null
     }
