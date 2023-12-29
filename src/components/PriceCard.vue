@@ -35,7 +35,7 @@
         <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" prepend-icon="mdi-map-marker-outline" @click="goToLocation()">
           {{ getPriceLocationTitle() }}
         </v-chip>
-        <v-chip class="mr-1" label size="small" prepend-icon="mdi-account">
+        <v-chip class="mr-1" label size="small" prepend-icon="mdi-account" @click="goToUser()">
           {{ price.owner }}
         </v-chip>
         <v-chip label size="small" prepend-icon="mdi-clock-outline">
@@ -151,6 +151,12 @@ export default {
         return
       }
       this.$router.push({ path: `/locations/${this.price.location_id}` })
+    },
+    goToUser() {
+      if (this.readonly) {
+        return
+      }
+      this.$router.push({ path: `/users/${this.price.owner}` })
     },
     getCategoryName(categoryTag) {
       return CategoryTagsByIndex[categoryTag].name
