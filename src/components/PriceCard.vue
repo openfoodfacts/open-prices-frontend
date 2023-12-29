@@ -32,13 +32,17 @@
       </v-row>
 
       <div class="d-flex flex-wrap ga-1 mt-2" v-if="price">
-        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" prepend-icon="mdi-map-marker-outline" @click="goToLocation()">
+        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" @click="goToLocation()">
+          <v-icon v-if="!getPriceLocationCountryEmoji()" start icon="mdi-map-marker-outline"></v-icon>
+          <span v-if="getPriceLocationCountryEmoji()" style="margin-left:-5px;margin-right:5px">{{ getPriceLocationCountryEmoji() }}&nbsp;</span>
           {{ getPriceLocationTitle() }}
         </v-chip>
-        <v-chip class="mr-1" label size="small" prepend-icon="mdi-account" @click="goToUser()">
+        <v-chip class="mr-1" label size="small" @click="goToUser()">
+          <v-icon start icon="mdi-account"></v-icon>
           {{ price.owner }}
         </v-chip>
-        <v-chip label size="small" prepend-icon="mdi-clock-outline">
+        <v-chip label size="small">
+          <v-icon start icon="mdi-clock-outline"></v-icon>
           {{ getRelativeDateTimeFormatted(price.created) }}
         </v-chip>
       </div>
@@ -48,8 +52,8 @@
 
 <script>
 import utils from '../utils.js'
-// Import category tags static JSON file
 import CategoryTags from '../data/category-tags.json'
+import CountriesWithEmoji from '../data/countries-with-emoji.json'
 
 // Transform category tags array into an object with 'id' as key
 const CategoryTagsByIndex = CategoryTags.reduce((acc, tag) => {
@@ -99,6 +103,19 @@ export default {
     }
   },
   methods: {
+    getPriceProductTitle() {
+      if (this.hasProduct && this.product.product_name) {
+        return this.product.product_name
+      } else if (this.hasPrice && this.price.product_code) {
+        return this.price.product_code
+      } else if (this.hasPrice && this.hasCategoryTag) {
+        return this.getCategoryName(this.price.category_tag)
+      }
+      return 'unknown'
+    },
+    getCategoryName(categoryTag) {
+      return CategoryTagsByIndex[categoryTag].name
+    },
     getPriceValue(priceValue, priceCurrency) {
       return priceValue.toLocaleString(navigator.language, {
         style: 'currency',
@@ -118,21 +135,18 @@ export default {
       let pricePerKilo = (this.priceValue / productQuantity) * 1000
       return `${this.getPriceValue(pricePerKilo, this.priceCurrency)} / kg`
     },
-    getPriceProductTitle() {
-      if (this.hasProduct && this.product.product_name) {
-        return this.product.product_name
-      } else if (this.hasPrice && this.price.product_code) {
-        return this.price.product_code
-      } else if (this.hasPrice && this.hasCategoryTag) {
-        return this.getCategoryName(this.price.category_tag)
-      }
-      return 'unknown'
-    },
     getPriceLocationTitle() {
       if (this.price.location) {
         return `${this.price.location.osm_name}, ${this.price.location.osm_address_city}`
       }
       return this.price.location_id
+    },
+    getPriceLocationCountryEmoji() {
+      if (this.price.location) {
+        const country = CountriesWithEmoji.find(c => c.name === this.price.location.osm_address_country)
+        return country.emoji
+      }
+      return
     },
     getDateFormatted(dateString) {
       return utils.prettyDate(dateString)
@@ -158,9 +172,6 @@ export default {
       }
       this.$router.push({ path: `/users/${this.price.owner}` })
     },
-    getCategoryName(categoryTag) {
-      return CategoryTagsByIndex[categoryTag].name
-    }
   },
 }
 </script>
