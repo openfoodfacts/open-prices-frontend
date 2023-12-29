@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.8.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.7.0...v1.8.0) (2023-12-29)
+
+
+### Features
+
+* **price card:** add label tags ([#83](https://github.com/openfoodfacts/open-prices-frontend/issues/83)) ([0b9c1f0](https://github.com/openfoodfacts/open-prices-frontend/commit/0b9c1f0c5a955b32ce5ef1cb2312abc2b1485642))
+* **price card:** add origin tag info ([#86](https://github.com/openfoodfacts/open-prices-frontend/issues/86)) ([8e8f359](https://github.com/openfoodfacts/open-prices-frontend/commit/8e8f3596382de05f25e84666352e14b0a1213bd8))
+* **price create form:** add label organic ([#82](https://github.com/openfoodfacts/open-prices-frontend/issues/82)) ([e6c520a](https://github.com/openfoodfacts/open-prices-frontend/commit/e6c520ace4be5eb875e388997130030f4e21dd30))
+* **price create form:** add origin field ([#85](https://github.com/openfoodfacts/open-prices-frontend/issues/85)) ([6c87093](https://github.com/openfoodfacts/open-prices-frontend/commit/6c870937039d0b418b5ccb602dc1405edff0e7be))
+
 ## [1.7.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.6.0...v1.7.0) (2023-12-29)
 
 
