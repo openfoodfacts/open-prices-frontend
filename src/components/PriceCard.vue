@@ -4,7 +4,7 @@
       <v-row>
         <v-col v-if="!hideProductImage" style="max-width:25%">
           <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;width:100px"></v-img>
-          <v-img v-if="!product || !product.image_url" :src="defaultAvatar" style="height:100px;width:100px;filter:invert(.9);"></v-img>
+          <v-img v-if="!product || !product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
         </v-col>
         <v-col style="max-width:75%">
           <h3 v-if="!hideProductInfo" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
@@ -33,8 +33,8 @@
 
       <div class="d-flex flex-wrap ga-1 mt-2" v-if="price">
         <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" @click="goToLocation()">
-          <v-icon v-if="!getPriceLocationCountryEmoji()" start icon="mdi-map-marker-outline"></v-icon>
-          <span v-if="getPriceLocationCountryEmoji()" style="margin-left:-5px;margin-right:5px">{{ getPriceLocationCountryEmoji() }}&nbsp;</span>
+          <v-icon v-if="!priceLocationEmoji" start icon="mdi-map-marker-outline"></v-icon>
+          <span v-if="priceLocationEmoji" style="margin-inline-start:-5px;margin-inline-end:5px">{{ priceLocationEmoji }}</span>
           {{ getPriceLocationTitle() }}
         </v-chip>
         <v-chip class="mr-1" label size="small" @click="goToUser()">
@@ -53,7 +53,6 @@
 <script>
 import utils from '../utils.js'
 import CategoryTags from '../data/category-tags.json'
-import CountriesWithEmoji from '../data/countries-with-emoji.json'
 
 // Transform category tags array into an object with 'id' as key
 const CategoryTagsByIndex = CategoryTags.reduce((acc, tag) => {
@@ -73,8 +72,12 @@ export default {
   },
   data() {
     return {
-      defaultAvatar: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg'
+      productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
+      priceLocationEmoji: null
     }
+  },
+  mounted() {
+    this.initPriceCard()
   },
   computed: {
     priceValue() {
@@ -103,6 +106,9 @@ export default {
     }
   },
   methods: {
+    initPriceCard() {
+      this.priceLocationEmoji = this.getPriceLocationCountryEmoji()
+    },
     getPriceProductTitle() {
       if (this.hasProduct && this.product.product_name) {
         return this.product.product_name
@@ -142,11 +148,10 @@ export default {
       return this.price.location_id
     },
     getPriceLocationCountryEmoji() {
-      if (this.price.location) {
-        const country = CountriesWithEmoji.find(c => c.name === this.price.location.osm_address_country)
-        return country.emoji
+      if (this.price && this.price.location) {
+        return utils.getCountryEmojiFromName(this.price.location.osm_address_country)
       }
-      return
+      return null
     },
     getDateFormatted(dateString) {
       return utils.prettyDate(dateString)
