@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.7.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.6.0...v1.7.0) (2023-12-29)
+
+
+### Features
+
+* **location detail:** add country flag ([#81](https://github.com/openfoodfacts/open-prices-frontend/issues/81)) ([62c9bb7](https://github.com/openfoodfacts/open-prices-frontend/commit/62c9bb7752f829499e1d917ce1858081fc6fc19e))
+* **price card:** improve look & feel ([#77](https://github.com/openfoodfacts/open-prices-frontend/issues/77)) ([3151439](https://github.com/openfoodfacts/open-prices-frontend/commit/31514392bd1a6af5044474ffd69b5a7c6c1ac5a9))
+* **price card:** show location country flag ([#80](https://github.com/openfoodfacts/open-prices-frontend/issues/80)) ([d2f6b31](https://github.com/openfoodfacts/open-prices-frontend/commit/d2f6b31db696ce5b528743680a92268135539589))
+* **price create form:** add support for raw categories ([#74](https://github.com/openfoodfacts/open-prices-frontend/issues/74)) ([af1d357](https://github.com/openfoodfacts/open-prices-frontend/commit/af1d3577cfe07dec93bd9af45f256b2f757ffc0f))
+* **price create form:** homogenize proof/product/location add buttons ([61d3a0e](https://github.com/openfoodfacts/open-prices-frontend/commit/61d3a0eb15e813403e20c4565d1dd25a0867b06c))
+* **price create form:** improve location selector search box, better display results, filter out parkings ([d845f52](https://github.com/openfoodfacts/open-prices-frontend/commit/d845f52412c8290998ee3f0aff1f5eee40475439))
+* **price create form:** make price card readonly, improve mode chips ([0c783f8](https://github.com/openfoodfacts/open-prices-frontend/commit/0c783f8ad99a673e52e7e15c8c8ee3d027a1021f))
+* **user detail:** new basic User detail page ([#78](https://github.com/openfoodfacts/open-prices-frontend/issues/78)) ([021a655](https://github.com/openfoodfacts/open-prices-frontend/commit/021a655d1567d4b3aaa6c101cfb026a1ca4c48c9))
+
 ## [1.6.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.5.0...v1.6.0) (2023-12-26)
 
 
