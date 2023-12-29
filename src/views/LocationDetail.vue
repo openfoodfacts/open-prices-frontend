@@ -37,6 +37,7 @@
 
 <script>
 import api from '../services/api'
+import utils from '../utils.js'
 import PriceCard from '../components/PriceCard.vue'
 
 export default {
@@ -77,7 +78,7 @@ export default {
     },
     getLocationTitle(location) {
       if (location) {
-        return `${location.osm_name}, ${location.osm_address_city}`
+        return utils.getLocationTitle(location, true)
       }
       return this.$route.params.id
     },

@@ -47,8 +47,16 @@ function prettyRelativeDateTime(dateTimeString, short=false) {
 }
 
 function getCountryEmojiFromName(countryString) {
-  const country = CountriesWithEmoji.find(c => c.name === countryString)
+  const country = CountriesWithEmoji.find(c => c.name === countryString || (c.name_original && c.name_original.length && c.name_original.indexOf(countryString) > -1))
   return country ? country.emoji : null
+}
+
+function getLocationTitle(locationObject, withEmoji=false) {
+  let locationTitle = `${locationObject.osm_name}, ${locationObject.osm_address_city || ''}`
+  if (withEmoji) {
+    locationTitle += ` ${getCountryEmojiFromName(locationObject.osm_address_country) || ''}`
+  }
+  return locationTitle
 }
 
 
@@ -57,4 +65,5 @@ export default {
   prettyDate,
   prettyRelativeDateTime,
   getCountryEmojiFromName,
+  getLocationTitle,
 }
