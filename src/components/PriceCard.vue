@@ -4,7 +4,7 @@
       <v-row>
         <v-col v-if="!hideProductImage" style="max-width:25%">
           <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;width:100px"></v-img>
-          <v-img v-if="!product || !product.image_url" :src="defaultAvatar" style="height:100px;width:100px;filter:invert(.9);"></v-img>
+          <v-img v-if="!product || !product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
         </v-col>
         <v-col style="max-width:75%">
           <h3 v-if="!hideProductInfo" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
@@ -32,13 +32,17 @@
       </v-row>
 
       <div class="d-flex flex-wrap ga-1 mt-2" v-if="price">
-        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" prepend-icon="mdi-map-marker-outline" @click="goToLocation()">
+        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" @click="goToLocation()">
+          <v-icon v-if="!priceLocationEmoji" start icon="mdi-map-marker-outline"></v-icon>
+          <span v-if="priceLocationEmoji" style="margin-inline-start:-5px;margin-inline-end:5px">{{ priceLocationEmoji }}</span>
           {{ getPriceLocationTitle() }}
         </v-chip>
-        <v-chip class="mr-1" label size="small" prepend-icon="mdi-account" @click="goToUser()">
+        <v-chip class="mr-1" label size="small" @click="goToUser()">
+          <v-icon start icon="mdi-account"></v-icon>
           {{ price.owner }}
         </v-chip>
-        <v-chip label size="small" prepend-icon="mdi-clock-outline">
+        <v-chip label size="small">
+          <v-icon start icon="mdi-clock-outline"></v-icon>
           {{ getRelativeDateTimeFormatted(price.created) }}
         </v-chip>
       </div>
@@ -48,7 +52,6 @@
 
 <script>
 import utils from '../utils.js'
-// Import category tags static JSON file
 import CategoryTags from '../data/category-tags.json'
 
 // Transform category tags array into an object with 'id' as key
@@ -69,8 +72,12 @@ export default {
   },
   data() {
     return {
-      defaultAvatar: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg'
+      productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
+      priceLocationEmoji: null
     }
+  },
+  mounted() {
+    this.initPriceCard()
   },
   computed: {
     priceValue() {
@@ -99,6 +106,22 @@ export default {
     }
   },
   methods: {
+    initPriceCard() {
+      this.priceLocationEmoji = this.getPriceLocationCountryEmoji()
+    },
+    getPriceProductTitle() {
+      if (this.hasProduct && this.product.product_name) {
+        return this.product.product_name
+      } else if (this.hasPrice && this.price.product_code) {
+        return this.price.product_code
+      } else if (this.hasPrice && this.hasCategoryTag) {
+        return this.getCategoryName(this.price.category_tag)
+      }
+      return 'unknown'
+    },
+    getCategoryName(categoryTag) {
+      return CategoryTagsByIndex[categoryTag].name
+    },
     getPriceValue(priceValue, priceCurrency) {
       return priceValue.toLocaleString(navigator.language, {
         style: 'currency',
@@ -118,21 +141,17 @@ export default {
       let pricePerKilo = (this.priceValue / productQuantity) * 1000
       return `${this.getPriceValue(pricePerKilo, this.priceCurrency)} / kg`
     },
-    getPriceProductTitle() {
-      if (this.hasProduct && this.product.product_name) {
-        return this.product.product_name
-      } else if (this.hasPrice && this.price.product_code) {
-        return this.price.product_code
-      } else if (this.hasPrice && this.hasCategoryTag) {
-        return this.getCategoryName(this.price.category_tag)
-      }
-      return 'unknown'
-    },
     getPriceLocationTitle() {
       if (this.price.location) {
         return `${this.price.location.osm_name}, ${this.price.location.osm_address_city}`
       }
       return this.price.location_id
+    },
+    getPriceLocationCountryEmoji() {
+      if (this.price && this.price.location) {
+        return utils.getCountryEmojiFromName(this.price.location.osm_address_country)
+      }
+      return null
     },
     getDateFormatted(dateString) {
       return utils.prettyDate(dateString)
@@ -158,9 +177,6 @@ export default {
       }
       this.$router.push({ path: `/users/${this.price.owner}` })
     },
-    getCategoryName(categoryTag) {
-      return CategoryTagsByIndex[categoryTag].name
-    }
   },
 }
 </script>
