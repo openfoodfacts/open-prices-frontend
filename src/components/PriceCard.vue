@@ -16,6 +16,9 @@
             <span v-if="hasProductQuantity">
               <v-chip label size="small" density="comfortable" class="mr-1">{{ product.product_quantity }} g</v-chip>
             </span>
+            <span v-if="hasPriceOrigin && priceOrigin">
+              <v-chip label size="small" density="comfortable" class="mr-1">{{ priceOrigin.name }}</v-chip>
+            </span>
             <span v-if="hasPriceLabels">
               <v-chip v-for="pl in priceLabels" label size="small" density="comfortable" class="mr-1">
                 {{ pl.name }}
@@ -59,13 +62,8 @@
 <script>
 import utils from '../utils.js'
 import CategoryTags from '../data/category-tags.json'
+import OriginTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
-
-// Transform category tags array into an object with 'id' as key
-const CategoryTagsByIndex = CategoryTags.reduce((acc, tag) => {
-  acc[tag.id] = tag
-  return acc
-}, {})
 
 
 export default {
@@ -80,6 +78,7 @@ export default {
   data() {
     return {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
+      priceOrigin: null,
       priceLabels: [],
       priceLocationEmoji: null
     }
@@ -112,13 +111,17 @@ export default {
     hasProductBrands() {
       return this.hasProduct && !!this.product.brands
     },
+    hasPriceOrigin() {
+      return this.hasPrice && !!this.price.origins_tags && this.price.origins_tags.length
+    },
     hasPriceLabels() {
-      return this.hasPrice && !!this.price.labels_tags
+      return this.hasPrice && !!this.price.labels_tags && this.price.labels_tags.length
     }
   },
   methods: {
     initPriceCard() {
       this.priceLocationEmoji = this.getPriceLocationCountryEmoji()
+      this.priceOrigin = this.getPriceOriginTag()
       this.priceLabels = this.getPriceLabelsTagsList()
     },
     getPriceProductTitle() {
@@ -127,12 +130,20 @@ export default {
       } else if (this.hasPrice && this.price.product_code) {
         return this.price.product_code
       } else if (this.hasPrice && this.hasCategoryTag) {
-        return this.getCategoryName(this.price.category_tag)
+        return this.getPriceCategoryName()
       }
       return 'unknown'
     },
-    getCategoryName(categoryTag) {
-      return CategoryTagsByIndex[categoryTag].name
+    getPriceCategoryName() {
+      if (this.price && this.price.category_tag) {
+        const tag = CategoryTags.find(ct => ct.id === this.price.category_tag)
+        return tag.name
+      }
+    },
+    getPriceOriginTag() {
+      if (this.price && this.price.origins_tags) {
+        return OriginTags.find(ot => this.price.origins_tags[0].indexOf(ot.id) > -1)
+      }
     },
     getPriceLabelsTagsList() {
       if (this.price && this.price.labels_tags) {
