@@ -61,7 +61,6 @@
 
 <script>
 import utils from '../utils.js'
-import CategoryTags from '../data/category-tags.json'
 import OriginTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
 
@@ -117,7 +116,13 @@ export default {
     },
     hasPriceLabels() {
       return this.hasPrice && !!this.price.labels_tags && this.price.labels_tags.length
-    }
+    },
+    getPriceCategoryName() {
+      if (this.price && this.price.category_tag) {
+        const tag = utils.getCategory(this.price.category_tag)
+        return tag ? tag.name : this.price.category_tag
+      }
+    },
   },
   methods: {
     initPriceCard() {
@@ -131,15 +136,9 @@ export default {
       } else if (this.hasPrice && this.price.product_code) {
         return this.price.product_code
       } else if (this.hasPrice && this.hasCategoryTag) {
-        return this.getPriceCategoryName()
+        return this.getPriceCategoryName
       }
       return 'unknown'
-    },
-    getPriceCategoryName() {
-      if (this.price && this.price.category_tag) {
-        const tag = CategoryTags.find(ct => ct.id === this.price.category_tag)
-        return tag.name
-      }
     },
     getPriceOriginTag() {
       if (this.price && this.price.origins_tags) {

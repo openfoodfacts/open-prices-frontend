@@ -2,7 +2,7 @@
   <v-row>
     <v-col cols="12" sm="6">
       <PriceCard v-if="product" :product="product" :readonly="true" elevation="1"></PriceCard>
-      <v-card v-if="productIsCategory" :title="productId" prepend-icon="mdi-fruit-watermelon"></v-card>
+      <v-card v-if="productIsCategory" :title="getCategoryName" prepend-icon="mdi-fruit-watermelon"></v-card>
     </v-col>
   </v-row>
 
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import utils from '../utils.js'
 import api from '../services/api'
 import PriceCard from '../components/PriceCard.vue'
 
@@ -63,7 +64,13 @@ export default {
   computed: {
     productIsCategory() {
       return this.productId.startsWith('en')
-    }
+    },
+    getCategoryName() {
+      if (this.productIsCategory) {
+        const tag = utils.getCategory(this.productId)
+        return tag ? tag.name : this.productId
+      }
+    },
   },
   methods: {
     getProduct() {
