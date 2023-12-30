@@ -69,7 +69,7 @@ export default {
     },
     getLocationPrices() {
       this.loading = true
-      return api.getPrices({ location_id: this.$route.params.id, order_by: '-created' })
+      return api.getPrices({ location_id: this.$route.params.id })
         .then((data) => {
           this.locationPriceList = data.items
           this.locationPriceCount = data.total

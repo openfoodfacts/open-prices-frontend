@@ -64,7 +64,7 @@ export default {
     },
     getProductPrices() {
       this.loading = true
-      return api.getPrices({ product_id: this.$route.params.id, order_by: '-created' })
+      return api.getPrices({ product_id: this.$route.params.id })
         .then((data) => {
           this.productPriceList = data.items
           this.productPriceCount = data.total

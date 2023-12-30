@@ -27,7 +27,7 @@ export default {
   methods: {
     getPrices() {
       this.loading = true
-      return api.getPrices()
+      return api.getPrices({ size: 1 })
         .then((data) => {
           this.priceCount = data.total
           this.loading = false

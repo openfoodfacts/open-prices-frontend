@@ -49,7 +49,7 @@ export default {
   methods: {
     getUserPrices() {
       this.loading = true
-      return api.getPrices({ owner: this.username, order_by: '-created' })
+      return api.getPrices({ owner: this.username })
         .then((data) => {
           this.userPriceList = data.items
           this.userPriceCount = data.total

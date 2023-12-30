@@ -47,7 +47,8 @@ export default {
   },
 
   getPrices(params = {}) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${new URLSearchParams(params)}`
+    const defaultParams = {page: 1, size: 10, order_by: '-created'}
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${new URLSearchParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
       headers: {
