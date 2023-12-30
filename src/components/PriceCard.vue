@@ -7,9 +7,9 @@
           <v-img v-if="!product || !product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
         </v-col>
         <v-col style="max-width:75%">
-          <h3 v-if="!hideProductInfo" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
+          <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
-          <p v-if="!hideProductInfo" class="mb-2">
+          <p v-if="!hideProductDetails" class="mb-2">
             <span v-if="hasProductBrands">
               <v-chip label size="small" density="comfortable" class="mr-1">{{ product.brands }}</v-chip>
             </span>
@@ -71,7 +71,8 @@ export default {
     'price': null,
     'product': null,
     'hideProductImage': false,
-    'hideProductInfo': false,
+    'hideProductTitle': false,
+    'hideProductDetails': false,
     'hidePriceLocation': false,
     'readonly': false
   },
@@ -188,10 +189,10 @@ export default {
       return utils.prettyRelativeDateTime(dateTimeString, true)
     },
     goToProduct() {
-      if (this.readonly || !this.hasProduct) {
+      if (this.readonly) {
         return
       }
-      this.$router.push({ path: `/products/${this.product.id}` })
+      this.$router.push({ path: `/products/${this.hasProduct ? this.product.id : this.price.category_tag}` })
     },
     goToLocation() {
       if (this.readonly) {
