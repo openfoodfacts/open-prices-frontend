@@ -5,8 +5,14 @@
   </h1>
 
   <v-row>
-    <v-col cols="12" sm="6" md="4" v-for="price in prices" :key="price">
+    <v-col cols="12" sm="6" md="4" v-for="price in priceList" :key="price">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%"></PriceCard>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="priceList.length < priceTotal" class="mb-2">
+    <v-col align="center">
+      <v-btn size="small" @click="getPrices">Load more</v-btn>
     </v-col>
   </v-row>
 </template>
@@ -21,7 +27,9 @@ export default {
   },
   data() {
     return {
-      prices: [],
+      priceList: [],
+      priceTotal: null,
+      pricePage: 0,
       loading: false,
     }
   },
@@ -31,9 +39,11 @@ export default {
   methods: {
     getPrices() {
       this.loading = true
-      return api.getPrices({ order_by: '-created' })
+      this.pricePage += 1
+      return api.getPrices({ page: this.pricePage })
         .then((data) => {
-          this.prices = data.items
+          this.priceList.push(...data.items)
+          this.priceTotal = data.total
           this.loading = false
         })
     }

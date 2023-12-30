@@ -24,13 +24,19 @@
 
   <h2 class="mb-1">
     Latest prices
-    <small>{{ locationPriceCount }}</small>
+    <small>{{ locationPriceTotal }}</small>
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="price in locationPriceList" :key="price">
       <PriceCard :price="price" :product="price.product" :hidePriceLocation="true" elevation="1" height="100%"></PriceCard>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="locationPriceList.length < locationPriceTotal" class="mb-2">
+    <v-col align="center">
+      <v-btn size="small" @click="getLocationPrices">Load more</v-btn>
     </v-col>
   </v-row>
 </template>
@@ -48,7 +54,8 @@ export default {
     return {
       location: null,
       locationPriceList: [],
-      locationPriceCount: null,
+      locationPriceTotal: null,
+      locationPricePage: 0,
       loading: false,
     }
   },
@@ -58,21 +65,20 @@ export default {
   },
   methods: {
     getLocation() {
-      this.loading = true
       return api.getLocationById(this.$route.params.id)
         .then((data) => {
           if (data.id) {
             this.location = data
-            this.loading = false
           }
         })
     },
     getLocationPrices() {
       this.loading = true
-      return api.getPrices({ location_id: this.$route.params.id, order_by: '-created' })
+      this.locationPricePage += 1
+      return api.getPrices({ location_id: this.$route.params.id, page: this.locationPricePage })
         .then((data) => {
-          this.locationPriceList = data.items
-          this.locationPriceCount = data.total
+          this.locationPriceList.push(...data.items)
+          this.locationPriceTotal = data.total
           this.loading = false
         })
     },
