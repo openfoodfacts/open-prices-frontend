@@ -6,7 +6,7 @@
 
   <v-row>
     <v-col cols="12" md="6" lg="4">
-      <v-card title="Price count" :text="priceCount"></v-card>
+      <v-card title="Price count" :text="priceTotal"></v-card>
     </v-col>
   </v-row>
 </template>
@@ -17,7 +17,7 @@ import api from '../services/api'
 export default {
   data() {
     return {
-      priceCount: null,
+      priceTotal: null,
       loading: false,
     }
   },
@@ -29,7 +29,7 @@ export default {
       this.loading = true
       return api.getPrices({ size: 1 })
         .then((data) => {
-          this.priceCount = data.total
+          this.priceTotal = data.total
           this.loading = false
         })
     }
