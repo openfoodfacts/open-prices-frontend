@@ -20,13 +20,19 @@
 
   <h2 class="mb-1">
     Latest prices
-    <small>{{ productPriceCount }}</small>
+    <small>{{ productPriceTotal }}</small>
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="price in productPriceList" :key="price">
       <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductInfo="true" elevation="1" height="100%"></PriceCard>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="productPriceList.length < productPriceTotal" class="mb-2">
+    <v-col align="center">
+      <v-btn size="small" @click="getProductPrices">Load more</v-btn>
     </v-col>
   </v-row>
 </template>
@@ -43,7 +49,8 @@ export default {
     return {
       product: null,
       productPriceList: [],
-      productPriceCount: null,
+      productPriceTotal: null,
+      productPricePage: 0,
       loading: false,
     }
   },
@@ -53,21 +60,20 @@ export default {
   },
   methods: {
     getProduct() {
-      this.loading = true
       return api.getProductById(this.$route.params.id)
         .then((data) => {
           if (data.id) {
             this.product = data
-            this.loading = false
           }
         })
     },
     getProductPrices() {
       this.loading = true
-      return api.getPrices({ product_id: this.$route.params.id })
+      this.productPricePage += 1
+      return api.getPrices({ product_id: this.$route.params.id, page: this.productPricePage })
         .then((data) => {
-          this.productPriceList = data.items
-          this.productPriceCount = data.total
+          this.productPriceList.push(...data.items)
+          this.productPriceTotal = data.total
           this.loading = false
         })
     },

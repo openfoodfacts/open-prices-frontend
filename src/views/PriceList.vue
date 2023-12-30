@@ -29,7 +29,7 @@ export default {
     return {
       priceList: [],
       priceTotal: null,
-      page: 0,
+      pricePage: 0,
       loading: false,
     }
   },
@@ -39,8 +39,8 @@ export default {
   methods: {
     getPrices() {
       this.loading = true
-      this.page += 1
-      return api.getPrices({ page: this.page })
+      this.pricePage += 1
+      return api.getPrices({ page: this.pricePage })
         .then((data) => {
           this.priceList.push(...data.items)
           this.priceTotal = data.total
