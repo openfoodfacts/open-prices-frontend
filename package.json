@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build-prod": "vite build --base=/app/ --mode prod",
+    "build": "vite build",
     "build-staging": "vite build  --base=/app/ --mode preprod",
+    "build-prod": "vite build --base=/app/ --mode prod",
     "preview": "vite preview"
   },
   "dependencies": {

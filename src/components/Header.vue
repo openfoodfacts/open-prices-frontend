@@ -1,7 +1,10 @@
 <template>
   <v-app-bar :elevation="1">
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu"></v-app-bar-nav-icon>
-    <v-app-bar-title style="cursor:pointer" @click="$router.push('/')">Open Prices</v-app-bar-title>
+    <v-app-bar-title style="cursor:pointer" @click="$router.push('/')">
+      <img src="/favicon.svg" height="28" style="vertical-align:bottom">
+      Open Prices
+    </v-app-bar-title>
     <template v-slot:append>
       <v-btn v-if="!username" to="/sign-in" icon="mdi-login"></v-btn>
       <v-menu v-if="username">
