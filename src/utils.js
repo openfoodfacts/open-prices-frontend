@@ -1,3 +1,4 @@
+import CategoryTags from './data/category-tags.json'
 import CountriesWithEmoji from './data/countries-with-emoji.json'
 
 
@@ -46,6 +47,10 @@ function prettyRelativeDateTime(dateTimeString, short=false) {
   diff < 60 && "just now" || diff < 120 && "1 minute ago" || diff < 3600 && Math.floor(diff / 60) + " minutes ago" || diff < 7200 && "1 hour ago" || diff < 86400 && Math.floor(diff / 3600) + " hours ago") || day_diff == 1 && "Yesterday" || day_diff < 7 && day_diff + " days ago" || day_diff < 31 && Math.ceil(day_diff / 7) + " weeks ago";
 }
 
+function getCategory(categoryId) {
+  return CategoryTags.find(ct => ct.id === categoryId)
+}
+
 function getCountryEmojiFromName(countryString) {
   const country = CountriesWithEmoji.find(c => c.name === countryString || (c.name_original && c.name_original.length && c.name_original.indexOf(countryString) > -1))
   return country ? country.emoji : null
@@ -64,6 +69,7 @@ export default {
   addObjectToArray,
   prettyDate,
   prettyRelativeDateTime,
+  getCategory,
   getCountryEmojiFromName,
   getLocationTitle,
 }

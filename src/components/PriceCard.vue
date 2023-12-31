@@ -7,9 +7,9 @@
           <v-img v-if="!product || !product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
         </v-col>
         <v-col style="max-width:75%">
-          <h3 v-if="!hideProductInfo" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
+          <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
-          <p v-if="!hideProductInfo" class="mb-2">
+          <p v-if="!hideProductDetails" class="mb-2">
             <span v-if="hasProductBrands">
               <v-chip label size="small" density="comfortable" class="mr-1">{{ product.brands }}</v-chip>
             </span>
@@ -61,7 +61,6 @@
 
 <script>
 import utils from '../utils.js'
-import CategoryTags from '../data/category-tags.json'
 import OriginTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
 
@@ -71,7 +70,8 @@ export default {
     'price': null,
     'product': null,
     'hideProductImage': false,
-    'hideProductInfo': false,
+    'hideProductTitle': false,
+    'hideProductDetails': false,
     'hidePriceLocation': false,
     'readonly': false
   },
@@ -116,7 +116,13 @@ export default {
     },
     hasPriceLabels() {
       return this.hasPrice && !!this.price.labels_tags && this.price.labels_tags.length
-    }
+    },
+    getPriceCategoryName() {
+      if (this.price && this.price.category_tag) {
+        const tag = utils.getCategory(this.price.category_tag)
+        return tag ? tag.name : this.price.category_tag
+      }
+    },
   },
   methods: {
     initPriceCard() {
@@ -130,15 +136,9 @@ export default {
       } else if (this.hasPrice && this.price.product_code) {
         return this.price.product_code
       } else if (this.hasPrice && this.hasCategoryTag) {
-        return this.getPriceCategoryName()
+        return this.getPriceCategoryName
       }
       return 'unknown'
-    },
-    getPriceCategoryName() {
-      if (this.price && this.price.category_tag) {
-        const tag = CategoryTags.find(ct => ct.id === this.price.category_tag)
-        return tag.name
-      }
     },
     getPriceOriginTag() {
       if (this.price && this.price.origins_tags) {
@@ -188,10 +188,10 @@ export default {
       return utils.prettyRelativeDateTime(dateTimeString, true)
     },
     goToProduct() {
-      if (this.readonly || !this.hasProduct) {
+      if (this.readonly) {
         return
       }
-      this.$router.push({ path: `/products/${this.product.id}` })
+      this.$router.push({ path: `/products/${this.hasProduct ? this.product.id : this.price.category_tag}` })
     },
     goToLocation() {
       if (this.readonly) {
