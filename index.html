@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="/favicon.ico">
+
     <title>Open Prices</title>
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <meta name="title" content="Open Prices" />
+    <meta name="description" content="An open crowdsourced database of food prices" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Open Prices" />
+    <meta property="og:description" content="An open crowdsourced database of food prices" />
+    <meta property="og:image" content="/logo-vertical-white-social-media-preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Open Prices" />
+    <meta property="twitter:description" content="An open crowdsourced database of food prices" />
+    <meta property="twitter:image" content="/logo-vertical-white-social-media-preview.png" />
   </head>
   <body>
+    <noscript>
+      <strong>We're sorry but this website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
