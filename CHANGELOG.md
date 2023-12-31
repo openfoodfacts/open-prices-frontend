@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.9.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.8.0...v1.9.0) (2023-12-31)
+
+
+### Features
+
+* add favicon & metatags ([#92](https://github.com/openfoodfacts/open-prices-frontend/issues/92)) ([011f8b3](https://github.com/openfoodfacts/open-prices-frontend/commit/011f8b3b0ea32561861aa9f11b7b2115dba3cc19))
+* add PWA manifest.json config ([#93](https://github.com/openfoodfacts/open-prices-frontend/issues/93)) ([c01c7cb](https://github.com/openfoodfacts/open-prices-frontend/commit/c01c7cbde188d1c1e0b39d9a5b914352d1c10ab1))
+* fetch latest prices by batches of 10 + load more button ([#89](https://github.com/openfoodfacts/open-prices-frontend/issues/89)) ([4c1581f](https://github.com/openfoodfacts/open-prices-frontend/commit/4c1581f0714e18561f4c7b61bf9f61bedbc12aa5))
+* **product detail:** manage category tags ([#91](https://github.com/openfoodfacts/open-prices-frontend/issues/91)) ([682c3ea](https://github.com/openfoodfacts/open-prices-frontend/commit/682c3ead29512c5c3adb377751deaee75efcba58))
+
+
+### Bug Fixes
+
+* PWA config for preprod & prod. ref [#93](https://github.com/openfoodfacts/open-prices-frontend/issues/93) ([f4c4984](https://github.com/openfoodfacts/open-prices-frontend/commit/f4c4984c0a9dbc01b035d723def17422a25acc15))
+
 ## [1.8.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.7.0...v1.8.0) (2023-12-29)
 
 
