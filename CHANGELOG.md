@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.9.0...v1.9.1) (2024-01-03)
+
+
+### Technical
+
+* update categories ([#96](https://github.com/openfoodfacts/open-prices-frontend/issues/96)) ([129d852](https://github.com/openfoodfacts/open-prices-frontend/commit/129d852bb29c01ab10c24b40589f08696f1e189d))
+
 ## [1.9.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.8.0...v1.9.0) (2023-12-31)
 
 
