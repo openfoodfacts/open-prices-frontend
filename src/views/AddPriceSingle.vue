@@ -4,53 +4,17 @@
   <v-form @submit.prevent="createPrice">
     <v-row>
 
-      <!-- Step 1: proof -->
+      <!-- Step 1: product -->
       <v-col cols="12" md="6" lg="4">
         <v-card
-          title="Take a picture of the price tag"
-          subtitle="We need this for proof"
-          :prepend-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
+          title="Product details"
+          subtitle=""
+          :prepend-icon="productFormFilled ? 'mdi-database-check-outline' : 'mdi-database-outline'"
           height="100%"
-          :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
-          <v-divider></v-divider>
-          <v-card-text>
-            <v-row>
-              <v-col>
-                <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click.prevent="$refs.proof.click()" :loading="createProofLoading" :disabled="createProofLoading">Proof</v-btn>
-                <v-file-input
-                  class="overflow-hidden d-none"
-                  ref="proof"
-                  :prepend-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
-                  v-model="proofImage"
-                  capture="environment"
-                  accept="image/*"
-                  @change="uploadProof"
-                  @click:clear="clearProof"
-                  :loading="createProofLoading">
-                </v-file-input>
-                <p v-if="proofFormFilled && !createProofLoading" class="text-green mb-2"><i>Proof uploaded!</i></p>
-                <p v-if="!proofFormFilled && !createProofLoading" class="text-red mb-2"><i>Upload a proof</i></p>
-              </v-col>
-              <v-col v-if="proofFormFilled">
-                <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
-              </v-col>
-            </v-row>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <!-- Step 2: product & price -->
-      <v-col cols="12" md="6" lg="4">
-        <v-card
-          title="Product & price details"
-          subtitle="The most important :)"
-          :prepend-icon="productPriceFormFilled ? 'mdi-tag-check-outline' : 'mdi-tag-outline'"
-          height="100%"
-          :style="productPriceFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
+          :style="productFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
             <h3 class="mb-1">
-              Product
               <v-item-group v-model="productMode" class="d-inline" mandatory>
                 <v-item v-for="pm in productModeList" :key="pm.key" :value="pm.key" v-slot="{ isSelected, toggle }">
                   <v-chip class="mr-1" @click="toggle">
@@ -69,6 +33,7 @@
                 label="Product code"
                 type="text"
                 hint="EAN"
+                hide-details="auto"
                 @click:prepend="showBarcodeScanner"
               ></v-text-field>
               <PriceCard v-if="product" class="mb-4" :product="product" :readonly="true" elevation="1"></PriceCard>
@@ -102,7 +67,20 @@
               </div>
             </v-sheet>
             <p v-if="(productMode === 'barcode' && !productBarcodeFormFilled) || (productMode === 'category' && !productCategoryFormFilled)" class="text-red mb-2"><i>Set a product</i></p>
+          </v-card-text>
+        </v-card>
+      </v-col>
 
+      <!-- Step 2: price -->
+      <v-col cols="12" md="6" lg="4">
+        <v-card
+          title="Price details"
+          subtitle=""
+          :prepend-icon="priceFormFilled ? 'mdi-tag-check-outline' : 'mdi-tag-outline'"
+          height="100%"
+          :style="priceFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
+          <v-divider></v-divider>
+          <v-card-text>
             <h3 class="mb-1">Price <span v-if="productMode === 'category'">per kg</span></h3>
             <v-row>
               <v-col cols="6">
@@ -128,7 +106,7 @@
       <v-col cols="12" md="6" lg="4">
         <v-card
           title="Where & when?"
-          subtitle="Final step!"
+          subtitle=""
           :prepend-icon="locationDateFormFilled ? 'mdi-map-marker-check-outline' : 'mdi-map-marker-outline'"
           height="100%"
           :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
@@ -156,6 +134,41 @@
                   label="Date"
                   type="date"
                 ></v-text-field>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <!-- Step 4: proof -->
+      <v-col cols="12" md="6" lg="4">
+        <v-card
+          title="Take a picture of the price tag"
+          subtitle="We need this for proof"
+          :prepend-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
+          height="100%"
+          :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
+          <v-divider></v-divider>
+          <v-card-text>
+            <v-row>
+              <v-col>
+                <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click.prevent="$refs.proof.click()" :loading="createProofLoading" :disabled="createProofLoading">Proof</v-btn>
+                <v-file-input
+                  class="overflow-hidden d-none"
+                  ref="proof"
+                  :prepend-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
+                  v-model="proofImage"
+                  capture="environment"
+                  accept="image/*"
+                  @change="uploadProof"
+                  @click:clear="clearProof"
+                  :loading="createProofLoading">
+                </v-file-input>
+                <p v-if="proofFormFilled && !createProofLoading" class="text-green mb-2"><i>Proof uploaded!</i></p>
+                <p v-if="!proofFormFilled && !createProofLoading" class="text-red mb-2"><i>Upload a proof</i></p>
+              </v-col>
+              <v-col v-if="proofFormFilled">
+                <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
               </v-col>
             </v-row>
           </v-card-text>
@@ -223,7 +236,6 @@ export default {
       dev: import.meta.env.DEV,
       // price form
       addPriceSingleForm: {
-        proof_id: null,
         product_code: '',
         category_tag: null,
         origins_tags: '',
@@ -232,14 +244,10 @@ export default {
         currency: null,  // see initPriceSingleForm
         location_osm_id: null,
         location_osm_type: '',
-        date: new Date().toISOString().substr(0, 10)
+        date: new Date().toISOString().substr(0, 10),
+        proof_id: null,
       },
       createPriceLoading: false,
-      // proof data
-      proofImage: null,
-      proofImagePreview: null,
-      createProofLoading: false,
-      proofSuccessMessage: false,
       // product data
       product: null,
       productModeList: [{key: 'barcode', value: 'Barcode', icon: 'mdi-barcode-scan'}, {key: 'category', value: 'Category', icon: 'mdi-basket-outline'}],
@@ -253,14 +261,15 @@ export default {
       // location data
       locationSelector: false,
       locationSelectedDisplayName: '',
+      // proof data
+      proofImage: null,
+      proofImagePreview: null,
+      createProofLoading: false,
+      proofSuccessMessage: false,
     }
   },
   computed: {
     ...mapStores(useAppStore),
-    proofFormFilled() {
-      let keys = ['proof_id']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-    },
     productBarcodeFormFilled() {
       let keys = ['product_code']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
@@ -269,8 +278,11 @@ export default {
       let keys = ['category_tag', 'origins_tags']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
-    productPriceFormFilled() {
-      return (this.productBarcodeFormFilled || this.productCategoryFormFilled) && !!this.addPriceSingleForm.price && !!this.addPriceSingleForm.currency
+    productFormFilled() {
+      return this.productBarcodeFormFilled || this.productCategoryFormFilled
+    },
+    priceFormFilled() {
+      return !!this.addPriceSingleForm.price && !!this.addPriceSingleForm.currency
     },
     recentLocations() {
       return this.appStore.getRecentLocations(3)
@@ -283,8 +295,12 @@ export default {
       let keys = ['location_osm_id', 'location_osm_type', 'date']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
+    proofFormFilled() {
+      let keys = ['proof_id']
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
     formFilled() {
-      return this.proofFormFilled && this.productPriceFormFilled && this.locationDateFormFilled
+      return this.productFormFilled && this.priceFormFilled && this.locationDateFormFilled && this.proofFormFilled
     },
   },
   mounted() {
