@@ -41,16 +41,16 @@
       </v-row>
 
       <div class="d-flex flex-wrap ga-1 mt-2" v-if="price">
-        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" @click="goToLocation()">
+        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small"  density="comfortable" @click="goToLocation()">
           <v-icon v-if="!priceLocationEmoji" start icon="mdi-map-marker-outline"></v-icon>
           <span v-if="priceLocationEmoji" style="margin-inline-start:-5px;margin-inline-end:5px">{{ priceLocationEmoji }}</span>
           {{ getPriceLocationTitle() }}
         </v-chip>
-        <v-chip class="mr-1" label size="small" @click="goToUser()">
+        <v-chip class="mr-1" label size="small" density="comfortable" @click="goToUser()">
           <v-icon start icon="mdi-account"></v-icon>
           {{ price.owner }}
         </v-chip>
-        <v-chip label size="small">
+        <v-chip label size="small" density="comfortable">
           <v-icon start icon="mdi-clock-outline"></v-icon>
           {{ getRelativeDateTimeFormatted(price.created) }}
         </v-chip>
