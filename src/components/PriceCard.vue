@@ -11,7 +11,7 @@
 
           <p v-if="!hideProductDetails" class="mb-2">
             <span v-if="hasProductBrands">
-              <v-chip v-for="brand in getPriceProductBrandsList" label size="small" density="comfortable" class="mr-1">
+              <v-chip v-for="brand in getPriceProductBrandsList" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
                 {{ brand }}
               </v-chip>
             </span>
@@ -208,6 +208,12 @@ export default {
         return
       }
       this.$router.push({ path: `/products/${this.price.product_code || this.price.category_tag}` })
+    },
+    goToBrand(brand) {
+      if (this.readonly) {
+        return
+      }
+      this.$router.push({ path: `/brands/${brand}` })
     },
     goToLocation() {
       if (this.readonly) {
