@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     getLocation() {
-      return api.getLocationById(this.$route.params.id)
+      return api.getLocationByOSMTypeAndId(this.$route.params.osmtype, this.$route.params.osmid)
         .then((data) => {
           if (data.id) {
             this.location = data
@@ -75,7 +75,7 @@ export default {
     getLocationPrices() {
       this.loading = true
       this.locationPricePage += 1
-      return api.getPrices({ location_id: this.$route.params.id, page: this.locationPricePage })
+      return api.getPrices({ location_osm_type: this.$route.params.osmtype.toUpperCase(), location_osm_id: this.$route.params.osmid, page: this.locationPricePage })
         .then((data) => {
           this.locationPriceList.push(...data.items)
           this.locationPriceTotal = data.total
@@ -86,7 +86,7 @@ export default {
       if (location) {
         return utils.getLocationTitle(location, true)
       }
-      return this.$route.params.id
+      return `${this.$route.params.osmtype} ${this.$route.params.osmid}`
     },
     getLocationOSMUrl(location) {
       return `https://www.openstreetmap.org/${location.osm_type.toLowerCase()}/${location.osm_id}`
