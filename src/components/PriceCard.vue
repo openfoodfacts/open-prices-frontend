@@ -146,7 +146,7 @@ export default {
       } else if (this.hasPrice && this.hasCategoryTag) {
         return this.getPriceCategoryName
       }
-      return 'unknown'
+      return 'Unknown product'
     },
     getPriceOriginTag() {
       if (this.price && this.price.origins_tags) {

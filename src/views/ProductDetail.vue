@@ -1,18 +1,26 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <PriceCard v-if="product" :product="product" :readonly="true" elevation="1"></PriceCard>
-      <v-card v-if="productIsCategory" :title="getCategoryName" prepend-icon="mdi-fruit-watermelon"></v-card>
+      <PriceCard v-if="!loading && !productIsCategory" :product="product" :readonly="true" elevation="1"></PriceCard>
+      <v-card v-if="!loading && productIsCategory" :title="getCategoryName" prepend-icon="mdi-fruit-watermelon" elevation="1"></v-card>
     </v-col>
   </v-row>
 
-  <v-row class="mt-0" v-if="product">
+  <v-row class="mt-0" v-if="!productNotFound">
     <v-col cols="12" sm="6">
       <v-btn v-if="product.code && product.source" size="small" append-icon="mdi-open-in-new" :href="getProductOFFUrl(product)" target="_blank">
         Open Food Facts
       </v-btn>
-      <p v-if="!product.code || !product.source" class="text-red">
+    </v-col>
+  </v-row>
+
+  <v-row class="mt-0" v-if="productOrCategoryNotFound">
+    <v-col cols="12" sm="6">
+      <p v-if="productNotFound" class="text-red">
         <i>Product not found in Open Food Facts... Don't hesitate to add it :)</i>
+      </p>
+      <p v-if="categoryNotFound" class="text-red">
+        <i>Category not found...</i>
       </p>
     </v-col>
   </v-row>
@@ -50,7 +58,7 @@ export default {
   data() {
     return {
       productId: this.$route.params.id,  // product_code or product_category
-      product: null,
+      product: { code: this.$route.params.id },
       productPriceList: [],
       productPriceTotal: null,
       productPricePage: 0,
@@ -66,11 +74,18 @@ export default {
       return this.productId.startsWith('en')
     },
     getCategoryName() {
-      if (this.productIsCategory) {
-        const tag = utils.getCategory(this.productId)
-        return tag ? tag.name : this.productId
-      }
+      const tag = this.getCategory()
+      return tag ? tag.name : this.productId
     },
+    productNotFound() {
+      return !this.productIsCategory && (!this.product.code || !this.product.source)
+    },
+    categoryNotFound() {
+      return this.productIsCategory && !!this.getCategory
+    },
+    productOrCategoryNotFound() {
+      return this.productNotFound || this.categoryNotFound
+    }
   },
   methods: {
     getProduct() {
@@ -81,6 +96,11 @@ export default {
               this.product = data
             }
           })
+      }
+    },
+    getCategory() {
+      if (this.productIsCategory) {
+        return utils.getCategory(this.productId)
       }
     },
     getProductPrices() {
