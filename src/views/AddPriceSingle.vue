@@ -14,7 +14,7 @@
           :style="productFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
-            <h3 class="mb-1">
+            <h3 class="mb-2">
               <v-item-group v-model="productMode" class="d-inline" mandatory>
                 <v-item v-for="pm in productModeList" :key="pm.key" :value="pm.key" v-slot="{ isSelected, toggle }">
                   <v-chip class="mr-1" @click="toggle">
@@ -71,14 +71,14 @@
         </v-card>
       </v-col>
 
-      <!-- Step 2: price -->
+      <!-- Step 2: price & proof -->
       <v-col cols="12" md="6" lg="4">
         <v-card
           title="Price details"
-          subtitle=""
-          :prepend-icon="priceFormFilled ? 'mdi-tag-check-outline' : 'mdi-tag-outline'"
+          subtitle="With a proof"
+          :prepend-icon="priceProofFormFilled ? 'mdi-tag-check-outline' : 'mdi-tag-outline'"
           height="100%"
-          :style="priceFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
+          :style="priceProofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
             <h3 class="mb-1">Price <span v-if="productMode === 'category'">per kg</span></h3>
@@ -88,6 +88,7 @@
                   v-model="addPriceSingleForm.price"
                   label="Price"
                   type="number"
+                  hide-details="auto"
                 ></v-text-field>
               </v-col>
               <v-col cols="6">
@@ -95,61 +96,10 @@
                   v-model="addPriceSingleForm.currency"
                   label="Currency"
                   :items="currencyList"
+                  hide-details="auto"
                 ></v-autocomplete>
               </v-col>
             </v-row>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <!-- Step 3: location & date -->
-      <v-col cols="12" md="6" lg="4">
-        <v-card
-          title="Where & when?"
-          subtitle=""
-          :prepend-icon="locationDateFormFilled ? 'mdi-map-marker-check-outline' : 'mdi-map-marker-outline'"
-          height="100%"
-          :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
-          <v-divider></v-divider>
-          <v-card-text>
-            <h3 class="mb-1">
-              Location
-            </h3>
-            <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showLocationSelector">Find</v-btn>
-            <v-chip
-              class="mb-2"
-              :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
-              v-for="location in recentLocations"
-              @click="setLocationData(location)">
-              <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
-              {{ location.display_name }}
-            </v-chip>
-            <p v-if="!locationFormFilled" class="text-red mb-2"><i>Select your location</i></p>
-
-            <h3 class="mt-4 mb-1">Date</h3>
-            <v-row>
-              <v-col>
-                <v-text-field
-                  v-model="addPriceSingleForm.date"
-                  label="Date"
-                  type="date"
-                ></v-text-field>
-              </v-col>
-            </v-row>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <!-- Step 4: proof -->
-      <v-col cols="12" md="6" lg="4">
-        <v-card
-          title="Take a picture of the price tag"
-          subtitle="We need this for proof"
-          :prepend-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
-          height="100%"
-          :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
-          <v-divider></v-divider>
-          <v-card-text>
             <v-row>
               <v-col>
                 <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click.prevent="$refs.proof.click()" :loading="createProofLoading" :disabled="createProofLoading">Proof</v-btn>
@@ -169,6 +119,44 @@
               </v-col>
               <v-col v-if="proofFormFilled">
                 <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
+              </v-col>
+            </v-row>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <!-- Step 3: location & date -->
+      <v-col cols="12" md="6" lg="4">
+        <v-card
+          title="Where & when?"
+          subtitle="Final step!"
+          :prepend-icon="locationDateFormFilled ? 'mdi-map-marker-check-outline' : 'mdi-map-marker-outline'"
+          height="100%"
+          :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
+          <v-divider></v-divider>
+          <v-card-text>
+            <h3 class="mb-1">
+              Location
+            </h3>
+            <v-chip
+              class="mb-2"
+              :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+              v-for="location in recentLocations"
+              @click="setLocationData(location)">
+              <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
+              {{ location.display_name }}
+            </v-chip>
+            <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showLocationSelector">Find</v-btn>
+            <p v-if="!locationFormFilled" class="text-red mb-2"><i>Select your location</i></p>
+
+            <h3 class="mt-4 mb-1">Date</h3>
+            <v-row>
+              <v-col>
+                <v-text-field
+                  v-model="addPriceSingleForm.date"
+                  label="Date"
+                  type="date"
+                ></v-text-field>
               </v-col>
             </v-row>
           </v-card-text>
@@ -281,8 +269,13 @@ export default {
     productFormFilled() {
       return this.productBarcodeFormFilled || this.productCategoryFormFilled
     },
-    priceFormFilled() {
-      return !!this.addPriceSingleForm.price && !!this.addPriceSingleForm.currency
+    priceProofFormFilled() {
+      let keys = ['price', 'currency', 'proof_id']
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
+    proofFormFilled() {
+      let keys = ['proof_id']
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     recentLocations() {
       return this.appStore.getRecentLocations(3)
@@ -295,12 +288,8 @@ export default {
       let keys = ['location_osm_id', 'location_osm_type', 'date']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
-    proofFormFilled() {
-      let keys = ['proof_id']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-    },
     formFilled() {
-      return this.productFormFilled && this.priceFormFilled && this.locationDateFormFilled && this.proofFormFilled
+      return this.productFormFilled && this.priceProofFormFilled && this.locationDateFormFilled
     },
   },
   mounted() {
