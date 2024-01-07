@@ -17,7 +17,7 @@
             <h3 class="mb-2">
               <v-item-group v-model="productMode" class="d-inline" mandatory>
                 <v-item v-for="pm in productModeList" :key="pm.key" :value="pm.key" v-slot="{ isSelected, toggle }">
-                  <v-chip class="mr-1" @click="toggle">
+                  <v-chip class="mr-1" @click="toggle" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'">
                     <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'"></v-icon>
                     {{ pm.value }}
                   </v-chip>
@@ -140,7 +140,7 @@
             </h3>
             <v-chip
               class="mb-2"
-              :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+              :style="isSelectedLocation(location) ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'"
               v-for="location in recentLocations"
               @click="setLocationData(location)">
               <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
