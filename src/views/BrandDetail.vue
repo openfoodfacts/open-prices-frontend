@@ -47,7 +47,7 @@ export default {
   },
   data() {
     return {
-      brand: this.$route.params.id,
+      brand: null,  // see init
       brandProductList: [],
       brandProductTotal: null,
       brandProductPage: 0,
@@ -55,9 +55,14 @@ export default {
     }
   },
   mounted() {
-    this.getBrandProducts()
+    this.initBrand()
   },
   methods: {
+    initBrand() {
+      this.brand = this.$route.params.id
+      this.brandProductPage = 0
+      this.getBrandProducts()
+    },
     getBrandProducts() {
       this.loading = true
       this.brandProductPage += 1
@@ -70,6 +75,13 @@ export default {
     },
     getBrandOFFUrl() {
       return `https://world.openfoodfacts.org/brand/${this.brand}`
+    }
+  },
+  watch: {
+    $route (newBrand, oldBrand) {
+      if (oldBrand && newBrand && newBrand.name == 'brand-detail' && oldBrand.fullPath != newBrand.fullPath) {
+        this.initBrand()
+      }
     }
   }
 }
