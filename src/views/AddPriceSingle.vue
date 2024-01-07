@@ -300,8 +300,14 @@ export default {
       return !!v
     },
     initPriceSingleForm() {
+      /**
+       * init product mode, currency & last location
+       */
       this.productMode = this.appStore.user.last_product_mode_used
       this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
+      if (this.recentLocations.length) {
+        this.setLocationData(this.recentLocations[0])
+      }
     },
     clearProof() {
       this.proofImage = null
