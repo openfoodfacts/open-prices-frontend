@@ -11,13 +11,19 @@
 
           <p v-if="!hideProductDetails" class="mb-2">
             <span v-if="hasProductBrands">
-              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.brands }}</v-chip>
+              <v-chip label size="small" density="comfortable" class="mr-1">
+                {{ product.brands }}
+              </v-chip>
             </span>
             <span v-if="hasProductQuantity">
-              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.product_quantity }} g</v-chip>
+              <v-chip label size="small" density="comfortable" class="mr-1">
+                {{ product.product_quantity }} g
+              </v-chip>
             </span>
             <span v-if="hasPriceOrigin && priceOrigin">
-              <v-chip label size="small" density="comfortable" class="mr-1">{{ priceOrigin.name }}</v-chip>
+              <v-chip label size="small" density="comfortable" class="mr-1">
+                {{ priceOrigin.name }}
+              </v-chip>
             </span>
             <span v-if="hasPriceLabels">
               <v-chip v-for="pl in priceLabels" label size="small" density="comfortable" class="mr-1">
@@ -41,10 +47,10 @@
       </v-row>
 
       <div class="d-flex flex-wrap ga-1 mt-2" v-if="price">
-        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small"  density="comfortable" @click="goToLocation()">
-          <v-icon v-if="!priceLocationEmoji" start icon="mdi-map-marker-outline"></v-icon>
-          <span v-if="priceLocationEmoji" style="margin-inline-start:-5px;margin-inline-end:5px">{{ priceLocationEmoji }}</span>
+        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" density="comfortable" @click="goToLocation()">
+          <v-icon start icon="mdi-map-marker-outline"></v-icon>
           {{ getPriceLocationTitle() }}
+          <span v-if="priceLocationEmoji" style="margin-inline-start:5px">{{ priceLocationEmoji }}</span>
         </v-chip>
         <v-chip class="mr-1" label size="small" density="comfortable" @click="goToUser()">
           <v-icon start icon="mdi-account"></v-icon>
