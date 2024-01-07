@@ -25,7 +25,7 @@
               </v-item-group>
             </h3>
             <v-sheet v-if="productMode === 'barcode'">
-              <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showBarcodeScanner">Scan a barcode</v-btn>
+              <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">Scan a barcode</v-btn>
               <v-text-field
                 v-if="dev"
                 :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
@@ -102,7 +102,7 @@
             </v-row>
             <v-row>
               <v-col>
-                <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click.prevent="$refs.proof.click()" :loading="createProofLoading" :disabled="createProofLoading">Proof</v-btn>
+                <v-btn class="mb-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proof.click()" :loading="createProofLoading" :disabled="createProofLoading">Proof</v-btn>
                 <v-file-input
                   class="overflow-hidden d-none"
                   ref="proof"
@@ -146,7 +146,7 @@
               <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
               {{ location.display_name }}
             </v-chip>
-            <v-btn class="mb-2" size="small" prepend-icon="mdi-plus" @click="showLocationSelector">Find</v-btn>
+            <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelector">Find</v-btn>
             <p v-if="!locationFormFilled" class="text-red mb-2"><i>Select your location</i></p>
 
             <h3 class="mt-4 mb-1">Date</h3>
