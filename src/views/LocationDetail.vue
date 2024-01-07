@@ -9,13 +9,18 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0" v-if="location">
-    <v-col cols="12" sm="6" v-if="location.osm_id">
-      <v-btn size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
+  <v-row class="mt-0">
+    <v-col cols="12" sm="6">
+      <v-btn size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl()" target="_blank">
         OpenStreetMap
       </v-btn>
-      <p v-if="!location.osm_id" class="text-red">
-        <i>Location not found in OpenStreetMap... Don't hesitate to add it :)</i>
+    </v-col>
+  </v-row>
+
+  <v-row class="mt-0">
+    <v-col cols="12" sm="6">
+      <p v-if="!location" class="text-red">
+        <i>Location not found in our database...</i>
       </p>
     </v-col>
   </v-row>
@@ -65,7 +70,7 @@ export default {
   },
   methods: {
     getLocation() {
-      return api.getLocationById(this.$route.params.id)
+      return api.getLocationByOSMTypeAndId(this.$route.params.osmtype, this.$route.params.osmid)
         .then((data) => {
           if (data.id) {
             this.location = data
@@ -75,7 +80,7 @@ export default {
     getLocationPrices() {
       this.loading = true
       this.locationPricePage += 1
-      return api.getPrices({ location_id: this.$route.params.id, page: this.locationPricePage })
+      return api.getPrices({ location_osm_type: this.$route.params.osmtype.toUpperCase(), location_osm_id: this.$route.params.osmid, page: this.locationPricePage })
         .then((data) => {
           this.locationPriceList.push(...data.items)
           this.locationPriceTotal = data.total
@@ -86,10 +91,13 @@ export default {
       if (location) {
         return utils.getLocationTitle(location, true)
       }
-      return this.$route.params.id
+      return `${this.$route.params.osmtype} ${this.$route.params.osmid}`
     },
-    getLocationOSMUrl(location) {
-      return `https://www.openstreetmap.org/${location.osm_type.toLowerCase()}/${location.osm_id}`
+    getLocationOSMUrl() {
+      if (this.location) {
+        return `https://www.openstreetmap.org/${this.location.osm_type.toLowerCase()}/${this.location.osm_id}`
+      }
+      return `https://www.openstreetmap.org/${this.$route.params.osmtype.toLowerCase()}/${this.$route.params.osmid}`
     }
   }
 }

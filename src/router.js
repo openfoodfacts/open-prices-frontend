@@ -21,7 +21,7 @@ const routes = [
   { path: '/add/single', name: 'add-price-single', component: AddPriceSingle, meta: { title: 'Add a single price', requiresAuth: true }},
   { path: '/prices', name: 'prices', component: PriceList, meta: { title: 'Latest prices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
   { path: '/products/:id', name: 'product-detail', component: ProductDetail, meta: { title: 'Product detail' }},
-  { path: '/locations/:id', name: 'location-detail', component: LocationDetail, meta: { title: 'Location detail' }},
+  { path: '/locations/:osmtype/:osmid', name: 'location-detail', component: LocationDetail, meta: { title: 'Location detail' }},
   { path: '/users/:username', name: 'user-detail', component: UserDetail, meta: { title: 'User detail' }},
   { path: '/stats', name: 'stats', component: Stats, meta: { title: 'Stats' }},
   { path: '/:path(.*)', component: NotFound },

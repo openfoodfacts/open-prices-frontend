@@ -213,7 +213,7 @@ export default {
       if (this.readonly) {
         return
       }
-      this.$router.push({ path: `/locations/${this.price.location_id}` })
+      this.$router.push({ path: `/locations/${this.price.location_osm_type.toLowerCase()}/${this.price.location_osm_id}` })
     },
     goToUser() {
       if (this.readonly) {
