@@ -7,6 +7,7 @@ import UserSettings from './views/UserSettings.vue'
 import AddPriceHome from './views/AddPriceHome.vue'
 import AddPriceSingle from './views/AddPriceSingle.vue'
 import PriceList from './views/PriceList.vue'
+import ProductList from './views/ProductList.vue'
 import ProductDetail from './views/ProductDetail.vue'
 import LocationDetail from './views/LocationDetail.vue'
 import UserDetail from './views/UserDetail.vue'
@@ -22,6 +23,7 @@ const routes = [
   { path: '/add', name: 'add-price', component: AddPriceHome, meta: { title: 'Add a price', icon: 'mdi-plus', drawerMenu: true, requiresAuth: true }},
   { path: '/add/single', name: 'add-price-single', component: AddPriceSingle, meta: { title: 'Add a single price', requiresAuth: true }},
   { path: '/prices', name: 'prices', component: PriceList, meta: { title: 'Latest prices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
+  { path: '/products', name: 'products', component: ProductList, meta: { title: 'Top products', icon: 'mdi-database-outline', drawerMenu: true }},
   { path: '/products/:id', name: 'product-detail', component: ProductDetail, meta: { title: 'Product detail' }},
   { path: '/locations/:id', name: 'location-detail', component: LocationDetail, meta: { title: 'Location detail' }},
   { path: '/users/:username', name: 'user-detail', component: UserDetail, meta: { title: 'User detail' }},
