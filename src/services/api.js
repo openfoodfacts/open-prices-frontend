@@ -103,6 +103,17 @@ export default {
     .then((response) => response.json())
   },
 
+  getLocationByOSMTypeAndId(locationOSMType, locationOSMId) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/osm/${locationOSMType}/${locationOSMId}`
+    return fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then((response) => response.json())
+  },
+
   openfoodfactsProductSearch(code) {
     return fetch(`${OPENFOODFACTS_PRODUCT_URL}/${code}.json`, {
       method: 'GET',
