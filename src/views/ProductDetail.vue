@@ -49,7 +49,7 @@ export default {
   },
   data() {
     return {
-      productId: this.$route.params.id,
+      productId: this.$route.params.id,  // product_code or product_category
       product: null,
       productPriceList: [],
       productPriceTotal: null,
@@ -75,7 +75,7 @@ export default {
   methods: {
     getProduct() {
       if (!this.productIsCategory) {
-        return api.getProductById(this.productId)
+        return api.getProductByCode(this.productId)
           .then((data) => {
             if (data.id) {
               this.product = data
@@ -86,7 +86,7 @@ export default {
     getProductPrices() {
       this.loading = true
       this.productPricePage += 1
-      return api.getPrices({ [this.productIsCategory ? 'category_tag' : 'product_id']: this.productId, page: this.productPricePage })
+      return api.getPrices({ [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, page: this.productPricePage })
         .then((data) => {
           this.productPriceList.push(...data.items)
           this.productPriceTotal = data.total
