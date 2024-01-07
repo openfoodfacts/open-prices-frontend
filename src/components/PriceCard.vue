@@ -11,8 +11,8 @@
 
           <p v-if="!hideProductDetails" class="mb-2">
             <span v-if="hasProductBrands">
-              <v-chip label size="small" density="comfortable" class="mr-1">
-                {{ product.brands }}
+              <v-chip v-for="brand in getPriceProductBrandsList" label size="small" density="comfortable" class="mr-1">
+                {{ brand }}
               </v-chip>
             </span>
             <span v-if="hasProductQuantity">
@@ -126,11 +126,16 @@ export default {
       return this.hasPrice && !!this.price.labels_tags && this.price.labels_tags.length
     },
     getPriceCategoryName() {
-      if (this.price && this.price.category_tag) {
+      if (this.price && this.hasCategoryTag) {
         const tag = utils.getCategory(this.price.category_tag)
         return tag ? tag.name : this.price.category_tag
       }
     },
+    getPriceProductBrandsList() {
+      if (this.hasProductBrands) {
+        return this.product.brands.split(',')
+      }
+    }
   },
   methods: {
     initPriceCard() {
