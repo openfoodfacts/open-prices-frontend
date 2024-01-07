@@ -23,7 +23,16 @@ function addObjectToArray(arr, obj, unshift = false, avoidDuplicates = true) {
  */
 function prettyDate(dateString) {
   const date = new Date(dateString)
-  return new Intl.DateTimeFormat('default').format(date)
+  return new Intl.DateTimeFormat(navigator.language, {dateStyle: 'short'}).format(date)
+}
+
+/**
+ * input: '2023-12-27T17:08:19.021410+01:00'
+ * output: '12/27/2023, 8:19AM'
+ */
+function prettyDateTime(dateTimeString) {
+  const date = new Date(dateTimeString)
+  return new Intl.DateTimeFormat(navigator.language, {dateStyle: 'short', timeStyle: 'short'}).format(date)
 }
 
 /**
@@ -72,6 +81,7 @@ function getLocationTitle(locationObject, withEmoji=false) {
 export default {
   addObjectToArray,
   prettyDate,
+  prettyDateTime,
   prettyRelativeDateTime,
   getCategory,
   getCountryEmojiFromName,

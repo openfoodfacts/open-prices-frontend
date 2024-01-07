@@ -59,6 +59,7 @@
         <v-chip label size="small" density="comfortable">
           <v-icon start icon="mdi-clock-outline"></v-icon>
           {{ getRelativeDateTimeFormatted(price.created) }}
+          <v-tooltip activator="parent" location="top">{{ getDateTimeFormatted(price.created) }}</v-tooltip>
         </v-chip>
       </div>
     </v-container>
@@ -189,6 +190,9 @@ export default {
     },
     getDateFormatted(dateString) {
       return utils.prettyDate(dateString)
+    },
+    getDateTimeFormatted(dateString) {
+      return utils.prettyDateTime(dateString)
     },
     getRelativeDateTimeFormatted(dateTimeString) {
       return utils.prettyRelativeDateTime(dateTimeString, 'shortest')
