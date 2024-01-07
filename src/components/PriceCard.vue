@@ -191,7 +191,7 @@ export default {
       return utils.prettyDate(dateString)
     },
     getRelativeDateTimeFormatted(dateTimeString) {
-      return utils.prettyRelativeDateTime(dateTimeString, true)
+      return utils.prettyRelativeDateTime(dateTimeString, 'shortest')
     },
     goToProduct() {
       if (this.readonly) {

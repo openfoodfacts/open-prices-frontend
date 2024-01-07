@@ -30,16 +30,20 @@ function prettyDate(dateString) {
  * https://johnresig.com/blog/javascript-pretty-date/
  * input: '2023-12-27T17:08:19.021410+01:00'
  * output: '5 hours ago', 'Yesterday', '2 days ago'...
- * changes: add short (replace 'days' with 'd', remove 'Yesterday'), extend days & weeks
+ * changes: add short (replace 'days' with 'd', remove 'Yesterday') & shortest (remove 'ago'), extend days & weeks
  */
-function prettyRelativeDateTime(dateTimeString, short=false) {
+function prettyRelativeDateTime(dateTimeString, size=null) {
   var date = new Date((dateTimeString || "").replace(/-/g, "/").replace(/[TZ]/g, " ")),
       diff = (((new Date()).getTime() - date.getTime()) / 1000),
       day_diff = Math.floor(diff / 86400);
 
   if (isNaN(day_diff) || day_diff < 0) return;
 
-  if (short) {
+  if (size == 'shortest') {
+    return day_diff == 0 && (
+      diff < 60 && "just now" || diff < 120 && "1m" || diff < 3600 && Math.floor(diff / 60) + "m" || diff < 7200 && "1h" || diff < 86400 && Math.floor(diff / 3600) + "h") || day_diff < 10 && day_diff + "d" || Math.ceil(day_diff / 7) + "w";
+  }
+  if (size == 'short') {
     return day_diff == 0 && (
       diff < 60 && "just now" || diff < 120 && "1m ago" || diff < 3600 && Math.floor(diff / 60) + "m ago" || diff < 7200 && "1h ago" || diff < 86400 && Math.floor(diff / 3600) + "h ago") || day_diff < 10 && day_diff + "d ago" || Math.ceil(day_diff / 7) + "w ago";
   }
