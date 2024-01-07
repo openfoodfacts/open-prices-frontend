@@ -32,12 +32,13 @@
               </v-chip>
             </span>
             <span v-if="!price">
+              <br />
               <v-chip label size="small" density="comfortable" class="mr-1">{{ product.code }}</v-chip>
             </span>
           </p>
 
           <v-sheet v-if="price">
-            <p class="mb-2">
+            <p>
               <span>{{ getPriceValueDisplay() }}</span>
               <span v-if="hasProductQuantity"> ({{  getPricePerKilo() }})</span>
               <span> on <i>{{ getDateFormatted(price.date) }}</i></span>
@@ -145,7 +146,7 @@ export default {
       } else if (this.hasPrice && this.hasCategoryTag) {
         return this.getPriceCategoryName
       }
-      return 'unknown'
+      return 'Unknown product'
     },
     getPriceOriginTag() {
       if (this.price && this.price.origins_tags) {
@@ -201,7 +202,7 @@ export default {
       if (this.readonly) {
         return
       }
-      this.$router.push({ path: `/products/${this.hasProduct ? this.product.id : this.price.category_tag}` })
+      this.$router.push({ path: `/products/${this.price.product_code || this.price.category_tag}` })
     },
     goToLocation() {
       if (this.readonly) {

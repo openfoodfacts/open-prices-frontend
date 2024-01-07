@@ -69,6 +69,17 @@ export default {
     .then((response) => response.json())
   },
 
+  getProductByCode(productCode) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}`
+    return fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then((response) => response.json())
+  },
+
   getLocationById(locationId) {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/${locationId}`
     return fetch(url, {
@@ -94,6 +105,4 @@ export default {
     .then((response) => response.json())
     .then((data) => data.filter(l => !NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
-
-
 }
