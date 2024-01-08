@@ -144,7 +144,7 @@
               v-for="location in recentLocations"
               @click="setLocationData(location)">
               <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
-              {{ location.display_name }}
+              {{ getNominatimLocationTitle(location, true, true, true) }}
             </v-chip>
             <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelector">Find</v-btn>
             <p v-if="!locationFormFilled" class="text-red mb-2"><i>Select your location</i></p>
@@ -198,6 +198,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
 import api from '../services/api'
+import utils from '../utils.js'
 import PriceCard from '../components/PriceCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import LocationSelector from '../components/LocationSelector.vue'
@@ -402,6 +403,9 @@ export default {
     },
     closeLocationSelector(event) {
       this.locationSelector = false
+    },
+    getNominatimLocationTitle(location, withName=true, withRoad=false, withCity=true) {
+      return utils.getLocationTitle(location, withName, withRoad, withCity)
     },
     setLocationData(location) {
       this.appStore.addRecentLocation(location)

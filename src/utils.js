@@ -75,8 +75,44 @@ function getCountryEmojiFromName(countryString) {
   return country ? country.emoji : null
 }
 
-function getLocationTitle(locationObject, withEmoji=false) {
-  let locationTitle = `${locationObject.osm_name}, ${locationObject.osm_address_city || ''}`
+function getLocationName(locationObject) {
+  // Nominatim or OP
+  return locationObject.osm_name || locationObject.name
+}
+
+function getLocationRoad(locationObject) {
+  // Nominatim
+  if (locationObject.address) {
+    let locationRoad = locationObject.address.house_number ? `${locationObject.address.house_number} ` : ''
+    locationRoad += locationObject.address.road || ''
+    return locationRoad
+  }
+  // OP
+  return ''
+}
+
+function getLocationCity(locationObject) {
+  // Nominatim
+  if (locationObject.address) {
+    return locationObject.address.village || locationObject.address.town || locationObject.address.city || locationObject.address.municipality
+  }
+  // OP
+  return locationObject.osm_address_city || ''
+}
+
+function getLocationTitle(locationObject, withName=true, withRoad=false, withCity=true, withEmoji=false) {
+  let locationTitle = ''
+  if (withName) {
+    locationTitle += `${getLocationName(locationObject)}`
+  }
+  if (withRoad && locationObject.address) {
+    locationTitle += locationTitle ? ', ' : ''
+    locationTitle += getLocationRoad(locationObject)
+  }
+  if (withCity) {
+    locationTitle += locationTitle ? ', ' : ''
+    locationTitle += getLocationCity(locationObject)
+  }
   if (withEmoji) {
     locationTitle += ` ${getCountryEmojiFromName(locationObject.osm_address_country) || ''}`
   }
