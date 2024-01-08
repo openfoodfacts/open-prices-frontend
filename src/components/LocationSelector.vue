@@ -67,7 +67,6 @@
         <v-chip
           class="mb-2"
           v-for="location in recentLocations"
-          elevation="1"
           @click="selectLocation(location)">
           <v-icon start icon="mdi-history"></v-icon>
           {{ location.display_name }}

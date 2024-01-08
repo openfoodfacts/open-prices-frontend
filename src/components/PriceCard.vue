@@ -11,13 +11,19 @@
 
           <p v-if="!hideProductDetails" class="mb-2">
             <span v-if="hasProductBrands">
-              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.brands }}</v-chip>
+              <v-chip v-for="brand in getPriceProductBrandsList" label size="small" density="comfortable" class="mr-1">
+                {{ brand }}
+              </v-chip>
             </span>
             <span v-if="hasProductQuantity">
-              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.product_quantity }} g</v-chip>
+              <v-chip label size="small" density="comfortable" class="mr-1">
+                {{ product.product_quantity }} g
+              </v-chip>
             </span>
             <span v-if="hasPriceOrigin && priceOrigin">
-              <v-chip label size="small" density="comfortable" class="mr-1">{{ priceOrigin.name }}</v-chip>
+              <v-chip label size="small" density="comfortable" class="mr-1">
+                {{ priceOrigin.name }}
+              </v-chip>
             </span>
             <span v-if="hasPriceLabels">
               <v-chip v-for="pl in priceLabels" label size="small" density="comfortable" class="mr-1">
@@ -26,12 +32,13 @@
               </v-chip>
             </span>
             <span v-if="!price">
+              <br />
               <v-chip label size="small" density="comfortable" class="mr-1">{{ product.code }}</v-chip>
             </span>
           </p>
 
           <v-sheet v-if="price">
-            <p class="mb-2">
+            <p>
               <span>{{ getPriceValueDisplay() }}</span>
               <span v-if="hasProductQuantity"> ({{  getPricePerKilo() }})</span>
               <span> on <i>{{ getDateFormatted(price.date) }}</i></span>
@@ -41,18 +48,19 @@
       </v-row>
 
       <div class="d-flex flex-wrap ga-1 mt-2" v-if="price">
-        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" @click="goToLocation()">
-          <v-icon v-if="!priceLocationEmoji" start icon="mdi-map-marker-outline"></v-icon>
-          <span v-if="priceLocationEmoji" style="margin-inline-start:-5px;margin-inline-end:5px">{{ priceLocationEmoji }}</span>
+        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" density="comfortable" @click="goToLocation()">
+          <v-icon start icon="mdi-map-marker-outline"></v-icon>
           {{ getPriceLocationTitle() }}
+          <span v-if="priceLocationEmoji" style="margin-inline-start:5px">{{ priceLocationEmoji }}</span>
         </v-chip>
-        <v-chip class="mr-1" label size="small" @click="goToUser()">
+        <v-chip class="mr-1" label size="small" density="comfortable" @click="goToUser()">
           <v-icon start icon="mdi-account"></v-icon>
           {{ price.owner }}
         </v-chip>
-        <v-chip label size="small">
+        <v-chip label size="small" density="comfortable">
           <v-icon start icon="mdi-clock-outline"></v-icon>
           {{ getRelativeDateTimeFormatted(price.created) }}
+          <v-tooltip activator="parent" location="top">{{ getDateTimeFormatted(price.created) }}</v-tooltip>
         </v-chip>
       </div>
     </v-container>
@@ -118,11 +126,16 @@ export default {
       return this.hasPrice && !!this.price.labels_tags && this.price.labels_tags.length
     },
     getPriceCategoryName() {
-      if (this.price && this.price.category_tag) {
+      if (this.price && this.hasCategoryTag) {
         const tag = utils.getCategory(this.price.category_tag)
         return tag ? tag.name : this.price.category_tag
       }
     },
+    getPriceProductBrandsList() {
+      if (this.hasProductBrands) {
+        return this.product.brands.split(',')
+      }
+    }
   },
   methods: {
     initPriceCard() {
@@ -138,7 +151,7 @@ export default {
       } else if (this.hasPrice && this.hasCategoryTag) {
         return this.getPriceCategoryName
       }
-      return 'unknown'
+      return 'Unknown product'
     },
     getPriceOriginTag() {
       if (this.price && this.price.origins_tags) {
@@ -184,14 +197,17 @@ export default {
     getDateFormatted(dateString) {
       return utils.prettyDate(dateString)
     },
+    getDateTimeFormatted(dateString) {
+      return utils.prettyDateTime(dateString)
+    },
     getRelativeDateTimeFormatted(dateTimeString) {
-      return utils.prettyRelativeDateTime(dateTimeString, true)
+      return utils.prettyRelativeDateTime(dateTimeString, 'shortest')
     },
     goToProduct() {
       if (this.readonly) {
         return
       }
-      this.$router.push({ path: `/products/${this.hasProduct ? this.product.id : this.price.category_tag}` })
+      this.$router.push({ path: `/products/${this.price.product_code || this.price.category_tag}` })
     },
     goToLocation() {
       if (this.readonly) {

@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.11.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.10.0...v1.11.0) (2024-01-07)
+
+
+### Features
+
+* **price create form:** init location with last recent ([#111](https://github.com/openfoodfacts/open-prices-frontend/issues/111)) ([e660b7d](https://github.com/openfoodfacts/open-prices-frontend/commit/e660b7db831ce6561760d94d0ae10484122e025c))
+
+
+### Bug Fixes
+
+* **price card:** split product brands into seperate labels ([#109](https://github.com/openfoodfacts/open-prices-frontend/issues/109)) ([187a549](https://github.com/openfoodfacts/open-prices-frontend/commit/187a5491d521a8bc667c409ee19bc07afad3fa4b))
+
+## [1.10.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.9.1...v1.10.0) (2024-01-07)
+
+
+### Features
+
+* **price create form:** move product scanning first ([#102](https://github.com/openfoodfacts/open-prices-frontend/issues/102)) ([38535f6](https://github.com/openfoodfacts/open-prices-frontend/commit/38535f63efa7d99ac6b6b7475528e14eb6570ed1))
+* **product page:** change url (code instead of id) ([#108](https://github.com/openfoodfacts/open-prices-frontend/issues/108)) ([23534f2](https://github.com/openfoodfacts/open-prices-frontend/commit/23534f20a4d55f5f189470f36d1d65f05bb37b59))
+
+
+### Bug Fixes
+
+* **price card:** improve created date info (further weeks, remove ago, tooltip) ([#107](https://github.com/openfoodfacts/open-prices-frontend/issues/107)) ([a83d24b](https://github.com/openfoodfacts/open-prices-frontend/commit/a83d24b9e24010bdd863e6b2fe09ba6ca2d4b14b))
+* **price card:** make bottom labels smaller ([#105](https://github.com/openfoodfacts/open-prices-frontend/issues/105)) ([ffb26a6](https://github.com/openfoodfacts/open-prices-frontend/commit/ffb26a6e2878a7d1242908e30489cd84ec5f5659))
+* **price card:** show location flag at the end ([#106](https://github.com/openfoodfacts/open-prices-frontend/issues/106)) ([1fc9c79](https://github.com/openfoodfacts/open-prices-frontend/commit/1fc9c797daeebc500a75000fece2a8f79ffd8ee1))
+
 ## [1.9.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.9.0...v1.9.1) (2024-01-03)
 
 

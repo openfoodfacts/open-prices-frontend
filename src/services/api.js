@@ -58,8 +58,31 @@ export default {
     .then((response) => response.json())
   },
 
+  getProducts(params = {}) {
+    const defaultParams = {page: 1, size: 10}  // order_by default ?
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products?${new URLSearchParams({...defaultParams, ...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then((response) => response.json())
+  },
+
   getProductById(productId) {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/${productId}`
+    return fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then((response) => response.json())
+  },
+
+  getProductByCode(productCode) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}`
     return fetch(url, {
       method: 'GET',
       headers: {
@@ -94,6 +117,4 @@ export default {
     .then((response) => response.json())
     .then((data) => data.filter(l => !NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
-
-
 }
