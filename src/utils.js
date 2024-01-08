@@ -2,9 +2,9 @@ import CategoryTags from './data/category-tags.json'
 import CountriesWithEmoji from './data/countries-with-emoji.json'
 
 
-function addObjectToArray(arr, obj, unshift = false, avoidDuplicates = true) {
+function addObjectToArray(arr, obj, unshift=false, avoidDuplicates=true) {
   // look for duplicate
-  var duplicateItemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
+  let duplicateItemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
   if (avoidDuplicates && duplicateItemIndex >= 0) {
     arr.splice(duplicateItemIndex, 1)
   }
@@ -18,7 +18,7 @@ function addObjectToArray(arr, obj, unshift = false, avoidDuplicates = true) {
 }
 
 function removeObjectFromArray(arr, obj) {
-  var itemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
+  let itemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
   arr.splice(itemIndex, 1)
   return arr
 }

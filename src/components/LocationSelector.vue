@@ -171,7 +171,6 @@ export default {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
     },
     selectLocation(location) {
-      this.appStore.addRecentLocation(location)
       this.$emit('location', location)
       this.close()
     },
