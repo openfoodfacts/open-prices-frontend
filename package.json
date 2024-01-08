@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^2.0.0",
     "@vue-leaflet/vue-leaflet": "^0.10.1",
     "@vueuse/core": "^10.6.1",
     "@vueuse/integrations": "^10.6.1",
@@ -20,6 +21,7 @@
     "pinia-plugin-persistedstate": "^3.2.1",
     "universal-cookie": "^6.1.1",
     "vue": "^3.3.9",
+    "vue-i18n": "9",
     "vue-router": "^4.2.5",
     "vuetify": "^3.4.6"
   },

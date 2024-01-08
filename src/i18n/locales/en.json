@@ -1,0 +1,10 @@
+{
+  "Footer": {
+    "About": "About",
+    "Stats": "Stats",
+    "Open_Prices_Project": {
+      "Text": "Open Prices is an {0} project.",
+      "Url": "Open Food Facts"
+    }
+  }
+}
