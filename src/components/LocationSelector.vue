@@ -66,15 +66,19 @@
         </h3>
         <v-chip
           class="mb-2"
+          closable
           v-for="location in recentLocations"
-          @click="selectLocation(location)">
-          <v-icon start icon="mdi-history"></v-icon>
+          :key="location.display_name"
+          prepend-icon="mdi-history"
+          close-icon="mdi-delete"
+          @click="selectLocation(location)"
+          @click:close="removeRecentLocation(location)">
           {{ location.display_name }}
         </v-chip>
         <br />
-        <v-chip variant="outlined" size="small" @click="clearRecentLocations">
+        <v-btn size="small" @click="clearRecentLocations">
           Clear
-        </v-chip>
+        </v-btn>
       </v-card-text>
 
       <v-divider v-if="recentLocations.length"></v-divider>
@@ -174,13 +178,16 @@ export default {
       }
       return locationDetails
     },
-    clearRecentLocations() {
-      this.appStore.clearRecentLocations()
-    },
     selectLocation(location) {
       this.appStore.addRecentLocation(location)
       this.$emit('location', location)
       this.close()
+    },
+    removeRecentLocation(location) {
+      this.appStore.removeRecentLocation(location)
+    },
+    clearRecentLocations() {
+      this.appStore.clearRecentLocations()
     },
     close() {
       this.$emit('close')

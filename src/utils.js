@@ -4,9 +4,9 @@ import CountriesWithEmoji from './data/countries-with-emoji.json'
 
 function addObjectToArray(arr, obj, unshift = false, avoidDuplicates = true) {
   // look for duplicate
-  var duplicateItem = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
-  if (avoidDuplicates && duplicateItem >= 0) {
-    arr.splice(duplicateItem, 1)
+  var duplicateItemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
+  if (avoidDuplicates && duplicateItemIndex >= 0) {
+    arr.splice(duplicateItemIndex, 1)
   }
   // add obj to array
   if (unshift) {
@@ -14,6 +14,12 @@ function addObjectToArray(arr, obj, unshift = false, avoidDuplicates = true) {
   } else {
     arr.push(obj)
   }
+  return arr
+}
+
+function removeObjectFromArray(arr, obj) {
+  var itemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
+  arr.splice(itemIndex, 1)
   return arr
 }
 
@@ -80,6 +86,7 @@ function getLocationTitle(locationObject, withEmoji=false) {
 
 export default {
   addObjectToArray,
+  removeObjectFromArray,
   prettyDate,
   prettyDateTime,
   prettyRelativeDateTime,

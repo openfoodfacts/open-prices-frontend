@@ -33,6 +33,9 @@ export const useAppStore = defineStore('app', {
     addRecentLocation(location) {
       this.user.recent_locations = utils.addObjectToArray(this.user.recent_locations, location, true)
     },
+    removeRecentLocation(location) {
+      this.user.recent_locations = utils.removeObjectFromArray(this.user.recent_locations, location)
+    },
     clearRecentLocations() {
       this.user.recent_locations = []
     },
