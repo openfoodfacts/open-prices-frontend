@@ -14,7 +14,6 @@
               v-model="userSettingsForm.currency"
               label="Currency"
               :items="currencyList"
-              hide-details="auto"
             ></v-autocomplete>
           </v-card-text>
         </v-card>
