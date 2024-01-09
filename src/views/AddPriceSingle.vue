@@ -81,21 +81,14 @@
           <v-card-text>
             <h3 class="mb-1">Price <span v-if="productMode === 'category'">per kg</span></h3>
             <v-row>
-              <v-col cols="6">
+              <v-col cols="12" sm="6">
                 <v-text-field
                   v-model="addPriceSingleForm.price"
                   label="Price"
                   type="number"
                   hide-details="auto"
+                  :suffix="addPriceSingleForm.currency"
                 ></v-text-field>
-              </v-col>
-              <v-col cols="6">
-                <v-autocomplete
-                  v-model="addPriceSingleForm.currency"
-                  label="Currency"
-                  :items="currencyList"
-                  hide-details="auto"
-                ></v-autocomplete>
               </v-col>
             </v-row>
             <v-row>
@@ -194,7 +187,6 @@
 import Compressor from 'compressorjs'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import constants from '../constants'
 import api from '../services/api'
 import utils from '../utils.js'
 import PriceCard from '../components/PriceCard.vue'
@@ -243,8 +235,6 @@ export default {
       originsTags: OriginsTags,  // list of origins tags for autocomplete
       labelsTags: LabelsTags,
       barcodeScanner: false,
-      // price data
-      currencyList: constants.CURRENCY_LIST,
       // location data
       locationSelector: false,
       locationSelectedDisplayName: '',
