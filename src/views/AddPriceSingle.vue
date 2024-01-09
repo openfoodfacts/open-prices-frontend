@@ -7,8 +7,7 @@
       <!-- Step 1: product -->
       <v-col cols="12" md="6" lg="4">
         <v-card
-          title="Product details"
-          subtitle=""
+          title="Product info"
           :prepend-icon="productFormFilled ? 'mdi-database-check-outline' : 'mdi-database-outline'"
           height="100%"
           :style="productFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
@@ -75,7 +74,6 @@
       <v-col cols="12" md="6" lg="4">
         <v-card
           title="Price details"
-          subtitle="With a proof"
           :prepend-icon="priceProofFormFilled ? 'mdi-tag-check-outline' : 'mdi-tag-outline'"
           height="100%"
           :style="priceProofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
@@ -129,7 +127,6 @@
       <v-col cols="12" md="6" lg="4">
         <v-card
           title="Where & when?"
-          subtitle="Final step!"
           :prepend-icon="locationDateFormFilled ? 'mdi-map-marker-check-outline' : 'mdi-map-marker-outline'"
           height="100%"
           :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
@@ -146,12 +143,13 @@
               <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
               {{ getNominatimLocationTitle(location, true, true, true) }}
             </v-chip>
+            <br v-if="recentLocations.length" />
             <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelector">Find</v-btn>
             <p v-if="!locationFormFilled" class="text-red mb-2"><i>Select your location</i></p>
 
             <h3 class="mt-4 mb-1">Date</h3>
             <v-row>
-              <v-col>
+              <v-col cols="12" sm="6">
                 <v-text-field
                   v-model="addPriceSingleForm.date"
                   label="Date"
