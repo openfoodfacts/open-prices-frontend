@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.12.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.11.0...v1.12.0) (2024-01-09)
+
+
+### Features
+
+* new api to get the product list ([#114](https://github.com/openfoodfacts/open-prices-frontend/issues/114)) ([4504f4e](https://github.com/openfoodfacts/open-prices-frontend/commit/4504f4e255d2e653df6654cf2bfe8143553dac77))
+* **price create form:** improve location selector (remove button, location name, fixes) ([#119](https://github.com/openfoodfacts/open-prices-frontend/issues/119)) ([26522b2](https://github.com/openfoodfacts/open-prices-frontend/commit/26522b2b1c50312a7bfd9a3ecd8c8575906c09b4))
+
 ## [1.11.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.10.0...v1.11.0) (2024-01-07)
 
 
