@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.12.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.11.0...v1.12.0) (2024-01-09)
+
+
+### Features
+
+* new api to get the product list ([#114](https://github.com/openfoodfacts/open-prices-frontend/issues/114)) ([4504f4e](https://github.com/openfoodfacts/open-prices-frontend/commit/4504f4e255d2e653df6654cf2bfe8143553dac77))
+* **price create form:** hide currency selector ([#122](https://github.com/openfoodfacts/open-prices-frontend/issues/122)) ([fa53702](https://github.com/openfoodfacts/open-prices-frontend/commit/fa5370239f98582450aa5a56371220c60611e024))
+* **price create form:** improve location selector (remove button, location name, fixes) ([#119](https://github.com/openfoodfacts/open-prices-frontend/issues/119)) ([26522b2](https://github.com/openfoodfacts/open-prices-frontend/commit/26522b2b1c50312a7bfd9a3ecd8c8575906c09b4))
+* **user settings:** new user settings page ([#121](https://github.com/openfoodfacts/open-prices-frontend/issues/121)) ([7abadd6](https://github.com/openfoodfacts/open-prices-frontend/commit/7abadd6c5cb0b33d5209e52516ad92ebdd90c368))
+
+
+### Bug Fixes
+
+* **price create form:** remove card subtitles ([d19a1dc](https://github.com/openfoodfacts/open-prices-frontend/commit/d19a1dce741b39664f8b77fe529c3191367bc9d7))
+
 ## [1.11.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.10.0...v1.11.0) (2024-01-07)
 
 
