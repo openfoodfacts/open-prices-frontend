@@ -15,6 +15,7 @@
           <v-list-item prepend-icon="mdi-account" disabled>{{ username }}</v-list-item>
           <v-divider></v-divider>
           <v-list-item prepend-icon="mdi-view-dashboard-outline" to="/dashboard">Dashboard</v-list-item>
+          <v-list-item prepend-icon="mdi-cog-outline" to="/settings">Settings</v-list-item>
           <v-list-item prepend-icon="mdi-logout" @click="signOut">Sign out</v-list-item>
         </v-list>
       </v-menu>
