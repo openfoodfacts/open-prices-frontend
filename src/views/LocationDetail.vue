@@ -84,7 +84,7 @@ export default {
     },
     getLocationTitle(location) {
       if (location) {
-        return utils.getLocationTitle(location, true)
+        return utils.getLocationTitle(location, true, false, true, true)
       }
       return this.$route.params.id
     },

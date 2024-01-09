@@ -36,8 +36,8 @@
               elevation="1"
               @click="selectLocation(location)">
               <v-card-text>
-                <h4>{{ getNominatimLocationTitle(location) }}</h4>
-                {{ getNominatimLocationDetails(location, true) }}<br />
+                <h4>{{ getNominatimLocationTitle(location, true, false, false) }}</h4>
+                {{ getNominatimLocationTitle(location, false, true, true) }}<br />
                 <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
               </v-card-text>
             </v-card>
@@ -47,8 +47,8 @@
               <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
               <l-marker v-for="location in results" :lat-lng="[location.lat, location.lon]">
                 <l-popup>
-                  <h4>{{ getNominatimLocationTitle(location) }}</h4>
-                  {{ getNominatimLocationDetails(location, true) }}<br />
+                  <h4>{{ getNominatimLocationTitle(location, true, false, false) }}</h4>
+                  {{ getNominatimLocationTitle(location, false, true, true) }}<br />
                   <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
                 </l-popup>
               </l-marker>
@@ -66,15 +66,19 @@
         </h3>
         <v-chip
           class="mb-2"
+          closable
           v-for="location in recentLocations"
-          @click="selectLocation(location)">
-          <v-icon start icon="mdi-history"></v-icon>
-          {{ location.display_name }}
+          :key="location.display_name"
+          prepend-icon="mdi-history"
+          close-icon="mdi-delete"
+          @click="selectLocation(location)"
+          @click:close="removeRecentLocation(location)">
+          {{ getNominatimLocationTitle(location, true, true, true) }}
         </v-chip>
         <br />
-        <v-chip variant="outlined" size="small" @click="clearRecentLocations">
+        <v-btn size="small" @click="clearRecentLocations">
           Clear
-        </v-chip>
+        </v-btn>
       </v-card-text>
 
       <v-divider v-if="recentLocations.length"></v-divider>
@@ -92,6 +96,7 @@ import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -154,7 +159,7 @@ export default {
         }
       })
     },
-    getNominatimLocationTitle(location) {
+    getNominatimLocationName(location) {
       return location.name
     },
     getNominatimLocationCity(location) {
@@ -162,25 +167,18 @@ export default {
         return location.address.village || location.address.town || location.address.city || location.address.municipality
       }
     },
-    getNominatimLocationDetails(location, withRoad=false) {
-      let locationDetails = ''
-      if (location.address) {
-        if (withRoad) {
-          locationDetails += location.address.house_number ? `${location.address.house_number} ` : ''
-          locationDetails += location.address.road || ''
-        }
-        locationDetails += locationDetails.length ? ', ' : ''
-        locationDetails += this.getNominatimLocationCity(location)
-      }
-      return locationDetails
+    getNominatimLocationTitle(location, withName=true, withRoad=false, withCity=true) {
+      return utils.getLocationTitle(location, withName, withRoad, withCity)
+    },
+    selectLocation(location) {
+      this.$emit('location', location)
+      this.close()
+    },
+    removeRecentLocation(location) {
+      this.appStore.removeRecentLocation(location)
     },
     clearRecentLocations() {
       this.appStore.clearRecentLocations()
-    },
-    selectLocation(location) {
-      this.appStore.addRecentLocation(location)
-      this.$emit('location', location)
-      this.close()
     },
     close() {
       this.$emit('close')
