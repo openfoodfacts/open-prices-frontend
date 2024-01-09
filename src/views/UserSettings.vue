@@ -57,7 +57,7 @@ export default {
       this.userSettingsForm.currency = this.appStore.user.last_currency_used
     },
     updateSettings() {
-      this.appStore.user.last_currency_used = this.userSettingsForm.currency
+      this.appStore.setLastCurrencyUsed(this.userSettingsForm.currency)
       this.$router.push({ path: '/', query: { settingsSuccess: 'true' } })
     }
   }
