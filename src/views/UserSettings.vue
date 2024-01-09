@@ -6,7 +6,7 @@
   <v-form @submit.prevent="updateSettings">
     <v-row>
       <v-col cols="12" sm="6">
-        <v-card title="Display" prepend-icon="mdi-application-cog-outline">
+        <v-card title="Adding prices" prepend-icon="mdi-tag-plus-outline">
           <v-divider></v-divider>
           <v-card-text>
             <h3 class="mb-1">Default currency</h3>
