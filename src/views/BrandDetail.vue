@@ -66,7 +66,7 @@ export default {
     getBrandProducts() {
       this.loading = true
       this.brandProductPage += 1
-      return api.getProducts({ brands__like: this.brand, unique_scans_n__gte: 1, order_by: '-unique_scans_n', page: this.brandProductPage })
+      return api.getProducts({ brands__like: this.brand, order_by: '-unique_scans_n', page: this.brandProductPage })
         .then((data) => {
           this.brandProductList.push(...data.items)
           this.brandProductTotal = data.total
