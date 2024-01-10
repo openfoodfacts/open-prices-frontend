@@ -41,7 +41,7 @@ export default {
     getProducts() {
       this.loading = true
       this.productPage += 1
-      return api.getProducts({ page: this.productPage, unique_scans_n__gte: 1, order_by: '-unique_scans_n' })
+      return api.getProducts({ page: this.productPage, order_by: '-unique_scans_n' })
         .then((data) => {
           this.productList.push(...data.items)
           this.productTotal = data.total
