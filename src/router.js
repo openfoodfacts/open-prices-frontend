@@ -10,6 +10,7 @@ import PriceList from './views/PriceList.vue'
 import ProductList from './views/ProductList.vue'
 import ProductDetail from './views/ProductDetail.vue'
 import LocationDetail from './views/LocationDetail.vue'
+import BrandDetail from './views/BrandDetail.vue'
 import UserDetail from './views/UserDetail.vue'
 import Stats from './views/Stats.vue'
 import NotFound from './views/NotFound.vue'
@@ -26,6 +27,7 @@ const routes = [
   { path: '/products', name: 'products', component: ProductList, meta: { title: 'Top products', icon: 'mdi-database-outline', drawerMenu: true }},
   { path: '/products/:id', name: 'product-detail', component: ProductDetail, meta: { title: 'Product detail' }},
   { path: '/locations/:id', name: 'location-detail', component: LocationDetail, meta: { title: 'Location detail' }},
+  { path: '/brands/:id', name: 'brand-detail', component: BrandDetail, meta: { title: 'Brand detail' }},
   { path: '/users/:username', name: 'user-detail', component: UserDetail, meta: { title: 'User detail' }},
   { path: '/stats', name: 'stats', component: Stats, meta: { title: 'Stats' }},
   { path: '/:path(.*)', component: NotFound },
