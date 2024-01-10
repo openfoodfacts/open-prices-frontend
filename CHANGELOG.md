@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.13.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.12.0...v1.13.0) (2024-01-10)
+
+
+### Features
+
+* **brand detail:** new Brand detail page ([#116](https://github.com/openfoodfacts/open-prices-frontend/issues/116)) ([000c305](https://github.com/openfoodfacts/open-prices-frontend/commit/000c30527009396113a746ead0d9470f2975df65))
+* **product list:** new product list page ordered by popularity (unique_scans_n) ([#113](https://github.com/openfoodfacts/open-prices-frontend/issues/113)) ([f090b32](https://github.com/openfoodfacts/open-prices-frontend/commit/f090b32b12dbef0eca0b1f2231da00942745c30a))
+
 ## [1.12.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.11.0...v1.12.0) (2024-01-09)
 
 
