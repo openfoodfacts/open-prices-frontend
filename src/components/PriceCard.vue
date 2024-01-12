@@ -3,7 +3,7 @@
     <v-container class="pa-2">
       <v-row>
         <v-col v-if="!hideProductImage" style="max-width:25%">
-          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;width:100px"></v-img>
+          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;width:100px" @click="goToProduct()"></v-img>
           <v-img v-if="!product || !product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
         </v-col>
         <v-col style="max-width:75%">
