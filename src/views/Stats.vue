@@ -10,7 +10,7 @@
         <v-card-text>
           <p>
             Total
-            <strong>{{ priceTotal }}</strong>
+            <strong>{{ productTotal }}</strong>
           </p>
           <p>
             With a product <v-chip label size="small" density="comfortable" class="mr-1">barcode</v-chip>
