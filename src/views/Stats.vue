@@ -6,10 +6,36 @@
 
   <v-row>
     <v-col cols="12" md="6" lg="4">
-      <v-card title="Prices" :text="priceTotal" height="100%"></v-card>
+      <v-card title="Prices" height="100%">
+        <v-card-text>
+          <p>
+            Total
+            <strong>{{ priceTotal }}</strong>
+          </p>
+          <p>
+            With a product <v-chip label size="small" density="comfortable" class="mr-1">barcode</v-chip>
+            <strong>{{ priceWithProduct }}</strong>
+          </p>
+          <p>
+            Without a product <v-chip label size="small" density="comfortable" class="mr-1">category</v-chip>
+            <strong>{{ priceWithoutProduct }}</strong>
+          </p>
+        </v-card-text>
+      </v-card>
     </v-col>
     <v-col cols="12" md="6" lg="4">
-      <v-card title="Products with prices" :subtitle="'Out of ' + productTotal + ' products'" :text="productWithPriceTotal"></v-card>
+      <v-card title="Products" height="100%">
+        <v-card-text>
+          <p>
+            Total
+            <strong>{{ priceTotal }}</strong>
+          </p>
+          <p>
+            With a price
+            <strong>{{ productWithPriceTotal }}</strong>
+          </p>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 </template>
@@ -21,13 +47,21 @@ export default {
   data() {
     return {
       priceTotal: null,
+      // priceWithProduct: null,
+      priceWithoutProduct: null,
       productTotal: null,
       productWithPriceTotal: null,
       loading: false,
     }
   },
+  computed: {
+    priceWithProduct() {
+      return this.priceTotal - this.priceWithoutProduct
+    }
+  },
   mounted() {
     this.getPrices()
+    this.getPricesWithProduct()
     this.getProducts()
     this.getProductsWithPrice()
   },
@@ -37,6 +71,14 @@ export default {
       return api.getPrices({ size: 1 })
         .then((data) => {
           this.priceTotal = data.total
+          this.loading = false
+        })
+    },
+    getPricesWithProduct() {
+      this.loading = true
+      return api.getPrices({ product_id__isnull: true, size: 1 })
+        .then((data) => {
+          this.priceWithoutProduct = data.total
           this.loading = false
         })
     },
@@ -50,12 +92,12 @@ export default {
     },
     getProductsWithPrice() {
       this.loading = true
-      return api.getProducts({ size: 1, price_count__gte: 1 })
+      return api.getProducts({ price_count__gte: 1, size: 1 })
         .then((data) => {
           this.productWithPriceTotal = data.total
           this.loading = false
         })
-    }
+    },
   }
 }
 </script>
