@@ -378,12 +378,12 @@ export default {
       this.addPriceSingleForm.product_code = code
       this.product = null
       api
-        .openfoodfactsProductSearch(code)
+        .getProductByCode(code)
         .then((data) => {
-          this.product = data['product'] || {'code': code}
+          this.product = data.id ? data : {'code': code}
         })
         .catch((error) => {
-          alert("Error: Open Food Facts server error")
+          alert("Error: Open Prices server error")
         })
     },
     showLocationSelector() {
