@@ -40,8 +40,14 @@ export const useAppStore = defineStore('app', {
       this.user.username = null
       this.user.token = null
     },
+    setLastCurrencyUsed(currency) {
+      this.user.last_currency_used = currency
+    },
     addRecentLocation(location) {
       this.user.recent_locations = utils.addObjectToArray(this.user.recent_locations, location, true)
+    },
+    removeRecentLocation(location) {
+      this.user.recent_locations = utils.removeObjectFromArray(this.user.recent_locations, location)
     },
     clearRecentLocations() {
       this.user.recent_locations = []
