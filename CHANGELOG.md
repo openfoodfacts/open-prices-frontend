@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.15.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.14.0...v1.15.0) (2024-01-12)
+
+
+### Features
+
+* **price create form:** on barcode scan, fetch product details from OP (instead of OFF) ([#132](https://github.com/openfoodfacts/open-prices-frontend/issues/132)) ([4b7b60e](https://github.com/openfoodfacts/open-prices-frontend/commit/4b7b60e7ec4b0a3089d59fa00ac8a034763d3298))
+* **product card:** new ProductCard, seperate with PriceCard ([#131](https://github.com/openfoodfacts/open-prices-frontend/issues/131)) ([3460119](https://github.com/openfoodfacts/open-prices-frontend/commit/34601196ec7df493e6208e02c1b7218740ed71d3))
+* **product list:** add filter to hide products with prices ([#130](https://github.com/openfoodfacts/open-prices-frontend/issues/130)) ([ba861aa](https://github.com/openfoodfacts/open-prices-frontend/commit/ba861aad01bda3d4055243fe3645bb577e3a5841))
+* **product list:** add order button to toggle between scan & price count ([#128](https://github.com/openfoodfacts/open-prices-frontend/issues/128)) ([b251029](https://github.com/openfoodfacts/open-prices-frontend/commit/b2510293f2eb06bc966379cf5b407bc8ced5344a))
+
 ## [1.14.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.13.0...v1.14.0) (2024-01-12)
 
 
