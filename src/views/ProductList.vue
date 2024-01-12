@@ -32,7 +32,7 @@
 
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="product in productList" :key="product">
-      <PriceCard :product="product" elevation="1" height="100%"></PriceCard>
+      <ProductCard :product="product" elevation="1" height="100%"></ProductCard>
     </v-col>
   </v-row>
 
@@ -45,11 +45,11 @@
 
 <script>
 import api from '../services/api'
-import PriceCard from '../components/PriceCard.vue'
+import ProductCard from '../components/ProductCard.vue'
 
 export default {
   components: {
-    PriceCard,
+    ProductCard,
   },
   data() {
     return {

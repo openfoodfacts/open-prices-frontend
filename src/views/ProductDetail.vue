@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <PriceCard v-if="!loading && !productIsCategory" :product="product" :readonly="true" elevation="1"></PriceCard>
+      <ProductCard v-if="!loading && !productIsCategory" :product="product" elevation="1"></ProductCard>
       <v-card v-if="!loading && productIsCategory" :title="getCategoryName" prepend-icon="mdi-fruit-watermelon" elevation="1"></v-card>
     </v-col>
   </v-row>
@@ -49,10 +49,12 @@
 <script>
 import utils from '../utils.js'
 import api from '../services/api'
+import ProductCard from '../components/ProductCard.vue'
 import PriceCard from '../components/PriceCard.vue'
 
 export default {
   components: {
+    ProductCard,
     PriceCard,
   },
   data() {
