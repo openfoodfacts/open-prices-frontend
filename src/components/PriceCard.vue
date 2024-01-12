@@ -11,7 +11,7 @@
 
           <p v-if="!hideProductDetails" class="mb-2">
             <span v-if="hasProductBrands">
-              <v-chip v-for="brand in getPriceProductBrandsList" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
+              <v-chip v-for="brand in getProductBrandsList" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
                 {{ brand }}
               </v-chip>
             </span>
@@ -31,7 +31,7 @@
                 <v-icon v-if="pl.icon" end :icon="pl.icon"></v-icon>
               </v-chip>
             </span>
-            <span v-if="!price">
+            <span v-if="!price && !hideProductCode">
               <br />
               <v-chip label size="small" density="comfortable" class="mr-1">{{ product.code }}</v-chip>
             </span>
@@ -80,6 +80,7 @@ export default {
     'hideProductImage': false,
     'hideProductTitle': false,
     'hideProductDetails': false,
+    'hideProductCode': false,
     'hidePriceLocation': false,
     'readonly': false
   },
@@ -131,7 +132,7 @@ export default {
         return tag ? tag.name : this.price.category_tag
       }
     },
-    getPriceProductBrandsList() {
+    getProductBrandsList() {
       if (this.hasProductBrands) {
         return this.product.brands.split(',')
       }
