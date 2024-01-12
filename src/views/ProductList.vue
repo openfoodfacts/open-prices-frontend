@@ -5,7 +5,7 @@
 
     <v-menu v-if="!loading">
       <template v-slot:activator="{ props }">
-        <v-btn v-bind="props" size="small" prepend-icon="mdi-order-bool-ascending">Order</v-btn>
+        <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon">Order</v-btn>
       </template>
       <v-list>
         <v-list-item :slim="true" v-for="order in productOrderList" :key="order.key" :prepend-icon="order.icon" :active="productOrder === order.key" @click="selectProductOrder(order.key)">
@@ -51,6 +51,12 @@ export default {
   },
   mounted() {
     this.initProductList()
+  },
+  computed: {
+    getCurrentProductOrderIcon() {
+      let currentProductOrder = this.productOrderList.find(o => o.key === this.productOrder)
+      return currentProductOrder ? currentProductOrder.icon : ''
+    }
   },
   methods: {
     initProductList() {
