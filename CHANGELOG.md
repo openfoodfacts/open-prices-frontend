@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.16.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.15.0...v1.16.0) (2024-01-12)
+
+
+### Features
+
+* **stats:** new stats on products (total & with prices) ([#134](https://github.com/openfoodfacts/open-prices-frontend/issues/134)) ([ffaafa2](https://github.com/openfoodfacts/open-prices-frontend/commit/ffaafa2834790fc1f202497c393aead5b50cd034))
+* **stats:** show number of products with at least 1 price. ref [#50](https://github.com/openfoodfacts/open-prices-frontend/issues/50) ([231f158](https://github.com/openfoodfacts/open-prices-frontend/commit/231f1585178e6e536813e5234b50d155b8cfc6d6))
+
 ## [1.15.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.14.0...v1.15.0) (2024-01-12)
 
 
