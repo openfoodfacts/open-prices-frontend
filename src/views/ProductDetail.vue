@@ -84,7 +84,7 @@ export default {
       return this.productIsCategory && !!this.getCategory
     },
     productOrCategoryNotFound() {
-      return this.productNotFound || this.categoryNotFound
+      return !this.loading && (this.productNotFound || this.categoryNotFound)
     }
   },
   methods: {
