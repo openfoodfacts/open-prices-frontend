@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.16.1...v1.16.2) (2024-01-12)
+
+
+### Bug Fixes
+
+* **stats:** typo again in product total. ref [#134](https://github.com/openfoodfacts/open-prices-frontend/issues/134) ([b721b80](https://github.com/openfoodfacts/open-prices-frontend/commit/b721b802de813a6e6dec8f773b1694874985ff78))
+
 ## [1.16.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.16.0...v1.16.1) (2024-01-12)
 
 
