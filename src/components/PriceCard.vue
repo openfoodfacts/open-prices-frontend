@@ -207,7 +207,7 @@ export default {
       if (this.readonly) {
         return
       }
-      this.$router.push({ path: `/products/${this.price.product_code || this.price.category_tag}` })
+      this.$router.push({ path: `/products/${this.product.code || this.price.product_code || this.price.category_tag}` })
     },
     goToBrand(brand) {
       if (this.readonly) {
