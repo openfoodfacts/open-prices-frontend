@@ -2,29 +2,33 @@
   <h1 class="mb-1">
     Top products
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-
-    <v-menu v-if="!loading">
-      <template v-slot:activator="{ props }">
-        <v-btn v-bind="props" size="small" prepend-icon="mdi-filter-variant" :active="!!productFilter">Filter</v-btn>
-      </template>
-      <v-list>
-        <v-list-item :slim="true" v-for="filter in productFilterList" :key="filter.key" :prepend-icon="(productFilter === filter.key) ? 'mdi-check' : ''" :active="productFilter === filter.key" @click="toggleProductFilter(filter.key)">
-          {{ filter.value }}
-        </v-list-item>
-      </v-list>
-    </v-menu>
-
-    <v-menu v-if="!loading">
-      <template v-slot:activator="{ props }">
-        <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon">Order</v-btn>
-      </template>
-      <v-list>
-        <v-list-item :slim="true" v-for="order in productOrderList" :key="order.key" :prepend-icon="order.icon" :active="productOrder === order.key" @click="selectProductOrder(order.key)">
-          {{ order.value }}
-        </v-list-item>
-      </v-list>
-    </v-menu>
   </h1>
+
+  <v-row v-if="!loading">
+    <v-col>
+      <v-menu>
+        <template v-slot:activator="{ props }">
+          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">Filter</v-btn>
+        </template>
+        <v-list>
+          <v-list-item :slim="true" v-for="filter in productFilterList" :key="filter.key" :prepend-icon="(productFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="productFilter === filter.key" @click="toggleProductFilter(filter.key)">
+            {{ filter.value }}
+          </v-list-item>
+        </v-list>
+      </v-menu>
+
+      <v-menu>
+        <template v-slot:activator="{ props }">
+          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon"  :active="!!productOrder">Order</v-btn>
+        </template>
+        <v-list>
+          <v-list-item :slim="true" v-for="order in productOrderList" :key="order.key" :prepend-icon="order.icon" :active="productOrder === order.key" @click="selectProductOrder(order.key)">
+            {{ order.value }}
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </v-col>
+  </v-row>
 
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="product in productList" :key="product">
