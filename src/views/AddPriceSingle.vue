@@ -35,7 +35,7 @@
                 hide-details="auto"
                 @click:prepend="showBarcodeScanner"
               ></v-text-field>
-              <PriceCard v-if="product" class="mb-4" :product="product" :readonly="true" elevation="1"></PriceCard>
+              <ProductCard v-if="product" class="mb-4" :product="product" :readonly="true" elevation="1"></ProductCard>
             </v-sheet>
             <v-sheet v-if="productMode === 'category'">
               <v-row>
@@ -189,7 +189,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import utils from '../utils.js'
-import PriceCard from '../components/PriceCard.vue'
+import ProductCard from '../components/ProductCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import LocationSelector from '../components/LocationSelector.vue'
 import CategoryTags from '../data/category-tags.json'
@@ -206,7 +206,7 @@ Compressor.setDefaults({
 
 export default {
   components: {
-    PriceCard,
+    ProductCard,
     BarcodeScanner,
     LocationSelector
   },
