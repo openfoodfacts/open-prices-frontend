@@ -10,6 +10,17 @@ export const useAppStore = defineStore('app', {
       last_currency_used: 'EUR',  // TODO: init with user locale ?
       recent_locations: [],
     },
+    stats: {
+      price_total: null,
+      price_without_product_total: null,
+      product_total: null,
+      product_with_price_total: null,
+      location_total: null,
+      location_with_price_total: null,
+      user_total: null,
+      user_with_price_total: null,
+      last_updated: null
+    }
   }),
   getters: {
     getRecentLocations: (state) => {
