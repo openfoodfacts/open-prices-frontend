@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.14.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.13.0...v1.14.0) (2024-01-12)
+
+
+### Features
+
+* **price card:** clicking on image goes to product page ([ed4a6a2](https://github.com/openfoodfacts/open-prices-frontend/commit/ed4a6a28616bbf5adb61e2dc410be7cd2798173b))
+* **price card:** option to hide product code ([eb5d6e3](https://github.com/openfoodfacts/open-prices-frontend/commit/eb5d6e3e83fc60f7cc3d0b93452cfb95805b91e2))
+* **price card:** show product price_count ([#127](https://github.com/openfoodfacts/open-prices-frontend/issues/127)) ([c9e35df](https://github.com/openfoodfacts/open-prices-frontend/commit/c9e35dff4807454b1704b9a7ee8a3efb97514a26))
+
+
+### Bug Fixes
+
+* **product detail:** avoid eror message flickr before loading ([78f7092](https://github.com/openfoodfacts/open-prices-frontend/commit/78f7092e7fe3ed5919d8a2ae81c5e645e861b9ba))
+* **product list:** fix broken link to product detail. ref [#113](https://github.com/openfoodfacts/open-prices-frontend/issues/113) ([096097b](https://github.com/openfoodfacts/open-prices-frontend/commit/096097b36487e26692e95c385971d022b59b92f6))
+
 ## [1.13.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.12.0...v1.13.0) (2024-01-10)
 
 
