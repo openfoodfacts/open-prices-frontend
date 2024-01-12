@@ -5,6 +5,17 @@
 
     <v-menu v-if="!loading">
       <template v-slot:activator="{ props }">
+        <v-btn v-bind="props" size="small" prepend-icon="mdi-filter-variant" :active="!!productFilter">Filter</v-btn>
+      </template>
+      <v-list>
+        <v-list-item :slim="true" v-for="filter in productFilterList" :key="filter.key" :prepend-icon="(productFilter === filter.key) ? 'mdi-check' : ''" :active="productFilter === filter.key" @click="toggleProductFilter(filter.key)">
+          {{ filter.value }}
+        </v-list-item>
+      </v-list>
+    </v-menu>
+
+    <v-menu v-if="!loading">
+      <template v-slot:activator="{ props }">
         <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon">Order</v-btn>
       </template>
       <v-list>
@@ -38,6 +49,10 @@ export default {
   },
   data() {
     return {
+      productFilter: '',
+      productFilterList: [
+        {key: 'hide_price_count_gte_1', value: 'Hide products with prices'},
+      ],
       productOrder: '-unique_scans_n',
       productOrderList: [
         {key: '-unique_scans_n', value: 'Number of scans', icon: 'mdi-barcode-scan'},
@@ -56,7 +71,14 @@ export default {
     getCurrentProductOrderIcon() {
       let currentProductOrder = this.productOrderList.find(o => o.key === this.productOrder)
       return currentProductOrder ? currentProductOrder.icon : ''
-    }
+    },
+    getProductsParams() {
+      let defaultParams = { page: this.productPage, order_by: `${this.productOrder}` }
+      if (this.productFilter && this.productFilter === 'hide_price_count_gte_1') {
+        defaultParams['price_count'] = 0
+      }
+      return defaultParams
+    },
   },
   methods: {
     initProductList() {
@@ -67,12 +89,16 @@ export default {
     getProducts() {
       this.loading = true
       this.productPage += 1
-      return api.getProducts({ page: this.productPage, order_by: `${this.productOrder}` })
+      return api.getProducts(this.getProductsParams)
         .then((data) => {
           this.productList.push(...data.items)
           this.productTotal = data.total
           this.loading = false
         })
+    },
+    toggleProductFilter(filterKey) {
+      this.productFilter = this.productFilter ? '' : filterKey
+      this.initProductList()
     },
     selectProductOrder(orderKey) {
       if (this.productOrder !== orderKey) {
