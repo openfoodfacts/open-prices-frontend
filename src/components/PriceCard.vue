@@ -10,12 +10,6 @@
           <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
           <p v-if="!hideProductDetails" class="mb-2">
-            <span v-if="!price">
-              <v-chip label size="small" density="comfortable" :color="getProductPriceCountColor" class="mr-1" @click="goToProduct()">
-                <v-icon start icon="mdi-tag-outline"></v-icon>
-                {{ product.price_count }}
-              </v-chip>
-            </span>
             <span v-if="hasProductBrands">
               <v-chip v-for="brand in getProductBrandsList" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
                 {{ brand }}
@@ -36,10 +30,6 @@
                 {{ pl.name }}
                 <v-icon v-if="pl.icon" end :icon="pl.icon"></v-icon>
               </v-chip>
-            </span>
-            <span v-if="!price && !hideProductCode">
-              <br />
-              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.code }}</v-chip>
             </span>
           </p>
 
@@ -86,7 +76,6 @@ export default {
     'hideProductImage': false,
     'hideProductTitle': false,
     'hideProductDetails': false,
-    'hideProductCode': false,
     'hidePriceLocation': false,
     'readonly': false
   },
