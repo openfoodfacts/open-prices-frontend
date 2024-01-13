@@ -23,6 +23,7 @@
         </v-card-text>
       </v-card>
     </v-col>
+
     <v-col cols="12" md="6" lg="4">
       <v-card title="Products" height="100%">
         <v-card-text>
@@ -33,6 +34,17 @@
           <p>
             With a price
             <strong>{{ productWithPriceTotal }}</strong>
+          </p>
+        </v-card-text>
+      </v-card>
+    </v-col>
+
+    <v-col cols="12" md="6" lg="4">
+      <v-card title="Locations" height="100%">
+        <v-card-text>
+          <p>
+            Total
+            <strong>{{ locationTotal }}</strong>
           </p>
         </v-card-text>
       </v-card>
@@ -51,6 +63,7 @@ export default {
       priceWithoutProduct: null,
       productTotal: null,
       productWithPriceTotal: null,
+      locationTotal: null,
       loading: false,
     }
   },
@@ -64,6 +77,7 @@ export default {
     this.getPricesWithProduct()
     this.getProducts()
     this.getProductsWithPrice()
+    this.getLocations()
   },
   methods: {
     getPrices() {
@@ -98,6 +112,14 @@ export default {
           this.loading = false
         })
     },
+    getLocations() {
+      this.loading = true
+      return api.getLocations({ size: 1 })
+        .then((data) => {
+          this.locationTotal = data.total
+          this.loading = false
+        })
+    }
   }
 }
 </script>
