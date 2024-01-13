@@ -54,18 +54,17 @@ export default {
   },
   data() {
     return {
+      // filter & order
       productFilter: '',
       productFilterList: constants.PRODUCT_FILTER_LIST,
       productOrder: '-unique_scans_n',
       productOrderList: constants.PRODUCT_ORDER_LIST,
+      // data
       productList: [],
       productTotal: null,
       productPage: 0,
       loading: false,
     }
-  },
-  mounted() {
-    this.initProductList()
   },
   computed: {
     getCurrentProductOrderIcon() {
@@ -73,12 +72,15 @@ export default {
       return currentProductOrder ? currentProductOrder.icon : ''
     },
     getProductsParams() {
-      let defaultParams = { page: this.productPage, order_by: `${this.productOrder}` }
+      let defaultParams = { order_by: `${this.productOrder}`, page: this.productPage }
       if (this.productFilter && this.productFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
       return defaultParams
     },
+  },
+  mounted() {
+    this.initProductList()
   },
   methods: {
     initProductList() {
