@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import constants from '../constants'
 import api from '../services/api'
 import ProductCard from '../components/ProductCard.vue'
 
@@ -53,23 +54,17 @@ export default {
   },
   data() {
     return {
+      // filter & order
       productFilter: '',
-      productFilterList: [
-        {key: 'hide_price_count_gte_1', value: 'Hide products with prices'},
-      ],
+      productFilterList: constants.PRODUCT_FILTER_LIST,
       productOrder: '-unique_scans_n',
-      productOrderList: [
-        {key: '-unique_scans_n', value: 'Number of scans', icon: 'mdi-barcode-scan'},
-        {key: '-price_count', value: 'Number of prices', icon: 'mdi-tag-multiple-outline'},
-      ],
+      productOrderList: constants.PRODUCT_ORDER_LIST,
+      // data
       productList: [],
       productTotal: null,
       productPage: 0,
       loading: false,
     }
-  },
-  mounted() {
-    this.initProductList()
   },
   computed: {
     getCurrentProductOrderIcon() {
@@ -77,12 +72,15 @@ export default {
       return currentProductOrder ? currentProductOrder.icon : ''
     },
     getProductsParams() {
-      let defaultParams = { page: this.productPage, order_by: `${this.productOrder}` }
+      let defaultParams = { order_by: `${this.productOrder}`, page: this.productPage }
       if (this.productFilter && this.productFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
       return defaultParams
     },
+  },
+  mounted() {
+    this.initProductList()
   },
   methods: {
     initProductList() {
