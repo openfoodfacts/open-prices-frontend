@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.17.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.16.2...v1.17.0) (2024-01-14)
+
+
+### Features
+
+* **brand detail:** add order & filter buttons ([#142](https://github.com/openfoodfacts/open-prices-frontend/issues/142)) ([120851f](https://github.com/openfoodfacts/open-prices-frontend/commit/120851f6e60454a0e5d70e0898336c384b4ff8c5))
+* **brand detail:** move product count to chip ([6fa885f](https://github.com/openfoodfacts/open-prices-frontend/commit/6fa885f28d5c5849a48e731c4f054975e7fd6b03))
+* **location detail:** move price count to chip ([0ad9d5a](https://github.com/openfoodfacts/open-prices-frontend/commit/0ad9d5a3069ba2527f4f94648e24c623b588a401))
+* new api to get the location list ([#138](https://github.com/openfoodfacts/open-prices-frontend/issues/138)) ([130c3b1](https://github.com/openfoodfacts/open-prices-frontend/commit/130c3b1d84db22fd19242f885623a62fd8a9c096))
+* **stats:** new location total stat ([#140](https://github.com/openfoodfacts/open-prices-frontend/issues/140)) ([05af0b2](https://github.com/openfoodfacts/open-prices-frontend/commit/05af0b2b1e7e844136b7ce06ecce355b1588f027))
+* **user detail:** move price count to chip ([8418a77](https://github.com/openfoodfacts/open-prices-frontend/commit/8418a7726e066280e4f1db8af6132f69a17b85ac))
+
+
+### Bug Fixes
+
+* **brand detail:** fix brand product filter. ref [#142](https://github.com/openfoodfacts/open-prices-frontend/issues/142) ([59d062f](https://github.com/openfoodfacts/open-prices-frontend/commit/59d062fd95ce81addcd51cb33acf69133b5834ec))
+
 ## [1.16.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.16.1...v1.16.2) (2024-01-12)
 
 
