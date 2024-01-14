@@ -10,6 +10,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12" sm="6">
+      <v-chip label class="mr-2">{{ brandProductTotal }} products</v-chip>
       <v-btn size="small" append-icon="mdi-open-in-new" :href="getBrandOFFUrl()" target="_blank">
         Open Food Facts
       </v-btn>
@@ -20,7 +21,6 @@
 
   <h2 class="mb-1">
     Top products
-    <small>{{ brandProductTotal }}</small>
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
