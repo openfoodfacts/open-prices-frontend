@@ -12,6 +12,7 @@ import ProductDetail from './views/ProductDetail.vue'
 import LocationList from './views/LocationList.vue'
 import LocationDetail from './views/LocationDetail.vue'
 import BrandDetail from './views/BrandDetail.vue'
+import UserList from './views/UserList.vue'
 import UserDetail from './views/UserDetail.vue'
 import Stats from './views/Stats.vue'
 import NotFound from './views/NotFound.vue'
@@ -30,6 +31,7 @@ const routes = [
   { path: '/locations', name: 'locations', component: LocationList, meta: { title: 'Top locations', icon: 'mdi-medal-outline', drawerMenu: true }},
   { path: '/locations/:id', name: 'location-detail', component: LocationDetail, meta: { title: 'Location detail' }},
   { path: '/brands/:id', name: 'brand-detail', component: BrandDetail, meta: { title: 'Brand detail' }},
+  { path: '/users', name: 'users', component: UserList, meta: { title: 'Top contributors', icon: 'mdi-medal-outline', drawerMenu: true }},
   { path: '/users/:username', name: 'user-detail', component: UserDetail, meta: { title: 'User detail' }},
   { path: '/stats', name: 'stats', component: Stats, meta: { title: 'Stats' }},
   { path: '/:path(.*)', component: NotFound },
