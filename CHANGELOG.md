@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.19.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.18.0...v1.19.0) (2024-01-14)
+
+
+### Features
+
+* **product detail:** add CTA to add a price ([cc1e9fa](https://github.com/openfoodfacts/open-prices-frontend/commit/cc1e9fa096bee8978efd8f0dd750f6c1e8b16068))
+
+
+### Bug Fixes
+
+* **brand detail:** fix reset list on order change. ref [#142](https://github.com/openfoodfacts/open-prices-frontend/issues/142) ([ec9fd9a](https://github.com/openfoodfacts/open-prices-frontend/commit/ec9fd9ab004f801ff89c47b9a9f3da8f7b2a3cdb))
+
 ## [1.18.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.17.0...v1.18.0) (2024-01-14)
 
 
