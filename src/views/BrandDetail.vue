@@ -106,6 +106,7 @@ export default {
   methods: {
     initBrand() {
       this.brand = this.$route.params.id
+      this.brandProductList = []
       this.brandProductPage = 0
       this.getBrandProducts()
     },
