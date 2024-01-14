@@ -6,8 +6,8 @@
   </v-row>
 
   <v-row class="mt-0">
-    <v-col cols="12" sm="6">
-      <v-chip label class="mr-2">{{ userPriceTotal }} prices</v-chip>
+    <v-col cols="12">
+      <v-chip class="mr-2" label prepend-icon="mdi-tag-outline">{{ userPriceTotal }} prices</v-chip>
     </v-col>
   </v-row>
 

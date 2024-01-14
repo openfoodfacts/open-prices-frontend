@@ -9,8 +9,8 @@
   </v-row>
 
   <v-row class="mt-0">
-    <v-col cols="12" sm="6">
-      <v-chip label class="mr-2">{{ brandProductTotal }} products</v-chip>
+    <v-col cols="12">
+      <v-chip class="mr-2" label>{{ brandProductTotal }} products</v-chip>
       <v-btn size="small" append-icon="mdi-open-in-new" :href="getBrandOFFUrl()" target="_blank">
         Open Food Facts
       </v-btn>

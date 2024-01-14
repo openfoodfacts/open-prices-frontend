@@ -7,7 +7,8 @@
   </v-row>
 
   <v-row class="mt-0" v-if="!productNotFound">
-    <v-col cols="12" sm="6">
+    <v-col cols="12">
+      <v-chip class="mr-2" label prepend-icon="mdi-tag-outline">{{ productPriceTotal }} prices</v-chip>
       <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" to="/add">Add a price</v-btn>
       <v-btn v-if="product.code && product.source" size="small" append-icon="mdi-open-in-new" :href="getProductOFFUrl(product)" target="_blank">
         Open Food Facts
@@ -30,7 +31,6 @@
 
   <h2 class="mb-1">
     Latest prices
-    <small>{{ productPriceTotal }}</small>
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 

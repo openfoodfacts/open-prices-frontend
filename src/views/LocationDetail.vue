@@ -10,8 +10,8 @@
   </v-row>
 
   <v-row class="mt-0" v-if="location">
-    <v-col cols="12" sm="6">
-      <v-chip label class="mr-2">{{ locationPriceTotal }} prices</v-chip>
+    <v-col cols="12">
+      <v-chip class="mr-2" label prepend-icon="mdi-tag-outline">{{ locationPriceTotal }} prices</v-chip>
       <v-btn v-if="location.osm_id" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
         OpenStreetMap
       </v-btn>
