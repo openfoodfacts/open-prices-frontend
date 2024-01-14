@@ -124,7 +124,7 @@ export default {
     },
     toggleProductFilter(filterKey) {
       this.productFilter = this.productFilter ? '' : filterKey
-      this.initProductList()
+      this.initBrand()
     },
     selectProductOrder(orderKey) {
       if (this.productOrder !== orderKey) {
