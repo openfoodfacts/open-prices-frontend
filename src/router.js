@@ -14,7 +14,6 @@ import BrandDetail from './views/BrandDetail.vue'
 import UserDetail from './views/UserDetail.vue'
 import Stats from './views/Stats.vue'
 import NotFound from './views/NotFound.vue'
-import constants from './constants'
 import localeManager from './i18n/localeManager.js'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
@@ -38,25 +37,20 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/:locale',
-      component: RouterView,
-      children: routes,
-      beforeEnter: localeManager.routeMiddleware,
-    },
-  ]
+  routes: routes,
 })
+
 /**
  * On each page change, check if it needs authentication.
  * If required, but the user is not authenticated (token unknown), then redirect to 'sign-in'
  */
-router.beforeEach(async (to, from, next) => {
-  console.log("to: ", to)
-
+ router.beforeEach(async (to, from, next) => {
   const store = useAppStore();
-
-  //await localeManager.routeMiddleware(to, from, next);
+  const fromLocale = from.params.locale;
+  const toLocale = to.params.locale || localeManager.guessDefaultLocale();
+  if (fromLocale !== toLocale) {
+    await localeManager.changeLanguage(toLocale);
+  }
   if (to.meta.requiresAuth && !store.user.token) {
     console.log("checkAuth");
     return next({ name: 'sign-in' });

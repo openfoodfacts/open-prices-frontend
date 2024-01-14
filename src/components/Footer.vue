@@ -2,7 +2,6 @@
   <v-footer class="bg-grey-lighten-1" style="max-height: 20%">
     <v-row>
       <v-col cols="12" md="4" align="center">
-      <LanguageSelector />
     </v-col>
       <v-col cols="12" md="4" align="center">
         <i18n-t keypath="Footer.Open_Prices_Project.Text" tag="label" for="Footer.Open_Prices_Project.url">
@@ -17,17 +16,3 @@
     </v-row>
   </v-footer>
 </template>
-
-<script>
-import LanguageSelector from '@/components/LanguageSelector.vue';
-import localeManager from '../i18n/localeManager';
-
-export default {
-  components: {
-    LanguageSelector,
-  },
-  setup() {
-    return { localeManager}
-  },
-}
-</script>

@@ -78,28 +78,8 @@ const localeManager = {
     }
     
     return localeManager.defaultLocale
-  },
-
-  async routeMiddleware(to, _from, next) {
-    const paramLocale = to.params.locale
-    console.log("islocaleManager: ", localeManager.isLocaleSupported(paramLocale))
-    if(!localeManager.isLocaleSupported(paramLocale)) {
-      return next(localeManager.guessDefaultLocale())
-    }
-
-    await localeManager.changeLanguage(paramLocale)
-    return next()
-  },
-
-  i18nRoute(to) {
-    return {
-      ...to,
-      params: {
-        locale: localeManager.currentLocale,
-        ...to.params
-      }
-    }
   }
+
 }
 
 export default localeManager
