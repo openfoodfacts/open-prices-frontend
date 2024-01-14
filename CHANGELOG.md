@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.20.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.19.0...v1.20.0) (2024-01-14)
+
+
+### Features
+
+* improve price & product count chip labels ([704c056](https://github.com/openfoodfacts/open-prices-frontend/commit/704c0563c232c8d9edeed80f13fa8c1a2198aeeb))
+* new api to get the user list ([#148](https://github.com/openfoodfacts/open-prices-frontend/issues/148)) ([6c473c6](https://github.com/openfoodfacts/open-prices-frontend/commit/6c473c6c0ca4e764e28044013a308c3824108b47))
+* **user list:** new user list page ordered by price_count ([#150](https://github.com/openfoodfacts/open-prices-frontend/issues/150)) ([825e444](https://github.com/openfoodfacts/open-prices-frontend/commit/825e4443835675586ce5b5116c6b5dc2b5b7dcd2))
+
+
+### Bug Fixes
+
+* **user list:** fix link to user detail page. ref [#150](https://github.com/openfoodfacts/open-prices-frontend/issues/150) ([0347d54](https://github.com/openfoodfacts/open-prices-frontend/commit/0347d5444b8e72989df132770bef366dc288fa1f))
+
 ## [1.19.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.18.0...v1.19.0) (2024-01-14)
 
 
