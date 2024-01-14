@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.17.0...v1.18.0) (2024-01-14)
+
+
+### Features
+
+* **location list:** new location list page ordered by price_count ([#145](https://github.com/openfoodfacts/open-prices-frontend/issues/145)) ([96aa72c](https://github.com/openfoodfacts/open-prices-frontend/commit/96aa72cbf475dc38cadf3d77fdeb82273e5e499e))
+
 ## [1.17.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.16.2...v1.17.0) (2024-01-14)
 
 
