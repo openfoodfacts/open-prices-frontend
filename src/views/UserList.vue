@@ -56,7 +56,7 @@ export default {
     getUsers() {
       this.loading = true
       this.userPage += 1
-      return api.getUsers({ order_by: '-price_count', page: this.userPage })
+      return api.getUsers({ price_count__gte: 1, order_by: '-price_count', page: this.userPage })
         .then((data) => {
           this.userList.push(...data.items)
           this.userTotal = data.total
