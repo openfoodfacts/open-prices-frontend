@@ -31,7 +31,6 @@
 
 <script>
 import api from '../services/api'
-import utils from '../utils.js'
 
 export default {
   data() {
@@ -63,9 +62,6 @@ export default {
           this.loading = false
         })
     },
-    getUserTitle(user) {
-      return utils.getUserTitle(user, true, false, true, true)
-    },
     getUserPriceCountColor(user) {
       if (user.price_count === 0) {
         return 'error'
@@ -78,7 +74,7 @@ export default {
       }
     },
     goToUser(user) {
-      this.$router.push({ path: `/users/${user.id}` })
+      this.$router.push({ path: `/users/${user.user_id}` })
     },
   }
 }
