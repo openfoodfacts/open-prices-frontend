@@ -16,6 +16,18 @@ export default {
     .then((response) => response.json())
   },
 
+  getUsers(params = {}) {
+    const defaultParams = {page: 1, size: 10}  // order_by default ?
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/users?${new URLSearchParams({...defaultParams, ...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then((response) => response.json())
+  },
+
   createProof(proofImage) {
     const store = useAppStore()
     let formData = new FormData()
