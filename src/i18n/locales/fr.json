@@ -1,185 +1,185 @@
 {
-	"AddPriceHome": {
-		"PriceCreated": "Prix créé !",
-		"ReceiptMode": {
-			"Subtitle": "Disponible bientôt dans la v2 (aidez nous!)",
-			"Title": "Mode d'ajout par ticket de caisse"
-		},
-		"SignedIn": "Connecté !",
-		"SingleProductMode": {
-			"Subtitle": "Préparez votre caméra :)",
-			"Title": "Mode d'ajout de prix unique"
-		},
-		"Title": "Ajout d'un prix"
-	},
-	"AddPriceSingle": {
-		"Create": "Créer",
-		"PriceDetails": {
-			"Label": "Prix",
-			"Proof": "Preuve",
-			"ProofUploaded": "Preuve envoyée !",
-			"Text": "Prix {perKg}",
-			"TextPerKg": "par kg",
-			"Title": "Détails du prix",
-			"UploadProof": "Envoyez une preuve"
-		},
-		"ProductInfo": {
-			"CategoryLabel": "Catégorie",
-			"OriginLabel": "Origine",
-			"ProductCode": "Code produit",
-			"ScanBarcode": "Scannez un code-barres",
-			"SetProduct": "Ajoutez un produit",
-			"Title": "Information du produit"
-		},
-		"ProductModeList": {
-			"Barcode": "Code-barres",
-			"Category": "Catégorie"
-		},
-		"Title": "Ajoutez un prix unique",
-		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
-			"Find": "Trouver",
-			"Location": "Localisation",
-			"SelectLocation": "Choisissez votre localisation",
-			"Title": "Où et quand ?"
-		}
-	},
-	"BarcodeScanner": {
-		"Htlm5-qrcode": {
-			"Text": "fonctionne avec {url}"
-		},
-		"Scan": "Scannez un code-barres"
-	},
-	"BrandDetail": {
-		"LoadMore": "Afficher plus",
-		"TopProducts": "Top produits"
-	},
-	"Footer": {
-		"About": "A Propos",
-		"Open_Prices_Project": {
-			"Text": "Open Prices est un projet de {0}.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "Statistiques"
-	},
-	"Header": {
-		"Dashboard": "Tableau de bord",
-		"Settings": "Paramètres",
-		"Sign-out": "Se déconnecter",
-		"Title": "Open Prices"
-	},
-	"Home": {
-		"AddPrice": "Ajouter un prix",
-		"SettingsUpdated": "Paramètres mis à jour !",
-		"Welcome": {
-			"Subtitle": "Une base de données ouverte et participative des prix des denrées alimentaires 🏷🍊💲",
-			"Title": "Bienvenue à Open Prices !"
-		}
-	},
-	"LocationDetail": {
-		"LatestPrices": "Derniers prix ajoutés",
-		"LoadMore": "Afficher plus",
-		"LocationNotFound": "Cette localisation n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)"
-	},
-	"LocationSelector": {
-		"Clear": "Effacer",
-		"NoResult": "Aucun résultat trouvé",
-		"OSM": {
-			"text": "fonctionne avec {url}"
-		},
-		"RecentLocations": "Location récente {recentLocationNumber}| Locations récentes {recentLocationNumber}",
-		"Result": "Résultat {resultNumber} | Résultats {resultNumber}",
-		"SearchByName": "Chercher par nom et ville",
-		"Title": "Trouver votre localisation"
-	},
-	"NotFound": {
-		"Subtitle": "La page demandée n'existe pas",
-		"Title": "Page inexistante"
-	},
-	"PriceCard": {
-		"PriceDate": "le {date}",
-		"PriceValueDisplay": "{0} /kg",
-		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Produit inconnu"
-	},
-	"PriceList": {
-		"LoadMore": "Afficher plus",
-		"Title": "Derniers prix ajoutés"
-	},
-	"ProductCard": {
-		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Nom de produit inconnu"
-	},
-	"ProductDetail": {
-		"CategoryNotFound": "Cette catégorie n'existe pas",
-		"LatestPrices": "Derniers prix ajoutés",
-		"LoadMore": "Afficher plus",
-		"ProductNotFound": "Ce produit n'existe pas sur Open Food Facts... N'hésitez pas à le rajouter :)"
-	},
-	"ProductList": {
-		"Filter": "Filtrer",
-		"HideProductsWithPrices": "Cacher les produits qui ont un prix",
-		"LoadMore": "Afficher plus",
-		"Order": "Ordre",
-		"PriceNumber": "Nombre de prix ajoutés",
-		"ScanNumber": "Nombre de scans ajoutés",
-		"Title": "Top produits"
-	},
-	"Router": {
-		"AddPrice": {
-			"Title": "Ajouter un prix"
-		},
-		"Home": {
-			"Title": "Accueil"
-		},
-		"LatestPrices": {
-			"Title": "Derniers prix"
-		},
-		"TopContributors": {
-			"Title": "Top contributeurs"
-		},
-		"TopLocations": {
-			"Title": "Top magasins"
-		},
-		"TopProducts": {
-			"Title": "Top produits"
-		}
-	},
-	"SignIn": {
-		"Button": "Se connecter",
-		"Password": "Mot de passe",
-		"ServerError": "Erreur : erreur serveur",
-		"Title": "Connexion",
-		"UseOFFCredentials": {
-			"Text": "Utilisez votre identifiant {url} pour vous connecter."
-		},
-		"UsernameLabel": "Identifiant",
-		"WrongCredentials": "Erreur : Problème d'identifiant"
-	},
-	"Stats": {
-		"Prices": "Prix",
-		"ProductsWithPrices": "Produits avec prix",
-		"Title": "Statistiques"
-	},
-	"UserDashboard": {
-		"LatestPrices": "Mes derniers prix ajoutés",
-		"LoadMore": "Afficher plus",
-		"Title": "Tableau de bord"
-	},
-	"UserDetail": {
-		"LatestPrices": "Derniers prix ajoutés",
-		"LoadMore": "Afficher plus"
-	},
-	"UserSettings": {
-		"AddingPrices": "Ajout de prix",
-		"ChangeLanguage": "Changer la langue",
-		"CountryLabel": "Pays",
-		"CurrencyLabel": "Devise",
-		"DefaultCurrency": "Devise par défaut",
-		"LanguageLabel": "Langue",
-		"LocaleNotSupported": "Cette langue n'est pas encore supportée, la langue sera mise par défaut en anglais",
-		"Save": "Sauvegarder",
-		"Title": "Paramètres"
-	}
+  "AddPriceHome": {
+    "PriceCreated": "Prix créé !",
+    "ReceiptMode": {
+      "Subtitle": "Disponible bientôt dans la v2 (aidez nous!)",
+      "Title": "Mode d'ajout par ticket de caisse"
+    },
+    "SignedIn": "Connecté !",
+    "SingleProductMode": {
+      "Subtitle": "Préparez votre caméra :)",
+      "Title": "Mode d'ajout de prix unique"
+    },
+    "Title": "Ajout d'un prix"
+  },
+  "AddPriceSingle": {
+    "Create": "Créer",
+    "PriceDetails": {
+      "Label": "Prix",
+      "Proof": "Preuve",
+      "ProofUploaded": "Preuve envoyée !",
+      "Text": "Prix {perKg}",
+      "TextPerKg": "par kg",
+      "Title": "Détails du prix",
+      "UploadProof": "Envoyez une preuve"
+    },
+    "ProductInfo": {
+      "CategoryLabel": "Catégorie",
+      "OriginLabel": "Origine",
+      "ProductCode": "Code produit",
+      "ScanBarcode": "Scannez un code-barres",
+      "SetProduct": "Ajoutez un produit",
+      "Title": "Information du produit"
+    },
+    "ProductModeList": {
+      "Barcode": "Code-barres",
+      "Category": "Catégorie"
+    },
+    "Title": "Ajoutez un prix unique",
+    "WhereWhen": {
+      "Date": "Date",
+      "DateLabel": "Date",
+      "Find": "Trouver",
+      "Location": "Localisation",
+      "SelectLocation": "Choisissez votre localisation",
+      "Title": "Où et quand ?"
+    }
+  },
+  "BarcodeScanner": {
+    "Htlm5-qrcode": {
+      "Text": "fonctionne avec {url}"
+    },
+    "Scan": "Scanner"
+  },
+  "BrandDetail": {
+    "LoadMore": "Afficher plus",
+    "TopProducts": "Meilleurs produits"
+  },
+  "Footer": {
+    "About": "A Propos",
+    "Open_Prices_Project": {
+      "Text": "Open Prices est un projet de {0}.",
+      "Url": "Open Food Facts"
+    },
+    "Stats": "Statistiques"
+  },
+  "Header": {
+    "Dashboard": "Tableau de bord",
+    "Settings": "Paramètres",
+    "Sign-out": "Se déconnecter",
+    "Title": "Open Prices"
+  },
+  "Home": {
+    "AddPrice": "Ajouter un prix",
+    "SettingsUpdated": "Paramètres mis à jour !",
+    "Welcome": {
+      "Subtitle": "Une base de donnée open source collaborative de prix de produits alimentaires 🏷🍊💲",
+      "Title": "Bienvenue à Open Prices !"
+    }
+  },
+  "LocationDetail": {
+    "LatestPrices": "Derniers prix ajoutés",
+    "LoadMore": "Afficher plus",
+    "LocationNotFound": "Cette localisation n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)"
+  },
+  "LocationSelector": {
+    "Clear": "Effacer",
+    "NoResult": "Aucun résultat trouvé",
+    "OSM": {
+      "text": "fonctionne avec {url}"
+    },
+    "RecentLocations": "Location récente {recentLocationNumber}| Locations récentes {recentLocationNumber}",
+    "Result": "Résultat {resultNumber} | Résultats {resultNumber}",
+    "SearchByName": "Chercher par nom et ville",
+    "Title": "Trouver votre localisation"
+  },
+  "NotFound": {
+    "Subtitle": "La page demandée n'existe pas",
+    "Title": "Page inexistante"
+  },
+  "PriceCard": {
+    "PriceDate": "le {date}",
+    "PriceValueDisplay": "",
+    "ProductQuantity": "{0} g",
+    "UnknownProduct": "Produit inconnu"
+  },
+  "PriceList": {
+    "LoadMore": "Afficher plus",
+    "Title": "Derniers prix ajoutés"
+  },
+  "ProductCard": {
+    "ProductQuantity": "{0} g",
+    "UnknownProduct": "Nom de produit inconnu"
+  },
+  "ProductDetail": {
+    "CategoryNotFound": "Cette catégorie n'existe pas",
+    "LatestPrices": "Derniers prix ajoutés",
+    "LoadMore": "Afficher plus",
+    "ProductNotFound": "Ce produit n'existe pas sur Open Food Facts... N'hésitez pas à le rajouter :)"
+  },
+  "ProductList": {
+    "Filter": "Filtrer",
+    "HideProductsWithPrices": "Cacher les produits qui ont un prix",
+    "LoadMore": "Afficher plus",
+    "Order": "Ordre",
+    "PriceNumber": "Nombre de prix ajoutés",
+    "ScanNumber": "Nombre de scans ajoutés",
+    "Title": "Produits les plus populaires"
+  },
+  "Router": {
+    "AddPrice": {
+      "Title": "Ajouter un prix"
+    },
+    "Home": {
+      "Title": "Accueil"
+    },
+    "LatestPrices": {
+      "Title": "Derniers prix"
+    },
+    "TopProducts": {
+      "Title": "Produits favoris"
+    },
+    "TopLocations": {
+      "Title": "Locations favorites"
+    },
+    "TopContributors": {
+      "Title": "Contributeurs favoris"
+    }
+  },
+  "SignIn": {
+    "Button": "Connexion",
+    "Password": "Mot de passe",
+    "ServerError": "Erreur : erreur serveur",
+    "Title": "Connexion",
+    "UseOFFCredentials": {
+      "Text": "Utilisez votre identifiant {url} pour vous connecter."
+    },
+    "UsernameLabel": "Identifiant",
+    "WrongCredentials": "Erreur : Problème d'identifiant"
+  },
+  "Stats": {
+    "Prices": "Prix",
+    "ProductsWithPrices": "Produits avec prix",
+    "Title": "Statistiques"
+  },
+  "UserDashboard": {
+    "LatestPrices": "Mes derniers prix ajoutés",
+    "LoadMore": "Afficher plus",
+    "Title": "Tableau de bord"
+  },
+  "UserDetail": {
+    "LatestPrices": "Derniers prix ajoutés",
+    "LoadMore": "Afficher plus"
+  },
+  "UserSettings": {
+    "AddingPrices": "Ajout de prix",
+    "ChangeLanguage": "Changer la langue",
+    "CountryLabel": "Pays",
+    "CurrencyLabel": "",
+    "DefaultCurrency": "Devise par défaut",
+    "LanguageLabel": "Langue",
+    "LocaleNotSupported": "Cette langue n'est pas encore supportée, la langue sera mise par défaut en anglais",
+    "Save": "Sauvegarder",
+    "Title": "Paramètres"
+  }
 }
