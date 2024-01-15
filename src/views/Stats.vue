@@ -1,15 +1,14 @@
 <template>
   <h1 class="mb-1">
-    Stats
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+    {{ $t('Stats.Title') }} <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h1>
 
   <v-row>
     <v-col cols="12" md="6" lg="4">
-      <v-card title="Prices" :text="priceTotal" height="100%"></v-card>
+      <v-card :title="$t('Stats.Prices')" :text="priceTotal" height="100%"></v-card>
     </v-col>
     <v-col cols="12" md="6" lg="4">
-      <v-card title="Products with prices" :subtitle="'Out of ' + productTotal + ' products'" :text="productWithPriceTotal"></v-card>
+      <v-card :title="$t('Stats.ProductsWithPrices')" :subtitle="'Out of ' + productTotal + ' products'" :text="productWithPriceTotal"></v-card>
     </v-col>
   </v-row>
 </template>

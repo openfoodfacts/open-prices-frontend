@@ -1,18 +1,17 @@
 <template>
 <div v-if="countriesData">
   <h1 class="mb-1">
-    Settings
-  </h1>
+    {{ $t('UserSettings.Title') }} </h1>
 
   <v-form @submit.prevent="updateSettings">
     <v-row>
       <v-col cols="12" sm="6">
-        <v-card title="Change language" prepend-icon="mdi-earth">
+        <v-card :title="$t('UserSettings.ChangeLanguage')" prepend-icon="mdi-earth">
           <v-divider></v-divider>
           <v-card-text>
             <v-autocomplete
               v-model="userSettingsForm.selectedCountry"
-              label="Country"
+              :label="$t('UserSettings.CountryLabel')"
               :items="countriesData"
               item-title="name"
               item-value="name"
@@ -22,7 +21,7 @@
           <v-card-text>
             <v-autocomplete
               v-model="userSettingsForm.selectedLanguage"
-              label="Language"
+              :label="$t('UserSettings.LanguageLabel')"
               :items="countryLanguages"
             >
             </v-autocomplete>
@@ -32,13 +31,13 @@
     </v-row>
     <v-row>
       <v-col cols="12" sm="6">
-        <v-card title="Adding prices" prepend-icon="mdi-tag-plus-outline">
+        <v-card :title="$t('UserSettings.AddingPrices')" prepend-icon="mdi-tag-plus-outline">
           <v-divider></v-divider>
           <v-card-text>
-            <h3 class="mb-1">Default currency</h3>
+            <h3 class="mb-1">{{ $t('UserSettings.DefaultCurrency') }}</h3>
             <v-autocomplete
               v-model="userSettingsForm.currency"
-              label="Currency"
+              :label="$t('UserSettings.CurrencyLabel')"
               :items="currencyList"
             ></v-autocomplete>
           </v-card-text>
@@ -48,7 +47,7 @@
 
     <v-row>
       <v-col>
-        <v-btn type="submit" :color="formFilled ? 'success' : ''" :disabled="!formFilled">Save</v-btn>
+        <v-btn type="submit" :color="formFilled ? 'success' : ''" :disabled="!formFilled">{{ $t('UserSettings.Save') }}</v-btn>
       </v-col>
     </v-row>
   </v-form>
@@ -57,7 +56,7 @@
     v-model="localeNotSupported"
     color="error"
     :timeout="5000"
-  >Locale not yet supported, language will be defaulted to English</v-snackbar>
+  >{{ $t('UserSettings.LocaleNotSupported') }}</v-snackbar>
 </template>
 
 <script>
@@ -118,7 +117,7 @@ export default {
     const { default: languagesData } = await import('@/i18n/data/languages.json');
     this.countriesData = countriesData;
     this.languagesData = languagesData;
-    this.countryLanguages = ['en'];
+    this.countryLanguages = ['English'];
   } catch (error) {
     console.error('Error loading countries and languages:', error);
   }

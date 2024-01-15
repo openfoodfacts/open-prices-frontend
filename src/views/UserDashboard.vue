@@ -1,7 +1,6 @@
 <template>
   <h1 class="mb-1">
-    Dashboard
-  </h1>
+    {{ $t('UserDashboard.Title') }} </h1>
 
   <v-row>
     <v-col cols="12" sm="6">
@@ -12,8 +11,7 @@
   <br />
 
   <h2 class="mb-1">
-    Latest prices
-    <small>{{ userPriceTotal }}</small>
+    {{ $t('UserDashboard.LatestPrices') }} <small>{{ userPriceTotal }}</small>
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
@@ -25,7 +23,7 @@
 
   <v-row v-if="userPriceList.length < userPriceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" @click="getUserPrices">Load more</v-btn>
+      <v-btn size="small" @click="getUserPrices">{{ $t('UserDashboard.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

@@ -1,20 +1,69 @@
-function ruPluralizationRules(
-    choice,
-    choicesLength
-  ) {
-    if (choice === 0) {
-      return 0
-    }
-    const teen = choice > 10 && choice < 20
-    const endsWithOne = choice % 10 === 1
-    if (!teen && endsWithOne) {
-      return 1
-    }
-    if (!teen && choice % 10 >= 2 && choice % 10 <= 4) {
-      return 2
-    }
-    return choicesLength < 4 ? 2 : 3
+function getPluralizationRules(locale) {
+  return new Intl.PluralRules(locale, { type: 'cardinal' });
+}
+
+function ruPluralizationRules(choice, choicesLength) {
+  const pluralRules = getPluralizationRules('ru');
+  
+  switch (pluralRules.select(choice)) {
+    case 'zero':
+      return 0;
+    case 'one':
+      return 1;
+    case 'two':
+    case 'few':
+      return 2;
+    default:
+      return 3;
   }
-  export default {
-    ru: ruPluralizationRules
-  };
+}
+
+function frPluralizationRules(choice, choicesLength) {
+  const pluralRules = getPluralizationRules('fr');
+  
+  switch (pluralRules.select(choice)) {
+    case 'zero':
+      return 0;
+    case 'one':
+      return 1;
+    case 'two':
+      return 2;
+    case 'few':
+      return 3;
+    case 'many':
+      return 4;
+    default:
+      return 5;
+  }
+}
+
+function esPluralizationRules(choice, choicesLength) {
+  const pluralRules = getPluralizationRules('es');
+  
+  switch (pluralRules.select(choice)) {
+    case 'one':
+      return 1;
+    default:
+      return 5;
+  }
+}
+
+function dePluralizationRules(choice, choicesLength) {
+  const pluralRules = getPluralizationRules('de');
+  
+  switch (pluralRules.select(choice)) {
+    case 'zero':
+      return 0;
+    case 'one':
+      return 1;
+    default:
+      return 5;
+  }
+}
+
+export default {
+  ru: ruPluralizationRules,
+  fr: frPluralizationRules,
+  es: esPluralizationRules,
+  de: dePluralizationRules,
+};

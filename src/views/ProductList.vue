@@ -1,14 +1,13 @@
 <template>
   <h1 class="mb-1">
-    Top products
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+    {{ $t('ProductList.Title') }} <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h1>
 
   <v-row v-if="!loading">
     <v-col>
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">Filter</v-btn>
+          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">{{ $t('ProductList.Filter') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="filter in productFilterList" :key="filter.key" :prepend-icon="(productFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="productFilter === filter.key" @click="toggleProductFilter(filter.key)">
@@ -19,7 +18,7 @@
 
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon"  :active="!!productOrder">Order</v-btn>
+          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon"  :active="!!productOrder">{{ $t('ProductList.Order') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="order in productOrderList" :key="order.key" :prepend-icon="order.icon" :active="productOrder === order.key" @click="selectProductOrder(order.key)">
@@ -38,7 +37,7 @@
 
   <v-row v-if="productList.length < productTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" @click="getProducts">Load more</v-btn>
+      <v-btn size="small" @click="getProducts">{{ $t('ProductList.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>
@@ -55,12 +54,12 @@ export default {
     return {
       productFilter: '',
       productFilterList: [
-        {key: 'hide_price_count_gte_1', value: 'Hide products with prices'},
+        {key: 'hide_price_count_gte_1', value: this.$t('ProductList.HideProductsWithPrices')},
       ],
       productOrder: '-unique_scans_n',
       productOrderList: [
-        {key: '-unique_scans_n', value: 'Number of scans', icon: 'mdi-barcode-scan'},
-        {key: '-price_count', value: 'Number of prices', icon: 'mdi-tag-multiple-outline'},
+        {key: '-unique_scans_n', value: this.$t('ProductList.ScanNumber'), icon: 'mdi-barcode-scan'},
+        {key: '-price_count', value: this.$t('ProductList.PriceNumber'), icon: 'mdi-tag-multiple-outline'},
       ],
       productList: [],
       productTotal: null,

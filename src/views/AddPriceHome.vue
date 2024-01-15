@@ -1,19 +1,19 @@
 <template>
-  <h1 class="mb-1">Add a price</h1>
+  <h1 class="mb-1">{{ $t('AddPriceHome.Title') }}</h1>
 
   <v-row>
     <v-col cols="12" md="6">
       <v-card
-        title="Single product mode"
-        subtitle="Get your camera ready :)"
+        :title="$t('AddPriceHome.SingleProductMode.Title')"
+        :subtitle="$t('AddPriceHome.SingleProductMode.Subtitle')"
         prepend-icon="mdi-barcode"
         to="/add/single">
       </v-card>
     </v-col>
     <v-col cols="12" md="6">
       <v-card
-        title="Receipt mode"
-        subtitle="Coming in the v2 (help us!)"
+        :title="$t('AddPriceHome.ReceiptMode.Title')"
+        :subtitle="$t('AddPriceHome.ReceiptMode.Subtitle')"
         prepend-icon="mdi-receipt-text-outline"
         link
         disabled></v-card>
@@ -24,12 +24,12 @@
     v-model="signinSuccessMessage"
     color="success"
     :timeout="2000"
-  >Signed in!</v-snackbar>
+  >{{ $t('AddPriceHome.SignedIn') }}</v-snackbar>
   <v-snackbar
     v-model="singleSuccessMessage"
     color="success"
     :timeout="2000"
-  >Price created!</v-snackbar>
+  >{{ $t('AddPriceHome.PriceCreated') }}</v-snackbar>
 </template>
 
 <script>

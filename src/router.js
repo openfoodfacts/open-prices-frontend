@@ -15,6 +15,8 @@ import UserDetail from './views/UserDetail.vue'
 import Stats from './views/Stats.vue'
 import NotFound from './views/NotFound.vue'
 import localeManager from './i18n/localeManager.js'
+import i18n from './i18n/index.js'
+
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 const routes = [
@@ -23,10 +25,10 @@ const routes = [
   { path: '/sign-in', name: 'sign-in', component: SignIn, meta: { title: 'Sign in', icon: 'mdi-login', drawerMenu: true, requiresAuth: false } },
   { path: '/dashboard', name: 'dashboard', component: UserDashboard, meta: { title: 'Dashboard', requiresAuth: true } },
   { path: '/settings', name: 'settings', component: UserSettings, meta: { title: 'Settings', requiresAuth: true } },
-  { path: '/add', name: 'add-price', component: AddPriceHome, meta: { title: 'Add a price', icon: 'mdi-plus', drawerMenu: true, requiresAuth: true }},
+  { path: '/add', name: 'add-price', component: AddPriceHome, meta: { title: 'AddPrice', icon: 'mdi-plus', drawerMenu: true, requiresAuth: true }},
   { path: '/add/single', name: 'add-price-single', component: AddPriceSingle, meta: { title: 'Add a single price', requiresAuth: true }},
-  { path: '/prices', name: 'prices', component: PriceList, meta: { title: 'Latest prices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
-  { path: '/products', name: 'products', component: ProductList, meta: { title: 'Top products', icon: 'mdi-database-outline', drawerMenu: true }},
+  { path: '/prices', name: 'prices', component: PriceList, meta: { title: 'LatestPrices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
+  { path: '/products', name: 'products', component: ProductList, meta: { title: 'TopProducts', icon: 'mdi-database-outline', drawerMenu: true }},
   { path: '/products/:id', name: 'product-detail', component: ProductDetail, meta: { title: 'Product detail' }},
   { path: '/locations/:id', name: 'location-detail', component: LocationDetail, meta: { title: 'Location detail' }},
   { path: '/brands/:id', name: 'brand-detail', component: BrandDetail, meta: { title: 'Brand detail' }},
@@ -48,7 +50,7 @@ const router = createRouter({
   const store = useAppStore();
   const fromLocale = from.params.locale;
   const toLocale = to.params.locale || localeManager.guessDefaultLocale();
-  if (fromLocale !== toLocale) {
+  if (fromLocale !== toLocale) {  
     await localeManager.changeLanguage(toLocale);
   }
   if (to.meta.requiresAuth && !store.user.token) {

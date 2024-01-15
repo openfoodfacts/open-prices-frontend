@@ -19,8 +19,7 @@
   <br />
 
   <h2 class="mb-1">
-    Top products
-    <small>{{ brandProductTotal }}</small>
+    {{ $t('BrandDetail.TopProducts') }} <small>{{ brandProductTotal }}</small>
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
@@ -32,7 +31,7 @@
 
   <v-row v-if="brandProductList.length < brandProductTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" @click="getBrandProducts">Load more</v-btn>
+      <v-btn size="small" @click="getBrandProducts">{{ $t('BrandDetail.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

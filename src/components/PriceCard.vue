@@ -17,7 +17,7 @@
             </span>
             <span v-if="hasProductQuantity">
               <v-chip label size="small" density="comfortable" class="mr-1">
-                {{ product.product_quantity }} g
+                {{ $t('PriceCard.ProductQuantity', [product.product_quantity]) }}
               </v-chip>
             </span>
             <span v-if="hasPriceOrigin && priceOrigin">
@@ -37,7 +37,13 @@
             <p>
               <span>{{ getPriceValueDisplay() }}</span>
               <span v-if="hasProductQuantity"> ({{  getPricePerKilo() }})</span>
-              <span> on <i>{{ getDateFormatted(price.date) }}</i></span>
+              <span>
+                <i18n-t keypath="PriceCard.PriceDate" tag="p">
+                  <template v-slot:date>
+                    <i>{{ getDateFormatted(price.date) }}</i>
+                  </template>
+                </i18n-t> 
+              </span>
             </p>
           </v-sheet>
         </v-col>
@@ -158,7 +164,7 @@ export default {
       } else if (this.hasPrice && this.hasCategoryTag) {
         return this.getPriceCategoryName
       }
-      return 'Unknown product'
+      return this.$t('PriceCard.UnknownProduct')
     },
     getPriceOriginTag() {
       if (this.price && this.price.origins_tags) {
@@ -180,14 +186,14 @@ export default {
     },
     getPriceValueDisplay() {
       if (this.hasCategoryTag) {
-        return `${this.getPriceValue(this.priceValue, this.priceCurrency)} / kg`
+        return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(this.priceValue, this.priceCurrency)])
       }
       return this.getPriceValue(this.priceValue, this.priceCurrency)
     },
     getPricePerKilo() {
       const productQuantity = this.price.product.product_quantity
       let pricePerKilo = (this.priceValue / productQuantity) * 1000
-      return `${this.getPriceValue(pricePerKilo, this.priceCurrency)} / kg`
+      return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(pricePerKilo, this.priceCurrency)])
     },
     getPriceLocationTitle() {
       if (this.price.location) {

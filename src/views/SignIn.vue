@@ -1,21 +1,26 @@
 <template>
-  <h1 class="mb-1">Sign in</h1>
+  <h1 class="mb-1">{{ $t('SignIn.Title') }}</h1>
 
   <v-alert
     class="mb-2"
     type="info"
     variant="outlined"
-  >Use your <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a> credentials to sign in.</v-alert>
-
+  >
+    <i18n-t keypath="SignIn.UseOFFCredentials.Text" tag="p">
+      <template #url>
+        <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
+      </template>
+    </i18n-t>
+  </v-alert>
   <v-form @submit.prevent="signIn">
     <v-text-field
       v-model="signinForm.username"
-      label="Username"
+      :label="$t('SignIn.UsernameLabel')"
       type="text"
     ></v-text-field>
     <v-text-field
       v-model="signinForm.password"
-      label="Password"
+      :label="$t('SignIn.Password')"
       type="password"
     ></v-text-field>
     <v-btn
@@ -23,7 +28,7 @@
       class="mt-2"
       :loading="loading"
       :disabled="!formFilled"
-    >Sign in</v-btn>
+    >{{ $t('SignIn.Button') }}</v-btn>
   </v-form>
 </template>
 
@@ -58,12 +63,12 @@ export default {
             this.appStore.signIn(this.signinForm.username, data['access_token'])
             this.$router.push({ path: '/add', query: { signinSuccess: 'true' } })
           } else {
-            alert('Error: wrong credentials')
+            alert(this.$t('SignIn.WrongCredentials'))
             this.loading = false
           }
         })
         .catch((error) => {
-          alert("Error: server error")
+          alert(this.$t('SignIn.ServerError'))
           this.loading = false
         });
     },
