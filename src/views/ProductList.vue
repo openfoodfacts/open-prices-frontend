@@ -5,6 +5,9 @@
 
   <v-row v-if="!loading">
     <v-col>
+      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-food-outline">
+        {{ productTotal }}<span class="d-none d-sm-inline">&nbsp;products</span>
+      </v-chip>
       <v-menu>
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">{{ $t('ProductList.Filter') }}</v-btn>
@@ -29,7 +32,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row class="mt-0">
     <v-col cols="12" sm="6" md="4" v-for="product in productList" :key="product">
       <ProductCard :product="product" elevation="1" height="100%"></ProductCard>
     </v-col>
@@ -37,12 +40,13 @@
 
   <v-row v-if="productList.length < productTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" @click="getProducts">{{ $t('ProductList.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getProducts">{{ $t('ProductList.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>
 
 <script>
+import constants from '../constants'
 import api from '../services/api'
 import ProductCard from '../components/ProductCard.vue'
 
@@ -52,23 +56,17 @@ export default {
   },
   data() {
     return {
+      // filter & order
       productFilter: '',
-      productFilterList: [
-        {key: 'hide_price_count_gte_1', value: this.$t('ProductList.HideProductsWithPrices')},
-      ],
+      productFilterList: constants.PRODUCT_FILTER_LIST,
       productOrder: '-unique_scans_n',
-      productOrderList: [
-        {key: '-unique_scans_n', value: this.$t('ProductList.ScanNumber'), icon: 'mdi-barcode-scan'},
-        {key: '-price_count', value: this.$t('ProductList.PriceNumber'), icon: 'mdi-tag-multiple-outline'},
-      ],
+      productOrderList: constants.PRODUCT_ORDER_LIST,
+      // data
       productList: [],
       productTotal: null,
       productPage: 0,
       loading: false,
     }
-  },
-  mounted() {
-    this.initProductList()
   },
   computed: {
     getCurrentProductOrderIcon() {
@@ -76,12 +74,15 @@ export default {
       return currentProductOrder ? currentProductOrder.icon : ''
     },
     getProductsParams() {
-      let defaultParams = { page: this.productPage, order_by: `${this.productOrder}` }
+      let defaultParams = { order_by: `${this.productOrder}`, page: this.productPage }
       if (this.productFilter && this.productFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
       return defaultParams
     },
+  },
+  mounted() {
+    this.initProductList()
   },
   methods: {
     initProductList() {

@@ -1,14 +1,21 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card :title="username" prepend-icon="mdi-account"></v-card>
+      <v-card :title="username" prepend-icon="mdi-account">
+        <v-card-text>
+          <v-chip label size="small" density="comfortable" class="mr-1">
+            <v-icon start icon="mdi-tag-outline"></v-icon>
+            {{ userPriceTotal }} prices
+          </v-chip>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 
   <br />
 
   <h2 class="mb-1">
-    {{ $t('UserDetail.LatestPrices') }} <small>{{ userPriceTotal }}</small>
+    {{ $t('UserDetail.LatestPrices') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
@@ -20,7 +27,7 @@
 
   <v-row v-if="userPriceList.length < userPriceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" @click="getUserPrices">{{ $t('UserDetail.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getUserPrices">{{ $t('UserDetail.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

@@ -1,5 +1,87 @@
 # Changelog
 
+## [1.21.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.20.0...v1.21.0) (2024-01-15)
+
+
+### Features
+
+* add loading action to Load more buttons ([3423eda](https://github.com/openfoodfacts/open-prices-frontend/commit/3423edaeca5d6178285bea9f494ae1af78bc1846))
+* final change on product & price labels ([71b650b](https://github.com/openfoodfacts/open-prices-frontend/commit/71b650bdf52a94c432edb959c059fb235d43981b))
+* improve again product & price counts. add spacing ([a5fa91e](https://github.com/openfoodfacts/open-prices-frontend/commit/a5fa91e4338999a13079fb661f3faf8c5f2ad945))
+* **stats:** new user total stats ([#151](https://github.com/openfoodfacts/open-prices-frontend/issues/151)) ([1d8731c](https://github.com/openfoodfacts/open-prices-frontend/commit/1d8731ce33b152c1867b766888078d10998ffd9e))
+
+## [1.20.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.19.0...v1.20.0) (2024-01-14)
+
+
+### Features
+
+* improve price & product count chip labels ([704c056](https://github.com/openfoodfacts/open-prices-frontend/commit/704c0563c232c8d9edeed80f13fa8c1a2198aeeb))
+* new api to get the user list ([#148](https://github.com/openfoodfacts/open-prices-frontend/issues/148)) ([6c473c6](https://github.com/openfoodfacts/open-prices-frontend/commit/6c473c6c0ca4e764e28044013a308c3824108b47))
+* **user list:** new user list page ordered by price_count ([#150](https://github.com/openfoodfacts/open-prices-frontend/issues/150)) ([825e444](https://github.com/openfoodfacts/open-prices-frontend/commit/825e4443835675586ce5b5116c6b5dc2b5b7dcd2))
+
+
+### Bug Fixes
+
+* **user list:** fix link to user detail page. ref [#150](https://github.com/openfoodfacts/open-prices-frontend/issues/150) ([0347d54](https://github.com/openfoodfacts/open-prices-frontend/commit/0347d5444b8e72989df132770bef366dc288fa1f))
+
+## [1.19.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.18.0...v1.19.0) (2024-01-14)
+
+
+### Features
+
+* **product detail:** add CTA to add a price ([cc1e9fa](https://github.com/openfoodfacts/open-prices-frontend/commit/cc1e9fa096bee8978efd8f0dd750f6c1e8b16068))
+
+
+### Bug Fixes
+
+* **brand detail:** fix reset list on order change. ref [#142](https://github.com/openfoodfacts/open-prices-frontend/issues/142) ([ec9fd9a](https://github.com/openfoodfacts/open-prices-frontend/commit/ec9fd9ab004f801ff89c47b9a9f3da8f7b2a3cdb))
+
+## [1.18.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.17.0...v1.18.0) (2024-01-14)
+
+
+### Features
+
+* **location list:** new location list page ordered by price_count ([#145](https://github.com/openfoodfacts/open-prices-frontend/issues/145)) ([96aa72c](https://github.com/openfoodfacts/open-prices-frontend/commit/96aa72cbf475dc38cadf3d77fdeb82273e5e499e))
+
+## [1.17.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.16.2...v1.17.0) (2024-01-14)
+
+
+### Features
+
+* **brand detail:** add order & filter buttons ([#142](https://github.com/openfoodfacts/open-prices-frontend/issues/142)) ([120851f](https://github.com/openfoodfacts/open-prices-frontend/commit/120851f6e60454a0e5d70e0898336c384b4ff8c5))
+* **brand detail:** move product count to chip ([6fa885f](https://github.com/openfoodfacts/open-prices-frontend/commit/6fa885f28d5c5849a48e731c4f054975e7fd6b03))
+* **location detail:** move price count to chip ([0ad9d5a](https://github.com/openfoodfacts/open-prices-frontend/commit/0ad9d5a3069ba2527f4f94648e24c623b588a401))
+* new api to get the location list ([#138](https://github.com/openfoodfacts/open-prices-frontend/issues/138)) ([130c3b1](https://github.com/openfoodfacts/open-prices-frontend/commit/130c3b1d84db22fd19242f885623a62fd8a9c096))
+* **stats:** new location total stat ([#140](https://github.com/openfoodfacts/open-prices-frontend/issues/140)) ([05af0b2](https://github.com/openfoodfacts/open-prices-frontend/commit/05af0b2b1e7e844136b7ce06ecce355b1588f027))
+* **user detail:** move price count to chip ([8418a77](https://github.com/openfoodfacts/open-prices-frontend/commit/8418a7726e066280e4f1db8af6132f69a17b85ac))
+
+
+### Bug Fixes
+
+* **brand detail:** fix brand product filter. ref [#142](https://github.com/openfoodfacts/open-prices-frontend/issues/142) ([59d062f](https://github.com/openfoodfacts/open-prices-frontend/commit/59d062fd95ce81addcd51cb33acf69133b5834ec))
+
+## [1.16.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.16.1...v1.16.2) (2024-01-12)
+
+
+### Bug Fixes
+
+* **stats:** typo again in product total. ref [#134](https://github.com/openfoodfacts/open-prices-frontend/issues/134) ([b721b80](https://github.com/openfoodfacts/open-prices-frontend/commit/b721b802de813a6e6dec8f773b1694874985ff78))
+
+## [1.16.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.16.0...v1.16.1) (2024-01-12)
+
+
+### Bug Fixes
+
+* **stats:** typo in product total. ref [#134](https://github.com/openfoodfacts/open-prices-frontend/issues/134) ([ab44506](https://github.com/openfoodfacts/open-prices-frontend/commit/ab44506015c62fa729839c22626dae1a5d713727))
+
+## [1.16.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.15.0...v1.16.0) (2024-01-12)
+
+
+### Features
+
+* **stats:** new stats on products (total & with prices) ([#134](https://github.com/openfoodfacts/open-prices-frontend/issues/134)) ([ffaafa2](https://github.com/openfoodfacts/open-prices-frontend/commit/ffaafa2834790fc1f202497c393aead5b50cd034))
+* **stats:** show number of products with at least 1 price. ref [#50](https://github.com/openfoodfacts/open-prices-frontend/issues/50) ([231f158](https://github.com/openfoodfacts/open-prices-frontend/commit/231f1585178e6e536813e5234b50d155b8cfc6d6))
+
 ## [1.15.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.14.0...v1.15.0) (2024-01-12)
 
 

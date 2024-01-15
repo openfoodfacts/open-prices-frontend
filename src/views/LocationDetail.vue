@@ -5,13 +5,19 @@
         :title="getLocationTitle(location)"
         :subtitle="location ? location.osm_display_name : ''"
         :prepend-icon="location ? 'mdi-map-marker-outline' : 'mdi-map-marker-remove-variant'">
+        <v-card-text>
+          <v-chip label size="small" density="comfortable" class="mr-1">
+            <v-icon start icon="mdi-tag-outline"></v-icon>
+            {{ locationPriceTotal }} prices
+          </v-chip>
+        </v-card-text>
       </v-card>
     </v-col>
   </v-row>
 
   <v-row class="mt-0" v-if="location">
-    <v-col cols="12" sm="6" v-if="location.osm_id">
-      <v-btn size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
+    <v-col cols="12">
+      <v-btn v-if="location.osm_id" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
         OpenStreetMap
       </v-btn>
       <p v-if="!location.osm_id" class="text-red">
@@ -35,7 +41,7 @@
 
   <v-row v-if="locationPriceList.length < locationPriceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" @click="getLocationPrices">{{ $t('LocationDetail.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getLocationPrices">{{ $t('LocationDetail.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

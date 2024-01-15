@@ -11,7 +11,7 @@
 
   <v-row v-if="priceList.length < priceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" @click="getPrices">{{ $t('PriceList.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getPrices">{{ $t('PriceList.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

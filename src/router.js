@@ -9,8 +9,10 @@ import AddPriceSingle from './views/AddPriceSingle.vue'
 import PriceList from './views/PriceList.vue'
 import ProductList from './views/ProductList.vue'
 import ProductDetail from './views/ProductDetail.vue'
+import LocationList from './views/LocationList.vue'
 import LocationDetail from './views/LocationDetail.vue'
 import BrandDetail from './views/BrandDetail.vue'
+import UserList from './views/UserList.vue'
 import UserDetail from './views/UserDetail.vue'
 import Stats from './views/Stats.vue'
 import NotFound from './views/NotFound.vue'
@@ -30,8 +32,10 @@ const routes = [
   { path: '/prices', name: 'prices', component: PriceList, meta: { title: 'LatestPrices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
   { path: '/products', name: 'products', component: ProductList, meta: { title: 'TopProducts', icon: 'mdi-database-outline', drawerMenu: true }},
   { path: '/products/:id', name: 'product-detail', component: ProductDetail, meta: { title: 'Product detail' }},
+  { path: '/locations', name: 'locations', component: LocationList, meta: { title: 'Top locations', icon: 'mdi-medal-outline', drawerMenu: true }},
   { path: '/locations/:id', name: 'location-detail', component: LocationDetail, meta: { title: 'Location detail' }},
   { path: '/brands/:id', name: 'brand-detail', component: BrandDetail, meta: { title: 'Brand detail' }},
+  { path: '/users', name: 'users', component: UserList, meta: { title: 'Top contributors', icon: 'mdi-medal-outline', drawerMenu: true }},
   { path: '/users/:username', name: 'user-detail', component: UserDetail, meta: { title: 'User detail' }},
   { path: '/stats', name: 'stats', component: Stats, meta: { title: 'Stats' }},
   { path: '/:path(.*)', component: NotFound },

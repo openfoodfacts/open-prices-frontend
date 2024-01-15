@@ -5,4 +5,11 @@ export default {
         { code: 'fr', value: 'FRENCH', name: 'Français' },
         { code: 'es', value: 'SPANISH', name: 'Español' },
     ],
+  PRODUCT_FILTER_LIST: [
+    {key: 'hide_price_count_gte_1', value: 'Hide products with prices'},
+  ],
+  PRODUCT_ORDER_LIST: [
+    {key: '-unique_scans_n', value: 'Number of scans', icon: 'mdi-barcode-scan'},
+    {key: '-price_count', value: 'Number of prices', icon: 'mdi-tag-multiple-outline'},
+  ]
 }

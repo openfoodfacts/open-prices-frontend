@@ -8,10 +8,16 @@
     </v-col>
   </v-row>
 
+  <v-row class="mt-0">
+    <v-col cols="12" sm="6">
+      <v-chip label class="mr-2">{{ userPriceTotal }} prices</v-chip>
+    </v-col>
+  </v-row>
+
   <br />
 
   <h2 class="mb-1">
-    {{ $t('UserDashboard.LatestPrices') }} <small>{{ userPriceTotal }}</small>
+    {{ $t('UserDashboard.LatestPrices') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
@@ -23,7 +29,7 @@
 
   <v-row v-if="userPriceList.length < userPriceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" @click="getUserPrices">{{ $t('UserDashboard.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getUserPrices">{{ $t('UserDashboard.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>
