@@ -63,7 +63,13 @@
                 </v-col>
               </v-row>
               <div class="d-inline">
-                <v-checkbox v-for="lt in labelsTags" v-model="addPriceSingleForm.labels_tags" :label="lt.name" :value="lt.id" hide-details="auto"></v-checkbox>
+                <v-checkbox
+                  v-for="lt in labelsTags"
+                  v-model="addPriceSingleForm.labels_tags"
+                  :label="lt.name"
+                  :value="lt.id"
+                  hide-details="auto"
+                ></v-checkbox>
               </div>
             </v-sheet>
             <p v-if="!productFormFilled" class="text-red mt-2 mb-2">
@@ -190,7 +196,12 @@
 
     <v-row>
       <v-col>
-        <v-btn type="submit" :color="formFilled ? 'success' : ''" :loading="createPriceLoading" :disabled="!formFilled">{{ $t('AddPriceSingle.Create') }}</v-btn>
+        <v-btn
+          type="submit"
+          :color="formFilled ? 'success' : ''"
+          :loading="createPriceLoading"
+          :disabled="!formFilled"
+        >{{ $t('AddPriceSingle.Create') }}</v-btn>
       </v-col>
     </v-row>
   </v-form>
@@ -262,6 +273,7 @@ export default {
         origins_tags: '',
         labels_tags: [],
         price: null,
+        priceDiscounted: false,
         price_without_discount: null,
         currency: null,  // see initPriceSingleForm
         location_osm_id: null,
@@ -307,8 +319,8 @@ export default {
     productFormFilled() {
       return this.productBarcodeFormFilled || this.productCategoryFormFilled
     },
-    priceProofFormFilled() {
-      let keys = ['price', 'currency', 'proof_id']
+    priceFormFilled() {
+      let keys = ['price', 'currency']
       if (!this.priceDiscounted) {
         return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
       } else {
@@ -319,6 +331,9 @@ export default {
     proofFormFilled() {
       let keys = ['proof_id']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
+    priceProofFormFilled() {
+      return this.priceFormFilled && this.proofFormFilled
     },
     recentLocations() {
       return this.appStore.getRecentLocations(3)
@@ -371,7 +386,7 @@ export default {
       })
       .then((proofImageCompressed) => {
         api
-          .createProof(proofImageCompressed)
+          .createProof(proofImageCompressed, 'PRICE_TAG')
           .then((data) => {
             this.createProofLoading = false
             if (data['id']) {
@@ -396,6 +411,43 @@ export default {
       // .finally(() => {
       //   console.log('Compress complete')
       // })
+    },
+    showBarcodeScanner() {
+      this.barcodeScanner = true
+    },
+    showBarcodeManualInput() {
+      this.barcodeManualInput = true
+    },
+    setProductCode(code) {
+      this.addPriceSingleForm.product_code = code
+      this.product = null
+      api
+        .getProductByCode(code)
+        .then((data) => {
+          this.product = data.id ? data : {'code': code}
+          console.log(this.product)
+        })
+        .catch((error) => {
+          alert("Error: Open Prices server error")
+        })
+    },
+    showLocationSelector() {
+      this.locationSelector = true
+    },
+    closeLocationSelector(event) {
+      this.locationSelector = false
+    },
+    getNominatimLocationTitle(location, withName=true, withRoad=false, withCity=true) {
+      return utils.getLocationTitle(location, withName, withRoad, withCity)
+    },
+    setLocationData(location) {
+      this.appStore.addRecentLocation(location)
+      this.locationSelectedDisplayName = location.display_name
+      this.addPriceSingleForm.location_osm_id = location.osm_id
+      this.addPriceSingleForm.location_osm_type = location.osm_type.toUpperCase()
+    },
+    isSelectedLocation(location) {
+      return this.locationSelectedDisplayName && this.locationSelectedDisplayName === location.display_name
     },
     createPrice() {
       this.createPriceLoading = true
@@ -430,42 +482,6 @@ export default {
           console.log(error)
           this.createPriceLoading = false
         })
-    },
-    showBarcodeScanner() {
-      this.barcodeScanner = true
-    },
-    showBarcodeManualInput() {
-      this.barcodeManualInput = true
-    },
-    setProductCode(code) {
-      this.addPriceSingleForm.product_code = code
-      this.product = null
-      api
-        .getProductByCode(code)
-        .then((data) => {
-          this.product = data.id ? data : {'code': code}
-        })
-        .catch((error) => {
-          alert("Error: Open Prices server error")
-        })
-    },
-    showLocationSelector() {
-      this.locationSelector = true
-    },
-    closeLocationSelector(event) {
-      this.locationSelector = false
-    },
-    getNominatimLocationTitle(location, withName=true, withRoad=false, withCity=true) {
-      return utils.getLocationTitle(location, withName, withRoad, withCity)
-    },
-    setLocationData(location) {
-      this.appStore.addRecentLocation(location)
-      this.locationSelectedDisplayName = location.display_name
-      this.addPriceSingleForm.location_osm_id = location.osm_id
-      this.addPriceSingleForm.location_osm_type = location.osm_type.toUpperCase()
-    },
-    isSelectedLocation(location) {
-      return this.locationSelectedDisplayName && this.locationSelectedDisplayName === location.display_name
     },
   },
   watch: {
