@@ -12,7 +12,8 @@ const i18n = createI18n({
   messages: { en },
   pluralRules,
   numberFormats,
-  datetimeFormats
+  datetimeFormats,
+  useScope: 'global',
 })
 
 // React to language changes

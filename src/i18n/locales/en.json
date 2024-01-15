@@ -138,6 +138,12 @@
     },
     "TopProducts": {
       "Title": "Top products"
+    },
+    "TopLocations": {
+      "Title": "Top Locations"
+    },
+    "TopContributors": {
+      "Title": "Top Contributors"
     }
   },
   "SignIn": {

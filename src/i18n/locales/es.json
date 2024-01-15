@@ -132,6 +132,18 @@
     },
     "Home": {
       "Title": ""
+    },
+    "LatestPrices": {
+      "Title": "Latest Prices"
+    },
+    "TopProducts": {
+      "Title": "Top products"
+    },
+    "TopLocations": {
+      "Title": "Top Locations"
+    },
+    "TopContributors": {
+      "Title": "Top Contributors"
     }
   },
   "SignIn": {

@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouterView } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import { useAppStore } from './store'
 import Home from './views/Home.vue'
 import SignIn from './views/SignIn.vue'
@@ -17,8 +17,6 @@ import UserDetail from './views/UserDetail.vue'
 import Stats from './views/Stats.vue'
 import NotFound from './views/NotFound.vue'
 import localeManager from './i18n/localeManager.js'
-import i18n from './i18n/index.js'
-
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 const routes = [
@@ -32,10 +30,10 @@ const routes = [
   { path: '/prices', name: 'prices', component: PriceList, meta: { title: 'LatestPrices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
   { path: '/products', name: 'products', component: ProductList, meta: { title: 'TopProducts', icon: 'mdi-database-outline', drawerMenu: true }},
   { path: '/products/:id', name: 'product-detail', component: ProductDetail, meta: { title: 'Product detail' }},
-  { path: '/locations', name: 'locations', component: LocationList, meta: { title: 'Top locations', icon: 'mdi-medal-outline', drawerMenu: true }},
+  { path: '/locations', name: 'locations', component: LocationList, meta: { title: 'TopLocations', icon: 'mdi-medal-outline', drawerMenu: true }},
   { path: '/locations/:id', name: 'location-detail', component: LocationDetail, meta: { title: 'Location detail' }},
   { path: '/brands/:id', name: 'brand-detail', component: BrandDetail, meta: { title: 'Brand detail' }},
-  { path: '/users', name: 'users', component: UserList, meta: { title: 'Top contributors', icon: 'mdi-medal-outline', drawerMenu: true }},
+  { path: '/users', name: 'users', component: UserList, meta: { title: 'TopContributors', icon: 'mdi-medal-outline', drawerMenu: true }},
   { path: '/users/:username', name: 'user-detail', component: UserDetail, meta: { title: 'User detail' }},
   { path: '/stats', name: 'stats', component: Stats, meta: { title: 'Stats' }},
   { path: '/:path(.*)', component: NotFound },

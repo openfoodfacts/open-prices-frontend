@@ -138,6 +138,12 @@
     },
     "TopProducts": {
       "Title": "Produits favoris"
+    },
+    "TopLocations": {
+      "Title": "Locations favorites"
+    },
+    "TopContributors": {
+      "Title": "Contributeurs favoris"
     }
   },
   "SignIn": {
