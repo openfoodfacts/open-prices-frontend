@@ -58,7 +58,7 @@
 
   <v-row v-if="brandProductList.length < brandProductTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" @click="getBrandProducts">Load more</v-btn>
+      <v-btn size="small" :loading="loading" @click="getBrandProducts">Load more</v-btn>
     </v-col>
   </v-row>
 </template>

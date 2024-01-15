@@ -36,7 +36,7 @@
 
   <v-row v-if="locationPriceList.length < locationPriceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" @click="getLocationPrices">Load more</v-btn>
+      <v-btn size="small" :loading="loading" @click="getLocationPrices">Load more</v-btn>
     </v-col>
   </v-row>
 </template>
