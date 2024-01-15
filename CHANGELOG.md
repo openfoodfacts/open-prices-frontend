@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.21.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.20.0...v1.21.0) (2024-01-15)
+
+
+### Features
+
+* add loading action to Load more buttons ([3423eda](https://github.com/openfoodfacts/open-prices-frontend/commit/3423edaeca5d6178285bea9f494ae1af78bc1846))
+* final change on product & price labels ([71b650b](https://github.com/openfoodfacts/open-prices-frontend/commit/71b650bdf52a94c432edb959c059fb235d43981b))
+* improve again product & price counts. add spacing ([a5fa91e](https://github.com/openfoodfacts/open-prices-frontend/commit/a5fa91e4338999a13079fb661f3faf8c5f2ad945))
+* **stats:** new user total stats ([#151](https://github.com/openfoodfacts/open-prices-frontend/issues/151)) ([1d8731c](https://github.com/openfoodfacts/open-prices-frontend/commit/1d8731ce33b152c1867b766888078d10998ffd9e))
+
 ## [1.20.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.19.0...v1.20.0) (2024-01-14)
 
 
