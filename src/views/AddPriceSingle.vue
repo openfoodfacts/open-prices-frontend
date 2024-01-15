@@ -24,7 +24,7 @@
               </v-item-group>
             </h3>
             <v-sheet v-if="productMode === 'barcode'">
-              <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">Scan a barcode</v-btn>
+              <v-btn class="mb-2 mt-1" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">Scan a barcode</v-btn>
               <v-text-field
                 v-if="dev"
                 :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
