@@ -3,23 +3,28 @@
     <v-col cols="12" sm="6">
       <v-card
         :title="brand"
-        prepend-icon="mdi-folder-outline">
+        prepend-icon="mdi-factory">
+        <v-card-text>
+          <v-chip label size="small" density="comfortable" class="mr-1">
+            <v-icon start icon="mdi-food-outline"></v-icon>
+            {{ brandProductTotal }} products
+          </v-chip>
+        </v-card-text>
       </v-card>
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-food-outline">
-        {{ brandProductTotal }}<span class="d-none d-sm-inline">&nbsp;products</span>
-      </v-chip>
       <v-btn size="small" append-icon="mdi-open-in-new" :href="getBrandOFFUrl()" target="_blank">
         Open Food Facts
       </v-btn>
     </v-col>
   </v-row>
 
-  <h2 class="mt-2 mb-1">
+  <br />
+
+  <h2 class="mb-1">
     Top products
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
@@ -50,7 +55,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row class="mt-0">
     <v-col cols="12" sm="6" md="4" v-for="product in brandProductList" :key="product">
       <ProductCard :product="product" elevation="1" height="100%"></ProductCard>
     </v-col>

@@ -5,15 +5,18 @@
         :title="getLocationTitle(location)"
         :subtitle="location ? location.osm_display_name : ''"
         :prepend-icon="location ? 'mdi-map-marker-outline' : 'mdi-map-marker-remove-variant'">
+        <v-card-text>
+          <v-chip label size="small" density="comfortable" class="mr-1">
+            <v-icon start icon="mdi-tag-outline"></v-icon>
+            {{ locationPriceTotal }} prices
+          </v-chip>
+        </v-card-text>
       </v-card>
     </v-col>
   </v-row>
 
   <v-row class="mt-0" v-if="location">
     <v-col cols="12">
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-outline">
-        {{ locationPriceTotal }}<span class="d-none d-sm-inline">&nbsp;prices</span>
-      </v-chip>
       <v-btn v-if="location.osm_id" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
         OpenStreetMap
       </v-btn>
@@ -23,7 +26,9 @@
     </v-col>
   </v-row>
 
-  <h2 class="mt-2 mb-1">
+  <br />
+
+  <h2 class="mb-1">
     Latest prices
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>

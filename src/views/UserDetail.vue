@@ -1,19 +1,20 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card :title="username" prepend-icon="mdi-account"></v-card>
+      <v-card :title="username" prepend-icon="mdi-account">
+        <v-card-text>
+          <v-chip label size="small" density="comfortable" class="mr-1">
+            <v-icon start icon="mdi-tag-outline"></v-icon>
+            {{ userPriceTotal }} prices
+          </v-chip>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
-    <v-col cols="12">
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-outline">
-        {{ userPriceTotal }} prices
-      </v-chip>
-    </v-col>
-  </v-row>
+  <br />
 
-  <h2 class="mt-2 mb-1">
+  <h2 class="mb-1">
     Latest prices
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
