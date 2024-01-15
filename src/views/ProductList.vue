@@ -6,6 +6,9 @@
 
   <v-row v-if="!loading">
     <v-col>
+      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-food-outline">
+        {{ productTotal }}<span class="d-none d-sm-inline">&nbsp;products</span>
+      </v-chip>
       <v-menu>
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">Filter</v-btn>
@@ -30,7 +33,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row class="mt-0">
     <v-col cols="12" sm="6" md="4" v-for="product in productList" :key="product">
       <ProductCard :product="product" elevation="1" height="100%"></ProductCard>
     </v-col>

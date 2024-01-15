@@ -4,7 +4,15 @@
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h1>
 
-  <v-row>
+  <v-row v-if="!loading">
+    <v-col>
+      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-account-badge-outline">
+        {{ userTotal }} contributors
+      </v-chip>
+    </v-col>
+  </v-row>
+
+  <v-row class="mt-0">
     <v-col cols="12" sm="6" md="4" v-for="user in userList" :key="user">
       <v-card
         :title="user.user_id"

@@ -7,13 +7,13 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <v-chip class="mr-2" label prepend-icon="mdi-tag-outline">{{ userPriceTotal }} prices</v-chip>
+      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-outline">
+        {{ userPriceTotal }} prices
+      </v-chip>
     </v-col>
   </v-row>
 
-  <br />
-
-  <h2 class="mb-1">
+  <h2 class="mt-2 mb-1">
     Latest prices
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>

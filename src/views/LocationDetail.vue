@@ -11,7 +11,9 @@
 
   <v-row class="mt-0" v-if="location">
     <v-col cols="12">
-      <v-chip class="mr-2" label prepend-icon="mdi-tag-outline">{{ locationPriceTotal }} prices</v-chip>
+      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-outline">
+        {{ locationPriceTotal }}<span class="d-none d-sm-inline">&nbsp;prices</span>
+      </v-chip>
       <v-btn v-if="location.osm_id" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
         OpenStreetMap
       </v-btn>
@@ -21,9 +23,7 @@
     </v-col>
   </v-row>
 
-  <br />
-
-  <h2 class="mb-1">
+  <h2 class="mt-2 mb-1">
     Latest prices
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
