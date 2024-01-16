@@ -160,6 +160,16 @@ export default {
       }
       return 'Unknown product'
     },
+    getPriceProductCode() {
+      if (this.hasProduct) {
+        return this.product.code
+      } else if (this.price.product_code) {
+        return this.price.product_code
+      } else if (this.price.category_tag) {
+        return this.price.category_tag
+      }
+      return 'product code error'
+    },
     getPriceOriginTag() {
       if (this.price && this.price.origins_tags) {
         return OriginTags.find(ot => this.price.origins_tags[0].indexOf(ot.id) > -1)
@@ -214,7 +224,7 @@ export default {
       if (this.readonly) {
         return
       }
-      this.$router.push({ path: `/products/${this.product.code || this.price.product_code || this.price.category_tag}` })
+      this.$router.push({ path: `/products/${this.getPriceProductCode()}` })
     },
     goToBrand(brand) {
       if (this.readonly) {
