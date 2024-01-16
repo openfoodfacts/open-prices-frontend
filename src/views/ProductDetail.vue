@@ -83,7 +83,7 @@ export default {
       return !this.productIsCategory && (!this.product.code || !this.product.source)
     },
     categoryNotFound() {
-      return this.productIsCategory && !!this.getCategory
+      return this.productIsCategory && !this.getCategory()
     },
     productOrCategoryNotFound() {
       return !this.loading && (this.productNotFound || this.categoryNotFound)
