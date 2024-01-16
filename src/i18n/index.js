@@ -1,7 +1,4 @@
 import { createI18n } from "vue-i18n";
-import pluralRules from "./rules/pluralization"
-import numberFormats from "./rules/numbers"
-import datetimeFormats from "./rules/datetime"
 import en from "./locales/en.json"
 
 const i18n = createI18n({
@@ -10,10 +7,6 @@ const i18n = createI18n({
   legacy: false,
   globalInjection: true,
   messages: { en },
-  pluralRules,
-  numberFormats,
-  datetimeFormats,
-  useScope: 'global',
 })
 
 // React to language changes

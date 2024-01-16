@@ -1,7 +1,5 @@
 import { defineStore } from 'pinia'
 import utils from './utils.js'
-import constants from './constants.js'
-import i18n from './i18n/index.js'
 
 export const useAppStore = defineStore('app', {
   state: () => ({
@@ -11,8 +9,7 @@ export const useAppStore = defineStore('app', {
       last_product_mode_used: 'barcode',
       last_currency_used: 'EUR',  // TODO: init with user locale ?
       recent_locations: [],
-      language: localStorage.getItem('userLanguage') || 'en', // Default to 'en' if not set
-      languageList: constants.LANGUAGE_LIST,
+      language: localStorage.getItem('user-locale') || 'en', // Default to 'en' if not set
     },
   }),
   getters: {
@@ -23,12 +20,6 @@ export const useAppStore = defineStore('app', {
         }
         return state.user.recent_locations
       }
-    },
-    getLanguage: (state) => {
-      return state.user.language;
-    },
-    getLanguageList: (state) => {
-      return state.user.languageList;
     },
   },
   actions: {
@@ -52,14 +43,8 @@ export const useAppStore = defineStore('app', {
     clearRecentLocations() {
       this.user.recent_locations = []
     },
-    async setLanguage(language) {
-      console.log('Selected language: ', language);
-      if (this.user.languageList.some(lang => lang.code === language)) {
-        this.user.language = language;
-        localStorage.setItem('userLanguage', language);
-      } else {
-        console.warn(`Unsupported language: ${language}`);
-      }
+    setLanguage(language) {
+      this.user.language = language
     },
   },
   // pinia-plugin-persistedstate
