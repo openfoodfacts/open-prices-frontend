@@ -17,7 +17,7 @@
           </p>
           <p>
             Without a product <v-chip label size="small" density="comfortable" class="mr-1">category</v-chip>
-            <strong>{{ priceWithoutProduct }}</strong>
+            <strong>{{ priceWithoutProductTotal }}</strong>
           </p>
         </v-card-text>
       </v-card>
@@ -71,6 +71,8 @@
 </template>
 
 <script>
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import api from '../services/api'
 
 export default {
@@ -78,7 +80,7 @@ export default {
     return {
       priceTotal: null,
       // priceWithProduct: null,
-      priceWithoutProduct: null,
+      priceWithoutProductTotal: null,
       productTotal: null,
       productWithPriceTotal: null,
       locationTotal: null,
@@ -89,85 +91,17 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     priceWithProduct() {
-      return this.priceTotal - this.priceWithoutProduct
+      return this.priceTotal - this.priceWithoutProductTotal
     }
   },
   mounted() {
-    this.getPrices()
-    this.getPricesWithProduct()
-    this.getProducts()
-    this.getProductsWithPrice()
-    this.getLocations()
-    this.getLocationsWithPrice()
-    this.getUsers()
-    this.getUsersWithPrice()
+    if (!this.appStore.stats.last_updated) {
+      api.updateStats()
+    }
   },
   methods: {
-    getPrices() {
-      this.loading = true
-      return api.getPrices({ size: 1 })
-        .then((data) => {
-          this.priceTotal = data.total
-          this.loading = false
-        })
-    },
-    getPricesWithProduct() {
-      this.loading = true
-      return api.getPrices({ product_id__isnull: true, size: 1 })
-        .then((data) => {
-          this.priceWithoutProduct = data.total
-          this.loading = false
-        })
-    },
-    getProducts() {
-      this.loading = true
-      return api.getProducts({ size: 1 })
-        .then((data) => {
-          this.productTotal = data.total
-          this.loading = false
-        })
-    },
-    getProductsWithPrice() {
-      this.loading = true
-      return api.getProducts({ price_count__gte: 1, size: 1 })
-        .then((data) => {
-          this.productWithPriceTotal = data.total
-          this.loading = false
-        })
-    },
-    getLocations() {
-      this.loading = true
-      return api.getLocations({ size: 1 })
-        .then((data) => {
-          this.locationTotal = data.total
-          this.loading = false
-        })
-    },
-    getLocationsWithPrice() {
-      this.loading = true
-      return api.getLocations({ price_count__gte: 1,size: 1 })
-        .then((data) => {
-          this.locationWithPriceTotal = data.total
-          this.loading = false
-        })
-    },
-    getUsers() {
-      this.loading = true
-      return api.getUsers({ size: 1 })
-        .then((data) => {
-          this.userTotal = data.total
-          this.loading = false
-        })
-    },
-    getUsersWithPrice() {
-      this.loading = true
-      return api.getUsers({ price_count__gte: 1, size: 1 })
-        .then((data) => {
-          this.userWithPriceTotal = data.total
-          this.loading = false
-        })
-    }
   }
 }
 </script>

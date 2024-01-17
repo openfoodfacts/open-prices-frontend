@@ -155,4 +155,49 @@ export default {
     .then((response) => response.json())
     .then((data) => data.filter(l => !NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
+
+  updateStats() {
+    const store = useAppStore()
+    this.loading = true
+    // TODO: use Promise
+    // price stats
+    this.getPrices({ size: 1 })
+      .then((data) => {
+        store.price_total = data.total
+      })
+    this.getPrices({ product_id__isnull: true, size: 1 })
+      .then((data) => {
+        store.price_without_product_total = data.total
+      })
+    // product stats
+    this.getProducts({ size: 1 })
+      .then((data) => {
+        store.product_total = data.total
+      })
+    this.getProducts({ price_count__gte: 1, size: 1 })
+      .then((data) => {
+        store.product_with_price_total = data.total
+      })
+    // location stats
+    this.getLocations({ size: 1 })
+      .then((data) => {
+        store.location_total = data.total
+      })
+    this.getLocations({ price_count__gte: 1, size: 1 })
+    .then((data) => {
+      store.location_with_price_total = data.total
+    })
+    // user stats
+    this.getUsers({ size: 1 })
+      .then((data) => {
+        store.user_total = data.total
+      })
+    this.getUsers({ price_count__gte: 1, size: 1 })
+    .then((data) => {
+      store.user_with_price_total = data.total
+    })
+    // update last_updated
+    this.last_updated = new Date()
+    this.loading = false
+  }
 }

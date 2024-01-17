@@ -11,6 +11,17 @@ export const useAppStore = defineStore('app', {
       recent_locations: [],
       language: localStorage.getItem('user-locale') || import.meta.env.VITE_DEFAULT_LOCALE,
     },
+    stats: {
+      price_total: null,
+      price_without_product_total: null,
+      product_total: null,
+      product_with_price_total: null,
+      location_total: null,
+      location_with_price_total: null,
+      user_total: null,
+      user_with_price_total: null,
+      last_updated: null
+    }
   }),
   getters: {
     getRecentLocations: (state) => {
