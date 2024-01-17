@@ -21,7 +21,7 @@
         OpenStreetMap
       </v-btn>
       <p v-if="!location.osm_id" class="text-red">
-        <i>Location not found in OpenStreetMap... Don't hesitate to add it :)</i>
+        <i>{{ $t('LocationDetail.LocationNotFound') }}</i>
       </p>
     </v-col>
   </v-row>
@@ -29,7 +29,7 @@
   <br />
 
   <h2 class="mb-1">
-    Latest prices
+    {{ $t('LocationDetail.LatestPrices') }} <small>{{ locationPriceTotal }}</small>
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
@@ -41,7 +41,7 @@
 
   <v-row v-if="locationPriceList.length < locationPriceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getLocationPrices">Load more</v-btn>
+      <v-btn size="small" :loading="loading" @click="getLocationPrices">{{ $t('LocationDetail.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

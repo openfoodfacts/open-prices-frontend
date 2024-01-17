@@ -1,6 +1,6 @@
 <template>
   <h1 class="mb-1">
-    Top products
+    {{ $t('ProductList.Title') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h1>
 
@@ -11,7 +11,7 @@
       </v-chip>
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">Filter</v-btn>
+          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">{{ $t('ProductList.Filter') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="filter in productFilterList" :key="filter.key" :prepend-icon="(productFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="productFilter === filter.key" @click="toggleProductFilter(filter.key)">
@@ -22,7 +22,7 @@
 
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon"  :active="!!productOrder">Order</v-btn>
+          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon"  :active="!!productOrder">{{ $t('ProductList.Order') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="order in productOrderList" :key="order.key" :prepend-icon="order.icon" :active="productOrder === order.key" @click="selectProductOrder(order.key)">
@@ -41,7 +41,7 @@
 
   <v-row v-if="productList.length < productTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getProducts">Load more</v-btn>
+      <v-btn size="small" :loading="loading" @click="getProducts">{{ $t('ProductList.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

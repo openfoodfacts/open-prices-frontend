@@ -1,0 +1,191 @@
+{
+  "AddPriceHome": {
+    "PriceCreated": "",
+    "ReceiptMode": {
+      "Subtitle": "",
+      "Title": ""
+    },
+    "SignedIn": "",
+    "SingleProductMode": {
+      "Subtitle": "",
+      "Title": ""
+    },
+    "Title": ""
+  },
+  "AddPriceSingle": {
+    "Create": "",
+    "PriceDetails": {
+      "Label": "",
+      "Proof": "",
+      "ProofUploaded": "",
+      "Text": "",
+      "TextPerKg": "",
+      "Title": "",
+      "UploadProof": ""
+    },
+    "ProductInfo": {
+      "CategoryLabel": "",
+      "OriginLabel": "",
+      "ProductCode": "",
+      "ScanBarcode": "",
+      "SetProduct": "",
+      "Title": ""
+    },
+    "ProductModeList": {
+      "Barcode": "",
+      "Category": ""
+    },
+    "Title": "",
+    "WhereWhen": {
+      "Date": "",
+      "DateLabel": "",
+      "Find": "",
+      "Location": "",
+      "SelectLocation": "",
+      "Title": ""
+    }
+  },
+  "BarcodeScanner": {
+    "Htlm5-qrcode": {
+      "Text": ""
+    },
+    "Scan": ""
+  },
+  "BrandDetail": {
+    "LoadMore": "",
+    "TopProducts": ""
+  },
+  "Footer": {
+    "About": "",
+    "Open_Prices_Project": {
+      "Text": "Open Prices is an {0} project.",
+      "Url": "Open Food Facts"
+    },
+    "Stats": ""
+  },
+  "Header": {
+    "Dashboard": "",
+    "Settings": "",
+    "Sign-out": "",
+    "Title": ""
+  },
+  "Home": {
+    "AddPrice": "",
+    "SettingsUpdated": "",
+    "Welcome": {
+      "Subtitle": "",
+      "Title": ""
+    }
+  },
+  "LocationDetail": {
+    "LatestPrices": "",
+    "LoadMore": "",
+    "LocationNotFound": ""
+  },
+  "LocationList": {
+    "Title": ""
+  },
+  "LocationSelector": {
+    "Clear": "",
+    "NoResult": "",
+    "OSM": {
+      "text": ""
+    },
+    "RecentLocations": "",
+    "Result": "",
+    "SearchByName": "",
+    "Title": ""
+  },
+  "NotFound": {
+    "Subtitle": "",
+    "Title": ""
+  },
+  "PriceCard": {
+    "PriceDate": "",
+    "PriceValueDisplay": "",
+    "ProductQuantity": "{0} g",
+    "UnknownProduct": ""
+  },
+  "PriceList": {
+    "LoadMore": "",
+    "Title": ""
+  },
+  "ProductCard": {
+    "ProductQuantity": "{0} g",
+    "UnknownProduct": ""
+  },
+  "ProductDetail": {
+    "CategoryNotFound": "",
+    "LatestPrices": "",
+    "LoadMore": "",
+    "ProductNotFound": ""
+  },
+  "ProductList": {
+    "Filter": "",
+    "HideProductsWithPrices": "",
+    "LoadMore": "",
+    "Order": "",
+    "PriceNumber": "",
+    "ScanNumber": "",
+    "Title": ""
+  },
+  "Router": {
+    "AddPrice": {
+      "Title": ""
+    },
+    "Home": {
+      "Title": ""
+    },
+    "LatestPrices": {
+      "Title": "Latest Prices"
+    },
+    "TopProducts": {
+      "Title": "Top products"
+    },
+    "TopLocations": {
+      "Title": "Top Locations"
+    },
+    "TopContributors": {
+      "Title": "Top Contributors"
+    }
+  },
+  "SignIn": {
+    "Button": "",
+    "Password": "",
+    "ServerError": "",
+    "Title": "",
+    "UseOFFCredentials": {
+      "Text": ""
+    },
+    "UsernameLabel": "",
+    "WrongCredentials": ""
+  },
+  "Stats": {
+    "Prices": "",
+    "ProductsWithPrices": "",
+    "Title": ""
+  },
+  "UserDashboard": {
+    "LatestPrices": "",
+    "LoadMore": "",
+    "Title": ""
+  },
+  "UserDetail": {
+    "LatestPrices": "",
+    "LoadMore": ""
+  },
+  "UserList": {
+    "Title": ""
+  },
+  "UserSettings": {
+    "AddingPrices": "",
+    "ChangeLanguage": "",
+    "CountryLabel": "",
+    "CurrencyLabel": "",
+    "DefaultCurrency": "",
+    "LanguageLabel": "",
+    "LocaleNotSupported": "",
+    "Save": "",
+    "Title": ""
+  }
+}

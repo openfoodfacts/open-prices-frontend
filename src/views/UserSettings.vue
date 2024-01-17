@@ -1,18 +1,32 @@
 <template>
-  <h1 class="mb-1">
-    Settings
-  </h1>
+  <h1 class="mb-1">{{ $t('UserSettings.Title') }}</h1>
 
   <v-form @submit.prevent="updateSettings">
     <v-row>
       <v-col cols="12" sm="6">
-        <v-card title="Adding prices" prepend-icon="mdi-tag-plus-outline">
+        <v-card :title="$t('UserSettings.ChangeLanguage')" prepend-icon="mdi-earth">
           <v-divider></v-divider>
           <v-card-text>
-            <h3 class="mb-1">Default currency</h3>
+            <v-autocomplete
+              v-model="userSettingsForm.selectedLanguage"
+              :label="$t('UserSettings.LanguageLabel')"
+              :items="languageList"
+              item-title="name"
+              return-object
+            ></v-autocomplete>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" sm="6">
+        <v-card :title="$t('UserSettings.AddingPrices')" prepend-icon="mdi-tag-plus-outline">
+          <v-divider></v-divider>
+          <v-card-text>
+            <h3 class="mb-1">{{ $t('UserSettings.DefaultCurrency') }}</h3>
             <v-autocomplete
               v-model="userSettingsForm.currency"
-              label="Currency"
+              :label="$t('UserSettings.CurrencyLabel')"
               :items="currencyList"
             ></v-autocomplete>
           </v-card-text>
@@ -22,7 +36,7 @@
 
     <v-row>
       <v-col>
-        <v-btn type="submit" :color="formFilled ? 'success' : ''" :disabled="!formFilled">Save</v-btn>
+        <v-btn type="submit" :color="formFilled ? 'success' : ''" :disabled="!formFilled">{{ $t('UserSettings.Save') }}</v-btn>
       </v-col>
     </v-row>
   </v-form>
@@ -32,21 +46,26 @@
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
+import localeManager from "../i18n/localeManager.js"
+
 
 export default {
   data() {
     return {
       userSettingsForm: {
+        selectedLanguage: null, // see initUserSettingsForm
         currency: null,  // see initUserSettingsForm
       },
       currencyList: constants.CURRENCY_LIST,
+      languageList: constants.LANGUAGE_LIST,
     }
   },
+
   computed: {
     ...mapStores(useAppStore),
     formFilled() {
       return Object.values(this.userSettingsForm).every(x => !!x)
-    }
+    },
   },
   mounted() {
     this.initUserSettingsForm()
@@ -54,8 +73,12 @@ export default {
   methods: {
     initUserSettingsForm() {
       this.userSettingsForm.currency = this.appStore.user.last_currency_used
+      this.userSettingsForm.selectedLanguage = constants.LANGUAGE_LIST.find(lang => lang.code === localeManager.guessDefaultLocale()) || constants.LANGUAGE_LIST[0]
     },
-    updateSettings() {
+    async updateSettings() {
+      console.log(this.userSettingsForm.selectedLanguage)
+      await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage.code)
+      this.appStore.setLanguage(this.userSettingsForm.selectedLanguage)
       this.appStore.setLastCurrencyUsed(this.userSettingsForm.currency)
       this.$router.push({ path: '/', query: { settingsSuccess: 'true' } })
     }

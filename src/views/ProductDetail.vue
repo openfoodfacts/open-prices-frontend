@@ -18,10 +18,10 @@
   <v-row class="mt-0" v-if="productOrCategoryNotFound">
     <v-col cols="12" sm="6">
       <p v-if="productNotFound" class="text-red">
-        <i>Product not found in Open Food Facts... Don't hesitate to add it :)</i>
+        <i>{{ $t('ProductDetail.ProductNotFound') }}</i>
       </p>
       <p v-if="categoryNotFound" class="text-red">
-        <i>Category not found...</i>
+        <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
       </p>
     </v-col>
   </v-row>
@@ -29,7 +29,7 @@
   <br />
 
   <h2 class="mb-1">
-    Latest prices
+    {{ $t('ProductDetail.LatestPrices') }} <small>{{ productPriceTotal }}</small>
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
@@ -41,7 +41,7 @@
 
   <v-row v-if="productPriceList.length < productPriceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getProductPrices">Load more</v-btn>
+      <v-btn size="small" :loading="loading" @click="getProductPrices">{{ $t('ProductDetail.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

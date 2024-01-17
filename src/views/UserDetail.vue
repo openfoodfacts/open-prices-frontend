@@ -15,7 +15,7 @@
   <br />
 
   <h2 class="mb-1">
-    Latest prices
+    {{ $t('UserDetail.LatestPrices') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
@@ -27,7 +27,7 @@
 
   <v-row v-if="userPriceList.length < userPriceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getUserPrices">Load more</v-btn>
+      <v-btn size="small" :loading="loading" @click="getUserPrices">{{ $t('UserDetail.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

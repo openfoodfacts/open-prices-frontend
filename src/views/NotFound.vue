@@ -1,4 +1,4 @@
 <template>
-  <h3>Not found</h3>
-  <p>The page you requested doesn't seem to exist...</p>
+  <h3>{{ $t('NotFound.Title') }}</h3>
+  <p>{{ $t('NotFound.Subtitle') }}</p>
 </template>

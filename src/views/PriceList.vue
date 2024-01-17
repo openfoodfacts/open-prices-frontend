@@ -1,6 +1,6 @@
 <template>
   <h1 class="mb-1">
-    Latest prices
+    {{ $t('PriceList.Title') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h1>
 
@@ -12,7 +12,7 @@
 
   <v-row v-if="priceList.length < priceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getPrices">Load more</v-btn>
+      <v-btn size="small" :loading="loading" @click="getPrices">{{ $t('PriceList.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

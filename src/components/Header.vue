@@ -3,8 +3,7 @@
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu"></v-app-bar-nav-icon>
     <v-app-bar-title style="cursor:pointer" @click="$router.push('/')">
       <img src="/favicon.svg" height="28" style="vertical-align:bottom">
-      Open Prices
-    </v-app-bar-title>
+      {{ $t('Header.Title') }} </v-app-bar-title>
     <template v-slot:append>
       <v-btn v-if="!username" to="/sign-in" icon="mdi-login"></v-btn>
       <v-menu v-if="username">
@@ -14,9 +13,9 @@
         <v-list>
           <v-list-item :slim="true" prepend-icon="mdi-account" disabled>{{ username }}</v-list-item>
           <v-divider></v-divider>
-          <v-list-item :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard">Dashboard</v-list-item>
-          <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/settings">Settings</v-list-item>
-          <v-list-item :slim="true" prepend-icon="mdi-logout" @click="signOut">Sign out</v-list-item>
+          <v-list-item :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard">{{ $t('Header.Dashboard') }}</v-list-item>
+          <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/settings">{{ $t('Header.Settings') }}</v-list-item>
+          <v-list-item :slim="true" prepend-icon="mdi-logout" @click="signOut">{{ $t('Header.Sign-out') }}</v-list-item>
         </v-list>
       </v-menu>
     </template>
@@ -47,7 +46,7 @@ export default {
       return this.$router.options.routes
         .filter(r => r.meta && r.meta.drawerMenu)
         .filter(r => this.username ? r.meta.requiresAuth !== false : !r.meta.requiresAuth)
-        .map((r => ({ title: r.meta.title, props: { 'prepend-icon': r.meta.icon, to: r.path }})))
+        .map((r => ({ title: this.$t(`Router.${r.meta.title}.Title`), props: { 'prepend-icon': r.meta.icon, to: r.path }})))
     }
   },
   methods: {

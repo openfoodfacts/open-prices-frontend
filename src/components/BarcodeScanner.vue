@@ -2,8 +2,7 @@
   <v-dialog persistent>
     <v-card>
       <v-card-title>
-        Scan a barcode
-        <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('BarcodeScanner.Scan') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
       </v-card-title>
 
       <v-divider></v-divider>
@@ -15,7 +14,13 @@
       <v-divider></v-divider>
 
       <v-card-text>
-        <div class="float-right">powered by <a href="https://github.com/mebjas/html5-qrcode" target="_blank">html5-qrcode</a></div>
+        <div class="float-right">
+          <i18n-t keypath="BarcodeScanner.Htlm5-qrcode.Text" tag="p">
+            <template #url>
+              <a href="https://github.com/mebjas/html5-qrcode" target="_blank">html5-qrcode</a>
+            </template>
+          </i18n-t>
+        </div>
       </v-card-text>
     </v-card>
   </v-dialog>

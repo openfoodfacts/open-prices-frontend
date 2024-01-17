@@ -9,6 +9,7 @@ export const useAppStore = defineStore('app', {
       last_product_mode_used: 'barcode',
       last_currency_used: 'EUR',  // TODO: init with user locale ?
       recent_locations: [],
+      language: localStorage.getItem('user-locale') || import.meta.env.VITE_DEFAULT_LOCALE,
     },
   }),
   getters: {
@@ -19,7 +20,7 @@ export const useAppStore = defineStore('app', {
         }
         return state.user.recent_locations
       }
-    }
+    },
   },
   actions: {
     signIn(username, token) {
@@ -41,6 +42,9 @@ export const useAppStore = defineStore('app', {
     },
     clearRecentLocations() {
       this.user.recent_locations = []
+    },
+    setLanguage(language) {
+      this.user.language = language
     },
   },
   // pinia-plugin-persistedstate

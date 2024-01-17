@@ -23,7 +23,7 @@
             </span>
             <span v-if="hasProductQuantity">
               <v-chip label size="small" density="comfortable" class="mr-1">
-                {{ product.product_quantity }} g
+                {{ $t('ProductCard.ProductQuantity', [product.product_quantity]) }}
               </v-chip>
             </span>
             <span>
@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     getProductTitle() {
-      return this.product.product_name || 'Unknown product name'
+      return this.product.product_name || this.$t('ProductCard.UnknownProduct')
     },
     goToProduct() {
       if (this.readonly) {

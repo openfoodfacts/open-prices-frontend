@@ -1,5 +1,5 @@
 <template>
-  <h1 class="mb-1">Add a single price</h1>
+  <h1 class="mb-1">{{ $t('AddPriceSingle.Title') }}</h1>
 
   <v-form @submit.prevent="createPrice">
     <v-row>
@@ -7,7 +7,7 @@
       <!-- Step 1: product -->
       <v-col cols="12" md="6" lg="4">
         <v-card
-          title="Product info"
+          :title="$t('AddPriceSingle.ProductInfo.Title')"
           :prepend-icon="productFormFilled ? 'mdi-database-check-outline' : 'mdi-database-outline'"
           height="100%"
           :style="productFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
@@ -24,12 +24,12 @@
               </v-item-group>
             </h3>
             <v-sheet v-if="productMode === 'barcode'">
-              <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">Scan a barcode</v-btn>
+              <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</v-btn>
               <v-text-field
                 v-if="dev"
                 :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
                 v-model="addPriceSingleForm.product_code"
-                label="Product code"
+                :label="$t('AddPriceSingle.ProductInfo.ProductCode')"
                 type="text"
                 hint="EAN"
                 hide-details="auto"
@@ -43,7 +43,7 @@
                   <v-autocomplete
                     :prepend-inner-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
                     v-model="addPriceSingleForm.category_tag"
-                    label="Category"
+                    :label="$t('AddPriceSingle.ProductInfo.CategoryLabel')"
                     :items="categoryTags"
                     :item-title="item => item.name"
                     :item-value="item => item.id"
@@ -53,7 +53,7 @@
                 <v-col cols="6">
                   <v-autocomplete
                     v-model="addPriceSingleForm.origins_tags"
-                    label="Origin"
+                    :label="$t('AddPriceSingle.ProductInfo.OriginLabel')"
                     :items="originsTags"
                     :item-title="item => item.name"
                     :item-value="item => item.id"
@@ -65,7 +65,7 @@
                 <v-checkbox v-for="lt in labelsTags" v-model="addPriceSingleForm.labels_tags" :label="lt.name" :value="lt.id" hide-details="auto"></v-checkbox>
               </div>
             </v-sheet>
-            <p v-if="(productMode === 'barcode' && !productBarcodeFormFilled) || (productMode === 'category' && !productCategoryFormFilled)" class="text-red mb-2"><i>Set a product</i></p>
+            <p v-if="(productMode === 'barcode' && !productBarcodeFormFilled) || (productMode === 'category' && !productCategoryFormFilled)" class="text-red mb-2"><i>{{ $t('AddPriceSingle.ProductInfo.SetProduct') }}</i></p>
           </v-card-text>
         </v-card>
       </v-col>
@@ -73,18 +73,24 @@
       <!-- Step 2: price & proof -->
       <v-col cols="12" md="6" lg="4">
         <v-card
-          title="Price details"
+          :title="$t('AddPriceSingle.PriceDetails.Title')"
           :prepend-icon="priceProofFormFilled ? 'mdi-tag-check-outline' : 'mdi-tag-outline'"
           height="100%"
           :style="priceProofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
-            <h3 class="mb-1">Price <span v-if="productMode === 'category'">per kg</span></h3>
+            <h3 class="mb-1">
+              <i18n-t keypath="AddPriceSingle.PriceDetails.Text" tag="p">
+                <template #perKg>
+                  <span v-if="productMode === 'category'">{{ $t('AddPriceSingle.PriceDetails.TextPerKg') }}</span>
+                </template>
+              </i18n-t>
+            </h3>
             <v-row>
               <v-col cols="12" sm="6">
                 <v-text-field
                   v-model="addPriceSingleForm.price"
-                  label="Price"
+                  :label="$t('AddPriceSingle.PriceDetails.Label')"
                   type="number"
                   hide-details="auto"
                   :suffix="addPriceSingleForm.currency"
@@ -93,7 +99,7 @@
             </v-row>
             <v-row>
               <v-col>
-                <v-btn class="mb-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proof.click()" :loading="createProofLoading" :disabled="createProofLoading">Proof</v-btn>
+                <v-btn class="mb-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proof.click()" :loading="createProofLoading" :disabled="createProofLoading">{{ $t('AddPriceSingle.PriceDetails.Proof') }}</v-btn>
                 <v-file-input
                   class="overflow-hidden d-none"
                   ref="proof"
@@ -105,8 +111,8 @@
                   @click:clear="clearProof"
                   :loading="createProofLoading">
                 </v-file-input>
-                <p v-if="proofFormFilled && !createProofLoading" class="text-green mb-2"><i>Proof uploaded!</i></p>
-                <p v-if="!proofFormFilled && !createProofLoading" class="text-red mb-2"><i>Upload a proof</i></p>
+                <p v-if="proofFormFilled && !createProofLoading" class="text-green mb-2"><i>{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i></p>
+                <p v-if="!proofFormFilled && !createProofLoading" class="text-red mb-2"><i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i></p>
               </v-col>
               <v-col v-if="proofFormFilled">
                 <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
@@ -119,15 +125,14 @@
       <!-- Step 3: location & date -->
       <v-col cols="12" md="6" lg="4">
         <v-card
-          title="Where & when?"
+          :title="$t('AddPriceSingle.WhereWhen.Title')"
           :prepend-icon="locationDateFormFilled ? 'mdi-map-marker-check-outline' : 'mdi-map-marker-outline'"
           height="100%"
           :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
             <h3 class="mb-1">
-              Location
-            </h3>
+              {{ $t('AddPriceSingle.WhereWhen.Location') }} </h3>
             <v-chip
               class="mb-2"
               :style="isSelectedLocation(location) ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'"
@@ -137,15 +142,15 @@
               {{ getNominatimLocationTitle(location, true, true, true) }}
             </v-chip>
             <br v-if="recentLocations.length" />
-            <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelector">Find</v-btn>
-            <p v-if="!locationFormFilled" class="text-red mb-2"><i>Select your location</i></p>
+            <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelector">{{ $t('AddPriceSingle.WhereWhen.Find') }}</v-btn>
+            <p v-if="!locationFormFilled" class="text-red mb-2"><i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i></p>
 
-            <h3 class="mt-4 mb-1">Date</h3>
+            <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.WhereWhen.Date') }}</h3>
             <v-row>
               <v-col cols="12" sm="6">
                 <v-text-field
                   v-model="addPriceSingleForm.date"
-                  label="Date"
+                  :label="$t('AddPriceSingle.WhereWhen.DateLabel')"
                   type="date"
                 ></v-text-field>
               </v-col>
@@ -157,7 +162,7 @@
 
     <v-row>
       <v-col>
-        <v-btn type="submit" :color="formFilled ? 'success' : ''" :loading="createPriceLoading" :disabled="!formFilled">Create</v-btn>
+        <v-btn type="submit" :color="formFilled ? 'success' : ''" :loading="createPriceLoading" :disabled="!formFilled">{{ $t('AddPriceSingle.Create') }}</v-btn>
       </v-col>
     </v-row>
   </v-form>
@@ -166,7 +171,7 @@
     v-model="proofSuccessMessage"
     color="success"
     :timeout="2000"
-  >Proof uploaded!</v-snackbar>
+  >{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</v-snackbar>
 
   <BarcodeScanner
     v-if="barcodeScanner"
@@ -229,7 +234,7 @@ export default {
       createPriceLoading: false,
       // product data
       product: null,
-      productModeList: [{key: 'barcode', value: 'Barcode', icon: 'mdi-barcode-scan'}, {key: 'category', value: 'Category', icon: 'mdi-basket-outline'}],
+      productModeList: [{key: 'barcode', value: this.$t('AddPriceSingle.ProductModeList.Barcode'), icon: 'mdi-barcode-scan'}, {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}],
       productMode: null,  // 'barcode' or 'category'  // see initPriceSingleForm
       categoryTags: CategoryTags,  // list of category tags for autocomplete
       originsTags: OriginsTags,  // list of origins tags for autocomplete
