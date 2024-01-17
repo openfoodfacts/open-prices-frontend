@@ -1,192 +1,192 @@
 {
 	"AddPriceHome": {
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Preço criado!",
 		"ReceiptMode": {
-			"Subtitle": "Coming in the v2 (help us!)",
-			"Title": "Receipt mode"
+			"Subtitle": "Chegando na v2 (ajude-nos!)",
+			"Title": "Modo de nota fiscal"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Conectado!",
 		"SingleProductMode": {
-			"Subtitle": "Get your camera ready :)",
-			"Title": "Single product mode"
+			"Subtitle": "Prepare sua câmera :)",
+			"Title": "Modo de produto único"
 		},
-		"Title": "Add a price"
+		"Title": "Adicionar um preço"
 	},
 	"AddPriceSingle": {
 		"Create": "Criar",
 		"PriceDetails": {
-			"Label": "Price",
+			"Label": "Preço",
 			"Proof": "Proof",
 			"ProofUploaded": "Proof uploaded!",
-			"Text": "Price {perKg}",
-			"TextPerKg": "per kg",
-			"Title": "Price details",
+			"Text": "Preço {perKg}",
+			"TextPerKg": "por kg",
+			"Title": "Detalhes do preço",
 			"UploadProof": "Upload a proof",
 			"TakePicture": "Tirar uma foto",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Selecione da sua galeria"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
-			"OriginLabel": "Origin",
-			"ProductCode": "Product code",
-			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"OriginLabel": "Origem",
+			"ProductCode": "Código do produto",
+			"ScanBarcode": "Escanear um código de barras",
+			"TypeBarcode": "Digite um código de barras",
+			"SetProduct": "Defina um produto",
+			"Title": "Informação do produto"
 		},
 		"ProductModeList": {
 			"Barcode": "Código de barras",
 			"Category": "Categoria"
 		},
-		"Title": "Add a single price",
+		"Title": "Adicionar um único preço",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Data",
+			"DateLabel": "Data",
 			"Find": "Buscar",
-			"Location": "Location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Localização",
+			"SelectLocation": "Selecione sua localização",
+			"Title": "Onde e quando?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Escanear um código de barras"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
 		"Submit": "Envie",
-		"Title": "Type a barcode"
+		"Title": "Digite um código de barras"
 	},
 	"BrandDetail": {
 		"LoadMore": "Carregar mais",
-		"TopProducts": "Top products"
+		"TopProducts": "Principais produtos"
 	},
 	"Footer": {
 		"About": "Sobre",
 		"Open_Prices_Project": {
-			"Text": "Open Prices is an {0} project.",
+			"Text": "Open Prices é um projeto {0}.",
 			"Url": "Open Food Facts"
 		},
-		"Stats": "Stats"
+		"Stats": "Estatísticas"
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Painel de controle",
 		"Settings": "Definições",
 		"Sign-out": "Sair",
 		"Title": "Open Prices"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"SettingsUpdated": "Settings updated!",
+		"AddPrice": "Adicionar um preço",
+		"SettingsUpdated": "Configurações atualizadas!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to Open Prices!"
+			"Subtitle": "Um banco de dados público e aberto de preços dos alimentos 🏷🍊💲",
+			"Title": "Bem-vindo ao Open Prices!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Localização não encontrada no OpenStreetMap... Não hesite em adicioná-la :)"
 	},
 	"LocationSelector": {
 		"Clear": "To clear",
-		"NoResult": "No results found",
+		"NoResult": "Nenhum resultado encontrado",
 		"OSM": {
 			"text": "powered by {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search by name and city",
-		"Title": "Find your location"
+		"RecentLocations": "Nenhum local recente | Localização recente {recentLocationNumber}| Locais recentes {recentLocationNumber}",
+		"Result": "Resultado {resultNumber} | Resultados {resultNumber}",
+		"SearchByName": "Pesquise por nome e cidade",
+		"Title": "Encontre a sua localização"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "A página que você procura parece não existir...",
+		"Title": "Não encontrado"
 	},
 	"PriceCard": {
-		"PriceDate": "on {date}",
+		"PriceDate": "em {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Produto desconhecido"
 	},
 	"PriceList": {
 		"LoadMore": "Carregar mais",
-		"Title": "Latest prices"
+		"Title": "Preços mais recentes"
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Nome de produto desconhecido"
 	},
 	"ProductDetail": {
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"CategoryNotFound": "Categoria não encontrada...",
+		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Produto não encontrado no Open Food Facts... Não hesite em adicioná-lo :)"
 	},
 	"ProductList": {
 		"Filter": "Filtro",
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Ocultar produtos com preços",
 		"LoadMore": "Carregar mais",
-		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Order": "Pedido",
+		"PriceNumber": "Número de preços adicionados",
+		"ScanNumber": "Número de escaneamentos adicionadas",
+		"Title": "Principais produtos"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Adicionar um preço"
 		},
 		"Home": {
 			"Title": "Início"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "Preços mais recentes"
 		},
 		"TopContributors": {
-			"Title": "Top Contributors"
+			"Title": "Maiores Contribuidores"
 		},
 		"TopLocations": {
-			"Title": "Top Locations"
+			"Title": "Principais Locais"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Principais produtos"
 		}
 	},
 	"SignIn": {
 		"Button": "Iniciar sessão",
 		"Password": "Palavra-passe",
-		"ServerError": "Error: server error",
+		"ServerError": "Erro: erro do servidor",
 		"Title": "Iniciar sessão",
 		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
+			"Text": "Use suas credenciais {url} para fazer login."
 		},
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"UsernameLabel": "Nome de usuário",
+		"WrongCredentials": "Erro: credenciais erradas"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Prices": "Preços",
+		"ProductsWithPrices": "Produtos com preços",
+		"Title": "Estatísticas"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais",
-		"Title": "Dashboard"
+		"Title": "Painel de controle"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Adicionando preços",
 		"ChangeLanguage": "Mudar idioma",
 		"CountryLabel": "País",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"CurrencyLabel": "Moeda",
+		"DefaultCurrency": "Moeda padrão",
 		"LanguageLabel": "Línguas",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
+		"LocaleNotSupported": "Idioma ainda não suportado, o idioma padrão será o inglês",
 		"Save": "Guardar",
 		"Title": "Definições"
 	}
