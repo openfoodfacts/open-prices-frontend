@@ -1,6 +1,5 @@
 <template>
-  <h1 class="mb-1">
-    {{ $t('UserSettings.Title') }} </h1>
+  <h1 class="mb-1">{{ $t('UserSettings.Title') }}</h1>
 
   <v-form @submit.prevent="updateSettings">
     <v-row>
@@ -14,8 +13,7 @@
               :items="languageList"
               item-title="name"
               return-object
-            >
-            </v-autocomplete>
+            ></v-autocomplete>
           </v-card-text>
         </v-card>
       </v-col>
@@ -74,13 +72,13 @@ export default {
   },
   methods: {
     initUserSettingsForm() {
-      this.userSettingsForm.currency = this.appStore.user.last_currency_used;
-      this.userSettingsForm.selectedLanguage = constants.LANGUAGE_LIST.find(lang => lang.code === localeManager.guessDefaultLocale()) || constants.LANGUAGE_LIST[0];
+      this.userSettingsForm.currency = this.appStore.user.last_currency_used
+      this.userSettingsForm.selectedLanguage = constants.LANGUAGE_LIST.find(lang => lang.code === localeManager.guessDefaultLocale()) || constants.LANGUAGE_LIST[0]
     },
     async updateSettings() {
       console.log(this.userSettingsForm.selectedLanguage)
-      await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage.code);
-      this.appStore.setLanguage(this.userSettingsForm.selectedLanguage);
+      await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage.code)
+      this.appStore.setLanguage(this.userSettingsForm.selectedLanguage)
       this.appStore.setLastCurrencyUsed(this.userSettingsForm.currency)
       this.$router.push({ path: '/', query: { settingsSuccess: 'true' } })
     }

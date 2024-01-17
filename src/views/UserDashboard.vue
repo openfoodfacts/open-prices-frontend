@@ -1,6 +1,5 @@
 <template>
-  <h1 class="mb-1">
-    {{ $t('UserDashboard.Title') }} </h1>
+  <h1 class="mb-1">{{ $t('UserDashboard.Title') }}</h1>
 
   <v-row>
     <v-col cols="12" sm="6">

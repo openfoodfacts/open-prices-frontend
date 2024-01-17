@@ -49,18 +49,18 @@ const router = createRouter({
  * If required, but the user is not authenticated (token unknown), then redirect to 'sign-in'
  */
  router.beforeEach(async (to, from, next) => {
-  const store = useAppStore();
-  const fromLocale = from.params.locale;
-  const toLocale = to.params.locale || localeManager.guessDefaultLocale();
+  const store = useAppStore()
+  const fromLocale = from.params.locale
+  const toLocale = to.params.locale || localeManager.guessDefaultLocale()
   if (fromLocale !== toLocale) {  
-    await localeManager.changeLanguage(toLocale);
+    await localeManager.changeLanguage(toLocale)
   }
   if (to.meta.requiresAuth && !store.user.token) {
-    console.log("checkAuth");
-    return next({ name: 'sign-in' });
+    console.log('checkAuth')
+    return next({ name: 'sign-in' })
   }
 
-  next();
-});
+  next()
+})
 
 export default router

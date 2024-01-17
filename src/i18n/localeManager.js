@@ -1,6 +1,6 @@
-import i18n from "@/i18n"
-import { nextTick } from "vue"
-import constants from "../constants"
+import i18n from '@/i18n'
+import { nextTick } from 'vue'
+import constants from '../constants'
 
 const localeManager = {
   get defaultLocale() {
@@ -22,8 +22,8 @@ const localeManager = {
   async changeLanguage(newLocale) {
     await localeManager.loadLocaleMessages(newLocale)
     localeManager.currentLocale = newLocale
-    document.querySelector("html").setAttribute("lang", newLocale)
-    localStorage.setItem("user-locale", newLocale)
+    document.querySelector('html').setAttribute('lang', newLocale)
+    localStorage.setItem('user-locale', newLocale)
 
   },
 
@@ -52,7 +52,7 @@ const localeManager = {
   },
 
   getPersistedLocale() {
-    const persistedLocale = localStorage.getItem("user-locale")
+    const persistedLocale = localStorage.getItem('user-locale')
 
     if(localeManager.isLocaleSupported(persistedLocale)) {
       return persistedLocale

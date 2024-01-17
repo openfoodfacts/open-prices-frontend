@@ -9,7 +9,7 @@ export const useAppStore = defineStore('app', {
       last_product_mode_used: 'barcode',
       last_currency_used: 'EUR',  // TODO: init with user locale ?
       recent_locations: [],
-      language: localStorage.getItem('user-locale') || 'en', // Default to 'en' if not set
+      language: localStorage.getItem('user-locale') || import.meta.env.VITE_DEFAULT_LOCALE,
     },
   }),
   getters: {
