@@ -1,0 +1,185 @@
+{
+	"AddPriceHome": {
+		"PriceCreated": "Prijs gemaakt!",
+		"ReceiptMode": {
+			"Subtitle": "Komt in de v2 (help ons!)",
+			"Title": "Ontvangstmodus"
+		},
+		"SignedIn": "Ingelogd!",
+		"SingleProductMode": {
+			"Subtitle": "Houd je camera gereed :)",
+			"Title": "Enkele productmodus"
+		},
+		"Title": "Voeg een prijs toe"
+	},
+	"AddPriceSingle": {
+		"Create": "Creëren",
+		"PriceDetails": {
+			"Label": "Prijs",
+			"Proof": "Bewijs",
+			"ProofUploaded": "Bewijs geüpload!",
+			"Text": "Prijs {perKg}",
+			"TextPerKg": "perkg",
+			"Title": "Prijsdetails",
+			"UploadProof": "Upload een bewijs"
+		},
+		"ProductInfo": {
+			"CategoryLabel": "Categorie",
+			"OriginLabel": "Oorsprong",
+			"ProductCode": "Productcode",
+			"ScanBarcode": "Scan een streepjescode",
+			"SetProduct": "Stel een product in",
+			"Title": "Product informatie"
+		},
+		"ProductModeList": {
+			"Barcode": "Barcode",
+			"Category": "Categorie"
+		},
+		"Title": "Voeg een enkele prijs toe",
+		"WhereWhen": {
+			"Date": "Datum",
+			"DateLabel": "Datum",
+			"Find": "Vind",
+			"Location": "Plaats",
+			"SelectLocation": "Selecteer uw locatie",
+			"Title": "Waar wanneer?"
+		}
+	},
+	"BarcodeScanner": {
+		"Htlm5-qrcode": {
+			"Text": "Mogelijk gemaakt door {url}"
+		},
+		"Scan": "Scan een streepjescode"
+	},
+	"BrandDetail": {
+		"LoadMore": "Meer laden",
+		"TopProducts": "Topproducten"
+	},
+	"Footer": {
+		"About": "Afdruk",
+		"Open_Prices_Project": {
+			"Text": "Open Prices is een {0} -project.",
+			"Url": "Open Food Facts"
+		},
+		"Stats": "Stats"
+	},
+	"Header": {
+		"Dashboard": "Dashboard",
+		"Settings": "Instellingen",
+		"Sign-out": "Afmelden",
+		"Title": "Open Prices"
+	},
+	"Home": {
+		"AddPrice": "Voeg een prijs toe",
+		"SettingsUpdated": "Instellingen bijgewerkt!",
+		"Welcome": {
+			"Subtitle": "Een open crowdsourced database met voedselprijzen 🏷🍊💲",
+			"Title": "Welkom bij Open Prices!"
+		}
+	},
+	"LocationDetail": {
+		"LatestPrices": "Laatste prijzen",
+		"LoadMore": "Meer laden",
+		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)"
+	},
+	"LocationSelector": {
+		"Clear": "Uitwissen",
+		"NoResult": "Geen resultaten gevonden",
+		"OSM": {
+			"text": "Mogelijk gemaakt door {url}"
+		},
+		"RecentLocations": "Geen recente locaties | Recente locatie {recentLocationNumber}| Recente locaties {recentLocationNumber}",
+		"Result": "Resultaat {resultNumber} | Resultaten {resultNumber}",
+		"SearchByName": "Zoek op naam en stad",
+		"Title": "Vind uw locatie"
+	},
+	"NotFound": {
+		"Subtitle": "De door u opgevraagde pagina lijkt niet te bestaan...",
+		"Title": "Niet gevonden"
+	},
+	"PriceCard": {
+		"PriceDate": "op {date}",
+		"PriceValueDisplay": "{0} /kg",
+		"ProductQuantity": "{0} gr",
+		"UnknownProduct": "Onbekend product"
+	},
+	"PriceList": {
+		"LoadMore": "Meer laden",
+		"Title": "Laatste prijzen"
+	},
+	"ProductCard": {
+		"ProductQuantity": "{0} gr",
+		"UnknownProduct": "Onbekende productnaam"
+	},
+	"ProductDetail": {
+		"CategoryNotFound": "Categorie niet gevonden...",
+		"LatestPrices": "Laatste prijzen",
+		"LoadMore": "Meer laden",
+		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
+	},
+	"ProductList": {
+		"Filter": "Filter",
+		"HideProductsWithPrices": "Verberg producten met prijzen",
+		"LoadMore": "Meer laden",
+		"Order": "Ordnung",
+		"PriceNumber": "Aantal prijzen toegevoegd",
+		"ScanNumber": "Aantal scans toegevoegd",
+		"Title": "Topproducten"
+	},
+	"Router": {
+		"AddPrice": {
+			"Title": "Voeg een prijs toe"
+		},
+		"Home": {
+			"Title": "Startpagina"
+		},
+		"LatestPrices": {
+			"Title": "Laatste prijzen"
+		},
+		"TopContributors": {
+			"Title": "Top bijdragers"
+		},
+		"TopLocations": {
+			"Title": "Toplocaties"
+		},
+		"TopProducts": {
+			"Title": "Topproducten"
+		}
+	},
+	"SignIn": {
+		"Button": "Aanmelden",
+		"Password": "Wachtwoord",
+		"ServerError": "Fout: serverfout",
+		"Title": "Aanmelden",
+		"UseOFFCredentials": {
+			"Text": "Gebruik uw {url} -inloggegevens om in te loggen."
+		},
+		"UsernameLabel": "Gebruikersnaam",
+		"WrongCredentials": "Fout: verkeerde inloggegevens"
+	},
+	"Stats": {
+		"Prices": "Prijzen",
+		"ProductsWithPrices": "Producten met prijzen",
+		"Title": "Stats"
+	},
+	"UserDashboard": {
+		"LatestPrices": "Laatste prijzen",
+		"LoadMore": "Meer laden",
+		"Title": "Dashboard"
+	},
+	"UserDetail": {
+		"LatestPrices": "Laatste prijzen",
+		"LoadMore": "Meer laden"
+	},
+	"UserSettings": {
+		"AddingPrices": "Prijzen toevoegen",
+		"ChangeLanguage": "Verander de taal",
+		"CountryLabel": "Land",
+		"CurrencyLabel": "Valuta",
+		"DefaultCurrency": "Standaard valuta",
+		"LanguageLabel": "Taal",
+		"LocaleNotSupported": "Taal wordt nog niet ondersteund. De taal wordt standaard ingesteld op Engels",
+		"Save": "Opslaan",
+		"Title": "Instellingen"
+	}
+}
