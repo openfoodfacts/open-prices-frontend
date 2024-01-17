@@ -58,7 +58,7 @@
 	"Footer": {
 		"About": "Acerca de",
 		"Open_Prices_Project": {
-			"Text": "Open Prices is an {0} project.",
+			"Text": "Open Prices es un proyecto de {0}.",
 			"Url": "Open Food Facts"
 		},
 		"Stats": "Estadísticas"
@@ -74,7 +74,7 @@
 		"SettingsUpdated": "¡Ajustes actualizan!",
 		"Welcome": {
 			"Subtitle": "Una base de datos abierta y colaborativa de precios de alimentos 🏷🍊💲",
-			"Title": "¡Bienvenidos a Open Prices!"
+			"Title": "¡Te damos la bienvenida a Open Prices!"
 		}
 	},
 	"LocationDetail": {
@@ -122,8 +122,8 @@
 		"HideProductsWithPrices": "Ocultar productos con precios",
 		"LoadMore": "Carga más",
 		"Order": "Orden",
-		"PriceNumber": "Número de precios agregados",
-		"ScanNumber": "Número de escaneos agregados",
+		"PriceNumber": "Número de precios añadidos",
+		"ScanNumber": "Número de escaneos añadidos",
 		"Title": "Productos Destacados"
 	},
 	"Router": {
@@ -134,10 +134,10 @@
 			"Title": "Inicio"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "Últimos precios"
 		},
 		"TopContributors": {
-			"Title": "Top Contributors"
+			"Title": "Top Colaboradores"
 		},
 		"TopLocations": {
 			"Title": "Ubicaciones principales"
@@ -152,7 +152,7 @@
 		"ServerError": "Error: error del servidor",
 		"Title": "Iniciar sesión",
 		"UseOFFCredentials": {
-			"Text": "Utilice sus credenciales {url} para iniciar sesión."
+			"Text": "Utiliza tus credenciales {url} para iniciar sesión."
 		},
 		"UsernameLabel": "Nombre de usuario",
 		"WrongCredentials": "Error: credenciales incorrectas"
@@ -177,7 +177,7 @@
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moneda",
 		"DefaultCurrency": "Moneda predeterminada",
-		"LanguageLabel": "Idioma",
+		"LanguageLabel": "Idiomas",
 		"LocaleNotSupported": "Idioma aún no admitido; el idioma predeterminado será el inglés",
 		"Save": "Guardar",
 		"Title": "Configuración"
