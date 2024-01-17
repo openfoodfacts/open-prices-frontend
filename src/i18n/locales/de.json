@@ -1,0 +1,185 @@
+{
+	"AddPriceHome": {
+		"PriceCreated": "Preis erstellt!",
+		"ReceiptMode": {
+			"Subtitle": "Kommt in der Version 2 (helfen Sie uns!)",
+			"Title": "Empfangsmodus"
+		},
+		"SignedIn": "Angemeldet!",
+		"SingleProductMode": {
+			"Subtitle": "Bereiten Sie Ihre Kamera vor :)",
+			"Title": "Einzelproduktmodus"
+		},
+		"Title": "Füge einen Preis hinzu"
+	},
+	"AddPriceSingle": {
+		"Create": "Erstellen",
+		"PriceDetails": {
+			"Label": "Preis",
+			"Proof": "Beweis",
+			"ProofUploaded": "Beweis hochgeladen!",
+			"Text": "Preis {perKg}",
+			"TextPerKg": "pro Kg",
+			"Title": "Preisdetails",
+			"UploadProof": "Laden Sie einen Beweis hoch"
+		},
+		"ProductInfo": {
+			"CategoryLabel": "Kategorie",
+			"OriginLabel": "Ursprung",
+			"ProductCode": "Produktcode",
+			"ScanBarcode": "Barcode scannen",
+			"SetProduct": "Legen Sie ein Produkt fest",
+			"Title": "Produktinformation"
+		},
+		"ProductModeList": {
+			"Barcode": "Barcode",
+			"Category": "Kategorie"
+		},
+		"Title": "Fügen Sie einen Einzelpreis hinzu",
+		"WhereWhen": {
+			"Date": "Datum",
+			"DateLabel": "Datum",
+			"Find": "Finden",
+			"Location": "Ort",
+			"SelectLocation": "Wähle deinen Standort",
+			"Title": "Wo wann?"
+		}
+	},
+	"BarcodeScanner": {
+		"Htlm5-qrcode": {
+			"Text": "Bereitgestellt von {url}"
+		},
+		"Scan": "Barcode scannen"
+	},
+	"BrandDetail": {
+		"LoadMore": "Mehr laden",
+		"TopProducts": "Top-Produkte"
+	},
+	"Footer": {
+		"About": "Impressum",
+		"Open_Prices_Project": {
+			"Text": "Open Prices ist ein {0} -Projekt.",
+			"Url": "Open Food Facts"
+		},
+		"Stats": "Statistiken"
+	},
+	"Header": {
+		"Dashboard": "Instrumententafel",
+		"Settings": "Einstellungen",
+		"Sign-out": "Ausloggen",
+		"Title": "Open Prices"
+	},
+	"Home": {
+		"AddPrice": "Füge einen Preis hinzu",
+		"SettingsUpdated": "Einstellungen aktualisiert!",
+		"Welcome": {
+			"Subtitle": "Eine offene Crowdsourcing-Datenbank mit Lebensmittelpreisen 🏷🍊💲",
+			"Title": "Willkommen bei Open Prices!"
+		}
+	},
+	"LocationDetail": {
+		"LatestPrices": "Aktuelle Preise",
+		"LoadMore": "Mehr laden",
+		"LocationNotFound": "Standort nicht in OpenStreetMap gefunden... Zögern Sie nicht, ihn hinzuzufügen :)"
+	},
+	"LocationSelector": {
+		"Clear": "Löschen",
+		"NoResult": "Keine Ergebnisse gefunden",
+		"OSM": {
+			"text": "Bereitgestellt von {url}"
+		},
+		"RecentLocations": "Keine aktuellen Standorte | Aktueller Standort {recentLocationNumber}| Letzte Standorte {recentLocationNumber}",
+		"Result": "Ergebnis {resultNumber} | Ergebnisse {resultNumber}",
+		"SearchByName": "Suche nach Name und Stadt",
+		"Title": "Finden Sie Ihren Standort"
+	},
+	"NotFound": {
+		"Subtitle": "Die von Ihnen angeforderte Seite scheint nicht zu existieren ...",
+		"Title": "Nicht gefunden"
+	},
+	"PriceCard": {
+		"PriceDate": "auf {date}",
+		"PriceValueDisplay": "{0} / kg",
+		"ProductQuantity": "{0} g",
+		"UnknownProduct": "Unbekanntes Produkt"
+	},
+	"PriceList": {
+		"LoadMore": "Mehr laden",
+		"Title": "Aktuelle Preise"
+	},
+	"ProductCard": {
+		"ProductQuantity": "{0} g",
+		"UnknownProduct": "Unbekannter Produktname"
+	},
+	"ProductDetail": {
+		"CategoryNotFound": "Kategorie nicht gefunden...",
+		"LatestPrices": "Aktuelle Preise",
+		"LoadMore": "Mehr laden",
+		"ProductNotFound": "Produkt nicht in Open Food Facts gefunden... Zögern Sie nicht, es hinzuzufügen :)"
+	},
+	"ProductList": {
+		"Filter": "Filter",
+		"HideProductsWithPrices": "Produkte mit Preisen ausblenden",
+		"LoadMore": "Mehr laden",
+		"Order": "Ordnung",
+		"PriceNumber": "Anzahl der hinzugefügten Preise",
+		"ScanNumber": "Anzahl der hinzugefügten Scans",
+		"Title": "Top-Produkte"
+	},
+	"Router": {
+		"AddPrice": {
+			"Title": "Füge einen Preis hinzu"
+		},
+		"Home": {
+			"Title": "Startseite"
+		},
+		"LatestPrices": {
+			"Title": "Aktuelle Preise"
+		},
+		"TopContributors": {
+			"Title": "Top Anbieter"
+		},
+		"TopLocations": {
+			"Title": "Top Standorte"
+		},
+		"TopProducts": {
+			"Title": "Top-Produkte"
+		}
+	},
+	"SignIn": {
+		"Button": "Einloggen",
+		"Password": "Passwort",
+		"ServerError": "Fehler: Serverfehler",
+		"Title": "Einloggen",
+		"UseOFFCredentials": {
+			"Text": "Verwenden Sie Ihre {url} -Anmeldeinformationen, um sich anzumelden."
+		},
+		"UsernameLabel": "Nutzername",
+		"WrongCredentials": "Fehler: falsche Anmeldeinformationen"
+	},
+	"Stats": {
+		"Prices": "Preise",
+		"ProductsWithPrices": "Produkte mit Preisen",
+		"Title": "Statistiken"
+	},
+	"UserDashboard": {
+		"LatestPrices": "Aktuelle Preise",
+		"LoadMore": "Mehr laden",
+		"Title": "Instrumententafel"
+	},
+	"UserDetail": {
+		"LatestPrices": "Aktuelle Preise",
+		"LoadMore": "Mehr laden"
+	},
+	"UserSettings": {
+		"AddingPrices": "Preise hinzufügen",
+		"ChangeLanguage": "Sprache ändern",
+		"CountryLabel": "Land",
+		"CurrencyLabel": "Währung",
+		"DefaultCurrency": "Standardwährung",
+		"LanguageLabel": "Sprache",
+		"LocaleNotSupported": "Die Sprache wird noch nicht unterstützt. Die Sprache wird standardmäßig auf Englisch eingestellt",
+		"Save": "Sparen",
+		"Title": "Die Einstellungen"
+	}
+}

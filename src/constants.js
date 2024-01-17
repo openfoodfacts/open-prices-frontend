@@ -4,6 +4,10 @@ export default {
     { code: 'en', value: 'ENGLISH', name: 'English' },
     { code: 'fr', value: 'FRENCH', name: 'Français' },
     { code: 'es', value: 'SPANISH', name: 'Español' },
+    { code: 'de', value: 'GERMAN', name: 'Deutsch' },
+    { code: 'it', value: 'ITALIAN', name: 'Italiano' },
+    { code: 'nl', value: 'DUTCH', name: 'Nederlands' },
+    { code: 'pt', value: 'PORTUGUESE', name: 'Português' },
   ],
   PRODUCT_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'Hide products with prices' },
