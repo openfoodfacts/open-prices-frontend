@@ -21,13 +21,16 @@
 			"Text": "Price {perKg}",
 			"TextPerKg": "per kg",
 			"Title": "Price details",
-			"UploadProof": "Upload a proof"
+			"UploadProof": "Upload a proof",
+			"TakePicture": "사진을 촬영",
+			"SelectFromGallery": "Select from your gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "카테고리",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
+			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
@@ -50,6 +53,11 @@
 			"Text": "powered by {url}"
 		},
 		"Scan": "Scan a barcode"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "바코드",
+		"Submit": "제출",
+		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
 		"LoadMore": "더 불러오기",
