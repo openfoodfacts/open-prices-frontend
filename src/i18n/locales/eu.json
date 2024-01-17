@@ -23,14 +23,14 @@
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"TakePicture": "Atera argazki bat",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Hautatu galeriatik"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategoria",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Idatzi barra-kode bat",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
@@ -57,7 +57,7 @@
 	"BarcodeManualInput": {
 		"Barcode": "Barra-kodea",
 		"Submit": "Submit",
-		"Title": "Type a barcode"
+		"Title": "Idatzi barra-kode bat"
 	},
 	"BrandDetail": {
 		"LoadMore": "Load more",
