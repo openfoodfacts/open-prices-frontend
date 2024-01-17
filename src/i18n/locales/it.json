@@ -23,14 +23,14 @@
 			"Title": "Dettagli sul prezzo",
 			"UploadProof": "Carica una prova",
 			"TakePicture": "Scatta una foto",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Seleziona dalla tua galleria"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
 			"OriginLabel": "Origine",
 			"ProductCode": "Codice prodotto",
 			"ScanBarcode": "Scansiona un codice a barre",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Inserisci il codice a barre",
 			"SetProduct": "Imposta un prodotto",
 			"Title": "Informazioni sul prodotto"
 		},
@@ -57,7 +57,7 @@
 	"BarcodeManualInput": {
 		"Barcode": "Codice a Barre",
 		"Submit": "Invia",
-		"Title": "Type a barcode"
+		"Title": "Inserisci il codice a barre"
 	},
 	"BrandDetail": {
 		"LoadMore": "Scarica altro",
