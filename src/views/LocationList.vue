@@ -1,6 +1,6 @@
 <template>
   <h1 class="mb-1">
-    Top locations
+    {{ $t('LocationList.Title') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h1>
 

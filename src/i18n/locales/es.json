@@ -82,6 +82,9 @@
     "LoadMore": "",
     "LocationNotFound": ""
   },
+  "LocationList": {
+    "Title": ""
+  },
   "LocationSelector": {
     "Clear": "",
     "NoResult": "",
@@ -170,6 +173,9 @@
   "UserDetail": {
     "LatestPrices": "",
     "LoadMore": ""
+  },
+  "UserList": {
+    "Title": ""
   },
   "UserSettings": {
     "AddingPrices": "",

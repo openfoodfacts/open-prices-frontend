@@ -1,6 +1,7 @@
 <template>
   <h1 class="mb-1">
-    {{ $t('PriceList.Title') }} <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+    {{ $t('PriceList.Title') }}
+    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h1>
 
   <v-row>

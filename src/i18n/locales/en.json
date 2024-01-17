@@ -82,6 +82,9 @@
     "LoadMore": "Load more",
     "LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
   },
+  "LocationList": {
+    "Title": "Top locations"
+  },
   "LocationSelector": {
     "Clear": "Clear",
     "NoResult": "No results found",
@@ -170,6 +173,9 @@
   "UserDetail": {
     "LatestPrices": "Latest prices",
     "LoadMore": "Load more"
+  },
+  "UserList": {
+    "Title": "Top Contributors"
   },
   "UserSettings": {
     "AddingPrices": "Adding prices",

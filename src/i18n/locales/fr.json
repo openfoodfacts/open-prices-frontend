@@ -40,8 +40,8 @@
       "Date": "Date",
       "DateLabel": "Date",
       "Find": "Trouver",
-      "Location": "Localisation",
-      "SelectLocation": "Choisissez votre localisation",
+      "Location": "Lieu",
+      "SelectLocation": "Choisissez votre lieu",
       "Title": "Où et quand ?"
     }
   },
@@ -80,7 +80,10 @@
   "LocationDetail": {
     "LatestPrices": "Derniers prix ajoutés",
     "LoadMore": "Afficher plus",
-    "LocationNotFound": "Cette localisation n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)"
+    "LocationNotFound": "Ce lieu n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)"
+  },
+  "LocationList": {
+    "Title": "Top lieux"
   },
   "LocationSelector": {
     "Clear": "Effacer",
@@ -88,10 +91,10 @@
     "OSM": {
       "text": "fonctionne avec {url}"
     },
-    "RecentLocations": "Location récente {recentLocationNumber}| Locations récentes {recentLocationNumber}",
+    "RecentLocations": "Lieu récent {recentLocationNumber}| Lieux récents {recentLocationNumber}",
     "Result": "Résultat {resultNumber} | Résultats {resultNumber}",
     "SearchByName": "Chercher par nom et ville",
-    "Title": "Trouver votre localisation"
+    "Title": "Trouver votre lieu"
   },
   "NotFound": {
     "Subtitle": "La page demandée n'existe pas",
@@ -124,7 +127,7 @@
     "Order": "Ordre",
     "PriceNumber": "Nombre de prix ajoutés",
     "ScanNumber": "Nombre de scans ajoutés",
-    "Title": "Produits les plus populaires"
+    "Title": "Top produits"
   },
   "Router": {
     "AddPrice": {
@@ -137,13 +140,13 @@
       "Title": "Derniers prix"
     },
     "TopProducts": {
-      "Title": "Produits favoris"
+      "Title": "Top produits"
     },
     "TopLocations": {
-      "Title": "Locations favorites"
+      "Title": "Top lieux"
     },
     "TopContributors": {
-      "Title": "Contributeurs favoris"
+      "Title": "Top contributeurs"
     }
   },
   "SignIn": {
@@ -170,6 +173,9 @@
   "UserDetail": {
     "LatestPrices": "Derniers prix ajoutés",
     "LoadMore": "Afficher plus"
+  },
+  "UserList": {
+    "Title": "Top contributeurs"
   },
   "UserSettings": {
     "AddingPrices": "Ajout de prix",
