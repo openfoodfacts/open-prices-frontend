@@ -97,15 +97,25 @@
                 ></v-text-field>
               </v-col>
             </v-row>
+            <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.PriceDetails.Proof') }}</h3>
             <v-row>
               <v-col>
-                <v-btn class="mb-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proof.click()" :loading="createProofLoading" :disabled="createProofLoading">{{ $t('AddPriceSingle.PriceDetails.Proof') }}</v-btn>
+                <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</v-btn>
+                <a href="#" @click.prevent="$refs.proofCamera.click()">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</a>
                 <v-file-input
-                  class="overflow-hidden d-none"
-                  ref="proof"
-                  :prepend-icon="proofFormFilled ? 'mdi-image-check' : 'mdi-camera'"
+                  class="d-none overflow-hidden"
+                  ref="proofCamera"
                   v-model="proofImage"
                   capture="environment"
+                  accept="image/*"
+                  @change="uploadProof"
+                  @click:clear="clearProof"
+                  :loading="createProofLoading">
+                </v-file-input>
+                <v-file-input
+                  class="d-none overflow-hidden"
+                  ref="proofGallery"
+                  v-model="proofImage"
                   accept="image/*"
                   @change="uploadProof"
                   @click:clear="clearProof"
@@ -131,8 +141,7 @@
           :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
           <v-divider></v-divider>
           <v-card-text>
-            <h3 class="mb-1">
-              {{ $t('AddPriceSingle.WhereWhen.Location') }} </h3>
+            <h3 class="mb-1">{{ $t('AddPriceSingle.WhereWhen.Location') }}</h3>
             <v-chip
               class="mb-2"
               :style="isSelectedLocation(location) ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'"
