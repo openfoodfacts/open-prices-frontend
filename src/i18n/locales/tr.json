@@ -21,13 +21,16 @@
 			"Text": "Fiyat {perKg}",
 			"TextPerKg": "kg başına",
 			"Title": "Fiyat ayrıntıları",
-			"UploadProof": "Bir kanıt yükleyin"
+			"UploadProof": "Bir kanıt yükleyin",
+			"TakePicture": "Resim çek",
+			"SelectFromGallery": "Select from your gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Kaynak",
 			"ProductCode": "Ürün kodu",
 			"ScanBarcode": "Barkod tara",
+			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Bir ürün ayarlayın",
 			"Title": "Ürün bilgisi"
 		},
@@ -50,6 +53,11 @@
 			"Text": "{url} tarafından desteklenmektedir"
 		},
 		"Scan": "Barkod tara"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "Barkod",
+		"Submit": "Gönder",
+		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
 		"LoadMore": "Daha fazla yükle",
