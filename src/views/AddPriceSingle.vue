@@ -307,6 +307,9 @@ export default {
     },
   },
   mounted() {
+    if (this.$route.query.code) {
+      this.setProductCode(this.$route.query.code)
+    }
     this.initPriceSingleForm()
   },
   methods: {
@@ -317,7 +320,7 @@ export default {
       /**
        * init product mode, currency & last location
        */
-      this.productMode = this.appStore.user.last_product_mode_used
+      this.productMode = this.addPriceSingleForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used
       this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
