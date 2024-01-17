@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.23.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.22.0...v1.23.0) (2024-01-17)
+
+
+### Features
+
+* **price create form:** allow typing the barcode manually ([#164](https://github.com/openfoodfacts/open-prices-frontend/issues/164)) ([04ec270](https://github.com/openfoodfacts/open-prices-frontend/commit/04ec270264326eb6cdd8d566988450246c95e46f))
+* **price create form:** allow uploading proof image from gallery ([#162](https://github.com/openfoodfacts/open-prices-frontend/issues/162)) ([b81f649](https://github.com/openfoodfacts/open-prices-frontend/commit/b81f6493d657decf7fcfaad83b6517b1612639a6))
+
+
+### Bug Fixes
+
+* typo in proof from gallery action. ref [#162](https://github.com/openfoodfacts/open-prices-frontend/issues/162) ([88d7591](https://github.com/openfoodfacts/open-prices-frontend/commit/88d759131a35975763031678462aed36a7df156b))
+
 ## [1.22.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.21.0...v1.22.0) (2024-01-17)
 
 
