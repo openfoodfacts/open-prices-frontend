@@ -65,8 +65,8 @@
 	},
 	"Header": {
 		"Dashboard": "Tablero",
-		"Settings": "Ajustes",
-		"Sign-out": "Desconectar",
+		"Settings": "Configuración",
+		"Sign-out": "Cerrar sesión",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -118,7 +118,7 @@
 		"ProductNotFound": "Producto no encontrado en Open Food Facts... No dudes en agregarlo :)"
 	},
 	"ProductList": {
-		"Filter": "Filtrar",
+		"Filter": "Filtros",
 		"HideProductsWithPrices": "Ocultar productos con precios",
 		"LoadMore": "Carga más",
 		"Order": "Orden",
@@ -131,7 +131,7 @@
 			"Title": "Agregar un precio"
 		},
 		"Home": {
-			"Title": "Página principal"
+			"Title": "Inicio"
 		},
 		"LatestPrices": {
 			"Title": "Latest Prices"
@@ -143,14 +143,14 @@
 			"Title": "Ubicaciones principales"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Productos Destacados"
 		}
 	},
 	"SignIn": {
-		"Button": "Registrarse",
+		"Button": "Iniciar sesión",
 		"Password": "Contraseña",
 		"ServerError": "Error: error del servidor",
-		"Title": "¡Registrado!",
+		"Title": "Iniciar sesión",
 		"UseOFFCredentials": {
 			"Text": "Utilice sus credenciales {url} para iniciar sesión."
 		},
@@ -179,7 +179,7 @@
 		"DefaultCurrency": "Moneda predeterminada",
 		"LanguageLabel": "Idioma",
 		"LocaleNotSupported": "Idioma aún no admitido; el idioma predeterminado será el inglés",
-		"Save": "Salvar",
-		"Title": "Ajustes"
+		"Save": "Guardar",
+		"Title": "Configuración"
 	}
 }
