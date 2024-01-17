@@ -1,0 +1,185 @@
+{
+	"AddPriceHome": {
+		"PriceCreated": "Price created!",
+		"ReceiptMode": {
+			"Subtitle": "Coming in the v2 (help us!)",
+			"Title": "Receipt mode"
+		},
+		"SignedIn": "Signed in!",
+		"SingleProductMode": {
+			"Subtitle": "Get your camera ready :)",
+			"Title": "Single product mode"
+		},
+		"Title": "Add a price"
+	},
+	"AddPriceSingle": {
+		"Create": "Izveidot",
+		"PriceDetails": {
+			"Label": "Price",
+			"Proof": "Proof",
+			"ProofUploaded": "Proof uploaded!",
+			"Text": "Price {perKg}",
+			"TextPerKg": "per kg",
+			"Title": "Price details",
+			"UploadProof": "Upload a proof"
+		},
+		"ProductInfo": {
+			"CategoryLabel": "Kategorija",
+			"OriginLabel": "Origin",
+			"ProductCode": "Product code",
+			"ScanBarcode": "Scan a barcode",
+			"SetProduct": "Set a product",
+			"Title": "Product info"
+		},
+		"ProductModeList": {
+			"Barcode": "Svītrkods",
+			"Category": "Kategorija"
+		},
+		"Title": "Add a single price",
+		"WhereWhen": {
+			"Date": "Date",
+			"DateLabel": "Date",
+			"Find": "Meklēt",
+			"Location": "Location",
+			"SelectLocation": "Select your location",
+			"Title": "Where & when?"
+		}
+	},
+	"BarcodeScanner": {
+		"Htlm5-qrcode": {
+			"Text": "powered by {url}"
+		},
+		"Scan": "Scan a barcode"
+	},
+	"BrandDetail": {
+		"LoadMore": "Load more",
+		"TopProducts": "Top products"
+	},
+	"Footer": {
+		"About": "Par",
+		"Open_Prices_Project": {
+			"Text": "Open Prices is an {0} project.",
+			"Url": "Open Food Facts"
+		},
+		"Stats": "Stats"
+	},
+	"Header": {
+		"Dashboard": "Dashboard",
+		"Settings": "Iestatījumi",
+		"Sign-out": "Sign out",
+		"Title": "Open Prices"
+	},
+	"Home": {
+		"AddPrice": "Add a price",
+		"SettingsUpdated": "Settings updated!",
+		"Welcome": {
+			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
+			"Title": "Welcome to Open Prices!"
+		}
+	},
+	"LocationDetail": {
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Load more",
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+	},
+	"LocationSelector": {
+		"Clear": "To clear",
+		"NoResult": "No results found",
+		"OSM": {
+			"text": "powered by {url}"
+		},
+		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
+		"Result": "Result {resultNumber} | Results {resultNumber}",
+		"SearchByName": "Search by name and city",
+		"Title": "Find your location"
+	},
+	"NotFound": {
+		"Subtitle": "The page you requested doesn't seem to exist...",
+		"Title": "Not found"
+	},
+	"PriceCard": {
+		"PriceDate": "on {date}",
+		"PriceValueDisplay": "{0} / kg",
+		"ProductQuantity": "{0} g",
+		"UnknownProduct": "Unknown product"
+	},
+	"PriceList": {
+		"LoadMore": "Load more",
+		"Title": "Latest prices"
+	},
+	"ProductCard": {
+		"ProductQuantity": "{0} g",
+		"UnknownProduct": "Unknown product name"
+	},
+	"ProductDetail": {
+		"CategoryNotFound": "Category not found...",
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Load more",
+		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+	},
+	"ProductList": {
+		"Filter": "Filter",
+		"HideProductsWithPrices": "Hide products with prices",
+		"LoadMore": "Load more",
+		"Order": "Order",
+		"PriceNumber": "Number of prices added",
+		"ScanNumber": "Number of scans added",
+		"Title": "Top products"
+	},
+	"Router": {
+		"AddPrice": {
+			"Title": "Add a price"
+		},
+		"Home": {
+			"Title": "Mājas"
+		},
+		"LatestPrices": {
+			"Title": "Latest Prices"
+		},
+		"TopContributors": {
+			"Title": "Top Contributors"
+		},
+		"TopLocations": {
+			"Title": "Top Locations"
+		},
+		"TopProducts": {
+			"Title": "Top products"
+		}
+	},
+	"SignIn": {
+		"Button": "Ieiet",
+		"Password": "Parole",
+		"ServerError": "Error: server error",
+		"Title": "Ieiet",
+		"UseOFFCredentials": {
+			"Text": "Use your {url} credentials to sign in."
+		},
+		"UsernameLabel": "Username",
+		"WrongCredentials": "Error: wrong credentials"
+	},
+	"Stats": {
+		"Prices": "Prices",
+		"ProductsWithPrices": "Products with prices",
+		"Title": "Stats"
+	},
+	"UserDashboard": {
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Load more",
+		"Title": "Dashboard"
+	},
+	"UserDetail": {
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Load more"
+	},
+	"UserSettings": {
+		"AddingPrices": "Adding prices",
+		"ChangeLanguage": "Change language",
+		"CountryLabel": "Country",
+		"CurrencyLabel": "Currency",
+		"DefaultCurrency": "Default currency",
+		"LanguageLabel": "Valoda",
+		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
+		"Save": "Saglabāt",
+		"Title": "Iestatījumi"
+	}
+}
