@@ -23,14 +23,14 @@
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"TakePicture": "Сфотографувати",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Виберіть із своєї галереї"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Категорія",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Введіть штрих-код",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
@@ -57,7 +57,7 @@
 	"BarcodeManualInput": {
 		"Barcode": "Код товару",
 		"Submit": "Підтвердити",
-		"Title": "Type a barcode"
+		"Title": "Введіть штрих-код"
 	},
 	"BrandDetail": {
 		"LoadMore": "Завантажити більше",
