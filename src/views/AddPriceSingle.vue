@@ -24,7 +24,8 @@
               </v-item-group>
             </h3>
             <v-sheet v-if="productMode === 'barcode'">
-              <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</v-btn>
+              <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</v-btn>
+              <a href="#" @click.prevent="showBarcodeManualInput">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</a>
               <v-text-field
                 v-if="dev"
                 :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
@@ -189,6 +190,13 @@
     @close="barcodeScanner = false"
   ></BarcodeScanner>
 
+  <BarcodeManualInput
+    v-if="barcodeManualInput"
+    v-model="barcodeManualInput"
+    @barcode="setProductCode($event)"
+    @close="barcodeManualInput = false"
+  ></BarcodeManualInput>
+
   <LocationSelector
     v-if="locationSelector"
     v-model="locationSelector"
@@ -205,6 +213,7 @@ import api from '../services/api'
 import utils from '../utils.js'
 import ProductCard from '../components/ProductCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
+import BarcodeManualInput from '../components/BarcodeManualInput.vue'
 import LocationSelector from '../components/LocationSelector.vue'
 import CategoryTags from '../data/category-tags.json'
 import OriginsTags from '../data/origins-tags.json'
@@ -222,6 +231,7 @@ export default {
   components: {
     ProductCard,
     BarcodeScanner,
+    BarcodeManualInput,
     LocationSelector
   },
   data() {
@@ -249,6 +259,7 @@ export default {
       originsTags: OriginsTags,  // list of origins tags for autocomplete
       labelsTags: LabelsTags,
       barcodeScanner: false,
+      barcodeManualInput: false,
       // location data
       locationSelector: false,
       locationSelectedDisplayName: '',
@@ -387,6 +398,9 @@ export default {
     },
     showBarcodeScanner() {
       this.barcodeScanner = true
+    },
+    showBarcodeManualInput() {
+      this.barcodeManualInput = true
     },
     setProductCode(code) {
       this.addPriceSingleForm.product_code = code
