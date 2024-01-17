@@ -177,7 +177,7 @@
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Taal",
+		"LanguageLabel": "Talen",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Opslaan",
 		"Title": "Instellingen"

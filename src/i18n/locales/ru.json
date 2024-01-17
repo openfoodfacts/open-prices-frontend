@@ -177,7 +177,7 @@
 		"CountryLabel": "Страна",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Язык",
+		"LanguageLabel": "Языки",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Сохранить",
 		"Title": "Настройки"

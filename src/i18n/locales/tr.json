@@ -1,59 +1,59 @@
 {
 	"AddPriceHome": {
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Fiyat oluşturuldu!",
 		"ReceiptMode": {
-			"Subtitle": "Coming in the v2 (help us!)",
-			"Title": "Receipt mode"
+			"Subtitle": "V2'de geliyor (bize yardım edin!)",
+			"Title": "Makbuz modu"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Giriş yapıldı!",
 		"SingleProductMode": {
-			"Subtitle": "Get your camera ready :)",
-			"Title": "Single product mode"
+			"Subtitle": "Kameranızı hazırlayın :)",
+			"Title": "Tek ürün modu"
 		},
-		"Title": "Add a price"
+		"Title": "Fiyat ekleyin"
 	},
 	"AddPriceSingle": {
 		"Create": "Oluştur",
 		"PriceDetails": {
-			"Label": "Price",
-			"Proof": "Proof",
-			"ProofUploaded": "Proof uploaded!",
-			"Text": "Price {perKg}",
-			"TextPerKg": "per kg",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof"
+			"Label": "Fiyat",
+			"Proof": "Kanıt",
+			"ProofUploaded": "Kanıt yüklendi!",
+			"Text": "Fiyat {perKg}",
+			"TextPerKg": "kg başına",
+			"Title": "Fiyat ayrıntıları",
+			"UploadProof": "Bir kanıt yükleyin"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
-			"OriginLabel": "Origin",
-			"ProductCode": "Product code",
-			"ScanBarcode": "Scan a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"OriginLabel": "Kaynak",
+			"ProductCode": "Ürün kodu",
+			"ScanBarcode": "Barkod tara",
+			"SetProduct": "Bir ürün ayarlayın",
+			"Title": "Ürün bilgisi"
 		},
 		"ProductModeList": {
 			"Barcode": "Barkod",
 			"Category": "Kategori"
 		},
-		"Title": "Add a single price",
+		"Title": "Tek bir fiyat ekleyin",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Tarih",
+			"DateLabel": "Tarih",
 			"Find": "Bul",
-			"Location": "Location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Konum",
+			"SelectLocation": "Konumunuzu seçin",
+			"Title": "Nerede ve ne zaman?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "{url} tarafından desteklenmektedir"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Barkod tara"
 	},
 	"BrandDetail": {
 		"LoadMore": "Daha fazla yükle",
-		"TopProducts": "Top products"
+		"TopProducts": "En iyi ürünler"
 	},
 	"Footer": {
 		"About": "Hakkında",
@@ -61,74 +61,74 @@
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
 		},
-		"Stats": "Stats"
+		"Stats": "İstatistikler"
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Gösterge paneli",
 		"Settings": "Ayarlar",
 		"Sign-out": "Çıkış yap",
 		"Title": "Open Prices"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"SettingsUpdated": "Settings updated!",
+		"AddPrice": "Fiyat ekleyin",
+		"SettingsUpdated": "Ayarlar güncellendi!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "OpenStreetMap'te konum bulunamadı... Eklemekten çekinmeyin :)"
 	},
 	"LocationSelector": {
-		"Clear": "To clear",
-		"NoResult": "No results found",
+		"Clear": "Temizlemek için",
+		"NoResult": "Sonuç bulunamadı",
 		"OSM": {
-			"text": "powered by {url}"
+			"text": "{url} tarafından desteklenmektedir"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search by name and city",
-		"Title": "Find your location"
+		"Title": "Konumunuzu bulun"
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Title": "Bulunamadı"
 	},
 	"PriceCard": {
-		"PriceDate": "on {date}",
-		"PriceValueDisplay": "{0} / kg",
-		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Unknown product"
+		"PriceDate": "{date} tarihinde",
+		"PriceValueDisplay": "{0} / kilo",
+		"ProductQuantity": "{0} gr",
+		"UnknownProduct": "Bilinmeyen ürün"
 	},
 	"PriceList": {
 		"LoadMore": "Daha fazla yükle",
-		"Title": "Latest prices"
+		"Title": "Son fiyatlar"
 	},
 	"ProductCard": {
-		"ProductQuantity": "{0} g",
+		"ProductQuantity": "{0} gr",
 		"UnknownProduct": "Bilinmeyen ürün adı"
 	},
 	"ProductDetail": {
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"CategoryNotFound": "Kategori bulunamadı...",
+		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Open Food Facts'te ürün bulunamadı... Eklemekten çekinmeyin :)"
 	},
 	"ProductList": {
 		"Filter": "Filtrele",
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Ürünleri fiyatlarıyla gizle",
 		"LoadMore": "Daha fazla yükle",
 		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Title": "En iyi ürünler"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Fiyat ekleyin"
 		},
 		"Home": {
 			"Title": "Ana Sayfa"
@@ -137,48 +137,48 @@
 			"Title": "Latest Prices"
 		},
 		"TopContributors": {
-			"Title": "Top Contributors"
+			"Title": "En çok katkıda bulunanlar"
 		},
 		"TopLocations": {
-			"Title": "Top Locations"
+			"Title": "En İyi Yerler"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "En iyi ürünler"
 		}
 	},
 	"SignIn": {
 		"Button": "Giriş Yap",
 		"Password": "Şifre",
-		"ServerError": "Error: server error",
+		"ServerError": "Hata: sunucu hatası",
 		"Title": "Giriş Yap",
 		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
+			"Text": "Oturum açmak için {url} kimlik bilgilerinizi kullanın."
 		},
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"UsernameLabel": "Kullanıcı adı",
+		"WrongCredentials": "Hata: yanlış kimlik bilgileri"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Prices": "Fiyatlar",
+		"ProductsWithPrices": "Fiyatları olan ürünler",
+		"Title": "İstatistikler"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
-		"Title": "Dashboard"
+		"Title": "Gösterge paneli"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Fiyat ekleme",
 		"ChangeLanguage": "Dili Değiştir",
 		"CountryLabel": "Ülke",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Dil",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
+		"CurrencyLabel": "Kur",
+		"DefaultCurrency": "Varsayılan para birimi",
+		"LanguageLabel": "Diller",
+		"LocaleNotSupported": "Dil henüz desteklenmiyor; dil varsayılan olarak İngilizce olarak ayarlanacak",
 		"Save": "Kaydet",
 		"Title": "Ayarlar"
 	}

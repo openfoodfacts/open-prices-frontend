@@ -177,7 +177,7 @@
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Währung",
 		"DefaultCurrency": "Standardwährung",
-		"LanguageLabel": "Sprache",
+		"LanguageLabel": "Sprachen",
 		"LocaleNotSupported": "Die Sprache wird noch nicht unterstützt. Die Sprache wird standardmäßig auf Englisch eingestellt",
 		"Save": "Speichern",
 		"Title": "Einstellungen"

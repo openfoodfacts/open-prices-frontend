@@ -177,7 +177,7 @@
 		"CountryLabel": "Maa",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Kieli",
+		"LanguageLabel": "Kielet",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Tallenna",
 		"Title": "Asetukset"
