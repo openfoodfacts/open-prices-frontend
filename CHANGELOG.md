@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.22.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.21.0...v1.22.0) (2024-01-17)
+
+
+### Features
+
+* **i18n:** add i18n configuration (French translation + language selector in user settings) ([#154](https://github.com/openfoodfacts/open-prices-frontend/issues/154)) ([fe3f54d](https://github.com/openfoodfacts/open-prices-frontend/commit/fe3f54de2902393ffd45e4c036318e2fbb30aea0))
+* **i18n:** add languages de nl it pt and update es fr ([#160](https://github.com/openfoodfacts/open-prices-frontend/issues/160)) ([07f4a26](https://github.com/openfoodfacts/open-prices-frontend/commit/07f4a2606bd50265b6b5e8fd4c4c2bfcbf7987ce))
+* **i18n:** Crowdin config ([#159](https://github.com/openfoodfacts/open-prices-frontend/issues/159)) ([c560680](https://github.com/openfoodfacts/open-prices-frontend/commit/c560680efbd9480424083a832b9f33af9e2c1581))
+* **l10n:** init Crowdin ([#161](https://github.com/openfoodfacts/open-prices-frontend/issues/161)) ([9a0c8cd](https://github.com/openfoodfacts/open-prices-frontend/commit/9a0c8cdfe456f50058f1a2351f7d68e4712a2505))
+* **l10n:** New Crowdin translations to review and merge ([#163](https://github.com/openfoodfacts/open-prices-frontend/issues/163)) ([4bb66e9](https://github.com/openfoodfacts/open-prices-frontend/commit/4bb66e9efa303a18f376dfac37988c7bff701144))
+* new api to get the proofs ([#155](https://github.com/openfoodfacts/open-prices-frontend/issues/155)) ([8d1cdea](https://github.com/openfoodfacts/open-prices-frontend/commit/8d1cdea4f3cc2cdb5fe95c603dbe9fa9b3ab1268))
+
+
+### Bug Fixes
+
+* fix 'category not found' message showing up in ProductDetail ([484f092](https://github.com/openfoodfacts/open-prices-frontend/commit/484f0923e598aca167ecd9e38afce4148f7439da))
+* fix goToProduct category from PriceCard. closes [#158](https://github.com/openfoodfacts/open-prices-frontend/issues/158) ([0e0fbd4](https://github.com/openfoodfacts/open-prices-frontend/commit/0e0fbd4cbc956c6711d0c2956d443ec542a38efc))
+* **l10n:** fix crowdin pr naming ([151f11a](https://github.com/openfoodfacts/open-prices-frontend/commit/151f11ad630a4fcb10b36517dca29370303470cb))
+
 ## [1.21.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.20.0...v1.21.0) (2024-01-15)
 
 
