@@ -8,7 +8,7 @@
 
   <v-row class="mt-0" v-if="!productNotFound">
     <v-col cols="12">
-      <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" to="/add">Add a price</v-btn>
+      <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
       <v-btn v-if="product.code && product.source" size="small" append-icon="mdi-open-in-new" :href="getProductOFFUrl(product)" target="_blank">
         Open Food Facts
       </v-btn>
