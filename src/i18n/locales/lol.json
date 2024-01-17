@@ -21,13 +21,16 @@
 			"Text": "crwdns246562:0{perKg}crwdne246562:0",
 			"TextPerKg": "crwdns246564:0crwdne246564:0",
 			"Title": "crwdns246566:0crwdne246566:0",
-			"UploadProof": "crwdns246568:0crwdne246568:0"
+			"UploadProof": "crwdns246568:0crwdne246568:0",
+			"TakePicture": "crwdns246756:0crwdne246756:0",
+			"SelectFromGallery": "crwdns246758:0crwdne246758:0"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "crwdns246570:0crwdne246570:0",
 			"OriginLabel": "crwdns246572:0crwdne246572:0",
 			"ProductCode": "crwdns246574:0crwdne246574:0",
 			"ScanBarcode": "crwdns246576:0crwdne246576:0",
+			"TypeBarcode": "crwdns246760:0crwdne246760:0",
 			"SetProduct": "crwdns246578:0crwdne246578:0",
 			"Title": "crwdns246580:0crwdne246580:0"
 		},
@@ -50,6 +53,11 @@
 			"Text": "crwdns246600:0{url}crwdne246600:0"
 		},
 		"Scan": "crwdns246602:0crwdne246602:0"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "crwdns246762:0crwdne246762:0",
+		"Submit": "crwdns246764:0crwdne246764:0",
+		"Title": "crwdns246766:0crwdne246766:0"
 	},
 	"BrandDetail": {
 		"LoadMore": "crwdns246604:0crwdne246604:0",
