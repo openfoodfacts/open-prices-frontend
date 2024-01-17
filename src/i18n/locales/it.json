@@ -13,7 +13,7 @@
 		"Title": "Aggiungi un prezzo"
 	},
 	"AddPriceSingle": {
-		"Create": "Creare",
+		"Create": "Crea",
 		"PriceDetails": {
 			"Label": "Prezzo",
 			"Proof": "Prova",
@@ -32,7 +32,7 @@
 			"Title": "Informazioni sul prodotto"
 		},
 		"ProductModeList": {
-			"Barcode": "Codice a barre",
+			"Barcode": "Codice a Barre",
 			"Category": "Categoria"
 		},
 		"Title": "Aggiungi un prezzo unico",
@@ -52,11 +52,11 @@
 		"Scan": "Scansiona un codice a barre"
 	},
 	"BrandDetail": {
-		"LoadMore": "Carica di più",
+		"LoadMore": "Scarica altro",
 		"TopProducts": "Prodotti migliori"
 	},
 	"Footer": {
-		"About": "Impronta",
+		"About": "Informazioni",
 		"Open_Prices_Project": {
 			"Text": "Open Prices è un progetto {0} .",
 			"Url": "Open Food Facts"
@@ -66,7 +66,7 @@
 	"Header": {
 		"Dashboard": "Cruscotto",
 		"Settings": "Impostazioni",
-		"Sign-out": "Disconnessione",
+		"Sign-out": "Esci",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -79,7 +79,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Carica di più",
+		"LoadMore": "Scarica altro",
 		"LocationNotFound": "Posizione non trovata in OpenStreetMap... Non esitate ad aggiungerla :)"
 	},
 	"LocationSelector": {
@@ -104,7 +104,7 @@
 		"UnknownProduct": "Prodotto sconosciuto"
 	},
 	"PriceList": {
-		"LoadMore": "Carica di più",
+		"LoadMore": "Scarica altro",
 		"Title": "Ultimi prezzi"
 	},
 	"ProductCard": {
@@ -114,13 +114,13 @@
 	"ProductDetail": {
 		"CategoryNotFound": "Categoria non trovata...",
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Carica di più",
+		"LoadMore": "Scarica altro",
 		"ProductNotFound": "Prodotto non trovato in Open Food Facts... Non esitate ad aggiungerlo :)"
 	},
 	"ProductList": {
-		"Filter": "Filtro",
+		"Filter": "Filtra",
 		"HideProductsWithPrices": "Nascondi i prodotti con i prezzi",
-		"LoadMore": "Carica di più",
+		"LoadMore": "Scarica altro",
 		"Order": "Ordine",
 		"PriceNumber": "Numero di prezzi aggiunti",
 		"ScanNumber": "Numero di scansioni aggiunte",
@@ -131,7 +131,7 @@
 			"Title": "Aggiungi un prezzo"
 		},
 		"Home": {
-			"Title": "HomePage"
+			"Title": "Homepage"
 		},
 		"LatestPrices": {
 			"Title": "Ultimi prezzi"
@@ -147,10 +147,10 @@
 		}
 	},
 	"SignIn": {
-		"Button": "Registrati",
-		"Password": "Parola d'ordine",
+		"Button": "Accedi",
+		"Password": "Password",
 		"ServerError": "Errore: errore del server",
-		"Title": "Registrati",
+		"Title": "Accedi",
 		"UseOFFCredentials": {
 			"Text": "Utilizza le tue credenziali {url} per accedere."
 		},
@@ -164,22 +164,22 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Carica di più",
+		"LoadMore": "Scarica altro",
 		"Title": "Cruscotto"
 	},
 	"UserDetail": {
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Carica di più"
+		"LoadMore": "Scarica altro"
 	},
 	"UserSettings": {
 		"AddingPrices": "Aggiunta di prezzi",
 		"ChangeLanguage": "Cambia lingua",
-		"CountryLabel": "Nazione",
+		"CountryLabel": "Paese",
 		"CurrencyLabel": "Moneta",
 		"DefaultCurrency": "Valuta predefinita",
-		"LanguageLabel": "Linguaggio",
+		"LanguageLabel": "Lingua",
 		"LocaleNotSupported": "Lingua non ancora supportata, la lingua predefinita sarà l'inglese",
-		"Save": "Salvare",
+		"Save": "Salva",
 		"Title": "Impostazioni"
 	}
 }
