@@ -21,13 +21,16 @@
 			"Text": "Prezzo {perKg}",
 			"TextPerKg": "al kg",
 			"Title": "Dettagli sul prezzo",
-			"UploadProof": "Carica una prova"
+			"UploadProof": "Carica una prova",
+			"TakePicture": "Scatta una foto",
+			"SelectFromGallery": "Select from your gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
 			"OriginLabel": "Origine",
 			"ProductCode": "Codice prodotto",
 			"ScanBarcode": "Scansiona un codice a barre",
+			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Imposta un prodotto",
 			"Title": "Informazioni sul prodotto"
 		},
@@ -50,6 +53,11 @@
 			"Text": "fornito da {url}"
 		},
 		"Scan": "Scansiona un codice a barre"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "Codice a Barre",
+		"Submit": "Invia",
+		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
 		"LoadMore": "Scarica altro",
