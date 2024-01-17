@@ -177,9 +177,9 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Language",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
+		"Save": "შენახვა",
 		"Title": "Settings"
 	}
 }

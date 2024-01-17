@@ -39,7 +39,7 @@
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "تلاش کریں",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -56,7 +56,7 @@
 		"TopProducts": "Top products"
 	},
 	"Footer": {
-		"About": "About",
+		"About": "کے بارے میں",
 		"Open_Prices_Project": {
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
@@ -65,7 +65,7 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
+		"Settings": "ترتیبات",
 		"Sign-out": "Sign out",
 		"Title": "Open Prices"
 	},
@@ -177,9 +177,9 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Language",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Save",
-		"Title": "Settings"
+		"Title": "ترتیبات"
 	}
 }

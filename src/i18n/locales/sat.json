@@ -24,7 +24,7 @@
 			"UploadProof": "Upload a proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "ᱦᱟᱹᱴᱤᱧ",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -32,14 +32,14 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
-			"Category": "Category"
+			"Barcode": "ᱵᱟᱨᱠᱳᱰ",
+			"Category": "ᱦᱟᱹᱴᱤᱧ"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "ᱯᱟᱱᱛᱮ",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -131,7 +131,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "ᱚᱲᱟᱜ"
 		},
 		"LatestPrices": {
 			"Title": "Latest Prices"
@@ -177,9 +177,9 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Language",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
+		"Save": "ᱥᱟᱱᱪᱟᱣ",
 		"Title": "Settings"
 	}
 }

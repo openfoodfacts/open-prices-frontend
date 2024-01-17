@@ -13,7 +13,7 @@
 		"Title": "Add a price"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "உருவாக்கு",
 		"PriceDetails": {
 			"Label": "Price",
 			"Proof": "Proof",
@@ -24,7 +24,7 @@
 			"UploadProof": "Upload a proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "வகை",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -32,14 +32,14 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
-			"Category": "Category"
+			"Barcode": "பார்கோடு",
+			"Category": "வகை"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "கண்டுபிடி",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -56,7 +56,7 @@
 		"TopProducts": "Top products"
 	},
 	"Footer": {
-		"About": "About",
+		"About": "இதைப் பற்றி",
 		"Open_Prices_Project": {
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
@@ -65,7 +65,7 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
+		"Settings": "அமைப்புகள்",
 		"Sign-out": "Sign out",
 		"Title": "Open Prices"
 	},
@@ -131,7 +131,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "முகப்பு"
 		},
 		"LatestPrices": {
 			"Title": "Latest Prices"
@@ -147,10 +147,10 @@
 		}
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "உள்நுழை",
+		"Password": "கடவுச்சொல்",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "உள்நுழை",
 		"UseOFFCredentials": {
 			"Text": "Use your {url} credentials to sign in."
 		},
@@ -177,9 +177,9 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "மொழி",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
-		"Title": "Settings"
+		"Save": "சேமி",
+		"Title": "அமைப்புகள்"
 	}
 }

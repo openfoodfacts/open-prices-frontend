@@ -24,7 +24,7 @@
 			"UploadProof": "Upload a proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "หมวดหมู่:",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -32,14 +32,14 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
-			"Category": "Category"
+			"Barcode": "บาร์โค้ด",
+			"Category": "หมวดหมู่:"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "ค้นหา",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -65,8 +65,8 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
-		"Sign-out": "Sign out",
+		"Settings": "ตั้งค่า",
+		"Sign-out": "ล๊อคเอ้าท์",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -109,7 +109,7 @@
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "ผลิตภัณฑ์ที่ไม่รู้จัก"
 	},
 	"ProductDetail": {
 		"CategoryNotFound": "Category not found...",
@@ -118,7 +118,7 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
+		"Filter": "กรอง",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Load more",
 		"Order": "Order",
@@ -131,7 +131,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "หน้าหลัก"
 		},
 		"LatestPrices": {
 			"Title": "Latest Prices"
@@ -147,10 +147,10 @@
 		}
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "เข้าสู่ระบบ",
+		"Password": "รหัสผ่าน",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "เข้าสู่ระบบ",
 		"UseOFFCredentials": {
 			"Text": "Use your {url} credentials to sign in."
 		},
@@ -177,9 +177,9 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "ภาษา",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
-		"Title": "Settings"
+		"Save": "บันทึก",
+		"Title": "ตั้งค่า"
 	}
 }

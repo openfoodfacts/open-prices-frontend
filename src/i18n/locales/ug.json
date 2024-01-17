@@ -39,7 +39,7 @@
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "ئىزدە",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -56,7 +56,7 @@
 		"TopProducts": "Top products"
 	},
 	"Footer": {
-		"About": "About",
+		"About": "ھەققىدە",
 		"Open_Prices_Project": {
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
@@ -65,7 +65,7 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
+		"Settings": "تەڭشەك",
 		"Sign-out": "Sign out",
 		"Title": "Open Prices"
 	},
@@ -131,7 +131,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "باش بەت"
 		},
 		"LatestPrices": {
 			"Title": "Latest Prices"
@@ -147,10 +147,10 @@
 		}
 	},
 	"SignIn": {
-		"Button": "Sign in",
+		"Button": "كىرىش",
 		"Password": "Password",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "كىرىش",
 		"UseOFFCredentials": {
 			"Text": "Use your {url} credentials to sign in."
 		},
@@ -177,9 +177,9 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "تىل",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
-		"Title": "Settings"
+		"Save": "ساقلاش",
+		"Title": "تەڭشەك"
 	}
 }

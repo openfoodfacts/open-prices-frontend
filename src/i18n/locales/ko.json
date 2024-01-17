@@ -13,7 +13,7 @@
 		"Title": "Add a price"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "만들기",
 		"PriceDetails": {
 			"Label": "Price",
 			"Proof": "Proof",
@@ -24,7 +24,7 @@
 			"UploadProof": "Upload a proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "카테고리",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -32,14 +32,14 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
-			"Category": "Category"
+			"Barcode": "바코드",
+			"Category": "카테고리"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "찾기",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -52,11 +52,11 @@
 		"Scan": "Scan a barcode"
 	},
 	"BrandDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "더 불러오기",
 		"TopProducts": "Top products"
 	},
 	"Footer": {
-		"About": "About",
+		"About": "정보",
 		"Open_Prices_Project": {
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
@@ -65,8 +65,8 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
-		"Sign-out": "Sign out",
+		"Settings": "설정",
+		"Sign-out": "로그아웃",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -79,7 +79,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "더 불러오기",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
@@ -104,23 +104,23 @@
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
-		"LoadMore": "Load more",
+		"LoadMore": "더 불러오기",
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "알 수 없는 상품명"
 	},
 	"ProductDetail": {
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "더 불러오기",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
+		"Filter": "필터",
 		"HideProductsWithPrices": "Hide products with prices",
-		"LoadMore": "Load more",
+		"LoadMore": "더 불러오기",
 		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
@@ -131,7 +131,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "홈"
 		},
 		"LatestPrices": {
 			"Title": "Latest Prices"
@@ -147,10 +147,10 @@
 		}
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "가입하기",
+		"Password": "암호",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "가입하기",
 		"UseOFFCredentials": {
 			"Text": "Use your {url} credentials to sign in."
 		},
@@ -164,22 +164,22 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "더 불러오기",
 		"Title": "Dashboard"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LoadMore": "더 불러오기"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
-		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"ChangeLanguage": "언어 변경",
+		"CountryLabel": "국가",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "언어",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
-		"Title": "Settings"
+		"Save": "저장",
+		"Title": "설정"
 	}
 }

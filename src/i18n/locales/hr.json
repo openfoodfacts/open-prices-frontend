@@ -32,7 +32,7 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
+			"Barcode": "Bar kod",
 			"Category": "Category"
 		},
 		"Title": "Add a single price",
@@ -148,7 +148,7 @@
 	},
 	"SignIn": {
 		"Button": "Sign in",
-		"Password": "Password",
+		"Password": "Lozinka",
 		"ServerError": "Error: server error",
 		"Title": "Sign in",
 		"UseOFFCredentials": {
@@ -177,9 +177,9 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Language",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
+		"Save": "Spremi",
 		"Title": "Settings"
 	}
 }

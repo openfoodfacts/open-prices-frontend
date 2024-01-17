@@ -39,7 +39,7 @@
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "Gjej",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -66,7 +66,7 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Settings",
-		"Sign-out": "Sign out",
+		"Sign-out": "Dilni",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -109,7 +109,7 @@
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Emer i panjohur produkti."
 	},
 	"ProductDetail": {
 		"CategoryNotFound": "Category not found...",
@@ -118,7 +118,7 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
+		"Filter": "Filtro",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Load more",
 		"Order": "Order",
@@ -177,7 +177,7 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Language",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Save",
 		"Title": "Settings"

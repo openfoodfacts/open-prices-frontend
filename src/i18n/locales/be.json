@@ -32,7 +32,7 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
+			"Barcode": "Штрых-код",
 			"Category": "Category"
 		},
 		"Title": "Add a single price",
@@ -52,7 +52,7 @@
 		"Scan": "Scan a barcode"
 	},
 	"BrandDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Загрузіць больш",
 		"TopProducts": "Top products"
 	},
 	"Footer": {
@@ -66,7 +66,7 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Settings",
-		"Sign-out": "Sign out",
+		"Sign-out": "Выйсці",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -79,7 +79,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Загрузіць больш",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
@@ -104,23 +104,23 @@
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
-		"LoadMore": "Load more",
+		"LoadMore": "Загрузіць больш",
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Назва прадукту невядома"
 	},
 	"ProductDetail": {
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Загрузіць больш",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
+		"Filter": "Фільтр",
 		"HideProductsWithPrices": "Hide products with prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Загрузіць больш",
 		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
@@ -164,12 +164,12 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Загрузіць больш",
 		"Title": "Dashboard"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LoadMore": "Загрузіць больш"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
@@ -177,7 +177,7 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Language",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Save",
 		"Title": "Settings"

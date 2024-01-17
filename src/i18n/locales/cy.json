@@ -24,7 +24,7 @@
 			"UploadProof": "Upload a proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "Categori",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -32,8 +32,8 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
-			"Category": "Category"
+			"Barcode": "Côd bar",
+			"Category": "Categori"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -177,7 +177,7 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Language",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Save",
 		"Title": "Settings"

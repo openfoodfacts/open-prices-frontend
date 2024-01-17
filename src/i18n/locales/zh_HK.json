@@ -13,7 +13,7 @@
 		"Title": "Add a price"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "新增",
 		"PriceDetails": {
 			"Label": "Price",
 			"Proof": "Proof",
@@ -24,7 +24,7 @@
 			"UploadProof": "Upload a proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "分類",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -32,14 +32,14 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
-			"Category": "Category"
+			"Barcode": "條碼",
+			"Category": "分類"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "搜尋",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -52,11 +52,11 @@
 		"Scan": "Scan a barcode"
 	},
 	"BrandDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "載入更多",
 		"TopProducts": "Top products"
 	},
 	"Footer": {
-		"About": "About",
+		"About": "關於",
 		"Open_Prices_Project": {
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
@@ -65,8 +65,8 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
-		"Sign-out": "Sign out",
+		"Settings": "設定",
+		"Sign-out": "登出",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -79,7 +79,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "載入更多",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
@@ -104,7 +104,7 @@
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
-		"LoadMore": "Load more",
+		"LoadMore": "載入更多",
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
@@ -114,13 +114,13 @@
 	"ProductDetail": {
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "載入更多",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
 		"Filter": "Filter",
 		"HideProductsWithPrices": "Hide products with prices",
-		"LoadMore": "Load more",
+		"LoadMore": "載入更多",
 		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
@@ -131,7 +131,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "首頁"
 		},
 		"LatestPrices": {
 			"Title": "Latest Prices"
@@ -147,10 +147,10 @@
 		}
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "登入",
+		"Password": "密碼",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "登入",
 		"UseOFFCredentials": {
 			"Text": "Use your {url} credentials to sign in."
 		},
@@ -164,22 +164,22 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "載入更多",
 		"Title": "Dashboard"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LoadMore": "載入更多"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "地區",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "語言",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
-		"Title": "Settings"
+		"Save": "儲存",
+		"Title": "設定"
 	}
 }

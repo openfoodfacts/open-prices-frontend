@@ -13,7 +13,7 @@
 		"Title": "Add a price"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Sortu",
 		"PriceDetails": {
 			"Label": "Price",
 			"Proof": "Proof",
@@ -24,7 +24,7 @@
 			"UploadProof": "Upload a proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "Kategoria",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -32,14 +32,14 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
-			"Category": "Category"
+			"Barcode": "Barra-kodea",
+			"Category": "Kategoria"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "Aurkitu",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -56,7 +56,7 @@
 		"TopProducts": "Top products"
 	},
 	"Footer": {
-		"About": "About",
+		"About": "Honi buruz",
 		"Open_Prices_Project": {
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
@@ -65,8 +65,8 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
-		"Sign-out": "Sign out",
+		"Settings": "Ezarpenak",
+		"Sign-out": "Saioa itxi",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -109,7 +109,7 @@
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Produktu-izen ezezaguna"
 	},
 	"ProductDetail": {
 		"CategoryNotFound": "Category not found...",
@@ -118,7 +118,7 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
+		"Filter": "Iragazi",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Load more",
 		"Order": "Order",
@@ -131,7 +131,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Hasiera"
 		},
 		"LatestPrices": {
 			"Title": "Latest Prices"
@@ -147,10 +147,10 @@
 		}
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "Hasi saioa",
+		"Password": "Pasahitza",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "Hasi saioa",
 		"UseOFFCredentials": {
 			"Text": "Use your {url} credentials to sign in."
 		},
@@ -173,13 +173,13 @@
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
-		"ChangeLanguage": "Change language",
+		"ChangeLanguage": "Aldatu hizkuntza",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Hizkuntza",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
-		"Title": "Settings"
+		"Save": "Gorde",
+		"Title": "Ezarpenak"
 	}
 }

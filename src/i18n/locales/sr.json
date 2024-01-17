@@ -24,7 +24,7 @@
 			"UploadProof": "Upload a proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "Kategorija",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -32,8 +32,8 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
-			"Category": "Category"
+			"Barcode": "Barkod",
+			"Category": "Kategorija"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -65,7 +65,7 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
+		"Settings": "Podešavanja",
 		"Sign-out": "Sign out",
 		"Title": "Open Prices"
 	},
@@ -148,7 +148,7 @@
 	},
 	"SignIn": {
 		"Button": "Sign in",
-		"Password": "Password",
+		"Password": "Lozinka",
 		"ServerError": "Error: server error",
 		"Title": "Sign in",
 		"UseOFFCredentials": {
@@ -173,13 +173,13 @@
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
-		"ChangeLanguage": "Change language",
+		"ChangeLanguage": "Promenite jezik",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Jezik",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
-		"Title": "Settings"
+		"Save": "Sačuvaj",
+		"Title": "Podešavanja"
 	}
 }

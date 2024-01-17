@@ -13,7 +13,7 @@
 		"Title": "Add a price"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Ustvari",
 		"PriceDetails": {
 			"Label": "Price",
 			"Proof": "Proof",
@@ -24,7 +24,7 @@
 			"UploadProof": "Upload a proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "Kategorijo",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -32,14 +32,14 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
-			"Category": "Category"
+			"Barcode": "Črtna koda",
+			"Category": "Kategorijo"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "Poišči",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -56,7 +56,7 @@
 		"TopProducts": "Top products"
 	},
 	"Footer": {
-		"About": "About",
+		"About": "O programu",
 		"Open_Prices_Project": {
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
@@ -65,8 +65,8 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
-		"Sign-out": "Sign out",
+		"Settings": "Nastavitve",
+		"Sign-out": "Odjava",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -109,7 +109,7 @@
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Neznano ime izdelka"
 	},
 	"ProductDetail": {
 		"CategoryNotFound": "Category not found...",
@@ -131,7 +131,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Domov"
 		},
 		"LatestPrices": {
 			"Title": "Latest Prices"
@@ -147,10 +147,10 @@
 		}
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "Vpis",
+		"Password": "Geslo",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "Vpis",
 		"UseOFFCredentials": {
 			"Text": "Use your {url} credentials to sign in."
 		},
@@ -173,13 +173,13 @@
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
-		"ChangeLanguage": "Change language",
+		"ChangeLanguage": "Spremeni jezik",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Jezik",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
-		"Title": "Settings"
+		"Save": "Shrani",
+		"Title": "Nastavitve"
 	}
 }

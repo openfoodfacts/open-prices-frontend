@@ -13,7 +13,7 @@
 		"Title": "Add a price"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Tạo",
 		"PriceDetails": {
 			"Label": "Price",
 			"Proof": "Proof",
@@ -24,7 +24,7 @@
 			"UploadProof": "Upload a proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "Danh mục",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -32,14 +32,14 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
-			"Category": "Category"
+			"Barcode": "Mã vạch",
+			"Category": "Danh mục"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "Tìm",
 			"Location": "Location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -52,11 +52,11 @@
 		"Scan": "Scan a barcode"
 	},
 	"BrandDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Tải thêm",
 		"TopProducts": "Top products"
 	},
 	"Footer": {
-		"About": "About",
+		"About": "Giới thiệu",
 		"Open_Prices_Project": {
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
@@ -65,8 +65,8 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
-		"Sign-out": "Sign out",
+		"Settings": "Cài đặt",
+		"Sign-out": "Thoát",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -79,7 +79,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Tải thêm",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
@@ -104,23 +104,23 @@
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
-		"LoadMore": "Load more",
+		"LoadMore": "Tải thêm",
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Tên sản phẩm không xác định"
 	},
 	"ProductDetail": {
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Tải thêm",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
+		"Filter": "Bộ lọc",
 		"HideProductsWithPrices": "Hide products with prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Tải thêm",
 		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
@@ -131,7 +131,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Trang chủ"
 		},
 		"LatestPrices": {
 			"Title": "Latest Prices"
@@ -147,10 +147,10 @@
 		}
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "Đăng nhập",
+		"Password": "Mật khẩu",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "Đăng nhập",
 		"UseOFFCredentials": {
 			"Text": "Use your {url} credentials to sign in."
 		},
@@ -164,22 +164,22 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Tải thêm",
 		"Title": "Dashboard"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LoadMore": "Tải thêm"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
-		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"ChangeLanguage": "Thay đổi ngôn ngữ",
+		"CountryLabel": "Quốc gia",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Ngôn ngữ",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
-		"Title": "Settings"
+		"Save": "Lưu",
+		"Title": "Cài đặt"
 	}
 }

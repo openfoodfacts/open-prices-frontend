@@ -1,0 +1,185 @@
+{
+	"AddPriceHome": {
+		"PriceCreated": "crwdns246540:0crwdne246540:0",
+		"ReceiptMode": {
+			"Subtitle": "crwdns246542:0crwdne246542:0",
+			"Title": "crwdns246544:0crwdne246544:0"
+		},
+		"SignedIn": "crwdns246546:0crwdne246546:0",
+		"SingleProductMode": {
+			"Subtitle": "crwdns246548:0crwdne246548:0",
+			"Title": "crwdns246550:0crwdne246550:0"
+		},
+		"Title": "crwdns246552:0crwdne246552:0"
+	},
+	"AddPriceSingle": {
+		"Create": "crwdns246554:0crwdne246554:0",
+		"PriceDetails": {
+			"Label": "crwdns246556:0crwdne246556:0",
+			"Proof": "crwdns246558:0crwdne246558:0",
+			"ProofUploaded": "crwdns246560:0crwdne246560:0",
+			"Text": "crwdns246562:0{perKg}crwdne246562:0",
+			"TextPerKg": "crwdns246564:0crwdne246564:0",
+			"Title": "crwdns246566:0crwdne246566:0",
+			"UploadProof": "crwdns246568:0crwdne246568:0"
+		},
+		"ProductInfo": {
+			"CategoryLabel": "crwdns246570:0crwdne246570:0",
+			"OriginLabel": "crwdns246572:0crwdne246572:0",
+			"ProductCode": "crwdns246574:0crwdne246574:0",
+			"ScanBarcode": "crwdns246576:0crwdne246576:0",
+			"SetProduct": "crwdns246578:0crwdne246578:0",
+			"Title": "crwdns246580:0crwdne246580:0"
+		},
+		"ProductModeList": {
+			"Barcode": "crwdns246582:0crwdne246582:0",
+			"Category": "crwdns246584:0crwdne246584:0"
+		},
+		"Title": "crwdns246586:0crwdne246586:0",
+		"WhereWhen": {
+			"Date": "crwdns246588:0crwdne246588:0",
+			"DateLabel": "crwdns246590:0crwdne246590:0",
+			"Find": "crwdns246592:0crwdne246592:0",
+			"Location": "crwdns246594:0crwdne246594:0",
+			"SelectLocation": "crwdns246596:0crwdne246596:0",
+			"Title": "crwdns246598:0crwdne246598:0"
+		}
+	},
+	"BarcodeScanner": {
+		"Htlm5-qrcode": {
+			"Text": "crwdns246600:0{url}crwdne246600:0"
+		},
+		"Scan": "crwdns246602:0crwdne246602:0"
+	},
+	"BrandDetail": {
+		"LoadMore": "crwdns246604:0crwdne246604:0",
+		"TopProducts": "crwdns246606:0crwdne246606:0"
+	},
+	"Footer": {
+		"About": "crwdns246608:0crwdne246608:0",
+		"Open_Prices_Project": {
+			"Text": "crwdns246610:0{0}crwdne246610:0",
+			"Url": "crwdns246612:0crwdne246612:0"
+		},
+		"Stats": "crwdns246614:0crwdne246614:0"
+	},
+	"Header": {
+		"Dashboard": "crwdns246616:0crwdne246616:0",
+		"Settings": "crwdns246618:0crwdne246618:0",
+		"Sign-out": "crwdns246620:0crwdne246620:0",
+		"Title": "crwdns246622:0crwdne246622:0"
+	},
+	"Home": {
+		"AddPrice": "crwdns246624:0crwdne246624:0",
+		"SettingsUpdated": "crwdns246626:0crwdne246626:0",
+		"Welcome": {
+			"Subtitle": "crwdns246628:0crwdne246628:0",
+			"Title": "crwdns246630:0crwdne246630:0"
+		}
+	},
+	"LocationDetail": {
+		"LatestPrices": "crwdns246632:0crwdne246632:0",
+		"LoadMore": "crwdns246634:0crwdne246634:0",
+		"LocationNotFound": "crwdns246636:0crwdne246636:0"
+	},
+	"LocationSelector": {
+		"Clear": "crwdns246638:0crwdne246638:0",
+		"NoResult": "crwdns246640:0crwdne246640:0",
+		"OSM": {
+			"text": "crwdns246642:0{url}crwdne246642:0"
+		},
+		"RecentLocations": "crwdns246644:0{recentLocationNumber}crwdnd246644:0{recentLocationNumber}crwdne246644:0",
+		"Result": "crwdns246646:0{resultNumber}crwdnd246646:0{resultNumber}crwdne246646:0",
+		"SearchByName": "crwdns246648:0crwdne246648:0",
+		"Title": "crwdns246650:0crwdne246650:0"
+	},
+	"NotFound": {
+		"Subtitle": "crwdns246652:0crwdne246652:0",
+		"Title": "crwdns246654:0crwdne246654:0"
+	},
+	"PriceCard": {
+		"PriceDate": "crwdns246656:0{date}crwdne246656:0",
+		"PriceValueDisplay": "crwdns246658:0{0}crwdne246658:0",
+		"ProductQuantity": "crwdns246660:0{0}crwdne246660:0",
+		"UnknownProduct": "crwdns246662:0crwdne246662:0"
+	},
+	"PriceList": {
+		"LoadMore": "crwdns246664:0crwdne246664:0",
+		"Title": "crwdns246666:0crwdne246666:0"
+	},
+	"ProductCard": {
+		"ProductQuantity": "crwdns246668:0{0}crwdne246668:0",
+		"UnknownProduct": "crwdns246670:0crwdne246670:0"
+	},
+	"ProductDetail": {
+		"CategoryNotFound": "crwdns246672:0crwdne246672:0",
+		"LatestPrices": "crwdns246674:0crwdne246674:0",
+		"LoadMore": "crwdns246676:0crwdne246676:0",
+		"ProductNotFound": "crwdns246678:0crwdne246678:0"
+	},
+	"ProductList": {
+		"Filter": "crwdns246680:0crwdne246680:0",
+		"HideProductsWithPrices": "crwdns246682:0crwdne246682:0",
+		"LoadMore": "crwdns246684:0crwdne246684:0",
+		"Order": "crwdns246686:0crwdne246686:0",
+		"PriceNumber": "crwdns246688:0crwdne246688:0",
+		"ScanNumber": "crwdns246690:0crwdne246690:0",
+		"Title": "crwdns246692:0crwdne246692:0"
+	},
+	"Router": {
+		"AddPrice": {
+			"Title": "crwdns246694:0crwdne246694:0"
+		},
+		"Home": {
+			"Title": "crwdns246696:0crwdne246696:0"
+		},
+		"LatestPrices": {
+			"Title": "crwdns246698:0crwdne246698:0"
+		},
+		"TopContributors": {
+			"Title": "crwdns246700:0crwdne246700:0"
+		},
+		"TopLocations": {
+			"Title": "crwdns246702:0crwdne246702:0"
+		},
+		"TopProducts": {
+			"Title": "crwdns246704:0crwdne246704:0"
+		}
+	},
+	"SignIn": {
+		"Button": "crwdns246706:0crwdne246706:0",
+		"Password": "crwdns246708:0crwdne246708:0",
+		"ServerError": "crwdns246710:0crwdne246710:0",
+		"Title": "crwdns246712:0crwdne246712:0",
+		"UseOFFCredentials": {
+			"Text": "crwdns246714:0{url}crwdne246714:0"
+		},
+		"UsernameLabel": "crwdns246716:0crwdne246716:0",
+		"WrongCredentials": "crwdns246718:0crwdne246718:0"
+	},
+	"Stats": {
+		"Prices": "crwdns246720:0crwdne246720:0",
+		"ProductsWithPrices": "crwdns246722:0crwdne246722:0",
+		"Title": "crwdns246724:0crwdne246724:0"
+	},
+	"UserDashboard": {
+		"LatestPrices": "crwdns246726:0crwdne246726:0",
+		"LoadMore": "crwdns246728:0crwdne246728:0",
+		"Title": "crwdns246730:0crwdne246730:0"
+	},
+	"UserDetail": {
+		"LatestPrices": "crwdns246732:0crwdne246732:0",
+		"LoadMore": "crwdns246734:0crwdne246734:0"
+	},
+	"UserSettings": {
+		"AddingPrices": "crwdns246736:0crwdne246736:0",
+		"ChangeLanguage": "crwdns246738:0crwdne246738:0",
+		"CountryLabel": "crwdns246740:0crwdne246740:0",
+		"CurrencyLabel": "crwdns246742:0crwdne246742:0",
+		"DefaultCurrency": "crwdns246744:0crwdne246744:0",
+		"LanguageLabel": "crwdns246746:0crwdne246746:0",
+		"LocaleNotSupported": "crwdns246748:0crwdne246748:0",
+		"Save": "crwdns246750:0crwdne246750:0",
+		"Title": "crwdns246752:0crwdne246752:0"
+	}
+}
