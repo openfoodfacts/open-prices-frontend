@@ -21,13 +21,16 @@
 			"Text": "Price {perKg}",
 			"TextPerKg": "per kg",
 			"Title": "Price details",
-			"UploadProof": "Upload a proof"
+			"UploadProof": "Upload a proof",
+			"TakePicture": "Tag et billede",
+			"SelectFromGallery": "Select from your gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
+			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
@@ -50,6 +53,11 @@
 			"Text": "powered by {url}"
 		},
 		"Scan": "Scan a barcode"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "Stregkode",
+		"Submit": "Indsend",
+		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
 		"LoadMore": "Indlæs mere",
