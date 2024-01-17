@@ -32,14 +32,14 @@
 			"Title": "Produktinformation"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
+			"Barcode": "Strichcode",
 			"Category": "Kategorie"
 		},
 		"Title": "Fügen Sie einen Einzelpreis hinzu",
 		"WhereWhen": {
 			"Date": "Datum",
 			"DateLabel": "Datum",
-			"Find": "Finden",
+			"Find": "Suchen",
 			"Location": "Ort",
 			"SelectLocation": "Wähle deinen Standort",
 			"Title": "Wo wann?"
@@ -52,11 +52,11 @@
 		"Scan": "Barcode scannen"
 	},
 	"BrandDetail": {
-		"LoadMore": "Mehr laden",
+		"LoadMore": "Weitere laden",
 		"TopProducts": "Top-Produkte"
 	},
 	"Footer": {
-		"About": "Impressum",
+		"About": "Über",
 		"Open_Prices_Project": {
 			"Text": "Open Prices ist ein {0} -Projekt.",
 			"Url": "Open Food Facts"
@@ -66,7 +66,7 @@
 	"Header": {
 		"Dashboard": "Instrumententafel",
 		"Settings": "Einstellungen",
-		"Sign-out": "Ausloggen",
+		"Sign-out": "Abmelden",
 		"Title": "Open Prices"
 	},
 	"Home": {
@@ -79,7 +79,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Aktuelle Preise",
-		"LoadMore": "Mehr laden",
+		"LoadMore": "Weitere laden",
 		"LocationNotFound": "Standort nicht in OpenStreetMap gefunden... Zögern Sie nicht, ihn hinzuzufügen :)"
 	},
 	"LocationSelector": {
@@ -104,7 +104,7 @@
 		"UnknownProduct": "Unbekanntes Produkt"
 	},
 	"PriceList": {
-		"LoadMore": "Mehr laden",
+		"LoadMore": "Weitere laden",
 		"Title": "Aktuelle Preise"
 	},
 	"ProductCard": {
@@ -114,13 +114,13 @@
 	"ProductDetail": {
 		"CategoryNotFound": "Kategorie nicht gefunden...",
 		"LatestPrices": "Aktuelle Preise",
-		"LoadMore": "Mehr laden",
+		"LoadMore": "Weitere laden",
 		"ProductNotFound": "Produkt nicht in Open Food Facts gefunden... Zögern Sie nicht, es hinzuzufügen :)"
 	},
 	"ProductList": {
 		"Filter": "Filter",
 		"HideProductsWithPrices": "Produkte mit Preisen ausblenden",
-		"LoadMore": "Mehr laden",
+		"LoadMore": "Weitere laden",
 		"Order": "Ordnung",
 		"PriceNumber": "Anzahl der hinzugefügten Preise",
 		"ScanNumber": "Anzahl der hinzugefügten Scans",
@@ -147,10 +147,10 @@
 		}
 	},
 	"SignIn": {
-		"Button": "Einloggen",
+		"Button": "Anmelden",
 		"Password": "Passwort",
 		"ServerError": "Fehler: Serverfehler",
-		"Title": "Einloggen",
+		"Title": "Anmelden",
 		"UseOFFCredentials": {
 			"Text": "Verwenden Sie Ihre {url} -Anmeldeinformationen, um sich anzumelden."
 		},
@@ -164,12 +164,12 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Aktuelle Preise",
-		"LoadMore": "Mehr laden",
+		"LoadMore": "Weitere laden",
 		"Title": "Instrumententafel"
 	},
 	"UserDetail": {
 		"LatestPrices": "Aktuelle Preise",
-		"LoadMore": "Mehr laden"
+		"LoadMore": "Weitere laden"
 	},
 	"UserSettings": {
 		"AddingPrices": "Preise hinzufügen",
@@ -179,7 +179,7 @@
 		"DefaultCurrency": "Standardwährung",
 		"LanguageLabel": "Sprache",
 		"LocaleNotSupported": "Die Sprache wird noch nicht unterstützt. Die Sprache wird standardmäßig auf Englisch eingestellt",
-		"Save": "Sparen",
-		"Title": "Die Einstellungen"
+		"Save": "Speichern",
+		"Title": "Einstellungen"
 	}
 }
