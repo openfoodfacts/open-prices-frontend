@@ -1,0 +1,185 @@
+{
+	"AddPriceHome": {
+		"PriceCreated": "Price created!",
+		"ReceiptMode": {
+			"Subtitle": "Coming in the v2 (help us!)",
+			"Title": "Receipt mode"
+		},
+		"SignedIn": "Signed in!",
+		"SingleProductMode": {
+			"Subtitle": "Get your camera ready :)",
+			"Title": "Single product mode"
+		},
+		"Title": "Add a price"
+	},
+	"AddPriceSingle": {
+		"Create": "Създай",
+		"PriceDetails": {
+			"Label": "Price",
+			"Proof": "Proof",
+			"ProofUploaded": "Proof uploaded!",
+			"Text": "Price {perKg}",
+			"TextPerKg": "per kg",
+			"Title": "Price details",
+			"UploadProof": "Upload a proof"
+		},
+		"ProductInfo": {
+			"CategoryLabel": "Категория",
+			"OriginLabel": "Origin",
+			"ProductCode": "Product code",
+			"ScanBarcode": "Scan a barcode",
+			"SetProduct": "Set a product",
+			"Title": "Product info"
+		},
+		"ProductModeList": {
+			"Barcode": "Баркод",
+			"Category": "Категория"
+		},
+		"Title": "Add a single price",
+		"WhereWhen": {
+			"Date": "Date",
+			"DateLabel": "Date",
+			"Find": "Намери",
+			"Location": "Location",
+			"SelectLocation": "Select your location",
+			"Title": "Where & when?"
+		}
+	},
+	"BarcodeScanner": {
+		"Htlm5-qrcode": {
+			"Text": "powered by {url}"
+		},
+		"Scan": "Scan a barcode"
+	},
+	"BrandDetail": {
+		"LoadMore": "Зареди още",
+		"TopProducts": "Top products"
+	},
+	"Footer": {
+		"About": "Относно",
+		"Open_Prices_Project": {
+			"Text": "Open Prices is an {0} project.",
+			"Url": "Open Food Facts"
+		},
+		"Stats": "Stats"
+	},
+	"Header": {
+		"Dashboard": "Dashboard",
+		"Settings": "Настройки",
+		"Sign-out": "Изход",
+		"Title": "Open Prices"
+	},
+	"Home": {
+		"AddPrice": "Add a price",
+		"SettingsUpdated": "Settings updated!",
+		"Welcome": {
+			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
+			"Title": "Welcome to Open Prices!"
+		}
+	},
+	"LocationDetail": {
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Зареди още",
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+	},
+	"LocationSelector": {
+		"Clear": "To clear",
+		"NoResult": "No results found",
+		"OSM": {
+			"text": "powered by {url}"
+		},
+		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
+		"Result": "Result {resultNumber} | Results {resultNumber}",
+		"SearchByName": "Search by name and city",
+		"Title": "Find your location"
+	},
+	"NotFound": {
+		"Subtitle": "The page you requested doesn't seem to exist...",
+		"Title": "Not found"
+	},
+	"PriceCard": {
+		"PriceDate": "on {date}",
+		"PriceValueDisplay": "{0} / kg",
+		"ProductQuantity": "{0} g",
+		"UnknownProduct": "Unknown product"
+	},
+	"PriceList": {
+		"LoadMore": "Зареди още",
+		"Title": "Latest prices"
+	},
+	"ProductCard": {
+		"ProductQuantity": "{0} g",
+		"UnknownProduct": "Неразпознат продукт"
+	},
+	"ProductDetail": {
+		"CategoryNotFound": "Category not found...",
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Зареди още",
+		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+	},
+	"ProductList": {
+		"Filter": "Филтър",
+		"HideProductsWithPrices": "Hide products with prices",
+		"LoadMore": "Зареди още",
+		"Order": "Order",
+		"PriceNumber": "Number of prices added",
+		"ScanNumber": "Number of scans added",
+		"Title": "Top products"
+	},
+	"Router": {
+		"AddPrice": {
+			"Title": "Add a price"
+		},
+		"Home": {
+			"Title": "Начало"
+		},
+		"LatestPrices": {
+			"Title": "Latest Prices"
+		},
+		"TopContributors": {
+			"Title": "Top Contributors"
+		},
+		"TopLocations": {
+			"Title": "Top Locations"
+		},
+		"TopProducts": {
+			"Title": "Top products"
+		}
+	},
+	"SignIn": {
+		"Button": "Вход",
+		"Password": "Парола",
+		"ServerError": "Error: server error",
+		"Title": "Вход",
+		"UseOFFCredentials": {
+			"Text": "Use your {url} credentials to sign in."
+		},
+		"UsernameLabel": "Username",
+		"WrongCredentials": "Error: wrong credentials"
+	},
+	"Stats": {
+		"Prices": "Prices",
+		"ProductsWithPrices": "Products with prices",
+		"Title": "Stats"
+	},
+	"UserDashboard": {
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Зареди още",
+		"Title": "Dashboard"
+	},
+	"UserDetail": {
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Зареди още"
+	},
+	"UserSettings": {
+		"AddingPrices": "Adding prices",
+		"ChangeLanguage": "Промяна на езика",
+		"CountryLabel": "Страна",
+		"CurrencyLabel": "Currency",
+		"DefaultCurrency": "Default currency",
+		"LanguageLabel": "Език",
+		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
+		"Save": "Запис",
+		"Title": "Настройки"
+	}
+}
