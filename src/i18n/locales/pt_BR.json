@@ -1,0 +1,185 @@
+{
+	"AddPriceHome": {
+		"PriceCreated": "Price created!",
+		"ReceiptMode": {
+			"Subtitle": "Coming in the v2 (help us!)",
+			"Title": "Receipt mode"
+		},
+		"SignedIn": "Signed in!",
+		"SingleProductMode": {
+			"Subtitle": "Get your camera ready :)",
+			"Title": "Single product mode"
+		},
+		"Title": "Add a price"
+	},
+	"AddPriceSingle": {
+		"Create": "Criar",
+		"PriceDetails": {
+			"Label": "Price",
+			"Proof": "Proof",
+			"ProofUploaded": "Proof uploaded!",
+			"Text": "Price {perKg}",
+			"TextPerKg": "per kg",
+			"Title": "Price details",
+			"UploadProof": "Upload a proof"
+		},
+		"ProductInfo": {
+			"CategoryLabel": "Categoria",
+			"OriginLabel": "Origin",
+			"ProductCode": "Product code",
+			"ScanBarcode": "Scan a barcode",
+			"SetProduct": "Set a product",
+			"Title": "Product info"
+		},
+		"ProductModeList": {
+			"Barcode": "Código de barras",
+			"Category": "Categoria"
+		},
+		"Title": "Add a single price",
+		"WhereWhen": {
+			"Date": "Date",
+			"DateLabel": "Date",
+			"Find": "Buscar",
+			"Location": "Location",
+			"SelectLocation": "Select your location",
+			"Title": "Where & when?"
+		}
+	},
+	"BarcodeScanner": {
+		"Htlm5-qrcode": {
+			"Text": "powered by {url}"
+		},
+		"Scan": "Scan a barcode"
+	},
+	"BrandDetail": {
+		"LoadMore": "Carregar mais",
+		"TopProducts": "Top products"
+	},
+	"Footer": {
+		"About": "Sobre",
+		"Open_Prices_Project": {
+			"Text": "Open Prices is an {0} project.",
+			"Url": "Open Food Facts"
+		},
+		"Stats": "Stats"
+	},
+	"Header": {
+		"Dashboard": "Dashboard",
+		"Settings": "Definições",
+		"Sign-out": "Sair",
+		"Title": "Open Prices"
+	},
+	"Home": {
+		"AddPrice": "Add a price",
+		"SettingsUpdated": "Settings updated!",
+		"Welcome": {
+			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
+			"Title": "Welcome to Open Prices!"
+		}
+	},
+	"LocationDetail": {
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Carregar mais",
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+	},
+	"LocationSelector": {
+		"Clear": "To clear",
+		"NoResult": "No results found",
+		"OSM": {
+			"text": "powered by {url}"
+		},
+		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
+		"Result": "Result {resultNumber} | Results {resultNumber}",
+		"SearchByName": "Search by name and city",
+		"Title": "Find your location"
+	},
+	"NotFound": {
+		"Subtitle": "The page you requested doesn't seem to exist...",
+		"Title": "Not found"
+	},
+	"PriceCard": {
+		"PriceDate": "on {date}",
+		"PriceValueDisplay": "{0} / kg",
+		"ProductQuantity": "{0} g",
+		"UnknownProduct": "Unknown product"
+	},
+	"PriceList": {
+		"LoadMore": "Carregar mais",
+		"Title": "Latest prices"
+	},
+	"ProductCard": {
+		"ProductQuantity": "{0} g",
+		"UnknownProduct": "Nome de produto desconhecido"
+	},
+	"ProductDetail": {
+		"CategoryNotFound": "Category not found...",
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Carregar mais",
+		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+	},
+	"ProductList": {
+		"Filter": "Filtro",
+		"HideProductsWithPrices": "Hide products with prices",
+		"LoadMore": "Carregar mais",
+		"Order": "Order",
+		"PriceNumber": "Number of prices added",
+		"ScanNumber": "Number of scans added",
+		"Title": "Top products"
+	},
+	"Router": {
+		"AddPrice": {
+			"Title": "Add a price"
+		},
+		"Home": {
+			"Title": "Início"
+		},
+		"LatestPrices": {
+			"Title": "Latest Prices"
+		},
+		"TopContributors": {
+			"Title": "Top Contributors"
+		},
+		"TopLocations": {
+			"Title": "Top Locations"
+		},
+		"TopProducts": {
+			"Title": "Top products"
+		}
+	},
+	"SignIn": {
+		"Button": "Iniciar sessão",
+		"Password": "Palavra-passe",
+		"ServerError": "Error: server error",
+		"Title": "Iniciar sessão",
+		"UseOFFCredentials": {
+			"Text": "Use your {url} credentials to sign in."
+		},
+		"UsernameLabel": "Username",
+		"WrongCredentials": "Error: wrong credentials"
+	},
+	"Stats": {
+		"Prices": "Prices",
+		"ProductsWithPrices": "Products with prices",
+		"Title": "Stats"
+	},
+	"UserDashboard": {
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Carregar mais",
+		"Title": "Dashboard"
+	},
+	"UserDetail": {
+		"LatestPrices": "Latest prices",
+		"LoadMore": "Carregar mais"
+	},
+	"UserSettings": {
+		"AddingPrices": "Adding prices",
+		"ChangeLanguage": "Mudar idioma",
+		"CountryLabel": "País",
+		"CurrencyLabel": "Currency",
+		"DefaultCurrency": "Default currency",
+		"LanguageLabel": "Idioma",
+		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
+		"Save": "Guardar",
+		"Title": "Definições"
+	}
+}
