@@ -102,7 +102,7 @@
             <v-row>
               <v-col>
                 <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</v-btn>
-                <a href="#" @click.prevent="$refs.proofCamera.click()">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</a>
+                <a href="#" @click.prevent="$refs.proofGallery.click()">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</a>
                 <v-file-input
                   class="d-none overflow-hidden"
                   ref="proofCamera"
