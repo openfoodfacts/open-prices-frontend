@@ -23,14 +23,14 @@
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"TakePicture": "画像を撮る",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "ギャラリーから選択"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "カテゴリー",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "バーコード入力",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
@@ -57,7 +57,7 @@
 	"BarcodeManualInput": {
 		"Barcode": "バーコード",
 		"Submit": "送信",
-		"Title": "Type a barcode"
+		"Title": "バーコード入力"
 	},
 	"BrandDetail": {
 		"LoadMore": "もっと読み込む",
