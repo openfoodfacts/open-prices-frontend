@@ -66,7 +66,9 @@
                 <v-checkbox v-for="lt in labelsTags" v-model="addPriceSingleForm.labels_tags" :label="lt.name" :value="lt.id" hide-details="auto"></v-checkbox>
               </div>
             </v-sheet>
-            <p v-if="(productMode === 'barcode' && !productBarcodeFormFilled) || (productMode === 'category' && !productCategoryFormFilled)" class="text-red mb-2"><i>{{ $t('AddPriceSingle.ProductInfo.SetProduct') }}</i></p>
+            <p v-if="!productFormFilled" class="text-red mt-2 mb-2">
+              <i>{{ $t('AddPriceSingle.ProductInfo.SetProduct') }}</i>
+            </p>
           </v-card-text>
         </v-card>
       </v-col>
@@ -134,8 +136,12 @@
                   @click:clear="clearProof"
                   :loading="createProofLoading">
                 </v-file-input>
-                <p v-if="proofFormFilled && !createProofLoading" class="text-green mb-2"><i>{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i></p>
-                <p v-if="!proofFormFilled && !createProofLoading" class="text-red mb-2"><i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i></p>
+                <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2">
+                  <i>{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
+                </p>
+                <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2">
+                  <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
+                </p>
               </v-col>
               <v-col v-if="proofFormFilled">
                 <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
@@ -465,11 +471,13 @@ export default {
   watch: {
     productMode(newProductMode, oldProductMode) {
       // reset product_code and category_tag when switching mode
-      this.addPriceSingleForm.product_code = ""
-      this.addPriceSingleForm.category_tag = null
-      this.addPriceSingleForm.origins_tags = ''
-      this.addPriceSingleForm.labels_tags = []
-      this.product = null
+      if (oldProductMode) {
+        this.addPriceSingleForm.product_code = ""
+        this.addPriceSingleForm.category_tag = null
+        this.addPriceSingleForm.origins_tags = ''
+        this.addPriceSingleForm.labels_tags = []
+        this.product = null
+      }
     }
   }
 }
