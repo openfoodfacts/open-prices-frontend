@@ -15,7 +15,10 @@
 	"AddPriceSingle": {
 		"Create": "Crear",
 		"PriceDetails": {
+			"Discount": "¿Descuento?",
 			"Label": "Precio",
+			"LabelDiscounted": "Precio con descuento",
+			"LabelFull": "Precio total",
 			"Proof": "Prueba",
 			"ProofUploaded": "¡Prueba cargada!",
 			"Text": "Precio {perKg}",
@@ -106,9 +109,11 @@
 		"Title": "Extraviado"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "en {date}",
 		"PriceValueDisplay": "{0} /kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "Precio total",
 		"UnknownProduct": "Producto desconocido"
 	},
 	"PriceList": {
