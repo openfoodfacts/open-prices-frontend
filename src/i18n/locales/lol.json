@@ -93,6 +93,10 @@
 		"LoadMore": "crwdns246634:0crwdne246634:0",
 		"LocationNotFound": "crwdns246636:0crwdne246636:0"
 	},
+	"LocationList": {
+		"Title": "crwdns246826:0crwdne246826:0",
+		"LoadMore": "crwdns246828:0crwdne246828:0"
+	},
 	"LocationSelector": {
 		"Clear": "crwdns246638:0crwdne246638:0",
 		"NoResult": "crwdns246640:0crwdne246640:0",
@@ -150,6 +154,9 @@
 		"LatestPrices": {
 			"Title": "crwdns246698:0crwdne246698:0"
 		},
+		"SignIn": {
+			"Title": "crwdns246830:0crwdne246830:0"
+		},
 		"TopContributors": {
 			"Title": "crwdns246700:0crwdne246700:0"
 		},
@@ -184,6 +191,10 @@
 	"UserDetail": {
 		"LatestPrices": "crwdns246732:0crwdne246732:0",
 		"LoadMore": "crwdns246734:0crwdne246734:0"
+	},
+	"UserList": {
+		"LoadMore": "crwdns246832:0crwdne246832:0",
+		"Title": "crwdns246834:0crwdne246834:0"
 	},
 	"UserSettings": {
 		"AddingPrices": "crwdns246736:0crwdne246736:0",
