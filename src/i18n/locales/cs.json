@@ -120,6 +120,7 @@
 		"UnknownProduct": "Neznámý název produktu"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Načíst další",
