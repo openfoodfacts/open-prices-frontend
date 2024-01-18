@@ -15,7 +15,10 @@
 	"AddPriceSingle": {
 		"Create": "crwdns246554:0crwdne246554:0",
 		"PriceDetails": {
+			"Discount": "crwdns246770:0crwdne246770:0",
 			"Label": "crwdns246556:0crwdne246556:0",
+			"LabelDiscounted": "crwdns246772:0crwdne246772:0",
+			"LabelFull": "crwdns246774:0crwdne246774:0",
 			"Proof": "crwdns246558:0crwdne246558:0",
 			"ProofUploaded": "crwdns246560:0crwdne246560:0",
 			"Text": "crwdns246562:0{perKg}crwdne246562:0",
@@ -106,9 +109,11 @@
 		"Title": "crwdns246654:0crwdne246654:0"
 	},
 	"PriceCard": {
+		"Discount": "crwdns246776:0crwdne246776:0",
 		"PriceDate": "crwdns246656:0{date}crwdne246656:0",
 		"PriceValueDisplay": "crwdns246658:0{0}crwdne246658:0",
 		"ProductQuantity": "crwdns246660:0{0}crwdne246660:0",
+		"FullPrice": "crwdns246778:0crwdne246778:0",
 		"UnknownProduct": "crwdns246662:0crwdne246662:0"
 	},
 	"PriceList": {
