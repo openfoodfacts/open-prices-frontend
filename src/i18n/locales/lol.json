@@ -15,19 +15,25 @@
 	"AddPriceSingle": {
 		"Create": "crwdns246554:0crwdne246554:0",
 		"PriceDetails": {
+			"Discount": "crwdns246770:0crwdne246770:0",
 			"Label": "crwdns246556:0crwdne246556:0",
+			"LabelDiscounted": "crwdns246772:0crwdne246772:0",
+			"LabelFull": "crwdns246774:0crwdne246774:0",
 			"Proof": "crwdns246558:0crwdne246558:0",
 			"ProofUploaded": "crwdns246560:0crwdne246560:0",
 			"Text": "crwdns246562:0{perKg}crwdne246562:0",
 			"TextPerKg": "crwdns246564:0crwdne246564:0",
 			"Title": "crwdns246566:0crwdne246566:0",
-			"UploadProof": "crwdns246568:0crwdne246568:0"
+			"UploadProof": "crwdns246568:0crwdne246568:0",
+			"TakePicture": "crwdns246756:0crwdne246756:0",
+			"SelectFromGallery": "crwdns246758:0crwdne246758:0"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "crwdns246570:0crwdne246570:0",
 			"OriginLabel": "crwdns246572:0crwdne246572:0",
 			"ProductCode": "crwdns246574:0crwdne246574:0",
 			"ScanBarcode": "crwdns246576:0crwdne246576:0",
+			"TypeBarcode": "crwdns246760:0crwdne246760:0",
 			"SetProduct": "crwdns246578:0crwdne246578:0",
 			"Title": "crwdns246580:0crwdne246580:0"
 		},
@@ -50,6 +56,11 @@
 			"Text": "crwdns246600:0{url}crwdne246600:0"
 		},
 		"Scan": "crwdns246602:0crwdne246602:0"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "crwdns246762:0crwdne246762:0",
+		"Submit": "crwdns246764:0crwdne246764:0",
+		"Title": "crwdns246766:0crwdne246766:0"
 	},
 	"BrandDetail": {
 		"LoadMore": "crwdns246604:0crwdne246604:0",
@@ -98,9 +109,11 @@
 		"Title": "crwdns246654:0crwdne246654:0"
 	},
 	"PriceCard": {
+		"Discount": "crwdns246776:0crwdne246776:0",
 		"PriceDate": "crwdns246656:0{date}crwdne246656:0",
 		"PriceValueDisplay": "crwdns246658:0{0}crwdne246658:0",
 		"ProductQuantity": "crwdns246660:0{0}crwdne246660:0",
+		"FullPrice": "crwdns246778:0crwdne246778:0",
 		"UnknownProduct": "crwdns246662:0crwdne246662:0"
 	},
 	"PriceList": {
@@ -112,6 +125,7 @@
 		"UnknownProduct": "crwdns246670:0crwdne246670:0"
 	},
 	"ProductDetail": {
+		"AddPrice": "crwdns246768:0crwdne246768:0",
 		"CategoryNotFound": "crwdns246672:0crwdne246672:0",
 		"LatestPrices": "crwdns246674:0crwdne246674:0",
 		"LoadMore": "crwdns246676:0crwdne246676:0",

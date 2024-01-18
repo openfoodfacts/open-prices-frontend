@@ -2,33 +2,39 @@
 	"AddPriceHome": {
 		"PriceCreated": "Preis erstellt!",
 		"ReceiptMode": {
-			"Subtitle": "Kommt in der Version 2 (helfen Sie uns!)",
+			"Subtitle": "Kommt in Version 2 (helfen Sie uns!)",
 			"Title": "Empfangsmodus"
 		},
 		"SignedIn": "Angemeldet!",
 		"SingleProductMode": {
-			"Subtitle": "Bereiten Sie Ihre Kamera vor :)",
+			"Subtitle": "Halten Sie Ihre Kamera bereit 🙂",
 			"Title": "Einzelproduktmodus"
 		},
-		"Title": "Füge einen Preis hinzu"
+		"Title": "Preis hinzufügen"
 	},
 	"AddPriceSingle": {
 		"Create": "Erstellen",
 		"PriceDetails": {
+			"Discount": "Discount?",
 			"Label": "Preis",
-			"Proof": "Beweis",
-			"ProofUploaded": "Beweis hochgeladen!",
+			"LabelDiscounted": "Discounted price",
+			"LabelFull": "Full price",
+			"Proof": "Nachweis",
+			"ProofUploaded": "Nachweis hochgeladen!",
 			"Text": "Preis {perKg}",
-			"TextPerKg": "pro Kg",
+			"TextPerKg": "pro kg",
 			"Title": "Preisdetails",
-			"UploadProof": "Laden Sie einen Beweis hoch"
+			"UploadProof": "Laden Sie einen Nachweis hoch",
+			"TakePicture": "Foto aufnehmen",
+			"SelectFromGallery": "Aus Ihrer Galerie auswählen"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
 			"OriginLabel": "Ursprung",
 			"ProductCode": "Produktcode",
-			"ScanBarcode": "Barcode scannen",
-			"SetProduct": "Legen Sie ein Produkt fest",
+			"ScanBarcode": "Strichcode einlesen",
+			"TypeBarcode": "Strichcode eingeben",
+			"SetProduct": "Produkt festlegen",
 			"Title": "Produktinformation"
 		},
 		"ProductModeList": {
@@ -41,15 +47,20 @@
 			"DateLabel": "Datum",
 			"Find": "Suchen",
 			"Location": "Ort",
-			"SelectLocation": "Wähle deinen Standort",
-			"Title": "Wo wann?"
+			"SelectLocation": "Wählen Sie Ihren Standort",
+			"Title": "Wo und wann?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "Bereitgestellt von {url}"
 		},
-		"Scan": "Barcode scannen"
+		"Scan": "Strichcode einlesen"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "Strichcode",
+		"Submit": "Senden",
+		"Title": "Strichcode eingeben"
 	},
 	"BrandDetail": {
 		"LoadMore": "Weitere laden",
@@ -58,29 +69,29 @@
 	"Footer": {
 		"About": "Über",
 		"Open_Prices_Project": {
-			"Text": "Open Prices ist ein {0} -Projekt.",
+			"Text": "Open Prices ist ein {0}-Projekt.",
 			"Url": "Open Food Facts"
 		},
 		"Stats": "Statistiken"
 	},
 	"Header": {
-		"Dashboard": "Instrumententafel",
+		"Dashboard": "Übersicht",
 		"Settings": "Einstellungen",
 		"Sign-out": "Abmelden",
 		"Title": "Open Prices"
 	},
 	"Home": {
-		"AddPrice": "Füge einen Preis hinzu",
+		"AddPrice": "Preis hinzufügen",
 		"SettingsUpdated": "Einstellungen aktualisiert!",
 		"Welcome": {
-			"Subtitle": "Eine offene Crowdsourcing-Datenbank mit Lebensmittelpreisen 🏷🍊💲",
+			"Subtitle": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise 🏷🍊💲",
 			"Title": "Willkommen bei Open Prices!"
 		}
 	},
 	"LocationDetail": {
 		"LatestPrices": "Aktuelle Preise",
 		"LoadMore": "Weitere laden",
-		"LocationNotFound": "Standort nicht in OpenStreetMap gefunden... Zögern Sie nicht, ihn hinzuzufügen :)"
+		"LocationNotFound": "Standort nicht in OpenStreetMap gefunden ... Zögern Sie nicht, ihn hinzuzufügen 🙂"
 	},
 	"LocationSelector": {
 		"Clear": "Löschen",
@@ -90,7 +101,7 @@
 		},
 		"RecentLocations": "Keine aktuellen Standorte | Aktueller Standort {recentLocationNumber}| Letzte Standorte {recentLocationNumber}",
 		"Result": "Ergebnis {resultNumber} | Ergebnisse {resultNumber}",
-		"SearchByName": "Suche nach Name und Stadt",
+		"SearchByName": "Name und Stadt suchen",
 		"Title": "Finden Sie Ihren Standort"
 	},
 	"NotFound": {
@@ -98,9 +109,11 @@
 		"Title": "Nicht gefunden"
 	},
 	"PriceCard": {
-		"PriceDate": "auf {date}",
+		"Discount": "Discount",
+		"PriceDate": "am {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "Full price",
 		"UnknownProduct": "Unbekanntes Produkt"
 	},
 	"PriceList": {
@@ -112,23 +125,24 @@
 		"UnknownProduct": "Unbekannter Produktname"
 	},
 	"ProductDetail": {
-		"CategoryNotFound": "Kategorie nicht gefunden...",
+		"AddPrice": "Preis hinzufügen",
+		"CategoryNotFound": "Kategorie nicht gefunden ...",
 		"LatestPrices": "Aktuelle Preise",
 		"LoadMore": "Weitere laden",
-		"ProductNotFound": "Produkt nicht in Open Food Facts gefunden... Zögern Sie nicht, es hinzuzufügen :)"
+		"ProductNotFound": "Produkt nicht in Open Food Facts gefunden... Zögern Sie nicht, es hinzuzufügen 🙂"
 	},
 	"ProductList": {
 		"Filter": "Filter",
 		"HideProductsWithPrices": "Produkte mit Preisen ausblenden",
 		"LoadMore": "Weitere laden",
-		"Order": "Ordnung",
+		"Order": "Reihenfolge",
 		"PriceNumber": "Anzahl der hinzugefügten Preise",
 		"ScanNumber": "Anzahl der hinzugefügten Scans",
 		"Title": "Top-Produkte"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Füge einen Preis hinzu"
+			"Title": "Preis hinzufügen"
 		},
 		"Home": {
 			"Title": "Startseite"
@@ -137,10 +151,10 @@
 			"Title": "Aktuelle Preise"
 		},
 		"TopContributors": {
-			"Title": "Top Anbieter"
+			"Title": "Top-Anbieter"
 		},
 		"TopLocations": {
-			"Title": "Top Standorte"
+			"Title": "Top-Standorte"
 		},
 		"TopProducts": {
 			"Title": "Top-Produkte"
@@ -152,10 +166,10 @@
 		"ServerError": "Fehler: Serverfehler",
 		"Title": "Anmelden",
 		"UseOFFCredentials": {
-			"Text": "Verwenden Sie Ihre {url} -Anmeldeinformationen, um sich anzumelden."
+			"Text": "Verwenden Sie Ihre {url} Anmeldeinformationen, um sich anzumelden."
 		},
-		"UsernameLabel": "Nutzername",
-		"WrongCredentials": "Fehler: falsche Anmeldeinformationen"
+		"UsernameLabel": "Benutzername",
+		"WrongCredentials": "Fehler: üngültige Anmeldeinformationen"
 	},
 	"Stats": {
 		"Prices": "Preise",
@@ -165,7 +179,7 @@
 	"UserDashboard": {
 		"LatestPrices": "Aktuelle Preise",
 		"LoadMore": "Weitere laden",
-		"Title": "Instrumententafel"
+		"Title": "Übersicht"
 	},
 	"UserDetail": {
 		"LatestPrices": "Aktuelle Preise",
@@ -178,7 +192,7 @@
 		"CurrencyLabel": "Währung",
 		"DefaultCurrency": "Standardwährung",
 		"LanguageLabel": "Sprachen",
-		"LocaleNotSupported": "Die Sprache wird noch nicht unterstützt. Die Sprache wird standardmäßig auf Englisch eingestellt",
+		"LocaleNotSupported": "Diese Sprache wird noch nicht unterstützt. Die Sprache wird auf Englisch festgelegt.",
 		"Save": "Speichern",
 		"Title": "Einstellungen"
 	}

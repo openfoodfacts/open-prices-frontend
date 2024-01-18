@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Prix créé !",
 		"ReceiptMode": {
-			"Subtitle": "Disponible bientôt dans la v2 (aidez nous!)",
+			"Subtitle": "Disponible bientôt dans la v2 (aidez nous !)",
 			"Title": "Mode d'ajout par ticket de caisse"
 		},
 		"SignedIn": "Connecté !",
@@ -15,19 +15,25 @@
 	"AddPriceSingle": {
 		"Create": "Créer",
 		"PriceDetails": {
+			"Discount": "Remise ?",
 			"Label": "Prix",
+			"LabelDiscounted": "Prix réduit",
+			"LabelFull": "Plein tarif",
 			"Proof": "Preuve",
 			"ProofUploaded": "Preuve envoyée !",
 			"Text": "Prix {perKg}",
 			"TextPerKg": "par kg",
 			"Title": "Détails du prix",
-			"UploadProof": "Envoyez une preuve"
+			"UploadProof": "Envoyez une preuve",
+			"TakePicture": "Prendre une photo",
+			"SelectFromGallery": "Sélectionnez dans votre galerie"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Catégorie",
 			"OriginLabel": "Origine",
 			"ProductCode": "Code produit",
 			"ScanBarcode": "Scannez un code-barres",
+			"TypeBarcode": "Tapez un code-barres",
 			"SetProduct": "Ajoutez un produit",
 			"Title": "Information du produit"
 		},
@@ -50,6 +56,11 @@
 			"Text": "fonctionne avec {url}"
 		},
 		"Scan": "Scannez un code-barres"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "Code-barres",
+		"Submit": "Envoyer",
+		"Title": "Tapez un code-barres"
 	},
 	"BrandDetail": {
 		"LoadMore": "Voir plus",
@@ -98,9 +109,11 @@
 		"Title": "Page inexistante"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "le {date}",
 		"PriceValueDisplay": "{0} /kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "Plein tarif",
 		"UnknownProduct": "Produit inconnu"
 	},
 	"PriceList": {
@@ -112,6 +125,7 @@
 		"UnknownProduct": "Produit inconnu"
 	},
 	"ProductDetail": {
+		"AddPrice": "Ajout d'un prix",
 		"CategoryNotFound": "Cette catégorie n'existe pas",
 		"LatestPrices": "Derniers prix ajoutés",
 		"LoadMore": "Voir plus",

@@ -15,19 +15,25 @@
 	"AddPriceSingle": {
 		"Create": "Sortu",
 		"PriceDetails": {
+			"Discount": "Deskonturik?",
 			"Label": "Price",
+			"LabelDiscounted": "Deskontua egindako prezioa",
+			"LabelFull": "Prezio osoa",
 			"Proof": "Proof",
 			"ProofUploaded": "Proof uploaded!",
 			"Text": "Price {perKg}",
 			"TextPerKg": "per kg",
 			"Title": "Price details",
-			"UploadProof": "Upload a proof"
+			"UploadProof": "Upload a proof",
+			"TakePicture": "Atera argazki bat",
+			"SelectFromGallery": "Hautatu galeriatik"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategoria",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
+			"TypeBarcode": "Idatzi barra-kode bat",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
@@ -50,6 +56,11 @@
 			"Text": "powered by {url}"
 		},
 		"Scan": "Scan a barcode"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "Barra-kodea",
+		"Submit": "Submit",
+		"Title": "Idatzi barra-kode bat"
 	},
 	"BrandDetail": {
 		"LoadMore": "Load more",
@@ -98,9 +109,11 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "Prezio osoa",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
@@ -112,6 +125,7 @@
 		"UnknownProduct": "Produktu-izen ezezaguna"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",

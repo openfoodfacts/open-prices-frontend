@@ -15,19 +15,25 @@
 	"AddPriceSingle": {
 		"Create": "Oluştur",
 		"PriceDetails": {
+			"Discount": "Discount?",
 			"Label": "Fiyat",
+			"LabelDiscounted": "Discounted price",
+			"LabelFull": "Full price",
 			"Proof": "Kanıt",
 			"ProofUploaded": "Kanıt yüklendi!",
 			"Text": "Fiyat {perKg}",
 			"TextPerKg": "kg başına",
 			"Title": "Fiyat ayrıntıları",
-			"UploadProof": "Bir kanıt yükleyin"
+			"UploadProof": "Bir kanıt yükleyin",
+			"TakePicture": "Resim çek",
+			"SelectFromGallery": "Galerinizden seçin"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Kaynak",
 			"ProductCode": "Ürün kodu",
 			"ScanBarcode": "Barkod tara",
+			"TypeBarcode": "Barkodu yazın",
 			"SetProduct": "Bir ürün ayarlayın",
 			"Title": "Ürün bilgisi"
 		},
@@ -50,6 +56,11 @@
 			"Text": "{url} tarafından desteklenmektedir"
 		},
 		"Scan": "Barkod tara"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "Barkod",
+		"Submit": "Gönder",
+		"Title": "Barkodu yazın"
 	},
 	"BrandDetail": {
 		"LoadMore": "Daha fazla yükle",
@@ -89,18 +100,20 @@
 			"text": "{url} tarafından desteklenmektedir"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search by name and city",
+		"Result": "Sonuç {resultNumber} | Sonuçlar {resultNumber}",
+		"SearchByName": "İsme ve şehre göre ara",
 		"Title": "Konumunuzu bulun"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
+		"Subtitle": "İstediğiniz sayfa mevcut değil gibi görünüyor...",
 		"Title": "Bulunamadı"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "{date} tarihinde",
 		"PriceValueDisplay": "{0} / kilo",
 		"ProductQuantity": "{0} gr",
+		"FullPrice": "Full price",
 		"UnknownProduct": "Bilinmeyen ürün"
 	},
 	"PriceList": {
@@ -112,6 +125,7 @@
 		"UnknownProduct": "Bilinmeyen ürün adı"
 	},
 	"ProductDetail": {
+		"AddPrice": "Fiyat ekleyin",
 		"CategoryNotFound": "Kategori bulunamadı...",
 		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
@@ -121,9 +135,9 @@
 		"Filter": "Filtrele",
 		"HideProductsWithPrices": "Ürünleri fiyatlarıyla gizle",
 		"LoadMore": "Daha fazla yükle",
-		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
+		"Order": "Sipariş",
+		"PriceNumber": "Eklenen fiyat sayısı",
+		"ScanNumber": "Eklenen tarama sayısı",
 		"Title": "En iyi ürünler"
 	},
 	"Router": {
@@ -134,7 +148,7 @@
 			"Title": "Ana Sayfa"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "Son Fiyatlar"
 		},
 		"TopContributors": {
 			"Title": "En çok katkıda bulunanlar"

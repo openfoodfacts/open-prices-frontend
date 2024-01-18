@@ -15,19 +15,25 @@
 	"AddPriceSingle": {
 		"Create": "Create",
 		"PriceDetails": {
+			"Discount": "ディスカウント",
 			"Label": "Price",
+			"LabelDiscounted": "割引価格",
+			"LabelFull": "正規価格",
 			"Proof": "Proof",
 			"ProofUploaded": "Proof uploaded!",
 			"Text": "Price {perKg}",
 			"TextPerKg": "per kg",
 			"Title": "Price details",
-			"UploadProof": "Upload a proof"
+			"UploadProof": "Upload a proof",
+			"TakePicture": "画像を撮る",
+			"SelectFromGallery": "ギャラリーから選択"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "カテゴリー",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
+			"TypeBarcode": "バーコード入力",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
@@ -50,6 +56,11 @@
 			"Text": "powered by {url}"
 		},
 		"Scan": "Scan a barcode"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "バーコード",
+		"Submit": "送信",
+		"Title": "バーコード入力"
 	},
 	"BrandDetail": {
 		"LoadMore": "もっと読み込む",
@@ -98,9 +109,11 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "正規価格",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
@@ -112,6 +125,7 @@
 		"UnknownProduct": "不明な製品名"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "もっと読み込む",

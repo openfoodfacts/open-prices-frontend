@@ -15,19 +15,25 @@
 	"AddPriceSingle": {
 		"Create": "Create",
 		"PriceDetails": {
+			"Discount": "Discount?",
 			"Label": "Price",
+			"LabelDiscounted": "Discounted price",
+			"LabelFull": "Full price",
 			"Proof": "Proof",
 			"ProofUploaded": "Proof uploaded!",
 			"Text": "Price {perKg}",
 			"TextPerKg": "per kg",
 			"Title": "Price details",
-			"UploadProof": "Upload a proof"
+			"UploadProof": "Upload a proof",
+			"TakePicture": "Uslikaj",
+			"SelectFromGallery": "Select from your gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorija",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
+			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
@@ -50,6 +56,11 @@
 			"Text": "powered by {url}"
 		},
 		"Scan": "Scan a barcode"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "Barkod",
+		"Submit": "Submit",
+		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
 		"LoadMore": "Load more",
@@ -98,9 +109,11 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "Full price",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
@@ -112,6 +125,7 @@
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",

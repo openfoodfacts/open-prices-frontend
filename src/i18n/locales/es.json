@@ -15,19 +15,25 @@
 	"AddPriceSingle": {
 		"Create": "Crear",
 		"PriceDetails": {
+			"Discount": "¿Descuento?",
 			"Label": "Precio",
+			"LabelDiscounted": "Precio con descuento",
+			"LabelFull": "Precio total",
 			"Proof": "Prueba",
 			"ProofUploaded": "¡Prueba cargada!",
 			"Text": "Precio {perKg}",
 			"TextPerKg": "por kg",
 			"Title": "Detalles del precio",
-			"UploadProof": "Sube una prueba"
+			"UploadProof": "Sube una prueba",
+			"TakePicture": "Saca una foto",
+			"SelectFromGallery": "Select from your gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoría",
 			"OriginLabel": "Origen",
 			"ProductCode": "Código del producto",
 			"ScanBarcode": "Escanear un código de barras",
+			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Establecer un producto",
 			"Title": "Información del producto"
 		},
@@ -50,6 +56,11 @@
 			"Text": "con tecnología de {url}"
 		},
 		"Scan": "Escanear un código de barras"
+	},
+	"BarcodeManualInput": {
+		"Barcode": "Código de barras",
+		"Submit": "Enviar",
+		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
 		"LoadMore": "Carga más",
@@ -98,9 +109,11 @@
 		"Title": "Extraviado"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "en {date}",
 		"PriceValueDisplay": "{0} /kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "Precio total",
 		"UnknownProduct": "Producto desconocido"
 	},
 	"PriceList": {
@@ -112,6 +125,7 @@
 		"UnknownProduct": "Nombre de producto desconocido"
 	},
 	"ProductDetail": {
+		"AddPrice": "Agregar un precio",
 		"CategoryNotFound": "Categoría no encontrada...",
 		"LatestPrices": "Últimos precios",
 		"LoadMore": "Carga más",
