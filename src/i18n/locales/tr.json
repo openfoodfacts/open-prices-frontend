@@ -64,7 +64,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Daha fazla yükle",
-		"TopProducts": "En iyi ürünler"
+		"TopProducts": "Top Products"
 	},
 	"Footer": {
 		"About": "Hakkında",
@@ -94,7 +94,7 @@
 		"LocationNotFound": "OpenStreetMap'te konum bulunamadı... Eklemekten çekinmeyin :)"
 	},
 	"LocationList": {
-		"Title": "En İyi Yerler",
+		"Title": "Top locations",
 		"LoadMore": "Daha fazla yükle"
 	},
 	"LocationSelector": {
@@ -152,16 +152,16 @@
 			"Title": "Ana Sayfa"
 		},
 		"LatestPrices": {
-			"Title": "Son Fiyatlar"
+			"Title": "Son fiyatlar"
 		},
 		"SignIn": {
 			"Title": "Giriş Yap"
 		},
 		"TopContributors": {
-			"Title": "En çok katkıda bulunanlar"
+			"Title": "Top contributors"
 		},
 		"TopLocations": {
-			"Title": "En İyi Yerler"
+			"Title": "Top locations"
 		},
 		"TopProducts": {
 			"Title": "En iyi ürünler"
@@ -194,7 +194,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Daha fazla yükle",
-		"Title": "En çok katkıda bulunanlar"
+		"Title": "Top contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Fiyat ekleme",
