@@ -26,11 +26,11 @@
 
       <v-card-text v-if="results && Array.isArray(results)">
         <h3>
-          <i18n-t keypath="LocationSelector.Result" tag="p">
+          <i18n-t keypath="LocationSelector.Result" tag="span">
             <template v-slot:resultNumber>
               <small>{{ results.length }}</small>
             </template>
-          </i18n-t> 
+          </i18n-t>
         </h3>
         <v-row>
           <v-col cols="12" sm="6">
@@ -67,11 +67,11 @@
 
       <v-card-text v-if="recentLocations.length">
         <h3 class="mb-1">
-          <i18n-t keypath="LocationSelector.RecentLocations" tag="p">
+          <i18n-t keypath="LocationSelector.RecentLocations" tag="span">
             <template v-slot:recentLocationNumber>
               <small>{{ recentLocations.length }}</small>
             </template>
-          </i18n-t> 
+          </i18n-t>
         </h3>
         <v-chip
           class="mb-2"
@@ -93,7 +93,7 @@
 
       <v-card-text>
         <div class="float-right">
-          <i18n-t keypath="LocationSelector.OSM.text" tag="p">
+          <i18n-t keypath="LocationSelector.OSM.text" tag="span">
             <template #url>
               <a href="https://nominatim.openstreetmap.org" target="_blank">OpenStreetMap Nominatim</a>
             </template>

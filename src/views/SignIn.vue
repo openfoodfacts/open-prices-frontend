@@ -6,7 +6,7 @@
     type="info"
     variant="outlined"
   >
-    <i18n-t keypath="SignIn.UseOFFCredentials.Text" tag="p">
+    <i18n-t keypath="SignIn.UseOFFCredentials.Text" tag="span">
       <template #url>
         <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
       </template>

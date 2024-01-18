@@ -15,7 +15,7 @@
 
       <v-card-text>
         <div class="float-right">
-          <i18n-t keypath="BarcodeScanner.Htlm5-qrcode.Text" tag="p">
+          <i18n-t keypath="BarcodeScanner.Htlm5-qrcode.Text" tag="span">
             <template #url>
               <a href="https://github.com/mebjas/html5-qrcode" target="_blank">html5-qrcode</a>
             </template>

@@ -83,7 +83,7 @@
           <v-divider></v-divider>
           <v-card-text>
             <h3 class="mb-1">
-              <i18n-t keypath="AddPriceSingle.PriceDetails.Text" tag="p">
+              <i18n-t keypath="AddPriceSingle.PriceDetails.Text" tag="span">
                 <template #perKg>
                   <span v-if="productMode === 'category'">{{ $t('AddPriceSingle.PriceDetails.TextPerKg') }}</span>
                 </template>
