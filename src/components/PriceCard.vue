@@ -34,10 +34,13 @@
           </p>
 
           <p v-if="price">
-            <span class="mr-1">{{ getPriceValueDisplay() }}</span>
+            <span class="mr-1">{{ getPriceValueDisplay(price.price) }}</span>
             <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerKilo() }})</span>
             <span v-if="price.price_without_discount">
-              <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">{{ $t('PriceCard.Discount') }}</v-chip>
+              <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">
+                {{ $t('PriceCard.Discount') }}
+                <v-tooltip activator="parent" location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(price.price_without_discount) }}</v-tooltip>
+              </v-chip>
             </span>
             <i18n-t keypath="PriceCard.PriceDate" tag="span">
               <template v-slot:date>
@@ -193,11 +196,11 @@ export default {
         maximumFractionDigits: 2
       })
     },
-    getPriceValueDisplay() {
+    getPriceValueDisplay(price) {
       if (this.hasCategoryTag) {
-        return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(this.priceValue, this.priceCurrency)])
+        return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(price, this.priceCurrency)])
       }
-      return this.getPriceValue(this.priceValue, this.priceCurrency)
+      return this.getPriceValue(price, this.priceCurrency)
     },
     getPricePerKilo() {
       const productQuantity = this.price.product.product_quantity
