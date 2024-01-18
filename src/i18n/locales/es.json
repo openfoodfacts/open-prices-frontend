@@ -26,14 +26,14 @@
 			"Title": "Detalles del precio",
 			"UploadProof": "Sube una prueba",
 			"TakePicture": "Saca una foto",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Selecciona de tu galería"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoría",
 			"OriginLabel": "Origen",
 			"ProductCode": "Código del producto",
 			"ScanBarcode": "Escanear un código de barras",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Introducir código de barras",
 			"SetProduct": "Establecer un producto",
 			"Title": "Información del producto"
 		},
@@ -60,7 +60,7 @@
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
 		"Submit": "Enviar",
-		"Title": "Type a barcode"
+		"Title": "Introducir código de barras"
 	},
 	"BrandDetail": {
 		"LoadMore": "Carga más",
@@ -109,7 +109,7 @@
 		"Title": "Extraviado"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "Descuento",
 		"PriceDate": "en {date}",
 		"PriceValueDisplay": "{0} /kg",
 		"ProductQuantity": "{0} g",

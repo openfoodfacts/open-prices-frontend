@@ -2,23 +2,23 @@
 	"AddPriceHome": {
 		"PriceCreated": "Prix créé !",
 		"ReceiptMode": {
-			"Subtitle": "Disponible bientôt dans la v2 (aidez nous !)",
+			"Subtitle": "Disponible bientôt dans la v2 (aidez-nous !)",
 			"Title": "Mode d'ajout par ticket de caisse"
 		},
 		"SignedIn": "Connecté !",
 		"SingleProductMode": {
 			"Subtitle": "Préparez votre caméra :)",
-			"Title": "Mode d'ajout de prix unique"
+			"Title": "Mode d'ajout simple"
 		},
-		"Title": "Ajout d'un prix"
+		"Title": "Ajouter un prix"
 	},
 	"AddPriceSingle": {
 		"Create": "Créer",
 		"PriceDetails": {
-			"Discount": "Remise ?",
+			"Discount": "Promo ?",
 			"Label": "Prix",
-			"LabelDiscounted": "Prix réduit",
-			"LabelFull": "Plein tarif",
+			"LabelDiscounted": "Prix en promo",
+			"LabelFull": "Prix d'origine",
 			"Proof": "Preuve",
 			"ProofUploaded": "Preuve envoyée !",
 			"Text": "Prix {perKg}",
@@ -81,7 +81,7 @@
 		"Title": "Open Prices"
 	},
 	"Home": {
-		"AddPrice": "Ajout d'un prix",
+		"AddPrice": "Ajouter un prix",
 		"SettingsUpdated": "Paramètres mis à jour !",
 		"Welcome": {
 			"Subtitle": "Une base de données open source collaborative de prix de produits alimentaires 🏷🍊💲",
@@ -109,11 +109,11 @@
 		"Title": "Page inexistante"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "Promo",
 		"PriceDate": "le {date}",
 		"PriceValueDisplay": "{0} /kg",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Plein tarif",
+		"FullPrice": "Prix d'origine",
 		"UnknownProduct": "Produit inconnu"
 	},
 	"PriceList": {
@@ -125,7 +125,7 @@
 		"UnknownProduct": "Produit inconnu"
 	},
 	"ProductDetail": {
-		"AddPrice": "Ajout d'un prix",
+		"AddPrice": "Ajouter un prix",
 		"CategoryNotFound": "Cette catégorie n'existe pas",
 		"LatestPrices": "Derniers prix ajoutés",
 		"LoadMore": "Voir plus",
@@ -142,7 +142,7 @@
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Ajout d'un prix"
+			"Title": "Ajouter un prix"
 		},
 		"Home": {
 			"Title": "Accueil"

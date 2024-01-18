@@ -15,10 +15,10 @@
 	"AddPriceSingle": {
 		"Create": "Створити",
 		"PriceDetails": {
-			"Discount": "Discount?",
+			"Discount": "Знижка?",
 			"Label": "Ціна",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
+			"LabelDiscounted": "Ціна зі знижкою",
+			"LabelFull": "Повна ціна",
 			"Proof": "Доказ",
 			"ProofUploaded": "Proof uploaded!",
 			"Text": "Price {perKg}",
@@ -109,11 +109,11 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "Знижка",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Full price",
+		"FullPrice": "Повна ціна",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
