@@ -15,7 +15,10 @@
 	"AddPriceSingle": {
 		"Create": "Erstellen",
 		"PriceDetails": {
+			"Discount": "Discount?",
 			"Label": "Preis",
+			"LabelDiscounted": "Discounted price",
+			"LabelFull": "Full price",
 			"Proof": "Nachweis",
 			"ProofUploaded": "Nachweis hochgeladen!",
 			"Text": "Preis {perKg}",
@@ -75,7 +78,7 @@
 		"Dashboard": "Übersicht",
 		"Settings": "Einstellungen",
 		"Sign-out": "Abmelden",
-		"Title": "Offene Preise"
+		"Title": "Open Prices"
 	},
 	"Home": {
 		"AddPrice": "Preis hinzufügen",
@@ -106,9 +109,11 @@
 		"Title": "Nicht gefunden"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "am {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "Full price",
 		"UnknownProduct": "Unbekanntes Produkt"
 	},
 	"PriceList": {
