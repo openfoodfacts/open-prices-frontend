@@ -120,6 +120,7 @@
 		"UnknownProduct": "Nom de producte desconegut"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Carrega mes ",
