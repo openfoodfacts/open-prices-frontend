@@ -109,7 +109,7 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "ディスカウント",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
