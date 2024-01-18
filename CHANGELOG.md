@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.24.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.23.0...v1.24.0) (2024-01-18)
+
+
+### Features
+
+* **l10n:** New Crowdin translations to review and merge ([#166](https://github.com/openfoodfacts/open-prices-frontend/issues/166)) ([289cfaf](https://github.com/openfoodfacts/open-prices-frontend/commit/289cfaf8063de60767a21a566bd15ffa96b1dcce))
+* **l10n:** New Crowdin translations to review and merge ([#175](https://github.com/openfoodfacts/open-prices-frontend/issues/175)) ([d8e7c15](https://github.com/openfoodfacts/open-prices-frontend/commit/d8e7c1548279fba1bd6f452301e7e1898571eb0f))
+* **price card:** show discount tag with tooltip ([#173](https://github.com/openfoodfacts/open-prices-frontend/issues/173)) ([7e4e8e3](https://github.com/openfoodfacts/open-prices-frontend/commit/7e4e8e3c0d78cf2c6fa4b07e958326cd99a17b54))
+* **price create form:** allow uploading heic images. ref [#170](https://github.com/openfoodfacts/open-prices-frontend/issues/170) ([b61c133](https://github.com/openfoodfacts/open-prices-frontend/commit/b61c1336e2c3760ef226750bbf501cbe75a599f8))
+* **price create form:** init form with code param from product detail CTA ([#168](https://github.com/openfoodfacts/open-prices-frontend/issues/168)) ([55c6c87](https://github.com/openfoodfacts/open-prices-frontend/commit/55c6c8757ba6188930d95f9741c510e89356576d))
+* **price create form:** manage discounted prices ([#171](https://github.com/openfoodfacts/open-prices-frontend/issues/171)) ([c7ba641](https://github.com/openfoodfacts/open-prices-frontend/commit/c7ba641e488dc57654d779324e698e27e8b3b709))
+
+
+### Bug Fixes
+
+* **i18n:** fix i18n template labels. ref [#154](https://github.com/openfoodfacts/open-prices-frontend/issues/154) ([b5d4282](https://github.com/openfoodfacts/open-prices-frontend/commit/b5d4282cebe574f6d973d076489c51196d92a25d))
+* **l10n:** change config to simplify PR from crowdin ([#174](https://github.com/openfoodfacts/open-prices-frontend/issues/174)) ([4813986](https://github.com/openfoodfacts/open-prices-frontend/commit/48139862f1591d2b11b3691a8956819f86711d8a))
+* **price create form:** fix product init from code param (hide error msg). ref [#168](https://github.com/openfoodfacts/open-prices-frontend/issues/168) ([d4a356e](https://github.com/openfoodfacts/open-prices-frontend/commit/d4a356e315911428b681e3ee0b5873267352fd96))
+
 ## [1.23.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.22.0...v1.23.0) (2024-01-17)
 
 
