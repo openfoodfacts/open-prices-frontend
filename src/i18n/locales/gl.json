@@ -64,7 +64,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Cargar máis",
-		"TopProducts": "Top products"
+		"TopProducts": "Top Products"
 	},
 	"Footer": {
 		"About": "Sobre",
@@ -94,7 +94,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
-		"Title": "Top Locations",
+		"Title": "Top locations",
 		"LoadMore": "Cargar máis"
 	},
 	"LocationSelector": {
@@ -152,16 +152,16 @@
 			"Title": "Inicio"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "Latest prices"
 		},
 		"SignIn": {
 			"Title": "Iniciar sesión"
 		},
 		"TopContributors": {
-			"Title": "Top Contributors"
+			"Title": "Top contributors"
 		},
 		"TopLocations": {
-			"Title": "Top Locations"
+			"Title": "Top locations"
 		},
 		"TopProducts": {
 			"Title": "Top products"
@@ -194,7 +194,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Cargar máis",
-		"Title": "Top Contributors"
+		"Title": "Top contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
