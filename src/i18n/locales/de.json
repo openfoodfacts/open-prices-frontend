@@ -158,7 +158,7 @@
 			"Title": "Anmelden"
 		},
 		"TopContributors": {
-			"Title": "Top-Anbieter"
+			"Title": "Aktivste Mitwirkende"
 		},
 		"TopLocations": {
 			"Title": "Top-Standorte"
@@ -194,7 +194,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Weitere laden",
-		"Title": "Top-Anbieter"
+		"Title": "Aktivste Mitwirkende"
 	},
 	"UserSettings": {
 		"AddingPrices": "Preise hinzufügen",
