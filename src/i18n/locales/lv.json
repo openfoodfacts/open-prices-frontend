@@ -15,7 +15,10 @@
 	"AddPriceSingle": {
 		"Create": "Izveidot",
 		"PriceDetails": {
+			"Discount": "Discount?",
 			"Label": "Price",
+			"LabelDiscounted": "Discounted price",
+			"LabelFull": "Full price",
 			"Proof": "Proof",
 			"ProofUploaded": "Proof uploaded!",
 			"Text": "Price {perKg}",
@@ -106,9 +109,11 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "Full price",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
