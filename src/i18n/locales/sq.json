@@ -120,6 +120,7 @@
 		"UnknownProduct": "Emer i panjohur produkti."
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
