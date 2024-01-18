@@ -64,7 +64,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Carregar mais",
-		"TopProducts": "Principais produtos"
+		"TopProducts": "Top Products"
 	},
 	"Footer": {
 		"About": "Sobre",
@@ -94,7 +94,7 @@
 		"LocationNotFound": "Localização não encontrada no OpenStreetMap... Não hesite em adicioná-la :)"
 	},
 	"LocationList": {
-		"Title": "Principais Locais",
+		"Title": "Top locations",
 		"LoadMore": "Carregar mais"
 	},
 	"LocationSelector": {
@@ -158,10 +158,10 @@
 			"Title": "Iniciar sessão"
 		},
 		"TopContributors": {
-			"Title": "Maiores Contribuidores"
+			"Title": "Top contributors"
 		},
 		"TopLocations": {
-			"Title": "Principais Locais"
+			"Title": "Top locations"
 		},
 		"TopProducts": {
 			"Title": "Principais produtos"
@@ -194,7 +194,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Carregar mais",
-		"Title": "Maiores Contribuidores"
+		"Title": "Top contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adicionando preços",
