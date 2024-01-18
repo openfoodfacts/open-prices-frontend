@@ -32,7 +32,7 @@
 
   <v-row v-if="userList.length < userTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getUsers">Load more</v-btn>
+      <v-btn size="small" :loading="loading" @click="getUsers">{{ $t('UserList.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
 </template>

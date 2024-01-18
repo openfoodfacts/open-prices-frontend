@@ -122,7 +122,7 @@
                   ref="proofCamera"
                   v-model="proofImage"
                   capture="environment"
-                  accept="image/*, .heic"
+                  accept="image/*"
                   @change="uploadProof"
                   @click:clear="clearProof"
                   :loading="createProofLoading">
