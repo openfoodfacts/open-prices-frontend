@@ -88,16 +88,28 @@
               </i18n-t>
             </h3>
             <v-row>
-              <v-col cols="12" sm="6">
+              <v-col :cols="priceDiscounted ? '6' : '12'" sm="6">
                 <v-text-field
                   v-model="addPriceSingleForm.price"
-                  :label="$t('AddPriceSingle.PriceDetails.Label')"
+                  :label="priceDiscounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
+                  type="number"
+                  hide-details="auto"
+                  :suffix="addPriceSingleForm.currency"
+                ></v-text-field>
+              </v-col>
+              <v-col v-if="priceDiscounted" cols="6">
+                <v-text-field
+                  v-model="addPriceSingleForm.price_without_discount"
+                  :label="$t('AddPriceSingle.PriceDetails.LabelFull')"
                   type="number"
                   hide-details="auto"
                   :suffix="addPriceSingleForm.currency"
                 ></v-text-field>
               </v-col>
             </v-row>
+            <div class="d-inline">
+              <v-checkbox v-model="priceDiscounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
+            </div>
             <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.PriceDetails.Proof') }}</h3>
             <v-row>
               <v-col>

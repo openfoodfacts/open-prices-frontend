@@ -15,7 +15,10 @@
 	"AddPriceSingle": {
 		"Create": "Create",
 		"PriceDetails": {
+			"Discount": "Discount?",
 			"Label": "Price",
+			"LabelDiscounted": "Discounted price",
+			"LabelFull": "Full price",
 			"Proof": "Proof",
 			"ProofUploaded": "Proof uploaded!",
 			"Text": "Price {perKg}",
