@@ -64,7 +64,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Carrega mes ",
-		"TopProducts": "Els millors productes"
+		"TopProducts": "Top Products"
 	},
 	"Footer": {
 		"About": "Quant a",
@@ -94,7 +94,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
-		"Title": "Top Locations",
+		"Title": "Top locations",
 		"LoadMore": "Carrega mes "
 	},
 	"LocationSelector": {
@@ -152,16 +152,16 @@
 			"Title": "Inici"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "Últims preus"
 		},
 		"SignIn": {
 			"Title": "Inicia la sessió"
 		},
 		"TopContributors": {
-			"Title": "Top Contributors"
+			"Title": "Top contributors"
 		},
 		"TopLocations": {
-			"Title": "Top Locations"
+			"Title": "Top locations"
 		},
 		"TopProducts": {
 			"Title": "Els millors productes"
@@ -194,7 +194,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Carrega mes ",
-		"Title": "Top Contributors"
+		"Title": "Top contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
