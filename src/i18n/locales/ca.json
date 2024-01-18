@@ -1,133 +1,133 @@
 {
 	"AddPriceHome": {
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Preu afegit!",
 		"ReceiptMode": {
-			"Subtitle": "Coming in the v2 (help us!)",
-			"Title": "Receipt mode"
+			"Subtitle": "Disponible a la v2 (ajudeu-nos!)",
+			"Title": "Mode tiquets"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Sessió iniciada!",
 		"SingleProductMode": {
-			"Subtitle": "Get your camera ready :)",
-			"Title": "Single product mode"
+			"Subtitle": "Prepara la càmera :)",
+			"Title": "Mode producte únic"
 		},
-		"Title": "Add a price"
+		"Title": "Afegir un preu"
 	},
 	"AddPriceSingle": {
 		"Create": "Crea",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofUploaded": "Proof uploaded!",
-			"Text": "Price {perKg}",
+			"Discount": "Descompte?",
+			"Label": "Preu",
+			"LabelDiscounted": "Preu rebaixat",
+			"LabelFull": "Preu total",
+			"Proof": "Prova",
+			"ProofUploaded": "S'ha carregat la prova!",
+			"Text": "Preu {perKg}",
 			"TextPerKg": "per kg",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"Title": "Detall de preus",
+			"UploadProof": "Carregueu una prova",
 			"TakePicture": "Fer una foto",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Seleccioneu de la galeria"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
-			"OriginLabel": "Origin",
-			"ProductCode": "Product code",
-			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
+			"OriginLabel": "Origen",
+			"ProductCode": "Codi de producte",
+			"ScanBarcode": "Escaneja el codi de barres",
+			"TypeBarcode": "Escriu el codi de barres",
 			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"Title": "Informació del producte"
 		},
 		"ProductModeList": {
 			"Barcode": "Codi de barres",
 			"Category": "Categoria"
 		},
-		"Title": "Add a single price",
+		"Title": "Afegeix un preu",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Data",
+			"DateLabel": "Data",
 			"Find": "Cerca",
-			"Location": "Location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Ubicació",
+			"SelectLocation": "Seleccioneu la vostra ubicació",
+			"Title": "On i quan?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "funciona amb {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Escaneja el codi de barres"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Codi de barres",
 		"Submit": "Envia",
-		"Title": "Type a barcode"
+		"Title": "Escriu el codi de barres"
 	},
 	"BrandDetail": {
 		"LoadMore": "Carrega mes ",
-		"TopProducts": "Top products"
+		"TopProducts": "Els millors productes"
 	},
 	"Footer": {
 		"About": "Quant a",
 		"Open_Prices_Project": {
-			"Text": "Open Prices is an {0} project.",
+			"Text": "Open Prices és un projecte de {0}.",
 			"Url": "Open Food Facts"
 		},
-		"Stats": "Stats"
+		"Stats": "Estadístiques"
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Tauler",
 		"Settings": "Preferències",
 		"Sign-out": "Tanca la sessió",
 		"Title": "Open Prices"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"SettingsUpdated": "Settings updated!",
+		"AddPrice": "Afegir un preu",
+		"SettingsUpdated": "Configuració modificada!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to Open Prices!"
+			"Subtitle": "Una base de dades oberta amb els preus dels aliments 🏷🍊💲",
+			"Title": "Benvingut a Open Prices!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Últims preus",
 		"LoadMore": "Carrega mes ",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
 		"Clear": "To clear",
-		"NoResult": "No results found",
+		"NoResult": "No s'han trobat resultats",
 		"OSM": {
-			"text": "powered by {url}"
+			"text": "funciona amb {url}"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search by name and city",
-		"Title": "Find your location"
+		"Title": "Seleccioneu la vostra ubicació"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "Sembla que la pàgina que has sol·licitat no existeix...",
+		"Title": "No s'ha trobat"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
+		"Discount": "Descompte",
+		"PriceDate": "el {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Full price",
+		"FullPrice": "Preu total",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
 		"LoadMore": "Carrega mes ",
-		"Title": "Latest prices"
+		"Title": "Últims preus"
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Nom de producte desconegut"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Afegir un preu",
 		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Últims preus",
 		"LoadMore": "Carrega mes ",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
@@ -138,11 +138,11 @@
 		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Title": "Els millors productes"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Afegir un preu"
 		},
 		"Home": {
 			"Title": "Inici"
@@ -157,7 +157,7 @@
 			"Title": "Top Locations"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Els millors productes"
 		}
 	},
 	"SignIn": {
@@ -174,15 +174,15 @@
 	"Stats": {
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Title": "Estadístiques"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Últims preus",
 		"LoadMore": "Carrega mes ",
-		"Title": "Dashboard"
+		"Title": "Tauler"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Últims preus",
 		"LoadMore": "Carrega mes "
 	},
 	"UserSettings": {
