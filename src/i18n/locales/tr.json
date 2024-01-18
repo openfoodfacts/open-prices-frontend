@@ -120,6 +120,7 @@
 		"UnknownProduct": "Bilinmeyen ürün adı"
 	},
 	"ProductDetail": {
+		"AddPrice": "Fiyat ekleyin",
 		"CategoryNotFound": "Kategori bulunamadı...",
 		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
