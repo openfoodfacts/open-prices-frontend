@@ -108,7 +108,7 @@
                   ref="proofCamera"
                   v-model="proofImage"
                   capture="environment"
-                  accept="image/*"
+                  accept="image/*, .heic"
                   @change="uploadProof"
                   @click:clear="clearProof"
                   :loading="createProofLoading">
@@ -117,7 +117,7 @@
                   class="d-none overflow-hidden"
                   ref="proofGallery"
                   v-model="proofImage"
-                  accept="image/*"
+                  accept="image/*, .heic"
                   @change="uploadProof"
                   @click:clear="clearProof"
                   :loading="createProofLoading">
@@ -253,7 +253,10 @@ export default {
       createPriceLoading: false,
       // product data
       product: null,
-      productModeList: [{key: 'barcode', value: this.$t('AddPriceSingle.ProductModeList.Barcode'), icon: 'mdi-barcode-scan'}, {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}],
+      productModeList: [
+        {key: 'barcode', value: this.$t('AddPriceSingle.ProductModeList.Barcode'), icon: 'mdi-barcode-scan'},
+        {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}
+      ],
       productMode: null,  // 'barcode' or 'category'  // see initPriceSingleForm
       categoryTags: CategoryTags,  // list of category tags for autocomplete
       originsTags: OriginsTags,  // list of origins tags for autocomplete
