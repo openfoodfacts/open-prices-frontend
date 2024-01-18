@@ -120,6 +120,7 @@
 		"UnknownProduct": "不明な製品名"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "もっと読み込む",
