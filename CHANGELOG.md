@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.24.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.24.1...v1.24.2) (2024-01-18)
+
+
+### Bug Fixes
+
+* **l10n:** avoid mixing capital letters in titles (en) ([8c539c6](https://github.com/openfoodfacts/open-prices-frontend/commit/8c539c6bbddc1082e5357b53dd257c8efea421af))
+* **l10n:** New Crowdin translations to review and merge ([#176](https://github.com/openfoodfacts/open-prices-frontend/issues/176)) ([0d2439b](https://github.com/openfoodfacts/open-prices-frontend/commit/0d2439be69b451850c96f2d7717d29c86e2eabb1))
+* **price create form:** tentative fix to show camera directly again. ref [#170](https://github.com/openfoodfacts/open-prices-frontend/issues/170) ([33cf753](https://github.com/openfoodfacts/open-prices-frontend/commit/33cf75362bb4ffd311f43d1cc813211b1d9e930c))
+
 ## [1.24.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.24.0...v1.24.1) (2024-01-18)
 
 
