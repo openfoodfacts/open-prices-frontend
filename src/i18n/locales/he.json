@@ -120,6 +120,7 @@
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "לטעון עוד",
