@@ -120,6 +120,7 @@
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Last inn flere",
