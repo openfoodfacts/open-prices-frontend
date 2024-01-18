@@ -93,6 +93,10 @@
 		"LoadMore": "Carregar mais",
 		"LocationNotFound": "Localização não encontrada no OpenStreetMap... Não hesite em adicioná-la :)"
 	},
+	"LocationList": {
+		"Title": "Principais Locais",
+		"LoadMore": "Carregar mais"
+	},
 	"LocationSelector": {
 		"Clear": "To clear",
 		"NoResult": "Nenhum resultado encontrado",
@@ -150,6 +154,9 @@
 		"LatestPrices": {
 			"Title": "Preços mais recentes"
 		},
+		"SignIn": {
+			"Title": "Iniciar sessão"
+		},
 		"TopContributors": {
 			"Title": "Maiores Contribuidores"
 		},
@@ -184,6 +191,10 @@
 	"UserDetail": {
 		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais"
+	},
+	"UserList": {
+		"LoadMore": "Carregar mais",
+		"Title": "Maiores Contribuidores"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adicionando preços",
