@@ -33,19 +33,18 @@
             </span>
           </p>
 
-          <v-sheet v-if="price">
-            <p>
-              <span>{{ getPriceValueDisplay() }}</span>
-              <span v-if="hasProductQuantity"> ({{  getPricePerKilo() }})</span>
-              <span>
-                <i18n-t keypath="PriceCard.PriceDate" tag="p">
-                  <template v-slot:date>
-                    <i>{{ getDateFormatted(price.date) }}</i>
-                  </template>
-                </i18n-t> 
-              </span>
-            </p>
-          </v-sheet>
+          <p v-if="price">
+            <span class="mr-1">{{ getPriceValueDisplay() }}</span>
+            <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerKilo() }})</span>
+            <span v-if="price.price_without_discount">
+              <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">{{ $t('PriceCard.Discount') }}</v-chip>
+            </span>
+            <i18n-t keypath="PriceCard.PriceDate" tag="span">
+              <template v-slot:date>
+                <i>{{ getDateFormatted(price.date) }}</i>
+              </template>
+            </i18n-t>
+          </p>
         </v-col>
       </v-row>
 
