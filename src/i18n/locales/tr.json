@@ -97,12 +97,12 @@
 			"text": "{url} tarafından desteklenmektedir"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search by name and city",
+		"Result": "Sonuç {resultNumber} | Sonuçlar {resultNumber}",
+		"SearchByName": "İsme ve şehre göre ara",
 		"Title": "Konumunuzu bulun"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
+		"Subtitle": "İstediğiniz sayfa mevcut değil gibi görünüyor...",
 		"Title": "Bulunamadı"
 	},
 	"PriceCard": {
@@ -130,9 +130,9 @@
 		"Filter": "Filtrele",
 		"HideProductsWithPrices": "Ürünleri fiyatlarıyla gizle",
 		"LoadMore": "Daha fazla yükle",
-		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
+		"Order": "Sipariş",
+		"PriceNumber": "Eklenen fiyat sayısı",
+		"ScanNumber": "Eklenen tarama sayısı",
 		"Title": "En iyi ürünler"
 	},
 	"Router": {
@@ -143,7 +143,7 @@
 			"Title": "Ana Sayfa"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "Son Fiyatlar"
 		},
 		"TopContributors": {
 			"Title": "En çok katkıda bulunanlar"
