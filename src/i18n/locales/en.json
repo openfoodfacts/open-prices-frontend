@@ -109,9 +109,11 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "Full price",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
