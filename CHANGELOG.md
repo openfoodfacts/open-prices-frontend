@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.24.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.24.0...v1.24.1) (2024-01-18)
+
+
+### Bug Fixes
+
+* **l10n:** fix missing translation keys in LocationList & UserList ([6e5dcbe](https://github.com/openfoodfacts/open-prices-frontend/commit/6e5dcbe5704865da82c3f532095df9ce3b73008d))
+
 ## [1.24.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.23.0...v1.24.0) (2024-01-18)
 
 
