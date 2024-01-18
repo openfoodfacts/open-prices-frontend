@@ -120,6 +120,7 @@
 		"UnknownProduct": "알 수 없는 상품명"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "더 불러오기",
