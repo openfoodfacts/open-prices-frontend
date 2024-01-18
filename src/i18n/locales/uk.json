@@ -64,7 +64,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Завантажити більше",
-		"TopProducts": "Top products"
+		"TopProducts": "Кращі продукти"
 	},
 	"Footer": {
 		"About": "Про додаток",
@@ -94,7 +94,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
-		"Title": "Top Locations",
+		"Title": "Топ локацій",
 		"LoadMore": "Завантажити більше"
 	},
 	"LocationSelector": {
@@ -152,16 +152,16 @@
 			"Title": "Головна"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "Latest prices"
 		},
 		"SignIn": {
 			"Title": "Увійти"
 		},
 		"TopContributors": {
-			"Title": "Top Contributors"
+			"Title": "Найактивніші користувачі"
 		},
 		"TopLocations": {
-			"Title": "Top Locations"
+			"Title": "Топ локацій"
 		},
 		"TopProducts": {
 			"Title": "Top products"
@@ -194,7 +194,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Завантажити більше",
-		"Title": "Top Contributors"
+		"Title": "Найактивніші користувачі"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
