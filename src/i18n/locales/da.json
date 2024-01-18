@@ -120,6 +120,7 @@
 		"UnknownProduct": "Ukendt produktnavn"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Indlæs mere",
