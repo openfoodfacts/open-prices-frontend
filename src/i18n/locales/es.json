@@ -18,7 +18,7 @@
 			"Discount": "¿Descuento?",
 			"Label": "Precio",
 			"LabelDiscounted": "Precio con descuento",
-			"LabelFull": "Precio total",
+			"LabelFull": "Precio original",
 			"Proof": "Prueba",
 			"ProofUploaded": "¡Prueba cargada!",
 			"Text": "Precio {perKg}",
@@ -113,7 +113,7 @@
 		"PriceDate": "en {date}",
 		"PriceValueDisplay": "{0} /kg",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Precio total",
+		"FullPrice": "Precio original",
 		"UnknownProduct": "Producto desconocido"
 	},
 	"PriceList": {
