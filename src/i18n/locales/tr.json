@@ -15,7 +15,10 @@
 	"AddPriceSingle": {
 		"Create": "Oluştur",
 		"PriceDetails": {
+			"Discount": "Discount?",
 			"Label": "Fiyat",
+			"LabelDiscounted": "Discounted price",
+			"LabelFull": "Full price",
 			"Proof": "Kanıt",
 			"ProofUploaded": "Kanıt yüklendi!",
 			"Text": "Fiyat {perKg}",
@@ -106,9 +109,11 @@
 		"Title": "Bulunamadı"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "{date} tarihinde",
 		"PriceValueDisplay": "{0} / kilo",
 		"ProductQuantity": "{0} gr",
+		"FullPrice": "Full price",
 		"UnknownProduct": "Bilinmeyen ürün"
 	},
 	"PriceList": {
