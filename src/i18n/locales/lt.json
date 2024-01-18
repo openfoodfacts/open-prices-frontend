@@ -120,6 +120,7 @@
 		"UnknownProduct": "Nežinomas produkto pavadinimas"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Įkelti daugiau",
