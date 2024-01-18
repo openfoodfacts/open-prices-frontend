@@ -88,16 +88,28 @@
               </i18n-t>
             </h3>
             <v-row>
-              <v-col cols="12" sm="6">
+              <v-col :cols="priceDiscounted ? '6' : '12'" sm="6">
                 <v-text-field
                   v-model="addPriceSingleForm.price"
-                  :label="$t('AddPriceSingle.PriceDetails.Label')"
+                  :label="priceDiscounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
+                  type="number"
+                  hide-details="auto"
+                  :suffix="addPriceSingleForm.currency"
+                ></v-text-field>
+              </v-col>
+              <v-col v-if="priceDiscounted" cols="6">
+                <v-text-field
+                  v-model="addPriceSingleForm.price_without_discount"
+                  :label="$t('AddPriceSingle.PriceDetails.LabelFull')"
                   type="number"
                   hide-details="auto"
                   :suffix="addPriceSingleForm.currency"
                 ></v-text-field>
               </v-col>
             </v-row>
+            <div class="d-inline">
+              <v-checkbox v-model="priceDiscounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
+            </div>
             <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.PriceDetails.Proof') }}</h3>
             <v-row>
               <v-col>
@@ -244,6 +256,7 @@ export default {
         origins_tags: '',
         labels_tags: [],
         price: null,
+        price_without_discount: null,
         currency: null,  // see initPriceSingleForm
         location_osm_id: null,
         location_osm_type: '',
@@ -263,6 +276,8 @@ export default {
       labelsTags: LabelsTags,
       barcodeScanner: false,
       barcodeManualInput: false,
+      // price data
+      priceDiscounted: false,
       // location data
       locationSelector: false,
       locationSelectedDisplayName: '',
@@ -288,7 +303,12 @@ export default {
     },
     priceProofFormFilled() {
       let keys = ['price', 'currency', 'proof_id']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+      if (!this.priceDiscounted) {
+        return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+      } else {
+        keys.push('price_without_discount')
+        return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+      }
     },
     proofFormFilled() {
       let keys = ['proof_id']
@@ -377,7 +397,6 @@ export default {
       if (!this.addPriceSingleForm.product_code) {
         this.addPriceSingleForm.product_code = null
       }
-      console.log(this.addPriceSingleForm.origins_tags)
       if ((typeof this.addPriceSingleForm.origins_tags === 'string') && (this.addPriceSingleForm.origins_tags.length)) {
         this.addPriceSingleForm.origins_tags = [this.addPriceSingleForm.origins_tags]
       } else {
@@ -386,6 +405,10 @@ export default {
       if (this.addPriceSingleForm.labels_tags.length == 0) {
         this.addPriceSingleForm.labels_tags = null
       }
+      if (!this.priceDiscounted) {
+        this.addPriceSingleForm.price_without_discount = null
+      }
+      // create price
       api
         .createPrice(this.addPriceSingleForm)
         .then((data) => {
