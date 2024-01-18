@@ -15,7 +15,10 @@
 	"AddPriceSingle": {
 		"Create": "Criar",
 		"PriceDetails": {
+			"Discount": "Discount?",
 			"Label": "Preço",
+			"LabelDiscounted": "Discounted price",
+			"LabelFull": "Full price",
 			"Proof": "Proof",
 			"ProofUploaded": "Proof uploaded!",
 			"Text": "Preço {perKg}",
@@ -106,9 +109,11 @@
 		"Title": "Não encontrado"
 	},
 	"PriceCard": {
+		"Discount": "Discount",
 		"PriceDate": "em {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
+		"FullPrice": "Full price",
 		"UnknownProduct": "Produto desconhecido"
 	},
 	"PriceList": {
