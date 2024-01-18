@@ -18,7 +18,7 @@
 			"Discount": "Descompte?",
 			"Label": "Preu",
 			"LabelDiscounted": "Preu rebaixat",
-			"LabelFull": "Preu total",
+			"LabelFull": "Preu original",
 			"Proof": "Prova",
 			"ProofUploaded": "S'ha carregat la prova!",
 			"Text": "Preu {perKg}",
@@ -93,6 +93,10 @@
 		"LoadMore": "Carrega mes ",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
+	"LocationList": {
+		"Title": "Top Locations",
+		"LoadMore": "Carrega mes "
+	},
 	"LocationSelector": {
 		"Clear": "To clear",
 		"NoResult": "No s'han trobat resultats",
@@ -113,7 +117,7 @@
 		"PriceDate": "el {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Preu total",
+		"FullPrice": "Preu original",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
@@ -150,6 +154,9 @@
 		"LatestPrices": {
 			"Title": "Latest Prices"
 		},
+		"SignIn": {
+			"Title": "Inicia la sessió"
+		},
 		"TopContributors": {
 			"Title": "Top Contributors"
 		},
@@ -184,6 +191,10 @@
 	"UserDetail": {
 		"LatestPrices": "Últims preus",
 		"LoadMore": "Carrega mes "
+	},
+	"UserList": {
+		"LoadMore": "Carrega mes ",
+		"Title": "Top Contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",

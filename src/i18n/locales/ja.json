@@ -93,6 +93,10 @@
 		"LoadMore": "もっと読み込む",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
+	"LocationList": {
+		"Title": "Top Locations",
+		"LoadMore": "もっと読み込む"
+	},
 	"LocationSelector": {
 		"Clear": "To clear",
 		"NoResult": "No results found",
@@ -109,7 +113,7 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "ディスカウント",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
@@ -150,6 +154,9 @@
 		"LatestPrices": {
 			"Title": "Latest Prices"
 		},
+		"SignIn": {
+			"Title": "サインイン"
+		},
 		"TopContributors": {
 			"Title": "Top Contributors"
 		},
@@ -184,6 +191,10 @@
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "もっと読み込む"
+	},
+	"UserList": {
+		"LoadMore": "もっと読み込む",
+		"Title": "Top Contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",

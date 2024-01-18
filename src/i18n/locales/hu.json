@@ -93,6 +93,10 @@
 		"LoadMore": "Load more",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
+	"LocationList": {
+		"Title": "Top Locations",
+		"LoadMore": "Load more"
+	},
 	"LocationSelector": {
 		"Clear": "To clear",
 		"NoResult": "No results found",
@@ -150,6 +154,9 @@
 		"LatestPrices": {
 			"Title": "Latest Prices"
 		},
+		"SignIn": {
+			"Title": "Bejelentkezés"
+		},
 		"TopContributors": {
 			"Title": "Top Contributors"
 		},
@@ -184,6 +191,10 @@
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more"
+	},
+	"UserList": {
+		"LoadMore": "Load more",
+		"Title": "Top Contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",

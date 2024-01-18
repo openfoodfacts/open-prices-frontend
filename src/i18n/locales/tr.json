@@ -93,6 +93,10 @@
 		"LoadMore": "Daha fazla yükle",
 		"LocationNotFound": "OpenStreetMap'te konum bulunamadı... Eklemekten çekinmeyin :)"
 	},
+	"LocationList": {
+		"Title": "En İyi Yerler",
+		"LoadMore": "Daha fazla yükle"
+	},
 	"LocationSelector": {
 		"Clear": "Temizlemek için",
 		"NoResult": "Sonuç bulunamadı",
@@ -150,6 +154,9 @@
 		"LatestPrices": {
 			"Title": "Son Fiyatlar"
 		},
+		"SignIn": {
+			"Title": "Giriş Yap"
+		},
 		"TopContributors": {
 			"Title": "En çok katkıda bulunanlar"
 		},
@@ -184,6 +191,10 @@
 	"UserDetail": {
 		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle"
+	},
+	"UserList": {
+		"LoadMore": "Daha fazla yükle",
+		"Title": "En çok katkıda bulunanlar"
 	},
 	"UserSettings": {
 		"AddingPrices": "Fiyat ekleme",

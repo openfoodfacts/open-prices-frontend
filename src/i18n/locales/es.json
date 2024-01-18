@@ -18,7 +18,7 @@
 			"Discount": "¿Descuento?",
 			"Label": "Precio",
 			"LabelDiscounted": "Precio con descuento",
-			"LabelFull": "Precio total",
+			"LabelFull": "Precio original",
 			"Proof": "Prueba",
 			"ProofUploaded": "¡Prueba cargada!",
 			"Text": "Precio {perKg}",
@@ -93,6 +93,10 @@
 		"LoadMore": "Carga más",
 		"LocationNotFound": "Ubicación no encontrada en OpenStreetMap... No dudes en agregarla :)"
 	},
+	"LocationList": {
+		"Title": "Ubicaciones principales",
+		"LoadMore": "Carga más"
+	},
 	"LocationSelector": {
 		"Clear": "Borrar",
 		"NoResult": "No se han encontrado resultados",
@@ -113,7 +117,7 @@
 		"PriceDate": "en {date}",
 		"PriceValueDisplay": "{0} /kg",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Precio total",
+		"FullPrice": "Precio original",
 		"UnknownProduct": "Producto desconocido"
 	},
 	"PriceList": {
@@ -150,6 +154,9 @@
 		"LatestPrices": {
 			"Title": "Últimos precios"
 		},
+		"SignIn": {
+			"Title": "Iniciar sesión"
+		},
 		"TopContributors": {
 			"Title": "Top Colaboradores"
 		},
@@ -184,6 +191,10 @@
 	"UserDetail": {
 		"LatestPrices": "Últimos precios",
 		"LoadMore": "Carga más"
+	},
+	"UserList": {
+		"LoadMore": "Carga más",
+		"Title": "Top Colaboradores"
 	},
 	"UserSettings": {
 		"AddingPrices": "Agregar precios",

@@ -93,6 +93,10 @@
 		"LoadMore": "Voir plus",
 		"LocationNotFound": "Ce lieu n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)"
 	},
+	"LocationList": {
+		"Title": "Top lieux",
+		"LoadMore": "Voir plus"
+	},
 	"LocationSelector": {
 		"Clear": "Effacer",
 		"NoResult": "Aucun résultat trouvé",
@@ -150,6 +154,9 @@
 		"LatestPrices": {
 			"Title": "Derniers prix"
 		},
+		"SignIn": {
+			"Title": "Se connecter"
+		},
 		"TopContributors": {
 			"Title": "Top contributeurs"
 		},
@@ -184,6 +191,10 @@
 	"UserDetail": {
 		"LatestPrices": "Derniers prix ajoutés",
 		"LoadMore": "Voir plus"
+	},
+	"UserList": {
+		"LoadMore": "Voir plus",
+		"Title": "Top contributeurs"
 	},
 	"UserSettings": {
 		"AddingPrices": "Ajout de prix",
