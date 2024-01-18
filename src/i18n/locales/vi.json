@@ -120,6 +120,7 @@
 		"UnknownProduct": "Tên sản phẩm không xác định"
 	},
 	"ProductDetail": {
+		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Tải thêm",
