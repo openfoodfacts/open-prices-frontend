@@ -23,14 +23,14 @@
 			"Title": "Fiyat ayrıntıları",
 			"UploadProof": "Bir kanıt yükleyin",
 			"TakePicture": "Resim çek",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Galerinizden seçin"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Kaynak",
 			"ProductCode": "Ürün kodu",
 			"ScanBarcode": "Barkod tara",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Barkodu yazın",
 			"SetProduct": "Bir ürün ayarlayın",
 			"Title": "Ürün bilgisi"
 		},
@@ -57,7 +57,7 @@
 	"BarcodeManualInput": {
 		"Barcode": "Barkod",
 		"Submit": "Gönder",
-		"Title": "Type a barcode"
+		"Title": "Barkodu yazın"
 	},
 	"BrandDetail": {
 		"LoadMore": "Daha fazla yükle",
