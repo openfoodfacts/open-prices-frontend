@@ -244,6 +244,7 @@ export default {
         origins_tags: '',
         labels_tags: [],
         price: null,
+        price_without_discount: null,
         currency: null,  // see initPriceSingleForm
         location_osm_id: null,
         location_osm_type: '',
@@ -263,6 +264,8 @@ export default {
       labelsTags: LabelsTags,
       barcodeScanner: false,
       barcodeManualInput: false,
+      // price data
+      priceDiscounted: false,
       // location data
       locationSelector: false,
       locationSelectedDisplayName: '',
@@ -288,7 +291,12 @@ export default {
     },
     priceProofFormFilled() {
       let keys = ['price', 'currency', 'proof_id']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+      if (!this.priceDiscounted) {
+        return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+      } else {
+        keys.push('price_without_discount')
+        return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+      }
     },
     proofFormFilled() {
       let keys = ['proof_id']
@@ -377,7 +385,6 @@ export default {
       if (!this.addPriceSingleForm.product_code) {
         this.addPriceSingleForm.product_code = null
       }
-      console.log(this.addPriceSingleForm.origins_tags)
       if ((typeof this.addPriceSingleForm.origins_tags === 'string') && (this.addPriceSingleForm.origins_tags.length)) {
         this.addPriceSingleForm.origins_tags = [this.addPriceSingleForm.origins_tags]
       } else {
@@ -386,6 +393,10 @@ export default {
       if (this.addPriceSingleForm.labels_tags.length == 0) {
         this.addPriceSingleForm.labels_tags = null
       }
+      if (!this.priceDiscounted) {
+        this.addPriceSingleForm.price_without_discount = null
+      }
+      // create price
       api
         .createPrice(this.addPriceSingleForm)
         .then((data) => {
