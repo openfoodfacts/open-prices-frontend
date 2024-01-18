@@ -18,7 +18,7 @@
 			"Discount": "Descompte?",
 			"Label": "Preu",
 			"LabelDiscounted": "Preu rebaixat",
-			"LabelFull": "Preu total",
+			"LabelFull": "Preu original",
 			"Proof": "Prova",
 			"ProofUploaded": "S'ha carregat la prova!",
 			"Text": "Preu {perKg}",
@@ -113,7 +113,7 @@
 		"PriceDate": "el {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Preu total",
+		"FullPrice": "Preu original",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
