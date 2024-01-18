@@ -64,7 +64,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Muat lebih banyak",
-		"TopProducts": "Top products"
+		"TopProducts": "Top Products"
 	},
 	"Footer": {
 		"About": "Tentang",
@@ -94,7 +94,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
-		"Title": "Top Locations",
+		"Title": "Top locations",
 		"LoadMore": "Muat lebih banyak"
 	},
 	"LocationSelector": {
@@ -152,16 +152,16 @@
 			"Title": "Beranda"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "Latest prices"
 		},
 		"SignIn": {
 			"Title": "Masuk"
 		},
 		"TopContributors": {
-			"Title": "Top Contributors"
+			"Title": "Top contributors"
 		},
 		"TopLocations": {
-			"Title": "Top Locations"
+			"Title": "Top locations"
 		},
 		"TopProducts": {
 			"Title": "Top products"
@@ -194,7 +194,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Muat lebih banyak",
-		"Title": "Top Contributors"
+		"Title": "Top contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
