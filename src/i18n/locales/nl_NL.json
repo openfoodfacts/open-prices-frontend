@@ -5,9 +5,9 @@
 			"Subtitle": "Coming in the v2 (help us!)",
 			"Title": "Receipt mode"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Ingelogd!",
 		"SingleProductMode": {
-			"Subtitle": "Get your camera ready :)",
+			"Subtitle": "Houd je camera gereed :)",
 			"Title": "Single product mode"
 		},
 		"Title": "Voeg een prijs toe"
@@ -31,11 +31,11 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categorie",
 			"OriginLabel": "Oorsprong",
-			"ProductCode": "Product code",
+			"ProductCode": "Productcode",
 			"ScanBarcode": "Scan een streepjescode",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"Title": "Productinformatie"
 		},
 		"ProductModeList": {
 			"Barcode": "Streepjescode",
@@ -69,7 +69,7 @@
 	"Footer": {
 		"About": "Over",
 		"Open_Prices_Project": {
-			"Text": "Open Prices is an {0} project.",
+			"Text": "Open Prijzen is een {0} -project.",
 			"Url": "Open Food Facts"
 		},
 		"Stats": "Statistieken"
@@ -78,51 +78,51 @@
 		"Dashboard": "Dashboard",
 		"Settings": "Instellingen",
 		"Sign-out": "Uitloggen",
-		"Title": "Open Prices"
+		"Title": "Open prijzen"
 	},
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
 		"SettingsUpdated": "Instellingen bijgewerkt!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to Open Prices!"
+			"Title": "Welkom bij Open Prijzen!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Laatste prijzen",
 		"LoadMore": "Meer laden",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)"
 	},
 	"LocationList": {
 		"Title": "Top locaties",
 		"LoadMore": "Meer laden"
 	},
 	"LocationSelector": {
-		"Clear": "To clear",
-		"NoResult": "No results found",
+		"Clear": "Wissen",
+		"NoResult": "Geen zoekresultaten",
 		"OSM": {
 			"text": "mogelijk gemaakt door {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search by name and city",
-		"Title": "Find your location"
+		"RecentLocations": "Geen recente locaties | Recente locatie {recentLocationNumber}| Recente locaties {recentLocationNumber}",
+		"Result": "Resultaat {resultNumber} | Resultaten {resultNumber}",
+		"SearchByName": "Zoek op naam en stad",
+		"Title": "Vind je locatie"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "De door u opgevraagde pagina lijkt niet te bestaan...",
+		"Title": "Niet gevonden"
 	},
 	"PriceCard": {
 		"Discount": "Korting",
-		"PriceDate": "on {date}",
-		"PriceValueDisplay": "{0} / kg",
+		"PriceDate": "op {date}",
+		"PriceValueDisplay": "{0} /kg",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Totale prijs",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Onbekend product"
 	},
 	"PriceList": {
 		"LoadMore": "Meer laden",
-		"Title": "Latest prices"
+		"Title": "Laatste prijzen"
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
@@ -130,18 +130,18 @@
 	},
 	"ProductDetail": {
 		"AddPrice": "Voeg een prijs toe",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"CategoryNotFound": "Categorie niet gevonden...",
+		"LatestPrices": "Laatste prijzen",
 		"LoadMore": "Meer laden",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
 	"ProductList": {
 		"Filter": "Filter",
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Verberg producten met prijzen",
 		"LoadMore": "Meer laden",
 		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
+		"PriceNumber": "Aantal prijzen toegevoegd",
+		"ScanNumber": "Aantal scans toegevoegd",
 		"Title": "Top products"
 	},
 	"Router": {
@@ -152,7 +152,7 @@
 			"Title": "Hoofdmenu"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Laatste prijzen"
 		},
 		"SignIn": {
 			"Title": "Inloggen"
@@ -170,26 +170,26 @@
 	"SignIn": {
 		"Button": "Inloggen",
 		"Password": "Wachtwoord",
-		"ServerError": "Error: server error",
+		"ServerError": "Fout: serverfout",
 		"Title": "Inloggen",
 		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
+			"Text": "Gebruik uw {url} inloggegevens om in te loggen."
 		},
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"UsernameLabel": "Gebruikersnaam",
+		"WrongCredentials": "Fout: verkeerde inloggegevens"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
+		"Prices": "Prijzen",
+		"ProductsWithPrices": "Producten met prijzen",
 		"Title": "Statistieken"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Laatste prijzen",
 		"LoadMore": "Meer laden",
 		"Title": "Dashboard"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Laatste prijzen",
 		"LoadMore": "Meer laden"
 	},
 	"UserList": {
@@ -197,13 +197,13 @@
 		"Title": "Top bijdragers"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Prijzen toevoegen",
 		"ChangeLanguage": "Een andere taal kiezen",
 		"CountryLabel": "Land",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"CurrencyLabel": "Valuta",
+		"DefaultCurrency": "Standaardvaluta",
 		"LanguageLabel": "Talen",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
+		"LocaleNotSupported": "Taal wordt nog niet ondersteund. De taal wordt standaard ingesteld op Engels",
 		"Save": "Opslaan",
 		"Title": "Instellingen"
 	}
