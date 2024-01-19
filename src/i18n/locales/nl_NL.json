@@ -10,29 +10,29 @@
 			"Subtitle": "Get your camera ready :)",
 			"Title": "Single product mode"
 		},
-		"Title": "Add a price"
+		"Title": "Voeg een prijs toe"
 	},
 	"AddPriceSingle": {
 		"Create": "Aanmaken",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofUploaded": "Proof uploaded!",
-			"Text": "Price {perKg}",
+			"Discount": "Korting?",
+			"Label": "Prijs",
+			"LabelDiscounted": "Gereduceerde prijs",
+			"LabelFull": "Totale prijs",
+			"Proof": "Bewijs",
+			"ProofUploaded": "Bewijs geüpload!",
+			"Text": "Prijs {perKg}",
 			"TextPerKg": "per kg",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"Title": "Prijsdetails",
+			"UploadProof": "Upload een bewijs",
 			"TakePicture": "Neem een foto",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Selecteer uit uw galerij"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categorie",
-			"OriginLabel": "Origin",
+			"OriginLabel": "Oorsprong",
 			"ProductCode": "Product code",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "Scan een streepjescode",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -43,19 +43,19 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Datum",
+			"DateLabel": "Datum",
 			"Find": "Zoeken",
-			"Location": "Location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Locatie",
+			"SelectLocation": "Selecteer uw locatie",
+			"Title": "Waar en wanneer?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "mogelijk gemaakt door {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Scan een streepjescode"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Streepjescode",
@@ -64,7 +64,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Meer laden",
-		"TopProducts": "Top Products"
+		"TopProducts": "Top producten"
 	},
 	"Footer": {
 		"About": "Over",
@@ -72,7 +72,7 @@
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
 		},
-		"Stats": "Stats"
+		"Stats": "Statistieken"
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
@@ -81,8 +81,8 @@
 		"Title": "Open Prices"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"SettingsUpdated": "Settings updated!",
+		"AddPrice": "Voeg een prijs toe",
+		"SettingsUpdated": "Instellingen bijgewerkt!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"
@@ -94,14 +94,14 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
-		"Title": "Top locations",
+		"Title": "Top locaties",
 		"LoadMore": "Meer laden"
 	},
 	"LocationSelector": {
 		"Clear": "To clear",
 		"NoResult": "No results found",
 		"OSM": {
-			"text": "powered by {url}"
+			"text": "mogelijk gemaakt door {url}"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
@@ -113,11 +113,11 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "Korting",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Full price",
+		"FullPrice": "Totale prijs",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
@@ -129,7 +129,7 @@
 		"UnknownProduct": "Onbekende productnaam"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Voeg een prijs toe",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Meer laden",
@@ -146,7 +146,7 @@
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Voeg een prijs toe"
 		},
 		"Home": {
 			"Title": "Hoofdmenu"
@@ -158,10 +158,10 @@
 			"Title": "Inloggen"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Top bijdragers"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Top locaties"
 		},
 		"TopProducts": {
 			"Title": "Top products"
@@ -181,7 +181,7 @@
 	"Stats": {
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Title": "Statistieken"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -194,7 +194,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Meer laden",
-		"Title": "Top contributors"
+		"Title": "Top bijdragers"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
