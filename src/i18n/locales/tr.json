@@ -15,10 +15,10 @@
 	"AddPriceSingle": {
 		"Create": "Oluştur",
 		"PriceDetails": {
-			"Discount": "Discount?",
+			"Discount": "İndirim?",
 			"Label": "Fiyat",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
+			"LabelDiscounted": "İndirimli fiyat",
+			"LabelFull": "Tam fiyat",
 			"Proof": "Kanıt",
 			"ProofUploaded": "Kanıt yüklendi!",
 			"Text": "Fiyat {perKg}",
@@ -64,7 +64,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Daha fazla yükle",
-		"TopProducts": "Top Products"
+		"TopProducts": "En Popüler Ürünler"
 	},
 	"Footer": {
 		"About": "Hakkında",
@@ -94,7 +94,7 @@
 		"LocationNotFound": "OpenStreetMap'te konum bulunamadı... Eklemekten çekinmeyin :)"
 	},
 	"LocationList": {
-		"Title": "Top locations",
+		"Title": "En iyi yerler",
 		"LoadMore": "Daha fazla yükle"
 	},
 	"LocationSelector": {
@@ -113,11 +113,11 @@
 		"Title": "Bulunamadı"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "İndirim",
 		"PriceDate": "{date} tarihinde",
 		"PriceValueDisplay": "{0} / kilo",
 		"ProductQuantity": "{0} gr",
-		"FullPrice": "Full price",
+		"FullPrice": "Tam fiyat",
 		"UnknownProduct": "Bilinmeyen ürün"
 	},
 	"PriceList": {
@@ -158,10 +158,10 @@
 			"Title": "Giriş Yap"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "En çok katkıda bulunanlar"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "En iyi yerler"
 		},
 		"TopProducts": {
 			"Title": "En iyi ürünler"
@@ -194,7 +194,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Daha fazla yükle",
-		"Title": "Top contributors"
+		"Title": "En çok katkıda bulunanlar"
 	},
 	"UserSettings": {
 		"AddingPrices": "Fiyat ekleme",
