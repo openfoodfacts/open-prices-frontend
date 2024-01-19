@@ -29,7 +29,7 @@
 			"SelectFromGallery": "Select from your gallery"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "Ангилал",
 			"OriginLabel": "Origin",
 			"ProductCode": "Product code",
 			"ScanBarcode": "Scan a barcode",
@@ -39,7 +39,7 @@
 		},
 		"ProductModeList": {
 			"Barcode": "Barcode",
-			"Category": "Category"
+			"Category": "Ангилал"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -204,7 +204,7 @@
 		"DefaultCurrency": "Default currency",
 		"LanguageLabel": "Languages",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
-		"Save": "Save",
+		"Save": "Хадгалах",
 		"Title": "Settings"
 	}
 }
