@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Preu afegit!",
 		"ReceiptMode": {
-			"Subtitle": "Disponible a la v2 (ajudeu-nos!)",
+			"Subtitle": "New!",
 			"Title": "Mode tiquets"
 		},
 		"SignedIn": "Sessió iniciada!",
@@ -10,7 +10,23 @@
 			"Subtitle": "Prepara la càmera :)",
 			"Title": "Mode producte únic"
 		},
+		"Thanks": "Thanks",
 		"Title": "Afegir un preu"
+	},
+	"AddPriceMultiple": {
+		"Done": "Fet",
+		"ProductPriceDetails": {
+			"Add": "Add a new price",
+			"AlreadyUploaded": "Prices already uploaded",
+			"Create": "Crea",
+			"NewPrice": "New price",
+			"PriceUploaded": "Preu afegit!",
+			"Title": "Product prices"
+		},
+		"ProofDetails": {
+			"Title": "Proof details"
+		},
+		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
 		"Create": "Crea",
