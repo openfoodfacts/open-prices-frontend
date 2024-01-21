@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.25.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.24.2...v1.25.0) (2024-01-21)
+
+
+### Features
+
+* **batch create form:** first simple batch mode to add multiple prices from a single proof ([#182](https://github.com/openfoodfacts/open-prices-frontend/issues/182)) ([5847d1d](https://github.com/openfoodfacts/open-prices-frontend/commit/5847d1d7fb7dff5b29678ceda54069d4389614c3))
+* **l10n:** New Crowdin translations to review and merge ([#180](https://github.com/openfoodfacts/open-prices-frontend/issues/180)) ([750a0ab](https://github.com/openfoodfacts/open-prices-frontend/commit/750a0ab5acf6dfdd1c09e1fd7b3d31df63d21a33))
+
 ## [1.24.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.24.1...v1.24.2) (2024-01-18)
 
 
