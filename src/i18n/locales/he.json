@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "המחיר נוצר!",
 		"ReceiptMode": {
-			"Subtitle": "מתוכנן לגרסה 2 (נשמח לעזרה!)",
+			"Subtitle": "New!",
 			"Title": "מצב מתכון"
 		},
 		"SignedIn": "נכנסת!",
@@ -10,7 +10,23 @@
 			"Subtitle": "נא להכין את המצלמה :)",
 			"Title": "מצב מוצר בודד"
 		},
+		"Thanks": "Thanks",
 		"Title": "הוספת מחיר"
+	},
+	"AddPriceMultiple": {
+		"Done": "בוצע",
+		"ProductPriceDetails": {
+			"Add": "Add a new price",
+			"AlreadyUploaded": "Prices already uploaded",
+			"Create": "יצירה",
+			"NewPrice": "New price",
+			"PriceUploaded": "המחיר נוצר!",
+			"Title": "Product prices"
+		},
+		"ProofDetails": {
+			"Title": "Proof details"
+		},
+		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
 		"Create": "יצירה",
