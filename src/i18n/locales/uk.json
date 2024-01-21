@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Ціна створена!",
 		"ReceiptMode": {
-			"Subtitle": "New!",
+			"Subtitle": "Новинка!",
 			"Title": "Receipt mode"
 		},
 		"SignedIn": "Signed in!",
@@ -10,7 +10,7 @@
 			"Subtitle": "Get your camera ready :)",
 			"Title": "Single product mode"
 		},
-		"Thanks": "Thanks",
+		"Thanks": "Дякую",
 		"Title": "Add a price"
 	},
 	"AddPriceMultiple": {
