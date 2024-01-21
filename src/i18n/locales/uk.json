@@ -16,17 +16,17 @@
 	"AddPriceMultiple": {
 		"Done": "Виконано",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "Prices already uploaded",
+			"Add": "Додати нову ціну",
+			"AlreadyUploaded": "Ціни вже завантажені",
 			"Create": "Створити",
-			"NewPrice": "New price",
+			"NewPrice": "Нова ціна",
 			"PriceUploaded": "Ціна створена!",
-			"Title": "Product prices"
+			"Title": "Ціни товару"
 		},
 		"ProofDetails": {
-			"Title": "Proof details"
+			"Title": "Подробиці перевірки"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Додати кілька цін"
 	},
 	"AddPriceSingle": {
 		"Create": "Створити",
