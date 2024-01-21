@@ -69,7 +69,7 @@
 	"Footer": {
 		"About": "Sobre",
 		"Open_Prices_Project": {
-			"Text": "Preços Abertos é um projeto {0}.",
+			"Text": "Open Prices é um projeto {0}.",
 			"Url": "Open Food Facts"
 		},
 		"Stats": "Estatísticas"
@@ -82,47 +82,47 @@
 	},
 	"Home": {
 		"AddPrice": "Adicionar um preço",
-		"SettingsUpdated": "Settings updated!",
+		"SettingsUpdated": "Definições atualizadas!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to Open Prices!"
+			"Subtitle": "Uma base de dados colaborativa de fonte aberta sobre os preços dos alimentos 🏷🍊💲",
+			"Title": "Bem-vindo ao Open Prices!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Localização não encontrada no OpenStreetMap... Não hesite em adicioná-la :)"
 	},
 	"LocationList": {
 		"Title": "Top locations",
 		"LoadMore": "Carregar mais"
 	},
 	"LocationSelector": {
-		"Clear": "To clear",
-		"NoResult": "No results found",
+		"Clear": "Limpar",
+		"NoResult": "Nenhum resultado encontrado",
 		"OSM": {
 			"text": "fornecido por {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search by name and city",
-		"Title": "Find your location"
+		"RecentLocations": "Nenhuma localização recente | Localização recente {recentLocationNumber}| Localizações recentes {recentLocationNumber}",
+		"Result": "Resultado {resultNumber} | Resultados {resultNumber}",
+		"SearchByName": "Pesquisar por nome e cidade",
+		"Title": "Encontrar a sua localização"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "A página que solicitou parece não existir...",
+		"Title": "Não encontrado"
 	},
 	"PriceCard": {
 		"Discount": "Discount",
-		"PriceDate": "on {date}",
+		"PriceDate": "em {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Produto desconhecido"
 	},
 	"PriceList": {
 		"LoadMore": "Carregar mais",
-		"Title": "Latest prices"
+		"Title": "Preços mais recentes"
 	},
 	"ProductCard": {
 		"ProductQuantity": "{0} g",
@@ -130,18 +130,18 @@
 	},
 	"ProductDetail": {
 		"AddPrice": "Adicionar um preço",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"CategoryNotFound": "Categoria não encontrada...",
+		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Produto não encontrado em Open Food Facts... Não hesite em adicioná-lo :)"
 	},
 	"ProductList": {
 		"Filter": "Filtro",
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Ocultar produtos com preços",
 		"LoadMore": "Carregar mais",
-		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
+		"Order": "Ordem",
+		"PriceNumber": "Número de preços adicionados",
+		"ScanNumber": "Número de digitalizações adicionadas",
 		"Title": "Top products"
 	},
 	"Router": {
@@ -152,7 +152,7 @@
 			"Title": "Início"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Preços mais recentes"
 		},
 		"SignIn": {
 			"Title": "Iniciar sessão"
@@ -170,26 +170,26 @@
 	"SignIn": {
 		"Button": "Iniciar sessão",
 		"Password": "Palavra-passe",
-		"ServerError": "Error: server error",
+		"ServerError": "Erro: erro do servidor",
 		"Title": "Iniciar sessão",
 		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
+			"Text": "Utilize as suas credenciais {url} para iniciar sessão."
 		},
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"UsernameLabel": "Nome de utilizador",
+		"WrongCredentials": "Erro: credenciais incorrectas"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
+		"Prices": "Preços",
+		"ProductsWithPrices": "Produtos com preços",
 		"Title": "Estatísticas"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais",
 		"Title": "Painel de controlo"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais"
 	},
 	"UserList": {
@@ -197,13 +197,13 @@
 		"Title": "Top contributors"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "A adicionar preços",
 		"ChangeLanguage": "Alterar idioma",
 		"CountryLabel": "País",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"CurrencyLabel": "Moeda",
+		"DefaultCurrency": "Moeda predefinida",
 		"LanguageLabel": "Idiomas",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
+		"LocaleNotSupported": "Idioma ainda não suportado, o idioma será predefinido para inglês",
 		"Save": "Guardar",
 		"Title": "Configurações"
 	}
