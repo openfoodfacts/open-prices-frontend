@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "Coming in the v2 (help us!)",
+			"Subtitle": "New!",
 			"Title": "Receipt mode"
 		},
 		"SignedIn": "Signed in!",
@@ -10,7 +10,23 @@
 			"Subtitle": "Get your camera ready :)",
 			"Title": "Single product mode"
 		},
+		"Thanks": "Thanks",
 		"Title": "Add a price"
+	},
+	"AddPriceMultiple": {
+		"Done": "Done",
+		"ProductPriceDetails": {
+			"Add": "Add a new price",
+			"AlreadyUploaded": "Prices already uploaded",
+			"Create": "Δημιουργία",
+			"NewPrice": "New price",
+			"PriceUploaded": "Price created!",
+			"Title": "Product prices"
+		},
+		"ProofDetails": {
+			"Title": "Proof details"
+		},
+		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
 		"Create": "Δημιουργία",
