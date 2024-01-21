@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "New!",
+			"Subtitle": "Nieuw!",
 			"Title": "Receipt mode"
 		},
 		"SignedIn": "Ingelogd!",
@@ -10,23 +10,23 @@
 			"Subtitle": "Houd je camera gereed :)",
 			"Title": "Single product mode"
 		},
-		"Thanks": "Thanks",
+		"Thanks": "Bedankt",
 		"Title": "Voeg een prijs toe"
 	},
 	"AddPriceMultiple": {
 		"Done": "Voltooid",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "Prices already uploaded",
+			"Add": "Nieuwe prijs toevoegen",
+			"AlreadyUploaded": "Prijzen zijn al geüpload",
 			"Create": "Aanmaken",
-			"NewPrice": "New price",
+			"NewPrice": "Nieuwe prijs",
 			"PriceUploaded": "Price created!",
-			"Title": "Product prices"
+			"Title": "Productprijzen"
 		},
 		"ProofDetails": {
-			"Title": "Proof details"
+			"Title": "Bewijs details"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Voeg meerdere prijzen toe"
 	},
 	"AddPriceSingle": {
 		"Create": "Aanmaken",
@@ -49,7 +49,7 @@
 			"OriginLabel": "Oorsprong",
 			"ProductCode": "Productcode",
 			"ScanBarcode": "Scan een streepjescode",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Voer een streepjescode in",
 			"SetProduct": "Set a product",
 			"Title": "Productinformatie"
 		},
@@ -76,7 +76,7 @@
 	"BarcodeManualInput": {
 		"Barcode": "Streepjescode",
 		"Submit": "Verzenden",
-		"Title": "Type a barcode"
+		"Title": "Voer een streepjescode in"
 	},
 	"BrandDetail": {
 		"LoadMore": "Meer laden",
