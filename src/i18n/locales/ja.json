@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "New!",
+			"Subtitle": "新規！",
 			"Title": "Receipt mode"
 		},
 		"SignedIn": "Signed in!",
@@ -10,23 +10,23 @@
 			"Subtitle": "Get your camera ready :)",
 			"Title": "Single product mode"
 		},
-		"Thanks": "Thanks",
+		"Thanks": "ありがとうございます",
 		"Title": "Add a price"
 	},
 	"AddPriceMultiple": {
 		"Done": "完了",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "Prices already uploaded",
+			"Add": "新しい価格を追加",
+			"AlreadyUploaded": "価格はすでにアップロードされています",
 			"Create": "Create",
-			"NewPrice": "New price",
+			"NewPrice": "新しい価格",
 			"PriceUploaded": "Price created!",
-			"Title": "Product prices"
+			"Title": "製品価格"
 		},
 		"ProofDetails": {
-			"Title": "Proof details"
+			"Title": "証明の詳細"
 		},
-		"Title": "Add multiple prices"
+		"Title": "複数の価格を追加する"
 	},
 	"AddPriceSingle": {
 		"Create": "Create",
