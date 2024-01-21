@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Preis erstellt!",
 		"ReceiptMode": {
-			"Subtitle": "Kommt in Version 2 (helfen Sie uns!)",
+			"Subtitle": "New!",
 			"Title": "Empfangsmodus"
 		},
 		"SignedIn": "Angemeldet!",
@@ -10,7 +10,23 @@
 			"Subtitle": "Halten Sie Ihre Kamera bereit 🙂",
 			"Title": "Einzelproduktmodus"
 		},
+		"Thanks": "Thanks",
 		"Title": "Preis hinzufügen"
+	},
+	"AddPriceMultiple": {
+		"Done": "Fertig",
+		"ProductPriceDetails": {
+			"Add": "Add a new price",
+			"AlreadyUploaded": "Prices already uploaded",
+			"Create": "Erstellen",
+			"NewPrice": "New price",
+			"PriceUploaded": "Preis erstellt!",
+			"Title": "Product prices"
+		},
+		"ProofDetails": {
+			"Title": "Proof details"
+		},
+		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
 		"Create": "Erstellen",
