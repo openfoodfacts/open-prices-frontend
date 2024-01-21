@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "¡Precio creado!",
 		"ReceiptMode": {
-			"Subtitle": "Próximamente en la v2 (¡ayúdanos!)",
+			"Subtitle": "New!",
 			"Title": "Modo de recibo"
 		},
 		"SignedIn": "¡Registrado!",
@@ -10,7 +10,23 @@
 			"Subtitle": "Prepara tu cámara :)",
 			"Title": "Modo de producto único"
 		},
+		"Thanks": "Thanks",
 		"Title": "Agregar un precio"
+	},
+	"AddPriceMultiple": {
+		"Done": "Hecho",
+		"ProductPriceDetails": {
+			"Add": "Add a new price",
+			"AlreadyUploaded": "Prices already uploaded",
+			"Create": "Crear",
+			"NewPrice": "New price",
+			"PriceUploaded": "¡Precio creado!",
+			"Title": "Product prices"
+		},
+		"ProofDetails": {
+			"Title": "Proof details"
+		},
+		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
 		"Create": "Crear",
@@ -64,7 +80,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Carga más",
-		"TopProducts": "Productos Destacados"
+		"TopProducts": "Los mejores productos"
 	},
 	"Footer": {
 		"About": "Acerca de",
@@ -94,7 +110,7 @@
 		"LocationNotFound": "Ubicación no encontrada en OpenStreetMap... No dudes en agregarla :)"
 	},
 	"LocationList": {
-		"Title": "Ubicaciones principales",
+		"Title": "Mejores ubicaciones",
 		"LoadMore": "Carga más"
 	},
 	"LocationSelector": {
@@ -158,10 +174,10 @@
 			"Title": "Iniciar sesión"
 		},
 		"TopContributors": {
-			"Title": "Top Colaboradores"
+			"Title": "Colaboradores principales"
 		},
 		"TopLocations": {
-			"Title": "Ubicaciones principales"
+			"Title": "Mejores ubicaciones"
 		},
 		"TopProducts": {
 			"Title": "Productos Destacados"
@@ -194,7 +210,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Carga más",
-		"Title": "Top Colaboradores"
+		"Title": "Colaboradores principales"
 	},
 	"UserSettings": {
 		"AddingPrices": "Agregar precios",

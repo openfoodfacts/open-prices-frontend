@@ -1,209 +1,225 @@
 {
 	"AddPriceHome": {
-		"PriceCreated": "Price created!",
+		"PriceCreated": "המחיר נוצר!",
 		"ReceiptMode": {
-			"Subtitle": "Coming in the v2 (help us!)",
-			"Title": "Receipt mode"
+			"Subtitle": "New!",
+			"Title": "מצב מתכון"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "נכנסת!",
 		"SingleProductMode": {
-			"Subtitle": "Get your camera ready :)",
-			"Title": "Single product mode"
+			"Subtitle": "נא להכין את המצלמה :)",
+			"Title": "מצב מוצר בודד"
 		},
-		"Title": "Add a price"
+		"Thanks": "Thanks",
+		"Title": "הוספת מחיר"
+	},
+	"AddPriceMultiple": {
+		"Done": "בוצע",
+		"ProductPriceDetails": {
+			"Add": "Add a new price",
+			"AlreadyUploaded": "Prices already uploaded",
+			"Create": "יצירה",
+			"NewPrice": "New price",
+			"PriceUploaded": "המחיר נוצר!",
+			"Title": "Product prices"
+		},
+		"ProofDetails": {
+			"Title": "Proof details"
+		},
+		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
 		"Create": "יצירה",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofUploaded": "Proof uploaded!",
-			"Text": "Price {perKg}",
-			"TextPerKg": "per kg",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"Discount": "הנחה?",
+			"Label": "מחיר",
+			"LabelDiscounted": "מחיר מוזל",
+			"LabelFull": "מחיר מלא",
+			"Proof": "הוכחה",
+			"ProofUploaded": "ההוכחה נשלחה!",
+			"Text": "מחיר {perKg}",
+			"TextPerKg": "לק״ג",
+			"Title": "פריטי מחיר",
+			"UploadProof": "העלאת הוכחה",
 			"TakePicture": "צילום תמונה",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "בחירה מהגלריה שלך"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
-			"OriginLabel": "Origin",
-			"ProductCode": "Product code",
-			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"OriginLabel": "מקור",
+			"ProductCode": "קוד מוצר",
+			"ScanBarcode": "סריקת ברקוד",
+			"TypeBarcode": "סוג ברקוד",
+			"SetProduct": "הגדרת מוצר",
+			"Title": "פרטי מוצר"
 		},
 		"ProductModeList": {
 			"Barcode": "ברקוד",
 			"Category": "קטגוריה"
 		},
-		"Title": "Add a single price",
+		"Title": "הוספת מחיר בודד",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "תאריך",
+			"DateLabel": "תאריך",
 			"Find": "חיפוש",
-			"Location": "Location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "מקום",
+			"SelectLocation": "נא לבחור את המקום שלך",
+			"Title": "איפה ומתי?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "מופעל על גבי {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "סריקת ברקוד"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "ברקוד",
 		"Submit": "הגשה",
-		"Title": "Type a barcode"
+		"Title": "סוג ברקוד"
 	},
 	"BrandDetail": {
 		"LoadMore": "לטעון עוד",
-		"TopProducts": "Top products"
+		"TopProducts": "מוצרים מובילים"
 	},
 	"Footer": {
 		"About": "על אודות",
 		"Open_Prices_Project": {
-			"Text": "Open Prices is an {0} project.",
+			"Text": "Open Prices הוא מיזם מבית {0}.",
 			"Url": "Open Food Facts"
 		},
-		"Stats": "Stats"
+		"Stats": "סטטיסטיקה"
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "לוח בקרה",
 		"Settings": "הגדרות",
 		"Sign-out": "יציאה",
 		"Title": "Open Prices"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"SettingsUpdated": "Settings updated!",
+		"AddPrice": "הוספת מחיר",
+		"SettingsUpdated": "ההגדרות עודכנו!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to Open Prices!"
+			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
+			"Title": "ברוך בואך ל־Open Prices!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "מחירים עדכניים",
 		"LoadMore": "לטעון עוד",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "המקום לא נמצא ב־OpenStreetMap… אפשר להוסיף אותו ללא חשש :)"
 	},
 	"LocationList": {
-		"Title": "Top Locations",
+		"Title": "מקומות מובילים",
 		"LoadMore": "לטעון עוד"
 	},
 	"LocationSelector": {
-		"Clear": "To clear",
-		"NoResult": "No results found",
+		"Clear": "לפינוי",
+		"NoResult": "לא נמצאו תוצאות",
 		"OSM": {
-			"text": "powered by {url}"
+			"text": "מופעל על גבי {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search by name and city",
-		"Title": "Find your location"
+		"RecentLocations": "אין מקומות אחרונים | מקום אחרון {recentLocationNumber}| {recentLocationNumber} מקומות אחרונים",
+		"Result": "תוצאה אחת | {resultNumber} תוצאות",
+		"SearchByName": "חיפוש לפי שם ועיר",
+		"Title": "איתור המקום שלך"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "העמוד שביקשת לא קיים כפי הנראה…",
+		"Title": "לא נמצא"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
-		"PriceValueDisplay": "{0} / kg",
-		"ProductQuantity": "{0} g",
-		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"Discount": "הנחה",
+		"PriceDate": "ב־{date}",
+		"PriceValueDisplay": "{0} לק״ג",
+		"ProductQuantity": "{0} גרם",
+		"FullPrice": "מחיר מלא",
+		"UnknownProduct": "מוצר לא ידוע"
 	},
 	"PriceList": {
 		"LoadMore": "לטעון עוד",
-		"Title": "Latest prices"
+		"Title": "מחירים עדכניים"
 	},
 	"ProductCard": {
-		"ProductQuantity": "{0} g",
+		"ProductQuantity": "{0} גרם",
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"AddPrice": "הוספת מחיר",
+		"CategoryNotFound": "הקטגוריה לא נמצאה…",
+		"LatestPrices": "מחירים עדכניים",
 		"LoadMore": "לטעון עוד",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "המוצר לא נמצא ב־Open Food Facts… אפשר להוסיף אותו ללא חשש :)"
 	},
 	"ProductList": {
 		"Filter": "סינון",
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "הסתרת מוצרים עם מחירים",
 		"LoadMore": "לטעון עוד",
-		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Order": "סדר",
+		"PriceNumber": "מספר המחירים שנוספו",
+		"ScanNumber": "מספר הסריקות שנוספו",
+		"Title": "מוצרים מובילים"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "הוספת מחיר"
 		},
 		"Home": {
 			"Title": "ראשי"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "מחירים עדכניים"
 		},
 		"SignIn": {
 			"Title": "כניסה"
 		},
 		"TopContributors": {
-			"Title": "Top Contributors"
+			"Title": "תורמים מובילים"
 		},
 		"TopLocations": {
-			"Title": "Top Locations"
+			"Title": "מקומות מובילים"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "מוצרים מובילים"
 		}
 	},
 	"SignIn": {
 		"Button": "כניסה",
 		"Password": "סיסמה",
-		"ServerError": "Error: server error",
+		"ServerError": "שגיאה: שגיאת שרת",
 		"Title": "כניסה",
 		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
+			"Text": "אפשר להשתמש בפרטי הגישה שלך ל־{url} כדי להיכנס."
 		},
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"UsernameLabel": "שם משתמש",
+		"WrongCredentials": "שגיאה: פרטי גישה שגויים"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Prices": "מחירים",
+		"ProductsWithPrices": "מוצרים עם מחירים",
+		"Title": "סטטיסטיקה"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "מחירים עדכניים",
 		"LoadMore": "לטעון עוד",
-		"Title": "Dashboard"
+		"Title": "לוח בקרה"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "מחירים עדכניים",
 		"LoadMore": "לטעון עוד"
 	},
 	"UserList": {
 		"LoadMore": "לטעון עוד",
-		"Title": "Top Contributors"
+		"Title": "תורמים מובילים"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "הוספת מחירים",
 		"ChangeLanguage": "החלפת שפה",
 		"CountryLabel": "מדינה",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"CurrencyLabel": "מטבע",
+		"DefaultCurrency": "מטבע ברירת מחדל",
 		"LanguageLabel": "שפות",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
+		"LocaleNotSupported": "השפה עדיין לא נתמכת, תיסוג לאנגלית",
 		"Save": "שמירה",
 		"Title": "הגדרות"
 	}

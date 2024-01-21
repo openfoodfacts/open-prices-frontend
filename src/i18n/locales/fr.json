@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Prix créé !",
 		"ReceiptMode": {
-			"Subtitle": "Disponible bientôt dans la v2 (aidez-nous !)",
+			"Subtitle": "Nouveau !",
 			"Title": "Mode d'ajout par ticket de caisse"
 		},
 		"SignedIn": "Connecté !",
@@ -10,7 +10,23 @@
 			"Subtitle": "Préparez votre caméra :)",
 			"Title": "Mode d'ajout simple"
 		},
+		"Thanks": "Merci",
 		"Title": "Ajouter un prix"
+	},
+	"AddPriceMultiple": {
+		"Done": "Fait",
+		"ProductPriceDetails": {
+			"Add": "Ajouter un nouveau prix",
+			"AlreadyUploaded": "Prix déjà téléversés",
+			"Create": "Créer",
+			"NewPrice": "Nouveau prix",
+			"PriceUploaded": "Prix créé !",
+			"Title": "Prix de l'article"
+		},
+		"ProofDetails": {
+			"Title": "Détails du prix"
+		},
+		"Title": "Ajouter des prix multiples"
 	},
 	"AddPriceSingle": {
 		"Create": "Créer",
@@ -64,7 +80,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Voir plus",
-		"TopProducts": "Meilleurs produits"
+		"TopProducts": "Top Produits"
 	},
 	"Footer": {
 		"About": "À propos",
@@ -152,7 +168,7 @@
 			"Title": "Accueil"
 		},
 		"LatestPrices": {
-			"Title": "Derniers prix"
+			"Title": "Derniers prix ajoutés"
 		},
 		"SignIn": {
 			"Title": "Se connecter"

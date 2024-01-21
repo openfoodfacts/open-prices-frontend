@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Prezzo creato!",
 		"ReceiptMode": {
-			"Subtitle": "In arrivo nella v2 (aiutaci!)",
+			"Subtitle": "New!",
 			"Title": "Modalità ricevuta"
 		},
 		"SignedIn": "Registrato in!",
@@ -10,7 +10,23 @@
 			"Subtitle": "Prepara la macchina fotografica :)",
 			"Title": "Modalità prodotto singolo"
 		},
+		"Thanks": "Thanks",
 		"Title": "Aggiungi un prezzo"
+	},
+	"AddPriceMultiple": {
+		"Done": "Fatto",
+		"ProductPriceDetails": {
+			"Add": "Add a new price",
+			"AlreadyUploaded": "Prices already uploaded",
+			"Create": "Crea",
+			"NewPrice": "New price",
+			"PriceUploaded": "Prezzo creato!",
+			"Title": "Product prices"
+		},
+		"ProofDetails": {
+			"Title": "Proof details"
+		},
+		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
 		"Create": "Crea",

@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "Coming in the v2 (help us!)",
+			"Subtitle": "New!",
 			"Title": "Receipt mode"
 		},
 		"SignedIn": "Signed in!",
@@ -10,7 +10,23 @@
 			"Subtitle": "Get your camera ready :)",
 			"Title": "Single product mode"
 		},
+		"Thanks": "Thanks",
 		"Title": "Add a price"
+	},
+	"AddPriceMultiple": {
+		"Done": "Done",
+		"ProductPriceDetails": {
+			"Add": "Add a new price",
+			"AlreadyUploaded": "Prices already uploaded",
+			"Create": "Create",
+			"NewPrice": "New price",
+			"PriceUploaded": "Price created!",
+			"Title": "Product prices"
+		},
+		"ProofDetails": {
+			"Title": "Proof details"
+		},
+		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
 		"Create": "Create",
@@ -64,7 +80,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Load more",
-		"TopProducts": "Top products"
+		"TopProducts": "Top Products"
 	},
 	"Footer": {
 		"About": "ھەققىدە",
@@ -94,7 +110,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
-		"Title": "Top Locations",
+		"Title": "Top locations",
 		"LoadMore": "Load more"
 	},
 	"LocationSelector": {
@@ -152,16 +168,16 @@
 			"Title": "باش بەت"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "Latest prices"
 		},
 		"SignIn": {
 			"Title": "كىرىش"
 		},
 		"TopContributors": {
-			"Title": "Top Contributors"
+			"Title": "Top contributors"
 		},
 		"TopLocations": {
-			"Title": "Top Locations"
+			"Title": "Top locations"
 		},
 		"TopProducts": {
 			"Title": "Top products"
@@ -194,7 +210,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Load more",
-		"Title": "Top Contributors"
+		"Title": "Top contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",

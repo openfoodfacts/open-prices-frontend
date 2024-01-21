@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "Coming in the v2 (help us!)",
+			"Subtitle": "New!",
 			"Title": "Receipt mode"
 		},
 		"SignedIn": "Signed in!",
@@ -10,7 +10,23 @@
 			"Subtitle": "Get your camera ready :)",
 			"Title": "Single product mode"
 		},
+		"Thanks": "Thanks",
 		"Title": "Add a price"
+	},
+	"AddPriceMultiple": {
+		"Done": "完了",
+		"ProductPriceDetails": {
+			"Add": "Add a new price",
+			"AlreadyUploaded": "Prices already uploaded",
+			"Create": "Create",
+			"NewPrice": "New price",
+			"PriceUploaded": "Price created!",
+			"Title": "Product prices"
+		},
+		"ProofDetails": {
+			"Title": "Proof details"
+		},
+		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
 		"Create": "Create",
@@ -64,7 +80,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "もっと読み込む",
-		"TopProducts": "Top products"
+		"TopProducts": "人気の製品"
 	},
 	"Footer": {
 		"About": "アプリについて",
@@ -94,7 +110,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
-		"Title": "Top Locations",
+		"Title": "上位の場所",
 		"LoadMore": "もっと読み込む"
 	},
 	"LocationSelector": {
@@ -152,16 +168,16 @@
 			"Title": "ホーム"
 		},
 		"LatestPrices": {
-			"Title": "Latest Prices"
+			"Title": "Latest prices"
 		},
 		"SignIn": {
 			"Title": "サインイン"
 		},
 		"TopContributors": {
-			"Title": "Top Contributors"
+			"Title": "上位貢献者:"
 		},
 		"TopLocations": {
-			"Title": "Top Locations"
+			"Title": "上位の場所"
 		},
 		"TopProducts": {
 			"Title": "Top products"
@@ -194,7 +210,7 @@
 	},
 	"UserList": {
 		"LoadMore": "もっと読み込む",
-		"Title": "Top Contributors"
+		"Title": "上位貢献者:"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
