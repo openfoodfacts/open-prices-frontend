@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "New!",
+			"Subtitle": "Berria!",
 			"Title": "Receipt mode"
 		},
 		"SignedIn": "Signed in!",
@@ -10,23 +10,23 @@
 			"Subtitle": "Get your camera ready :)",
 			"Title": "Single product mode"
 		},
-		"Thanks": "Thanks",
+		"Thanks": "Eskerrik asko",
 		"Title": "Add a price"
 	},
 	"AddPriceMultiple": {
 		"Done": "Done",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "Prices already uploaded",
+			"Add": "Gehitu prezio berria",
+			"AlreadyUploaded": "Prezioak igo dira jada",
 			"Create": "Sortu",
-			"NewPrice": "New price",
+			"NewPrice": "Prezio berria",
 			"PriceUploaded": "Price created!",
-			"Title": "Product prices"
+			"Title": "Produktuaren prezioak"
 		},
 		"ProofDetails": {
-			"Title": "Proof details"
+			"Title": "Frogaren xehetasunak"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Gehitu hainbat prezio"
 	},
 	"AddPriceSingle": {
 		"Create": "Sortu",
