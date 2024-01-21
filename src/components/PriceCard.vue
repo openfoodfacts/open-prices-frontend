@@ -42,7 +42,7 @@
                 <v-tooltip activator="parent" location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(price.price_without_discount) }}</v-tooltip>
               </v-chip>
             </span>
-            <i18n-t keypath="PriceCard.PriceDate" tag="span">
+            <i18n-t v-if="!hidePriceDate" keypath="PriceCard.PriceDate" tag="span">
               <template v-slot:date>
                 <i>{{ getDateFormatted(price.date) }}</i>
               </template>
@@ -51,7 +51,7 @@
         </v-col>
       </v-row>
 
-      <div class="d-flex flex-wrap ga-1 mt-2" v-if="price">
+      <div v-if="price && !hidePriceFooter" class="d-flex flex-wrap ga-1 mt-2">
         <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" density="comfortable" @click="goToLocation()">
           <v-icon start icon="mdi-map-marker-outline"></v-icon>
           {{ getPriceLocationTitle() }}
@@ -84,6 +84,8 @@ export default {
     'hideProductImage': false,
     'hideProductTitle': false,
     'hideProductDetails': false,
+    'hidePriceDate': false,
+    'hidePriceFooter': false,
     'hidePriceLocation': false,
     'readonly': false
   },

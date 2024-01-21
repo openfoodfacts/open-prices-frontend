@@ -6,6 +6,7 @@ import UserDashboard from './views/UserDashboard.vue'
 import UserSettings from './views/UserSettings.vue'
 import AddPriceHome from './views/AddPriceHome.vue'
 import AddPriceSingle from './views/AddPriceSingle.vue'
+import AddPriceMultiple from './views/AddPriceMultiple.vue'
 import PriceList from './views/PriceList.vue'
 import ProductList from './views/ProductList.vue'
 import ProductDetail from './views/ProductDetail.vue'
@@ -27,6 +28,7 @@ const routes = [
   { path: '/settings', name: 'settings', component: UserSettings, meta: { title: 'Settings', requiresAuth: true } },
   { path: '/add', name: 'add-price', component: AddPriceHome, meta: { title: 'AddPrice', icon: 'mdi-plus', drawerMenu: true, requiresAuth: true }},
   { path: '/add/single', name: 'add-price-single', component: AddPriceSingle, meta: { title: 'Add a single price', requiresAuth: true }},
+  { path: '/add/multiple', name: 'add-price-multiple', component: AddPriceMultiple, meta: { title: 'Add multiple prices', requiresAuth: true }},
   { path: '/prices', name: 'prices', component: PriceList, meta: { title: 'LatestPrices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
   { path: '/products', name: 'products', component: ProductList, meta: { title: 'TopProducts', icon: 'mdi-database-outline', drawerMenu: true }},
   { path: '/products/:id', name: 'product-detail', component: ProductDetail, meta: { title: 'Product detail' }},

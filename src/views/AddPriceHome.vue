@@ -2,7 +2,7 @@
   <h1 class="mb-1">{{ $t('AddPriceHome.Title') }}</h1>
 
   <v-row>
-    <v-col cols="12" md="6">
+    <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('AddPriceHome.SingleProductMode.Title')"
         :subtitle="$t('AddPriceHome.SingleProductMode.Subtitle')"
@@ -10,13 +10,13 @@
         to="/add/single">
       </v-card>
     </v-col>
-    <v-col cols="12" md="6">
+    <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('AddPriceHome.ReceiptMode.Title')"
         :subtitle="$t('AddPriceHome.ReceiptMode.Subtitle')"
         prepend-icon="mdi-receipt-text-outline"
-        link
-        disabled></v-card>
+        to="/add/multiple">
+      </v-card>
     </v-col>
   </v-row>
 
@@ -30,22 +30,31 @@
     color="success"
     :timeout="2000"
   >{{ $t('AddPriceHome.PriceCreated') }}</v-snackbar>
+  <v-snackbar
+    v-model="multipleSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >{{ $t('AddPriceHome.Thanks') }}</v-snackbar>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      singleSuccessMessage: false,
       signinSuccessMessage: false,
+      singleSuccessMessage: false,
+      multipleSuccessMessage: false,
     }
   },
   mounted() {
+    if (this.$route.query.signinSuccess === 'true') {
+      this.signinSuccessMessage = true
+    }
     if (this.$route.query.singleSuccess === 'true') {
       this.singleSuccessMessage = true
     }
-    if (this.$route.query.signinSuccess === 'true') {
-      this.signinSuccessMessage = true
+    if (this.$route.query.multipleSuccess === 'true') {
+      this.multipleSuccessMessage = true
     }
   }
 }

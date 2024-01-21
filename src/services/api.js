@@ -28,11 +28,11 @@ export default {
     .then((response) => response.json())
   },
 
-  createProof(proofImage) {
+  createProof(proofImage, type='PRICE_TAG') {
     const store = useAppStore()
     let formData = new FormData()
     formData.append('file', proofImage, proofImage.name)
-    formData.append('type', 'PRICE_TAG')
+    formData.append('type', type)
     return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload`, {
       method: 'POST',
       headers: {
