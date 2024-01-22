@@ -4,8 +4,8 @@
         "id": "en:acidic-apples"
     },
     {
-        "id": "en:agata-potatoes",
-        "name": "Agata potatoes"
+        "name": "Agata potatoes",
+        "id": "en:agata-potatoes"
     },
     {
         "name": "Allium neapolitanum",
@@ -44,8 +44,8 @@
         "id": "en:avocados"
     },
     {
-        "id": "en:ayrshire-new-potatoes",
-        "name": "Ayrshire New Potatoes"
+        "name": "Ayrshire New Potatoes",
+        "id": "en:ayrshire-new-potatoes"
     },
     {
         "name": "Bagnoli truffles",
@@ -102,6 +102,14 @@
     {
         "name": "Blackthorns",
         "id": "en:blackthorns"
+    },
+    {
+        "name": "Blanched roasted hazelnuts",
+        "id": "en:blanched-roasted-hazelnuts"
+    },
+    {
+        "name": "Blanched shelled hazelnuts",
+        "id": "en:blanched-shelled-hazelnuts"
     },
     {
         "name": "Bloody milk caps",
@@ -212,8 +220,8 @@
         "id": "en:charentais-melons"
     },
     {
-        "id": "en:charlotte-potatoes",
-        "name": "Charlotte potatoes"
+        "name": "Charlotte potatoes",
+        "id": "en:charlotte-potatoes"
     },
     {
         "name": "Cherries",
@@ -424,6 +432,10 @@
         "id": "en:gherkins-in-sweet-and-sour-sauce"
     },
     {
+        "name": "Ginger",
+        "id": "en:ginger"
+    },
+    {
         "name": "Golden Delicious apples",
         "id": "en:golden-delicious-apples"
     },
@@ -496,6 +508,10 @@
         "id": "en:guavas"
     },
     {
+        "name": "Hazelnut grilled salted",
+        "id": "en:hazelnut-grilled-salted"
+    },
+    {
         "name": "Honeydew melons",
         "id": "en:honeydew-melons"
     },
@@ -516,8 +532,8 @@
         "id": "en:jackfruit"
     },
     {
-        "id": "en:jersey-royal-potatoes",
-        "name": "Jersey Royal potatoes"
+        "name": "Jersey Royal potatoes",
+        "id": "en:jersey-royal-potatoes"
     },
     {
         "name": "Jerusalem artichoke",
@@ -660,16 +676,16 @@
         "id": "en:nectarines"
     },
     {
-        "id": "en:new-season-comber-potatoes",
-        "name": "New Season Comber Potatoes"
+        "name": "New Season Comber Potatoes",
+        "id": "en:new-season-comber-potatoes"
     },
     {
         "name": "New Zealand spinach",
         "id": "en:new-zealand-spinach"
     },
     {
-        "id": "en:new-potatoes",
-        "name": "New potatoes"
+        "name": "New potatoes",
+        "id": "en:new-potatoes"
     },
     {
         "name": "Northern Highbush Blueberries",
@@ -788,8 +804,8 @@
         "id": "en:porcini-mushrooms"
     },
     {
-        "id": "en:potatoes",
-        "name": "Potatoes"
+        "name": "Potatoes",
+        "id": "en:potatoes"
     },
     {
         "name": "Prickly pears",
@@ -868,12 +884,24 @@
         "id": "en:rhubarbs"
     },
     {
+        "name": "Roasted hazelnuts",
+        "id": "en:roasted-hazelnuts"
+    },
+    {
+        "name": "Roasted hazelnuts with skin",
+        "id": "en:roasted-hazelnuts-with-skin"
+    },
+    {
         "name": "Rochet melons",
         "id": "en:rochet-melons"
     },
     {
         "name": "Rocket",
         "id": "en:rocket"
+    },
+    {
+        "name": "Rolled oats",
+        "id": "en:rolled-oats"
     },
     {
         "name": "Romaine lettuce",
@@ -910,6 +938,42 @@
     {
         "name": "Shallots",
         "id": "en:shallots"
+    },
+    {
+        "name": "Shelled Brazil nuts",
+        "id": "en:shelled-brazil-nuts"
+    },
+    {
+        "name": "Shelled almonds",
+        "id": "en:shelled-almonds"
+    },
+    {
+        "name": "Shelled chestnuts",
+        "id": "en:shelled-chestnuts"
+    },
+    {
+        "name": "Shelled hazelnuts",
+        "id": "en:shelled-hazelnuts"
+    },
+    {
+        "name": "Shelled hazelnuts with skin",
+        "id": "en:shelled-hazelnuts-with-skin"
+    },
+    {
+        "name": "Shelled macadamia nuts",
+        "id": "en:shelled-macadamia-nuts"
+    },
+    {
+        "name": "Shelled pecan nuts",
+        "id": "en:shelled-pecan-nuts"
+    },
+    {
+        "name": "Shelled pine nuts",
+        "id": "en:shelled-pine-nuts"
+    },
+    {
+        "name": "Shelled pistachios",
+        "id": "en:shelled-pistachios"
     },
     {
         "name": "Shiitake mushrooms",
@@ -964,6 +1028,10 @@
         "id": "en:tendral-melons"
     },
     {
+        "name": "Textured soy protein",
+        "id": "en:textured-soy-protein"
+    },
+    {
         "name": "Tomatoes",
         "id": "en:tomatoes"
     },
@@ -986,6 +1054,10 @@
     {
         "name": "Vegetable rods",
         "id": "en:vegetable-rods"
+    },
+    {
+        "name": "Walnut kernels",
+        "id": "en:walnut-kernels"
     },
     {
         "name": "Watercress",
