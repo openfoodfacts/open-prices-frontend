@@ -46,6 +46,7 @@
             </v-col>
           </v-row>
         </v-card-text>
+        <v-overlay v-model="disableProofLocationDateForm" scrim="#E8F5E9" contained persistent></v-overlay>
       </v-card>
     </v-col>
 
@@ -82,6 +83,7 @@
             </v-col>
           </v-row>
         </v-card-text>
+        <v-overlay v-model="disableProofLocationDateForm" scrim="#E8F5E9" contained persistent></v-overlay>
       </v-card>
     </v-col>
 
@@ -398,7 +400,10 @@ export default {
       return this.productFormFilled && this.priceFormFilled
     },
     formFilled() {
-      return this.proofLocationFormFilled && this.productPriceUploadedList.length && !Object.keys(this.productPriceForm).length
+      return this.proofLocationFormFilled && !!this.productPriceUploadedList.length && !Object.keys(this.productPriceForm).length
+    },
+    disableProofLocationDateForm() {
+      return this.proofLocationFormFilled && !!this.productPriceUploadedList.length
     }
   },
   mounted() {
