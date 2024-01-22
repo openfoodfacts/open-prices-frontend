@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.26.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.25.0...v1.26.0) (2024-01-22)
+
+
+### Features
+
+* **l10n:** New Crowdin translations to review and merge ([#184](https://github.com/openfoodfacts/open-prices-frontend/issues/184)) ([00a96c5](https://github.com/openfoodfacts/open-prices-frontend/commit/00a96c502cd8b84d3c76a62647d67c90904bd072))
+* **multiple create form:** disable proof & location steps when first price uploaded ([7db5e26](https://github.com/openfoodfacts/open-prices-frontend/commit/7db5e2661e0135fd1fd6d8bdb14d8c644eb5b6ae))
+* **multiple create form:** seperate Receipt & Price tag modes ([#188](https://github.com/openfoodfacts/open-prices-frontend/issues/188)) ([b2c6113](https://github.com/openfoodfacts/open-prices-frontend/commit/b2c611352abfd254786cec9b5c168878e060accb))
+* **price create form:** make location selected chip greener ([ec175cc](https://github.com/openfoodfacts/open-prices-frontend/commit/ec175cc06be11d62c04dc1588d6b8e2331ac3b0f))
+
+
+### Bug Fixes
+
+* add new categories ([#187](https://github.com/openfoodfacts/open-prices-frontend/issues/187)) ([e65d00e](https://github.com/openfoodfacts/open-prices-frontend/commit/e65d00e181634fca04d22fcdb34d6485dba26627))
+* **l10n:** revert crowdin commit naming. ref [#174](https://github.com/openfoodfacts/open-prices-frontend/issues/174) ([16e2c8e](https://github.com/openfoodfacts/open-prices-frontend/commit/16e2c8e9efcb56981f9c8d1c5e483f79c002a247))
+* **multiple create form:** improve button colors ([ccf6207](https://github.com/openfoodfacts/open-prices-frontend/commit/ccf62073b06474ce9b103596bf5db2a625346940))
+* **multiple create form:** improve proof icons. ref [#188](https://github.com/openfoodfacts/open-prices-frontend/issues/188) ([83dc790](https://github.com/openfoodfacts/open-prices-frontend/commit/83dc79090df0019ed901219fd9c398bff994ba65))
+
 ## [1.25.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.24.2...v1.25.0) (2024-01-21)
 
 
