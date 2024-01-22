@@ -1,17 +1,23 @@
 {
 	"AddPriceHome": {
+		"MultipleProductMode": {
+			"Subtitle": "Ein Regal mit mehreren Preisschildern",
+			"Title": "Mehrere Produkte"
+		},
 		"PriceCreated": "Preis erstellt!",
 		"ReceiptMode": {
-			"Subtitle": "Neu!",
-			"Title": "Empfangsmodus"
+			"Subtitle": "Ein oder mehrere Produkte",
+			"Title": "Kassenbon"
 		},
 		"SignedIn": "Angemeldet!",
 		"SingleProductMode": {
-			"Subtitle": "Halten Sie Ihre Kamera bereit 🙂",
-			"Title": "Einzelproduktmodus"
+			"Subtitle": "Nur ein Preisschild",
+			"Title": "Einzelnes Produkt"
 		},
 		"Thanks": "Danke",
-		"Title": "Preis hinzufügen"
+		"Title": "Preis hinzufügen",
+		"TitleSingle": "Fügen Sie einen Einzelpreis hinzu",
+		"TitleMultiple": "Mehrere Preise auf einmal hinzufügen"
 	},
 	"AddPriceMultiple": {
 		"Done": "Fertig",
@@ -21,7 +27,8 @@
 			"Create": "Erstellen",
 			"NewPrice": "Neuer Preis",
 			"PriceUploaded": "Preis erstellt!",
-			"Title": "Produktpreise"
+			"Title": "Produktpreise",
+			"Upload": "Upload"
 		},
 		"ProofDetails": {
 			"Title": "Details zum Nachweis"
@@ -114,7 +121,7 @@
 		"LoadMore": "Weitere laden"
 	},
 	"LocationSelector": {
-		"Clear": "Löschen",
+		"Clear": "Leeren",
 		"NoResult": "Keine Ergebnisse gefunden",
 		"OSM": {
 			"text": "Bereitgestellt von {url}"
