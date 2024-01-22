@@ -1,17 +1,23 @@
 {
 	"AddPriceHome": {
+		"MultipleProductMode": {
+			"Subtitle": "A shelf with multiple price tags",
+			"Title": "Multiple products"
+		},
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "Nieuw!",
-			"Title": "Receipt mode"
+			"Subtitle": "One or multiple products",
+			"Title": "Receipt"
 		},
 		"SignedIn": "Ingelogd!",
 		"SingleProductMode": {
-			"Subtitle": "Houd je camera gereed :)",
-			"Title": "Single product mode"
+			"Subtitle": "Just one price tag",
+			"Title": "Single product"
 		},
 		"Thanks": "Bedankt",
-		"Title": "Voeg een prijs toe"
+		"Title": "Voeg een prijs toe",
+		"TitleSingle": "Add a single price",
+		"TitleMultiple": "Add multiple prices in bulk"
 	},
 	"AddPriceMultiple": {
 		"Done": "Voltooid",
@@ -21,7 +27,8 @@
 			"Create": "Aanmaken",
 			"NewPrice": "Nieuwe prijs",
 			"PriceUploaded": "Price created!",
-			"Title": "Productprijzen"
+			"Title": "Productprijzen",
+			"Upload": "Upload"
 		},
 		"ProofDetails": {
 			"Title": "Bewijs details"

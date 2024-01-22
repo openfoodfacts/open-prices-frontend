@@ -1,17 +1,23 @@
 {
 	"AddPriceHome": {
+		"MultipleProductMode": {
+			"Subtitle": "Une étagère avec plusieurs étiquettes de prix",
+			"Title": "Plusieurs produits"
+		},
 		"PriceCreated": "Prix créé !",
 		"ReceiptMode": {
-			"Subtitle": "Nouveau !",
-			"Title": "Mode d'ajout par ticket de caisse"
+			"Subtitle": "Un ou plusieurs produits",
+			"Title": "Reçu"
 		},
 		"SignedIn": "Connecté !",
 		"SingleProductMode": {
-			"Subtitle": "Préparez votre caméra :)",
-			"Title": "Mode d'ajout simple"
+			"Subtitle": "Une seule étiquette de prix",
+			"Title": "Produit unique"
 		},
 		"Thanks": "Merci",
-		"Title": "Ajouter un prix"
+		"Title": "Ajouter un prix",
+		"TitleSingle": "Ajoutez un prix unique",
+		"TitleMultiple": "Ajouter des prix multiples"
 	},
 	"AddPriceMultiple": {
 		"Done": "Fait",
@@ -21,7 +27,8 @@
 			"Create": "Créer",
 			"NewPrice": "Nouveau prix",
 			"PriceUploaded": "Prix créé !",
-			"Title": "Prix de l'article"
+			"Title": "Prix de l'article",
+			"Upload": "Upload"
 		},
 		"ProofDetails": {
 			"Title": "Détails du prix"
