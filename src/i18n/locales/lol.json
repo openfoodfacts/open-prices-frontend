@@ -1,17 +1,23 @@
 {
 	"AddPriceHome": {
+		"MultipleProductMode": {
+			"Subtitle": "crwdns246870:0crwdne246870:0",
+			"Title": "crwdns246872:0crwdne246872:0"
+		},
 		"PriceCreated": "crwdns246540:0crwdne246540:0",
 		"ReceiptMode": {
-			"Subtitle": "crwdns246848:0crwdne246848:0",
-			"Title": "crwdns246544:0crwdne246544:0"
+			"Subtitle": "crwdns246874:0crwdne246874:0",
+			"Title": "crwdns246876:0crwdne246876:0"
 		},
 		"SignedIn": "crwdns246546:0crwdne246546:0",
 		"SingleProductMode": {
-			"Subtitle": "crwdns246548:0crwdne246548:0",
-			"Title": "crwdns246550:0crwdne246550:0"
+			"Subtitle": "crwdns246878:0crwdne246878:0",
+			"Title": "crwdns246880:0crwdne246880:0"
 		},
 		"Thanks": "crwdns246850:0crwdne246850:0",
-		"Title": "crwdns246552:0crwdne246552:0"
+		"Title": "crwdns246552:0crwdne246552:0",
+		"TitleSingle": "crwdns246882:0crwdne246882:0",
+		"TitleMultiple": "crwdns246884:0crwdne246884:0"
 	},
 	"AddPriceMultiple": {
 		"Done": "crwdns246852:0crwdne246852:0",
@@ -21,7 +27,8 @@
 			"Create": "crwdns246858:0crwdne246858:0",
 			"NewPrice": "crwdns246860:0crwdne246860:0",
 			"PriceUploaded": "crwdns246862:0crwdne246862:0",
-			"Title": "crwdns246864:0crwdne246864:0"
+			"Title": "crwdns246864:0crwdne246864:0",
+			"Upload": "crwdns246886:0crwdne246886:0"
 		},
 		"ProofDetails": {
 			"Title": "crwdns246866:0crwdne246866:0"
@@ -114,7 +121,7 @@
 		"LoadMore": "crwdns246828:0crwdne246828:0"
 	},
 	"LocationSelector": {
-		"Clear": "crwdns246638:0crwdne246638:0",
+		"Clear": "crwdns246888:0crwdne246888:0",
 		"NoResult": "crwdns246640:0crwdne246640:0",
 		"OSM": {
 			"text": "crwdns246642:0{url}crwdne246642:0"
