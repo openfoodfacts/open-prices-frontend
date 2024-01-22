@@ -6,9 +6,12 @@
     <v-col cols="12" md="6" lg="4">
       <v-card
         :title="$t('AddPriceMultiple.ProofDetails.Title')"
-        :prepend-icon="proofFormFilled ? (proofType === 'RECEIPT' ? 'mdi-receipt-text-check-outline' : 'mdi-library-shelves') : (proofType === 'RECEIPT' ? 'mdi-receipt-text-outline' : 'mdi-library-shelves')"
+        :prepend-icon="(proofType === 'RECEIPT') ? 'mdi-receipt-text-outline' : 'mdi-library-shelves'"
         height="100%"
         :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
+        <template v-slot:append v-if="proofFormFilled">
+          <v-icon icon="mdi-checkbox-marked-circle" color="success"></v-icon>
+        </template>
         <v-divider></v-divider>
         <v-card-text>
           <v-row>
@@ -54,9 +57,12 @@
     <v-col cols="12" md="6" lg="4">
       <v-card
         :title="$t('AddPriceSingle.WhereWhen.Title')"
-        :prepend-icon="locationDateFormFilled ? 'mdi-map-marker-check-outline' : 'mdi-map-marker-outline'"
+        prepend-icon="mdi-map-marker-outline"
         height="100%"
         :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
+        <template v-slot:append v-if="locationDateFormFilled">
+          <v-icon icon="mdi-checkbox-marked-circle" color="success"></v-icon>
+        </template>
         <v-divider></v-divider>
         <v-card-text>
           <h3 class="mb-1">{{ $t('AddPriceSingle.WhereWhen.Location') }}</h3>
@@ -65,7 +71,7 @@
             :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
             v-for="location in recentLocations"
             @click="setLocationData(location)">
-            <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'" :color="isSelectedLocation(location) ? 'green' : ''"></v-icon>
+            <v-icon start :icon="isSelectedLocation(location) ? 'mdi-check-circle-outline' : 'mdi-history'" :color="isSelectedLocation(location) ? 'green' : ''"></v-icon>
             {{ getNominatimLocationTitle(location, true, true, true) }}
           </v-chip>
           <br v-if="recentLocations.length" />
@@ -94,6 +100,9 @@
         prepend-icon="mdi-tag-check-outline"
         height="100%"
         style="border: 1px solid #4CAF50">
+        <template v-slot:append>
+          <v-icon icon="mdi-checkbox-marked-circle" color="success"></v-icon>
+        </template>
         <v-divider></v-divider>
         <v-card-text>
           <v-row>
