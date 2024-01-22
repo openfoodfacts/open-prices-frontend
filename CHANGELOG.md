@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.27.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.27.0...v1.27.1) (2024-01-22)
+
+
+### Bug Fixes
+
+* **price card:** fix price parsing ([3204df8](https://github.com/openfoodfacts/open-prices-frontend/commit/3204df8cd224711505c8e487bd0f8cf749fa2afd))
+
 ## [1.27.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.26.0...v1.27.0) (2024-01-22)
 
 
