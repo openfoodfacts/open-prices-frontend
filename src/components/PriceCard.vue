@@ -102,10 +102,10 @@ export default {
   },
   computed: {
     priceValue() {
-      return parseInt(this.price.price)
+      return parseFloat(this.price.price)
     },
     priceWithoutDiscountValue() {
-      return parseInt(this.price.price_without_discount)
+      return parseFloat(this.price.price_without_discount)
     },
     priceCurrency() {
       return this.price.currency
