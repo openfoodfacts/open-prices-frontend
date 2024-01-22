@@ -14,7 +14,7 @@
 			"Subtitle": "Just one price tag",
 			"Title": "Single product"
 		},
-		"Thanks": "Thanks",
+		"Thanks": "Obrigado",
 		"Title": "Adicionar um preço",
 		"TitleSingle": "Adicionar um preço único",
 		"TitleMultiple": "Add multiple prices in bulk"
@@ -22,18 +22,18 @@
 	"AddPriceMultiple": {
 		"Done": "Concluído",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "Prices already uploaded",
+			"Add": "Adicionar um novo preço",
+			"AlreadyUploaded": "Preços já carregados",
 			"Create": "Criar",
-			"NewPrice": "New price",
+			"NewPrice": "Novo preço",
 			"PriceUploaded": "Preço criado!",
-			"Title": "Product prices",
-			"Upload": "Upload"
+			"Title": "Preço do produto",
+			"Upload": "Carregar"
 		},
 		"ProofDetails": {
-			"Title": "Proof details"
+			"Title": "Detalhes do comprovativo"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Adicione vários preços"
 	},
 	"AddPriceSingle": {
 		"Create": "Criar",
@@ -87,7 +87,7 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Carregar mais",
-		"TopProducts": "Top Products"
+		"TopProducts": "Produtos em destaque"
 	},
 	"Footer": {
 		"About": "Sobre",
