@@ -310,6 +310,7 @@ export default {
   data() {
     return {
       dev: import.meta.env.DEV,
+      proofType: null,  // 'PRICE_TAG' or 'RECEIPT'
       // price form
       addPriceMultipleForm: {
         proof_id: null,
@@ -403,6 +404,7 @@ export default {
   },
   mounted() {
     this.initPriceMultipleForm()
+    this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
   },
   methods: {
     initPriceMultipleForm() {
@@ -429,7 +431,7 @@ export default {
       })
       .then((proofImageCompressed) => {
         api
-          .createProof(proofImageCompressed, 'RECEIPT')
+          .createProof(proofImageCompressed, this.proofType)
           .then((data) => {
             this.createProofLoading = false
             if (data['id']) {
