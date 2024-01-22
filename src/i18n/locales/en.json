@@ -27,7 +27,8 @@
 			"Create": "Create",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
-			"Title": "Product prices"
+			"Title": "Product prices",
+			"Upload": "Upload"
 		},
 		"ProofDetails": {
 			"Title": "Proof details"
@@ -120,7 +121,7 @@
 		"LoadMore": "Load more"
 	},
 	"LocationSelector": {
-		"Clear": "To clear",
+		"Clear": "Clear",
 		"NoResult": "No results found",
 		"OSM": {
 			"text": "powered by {url}"

@@ -216,7 +216,7 @@
             :loading="createPriceLoading"
             :disabled="!productPriceFormFilled"
             @click="createPrice"
-          >{{ $t('AddPriceMultiple.ProductPriceDetails.Create') }}</v-btn>
+          >{{ $t('AddPriceMultiple.ProductPriceDetails.Upload') }}</v-btn>
         </v-card-text>
       </v-card>
     </v-col>
@@ -236,7 +236,6 @@
       <v-btn
         class="float-right"
         type="submit"
-        :color="formFilled ? 'success' : ''"
         :loading="createPriceLoading"
         :disabled="!formFilled"
         @click="done"
