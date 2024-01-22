@@ -1,23 +1,23 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "複数の値札が貼られた棚",
+			"Title": "複数の製品"
 		},
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "1つまたは複数の製品",
+			"Title": "領収書"
 		},
 		"SignedIn": "Signed in!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "値札は 1 枚だけ",
+			"Title": "単一製品"
 		},
 		"Thanks": "ありがとうございます",
 		"Title": "Add a price",
 		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "複数の価格を追加する"
 	},
 	"AddPriceMultiple": {
 		"Done": "完了",
