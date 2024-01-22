@@ -10,9 +10,10 @@
       <v-form @submit.prevent="onSubmit">
         <v-card-text>
           <v-text-field
+            ref="barcodeInput"
             v-model="barcodeForm.barcode"
             :label="$t('BarcodeManualInput.Barcode')"
-            type="input"
+            type="number"
             prepend-inner-icon="mdi-barcode"
             :hint="barcodeForm.barcode.length.toString()"
             persistent-hint
@@ -48,6 +49,7 @@ export default {
     }
   },
   mounted() {
+    this.$refs.barcodeInput.focus()
   },
   methods: {
     onSubmit() {
