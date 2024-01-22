@@ -1,17 +1,23 @@
 {
 	"AddPriceHome": {
+		"MultipleProductMode": {
+			"Subtitle": "A shelf with multiple price tags",
+			"Title": "Multiple products"
+		},
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "New!",
-			"Title": "Receipt mode"
+			"Subtitle": "One or multiple products",
+			"Title": "Receipt"
 		},
 		"SignedIn": "Signed in!",
 		"SingleProductMode": {
-			"Subtitle": "Get your camera ready :)",
-			"Title": "Single product mode"
+			"Subtitle": "Just one price tag",
+			"Title": "Single product"
 		},
 		"Thanks": "Thanks",
-		"Title": "Add a price"
+		"Title": "Add a price",
+		"TitleSingle": "Add a single price",
+		"TitleMultiple": "Add multiple prices in bulk"
 	},
 	"AddPriceMultiple": {
 		"Done": "Færdiggjort",
@@ -21,7 +27,8 @@
 			"Create": "Opret",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
-			"Title": "Product prices"
+			"Title": "Product prices",
+			"Upload": "Upload"
 		},
 		"ProofDetails": {
 			"Title": "Proof details"
@@ -114,7 +121,7 @@
 		"LoadMore": "Indlæs mere"
 	},
 	"LocationSelector": {
-		"Clear": "To clear",
+		"Clear": "Ryd",
 		"NoResult": "No results found",
 		"OSM": {
 			"text": "powered by {url}"
