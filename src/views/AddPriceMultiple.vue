@@ -61,10 +61,10 @@
           <h3 class="mb-1">{{ $t('AddPriceSingle.WhereWhen.Location') }}</h3>
           <v-chip
             class="mb-2"
-            :style="isSelectedLocation(location) ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'"
+            :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
             v-for="location in recentLocations"
             @click="setLocationData(location)">
-            <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'"></v-icon>
+            <v-icon start :icon="isSelectedLocation(location) ? 'mdi-checkbox-marked-circle' : 'mdi-history'" :color="isSelectedLocation(location) ? 'green' : ''"></v-icon>
             {{ getNominatimLocationTitle(location, true, true, true) }}
           </v-chip>
           <br v-if="recentLocations.length" />
