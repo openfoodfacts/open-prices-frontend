@@ -6,7 +6,7 @@
     <v-col cols="12" md="6" lg="4">
       <v-card
         :title="$t('AddPriceMultiple.ProofDetails.Title')"
-        :prepend-icon="proofFormFilled ? 'mdi-receipt-text-check-outline' : 'mdi-receipt-text-outline'"
+        :prepend-icon="proofFormFilled ? (proofType === 'RECEIPT' ? 'mdi-receipt-text-check-outline' : 'mdi-library-shelves') : (proofType === 'RECEIPT' ? 'mdi-receipt-text-outline' : 'mdi-library-shelves')"
         height="100%"
         :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
         <v-divider></v-divider>
