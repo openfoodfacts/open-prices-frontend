@@ -34,12 +34,12 @@
           </p>
 
           <p v-if="price">
-            <span class="mr-1">{{ getPriceValueDisplay(price.price) }}</span>
+            <span class="mr-1">{{ getPriceValueDisplay(priceValue) }}</span>
             <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerKilo() }})</span>
-            <span v-if="price.price_without_discount">
+            <span v-if="priceWithoutDiscountValue">
               <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">
                 {{ $t('PriceCard.Discount') }}
-                <v-tooltip activator="parent" location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(price.price_without_discount) }}</v-tooltip>
+                <v-tooltip activator="parent" location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(priceWithoutDiscountValue) }}</v-tooltip>
               </v-chip>
             </span>
             <i18n-t v-if="!hidePriceDate" keypath="PriceCard.PriceDate" tag="span">
@@ -102,7 +102,10 @@ export default {
   },
   computed: {
     priceValue() {
-      return this.price.price
+      return parseInt(this.price.price)
+    },
+    priceWithoutDiscountValue() {
+      return parseInt(this.price.price_without_discount)
     },
     priceCurrency() {
       return this.price.currency
