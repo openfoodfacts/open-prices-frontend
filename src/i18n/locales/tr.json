@@ -1,23 +1,23 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Birden fazla fiyat etiketi içeren bir raf",
+			"Title": "Birden fazla ürün"
 		},
 		"PriceCreated": "Fiyat oluşturuldu!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Bir veya birden fazla ürün",
+			"Title": "Makbuz"
 		},
 		"SignedIn": "Giriş yapıldı!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Sadece bir fiyat etiketi",
+			"Title": "Tek ürün"
 		},
 		"Thanks": "Teşekkürler",
 		"Title": "Fiyat ekleyin",
 		"TitleSingle": "Tek bir fiyat ekleyin",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "Toplu olarak birden fazla fiyat ekleyin"
 	},
 	"AddPriceMultiple": {
 		"Done": "Yapıldı",
@@ -28,7 +28,7 @@
 			"NewPrice": "Yeni fiyat",
 			"PriceUploaded": "Fiyat oluşturuldu!",
 			"Title": "Ürün fiyatları",
-			"Upload": "Upload"
+			"Upload": "Yükle"
 		},
 		"ProofDetails": {
 			"Title": "Kanıt ayrıntıları"
