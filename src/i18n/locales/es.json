@@ -1,17 +1,23 @@
 {
 	"AddPriceHome": {
+		"MultipleProductMode": {
+			"Subtitle": "A shelf with multiple price tags",
+			"Title": "Multiple products"
+		},
 		"PriceCreated": "¡Precio creado!",
 		"ReceiptMode": {
-			"Subtitle": "New!",
-			"Title": "Modo de recibo"
+			"Subtitle": "One or multiple products",
+			"Title": "Receipt"
 		},
 		"SignedIn": "¡Registrado!",
 		"SingleProductMode": {
-			"Subtitle": "Prepara tu cámara :)",
-			"Title": "Modo de producto único"
+			"Subtitle": "Just one price tag",
+			"Title": "Single product"
 		},
 		"Thanks": "Thanks",
-		"Title": "Agregar un precio"
+		"Title": "Agregar un precio",
+		"TitleSingle": "Agregar un precio individual",
+		"TitleMultiple": "Add multiple prices in bulk"
 	},
 	"AddPriceMultiple": {
 		"Done": "Hecho",
@@ -21,7 +27,8 @@
 			"Create": "Crear",
 			"NewPrice": "New price",
 			"PriceUploaded": "¡Precio creado!",
-			"Title": "Product prices"
+			"Title": "Product prices",
+			"Upload": "Upload"
 		},
 		"ProofDetails": {
 			"Title": "Proof details"
@@ -114,7 +121,7 @@
 		"LoadMore": "Carga más"
 	},
 	"LocationSelector": {
-		"Clear": "Borrar",
+		"Clear": "Limpiar",
 		"NoResult": "No se han encontrado resultados",
 		"OSM": {
 			"text": "con tecnología de {url}"
