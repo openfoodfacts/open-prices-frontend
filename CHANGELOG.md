@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.27.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.26.0...v1.27.0) (2024-01-22)
+
+
+### Features
+
+* **l10n:** New Crowdin translations to review and merge ([#189](https://github.com/openfoodfacts/open-prices-frontend/issues/189)) ([61383c8](https://github.com/openfoodfacts/open-prices-frontend/commit/61383c81f11cb76a006ae8bdc9685e0132fbc1d8))
+* **price create form:** add green check marks next to filled in cards ([a337052](https://github.com/openfoodfacts/open-prices-frontend/commit/a3370525f71ec646d8c770c431ab4d6ede9807ee))
+* **price create form:** manual barcode: focus input, show number keyboard ([e547914](https://github.com/openfoodfacts/open-prices-frontend/commit/e547914f057fb979c49e21daa7f94c673f1db6a0))
+
+
+### Bug Fixes
+
+* **multiple create form:** fix display price currency ([87af5c1](https://github.com/openfoodfacts/open-prices-frontend/commit/87af5c1ffaf83a48ddaf339442f548ccd657ba86))
+
 ## [1.26.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.25.0...v1.26.0) (2024-01-22)
 
 
