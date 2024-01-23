@@ -105,6 +105,7 @@
 	},
 	"Home": {
 		"AddPrice": "Add a price",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Settings updated!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
@@ -148,6 +149,7 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Άγνωστο όνομα προϊόντος"
 	},
@@ -177,6 +179,9 @@
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
+		"Search": {
+			"Title": "Αναζήτηση"
+		},
 		"SignIn": {
 			"Title": "Σύνδεση"
 		},
@@ -189,6 +194,10 @@
 		"TopProducts": {
 			"Title": "Top products"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Αναζήτηση"
 	},
 	"SignIn": {
 		"Button": "Σύνδεση",
