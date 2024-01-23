@@ -27,7 +27,6 @@
 			"Create": "Erstellen",
 			"NewPrice": "Neuer Preis",
 			"PriceUploaded": "Preis erstellt!",
-			"Title": "Produktpreise",
 			"Upload": "Hochladen"
 		},
 		"ProofDetails": {
@@ -105,7 +104,7 @@
 	},
 	"Home": {
 		"AddPrice": "Preis hinzufügen",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Produkt suchen",
 		"SettingsUpdated": "Einstellungen aktualisiert!",
 		"Welcome": {
 			"Subtitle": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise 🏷🍊💲",
@@ -149,7 +148,7 @@
 		"Title": "Aktuelle Preise"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Neuester Preis",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Unbekannter Produktname"
 	},
@@ -196,7 +195,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"SearchByProductBarcode": "Produkt mit Strichcode suchen",
 		"Title": "Suchen"
 	},
 	"SignIn": {
