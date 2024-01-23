@@ -1,23 +1,23 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "מדף עם מגוון תגיות מחיר",
+			"Title": "מגוון מוצרים"
 		},
 		"PriceCreated": "המחיר נוצר!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "מוצר או יותר",
+			"Title": "קבלה"
 		},
 		"SignedIn": "נכנסת!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "תגית מחיר אחת בלבד",
+			"Title": "מוצר יחיד"
 		},
 		"Thanks": "תודה",
 		"Title": "הוספת מחיר",
 		"TitleSingle": "הוספת מחיר בודד",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "הוספת מספר מחירים במרוכז"
 	},
 	"AddPriceMultiple": {
 		"Done": "בוצע",
@@ -27,7 +27,7 @@
 			"Create": "יצירה",
 			"NewPrice": "מחיר חדש",
 			"PriceUploaded": "המחיר נוצר!",
-			"Upload": "Upload"
+			"Upload": "העלאה"
 		},
 		"ProofDetails": {
 			"Title": "פרטי הוכחה"
@@ -104,7 +104,7 @@
 	},
 	"Home": {
 		"AddPrice": "הוספת מחיר",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "חיפוש מוצר",
 		"SettingsUpdated": "ההגדרות עודכנו!",
 		"Welcome": {
 			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
@@ -148,7 +148,7 @@
 		"Title": "מחירים עדכניים"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "המחיר העדכני",
 		"ProductQuantity": "{0} גרם",
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
@@ -195,7 +195,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"SearchByProductBarcode": "חיפוש לפי ברקוד של מוצר",
 		"Title": "חיפוש"
 	},
 	"SignIn": {
