@@ -33,14 +33,29 @@
           </p>
         </v-col>
       </v-row>
+
+      <v-sheet v-if="latestPrice">
+        <v-divider class="mt-2 mb-2"></v-divider>
+        <h4>{{ $t('ProductCard.LatestPrice') }}</h4>
+        <PricePrice :price="latestPrice" :productQuantity="product.product_quantity"></PricePrice>
+        <PriceFooter :price="latestPrice"></PriceFooter>
+      </v-sheet>
     </v-container>
   </v-card>
 </template>
 
 <script>
+import PricePrice from '../components/PricePrice.vue'
+import PriceFooter from '../components/PriceFooter.vue'
+
 export default {
+  components: {
+    PricePrice,
+    PriceFooter,
+  },
   props: {
     'product': null,
+    'latestPrice': null,
     'readonly': false
   },
   data() {
