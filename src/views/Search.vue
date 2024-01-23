@@ -25,7 +25,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12" sm="6" md="4" v-for="product in resultList" :key="product">
-      <ProductCard :product="product" elevation="1" height="100%"></ProductCard>
+      <ProductCard :product="product" :latestPrice="product.latest_price" elevation="1" height="100%"></ProductCard>
     </v-col>
   </v-row>
 
@@ -86,8 +86,26 @@ export default {
           this.resultList.push(...data.items)
           this.resultTotal = data.total
           this.loading = false
+          if (data.items.length) {
+            this.getProductLatestPrices()
+          }
         })
     },
+    getProductLatestPrices() {
+      this.resultList.forEach((product, index) => {
+        if (product.price_count && !product.latest_price) {
+          this.getPrices(product)
+        }
+      })
+    },
+    getPrices(product) {
+      return api.getPrices({ product_code: product.code, size: 1, order_by: '-date' })
+        .then((data) => {
+          if (data.items.length) {
+            product.latest_price = data.items[0]
+          }
+        })
+    }
   }
 }
 </script>

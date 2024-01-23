@@ -33,14 +33,22 @@
           </p>
         </v-col>
       </v-row>
+
+      <Price v-if="latestPrice" :price="latestPrice" :productQuantity="product.product_quantity"></Price>
     </v-container>
   </v-card>
 </template>
 
 <script>
+import Price from '../components/Price.vue'
+
 export default {
+  components: {
+    Price,
+  },
   props: {
     'product': null,
+    'latestPrice': null,
     'readonly': false
   },
   data() {

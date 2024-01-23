@@ -33,21 +33,7 @@
             </span>
           </p>
 
-          <p v-if="price">
-            <span class="mr-1">{{ getPriceValueDisplay(priceValue) }}</span>
-            <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerKilo() }})</span>
-            <span v-if="priceWithoutDiscountValue">
-              <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">
-                {{ $t('PriceCard.Discount') }}
-                <v-tooltip activator="parent" location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(priceWithoutDiscountValue) }}</v-tooltip>
-              </v-chip>
-            </span>
-            <i18n-t v-if="!hidePriceDate" keypath="PriceCard.PriceDate" tag="span">
-              <template v-slot:date>
-                <i>{{ getDateFormatted(price.date) }}</i>
-              </template>
-            </i18n-t>
-          </p>
+          <Price v-if="price" :price="price" :productQuantity="product.product_quantity" :hidePriceDate="hidePriceDate"></Price>
         </v-col>
       </v-row>
 
@@ -75,9 +61,13 @@
 import utils from '../utils.js'
 import OriginTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
+import Price from '../components/Price.vue'
 
 
 export default {
+  components: {
+    Price,
+  },
   props: {
     'price': null,
     'product': null,
@@ -101,15 +91,6 @@ export default {
     this.initPriceCard()
   },
   computed: {
-    priceValue() {
-      return parseFloat(this.price.price)
-    },
-    priceWithoutDiscountValue() {
-      return parseFloat(this.price.price_without_discount)
-    },
-    priceCurrency() {
-      return this.price.currency
-    },
     categoryTag() {
       return this.price.category_tag
     },
@@ -193,25 +174,6 @@ export default {
         return LabelsTags.filter(lt => this.price.labels_tags.indexOf(lt.id) > -1)
       }
     },
-    getPriceValue(priceValue, priceCurrency) {
-      return priceValue.toLocaleString(navigator.language, {
-        style: 'currency',
-        currency: priceCurrency,
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2
-      })
-    },
-    getPriceValueDisplay(price) {
-      if (this.hasCategoryTag) {
-        return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(price, this.priceCurrency)])
-      }
-      return this.getPriceValue(price, this.priceCurrency)
-    },
-    getPricePerKilo() {
-      const productQuantity = this.price.product.product_quantity
-      let pricePerKilo = (this.priceValue / productQuantity) * 1000
-      return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(pricePerKilo, this.priceCurrency)])
-    },
     getPriceLocationTitle() {
       if (this.price.location) {
         return utils.getLocationTitle(this.price.location)
@@ -223,9 +185,6 @@ export default {
         return utils.getCountryEmojiFromName(this.price.location.osm_address_country)
       }
       return null
-    },
-    getDateFormatted(dateString) {
-      return utils.prettyDate(dateString)
     },
     getDateTimeFormatted(dateString) {
       return utils.prettyDateTime(dateString)
