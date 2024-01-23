@@ -105,6 +105,7 @@
 	},
 	"Home": {
 		"AddPrice": "Fiyat ekleyin",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Ayarlar güncellendi!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
@@ -148,6 +149,7 @@
 		"Title": "Son fiyatlar"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} gr",
 		"UnknownProduct": "Bilinmeyen ürün adı"
 	},
@@ -177,6 +179,9 @@
 		"LatestPrices": {
 			"Title": "Son fiyatlar"
 		},
+		"Search": {
+			"Title": "Ara"
+		},
 		"SignIn": {
 			"Title": "Giriş Yap"
 		},
@@ -189,6 +194,10 @@
 		"TopProducts": {
 			"Title": "En iyi ürünler"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Ara"
 	},
 	"SignIn": {
 		"Button": "Giriş Yap",
