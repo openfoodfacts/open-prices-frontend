@@ -33,7 +33,7 @@
             </span>
           </p>
 
-          <PricePrice v-if="price" :price="price" :productQuantity="product.product_quantity" :hidePriceDate="hidePriceDate"></PricePrice>
+          <PricePrice v-if="price" :price="price" :productQuantity="product ? product.product_quantity : null" :hidePriceDate="hidePriceDate"></PricePrice>
         </v-col>
       </v-row>
 

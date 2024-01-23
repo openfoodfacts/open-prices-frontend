@@ -36,7 +36,7 @@ export default {
       return !!this.categoryTag
     },
     hasProductQuantity() {
-      !!this.productQuantity
+      return !!this.productQuantity
     },
     priceValue() {
       return parseFloat(this.price.price)
@@ -64,7 +64,7 @@ export default {
       return this.getPriceValue(price, this.priceCurrency)
     },
     getPricePerKilo() {
-      const productQuantity = this.price.product.product_quantity
+      const productQuantity = this.productQuantity
       let pricePerKilo = (this.priceValue / productQuantity) * 1000
       return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(pricePerKilo, this.priceCurrency)])
     },
