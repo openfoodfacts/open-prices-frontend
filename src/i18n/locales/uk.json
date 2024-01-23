@@ -104,7 +104,7 @@
 	},
 	"Home": {
 		"AddPrice": "Add a price",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Пошук товару",
 		"SettingsUpdated": "Settings updated!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
@@ -148,7 +148,7 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Остання ціна",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Невідомий продукт"
 	},
@@ -195,7 +195,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"SearchByProductBarcode": "Пошук за штрих-кодом товару",
 		"Title": "Пошук"
 	},
 	"SignIn": {
