@@ -23,7 +23,7 @@
 		"Done": "Hecho",
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
-			"AlreadyUploaded": "Prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Crear",
 			"NewPrice": "New price",
 			"PriceUploaded": "¡Precio creado!",
@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categoría",
 			"OriginLabel": "Origen",
-			"ProductCode": "Código del producto",
+			"ProductCode": "Product barcode",
 			"ScanBarcode": "Escanear un código de barras",
 			"TypeBarcode": "Introducir código de barras",
 			"SetProduct": "Establecer un producto",
@@ -104,8 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Agregar un precio",
+		"LatestPrices": "Últimos precios",
 		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "¡Ajustes actualizan!",
+		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "Una base de datos abierta y colaborativa de precios de alimentos 🏷🍊💲",
 			"Title": "¡Te damos la bienvenida a Open Prices!"
