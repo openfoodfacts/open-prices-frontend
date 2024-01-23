@@ -3,6 +3,7 @@
   <p>{{ $t('Home.Welcome.Subtitle') }}</p>
   <br />
   <v-btn class="mb-2" prepend-icon="mdi-magnify" to="/search">{{ $t('Home.SearchProduct') }}</v-btn>
+  <br />
   <v-btn color="primary" prepend-icon="mdi-plus" to="/add">{{ $t('Home.AddPrice') }}</v-btn>
 
   <v-snackbar
