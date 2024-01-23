@@ -16,8 +16,8 @@
 		},
 		"Thanks": "Merci",
 		"Title": "Ajouter un prix",
-		"TitleSingle": "Ajoutez un prix unique",
-		"TitleMultiple": "Ajouter des prix multiples"
+		"TitleSingle": "Ajouter un seul prix",
+		"TitleMultiple": "Ajouter plusieurs prix en masse"
 	},
 	"AddPriceMultiple": {
 		"Done": "Fait",
@@ -27,7 +27,6 @@
 			"Create": "Créer",
 			"NewPrice": "Nouveau prix",
 			"PriceUploaded": "Prix créé !",
-			"Title": "Prix de l'article",
 			"Upload": "Téléverser"
 		},
 		"ProofDetails": {
@@ -43,34 +42,34 @@
 			"LabelDiscounted": "Prix en promo",
 			"LabelFull": "Prix d'origine",
 			"Proof": "Preuve",
-			"ProofUploaded": "Preuve envoyée !",
+			"ProofUploaded": "Preuve téléversée !",
 			"Text": "Prix {perKg}",
 			"TextPerKg": "par kg",
 			"Title": "Détails du prix",
-			"UploadProof": "Envoyez une preuve",
+			"UploadProof": "Téléverser une preuve",
 			"TakePicture": "Prendre une photo",
-			"SelectFromGallery": "Sélectionnez dans votre galerie"
+			"SelectFromGallery": "Sélectionner dans votre galerie"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Catégorie",
 			"OriginLabel": "Origine",
 			"ProductCode": "Code produit",
-			"ScanBarcode": "Scannez un code-barres",
-			"TypeBarcode": "Tapez un code-barres",
-			"SetProduct": "Ajoutez un produit",
+			"ScanBarcode": "Scanner un code-barres",
+			"TypeBarcode": "Taper un code-barres",
+			"SetProduct": "Ajouter un produit",
 			"Title": "Information du produit"
 		},
 		"ProductModeList": {
 			"Barcode": "Code-barres",
 			"Category": "Catégorie"
 		},
-		"Title": "Ajoutez un prix unique",
+		"Title": "Ajouter un seul prix",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
 			"Find": "Chercher",
 			"Location": "Lieu",
-			"SelectLocation": "Choisissez votre lieu",
+			"SelectLocation": "Choisir le lieu",
 			"Title": "Où et quand ?"
 		}
 	},
@@ -78,12 +77,12 @@
 		"Htlm5-qrcode": {
 			"Text": "fonctionne avec {url}"
 		},
-		"Scan": "Scannez un code-barres"
+		"Scan": "Scanner un code-barres"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Code-barres",
 		"Submit": "Envoyer",
-		"Title": "Tapez un code-barres"
+		"Title": "Taper un code-barres"
 	},
 	"BrandDetail": {
 		"LoadMore": "Voir plus",
@@ -105,7 +104,7 @@
 	},
 	"Home": {
 		"AddPrice": "Ajouter un prix",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Chercher un produit",
 		"SettingsUpdated": "Paramètres mis à jour !",
 		"Welcome": {
 			"Subtitle": "Une base de données open source collaborative de prix de produits alimentaires 🏷🍊💲",
@@ -149,7 +148,7 @@
 		"Title": "Derniers prix ajoutés"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Dernier prix ajouté",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Produit inconnu"
 	},
@@ -196,7 +195,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"SearchByProductBarcode": "Chercher par code-barres",
 		"Title": "Rechercher"
 	},
 	"SignIn": {
