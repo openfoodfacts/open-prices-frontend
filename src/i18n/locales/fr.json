@@ -105,6 +105,7 @@
 	},
 	"Home": {
 		"AddPrice": "Ajouter un prix",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Paramètres mis à jour !",
 		"Welcome": {
 			"Subtitle": "Une base de données open source collaborative de prix de produits alimentaires 🏷🍊💲",
@@ -148,6 +149,7 @@
 		"Title": "Derniers prix ajoutés"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Produit inconnu"
 	},
@@ -177,6 +179,9 @@
 		"LatestPrices": {
 			"Title": "Derniers prix ajoutés"
 		},
+		"Search": {
+			"Title": "Rechercher"
+		},
 		"SignIn": {
 			"Title": "Se connecter"
 		},
@@ -189,6 +194,10 @@
 		"TopProducts": {
 			"Title": "Meilleurs produits"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Rechercher"
 	},
 	"SignIn": {
 		"Button": "Se connecter",
