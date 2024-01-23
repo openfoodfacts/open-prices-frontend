@@ -105,6 +105,7 @@
 	},
 	"Home": {
 		"AddPrice": "Afegir un preu",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Configuració modificada!",
 		"Welcome": {
 			"Subtitle": "Una base de dades oberta amb els preus dels aliments 🏷🍊💲",
@@ -148,6 +149,7 @@
 		"Title": "Últims preus"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Nom de producte desconegut"
 	},
@@ -177,6 +179,9 @@
 		"LatestPrices": {
 			"Title": "Últims preus"
 		},
+		"Search": {
+			"Title": "Cerca"
+		},
 		"SignIn": {
 			"Title": "Inicia la sessió"
 		},
@@ -189,6 +194,10 @@
 		"TopProducts": {
 			"Title": "Els millors productes"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Cerca"
 	},
 	"SignIn": {
 		"Button": "Inicia la sessió",
