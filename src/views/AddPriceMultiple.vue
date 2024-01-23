@@ -544,8 +544,9 @@ export default {
             alert(`Error: with input ${data['detail'][0]['input']}`)
           } else {
             this.addPriceToUploadedList(Object.assign({}, this.productPriceForm, {product: this.product}))
-            this.clearProductPriceForm()
             this.priceSuccessMessage = true
+            // show new price form immediately
+            this.initNewProductPriceForm()
           }
           this.createPriceLoading = false
         })
