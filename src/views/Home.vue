@@ -1,26 +1,45 @@
 <template>
   <h1 class="mb-1">{{ $t('Home.Welcome.Title') }}</h1>
   <p>{{ $t('Home.Welcome.Subtitle') }}</p>
-  <br />
-  <v-btn class="mb-2" prepend-icon="mdi-magnify" to="/search">{{ $t('Home.SearchProduct') }}</v-btn>
-  <br />
-  <v-btn color="primary" prepend-icon="mdi-plus" to="/add">{{ $t('Home.AddPrice') }}</v-btn>
-
-  <br />
+  
   <br />
 
-  <v-card
-    :title="$t('Home.LatestPrices')"
-    prepend-icon="mdi-tag-multiple-outline"
-    to="/prices">
-    <template v-slot:subtitle v-if="!loading">
-      <i18n-t keypath="Home.TodayPriceStat" :plural="todayPriceCount" tag="span">
-        <template v-slot:todayPriceNumber>
-          <span>{{ todayPriceCount }}</span>
+  <v-row>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Home.SearchProduct')"
+        prepend-icon="mdi-magnify"
+        to="/search">
+      </v-card>
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Home.AddPrice')"
+        prepend-icon="mdi-plus"
+        color="primary"
+        variant="outlined"
+        elevation="1"
+        to="/add">
+      </v-card>
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Home.LatestPrices')"
+        prepend-icon="mdi-tag-multiple-outline"
+        to="/prices">
+        <template v-slot:subtitle v-if="!loading">
+          <i18n-t keypath="Home.TodayPriceStat" :plural="todayPriceCount" tag="span">
+            <template v-slot:todayPriceNumber>
+              <span>{{ todayPriceCount }}</span>
+            </template>
+          </i18n-t>
         </template>
-      </i18n-t>
-    </template>
-  </v-card>
+      </v-card>
+    </v-col>
+  </v-row>
 
   <v-snackbar
     v-model="settingsSuccessMessage"
