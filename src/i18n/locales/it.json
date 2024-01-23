@@ -105,6 +105,7 @@
 	},
 	"Home": {
 		"AddPrice": "Aggiungi un prezzo",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Impostazioni aggiornate!",
 		"Welcome": {
 			"Subtitle": "Un database aperto in crowdsourcing dei prezzi dei prodotti alimentari 🏷🍊💲",
@@ -148,6 +149,7 @@
 		"Title": "Ultimi prezzi"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Nome del prodotto sconosciuto"
 	},
@@ -177,6 +179,9 @@
 		"LatestPrices": {
 			"Title": "Ultimi prezzi"
 		},
+		"Search": {
+			"Title": "Cerca"
+		},
 		"SignIn": {
 			"Title": "Accedi"
 		},
@@ -189,6 +194,10 @@
 		"TopProducts": {
 			"Title": "Prodotti migliori"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Cerca"
 	},
 	"SignIn": {
 		"Button": "Accedi",
