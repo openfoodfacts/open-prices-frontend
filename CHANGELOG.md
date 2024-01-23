@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.28.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.27.1...v1.28.0) (2024-01-23)
+
+
+### Features
+
+* **PWA:** improve manifest configuration ([#193](https://github.com/openfoodfacts/open-prices-frontend/issues/193)) ([f64990f](https://github.com/openfoodfacts/open-prices-frontend/commit/f64990f36893acc704db595341b346bdfafd05d2))
+* **search:** basic product search page by barcode ([#195](https://github.com/openfoodfacts/open-prices-frontend/issues/195)) ([f8f6b70](https://github.com/openfoodfacts/open-prices-frontend/commit/f8f6b70c7bb5989a3abeae97e9b12a9cd7feef07))
+
 ## [1.27.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.27.0...v1.27.1) (2024-01-22)
 
 
