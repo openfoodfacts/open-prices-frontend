@@ -37,7 +37,7 @@
                 type="text"
                 hint="EAN"
                 hide-details="auto"
-                @click:prepend="showBarcodeScanner"
+                @click:prepend-inner="showBarcodeScanner"
               ></v-text-field>
               <ProductCard v-if="product" class="mb-4" :product="product" :readonly="true" elevation="1"></ProductCard>
             </v-sheet>

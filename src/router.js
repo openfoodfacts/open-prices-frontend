@@ -7,6 +7,7 @@ import UserSettings from './views/UserSettings.vue'
 import AddPriceHome from './views/AddPriceHome.vue'
 import AddPriceSingle from './views/AddPriceSingle.vue'
 import AddPriceMultiple from './views/AddPriceMultiple.vue'
+import Search from './views/Search.vue'
 import PriceList from './views/PriceList.vue'
 import ProductList from './views/ProductList.vue'
 import ProductDetail from './views/ProductDetail.vue'
@@ -21,7 +22,6 @@ import localeManager from './i18n/localeManager.js'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 const routes = [
-
   { path: '/', name: 'home', component: Home, meta: { title: 'Home', icon: 'mdi-home', drawerMenu: true } },
   { path: '/sign-in', name: 'sign-in', component: SignIn, meta: { title: 'Sign in', icon: 'mdi-login', drawerMenu: true, requiresAuth: false } },
   { path: '/dashboard', name: 'dashboard', component: UserDashboard, meta: { title: 'Dashboard', requiresAuth: true } },
@@ -30,6 +30,7 @@ const routes = [
   { path: '/add/single', name: 'add-price-single', component: AddPriceSingle, meta: { title: 'Add a single price (price tag)', requiresAuth: true }},
   { path: '/add/multiple/price-tag', name: 'add-price-multiple-price-tag', component: AddPriceMultiple, meta: { title: 'Add multiple prices (price tags)', requiresAuth: true }},
   { path: '/add/multiple/receipt', name: 'add-price-multiple-receipt', component: AddPriceMultiple, meta: { title: 'Add multiple prices (receipt)', requiresAuth: true }},
+  { path: '/search', name: 'search', component: Search, meta: { title: 'Search', icon: 'mdi-magnify', drawerMenu: true }},
   { path: '/prices', name: 'prices', component: PriceList, meta: { title: 'LatestPrices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
   { path: '/products', name: 'products', component: ProductList, meta: { title: 'TopProducts', icon: 'mdi-database-outline', drawerMenu: true }},
   { path: '/products/:id', name: 'product-detail', component: ProductDetail, meta: { title: 'Product detail' }},
