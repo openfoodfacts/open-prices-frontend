@@ -1,23 +1,23 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Uma prateleira com várias etiquetas de preço",
+			"Title": "Vários produtos"
 		},
 		"PriceCreated": "Preço criado!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Um ou vários produtos",
+			"Title": "Recibo"
 		},
 		"SignedIn": "Sessão iniciada!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Apenas uma etiqueta de preço",
+			"Title": "Produto único"
 		},
 		"Thanks": "Obrigado",
 		"Title": "Adicionar um preço",
 		"TitleSingle": "Adicionar um preço único",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "Adicionar vários preços em massa"
 	},
 	"AddPriceMultiple": {
 		"Done": "Concluído",
@@ -104,7 +104,7 @@
 	},
 	"Home": {
 		"AddPrice": "Adicionar um preço",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Pesquisar um produto",
 		"SettingsUpdated": "Definições atualizadas!",
 		"Welcome": {
 			"Subtitle": "Uma base de dados colaborativa de fonte aberta sobre os preços dos alimentos 🏷🍊💲",
@@ -148,7 +148,7 @@
 		"Title": "Preços mais recentes"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Preço mais recente",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Nome de produto desconhecido"
 	},
@@ -195,7 +195,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"SearchByProductBarcode": "Pesquisar por código de barras do produto",
 		"Title": "Procurar"
 	},
 	"SignIn": {
