@@ -24,6 +24,13 @@ function removeObjectFromArray(arr, obj) {
 }
 
 /**
+ * output: '2023-12-25'
+ */
+function currentDate() {
+  return new Date().toISOString().substring(0, 10)
+}
+
+/**
  * input: '2023-12-25'
  * output: '12/25/2023'
  */
@@ -33,8 +40,8 @@ function prettyDate(dateString) {
 }
 
 /**
- * input: '2023-12-27T17:08:19.021410+01:00'
- * output: '12/27/2023, 8:19AM'
+ * input: '2023-12-25T17:08:19.021410+01:00'
+ * output: '12/25/2023, 8:19AM'
  */
 function prettyDateTime(dateTimeString) {
   const date = new Date(dateTimeString)
@@ -43,7 +50,7 @@ function prettyDateTime(dateTimeString) {
 
 /**
  * https://johnresig.com/blog/javascript-pretty-date/
- * input: '2023-12-27T17:08:19.021410+01:00'
+ * input: '2023-12-25T17:08:19.021410+01:00'
  * output: '5 hours ago', 'Yesterday', '2 days ago'...
  * changes: add short (replace 'days' with 'd', remove 'Yesterday') & shortest (remove 'ago'), extend days & weeks
  */
@@ -123,6 +130,7 @@ function getLocationTitle(locationObject, withName=true, withRoad=false, withCit
 export default {
   addObjectToArray,
   removeObjectFromArray,
+  currentDate,
   prettyDate,
   prettyDateTime,
   prettyRelativeDateTime,

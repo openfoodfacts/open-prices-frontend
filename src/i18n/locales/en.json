@@ -104,8 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Add a price",
+		"LatestPrices": "Latest prices",
 		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Settings updated!",
+		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"

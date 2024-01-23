@@ -287,7 +287,7 @@ export default {
         currency: null,  // see initPriceSingleForm
         location_osm_id: null,
         location_osm_type: '',
-        date: new Date().toISOString().substr(0, 10),
+        date: utils.currentDate(),
         proof_id: null,
       },
       createPriceLoading: false,

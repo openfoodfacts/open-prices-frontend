@@ -4,14 +4,14 @@
   <v-alert
     class="mb-2"
     type="info"
-    variant="outlined"
-  >
+    variant="outlined">
     <i18n-t keypath="SignIn.UseOFFCredentials.Text" tag="span">
       <template #url>
         <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
       </template>
     </i18n-t>
   </v-alert>
+
   <v-form @submit.prevent="signIn">
     <v-text-field
       v-model="signinForm.username"
