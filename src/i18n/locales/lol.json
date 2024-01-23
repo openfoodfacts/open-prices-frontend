@@ -105,6 +105,7 @@
 	},
 	"Home": {
 		"AddPrice": "crwdns246624:0crwdne246624:0",
+		"SearchProduct": "crwdns246890:0crwdne246890:0",
 		"SettingsUpdated": "crwdns246626:0crwdne246626:0",
 		"Welcome": {
 			"Subtitle": "crwdns246628:0crwdne246628:0",
@@ -148,6 +149,7 @@
 		"Title": "crwdns246666:0crwdne246666:0"
 	},
 	"ProductCard": {
+		"LatestPrice": "crwdns246892:0crwdne246892:0",
 		"ProductQuantity": "crwdns246668:0{0}crwdne246668:0",
 		"UnknownProduct": "crwdns246670:0crwdne246670:0"
 	},
@@ -177,6 +179,9 @@
 		"LatestPrices": {
 			"Title": "crwdns246840:0crwdne246840:0"
 		},
+		"Search": {
+			"Title": "crwdns246894:0crwdne246894:0"
+		},
 		"SignIn": {
 			"Title": "crwdns246830:0crwdne246830:0"
 		},
@@ -189,6 +194,10 @@
 		"TopProducts": {
 			"Title": "crwdns246704:0crwdne246704:0"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "crwdns246896:0crwdne246896:0",
+		"Title": "crwdns246898:0crwdne246898:0"
 	},
 	"SignIn": {
 		"Button": "crwdns246706:0crwdne246706:0",
