@@ -105,6 +105,7 @@
 	},
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Instellingen bijgewerkt!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
@@ -148,6 +149,7 @@
 		"Title": "Laatste prijzen"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Onbekende productnaam"
 	},
@@ -177,6 +179,9 @@
 		"LatestPrices": {
 			"Title": "Laatste prijzen"
 		},
+		"Search": {
+			"Title": "Zoeken"
+		},
 		"SignIn": {
 			"Title": "Inloggen"
 		},
@@ -189,6 +194,10 @@
 		"TopProducts": {
 			"Title": "Top products"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Zoeken"
 	},
 	"SignIn": {
 		"Button": "Inloggen",
