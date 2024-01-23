@@ -23,7 +23,7 @@
 		"Done": "Yapıldı",
 		"ProductPriceDetails": {
 			"Add": "Yeni bir fiyat ekle",
-			"AlreadyUploaded": "Fiyatlar zaten yüklendi",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Oluştur",
 			"NewPrice": "Yeni fiyat",
 			"PriceUploaded": "Fiyat oluşturuldu!",
@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Kaynak",
-			"ProductCode": "Ürün kodu",
+			"ProductCode": "Product barcode",
 			"ScanBarcode": "Barkod tara",
 			"TypeBarcode": "Barkodu yazın",
 			"SetProduct": "Bir ürün ayarlayın",
@@ -104,8 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Fiyat ekleyin",
+		"LatestPrices": "Son fiyatlar",
 		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Ayarlar güncellendi!",
+		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"
