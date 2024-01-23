@@ -104,7 +104,7 @@
 	},
 	"Home": {
 		"AddPrice": "Add a price",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "商品を検索",
 		"SettingsUpdated": "Settings updated!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
@@ -148,7 +148,7 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "最新価格",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "不明な製品名"
 	},
@@ -195,7 +195,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"SearchByProductBarcode": "商品名またはバーコードから探す",
 		"Title": "検索"
 	},
 	"SignIn": {
