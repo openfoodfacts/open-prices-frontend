@@ -33,26 +33,11 @@
             </span>
           </p>
 
-          <Price v-if="price" :price="price" :productQuantity="product.product_quantity" :hidePriceDate="hidePriceDate"></Price>
+          <PricePrice v-if="price" :price="price" :productQuantity="product.product_quantity" :hidePriceDate="hidePriceDate"></PricePrice>
         </v-col>
       </v-row>
 
-      <div v-if="price && !hidePriceFooter" class="d-flex flex-wrap ga-1 mt-2">
-        <v-chip v-if="!hidePriceLocation" class="mr-1" label size="small" density="comfortable" @click="goToLocation()">
-          <v-icon start icon="mdi-map-marker-outline"></v-icon>
-          {{ getPriceLocationTitle() }}
-          <span v-if="priceLocationEmoji" style="margin-inline-start:5px">{{ priceLocationEmoji }}</span>
-        </v-chip>
-        <v-chip class="mr-1" label size="small" density="comfortable" @click="goToUser()">
-          <v-icon start icon="mdi-account"></v-icon>
-          {{ price.owner }}
-        </v-chip>
-        <v-chip label size="small" density="comfortable">
-          <v-icon start icon="mdi-clock-outline"></v-icon>
-          {{ getRelativeDateTimeFormatted(price.created) }}
-          <v-tooltip activator="parent" location="top">{{ getDateTimeFormatted(price.created) }}</v-tooltip>
-        </v-chip>
-      </div>
+      <PriceFooter v-if="price && !hidePriceFooter" class="mt-2" :price="price" :hidePriceLocation="hidePriceLocation" :readonly="readonly"></PriceFooter>
     </v-container>
   </v-card>
 </template>
@@ -61,12 +46,13 @@
 import utils from '../utils.js'
 import OriginTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
-import Price from '../components/Price.vue'
-
+import PricePrice from '../components/PricePrice.vue'
+import PriceFooter from '../components/PriceFooter.vue'
 
 export default {
   components: {
-    Price,
+    PricePrice,
+    PriceFooter
   },
   props: {
     'price': null,
@@ -84,7 +70,6 @@ export default {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
       priceOrigin: null,
       priceLabels: [],
-      priceLocationEmoji: null
     }
   },
   mounted() {
@@ -140,7 +125,6 @@ export default {
   },
   methods: {
     initPriceCard() {
-      this.priceLocationEmoji = this.getPriceLocationCountryEmoji()
       this.priceOrigin = this.getPriceOriginTag()
       this.priceLabels = this.getPriceLabelsTagsList()
     },
@@ -174,24 +158,6 @@ export default {
         return LabelsTags.filter(lt => this.price.labels_tags.indexOf(lt.id) > -1)
       }
     },
-    getPriceLocationTitle() {
-      if (this.price.location) {
-        return utils.getLocationTitle(this.price.location)
-      }
-      return this.price.location_id
-    },
-    getPriceLocationCountryEmoji() {
-      if (this.price && this.price.location) {
-        return utils.getCountryEmojiFromName(this.price.location.osm_address_country)
-      }
-      return null
-    },
-    getDateTimeFormatted(dateString) {
-      return utils.prettyDateTime(dateString)
-    },
-    getRelativeDateTimeFormatted(dateTimeString) {
-      return utils.prettyRelativeDateTime(dateTimeString, 'shortest')
-    },
     goToProduct() {
       if (this.readonly) {
         return
@@ -203,18 +169,6 @@ export default {
         return
       }
       this.$router.push({ path: `/brands/${brand}` })
-    },
-    goToLocation() {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/locations/${this.price.location_id}` })
-    },
-    goToUser() {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/users/${this.price.owner}` })
     },
   },
 }

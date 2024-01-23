@@ -149,6 +149,7 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Unknown product name"
 	},
