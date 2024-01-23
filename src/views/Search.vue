@@ -23,8 +23,12 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
-    <v-col cols="12" sm="6" md="4" v-for="product in resultList" :key="product">
+  <p v-if="productTotal === 0" class="text-red">
+    <i>{{ $t('ProductDetail.ProductNotFound') }}</i>
+  </p>
+
+  <v-row v-if="productTotal > 0" class="mt-0">
+    <v-col cols="12" sm="6" md="4" v-for="product in productList" :key="product">
       <ProductCard :product="product" :latestPrice="product.latest_price" elevation="1" height="100%"></ProductCard>
     </v-col>
   </v-row>
@@ -52,8 +56,8 @@ export default {
       productSearchForm: {
         q: ''
       },
-      resultList: [],
-      resultTotal: null,
+      productList: [],
+      productTotal: null,
       loading: false,
       // barcode scanner
       barcodeScanner: false,
@@ -76,15 +80,16 @@ export default {
       this.search()
     },
     search() {
+      this.productList = []
+      this.productTotal = null
       this.getProducts()
     },
     getProducts() {
       this.loading = true
-      this.productPage += 1
       return api.getProducts({ code: this.productSearchForm.q })
         .then((data) => {
-          this.resultList.push(...data.items)
-          this.resultTotal = data.total
+          this.productList.push(...data.items)
+          this.productTotal = data.total
           this.loading = false
           if (data.items.length) {
             this.getProductLatestPrices()
@@ -92,7 +97,7 @@ export default {
         })
     },
     getProductLatestPrices() {
-      this.resultList.forEach((product, index) => {
+      this.productList.forEach((product, index) => {
         if (product.price_count && !product.latest_price) {
           this.getPrices(product)
         }
