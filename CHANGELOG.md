@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.28.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.28.0...v1.28.1) (2024-01-23)
+
+
+### Bug Fixes
+
+* **multiple create form:** show new price form immediately after upload ([e5e89c9](https://github.com/openfoodfacts/open-prices-frontend/commit/e5e89c9b19e1b230c969a4e07175bb5c06ea8e9b))
+* **price card:** fix price per kilo display. broken in [#195](https://github.com/openfoodfacts/open-prices-frontend/issues/195) ([27af696](https://github.com/openfoodfacts/open-prices-frontend/commit/27af69663aab9d8042d9965486db31756623ee29))
+* **search:** fix button display and drawer order. ref [#195](https://github.com/openfoodfacts/open-prices-frontend/issues/195) ([a02953f](https://github.com/openfoodfacts/open-prices-frontend/commit/a02953f70be91e75acda9e76c11d26886b9c2ffa))
+
 ## [1.28.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.27.1...v1.28.0) (2024-01-23)
 
 
