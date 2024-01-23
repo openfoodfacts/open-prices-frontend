@@ -105,6 +105,7 @@
 	},
 	"Home": {
 		"AddPrice": "הוספת מחיר",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "ההגדרות עודכנו!",
 		"Welcome": {
 			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
@@ -148,6 +149,7 @@
 		"Title": "מחירים עדכניים"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} גרם",
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
@@ -177,6 +179,9 @@
 		"LatestPrices": {
 			"Title": "מחירים עדכניים"
 		},
+		"Search": {
+			"Title": "חיפוש"
+		},
 		"SignIn": {
 			"Title": "כניסה"
 		},
@@ -189,6 +194,10 @@
 		"TopProducts": {
 			"Title": "מוצרים מובילים"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "חיפוש"
 	},
 	"SignIn": {
 		"Button": "כניסה",
