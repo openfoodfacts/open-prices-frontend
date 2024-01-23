@@ -23,7 +23,7 @@
 		"Done": "完了",
 		"ProductPriceDetails": {
 			"Add": "新しい価格を追加",
-			"AlreadyUploaded": "価格はすでにアップロードされています",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Create",
 			"NewPrice": "新しい価格",
 			"PriceUploaded": "Price created!",
@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "カテゴリー",
 			"OriginLabel": "Origin",
-			"ProductCode": "Product code",
+			"ProductCode": "Product barcode",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "バーコード入力",
 			"SetProduct": "Set a product",
@@ -104,8 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Add a price",
+		"LatestPrices": "Latest prices",
 		"SearchProduct": "商品を検索",
 		"SettingsUpdated": "Settings updated!",
+		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"
