@@ -33,7 +33,7 @@
                 v-if="dev"
                 :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
                 v-model="addPriceSingleForm.product_code"
-                :label="$t('AddPriceSingle.ProductInfo.ProductCode')"
+                :label="$t('AddPriceSingle.ProductInfo.ProductBarcode')"
                 type="text"
                 hint="EAN"
                 hide-details="auto"

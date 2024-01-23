@@ -96,10 +96,16 @@
     <!-- Step 3a: product prices already uploaded -->
     <v-col v-if="productPriceUploadedList.length" cols="12" md="6" lg="4">
       <v-card
-        :title="$t('AddPriceMultiple.ProductPriceDetails.AlreadyUploaded')"
         prepend-icon="mdi-tag-check-outline"
         height="100%"
         style="border: 1px solid #4CAF50">
+        <template v-slot:title>
+          <i18n-t keypath="AddPriceMultiple.ProductPriceDetails.AlreadyUploaded" :plural="productPriceUploadedList.length" tag="span">
+            <template v-slot:priceAlreadyUploadedNumber>
+              <span>{{ productPriceUploadedList.length }}</span>
+            </template>
+          </i18n-t>
+        </template>
         <template v-slot:append>
           <v-icon icon="mdi-checkbox-marked-circle" color="success"></v-icon>
         </template>
@@ -111,6 +117,7 @@
             </v-col>
           </v-row>
         </v-card-text>
+        <v-overlay v-model="disablePriceAlreadyUploadedCard" scrim="#E8F5E9" contained persistent></v-overlay>
       </v-card>
     </v-col>
 
@@ -123,7 +130,7 @@
         height="100%"
         style="border: 1px solid transparent">
         <template v-slot:append>
-          <v-icon icon="mdi-delete" @click="clearProductPriceForm"></v-icon>
+          <v-icon icon="mdi-delete" @click="clearProductPriceForm" color="error"></v-icon>
         </template>
         <v-divider></v-divider>
         <v-card-text>
@@ -144,7 +151,7 @@
               v-if="dev"
               :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
               v-model="productPriceForm.product_code"
-              :label="$t('AddPriceSingle.ProductInfo.ProductCode')"
+              :label="$t('AddPriceSingle.ProductInfo.ProductBarcode')"
               type="text"
               hint="EAN"
               hide-details="auto"
@@ -248,7 +255,7 @@
         class="float-right"
         type="submit"
         :loading="createPriceLoading"
-        :disabled="!formFilled"
+        :disabled="!proofLocationFormFilled"
         @click="done"
       >{{ $t('AddPriceMultiple.Done') }}</v-btn>
     </v-col>
@@ -413,6 +420,9 @@ export default {
     },
     disableProofLocationDateForm() {
       return this.proofLocationFormFilled && !!this.productPriceUploadedList.length
+    },
+    disablePriceAlreadyUploadedCard() {
+      return !!this.productPriceUploadedList.length
     }
   },
   mounted() {
@@ -432,7 +442,6 @@ export default {
       this.proofImage = null
       this.proofImagePreview = null
       this.addPriceMultipleForm.proof_id = null
-      this.proofSuccessMessage = false
     },
     uploadProof() {
       this.createProofLoading = true
@@ -511,7 +520,6 @@ export default {
       this.productPriceForm = {}
       this.product = null
       this.priceDiscounted = false
-      this.priceSuccessMessage = false
     },
     initNewProductPriceForm() {
       this.clearProductPriceForm()
