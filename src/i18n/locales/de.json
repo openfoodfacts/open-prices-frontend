@@ -105,6 +105,7 @@
 	},
 	"Home": {
 		"AddPrice": "Preis hinzufügen",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Einstellungen aktualisiert!",
 		"Welcome": {
 			"Subtitle": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise 🏷🍊💲",
@@ -148,6 +149,7 @@
 		"Title": "Aktuelle Preise"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Unbekannter Produktname"
 	},
@@ -177,6 +179,9 @@
 		"LatestPrices": {
 			"Title": "Aktuelle Preise"
 		},
+		"Search": {
+			"Title": "Suchen"
+		},
 		"SignIn": {
 			"Title": "Anmelden"
 		},
@@ -189,6 +194,10 @@
 		"TopProducts": {
 			"Title": "Top-Produkte"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Suchen"
 	},
 	"SignIn": {
 		"Button": "Anmelden",
