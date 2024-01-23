@@ -23,7 +23,7 @@
 		"Done": "בוצע",
 		"ProductPriceDetails": {
 			"Add": "הוספת מחיר חדש",
-			"AlreadyUploaded": "המחירים כבר עדכניים",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "יצירה",
 			"NewPrice": "מחיר חדש",
 			"PriceUploaded": "המחיר נוצר!",
@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
 			"OriginLabel": "מקור",
-			"ProductCode": "קוד מוצר",
+			"ProductCode": "Product barcode",
 			"ScanBarcode": "סריקת ברקוד",
 			"TypeBarcode": "סוג ברקוד",
 			"SetProduct": "הגדרת מוצר",
@@ -104,8 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "הוספת מחיר",
+		"LatestPrices": "מחירים עדכניים",
 		"SearchProduct": "חיפוש מוצר",
 		"SettingsUpdated": "ההגדרות עודכנו!",
+		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
 			"Title": "ברוך בואך ל־Open Prices!"
