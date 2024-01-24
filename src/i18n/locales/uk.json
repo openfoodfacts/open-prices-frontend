@@ -23,7 +23,7 @@
 		"Done": "Виконано",
 		"ProductPriceDetails": {
 			"Add": "Додати нову ціну",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} ціна вже завантажена | {priceAlreadyUploadedNumber} ціни вже завантажено",
 			"Create": "Створити",
 			"NewPrice": "Нова ціна",
 			"PriceUploaded": "Ціна створена!",
@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Категорія",
 			"OriginLabel": "Origin",
-			"ProductCode": "Product barcode",
+			"ProductCode": "Штрих-код продукту",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "Введіть штрих-код",
 			"SetProduct": "Set a product",
@@ -107,7 +107,7 @@
 		"LatestPrices": "Latest prices",
 		"SearchProduct": "Пошук товару",
 		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"TodayPriceStat": "Жодної ціни сьогодні не додано | {todayPriceNumber} нові ціни сьогодні | {todayPriceNumber} нові ціни, додані сьогодні!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"
