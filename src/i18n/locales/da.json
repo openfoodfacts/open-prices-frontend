@@ -89,7 +89,7 @@
 		"TopProducts": "Top products"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Log på med din {url} konto"
 	},
 	"Footer": {
 		"About": "Om",
@@ -212,7 +212,7 @@
 		"Password": "Adgangskode",
 		"ServerError": "Error: server error",
 		"Title": "Log ind",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Log på med din {url} konto",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
