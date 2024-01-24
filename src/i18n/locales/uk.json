@@ -30,7 +30,7 @@
 			"Upload": "Завантажити"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "Чеки можуть містити особисту інформацію, рекомендуємо приховати їх (відредагувати, згорнути...) перед фотографуванням.",
 			"Title": "Подробиці перевірки"
 		},
 		"Title": "Додати кілька цін"
@@ -54,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Категорія",
 			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Штрих-код продукту",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "Введіть штрих-код",
 			"SetProduct": "Set a product",
@@ -136,7 +136,7 @@
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search by name and city",
 		"Title": "Find your location",
-		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
+		"Warning": "Пошукова система в даний час не точна. Не вагайтеся додати назву вулиці, щоб звузити результати пошуку."
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
