@@ -23,7 +23,7 @@
 		"Done": "Yapıldı",
 		"ProductPriceDetails": {
 			"Add": "Yeni bir fiyat ekle",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} fiyat zaten yüklendi | {priceAlreadyUploadedNumber} fiyat zaten yüklendi",
 			"Create": "Oluştur",
 			"NewPrice": "Yeni fiyat",
 			"PriceUploaded": "Fiyat oluşturuldu!",
@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Kaynak",
-			"ProductCode": "Product barcode",
+			"ProductCode": "Ürün barkodu",
 			"ScanBarcode": "Barkod tara",
 			"TypeBarcode": "Barkodu yazın",
 			"SetProduct": "Bir ürün ayarlayın",
@@ -105,7 +105,7 @@
 	"Home": {
 		"AddPrice": "Fiyat ekleyin",
 		"LatestPrices": "Son fiyatlar",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Bir ürün arayın",
 		"SettingsUpdated": "Ayarlar güncellendi!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -150,7 +150,7 @@
 		"Title": "Son fiyatlar"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "En son fiyat",
 		"ProductQuantity": "{0} gr",
 		"UnknownProduct": "Bilinmeyen ürün adı"
 	},
@@ -197,8 +197,11 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"SearchByProductBarcode": "Ürün barkoduna göre ara",
 		"Title": "Ara"
+	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
 	},
 	"SignIn": {
 		"Button": "Giriş Yap",
