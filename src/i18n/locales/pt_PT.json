@@ -30,6 +30,7 @@
 			"Upload": "Carregar"
 		},
 		"ProofDetails": {
+			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
 			"Title": "Detalhes do comprovativo"
 		},
 		"Title": "Adicione vários preços"
