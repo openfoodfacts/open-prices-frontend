@@ -88,6 +88,9 @@
 		"LoadMore": "Загрузить ещё",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "О приложении",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Пароль",
 		"ServerError": "Error: server error",
 		"Title": "Войти",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
