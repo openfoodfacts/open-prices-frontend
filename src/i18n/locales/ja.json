@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "商品名またはバーコードから探す",
 		"Title": "検索"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
+	},
 	"SignIn": {
 		"Button": "サインイン",
 		"Password": "パスワード",
