@@ -8,10 +8,11 @@
 
   <v-row class="mt-0" v-if="!productNotFound">
     <v-col cols="12">
-      <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
-      <v-btn v-if="product.code && product.source" size="small" append-icon="mdi-open-in-new" :href="getProductOFFUrl(product)" target="_blank">
+      <v-btn size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
+      <v-btn v-if="product.code && product.source" class="ml-2" size="small" append-icon="mdi-open-in-new" :href="getProductOFFUrl(product)" target="_blank">
         Open Food Facts
       </v-btn>
+      <v-btn class="ml-2" size="small" density="comfortable" color="teal" icon="mdi-share-variant" @click="shareViaWebShare"></v-btn>
     </v-col>
   </v-row>
 
@@ -44,6 +45,12 @@
       <v-btn size="small" :loading="loading" @click="getProductPrices">{{ $t('ProductDetail.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
+
+  <v-snackbar
+    v-model="shareLinkCopySuccessMessage"
+    color="success"
+    :timeout="2000"
+  >{{ $t('Common.ShareLinkCopySuccess') }}</v-snackbar>
 </template>
 
 <script>
@@ -65,6 +72,8 @@ export default {
       productPriceTotal: null,
       productPricePage: 0,
       loading: false,
+      // share
+      shareLinkCopySuccessMessage: false,
     }
   },
   mounted() {
@@ -117,6 +126,18 @@ export default {
     },
     getProductOFFUrl(product) {
       return `https://world.openfoodfacts.org/product/${product.code}`
+    },
+    shareViaWebShare() {
+      let URL = `${import.meta.env.VITE_OPEN_PRICES_API_URL}${this.$route.href}`
+      if (navigator.share) {
+        navigator.share({
+          title: import.meta.env.VITE_OPEN_PRICES_NAME,
+          url: URL
+        })
+      } else {
+        navigator.clipboard.writeText(URL)
+        this.shareLinkCopySuccessMessage = true
+      }
     }
   }
 }
