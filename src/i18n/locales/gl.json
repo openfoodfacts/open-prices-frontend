@@ -88,6 +88,9 @@
 		"LoadMore": "Cargar máis",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "Sobre",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Contrasinal",
 		"ServerError": "Error: server error",
 		"Title": "Iniciar sesión",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
