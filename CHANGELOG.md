@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.30.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.29.1...v1.30.0) (2024-01-24)
+
+
+### Features
+
+* **price card:** allow displaying price proofs (if is public) ([#205](https://github.com/openfoodfacts/open-prices-frontend/issues/205)) ([7758e6f](https://github.com/openfoodfacts/open-prices-frontend/commit/7758e6f186835b0dc2fe7cb474b2c9492dbc369a))
+
+
+### Bug Fixes
+
+* **l10n:** New Crowdin translations to review and merge ([#191](https://github.com/openfoodfacts/open-prices-frontend/issues/191)) ([53912ce](https://github.com/openfoodfacts/open-prices-frontend/commit/53912ce0445ad7dae5f29f8e7c36b5fee36c6572))
+* **l10n:** New Crowdin translations to review and merge ([#204](https://github.com/openfoodfacts/open-prices-frontend/issues/204)) ([f5e4ebe](https://github.com/openfoodfacts/open-prices-frontend/commit/f5e4ebe99eebc78e0a373066dfb8013cd66131e2))
+
 ## [1.29.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.29.0...v1.29.1) (2024-01-24)
 
 
