@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "Produkt mit Strichcode suchen",
 		"Title": "Suchen"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
+	},
 	"SignIn": {
 		"Button": "Anmelden",
 		"Password": "Passwort",
