@@ -88,6 +88,9 @@
 		"LoadMore": "載入更多",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "關於",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "密碼",
 		"ServerError": "Error: server error",
 		"Title": "登入",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
