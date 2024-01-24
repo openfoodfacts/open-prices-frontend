@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "Search by product barcode",
 		"Title": "Iskanje"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
+	},
 	"SignIn": {
 		"Button": "Vpis",
 		"Password": "Geslo",
