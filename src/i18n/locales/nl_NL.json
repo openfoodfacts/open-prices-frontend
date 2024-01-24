@@ -88,6 +88,9 @@
 		"LoadMore": "Meer laden",
 		"TopProducts": "Top producten"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "Over",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Wachtwoord",
 		"ServerError": "Fout: serverfout",
 		"Title": "Inloggen",
-		"UseOFFCredentials": {
-			"Text": "Gebruik uw {url} inloggegevens om in te loggen."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Gebruikersnaam",
 		"WrongCredentials": "Fout: verkeerde inloggegevens"
 	},
