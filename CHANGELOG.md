@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.29.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.29.0...v1.29.1) (2024-01-24)
+
+
+### Bug Fixes
+
+* **share:** fix share url again. ref [#200](https://github.com/openfoodfacts/open-prices-frontend/issues/200) ([f467d68](https://github.com/openfoodfacts/open-prices-frontend/commit/f467d68ef2883d608eb971022ad3d31fc1dcd069))
+
 ## [1.29.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.28.1...v1.29.0) (2024-01-24)
 
 
