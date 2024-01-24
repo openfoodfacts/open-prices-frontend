@@ -5,7 +5,7 @@
     class="mb-2"
     type="info"
     variant="outlined">
-    <i18n-t keypath="SignIn.UseOFFCredentials.Text" tag="span">
+    <i18n-t keypath="Common.SignInOFFAccount" tag="span">
       <template #url>
         <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
       </template>

@@ -20,6 +20,13 @@
         variant="outlined"
         elevation="1"
         to="/add">
+        <template v-slot:subtitle v-if="!username">
+          <i18n-t keypath="Common.SignInOFFAccount" tag="span">
+            <template #url>
+              <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
+            </template>
+          </i18n-t>
+        </template>
       </v-card>
     </v-col>
   </v-row>
@@ -49,6 +56,8 @@
 </template>
 
 <script>
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import utils from '../utils.js'
 import api from '../services/api'
 
@@ -59,6 +68,12 @@ export default {
       todayPriceCount: null,
       loading: false
     }
+  },
+  computed: {
+    ...mapStores(useAppStore),
+    username() {
+      return this.appStore.user.username
+    },
   },
   mounted() {
     if (this.$route.query.settingsSuccess === 'true') {
