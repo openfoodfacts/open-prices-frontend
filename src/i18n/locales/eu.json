@@ -23,11 +23,10 @@
 		"Done": "Done",
 		"ProductPriceDetails": {
 			"Add": "Gehitu prezio berria",
-			"AlreadyUploaded": "Prezioak igo dira jada",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Sortu",
 			"NewPrice": "Prezio berria",
 			"PriceUploaded": "Price created!",
-			"Title": "Produktuaren prezioak",
 			"Upload": "Upload"
 		},
 		"ProofDetails": {
@@ -54,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategoria",
 			"OriginLabel": "Origin",
-			"ProductCode": "Product code",
+			"ProductCode": "Product barcode",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "Idatzi barra-kode bat",
 			"SetProduct": "Set a product",
@@ -105,7 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Add a price",
+		"LatestPrices": "Latest prices",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Settings updated!",
+		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"
@@ -148,6 +150,7 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Produktu-izen ezezaguna"
 	},
@@ -177,6 +180,9 @@
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
+		"Search": {
+			"Title": "Bilatu"
+		},
 		"SignIn": {
 			"Title": "Hasi saioa"
 		},
@@ -189,6 +195,13 @@
 		"TopProducts": {
 			"Title": "Top products"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Bilatu"
+	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
 	},
 	"SignIn": {
 		"Button": "Hasi saioa",

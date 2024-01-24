@@ -1,34 +1,33 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "複数の値札が貼られた棚",
+			"Title": "複数の製品"
 		},
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "1つまたは複数の製品",
+			"Title": "領収書"
 		},
 		"SignedIn": "Signed in!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "値札は 1 枚だけ",
+			"Title": "単一製品"
 		},
 		"Thanks": "ありがとうございます",
 		"Title": "Add a price",
 		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "複数の価格を追加する"
 	},
 	"AddPriceMultiple": {
 		"Done": "完了",
 		"ProductPriceDetails": {
 			"Add": "新しい価格を追加",
-			"AlreadyUploaded": "価格はすでにアップロードされています",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 価格はすでにアップロードされています | {priceAlreadyUploadedNumber} 価格がすでにアップロードされています",
 			"Create": "Create",
 			"NewPrice": "新しい価格",
 			"PriceUploaded": "Price created!",
-			"Title": "製品価格",
-			"Upload": "Upload"
+			"Upload": "アップロード"
 		},
 		"ProofDetails": {
 			"Title": "証明の詳細"
@@ -54,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "カテゴリー",
 			"OriginLabel": "Origin",
-			"ProductCode": "Product code",
+			"ProductCode": "商品バーコード：",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "バーコード入力",
 			"SetProduct": "Set a product",
@@ -105,7 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Add a price",
+		"LatestPrices": "Latest prices",
+		"SearchProduct": "商品を検索",
 		"SettingsUpdated": "Settings updated!",
+		"TodayPriceStat": "今日は価格が追加されていません |本日追加された新しい価格は {todayPriceNumber} |本日、新たに {todayPriceNumber} 件の価格が追加されました！",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"
@@ -148,6 +150,7 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"LatestPrice": "最新価格",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "不明な製品名"
 	},
@@ -177,6 +180,9 @@
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
+		"Search": {
+			"Title": "検索"
+		},
 		"SignIn": {
 			"Title": "サインイン"
 		},
@@ -189,6 +195,13 @@
 		"TopProducts": {
 			"Title": "Top products"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "商品名またはバーコードから探す",
+		"Title": "検索"
+	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
 	},
 	"SignIn": {
 		"Button": "サインイン",

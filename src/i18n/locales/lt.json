@@ -1,47 +1,46 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Lentyna su keliomis kainų etiketėmis",
+			"Title": "Keli produktai"
 		},
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Vienas ar keli produktai",
+			"Title": "Čekis"
 		},
 		"SignedIn": "Signed in!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Tik viena kainos etiketė",
+			"Title": "Nekeičiamos sudėties produktas"
 		},
-		"Thanks": "Thanks",
+		"Thanks": "Ačiū",
 		"Title": "Add a price",
 		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "Pridėti kelias kainas masiškai"
 	},
 	"AddPriceMultiple": {
 		"Done": "Atlikta",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "Prices already uploaded",
+			"Add": "Pridėti naują kainą",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Kurti",
-			"NewPrice": "New price",
+			"NewPrice": "Nauja kaina",
 			"PriceUploaded": "Price created!",
-			"Title": "Product prices",
-			"Upload": "Upload"
+			"Upload": "Įkelti"
 		},
 		"ProofDetails": {
-			"Title": "Proof details"
+			"Title": "Išsami įdorymų informacija"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Pridėti kelia skainas"
 	},
 	"AddPriceSingle": {
 		"Create": "Kurti",
 		"PriceDetails": {
-			"Discount": "Discount?",
+			"Discount": "Nuolaida?",
 			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
+			"LabelDiscounted": "Sumažinta kaina",
+			"LabelFull": "Visa kaina",
 			"Proof": "Proof",
 			"ProofUploaded": "Proof uploaded!",
 			"Text": "Price {perKg}",
@@ -54,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategorija",
 			"OriginLabel": "Origin",
-			"ProductCode": "Product code",
+			"ProductCode": "Product barcode",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
@@ -105,7 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Add a price",
+		"LatestPrices": "Latest prices",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Settings updated!",
+		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"
@@ -136,11 +138,11 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "Nuolaida",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Full price",
+		"FullPrice": "Visa kaina",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceList": {
@@ -148,6 +150,7 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Nežinomas produkto pavadinimas"
 	},
@@ -177,6 +180,9 @@
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
+		"Search": {
+			"Title": "Paieška"
+		},
 		"SignIn": {
 			"Title": "Prisijungti"
 		},
@@ -189,6 +195,13 @@
 		"TopProducts": {
 			"Title": "Top products"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Paieška"
+	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
 	},
 	"SignIn": {
 		"Button": "Prisijungti",

@@ -23,11 +23,10 @@
 		"Done": "Fet",
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
-			"AlreadyUploaded": "Prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Crea",
 			"NewPrice": "New price",
 			"PriceUploaded": "Preu afegit!",
-			"Title": "Product prices",
 			"Upload": "Upload"
 		},
 		"ProofDetails": {
@@ -54,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
 			"OriginLabel": "Origen",
-			"ProductCode": "Codi de producte",
+			"ProductCode": "Product barcode",
 			"ScanBarcode": "Escaneja el codi de barres",
 			"TypeBarcode": "Escriu el codi de barres",
 			"SetProduct": "Set a product",
@@ -105,7 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Afegir un preu",
+		"LatestPrices": "Últims preus",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Configuració modificada!",
+		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "Una base de dades oberta amb els preus dels aliments 🏷🍊💲",
 			"Title": "Benvingut a Open Prices!"
@@ -148,6 +150,7 @@
 		"Title": "Últims preus"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Nom de producte desconegut"
 	},
@@ -177,6 +180,9 @@
 		"LatestPrices": {
 			"Title": "Últims preus"
 		},
+		"Search": {
+			"Title": "Cerca"
+		},
 		"SignIn": {
 			"Title": "Inicia la sessió"
 		},
@@ -189,6 +195,13 @@
 		"TopProducts": {
 			"Title": "Els millors productes"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Cerca"
+	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
 	},
 	"SignIn": {
 		"Button": "Inicia la sessió",

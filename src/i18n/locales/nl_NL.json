@@ -1,18 +1,18 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Een plank met meerdere prijskaartjes",
+			"Title": "Meerdere producten"
 		},
 		"PriceCreated": "Price created!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Eén of meerdere producten",
+			"Title": "Bon"
 		},
 		"SignedIn": "Ingelogd!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Slechts één prijskaartje",
+			"Title": "Enkel product"
 		},
 		"Thanks": "Bedankt",
 		"Title": "Voeg een prijs toe",
@@ -23,12 +23,11 @@
 		"Done": "Voltooid",
 		"ProductPriceDetails": {
 			"Add": "Nieuwe prijs toevoegen",
-			"AlreadyUploaded": "Prijzen zijn al geüpload",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Aanmaken",
 			"NewPrice": "Nieuwe prijs",
 			"PriceUploaded": "Price created!",
-			"Title": "Productprijzen",
-			"Upload": "Upload"
+			"Upload": "Uploaden"
 		},
 		"ProofDetails": {
 			"Title": "Bewijs details"
@@ -54,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categorie",
 			"OriginLabel": "Oorsprong",
-			"ProductCode": "Productcode",
+			"ProductCode": "Product barcode",
 			"ScanBarcode": "Scan een streepjescode",
 			"TypeBarcode": "Voer een streepjescode in",
 			"SetProduct": "Set a product",
@@ -105,7 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
+		"LatestPrices": "Laatste prijzen",
+		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Instellingen bijgewerkt!",
+		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welkom bij Open Prijzen!"
@@ -148,6 +150,7 @@
 		"Title": "Laatste prijzen"
 	},
 	"ProductCard": {
+		"LatestPrice": "Latest price",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Onbekende productnaam"
 	},
@@ -177,6 +180,9 @@
 		"LatestPrices": {
 			"Title": "Laatste prijzen"
 		},
+		"Search": {
+			"Title": "Zoeken"
+		},
 		"SignIn": {
 			"Title": "Inloggen"
 		},
@@ -189,6 +195,13 @@
 		"TopProducts": {
 			"Title": "Top products"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Search by product barcode",
+		"Title": "Zoeken"
+	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
 	},
 	"SignIn": {
 		"Button": "Inloggen",

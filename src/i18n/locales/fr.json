@@ -16,19 +16,18 @@
 		},
 		"Thanks": "Merci",
 		"Title": "Ajouter un prix",
-		"TitleSingle": "Ajoutez un prix unique",
-		"TitleMultiple": "Ajouter des prix multiples"
+		"TitleSingle": "Ajouter un seul prix",
+		"TitleMultiple": "Ajouter plusieurs prix en masse"
 	},
 	"AddPriceMultiple": {
 		"Done": "Fait",
 		"ProductPriceDetails": {
 			"Add": "Ajouter un nouveau prix",
-			"AlreadyUploaded": "Prix déjà téléversés",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Créer",
 			"NewPrice": "Nouveau prix",
 			"PriceUploaded": "Prix créé !",
-			"Title": "Prix de l'article",
-			"Upload": "Upload"
+			"Upload": "Téléverser"
 		},
 		"ProofDetails": {
 			"Title": "Détails du prix"
@@ -43,34 +42,34 @@
 			"LabelDiscounted": "Prix en promo",
 			"LabelFull": "Prix d'origine",
 			"Proof": "Preuve",
-			"ProofUploaded": "Preuve envoyée !",
+			"ProofUploaded": "Preuve téléversée !",
 			"Text": "Prix {perKg}",
 			"TextPerKg": "par kg",
 			"Title": "Détails du prix",
-			"UploadProof": "Envoyez une preuve",
+			"UploadProof": "Téléverser une preuve",
 			"TakePicture": "Prendre une photo",
-			"SelectFromGallery": "Sélectionnez dans votre galerie"
+			"SelectFromGallery": "Sélectionner dans votre galerie"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Catégorie",
 			"OriginLabel": "Origine",
-			"ProductCode": "Code produit",
-			"ScanBarcode": "Scannez un code-barres",
-			"TypeBarcode": "Tapez un code-barres",
-			"SetProduct": "Ajoutez un produit",
+			"ProductCode": "Product barcode",
+			"ScanBarcode": "Scanner un code-barres",
+			"TypeBarcode": "Taper un code-barres",
+			"SetProduct": "Ajouter un produit",
 			"Title": "Information du produit"
 		},
 		"ProductModeList": {
 			"Barcode": "Code-barres",
 			"Category": "Catégorie"
 		},
-		"Title": "Ajoutez un prix unique",
+		"Title": "Ajouter un seul prix",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
 			"Find": "Chercher",
 			"Location": "Lieu",
-			"SelectLocation": "Choisissez votre lieu",
+			"SelectLocation": "Choisir le lieu",
 			"Title": "Où et quand ?"
 		}
 	},
@@ -78,12 +77,12 @@
 		"Htlm5-qrcode": {
 			"Text": "fonctionne avec {url}"
 		},
-		"Scan": "Scannez un code-barres"
+		"Scan": "Scanner un code-barres"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Code-barres",
 		"Submit": "Envoyer",
-		"Title": "Tapez un code-barres"
+		"Title": "Taper un code-barres"
 	},
 	"BrandDetail": {
 		"LoadMore": "Voir plus",
@@ -105,7 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Ajouter un prix",
+		"LatestPrices": "Derniers prix ajoutés",
+		"SearchProduct": "Chercher un produit",
 		"SettingsUpdated": "Paramètres mis à jour !",
+		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "Une base de données open source collaborative de prix de produits alimentaires 🏷🍊💲",
 			"Title": "Bienvenue à Open Prices !"
@@ -148,6 +150,7 @@
 		"Title": "Derniers prix ajoutés"
 	},
 	"ProductCard": {
+		"LatestPrice": "Dernier prix ajouté",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Produit inconnu"
 	},
@@ -177,6 +180,9 @@
 		"LatestPrices": {
 			"Title": "Derniers prix ajoutés"
 		},
+		"Search": {
+			"Title": "Rechercher"
+		},
 		"SignIn": {
 			"Title": "Se connecter"
 		},
@@ -189,6 +195,13 @@
 		"TopProducts": {
 			"Title": "Meilleurs produits"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Chercher par code-barres",
+		"Title": "Rechercher"
+	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
 	},
 	"SignIn": {
 		"Button": "Se connecter",

@@ -1,34 +1,33 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Полиця з кількома цінниками",
+			"Title": "Кілька продуктів"
 		},
 		"PriceCreated": "Ціна створена!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Один або кілька продуктів",
+			"Title": "Квитанція"
 		},
 		"SignedIn": "Signed in!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Лише один цінник",
+			"Title": "Один продукт"
 		},
 		"Thanks": "Дякую",
 		"Title": "Add a price",
 		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "Додайте кілька цін гуртом"
 	},
 	"AddPriceMultiple": {
 		"Done": "Виконано",
 		"ProductPriceDetails": {
 			"Add": "Додати нову ціну",
-			"AlreadyUploaded": "Ціни вже завантажені",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} ціна вже завантажена | {priceAlreadyUploadedNumber} ціни вже завантажено",
 			"Create": "Створити",
 			"NewPrice": "Нова ціна",
 			"PriceUploaded": "Ціна створена!",
-			"Title": "Ціни товару",
-			"Upload": "Upload"
+			"Upload": "Завантажити"
 		},
 		"ProofDetails": {
 			"Title": "Подробиці перевірки"
@@ -54,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Категорія",
 			"OriginLabel": "Origin",
-			"ProductCode": "Product code",
+			"ProductCode": "Штрих-код продукту",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "Введіть штрих-код",
 			"SetProduct": "Set a product",
@@ -105,7 +104,10 @@
 	},
 	"Home": {
 		"AddPrice": "Add a price",
+		"LatestPrices": "Latest prices",
+		"SearchProduct": "Пошук товару",
 		"SettingsUpdated": "Settings updated!",
+		"TodayPriceStat": "Жодної ціни сьогодні не додано | {todayPriceNumber} нові ціни сьогодні | {todayPriceNumber} нові ціни, додані сьогодні!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"
@@ -148,6 +150,7 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"LatestPrice": "Остання ціна",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Невідомий продукт"
 	},
@@ -177,6 +180,9 @@
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
+		"Search": {
+			"Title": "Пошук"
+		},
 		"SignIn": {
 			"Title": "Увійти"
 		},
@@ -189,6 +195,13 @@
 		"TopProducts": {
 			"Title": "Top products"
 		}
+	},
+	"Search": {
+		"SearchByProductBarcode": "Пошук за штрих-кодом товару",
+		"Title": "Пошук"
+	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
 	},
 	"SignIn": {
 		"Button": "Увійти",
