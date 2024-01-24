@@ -88,6 +88,9 @@
 		"LoadMore": "Load more",
 		"TopProducts": "Κορυφαία Προϊόντα"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "Σχετικά με την εφαρμογή",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Κωδικός χρήστη",
 		"ServerError": "Error: server error",
 		"Title": "Σύνδεση",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
