@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.29.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.28.1...v1.29.0) (2024-01-24)
+
+
+### Features
+
+* **home:** show action buttons as cards ([28d9b78](https://github.com/openfoodfacts/open-prices-frontend/commit/28d9b7825fc9bbdc7776b9d6381dae398ad01056))
+* **home:** show sign in message if user anonymous ([4e49d4f](https://github.com/openfoodfacts/open-prices-frontend/commit/4e49d4faa262588d17feb4a507a7ea263ee14b56))
+* **share:** add new button to other detail pages ([#201](https://github.com/openfoodfacts/open-prices-frontend/issues/201)) ([d991460](https://github.com/openfoodfacts/open-prices-frontend/commit/d9914604e7cb282e71ff5fd9f6b700af1897f14a))
+* **share:** move button to dedicated component. fix url ([#200](https://github.com/openfoodfacts/open-prices-frontend/issues/200)) ([9f33984](https://github.com/openfoodfacts/open-prices-frontend/commit/9f33984abc19772dc73ab0aaf4bb66d13f2422ed))
+* **share:** simple share button on Product Detail ([#199](https://github.com/openfoodfacts/open-prices-frontend/issues/199)) ([2df86eb](https://github.com/openfoodfacts/open-prices-frontend/commit/2df86eb36973c660be96167cf5531eda65511d3f))
+* show today new price count on home page ([c163e34](https://github.com/openfoodfacts/open-prices-frontend/commit/c163e348249a303862abd97091b5da7d41e099cf))
+
+
+### Bug Fixes
+
+* **multiple price form:** cosmetic fixes ([cd235d1](https://github.com/openfoodfacts/open-prices-frontend/commit/cd235d11385ab0bf333c5e56d6a75c85243734df))
+
+
+### Technical
+
+* update gitignore ([#198](https://github.com/openfoodfacts/open-prices-frontend/issues/198)) ([dc79e02](https://github.com/openfoodfacts/open-prices-frontend/commit/dc79e02025f541acc84c4e17732e27a8d27b9620))
+
 ## [1.28.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.28.0...v1.28.1) (2024-01-23)
 
 
