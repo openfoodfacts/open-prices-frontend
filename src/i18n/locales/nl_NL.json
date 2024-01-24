@@ -144,6 +144,7 @@
 		"Discount": "Korting",
 		"PriceDate": "op {date}",
 		"PriceValueDisplay": "{0} /kg",
+		"Proof": "Bewijs",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Totale prijs",
 		"UnknownProduct": "Onbekend product"
