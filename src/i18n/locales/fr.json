@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "Chercher par code-barres",
 		"Title": "Rechercher"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
+	},
 	"SignIn": {
 		"Button": "Se connecter",
 		"Password": "Mot de passe",
