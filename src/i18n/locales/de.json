@@ -88,6 +88,9 @@
 		"LoadMore": "Weitere laden",
 		"TopProducts": "Top-Produkte"
 	},
+	"Common": {
+		"SignInOFFAccount": "Melden Sie sich mit ihrem {url} Account an"
+	},
 	"Footer": {
 		"About": "Über",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Passwort",
 		"ServerError": "Fehler: Serverfehler",
 		"Title": "Anmelden",
-		"UseOFFCredentials": {
-			"Text": "Verwenden Sie Ihre {url} Anmeldeinformationen, um sich anzumelden."
-		},
+		"SignInOFFAccount": "Melden Sie sich mit ihrem {url} Account an",
 		"UsernameLabel": "Benutzername",
 		"WrongCredentials": "Fehler: üngültige Anmeldeinformationen"
 	},

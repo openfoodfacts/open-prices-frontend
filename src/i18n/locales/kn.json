@@ -88,6 +88,9 @@
 		"LoadMore": "Load more",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "ಬಗ್ಗೆ",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "ಪಾಸ್‌ವರ್ಡ್",
 		"ServerError": "Error: server error",
 		"Title": "ಸೈನ್ ಇನ್ ಮಾಡಿ",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

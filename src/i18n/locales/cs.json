@@ -1,184 +1,187 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Police s více cenovkami",
+			"Title": "Více produktů"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Cena vytvořena!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Jeden nebo více produktů",
+			"Title": "Účtenka"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Přihlášeno!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Jen jedna cenovka",
+			"Title": "Jeden produkt"
 		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"Thanks": "Děkujeme",
+		"Title": "Přidat cenu",
+		"TitleSingle": "Přidat jednotnou cenu",
+		"TitleMultiple": "Přidat hromadně více cen"
 	},
 	"AddPriceMultiple": {
 		"Done": "Hotovo",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "Přidat novou cenu",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} cena již nahrána | {priceAlreadyUploadedNumber} cen již nahráno",
 			"Create": "Vytvořit",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"NewPrice": "Nová cena",
+			"PriceUploaded": "Cena vytvořena!",
+			"Upload": "Nahrát"
 		},
 		"ProofDetails": {
-			"Title": "Proof details"
+			"Title": "Podrobnosti o důkazu"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Přidat více cen"
 	},
 	"AddPriceSingle": {
 		"Create": "Vytvořit",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofUploaded": "Proof uploaded!",
-			"Text": "Price {perKg}",
-			"TextPerKg": "per kg",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"Discount": "Sleva?",
+			"Label": "Cena",
+			"LabelDiscounted": "Snížená cena",
+			"LabelFull": "Plná cena",
+			"Proof": "Důkaz",
+			"ProofUploaded": "Důkaz nahrán!",
+			"Text": "Cena {perKg}",
+			"TextPerKg": "za kg",
+			"Title": "Podrobnosti o ceně",
+			"UploadProof": "Nahrát důkaz",
 			"TakePicture": "Vyfotit",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Vybrat z vaší galerie"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
-			"OriginLabel": "Origin",
-			"ProductCode": "Product barcode",
-			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"OriginLabel": "Původ",
+			"ProductCode": "Čárový kód produktu",
+			"ScanBarcode": "Naskenovat čárový kód",
+			"TypeBarcode": "Zadat čárový kód",
+			"SetProduct": "Nastavit produkt",
+			"Title": "Informace o produktu"
 		},
 		"ProductModeList": {
 			"Barcode": "Čárový kód",
 			"Category": "Kategorie"
 		},
-		"Title": "Add a single price",
+		"Title": "Přidat jednotnou cenu",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Datum",
+			"DateLabel": "Datum",
 			"Find": "Vyhledat",
-			"Location": "Location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Poloha",
+			"SelectLocation": "Vyberte vaši polohu",
+			"Title": "Kde a kdy?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "poháněno {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Naskenovat čárový kód"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Čárový kód",
 		"Submit": "Odeslat",
-		"Title": "Type a barcode"
+		"Title": "Zadat čárový kód"
 	},
 	"BrandDetail": {
 		"LoadMore": "Načíst další",
-		"TopProducts": "Top Products"
+		"TopProducts": "Nejlepší produkty"
+	},
+	"Common": {
+		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}"
 	},
 	"Footer": {
 		"About": "O aplikaci",
 		"Open_Prices_Project": {
-			"Text": "Open Prices is an {0} project.",
+			"Text": "Open Prices jsou projektem {0}.",
 			"Url": "Open Food Facts"
 		},
-		"Stats": "Stats"
+		"Stats": "Statistiky"
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Nástěnka",
 		"Settings": "Nastavení",
 		"Sign-out": "Odhlásit",
 		"Title": "Open Prices"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"LatestPrices": "Latest prices",
-		"SearchProduct": "Search for a product",
-		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"AddPrice": "Přidat cenu",
+		"LatestPrices": "Nejnovější ceny",
+		"SearchProduct": "Vyhledat produkt",
+		"SettingsUpdated": "Nastavení aktualizováno!",
+		"TodayPriceStat": "Dnes nebyly přidány žádné ceny | Dnes přidány {todayPriceNumber} nové ceny | Dnes přidáno {todayPriceNumber} nových cen!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to Open Prices!"
+			"Subtitle": "Otevřená crowdsourcovaná databáze cen potravin 🏷🍊💲",
+			"Title": "Vítejte v Open Prices!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Nejnovější ceny",
 		"LoadMore": "Načíst další",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Poloha nebyla nalezena v OpenStreetMap... Neváhejte ji přidat :)"
 	},
 	"LocationList": {
-		"Title": "Top locations",
+		"Title": "Nejlepší polohy",
 		"LoadMore": "Načíst další"
 	},
 	"LocationSelector": {
 		"Clear": "Vymazat",
-		"NoResult": "No results found",
+		"NoResult": "Nenalezeny žádné výsledky",
 		"OSM": {
-			"text": "powered by {url}"
+			"text": "poháněno {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search by name and city",
-		"Title": "Find your location"
+		"RecentLocations": "Žádná nedávné poloha | Nedávná poloha {recentLocationNumber}| Nedávné polohy {recentLocationNumber}",
+		"Result": "Výsledek {resultNumber} | Výsledky {resultNumber}",
+		"SearchByName": "Hledat podle jména a města",
+		"Title": "Najít vaši polohu"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "Vypadá to, že požadovaná stránka neexistuje...",
+		"Title": "Nenalezeno"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
+		"Discount": "Sleva",
+		"PriceDate": "dne {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"FullPrice": "Plná cena",
+		"UnknownProduct": "Neznámý produkt"
 	},
 	"PriceList": {
 		"LoadMore": "Načíst další",
-		"Title": "Latest prices"
+		"Title": "Nejnovější ceny"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Nejnovější cena",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Neznámý název produktu"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"AddPrice": "Přidat cenu",
+		"CategoryNotFound": "Kategorie nenalezena...",
+		"LatestPrices": "Nejnovější ceny",
 		"LoadMore": "Načíst další",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Produkt nebyl nalezen v Open Food Facts... Neváhejte ho přidat :)"
 	},
 	"ProductList": {
 		"Filter": "Filtr",
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Skrýt produkty s cenami",
 		"LoadMore": "Načíst další",
-		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Order": "Pořadí",
+		"PriceNumber": "Počet přidaných cen",
+		"ScanNumber": "Počet přidaných skenů",
+		"Title": "Nejlepší produkty"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Přidat cenu"
 		},
 		"Home": {
 			"Title": "Úvod"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Nejnovější ceny"
 		},
 		"Search": {
 			"Title": "Vyhledat"
@@ -187,59 +190,57 @@
 			"Title": "Přihlásit se"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Nejlepší přispěvatelé"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Nejlepší polohy"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Nejlepší produkty"
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"SearchByProductBarcode": "Hledat podle čárového kódu",
 		"Title": "Vyhledat"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Odkaz zkopírován"
 	},
 	"SignIn": {
 		"Button": "Přihlásit se",
 		"Password": "Heslo",
-		"ServerError": "Error: server error",
+		"ServerError": "Chyba: chyba serveru",
 		"Title": "Přihlásit se",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
+		"UsernameLabel": "Uživatelské jméno",
+		"WrongCredentials": "Chyba: nesprávné přihlašovací údaje"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Prices": "Ceny",
+		"ProductsWithPrices": "Produkty s cenami",
+		"Title": "Statistiky"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Nejnovější ceny",
 		"LoadMore": "Načíst další",
-		"Title": "Dashboard"
+		"Title": "Nástěnka"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Nejnovější ceny",
 		"LoadMore": "Načíst další"
 	},
 	"UserList": {
 		"LoadMore": "Načíst další",
-		"Title": "Top contributors"
+		"Title": "Nejlepší přispěvatelé"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Přidávání cen",
 		"ChangeLanguage": "Změnit jazyk",
 		"CountryLabel": "Země",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"CurrencyLabel": "Měna",
+		"DefaultCurrency": "Výchozí měna",
 		"LanguageLabel": "Jazyky",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
+		"LocaleNotSupported": "Jazyk zatím není podporován, výchozím jazykem bude angličtina",
 		"Save": "Uložit",
 		"Title": "Nastavení"
 	}

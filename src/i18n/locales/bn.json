@@ -88,6 +88,9 @@
 		"LoadMore": "Load more",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "সম্পর্কে",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "পাসওয়ার্ড",
 		"ServerError": "Error: server error",
 		"Title": "সাইন ইন",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

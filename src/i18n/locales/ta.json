@@ -23,7 +23,7 @@
 		"Done": "Done",
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} விலை ஏற்கனவே பதிவேற்றப்பட்டது | {priceAlreadyUploadedNumber} விலை ஏற்கனவே பதிவேற்றப்பட்டது",
 			"Create": "உருவாக்கு",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "வகை",
 			"OriginLabel": "Origin",
-			"ProductCode": "Product barcode",
+			"ProductCode": "தயாரிப்பு பார்கோடு",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
@@ -88,6 +88,9 @@
 		"LoadMore": "Load more",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக"
+	},
 	"Footer": {
 		"About": "இதைப் பற்றி",
 		"Open_Prices_Project": {
@@ -107,7 +110,7 @@
 		"LatestPrices": "Latest prices",
 		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"TodayPriceStat": "இன்று விலை சேர்க்கப்படவில்லை | {todayPriceNumber} புதிய விலைகள் இன்று சேர்க்கப்பட்டுள்ளன | இன்று {todayPriceNumber} புதிய விலை சேர்க்கப்பட்டது!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to Open Prices!"
@@ -201,16 +204,14 @@
 		"Title": "தேடுக"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "லிங்க் காப்பி ஆகிவிட்டது"
 	},
 	"SignIn": {
 		"Button": "உள்நுழை",
 		"Password": "கடவுச்சொல்",
 		"ServerError": "Error: server error",
 		"Title": "உள்நுழை",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

@@ -88,6 +88,9 @@
 		"LoadMore": "Muat lebih banyak",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "Tentang",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Kata sandi",
 		"ServerError": "Error: server error",
 		"Title": "Masuk",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

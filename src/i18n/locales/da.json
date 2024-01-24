@@ -88,6 +88,9 @@
 		"LoadMore": "Indlæs mere",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "Om",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Adgangskode",
 		"ServerError": "Error: server error",
 		"Title": "Log ind",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

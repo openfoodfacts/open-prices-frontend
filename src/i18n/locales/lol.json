@@ -88,6 +88,9 @@
 		"LoadMore": "crwdns246604:0crwdne246604:0",
 		"TopProducts": "crwdns246836:0crwdne246836:0"
 	},
+	"Common": {
+		"SignInOFFAccount": "crwdns246910:0{url}crwdne246910:0"
+	},
 	"Footer": {
 		"About": "crwdns246608:0crwdne246608:0",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "crwdns246708:0crwdne246708:0",
 		"ServerError": "crwdns246710:0crwdne246710:0",
 		"Title": "crwdns246712:0crwdne246712:0",
-		"UseOFFCredentials": {
-			"Text": "crwdns246714:0{url}crwdne246714:0"
-		},
+		"SignInOFFAccount": "crwdns246912:0{url}crwdne246912:0",
 		"UsernameLabel": "crwdns246716:0crwdne246716:0",
 		"WrongCredentials": "crwdns246718:0crwdne246718:0"
 	},

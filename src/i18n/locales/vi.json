@@ -88,6 +88,9 @@
 		"LoadMore": "Tải thêm",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "Giới thiệu",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Mật khẩu",
 		"ServerError": "Error: server error",
 		"Title": "Đăng nhập",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

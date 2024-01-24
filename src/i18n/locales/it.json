@@ -88,6 +88,9 @@
 		"LoadMore": "Scarica altro",
 		"TopProducts": "Prodotti migliori"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "Informazioni",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Password",
 		"ServerError": "Errore: errore del server",
 		"Title": "Accedi",
-		"UseOFFCredentials": {
-			"Text": "Utilizza le tue credenziali {url} per accedere."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Nome utente",
 		"WrongCredentials": "Errore: credenziali errate"
 	},

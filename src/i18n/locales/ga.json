@@ -88,6 +88,9 @@
 		"LoadMore": "Load more",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "Faoi",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Pasfhocal",
 		"ServerError": "Error: server error",
 		"Title": "Sínigh isteach",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
