@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
 			"OriginLabel": "Origen",
-			"ProductCode": "Product barcode",
+			"ProductBarcode": "Product barcode",
 			"ScanBarcode": "Escaneja el codi de barres",
 			"TypeBarcode": "Escriu el codi de barres",
 			"SetProduct": "Set a product",
@@ -134,7 +134,8 @@
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search by name and city",
-		"Title": "Seleccioneu la vostra ubicació"
+		"Title": "Seleccioneu la vostra ubicació",
+		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
 	},
 	"NotFound": {
 		"Subtitle": "Sembla que la pàgina que has sol·licitat no existeix...",
