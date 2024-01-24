@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "分类",
 			"OriginLabel": "Origin",
-			"ProductCode": "Product barcode",
+			"ProductBarcode": "Product barcode",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
@@ -134,7 +134,8 @@
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search by name and city",
-		"Title": "Find your location"
+		"Title": "Find your location",
+		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
