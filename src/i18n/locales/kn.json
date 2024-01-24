@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "Search by product barcode",
 		"Title": "ಹುಡುಕಿ"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
+	},
 	"SignIn": {
 		"Button": "ಸೈನ್ ಇನ್ ಮಾಡಿ",
 		"Password": "ಪಾಸ್‌ವರ್ಡ್",
