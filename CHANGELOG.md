@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.30.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.30.2...v1.30.3) (2024-01-24)
+
+
+### Bug Fixes
+
+* **l10n:** move crowdin PRs to refactor instead of feat. ref [#159](https://github.com/openfoodfacts/open-prices-frontend/issues/159) ([20a44f4](https://github.com/openfoodfacts/open-prices-frontend/commit/20a44f45cfb63e56fc4c12b7d4ca5abb7b6134e9))
+* **l10n:** New Crowdin translations to review and merge ([#209](https://github.com/openfoodfacts/open-prices-frontend/issues/209)) ([bd9ede0](https://github.com/openfoodfacts/open-prices-frontend/commit/bd9ede0b6c34e1dc49a3cd363d3db01d7c6b9cce))
+* **location selector:** add help message if struggling to find location. ref [#212](https://github.com/openfoodfacts/open-prices-frontend/issues/212) ([376baeb](https://github.com/openfoodfacts/open-prices-frontend/commit/376baebdd40abf47e11942df4f7b4ab2d69fd1ad))
+* **multiple create mode:** add warning message for receipts. ref [#212](https://github.com/openfoodfacts/open-prices-frontend/issues/212) ([2ee5b75](https://github.com/openfoodfacts/open-prices-frontend/commit/2ee5b757272990d778eceb371109efb890fef2c6))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#211](https://github.com/openfoodfacts/open-prices-frontend/issues/211)) ([550c496](https://github.com/openfoodfacts/open-prices-frontend/commit/550c496e182ca0913bdb0d30fa75f353d736089b))
+* **l10n:** New Crowdin translations to review and merge ([#213](https://github.com/openfoodfacts/open-prices-frontend/issues/213)) ([eaf7dc2](https://github.com/openfoodfacts/open-prices-frontend/commit/eaf7dc283c27bddf504506236baea29225e7359b))
+
 ## [1.30.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.30.1...v1.30.2) (2024-01-24)
 
 
