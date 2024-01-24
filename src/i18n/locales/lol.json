@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "crwdns246896:0crwdne246896:0",
 		"Title": "crwdns246898:0crwdne246898:0"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "crwdns246908:0crwdne246908:0"
+	},
 	"SignIn": {
 		"Button": "crwdns246706:0crwdne246706:0",
 		"Password": "crwdns246708:0crwdne246708:0",
