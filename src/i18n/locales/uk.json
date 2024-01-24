@@ -88,6 +88,9 @@
 		"LoadMore": "Завантажити більше",
 		"TopProducts": "Кращі продукти"
 	},
+	"Common": {
+		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису"
+	},
 	"Footer": {
 		"About": "Про додаток",
 		"Open_Prices_Project": {
@@ -201,16 +204,14 @@
 		"Title": "Пошук"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Посилання скопійоване"
 	},
 	"SignIn": {
 		"Button": "Увійти",
 		"Password": "Пароль",
 		"ServerError": "Error: server error",
 		"Title": "Увійти",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
