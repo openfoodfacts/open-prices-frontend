@@ -30,7 +30,7 @@
 			"Upload": "アップロード"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "領収書には個人情報が含まれている場合があります。写真を撮る前にそれらを非表示にすることをお勧めします。",
 			"Title": "証明の詳細"
 		},
 		"Title": "複数の価格を追加する"
@@ -54,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "カテゴリー",
 			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "製品バーコード",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "バーコード入力",
 			"SetProduct": "Set a product",
@@ -136,7 +136,7 @@
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search by name and city",
 		"Title": "Find your location",
-		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
+		"Warning": "現在、検索エンジンの精度はあまり高くありません。結果を絞り込むために、迷わず通り名を追加してください。"
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
