@@ -30,6 +30,7 @@
 			"Upload": "アップロード"
 		},
 		"ProofDetails": {
+			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
 			"Title": "証明の詳細"
 		},
 		"Title": "複数の価格を追加する"
