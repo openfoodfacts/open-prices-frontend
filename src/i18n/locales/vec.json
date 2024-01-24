@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "Search by product barcode",
 		"Title": "Search"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
+	},
 	"SignIn": {
 		"Button": "Rejìstrate",
 		"Password": "Password",
