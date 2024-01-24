@@ -20,6 +20,7 @@
       <v-btn v-if="location.osm_id" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
         OpenStreetMap
       </v-btn>
+      <ShareButton v-if="location.osm_id"></ShareButton>
       <p v-if="!location.osm_id" class="text-red">
         <i>{{ $t('LocationDetail.LocationNotFound') }}</i>
       </p>
@@ -50,10 +51,12 @@
 import api from '../services/api'
 import utils from '../utils.js'
 import PriceCard from '../components/PriceCard.vue'
+import ShareButton from '../components/ShareButton.vue'
 
 export default {
   components: {
     PriceCard,
+    ShareButton,
   },
   data() {
     return {
