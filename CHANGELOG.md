@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.30.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.30.0...v1.30.1) (2024-01-24)
+
+
+### Bug Fixes
+
+* **price card:** reduce price footer chip padding ([4d88ae8](https://github.com/openfoodfacts/open-prices-frontend/commit/4d88ae81c39beff56240a89e5773c5a69a1e7782))
+
 ## [1.30.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.29.1...v1.30.0) (2024-01-24)
 
 
