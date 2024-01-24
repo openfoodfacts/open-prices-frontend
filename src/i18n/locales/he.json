@@ -23,7 +23,7 @@
 		"Done": "בוצע",
 		"ProductPriceDetails": {
 			"Add": "הוספת מחיר חדש",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "מחיר כבר נשלח | {priceAlreadyUploadedNumber} מחירים כבר נשלחו",
 			"Create": "יצירה",
 			"NewPrice": "מחיר חדש",
 			"PriceUploaded": "המחיר נוצר!",
@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
 			"OriginLabel": "מקור",
-			"ProductCode": "Product barcode",
+			"ProductCode": "ברקוד מוצר",
 			"ScanBarcode": "סריקת ברקוד",
 			"TypeBarcode": "סוג ברקוד",
 			"SetProduct": "הגדרת מוצר",
@@ -88,6 +88,9 @@
 		"LoadMore": "לטעון עוד",
 		"TopProducts": "מוצרים מובילים"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "על אודות",
 		"Open_Prices_Project": {
@@ -107,7 +110,7 @@
 		"LatestPrices": "מחירים עדכניים",
 		"SearchProduct": "חיפוש מוצר",
 		"SettingsUpdated": "ההגדרות עודכנו!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"TodayPriceStat": "לא נוספו מחירים היום | מחיר חדש נוסף היום | {todayPriceNumber} מחירים חדשים נוספו היום!",
 		"Welcome": {
 			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
 			"Title": "ברוך בואך ל־Open Prices!"
@@ -208,9 +211,7 @@
 		"Password": "סיסמה",
 		"ServerError": "שגיאה: שגיאת שרת",
 		"Title": "כניסה",
-		"UseOFFCredentials": {
-			"Text": "אפשר להשתמש בפרטי הגישה שלך ל־{url} כדי להיכנס."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "שם משתמש",
 		"WrongCredentials": "שגיאה: פרטי גישה שגויים"
 	},
