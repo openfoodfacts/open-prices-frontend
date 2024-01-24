@@ -5,22 +5,30 @@
       {{ getPriceLocationTitle() }}
       <span v-if="priceLocationEmoji" style="margin-inline-start:5px">{{ priceLocationEmoji }}</span>
     </v-chip>
+
     <v-chip class="mr-1" label size="small" density="comfortable" @click="goToUser()">
       <v-icon start icon="mdi-account"></v-icon>
       {{ price.owner }}
     </v-chip>
-    <v-chip label size="small" density="comfortable">
+
+    <v-chip class="mr-1" label size="small" density="comfortable">
       <v-icon start icon="mdi-clock-outline"></v-icon>
       {{ getRelativeDateTimeFormatted(price.created) }}
       <v-tooltip activator="parent" location="top">{{ getDateTimeFormatted(price.created) }}</v-tooltip>
     </v-chip>
+
+    <PriceProof v-if="price.proof && price.proof.is_public" :proof="price.proof"></PriceProof>
   </div>
 </template>
 
 <script>
 import utils from '../utils.js'
+import PriceProof from '../components/PriceProof.vue'
 
 export default {
+  components: {
+    PriceProof
+  },
   props: {
     'price': null,
     'hidePriceLocation': false,
