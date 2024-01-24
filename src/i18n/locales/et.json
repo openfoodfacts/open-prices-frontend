@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "Search by product barcode",
 		"Title": "Otsi"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
+	},
 	"SignIn": {
 		"Button": "Logi sisse",
 		"Password": "Password",
