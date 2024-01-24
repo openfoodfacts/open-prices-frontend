@@ -30,6 +30,7 @@
 			"Upload": "העלאה"
 		},
 		"ProofDetails": {
+			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
 			"Title": "פרטי הוכחה"
 		},
 		"Title": "הוספת מגוון מחירים"
@@ -53,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
 			"OriginLabel": "מקור",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "ברקוד מוצר",
 			"ScanBarcode": "סריקת ברקוד",
 			"TypeBarcode": "סוג ברקוד",
 			"SetProduct": "הגדרת מוצר",
@@ -135,7 +136,7 @@
 		"Result": "תוצאה אחת | {resultNumber} תוצאות",
 		"SearchByName": "חיפוש לפי שם ועיר",
 		"Title": "איתור המקום שלך",
-		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
+		"Warning": "מנוע החיפוש לא כל כך מדויק כרגע. הוספת שם הרחוב יצמצם קצת את התוצאות."
 	},
 	"NotFound": {
 		"Subtitle": "העמוד שביקשת לא קיים כפי הנראה…",
