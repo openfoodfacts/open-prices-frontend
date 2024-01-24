@@ -16,10 +16,15 @@
             append-inner-icon="mdi-magnify"
             @click:append-inner="search"
             :rules="[fieldRequired]"
+            hide-details="auto"
             :loading="loading"
             required>
           </v-text-field>
         </v-form>
+
+        <p class="text-warning mt-2">
+          {{ $t('LocationSelector.Warning') }}
+        </p>
       </v-card-text>
 
       <v-divider></v-divider>
