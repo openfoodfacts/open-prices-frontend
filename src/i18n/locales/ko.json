@@ -88,6 +88,9 @@
 		"LoadMore": "더 불러오기",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "정보",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "암호",
 		"ServerError": "Error: server error",
 		"Title": "가입하기",
-		"UseOFFCredentials": {
-			"Text": "Use your {url} credentials to sign in."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
