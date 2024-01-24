@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "חיפוש לפי ברקוד של מוצר",
 		"Title": "חיפוש"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
+	},
 	"SignIn": {
 		"Button": "כניסה",
 		"Password": "סיסמה",
