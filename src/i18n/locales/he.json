@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
 			"OriginLabel": "מקור",
-			"ProductCode": "ברקוד מוצר",
+			"ProductBarcode": "Product barcode",
 			"ScanBarcode": "סריקת ברקוד",
 			"TypeBarcode": "סוג ברקוד",
 			"SetProduct": "הגדרת מוצר",
@@ -134,7 +134,8 @@
 		"RecentLocations": "אין מקומות אחרונים | מקום אחרון {recentLocationNumber}| {recentLocationNumber} מקומות אחרונים",
 		"Result": "תוצאה אחת | {resultNumber} תוצאות",
 		"SearchByName": "חיפוש לפי שם ועיר",
-		"Title": "איתור המקום שלך"
+		"Title": "איתור המקום שלך",
+		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
 	},
 	"NotFound": {
 		"Subtitle": "העמוד שביקשת לא קיים כפי הנראה…",
