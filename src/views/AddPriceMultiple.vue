@@ -43,6 +43,9 @@
               <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2">
                 <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
               </p>
+              <p v-if="proofType === 'RECEIPT'" class="text-warning">
+                <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
+              </p>
             </v-col>
             <v-col v-if="proofFormFilled">
               <v-img :src="proofImagePreview" style="max-height:200px"></v-img>

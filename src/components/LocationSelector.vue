@@ -23,7 +23,7 @@
         </v-form>
 
         <p class="text-warning mt-2">
-          {{ $t('LocationSelector.Warning') }}
+          <i>{{ $t('LocationSelector.Warning') }}</i>
         </p>
       </v-card-text>
 
