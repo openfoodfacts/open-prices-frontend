@@ -144,6 +144,7 @@
 		"Discount": "Promo",
 		"PriceDate": "le {date}",
 		"PriceValueDisplay": "{0} /kg",
+		"Proof": "Preuve",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Prix d'origine",
 		"UnknownProduct": "Produit inconnu"
@@ -171,7 +172,7 @@
 		"Order": "Ordre",
 		"PriceNumber": "Nombre de prix ajoutés",
 		"ScanNumber": "Nombre de scans ajoutés",
-		"Title": "Meilleurs produits"
+		"Title": "Top produits"
 	},
 	"Router": {
 		"AddPrice": {
@@ -196,7 +197,7 @@
 			"Title": "Top lieux"
 		},
 		"TopProducts": {
-			"Title": "Meilleurs produits"
+			"Title": "Top produits"
 		}
 	},
 	"Search": {
