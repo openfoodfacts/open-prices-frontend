@@ -89,7 +89,7 @@
 		"TopProducts": "מוצרים מובילים"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}"
 	},
 	"Footer": {
 		"About": "על אודות",
@@ -205,14 +205,14 @@
 		"Title": "חיפוש"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "הקישור הועתק"
 	},
 	"SignIn": {
 		"Button": "כניסה",
 		"Password": "סיסמה",
 		"ServerError": "שגיאה: שגיאת שרת",
 		"Title": "כניסה",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
 		"UsernameLabel": "שם משתמש",
 		"WrongCredentials": "שגיאה: פרטי גישה שגויים"
 	},
