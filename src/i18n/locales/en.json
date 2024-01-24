@@ -88,6 +88,9 @@
 		"LoadMore": "Load more",
 		"TopProducts": "Top Products"
 	},
+	"Common": {
+		"ShareLinkCopySuccess": "Link copied to clipboard"
+	},
 	"Footer": {
 		"About": "About",
 		"Open_Prices_Project": {
