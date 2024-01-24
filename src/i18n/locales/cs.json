@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "Search by product barcode",
 		"Title": "Vyhledat"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
+	},
 	"SignIn": {
 		"Button": "Přihlásit se",
 		"Password": "Heslo",
