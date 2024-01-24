@@ -30,7 +30,7 @@
 			"Upload": "Nahrát"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "Účtenky mohou obsahovat osobní údaje, doporučujeme je před focením schovat (zakrýt, přeložit...).",
 			"Title": "Podrobnosti o důkazu"
 		},
 		"Title": "Přidat více cen"
@@ -54,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
 			"OriginLabel": "Původ",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Čárový kód produktu",
 			"ScanBarcode": "Naskenovat čárový kód",
 			"TypeBarcode": "Zadat čárový kód",
 			"SetProduct": "Nastavit produkt",
@@ -136,7 +136,7 @@
 		"Result": "Výsledek {resultNumber} | Výsledky {resultNumber}",
 		"SearchByName": "Hledat podle jména a města",
 		"Title": "Najít vaši polohu",
-		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
+		"Warning": "Vyhledávač v současné době není příliš přesný. Pro zúžení výsledků neváhejte přidat název ulice."
 	},
 	"NotFound": {
 		"Subtitle": "Vypadá to, že požadovaná stránka neexistuje...",
