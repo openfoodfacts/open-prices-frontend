@@ -19,6 +19,7 @@
       <v-btn size="small" append-icon="mdi-open-in-new" :href="getBrandOFFUrl()" target="_blank">
         Open Food Facts
       </v-btn>
+      <ShareButton></ShareButton>
     </v-col>
   </v-row>
 
@@ -73,10 +74,12 @@
 import constants from '../constants'
 import api from '../services/api'
 import ProductCard from '../components/ProductCard.vue'
+import ShareButton from '../components/ShareButton.vue'
 
 export default {
   components: {
     ProductCard,
+    ShareButton,
   },
   data() {
     return {
