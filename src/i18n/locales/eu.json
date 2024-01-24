@@ -144,6 +144,7 @@
 		"Discount": "Deskontua",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"Proof": "Proof",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Prezio osoa",
 		"UnknownProduct": "Unknown product"

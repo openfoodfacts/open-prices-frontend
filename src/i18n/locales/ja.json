@@ -89,7 +89,7 @@
 		"TopProducts": "人気の製品"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Google アカウントでログイン"
 	},
 	"Footer": {
 		"About": "アプリについて",
@@ -144,6 +144,7 @@
 		"Discount": "ディスカウント",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"Proof": "Proof",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "正規価格",
 		"UnknownProduct": "Unknown product"
@@ -204,14 +205,14 @@
 		"Title": "検索"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "リンクをコピーしました"
 	},
 	"SignIn": {
 		"Button": "サインイン",
 		"Password": "パスワード",
 		"ServerError": "Error: server error",
 		"Title": "サインイン",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Google アカウントでログイン",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},

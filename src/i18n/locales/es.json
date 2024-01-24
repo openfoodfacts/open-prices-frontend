@@ -144,6 +144,7 @@
 		"Discount": "Descuento",
 		"PriceDate": "en {date}",
 		"PriceValueDisplay": "{0} /kg",
+		"Proof": "Prueba",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Precio original",
 		"UnknownProduct": "Producto desconocido"
