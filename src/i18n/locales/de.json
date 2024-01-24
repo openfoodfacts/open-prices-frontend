@@ -30,6 +30,7 @@
 			"Upload": "Hochladen"
 		},
 		"ProofDetails": {
+			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
 			"Title": "Details zum Nachweis"
 		},
 		"Title": "Mehrere Preise hinzufügen"
