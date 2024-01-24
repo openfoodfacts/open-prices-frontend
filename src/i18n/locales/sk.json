@@ -30,6 +30,7 @@
 			"Upload": "Upload"
 		},
 		"ProofDetails": {
+			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
 			"Title": "Proof details"
 		},
 		"Title": "Add multiple prices"
