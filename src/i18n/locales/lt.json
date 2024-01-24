@@ -144,6 +144,7 @@
 		"Discount": "Nuolaida",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"Proof": "Proof",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Visa kaina",
 		"UnknownProduct": "Unknown product"
