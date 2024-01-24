@@ -200,6 +200,9 @@
 		"SearchByProductBarcode": "Пошук за штрих-кодом товару",
 		"Title": "Пошук"
 	},
+	"ShareButton": {
+		"LinkCopySuccess": "Link copied"
+	},
 	"SignIn": {
 		"Button": "Увійти",
 		"Password": "Пароль",
