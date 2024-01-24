@@ -144,6 +144,7 @@
 		"Discount": "Знижка",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"Proof": "Доказ",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Повна ціна",
 		"UnknownProduct": "Unknown product"
