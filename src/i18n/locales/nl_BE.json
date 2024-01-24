@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categorie",
 			"OriginLabel": "Oorsprong",
-			"ProductCode": "Product streepjescode",
+			"ProductBarcode": "Product barcode",
 			"ScanBarcode": "Scan een streepjescode",
 			"TypeBarcode": "Voer een streepjescode in",
 			"SetProduct": "Set a product",
@@ -134,7 +134,8 @@
 		"RecentLocations": "Geen recente locaties | Recente locatie {recentLocationNumber}| Recente locaties {recentLocationNumber}",
 		"Result": "Resultaat {resultNumber} | Resultaten {resultNumber}",
 		"SearchByName": "Zoek op naam en stad",
-		"Title": "Vind je locatie"
+		"Title": "Vind je locatie",
+		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
 	},
 	"NotFound": {
 		"Subtitle": "De door u opgevraagde pagina lijkt niet te bestaan...",

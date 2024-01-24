@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categoría",
 			"OriginLabel": "Origen",
-			"ProductCode": "Product barcode",
+			"ProductBarcode": "Product barcode",
 			"ScanBarcode": "Escanear un código de barras",
 			"TypeBarcode": "Introducir código de barras",
 			"SetProduct": "Establecer un producto",
@@ -134,7 +134,8 @@
 		"RecentLocations": "No hay ubicaciones recientes | Ubicación reciente {recentLocationNumber}| Ubicaciones recientes {recentLocationNumber}",
 		"Result": "Resultado {resultNumber} | Resultados {resultNumber}",
 		"SearchByName": "Buscar por nombre y ciudad",
-		"Title": "Encuentra tu ubicación"
+		"Title": "Encuentra tu ubicación",
+		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
 	},
 	"NotFound": {
 		"Subtitle": "La página que solicitaste no parece existir...",

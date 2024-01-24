@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "crwdns246570:0crwdne246570:0",
 			"OriginLabel": "crwdns246572:0crwdne246572:0",
-			"ProductCode": "crwdns246902:0crwdne246902:0",
+			"ProductBarcode": "crwdns246918:0crwdne246918:0",
 			"ScanBarcode": "crwdns246576:0crwdne246576:0",
 			"TypeBarcode": "crwdns246760:0crwdne246760:0",
 			"SetProduct": "crwdns246578:0crwdne246578:0",
@@ -134,7 +134,8 @@
 		"RecentLocations": "crwdns246644:0{recentLocationNumber}crwdnd246644:0{recentLocationNumber}crwdne246644:0",
 		"Result": "crwdns246646:0{resultNumber}crwdnd246646:0{resultNumber}crwdne246646:0",
 		"SearchByName": "crwdns246648:0crwdne246648:0",
-		"Title": "crwdns246650:0crwdne246650:0"
+		"Title": "crwdns246650:0crwdne246650:0",
+		"Warning": "crwdns246920:0crwdne246920:0"
 	},
 	"NotFound": {
 		"Subtitle": "crwdns246652:0crwdne246652:0",

@@ -53,7 +53,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
 			"OriginLabel": "Původ",
-			"ProductCode": "Čárový kód produktu",
+			"ProductBarcode": "Product barcode",
 			"ScanBarcode": "Naskenovat čárový kód",
 			"TypeBarcode": "Zadat čárový kód",
 			"SetProduct": "Nastavit produkt",
@@ -134,7 +134,8 @@
 		"RecentLocations": "Žádná nedávné poloha | Nedávná poloha {recentLocationNumber}| Nedávné polohy {recentLocationNumber}",
 		"Result": "Výsledek {resultNumber} | Výsledky {resultNumber}",
 		"SearchByName": "Hledat podle jména a města",
-		"Title": "Najít vaši polohu"
+		"Title": "Najít vaši polohu",
+		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
 	},
 	"NotFound": {
 		"Subtitle": "Vypadá to, že požadovaná stránka neexistuje...",
