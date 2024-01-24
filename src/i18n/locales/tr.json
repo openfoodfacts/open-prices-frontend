@@ -88,6 +88,9 @@
 		"LoadMore": "Daha fazla yükle",
 		"TopProducts": "En Popüler Ürünler"
 	},
+	"Common": {
+		"SignInOFFAccount": "Sign in with your {url} account"
+	},
 	"Footer": {
 		"About": "Hakkında",
 		"Open_Prices_Project": {
@@ -208,9 +211,7 @@
 		"Password": "Şifre",
 		"ServerError": "Hata: sunucu hatası",
 		"Title": "Giriş Yap",
-		"UseOFFCredentials": {
-			"Text": "Oturum açmak için {url} kimlik bilgilerinizi kullanın."
-		},
+		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Kullanıcı adı",
 		"WrongCredentials": "Hata: yanlış kimlik bilgileri"
 	},
