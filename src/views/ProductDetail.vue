@@ -12,7 +12,7 @@
       <v-btn v-if="product.code && product.source" class="ml-2" size="small" append-icon="mdi-open-in-new" :href="getProductOFFUrl(product)" target="_blank">
         Open Food Facts
       </v-btn>
-      <v-btn class="ml-2" size="small" density="comfortable" color="teal" icon="mdi-share-variant" @click="shareViaWebShare"></v-btn>
+      <ShareButton></ShareButton>
     </v-col>
   </v-row>
 
@@ -45,12 +45,6 @@
       <v-btn size="small" :loading="loading" @click="getProductPrices">{{ $t('ProductDetail.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
-
-  <v-snackbar
-    v-model="shareLinkCopySuccessMessage"
-    color="success"
-    :timeout="2000"
-  >{{ $t('Common.ShareLinkCopySuccess') }}</v-snackbar>
 </template>
 
 <script>
@@ -58,11 +52,13 @@ import utils from '../utils.js'
 import api from '../services/api'
 import ProductCard from '../components/ProductCard.vue'
 import PriceCard from '../components/PriceCard.vue'
+import ShareButton from '../components/ShareButton.vue'
 
 export default {
   components: {
     ProductCard,
     PriceCard,
+    ShareButton,
   },
   data() {
     return {
@@ -127,18 +123,6 @@ export default {
     getProductOFFUrl(product) {
       return `https://world.openfoodfacts.org/product/${product.code}`
     },
-    shareViaWebShare() {
-      let URL = `${import.meta.env.VITE_OPEN_PRICES_API_URL}${this.$route.href}`
-      if (navigator.share) {
-        navigator.share({
-          title: import.meta.env.VITE_OPEN_PRICES_NAME,
-          url: URL
-        })
-      } else {
-        navigator.clipboard.writeText(URL)
-        this.shareLinkCopySuccessMessage = true
-      }
-    }
   }
 }
 </script>
