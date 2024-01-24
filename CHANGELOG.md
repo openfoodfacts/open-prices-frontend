@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.30.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.30.1...v1.30.2) (2024-01-24)
+
+
+### Bug Fixes
+
+* **l10n:** rename en Top product title ([9eaffce](https://github.com/openfoodfacts/open-prices-frontend/commit/9eaffcea3cc05d5ca2970ccc08e5608d2a8ca4b3))
+
 ## [1.30.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.30.0...v1.30.1) (2024-01-24)
 
 
