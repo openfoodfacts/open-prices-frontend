@@ -30,7 +30,7 @@
 			"Upload": "Yükle"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "Makbuzlar kişisel bilgiler içerebilir; fotoğrafı çekmeden önce bunları gizlemenizi (düzeltmeyi, katlamayı...) öneririz.",
 			"Title": "Kanıt ayrıntıları"
 		},
 		"Title": "Birden fazla fiyat ekle"
@@ -54,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Kaynak",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Ürün barkodu",
 			"ScanBarcode": "Barkod tara",
 			"TypeBarcode": "Barkodu yazın",
 			"SetProduct": "Bir ürün ayarlayın",
@@ -90,7 +90,7 @@
 		"TopProducts": "En iyi ürünler"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "{url} hesabınızla oturum açın"
 	},
 	"Footer": {
 		"About": "Hakkında",
@@ -207,14 +207,14 @@
 		"Title": "Ara"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Bağlantı kopyalandı"
 	},
 	"SignIn": {
 		"Button": "Giriş Yap",
 		"Password": "Şifre",
 		"ServerError": "Hata: sunucu hatası",
 		"Title": "Giriş Yap",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"UsernameLabel": "Kullanıcı adı",
 		"WrongCredentials": "Hata: yanlış kimlik bilgileri"
 	},
