@@ -4,19 +4,19 @@
 			"Subtitle": "Lentyna su keliomis kainų etiketėmis",
 			"Title": "Keli produktai"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Kaina sukurta!",
 		"ReceiptMode": {
 			"Subtitle": "Vienas ar keli produktai",
 			"Title": "Čekis"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Prisijungta!",
 		"SingleProductMode": {
 			"Subtitle": "Tik viena kainos etiketė",
 			"Title": "Nekeičiamos sudėties produktas"
 		},
 		"Thanks": "Ačiū",
-		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
+		"Title": "Pridėti kainą",
+		"TitleSingle": "Pridėti vieną kainą",
 		"TitleMultiple": "Pridėti kelias kainas masiškai"
 	},
 	"AddPriceMultiple": {
@@ -26,7 +26,7 @@
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Kurti",
 			"NewPrice": "Nauja kaina",
-			"PriceUploaded": "Price created!",
+			"PriceUploaded": "Kaina sukurta!",
 			"Upload": "Įkelti"
 		},
 		"ProofDetails": {
@@ -39,51 +39,51 @@
 		"Create": "Kurti",
 		"PriceDetails": {
 			"Discount": "Nuolaida?",
-			"Label": "Price",
+			"Label": "Kaina",
 			"LabelDiscounted": "Sumažinta kaina",
 			"LabelFull": "Visa kaina",
-			"Proof": "Proof",
-			"ProofUploaded": "Proof uploaded!",
-			"Text": "Price {perKg}",
-			"TextPerKg": "per kg",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"Proof": "Įrodymai",
+			"ProofUploaded": "Įrodymai įkelti!",
+			"Text": "Kaina {perKg}",
+			"TextPerKg": "už kg",
+			"Title": "Išsami informacija apie kainą",
+			"UploadProof": "Įkelti įrodymus",
 			"TakePicture": "Fotografuoti",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Pasirinkite iš savo galerijos"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorija",
-			"OriginLabel": "Origin",
+			"OriginLabel": "Kilmė",
 			"ProductBarcode": "Product barcode",
-			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"ScanBarcode": "Nuskaityti brūkšninį kodą",
+			"TypeBarcode": "Įveskite brūkšninį kodą",
+			"SetProduct": "Nustatyti produktą",
+			"Title": "Informacija apie produktą"
 		},
 		"ProductModeList": {
 			"Barcode": "Barkodas",
 			"Category": "Kategorija"
 		},
-		"Title": "Add a single price",
+		"Title": "Pridėti vieną kainą",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Data",
+			"DateLabel": "Data",
 			"Find": "Rasti",
 			"Location": "Parduotuvės vieta",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"SelectLocation": "Pasirinkite savo vietą",
+			"Title": "Kur ir kada?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Nuskaityti brūkšninį kodą"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barkodas",
 		"Submit": "Pateikti",
-		"Title": "Type a barcode"
+		"Title": "Įveskite brūkšninį kodą"
 	},
 	"BrandDetail": {
 		"LoadMore": "Įkelti daugiau",
@@ -107,7 +107,7 @@
 		"Title": "Open Prices"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Pridėti kainą",
 		"LatestPrices": "Latest prices",
 		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Settings updated!",
@@ -146,7 +146,7 @@
 		"Discount": "Nuolaida",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"Proof": "Proof",
+		"Proof": "Įrodymai",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Visa kaina",
 		"UnknownProduct": "Unknown product"
@@ -161,7 +161,7 @@
 		"UnknownProduct": "Nežinomas produkto pavadinimas"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Pridėti kainą",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Įkelti daugiau",
@@ -178,7 +178,7 @@
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Pridėti kainą"
 		},
 		"Home": {
 			"Title": "Pagrindinis"
