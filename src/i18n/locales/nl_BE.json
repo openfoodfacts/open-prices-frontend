@@ -30,7 +30,7 @@
 			"Upload": "Uploaden"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "Kwitanties kunnen persoonlijke informatie bevatten. Wij raden u aan deze te verbergen (redigeren, vouwen...) voordat u de foto maakt.",
 			"Title": "Bewijs details"
 		},
 		"Title": "Voeg meerdere prijzen toe"
@@ -69,7 +69,7 @@
 			"Date": "Datum",
 			"DateLabel": "Datum",
 			"Find": "Zoeken",
-			"Location": "Shop location",
+			"Location": "Winkel locatie",
 			"SelectLocation": "Selecteer uw locatie",
 			"Title": "Waar en wanneer?"
 		}
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "Geen recente locaties | Recente locatie {recentLocationNumber}| Recente locaties {recentLocationNumber}",
 		"Result": "Resultaat {resultNumber} | Resultaten {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"SearchByName": "Zoek uw winkel op naam en plaats",
+		"Title": "Vind uw winkellocatie",
+		"Warning": "De zoekmachine om een winkel te vinden is momenteel niet erg nauwkeurig.{newline}Aarzel niet om de straatnaam toe te voegen om de resultaten te verfijnen.{newline}Voorbeelden: Carrefour City 15e Parijs; Sainsbury's Camden Londen"
 	},
 	"NotFound": {
 		"Subtitle": "De door u opgevraagde pagina lijkt niet te bestaan...",
