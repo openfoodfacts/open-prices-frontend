@@ -16,5 +16,5 @@ export default {
     { key: '-unique_scans_n', value: 'Number of scans', icon: 'mdi-barcode-scan' },
     { key: '-price_count', value: 'Number of prices', icon: 'mdi-tag-multiple-outline' },
   ],
-  NOMINATIM_RESULT_TYPE_EXCLUDE_LIST: ['administrative', 'village', 'town', 'city', 'municipality', 'state_district', 'fuel', 'gas', 'casino', 'parking', 'parking_space'],
+  NOMINATIM_RESULT_TYPE_EXCLUDE_LIST: ['administrative', 'village', 'town', 'city', 'municipality', 'state_district', 'county', 'state', 'fuel', 'gas', 'casino', 'parking', 'parking_space', 'atm', 'residential', 'pedestrian', 'car_sharing', 'primary', 'secondary', 'tertiary'],
 }

@@ -23,7 +23,9 @@
         </v-form>
 
         <p class="text-warning mt-2">
-          <i>{{ $t('LocationSelector.Warning') }}</i>
+          <i18n-t keypath="LocationSelector.Warning" tag="i">
+            <template #newline><br /></template>
+          </i18n-t>
         </p>
       </v-card-text>
 
