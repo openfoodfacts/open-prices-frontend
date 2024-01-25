@@ -9,6 +9,7 @@
       <v-card
         :title="$t('Home.SearchProduct')"
         prepend-icon="mdi-magnify"
+        height="100%"
         to="/search">
       </v-card>
     </v-col>
