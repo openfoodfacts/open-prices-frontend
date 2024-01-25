@@ -46,7 +46,7 @@ export default {
       return this.$router.options.routes
         .filter(r => r.meta && r.meta.drawerMenu)
         .filter(r => this.username ? r.meta.requiresAuth !== false : !r.meta.requiresAuth)
-        .map((r => ({ title: this.$t(`Router.${r.meta.title}.Title`), props: { 'prepend-icon': r.meta.icon, to: r.path }})))
+        .map((r => ({ title: this.$t(`Router.${r.meta.title}.Title`), props: { 'prepend-icon': r.meta.icon, 'base-color': r.meta.color, to: r.path }})))
     }
   },
   methods: {

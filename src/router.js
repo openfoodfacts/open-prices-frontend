@@ -27,7 +27,7 @@ const routes = [
   { path: '/dashboard', name: 'dashboard', component: UserDashboard, meta: { title: 'Dashboard', requiresAuth: true } },
   { path: '/settings', name: 'settings', component: UserSettings, meta: { title: 'Settings', requiresAuth: true } },
   { path: '/search', name: 'search', component: Search, meta: { title: 'Search', icon: 'mdi-magnify', drawerMenu: true }},
-  { path: '/add', name: 'add-price', component: AddPriceHome, meta: { title: 'AddPrice', icon: 'mdi-plus', drawerMenu: true, requiresAuth: true }},
+  { path: '/add', name: 'add-price', component: AddPriceHome, meta: { title: 'AddPrice', icon: 'mdi-plus', drawerMenu: true, color: 'primary', requiresAuth: true }},
   { path: '/add/single', name: 'add-price-single', component: AddPriceSingle, meta: { title: 'Add a single price (price tag)', requiresAuth: true }},
   { path: '/add/multiple/price-tag', name: 'add-price-multiple-price-tag', component: AddPriceMultiple, meta: { title: 'Add multiple prices (price tags)', requiresAuth: true }},
   { path: '/add/multiple/receipt', name: 'add-price-multiple-receipt', component: AddPriceMultiple, meta: { title: 'Add multiple prices (receipt)', requiresAuth: true }},
