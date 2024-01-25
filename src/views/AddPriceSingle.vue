@@ -102,16 +102,16 @@
               </i18n-t>
             </h3>
             <v-row>
-              <v-col :cols="priceDiscounted ? '6' : '12'" sm="6">
+              <v-col :cols="addPriceSingleForm.price_is_discounted ? '6' : '12'" sm="6">
                 <v-text-field
                   v-model="addPriceSingleForm.price"
-                  :label="priceDiscounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
+                  :label="addPriceSingleForm.price_is_discounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
                   type="number"
                   hide-details="auto"
                   :suffix="addPriceSingleForm.currency"
                 ></v-text-field>
               </v-col>
-              <v-col v-if="priceDiscounted" cols="6">
+              <v-col v-if="addPriceSingleForm.price_is_discounted" cols="6">
                 <v-text-field
                   v-model="addPriceSingleForm.price_without_discount"
                   :label="$t('AddPriceSingle.PriceDetails.LabelFull')"
@@ -122,7 +122,7 @@
               </v-col>
             </v-row>
             <div class="d-inline">
-              <v-checkbox v-model="priceDiscounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
+              <v-checkbox v-model="addPriceSingleForm.price_is_discounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
             </div>
             <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.PriceDetails.Proof') }}</h3>
             <v-row>
@@ -282,7 +282,7 @@ export default {
         origins_tags: '',
         labels_tags: [],
         price: null,
-        priceDiscounted: false,
+        price_is_discounted: false,
         price_without_discount: null,
         currency: null,  // see initPriceSingleForm
         location_osm_id: null,
@@ -303,8 +303,6 @@ export default {
       labelsTags: LabelsTags,
       barcodeScanner: false,
       barcodeManualInput: false,
-      // price data
-      priceDiscounted: false,
       // location data
       locationSelector: false,
       locationSelectedDisplayName: '',
@@ -330,12 +328,7 @@ export default {
     },
     priceFormFilled() {
       let keys = ['price', 'currency']
-      if (!this.priceDiscounted) {
-        return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-      } else {
-        keys.push('price_without_discount')
-        return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-      }
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     proofFormFilled() {
       let keys = ['proof_id']
@@ -472,7 +465,7 @@ export default {
       if (this.addPriceSingleForm.labels_tags.length == 0) {
         this.addPriceSingleForm.labels_tags = null
       }
-      if (!this.priceDiscounted) {
+      if (!this.addPriceSingleForm.price_is_discounted) {
         this.addPriceSingleForm.price_without_discount = null
       }
       // create price
