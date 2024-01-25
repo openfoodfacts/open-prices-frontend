@@ -207,16 +207,16 @@
             </i18n-t>
           </h3>
           <v-row>
-            <v-col :cols="priceDiscounted ? '6' : '12'" sm="6">
+            <v-col :cols="productPriceForm.price_is_discounted ? '6' : '12'" sm="6">
               <v-text-field
                 v-model="productPriceForm.price"
-                :label="priceDiscounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
+                :label="productPriceForm.price_is_discounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
                 type="number"
                 hide-details="auto"
                 :suffix="productPriceForm.currency"
               ></v-text-field>
             </v-col>
-            <v-col v-if="priceDiscounted" cols="6">
+            <v-col v-if="productPriceForm.price_is_discounted" cols="6">
               <v-text-field
                 v-model="productPriceForm.price_without_discount"
                 :label="$t('AddPriceSingle.PriceDetails.LabelFull')"
@@ -227,7 +227,7 @@
             </v-col>
           </v-row>
           <div class="d-inline">
-            <v-checkbox v-model="priceDiscounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
+            <v-checkbox v-model="productPriceForm.price_is_discounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
           </div>
         </v-card-text>
         <v-divider></v-divider>
@@ -357,6 +357,7 @@ export default {
         origins_tags: '',
         labels_tags: [],
         price: null,
+        price_is_discounted: false,
         price_without_discount: null,
         currency: null,  // see initPriceMultipleForm
         uploaded: false
@@ -372,7 +373,6 @@ export default {
       labelsTags: LabelsTags,
       barcodeScanner: false,
       barcodeManualInput: false,
-      priceDiscounted: false,
     }
   },
   computed: {
@@ -408,12 +408,7 @@ export default {
     },
     priceFormFilled() {
       let keys = ['price', 'currency']
-      if (!this.priceDiscounted) {
-        return Object.keys(this.productPriceForm).filter(k => keys.includes(k)).every(k => !!this.productPriceForm[k])
-      } else {
-        keys.push('price_without_discount')
-        return Object.keys(this.productPriceForm).filter(k => keys.includes(k)).every(k => !!this.productPriceForm[k])
-      }
+      return Object.keys(this.productPriceForm).filter(k => keys.includes(k)).every(k => !!this.productPriceForm[k])
     },
     productPriceFormFilled() {
       return this.productFormFilled && this.priceFormFilled
@@ -522,7 +517,6 @@ export default {
     clearProductPriceForm() {
       this.productPriceForm = {}
       this.product = null
-      this.priceDiscounted = false
     },
     initNewProductPriceForm() {
       this.clearProductPriceForm()
@@ -544,7 +538,7 @@ export default {
       if (this.productPriceForm.labels_tags.length == 0) {
         this.productPriceForm.labels_tags = null
       }
-      if (!this.priceDiscounted) {
+      if (!this.productPriceForm.price_is_discounted) {
         this.productPriceForm.price_without_discount = null
       }
       // create price
