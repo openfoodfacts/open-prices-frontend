@@ -69,7 +69,7 @@
 			"Date": "Datum",
 			"DateLabel": "Datum",
 			"Find": "Vyhledat",
-			"Location": "Poloha",
+			"Location": "Shop location",
 			"SelectLocation": "Vyberte vaši polohu",
 			"Title": "Kde a kdy?"
 		}
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "Žádná nedávné poloha | Nedávná poloha {recentLocationNumber}| Nedávné polohy {recentLocationNumber}",
 		"Result": "Výsledek {resultNumber} | Výsledky {resultNumber}",
-		"SearchByName": "Hledat podle jména a města",
-		"Title": "Najít vaši polohu",
-		"Warning": "Vyhledávač v současné době není příliš přesný. Pro zúžení výsledků neváhejte přidat název ulice."
+		"SearchByName": "Search for your shop by name and city",
+		"Title": "Find your shop location",
+		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
 	"NotFound": {
 		"Subtitle": "Vypadá to, že požadovaná stránka neexistuje...",
