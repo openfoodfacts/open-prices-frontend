@@ -69,7 +69,7 @@
 			"Date": "Datum",
 			"DateLabel": "Datum",
 			"Find": "Zoeken",
-			"Location": "Locatie",
+			"Location": "Shop location",
 			"SelectLocation": "Selecteer uw locatie",
 			"Title": "Waar en wanneer?"
 		}
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "Geen recente locaties | Recente locatie {recentLocationNumber}| Recente locaties {recentLocationNumber}",
 		"Result": "Resultaat {resultNumber} | Resultaten {resultNumber}",
-		"SearchByName": "Zoek op naam en stad",
-		"Title": "Vind je locatie",
-		"Warning": "De zoekmachine is momenteel niet erg nauwkeurig. Aarzel niet om de straatnaam toe te voegen om de resultaten te verfijnen."
+		"SearchByName": "Search for your shop by name and city",
+		"Title": "Find your shop location",
+		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
 	"NotFound": {
 		"Subtitle": "De door u opgevraagde pagina lijkt niet te bestaan...",

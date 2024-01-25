@@ -30,7 +30,7 @@
 			"Upload": "Yükle"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "Makbuzlar kişisel bilgiler içerebilir; fotoğrafı çekmeden önce bunları gizlemenizi (düzeltmeyi, katlamayı...) öneririz.",
 			"Title": "Kanıt ayrıntıları"
 		},
 		"Title": "Birden fazla fiyat ekle"
@@ -54,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Kaynak",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Ürün barkodu",
 			"ScanBarcode": "Barkod tara",
 			"TypeBarcode": "Barkodu yazın",
 			"SetProduct": "Bir ürün ayarlayın",
@@ -69,7 +69,7 @@
 			"Date": "Tarih",
 			"DateLabel": "Tarih",
 			"Find": "Bul",
-			"Location": "Konum",
+			"Location": "Shop location",
 			"SelectLocation": "Konumunuzu seçin",
 			"Title": "Nerede ve ne zaman?"
 		}
@@ -90,7 +90,7 @@
 		"TopProducts": "En iyi ürünler"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "{url} hesabınızla oturum açın"
 	},
 	"Footer": {
 		"About": "Hakkında",
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Sonuç {resultNumber} | Sonuçlar {resultNumber}",
-		"SearchByName": "İsme ve şehre göre ara",
-		"Title": "Konumunuzu bulun",
-		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
+		"SearchByName": "Search for your shop by name and city",
+		"Title": "Find your shop location",
+		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
 	"NotFound": {
 		"Subtitle": "İstediğiniz sayfa mevcut değil gibi görünüyor...",
@@ -207,14 +207,14 @@
 		"Title": "Ara"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Bağlantı kopyalandı"
 	},
 	"SignIn": {
 		"Button": "Giriş Yap",
 		"Password": "Şifre",
 		"ServerError": "Hata: sunucu hatası",
 		"Title": "Giriş Yap",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"UsernameLabel": "Kullanıcı adı",
 		"WrongCredentials": "Hata: yanlış kimlik bilgileri"
 	},

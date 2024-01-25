@@ -69,7 +69,7 @@
 			"Date": "Date",
 			"DateLabel": "Date",
 			"Find": "கண்டுபிடி",
-			"Location": "Location",
+			"Location": "கடை இருக்குமிடம்",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
 		}
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search by name and city",
-		"Title": "Find your location",
-		"Warning": "தேடுபொறி தற்போது மிகவும் துல்லியமாக இல்லை. முடிவுகளைக் குறைக்க, தெருவின் பெயரைச் சேர்க்க தயங்க வேண்டாம்."
+		"SearchByName": "பெயர் மற்றும் நகரம் மூலம் உங்கள் கடையைத் தேடுங்கள்",
+		"Title": "உங்கள் கடையின் இருப்பிடத்தைக் கண்டறியவும்",
+		"Warning": "கடையைக் கண்டுபிடிப்பதற்கான தேடுபொறி தற்போது மிகவும் துல்லியமாக இல்லை.{newline}முடிவுகளைக் குறைக்க தெருவின் பெயரைச் சேர்க்க தயங்க வேண்டாம்.{newline}எடுத்துக்காட்டுகள்: Carrefour City 15e பாரிஸ் ; சைன்ஸ்பரியின் கேம்டன் லண்டன்"
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
