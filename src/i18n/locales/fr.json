@@ -54,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Catégorie",
 			"OriginLabel": "Origine",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Code-barres du produit",
 			"ScanBarcode": "Scanner un code-barres",
 			"TypeBarcode": "Taper un code-barres",
 			"SetProduct": "Ajouter un produit",
@@ -69,7 +69,7 @@
 			"Date": "Date",
 			"DateLabel": "Date",
 			"Find": "Chercher",
-			"Location": "Shop location",
+			"Location": "Emplacement du magasin",
 			"SelectLocation": "Choisir le lieu",
 			"Title": "Où et quand ?"
 		}
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "Lieu récent {recentLocationNumber}| Lieux récents {recentLocationNumber}",
 		"Result": "Résultat {resultNumber} | Résultats {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"SearchByName": "Recherchez votre magasin par nom et par ville",
+		"Title": "Trouvez l'emplacement de votre magasin",
+		"Warning": "Le moteur de recherche pour trouver un magasin n'est actuellement pas très précis.{newline}N'hésitez pas à ajouter le nom de la rue pour affiner les résultats.{newline}Exemples : Carrefour City 15e Paris ; Sainsbury's camden Londres"
 	},
 	"NotFound": {
 		"Subtitle": "La page demandée n'existe pas",
