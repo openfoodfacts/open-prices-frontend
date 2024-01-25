@@ -258,7 +258,7 @@
         class="float-right"
         type="submit"
         :loading="createPriceLoading"
-        :disabled="!proofLocationFormFilled"
+        :disabled="!proofLocationFormFilled || !productPriceUploadedList.length"
         @click="done"
       >{{ $t('AddPriceMultiple.Done') }}</v-btn>
     </v-col>
