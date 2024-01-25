@@ -69,7 +69,7 @@
 			"Date": "Tarih",
 			"DateLabel": "Tarih",
 			"Find": "Bul",
-			"Location": "Shop location",
+			"Location": "Mağaza konumu",
 			"SelectLocation": "Konumunuzu seçin",
 			"Title": "Nerede ve ne zaman?"
 		}
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Sonuç {resultNumber} | Sonuçlar {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"SearchByName": "Mağazanızı ada ve şehre göre arayın",
+		"Title": "Mağazanızın konumunu bulun",
+		"Warning": "Bir mağaza bulmak için kullanılan arama motoru şu anda çok hassas değildir.{newline}Sonuçları daraltmak için sokak adını eklemekten çekinmeyin.{newline}Örnekler: Carrefour City 15e Paris ; Sainsbury Camden Londra"
 	},
 	"NotFound": {
 		"Subtitle": "İstediğiniz sayfa mevcut değil gibi görünüyor...",

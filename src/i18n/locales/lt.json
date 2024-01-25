@@ -136,7 +136,7 @@
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Ieškoti savo parduotuvės pagal pavadinimą ir miestą",
 		"Title": "Rasti savo parduotuvės vietą",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"Warning": "Paieškos sistema, skirta rasti parduotuvę, šiuo metu nėra labai tiksli.{newline}Nedvejodami pridėkite gatvės pavadinimą, kad susiaurintumėte rezultatus.{newline}Pavyzdžiui: Carrefour City 15e Paris ; Sainsbury's Camden London"
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
