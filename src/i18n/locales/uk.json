@@ -69,7 +69,7 @@
 			"Date": "Date",
 			"DateLabel": "Date",
 			"Find": "Знайти",
-			"Location": "Shop location",
+			"Location": "Розташування магазину",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
 		}
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"SearchByName": "Шукайте свій магазин за назвою та містом",
+		"Title": "Знайдіть місце розташування свого магазину",
+		"Warning": "Пошукова система для пошуку магазину зараз не дуже точна.{newline}Не соромтеся додати назву вулиці, щоб звузити результати.{newline}Приклади: Carrefour City 15e Paris ; Сейнсбері Камден Лондон"
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
