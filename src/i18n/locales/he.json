@@ -69,7 +69,7 @@
 			"Date": "תאריך",
 			"DateLabel": "תאריך",
 			"Find": "חיפוש",
-			"Location": "מקום",
+			"Location": "Shop location",
 			"SelectLocation": "נא לבחור את המקום שלך",
 			"Title": "איפה ומתי?"
 		}
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "אין מקומות אחרונים | מקום אחרון {recentLocationNumber}| {recentLocationNumber} מקומות אחרונים",
 		"Result": "תוצאה אחת | {resultNumber} תוצאות",
-		"SearchByName": "חיפוש לפי שם ועיר",
-		"Title": "איתור המקום שלך",
-		"Warning": "מנוע החיפוש לא כל כך מדויק כרגע. הוספת שם הרחוב יצמצם קצת את התוצאות."
+		"SearchByName": "Search for your shop by name and city",
+		"Title": "Find your shop location",
+		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
 	"NotFound": {
 		"Subtitle": "העמוד שביקשת לא קיים כפי הנראה…",
