@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.31.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.30.4...v1.31.0) (2024-01-25)
+
+
+### Features
+
+* improve price discount (full_price not mandatory anymore) ([#218](https://github.com/openfoodfacts/open-prices-frontend/issues/218)) ([1c6d1d7](https://github.com/openfoodfacts/open-prices-frontend/commit/1c6d1d783343ad59e6b029873adc884e7ee6796b))
+
+
+### Bug Fixes
+
+* **location selector:** additional filtering on places returned ([7482f47](https://github.com/openfoodfacts/open-prices-frontend/commit/7482f475606b7e77c755984d1f2cfe9c25dd7ff5))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#216](https://github.com/openfoodfacts/open-prices-frontend/issues/216)) ([7e87e4b](https://github.com/openfoodfacts/open-prices-frontend/commit/7e87e4bae90ae6b3e8ed007b61ba8fe33eb65278))
+
 ## [1.30.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.30.3...v1.30.4) (2024-01-25)
 
 
