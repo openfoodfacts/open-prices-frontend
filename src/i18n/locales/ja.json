@@ -69,7 +69,7 @@
 			"Date": "Date",
 			"DateLabel": "Date",
 			"Find": "検索",
-			"Location": "Shop location",
+			"Location": "ショップ所在地",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
 		}
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"SearchByName": "名前と都市でショップを検索",
+		"Title": "ショップの場所を探す",
+		"Warning": "現在、お店を見つけるための検索エンジンの精度はあまり高くありません。{newline}結果を絞り込むために、迷わず通り名を追加してください。{newline}例: カルフール シティ 15e パリ ;セインズベリーズ カムデン ロンドン"
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
