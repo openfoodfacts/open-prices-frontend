@@ -30,6 +30,7 @@
 			"Upload": "Hochladen"
 		},
 		"ProofDetails": {
+			"ReceiptWarning": "Quittungen können personenbezogene Daten enthalten. Wir empfehlen, diese vor der Aufnahme zu verbergen (unkenntlich machen, falten …).",
 			"Title": "Details zum Nachweis"
 		},
 		"Title": "Mehrere Preise hinzufügen"
@@ -53,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
 			"OriginLabel": "Ursprung",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Produkt-Strichcode",
 			"ScanBarcode": "Strichcode einlesen",
 			"TypeBarcode": "Strichcode eingeben",
 			"SetProduct": "Produkt festlegen",
@@ -135,7 +136,7 @@
 		"Result": "Ergebnis {resultNumber} | Ergebnisse {resultNumber}",
 		"SearchByName": "Name und Stadt suchen",
 		"Title": "Finden Sie Ihren Standort",
-		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
+		"Warning": "Die Suchmaschine ist derzeit nicht sehr präzise. Zögern Sie nicht, den Straßennamen hinzuzufügen, um die Ergebnisse einzugrenzen."
 	},
 	"NotFound": {
 		"Subtitle": "Die von Ihnen angeforderte Seite scheint nicht zu existieren ...",

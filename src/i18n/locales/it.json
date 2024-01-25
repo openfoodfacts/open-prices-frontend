@@ -30,6 +30,7 @@
 			"Upload": "Upload"
 		},
 		"ProofDetails": {
+			"ReceiptWarning": "Le ricevute potrebbero contenere delle informazioni personali, consigliamo di nasconderlee (redarre, piegaare...), prima di scattare la foto.",
 			"Title": "Proof details"
 		},
 		"Title": "Add multiple prices"

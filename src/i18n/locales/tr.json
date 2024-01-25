@@ -30,6 +30,7 @@
 			"Upload": "Yükle"
 		},
 		"ProofDetails": {
+			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
 			"Title": "Kanıt ayrıntıları"
 		},
 		"Title": "Birden fazla fiyat ekle"

@@ -30,6 +30,7 @@
 			"Upload": "Uploaden"
 		},
 		"ProofDetails": {
+			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
 			"Title": "Bewijs details"
 		},
 		"Title": "Voeg meerdere prijzen toe"
@@ -53,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categorie",
 			"OriginLabel": "Oorsprong",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Streepjescode van product",
 			"ScanBarcode": "Scan een streepjescode",
 			"TypeBarcode": "Voer een streepjescode in",
 			"SetProduct": "Set a product",
@@ -135,7 +136,7 @@
 		"Result": "Resultaat {resultNumber} | Resultaten {resultNumber}",
 		"SearchByName": "Zoek op naam en stad",
 		"Title": "Vind je locatie",
-		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
+		"Warning": "De zoekmachine is momenteel niet erg nauwkeurig. Aarzel niet om de straatnaam toe te voegen om de resultaten te verfijnen."
 	},
 	"NotFound": {
 		"Subtitle": "De door u opgevraagde pagina lijkt niet te bestaan...",

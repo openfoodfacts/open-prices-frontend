@@ -30,6 +30,7 @@
 			"Upload": "Upload"
 		},
 		"ProofDetails": {
+			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
 			"Title": "Proof details"
 		},
 		"Title": "Add multiple prices"
@@ -53,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "வகை",
 			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "தயாரிப்பு பார்கோடு",
 			"ScanBarcode": "Scan a barcode",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
@@ -135,7 +136,7 @@
 		"Result": "Result {resultNumber} | Results {resultNumber}",
 		"SearchByName": "Search by name and city",
 		"Title": "Find your location",
-		"Warning": "The search engine is currently not very precise. Don't hesitate to add the street name to narrow down the results."
+		"Warning": "தேடுபொறி தற்போது மிகவும் துல்லியமாக இல்லை. முடிவுகளைக் குறைக்க, தெருவின் பெயரைச் சேர்க்க தயங்க வேண்டாம்."
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
