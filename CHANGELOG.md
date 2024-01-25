@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.30.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.30.3...v1.30.4) (2024-01-25)
+
+
+### Bug Fixes
+
+* **location selector:** hide administrative & city results. ([87a631b](https://github.com/openfoodfacts/open-prices-frontend/commit/87a631b1dc0adbd1c63f8c9d170e0c682f727d76))
+* **location selector:** improve warning message. Add 'shop' ([0c78993](https://github.com/openfoodfacts/open-prices-frontend/commit/0c789933c9c4922f160f4fd383726f920fcef7ef))
+* **price card:** add extra country flags ([8e962b8](https://github.com/openfoodfacts/open-prices-frontend/commit/8e962b8f72e17c099f45a6e826ecf7d91f85f569))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#214](https://github.com/openfoodfacts/open-prices-frontend/issues/214)) ([59e0fcd](https://github.com/openfoodfacts/open-prices-frontend/commit/59e0fcd833d5c925d95a5c981157b6a0c207e8d8))
+
 ## [1.30.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.30.2...v1.30.3) (2024-01-24)
 
 
