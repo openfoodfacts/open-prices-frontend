@@ -2,10 +2,10 @@
   <p>
     <span class="mr-1">{{ getPriceValueDisplay(priceValue) }}</span>
     <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerKilo() }})</span>
-    <span v-if="priceWithoutDiscountValue">
+    <span v-if="price.price_is_discounted">
       <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">
         {{ $t('PriceCard.Discount') }}
-        <v-tooltip activator="parent" location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(priceWithoutDiscountValue) }}</v-tooltip>
+        <v-tooltip v-if="priceWithoutDiscountValue" activator="parent" location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(priceWithoutDiscountValue) }}</v-tooltip>
       </v-chip>
     </span>
     <i18n-t v-if="!hidePriceDate" keypath="PriceCard.PriceDate" tag="span">
