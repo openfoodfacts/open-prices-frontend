@@ -16,5 +16,12 @@ export default {
     { key: '-unique_scans_n', value: 'Number of scans', icon: 'mdi-barcode-scan' },
     { key: '-price_count', value: 'Number of prices', icon: 'mdi-tag-multiple-outline' },
   ],
-  NOMINATIM_RESULT_TYPE_EXCLUDE_LIST: ['administrative', 'village', 'town', 'city', 'municipality', 'state_district', 'county', 'state', 'fuel', 'gas', 'casino', 'parking', 'parking_space', 'atm', 'residential', 'pedestrian', 'car_sharing', 'primary', 'secondary', 'tertiary'],
+  // https://wiki.openstreetmap.org/wiki/Key:place
+  // 'farm'
+  NOMINATIM_RESULT_TYPE_EXCLUDE_LIST: [
+    'country', 'state', 'region', 'province', 'district', 'county', 'municipality', 'city', 'borough', 'suburb', 'quarter', 'neighbourhood', 'block', 'city_block', 'plot', 'town', 'village', 'hamlet', 'isolated_dwelling', 'allotments',
+    'continent', 'archipelago', 'island', 'islet', 'square', 'locality', 'polder', 'sea', 'ocean',
+    'administrative', 'state_district',
+    'fuel', 'gas', 'casino', 'parking', 'parking_space', 'atm', 'residential', 'pedestrian', 'car_sharing', 'primary', 'secondary', 'tertiary'
+  ],
 }
