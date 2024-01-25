@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.32.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.31.0...v1.32.0) (2024-01-25)
+
+
+### Features
+
+* add Matomo analytics. ref [#100](https://github.com/openfoodfacts/open-prices-frontend/issues/100) ([e4c7fd2](https://github.com/openfoodfacts/open-prices-frontend/commit/e4c7fd279be27db744d48afbd64b42df2f4449b6))
+
+
+### Bug Fixes
+
+* **home:** make 'Add a price' drawer menu blue. Fix home button height alignement ([e558cb5](https://github.com/openfoodfacts/open-prices-frontend/commit/e558cb5d3159f44a275fe22712882eb630d3e1c9))
+* **multiple price form:** disable Done button until at least 1 product is uploaded. closes [#222](https://github.com/openfoodfacts/open-prices-frontend/issues/222) ([7220da0](https://github.com/openfoodfacts/open-prices-frontend/commit/7220da0865ab7441fb3a83f242ea35a8cb033bfc))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#219](https://github.com/openfoodfacts/open-prices-frontend/issues/219)) ([94da0a4](https://github.com/openfoodfacts/open-prices-frontend/commit/94da0a4bc92c782e198c2f8c7be687be6332ea09))
+* **l10n:** New Crowdin translations to review and merge ([#221](https://github.com/openfoodfacts/open-prices-frontend/issues/221)) ([6daa8c2](https://github.com/openfoodfacts/open-prices-frontend/commit/6daa8c2d832712fc6f32668c4e9c05a58b6f6ff5))
+
 ## [1.31.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.30.4...v1.31.0) (2024-01-25)
 
 
