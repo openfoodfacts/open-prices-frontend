@@ -30,7 +30,7 @@
 			"Upload": "העלאה"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "קבלות יכולות לכלול מידע אישי, אנו ממליצים להסתיר אותו (להסתיר, לקפל…) טרם צילום התמונה.",
 			"Title": "פרטי הוכחה"
 		},
 		"Title": "הוספת מגוון מחירים"
@@ -69,7 +69,7 @@
 			"Date": "תאריך",
 			"DateLabel": "תאריך",
 			"Find": "חיפוש",
-			"Location": "Shop location",
+			"Location": "מקום החנות",
 			"SelectLocation": "נא לבחור את המקום שלך",
 			"Title": "איפה ומתי?"
 		}
@@ -134,9 +134,9 @@
 		},
 		"RecentLocations": "אין מקומות אחרונים | מקום אחרון {recentLocationNumber}| {recentLocationNumber} מקומות אחרונים",
 		"Result": "תוצאה אחת | {resultNumber} תוצאות",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"SearchByName": "חיפוש החנות שלך לפי שם ועיר",
+		"Title": "איתור מקום החנות שלך",
+		"Warning": "מנוע החיפוש לאיתור חנויות לא מדויק במיוחד כרגע.{newline}כדאי להוסיף את שם הרחוב כדי לצמצם את התוצאות.{newline}למשל: ויקטורי אשקלון; שיווק השקמה זכרון יעקב"
 	},
 	"NotFound": {
 		"Subtitle": "העמוד שביקשת לא קיים כפי הנראה…",
