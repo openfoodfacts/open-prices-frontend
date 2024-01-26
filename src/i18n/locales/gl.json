@@ -245,6 +245,7 @@
 		"LanguageLabel": "Linguas",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Gardar",
-		"Title": "Axustes"
+		"Title": "Axustes",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
