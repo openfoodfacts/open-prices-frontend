@@ -156,7 +156,7 @@
 		"Title": "Derniers prix ajoutés"
 	},
 	"ProductCard": {
-		"LatestPrice": "Dernier prix ajouté",
+		"LatestPrice": "Dernier prix",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Produit inconnu"
 	},
@@ -246,6 +246,6 @@
 		"LocaleNotSupported": "Cette langue n'est pas encore supportée, la langue sera mise par défaut en anglais",
 		"Save": "Enregistrer",
 		"Title": "Paramètres",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "Aidez-nous à traduire plus de langues"
 	}
 }
