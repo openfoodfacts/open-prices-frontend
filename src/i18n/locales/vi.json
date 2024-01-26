@@ -199,7 +199,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"ProductBarcode": "Product barcode",
 		"Title": "Tìm kiếm"
 	},
 	"ShareButton": {
