@@ -23,7 +23,7 @@
 		"Done": "Hecho",
 		"ProductPriceDetails": {
 			"Add": "Añadir un nuevo precio",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} precio ya subido | {priceAlreadyUploadedNumber} precios ya subidos",
 			"Create": "Crear",
 			"NewPrice": "Nuevo precio",
 			"PriceUploaded": "¡Precio creado!",
