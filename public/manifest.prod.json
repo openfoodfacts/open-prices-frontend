@@ -17,7 +17,7 @@
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "scope": "/",
-    "start_url": "https://prices.openfoodfacts.com/app",
+    "start_url": "https://prices.openfoodfacts.org/app",
     "display": "standalone",
     "orientation": "portrait"
 }
