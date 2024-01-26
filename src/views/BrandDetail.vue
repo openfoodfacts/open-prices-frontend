@@ -25,9 +25,8 @@
 
   <br />
 
-  <h2 class="mb-1">
-    {{ $t('BrandDetail.TopProducts') }} <small>{{ brandProductTotal }}</small>
-
+  <h2 class="text-h6 mb-1">
+    {{ $t('BrandDetail.TopProducts') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 

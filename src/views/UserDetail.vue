@@ -23,7 +23,7 @@
 
   <br />
 
-  <h2 class="mb-1">
+  <h2 class="text-h6 mb-1">
     {{ $t('UserDetail.LatestPrices') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>

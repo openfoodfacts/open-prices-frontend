@@ -1,5 +1,5 @@
 <template>
-  <h1 class="mb-1">
+  <h1 class="text-h5 mb-1">
     {{ $t('Search.Title') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h1>
@@ -9,7 +9,7 @@
       <v-form @submit.prevent="search">
         <v-text-field
           v-model="productSearchForm.q"
-          :label="$t('Search.SearchByProductBarcode')"
+          :label="$t('Search.ProductBarcode')"
           type="number"
           :prepend-inner-icon="formFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
           append-inner-icon="mdi-magnify"

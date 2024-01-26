@@ -33,8 +33,8 @@
 
   <br />
 
-  <h2 class="mb-1">
-    {{ $t('ProductDetail.LatestPrices') }} <small>{{ productPriceTotal }}</small>
+  <h2 class="text-h6 mb-1">
+    {{ $t('ProductDetail.LatestPrices') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 

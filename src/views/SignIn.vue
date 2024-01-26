@@ -1,5 +1,7 @@
 <template>
-  <h1 class="mb-1">{{ $t('SignIn.Title') }}</h1>
+  <h1 class="text-h5 mb-1">
+    {{ $t('SignIn.Title') }}
+  </h1>
 
   <v-alert
     class="mb-2"
