@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.32.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.32.1...v1.32.2) (2024-01-26)
+
+
+### Bug Fixes
+
+* Matomo url. ref [#100](https://github.com/openfoodfacts/open-prices-frontend/issues/100) ([521e3e0](https://github.com/openfoodfacts/open-prices-frontend/commit/521e3e03fea3080847c3f5c65cdb882f7b5a2e0f))
+* **multiple create form:** rename proof to receipt ([12fb8b0](https://github.com/openfoodfacts/open-prices-frontend/commit/12fb8b0853fd0a429cf3683703ccd5b0520ef746))
+* **PWA:** fix manifest prod config. ref [#193](https://github.com/openfoodfacts/open-prices-frontend/issues/193) ([192d286](https://github.com/openfoodfacts/open-prices-frontend/commit/192d286d231c859bced4def4f2137a15ebc9cd39))
+
 ## [1.32.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.32.0...v1.32.1) (2024-01-26)
 
 
