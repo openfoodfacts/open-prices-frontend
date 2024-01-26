@@ -245,6 +245,7 @@
 		"LanguageLabel": "Languages",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "ಉಳಿಸು",
-		"Title": "ಸೆಟ್ಟಿಂಗ್"
+		"Title": "ಸೆಟ್ಟಿಂಗ್",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
