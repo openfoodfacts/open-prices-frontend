@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "Про додаток",
-		"TagLine": {
-			"Text": "Open Prices is an {0} project.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "Stats"
+		"Stats": "Stats",
+		"TagLine": "{name} є проектом {url}."
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Налаштування",
-		"Sign-out": "Вийти",
-		"Title": "Open Prices"
+		"Sign-out": "Вийти"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "Жодної ціни сьогодні не додано | {todayPriceNumber} нові ціни сьогодні | {todayPriceNumber} нові ціни, додані сьогодні!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to Open Prices!"
+			"Title": "Ласкаво просимо до {name}!"
 		}
 	},
 	"LocationDetail": {
@@ -246,6 +242,6 @@
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Зберегти",
 		"Title": "Налаштування",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "Допоможіть нам перекласти більше мов"
 	}
 }
