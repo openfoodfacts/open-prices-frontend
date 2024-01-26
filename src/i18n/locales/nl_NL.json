@@ -199,7 +199,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"ProductBarcode": "Streepjescode van product",
 		"Title": "Zoeken"
 	},
 	"ShareButton": {
