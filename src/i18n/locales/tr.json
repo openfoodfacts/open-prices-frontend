@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "Hakkında",
-		"TagLine": {
-			"Text": "Open Prices is an {0} project.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "İstatistikler"
+		"Stats": "İstatistikler",
+		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
 		"Dashboard": "Gösterge paneli",
 		"Settings": "Ayarlar",
-		"Sign-out": "Çıkış yap",
-		"Title": "Open Prices"
+		"Sign-out": "Çıkış yap"
 	},
 	"Home": {
 		"AddPrice": "Fiyat ekleyin",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to Open Prices!"
+			"Title": "Welcome to {name}!"
 		}
 	},
 	"LocationDetail": {

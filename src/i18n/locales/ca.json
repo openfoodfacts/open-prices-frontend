@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "Quant a",
-		"TagLine": {
-			"Text": "Open Prices és un projecte de {0}.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "Estadístiques"
+		"Stats": "Estadístiques",
+		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
 		"Dashboard": "Tauler",
 		"Settings": "Preferències",
-		"Sign-out": "Tanca la sessió",
-		"Title": "Open Prices"
+		"Sign-out": "Tanca la sessió"
 	},
 	"Home": {
 		"AddPrice": "Afegir un preu",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "Una base de dades oberta amb els preus dels aliments 🏷🍊💲",
-			"Title": "Benvingut a Open Prices!"
+			"Title": "Welcome to {name}!"
 		}
 	},
 	"LocationDetail": {

@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "crwdns246608:0crwdne246608:0",
-		"TagLine": {
-			"Text": "crwdns246610:0{0}crwdne246610:0",
-			"Url": "crwdns246612:0crwdne246612:0"
-		},
-		"Stats": "crwdns246614:0crwdne246614:0"
+		"Stats": "crwdns246614:0crwdne246614:0",
+		"TagLine": "crwdns246934:0{name}crwdnd246934:0{url}crwdne246934:0"
 	},
 	"Header": {
 		"Dashboard": "crwdns246616:0crwdne246616:0",
 		"Settings": "crwdns246618:0crwdne246618:0",
-		"Sign-out": "crwdns246620:0crwdne246620:0",
-		"Title": "crwdns246622:0crwdne246622:0"
+		"Sign-out": "crwdns246620:0crwdne246620:0"
 	},
 	"Home": {
 		"AddPrice": "crwdns246624:0crwdne246624:0",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "crwdns246906:0{todayPriceNumber}crwdnd246906:0{todayPriceNumber}crwdne246906:0",
 		"Welcome": {
 			"Subtitle": "crwdns246628:0crwdne246628:0",
-			"Title": "crwdns246630:0crwdne246630:0"
+			"Title": "crwdns246936:0{name}crwdne246936:0"
 		}
 	},
 	"LocationDetail": {

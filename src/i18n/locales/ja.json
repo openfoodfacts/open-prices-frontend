@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "アプリについて",
-		"TagLine": {
-			"Text": "Open Prices is an {0} project.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "Stats"
+		"Stats": "Stats",
+		"TagLine": "{name} {url} のプロジェクトです。"
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "設定",
-		"Sign-out": "サインアウト",
-		"Title": "Open Prices"
+		"Sign-out": "サインアウト"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "今日は価格が追加されていません |本日追加された新しい価格は {todayPriceNumber} |本日、新たに {todayPriceNumber} 件の価格が追加されました！",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to Open Prices!"
+			"Title": "{name} へようこそ"
 		}
 	},
 	"LocationDetail": {
@@ -246,6 +242,6 @@
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "保存",
 		"Title": "設定",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "より多くの言語の翻訳にご協力ください"
 	}
 }

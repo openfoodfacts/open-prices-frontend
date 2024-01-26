@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "À propos",
-		"TagLine": {
-			"Text": "Open Prices est un projet de {0}.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "Statistiques"
+		"Stats": "Statistiques",
+		"TagLine": "{name} est un projet {url}."
 	},
 	"Header": {
 		"Dashboard": "Tableau de bord",
 		"Settings": "Paramètres",
-		"Sign-out": "Se déconnecter",
-		"Title": "Open Prices"
+		"Sign-out": "Se déconnecter"
 	},
 	"Home": {
 		"AddPrice": "Ajouter un prix",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "Aucun prix ajouté aujourd'hui | {todayPriceNumber} nouveau prix ajouté aujourd'hui | {todayPriceNumber} nouveaux prix ajoutés aujourd'hui !",
 		"Welcome": {
 			"Subtitle": "Une base de données open source collaborative de prix de produits alimentaires 🏷🍊💲",
-			"Title": "Bienvenue à Open Prices !"
+			"Title": "Bienvenue sur {name} !"
 		}
 	},
 	"LocationDetail": {

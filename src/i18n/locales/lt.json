@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "About",
-		"TagLine": {
-			"Text": "„Open Prices“ (atviros kainos) – tai {0} projektas.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "Statistika"
+		"Stats": "Statistika",
+		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
 		"Dashboard": "Prietaisų skydelis",
 		"Settings": "Nustatymai",
-		"Sign-out": "Atsijungti",
-		"Title": "Open Prices"
+		"Sign-out": "Atsijungti"
 	},
 	"Home": {
 		"AddPrice": "Pridėti kainą",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "Atviroji sutelktinių išteklių gautų maisto kainų duomenų bazė 🏷🍊💲",
-			"Title": "Sveiki prisijungę prie „Open Prices“!"
+			"Title": "Welcome to {name}!"
 		}
 	},
 	"LocationDetail": {

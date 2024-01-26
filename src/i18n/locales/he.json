@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "על אודות",
-		"TagLine": {
-			"Text": "Open Prices הוא מיזם מבית {0}.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "סטטיסטיקה"
+		"Stats": "סטטיסטיקה",
+		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
 		"Dashboard": "לוח בקרה",
 		"Settings": "הגדרות",
-		"Sign-out": "יציאה",
-		"Title": "Open Prices"
+		"Sign-out": "יציאה"
 	},
 	"Home": {
 		"AddPrice": "הוספת מחיר",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "לא נוספו מחירים היום | מחיר חדש נוסף היום | {todayPriceNumber} מחירים חדשים נוספו היום!",
 		"Welcome": {
 			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
-			"Title": "ברוך בואך ל־Open Prices!"
+			"Title": "Welcome to {name}!"
 		}
 	},
 	"LocationDetail": {

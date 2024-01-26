@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "Over",
-		"TagLine": {
-			"Text": "Open Prijzen is een {0} -project.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "Statistieken"
+		"Stats": "Statistieken",
+		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Instellingen",
-		"Sign-out": "Uitloggen",
-		"Title": "Open prijzen"
+		"Sign-out": "Uitloggen"
 	},
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "Geen prijzen toegevoegd vandaag | Vandaag {todayPriceNumber} nieuwe prijzen toegevoegd | Vandaag {todayPriceNumber} nieuwe prijzen toegevoegd!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welkom bij Open Prijzen!"
+			"Title": "Welcome to {name}!"
 		}
 	},
 	"LocationDetail": {
