@@ -1,5 +1,7 @@
 <template>
-  <h1 class="mb-1">{{ $t('UserDashboard.Title') }}</h1>
+  <h1 class="text-h5 mb-1">
+    {{ $t('UserDashboard.Title') }}
+  </h1>
 
   <v-row>
     <v-col cols="12" sm="6">
@@ -15,7 +17,7 @@
 
   <br />
 
-  <h2 class="mb-1">
+  <h2 class="text-h6 mb-1">
     {{ $t('UserDashboard.LatestPrices') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>

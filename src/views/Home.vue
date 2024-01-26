@@ -1,5 +1,5 @@
 <template>
-  <h1 class="mb-1">
+  <h1 class="text-h5 mb-1">
     <i18n-t keypath="Home.Welcome.Title" tag="span">
       <template #name>{{ APP_NAME }}</template>
     </i18n-t>

@@ -1,5 +1,7 @@
 <template>
-  <h1 class="mb-1">{{ $t('AddPriceMultiple.Title') }}</h1>
+  <h1 class="text-h5 mb-1">
+    {{ $t('AddPriceMultiple.Title') }}
+  </h1>
 
   <v-row>
     <!-- Step 1: proof -->

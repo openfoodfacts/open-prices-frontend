@@ -29,8 +29,8 @@
 
   <br />
 
-  <h2 class="mb-1">
-    {{ $t('LocationDetail.LatestPrices') }} <small>{{ locationPriceTotal }}</small>
+  <h2 class="text-h6 mb-1">
+    {{ $t('LocationDetail.LatestPrices') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
