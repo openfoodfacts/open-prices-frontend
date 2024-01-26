@@ -1087,6 +1087,11 @@ vue-i18n@9:
     "@intlify/shared" "9.9.0"
     "@vue/devtools-api" "^6.5.0"
 
+vue-matomo@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/vue-matomo/-/vue-matomo-4.2.0.tgz#d65e369e4ead1d95ef790bef3627512cac3d25e9"
+  integrity sha512-m5hCw7LH3wPDcERaF4sp/ojR9sEx7Rl8TpOyH/4jjQxMF2DuY/q5pO+i9o5Dx+BXLSa9+IQ0qhAbWYRyESQXmA==
+
 vue-router@^4.2.5:
   version "4.2.5"
   resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.2.5.tgz"
