@@ -95,7 +95,7 @@
 	"Footer": {
 		"About": "Over",
 		"Stats": "Statistieken",
-		"TagLine": "{name} is an {url} project."
+		"TagLine": "{name} is een {url} project."
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
@@ -110,7 +110,7 @@
 		"TodayPriceStat": "Geen prijzen toegevoegd vandaag | Vandaag {todayPriceNumber} nieuwe prijzen toegevoegd | Vandaag {todayPriceNumber} nieuwe prijzen toegevoegd!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "Welkom bij {name}!"
 		}
 	},
 	"LocationDetail": {
@@ -242,6 +242,6 @@
 		"LocaleNotSupported": "Taal wordt nog niet ondersteund. De taal wordt standaard ingesteld op Engels",
 		"Save": "Opslaan",
 		"Title": "Instellingen",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "Help ons in meer talen te vertalen"
 	}
 }
