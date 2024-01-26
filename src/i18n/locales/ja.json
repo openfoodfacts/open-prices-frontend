@@ -199,7 +199,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "商品名またはバーコードから探す",
+		"ProductBarcode": "製品バーコード",
 		"Title": "検索"
 	},
 	"ShareButton": {
