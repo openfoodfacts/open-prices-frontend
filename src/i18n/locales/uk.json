@@ -245,6 +245,7 @@
 		"LanguageLabel": "Мови",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Зберегти",
-		"Title": "Налаштування"
+		"Title": "Налаштування",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
