@@ -95,7 +95,7 @@
 	"Footer": {
 		"About": "Hakkında",
 		"Stats": "İstatistikler",
-		"TagLine": "{name} is an {url} project."
+		"TagLine": "{name}, {url} projedir."
 	},
 	"Header": {
 		"Dashboard": "Gösterge paneli",
@@ -110,7 +110,7 @@
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "{name}'a Hoş Geldiniz!"
 		}
 	},
 	"LocationDetail": {
@@ -242,6 +242,6 @@
 		"LocaleNotSupported": "Dil henüz desteklenmiyor; dil varsayılan olarak İngilizce olarak ayarlanacak",
 		"Save": "Kaydet",
 		"Title": "Ayarlar",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "Daha fazla dile çevirmemize yardımcı olun"
 	}
 }
