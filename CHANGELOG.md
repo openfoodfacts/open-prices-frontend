@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.32.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.32.2...v1.32.3) (2024-01-26)
+
+
+### Bug Fixes
+
+* **l10n:** router sign in translation ([f49c997](https://github.com/openfoodfacts/open-prices-frontend/commit/f49c997349646fc08cb83394d996094714fdceee))
+* **stats:** fix home prices created today ([f48c4ce](https://github.com/openfoodfacts/open-prices-frontend/commit/f48c4cecb9fb8bb4b675685851392f7aab9ec15f))
+
 ## [1.32.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.32.1...v1.32.2) (2024-01-26)
 
 
