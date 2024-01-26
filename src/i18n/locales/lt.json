@@ -76,7 +76,7 @@
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "įgalino {url}"
 		},
 		"Scan": "Nuskaityti brūkšninį kodą"
 	},
@@ -95,30 +95,30 @@
 	"Footer": {
 		"About": "About",
 		"Open_Prices_Project": {
-			"Text": "Open Prices is an {0} project.",
+			"Text": "„Open Prices“ (atviros kainos) – tai {0} projektas.",
 			"Url": "Open Food Facts"
 		},
-		"Stats": "Stats"
+		"Stats": "Statistika"
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Prietaisų skydelis",
 		"Settings": "Nustatymai",
 		"Sign-out": "Atsijungti",
 		"Title": "Open Prices"
 	},
 	"Home": {
 		"AddPrice": "Pridėti kainą",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Naujausios kainos",
 		"SearchProduct": "Search for a product",
-		"SettingsUpdated": "Settings updated!",
+		"SettingsUpdated": "Nuostatos atnaujintos!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to Open Prices!"
+			"Subtitle": "Atviroji sutelktinių išteklių gautų maisto kainų duomenų bazė 🏷🍊💲",
+			"Title": "Sveiki prisijungę prie „Open Prices“!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Naujausios kainos",
 		"LoadMore": "Įkelti daugiau",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
@@ -130,7 +130,7 @@
 		"Clear": "Clear",
 		"NoResult": "No results found",
 		"OSM": {
-			"text": "powered by {url}"
+			"text": "įgalino {url}"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
@@ -153,7 +153,7 @@
 	},
 	"PriceList": {
 		"LoadMore": "Įkelti daugiau",
-		"Title": "Latest prices"
+		"Title": "Naujausios kainos"
 	},
 	"ProductCard": {
 		"LatestPrice": "Latest price",
@@ -163,7 +163,7 @@
 	"ProductDetail": {
 		"AddPrice": "Pridėti kainą",
 		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Naujausios kainos",
 		"LoadMore": "Įkelti daugiau",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
@@ -184,7 +184,7 @@
 			"Title": "Pagrindinis"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Naujausios kainos"
 		},
 		"Search": {
 			"Title": "Paieška"
@@ -221,15 +221,15 @@
 	"Stats": {
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Title": "Statistika"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Naujausios kainos",
 		"LoadMore": "Įkelti daugiau",
-		"Title": "Dashboard"
+		"Title": "Prietaisų skydelis"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Naujausios kainos",
 		"LoadMore": "Įkelti daugiau"
 	},
 	"UserList": {
