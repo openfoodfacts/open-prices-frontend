@@ -245,6 +245,7 @@
 		"LanguageLabel": "Diller",
 		"LocaleNotSupported": "Dil henüz desteklenmiyor; dil varsayılan olarak İngilizce olarak ayarlanacak",
 		"Save": "Kaydet",
-		"Title": "Ayarlar"
+		"Title": "Ayarlar",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
