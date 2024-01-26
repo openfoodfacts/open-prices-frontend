@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "Über",
-		"TagLine": {
-			"Text": "Open Prices ist ein {0}-Projekt.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "Statistiken"
+		"Stats": "Statistiken",
+		"TagLine": "{name} ist ein {url}-Projekt."
 	},
 	"Header": {
 		"Dashboard": "Übersicht",
 		"Settings": "Einstellungen",
-		"Sign-out": "Abmelden",
-		"Title": "Open Prices"
+		"Sign-out": "Abmelden"
 	},
 	"Home": {
 		"AddPrice": "Preis hinzufügen",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "Heute keine Preise hinzugefügt | Heute {todayPriceNumber} neue Preise hinzugefügt | Heute {todayPriceNumber} neue Preise hinzugefügt!",
 		"Welcome": {
 			"Subtitle": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise 🏷🍊💲",
-			"Title": "Willkommen bei Open Prices!"
+			"Title": "Willkommen bei {name}!"
 		}
 	},
 	"LocationDetail": {
@@ -246,6 +242,6 @@
 		"LocaleNotSupported": "Diese Sprache wird noch nicht unterstützt. Die Sprache wird auf Englisch festgelegt.",
 		"Save": "Speichern",
 		"Title": "Einstellungen",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "Helfen Sie uns, weitere Sprachen zu übersetzen"
 	}
 }
