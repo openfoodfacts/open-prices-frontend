@@ -245,6 +245,7 @@
 		"LanguageLabel": "Sprachen",
 		"LocaleNotSupported": "Diese Sprache wird noch nicht unterstützt. Die Sprache wird auf Englisch festgelegt.",
 		"Save": "Speichern",
-		"Title": "Einstellungen"
+		"Title": "Einstellungen",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
