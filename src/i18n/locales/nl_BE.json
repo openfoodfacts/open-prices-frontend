@@ -245,6 +245,7 @@
 		"LanguageLabel": "Talen",
 		"LocaleNotSupported": "Taal wordt nog niet ondersteund. De taal wordt standaard ingesteld op Engels",
 		"Save": "Opslaan",
-		"Title": "Instellingen"
+		"Title": "Instellingen",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
