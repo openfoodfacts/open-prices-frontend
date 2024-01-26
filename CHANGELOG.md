@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.33.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.32.3...v1.33.0) (2024-01-26)
+
+
+### Features
+
+* **l10n:** create constants for app & OFF names ([#232](https://github.com/openfoodfacts/open-prices-frontend/issues/232)) ([ea71096](https://github.com/openfoodfacts/open-prices-frontend/commit/ea7109696a9658c213a419b0392c90125c132192))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#231](https://github.com/openfoodfacts/open-prices-frontend/issues/231)) ([2647bc1](https://github.com/openfoodfacts/open-prices-frontend/commit/2647bc1037e5cccd9bef023abd7c774fecff428c))
+* **l10n:** New Crowdin translations to review and merge ([#235](https://github.com/openfoodfacts/open-prices-frontend/issues/235)) ([f227a2e](https://github.com/openfoodfacts/open-prices-frontend/commit/f227a2e8945589cf8d5eb8f4e0fdcb3b45400163))
+
 ## [1.32.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.32.2...v1.32.3) (2024-01-26)
 
 
