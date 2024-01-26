@@ -245,6 +245,7 @@
 		"LanguageLabel": "Ngôn ngữ",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Lưu",
-		"Title": "Cài đặt"
+		"Title": "Cài đặt",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
