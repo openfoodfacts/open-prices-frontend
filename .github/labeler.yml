@@ -1,0 +1,39 @@
+# For reference, please look at https://github.com/actions/labeler
+
+GitHub Actions:
+- .github/**/*
+
+Price addition:
+- 'src/views/AddPriceHome.vue'
+
+Multiple price addition:
+- 'src/views/AddPriceMultiple.vue'
+
+Brands:
+- 'src/views/BrandDetail.vue'
+
+📍 Locations:
+- 'src/views/LocationDetail.vue'
+- 'src/views/LocationList.vue'
+
+🥫 Product page:
+- 'src/views/ProductDetail.vue'
+
+🔍 Search:
+- 'src/views/Search.vue'
+- 'src/views/SignIn.vue'
+
+Stats:
+- 'src/views/Stats.vue'
+
+User:
+- 'src/views/User.vue'
+- 'src/views/UserList.vue'
+- 'src/views/UserDetail.vue'
+
+User dashboard:
+- 'src/views/UserDashboard.vue'
+
+⚙️ Settings:
+- 'src/views/UserSettings.vue'
+
