@@ -94,17 +94,13 @@
 	},
 	"Footer": {
 		"About": "O aplikaci",
-		"TagLine": {
-			"Text": "Open Prices jsou projektem {0}.",
-			"Url": "Open Food Facts"
-		},
-		"Stats": "Statistiky"
+		"Stats": "Statistiky",
+		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
 		"Dashboard": "Nástěnka",
 		"Settings": "Nastavení",
-		"Sign-out": "Odhlásit",
-		"Title": "Open Prices"
+		"Sign-out": "Odhlásit"
 	},
 	"Home": {
 		"AddPrice": "Přidat cenu",
@@ -114,7 +110,7 @@
 		"TodayPriceStat": "Dnes nebyly přidány žádné ceny | Dnes přidány {todayPriceNumber} nové ceny | Dnes přidáno {todayPriceNumber} nových cen!",
 		"Welcome": {
 			"Subtitle": "Otevřená crowdsourcovaná databáze cen potravin 🏷🍊💲",
-			"Title": "Vítejte v Open Prices!"
+			"Title": "Welcome to {name}!"
 		}
 	},
 	"LocationDetail": {
