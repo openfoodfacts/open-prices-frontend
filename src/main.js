@@ -18,7 +18,7 @@ app.use(router)
 app.use(vuetify)
 app.use(i18n)
 app.use(VueMatomo, {
-  host: 'https://analytics.openfoodfacts.org/',
+  host: 'https://analytics.openfoodfacts.org',
   siteId: 13,
 })
 
