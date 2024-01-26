@@ -245,6 +245,7 @@
 		"LanguageLabel": "Kielet",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Tallenna",
-		"Title": "Asetukset"
+		"Title": "Asetukset",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
