@@ -245,6 +245,7 @@
 		"LanguageLabel": "ภาษา",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "บันทึก",
-		"Title": "ตั้งค่า"
+		"Title": "ตั้งค่า",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
