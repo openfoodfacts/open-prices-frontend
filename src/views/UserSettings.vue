@@ -20,6 +20,10 @@
 
             <br />
             <p>
+              <i18n-t v-if="this.languageTranslationCompletion < 80" keypath="UserSettings.TranslationCompletion" tag="span">
+                <template #completion>{{ this.languageTranslationCompletion }}</template>
+              </i18n-t>
+              <span v-if="this.languageTranslationCompletion < 80">&nbsp;</span>
               <a href="https://translate.openfoodfacts.org" target="_blank">
                 {{ $t('UserSettings.TranslationHelp') }}
                 <v-icon size="small" icon="mdi-open-in-new"></v-icon>
@@ -52,11 +56,6 @@
       </v-col>
     </v-row>
   </v-form>
-  <v-snackbar
-    v-model="localeNotFullyTranslated"
-    color="error"
-    :timeout="5000"
-  >Translation for this language is only completed at {{ this.languageTranslationCompletion }} %, the rest is by default in English</v-snackbar>
 </template>
 
 <script>
@@ -80,17 +79,11 @@ export default {
     }
   },
   watch:{
-    'userSettingsForm.selectedLanguage': function () {
+    'userSettingsForm.selectedLanguage': async function () {
       console.log("selected language: ", this.userSettingsForm.selectedLanguage)
       if (this.userSettingsForm.selectedLanguage !== null) {
-        this.languageTranslationCompletion = localeManager.calculateTranslationCompletion(this.userSettingsForm.selectedLanguage.code)
+        this.languageTranslationCompletion = await localeManager.calculateTranslationCompletion(this.userSettingsForm.selectedLanguage.code)
         console.log("completion: ", this.languageTranslationCompletion)
-        if (!this.languageTranslationCompletion) {
-          this.localeNotSupported = true;
-          setTimeout(() => {
-            this.localeNotSupported = false;
-          }, 5000);
-        }
       }
     },
 
@@ -114,7 +107,7 @@ export default {
   methods: {
     initUserSettingsForm() {
       this.userSettingsForm.currency = this.appStore.user.last_currency_used
-      this.userSettingsForm.selectedLanguage = this.languageList.find(lang => lang.code === localeManager.guessDefaultLocale()) || constants.LANGUAGE_LIST[0]
+      this.userSettingsForm.selectedLanguage = this.languageList.find(lang => lang.code === localeManager.guessDefaultLocale()) || this.languageList.find(lang => lang.code === 'en')
     },
     async updateSettings() {
       console.log(this.userSettingsForm.selectedLanguage)

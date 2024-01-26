@@ -7,6 +7,7 @@ const localeManager = {
     return import.meta.env.VITE_DEFAULT_LOCALE
   },
 
+  //NOTE: Not used anymore, but keeping it here for reference
   get supportedLocales() {
     return constants.LANGUAGE_LIST
   },
@@ -121,6 +122,7 @@ const localeManager = {
     console.log('localeValues.length', localeValues.length)
     for (let i = 0; i < enKeys.length; i++) {
       if(!localeKeys.includes(enKeys[i])) {
+        console.log('missing key', enKeys[i])
         missingKeys++
       } else {
         const enValue = String(enFlat[enKeys[i]]).trim();
@@ -130,7 +132,6 @@ const localeManager = {
         }
       }
     }
-
     if(locale === 'en') {
       return 100
     }
