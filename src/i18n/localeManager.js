@@ -78,8 +78,66 @@ const localeManager = {
     }
     
     return localeManager.defaultLocale
-  }
+  },
 
+  async getLocales() {
+    try {
+      const localesContext = import.meta.globEager('./locales/*.json')
+      const locales = Object.keys(localesContext).map(key => {
+        const localeCode = key.replace('./locales/', '').replace('.json', '')
+        return localeCode;
+      })
+  
+      return locales;
+    } catch (error) {
+      console.error('Error fetching locales:', error);
+    }
+  },
+  async calculateTranslationCompletion(locale) {
+    const enJson = await import(`@/i18n/locales/en.json`)
+    const localeJson = await import(`@/i18n/locales/${locale}.json`)
+    
+    const flattenObject = (obj, prefix = '') => {
+      return Object.keys(obj).reduce((acc, k) => {
+        const pre = prefix.length ? prefix + '.' : '';
+        if (typeof obj[k] === 'object') Object.assign(acc, flattenObject(obj[k], pre + k));
+        else acc[pre + k] = obj[k];
+        return acc;
+      }, {});
+    }
+  
+    const enFlat = flattenObject(enJson.default);
+    const localeFlat = flattenObject(localeJson.default);
+  
+    const enKeys = Object.keys(enFlat)
+    const localeKeys = Object.keys(localeFlat)
+    const enValues = Object.values(enFlat)
+    const localeValues = Object.values(localeFlat)
+    let identicalValues = 0
+    let missingKeys = 0
+    console.log('enKeys.length', enKeys.length)
+    console.log('enValues.length', enValues.length)
+    console.log('localeKeys.length', localeKeys.length)
+    console.log('localeValues.length', localeValues.length)
+    for (let i = 0; i < enKeys.length; i++) {
+      if(!localeKeys.includes(enKeys[i])) {
+        missingKeys++
+      } else {
+        const enValue = String(enFlat[enKeys[i]]).trim();
+        const localeValue = String(localeFlat[enKeys[i]]).trim();
+        if (enValue === localeValue) {
+          identicalValues++
+        }
+      }
+    }
+
+    if(locale === 'en') {
+      return 100
+    }
+    console.log('identicalValues', identicalValues)
+    console.log('missingKeys', missingKeys)
+    return Math.round(((enKeys.length - (identicalValues + missingKeys)) / enKeys.length) * 100)
+  }
 }
 
 export default localeManager
