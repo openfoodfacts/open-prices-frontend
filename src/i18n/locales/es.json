@@ -199,7 +199,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Buscar por código de barras del producto",
+		"ProductBarcode": "Código de barras del producto",
 		"Title": "Buscar"
 	},
 	"ShareButton": {
