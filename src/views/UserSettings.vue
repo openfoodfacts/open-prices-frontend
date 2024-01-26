@@ -13,7 +13,16 @@
               :items="languageList"
               item-title="name"
               return-object
+              hide-details="auto"
             ></v-autocomplete>
+
+            <br />
+            <p>
+              <a href="https://translate.openfoodfacts.org" target="_blank">
+                {{ $t('UserSettings.TranslationHelp') }}
+                <v-icon size="small" icon="mdi-open-in-new"></v-icon>
+              </a>
+            </p>
           </v-card-text>
         </v-card>
       </v-col>
@@ -28,6 +37,7 @@
               v-model="userSettingsForm.currency"
               :label="$t('UserSettings.CurrencyLabel')"
               :items="currencyList"
+              hide-details="auto"
             ></v-autocomplete>
           </v-card-text>
         </v-card>
