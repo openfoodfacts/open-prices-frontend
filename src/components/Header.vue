@@ -3,7 +3,8 @@
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu"></v-app-bar-nav-icon>
     <v-app-bar-title style="cursor:pointer" @click="$router.push('/')">
       <img src="/favicon.svg" height="28" style="vertical-align:bottom">
-      {{ $t('Header.Title') }} </v-app-bar-title>
+      {{ APP_NAME }}
+    </v-app-bar-title>
     <template v-slot:append>
       <v-btn v-if="!username" to="/sign-in" icon="mdi-login"></v-btn>
       <v-menu v-if="username">
@@ -29,10 +30,12 @@
 <script>
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 
 export default {
   data() {
     return {
+      APP_NAME: constants.APP_NAME,
       showDrawerMenu: false,
       showProfileMenu: false,
     }

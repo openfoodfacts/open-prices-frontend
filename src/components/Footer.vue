@@ -2,8 +2,11 @@
   <v-footer class="bg-grey-lighten-1" style="max-height: 20%">
     <v-row>
       <v-col cols="12" md="6" align="center">
-        <i18n-t keypath="Footer.Open_Prices_Project.Text" tag="label" for="Footer.Open_Prices_Project.url">
-          <a href="https://world.openfoodfacts.org" target="_blank">{{ $t('Footer.Open_Prices_Project.Url') }}</a>
+        <i18n-t keypath="Footer.TagLine" tag="span">
+          <template #name>{{ APP_NAME }}</template>
+          <template #url>
+            <a href="https://world.openfoodfacts.org" target="_blank">{{ OFF_NAME }}</a>
+          </template>
         </i18n-t>
       </v-col>
       <v-col cols="12" md="6" align="center">
@@ -14,3 +17,16 @@
     </v-row>
   </v-footer>
 </template>
+
+<script>
+import constants from '../constants'
+
+export default {
+  data() {
+    return {
+      APP_NAME: constants.APP_NAME,
+      OFF_NAME: constants.OFF_NAME,
+    }
+  },
+}
+</script>

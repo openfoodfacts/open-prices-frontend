@@ -1,5 +1,9 @@
 <template>
-  <h1 class="mb-1">{{ $t('Home.Welcome.Title') }}</h1>
+  <h1 class="mb-1">
+    <i18n-t keypath="Home.Welcome.Title" tag="span">
+      <template #name>{{ APP_NAME }}</template>
+    </i18n-t>
+  </h1>
   <p>{{ $t('Home.Welcome.Subtitle') }}</p>
   
   <br />
@@ -59,12 +63,14 @@
 <script>
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 import utils from '../utils.js'
 import api from '../services/api'
 
 export default {
   data() {
     return {
+      APP_NAME: constants.APP_NAME,
       settingsSuccessMessage: false,
       todayPriceCount: null,
       loading: false

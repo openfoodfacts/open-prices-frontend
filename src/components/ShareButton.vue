@@ -16,9 +16,12 @@
 </template>
 
 <script>
+import constants from '../constants'
+
 export default {
   data () {
     return {
+      APP_NAME: constants.APP_NAME,
       shareLinkCopySuccessMessage: false
     }
   },
@@ -27,7 +30,7 @@ export default {
       let URL = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}${this.$route.href}`
       if (navigator.share) {
         navigator.share({
-          title: import.meta.env.VITE_OPEN_PRICES_NAME,
+          title: this.APP_NAME,
           url: URL
         })
       } else {

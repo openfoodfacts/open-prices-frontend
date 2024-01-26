@@ -19,7 +19,11 @@
   <v-row class="mt-0" v-if="productOrCategoryNotFound">
     <v-col cols="12" sm="6">
       <p v-if="productNotFound" class="text-red">
-        <i>{{ $t('ProductDetail.ProductNotFound') }}</i>
+        <i>
+          <i18n-t keypath="ProductDetail.ProductNotFound" tag="span">
+            <template #name>{{ OFF_NAME }}</template>
+          </i18n-t>
+        </i>
       </p>
       <p v-if="categoryNotFound" class="text-red">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
@@ -48,6 +52,7 @@
 </template>
 
 <script>
+import constants from '../constants'
 import utils from '../utils.js'
 import api from '../services/api'
 import ProductCard from '../components/ProductCard.vue'
@@ -62,6 +67,7 @@ export default {
   },
   data() {
     return {
+      OFF_NAME: constants.OFF_NAME,
       productId: this.$route.params.id,  // product_code or product_category
       product: { code: this.$route.params.id },
       productPriceList: [],
