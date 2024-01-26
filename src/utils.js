@@ -31,6 +31,15 @@ function currentDate() {
 }
 
 /**
+ * output: '2023-12-25T00:00:00.000Z'
+ */
+function currentStartOfDay() {
+  let today = new Date()
+  today.setUTCHours(0, 0, 0, 0)
+  return today.toISOString()
+}
+
+/**
  * input: '2023-12-25'
  * output: '12/25/2023'
  */
@@ -130,6 +139,7 @@ function getLocationTitle(locationObject, withName=true, withRoad=false, withCit
 export default {
   addObjectToArray,
   removeObjectFromArray,
+  currentStartOfDay,
   currentDate,
   prettyDate,
   prettyDateTime,

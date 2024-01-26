@@ -85,7 +85,7 @@ export default {
   methods: {
     getTodayPriceCount() {
       this.loading = true
-      return api.getPrices({ date: utils.currentDate(), size: 1 })
+      return api.getPrices({ created__gte: utils.currentStartOfDay(), size: 2 })
         .then((data) => {
           this.todayPriceCount = data.total
           this.loading = false
