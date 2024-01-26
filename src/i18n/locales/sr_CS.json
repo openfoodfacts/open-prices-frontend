@@ -245,6 +245,7 @@
 		"LanguageLabel": "Languages",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Sačuvaj",
-		"Title": "Podešavanja"
+		"Title": "Podešavanja",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
