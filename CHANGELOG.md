@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.32.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.32.0...v1.32.1) (2024-01-26)
+
+
+### Bug Fixes
+
+* fix Matomo script position. ref [#100](https://github.com/openfoodfacts/open-prices-frontend/issues/100) ([660faa3](https://github.com/openfoodfacts/open-prices-frontend/commit/660faa3e87566b36a609a1e8bfd16bfcf9ab63f4))
+* install Matomo using vue-matomo instead. ref [#100](https://github.com/openfoodfacts/open-prices-frontend/issues/100) ([ea70610](https://github.com/openfoodfacts/open-prices-frontend/commit/ea7061038a5114eae953d3054fc4ef2f1b4bf1c0))
+* **l10n:** add message about needing translations ([30caf64](https://github.com/openfoodfacts/open-prices-frontend/commit/30caf6449dbda3adf0da6e241bf4c4ddab6f190b))
+* **PWA:** fix manifest config. ref [#193](https://github.com/openfoodfacts/open-prices-frontend/issues/193) ([5dbe3b9](https://github.com/openfoodfacts/open-prices-frontend/commit/5dbe3b9b1ab0dd89ee160d85b65482b8a475e118))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#226](https://github.com/openfoodfacts/open-prices-frontend/issues/226)) ([51fc3ab](https://github.com/openfoodfacts/open-prices-frontend/commit/51fc3ab970d8ceee4e64cb47d04d3ca650deeb08))
+
 ## [1.32.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.31.0...v1.32.0) (2024-01-25)
 
 
