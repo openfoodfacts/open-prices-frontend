@@ -94,7 +94,7 @@
 	},
 	"Footer": {
 		"About": "Li_ser",
-		"Open_Prices_Project": {
+		"TagLine": {
 			"Text": "Open Prices is an {0} project.",
 			"Url": "Open Food Facts"
 		},

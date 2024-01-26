@@ -94,7 +94,7 @@
 	},
 	"Footer": {
 		"About": "על אודות",
-		"Open_Prices_Project": {
+		"TagLine": {
 			"Text": "Open Prices הוא מיזם מבית {0}.",
 			"Url": "Open Food Facts"
 		},

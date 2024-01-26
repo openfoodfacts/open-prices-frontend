@@ -2,7 +2,7 @@
   <v-footer class="bg-grey-lighten-1" style="max-height: 20%">
     <v-row>
       <v-col cols="12" md="6" align="center">
-        <i18n-t keypath="Footer.Open_Prices_Project.Text" tag="span">
+        <i18n-t keypath="Footer.TagLine" tag="span">
           <template #name>{{ APP_NAME }}</template>
           <template #url>
             <a href="https://world.openfoodfacts.org" target="_blank">{{ OFF_NAME }}</a>

@@ -94,10 +94,8 @@
 	},
 	"Footer": {
 		"About": "About",
-		"Open_Prices_Project": {
-			"Text": "{name} is an {url} project."
-		},
-		"Stats": "Stats"
+		"Stats": "Stats",
+		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
 		"Dashboard": "Dashboard",

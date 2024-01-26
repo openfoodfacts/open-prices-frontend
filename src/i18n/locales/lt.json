@@ -94,7 +94,7 @@
 	},
 	"Footer": {
 		"About": "About",
-		"Open_Prices_Project": {
+		"TagLine": {
 			"Text": "„Open Prices“ (atviros kainos) – tai {0} projektas.",
 			"Url": "Open Food Facts"
 		},
