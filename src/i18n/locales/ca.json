@@ -245,6 +245,7 @@
 		"LanguageLabel": "Llengües",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Desa",
-		"Title": "Preferències"
+		"Title": "Preferències",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
