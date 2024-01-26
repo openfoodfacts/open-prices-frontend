@@ -245,6 +245,7 @@
 		"LanguageLabel": "Jazyky",
 		"LocaleNotSupported": "Jazyk zatím není podporován, výchozím jazykem bude angličtina",
 		"Save": "Uložit",
-		"Title": "Nastavení"
+		"Title": "Nastavení",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
