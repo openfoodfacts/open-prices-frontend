@@ -7,7 +7,7 @@
     variant="outlined">
     <i18n-t keypath="Common.SignInOFFAccount" tag="span">
       <template #url>
-        <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
+        <a :href="OFF_URL" target="_blank">{{ OFF_NAME }}</a>
       </template>
     </i18n-t>
   </v-alert>
@@ -35,11 +35,14 @@
 <script>
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 import api from '../services/api'
 
 export default {
   data() {
     return {
+      OFF_NAME: constants.OFF_NAME,
+      OFF_URL: constants.OFF_URL,
       signinForm: {
         username: '',
         password: '',

@@ -28,7 +28,7 @@
         <template v-slot:subtitle v-if="!username">
           <i18n-t keypath="Common.SignInOFFAccount" tag="span">
             <template #url>
-              <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
+              <a :href="OFF_URL" target="_blank">{{ OFF_NAME }}</a>
             </template>
           </i18n-t>
         </template>
@@ -71,6 +71,8 @@ export default {
   data() {
     return {
       APP_NAME: constants.APP_NAME,
+      OFF_NAME: constants.OFF_NAME,
+      OFF_URL: constants.OFF_URL,
       settingsSuccessMessage: false,
       todayPriceCount: null,
       loading: false
