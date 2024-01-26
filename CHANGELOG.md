@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.33.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.33.0...v1.33.1) (2024-01-26)
+
+
+### Bug Fixes
+
+* reduce page header sizes ([#238](https://github.com/openfoodfacts/open-prices-frontend/issues/238)) ([5efeb73](https://github.com/openfoodfacts/open-prices-frontend/commit/5efeb733c56db6108f49317488b17d712c708535))
+
 ## [1.33.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.32.3...v1.33.0) (2024-01-26)
 
 
