@@ -245,6 +245,7 @@
 		"LanguageLabel": "Tutlayin",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Sekles",
-		"Title": "Iɣewwaren"
+		"Title": "Iɣewwaren",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
