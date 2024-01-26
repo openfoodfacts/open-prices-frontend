@@ -245,6 +245,7 @@
 		"LanguageLabel": "Keeled",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Salvesta",
-		"Title": "Seaded"
+		"Title": "Seaded",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

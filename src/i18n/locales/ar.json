@@ -245,6 +245,7 @@
 		"LanguageLabel": "اللغات",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "حفظ",
-		"Title": "الإعدادات"
+		"Title": "الإعدادات",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

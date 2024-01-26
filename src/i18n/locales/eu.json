@@ -245,6 +245,7 @@
 		"LanguageLabel": "Hizkuntzak",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Gorde",
-		"Title": "Ezarpenak"
+		"Title": "Ezarpenak",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

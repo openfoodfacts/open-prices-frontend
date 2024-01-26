@@ -245,6 +245,7 @@
 		"LanguageLabel": "Languages",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "சேமி",
-		"Title": "அமைப்புகள்"
+		"Title": "அமைப்புகள்",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

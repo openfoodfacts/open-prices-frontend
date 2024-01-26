@@ -245,6 +245,7 @@
 		"LanguageLabel": "Sprog",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Gem",
-		"Title": "Indstillinger"
+		"Title": "Indstillinger",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

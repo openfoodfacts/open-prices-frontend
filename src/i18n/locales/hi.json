@@ -245,6 +245,7 @@
 		"LanguageLabel": "Languages",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "सेव़",
-		"Title": "सेटिंग्स"
+		"Title": "सेटिंग्स",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

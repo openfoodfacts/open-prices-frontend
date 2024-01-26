@@ -245,6 +245,7 @@
 		"LanguageLabel": "Lingue",
 		"LocaleNotSupported": "Lingua non ancora supportata, la lingua predefinita sarà l'inglese",
 		"Save": "Salva",
-		"Title": "Impostazioni"
+		"Title": "Impostazioni",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

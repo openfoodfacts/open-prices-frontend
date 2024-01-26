@@ -245,6 +245,7 @@
 		"LanguageLabel": "Kalbos",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Išsaugoti",
-		"Title": "Nustatymai"
+		"Title": "Nustatymai",
+		"TranslationHelp": "Padėkite mums išversti į daugiau kalbų"
 	}
 }

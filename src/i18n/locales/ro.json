@@ -245,6 +245,7 @@
 		"LanguageLabel": "Limbi",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Salvează",
-		"Title": "Configurări"
+		"Title": "Configurări",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

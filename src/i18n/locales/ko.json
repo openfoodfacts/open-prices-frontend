@@ -245,6 +245,7 @@
 		"LanguageLabel": "언어",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "저장",
-		"Title": "설정"
+		"Title": "설정",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

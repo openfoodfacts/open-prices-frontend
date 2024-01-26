@@ -245,6 +245,7 @@
 		"LanguageLabel": "Languages",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "သိမ်းဆည်းမည်",
-		"Title": "အပြင်​အဆင်​များ"
+		"Title": "အပြင်​အဆင်​များ",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

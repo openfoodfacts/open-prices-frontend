@@ -245,6 +245,7 @@
 		"LanguageLabel": "Språk",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Spara",
-		"Title": "Inställningar"
+		"Title": "Inställningar",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

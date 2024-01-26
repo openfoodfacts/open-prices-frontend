@@ -30,7 +30,7 @@
 			"Upload": "Téléverser"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "Un ticketsde caisse peut contenir des informations personnelles, nous vous recommandons de les masquer (caviarder, plier...) avant de le prendre en photo.",
 			"Title": "Preuve"
 		},
 		"Title": "Ajouter plusieurs prix"
@@ -156,7 +156,7 @@
 		"Title": "Derniers prix ajoutés"
 	},
 	"ProductCard": {
-		"LatestPrice": "Dernier prix ajouté",
+		"LatestPrice": "Dernier prix",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Produit inconnu"
 	},
@@ -245,6 +245,7 @@
 		"LanguageLabel": "Langue",
 		"LocaleNotSupported": "Cette langue n'est pas encore supportée, la langue sera mise par défaut en anglais",
 		"Save": "Enregistrer",
-		"Title": "Paramètres"
+		"Title": "Paramètres",
+		"TranslationHelp": "Aidez-nous à traduire plus de langues"
 	}
 }

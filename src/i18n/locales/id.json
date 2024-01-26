@@ -245,6 +245,7 @@
 		"LanguageLabel": "Bahasa",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "menyimpan ",
-		"Title": "Pengaturan"
+		"Title": "Pengaturan",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

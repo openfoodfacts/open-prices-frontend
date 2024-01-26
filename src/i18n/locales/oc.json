@@ -245,6 +245,7 @@
 		"LanguageLabel": "Languages",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Enregistrar",
-		"Title": "Paramètres"
+		"Title": "Paramètres",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }

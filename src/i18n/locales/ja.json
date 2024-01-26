@@ -245,6 +245,7 @@
 		"LanguageLabel": "言語",
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "保存",
-		"Title": "設定"
+		"Title": "設定",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
