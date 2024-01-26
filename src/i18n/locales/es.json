@@ -245,6 +245,7 @@
 		"LanguageLabel": "Idiomas",
 		"LocaleNotSupported": "Idioma aún no admitido; el idioma predeterminado será el inglés",
 		"Save": "Guardar",
-		"Title": "Configuración"
+		"Title": "Configuración",
+		"TranslationHelp": "Help us translate more languages"
 	}
 }
