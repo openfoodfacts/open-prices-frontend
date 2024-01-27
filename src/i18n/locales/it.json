@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Ultimi prezzi",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Scarica altro",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "Impostazioni",
 		"Title": "Cruscotto"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Lingua non ancora supportata, la lingua predefinita sarà l'inglese",
 		"Save": "Salva",
 		"Title": "Impostazioni",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
 	}
 }

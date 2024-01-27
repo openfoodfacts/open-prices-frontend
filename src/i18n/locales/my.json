@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "အပြင်​အဆင်​များ",
 		"Title": "Dashboard"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "သိမ်းဆည်းမည်",
 		"Title": "အပြင်​အဆင်​များ",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
 	}
 }

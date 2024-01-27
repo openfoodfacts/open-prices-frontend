@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Laatste prijzen",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Meer laden",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "Instellingen",
 		"Title": "Dashboard"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Taal wordt nog niet ondersteund. De taal wordt standaard ingesteld op Engels",
 		"Save": "Opslaan",
 		"Title": "Instellingen",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help ons in meer talen te vertalen"
 	}
 }

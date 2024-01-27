@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Últims preus",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Carrega mes ",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "Preferències",
 		"Title": "Tauler"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Desa",
 		"Title": "Preferències",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
 	}
 }

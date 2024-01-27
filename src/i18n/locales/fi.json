@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Viimeisimmät hinnat",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Lataa enemmän",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "Asetukset",
 		"Title": "Kojelauta"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Kieltä ei vielä tueta, oletuskieli on englanti",
 		"Save": "Tallenna",
 		"Title": "Asetukset",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Auta meitä kääntämään useampia kieliä"
 	}
 }

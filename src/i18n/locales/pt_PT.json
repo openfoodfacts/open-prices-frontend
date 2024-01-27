@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Preços mais recentes",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Carregar mais",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "Configurações",
 		"Title": "Painel de controlo"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Idioma ainda não suportado, o idioma será predefinido para inglês",
 		"Save": "Guardar",
 		"Title": "Configurações",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Ajude-nos a traduzir mais idiomas"
 	}
 }
