@@ -23,14 +23,14 @@
 		"Done": "Concluído",
 		"ProductPriceDetails": {
 			"Add": "Adicionar um novo preço",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} preço já carregado | {priceAlreadyUploadedNumber} preços já carregados",
 			"Create": "Criar",
 			"NewPrice": "Novo preço",
 			"PriceUploaded": "Preço criado!",
 			"Upload": "Carregar"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "Os recibos podem conter informações pessoais, pelo que recomendamos que os oculte (rabiscar, dobrar...) antes de tirar a fotografia.",
 			"Title": "Detalhes do comprovativo"
 		},
 		"Title": "Adicione vários preços"
@@ -54,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
 			"OriginLabel": "Origem",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Código de barras do produto",
 			"ScanBarcode": "Digitalizar um código de barras",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Selecionar um produto",
@@ -90,7 +90,7 @@
 		"TopProducts": "Top products"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}"
 	},
 	"Footer": {
 		"About": "Sobre",
@@ -107,7 +107,7 @@
 		"LatestPrices": "Preços mais recentes",
 		"SearchProduct": "Pesquisar um produto",
 		"SettingsUpdated": "Definições atualizadas!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"TodayPriceStat": "Nenhum preço adicionado hoje | {todayPriceNumber} novos preços adicionados hoje | {todayPriceNumber} novos preços adicionados hoje!",
 		"Welcome": {
 			"Subtitle": "Uma base de dados colaborativa de fonte aberta sobre os preços dos alimentos 🏷🍊💲",
 			"Title": "Bem-vindo(a) ao {nome}!"
@@ -199,18 +199,18 @@
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Código de barras do produto",
 		"Title": "Procurar"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copiado"
 	},
 	"SignIn": {
 		"Button": "Iniciar sessão",
 		"Password": "Palavra-passe",
 		"ServerError": "Erro: erro do servidor",
 		"Title": "Iniciar sessão",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
 		"UsernameLabel": "Nome de utilizador",
 		"WrongCredentials": "Erro: credenciais incorrectas"
 	},
