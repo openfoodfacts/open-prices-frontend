@@ -95,7 +95,7 @@
 	"Footer": {
 		"About": "Sobre",
 		"Stats": "Estatísticas",
-		"TagLine": "{name} is an {url} project."
+		"TagLine": "{name} é um projeto {url}."
 	},
 	"Header": {
 		"Dashboard": "Painel de controlo",
@@ -110,7 +110,7 @@
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "Uma base de dados colaborativa de fonte aberta sobre os preços dos alimentos 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "Bem-vindo(a) ao {nome}!"
 		}
 	},
 	"LocationDetail": {
@@ -242,6 +242,6 @@
 		"LocaleNotSupported": "Idioma ainda não suportado, o idioma será predefinido para inglês",
 		"Save": "Guardar",
 		"Title": "Configurações",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "Ajude-nos a traduzir mais idiomas"
 	}
 }
