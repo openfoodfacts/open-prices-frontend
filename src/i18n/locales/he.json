@@ -95,7 +95,7 @@
 	"Footer": {
 		"About": "על אודות",
 		"Stats": "סטטיסטיקה",
-		"TagLine": "{name} is an {url} project."
+		"TagLine": "{name} הוא מיזם מבית {url}."
 	},
 	"Header": {
 		"Dashboard": "לוח בקרה",
@@ -110,7 +110,7 @@
 		"TodayPriceStat": "לא נוספו מחירים היום | מחיר חדש נוסף היום | {todayPriceNumber} מחירים חדשים נוספו היום!",
 		"Welcome": {
 			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
-			"Title": "Welcome to {name}!"
+			"Title": "ברוך בואך אל {name}!"
 		}
 	},
 	"LocationDetail": {
@@ -199,7 +199,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "חיפוש לפי ברקוד של מוצר",
+		"ProductBarcode": "ברקוד מוצר",
 		"Title": "חיפוש"
 	},
 	"ShareButton": {
@@ -242,6 +242,6 @@
 		"LocaleNotSupported": "השפה עדיין לא נתמכת, תיסוג לאנגלית",
 		"Save": "שמירה",
 		"Title": "הגדרות",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "נשמח לעזרתך לתרגם לשפות נוספות"
 	}
 }

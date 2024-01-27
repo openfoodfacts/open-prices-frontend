@@ -23,14 +23,14 @@
 		"Done": "Concluído",
 		"ProductPriceDetails": {
 			"Add": "Adicionar um novo preço",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} preço já carregado | {priceAlreadyUploadedNumber} preços já carregados",
 			"Create": "Criar",
 			"NewPrice": "Novo preço",
 			"PriceUploaded": "Preço criado!",
 			"Upload": "Carregar"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "Os recibos podem conter informações pessoais, pelo que recomendamos que os oculte (rabiscar, dobrar...) antes de tirar a fotografia.",
 			"Title": "Detalhes do comprovativo"
 		},
 		"Title": "Adicione vários preços"
@@ -54,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
 			"OriginLabel": "Origem",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Código de barras do produto",
 			"ScanBarcode": "Digitalizar um código de barras",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Selecionar um produto",
@@ -69,7 +69,7 @@
 			"Date": "Data",
 			"DateLabel": "Data",
 			"Find": "Pesquisar",
-			"Location": "Shop location",
+			"Location": "Localização da loja",
 			"SelectLocation": "Selecione a sua localização",
 			"Title": "Onde e quando?"
 		}
@@ -90,12 +90,12 @@
 		"TopProducts": "Top products"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}"
 	},
 	"Footer": {
 		"About": "Sobre",
 		"Stats": "Estatísticas",
-		"TagLine": "{name} is an {url} project."
+		"TagLine": "{name} é um projeto {url}."
 	},
 	"Header": {
 		"Dashboard": "Painel de controlo",
@@ -107,10 +107,10 @@
 		"LatestPrices": "Preços mais recentes",
 		"SearchProduct": "Pesquisar um produto",
 		"SettingsUpdated": "Definições atualizadas!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"TodayPriceStat": "Nenhum preço adicionado hoje | {todayPriceNumber} novos preços adicionados hoje | {todayPriceNumber} novos preços adicionados hoje!",
 		"Welcome": {
 			"Subtitle": "Uma base de dados colaborativa de fonte aberta sobre os preços dos alimentos 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "Bem-vindo(a) ao {nome}!"
 		}
 	},
 	"LocationDetail": {
@@ -130,9 +130,9 @@
 		},
 		"RecentLocations": "Nenhuma localização recente | Localização recente {recentLocationNumber}| Localizações recentes {recentLocationNumber}",
 		"Result": "Resultado {resultNumber} | Resultados {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"SearchByName": "Pesquisar a sua loja por nome e cidade",
+		"Title": "Encontrar o local da sua loja",
+		"Warning": "O motor de pesquisa para encontrar uma loja não é atualmente muito preciso.{newline}Não hesite em acrescentar o nome da rua para limitar os resultados.{newline}Exemplos: Carrefour City 15e Paris ; Sainsbury's Camden Londres"
 	},
 	"NotFound": {
 		"Subtitle": "A página que solicitou parece não existir...",
@@ -199,18 +199,18 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Pesquisar por código de barras do produto",
+		"ProductBarcode": "Código de barras do produto",
 		"Title": "Procurar"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copiado"
 	},
 	"SignIn": {
 		"Button": "Iniciar sessão",
 		"Password": "Palavra-passe",
 		"ServerError": "Erro: erro do servidor",
 		"Title": "Iniciar sessão",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
 		"UsernameLabel": "Nome de utilizador",
 		"WrongCredentials": "Erro: credenciais incorrectas"
 	},
@@ -242,6 +242,6 @@
 		"LocaleNotSupported": "Idioma ainda não suportado, o idioma será predefinido para inglês",
 		"Save": "Guardar",
 		"Title": "Configurações",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "Ajude-nos a traduzir mais idiomas"
 	}
 }

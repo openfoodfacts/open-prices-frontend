@@ -1,186 +1,186 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Hylly, jossa on useita hintalappuja",
+			"Title": "Useita tuotteita"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Hinta luotu!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Yksi tai useampi tuote",
+			"Title": "Kuitti"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Kirjautunut sisään!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Vain yksi hintalappu",
+			"Title": "Yksittäinen tuote"
 		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"Thanks": "Kiitos",
+		"Title": "Lisää hinta",
+		"TitleSingle": "Lisää yksi hinta",
+		"TitleMultiple": "Lisää useita hintoja kerralla"
 	},
 	"AddPriceMultiple": {
 		"Done": "Valmis",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "Lisää uusi hinta",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} hinta jo ladattu | {priceAlreadyUploadedNumber} hinnat on jo ladattu",
 			"Create": "Luo",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"NewPrice": "Uusi hinta",
+			"PriceUploaded": "Hinta luotu!",
+			"Upload": "Lähetä"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"Title": "Proof details"
+			"ReceiptWarning": "Kuitit voivat sisältää henkilökohtaisia tietoja, suosittelemme piilottamaan ne (peitä, taita...) ennen kuvan ottamista.",
+			"Title": "Todistuksen yksityiskohdat"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Lisää useita hintoja"
 	},
 	"AddPriceSingle": {
 		"Create": "Luo",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofUploaded": "Proof uploaded!",
-			"Text": "Price {perKg}",
+			"Discount": "Alennus?",
+			"Label": "Hinta",
+			"LabelDiscounted": "Alennettu hinta",
+			"LabelFull": "Täysi hinta",
+			"Proof": "Todiste",
+			"ProofUploaded": "Todiste lähetetty!",
+			"Text": "Hinta {perKg}",
 			"TextPerKg": "per kg",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"Title": "Hintatiedot",
+			"UploadProof": "Lähetä todiste",
 			"TakePicture": "Ota kuva",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Valitse galleriastasi"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Tuoteluokka",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
-			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"OriginLabel": "Alkuperä",
+			"ProductBarcode": "Tuotteen viivakoodi",
+			"ScanBarcode": "Skannaa viivakoodi",
+			"TypeBarcode": "Syötä viivakoodi",
+			"SetProduct": "Aseta tuote",
+			"Title": "Tuotetiedot"
 		},
 		"ProductModeList": {
 			"Barcode": "Viivakoodi",
 			"Category": "Tuoteluokka"
 		},
-		"Title": "Add a single price",
+		"Title": "Lisää yksi hinta",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Päivämäärä",
+			"DateLabel": "Päivämäärä",
 			"Find": "Etsi",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Kaupan sijainti",
+			"SelectLocation": "Valitse sijaintisi",
+			"Title": "Missä ja milloin?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Skannaa viivakoodi"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Viivakoodi",
 		"Submit": "Lähetä",
-		"Title": "Type a barcode"
+		"Title": "Syötä viivakoodi"
 	},
 	"BrandDetail": {
 		"LoadMore": "Lataa enemmän",
-		"TopProducts": "Top products"
+		"TopProducts": "Huipputuotteet"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi"
 	},
 	"Footer": {
 		"About": "Tietoja",
-		"Stats": "Stats",
-		"TagLine": "{name} is an {url} project."
+		"Stats": "Tilastot",
+		"TagLine": "{name} on {url} projekti."
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Kojelauta",
 		"Settings": "Asetukset",
 		"Sign-out": "Kirjaudu ulos"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"LatestPrices": "Latest prices",
-		"SearchProduct": "Search for a product",
-		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"AddPrice": "Lisää hinta",
+		"LatestPrices": "Viimeisimmät hinnat",
+		"SearchProduct": "Etsi tuote",
+		"SettingsUpdated": "Asetukset päivitetty!",
+		"TodayPriceStat": "Ei hintoja lisätty tänään | {todayPriceNumber} uutta hintaa lisätty tänään | {todayPriceNumber} uusi hinta lisätty tänään!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Subtitle": "Avoin joukkolähdetietokanta elintarvikkeiden hinnoista 🏷🍊💲",
+			"Title": "Tervetuloa {name}:aan!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Viimeisimmät hinnat",
 		"LoadMore": "Lataa enemmän",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Sijaintia ei löydy OpenStreetMapista... Älä epäröi lisätä sitä :)"
 	},
 	"LocationList": {
-		"Title": "Top locations",
+		"Title": "Huippupaikat",
 		"LoadMore": "Lataa enemmän"
 	},
 	"LocationSelector": {
 		"Clear": "Tyhjennä",
-		"NoResult": "No results found",
+		"NoResult": "Ei tuloksia",
 		"OSM": {
 			"text": "powered by {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"RecentLocations": "Ei viimeaikaisia sijainteja | Viimeaikainen sijainti {recentLocationNumber}| Viimeaikaiset sijainnit {recentLocationNumber}",
+		"Result": "Tulos {resultNumber} | Tulokset {resultNumber}",
+		"SearchByName": "Hae kauppaasi nimen ja kaupungin mukaan",
+		"Title": "Etsi myymäläsi sijainti",
+		"Warning": "Hakukone kaupan löytämiseksi ei ole tällä hetkellä kovin tarkka.{newline}Älä epäröi lisätä kadun nimeä tulosten rajaamiseksi.{newline}Esimerkkejä: Carrefour City 15e Paris ; Sainsburyn camden Lontoossa"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "Pyytämääsi sivua ei näytä olevan olemassa...",
+		"Title": "Ei löydetty"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
+		"Discount": "Alennus",
+		"PriceDate": "päivänä {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"Proof": "Proof",
+		"Proof": "Todiste",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"FullPrice": "Täysi hinta",
+		"UnknownProduct": "Tuntematon tuote"
 	},
 	"PriceList": {
 		"LoadMore": "Lataa enemmän",
-		"Title": "Latest prices"
+		"Title": "Viimeisimmät hinnat"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Viimeisin hinta",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Tuntematon tuotenimi"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"AddPrice": "Lisää hinta",
+		"CategoryNotFound": "Luokkaa ei löydy...",
+		"LatestPrices": "Viimeisimmät hinnat",
 		"LoadMore": "Lataa enemmän",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Tuotetta ei löydy Open Food Factsista... Älä epäröi lisätä sitä :)"
 	},
 	"ProductList": {
 		"Filter": "Suodata",
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Piilota tuotteet hinnoilla",
 		"LoadMore": "Lataa enemmän",
-		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Order": "Järjestys",
+		"PriceNumber": "Lisättyjen hintojen määrä",
+		"ScanNumber": "Lisättyjen skannausten määrä",
+		"Title": "Huipputuotteet"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Lisää hinta"
 		},
 		"Home": {
 			"Title": "Koti"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Viimeisimmät hinnat"
 		},
 		"Search": {
 			"Title": "Etsi"
@@ -189,59 +189,59 @@
 			"Title": "Kirjaudu sisään"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Huippuavustajat"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Huippupaikat"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Huipputuotteet"
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Search by product barcode",
+		"ProductBarcode": "Tuotteen viivakoodi",
 		"Title": "Etsi"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Linkki kopioitu"
 	},
 	"SignIn": {
 		"Button": "Kirjaudu sisään",
 		"Password": "Salasana",
-		"ServerError": "Error: server error",
+		"ServerError": "Virhe: palvelinvirhe",
 		"Title": "Kirjaudu sisään",
-		"SignInOFFAccount": "Sign in with your {url} account",
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
+		"UsernameLabel": "Käyttäjätunnus",
+		"WrongCredentials": "Virhe: väärät tunnistetiedot"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Prices": "Hinnat",
+		"ProductsWithPrices": "Tuotteet hinnoilla",
+		"Title": "Tilastot"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Viimeisimmät hinnat",
 		"LoadMore": "Lataa enemmän",
-		"Title": "Dashboard"
+		"Title": "Kojelauta"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Viimeisimmät hinnat",
 		"LoadMore": "Lataa enemmän"
 	},
 	"UserList": {
 		"LoadMore": "Lataa enemmän",
-		"Title": "Top contributors"
+		"Title": "Huippuavustajat"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Lisätään hintoja",
 		"ChangeLanguage": "Vaihda kieli",
 		"CountryLabel": "Maa",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"CurrencyLabel": "Valuutta",
+		"DefaultCurrency": "Oletusvaluutta",
 		"LanguageLabel": "Kielet",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
+		"LocaleNotSupported": "Kieltä ei vielä tueta, oletuskieli on englanti",
 		"Save": "Tallenna",
 		"Title": "Asetukset",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "Auta meitä kääntämään useampia kieliä"
 	}
 }

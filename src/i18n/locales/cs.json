@@ -199,7 +199,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Hledat podle čárového kódu",
+		"ProductBarcode": "Čárový kód produktu",
 		"Title": "Vyhledat"
 	},
 	"ShareButton": {

@@ -23,7 +23,7 @@
 		"Done": "Hecho",
 		"ProductPriceDetails": {
 			"Add": "Añadir un nuevo precio",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} precio ya subido | {priceAlreadyUploadedNumber} precios ya subidos",
 			"Create": "Crear",
 			"NewPrice": "Nuevo precio",
 			"PriceUploaded": "¡Precio creado!",
@@ -69,7 +69,7 @@
 			"Date": "Fecha",
 			"DateLabel": "Fecha",
 			"Find": "Buscar",
-			"Location": "Shop location",
+			"Location": "Ubicación de la tienda",
 			"SelectLocation": "Selecciona tu ubicación",
 			"Title": "¿Dónde y cuándo?"
 		}
@@ -95,7 +95,7 @@
 	"Footer": {
 		"About": "Acerca de",
 		"Stats": "Estadísticas",
-		"TagLine": "{name} is an {url} project."
+		"TagLine": "{name} es un proyecto {url}."
 	},
 	"Header": {
 		"Dashboard": "Panel de control",
@@ -110,7 +110,7 @@
 		"TodayPriceStat": "Hoy no se han añadido precios | Hoy se han añadido {todayPriceNumber} precios nuevos | ¡Hoy se han añadido {todayPriceNumber} precios nuevos!",
 		"Welcome": {
 			"Subtitle": "Una base de datos abierta y colaborativa de precios de alimentos 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "¡Bienvenido a {name}!"
 		}
 	},
 	"LocationDetail": {
@@ -130,9 +130,9 @@
 		},
 		"RecentLocations": "No hay ubicaciones recientes | Ubicación reciente {recentLocationNumber}| Ubicaciones recientes {recentLocationNumber}",
 		"Result": "{resultNumber} resultado | {resultNumber} resultados",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"SearchByName": "Busca tu tienda por nombre y ciudad",
+		"Title": "Encuentra la ubicación de tu tienda",
+		"Warning": "El motor de búsqueda para encontrar una tienda no es muy preciso.{newline}No dudes en agregar el nombre de la calle para limitar los resultados.{newline}Ejemplos: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
 	"NotFound": {
 		"Subtitle": "Parece que la página que buscas no existe...",
@@ -199,7 +199,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Buscar por código de barras del producto",
+		"ProductBarcode": "Código de barras del producto",
 		"Title": "Buscar"
 	},
 	"ShareButton": {
@@ -242,6 +242,6 @@
 		"LocaleNotSupported": "Idioma aún no admitido; el idioma predeterminado será el inglés",
 		"Save": "Guardar",
 		"Title": "Configuración",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "Ayúdanos a traducir más idiomas"
 	}
 }

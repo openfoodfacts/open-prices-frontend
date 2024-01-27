@@ -30,7 +30,7 @@
 			"Upload": "Téléverser"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Un ticketsde caisse peut contenir des informations personnelles, nous vous recommandons de les masquer (caviarder, plier...) avant de le prendre en photo.",
+			"ReceiptWarning": "Un ticket de caisse peut contenir des informations personnelles, nous vous recommandons de les masquer (caviarder, plier...) avant de le prendre en photo.",
 			"Title": "Preuve"
 		},
 		"Title": "Ajouter plusieurs prix"
@@ -199,7 +199,7 @@
 		}
 	},
 	"Search": {
-		"SearchByProductBarcode": "Chercher par code-barres",
+		"ProductBarcode": "Code-barres du produit",
 		"Title": "Rechercher"
 	},
 	"ShareButton": {
