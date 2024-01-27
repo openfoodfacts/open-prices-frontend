@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Meer laden",
-		"TopProducts": "Top products"
+		"TopProducts": "Top products",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Filter",
+		"Order": "Order"
 	},
 	"Common": {
 		"SignInOFFAccount": "Meld u aan met uw {url} account"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Laatste prijzen",
 		"LoadMore": "Meer laden",
-		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)"
+		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Top locaties",
-		"LoadMore": "Meer laden"
+		"LoadMore": "Meer laden",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Wissen",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Prijzen",
 		"ProductsWithPrices": "Producten met prijzen",
-		"Title": "Statistieken"
+		"Title": "Statistieken",
+		"Products": "Producten",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Totaal",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Laatste prijzen",
@@ -226,15 +239,20 @@
 		"MyPrices": "Mijn prijzen",
 		"MyProofs": "Mijn bewijzen",
 		"Settings": "Instellingen",
-		"Title": "Dashboard"
+		"Title": "Dashboard",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Laatste prijzen",
-		"LoadMore": "Meer laden"
+		"LoadMore": "Meer laden",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Meer laden",
-		"Title": "Top bijdragers"
+		"Title": "Top bijdragers",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Prijzen toevoegen",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Valuta",
 		"DefaultCurrency": "Standaardvaluta",
 		"LanguageLabel": "Talen",
-		"LocaleNotSupported": "Taal wordt nog niet ondersteund. De taal wordt standaard ingesteld op Engels",
 		"Save": "Opslaan",
 		"Title": "Instellingen",
 		"TranslationCompletion": "De vertaling is {completion}% voltooid.",
