@@ -23,14 +23,14 @@
 		"Done": "Atlikta",
 		"ProductPriceDetails": {
 			"Add": "Pridėti naują kainą",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} kaina jau įkelta | {priceAlreadyUploadedNumber} kaina jau įkelta",
 			"Create": "Kurti",
 			"NewPrice": "Nauja kaina",
 			"PriceUploaded": "Kaina sukurta!",
 			"Upload": "Įkelti"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "Kvituose gali būti asmeninės informacijos, todėl rekomenduojame prieš fotografuojant ją paslėpti (redaguoti, užlenkti...).",
 			"Title": "Išsami įdorymų informacija"
 		},
 		"Title": "Pridėti kelia skainas"
@@ -54,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategorija",
 			"OriginLabel": "Kilmė",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Brūkšninis produkto kodas",
 			"ScanBarcode": "Nuskaityti brūkšninį kodą",
 			"TypeBarcode": "Įveskite brūkšninį kodą",
 			"SetProduct": "Nustatyti produktą",
@@ -90,12 +90,12 @@
 		"TopProducts": "Top products"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Prisijungti su savo {url} paskyra"
 	},
 	"Footer": {
 		"About": "About",
 		"Stats": "Statistika",
-		"TagLine": "{name} is an {url} project."
+		"TagLine": "{name} – tai {url} projektas."
 	},
 	"Header": {
 		"Dashboard": "Prietaisų skydelis",
@@ -105,12 +105,12 @@
 	"Home": {
 		"AddPrice": "Pridėti kainą",
 		"LatestPrices": "Naujausios kainos",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Ieškoti produkto",
 		"SettingsUpdated": "Nuostatos atnaujintos!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"TodayPriceStat": "Šiandien nepridėta jokių kainų | Šiandien pridėta {todayPriceNumber} naujų kainų | Šiandien pridėta {todayPriceNumber} naujos kainos!",
 		"Welcome": {
 			"Subtitle": "Atviroji sutelktinių išteklių gautų maisto kainų duomenų bazė 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "Sveiki prisijungę prie {name}!"
 		}
 	},
 	"LocationDetail": {
@@ -152,7 +152,7 @@
 		"Title": "Naujausios kainos"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Naujausia kaina",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Nežinomas produkto pavadinimas"
 	},
@@ -199,18 +199,18 @@
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Brūkšninis produkto kodas",
 		"Title": "Paieška"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Nuoroda nukopijuota"
 	},
 	"SignIn": {
 		"Button": "Prisijungti",
 		"Password": "Slaptažodis",
 		"ServerError": "Error: server error",
 		"Title": "Prisijungti",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Naujausios kainos",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Įkelti daugiau",
+		"MyPrices": "Mano kainos",
+		"MyProofs": "My proofs",
+		"Settings": "Nustatymai",
 		"Title": "Prietaisų skydelis"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Išsaugoti",
 		"Title": "Nustatymai",
+		"TranslationCompletion": "Užbaigta {completion} % vertimo.",
 		"TranslationHelp": "Padėkite mums išversti į daugiau kalbų"
 	}
 }
