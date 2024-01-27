@@ -80,10 +80,8 @@ export default {
   },
   watch:{
     'userSettingsForm.selectedLanguage': async function () {
-      console.log("selected language: ", this.userSettingsForm.selectedLanguage)
       if (this.userSettingsForm.selectedLanguage !== null) {
         this.languageTranslationCompletion = await localeManager.calculateTranslationCompletion(this.userSettingsForm.selectedLanguage.code)
-        console.log("completion: ", this.languageTranslationCompletion)
       }
     },
 
@@ -110,7 +108,6 @@ export default {
       this.userSettingsForm.selectedLanguage = this.languageList.find(lang => lang.code === localeManager.guessDefaultLocale()) || this.languageList.find(lang => lang.code === 'en')
     },
     async updateSettings() {
-      console.log(this.userSettingsForm.selectedLanguage)
       await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage.code)
       this.appStore.setLanguage(this.userSettingsForm.selectedLanguage)
       this.appStore.setLastCurrencyUsed(this.userSettingsForm.currency)
