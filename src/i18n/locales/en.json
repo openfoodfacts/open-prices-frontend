@@ -222,6 +222,8 @@
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
+		"MyPrices": "My prices",
+		"Settings": "Settings",
 		"Title": "Dashboard"
 	},
 	"UserDetail": {
