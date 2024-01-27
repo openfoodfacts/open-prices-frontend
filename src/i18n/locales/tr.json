@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Daha fazla yükle",
-		"TopProducts": "En iyi ürünler"
+		"TopProducts": "En iyi ürünler",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Filtrele",
+		"Order": "Sipariş"
 	},
 	"Common": {
 		"SignInOFFAccount": "{url} hesabınızla oturum açın"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
-		"LocationNotFound": "OpenStreetMap'te konum bulunamadı... Eklemekten çekinmeyin :)"
+		"LocationNotFound": "OpenStreetMap'te konum bulunamadı... Eklemekten çekinmeyin :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "En iyi yerler",
-		"LoadMore": "Daha fazla yükle"
+		"LoadMore": "Daha fazla yükle",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Temizle",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Fiyatlar",
 		"ProductsWithPrices": "Fiyatları olan ürünler",
-		"Title": "İstatistikler"
+		"Title": "İstatistikler",
+		"Products": "Ürünler",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Toplam",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Son fiyatlar",
@@ -226,15 +239,20 @@
 		"MyPrices": "Fiyatlarım",
 		"MyProofs": "My proofs",
 		"Settings": "Ayarlar",
-		"Title": "Gösterge paneli"
+		"Title": "Gösterge paneli",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Son fiyatlar",
-		"LoadMore": "Daha fazla yükle"
+		"LoadMore": "Daha fazla yükle",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Daha fazla yükle",
-		"Title": "En çok katkıda bulunanlar"
+		"Title": "En çok katkıda bulunanlar",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Fiyat ekleme",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Kur",
 		"DefaultCurrency": "Varsayılan para birimi",
 		"LanguageLabel": "Diller",
-		"LocaleNotSupported": "Dil henüz desteklenmiyor; dil varsayılan olarak İngilizce olarak ayarlanacak",
 		"Save": "Kaydet",
 		"Title": "Ayarlar",
 		"TranslationCompletion": "Çeviri % {completion} tamamlandı.",
