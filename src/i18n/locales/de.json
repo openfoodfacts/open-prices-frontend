@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Aktuelle Preise",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Weitere laden",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "Einstellungen",
 		"Title": "Übersicht"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Diese Sprache wird noch nicht unterstützt. Die Sprache wird auf Englisch festgelegt.",
 		"Save": "Speichern",
 		"Title": "Einstellungen",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Helfen Sie uns, weitere Sprachen zu übersetzen"
 	}
 }
