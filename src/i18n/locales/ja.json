@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "もっと読み込む",
-		"TopProducts": "Top products"
+		"TopProducts": "Top products",
+		"BrandProductTotal": "{count} products",
+		"Filter": "フィルタ",
+		"Order": "Order"
 	},
 	"Common": {
 		"SignInOFFAccount": "Google アカウントでログイン"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "もっと読み込む",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "上位の場所",
-		"LoadMore": "もっと読み込む"
+		"LoadMore": "もっと読み込む",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "クリア",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Title": "Stats",
+		"Products": "製品",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "合計",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -226,15 +239,20 @@
 		"MyPrices": "私の価格",
 		"MyProofs": "自分の証拠",
 		"Settings": "設定",
-		"Title": "Dashboard"
+		"Title": "Dashboard",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "もっと読み込む"
+		"LoadMore": "もっと読み込む",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "もっと読み込む",
-		"Title": "上位貢献者:"
+		"Title": "上位貢献者:",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
 		"LanguageLabel": "言語",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "保存",
 		"Title": "設定",
 		"TranslationCompletion": "翻訳は {completion}% 完了しています。",
