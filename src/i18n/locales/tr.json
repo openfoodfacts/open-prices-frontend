@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Son fiyatlar",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Daha fazla yükle",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "Ayarlar",
 		"Title": "Gösterge paneli"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Dil henüz desteklenmiyor; dil varsayılan olarak İngilizce olarak ayarlanacak",
 		"Save": "Kaydet",
 		"Title": "Ayarlar",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Daha fazla dile çevirmemize yardımcı olun"
 	}
 }
