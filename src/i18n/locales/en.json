@@ -240,11 +240,13 @@
 		"MyProofs": "My proofs",
 		"Settings": "Settings",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LoadMore": "Load more",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Load more",
