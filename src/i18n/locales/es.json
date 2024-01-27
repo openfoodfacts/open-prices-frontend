@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Carga más",
-		"TopProducts": "Productos destacados"
+		"TopProducts": "Productos destacados",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Filtros",
+		"Order": "Orden"
 	},
 	"Common": {
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Últimos precios",
 		"LoadMore": "Carga más",
-		"LocationNotFound": "Ubicación no encontrada en OpenStreetMap... No dudes en agregarla :)"
+		"LocationNotFound": "Ubicación no encontrada en OpenStreetMap... No dudes en agregarla :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Ubicaciones destacadas",
-		"LoadMore": "Carga más"
+		"LoadMore": "Carga más",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Limpiar",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Precios",
 		"ProductsWithPrices": "Productos con precios",
-		"Title": "Estadísticas"
+		"Title": "Estadísticas",
+		"Products": "Productos",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Total",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Últimos precios",
@@ -226,15 +239,20 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"Settings": "Configuración",
-		"Title": "Panel de control"
+		"Title": "Panel de control",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Últimos precios",
-		"LoadMore": "Carga más"
+		"LoadMore": "Carga más",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Carga más",
-		"Title": "Colaboradores destacados"
+		"Title": "Colaboradores destacados",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Añadiendo precios",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Moneda",
 		"DefaultCurrency": "Moneda predeterminada",
 		"LanguageLabel": "Idiomas",
-		"LocaleNotSupported": "Idioma aún no admitido; el idioma predeterminado será el inglés",
 		"Save": "Guardar",
 		"Title": "Configuración",
 		"TranslationCompletion": "Translation is {completion}% complete.",
