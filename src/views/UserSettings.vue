@@ -13,13 +13,17 @@
               v-model="userSettingsForm.selectedLanguage"
               :label="$t('UserSettings.LanguageLabel')"
               :items="languageList"
-              item-title="name"
+              item-title="native"
               return-object
               hide-details="auto"
             ></v-autocomplete>
 
             <br />
             <p>
+              <i18n-t v-if="this.languageTranslationCompletion < 80" keypath="UserSettings.TranslationCompletion" tag="span">
+                <template #completion>{{ this.languageTranslationCompletion }}</template>
+              </i18n-t>
+              <span v-if="this.languageTranslationCompletion < 80">&nbsp;</span>
               <a href="https://translate.openfoodfacts.org" target="_blank">
                 {{ $t('UserSettings.TranslationHelp') }}
                 <v-icon size="small" icon="mdi-open-in-new"></v-icon>
@@ -59,6 +63,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
 import localeManager from "../i18n/localeManager.js"
+import languageData from '../i18n/data/languages.json';
 
 
 export default {
@@ -69,26 +74,38 @@ export default {
         currency: null,  // see initUserSettingsForm
       },
       currencyList: constants.CURRENCY_LIST,
-      languageList: constants.LANGUAGE_LIST,
+      languageList: [],
+      languageTranslationCompletion: null,
     }
   },
+  watch:{
+    'userSettingsForm.selectedLanguage': async function () {
+      if (this.userSettingsForm.selectedLanguage !== null) {
+        this.languageTranslationCompletion = await localeManager.calculateTranslationCompletion(this.userSettingsForm.selectedLanguage.code)
+      }
+    },
 
+  },
   computed: {
     ...mapStores(useAppStore),
     formFilled() {
       return Object.values(this.userSettingsForm).every(x => !!x)
     },
   },
-  mounted() {
+  async mounted() {
+    const languageListCode = await localeManager.getLocales()
+    this.languageList = languageListCode.map(code => {
+        const language = languageData.find(lang => lang.code === code)
+        return language ? language : null
+    }).filter(language => language !== null)
     this.initUserSettingsForm()
   },
   methods: {
     initUserSettingsForm() {
       this.userSettingsForm.currency = this.appStore.user.last_currency_used
-      this.userSettingsForm.selectedLanguage = constants.LANGUAGE_LIST.find(lang => lang.code === localeManager.guessDefaultLocale()) || constants.LANGUAGE_LIST[0]
+      this.userSettingsForm.selectedLanguage = this.languageList.find(lang => lang.code === localeManager.guessDefaultLocale()) || this.languageList.find(lang => lang.code === 'en')
     },
     async updateSettings() {
-      console.log(this.userSettingsForm.selectedLanguage)
       await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage.code)
       this.appStore.setLanguage(this.userSettingsForm.selectedLanguage)
       this.appStore.setLastCurrencyUsed(this.userSettingsForm.currency)
