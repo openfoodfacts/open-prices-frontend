@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Weitere laden",
-		"TopProducts": "Top-Produkte"
+		"TopProducts": "Top-Produkte",
+		"BrandProductTotal": "{count} Produkte",
+		"Filter": "Filter",
+		"Order": "Reihenfolge"
 	},
 	"Common": {
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Aktuelle Preise",
 		"LoadMore": "Weitere laden",
-		"LocationNotFound": "Standort nicht in OpenStreetMap gefunden ... Zögern Sie nicht, ihn hinzuzufügen 🙂"
+		"LocationNotFound": "Standort nicht in OpenStreetMap gefunden ... Zögern Sie nicht, ihn hinzuzufügen 🙂",
+		"LocationPriceTotal": "{count} Preise"
 	},
 	"LocationList": {
 		"Title": "Top-Standorte",
-		"LoadMore": "Weitere laden"
+		"LoadMore": "Weitere laden",
+		"LocationTotal": "{count} Standorte",
+		"LocationPriceCount": "{count} Preise"
 	},
 	"LocationSelector": {
 		"Clear": "Leeren",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Preise",
 		"ProductsWithPrices": "Produkte mit Preisen",
-		"Title": "Statistiken"
+		"Title": "Statistiken",
+		"Products": "Produkte",
+		"Locations": "Orte",
+		"Users": "Benutzer",
+		"Total": "Gesamt",
+		"WithPrice": "Mit einem Preis",
+		"WithProduct": "Mit einem Produkt",
+		"WithoutProduct": "Ohne Produkt"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Aktuelle Preise",
@@ -226,15 +239,20 @@
 		"MyPrices": "Mein Preise",
 		"MyProofs": "Meine Belege",
 		"Settings": "Einstellungen",
-		"Title": "Übersicht"
+		"Title": "Übersicht",
+		"UserPriceTotal": "{count} Preise",
+		"UserProofTotal": "{count} Belege"
 	},
 	"UserDetail": {
 		"LatestPrices": "Aktuelle Preise",
-		"LoadMore": "Weitere laden"
+		"LoadMore": "Weitere laden",
+		"UserPriceTotal": "{count} Preise"
 	},
 	"UserList": {
 		"LoadMore": "Weitere laden",
-		"Title": "Aktivste Mitwirkende"
+		"Title": "Aktivste Mitwirkende",
+		"UserTotal": "{count} Mitwirkende",
+		"UserPriceCount": "{count} Preise"
 	},
 	"UserSettings": {
 		"AddingPrices": "Preise hinzufügen",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Währung",
 		"DefaultCurrency": "Standardwährung",
 		"LanguageLabel": "Sprachen",
-		"LocaleNotSupported": "Diese Sprache wird noch nicht unterstützt. Die Sprache wird auf Englisch festgelegt.",
 		"Save": "Speichern",
 		"Title": "Einstellungen",
 		"TranslationCompletion": "Die Übersetzung ist zu {completion}% abgeschlossen.",

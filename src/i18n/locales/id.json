@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Muat lebih banyak",
-		"TopProducts": "Top products"
+		"TopProducts": "Top products",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Filter",
+		"Order": "Order"
 	},
 	"Common": {
 		"SignInOFFAccount": "Sign in with your {url} account"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Muat lebih banyak",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Top locations",
-		"LoadMore": "Muat lebih banyak"
+		"LoadMore": "Muat lebih banyak",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Hapus",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Title": "Stats",
+		"Products": "Produk - produk",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Total",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -226,15 +239,20 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"Settings": "Pengaturan",
-		"Title": "Dashboard"
+		"Title": "Dashboard",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Muat lebih banyak"
+		"LoadMore": "Muat lebih banyak",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Muat lebih banyak",
-		"Title": "Top contributors"
+		"Title": "Top contributors",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
 		"LanguageLabel": "Bahasa",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "menyimpan ",
 		"Title": "Pengaturan",
 		"TranslationCompletion": "Translation is {completion}% complete.",

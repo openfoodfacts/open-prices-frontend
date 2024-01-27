@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Indlæs mere",
-		"TopProducts": "Top products"
+		"TopProducts": "Top products",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Filtrere",
+		"Order": "Order"
 	},
 	"Common": {
 		"SignInOFFAccount": "Log på med din {url} konto"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Indlæs mere",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Top locations",
-		"LoadMore": "Indlæs mere"
+		"LoadMore": "Indlæs mere",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Ryd",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Title": "Stats",
+		"Products": "Produkter",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "I alt",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -226,15 +239,20 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"Settings": "Indstillinger",
-		"Title": "Dashboard"
+		"Title": "Dashboard",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Indlæs mere"
+		"LoadMore": "Indlæs mere",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Indlæs mere",
-		"Title": "Top contributors"
+		"Title": "Top contributors",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
 		"LanguageLabel": "Sprog",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Gem",
 		"Title": "Indstillinger",
 		"TranslationCompletion": "Translation is {completion}% complete.",

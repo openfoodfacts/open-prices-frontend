@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Načíst další",
-		"TopProducts": "Nejlepší produkty"
+		"TopProducts": "Nejlepší produkty",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Filtr",
+		"Order": "Pořadí"
 	},
 	"Common": {
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Nejnovější ceny",
 		"LoadMore": "Načíst další",
-		"LocationNotFound": "Poloha nebyla nalezena v OpenStreetMap... Neváhejte ji přidat :)"
+		"LocationNotFound": "Poloha nebyla nalezena v OpenStreetMap... Neváhejte ji přidat :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Nejlepší polohy",
-		"LoadMore": "Načíst další"
+		"LoadMore": "Načíst další",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Vymazat",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Ceny",
 		"ProductsWithPrices": "Produkty s cenami",
-		"Title": "Statistiky"
+		"Title": "Statistiky",
+		"Products": "Produkty",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Celkem",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Nejnovější ceny",
@@ -226,15 +239,20 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"Settings": "Nastavení",
-		"Title": "Nástěnka"
+		"Title": "Nástěnka",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Nejnovější ceny",
-		"LoadMore": "Načíst další"
+		"LoadMore": "Načíst další",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Načíst další",
-		"Title": "Nejlepší přispěvatelé"
+		"Title": "Nejlepší přispěvatelé",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Přidávání cen",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Měna",
 		"DefaultCurrency": "Výchozí měna",
 		"LanguageLabel": "Jazyky",
-		"LocaleNotSupported": "Jazyk zatím není podporován, výchozím jazykem bude angličtina",
 		"Save": "Uložit",
 		"Title": "Nastavení",
 		"TranslationCompletion": "Translation is {completion}% complete.",

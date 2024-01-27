@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Завантажити більше",
-		"TopProducts": "Top products"
+		"TopProducts": "Top products",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Фільтр",
+		"Order": "Order"
 	},
 	"Common": {
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Завантажити більше",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Топ локацій",
-		"LoadMore": "Завантажити більше"
+		"LoadMore": "Завантажити більше",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Очистити",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Title": "Stats",
+		"Products": "Товари",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Усього",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -226,15 +239,20 @@
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
 		"Settings": "Налаштування",
-		"Title": "Dashboard"
+		"Title": "Dashboard",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Завантажити більше"
+		"LoadMore": "Завантажити більше",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Завантажити більше",
-		"Title": "Найактивніші користувачі"
+		"Title": "Найактивніші користувачі",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
 		"LanguageLabel": "Мови",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Зберегти",
 		"Title": "Налаштування",
 		"TranslationCompletion": "Переклад виконано на {completion}%.",

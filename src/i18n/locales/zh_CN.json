@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "显示更多",
-		"TopProducts": "Top products"
+		"TopProducts": "Top products",
+		"BrandProductTotal": "{count} products",
+		"Filter": "过滤器",
+		"Order": "Order"
 	},
 	"Common": {
 		"SignInOFFAccount": "Sign in with your {url} account"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "显示更多",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Top locations",
-		"LoadMore": "显示更多"
+		"LoadMore": "显示更多",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "清除",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Title": "Stats",
+		"Products": "产品",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "总计",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -226,15 +239,20 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"Settings": "设置",
-		"Title": "Dashboard"
+		"Title": "Dashboard",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "显示更多"
+		"LoadMore": "显示更多",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "显示更多",
-		"Title": "Top contributors"
+		"Title": "Top contributors",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
 		"LanguageLabel": "语言",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "保存",
 		"Title": "设置",
 		"TranslationCompletion": "Translation is {completion}% complete.",

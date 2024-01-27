@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "crwdns246604:0crwdne246604:0",
-		"TopProducts": "crwdns246916:0crwdne246916:0"
+		"TopProducts": "crwdns246916:0crwdne246916:0",
+		"BrandProductTotal": "crwdns246950:0{count}crwdne246950:0",
+		"Filter": "crwdns246952:0crwdne246952:0",
+		"Order": "crwdns246954:0crwdne246954:0"
 	},
 	"Common": {
 		"SignInOFFAccount": "crwdns246910:0{url}crwdne246910:0"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "crwdns246632:0crwdne246632:0",
 		"LoadMore": "crwdns246634:0crwdne246634:0",
-		"LocationNotFound": "crwdns246636:0crwdne246636:0"
+		"LocationNotFound": "crwdns246636:0crwdne246636:0",
+		"LocationPriceTotal": "crwdns246956:0{count}crwdne246956:0"
 	},
 	"LocationList": {
 		"Title": "crwdns246838:0crwdne246838:0",
-		"LoadMore": "crwdns246828:0crwdne246828:0"
+		"LoadMore": "crwdns246828:0crwdne246828:0",
+		"LocationTotal": "crwdns246958:0{count}crwdne246958:0",
+		"LocationPriceCount": "crwdns246960:0{count}crwdne246960:0"
 	},
 	"LocationSelector": {
 		"Clear": "crwdns246888:0crwdne246888:0",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "crwdns246720:0crwdne246720:0",
 		"ProductsWithPrices": "crwdns246722:0crwdne246722:0",
-		"Title": "crwdns246724:0crwdne246724:0"
+		"Title": "crwdns246724:0crwdne246724:0",
+		"Products": "crwdns246962:0crwdne246962:0",
+		"Locations": "crwdns246964:0crwdne246964:0",
+		"Users": "crwdns246966:0crwdne246966:0",
+		"Total": "crwdns246968:0crwdne246968:0",
+		"WithPrice": "crwdns246970:0crwdne246970:0",
+		"WithProduct": "crwdns246972:0crwdne246972:0",
+		"WithoutProduct": "crwdns246974:0crwdne246974:0"
 	},
 	"UserDashboard": {
 		"LatestPrices": "crwdns246726:0crwdne246726:0",
@@ -226,15 +239,20 @@
 		"MyPrices": "crwdns246940:0crwdne246940:0",
 		"MyProofs": "crwdns246948:0crwdne246948:0",
 		"Settings": "crwdns246942:0crwdne246942:0",
-		"Title": "crwdns246730:0crwdne246730:0"
+		"Title": "crwdns246730:0crwdne246730:0",
+		"UserPriceTotal": "crwdns246976:0{count}crwdne246976:0",
+		"UserProofTotal": "crwdns246978:0{count}crwdne246978:0"
 	},
 	"UserDetail": {
 		"LatestPrices": "crwdns246732:0crwdne246732:0",
-		"LoadMore": "crwdns246734:0crwdne246734:0"
+		"LoadMore": "crwdns246734:0crwdne246734:0",
+		"UserPriceTotal": "crwdns246980:0{count}crwdne246980:0"
 	},
 	"UserList": {
 		"LoadMore": "crwdns246832:0crwdne246832:0",
-		"Title": "crwdns246846:0crwdne246846:0"
+		"Title": "crwdns246846:0crwdne246846:0",
+		"UserTotal": "crwdns246982:0{count}crwdne246982:0",
+		"UserPriceCount": "crwdns246984:0{count}crwdne246984:0"
 	},
 	"UserSettings": {
 		"AddingPrices": "crwdns246736:0crwdne246736:0",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "crwdns246742:0crwdne246742:0",
 		"DefaultCurrency": "crwdns246744:0crwdne246744:0",
 		"LanguageLabel": "crwdns246754:0crwdne246754:0",
-		"LocaleNotSupported": "crwdns246748:0crwdne246748:0",
 		"Save": "crwdns246750:0crwdne246750:0",
 		"Title": "crwdns246752:0crwdne246752:0",
 		"TranslationCompletion": "crwdns246944:0{completion}crwdne246944:0",

@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Load more",
-		"TopProducts": "Top products"
+		"TopProducts": "Top products",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Filter",
+		"Order": "Order"
 	},
 	"Common": {
 		"SignInOFFAccount": "Sign in with your {url} account"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Top locations",
-		"LoadMore": "Load more"
+		"LoadMore": "Load more",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Sfeḍ",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats"
+		"Title": "Stats",
+		"Products": "Ifarisen",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Total",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -226,15 +239,20 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"Settings": "Iɣewwaren",
-		"Title": "Dashboard"
+		"Title": "Dashboard",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LoadMore": "Load more",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Load more",
-		"Title": "Top contributors"
+		"Title": "Top contributors",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
 		"LanguageLabel": "Tutlayin",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Sekles",
 		"Title": "Iɣewwaren",
 		"TranslationCompletion": "Translation is {completion}% complete.",

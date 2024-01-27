@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Scarica altro",
-		"TopProducts": "Prodotti migliori"
+		"TopProducts": "Prodotti migliori",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Filtra",
+		"Order": "Ordine"
 	},
 	"Common": {
 		"SignInOFFAccount": "Sign in with your {url} account"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Ultimi prezzi",
 		"LoadMore": "Scarica altro",
-		"LocationNotFound": "Posizione non trovata in OpenStreetMap... Non esitate ad aggiungerla :)"
+		"LocationNotFound": "Posizione non trovata in OpenStreetMap... Non esitate ad aggiungerla :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Posizioni migliori",
-		"LoadMore": "Scarica altro"
+		"LoadMore": "Scarica altro",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Cancella",
@@ -217,24 +223,36 @@
 	"Stats": {
 		"Prices": "Prezzi",
 		"ProductsWithPrices": "Prodotti con prezzi",
-		"Title": "Statistiche"
+		"Title": "Statistiche",
+		"Products": "Prodotti",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Totale",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Ultimi prezzi",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "Ultime prove",
 		"LoadMore": "Scarica altro",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "I miei prezzi",
+		"MyProofs": "Le mie prove",
 		"Settings": "Impostazioni",
-		"Title": "Cruscotto"
+		"Title": "Cruscotto",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Scarica altro"
+		"LoadMore": "Scarica altro",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Scarica altro",
-		"Title": "Collaboratori principali"
+		"Title": "Collaboratori principali",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Aggiunta di prezzi",
@@ -243,10 +261,9 @@
 		"CurrencyLabel": "Moneta",
 		"DefaultCurrency": "Valuta predefinita",
 		"LanguageLabel": "Lingue",
-		"LocaleNotSupported": "Lingua non ancora supportata, la lingua predefinita sarà l'inglese",
 		"Save": "Salva",
 		"Title": "Impostazioni",
-		"TranslationCompletion": "Translation is {completion}% complete.",
+		"TranslationCompletion": "La traduzione è completa al {completion}%.",
 		"TranslationHelp": "Help us translate more languages"
 	}
 }

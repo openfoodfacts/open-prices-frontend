@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "לטעון עוד",
-		"TopProducts": "מוצרים מובילים"
+		"TopProducts": "מוצרים מובילים",
+		"BrandProductTotal": "{count} products",
+		"Filter": "סינון",
+		"Order": "סדר"
 	},
 	"Common": {
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "מחירים עדכניים",
 		"LoadMore": "לטעון עוד",
-		"LocationNotFound": "המקום לא נמצא ב־OpenStreetMap… אפשר להוסיף אותו ללא חשש :)"
+		"LocationNotFound": "המקום לא נמצא ב־OpenStreetMap… אפשר להוסיף אותו ללא חשש :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "מקומות מובילים",
-		"LoadMore": "לטעון עוד"
+		"LoadMore": "לטעון עוד",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "פינוי",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "מחירים",
 		"ProductsWithPrices": "מוצרים עם מחירים",
-		"Title": "סטטיסטיקה"
+		"Title": "סטטיסטיקה",
+		"Products": "מוצרים",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "סך הכול",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "מחירים עדכניים",
@@ -226,15 +239,20 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"Settings": "הגדרות",
-		"Title": "לוח בקרה"
+		"Title": "לוח בקרה",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "מחירים עדכניים",
-		"LoadMore": "לטעון עוד"
+		"LoadMore": "לטעון עוד",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "לטעון עוד",
-		"Title": "תורמים מובילים"
+		"Title": "תורמים מובילים",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "הוספת מחירים",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "מטבע",
 		"DefaultCurrency": "מטבע ברירת מחדל",
 		"LanguageLabel": "שפות",
-		"LocaleNotSupported": "השפה עדיין לא נתמכת, תיסוג לאנגלית",
 		"Save": "שמירה",
 		"Title": "הגדרות",
 		"TranslationCompletion": "Translation is {completion}% complete.",
