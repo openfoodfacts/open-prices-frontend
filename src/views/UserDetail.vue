@@ -5,7 +5,7 @@
         <v-card-text>
           <v-chip label size="small" density="comfortable" class="mr-1">
             <v-icon start icon="mdi-tag-outline"></v-icon>
-            {{ userPriceTotal }} prices
+            {{ $t('UserDetail.UserPriceTotal', { count: userPriceTotal }) }}
           </v-chip>
         </v-card-text>
       </v-card>

@@ -7,7 +7,7 @@
   <v-row v-if="!loading">
     <v-col>
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-account-badge-outline">
-        {{ userTotal }} contributors
+        {{ $t('UserList.UserTotal', { count: userTotal }) }}
       </v-chip>
     </v-col>
   </v-row>
@@ -23,7 +23,7 @@
         <v-card-text>
           <v-chip label size="small" density="comfortable" :color="getUserPriceCountColor(user)" class="mr-1">
             <v-icon start icon="mdi-tag-outline"></v-icon>
-            {{ user.price_count }} prices
+            {{ $t('UserList.UserPriceCount', { count: user.price_count }) }}
           </v-chip>
         </v-card-text>
       </v-card>

@@ -6,7 +6,7 @@
   <v-row>
     <v-col>
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-multiple-outline">
-        {{ userPriceTotal }}<span class="d-none d-sm-inline">&nbsp;prices</span>
+        {{ $t('UserDashboard.UserPriceTotal', { count: userPriceTotal }) }}
       </v-chip>
       <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
         {{ $t('UserDashboard.Title') }}
