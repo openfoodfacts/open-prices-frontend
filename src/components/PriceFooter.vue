@@ -11,11 +11,7 @@
       {{ price.owner }}
     </v-chip>
 
-    <v-chip label size="small" density="comfortable">
-      <v-icon start icon="mdi-clock-outline"></v-icon>
-      {{ getRelativeDateTimeFormatted(price.created) }}
-      <v-tooltip activator="parent" location="top">{{ getDateTimeFormatted(price.created) }}</v-tooltip>
-    </v-chip>
+    <RelativeDateTimeChip :dateTime="price.created"></RelativeDateTimeChip>
 
     <PriceProof v-if="price.proof && price.proof.is_public" :proof="price.proof"></PriceProof>
   </div>
@@ -24,10 +20,12 @@
 <script>
 import utils from '../utils.js'
 import PriceProof from '../components/PriceProof.vue'
+import RelativeDateTimeChip from '../components/RelativeDateTimeChip.vue'
 
 export default {
   components: {
-    PriceProof
+    RelativeDateTimeChip,
+    PriceProof,
   },
   props: {
     'price': null,
@@ -57,12 +55,6 @@ export default {
         return utils.getCountryEmojiFromName(this.price.location.osm_address_country)
       }
       return null
-    },
-    getDateTimeFormatted(dateString) {
-      return utils.prettyDateTime(dateString)
-    },
-    getRelativeDateTimeFormatted(dateTimeString) {
-      return utils.prettyRelativeDateTime(dateTimeString, 'shortest')
     },
     goToLocation() {
       if (this.readonly) {

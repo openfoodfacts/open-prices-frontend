@@ -23,11 +23,7 @@
 
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="proof in userProofList" :key="proof">
-      <v-card>
-        <v-card-text>
-          <v-img :src="getProofUrl(proof)"></v-img>
-        </v-card-text>
-      </v-card>
+      <ProofCard :proof="proof"></ProofCard>
     </v-col>
   </v-row>
 
@@ -42,8 +38,12 @@
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import ProofCard from '../components/ProofCard.vue'
 
 export default {
+  components: {
+    ProofCard,
+  },
   data() {
     return {
       userProofList: [],
@@ -72,9 +72,6 @@ export default {
           this.loading = false
         })
     },
-    getProofUrl(proof) {
-      return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
-    }
   }
 }
 </script>
