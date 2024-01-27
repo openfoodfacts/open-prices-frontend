@@ -119,7 +119,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
-		"Title": "Top locations",
+		"Title": "Geriausios vietos",
 		"LoadMore": "Įkelti daugiau"
 	},
 	"LocationSelector": {
@@ -189,10 +189,10 @@
 			"Title": "Prisijungti"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Geriausi bendraautoriai"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Geriausios vietos"
 		},
 		"TopProducts": {
 			"Title": "Top products"
@@ -221,10 +221,10 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Naujausios kainos",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "Naujausi įrodymai",
 		"LoadMore": "Įkelti daugiau",
 		"MyPrices": "Mano kainos",
-		"MyProofs": "My proofs",
+		"MyProofs": "Mano įrodymai",
 		"Settings": "Nustatymai",
 		"Title": "Prietaisų skydelis"
 	},
@@ -234,7 +234,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Įkelti daugiau",
-		"Title": "Top contributors"
+		"Title": "Geriausi bendraautoriai"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
