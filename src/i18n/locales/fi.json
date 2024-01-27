@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Lataa enemmän",
-		"TopProducts": "Huipputuotteet"
+		"TopProducts": "Huipputuotteet",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Suodata",
+		"Order": "Järjestys"
 	},
 	"Common": {
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Viimeisimmät hinnat",
 		"LoadMore": "Lataa enemmän",
-		"LocationNotFound": "Sijaintia ei löydy OpenStreetMapista... Älä epäröi lisätä sitä :)"
+		"LocationNotFound": "Sijaintia ei löydy OpenStreetMapista... Älä epäröi lisätä sitä :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Huippupaikat",
-		"LoadMore": "Lataa enemmän"
+		"LoadMore": "Lataa enemmän",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Tyhjennä",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Hinnat",
 		"ProductsWithPrices": "Tuotteet hinnoilla",
-		"Title": "Tilastot"
+		"Title": "Tilastot",
+		"Products": "Tuotteet",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Yhteensä",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Viimeisimmät hinnat",
@@ -226,15 +239,20 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"Settings": "Asetukset",
-		"Title": "Kojelauta"
+		"Title": "Kojelauta",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Viimeisimmät hinnat",
-		"LoadMore": "Lataa enemmän"
+		"LoadMore": "Lataa enemmän",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Lataa enemmän",
-		"Title": "Huippuavustajat"
+		"Title": "Huippuavustajat",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Lisätään hintoja",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Valuutta",
 		"DefaultCurrency": "Oletusvaluutta",
 		"LanguageLabel": "Kielet",
-		"LocaleNotSupported": "Kieltä ei vielä tueta, oletuskieli on englanti",
 		"Save": "Tallenna",
 		"Title": "Asetukset",
 		"TranslationCompletion": "Translation is {completion}% complete.",
