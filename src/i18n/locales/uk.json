@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "Завантажити більше",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} продуктів",
 		"Filter": "Фільтр",
 		"Order": "Order"
 	},
@@ -120,13 +120,13 @@
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Завантажити більше",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "{count} цін"
 	},
 	"LocationList": {
 		"Title": "Топ локацій",
 		"LoadMore": "Завантажити більше",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} місць",
+		"LocationPriceCount": "{count} цін"
 	},
 	"LocationSelector": {
 		"Clear": "Очистити",
@@ -225,12 +225,12 @@
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "Товари",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Місцезнаходження",
+		"Users": "Користувачі",
 		"Total": "Усього",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "З ціною",
+		"WithProduct": "З продуктом",
+		"WithoutProduct": "Без продукту"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -240,19 +240,19 @@
 		"MyProofs": "Мої докази",
 		"Settings": "Налаштування",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} цін",
+		"UserProofTotal": "{count} доказів"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Завантажити більше",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} цін"
 	},
 	"UserList": {
 		"LoadMore": "Завантажити більше",
 		"Title": "Найактивніші користувачі",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} учасників",
+		"UserPriceCount": "{count} цін"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
