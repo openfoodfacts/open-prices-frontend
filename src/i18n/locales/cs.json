@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Nejnovější ceny",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Načíst další",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "Nastavení",
 		"Title": "Nástěnka"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Jazyk zatím není podporován, výchozím jazykem bude angličtina",
 		"Save": "Uložit",
 		"Title": "Nastavení",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
 	}
 }
