@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "crwdns246726:0crwdne246726:0",
+		"LatestProofs": "crwdns246946:0crwdne246946:0",
 		"LoadMore": "crwdns246728:0crwdne246728:0",
+		"MyPrices": "crwdns246940:0crwdne246940:0",
+		"MyProofs": "crwdns246948:0crwdne246948:0",
+		"Settings": "crwdns246942:0crwdne246942:0",
 		"Title": "crwdns246730:0crwdne246730:0"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "crwdns246748:0crwdne246748:0",
 		"Save": "crwdns246750:0crwdne246750:0",
 		"Title": "crwdns246752:0crwdne246752:0",
+		"TranslationCompletion": "crwdns246944:0{completion}crwdne246944:0",
 		"TranslationHelp": "crwdns246932:0crwdne246932:0"
 	}
 }
