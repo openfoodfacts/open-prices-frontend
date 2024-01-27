@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "Carregar mais",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} produtos",
 		"Filter": "Filtro",
 		"Order": "Ordem"
 	},
@@ -120,13 +120,13 @@
 		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais",
 		"LocationNotFound": "Localização não encontrada no OpenStreetMap... Não hesite em adicioná-la :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "{count} preços"
 	},
 	"LocationList": {
-		"Title": "Top locations",
+		"Title": "Principais localizações",
 		"LoadMore": "Carregar mais",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} localizações",
+		"LocationPriceCount": "{count} preços"
 	},
 	"LocationSelector": {
 		"Clear": "Limpar",
@@ -198,7 +198,7 @@
 			"Title": "Top contributors"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Principais localizações"
 		},
 		"TopProducts": {
 			"Title": "Top products"
@@ -225,12 +225,12 @@
 		"ProductsWithPrices": "Produtos com preços",
 		"Title": "Estatísticas",
 		"Products": "Produtos",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Localizações",
+		"Users": "Utilizadores",
 		"Total": "Total",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "Com um preço",
+		"WithProduct": "Com um produto",
+		"WithoutProduct": "Sem qualquer produto"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Preços mais recentes",
@@ -240,19 +240,19 @@
 		"MyProofs": "Os meus comprovativos",
 		"Settings": "Configurações",
 		"Title": "Painel de controlo",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} preços",
+		"UserProofTotal": "{count} comprovativos"
 	},
 	"UserDetail": {
 		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} preços"
 	},
 	"UserList": {
 		"LoadMore": "Carregar mais",
 		"Title": "Top contributors",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} colaboradores",
+		"UserPriceCount": "{count} preços"
 	},
 	"UserSettings": {
 		"AddingPrices": "A adicionar preços",
