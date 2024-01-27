@@ -63,6 +63,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
 import localeManager from "../i18n/localeManager.js"
+import languageData from '../i18n/data/languages.json';
 
 
 export default {
@@ -74,7 +75,6 @@ export default {
       },
       currencyList: constants.CURRENCY_LIST,
       languageList: [],
-      languagesData: null,
       languageTranslationCompletion: null,
     }
   },
@@ -94,10 +94,8 @@ export default {
   },
   async mounted() {
     const languageListCode = await localeManager.getLocales()
-    const { default: languagesData } = await import('@/i18n/data/languages.json')
-    this.languagesData = languagesData
     this.languageList = languageListCode.map(code => {
-        const language = this.languagesData.find(lang => lang.code === code)
+        const language = languageData.find(lang => lang.code === code)
         return language ? language : null
     }).filter(language => language !== null)
     this.initUserSettingsForm()
