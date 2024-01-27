@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "מחירים עדכניים",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "לטעון עוד",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "הגדרות",
 		"Title": "לוח בקרה"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "השפה עדיין לא נתמכת, תיסוג לאנגלית",
 		"Save": "שמירה",
 		"Title": "הגדרות",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "נשמח לעזרתך לתרגם לשפות נוספות"
 	}
 }
