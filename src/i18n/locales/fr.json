@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Voir plus",
-		"TopProducts": "Top produits"
+		"TopProducts": "Top produits",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Filtre",
+		"Order": "Ordre"
 	},
 	"Common": {
 		"SignInOFFAccount": "Se connecter avec votre compte {url}"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Derniers prix ajoutés",
 		"LoadMore": "Voir plus",
-		"LocationNotFound": "Ce lieu n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)"
+		"LocationNotFound": "Ce lieu n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Top lieux",
-		"LoadMore": "Voir plus"
+		"LoadMore": "Voir plus",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Effacer",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Prix",
 		"ProductsWithPrices": "Produits avec prix",
-		"Title": "Statistiques"
+		"Title": "Statistiques",
+		"Products": "Produits",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Total",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Derniers prix ajoutés",
@@ -226,15 +239,20 @@
 		"MyPrices": "Mes prix",
 		"MyProofs": "Mes preuves",
 		"Settings": "Paramètres",
-		"Title": "Tableau de bord"
+		"Title": "Tableau de bord",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Derniers prix ajoutés",
-		"LoadMore": "Voir plus"
+		"LoadMore": "Voir plus",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Voir plus",
-		"Title": "Top contributeurs"
+		"Title": "Top contributeurs",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Ajout de prix",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Devise",
 		"DefaultCurrency": "Devise par défaut",
 		"LanguageLabel": "Langue",
-		"LocaleNotSupported": "Cette langue n'est pas encore supportée, la langue sera mise par défaut en anglais",
 		"Save": "Enregistrer",
 		"Title": "Paramètres",
 		"TranslationCompletion": "La traduction est terminée à {completion} %.",
