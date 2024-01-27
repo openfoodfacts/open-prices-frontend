@@ -7,7 +7,7 @@
   <v-row v-if="!loading">
     <v-col>
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-map-marker-outline">
-        {{ locationTotal }} locations
+        {{ $t('LocationList.LocationTotal', { count: locationTotal }) }}
       </v-chip>
     </v-col>
   </v-row>
@@ -24,7 +24,7 @@
         <v-card-text>
           <v-chip label size="small" density="comfortable" :color="getLocationPriceCountColor(location)" class="mr-1">
             <v-icon start icon="mdi-tag-outline"></v-icon>
-            {{ location.price_count }} prices
+            {{ $t('LocationList.LocationPriceCount', { count: location.price_count }) }}
           </v-chip>
         </v-card-text>
       </v-card>

@@ -9,15 +9,14 @@
       <v-card :title="$t('Stats.Prices')" height="100%">
         <v-card-text>
           <p>
-            Total
-            <strong>{{ priceTotal }}</strong>
+            {{ $t('Stats.Total') }} <strong>{{ priceTotal }}</strong>
           </p>
           <p>
-            With a product <v-chip label size="small" density="comfortable" class="mr-1">barcode</v-chip>
+            {{ $t('Stats.WithProduct') }} <v-chip label size="small" density="comfortable" class="mr-1">barcode</v-chip>
             <strong>{{ priceWithProduct }}</strong>
           </p>
           <p>
-            Without a product <v-chip label size="small" density="comfortable" class="mr-1">category</v-chip>
+            {{ $t('Stats.WithoutProduct') }} <v-chip label size="small" density="comfortable" class="mr-1">category</v-chip>
             <strong>{{ priceWithoutProduct }}</strong>
           </p>
         </v-card-text>
@@ -25,45 +24,39 @@
     </v-col>
 
     <v-col cols="12" md="6" lg="4">
-      <v-card title="Products" height="100%">
+      <v-card title="$t('Stats.Products')" height="100%">
         <v-card-text>
           <p>
-            Total
-            <strong>{{ productTotal }}</strong>
+            {{ $t('Stats.Total') }} <strong>{{ productTotal }}</strong>
           </p>
           <p>
-            With a price
-            <strong>{{ productWithPriceTotal }}</strong>
+            {{ $t('Stats.WithPrice') }} <strong>{{ productWithPriceTotal }}</strong>
           </p>
         </v-card-text>
       </v-card>
     </v-col>
 
     <v-col cols="12" md="6" lg="4">
-      <v-card title="Locations" height="100%">
+      <v-card title="$t('Stats.Locations')" height="100%">
         <v-card-text>
           <p>
-            Total
-            <strong>{{ locationTotal }}</strong>
+            {{ $t('Stats.Total') }} <strong>{{ locationTotal }}</strong>
           </p>
           <p>
-            With a price
-            <strong>{{ locationWithPriceTotal }}</strong>
+            {{ $t('Stats.WithPrice') }} <strong>{{ locationWithPriceTotal }}</strong>
           </p>
         </v-card-text>
       </v-card>
     </v-col>
 
     <v-col cols="12" md="6" lg="4">
-      <v-card title="Users" height="100%">
+      <v-card title="$t('Stats.Users')" height="100%">
         <v-card-text>
           <p>
-            Total
-            <strong>{{ userTotal }}</strong>
+            {{ $t('Stats.Total') }} <strong>{{ userTotal }}</strong>
           </p>
           <p>
-            With a price
-            <strong>{{ userWithPriceTotal }}</strong>
+            {{ $t('Stats.WithPrice') }} <strong>{{ userWithPriceTotal }}</strong>
           </p>
         </v-card-text>
       </v-card>

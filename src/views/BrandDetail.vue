@@ -7,7 +7,7 @@
         <v-card-text>
           <v-chip label size="small" density="comfortable" class="mr-1">
             <v-icon start icon="mdi-food-outline"></v-icon>
-            {{ brandProductTotal }} products
+            {{ $t('BrandDetail.BrandProductTotal', { count: brandProductTotal }) }}
           </v-chip>
         </v-card-text>
       </v-card>
@@ -34,7 +34,7 @@
     <v-col>
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">Filter</v-btn>
+          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">{{ $t('BrandDetail.Filter') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="filter in productFilterList" :key="filter.key" :prepend-icon="(productFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="productFilter === filter.key" @click="toggleProductFilter(filter.key)">
@@ -45,7 +45,7 @@
 
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon"  :active="!!productOrder">Order</v-btn>
+          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon"  :active="!!productOrder">{{ $t('BrandDetail.Order') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="order in productOrderList" :key="order.key" :prepend-icon="order.icon" :active="productOrder === order.key" @click="selectProductOrder(order.key)">
