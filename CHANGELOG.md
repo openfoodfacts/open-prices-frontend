@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.34.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.33.1...v1.34.0) (2024-01-27)
+
+
+### Features
+
+* **dashboard:** move prices to seperate page ([#244](https://github.com/openfoodfacts/open-prices-frontend/issues/244)) ([9711825](https://github.com/openfoodfacts/open-prices-frontend/commit/9711825640f1773b993708c7d781ed71e129ce17))
+* **dashboard:** new page with user proofs ([#245](https://github.com/openfoodfacts/open-prices-frontend/issues/245)) ([c73b9d4](https://github.com/openfoodfacts/open-prices-frontend/commit/c73b9d42db48c64de8bbb842cc49333bca62cdec))
+* **i18n:** Add new languages ([#241](https://github.com/openfoodfacts/open-prices-frontend/issues/241)) ([6c8f7f4](https://github.com/openfoodfacts/open-prices-frontend/commit/6c8f7f494c543ffa57887038efb005a4abde5d2f))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#240](https://github.com/openfoodfacts/open-prices-frontend/issues/240)) ([345a2b8](https://github.com/openfoodfacts/open-prices-frontend/commit/345a2b8555d0798c72c9570822c14202d85bd594))
+
 ## [1.33.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.33.0...v1.33.1) (2024-01-26)
 
 
