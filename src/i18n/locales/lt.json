@@ -87,7 +87,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Įkelti daugiau",
-		"TopProducts": "Top products"
+		"TopProducts": "Top products",
+		"BrandProductTotal": "{count} products",
+		"Filter": "Filtras",
+		"Order": "Order"
 	},
 	"Common": {
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra"
@@ -116,11 +119,14 @@
 	"LocationDetail": {
 		"LatestPrices": "Naujausios kainos",
 		"LoadMore": "Įkelti daugiau",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
+		"LocationPriceTotal": "{count} prices"
 	},
 	"LocationList": {
 		"Title": "Geriausios vietos",
-		"LoadMore": "Įkelti daugiau"
+		"LoadMore": "Įkelti daugiau",
+		"LocationTotal": "{count} locations",
+		"LocationPriceCount": "{count} prices"
 	},
 	"LocationSelector": {
 		"Clear": "Clear",
@@ -217,7 +223,14 @@
 	"Stats": {
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Statistika"
+		"Title": "Statistika",
+		"Products": "Produktai",
+		"Locations": "Locations",
+		"Users": "Users",
+		"Total": "Iš viso",
+		"WithPrice": "With a price",
+		"WithProduct": "With a product",
+		"WithoutProduct": "Without a product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Naujausios kainos",
@@ -226,15 +239,20 @@
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
 		"Settings": "Nustatymai",
-		"Title": "Prietaisų skydelis"
+		"Title": "Prietaisų skydelis",
+		"UserPriceTotal": "{count} prices",
+		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Naujausios kainos",
-		"LoadMore": "Įkelti daugiau"
+		"LoadMore": "Įkelti daugiau",
+		"UserPriceTotal": "{count} prices"
 	},
 	"UserList": {
 		"LoadMore": "Įkelti daugiau",
-		"Title": "Geriausi bendraautoriai"
+		"Title": "Geriausi bendraautoriai",
+		"UserTotal": "{count} contributors",
+		"UserPriceCount": "{count} prices"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
@@ -243,7 +261,6 @@
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
 		"LanguageLabel": "Kalbos",
-		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Išsaugoti",
 		"Title": "Nustatymai",
 		"TranslationCompletion": "Užbaigta {completion} % vertimo.",
