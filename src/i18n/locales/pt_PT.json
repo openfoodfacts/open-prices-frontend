@@ -221,10 +221,10 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Preços mais recentes",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "Últimos comprovativos",
 		"LoadMore": "Carregar mais",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Os meus preços",
+		"MyProofs": "Os meus comprovativos",
 		"Settings": "Configurações",
 		"Title": "Painel de controlo"
 	},
@@ -246,7 +246,7 @@
 		"LocaleNotSupported": "Idioma ainda não suportado, o idioma será predefinido para inglês",
 		"Save": "Guardar",
 		"Title": "Configurações",
-		"TranslationCompletion": "Translation is {completion}% complete.",
+		"TranslationCompletion": "A tradução está {completion}% concluída.",
 		"TranslationHelp": "Ajude-nos a traduzir mais idiomas"
 	}
 }
