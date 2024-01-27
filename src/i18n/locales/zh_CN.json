@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "显示更多",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "设置",
 		"Title": "Dashboard"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "保存",
 		"Title": "设置",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
 	}
 }
