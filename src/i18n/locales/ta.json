@@ -223,7 +223,7 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
-		"MyPrices": "My prices",
+		"MyPrices": "எனது விலைகள்",
 		"MyProofs": "My proofs",
 		"Settings": "அமைப்புகள்",
 		"Title": "Dashboard"
@@ -246,7 +246,7 @@
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "சேமி",
 		"Title": "அமைப்புகள்",
-		"TranslationCompletion": "Translation is {completion}% complete.",
+		"TranslationCompletion": "மொழிபெயர்ப்பு {completion}% முடிந்தது.",
 		"TranslationHelp": "Help us translate more languages"
 	}
 }
