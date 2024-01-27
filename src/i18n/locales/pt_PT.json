@@ -69,7 +69,7 @@
 			"Date": "Data",
 			"DateLabel": "Data",
 			"Find": "Pesquisar",
-			"Location": "Shop location",
+			"Location": "Localização da loja",
 			"SelectLocation": "Selecione a sua localização",
 			"Title": "Onde e quando?"
 		}
@@ -130,9 +130,9 @@
 		},
 		"RecentLocations": "Nenhuma localização recente | Localização recente {recentLocationNumber}| Localizações recentes {recentLocationNumber}",
 		"Result": "Resultado {resultNumber} | Resultados {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"SearchByName": "Pesquisar a sua loja por nome e cidade",
+		"Title": "Encontrar o local da sua loja",
+		"Warning": "O motor de pesquisa para encontrar uma loja não é atualmente muito preciso.{newline}Não hesite em acrescentar o nome da rua para limitar os resultados.{newline}Exemplos: Carrefour City 15e Paris ; Sainsbury's Camden Londres"
 	},
 	"NotFound": {
 		"Subtitle": "A página que solicitou parece não existir...",
