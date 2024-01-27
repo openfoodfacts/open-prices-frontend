@@ -221,10 +221,10 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "Останні докази",
 		"LoadMore": "Завантажити більше",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Мої ціни",
+		"MyProofs": "Мої докази",
 		"Settings": "Налаштування",
 		"Title": "Dashboard"
 	},
@@ -246,7 +246,7 @@
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "Зберегти",
 		"Title": "Налаштування",
-		"TranslationCompletion": "Translation is {completion}% complete.",
+		"TranslationCompletion": "Переклад виконано на {completion}%.",
 		"TranslationHelp": "Допоможіть нам перекласти більше мов"
 	}
 }
