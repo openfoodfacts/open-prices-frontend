@@ -221,8 +221,10 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
 		"Settings": "Settings",
 		"Title": "Dashboard"
 	},

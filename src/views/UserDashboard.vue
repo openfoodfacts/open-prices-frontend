@@ -24,6 +24,15 @@
         to="/dashboard/prices">
       </v-card>
     </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('UserDashboard.MyProofs')"
+        :subtitle="userProofTotal"
+        prepend-icon="mdi-image"
+        height="100%"
+        to="/dashboard/proofs">
+      </v-card>
+    </v-col>
   </v-row>
 </template>
 
@@ -36,7 +45,7 @@ export default {
   data() {
     return {
       userPriceTotal: null,
-      userPricePage: 0,
+      userProofTotal: null,
       loading: false,
     }
   },
@@ -48,14 +57,22 @@ export default {
   },
   mounted() {
     this.getUserPriceCount()
+    this.getUserProofCount()
   },
   methods: {
     getUserPriceCount() {
       this.loading = true
-      this.userPricePage += 1
       return api.getPrices({ owner: this.username, size: 1 })
         .then((data) => {
           this.userPriceTotal = data.total
+          this.loading = false
+        })
+    },
+    getUserProofCount() {
+      this.loading = true
+      return api.getProofs({ owner: this.username, size: 1 })
+        .then((data) => {
+          this.userProofTotal = data.total
           this.loading = false
         })
     },
