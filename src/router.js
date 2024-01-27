@@ -3,6 +3,7 @@ import { useAppStore } from './store'
 import Home from './views/Home.vue'
 import SignIn from './views/SignIn.vue'
 import UserDashboard from './views/UserDashboard.vue'
+import UserDashboardPriceList from './views/UserDashboardPriceList.vue'
 import UserSettings from './views/UserSettings.vue'
 import Search from './views/Search.vue'
 import AddPriceHome from './views/AddPriceHome.vue'
@@ -25,6 +26,7 @@ const routes = [
   { path: '/', name: 'home', component: Home, meta: { title: 'Home', icon: 'mdi-home', drawerMenu: true } },
   { path: '/sign-in', name: 'sign-in', component: SignIn, meta: { title: 'SignIn', icon: 'mdi-login', drawerMenu: true, requiresAuth: false } },
   { path: '/dashboard', name: 'dashboard', component: UserDashboard, meta: { title: 'Dashboard', requiresAuth: true } },
+  { path: '/dashboard/prices', name: 'dashboard-prices', component: UserDashboardPriceList, meta: { title: 'My prices', requiresAuth: true } },
   { path: '/settings', name: 'settings', component: UserSettings, meta: { title: 'Settings', requiresAuth: true } },
   { path: '/search', name: 'search', component: Search, meta: { title: 'Search', icon: 'mdi-magnify', drawerMenu: true }},
   { path: '/add', name: 'add-price', component: AddPriceHome, meta: { title: 'AddPrice', icon: 'mdi-plus', drawerMenu: true, color: 'primary', requiresAuth: true }},
