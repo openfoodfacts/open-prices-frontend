@@ -221,7 +221,11 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
+		"LatestProofs": "Latest proofs",
 		"LoadMore": "もっと読み込む",
+		"MyPrices": "My prices",
+		"MyProofs": "My proofs",
+		"Settings": "設定",
 		"Title": "Dashboard"
 	},
 	"UserDetail": {
@@ -242,6 +246,7 @@
 		"LocaleNotSupported": "Language not yet supported, language will be defaulted to English",
 		"Save": "保存",
 		"Title": "設定",
+		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "より多くの言語の翻訳にご協力ください"
 	}
 }
