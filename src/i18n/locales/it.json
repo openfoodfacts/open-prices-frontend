@@ -1,39 +1,39 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Uno scaffale con più cartellini dei prezzi",
+			"Title": "Prodotti multipli"
 		},
 		"PriceCreated": "Prezzo creato!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Uno o più prodotti",
+			"Title": "Ricevuta"
 		},
 		"SignedIn": "Registrato in!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Solo un prezzo",
+			"Title": "Singolo prodotto"
 		},
-		"Thanks": "Thanks",
+		"Thanks": "Grazie",
 		"Title": "Aggiungi un prezzo",
 		"TitleSingle": "Aggiungi un prezzo unico",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "Aggiungi più prezzi in blocco"
 	},
 	"AddPriceMultiple": {
 		"Done": "Fatto",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
+			"Add": "Aggiungi un nuovo prezzo",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Crea",
-			"NewPrice": "New price",
+			"NewPrice": "Nuovo prezzo",
 			"PriceUploaded": "Prezzo creato!",
-			"Upload": "Upload"
+			"Upload": "Carica"
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Le ricevute potrebbero contenere delle informazioni personali, consigliamo di nasconderlee (redarre, piegaare...), prima di scattare la foto.",
-			"Title": "Proof details"
+			"Title": "Dettagli della prova"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Aggiungi più prezzi"
 	},
 	"AddPriceSingle": {
 		"Create": "Crea",
@@ -69,7 +69,7 @@
 			"Date": "Data",
 			"DateLabel": "Data",
 			"Find": "Trova",
-			"Location": "Shop location",
+			"Location": "Posizione negozio",
 			"SelectLocation": "Seleziona la tua posizione",
 			"Title": "Dove quando?"
 		}
@@ -98,7 +98,7 @@
 	"Footer": {
 		"About": "Informazioni",
 		"Stats": "Statistiche",
-		"TagLine": "{name} is an {url} project."
+		"TagLine": "{name} è un progetto {url}."
 	},
 	"Header": {
 		"Dashboard": "Cruscotto",
@@ -113,7 +113,7 @@
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Subtitle": "Un database aperto in crowdsourcing dei prezzi dei prodotti alimentari 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "Benvenuto/a in {name}!"
 		}
 	},
 	"LocationDetail": {
@@ -136,9 +136,9 @@
 		},
 		"RecentLocations": "Nessuna posizione recente | Posizione recente {recentLocationNumber}| Posizioni recenti {recentLocationNumber}",
 		"Result": "Risultato {resultNumber} | Risultati {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"SearchByName": "Cerca il tuo negozio per nome e città",
+		"Title": "Trova la posizione del tuo negozio",
+		"Warning": "Il motore di ricerca per trovare un negozio non è al momento molto preciso.{newline}Non esitare ad aggiungere il nome della strada per restringere i risultati.{newline}Esempi: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
 	"NotFound": {
 		"Subtitle": "La pagina richiesta non sembra esistere...",
@@ -264,6 +264,6 @@
 		"Save": "Salva",
 		"Title": "Impostazioni",
 		"TranslationCompletion": "La traduzione è completa al {completion}%.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationHelp": "Aiutaci a tradurre più lingue"
 	}
 }
