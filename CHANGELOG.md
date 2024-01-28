@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.34.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.34.1...v1.34.2) (2024-01-28)
+
+
+### Bug Fixes
+
+* **l10n:** fix japanese translation formatting error ([d48cefc](https://github.com/openfoodfacts/open-prices-frontend/commit/d48cefc8099d81fc4eeb5d6c4323765b6b506dd1))
+* **l10n:** fix translation keys in Stats page ([8bea154](https://github.com/openfoodfacts/open-prices-frontend/commit/8bea154ae04b50d98b5d2cb78cb459917da8dee6))
+
+
+### Technical
+
+* improve setup instructions ([#246](https://github.com/openfoodfacts/open-prices-frontend/issues/246)) ([351b48c](https://github.com/openfoodfacts/open-prices-frontend/commit/351b48c5cf5135bfc4c21ae309e4a4dbe93f6c4a))
+* **l10n:** New Crowdin translations to review and merge ([#254](https://github.com/openfoodfacts/open-prices-frontend/issues/254)) ([4c113b8](https://github.com/openfoodfacts/open-prices-frontend/commit/4c113b88886114a90ca95e4ab9a48de5b992049c))
+* **l10n:** New Crowdin translations to review and merge ([#257](https://github.com/openfoodfacts/open-prices-frontend/issues/257)) ([866fe10](https://github.com/openfoodfacts/open-prices-frontend/commit/866fe1081c468ac3d4bbaadb23354281be8e8d76))
+* new OpenFoodFacts button component ([#258](https://github.com/openfoodfacts/open-prices-frontend/issues/258)) ([b8a55f9](https://github.com/openfoodfacts/open-prices-frontend/commit/b8a55f910f8dffb19b0b8353c7452d503966d1b2))
+
 ## [1.34.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.34.0...v1.34.1) (2024-01-27)
 
 
