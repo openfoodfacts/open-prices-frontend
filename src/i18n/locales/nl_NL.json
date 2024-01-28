@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "Meer laden",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} producten",
 		"Filter": "Filter",
 		"Order": "Order"
 	},
@@ -120,13 +120,13 @@
 		"LatestPrices": "Laatste prijzen",
 		"LoadMore": "Meer laden",
 		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "{count} prijzen"
 	},
 	"LocationList": {
 		"Title": "Top locaties",
 		"LoadMore": "Meer laden",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} locaties",
+		"LocationPriceCount": "{count} prijzen"
 	},
 	"LocationSelector": {
 		"Clear": "Wissen",
@@ -225,12 +225,12 @@
 		"ProductsWithPrices": "Producten met prijzen",
 		"Title": "Statistieken",
 		"Products": "Producten",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Locaties",
+		"Users": "Gebruikers",
 		"Total": "Totaal",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "Met een prijs",
+		"WithProduct": "Met een product",
+		"WithoutProduct": "Zonder product"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Laatste prijzen",
@@ -240,19 +240,19 @@
 		"MyProofs": "Mijn bewijzen",
 		"Settings": "Instellingen",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} prijzen",
+		"UserProofTotal": "{count} bewijzen"
 	},
 	"UserDetail": {
 		"LatestPrices": "Laatste prijzen",
 		"LoadMore": "Meer laden",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} prijzen"
 	},
 	"UserList": {
 		"LoadMore": "Meer laden",
 		"Title": "Top bijdragers",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} bijdragers",
+		"UserPriceCount": "{count} prijzen"
 	},
 	"UserSettings": {
 		"AddingPrices": "Prijzen toevoegen",
