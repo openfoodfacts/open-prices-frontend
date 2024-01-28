@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "Voir plus",
 		"TopProducts": "Top produits",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} produits",
 		"Filter": "Filtre",
 		"Order": "Ordre"
 	},
@@ -120,13 +120,13 @@
 		"LatestPrices": "Derniers prix ajoutés",
 		"LoadMore": "Voir plus",
 		"LocationNotFound": "Ce lieu n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "{count} prix"
 	},
 	"LocationList": {
 		"Title": "Top lieux",
 		"LoadMore": "Voir plus",
 		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationPriceCount": "{count} prix"
 	},
 	"LocationSelector": {
 		"Clear": "Effacer",
@@ -226,11 +226,11 @@
 		"Title": "Statistiques",
 		"Products": "Produits",
 		"Locations": "Locations",
-		"Users": "Users",
+		"Users": "Utilisateurs",
 		"Total": "Total",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "Avec un prix",
+		"WithProduct": "Avec un produit",
+		"WithoutProduct": "Sans produit"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Derniers prix ajoutés",
@@ -240,19 +240,19 @@
 		"MyProofs": "Mes preuves",
 		"Settings": "Paramètres",
 		"Title": "Tableau de bord",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} prix",
+		"UserProofTotal": "{count} preuves"
 	},
 	"UserDetail": {
 		"LatestPrices": "Derniers prix ajoutés",
 		"LoadMore": "Voir plus",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} prix"
 	},
 	"UserList": {
 		"LoadMore": "Voir plus",
 		"Title": "Top contributeurs",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} contributeur",
+		"UserPriceCount": "{count} prix"
 	},
 	"UserSettings": {
 		"AddingPrices": "Ajout de prix",
