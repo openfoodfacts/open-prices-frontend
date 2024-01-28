@@ -8,10 +8,8 @@
 
   <v-row class="mt-0" v-if="!productNotFound">
     <v-col cols="12">
-      <v-btn size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
-      <v-btn v-if="product.code && product.source" class="ml-2" size="small" append-icon="mdi-open-in-new" :href="getProductOFFUrl(product)" target="_blank">
-        Open Food Facts
-      </v-btn>
+      <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
+      <OpenFoodFactsButton v-if="product.code && product.source" type="product" :value="product.code"></OpenFoodFactsButton>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -57,12 +55,14 @@ import utils from '../utils.js'
 import api from '../services/api'
 import ProductCard from '../components/ProductCard.vue'
 import PriceCard from '../components/PriceCard.vue'
+import OpenFoodFactsButton from '../components/OpenFoodFactsButton.vue'
 import ShareButton from '../components/ShareButton.vue'
 
 export default {
   components: {
     ProductCard,
     PriceCard,
+    OpenFoodFactsButton,
     ShareButton,
   },
   data() {
@@ -125,9 +125,6 @@ export default {
           this.productPriceTotal = data.total
           this.loading = false
         })
-    },
-    getProductOFFUrl(product) {
-      return `https://world.openfoodfacts.org/product/${product.code}`
     },
   }
 }
