@@ -236,7 +236,7 @@
 		"LatestPrices": "מחירים עדכניים",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "לטעון עוד",
-		"MyPrices": "My prices",
+		"MyPrices": "המחירים שלי",
 		"MyProofs": "My proofs",
 		"Settings": "הגדרות",
 		"Title": "לוח בקרה",
@@ -263,7 +263,7 @@
 		"LanguageLabel": "שפות",
 		"Save": "שמירה",
 		"Title": "הגדרות",
-		"TranslationCompletion": "Translation is {completion}% complete.",
+		"TranslationCompletion": "התרגום הושלם ב־{completion}%.",
 		"TranslationHelp": "נשמח לעזרתך לתרגם לשפות נוספות"
 	}
 }
