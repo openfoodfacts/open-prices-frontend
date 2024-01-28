@@ -24,7 +24,7 @@
     </v-col>
 
     <v-col cols="12" md="6" lg="4">
-      <v-card title="$t('Stats.Products')" height="100%">
+      <v-card :title="$t('Stats.Products')" height="100%">
         <v-card-text>
           <p>
             {{ $t('Stats.Total') }} <strong>{{ productTotal }}</strong>
@@ -37,7 +37,7 @@
     </v-col>
 
     <v-col cols="12" md="6" lg="4">
-      <v-card title="$t('Stats.Locations')" height="100%">
+      <v-card :title="$t('Stats.Locations')" height="100%">
         <v-card-text>
           <p>
             {{ $t('Stats.Total') }} <strong>{{ locationTotal }}</strong>
@@ -50,7 +50,7 @@
     </v-col>
 
     <v-col cols="12" md="6" lg="4">
-      <v-card title="$t('Stats.Users')" height="100%">
+      <v-card :title="$t('Stats.Users')" height="100%">
         <v-card-text>
           <p>
             {{ $t('Stats.Total') }} <strong>{{ userTotal }}</strong>
