@@ -16,9 +16,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <v-btn size="small" append-icon="mdi-open-in-new" :href="getBrandOFFUrl()" target="_blank">
-        Open Food Facts
-      </v-btn>
+      <OpenFoodFactsButton type="brand" :value="brand"></OpenFoodFactsButton>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -73,11 +71,13 @@
 import constants from '../constants'
 import api from '../services/api'
 import ProductCard from '../components/ProductCard.vue'
+import OpenFoodFactsButton from '../components/OpenFoodFactsButton.vue'
 import ShareButton from '../components/ShareButton.vue'
 
 export default {
   components: {
     ProductCard,
+    OpenFoodFactsButton,
     ShareButton,
   },
   data() {
@@ -127,9 +127,6 @@ export default {
           this.brandProductTotal = data.total
           this.loading = false
         })
-    },
-    getBrandOFFUrl() {
-      return `https://world.openfoodfacts.org/brand/${this.brand}`
     },
     toggleProductFilter(filterKey) {
       this.productFilter = this.productFilter ? '' : filterKey

@@ -14,9 +14,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <v-btn size="small" append-icon="mdi-open-in-new" :href="getUserOFFUrl()" target="_blank">
-        Open Food Facts
-      </v-btn>
+      <OpenFoodFactsButton type="editor" :value="username"></OpenFoodFactsButton>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -46,11 +44,13 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import PriceCard from '../components/PriceCard.vue'
+import OpenFoodFactsButton from '../components/OpenFoodFactsButton.vue'
 import ShareButton from '../components/ShareButton.vue'
 
 export default {
   components: {
     PriceCard,
+    OpenFoodFactsButton,
     ShareButton,
   },
   data() {
@@ -80,9 +80,6 @@ export default {
           this.userPriceTotal = data.total
           this.loading = false
         })
-    },
-    getUserOFFUrl() {
-      return `https://world.openfoodfacts.org/editor/${this.username}`
     },
   }
 }
