@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "Load more",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} தயாரிப்புகள்",
 		"Filter": "Filter",
 		"Order": "Order"
 	},
@@ -120,13 +120,13 @@
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "{count} விலைகள்"
 	},
 	"LocationList": {
 		"Title": "Top locations",
 		"LoadMore": "Load more",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} இடங்கள்",
+		"LocationPriceCount": "{count} விலைகள்"
 	},
 	"LocationSelector": {
 		"Clear": "Clear",
@@ -225,12 +225,12 @@
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "Products",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "இடங்கள்",
+		"Users": "பயனர்",
 		"Total": "Total",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "ஒரு விலையுடன்",
+		"WithProduct": "ஒரு தயாரிப்புடன்",
+		"WithoutProduct": "ஒரு தயாரிப்பு இல்லாமல்"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -240,19 +240,19 @@
 		"MyProofs": "My proofs",
 		"Settings": "அமைப்புகள்",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} விலைகள்",
+		"UserProofTotal": "{count} சான்றுகள்"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} விலைகள்"
 	},
 	"UserList": {
 		"LoadMore": "Load more",
 		"Title": "Top contributors",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} பங்களிப்பாளர்கள்",
+		"UserPriceCount": "{count} விலைகள்"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",

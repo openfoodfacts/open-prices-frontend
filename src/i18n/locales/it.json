@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "Scarica altro",
 		"TopProducts": "Prodotti migliori",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} prodotti",
 		"Filter": "Filtra",
 		"Order": "Ordine"
 	},
@@ -120,13 +120,13 @@
 		"LatestPrices": "Ultimi prezzi",
 		"LoadMore": "Scarica altro",
 		"LocationNotFound": "Posizione non trovata in OpenStreetMap... Non esitate ad aggiungerla :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "{count} prezzi"
 	},
 	"LocationList": {
 		"Title": "Posizioni migliori",
 		"LoadMore": "Scarica altro",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} posizioni",
+		"LocationPriceCount": "{count} prezzi"
 	},
 	"LocationSelector": {
 		"Clear": "Cancella",
@@ -225,12 +225,12 @@
 		"ProductsWithPrices": "Prodotti con prezzi",
 		"Title": "Statistiche",
 		"Products": "Prodotti",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Posizioni",
+		"Users": "Utenti",
 		"Total": "Totale",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "Con un prezzo",
+		"WithProduct": "Con un prodotto",
+		"WithoutProduct": "Senza prodotto"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Ultimi prezzi",
@@ -240,19 +240,19 @@
 		"MyProofs": "Le mie prove",
 		"Settings": "Impostazioni",
 		"Title": "Cruscotto",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} prezzi",
+		"UserProofTotal": "{count} prove"
 	},
 	"UserDetail": {
 		"LatestPrices": "Ultimi prezzi",
 		"LoadMore": "Scarica altro",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} prezzi"
 	},
 	"UserList": {
 		"LoadMore": "Scarica altro",
 		"Title": "Collaboratori principali",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} contributori",
+		"UserPriceCount": "{count} prezzi"
 	},
 	"UserSettings": {
 		"AddingPrices": "Aggiunta di prezzi",

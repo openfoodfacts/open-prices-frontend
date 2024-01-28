@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "もっと読み込む",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "商品 {{ count}} 個",
 		"Filter": "フィルタ",
 		"Order": "Order"
 	},
@@ -120,13 +120,13 @@
 		"LatestPrices": "Latest prices",
 		"LoadMore": "もっと読み込む",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "商品 {{ count}} 個"
 	},
 	"LocationList": {
 		"Title": "上位の場所",
 		"LoadMore": "もっと読み込む",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} か所",
+		"LocationPriceCount": "商品 {{ count}} 個"
 	},
 	"LocationSelector": {
 		"Clear": "クリア",
@@ -225,12 +225,12 @@
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "製品",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "場所：",
+		"Users": "ユーザー",
 		"Total": "合計",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "価格付き",
+		"WithProduct": "製品付き",
+		"WithoutProduct": "製品なし"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
@@ -240,19 +240,19 @@
 		"MyProofs": "自分の証拠",
 		"Settings": "設定",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "商品 {{ count}} 個",
+		"UserProofTotal": "{count} 件の証明"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "もっと読み込む",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "商品 {{ count}} 個"
 	},
 	"UserList": {
 		"LoadMore": "もっと読み込む",
 		"Title": "上位貢献者:",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} 人の貢献者",
+		"UserPriceCount": "商品 {{ count}} 個"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
