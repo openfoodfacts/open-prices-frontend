@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "Daha fazla yükle",
 		"TopProducts": "En iyi ürünler",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} ürün",
 		"Filter": "Filtrele",
 		"Order": "Sipariş"
 	},
@@ -120,13 +120,13 @@
 		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
 		"LocationNotFound": "OpenStreetMap'te konum bulunamadı... Eklemekten çekinmeyin :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "{count} fiyat"
 	},
 	"LocationList": {
 		"Title": "En iyi yerler",
 		"LoadMore": "Daha fazla yükle",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} konum",
+		"LocationPriceCount": "{count} fiyat"
 	},
 	"LocationSelector": {
 		"Clear": "Temizle",
@@ -225,12 +225,12 @@
 		"ProductsWithPrices": "Fiyatları olan ürünler",
 		"Title": "İstatistikler",
 		"Products": "Ürünler",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Konumlar",
+		"Users": "Kullanıcılar",
 		"Total": "Toplam",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "Bir fiyat ile",
+		"WithProduct": "Bir ürün ile",
+		"WithoutProduct": "Ürün olmadan"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Son fiyatlar",
@@ -240,19 +240,19 @@
 		"MyProofs": "My proofs",
 		"Settings": "Ayarlar",
 		"Title": "Gösterge paneli",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} fiyat",
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} fiyat"
 	},
 	"UserList": {
 		"LoadMore": "Daha fazla yükle",
 		"Title": "En çok katkıda bulunanlar",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} katkıda bulunan",
+		"UserPriceCount": "{count} fiyat"
 	},
 	"UserSettings": {
 		"AddingPrices": "Fiyat ekleme",
