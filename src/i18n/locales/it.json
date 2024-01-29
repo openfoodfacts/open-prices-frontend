@@ -23,7 +23,7 @@
 		"Done": "Fatto",
 		"ProductPriceDetails": {
 			"Add": "Aggiungi un nuovo prezzo",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} prezzo già caricato | {priceAlreadyUploadedNumber} prezzi già caricati",
 			"Create": "Crea",
 			"NewPrice": "Nuovo prezzo",
 			"PriceUploaded": "Prezzo creato!",
@@ -54,7 +54,7 @@
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
 			"OriginLabel": "Origine",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Codice a barre del prodotto",
 			"ScanBarcode": "Scansiona un codice a barre",
 			"TypeBarcode": "Inserisci il codice a barre",
 			"SetProduct": "Imposta un prodotto",
@@ -93,7 +93,7 @@
 		"Order": "Ordine"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Accedi con il tuo profilo di {url}"
 	},
 	"Footer": {
 		"About": "Informazioni",
@@ -108,9 +108,9 @@
 	"Home": {
 		"AddPrice": "Aggiungi un prezzo",
 		"LatestPrices": "Ultimi prezzi",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Cerca un prodotto",
 		"SettingsUpdated": "Impostazioni aggiornate!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"TodayPriceStat": "Nessun prezzo aggiunto oggi | {todayPriceNumber} nuovi prezzi aggiunti oggi | {todayPriceNumber} nuovi prezzi aggiunti oggi!",
 		"Welcome": {
 			"Subtitle": "Un database aperto in crowdsourcing dei prezzi dei prodotti alimentari 🏷🍊💲",
 			"Title": "Benvenuto/a in {name}!"
@@ -158,7 +158,7 @@
 		"Title": "Ultimi prezzi"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Prezzo più recente",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Nome del prodotto sconosciuto"
 	},
@@ -205,18 +205,18 @@
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Codice a barre del prodotto",
 		"Title": "Cerca"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copiato"
 	},
 	"SignIn": {
 		"Button": "Accedi",
 		"Password": "Password",
 		"ServerError": "Errore: errore del server",
 		"Title": "Accedi",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
 		"UsernameLabel": "Nome utente",
 		"WrongCredentials": "Errore: credenziali errate"
 	},
