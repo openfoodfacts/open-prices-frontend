@@ -1,9 +1,11 @@
 import { useAppStore } from '../store'
 import constants from '../constants'
+import localeManager from "../i18n/localeManager.js"
+
 
 const OPENFOODFACTS_PRODUCT_URL = 'https://world.openfoodfacts.org/api/v2/product'
 const NOMINATIM_SEARCH_URL = 'https://nominatim.openstreetmap.org/search'
-
+const OPENFOODFACTS_SEARCH_URL = 'https://search.openfoodfacts.org'
 
 export default {
   signIn(username, password) {
@@ -156,4 +158,29 @@ export default {
     .then((response) => response.json())
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
+
+    /**
+   * Searches the OpenFoodFacts API for categories based on a query string.
+   * @param {string} query - The query string for the request.
+   * @param {string} taxonomyNames - The taxonomy names for the request.
+   * @param {number} size - The size of the response.
+   * @returns {Promise<Array>} A promise that resolves to a list of categories.
+   */
+    async getCategories(query, taxonomyNames, size) {
+      const locale = localeManager.currentLocale;
+      const url = `${OPENFOODFACTS_SEARCH_URL}/autocomplete?q=${query}&taxonomy_names=${taxonomyNames}&lang=${locale}&size=${size}`;
+      console.log(url);
+      // for dev I used this proxy to avoid CORS errors https://stackoverflow.com/a/74410781
+      const proxyUrl = 'https://api.allorigins.win/get?url=';
+
+      const response = await fetch(proxyUrl + encodeURIComponent(url), {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const responseJSON = await response.json();
+      const usableData = JSON.parse(responseJSON.contents);
+      return usableData.options;
+    },
 }
