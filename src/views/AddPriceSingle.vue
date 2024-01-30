@@ -49,11 +49,14 @@
                   <v-autocomplete
                     :prepend-inner-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
                     v-model="addPriceSingleForm.category_tag"
+                    v-model:search="category_query"
+                    :loading="category_loading"
                     :label="$t('AddPriceSingle.ProductInfo.CategoryLabel')"
                     :items="categoryTags"
-                    :item-title="item => item.name"
+                    :item-title="item => item.text"
                     :item-value="item => item.id"
                     hide-details="auto"
+                    @update:search="updateCategoryTags"
                   ></v-autocomplete>
                 </v-col>
                 <v-col cols="6">
@@ -255,7 +258,7 @@ import ProductCard from '../components/ProductCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import BarcodeManualInput from '../components/BarcodeManualInput.vue'
 import LocationSelector from '../components/LocationSelector.vue'
-import CategoryTags from '../data/category-tags.json'
+//import CategoryTags from '../data/category-tags.json'
 import OriginsTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
 
@@ -300,7 +303,9 @@ export default {
         {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}
       ],
       productMode: null,  // 'barcode' or 'category'  // see initPriceSingleForm
-      categoryTags: CategoryTags,  // list of category tags for autocomplete
+      category_query: null,
+      categoryTags: [],  // list of category tags for autocomplete - initialized in mounted with API call to a fixed value
+      category_loading: false,
       originsTags: OriginsTags,  // list of origins tags for autocomplete
       labelsTags: LabelsTags,
       barcodeScanner: false,
@@ -373,6 +378,41 @@ export default {
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
       }
+      // get a list of categories to init the autocomplete - might be replaced with hardcoded categories
+      const initVal = 'a'
+      this.queryCategory(initVal)
+    },
+    queryCategory(newVal) {
+      this.loading = true
+      if (newVal && newVal.length > 0) {
+        this.category_loading = true
+        api
+          .getCategories(newVal, 'category', 10)
+          .then((data) => {
+            this.category_loading = false
+            if (data) {
+              this.categoryTags = data
+            } else {
+              console.error('No categories returned from API');
+            }
+          })
+          .catch((error) => {
+            console.error('Error fetching categories:', error);
+            this.loading = false
+            this.category_loading = false
+          })
+      } else {
+        this.loading = false
+      }
+    },
+    updateCategoryTags(newVal) {
+      const selectedItem = this.categoryTags.find(item => item.id === this.addPriceSingleForm.category_tag);
+      const selectedItemText = selectedItem ? selectedItem.text : null;
+
+      if (newVal && newVal !== selectedItemText) {
+        this.queryCategory(newVal);
+      }
+      console.log("updateCategorySearchInput triggered:",  newVal)
     },
     clearProof() {
       this.proofImage = null

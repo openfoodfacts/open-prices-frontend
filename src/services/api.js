@@ -171,9 +171,9 @@ export default {
       const url = `${OPENFOODFACTS_SEARCH_URL}/autocomplete?q=${query}&taxonomy_names=${taxonomyNames}&lang=${locale}&size=${size}`;
       console.log(url);
       // for dev I used this proxy to avoid CORS errors https://stackoverflow.com/a/74410781
-      const proxyUrl = 'https://api.allorigins.win/get?url=';
-
-      const response = await fetch(proxyUrl + encodeURIComponent(url), {
+      //const proxyUrl = 'https://api.allorigins.win/get?url=';
+      //const response = await fetch(proxyUrl + encodeURIComponent(url), {
+      const response = await fetch(url, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

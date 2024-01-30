@@ -374,7 +374,7 @@ export default {
       ],
       productMode: null,
       category_query: null,
-      categoryTags: null,  // list of category tags for autocomplete - initialized in mounted with API call to a fixed value
+      categoryTags: [],  // list of category tags for autocomplete - initialized in mounted with API call to a fixed value
       category_loading: false,
       originsTags: OriginsTags,  // list of origins tags for autocomplete
       labelsTags: LabelsTags,
@@ -617,16 +617,6 @@ export default {
         this.productPriceForm.labels_tags = []
         this.product = null
       }
-    },
-    category_query (val) {
-      const selectedItem = this.categoryTags.find(item => item.id === this.productPriceForm.category_tag);
-      const selectedItemText = selectedItem ? selectedItem.text : null;
-
-      if (val && val !== selectedItemText) {
-        this.queryCategory(val);
-        console.log("category_query triggered:",  val)
-      }
-      
     },
   }
 }
