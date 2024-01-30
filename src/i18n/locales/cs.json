@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "Načíst další",
 		"TopProducts": "Nejlepší produkty",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} produktů",
 		"Filter": "Filtr",
 		"Order": "Pořadí"
 	},
@@ -98,7 +98,7 @@
 	"Footer": {
 		"About": "O aplikaci",
 		"Stats": "Statistiky",
-		"TagLine": "{name} is an {url} project."
+		"TagLine": "{name} je projekt {url}."
 	},
 	"Header": {
 		"Dashboard": "Nástěnka",
@@ -113,20 +113,20 @@
 		"TodayPriceStat": "Dnes nebyly přidány žádné ceny | Dnes přidány {todayPriceNumber} nové ceny | Dnes přidáno {todayPriceNumber} nových cen!",
 		"Welcome": {
 			"Subtitle": "Otevřená crowdsourcovaná databáze cen potravin 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "Vítejte v {name}!"
 		}
 	},
 	"LocationDetail": {
 		"LatestPrices": "Nejnovější ceny",
 		"LoadMore": "Načíst další",
 		"LocationNotFound": "Poloha nebyla nalezena v OpenStreetMap... Neváhejte ji přidat :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "{count} cen"
 	},
 	"LocationList": {
 		"Title": "Nejlepší polohy",
 		"LoadMore": "Načíst další",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} poloh",
+		"LocationPriceCount": "{count} cen"
 	},
 	"LocationSelector": {
 		"Clear": "Vymazat",
@@ -225,34 +225,34 @@
 		"ProductsWithPrices": "Produkty s cenami",
 		"Title": "Statistiky",
 		"Products": "Produkty",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Polohy",
+		"Users": "Uživatelé",
 		"Total": "Celkem",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "S cenou",
+		"WithProduct": "S produktem",
+		"WithoutProduct": "Bez produktu"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Nejnovější ceny",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "Nejnovější důkazy",
 		"LoadMore": "Načíst další",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Moje ceny",
+		"MyProofs": "Moje důkazy",
 		"Settings": "Nastavení",
 		"Title": "Nástěnka",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} cen",
+		"UserProofTotal": "{count} důkazů"
 	},
 	"UserDetail": {
 		"LatestPrices": "Nejnovější ceny",
 		"LoadMore": "Načíst další",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} cen"
 	},
 	"UserList": {
 		"LoadMore": "Načíst další",
 		"Title": "Nejlepší přispěvatelé",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} přispěvatelů",
+		"UserPriceCount": "{count} cen"
 	},
 	"UserSettings": {
 		"AddingPrices": "Přidávání cen",
@@ -263,7 +263,7 @@
 		"LanguageLabel": "Jazyky",
 		"Save": "Uložit",
 		"Title": "Nastavení",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationCompletion": "Překlad je z {completion}% dokončen.",
+		"TranslationHelp": "Pomozte nám s překladem dalších jazyků"
 	}
 }
