@@ -44,8 +44,6 @@
 			"LabelFull": "crwdns246774:0crwdne246774:0",
 			"Proof": "crwdns246558:0crwdne246558:0",
 			"ProofUploaded": "crwdns246560:0crwdne246560:0",
-			"Text": "crwdns246562:0{perKg}crwdne246562:0",
-			"TextPerKg": "crwdns246564:0crwdne246564:0",
 			"Title": "crwdns246566:0crwdne246566:0",
 			"UploadProof": "crwdns246568:0crwdne246568:0",
 			"TakePicture": "crwdns246756:0crwdne246756:0",
@@ -63,6 +61,10 @@
 		"ProductModeList": {
 			"Barcode": "crwdns246582:0crwdne246582:0",
 			"Category": "crwdns246584:0crwdne246584:0"
+		},
+		"CategoryPricePer": {
+			"PerKg": "crwdns246990:0crwdne246990:0",
+			"PerUnit": "crwdns246992:0crwdne246992:0"
 		},
 		"Title": "crwdns246586:0crwdne246586:0",
 		"WhereWhen": {
@@ -148,6 +150,7 @@
 		"Discount": "crwdns246776:0crwdne246776:0",
 		"PriceDate": "crwdns246656:0{date}crwdne246656:0",
 		"PriceValueDisplay": "crwdns246658:0{0}crwdne246658:0",
+		"PriceValueDisplayUnit": "crwdns246994:0{0}crwdne246994:0",
 		"Proof": "crwdns246914:0crwdne246914:0",
 		"ProductQuantity": "crwdns246660:0{0}crwdne246660:0",
 		"FullPrice": "crwdns246778:0crwdne246778:0",
