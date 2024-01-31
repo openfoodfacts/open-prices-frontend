@@ -44,8 +44,6 @@
 			"LabelFull": "Täysi hinta",
 			"Proof": "Todiste",
 			"ProofUploaded": "Todiste lähetetty!",
-			"Text": "Hinta {perKg}",
-			"TextPerKg": "per kg",
 			"Title": "Hintatiedot",
 			"UploadProof": "Lähetä todiste",
 			"TakePicture": "Ota kuva",
@@ -63,6 +61,10 @@
 		"ProductModeList": {
 			"Barcode": "Viivakoodi",
 			"Category": "Tuoteluokka"
+		},
+		"CategoryPricePer": {
+			"PerKg": "Price per kg",
+			"PerUnit": "Price per unit"
 		},
 		"Title": "Lisää yksi hinta",
 		"WhereWhen": {
@@ -148,6 +150,7 @@
 		"Discount": "Alennus",
 		"PriceDate": "päivänä {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Todiste",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Täysi hinta",
