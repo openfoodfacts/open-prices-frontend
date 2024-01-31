@@ -44,8 +44,6 @@
 			"LabelFull": "Plná cena",
 			"Proof": "Důkaz",
 			"ProofUploaded": "Důkaz nahrán!",
-			"Text": "Cena {perKg}",
-			"TextPerKg": "za kg",
 			"Title": "Podrobnosti o ceně",
 			"UploadProof": "Nahrát důkaz",
 			"TakePicture": "Vyfotit",
@@ -63,6 +61,10 @@
 		"ProductModeList": {
 			"Barcode": "Čárový kód",
 			"Category": "Kategorie"
+		},
+		"CategoryPricePer": {
+			"PerKg": "Price per kg",
+			"PerUnit": "Price per unit"
 		},
 		"Title": "Přidat jednotnou cenu",
 		"WhereWhen": {
@@ -148,6 +150,7 @@
 		"Discount": "Sleva",
 		"PriceDate": "dne {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Důkaz",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Plná cena",
