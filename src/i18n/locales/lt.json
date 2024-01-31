@@ -44,8 +44,6 @@
 			"LabelFull": "Visa kaina",
 			"Proof": "Įrodymai",
 			"ProofUploaded": "Įrodymai įkelti!",
-			"Text": "Kaina {perKg}",
-			"TextPerKg": "už kg",
 			"Title": "Išsami informacija apie kainą",
 			"UploadProof": "Įkelti įrodymus",
 			"TakePicture": "Fotografuoti",
@@ -63,6 +61,10 @@
 		"ProductModeList": {
 			"Barcode": "Barkodas",
 			"Category": "Kategorija"
+		},
+		"CategoryPricePer": {
+			"PerKg": "Price per kg",
+			"PerUnit": "Price per unit"
 		},
 		"Title": "Pridėti vieną kainą",
 		"WhereWhen": {
@@ -148,6 +150,7 @@
 		"Discount": "Nuolaida",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Įrodymai",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Visa kaina",
