@@ -540,6 +540,8 @@ export default {
       // cleanup form
       if (!this.productPriceForm.product_code) {
         this.productPriceForm.product_code = null
+      } else {
+        this.productPriceForm.price_per = null
       }
       if ((typeof this.productPriceForm.origins_tags === 'string') && (this.productPriceForm.origins_tags.length)) {
         this.productPriceForm.origins_tags = [this.productPriceForm.origins_tags]

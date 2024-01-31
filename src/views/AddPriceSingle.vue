@@ -467,6 +467,8 @@ export default {
       // cleanup form
       if (!this.addPriceSingleForm.product_code) {
         this.addPriceSingleForm.product_code = null
+      } else {
+        this.addPriceSingleForm.price_per = null
       }
       if ((typeof this.addPriceSingleForm.origins_tags === 'string') && (this.addPriceSingleForm.origins_tags.length)) {
         this.addPriceSingleForm.origins_tags = [this.addPriceSingleForm.origins_tags]

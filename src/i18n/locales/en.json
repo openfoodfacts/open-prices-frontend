@@ -150,6 +150,7 @@
 		"Discount": "Discount",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayUnit": "{0} / Unit",
 		"Proof": "Proof",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Full price",
