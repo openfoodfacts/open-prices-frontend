@@ -16,6 +16,7 @@ export default {
     'country', 'state', 'region', 'province', 'district', 'county', 'municipality', 'city', 'borough', 'suburb', 'quarter', 'neighbourhood', 'block', 'city_block', 'plot', 'town', 'village', 'hamlet', 'isolated_dwelling', 'allotments',
     'continent', 'archipelago', 'island', 'islet', 'square', 'locality', 'polder', 'sea', 'ocean',
     'administrative', 'state_district',
-    'fuel', 'gas', 'casino', 'parking', 'parking_space', 'atm', 'residential', 'pedestrian', 'car_sharing', 'primary', 'secondary', 'tertiary'
+    'residential', 'pedestrian', 'car_sharing', 'primary', 'secondary', 'tertiary',
+    'fuel', 'gas', 'casino', 'parking', 'parking_space', 'charging_station', 'atm',
   ],
 }
