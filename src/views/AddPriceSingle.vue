@@ -97,11 +97,14 @@
           <v-divider></v-divider>
           <v-card-text>
             <h3 class="mb-1">
-              <i18n-t keypath="AddPriceSingle.PriceDetails.Text" tag="span">
-                <template #perKg>
-                  <span v-if="productMode === 'category'">{{ $t('AddPriceSingle.PriceDetails.TextPerKg') }}</span>
-                </template>
-              </i18n-t>
+              <v-item-group v-if="productMode === 'category'" v-model="addPriceSingleForm.price_per" class="d-inline" mandatory>
+                <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" :value="cpp.key" v-slot="{ isSelected, toggle }">
+                  <v-chip class="mr-1" @click="toggle" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'">
+                    <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'"></v-icon>
+                    {{ cpp.value }}
+                  </v-chip>
+                </v-item>
+              </v-item-group>
             </h3>
             <v-row>
               <v-col :cols="addPriceSingleForm.price_is_discounted ? '6' : '12'" sm="6">
@@ -284,6 +287,7 @@ export default {
         origins_tags: '',
         labels_tags: [],
         price: null,
+        price_per: null, // see initPriceSingleForm
         price_is_discounted: false,
         price_without_discount: null,
         currency: null,  // see initPriceSingleForm
@@ -313,6 +317,10 @@ export default {
       proofImagePreview: null,
       createProofLoading: false,
       proofSuccessMessage: false,
+      categoryPricePerList: [
+        {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
+        {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
+      ],
     }
   },
   computed: {
@@ -329,7 +337,7 @@ export default {
       return this.productBarcodeFormFilled || this.productCategoryFormFilled
     },
     priceFormFilled() {
-      let keys = ['price', 'currency']
+      let keys = ['price', 'currency', 'price_per']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     proofFormFilled() {
@@ -369,6 +377,7 @@ export default {
        * init product mode, currency & last location
        */
       this.productMode = this.addPriceSingleForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used
+      this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
@@ -458,6 +467,8 @@ export default {
       // cleanup form
       if (!this.addPriceSingleForm.product_code) {
         this.addPriceSingleForm.product_code = null
+      } else {
+        this.addPriceSingleForm.price_per = null
       }
       if ((typeof this.addPriceSingleForm.origins_tags === 'string') && (this.addPriceSingleForm.origins_tags.length)) {
         this.addPriceSingleForm.origins_tags = [this.addPriceSingleForm.origins_tags]

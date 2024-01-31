@@ -47,6 +47,9 @@ export default {
     priceCurrency() {
       return this.price.currency
     },
+    pricePricePer() {
+      return this.price.price_per
+    },
   },
   methods: {
     getPriceValue(priceValue, priceCurrency) {
@@ -59,9 +62,10 @@ export default {
     },
     getPriceValueDisplay(price) {
       if (this.hasCategoryTag) {
-        return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(price, this.priceCurrency)])
+        const translationKey = this.pricePricePer === 'UNIT' ? 'PriceCard.PriceValueDisplayUnit' : 'PriceCard.PriceValueDisplay';
+        return this.$t(translationKey, [this.getPriceValue(price, this.priceCurrency)]);
       }
-      return this.getPriceValue(price, this.priceCurrency)
+      return this.getPriceValue(price, this.priceCurrency);
     },
     getPricePerKilo() {
       const productQuantity = this.productQuantity
