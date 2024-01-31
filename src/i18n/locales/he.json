@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "לטעון עוד",
 		"TopProducts": "מוצרים מובילים",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} מוצרים",
 		"Filter": "סינון",
 		"Order": "סדר"
 	},
@@ -120,13 +120,13 @@
 		"LatestPrices": "מחירים עדכניים",
 		"LoadMore": "לטעון עוד",
 		"LocationNotFound": "המקום לא נמצא ב־OpenStreetMap… אפשר להוסיף אותו ללא חשש :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "{count} מחירים"
 	},
 	"LocationList": {
 		"Title": "מקומות מובילים",
 		"LoadMore": "לטעון עוד",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} מקומות",
+		"LocationPriceCount": "{count} מחירים"
 	},
 	"LocationSelector": {
 		"Clear": "פינוי",
@@ -225,34 +225,34 @@
 		"ProductsWithPrices": "מוצרים עם מחירים",
 		"Title": "סטטיסטיקה",
 		"Products": "מוצרים",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "מקומות",
+		"Users": "משתמשים",
 		"Total": "סך הכול",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "עם מחיר",
+		"WithProduct": "עם מוצר",
+		"WithoutProduct": "בלי מוצר"
 	},
 	"UserDashboard": {
 		"LatestPrices": "מחירים עדכניים",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "ההוכחות העדכניות ביותר",
 		"LoadMore": "לטעון עוד",
 		"MyPrices": "המחירים שלי",
-		"MyProofs": "My proofs",
+		"MyProofs": "ההוכחות שלי",
 		"Settings": "הגדרות",
 		"Title": "לוח בקרה",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} מחירים",
+		"UserProofTotal": "{count} הוכחות"
 	},
 	"UserDetail": {
 		"LatestPrices": "מחירים עדכניים",
 		"LoadMore": "לטעון עוד",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} מחירים"
 	},
 	"UserList": {
 		"LoadMore": "לטעון עוד",
 		"Title": "תורמים מובילים",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} תורמים",
+		"UserPriceCount": "{count} מחירים"
 	},
 	"UserSettings": {
 		"AddingPrices": "הוספת מחירים",

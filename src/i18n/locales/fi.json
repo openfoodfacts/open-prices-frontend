@@ -88,7 +88,7 @@
 	"BrandDetail": {
 		"LoadMore": "Lataa enemmän",
 		"TopProducts": "Huipputuotteet",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} tuotteita",
 		"Filter": "Suodata",
 		"Order": "Järjestys"
 	},
@@ -120,13 +120,13 @@
 		"LatestPrices": "Viimeisimmät hinnat",
 		"LoadMore": "Lataa enemmän",
 		"LocationNotFound": "Sijaintia ei löydy OpenStreetMapista... Älä epäröi lisätä sitä :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationPriceTotal": "{count} hinnat"
 	},
 	"LocationList": {
 		"Title": "Huippupaikat",
 		"LoadMore": "Lataa enemmän",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} sijaintia",
+		"LocationPriceCount": "{count} hinnat"
 	},
 	"LocationSelector": {
 		"Clear": "Tyhjennä",
@@ -225,34 +225,34 @@
 		"ProductsWithPrices": "Tuotteet hinnoilla",
 		"Title": "Tilastot",
 		"Products": "Tuotteet",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Sijainnit",
+		"Users": "Käyttäjät",
 		"Total": "Yhteensä",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "Hinnalla",
+		"WithProduct": "Tuotteen kanssa",
+		"WithoutProduct": "Ilman tuotetta"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Viimeisimmät hinnat",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "Uusimmat todisteet",
 		"LoadMore": "Lataa enemmän",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Minun hinnat",
+		"MyProofs": "Minun todisteeni",
 		"Settings": "Asetukset",
 		"Title": "Kojelauta",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} hinnat",
+		"UserProofTotal": "{count} todisteita"
 	},
 	"UserDetail": {
 		"LatestPrices": "Viimeisimmät hinnat",
 		"LoadMore": "Lataa enemmän",
-		"UserPriceTotal": "{count} prices"
+		"UserPriceTotal": "{count} hinnat"
 	},
 	"UserList": {
 		"LoadMore": "Lataa enemmän",
 		"Title": "Huippuavustajat",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} avustajia",
+		"UserPriceCount": "{count} hinnat"
 	},
 	"UserSettings": {
 		"AddingPrices": "Lisätään hintoja",
@@ -263,7 +263,7 @@
 		"LanguageLabel": "Kielet",
 		"Save": "Tallenna",
 		"Title": "Asetukset",
-		"TranslationCompletion": "Translation is {completion}% complete.",
+		"TranslationCompletion": "Käännös on {completion}% valmis.",
 		"TranslationHelp": "Auta meitä kääntämään useampia kieliä"
 	}
 }
