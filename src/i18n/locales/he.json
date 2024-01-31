@@ -44,8 +44,6 @@
 			"LabelFull": "מחיר מלא",
 			"Proof": "הוכחה",
 			"ProofUploaded": "ההוכחה נשלחה!",
-			"Text": "מחיר {perKg}",
-			"TextPerKg": "לק״ג",
 			"Title": "פריטי מחיר",
 			"UploadProof": "העלאת הוכחה",
 			"TakePicture": "צילום תמונה",
@@ -63,6 +61,10 @@
 		"ProductModeList": {
 			"Barcode": "ברקוד",
 			"Category": "קטגוריה"
+		},
+		"CategoryPricePer": {
+			"PerKg": "Price per kg",
+			"PerUnit": "Price per unit"
 		},
 		"Title": "הוספת מחיר בודד",
 		"WhereWhen": {
@@ -148,6 +150,7 @@
 		"Discount": "הנחה",
 		"PriceDate": "ב־{date}",
 		"PriceValueDisplay": "{0} לק״ג",
+		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "הוכחה",
 		"ProductQuantity": "{0} גרם",
 		"FullPrice": "מחיר מלא",
