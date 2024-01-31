@@ -44,8 +44,6 @@
 			"LabelFull": "Totale prijs",
 			"Proof": "Bewijs",
 			"ProofUploaded": "Bewijs geüpload!",
-			"Text": "Prijs {perKg}",
-			"TextPerKg": "per kg",
 			"Title": "Prijsdetails",
 			"UploadProof": "Upload een bewijs",
 			"TakePicture": "Maak een foto",
@@ -63,6 +61,10 @@
 		"ProductModeList": {
 			"Barcode": "Streepjescode",
 			"Category": "Categorie"
+		},
+		"CategoryPricePer": {
+			"PerKg": "Price per kg",
+			"PerUnit": "Price per unit"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -148,6 +150,7 @@
 		"Discount": "Korting",
 		"PriceDate": "op {date}",
 		"PriceValueDisplay": "{0} /kg",
+		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Bewijs",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Totale prijs",
