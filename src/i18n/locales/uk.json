@@ -63,8 +63,8 @@
 			"Category": "Категорія"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Ціна за кг",
+			"PerUnit": "Ціна за одиницю"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -150,7 +150,7 @@
 		"Discount": "Знижка",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / одиниця",
 		"Proof": "Доказ",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Повна ціна",
