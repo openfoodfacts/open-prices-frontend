@@ -63,8 +63,8 @@
 			"Category": "カテゴリー"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "1kgあたりの価格",
+			"PerUnit": "単位あたりの価格"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -150,7 +150,7 @@
 		"Discount": "ディスカウント",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / 単位",
 		"Proof": "Proof",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "正規価格",
