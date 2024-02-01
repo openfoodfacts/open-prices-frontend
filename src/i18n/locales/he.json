@@ -63,8 +63,8 @@
 			"Category": "קטגוריה"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "מחיר לק״ג",
+			"PerUnit": "מחיר ליחידה"
 		},
 		"Title": "הוספת מחיר בודד",
 		"WhereWhen": {
@@ -150,7 +150,7 @@
 		"Discount": "הנחה",
 		"PriceDate": "ב־{date}",
 		"PriceValueDisplay": "{0} לק״ג",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} ליחידה",
 		"Proof": "הוכחה",
 		"ProductQuantity": "{0} גרם",
 		"FullPrice": "מחיר מלא",
