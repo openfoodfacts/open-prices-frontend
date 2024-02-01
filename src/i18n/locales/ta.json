@@ -63,8 +63,8 @@
 			"Category": "வகை"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "ஒரு கிலோ விலை",
+			"PerUnit": "ஒன்றின் விலை"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -150,7 +150,7 @@
 		"Discount": "Discount",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / அலகு",
 		"Proof": "Proof",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Full price",
