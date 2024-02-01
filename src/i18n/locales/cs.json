@@ -63,8 +63,8 @@
 			"Category": "Kategorie"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Cena za kg",
+			"PerUnit": "Cena za kus"
 		},
 		"Title": "Přidat jednotnou cenu",
 		"WhereWhen": {
@@ -150,7 +150,7 @@
 		"Discount": "Sleva",
 		"PriceDate": "dne {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / kus",
 		"Proof": "Důkaz",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Plná cena",
