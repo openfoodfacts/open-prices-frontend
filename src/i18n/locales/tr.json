@@ -63,8 +63,8 @@
 			"Category": "Kategori"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Kg başına fiyat",
+			"PerUnit": "Birim fiyat"
 		},
 		"Title": "Tek bir fiyat ekleyin",
 		"WhereWhen": {
@@ -150,7 +150,7 @@
 		"Discount": "İndirim",
 		"PriceDate": "{date} tarihinde",
 		"PriceValueDisplay": "{0} / kilo",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / birim",
 		"Proof": "Kanıt",
 		"ProductQuantity": "{0} gr",
 		"FullPrice": "Tam fiyat",
