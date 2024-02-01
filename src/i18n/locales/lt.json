@@ -63,8 +63,8 @@
 			"Category": "Kategorija"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Kaina už kg",
+			"PerUnit": "Kaina už vienetą"
 		},
 		"Title": "Pridėti vieną kainą",
 		"WhereWhen": {
@@ -150,7 +150,7 @@
 		"Discount": "Nuolaida",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / vnt.",
 		"Proof": "Įrodymai",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Visa kaina",
