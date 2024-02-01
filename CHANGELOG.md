@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.35.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.34.2...v1.35.0) (2024-02-01)
+
+
+### Features
+
+* add category price per unit toggle ([#266](https://github.com/openfoodfacts/open-prices-frontend/issues/266)) ([02c97c0](https://github.com/openfoodfacts/open-prices-frontend/commit/02c97c03e155ba49d799904b42d28b21099d5641))
+
+
+### Technical
+
+* **l10n:** fr and it translations ([#260](https://github.com/openfoodfacts/open-prices-frontend/issues/260)) ([8db68ed](https://github.com/openfoodfacts/open-prices-frontend/commit/8db68ed214b03d999cb95facf0df9739fdae6fb6))
+* **l10n:** New Crowdin translations to review and merge ([#259](https://github.com/openfoodfacts/open-prices-frontend/issues/259)) ([038b9f5](https://github.com/openfoodfacts/open-prices-frontend/commit/038b9f5a373697ae50bb4c8e561edcc7f745ea79))
+* **l10n:** New Crowdin translations to review and merge ([#264](https://github.com/openfoodfacts/open-prices-frontend/issues/264)) ([0d0368d](https://github.com/openfoodfacts/open-prices-frontend/commit/0d0368d16d2ea294d74e70494098b04c3d031c6d))
+* **l10n:** New Crowdin translations to review and merge ([#269](https://github.com/openfoodfacts/open-prices-frontend/issues/269)) ([061f511](https://github.com/openfoodfacts/open-prices-frontend/commit/061f511c986cc429bfe3e175806b04a5fc5fde87))
+
 ## [1.34.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.34.1...v1.34.2) (2024-01-28)
 
 
