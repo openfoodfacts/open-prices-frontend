@@ -4,7 +4,7 @@
 			"Subtitle": "Een plank met meerdere prijskaartjes",
 			"Title": "Meerdere producten"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Prijs aangemaakt!",
 		"ReceiptMode": {
 			"Subtitle": "Eén of meerdere producten",
 			"Title": "Bon"
@@ -16,8 +16,8 @@
 		},
 		"Thanks": "Bedankt",
 		"Title": "Voeg een prijs toe",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleSingle": "Voeg een enkele prijs toe",
+		"TitleMultiple": "Voeg meerdere prijzen in bulk toe"
 	},
 	"AddPriceMultiple": {
 		"Done": "Voltooid",
@@ -26,7 +26,7 @@
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} prijs al geüpload | {priceAlreadyUploadedNumber} prijzen al geüpload",
 			"Create": "Aanmaken",
 			"NewPrice": "Nieuwe prijs",
-			"PriceUploaded": "Price created!",
+			"PriceUploaded": "Prijs aangemaakt!",
 			"Upload": "Uploaden"
 		},
 		"ProofDetails": {
@@ -55,7 +55,7 @@
 			"ProductBarcode": "Streepjescode van product",
 			"ScanBarcode": "Scan een streepjescode",
 			"TypeBarcode": "Voer een streepjescode in",
-			"SetProduct": "Set a product",
+			"SetProduct": "Stel een product in",
 			"Title": "Productinformatie"
 		},
 		"ProductModeList": {
@@ -63,10 +63,10 @@
 			"Category": "Categorie"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Prijs per kg",
+			"PerUnit": "Prijs per eenheid"
 		},
-		"Title": "Add a single price",
+		"Title": "Voeg een enkele prijs toe",
 		"WhereWhen": {
 			"Date": "Datum",
 			"DateLabel": "Datum",
@@ -89,10 +89,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Meer laden",
-		"TopProducts": "Top products",
+		"TopProducts": "Top producten",
 		"BrandProductTotal": "{count} producten",
 		"Filter": "Filter",
-		"Order": "Order"
+		"Order": "Sorteren"
 	},
 	"Common": {
 		"SignInOFFAccount": "Meld u aan met uw {url} account"
@@ -110,11 +110,11 @@
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
 		"LatestPrices": "Laatste prijzen",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Zoek naar een product",
 		"SettingsUpdated": "Instellingen bijgewerkt!",
 		"TodayPriceStat": "Geen prijzen toegevoegd vandaag | Vandaag {todayPriceNumber} nieuwe prijzen toegevoegd | Vandaag {todayPriceNumber} nieuwe prijzen toegevoegd!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
+			"Subtitle": "Een open crowdsourced database met voedselprijzen 🏷🍊💲",
 			"Title": "Welkom bij {name}!"
 		}
 	},
@@ -150,7 +150,7 @@
 		"Discount": "Korting",
 		"PriceDate": "op {date}",
 		"PriceValueDisplay": "{0} /kg",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / eenheid",
 		"Proof": "Bewijs",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Totale prijs",
@@ -161,7 +161,7 @@
 		"Title": "Laatste prijzen"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Laatste prijzen",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Onbekende productnaam"
 	},
@@ -176,10 +176,10 @@
 		"Filter": "Filter",
 		"HideProductsWithPrices": "Verberg producten met prijzen",
 		"LoadMore": "Meer laden",
-		"Order": "Order",
+		"Order": "Sorteren",
 		"PriceNumber": "Aantal prijzen toegevoegd",
 		"ScanNumber": "Aantal scans toegevoegd",
-		"Title": "Top products"
+		"Title": "Top producten"
 	},
 	"Router": {
 		"AddPrice": {
@@ -204,7 +204,7 @@
 			"Title": "Top locaties"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Top producten"
 		}
 	},
 	"Search": {
@@ -237,7 +237,7 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Laatste prijzen",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "Laatste bewijzen",
 		"LoadMore": "Meer laden",
 		"MyPrices": "Mijn prijzen",
 		"MyProofs": "Mijn bewijzen",
