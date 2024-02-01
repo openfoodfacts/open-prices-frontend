@@ -44,8 +44,6 @@
 			"LabelFull": "Preu original",
 			"Proof": "Prova",
 			"ProofUploaded": "S'ha carregat la prova!",
-			"Text": "Preu {perKg}",
-			"TextPerKg": "per kg",
 			"Title": "Detall de preus",
 			"UploadProof": "Carregueu una prova",
 			"TakePicture": "Fer una foto",
@@ -63,6 +61,10 @@
 		"ProductModeList": {
 			"Barcode": "Codi de barres",
 			"Category": "Categoria"
+		},
+		"CategoryPricePer": {
+			"PerKg": "Price per kg",
+			"PerUnit": "Price per unit"
 		},
 		"Title": "Afegeix un preu",
 		"WhereWhen": {
@@ -148,6 +150,7 @@
 		"Discount": "Descompte",
 		"PriceDate": "el {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Prova",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Preu original",

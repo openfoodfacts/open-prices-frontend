@@ -44,8 +44,6 @@
 			"LabelFull": "Tam fiyat",
 			"Proof": "Kanıt",
 			"ProofUploaded": "Kanıt yüklendi!",
-			"Text": "Fiyat {perKg}",
-			"TextPerKg": "kg başına",
 			"Title": "Fiyat ayrıntıları",
 			"UploadProof": "Bir kanıt yükleyin",
 			"TakePicture": "Resim çek",
@@ -63,6 +61,10 @@
 		"ProductModeList": {
 			"Barcode": "Barkod",
 			"Category": "Kategori"
+		},
+		"CategoryPricePer": {
+			"PerKg": "Price per kg",
+			"PerUnit": "Price per unit"
 		},
 		"Title": "Tek bir fiyat ekleyin",
 		"WhereWhen": {
@@ -148,6 +150,7 @@
 		"Discount": "İndirim",
 		"PriceDate": "{date} tarihinde",
 		"PriceValueDisplay": "{0} / kilo",
+		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Kanıt",
 		"ProductQuantity": "{0} gr",
 		"FullPrice": "Tam fiyat",

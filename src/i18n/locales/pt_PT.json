@@ -44,8 +44,6 @@
 			"LabelFull": "Full price",
 			"Proof": "Comprovativo",
 			"ProofUploaded": "Comprovativo carregado!",
-			"Text": "Preço {perKg}",
-			"TextPerKg": "por kg",
 			"Title": "Detalhes do preço",
 			"UploadProof": "Carregar um comprovativo",
 			"TakePicture": "Tirar uma foto",
@@ -63,6 +61,10 @@
 		"ProductModeList": {
 			"Barcode": "Código de barras",
 			"Category": "Categoria"
+		},
+		"CategoryPricePer": {
+			"PerKg": "Preço por kg",
+			"PerUnit": "Preço por unidade"
 		},
 		"Title": "Adicionar um preço único",
 		"WhereWhen": {
@@ -148,6 +150,7 @@
 		"Discount": "Discount",
 		"PriceDate": "em {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayUnit": "{0} / unidade",
 		"Proof": "Comprovativo",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Full price",

@@ -44,8 +44,6 @@
 			"LabelFull": "Full price",
 			"Proof": "Proof",
 			"ProofUploaded": "Proof uploaded!",
-			"Text": "Price {perKg}",
-			"TextPerKg": "per kg",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"TakePicture": "Направи снимка",
@@ -63,6 +61,10 @@
 		"ProductModeList": {
 			"Barcode": "Баркод",
 			"Category": "Категория"
+		},
+		"CategoryPricePer": {
+			"PerKg": "Price per kg",
+			"PerUnit": "Price per unit"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -148,6 +150,7 @@
 		"Discount": "Discount",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Proof",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Full price",
