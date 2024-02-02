@@ -127,7 +127,7 @@
 	"LocationList": {
 		"Title": "Top lieux",
 		"LoadMore": "Voir plus",
-		"LocationTotal": "{count} locations",
+		"LocationTotal": "{count} emplacements",
 		"LocationPriceCount": "{count} prix"
 	},
 	"LocationSelector": {
@@ -228,7 +228,7 @@
 		"ProductsWithPrices": "Produits avec prix",
 		"Title": "Statistiques",
 		"Products": "Produits",
-		"Locations": "Locations",
+		"Locations": "Emplacements",
 		"Users": "Utilisateurs",
 		"Total": "Total",
 		"WithPrice": "Avec un prix",
