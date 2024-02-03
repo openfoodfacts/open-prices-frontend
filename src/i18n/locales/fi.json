@@ -63,8 +63,8 @@
 			"Category": "Tuoteluokka"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Hinta per kg",
+			"PerUnit": "Hinta per yksikkö"
 		},
 		"Title": "Lisää yksi hinta",
 		"WhereWhen": {
@@ -150,7 +150,7 @@
 		"Discount": "Alennus",
 		"PriceDate": "päivänä {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / yksikkö",
 		"Proof": "Todiste",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Täysi hinta",

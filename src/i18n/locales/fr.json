@@ -63,8 +63,8 @@
 			"Category": "Catégorie"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Prix au kg",
+			"PerUnit": "Prix a l'unité"
 		},
 		"Title": "Ajouter un seul prix",
 		"WhereWhen": {
@@ -127,7 +127,7 @@
 	"LocationList": {
 		"Title": "Top lieux",
 		"LoadMore": "Voir plus",
-		"LocationTotal": "{count} locations",
+		"LocationTotal": "{count} emplacements",
 		"LocationPriceCount": "{count} prix"
 	},
 	"LocationSelector": {
@@ -150,7 +150,7 @@
 		"Discount": "Promo",
 		"PriceDate": "le {date}",
 		"PriceValueDisplay": "{0} /kg",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / unité",
 		"Proof": "Preuve",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Prix d'origine",
@@ -228,7 +228,7 @@
 		"ProductsWithPrices": "Produits avec prix",
 		"Title": "Statistiques",
 		"Products": "Produits",
-		"Locations": "Locations",
+		"Locations": "Emplacements",
 		"Users": "Utilisateurs",
 		"Total": "Total",
 		"WithPrice": "Avec un prix",

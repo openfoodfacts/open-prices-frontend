@@ -63,8 +63,8 @@
 			"Category": "Kategorie"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Preis pro kg",
+			"PerUnit": "Preis pro Stück"
 		},
 		"Title": "Fügen Sie einen Einzelpreis hinzu",
 		"WhereWhen": {
@@ -150,7 +150,7 @@
 		"Discount": "Rabatt",
 		"PriceDate": "am {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / Einheit",
 		"Proof": "Nachweis",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Voller Preis",
