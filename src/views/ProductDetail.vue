@@ -87,14 +87,13 @@ export default {
       return this.productId.startsWith('en')
     },
     getCategoryName() {
-      const tag = this.getCategory()
-      return tag ? tag.name : this.productId
+      return utils.getCategoryName(this.productId)
     },
     productNotFound() {
       return !this.productIsCategory && (!this.product.code || !this.product.source)
     },
     categoryNotFound() {
-      return this.productIsCategory && !this.getCategory()
+      return this.productIsCategory && (this.getCategoryName === this.productId)
     },
     productOrCategoryNotFound() {
       return !this.loading && (this.productNotFound || this.categoryNotFound)
@@ -109,11 +108,6 @@ export default {
               this.product = data
             }
           })
-      }
-    },
-    getCategory() {
-      if (this.productIsCategory) {
-        return utils.getCategory(this.productId)
       }
     },
     getProductPrices() {
