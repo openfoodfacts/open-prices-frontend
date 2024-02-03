@@ -1,13 +1,23 @@
 import json
-from openfoodfacts.taxonomy import get_taxonomy, TaxonomyNode
+from openfoodfacts.taxonomy import get_taxonomy
 
 
-PARENT_CATEGORIES_ID = [  # 673  # 580
+PARENT_CATEGORIES_ID = [
+    "en:vegetables",  # 391
     "en:fruits",  # 287
-    "en:vegetables"  # 391
+    "en:culinary-plants",  # 152
+    "en:nuts",  # 77
+    "en:potatoes",  # 27
+    "en:textured-vegetable-protein",  # 2
 ]
 
-EXTRA_FILTERING = [
+EXTRA_CHILDREN = [
+    "en:rolled-oats",
+    "en:ginger",
+    "en:mushrooms",
+]
+
+ADDITIONAL_FILTERING = [
     "Cooked ",
     "Fresh ",
 ]
@@ -18,20 +28,21 @@ def get_languages():
         return json.load(f)
 
 
+def get_category_taxonomy():
+    return get_taxonomy("category")
+
+
 def get_taxonomy_node_by_id(taxonomy, node_id):
-    return next(node for node in taxonomy.iter_nodes() if node.id == node_id)
+    return next((node for node in taxonomy.iter_nodes() if node.id == node_id), None)
 
 
 def get_taxonomy_node_list_by_id_list(taxonomy, node_id_list):
     node_list = list()
     for node_id in node_id_list:
         taxonomy_node = get_taxonomy_node_by_id(taxonomy, node_id)
-        node_list.append(taxonomy_node)
+        if taxonomy_node:
+            node_list.append(taxonomy_node)
     return node_list
-
-
-def get_category_taxonomy():
-    return get_taxonomy("category")
 
 
 def taxonomy_node_list_to_dict_list(node_list, delete_parents=False):
@@ -44,25 +55,39 @@ def taxonomy_node_list_to_dict_list(node_list, delete_parents=False):
     return node_dict_list
 
 
+def get_taxonomy_node_children_full_list(taxonomy, node_parent):
+    children_node_list = list()
+    for node in taxonomy.iter_nodes():
+        node_parents = node.get_parents_hierarchy()
+        if next((n for n in node_parents if n == node_parent), None):
+            children_node_list.append(node)
+    return children_node_list
+
+
 def filter_categories(categories, parent_categories):
     """
-    pip install openfoodfacts
-    python data/categories/filter_categories.py
+    How to run:
+    > pip install openfoodfacts
+    > python data/categories/filter_categories.py
     """
-    
-
     # get child nodes of parent_categories
     node_child_list = list()
-    for node in categories.iter_nodes():
-        node_parents = node.get_parents_hierarchy()
-        if any(pn in node_parents for pn in parent_categories):
+    for parent_node in parent_categories:
+        parent_node_children = get_taxonomy_node_children_full_list(categories, parent_node)
+        node_child_list.extend(parent_node_children)
+
+    # add extra nodes
+    print("Add extra nodes:", EXTRA_CHILDREN)
+    for id in EXTRA_CHILDREN:
+        node = get_taxonomy_node_by_id(categories, id)
+        if node:
             node_child_list.append(node)
 
-    # extra filtering
-    print("Extra filtering on:", EXTRA_FILTERING)
+    # additional filtering
+    print("Additional filtering on:", ADDITIONAL_FILTERING)
     node_child_list_filtered = list()
     for node in node_child_list:
-        if not node.get_localized_name("en").startswith(tuple(EXTRA_FILTERING)):
+        if not node.get_localized_name("en").startswith(tuple(ADDITIONAL_FILTERING)):
             node_child_list_filtered.append(node)
 
     # remove duplicates
@@ -90,6 +115,33 @@ def write_categories_to_files(categories):
             json.dump(language_categories, f, ensure_ascii=False)
 
 
+def compare_new_categories_with_old_categories():
+    with open("src/data/category-tags.json") as f:
+        old_categories = json.load(f)
+    print("old_categories", len(old_categories))
+
+    with open("src/data/categories/en.json") as f:
+        new_categories = json.load(f)
+    print("new_categories", len(new_categories))
+
+    # check missing in new
+    category_missing_in_new_list = list()
+    for category in old_categories:
+        found = next((c for c in new_categories if c['id'] == category['id']), None)
+        if not found:
+            category_missing_in_new_list.append(category)
+    print("missing in new", len(category_missing_in_new_list))
+    print(category_missing_in_new_list)
+
+    # check missing in old
+    category_missing_in_old_list = list()
+    for category in old_categories:
+        found = next((c for c in old_categories if c['id'] == category['id']), None)
+        if not found:
+            category_missing_in_old_list.append(category)
+    print("missing in old", len(category_missing_in_old_list))
+
+
 if __name__ == "__main__":
     # init
     CATEGORIES_FULL = get_category_taxonomy()
@@ -103,3 +155,5 @@ if __name__ == "__main__":
 
     write_categories_to_files(categories_filtered_to_dict_list)
     print("Wrote to language files")
+
+    # compare_new_categories_with_old_categories()
