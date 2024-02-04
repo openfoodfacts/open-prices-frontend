@@ -182,6 +182,10 @@
 		"ScanNumber": "Počet přidaných skenů",
 		"Title": "Nejlepší produkty"
 	},
+	"ProofCard": {
+		"PRICE_TAG": "Price tag",
+		"RECEIPT": "Účtenka"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Přidat cenu"
