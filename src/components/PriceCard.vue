@@ -102,8 +102,7 @@ export default {
     },
     getPriceCategoryName() {
       if (this.price && this.hasCategoryTag) {
-        const tag = utils.getCategory(this.price.category_tag)
-        return tag ? tag.name : this.price.category_tag
+        return utils.getCategoryName(this.price.category_tag)
       }
     },
     getProductPriceCountColor() {
