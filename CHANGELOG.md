@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.36.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.35.0...v1.36.0) (2024-02-04)
+
+
+### Features
+
+* add price_count to ProofCard (create new PriceCountChip component) ([#279](https://github.com/openfoodfacts/open-prices-frontend/issues/279)) ([a6f5276](https://github.com/openfoodfacts/open-prices-frontend/commit/a6f527616e3a984f3ec51d3cc30fd5c97b24f5e3))
+* **l10n:** translate category list in price add form depending on user locale ([#275](https://github.com/openfoodfacts/open-prices-frontend/issues/275)) ([f821b75](https://github.com/openfoodfacts/open-prices-frontend/commit/f821b75967d66b3808b847a20067fc27721fb8c6))
+* **proof card:** better display proofs ([#281](https://github.com/openfoodfacts/open-prices-frontend/issues/281)) ([04c554d](https://github.com/openfoodfacts/open-prices-frontend/commit/04c554d0f5f58c579c7a667007260feabfc469b7))
+* script to filter and generate raw categories (with translations) ([#273](https://github.com/openfoodfacts/open-prices-frontend/issues/273)) ([7bed8b9](https://github.com/openfoodfacts/open-prices-frontend/commit/7bed8b9e7d7d7ce7a0759fdb1cd07ef738e49c85))
+
+
+### Bug Fixes
+
+* fix get category name ([#276](https://github.com/openfoodfacts/open-prices-frontend/issues/276)) ([57cd661](https://github.com/openfoodfacts/open-prices-frontend/commit/57cd661f0602a940184df7c5e36388f37f3124fa))
+* **location selector:** filter out additional place types ([#268](https://github.com/openfoodfacts/open-prices-frontend/issues/268)) ([fcf9417](https://github.com/openfoodfacts/open-prices-frontend/commit/fcf94172ae6c05799edfcd710d1716fe4f348a13))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#270](https://github.com/openfoodfacts/open-prices-frontend/issues/270)) ([15bdfdc](https://github.com/openfoodfacts/open-prices-frontend/commit/15bdfdc743955f66ebf6ab77fb976b54357d1344))
+* **l10n:** New Crowdin translations to review and merge ([#280](https://github.com/openfoodfacts/open-prices-frontend/issues/280)) ([f3eb581](https://github.com/openfoodfacts/open-prices-frontend/commit/f3eb58136ca9db0bb4f89501cb2714cf535ac965))
+
 ## [1.35.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.34.2...v1.35.0) (2024-02-01)
 
 
