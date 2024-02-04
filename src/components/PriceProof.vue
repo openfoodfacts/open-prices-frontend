@@ -43,14 +43,6 @@ export default {
     }
   },
   computed: {
-    proofIcon() {
-      if (this.proof.type === 'PRICE_TAG') {
-        return 'mdi-tag-outline'
-      }
-      else if (this.proof.type === 'RECEIPT') {
-        return 'mdi-receipt-text-outline'
-      }
-    },
     proofUrl() {
       // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
       // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'

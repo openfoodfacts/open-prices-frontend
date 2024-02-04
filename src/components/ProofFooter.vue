@@ -2,7 +2,7 @@
   <div class="d-flex flex-wrap ga-1">
     <v-chip label size="small" density="comfortable">
       <v-icon start icon="mdi-paperclip"></v-icon>
-      {{ proof.type }}
+      {{ proofType }}
     </v-chip>
     <PriceCountChip :count="proof.price_count" :withLabel="true"></PriceCountChip>
     <RelativeDateTimeChip :dateTime="proof.created"></RelativeDateTimeChip>
@@ -21,5 +21,10 @@ export default {
   props: {
     'proof': null,
   },
+  computed: {
+    proofType() {
+      return this.$t(`ProofCard.${this.proof.type}`)
+    }
+  }
 }
 </script>
