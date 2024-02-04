@@ -258,7 +258,6 @@ import ProductCard from '../components/ProductCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import BarcodeManualInput from '../components/BarcodeManualInput.vue'
 import LocationSelector from '../components/LocationSelector.vue'
-import CategoryTags from '../data/category-tags.json'
 import OriginsTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
 
@@ -304,7 +303,7 @@ export default {
         {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}
       ],
       productMode: null,  // 'barcode' or 'category'  // see initPriceSingleForm
-      categoryTags: CategoryTags,  // list of category tags for autocomplete
+      categoryTags: null,  // list of category tags for autocomplete  // see initPriceSingleForm
       originsTags: OriginsTags,  // list of origins tags for autocomplete
       labelsTags: LabelsTags,
       barcodeScanner: false,
@@ -374,14 +373,18 @@ export default {
     },
     initPriceSingleForm() {
       /**
-       * init product mode, currency & last location
+       * init form config (product mode, categories, last locations)
+       * init form
        */
       this.productMode = this.addPriceSingleForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used
-      this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
-      this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
+      utils.getLocaleCategoryTags(this.appStore.user.language.code).then((module) => {
+        this.categoryTags = module.default
+      })
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
       }
+      this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
+      this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
     },
     clearProof() {
       this.proofImage = null

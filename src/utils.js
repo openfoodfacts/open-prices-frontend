@@ -82,8 +82,8 @@ function prettyRelativeDateTime(dateTimeString, size=null) {
   diff < 60 && "just now" || diff < 120 && "1 minute ago" || diff < 3600 && Math.floor(diff / 60) + " minutes ago" || diff < 7200 && "1 hour ago" || diff < 86400 && Math.floor(diff / 3600) + " hours ago") || day_diff == 1 && "Yesterday" || day_diff < 10 && day_diff + " days ago" || Math.ceil(day_diff / 7) + " weeks ago";
 }
 
-function getCategory(categoryId) {
-  return CategoryTags.find(ct => ct.id === categoryId)
+function getLocaleCategoryTags(locale) {
+  return import(`./data/categories/${locale}.json`)
 }
 
 function getCountryEmojiFromName(countryString) {
@@ -144,7 +144,7 @@ export default {
   prettyDate,
   prettyDateTime,
   prettyRelativeDateTime,
-  getCategory,
+  getLocaleCategoryTags,
   getCountryEmojiFromName,
   getLocationTitle,
 }

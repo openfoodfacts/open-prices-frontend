@@ -374,7 +374,7 @@ export default {
         {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}
       ],
       productMode: null,
-      categoryTags: CategoryTags,  // list of category tags for autocomplete
+      categoryTags: null,  // list of category tags for autocomplete  // see initPriceMultipleForm
       originsTags: OriginsTags,  // list of origins tags for autocomplete
       labelsTags: LabelsTags,
       barcodeScanner: false,
@@ -435,10 +435,17 @@ export default {
   },
   mounted() {
     this.initPriceMultipleForm()
-    this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
   },
   methods: {
     initPriceMultipleForm() {
+      /**
+       * init form config (product mode, categories, last locations)
+       * (init form done in initNewProductPriceForm)
+       */
+      this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
+      utils.getLocaleCategoryTags(this.appStore.user.language.code).then((module) => {
+        this.categoryTags = module.default
+      })
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
       }
@@ -529,10 +536,10 @@ export default {
       this.product = null
     },
     initNewProductPriceForm() {
+      this.productMode = this.appStore.user.last_product_mode_used
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))
       this.productPriceForm.currency = this.appStore.user.last_currency_used
-      this.productMode = this.appStore.user.last_product_mode_used
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
     },
     createPrice() {
