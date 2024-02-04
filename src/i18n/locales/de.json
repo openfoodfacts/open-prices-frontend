@@ -182,6 +182,10 @@
 		"ScanNumber": "Anzahl der hinzugefügten Scans",
 		"Title": "Top-Produkte"
 	},
+	"ProofCard": {
+		"PRICE_TAG": "Price tag",
+		"RECEIPT": "Kassenbon"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Preis hinzufügen"
