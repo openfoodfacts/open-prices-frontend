@@ -18,12 +18,21 @@
       <v-card-text>
         <v-img :src="proofUrl"></v-img>
       </v-card-text>
+      <v-divider></v-divider>
+      <v-card-text>
+        <ProofFooter :proof="proof"></ProofFooter>
+      </v-card-text>
     </v-card>
   </v-dialog>
 </template>
 
 <script>
+import ProofFooter from '../components/ProofFooter.vue'
+
 export default {
+  components: {
+    ProofFooter,
+  },
   props: {
     'proof': null,
     'readonly': false
@@ -43,7 +52,8 @@ export default {
       }
     },
     proofUrl() {
-      return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${this.proof.file_path}`
+      return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'
+      // return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${this.proof.file_path}`
     }
   },
   methods: {
