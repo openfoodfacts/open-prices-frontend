@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Últimos precios",
 		"LoadMore": "Carga más",
-		"LocationNotFound": "Ubicación no encontrada en OpenStreetMap... No dudes en agregarla :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationNotFound": "Ubicación no encontrada en OpenStreetMap... No dudes en agregarla :)"
 	},
 	"LocationList": {
 		"Title": "Ubicaciones destacadas",
 		"LoadMore": "Carga más",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} locations"
 	},
 	"LocationSelector": {
 		"Clear": "Limpiar",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Precio original",
 		"UnknownProduct": "Producto desconocido"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Carga más",
@@ -248,14 +249,12 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Últimos precios",
-		"LoadMore": "Carga más",
-		"UserPriceTotal": "{count} prices"
+		"LoadMore": "Carga más"
 	},
 	"UserList": {
 		"LoadMore": "Carga más",
 		"Title": "Colaboradores destacados",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Añadiendo precios",
