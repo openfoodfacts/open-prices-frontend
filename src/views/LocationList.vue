@@ -22,10 +22,7 @@
         height="100%"
         @click="goToLocation(location)">
         <v-card-text>
-          <v-chip label size="small" density="comfortable" :color="getLocationPriceCountColor(location)" class="mr-1">
-            <v-icon start icon="mdi-tag-outline"></v-icon>
-            {{ $t('LocationList.LocationPriceCount', { count: location.price_count }) }}
-          </v-chip>
+          <PriceCountChip :count="location.price_count" :withLabel="true"></PriceCountChip>
         </v-card-text>
       </v-card>
     </v-col>
@@ -41,8 +38,12 @@
 <script>
 import api from '../services/api'
 import utils from '../utils.js'
+import PriceCountChip from '../components/PriceCountChip.vue'
 
 export default {
+  components: {
+    PriceCountChip,
+  },
   data() {
     return {
       // data
@@ -74,17 +75,6 @@ export default {
     },
     getLocationTitle(location) {
       return utils.getLocationTitle(location, true, false, true, true)
-    },
-    getLocationPriceCountColor(location) {
-      if (location.price_count === 0) {
-        return 'error'
-      }
-      if (location.price_count === 1) {
-        return 'warning'
-      }
-      if (location.price_count > 1) {
-        return 'success'
-      }
     },
     goToLocation(location) {
       this.$router.push({ path: `/locations/${location.id}` })

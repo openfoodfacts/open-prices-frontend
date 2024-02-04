@@ -105,17 +105,6 @@ export default {
         return utils.getCategoryName(this.price.category_tag)
       }
     },
-    getProductPriceCountColor() {
-      if (this.product.price_count === 0) {
-        return 'error'
-      }
-      if (this.product.price_count === 1) {
-        return 'warning'
-      }
-      if (this.product.price_count > 1) {
-        return 'success'
-      }
-    },
     getProductBrandsList() {
       if (this.hasProductBrands) {
         return this.product.brands.split(',')
