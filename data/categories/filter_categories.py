@@ -109,7 +109,7 @@ def write_categories_to_files(categories):
             language_category_name = category['name'][language_code] if (language_code in category['name']) else category['name']['en']
             language_categories.append({"id": category['id'], "name": language_category_name})
         # order by name
-        sorted(language_categories, key=lambda x: x['name'])
+        language_categories = sorted(language_categories, key=lambda x: x['name'])
         # write to file
         with open(f"src/data/categories/{language['code']}.json", "w") as f:
             json.dump(language_categories, f, ensure_ascii=False)
