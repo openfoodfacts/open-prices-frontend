@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
-		"LocationNotFound": "OpenStreetMap'te konum bulunamadı... Eklemekten çekinmeyin :)",
-		"LocationPriceTotal": "{count} fiyat"
+		"LocationNotFound": "OpenStreetMap'te konum bulunamadı... Eklemekten çekinmeyin :)"
 	},
 	"LocationList": {
 		"Title": "En iyi yerler",
 		"LoadMore": "Daha fazla yükle",
-		"LocationTotal": "{count} konum",
-		"LocationPriceCount": "{count} fiyat"
+		"LocationTotal": "{count} konum"
 	},
 	"LocationSelector": {
 		"Clear": "Temizle",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} gr",
 		"FullPrice": "Tam fiyat",
 		"UnknownProduct": "Bilinmeyen ürün"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Daha fazla yükle",
@@ -243,19 +244,17 @@
 		"MyProofs": "My proofs",
 		"Settings": "Ayarlar",
 		"Title": "Gösterge paneli",
-		"UserPriceTotal": "{count} fiyat",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Son fiyatlar",
-		"LoadMore": "Daha fazla yükle",
-		"UserPriceTotal": "{count} fiyat"
+		"LoadMore": "Daha fazla yükle"
 	},
 	"UserList": {
 		"LoadMore": "Daha fazla yükle",
 		"Title": "En çok katkıda bulunanlar",
-		"UserTotal": "{count} katkıda bulunan",
-		"UserPriceCount": "{count} fiyat"
+		"UserTotal": "{count} katkıda bulunan"
 	},
 	"UserSettings": {
 		"AddingPrices": "Fiyat ekleme",
