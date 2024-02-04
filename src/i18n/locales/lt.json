@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Naujausios kainos",
 		"LoadMore": "Įkelti daugiau",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
-		"LocationPriceTotal": "{count} kainos (-ų)"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
 		"Title": "Geriausios vietos",
 		"LoadMore": "Įkelti daugiau",
-		"LocationTotal": "{count} vietos (-ų)",
-		"LocationPriceCount": "{count} kainos (-ų)"
+		"LocationTotal": "{count} vietos (-ų)"
 	},
 	"LocationSelector": {
 		"Clear": "Clear",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Visa kaina",
 		"UnknownProduct": "Unknown product"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Įkelti daugiau",
@@ -243,19 +244,17 @@
 		"MyProofs": "Mano įrodymai",
 		"Settings": "Nustatymai",
 		"Title": "Prietaisų skydelis",
-		"UserPriceTotal": "{count} kainos (-ų)",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} įrodymai (-ų)"
 	},
 	"UserDetail": {
 		"LatestPrices": "Naujausios kainos",
-		"LoadMore": "Įkelti daugiau",
-		"UserPriceTotal": "{count} kainos (-ų)"
+		"LoadMore": "Įkelti daugiau"
 	},
 	"UserList": {
 		"LoadMore": "Įkelti daugiau",
 		"Title": "Geriausi bendraautoriai",
-		"UserTotal": "{count} bendraautoriai (-ių)",
-		"UserPriceCount": "{count} kainos (-ų)"
+		"UserTotal": "{count} bendraautoriai (-ių)"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
