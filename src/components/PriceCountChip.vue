@@ -1,26 +1,26 @@
 <template>
-  <v-chip label size="small" density="comfortable" :color="getColor(item)" class="mr-1">
+  <v-chip label size="small" density="comfortable" :color="getColor()" class="mr-1">
     <v-icon start icon="mdi-tag-outline"></v-icon>
-    <span v-if="withLabel">{{ $t('LocationList.LocationPriceCount', { count: item.price_count }) }}</span>
-    <span v-if="!withLabel">{{ item.price_count }}</span>
+    <span v-if="withLabel">{{ $t('PriceCountChip.PriceCount', { count: count }) }}</span>
+    <span v-if="!withLabel">{{ count }}</span>
   </v-chip>
 </template>
 
 <script>
 export default {
   props: {
-    'item': null,
-    'withLabel': true
+    'count': null,
+    'withLabel': false
   },
   methods: {
-    getColor(item) {
-      if (item.price_count === 0) {
+    getColor() {
+      if (this.count === 0) {
         return 'error'
       }
-      if (item.price_count === 1) {
+      if (this.count === 1) {
         return 'warning'
       }
-      if (item.price_count > 1) {
+      if (this.count > 1) {
         return 'success'
       }
     },

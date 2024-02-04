@@ -21,7 +21,7 @@
         height="100%"
         @click="goToUser(user)">
         <v-card-text>
-          <PriceCountChip :item="user"></PriceCountChip>
+          <PriceCountChip :count="user.price_count" :withLabel="true"></PriceCountChip>
         </v-card-text>
       </v-card>
     </v-col>

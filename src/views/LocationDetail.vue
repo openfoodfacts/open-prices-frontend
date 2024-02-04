@@ -6,10 +6,7 @@
         :subtitle="location ? location.osm_display_name : ''"
         :prepend-icon="location ? 'mdi-map-marker-outline' : 'mdi-map-marker-remove-variant'">
         <v-card-text>
-          <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-tag-outline"></v-icon>
-            {{ $t('LocationDetail.LocationPriceTotal', { count: locationPriceTotal }) }}
-          </v-chip>
+          <PriceCountChip :count="locationPriceTotal" :withLabel="true"></PriceCountChip>
         </v-card-text>
       </v-card>
     </v-col>
@@ -50,11 +47,13 @@
 <script>
 import api from '../services/api'
 import utils from '../utils.js'
+import PriceCountChip from '../components/PriceCountChip.vue'
 import PriceCard from '../components/PriceCard.vue'
 import ShareButton from '../components/ShareButton.vue'
 
 export default {
   components: {
+    PriceCountChip,
     PriceCard,
     ShareButton,
   },

@@ -3,10 +3,7 @@
     <v-col cols="12" sm="6">
       <v-card :title="username" prepend-icon="mdi-account">
         <v-card-text>
-          <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-tag-outline"></v-icon>
-            {{ $t('UserDetail.UserPriceTotal', { count: userPriceTotal }) }}
-          </v-chip>
+          <PriceCountChip :count="userPriceTotal" :withLabel="true"></PriceCountChip>
         </v-card-text>
       </v-card>
     </v-col>
@@ -43,12 +40,14 @@
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import PriceCountChip from '../components/PriceCountChip.vue'
 import PriceCard from '../components/PriceCard.vue'
 import OpenFoodFactsButton from '../components/OpenFoodFactsButton.vue'
 import ShareButton from '../components/ShareButton.vue'
 
 export default {
   components: {
+    PriceCountChip,
     PriceCard,
     OpenFoodFactsButton,
     ShareButton,

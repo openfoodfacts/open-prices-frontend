@@ -22,7 +22,7 @@
         height="100%"
         @click="goToLocation(location)">
         <v-card-text>
-          <PriceCountChip :item="location"></PriceCountChip>
+          <PriceCountChip :count="location.price_count" :withLabel="true"></PriceCountChip>
         </v-card-text>
       </v-card>
     </v-col>
