@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Laatste prijzen",
 		"LoadMore": "Meer laden",
-		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)",
-		"LocationPriceTotal": "{count} prijzen"
+		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)"
 	},
 	"LocationList": {
 		"Title": "Top locaties",
 		"LoadMore": "Meer laden",
-		"LocationTotal": "{count} locaties",
-		"LocationPriceCount": "{count} prijzen"
+		"LocationTotal": "{count} locaties"
 	},
 	"LocationSelector": {
 		"Clear": "Wissen",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Totale prijs",
 		"UnknownProduct": "Onbekend product"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Meer laden",
@@ -243,19 +244,17 @@
 		"MyProofs": "Mijn bewijzen",
 		"Settings": "Instellingen",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prijzen",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} bewijzen"
 	},
 	"UserDetail": {
 		"LatestPrices": "Laatste prijzen",
-		"LoadMore": "Meer laden",
-		"UserPriceTotal": "{count} prijzen"
+		"LoadMore": "Meer laden"
 	},
 	"UserList": {
 		"LoadMore": "Meer laden",
 		"Title": "Top bijdragers",
-		"UserTotal": "{count} bijdragers",
-		"UserPriceCount": "{count} prijzen"
+		"UserTotal": "{count} bijdragers"
 	},
 	"UserSettings": {
 		"AddingPrices": "Prijzen toevoegen",
