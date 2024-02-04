@@ -1,14 +1,16 @@
 <template>
   <v-chip label size="small" density="comfortable" :color="getColor(item)" class="mr-1">
     <v-icon start icon="mdi-tag-outline"></v-icon>
-    {{ $t('LocationList.LocationPriceCount', { count: item.price_count }) }}
+    <span v-if="withLabel">{{ $t('LocationList.LocationPriceCount', { count: item.price_count }) }}</span>
+    <span v-if="!withLabel">{{ item.price_count }}</span>
   </v-chip>
 </template>
 
 <script>
 export default {
   props: {
-    'item': null
+    'item': null,
+    'withLabel': true
   },
   methods: {
     getColor(item) {

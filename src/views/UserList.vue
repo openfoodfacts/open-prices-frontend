@@ -21,10 +21,7 @@
         height="100%"
         @click="goToUser(user)">
         <v-card-text>
-          <v-chip label size="small" density="comfortable" :color="getUserPriceCountColor(user)" class="mr-1">
-            <v-icon start icon="mdi-tag-outline"></v-icon>
-            {{ $t('UserList.UserPriceCount', { count: user.price_count }) }}
-          </v-chip>
+          <PriceCountChip :item="user"></PriceCountChip>
         </v-card-text>
       </v-card>
     </v-col>
@@ -39,8 +36,12 @@
 
 <script>
 import api from '../services/api'
+import PriceCountChip from '../components/PriceCountChip.vue'
 
 export default {
+  components: {
+    PriceCountChip,
+  },
   data() {
     return {
       // data
@@ -69,17 +70,6 @@ export default {
           this.userTotal = data.total
           this.loading = false
         })
-    },
-    getUserPriceCountColor(user) {
-      if (user.price_count === 0) {
-        return 'error'
-      }
-      if (user.price_count === 1) {
-        return 'warning'
-      }
-      if (user.price_count > 1) {
-        return 'success'
-      }
     },
     goToUser(user) {
       this.$router.push({ path: `/users/${user.user_id}` })

@@ -11,10 +11,7 @@
 
           <p class="mb-2">
             <span>
-              <v-chip label size="small" density="comfortable" :color="getPriceCountColor" class="mr-1" @click="goToProduct()">
-                <v-icon start icon="mdi-tag-outline"></v-icon>
-                {{ product.price_count }}
-              </v-chip>
+              <PriceCountChip :item="product" @click="goToProduct()"></PriceCountChip>
             </span>
             <span v-if="hasProductBrands">
               <v-chip v-for="brand in getProductBrandsList" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
@@ -45,11 +42,13 @@
 </template>
 
 <script>
+import PriceCountChip from '../components/PriceCountChip.vue'
 import PricePrice from '../components/PricePrice.vue'
 import PriceFooter from '../components/PriceFooter.vue'
 
 export default {
   components: {
+    PriceCountChip,
     PricePrice,
     PriceFooter,
   },
@@ -71,17 +70,6 @@ export default {
     },
     hasProductQuantity() {
       return !!this.product.product_quantity
-    },
-    getPriceCountColor() {
-      if (this.product.price_count === 0) {
-        return 'error'
-      }
-      if (this.product.price_count === 1) {
-        return 'warning'
-      }
-      if (this.product.price_count > 1) {
-        return 'success'
-      }
     },
     getProductBrandsList() {
       if (this.hasProductBrands) {
