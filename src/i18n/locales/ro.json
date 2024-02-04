@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Încarcă mai mult",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
 		"Title": "Top locations",
 		"LoadMore": "Încarcă mai mult",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} locations"
 	},
 	"LocationSelector": {
 		"Clear": "Ștergeți",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Full price",
 		"UnknownProduct": "Unknown product"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Încarcă mai mult",
@@ -248,14 +249,12 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Încarcă mai mult",
-		"UserPriceTotal": "{count} prices"
+		"LoadMore": "Încarcă mai mult"
 	},
 	"UserList": {
 		"LoadMore": "Încarcă mai mult",
 		"Title": "Top contributors",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",

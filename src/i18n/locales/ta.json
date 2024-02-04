@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
-		"LocationPriceTotal": "{count} விலைகள்"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
 		"Title": "Top locations",
 		"LoadMore": "Load more",
-		"LocationTotal": "{count} இடங்கள்",
-		"LocationPriceCount": "{count} விலைகள்"
+		"LocationTotal": "{count} இடங்கள்"
 	},
 	"LocationSelector": {
 		"Clear": "Clear",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Full price",
 		"UnknownProduct": "Unknown product"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Load more",
@@ -243,19 +244,17 @@
 		"MyProofs": "My proofs",
 		"Settings": "அமைப்புகள்",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} விலைகள்",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} சான்றுகள்"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
-		"UserPriceTotal": "{count} விலைகள்"
+		"LoadMore": "Load more"
 	},
 	"UserList": {
 		"LoadMore": "Load more",
 		"Title": "Top contributors",
-		"UserTotal": "{count} பங்களிப்பாளர்கள்",
-		"UserPriceCount": "{count} விலைகள்"
+		"UserTotal": "{count} பங்களிப்பாளர்கள்"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",

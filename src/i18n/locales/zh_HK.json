@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "載入更多",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
-		"LocationPriceTotal": "{count} prices"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
 		"Title": "Top locations",
 		"LoadMore": "載入更多",
-		"LocationTotal": "{count} locations",
-		"LocationPriceCount": "{count} prices"
+		"LocationTotal": "{count} locations"
 	},
 	"LocationSelector": {
 		"Clear": "清除",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Full price",
 		"UnknownProduct": "Unknown product"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "載入更多",
@@ -248,14 +249,12 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "載入更多",
-		"UserPriceTotal": "{count} prices"
+		"LoadMore": "載入更多"
 	},
 	"UserList": {
 		"LoadMore": "載入更多",
 		"Title": "Top contributors",
-		"UserTotal": "{count} contributors",
-		"UserPriceCount": "{count} prices"
+		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",

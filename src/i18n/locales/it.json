@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Ultimi prezzi",
 		"LoadMore": "Scarica altro",
-		"LocationNotFound": "Posizione non trovata in OpenStreetMap... Non esitate ad aggiungerla :)",
-		"LocationPriceTotal": "{count} prezzi"
+		"LocationNotFound": "Posizione non trovata in OpenStreetMap... Non esitate ad aggiungerla :)"
 	},
 	"LocationList": {
 		"Title": "Posizioni migliori",
 		"LoadMore": "Scarica altro",
-		"LocationTotal": "{count} posizioni",
-		"LocationPriceCount": "{count} prezzi"
+		"LocationTotal": "{count} posizioni"
 	},
 	"LocationSelector": {
 		"Clear": "Cancella",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Prezzo pieno",
 		"UnknownProduct": "Prodotto sconosciuto"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Scarica altro",
@@ -243,19 +244,17 @@
 		"MyProofs": "Le mie prove",
 		"Settings": "Impostazioni",
 		"Title": "Cruscotto",
-		"UserPriceTotal": "{count} prezzi",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} prove"
 	},
 	"UserDetail": {
 		"LatestPrices": "Ultimi prezzi",
-		"LoadMore": "Scarica altro",
-		"UserPriceTotal": "{count} prezzi"
+		"LoadMore": "Scarica altro"
 	},
 	"UserList": {
 		"LoadMore": "Scarica altro",
 		"Title": "Collaboratori principali",
-		"UserTotal": "{count} contributori",
-		"UserPriceCount": "{count} prezzi"
+		"UserTotal": "{count} contributori"
 	},
 	"UserSettings": {
 		"AddingPrices": "Aggiunta di prezzi",

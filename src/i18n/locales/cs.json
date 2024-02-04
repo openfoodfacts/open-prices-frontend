@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Nejnovější ceny",
 		"LoadMore": "Načíst další",
-		"LocationNotFound": "Poloha nebyla nalezena v OpenStreetMap... Neváhejte ji přidat :)",
-		"LocationPriceTotal": "{count} cen"
+		"LocationNotFound": "Poloha nebyla nalezena v OpenStreetMap... Neváhejte ji přidat :)"
 	},
 	"LocationList": {
 		"Title": "Nejlepší polohy",
 		"LoadMore": "Načíst další",
-		"LocationTotal": "{count} poloh",
-		"LocationPriceCount": "{count} cen"
+		"LocationTotal": "{count} poloh"
 	},
 	"LocationSelector": {
 		"Clear": "Vymazat",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Plná cena",
 		"UnknownProduct": "Neznámý produkt"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Načíst další",
@@ -243,19 +244,17 @@
 		"MyProofs": "Moje důkazy",
 		"Settings": "Nastavení",
 		"Title": "Nástěnka",
-		"UserPriceTotal": "{count} cen",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} důkazů"
 	},
 	"UserDetail": {
 		"LatestPrices": "Nejnovější ceny",
-		"LoadMore": "Načíst další",
-		"UserPriceTotal": "{count} cen"
+		"LoadMore": "Načíst další"
 	},
 	"UserList": {
 		"LoadMore": "Načíst další",
 		"Title": "Nejlepší přispěvatelé",
-		"UserTotal": "{count} přispěvatelů",
-		"UserPriceCount": "{count} cen"
+		"UserTotal": "{count} přispěvatelů"
 	},
 	"UserSettings": {
 		"AddingPrices": "Přidávání cen",

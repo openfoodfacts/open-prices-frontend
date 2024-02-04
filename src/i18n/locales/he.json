@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "מחירים עדכניים",
 		"LoadMore": "לטעון עוד",
-		"LocationNotFound": "המקום לא נמצא ב־OpenStreetMap… אפשר להוסיף אותו ללא חשש :)",
-		"LocationPriceTotal": "{count} מחירים"
+		"LocationNotFound": "המקום לא נמצא ב־OpenStreetMap… אפשר להוסיף אותו ללא חשש :)"
 	},
 	"LocationList": {
 		"Title": "מקומות מובילים",
 		"LoadMore": "לטעון עוד",
-		"LocationTotal": "{count} מקומות",
-		"LocationPriceCount": "{count} מחירים"
+		"LocationTotal": "{count} מקומות"
 	},
 	"LocationSelector": {
 		"Clear": "פינוי",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} גרם",
 		"FullPrice": "מחיר מלא",
 		"UnknownProduct": "מוצר לא ידוע"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "לטעון עוד",
@@ -243,19 +244,17 @@
 		"MyProofs": "ההוכחות שלי",
 		"Settings": "הגדרות",
 		"Title": "לוח בקרה",
-		"UserPriceTotal": "{count} מחירים",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} הוכחות"
 	},
 	"UserDetail": {
 		"LatestPrices": "מחירים עדכניים",
-		"LoadMore": "לטעון עוד",
-		"UserPriceTotal": "{count} מחירים"
+		"LoadMore": "לטעון עוד"
 	},
 	"UserList": {
 		"LoadMore": "לטעון עוד",
 		"Title": "תורמים מובילים",
-		"UserTotal": "{count} תורמים",
-		"UserPriceCount": "{count} מחירים"
+		"UserTotal": "{count} תורמים"
 	},
 	"UserSettings": {
 		"AddingPrices": "הוספת מחירים",

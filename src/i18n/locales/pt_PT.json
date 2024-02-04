@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais",
-		"LocationNotFound": "Localização não encontrada no OpenStreetMap... Não hesite em adicioná-la :)",
-		"LocationPriceTotal": "{count} preços"
+		"LocationNotFound": "Localização não encontrada no OpenStreetMap... Não hesite em adicioná-la :)"
 	},
 	"LocationList": {
 		"Title": "Principais localizações",
 		"LoadMore": "Carregar mais",
-		"LocationTotal": "{count} localizações",
-		"LocationPriceCount": "{count} preços"
+		"LocationTotal": "{count} localizações"
 	},
 	"LocationSelector": {
 		"Clear": "Limpar",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Full price",
 		"UnknownProduct": "Produto desconhecido"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Carregar mais",
@@ -243,19 +244,17 @@
 		"MyProofs": "Os meus comprovativos",
 		"Settings": "Configurações",
 		"Title": "Painel de controlo",
-		"UserPriceTotal": "{count} preços",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} comprovativos"
 	},
 	"UserDetail": {
 		"LatestPrices": "Preços mais recentes",
-		"LoadMore": "Carregar mais",
-		"UserPriceTotal": "{count} preços"
+		"LoadMore": "Carregar mais"
 	},
 	"UserList": {
 		"LoadMore": "Carregar mais",
 		"Title": "Top contributors",
-		"UserTotal": "{count} colaboradores",
-		"UserPriceCount": "{count} preços"
+		"UserTotal": "{count} colaboradores"
 	},
 	"UserSettings": {
 		"AddingPrices": "A adicionar preços",
