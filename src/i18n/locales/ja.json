@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "もっと読み込む",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
-		"LocationPriceTotal": "商品 {count} 個"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
 		"Title": "上位の場所",
 		"LoadMore": "もっと読み込む",
-		"LocationTotal": "{count} か所",
-		"LocationPriceCount": "商品 {count} 個"
+		"LocationTotal": "{count} か所"
 	},
 	"LocationSelector": {
 		"Clear": "クリア",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "正規価格",
 		"UnknownProduct": "Unknown product"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "もっと読み込む",
@@ -243,19 +244,17 @@
 		"MyProofs": "自分の証拠",
 		"Settings": "設定",
 		"Title": "Dashboard",
-		"UserPriceTotal": "商品 {count} 個",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} 件の証明"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "もっと読み込む",
-		"UserPriceTotal": "商品 {count} 個"
+		"LoadMore": "もっと読み込む"
 	},
 	"UserList": {
 		"LoadMore": "もっと読み込む",
 		"Title": "上位貢献者:",
-		"UserTotal": "{count} 人の貢献者",
-		"UserPriceCount": "商品 {count} 個"
+		"UserTotal": "{count} 人の貢献者"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
