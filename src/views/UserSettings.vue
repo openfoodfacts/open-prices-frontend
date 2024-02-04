@@ -62,8 +62,8 @@
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
-import localeManager from "../i18n/localeManager.js"
-import languageData from '../i18n/data/languages.json';
+import localeManager from '../i18n/localeManager.js'
+import languageData from '../i18n/data/languages.json'
 
 
 export default {
