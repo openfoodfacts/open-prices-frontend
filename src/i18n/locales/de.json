@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Aktuelle Preise",
 		"LoadMore": "Weitere laden",
-		"LocationNotFound": "Standort nicht in OpenStreetMap gefunden ... Zögern Sie nicht, ihn hinzuzufügen 🙂",
-		"LocationPriceTotal": "{count} Preise"
+		"LocationNotFound": "Standort nicht in OpenStreetMap gefunden ... Zögern Sie nicht, ihn hinzuzufügen 🙂"
 	},
 	"LocationList": {
 		"Title": "Top-Standorte",
 		"LoadMore": "Weitere laden",
-		"LocationTotal": "{count} Standorte",
-		"LocationPriceCount": "{count} Preise"
+		"LocationTotal": "{count} Standorte"
 	},
 	"LocationSelector": {
 		"Clear": "Leeren",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Voller Preis",
 		"UnknownProduct": "Unbekanntes Produkt"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Weitere laden",
@@ -243,19 +244,17 @@
 		"MyProofs": "Meine Belege",
 		"Settings": "Einstellungen",
 		"Title": "Übersicht",
-		"UserPriceTotal": "{count} Preise",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} Belege"
 	},
 	"UserDetail": {
 		"LatestPrices": "Aktuelle Preise",
-		"LoadMore": "Weitere laden",
-		"UserPriceTotal": "{count} Preise"
+		"LoadMore": "Weitere laden"
 	},
 	"UserList": {
 		"LoadMore": "Weitere laden",
 		"Title": "Aktivste Mitwirkende",
-		"UserTotal": "{count} Mitwirkende",
-		"UserPriceCount": "{count} Preise"
+		"UserTotal": "{count} Mitwirkende"
 	},
 	"UserSettings": {
 		"AddingPrices": "Preise hinzufügen",
