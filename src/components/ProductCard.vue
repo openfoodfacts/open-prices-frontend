@@ -11,7 +11,7 @@
 
           <p class="mb-2">
             <span>
-              <v-chip label size="small" density="comfortable" :color="getProductPriceCountColor" class="mr-1" @click="goToProduct()">
+              <v-chip label size="small" density="comfortable" :color="getPriceCountColor" class="mr-1" @click="goToProduct()">
                 <v-icon start icon="mdi-tag-outline"></v-icon>
                 {{ product.price_count }}
               </v-chip>
@@ -72,7 +72,7 @@ export default {
     hasProductQuantity() {
       return !!this.product.product_quantity
     },
-    getProductPriceCountColor() {
+    getPriceCountColor() {
       if (this.product.price_count === 0) {
         return 'error'
       }
