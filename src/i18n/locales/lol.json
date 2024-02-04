@@ -182,6 +182,10 @@
 		"ScanNumber": "crwdns246690:0crwdne246690:0",
 		"Title": "crwdns246692:0crwdne246692:0"
 	},
+	"ProofCard": {
+		"PRICE_TAG": "crwdns247002:0crwdne247002:0",
+		"RECEIPT": "crwdns247004:0crwdne247004:0"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "crwdns246694:0crwdne246694:0"
