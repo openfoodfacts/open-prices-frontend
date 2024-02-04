@@ -3,7 +3,7 @@
     <v-card-text>
       <v-img :src="getProofUrl(proof)"></v-img>
     </v-card-text>
-      <v-divider></v-divider>
+    <v-divider></v-divider>
     <v-card-text>
       <ProofFooter :proof="proof"></ProofFooter>
     </v-card-text>
