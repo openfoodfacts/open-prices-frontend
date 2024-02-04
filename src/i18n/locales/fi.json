@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Viimeisimmät hinnat",
 		"LoadMore": "Lataa enemmän",
-		"LocationNotFound": "Sijaintia ei löydy OpenStreetMapista... Älä epäröi lisätä sitä :)",
-		"LocationPriceTotal": "{count} hinnat"
+		"LocationNotFound": "Sijaintia ei löydy OpenStreetMapista... Älä epäröi lisätä sitä :)"
 	},
 	"LocationList": {
 		"Title": "Huippupaikat",
 		"LoadMore": "Lataa enemmän",
-		"LocationTotal": "{count} sijaintia",
-		"LocationPriceCount": "{count} hinnat"
+		"LocationTotal": "{count} sijaintia"
 	},
 	"LocationSelector": {
 		"Clear": "Tyhjennä",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Täysi hinta",
 		"UnknownProduct": "Tuntematon tuote"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Lataa enemmän",
@@ -243,19 +244,17 @@
 		"MyProofs": "Minun todisteeni",
 		"Settings": "Asetukset",
 		"Title": "Kojelauta",
-		"UserPriceTotal": "{count} hinnat",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} todisteita"
 	},
 	"UserDetail": {
 		"LatestPrices": "Viimeisimmät hinnat",
-		"LoadMore": "Lataa enemmän",
-		"UserPriceTotal": "{count} hinnat"
+		"LoadMore": "Lataa enemmän"
 	},
 	"UserList": {
 		"LoadMore": "Lataa enemmän",
 		"Title": "Huippuavustajat",
-		"UserTotal": "{count} avustajia",
-		"UserPriceCount": "{count} hinnat"
+		"UserTotal": "{count} avustajia"
 	},
 	"UserSettings": {
 		"AddingPrices": "Lisätään hintoja",
