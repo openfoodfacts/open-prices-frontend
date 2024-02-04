@@ -121,14 +121,12 @@
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Завантажити більше",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)",
-		"LocationPriceTotal": "{count} цін"
+		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
 		"Title": "Топ локацій",
 		"LoadMore": "Завантажити більше",
-		"LocationTotal": "{count} місць",
-		"LocationPriceCount": "{count} цін"
+		"LocationTotal": "{count} місць"
 	},
 	"LocationSelector": {
 		"Clear": "Очистити",
@@ -155,6 +153,9 @@
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Повна ціна",
 		"UnknownProduct": "Unknown product"
+	},
+	"PriceCountChip": {
+		"PriceCount": "{count} prices"
 	},
 	"PriceList": {
 		"LoadMore": "Завантажити більше",
@@ -243,19 +244,17 @@
 		"MyProofs": "Мої докази",
 		"Settings": "Налаштування",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} цін",
+		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} доказів"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Завантажити більше",
-		"UserPriceTotal": "{count} цін"
+		"LoadMore": "Завантажити більше"
 	},
 	"UserList": {
 		"LoadMore": "Завантажити більше",
 		"Title": "Найактивніші користувачі",
-		"UserTotal": "{count} учасників",
-		"UserPriceCount": "{count} цін"
+		"UserTotal": "{count} учасників"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
