@@ -182,6 +182,10 @@
 		"ScanNumber": "Número de escaneamentos adicionadas",
 		"Title": "Principais produtos"
 	},
+	"ProofCard": {
+		"PRICE_TAG": "Price tag",
+		"RECEIPT": "Receipt"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Adicionar um preço"

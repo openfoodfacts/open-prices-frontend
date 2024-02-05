@@ -182,6 +182,10 @@
 		"ScanNumber": "Número de digitalizações adicionadas",
 		"Title": "Top products"
 	},
+	"ProofCard": {
+		"PRICE_TAG": "Price tag",
+		"RECEIPT": "Recibo"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Adicionar um preço"

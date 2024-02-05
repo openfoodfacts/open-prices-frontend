@@ -182,6 +182,10 @@
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products"
 	},
+	"ProofCard": {
+		"PRICE_TAG": "Price tag",
+		"RECEIPT": "Čekis"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Pridėti kainą"

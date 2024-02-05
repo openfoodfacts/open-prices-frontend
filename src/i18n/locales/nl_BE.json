@@ -182,6 +182,10 @@
 		"ScanNumber": "Aantal scans toegevoegd",
 		"Title": "Top producten"
 	},
+	"ProofCard": {
+		"PRICE_TAG": "Price tag",
+		"RECEIPT": "Bon"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Voeg een prijs toe"
