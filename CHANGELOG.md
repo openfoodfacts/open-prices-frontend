@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.36.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.36.0...v1.36.1) (2024-02-05)
+
+
+### Bug Fixes
+
+* fix category list translation selection. ref [#275](https://github.com/openfoodfacts/open-prices-frontend/issues/275) ([0f59566](https://github.com/openfoodfacts/open-prices-frontend/commit/0f5956676d42bc197d3a4a31550683fb013b1bc4))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#282](https://github.com/openfoodfacts/open-prices-frontend/issues/282)) ([41ce5ce](https://github.com/openfoodfacts/open-prices-frontend/commit/41ce5ce603e507d101a697787090d9de2e59b676))
+
 ## [1.36.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.35.0...v1.36.0) (2024-02-04)
 
 
