@@ -155,7 +155,7 @@
 		"UnknownProduct": "Unbekanntes Produkt"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} Preise"
 	},
 	"PriceList": {
 		"LoadMore": "Weitere laden",
@@ -183,7 +183,7 @@
 		"Title": "Top-Produkte"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Preisschild",
 		"RECEIPT": "Kassenbon"
 	},
 	"Router": {
@@ -248,7 +248,7 @@
 		"MyProofs": "Meine Belege",
 		"Settings": "Einstellungen",
 		"Title": "Übersicht",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} Preise",
 		"UserProofTotal": "{count} Belege"
 	},
 	"UserDetail": {
