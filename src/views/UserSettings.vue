@@ -107,7 +107,7 @@ export default {
     },
     async updateSettings() {
       await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage.code)
-      this.appStore.setLanguage(this.userSettingsForm.selectedLanguage)
+      this.appStore.setLanguage(this.userSettingsForm.selectedLanguage.code)
       this.appStore.setLastCurrencyUsed(this.userSettingsForm.currency)
       this.$router.push({ path: '/', query: { settingsSuccess: 'true' } })
     }

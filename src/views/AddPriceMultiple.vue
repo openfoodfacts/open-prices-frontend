@@ -443,7 +443,7 @@ export default {
        * (init form done in initNewProductPriceForm)
        */
       this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
-      utils.getLocaleCategoryTags(this.appStore.user.language.code).then((module) => {
+      utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
         this.categoryTags = module.default
       })
       if (this.recentLocations.length) {

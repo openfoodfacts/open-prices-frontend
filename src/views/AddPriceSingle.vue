@@ -377,7 +377,7 @@ export default {
        * init form
        */
       this.productMode = this.addPriceSingleForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used
-      utils.getLocaleCategoryTags(this.appStore.user.language.code).then((module) => {
+      utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
         this.categoryTags = module.default
       })
       if (this.recentLocations.length) {
