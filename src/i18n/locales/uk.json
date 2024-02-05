@@ -155,7 +155,7 @@
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} цін"
 	},
 	"PriceList": {
 		"LoadMore": "Завантажити більше",
@@ -183,7 +183,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Цінник",
 		"RECEIPT": "Квитанція"
 	},
 	"Router": {
@@ -248,7 +248,7 @@
 		"MyProofs": "Мої докази",
 		"Settings": "Налаштування",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} цін",
 		"UserProofTotal": "{count} доказів"
 	},
 	"UserDetail": {
