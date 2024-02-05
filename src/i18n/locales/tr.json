@@ -155,7 +155,7 @@
 		"UnknownProduct": "Bilinmeyen ürün"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} fiyat"
 	},
 	"PriceList": {
 		"LoadMore": "Daha fazla yükle",
@@ -183,7 +183,7 @@
 		"Title": "En iyi ürünler"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Fiyat etiketi",
 		"RECEIPT": "Makbuz"
 	},
 	"Router": {
@@ -248,7 +248,7 @@
 		"MyProofs": "My proofs",
 		"Settings": "Ayarlar",
 		"Title": "Gösterge paneli",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} fiyat",
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {

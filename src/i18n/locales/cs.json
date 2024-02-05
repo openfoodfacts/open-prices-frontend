@@ -155,7 +155,7 @@
 		"UnknownProduct": "Neznámý produkt"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} cen"
 	},
 	"PriceList": {
 		"LoadMore": "Načíst další",
@@ -183,7 +183,7 @@
 		"Title": "Nejlepší produkty"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Cenovka",
 		"RECEIPT": "Účtenka"
 	},
 	"Router": {
@@ -248,7 +248,7 @@
 		"MyProofs": "Moje důkazy",
 		"Settings": "Nastavení",
 		"Title": "Nástěnka",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} cen",
 		"UserProofTotal": "{count} důkazů"
 	},
 	"UserDetail": {
