@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card :id="'price_' + price.id">
     <v-container class="pa-2">
       <v-row>
         <v-col v-if="!hideProductImage" style="max-width:25%">
@@ -109,7 +109,7 @@ export default {
       if (this.hasProductBrands) {
         return this.product.brands.split(',')
       }
-    }
+    },
   },
   methods: {
     initPriceCard() {

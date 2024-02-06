@@ -14,18 +14,24 @@
     <RelativeDateTimeChip :dateTime="price.created"></RelativeDateTimeChip>
 
     <PriceProof v-if="price.proof && price.proof.is_public" :proof="price.proof"></PriceProof>
+
+    <PriceDeleteChip v-if="userIsPriceOwner" :price="price"></PriceDeleteChip>
   </div>
 </template>
 
 <script>
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import utils from '../utils.js'
-import PriceProof from '../components/PriceProof.vue'
 import RelativeDateTimeChip from '../components/RelativeDateTimeChip.vue'
+import PriceProof from '../components/PriceProof.vue'
+import PriceDeleteChip from '../components/PriceDeleteChip.vue'
 
 export default {
   components: {
     RelativeDateTimeChip,
     PriceProof,
+    PriceDeleteChip,
   },
   props: {
     'price': null,
@@ -35,6 +41,15 @@ export default {
   data() {
     return {
       priceLocationEmoji: null
+    }
+  },
+  computed: {
+    ...mapStores(useAppStore),
+    username() {
+      return this.appStore.user.username
+    },
+    userIsPriceOwner() {
+      return this.username && (this.price.owner === this.username)
     }
   },
   mounted() {
