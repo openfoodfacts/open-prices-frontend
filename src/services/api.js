@@ -85,6 +85,17 @@ export default {
     .then((response) => response.json())
   },
 
+  deletePrice(priceId) {
+    const store = useAppStore()
+    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${store.user.token}`
+      },
+    })
+    // .then((response) => response.json())
+  },
+
   getProducts(params = {}) {
     const defaultParams = {page: 1, size: 10}  // order_by default ?
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products?${new URLSearchParams({...defaultParams, ...params})}`
