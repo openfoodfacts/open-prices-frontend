@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.37.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.36.1...v1.37.0) (2024-02-06)
+
+
+### Features
+
+* allow user to delete its own prices ([#287](https://github.com/openfoodfacts/open-prices-frontend/issues/287)) ([cdedf89](https://github.com/openfoodfacts/open-prices-frontend/commit/cdedf897504a592fc154d874c6c4342d527f1faf))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#284](https://github.com/openfoodfacts/open-prices-frontend/issues/284)) ([a547f87](https://github.com/openfoodfacts/open-prices-frontend/commit/a547f87dac970d53bf009c3a70dbe5255615a04e))
+* **l10n:** New Crowdin translations to review and merge ([#288](https://github.com/openfoodfacts/open-prices-frontend/issues/288)) ([7d80bb5](https://github.com/openfoodfacts/open-prices-frontend/commit/7d80bb54cdb7f7f1e52874b9a148fe9ce0ec9700))
+
 ## [1.36.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.36.0...v1.36.1) (2024-02-05)
 
 
