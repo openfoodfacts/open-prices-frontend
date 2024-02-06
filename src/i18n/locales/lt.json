@@ -157,6 +157,12 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
 	},
+	"PriceDeleteChip": {
+		"Confirmation": "Ar tikrai norite ištrinti šią kainą?",
+		"Delete": "Ištrinti",
+		"DeleteTitle": "Trinti kainą",
+		"Success": "Kaina ištrinta!"
+	},
 	"PriceList": {
 		"LoadMore": "Įkelti daugiau",
 		"Title": "Naujausios kainos"

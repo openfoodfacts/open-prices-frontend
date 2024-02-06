@@ -157,6 +157,12 @@
 	"PriceCountChip": {
 		"PriceCount": "商品 {count} 個"
 	},
+	"PriceDeleteChip": {
+		"Confirmation": "この価格を削除してもよろしいですか?",
+		"Delete": "削除",
+		"DeleteTitle": "価格を削除する",
+		"Success": "価格が削除されました!"
+	},
 	"PriceList": {
 		"LoadMore": "もっと読み込む",
 		"Title": "Latest prices"

@@ -157,6 +157,12 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} fiyat"
 	},
+	"PriceDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this price?",
+		"Delete": "Sil",
+		"DeleteTitle": "Delete a price",
+		"Success": "Price deleted!"
+	},
 	"PriceList": {
 		"LoadMore": "Daha fazla yükle",
 		"Title": "Son fiyatlar"

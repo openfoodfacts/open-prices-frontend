@@ -157,6 +157,12 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} цін"
 	},
+	"PriceDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this price?",
+		"Delete": "Видалити",
+		"DeleteTitle": "Delete a price",
+		"Success": "Price deleted!"
+	},
 	"PriceList": {
 		"LoadMore": "Завантажити більше",
 		"Title": "Latest prices"
