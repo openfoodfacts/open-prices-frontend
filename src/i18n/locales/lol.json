@@ -157,6 +157,12 @@
 	"PriceCountChip": {
 		"PriceCount": "crwdns247000:0{count}crwdne247000:0"
 	},
+	"PriceDeleteChip": {
+		"Confirmation": "crwdns247006:0crwdne247006:0",
+		"Delete": "crwdns247008:0crwdne247008:0",
+		"DeleteTitle": "crwdns247010:0crwdne247010:0",
+		"Success": "crwdns247012:0crwdne247012:0"
+	},
 	"PriceList": {
 		"LoadMore": "crwdns246664:0crwdne246664:0",
 		"Title": "crwdns246666:0crwdne246666:0"
