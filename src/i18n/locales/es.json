@@ -11,13 +11,13 @@
 		},
 		"SignedIn": "¡Sesión iniciada!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Sólo una etiqueta de precio",
+			"Title": "Producto único"
 		},
 		"Thanks": "Gracias",
 		"Title": "Añadir un precio",
 		"TitleSingle": "Añadir un solo precio",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "Añadir precios en masa"
 	},
 	"AddPriceMultiple": {
 		"Done": "Hecho",
@@ -63,8 +63,8 @@
 			"Category": "Categoría"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Precio por kilo",
+			"PerUnit": "Precio por unidad"
 		},
 		"Title": "Añadir un solo precio",
 		"WhereWhen": {
@@ -90,7 +90,7 @@
 	"BrandDetail": {
 		"LoadMore": "Carga más",
 		"TopProducts": "Productos destacados",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} productos",
 		"Filter": "Filtros",
 		"Order": "Orden"
 	},
@@ -126,7 +126,7 @@
 	"LocationList": {
 		"Title": "Ubicaciones destacadas",
 		"LoadMore": "Carga más",
-		"LocationTotal": "{count} locations"
+		"LocationTotal": "{count} ubicaciones"
 	},
 	"LocationSelector": {
 		"Clear": "Limpiar",
@@ -148,20 +148,20 @@
 		"Discount": "Descuento",
 		"PriceDate": "el {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / unidad",
 		"Proof": "Comprobante",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Precio original",
 		"UnknownProduct": "Producto desconocido"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} precios"
 	},
 	"PriceDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "¿Está seguro de que desea eliminar este precio?",
 		"Delete": "Eliminar",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"DeleteTitle": "Eliminar precio",
+		"Success": "¡Precio eliminado!"
 	},
 	"PriceList": {
 		"LoadMore": "Carga más",
@@ -189,7 +189,7 @@
 		"Title": "Productos destacados"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Etiqueta de precio",
 		"RECEIPT": "Ticket"
 	},
 	"Router": {
@@ -239,10 +239,10 @@
 		"ProductsWithPrices": "Productos con precios",
 		"Title": "Estadísticas",
 		"Products": "Productos",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Ubicaciones",
+		"Users": "Usuarios",
 		"Total": "Total",
-		"WithPrice": "With a price",
+		"WithPrice": "con precio",
 		"WithProduct": "With a product",
 		"WithoutProduct": "Without a product"
 	},
@@ -254,7 +254,7 @@
 		"MyProofs": "My proofs",
 		"Settings": "Configuración",
 		"Title": "Panel de control",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} precios",
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
