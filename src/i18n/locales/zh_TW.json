@@ -157,6 +157,12 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
 	},
+	"PriceDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this price?",
+		"Delete": "刪除",
+		"DeleteTitle": "Delete a price",
+		"Success": "Price deleted!"
+	},
 	"PriceList": {
 		"LoadMore": "載入更多",
 		"Title": "Latest prices"
