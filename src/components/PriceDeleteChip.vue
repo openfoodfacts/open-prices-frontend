@@ -19,21 +19,30 @@
       <v-card-text>
         <p class="mb-1">{{ $t('PriceDeleteChip.Confirmation') }}</p>
         <v-row>
-          <v-col cols="12" sm="6" md="4">
-            <PriceCard v-if="price" :price="price" :hidePriceFooter="true" :readonly="true"></PriceCard>
+          <v-col cols="12" md="6">
+            <PriceCard :price="price" :product="price.product" :hidePriceFooter="true" :readonly="true"></PriceCard>
           </v-col>
         </v-row>
-        <v-btn
-          class="mt-2"
-          size="small"
-          color="error"
-          prepend-icon="mdi-delete"
-          :loading="loading"
-          @click="deletePrice"
-        >{{ $t('PriceDeleteChip.Delete') }}</v-btn>
+        <v-row>
+          <v-col>
+            <v-btn
+              size="small"
+              color="error"
+              prepend-icon="mdi-delete"
+              :loading="loading"
+              @click="deletePrice"
+            >{{ $t('PriceDeleteChip.Delete') }}</v-btn>
+          </v-col>
+        </v-row>
       </v-card-text>
     </v-card>
   </v-dialog>
+
+  <v-snackbar
+    v-model="deleteSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >{{ $t('PriceDeleteChip.Success') }}</v-snackbar>
 </template>
 
 <script>
@@ -51,7 +60,8 @@ export default {
   data() {
     return {
       loading: false,
-      dialog: false
+      dialog: false,
+      deleteSuccessMessage: false
     }
   },
   computed: {
@@ -64,6 +74,7 @@ export default {
         .then((response) => {
           // if response.status == 204
           this.loading = false
+          this.deleteSuccessMessage = true
           this.removePriceCard()
           this.closeDialog()
         })
