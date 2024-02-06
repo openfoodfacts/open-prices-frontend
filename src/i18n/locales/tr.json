@@ -112,9 +112,9 @@
 		"LatestPrices": "Son fiyatlar",
 		"SearchProduct": "Bir ürün arayın",
 		"SettingsUpdated": "Ayarlar güncellendi!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"TodayPriceStat": "Bugün fiyat eklenmedi | Bugün eklenen {todayPriceNumber} yeni fiyat | Bugün {todayPriceNumber} yeni fiyat eklendi!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
+			"Subtitle": "Gıda fiyatlarına ilişkin açık ve kitle kaynaklı bir veritabanı 🏷🍊💲",
 			"Title": "{name}'a Hoş Geldiniz!"
 		}
 	},
@@ -134,7 +134,7 @@
 		"OSM": {
 			"text": "{url} tarafından desteklenmektedir"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
+		"RecentLocations": "Yeni konum yok | Son konum {recentLocationNumber}| Son konumlar {recentLocationNumber}",
 		"Result": "Sonuç {resultNumber} | Sonuçlar {resultNumber}",
 		"SearchByName": "Mağazanızı ada ve şehre göre arayın",
 		"Title": "Mağazanızın konumunu bulun",
