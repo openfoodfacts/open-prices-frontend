@@ -157,6 +157,12 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
 	},
+	"PriceDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this price?",
+		"Delete": "Usuń",
+		"DeleteTitle": "Delete a price",
+		"Success": "Price deleted!"
+	},
 	"PriceList": {
 		"LoadMore": "Załaduj więcej",
 		"Title": "Latest prices"
