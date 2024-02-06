@@ -155,13 +155,13 @@
 		"UnknownProduct": "Onbekend product"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} prijzen"
 	},
 	"PriceDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Weet u zeker dat u deze prijs wilt verwijderen?",
 		"Delete": "Verwijder",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"DeleteTitle": "Een prijs verwijderen",
+		"Success": "Prijs verwijderd!"
 	},
 	"PriceList": {
 		"LoadMore": "Meer laden",
@@ -189,7 +189,7 @@
 		"Title": "Top producten"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Prijskaartje",
 		"RECEIPT": "Bon"
 	},
 	"Router": {
@@ -254,7 +254,7 @@
 		"MyProofs": "Mijn bewijzen",
 		"Settings": "Instellingen",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} prijzen",
 		"UserProofTotal": "{count} bewijzen"
 	},
 	"UserDetail": {

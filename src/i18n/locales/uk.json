@@ -158,10 +158,10 @@
 		"PriceCount": "{count} цін"
 	},
 	"PriceDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Ви впевнені, що хочете видалити цю ціну?",
 		"Delete": "Видалити",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"DeleteTitle": "Видалити ціну",
+		"Success": "Ціну видалено!"
 	},
 	"PriceList": {
 		"LoadMore": "Завантажити більше",

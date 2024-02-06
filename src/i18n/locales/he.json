@@ -155,13 +155,13 @@
 		"UnknownProduct": "מוצר לא ידוע"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} מחירים"
 	},
 	"PriceDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "למחוק את המחיר הזה?",
 		"Delete": "מחיקה",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"DeleteTitle": "מחיקת מחיר",
+		"Success": "המחיר נמחק!"
 	},
 	"PriceList": {
 		"LoadMore": "לטעון עוד",
@@ -189,7 +189,7 @@
 		"Title": "מוצרים מובילים"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "תווית מחיר",
 		"RECEIPT": "קבלה"
 	},
 	"Router": {
@@ -254,7 +254,7 @@
 		"MyProofs": "ההוכחות שלי",
 		"Settings": "הגדרות",
 		"Title": "לוח בקרה",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} מחירים",
 		"UserProofTotal": "{count} הוכחות"
 	},
 	"UserDetail": {

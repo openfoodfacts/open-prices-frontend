@@ -1,206 +1,206 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Rak dengan beberapa label harga",
+			"Title": "Beberapa produk"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Harga dibuat!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Satu atau beberapa produk",
+			"Title": "Resi"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Masuk!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Hanya satu label harga",
+			"Title": "Satu produk"
 		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"Thanks": "Terima Kasih",
+		"Title": "Tambahkan harga",
+		"TitleSingle": "Tambahkan satu harga",
+		"TitleMultiple": "Tambahkan beberapa harga dalam jumlah besar"
 	},
 	"AddPriceMultiple": {
 		"Done": "Selesai",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "Tambahkan harga baru",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} harga sudah diunggah | {priceAlreadyUploadedNumber} harga sudah diunggah",
 			"Create": "Buat",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"NewPrice": "Harga baru",
+			"PriceUploaded": "Harga dibuat!",
+			"Upload": "Unggah"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"Title": "Proof details"
+			"ReceiptWarning": "Tanda terima mungkin berisi informasi pribadi, kami sarankan untuk menyembunyikannya (edit, lipat...) sebelum mengambil gambar.",
+			"Title": "Rincian bukti"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Tambahkan beberapa harga"
 	},
 	"AddPriceSingle": {
 		"Create": "Buat",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"Discount": "Diskon?",
+			"Label": "Harga",
+			"LabelDiscounted": "Harga sesudah diskon",
+			"LabelFull": "Harga penuh",
+			"Proof": "Bukti",
+			"ProofUploaded": "Bukti telah diunggah!",
+			"Title": "Detail harga",
+			"UploadProof": "Unggah bukti",
 			"TakePicture": "Ambil gambar",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Pilih dari galeri Anda"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
-			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"OriginLabel": "Asal",
+			"ProductBarcode": "Barcode produk",
+			"ScanBarcode": "Pindai barcode",
+			"TypeBarcode": "Ketik barcode",
+			"SetProduct": "Tetapkan produk",
+			"Title": "Info produk"
 		},
 		"ProductModeList": {
 			"Barcode": "Kode batang",
 			"Category": "Kategori"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Harga per kg",
+			"PerUnit": "Harga per unit"
 		},
-		"Title": "Add a single price",
+		"Title": "Tambahkan satu harga",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Tanggal",
+			"DateLabel": "Tanggal",
 			"Find": "Temukan",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Lokasi toko",
+			"SelectLocation": "Pilih lokasi Anda",
+			"Title": "Di mana & kapan?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "didukung oleh {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Pindai barcode"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kode batang",
 		"Submit": "Kirim",
-		"Title": "Type a barcode"
+		"Title": "Ketik barcode"
 	},
 	"BrandDetail": {
 		"LoadMore": "Muat lebih banyak",
-		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
+		"TopProducts": "Produk teratas",
+		"BrandProductTotal": "{count} produk",
 		"Filter": "Filter",
-		"Order": "Order"
+		"Order": "Urutan"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Masuk dengan akun {url} Anda"
 	},
 	"Footer": {
 		"About": "Tentang",
-		"Stats": "Stats",
-		"TagLine": "{name} is an {url} project."
+		"Stats": "Statistik",
+		"TagLine": "{name} adalah sebuah proyek {url}."
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Dasbor",
 		"Settings": "Pengaturan",
 		"Sign-out": "Keluar"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"LatestPrices": "Latest prices",
-		"SearchProduct": "Search for a product",
-		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"AddPrice": "Tambahkan harga",
+		"LatestPrices": "Harga terbaru",
+		"SearchProduct": "Cari produk",
+		"SettingsUpdated": "Pengaturan berhasil diperbarui!",
+		"TodayPriceStat": "Tidak ada harga yang ditambahkan hari ini | {todayPriceNumber} harga baru ditambahkan hari ini | {todayPriceNumber} harga baru ditambahkan hari ini!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Subtitle": "Basis data harga makanan yang terbuka dan bersumber dari banyak orang 🏷🍊💲",
+			"Title": "Selamat datang di {name}!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Harga terbaru",
 		"LoadMore": "Muat lebih banyak",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Lokasi tidak ditemukan di OpenStreetMap... Jangan ragu untuk menambahkannya :)"
 	},
 	"LocationList": {
-		"Title": "Top locations",
+		"Title": "Lokasi teratas",
 		"LoadMore": "Muat lebih banyak",
-		"LocationTotal": "{count} locations"
+		"LocationTotal": "{count} lokasi"
 	},
 	"LocationSelector": {
 		"Clear": "Hapus",
-		"NoResult": "No results found",
+		"NoResult": "Tidak ada hasil yang ditemukan",
 		"OSM": {
-			"text": "powered by {url}"
+			"text": "didukung oleh {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"RecentLocations": "Tidak ada lokasi terbaru | Lokasi terbaru {recentLocationNumber}| Lokasi terbaru {recentLocationNumber}",
+		"Result": "Hasil {resultNumber} | Hasil {resultNumber}",
+		"SearchByName": "Cari toko Anda berdasarkan nama dan kota",
+		"Title": "Temukan lokasi toko Anda",
+		"Warning": "Mesin pencari untuk menemukan toko saat ini tidak terlalu tepat.{newline}Jangan ragu untuk menambahkan nama jalan untuk mempersempit hasil pencarian.{newline}Contohnya: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "Halaman yang Anda minta sepertinya tidak ada...",
+		"Title": "Tidak ditemukan"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
+		"Discount": "Diskon",
+		"PriceDate": "pada {date}",
 		"PriceValueDisplay": "{0} / kg",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Bukti",
 		"ProductQuantity": "{0} g",
-		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"FullPrice": "Harga penuh",
+		"UnknownProduct": "Produk tidak diketahui"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} harga"
 	},
 	"PriceDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Apakah Anda yakin ingin menghapus harga ini?",
 		"Delete": "Hapus",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"DeleteTitle": "Hapus harga",
+		"Success": "Harga telah dihapus!"
 	},
 	"PriceList": {
 		"LoadMore": "Muat lebih banyak",
-		"Title": "Latest prices"
+		"Title": "Harga terbaru"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Harga terbaru",
 		"ProductQuantity": "{0} g",
 		"UnknownProduct": "Nama produk tidak dikenal"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"AddPrice": "Tambahkan harga",
+		"CategoryNotFound": "Kategori tidak ditemukan...",
+		"LatestPrices": "Harga terbaru",
 		"LoadMore": "Muat lebih banyak",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Produk tidak ditemukan di Open Food Facts... Jangan ragu untuk menambahkannya :)"
 	},
 	"ProductList": {
 		"Filter": "Filter",
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Sembunyikan produk dengan harga",
 		"LoadMore": "Muat lebih banyak",
-		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Order": "Urutan",
+		"PriceNumber": "Jumlah harga yang ditambahkan",
+		"ScanNumber": "Jumlah pemindaian yang ditambahkan",
+		"Title": "Produk teratas"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt"
+		"PRICE_TAG": "Label harga",
+		"RECEIPT": "Resi"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Tambahkan harga"
 		},
 		"Home": {
 			"Title": "Beranda"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Harga terbaru"
 		},
 		"Search": {
 			"Title": "Cari"
@@ -209,73 +209,73 @@
 			"Title": "Masuk"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Kontributor teratas"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Lokasi teratas"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Produk teratas"
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Barcode produk",
 		"Title": "Cari"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Tautan disalin"
 	},
 	"SignIn": {
 		"Button": "Masuk",
 		"Password": "Kata sandi",
-		"ServerError": "Error: server error",
+		"ServerError": "Kesalahan: kesalahan server",
 		"Title": "Masuk",
-		"SignInOFFAccount": "Sign in with your {url} account",
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
+		"UsernameLabel": "Nama pengguna",
+		"WrongCredentials": "Kesalahan: kredensial salah"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"Prices": "Harga",
+		"ProductsWithPrices": "Produk dengan harga",
+		"Title": "Statistik",
 		"Products": "Produk - produk",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Lokasi",
+		"Users": "Pengguna",
 		"Total": "Total",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "Dengan harga",
+		"WithProduct": "Dengan produk",
+		"WithoutProduct": "Tanpa produk"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "Harga terbaru",
+		"LatestProofs": "Bukti terbaru",
 		"LoadMore": "Muat lebih banyak",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Harga saya",
+		"MyProofs": "Bukti saya",
 		"Settings": "Pengaturan",
-		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"Title": "Dasbor",
+		"UserPriceTotal": "{count} harga",
+		"UserProofTotal": "{count} bukti"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Harga terbaru",
 		"LoadMore": "Muat lebih banyak"
 	},
 	"UserList": {
 		"LoadMore": "Muat lebih banyak",
-		"Title": "Top contributors",
-		"UserTotal": "{count} contributors"
+		"Title": "Kontributor teratas",
+		"UserTotal": "{count} kontributor"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Menambahkan harga",
 		"ChangeLanguage": "Ganti bahasa",
 		"CountryLabel": "Negara",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"CurrencyLabel": "Mata uang",
+		"DefaultCurrency": "Mata uang default",
 		"LanguageLabel": "Bahasa",
 		"Save": "menyimpan ",
 		"Title": "Pengaturan",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationCompletion": "Terjemahan sudah {completion}% selesai.",
+		"TranslationHelp": "Bantu kami menerjemahkan lebih banyak bahasa"
 	}
 }
