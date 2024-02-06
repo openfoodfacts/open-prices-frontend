@@ -157,6 +157,12 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} cen"
 	},
+	"PriceDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this price?",
+		"Delete": "Odstranit",
+		"DeleteTitle": "Delete a price",
+		"Success": "Price deleted!"
+	},
 	"PriceList": {
 		"LoadMore": "Načíst další",
 		"Title": "Nejnovější ceny"
