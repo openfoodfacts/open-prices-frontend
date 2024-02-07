@@ -59,6 +59,17 @@ export default {
     .then((response) => response.json())
   },
 
+  deleteProof(proofId) {
+    const store = useAppStore()
+    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${store.user.token}`
+      },
+    })
+    // .then((response) => response.json())
+  },
+
   createPrice(priceData) {
     const store = useAppStore()
     store.user.last_product_mode_used = priceData.product_code ? 'barcode' : 'category'
