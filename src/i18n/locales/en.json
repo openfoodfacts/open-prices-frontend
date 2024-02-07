@@ -192,6 +192,12 @@
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Receipt"
 	},
+	"ProofDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this proof?",
+		"Delete": "Delete",
+		"DeleteTitle": "Delete a proof",
+		"Success": "Proof deleted!"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Add a price"
