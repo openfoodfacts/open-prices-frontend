@@ -2,7 +2,7 @@
 	"AddPriceHome": {
 		"MultipleProductMode": {
 			"Subtitle": "Lentyna su keliomis kainų etiketėmis",
-			"Title": "Keli produktai"
+			"Title": "Kelis produktus"
 		},
 		"PriceCreated": "Kaina sukurta!",
 		"ReceiptMode": {
@@ -11,8 +11,8 @@
 		},
 		"SignedIn": "Prisijungta!",
 		"SingleProductMode": {
-			"Subtitle": "Tik viena kainos etiketė",
-			"Title": "Nekeičiamos sudėties produktas"
+			"Subtitle": "Tik vieną kainos etiketę",
+			"Title": "Vieną produktą"
 		},
 		"Thanks": "Ačiū",
 		"Title": "Pridėti kainą",
@@ -89,10 +89,10 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Įkelti daugiau",
-		"TopProducts": "Top products",
+		"TopProducts": "Populiariausi produktai",
 		"BrandProductTotal": "{count} produktai (-ų)",
 		"Filter": "Filtras",
-		"Order": "Order"
+		"Order": "Rikiavimas"
 	},
 	"Common": {
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra"
@@ -121,7 +121,7 @@
 	"LocationDetail": {
 		"LatestPrices": "Naujausios kainos",
 		"LoadMore": "Įkelti daugiau",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Vieta nerasta OpenStreetMap... Nedvejokite pridėti ją :)"
 	},
 	"LocationList": {
 		"Title": "Geriausios vietos",
@@ -130,7 +130,7 @@
 	},
 	"LocationSelector": {
 		"Clear": "Clear",
-		"NoResult": "No results found",
+		"NoResult": "Rezultatų nerasta",
 		"OSM": {
 			"text": "įgalino {url}"
 		},
@@ -142,7 +142,7 @@
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Title": "Nerasta"
 	},
 	"PriceCard": {
 		"Discount": "Nuolaida",
@@ -152,7 +152,7 @@
 		"Proof": "Įrodymai",
 		"ProductQuantity": "{0} g",
 		"FullPrice": "Visa kaina",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Nežinomas produktas"
 	},
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
@@ -174,22 +174,22 @@
 	},
 	"ProductDetail": {
 		"AddPrice": "Pridėti kainą",
-		"CategoryNotFound": "Category not found...",
+		"CategoryNotFound": "Kategorija nerasta...",
 		"LatestPrices": "Naujausios kainos",
 		"LoadMore": "Įkelti daugiau",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Produktas nerastas Open Food Facts... Nedvejokite ir pridėkite :)"
 	},
 	"ProductList": {
 		"Filter": "Filtras",
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Slėpti produktus su kainomis",
 		"LoadMore": "Įkelti daugiau",
-		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Order": "Rikiavimas",
+		"PriceNumber": "Pridėtų kainų skaičius",
+		"ScanNumber": "Pridėtų nuskaitymų skaičius",
+		"Title": "Populiariausi produktai"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Kainos etiketė",
 		"RECEIPT": "Čekis"
 	},
 	"Router": {
@@ -215,7 +215,7 @@
 			"Title": "Geriausios vietos"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Populiariausi produktai"
 		}
 	},
 	"Search": {
@@ -231,12 +231,12 @@
 		"ServerError": "Error: server error",
 		"Title": "Prisijungti",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"UsernameLabel": "Vartotojo vardas",
+		"WrongCredentials": "Klaida: neteisingi kredencialai"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
+		"Prices": "Kainos",
+		"ProductsWithPrices": "Produktai su kainomis",
 		"Title": "Statistika",
 		"Products": "Produktai",
 		"Locations": "Vietos",
@@ -267,11 +267,11 @@
 		"UserTotal": "{count} bendraautoriai (-ių)"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Kainų pridėjimas",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Šalis",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"CurrencyLabel": "Valiuta",
+		"DefaultCurrency": "Nustatyta valiuta",
 		"LanguageLabel": "Kalbos",
 		"Save": "Išsaugoti",
 		"Title": "Nustatymai",
