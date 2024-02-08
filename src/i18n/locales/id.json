@@ -192,6 +192,12 @@
 		"PRICE_TAG": "Label harga",
 		"RECEIPT": "Resi"
 	},
+	"ProofDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this proof?",
+		"Delete": "Hapus",
+		"DeleteTitle": "Delete a proof",
+		"Success": "Proof deleted!"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Tambahkan harga"
