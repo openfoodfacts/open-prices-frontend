@@ -192,6 +192,12 @@
 		"PRICE_TAG": "Preisschild",
 		"RECEIPT": "Kassenbon"
 	},
+	"ProofDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this proof?",
+		"Delete": "Löschen",
+		"DeleteTitle": "Delete a proof",
+		"Success": "Proof deleted!"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Preis hinzufügen"
