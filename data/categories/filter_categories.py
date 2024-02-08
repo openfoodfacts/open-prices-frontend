@@ -20,6 +20,8 @@ EXTRA_CHILDREN = [
 ADDITIONAL_FILTERING = [
     "Cooked ",
     "Fresh ",
+    "Frozen ",
+    "Canned "
 ]
 
 
@@ -65,11 +67,6 @@ def get_taxonomy_node_children_full_list(taxonomy, node_parent):
 
 
 def filter_categories(categories, parent_categories):
-    """
-    How to run:
-    > pip install openfoodfacts
-    > python data/categories/filter_categories.py
-    """
     # get child nodes of parent_categories
     node_child_list = list()
     for parent_node in parent_categories:
@@ -143,6 +140,11 @@ def compare_new_categories_with_old_categories():
 
 
 if __name__ == "__main__":
+    """
+    How-to run ?
+    > pip install openfoodfacts
+    > python data/categories/filter_categories.py
+    """
     # init
     CATEGORIES_FULL = get_category_taxonomy()
     print("Total number of categories:", len(CATEGORIES_FULL))
