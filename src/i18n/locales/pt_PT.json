@@ -84,7 +84,7 @@
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
-		"Submit": "Submeter",
+		"Submit": "Envie",
 		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
@@ -191,6 +191,12 @@
 	"ProofCard": {
 		"PRICE_TAG": "Etiqueta de preço",
 		"RECEIPT": "Recibo"
+	},
+	"ProofDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this proof?",
+		"Delete": "Eliminar",
+		"DeleteTitle": "Delete a proof",
+		"Success": "Proof deleted!"
 	},
 	"Router": {
 		"AddPrice": {
