@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.38.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.37.0...v1.38.0) (2024-02-08)
+
+
+### Features
+
+* allow users to delete its own proofs ([#304](https://github.com/openfoodfacts/open-prices-frontend/issues/304)) ([0e73489](https://github.com/openfoodfacts/open-prices-frontend/commit/0e7348954df881daf0067b68bf7ad7ac0e298f05))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#289](https://github.com/openfoodfacts/open-prices-frontend/issues/289)) ([366ddf2](https://github.com/openfoodfacts/open-prices-frontend/commit/366ddf23f75eab6ee2111d824a4ac9302ef313e0))
+* **l10n:** New Crowdin translations to review and merge ([#292](https://github.com/openfoodfacts/open-prices-frontend/issues/292)) ([006111a](https://github.com/openfoodfacts/open-prices-frontend/commit/006111a043180c22e09cd1fa6a8be3cf706e2972))
+* **l10n:** New Crowdin translations to review and merge ([#306](https://github.com/openfoodfacts/open-prices-frontend/issues/306)) ([23d48fb](https://github.com/openfoodfacts/open-prices-frontend/commit/23d48fb343d2d425fe5ef3e73f4e35563c4cc498))
+* locale cleanup (update language list) ([#296](https://github.com/openfoodfacts/open-prices-frontend/issues/296)) ([7fd7e7d](https://github.com/openfoodfacts/open-prices-frontend/commit/7fd7e7d3a7a2cdc4e3d8f7a1901b28bb9208bfb5))
+* remove additional raw categories (canned, frozen) ([#305](https://github.com/openfoodfacts/open-prices-frontend/issues/305)) ([97ded3b](https://github.com/openfoodfacts/open-prices-frontend/commit/97ded3b411bce01a73af3a8e68d3d269a9e34d0d))
+
 ## [1.37.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.36.1...v1.37.0) (2024-02-06)
 
 
