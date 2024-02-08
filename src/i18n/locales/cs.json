@@ -192,6 +192,12 @@
 		"PRICE_TAG": "Cenovka",
 		"RECEIPT": "Účtenka"
 	},
+	"ProofDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this proof?",
+		"Delete": "Odstranit",
+		"DeleteTitle": "Delete a proof",
+		"Success": "Proof deleted!"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Přidat cenu"
