@@ -192,6 +192,12 @@
 		"PRICE_TAG": "Étiquette de prix",
 		"RECEIPT": "Ticket de caisse"
 	},
+	"ProofDeleteChip": {
+		"Confirmation": "Are you sure you want to delete this proof?",
+		"Delete": "Supprimer",
+		"DeleteTitle": "Delete a proof",
+		"Success": "Proof deleted!"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Ajouter un prix"
