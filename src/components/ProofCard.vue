@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card :id="'proof_' + proof.id">
     <v-card-text>
       <v-img :src="getProofUrl(proof)"></v-img>
     </v-card-text>
