@@ -50,7 +50,7 @@
 			"SelectFromGallery": "Select from your gallery"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "分类",
+			"CategoryLabel": "分類",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
 			"ScanBarcode": "Scan a barcode",
@@ -59,8 +59,8 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "条形码",
-			"Category": "分类"
+			"Barcode": "條碼",
+			"Category": "分類"
 		},
 		"CategoryPricePer": {
 			"PerKg": "Price per kg",
@@ -83,12 +83,12 @@
 		"Scan": "Scan a barcode"
 	},
 	"BarcodeManualInput": {
-		"Barcode": "条形码",
-		"Submit": "提交",
+		"Barcode": "條碼",
+		"Submit": "送出",
 		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
-		"LoadMore": "显示更多",
+		"LoadMore": "載入更多",
 		"TopProducts": "Top products",
 		"BrandProductTotal": "{count} products",
 		"Filter": "过滤器",
@@ -104,7 +104,7 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "设置",
+		"Settings": "設定",
 		"Sign-out": "登出"
 	},
 	"Home": {
@@ -120,12 +120,12 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "显示更多",
+		"LoadMore": "載入更多",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
 		"Title": "Top locations",
-		"LoadMore": "显示更多",
+		"LoadMore": "載入更多",
 		"LocationTotal": "{count} locations"
 	},
 	"LocationSelector": {
@@ -164,7 +164,7 @@
 		"Success": "Price deleted!"
 	},
 	"PriceList": {
-		"LoadMore": "显示更多",
+		"LoadMore": "載入更多",
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
@@ -176,13 +176,13 @@
 		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
-		"LoadMore": "显示更多",
+		"LoadMore": "載入更多",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
 		"Filter": "过滤器",
 		"HideProductsWithPrices": "Hide products with prices",
-		"LoadMore": "显示更多",
+		"LoadMore": "載入更多",
 		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
@@ -203,7 +203,7 @@
 			"Title": "Latest prices"
 		},
 		"Search": {
-			"Title": "搜索"
+			"Title": "搜尋"
 		},
 		"SignIn": {
 			"Title": "登录"
@@ -220,7 +220,7 @@
 	},
 	"Search": {
 		"ProductBarcode": "Product barcode",
-		"Title": "搜索"
+		"Title": "搜尋"
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied"
@@ -249,32 +249,32 @@
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
-		"LoadMore": "显示更多",
+		"LoadMore": "載入更多",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
-		"Settings": "设置",
+		"Settings": "設定",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "显示更多"
+		"LoadMore": "載入更多"
 	},
 	"UserList": {
-		"LoadMore": "显示更多",
+		"LoadMore": "載入更多",
 		"Title": "Top contributors",
 		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "更改语言",
-		"CountryLabel": "国家/地区",
+		"CountryLabel": "地區",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "语言",
-		"Save": "保存",
-		"Title": "设置",
+		"LanguageLabel": "語言",
+		"Save": "儲存",
+		"Title": "設定",
 		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
 	}
