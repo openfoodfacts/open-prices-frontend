@@ -148,6 +148,7 @@
 		"Discount": "Promo",
 		"PriceDate": "le {date}",
 		"PriceValueDisplay": "{0} /kg",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unité",
 		"Proof": "Preuve",
 		"ProductQuantity": "{0} g",
@@ -193,10 +194,10 @@
 		"RECEIPT": "Ticket de caisse"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Êtes-vous sûr de vouloir supprimer cette preuve?",
 		"Delete": "Supprimer",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "Supprimer une preuve",
+		"Success": "Preuve supprimée!"
 	},
 	"Router": {
 		"AddPrice": {

@@ -148,6 +148,7 @@
 		"Discount": "İndirim",
 		"PriceDate": "{date} tarihinde",
 		"PriceValueDisplay": "{0} / kilo",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / birim",
 		"Proof": "Kanıt",
 		"ProductQuantity": "{0} gr",

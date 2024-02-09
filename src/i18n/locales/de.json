@@ -148,6 +148,7 @@
 		"Discount": "Rabatt",
 		"PriceDate": "am {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / Einheit",
 		"Proof": "Nachweis",
 		"ProductQuantity": "{0} g",
@@ -193,10 +194,10 @@
 		"RECEIPT": "Kassenbon"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Möchten Sie diesen Nachweis wirklich löschen?",
 		"Delete": "Löschen",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "Einen Nachweis löschen",
+		"Success": "Nachweis gelöscht!"
 	},
 	"Router": {
 		"AddPrice": {

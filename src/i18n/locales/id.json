@@ -148,6 +148,7 @@
 		"Discount": "Diskon",
 		"PriceDate": "pada {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Bukti",
 		"ProductQuantity": "{0} g",

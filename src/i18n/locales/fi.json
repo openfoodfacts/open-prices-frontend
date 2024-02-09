@@ -148,6 +148,7 @@
 		"Discount": "Alennus",
 		"PriceDate": "päivänä {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / yksikkö",
 		"Proof": "Todiste",
 		"ProductQuantity": "{0} g",

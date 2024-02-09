@@ -148,6 +148,7 @@
 		"Discount": "Nuolaida",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / vnt.",
 		"Proof": "Įrodymai",
 		"ProductQuantity": "{0} g",
@@ -193,10 +194,10 @@
 		"RECEIPT": "Čekis"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Ar tikrai norite ištrinti šį įrodymą?",
 		"Delete": "Ištrinti",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "Trinti įrodymą",
+		"Success": "Įrodymas ištrintas!"
 	},
 	"Router": {
 		"AddPrice": {

@@ -148,6 +148,7 @@
 		"Discount": "Знижка",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayLitre": "{0} / л",
 		"PriceValueDisplayUnit": "{0} / одиниця",
 		"Proof": "Доказ",
 		"ProductQuantity": "{0} g",
@@ -193,10 +194,10 @@
 		"RECEIPT": "Квитанція"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Ви дійсно бажаєте видалити це?",
 		"Delete": "Видалити",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "Видалити підтвердження",
+		"Success": "Доказ видалено!"
 	},
 	"Router": {
 		"AddPrice": {
