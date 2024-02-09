@@ -147,11 +147,10 @@
 	"PriceCard": {
 		"Discount": "crwdns246776:0crwdne246776:0",
 		"PriceDate": "crwdns246656:0{date}crwdne246656:0",
-		"PriceValueDisplay": "crwdns246658:0{0}crwdne246658:0",
+		"PriceValueDisplayKilogram": "crwdns247494:0{0}crwdne247494:0",
 		"PriceValueDisplayLitre": "crwdns247492:0{0}crwdne247492:0",
 		"PriceValueDisplayUnit": "crwdns246994:0{0}crwdne246994:0",
 		"Proof": "crwdns246914:0crwdne246914:0",
-		"ProductQuantity": "crwdns246660:0{0}crwdne246660:0",
 		"FullPrice": "crwdns246778:0crwdne246778:0",
 		"UnknownProduct": "crwdns246662:0crwdne246662:0"
 	},
@@ -170,7 +169,10 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "crwdns246892:0crwdne246892:0",
-		"ProductQuantity": "crwdns246668:0{0}crwdne246668:0",
+		"ProductQuantityGram": "crwdns247496:0{0}crwdne247496:0",
+		"ProductQuantityKilogram": "crwdns247498:0{0}crwdne247498:0",
+		"ProductQuantityMililitre": "crwdns247500:0{0}crwdne247500:0",
+		"ProductQuantityLitre": "crwdns247502:0{0}crwdne247502:0",
 		"UnknownProduct": "crwdns246670:0crwdne246670:0"
 	},
 	"ProductDetail": {
