@@ -148,6 +148,7 @@
 		"Discount": "Discount",
 		"PriceDate": "em {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unidade",
 		"Proof": "Comprovativo",
 		"ProductQuantity": "{0} g",
