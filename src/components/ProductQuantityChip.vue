@@ -1,6 +1,6 @@
 <template>
   <v-chip label size="small" density="comfortable">
-    {{ $t('ProductCard.ProductQuantity', [productQuantity]) }}
+    {{ productQuantityWithUnitDisplay }}
   </v-chip>
 </template>
 
@@ -8,10 +8,15 @@
 export default {
   props: {
     productQuantity: null,
-    productQuantityUnit: null
+    productQuantityUnit: 'g'  // 'mL'
   },
   computed: {
-
+    productQuantityWithUnitDisplay() {
+      if (this.productQuantityUnit === 'mL') {
+        return this.$t('ProductCard.ProductQuantityLitre', [this.productQuantity])
+      }
+      return this.$t('ProductCard.ProductQuantity', [this.productQuantity])
+    }
   }
 }
 </script>

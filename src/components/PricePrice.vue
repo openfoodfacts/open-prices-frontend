@@ -23,7 +23,7 @@ export default {
   props: {
     'price': null,
     'productQuantity': null,
-    'productQuantityUnit': null,  // 'g', 'mL'
+    'productQuantityUnit': 'g',  // 'mL'
     'hidePriceDate': false
   },
   data() {
