@@ -147,11 +147,10 @@
 	"PriceCard": {
 		"Discount": "הנחה",
 		"PriceDate": "ב־{date}",
-		"PriceValueDisplay": "{0} לק״ג",
+		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} לליטר",
 		"PriceValueDisplayUnit": "{0} ליחידה",
 		"Proof": "הוכחה",
-		"ProductQuantity": "{0} גרם",
 		"FullPrice": "מחיר מלא",
 		"UnknownProduct": "מוצר לא ידוע"
 	},
@@ -170,7 +169,10 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "המחיר העדכני",
-		"ProductQuantity": "{0} גרם",
+		"ProductQuantityGram": "{0} g",
+		"ProductQuantityKilogram": "{0} kg",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
 	"ProductDetail": {
