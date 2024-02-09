@@ -193,10 +193,10 @@
 		"RECEIPT": "Účtenka"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Jste si jisti, že chcete smazat tento důkaz?",
 		"Delete": "Odstranit",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "Odstranit důkaz",
+		"Success": "Důkaz odstraněn!"
 	},
 	"Router": {
 		"AddPrice": {
