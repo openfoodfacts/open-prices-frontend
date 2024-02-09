@@ -148,6 +148,7 @@
 		"Discount": "Sleva",
 		"PriceDate": "dne {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / kus",
 		"Proof": "Důkaz",
 		"ProductQuantity": "{0} g",
