@@ -148,7 +148,7 @@
 		"Discount": "Знижка",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
-		"PriceValueDisplayLitre": "{0} / L",
+		"PriceValueDisplayLitre": "{0} / л",
 		"PriceValueDisplayUnit": "{0} / одиниця",
 		"Proof": "Доказ",
 		"ProductQuantity": "{0} g",
