@@ -148,6 +148,7 @@
 		"Discount": "Korting",
 		"PriceDate": "op {date}",
 		"PriceValueDisplay": "{0} /kg",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / eenheid",
 		"Proof": "Bewijs",
 		"ProductQuantity": "{0} g",
