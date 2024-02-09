@@ -34,7 +34,7 @@
       <v-sheet v-if="latestPrice">
         <v-divider class="mt-2 mb-2"></v-divider>
         <h4>{{ $t('ProductCard.LatestPrice') }}</h4>
-        <PricePrice :price="latestPrice" :productQuantity="product.product_quantity"></PricePrice>
+        <PricePrice :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></PricePrice>
         <PriceFooter :price="latestPrice"></PriceFooter>
       </v-sheet>
     </v-container>
