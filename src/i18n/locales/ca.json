@@ -148,6 +148,7 @@
 		"Discount": "Descompte",
 		"PriceDate": "el {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Prova",
 		"ProductQuantity": "{0} g",
