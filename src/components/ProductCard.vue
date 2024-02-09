@@ -19,9 +19,7 @@
               </v-chip>
             </span>
             <span v-if="hasProductQuantity">
-              <v-chip label size="small" density="comfortable" class="mr-1">
-                {{ $t('ProductCard.ProductQuantity', [product.product_quantity]) }}
-              </v-chip>
+              <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
             <span>
               <br />
@@ -43,12 +41,14 @@
 
 <script>
 import PriceCountChip from '../components/PriceCountChip.vue'
+import ProductQuantityChip from '../components/ProductQuantityChip.vue'
 import PricePrice from '../components/PricePrice.vue'
 import PriceFooter from '../components/PriceFooter.vue'
 
 export default {
   components: {
     PriceCountChip,
+    ProductQuantityChip,
     PricePrice,
     PriceFooter,
   },
