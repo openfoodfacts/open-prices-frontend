@@ -13,9 +13,9 @@ export default {
   computed: {
     productQuantityWithUnitDisplay() {
       if (this.productQuantityUnit === 'mL') {
-        return this.$t('ProductCard.ProductQuantityLitre', [this.productQuantity])
+        return this.$t('ProductCard.ProductQuantityMililitre', [this.productQuantity])
       }
-      return this.$t('ProductCard.ProductQuantity', [this.productQuantity])
+      return this.$t('ProductCard.ProductQuantityGram', [this.productQuantity])
     }
   }
 }

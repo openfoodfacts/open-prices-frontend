@@ -67,14 +67,14 @@ export default {
           return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.priceCurrency)])
         }
         // default to 'KILOGRAM'
-        return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(price, this.priceCurrency)])
+        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.priceCurrency)])
       }
       if (this.hasProductQuantity) {
         const pricePerUnit = (price / this.productQuantity) * 1000
         if (this.productQuantityUnit === 'mL') {
           return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
         }
-        return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
+        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
       }
     },
     getPriceValueDisplay(price) {
