@@ -16,9 +16,7 @@
               </v-chip>
             </span>
             <span v-if="hasProductQuantity">
-              <v-chip label size="small" density="comfortable" class="mr-1">
-                {{ $t('PriceCard.ProductQuantity', [product.product_quantity]) }}
-              </v-chip>
+              <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
             <span v-if="hasPriceOrigin && priceOrigin">
               <v-chip label size="small" density="comfortable" class="mr-1">
@@ -46,11 +44,13 @@
 import utils from '../utils.js'
 import OriginTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
+import ProductQuantityChip from '../components/ProductQuantityChip.vue'
 import PricePrice from '../components/PricePrice.vue'
 import PriceFooter from '../components/PriceFooter.vue'
 
 export default {
   components: {
+    ProductQuantityChip,
     PricePrice,
     PriceFooter
   },
