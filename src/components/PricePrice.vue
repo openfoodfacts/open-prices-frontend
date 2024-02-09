@@ -1,7 +1,7 @@
 <template>
   <p>
     <span class="mr-1">{{ getPriceValueDisplay(priceValue) }}</span>
-    <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerKilo() }})</span>
+    <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(priceValue) }})</span>
     <span v-if="price.price_is_discounted">
       <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">
         {{ $t('PriceCard.Discount') }}
@@ -23,6 +23,7 @@ export default {
   props: {
     'price': null,
     'productQuantity': null,
+    'productQuantityUnit': null,  // 'g', 'mL'
     'hidePriceDate': false
   },
   data() {
@@ -60,17 +61,27 @@ export default {
         maximumFractionDigits: 2
       })
     },
+    getPricePerUnit(price) {
+      if (this.hasCategoryTag) {
+        if (this.pricePricePer === 'UNIT') {
+          return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.priceCurrency)])
+        }
+        // default to 'KILOGRAM'
+        return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(price, this.priceCurrency)])
+      }
+      if (this.hasProductQuantity) {
+        const pricePerUnit = (price / this.productQuantity) * 1000
+        if (this.productQuantityUnit === 'mL') {
+          return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
+        }
+        return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
+      }
+    },
     getPriceValueDisplay(price) {
       if (this.hasCategoryTag) {
-        const translationKey = this.pricePricePer === 'UNIT' ? 'PriceCard.PriceValueDisplayUnit' : 'PriceCard.PriceValueDisplay';
-        return this.$t(translationKey, [this.getPriceValue(price, this.priceCurrency)]);
+        return this.getPricePerUnit(price)
       }
-      return this.getPriceValue(price, this.priceCurrency);
-    },
-    getPricePerKilo() {
-      const productQuantity = this.productQuantity
-      let pricePerKilo = (this.priceValue / productQuantity) * 1000
-      return this.$t('PriceCard.PriceValueDisplay', [this.getPriceValue(pricePerKilo, this.priceCurrency)])
+      return this.getPriceValue(price, this.priceCurrency)
     },
     getDateFormatted(dateString) {
       return utils.prettyDate(dateString)
