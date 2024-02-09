@@ -148,6 +148,7 @@
 		"Discount": "הנחה",
 		"PriceDate": "ב־{date}",
 		"PriceValueDisplay": "{0} לק״ג",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} ליחידה",
 		"Proof": "הוכחה",
 		"ProductQuantity": "{0} גרם",
