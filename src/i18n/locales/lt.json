@@ -148,6 +148,7 @@
 		"Discount": "Nuolaida",
 		"PriceDate": "on {date}",
 		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / vnt.",
 		"Proof": "Įrodymai",
 		"ProductQuantity": "{0} g",
