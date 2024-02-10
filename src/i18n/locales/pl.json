@@ -1,120 +1,120 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Półka z wieloma cenami",
+			"Title": "Wiele produktów"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Cena utworzona!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Jeden lub wiele produktów",
+			"Title": "Rachunek"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Zalogowano!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Tylko jedna cena",
+			"Title": "Pojedynczy produkt"
 		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"Thanks": "Dziękujemy",
+		"Title": "Dodaj cenę",
+		"TitleSingle": "Dodaj pojedynczą cenę",
+		"TitleMultiple": "Dodaj więcej cen naraz"
 	},
 	"AddPriceMultiple": {
 		"Done": "Gotowe",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "Dodaj nową cenę",
+			"AlreadyUploaded": "Cena {priceAlreadyUploadedNumber} została już przesłana | Ceny {priceAlreadyUploadedNumber} już przesłane",
 			"Create": "Stwórz",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"NewPrice": "Nowa cena",
+			"PriceUploaded": "Cena utworzona!",
+			"Upload": "Prześlij"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"Title": "Proof details"
+			"ReceiptWarning": "Paragony mogą zawierać dane osobowe, zalecamy ich ukrycie (wymazanie, złożenie...) przed zrobieniem zdjęcia.",
+			"Title": "Szczegóły dowodu"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Dodaj więcej cen"
 	},
 	"AddPriceSingle": {
 		"Create": "Stwórz",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"Discount": "Promocja?",
+			"Label": "Cena",
+			"LabelDiscounted": "Cena promocyjna",
+			"LabelFull": "Pełna cena",
+			"Proof": "Dowód",
+			"ProofUploaded": "Dowód przesłany!",
+			"Title": "Szczegóły ceny",
+			"UploadProof": "Prześlij dowód",
 			"TakePicture": "Zrób zdjęcie",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Wybierz ze swojej galerii"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategoria",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
-			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"OriginLabel": "Pochodzenie",
+			"ProductBarcode": "Kod kreskowy produktu",
+			"ScanBarcode": "Zeskanuj kod kreskowy",
+			"TypeBarcode": "Wpisz kod kreskowy",
+			"SetProduct": "Ustaw produkt",
+			"Title": "Informacje o produkcie"
 		},
 		"ProductModeList": {
 			"Barcode": "Kod kreskowy",
 			"Category": "Kategoria"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Cena za kg",
+			"PerUnit": "Cena jednostkowa"
 		},
-		"Title": "Add a single price",
+		"Title": "Dodaj pojedynczą cenę",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Data",
+			"DateLabel": "Data",
 			"Find": "Znajdź",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Lokalizacja sklepu",
+			"SelectLocation": "Wybierz swoją lokalizację",
+			"Title": "Gdzie i kiedy?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Zeskanuj kod kreskowy"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kod kreskowy",
 		"Submit": "Prześlij",
-		"Title": "Type a barcode"
+		"Title": "Wpisz kod kreskowy"
 	},
 	"BrandDetail": {
 		"LoadMore": "Załaduj więcej",
-		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
+		"TopProducts": "Najlepsze produkty",
+		"BrandProductTotal": "{count} produktów",
 		"Filter": "Filtr",
-		"Order": "Order"
+		"Order": "Kolejność"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}"
 	},
 	"Footer": {
 		"About": "Na temat",
-		"Stats": "Stats",
-		"TagLine": "{name} is an {url} project."
+		"Stats": "Statystyki",
+		"TagLine": "{name} to projekt {url}."
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Panel",
 		"Settings": "Ustawienia",
 		"Sign-out": "Wyloguj się"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Dodaj cenę",
 		"LatestPrices": "Latest prices",
-		"SearchProduct": "Search for a product",
-		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"SearchProduct": "Wyszukaj produkt",
+		"SettingsUpdated": "Zaktualizowano ustawienia!",
+		"TodayPriceStat": "Dzisiaj nie dodano żadnych cen | {todayPriceNumber} nowych cen dodanych dzisiaj | {todayPriceNumber} nowych cen dodanych dzisiaj!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
+			"Subtitle": "Otwarta, crowdsourcingowa baza cen żywności 🏷🍊💲",
 			"Title": "Welcome to {name}!"
 		}
 	},
@@ -124,86 +124,86 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
-		"Title": "Top locations",
+		"Title": "Najczęstsze lokalizacje",
 		"LoadMore": "Załaduj więcej",
-		"LocationTotal": "{count} locations"
+		"LocationTotal": "{count} lokalizacji"
 	},
 	"LocationSelector": {
 		"Clear": "Wyczyść",
-		"NoResult": "No results found",
+		"NoResult": "Nie znaleziono wyników",
 		"OSM": {
 			"text": "powered by {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
+		"RecentLocations": "Brak ostatnich lokalizacji | Ostatnia lokalizacja {recentLocationNumber}| Ostatnie lokalizacje {recentLocationNumber}",
+		"Result": "Wynik {resultNumber} | Wyniki {resultNumber}",
+		"SearchByName": "Wyszukaj swój sklep według nazwy i miasta",
+		"Title": "Znajdź lokalizację swojego sklepu",
 		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Title": "Nie znaleziono"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
+		"Discount": "Promocja",
+		"PriceDate": "dnia {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
-		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
-		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"PriceValueDisplayUnit": "{0} / sztukę",
+		"Proof": "Dowód",
+		"FullPrice": "Pełna cena",
+		"UnknownProduct": "Nieznany produkt"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} cen"
 	},
 	"PriceDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Czy na pewno chcesz usunąć tę cenę?",
 		"Delete": "Usuń",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"DeleteTitle": "Usuń cenę",
+		"Success": "Cena usunięta!"
 	},
 	"PriceList": {
 		"LoadMore": "Załaduj więcej",
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
-		"LatestPrice": "Latest price",
+		"LatestPrice": "Ostatnia cena",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Nieznana nazwa produktu"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
-		"CategoryNotFound": "Category not found...",
+		"AddPrice": "Dodaj cenę",
+		"CategoryNotFound": "Nie znaleziono kategorii...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Załaduj więcej",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Produktu nie znaleziono w Open Food Facts... Nie wahaj się go dodać :)"
 	},
 	"ProductList": {
 		"Filter": "Filtr",
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Ukryj produkty z cenami",
 		"LoadMore": "Załaduj więcej",
-		"Order": "Order",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Order": "Kolejność",
+		"PriceNumber": "Liczba dodanych cen",
+		"ScanNumber": "Liczba dodanych skanów",
+		"Title": "Najlepsze produkty"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt"
+		"PRICE_TAG": "Cenówka",
+		"RECEIPT": "Rachunek"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Czy na pewno chcesz usunąć ten dowód?",
 		"Delete": "Usuń",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "Usuń dowód",
+		"Success": "Dowód usunięty!"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Dodaj cenę"
 		},
 		"Home": {
 			"Title": "Strona główna"
@@ -218,53 +218,53 @@
 			"Title": "Zaloguj się"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Najlepsi współtwórcy"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Najczęstsze lokalizacje"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Najlepsze produkty"
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Kod kreskowy produktu",
 		"Title": "Wyszukiwanie"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link skopiowany"
 	},
 	"SignIn": {
 		"Button": "Zaloguj się",
 		"Password": "Hasło",
-		"ServerError": "Error: server error",
+		"ServerError": "Błąd: błąd serwera",
 		"Title": "Zaloguj się",
-		"SignInOFFAccount": "Sign in with your {url} account",
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
+		"UsernameLabel": "Nazwa użytkownika",
+		"WrongCredentials": "Błąd: nieprawidłowe dane logowania"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"Prices": "Ceny",
+		"ProductsWithPrices": "Produkty z cenami",
+		"Title": "Statystyki",
 		"Products": "Produkty",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Lokalizacje",
+		"Users": "Użytkownicy",
 		"Total": "Razem",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "Z ceną",
+		"WithProduct": "Z produktem",
+		"WithoutProduct": "Bez produktu"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "Najnowsze dowody",
 		"LoadMore": "Załaduj więcej",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Moje ceny",
+		"MyProofs": "Moje dowody",
 		"Settings": "Ustawienia",
-		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"Title": "Panel",
+		"UserPriceTotal": "{count} cen",
+		"UserProofTotal": "{count} dowodów"
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
@@ -272,19 +272,19 @@
 	},
 	"UserList": {
 		"LoadMore": "Załaduj więcej",
-		"Title": "Top contributors",
-		"UserTotal": "{count} contributors"
+		"Title": "Najlepsi współtwórcy",
+		"UserTotal": "{count} współtwórców"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Dodawanie cen",
 		"ChangeLanguage": "Zmiana języka",
 		"CountryLabel": "Kraj",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"CurrencyLabel": "Waluta",
+		"DefaultCurrency": "Domyślna waluta",
 		"LanguageLabel": "Języki",
 		"Save": "Zapisz",
 		"Title": "Ustawienia",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationCompletion": "Tłumaczenie jest ukończone w {completion}%.",
+		"TranslationHelp": "Pomóż nam przetłumaczyć więcej języków"
 	}
 }
