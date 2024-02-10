@@ -112,6 +112,7 @@
                   v-model="addPriceSingleForm.price"
                   :label="addPriceSingleForm.price_is_discounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
                   type="number"
+                  min="0"
                   hide-details="auto"
                   :suffix="addPriceSingleForm.currency"
                 ></v-text-field>
@@ -121,6 +122,7 @@
                   v-model="addPriceSingleForm.price_without_discount"
                   :label="$t('AddPriceSingle.PriceDetails.LabelFull')"
                   type="number"
+                  min="0"
                   hide-details="auto"
                   :suffix="addPriceSingleForm.currency"
                 ></v-text-field>
