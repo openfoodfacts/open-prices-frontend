@@ -26,7 +26,7 @@
                 v-model="proofImage"
                 capture="environment"
                 accept="image/*"
-                @change="uploadProof"
+                @change="newProof('camera')"
                 @click:clear="clearProof"
                 :loading="createProofLoading">
               </v-file-input>
@@ -35,7 +35,7 @@
                 ref="proofGallery"
                 v-model="proofImage"
                 accept="image/*, .heic"
-                @change="uploadProof"
+                @change="newProof('gallery')"
                 @click:clear="clearProof"
                 :loading="createProofLoading">
               </v-file-input>
@@ -272,11 +272,15 @@
   </v-row>
 
   <v-snackbar
+    v-model="proofDateSuccessMessage"
+    color="info"
+    :timeout="2000"
+  >{{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}</v-snackbar>
+  <v-snackbar
     v-model="proofSuccessMessage"
     color="success"
     :timeout="2000"
   >{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</v-snackbar>
-
   <v-snackbar
     v-model="priceSuccessMessage"
     color="success"
@@ -289,14 +293,12 @@
     @location="setLocationData($event)"
     @close="closeLocationSelector($event)"
   ></LocationSelector>
-
   <BarcodeScanner
     v-if="barcodeScanner"
     v-model="barcodeScanner"
     @barcode="setProductCode($event)"
     @close="barcodeScanner = false"
   ></BarcodeScanner>
-
   <BarcodeManualInput
     v-if="barcodeManualInput"
     v-model="barcodeManualInput"
@@ -352,6 +354,7 @@ export default {
       proofImage: null,
       proofImagePreview: null,
       createProofLoading: false,
+      proofDateSuccessMessage: false,
       proofSuccessMessage: false,
       // location data
       locationSelector: false,
@@ -455,10 +458,20 @@ export default {
     addPriceToUploadedList(price) {
       this.productPriceUploadedList.push(price)
     },
-    clearProof() {
-      this.proofImage = null
-      this.proofImagePreview = null
-      this.addPriceMultipleForm.proof_id = null
+    newProof(source) {
+      if (source === 'gallery') {
+        ExifReader.load(this.proofImage[0]).then((tags) => {
+          if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
+            // exif DateTimeOriginal format: '2024:01:31 20:23:52'
+            const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')
+            if (imageDateString !== this.addPriceMultipleForm.date) {
+              this.addPriceMultipleForm.date = imageDateString
+              this.proofDateSuccessMessage = true
+            }
+          }
+        })
+      }
+      this.uploadProof()
     },
     uploadProof() {
       this.createProofLoading = true
@@ -495,6 +508,11 @@ export default {
       // .finally(() => {
       //   console.log('Compress complete')
       // })
+    },
+    clearProof() {
+      this.proofImage = null
+      this.proofImagePreview = null
+      this.addPriceMultipleForm.proof_id = null
     },
     showLocationSelector() {
       this.locationSelector = true
