@@ -147,7 +147,7 @@
 	"PriceCard": {
 		"Discount": "הנחה",
 		"PriceDate": "ב־{date}",
-		"PriceValueDisplayKilogram": "{0} / kg",
+		"PriceValueDisplayKilogram": "{0} לק״ג",
 		"PriceValueDisplayLitre": "{0} לליטר",
 		"PriceValueDisplayUnit": "{0} ליחידה",
 		"Proof": "הוכחה",
@@ -169,10 +169,10 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "המחיר העדכני",
-		"ProductQuantityGram": "{0} g",
-		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityGram": "{0} גרם",
+		"ProductQuantityKilogram": "{0} ק״ג",
+		"ProductQuantityMililitre": "{0} מ״ל",
+		"ProductQuantityLitre": "{0} ליטר",
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
 	"ProductDetail": {
@@ -196,10 +196,10 @@
 		"RECEIPT": "קבלה"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "למחוק את ההוכחה הזאת?",
 		"Delete": "מחיקה",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "מחיקת הוכחה",
+		"Success": "ההוכחה נמחקה!"
 	},
 	"Router": {
 		"AddPrice": {
