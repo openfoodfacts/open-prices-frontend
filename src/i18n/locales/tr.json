@@ -169,7 +169,7 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "En son fiyat",
-		"ProductQuantityGram": "{0} g",
+		"ProductQuantityGram": "{0} gr",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
@@ -196,10 +196,10 @@
 		"RECEIPT": "Makbuz"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Bu kanıtı silmek istediğinizden emin misiniz?",
 		"Delete": "Sil",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "Kanıtı sil",
+		"Success": "Kanıt silindi!"
 	},
 	"Router": {
 		"AddPrice": {
