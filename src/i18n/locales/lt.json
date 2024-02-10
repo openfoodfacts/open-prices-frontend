@@ -147,11 +147,10 @@
 	"PriceCard": {
 		"Discount": "Nuolaida",
 		"PriceDate": "on {date}",
-		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / vnt.",
 		"Proof": "Įrodymai",
-		"ProductQuantity": "{0} g",
 		"FullPrice": "Visa kaina",
 		"UnknownProduct": "Nežinomas produktas"
 	},
@@ -170,7 +169,10 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "Naujausia kaina",
-		"ProductQuantity": "{0} g",
+		"ProductQuantityGram": "{0} g",
+		"ProductQuantityKilogram": "{0} kg",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Nežinomas produkto pavadinimas"
 	},
 	"ProductDetail": {

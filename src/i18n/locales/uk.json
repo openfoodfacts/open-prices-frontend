@@ -147,11 +147,10 @@
 	"PriceCard": {
 		"Discount": "Знижка",
 		"PriceDate": "on {date}",
-		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / л",
 		"PriceValueDisplayUnit": "{0} / одиниця",
 		"Proof": "Доказ",
-		"ProductQuantity": "{0} g",
 		"FullPrice": "Повна ціна",
 		"UnknownProduct": "Unknown product"
 	},
@@ -170,7 +169,10 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "Остання ціна",
-		"ProductQuantity": "{0} g",
+		"ProductQuantityGram": "{0} g",
+		"ProductQuantityKilogram": "{0} kg",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Невідомий продукт"
 	},
 	"ProductDetail": {

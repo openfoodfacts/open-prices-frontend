@@ -147,11 +147,10 @@
 	"PriceCard": {
 		"Discount": "Alennus",
 		"PriceDate": "päivänä {date}",
-		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / yksikkö",
 		"Proof": "Todiste",
-		"ProductQuantity": "{0} g",
 		"FullPrice": "Täysi hinta",
 		"UnknownProduct": "Tuntematon tuote"
 	},
@@ -170,7 +169,10 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "Viimeisin hinta",
-		"ProductQuantity": "{0} g",
+		"ProductQuantityGram": "{0} g",
+		"ProductQuantityKilogram": "{0} kg",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Tuntematon tuotenimi"
 	},
 	"ProductDetail": {

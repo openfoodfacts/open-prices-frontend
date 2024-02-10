@@ -147,11 +147,10 @@
 	"PriceCard": {
 		"Discount": "Sconto",
 		"PriceDate": "Il {date}",
-		"PriceValueDisplay": "{0} /kg",
+		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Prova",
-		"ProductQuantity": "{0} g",
 		"FullPrice": "Prezzo pieno",
 		"UnknownProduct": "Prodotto sconosciuto"
 	},
@@ -170,7 +169,10 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "Prezzo più recente",
-		"ProductQuantity": "{0} g",
+		"ProductQuantityGram": "{0} g",
+		"ProductQuantityKilogram": "{0} kg",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Nome del prodotto sconosciuto"
 	},
 	"ProductDetail": {

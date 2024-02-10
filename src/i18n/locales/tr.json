@@ -147,11 +147,10 @@
 	"PriceCard": {
 		"Discount": "İndirim",
 		"PriceDate": "{date} tarihinde",
-		"PriceValueDisplay": "{0} / kilo",
+		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / birim",
 		"Proof": "Kanıt",
-		"ProductQuantity": "{0} gr",
 		"FullPrice": "Tam fiyat",
 		"UnknownProduct": "Bilinmeyen ürün"
 	},
@@ -170,7 +169,10 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "En son fiyat",
-		"ProductQuantity": "{0} gr",
+		"ProductQuantityGram": "{0} g",
+		"ProductQuantityKilogram": "{0} kg",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Bilinmeyen ürün adı"
 	},
 	"ProductDetail": {

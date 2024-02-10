@@ -147,11 +147,10 @@
 	"PriceCard": {
 		"Discount": "ディスカウント",
 		"PriceDate": "on {date}",
-		"PriceValueDisplay": "{0} / kg",
+		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / 単位",
 		"Proof": "Proof",
-		"ProductQuantity": "{0} g",
 		"FullPrice": "正規価格",
 		"UnknownProduct": "Unknown product"
 	},
@@ -170,7 +169,10 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "最新価格",
-		"ProductQuantity": "{0} g",
+		"ProductQuantityGram": "{0} g",
+		"ProductQuantityKilogram": "{0}kg",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityLitre": "{0} / L",
 		"UnknownProduct": "不明な製品名"
 	},
 	"ProductDetail": {
