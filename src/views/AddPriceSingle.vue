@@ -142,7 +142,7 @@
                   v-model="proofImage"
                   capture="environment"
                   accept="image/*"
-                  @change="uploadProof"
+                  @change="newProof('camera')"
                   @click:clear="clearProof"
                   :loading="createProofLoading">
                 </v-file-input>
@@ -151,7 +151,7 @@
                   ref="proofGallery"
                   v-model="proofImage"
                   accept="image/*, .heic"
-                  @change="uploadProof"
+                  @change="newProof('gallery')"
                   @click:clear="clearProof"
                   :loading="createProofLoading">
                 </v-file-input>
@@ -223,6 +223,11 @@
   </v-form>
 
   <v-snackbar
+    v-model="proofDateSuccessMessage"
+    color="info"
+    :timeout="2000"
+  >{{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}</v-snackbar>
+  <v-snackbar
     v-model="proofSuccessMessage"
     color="success"
     :timeout="2000"
@@ -234,14 +239,12 @@
     @barcode="setProductCode($event)"
     @close="barcodeScanner = false"
   ></BarcodeScanner>
-
   <BarcodeManualInput
     v-if="barcodeManualInput"
     v-model="barcodeManualInput"
     @barcode="setProductCode($event)"
     @close="barcodeManualInput = false"
   ></BarcodeManualInput>
-
   <LocationSelector
     v-if="locationSelector"
     v-model="locationSelector"
@@ -252,6 +255,7 @@
 
 <script>
 import Compressor from 'compressorjs'
+import ExifReader from 'exifreader'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
@@ -317,6 +321,7 @@ export default {
       proofImage: null,
       proofImagePreview: null,
       createProofLoading: false,
+      proofDateSuccessMessage: false,
       proofSuccessMessage: false,
       categoryPricePerList: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
@@ -388,11 +393,20 @@ export default {
       this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
     },
-    clearProof() {
-      this.proofImage = null
-      this.proofImagePreview = null
-      this.addPriceSingleForm.proof_id = null
-      this.proofSuccessMessage = false
+    newProof(source) {
+      if (source === 'gallery') {
+        ExifReader.load(this.proofImage[0]).then((tags) => {
+          if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
+            // exif DateTimeOriginal format: '2024:01:31 20:23:52'
+            const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')
+            if (imageDateString !== this.addPriceSingleForm.date) {
+              this.addPriceSingleForm.date = imageDateString
+              this.proofDateSuccessMessage = true
+            }
+          }
+        })
+      }
+      this.uploadProof()
     },
     uploadProof() {
       this.createProofLoading = true
@@ -429,6 +443,11 @@ export default {
       // .finally(() => {
       //   console.log('Compress complete')
       // })
+    },
+    clearProof() {
+      this.proofImage = null
+      this.proofImagePreview = null
+      this.addPriceSingleForm.proof_id = null
     },
     showBarcodeScanner() {
       this.barcodeScanner = true
