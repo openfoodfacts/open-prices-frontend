@@ -43,12 +43,12 @@
 			"LabelDiscounted": "Reduzierter Preis",
 			"LabelFull": "Voller Preis",
 			"Proof": "Nachweis",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Datum aktualisiert!",
 			"ProofUploaded": "Nachweis hochgeladen!",
 			"Title": "Preisdetails",
 			"UploadProof": "Laden Sie einen Nachweis hoch",
 			"TakePicture": "Foto aufnehmen",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Aus der Galerie des Gerätes auswählen"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
