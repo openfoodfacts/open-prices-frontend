@@ -148,8 +148,8 @@
 	"PriceCard": {
 		"Discount": "Korting",
 		"PriceDate": "op {date}",
-		"PriceValueDisplayKilogram": "{0} / kg",
-		"PriceValueDisplayLitre": "{0} / L",
+		"PriceValueDisplayKilogram": "{0} /kg",
+		"PriceValueDisplayLitre": "{0} / l",
 		"PriceValueDisplayUnit": "{0} / eenheid",
 		"Proof": "Bewijs",
 		"FullPrice": "Totale prijs",
@@ -172,8 +172,8 @@
 		"LatestPrice": "Laatste prijzen",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityLitre": "{0} l",
 		"UnknownProduct": "Onbekende productnaam"
 	},
 	"ProductDetail": {
