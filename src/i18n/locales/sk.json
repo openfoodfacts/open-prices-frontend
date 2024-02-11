@@ -43,7 +43,7 @@
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
 			"Proof": "Proof",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Dátum bol aktualizovaný!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
@@ -85,7 +85,7 @@
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Čiarový kód",
-		"Submit": "Submit",
+		"Submit": "Potvrdiť",
 		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
@@ -279,10 +279,10 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Zmeniť jazyk",
-		"CountryLabel": "Country",
+		"CountryLabel": "Krajina",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Jazyk",
 		"Save": "Uložiť",
 		"Title": "Nastavenia",
 		"TranslationCompletion": "Translation is {completion}% complete.",
