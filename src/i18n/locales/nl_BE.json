@@ -43,12 +43,12 @@
 			"LabelDiscounted": "Gereduceerde prijs",
 			"LabelFull": "Totale prijs",
 			"Proof": "Bewijs",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Datum bijgewerkt!",
 			"ProofUploaded": "Bewijs geüpload!",
 			"Title": "Prijsdetails",
 			"UploadProof": "Upload een bewijs",
 			"TakePicture": "Maak een foto",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Uit galerij van apparaat selecteren"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categorie",
