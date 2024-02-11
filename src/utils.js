@@ -91,6 +91,10 @@ function getCategoryName(categoryId) {
   return category ? category.name : categoryId
 }
 
+function getLocaleOriginTags(locale) {
+  return import(`./data/origins/${locale}.json`)
+}
+
 function getCountryEmojiFromName(countryString) {
   const country = CountriesWithEmoji.find(c => c.name === countryString || (c.name_original && c.name_original.length && c.name_original.indexOf(countryString) > -1))
   return country ? country.emoji : null
@@ -151,6 +155,7 @@ export default {
   prettyRelativeDateTime,
   getLocaleCategoryTags,
   getCategoryName,
+  getLocaleOriginTags,
   getCountryEmojiFromName,
   getLocationTitle,
 }

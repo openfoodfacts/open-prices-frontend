@@ -60,7 +60,7 @@
                   <v-autocomplete
                     v-model="addPriceSingleForm.origins_tags"
                     :label="$t('AddPriceSingle.ProductInfo.OriginLabel')"
-                    :items="originsTags"
+                    :items="originTags"
                     :item-title="item => item.name"
                     :item-value="item => item.id"
                     hide-details="auto"
@@ -264,7 +264,6 @@ import ProductCard from '../components/ProductCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import BarcodeManualInput from '../components/BarcodeManualInput.vue'
 import LocationSelector from '../components/LocationSelector.vue'
-import OriginsTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
 
 Compressor.setDefaults({
@@ -309,8 +308,8 @@ export default {
         {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}
       ],
       productMode: null,  // 'barcode' or 'category'  // see initPriceSingleForm
-      categoryTags: null,  // list of category tags for autocomplete  // see initPriceSingleForm
-      originsTags: OriginsTags,  // list of origins tags for autocomplete
+      categoryTags: [],  // list of category tags for autocomplete  // see initPriceSingleForm
+      originTags: [],  // list of origins tags for autocomplete  // see initPriceSingleForm
       labelsTags: LabelsTags,
       barcodeScanner: false,
       barcodeManualInput: false,
@@ -380,12 +379,15 @@ export default {
     },
     initPriceSingleForm() {
       /**
-       * init form config (product mode, categories, last locations)
+       * init form config (product mode, categories, origins, last locations)
        * init form
        */
       this.productMode = this.addPriceSingleForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used
       utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
         this.categoryTags = module.default
+      })
+      utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
+        this.originTags = module.default
       })
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
