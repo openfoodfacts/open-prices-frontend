@@ -43,7 +43,7 @@
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
 			"Proof": "Comprovativo",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Data de atualização!",
 			"ProofUploaded": "Comprovativo carregado!",
 			"Title": "Detalhes do preço",
 			"UploadProof": "Carregar um comprovativo",
@@ -85,7 +85,7 @@
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
-		"Submit": "Envie",
+		"Submit": "Enviar",
 		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
@@ -105,7 +105,7 @@
 	},
 	"Header": {
 		"Dashboard": "Painel de controlo",
-		"Settings": "Configurações",
+		"Settings": "Definições",
 		"Sign-out": "Terminar sessão"
 	},
 	"Home": {
@@ -262,7 +262,7 @@
 		"LoadMore": "Carregar mais",
 		"MyPrices": "Os meus preços",
 		"MyProofs": "Os meus comprovativos",
-		"Settings": "Configurações",
+		"Settings": "Definições",
 		"Title": "Painel de controlo",
 		"UserPriceTotal": "{count} preços",
 		"UserProofTotal": "{count} comprovativos"
@@ -284,7 +284,7 @@
 		"DefaultCurrency": "Moeda predefinida",
 		"LanguageLabel": "Idiomas",
 		"Save": "Guardar",
-		"Title": "Configurações",
+		"Title": "Definições",
 		"TranslationCompletion": "A tradução está {completion}% concluída.",
 		"TranslationHelp": "Ajude-nos a traduzir mais idiomas"
 	}
