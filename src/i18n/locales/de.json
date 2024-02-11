@@ -43,6 +43,7 @@
 			"LabelDiscounted": "Reduzierter Preis",
 			"LabelFull": "Voller Preis",
 			"Proof": "Nachweis",
+			"ProofDateChanged": "Date updated!",
 			"ProofUploaded": "Nachweis hochgeladen!",
 			"Title": "Preisdetails",
 			"UploadProof": "Laden Sie einen Nachweis hoch",
@@ -171,8 +172,8 @@
 		"LatestPrice": "Neuester Preis",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityLitre": "{0} l",
 		"UnknownProduct": "Unbekannter Produktname"
 	},
 	"ProductDetail": {

@@ -43,6 +43,7 @@
 			"LabelDiscounted": "Ціна зі знижкою",
 			"LabelFull": "Повна ціна",
 			"Proof": "Доказ",
+			"ProofDateChanged": "Date updated!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
@@ -147,7 +148,7 @@
 	"PriceCard": {
 		"Discount": "Знижка",
 		"PriceDate": "on {date}",
-		"PriceValueDisplayKilogram": "{0} / kg",
+		"PriceValueDisplayKilogram": "{0} / кг",
 		"PriceValueDisplayLitre": "{0} / л",
 		"PriceValueDisplayUnit": "{0} / одиниця",
 		"Proof": "Доказ",
@@ -169,10 +170,10 @@
 	},
 	"ProductCard": {
 		"LatestPrice": "Остання ціна",
-		"ProductQuantityGram": "{0} g",
-		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityGram": "{0} г",
+		"ProductQuantityKilogram": "{0} кг",
+		"ProductQuantityMililitre": "{0} мл",
+		"ProductQuantityLitre": "{0} Л",
 		"UnknownProduct": "Невідомий продукт"
 	},
 	"ProductDetail": {

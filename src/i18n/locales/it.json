@@ -43,6 +43,7 @@
 			"LabelDiscounted": "Prezzo scontato",
 			"LabelFull": "Prezzo pieno",
 			"Proof": "Prova",
+			"ProofDateChanged": "Date updated!",
 			"ProofUploaded": "Prova caricata!",
 			"Title": "Dettagli sul prezzo",
 			"UploadProof": "Carica una prova",
@@ -63,8 +64,8 @@
 			"Category": "Categoria"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Prezzo per kg",
+			"PerUnit": "Prezzo unitario"
 		},
 		"Title": "Aggiungi un prezzo unico",
 		"WhereWhen": {
@@ -149,19 +150,19 @@
 		"PriceDate": "Il {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / unità",
 		"Proof": "Prova",
 		"FullPrice": "Prezzo pieno",
 		"UnknownProduct": "Prodotto sconosciuto"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} prezzi"
 	},
 	"PriceDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Sei sicuro di voler eliminare questo prezzo?",
 		"Delete": "Elimina",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"DeleteTitle": "Elimina un prezzo",
+		"Success": "Prezzo eliminato!"
 	},
 	"PriceList": {
 		"LoadMore": "Scarica altro",
@@ -192,14 +193,14 @@
 		"Title": "Prodotti migliori"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Etichetta del prezzo",
 		"RECEIPT": "Ricevuta"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Sei sicuro di voler eliminare questa prova?",
 		"Delete": "Elimina",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "Elimina una prova",
+		"Success": "Prova eliminata!"
 	},
 	"Router": {
 		"AddPrice": {
@@ -263,7 +264,7 @@
 		"MyProofs": "Le mie prove",
 		"Settings": "Impostazioni",
 		"Title": "Cruscotto",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} prezzi",
 		"UserProofTotal": "{count} prove"
 	},
 	"UserDetail": {
