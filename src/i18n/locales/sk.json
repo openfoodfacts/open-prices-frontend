@@ -20,11 +20,11 @@
 		"TitleMultiple": "Add multiple prices in bulk"
 	},
 	"AddPriceMultiple": {
-		"Done": "Done",
+		"Done": "Hotovo",
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Vytvoriť",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
 			"Upload": "Upload"
@@ -36,7 +36,7 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Vytvoriť",
 		"PriceDetails": {
 			"Discount": "Discount?",
 			"Label": "Price",
@@ -248,7 +248,7 @@
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "Výrobky",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
