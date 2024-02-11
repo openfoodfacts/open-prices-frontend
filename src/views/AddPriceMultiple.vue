@@ -318,8 +318,6 @@ import PriceCard from '../components/PriceCard.vue'
 import ProductCard from '../components/ProductCard.vue'
 import BarcodeScanner from '../components/BarcodeScanner.vue'
 import BarcodeManualInput from '../components/BarcodeManualInput.vue'
-import CategoryTags from '../data/category-tags.json'
-import OriginsTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
 
 Compressor.setDefaults({
@@ -380,7 +378,7 @@ export default {
       ],
       productMode: null,
       categoryTags: null,  // list of category tags for autocomplete  // see initPriceMultipleForm
-      originsTags: OriginsTags,  // list of origins tags for autocomplete
+      originsTags: null,  // list of origins tags for autocomplete  // see initPriceMultipleForm
       labelsTags: LabelsTags,
       barcodeScanner: false,
       barcodeManualInput: false,
@@ -444,12 +442,15 @@ export default {
   methods: {
     initPriceMultipleForm() {
       /**
-       * init form config (product mode, categories, last locations)
+       * init form config (product mode, categories, origins, last locations)
        * (init form done in initNewProductPriceForm)
        */
       this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
       utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
         this.categoryTags = module.default
+      })
+      utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
+        this.originTags = module.default
       })
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
