@@ -43,12 +43,12 @@
 			"LabelDiscounted": "Snížená cena",
 			"LabelFull": "Plná cena",
 			"Proof": "Důkaz",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Datum aktualizováno!",
 			"ProofUploaded": "Důkaz nahrán!",
 			"Title": "Podrobnosti o ceně",
 			"UploadProof": "Nahrát důkaz",
 			"TakePicture": "Vyfotit",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Vybrat z galerie zařízení"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
@@ -149,7 +149,7 @@
 		"Discount": "Sleva",
 		"PriceDate": "dne {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
-		"PriceValueDisplayLitre": "{0} / L",
+		"PriceValueDisplayLitre": "{0} / l",
 		"PriceValueDisplayUnit": "{0} / kus",
 		"Proof": "Důkaz",
 		"FullPrice": "Plná cena",
@@ -172,8 +172,8 @@
 		"LatestPrice": "Nejnovější cena",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityLitre": "{0} l",
 		"UnknownProduct": "Neznámý název produktu"
 	},
 	"ProductDetail": {
