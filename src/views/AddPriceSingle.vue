@@ -60,7 +60,7 @@
                   <v-autocomplete
                     v-model="addPriceSingleForm.origins_tags"
                     :label="$t('AddPriceSingle.ProductInfo.OriginLabel')"
-                    :items="originsTags"
+                    :items="originTags"
                     :item-title="item => item.name"
                     :item-value="item => item.id"
                     hide-details="auto"
@@ -308,8 +308,8 @@ export default {
         {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}
       ],
       productMode: null,  // 'barcode' or 'category'  // see initPriceSingleForm
-      categoryTags: null,  // list of category tags for autocomplete  // see initPriceSingleForm
-      originsTags: null,  // list of origins tags for autocomplete  // see initPriceSingleForm
+      categoryTags: [],  // list of category tags for autocomplete  // see initPriceSingleForm
+      originTags: [],  // list of origins tags for autocomplete  // see initPriceSingleForm
       labelsTags: LabelsTags,
       barcodeScanner: false,
       barcodeManualInput: false,
