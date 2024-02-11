@@ -43,12 +43,12 @@
 			"LabelDiscounted": "Ціна зі знижкою",
 			"LabelFull": "Повна ціна",
 			"Proof": "Доказ",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Дата оновлення!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"TakePicture": "Сфотографувати",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Виберіть з галереї пристрою"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Категорія",
