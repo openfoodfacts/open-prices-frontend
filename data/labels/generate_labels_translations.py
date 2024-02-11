@@ -1,21 +1,31 @@
+"""
+https://static.openfoodfacts.org/data/taxonomies/labels.full.json
+
+How-to run ?
+> pip install openfoodfacts
+> python data/labels/generate_labels_translations.py
+"""
+
 import json
 from openfoodfacts.taxonomy import get_taxonomy
 
 
+OFF_TAXONOMY_NAME = "label"
+OP_LANGUAGES_FILE = "src/i18n/data/languages.json"
 OLD_LABELS_FILE = "src/data/labels-tags.json"
 
-EXTRA = [
-    "en:organic",
+KEEP_ONLY = [
+    "en:organic"
 ]
 
 
 def get_languages():
-    with open("src/i18n/data/languages.json") as f:
+    with open(OP_LANGUAGES_FILE) as f:
         return json.load(f)
 
 
 def get_label_taxonomy():
-    return get_taxonomy("label")
+    return get_taxonomy(OFF_TAXONOMY_NAME)
 
 
 def get_taxonomy_node_by_id(taxonomy, node_id):
@@ -53,20 +63,20 @@ def get_taxonomy_node_children_full_list(taxonomy, node_parent):
 def filter_labels(taxonomy):
     node_list = list()
     for node in taxonomy.iter_nodes():
-        if node.id in EXTRA:
+        if node.id in KEEP_ONLY:
             node_list.append(node)
     return node_list
 
 
-def write_labels_to_files(origins):
+def write_labels_to_files(labels):
     languages = get_languages()
     for language in languages:
         language_code = language['code']
         language_labels = list()
-        # for each origin, get translation (or default to en)
-        for origin in origins:
-            language_origin_name = origin['name'][language_code] if (language_code in origin['name']) else origin['name']['en']
-            language_labels.append({"id": origin['id'], "name": language_origin_name})
+        # for each label, get translation (or default to en)
+        for label in labels:
+            language_label_name = label['name'][language_code] if (language_code in label['name']) else label['name']['en']
+            language_labels.append({"id": label['id'], "name": language_label_name})
         # order by name
         language_labels = sorted(language_labels, key=lambda x: x['name'])
         # write to file
@@ -84,29 +94,24 @@ def compare_new_labels_with_old_labels():
     print("new_labels", len(new_labels))
 
     # check missing in new
-    origin_missing_in_new_list = list()
-    for origin in old_labels:
-        found = next((c for c in new_labels if c['id'] == origin['id']), None)
+    label_missing_in_new_list = list()
+    for label in old_labels:
+        found = next((c for c in new_labels if c['id'] == label['id']), None)
         if not found:
-            origin_missing_in_new_list.append(origin)
-    print("missing in new", len(origin_missing_in_new_list))
-    print(origin_missing_in_new_list)
+            label_missing_in_new_list.append(label)
+    print("missing in new", len(label_missing_in_new_list))
+    print(label_missing_in_new_list)
 
     # check missing in old
-    origin_missing_in_old_list = list()
-    for origin in old_labels:
-        found = next((c for c in old_labels if c['id'] == origin['id']), None)
+    label_missing_in_old_list = list()
+    for label in old_labels:
+        found = next((c for c in old_labels if c['id'] == label['id']), None)
         if not found:
-            origin_missing_in_old_list.append(origin)
-    print("missing in old", len(origin_missing_in_old_list))
+            label_missing_in_old_list.append(label)
+    print("missing in old", len(label_missing_in_old_list))
 
 
 if __name__ == "__main__":
-    """
-    How-to run ?
-    > pip install openfoodfacts
-    > python data/labels/generate_labels_translations.py
-    """
     # init
     LABELS_FULL = get_label_taxonomy()
     print("Total number of labels:", len(LABELS_FULL))
