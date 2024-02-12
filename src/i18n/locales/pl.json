@@ -43,12 +43,12 @@
 			"LabelDiscounted": "Cena promocyjna",
 			"LabelFull": "Pełna cena",
 			"Proof": "Dowód",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Data zaktualizowana!",
 			"ProofUploaded": "Dowód przesłany!",
 			"Title": "Szczegóły ceny",
 			"UploadProof": "Prześlij dowód",
 			"TakePicture": "Zrób zdjęcie",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Wybierz z galerii urządzenia"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategoria",
@@ -79,7 +79,7 @@
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "używa {url}"
 		},
 		"Scan": "Zeskanuj kod kreskowy"
 	},
@@ -110,19 +110,19 @@
 	},
 	"Home": {
 		"AddPrice": "Dodaj cenę",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Najnowsze ceny",
 		"SearchProduct": "Wyszukaj produkt",
 		"SettingsUpdated": "Zaktualizowano ustawienia!",
 		"TodayPriceStat": "Dzisiaj nie dodano żadnych cen | {todayPriceNumber} nowych cen dodanych dzisiaj | {todayPriceNumber} nowych cen dodanych dzisiaj!",
 		"Welcome": {
 			"Subtitle": "Otwarta, crowdsourcingowa baza cen żywności 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "Witaj w {name}!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Najnowsze ceny",
 		"LoadMore": "Załaduj więcej",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Lokalizacji nie znaleziono w OpenStreetMap... Nie wahaj się jej dodać :)"
 	},
 	"LocationList": {
 		"Title": "Najczęstsze lokalizacje",
@@ -133,16 +133,16 @@
 		"Clear": "Wyczyść",
 		"NoResult": "Nie znaleziono wyników",
 		"OSM": {
-			"text": "powered by {url}"
+			"text": "używa {url}"
 		},
 		"RecentLocations": "Brak ostatnich lokalizacji | Ostatnia lokalizacja {recentLocationNumber}| Ostatnie lokalizacje {recentLocationNumber}",
 		"Result": "Wynik {resultNumber} | Wyniki {resultNumber}",
 		"SearchByName": "Wyszukaj swój sklep według nazwy i miasta",
 		"Title": "Znajdź lokalizację swojego sklepu",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"Warning": "Wyszukiwarka umożliwiająca znalezienie sklepu nie jest obecnie zbyt precyzyjna.{newline}Nie wahaj się dodać nazwy ulicy, aby zawęzić wyniki.{newline}Przykłady: Dino Długa 19 Dawidy Bankowe ; Carrefour Legnicka 58 Wrocław"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
+		"Subtitle": "Wygląda na to, że ta strona nie istnieje...",
 		"Title": "Nie znaleziono"
 	},
 	"PriceCard": {
@@ -166,7 +166,7 @@
 	},
 	"PriceList": {
 		"LoadMore": "Załaduj więcej",
-		"Title": "Latest prices"
+		"Title": "Najnowsze ceny"
 	},
 	"ProductCard": {
 		"LatestPrice": "Ostatnia cena",
@@ -179,7 +179,7 @@
 	"ProductDetail": {
 		"AddPrice": "Dodaj cenę",
 		"CategoryNotFound": "Nie znaleziono kategorii...",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Najnowsze ceny",
 		"LoadMore": "Załaduj więcej",
 		"ProductNotFound": "Produktu nie znaleziono w Open Food Facts... Nie wahaj się go dodać :)"
 	},
@@ -210,7 +210,7 @@
 			"Title": "Strona główna"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Najnowsze ceny"
 		},
 		"Search": {
 			"Title": "Wyszukiwanie"
@@ -257,7 +257,7 @@
 		"WithoutProduct": "Bez produktu"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Najnowsze ceny",
 		"LatestProofs": "Najnowsze dowody",
 		"LoadMore": "Załaduj więcej",
 		"MyPrices": "Moje ceny",
@@ -268,7 +268,7 @@
 		"UserProofTotal": "{count} dowodów"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Najnowsze ceny",
 		"LoadMore": "Załaduj więcej"
 	},
 	"UserList": {
