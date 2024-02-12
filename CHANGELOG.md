@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.40.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.39.0...v1.40.0) (2024-02-12)
+
+
+### Features
+
+* **l10n:** translate origin list in price add form depending on user locale ([#322](https://github.com/openfoodfacts/open-prices-frontend/issues/322)) ([1bd4355](https://github.com/openfoodfacts/open-prices-frontend/commit/1bd4355bb36eda02111f425be02ff5a5ed211696))
+* script to filter and generate origins (with translations) ([#321](https://github.com/openfoodfacts/open-prices-frontend/issues/321)) ([94c326c](https://github.com/openfoodfacts/open-prices-frontend/commit/94c326cb853ced803c7956a921ced091fe3e324b))
+
+
+### Bug Fixes
+
+* fix import exifreader in price multiple form. ref [#320](https://github.com/openfoodfacts/open-prices-frontend/issues/320) ([a68c114](https://github.com/openfoodfacts/open-prices-frontend/commit/a68c114f769cc4545566a8970790bce89fff8d83))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#332](https://github.com/openfoodfacts/open-prices-frontend/issues/332)) ([ee7fc41](https://github.com/openfoodfacts/open-prices-frontend/commit/ee7fc41b465b66ae90ea11f39a4b5fbc6c7123dc))
+
 ## [1.39.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.38.0...v1.39.0) (2024-02-11)
 
 
