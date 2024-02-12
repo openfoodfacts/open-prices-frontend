@@ -309,6 +309,7 @@
 
 <script>
 import Compressor from 'compressorjs'
+import ExifReader from 'exifreader'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
