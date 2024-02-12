@@ -48,7 +48,7 @@
 			"Title": "Detalles del precio",
 			"UploadProof": "Subir un comprobante",
 			"TakePicture": "Saca una foto",
-			"SelectFromGallery": "Selecciona de tu galería"
+			"SelectFromGallery": "Select from device gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoría",

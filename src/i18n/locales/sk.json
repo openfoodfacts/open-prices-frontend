@@ -1,102 +1,102 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Regál s viacerými cenovkami",
+			"Title": "Viaceré produkty"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Cena vytvorená!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Jeden alebo viacero produktov",
+			"Title": "Účtenka"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Prihlásený!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Len jedna cenovka",
+			"Title": "Jeden produkt"
 		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"Thanks": "Ďakujeme",
+		"Title": "Pridajte cenu",
+		"TitleSingle": "Pridajte jednu cenu",
+		"TitleMultiple": "Hromadne pridajte viacero cien"
 	},
 	"AddPriceMultiple": {
-		"Done": "Done",
+		"Done": "Hotovo",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"Add": "Pridajte novú cenu",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} cena už nahraná | {priceAlreadyUploadedNumber} ceny sú už nahrané",
+			"Create": "Vytvoriť",
+			"NewPrice": "Nová cena",
+			"PriceUploaded": "Cena vytvorená!",
+			"Upload": "Nahrať"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "Účtenky môžu obsahovať osobné údaje, odporúčame ich pred fotografovaním skryť (redigovať, zložiť...).",
 			"Title": "Proof details"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Pridajte viacero cien"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Vytvoriť",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
+			"Discount": "Zľava?",
+			"Label": "Cena",
+			"LabelDiscounted": "Zvýhodnená cena",
+			"LabelFull": "Plná cena",
 			"Proof": "Proof",
 			"ProofDateChanged": "Dátum bol aktualizovaný!",
 			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
+			"Title": "Podrobnosti o cene",
 			"UploadProof": "Upload a proof",
 			"TakePicture": "Odfotiť",
-			"SelectFromGallery": "Select from your gallery"
+			"SelectFromGallery": "Vyberte z galérie zariadenia"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategória",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
-			"ScanBarcode": "Scan a barcode",
-			"TypeBarcode": "Type a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"OriginLabel": "Pôvod",
+			"ProductBarcode": "Čiarový kód produktu",
+			"ScanBarcode": "Naskenujte čiarový kód",
+			"TypeBarcode": "Zadajte čiarový kód",
+			"SetProduct": "Nastavte produkt",
+			"Title": "Informácie o produkte"
 		},
 		"ProductModeList": {
 			"Barcode": "Čiarový kód",
 			"Category": "Kategória"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Cena za kg",
+			"PerUnit": "Cena za jednotku"
 		},
-		"Title": "Add a single price",
+		"Title": "Pridajte jednu cenu",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Dátum",
+			"DateLabel": "Dátum",
 			"Find": "Nájsť",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Umiestnenie predajne",
+			"SelectLocation": "Vyberte svoju polohu",
+			"Title": "Kde? Kedy?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Naskenujte čiarový kód"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Čiarový kód",
 		"Submit": "Potvrdiť",
-		"Title": "Type a barcode"
+		"Title": "Zadajte čiarový kód"
 	},
 	"BrandDetail": {
 		"LoadMore": "Načítať ďalšie",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
+		"BrandProductTotal": "{count} produktov",
 		"Filter": "Filtrovať",
 		"Order": "Order"
 	},
 	"Common": {
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}"
 	},
 	"Footer": {
 		"About": "O",
@@ -104,19 +104,19 @@
 		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Hlavný panel",
 		"Settings": "Nastavenia",
 		"Sign-out": "Odhlásiť sa"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Pridajte cenu",
 		"LatestPrices": "Latest prices",
-		"SearchProduct": "Search for a product",
-		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"SearchProduct": "Vyhľadajte produkt",
+		"SettingsUpdated": "Nastavenia aktualizované!",
+		"TodayPriceStat": "Dnes neboli pridané žiadne ceny | {todayPriceNumber} dnes pridané nové ceny | {todayPriceNumber} dnes pridané nové ceny!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Subtitle": "Otvorená crowdsourcovaná databáza cien potravín 🏷🍊💲",
+			"Title": "Vitajte v {name}!"
 		}
 	},
 	"LocationDetail": {
@@ -152,7 +152,7 @@
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Proof",
-		"FullPrice": "Full price",
+		"FullPrice": "Plná cena",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceCountChip": {
@@ -172,12 +172,12 @@
 		"LatestPrice": "Latest price",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Neznámy názov výrobku"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Pridajte cenu",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Načítať ďalšie",
@@ -194,7 +194,7 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt"
+		"RECEIPT": "Účtenka"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Naozaj chcete odstrániť túto položku?",
@@ -204,7 +204,7 @@
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Pridajte cenu"
 		},
 		"Home": {
 			"Title": "Domov"
@@ -229,7 +229,7 @@
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Čiarový kód produktu",
 		"Title": "Vyhľadať"
 	},
 	"ShareButton": {
@@ -240,7 +240,7 @@
 		"Password": "Heslo",
 		"ServerError": "Error: server error",
 		"Title": "Prihlásiť sa",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -248,7 +248,7 @@
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "Výrobky",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -260,10 +260,10 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Načítať ďalšie",
-		"MyPrices": "My prices",
+		"MyPrices": "Moje ceny",
 		"MyProofs": "My proofs",
 		"Settings": "Nastavenia",
-		"Title": "Dashboard",
+		"Title": "Hlavný panel",
 		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} proofs"
 	},
@@ -274,18 +274,18 @@
 	"UserList": {
 		"LoadMore": "Načítať ďalšie",
 		"Title": "Top contributors",
-		"UserTotal": "{count} contributors"
+		"UserTotal": "{count} prispievateľov"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Pridanie cien",
 		"ChangeLanguage": "Zmeniť jazyk",
 		"CountryLabel": "Krajina",
-		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"CurrencyLabel": "Mena",
+		"DefaultCurrency": "Predvolená mena",
 		"LanguageLabel": "Jazyk",
 		"Save": "Uložiť",
 		"Title": "Nastavenia",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationCompletion": "Preklad je dokončený na {completion}%.",
+		"TranslationHelp": "Pomôžte nám preložiť ďalšie jazyky"
 	}
 }
