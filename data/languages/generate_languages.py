@@ -7,7 +7,7 @@ import os
 # CROWDIN LANGUAGES : https://developer.crowdin.com/language-codes/
 CROWDIN_INPUT_FOLDER = "src/i18n/locales"
 CROWDIN_LANGUAGES_TO_IGNORE = [
-    {"code": "lol"}
+    {"code": "lol", "name": "LOLCAT"}
 ]
 
 LANGUAGES_CSV = "https://raw.githubusercontent.com/forxer/languages-list/master/src/Languages.csv"
@@ -81,7 +81,10 @@ def generate_languages(crowdin_languages, languages):
 
 
 def write_languages_to_file(languages):
-    with open(LANGUAGES_OUTPUT_FILE, "w") as f:
+    # order by code
+    languages = sorted(languages, key=lambda x: x['code'])
+    # write to file
+    with open(LANGUAGES_OUTPUT_FILE, "w", encoding="utf8") as f:
         json.dump(languages, f, ensure_ascii=False)
 
 
