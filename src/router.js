@@ -58,11 +58,6 @@ const router = createRouter({
  */
  router.beforeEach(async (to, from, next) => {
   const store = useAppStore()
-  const fromLocale = from.params.locale
-  const toLocale = to.params.locale || localeManager.guessDefaultLocale()
-  if (fromLocale !== toLocale) {  
-    await localeManager.changeLanguage(toLocale)
-  }
   if (to.meta.requiresAuth && !store.user.token) {
     console.log('checkAuth')
     return next({ name: 'sign-in' })

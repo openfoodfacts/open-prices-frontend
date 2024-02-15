@@ -9,7 +9,7 @@ export const useAppStore = defineStore('app', {
       last_product_mode_used: 'barcode',
       last_currency_used: 'EUR',  // TODO: init with user locale ?
       recent_locations: [],
-      language: localStorage.getItem('user-locale') || import.meta.env.VITE_DEFAULT_LOCALE,  // 'en'
+      language: import.meta.env.VITE_DEFAULT_LOCALE,  // 'en'
     },
   }),
   getters: {
@@ -22,10 +22,6 @@ export const useAppStore = defineStore('app', {
       }
     },
     getUserLanguage: (state) => {
-      // manage edge-case where some user languages were stored as objects instead of strings
-      if (typeof state.user.language === 'object') {
-        return state.user.language.code
-      }
       return state.user.language
     }
   },
