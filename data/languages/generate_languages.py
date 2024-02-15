@@ -65,7 +65,7 @@ def get_language_source():
             # ld[key.strip()] = row[key].strip()
             ld["code"] = row["639-1 "].strip()
             ld["name"] = row["Language name "].strip()
-            ld["native"] = row["Native name "].strip()
+            ld["native"] = row["Native name "].strip().strip("\u200e")  # remove left-to-right
             languages.append(ld)
     return languages
 
