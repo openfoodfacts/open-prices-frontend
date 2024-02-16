@@ -25,11 +25,11 @@ EXTRA_LANGUAGES = [
     {"code": "en_GB", "name": "English (United Kingdom)", "native": "English (United Kingdom)"},
     {"code": "fil", "name": "Filipino", "native": "Wikang Filipino"},
     {"code": "kab", "name": "Kabyle", "native": "Tamaziɣt Taqbaylit"},
-    {"code": "kmr_TR", "name": "", "native": "Português (Portugal)"},
+    {"code": "kmr_TR", "name": "Kurmanji (Kurdish)", "native": "Kurmancî"},
     {"code": "nl_BE", "name": "Dutch (Belgium)", "native": "Nederlands (België)"},
     {"code": "nl_NL", "name": "Dutch (Netherlands)", "native": "Nederlands (Nederland)"},
     {"code": "pt_BR", "name": "Portuguese (Brazil)", "native": "Português (Brasil)"},
-    {"code": "pt_PT", "name": "Portuguese (Portugal)", "native": ""},
+    {"code": "pt_PT", "name": "Portuguese (Portugal)", "native": "Português (Portugal)"},
     {"code": "sat", "name": "Santali", "native": "ᱥᱟᱱᱛᱟᱲᱤ"},
     {"code": "sco", "name": "Scots", "native": "Braid Scots"},
     {"code": "sma", "name": "Southern Sami", "native": "Åarjelsaemien gïele"},
@@ -43,7 +43,7 @@ EXTRA_LANGUAGES = [
     {"code": "zh_CN", "name": "Chinese Simplified", "native": "中文(中华人民共和国)"},
     {"code": "zh_HK", "name": "Chinese Traditional (Hong Kong)", "native": "中文(香港特別行政區)"},
     {"code": "zh_TW", "name": "Chinese Traditional", "native": "中文(台灣)"},
-    # {"code": "vls", "name": "", "native": ""},
+    {"code": "vls", "name": "West Flemisch", "native": "Vlaemsch"},
 ]
 
 
@@ -85,7 +85,7 @@ def write_languages_to_file(languages):
     languages = sorted(languages, key=lambda x: x['code'])
     # write to file
     with open(LANGUAGES_OUTPUT_FILE, "w", encoding="utf8") as f:
-        json.dump(languages, f, ensure_ascii=False)
+        json.dump(languages, f, ensure_ascii=False, indent=4)
 
 
 def compare_crowdin_languages(crowdin_languages, languages):
