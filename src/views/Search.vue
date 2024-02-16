@@ -43,13 +43,12 @@
 
 <script>
 import api from '../services/api'
-import BarcodeScanner from '../components/BarcodeScanner.vue'
-import ProductCard from '../components/ProductCard.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    BarcodeScanner,
-    ProductCard,
+    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue'))
   },
   data() {
     return {

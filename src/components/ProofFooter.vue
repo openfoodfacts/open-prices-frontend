@@ -13,15 +13,13 @@
 <script>
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import PriceCountChip from '../components/PriceCountChip.vue'
-import RelativeDateTimeChip from '../components/RelativeDateTimeChip.vue'
-import ProofDeleteChip from '../components/ProofDeleteChip.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    PriceCountChip,
-    RelativeDateTimeChip,
-    ProofDeleteChip
+    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    'RelativeDateTimeChip': defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
+    'ProofDeleteChip': defineAsyncComponent(() => import('../components/ProofDeleteChip.vue'))
   },
   props: {
     'proof': null,

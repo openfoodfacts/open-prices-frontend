@@ -49,11 +49,11 @@
 <script>
 import constants from '../constants'
 import api from '../services/api'
-import ProductCard from '../components/ProductCard.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    ProductCard,
+    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
   },
   data() {
     return {

@@ -70,15 +70,13 @@
 <script>
 import constants from '../constants'
 import api from '../services/api'
-import ProductCard from '../components/ProductCard.vue'
-import OpenFoodFactsButton from '../components/OpenFoodFactsButton.vue'
-import ShareButton from '../components/ShareButton.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    ProductCard,
-    OpenFoodFactsButton,
-    ShareButton,
+    'ProductCard': defineAsyncComponent(() => import('../components/ShareButton.vue')),
+    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/ShareButton.vue')),
+    'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
     return {
