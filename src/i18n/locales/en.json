@@ -282,7 +282,7 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Language",
 		"Save": "Save",
 		"Title": "Settings",
 		"TranslationCompletion": "Translation is {completion}% complete.",
