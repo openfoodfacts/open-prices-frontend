@@ -10,6 +10,13 @@
           <v-divider></v-divider>
           <v-card-text>
             <v-autocomplete
+              v-model="userSettingsForm.selectedCountry"
+              :label="$t('UserSettings.CountryLabel')"
+              :items="countryList"
+              item-title="native"
+              item-value="code"
+            ></v-autocomplete>
+            <v-autocomplete
               v-model="userSettingsForm.selectedLanguage"
               :label="$t('UserSettings.LanguageLabel')"
               :items="languageList"
@@ -64,18 +71,21 @@ import { useAppStore } from '../store'
 import constants from '../constants'
 import localeManager from '../i18n/localeManager.js'
 import languageData from '../i18n/data/languages.json'
+import countryData from '../i18n/data/countries.json'
 
 
 export default {
   data() {
     return {
       userSettingsForm: {
+        selectedCountry: null, // see initUserSettingsForm
         selectedLanguage: null, // see initUserSettingsForm
         currency: null,  // see initUserSettingsForm
       },
       currencyList: constants.CURRENCY_LIST,
       languageList: [],
       languageTranslationCompletion: null,
+      countryList: countryData, // can be used to further filter the country list if needed
     }
   },
   watch:{
@@ -104,10 +114,12 @@ export default {
     initUserSettingsForm() {
       this.userSettingsForm.currency = this.appStore.user.last_currency_used
       this.userSettingsForm.selectedLanguage = this.languageList.find(lang => lang.code === localeManager.guessDefaultLocale()) || this.languageList.find(lang => lang.code === 'en')
+      this.userSettingsForm.selectedCountry = countryData.find(country => country.code === this.appStore.user.country).code  
     },
     async updateSettings() {
       await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage.code)
       this.appStore.setLanguage(this.userSettingsForm.selectedLanguage.code)
+      this.appStore.setCountry(this.userSettingsForm.selectedCountry)
       this.appStore.setLastCurrencyUsed(this.userSettingsForm.currency)
       this.$router.push({ path: '/', query: { settingsSuccess: 'true' } })
     }
