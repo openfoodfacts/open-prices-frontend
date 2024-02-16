@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Cenówka",
-		"RECEIPT": "Rachunek"
+		"RECEIPT": "Rachunek",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Czy na pewno chcesz usunąć ten dowód?",
