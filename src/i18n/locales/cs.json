@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Cenovka",
-		"RECEIPT": "Účtenka"
+		"RECEIPT": "Účtenka",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Jste si jisti, že chcete smazat tento důkaz?",
