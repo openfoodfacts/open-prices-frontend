@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "crwdns247002:0crwdne247002:0",
-		"RECEIPT": "crwdns247004:0crwdne247004:0"
+		"RECEIPT": "crwdns247004:0crwdne247004:0",
+		"GDPR_REQUEST": "crwdns247712:0crwdne247712:0"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "crwdns247484:0crwdne247484:0",
