@@ -11,11 +11,10 @@
           <v-card-text>
             <v-autocomplete
               v-model="userSettingsForm.selectedCountry"
-              label="Country"
+              :label="$t('UserSettings.CountryLabel')"
               :items="countryList"
-              item-title="name"
-              item-value="name"
-              return-object
+              item-title="native"
+              item-value="code"
             >
             </v-autocomplete>
             <v-autocomplete
@@ -116,7 +115,7 @@ export default {
     initUserSettingsForm() {
       this.userSettingsForm.currency = this.appStore.user.last_currency_used
       this.userSettingsForm.selectedLanguage = this.languageList.find(lang => lang.code === localeManager.guessDefaultLocale()) || this.languageList.find(lang => lang.code === 'en')
-      this.userSettingsForm.selectedCountry = countryData.find(country => country.code === this.appStore.user.country) || countryData.find(country => country.code === 'FR')    
+      this.userSettingsForm.selectedCountry = countryData.find(country => country.code === this.appStore.user.country).code  
     },
     async updateSettings() {
       await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage.code)

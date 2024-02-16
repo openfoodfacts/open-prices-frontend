@@ -10,8 +10,7 @@ export const useAppStore = defineStore('app', {
       last_currency_used: 'EUR',  // TODO: init with user locale ?
       recent_locations: [],
       language: localStorage.getItem('user-locale') || import.meta.env.VITE_DEFAULT_LOCALE,  // 'en'
-      country: null, // will be of type Object like 
-                     //{"code": "FR", "name": "France", "native": "France", "capital": "Paris", "currency": ["EUR"], "languages": ["fr"]}
+      country: 'FR', 
     },
   }),
   getters: {
