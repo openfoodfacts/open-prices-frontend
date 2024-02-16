@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Hintalappu",
-		"RECEIPT": "Kuitti"
+		"RECEIPT": "Kuitti",
+		"GDPR_REQUEST": "GDPR-pyyntö"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Haluatko varmasti poistaa tämän todisteen?",
