@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Label harga",
-		"RECEIPT": "Resi"
+		"RECEIPT": "Resi",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Apakah Anda yakin ingin menghapus bukti ini?",
