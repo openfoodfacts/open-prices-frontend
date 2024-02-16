@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Fiyat etiketi",
-		"RECEIPT": "Makbuz"
+		"RECEIPT": "Makbuz",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Bu kanıtı silmek istediğinizden emin misiniz?",
