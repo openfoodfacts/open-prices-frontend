@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Цінник",
-		"RECEIPT": "Квитанція"
+		"RECEIPT": "Квитанція",
+		"GDPR_REQUEST": "Запит GDPR"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Ви дійсно бажаєте видалити це?",
@@ -282,7 +283,7 @@
 		"CountryLabel": "Країна",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Мови",
+		"LanguageLabel": "Мова",
 		"Save": "Зберегти",
 		"Title": "Налаштування",
 		"TranslationCompletion": "Переклад виконано на {completion}%.",

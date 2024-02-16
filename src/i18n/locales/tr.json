@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Fiyat etiketi",
-		"RECEIPT": "Makbuz"
+		"RECEIPT": "Makbuz",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Bu kanıtı silmek istediğinizden emin misiniz?",
@@ -282,7 +283,7 @@
 		"CountryLabel": "Ülke",
 		"CurrencyLabel": "Kur",
 		"DefaultCurrency": "Varsayılan para birimi",
-		"LanguageLabel": "Diller",
+		"LanguageLabel": "Dil",
 		"Save": "Kaydet",
 		"Title": "Ayarlar",
 		"TranslationCompletion": "Çeviri % {completion} tamamlandı.",
