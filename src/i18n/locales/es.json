@@ -283,7 +283,7 @@
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moneda",
 		"DefaultCurrency": "Moneda predeterminada",
-		"LanguageLabel": "Idiomas",
+		"LanguageLabel": "Idioma",
 		"Save": "Guardar",
 		"Title": "Configuración",
 		"TranslationCompletion": "Translation is {completion}% complete.",
