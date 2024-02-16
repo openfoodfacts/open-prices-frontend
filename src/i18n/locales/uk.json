@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Цінник",
-		"RECEIPT": "Квитанція"
+		"RECEIPT": "Квитанція",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Ви дійсно бажаєте видалити це?",
