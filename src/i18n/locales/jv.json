@@ -283,7 +283,7 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Basa",
+		"LanguageLabel": "Language",
 		"Save": "Nyimpen",
 		"Title": "Settings",
 		"TranslationCompletion": "Translation is {completion}% complete.",
