@@ -103,11 +103,13 @@ export default {
     },
     toggleProductFilter(filterKey) {
       this.productFilter = this.productFilter ? '' : filterKey
+      this.$router.push({ query: { ...this.$route.query, productFilter: this.productFilter } })
       this.initProductList()
     },
     selectProductOrder(orderKey) {
       if (this.productOrder !== orderKey) {
         this.productOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, productOrder: this.productOrder } })
         this.initProductList()
       }
     }
