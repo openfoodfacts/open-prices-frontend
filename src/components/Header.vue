@@ -2,11 +2,11 @@
   <v-app-bar :elevation="1" style="background-color: rgb(242, 233, 228);">
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu"></v-app-bar-nav-icon>
     <v-app-bar-title style="cursor:pointer" @click="$router.push('/')">
-      <img src="/favicon.svg" height="28" style="vertical-align:bottom">
+      <img src="/favicon.svg" height="28" width="28" style="vertical-align:bottom">
       {{ APP_NAME }}
     </v-app-bar-title>
     <template v-slot:append>
-      <v-btn v-if="!username" to="/sign-in" icon="mdi-login"></v-btn>
+      <v-btn v-if="!username" to="/sign-in" icon="mdi-login" aria-label="Sign in"></v-btn>
       <v-menu v-if="username">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" icon="mdi-account-circle"></v-btn>
@@ -14,9 +14,9 @@
         <v-list>
           <v-list-item :slim="true" prepend-icon="mdi-account" disabled>{{ username }}</v-list-item>
           <v-divider></v-divider>
-          <v-list-item :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard">{{ $t('Header.Dashboard') }}</v-list-item>
-          <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/settings">{{ $t('Header.Settings') }}</v-list-item>
-          <v-list-item :slim="true" prepend-icon="mdi-logout" @click="signOut">{{ $t('Header.Sign-out') }}</v-list-item>
+          <v-list-item aria-label="Dashboard" :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard">{{ $t('Header.Dashboard') }}</v-list-item>
+          <v-list-item aria-label="Settings" :slim="true" prepend-icon="mdi-cog-outline" to="/settings">{{ $t('Header.Settings') }}</v-list-item>
+          <v-list-item aria-label="Sign out" :slim="true" prepend-icon="mdi-logout" @click="signOut">{{ $t('Header.Sign-out') }}</v-list-item>
         </v-list>
       </v-menu>
     </template>
