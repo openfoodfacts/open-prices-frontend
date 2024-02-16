@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Preisschild",
-		"RECEIPT": "Kassenbon"
+		"RECEIPT": "Kassenbon",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Möchten Sie diesen Nachweis wirklich löschen?",
