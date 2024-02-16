@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.41.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.40.0...v1.41.0) (2024-02-16)
+
+
+### Features
+
+* add a country selector in the user settings ([#297](https://github.com/openfoodfacts/open-prices-frontend/issues/297)) ([82a9f35](https://github.com/openfoodfacts/open-prices-frontend/commit/82a9f35ece9a14d1619907ff3753716f7217ee35))
+* add GDPR proof type ([#341](https://github.com/openfoodfacts/open-prices-frontend/issues/341)) ([93b04a8](https://github.com/openfoodfacts/open-prices-frontend/commit/93b04a8a77421ae989a06ca3bc8c6b11bd6cace5))
+
+
+### Bug Fixes
+
+* **l10n:** improve language script ([#342](https://github.com/openfoodfacts/open-prices-frontend/issues/342)) ([b65c011](https://github.com/openfoodfacts/open-prices-frontend/commit/b65c011ef690be5751781b6757e1075207fd6def))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#334](https://github.com/openfoodfacts/open-prices-frontend/issues/334)) ([7031a53](https://github.com/openfoodfacts/open-prices-frontend/commit/7031a531ee0859007705788b7534c83b6e46393b))
+* **l10n:** script to generate languages ([#338](https://github.com/openfoodfacts/open-prices-frontend/issues/338)) ([e182a5c](https://github.com/openfoodfacts/open-prices-frontend/commit/e182a5cf0897041bdb5c1802e6ad424d98274d08))
+
 ## [1.40.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.39.0...v1.40.0) (2024-02-12)
 
 
