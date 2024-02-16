@@ -64,8 +64,10 @@ def get_language_source():
         for key in row:
             # ld[key.strip()] = row[key].strip()
             ld["code"] = row["639-1 "].strip()
-            ld["name"] = row["Language name "].strip()
-            ld["native"] = row["Native name "].strip().strip("\u200e")  # remove left-to-right
+            name = row["Language name "].strip().split(',')[0].split(';')[0] # keep only the first language name if there is a , or ;
+            ld["name"] = name[0].upper() + name[1:] # capitalize first letter and keep the rest as it is (capitalize function lower the rest of the string)
+            native = row["Native name "].strip().strip("\u200e").split(',')[0].split(';')[0] # keep only the first language native name if there is a , or ;
+            ld["native"] = native[0].upper() + native[1:] # capitalize first letter and keep the rest as it is (capitalize function lower the rest of the string)
             languages.append(ld)
     return languages
 

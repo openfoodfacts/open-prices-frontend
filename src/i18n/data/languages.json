@@ -42,12 +42,12 @@
     {
         "code": "az",
         "name": "Azerbaijani",
-        "native": "azərbaycan dili"
+        "native": "Azərbaycan dili"
     },
     {
         "code": "be",
         "name": "Belarusian",
-        "native": "беларуская мова"
+        "native": "Беларуская мова"
     },
     {
         "code": "ber",
@@ -57,42 +57,42 @@
     {
         "code": "bg",
         "name": "Bulgarian",
-        "native": "български език"
+        "native": "Български език"
     },
     {
         "code": "bm",
         "name": "Bambara",
-        "native": "bamanankan"
+        "native": "Bamanankan"
     },
     {
         "code": "bn",
-        "name": "Bengali; Bangla",
+        "name": "Bengali",
         "native": "বাংলা"
     },
     {
         "code": "bo",
-        "name": "Tibetan Standard, Tibetan, Central",
+        "name": "Tibetan Standard",
         "native": "བོད་ཡིག"
     },
     {
         "code": "br",
         "name": "Breton",
-        "native": "brezhoneg"
+        "native": "Brezhoneg"
     },
     {
         "code": "bs",
         "name": "Bosnian",
-        "native": "bosanski jezik"
+        "native": "Bosanski jezik"
     },
     {
         "code": "ca",
-        "name": "Catalan; Valencian",
-        "native": "català, valencià"
+        "name": "Catalan",
+        "native": "Català"
     },
     {
         "code": "ce",
         "name": "Chechen",
-        "native": "нохчийн мотт"
+        "native": "Нохчийн мотт"
     },
     {
         "code": "chr",
@@ -102,7 +102,7 @@
     {
         "code": "co",
         "name": "Corsican",
-        "native": "corsu, lingua corsa"
+        "native": "Corsu"
     },
     {
         "code": "crs",
@@ -112,12 +112,12 @@
     {
         "code": "cs",
         "name": "Czech",
-        "native": "čeština, český jazyk"
+        "native": "Čeština"
     },
     {
         "code": "cv",
         "name": "Chuvash",
-        "native": "чӑваш чӗлхи"
+        "native": "Чӑваш чӗлхи"
     },
     {
         "code": "cy",
@@ -127,7 +127,7 @@
     {
         "code": "da",
         "name": "Danish",
-        "native": "dansk"
+        "native": "Dansk"
     },
     {
         "code": "de",
@@ -136,8 +136,8 @@
     },
     {
         "code": "el",
-        "name": "Greek, Modern",
-        "native": "ελληνικά"
+        "name": "Greek",
+        "native": "Ελληνικά"
     },
     {
         "code": "en",
@@ -161,18 +161,18 @@
     },
     {
         "code": "es",
-        "name": "Spanish; Castilian",
-        "native": "español, castellano"
+        "name": "Spanish",
+        "native": "Español"
     },
     {
         "code": "et",
         "name": "Estonian",
-        "native": "eesti, eesti keel"
+        "native": "Eesti"
     },
     {
         "code": "eu",
         "name": "Basque",
-        "native": "euskara, euskera"
+        "native": "Euskara"
     },
     {
         "code": "fa",
@@ -182,7 +182,7 @@
     {
         "code": "fi",
         "name": "Finnish",
-        "native": "suomi, suomen kieli"
+        "native": "Suomi"
     },
     {
         "code": "fil",
@@ -192,12 +192,12 @@
     {
         "code": "fo",
         "name": "Faroese",
-        "native": "føroyskt"
+        "native": "Føroyskt"
     },
     {
         "code": "fr",
         "name": "French",
-        "native": "français, langue française"
+        "native": "Français"
     },
     {
         "code": "ga",
@@ -206,13 +206,13 @@
     },
     {
         "code": "gd",
-        "name": "Scottish Gaelic; Gaelic",
+        "name": "Scottish Gaelic",
         "native": "Gàidhlig"
     },
     {
         "code": "gl",
         "name": "Galician",
-        "native": "galego"
+        "native": "Galego"
     },
     {
         "code": "gu",
@@ -222,7 +222,7 @@
     {
         "code": "ha",
         "name": "Hausa",
-        "native": "Hausa, هَوُسَ"
+        "native": "Hausa"
     },
     {
         "code": "he",
@@ -232,22 +232,22 @@
     {
         "code": "hi",
         "name": "Hindi",
-        "native": "हिन्दी, हिंदी"
+        "native": "हिन्दी"
     },
     {
         "code": "hr",
         "name": "Croatian",
-        "native": "hrvatski jezik"
+        "native": "Hrvatski jezik"
     },
     {
         "code": "ht",
-        "name": "Haitian; Haitian Creole",
+        "name": "Haitian",
         "native": "Kreyòl ayisyen"
     },
     {
         "code": "hu",
         "name": "Hungarian",
-        "native": "magyar"
+        "native": "Magyar"
     },
     {
         "code": "hy",
@@ -272,7 +272,7 @@
     {
         "code": "it",
         "name": "Italian",
-        "native": "italiano"
+        "native": "Italiano"
     },
     {
         "code": "iu",
@@ -287,12 +287,12 @@
     {
         "code": "jv",
         "name": "Javanese",
-        "native": "basa Jawa"
+        "native": "Basa Jawa"
     },
     {
         "code": "ka",
         "name": "Georgian",
-        "native": "ქართული"
+        "native": "Ქართული"
     },
     {
         "code": "kab",
@@ -302,12 +302,12 @@
     {
         "code": "kk",
         "name": "Kazakh",
-        "native": "қазақ тілі"
+        "native": "Қазақ тілі"
     },
     {
         "code": "km",
         "name": "Khmer",
-        "native": "ខ្មែរ, ខេមរភាសា, ភាសាខ្មែរ"
+        "native": "ខ្មែរ"
     },
     {
         "code": "kmr_TR",
@@ -322,7 +322,7 @@
     {
         "code": "ko",
         "name": "Korean",
-        "native": "한국어 (韓國語), 조선어 (朝鮮語)"
+        "native": "한국어 (韓國語)"
     },
     {
         "code": "kw",
@@ -332,16 +332,16 @@
     {
         "code": "ky",
         "name": "Kyrgyz",
-        "native": "Кыргызча, Кыргыз тили"
+        "native": "Кыргызча"
     },
     {
         "code": "la",
         "name": "Latin",
-        "native": "latine, lingua latina"
+        "native": "Latine"
     },
     {
         "code": "lb",
-        "name": "Luxembourgish, Letzeburgesch",
+        "name": "Luxembourgish",
         "native": "Lëtzebuergesch"
     },
     {
@@ -352,22 +352,22 @@
     {
         "code": "lt",
         "name": "Lithuanian",
-        "native": "lietuvių kalba"
+        "native": "Lietuvių kalba"
     },
     {
         "code": "lv",
         "name": "Latvian",
-        "native": "latviešu valoda"
+        "native": "Latviešu valoda"
     },
     {
         "code": "mg",
         "name": "Malagasy",
-        "native": "fiteny malagasy"
+        "native": "Fiteny malagasy"
     },
     {
         "code": "mi",
         "name": "Māori",
-        "native": "te reo Māori"
+        "native": "Te reo Māori"
     },
     {
         "code": "ml",
@@ -377,7 +377,7 @@
     {
         "code": "mn",
         "name": "Mongolian",
-        "native": "монгол"
+        "native": "Монгол"
     },
     {
         "code": "mr",
@@ -387,7 +387,7 @@
     {
         "code": "ms",
         "name": "Malay",
-        "native": "bahasa Melayu, بهاس ملايو"
+        "native": "Bahasa Melayu"
     },
     {
         "code": "mt",
@@ -432,12 +432,12 @@
     {
         "code": "nr",
         "name": "South Ndebele",
-        "native": "isiNdebele"
+        "native": "IsiNdebele"
     },
     {
         "code": "oc",
         "name": "Occitan",
-        "native": "occitan, lenga d'òc"
+        "native": "Occitan"
     },
     {
         "code": "or",
@@ -446,13 +446,13 @@
     },
     {
         "code": "pa",
-        "name": "Panjabi, Punjabi",
-        "native": "ਪੰਜਾਬੀ, پنجابی"
+        "name": "Panjabi",
+        "native": "ਪੰਜਾਬੀ"
     },
     {
         "code": "pl",
         "name": "Polish",
-        "native": "język polski, polszczyzna"
+        "native": "Język polski"
     },
     {
         "code": "pt_BR",
@@ -467,22 +467,22 @@
     {
         "code": "qu",
         "name": "Quechua",
-        "native": "Runa Simi, Kichwa"
+        "native": "Runa Simi"
     },
     {
         "code": "rm",
         "name": "Romansh",
-        "native": "rumantsch grischun"
+        "native": "Rumantsch grischun"
     },
     {
         "code": "ro",
         "name": "Romanian",
-        "native": "limba română"
+        "native": "Limba română"
     },
     {
         "code": "ru",
         "name": "Russian",
-        "native": "русский язык"
+        "native": "Русский язык"
     },
     {
         "code": "sa",
@@ -497,7 +497,7 @@
     {
         "code": "sc",
         "name": "Sardinian",
-        "native": "sardu"
+        "native": "Sardu"
     },
     {
         "code": "sco",
@@ -507,27 +507,27 @@
     {
         "code": "sd",
         "name": "Sindhi",
-        "native": "सिन्धी, سنڌي، سندھی"
+        "native": "सिन्धी"
     },
     {
         "code": "sg",
         "name": "Sango",
-        "native": "yângâ tî sängö"
+        "native": "Yângâ tî sängö"
     },
     {
         "code": "si",
-        "name": "Sinhala, Sinhalese",
+        "name": "Sinhala",
         "native": "සිංහල"
     },
     {
         "code": "sk",
         "name": "Slovak",
-        "native": "slovenčina, slovenský jazyk"
+        "native": "Slovenčina"
     },
     {
         "code": "sl",
         "name": "Slovene",
-        "native": "slovenski jezik, slovenščina"
+        "native": "Slovenski jezik"
     },
     {
         "code": "sma",
@@ -537,12 +537,12 @@
     {
         "code": "sn",
         "name": "Shona",
-        "native": "chiShona"
+        "native": "ChiShona"
     },
     {
         "code": "so",
         "name": "Somali",
-        "native": "Soomaaliga, af Soomaali"
+        "native": "Soomaaliga"
     },
     {
         "code": "son",
@@ -552,12 +552,12 @@
     {
         "code": "sq",
         "name": "Albanian",
-        "native": "gjuha shqipe"
+        "native": "Gjuha shqipe"
     },
     {
         "code": "sr",
         "name": "Serbian",
-        "native": "српски језик"
+        "native": "Српски језик"
     },
     {
         "code": "sr_CS",
@@ -602,7 +602,7 @@
     {
         "code": "tg",
         "name": "Tajik",
-        "native": "тоҷикӣ, toğikī, تاجیکی"
+        "native": "Тоҷикӣ"
     },
     {
         "code": "th",
@@ -617,7 +617,7 @@
     {
         "code": "tl",
         "name": "Tagalog",
-        "native": "Wikang Tagalog, ᜏᜒᜃᜅ᜔ ᜆᜄᜎᜓᜄ᜔"
+        "native": "Wikang Tagalog"
     },
     {
         "code": "tn",
@@ -637,7 +637,7 @@
     {
         "code": "tt",
         "name": "Tatar",
-        "native": "татар теле, tatar tele"
+        "native": "Татар теле"
     },
     {
         "code": "tw",
@@ -656,13 +656,13 @@
     },
     {
         "code": "ug",
-        "name": "Uyghur, Uighur",
-        "native": "Uyƣurqə, ئۇيغۇرچە"
+        "name": "Uyghur",
+        "native": "Uyƣurqə"
     },
     {
         "code": "uk",
         "name": "Ukrainian",
-        "native": "українська мова"
+        "native": "Українська мова"
     },
     {
         "code": "ur",
@@ -672,7 +672,7 @@
     {
         "code": "uz",
         "name": "Uzbek",
-        "native": "O‘zbek, Ўзбек, أۇزبېك"
+        "native": "O‘zbek"
     },
     {
         "code": "val",
@@ -702,7 +702,7 @@
     {
         "code": "wa",
         "name": "Walloon",
-        "native": "walon"
+        "native": "Walon"
     },
     {
         "code": "wo",
@@ -712,7 +712,7 @@
     {
         "code": "xh",
         "name": "Xhosa",
-        "native": "isiXhosa"
+        "native": "IsiXhosa"
     },
     {
         "code": "yi",
@@ -747,6 +747,6 @@
     {
         "code": "zu",
         "name": "Zulu",
-        "native": "isiZulu"
+        "native": "IsiZulu"
     }
 ]
