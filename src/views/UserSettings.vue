@@ -97,7 +97,7 @@ export default {
     },
     'userSettingsForm.selectedCountry': function (newValue, oldValue) {
       if (newValue !== oldValue) {
-        const selectedCountry = this.countryList.find(country => country === newValue)
+        const selectedCountry = this.countryList.find(country => country.code === newValue)
         // Update the currency list to the first currency of the selected country if it exists or USD otherwise
         if (selectedCountry && selectedCountry.currency && selectedCountry.currency.length > 0) {
           this.userSettingsForm.currency = selectedCountry.currency[0]
