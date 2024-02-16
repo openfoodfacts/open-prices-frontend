@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Prijskaartje",
-		"RECEIPT": "Bon"
+		"RECEIPT": "Bon",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Weet u zeker dat u dit bewijs wilt verwijderen?",
