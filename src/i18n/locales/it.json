@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Etichetta del prezzo",
-		"RECEIPT": "Ricevuta"
+		"RECEIPT": "Ricevuta",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Sei sicuro di voler eliminare questa prova?",
