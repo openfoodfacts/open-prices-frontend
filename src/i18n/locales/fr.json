@@ -199,7 +199,7 @@
 	"ProofCard": {
 		"PRICE_TAG": "Étiquette de prix",
 		"RECEIPT": "Ticket de caisse",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "Requête RGPD"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Êtes-vous sûr de vouloir supprimer cette preuve?",
