@@ -47,14 +47,18 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Podrobnosti o cene",
 			"UploadProof": "Upload a proof",
+			"Picture": "Picture",
 			"TakePicture": "Odfotiť",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Vyberte z galérie zariadenia"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategória",
 			"OriginLabel": "Pôvod",
 			"ProductBarcode": "Čiarový kód produktu",
+			"Scan": "Sken",
 			"ScanBarcode": "Naskenujte čiarový kód",
+			"Type": "Druhy",
 			"TypeBarcode": "Zadajte čiarový kód",
 			"SetProduct": "Nastavte produkt",
 			"Title": "Informácie o produkte"
@@ -195,7 +199,7 @@
 	"ProofCard": {
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Účtenka",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "žiadosť GDPR"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Naozaj chcete odstrániť túto položku?",

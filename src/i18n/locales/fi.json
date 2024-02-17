@@ -47,14 +47,18 @@
 			"ProofUploaded": "Todiste lähetetty!",
 			"Title": "Hintatiedot",
 			"UploadProof": "Lähetä todiste",
+			"Picture": "Picture",
 			"TakePicture": "Ota kuva",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Valitse galleriastasi"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Tuoteluokka",
 			"OriginLabel": "Alkuperä",
 			"ProductBarcode": "Tuotteen viivakoodi",
+			"Scan": "Lue",
 			"ScanBarcode": "Skannaa viivakoodi",
+			"Type": "Tyyppi",
 			"TypeBarcode": "Syötä viivakoodi",
 			"SetProduct": "Aseta tuote",
 			"Title": "Tuotetiedot"

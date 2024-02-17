@@ -47,14 +47,18 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
+			"Picture": "Picture",
 			"TakePicture": "Posnemi fotografijo",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorijo",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
+			"Scan": "Preberi",
 			"ScanBarcode": "Scan a barcode",
+			"Type": "Tip",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"

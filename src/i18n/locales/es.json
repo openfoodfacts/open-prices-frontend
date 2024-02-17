@@ -47,14 +47,18 @@
 			"ProofUploaded": "¡Comprobante subido!",
 			"Title": "Detalles del precio",
 			"UploadProof": "Subir un comprobante",
+			"Picture": "Picture",
 			"TakePicture": "Saca una foto",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoría",
 			"OriginLabel": "Origen",
 			"ProductBarcode": "Código de barras del producto",
+			"Scan": "Escanear",
 			"ScanBarcode": "Escanear un código de barras",
+			"Type": "Tipo",
 			"TypeBarcode": "Introducir código de barras",
 			"SetProduct": "Establecer un producto",
 			"Title": "Información del producto"
