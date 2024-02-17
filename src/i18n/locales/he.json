@@ -47,14 +47,18 @@
 			"ProofUploaded": "ההוכחה נשלחה!",
 			"Title": "פריטי מחיר",
 			"UploadProof": "העלאת הוכחה",
+			"Picture": "Picture",
 			"TakePicture": "צילום תמונה",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
 			"OriginLabel": "מקור",
 			"ProductBarcode": "ברקוד מוצר",
+			"Scan": "סריקה",
 			"ScanBarcode": "סריקת ברקוד",
+			"Type": "סוג",
 			"TypeBarcode": "סוג ברקוד",
 			"SetProduct": "הגדרת מוצר",
 			"Title": "פרטי מוצר"
