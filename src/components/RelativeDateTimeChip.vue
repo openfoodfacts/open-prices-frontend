@@ -2,7 +2,7 @@
   <v-chip label size="small" density="comfortable">
     <v-icon start icon="mdi-clock-outline"></v-icon>
     {{ getRelativeDateTimeFormatted(dateTime) }}
-    <v-tooltip activator="parent" location="top">{{ getDateTimeFormatted(dateTime) }}</v-tooltip>
+    <v-tooltip activator="parent" open-on-click location="top">{{ getDateTimeFormatted(dateTime) }}</v-tooltip>
   </v-chip>
 </template>
 
