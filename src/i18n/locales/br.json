@@ -47,14 +47,18 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
+			"Picture": "Picture",
 			"TakePicture": "Tapout ur skeudenn",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Rummad",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
+			"Scan": "Skanañ",
 			"ScanBarcode": "Scan a barcode",
+			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
