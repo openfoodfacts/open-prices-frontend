@@ -1171,7 +1171,7 @@ vue@^3.2.25:
     "@vue/server-renderer" "3.3.13"
     "@vue/shared" "3.3.13"
 
-vue@^3.3.9:
+vue@^3.4.19:
   version "3.4.19"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.4.19.tgz#f9ae0a44db86628548736ff04152830726a97263"
   integrity sha512-W/7Fc9KUkajFU8dBeDluM4sRGc/aa4YJnOYck8dkjgZoXtVsn3OeTGni66FV1l3+nvPA7VBFYtPioaGKUmEADw==
