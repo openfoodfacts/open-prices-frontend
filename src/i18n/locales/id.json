@@ -47,14 +47,18 @@
 			"ProofUploaded": "Bukti telah diunggah!",
 			"Title": "Detail harga",
 			"UploadProof": "Unggah bukti",
+			"Picture": "Picture",
 			"TakePicture": "Ambil gambar",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Pilih dari galeri perangkat"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Asal",
 			"ProductBarcode": "Barcode produk",
+			"Scan": "Pindai",
 			"ScanBarcode": "Pindai barcode",
+			"Type": "Tipe",
 			"TypeBarcode": "Ketik barcode",
 			"SetProduct": "Tetapkan produk",
 			"Title": "Info produk"
