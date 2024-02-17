@@ -109,6 +109,8 @@ export default {
     },
   },
   mounted() {
+    this.productFilter = this.$route.query.filter || ''
+    this.productOrder = this.$route.query.order_by || '-price_count'
     this.initBrand()
   },
   methods: {
@@ -130,13 +132,13 @@ export default {
     },
     toggleProductFilter(filterKey) {
       this.productFilter = this.productFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, productFilter: this.productFilter } })
+      this.$router.push({ query: { ...this.$route.query, filter: this.productFilter } })
       this.initBrand()
     },
     selectProductOrder(orderKey) {
       if (this.productOrder !== orderKey) {
         this.productOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, productOrder: this.productOrder } })
+        this.$router.push({ query: { ...this.$route.query, order_by: this.productOrder } })
         this.initBrand()
       }
     }
