@@ -14,9 +14,9 @@
         <v-list>
           <v-list-item :slim="true" prepend-icon="mdi-account" disabled>{{ username }}</v-list-item>
           <v-divider></v-divider>
-          <v-list-item aria-label="Dashboard" :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard">{{ $t('Header.Dashboard') }}</v-list-item>
-          <v-list-item aria-label="Settings" :slim="true" prepend-icon="mdi-cog-outline" to="/settings">{{ $t('Header.Settings') }}</v-list-item>
-          <v-list-item aria-label="Sign out" :slim="true" prepend-icon="mdi-logout" @click="signOut">{{ $t('Header.Sign-out') }}</v-list-item>
+          <v-list-item :aria-label="$t('Header.Dashboard')" :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard">{{ $t('Header.Dashboard') }}</v-list-item>
+          <v-list-item :aria-label="$t('Header.Settings')" :slim="true" prepend-icon="mdi-cog-outline" to="/settings">{{ $t('Header.Settings') }}</v-list-item>
+          <v-list-item :aria-label="$t('Header.Sign-out')" :slim="true" prepend-icon="mdi-logout" @click="signOut">{{ $t('Header.Sign-out') }}</v-list-item>
         </v-list>
       </v-menu>
     </template>
