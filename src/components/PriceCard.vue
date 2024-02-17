@@ -44,15 +44,13 @@
 import utils from '../utils.js'
 import OriginTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
-import ProductQuantityChip from '../components/ProductQuantityChip.vue'
-import PricePrice from '../components/PricePrice.vue'
-import PriceFooter from '../components/PriceFooter.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    ProductQuantityChip,
-    PricePrice,
-    PriceFooter
+    'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
+    'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
+    'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue'))
   },
   props: {
     'price': null,

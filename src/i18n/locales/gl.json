@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt"
+		"RECEIPT": "Receipt",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Are you sure you want to delete this proof?",
@@ -282,7 +283,7 @@
 		"CountryLabel": "País",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Linguas",
+		"LanguageLabel": "Idioma",
 		"Save": "Gardar",
 		"Title": "Axustes",
 		"TranslationCompletion": "Translation is {completion}% complete.",

@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt"
+		"RECEIPT": "Receipt",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Are you sure you want to delete this proof?",
@@ -282,7 +283,7 @@
 		"CountryLabel": "地區",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "語言",
+		"LanguageLabel": "语言",
 		"Save": "儲存",
 		"Title": "設定",
 		"TranslationCompletion": "Translation is {completion}% complete.",

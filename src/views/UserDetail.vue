@@ -40,17 +40,14 @@
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
-import PriceCountChip from '../components/PriceCountChip.vue'
-import PriceCard from '../components/PriceCard.vue'
-import OpenFoodFactsButton from '../components/OpenFoodFactsButton.vue'
-import ShareButton from '../components/ShareButton.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    PriceCountChip,
-    PriceCard,
-    OpenFoodFactsButton,
-    ShareButton,
+    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/OpenFoodFactsButton.vue')),
+    'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
     return {

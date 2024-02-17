@@ -40,17 +40,14 @@
 </template>
 
 <script>
-import PriceCountChip from '../components/PriceCountChip.vue'
-import ProductQuantityChip from '../components/ProductQuantityChip.vue'
-import PricePrice from '../components/PricePrice.vue'
-import PriceFooter from '../components/PriceFooter.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    PriceCountChip,
-    ProductQuantityChip,
-    PricePrice,
-    PriceFooter,
+    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
+    'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
+    'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue'))
   },
   props: {
     'product': null,

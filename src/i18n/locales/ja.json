@@ -48,7 +48,7 @@
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"TakePicture": "画像を撮る",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "デバイスギャラリーから選択"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "カテゴリー",
@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "値札",
-		"RECEIPT": "領収書"
+		"RECEIPT": "領収書",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "この証明を削除してもよろしいですか?",

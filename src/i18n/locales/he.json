@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "תווית מחיר",
-		"RECEIPT": "קבלה"
+		"RECEIPT": "קבלה",
+		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "למחוק את ההוכחה הזאת?",
@@ -282,7 +283,7 @@
 		"CountryLabel": "מדינה",
 		"CurrencyLabel": "מטבע",
 		"DefaultCurrency": "מטבע ברירת מחדל",
-		"LanguageLabel": "שפות",
+		"LanguageLabel": "שפה",
 		"Save": "שמירה",
 		"Title": "הגדרות",
 		"TranslationCompletion": "התרגום הושלם ב־{completion}%.",

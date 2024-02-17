@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Étiquette de prix",
-		"RECEIPT": "Ticket de caisse"
+		"RECEIPT": "Ticket de caisse",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Êtes-vous sûr de vouloir supprimer cette preuve?",

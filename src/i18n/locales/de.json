@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Preisschild",
-		"RECEIPT": "Kassenbon"
+		"RECEIPT": "Kassenbon",
+		"GDPR_REQUEST": "DSGVO-Anfrage"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Möchten Sie diesen Nachweis wirklich löschen?",
@@ -282,7 +283,7 @@
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Währung",
 		"DefaultCurrency": "Standardwährung",
-		"LanguageLabel": "Sprachen",
+		"LanguageLabel": "Sprache",
 		"Save": "Speichern",
 		"Title": "Einstellungen",
 		"TranslationCompletion": "Die Übersetzung ist zu {completion}% abgeschlossen.",

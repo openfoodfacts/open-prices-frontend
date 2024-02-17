@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Kainos etiketė",
-		"RECEIPT": "Čekis"
+		"RECEIPT": "Čekis",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Ar tikrai norite ištrinti šį įrodymą?",
@@ -282,7 +283,7 @@
 		"CountryLabel": "Šalis",
 		"CurrencyLabel": "Valiuta",
 		"DefaultCurrency": "Nustatyta valiuta",
-		"LanguageLabel": "Kalbos",
+		"LanguageLabel": "Kalba",
 		"Save": "Išsaugoti",
 		"Title": "Nustatymai",
 		"TranslationCompletion": "Užbaigta {completion} % vertimo.",

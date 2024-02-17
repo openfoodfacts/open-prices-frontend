@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Etichetta del prezzo",
-		"RECEIPT": "Ricevuta"
+		"RECEIPT": "Ricevuta",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Sei sicuro di voler eliminare questa prova?",
@@ -282,7 +283,7 @@
 		"CountryLabel": "Paese",
 		"CurrencyLabel": "Moneta",
 		"DefaultCurrency": "Valuta predefinita",
-		"LanguageLabel": "Lingue",
+		"LanguageLabel": "Lingua",
 		"Save": "Salva",
 		"Title": "Impostazioni",
 		"TranslationCompletion": "La traduzione è completa al {completion}%.",

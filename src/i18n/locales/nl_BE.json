@@ -194,7 +194,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Prijskaartje",
-		"RECEIPT": "Bon"
+		"RECEIPT": "Bon",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Weet u zeker dat u dit bewijs wilt verwijderen?",
@@ -282,7 +283,7 @@
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
 		"DefaultCurrency": "Standaardvaluta",
-		"LanguageLabel": "Talen",
+		"LanguageLabel": "Taal",
 		"Save": "Opslaan",
 		"Title": "Instellingen",
 		"TranslationCompletion": "De vertaling is {completion}% voltooid.",

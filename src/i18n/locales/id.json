@@ -43,12 +43,12 @@
 			"LabelDiscounted": "Harga sesudah diskon",
 			"LabelFull": "Harga penuh",
 			"Proof": "Bukti",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Tanggal telah diperbarui!",
 			"ProofUploaded": "Bukti telah diunggah!",
 			"Title": "Detail harga",
 			"UploadProof": "Unggah bukti",
 			"TakePicture": "Ambil gambar",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Pilih dari galeri perangkat"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
@@ -194,13 +194,14 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Label harga",
-		"RECEIPT": "Resi"
+		"RECEIPT": "Resi",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Apakah Anda yakin ingin menghapus bukti ini?",
 		"Delete": "Hapus",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "Menghapus bukti",
+		"Success": "Bukti telah dihapus!"
 	},
 	"Router": {
 		"AddPrice": {

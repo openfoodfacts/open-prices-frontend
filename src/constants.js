@@ -2,6 +2,9 @@ export default {
   APP_NAME: 'Open Prices',
   OFF_NAME: 'Open Food Facts',
   OFF_URL: 'https://world.openfoodfacts.org',
+  OFF_WIKI_URL: 'https://wiki.openfoodfacts.org/Main_Page',
+  OFF_WIKI_APP_URL: 'https://wiki.openfoodfacts.org/Project:Open-Prices',
+  OFF_WIKI_GDPR_REQUEST_URL: 'https://wiki.openfoodfacts.org/GDPR_request',
   PRODUCT_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'Hide products with prices' },
   ],

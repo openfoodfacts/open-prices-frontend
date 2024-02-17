@@ -15,8 +15,7 @@
               :items="countryList"
               item-title="native"
               item-value="code"
-            >
-            </v-autocomplete>
+            ></v-autocomplete>
             <v-autocomplete
               v-model="userSettingsForm.selectedLanguage"
               :label="$t('UserSettings.LanguageLabel')"
