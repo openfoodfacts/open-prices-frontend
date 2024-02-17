@@ -85,8 +85,8 @@ export default {
       // filter & order
       productFilter: '',
       productFilterList: constants.PRODUCT_FILTER_LIST,
-      productOrder: constants.PRODUCT_ORDER_LIST[1].key,
-      productOrderList: constants.PRODUCT_ORDER_LIST,
+      productOrder: constants.PRODUCT_ORDER_BY_LIST[1].key,
+      productOrderList: constants.PRODUCT_ORDER_BY_LIST,
       // data
       brand: null,  // see init
       brandProductList: [],
@@ -110,7 +110,7 @@ export default {
   },
   mounted() {
     this.productFilter = this.$route.query[constants.FILTER_PARAM] || this.productFilter
-    this.productOrder = this.$route.query[constants.ORDER_PARAM] || this.productOrder
+    this.productOrder = this.$route.query[constants.ORDER_BY_PARAM] || this.productOrder
     this.initBrand()
   },
   methods: {
@@ -138,7 +138,7 @@ export default {
     selectProductOrder(orderKey) {
       if (this.productOrder !== orderKey) {
         this.productOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.productOrder } })
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_BY_PARAM]: this.productOrder } })
         // this.initBrand() will be called in watch $route
       }
     }

@@ -10,8 +10,8 @@ export default {
   PRODUCT_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'Hide products with prices' },
   ],
-  ORDER_PARAM: 'order_by',
-  PRODUCT_ORDER_LIST: [
+  ORDER_BY_PARAM: 'order_by',
+  PRODUCT_ORDER_BY_LIST: [
     { key: '-unique_scans_n', value: 'Number of scans', icon: 'mdi-barcode-scan' },
     { key: '-price_count', value: 'Number of prices', icon: 'mdi-tag-multiple-outline' },
   ],
