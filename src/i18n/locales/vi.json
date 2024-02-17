@@ -47,14 +47,18 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
+			"Picture": "Picture",
 			"TakePicture": "Chụp ảnh",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Danh mục",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
+			"Scan": "Quét",
 			"ScanBarcode": "Scan a barcode",
+			"Type": "Loại",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
