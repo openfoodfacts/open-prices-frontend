@@ -47,9 +47,9 @@
 			"ProofUploaded": "Prova caricata!",
 			"Title": "Dettagli sul prezzo",
 			"UploadProof": "Carica una prova",
-			"Picture": "Picture",
+			"Picture": "Foto",
 			"TakePicture": "Scatta una foto",
-			"Gallery": "Device gallery",
+			"Gallery": "Galleria dispositivo",
 			"SelectFromGallery": "Seleziona dalla galleria del dispositivo"
 		},
 		"ProductInfo": {
@@ -287,7 +287,7 @@
 		"CountryLabel": "Paese",
 		"CurrencyLabel": "Moneta",
 		"DefaultCurrency": "Valuta predefinita",
-		"LanguageLabel": "Lingua",
+		"LanguageLabel": "Lingue",
 		"Save": "Salva",
 		"Title": "Impostazioni",
 		"TranslationCompletion": "La traduzione è completa al {completion}%.",

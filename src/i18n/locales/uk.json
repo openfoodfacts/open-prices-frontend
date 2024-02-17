@@ -47,9 +47,9 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"Picture": "Зображення",
 			"TakePicture": "Сфотографувати",
-			"Gallery": "Device gallery",
+			"Gallery": "Галерея пристрою",
 			"SelectFromGallery": "Виберіть з галереї пристрою"
 		},
 		"ProductInfo": {
@@ -287,7 +287,7 @@
 		"CountryLabel": "Країна",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Мова",
+		"LanguageLabel": "Мови",
 		"Save": "Зберегти",
 		"Title": "Налаштування",
 		"TranslationCompletion": "Переклад виконано на {completion}%.",
