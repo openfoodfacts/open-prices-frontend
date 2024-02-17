@@ -74,8 +74,8 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    'ProductCard': defineAsyncComponent(() => import('../components/ShareButton.vue')),
-    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/ShareButton.vue')),
+    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/OpenFoodFactsButton.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
