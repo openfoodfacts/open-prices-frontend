@@ -47,14 +47,18 @@
 			"ProofUploaded": "Preuve téléversée !",
 			"Title": "Détails du prix",
 			"UploadProof": "Téléverser une preuve",
+			"Picture": "Photo",
 			"TakePicture": "Prendre une photo",
+			"Gallery": "Galerie",
 			"SelectFromGallery": "Sélectionner dans votre galerie"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Catégorie",
 			"OriginLabel": "Origine",
 			"ProductBarcode": "Code-barres du produit",
+			"Scan": "Scanner",
 			"ScanBarcode": "Scanner un code-barres",
+			"Type": "Taper",
 			"TypeBarcode": "Taper un code-barres",
 			"SetProduct": "Ajouter un produit",
 			"Title": "Information du produit"
