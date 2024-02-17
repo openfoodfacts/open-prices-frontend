@@ -47,14 +47,18 @@
 			"ProofUploaded": "Kanıt yüklendi!",
 			"Title": "Fiyat ayrıntıları",
 			"UploadProof": "Bir kanıt yükleyin",
+			"Picture": "Picture",
 			"TakePicture": "Resim çek",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Cihaz galerisinden seçin"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Kaynak",
 			"ProductBarcode": "Ürün barkodu",
+			"Scan": "Tara",
 			"ScanBarcode": "Barkod tara",
+			"Type": "Tür",
 			"TypeBarcode": "Barkodu yazın",
 			"SetProduct": "Bir ürün ayarlayın",
 			"Title": "Ürün bilgisi"
