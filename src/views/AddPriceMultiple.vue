@@ -314,12 +314,8 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import utils from '../utils.js'
-import LocationSelector from '../components/LocationSelector.vue'
-import PriceCard from '../components/PriceCard.vue'
-import ProductCard from '../components/ProductCard.vue'
-import BarcodeScanner from '../components/BarcodeScanner.vue'
-import BarcodeManualInput from '../components/BarcodeManualInput.vue'
 import LabelsTags from '../data/labels-tags.json'
+import { defineAsyncComponent } from 'vue'
 
 Compressor.setDefaults({
   checkOrientation: true,  // default
@@ -329,11 +325,11 @@ Compressor.setDefaults({
 
 export default {
   components: {
-    LocationSelector,
-    PriceCard,
-    ProductCard,
-    BarcodeScanner,
-    BarcodeManualInput,
+    'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue')),
+    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
+    'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue'))
   },
   data() {
     return {

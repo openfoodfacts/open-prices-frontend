@@ -111,7 +111,7 @@ const localeManager = {
    */
   async getLocales() {
     try {
-      const localesContext = import.meta.globEager('./locales/*.json')
+      const localesContext = import.meta.glob('./locales/*.json')
       const locales = Object.keys(localesContext).map(key => {
         const localeCode = key.replace('./locales/', '').replace('.json', '')
         return localeCode;

@@ -38,11 +38,11 @@
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
-import PriceCard from '../components/PriceCard.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    PriceCard,
+    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
     return {

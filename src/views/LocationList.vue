@@ -38,11 +38,11 @@
 <script>
 import api from '../services/api'
 import utils from '../utils.js'
-import PriceCountChip from '../components/PriceCountChip.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    PriceCountChip,
+    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
   },
   data() {
     return {

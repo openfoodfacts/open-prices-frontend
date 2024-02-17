@@ -48,7 +48,6 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
-// import PriceCard from '../components/PriceCard.vue'
 
 export default {
   components: {
