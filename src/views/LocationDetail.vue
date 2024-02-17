@@ -47,15 +47,13 @@
 <script>
 import api from '../services/api'
 import utils from '../utils.js'
-import PriceCountChip from '../components/PriceCountChip.vue'
-import PriceCard from '../components/PriceCard.vue'
-import ShareButton from '../components/ShareButton.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    PriceCountChip,
-    PriceCard,
-    ShareButton,
+    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue')),
   },
   data() {
     return {

@@ -47,14 +47,18 @@
 			"ProofUploaded": "Kanıt yüklendi!",
 			"Title": "Fiyat ayrıntıları",
 			"UploadProof": "Bir kanıt yükleyin",
+			"Picture": "Picture",
 			"TakePicture": "Resim çek",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Cihaz galerisinden seçin"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Kaynak",
 			"ProductBarcode": "Ürün barkodu",
+			"Scan": "Tara",
 			"ScanBarcode": "Barkod tara",
+			"Type": "Tür",
 			"TypeBarcode": "Barkodu yazın",
 			"SetProduct": "Bir ürün ayarlayın",
 			"Title": "Ürün bilgisi"
@@ -194,7 +198,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Fiyat etiketi",
-		"RECEIPT": "Makbuz"
+		"RECEIPT": "Makbuz",
+		"GDPR_REQUEST": "GDPR talebi"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Bu kanıtı silmek istediğinizden emin misiniz?",
@@ -282,7 +287,7 @@
 		"CountryLabel": "Ülke",
 		"CurrencyLabel": "Kur",
 		"DefaultCurrency": "Varsayılan para birimi",
-		"LanguageLabel": "Diller",
+		"LanguageLabel": "Dil",
 		"Save": "Kaydet",
 		"Title": "Ayarlar",
 		"TranslationCompletion": "Çeviri % {completion} tamamlandı.",

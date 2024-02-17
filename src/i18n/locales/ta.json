@@ -47,14 +47,18 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
+			"Picture": "Picture",
 			"TakePicture": "ஒரு படம் எடு",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "வகை",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "தயாரிப்பு பார்கோடு",
+			"Scan": "ஸ்கேன்",
 			"ScanBarcode": "Scan a barcode",
+			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -194,7 +198,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt"
+		"RECEIPT": "Receipt",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Are you sure you want to delete this proof?",
@@ -282,7 +287,7 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "மொழி",
 		"Save": "சேமி",
 		"Title": "அமைப்புகள்",
 		"TranslationCompletion": "மொழிபெயர்ப்பு {completion}% முடிந்தது.",

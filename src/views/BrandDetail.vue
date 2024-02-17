@@ -70,23 +70,21 @@
 <script>
 import constants from '../constants'
 import api from '../services/api'
-import ProductCard from '../components/ProductCard.vue'
-import OpenFoodFactsButton from '../components/OpenFoodFactsButton.vue'
-import ShareButton from '../components/ShareButton.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    ProductCard,
-    OpenFoodFactsButton,
-    ShareButton,
+    'ProductCard': defineAsyncComponent(() => import('../components/ShareButton.vue')),
+    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/ShareButton.vue')),
+    'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
     return {
       // filter & order
       productFilter: '',
       productFilterList: constants.PRODUCT_FILTER_LIST,
-      productOrder: '-unique_scans_n',
-      productOrderList: constants.PRODUCT_ORDER_LIST,
+      productOrder: constants.PRODUCT_ORDER_BY_LIST[1].key,
+      productOrderList: constants.PRODUCT_ORDER_BY_LIST,
       // data
       brand: null,  // see init
       brandProductList: [],
@@ -109,6 +107,8 @@ export default {
     },
   },
   mounted() {
+    this.productFilter = this.$route.query[constants.FILTER_PARAM] || this.productFilter
+    this.productOrder = this.$route.query[constants.ORDER_BY_PARAM] || this.productOrder
     this.initBrand()
   },
   methods: {
@@ -130,12 +130,14 @@ export default {
     },
     toggleProductFilter(filterKey) {
       this.productFilter = this.productFilter ? '' : filterKey
-      this.initBrand()
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.productFilter } })
+      // this.initBrand() will be called in watch $route
     },
     selectProductOrder(orderKey) {
       if (this.productOrder !== orderKey) {
         this.productOrder = orderKey
-        this.initBrand()
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_BY_PARAM]: this.productOrder } })
+        // this.initBrand() will be called in watch $route
       }
     }
   },

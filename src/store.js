@@ -9,7 +9,7 @@ export const useAppStore = defineStore('app', {
       last_product_mode_used: 'barcode',
       last_currency_used: 'EUR',  // TODO: init with user locale ?
       recent_locations: [],
-      language: import.meta.env.VITE_DEFAULT_LOCALE,  // 'en'
+      country: import.meta.env.VITE_DEFAULT_COUNTRY,  // 'FR',
     },
   }),
   getters: {
@@ -23,6 +23,9 @@ export const useAppStore = defineStore('app', {
     },
     getUserLanguage: (state) => {
       return state.user.language
+    },
+    getUserCountry: (state) => {
+      return state.user.country
     }
   },
   actions: {
@@ -49,6 +52,9 @@ export const useAppStore = defineStore('app', {
     setLanguage(language) {
       this.user.language = language
     },
+    setCountry(country) {
+      this.user.country = country
+    }
   },
   // pinia-plugin-persistedstate
   persist: {

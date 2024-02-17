@@ -1,50 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useAppStore } from './store'
-import Home from './views/Home.vue'
-import SignIn from './views/SignIn.vue'
-import UserDashboard from './views/UserDashboard.vue'
-import UserDashboardPriceList from './views/UserDashboardPriceList.vue'
-import UserDashboardProofList from './views/UserDashboardProofList.vue'
-import UserSettings from './views/UserSettings.vue'
-import Search from './views/Search.vue'
-import AddPriceHome from './views/AddPriceHome.vue'
-import AddPriceSingle from './views/AddPriceSingle.vue'
-import AddPriceMultiple from './views/AddPriceMultiple.vue'
-import PriceList from './views/PriceList.vue'
-import ProductList from './views/ProductList.vue'
-import ProductDetail from './views/ProductDetail.vue'
-import LocationList from './views/LocationList.vue'
-import LocationDetail from './views/LocationDetail.vue'
-import BrandDetail from './views/BrandDetail.vue'
-import UserList from './views/UserList.vue'
-import UserDetail from './views/UserDetail.vue'
-import Stats from './views/Stats.vue'
-import NotFound from './views/NotFound.vue'
 import localeManager from './i18n/localeManager.js'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 const routes = [
-  { path: '/', name: 'home', component: Home, meta: { title: 'Home', icon: 'mdi-home', drawerMenu: true } },
-  { path: '/sign-in', name: 'sign-in', component: SignIn, meta: { title: 'SignIn', icon: 'mdi-login', drawerMenu: true, requiresAuth: false } },
-  { path: '/dashboard', name: 'dashboard', component: UserDashboard, meta: { title: 'Dashboard', requiresAuth: true } },
-  { path: '/dashboard/prices', name: 'dashboard-prices', component: UserDashboardPriceList, meta: { title: 'MyPrices', requiresAuth: true } },
-  { path: '/dashboard/proofs', name: 'dashboard-proofs', component: UserDashboardProofList, meta: { title: 'MyProofs', requiresAuth: true } },
-  { path: '/settings', name: 'settings', component: UserSettings, meta: { title: 'Settings', requiresAuth: true } },
-  { path: '/search', name: 'search', component: Search, meta: { title: 'Search', icon: 'mdi-magnify', drawerMenu: true }},
-  { path: '/add', name: 'add-price', component: AddPriceHome, meta: { title: 'AddPrice', icon: 'mdi-plus', drawerMenu: true, color: 'primary', requiresAuth: true }},
-  { path: '/add/single', name: 'add-price-single', component: AddPriceSingle, meta: { title: 'Add a single price (price tag)', requiresAuth: true }},
-  { path: '/add/multiple/price-tag', name: 'add-price-multiple-price-tag', component: AddPriceMultiple, meta: { title: 'Add multiple prices (price tags)', requiresAuth: true }},
-  { path: '/add/multiple/receipt', name: 'add-price-multiple-receipt', component: AddPriceMultiple, meta: { title: 'Add multiple prices (receipt)', requiresAuth: true }},
-  { path: '/prices', name: 'prices', component: PriceList, meta: { title: 'LatestPrices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
-  { path: '/products', name: 'products', component: ProductList, meta: { title: 'TopProducts', icon: 'mdi-database-outline', drawerMenu: true }},
-  { path: '/products/:id', name: 'product-detail', component: ProductDetail, meta: { title: 'Product detail' }},
-  { path: '/locations', name: 'locations', component: LocationList, meta: { title: 'TopLocations', icon: 'mdi-medal-outline', drawerMenu: true }},
-  { path: '/locations/:id', name: 'location-detail', component: LocationDetail, meta: { title: 'Location detail' }},
-  { path: '/brands/:id', name: 'brand-detail', component: BrandDetail, meta: { title: 'Brand detail' }},
-  { path: '/users', name: 'users', component: UserList, meta: { title: 'TopContributors', icon: 'mdi-medal-outline', drawerMenu: true }},
-  { path: '/users/:username', name: 'user-detail', component: UserDetail, meta: { title: 'User detail' }},
-  { path: '/stats', name: 'stats', component: Stats, meta: { title: 'Stats' }},
-  { path: '/:path(.*)', component: NotFound },
+  { path: '/', name: 'home', component: () => import('./views/Home.vue'), meta: { title: 'Home', icon: 'mdi-home', drawerMenu: true } },
+  { path: '/sign-in', name: 'sign-in', component: () => import('./views/SignIn.vue'), meta: { title: 'SignIn', icon: 'mdi-login', drawerMenu: true, requiresAuth: false } },
+  { path: '/dashboard', name: 'dashboard', component: () => import('./views/UserDashboard.vue'), meta: { title: 'Dashboard', requiresAuth: true } },
+  { path: '/dashboard/prices', name: 'dashboard-prices', component: () => import('./views/UserDashboardPriceList.vue'), meta: { title: 'MyPrices', requiresAuth: true } },
+  { path: '/dashboard/proofs', name: 'dashboard-proofs', component: () => import('./views/UserDashboardProofList.vue'), meta: { title: 'MyProofs', requiresAuth: true } },
+  { path: '/settings', name: 'settings', component: () => import('./views/UserSettings.vue'), meta: { title: 'Settings', requiresAuth: true } },
+  { path: '/search', name: 'search', component: () => import('./views/Search.vue'), meta: { title: 'Search', icon: 'mdi-magnify', drawerMenu: true }},
+  { path: '/add', name: 'add-price', component: () => import('./views/AddPriceHome.vue'), meta: { title: 'AddPrice', icon: 'mdi-plus', drawerMenu: true, color: 'primary', requiresAuth: true }},
+  { path: '/add/single', name: 'add-price-single', component: () => import('./views/AddPriceSingle.vue'), meta: { title: 'Add a single price (price tag)', requiresAuth: true }},
+  { path: '/add/multiple/price-tag', name: 'add-price-multiple-price-tag', component: () => import('./views/AddPriceMultiple.vue'), meta: { title: 'Add multiple prices (price tags)', requiresAuth: true }},
+  { path: '/add/multiple/receipt', name: 'add-price-multiple-receipt', component: () => import('./views/AddPriceMultiple.vue'), meta: { title: 'Add multiple prices (receipt)', requiresAuth: true }},
+  { path: '/prices', name: 'prices', component: () => import('./views/PriceList.vue'), meta: { title: 'LatestPrices', icon: 'mdi-tag-multiple-outline', drawerMenu: true }},
+  { path: '/products', name: 'products', component: () => import('./views/ProductList.vue'), meta: { title: 'TopProducts', icon: 'mdi-database-outline', drawerMenu: true }},
+  { path: '/products/:id', name: 'product-detail', component: () => import('./views/ProductDetail.vue'), meta: { title: 'Product detail' }},
+  { path: '/locations', name: 'locations', component: () => import('./views/LocationList.vue'), meta: { title: 'TopLocations', icon: 'mdi-medal-outline', drawerMenu: true }},
+  { path: '/locations/:id', name: 'location-detail', component: () => import('./views/LocationDetail.vue'), meta: { title: 'Location detail' }},
+  { path: '/brands/:id', name: 'brand-detail', component: () => import('./views/BrandDetail.vue'), meta: { title: 'Brand detail' }},
+  { path: '/users', name: 'users', component: () => import('./views/UserList.vue'), meta: { title: 'TopContributors', icon: 'mdi-medal-outline', drawerMenu: true }},
+  { path: '/users/:username', name: 'user-detail', component: () => import('./views/UserDetail.vue'), meta: { title: 'User detail' }},
+  { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats' }},
+  { path: '/:path(.*)', component: () => import('./views/NotFound.vue') },
 ]
 
 const router = createRouter({

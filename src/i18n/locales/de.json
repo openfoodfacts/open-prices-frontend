@@ -47,14 +47,18 @@
 			"ProofUploaded": "Nachweis hochgeladen!",
 			"Title": "Preisdetails",
 			"UploadProof": "Laden Sie einen Nachweis hoch",
+			"Picture": "Picture",
 			"TakePicture": "Foto aufnehmen",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Aus der Galerie des Gerätes auswählen"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
 			"OriginLabel": "Ursprung",
 			"ProductBarcode": "Produkt-Strichcode",
+			"Scan": "Einlesen",
 			"ScanBarcode": "Strichcode einlesen",
+			"Type": "Art",
 			"TypeBarcode": "Strichcode eingeben",
 			"SetProduct": "Produkt festlegen",
 			"Title": "Produktinformation"
@@ -194,7 +198,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Preisschild",
-		"RECEIPT": "Kassenbon"
+		"RECEIPT": "Kassenbon",
+		"GDPR_REQUEST": "DSGVO-Anfrage"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Möchten Sie diesen Nachweis wirklich löschen?",
@@ -282,7 +287,7 @@
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Währung",
 		"DefaultCurrency": "Standardwährung",
-		"LanguageLabel": "Sprachen",
+		"LanguageLabel": "Sprache",
 		"Save": "Speichern",
 		"Title": "Einstellungen",
 		"TranslationCompletion": "Die Übersetzung ist zu {completion}% abgeschlossen.",

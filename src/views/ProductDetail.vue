@@ -53,17 +53,14 @@
 import constants from '../constants'
 import utils from '../utils.js'
 import api from '../services/api'
-import ProductCard from '../components/ProductCard.vue'
-import PriceCard from '../components/PriceCard.vue'
-import OpenFoodFactsButton from '../components/OpenFoodFactsButton.vue'
-import ShareButton from '../components/ShareButton.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    ProductCard,
-    PriceCard,
-    OpenFoodFactsButton,
-    ShareButton,
+    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/OpenFoodFactsButton.vue')),
+    'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
     return {

@@ -29,8 +29,14 @@
               </v-item-group>
             </h3>
             <v-sheet v-if="productMode === 'barcode'">
-              <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</v-btn>
-              <a href="#" @click.prevent="showBarcodeManualInput">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</a>
+              <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">
+                <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Scan') }}</span>
+                <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</span>
+              </v-btn>
+              <v-btn class="mb-2" size="small" prepend-icon="mdi-numeric" @click.prevent="showBarcodeManualInput">
+                <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Type') }}</span>
+                <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</span>
+              </v-btn>
               <v-text-field
                 v-if="dev"
                 :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
@@ -134,8 +140,14 @@
             <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.PriceDetails.Proof') }}</h3>
             <v-row>
               <v-col>
-                <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</v-btn>
-                <a href="#" @click.prevent="$refs.proofGallery.click()">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</a>
+                <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">
+                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
+                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
+                </v-btn>
+                <v-btn class="mb-2" size="small" prepend-icon="mdi-image-plus" @click.prevent="$refs.proofGallery.click()" :loading="createProofLoading" :disabled="createProofLoading">
+                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
+                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
+                </v-btn>
                 <v-file-input
                   class="d-none overflow-hidden"
                   ref="proofCamera"
@@ -260,11 +272,8 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import utils from '../utils.js'
-import ProductCard from '../components/ProductCard.vue'
-import BarcodeScanner from '../components/BarcodeScanner.vue'
-import BarcodeManualInput from '../components/BarcodeManualInput.vue'
-import LocationSelector from '../components/LocationSelector.vue'
 import LabelsTags from '../data/labels-tags.json'
+import { defineAsyncComponent } from 'vue'
 
 Compressor.setDefaults({
   checkOrientation: true,  // default
@@ -276,10 +285,10 @@ Compressor.setDefaults({
 
 export default {
   components: {
-    ProductCard,
-    BarcodeScanner,
-    BarcodeManualInput,
-    LocationSelector
+    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
+    'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
+    'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue'))
   },
   data() {
     return {

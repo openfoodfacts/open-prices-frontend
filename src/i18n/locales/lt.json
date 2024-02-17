@@ -47,14 +47,18 @@
 			"ProofUploaded": "Įrodymai įkelti!",
 			"Title": "Išsami informacija apie kainą",
 			"UploadProof": "Įkelti įrodymus",
+			"Picture": "Picture",
 			"TakePicture": "Fotografuoti",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Pasirinkti iš prietaisų galerijos"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorija",
 			"OriginLabel": "Kilmė",
 			"ProductBarcode": "Brūkšninis produkto kodas",
+			"Scan": "Skenuoti",
 			"ScanBarcode": "Nuskaityti brūkšninį kodą",
+			"Type": "Tipas",
 			"TypeBarcode": "Įveskite brūkšninį kodą",
 			"SetProduct": "Nustatyti produktą",
 			"Title": "Informacija apie produktą"
@@ -194,7 +198,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Kainos etiketė",
-		"RECEIPT": "Čekis"
+		"RECEIPT": "Čekis",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Ar tikrai norite ištrinti šį įrodymą?",
@@ -282,7 +287,7 @@
 		"CountryLabel": "Šalis",
 		"CurrencyLabel": "Valiuta",
 		"DefaultCurrency": "Nustatyta valiuta",
-		"LanguageLabel": "Kalbos",
+		"LanguageLabel": "Kalba",
 		"Save": "Išsaugoti",
 		"Title": "Nustatymai",
 		"TranslationCompletion": "Užbaigta {completion} % vertimo.",

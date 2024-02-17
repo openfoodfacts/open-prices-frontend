@@ -43,18 +43,22 @@
 			"LabelDiscounted": "Alennettu hinta",
 			"LabelFull": "Täysi hinta",
 			"Proof": "Todiste",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Päivämäärä päivitetty!",
 			"ProofUploaded": "Todiste lähetetty!",
 			"Title": "Hintatiedot",
 			"UploadProof": "Lähetä todiste",
+			"Picture": "Picture",
 			"TakePicture": "Ota kuva",
-			"SelectFromGallery": "Select from device gallery"
+			"Gallery": "Device gallery",
+			"SelectFromGallery": "Valitse galleriastasi"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Tuoteluokka",
 			"OriginLabel": "Alkuperä",
 			"ProductBarcode": "Tuotteen viivakoodi",
+			"Scan": "Lue",
 			"ScanBarcode": "Skannaa viivakoodi",
+			"Type": "Tyyppi",
 			"TypeBarcode": "Syötä viivakoodi",
 			"SetProduct": "Aseta tuote",
 			"Title": "Tuotetiedot"
@@ -149,20 +153,20 @@
 		"Discount": "Alennus",
 		"PriceDate": "päivänä {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
-		"PriceValueDisplayLitre": "{0} / L",
+		"PriceValueDisplayLitre": "{0} / kg",
 		"PriceValueDisplayUnit": "{0} / yksikkö",
 		"Proof": "Todiste",
 		"FullPrice": "Täysi hinta",
 		"UnknownProduct": "Tuntematon tuote"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} hinnat"
 	},
 	"PriceDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Haluatko varmasti poistaa tämän hinnan?",
 		"Delete": "Poista",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"DeleteTitle": "Poista hinta",
+		"Success": "Hinta poistettu!"
 	},
 	"PriceList": {
 		"LoadMore": "Lataa enemmän",
@@ -193,14 +197,15 @@
 		"Title": "Huipputuotteet"
 	},
 	"ProofCard": {
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Kuitti"
+		"PRICE_TAG": "Hintalappu",
+		"RECEIPT": "Kuitti",
+		"GDPR_REQUEST": "GDPR-pyyntö"
 	},
 	"ProofDeleteChip": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Haluatko varmasti poistaa tämän todisteen?",
 		"Delete": "Poista",
-		"DeleteTitle": "Delete a proof",
-		"Success": "Proof deleted!"
+		"DeleteTitle": "Poista todiste",
+		"Success": "Todiste poistettu!"
 	},
 	"Router": {
 		"AddPrice": {
@@ -264,7 +269,7 @@
 		"MyProofs": "Minun todisteeni",
 		"Settings": "Asetukset",
 		"Title": "Kojelauta",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} hinnat",
 		"UserProofTotal": "{count} todisteita"
 	},
 	"UserDetail": {
@@ -282,7 +287,7 @@
 		"CountryLabel": "Maa",
 		"CurrencyLabel": "Valuutta",
 		"DefaultCurrency": "Oletusvaluutta",
-		"LanguageLabel": "Kielet",
+		"LanguageLabel": "Kieli",
 		"Save": "Tallenna",
 		"Title": "Asetukset",
 		"TranslationCompletion": "Käännös on {completion}% valmis.",

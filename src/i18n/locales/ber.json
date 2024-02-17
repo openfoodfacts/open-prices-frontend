@@ -47,14 +47,18 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
+			"Picture": "Picture",
 			"TakePicture": "Take a picture",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Category",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
+			"Scan": "Azray",
 			"ScanBarcode": "Scan a barcode",
+			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -194,7 +198,8 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt"
+		"RECEIPT": "Receipt",
+		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Are you sure you want to delete this proof?",
@@ -282,7 +287,7 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "ⵜⵓⵜⵍⴰⵢⵜ",
 		"Save": "ⵃⴹⵓ",
 		"Title": "Settings",
 		"TranslationCompletion": "Translation is {completion}% complete.",
