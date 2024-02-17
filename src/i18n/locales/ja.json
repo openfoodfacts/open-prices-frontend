@@ -195,7 +195,7 @@
 	"ProofCard": {
 		"PRICE_TAG": "値札",
 		"RECEIPT": "領収書",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "GDPR リクエスト"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "この証明を削除してもよろしいですか?",
