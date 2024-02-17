@@ -287,7 +287,7 @@
 		"CountryLabel": "Maa",
 		"CurrencyLabel": "Valuutta",
 		"DefaultCurrency": "Oletusvaluutta",
-		"LanguageLabel": "Kieli",
+		"LanguageLabel": "Kielet",
 		"Save": "Tallenna",
 		"Title": "Asetukset",
 		"TranslationCompletion": "Käännös on {completion}% valmis.",
