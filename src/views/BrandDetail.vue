@@ -85,7 +85,7 @@ export default {
       // filter & order
       productFilter: '',
       productFilterList: constants.PRODUCT_FILTER_LIST,
-      productOrder: '-unique_scans_n',
+      productOrder: constants.PRODUCT_ORDER_LIST[1].key,
       productOrderList: constants.PRODUCT_ORDER_LIST,
       // data
       brand: null,  // see init
@@ -109,8 +109,8 @@ export default {
     },
   },
   mounted() {
-    this.productFilter = this.$route.query.filter || ''
-    this.productOrder = this.$route.query.order_by || '-price_count'
+    this.productFilter = this.$route.query[constants.FILTER_PARAM] || this.productFilter
+    this.productOrder = this.$route.query[constants.ORDER_PARAM] || this.productOrder
     this.initBrand()
   },
   methods: {
@@ -132,14 +132,14 @@ export default {
     },
     toggleProductFilter(filterKey) {
       this.productFilter = this.productFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, filter: this.productFilter } })
-      this.initBrand()
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.productFilter } })
+      // this.initBrand() will be called in watch $route
     },
     selectProductOrder(orderKey) {
       if (this.productOrder !== orderKey) {
         this.productOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, order_by: this.productOrder } })
-        this.initBrand()
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.productOrder } })
+        // this.initBrand() will be called in watch $route
       }
     }
   },
