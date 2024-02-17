@@ -30,7 +30,7 @@
             </h3>
             <v-sheet v-if="productMode === 'barcode'">
               <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</v-btn>
-              <a href="#" @click.prevent="showBarcodeManualInput">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</a>
+              <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-numeric" @click.prevent="showBarcodeManualInput">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</v-btn>
               <v-text-field
                 v-if="dev"
                 :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
@@ -135,7 +135,7 @@
             <v-row>
               <v-col>
                 <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</v-btn>
-                <a href="#" @click.prevent="$refs.proofGallery.click()">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</a>
+                <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" @click.prevent="$refs.proofGallery.click()" :loading="createProofLoading" :disabled="createProofLoading">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</v-btn>
                 <v-file-input
                   class="d-none overflow-hidden"
                   ref="proofCamera"
