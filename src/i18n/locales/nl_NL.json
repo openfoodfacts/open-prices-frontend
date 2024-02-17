@@ -47,14 +47,18 @@
 			"ProofUploaded": "Bewijs geüpload!",
 			"Title": "Prijsdetails",
 			"UploadProof": "Upload een bewijs",
+			"Picture": "Picture",
 			"TakePicture": "Neem een foto",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Uit galerij van apparaat selecteren"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categorie",
 			"OriginLabel": "Oorsprong",
 			"ProductBarcode": "Streepjescode van product",
+			"Scan": "Scan",
 			"ScanBarcode": "Scan een streepjescode",
+			"Type": "Type",
 			"TypeBarcode": "Voer een streepjescode in",
 			"SetProduct": "Stel een product in",
 			"Title": "Productinformatie"
