@@ -47,9 +47,9 @@
 			"ProofUploaded": "Preuve téléversée !",
 			"Title": "Détails du prix",
 			"UploadProof": "Téléverser une preuve",
-			"Picture": "Photo",
+			"Picture": "Picture",
 			"TakePicture": "Prendre une photo",
-			"Gallery": "Galerie",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Sélectionner dans votre galerie"
 		},
 		"ProductInfo": {
@@ -58,7 +58,7 @@
 			"ProductBarcode": "Code-barres du produit",
 			"Scan": "Scanner",
 			"ScanBarcode": "Scanner un code-barres",
-			"Type": "Taper",
+			"Type": "Type",
 			"TypeBarcode": "Taper un code-barres",
 			"SetProduct": "Ajouter un produit",
 			"Title": "Information du produit"
@@ -199,7 +199,7 @@
 	"ProofCard": {
 		"PRICE_TAG": "Étiquette de prix",
 		"RECEIPT": "Ticket de caisse",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "Requête RGPD"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Êtes-vous sûr de vouloir supprimer cette preuve?",

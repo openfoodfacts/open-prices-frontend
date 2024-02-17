@@ -47,14 +47,18 @@
 			"ProofUploaded": "Důkaz nahrán!",
 			"Title": "Podrobnosti o ceně",
 			"UploadProof": "Nahrát důkaz",
+			"Picture": "Picture",
 			"TakePicture": "Vyfotit",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Vybrat z galerie zařízení"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
 			"OriginLabel": "Původ",
 			"ProductBarcode": "Čárový kód produktu",
+			"Scan": "Skenovat",
 			"ScanBarcode": "Naskenovat čárový kód",
+			"Type": "Typ",
 			"TypeBarcode": "Zadat čárový kód",
 			"SetProduct": "Nastavit produkt",
 			"Title": "Informace o produktu"

@@ -47,14 +47,18 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
+			"Picture": "Picture",
 			"TakePicture": "ஒரு படம் எடு",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "வகை",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "தயாரிப்பு பார்கோடு",
+			"Scan": "ஸ்கேன்",
 			"ScanBarcode": "Scan a barcode",
+			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"

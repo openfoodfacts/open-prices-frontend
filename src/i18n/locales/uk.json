@@ -47,14 +47,18 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
+			"Picture": "Picture",
 			"TakePicture": "Сфотографувати",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Виберіть з галереї пристрою"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Категорія",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Штрих-код продукту",
+			"Scan": "Сканувати",
 			"ScanBarcode": "Scan a barcode",
+			"Type": "Тип",
 			"TypeBarcode": "Введіть штрих-код",
 			"SetProduct": "Set a product",
 			"Title": "Product info"

@@ -47,14 +47,18 @@
 			"ProofUploaded": "Dowód przesłany!",
 			"Title": "Szczegóły ceny",
 			"UploadProof": "Prześlij dowód",
+			"Picture": "Picture",
 			"TakePicture": "Zrób zdjęcie",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Wybierz z galerii urządzenia"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategoria",
 			"OriginLabel": "Pochodzenie",
 			"ProductBarcode": "Kod kreskowy produktu",
+			"Scan": "Skanuj",
 			"ScanBarcode": "Zeskanuj kod kreskowy",
+			"Type": "Typ",
 			"TypeBarcode": "Wpisz kod kreskowy",
 			"SetProduct": "Ustaw produkt",
 			"Title": "Informacje o produkcie"

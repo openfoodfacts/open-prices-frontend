@@ -47,14 +47,18 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
+			"Picture": "Picture",
 			"TakePicture": "Atera argazki bat",
+			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategoria",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
+			"Scan": "Eskaneatu",
 			"ScanBarcode": "Scan a barcode",
+			"Type": "Type",
 			"TypeBarcode": "Idatzi barra-kode bat",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
