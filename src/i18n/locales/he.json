@@ -47,10 +47,10 @@
 			"ProofUploaded": "ההוכחה נשלחה!",
 			"Title": "פריטי מחיר",
 			"UploadProof": "העלאת הוכחה",
-			"Picture": "Picture",
+			"Picture": "תמונה",
 			"TakePicture": "צילום תמונה",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery"
+			"Gallery": "גלריית המכשיר",
+			"SelectFromGallery": "בחירה מהגלריה של המכשיר שלך"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
