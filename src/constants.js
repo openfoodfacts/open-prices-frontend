@@ -10,10 +10,17 @@ export default {
   PRODUCT_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'Hide products with prices' },
   ],
+  PRICE_FILTER_LIST: [
+    { key: 'show_last_month', value: 'Show Prices from Last 30 Days' },
+  ],
   ORDER_BY_PARAM: 'order_by',
   PRODUCT_ORDER_BY_LIST: [
     { key: '-unique_scans_n', value: 'Number of scans', icon: 'mdi-barcode-scan' },
     { key: '-price_count', value: 'Number of prices', icon: 'mdi-tag-multiple-outline' },
+  ],
+  PRICE_ORDER_BY_LIST: [
+    { key: '-created', value: 'Last created', icon: 'mdi-calendar-plus' },
+    { key: '-date', value: 'Date (Newest First)', icon: 'mdi-calendar' },
   ],
   // https://wiki.openstreetmap.org/wiki/Key:place
   // https://wiki.openstreetmap.org/wiki/Key:highway

@@ -117,8 +117,8 @@ export default {
     }
   },
   watch: {
-    $route (newRoute, oldRoute) {
-      if (oldRoute.fullPath !== newRoute.fullPath) {
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
         this.initProductList()
       }
     }
