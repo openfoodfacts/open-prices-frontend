@@ -136,7 +136,7 @@ export default {
       if (this.priceFilter === 'show_last_month') {
         let oneMonthAgo = new Date()
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
-        defaultParams['date__gte'] = oneMonthAgo.toISOString().split('T')[0]
+        defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
       }
       return defaultParams
     },
