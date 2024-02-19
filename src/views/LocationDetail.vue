@@ -35,7 +35,7 @@
     <v-col>
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!priceFilter">{{ $t('BrandDetail.Filter') }}</v-btn>
+          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!priceFilter">{{ $t('Common.Filter') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="filter in priceFilterList" :key="filter.key" :prepend-icon="(priceFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="priceFilter === filter.key" @click="togglePriceFilter(filter.key)">
@@ -46,7 +46,7 @@
 
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentPriceOrderIcon"  :active="!!priceOrder">{{ $t('BrandDetail.Order') }}</v-btn>
+          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentPriceOrderIcon" :active="!!priceOrder">{{ $t('Common.Order') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="order in priceOrderList" :key="order.key" :prepend-icon="order.icon" :active="priceOrder === order.key" @click="selectPriceOrder(order.key)">
@@ -111,7 +111,7 @@ export default {
       return currentPriceOrder ? currentPriceOrder.icon : ''
     },
     getPricesParams() {
-      let defaultParams = { location_id: this.locationId, order_by: `${this.priceOrder}`, page: this.locationPricePage }
+      let defaultParams = { location_id: this.locationId, order_by: this.priceOrder, page: this.locationPricePage }
       if (this.priceFilter === 'show_last_month') {
         let oneMonthAgo = new Date()
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
@@ -171,6 +171,19 @@ export default {
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
         this.initLocationPrices()
       }
+      let date = new Date().toISOString();
+
+      console.time('split');
+      for (let i = 0; i < 1000000; i++) {
+        let result = date.split('T')[0];
+      }
+      console.timeEnd('split');
+
+      console.time('substring');
+      for (let i = 0; i < 1000000; i++) {
+        let result = date.substring(0, 10);
+      }
+      console.timeEnd('substring');
     }
   }
 }
