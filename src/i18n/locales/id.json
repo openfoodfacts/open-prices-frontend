@@ -47,9 +47,9 @@
 			"ProofUploaded": "Bukti telah diunggah!",
 			"Title": "Detail harga",
 			"UploadProof": "Unggah bukti",
-			"Picture": "Picture",
+			"Picture": "Gambar",
 			"TakePicture": "Ambil gambar",
-			"Gallery": "Device gallery",
+			"Gallery": "Galeri perangkat",
 			"SelectFromGallery": "Pilih dari galeri perangkat"
 		},
 		"ProductInfo": {
@@ -199,7 +199,7 @@
 	"ProofCard": {
 		"PRICE_TAG": "Label harga",
 		"RECEIPT": "Resi",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "Permintaan GDPR"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Apakah Anda yakin ingin menghapus bukti ini?",
