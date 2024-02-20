@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Încarcă mai mult",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
-		"Filter": "Filtrare",
-		"Order": "Order"
+		"BrandProductTotal": "{count} products"
 	},
 	"Common": {
+		"Filter": "Filtrare",
+		"Order": "Order",
 		"SignInOFFAccount": "Sign in with your {url} account"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filtrare",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Încarcă mai mult",
-		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products"
