@@ -99,7 +99,7 @@
 	},
 	"Common": {
 		"Filter": "Filter",
-		"Order": "Order",
+		"Order": "Reihenfolge",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an"
 	},
 	"Footer": {
