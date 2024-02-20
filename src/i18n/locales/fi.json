@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Lataa enemmän",
 		"TopProducts": "Huipputuotteet",
-		"BrandProductTotal": "{count} tuotteita",
-		"Filter": "Suodata",
-		"Order": "Järjestys"
+		"BrandProductTotal": "{count} tuotteita"
 	},
 	"Common": {
+		"Filter": "Suodata",
+		"Order": "Order",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Tuotetta ei löydy Open Food Factsista... Älä epäröi lisätä sitä :)"
 	},
 	"ProductList": {
-		"Filter": "Suodata",
 		"HideProductsWithPrices": "Piilota tuotteet hinnoilla",
 		"LoadMore": "Lataa enemmän",
-		"Order": "Järjestys",
 		"PriceNumber": "Lisättyjen hintojen määrä",
 		"ScanNumber": "Lisättyjen skannausten määrä",
 		"Title": "Huipputuotteet"
