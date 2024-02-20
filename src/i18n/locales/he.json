@@ -99,7 +99,7 @@
 	},
 	"Common": {
 		"Filter": "סינון",
-		"Order": "Order",
+		"Order": "סדר",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}"
 	},
 	"Footer": {
