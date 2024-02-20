@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "もっと読み込む",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "商品 {count} 個",
-		"Filter": "フィルタ",
-		"Order": "Order"
+		"BrandProductTotal": "商品 {count} 個"
 	},
 	"Common": {
+		"Filter": "フィルタ",
+		"Order": "Order",
 		"SignInOFFAccount": "Google アカウントでログイン"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "フィルタ",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "もっと読み込む",
-		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products"
