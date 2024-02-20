@@ -47,9 +47,9 @@
 			"ProofUploaded": "Nachweis hochgeladen!",
 			"Title": "Preisdetails",
 			"UploadProof": "Laden Sie einen Nachweis hoch",
-			"Picture": "Picture",
+			"Picture": "Bild",
 			"TakePicture": "Foto aufnehmen",
-			"Gallery": "Device gallery",
+			"Gallery": "Gerätegalerie",
 			"SelectFromGallery": "Aus der Galerie des Gerätes auswählen"
 		},
 		"ProductInfo": {
@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Weitere laden",
 		"TopProducts": "Top-Produkte",
-		"BrandProductTotal": "{count} Produkte",
-		"Filter": "Filter",
-		"Order": "Reihenfolge"
+		"BrandProductTotal": "{count} Produkte"
 	},
 	"Common": {
+		"Filter": "Filter",
+		"Order": "Reihenfolge",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Produkt nicht in Open Food Facts gefunden... Zögern Sie nicht, es hinzuzufügen 🙂"
 	},
 	"ProductList": {
-		"Filter": "Filter",
 		"HideProductsWithPrices": "Produkte mit Preisen ausblenden",
 		"LoadMore": "Weitere laden",
-		"Order": "Reihenfolge",
 		"PriceNumber": "Anzahl der hinzugefügten Preise",
 		"ScanNumber": "Anzahl der hinzugefügten Scans",
 		"Title": "Top-Produkte"

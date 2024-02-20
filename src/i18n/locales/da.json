@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Indlæs mere",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
-		"Filter": "Filtrere",
-		"Order": "Order"
+		"BrandProductTotal": "{count} products"
 	},
 	"Common": {
+		"Filter": "Filtrere",
+		"Order": "Order",
 		"SignInOFFAccount": "Log på med din {url} konto"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filtrere",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Indlæs mere",
-		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products"

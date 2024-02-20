@@ -47,10 +47,10 @@
 			"ProofUploaded": "ההוכחה נשלחה!",
 			"Title": "פריטי מחיר",
 			"UploadProof": "העלאת הוכחה",
-			"Picture": "Picture",
+			"Picture": "תמונה",
 			"TakePicture": "צילום תמונה",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery"
+			"Gallery": "גלריית המכשיר",
+			"SelectFromGallery": "בחירה מהגלריה של המכשיר שלך"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "לטעון עוד",
 		"TopProducts": "מוצרים מובילים",
-		"BrandProductTotal": "{count} מוצרים",
-		"Filter": "סינון",
-		"Order": "סדר"
+		"BrandProductTotal": "{count} מוצרים"
 	},
 	"Common": {
+		"Filter": "סינון",
+		"Order": "סדר",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "המוצר לא נמצא ב־Open Food Facts… אפשר להוסיף אותו ללא חשש :)"
 	},
 	"ProductList": {
-		"Filter": "סינון",
 		"HideProductsWithPrices": "הסתרת מוצרים עם מחירים",
 		"LoadMore": "לטעון עוד",
-		"Order": "סדר",
 		"PriceNumber": "מספר המחירים שנוספו",
 		"ScanNumber": "מספר הסריקות שנוספו",
 		"Title": "מוצרים מובילים"

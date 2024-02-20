@@ -47,9 +47,9 @@
 			"ProofUploaded": "Kanıt yüklendi!",
 			"Title": "Fiyat ayrıntıları",
 			"UploadProof": "Bir kanıt yükleyin",
-			"Picture": "Picture",
+			"Picture": "Resim",
 			"TakePicture": "Resim çek",
-			"Gallery": "Device gallery",
+			"Gallery": "Cihaz galerisi",
 			"SelectFromGallery": "Cihaz galerisinden seçin"
 		},
 		"ProductInfo": {
@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Daha fazla yükle",
 		"TopProducts": "En iyi ürünler",
-		"BrandProductTotal": "{count} ürün",
-		"Filter": "Filtrele",
-		"Order": "Sipariş"
+		"BrandProductTotal": "{count} ürün"
 	},
 	"Common": {
+		"Filter": "Filtrele",
+		"Order": "Order",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Open Food Facts'te ürün bulunamadı... Eklemekten çekinmeyin :)"
 	},
 	"ProductList": {
-		"Filter": "Filtrele",
 		"HideProductsWithPrices": "Ürünleri fiyatlarıyla gizle",
 		"LoadMore": "Daha fazla yükle",
-		"Order": "Sipariş",
 		"PriceNumber": "Eklenen fiyat sayısı",
 		"ScanNumber": "Eklenen tarama sayısı",
 		"Title": "En iyi ürünler"
