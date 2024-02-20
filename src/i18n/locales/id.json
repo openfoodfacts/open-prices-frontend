@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Muat lebih banyak",
 		"TopProducts": "Produk teratas",
-		"BrandProductTotal": "{count} produk",
-		"Filter": "Filter",
-		"Order": "Urutan"
+		"BrandProductTotal": "{count} produk"
 	},
 	"Common": {
+		"Filter": "Filter",
+		"Order": "Order",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Produk tidak ditemukan di Open Food Facts... Jangan ragu untuk menambahkannya :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
 		"HideProductsWithPrices": "Sembunyikan produk dengan harga",
 		"LoadMore": "Muat lebih banyak",
-		"Order": "Urutan",
 		"PriceNumber": "Jumlah harga yang ditambahkan",
 		"ScanNumber": "Jumlah pemindaian yang ditambahkan",
 		"Title": "Produk teratas"
