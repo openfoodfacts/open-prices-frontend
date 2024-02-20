@@ -99,7 +99,7 @@
 	},
 	"Common": {
 		"Filter": "Filtr",
-		"Order": "Order",
+		"Order": "Pořadí",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}"
 	},
 	"Footer": {
