@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Załaduj więcej",
 		"TopProducts": "Najlepsze produkty",
-		"BrandProductTotal": "{count} produktów",
-		"Filter": "Filtr",
-		"Order": "Kolejność"
+		"BrandProductTotal": "{count} produktów"
 	},
 	"Common": {
+		"Filter": "Filtr",
+		"Order": "Order",
 		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Produktu nie znaleziono w Open Food Facts... Nie wahaj się go dodać :)"
 	},
 	"ProductList": {
-		"Filter": "Filtr",
 		"HideProductsWithPrices": "Ukryj produkty z cenami",
 		"LoadMore": "Załaduj więcej",
-		"Order": "Kolejność",
 		"PriceNumber": "Liczba dodanych cen",
 		"ScanNumber": "Liczba dodanych skanów",
 		"Title": "Najlepsze produkty"
