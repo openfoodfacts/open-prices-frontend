@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Načíst další",
 		"TopProducts": "Nejlepší produkty",
-		"BrandProductTotal": "{count} produktů",
-		"Filter": "Filtr",
-		"Order": "Pořadí"
+		"BrandProductTotal": "{count} produktů"
 	},
 	"Common": {
+		"Filter": "Filtr",
+		"Order": "Order",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Produkt nebyl nalezen v Open Food Facts... Neváhejte ho přidat :)"
 	},
 	"ProductList": {
-		"Filter": "Filtr",
 		"HideProductsWithPrices": "Skrýt produkty s cenami",
 		"LoadMore": "Načíst další",
-		"Order": "Pořadí",
 		"PriceNumber": "Počet přidaných cen",
 		"ScanNumber": "Počet přidaných skenů",
 		"Title": "Nejlepší produkty"
