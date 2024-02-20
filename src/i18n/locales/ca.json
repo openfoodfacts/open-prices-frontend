@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Carrega mes ",
 		"TopProducts": "Els millors productes",
-		"BrandProductTotal": "{count} products",
-		"Filter": "Filtre",
-		"Order": "Order"
+		"BrandProductTotal": "{count} products"
 	},
 	"Common": {
+		"Filter": "Filtre",
+		"Order": "Order",
 		"SignInOFFAccount": "Sign in with your {url} account"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filtre",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Carrega mes ",
-		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Els millors productes"
