@@ -8,7 +8,7 @@
       <v-divider></v-divider>
 
       <v-card-text v-if="categories.length">
-        <v-chip v-for="category in categories" label class="mr-2 mb-2">
+        <v-chip v-for="category in categories" :key="category" label class="mr-2 mb-2">
           {{ category }}
         </v-chip>
       </v-card-text>

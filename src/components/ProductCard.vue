@@ -14,7 +14,7 @@
               <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
             </span>
             <span v-if="hasProductBrands">
-              <v-chip v-for="brand in getProductBrandsList" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
+              <v-chip v-for="brand in getProductBrandsList" :key="brand" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
                 {{ brand }}
               </v-chip>
             </span>
