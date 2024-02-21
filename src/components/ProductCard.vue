@@ -26,6 +26,9 @@
               <v-chip label size="small" density="comfortable" class="mr-1">
                 {{ $t('ProductCard.CategoryTotal', { count: product ? product.categories_tags.length : 0 }) }}
               </v-chip>
+              <v-chip label size="small" density="comfortable">
+                {{ $t('ProductCard.LabelTotal', { count: product ? product.labels_tags.length : 0 }) }}
+              </v-chip>
             </span>
             <br />
             <span>
