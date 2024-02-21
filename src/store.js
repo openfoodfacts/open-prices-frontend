@@ -1,6 +1,11 @@
 import { defineStore } from 'pinia'
 import utils from './utils.js'
 
+const getDefaultDarkModeValue = () => {
+  const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return prefersDarkMode;
+};
+
 export const useAppStore = defineStore('app', {
   state: () => ({
     user: {
@@ -11,6 +16,7 @@ export const useAppStore = defineStore('app', {
       recent_locations: [],
       language: localStorage.getItem('user-locale') || import.meta.env.VITE_DEFAULT_LOCALE,  // 'en'
       country: import.meta.env.VITE_DEFAULT_COUNTRY,  // 'FR',
+      darkMode: getDefaultDarkModeValue(),
     },
   }),
   getters: {
@@ -31,7 +37,10 @@ export const useAppStore = defineStore('app', {
     },
     getUserCountry: (state) => {
       return state.user.country
-    }
+    },
+    getDarkMode: (state) => {
+      return state.user.darkMode;
+    },
   },
   actions: {
     signIn(username, token) {
@@ -59,6 +68,9 @@ export const useAppStore = defineStore('app', {
     },
     setCountry(country) {
       this.user.country = country
+    },
+    setDarkMode(isDark) {
+      this.user.darkMode = isDark;
     }
   },
   // pinia-plugin-persistedstate

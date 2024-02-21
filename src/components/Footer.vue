@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="bg-grey-lighten-1" style="max-height: 20%">
+  <v-footer class="bg-grey-lighten-1" style="position: static; width: 100%;height: 120px; bottom: 0;">
     <v-row>
       <v-col cols="12" md="6" align="center">
         <i18n-t keypath="Footer.TagLine" tag="span">
@@ -10,9 +10,11 @@
         </i18n-t>
       </v-col>
       <v-col cols="12" md="6" align="center">
-        <v-btn class="mx-2" variant="text" href="https://prices.openfoodfacts.org" target="_blank">{{ $t('Footer.About') }}</v-btn>
+        <v-btn class="mx-2" variant="text" href="https://prices.openfoodfacts.org" target="_blank">{{ $t('Footer.About')
+        }}</v-btn>
         <v-btn class="mx-2" variant="text" to="/stats">{{ $t('Footer.Stats') }}</v-btn>
-        <v-btn class="mx-2" variant="text" href="https://github.com/openfoodfacts/open-prices-frontend" target="_blank">Github</v-btn>
+        <v-btn class="mx-2" variant="text" href="https://github.com/openfoodfacts/open-prices-frontend"
+          target="_blank">Github</v-btn>
       </v-col>
     </v-row>
   </v-footer>
