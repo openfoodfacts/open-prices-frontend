@@ -17,13 +17,14 @@
 </template>
 
 <script>
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
   props: {
     'price': null,
     'productQuantity': null,
-    'productQuantityUnit': 'g',  // 'mL'
+    'productQuantityUnit': constants.PRODUCT_QUANTITY_UNIT_G,
     'hidePriceDate': false
   },
   data() {
@@ -71,7 +72,7 @@ export default {
       }
       if (this.hasProductQuantity) {
         const pricePerUnit = (price / this.productQuantity) * 1000
-        if (this.productQuantityUnit === 'mL') {
+        if (this.productQuantityUnit === constants.PRODUCT_QUANTITY_UNIT_ML) {
           return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
         }
         return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
