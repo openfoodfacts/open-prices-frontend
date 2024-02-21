@@ -173,6 +173,7 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categories",
 		"LatestPrice": "Latest price",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",

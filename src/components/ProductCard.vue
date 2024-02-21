@@ -21,9 +21,15 @@
             <span v-if="hasProductQuantity">
               <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
+            <br />
             <span>
-              <br />
-              <v-chip label size="small" density="comfortable" class="mr-1">{{ product.code }}</v-chip>
+              <v-chip label size="small" density="comfortable" class="mr-1">
+                {{ $t('ProductCard.CategoryTotal', { count: product ? product.categories_tags.length : 0 }) }}
+              </v-chip>
+            </span>
+            <br />
+            <span>
+              <v-chip label size="small" density="comfortable">{{ product.code }}</v-chip>
             </span>
           </p>
         </v-col>
