@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Načítať ďalšie",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} produktov",
-		"Filter": "Filtrovať",
-		"Order": "Order"
+		"BrandProductTotal": "{count} produktov"
 	},
 	"Common": {
+		"Filter": "Filtrovať",
+		"Order": "Order",
 		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filtrovať",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Načítať ďalšie",
-		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products"

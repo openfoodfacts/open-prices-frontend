@@ -47,9 +47,9 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"Picture": "Зображення",
 			"TakePicture": "Сфотографувати",
-			"Gallery": "Device gallery",
+			"Gallery": "Галерея пристрою",
 			"SelectFromGallery": "Виберіть з галереї пристрою"
 		},
 		"ProductInfo": {
@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Завантажити більше",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} продуктів",
-		"Filter": "Фільтр",
-		"Order": "Order"
+		"BrandProductTotal": "{count} продуктів"
 	},
 	"Common": {
+		"Filter": "Фільтр",
+		"Order": "Order",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Фільтр",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Завантажити більше",
-		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products"
@@ -287,7 +285,7 @@
 		"CountryLabel": "Країна",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "Мова",
+		"LanguageLabel": "Мови",
 		"Save": "Зберегти",
 		"Title": "Налаштування",
 		"TranslationCompletion": "Переклад виконано на {completion}%.",

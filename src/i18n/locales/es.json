@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Carga más",
 		"TopProducts": "Productos destacados",
-		"BrandProductTotal": "{count} productos",
-		"Filter": "Filtros",
-		"Order": "Orden"
+		"BrandProductTotal": "{count} productos"
 	},
 	"Common": {
+		"Filter": "Filtros",
+		"Order": "Order",
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "No se ha encontrado el producgto en Open Food Facts... No dudes en agregarlo :)"
 	},
 	"ProductList": {
-		"Filter": "Filtros",
 		"HideProductsWithPrices": "Ocultar productos con precios",
 		"LoadMore": "Carga más",
-		"Order": "Orden",
 		"PriceNumber": "Número de precios añadidos",
 		"ScanNumber": "Número de escaneos añadidos",
 		"Title": "Productos destacados"
@@ -287,7 +285,7 @@
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moneda",
 		"DefaultCurrency": "Moneda predeterminada",
-		"LanguageLabel": "Idioma",
+		"LanguageLabel": "Idiomas",
 		"Save": "Guardar",
 		"Title": "Configuración",
 		"TranslationCompletion": "Translation is {completion}% complete.",

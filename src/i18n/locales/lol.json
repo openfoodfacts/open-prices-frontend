@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "crwdns246604:0crwdne246604:0",
 		"TopProducts": "crwdns246916:0crwdne246916:0",
-		"BrandProductTotal": "crwdns246950:0{count}crwdne246950:0",
-		"Filter": "crwdns246952:0crwdne246952:0",
-		"Order": "crwdns246954:0crwdne246954:0"
+		"BrandProductTotal": "crwdns246950:0{count}crwdne246950:0"
 	},
 	"Common": {
+		"Filter": "crwdns247746:0crwdne247746:0",
+		"Order": "crwdns247748:0crwdne247748:0",
 		"SignInOFFAccount": "crwdns246910:0{url}crwdne246910:0"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "crwdns246678:0crwdne246678:0"
 	},
 	"ProductList": {
-		"Filter": "crwdns246680:0crwdne246680:0",
 		"HideProductsWithPrices": "crwdns246682:0crwdne246682:0",
 		"LoadMore": "crwdns246684:0crwdne246684:0",
-		"Order": "crwdns246686:0crwdne246686:0",
 		"PriceNumber": "crwdns246688:0crwdne246688:0",
 		"ScanNumber": "crwdns246690:0crwdne246690:0",
 		"Title": "crwdns246692:0crwdne246692:0"
@@ -287,7 +285,7 @@
 		"CountryLabel": "crwdns246740:0crwdne246740:0",
 		"CurrencyLabel": "crwdns246742:0crwdne246742:0",
 		"DefaultCurrency": "crwdns246744:0crwdne246744:0",
-		"LanguageLabel": "crwdns247714:0crwdne247714:0",
+		"LanguageLabel": "crwdns247724:0crwdne247724:0",
 		"Save": "crwdns246750:0crwdne246750:0",
 		"Title": "crwdns246752:0crwdne246752:0",
 		"TranslationCompletion": "crwdns246944:0{completion}crwdne246944:0",

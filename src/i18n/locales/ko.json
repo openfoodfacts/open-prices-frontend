@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "더 불러오기",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
-		"Filter": "필터",
-		"Order": "Order"
+		"BrandProductTotal": "{count} products"
 	},
 	"Common": {
+		"Filter": "필터",
+		"Order": "Order",
 		"SignInOFFAccount": "Sign in with your {url} account"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "필터",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "더 불러오기",
-		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products"

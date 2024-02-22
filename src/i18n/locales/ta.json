@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Load more",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} தயாரிப்புகள்",
-		"Filter": "Filter",
-		"Order": "Order"
+		"BrandProductTotal": "{count} தயாரிப்புகள்"
 	},
 	"Common": {
+		"Filter": "Filter",
+		"Order": "Order",
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Load more",
-		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products"
@@ -287,7 +285,7 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "மொழி",
+		"LanguageLabel": "Languages",
 		"Save": "சேமி",
 		"Title": "அமைப்புகள்",
 		"TranslationCompletion": "மொழிபெயர்ப்பு {completion}% முடிந்தது.",

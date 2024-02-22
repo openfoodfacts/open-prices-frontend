@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "載入更多",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
-		"Filter": "过滤器",
-		"Order": "Order"
+		"BrandProductTotal": "{count} products"
 	},
 	"Common": {
+		"Filter": "过滤器",
+		"Order": "Order",
 		"SignInOFFAccount": "Sign in with your {url} account"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "过滤器",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "載入更多",
-		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products"
@@ -287,7 +285,7 @@
 		"CountryLabel": "地區",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "语言",
+		"LanguageLabel": "語言",
 		"Save": "儲存",
 		"Title": "設定",
 		"TranslationCompletion": "Translation is {completion}% complete.",

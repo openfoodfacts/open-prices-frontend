@@ -47,9 +47,9 @@
 			"ProofUploaded": "Bewijs geüpload!",
 			"Title": "Prijsdetails",
 			"UploadProof": "Upload een bewijs",
-			"Picture": "Picture",
+			"Picture": "Afbeelding",
 			"TakePicture": "Neem een foto",
-			"Gallery": "Device gallery",
+			"Gallery": "Apparaatgalerij",
 			"SelectFromGallery": "Uit galerij van apparaat selecteren"
 		},
 		"ProductInfo": {
@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Meer laden",
 		"TopProducts": "Top producten",
-		"BrandProductTotal": "{count} producten",
-		"Filter": "Filter",
-		"Order": "Sorteren"
+		"BrandProductTotal": "{count} producten"
 	},
 	"Common": {
+		"Filter": "Filter",
+		"Order": "Order",
 		"SignInOFFAccount": "Meld u aan met uw {url} account"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
 		"HideProductsWithPrices": "Verberg producten met prijzen",
 		"LoadMore": "Meer laden",
-		"Order": "Sorteren",
 		"PriceNumber": "Aantal prijzen toegevoegd",
 		"ScanNumber": "Aantal scans toegevoegd",
 		"Title": "Top producten"
@@ -287,7 +285,7 @@
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
 		"DefaultCurrency": "Standaardvaluta",
-		"LanguageLabel": "Taal",
+		"LanguageLabel": "Talen",
 		"Save": "Opslaan",
 		"Title": "Instellingen",
 		"TranslationCompletion": "De vertaling is {completion}% voltooid.",

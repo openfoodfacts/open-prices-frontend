@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Load more",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products",
-		"Filter": "Filter",
-		"Order": "Order"
+		"BrandProductTotal": "{count} products"
 	},
 	"Common": {
+		"Filter": "Filter",
+		"Order": "Order",
 		"SignInOFFAccount": "Sign in with your {url} account"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Load more",
-		"Order": "Order",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products"
@@ -287,7 +285,7 @@
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DefaultCurrency": "Default currency",
-		"LanguageLabel": "ভাষা",
+		"LanguageLabel": "Languages",
 		"Save": "সংরক্ষণ করুন",
 		"Title": "সেটিংস",
 		"TranslationCompletion": "Translation is {completion}% complete.",

@@ -47,9 +47,9 @@
 			"ProofUploaded": "Důkaz nahrán!",
 			"Title": "Podrobnosti o ceně",
 			"UploadProof": "Nahrát důkaz",
-			"Picture": "Picture",
+			"Picture": "Obrázek",
 			"TakePicture": "Vyfotit",
-			"Gallery": "Device gallery",
+			"Gallery": "Galerie zařízení",
 			"SelectFromGallery": "Vybrat z galerie zařízení"
 		},
 		"ProductInfo": {
@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Načíst další",
 		"TopProducts": "Nejlepší produkty",
-		"BrandProductTotal": "{count} produktů",
-		"Filter": "Filtr",
-		"Order": "Pořadí"
+		"BrandProductTotal": "{count} produktů"
 	},
 	"Common": {
+		"Filter": "Filtr",
+		"Order": "Order",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Produkt nebyl nalezen v Open Food Facts... Neváhejte ho přidat :)"
 	},
 	"ProductList": {
-		"Filter": "Filtr",
 		"HideProductsWithPrices": "Skrýt produkty s cenami",
 		"LoadMore": "Načíst další",
-		"Order": "Pořadí",
 		"PriceNumber": "Počet přidaných cen",
 		"ScanNumber": "Počet přidaných skenů",
 		"Title": "Nejlepší produkty"
@@ -287,7 +285,7 @@
 		"CountryLabel": "Země",
 		"CurrencyLabel": "Měna",
 		"DefaultCurrency": "Výchozí měna",
-		"LanguageLabel": "Jazyk",
+		"LanguageLabel": "Jazyky",
 		"Save": "Uložit",
 		"Title": "Nastavení",
 		"TranslationCompletion": "Překlad je z {completion}% dokončen.",

@@ -47,9 +47,9 @@
 			"ProofUploaded": "Bukti telah diunggah!",
 			"Title": "Detail harga",
 			"UploadProof": "Unggah bukti",
-			"Picture": "Picture",
+			"Picture": "Gambar",
 			"TakePicture": "Ambil gambar",
-			"Gallery": "Device gallery",
+			"Gallery": "Galeri perangkat",
 			"SelectFromGallery": "Pilih dari galeri perangkat"
 		},
 		"ProductInfo": {
@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Muat lebih banyak",
 		"TopProducts": "Produk teratas",
-		"BrandProductTotal": "{count} produk",
-		"Filter": "Filter",
-		"Order": "Urutan"
+		"BrandProductTotal": "{count} produk"
 	},
 	"Common": {
+		"Filter": "Filter",
+		"Order": "Order",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Produk tidak ditemukan di Open Food Facts... Jangan ragu untuk menambahkannya :)"
 	},
 	"ProductList": {
-		"Filter": "Filter",
 		"HideProductsWithPrices": "Sembunyikan produk dengan harga",
 		"LoadMore": "Muat lebih banyak",
-		"Order": "Urutan",
 		"PriceNumber": "Jumlah harga yang ditambahkan",
 		"ScanNumber": "Jumlah pemindaian yang ditambahkan",
 		"Title": "Produk teratas"
@@ -199,7 +197,7 @@
 	"ProofCard": {
 		"PRICE_TAG": "Label harga",
 		"RECEIPT": "Resi",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "Permintaan GDPR"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Apakah Anda yakin ingin menghapus bukti ini?",

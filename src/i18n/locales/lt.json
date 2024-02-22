@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Įkelti daugiau",
 		"TopProducts": "Populiariausi produktai",
-		"BrandProductTotal": "{count} produktai (-ų)",
-		"Filter": "Filtras",
-		"Order": "Rikiavimas"
+		"BrandProductTotal": "{count} produktai (-ų)"
 	},
 	"Common": {
+		"Filter": "Filtras",
+		"Order": "Order",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Produktas nerastas Open Food Facts... Nedvejokite ir pridėkite :)"
 	},
 	"ProductList": {
-		"Filter": "Filtras",
 		"HideProductsWithPrices": "Slėpti produktus su kainomis",
 		"LoadMore": "Įkelti daugiau",
-		"Order": "Rikiavimas",
 		"PriceNumber": "Pridėtų kainų skaičius",
 		"ScanNumber": "Pridėtų nuskaitymų skaičius",
 		"Title": "Populiariausi produktai"
@@ -287,7 +285,7 @@
 		"CountryLabel": "Šalis",
 		"CurrencyLabel": "Valiuta",
 		"DefaultCurrency": "Nustatyta valiuta",
-		"LanguageLabel": "Kalba",
+		"LanguageLabel": "Kalbos",
 		"Save": "Išsaugoti",
 		"Title": "Nustatymai",
 		"TranslationCompletion": "Užbaigta {completion} % vertimo.",

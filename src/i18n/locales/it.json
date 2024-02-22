@@ -47,9 +47,9 @@
 			"ProofUploaded": "Prova caricata!",
 			"Title": "Dettagli sul prezzo",
 			"UploadProof": "Carica una prova",
-			"Picture": "Picture",
+			"Picture": "Foto",
 			"TakePicture": "Scatta una foto",
-			"Gallery": "Device gallery",
+			"Gallery": "Galleria dispositivo",
 			"SelectFromGallery": "Seleziona dalla galleria del dispositivo"
 		},
 		"ProductInfo": {
@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Scarica altro",
 		"TopProducts": "Prodotti migliori",
-		"BrandProductTotal": "{count} prodotti",
-		"Filter": "Filtra",
-		"Order": "Ordine"
+		"BrandProductTotal": "{count} prodotti"
 	},
 	"Common": {
+		"Filter": "Filtra",
+		"Order": "Order",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Prodotto non trovato in Open Food Facts... Non esitate ad aggiungerlo :)"
 	},
 	"ProductList": {
-		"Filter": "Filtra",
 		"HideProductsWithPrices": "Nascondi i prodotti con i prezzi",
 		"LoadMore": "Scarica altro",
-		"Order": "Ordine",
 		"PriceNumber": "Numero di prezzi aggiunti",
 		"ScanNumber": "Numero di scansioni aggiunte",
 		"Title": "Prodotti migliori"
@@ -287,7 +285,7 @@
 		"CountryLabel": "Paese",
 		"CurrencyLabel": "Moneta",
 		"DefaultCurrency": "Valuta predefinita",
-		"LanguageLabel": "Lingua",
+		"LanguageLabel": "Lingue",
 		"Save": "Salva",
 		"Title": "Impostazioni",
 		"TranslationCompletion": "La traduzione è completa al {completion}%.",

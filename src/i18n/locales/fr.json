@@ -47,9 +47,9 @@
 			"ProofUploaded": "Preuve téléversée !",
 			"Title": "Détails du prix",
 			"UploadProof": "Téléverser une preuve",
-			"Picture": "Picture",
+			"Picture": "Image",
 			"TakePicture": "Prendre une photo",
-			"Gallery": "Device gallery",
+			"Gallery": "Galerie de l'appareil",
 			"SelectFromGallery": "Sélectionner dans votre galerie"
 		},
 		"ProductInfo": {
@@ -95,11 +95,11 @@
 	"BrandDetail": {
 		"LoadMore": "Voir plus",
 		"TopProducts": "Top produits",
-		"BrandProductTotal": "{count} produits",
-		"Filter": "Filtre",
-		"Order": "Ordre"
+		"BrandProductTotal": "{count} produits"
 	},
 	"Common": {
+		"Filter": "Filtre",
+		"Order": "Order",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}"
 	},
 	"Footer": {
@@ -188,10 +188,8 @@
 		"ProductNotFound": "Ce produit n'existe pas sur Open Food Facts... N'hésitez pas à le rajouter :)"
 	},
 	"ProductList": {
-		"Filter": "Filtre",
 		"HideProductsWithPrices": "Cacher les produits qui ont un prix",
 		"LoadMore": "Voir plus",
-		"Order": "Ordre",
 		"PriceNumber": "Nombre de prix ajoutés",
 		"ScanNumber": "Nombre de scans ajoutés",
 		"Title": "Top produits"
