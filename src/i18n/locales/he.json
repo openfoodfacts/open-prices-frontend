@@ -173,12 +173,18 @@
 		"Title": "מחירים עדכניים"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categories",
+		"LabelTotal": "{count} labels",
 		"LatestPrice": "המחיר העדכני",
 		"ProductQuantityGram": "{0} גרם",
 		"ProductQuantityKilogram": "{0} ק״ג",
 		"ProductQuantityMililitre": "{0} מ״ל",
 		"ProductQuantityLitre": "{0} ליטר",
 		"UnknownProduct": "שם המוצר אינו ידוע"
+	},
+	"ProductCategories": {
+		"Title": "קטגוריות",
+		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "הוספת מחיר",
