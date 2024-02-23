@@ -173,12 +173,18 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categories",
+		"LabelTotal": "{count} labels",
 		"LatestPrice": "Остання ціна",
 		"ProductQuantityGram": "{0} г",
 		"ProductQuantityKilogram": "{0} кг",
 		"ProductQuantityMililitre": "{0} мл",
 		"ProductQuantityLitre": "{0} Л",
 		"UnknownProduct": "Невідомий продукт"
+	},
+	"ProductCategories": {
+		"Title": "Категорії",
+		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
