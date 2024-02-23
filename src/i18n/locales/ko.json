@@ -173,12 +173,18 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categories",
+		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "알 수 없는 상품명"
+	},
+	"ProductCategories": {
+		"Title": "카테고리",
+		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
