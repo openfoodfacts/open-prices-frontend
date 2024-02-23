@@ -14,6 +14,7 @@
             v-model="barcodeForm.barcode"
             :label="$t('BarcodeManualInput.Barcode')"
             type="number"
+            inputmode="numeric"
             prepend-inner-icon="mdi-barcode"
             :hint="barcodeForm.barcode.length.toString()"
             persistent-hint
