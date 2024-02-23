@@ -11,6 +11,7 @@
           v-model="productSearchForm.q"
           :label="$t('Search.ProductBarcode')"
           type="number"
+          imputmode="numeric"
           :prepend-inner-icon="formFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
           append-inner-icon="mdi-magnify"
           @click:prepend-inner="showBarcodeScanner"
