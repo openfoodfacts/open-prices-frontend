@@ -173,12 +173,18 @@
 		"Title": "crwdns246666:0crwdne246666:0"
 	},
 	"ProductCard": {
+		"CategoryTotal": "crwdns247750:0{count}crwdne247750:0",
+		"LabelTotal": "crwdns247752:0{count}crwdne247752:0",
 		"LatestPrice": "crwdns246892:0crwdne246892:0",
 		"ProductQuantityGram": "crwdns247496:0{0}crwdne247496:0",
 		"ProductQuantityKilogram": "crwdns247498:0{0}crwdne247498:0",
 		"ProductQuantityMililitre": "crwdns247500:0{0}crwdne247500:0",
 		"ProductQuantityLitre": "crwdns247502:0{0}crwdne247502:0",
 		"UnknownProduct": "crwdns246670:0crwdne246670:0"
+	},
+	"ProductCategories": {
+		"Title": "crwdns247754:0crwdne247754:0",
+		"Empty": "crwdns247756:0crwdne247756:0"
 	},
 	"ProductDetail": {
 		"AddPrice": "crwdns246768:0crwdne246768:0",
