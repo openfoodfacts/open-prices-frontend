@@ -173,12 +173,18 @@
 		"Title": "Naujausios kainos"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categories",
+		"LabelTotal": "{count} labels",
 		"LatestPrice": "Naujausia kaina",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Nežinomas produkto pavadinimas"
+	},
+	"ProductCategories": {
+		"Title": "Kategorijos",
+		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Pridėti kainą",

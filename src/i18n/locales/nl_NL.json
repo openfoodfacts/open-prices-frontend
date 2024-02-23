@@ -99,7 +99,7 @@
 	},
 	"Common": {
 		"Filter": "Filter",
-		"Order": "Order",
+		"Order": "Sorteren",
 		"SignInOFFAccount": "Meld u aan met uw {url} account"
 	},
 	"Footer": {
@@ -173,12 +173,18 @@
 		"Title": "Laatste prijzen"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categorieën",
+		"LabelTotal": "{count} labels",
 		"LatestPrice": "Laatste prijzen",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} l",
 		"UnknownProduct": "Onbekende productnaam"
+	},
+	"ProductCategories": {
+		"Title": "Categorieën",
+		"Empty": "Er zijn nog geen categorieën aan dit product toegevoegd."
 	},
 	"ProductDetail": {
 		"AddPrice": "Voeg een prijs toe",

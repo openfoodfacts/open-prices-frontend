@@ -173,12 +173,18 @@
 		"Title": "Viimeisimmät hinnat"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categories",
+		"LabelTotal": "{count} labels",
 		"LatestPrice": "Viimeisin hinta",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Tuntematon tuotenimi"
+	},
+	"ProductCategories": {
+		"Title": "Tuoteluokat",
+		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Lisää hinta",

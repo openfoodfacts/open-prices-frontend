@@ -173,12 +173,18 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} カテゴリ",
+		"LabelTotal": "{count} ラベル",
 		"LatestPrice": "最新価格",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0}kg",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} / L",
 		"UnknownProduct": "不明な製品名"
+	},
+	"ProductCategories": {
+		"Title": "カテゴリー",
+		"Empty": "この商品にはまだカテゴリが追加されていません。"
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",

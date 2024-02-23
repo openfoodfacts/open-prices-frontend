@@ -99,7 +99,7 @@
 	},
 	"Common": {
 		"Filter": "Filtrele",
-		"Order": "Order",
+		"Order": "Sipariş",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın"
 	},
 	"Footer": {
@@ -173,12 +173,18 @@
 		"Title": "Son fiyatlar"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categories",
+		"LabelTotal": "{count} labels",
 		"LatestPrice": "En son fiyat",
 		"ProductQuantityGram": "{0} gr",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Bilinmeyen ürün adı"
+	},
+	"ProductCategories": {
+		"Title": "Kategoriler",
+		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Fiyat ekleyin",

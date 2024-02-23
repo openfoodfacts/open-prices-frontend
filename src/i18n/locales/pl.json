@@ -173,12 +173,18 @@
 		"Title": "Najnowsze ceny"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categories",
+		"LabelTotal": "{count} labels",
 		"LatestPrice": "Ostatnia cena",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Nieznana nazwa produktu"
+	},
+	"ProductCategories": {
+		"Title": "Kategorie",
+		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Dodaj cenę",
