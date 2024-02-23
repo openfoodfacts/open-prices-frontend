@@ -173,8 +173,8 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
-		"CategoryTotal": "{count} categories",
-		"LabelTotal": "{count} labels",
+		"CategoryTotal": "{count} カテゴリ",
+		"LabelTotal": "{count} ラベル",
 		"LatestPrice": "最新価格",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0}kg",
@@ -184,7 +184,7 @@
 	},
 	"ProductCategories": {
 		"Title": "カテゴリー",
-		"Empty": "No categories have been added to this product yet."
+		"Empty": "この商品にはまだカテゴリが追加されていません。"
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
