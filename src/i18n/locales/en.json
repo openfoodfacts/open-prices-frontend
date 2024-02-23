@@ -184,7 +184,7 @@
 	},
 	"ProductCategories": {
 		"Title": "Categories",
-		"Empty": "This product does not have any categories yet."
+		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
