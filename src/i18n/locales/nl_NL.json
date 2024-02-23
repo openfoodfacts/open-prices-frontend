@@ -173,12 +173,18 @@
 		"Title": "Laatste prijzen"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categories",
+		"LabelTotal": "{count} labels",
 		"LatestPrice": "Laatste prijzen",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} l",
 		"UnknownProduct": "Onbekende productnaam"
+	},
+	"ProductCategories": {
+		"Title": "Categorieën",
+		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Voeg een prijs toe",
