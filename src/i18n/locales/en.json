@@ -182,6 +182,10 @@
 		"ProductQuantityLitre": "{0} L",
 		"UnknownProduct": "Unknown product name"
 	},
+	"ProductCategories": {
+		"Title": "Categories",
+		"Empty": "No categories have been added to this product yet."
+	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
