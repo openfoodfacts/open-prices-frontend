@@ -173,12 +173,18 @@
 		"Title": "Nejnovější ceny"
 	},
 	"ProductCard": {
+		"CategoryTotal": "{count} categories",
+		"LabelTotal": "{count} labels",
 		"LatestPrice": "Nejnovější cena",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} l",
 		"UnknownProduct": "Neznámý název produktu"
+	},
+	"ProductCategories": {
+		"Title": "Kategorie",
+		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Přidat cenu",
