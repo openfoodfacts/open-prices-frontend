@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.44.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.43.0...v1.44.0) (2024-02-24)
+
+
+### Features
+
+* **products:** display categories & labels count ([#367](https://github.com/openfoodfacts/open-prices-frontend/issues/367)) ([648b8f2](https://github.com/openfoodfacts/open-prices-frontend/commit/648b8f269de050d46de13304512f037051670d2b))
+* **products:** display popup with product categories ([#369](https://github.com/openfoodfacts/open-prices-frontend/issues/369)) ([69aa514](https://github.com/openfoodfacts/open-prices-frontend/commit/69aa5141168bd3acb54a70c8ca5ca9f4c28c9028))
+
+
+### Bug Fixes
+
+* fix typo in product quantity for ml. ref [#311](https://github.com/openfoodfacts/open-prices-frontend/issues/311) & [#314](https://github.com/openfoodfacts/open-prices-frontend/issues/314) ([d9ca758](https://github.com/openfoodfacts/open-prices-frontend/commit/d9ca758f135bffdc35c2f176da526c8de8e13a98))
+* force numeric keyboard for barcode & price inputs ([#373](https://github.com/openfoodfacts/open-prices-frontend/issues/373)) ([38c6a10](https://github.com/openfoodfacts/open-prices-frontend/commit/38c6a10e39924d8188bd0d778f330b0de7efeff4))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#362](https://github.com/openfoodfacts/open-prices-frontend/issues/362)) ([d3b515b](https://github.com/openfoodfacts/open-prices-frontend/commit/d3b515be477c43d30afbd68b4a6f6fadb10245ad))
+* **l10n:** New Crowdin translations to review and merge ([#374](https://github.com/openfoodfacts/open-prices-frontend/issues/374)) ([aade212](https://github.com/openfoodfacts/open-prices-frontend/commit/aade2127ffc82b8e7987e48a6e1801f7586b8ec4))
+
 ## [1.43.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.42.0...v1.43.0) (2024-02-20)
 
 
