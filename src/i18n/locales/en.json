@@ -219,6 +219,10 @@
 		"DeleteTitle": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
+	"ProofDetail": {
+		"Prices": "Prices",
+		"LoadMore": "Load more"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Add a price"
