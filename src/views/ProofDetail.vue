@@ -2,23 +2,24 @@
   <v-row>
     <v-col cols="12" sm="6">
       <ProofCard v-if="proof" :proof="proof" :readonly="true"></ProofCard>
+      <p v-if="!loading && !proof" class="text-red">{{ $t('ProofDetail.ProofNotFound') }}</p>
     </v-col>
   </v-row>
 
   <br />
 
-  <h2 class="text-h6 mb-1">
+  <h2 class="text-h6 mb-1" v-if="proof">
     {{ $t('ProofDetail.Prices') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
 
-  <v-row>
+  <v-row v-if="proof">
     <v-col cols="12" sm="6" md="4" v-for="price in proofPriceList" :key="price">
       <PriceCard :price="price" :product="price.product" :hidePriceProof="true" elevation="1" height="100%"></PriceCard>
     </v-col>
   </v-row>
 
-  <v-row v-if="proofPriceList.length < proofPriceTotal" class="mb-2">
+  <v-row v-if="proof && (proofPriceList.length < proofPriceTotal)" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getProofPrices">{{ $t('ProofDetail.LoadMore') }}</v-btn>
     </v-col>
@@ -46,7 +47,6 @@ export default {
   },
   mounted() {
     this.getProof()
-    this.getProofPrices()
   },
   methods: {
     getProof() {
@@ -54,6 +54,7 @@ export default {
         .then((data) => {
           if (data.id) {
             this.proof = data
+            this.getProofPrices()
           }
         })
     },
