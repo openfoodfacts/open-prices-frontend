@@ -50,7 +50,9 @@
 			"Picture": "Picture",
 			"TakePicture": "Take a picture",
 			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Select from device gallery",
+			"ExistingProof": "Existing proof",
+			"SelectExistingProof": "Select an existing proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Category",

@@ -150,6 +150,10 @@
                   <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
                   <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
                 </v-btn>
+                <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showExistingProofs">
+                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.ExistingProof') }}</span>
+                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectExistingProof') }}</span>
+                </v-btn>
                 <v-file-input
                   class="d-none overflow-hidden"
                   ref="proofCamera"
@@ -265,6 +269,12 @@
     @location="setLocationData($event)"
     @close="closeLocationSelector($event)"
   ></LocationSelector>
+  <ExistingProofDialog
+    v-if="existingProofDialog"
+    v-model="existingProofDialog"
+    @proofConfirmed="handleProofConfirmed"
+    @close="existingProofDialog = false"
+  ></ExistingProofDialog>
 </template>
 
 <script>
@@ -290,7 +300,8 @@ export default {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
     'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
-    'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue'))
+    'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue')),
+    'ExistingProofDialog': defineAsyncComponent(() => import('../components/ExistingProofDialog.vue')),
   },
   data() {
     return {
@@ -328,6 +339,7 @@ export default {
       locationSelector: false,
       locationSelectedDisplayName: '',
       // proof data
+      existingProofDialog: false,
       proofImage: null,
       proofImagePreview: null,
       createProofLoading: false,
@@ -405,6 +417,17 @@ export default {
       }
       this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
+    },
+    showExistingProofs() {
+      this.existingProofDialog = true
+    },
+    handleProofConfirmed(selectedProof) {
+      this.addPriceSingleForm.proof_id = selectedProof.id
+      this.proofImagePreview = this.getProofUrl(selectedProof)
+      this.proofSuccessMessage = true
+    },
+    getProofUrl(proof) {
+      return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
     },
     newProof(source) {
       if (source === 'gallery') {
