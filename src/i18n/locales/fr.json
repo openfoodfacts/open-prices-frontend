@@ -99,7 +99,7 @@
 	},
 	"Common": {
 		"Filter": "Filtre",
-		"Order": "Commande",
+		"Order": "Ordre",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}"
 	},
 	"Footer": {
@@ -173,7 +173,7 @@
 		"Title": "Derniers prix ajoutés"
 	},
 	"ProductCard": {
-		"CategoryTotal": "{count} categories",
+		"CategoryTotal": "{count} catégories",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Dernier prix",
 		"ProductQuantityGram": "{0} g",
@@ -184,7 +184,7 @@
 	},
 	"ProductCategories": {
 		"Title": "Catégories",
-		"Empty": "No categories have been added to this product yet."
+		"Empty": "Aucune catégorie n'a encore été ajoutée pour ce produit."
 	},
 	"ProductDetail": {
 		"AddPrice": "Ajouter un prix",
