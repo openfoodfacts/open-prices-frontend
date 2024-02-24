@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <ProofCard v-if="proof" :proof="proof"></ProofCard>
+      <ProofCard v-if="proof" :proof="proof" :readonly="true"></ProofCard>
     </v-col>
   </v-row>
 

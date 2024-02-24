@@ -11,9 +11,9 @@
       <span v-if="proof.type !== 'GDPR_REQUEST'">
         {{ proofType }}
       </span>
-      
+
     </v-chip>
-    <PriceCountChip :count="proof.price_count" :withLabel="true"></PriceCountChip>
+    <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()"></PriceCountChip>
     <RelativeDateTimeChip :dateTime="proof.created"></RelativeDateTimeChip>
     <ProofDeleteChip v-if="!hideProofDelete && userCanDeleteProof" :proof="proof"></ProofDeleteChip>
   </div>
@@ -37,6 +37,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    readonly: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -48,14 +52,25 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    isProofOwner() {
+      return this.username && (this.proof.owner === this.username)
+    },
     userCanDeleteProof() {
       // user must be proof owner
       // and proof must not have any prices
-      return this.username && (this.proof.owner === this.username) && (this.proof.price_count === 0)
+      return this.isProofOwner && (this.proof.price_count === 0)
     },
     proofType() {
       return this.$t(`ProofCard.${this.proof.type}`)
     }
+  },
+  methods: {
+    goToProof() {
+      if (this.readonly || !this.isProofOwner) {
+        return
+      }
+      this.$router.push({ path: `/proofs/${this.proof.id}` })
+    },
   }
 }
 </script>
