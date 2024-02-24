@@ -173,8 +173,8 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
-		"CategoryTotal": "{count} categories",
-		"LabelTotal": "{count} labels",
+		"CategoryTotal": "{count} категорій",
+		"LabelTotal": "{count} міток",
 		"LatestPrice": "Остання ціна",
 		"ProductQuantityGram": "{0} г",
 		"ProductQuantityKilogram": "{0} кг",
@@ -184,7 +184,7 @@
 	},
 	"ProductCategories": {
 		"Title": "Категорії",
-		"Empty": "No categories have been added to this product yet."
+		"Empty": "До цього товару ще не додано жодної категорії."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",

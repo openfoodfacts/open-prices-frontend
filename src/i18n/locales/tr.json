@@ -173,8 +173,8 @@
 		"Title": "Son fiyatlar"
 	},
 	"ProductCard": {
-		"CategoryTotal": "{count} categories",
-		"LabelTotal": "{count} labels",
+		"CategoryTotal": "{count} kategoriler",
+		"LabelTotal": "{count} etiketler",
 		"LatestPrice": "En son fiyat",
 		"ProductQuantityGram": "{0} gr",
 		"ProductQuantityKilogram": "{0} kg",
@@ -184,7 +184,7 @@
 	},
 	"ProductCategories": {
 		"Title": "Kategoriler",
-		"Empty": "No categories have been added to this product yet."
+		"Empty": "Bu ürüne henüz kategori eklenmemiştir."
 	},
 	"ProductDetail": {
 		"AddPrice": "Fiyat ekleyin",

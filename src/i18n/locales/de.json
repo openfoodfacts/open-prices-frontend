@@ -173,8 +173,8 @@
 		"Title": "Aktuelle Preise"
 	},
 	"ProductCard": {
-		"CategoryTotal": "{count} categories",
-		"LabelTotal": "{count} labels",
+		"CategoryTotal": "{count} Kategorien",
+		"LabelTotal": "{count} Etiketten",
 		"LatestPrice": "Neuester Preis",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
@@ -184,7 +184,7 @@
 	},
 	"ProductCategories": {
 		"Title": "Kategorien",
-		"Empty": "No categories have been added to this product yet."
+		"Empty": "Es wurden noch keine Kategorien zu diesem Produkt hinzugefügt."
 	},
 	"ProductDetail": {
 		"AddPrice": "Preis hinzufügen",
