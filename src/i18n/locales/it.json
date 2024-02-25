@@ -173,8 +173,8 @@
 		"Title": "Ultimi prezzi"
 	},
 	"ProductCard": {
-		"CategoryTotal": "{count} categories",
-		"LabelTotal": "{count} labels",
+		"CategoryTotal": "{count} categorie",
+		"LabelTotal": "{count} etichette",
 		"LatestPrice": "Prezzo più recente",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
@@ -184,7 +184,7 @@
 	},
 	"ProductCategories": {
 		"Title": "Categorie",
-		"Empty": "No categories have been added to this product yet."
+		"Empty": "Nessuna categoria è stata ancora aggiunta a questo prodotto."
 	},
 	"ProductDetail": {
 		"AddPrice": "Aggiungi un prezzo",
