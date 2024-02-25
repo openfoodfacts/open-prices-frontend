@@ -7,25 +7,12 @@
       <v-divider></v-divider>
       <v-card-text>
         <v-row>
-          <v-col cols="6" sm="6" md="3" v-for="proof in userProofList" :key="proof">
-            <ProofCard :proof="proof" :reducedProofFooter="true" :isSelectable="true" :isSelected="selectedProof === proof" @proofSelected="selectProof"></ProofCard>
+          <v-col cols="12" sm="6" md="3" v-for="proof in userProofList" :key="proof">
+            <ProofCard :proof="proof" :hideProofDelete="true" :isSelectable="true" :isSelected="selectedProof === proof" @proofSelected="selectProof"></ProofCard>
           </v-col>
         </v-row>
     </v-card-text>
     </v-card>
-    <v-bottom-sheet v-model="showConfirmationPopup">
-      <v-card>
-        <v-card-text class="d-flex align-center">
-          {{ $t('ExistingProofDialog.SelectThis') }}
-          <v-btn class="mb-2 ml-2" size="small" prepend-icon="mdi-check-circle" @click="confirmSelection">
-            <span class="d-sm-inline-flex">{{ $t('Common.Yes') }}</span>
-          </v-btn>
-          <v-btn class="mb-2 ml-2" size="small" prepend-icon="mdi-close-circle-outline" @click="cancelSelection">
-            <span class="d-sm-inline-flex">{{ $t('Common.No') }}</span>
-          </v-btn>
-        </v-card-text>
-      </v-card>
-    </v-bottom-sheet>
   </v-dialog>
 </template>
 
@@ -46,7 +33,6 @@ export default {
       userProofPage: 1,
       loading: false,
       selectedProof: null,
-      showConfirmationPopup: false,
     }
   },
   computed: {
@@ -74,16 +60,8 @@ export default {
     },
     selectProof(proof) {
       this.selectedProof = proof
-      this.showConfirmationPopup = true
-    },
-    confirmSelection() {
-      this.showConfirmationPopup = false
-      this.$emit('proofConfirmed', this.selectedProof);
+      this.$emit('proofConfirmed', this.selectedProof)
       this.close()
-    },
-    cancelSelection() {
-      this.selectedProof = null;
-      this.showConfirmationPopup = false
     },
     close() {
       this.$emit('close')
@@ -91,9 +69,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.d-flex {
-  display: flex;
-}
-</style>

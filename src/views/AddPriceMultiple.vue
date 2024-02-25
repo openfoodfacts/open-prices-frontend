@@ -43,15 +43,13 @@
                 @click:clear="clearProof"
                 :loading="createProofLoading">
               </v-file-input>
-              <p v-if="proofFormFilled && !createProofLoading && !proofSelectedMessage" class="text-green mt-2 mb-2">
-                <i>{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
-              </p>
+              <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2">
+                  <i v-if="!proofSelectedMessage">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
+                  <i v-if="proofSelectedMessage">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
+                </p>
               <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2">
                 <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
               </p>
-              <p v-if="proofFormFilled && proofSelectedMessage" class="text-green mt-2 mb-2">
-                  <i>{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
-                </p>
               <p v-if="proofType === 'RECEIPT'" class="text-warning">
                 <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
               </p>
