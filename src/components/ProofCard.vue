@@ -1,11 +1,11 @@
 <template>
-  <v-card :id="'proof_' + proof.id" :class="{ 'highlighted': isSelected }" @click="selectProof">
+  <v-card :id="'proof_' + proof.id" :class="{ 'full-screen-proof-card': isSelected }" @click="selectProof">
     <v-card-text>
       <v-img :src="getProofUrl(proof)"></v-img>
     </v-card-text>
-    <v-divider></v-divider>
-    <v-card-text v-if="showProofFooter">
-      <ProofFooter :proof="proof"></ProofFooter>
+    <v-divider v-if="!isSelected"></v-divider>
+    <v-card-text v-if="!isSelected">
+      <ProofFooter :proof="proof" :reducedProofFooter="reducedProofFooter"></ProofFooter>
     </v-card-text>
   </v-card>
 </template>
@@ -19,9 +19,9 @@ export default {
   },
   props: {
     'proof': null,
-    showProofFooter: {
+    reducedProofFooter: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     isSelectable: {
       type: Boolean,
@@ -54,5 +54,16 @@ export default {
 <style scoped>
 .highlighted {
   background-color: rgb(0, 255, 64);
+}
+.full-screen-proof-card {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  object-fit: cover;
 }
 </style>

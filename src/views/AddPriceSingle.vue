@@ -173,11 +173,14 @@
                   @click:clear="clearProof"
                   :loading="createProofLoading">
                 </v-file-input>
-                <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2">
+                <p v-if="proofFormFilled && !createProofLoading && !proofSelectedMessage" class="text-green mt-2 mb-2">
                   <i>{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
                 </p>
                 <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2">
                   <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
+                </p>
+                <p v-if="proofFormFilled && proofSelectedMessage" class="text-green mt-2 mb-2">
+                  <i>{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
                 </p>
               </v-col>
               <v-col v-if="proofFormFilled">
@@ -250,6 +253,11 @@
     color="success"
     :timeout="2000"
   >{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</v-snackbar>
+  <v-snackbar
+    v-model="proofSelectedSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</v-snackbar>
 
   <BarcodeScanner
     v-if="barcodeScanner"
@@ -345,6 +353,8 @@ export default {
       createProofLoading: false,
       proofDateSuccessMessage: false,
       proofSuccessMessage: false,
+      proofSelectedSuccessMessage: false,
+      proofSelectedMessage: false,
       categoryPricePerList: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
@@ -424,7 +434,8 @@ export default {
     handleProofConfirmed(selectedProof) {
       this.addPriceSingleForm.proof_id = selectedProof.id
       this.proofImagePreview = this.getProofUrl(selectedProof)
-      this.proofSuccessMessage = true
+      this.proofSelectedSuccessMessage = true
+      this.proofSelectedMessage = true
     },
     getProofUrl(proof) {
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`

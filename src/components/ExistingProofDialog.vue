@@ -2,27 +2,30 @@
   <v-dialog>
     <v-card>
       <v-card-title>
-        {{ $t('UserDashboard.LatestProofs') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('ExistingProofDialog.ChooseLatestProofs') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
       </v-card-title>
       <v-divider></v-divider>
       <v-card-text>
         <v-row>
           <v-col cols="6" sm="6" md="3" v-for="proof in userProofList" :key="proof">
-            <ProofCard :proof="proof" :showProofFooter="false" :isSelectable="true" :isSelected="selectedProof === proof" @proofSelected="selectProof"></ProofCard>
+            <ProofCard :proof="proof" :reducedProofFooter="true" :isSelectable="true" :isSelected="selectedProof === proof" @proofSelected="selectProof"></ProofCard>
           </v-col>
         </v-row>
     </v-card-text>
     </v-card>
-    <v-dialog v-model="showConfirmationPopup">
+    <v-bottom-sheet v-model="showConfirmationPopup">
       <v-card>
-        <v-card-title>Confirmation</v-card-title>
-        <v-card-text>Are you sure you want to select this proof?</v-card-text>
-        <v-card-actions>
-          <v-btn text @click="confirmSelection">Yes</v-btn>
-          <v-btn text @click="cancelSelection">No</v-btn>
-        </v-card-actions>
+        <v-card-text class="d-flex align-center">
+          {{ $t('ExistingProofDialog.SelectThis') }}
+          <v-btn class="mb-2 ml-2" size="small" prepend-icon="mdi-check-circle" @click="confirmSelection">
+            <span class="d-sm-inline-flex">{{ $t('Common.Yes') }}</span>
+          </v-btn>
+          <v-btn class="mb-2 ml-2" size="small" prepend-icon="mdi-close-circle-outline" @click="cancelSelection">
+            <span class="d-sm-inline-flex">{{ $t('Common.No') }}</span>
+          </v-btn>
+        </v-card-text>
       </v-card>
-    </v-dialog>
+    </v-bottom-sheet>
   </v-dialog>
 </template>
 
@@ -90,12 +93,6 @@ export default {
 </script>
 
 <style scoped>
-.d-inline-block {
-  display: inline-block;
-}
-.align-start {
-  align-items: start;
-}
 .d-flex {
   display: flex;
 }

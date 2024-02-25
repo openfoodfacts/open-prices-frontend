@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-wrap ga-1">
-    <v-chip label size="small" density="comfortable">
+    <v-chip v-if="!reducedProofFooter" label size="small" density="comfortable">
       <v-icon start icon="mdi-paperclip"></v-icon>
       <span v-if="proof.type === 'GDPR_REQUEST'">
         <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">
@@ -13,9 +13,9 @@
       </span>
       
     </v-chip>
-    <PriceCountChip :count="proof.price_count" :withLabel="true"></PriceCountChip>
+    <PriceCountChip v-if="!reducedProofFooter" :count="proof.price_count" :withLabel="true"></PriceCountChip>
     <RelativeDateTimeChip :dateTime="proof.created"></RelativeDateTimeChip>
-    <ProofDeleteChip v-if="userCanDeleteProof" :proof="proof"></ProofDeleteChip>
+    <ProofDeleteChip v-if="!reducedProofFooter && userCanDeleteProof" :proof="proof"></ProofDeleteChip>
   </div>
 </template>
 
@@ -33,6 +33,10 @@ export default {
   },
   props: {
     'proof': null,
+    reducedProofFooter: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {

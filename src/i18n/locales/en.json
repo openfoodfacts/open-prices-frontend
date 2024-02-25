@@ -44,6 +44,7 @@
 			"LabelFull": "Full price",
 			"Proof": "Proof",
 			"ProofDateChanged": "Date updated!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
@@ -102,7 +103,13 @@
 	"Common": {
 		"Filter": "Filter",
 		"Order": "Order",
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Sign in with your {url} account",
+		"Yes": "Yes",
+		"No": "No"
+	},
+	"ExistingProofDialog": {
+		"ChooseLatestProofs": "Choose from latest proofs",
+		"SelectThis": "Select this proof?"
 	},
 	"Footer": {
 		"About": "About",
