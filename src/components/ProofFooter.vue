@@ -15,7 +15,7 @@
     </v-chip>
     <PriceCountChip :count="proof.price_count" :withLabel="true"></PriceCountChip>
     <RelativeDateTimeChip :dateTime="proof.created"></RelativeDateTimeChip>
-    <ProofDeleteChip v-if="userCanDeleteProof" :proof="proof"></ProofDeleteChip>
+    <ProofDeleteChip v-if="!hideProofDelete && userCanDeleteProof" :proof="proof"></ProofDeleteChip>
   </div>
 </template>
 
@@ -33,6 +33,10 @@ export default {
   },
   props: {
     'proof': null,
+    hideProofDelete: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {

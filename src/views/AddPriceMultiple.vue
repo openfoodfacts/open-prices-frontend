@@ -20,6 +20,10 @@
             <v-col>
               <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</v-btn>
               <a href="#" @click.prevent="$refs.proofGallery.click()">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</a>
+              <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofs">
+                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
+                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
+                </v-btn>
               <v-file-input
                 class="d-none overflow-hidden"
                 ref="proofCamera"
@@ -40,8 +44,9 @@
                 :loading="createProofLoading">
               </v-file-input>
               <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2">
-                <i>{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
-              </p>
+                  <i v-if="!proofSelectedMessage">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
+                  <i v-if="proofSelectedMessage">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
+                </p>
               <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2">
                 <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
               </p>
@@ -284,6 +289,11 @@
     :timeout="2000"
   >{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</v-snackbar>
   <v-snackbar
+    v-model="proofSelectedSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</v-snackbar>
+  <v-snackbar
     v-model="priceSuccessMessage"
     color="success"
     :timeout="2000"
@@ -307,6 +317,12 @@
     @barcode="setProductCode($event)"
     @close="barcodeManualInput = false"
   ></BarcodeManualInput>
+  <UserRecentProofsDialog
+    v-if="userRecentProofsDialog"
+    v-model="userRecentProofsDialog"
+    @proofConfirmed="handleProofConfirmed"
+    @close="userRecentProofsDialog = false"
+  ></UserRecentProofsDialog>
 </template>
 
 <script>
@@ -331,7 +347,8 @@ export default {
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
-    'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue'))
+    'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
+    'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue'))
   },
   data() {
     return {
@@ -353,6 +370,9 @@ export default {
       createProofLoading: false,
       proofDateSuccessMessage: false,
       proofSuccessMessage: false,
+      userRecentProofsDialog: false,
+      proofSelectedSuccessMessage: false,
+      proofSelectedMessage: false,
       // location data
       locationSelector: false,
       locationSelectedDisplayName: '',
@@ -457,6 +477,18 @@ export default {
     },
     addPriceToUploadedList(price) {
       this.productPriceUploadedList.push(price)
+    },
+    showUserRecentProofs() {
+      this.userRecentProofsDialog = true
+    },
+    handleProofConfirmed(selectedProof) {
+      this.addPriceMultipleForm.proof_id = selectedProof.id
+      this.proofImagePreview = this.getProofUrl(selectedProof)
+      this.proofSelectedSuccessMessage = true
+      this.proofSelectedMessage = true
+    },
+    getProofUrl(proof) {
+      return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
     },
     newProof(source) {
       if (source === 'gallery') {

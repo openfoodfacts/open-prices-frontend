@@ -150,6 +150,10 @@
                   <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
                   <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
                 </v-btn>
+                <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofs">
+                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
+                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
+                </v-btn>
                 <v-file-input
                   class="d-none overflow-hidden"
                   ref="proofCamera"
@@ -170,7 +174,8 @@
                   :loading="createProofLoading">
                 </v-file-input>
                 <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2">
-                  <i>{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
+                  <i v-if="!proofSelectedMessage">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
+                  <i v-if="proofSelectedMessage">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
                 </p>
                 <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2">
                   <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
@@ -246,6 +251,11 @@
     color="success"
     :timeout="2000"
   >{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</v-snackbar>
+  <v-snackbar
+    v-model="proofSelectedSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</v-snackbar>
 
   <BarcodeScanner
     v-if="barcodeScanner"
@@ -263,8 +273,14 @@
     v-if="locationSelector"
     v-model="locationSelector"
     @location="setLocationData($event)"
-    @close="closeLocationSelector($event)"
+    @close="locationSelector = false"
   ></LocationSelector>
+  <UserRecentProofsDialog
+    v-if="userRecentProofsDialog"
+    v-model="userRecentProofsDialog"
+    @proofConfirmed="handleProofConfirmed"
+    @close="userRecentProofsDialog = false"
+  ></UserRecentProofsDialog>
 </template>
 
 <script>
@@ -290,7 +306,8 @@ export default {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
     'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
-    'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue'))
+    'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue')),
+    'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
   },
   data() {
     return {
@@ -328,11 +345,14 @@ export default {
       locationSelector: false,
       locationSelectedDisplayName: '',
       // proof data
+      userRecentProofsDialog: false,
       proofImage: null,
       proofImagePreview: null,
       createProofLoading: false,
       proofDateSuccessMessage: false,
       proofSuccessMessage: false,
+      proofSelectedSuccessMessage: false,
+      proofSelectedMessage: false,
       categoryPricePerList: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
@@ -405,6 +425,18 @@ export default {
       }
       this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
+    },
+    showUserRecentProofs() {
+      this.userRecentProofsDialog = true
+    },
+    handleProofConfirmed(selectedProof) {
+      this.addPriceSingleForm.proof_id = selectedProof.id
+      this.proofImagePreview = this.getProofUrl(selectedProof)
+      this.proofSelectedSuccessMessage = true
+      this.proofSelectedMessage = true
+    },
+    getProofUrl(proof) {
+      return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
     },
     newProof(source) {
       if (source === 'gallery') {
@@ -483,9 +515,6 @@ export default {
     },
     showLocationSelector() {
       this.locationSelector = true
-    },
-    closeLocationSelector(event) {
-      this.locationSelector = false
     },
     getNominatimLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
