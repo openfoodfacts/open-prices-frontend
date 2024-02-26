@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.45.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.44.0...v1.45.0) (2024-02-26)
+
+
+### Features
+
+* **price create form:** allow user to select a recent proof ([#376](https://github.com/openfoodfacts/open-prices-frontend/issues/376)) ([483be18](https://github.com/openfoodfacts/open-prices-frontend/commit/483be1873d68b369d708933a5c289466d43fe328))
+
+
+### Bug Fixes
+
+* **price create form:** turn 'Select from device gallery' link into button ([#381](https://github.com/openfoodfacts/open-prices-frontend/issues/381)) ([8474c1f](https://github.com/openfoodfacts/open-prices-frontend/commit/8474c1fac2980c972e8b546afc45068d81019dd3))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#377](https://github.com/openfoodfacts/open-prices-frontend/issues/377)) ([7674455](https://github.com/openfoodfacts/open-prices-frontend/commit/7674455bb1c634158c54ec259d2ccb2456a75ac5))
+
 ## [1.44.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.43.0...v1.44.0) (2024-02-24)
 
 
