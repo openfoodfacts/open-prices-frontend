@@ -44,7 +44,7 @@
 			"LabelFull": "מחיר מלא",
 			"Proof": "הוכחה",
 			"ProofDateChanged": "התאריך עודכן!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "נבחרה הוכחה!",
 			"ProofUploaded": "ההוכחה נשלחה!",
 			"Title": "פריטי מחיר",
 			"UploadProof": "העלאת הוכחה",
@@ -52,8 +52,8 @@
 			"TakePicture": "צילום תמונה",
 			"Gallery": "גלריית המכשיר",
 			"SelectFromGallery": "בחירה מהגלריה של המכשיר שלך",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "הוכחה עדכנית",
+			"SelectRecentProof": "נא לבחור טענה עדכנית"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
@@ -108,7 +108,7 @@
 		"No": "לא"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "נא לבחור אחת מההוכחות העדכניות שלך"
 	},
 	"Footer": {
 		"About": "על אודות",
