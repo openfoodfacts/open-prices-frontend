@@ -44,13 +44,16 @@
 			"LabelFull": "Visa kaina",
 			"Proof": "Įrodymai",
 			"ProofDateChanged": "Data atnaujinta!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Įrodymai įkelti!",
 			"Title": "Išsami informacija apie kainą",
 			"UploadProof": "Įkelti įrodymus",
 			"Picture": "Picture",
 			"TakePicture": "Fotografuoti",
 			"Gallery": "Device gallery",
-			"SelectFromGallery": "Pasirinkti iš prietaisų galerijos"
+			"SelectFromGallery": "Pasirinkti iš prietaisų galerijos",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorija",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Filtras",
 		"Order": "Order",
-		"SignInOFFAccount": "Prisijungti su savo {url} paskyra"
+		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
+		"Yes": "Taip",
+		"No": "Ne"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "About",
