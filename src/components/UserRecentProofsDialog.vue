@@ -8,7 +8,7 @@
       <v-card-text style="overflow-y:scroll;">
         <v-row>
           <v-col cols="12" sm="6" md="3" v-for="proof in userProofList" :key="proof">
-            <ProofCard :proof="proof" :hideProofDelete="true" :isSelectable="true" @proofSelected="selectProof"></ProofCard>
+            <ProofCard :proof="proof" :hideProofDelete="true" :isSelectable="true" :readonly="true" @proofSelected="selectProof"></ProofCard>
           </v-col>
         </v-row>
       </v-card-text>
