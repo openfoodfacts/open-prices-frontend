@@ -52,8 +52,8 @@
 			"TakePicture": "Take a picture",
 			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery",
-			"ExistingProof": "Existing proof",
-			"SelectExistingProof": "Select an existing proof"
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Category",
@@ -107,9 +107,8 @@
 		"Yes": "Yes",
 		"No": "No"
 	},
-	"ExistingProofDialog": {
-		"ChooseLatestProofs": "Choose from latest proofs",
-		"SelectThis": "Select this proof?"
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "About",

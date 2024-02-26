@@ -20,9 +20,9 @@
             <v-col>
               <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</v-btn>
               <a href="#" @click.prevent="$refs.proofGallery.click()">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</a>
-              <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showExistingProofs">
-                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.ExistingProof') }}</span>
-                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectExistingProof') }}</span>
+              <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofs">
+                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
+                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
                 </v-btn>
               <v-file-input
                 class="d-none overflow-hidden"
@@ -317,12 +317,12 @@
     @barcode="setProductCode($event)"
     @close="barcodeManualInput = false"
   ></BarcodeManualInput>
-  <ExistingProofDialog
-    v-if="existingProofDialog"
-    v-model="existingProofDialog"
+  <UserRecentProofsDialog
+    v-if="userRecentProofsDialog"
+    v-model="userRecentProofsDialog"
     @proofConfirmed="handleProofConfirmed"
-    @close="existingProofDialog = false"
-  ></ExistingProofDialog>
+    @close="userRecentProofsDialog = false"
+  ></UserRecentProofsDialog>
 </template>
 
 <script>
@@ -348,7 +348,7 @@ export default {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
     'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
-    'ExistingProofDialog': defineAsyncComponent(() => import('../components/ExistingProofDialog.vue'))
+    'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue'))
   },
   data() {
     return {
@@ -370,7 +370,7 @@ export default {
       createProofLoading: false,
       proofDateSuccessMessage: false,
       proofSuccessMessage: false,
-      existingProofDialog: false,
+      userRecentProofsDialog: false,
       proofSelectedSuccessMessage: false,
       proofSelectedMessage: false,
       // location data
@@ -478,8 +478,8 @@ export default {
     addPriceToUploadedList(price) {
       this.productPriceUploadedList.push(price)
     },
-    showExistingProofs() {
-      this.existingProofDialog = true
+    showUserRecentProofs() {
+      this.userRecentProofsDialog = true
     },
     handleProofConfirmed(selectedProof) {
       this.addPriceMultipleForm.proof_id = selectedProof.id

@@ -150,9 +150,9 @@
                   <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
                   <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
                 </v-btn>
-                <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showExistingProofs">
-                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.ExistingProof') }}</span>
-                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectExistingProof') }}</span>
+                <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofs">
+                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
+                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
                 </v-btn>
                 <v-file-input
                   class="d-none overflow-hidden"
@@ -273,14 +273,14 @@
     v-if="locationSelector"
     v-model="locationSelector"
     @location="setLocationData($event)"
-    @close="closeLocationSelector($event)"
+    @close="locationSelector = false"
   ></LocationSelector>
-  <ExistingProofDialog
-    v-if="existingProofDialog"
-    v-model="existingProofDialog"
+  <UserRecentProofsDialog
+    v-if="userRecentProofsDialog"
+    v-model="userRecentProofsDialog"
     @proofConfirmed="handleProofConfirmed"
-    @close="existingProofDialog = false"
-  ></ExistingProofDialog>
+    @close="userRecentProofsDialog = false"
+  ></UserRecentProofsDialog>
 </template>
 
 <script>
@@ -307,7 +307,7 @@ export default {
     'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
     'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
     'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue')),
-    'ExistingProofDialog': defineAsyncComponent(() => import('../components/ExistingProofDialog.vue')),
+    'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
   },
   data() {
     return {
@@ -345,7 +345,7 @@ export default {
       locationSelector: false,
       locationSelectedDisplayName: '',
       // proof data
-      existingProofDialog: false,
+      userRecentProofsDialog: false,
       proofImage: null,
       proofImagePreview: null,
       createProofLoading: false,
@@ -426,8 +426,8 @@ export default {
       this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
     },
-    showExistingProofs() {
-      this.existingProofDialog = true
+    showUserRecentProofs() {
+      this.userRecentProofsDialog = true
     },
     handleProofConfirmed(selectedProof) {
       this.addPriceSingleForm.proof_id = selectedProof.id
@@ -515,9 +515,6 @@ export default {
     },
     showLocationSelector() {
       this.locationSelector = true
-    },
-    closeLocationSelector(event) {
-      this.locationSelector = false
     },
     getNominatimLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
