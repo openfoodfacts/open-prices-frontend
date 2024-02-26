@@ -56,6 +56,19 @@
         </v-card>
       </v-col>
     </v-row>
+    <v-row>
+    <v-col cols="12" sm="6">
+        <v-card :title="$t('Change Mode')" prepend-icon="mdi-brightness-4">
+          <v-divider></v-divider>
+          <v-card-text>
+            <v-radio-group v-model="userSettingsForm.darkMode">
+              <v-radio label="Dark Mode" value="dark"></v-radio>
+              <v-radio label="Light Mode" value="light"></v-radio>
+            </v-radio-group>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
 
     <v-row>
       <v-col>
@@ -81,6 +94,7 @@ export default {
         selectedCountry: null, // see initUserSettingsForm
         selectedLanguage: null, // see initUserSettingsForm
         currency: null,  // see initUserSettingsForm
+        darkMode: null,
       },
       currencyList: constants.CURRENCY_LIST,
       languageList: [],
@@ -92,6 +106,18 @@ export default {
     'userSettingsForm.selectedLanguage': async function () {
       if (this.userSettingsForm.selectedLanguage !== null) {
         this.languageTranslationCompletion = await localeManager.calculateTranslationCompletion(this.userSettingsForm.selectedLanguage.code)
+      }
+    },
+    'userSettingsForm.darkMode': function (newDarkMode, oldDarkMode) {
+      if (newDarkMode !== oldDarkMode) {
+        if (newDarkMode === 'dark') {
+          this.appStore.setDarkMode(true);
+        } else if (newDarkMode === 'light') {
+          this.appStore.setDarkMode(false);
+        } else {
+          const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          this.appStore.setDarkMode(systemDarkMode);
+        }
       }
     },
 
@@ -115,6 +141,7 @@ export default {
       this.userSettingsForm.currency = this.appStore.user.last_currency_used
       this.userSettingsForm.selectedLanguage = this.languageList.find(lang => lang.code === localeManager.guessDefaultLocale()) || this.languageList.find(lang => lang.code === 'en')
       this.userSettingsForm.selectedCountry = countryData.find(country => country.code === this.appStore.user.country).code  
+      this.userSettingsForm.darkMode = 'system'
     },
     async updateSettings() {
       await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage.code)
