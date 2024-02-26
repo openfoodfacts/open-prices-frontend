@@ -146,7 +146,7 @@
                   <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
                   <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
                 </v-btn>
-                <v-btn class="mb-2" size="small" prepend-icon="mdi-image-plus" @click.prevent="$refs.proofGallery.click()" :loading="createProofLoading" :disabled="createProofLoading">
+                <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" @click.prevent="$refs.proofGallery.click()" :loading="createProofLoading" :disabled="createProofLoading">
                   <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
                   <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
                 </v-btn>

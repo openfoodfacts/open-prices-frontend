@@ -18,8 +18,14 @@
         <v-card-text>
           <v-row>
             <v-col>
-              <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</v-btn>
-              <a href="#" @click.prevent="$refs.proofGallery.click()">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</a>
+              <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">
+                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
+                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
+                </v-btn>
+              <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" @click.prevent="$refs.proofGallery.click()" :loading="createProofLoading" :disabled="createProofLoading">
+                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
+                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
+                </v-btn>
               <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofs">
                   <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
                   <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
