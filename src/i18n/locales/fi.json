@@ -44,13 +44,16 @@
 			"LabelFull": "Täysi hinta",
 			"Proof": "Todiste",
 			"ProofDateChanged": "Päivämäärä päivitetty!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Todiste lähetetty!",
 			"Title": "Hintatiedot",
 			"UploadProof": "Lähetä todiste",
 			"Picture": "Picture",
 			"TakePicture": "Ota kuva",
 			"Gallery": "Device gallery",
-			"SelectFromGallery": "Valitse galleriastasi"
+			"SelectFromGallery": "Valitse galleriastasi",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Tuoteluokka",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Suodata",
 		"Order": "Order",
-		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi"
+		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
+		"Yes": "Kyllä",
+		"No": "Ei"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "Tietoja",
