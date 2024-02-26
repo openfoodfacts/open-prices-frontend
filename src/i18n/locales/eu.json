@@ -44,13 +44,16 @@
 			"LabelFull": "Prezio osoa",
 			"Proof": "Proof",
 			"ProofDateChanged": "Date updated!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
 			"TakePicture": "Atera argazki bat",
 			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Select from device gallery",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategoria",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Iragazi",
 		"Order": "Order",
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Sign in with your {url} account",
+		"Yes": "Bai",
+		"No": "Ez"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "Honi buruz",
