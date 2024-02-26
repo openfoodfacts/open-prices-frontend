@@ -3,8 +3,8 @@
     <v-card-text>
       <v-img :src="getProofUrl(proof)"></v-img>
     </v-card-text>
-    <v-divider v-if="!isSelected"></v-divider>
-    <v-card-text v-if="!isSelected">
+    <v-divider></v-divider>
+    <v-card-text>
       <ProofFooter :proof="proof" :hideProofDelete="hideProofDelete"></ProofFooter>
     </v-card-text>
   </v-card>
@@ -24,10 +24,6 @@ export default {
       default: false,
     },
     isSelectable: {
-      type: Boolean,
-      default: false,
-    },
-    isSelected: {
       type: Boolean,
       default: false,
     },

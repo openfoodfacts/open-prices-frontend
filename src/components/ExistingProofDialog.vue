@@ -1,14 +1,14 @@
 <template>
-  <v-dialog>
+  <v-dialog max-height="80%" width="80%">
     <v-card>
       <v-card-title>
         {{ $t('ExistingProofDialog.ChooseLatestProofs') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
       </v-card-title>
       <v-divider></v-divider>
-      <v-card-text>
+      <v-card-text style="overflow-y:scroll;">
         <v-row>
           <v-col cols="12" sm="6" md="3" v-for="proof in userProofList" :key="proof">
-            <ProofCard :proof="proof" :hideProofDelete="true" :isSelectable="true" :isSelected="selectedProof === proof" @proofSelected="selectProof"></ProofCard>
+            <ProofCard :proof="proof" :hideProofDelete="true" :isSelectable="true" @proofSelected="selectProof"></ProofCard>
           </v-col>
         </v-row>
     </v-card-text>
