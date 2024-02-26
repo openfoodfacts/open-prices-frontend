@@ -59,6 +59,20 @@ export default {
     .then((response) => response.json())
   },
 
+  // will return only the user's proof
+  getProofById(proofId) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}`
+    return fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${store.user.token}`
+      },
+    })
+    .then((response) => response.json())
+  },
+
   deleteProof(proofId) {
     const store = useAppStore()
     return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}`, {
