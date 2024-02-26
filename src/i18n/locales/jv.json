@@ -44,13 +44,16 @@
 			"LabelFull": "Full price",
 			"Proof": "Proof",
 			"ProofDateChanged": "Date updated!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
 			"TakePicture": "Take a picture",
 			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Select from device gallery",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Filter",
 		"Order": "Order",
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Sign in with your {url} account",
+		"Yes": "Nggih",
+		"No": "Mboten"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "About",
