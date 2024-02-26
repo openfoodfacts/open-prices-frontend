@@ -44,13 +44,16 @@
 			"LabelFull": "Totale prijs",
 			"Proof": "Bewijs",
 			"ProofDateChanged": "Datum bijgewerkt!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Bewijs geüpload!",
 			"Title": "Prijsdetails",
 			"UploadProof": "Upload een bewijs",
 			"Picture": "Afbeelding",
 			"TakePicture": "Maak een foto",
 			"Gallery": "Apparaatgalerij",
-			"SelectFromGallery": "Uit galerij van apparaat selecteren"
+			"SelectFromGallery": "Uit galerij van apparaat selecteren",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categorie",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Filter",
 		"Order": "Sorteren",
-		"SignInOFFAccount": "Meld u aan met uw {url} account"
+		"SignInOFFAccount": "Meld u aan met uw {url} account",
+		"Yes": "Ja",
+		"No": "Nee"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "Over",

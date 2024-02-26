@@ -44,13 +44,16 @@
 			"LabelFull": "正規価格",
 			"Proof": "Proof",
 			"ProofDateChanged": "更新された日付",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"Picture": "画像",
 			"TakePicture": "画像を撮る",
 			"Gallery": "デバイスギャラリー",
-			"SelectFromGallery": "デバイスギャラリーから選択"
+			"SelectFromGallery": "デバイスギャラリーから選択",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "カテゴリー",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "フィルタ",
 		"Order": "注文品",
-		"SignInOFFAccount": "Google アカウントでログイン"
+		"SignInOFFAccount": "Google アカウントでログイン",
+		"Yes": "はい",
+		"No": "いいえ"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "アプリについて",

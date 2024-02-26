@@ -44,13 +44,16 @@
 			"LabelFull": "Full price",
 			"Proof": "Proof",
 			"ProofDateChanged": "Date updated!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
 			"TakePicture": "Tehke foto",
 			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Select from device gallery",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategooria",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Filtreeri",
 		"Order": "Order",
-		"SignInOFFAccount": "Sign in with your {url} account"
+		"SignInOFFAccount": "Sign in with your {url} account",
+		"Yes": "Jah",
+		"No": "Ei"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "Info",

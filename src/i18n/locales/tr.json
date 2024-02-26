@@ -44,13 +44,16 @@
 			"LabelFull": "Tam fiyat",
 			"Proof": "Kanıt",
 			"ProofDateChanged": "Tarih güncellendi!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Kanıt yüklendi!",
 			"Title": "Fiyat ayrıntıları",
 			"UploadProof": "Bir kanıt yükleyin",
 			"Picture": "Resim",
 			"TakePicture": "Resim çek",
 			"Gallery": "Cihaz galerisi",
-			"SelectFromGallery": "Cihaz galerisinden seçin"
+			"SelectFromGallery": "Cihaz galerisinden seçin",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Filtrele",
 		"Order": "Sipariş",
-		"SignInOFFAccount": "{url} hesabınızla oturum açın"
+		"SignInOFFAccount": "{url} hesabınızla oturum açın",
+		"Yes": "Evet",
+		"No": "Hayır"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "Hakkında",

@@ -44,13 +44,16 @@
 			"LabelFull": "Plná cena",
 			"Proof": "Důkaz",
 			"ProofDateChanged": "Datum aktualizováno!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Důkaz nahrán!",
 			"Title": "Podrobnosti o ceně",
 			"UploadProof": "Nahrát důkaz",
 			"Picture": "Obrázek",
 			"TakePicture": "Vyfotit",
 			"Gallery": "Galerie zařízení",
-			"SelectFromGallery": "Vybrat z galerie zařízení"
+			"SelectFromGallery": "Vybrat z galerie zařízení",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Filtr",
 		"Order": "Pořadí",
-		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}"
+		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
+		"Yes": "Ano",
+		"No": "Ne"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "O aplikaci",

@@ -44,13 +44,16 @@
 			"LabelFull": "מחיר מלא",
 			"Proof": "הוכחה",
 			"ProofDateChanged": "התאריך עודכן!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "ההוכחה נשלחה!",
 			"Title": "פריטי מחיר",
 			"UploadProof": "העלאת הוכחה",
 			"Picture": "תמונה",
 			"TakePicture": "צילום תמונה",
 			"Gallery": "גלריית המכשיר",
-			"SelectFromGallery": "בחירה מהגלריה של המכשיר שלך"
+			"SelectFromGallery": "בחירה מהגלריה של המכשיר שלך",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "סינון",
 		"Order": "סדר",
-		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}"
+		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
+		"Yes": "כן",
+		"No": "לא"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "על אודות",
@@ -173,8 +181,8 @@
 		"Title": "מחירים עדכניים"
 	},
 	"ProductCard": {
-		"CategoryTotal": "{count} categories",
-		"LabelTotal": "{count} labels",
+		"CategoryTotal": "{count} קטגוריות",
+		"LabelTotal": "{count} תוויות",
 		"LatestPrice": "המחיר העדכני",
 		"ProductQuantityGram": "{0} גרם",
 		"ProductQuantityKilogram": "{0} ק״ג",
@@ -184,7 +192,7 @@
 	},
 	"ProductCategories": {
 		"Title": "קטגוריות",
-		"Empty": "No categories have been added to this product yet."
+		"Empty": "עדיין לא נוספו קטגוריות למוצר הזה."
 	},
 	"ProductDetail": {
 		"AddPrice": "הוספת מחיר",

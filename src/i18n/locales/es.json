@@ -44,13 +44,16 @@
 			"LabelFull": "Precio original",
 			"Proof": "Comprobante",
 			"ProofDateChanged": "Date updated!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "¡Comprobante subido!",
 			"Title": "Detalles del precio",
 			"UploadProof": "Subir un comprobante",
 			"Picture": "Picture",
 			"TakePicture": "Saca una foto",
 			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Select from device gallery",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoría",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Filtros",
 		"Order": "Order",
-		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}"
+		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
+		"Yes": "Sí",
+		"No": "No"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "Acerca de",

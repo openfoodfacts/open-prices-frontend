@@ -44,13 +44,16 @@
 			"LabelFull": "Harga penuh",
 			"Proof": "Bukti",
 			"ProofDateChanged": "Tanggal telah diperbarui!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Bukti telah diunggah!",
 			"Title": "Detail harga",
 			"UploadProof": "Unggah bukti",
 			"Picture": "Gambar",
 			"TakePicture": "Ambil gambar",
 			"Gallery": "Galeri perangkat",
-			"SelectFromGallery": "Pilih dari galeri perangkat"
+			"SelectFromGallery": "Pilih dari galeri perangkat",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Filter",
 		"Order": "Order",
-		"SignInOFFAccount": "Masuk dengan akun {url} Anda"
+		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
+		"Yes": "Ya",
+		"No": "Tidak"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "Tentang",
