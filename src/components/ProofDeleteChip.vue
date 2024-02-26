@@ -47,7 +47,7 @@
 
 <script>
 import api from '../services/api'
-import { useProofsStore } from '../store/proofs'
+import { useAppStore } from '../store'
 
 export default {
   props: {
@@ -76,8 +76,8 @@ export default {
           // if response.status == 204
           this.loading = false
           this.deleteSuccessMessage = true
-          const proofsStore = useProofsStore()
-          proofsStore.removeProof(this.proof.id)
+          const store = useAppStore()
+          store.removeProof(this.proof.id)
           this.closeDialog()
         })
     },

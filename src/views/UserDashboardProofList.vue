@@ -22,12 +22,12 @@
   </h2>
 
   <v-row>
-    <v-col cols="12" sm="6" md="4" v-for="proof in proofsStore.proofs" :key="proof">
+    <v-col cols="12" sm="6" md="4" v-for="proof in appStore.user.proofs" :key="proof">
       <ProofCard :proof="proof" height="100%"></ProofCard>
     </v-col>
   </v-row>
 
-  <v-row v-if="this.proofsStore.proofs.length < userProofTotal" class="mb-2">
+  <v-row v-if="this.appStore.user.proofs.length < userProofTotal" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getUserProofs">{{ $t('UserDashboard.LoadMore') }}</v-btn>
     </v-col>
@@ -37,7 +37,6 @@
 <script>
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import { useProofsStore } from '../store/proofs'
 import api from '../services/api'
 import ProofCard from '../components/ProofCard.vue'
 
@@ -54,7 +53,6 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    ...mapStores(useProofsStore),
     username() {
       return this.appStore.user.username
     },
@@ -68,8 +66,9 @@ export default {
       this.userProofPage += 1
       return api.getProofs({ owner: this.username, page: this.userProofPage })
         .then((data) => {
-          data.items.forEach(proof => this.proofsStore.addProof(proof))
-          this.userProofTotal = this.proofsStore.proofs.length
+          data.items.forEach(proof => this.appStore.addProof(proof))
+          this.appStore.user.proofs.sort((a, b) => new Date(b.created) - new Date(a.created))
+          this.userProofTotal = this.appStore.user.proofs.length
           this.loading = false
         })
     },
