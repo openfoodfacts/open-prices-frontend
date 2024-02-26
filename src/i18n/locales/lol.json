@@ -44,13 +44,16 @@
 			"LabelFull": "crwdns246774:0crwdne246774:0",
 			"Proof": "crwdns246558:0crwdne246558:0",
 			"ProofDateChanged": "crwdns247504:0crwdne247504:0",
+			"ProofSelected": "crwdns247784:0crwdne247784:0",
 			"ProofUploaded": "crwdns246560:0crwdne246560:0",
 			"Title": "crwdns246566:0crwdne246566:0",
 			"UploadProof": "crwdns246568:0crwdne246568:0",
 			"Picture": "crwdns247716:0crwdne247716:0",
 			"TakePicture": "crwdns246756:0crwdne246756:0",
 			"Gallery": "crwdns247718:0crwdne247718:0",
-			"SelectFromGallery": "crwdns247506:0crwdne247506:0"
+			"SelectFromGallery": "crwdns247506:0crwdne247506:0",
+			"RecentProof": "crwdns247786:0crwdne247786:0",
+			"SelectRecentProof": "crwdns247788:0crwdne247788:0"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "crwdns246570:0crwdne246570:0",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "crwdns247746:0crwdne247746:0",
 		"Order": "crwdns247748:0crwdne247748:0",
-		"SignInOFFAccount": "crwdns246910:0{url}crwdne246910:0"
+		"SignInOFFAccount": "crwdns246910:0{url}crwdne246910:0",
+		"Yes": "crwdns247790:0crwdne247790:0",
+		"No": "crwdns247792:0crwdne247792:0"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "crwdns247794:0crwdne247794:0"
 	},
 	"Footer": {
 		"About": "crwdns246608:0crwdne246608:0",
