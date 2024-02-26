@@ -44,13 +44,16 @@
 			"LabelFull": "מחיר מלא",
 			"Proof": "הוכחה",
 			"ProofDateChanged": "התאריך עודכן!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "ההוכחה נשלחה!",
 			"Title": "פריטי מחיר",
 			"UploadProof": "העלאת הוכחה",
 			"Picture": "תמונה",
 			"TakePicture": "צילום תמונה",
 			"Gallery": "גלריית המכשיר",
-			"SelectFromGallery": "בחירה מהגלריה של המכשיר שלך"
+			"SelectFromGallery": "בחירה מהגלריה של המכשיר שלך",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "קטגוריה",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "סינון",
 		"Order": "סדר",
-		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}"
+		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
+		"Yes": "כן",
+		"No": "לא"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "על אודות",
