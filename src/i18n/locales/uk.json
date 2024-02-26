@@ -44,13 +44,16 @@
 			"LabelFull": "Повна ціна",
 			"Proof": "Доказ",
 			"ProofDateChanged": "Дата оновлення!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"Picture": "Зображення",
 			"TakePicture": "Сфотографувати",
 			"Gallery": "Галерея пристрою",
-			"SelectFromGallery": "Виберіть з галереї пристрою"
+			"SelectFromGallery": "Виберіть з галереї пристрою",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Категорія",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Фільтр",
 		"Order": "Order",
-		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису"
+		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
+		"Yes": "Так",
+		"No": "Ні"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "Про додаток",
