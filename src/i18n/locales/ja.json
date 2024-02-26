@@ -44,7 +44,7 @@
 			"LabelFull": "正規価格",
 			"Proof": "Proof",
 			"ProofDateChanged": "更新された日付",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "証明が選択されました！",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
@@ -52,8 +52,8 @@
 			"TakePicture": "画像を撮る",
 			"Gallery": "デバイスギャラリー",
 			"SelectFromGallery": "デバイスギャラリーから選択",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "最近の証拠",
+			"SelectRecentProof": "最近の証拠を選択してください"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "カテゴリー",
@@ -108,7 +108,7 @@
 		"No": "いいえ"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "最近の証明のいずれかを選択"
 	},
 	"Footer": {
 		"About": "アプリについて",
