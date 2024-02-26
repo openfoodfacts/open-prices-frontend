@@ -44,13 +44,16 @@
 			"LabelFull": "Full price",
 			"Proof": "Proof",
 			"ProofDateChanged": "Date updated!",
+			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
 			"TakePicture": "Tag et billede",
 			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery"
+			"SelectFromGallery": "Select from device gallery",
+			"RecentProof": "Recent proof",
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
@@ -100,7 +103,12 @@
 	"Common": {
 		"Filter": "Filtrere",
 		"Order": "Order",
-		"SignInOFFAccount": "Log på med din {url} konto"
+		"SignInOFFAccount": "Log på med din {url} konto",
+		"Yes": "Ja",
+		"No": "Nej"
+	},
+	"UserRecentProofsDialog": {
+		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "Om",
