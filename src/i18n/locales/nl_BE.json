@@ -219,6 +219,11 @@
 		"DeleteTitle": "Een bewijs verwijderen",
 		"Success": "Bewijs verwijderd!"
 	},
+	"ProofDetail": {
+		"LoadMore": "Meer laden",
+		"Prices": "Prijzen",
+		"ProofNotFound": "Proof not found (or not the owner)"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Voeg een prijs toe"
