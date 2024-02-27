@@ -219,6 +219,11 @@
 		"DeleteTitle": "Menghapus bukti",
 		"Success": "Bukti telah dihapus!"
 	},
+	"ProofDetail": {
+		"LoadMore": "Muat lebih banyak",
+		"Prices": "Harga",
+		"ProofNotFound": "Proof not found (or not the owner)"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Tambahkan harga"
