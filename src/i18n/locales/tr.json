@@ -44,7 +44,7 @@
 			"LabelFull": "Tam fiyat",
 			"Proof": "Kanıt",
 			"ProofDateChanged": "Tarih güncellendi!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Bedel seçildi!",
 			"ProofUploaded": "Kanıt yüklendi!",
 			"Title": "Fiyat ayrıntıları",
 			"UploadProof": "Bir kanıt yükleyin",
@@ -52,8 +52,8 @@
 			"TakePicture": "Resim çek",
 			"Gallery": "Cihaz galerisi",
 			"SelectFromGallery": "Cihaz galerisinden seçin",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "Son bedel",
+			"SelectRecentProof": "Yeni bir bedel seçin"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
@@ -108,7 +108,7 @@
 		"No": "Hayır"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Son bedellerinizden birini seçin"
 	},
 	"Footer": {
 		"About": "Hakkında",
@@ -275,14 +275,14 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Son fiyatlar",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "En son bedeller",
 		"LoadMore": "Daha fazla yükle",
 		"MyPrices": "Fiyatlarım",
-		"MyProofs": "My proofs",
+		"MyProofs": "Bedellerim",
 		"Settings": "Ayarlar",
 		"Title": "Gösterge paneli",
 		"UserPriceTotal": "{count} fiyat",
-		"UserProofTotal": "{count} proofs"
+		"UserProofTotal": "{count} bedel"
 	},
 	"UserDetail": {
 		"LatestPrices": "Son fiyatlar",
