@@ -219,6 +219,11 @@
 		"DeleteTitle": "証拠を削除する",
 		"Success": "証拠は削除されました！"
 	},
+	"ProofDetail": {
+		"LoadMore": "もっと読み込む",
+		"Prices": "Prices",
+		"ProofNotFound": "証明書が見つかりません（または所有者ではありません）"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Add a price"
