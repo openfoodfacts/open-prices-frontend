@@ -219,6 +219,11 @@
 		"DeleteTitle": "Poista todiste",
 		"Success": "Todiste poistettu!"
 	},
+	"ProofDetail": {
+		"LoadMore": "Lataa enemmän",
+		"Prices": "Hinnat",
+		"ProofNotFound": "Proof not found (or not the owner)"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Lisää hinta"
