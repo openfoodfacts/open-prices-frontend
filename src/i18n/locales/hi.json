@@ -2,65 +2,65 @@
 	"AddPriceHome": {
 		"MultipleProductMode": {
 			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Title": "एकाधिक उत्पाद"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "कीमत बनाई गई!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "एक या एकाधिक उत्पाद",
+			"Title": "रसीद"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "साइन इन किया!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "बस एक कीमत का टैग",
+			"Title": "एकल उत्पाद"
 		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
+		"Thanks": "धन्यवाद",
+		"Title": "एक मूल्य जोड़े",
 		"TitleSingle": "Add a single price",
 		"TitleMultiple": "Add multiple prices in bulk"
 	},
 	"AddPriceMultiple": {
 		"Done": "Done",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "नई कीमत जोड़ें",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} कीमत पहले ही अपलोड की जा चुकी है | {priceAlreadyUploadedNumber} कीमतें पहले ही अपलोड की जा चुकी हैं",
 			"Create": "Create",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"NewPrice": "नया मूल्य",
+			"PriceUploaded": "कीमत बनाई गई!",
+			"Upload": "अपलोड"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"Title": "Proof details"
+			"ReceiptWarning": "रसीदों में व्यक्तिगत जानकारी हो सकती है, हम तस्वीर लेने से पहले उन्हें छिपाने (रीडैक्ट, फोल्ड...) की सलाह देते हैं।",
+			"Title": "प्रमाण विवरण"
 		},
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
 		"Create": "Create",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofDateChanged": "Date updated!",
-			"ProofSelected": "Proof selected!",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"Discount": "छूट?",
+			"Label": "कीमत",
+			"LabelDiscounted": "छूट की दर",
+			"LabelFull": "पूरी कीमत",
+			"Proof": "सबूत",
+			"ProofDateChanged": "तारीख अपडेट की गई!",
+			"ProofSelected": "प्रमाण चयनित!",
+			"ProofUploaded": "प्रमाण अपलोड किया गया!",
+			"Title": "मूल्य विवरण",
+			"UploadProof": "एक प्रमाण अपलोड करें",
+			"Picture": "चित्र",
 			"TakePicture": "एक तस्वीर ले लो",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"Gallery": "डिवाइस गैलरी",
+			"SelectFromGallery": "डिवाइस गैलरी से चयन करें",
+			"RecentProof": "ताज़ा सबूत",
+			"SelectRecentProof": "एक हालिया प्रमाण चुनें"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "श्रेणी",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"OriginLabel": "मूल",
+			"ProductBarcode": "उत्पाद बारकोड",
 			"Scan": "स्कैन",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "बारकोड स्कैन करें",
 			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
@@ -88,7 +88,7 @@
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "बारकोड स्कैन करें"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "बारकोड",
@@ -121,7 +121,7 @@
 		"Sign-out": "Sign out"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "एक मूल्य जोड़े",
 		"LatestPrices": "Latest prices",
 		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Settings updated!",
@@ -163,8 +163,8 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
-		"FullPrice": "Full price",
+		"Proof": "सबूत",
+		"FullPrice": "पूरी कीमत",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceCountChip": {
@@ -195,7 +195,7 @@
 		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "एक मूल्य जोड़े",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "अधिक लोड करें",
@@ -210,7 +210,7 @@
 	},
 	"ProofCard": {
 		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"RECEIPT": "रसीद",
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDeleteChip": {
@@ -221,7 +221,7 @@
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "एक मूल्य जोड़े"
 		},
 		"Home": {
 			"Title": "मुख्य पृष्ठ"
@@ -246,7 +246,7 @@
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "उत्पाद बारकोड",
 		"Title": "ढूंढें"
 	},
 	"ShareButton": {
