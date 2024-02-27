@@ -222,7 +222,7 @@
 	"ProofDetail": {
 		"LoadMore": "Завантажити більше",
 		"Prices": "Prices",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Доказ не знайдено (або не власник)"
 	},
 	"Router": {
 		"AddPrice": {
