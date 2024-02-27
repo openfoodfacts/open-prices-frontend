@@ -97,12 +97,6 @@ export default {
     'userSettingsForm.selectedCountry': function (newValue, oldValue) {
       if (newValue !== oldValue) {
         const selectedCountry = this.countryList.find(country => country.code === newValue)
-        // Update the currency list to the first currency of the selected country if it exists or last currency used otherwise
-        if (selectedCountry && selectedCountry.currency && selectedCountry.currency.length > 0) {
-          this.userSettingsForm.currency = selectedCountry.currency[0]
-        } else {
-          this.userSettingsForm.currency = this.appStore.user.last_currency_used
-        }
         // Update the language list to show the previously selected language first then the selected country languages and the rest of the languages
         let newLanguageList = this.languageList.slice()
         if (selectedCountry) {
