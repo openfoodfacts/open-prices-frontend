@@ -219,6 +219,11 @@
 		"DeleteTitle": "מחיקת הוכחה",
 		"Success": "ההוכחה נמחקה!"
 	},
+	"ProofDetail": {
+		"LoadMore": "לטעון עוד",
+		"Prices": "מחירים",
+		"ProofNotFound": "Proof not found (or not the owner)"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "הוספת מחיר"
