@@ -47,6 +47,7 @@
 
 <script>
 import api from '../services/api'
+import { useAppStore } from '../store'
 
 export default {
   props: {
@@ -75,13 +76,10 @@ export default {
           // if response.status == 204
           this.loading = false
           this.deleteSuccessMessage = true
-          this.removeProofCard()
+          const store = useAppStore()
+          store.removeProof(this.proof.id)
           this.closeDialog()
         })
-    },
-    removeProofCard() {
-      const proofCardCol = document.getElementById(`proof_${this.proof.id}`)
-      proofCardCol.remove()
     },
     openDialog() {
       this.dialog = true

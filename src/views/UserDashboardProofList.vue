@@ -6,7 +6,7 @@
   <v-row>
     <v-col>
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-multiple-outline">
-        {{ $t('UserDashboard.UserProofTotal', { count: userProofTotal }) }}
+        {{ $t('UserDashboard.UserProofTotal', { count: this.appStore.getUserProofTotal }) }}
       </v-chip>
       <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
         {{ $t('UserDashboard.Title') }}
@@ -22,12 +22,12 @@
   </h2>
 
   <v-row>
-    <v-col cols="12" sm="6" md="4" v-for="proof in userProofList" :key="proof">
+    <v-col cols="12" sm="6" md="4" v-for="proof in appStore.user.proofs" :key="proof">
       <ProofCard :proof="proof" height="100%"></ProofCard>
     </v-col>
   </v-row>
 
-  <v-row v-if="userProofList.length < userProofTotal" class="mb-2">
+  <v-row v-if="this.appStore.user.proofs.length < this.appStore.getUserProofTotal" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getUserProofs">{{ $t('UserDashboard.LoadMore') }}</v-btn>
     </v-col>
@@ -46,8 +46,6 @@ export default {
   },
   data() {
     return {
-      userProofList: [],
-      userProofTotal: null,
       userProofPage: 0,
       loading: false,
     }
@@ -67,8 +65,9 @@ export default {
       this.userProofPage += 1
       return api.getProofs({ owner: this.username, page: this.userProofPage })
         .then((data) => {
-          this.userProofList.push(...data.items)
-          this.userProofTotal = data.total
+          data.items.forEach(proof => this.appStore.addProof(proof))
+          this.appStore.user.proofs.sort((a, b) => new Date(b.created) - new Date(a.created))
+          this.appStore.setProofTotal(data.total)
           this.loading = false
         })
     },
