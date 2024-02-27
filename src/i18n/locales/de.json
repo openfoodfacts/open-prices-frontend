@@ -219,6 +219,11 @@
 		"DeleteTitle": "Einen Nachweis löschen",
 		"Success": "Nachweis gelöscht!"
 	},
+	"ProofDetail": {
+		"LoadMore": "Weitere laden",
+		"Prices": "Preise",
+		"ProofNotFound": "Proof not found (or not the owner)"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Preis hinzufügen"
