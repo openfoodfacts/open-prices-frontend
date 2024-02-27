@@ -80,6 +80,9 @@ export default {
   mounted() {
   },
   computed: {
+    hasProductSource() {
+      return !!this.product.source
+    },
     hasProductBrands() {
       return !!this.product.brands
     },
@@ -94,7 +97,7 @@ export default {
   },
   methods: {
     getProductTitle() {
-      return this.product.product_name || this.$t('ProductCard.UnknownProduct')
+      return this.hasProductSource ? (this.product.product_name || this.$t('ProductCard.UnknownProduct')) : this.product.code
     },
     showProductCategoriesDialog() {
       this.productCategoriesDialog = true
