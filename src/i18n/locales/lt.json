@@ -219,6 +219,11 @@
 		"DeleteTitle": "Trinti įrodymą",
 		"Success": "Įrodymas ištrintas!"
 	},
+	"ProofDetail": {
+		"LoadMore": "Įkelti daugiau",
+		"Prices": "Kainos",
+		"ProofNotFound": "Proof not found (or not the owner)"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Pridėti kainą"
