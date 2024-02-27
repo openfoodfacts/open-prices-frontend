@@ -219,6 +219,11 @@
 		"DeleteTitle": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
+	"ProofDetail": {
+		"LoadMore": "अधिक लोड करें",
+		"Prices": "Prices",
+		"ProofNotFound": "Proof not found (or not the owner)"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "एक मूल्य जोड़े"
