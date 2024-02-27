@@ -20,7 +20,10 @@ export default {
   },
   methods: {
     getOFFUrl() {
-      return `${this.OFF_URL}/${this.type}/${this.value}`
+      if (this.type && this.value) {
+        return `${this.OFF_URL}/${this.type}/${this.value}`
+      }
+      return this.OFF_URL
     },
   }  
 }
