@@ -68,7 +68,6 @@
 <script>
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import constants from '../constants'
 import localeManager from '../i18n/localeManager.js'
 import languageData from '../i18n/data/languages.json'
 import countryData from '../i18n/data/countries.json'
@@ -82,8 +81,9 @@ export default {
         selectedLanguage: null, // see initUserSettingsForm
         currency: null,  // see initUserSettingsForm
       },
-      currencyList: constants.CURRENCY_LIST,
+      currencyList: [],
       languageList: [],
+      languageListCode: [],
       languageTranslationCompletion: null,
       countryList: countryData, // can be used to further filter the country list if needed
     }
@@ -94,7 +94,28 @@ export default {
         this.languageTranslationCompletion = await localeManager.calculateTranslationCompletion(this.userSettingsForm.selectedLanguage.code)
       }
     },
-
+    'userSettingsForm.selectedCountry': function (newValue, oldValue) {
+      if (newValue !== oldValue) {
+        const selectedCountry = this.countryList.find(country => country.code === newValue)
+        // Update the language list to show the previously selected language first then the selected country languages and the rest of the languages
+        let newLanguageList = this.languageList.slice()
+        if (selectedCountry) {
+          // get the languages of the selected country minus the selected language (if it exists in the country languages list)
+          const countryLanguagesList = selectedCountry.languages.map(code => {
+            const language = languageData.find(lang => lang.code === code || lang.code === `${code}_${selectedCountry.code}`)
+            return language ? language : null
+          }).filter(language => language !== null && language.code !== this.userSettingsForm.selectedLanguage.code)
+          // Update the language list to show the current selected language first then the selected country languages and the rest of the languages
+          newLanguageList = [
+            ...[this.userSettingsForm.selectedLanguage],
+            ...countryLanguagesList,
+            ...newLanguageList.filter(language => !selectedCountry.languages.includes(language.code) && language.code !== this.userSettingsForm.selectedLanguage.code &&
+              !countryLanguagesList.includes(language))
+          ].filter(Boolean); // Remove any null or undefined values 
+          this.languageList = newLanguageList
+        }
+      }
+    }
   },
   computed: {
     ...mapStores(useAppStore),
@@ -103,11 +124,15 @@ export default {
     },
   },
   async mounted() {
-    const languageListCode = await localeManager.getLocales()
-    this.languageList = languageListCode.map(code => {
+    this.languageListCode = await localeManager.getLocales()
+    this.languageList = this.languageListCode.map(code => {
         const language = languageData.find(lang => lang.code === code)
         return language ? language : null
     }).filter(language => language !== null)
+    this.currencyList = [...new Set(this.countryList
+      .map(country => country.currency)
+      .flat()
+      .filter(currency => currency !== null && currency.length !== 0))]
     this.initUserSettingsForm()
   },
   methods: {
