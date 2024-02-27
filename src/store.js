@@ -12,6 +12,7 @@ export const useAppStore = defineStore('app', {
       language: localStorage.getItem('user-locale') || import.meta.env.VITE_DEFAULT_LOCALE,  // 'en'
       country: import.meta.env.VITE_DEFAULT_COUNTRY,  // 'FR',
       proofs: [],
+      proofTotal: null,
     },
   }),
   getters: {
@@ -32,6 +33,9 @@ export const useAppStore = defineStore('app', {
     },
     getUserCountry: (state) => {
       return state.user.country
+    },
+    getUserProofTotal: (state) => {
+      return state.user.proofTotal
     }
   },
   actions: {
@@ -61,6 +65,9 @@ export const useAppStore = defineStore('app', {
     setCountry(country) {
       this.user.country = country
     },
+    setProofTotal(proofTotal) {
+      this.user.proofTotal = proofTotal
+    },
     addProof(proof) {
       if (!this.user.proofs.some(existingProof => existingProof.id === proof.id)) {
         this.user.proofs.push(proof)
@@ -68,6 +75,7 @@ export const useAppStore = defineStore('app', {
     },
     removeProof(proofId) {
       this.user.proofs = this.user.proofs.filter(proof => proof.id !== proofId)
+      this.user.proofTotal -= 1
     }
   },
   // pinia-plugin-persistedstate

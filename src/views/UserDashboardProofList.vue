@@ -6,7 +6,7 @@
   <v-row>
     <v-col>
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-multiple-outline">
-        {{ $t('UserDashboard.UserProofTotal', { count: userProofTotal }) }}
+        {{ $t('UserDashboard.UserProofTotal', { count: this.appStore.getUserProofTotal }) }}
       </v-chip>
       <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
         {{ $t('UserDashboard.Title') }}
@@ -27,7 +27,7 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="this.appStore.user.proofs.length < userProofTotal" class="mb-2">
+  <v-row v-if="this.appStore.user.proofs.length < this.appStore.getUserProofTotal" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getUserProofs">{{ $t('UserDashboard.LoadMore') }}</v-btn>
     </v-col>
@@ -46,7 +46,6 @@ export default {
   },
   data() {
     return {
-      userProofTotal: null,
       userProofPage: 0,
       loading: false,
     }
@@ -68,7 +67,7 @@ export default {
         .then((data) => {
           data.items.forEach(proof => this.appStore.addProof(proof))
           this.appStore.user.proofs.sort((a, b) => new Date(b.created) - new Date(a.created))
-          this.userProofTotal = this.appStore.user.proofs.length
+          this.appStore.setProofTotal(data.total)
           this.loading = false
         })
     },
