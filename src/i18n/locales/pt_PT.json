@@ -219,6 +219,11 @@
 		"DeleteTitle": "Eliminar um comprovativo",
 		"Success": "Comprovativo eliminado!"
 	},
+	"ProofDetail": {
+		"LoadMore": "Carregar mais",
+		"Prices": "Preços",
+		"ProofNotFound": "Proof not found (or not the owner)"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Adicionar um preço"
