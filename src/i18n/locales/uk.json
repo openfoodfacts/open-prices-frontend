@@ -44,7 +44,7 @@
 			"LabelFull": "Повна ціна",
 			"Proof": "Доказ",
 			"ProofDateChanged": "Дата оновлення!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Доказ вибрано!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
@@ -52,7 +52,7 @@
 			"TakePicture": "Сфотографувати",
 			"Gallery": "Галерея пристрою",
 			"SelectFromGallery": "Виберіть з галереї пристрою",
-			"RecentProof": "Recent proof",
+			"RecentProof": "Недавні докази",
 			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
@@ -218,6 +218,11 @@
 		"Delete": "Видалити",
 		"DeleteTitle": "Видалити підтвердження",
 		"Success": "Доказ видалено!"
+	},
+	"ProofDetail": {
+		"LoadMore": "Завантажити більше",
+		"Prices": "Prices",
+		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"Router": {
 		"AddPrice": {
