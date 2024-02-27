@@ -219,6 +219,11 @@
 		"DeleteTitle": "crwdns247488:0crwdne247488:0",
 		"Success": "crwdns247490:0crwdne247490:0"
 	},
+	"ProofDetail": {
+		"LoadMore": "crwdns247796:0crwdne247796:0",
+		"Prices": "crwdns247798:0crwdne247798:0",
+		"ProofNotFound": "crwdns247800:0crwdne247800:0"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "crwdns246694:0crwdne246694:0"
