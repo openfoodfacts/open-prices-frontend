@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build-staging": "vite build  --base=/app/ --mode preprod",
-    "build-prod": "vite build --base=/app/ --mode prod",
+    "build-staging": "vite build  --base=/ --mode preprod",
+    "build-prod": "vite build --base=/ --mode prod",
     "preview": "vite preview"
   },
   "dependencies": {
