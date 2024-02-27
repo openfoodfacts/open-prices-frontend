@@ -35,7 +35,7 @@
         </v-col>
       </v-row>
 
-      <PriceFooter v-if="price && !hidePriceFooter" class="mt-2" :price="price" :hidePriceLocation="hidePriceLocation" :readonly="readonly"></PriceFooter>
+      <PriceFooter v-if="price && !hidePriceFooter" class="mt-2" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly"></PriceFooter>
     </v-container>
   </v-card>
 </template>
@@ -61,6 +61,7 @@ export default {
     'hidePriceDate': false,
     'hidePriceFooter': false,
     'hidePriceLocation': false,
+    'hidePriceProof': false,
     'readonly': false
   },
   data() {

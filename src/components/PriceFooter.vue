@@ -13,7 +13,7 @@
 
     <RelativeDateTimeChip :dateTime="price.created"></RelativeDateTimeChip>
 
-    <PriceProof v-if="price.proof && price.proof.is_public" :proof="price.proof"></PriceProof>
+    <PriceProof v-if="price.proof && price.proof.is_public && !hidePriceProof" :proof="price.proof"></PriceProof>
 
     <PriceDeleteChip v-if="userIsPriceOwner" :price="price"></PriceDeleteChip>
   </div>
@@ -34,6 +34,7 @@ export default {
   props: {
     'price': null,
     'hidePriceLocation': false,
+    'hidePriceProof': false,
     'readonly': false
   },
   data() {

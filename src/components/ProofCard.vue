@@ -5,7 +5,7 @@
     </v-card-text>
     <v-divider></v-divider>
     <v-card-text>
-      <ProofFooter :proof="proof" :hideProofDelete="hideProofDelete"></ProofFooter>
+      <ProofFooter :proof="proof" :hideProofDelete="hideProofDelete" :readonly="readonly"></ProofFooter>
     </v-card-text>
   </v-card>
 </template>
@@ -24,6 +24,10 @@ export default {
       default: false,
     },
     isSelectable: {
+      type: Boolean,
+      default: false,
+    },
+    readonly: {
       type: Boolean,
       default: false,
     },
