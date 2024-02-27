@@ -219,6 +219,11 @@
 		"DeleteTitle": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
+	"ProofDetail": {
+		"LoadMore": "Carga más",
+		"Prices": "Precios",
+		"ProofNotFound": "Proof not found (or not the owner)"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Añadir un precio"
