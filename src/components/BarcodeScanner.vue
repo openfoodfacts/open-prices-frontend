@@ -60,7 +60,10 @@ export default {
       // console.warn(`Code scan error = ${error}`)
     },
     close() {
-      this.scanner.stop()
+      // https://scanapp.org/html5-qrcode-docs/docs/apis/enums/Html5QrcodeScannerState
+      if (this.scanner.getState() > 1) {
+        this.scanner.stop()
+      }
       this.$emit('close')
     },
   }
