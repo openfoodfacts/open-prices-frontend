@@ -9,13 +9,13 @@
     <v-icon icon="mdi-image"></v-icon>
   </v-chip>
 
-  <v-dialog v-model="dialog" max-height="80%" width="80%">
+  <v-dialog scrollable v-model="dialog" max-height="80%" width="80%">
     <v-card>
       <v-card-title>
         {{ $t('PriceCard.Proof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog"></v-btn>
       </v-card-title>
       <v-divider></v-divider>
-      <v-card-text style="overflow-y:scroll;">
+      <v-card-text>
         <v-img :src="proofUrl"></v-img>
       </v-card-text>
       <v-divider></v-divider>
