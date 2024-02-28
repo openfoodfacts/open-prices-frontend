@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} продуктів"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Фільтр",
 		"Order": "Order",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
