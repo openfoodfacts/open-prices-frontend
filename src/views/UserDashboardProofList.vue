@@ -23,7 +23,7 @@
 
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="proof in appStore.user.proofs" :key="proof">
-      <ProofCard :proof="proof" height="100%"></ProofCard>
+      <ProofCard :proof="proof" :hideProofHeader="true" height="100%"></ProofCard>
     </v-col>
   </v-row>
 
