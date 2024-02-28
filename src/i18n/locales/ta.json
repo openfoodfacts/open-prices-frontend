@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} தயாரிப்புகள்"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Filter",
 		"Order": "Order",
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
