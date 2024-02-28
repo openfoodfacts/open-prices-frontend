@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} productos"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Filtros",
 		"Order": "Order",
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
