@@ -223,7 +223,7 @@
 	"ProofDetail": {
 		"LoadMore": "לטעון עוד",
 		"Prices": "מחירים",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "לא נמצאה הוכחה (או שהבעלות לא אצלך)"
 	},
 	"Router": {
 		"AddPrice": {
