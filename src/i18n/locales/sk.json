@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} produktov"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Filtrovať",
 		"Order": "Order",
 		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}",
@@ -218,6 +219,11 @@
 		"Delete": "Vymazať",
 		"DeleteTitle": "Delete a proof",
 		"Success": "Proof deleted!"
+	},
+	"ProofDetail": {
+		"LoadMore": "Načítať ďalšie",
+		"Prices": "Prices",
+		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"Router": {
 		"AddPrice": {

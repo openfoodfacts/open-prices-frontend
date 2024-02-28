@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} products"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Филтър",
 		"Order": "Order",
 		"SignInOFFAccount": "Sign in with your {url} account",
@@ -218,6 +219,11 @@
 		"Delete": "Изтрий",
 		"DeleteTitle": "Delete a proof",
 		"Success": "Proof deleted!"
+	},
+	"ProofDetail": {
+		"LoadMore": "Зареди още",
+		"Prices": "Prices",
+		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"Router": {
 		"AddPrice": {

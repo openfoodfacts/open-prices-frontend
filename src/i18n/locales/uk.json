@@ -44,7 +44,7 @@
 			"LabelFull": "Повна ціна",
 			"Proof": "Доказ",
 			"ProofDateChanged": "Дата оновлення!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Доказ вибрано!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
@@ -52,7 +52,7 @@
 			"TakePicture": "Сфотографувати",
 			"Gallery": "Галерея пристрою",
 			"SelectFromGallery": "Виберіть з галереї пристрою",
-			"RecentProof": "Recent proof",
+			"RecentProof": "Недавні докази",
 			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} продуктів"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Фільтр",
 		"Order": "Order",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
@@ -218,6 +219,11 @@
 		"Delete": "Видалити",
 		"DeleteTitle": "Видалити підтвердження",
 		"Success": "Доказ видалено!"
+	},
+	"ProofDetail": {
+		"LoadMore": "Завантажити більше",
+		"Prices": "Prices",
+		"ProofNotFound": "Доказ не знайдено (або не власник)"
 	},
 	"Router": {
 		"AddPrice": {

@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} produktů"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Filtr",
 		"Order": "Pořadí",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
@@ -218,6 +219,11 @@
 		"Delete": "Odstranit",
 		"DeleteTitle": "Odstranit důkaz",
 		"Success": "Důkaz odstraněn!"
+	},
+	"ProofDetail": {
+		"LoadMore": "Načíst další",
+		"Prices": "Ceny",
+		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"Router": {
 		"AddPrice": {

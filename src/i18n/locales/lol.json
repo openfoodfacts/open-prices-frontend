@@ -101,6 +101,7 @@
 		"BrandProductTotal": "crwdns246950:0{count}crwdne246950:0"
 	},
 	"Common": {
+		"AddToOFF": "crwdns247802:0{name}crwdne247802:0",
 		"Filter": "crwdns247746:0crwdne247746:0",
 		"Order": "crwdns247748:0crwdne247748:0",
 		"SignInOFFAccount": "crwdns246910:0{url}crwdne246910:0",
@@ -218,6 +219,11 @@
 		"Delete": "crwdns247486:0crwdne247486:0",
 		"DeleteTitle": "crwdns247488:0crwdne247488:0",
 		"Success": "crwdns247490:0crwdne247490:0"
+	},
+	"ProofDetail": {
+		"LoadMore": "crwdns247796:0crwdne247796:0",
+		"Prices": "crwdns247798:0crwdne247798:0",
+		"ProofNotFound": "crwdns247800:0crwdne247800:0"
 	},
 	"Router": {
 		"AddPrice": {

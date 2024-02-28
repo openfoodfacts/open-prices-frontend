@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} products"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Filtro",
 		"Order": "Order",
 		"SignInOFFAccount": "Sign in with your {url} account",
@@ -218,6 +219,11 @@
 		"Delete": "Delete",
 		"DeleteTitle": "Delete a proof",
 		"Success": "Proof deleted!"
+	},
+	"ProofDetail": {
+		"LoadMore": "Load more",
+		"Prices": "Prices",
+		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"Router": {
 		"AddPrice": {

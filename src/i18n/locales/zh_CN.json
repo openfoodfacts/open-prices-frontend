@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} products"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "过滤器",
 		"Order": "Order",
 		"SignInOFFAccount": "Sign in with your {url} account",
@@ -218,6 +219,11 @@
 		"Delete": "删除",
 		"DeleteTitle": "Delete a proof",
 		"Success": "Proof deleted!"
+	},
+	"ProofDetail": {
+		"LoadMore": "載入更多",
+		"Prices": "Prices",
+		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"Router": {
 		"AddPrice": {

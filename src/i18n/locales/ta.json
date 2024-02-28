@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} தயாரிப்புகள்"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Filter",
 		"Order": "Order",
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
@@ -218,6 +219,11 @@
 		"Delete": "நீக்கு",
 		"DeleteTitle": "Delete a proof",
 		"Success": "Proof deleted!"
+	},
+	"ProofDetail": {
+		"LoadMore": "Load more",
+		"Prices": "Prices",
+		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"Router": {
 		"AddPrice": {

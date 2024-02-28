@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} מוצרים"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "סינון",
 		"Order": "סדר",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
@@ -218,6 +219,11 @@
 		"Delete": "מחיקה",
 		"DeleteTitle": "מחיקת הוכחה",
 		"Success": "ההוכחה נמחקה!"
+	},
+	"ProofDetail": {
+		"LoadMore": "לטעון עוד",
+		"Prices": "מחירים",
+		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"Router": {
 		"AddPrice": {

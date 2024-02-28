@@ -101,6 +101,7 @@
 		"BrandProductTotal": "商品 {count} 個"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "フィルタ",
 		"Order": "注文品",
 		"SignInOFFAccount": "Google アカウントでログイン",
@@ -218,6 +219,11 @@
 		"Delete": "削除",
 		"DeleteTitle": "証拠を削除する",
 		"Success": "証拠は削除されました！"
+	},
+	"ProofDetail": {
+		"LoadMore": "もっと読み込む",
+		"Prices": "Prices",
+		"ProofNotFound": "証明書が見つかりません（または所有者ではありません）"
 	},
 	"Router": {
 		"AddPrice": {

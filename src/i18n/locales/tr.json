@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} ürün"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Filtrele",
 		"Order": "Sipariş",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
@@ -218,6 +219,11 @@
 		"Delete": "Sil",
 		"DeleteTitle": "Kanıtı sil",
 		"Success": "Kanıt silindi!"
+	},
+	"ProofDetail": {
+		"LoadMore": "Daha fazla yükle",
+		"Prices": "Fiyatlar",
+		"ProofNotFound": "Bedel bulunamadı (veya sahibi değil)"
 	},
 	"Router": {
 		"AddPrice": {

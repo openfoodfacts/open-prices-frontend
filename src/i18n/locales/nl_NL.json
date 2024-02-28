@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} producten"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Filter",
 		"Order": "Sorteren",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
@@ -218,6 +219,11 @@
 		"Delete": "Verwijder",
 		"DeleteTitle": "Een bewijs verwijderen",
 		"Success": "Bewijs verwijderd!"
+	},
+	"ProofDetail": {
+		"LoadMore": "Meer laden",
+		"Prices": "Prijzen",
+		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"Router": {
 		"AddPrice": {
