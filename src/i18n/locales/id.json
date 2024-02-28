@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} produk"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Filter",
 		"Order": "Order",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
