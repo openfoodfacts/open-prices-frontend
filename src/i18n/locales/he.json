@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} מוצרים"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "סינון",
 		"Order": "סדר",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
