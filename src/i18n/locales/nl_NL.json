@@ -223,7 +223,7 @@
 	"ProofDetail": {
 		"LoadMore": "Meer laden",
 		"Prices": "Prijzen",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Bewijs niet gevonden (of niet de eigenaar)"
 	},
 	"Router": {
 		"AddPrice": {
