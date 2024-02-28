@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.46.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.46.0...v1.46.1) (2024-02-28)
+
+
+### Bug Fixes
+
+* fix link in OFF button. ref [#389](https://github.com/openfoodfacts/open-prices-frontend/issues/389) ([b19afb2](https://github.com/openfoodfacts/open-prices-frontend/commit/b19afb2bb44d3fc3aaacde297f31024e8da4e073))
+* reduce size of text warning messages ([ad050e4](https://github.com/openfoodfacts/open-prices-frontend/commit/ad050e4dbc937c9f422e3eb49ade5320152a3d7d))
+* use v-card-actions in v-dialogs to allow scroll ([86942a5](https://github.com/openfoodfacts/open-prices-frontend/commit/86942a5407a31f374ec50620980f3682ef6055ba))
+* use v-dialog scrollable props ([e83a9cd](https://github.com/openfoodfacts/open-prices-frontend/commit/e83a9cd153da934746f225360834647067b20801))
+
 ## [1.46.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.45.0...v1.46.0) (2024-02-28)
 
 
