@@ -13,15 +13,15 @@
 
       <v-divider></v-divider>
 
-      <v-card-text>
-        <div class="float-right">
+      <v-card-actions class="justify-end">
+        <div>
           <i18n-t keypath="BarcodeScanner.Htlm5-qrcode.Text" tag="span">
             <template #url>
               <a href="https://github.com/mebjas/html5-qrcode" target="_blank">html5-qrcode</a>
             </template>
           </i18n-t>
         </div>
-      </v-card-text>
+      </v-card-actions>
     </v-card>
   </v-dialog>
 </template>

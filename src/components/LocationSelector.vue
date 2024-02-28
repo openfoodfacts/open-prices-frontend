@@ -1,5 +1,5 @@
 <template>
-  <v-dialog persistent>
+  <v-dialog scrollable persistent>
     <v-card>
       <v-card-title>
         {{ $t('LocationSelector.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
@@ -27,86 +27,87 @@
             <template #newline><br /></template>
           </i18n-t>
         </p>
+
+        <v-sheet v-if="results && Array.isArray(results)">
+          <v-divider></v-divider>
+
+          <h3>
+            <i18n-t keypath="LocationSelector.Result" tag="span">
+              <template v-slot:resultNumber>
+                <small>{{ results.length }}</small>
+              </template>
+            </i18n-t>
+          </h3>
+          <v-row>
+            <v-col cols="12" sm="6">
+              <v-card
+                class="mb-2"
+                width="100%"
+                v-for="location in results"
+                elevation="1"
+                @click="selectLocation(location)">
+                <v-card-text>
+                  <h4>{{ getNominatimLocationTitle(location, true, false, false) }}</h4>
+                  {{ getNominatimLocationTitle(location, false, true, true) }}<br />
+                  <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
+                </v-card-text>
+              </v-card>
+            </v-col>
+            <v-col cols="12" sm="6" style="min-height:200px">
+              <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
+                <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
+                <l-marker v-for="location in results" :lat-lng="[location.lat, location.lon]">
+                  <l-popup>
+                    <h4>{{ getNominatimLocationTitle(location, true, false, false) }}</h4>
+                    {{ getNominatimLocationTitle(location, false, true, true) }}<br />
+                    <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
+                  </l-popup>
+                </l-marker>
+              </l-map>
+            </v-col>
+          </v-row>
+        </v-sheet>
+
+        <v-sheet v-if="results && (typeof results === 'string')">{{ results }}</v-sheet>
+
+        <v-sheet v-if="recentLocations.length">
+          <v-divider class="mt-2 mb-2"></v-divider>
+
+          <h3 class="mb-1">
+            <i18n-t keypath="LocationSelector.RecentLocations" tag="span">
+              <template v-slot:recentLocationNumber>
+                <small>{{ recentLocations.length }}</small>
+              </template>
+            </i18n-t>
+          </h3>
+          <v-chip
+            class="mb-2"
+            closable
+            v-for="location in recentLocations"
+            :key="location.display_name"
+            prepend-icon="mdi-history"
+            close-icon="mdi-delete"
+            @click="selectLocation(location)"
+            @click:close="removeRecentLocation(location)">
+            {{ getNominatimLocationTitle(location, true, true, true) }}
+          </v-chip>
+          <br />
+          <v-btn size="small" @click="clearRecentLocations">
+            {{ $t('LocationSelector.Clear') }} </v-btn>
+        </v-sheet>
       </v-card-text>
 
       <v-divider></v-divider>
 
-      <v-card-text v-if="results && Array.isArray(results)">
-        <h3>
-          <i18n-t keypath="LocationSelector.Result" tag="span">
-            <template v-slot:resultNumber>
-              <small>{{ results.length }}</small>
-            </template>
-          </i18n-t>
-        </h3>
-        <v-row>
-          <v-col cols="12" sm="6">
-            <v-card
-              class="mb-2"
-              width="100%"
-              v-for="location in results"
-              elevation="1"
-              @click="selectLocation(location)">
-              <v-card-text>
-                <h4>{{ getNominatimLocationTitle(location, true, false, false) }}</h4>
-                {{ getNominatimLocationTitle(location, false, true, true) }}<br />
-                <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
-              </v-card-text>
-            </v-card>
-          </v-col>
-          <v-col cols="12" sm="6" style="min-height:200px">
-            <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
-              <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
-              <l-marker v-for="location in results" :lat-lng="[location.lat, location.lon]">
-                <l-popup>
-                  <h4>{{ getNominatimLocationTitle(location, true, false, false) }}</h4>
-                  {{ getNominatimLocationTitle(location, false, true, true) }}<br />
-                  <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
-                </l-popup>
-              </l-marker>
-            </l-map>
-          </v-col>
-        </v-row>
-      </v-card-text>
-      <v-card-text v-if="results && (typeof results === 'string')">{{ results }}</v-card-text>
-
-      <v-divider v-if="results"></v-divider>
-
-      <v-card-text v-if="recentLocations.length">
-        <h3 class="mb-1">
-          <i18n-t keypath="LocationSelector.RecentLocations" tag="span">
-            <template v-slot:recentLocationNumber>
-              <small>{{ recentLocations.length }}</small>
-            </template>
-          </i18n-t>
-        </h3>
-        <v-chip
-          class="mb-2"
-          closable
-          v-for="location in recentLocations"
-          :key="location.display_name"
-          prepend-icon="mdi-history"
-          close-icon="mdi-delete"
-          @click="selectLocation(location)"
-          @click:close="removeRecentLocation(location)">
-          {{ getNominatimLocationTitle(location, true, true, true) }}
-        </v-chip>
-        <br />
-        <v-btn size="small" @click="clearRecentLocations">
-          {{ $t('LocationSelector.Clear') }} </v-btn>
-      </v-card-text>
-
-      <v-divider v-if="recentLocations.length"></v-divider>
-
-      <v-card-text>
-        <div class="float-right">
+      <v-card-actions class="justify-end">
+        <div>
           <i18n-t keypath="LocationSelector.OSM.text" tag="span">
             <template #url>
               <a href="https://nominatim.openstreetmap.org" target="_blank">OpenStreetMap Nominatim</a>
             </template>
           </i18n-t>
         </div>
-      </v-card-text>
+      </v-card-actions>
     </v-card>
   </v-dialog>
 </template>

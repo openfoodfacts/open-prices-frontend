@@ -7,8 +7,8 @@
 
       <v-divider></v-divider>
 
-      <v-form @submit.prevent="onSubmit">
-        <v-card-text>
+      <v-card-text>
+        <v-form @submit.prevent="onSubmit">
           <v-text-field
             ref="barcodeInput"
             v-model="barcodeForm.barcode"
@@ -19,18 +19,14 @@
             :hint="barcodeForm.barcode.length.toString()"
             persistent-hint
           ></v-text-field>
-        </v-card-text>
 
-        <v-divider></v-divider>
-
-        <v-card-text>
           <v-btn
             type="submit"
             class="mt-2"
             :disabled="!formFilled"
           >{{ $t('BarcodeManualInput.Submit') }}</v-btn>
-        </v-card-text>
-      </v-form>
+        </v-form>
+      </v-card-text>
     </v-card>
   </v-dialog>
 </template>
