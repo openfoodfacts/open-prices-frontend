@@ -400,7 +400,13 @@ export default {
   },
   mounted() {
     if (this.$route.query.code) {
-      this.setProductCode(this.$route.query.code)
+      if (this.$route.query.code.startsWith('en')) {
+        this.productMode = 'category'
+        this.addPriceSingleForm.category_tag = this.$route.query.code
+      }
+      else {
+        this.setProductCode(this.$route.query.code)
+      }
     }
     this.initPriceSingleForm()
   },
@@ -413,7 +419,7 @@ export default {
        * init form config (product mode, categories, origins, last locations)
        * init form
        */
-      this.productMode = this.addPriceSingleForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used
+      this.productMode = this.productMode ? this.productMode : (this.addPriceSingleForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used)
       utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
         this.categoryTags = module.default
       })
