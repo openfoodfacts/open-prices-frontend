@@ -101,7 +101,7 @@
 		"BrandProductTotal": "商品 {count} 個"
 	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "{name} に追加",
 		"Filter": "フィルタ",
 		"Order": "注文品",
 		"SignInOFFAccount": "Google アカウントでログイン",

@@ -101,7 +101,7 @@
 		"BrandProductTotal": "{count} produits"
 	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Ajouter à {name}",
 		"Filter": "Filtre",
 		"Order": "Ordre",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
@@ -223,7 +223,7 @@
 	"ProofDetail": {
 		"LoadMore": "Voir plus",
 		"Prices": "Prix",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Preuve introuvable (ou pas le propriétaire)"
 	},
 	"Router": {
 		"AddPrice": {
