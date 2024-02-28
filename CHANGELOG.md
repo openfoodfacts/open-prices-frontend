@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.46.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.45.0...v1.46.0) (2024-02-28)
+
+
+### Features
+
+* **api:** new getProofById ([#383](https://github.com/openfoodfacts/open-prices-frontend/issues/383)) ([518e84d](https://github.com/openfoodfacts/open-prices-frontend/commit/518e84d256d51fe8036ec9bbbd20dc9e147ca0ee))
+* new proof detail page ([#375](https://github.com/openfoodfacts/open-prices-frontend/issues/375)) ([4f11bea](https://github.com/openfoodfacts/open-prices-frontend/commit/4f11bea3d0f01d8d2bfe030e113b2580dbea4aab))
+* Settings country dependencies ([#310](https://github.com/openfoodfacts/open-prices-frontend/issues/310)) ([c52f046](https://github.com/openfoodfacts/open-prices-frontend/commit/c52f046df9f8a61dc43400d5b2898489416750eb))
+
+
+### Bug Fixes
+
+* delete proof display ([#378](https://github.com/openfoodfacts/open-prices-frontend/issues/378)) ([bc16444](https://github.com/openfoodfacts/open-prices-frontend/commit/bc16444dd7df3d0b787e7baee5a127c264ff56c6))
+* **price create form:** fix form init when coming from category ([#388](https://github.com/openfoodfacts/open-prices-frontend/issues/388)) ([00d4ffa](https://github.com/openfoodfacts/open-prices-frontend/commit/00d4ffa59e0d1f0d8b586cf4b2777485b40ff2dd))
+* **product:** fix add OFF button if product not found ([#389](https://github.com/openfoodfacts/open-prices-frontend/issues/389)) ([f7c7258](https://github.com/openfoodfacts/open-prices-frontend/commit/f7c7258a5ad7d3653cddca790378c4222e970591))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#385](https://github.com/openfoodfacts/open-prices-frontend/issues/385)) ([23be362](https://github.com/openfoodfacts/open-prices-frontend/commit/23be362495b57aba9ff974c3179e3095602a6940))
+* **l10n:** New Crowdin translations to review and merge ([#387](https://github.com/openfoodfacts/open-prices-frontend/issues/387)) ([30fe0a7](https://github.com/openfoodfacts/open-prices-frontend/commit/30fe0a7b4fc0a1703738db2f61b1b96dd19fe3d9))
+* **l10n:** New Crowdin translations to review and merge ([#391](https://github.com/openfoodfacts/open-prices-frontend/issues/391)) ([7a9ae17](https://github.com/openfoodfacts/open-prices-frontend/commit/7a9ae172edbb909817b93b9d6d48027f07079a76))
+
 ## [1.45.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.44.0...v1.45.0) (2024-02-26)
 
 
