@@ -22,7 +22,7 @@
           </v-text-field>
         </v-form>
 
-        <p class="text-warning mt-2">
+        <p class="text-caption text-warning mt-2">
           <i18n-t keypath="LocationSelector.Warning" tag="i">
             <template #newline><br /></template>
           </i18n-t>
