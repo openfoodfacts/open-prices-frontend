@@ -1,7 +1,17 @@
+"""
+https://static.openfoodfacts.org/data/taxonomies/origins.full.json
+
+How-to run ?
+> pip install openfoodfacts
+> python data/origins/generate_origins_translations.py
+"""
+
 import json
 from openfoodfacts.taxonomy import get_taxonomy
 
 
+OFF_TAXONOMY_NAME = "origin"
+OP_LANGUAGES_FILE = "src/i18n/data/languages.json"
 OLD_ORIGINS_FILE = "src/data/origins-tags.json"
 
 WITH_PROPERTIES = [
@@ -25,12 +35,12 @@ EXTRA = [
 
 
 def get_languages():
-    with open("src/i18n/data/languages.json") as f:
+    with open(OP_LANGUAGES_FILE) as f:
         return json.load(f)
 
 
 def get_origin_taxonomy():
-    return get_taxonomy("origin")
+    return get_taxonomy(OFF_TAXONOMY_NAME)
 
 
 def get_taxonomy_node_by_id(taxonomy, node_id):
@@ -119,11 +129,6 @@ def compare_new_origins_with_old_origins():
 
 
 if __name__ == "__main__":
-    """
-    How-to run ?
-    > pip install openfoodfacts
-    > python data/origins/generate_origins_translations.py
-    """
     # init
     ORIGINS_FULL = get_origin_taxonomy()
     print("Total number of origins:", len(ORIGINS_FULL))
