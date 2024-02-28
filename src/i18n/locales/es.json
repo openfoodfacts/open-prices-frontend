@@ -96,7 +96,7 @@
 		"Title": "Introducir código de barras"
 	},
 	"BrandDetail": {
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"TopProducts": "Productos destacados",
 		"BrandProductTotal": "{count} productos"
 	},
@@ -134,12 +134,12 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Últimos precios",
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"LocationNotFound": "Ubicación no encontrada en OpenStreetMap... No dudes en agregarla :)"
 	},
 	"LocationList": {
 		"Title": "Ubicaciones destacadas",
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"LocationTotal": "{count} ubicaciones"
 	},
 	"LocationSelector": {
@@ -178,7 +178,7 @@
 		"Success": "¡Precio eliminado!"
 	},
 	"PriceList": {
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"Title": "Últimos precios"
 	},
 	"ProductCard": {
@@ -199,12 +199,12 @@
 		"AddPrice": "Añadir un precio",
 		"CategoryNotFound": "Categoría no encontrada...",
 		"LatestPrices": "Últimos precios",
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"ProductNotFound": "No se ha encontrado el producgto en Open Food Facts... No dudes en agregarlo :)"
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Ocultar productos con precios",
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"PriceNumber": "Número de precios añadidos",
 		"ScanNumber": "Número de escaneos añadidos",
 		"Title": "Productos destacados"
@@ -221,7 +221,7 @@
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"Prices": "Precios",
 		"ProofNotFound": "Proof not found (or not the owner)"
 	},
@@ -282,7 +282,7 @@
 	"UserDashboard": {
 		"LatestPrices": "Últimos precios",
 		"LatestProofs": "Latest proofs",
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"Settings": "Configuración",
@@ -292,10 +292,10 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Últimos precios",
-		"LoadMore": "Carga más"
+		"LoadMore": "Cargar más"
 	},
 	"UserList": {
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"Title": "Colaboradores destacados",
 		"UserTotal": "{count} contributors"
 	},
