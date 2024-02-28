@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} tuotteita"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Suodata",
 		"Order": "Order",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
