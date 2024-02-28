@@ -1,5 +1,5 @@
 <template>
-  <v-btn size="small" append-icon="mdi-open-in-new" :href="getOFFUrl" target="_blank">
+  <v-btn size="small" append-icon="mdi-open-in-new" :href="getOFFUrl()" target="_blank">
     {{ getOFFName() }}
   </v-btn>
 </template>
