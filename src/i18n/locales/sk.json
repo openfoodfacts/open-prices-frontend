@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} produktov"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "Filtrovať",
 		"Order": "Order",
 		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}",
