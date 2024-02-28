@@ -101,6 +101,7 @@
 		"BrandProductTotal": "{count} products"
 	},
 	"Common": {
+		"AddToOFF": "Add to {name}",
 		"Filter": "过滤器",
 		"Order": "Order",
 		"SignInOFFAccount": "Sign in with your {url} account",
