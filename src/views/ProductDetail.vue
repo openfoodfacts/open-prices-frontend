@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <ProductCard v-if="!loading && !productIsCategory" :product="product" elevation="1"></ProductCard>
+      <ProductCard v-if="!loading && !productIsCategory" :product="product"></ProductCard>
       <v-card v-if="!loading && productIsCategory" :title="getCategoryName" prepend-icon="mdi-fruit-watermelon" elevation="1"></v-card>
     </v-col>
   </v-row>
@@ -22,6 +22,7 @@
             <template #name>{{ OFF_NAME }}</template>
           </i18n-t>
         </i>
+        <OpenFoodFactsButton class="ml-2" action="add"></OpenFoodFactsButton>
       </p>
       <p v-if="categoryNotFound" class="text-red">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
