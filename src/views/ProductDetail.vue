@@ -22,7 +22,7 @@
             <template #name>{{ OFF_NAME }}</template>
           </i18n-t>
         </i>
-        <OpenFoodFactsButton class="ml-2"></OpenFoodFactsButton>
+        <OpenFoodFactsButton class="ml-2" action="add"></OpenFoodFactsButton>
       </p>
       <p v-if="categoryNotFound" class="text-red">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>

@@ -1,6 +1,6 @@
 <template>
-  <v-btn size="small" append-icon="mdi-open-in-new" :href="getOFFUrl()" target="_blank">
-    {{ OFF_NAME }}
+  <v-btn size="small" append-icon="mdi-open-in-new" :href="getOFFUrl" target="_blank">
+    {{ getOFFName() }}
   </v-btn>
 </template>
 
@@ -11,6 +11,7 @@ export default {
   props: {
     type: null,
     value: null,
+    action: null
   },
   data () {
     return {
@@ -25,6 +26,12 @@ export default {
       }
       return this.OFF_URL
     },
+    getOFFName() {
+      if (this.action === 'add') {
+        return this.$t('Common.AddToOFF', {name: this.OFF_NAME})
+      }
+      return this.OFF_NAME
+    }
   }  
 }
 </script>
