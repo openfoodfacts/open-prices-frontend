@@ -101,7 +101,7 @@
 		"BrandProductTotal": "{count} producten"
 	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Toevoegen aan {name}",
 		"Filter": "Filter",
 		"Order": "Sorteren",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
