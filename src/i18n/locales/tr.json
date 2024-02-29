@@ -101,7 +101,7 @@
 		"BrandProductTotal": "{count} ürün"
 	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "{name}'e ekle",
 		"Filter": "Filtrele",
 		"Order": "Sipariş",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
