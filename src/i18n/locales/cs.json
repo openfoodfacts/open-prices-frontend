@@ -44,7 +44,7 @@
 			"LabelFull": "Plná cena",
 			"Proof": "Důkaz",
 			"ProofDateChanged": "Datum aktualizováno!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Důkaz vybrán!",
 			"ProofUploaded": "Důkaz nahrán!",
 			"Title": "Podrobnosti o ceně",
 			"UploadProof": "Nahrát důkaz",
@@ -52,8 +52,8 @@
 			"TakePicture": "Vyfotit",
 			"Gallery": "Galerie zařízení",
 			"SelectFromGallery": "Vybrat z galerie zařízení",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "Nedávný důkaz",
+			"SelectRecentProof": "Vybrat nedávný důkaz"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
@@ -101,7 +101,7 @@
 		"BrandProductTotal": "{count} produktů"
 	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Přidat do {name}",
 		"Filter": "Filtr",
 		"Order": "Pořadí",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
@@ -109,7 +109,7 @@
 		"No": "Ne"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Vyberte jeden ze svých nedávných důkazů"
 	},
 	"Footer": {
 		"About": "O aplikaci",
@@ -223,7 +223,7 @@
 	"ProofDetail": {
 		"LoadMore": "Načíst další",
 		"Prices": "Ceny",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Důkaz nenalezen (nebo není vlastník)"
 	},
 	"Router": {
 		"AddPrice": {
