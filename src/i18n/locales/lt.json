@@ -202,6 +202,10 @@
 		"LoadMore": "Įkelti daugiau",
 		"ProductNotFound": "Produktas nerastas Open Food Facts... Nedvejokite ir pridėkite :)"
 	},
+	"ProductLabels": {
+		"Title": "Labels",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Slėpti produktus su kainomis",
 		"LoadMore": "Įkelti daugiau",
@@ -210,6 +214,7 @@
 		"Title": "Populiariausi produktai"
 	},
 	"ProofCard": {
+		"Proof": "Įrodymai",
 		"PRICE_TAG": "Kainos etiketė",
 		"RECEIPT": "Čekis",
 		"GDPR_REQUEST": "GDPR request"
