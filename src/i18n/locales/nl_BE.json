@@ -202,6 +202,10 @@
 		"LoadMore": "Meer laden",
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
+	"ProductLabels": {
+		"Title": "Keurmerken",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Verberg producten met prijzen",
 		"LoadMore": "Meer laden",
@@ -210,6 +214,7 @@
 		"Title": "Top producten"
 	},
 	"ProofCard": {
+		"Proof": "Bewijs",
 		"PRICE_TAG": "Prijskaartje",
 		"RECEIPT": "Bon",
 		"GDPR_REQUEST": "GDPR request"
