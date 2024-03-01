@@ -202,6 +202,10 @@
 		"LoadMore": "अधिक लोड करें",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
+	"ProductLabels": {
+		"Title": "लेबल",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "अधिक लोड करें",
@@ -210,6 +214,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "सबूत",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "रसीद",
 		"GDPR_REQUEST": "GDPR request"
