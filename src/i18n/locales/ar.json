@@ -202,6 +202,10 @@
 		"LoadMore": "حمّل المزيد",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
+	"ProductLabels": {
+		"Title": "علامات",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "حمّل المزيد",
@@ -210,6 +214,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Receipt",
 		"GDPR_REQUEST": "GDPR request"
