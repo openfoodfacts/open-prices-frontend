@@ -204,7 +204,7 @@
 	},
 	"ProductLabels": {
 		"Title": "Etiketler",
-		"Empty": "No labels have been added to this product yet."
+		"Empty": "Bu ürüne henüz etiket eklenmedi."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Ürünleri fiyatlarıyla gizle",
