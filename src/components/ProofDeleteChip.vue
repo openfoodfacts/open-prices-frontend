@@ -18,11 +18,8 @@
       <v-divider></v-divider>
       <v-card-text>
         <p class="mb-1">{{ $t('ProofDeleteChip.Confirmation') }}</p>
-        <v-row>
-          <v-col cols="12" md="6">
-            <v-img :src="proofUrl" max-height="150px"></v-img>
-          </v-col>
-        </v-row>
+        <ProofCard :proof="proof" :hideProofHeader="true" :hideProofDelete="true" :readonly="true"></ProofCard>
+        <br />
         <v-row>
           <v-col>
             <v-btn
@@ -48,8 +45,12 @@
 <script>
 import api from '../services/api'
 import { useAppStore } from '../store'
+import ProofCard from '../components/ProofCard.vue'
 
 export default {
+  components: {
+    ProofCard
+  },
   props: {
     'proof': null,
   },
@@ -61,11 +62,6 @@ export default {
     }
   },
   computed: {
-    proofUrl() {
-      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
-      // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'
-      return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${this.proof.file_path}`
-    }
   },
   methods: {
     deleteProof() {
