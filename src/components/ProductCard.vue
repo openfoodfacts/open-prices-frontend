@@ -26,7 +26,7 @@
               <v-chip label size="small" density="comfortable" class="mr-1" @click="showProductCategoriesDialog">
                 {{ $t('ProductCard.CategoryTotal', { count: (product && product.categories_tags) ? product.categories_tags.length : 0 }) }}
               </v-chip>
-              <v-chip label size="small" density="comfortable">
+              <v-chip label size="small" density="comfortable" @click="showProductLabelsDialog">
                 {{ $t('ProductCard.LabelTotal', { count: (product && product.labels_tags) ? product.labels_tags.length : 0 }) }}
               </v-chip>
             </span>
@@ -53,6 +53,12 @@
     v-model="productCategoriesDialog"
     @close="productCategoriesDialog = false"
   ></ProductCategoriesDialog>
+  <ProductLabelsDialog
+    v-if="product && product.labels_tags && productLabelsDialog"
+    :labels="product.labels_tags"
+    v-model="productLabelsDialog"
+    @close="productLabelsDialog = false"
+  ></ProductLabelsDialog>
 </template>
 
 <script>
@@ -65,6 +71,7 @@ export default {
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
     'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue')),
     'ProductCategoriesDialog': defineAsyncComponent(() => import('../components/ProductCategoriesDialog.vue')),
+    'ProductLabelsDialog': defineAsyncComponent(() => import('../components/ProductLabelsDialog.vue')),
   },
   props: {
     'product': null,
@@ -75,6 +82,7 @@ export default {
     return {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
       productCategoriesDialog: false,
+      productLabelsDialog: false
     }
   },
   mounted() {
@@ -101,6 +109,9 @@ export default {
     },
     showProductCategoriesDialog() {
       this.productCategoriesDialog = true
+    },
+    showProductLabelsDialog() {
+      this.productLabelsDialog = true
     },
     goToProduct() {
       if (this.readonly) {
