@@ -202,6 +202,10 @@
 		"LoadMore": "לטעון עוד",
 		"ProductNotFound": "המוצר לא נמצא ב־Open Food Facts… אפשר להוסיף אותו ללא חשש :)"
 	},
+	"ProductLabels": {
+		"Title": "תוויות",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "הסתרת מוצרים עם מחירים",
 		"LoadMore": "לטעון עוד",
@@ -210,6 +214,7 @@
 		"Title": "מוצרים מובילים"
 	},
 	"ProofCard": {
+		"Proof": "הוכחה",
 		"PRICE_TAG": "תווית מחיר",
 		"RECEIPT": "קבלה",
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)"
