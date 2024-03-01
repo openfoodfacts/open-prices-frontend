@@ -202,6 +202,10 @@
 		"LoadMore": "Lataa enemmän",
 		"ProductNotFound": "Tuotetta ei löydy Open Food Factsista... Älä epäröi lisätä sitä :)"
 	},
+	"ProductLabels": {
+		"Title": "Merkit",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Piilota tuotteet hinnoilla",
 		"LoadMore": "Lataa enemmän",
@@ -210,6 +214,7 @@
 		"Title": "Huipputuotteet"
 	},
 	"ProofCard": {
+		"Proof": "Todiste",
 		"PRICE_TAG": "Hintalappu",
 		"RECEIPT": "Kuitti",
 		"GDPR_REQUEST": "GDPR-pyyntö"
