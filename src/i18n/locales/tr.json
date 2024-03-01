@@ -202,6 +202,10 @@
 		"LoadMore": "Daha fazla yükle",
 		"ProductNotFound": "Open Food Facts'te ürün bulunamadı... Eklemekten çekinmeyin :)"
 	},
+	"ProductLabels": {
+		"Title": "Etiketler",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Ürünleri fiyatlarıyla gizle",
 		"LoadMore": "Daha fazla yükle",
@@ -210,6 +214,7 @@
 		"Title": "En iyi ürünler"
 	},
 	"ProofCard": {
+		"Proof": "Kanıt",
 		"PRICE_TAG": "Fiyat etiketi",
 		"RECEIPT": "Makbuz",
 		"GDPR_REQUEST": "GDPR talebi"
