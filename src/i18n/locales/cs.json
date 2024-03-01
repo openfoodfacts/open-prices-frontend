@@ -202,6 +202,10 @@
 		"LoadMore": "Načíst další",
 		"ProductNotFound": "Produkt nebyl nalezen v Open Food Facts... Neváhejte ho přidat :)"
 	},
+	"ProductLabels": {
+		"Title": "Štítky",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Skrýt produkty s cenami",
 		"LoadMore": "Načíst další",
@@ -210,6 +214,7 @@
 		"Title": "Nejlepší produkty"
 	},
 	"ProofCard": {
+		"Proof": "Důkaz",
 		"PRICE_TAG": "Cenovka",
 		"RECEIPT": "Účtenka",
 		"GDPR_REQUEST": "GDPR požadavek"
