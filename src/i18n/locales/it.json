@@ -202,6 +202,10 @@
 		"LoadMore": "Scarica altro",
 		"ProductNotFound": "Prodotto non trovato in Open Food Facts... Non esitate ad aggiungerlo :)"
 	},
+	"ProductLabels": {
+		"Title": "Etichette",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Nascondi i prodotti con i prezzi",
 		"LoadMore": "Scarica altro",
@@ -210,6 +214,7 @@
 		"Title": "Prodotti migliori"
 	},
 	"ProofCard": {
+		"Proof": "Prova",
 		"PRICE_TAG": "Etichetta del prezzo",
 		"RECEIPT": "Ricevuta",
 		"GDPR_REQUEST": "Richiesta RGPD"
@@ -223,7 +228,7 @@
 	"ProofDetail": {
 		"LoadMore": "Scarica altro",
 		"Prices": "Prezzi",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Prova non trovata (o non si è il proprietario)"
 	},
 	"Router": {
 		"AddPrice": {
