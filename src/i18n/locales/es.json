@@ -202,6 +202,10 @@
 		"LoadMore": "Cargar más",
 		"ProductNotFound": "No se ha encontrado el producgto en Open Food Facts... No dudes en agregarlo :)"
 	},
+	"ProductLabels": {
+		"Title": "Etiquetas",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Ocultar productos con precios",
 		"LoadMore": "Cargar más",
@@ -210,6 +214,7 @@
 		"Title": "Productos destacados"
 	},
 	"ProofCard": {
+		"Proof": "Comprobante",
 		"PRICE_TAG": "Etiqueta de precio",
 		"RECEIPT": "Ticket",
 		"GDPR_REQUEST": "GDPR request"
