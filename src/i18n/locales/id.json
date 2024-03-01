@@ -202,6 +202,10 @@
 		"LoadMore": "Muat lebih banyak",
 		"ProductNotFound": "Produk tidak ditemukan di Open Food Facts... Jangan ragu untuk menambahkannya :)"
 	},
+	"ProductLabels": {
+		"Title": "Label - label",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Sembunyikan produk dengan harga",
 		"LoadMore": "Muat lebih banyak",
@@ -210,6 +214,7 @@
 		"Title": "Produk teratas"
 	},
 	"ProofCard": {
+		"Proof": "Bukti",
 		"PRICE_TAG": "Label harga",
 		"RECEIPT": "Resi",
 		"GDPR_REQUEST": "Permintaan GDPR"
