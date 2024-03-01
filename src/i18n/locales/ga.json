@@ -202,6 +202,10 @@
 		"LoadMore": "Load more",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
+	"ProductLabels": {
+		"Title": "Lipéid",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Load more",
@@ -210,6 +214,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Receipt",
 		"GDPR_REQUEST": "GDPR request"
