@@ -204,7 +204,7 @@
 	},
 	"ProductLabels": {
 		"Title": "Етикетки",
-		"Empty": "No labels have been added to this product yet."
+		"Empty": "До цього продукту ще не додано жодної мітки."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
