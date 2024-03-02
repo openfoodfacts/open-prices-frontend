@@ -204,7 +204,7 @@
 	},
 	"ProductLabels": {
 		"Title": "Labels",
-		"Empty": "No labels have been added to this product yet."
+		"Empty": "Diesem Produkt sind noch keine Etiketten hinzugefügt worden."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Produkte mit Preisen ausblenden",
