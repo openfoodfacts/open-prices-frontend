@@ -204,7 +204,7 @@
 	},
 	"ProductLabels": {
 		"Title": "Labels",
-		"Empty": "No labels have been added to this product yet."
+		"Empty": "Aucune étiquette n'a encore été ajoutée à ce produit."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Cacher les produits qui ont un prix",
