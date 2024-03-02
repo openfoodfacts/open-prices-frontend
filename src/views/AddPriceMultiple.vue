@@ -246,9 +246,26 @@
               ></v-text-field>
             </v-col>
           </v-row>
-          <div class="d-inline">
+          <div class="d-flex">
             <v-checkbox v-model="productPriceForm.price_is_discounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
+            <v-checkbox v-model="isChangeCurrency" :label="$t('AddPriceSingle.PriceDetails.ChangeCurrency')" hide-details="auto"></v-checkbox>
+
           </div>
+          <v-row v-if="isChangeCurrency">
+              <v-col cols="6">
+                <v-select
+                  v-model="productPriceForm.currency"
+                  :label="$t('AddPriceSingle.PriceDetails.Currency')"
+                  :items="appStore.getUserCurrencies"
+                  hide-details="auto"
+                ></v-select>
+              </v-col>
+              <v-col cols="6" class="d-flex align-center">
+                <v-btn class="mb-2" size="small" prepend-icon="mdi-cog-outline" @click="goToSettings">
+                  <span>{{ $t('AddPriceSingle.PriceDetails.AddCurrencies') }}</span>
+                </v-btn>
+              </v-col>
+            </v-row>
         </v-card-text>
         <v-divider></v-divider>
         <v-card-text>
@@ -411,6 +428,7 @@ export default {
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
       ],
+      isChangeCurrency: false,
     }
   },
   computed: {
@@ -480,6 +498,9 @@ export default {
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
       }
+    },
+    goToSettings() {
+      this.$router.push({ path: "/settings/" })
     },
     addPriceToUploadedList(price) {
       this.productPriceUploadedList.push(price)
@@ -595,13 +616,15 @@ export default {
     },
     initNewProductPriceForm() {
       this.productMode = this.appStore.user.last_product_mode_used
+      this.isChangeCurrency = false
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))
-      this.productPriceForm.currency = this.appStore.user.last_currency_used
+      this.productPriceForm.currency = this.appStore.getUserLastCurrencyUsed
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
     },
     createPrice() {
       this.createPriceLoading = true
+      this.appStore.setLastCurrencyUsed(this.productPriceForm.currency)
       // cleanup form
       if (!this.productPriceForm.product_code) {
         this.productPriceForm.product_code = null

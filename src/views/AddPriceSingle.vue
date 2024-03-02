@@ -136,9 +136,25 @@
                 ></v-text-field>
               </v-col>
             </v-row>
-            <div class="d-inline">
+            <div class="d-flex">
               <v-checkbox v-model="addPriceSingleForm.price_is_discounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
+              <v-checkbox v-model="isChangeCurrency" :label="$t('AddPriceSingle.PriceDetails.ChangeCurrency')" hide-details="auto"></v-checkbox>
             </div>
+            <v-row v-if="isChangeCurrency">
+              <v-col cols="6">
+                <v-select
+                  v-model="addPriceSingleForm.currency"
+                  :label="$t('AddPriceSingle.PriceDetails.Currency')"
+                  :items="appStore.getUserCurrencies"
+                  hide-details="auto"
+                ></v-select>
+              </v-col>
+              <v-col cols="6" class="d-flex align-center">
+                <v-btn class="mb-2" size="small" prepend-icon="mdi-cog-outline" @click="goToSettings">
+                  <span>{{ $t('AddPriceSingle.PriceDetails.AddCurrencies') }}</span>
+                </v-btn>
+              </v-col>
+            </v-row>
             <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.PriceDetails.Proof') }}</h3>
             <v-row>
               <v-col>
@@ -357,6 +373,7 @@ export default {
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
       ],
+      isChangeCurrency: false,
     }
   },
   computed: {
@@ -430,7 +447,11 @@ export default {
         this.setLocationData(this.recentLocations[0])
       }
       this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
-      this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
+      this.addPriceSingleForm.currency = this.appStore.getUserLastCurrencyUsed
+      this.isChangeCurrency = false
+    },
+    goToSettings() {
+      this.$router.push({ path: "/settings/" })
     },
     showUserRecentProofs() {
       this.userRecentProofsDialog = true
@@ -536,6 +557,7 @@ export default {
     },
     createPrice() {
       this.createPriceLoading = true
+      this.appStore.setLastCurrencyUsed(this.addPriceSingleForm.currency)
       // cleanup form
       if (!this.addPriceSingleForm.product_code) {
         this.addPriceSingleForm.product_code = null
