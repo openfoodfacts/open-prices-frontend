@@ -44,7 +44,7 @@
 			"LabelFull": "Prezzo pieno",
 			"Proof": "Prova",
 			"ProofDateChanged": "Data aggiornata!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Prova selezionata!",
 			"ProofUploaded": "Prova caricata!",
 			"Title": "Dettagli sul prezzo",
 			"UploadProof": "Carica una prova",
@@ -52,8 +52,8 @@
 			"TakePicture": "Scatta una foto",
 			"Gallery": "Galleria dispositivo",
 			"SelectFromGallery": "Seleziona dalla galleria del dispositivo",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "Prova recente",
+			"SelectRecentProof": "Seleziona una prova recente"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
@@ -109,7 +109,7 @@
 		"No": "No"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Seleziona una delle tue prove recenti"
 	},
 	"Footer": {
 		"About": "Informazioni",
@@ -204,7 +204,7 @@
 	},
 	"ProductLabels": {
 		"Title": "Etichette",
-		"Empty": "No labels have been added to this product yet."
+		"Empty": "Nessuna etichetta è stata ancora aggiunta a questo prodotto."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Nascondi i prodotti con i prezzi",
