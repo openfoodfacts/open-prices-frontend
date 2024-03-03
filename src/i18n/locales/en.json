@@ -230,6 +230,11 @@
 		"Prices": "Prices",
 		"ProofNotFound": "Proof not found (or not the owner)"
 	},
+	"ProofIsPublicChip": {
+		"Public": "Public",
+		"Private": "Private",
+		"Success": "Proof updated!"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Add a price"

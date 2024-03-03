@@ -73,6 +73,10 @@ export const useAppStore = defineStore('app', {
         this.user.proofs.push(proof)
       }
     },
+    updateProof(proofId, params) {
+      const proof = this.user.proofs.find(proof => proof.id === proofId)
+      Object.assign(proof, params)
+    },
     removeProof(proofId) {
       this.user.proofs = this.user.proofs.filter(proof => proof.id !== proofId)
       this.user.proofTotal -= 1
