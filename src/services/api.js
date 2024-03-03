@@ -73,6 +73,22 @@ export default {
     .then((response) => response.json())
   },
 
+  updateProof(proofId) {
+    const store = useAppStore()
+    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}`, {
+      method: 'PATCH',
+      headers: {
+        'Authorization': `Bearer ${store.user.token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        "is_public": "true", 
+        "type": "PRICE_TAG"
+      }),
+    })
+    .then((response) => response.json())
+  },
+
   deleteProof(proofId) {
     const store = useAppStore()
     return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}`, {
