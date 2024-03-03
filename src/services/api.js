@@ -123,6 +123,19 @@ export default {
     .then((response) => response.json())
   },
 
+  updatePrice(priceId, params = {}) {
+    const store = useAppStore()
+    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}`, {
+      method: 'PATCH',
+      headers: {
+        'Authorization': `Bearer ${store.user.token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(params),
+    })
+    .then((response) => response.json())
+  },
+
   deletePrice(priceId) {
     const store = useAppStore()
     return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}`, {
