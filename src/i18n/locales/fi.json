@@ -44,16 +44,16 @@
 			"LabelFull": "Täysi hinta",
 			"Proof": "Todiste",
 			"ProofDateChanged": "Päivämäärä päivitetty!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Todiste valittu!",
 			"ProofUploaded": "Todiste lähetetty!",
 			"Title": "Hintatiedot",
 			"UploadProof": "Lähetä todiste",
-			"Picture": "Picture",
+			"Picture": "Kuva",
 			"TakePicture": "Ota kuva",
-			"Gallery": "Device gallery",
+			"Gallery": "Laitteen galleria",
 			"SelectFromGallery": "Valitse galleriastasi",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "Viimeaikainen todiste",
+			"SelectRecentProof": "Valitse viimeaikainen todistus"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Tuoteluokka",
@@ -101,15 +101,15 @@
 		"BrandProductTotal": "{count} tuotteita"
 	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Lisää kohtaan {name}",
 		"Filter": "Suodata",
-		"Order": "Order",
+		"Order": "Järjestys",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
 		"Yes": "Kyllä",
 		"No": "Ei"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Valitse jokin viimeaikaisista todisteistasi"
 	},
 	"Footer": {
 		"About": "Tietoja",
@@ -182,8 +182,8 @@
 		"Title": "Viimeisimmät hinnat"
 	},
 	"ProductCard": {
-		"CategoryTotal": "{count} categories",
-		"LabelTotal": "{count} labels",
+		"CategoryTotal": "{count} kategoriaa",
+		"LabelTotal": "{count} tunnisteita",
 		"LatestPrice": "Viimeisin hinta",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
@@ -193,7 +193,7 @@
 	},
 	"ProductCategories": {
 		"Title": "Tuoteluokat",
-		"Empty": "No categories have been added to this product yet."
+		"Empty": "Tähän tuotteeseen ei ole vielä lisätty luokkia."
 	},
 	"ProductDetail": {
 		"AddPrice": "Lisää hinta",
@@ -204,7 +204,7 @@
 	},
 	"ProductLabels": {
 		"Title": "Merkit",
-		"Empty": "No labels have been added to this product yet."
+		"Empty": "Tähän tuotteeseen ei ole vielä lisätty etikettejä."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Piilota tuotteet hinnoilla",
@@ -228,7 +228,7 @@
 	"ProofDetail": {
 		"LoadMore": "Lataa enemmän",
 		"Prices": "Hinnat",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Todistetta ei löydy (tai ei omistajaa)"
 	},
 	"Router": {
 		"AddPrice": {
