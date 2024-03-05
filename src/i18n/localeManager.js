@@ -1,6 +1,7 @@
 import i18n from '@/i18n'
 import { nextTick } from 'vue'
 import languageData from '@/i18n/data/languages.json'
+import { useAppStore } from '@/store'
 
 const localeManager = {
   get defaultLocale() {
@@ -28,8 +29,8 @@ const localeManager = {
     await localeManager.loadLocaleMessages(newLocale)
     localeManager.currentLocale = newLocale
     document.querySelector('html').setAttribute('lang', newLocale)
-    localStorage.setItem('user-locale', newLocale)
-
+    const store = useAppStore()
+    store.setLanguage(newLocale)
   },
 
   /**
@@ -74,7 +75,8 @@ const localeManager = {
    * @returns {string|null} The persisted locale if it is supported, or null otherwise.
    */
   getPersistedLocale() {
-    const persistedLocale = localStorage.getItem('user-locale')
+    const store = useAppStore()
+    const persistedLocale = store.getUserLanguage
 
     if(localeManager.isLocaleSupported(persistedLocale)) {
       return persistedLocale

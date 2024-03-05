@@ -9,9 +9,4 @@ const i18n = createI18n({
   messages: { en },
 })
 
-// React to language changes
-i18n.onLanguageChanged = (newLocale, oldLocale) => {
-    console.log(`Language changed from ${oldLocale} to ${newLocale}`)
-    // You can perform additional actions here if needed
-}
 export default i18n
