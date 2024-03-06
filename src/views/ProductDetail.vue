@@ -56,7 +56,7 @@
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="order in priceOrderList" :key="order.key" :prepend-icon="order.icon" :active="priceOrder === order.key" @click="selectPriceOrder(order.key)">
-            {{ order.value }}
+            {{ $t('Common.' + order.value) }}
           </v-list-item>
         </v-list>
       </v-menu>

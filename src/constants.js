@@ -20,9 +20,9 @@ export default {
     { key: '-price_count', value: 'Number of prices', icon: 'mdi-tag-multiple-outline' },
   ],
   PRICE_ORDER_BY_LIST: [
-    { key: 'price', value: 'Price', icon: 'mdi-order-numeric-ascending' },
-    { key: '-date', value: 'Price Date', icon: 'mdi-calendar' },
-    { key: '-created', value: 'Addition date', icon: 'mdi-clock-outline' },
+    { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
+    { key: '-date', value: 'OrderPriceDateDESC', icon: 'mdi-calendar' },
+    { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   // https://wiki.openstreetmap.org/wiki/Key:place
   // https://wiki.openstreetmap.org/wiki/Key:highway
