@@ -100,6 +100,11 @@
 		"TopProducts": "Produk teratas",
 		"BrandProductTotal": "{count} produk"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Muat lebih banyak",
+		"TopProducts": "Produk teratas",
+		"CategoryProductTotal": "{count} produk"
+	},
 	"Common": {
 		"AddToOFF": "Tambahkan ke {name}",
 		"Filter": "Filter",
