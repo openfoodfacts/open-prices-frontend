@@ -100,6 +100,11 @@
 		"TopProducts": "Nejlepší produkty",
 		"BrandProductTotal": "{count} produktů"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Načíst další",
+		"TopProducts": "Nejlepší produkty",
+		"CategoryProductTotal": "{count} produktů"
+	},
 	"Common": {
 		"AddToOFF": "Přidat do {name}",
 		"Filter": "Filtr",
