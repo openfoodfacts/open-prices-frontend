@@ -100,6 +100,11 @@
 		"TopProducts": "Populiariausi produktai",
 		"BrandProductTotal": "{count} produktai (-ų)"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Įkelti daugiau",
+		"TopProducts": "Populiariausi produktai",
+		"CategoryProductTotal": "{count} produktai (-ų)"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filtras",
