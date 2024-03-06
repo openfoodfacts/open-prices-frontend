@@ -15,7 +15,7 @@
                 {{ brand }}
               </v-chip>
             </span>
-            <span v-if="hasProductQuantity">
+            <span v-if="hasProductName">
               <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
             <span v-if="hasPriceOrigin && priceOrigin">
@@ -87,6 +87,9 @@ export default {
     hasCategoryTag() {
       return !!this.categoryTag
     },
+    hasProductName() {
+      return this.hasProduct && !!this.product.product_name
+    },
     hasProductQuantity() {
       return this.hasProduct && !!this.product.product_quantity
     },
@@ -116,7 +119,7 @@ export default {
       this.priceLabels = this.getPriceLabelsTagsList()
     },
     getPriceProductTitle() {
-      if (this.hasProduct && this.product.product_name) {
+      if (this.hasProductName) {
         return this.product.product_name
       } else if (this.hasPrice && this.price.product_code) {
         return this.price.product_code

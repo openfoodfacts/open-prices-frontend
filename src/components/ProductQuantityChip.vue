@@ -1,6 +1,9 @@
 <template>
-  <v-chip label size="small" density="comfortable">
+  <v-chip v-if="productQuantity" label size="small" density="comfortable">
     {{ productQuantityWithUnitDisplay }}
+  </v-chip>
+  <v-chip v-else label size="small" density="comfortable" color="warning">
+    ??? g
   </v-chip>
 </template>
 
