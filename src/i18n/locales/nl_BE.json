@@ -100,6 +100,11 @@
 		"TopProducts": "Top producten",
 		"BrandProductTotal": "{count} producten"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Meer laden",
+		"TopProducts": "Top producten",
+		"CategoryProductTotal": "{count} producten"
+	},
 	"Common": {
 		"AddToOFF": "Toevoegen aan {name}",
 		"Filter": "Filter",
