@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.47.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.46.1...v1.47.0) (2024-03-06)
+
+
+### Features
+
+* add update PATCH proof in api ([#401](https://github.com/openfoodfacts/open-prices-frontend/issues/401)) ([7c9143d](https://github.com/openfoodfacts/open-prices-frontend/commit/7c9143d9b8bf640ab5c93d7edd0f36e9824edca8))
+* **api:** new updatePrice method ([#403](https://github.com/openfoodfacts/open-prices-frontend/issues/403)) ([f701df8](https://github.com/openfoodfacts/open-prices-frontend/commit/f701df818ff6a2c7a45d45965bb5f771ea132c26))
+* **category detail:** new category detail page ([#400](https://github.com/openfoodfacts/open-prices-frontend/issues/400)) ([1eb0324](https://github.com/openfoodfacts/open-prices-frontend/commit/1eb0324e61f8e2b2140c85ab849a7d71a3f85667))
+* **products:** display popup with product labels ([#396](https://github.com/openfoodfacts/open-prices-frontend/issues/396)) ([148d607](https://github.com/openfoodfacts/open-prices-frontend/commit/148d6073b217cf6d015c16c692e0c377c20debe9))
+
+
+### Bug Fixes
+
+* fix scanner crashing when camera not allowed by user. closes [#309](https://github.com/openfoodfacts/open-prices-frontend/issues/309) ([7c8c086](https://github.com/openfoodfacts/open-prices-frontend/commit/7c8c08665f15e627709116233acf530d0fc6eb89))
+
+
+### Technical
+
+* cleanup language settings and language selector ([#337](https://github.com/openfoodfacts/open-prices-frontend/issues/337)) ([396c808](https://github.com/openfoodfacts/open-prices-frontend/commit/396c8082f10b13d55e700fdb2027797cc8904532))
+* use ProofCard everywhere ([#395](https://github.com/openfoodfacts/open-prices-frontend/issues/395)) ([e589322](https://github.com/openfoodfacts/open-prices-frontend/commit/e589322bcc7fd9fe65c6a9aaa0ed2410e9df6266))
+
 ## [1.46.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.46.0...v1.46.1) (2024-02-28)
 
 
