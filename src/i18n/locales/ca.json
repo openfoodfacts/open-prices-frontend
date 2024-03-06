@@ -100,6 +100,11 @@
 		"TopProducts": "Els millors productes",
 		"BrandProductTotal": "{count} products"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Carrega mes ",
+		"TopProducts": "Els millors productes",
+		"CategoryProductTotal": "{count} products"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filtre",
