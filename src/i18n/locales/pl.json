@@ -100,6 +100,11 @@
 		"TopProducts": "Najlepsze produkty",
 		"BrandProductTotal": "{count} produktów"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Załaduj więcej",
+		"TopProducts": "Najlepsze produkty",
+		"CategoryProductTotal": "{count} produktów"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filtr",
