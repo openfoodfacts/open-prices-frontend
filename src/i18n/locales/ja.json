@@ -108,7 +108,14 @@
 	"Common": {
 		"AddToOFF": "{name} に追加",
 		"Filter": "フィルタ",
+		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "注文品",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Price",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Google アカウントでログイン",
 		"Yes": "はい",
 		"No": "いいえ"
