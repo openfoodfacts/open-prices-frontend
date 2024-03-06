@@ -108,7 +108,14 @@
 	"Common": {
 		"AddToOFF": "Zu {name} hinzufügen",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Produkte mit Preisen ausblenden",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Reihenfolge",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Preis",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
 		"Yes": "Ja",
 		"No": "Nein"
