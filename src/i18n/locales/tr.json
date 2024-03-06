@@ -108,7 +108,14 @@
 	"Common": {
 		"AddToOFF": "{name}'e ekle",
 		"Filter": "Filtrele",
+		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Sipariş",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Fiyat",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"Yes": "Evet",
 		"No": "Hayır"
