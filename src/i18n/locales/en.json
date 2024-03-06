@@ -109,6 +109,8 @@
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filter",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceASC": "Price",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
