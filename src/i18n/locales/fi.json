@@ -108,7 +108,14 @@
 	"Common": {
 		"AddToOFF": "Lisää kohtaan {name}",
 		"Filter": "Suodata",
+		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Järjestys",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Hinta",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
 		"Yes": "Kyllä",
 		"No": "Ei"
