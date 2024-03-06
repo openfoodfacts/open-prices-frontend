@@ -100,6 +100,11 @@
 		"TopProducts": "Top products",
 		"BrandProductTotal": "商品 {count} 個"
 	},
+	"CategoryDetail": {
+		"LoadMore": "もっと読み込む",
+		"TopProducts": "Top products",
+		"CategoryProductTotal": "商品 {count} 個"
+	},
 	"Common": {
 		"AddToOFF": "{name} に追加",
 		"Filter": "フィルタ",
