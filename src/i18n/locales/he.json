@@ -108,7 +108,14 @@
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "סינון",
+		"FilterProductWithPriceCountHide": "הסתרת מוצרים עם מחירים",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "סדר",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "מחיר",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
 		"Yes": "כן",
 		"No": "לא"
