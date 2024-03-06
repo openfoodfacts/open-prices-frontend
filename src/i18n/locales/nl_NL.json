@@ -108,7 +108,14 @@
 	"Common": {
 		"AddToOFF": "Toevoegen aan {name}",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Verberg producten met prijzen",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Sorteren",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Prijs",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
 		"Yes": "Ja",
 		"No": "Nee"
