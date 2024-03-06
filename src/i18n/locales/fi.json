@@ -100,6 +100,11 @@
 		"TopProducts": "Huipputuotteet",
 		"BrandProductTotal": "{count} tuotteita"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Lataa enemmän",
+		"TopProducts": "Huipputuotteet",
+		"CategoryProductTotal": "{count} tuotteita"
+	},
 	"Common": {
 		"AddToOFF": "Lisää kohtaan {name}",
 		"Filter": "Suodata",
