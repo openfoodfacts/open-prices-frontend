@@ -108,7 +108,14 @@
 	"Common": {
 		"AddToOFF": "Tambahkan ke {name}",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Harga",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
 		"Yes": "Ya",
 		"No": "Tidak"
