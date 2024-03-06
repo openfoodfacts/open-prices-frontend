@@ -115,6 +115,7 @@ export default {
     initCategory() {
       this.category = this.$route.params.id
       this.categoryProductList = []
+      this.categoryProductTotal = null
       this.categoryProductPage = 0
       this.getCategoryProducts()
     },

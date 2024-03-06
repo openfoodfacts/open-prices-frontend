@@ -123,6 +123,7 @@ export default {
   methods: {
     initLocationPrices() {
       this.locationPriceList = []
+      this.locationPriceTotal = null
       this.locationPricePage = 0
       this.getLocationPrices()
     },
