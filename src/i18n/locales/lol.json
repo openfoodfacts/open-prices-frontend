@@ -100,6 +100,11 @@
 		"TopProducts": "crwdns246916:0crwdne246916:0",
 		"BrandProductTotal": "crwdns246950:0{count}crwdne246950:0"
 	},
+	"CategoryDetail": {
+		"LoadMore": "crwdns247812:0crwdne247812:0",
+		"TopProducts": "crwdns247814:0crwdne247814:0",
+		"CategoryProductTotal": "crwdns247816:0{count}crwdne247816:0"
+	},
 	"Common": {
 		"AddToOFF": "crwdns247802:0{name}crwdne247802:0",
 		"Filter": "crwdns247746:0crwdne247746:0",
