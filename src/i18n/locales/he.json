@@ -100,6 +100,11 @@
 		"TopProducts": "מוצרים מובילים",
 		"BrandProductTotal": "{count} מוצרים"
 	},
+	"CategoryDetail": {
+		"LoadMore": "לטעון עוד",
+		"TopProducts": "מוצרים מובילים",
+		"CategoryProductTotal": "{count} מוצרים"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "סינון",
