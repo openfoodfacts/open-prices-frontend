@@ -108,7 +108,14 @@
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filtras",
+		"FilterProductWithPriceCountHide": "Slėpti produktus su kainomis",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Kaina",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"Yes": "Taip",
 		"No": "Ne"
