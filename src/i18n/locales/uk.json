@@ -100,6 +100,11 @@
 		"TopProducts": "Top products",
 		"BrandProductTotal": "{count} продуктів"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Завантажити більше",
+		"TopProducts": "Top products",
+		"CategoryProductTotal": "{count} продуктів"
+	},
 	"Common": {
 		"AddToOFF": "Додати до {name}",
 		"Filter": "Фільтр",
