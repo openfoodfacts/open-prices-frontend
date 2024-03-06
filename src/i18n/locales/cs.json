@@ -108,7 +108,14 @@
 	"Common": {
 		"AddToOFF": "Přidat do {name}",
 		"Filter": "Filtr",
+		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Pořadí",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Cena",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
 		"Yes": "Ano",
 		"No": "Ne"
