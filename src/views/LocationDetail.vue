@@ -171,19 +171,6 @@ export default {
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
         this.initLocationPrices()
       }
-      let date = new Date().toISOString();
-
-      console.time('split');
-      for (let i = 0; i < 1000000; i++) {
-        let result = date.split('T')[0];
-      }
-      console.timeEnd('split');
-
-      console.time('substring');
-      for (let i = 0; i < 1000000; i++) {
-        let result = date.substring(0, 10);
-      }
-      console.timeEnd('substring');
     }
   }
 }
