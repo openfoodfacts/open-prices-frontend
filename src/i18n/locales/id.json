@@ -101,7 +101,7 @@
 		"BrandProductTotal": "{count} produk"
 	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Tambahkan ke {name}",
 		"Filter": "Filter",
 		"Order": "Order",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
@@ -204,7 +204,7 @@
 	},
 	"ProductLabels": {
 		"Title": "Label - label",
-		"Empty": "No labels have been added to this product yet."
+		"Empty": "Belum ada label yang ditambahkan ke produk ini."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Sembunyikan produk dengan harga",
