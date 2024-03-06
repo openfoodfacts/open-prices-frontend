@@ -9,10 +9,10 @@ export default {
   PRODUCT_QUANTITY_UNIT_ML: 'ml',
   FILTER_PARAM: 'filter',
   PRODUCT_FILTER_LIST: [
-    { key: 'hide_price_count_gte_1', value: 'Hide products with prices' },
+    { key: 'hide_price_count_gte_1', value: 'FilterProductWithPriceCountHide' },
   ],
   PRICE_FILTER_LIST: [
-    { key: 'only_last_30d', value: 'Only prices for the last 30 days' },
+    { key: 'only_last_30d', value: 'FilterPriceMoreThan30DaysHide' },
   ],
   ORDER_BY_PARAM: 'order_by',
   PRODUCT_ORDER_BY_LIST: [

@@ -39,7 +39,7 @@
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="filter in priceFilterList" :key="filter.key" :prepend-icon="(priceFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="priceFilter === filter.key" @click="togglePriceFilter(filter.key)">
-            {{ filter.value }}
+            {{ $t('Common.' + filter.value) }}
           </v-list-item>
         </v-list>
       </v-menu>
