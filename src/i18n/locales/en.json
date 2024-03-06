@@ -109,6 +109,9 @@
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filter",
 		"Order": "Order",
+		"OrderPriceASC": "Price",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Yes": "Yes",
 		"No": "No"
