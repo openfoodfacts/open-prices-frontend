@@ -90,6 +90,7 @@ export default {
   methods: {
     initProductList() {
       this.productList = []
+      this.productTotal = null
       this.productPage = 0
       this.getProducts()
     },

@@ -116,6 +116,7 @@ export default {
   methods: {
     initUserPrices() {
       this.userPriceList = []
+      this.userPriceTotal = null
       this.userPricePage = 0
       this.getUserPrices()
     },

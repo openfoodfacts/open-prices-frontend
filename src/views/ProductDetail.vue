@@ -1,8 +1,8 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <ProductCard v-if="!loading && !productIsCategory" :product="product"></ProductCard>
-      <v-card v-if="!loading && productIsCategory" :title="getCategoryName" prepend-icon="mdi-fruit-watermelon" elevation="1"></v-card>
+      <ProductCard v-if="!productIsCategory" :product="product"></ProductCard>
+      <v-card v-else :title="getCategoryName" prepend-icon="mdi-fruit-watermelon" elevation="1"></v-card>
     </v-col>
   </v-row>
 
@@ -110,7 +110,7 @@ export default {
     this.priceFilter = this.$route.query[constants.FILTER_PARAM] || this.priceFilter
     this.priceOrder = this.$route.query[constants.ORDER_BY_PARAM] || this.priceOrder
     this.getProduct(),
-    this.getProductPrices()
+    this.initProductPrices()
   },
   computed: {
     productIsCategory() {
@@ -145,6 +145,7 @@ export default {
   methods: {
     initProductPrices() {
       this.productPriceList = []
+      this.productPriceTotal = null
       this.productPricePage = 0
       this.getProductPrices()
     },
