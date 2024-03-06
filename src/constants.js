@@ -16,8 +16,8 @@ export default {
   ],
   ORDER_BY_PARAM: 'order_by',
   PRODUCT_ORDER_BY_LIST: [
-    { key: '-unique_scans_n', value: 'Number of scans', icon: 'mdi-barcode-scan' },
-    { key: '-price_count', value: 'Number of prices', icon: 'mdi-tag-multiple-outline' },
+    { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
+    { key: '-price_count', value: 'OrderProductPriceDESC', icon: 'mdi-tag-multiple-outline' },
   ],
   PRICE_ORDER_BY_LIST: [
     { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
