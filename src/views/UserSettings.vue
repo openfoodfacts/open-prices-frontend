@@ -19,7 +19,7 @@
               :label="$t('UserSettings.LanguageLabel')"
               :items="languageList"
               item-title="native"
-              return-object
+              item-value="code"
               hide-details="auto"
             ></v-autocomplete>
 
@@ -92,7 +92,7 @@ export default {
   watch: {
     'userSettingsForm.selectedLanguage': async function () {
       if (this.userSettingsForm.selectedLanguage !== null) {
-        this.languageTranslationCompletion = await localeManager.calculateTranslationCompletion(this.userSettingsForm.selectedLanguage.code)
+        this.languageTranslationCompletion = await localeManager.calculateTranslationCompletion(this.userSettingsForm.selectedLanguage)
       }
     },
     'userSettingsForm.selectedCountry': function (newValue, oldValue) {
@@ -160,8 +160,8 @@ export default {
       this.userSettingsForm.selectedCurrencies = this.appStore.getUserFavoriteCurrencies
     },
     async updateSettings() {
-      await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage.code)
-      this.appStore.setLanguage(this.userSettingsForm.selectedLanguage.code)
+      await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage)
+      this.appStore.setLanguage(this.userSettingsForm.selectedLanguage)
       this.appStore.setCountry(this.userSettingsForm.selectedCountry)
       this.appStore.setFavoriteCurrencies(this.userSettingsForm.selectedCurrencies)
       this.$router.push({ path: '/', query: { settingsSuccess: 'true' } })
