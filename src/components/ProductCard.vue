@@ -23,12 +23,8 @@
             </span>
             <br />
             <span>
-              <v-chip label size="small" density="comfortable" class="mr-1" @click="showProductCategoriesDialog">
-                {{ $t('ProductCard.CategoryTotal', { count: (product && product.categories_tags) ? product.categories_tags.length : 0 }) }}
-              </v-chip>
-              <v-chip label size="small" density="comfortable" @click="showProductLabelsDialog">
-                {{ $t('ProductCard.LabelTotal', { count: (product && product.labels_tags) ? product.labels_tags.length : 0 }) }}
-              </v-chip>
+              <ProductCategoriesChip :productCategories="product.categories_tags"></ProductCategoriesChip>
+              <ProductLabelsChip :productLabels="product.labels_tags"></ProductLabelsChip>
             </span>
             <br />
             <span>
@@ -46,19 +42,6 @@
       </v-sheet>
     </v-container>
   </v-card>
-
-  <ProductCategoriesDialog
-    v-if="product && product.categories_tags && productCategoriesDialog"
-    :categories="product.categories_tags"
-    v-model="productCategoriesDialog"
-    @close="productCategoriesDialog = false"
-  ></ProductCategoriesDialog>
-  <ProductLabelsDialog
-    v-if="product && product.labels_tags && productLabelsDialog"
-    :labels="product.labels_tags"
-    v-model="productLabelsDialog"
-    @close="productLabelsDialog = false"
-  ></ProductLabelsDialog>
 </template>
 
 <script>
@@ -68,10 +51,10 @@ export default {
   components: {
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
+    'ProductCategoriesChip': defineAsyncComponent(() => import('../components/ProductCategoriesChip.vue')),
+    'ProductLabelsChip': defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
     'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue')),
-    'ProductCategoriesDialog': defineAsyncComponent(() => import('../components/ProductCategoriesDialog.vue')),
-    'ProductLabelsDialog': defineAsyncComponent(() => import('../components/ProductLabelsDialog.vue')),
   },
   props: {
     'product': null,
@@ -81,8 +64,6 @@ export default {
   data() {
     return {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
-      productCategoriesDialog: false,
-      productLabelsDialog: false
     }
   },
   mounted() {
@@ -106,12 +87,6 @@ export default {
   methods: {
     getProductTitle() {
       return this.hasProductSource ? (this.product.product_name || this.$t('ProductCard.UnknownProduct')) : this.product.code
-    },
-    showProductCategoriesDialog() {
-      this.productCategoriesDialog = true
-    },
-    showProductLabelsDialog() {
-      this.productLabelsDialog = true
     },
     goToProduct() {
       if (this.readonly) {
