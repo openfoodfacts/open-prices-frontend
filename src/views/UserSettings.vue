@@ -141,8 +141,6 @@ export default {
       this.userSettingsForm.currency = this.appStore.user.last_currency_used
       this.userSettingsForm.selectedLanguage = this.languageList.find(lang => lang.code === localeManager.guessDefaultLocale()).code
       this.userSettingsForm.selectedCountry = countryData.find(country => country.code === this.appStore.user.country).code
-      const store = useAppStore()
-      console.log(store.user)
     },
     async updateSettings() {
       await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage)
@@ -150,8 +148,6 @@ export default {
       this.appStore.setCountry(this.userSettingsForm.selectedCountry)
       this.appStore.setLastCurrencyUsed(this.userSettingsForm.currency)
       this.$router.push({ path: '/', query: { settingsSuccess: 'true' } })
-      const store = useAppStore()
-      console.log(store.user)
     }
   }
 }
