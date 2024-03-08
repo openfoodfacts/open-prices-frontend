@@ -123,6 +123,11 @@
 		"Yes": "Yes",
 		"No": "No"
 	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of favorite currencies",
+		"Currency": "Currency"
+		
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
