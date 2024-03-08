@@ -100,16 +100,17 @@ export default {
         // Update the language list to show the previously selected language first then the selected country languages and the rest of the languages
         let newLanguageList = this.languageList.slice()
         if (selectedCountry) {
+          const currentLanguage = this.languageList.find(lang => lang.code === this.userSettingsForm.selectedLanguage)
           // get the languages of the selected country minus the selected language (if it exists in the country languages list)
           const countryLanguagesList = selectedCountry.languages.map(code => {
             const language = languageData.find(lang => lang.code === code || lang.code === `${code}_${selectedCountry.code}`)
             return language ? language : null
-          }).filter(language => language !== null && language.code !== this.userSettingsForm.selectedLanguage.code)
+          }).filter(language => language !== null && language.code !== currentLanguage.code)
           // Update the language list to show the current selected language first then the selected country languages and the rest of the languages
           newLanguageList = [
-            ...[this.userSettingsForm.selectedLanguage],
+            ...[currentLanguage],
             ...countryLanguagesList,
-            ...newLanguageList.filter(language => !selectedCountry.languages.includes(language.code) && language.code !== this.userSettingsForm.selectedLanguage.code &&
+            ...newLanguageList.filter(language => !selectedCountry.languages.includes(language.code) && language.code !== currentLanguage.code &&
               !countryLanguagesList.includes(language))
           ].filter(Boolean); // Remove any null or undefined values 
           this.languageList = newLanguageList
@@ -139,7 +140,7 @@ export default {
     initUserSettingsForm() {
       this.userSettingsForm.currency = this.appStore.user.last_currency_used
       this.userSettingsForm.selectedLanguage = this.languageList.find(lang => lang.code === localeManager.guessDefaultLocale()).code
-      this.userSettingsForm.selectedCountry = countryData.find(country => country.code === this.appStore.user.country).code  
+      this.userSettingsForm.selectedCountry = countryData.find(country => country.code === this.appStore.user.country).code
     },
     async updateSettings() {
       await localeManager.changeLanguage(this.userSettingsForm.selectedLanguage)

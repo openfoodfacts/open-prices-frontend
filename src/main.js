@@ -7,7 +7,7 @@ import App from './App.vue'
 import router from './router.js'
 import { vuetify } from './plugins/vuetify.js'
 import i18n from './i18n'
-
+import localeManager from './i18n/localeManager.js'
 const app = createApp(App)
 
 const pinia = createPinia()
@@ -21,7 +21,8 @@ app.use(VueMatomo, {
   host: 'https://analytics.openfoodfacts.org',
   siteId: 13,
 })
-
+const locale = localeManager.guessDefaultLocale()
+localeManager.changeLanguage(locale)
 app.mount('#app')
 
 // Matomo
