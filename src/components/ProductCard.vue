@@ -24,9 +24,7 @@
             <br />
             <span>
               <ProductCategoriesChip :productCategories="product.categories_tags"></ProductCategoriesChip>
-              <v-chip label size="small" density="comfortable" @click="showProductLabelsDialog">
-                {{ $t('ProductCard.LabelTotal', { count: (product && product.labels_tags) ? product.labels_tags.length : 0 }) }}
-              </v-chip>
+              <ProductLabelsChip :productLabels="product.labels_tags"></ProductLabelsChip>
             </span>
             <br />
             <span>
@@ -44,13 +42,6 @@
       </v-sheet>
     </v-container>
   </v-card>
-
-  <ProductLabelsDialog
-    v-if="product && product.labels_tags && productLabelsDialog"
-    :labels="product.labels_tags"
-    v-model="productLabelsDialog"
-    @close="productLabelsDialog = false"
-  ></ProductLabelsDialog>
 </template>
 
 <script>
@@ -61,9 +52,9 @@ export default {
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
     'ProductCategoriesChip': defineAsyncComponent(() => import('../components/ProductCategoriesChip.vue')),
+    'ProductLabelsChip': defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
     'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue')),
-    'ProductLabelsDialog': defineAsyncComponent(() => import('../components/ProductLabelsDialog.vue')),
   },
   props: {
     'product': null,
@@ -73,7 +64,6 @@ export default {
   data() {
     return {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
-      productLabelsDialog: false
     }
   },
   mounted() {
@@ -97,9 +87,6 @@ export default {
   methods: {
     getProductTitle() {
       return this.hasProductSource ? (this.product.product_name || this.$t('ProductCard.UnknownProduct')) : this.product.code
-    },
-    showProductLabelsDialog() {
-      this.productLabelsDialog = true
     },
     goToProduct() {
       if (this.readonly) {
