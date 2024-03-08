@@ -2,8 +2,8 @@
   <v-chip v-if="productQuantity" label size="small" density="comfortable">
     {{ productQuantityWithUnitDisplay }}
   </v-chip>
-  <v-chip v-else label size="small" density="comfortable" color="warning">
-    ??? g
+  <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning">
+    g
   </v-chip>
 </template>
 
