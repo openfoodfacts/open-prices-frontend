@@ -194,7 +194,9 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "ब्रांड",
 		"BrandLower": "ब्रांड",
+		"BrandTotal": "{count} brands",
 		"Categories": "श्रेणियाँ",
 		"CategoriesLower": "श्रेणियाँ",
 		"CategoryTotal": "{count} categories",
