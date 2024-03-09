@@ -194,7 +194,9 @@
 		"Title": "Laatste prijzen"
 	},
 	"ProductCard": {
+		"Brands": "Merken",
 		"BrandLower": "merk",
+		"BrandTotal": "{count} brands",
 		"Categories": "Categorieën",
 		"CategoriesLower": "categorieën",
 		"CategoryTotal": "{count} categorieën",
