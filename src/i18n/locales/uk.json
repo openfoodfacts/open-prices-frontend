@@ -199,8 +199,9 @@
 		"LatestPrice": "Остання ціна",
 		"ProductQuantityGram": "{0} г",
 		"ProductQuantityKilogram": "{0} кг",
-		"ProductQuantityMililitre": "{0} мл",
 		"ProductQuantityLitre": "{0} Л",
+		"ProductQuantityMililitre": "{0} мл",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Невідомий продукт"
 	},
 	"ProductCategories": {
