@@ -199,8 +199,9 @@
 		"LatestPrice": "Ostatnia cena",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Nieznana nazwa produktu"
 	},
 	"ProductCategories": {
