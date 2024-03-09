@@ -1,10 +1,13 @@
 <template>
-  <v-chip label size="small" density="comfortable" class="mr-1" @click="showProductLabelsDialog">
-    {{ $t('ProductCard.LabelTotal', { count: productLabels ? productLabels.length : 0 }) }}
+  <v-chip v-if="productLabels.length" label size="small" density="comfortable" @click="showProductLabelsDialog">
+    {{ $t('ProductCard.LabelTotal', { count: productLabels.length }) }}
+  </v-chip>
+  <v-chip v-else label size="small" density="comfortable"><!-- prepend-icon="mdi-help" color="warning" -->
+    {{ $t('ProductCard.LabelTotal', { count: 0 }) }}
   </v-chip>
 
   <ProductLabelsDialog
-    v-if="productLabels && productLabelsDialog"
+    v-if="productLabels.length && productLabelsDialog"
     :labels="productLabels"
     v-model="productLabelsDialog"
     @close="productLabelsDialog = false"
@@ -19,14 +22,15 @@ export default {
     'ProductLabelsDialog': defineAsyncComponent(() => import('../components/ProductLabelsDialog.vue')),
   },
   props: {
-    productLabels: null,
+    productLabels: {
+      type: Array,
+      default: []
+    }
   },
   data() {
     return {
       productLabelsDialog: false
     }
-  },
-  computed: {
   },
   methods: {
     showProductLabelsDialog() {
