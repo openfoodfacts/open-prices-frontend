@@ -194,7 +194,9 @@
 		"Title": "Viimeisimmät hinnat"
 	},
 	"ProductCard": {
+		"Brands": "Tuotemerkit",
 		"BrandLower": "tuotemerkki",
+		"BrandTotal": "{count} brands",
 		"Categories": "Tuoteluokat",
 		"CategoriesLower": "tuoteluokat",
 		"CategoryTotal": "{count} kategoriaa",
