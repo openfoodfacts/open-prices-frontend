@@ -194,7 +194,9 @@
 		"Title": "Najnowsze ceny"
 	},
 	"ProductCard": {
+		"Brands": "Marki",
 		"BrandLower": "marka",
+		"BrandTotal": "{count} brands",
 		"Categories": "Kategorie",
 		"CategoriesLower": "kategorie",
 		"CategoryTotal": "{count} categories",
