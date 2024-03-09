@@ -194,18 +194,22 @@
 		"Title": "Najnowsze ceny"
 	},
 	"ProductCard": {
+		"BrandLower": "marka",
+		"Categories": "Kategorie",
+		"CategoriesLower": "kategorie",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Etykieta",
+		"LabelsLower": "etykiety",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Ostatnia cena",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Nieznana nazwa produktu"
-	},
-	"ProductCategories": {
-		"Title": "Kategorie",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Dodaj cenę",
@@ -213,10 +217,6 @@
 		"LatestPrices": "Najnowsze ceny",
 		"LoadMore": "Załaduj więcej",
 		"ProductNotFound": "Produktu nie znaleziono w Open Food Facts... Nie wahaj się go dodać :)"
-	},
-	"ProductLabels": {
-		"Title": "Etykieta",
-		"Empty": "No labels have been added to this product yet."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Ukryj produkty z cenami",

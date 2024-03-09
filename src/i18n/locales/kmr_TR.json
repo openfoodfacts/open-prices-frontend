@@ -194,18 +194,22 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"BrandLower": "marke",
+		"Categories": "Vebir",
+		"CategoriesLower": "kategori",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Labels",
+		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Unknown product name"
-	},
-	"ProductCategories": {
-		"Title": "Vebir",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
@@ -213,10 +217,6 @@
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
-	},
-	"ProductLabels": {
-		"Title": "Labels",
-		"Empty": "No labels have been added to this product yet."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",

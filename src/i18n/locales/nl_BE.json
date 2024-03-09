@@ -194,18 +194,22 @@
 		"Title": "Laatste prijzen"
 	},
 	"ProductCard": {
+		"BrandLower": "merk",
+		"Categories": "Categorieën",
+		"CategoriesLower": "categorieën",
 		"CategoryTotal": "{count} categorieën",
+		"Labels": "Keurmerken",
+		"LabelsLower": "keurmerken",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Laatste prijzen",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} l",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Onbekende productnaam"
-	},
-	"ProductCategories": {
-		"Title": "Categorieën",
-		"Empty": "Er zijn nog geen categorieën aan dit product toegevoegd."
 	},
 	"ProductDetail": {
 		"AddPrice": "Voeg een prijs toe",
@@ -213,10 +217,6 @@
 		"LatestPrices": "Laatste prijzen",
 		"LoadMore": "Meer laden",
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
-	},
-	"ProductLabels": {
-		"Title": "Keurmerken",
-		"Empty": "Er zijn nog geen labels aan dit product toegevoegd."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Verberg producten met prijzen",

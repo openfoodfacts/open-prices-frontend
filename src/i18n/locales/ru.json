@@ -194,18 +194,22 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"BrandLower": "марка",
+		"Categories": "Категории",
+		"CategoriesLower": "категории",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Маркировки",
+		"LabelsLower": "маркировки",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Неизвестный продукт"
-	},
-	"ProductCategories": {
-		"Title": "Категории",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
@@ -213,10 +217,6 @@
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Загрузить ещё",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
-	},
-	"ProductLabels": {
-		"Title": "Маркировки",
-		"Empty": "No labels have been added to this product yet."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",

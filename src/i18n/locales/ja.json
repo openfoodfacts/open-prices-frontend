@@ -194,18 +194,22 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"BrandLower": "ブランド",
+		"Categories": "カテゴリー",
+		"CategoriesLower": "カテゴリー",
 		"CategoryTotal": "{count} カテゴリ",
+		"Labels": "ラベル",
+		"LabelsLower": "ラベル",
 		"LabelTotal": "{count} ラベル",
 		"LatestPrice": "最新価格",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0}kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} / L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "不明な製品名"
-	},
-	"ProductCategories": {
-		"Title": "カテゴリー",
-		"Empty": "この商品にはまだカテゴリが追加されていません。"
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
@@ -213,10 +217,6 @@
 		"LatestPrices": "Latest prices",
 		"LoadMore": "もっと読み込む",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
-	},
-	"ProductLabels": {
-		"Title": "ラベル",
-		"Empty": "No labels have been added to this product yet."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",

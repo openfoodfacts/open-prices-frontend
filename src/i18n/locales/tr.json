@@ -194,18 +194,22 @@
 		"Title": "Son fiyatlar"
 	},
 	"ProductCard": {
+		"BrandLower": "marka",
+		"Categories": "Kategoriler",
+		"CategoriesLower": "kategoriler",
 		"CategoryTotal": "{count} kategoriler",
+		"Labels": "Etiketler",
+		"LabelsLower": "etiketler",
 		"LabelTotal": "{count} etiketler",
 		"LatestPrice": "En son fiyat",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} gr",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Bilinmeyen ürün adı"
-	},
-	"ProductCategories": {
-		"Title": "Kategoriler",
-		"Empty": "Bu ürüne henüz kategori eklenmemiştir."
 	},
 	"ProductDetail": {
 		"AddPrice": "Fiyat ekleyin",
@@ -213,10 +217,6 @@
 		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
 		"ProductNotFound": "Open Food Facts'te ürün bulunamadı... Eklemekten çekinmeyin :)"
-	},
-	"ProductLabels": {
-		"Title": "Etiketler",
-		"Empty": "Bu ürüne henüz etiket eklenmedi."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Ürünleri fiyatlarıyla gizle",

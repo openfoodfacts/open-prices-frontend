@@ -194,18 +194,22 @@
 		"Title": "Harga terbaru"
 	},
 	"ProductCard": {
+		"BrandLower": "merek",
+		"Categories": "Kategori",
+		"CategoriesLower": "kategori",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Label - label",
+		"LabelsLower": "label - label",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Harga terbaru",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Nama produk tidak dikenal"
-	},
-	"ProductCategories": {
-		"Title": "Kategori",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Tambahkan harga",
@@ -213,10 +217,6 @@
 		"LatestPrices": "Harga terbaru",
 		"LoadMore": "Muat lebih banyak",
 		"ProductNotFound": "Produk tidak ditemukan di Open Food Facts... Jangan ragu untuk menambahkannya :)"
-	},
-	"ProductLabels": {
-		"Title": "Label - label",
-		"Empty": "Belum ada label yang ditambahkan ke produk ini."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Sembunyikan produk dengan harga",
