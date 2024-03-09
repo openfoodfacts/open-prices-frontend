@@ -26,10 +26,6 @@
             <span>
               <ProductLabelsChip :productLabels="product.labels_tags"></ProductLabelsChip>
             </span>
-            <br />
-            <span>
-              <v-chip label size="small" density="comfortable">{{ product.code }}</v-chip>
-            </span>
           </p>
         </v-col>
       </v-row>
