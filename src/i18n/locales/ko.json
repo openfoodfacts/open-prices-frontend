@@ -194,7 +194,9 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "브랜드",
 		"BrandLower": "브랜드",
+		"BrandTotal": "{count} brands",
 		"Categories": "카테고리",
 		"CategoriesLower": "카테고리",
 		"CategoryTotal": "{count} categories",
