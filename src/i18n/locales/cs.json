@@ -194,9 +194,16 @@
 		"Title": "Nejnovější ceny"
 	},
 	"ProductCard": {
+		"BrandLower": "značka",
+		"Categories": "Kategorie",
+		"CategoriesLower": "kategorie",
 		"CategoryTotal": "{count} kategorií",
+		"Labels": "Štítky",
+		"LabelsLower": "štítky",
 		"LabelTotal": "{count} štítků",
 		"LatestPrice": "Nejnovější cena",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} l",
@@ -204,20 +211,12 @@
 		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Neznámý název produktu"
 	},
-	"ProductCategories": {
-		"Title": "Kategorie",
-		"Empty": "K tomuto produktu ještě nebyly přidány žádné kategorie."
-	},
 	"ProductDetail": {
 		"AddPrice": "Přidat cenu",
 		"CategoryNotFound": "Kategorie nenalezena...",
 		"LatestPrices": "Nejnovější ceny",
 		"LoadMore": "Načíst další",
 		"ProductNotFound": "Produkt nebyl nalezen v Open Food Facts... Neváhejte ho přidat :)"
-	},
-	"ProductLabels": {
-		"Title": "Štítky",
-		"Empty": "K tomuto produktu ještě nebyly přidány žádné štítky."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Skrýt produkty s cenami",
