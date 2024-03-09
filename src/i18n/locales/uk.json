@@ -194,19 +194,22 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"BrandLower": "виробник",
+		"Categories": "Категорії",
+		"CategoriesLower": "категорії",
 		"CategoryTotal": "{count} категорій",
+		"Labels": "Етикетки",
+		"LabelsLower": "категорії",
 		"LabelTotal": "{count} міток",
 		"LatestPrice": "Остання ціна",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} г",
 		"ProductQuantityKilogram": "{0} кг",
 		"ProductQuantityLitre": "{0} Л",
 		"ProductQuantityMililitre": "{0} мл",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Відсутня кількість товару",
 		"UnknownProduct": "Невідомий продукт"
-	},
-	"ProductCategories": {
-		"Title": "Категорії",
-		"Empty": "До цього товару ще не додано жодної категорії."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
@@ -214,10 +217,6 @@
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Завантажити більше",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
-	},
-	"ProductLabels": {
-		"Title": "Етикетки",
-		"Empty": "До цього продукту ще не додано жодної мітки."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
