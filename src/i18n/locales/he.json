@@ -194,9 +194,16 @@
 		"Title": "מחירים עדכניים"
 	},
 	"ProductCard": {
+		"BrandLower": "מותג",
+		"Categories": "קטגוריות",
+		"CategoriesLower": "קטגוריות",
 		"CategoryTotal": "{count} קטגוריות",
+		"Labels": "תוויות",
+		"LabelsLower": "תוויות",
 		"LabelTotal": "{count} תוויות",
 		"LatestPrice": "המחיר העדכני",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} גרם",
 		"ProductQuantityKilogram": "{0} ק״ג",
 		"ProductQuantityLitre": "{0} ליטר",
@@ -204,20 +211,12 @@
 		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
-	"ProductCategories": {
-		"Title": "קטגוריות",
-		"Empty": "עדיין לא נוספו קטגוריות למוצר הזה."
-	},
 	"ProductDetail": {
 		"AddPrice": "הוספת מחיר",
 		"CategoryNotFound": "הקטגוריה לא נמצאה…",
 		"LatestPrices": "מחירים עדכניים",
 		"LoadMore": "לטעון עוד",
 		"ProductNotFound": "המוצר לא נמצא ב־Open Food Facts… אפשר להוסיף אותו ללא חשש :)"
-	},
-	"ProductLabels": {
-		"Title": "תוויות",
-		"Empty": "עדיין לא נוספו תוויות למוצר הזה."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "הסתרת מוצרים עם מחירים",
