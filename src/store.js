@@ -11,6 +11,7 @@ export const useAppStore = defineStore('app', {
       recent_locations: [],
       language: import.meta.env.VITE_DEFAULT_LOCALE, // 'en'
       country: import.meta.env.VITE_DEFAULT_COUNTRY,  // 'FR',
+      favorite_currencies: [import.meta.env.VITE_DEFAULT_CURRENCY], // ['EUR']
       proofs: [],
       proofTotal: null,
     },
@@ -32,6 +33,12 @@ export const useAppStore = defineStore('app', {
     },
     getUserProofTotal: (state) => {
       return state.user.proofTotal
+    },
+    getUserFavoriteCurrencies: (state) => {
+      return state.user.currencies
+    },
+    getUserLastCurrencyUsed: (state) => {
+      return state.user.last_currency_used
     }
   },
   actions: {
@@ -60,6 +67,12 @@ export const useAppStore = defineStore('app', {
     },
     setCountry(country) {
       this.user.country = country
+    },
+    setFavoriteCurrencies(currencies) {
+      this.user.currencies = currencies
+    },
+    setLastCurrencyUsed(currency) {
+      this.user.last_currency_used = currency
     },
     setProofTotal(proofTotal) {
       this.user.proofTotal = proofTotal
