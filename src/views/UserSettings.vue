@@ -1,7 +1,5 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('UserSettings.Title') }}
-  </h1>
+  <h1 class="text-h5 mb-1">{{ $t('UserSettings.Title') }}</h1>
 
   <v-form @submit.prevent="updateSettings">
     <v-row>
@@ -76,7 +74,6 @@ import localeManager from '../i18n/localeManager.js'
 import languageData from '../i18n/data/languages.json'
 import countryData from '../i18n/data/countries.json'
 
-
 export default {
   data() {
     return {
@@ -92,7 +89,7 @@ export default {
       countryList: countryData, // can be used to further filter the country list if needed
     }
   },
-  watch:{
+  watch: {
     'userSettingsForm.selectedLanguage': async function () {
       if (this.userSettingsForm.selectedLanguage !== null) {
         this.languageTranslationCompletion = await localeManager.calculateTranslationCompletion(this.userSettingsForm.selectedLanguage)
@@ -117,7 +114,7 @@ export default {
             ...countryLanguagesList,
             ...newLanguageList.filter(language => !selectedCountry.languages.includes(language.code) && language.code !== currentLanguage.code &&
               !countryLanguagesList.includes(language))
-          ].filter(Boolean); // Remove any null or undefined values 
+          ].filter(Boolean) // Remove any null or undefined values 
           this.languageList = newLanguageList
 
           // get the currencies of the selected country minus the already selected currencies (if they exists in the country currencies list)
@@ -127,7 +124,7 @@ export default {
             ...this.userSettingsForm.selectedCurrencies,
             ...countryCurrenciesList,
             ...newCurrencyList.filter(currency => !selectedCountry.currency.includes(currency) && !this.userSettingsForm.selectedCurrencies.includes(currency))
-          ].filter(Boolean); // Remove any null or undefined values
+          ].filter(Boolean) // Remove any null or undefined values
           this.currencyList = newCurrencyList
         }
       }
