@@ -2,18 +2,15 @@
   <v-dialog>
     <v-card>
       <v-card-title>
-        {{ $t('ProductCategories.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('ProductCard.Categories') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
       </v-card-title>
 
       <v-divider></v-divider>
 
-      <v-card-text v-if="categories.length">
+      <v-card-text>
         <v-chip v-for="category in categories" :key="category" label class="mr-2 mb-2" @click="goToCategory(category)">
           {{ category }}
         </v-chip>
-      </v-card-text>
-      <v-card-text v-if="!categories.length">
-        <span class="text-red">{{ $t('ProductCategories.Empty') }}</span>
       </v-card-text>
     </v-card>
   </v-dialog>
@@ -22,15 +19,7 @@
 <script>
 export default {
   props: {
-    'categories': Array,
-  },
-  data() {
-    return {
-    }
-  },
-  computed: {
-  },
-  mounted() {
+    categories: Array,
   },
   methods: {
     goToCategory(category) {

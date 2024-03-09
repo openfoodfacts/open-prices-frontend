@@ -194,19 +194,19 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Categories": "Categories",
+		"CategoriesLower": "categories",
 		"CategoryTotal": "{count} categories",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
+		"ProductCategoriesMissing": "Product categories missing",
+		"ProductLabelsMissing": "Product labels missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Unknown product name"
-	},
-	"ProductCategories": {
-		"Title": "Categories",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
