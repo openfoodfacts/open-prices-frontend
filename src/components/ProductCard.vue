@@ -22,8 +22,10 @@
               <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
             <br />
-            <span>
+            <span class="mr-1">
               <ProductCategoriesChip :productCategories="product.categories_tags"></ProductCategoriesChip>
+            </span>
+            <span>
               <ProductLabelsChip :productLabels="product.labels_tags"></ProductLabelsChip>
             </span>
             <br />

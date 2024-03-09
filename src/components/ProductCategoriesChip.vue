@@ -1,10 +1,14 @@
 <template>
-  <v-chip label size="small" density="comfortable" class="mr-1" @click="showProductCategoriesDialog">
-    {{ $t('ProductCard.CategoryTotal', { count: productCategories ? productCategories.length : 0 }) }}
+  <v-chip v-if="productCategories.length" label size="small" density="comfortable" @click="showProductCategoriesDialog">
+    {{ $t('ProductCard.CategoryTotal', { count: productCategories.length }) }}
+  </v-chip>
+  <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning">
+    {{ $t('ProductCard.CategoriesLower') }}
+    <v-tooltip activator="parent" open-on-click location="top">{{ $t('ProductCard.ProductCategoriesMissing') }}</v-tooltip>
   </v-chip>
 
   <ProductCategoriesDialog
-    v-if="productCategories && productCategoriesDialog"
+    v-if="productCategories.length && productCategoriesDialog"
     :categories="productCategories"
     v-model="productCategoriesDialog"
     @close="productCategoriesDialog = false"
@@ -19,7 +23,10 @@ export default {
     'ProductCategoriesDialog': defineAsyncComponent(() => import('../components/ProductCategoriesDialog.vue')),
   },
   props: {
-    productCategories: null,
+    productCategories: {
+      type: Array,
+      default: []
+    }
   },
   data() {
     return {
