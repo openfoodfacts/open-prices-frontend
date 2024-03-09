@@ -199,8 +199,9 @@
 		"LatestPrice": "En son fiyat",
 		"ProductQuantityGram": "{0} gr",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Bilinmeyen ürün adı"
 	},
 	"ProductCategories": {
