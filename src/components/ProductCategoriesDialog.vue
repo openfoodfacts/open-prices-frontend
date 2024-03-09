@@ -21,14 +21,6 @@ export default {
   props: {
     categories: Array,
   },
-  data() {
-    return {
-    }
-  },
-  computed: {
-  },
-  mounted() {
-  },
   methods: {
     goToCategory(category) {
       this.$router.push({ path: `/categories/${category}` })

@@ -33,8 +33,6 @@ export default {
       productCategoriesDialog: false
     }
   },
-  computed: {
-  },
   methods: {
     showProductCategoriesDialog() {
       this.productCategoriesDialog = true
