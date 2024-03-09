@@ -19,11 +19,8 @@
             <span v-if="hasPriceOrigin" class="mr-1">
               <PriceOrigins :priceOrigins="price.origins_tags"></PriceOrigins>
             </span>
-            <span v-if="hasPriceLabels">
-              <v-chip v-for="pl in priceLabels" label size="small" density="comfortable" class="mr-1">
-                {{ pl.name }}
-                <v-icon v-if="pl.icon" end :icon="pl.icon"></v-icon>
-              </v-chip>
+            <span v-if="hasPriceLabels" class="mr-1">
+              <PriceLabels :priceLabels="price.labels_tags"></PriceLabels>
             </span>
           </p>
 
@@ -38,7 +35,6 @@
 
 <script>
 import utils from '../utils.js'
-import LabelsTags from '../data/labels-tags.json'
 import { defineAsyncComponent } from 'vue'
 
 export default {
@@ -46,6 +42,7 @@ export default {
     'ProductBrands': defineAsyncComponent(() => import('../components/ProductBrands.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
     'PriceOrigins': defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
+    'PriceLabels': defineAsyncComponent(() => import('../components/PriceLabels.vue')),
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
     'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue'))
   },
@@ -64,11 +61,9 @@ export default {
   data() {
     return {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
-      priceLabels: [],
     }
   },
   mounted() {
-    this.initPriceCard()
   },
   computed: {
     categoryTag() {
@@ -105,9 +100,6 @@ export default {
     },
   },
   methods: {
-    initPriceCard() {
-      this.priceLabels = this.getPriceLabelsTagsList()
-    },
     getPriceProductTitle() {
       if (this.hasProductName) {
         return this.product.product_name
@@ -127,12 +119,6 @@ export default {
         return this.price.category_tag
       }
       return 'product code error'
-    },
-    
-    getPriceLabelsTagsList() {
-      if (this.price && this.price.labels_tags) {
-        return LabelsTags.filter(lt => this.price.labels_tags.indexOf(lt.id) > -1)
-      }
     },
     goToProduct() {
       if (this.readonly) {
