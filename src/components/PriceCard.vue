@@ -16,10 +16,8 @@
             <span v-if="hasProductName" class="mr-1">
               <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
-            <span v-if="hasPriceOrigin && priceOrigin">
-              <v-chip label size="small" density="comfortable" class="mr-1">
-                {{ priceOrigin.name }}
-              </v-chip>
+            <span v-if="hasPriceOrigin" class="mr-1">
+              <PriceOrigins :priceOrigins="price.origins_tags"></PriceOrigins>
             </span>
             <span v-if="hasPriceLabels">
               <v-chip v-for="pl in priceLabels" label size="small" density="comfortable" class="mr-1">
@@ -40,7 +38,6 @@
 
 <script>
 import utils from '../utils.js'
-import OriginTags from '../data/origins-tags.json'
 import LabelsTags from '../data/labels-tags.json'
 import { defineAsyncComponent } from 'vue'
 
@@ -48,6 +45,7 @@ export default {
   components: {
     'ProductBrands': defineAsyncComponent(() => import('../components/ProductBrands.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
+    'PriceOrigins': defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
     'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue'))
   },
@@ -66,7 +64,6 @@ export default {
   data() {
     return {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
-      priceOrigin: null,
       priceLabels: [],
     }
   },
@@ -109,7 +106,6 @@ export default {
   },
   methods: {
     initPriceCard() {
-      this.priceOrigin = this.getPriceOriginTag()
       this.priceLabels = this.getPriceLabelsTagsList()
     },
     getPriceProductTitle() {
@@ -132,11 +128,7 @@ export default {
       }
       return 'product code error'
     },
-    getPriceOriginTag() {
-      if (this.price && this.price.origins_tags) {
-        return OriginTags.find(ot => this.price.origins_tags[0].indexOf(ot.id) > -1)
-      }
-    },
+    
     getPriceLabelsTagsList() {
       if (this.price && this.price.labels_tags) {
         return LabelsTags.filter(lt => this.price.labels_tags.indexOf(lt.id) > -1)
