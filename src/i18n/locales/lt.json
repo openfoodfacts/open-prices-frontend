@@ -194,7 +194,9 @@
 		"Title": "Naujausios kainos"
 	},
 	"ProductCard": {
+		"Brands": "Prekės ženklai",
 		"BrandLower": "prekės ženklas",
+		"BrandTotal": "{count} prekių ženklai (-ų)",
 		"Categories": "Kategorijos",
 		"CategoriesLower": "kategorijos",
 		"CategoryTotal": "{count} categories",
@@ -202,7 +204,7 @@
 		"LabelsLower": "etiketes",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Naujausia kaina",
-		"ProductBrandMissing": "Product brand missing",
+		"ProductBrandMissing": "Trûksta produkto prekių ženklo",
 		"ProductCategoriesMissing": "Trūksta produktų kategorijų",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
