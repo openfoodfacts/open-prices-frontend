@@ -194,9 +194,16 @@
 		"Title": "Viimeisimmät hinnat"
 	},
 	"ProductCard": {
+		"BrandLower": "tuotemerkki",
+		"Categories": "Tuoteluokat",
+		"CategoriesLower": "tuoteluokat",
 		"CategoryTotal": "{count} kategoriaa",
+		"Labels": "Merkit",
+		"LabelsLower": "merkit",
 		"LabelTotal": "{count} tunnisteita",
 		"LatestPrice": "Viimeisin hinta",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
@@ -204,20 +211,12 @@
 		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Tuntematon tuotenimi"
 	},
-	"ProductCategories": {
-		"Title": "Tuoteluokat",
-		"Empty": "Tähän tuotteeseen ei ole vielä lisätty luokkia."
-	},
 	"ProductDetail": {
 		"AddPrice": "Lisää hinta",
 		"CategoryNotFound": "Luokkaa ei löydy...",
 		"LatestPrices": "Viimeisimmät hinnat",
 		"LoadMore": "Lataa enemmän",
 		"ProductNotFound": "Tuotetta ei löydy Open Food Factsista... Älä epäröi lisätä sitä :)"
-	},
-	"ProductLabels": {
-		"Title": "Merkit",
-		"Empty": "Tähän tuotteeseen ei ole vielä lisätty etikettejä."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Piilota tuotteet hinnoilla",
