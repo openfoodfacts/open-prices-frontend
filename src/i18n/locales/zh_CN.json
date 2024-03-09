@@ -194,9 +194,16 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"BrandLower": "品牌",
+		"Categories": "類別",
+		"CategoriesLower": "分类",
 		"CategoryTotal": "{count} categories",
+		"Labels": "标签",
+		"LabelsLower": "标签",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
@@ -204,20 +211,12 @@
 		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "未知产品名称"
 	},
-	"ProductCategories": {
-		"Title": "類別",
-		"Empty": "No categories have been added to this product yet."
-	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "載入更多",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
-	},
-	"ProductLabels": {
-		"Title": "标签",
-		"Empty": "No labels have been added to this product yet."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
