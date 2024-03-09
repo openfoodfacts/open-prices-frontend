@@ -13,8 +13,8 @@
             <span v-if="hasProductSource">
               <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
             </span>
-            <span v-if="hasProductName">
-              <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
+            <span v-if="hasProductName" class="mr-1">
+              <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
             <span v-if="hasPriceOrigin && priceOrigin">
               <v-chip label size="small" density="comfortable" class="mr-1">
