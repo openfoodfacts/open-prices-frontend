@@ -194,7 +194,9 @@
 		"Title": "Son fiyatlar"
 	},
 	"ProductCard": {
+		"Brands": "Markalar",
 		"BrandLower": "marka",
+		"BrandTotal": "{count} marka",
 		"Categories": "Kategoriler",
 		"CategoriesLower": "kategoriler",
 		"CategoryTotal": "{count} kategoriler",
@@ -202,13 +204,13 @@
 		"LabelsLower": "etiketler",
 		"LabelTotal": "{count} etiketler",
 		"LatestPrice": "En son fiyat",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Ürün markası eksik",
+		"ProductCategoriesMissing": "Ürün kategorileri eksik",
 		"ProductQuantityGram": "{0} gr",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Ürün miktarı eksik",
 		"UnknownProduct": "Bilinmeyen ürün adı"
 	},
 	"ProductDetail": {

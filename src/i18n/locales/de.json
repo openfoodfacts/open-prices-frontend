@@ -194,7 +194,9 @@
 		"Title": "Aktuelle Preise"
 	},
 	"ProductCard": {
+		"Brands": "Marken",
 		"BrandLower": "Marke",
+		"BrandTotal": "{count} Marken",
 		"Categories": "Kategorien",
 		"CategoriesLower": "Kategorien",
 		"CategoryTotal": "{count} Kategorien",
@@ -202,13 +204,13 @@
 		"LabelsLower": "Etiketten",
 		"LabelTotal": "{count} Etiketten",
 		"LatestPrice": "Neuester Preis",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Produktmarke fehlt",
+		"ProductCategoriesMissing": "Produktkategorien fehlen",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} l",
 		"ProductQuantityMililitre": "{0} ml",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Produktmenge fehlt",
 		"UnknownProduct": "Unbekannter Produktname"
 	},
 	"ProductDetail": {

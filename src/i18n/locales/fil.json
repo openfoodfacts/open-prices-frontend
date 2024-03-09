@@ -194,7 +194,9 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "Mga Tatak",
 		"BrandLower": "mga tatak",
+		"BrandTotal": "{count} brands",
 		"Categories": "Mga Kategorya",
 		"CategoriesLower": "mga kategorya",
 		"CategoryTotal": "{count} categories",

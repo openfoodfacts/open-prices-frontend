@@ -194,7 +194,9 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "Kaubamärgid",
 		"BrandLower": "kaubamärk",
+		"BrandTotal": "{count} brands",
 		"Categories": "Kategooriad",
 		"CategoriesLower": "kategooriad",
 		"CategoryTotal": "{count} categories",

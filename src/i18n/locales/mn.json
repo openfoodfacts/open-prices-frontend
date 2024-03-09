@@ -194,7 +194,9 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "Брэндүүд",
 		"BrandLower": "брэнд",
+		"BrandTotal": "{count} brands",
 		"Categories": "Ангилалууд",
 		"CategoriesLower": "categories",
 		"CategoryTotal": "{count} categories",

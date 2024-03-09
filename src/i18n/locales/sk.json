@@ -194,7 +194,9 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "Značky",
 		"BrandLower": "značka",
+		"BrandTotal": "{count} brands",
 		"Categories": "Kategórie",
 		"CategoriesLower": "kategórie",
 		"CategoryTotal": "{count} categories",

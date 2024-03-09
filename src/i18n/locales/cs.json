@@ -194,7 +194,9 @@
 		"Title": "Nejnovější ceny"
 	},
 	"ProductCard": {
+		"Brands": "Značky",
 		"BrandLower": "značka",
+		"BrandTotal": "{count} brands",
 		"Categories": "Kategorie",
 		"CategoriesLower": "kategorie",
 		"CategoryTotal": "{count} kategorií",

@@ -194,7 +194,9 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "Виробники",
 		"BrandLower": "виробник",
+		"BrandTotal": "{count} брендів",
 		"Categories": "Категорії",
 		"CategoriesLower": "категорії",
 		"CategoryTotal": "{count} категорій",
@@ -202,8 +204,8 @@
 		"LabelsLower": "категорії",
 		"LabelTotal": "{count} міток",
 		"LatestPrice": "Остання ціна",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Бренд продукту відсутній",
+		"ProductCategoriesMissing": "Категорії товарів відсутні",
 		"ProductQuantityGram": "{0} г",
 		"ProductQuantityKilogram": "{0} кг",
 		"ProductQuantityLitre": "{0} Л",

@@ -194,7 +194,9 @@
 		"Title": "Derniers prix ajoutés"
 	},
 	"ProductCard": {
+		"Brands": "Marques",
 		"BrandLower": "marque",
+		"BrandTotal": "{count} marques",
 		"Categories": "Catégories",
 		"CategoriesLower": "catégories",
 		"CategoryTotal": "{count} catégories",
@@ -202,13 +204,13 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Dernier prix",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Marque de produit manquante",
+		"ProductCategoriesMissing": "Catégories de produits manquantes",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Quantité de produit manquante",
 		"UnknownProduct": "Produit inconnu"
 	},
 	"ProductDetail": {

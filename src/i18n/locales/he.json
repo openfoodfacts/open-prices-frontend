@@ -194,7 +194,9 @@
 		"Title": "מחירים עדכניים"
 	},
 	"ProductCard": {
+		"Brands": "מותגים",
 		"BrandLower": "מותג",
+		"BrandTotal": "{count} brands",
 		"Categories": "קטגוריות",
 		"CategoriesLower": "קטגוריות",
 		"CategoryTotal": "{count} קטגוריות",
