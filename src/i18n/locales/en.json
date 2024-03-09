@@ -39,7 +39,6 @@
 		"Create": "Create",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"ChangeCurrency": "Change currency",
 			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "Discounted price",
@@ -55,8 +54,7 @@
 			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery",
 			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof",
-			"AddCurrencies": "Add currencies"
+			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Category",
@@ -125,7 +123,9 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of favorite currencies",
-		"Currency": "Currency"
+		"Currency": "Currency",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning":"You will be redirected to the Settings page but will lose any info you have entered on this page."
 		
 	},
 	"UserRecentProofsDialog": {

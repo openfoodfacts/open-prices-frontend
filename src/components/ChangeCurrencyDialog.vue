@@ -9,12 +9,16 @@
           :label="$t('ChangeCurrencyDialog.Currency')"
           :items="userFavoriteCurrencies"
           hide-details="auto"
+          class="mb-5"
+
         ></v-select>
         <v-col cols="12">
-          
           <v-btn class="mb-2" size="small" prepend-icon="mdi-cog-outline" @click="goToSettings">
-            <span>{{ $t('AddPriceSingle.PriceDetails.AddCurrencies') }}</span>
+            <span>{{ $t('ChangeCurrencyDialog.AddCurrencies') }}</span>
           </v-btn>
+          <p class="text-caption text-warning">
+            <i>{{ $t('ChangeCurrencyDialog.AddCurrenciesWarning') }}</i>
+          </p>
         </v-col>
         <v-col cols="12">
           <v-btn class="mt-2" color="success" @click="selectedCurrency">{{ $t('UserSettings.Save') }}</v-btn>

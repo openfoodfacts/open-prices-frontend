@@ -232,7 +232,12 @@
                 min="0"
                 hide-details="auto"
                 :suffix="productPriceForm.currency"
-              ></v-text-field>
+                >
+                  <template v-slot:prepend>
+                    <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
+                    <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true" />
+                  </template>
+              </v-text-field>
             </v-col>
             <v-col v-if="productPriceForm.price_is_discounted" cols="6">
               <v-text-field
@@ -246,26 +251,9 @@
               ></v-text-field>
             </v-col>
           </v-row>
-          <div class="d-flex">
+          <div class="d-inline">
             <v-checkbox v-model="productPriceForm.price_is_discounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
-            <v-checkbox v-model="isChangeCurrency" :label="$t('AddPriceSingle.PriceDetails.ChangeCurrency')" hide-details="auto"></v-checkbox>
-
           </div>
-          <v-row v-if="isChangeCurrency">
-              <v-col cols="6">
-                <v-select
-                  v-model="productPriceForm.currency"
-                  :label="$t('AddPriceSingle.PriceDetails.Currency')"
-                  :items="appStore.getUserCurrencies"
-                  hide-details="auto"
-                ></v-select>
-              </v-col>
-              <v-col cols="6" class="d-flex align-center">
-                <v-btn class="mb-2" size="small" prepend-icon="mdi-cog-outline" @click="goToSettings">
-                  <span>{{ $t('AddPriceSingle.PriceDetails.AddCurrencies') }}</span>
-                </v-btn>
-              </v-col>
-            </v-row>
         </v-card-text>
         <v-divider></v-divider>
         <v-card-text>
@@ -346,6 +334,12 @@
     @proofConfirmed="handleProofConfirmed"
     @close="userRecentProofsDialog = false"
   ></UserRecentProofsDialog>
+  <ChangeCurrencyDialog
+    v-if="changeCurrencyDialog"
+    v-model="changeCurrencyDialog"
+    @newCurrencySelected="setCurrencyData($event)"
+    @close="changeCurrencyDialog = false"
+  ></ChangeCurrencyDialog>
 </template>
 
 <script>
@@ -371,7 +365,8 @@ export default {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
     'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
-    'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue'))
+    'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
+    'ChangeCurrencyDialog': defineAsyncComponent(() => import('../components/ChangeCurrencyDialog.vue')),
   },
   data() {
     return {
@@ -428,8 +423,9 @@ export default {
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
       ],
-      isChangeCurrency: false,
-    }
+      // currency selection
+      changeCurrencyDialog: false,
+     }
   },
   computed: {
     ...mapStores(useAppStore),
@@ -498,9 +494,6 @@ export default {
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
       }
-    },
-    goToSettings() {
-      this.$router.push({ path: "/settings/" })
     },
     addPriceToUploadedList(price) {
       this.productPriceUploadedList.push(price)
@@ -622,6 +615,9 @@ export default {
       this.productPriceForm.currency = this.appStore.getUserLastCurrencyUsed
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
     },
+    setCurrencyData(currency) {
+      this.productPriceForm.currency = currency
+    },
     createPrice() {
       this.createPriceLoading = true
       this.appStore.setLastCurrencyUsed(this.productPriceForm.currency)
@@ -680,3 +676,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.icon-info-currency {
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-right: -10px;
+}
+</style>
