@@ -21,7 +21,9 @@
           </p>
         </v-col>
         <v-col cols="12">
-          <v-btn class="mt-2" color="success" @click="selectedCurrency">{{ $t('UserSettings.Save') }}</v-btn>
+          <v-btn class="mt-2" @click="selectedCurrency">
+            {{ $t('ChangeCurrencyDialog.Select', { currency_code: userLastCurrencyUsed }) }}
+          </v-btn>
         </v-col>
       </v-card-text>
     </v-card>

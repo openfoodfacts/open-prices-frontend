@@ -233,7 +233,7 @@
                 hide-details="auto"
                 :suffix="productPriceForm.currency"
                 >
-                  <template v-slot:prepend>
+                  <template v-slot:prepend-inner>
                     <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
                     <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true" />
                   </template>
@@ -679,9 +679,8 @@ export default {
 
 <style scoped>
 .icon-info-currency {
-  width: 30px;
-  height: 30px;
-  margin-left: -15px;
-  margin-right: -10px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 </style>
