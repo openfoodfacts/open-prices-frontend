@@ -194,7 +194,9 @@
 		"Title": "Harga terbaru"
 	},
 	"ProductCard": {
+		"Brands": "Merek - merek",
 		"BrandLower": "merek",
+		"BrandTotal": "{count} brands",
 		"Categories": "Kategori",
 		"CategoriesLower": "kategori",
 		"CategoryTotal": "{count} categories",
