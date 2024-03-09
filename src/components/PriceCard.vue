@@ -10,10 +10,8 @@
           <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
           <p v-if="!hideProductDetails" class="mb-2">
-            <span v-if="hasProductBrands">
-              <v-chip v-for="brand in getProductBrandsList" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
-                {{ brand }}
-              </v-chip>
+            <span v-if="hasProductSource">
+              <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
             </span>
             <span v-if="hasProductName">
               <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
@@ -48,6 +46,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
+    'ProductBrands': defineAsyncComponent(() => import('../components/ProductBrands.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
     'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue'))
@@ -90,11 +89,11 @@ export default {
     hasProductName() {
       return this.hasProduct && !!this.product.product_name
     },
+    hasProductSource() {
+      return this.hasProduct && !!this.product.source
+    },
     hasProductQuantity() {
       return this.hasProduct && !!this.product.product_quantity
-    },
-    hasProductBrands() {
-      return this.hasProduct && !!this.product.brands
     },
     hasPriceOrigin() {
       return this.hasPrice && !!this.price.origins_tags && this.price.origins_tags.length
@@ -105,11 +104,6 @@ export default {
     getPriceCategoryName() {
       if (this.price && this.hasCategoryTag) {
         return utils.getCategoryName(this.price.category_tag)
-      }
-    },
-    getProductBrandsList() {
-      if (this.hasProductBrands) {
-        return this.product.brands.split(',')
       }
     },
   },
@@ -153,12 +147,6 @@ export default {
         return
       }
       this.$router.push({ path: `/products/${this.getPriceProductCode()}` })
-    },
-    goToBrand(brand) {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/brands/${brand}` })
     },
   },
 }
