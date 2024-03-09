@@ -194,9 +194,16 @@
 		"Title": "Últims preus"
 	},
 	"ProductCard": {
+		"BrandLower": "marca",
+		"Categories": "Categories",
+		"CategoriesLower": "categories",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Etiquetes",
+		"LabelsLower": "etiquetes",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
@@ -204,20 +211,12 @@
 		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Nom de producte desconegut"
 	},
-	"ProductCategories": {
-		"Title": "Categories",
-		"Empty": "No categories have been added to this product yet."
-	},
 	"ProductDetail": {
 		"AddPrice": "Afegir un preu",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Últims preus",
 		"LoadMore": "Carrega mes ",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
-	},
-	"ProductLabels": {
-		"Title": "Etiquetes",
-		"Empty": "No labels have been added to this product yet."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
