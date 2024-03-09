@@ -13,12 +13,8 @@
             <span>
               <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
             </span>
-            <span v-if="hasProductBrands">
-              <v-chip v-for="brand in getProductBrandsList" :key="brand" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
-                {{ brand }}
-              </v-chip>
-            </span>
-            <span v-if="hasProductName">
+            <ProductBrands v-if="hasProductSource" :productBrands="product.brands"></ProductBrands>
+            <span v-if="hasProductSource">
               <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
             <br />
@@ -52,6 +48,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    'ProductBrands': defineAsyncComponent(() => import('../components/ProductBrands.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
     'ProductCategoriesChip': defineAsyncComponent(() => import('../components/ProductCategoriesChip.vue')),
     'ProductLabelsChip': defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
@@ -83,11 +80,6 @@ export default {
     hasProductQuantity() {
       return !!this.product.product_quantity
     },
-    getProductBrandsList() {
-      if (this.hasProductBrands) {
-        return this.product.brands.split(',')
-      }
-    }
   },
   methods: {
     getProductTitle() {
@@ -98,12 +90,6 @@ export default {
         return
       }
       this.$router.push({ path: `/products/${this.product.code}` })
-    },
-    goToBrand(brand) {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/brands/${brand}` })
     },
   }
 }
