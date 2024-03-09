@@ -61,7 +61,7 @@
 			"ProductBarcode": "उत्पाद बारकोड",
 			"Scan": "स्कैन",
 			"ScanBarcode": "बारकोड स्कैन करें",
-			"Type": "Type",
+			"Type": "प्रकार",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -100,10 +100,22 @@
 		"TopProducts": "Top products",
 		"BrandProductTotal": "{count} products"
 	},
+	"CategoryDetail": {
+		"LoadMore": "अधिक लोड करें",
+		"TopProducts": "Top products",
+		"CategoryProductTotal": "{count} products"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "कीमत",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Yes": "हाँ",
 		"No": "नहीं"
@@ -202,6 +214,10 @@
 		"LoadMore": "अधिक लोड करें",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
+	"ProductLabels": {
+		"Title": "लेबल",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "अधिक लोड करें",
@@ -210,6 +226,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "सबूत",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "रसीद",
 		"GDPR_REQUEST": "GDPR request"

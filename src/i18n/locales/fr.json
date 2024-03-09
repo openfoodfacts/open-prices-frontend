@@ -100,10 +100,22 @@
 		"TopProducts": "Top produits",
 		"BrandProductTotal": "{count} produits"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Voir plus",
+		"TopProducts": "Top produits",
+		"CategoryProductTotal": "{count} produits"
+	},
 	"Common": {
 		"AddToOFF": "Ajouter à {name}",
 		"Filter": "Filtre",
+		"FilterProductWithPriceCountHide": "Cacher les produits qui ont un prix",
+		"FilterPriceMoreThan30DaysHide": "Masquer les prix datant de plus de 30 jours",
 		"Order": "Ordre",
+		"OrderProductUniqueScansDESC": "Nombre de numérisations",
+		"OrderProductPriceCountDESC": "Nombre de prix",
+		"OrderPriceASC": "Prix",
+		"OrderPriceCreatedDESC": "Date d'ajout",
+		"OrderPriceDateDESC": "Date du prix",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
 		"Yes": "Oui",
 		"No": "Non"
@@ -202,6 +214,10 @@
 		"LoadMore": "Voir plus",
 		"ProductNotFound": "Ce produit n'existe pas sur Open Food Facts... N'hésitez pas à le rajouter :)"
 	},
+	"ProductLabels": {
+		"Title": "Labels",
+		"Empty": "Aucune étiquette n'a encore été ajoutée à ce produit."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Cacher les produits qui ont un prix",
 		"LoadMore": "Voir plus",
@@ -210,6 +226,7 @@
 		"Title": "Top produits"
 	},
 	"ProofCard": {
+		"Proof": "Preuve",
 		"PRICE_TAG": "Étiquette de prix",
 		"RECEIPT": "Ticket de caisse",
 		"GDPR_REQUEST": "Requête RGPD"

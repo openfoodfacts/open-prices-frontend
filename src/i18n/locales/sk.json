@@ -100,10 +100,22 @@
 		"TopProducts": "Top products",
 		"BrandProductTotal": "{count} produktov"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Načítať ďalšie",
+		"TopProducts": "Top products",
+		"CategoryProductTotal": "{count} produktov"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filtrovať",
+		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Cena",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}",
 		"Yes": "Áno",
 		"No": "Nie"
@@ -202,6 +214,10 @@
 		"LoadMore": "Načítať ďalšie",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
+	"ProductLabels": {
+		"Title": "Štítky",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Načítať ďalšie",
@@ -210,6 +226,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Účtenka",
 		"GDPR_REQUEST": "žiadosť GDPR"

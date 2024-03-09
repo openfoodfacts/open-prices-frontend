@@ -100,10 +100,22 @@
 		"TopProducts": "Top-Produkte",
 		"BrandProductTotal": "{count} Produkte"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Weitere laden",
+		"TopProducts": "Top-Produkte",
+		"CategoryProductTotal": "{count} Produkte"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Zu {name} hinzufügen",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Produkte mit Preisen ausblenden",
+		"FilterPriceMoreThan30DaysHide": "Preise ausblenden, die älter als 30 Tage sind",
 		"Order": "Reihenfolge",
+		"OrderProductUniqueScansDESC": "Anzahl der Scans",
+		"OrderProductPriceCountDESC": "Anzahl der Preise",
+		"OrderPriceASC": "Preis",
+		"OrderPriceCreatedDESC": "Hinzugefügt am",
+		"OrderPriceDateDESC": "Preisdatum",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
 		"Yes": "Ja",
 		"No": "Nein"
@@ -202,6 +214,10 @@
 		"LoadMore": "Weitere laden",
 		"ProductNotFound": "Produkt nicht in Open Food Facts gefunden... Zögern Sie nicht, es hinzuzufügen 🙂"
 	},
+	"ProductLabels": {
+		"Title": "Labels",
+		"Empty": "Diesem Produkt sind noch keine Etiketten hinzugefügt worden."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Produkte mit Preisen ausblenden",
 		"LoadMore": "Weitere laden",
@@ -210,6 +226,7 @@
 		"Title": "Top-Produkte"
 	},
 	"ProofCard": {
+		"Proof": "Nachweis",
 		"PRICE_TAG": "Preisschild",
 		"RECEIPT": "Kassenbon",
 		"GDPR_REQUEST": "DSGVO-Anfrage"
@@ -223,7 +240,7 @@
 	"ProofDetail": {
 		"LoadMore": "Weitere laden",
 		"Prices": "Preise",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Nachweis nicht gefunden (oder nicht der Eigentümer)"
 	},
 	"Router": {
 		"AddPrice": {

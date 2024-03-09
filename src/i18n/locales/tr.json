@@ -100,10 +100,22 @@
 		"TopProducts": "En iyi ürünler",
 		"BrandProductTotal": "{count} ürün"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Daha fazla yükle",
+		"TopProducts": "En iyi ürünler",
+		"CategoryProductTotal": "{count} ürün"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "{name}'e ekle",
 		"Filter": "Filtrele",
+		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
+		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
 		"Order": "Sipariş",
+		"OrderProductUniqueScansDESC": "Tarama sayısı",
+		"OrderProductPriceCountDESC": "Fiyat sayısı",
+		"OrderPriceASC": "Fiyat",
+		"OrderPriceCreatedDESC": "Eklenme tarihi",
+		"OrderPriceDateDESC": "Fiyat tarihi",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"Yes": "Evet",
 		"No": "Hayır"
@@ -202,6 +214,10 @@
 		"LoadMore": "Daha fazla yükle",
 		"ProductNotFound": "Open Food Facts'te ürün bulunamadı... Eklemekten çekinmeyin :)"
 	},
+	"ProductLabels": {
+		"Title": "Etiketler",
+		"Empty": "Bu ürüne henüz etiket eklenmedi."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Ürünleri fiyatlarıyla gizle",
 		"LoadMore": "Daha fazla yükle",
@@ -210,6 +226,7 @@
 		"Title": "En iyi ürünler"
 	},
 	"ProofCard": {
+		"Proof": "Kanıt",
 		"PRICE_TAG": "Fiyat etiketi",
 		"RECEIPT": "Makbuz",
 		"GDPR_REQUEST": "GDPR talebi"

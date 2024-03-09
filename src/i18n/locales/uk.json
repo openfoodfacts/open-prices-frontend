@@ -100,10 +100,22 @@
 		"TopProducts": "Top products",
 		"BrandProductTotal": "{count} продуктів"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Завантажити більше",
+		"TopProducts": "Top products",
+		"CategoryProductTotal": "{count} продуктів"
+	},
 	"Common": {
 		"AddToOFF": "Додати до {name}",
 		"Filter": "Фільтр",
+		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterPriceMoreThan30DaysHide": "Приховати ціни старші за 30 днів",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Кількість сканувань",
+		"OrderProductPriceCountDESC": "Кількість цін",
+		"OrderPriceASC": "Ціна",
+		"OrderPriceCreatedDESC": "Дата додавання",
+		"OrderPriceDateDESC": "Дата ціни",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
 		"Yes": "Так",
 		"No": "Ні"
@@ -202,6 +214,10 @@
 		"LoadMore": "Завантажити більше",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
+	"ProductLabels": {
+		"Title": "Етикетки",
+		"Empty": "До цього продукту ще не додано жодної мітки."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "Завантажити більше",
@@ -210,6 +226,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "Доказ",
 		"PRICE_TAG": "Цінник",
 		"RECEIPT": "Квитанція",
 		"GDPR_REQUEST": "Запит GDPR"

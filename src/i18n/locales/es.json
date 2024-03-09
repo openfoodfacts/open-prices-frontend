@@ -1,7 +1,7 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
+			"Subtitle": "Un shelf con múltiples etiquetas de precio",
 			"Title": "Varios productos"
 		},
 		"PriceCreated": "¡Precio creado!",
@@ -43,14 +43,14 @@
 			"LabelDiscounted": "Precio con descuento",
 			"LabelFull": "Precio original",
 			"Proof": "Comprobante",
-			"ProofDateChanged": "Date updated!",
-			"ProofSelected": "Proof selected!",
+			"ProofDateChanged": "¡Fecha de actualización!",
+			"ProofSelected": "¡Prueba seleccionada!",
 			"ProofUploaded": "¡Comprobante subido!",
 			"Title": "Detalles del precio",
 			"UploadProof": "Subir un comprobante",
-			"Picture": "Picture",
+			"Picture": "Imagen",
 			"TakePicture": "Saca una foto",
-			"Gallery": "Device gallery",
+			"Gallery": "Galería de dispositivos",
 			"SelectFromGallery": "Select from device gallery",
 			"RecentProof": "Recent proof",
 			"SelectRecentProof": "Select a recent proof"
@@ -96,14 +96,26 @@
 		"Title": "Introducir código de barras"
 	},
 	"BrandDetail": {
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"TopProducts": "Productos destacados",
 		"BrandProductTotal": "{count} productos"
+	},
+	"CategoryDetail": {
+		"LoadMore": "Cargar más",
+		"TopProducts": "Productos destacados",
+		"CategoryProductTotal": "{count} productos"
 	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filtros",
+		"FilterProductWithPriceCountHide": "Ocultar productos con precios",
+		"FilterPriceMoreThan30DaysHide": "Ocultar precios de más de 30 días",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Número de escaneos",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Precio",
+		"OrderPriceCreatedDESC": "Fecha de agregación",
+		"OrderPriceDateDESC": "Fecha del precio",
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
 		"Yes": "Sí",
 		"No": "No"
@@ -134,12 +146,12 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Últimos precios",
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"LocationNotFound": "Ubicación no encontrada en OpenStreetMap... No dudes en agregarla :)"
 	},
 	"LocationList": {
 		"Title": "Ubicaciones destacadas",
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"LocationTotal": "{count} ubicaciones"
 	},
 	"LocationSelector": {
@@ -178,7 +190,7 @@
 		"Success": "¡Precio eliminado!"
 	},
 	"PriceList": {
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"Title": "Últimos precios"
 	},
 	"ProductCard": {
@@ -199,17 +211,22 @@
 		"AddPrice": "Añadir un precio",
 		"CategoryNotFound": "Categoría no encontrada...",
 		"LatestPrices": "Últimos precios",
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"ProductNotFound": "No se ha encontrado el producgto en Open Food Facts... No dudes en agregarlo :)"
+	},
+	"ProductLabels": {
+		"Title": "Etiquetas",
+		"Empty": "No labels have been added to this product yet."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Ocultar productos con precios",
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"PriceNumber": "Número de precios añadidos",
 		"ScanNumber": "Número de escaneos añadidos",
 		"Title": "Productos destacados"
 	},
 	"ProofCard": {
+		"Proof": "Comprobante",
 		"PRICE_TAG": "Etiqueta de precio",
 		"RECEIPT": "Ticket",
 		"GDPR_REQUEST": "GDPR request"
@@ -221,7 +238,7 @@
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"Prices": "Precios",
 		"ProofNotFound": "Proof not found (or not the owner)"
 	},
@@ -282,9 +299,9 @@
 	"UserDashboard": {
 		"LatestPrices": "Últimos precios",
 		"LatestProofs": "Latest proofs",
-		"LoadMore": "Carga más",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"LoadMore": "Cargar más",
+		"MyPrices": "Mis precios",
+		"MyProofs": "Mis pruebas",
 		"Settings": "Configuración",
 		"Title": "Panel de control",
 		"UserPriceTotal": "{count} precios",
@@ -292,10 +309,10 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Últimos precios",
-		"LoadMore": "Carga más"
+		"LoadMore": "Cargar más"
 	},
 	"UserList": {
-		"LoadMore": "Carga más",
+		"LoadMore": "Cargar más",
 		"Title": "Colaboradores destacados",
 		"UserTotal": "{count} contributors"
 	},

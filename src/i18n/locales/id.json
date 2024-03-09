@@ -100,10 +100,22 @@
 		"TopProducts": "Produk teratas",
 		"BrandProductTotal": "{count} produk"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Muat lebih banyak",
+		"TopProducts": "Produk teratas",
+		"CategoryProductTotal": "{count} produk"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Tambahkan ke {name}",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
+		"FilterPriceMoreThan30DaysHide": "Sembunyikan harga yang sudah lebih dari 30 hari",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Jumlah pindaian",
+		"OrderProductPriceCountDESC": "Jumlah harga",
+		"OrderPriceASC": "Harga",
+		"OrderPriceCreatedDESC": "Tanggal penambahan",
+		"OrderPriceDateDESC": "Tanggal harga",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
 		"Yes": "Ya",
 		"No": "Tidak"
@@ -202,6 +214,10 @@
 		"LoadMore": "Muat lebih banyak",
 		"ProductNotFound": "Produk tidak ditemukan di Open Food Facts... Jangan ragu untuk menambahkannya :)"
 	},
+	"ProductLabels": {
+		"Title": "Label - label",
+		"Empty": "Belum ada label yang ditambahkan ke produk ini."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Sembunyikan produk dengan harga",
 		"LoadMore": "Muat lebih banyak",
@@ -210,6 +226,7 @@
 		"Title": "Produk teratas"
 	},
 	"ProofCard": {
+		"Proof": "Bukti",
 		"PRICE_TAG": "Label harga",
 		"RECEIPT": "Resi",
 		"GDPR_REQUEST": "Permintaan GDPR"

@@ -100,10 +100,22 @@
 		"TopProducts": "Populiariausi produktai",
 		"BrandProductTotal": "{count} produktai (-ų)"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Įkelti daugiau",
+		"TopProducts": "Populiariausi produktai",
+		"CategoryProductTotal": "{count} produktai (-ų)"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filtras",
+		"FilterProductWithPriceCountHide": "Slėpti produktus su kainomis",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Kaina",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"Yes": "Taip",
 		"No": "Ne"
@@ -202,6 +214,10 @@
 		"LoadMore": "Įkelti daugiau",
 		"ProductNotFound": "Produktas nerastas Open Food Facts... Nedvejokite ir pridėkite :)"
 	},
+	"ProductLabels": {
+		"Title": "Labels",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Slėpti produktus su kainomis",
 		"LoadMore": "Įkelti daugiau",
@@ -210,6 +226,7 @@
 		"Title": "Populiariausi produktai"
 	},
 	"ProofCard": {
+		"Proof": "Įrodymai",
 		"PRICE_TAG": "Kainos etiketė",
 		"RECEIPT": "Čekis",
 		"GDPR_REQUEST": "GDPR request"

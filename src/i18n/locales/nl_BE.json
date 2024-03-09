@@ -100,10 +100,22 @@
 		"TopProducts": "Top producten",
 		"BrandProductTotal": "{count} producten"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Meer laden",
+		"TopProducts": "Top producten",
+		"CategoryProductTotal": "{count} producten"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Toevoegen aan {name}",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Verberg producten met prijzen",
+		"FilterPriceMoreThan30DaysHide": "Verberg prijzen ouder dan 30 dagen",
 		"Order": "Sorteren",
+		"OrderProductUniqueScansDESC": "Aantal scans",
+		"OrderProductPriceCountDESC": "Aantal prijzen",
+		"OrderPriceASC": "Prijs",
+		"OrderPriceCreatedDESC": "Datum van toevoeging",
+		"OrderPriceDateDESC": "Prijsdatum",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
 		"Yes": "Ja",
 		"No": "Nee"
@@ -202,6 +214,10 @@
 		"LoadMore": "Meer laden",
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
+	"ProductLabels": {
+		"Title": "Keurmerken",
+		"Empty": "Er zijn nog geen labels aan dit product toegevoegd."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Verberg producten met prijzen",
 		"LoadMore": "Meer laden",
@@ -210,6 +226,7 @@
 		"Title": "Top producten"
 	},
 	"ProofCard": {
+		"Proof": "Bewijs",
 		"PRICE_TAG": "Prijskaartje",
 		"RECEIPT": "Bon",
 		"GDPR_REQUEST": "GDPR request"
@@ -223,7 +240,7 @@
 	"ProofDetail": {
 		"LoadMore": "Meer laden",
 		"Prices": "Prijzen",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Bewijs niet gevonden (of niet de eigenaar)"
 	},
 	"Router": {
 		"AddPrice": {

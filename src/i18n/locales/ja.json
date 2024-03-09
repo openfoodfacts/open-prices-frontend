@@ -100,10 +100,22 @@
 		"TopProducts": "Top products",
 		"BrandProductTotal": "商品 {count} 個"
 	},
+	"CategoryDetail": {
+		"LoadMore": "もっと読み込む",
+		"TopProducts": "Top products",
+		"CategoryProductTotal": "商品 {count} 個"
+	},
 	"Common": {
 		"AddToOFF": "{name} に追加",
 		"Filter": "フィルタ",
+		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterPriceMoreThan30DaysHide": "30日以上経過した価格を非表示にする",
 		"Order": "注文品",
+		"OrderProductUniqueScansDESC": "スキャンの数:",
+		"OrderProductPriceCountDESC": "価格の数",
+		"OrderPriceASC": "Price",
+		"OrderPriceCreatedDESC": "追加日",
+		"OrderPriceDateDESC": "価格日",
 		"SignInOFFAccount": "Google アカウントでログイン",
 		"Yes": "はい",
 		"No": "いいえ"
@@ -202,6 +214,10 @@
 		"LoadMore": "もっと読み込む",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
+	"ProductLabels": {
+		"Title": "ラベル",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
 		"LoadMore": "もっと読み込む",
@@ -210,6 +226,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "Proof",
 		"PRICE_TAG": "値札",
 		"RECEIPT": "領収書",
 		"GDPR_REQUEST": "GDPR リクエスト"

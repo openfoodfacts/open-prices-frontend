@@ -100,10 +100,22 @@
 		"TopProducts": "Najlepsze produkty",
 		"BrandProductTotal": "{count} produktów"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Załaduj więcej",
+		"TopProducts": "Najlepsze produkty",
+		"CategoryProductTotal": "{count} produktów"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "Filtr",
+		"FilterProductWithPriceCountHide": "Ukryj produkty z cenami",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Cena",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
 		"Yes": "Tak",
 		"No": "Nie"
@@ -202,6 +214,10 @@
 		"LoadMore": "Załaduj więcej",
 		"ProductNotFound": "Produktu nie znaleziono w Open Food Facts... Nie wahaj się go dodać :)"
 	},
+	"ProductLabels": {
+		"Title": "Etykieta",
+		"Empty": "No labels have been added to this product yet."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Ukryj produkty z cenami",
 		"LoadMore": "Załaduj więcej",
@@ -210,6 +226,7 @@
 		"Title": "Najlepsze produkty"
 	},
 	"ProofCard": {
+		"Proof": "Dowód",
 		"PRICE_TAG": "Cenówka",
 		"RECEIPT": "Rachunek",
 		"GDPR_REQUEST": "GDPR request"

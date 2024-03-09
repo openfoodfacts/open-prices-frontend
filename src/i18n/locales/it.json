@@ -44,7 +44,7 @@
 			"LabelFull": "Prezzo pieno",
 			"Proof": "Prova",
 			"ProofDateChanged": "Data aggiornata!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Prova selezionata!",
 			"ProofUploaded": "Prova caricata!",
 			"Title": "Dettagli sul prezzo",
 			"UploadProof": "Carica una prova",
@@ -52,8 +52,8 @@
 			"TakePicture": "Scatta una foto",
 			"Gallery": "Galleria dispositivo",
 			"SelectFromGallery": "Seleziona dalla galleria del dispositivo",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "Prova recente",
+			"SelectRecentProof": "Seleziona una prova recente"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
@@ -100,16 +100,28 @@
 		"TopProducts": "Prodotti migliori",
 		"BrandProductTotal": "{count} prodotti"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Scarica altro",
+		"TopProducts": "Prodotti migliori",
+		"CategoryProductTotal": "{count} prodotti"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Aggiungi a {name}",
 		"Filter": "Filtra",
+		"FilterProductWithPriceCountHide": "Nascondi i prodotti con i prezzi",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Ordine",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Prezzo",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
 		"Yes": "Sì",
 		"No": "No"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Seleziona una delle tue prove recenti"
 	},
 	"Footer": {
 		"About": "Informazioni",
@@ -202,6 +214,10 @@
 		"LoadMore": "Scarica altro",
 		"ProductNotFound": "Prodotto non trovato in Open Food Facts... Non esitate ad aggiungerlo :)"
 	},
+	"ProductLabels": {
+		"Title": "Etichette",
+		"Empty": "Nessuna etichetta è stata ancora aggiunta a questo prodotto."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "Nascondi i prodotti con i prezzi",
 		"LoadMore": "Scarica altro",
@@ -210,6 +226,7 @@
 		"Title": "Prodotti migliori"
 	},
 	"ProofCard": {
+		"Proof": "Prova",
 		"PRICE_TAG": "Etichetta del prezzo",
 		"RECEIPT": "Ricevuta",
 		"GDPR_REQUEST": "Richiesta RGPD"
@@ -223,7 +240,7 @@
 	"ProofDetail": {
 		"LoadMore": "Scarica altro",
 		"Prices": "Prezzi",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Prova non trovata (o non si è il proprietario)"
 	},
 	"Router": {
 		"AddPrice": {

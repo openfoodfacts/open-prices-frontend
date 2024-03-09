@@ -100,10 +100,22 @@
 		"TopProducts": "מוצרים מובילים",
 		"BrandProductTotal": "{count} מוצרים"
 	},
+	"CategoryDetail": {
+		"LoadMore": "לטעון עוד",
+		"TopProducts": "מוצרים מובילים",
+		"CategoryProductTotal": "{count} מוצרים"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
 		"Filter": "סינון",
+		"FilterProductWithPriceCountHide": "הסתרת מוצרים עם מחירים",
+		"FilterPriceMoreThan30DaysHide": "הסתרת מחירים ישנים מ־30 יום",
 		"Order": "סדר",
+		"OrderProductUniqueScansDESC": "מספר הסריקות",
+		"OrderProductPriceCountDESC": "מספר המחירים",
+		"OrderPriceASC": "מחיר",
+		"OrderPriceCreatedDESC": "תאריך ההוספה",
+		"OrderPriceDateDESC": "תאריך המחיר",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
 		"Yes": "כן",
 		"No": "לא"
@@ -202,6 +214,10 @@
 		"LoadMore": "לטעון עוד",
 		"ProductNotFound": "המוצר לא נמצא ב־Open Food Facts… אפשר להוסיף אותו ללא חשש :)"
 	},
+	"ProductLabels": {
+		"Title": "תוויות",
+		"Empty": "עדיין לא נוספו תוויות למוצר הזה."
+	},
 	"ProductList": {
 		"HideProductsWithPrices": "הסתרת מוצרים עם מחירים",
 		"LoadMore": "לטעון עוד",
@@ -210,6 +226,7 @@
 		"Title": "מוצרים מובילים"
 	},
 	"ProofCard": {
+		"Proof": "הוכחה",
 		"PRICE_TAG": "תווית מחיר",
 		"RECEIPT": "קבלה",
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)"
