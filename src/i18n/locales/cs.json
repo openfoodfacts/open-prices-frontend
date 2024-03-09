@@ -199,8 +199,9 @@
 		"LatestPrice": "Nejnovější cena",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} l",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Neznámý název produktu"
 	},
 	"ProductCategories": {
