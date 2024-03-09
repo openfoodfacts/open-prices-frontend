@@ -194,7 +194,9 @@
 		"Title": "Últims preus"
 	},
 	"ProductCard": {
+		"Brands": "Marques",
 		"BrandLower": "marca",
+		"BrandTotal": "{count} brands",
 		"Categories": "Categories",
 		"CategoriesLower": "categories",
 		"CategoryTotal": "{count} categories",
