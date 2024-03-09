@@ -194,7 +194,9 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "Brands",
 		"BrandLower": "အမှတ်တံဆိပ်",
+		"BrandTotal": "{count} brands",
 		"Categories": "Categories",
 		"CategoriesLower": "categories",
 		"CategoryTotal": "{count} categories",
