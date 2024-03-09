@@ -194,7 +194,9 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "Brands",
 		"BrandLower": "نام تجاری",
+		"BrandTotal": "{count} brands",
 		"Categories": "دسته‌‎بندی‎ها",
 		"CategoriesLower": "categories",
 		"CategoryTotal": "{count} categories",
