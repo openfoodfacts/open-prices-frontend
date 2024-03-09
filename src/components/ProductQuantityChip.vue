@@ -3,7 +3,7 @@
     {{ productQuantityWithUnitDisplay }}
   </v-chip>
   <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning">
-    <span>{{ productQuantityUnitDisplay }}</span>
+    {{ productQuantityUnitDisplay }}
     <v-tooltip activator="parent" open-on-click location="top">{{ $t('ProductCard.ProductQuantityMissing') }}</v-tooltip>
   </v-chip>
 </template>

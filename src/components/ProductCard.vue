@@ -13,7 +13,9 @@
             <span>
               <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
             </span>
-            <ProductBrands v-if="hasProductSource" :productBrands="product.brands"></ProductBrands>
+            <span v-if="hasProductSource">
+              <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
+            </span>
             <span v-if="hasProductSource">
               <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>

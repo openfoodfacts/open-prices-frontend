@@ -194,6 +194,7 @@
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"BrandLower": "brand",
 		"Categories": "Categories",
 		"CategoriesLower": "categories",
 		"CategoryTotal": "{count} categories",
@@ -201,6 +202,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
+		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
