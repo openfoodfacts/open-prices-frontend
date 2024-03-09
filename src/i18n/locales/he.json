@@ -199,8 +199,9 @@
 		"LatestPrice": "המחיר העדכני",
 		"ProductQuantityGram": "{0} גרם",
 		"ProductQuantityKilogram": "{0} ק״ג",
-		"ProductQuantityMililitre": "{0} מ״ל",
 		"ProductQuantityLitre": "{0} ליטר",
+		"ProductQuantityMililitre": "{0} מ״ל",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
 	"ProductCategories": {
