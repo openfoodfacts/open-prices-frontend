@@ -18,7 +18,7 @@
                 {{ brand }}
               </v-chip>
             </span>
-            <span v-if="hasProductQuantity">
+            <span v-if="hasProductName">
               <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
             <br />
@@ -69,6 +69,9 @@ export default {
   mounted() {
   },
   computed: {
+    hasProductName() {
+      return !!this.product.product_name
+    },
     hasProductSource() {
       return !!this.product.source
     },
