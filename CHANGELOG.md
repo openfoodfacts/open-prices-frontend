@@ -1,5 +1,39 @@
 # Changelog
 
+## [1.48.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.47.0...v1.48.0) (2024-03-09)
+
+
+### Features
+
+* new ordering choice by price (lowest first) ([#408](https://github.com/openfoodfacts/open-prices-frontend/issues/408)) ([591a062](https://github.com/openfoodfacts/open-prices-frontend/commit/591a062d320544a03c9ee6c87b529d6e9fe869ca))
+* **product:** if brand missing, show warning color & tooltip ([#422](https://github.com/openfoodfacts/open-prices-frontend/issues/422)) ([1b9a30a](https://github.com/openfoodfacts/open-prices-frontend/commit/1b9a30ab7c97235f5b5461c4b42181efadc43123))
+* **product:** if categories missing, show warning color & tooltip ([#417](https://github.com/openfoodfacts/open-prices-frontend/issues/417)) ([5527b29](https://github.com/openfoodfacts/open-prices-frontend/commit/5527b2954004ae8c3a74c11774a8ea590a1a8d7f))
+* **product:** if quantity missing, show warning color & tooltip ([#412](https://github.com/openfoodfacts/open-prices-frontend/issues/412)) ([d4ce6ce](https://github.com/openfoodfacts/open-prices-frontend/commit/d4ce6ce3700f2713b33ffae5c4a0f4c14f691fc6))
+* **product:** if too many brands, show count & dialog ([#424](https://github.com/openfoodfacts/open-prices-frontend/issues/424)) ([4a8326c](https://github.com/openfoodfacts/open-prices-frontend/commit/4a8326c002ad77d85c02be3d64c9807f2982d779))
+
+
+### Bug Fixes
+
+* **i10n:** language dropdown and locale load at mount ([#419](https://github.com/openfoodfacts/open-prices-frontend/issues/419)) ([6244e22](https://github.com/openfoodfacts/open-prices-frontend/commit/6244e22206baf5b9c937bde63b44f0f91b2bb148))
+* improve page display when the user changes the price or product order ([#414](https://github.com/openfoodfacts/open-prices-frontend/issues/414)) ([c0468bb](https://github.com/openfoodfacts/open-prices-frontend/commit/c0468bb59306e91fd7860508c7dd4fd5c07b6e57))
+* **l10n:** fix missing translation. ref [#410](https://github.com/openfoodfacts/open-prices-frontend/issues/410) ([b592e31](https://github.com/openfoodfacts/open-prices-frontend/commit/b592e318facf8b48be1c48f6ddce5fa6c322324e))
+* remove unused code. ref [#358](https://github.com/openfoodfacts/open-prices-frontend/issues/358) ([6c6ae53](https://github.com/openfoodfacts/open-prices-frontend/commit/6c6ae5325c008d6d9258c9b86796157c6e5c5a8b))
+
+
+### Technical
+
+* **l10n:** allow translation of filtering options ([#411](https://github.com/openfoodfacts/open-prices-frontend/issues/411)) ([c013a76](https://github.com/openfoodfacts/open-prices-frontend/commit/c013a76fb121a27b0767d127b5d40d762487acc9))
+* **l10n:** allow translation of price ordering options ([#409](https://github.com/openfoodfacts/open-prices-frontend/issues/409)) ([6ef5de6](https://github.com/openfoodfacts/open-prices-frontend/commit/6ef5de65e92d1f284410ebd2b5c6b445468bfd60))
+* **l10n:** allow translation of product ordering options ([#410](https://github.com/openfoodfacts/open-prices-frontend/issues/410)) ([4ea4387](https://github.com/openfoodfacts/open-prices-frontend/commit/4ea43877e4dda4c4d0749aa57adaa114bffc7998))
+* **l10n:** New Crowdin translations to review and merge ([#393](https://github.com/openfoodfacts/open-prices-frontend/issues/393)) ([3ade61d](https://github.com/openfoodfacts/open-prices-frontend/commit/3ade61d4b3ee76872c39c3b0ff168bcef440a420))
+* **l10n:** New Crowdin translations to review and merge ([#420](https://github.com/openfoodfacts/open-prices-frontend/issues/420)) ([d807337](https://github.com/openfoodfacts/open-prices-frontend/commit/d80733727a2f99be9d1f6ea873d96989f7a86c32))
+* **prices:** move label to own component ([#427](https://github.com/openfoodfacts/open-prices-frontend/issues/427)) ([cc87203](https://github.com/openfoodfacts/open-prices-frontend/commit/cc8720306ab90aeb9a65f4062a29843aec65dd2e))
+* **prices:** move origin to own chip ([#426](https://github.com/openfoodfacts/open-prices-frontend/issues/426)) ([70c46b0](https://github.com/openfoodfacts/open-prices-frontend/commit/70c46b09d4f028ee1c2addf254228fb62baff478))
+* **product:** hide product code ([#423](https://github.com/openfoodfacts/open-prices-frontend/issues/423)) ([bdc2b52](https://github.com/openfoodfacts/open-prices-frontend/commit/bdc2b520706d312d03845f1f720c09803a8f122d))
+* **product:** if labels missing, don't show dialog ([#421](https://github.com/openfoodfacts/open-prices-frontend/issues/421)) ([9bc58a5](https://github.com/openfoodfacts/open-prices-frontend/commit/9bc58a59e713dc65ecf5805639377c286c484333))
+* **product:** if product missing, hide categories & labels ([#425](https://github.com/openfoodfacts/open-prices-frontend/issues/425)) ([5c2eee1](https://github.com/openfoodfacts/open-prices-frontend/commit/5c2eee1337b50390f6451bd93d3141dae7993e4f))
+* **product:** new ProductCategoriesChip & ProductLabelsChip ([#416](https://github.com/openfoodfacts/open-prices-frontend/issues/416)) ([df1fbf4](https://github.com/openfoodfacts/open-prices-frontend/commit/df1fbf4da8a1eea426c1d8e800816b6e7ca88d7c))
+
 ## [1.47.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.46.1...v1.47.0) (2024-03-06)
 
 
