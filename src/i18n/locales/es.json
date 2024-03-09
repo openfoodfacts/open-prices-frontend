@@ -194,7 +194,9 @@
 		"Title": "Últimos precios"
 	},
 	"ProductCard": {
+		"Brands": "Marcas",
 		"BrandLower": "marca",
+		"BrandTotal": "{count} brands",
 		"Categories": "Categorías",
 		"CategoriesLower": "categorías",
 		"CategoryTotal": "{count} categories",
