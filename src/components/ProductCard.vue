@@ -16,14 +16,14 @@
             <span v-if="hasProductSource">
               <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
             </span>
-            <span v-if="hasProductSource">
-              <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
+            <span v-if="hasProductSource" class="mr-1">
+              <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
             <br />
-            <span class="mr-1">
+            <span v-if="hasProductSource" class="mr-1">
               <ProductCategoriesChip :productCategories="product.categories_tags"></ProductCategoriesChip>
             </span>
-            <span>
+            <span v-if="hasProductSource">
               <ProductLabelsChip :productLabels="product.labels_tags"></ProductLabelsChip>
             </span>
           </p>
