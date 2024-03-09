@@ -194,9 +194,16 @@
 		"Title": "crwdns246666:0crwdne246666:0"
 	},
 	"ProductCard": {
+		"BrandLower": "crwdns247856:0crwdne247856:0",
+		"Categories": "crwdns247846:0crwdne247846:0",
+		"CategoriesLower": "crwdns247848:0crwdne247848:0",
 		"CategoryTotal": "crwdns247750:0{count}crwdne247750:0",
+		"Labels": "crwdns247850:0crwdne247850:0",
+		"LabelsLower": "crwdns247852:0crwdne247852:0",
 		"LabelTotal": "crwdns247752:0{count}crwdne247752:0",
 		"LatestPrice": "crwdns246892:0crwdne246892:0",
+		"ProductBrandMissing": "crwdns247858:0crwdne247858:0",
+		"ProductCategoriesMissing": "crwdns247854:0crwdne247854:0",
 		"ProductQuantityGram": "crwdns247496:0{0}crwdne247496:0",
 		"ProductQuantityKilogram": "crwdns247498:0{0}crwdne247498:0",
 		"ProductQuantityLitre": "crwdns247502:0{0}crwdne247502:0",
@@ -204,20 +211,12 @@
 		"ProductQuantityMissing": "crwdns247844:0crwdne247844:0",
 		"UnknownProduct": "crwdns246670:0crwdne246670:0"
 	},
-	"ProductCategories": {
-		"Title": "crwdns247754:0crwdne247754:0",
-		"Empty": "crwdns247756:0crwdne247756:0"
-	},
 	"ProductDetail": {
 		"AddPrice": "crwdns246768:0crwdne246768:0",
 		"CategoryNotFound": "crwdns246672:0crwdne246672:0",
 		"LatestPrices": "crwdns246674:0crwdne246674:0",
 		"LoadMore": "crwdns246676:0crwdne246676:0",
 		"ProductNotFound": "crwdns246678:0crwdne246678:0"
-	},
-	"ProductLabels": {
-		"Title": "crwdns247806:0crwdne247806:0",
-		"Empty": "crwdns247808:0crwdne247808:0"
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "crwdns246682:0crwdne246682:0",
