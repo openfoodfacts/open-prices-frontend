@@ -194,19 +194,22 @@
 		"Title": "Naujausios kainos"
 	},
 	"ProductCard": {
+		"BrandLower": "prekės ženklas",
+		"Categories": "Kategorijos",
+		"CategoriesLower": "kategorijos",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Labels",
+		"LabelsLower": "etiketes",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Naujausia kaina",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Trūksta produktų kategorijų",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Trūksta produkto kiekio",
 		"UnknownProduct": "Nežinomas produkto pavadinimas"
-	},
-	"ProductCategories": {
-		"Title": "Kategorijos",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Pridėti kainą",
@@ -214,10 +217,6 @@
 		"LatestPrices": "Naujausios kainos",
 		"LoadMore": "Įkelti daugiau",
 		"ProductNotFound": "Produktas nerastas Open Food Facts... Nedvejokite ir pridėkite :)"
-	},
-	"ProductLabels": {
-		"Title": "Labels",
-		"Empty": "No labels have been added to this product yet."
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Slėpti produktus su kainomis",
