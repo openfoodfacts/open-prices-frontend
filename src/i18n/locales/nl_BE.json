@@ -39,6 +39,7 @@
 		"Create": "Aanmaken",
 		"PriceDetails": {
 			"Discount": "Korting?",
+			"Currency": "Valuta",
 			"Label": "Prijs",
 			"LabelDiscounted": "Gereduceerde prijs",
 			"LabelFull": "Totale prijs",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
 		"Yes": "Ja",
 		"No": "Nee"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Valuta",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
