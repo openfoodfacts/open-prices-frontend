@@ -39,6 +39,7 @@
 		"Create": "Erstellen",
 		"PriceDetails": {
 			"Discount": "Rabatt?",
+			"Currency": "Währung",
 			"Label": "Preis",
 			"LabelDiscounted": "Reduzierter Preis",
 			"LabelFull": "Voller Preis",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
 		"Yes": "Ja",
 		"No": "Nein"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Währung",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Wählen Sie einen Ihrer aktuellen Nachweise"
