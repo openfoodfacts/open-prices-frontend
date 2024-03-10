@@ -39,6 +39,7 @@
 		"Create": "Oluştur",
 		"PriceDetails": {
 			"Discount": "İndirim?",
+			"Currency": "Kur",
 			"Label": "Fiyat",
 			"LabelDiscounted": "İndirimli fiyat",
 			"LabelFull": "Tam fiyat",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"Yes": "Evet",
 		"No": "Hayır"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Kur",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Son bedellerinizden birini seçin"
