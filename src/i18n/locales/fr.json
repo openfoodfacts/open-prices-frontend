@@ -39,6 +39,7 @@
 		"Create": "Créer",
 		"PriceDetails": {
 			"Discount": "Promo ?",
+			"Currency": "Devise",
 			"Label": "Prix",
 			"LabelDiscounted": "Prix en promo",
 			"LabelFull": "Prix d'origine",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
 		"Yes": "Oui",
 		"No": "Non"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Devise",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Sélectionnez une de vos preuves récentes"
