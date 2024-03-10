@@ -122,11 +122,11 @@
 		"No": "Ні"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "Оберіть одну з ваших улюблених валют",
 		"Currency": "Currency",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrencies": "Додайте валюту в налаштуваннях",
+		"AddCurrenciesWarning": "Ви будете перенаправлені на сторінку налаштувань, але втратите всю інформацію, яку ви ввели на цій сторінці.",
+		"Select": "Вибрати {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
