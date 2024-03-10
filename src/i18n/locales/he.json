@@ -39,6 +39,7 @@
 		"Create": "יצירה",
 		"PriceDetails": {
 			"Discount": "הנחה?",
+			"Currency": "מטבע",
 			"Label": "מחיר",
 			"LabelDiscounted": "מחיר מוזל",
 			"LabelFull": "מחיר מלא",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
 		"Yes": "כן",
 		"No": "לא"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "מטבע",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "נא לבחור אחת מההוכחות העדכניות שלך"
