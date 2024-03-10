@@ -39,6 +39,7 @@
 		"Create": "Create",
 		"PriceDetails": {
 			"Discount": "ディスカウント",
+			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "割引価格",
 			"LabelFull": "正規価格",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Google アカウントでログイン",
 		"Yes": "はい",
 		"No": "いいえ"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Currency",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "最近の証明のいずれかを選択"
