@@ -39,6 +39,7 @@
 		"Create": "Створити",
 		"PriceDetails": {
 			"Discount": "Знижка?",
+			"Currency": "Currency",
 			"Label": "Ціна",
 			"LabelDiscounted": "Ціна зі знижкою",
 			"LabelFull": "Повна ціна",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
 		"Yes": "Так",
 		"No": "Ні"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Currency",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
