@@ -210,7 +210,7 @@
 		"ProductQuantityKilogram": "{0} ק״ג",
 		"ProductQuantityLitre": "{0} ליטר",
 		"ProductQuantityMililitre": "{0} מ״ל",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "כמות המוצר חסרה",
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
 	"ProductDetail": {
