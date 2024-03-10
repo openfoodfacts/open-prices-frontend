@@ -39,6 +39,7 @@
 		"Create": "Buat",
 		"PriceDetails": {
 			"Discount": "Diskon?",
+			"Currency": "Mata uang",
 			"Label": "Harga",
 			"LabelDiscounted": "Harga sesudah diskon",
 			"LabelFull": "Harga penuh",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
 		"Yes": "Ya",
 		"No": "Tidak"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Mata uang",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
