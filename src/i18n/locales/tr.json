@@ -122,11 +122,11 @@
 		"No": "Hayır"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "Favori para birimlerinizden birini seçin",
 		"Currency": "Kur",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrencies": "Ayarlar'a para birimleri ekleyin",
+		"AddCurrenciesWarning": "Ayarlar sayfasına yönlendirileceksiniz ancak bu sayfaya girdiğiniz tüm bilgileri kaybedeceksiniz.",
+		"Select": "{currency_code} öğesini seçin"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Son bedellerinizden birini seçin"
