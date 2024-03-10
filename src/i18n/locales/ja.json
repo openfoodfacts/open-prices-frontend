@@ -122,10 +122,10 @@
 		"No": "いいえ"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "お気に入りの通貨を 1 つ選択してください",
 		"Currency": "Currency",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"AddCurrencies": "設定で通貨を追加する",
+		"AddCurrenciesWarning": "[設定] ページにリダイレクトされますが、このページに入力した情報はすべて失われます。",
 		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
