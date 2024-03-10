@@ -39,6 +39,7 @@
 		"Create": "crwdns246554:0crwdne246554:0",
 		"PriceDetails": {
 			"Discount": "crwdns246770:0crwdne246770:0",
+			"Currency": "crwdns247868:0crwdne247868:0",
 			"Label": "crwdns246556:0crwdne246556:0",
 			"LabelDiscounted": "crwdns246772:0crwdne246772:0",
 			"LabelFull": "crwdns246774:0crwdne246774:0",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "crwdns246910:0{url}crwdne246910:0",
 		"Yes": "crwdns247790:0crwdne247790:0",
 		"No": "crwdns247792:0crwdne247792:0"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "crwdns247870:0crwdne247870:0",
+		"Currency": "crwdns247872:0crwdne247872:0",
+		"AddCurrencies": "crwdns247874:0crwdne247874:0",
+		"AddCurrenciesWarning": "crwdns247876:0crwdne247876:0",
+		"Select": "crwdns247878:0{currency_code}crwdne247878:0"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "crwdns247794:0crwdne247794:0"
