@@ -125,8 +125,8 @@
 		"Title": "נא לבחור את אחד המטבעות המועדפים עליך",
 		"Currency": "מטבע",
 		"AddCurrencies": "הוספת מטבעות בהגדרות",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrenciesWarning": "תתבצע הפניה לעמוד ההגדרות אך המידע שמילאת בדף הזה יאבד.",
+		"Select": "בחירה ב{currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "נא לבחור אחת מההוכחות העדכניות שלך"
