@@ -122,11 +122,11 @@
 		"No": "Ne"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "Pasirinkite vieną iš savo mėgstamų valiutų",
 		"Currency": "Valiuta",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrencies": "Pridėti valiutas „Nuostatose“",
+		"AddCurrenciesWarning": "Būsite nukreipti į puslapį „Nuostatos“, bet prarasite visą šiame puslapyje įvestą informaciją.",
+		"Select": "Pasirinkti {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
