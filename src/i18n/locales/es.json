@@ -122,11 +122,11 @@
 		"No": "No"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "Elige uno de tus monedas favoritas",
 		"Currency": "Moneda",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrencies": "Añadir monedas en Configuración",
+		"AddCurrenciesWarning": "Serás redirigido a la página de Configuración, pero perderás toda la información que hayas ingresado en esta página.",
+		"Select": "Selecciona {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
