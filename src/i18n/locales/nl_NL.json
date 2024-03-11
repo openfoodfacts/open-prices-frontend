@@ -122,11 +122,11 @@
 		"No": "Nee"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "Kies een van je favoriete valuta's",
 		"Currency": "Valuta",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrencies": "Voeg valuta's toe in Instellingen",
+		"AddCurrenciesWarning": "U wordt doorgestuurd naar de pagina Instellingen, maar alle informatie die u op deze pagina heeft ingevoerd, gaat verloren.",
+		"Select": "Selecteer {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
