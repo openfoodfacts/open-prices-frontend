@@ -11,13 +11,10 @@
       <span v-if="proof.type !== 'GDPR_REQUEST'">
         {{ proofType }}
       </span>
-
     </v-chip>
     <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()"></PriceCountChip>
     <RelativeDateTimeChip :dateTime="proof.created"></RelativeDateTimeChip>
-    <ProofIsPublicChip v-if="proof.type === 'RECEIPT'" :proof="proof"></ProofIsPublicChip>
     <ProofDeleteChip v-if="!hideProofDelete && userCanDeleteProof" :proof="proof"></ProofDeleteChip>
-
   </div>
 </template>
 
@@ -31,9 +28,7 @@ export default {
   components: {
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'RelativeDateTimeChip': defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
-    'ProofDeleteChip': defineAsyncComponent(() => import('../components/ProofDeleteChip.vue')),
-    'ProofIsPublicChip': defineAsyncComponent(() => import('../components/ProofisPublicChip.vue'))
-
+    'ProofDeleteChip': defineAsyncComponent(() => import('../components/ProofDeleteChip.vue'))
   },
   props: {
     'proof': null,

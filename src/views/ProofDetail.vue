@@ -55,6 +55,8 @@ export default {
           if (data.id) {
             this.proof = data
             this.getProofPrices()
+            console.log(data)
+            console.log(api.getProofById(this.proofId))
           }
         })
     },

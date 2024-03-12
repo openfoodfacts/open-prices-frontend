@@ -7,7 +7,9 @@
     <v-divider v-if="!hideProofHeader"></v-divider>
 
     <v-card-text>
-      <v-img :src="getProofUrl(proof)"></v-img>
+      <v-img :src="getProofUrl(proof)">
+        <slot name="actions"></slot>
+      </v-img>
     </v-card-text>
 
     <v-divider></v-divider>
