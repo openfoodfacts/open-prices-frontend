@@ -6,37 +6,17 @@
     density="comfortable"
     color="error"
     :title="$t('PriceDeleteChip.Delete')"
-    @click="openDialog">
+    @click="openConfirmationDialog">
     <v-icon icon="mdi-delete"></v-icon>
   </v-chip>
 
-  <v-dialog v-model="dialog" max-height="80%" max-width="80%">
-    <v-card>
-      <v-card-title>
-        {{ $t('PriceDeleteChip.DeleteTitle') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog"></v-btn>
-      </v-card-title>
-      <v-divider></v-divider>
-      <v-card-text>
-        <p class="mb-1">{{ $t('PriceDeleteChip.Confirmation') }}</p>
-        <v-row>
-          <v-col cols="12" md="6">
-            <PriceCard :price="price" :product="price.product" :hidePriceFooter="true" :readonly="true"></PriceCard>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col>
-            <v-btn
-              size="small"
-              color="error"
-              prepend-icon="mdi-delete"
-              :loading="loading"
-              @click="deletePrice"
-            >{{ $t('PriceDeleteChip.Delete') }}</v-btn>
-          </v-col>
-        </v-row>
-      </v-card-text>
-    </v-card>
-  </v-dialog>
+  <PriceDeleteConfirmationDialog
+    v-if="confirmationDialog"
+    v-model="confirmationDialog"
+    :price="price"
+    @delete="deletePrice($event)"
+    @close="confirmationDialog = false">
+  </PriceDeleteConfirmationDialog>
 
   <v-snackbar
     v-model="deleteSuccessMessage"
@@ -51,7 +31,7 @@ import api from '../services/api'
 
 export default {
   components: {
-    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    'PriceDeleteConfirmationDialog': defineAsyncComponent(() => import('../components/PriceDeleteConfirmationDialog.vue'))
   },
   props: {
     'price': null,
@@ -59,7 +39,7 @@ export default {
   data() {
     return {
       loading: false,
-      dialog: false,
+      confirmationDialog: false,
       deleteSuccessMessage: false
     }
   },
@@ -75,18 +55,17 @@ export default {
           this.loading = false
           this.deleteSuccessMessage = true
           this.removePriceCard()
-          this.closeDialog()
+          this.closeConfirmationDialog()
         })
     },
     removePriceCard() {
-      const priceCardCol = document.getElementById(`price_${this.price.id}`)
-      priceCardCol.remove()
+      document.getElementById(`price_${this.price.id}`).remove()
     },
-    openDialog() {
-      this.dialog = true
+    openConfirmationDialog() {
+      this.confirmationDialog = true
     },
-    closeDialog() {
-      this.dialog = false
+    closeConfirmationDialog() {
+      this.confirmationDialog = false
     }
   }
 }
