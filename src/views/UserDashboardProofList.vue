@@ -22,20 +22,7 @@
   </h2>
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="proof in appStore.user.proofs" :key="proof">
-      <ProofCard :proof="proof" :hideProofHeader="true" height="100%">
-        <template v-slot:actions>
-          <v-btn
-          v-if="proof.type === 'RECEIPT'"
-            absolute
-            elevated
-            top
-            right
-            icon
-            @click="showProofEditDialog(proof)"
-          >
-            <v-icon>mdi-pencil</v-icon>
-          </v-btn>
-        </template>
+      <ProofCard :proof="proof" :hideProofHeader="true" :isEditable="true" @proofUpdated="handleProofUpdated" height="100%">
       </ProofCard>
     </v-col>
   </v-row>
@@ -44,13 +31,6 @@
       <v-btn size="small" :loading="loading" @click="getUserProofs">{{ $t('UserDashboard.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
-  <ProofEditDialog
-    v-if="proofEditDialog"
-    :proof="selectedProofEdit"
-    v-model="proofEditDialog"
-    @proofUpdated="proofUpdated = true"
-    @close="proofEditDialog = false"
-  ></ProofEditDialog>
 
   <v-snackbar
     v-model="proofUpdated"
@@ -64,19 +44,15 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import ProofCard from '../components/ProofCard.vue'
-import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
     ProofCard,
-    'ProofEditDialog': defineAsyncComponent(() => import('../components/ProofEditDialog.vue')),
   },
   data() {
     return {
       userProofPage: 0,
       loading: false,
-      proofEditDialog: false,
-      selectedProofEdit: null,
       proofUpdated: false
     }
   },
@@ -101,10 +77,9 @@ export default {
           this.loading = false
         })
     },
-    showProofEditDialog(proof) {
-      this.proofEditDialog = true
-      this.selectedProofEdit = proof
-    }
+    handleProofUpdated() {
+      this.proofUpdated = true
+  },
   }
 }
 </script>

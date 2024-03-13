@@ -63,7 +63,6 @@ export default {
         .then((data) => {
           if (data['access_token']) {
             this.appStore.signIn(this.signinForm.username, data['access_token'])
-            console.log(data['access_token'])
             this.$router.push({ path: '/add', query: { signinSuccess: 'true' } })
           } else {
             alert(this.$t('SignIn.WrongCredentials'))

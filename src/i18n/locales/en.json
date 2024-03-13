@@ -235,7 +235,7 @@
 		"EditProof": "Edit your proof",
 		"Public": "Public",
 		"Private": "Private",
-		"PrivateWarning": "When settign your proof to Private, it will be hidden from the public view. We recommend to hide personal information redact, fold...) if possible.",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "Save"
 	},
 	"Router": {
