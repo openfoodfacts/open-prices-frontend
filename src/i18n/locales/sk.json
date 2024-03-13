@@ -39,6 +39,7 @@
 		"Create": "Vytvoriť",
 		"PriceDetails": {
 			"Discount": "Zľava?",
+			"Currency": "Mena",
 			"Label": "Cena",
 			"LabelDiscounted": "Zvýhodnená cena",
 			"LabelFull": "Plná cena",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}",
 		"Yes": "Áno",
 		"No": "Nie"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Mena",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Zmeniť jazyk",
 		"CountryLabel": "Krajina",
 		"CurrencyLabel": "Mena",
-		"DefaultCurrency": "Predvolená mena",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Jazyk",
 		"Save": "Uložiť",
 		"Title": "Nastavenia",

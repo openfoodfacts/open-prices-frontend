@@ -39,6 +39,7 @@
 		"Create": "Luo",
 		"PriceDetails": {
 			"Discount": "Alennus?",
+			"Currency": "Valuutta",
 			"Label": "Hinta",
 			"LabelDiscounted": "Alennettu hinta",
 			"LabelFull": "Täysi hinta",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
 		"Yes": "Kyllä",
 		"No": "Ei"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Valuutta",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Valitse jokin viimeaikaisista todisteistasi"
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Vaihda kieli",
 		"CountryLabel": "Maa",
 		"CurrencyLabel": "Valuutta",
-		"DefaultCurrency": "Oletusvaluutta",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Kielet",
 		"Save": "Tallenna",
 		"Title": "Asetukset",

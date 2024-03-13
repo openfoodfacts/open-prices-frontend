@@ -39,6 +39,7 @@
 		"Create": "Kurti",
 		"PriceDetails": {
 			"Discount": "Nuolaida?",
+			"Currency": "Valiuta",
 			"Label": "Kaina",
 			"LabelDiscounted": "Sumažinta kaina",
 			"LabelFull": "Visa kaina",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"Yes": "Taip",
 		"No": "Ne"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Pasirinkite vieną iš savo mėgstamų valiutų",
+		"Currency": "Valiuta",
+		"AddCurrencies": "Pridėti valiutas „Nuostatose“",
+		"AddCurrenciesWarning": "Būsite nukreipti į puslapį „Nuostatos“, bet prarasite visą šiame puslapyje įvestą informaciją.",
+		"Select": "Pasirinkti {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Šalis",
 		"CurrencyLabel": "Valiuta",
-		"DefaultCurrency": "Nustatyta valiuta",
+		"FavoriteCurrencies": "Mėgstamos valiutos",
+		"CurrencyRequired": "Būtina bent viena valiuta",
 		"LanguageLabel": "Kalbos",
 		"Save": "Išsaugoti",
 		"Title": "Nustatymai",

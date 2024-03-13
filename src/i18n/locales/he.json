@@ -39,6 +39,7 @@
 		"Create": "יצירה",
 		"PriceDetails": {
 			"Discount": "הנחה?",
+			"Currency": "מטבע",
 			"Label": "מחיר",
 			"LabelDiscounted": "מחיר מוזל",
 			"LabelFull": "מחיר מלא",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
 		"Yes": "כן",
 		"No": "לא"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "נא לבחור את אחד המטבעות המועדפים עליך",
+		"Currency": "מטבע",
+		"AddCurrencies": "הוספת מטבעות בהגדרות",
+		"AddCurrenciesWarning": "תתבצע הפניה לעמוד ההגדרות אך המידע שמילאת בדף הזה יאבד.",
+		"Select": "בחירה ב{currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "נא לבחור אחת מההוכחות העדכניות שלך"
@@ -210,7 +218,7 @@
 		"ProductQuantityKilogram": "{0} ק״ג",
 		"ProductQuantityLitre": "{0} ליטר",
 		"ProductQuantityMililitre": "{0} מ״ל",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "כמות המוצר חסרה",
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
 	"ProductDetail": {
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "החלפת שפה",
 		"CountryLabel": "מדינה",
 		"CurrencyLabel": "מטבע",
-		"DefaultCurrency": "מטבע ברירת מחדל",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "שפות",
 		"Save": "שמירה",
 		"Title": "הגדרות",

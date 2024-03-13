@@ -39,6 +39,7 @@
 		"Create": "Oluştur",
 		"PriceDetails": {
 			"Discount": "İndirim?",
+			"Currency": "Kur",
 			"Label": "Fiyat",
 			"LabelDiscounted": "İndirimli fiyat",
 			"LabelFull": "Tam fiyat",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"Yes": "Evet",
 		"No": "Hayır"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Favori para birimlerinizden birini seçin",
+		"Currency": "Kur",
+		"AddCurrencies": "Ayarlar'a para birimleri ekleyin",
+		"AddCurrenciesWarning": "Ayarlar sayfasına yönlendirileceksiniz ancak bu sayfaya girdiğiniz tüm bilgileri kaybedeceksiniz.",
+		"Select": "{currency_code} öğesini seçin"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Son bedellerinizden birini seçin"
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Dili Değiştir",
 		"CountryLabel": "Ülke",
 		"CurrencyLabel": "Kur",
-		"DefaultCurrency": "Varsayılan para birimi",
+		"FavoriteCurrencies": "Sık kullanılan para birimleri",
+		"CurrencyRequired": "En az bir para birimi gerekli",
 		"LanguageLabel": "Diller",
 		"Save": "Kaydet",
 		"Title": "Ayarlar",

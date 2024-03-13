@@ -39,6 +39,7 @@
 		"Create": "Vytvořit",
 		"PriceDetails": {
 			"Discount": "Sleva?",
+			"Currency": "Měna",
 			"Label": "Cena",
 			"LabelDiscounted": "Snížená cena",
 			"LabelFull": "Plná cena",
@@ -109,16 +110,23 @@
 		"AddToOFF": "Přidat do {name}",
 		"Filter": "Filtr",
 		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
+		"FilterPriceMoreThan30DaysHide": "Skrýt ceny starší než 30 dní",
 		"Order": "Pořadí",
-		"OrderProductUniqueScansDESC": "Number of scans",
-		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderProductUniqueScansDESC": "Počet skenů",
+		"OrderProductPriceCountDESC": "Počet cen",
 		"OrderPriceASC": "Cena",
-		"OrderPriceCreatedDESC": "Addition date",
-		"OrderPriceDateDESC": "Price date",
+		"OrderPriceCreatedDESC": "Datum přidání",
+		"OrderPriceDateDESC": "Datum ceny",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
 		"Yes": "Ano",
 		"No": "Ne"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Vyberte jednu ze svých oblíbených měn",
+		"Currency": "Měna",
+		"AddCurrencies": "Přidejte měny v Nastavení",
+		"AddCurrenciesWarning": "Budete přesměrováni na stránku Nastavení, ale ztratíte veškeré informace, které jste zadali na této stránce.",
+		"Select": "Vybrat {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Vyberte jeden ze svých nedávných důkazů"
@@ -196,7 +204,7 @@
 	"ProductCard": {
 		"Brands": "Značky",
 		"BrandLower": "značka",
-		"BrandTotal": "{count} brands",
+		"BrandTotal": "{count} značek",
 		"Categories": "Kategorie",
 		"CategoriesLower": "kategorie",
 		"CategoryTotal": "{count} kategorií",
@@ -204,13 +212,13 @@
 		"LabelsLower": "štítky",
 		"LabelTotal": "{count} štítků",
 		"LatestPrice": "Nejnovější cena",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Chybí značka produktu",
+		"ProductCategoriesMissing": "Chybí kategorie produktu",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} l",
 		"ProductQuantityMililitre": "{0} ml",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Chybí množství produktu",
 		"UnknownProduct": "Neznámý název produktu"
 	},
 	"ProductDetail": {
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Změnit jazyk",
 		"CountryLabel": "Země",
 		"CurrencyLabel": "Měna",
-		"DefaultCurrency": "Výchozí měna",
+		"FavoriteCurrencies": "Oblíbené měny",
+		"CurrencyRequired": "Je vyžadována alespoň jedna měna",
 		"LanguageLabel": "Jazyky",
 		"Save": "Uložit",
 		"Title": "Nastavení",

@@ -39,6 +39,7 @@
 		"Create": "Stwórz",
 		"PriceDetails": {
 			"Discount": "Promocja?",
+			"Currency": "Waluta",
 			"Label": "Cena",
 			"LabelDiscounted": "Cena promocyjna",
 			"LabelFull": "Pełna cena",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
 		"Yes": "Tak",
 		"No": "Nie"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Waluta",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Zmiana języka",
 		"CountryLabel": "Kraj",
 		"CurrencyLabel": "Waluta",
-		"DefaultCurrency": "Domyślna waluta",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Języki",
 		"Save": "Zapisz",
 		"Title": "Ustawienia",

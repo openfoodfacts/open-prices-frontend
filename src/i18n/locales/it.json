@@ -39,6 +39,7 @@
 		"Create": "Crea",
 		"PriceDetails": {
 			"Discount": "Sconto?",
+			"Currency": "Moneta",
 			"Label": "Prezzo",
 			"LabelDiscounted": "Prezzo scontato",
 			"LabelFull": "Prezzo pieno",
@@ -109,16 +110,23 @@
 		"AddToOFF": "Aggiungi a {name}",
 		"Filter": "Filtra",
 		"FilterProductWithPriceCountHide": "Nascondi i prodotti con i prezzi",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
+		"FilterPriceMoreThan30DaysHide": "Nascondi i prezzi più vecchi di 30 giorni",
 		"Order": "Ordine",
-		"OrderProductUniqueScansDESC": "Number of scans",
-		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderProductUniqueScansDESC": "Numero di scansioni",
+		"OrderProductPriceCountDESC": "Numero di prezzi",
 		"OrderPriceASC": "Prezzo",
-		"OrderPriceCreatedDESC": "Addition date",
-		"OrderPriceDateDESC": "Price date",
+		"OrderPriceCreatedDESC": "Data di inserimento",
+		"OrderPriceDateDESC": "Data del prezzo",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
 		"Yes": "Sì",
 		"No": "No"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Scegli una delle tue valute preferite",
+		"Currency": "Moneta",
+		"AddCurrencies": "Aggiungi le valute nelle Impostazioni",
+		"AddCurrenciesWarning": "Sarai reindirizzato alla pagina delle Impostazioni, ma perderai qualsiasi informazione inserita su questa pagina.",
+		"Select": "Seleziona {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Seleziona una delle tue prove recenti"
@@ -196,7 +204,7 @@
 	"ProductCard": {
 		"Brands": "Marche",
 		"BrandLower": "marca",
-		"BrandTotal": "{count} brands",
+		"BrandTotal": "{count} marche",
 		"Categories": "Categorie",
 		"CategoriesLower": "categorie",
 		"CategoryTotal": "{count} categorie",
@@ -204,13 +212,13 @@
 		"LabelsLower": "etichette",
 		"LabelTotal": "{count} etichette",
 		"LatestPrice": "Prezzo più recente",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Marca del prodotto mancante",
+		"ProductCategoriesMissing": "Categorie del prodotto mancanti",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Quantità del prodotto mancante",
 		"UnknownProduct": "Nome del prodotto sconosciuto"
 	},
 	"ProductDetail": {
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Cambia lingua",
 		"CountryLabel": "Paese",
 		"CurrencyLabel": "Moneta",
-		"DefaultCurrency": "Valuta predefinita",
+		"FavoriteCurrencies": "Valute preferite",
+		"CurrencyRequired": "Almeno una valuta è necessaria",
 		"LanguageLabel": "Lingue",
 		"Save": "Salva",
 		"Title": "Impostazioni",

@@ -39,6 +39,7 @@
 		"Create": "Crear",
 		"PriceDetails": {
 			"Discount": "¿Descuento?",
+			"Currency": "Moneda",
 			"Label": "Precio",
 			"LabelDiscounted": "Precio con descuento",
 			"LabelFull": "Precio original",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
 		"Yes": "Sí",
 		"No": "No"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Elige uno de tus monedas favoritas",
+		"Currency": "Moneda",
+		"AddCurrencies": "Añadir monedas en Configuración",
+		"AddCurrenciesWarning": "Serás redirigido a la página de Configuración, pero perderás toda la información que hayas ingresado en esta página.",
+		"Select": "Selecciona {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Cambiar idioma",
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moneda",
-		"DefaultCurrency": "Moneda predeterminada",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Idiomas",
 		"Save": "Guardar",
 		"Title": "Configuración",

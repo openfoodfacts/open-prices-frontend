@@ -39,6 +39,7 @@
 		"Create": "உருவாக்கு",
 		"PriceDetails": {
 			"Discount": "Discount?",
+			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
 		"Yes": "ஆம்",
 		"No": "இல்லை"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Currency",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -210,7 +218,7 @@
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "தயாரிப்பு அளவு இல்லை",
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Languages",
 		"Save": "சேமி",
 		"Title": "அமைப்புகள்",

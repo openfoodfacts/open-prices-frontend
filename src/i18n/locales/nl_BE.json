@@ -39,6 +39,7 @@
 		"Create": "Aanmaken",
 		"PriceDetails": {
 			"Discount": "Korting?",
+			"Currency": "Valuta",
 			"Label": "Prijs",
 			"LabelDiscounted": "Gereduceerde prijs",
 			"LabelFull": "Totale prijs",
@@ -120,6 +121,13 @@
 		"Yes": "Ja",
 		"No": "Nee"
 	},
+	"ChangeCurrencyDialog": {
+		"Title": "Kies een van uw favoriete valuta",
+		"Currency": "Valuta",
+		"AddCurrencies": "Voeg valuta's toe in Instellingen",
+		"AddCurrenciesWarning": "U wordt doorgestuurd naar de pagina Instellingen, maar alle informatie die u op deze pagina heeft ingevoerd, gaat verloren.",
+		"Select": "Selecteer {currency_code}"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
 	},
@@ -196,7 +204,7 @@
 	"ProductCard": {
 		"Brands": "Merken",
 		"BrandLower": "merk",
-		"BrandTotal": "{count} brands",
+		"BrandTotal": "{count} merken",
 		"Categories": "Categorieën",
 		"CategoriesLower": "categorieën",
 		"CategoryTotal": "{count} categorieën",
@@ -204,13 +212,13 @@
 		"LabelsLower": "keurmerken",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Laatste prijzen",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Productmerk ontbreekt",
+		"ProductCategoriesMissing": "Productcategorieën ontbreken",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} l",
 		"ProductQuantityMililitre": "{0} ml",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Producthoeveelheid ontbreekt",
 		"UnknownProduct": "Onbekende productnaam"
 	},
 	"ProductDetail": {
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Taal wijzigen",
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
-		"DefaultCurrency": "Standaardvaluta",
+		"FavoriteCurrencies": "Favoriete valuta",
+		"CurrencyRequired": "Er is minimaal één valuta vereist",
 		"LanguageLabel": "Talen",
 		"Save": "Opslaan",
 		"Title": "Instellingen",

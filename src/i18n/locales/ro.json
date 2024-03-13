@@ -39,6 +39,7 @@
 		"Create": "Crează",
 		"PriceDetails": {
 			"Discount": "Discount?",
+			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
@@ -119,6 +120,13 @@
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Yes": "Da",
 		"No": "Nu"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Currency",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Modificați limba",
 		"CountryLabel": "Țară",
 		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Limbi",
 		"Save": "Salvează",
 		"Title": "Configurări",

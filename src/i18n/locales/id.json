@@ -39,6 +39,7 @@
 		"Create": "Buat",
 		"PriceDetails": {
 			"Discount": "Diskon?",
+			"Currency": "Mata uang",
 			"Label": "Harga",
 			"LabelDiscounted": "Harga sesudah diskon",
 			"LabelFull": "Harga penuh",
@@ -120,6 +121,13 @@
 		"Yes": "Ya",
 		"No": "Tidak"
 	},
+	"ChangeCurrencyDialog": {
+		"Title": "Pilih salah satu mata uang favorit Anda",
+		"Currency": "Mata uang",
+		"AddCurrencies": "Tambahkan mata uang di Pengaturan",
+		"AddCurrenciesWarning": "Anda akan diarahkan ke halaman Pengaturan, tetapi informasi apa pun yang telah Anda masukkan di halaman ini akan hilang.",
+		"Select": "Pilih {currency_code}"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -196,7 +204,7 @@
 	"ProductCard": {
 		"Brands": "Merek - merek",
 		"BrandLower": "merek",
-		"BrandTotal": "{count} brands",
+		"BrandTotal": "{count} merek",
 		"Categories": "Kategori",
 		"CategoriesLower": "kategori",
 		"CategoryTotal": "{count} categories",
@@ -204,13 +212,13 @@
 		"LabelsLower": "label - label",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Harga terbaru",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Merek produk tidak ada",
+		"ProductCategoriesMissing": "Kategori produk tidak ada",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Kuantitas produk tidak ada",
 		"UnknownProduct": "Nama produk tidak dikenal"
 	},
 	"ProductDetail": {
@@ -323,7 +331,8 @@
 		"ChangeLanguage": "Ganti bahasa",
 		"CountryLabel": "Negara",
 		"CurrencyLabel": "Mata uang",
-		"DefaultCurrency": "Mata uang default",
+		"FavoriteCurrencies": "Mata uang favorit",
+		"CurrencyRequired": "Setidaknya diperlukan satu mata uang",
 		"LanguageLabel": "Bahasa",
 		"Save": "menyimpan ",
 		"Title": "Pengaturan",
