@@ -1,10 +1,12 @@
 <template>
-  <v-dialog max-height="80%" max-width="80%">
+  <v-dialog scrollable max-height="80%" max-width="80%">
     <v-card>
       <v-card-title>
         {{ $t('PriceDeleteChip.DeleteTitle') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog"></v-btn>
       </v-card-title>
+
       <v-divider></v-divider>
+
       <v-card-text>
         <p class="mb-1">{{ $t('PriceDeleteChip.Confirmation') }}</p>
         <v-row>
@@ -12,17 +14,18 @@
             <PriceCard :price="price" :product="price.product" :hidePriceFooter="true" :readonly="true"></PriceCard>
           </v-col>
         </v-row>
-        <v-row>
-          <v-col>
-            <v-btn
-              size="small"
-              color="error"
-              prepend-icon="mdi-delete"
-              @click="deletePrice"
-            >{{ $t('PriceDeleteChip.Delete') }}</v-btn>
-          </v-col>
-        </v-row>
       </v-card-text>
+
+      <v-divider></v-divider>
+
+      <v-card-actions>
+        <v-btn
+          color="error"
+          elevation="1"
+          prepend-icon="mdi-delete"
+          @click="deletePrice"
+        >{{ $t('PriceDeleteChip.Delete') }}</v-btn>
+      </v-card-actions>
     </v-card>
   </v-dialog>
 </template>
