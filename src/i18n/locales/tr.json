@@ -252,6 +252,14 @@
 		"Prices": "Fiyatlar",
 		"ProofNotFound": "Bedel bulunamadı (veya sahibi değil)"
 	},
+	"ProofEditDialog": {
+		"Title": "Modify your proof",
+		"EditProof": "Edit your proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Kaydet"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Fiyat ekleyin"
@@ -312,6 +320,7 @@
 		"LoadMore": "Daha fazla yükle",
 		"MyPrices": "Fiyatlarım",
 		"MyProofs": "Bedellerim",
+		"ProofUpdated": "Proof updated!",
 		"Settings": "Ayarlar",
 		"Title": "Gösterge paneli",
 		"UserPriceTotal": "{count} fiyat",
