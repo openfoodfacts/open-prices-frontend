@@ -252,6 +252,14 @@
 		"Prices": "מחירים",
 		"ProofNotFound": "לא נמצאה הוכחה (או שהבעלות לא אצלך)"
 	},
+	"ProofEditDialog": {
+		"Title": "Modify your proof",
+		"EditProof": "Edit your proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "שמירה"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "הוספת מחיר"
@@ -312,6 +320,7 @@
 		"LoadMore": "לטעון עוד",
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
+		"ProofUpdated": "Proof updated!",
 		"Settings": "הגדרות",
 		"Title": "לוח בקרה",
 		"UserPriceTotal": "{count} מחירים",
