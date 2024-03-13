@@ -11,7 +11,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <OpenFoodFactsLink type="editor" :value="username"></OpenFoodFactsLink>
+      <OpenFoodFactsLink facet="editor" :value="username"></OpenFoodFactsLink>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
