@@ -1,5 +1,8 @@
 <template>
-  <v-btn size="small" append-icon="mdi-open-in-new" :href="getOFFUrl()" target="_blank">
+  <a v-if="display === 'link'" href="https://world.openfoodfacts.org" target="_blank">
+    {{ getOFFName() }}
+  </a>
+  <v-btn v-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getOFFUrl()" target="_blank">
     {{ getOFFName() }}
   </v-btn>
 </template>
@@ -9,7 +12,14 @@ import constants from '../constants'
 
 export default {
   props: {
-    type: null,
+    display: {
+      type: String,
+      default: 'link'
+    },
+    facet: {
+      type: String,
+      default: null
+    },
     value: null,
     action: null
   },
@@ -21,8 +31,8 @@ export default {
   },
   methods: {
     getOFFUrl() {
-      if (this.type && this.value) {
-        return `${this.OFF_URL}/${this.type}/${this.value}`
+      if (this.facet && this.value) {
+        return `${this.OFF_URL}/${this.facet}/${this.value}`
       }
       return this.OFF_URL
     },

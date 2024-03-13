@@ -9,7 +9,7 @@
   <v-row class="mt-0" v-if="!productNotFound">
     <v-col cols="12">
       <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
-      <OpenFoodFactsButton v-if="product.code && product.source" type="product" :value="product.code"></OpenFoodFactsButton>
+      <OpenFoodFactsLink v-if="product.code && product.source" display="button" facet="product" :value="product.code"></OpenFoodFactsLink>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -22,7 +22,7 @@
             <template #name>{{ OFF_NAME }}</template>
           </i18n-t>
         </i>
-        <OpenFoodFactsButton class="ml-2" action="add"></OpenFoodFactsButton>
+        <OpenFoodFactsLink class="ml-2" display="button" action="add"></OpenFoodFactsLink>
       </p>
       <p v-if="categoryNotFound" class="text-red">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
@@ -85,7 +85,7 @@ export default {
   components: {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/OpenFoodFactsButton.vue')),
+    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {

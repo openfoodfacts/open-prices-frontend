@@ -11,7 +11,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <OpenFoodFactsButton type="editor" :value="username"></OpenFoodFactsButton>
+      <OpenFoodFactsLink display="button" facet="editor" :value="username"></OpenFoodFactsLink>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -73,7 +73,7 @@ export default {
   components: {
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/OpenFoodFactsButton.vue')),
+    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {

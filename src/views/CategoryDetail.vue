@@ -16,7 +16,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <OpenFoodFactsButton type="category" :value="category"></OpenFoodFactsButton>
+      <OpenFoodFactsLink display="button" facet="category" :value="category"></OpenFoodFactsLink>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -75,7 +75,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/OpenFoodFactsButton.vue')),
+    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
