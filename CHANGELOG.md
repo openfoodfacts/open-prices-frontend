@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.49.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.48.0...v1.49.0) (2024-03-13)
+
+
+### Features
+
+* allow using multiple currencies in Add Prices form ([#397](https://github.com/openfoodfacts/open-prices-frontend/issues/397)) ([e852b02](https://github.com/openfoodfacts/open-prices-frontend/commit/e852b02a595258f10851c58333283898cca47ee2))
+* **settings:** allow selecting multiple "favorite" currencies ([#406](https://github.com/openfoodfacts/open-prices-frontend/issues/406)) ([33b4cbb](https://github.com/openfoodfacts/open-prices-frontend/commit/33b4cbb57b90e2b999e613afe4ec965f7aacd325))
+
+
+### Bug Fixes
+
+* **store:** wrong name for favorite_currencies ([#431](https://github.com/openfoodfacts/open-prices-frontend/issues/431)) ([103f449](https://github.com/openfoodfacts/open-prices-frontend/commit/103f4496dce103e4ab35f1717f4ff9d0577bd5c4))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#428](https://github.com/openfoodfacts/open-prices-frontend/issues/428)) ([66e0e5e](https://github.com/openfoodfacts/open-prices-frontend/commit/66e0e5ee906a1819f798a89e9a0f569e1ef42b27))
+* **l10n:** New Crowdin translations to review and merge ([#430](https://github.com/openfoodfacts/open-prices-frontend/issues/430)) ([88b1914](https://github.com/openfoodfacts/open-prices-frontend/commit/88b19140afb6d9af920d22ebf83ba1548ca6b2b0))
+
 ## [1.48.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.47.0...v1.48.0) (2024-03-09)
 
 
