@@ -252,6 +252,14 @@
 		"Prices": "Hinnat",
 		"ProofNotFound": "Todistetta ei löydy (tai ei omistajaa)"
 	},
+	"ProofEditDialog": {
+		"Title": "Modify your proof",
+		"EditProof": "Edit your proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Tallenna"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Lisää hinta"
@@ -312,6 +320,7 @@
 		"LoadMore": "Lataa enemmän",
 		"MyPrices": "Minun hinnat",
 		"MyProofs": "Minun todisteeni",
+		"ProofUpdated": "Proof updated!",
 		"Settings": "Asetukset",
 		"Title": "Kojelauta",
 		"UserPriceTotal": "{count} hinnat",
