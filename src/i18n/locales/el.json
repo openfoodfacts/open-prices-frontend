@@ -122,11 +122,11 @@
 		"No": "Όχι"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "Επιλέξτε ένα από τα αγαπημένα σας νομίσματα",
 		"Currency": "Currency",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrencies": "Προσθήκη νομισμάτων στις Ρυθμίσεις",
+		"AddCurrenciesWarning": "Θα ανακατευθυνθείτε στη σελίδα Ρυθμίσεις αλλά θα χάσετε όλες τις πληροφορίες που έχετε εισαγάγει σε αυτήν τη σελίδα.",
+		"Select": "Επιλέξτε {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
