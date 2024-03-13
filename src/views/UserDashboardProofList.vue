@@ -20,18 +20,23 @@
     {{ $t('UserDashboard.LatestProofs') }}
     <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
   </h2>
-
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="proof in appStore.user.proofs" :key="proof">
-      <ProofCard :proof="proof" :hideProofHeader="true" height="100%"></ProofCard>
+      <ProofCard :proof="proof" :hideProofHeader="true" :isEditable="true" @proofUpdated="handleProofUpdated" height="100%">
+      </ProofCard>
     </v-col>
   </v-row>
-
   <v-row v-if="this.appStore.user.proofs.length < this.appStore.getUserProofTotal" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getUserProofs">{{ $t('UserDashboard.LoadMore') }}</v-btn>
     </v-col>
   </v-row>
+
+  <v-snackbar
+    v-model="proofUpdated"
+    color="success"
+    :timeout="2000"
+  >{{ $t('UserDashboard.ProofUpdated') }}</v-snackbar>
 </template>
 
 <script>
@@ -48,6 +53,7 @@ export default {
     return {
       userProofPage: 0,
       loading: false,
+      proofUpdated: false
     }
   },
   computed: {
@@ -71,6 +77,9 @@ export default {
           this.loading = false
         })
     },
+    handleProofUpdated() {
+      this.proofUpdated = true
+  },
   }
 }
 </script>
