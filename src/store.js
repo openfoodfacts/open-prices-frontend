@@ -35,7 +35,7 @@ export const useAppStore = defineStore('app', {
       return state.user.proofTotal
     },
     getUserFavoriteCurrencies: (state) => {
-      return state.user.currencies
+      return state.user.favorite_currencies
     },
     getUserLastCurrencyUsed: (state) => {
       return state.user.last_currency_used
@@ -69,7 +69,7 @@ export const useAppStore = defineStore('app', {
       this.user.country = country
     },
     setFavoriteCurrencies(currencies) {
-      this.user.currencies = currencies
+      this.user.favorite_currencies = currencies
     },
     setLastCurrencyUsed(currency) {
       this.user.last_currency_used = currency

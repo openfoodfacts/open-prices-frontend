@@ -232,7 +232,12 @@
                 min="0"
                 hide-details="auto"
                 :suffix="productPriceForm.currency"
-              ></v-text-field>
+                >
+                  <template v-slot:prepend-inner>
+                    <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
+                    <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true" />
+                  </template>
+              </v-text-field>
             </v-col>
             <v-col v-if="productPriceForm.price_is_discounted" cols="6">
               <v-text-field
@@ -329,6 +334,12 @@
     @proofConfirmed="handleProofConfirmed"
     @close="userRecentProofsDialog = false"
   ></UserRecentProofsDialog>
+  <ChangeCurrencyDialog
+    v-if="changeCurrencyDialog"
+    v-model="changeCurrencyDialog"
+    @newCurrencySelected="setCurrencyData($event)"
+    @close="changeCurrencyDialog = false"
+  ></ChangeCurrencyDialog>
 </template>
 
 <script>
@@ -354,7 +365,8 @@ export default {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
     'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
-    'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue'))
+    'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
+    'ChangeCurrencyDialog': defineAsyncComponent(() => import('../components/ChangeCurrencyDialog.vue')),
   },
   data() {
     return {
@@ -411,7 +423,9 @@ export default {
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
       ],
-    }
+      // currency selection
+      changeCurrencyDialog: false,
+     }
   },
   computed: {
     ...mapStores(useAppStore),
@@ -595,13 +609,18 @@ export default {
     },
     initNewProductPriceForm() {
       this.productMode = this.appStore.user.last_product_mode_used
+      this.isChangeCurrency = false
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))
-      this.productPriceForm.currency = this.appStore.user.last_currency_used
+      this.productPriceForm.currency = this.appStore.getUserLastCurrencyUsed
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
+    },
+    setCurrencyData(currency) {
+      this.productPriceForm.currency = currency
     },
     createPrice() {
       this.createPriceLoading = true
+      this.appStore.setLastCurrencyUsed(this.productPriceForm.currency)
       // cleanup form
       if (!this.productPriceForm.product_code) {
         this.productPriceForm.product_code = null
@@ -657,3 +676,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.icon-info-currency {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+</style>
