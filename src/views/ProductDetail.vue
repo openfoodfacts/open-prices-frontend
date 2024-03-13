@@ -9,7 +9,7 @@
   <v-row class="mt-0" v-if="!productNotFound">
     <v-col cols="12">
       <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
-      <OpenFoodFactsLink v-if="product.code && product.source" facet="product" :value="product.code"></OpenFoodFactsLink>
+      <OpenFoodFactsLink v-if="product.code && product.source" display="button" facet="product" :value="product.code"></OpenFoodFactsLink>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -22,7 +22,7 @@
             <template #name>{{ OFF_NAME }}</template>
           </i18n-t>
         </i>
-        <OpenFoodFactsLink class="ml-2" action="add"></OpenFoodFactsLink>
+        <OpenFoodFactsLink class="ml-2" display="button" action="add"></OpenFoodFactsLink>
       </p>
       <p v-if="categoryNotFound" class="text-red">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>

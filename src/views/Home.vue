@@ -28,7 +28,7 @@
         <template v-slot:subtitle v-if="!username">
           <i18n-t keypath="Common.SignInOFFAccount" tag="span">
             <template #url>
-              <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
+              <OpenFoodFactsLink display="link"></OpenFoodFactsLink>
             </template>
           </i18n-t>
         </template>
@@ -61,6 +61,7 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
@@ -68,6 +69,9 @@ import utils from '../utils.js'
 import api from '../services/api'
 
 export default {
+  components: {
+    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+  },
   data() {
     return {
       APP_NAME: constants.APP_NAME,

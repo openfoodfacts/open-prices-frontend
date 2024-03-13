@@ -1,4 +1,7 @@
 <template>
+  <a v-if="display === 'link'" href="https://world.openfoodfacts.org" target="_blank">
+    {{ getOFFName() }}
+  </a>
   <v-btn v-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getOFFUrl()" target="_blank">
     {{ getOFFName() }}
   </v-btn>
@@ -10,11 +13,11 @@ import constants from '../constants'
 export default {
   props: {
     display: {
-      type: string,
-      default: 'button'
+      type: String,
+      default: 'link'
     },
     facet: {
-      type: string,
+      type: String,
       default: null
     },
     value: null,

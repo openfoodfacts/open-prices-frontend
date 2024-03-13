@@ -9,7 +9,7 @@
     variant="outlined">
     <i18n-t keypath="Common.SignInOFFAccount" tag="span">
       <template #url>
-        <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
+        <OpenFoodFactsLink display="link"></OpenFoodFactsLink>
       </template>
     </i18n-t>
   </v-alert>
@@ -35,11 +35,15 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 
 export default {
+  components: {
+    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+  },
   data() {
     return {
       signinForm: {
