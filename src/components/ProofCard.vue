@@ -12,8 +12,7 @@
           <v-btn
           v-if="proof.type === 'RECEIPT' && isEditable"
             elevation="2"
-            density="default"
-            position="fixed"
+            style="margin: 15px;"
             icon
             @click="showProofEditDialog(proof)"
           >
