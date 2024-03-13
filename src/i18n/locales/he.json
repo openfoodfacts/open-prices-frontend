@@ -253,11 +253,11 @@
 		"ProofNotFound": "לא נמצאה הוכחה (או שהבעלות לא אצלך)"
 	},
 	"ProofEditDialog": {
-		"Title": "Modify your proof",
-		"EditProof": "Edit your proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "שינוי ההוכחה שלך",
+		"EditProof": "עריכת ההוכחה שלך",
+		"Public": "ציבורית",
+		"Private": "פרטית",
+		"PrivateWarning": "בעת הגדרת ההוכחה שלך לפרטית, היא תוסתר מעיני הציבור. אנו ממליצים להסתיר פרטים אישיים על ידי כיסוי או קיפול המסמך, אם ניתן.",
 		"Save": "שמירה"
 	},
 	"Router": {
@@ -320,7 +320,7 @@
 		"LoadMore": "לטעון עוד",
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "ההוכחה עודכנה!",
 		"Settings": "הגדרות",
 		"Title": "לוח בקרה",
 		"UserPriceTotal": "{count} מחירים",
