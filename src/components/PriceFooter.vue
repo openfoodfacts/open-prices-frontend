@@ -1,16 +1,9 @@
 <template>
   <div class="d-flex flex-wrap ga-1">
     <PriceLocationChip v-if="!hidePriceLocation" :price="price" :readonly="readonly"></PriceLocationChip>
-
-    <v-chip label size="small" density="comfortable" @click="goToUser()">
-      <v-icon start icon="mdi-account"></v-icon>
-      {{ price.owner }}
-    </v-chip>
-
+    <PriceOwnerChip :price="price" :readonly="readonly"></PriceOwnerChip>
     <RelativeDateTimeChip :dateTime="price.created"></RelativeDateTimeChip>
-
     <PriceProof v-if="price.proof && price.proof.is_public && !hidePriceProof" :proof="price.proof"></PriceProof>
-
     <PriceDeleteChip v-if="userIsPriceOwner" :price="price"></PriceDeleteChip>
   </div>
 </template>
@@ -24,6 +17,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     'PriceLocationChip': defineAsyncComponent(() => import('../components/PriceLocationChip.vue')),
+    'PriceOwnerChip': defineAsyncComponent(() => import('../components/PriceOwnerChip.vue')),
     'RelativeDateTimeChip': defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     'PriceProof': defineAsyncComponent(() => import('../components/PriceProof.vue')),
     'PriceDeleteChip': defineAsyncComponent(() => import('../components/PriceDeleteChip.vue'))
@@ -42,14 +36,6 @@ export default {
     userIsPriceOwner() {
       return this.username && (this.price.owner === this.username)
     }
-  },
-  methods: {
-    goToUser() {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/users/${this.price.owner}` })
-    },
   }
 }
 </script>
