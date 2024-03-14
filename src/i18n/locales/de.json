@@ -253,11 +253,11 @@
 		"ProofNotFound": "Nachweis nicht gefunden (oder nicht der Eigentümer)"
 	},
 	"ProofEditDialog": {
-		"Title": "Modify your proof",
-		"EditProof": "Edit your proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Ändern Sie Ihren Nachweis",
+		"EditProof": "Bearbeiten Sie Ihren Nachweis",
+		"Public": "Öffentlich",
+		"Private": "Privat",
+		"PrivateWarning": "Wenn Sie Ihren Korrekturabzug auf „Privat” setzen, ist er für die Öffentlichkeit nicht zugänglich. Wir empfehlen, personenbezogene Informationen nach Möglichkeit durch Schwärzen oder Falten des Dokuments zu verbergen.",
 		"Save": "Speichern"
 	},
 	"Router": {
@@ -320,7 +320,7 @@
 		"LoadMore": "Weitere laden",
 		"MyPrices": "Mein Preise",
 		"MyProofs": "Meine Belege",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "Nachweis aktualisiert!",
 		"Settings": "Einstellungen",
 		"Title": "Übersicht",
 		"UserPriceTotal": "{count} Preise",
