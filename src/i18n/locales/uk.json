@@ -253,11 +253,11 @@
 		"ProofNotFound": "Доказ не знайдено (або не власник)"
 	},
 	"ProofEditDialog": {
-		"Title": "Modify your proof",
-		"EditProof": "Edit your proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Змініть свій доказ",
+		"EditProof": "Відредагуйте свій доказ",
+		"Public": "Загальнодоступний",
+		"Private": "Приватний",
+		"PrivateWarning": "Якщо ваш доказ буде закрито, його буде приховано від загального огляду. Ми рекомендуємо приховати будь-яку особисту інформацію, відредагувавши або згорнувши документ, якщо це можливо.",
 		"Save": "Зберегти"
 	},
 	"Router": {
@@ -320,7 +320,7 @@
 		"LoadMore": "Завантажити більше",
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "Доказ оновлено!",
 		"Settings": "Налаштування",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} цін",
