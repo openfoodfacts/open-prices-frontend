@@ -1,17 +1,19 @@
 <template>
-  <div class="d-flex flex-wrap ga-1">
-    <PriceLocationChip v-if="!hidePriceLocation" :price="price" :readonly="readonly"></PriceLocationChip>
-    <PriceOwnerChip :price="price" :readonly="readonly"></PriceOwnerChip>
-    <RelativeDateTimeChip :dateTime="price.created"></RelativeDateTimeChip>
-    <PriceProof v-if="price.proof && price.proof.is_public && !hidePriceProof" :proof="price.proof"></PriceProof>
-    <PriceDeleteChip v-if="userIsPriceOwner" :price="price"></PriceDeleteChip>
-  </div>
+  <v-row>
+    <v-col :cols="userIsPriceOwner ? '11' : '12'">
+      <PriceLocationChip v-if="!hidePriceLocation" class="mr-1" :price="price" :readonly="readonly"></PriceLocationChip>
+      <PriceOwnerChip class="mr-1" :price="price" :readonly="readonly"></PriceOwnerChip>
+      <RelativeDateTimeChip class="mr-1" :dateTime="price.created"></RelativeDateTimeChip>
+      <PriceProof v-if="price.proof && price.proof.is_public && !hidePriceProof" :proof="price.proof"></PriceProof>
+    </v-col>
+  </v-row>
+
+  <PriceActionMenuButton v-if="userIsPriceOwner" style="position:absolute;bottom:6px;right:0;"></PriceActionMenuButton>
 </template>
 
 <script>
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import utils from '../utils.js'
 import { defineAsyncComponent } from 'vue'
 
 export default {
@@ -20,7 +22,8 @@ export default {
     'PriceOwnerChip': defineAsyncComponent(() => import('../components/PriceOwnerChip.vue')),
     'RelativeDateTimeChip': defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     'PriceProof': defineAsyncComponent(() => import('../components/PriceProof.vue')),
-    'PriceDeleteChip': defineAsyncComponent(() => import('../components/PriceDeleteChip.vue'))
+    'PriceActionMenuButton': defineAsyncComponent(() => import('../components/PriceActionMenuButton.vue')),
+    'PriceDeleteChip': defineAsyncComponent(() => import('../components/PriceDeleteChip.vue')),
   },
   props: {
     'price': null,
