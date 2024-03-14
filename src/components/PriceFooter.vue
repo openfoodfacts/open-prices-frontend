@@ -1,10 +1,6 @@
 <template>
   <div class="d-flex flex-wrap ga-1">
-    <v-chip v-if="!hidePriceLocation" label size="small" density="comfortable" @click="goToLocation()">
-      <v-icon start icon="mdi-map-marker-outline"></v-icon>
-      {{ getPriceLocationTitle() }}
-      <span v-if="priceLocationEmoji" style="margin-inline-start:5px">{{ priceLocationEmoji }}</span>
-    </v-chip>
+    <PriceLocationChip v-if="!hidePriceLocation" :price="price" :readonly="readonly"></PriceLocationChip>
 
     <v-chip label size="small" density="comfortable" @click="goToUser()">
       <v-icon start icon="mdi-account"></v-icon>
@@ -27,6 +23,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
+    'PriceLocationChip': defineAsyncComponent(() => import('../components/PriceLocationChip.vue')),
     'RelativeDateTimeChip': defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     'PriceProof': defineAsyncComponent(() => import('../components/PriceProof.vue')),
     'PriceDeleteChip': defineAsyncComponent(() => import('../components/PriceDeleteChip.vue'))
@@ -37,11 +34,6 @@ export default {
     'hidePriceProof': false,
     'readonly': false
   },
-  data() {
-    return {
-      priceLocationEmoji: null
-    }
-  },
   computed: {
     ...mapStores(useAppStore),
     username() {
@@ -51,31 +43,7 @@ export default {
       return this.username && (this.price.owner === this.username)
     }
   },
-  mounted() {
-    this.initPriceFooter()
-  },
   methods: {
-    initPriceFooter() {
-      this.priceLocationEmoji = this.getPriceLocationCountryEmoji()
-    },
-    getPriceLocationTitle() {
-      if (this.price.location) {
-        return utils.getLocationTitle(this.price.location)
-      }
-      return this.price.location_id
-    },
-    getPriceLocationCountryEmoji() {
-      if (this.price && this.price.location) {
-        return utils.getCountryEmojiFromName(this.price.location.osm_address_country)
-      }
-      return null
-    },
-    goToLocation() {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/locations/${this.price.location_id}` })
-    },
     goToUser() {
       if (this.readonly) {
         return
