@@ -253,11 +253,11 @@
 		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"ProofEditDialog": {
-		"Title": "Modify your proof",
-		"EditProof": "Edit your proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Ubah bukti Anda",
+		"EditProof": "Edit bukti Anda",
+		"Public": "Publik",
+		"Private": "Privat",
+		"PrivateWarning": "Jika pengaturan bukti Anda Privat, bukti tersebut akan disembunyikan dari publik. Kami sarankan untuk menyembunyikan informasi pribadi apa pun dengan menyunting atau melipat dokumen, jika memungkinkan.",
 		"Save": "menyimpan "
 	},
 	"Router": {
@@ -320,7 +320,7 @@
 		"LoadMore": "Muat lebih banyak",
 		"MyPrices": "Harga saya",
 		"MyProofs": "Bukti saya",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "Bukti diperbarui!",
 		"Settings": "Pengaturan",
 		"Title": "Dasbor",
 		"UserPriceTotal": "{count} harga",
