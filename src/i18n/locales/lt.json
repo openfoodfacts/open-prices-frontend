@@ -252,6 +252,14 @@
 		"Prices": "Kainos",
 		"ProofNotFound": "Proof not found (or not the owner)"
 	},
+	"ProofEditDialog": {
+		"Title": "Modifikuoti savo įrodymą",
+		"EditProof": "Redaguoti savo įrodymą",
+		"Public": "Vieša",
+		"Private": "Privatus",
+		"PrivateWarning": "Jei savo įrodymą nustatysite kaip privatų, jis bus paslėptas nuo viešos peržiūros. Rekomenduojame paslėpti savo asmeninę informaciją redaguojant arba užlenkiant dokumentą, jei įmanoma.",
+		"Save": "Išsaugoti"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Pridėti kainą"
@@ -312,6 +320,7 @@
 		"LoadMore": "Įkelti daugiau",
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
+		"ProofUpdated": "Įrodymas atnaujintas!",
 		"Settings": "Nustatymai",
 		"Title": "Prietaisų skydelis",
 		"UserPriceTotal": "{count} prices",

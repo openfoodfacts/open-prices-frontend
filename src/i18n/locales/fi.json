@@ -110,23 +110,23 @@
 		"AddToOFF": "Lisää kohtaan {name}",
 		"Filter": "Suodata",
 		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
+		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
 		"Order": "Järjestys",
-		"OrderProductUniqueScansDESC": "Number of scans",
-		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderProductUniqueScansDESC": "Skannausten määrä",
+		"OrderProductPriceCountDESC": "Hintojen määrä",
 		"OrderPriceASC": "Hinta",
-		"OrderPriceCreatedDESC": "Addition date",
-		"OrderPriceDateDESC": "Price date",
+		"OrderPriceCreatedDESC": "Lisäyspäivämäärä",
+		"OrderPriceDateDESC": "Hinnan päivämäärä",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
 		"Yes": "Kyllä",
 		"No": "Ei"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "Valitse yksi suosikkivaluutoistasi",
 		"Currency": "Valuutta",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrencies": "Lisää valuuttoja asetuksissa",
+		"AddCurrenciesWarning": "Sinut ohjataan Asetukset-sivulle, mutta menetät kaikki tälle sivulle antamasi tiedot.",
+		"Select": "Valitse {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Valitse jokin viimeaikaisista todisteistasi"
@@ -204,7 +204,7 @@
 	"ProductCard": {
 		"Brands": "Tuotemerkit",
 		"BrandLower": "tuotemerkki",
-		"BrandTotal": "{count} brands",
+		"BrandTotal": "{count} tuotemerkkejä",
 		"Categories": "Tuoteluokat",
 		"CategoriesLower": "tuoteluokat",
 		"CategoryTotal": "{count} kategoriaa",
@@ -212,13 +212,13 @@
 		"LabelsLower": "merkit",
 		"LabelTotal": "{count} tunnisteita",
 		"LatestPrice": "Viimeisin hinta",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Tuotteen merkki puuttuu",
+		"ProductCategoriesMissing": "Tuoteluokat puuttuvat",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Tuotteen määrä puuttuu",
 		"UnknownProduct": "Tuntematon tuotenimi"
 	},
 	"ProductDetail": {
@@ -251,6 +251,14 @@
 		"LoadMore": "Lataa enemmän",
 		"Prices": "Hinnat",
 		"ProofNotFound": "Todistetta ei löydy (tai ei omistajaa)"
+	},
+	"ProofEditDialog": {
+		"Title": "Modify your proof",
+		"EditProof": "Edit your proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Tallenna"
 	},
 	"Router": {
 		"AddPrice": {
@@ -312,6 +320,7 @@
 		"LoadMore": "Lataa enemmän",
 		"MyPrices": "Minun hinnat",
 		"MyProofs": "Minun todisteeni",
+		"ProofUpdated": "Proof updated!",
 		"Settings": "Asetukset",
 		"Title": "Kojelauta",
 		"UserPriceTotal": "{count} hinnat",
@@ -331,8 +340,8 @@
 		"ChangeLanguage": "Vaihda kieli",
 		"CountryLabel": "Maa",
 		"CurrencyLabel": "Valuutta",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"FavoriteCurrencies": "Suosikki valuutat",
+		"CurrencyRequired": "Vähintään yksi valuutta vaaditaan",
 		"LanguageLabel": "Kielet",
 		"Save": "Tallenna",
 		"Title": "Asetukset",

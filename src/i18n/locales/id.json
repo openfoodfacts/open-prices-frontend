@@ -252,6 +252,14 @@
 		"Prices": "Harga",
 		"ProofNotFound": "Proof not found (or not the owner)"
 	},
+	"ProofEditDialog": {
+		"Title": "Ubah bukti Anda",
+		"EditProof": "Edit bukti Anda",
+		"Public": "Publik",
+		"Private": "Privat",
+		"PrivateWarning": "Jika pengaturan bukti Anda Privat, bukti tersebut akan disembunyikan dari publik. Kami sarankan untuk menyembunyikan informasi pribadi apa pun dengan menyunting atau melipat dokumen, jika memungkinkan.",
+		"Save": "menyimpan "
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Tambahkan harga"
@@ -312,6 +320,7 @@
 		"LoadMore": "Muat lebih banyak",
 		"MyPrices": "Harga saya",
 		"MyProofs": "Bukti saya",
+		"ProofUpdated": "Bukti diperbarui!",
 		"Settings": "Pengaturan",
 		"Title": "Dasbor",
 		"UserPriceTotal": "{count} harga",

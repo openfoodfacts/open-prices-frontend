@@ -252,6 +252,14 @@
 		"Prices": "Prix",
 		"ProofNotFound": "Preuve introuvable (ou pas le propriétaire)"
 	},
+	"ProofEditDialog": {
+		"Title": "Modifier votre preuve",
+		"EditProof": "Éditer votre preuve",
+		"Public": "Publique",
+		"Private": "Privée",
+		"PrivateWarning": "Lorsque vous définissez votre preuve comme Privée, elle est masquée à la vue du public. Nous vous recommandons de cacher toute information personnelle en caviardant ou en pliant le document, si possible.",
+		"Save": "Enregistrer"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Ajouter un prix"
@@ -312,6 +320,7 @@
 		"LoadMore": "Voir plus",
 		"MyPrices": "Mes prix",
 		"MyProofs": "Mes preuves",
+		"ProofUpdated": "Preuve mise à jour !",
 		"Settings": "Paramètres",
 		"Title": "Tableau de bord",
 		"UserPriceTotal": "{count} prix",

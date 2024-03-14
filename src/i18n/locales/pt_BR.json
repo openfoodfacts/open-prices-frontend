@@ -252,6 +252,14 @@
 		"Prices": "Preços",
 		"ProofNotFound": "Proof not found (or not the owner)"
 	},
+	"ProofEditDialog": {
+		"Title": "Modify your proof",
+		"EditProof": "Edit your proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Guardar"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Adicionar um preço"
@@ -312,6 +320,7 @@
 		"LoadMore": "Carregar mais",
 		"MyPrices": "Meus valores",
 		"MyProofs": "Minhas demonstrações",
+		"ProofUpdated": "Proof updated!",
 		"Settings": "Definições",
 		"Title": "Painel de controle",
 		"UserPriceTotal": "{count} valores",

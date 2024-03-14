@@ -252,6 +252,14 @@
 		"Prices": "Fiyatlar",
 		"ProofNotFound": "Bedel bulunamadı (veya sahibi değil)"
 	},
+	"ProofEditDialog": {
+		"Title": "Bedelinizi değiştirin",
+		"EditProof": "Bedelinizi düzenleyin",
+		"Public": "Genel",
+		"Private": "Özel",
+		"PrivateWarning": "Bedelinizi Özel olarak ayarladığınızda, herkese açık görünümden gizlenecektir. Mümkünse belgeyi düzenleyerek veya katlayarak tüm kişisel bilgileri gizlemenizi öneririz.",
+		"Save": "Kaydet"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Fiyat ekleyin"
@@ -312,6 +320,7 @@
 		"LoadMore": "Daha fazla yükle",
 		"MyPrices": "Fiyatlarım",
 		"MyProofs": "Bedellerim",
+		"ProofUpdated": "Bedel güncellendi!",
 		"Settings": "Ayarlar",
 		"Title": "Gösterge paneli",
 		"UserPriceTotal": "{count} fiyat",

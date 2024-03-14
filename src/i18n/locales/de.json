@@ -252,6 +252,14 @@
 		"Prices": "Preise",
 		"ProofNotFound": "Nachweis nicht gefunden (oder nicht der Eigentümer)"
 	},
+	"ProofEditDialog": {
+		"Title": "Ändern Sie Ihren Nachweis",
+		"EditProof": "Bearbeiten Sie Ihren Nachweis",
+		"Public": "Öffentlich",
+		"Private": "Privat",
+		"PrivateWarning": "Wenn Sie Ihren Korrekturabzug auf „Privat” setzen, ist er für die Öffentlichkeit nicht zugänglich. Wir empfehlen, personenbezogene Informationen nach Möglichkeit durch Schwärzen oder Falten des Dokuments zu verbergen.",
+		"Save": "Speichern"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Preis hinzufügen"
@@ -312,6 +320,7 @@
 		"LoadMore": "Weitere laden",
 		"MyPrices": "Mein Preise",
 		"MyProofs": "Meine Belege",
+		"ProofUpdated": "Nachweis aktualisiert!",
 		"Settings": "Einstellungen",
 		"Title": "Übersicht",
 		"UserPriceTotal": "{count} Preise",

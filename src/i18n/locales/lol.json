@@ -252,6 +252,14 @@
 		"Prices": "crwdns247798:0crwdne247798:0",
 		"ProofNotFound": "crwdns247800:0crwdne247800:0"
 	},
+	"ProofEditDialog": {
+		"Title": "crwdns247880:0crwdne247880:0",
+		"EditProof": "crwdns247882:0crwdne247882:0",
+		"Public": "crwdns247884:0crwdne247884:0",
+		"Private": "crwdns247886:0crwdne247886:0",
+		"PrivateWarning": "crwdns247888:0crwdne247888:0",
+		"Save": "crwdns247890:0crwdne247890:0"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "crwdns246694:0crwdne246694:0"
@@ -312,6 +320,7 @@
 		"LoadMore": "crwdns246728:0crwdne246728:0",
 		"MyPrices": "crwdns246940:0crwdne246940:0",
 		"MyProofs": "crwdns246948:0crwdne246948:0",
+		"ProofUpdated": "crwdns247892:0crwdne247892:0",
 		"Settings": "crwdns246942:0crwdne246942:0",
 		"Title": "crwdns246730:0crwdne246730:0",
 		"UserPriceTotal": "crwdns246976:0{count}crwdne246976:0",

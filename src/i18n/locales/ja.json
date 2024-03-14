@@ -252,6 +252,14 @@
 		"Prices": "Prices",
 		"ProofNotFound": "証明書が見つかりません（または所有者ではありません）"
 	},
+	"ProofEditDialog": {
+		"Title": "証拠を修正する",
+		"EditProof": "証拠を編集する",
+		"Public": "一般公開",
+		"Private": "非公開",
+		"PrivateWarning": "証明を非公開に設定すると、公開ビューから非表示になります。 可能であれば、文書を編集または折り畳むことによって個人情報を非表示にすることをお勧めします。",
+		"Save": "保存"
+	},
 	"Router": {
 		"AddPrice": {
 			"Title": "Add a price"
@@ -312,6 +320,7 @@
 		"LoadMore": "もっと読み込む",
 		"MyPrices": "私の価格",
 		"MyProofs": "自分の証拠",
+		"ProofUpdated": "証拠が更新されました！",
 		"Settings": "設定",
 		"Title": "Dashboard",
 		"UserPriceTotal": "商品 {count} 個",
