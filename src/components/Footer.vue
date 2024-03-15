@@ -5,7 +5,7 @@
         <i18n-t keypath="Footer.TagLine" tag="span">
           <template #name>{{ APP_NAME }}</template>
           <template #url>
-            <a href="https://world.openfoodfacts.org" target="_blank">{{ OFF_NAME }}</a>
+            <OpenFoodFactsLink display="link"></OpenFoodFactsLink>
           </template>
         </i18n-t>
       </v-col>
@@ -19,9 +19,13 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 
 export default {
+  components: {
+    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+  },
   data() {
     return {
       APP_NAME: constants.APP_NAME,
