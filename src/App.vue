@@ -12,6 +12,15 @@
   </v-app>
 </template>
 
+<style>
+.v-main{
+  background-color: #FFFCF2;
+}
+a {
+  color: #309191;
+}
+</style>
+
 <script>
 import { defineComponent } from 'vue'
 import Header from './components/Header.vue'

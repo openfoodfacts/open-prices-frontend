@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar :elevation="1" style="background-color: rgb(242, 233, 228);">
+  <v-app-bar :elevation="1" >
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu"></v-app-bar-nav-icon>
     <v-app-bar-title style="cursor:pointer" @click="$router.push('/')">
       <img src="/favicon.svg" height="28" width="28" style="vertical-align:bottom">
@@ -26,6 +26,12 @@
     <v-list :items="getDrawerMenuItems"></v-list>
   </v-navigation-drawer>
 </template>
+
+<style scoped>
+.v-app-bar {
+  background-color: #ff8e00;
+}
+</style>
 
 <script>
 import { mapStores } from 'pinia'
