@@ -28,7 +28,7 @@
         </v-col>
       </v-row>
 
-      <PriceFooter v-if="price && !hidePriceFooter" class="mt-2" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly"></PriceFooter>
+      <PriceFooter v-if="price && !hidePriceFooter" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly"></PriceFooter>
     </v-container>
   </v-card>
 </template>

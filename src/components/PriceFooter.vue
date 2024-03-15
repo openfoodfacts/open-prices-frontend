@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row style="margin-top:0;">
     <v-col :cols="userIsPriceOwner ? '11' : '12'">
       <PriceLocationChip v-if="!hidePriceLocation" class="mr-1" :price="price" :readonly="readonly"></PriceLocationChip>
       <PriceOwnerChip class="mr-1" :price="price" :readonly="readonly"></PriceOwnerChip>
@@ -8,7 +8,7 @@
     </v-col>
   </v-row>
 
-  <PriceActionMenuButton v-if="userIsPriceOwner" style="position:absolute;bottom:6px;right:0;"></PriceActionMenuButton>
+  <PriceActionMenuButton v-if="userIsPriceOwner" :price="price"></PriceActionMenuButton>
 </template>
 
 <script>
@@ -23,7 +23,6 @@ export default {
     'RelativeDateTimeChip': defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     'PriceProof': defineAsyncComponent(() => import('../components/PriceProof.vue')),
     'PriceActionMenuButton': defineAsyncComponent(() => import('../components/PriceActionMenuButton.vue')),
-    'PriceDeleteChip': defineAsyncComponent(() => import('../components/PriceDeleteChip.vue')),
   },
   props: {
     'price': null,
