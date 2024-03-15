@@ -1,37 +1,42 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('SignIn.Title') }}
-  </h1>
+  <v-row align="center" justify="center">
+    <v-col cols="12" sm="10" md="8" lg="6">
+      <h1 class="text-h5 mb-1">
+        {{ $t('SignIn.Title') }}
+      </h1>
+      <br />
+      <v-alert
+          class="mb-2"
+          type="info"
+          variant="outlined">
+        <i18n-t keypath="Common.SignInOFFAccount" tag="span">
+          <template #url>
+            <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
+          </template>
+        </i18n-t>
+      </v-alert>
 
-  <v-alert
-    class="mb-2"
-    type="info"
-    variant="outlined">
-    <i18n-t keypath="Common.SignInOFFAccount" tag="span">
-      <template #url>
-        <a href="https://world.openfoodfacts.org" target="_blank">Open Food Facts</a>
-      </template>
-    </i18n-t>
-  </v-alert>
-
-  <v-form @submit.prevent="signIn">
-    <v-text-field
-      v-model="signinForm.username"
-      :label="$t('SignIn.UsernameLabel')"
-      type="text"
-    ></v-text-field>
-    <v-text-field
-      v-model="signinForm.password"
-      :label="$t('SignIn.Password')"
-      type="password"
-    ></v-text-field>
-    <v-btn
-      type="submit"
-      class="mt-2"
-      :loading="loading"
-      :disabled="!formFilled"
-    >{{ $t('SignIn.Button') }}</v-btn>
-  </v-form>
+      <v-form @submit.prevent="signIn">
+        <v-text-field
+            v-model="signinForm.username"
+            :label="$t('SignIn.UsernameLabel')"
+            type="text"
+        ></v-text-field>
+        <v-text-field
+            v-model="signinForm.password"
+            :label="$t('SignIn.Password')"
+            type="password"
+        ></v-text-field>
+        <v-btn
+            type="submit"
+            class="mt-2"
+            variant="elevated"
+            :loading="loading"
+            :disabled="!formFilled"
+        >{{ $t('SignIn.Button') }}</v-btn>
+      </v-form>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

@@ -1,11 +1,15 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('UserList.Title') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-  </h1>
-
+  <v-row align="center" justify="center">
+    <v-col cols="12" sm="10" md="8" lg="6">
+      <h1 class="text-h5 mb-1">
+        {{ $t('UserList.Title') }}
+        <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+      </h1>
+    </v-col>
+  </v-row>
+  <br/>
   <v-row v-if="!loading">
-    <v-col>
+    <v-col cols="12" sm="10" md="8" lg="6">
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-account-badge-outline">
         {{ $t('UserList.UserTotal', { count: userTotal }) }}
       </v-chip>

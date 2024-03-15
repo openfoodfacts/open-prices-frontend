@@ -1,11 +1,15 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('ProductList.Title') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-  </h1>
-
-  <v-row v-if="!loading">
-    <v-col>
+  <v-row align="center" justify="center">
+    <v-col cols="12" sm="10" md="8" lg="6">
+      <h1 class="text-h5 mb-1">
+        {{ $t('ProductList.Title') }}
+        <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+      </h1>
+    </v-col>
+  </v-row>
+  <br/>
+  <v-row v-if="!loading" align="center" justify="center">
+    <v-col cols="12" sm="10" md="8" lg="6">
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-food-outline">
         {{ productTotal }}<span class="d-none d-sm-inline">&nbsp;products</span>
       </v-chip>

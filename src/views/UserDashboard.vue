@@ -4,7 +4,7 @@
   </h1>
 
   <v-row>
-    <v-col>
+    <v-col cols="12" sm="10" md="8" lg="6">
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-account">
         {{ username }}
       </v-chip>
@@ -15,7 +15,7 @@
   </v-row>
 
   <v-row>
-    <v-col cols="12" sm="6" lg="4">
+    <v-col cols="12" sm="10" md="8" lg="6">
       <v-card
         :title="$t('UserDashboard.MyPrices')"
         :subtitle="userPriceTotal"
@@ -24,7 +24,7 @@
         to="/dashboard/prices">
       </v-card>
     </v-col>
-    <v-col cols="12" sm="6" lg="4">
+    <v-col cols="12" sm="10" md="8" lg="6">
       <v-card
         :title="$t('UserDashboard.MyProofs')"
         :subtitle="userProofTotal"

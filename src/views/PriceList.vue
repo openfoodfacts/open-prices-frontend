@@ -1,9 +1,13 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('PriceList.Title') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-  </h1>
-
+  <v-row align="center" justify="center">
+    <v-col cols="12" sm="10" md="8" lg="6">
+      <h1 class="text-h5 mb-1">
+        {{ $t('PriceList.Title') }}
+        <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+      </h1>
+    </v-col>
+  </v-row>
+  <br/>
   <v-row>
     <v-col cols="12" sm="6" md="4" v-for="price in priceList" :key="price">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%"></PriceCard>
