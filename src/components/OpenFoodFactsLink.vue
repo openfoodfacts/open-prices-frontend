@@ -1,5 +1,5 @@
 <template>
-  <a v-if="display === 'link'" href="https://world.openfoodfacts.org" target="_blank">
+  <a v-if="display === 'link'" :href="getOFFUrl()" target="_blank">
     {{ getOFFName() }}
   </a>
   <v-btn v-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getOFFUrl()" target="_blank">
@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import constants from '../constants'
 
 export default {
@@ -29,12 +31,18 @@ export default {
       OFF_URL: constants.OFF_URL,
     }
   },
+  computed: {
+    ...mapStores(useAppStore),
+    getOFFUrlWithLocale() {
+      return this.OFF_URL.replace('world', this.appStore.user.language)
+    }
+  },
   methods: {
     getOFFUrl() {
       if (this.facet && this.value) {
-        return `${this.OFF_URL}/${this.facet}/${this.value}`
+        return `${this.getOFFUrlWithLocale}/${this.facet}/${this.value}`
       }
-      return this.OFF_URL
+      return this.getOFFUrlWithLocale
     },
     getOFFName() {
       if (this.action === 'add') {
