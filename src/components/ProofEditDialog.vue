@@ -1,12 +1,14 @@
 <template>
-  <v-dialog>
+  <v-dialog scrollable max-height="80%" max-width="80%">
     <v-card>
       <v-card-title>
-        {{ $t('ProofEditDialog.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('PriceEdit.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
       </v-card-title>
+
       <v-divider></v-divider>
+
       <v-card-subtitle size="small">
-        {{ $t('ProofEditDialog.EditProof') }}
+        {{ $t('PriceEdit.EditProof') }}
       </v-card-subtitle>
       <v-card-text v-if="proof.type === 'RECEIPT'">
         <v-switch
@@ -14,11 +16,11 @@
           color="green"
           density="compact"
           inset
-          :label="isPublic ? $t('ProofEditDialog.Public') : $t('ProofEditDialog.Private')"
+          :label="isPublic ? $t('PriceEdit.Public') : $t('PriceEdit.Private')"
           hide-details
         ></v-switch>
         <p class="text-caption text-warning">
-          <i>{{ $t('ProofEditDialog.PrivateWarning') }}</i>
+          <i>{{ $t('PriceEdit.PrivateWarning') }}</i>
         </p>
         <!-- placeholder for receipt type change-->
 
@@ -26,7 +28,7 @@
       <v-divider></v-divider>
       <!-- placeholder for proof delete-->
       <v-card-actions>
-        <v-btn @click="save">{{ $t('ProofEditDialog.Save') }}</v-btn>
+        <v-btn @click="save">{{ $t('PriceEdit.Save') }}</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>

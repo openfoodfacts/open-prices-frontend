@@ -121,8 +121,7 @@
                   inputmode="decimal"
                   min="0"
                   hide-details="auto"
-                  :suffix="addPriceSingleForm.currency"
-                >
+                  :suffix="addPriceSingleForm.currency">
                   <template v-slot:prepend-inner>
                     <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
                     <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true" />
@@ -137,8 +136,8 @@
                   inputmode="decimal"
                   min="0"
                   hide-details="auto"
-                  :suffix="addPriceSingleForm.currency"
-                ></v-text-field>
+                  :suffix="addPriceSingleForm.currency">
+                </v-text-field>
               </v-col>
             </v-row>
             <div class="d-inline">
