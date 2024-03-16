@@ -195,15 +195,15 @@
 		"PriceCount": "{count} prijzen"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Weet u zeker dat u deze prijs wilt verwijderen?",
 		"Delete": "Verwijder",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Prijs verwijderd!",
+		"Title": "Een prijs verwijderen"
 	},
 	"PriceEdit": {
 		"Save": "Opslaan",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Prijs gewijzigd!",
+		"Title": "Bewerk een prijs"
 	},
 	"PriceList": {
 		"LoadMore": "Meer laden",
