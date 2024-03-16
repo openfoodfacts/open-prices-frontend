@@ -199,6 +199,11 @@
 		"Success": "価格が削除されました!",
 		"Title": "価格を削除する"
 	},
+	"PriceEdit": {
+		"Save": "保存",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
+	},
 	"PriceList": {
 		"LoadMore": "もっと読み込む",
 		"Title": "Latest prices"
