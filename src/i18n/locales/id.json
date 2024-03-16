@@ -199,6 +199,11 @@
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
+	"PriceEdit": {
+		"Save": "menyimpan ",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
+	},
 	"PriceList": {
 		"LoadMore": "Muat lebih banyak",
 		"Title": "Harga terbaru"

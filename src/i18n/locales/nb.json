@@ -199,6 +199,11 @@
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
+	"PriceEdit": {
+		"Save": "Lagre",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
+	},
 	"PriceList": {
 		"LoadMore": "Last inn flere",
 		"Title": "Latest prices"

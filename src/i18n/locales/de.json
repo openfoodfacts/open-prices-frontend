@@ -194,10 +194,15 @@
 		"PriceCount": "{count} Preise"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Möchten Sie diesen Preis wirklich löschen?",
 		"Delete": "Löschen",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Preis gelöscht!",
+		"Title": "Preis löschen"
+	},
+	"PriceEdit": {
+		"Save": "Speichern",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "Weitere laden",

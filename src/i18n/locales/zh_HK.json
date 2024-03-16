@@ -199,6 +199,11 @@
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
+	"PriceEdit": {
+		"Save": "儲存",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
+	},
 	"PriceList": {
 		"LoadMore": "載入更多",
 		"Title": "Latest prices"
