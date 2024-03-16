@@ -331,7 +331,7 @@
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
-    @proofConfirmed="handleProofConfirmed"
+    @recentProofSelected="handleproofSelected($event)"
     @close="userRecentProofsDialog = false"
   ></UserRecentProofsDialog>
   <ChangeCurrencyDialog
@@ -501,7 +501,7 @@ export default {
     showUserRecentProofs() {
       this.userRecentProofsDialog = true
     },
-    handleProofConfirmed(selectedProof) {
+    handleproofSelected(selectedProof) {
       this.addPriceMultipleForm.proof_id = selectedProof.id
       this.proofImagePreview = this.getProofUrl(selectedProof)
       this.proofSelectedSuccessMessage = true

@@ -78,8 +78,7 @@ export default {
       proofEditDialog: false,
     }
   },
-  emits: ['proofUpdated'],
-
+  emits: ['proofSelected', 'proofUpdated', 'close'],
   methods: {
     selectProof() {
       if (this.isSelectable) {
