@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "அமைப்புகள்",
-		"Sign-out": "Sign out"
+		"SignIn": "உள்நுழை",
+		"SignOut": "Sign out"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
