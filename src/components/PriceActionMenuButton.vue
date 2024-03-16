@@ -13,7 +13,7 @@
     v-if="editDialog"
     v-model="editDialog"
     :price="price"
-    @update="showEditSuccessMessage"
+    @update="onPriceEditSuccess($event)"
     @close="closeEditDialog">
   </PriceEditDialog>
 
@@ -61,9 +61,11 @@ export default {
       deleteSuccessMessage: false
     }
   },
-  computed: {
-  },
   methods: {
+    onPriceEditSuccess(price) {
+      // this.price = price
+      this.showEditSuccessMessage()
+    },
     openEditDialog() {
       this.editDialog = true
     },

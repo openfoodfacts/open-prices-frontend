@@ -53,7 +53,7 @@
         <v-btn
           elevation="1"
           :loading="loading"
-          @click="update"
+          @click="updatePrice"
         >{{ $t('PriceEdit.Save') }}</v-btn>
       </v-card-actions>
     </v-card>
@@ -104,17 +104,14 @@ export default {
         .updatePrice(this.price.id, this.updatePriceForm)
         .then((response) => {
           // if response.status == 204
+          this.$emit('update', response.data)
+          this.close()
         })
         .catch((error) => {
           console.log(error)
         })
     },
     close() {
-      this.$emit('close')
-    },
-    update() {
-      this.updatePrice()
-      this.$emit('update')
       this.$emit('close')
     },
   }
