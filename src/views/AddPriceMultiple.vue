@@ -331,7 +331,7 @@
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
-    @recentProofSelected="handleproofSelected($event)"
+    @recentProofSelected="handleRecentProofSelected($event)"
     @close="userRecentProofsDialog = false"
   ></UserRecentProofsDialog>
   <ChangeCurrencyDialog
@@ -345,12 +345,12 @@
 <script>
 import Compressor from 'compressorjs'
 import ExifReader from 'exifreader'
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import utils from '../utils.js'
 import LabelsTags from '../data/labels-tags.json'
-import { defineAsyncComponent } from 'vue'
 
 Compressor.setDefaults({
   checkOrientation: true,  // default
@@ -501,7 +501,7 @@ export default {
     showUserRecentProofs() {
       this.userRecentProofsDialog = true
     },
-    handleproofSelected(selectedProof) {
+    handleRecentProofSelected(selectedProof) {
       this.addPriceMultipleForm.proof_id = selectedProof.id
       this.proofImagePreview = this.getProofUrl(selectedProof)
       this.proofSelectedSuccessMessage = true
