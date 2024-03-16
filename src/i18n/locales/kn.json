@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "ಸೆಟ್ಟಿಂಗ್",
-		"Sign-out": "Sign out"
+		"SignIn": "ಸೈನ್ ಇನ್ ಮಾಡಿ",
+		"SignOut": "Sign out"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
