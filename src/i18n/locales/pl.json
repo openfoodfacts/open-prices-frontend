@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Panel",
 		"Settings": "Ustawienia",
-		"Sign-out": "Wyloguj się"
+		"SignIn": "Zaloguj się",
+		"SignOut": "Wyloguj się"
 	},
 	"Home": {
 		"AddPrice": "Dodaj cenę",
