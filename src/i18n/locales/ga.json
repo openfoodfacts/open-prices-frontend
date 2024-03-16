@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Socruithe",
-		"Sign-out": "Sign out"
+		"SignIn": "Sínigh isteach",
+		"SignOut": "Sign out"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
