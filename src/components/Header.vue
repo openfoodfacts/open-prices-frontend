@@ -5,18 +5,21 @@
       <img src="/favicon.svg" height="28" width="28" style="vertical-align:bottom">
       {{ APP_NAME }}
     </v-app-bar-title>
-    <template v-slot:append>
-      <v-btn v-if="!username" to="/sign-in" icon="mdi-login" aria-label="Sign in"></v-btn>
-      <v-menu v-if="username">
+    <template v-if="!username" v-slot:append>
+      <v-btn class="d-sm-none" icon="mdi-login" to="/sign-in" :aria-label="$t('Header.SignIn')"></v-btn>
+      <v-btn class="d-none d-sm-flex" prepend-icon="mdi-login" to="/sign-in" :aria-label="$t('Header.SignIn')">{{ $t('Header.SignIn') }}</v-btn>
+    </template>
+    <template v-else v-slot:append>
+      <v-menu>
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" icon="mdi-account-circle"></v-btn>
         </template>
         <v-list>
-          <v-list-item :slim="true" prepend-icon="mdi-account" disabled>{{ username }}</v-list-item>
+          <v-list-item class="" :slim="true" prepend-icon="mdi-account" disabled>{{ username }}</v-list-item>
           <v-divider></v-divider>
-          <v-list-item :aria-label="$t('Header.Dashboard')" :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard">{{ $t('Header.Dashboard') }}</v-list-item>
-          <v-list-item :aria-label="$t('Header.Settings')" :slim="true" prepend-icon="mdi-cog-outline" to="/settings">{{ $t('Header.Settings') }}</v-list-item>
-          <v-list-item :aria-label="$t('Header.Sign-out')" :slim="true" prepend-icon="mdi-logout" @click="signOut">{{ $t('Header.Sign-out') }}</v-list-item>
+          <v-list-item :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard" :aria-label="$t('Header.Dashboard')">{{ $t('Header.Dashboard') }}</v-list-item>
+          <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/settings" :aria-label="$t('Header.Settings')">{{ $t('Header.Settings') }}</v-list-item>
+          <v-list-item :slim="true" prepend-icon="mdi-logout" @click="signOut" :aria-label="$t('Header.SignOut')">{{ $t('Header.SignOut') }}</v-list-item>
         </v-list>
       </v-menu>
     </template>
