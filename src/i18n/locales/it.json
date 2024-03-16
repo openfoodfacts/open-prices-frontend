@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Cruscotto",
 		"Settings": "Impostazioni",
-		"Sign-out": "Esci"
+		"SignIn": "Accedi",
+		"SignOut": "Esci"
 	},
 	"Home": {
 		"AddPrice": "Aggiungi un prezzo",
