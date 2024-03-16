@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "सेटिंग्स",
-		"Sign-out": "Sign out"
+		"SignIn": "साइन इन करें",
+		"SignOut": "Sign out"
 	},
 	"Home": {
 		"AddPrice": "एक मूल्य जोड़े",
