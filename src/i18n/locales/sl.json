@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Nastavitve",
-		"Sign-out": "Odjava"
+		"SignIn": "Vpis",
+		"SignOut": "Odjava"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
