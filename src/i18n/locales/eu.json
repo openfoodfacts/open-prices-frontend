@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Ezarpenak",
-		"Sign-out": "Saioa itxi"
+		"SignIn": "Hasi saioa",
+		"SignOut": "Saioa itxi"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
