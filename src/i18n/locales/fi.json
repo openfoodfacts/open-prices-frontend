@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Kojelauta",
 		"Settings": "Asetukset",
-		"Sign-out": "Kirjaudu ulos"
+		"SignIn": "Kirjaudu sisään",
+		"SignOut": "Kirjaudu ulos"
 	},
 	"Home": {
 		"AddPrice": "Lisää hinta",
