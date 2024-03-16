@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Axustes",
-		"Sign-out": "Sign out"
+		"SignIn": "Iniciar sesión",
+		"SignOut": "Sign out"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
