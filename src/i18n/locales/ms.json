@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Tetapan",
-		"Sign-out": "Daftar keluar"
+		"SignIn": "Sign in",
+		"SignOut": "Daftar keluar"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
