@@ -199,6 +199,11 @@
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
+	"PriceEdit": {
+		"Save": "Запис",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
+	},
 	"PriceList": {
 		"LoadMore": "Зареди още",
 		"Title": "Latest prices"
