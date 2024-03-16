@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "ตั้งค่า",
-		"Sign-out": "ล๊อคเอ้าท์"
+		"SignIn": "เข้าสู่ระบบ",
+		"SignOut": "ล๊อคเอ้าท์"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
