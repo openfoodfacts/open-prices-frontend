@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "crwdns247802:0{name}crwdne247802:0",
+		"Delete": "crwdns247896:0crwdne247896:0",
+		"Edit": "crwdns247898:0crwdne247898:0",
 		"Filter": "crwdns247746:0crwdne247746:0",
 		"FilterProductWithPriceCountHide": "crwdns247818:0crwdne247818:0",
 		"FilterPriceMoreThan30DaysHide": "crwdns247820:0crwdne247820:0",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "crwdns247000:0{count}crwdne247000:0"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "crwdns247006:0crwdne247006:0",
-		"Delete": "crwdns247008:0crwdne247008:0",
-		"DeleteTitle": "crwdns247010:0crwdne247010:0",
-		"Success": "crwdns247012:0crwdne247012:0"
+	"PriceDelete": {
+		"Confirmation": "crwdns247900:0crwdne247900:0",
+		"Delete": "crwdns247902:0crwdne247902:0",
+		"Success": "crwdns247904:0crwdne247904:0",
+		"Title": "crwdns247906:0crwdne247906:0"
 	},
 	"PriceList": {
 		"LoadMore": "crwdns246664:0crwdne246664:0",
