@@ -126,8 +126,8 @@
 	"ChangeCurrencyDialog": {
 		"Title": "Choisissez l'une de vos devises préférées",
 		"Currency": "Devise",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"AddCurrencies": "Ajouter des devises dans les paramètres",
+		"AddCurrenciesWarning": "Vous allez être redirigé vers la page des paramètres, mais vous perdrez toutes les informations que vous avez saisies sur cette page.",
 		"Select": "Sélectionnez {currency_code}"
 	},
 	"UserRecentProofsDialog": {
