@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "crwdns246616:0crwdne246616:0",
 		"Settings": "crwdns246618:0crwdne246618:0",
-		"Sign-out": "crwdns246620:0crwdne246620:0"
+		"SignIn": "crwdns247914:0crwdne247914:0",
+		"SignOut": "crwdns247916:0crwdne247916:0"
 	},
 	"Home": {
 		"AddPrice": "crwdns246624:0crwdne246624:0",
