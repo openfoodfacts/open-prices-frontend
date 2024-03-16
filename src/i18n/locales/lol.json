@@ -199,6 +199,11 @@
 		"Success": "crwdns247904:0crwdne247904:0",
 		"Title": "crwdns247906:0crwdne247906:0"
 	},
+	"PriceEdit": {
+		"Save": "crwdns247908:0crwdne247908:0",
+		"Success": "crwdns247910:0crwdne247910:0",
+		"Title": "crwdns247912:0crwdne247912:0"
+	},
 	"PriceList": {
 		"LoadMore": "crwdns246664:0crwdne246664:0",
 		"Title": "crwdns246666:0crwdne246666:0"
