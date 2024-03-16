@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Gösterge paneli",
 		"Settings": "Ayarlar",
-		"Sign-out": "Çıkış yap"
+		"SignIn": "Giriş Yap",
+		"SignOut": "Çıkış yap"
 	},
 	"Home": {
 		"AddPrice": "Fiyat ekleyin",
