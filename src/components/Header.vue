@@ -12,11 +12,12 @@
     <template v-else v-slot:append>
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" icon="mdi-account-circle"></v-btn>
-        </template>
+          <v-btn class="d-sm-none" v-bind="props" icon="mdi-account-circle"></v-btn>
+          <v-btn class="d-none d-sm-flex text-none" v-bind="props" prepend-icon="mdi-account-circle">{{ username }}</v-btn>
+        </template> 
         <v-list>
-          <v-list-item class="" :slim="true" prepend-icon="mdi-account" disabled>{{ username }}</v-list-item>
-          <v-divider></v-divider>
+          <v-list-item class="d-sm-none" :slim="true" prepend-icon="mdi-account" disabled>{{ username }}</v-list-item>
+          <v-divider class="d-sm-none"></v-divider>
           <v-list-item :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard" :aria-label="$t('Header.Dashboard')">{{ $t('Header.Dashboard') }}</v-list-item>
           <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/settings" :aria-label="$t('Header.Settings')">{{ $t('Header.Settings') }}</v-list-item>
           <v-list-item :slim="true" prepend-icon="mdi-logout" @click="signOut" :aria-label="$t('Header.SignOut')">{{ $t('Header.SignOut') }}</v-list-item>
