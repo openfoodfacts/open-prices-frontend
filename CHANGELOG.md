@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.50.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.50.1...v1.50.2) (2024-03-16)
+
+
+### Bug Fixes
+
+* always close v-menus if user scrolls. ref [#446](https://github.com/openfoodfacts/open-prices-frontend/issues/446) & other ([ee35e98](https://github.com/openfoodfacts/open-prices-frontend/commit/ee35e98adb654456f0aafc3e7651669506fdc52f))
+* **header:** fix menu display. ref [#451](https://github.com/openfoodfacts/open-prices-frontend/issues/451) & [#452](https://github.com/openfoodfacts/open-prices-frontend/issues/452) ([d6091cd](https://github.com/openfoodfacts/open-prices-frontend/commit/d6091cd54a115d17b534402db8aedffa59e8cf1a))
+
 ## [1.50.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.50.0...v1.50.1) (2024-03-16)
 
 
