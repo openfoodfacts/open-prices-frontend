@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
+		"Delete": "מחיקה",
+		"Edit": "עריכה",
 		"Filter": "סינון",
 		"FilterProductWithPriceCountHide": "הסתרת מוצרים עם מחירים",
 		"FilterPriceMoreThan30DaysHide": "הסתרת מחירים ישנים מ־30 יום",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} מחירים"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "למחוק את המחיר הזה?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "מחיקה",
-		"DeleteTitle": "מחיקת מחיר",
-		"Success": "המחיר נמחק!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "לטעון עוד",
