@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "{name}'e ekle",
+		"Delete": "Sil",
+		"Edit": "Düzenle",
 		"Filter": "Filtrele",
 		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
 		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} fiyat"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Bu fiyatı silmek istediğinizden emin misiniz?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Sil",
-		"DeleteTitle": "Fiyatı sil",
-		"Success": "Fiyat silindi!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "Daha fazla yükle",
