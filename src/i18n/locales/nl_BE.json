@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "Toevoegen aan {name}",
+		"Delete": "Verwijder",
+		"Edit": "Bewerken",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Verberg producten met prijzen",
 		"FilterPriceMoreThan30DaysHide": "Verberg prijzen ouder dan 30 dagen",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prijzen"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Weet u zeker dat u deze prijs wilt verwijderen?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Verwijder",
-		"DeleteTitle": "Een prijs verwijderen",
-		"Success": "Prijs verwijderd!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "Meer laden",
@@ -253,11 +255,11 @@
 		"ProofNotFound": "Bewijs niet gevonden (of niet de eigenaar)"
 	},
 	"ProofEditDialog": {
-		"Title": "Modify your proof",
-		"EditProof": "Edit your proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Wijzig uw bewijs",
+		"EditProof": "Bewerk uw bewijs",
+		"Public": "Openbaar",
+		"Private": "Privé",
+		"PrivateWarning": "Wanneer je je bewijs instelt op Privé, zal het verborgen worden in de publieke weergave. Wij raden aan persoonlijke informatie te verbergen door het document te veranderen of indien mogelijk te vouwen.",
 		"Save": "Opslaan"
 	},
 	"Router": {
@@ -320,7 +322,7 @@
 		"LoadMore": "Meer laden",
 		"MyPrices": "Mijn prijzen",
 		"MyProofs": "Mijn bewijzen",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "Bewijs bijgewerkt!",
 		"Settings": "Instellingen",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prijzen",

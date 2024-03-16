@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
+		"Delete": "刪除",
+		"Edit": "編輯",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
 	},
-	"PriceDeleteChip": {
+	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "刪除",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "載入更多",

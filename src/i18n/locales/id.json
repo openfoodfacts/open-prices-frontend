@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "Tambahkan ke {name}",
+		"Delete": "Hapus",
+		"Edit": "Sunting",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
 		"FilterPriceMoreThan30DaysHide": "Sembunyikan harga yang sudah lebih dari 30 hari",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} harga"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Apakah Anda yakin ingin menghapus harga ini?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Hapus",
-		"DeleteTitle": "Hapus harga",
-		"Success": "Harga telah dihapus!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "Muat lebih banyak",

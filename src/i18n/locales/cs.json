@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "Přidat do {name}",
+		"Delete": "Odstranit",
+		"Edit": "Upravit",
 		"Filter": "Filtr",
 		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
 		"FilterPriceMoreThan30DaysHide": "Skrýt ceny starší než 30 dní",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} cen"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Opravdu chcete tuto cenu smazat?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Odstranit",
-		"DeleteTitle": "Smazat cenu",
-		"Success": "Cena smazána!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "Načíst další",
@@ -253,11 +255,11 @@
 		"ProofNotFound": "Důkaz nenalezen (nebo není vlastník)"
 	},
 	"ProofEditDialog": {
-		"Title": "Modify your proof",
-		"EditProof": "Edit your proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Změňte váš důkaz",
+		"EditProof": "Upravte váš důkaz",
+		"Public": "Veřejný",
+		"Private": "Soukromý",
+		"PrivateWarning": "Když nastavíte svůj důkaz na soukromý, bude skryt před veřejností. Pokud je to možné, doporučujeme skrýt jakékoli osobní údaje zakrytím nebo přeložením dokumentu.",
 		"Save": "Uložit"
 	},
 	"Router": {
@@ -320,7 +322,7 @@
 		"LoadMore": "Načíst další",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje důkazy",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "Důkaz aktualizován!",
 		"Settings": "Nastavení",
 		"Title": "Nástěnka",
 		"UserPriceTotal": "{count} cen",

@@ -50,7 +50,7 @@
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
-			"TakePicture": "การถ่ายภาพ",
+			"TakePicture": "ถ่ายภาพ",
 			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery",
 			"RecentProof": "Recent proof",
@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
+		"Delete": "ลบ",
+		"Edit": "แก้ไข",
 		"Filter": "กรอง",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
 	},
-	"PriceDeleteChip": {
+	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "ลบ",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "Load more",

@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "Lisää kohtaan {name}",
+		"Delete": "Poista",
+		"Edit": "Muokkaa",
 		"Filter": "Suodata",
 		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
 		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} hinnat"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Haluatko varmasti poistaa tämän hinnan?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Poista",
-		"DeleteTitle": "Poista hinta",
-		"Success": "Hinta poistettu!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "Lataa enemmän",

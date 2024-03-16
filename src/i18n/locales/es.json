@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
+		"Delete": "Eliminar",
+		"Edit": "Editar",
 		"Filter": "Filtros",
 		"FilterProductWithPriceCountHide": "Ocultar productos con precios",
 		"FilterPriceMoreThan30DaysHide": "Ocultar precios de más de 30 días",
@@ -122,9 +124,9 @@
 		"No": "No"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Elige uno de tus monedas favoritas",
+		"Title": "Elige una de tus divisas favoritas",
 		"Currency": "Moneda",
-		"AddCurrencies": "Añadir monedas en Configuración",
+		"AddCurrencies": "Añadir divisas en Configuración",
 		"AddCurrenciesWarning": "Serás redirigido a la página de Configuración, pero perderás toda la información que hayas ingresado en esta página.",
 		"Select": "Selecciona {currency_code}"
 	},
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} precios"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "¿Está seguro de que desea eliminar este precio?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Eliminar",
-		"DeleteTitle": "Eliminar precio",
-		"Success": "¡Precio eliminado!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "Cargar más",
@@ -204,7 +206,7 @@
 	"ProductCard": {
 		"Brands": "Marcas",
 		"BrandLower": "marca",
-		"BrandTotal": "{count} brands",
+		"BrandTotal": "{count} marcas",
 		"Categories": "Categorías",
 		"CategoriesLower": "categorías",
 		"CategoryTotal": "{count} categories",
@@ -212,13 +214,13 @@
 		"LabelsLower": "etiquetas",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Último precio",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Falta la marca del producto",
+		"ProductCategoriesMissing": "Faltan las categorías del producto",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Falta la cantidad del producto",
 		"UnknownProduct": "Nombre de producto desconocido"
 	},
 	"ProductDetail": {
@@ -253,11 +255,11 @@
 		"ProofNotFound": "Proof not found (or not the owner)"
 	},
 	"ProofEditDialog": {
-		"Title": "Modify your proof",
-		"EditProof": "Edit your proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Modifica tu comprobante",
+		"EditProof": "Edita tu comprobante",
+		"Public": "Público",
+		"Private": "Privado",
+		"PrivateWarning": "Al establecer tu comprobante como «privado», no se hará público. Si es posible, te recomendamos ocultar cualquier información personal modificando o doblando el documento.",
 		"Save": "Guardar"
 	},
 	"Router": {
@@ -320,7 +322,7 @@
 		"LoadMore": "Cargar más",
 		"MyPrices": "Mis precios",
 		"MyProofs": "Mis pruebas",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "¡Comprobante actualizado!",
 		"Settings": "Configuración",
 		"Title": "Panel de control",
 		"UserPriceTotal": "{count} precios",
@@ -340,8 +342,8 @@
 		"ChangeLanguage": "Cambiar idioma",
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moneda",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"FavoriteCurrencies": "Divisas favoritas",
+		"CurrencyRequired": "Se necsita por lo menos una divisa",
 		"LanguageLabel": "Idiomas",
 		"Save": "Guardar",
 		"Title": "Configuración",

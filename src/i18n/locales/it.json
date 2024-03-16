@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "Aggiungi a {name}",
+		"Delete": "Elimina",
+		"Edit": "Modifica",
 		"Filter": "Filtra",
 		"FilterProductWithPriceCountHide": "Nascondi i prodotti con i prezzi",
 		"FilterPriceMoreThan30DaysHide": "Nascondi i prezzi più vecchi di 30 giorni",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prezzi"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Sei sicuro di voler eliminare questo prezzo?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Elimina",
-		"DeleteTitle": "Elimina un prezzo",
-		"Success": "Prezzo eliminato!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "Scarica altro",

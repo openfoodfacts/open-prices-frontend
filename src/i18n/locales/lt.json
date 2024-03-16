@@ -108,6 +108,8 @@
 	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
+		"Delete": "Ištrinti",
+		"Edit": "Redaguoti",
 		"Filter": "Filtras",
 		"FilterProductWithPriceCountHide": "Slėpti produktus su kainomis",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
@@ -191,11 +193,11 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Ar tikrai norite ištrinti šią kainą?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Ištrinti",
-		"DeleteTitle": "Trinti kainą",
-		"Success": "Kaina ištrinta!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
 	},
 	"PriceList": {
 		"LoadMore": "Įkelti daugiau",
