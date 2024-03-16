@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Hlavný panel",
 		"Settings": "Nastavenia",
-		"Sign-out": "Odhlásiť sa"
+		"SignIn": "Prihlásiť sa",
+		"SignOut": "Odhlásiť sa"
 	},
 	"Home": {
 		"AddPrice": "Pridajte cenu",
