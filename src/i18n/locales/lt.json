@@ -202,8 +202,8 @@
 	},
 	"PriceEdit": {
 		"Save": "Išsaugoti",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Kaina redaguota!",
+		"Title": "Redaguoti kainą"
 	},
 	"PriceList": {
 		"LoadMore": "Įkelti daugiau",
