@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Beállítások",
-		"Sign-out": "Kijelentkezés"
+		"SignIn": "Bejelentkezés",
+		"SignOut": "Kijelentkezés"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
