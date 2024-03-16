@@ -195,15 +195,15 @@
 		"PriceCount": "{count} fiyat"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Bu fiyatı silmek istediğinizden emin misiniz?",
 		"Delete": "Sil",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Fiyat silindi!",
+		"Title": "Fiyatı sil"
 	},
 	"PriceEdit": {
 		"Save": "Kaydet",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Fiyat düzenlendi!",
+		"Title": "Fiyatı düzenle"
 	},
 	"PriceList": {
 		"LoadMore": "Daha fazla yükle",
