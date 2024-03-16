@@ -10,7 +10,7 @@
       <v-btn v-else prepend-icon="mdi-login" to="/sign-in" :aria-label="$t('Header.SignIn')">{{ $t('Header.SignIn') }}</v-btn>
     </template>
     <template v-else v-slot:append>
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-if="!$vuetify.display.smAndUp" v-bind="props" icon="mdi-account-circle"></v-btn>
           <v-btn v-else v-bind="props" prepend-icon="mdi-account-circle">{{ username }}</v-btn>

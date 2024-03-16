@@ -39,7 +39,7 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!priceFilter">{{ $t('Common.Filter') }}</v-btn>
         </template>
@@ -50,7 +50,7 @@
         </v-list>
       </v-menu>
 
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentPriceOrderIcon"  :active="!!priceOrder">{{ $t('Common.Order') }}</v-btn>
         </template>

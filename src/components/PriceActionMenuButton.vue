@@ -1,7 +1,7 @@
 <template>
   <v-btn :style="style" icon size="small" density="comfortable" variant="text">
     <v-icon>mdi-dots-vertical</v-icon>
-    <v-menu activator="parent" transition="slide-y-transition">
+    <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
         <v-list-item :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">{{ $t('Common.Edit') }}</v-list-item>
         <v-list-item :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">{{ $t('Common.Delete') }}</v-list-item>

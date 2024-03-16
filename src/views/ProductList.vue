@@ -9,7 +9,7 @@
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-food-outline">
         {{ productTotal }}<span class="d-none d-sm-inline">&nbsp;products</span>
       </v-chip>
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">{{ $t('Common.Filter') }}</v-btn>
         </template>
@@ -20,7 +20,7 @@
         </v-list>
       </v-menu>
 
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon"  :active="!!productOrder">{{ $t('Common.Order') }}</v-btn>
         </template>
