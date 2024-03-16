@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Tauler",
 		"Settings": "Preferències",
-		"Sign-out": "Tanca la sessió"
+		"SignIn": "Inicia la sessió",
+		"SignOut": "Tanca la sessió"
 	},
 	"Home": {
 		"AddPrice": "Afegir un preu",
