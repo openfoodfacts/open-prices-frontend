@@ -6,15 +6,15 @@
       {{ APP_NAME }}
     </v-app-bar-title>
     <template v-if="!username" v-slot:append>
-      <v-btn class="d-sm-none" icon="mdi-login" to="/sign-in" :aria-label="$t('Header.SignIn')"></v-btn>
-      <v-btn class="d-none d-sm-flex" prepend-icon="mdi-login" to="/sign-in" :aria-label="$t('Header.SignIn')">{{ $t('Header.SignIn') }}</v-btn>
+      <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-login" to="/sign-in" :aria-label="$t('Header.SignIn')"></v-btn>
+      <v-btn v-else prepend-icon="mdi-login" to="/sign-in" :aria-label="$t('Header.SignIn')">{{ $t('Header.SignIn') }}</v-btn>
     </template>
     <template v-else v-slot:append>
       <v-menu>
         <template v-slot:activator="{ props }">
-          <v-btn class="d-sm-none" v-bind="props" icon="mdi-account-circle"></v-btn>
-          <v-btn class="d-none d-sm-flex text-none" v-bind="props" prepend-icon="mdi-account-circle">{{ username }}</v-btn>
-        </template> 
+          <v-btn v-if="!$vuetify.display.smAndUp" v-bind="props" icon="mdi-account-circle"></v-btn>
+          <v-btn v-else v-bind="props" prepend-icon="mdi-account-circle">{{ username }}</v-btn>
+        </template>
         <v-list>
           <v-list-item class="d-sm-none" :slim="true" prepend-icon="mdi-account" disabled>{{ username }}</v-list-item>
           <v-divider class="d-sm-none"></v-divider>
