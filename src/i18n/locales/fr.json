@@ -124,11 +124,11 @@
 		"No": "Non"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "Choisissez l'une de vos devises préférées",
 		"Currency": "Devise",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"Select": "Sélectionnez {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Sélectionnez une de vos preuves récentes"
@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Tableau de bord",
 		"Settings": "Paramètres",
-		"Sign-out": "Se déconnecter"
+		"SignIn": "Se connecter",
+		"SignOut": "Se déconnecter"
 	},
 	"Home": {
 		"AddPrice": "Ajouter un prix",
@@ -194,15 +195,15 @@
 		"PriceCount": "{count} prix"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Êtes-vous sûr de vouloir supprimer ce prix ?",
 		"Delete": "Supprimer",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Prix supprimé !",
+		"Title": "Supprimer un prix"
 	},
 	"PriceEdit": {
 		"Save": "Enregistrer",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Prix modifié !",
+		"Title": "Modifier un prix"
 	},
 	"PriceList": {
 		"LoadMore": "Voir plus",
@@ -347,8 +348,8 @@
 		"ChangeLanguage": "Changer la langue",
 		"CountryLabel": "Pays",
 		"CurrencyLabel": "Devise",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"FavoriteCurrencies": "Devises préférées",
+		"CurrencyRequired": "Au moins une devise est requise",
 		"LanguageLabel": "Langue",
 		"Save": "Enregistrer",
 		"Title": "Paramètres",
