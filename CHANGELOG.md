@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.50.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.50.0...v1.50.1) (2024-03-16)
+
+
+### Bug Fixes
+
+* remove errors on Proof card emits ([#455](https://github.com/openfoodfacts/open-prices-frontend/issues/455)) ([3cdd81c](https://github.com/openfoodfacts/open-prices-frontend/commit/3cdd81c3cadc53a919569b192667dc3551de3695))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#453](https://github.com/openfoodfacts/open-prices-frontend/issues/453)) ([44aab94](https://github.com/openfoodfacts/open-prices-frontend/commit/44aab94604942ed89ff46482867835f73bbe94f5))
+
 ## [1.50.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.49.0...v1.50.0) (2024-03-16)
 
 
