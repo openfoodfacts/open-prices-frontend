@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "تەڭشەك",
-		"Sign-out": "Sign out"
+		"SignIn": "كىرىش",
+		"SignOut": "Sign out"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
