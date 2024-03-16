@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Cài đặt",
-		"Sign-out": "Thoát"
+		"SignIn": "Đăng nhập",
+		"SignOut": "Thoát"
 	},
 	"Home": {
 		"AddPrice": "Add a price",

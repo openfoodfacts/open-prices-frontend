@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "설정",
-		"Sign-out": "로그아웃"
+		"SignIn": "가입하기",
+		"SignOut": "로그아웃"
 	},
 	"Home": {
 		"AddPrice": "Add a price",

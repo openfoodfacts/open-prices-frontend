@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Indstillinger",
-		"Sign-out": "Log ud"
+		"SignIn": "Log ind",
+		"SignOut": "Log ud"
 	},
 	"Home": {
 		"AddPrice": "Add a price",

@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Ρυθμίσεις",
-		"Sign-out": "Αποσύνδεση"
+		"SignIn": "Σύνδεση",
+		"SignOut": "Αποσύνδεση"
 	},
 	"Home": {
 		"AddPrice": "Add a price",

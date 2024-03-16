@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Prietaisų skydelis",
 		"Settings": "Nustatymai",
-		"Sign-out": "Atsijungti"
+		"SignIn": "Prisijungti",
+		"SignOut": "Atsijungti"
 	},
 	"Home": {
 		"AddPrice": "Pridėti kainą",

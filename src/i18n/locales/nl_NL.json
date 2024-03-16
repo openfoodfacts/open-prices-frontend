@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Instellingen",
-		"Sign-out": "Uitloggen"
+		"SignIn": "Inloggen",
+		"SignOut": "Uitloggen"
 	},
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",

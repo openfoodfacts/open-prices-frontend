@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "అమరికలు",
-		"Sign-out": "Sign out"
+		"SignIn": "సైన్ ఇన్ చేయండి",
+		"SignOut": "Sign out"
 	},
 	"Home": {
 		"AddPrice": "Add a price",

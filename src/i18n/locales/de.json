@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Übersicht",
 		"Settings": "Einstellungen",
-		"Sign-out": "Abmelden"
+		"SignIn": "Anmelden",
+		"SignOut": "Abmelden"
 	},
 	"Home": {
 		"AddPrice": "Preis hinzufügen",
@@ -201,8 +202,8 @@
 	},
 	"PriceEdit": {
 		"Save": "Speichern",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Preis bearbeitet!",
+		"Title": "Preis bearbeiten"
 	},
 	"PriceList": {
 		"LoadMore": "Weitere laden",

@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dasbor",
 		"Settings": "Pengaturan",
-		"Sign-out": "Keluar"
+		"SignIn": "Masuk",
+		"SignOut": "Keluar"
 	},
 	"Home": {
 		"AddPrice": "Tambahkan harga",

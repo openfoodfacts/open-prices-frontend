@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "সেটিংস",
-		"Sign-out": "সাইন আউট করুন"
+		"SignIn": "সাইন ইন",
+		"SignOut": "সাইন আউট করুন"
 	},
 	"Home": {
 		"AddPrice": "Add a price",

@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "تنظیمات",
-		"Sign-out": "Sign out"
+		"SignIn": "ورود به سیستم",
+		"SignOut": "Sign out"
 	},
 	"Home": {
 		"AddPrice": "Add a price",

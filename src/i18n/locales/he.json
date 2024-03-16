@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "לוח בקרה",
 		"Settings": "הגדרות",
-		"Sign-out": "יציאה"
+		"SignIn": "כניסה",
+		"SignOut": "יציאה"
 	},
 	"Home": {
 		"AddPrice": "הוספת מחיר",

@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Nástěnka",
 		"Settings": "Nastavení",
-		"Sign-out": "Odhlásit"
+		"SignIn": "Přihlásit se",
+		"SignOut": "Odhlásit"
 	},
 	"Home": {
 		"AddPrice": "Přidat cenu",

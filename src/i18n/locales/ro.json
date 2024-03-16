@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Configurări",
-		"Sign-out": "Deconectare"
+		"SignIn": "Conectare",
+		"SignOut": "Deconectare"
 	},
 	"Home": {
 		"AddPrice": "Add a price",

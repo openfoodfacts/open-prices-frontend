@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Panel de control",
 		"Settings": "Configuración",
-		"Sign-out": "Cerrar sesión"
+		"SignIn": "Iniciar sesión",
+		"SignOut": "Cerrar sesión"
 	},
 	"Home": {
 		"AddPrice": "Añadir un precio",

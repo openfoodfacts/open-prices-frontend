@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Налаштування",
-		"Sign-out": "Вийти"
+		"SignIn": "Увійти",
+		"SignOut": "Вийти"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
