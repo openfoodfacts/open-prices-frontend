@@ -141,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Settings",
-		"Sign-out": "Dilni"
+		"SignIn": "Sign in",
+		"SignOut": "Dilni"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
