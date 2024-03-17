@@ -195,15 +195,15 @@
 		"PriceCount": "{count} prezzi"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Sei sicuro di voler eliminare questo prezzo?",
 		"Delete": "Elimina",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Prezzo eliminato!",
+		"Title": "Elimina un prezzo"
 	},
 	"PriceEdit": {
 		"Save": "Salva",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Prezzo modificato!",
+		"Title": "Modifica un prezzo"
 	},
 	"PriceList": {
 		"LoadMore": "Scarica altro",
@@ -261,11 +261,11 @@
 		"ProofNotFound": "Prova non trovata (o non si è il proprietario)"
 	},
 	"ProofEditDialog": {
-		"Title": "Modify your proof",
-		"EditProof": "Edit your proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Modifica la tua prova",
+		"EditProof": "Modifica la tua prova",
+		"Public": "Pubblica",
+		"Private": "Privata",
+		"PrivateWarning": "Quando si imposta la prova su Privata, sarà nascosta dalla vista pubblica. Raccomandiamo di nascondere le informazioni personali modificando o ripiegando il documento, se possibile.",
 		"Save": "Salva"
 	},
 	"Router": {
@@ -328,7 +328,7 @@
 		"LoadMore": "Scarica altro",
 		"MyPrices": "I miei prezzi",
 		"MyProofs": "Le mie prove",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "Prova aggiornata!",
 		"Settings": "Impostazioni",
 		"Title": "Cruscotto",
 		"UserPriceTotal": "{count} prezzi",
