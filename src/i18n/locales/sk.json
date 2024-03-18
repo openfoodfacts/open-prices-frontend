@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Účtenky môžu obsahovať osobné údaje, odporúčame ich pred fotografovaním skryť (redigovať, zložiť...).",
-			"Title": "Proof details"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Proof details",
+			"ProofStatus": "Proof status",
+			"Public": "Public",
+			"Private": "Private"
 		},
 		"Title": "Pridajte viacero cien"
 	},
