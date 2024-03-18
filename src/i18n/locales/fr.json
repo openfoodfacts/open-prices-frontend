@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Un ticket de caisse peut contenir des informations personnelles, nous vous recommandons de les masquer (caviarder, plier...) avant de le prendre en photo.",
-			"Title": "Preuve"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Preuve",
+			"ProofStatus": "Proof status",
+			"Public": "Publique",
+			"Private": "Privée"
 		},
 		"Title": "Ajouter plusieurs prix"
 	},
