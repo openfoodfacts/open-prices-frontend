@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "קבלות יכולות לכלול מידע אישי, אנו ממליצים להסתיר אותו (להסתיר, לקפל…) טרם צילום התמונה.",
-			"Title": "פרטי הוכחה"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "פרטי הוכחה",
+			"ProofStatus": "Proof status",
+			"Public": "ציבורית",
+			"Private": "פרטית"
 		},
 		"Title": "הוספת מגוון מחירים"
 	},
