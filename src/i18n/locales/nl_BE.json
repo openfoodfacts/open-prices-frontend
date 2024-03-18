@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Kwitanties kunnen persoonlijke informatie bevatten. Wij raden u aan deze te verbergen (redigeren, vouwen...) voordat u de foto maakt.",
-			"Title": "Bewijs details"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Bewijs details",
+			"ProofStatus": "Proof status",
+			"Public": "Openbaar",
+			"Private": "Privé"
 		},
 		"Title": "Voeg meerdere prijzen toe"
 	},
