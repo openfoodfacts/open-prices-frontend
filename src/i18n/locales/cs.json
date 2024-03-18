@@ -39,12 +39,13 @@
 		"Create": "Vytvořit",
 		"PriceDetails": {
 			"Discount": "Sleva?",
+			"Currency": "Měna",
 			"Label": "Cena",
 			"LabelDiscounted": "Snížená cena",
 			"LabelFull": "Plná cena",
 			"Proof": "Důkaz",
 			"ProofDateChanged": "Datum aktualizováno!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Důkaz vybrán!",
 			"ProofUploaded": "Důkaz nahrán!",
 			"Title": "Podrobnosti o ceně",
 			"UploadProof": "Nahrát důkaz",
@@ -52,8 +53,8 @@
 			"TakePicture": "Vyfotit",
 			"Gallery": "Galerie zařízení",
 			"SelectFromGallery": "Vybrat z galerie zařízení",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "Nedávný důkaz",
+			"SelectRecentProof": "Vybrat nedávný důkaz"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
@@ -100,16 +101,37 @@
 		"TopProducts": "Nejlepší produkty",
 		"BrandProductTotal": "{count} produktů"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Načíst další",
+		"TopProducts": "Nejlepší produkty",
+		"CategoryProductTotal": "{count} produktů"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Přidat do {name}",
+		"Delete": "Odstranit",
+		"Edit": "Upravit",
 		"Filter": "Filtr",
+		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
+		"FilterPriceMoreThan30DaysHide": "Skrýt ceny starší než 30 dní",
 		"Order": "Pořadí",
+		"OrderProductUniqueScansDESC": "Počet skenů",
+		"OrderProductPriceCountDESC": "Počet cen",
+		"OrderPriceASC": "Cena",
+		"OrderPriceCreatedDESC": "Datum přidání",
+		"OrderPriceDateDESC": "Datum ceny",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
 		"Yes": "Ano",
 		"No": "Ne"
 	},
+	"ChangeCurrencyDialog": {
+		"Title": "Vyberte jednu ze svých oblíbených měn",
+		"Currency": "Měna",
+		"AddCurrencies": "Přidejte měny v Nastavení",
+		"AddCurrenciesWarning": "Budete přesměrováni na stránku Nastavení, ale ztratíte veškeré informace, které jste zadali na této stránce.",
+		"Select": "Vybrat {currency_code}"
+	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Vyberte jeden ze svých nedávných důkazů"
 	},
 	"Footer": {
 		"About": "O aplikaci",
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Nástěnka",
 		"Settings": "Nastavení",
-		"Sign-out": "Odhlásit"
+		"SignIn": "Přihlásit se",
+		"SignOut": "Odhlásit"
 	},
 	"Home": {
 		"AddPrice": "Přidat cenu",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} cen"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Opravdu chcete tuto cenu smazat?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Odstranit",
-		"DeleteTitle": "Smazat cenu",
-		"Success": "Cena smazána!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
+	},
+	"PriceEdit": {
+		"Save": "Uložit",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "Načíst další",
 		"Title": "Nejnovější ceny"
 	},
 	"ProductCard": {
+		"Brands": "Značky",
+		"BrandLower": "značka",
+		"BrandTotal": "{count} značek",
+		"Categories": "Kategorie",
+		"CategoriesLower": "kategorie",
 		"CategoryTotal": "{count} kategorií",
+		"Labels": "Štítky",
+		"LabelsLower": "štítky",
 		"LabelTotal": "{count} štítků",
 		"LatestPrice": "Nejnovější cena",
+		"ProductBrandMissing": "Chybí značka produktu",
+		"ProductCategoriesMissing": "Chybí kategorie produktu",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} l",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityMissing": "Chybí množství produktu",
 		"UnknownProduct": "Neznámý název produktu"
-	},
-	"ProductCategories": {
-		"Title": "Kategorie",
-		"Empty": "K tomuto produktu ještě nebyly přidány žádné kategorie."
 	},
 	"ProductDetail": {
 		"AddPrice": "Přidat cenu",
@@ -210,6 +244,7 @@
 		"Title": "Nejlepší produkty"
 	},
 	"ProofCard": {
+		"Proof": "Důkaz",
 		"PRICE_TAG": "Cenovka",
 		"RECEIPT": "Účtenka",
 		"GDPR_REQUEST": "GDPR požadavek"
@@ -223,7 +258,15 @@
 	"ProofDetail": {
 		"LoadMore": "Načíst další",
 		"Prices": "Ceny",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Důkaz nenalezen (nebo není vlastník)"
+	},
+	"ProofEditDialog": {
+		"Title": "Změňte váš důkaz",
+		"EditProof": "Upravte váš důkaz",
+		"Public": "Veřejný",
+		"Private": "Soukromý",
+		"PrivateWarning": "Když nastavíte svůj důkaz na soukromý, bude skryt před veřejností. Pokud je to možné, doporučujeme skrýt jakékoli osobní údaje zakrytím nebo přeložením dokumentu.",
+		"Save": "Uložit"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Načíst další",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje důkazy",
+		"ProofUpdated": "Důkaz aktualizován!",
 		"Settings": "Nastavení",
 		"Title": "Nástěnka",
 		"UserPriceTotal": "{count} cen",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Změnit jazyk",
 		"CountryLabel": "Země",
 		"CurrencyLabel": "Měna",
-		"DefaultCurrency": "Výchozí měna",
+		"FavoriteCurrencies": "Oblíbené měny",
+		"CurrencyRequired": "Je vyžadována alespoň jedna měna",
 		"LanguageLabel": "Jazyky",
 		"Save": "Uložit",
 		"Title": "Nastavení",

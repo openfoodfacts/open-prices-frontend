@@ -1,15 +1,15 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <ProductCard v-if="!loading && !productIsCategory" :product="product"></ProductCard>
-      <v-card v-if="!loading && productIsCategory" :title="getCategoryName" prepend-icon="mdi-fruit-watermelon" elevation="1"></v-card>
+      <ProductCard v-if="!productIsCategory" :product="product"></ProductCard>
+      <v-card v-else :title="getCategoryName" prepend-icon="mdi-fruit-watermelon" elevation="1"></v-card>
     </v-col>
   </v-row>
 
   <v-row class="mt-0" v-if="!productNotFound">
     <v-col cols="12">
       <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
-      <OpenFoodFactsButton v-if="product.code && product.source" type="product" :value="product.code"></OpenFoodFactsButton>
+      <OpenFoodFactsLink v-if="product.code && product.source" display="button" facet="product" :value="product.code"></OpenFoodFactsLink>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -22,7 +22,7 @@
             <template #name>{{ OFF_NAME }}</template>
           </i18n-t>
         </i>
-        <OpenFoodFactsButton class="ml-2" action="add"></OpenFoodFactsButton>
+        <OpenFoodFactsLink class="ml-2" display="button" action="add"></OpenFoodFactsLink>
       </p>
       <p v-if="categoryNotFound" class="text-red">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
@@ -39,24 +39,24 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!priceFilter">{{ $t('Common.Filter') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="filter in priceFilterList" :key="filter.key" :prepend-icon="(priceFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="priceFilter === filter.key" @click="togglePriceFilter(filter.key)">
-            {{ filter.value }}
+            {{ $t('Common.' + filter.value) }}
           </v-list-item>
         </v-list>
       </v-menu>
 
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentPriceOrderIcon"  :active="!!priceOrder">{{ $t('Common.Order') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="order in priceOrderList" :key="order.key" :prepend-icon="order.icon" :active="priceOrder === order.key" @click="selectPriceOrder(order.key)">
-            {{ order.value }}
+            {{ $t('Common.' + order.value) }}
           </v-list-item>
         </v-list>
       </v-menu>
@@ -85,7 +85,7 @@ export default {
   components: {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/OpenFoodFactsButton.vue')),
+    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
@@ -110,7 +110,7 @@ export default {
     this.priceFilter = this.$route.query[constants.FILTER_PARAM] || this.priceFilter
     this.priceOrder = this.$route.query[constants.ORDER_BY_PARAM] || this.priceOrder
     this.getProduct(),
-    this.getProductPrices()
+    this.initProductPrices()
   },
   computed: {
     productIsCategory() {
@@ -145,6 +145,7 @@ export default {
   methods: {
     initProductPrices() {
       this.productPriceList = []
+      this.productPriceTotal = null
       this.productPricePage = 0
       this.getProductPrices()
     },

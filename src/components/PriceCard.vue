@@ -10,24 +10,17 @@
           <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
           <p v-if="!hideProductDetails" class="mb-2">
-            <span v-if="hasProductBrands">
-              <v-chip v-for="brand in getProductBrandsList" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
-                {{ brand }}
-              </v-chip>
+            <span v-if="hasProductSource">
+              <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
             </span>
-            <span v-if="hasProductQuantity">
-              <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
+            <span v-if="hasProductName" class="mr-1">
+              <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
-            <span v-if="hasPriceOrigin && priceOrigin">
-              <v-chip label size="small" density="comfortable" class="mr-1">
-                {{ priceOrigin.name }}
-              </v-chip>
+            <span v-if="hasPriceOrigin" class="mr-1">
+              <PriceOrigins :priceOrigins="price.origins_tags"></PriceOrigins>
             </span>
-            <span v-if="hasPriceLabels">
-              <v-chip v-for="pl in priceLabels" label size="small" density="comfortable" class="mr-1">
-                {{ pl.name }}
-                <v-icon v-if="pl.icon" end :icon="pl.icon"></v-icon>
-              </v-chip>
+            <span v-if="hasPriceLabels" class="mr-1">
+              <PriceLabels :priceLabels="price.labels_tags"></PriceLabels>
             </span>
           </p>
 
@@ -35,20 +28,21 @@
         </v-col>
       </v-row>
 
-      <PriceFooter v-if="price && !hidePriceFooter" class="mt-2" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly"></PriceFooter>
+      <PriceFooter v-if="price && !hidePriceFooter" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly"></PriceFooter>
     </v-container>
   </v-card>
 </template>
 
 <script>
 import utils from '../utils.js'
-import OriginTags from '../data/origins-tags.json'
-import LabelsTags from '../data/labels-tags.json'
 import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
+    'ProductBrands': defineAsyncComponent(() => import('../components/ProductBrands.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
+    'PriceOrigins': defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
+    'PriceLabels': defineAsyncComponent(() => import('../components/PriceLabels.vue')),
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
     'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue'))
   },
@@ -67,12 +61,9 @@ export default {
   data() {
     return {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
-      priceOrigin: null,
-      priceLabels: [],
     }
   },
   mounted() {
-    this.initPriceCard()
   },
   computed: {
     categoryTag() {
@@ -87,11 +78,14 @@ export default {
     hasCategoryTag() {
       return !!this.categoryTag
     },
+    hasProductName() {
+      return this.hasProduct && !!this.product.product_name
+    },
+    hasProductSource() {
+      return this.hasProduct && !!this.product.source
+    },
     hasProductQuantity() {
       return this.hasProduct && !!this.product.product_quantity
-    },
-    hasProductBrands() {
-      return this.hasProduct && !!this.product.brands
     },
     hasPriceOrigin() {
       return this.hasPrice && !!this.price.origins_tags && this.price.origins_tags.length
@@ -104,19 +98,10 @@ export default {
         return utils.getCategoryName(this.price.category_tag)
       }
     },
-    getProductBrandsList() {
-      if (this.hasProductBrands) {
-        return this.product.brands.split(',')
-      }
-    },
   },
   methods: {
-    initPriceCard() {
-      this.priceOrigin = this.getPriceOriginTag()
-      this.priceLabels = this.getPriceLabelsTagsList()
-    },
     getPriceProductTitle() {
-      if (this.hasProduct && this.product.product_name) {
+      if (this.hasProductName) {
         return this.product.product_name
       } else if (this.hasPrice && this.price.product_code) {
         return this.price.product_code
@@ -135,27 +120,11 @@ export default {
       }
       return 'product code error'
     },
-    getPriceOriginTag() {
-      if (this.price && this.price.origins_tags) {
-        return OriginTags.find(ot => this.price.origins_tags[0].indexOf(ot.id) > -1)
-      }
-    },
-    getPriceLabelsTagsList() {
-      if (this.price && this.price.labels_tags) {
-        return LabelsTags.filter(lt => this.price.labels_tags.indexOf(lt.id) > -1)
-      }
-    },
     goToProduct() {
       if (this.readonly) {
         return
       }
       this.$router.push({ path: `/products/${this.getPriceProductCode()}` })
-    },
-    goToBrand(brand) {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/brands/${brand}` })
     },
   },
 }

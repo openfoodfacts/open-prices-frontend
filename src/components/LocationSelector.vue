@@ -10,6 +10,7 @@
       <v-card-text>
         <v-form @submit.prevent="search">
           <v-text-field
+            ref="locationInput"
             v-model="locationSearchForm.q"
             :label="$t('LocationSelector.SearchByName')"
             type="text"
@@ -150,6 +151,9 @@ export default {
     recentLocations() {
       return this.appStore.getRecentLocations()
     },
+  },
+  mounted() {
+    this.$refs.locationInput.focus()
   },
   methods: {
     fieldRequired(v) {

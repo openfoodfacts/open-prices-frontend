@@ -11,7 +11,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <OpenFoodFactsButton type="editor" :value="username"></OpenFoodFactsButton>
+      <OpenFoodFactsLink display="button" facet="editor" :value="username"></OpenFoodFactsLink>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -25,24 +25,24 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!priceFilter">{{ $t('Common.Filter') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="filter in priceFilterList" :key="filter.key" :prepend-icon="(priceFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="priceFilter === filter.key" @click="togglePriceFilter(filter.key)">
-            {{ filter.value }}
+            {{ $t('Common.' + filter.value) }}
           </v-list-item>
         </v-list>
       </v-menu>
 
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentPriceOrderIcon"  :active="!!priceOrder">{{ $t('Common.Order') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="order in priceOrderList" :key="order.key" :prepend-icon="order.icon" :active="priceOrder === order.key" @click="selectPriceOrder(order.key)">
-            {{ order.value }}
+            {{ $t('Common.' + order.value) }}
           </v-list-item>
         </v-list>
       </v-menu>
@@ -73,7 +73,7 @@ export default {
   components: {
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/OpenFoodFactsButton.vue')),
+    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
@@ -116,6 +116,7 @@ export default {
   methods: {
     initUserPrices() {
       this.userPriceList = []
+      this.userPriceTotal = null
       this.userPricePage = 0
       this.getUserPrices()
     },

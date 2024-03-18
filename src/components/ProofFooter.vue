@@ -11,7 +11,6 @@
       <span v-if="proof.type !== 'GDPR_REQUEST'">
         {{ proofType }}
       </span>
-
     </v-chip>
     <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()"></PriceCountChip>
     <RelativeDateTimeChip :dateTime="proof.created"></RelativeDateTimeChip>

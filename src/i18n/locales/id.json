@@ -39,6 +39,7 @@
 		"Create": "Buat",
 		"PriceDetails": {
 			"Discount": "Diskon?",
+			"Currency": "Mata uang",
 			"Label": "Harga",
 			"LabelDiscounted": "Harga sesudah diskon",
 			"LabelFull": "Harga penuh",
@@ -100,13 +101,34 @@
 		"TopProducts": "Produk teratas",
 		"BrandProductTotal": "{count} produk"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Muat lebih banyak",
+		"TopProducts": "Produk teratas",
+		"CategoryProductTotal": "{count} produk"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Tambahkan ke {name}",
+		"Delete": "Hapus",
+		"Edit": "Sunting",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
+		"FilterPriceMoreThan30DaysHide": "Sembunyikan harga yang sudah lebih dari 30 hari",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Jumlah pindaian",
+		"OrderProductPriceCountDESC": "Jumlah harga",
+		"OrderPriceASC": "Harga",
+		"OrderPriceCreatedDESC": "Tanggal penambahan",
+		"OrderPriceDateDESC": "Tanggal harga",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
 		"Yes": "Ya",
 		"No": "Tidak"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Pilih salah satu mata uang favorit Anda",
+		"Currency": "Mata uang",
+		"AddCurrencies": "Tambahkan mata uang di Pengaturan",
+		"AddCurrenciesWarning": "Anda akan diarahkan ke halaman Pengaturan, tetapi informasi apa pun yang telah Anda masukkan di halaman ini akan hilang.",
+		"Select": "Pilih {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dasbor",
 		"Settings": "Pengaturan",
-		"Sign-out": "Keluar"
+		"SignIn": "Masuk",
+		"SignOut": "Keluar"
 	},
 	"Home": {
 		"AddPrice": "Tambahkan harga",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} harga"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Apakah Anda yakin ingin menghapus harga ini?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Hapus",
-		"DeleteTitle": "Hapus harga",
-		"Success": "Harga telah dihapus!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
+	},
+	"PriceEdit": {
+		"Save": "menyimpan ",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "Muat lebih banyak",
 		"Title": "Harga terbaru"
 	},
 	"ProductCard": {
+		"Brands": "Merek - merek",
+		"BrandLower": "merek",
+		"BrandTotal": "{count} merek",
+		"Categories": "Kategori",
+		"CategoriesLower": "kategori",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Label - label",
+		"LabelsLower": "label - label",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Harga terbaru",
+		"ProductBrandMissing": "Merek produk tidak ada",
+		"ProductCategoriesMissing": "Kategori produk tidak ada",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Kuantitas produk tidak ada",
 		"UnknownProduct": "Nama produk tidak dikenal"
-	},
-	"ProductCategories": {
-		"Title": "Kategori",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Tambahkan harga",
@@ -210,6 +244,7 @@
 		"Title": "Produk teratas"
 	},
 	"ProofCard": {
+		"Proof": "Bukti",
 		"PRICE_TAG": "Label harga",
 		"RECEIPT": "Resi",
 		"GDPR_REQUEST": "Permintaan GDPR"
@@ -224,6 +259,14 @@
 		"LoadMore": "Muat lebih banyak",
 		"Prices": "Harga",
 		"ProofNotFound": "Proof not found (or not the owner)"
+	},
+	"ProofEditDialog": {
+		"Title": "Ubah bukti Anda",
+		"EditProof": "Edit bukti Anda",
+		"Public": "Publik",
+		"Private": "Privat",
+		"PrivateWarning": "Jika pengaturan bukti Anda Privat, bukti tersebut akan disembunyikan dari publik. Kami sarankan untuk menyembunyikan informasi pribadi apa pun dengan menyunting atau melipat dokumen, jika memungkinkan.",
+		"Save": "menyimpan "
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Muat lebih banyak",
 		"MyPrices": "Harga saya",
 		"MyProofs": "Bukti saya",
+		"ProofUpdated": "Bukti diperbarui!",
 		"Settings": "Pengaturan",
 		"Title": "Dasbor",
 		"UserPriceTotal": "{count} harga",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Ganti bahasa",
 		"CountryLabel": "Negara",
 		"CurrencyLabel": "Mata uang",
-		"DefaultCurrency": "Mata uang default",
+		"FavoriteCurrencies": "Mata uang favorit",
+		"CurrencyRequired": "Setidaknya diperlukan satu mata uang",
 		"LanguageLabel": "Bahasa",
 		"Save": "menyimpan ",
 		"Title": "Pengaturan",

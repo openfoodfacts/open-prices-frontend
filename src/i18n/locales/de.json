@@ -39,6 +39,7 @@
 		"Create": "Erstellen",
 		"PriceDetails": {
 			"Discount": "Rabatt?",
+			"Currency": "Währung",
 			"Label": "Preis",
 			"LabelDiscounted": "Reduzierter Preis",
 			"LabelFull": "Voller Preis",
@@ -100,13 +101,34 @@
 		"TopProducts": "Top-Produkte",
 		"BrandProductTotal": "{count} Produkte"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Weitere laden",
+		"TopProducts": "Top-Produkte",
+		"CategoryProductTotal": "{count} Produkte"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Zu {name} hinzufügen",
+		"Delete": "Löschen",
+		"Edit": "Bearbeiten",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Produkte mit Preisen ausblenden",
+		"FilterPriceMoreThan30DaysHide": "Preise ausblenden, die älter als 30 Tage sind",
 		"Order": "Reihenfolge",
+		"OrderProductUniqueScansDESC": "Anzahl der Scans",
+		"OrderProductPriceCountDESC": "Anzahl der Preise",
+		"OrderPriceASC": "Preis",
+		"OrderPriceCreatedDESC": "Hinzugefügt am",
+		"OrderPriceDateDESC": "Preisdatum",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
 		"Yes": "Ja",
 		"No": "Nein"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Wählen Sie Ihre bevorzugte Währung",
+		"Currency": "Währung",
+		"AddCurrencies": "Währungen in den Einstellungen hinzufügen",
+		"AddCurrenciesWarning": "Sie werden zur Seite „Einstellungen“ weitergeleitet, verlieren jedoch alle Informationen, die Sie auf dieser Seite eingegeben haben.",
+		"Select": "{currency_code} auswählen"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Wählen Sie einen Ihrer aktuellen Nachweise"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Übersicht",
 		"Settings": "Einstellungen",
-		"Sign-out": "Abmelden"
+		"SignIn": "Anmelden",
+		"SignOut": "Abmelden"
 	},
 	"Home": {
 		"AddPrice": "Preis hinzufügen",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} Preise"
 	},
-	"PriceDeleteChip": {
+	"PriceDelete": {
 		"Confirmation": "Möchten Sie diesen Preis wirklich löschen?",
 		"Delete": "Löschen",
-		"DeleteTitle": "Preis löschen",
-		"Success": "Preis gelöscht!"
+		"Success": "Preis gelöscht!",
+		"Title": "Preis löschen"
+	},
+	"PriceEdit": {
+		"Save": "Speichern",
+		"Success": "Preis bearbeitet!",
+		"Title": "Preis bearbeiten"
 	},
 	"PriceList": {
 		"LoadMore": "Weitere laden",
 		"Title": "Aktuelle Preise"
 	},
 	"ProductCard": {
+		"Brands": "Marken",
+		"BrandLower": "Marke",
+		"BrandTotal": "{count} Marken",
+		"Categories": "Kategorien",
+		"CategoriesLower": "Kategorien",
 		"CategoryTotal": "{count} Kategorien",
+		"Labels": "Labels",
+		"LabelsLower": "Etiketten",
 		"LabelTotal": "{count} Etiketten",
 		"LatestPrice": "Neuester Preis",
+		"ProductBrandMissing": "Produktmarke fehlt",
+		"ProductCategoriesMissing": "Produktkategorien fehlen",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} l",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityMissing": "Produktmenge fehlt",
 		"UnknownProduct": "Unbekannter Produktname"
-	},
-	"ProductCategories": {
-		"Title": "Kategorien",
-		"Empty": "Es wurden noch keine Kategorien zu diesem Produkt hinzugefügt."
 	},
 	"ProductDetail": {
 		"AddPrice": "Preis hinzufügen",
@@ -210,6 +244,7 @@
 		"Title": "Top-Produkte"
 	},
 	"ProofCard": {
+		"Proof": "Nachweis",
 		"PRICE_TAG": "Preisschild",
 		"RECEIPT": "Kassenbon",
 		"GDPR_REQUEST": "DSGVO-Anfrage"
@@ -223,7 +258,15 @@
 	"ProofDetail": {
 		"LoadMore": "Weitere laden",
 		"Prices": "Preise",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Nachweis nicht gefunden (oder nicht der Eigentümer)"
+	},
+	"ProofEditDialog": {
+		"Title": "Ändern Sie Ihren Nachweis",
+		"EditProof": "Bearbeiten Sie Ihren Nachweis",
+		"Public": "Öffentlich",
+		"Private": "Privat",
+		"PrivateWarning": "Wenn Sie Ihren Korrekturabzug auf „Privat” setzen, ist er für die Öffentlichkeit nicht zugänglich. Wir empfehlen, personenbezogene Informationen nach Möglichkeit durch Schwärzen oder Falten des Dokuments zu verbergen.",
+		"Save": "Speichern"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Weitere laden",
 		"MyPrices": "Mein Preise",
 		"MyProofs": "Meine Belege",
+		"ProofUpdated": "Nachweis aktualisiert!",
 		"Settings": "Einstellungen",
 		"Title": "Übersicht",
 		"UserPriceTotal": "{count} Preise",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Sprache ändern",
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Währung",
-		"DefaultCurrency": "Standardwährung",
+		"FavoriteCurrencies": "Bevorzugte Währungen",
+		"CurrencyRequired": "Es ist mindestens eine Währung erforderlich",
 		"LanguageLabel": "Sprachen",
 		"Save": "Speichern",
 		"Title": "Einstellungen",

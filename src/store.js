@@ -9,8 +9,9 @@ export const useAppStore = defineStore('app', {
       last_product_mode_used: 'barcode',
       last_currency_used: import.meta.env.VITE_DEFAULT_CURRENCY,  // 'EUR'
       recent_locations: [],
-      language: localStorage.getItem('user-locale') || import.meta.env.VITE_DEFAULT_LOCALE,  // 'en'
+      language: import.meta.env.VITE_DEFAULT_LOCALE, // 'en'
       country: import.meta.env.VITE_DEFAULT_COUNTRY,  // 'FR',
+      favorite_currencies: [import.meta.env.VITE_DEFAULT_CURRENCY], // ['EUR']
       proofs: [],
       proofTotal: null,
     },
@@ -25,10 +26,6 @@ export const useAppStore = defineStore('app', {
       }
     },
     getUserLanguage: (state) => {
-      // manage edge-case where some user languages were stored as objects instead of strings
-      if (typeof state.user.language === 'object') {
-        return state.user.language.code
-      }
       return state.user.language
     },
     getUserCountry: (state) => {
@@ -36,6 +33,12 @@ export const useAppStore = defineStore('app', {
     },
     getUserProofTotal: (state) => {
       return state.user.proofTotal
+    },
+    getUserFavoriteCurrencies: (state) => {
+      return state.user.favorite_currencies
+    },
+    getUserLastCurrencyUsed: (state) => {
+      return state.user.last_currency_used
     }
   },
   actions: {
@@ -64,6 +67,12 @@ export const useAppStore = defineStore('app', {
     },
     setCountry(country) {
       this.user.country = country
+    },
+    setFavoriteCurrencies(currencies) {
+      this.user.favorite_currencies = currencies
+    },
+    setLastCurrencyUsed(currency) {
+      this.user.last_currency_used = currency
     },
     setProofTotal(proofTotal) {
       this.user.proofTotal = proofTotal

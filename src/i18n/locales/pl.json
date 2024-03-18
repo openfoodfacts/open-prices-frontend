@@ -39,6 +39,7 @@
 		"Create": "Stwórz",
 		"PriceDetails": {
 			"Discount": "Promocja?",
+			"Currency": "Waluta",
 			"Label": "Cena",
 			"LabelDiscounted": "Cena promocyjna",
 			"LabelFull": "Pełna cena",
@@ -100,13 +101,34 @@
 		"TopProducts": "Najlepsze produkty",
 		"BrandProductTotal": "{count} produktów"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Załaduj więcej",
+		"TopProducts": "Najlepsze produkty",
+		"CategoryProductTotal": "{count} produktów"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
+		"Delete": "Usuń",
+		"Edit": "Edytuj",
 		"Filter": "Filtr",
+		"FilterProductWithPriceCountHide": "Ukryj produkty z cenami",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Cena",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
 		"Yes": "Tak",
 		"No": "Nie"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Waluta",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Panel",
 		"Settings": "Ustawienia",
-		"Sign-out": "Wyloguj się"
+		"SignIn": "Zaloguj się",
+		"SignOut": "Wyloguj się"
 	},
 	"Home": {
 		"AddPrice": "Dodaj cenę",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} cen"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Czy na pewno chcesz usunąć tę cenę?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Usuń",
-		"DeleteTitle": "Usuń cenę",
-		"Success": "Cena usunięta!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
+	},
+	"PriceEdit": {
+		"Save": "Zapisz",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "Załaduj więcej",
 		"Title": "Najnowsze ceny"
 	},
 	"ProductCard": {
+		"Brands": "Marki",
+		"BrandLower": "marka",
+		"BrandTotal": "{count} brands",
+		"Categories": "Kategorie",
+		"CategoriesLower": "kategorie",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Etykieta",
+		"LabelsLower": "etykiety",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Ostatnia cena",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Nieznana nazwa produktu"
-	},
-	"ProductCategories": {
-		"Title": "Kategorie",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Dodaj cenę",
@@ -210,6 +244,7 @@
 		"Title": "Najlepsze produkty"
 	},
 	"ProofCard": {
+		"Proof": "Dowód",
 		"PRICE_TAG": "Cenówka",
 		"RECEIPT": "Rachunek",
 		"GDPR_REQUEST": "GDPR request"
@@ -224,6 +259,14 @@
 		"LoadMore": "Załaduj więcej",
 		"Prices": "Ceny",
 		"ProofNotFound": "Proof not found (or not the owner)"
+	},
+	"ProofEditDialog": {
+		"Title": "Modify your proof",
+		"EditProof": "Edit your proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Zapisz"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Załaduj więcej",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje dowody",
+		"ProofUpdated": "Proof updated!",
 		"Settings": "Ustawienia",
 		"Title": "Panel",
 		"UserPriceTotal": "{count} cen",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Zmiana języka",
 		"CountryLabel": "Kraj",
 		"CurrencyLabel": "Waluta",
-		"DefaultCurrency": "Domyślna waluta",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Języki",
 		"Save": "Zapisz",
 		"Title": "Ustawienia",

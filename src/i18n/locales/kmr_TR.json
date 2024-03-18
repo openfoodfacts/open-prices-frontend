@@ -39,6 +39,7 @@
 		"Create": "Create",
 		"PriceDetails": {
 			"Discount": "Discount?",
+			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
@@ -100,13 +101,34 @@
 		"TopProducts": "Top products",
 		"BrandProductTotal": "{count} products"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Load more",
+		"TopProducts": "Top products",
+		"CategoryProductTotal": "{count} products"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
+		"Delete": "Paqijkirin",
+		"Edit": "Edit",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Price",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Yes": "Erê",
 		"No": "No no"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Currency",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Ligorî",
-		"Sign-out": "Sign out"
+		"SignIn": "Niştin vegır",
+		"SignOut": "Sign out"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
 	},
-	"PriceDeleteChip": {
+	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Paqijkirin",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
+	},
+	"PriceEdit": {
+		"Save": "Rekor",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "Load more",
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "Marke",
+		"BrandLower": "marke",
+		"BrandTotal": "{count} brands",
+		"Categories": "Vebir",
+		"CategoriesLower": "kategori",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Labels",
+		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Unknown product name"
-	},
-	"ProductCategories": {
-		"Title": "Vebir",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
@@ -210,6 +244,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Receipt",
 		"GDPR_REQUEST": "GDPR request"
@@ -224,6 +259,14 @@
 		"LoadMore": "Load more",
 		"Prices": "Prices",
 		"ProofNotFound": "Proof not found (or not the owner)"
+	},
+	"ProofEditDialog": {
+		"Title": "Modify your proof",
+		"EditProof": "Edit your proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Rekor"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Load more",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
+		"ProofUpdated": "Proof updated!",
 		"Settings": "Ligorî",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Ziman degişmişke",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Languages",
 		"Save": "Rekor",
 		"Title": "Ligorî",

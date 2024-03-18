@@ -39,6 +39,7 @@
 		"Create": "Create",
 		"PriceDetails": {
 			"Discount": "ディスカウント",
+			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "割引価格",
 			"LabelFull": "正規価格",
@@ -100,13 +101,34 @@
 		"TopProducts": "Top products",
 		"BrandProductTotal": "商品 {count} 個"
 	},
+	"CategoryDetail": {
+		"LoadMore": "もっと読み込む",
+		"TopProducts": "Top products",
+		"CategoryProductTotal": "商品 {count} 個"
+	},
 	"Common": {
 		"AddToOFF": "{name} に追加",
+		"Delete": "削除",
+		"Edit": "編集",
 		"Filter": "フィルタ",
+		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterPriceMoreThan30DaysHide": "30日以上経過した価格を非表示にする",
 		"Order": "注文品",
+		"OrderProductUniqueScansDESC": "スキャンの数:",
+		"OrderProductPriceCountDESC": "価格の数",
+		"OrderPriceASC": "Price",
+		"OrderPriceCreatedDESC": "追加日",
+		"OrderPriceDateDESC": "価格日",
 		"SignInOFFAccount": "Google アカウントでログイン",
 		"Yes": "はい",
 		"No": "いいえ"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "お気に入りの通貨を 1 つ選択してください",
+		"Currency": "Currency",
+		"AddCurrencies": "設定で通貨を追加する",
+		"AddCurrenciesWarning": "[設定] ページにリダイレクトされますが、このページに入力した情報はすべて失われます。",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "最近の証明のいずれかを選択"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "設定",
-		"Sign-out": "サインアウト"
+		"SignIn": "サインイン",
+		"SignOut": "サインアウト"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "商品 {count} 個"
 	},
-	"PriceDeleteChip": {
+	"PriceDelete": {
 		"Confirmation": "この価格を削除してもよろしいですか?",
 		"Delete": "削除",
-		"DeleteTitle": "価格を削除する",
-		"Success": "価格が削除されました!"
+		"Success": "価格が削除されました!",
+		"Title": "価格を削除する"
+	},
+	"PriceEdit": {
+		"Save": "保存",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "もっと読み込む",
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "ブランド",
+		"BrandLower": "ブランド",
+		"BrandTotal": "{count} ブランド",
+		"Categories": "カテゴリー",
+		"CategoriesLower": "カテゴリー",
 		"CategoryTotal": "{count} カテゴリ",
+		"Labels": "ラベル",
+		"LabelsLower": "ラベル",
 		"LabelTotal": "{count} ラベル",
 		"LatestPrice": "最新価格",
+		"ProductBrandMissing": "製品ブランドがありません",
+		"ProductCategoriesMissing": "製品カテゴリがありません",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0}kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} / L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "商品数量が不足しています",
 		"UnknownProduct": "不明な製品名"
-	},
-	"ProductCategories": {
-		"Title": "カテゴリー",
-		"Empty": "この商品にはまだカテゴリが追加されていません。"
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
@@ -210,6 +244,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "Proof",
 		"PRICE_TAG": "値札",
 		"RECEIPT": "領収書",
 		"GDPR_REQUEST": "GDPR リクエスト"
@@ -224,6 +259,14 @@
 		"LoadMore": "もっと読み込む",
 		"Prices": "Prices",
 		"ProofNotFound": "証明書が見つかりません（または所有者ではありません）"
+	},
+	"ProofEditDialog": {
+		"Title": "証拠を修正する",
+		"EditProof": "証拠を編集する",
+		"Public": "一般公開",
+		"Private": "非公開",
+		"PrivateWarning": "証明を非公開に設定すると、公開ビューから非表示になります。 可能であれば、文書を編集または折り畳むことによって個人情報を非表示にすることをお勧めします。",
+		"Save": "保存"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "もっと読み込む",
 		"MyPrices": "私の価格",
 		"MyProofs": "自分の証拠",
+		"ProofUpdated": "証拠が更新されました！",
 		"Settings": "設定",
 		"Title": "Dashboard",
 		"UserPriceTotal": "商品 {count} 個",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "言語の変更",
 		"CountryLabel": "国",
 		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"FavoriteCurrencies": "お気に入りの通貨",
+		"CurrencyRequired": "少なくとも 1 つの通貨が必要です",
 		"LanguageLabel": "言語",
 		"Save": "保存",
 		"Title": "設定",

@@ -39,6 +39,7 @@
 		"Create": "Oluştur",
 		"PriceDetails": {
 			"Discount": "İndirim?",
+			"Currency": "Kur",
 			"Label": "Fiyat",
 			"LabelDiscounted": "İndirimli fiyat",
 			"LabelFull": "Tam fiyat",
@@ -100,13 +101,34 @@
 		"TopProducts": "En iyi ürünler",
 		"BrandProductTotal": "{count} ürün"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Daha fazla yükle",
+		"TopProducts": "En iyi ürünler",
+		"CategoryProductTotal": "{count} ürün"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "{name}'e ekle",
+		"Delete": "Sil",
+		"Edit": "Düzenle",
 		"Filter": "Filtrele",
+		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
+		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
 		"Order": "Sipariş",
+		"OrderProductUniqueScansDESC": "Tarama sayısı",
+		"OrderProductPriceCountDESC": "Fiyat sayısı",
+		"OrderPriceASC": "Fiyat",
+		"OrderPriceCreatedDESC": "Eklenme tarihi",
+		"OrderPriceDateDESC": "Fiyat tarihi",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"Yes": "Evet",
 		"No": "Hayır"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Favori para birimlerinizden birini seçin",
+		"Currency": "Kur",
+		"AddCurrencies": "Ayarlar'a para birimleri ekleyin",
+		"AddCurrenciesWarning": "Ayarlar sayfasına yönlendirileceksiniz ancak bu sayfaya girdiğiniz tüm bilgileri kaybedeceksiniz.",
+		"Select": "{currency_code} öğesini seçin"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Son bedellerinizden birini seçin"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Gösterge paneli",
 		"Settings": "Ayarlar",
-		"Sign-out": "Çıkış yap"
+		"SignIn": "Giriş Yap",
+		"SignOut": "Çıkış yap"
 	},
 	"Home": {
 		"AddPrice": "Fiyat ekleyin",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} fiyat"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Bu fiyatı silmek istediğinizden emin misiniz?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Sil",
-		"DeleteTitle": "Fiyatı sil",
-		"Success": "Fiyat silindi!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
+	},
+	"PriceEdit": {
+		"Save": "Kaydet",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "Daha fazla yükle",
 		"Title": "Son fiyatlar"
 	},
 	"ProductCard": {
+		"Brands": "Markalar",
+		"BrandLower": "marka",
+		"BrandTotal": "{count} marka",
+		"Categories": "Kategoriler",
+		"CategoriesLower": "kategoriler",
 		"CategoryTotal": "{count} kategoriler",
+		"Labels": "Etiketler",
+		"LabelsLower": "etiketler",
 		"LabelTotal": "{count} etiketler",
 		"LatestPrice": "En son fiyat",
+		"ProductBrandMissing": "Ürün markası eksik",
+		"ProductCategoriesMissing": "Ürün kategorileri eksik",
 		"ProductQuantityGram": "{0} gr",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Ürün miktarı eksik",
 		"UnknownProduct": "Bilinmeyen ürün adı"
-	},
-	"ProductCategories": {
-		"Title": "Kategoriler",
-		"Empty": "Bu ürüne henüz kategori eklenmemiştir."
 	},
 	"ProductDetail": {
 		"AddPrice": "Fiyat ekleyin",
@@ -210,6 +244,7 @@
 		"Title": "En iyi ürünler"
 	},
 	"ProofCard": {
+		"Proof": "Kanıt",
 		"PRICE_TAG": "Fiyat etiketi",
 		"RECEIPT": "Makbuz",
 		"GDPR_REQUEST": "GDPR talebi"
@@ -224,6 +259,14 @@
 		"LoadMore": "Daha fazla yükle",
 		"Prices": "Fiyatlar",
 		"ProofNotFound": "Bedel bulunamadı (veya sahibi değil)"
+	},
+	"ProofEditDialog": {
+		"Title": "Bedelinizi değiştirin",
+		"EditProof": "Bedelinizi düzenleyin",
+		"Public": "Genel",
+		"Private": "Özel",
+		"PrivateWarning": "Bedelinizi Özel olarak ayarladığınızda, herkese açık görünümden gizlenecektir. Mümkünse belgeyi düzenleyerek veya katlayarak tüm kişisel bilgileri gizlemenizi öneririz.",
+		"Save": "Kaydet"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Daha fazla yükle",
 		"MyPrices": "Fiyatlarım",
 		"MyProofs": "Bedellerim",
+		"ProofUpdated": "Bedel güncellendi!",
 		"Settings": "Ayarlar",
 		"Title": "Gösterge paneli",
 		"UserPriceTotal": "{count} fiyat",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Dili Değiştir",
 		"CountryLabel": "Ülke",
 		"CurrencyLabel": "Kur",
-		"DefaultCurrency": "Varsayılan para birimi",
+		"FavoriteCurrencies": "Sık kullanılan para birimleri",
+		"CurrencyRequired": "En az bir para birimi gerekli",
 		"LanguageLabel": "Diller",
 		"Save": "Kaydet",
 		"Title": "Ayarlar",

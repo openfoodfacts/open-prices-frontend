@@ -39,6 +39,7 @@
 		"Create": "Aanmaken",
 		"PriceDetails": {
 			"Discount": "Korting?",
+			"Currency": "Valuta",
 			"Label": "Prijs",
 			"LabelDiscounted": "Gereduceerde prijs",
 			"LabelFull": "Totale prijs",
@@ -100,13 +101,34 @@
 		"TopProducts": "Top producten",
 		"BrandProductTotal": "{count} producten"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Meer laden",
+		"TopProducts": "Top producten",
+		"CategoryProductTotal": "{count} producten"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Toevoegen aan {name}",
+		"Delete": "Verwijder",
+		"Edit": "Bewerken",
 		"Filter": "Filter",
+		"FilterProductWithPriceCountHide": "Verberg producten met prijzen",
+		"FilterPriceMoreThan30DaysHide": "Verberg prijzen ouder dan 30 dagen",
 		"Order": "Sorteren",
+		"OrderProductUniqueScansDESC": "Aantal scans",
+		"OrderProductPriceCountDESC": "Aantal prijzen",
+		"OrderPriceASC": "Prijs",
+		"OrderPriceCreatedDESC": "Datum van toevoeging",
+		"OrderPriceDateDESC": "Prijsdatum",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
 		"Yes": "Ja",
 		"No": "Nee"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Kies een van je favoriete valuta's",
+		"Currency": "Valuta",
+		"AddCurrencies": "Voeg valuta's toe in Instellingen",
+		"AddCurrenciesWarning": "U wordt doorgestuurd naar de pagina Instellingen, maar alle informatie die u op deze pagina heeft ingevoerd, gaat verloren.",
+		"Select": "Selecteer {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Instellingen",
-		"Sign-out": "Uitloggen"
+		"SignIn": "Inloggen",
+		"SignOut": "Uitloggen"
 	},
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prijzen"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Weet u zeker dat u deze prijs wilt verwijderen?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Verwijder",
-		"DeleteTitle": "Een prijs verwijderen",
-		"Success": "Prijs verwijderd!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
+	},
+	"PriceEdit": {
+		"Save": "Opslaan",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "Meer laden",
 		"Title": "Laatste prijzen"
 	},
 	"ProductCard": {
+		"Brands": "Merken",
+		"BrandLower": "merk",
+		"BrandTotal": "{count} merken",
+		"Categories": "Categorieën",
+		"CategoriesLower": "categorieën",
 		"CategoryTotal": "{count} categorieën",
+		"Labels": "Keurmerken",
+		"LabelsLower": "keurmerken",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Laatste prijzen",
+		"ProductBrandMissing": "Productmerk ontbreekt",
+		"ProductCategoriesMissing": "Productcategorieën ontbreken",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityLitre": "{0} l",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityMissing": "Producthoeveelheid ontbreekt",
 		"UnknownProduct": "Onbekende productnaam"
-	},
-	"ProductCategories": {
-		"Title": "Categorieën",
-		"Empty": "Er zijn nog geen categorieën aan dit product toegevoegd."
 	},
 	"ProductDetail": {
 		"AddPrice": "Voeg een prijs toe",
@@ -210,6 +244,7 @@
 		"Title": "Top producten"
 	},
 	"ProofCard": {
+		"Proof": "Bewijs",
 		"PRICE_TAG": "Prijskaartje",
 		"RECEIPT": "Bon",
 		"GDPR_REQUEST": "GDPR request"
@@ -223,7 +258,15 @@
 	"ProofDetail": {
 		"LoadMore": "Meer laden",
 		"Prices": "Prijzen",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Bewijs niet gevonden (of niet de eigenaar)"
+	},
+	"ProofEditDialog": {
+		"Title": "Wijzig uw bewijs",
+		"EditProof": "Bewerk uw bewijs",
+		"Public": "Openbaar",
+		"Private": "Privé",
+		"PrivateWarning": "Wanneer je je bewijs instelt op Privé, zal het verborgen worden in de publieke weergave. Wij raden aan persoonlijke informatie te verbergen door het document te veranderen of indien mogelijk te vouwen.",
+		"Save": "Opslaan"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Meer laden",
 		"MyPrices": "Mijn prijzen",
 		"MyProofs": "Mijn bewijzen",
+		"ProofUpdated": "Bewijs bijgewerkt!",
 		"Settings": "Instellingen",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prijzen",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Een andere taal kiezen",
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
-		"DefaultCurrency": "Standaardvaluta",
+		"FavoriteCurrencies": "Favoriete valuta",
+		"CurrencyRequired": "Er is minimaal één valuta vereist",
 		"LanguageLabel": "Talen",
 		"Save": "Opslaan",
 		"Title": "Instellingen",

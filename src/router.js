@@ -21,6 +21,7 @@ const routes = [
   { path: '/locations', name: 'locations', component: () => import('./views/LocationList.vue'), meta: { title: 'TopLocations', icon: 'mdi-medal-outline', drawerMenu: true }},
   { path: '/locations/:id', name: 'location-detail', component: () => import('./views/LocationDetail.vue'), meta: { title: 'Location detail' }},
   { path: '/brands/:id', name: 'brand-detail', component: () => import('./views/BrandDetail.vue'), meta: { title: 'Brand detail' }},
+  { path: '/categories/:id', name: 'category-detail', component: () => import('./views/CategoryDetail.vue'), meta: { title: 'Category detail' }},
   { path: '/proofs/:id', name: 'proof-detail', component: () => import('./views/ProofDetail.vue'), meta: { title: 'Proof detail', requiresAuth: true }},
   { path: '/users', name: 'users', component: () => import('./views/UserList.vue'), meta: { title: 'TopContributors', icon: 'mdi-medal-outline', drawerMenu: true }},
   { path: '/users/:username', name: 'user-detail', component: () => import('./views/UserDetail.vue'), meta: { title: 'User detail' }},
@@ -39,10 +40,9 @@ const router = createRouter({
  */
  router.beforeEach(async (to, from, next) => {
   const store = useAppStore()
-  const fromLocale = from.params.locale
-  const toLocale = to.params.locale || localeManager.guessDefaultLocale()
-  if (fromLocale !== toLocale) {  
-    await localeManager.changeLanguage(toLocale)
+  const locale = localeManager.guessDefaultLocale()
+  if (locale !== store.user.language) {
+    await localeManager.changeLanguage(locale)
   }
   if (to.meta.requiresAuth && !store.user.token) {
     console.log('checkAuth')

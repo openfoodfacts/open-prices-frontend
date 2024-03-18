@@ -39,6 +39,7 @@
 		"Create": "Créer",
 		"PriceDetails": {
 			"Discount": "Promo ?",
+			"Currency": "Devise",
 			"Label": "Prix",
 			"LabelDiscounted": "Prix en promo",
 			"LabelFull": "Prix d'origine",
@@ -100,13 +101,34 @@
 		"TopProducts": "Top produits",
 		"BrandProductTotal": "{count} produits"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Voir plus",
+		"TopProducts": "Top produits",
+		"CategoryProductTotal": "{count} produits"
+	},
 	"Common": {
 		"AddToOFF": "Ajouter à {name}",
+		"Delete": "Supprimer",
+		"Edit": "Modifier",
 		"Filter": "Filtre",
+		"FilterProductWithPriceCountHide": "Cacher les produits qui ont un prix",
+		"FilterPriceMoreThan30DaysHide": "Masquer les prix datant de plus de 30 jours",
 		"Order": "Ordre",
+		"OrderProductUniqueScansDESC": "Nombre de numérisations",
+		"OrderProductPriceCountDESC": "Nombre de prix",
+		"OrderPriceASC": "Prix",
+		"OrderPriceCreatedDESC": "Date d'ajout",
+		"OrderPriceDateDESC": "Date du prix",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
 		"Yes": "Oui",
 		"No": "Non"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choisissez l'une de vos devises préférées",
+		"Currency": "Devise",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Sélectionnez {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Sélectionnez une de vos preuves récentes"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Tableau de bord",
 		"Settings": "Paramètres",
-		"Sign-out": "Se déconnecter"
+		"SignIn": "Se connecter",
+		"SignOut": "Se déconnecter"
 	},
 	"Home": {
 		"AddPrice": "Ajouter un prix",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prix"
 	},
-	"PriceDeleteChip": {
+	"PriceDelete": {
 		"Confirmation": "Êtes-vous sûr de vouloir supprimer ce prix ?",
 		"Delete": "Supprimer",
-		"DeleteTitle": "Supprimer un prix",
-		"Success": "Prix supprimé !"
+		"Success": "Prix supprimé !",
+		"Title": "Supprimer un prix"
+	},
+	"PriceEdit": {
+		"Save": "Enregistrer",
+		"Success": "Prix modifié !",
+		"Title": "Modifier un prix"
 	},
 	"PriceList": {
 		"LoadMore": "Voir plus",
 		"Title": "Derniers prix ajoutés"
 	},
 	"ProductCard": {
+		"Brands": "Marques",
+		"BrandLower": "marque",
+		"BrandTotal": "{count} marques",
+		"Categories": "Catégories",
+		"CategoriesLower": "catégories",
 		"CategoryTotal": "{count} catégories",
+		"Labels": "Labels",
+		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Dernier prix",
+		"ProductBrandMissing": "Marque de produit manquante",
+		"ProductCategoriesMissing": "Catégories de produits manquantes",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Quantité de produit manquante",
 		"UnknownProduct": "Produit inconnu"
-	},
-	"ProductCategories": {
-		"Title": "Catégories",
-		"Empty": "Aucune catégorie n'a encore été ajoutée pour ce produit."
 	},
 	"ProductDetail": {
 		"AddPrice": "Ajouter un prix",
@@ -210,6 +244,7 @@
 		"Title": "Top produits"
 	},
 	"ProofCard": {
+		"Proof": "Preuve",
 		"PRICE_TAG": "Étiquette de prix",
 		"RECEIPT": "Ticket de caisse",
 		"GDPR_REQUEST": "Requête RGPD"
@@ -224,6 +259,14 @@
 		"LoadMore": "Voir plus",
 		"Prices": "Prix",
 		"ProofNotFound": "Preuve introuvable (ou pas le propriétaire)"
+	},
+	"ProofEditDialog": {
+		"Title": "Modifier votre preuve",
+		"EditProof": "Éditer votre preuve",
+		"Public": "Publique",
+		"Private": "Privée",
+		"PrivateWarning": "Lorsque vous définissez votre preuve comme Privée, elle est masquée à la vue du public. Nous vous recommandons de cacher toute information personnelle en caviardant ou en pliant le document, si possible.",
+		"Save": "Enregistrer"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Voir plus",
 		"MyPrices": "Mes prix",
 		"MyProofs": "Mes preuves",
+		"ProofUpdated": "Preuve mise à jour !",
 		"Settings": "Paramètres",
 		"Title": "Tableau de bord",
 		"UserPriceTotal": "{count} prix",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Changer la langue",
 		"CountryLabel": "Pays",
 		"CurrencyLabel": "Devise",
-		"DefaultCurrency": "Devise par défaut",
+		"FavoriteCurrencies": "Devises préférées",
+		"CurrencyRequired": "Au moins une devise est requise",
 		"LanguageLabel": "Langue",
 		"Save": "Enregistrer",
 		"Title": "Paramètres",

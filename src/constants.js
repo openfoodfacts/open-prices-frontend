@@ -9,19 +9,20 @@ export default {
   PRODUCT_QUANTITY_UNIT_ML: 'ml',
   FILTER_PARAM: 'filter',
   PRODUCT_FILTER_LIST: [
-    { key: 'hide_price_count_gte_1', value: 'Hide products with prices' },
+    { key: 'hide_price_count_gte_1', value: 'FilterProductWithPriceCountHide' },
   ],
   PRICE_FILTER_LIST: [
-    { key: 'only_last_30d', value: 'Only prices for the last 30 days' },
+    { key: 'only_last_30d', value: 'FilterPriceMoreThan30DaysHide' },
   ],
   ORDER_BY_PARAM: 'order_by',
   PRODUCT_ORDER_BY_LIST: [
-    { key: '-unique_scans_n', value: 'Number of scans', icon: 'mdi-barcode-scan' },
-    { key: '-price_count', value: 'Number of prices', icon: 'mdi-tag-multiple-outline' },
+    { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
+    { key: '-price_count', value: 'OrderProductPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
   ],
   PRICE_ORDER_BY_LIST: [
-    { key: '-created', value: 'Addition date', icon: 'mdi-clock-outline' },
-    { key: '-date', value: 'Price Date', icon: 'mdi-calendar' },
+    { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
+    { key: '-date', value: 'OrderPriceDateDESC', icon: 'mdi-calendar' },
+    { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   // https://wiki.openstreetmap.org/wiki/Key:place
   // https://wiki.openstreetmap.org/wiki/Key:highway

@@ -39,6 +39,7 @@
 		"Create": "Kurti",
 		"PriceDetails": {
 			"Discount": "Nuolaida?",
+			"Currency": "Valiuta",
 			"Label": "Kaina",
 			"LabelDiscounted": "Sumažinta kaina",
 			"LabelFull": "Visa kaina",
@@ -100,13 +101,34 @@
 		"TopProducts": "Populiariausi produktai",
 		"BrandProductTotal": "{count} produktai (-ų)"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Įkelti daugiau",
+		"TopProducts": "Populiariausi produktai",
+		"CategoryProductTotal": "{count} produktai (-ų)"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
+		"Delete": "Ištrinti",
+		"Edit": "Redaguoti",
 		"Filter": "Filtras",
+		"FilterProductWithPriceCountHide": "Slėpti produktus su kainomis",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Kaina",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"Yes": "Taip",
 		"No": "Ne"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Pasirinkite vieną iš savo mėgstamų valiutų",
+		"Currency": "Valiuta",
+		"AddCurrencies": "Pridėti valiutas „Nuostatose“",
+		"AddCurrenciesWarning": "Būsite nukreipti į puslapį „Nuostatos“, bet prarasite visą šiame puslapyje įvestą informaciją.",
+		"Select": "Pasirinkti {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Prietaisų skydelis",
 		"Settings": "Nustatymai",
-		"Sign-out": "Atsijungti"
+		"SignIn": "Prisijungti",
+		"SignOut": "Atsijungti"
 	},
 	"Home": {
 		"AddPrice": "Pridėti kainą",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
 	},
-	"PriceDeleteChip": {
+	"PriceDelete": {
 		"Confirmation": "Ar tikrai norite ištrinti šią kainą?",
 		"Delete": "Ištrinti",
-		"DeleteTitle": "Trinti kainą",
-		"Success": "Kaina ištrinta!"
+		"Success": "Kaina ištrinta!",
+		"Title": "Trinti kainą"
+	},
+	"PriceEdit": {
+		"Save": "Išsaugoti",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "Įkelti daugiau",
 		"Title": "Naujausios kainos"
 	},
 	"ProductCard": {
+		"Brands": "Prekės ženklai",
+		"BrandLower": "prekės ženklas",
+		"BrandTotal": "{count} prekių ženklai (-ų)",
+		"Categories": "Kategorijos",
+		"CategoriesLower": "kategorijos",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Labels",
+		"LabelsLower": "etiketes",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Naujausia kaina",
+		"ProductBrandMissing": "Trûksta produkto prekių ženklo",
+		"ProductCategoriesMissing": "Trūksta produktų kategorijų",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Trūksta produkto kiekio",
 		"UnknownProduct": "Nežinomas produkto pavadinimas"
-	},
-	"ProductCategories": {
-		"Title": "Kategorijos",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Pridėti kainą",
@@ -210,6 +244,7 @@
 		"Title": "Populiariausi produktai"
 	},
 	"ProofCard": {
+		"Proof": "Įrodymai",
 		"PRICE_TAG": "Kainos etiketė",
 		"RECEIPT": "Čekis",
 		"GDPR_REQUEST": "GDPR request"
@@ -224,6 +259,14 @@
 		"LoadMore": "Įkelti daugiau",
 		"Prices": "Kainos",
 		"ProofNotFound": "Proof not found (or not the owner)"
+	},
+	"ProofEditDialog": {
+		"Title": "Modifikuoti savo įrodymą",
+		"EditProof": "Redaguoti savo įrodymą",
+		"Public": "Vieša",
+		"Private": "Privatus",
+		"PrivateWarning": "Jei savo įrodymą nustatysite kaip privatų, jis bus paslėptas nuo viešos peržiūros. Rekomenduojame paslėpti savo asmeninę informaciją redaguojant arba užlenkiant dokumentą, jei įmanoma.",
+		"Save": "Išsaugoti"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Įkelti daugiau",
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
+		"ProofUpdated": "Įrodymas atnaujintas!",
 		"Settings": "Nustatymai",
 		"Title": "Prietaisų skydelis",
 		"UserPriceTotal": "{count} prices",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Šalis",
 		"CurrencyLabel": "Valiuta",
-		"DefaultCurrency": "Nustatyta valiuta",
+		"FavoriteCurrencies": "Mėgstamos valiutos",
+		"CurrencyRequired": "Būtina bent viena valiuta",
 		"LanguageLabel": "Kalbos",
 		"Save": "Išsaugoti",
 		"Title": "Nustatymai",

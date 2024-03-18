@@ -121,8 +121,12 @@
                   inputmode="decimal"
                   min="0"
                   hide-details="auto"
-                  :suffix="addPriceSingleForm.currency"
-                ></v-text-field>
+                  :suffix="addPriceSingleForm.currency">
+                  <template v-slot:prepend-inner>
+                    <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
+                    <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true" />
+                  </template>
+              </v-text-field>
               </v-col>
               <v-col v-if="addPriceSingleForm.price_is_discounted" cols="6">
                 <v-text-field
@@ -132,8 +136,8 @@
                   inputmode="decimal"
                   min="0"
                   hide-details="auto"
-                  :suffix="addPriceSingleForm.currency"
-                ></v-text-field>
+                  :suffix="addPriceSingleForm.currency">
+                </v-text-field>
               </v-col>
             </v-row>
             <div class="d-inline">
@@ -278,20 +282,26 @@
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
-    @proofConfirmed="handleProofConfirmed"
+    @recentProofSelected="handleRecentProofSelected($event)"
     @close="userRecentProofsDialog = false"
   ></UserRecentProofsDialog>
+  <ChangeCurrencyDialog
+    v-if="changeCurrencyDialog"
+    v-model="changeCurrencyDialog"
+    @newCurrencySelected="setCurrencyData($event)"
+    @close="changeCurrencyDialog = false"
+  ></ChangeCurrencyDialog>
 </template>
 
 <script>
 import Compressor from 'compressorjs'
 import ExifReader from 'exifreader'
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import utils from '../utils.js'
 import LabelsTags from '../data/labels-tags.json'
-import { defineAsyncComponent } from 'vue'
 
 Compressor.setDefaults({
   checkOrientation: true,  // default
@@ -308,6 +318,7 @@ export default {
     'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
     'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue')),
     'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
+    'ChangeCurrencyDialog': defineAsyncComponent(() => import('../components/ChangeCurrencyDialog.vue')),
   },
   data() {
     return {
@@ -357,6 +368,8 @@ export default {
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
       ],
+      // currency selection
+      changeCurrencyDialog: false,
     }
   },
   computed: {
@@ -430,12 +443,12 @@ export default {
         this.setLocationData(this.recentLocations[0])
       }
       this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
-      this.addPriceSingleForm.currency = this.appStore.user.last_currency_used
+      this.addPriceSingleForm.currency = this.appStore.getUserLastCurrencyUsed
     },
     showUserRecentProofs() {
       this.userRecentProofsDialog = true
     },
-    handleProofConfirmed(selectedProof) {
+    handleRecentProofSelected(selectedProof) {
       this.addPriceSingleForm.proof_id = selectedProof.id
       this.proofImagePreview = this.getProofUrl(selectedProof)
       this.proofSelectedSuccessMessage = true
@@ -534,8 +547,12 @@ export default {
     isSelectedLocation(location) {
       return this.locationSelectedDisplayName && this.locationSelectedDisplayName === location.display_name
     },
+    setCurrencyData(currency) {
+      this.addPriceSingleForm.currency = currency
+    },
     createPrice() {
       this.createPriceLoading = true
+      this.appStore.setLastCurrencyUsed(this.addPriceSingleForm.currency)
       // cleanup form
       if (!this.addPriceSingleForm.product_code) {
         this.addPriceSingleForm.product_code = null
@@ -585,3 +602,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.icon-info-currency {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+</style>

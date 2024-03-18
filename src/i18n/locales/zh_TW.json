@@ -39,6 +39,7 @@
 		"Create": "Create",
 		"PriceDetails": {
 			"Discount": "Discount?",
+			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
@@ -100,13 +101,34 @@
 		"TopProducts": "Top products",
 		"BrandProductTotal": "{count} products"
 	},
+	"CategoryDetail": {
+		"LoadMore": "載入更多",
+		"TopProducts": "Top products",
+		"CategoryProductTotal": "{count} products"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
+		"Delete": "刪除",
+		"Edit": "編輯",
 		"Filter": "篩選器",
+		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Price",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Yes": "是",
 		"No": "否"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Currency",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "設定",
-		"Sign-out": "登出"
+		"SignIn": "登入",
+		"SignOut": "登出"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
 	},
-	"PriceDeleteChip": {
+	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "刪除",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
+	},
+	"PriceEdit": {
+		"Save": "儲存",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "載入更多",
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "品牌",
+		"BrandLower": "品牌",
+		"BrandTotal": "{count} brands",
+		"Categories": "類別",
+		"CategoriesLower": "類別",
 		"CategoryTotal": "{count} categories",
+		"Labels": "標籤",
+		"LabelsLower": "標籤",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "未知產品名稱"
-	},
-	"ProductCategories": {
-		"Title": "類別",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
@@ -210,6 +244,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Receipt",
 		"GDPR_REQUEST": "GDPR request"
@@ -224,6 +259,14 @@
 		"LoadMore": "載入更多",
 		"Prices": "Prices",
 		"ProofNotFound": "Proof not found (or not the owner)"
+	},
+	"ProofEditDialog": {
+		"Title": "Modify your proof",
+		"EditProof": "Edit your proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "儲存"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "載入更多",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
+		"ProofUpdated": "Proof updated!",
 		"Settings": "設定",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "更改語言",
 		"CountryLabel": "地區",
 		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "語言",
 		"Save": "儲存",
 		"Title": "設定",

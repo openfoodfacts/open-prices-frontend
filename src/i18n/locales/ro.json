@@ -39,6 +39,7 @@
 		"Create": "Crează",
 		"PriceDetails": {
 			"Discount": "Discount?",
+			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
@@ -100,13 +101,34 @@
 		"TopProducts": "Top products",
 		"BrandProductTotal": "{count} products"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Încarcă mai mult",
+		"TopProducts": "Top products",
+		"CategoryProductTotal": "{count} products"
+	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
+		"Delete": "Ştergeţi",
+		"Edit": "Modificare",
 		"Filter": "Filtrare",
+		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
+		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderPriceASC": "Price",
+		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Yes": "Da",
 		"No": "Nu"
+	},
+	"ChangeCurrencyDialog": {
+		"Title": "Choose one of your favorite currencies",
+		"Currency": "Currency",
+		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Configurări",
-		"Sign-out": "Deconectare"
+		"SignIn": "Conectare",
+		"SignOut": "Deconectare"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} prices"
 	},
-	"PriceDeleteChip": {
+	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Ştergeţi",
-		"DeleteTitle": "Delete a price",
-		"Success": "Price deleted!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
+	},
+	"PriceEdit": {
+		"Save": "Salvează",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "Încarcă mai mult",
 		"Title": "Latest prices"
 	},
 	"ProductCard": {
+		"Brands": "Mărci",
+		"BrandLower": "marca",
+		"BrandTotal": "{count} brands",
+		"Categories": "Categorii",
+		"CategoriesLower": "categorii",
 		"CategoryTotal": "{count} categories",
+		"Labels": "Etichete",
+		"LabelsLower": "etichete",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
+		"ProductBrandMissing": "Product brand missing",
+		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Product quantity missing",
 		"UnknownProduct": "Produs cu nume necunoscut"
-	},
-	"ProductCategories": {
-		"Title": "Categorii",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
@@ -210,6 +244,7 @@
 		"Title": "Top products"
 	},
 	"ProofCard": {
+		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Receipt",
 		"GDPR_REQUEST": "GDPR request"
@@ -224,6 +259,14 @@
 		"LoadMore": "Încarcă mai mult",
 		"Prices": "Prices",
 		"ProofNotFound": "Proof not found (or not the owner)"
+	},
+	"ProofEditDialog": {
+		"Title": "Modify your proof",
+		"EditProof": "Edit your proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Salvează"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Încarcă mai mult",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
+		"ProofUpdated": "Proof updated!",
 		"Settings": "Configurări",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Modificați limba",
 		"CountryLabel": "Țară",
 		"CurrencyLabel": "Currency",
-		"DefaultCurrency": "Default currency",
+		"FavoriteCurrencies": "Favorite currencies",
+		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Limbi",
 		"Save": "Salvează",
 		"Title": "Configurări",

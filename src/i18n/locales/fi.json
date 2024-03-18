@@ -39,21 +39,22 @@
 		"Create": "Luo",
 		"PriceDetails": {
 			"Discount": "Alennus?",
+			"Currency": "Valuutta",
 			"Label": "Hinta",
 			"LabelDiscounted": "Alennettu hinta",
 			"LabelFull": "Täysi hinta",
 			"Proof": "Todiste",
 			"ProofDateChanged": "Päivämäärä päivitetty!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Todiste valittu!",
 			"ProofUploaded": "Todiste lähetetty!",
 			"Title": "Hintatiedot",
 			"UploadProof": "Lähetä todiste",
-			"Picture": "Picture",
+			"Picture": "Kuva",
 			"TakePicture": "Ota kuva",
-			"Gallery": "Device gallery",
+			"Gallery": "Laitteen galleria",
 			"SelectFromGallery": "Valitse galleriastasi",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "Viimeaikainen todiste",
+			"SelectRecentProof": "Valitse viimeaikainen todistus"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Tuoteluokka",
@@ -100,16 +101,37 @@
 		"TopProducts": "Huipputuotteet",
 		"BrandProductTotal": "{count} tuotteita"
 	},
+	"CategoryDetail": {
+		"LoadMore": "Lataa enemmän",
+		"TopProducts": "Huipputuotteet",
+		"CategoryProductTotal": "{count} tuotteita"
+	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Lisää kohtaan {name}",
+		"Delete": "Poista",
+		"Edit": "Muokkaa",
 		"Filter": "Suodata",
-		"Order": "Order",
+		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
+		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
+		"Order": "Järjestys",
+		"OrderProductUniqueScansDESC": "Skannausten määrä",
+		"OrderProductPriceCountDESC": "Hintojen määrä",
+		"OrderPriceASC": "Hinta",
+		"OrderPriceCreatedDESC": "Lisäyspäivämäärä",
+		"OrderPriceDateDESC": "Hinnan päivämäärä",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
 		"Yes": "Kyllä",
 		"No": "Ei"
 	},
+	"ChangeCurrencyDialog": {
+		"Title": "Valitse yksi suosikkivaluutoistasi",
+		"Currency": "Valuutta",
+		"AddCurrencies": "Lisää valuuttoja asetuksissa",
+		"AddCurrenciesWarning": "Sinut ohjataan Asetukset-sivulle, mutta menetät kaikki tälle sivulle antamasi tiedot.",
+		"Select": "Valitse {currency_code}"
+	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Valitse jokin viimeaikaisista todisteistasi"
 	},
 	"Footer": {
 		"About": "Tietoja",
@@ -119,7 +141,8 @@
 	"Header": {
 		"Dashboard": "Kojelauta",
 		"Settings": "Asetukset",
-		"Sign-out": "Kirjaudu ulos"
+		"SignIn": "Kirjaudu sisään",
+		"SignOut": "Kirjaudu ulos"
 	},
 	"Home": {
 		"AddPrice": "Lisää hinta",
@@ -171,29 +194,40 @@
 	"PriceCountChip": {
 		"PriceCount": "{count} hinnat"
 	},
-	"PriceDeleteChip": {
-		"Confirmation": "Haluatko varmasti poistaa tämän hinnan?",
+	"PriceDelete": {
+		"Confirmation": "Are you sure you want to delete this price?",
 		"Delete": "Poista",
-		"DeleteTitle": "Poista hinta",
-		"Success": "Hinta poistettu!"
+		"Success": "Price deleted!",
+		"Title": "Delete a price"
+	},
+	"PriceEdit": {
+		"Save": "Tallenna",
+		"Success": "Price edited!",
+		"Title": "Edit a price"
 	},
 	"PriceList": {
 		"LoadMore": "Lataa enemmän",
 		"Title": "Viimeisimmät hinnat"
 	},
 	"ProductCard": {
-		"CategoryTotal": "{count} categories",
-		"LabelTotal": "{count} labels",
+		"Brands": "Tuotemerkit",
+		"BrandLower": "tuotemerkki",
+		"BrandTotal": "{count} tuotemerkkejä",
+		"Categories": "Tuoteluokat",
+		"CategoriesLower": "tuoteluokat",
+		"CategoryTotal": "{count} kategoriaa",
+		"Labels": "Merkit",
+		"LabelsLower": "merkit",
+		"LabelTotal": "{count} tunnisteita",
 		"LatestPrice": "Viimeisin hinta",
+		"ProductBrandMissing": "Tuotteen merkki puuttuu",
+		"ProductCategoriesMissing": "Tuoteluokat puuttuvat",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityLitre": "{0} L",
+		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityMissing": "Tuotteen määrä puuttuu",
 		"UnknownProduct": "Tuntematon tuotenimi"
-	},
-	"ProductCategories": {
-		"Title": "Tuoteluokat",
-		"Empty": "No categories have been added to this product yet."
 	},
 	"ProductDetail": {
 		"AddPrice": "Lisää hinta",
@@ -210,6 +244,7 @@
 		"Title": "Huipputuotteet"
 	},
 	"ProofCard": {
+		"Proof": "Todiste",
 		"PRICE_TAG": "Hintalappu",
 		"RECEIPT": "Kuitti",
 		"GDPR_REQUEST": "GDPR-pyyntö"
@@ -223,7 +258,15 @@
 	"ProofDetail": {
 		"LoadMore": "Lataa enemmän",
 		"Prices": "Hinnat",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Todistetta ei löydy (tai ei omistajaa)"
+	},
+	"ProofEditDialog": {
+		"Title": "Modify your proof",
+		"EditProof": "Edit your proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Tallenna"
 	},
 	"Router": {
 		"AddPrice": {
@@ -285,6 +328,7 @@
 		"LoadMore": "Lataa enemmän",
 		"MyPrices": "Minun hinnat",
 		"MyProofs": "Minun todisteeni",
+		"ProofUpdated": "Proof updated!",
 		"Settings": "Asetukset",
 		"Title": "Kojelauta",
 		"UserPriceTotal": "{count} hinnat",
@@ -304,7 +348,8 @@
 		"ChangeLanguage": "Vaihda kieli",
 		"CountryLabel": "Maa",
 		"CurrencyLabel": "Valuutta",
-		"DefaultCurrency": "Oletusvaluutta",
+		"FavoriteCurrencies": "Suosikki valuutat",
+		"CurrencyRequired": "Vähintään yksi valuutta vaaditaan",
 		"LanguageLabel": "Kielet",
 		"Save": "Tallenna",
 		"Title": "Asetukset",

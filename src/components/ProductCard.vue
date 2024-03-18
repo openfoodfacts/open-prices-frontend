@@ -13,26 +13,18 @@
             <span>
               <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
             </span>
-            <span v-if="hasProductBrands">
-              <v-chip v-for="brand in getProductBrandsList" :key="brand" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
-                {{ brand }}
-              </v-chip>
+            <span v-if="hasProductSource">
+              <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
             </span>
-            <span v-if="hasProductQuantity">
-              <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
+            <span v-if="hasProductSource" class="mr-1">
+              <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
             </span>
             <br />
-            <span>
-              <v-chip label size="small" density="comfortable" class="mr-1" @click="showProductCategoriesDialog">
-                {{ $t('ProductCard.CategoryTotal', { count: (product && product.categories_tags) ? product.categories_tags.length : 0 }) }}
-              </v-chip>
-              <v-chip label size="small" density="comfortable" @click="showProductLabelsDialog">
-                {{ $t('ProductCard.LabelTotal', { count: (product && product.labels_tags) ? product.labels_tags.length : 0 }) }}
-              </v-chip>
+            <span v-if="hasProductSource" class="mr-1">
+              <ProductCategoriesChip :productCategories="product.categories_tags"></ProductCategoriesChip>
             </span>
-            <br />
-            <span>
-              <v-chip label size="small" density="comfortable">{{ product.code }}</v-chip>
+            <span v-if="hasProductSource">
+              <ProductLabelsChip :productLabels="product.labels_tags"></ProductLabelsChip>
             </span>
           </p>
         </v-col>
@@ -46,19 +38,6 @@
       </v-sheet>
     </v-container>
   </v-card>
-
-  <ProductCategoriesDialog
-    v-if="product && product.categories_tags && productCategoriesDialog"
-    :categories="product.categories_tags"
-    v-model="productCategoriesDialog"
-    @close="productCategoriesDialog = false"
-  ></ProductCategoriesDialog>
-  <ProductLabelsDialog
-    v-if="product && product.labels_tags && productLabelsDialog"
-    :labels="product.labels_tags"
-    v-model="productLabelsDialog"
-    @close="productLabelsDialog = false"
-  ></ProductLabelsDialog>
 </template>
 
 <script>
@@ -67,11 +46,12 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    'ProductBrands': defineAsyncComponent(() => import('../components/ProductBrands.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
+    'ProductCategoriesChip': defineAsyncComponent(() => import('../components/ProductCategoriesChip.vue')),
+    'ProductLabelsChip': defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
     'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue')),
-    'ProductCategoriesDialog': defineAsyncComponent(() => import('../components/ProductCategoriesDialog.vue')),
-    'ProductLabelsDialog': defineAsyncComponent(() => import('../components/ProductLabelsDialog.vue')),
   },
   props: {
     'product': null,
@@ -81,13 +61,14 @@ export default {
   data() {
     return {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
-      productCategoriesDialog: false,
-      productLabelsDialog: false
     }
   },
   mounted() {
   },
   computed: {
+    hasProductName() {
+      return !!this.product.product_name
+    },
     hasProductSource() {
       return !!this.product.source
     },
@@ -97,33 +78,16 @@ export default {
     hasProductQuantity() {
       return !!this.product.product_quantity
     },
-    getProductBrandsList() {
-      if (this.hasProductBrands) {
-        return this.product.brands.split(',')
-      }
-    }
   },
   methods: {
     getProductTitle() {
       return this.hasProductSource ? (this.product.product_name || this.$t('ProductCard.UnknownProduct')) : this.product.code
-    },
-    showProductCategoriesDialog() {
-      this.productCategoriesDialog = true
-    },
-    showProductLabelsDialog() {
-      this.productLabelsDialog = true
     },
     goToProduct() {
       if (this.readonly) {
         return
       }
       this.$router.push({ path: `/products/${this.product.code}` })
-    },
-    goToBrand(brand) {
-      if (this.readonly) {
-        return
-      }
-      this.$router.push({ path: `/brands/${brand}` })
     },
   }
 }

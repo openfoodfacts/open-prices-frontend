@@ -16,7 +16,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <OpenFoodFactsButton type="brand" :value="brand"></OpenFoodFactsButton>
+      <OpenFoodFactsLink display="button" facet="brand" :value="brand"></OpenFoodFactsLink>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -30,24 +30,24 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">{{ $t('Common.Filter') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="filter in productFilterList" :key="filter.key" :prepend-icon="(productFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="productFilter === filter.key" @click="toggleProductFilter(filter.key)">
-            {{ filter.value }}
+            {{ $t('Common.' + filter.value) }}
           </v-list-item>
         </v-list>
       </v-menu>
 
-      <v-menu>
+      <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon"  :active="!!productOrder">{{ $t('Common.Order') }}</v-btn>
         </template>
         <v-list>
           <v-list-item :slim="true" v-for="order in productOrderList" :key="order.key" :prepend-icon="order.icon" :active="productOrder === order.key" @click="selectProductOrder(order.key)">
-            {{ order.value }}
+            {{ $t('Common.' + order.value) }}
           </v-list-item>
         </v-list>
       </v-menu>
@@ -75,7 +75,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    'OpenFoodFactsButton': defineAsyncComponent(() => import('../components/OpenFoodFactsButton.vue')),
+    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
@@ -115,6 +115,7 @@ export default {
     initBrand() {
       this.brand = this.$route.params.id
       this.brandProductList = []
+      this.brandProductTotal = null
       this.brandProductPage = 0
       this.getBrandProducts()
     },
