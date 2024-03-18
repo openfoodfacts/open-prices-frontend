@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Kvituose gali būti asmeninės informacijos, todėl rekomenduojame prieš fotografuojant ją paslėpti (redaguoti, užlenkti...).",
-			"Title": "Išsami įdorymų informacija"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Išsami įdorymų informacija",
+			"ProofStatus": "Proof status",
+			"Public": "Vieša",
+			"Private": "Privatus"
 		},
 		"Title": "Pridėti kelia skainas"
 	},
