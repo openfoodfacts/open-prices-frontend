@@ -17,19 +17,19 @@
         <v-divider></v-divider>
         <v-card-text>
           <v-row>
-            <v-col cols="12" sm="12" md="8">
+            <v-col cols="8">
               <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">
-                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
-                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
-                </v-btn>
+                <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
+                <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
+              </v-btn>
               <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" @click.prevent="$refs.proofGallery.click()" :loading="createProofLoading" :disabled="createProofLoading">
-                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
-                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
-                </v-btn>
+                <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
+                <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
+              </v-btn>
               <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofs">
-                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
-                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
-                </v-btn>
+                <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
+                <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
+              </v-btn>
               <v-file-input
                 class="d-none overflow-hidden"
                 ref="proofCamera"
@@ -50,36 +50,40 @@
                 :loading="createProofLoading">
               </v-file-input>
               <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2">
-                  <i v-if="!proofisSelected">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
-                  <i v-if="proofisSelected">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
-                </p>
+                <i v-if="!proofisSelected">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
+                <i v-if="proofisSelected">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
+              </p>
               <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2">
                 <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
               </p>
-              <p v-if="proofType === 'RECEIPT'" class="text-caption text-warning">
+            </v-col>
+            <v-col cols="4" v-if="proofFormFilled">
+              <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
+            </v-col>
+          </v-row>
+          <v-row v-if="proofType === 'RECEIPT'">
+            <v-col>
+              <h3 class="mb-1">Privacy</h3>
+              <p class="text-caption text-warning">
                 <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
                 <i>{{ $t('AddPriceMultiple.ProofDetails.PrivateWarning') }}</i>
               </p>
-            </v-col>
-            <v-col  cols="12" sm="12" md="4" v-if="proofFormFilled">
-              <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
-              <div class="proofIsPublic-switch-container" v-if="proofFormFilled && (proofType === 'RECEIPT')">
-                <div class="proofIsPublic-status" style="text-align: center;">
-                  {{ $t('AddPriceMultiple.ProofDetails.ProofStatus') }}
-                  <br />
-                  <v-icon start :icon="proofIsPublic ? 'mdi-lock-open-check' : 'mdi-lock-alert'" :color="proofIsPublic ? 'green' : 'red'"></v-icon>
-                  <span :style="{ color: proofIsPublic ? 'green' : 'red' }">
-                    {{ proofIsPublic ? $t('AddPriceMultiple.ProofDetails.Public') : $t('AddPriceMultiple.ProofDetails.Private') }}
-                  </span>
-                </div>
-                <v-switch v-if="proofType === 'RECEIPT'"
+              <div v-if="proofFormFilled">
+                <v-switch
                   v-model="proofIsPublic"
                   density="compact"
                   color="green"
                   inset
                   hide-details
-                  @change="updateIsPublicProof"
-                ></v-switch>
+                  @change="updateIsPublicProof">
+                  <template v-slot:label>
+                    <v-icon start :icon="proofIsPublic ? 'mdi-lock-open-check' : 'mdi-lock-alert'" :color="proofIsPublic ? 'green' : 'red'"></v-icon>
+                    {{ $t('AddPriceMultiple.ProofDetails.ProofStatus') }} :&nbsp;
+                    <span :style="{ color: proofIsPublic ? 'green' : 'red' }">
+                      {{ proofIsPublic ? $t('AddPriceMultiple.ProofDetails.Public') : $t('AddPriceMultiple.ProofDetails.Private') }}
+                    </span>
+                  </template>
+                </v-switch>
               </div>
             </v-col>
           </v-row>
@@ -717,17 +721,6 @@ export default {
 </script>
 
 <style scoped>
-.proofIsPublic-switch-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.proofIsPublic-status {
-  margin-top: 20px;
-  margin-bottom: 0px;
-
-}
 .icon-info-currency {
   cursor: pointer;
   width: 24px;
