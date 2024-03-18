@@ -17,7 +17,7 @@
         <v-divider></v-divider>
         <v-card-text>
           <v-row>
-            <v-col cols="9">
+            <v-col cols="12" sm="12" md="8">
               <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">
                   <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
                   <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
@@ -61,14 +61,16 @@
                 <i>{{ $t('AddPriceMultiple.ProofDetails.PrivateWarning') }}</i>
               </p>
             </v-col>
-            <v-col  cols=3 v-if="proofFormFilled">
+            <v-col  cols="12" sm="12" md="4" v-if="proofFormFilled">
               <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
               <div class="proofIsPublic-switch-container" v-if="proofFormFilled && (proofType === 'RECEIPT')">
-                <div class="proofIsPublic-status centered-text">
+                <div class="proofIsPublic-status" style="text-align: center;">
                   {{ $t('AddPriceMultiple.ProofDetails.ProofStatus') }}
                   <br />
                   <v-icon start :icon="proofIsPublic ? 'mdi-lock-open-check' : 'mdi-lock-alert'" :color="proofIsPublic ? 'green' : 'red'"></v-icon>
-                  <span :class="{'public-color': proofIsPublic, 'private-color': !proofIsPublic}">{{ proofIsPublic ? $t('AddPriceMultiple.ProofDetails.Public') : $t('AddPriceMultiple.ProofDetails.Private') }}</span>
+                  <span :style="{ color: proofIsPublic ? 'green' : 'red' }">
+                    {{ proofIsPublic ? $t('AddPriceMultiple.ProofDetails.Public') : $t('AddPriceMultiple.ProofDetails.Private') }}
+                  </span>
                 </div>
                 <v-switch v-if="proofType === 'RECEIPT'"
                   v-model="proofIsPublic"
@@ -707,14 +709,9 @@ export default {
   margin-bottom: 0px;
 
 }
-.centered-text {
-  text-align: center;
-}
-.public-color {
-  color: green;
-}
-
-.private-color {
-  color: red;
+.icon-info-currency {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
 </style>
