@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Makbuzlar kişisel bilgiler içerebilir; fotoğrafı çekmeden önce bunları gizlemenizi (düzeltmeyi, katlamayı...) öneririz.",
-			"Title": "Kanıt ayrıntıları"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Kanıt ayrıntıları",
+			"ProofStatus": "Proof status",
+			"Public": "Genel",
+			"Private": "Özel"
 		},
 		"Title": "Birden fazla fiyat ekle"
 	},
