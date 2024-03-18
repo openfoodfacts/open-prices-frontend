@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Účtenky mohou obsahovat osobní údaje, doporučujeme je před focením schovat (zakrýt, přeložit...).",
-			"Title": "Podrobnosti o důkazu"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Podrobnosti o důkazu",
+			"ProofStatus": "Proof status",
+			"Public": "Veřejný",
+			"Private": "Soukromý"
 		},
 		"Title": "Přidat více cen"
 	},
