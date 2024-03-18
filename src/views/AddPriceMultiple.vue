@@ -17,19 +17,19 @@
         <v-divider></v-divider>
         <v-card-text>
           <v-row>
-            <v-col>
+            <v-col cols="8">
               <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">
-                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
-                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
-                </v-btn>
+                <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
+                <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
+              </v-btn>
               <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" @click.prevent="$refs.proofGallery.click()" :loading="createProofLoading" :disabled="createProofLoading">
-                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
-                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
-                </v-btn>
+                <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
+                <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
+              </v-btn>
               <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofs">
-                  <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
-                  <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
-                </v-btn>
+                <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
+                <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
+              </v-btn>
               <v-file-input
                 class="d-none overflow-hidden"
                 ref="proofCamera"
@@ -50,18 +50,41 @@
                 :loading="createProofLoading">
               </v-file-input>
               <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2">
-                  <i v-if="!proofSelectedMessage">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
-                  <i v-if="proofSelectedMessage">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
-                </p>
+                <i v-if="!proofisSelected">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
+                <i v-if="proofisSelected">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
+              </p>
               <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2">
                 <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
               </p>
-              <p v-if="proofType === 'RECEIPT'" class="text-caption text-warning">
-                <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
-              </p>
             </v-col>
-            <v-col v-if="proofFormFilled">
+            <v-col cols="4" v-if="proofFormFilled">
               <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
+            </v-col>
+          </v-row>
+          <v-row v-if="proofType === 'RECEIPT'">
+            <v-col>
+              <h3 class="mb-1">Privacy</h3>
+              <p class="text-caption text-warning">
+                <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
+                <i>{{ $t('AddPriceMultiple.ProofDetails.PrivateWarning') }}</i>
+              </p>
+              <div v-if="proofFormFilled">
+                <v-switch
+                  v-model="proofIsPublic"
+                  density="compact"
+                  color="green"
+                  inset
+                  hide-details
+                  @change="updateIsPublicProof">
+                  <template v-slot:label>
+                    <v-icon start :icon="proofIsPublic ? 'mdi-lock-open-check' : 'mdi-lock-alert'" :color="proofIsPublic ? 'green' : 'red'"></v-icon>
+                    {{ $t('AddPriceMultiple.ProofDetails.ProofStatus') }} :&nbsp;
+                    <span :style="{ color: proofIsPublic ? 'green' : 'red' }">
+                      {{ proofIsPublic ? $t('AddPriceMultiple.ProofDetails.Public') : $t('AddPriceMultiple.ProofDetails.Private') }}
+                    </span>
+                  </template>
+                </v-switch>
+              </div>
             </v-col>
           </v-row>
         </v-card-text>
@@ -390,7 +413,8 @@ export default {
       proofSuccessMessage: false,
       userRecentProofsDialog: false,
       proofSelectedSuccessMessage: false,
-      proofSelectedMessage: false,
+      proofisSelected: false,
+      proofIsPublic: true,
       // location data
       locationSelector: false,
       locationSelectedDisplayName: '',
@@ -505,7 +529,8 @@ export default {
       this.addPriceMultipleForm.proof_id = selectedProof.id
       this.proofImagePreview = this.getProofUrl(selectedProof)
       this.proofSelectedSuccessMessage = true
-      this.proofSelectedMessage = true
+      this.proofisSelected = true
+      this.proofIsPublic = selectedProof.is_public
     },
     getProofUrl(proof) {
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
@@ -539,7 +564,10 @@ export default {
           .then((data) => {
             this.createProofLoading = false
             if (data['id']) {
+              const store = useAppStore()
+              store.addProof(data)
               this.addPriceMultipleForm.proof_id = data['id']
+              this.proofIsPublic = data['is_public']
               this.proofImagePreview = URL.createObjectURL(proofImageCompressed)
               this.proofSuccessMessage = true
             } else {
@@ -560,6 +588,21 @@ export default {
       // .finally(() => {
       //   console.log('Compress complete')
       // })
+    },
+    updateIsPublicProof() {
+      const params = {
+        is_public: this.proofIsPublic
+      }
+      api
+        .updateProof(this.addPriceMultipleForm.proof_id, params)
+        .then((response) => {
+          // if response.status == 204
+          const store = useAppStore()
+          store.updateProof(this.addPriceMultipleForm.proof_id, params)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
     },
     clearProof() {
       this.proofImage = null
