@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Le ricevute potrebbero contenere delle informazioni personali, consigliamo di nasconderle (cancellarle, piegare...), prima di scattare la foto.",
-			"Title": "Dettagli della prova"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Dettagli della prova",
+			"ProofStatus": "Proof status",
+			"Public": "Pubblica",
+			"Private": "Privata"
 		},
 		"Title": "Aggiungi più prezzi"
 	},
