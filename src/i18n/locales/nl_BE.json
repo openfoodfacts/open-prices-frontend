@@ -31,9 +31,9 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Kwitanties kunnen persoonlijke informatie bevatten. Wij raden u aan deze te verbergen (redigeren, vouwen...) voordat u de foto maakt.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "U kunt de bon ook instellen op Privé. Privébewijzen zijn alleen zichtbaar voor jou en moderators.",
 			"Title": "Bewijs details",
-			"ProofStatus": "Proof status",
+			"ProofStatus": "Bewijsstatus",
 			"Public": "Openbaar",
 			"Private": "Privé",
 			"Privacy": "Privacy"
