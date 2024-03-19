@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Paragony mogą zawierać dane osobowe, zalecamy ich ukrycie (wymazanie, złożenie...) przed zrobieniem zdjęcia.",
-			"Title": "Szczegóły dowodu"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Szczegóły dowodu",
+			"ProofStatus": "Proof status",
+			"Public": "Public",
+			"Private": "Private"
 		},
 		"Title": "Dodaj więcej cen"
 	},

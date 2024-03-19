@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Tanda terima mungkin berisi informasi pribadi, kami sarankan untuk menyembunyikannya (edit, lipat...) sebelum mengambil gambar.",
-			"Title": "Rincian bukti"
+			"PrivateWarning": "Jika tidak, atur Status Bukti ke Privat. Bukti privat hanya dapat dilihat oleh Anda dan moderator.",
+			"Title": "Rincian bukti",
+			"ProofStatus": "Status bukti",
+			"Public": "Publik",
+			"Private": "Privat"
 		},
 		"Title": "Tambahkan beberapa harga"
 	},
@@ -195,15 +199,15 @@
 		"PriceCount": "{count} harga"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Yakin ingin menghapus harga ini?",
 		"Delete": "Hapus",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Harga dihapus!",
+		"Title": "Hapus harga"
 	},
 	"PriceEdit": {
 		"Save": "menyimpan ",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Harga diubah!",
+		"Title": "Ubah harga"
 	},
 	"PriceList": {
 		"LoadMore": "Muat lebih banyak",

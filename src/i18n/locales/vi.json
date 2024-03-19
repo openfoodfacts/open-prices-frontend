@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"Title": "Proof details"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Proof details",
+			"ProofStatus": "Proof status",
+			"Public": "Public",
+			"Private": "Private"
 		},
 		"Title": "Add multiple prices"
 	},

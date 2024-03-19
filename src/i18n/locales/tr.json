@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Makbuzlar kişisel bilgiler içerebilir; fotoğrafı çekmeden önce bunları gizlemenizi (düzeltmeyi, katlamayı...) öneririz.",
-			"Title": "Kanıt ayrıntıları"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Kanıt ayrıntıları",
+			"ProofStatus": "Proof status",
+			"Public": "Genel",
+			"Private": "Özel"
 		},
 		"Title": "Birden fazla fiyat ekle"
 	},
@@ -195,15 +199,15 @@
 		"PriceCount": "{count} fiyat"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Bu fiyatı silmek istediğinizden emin misiniz?",
 		"Delete": "Sil",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Fiyat silindi!",
+		"Title": "Fiyatı sil"
 	},
 	"PriceEdit": {
 		"Save": "Kaydet",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Fiyat düzenlendi!",
+		"Title": "Fiyatı düzenle"
 	},
 	"PriceList": {
 		"LoadMore": "Daha fazla yükle",

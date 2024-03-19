@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Os recibos podem conter informações pessoais, pelo que recomendamos que os oculte (rabiscar, dobrar...) antes de tirar a fotografia.",
-			"Title": "Detalhes do comprovativo"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Detalhes do comprovativo",
+			"ProofStatus": "Proof status",
+			"Public": "Público",
+			"Private": "Privado"
 		},
 		"Title": "Adicione vários preços"
 	},
@@ -45,7 +49,7 @@
 			"LabelFull": "Full price",
 			"Proof": "Comprovativo",
 			"ProofDateChanged": "Data de atualização!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Comprovativo selecionado!",
 			"ProofUploaded": "Comprovativo carregado!",
 			"Title": "Detalhes do preço",
 			"UploadProof": "Carregar um comprovativo",
@@ -53,8 +57,8 @@
 			"TakePicture": "Tirar uma foto",
 			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "Comprovativo recente",
+			"SelectRecentProof": "Selecionar um comprovativo recente"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
@@ -131,7 +135,7 @@
 		"Select": "Select {currency_code}"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Selecionar um dos seus comprovativos recentes"
 	},
 	"Footer": {
 		"About": "Sobre",
@@ -195,15 +199,15 @@
 		"PriceCount": "{count} preços"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Tem a certeza de que pretende eliminar este preço?",
 		"Delete": "Eliminar",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Preço eliminado!",
+		"Title": "Eliminar um preço"
 	},
 	"PriceEdit": {
 		"Save": "Guardar",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Preço editado!",
+		"Title": "Editar um preço"
 	},
 	"PriceList": {
 		"LoadMore": "Carregar mais",
@@ -212,7 +216,7 @@
 	"ProductCard": {
 		"Brands": "Marcas",
 		"BrandLower": "marca",
-		"BrandTotal": "{count} brands",
+		"BrandTotal": "{count} marcas",
 		"Categories": "Categorias",
 		"CategoriesLower": "categorias",
 		"CategoryTotal": "{count} categories",
@@ -220,13 +224,13 @@
 		"LabelsLower": "etiquetas",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Preço mais recente",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "Marca do produto em falta",
+		"ProductCategoriesMissing": "Categorias de produtos em falta",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Quantidade do produto em falta",
 		"UnknownProduct": "Nome de produto desconhecido"
 	},
 	"ProductDetail": {
@@ -247,7 +251,7 @@
 		"Proof": "Comprovativo",
 		"PRICE_TAG": "Etiqueta de preço",
 		"RECEIPT": "Recibo",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "Pedido RGPD"
 	},
 	"ProofDeleteChip": {
 		"Confirmation": "Tem a certeza de que pretende eliminar este comprovativo?",
@@ -258,14 +262,14 @@
 	"ProofDetail": {
 		"LoadMore": "Carregar mais",
 		"Prices": "Preços",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Comprovativo não encontrado (ou não é o proprietário)"
 	},
 	"ProofEditDialog": {
-		"Title": "Modify your proof",
-		"EditProof": "Edit your proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Modificar o seu comprovativo",
+		"EditProof": "Editar o seu comprovativo",
+		"Public": "Público",
+		"Private": "Privado",
+		"PrivateWarning": "Ao definir o seu comprovativo como Privado, este será ocultado da visualização pública. Recomendamos que oculte todas as informações pessoais redigindo ou dobrando o documento, se possível.",
 		"Save": "Guardar"
 	},
 	"Router": {
@@ -328,7 +332,7 @@
 		"LoadMore": "Carregar mais",
 		"MyPrices": "Os meus preços",
 		"MyProofs": "Os meus comprovativos",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "Comprovativo atualizado!",
 		"Settings": "Definições",
 		"Title": "Painel de controlo",
 		"UserPriceTotal": "{count} preços",
@@ -348,8 +352,8 @@
 		"ChangeLanguage": "Alterar idioma",
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moeda",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"FavoriteCurrencies": "Moedas favoritas",
+		"CurrencyRequired": "É necessária pelo menos uma moeda",
 		"LanguageLabel": "Idiomas",
 		"Save": "Guardar",
 		"Title": "Definições",

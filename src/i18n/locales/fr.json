@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Un ticket de caisse peut contenir des informations personnelles, nous vous recommandons de les masquer (caviarder, plier...) avant de le prendre en photo.",
-			"Title": "Preuve"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Preuve",
+			"ProofStatus": "Proof status",
+			"Public": "Publique",
+			"Private": "Privée"
 		},
 		"Title": "Ajouter plusieurs prix"
 	},
@@ -126,8 +130,8 @@
 	"ChangeCurrencyDialog": {
 		"Title": "Choisissez l'une de vos devises préférées",
 		"Currency": "Devise",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
+		"AddCurrencies": "Ajouter des devises dans les paramètres",
+		"AddCurrenciesWarning": "Vous allez être redirigé vers la page des paramètres, mais vous perdrez toutes les informations que vous avez saisies sur cette page.",
 		"Select": "Sélectionnez {currency_code}"
 	},
 	"UserRecentProofsDialog": {

@@ -31,7 +31,11 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"Title": "Frogaren xehetasunak"
+			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"Title": "Frogaren xehetasunak",
+			"ProofStatus": "Proof status",
+			"Public": "Public",
+			"Private": "Private"
 		},
 		"Title": "Gehitu hainbat prezio"
 	},
