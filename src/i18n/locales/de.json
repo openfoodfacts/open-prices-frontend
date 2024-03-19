@@ -31,11 +31,12 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Quittungen können personenbezogene Daten enthalten. Wir empfehlen, diese vor der Aufnahme zu verbergen (unkenntlich machen, falten …).",
-			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
 			"Title": "Details zum Nachweis",
 			"ProofStatus": "Proof status",
 			"Public": "Öffentlich",
-			"Private": "Privat"
+			"Private": "Privat",
+			"Privacy": "Datenschutz"
 		},
 		"Title": "Mehrere Preise hinzufügen"
 	},
