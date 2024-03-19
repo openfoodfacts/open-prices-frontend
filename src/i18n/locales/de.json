@@ -31,9 +31,9 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Quittungen können personenbezogene Daten enthalten. Wir empfehlen, diese vor der Aufnahme zu verbergen (unkenntlich machen, falten …).",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "Sie können den Beleg auch auf „Privat” festlegen. Private Nachweise sind nur für Sie und für Moderatoren sichtbar.",
 			"Title": "Details zum Nachweis",
-			"ProofStatus": "Proof status",
+			"ProofStatus": "Status des Nachweises",
 			"Public": "Öffentlich",
 			"Private": "Privat",
 			"Privacy": "Datenschutz"
