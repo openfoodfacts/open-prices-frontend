@@ -31,7 +31,7 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Makbuzlar kişisel bilgiler içerebilir; fotoğrafı çekmeden önce bunları gizlemenizi (düzeltmeyi, katlamayı...) öneririz.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "Makbuzu Özel olarak da ayarlayabilirsiniz. Özel bedeller yalnızca siz ve moderatörler tarafından görülebilecektir.",
 			"Title": "Kanıt ayrıntıları",
 			"ProofStatus": "Bedel durumu",
 			"Public": "Genel",
