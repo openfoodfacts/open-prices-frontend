@@ -31,9 +31,9 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Un ticket de caisse peut contenir des informations personnelles, nous vous recommandons de les masquer (caviarder, plier...) avant de le prendre en photo.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "Vous pouvez également définir le reçu en privé. Les preuves privées ne seront visibles que pour vous et les modérateurs.",
 			"Title": "Preuve",
-			"ProofStatus": "Proof status",
+			"ProofStatus": "Preuve de statut",
 			"Public": "Publique",
 			"Private": "Privée",
 			"Privacy": "Confidentialité"
