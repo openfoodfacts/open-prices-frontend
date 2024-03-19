@@ -31,9 +31,9 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Tanda terima mungkin berisi informasi pribadi, kami sarankan untuk menyembunyikannya (edit, lipat...) sebelum mengambil gambar.",
-			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"PrivateWarning": "Jika tidak, atur Status Bukti ke Privat. Bukti privat hanya dapat dilihat oleh Anda dan moderator.",
 			"Title": "Rincian bukti",
-			"ProofStatus": "Proof status",
+			"ProofStatus": "Status bukti",
 			"Public": "Publik",
 			"Private": "Privat"
 		},
