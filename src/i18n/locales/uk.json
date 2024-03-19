@@ -31,7 +31,7 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Чеки можуть містити особисту інформацію, рекомендуємо приховати їх (відредагувати, згорнути...) перед фотографуванням.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "Ви також можете встановити чек як Приватний. Приватні докази будуть видимі лише вам і модераторам.",
 			"Title": "Подробиці перевірки",
 			"ProofStatus": "Статус підтвердження",
 			"Public": "Загальнодоступний",
