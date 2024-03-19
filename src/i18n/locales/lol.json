@@ -31,11 +31,12 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "crwdns246922:0crwdne246922:0",
-			"PrivateWarning": "crwdns247932:0crwdne247932:0",
+			"PrivateWarning": "crwdns247940:0crwdne247940:0",
 			"Title": "crwdns246866:0crwdne246866:0",
 			"ProofStatus": "crwdns247934:0crwdne247934:0",
 			"Public": "crwdns247936:0crwdne247936:0",
-			"Private": "crwdns247938:0crwdne247938:0"
+			"Private": "crwdns247938:0crwdne247938:0",
+			"Privacy": "crwdns247942:0crwdne247942:0"
 		},
 		"Title": "crwdns246868:0crwdne246868:0"
 	},
