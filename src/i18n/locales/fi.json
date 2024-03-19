@@ -31,11 +31,12 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Kuitit voivat sisältää henkilökohtaisia tietoja, suosittelemme piilottamaan ne (peitä, taita...) ennen kuvan ottamista.",
-			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
 			"Title": "Todistuksen yksityiskohdat",
 			"ProofStatus": "Proof status",
 			"Public": "Public",
-			"Private": "Private"
+			"Private": "Private",
+			"Privacy": "Yksityisyys"
 		},
 		"Title": "Lisää useita hintoja"
 	},
