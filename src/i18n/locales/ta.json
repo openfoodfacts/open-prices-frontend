@@ -31,9 +31,9 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"PrivateWarning": "இல்லையெனில், ஆதார நிலையைத் தனிப்பட்டதாக அமைக்கவும். தனிப்பட்ட சான்றுகள் உங்களுக்கும் மதிப்பீட்டாளர்களுக்கும் மட்டுமே தெரியும்.",
 			"Title": "Proof details",
-			"ProofStatus": "Proof status",
+			"ProofStatus": "ஆதார நிலை",
 			"Public": "Public",
 			"Private": "Private"
 		},
