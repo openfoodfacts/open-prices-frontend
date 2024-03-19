@@ -61,9 +61,9 @@
               <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
             </v-col>
           </v-row>
-          <v-row v-if="proofType === 'RECEIPT'">
+          <v-row v-if="proofType === 'RECEIPT'" class="mt-0">
             <v-col>
-              <h3 class="mb-1">Privacy</h3>
+              <h3 class="mb-1">{{ $t('AddPriceMultiple.ProofDetails.Privacy') }}</h3>
               <p class="text-caption text-warning">
                 <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
                 <i>{{ $t('AddPriceMultiple.ProofDetails.PrivateWarning') }}</i>
@@ -77,8 +77,8 @@
                   hide-details
                   @change="updateIsPublicProof">
                   <template v-slot:label>
-                    <v-icon start :icon="proofIsPublic ? 'mdi-lock-open-check' : 'mdi-lock-alert'" :color="proofIsPublic ? 'green' : 'red'"></v-icon>
-                    {{ $t('AddPriceMultiple.ProofDetails.ProofStatus') }} :&nbsp;
+                    <v-icon start size="small" :icon="proofIsPublic ? 'mdi-lock-open-check' : 'mdi-lock-alert'" :color="proofIsPublic ? 'green' : 'red'"></v-icon>
+                    <strong>{{ $t('AddPriceMultiple.ProofDetails.ProofStatus') }}&nbsp;</strong>
                     <span :style="{ color: proofIsPublic ? 'green' : 'red' }">
                       {{ proofIsPublic ? $t('AddPriceMultiple.ProofDetails.Public') : $t('AddPriceMultiple.ProofDetails.Private') }}
                     </span>
@@ -533,6 +533,7 @@ export default {
       this.proofIsPublic = selectedProof.is_public
     },
     getProofUrl(proof) {
+      return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
     },
     newProof(source) {
