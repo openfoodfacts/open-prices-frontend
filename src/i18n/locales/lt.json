@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Kvituose gali būti asmeninės informacijos, todėl rekomenduojame prieš fotografuojant ją paslėpti (redaguoti, užlenkti...).",
 			"PrivateWarning": "Kvitą galite nustatytti kaip Privatų. Privatūs kvitai bus matomi tik jums ir moderatoriams.",
-			"Title": "Išsami įdorymų informacija",
-			"ProofStatus": "Įrodymo būsena",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Privacy"
+			"Title": "Išsami įdorymų informacija"
 		},
 		"Title": "Pridėti kelia skainas"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "Įkelti daugiau",
 		"Prices": "Kainos",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Proof not found (or not the owner)",
+		"Public": "Public",
+		"Private": "Private",
+		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "Išsaugoti",
 		"Success": "Proof edited!"
