@@ -11,6 +11,7 @@
       <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
         {{ $t('UserDashboard.Title') }}
       </v-btn>
+      <ShareButton :overrideUrl="'/users/' + username"></ShareButton>
     </v-col>
   </v-row>
 
@@ -35,13 +36,14 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
-import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
+    'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
