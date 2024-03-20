@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Quittungen können personenbezogene Daten enthalten. Wir empfehlen, diese vor der Aufnahme zu verbergen (unkenntlich machen, falten …).",
 			"PrivateWarning": "Sie können den Beleg auch auf „Privat” festlegen. Private Nachweise sind nur für Sie und für Moderatoren sichtbar.",
-			"Title": "Details zum Nachweis",
-			"ProofStatus": "Status des Nachweises",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Datenschutz"
+			"Title": "Details zum Nachweis"
 		},
 		"Title": "Mehrere Preise hinzufügen"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "Weitere laden",
 		"Prices": "Preise",
-		"ProofNotFound": "Nachweis nicht gefunden (oder nicht der Eigentümer)"
+		"ProofNotFound": "Nachweis nicht gefunden (oder nicht der Eigentümer)",
+		"Public": "Public",
+		"Private": "Private",
+		"Privacy": "Datenschutz"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "Speichern",
 		"Success": "Proof edited!"
