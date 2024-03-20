@@ -7,7 +7,7 @@
         <v-icon size="x-small" icon="mdi-open-in-new"></v-icon>
       </a>
     </span>
-    <span v-if="proof.type !== 'GDPR_REQUEST'">
+    <span v-else>
       {{ proofTypeName }}
     </span>
   </v-chip>
