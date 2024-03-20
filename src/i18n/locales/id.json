@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Tanda terima mungkin berisi informasi pribadi, kami sarankan untuk menyembunyikannya (edit, lipat...) sebelum mengambil gambar.",
 			"PrivateWarning": "Anda juga bisa mengatur tanda terima menjadi Pribadi. Bukti pribadi hanya akan terlihat oleh Anda dan moderator.",
-			"Title": "Rincian bukti",
-			"ProofStatus": "Status bukti",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Privacy"
+			"Title": "Rincian bukti"
 		},
 		"Title": "Tambahkan beberapa harga"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "Muat lebih banyak",
 		"Prices": "Harga",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Proof not found (or not the owner)",
+		"Public": "Public",
+		"Private": "Private",
+		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "menyimpan ",
 		"Success": "Proof edited!"

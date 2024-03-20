@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "रसीदों में व्यक्तिगत जानकारी हो सकती है, हम तस्वीर लेने से पहले उन्हें छिपाने (रीडैक्ट, फोल्ड...) की सलाह देते हैं।",
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "प्रमाण विवरण",
-			"ProofStatus": "Proof status",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Privacy"
+			"Title": "प्रमाण विवरण"
 		},
 		"Title": "Add multiple prices"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "अधिक लोड करें",
 		"Prices": "Prices",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Proof not found (or not the owner)",
+		"Public": "Public",
+		"Private": "Private",
+		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "सेव़",
 		"Success": "Proof edited!"

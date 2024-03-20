@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "crwdns246922:0crwdne246922:0",
 			"PrivateWarning": "crwdns247940:0crwdne247940:0",
-			"Title": "crwdns246866:0crwdne246866:0",
-			"ProofStatus": "crwdns247934:0crwdne247934:0",
-			"Public": "crwdns247936:0crwdne247936:0",
-			"Private": "crwdns247938:0crwdne247938:0",
-			"Privacy": "crwdns247942:0crwdne247942:0"
+			"Title": "crwdns246866:0crwdne246866:0"
 		},
 		"Title": "crwdns246868:0crwdne246868:0"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "crwdns247796:0crwdne247796:0",
 		"Prices": "crwdns247798:0crwdne247798:0",
-		"ProofNotFound": "crwdns247800:0crwdne247800:0"
+		"ProofNotFound": "crwdns247800:0crwdne247800:0",
+		"Public": "crwdns247964:0crwdne247964:0",
+		"Private": "crwdns247966:0crwdne247966:0",
+		"Privacy": "crwdns247968:0crwdne247968:0"
 	},
 	"ProofEdit": {
 		"Title": "crwdns247952:0crwdne247952:0",
-		"Public": "crwdns247954:0crwdne247954:0",
-		"Private": "crwdns247956:0crwdne247956:0",
 		"PrivateWarning": "crwdns247958:0crwdne247958:0",
 		"Save": "crwdns247960:0crwdne247960:0",
 		"Success": "crwdns247962:0crwdne247962:0"

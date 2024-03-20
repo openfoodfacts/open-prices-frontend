@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Proof details",
-			"ProofStatus": "Proof status",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Privacy"
+			"Title": "Proof details"
 		},
 		"Title": "Add multiple prices"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "Cargar máis",
 		"Prices": "Prices",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Proof not found (or not the owner)",
+		"Public": "Public",
+		"Private": "Private",
+		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "Gardar",
 		"Success": "Proof edited!"

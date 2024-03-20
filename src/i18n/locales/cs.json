@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Účtenky mohou obsahovat osobní údaje, doporučujeme je před focením schovat (zakrýt, přeložit...).",
 			"PrivateWarning": "Účtenku můžete také nastavit jako soukromou. Soukromé důkazy budou viditelné pouze pro vás a pro moderátory.",
-			"Title": "Podrobnosti o důkazu",
-			"ProofStatus": "Stav důkazu",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Soukromí"
+			"Title": "Podrobnosti o důkazu"
 		},
 		"Title": "Přidat více cen"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "Načíst další",
 		"Prices": "Ceny",
-		"ProofNotFound": "Důkaz nenalezen (nebo není vlastník)"
+		"ProofNotFound": "Důkaz nenalezen (nebo není vlastník)",
+		"Public": "Public",
+		"Private": "Private",
+		"Privacy": "Soukromí"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "Uložit",
 		"Success": "Proof edited!"

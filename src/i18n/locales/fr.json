@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Un ticket de caisse peut contenir des informations personnelles, nous vous recommandons de les masquer (caviarder, plier...) avant de le prendre en photo.",
 			"PrivateWarning": "Vous pouvez également définir le reçu en privé. Les preuves privées ne seront visibles que pour vous et les modérateurs.",
-			"Title": "Preuve",
-			"ProofStatus": "Preuve de statut",
-			"Public": "Publique",
-			"Private": "Privé",
-			"Privacy": "Confidentialité"
+			"Title": "Preuve"
 		},
 		"Title": "Ajouter plusieurs prix"
 	},
@@ -263,15 +259,16 @@
 	"ProofDetail": {
 		"LoadMore": "Voir plus",
 		"Prices": "Prix",
-		"ProofNotFound": "Preuve introuvable (ou pas le propriétaire)"
+		"ProofNotFound": "Preuve introuvable (ou pas le propriétaire)",
+		"Public": "Public",
+		"Private": "Privé",
+		"Privacy": "Confidentialité"
 	},
 	"ProofEdit": {
 		"Title": "Modifier une preuve",
-		"Public": "Publique",
-		"Private": "Privé",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"PrivateWarning": "Lorsque vous définissez votre preuve à Privé, elle sera cachée de la vue publique. Nous vous recommandons de masquer toute information personnelle en modifiant ou en pliant le document si possible.",
 		"Save": "Enregistrer",
-		"Success": "Proof edited!"
+		"Success": "Preuve modifiée !"
 	},
 	"Router": {
 		"AddPrice": {

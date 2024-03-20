@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "領収書には個人情報が含まれている場合があります。写真を撮る前にそれらを非表示にすることをお勧めします。",
 			"PrivateWarning": "領収書を非公開に設定することもできます。プライベートプルーフはあなたとモデレーターのみに表示されます。",
-			"Title": "証明の詳細",
-			"ProofStatus": "証明ステータス",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "プライバシー"
+			"Title": "証明の詳細"
 		},
 		"Title": "複数の価格を追加する"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "もっと読み込む",
 		"Prices": "Prices",
-		"ProofNotFound": "証明書が見つかりません（または所有者ではありません）"
+		"ProofNotFound": "証明書が見つかりません（または所有者ではありません）",
+		"Public": "公開",
+		"Private": "非公開",
+		"Privacy": "プライバシー"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "保存",
 		"Success": "Proof edited!"
