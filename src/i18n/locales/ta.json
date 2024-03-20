@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Proof details",
-			"ProofStatus": "ஆதார நிலை",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Privacy"
+			"Title": "Proof details"
 		},
 		"Title": "Add multiple prices"
 	},
@@ -255,21 +251,22 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "இந்தச் சான்றை நிச்சயமாக நீக்க விரும்புகிறீர்களா?",
 		"Delete": "நீக்கு",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "சான்றை நீக்கவும்",
+		"Success": "சான்று நீக்கப்பட்டது!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
 		"Prices": "Prices",
-		"ProofNotFound": "Proof not found (or not the owner)"
-	},
-	"ProofEdit": {
-		"Title": "Edit a proof",
+		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Privacy": "Privacy"
+	},
+	"ProofEdit": {
+		"Title": "ஆதாரத்தைத் திருத்தவும்",
+		"PrivateWarning": "உங்கள் ஆதாரத்தைத் தனிப்பட்டதாக அமைக்கும்போது, அது பொது பார்வையிலிருந்து மறைக்கப்படும். முடிந்தால், ஆவணத்தைத் திருத்தி அல்லது மடிப்பதன் மூலம் எந்தவொரு தனிப்பட்ட தகவலையும் மறைக்கப் பரிந்துரைக்கிறோம்.",
 		"Save": "சேமி",
 		"Success": "Proof edited!"
 	},
