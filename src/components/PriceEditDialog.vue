@@ -84,6 +84,7 @@ export default {
       loading: false
     }
   },
+  emits: ['update', 'close'],
   mounted() {
     this.initUpdatePriceForm()
   },
@@ -99,7 +100,7 @@ export default {
       if (!this.updatePriceForm.price_is_discounted) {
         this.updatePriceForm.price_without_discount = null
       }
-      // create price
+      // update price
       api
         .updatePrice(this.price.id, this.updatePriceForm)
         .then((response) => {

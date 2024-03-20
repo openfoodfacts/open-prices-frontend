@@ -2,41 +2,42 @@
   <v-dialog scrollable max-height="80%" max-width="80%">
     <v-card>
       <v-card-title>
-        {{ $t('PriceEdit.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('ProofEdit.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
       </v-card-title>
 
       <v-divider></v-divider>
 
-      <v-card-subtitle size="small">
-        {{ $t('PriceEdit.EditProof') }}
-      </v-card-subtitle>
       <v-card-text v-if="proof.type === 'RECEIPT'">
         <v-switch
           v-model="isPublic"
           color="green"
           density="compact"
           inset
-          :label="isPublic ? $t('PriceEdit.Public') : $t('PriceEdit.Private')"
+          :label="isPublic ? $t('ProofEdit.Public') : $t('ProofEdit.Private')"
           hide-details
         ></v-switch>
         <p class="text-caption text-warning">
-          <i>{{ $t('PriceEdit.PrivateWarning') }}</i>
+          <i>{{ $t('ProofEdit.PrivateWarning') }}</i>
         </p>
-        <!-- placeholder for receipt type change-->
-
       </v-card-text>
+
       <v-divider></v-divider>
-      <!-- placeholder for proof delete-->
+
       <v-card-actions>
-        <v-btn @click="save">{{ $t('PriceEdit.Save') }}</v-btn>
+        <v-btn
+          elevation="1"
+          :loading="loading"
+          @click="updateProof"
+        >{{ $t('ProofEdit.Save') }}</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
 </template>
 
 <script>
-import api from '../services/api'
 import { useAppStore } from '../store'
+import api from '../services/api'
+
 export default {
   props: {
     'proof': null,
@@ -44,24 +45,29 @@ export default {
   data() {
     return {
       isPublic: false,
+      loading: false
     }
   },
+  emits: ['update', 'close'],
   computed: {
   },
   mounted() {
     this.isPublic = this.proof.is_public
   },
   methods: {
-    updateIsPublicProof() {
+    updateProof() {
       const params = {
         is_public: this.isPublic
       }
+      // update proof
       api
         .updateProof(this.proof.id, params)
         .then((response) => {
           // if response.status == 204
           const store = useAppStore()
           store.updateProof(this.proof.id, params)
+          this.$emit('update', response.data)
+          this.close()
         })
         .catch((error) => {
           console.log(error)
@@ -69,11 +75,6 @@ export default {
     },
     close() {
       this.$emit('close')
-    },
-    save() {
-      this.updateIsPublicProof()
-      this.$emit('close')
-      this.$emit('proofUpdated')
     },
   }
 }

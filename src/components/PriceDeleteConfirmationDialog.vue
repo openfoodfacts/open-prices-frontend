@@ -47,6 +47,7 @@ export default {
       loading: false,
     }
   },
+  emits: ['delete', 'close'],
   methods: {
     deletePrice() {
       this.loading = true
