@@ -2,6 +2,7 @@
   <v-row>
     <v-col :cols="userIsProofOwner ? '11' : '12'">
       <ProofTypeChip class="mr-1" :proof="proof"></ProofTypeChip>
+      <ProofPrivateChip v-if="proof.type === 'RECEIPT'" class="mr-1" :proof="proof"></ProofPrivateChip>
       <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()"></PriceCountChip>
       <RelativeDateTimeChip :dateTime="proof.created"></RelativeDateTimeChip>
     </v-col>
@@ -18,6 +19,7 @@ import { useAppStore } from '../store'
 export default {
   components: {
     'ProofTypeChip': defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
+    'ProofPrivateChip': defineAsyncComponent(() => import('../components/ProofPrivateChip.vue')),
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'RelativeDateTimeChip': defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     'ProofActionMenuButton': defineAsyncComponent(() => import('../components/ProofActionMenuButton.vue'))

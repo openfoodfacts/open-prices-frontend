@@ -78,8 +78,8 @@
                   @change="updateIsPublicProof">
                   <template v-slot:label>
                     <v-icon start size="small" :icon="proofIsPublic ? 'mdi-lock-open-check' : 'mdi-lock-alert'" :color="proofIsPublic ? 'green' : 'red'"></v-icon>
-                    <span :style="{ color: proofIsPublic ? 'green' : 'red' }">
-                      {{ proofIsPublic ? $t('AddPriceMultiple.ProofDetails.Public') : $t('AddPriceMultiple.ProofDetails.Private') }}
+                    <span :class="proofIsPublic ? 'text-green' : 'text-red'">
+                      {{ proofIsPublic ? $t('ProofDetail.Public') : $t('ProofDetail.Private') }}
                     </span>
                   </template>
                 </v-switch>
