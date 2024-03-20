@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Makbuzlar kişisel bilgiler içerebilir; fotoğrafı çekmeden önce bunları gizlemenizi (düzeltmeyi, katlamayı...) öneririz.",
 			"PrivateWarning": "Makbuzu Özel olarak da ayarlayabilirsiniz. Özel bedeller yalnızca siz ve moderatörler tarafından görülebilecektir.",
-			"Title": "Kanıt ayrıntıları",
-			"ProofStatus": "Bedel durumu",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Mahremiyet"
+			"Title": "Kanıt ayrıntıları"
 		},
 		"Title": "Birden fazla fiyat ekle"
 	},
@@ -255,23 +251,24 @@
 		"GDPR_REQUEST": "GDPR talebi"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Bu bedeli silmek istediğinizden emin misiniz?",
 		"Delete": "Sil",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "Bedeli sil",
+		"Success": "Bedel silindi!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Daha fazla yükle",
 		"Prices": "Fiyatlar",
-		"ProofNotFound": "Bedel bulunamadı (veya sahibi değil)"
+		"ProofNotFound": "Bedel bulunamadı (veya sahibi değil)",
+		"Public": "Genel",
+		"Private": "Özel",
+		"Privacy": "Mahremiyet"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Bedeli düzenle",
+		"PrivateWarning": "Bedelinizi Özel olarak ayarladığınızda, herkese açık görünümden gizlenecektir. Mümkünse belgeyi düzenleyerek veya katlayarak tüm kişisel bilgileri gizlemenizi öneririz.",
 		"Save": "Kaydet",
-		"Success": "Proof edited!"
+		"Success": "Bedel düzenlendi!"
 	},
 	"Router": {
 		"AddPrice": {
