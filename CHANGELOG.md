@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.51.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.50.2...v1.51.0) (2024-03-20)
+
+
+### Features
+
+* Add price proof private in Add Price ([#405](https://github.com/openfoodfacts/open-prices-frontend/issues/405)) ([3da8a21](https://github.com/openfoodfacts/open-prices-frontend/commit/3da8a21e7de029aec667bc38edd13cc06920741d))
+* **proofs:** display the proof receipt privacy status in the proof footer ([#468](https://github.com/openfoodfacts/open-prices-frontend/issues/468)) ([f1ca0fe](https://github.com/openfoodfacts/open-prices-frontend/commit/f1ca0feba5ac94bbca4129637d6c95a15983f4d3))
+* **proofs:** new action menu if user is owner (edit & delete) ([#462](https://github.com/openfoodfacts/open-prices-frontend/issues/462)) ([15aa82d](https://github.com/openfoodfacts/open-prices-frontend/commit/15aa82d1db408130f8407df646f32314af0f258e))
+* **user:** add share button on dashboard ([#469](https://github.com/openfoodfacts/open-prices-frontend/issues/469)) ([7386b95](https://github.com/openfoodfacts/open-prices-frontend/commit/7386b9591f57cb1106a9aec80a6b109f83289a72))
+
+
+### Bug Fixes
+
+* focus location search input. ref [#15](https://github.com/openfoodfacts/open-prices-frontend/issues/15) ([1528349](https://github.com/openfoodfacts/open-prices-frontend/commit/1528349f4f6ab760e6c34ffe0eff181cb91892bb))
+* **proofs:** cleanup post proof privacy recent changes ([#466](https://github.com/openfoodfacts/open-prices-frontend/issues/466)) ([a12ead6](https://github.com/openfoodfacts/open-prices-frontend/commit/a12ead612df5aaf24b903a018fe09482a2287753))
+* **proofs:** fix some stuff after merging the proof private toggle. ref [#405](https://github.com/openfoodfacts/open-prices-frontend/issues/405) ([954190b](https://github.com/openfoodfacts/open-prices-frontend/commit/954190b0d3b66b47823372b23424e8a5d3aec32f))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#457](https://github.com/openfoodfacts/open-prices-frontend/issues/457)) ([9e37b4d](https://github.com/openfoodfacts/open-prices-frontend/commit/9e37b4d9042954393ac6d60dfb15c0900f02c75c))
+* **l10n:** New Crowdin translations to review and merge ([#461](https://github.com/openfoodfacts/open-prices-frontend/issues/461)) ([cea0261](https://github.com/openfoodfacts/open-prices-frontend/commit/cea0261c9778455dde84ffc90c32ea42ae509b81))
+* **l10n:** New Crowdin translations to review and merge ([#463](https://github.com/openfoodfacts/open-prices-frontend/issues/463)) ([53da805](https://github.com/openfoodfacts/open-prices-frontend/commit/53da8050370d344d2f53f0dbff697bb5b7e359f4))
+* **l10n:** New Crowdin translations to review and merge ([#465](https://github.com/openfoodfacts/open-prices-frontend/issues/465)) ([d110ba3](https://github.com/openfoodfacts/open-prices-frontend/commit/d110ba35825b8bb76725eec03d7840146ad116a2))
+* **proof:** new ProofTypeChip component ([#464](https://github.com/openfoodfacts/open-prices-frontend/issues/464)) ([851e380](https://github.com/openfoodfacts/open-prices-frontend/commit/851e380639b5fe9db513968fb4e96416beebad5a))
+
 ## [1.50.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.50.1...v1.50.2) (2024-03-16)
 
 
