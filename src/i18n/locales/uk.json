@@ -15,7 +15,7 @@
 			"Title": "Один продукт"
 		},
 		"Thanks": "Дякую",
-		"Title": "Add a price",
+		"Title": "Додати ціну",
 		"TitleSingle": "Add a single price",
 		"TitleMultiple": "Додайте кілька цін гуртом"
 	},
@@ -66,7 +66,7 @@
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Штрих-код продукту",
 			"Scan": "Сканувати",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "Просканувати штрих-код",
 			"Type": "Тип",
 			"TypeBarcode": "Введіть штрих-код",
 			"SetProduct": "Set a product",
@@ -94,7 +94,7 @@
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Просканувати штрих-код"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Код товару",
@@ -103,12 +103,12 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Завантажити більше",
-		"TopProducts": "Top products",
+		"TopProducts": "Кращі продукти",
 		"BrandProductTotal": "{count} продуктів"
 	},
 	"CategoryDetail": {
 		"LoadMore": "Завантажити більше",
-		"TopProducts": "Top products",
+		"TopProducts": "Кращі продукти",
 		"CategoryProductTotal": "{count} продуктів"
 	},
 	"Common": {
@@ -118,7 +118,7 @@
 		"Filter": "Фільтр",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Приховати ціни старші за 30 днів",
-		"Order": "Order",
+		"Order": "Замовлення",
 		"OrderProductUniqueScansDESC": "Кількість сканувань",
 		"OrderProductPriceCountDESC": "Кількість цін",
 		"OrderPriceASC": "Ціна",
@@ -150,10 +150,10 @@
 		"SignOut": "Вийти"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"LatestPrices": "Latest prices",
+		"AddPrice": "Додати ціну",
+		"LatestPrices": "Остання ціна",
 		"SearchProduct": "Пошук товару",
-		"SettingsUpdated": "Settings updated!",
+		"SettingsUpdated": "Параметри оновлено!",
 		"TodayPriceStat": "Жодної ціни сьогодні не додано | {todayPriceNumber} нові ціни сьогодні | {todayPriceNumber} нові ціни, додані сьогодні!",
 		"Welcome": {
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
@@ -161,7 +161,7 @@
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Остання ціна",
 		"LoadMore": "Завантажити більше",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
@@ -172,7 +172,7 @@
 	},
 	"LocationSelector": {
 		"Clear": "Очистити",
-		"NoResult": "No results found",
+		"NoResult": "Результатів не знайдено",
 		"OSM": {
 			"text": "powered by {url}"
 		},
@@ -184,7 +184,7 @@
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Title": "Не знайдено"
 	},
 	"PriceCard": {
 		"Discount": "Знижка",
@@ -194,7 +194,7 @@
 		"PriceValueDisplayUnit": "{0} / одиниця",
 		"Proof": "Доказ",
 		"FullPrice": "Повна ціна",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Невідомий продукт"
 	},
 	"PriceCountChip": {
 		"PriceCount": "{count} цін"
@@ -212,7 +212,7 @@
 	},
 	"PriceList": {
 		"LoadMore": "Завантажити більше",
-		"Title": "Latest prices"
+		"Title": "Остання ціна"
 	},
 	"ProductCard": {
 		"Brands": "Виробники",
@@ -235,9 +235,9 @@
 		"UnknownProduct": "Невідомий продукт"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Додати ціну",
 		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Остання ціна",
 		"LoadMore": "Завантажити більше",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
@@ -246,7 +246,7 @@
 		"LoadMore": "Завантажити більше",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Title": "Кращі продукти"
 	},
 	"ProofCard": {
 		"Proof": "Доказ",
@@ -262,7 +262,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Завантажити більше",
-		"Prices": "Prices",
+		"Prices": "Ціни",
 		"ProofNotFound": "Доказ не знайдено (або не власник)"
 	},
 	"ProofEditDialog": {
@@ -275,13 +275,13 @@
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Додати ціну"
 		},
 		"Home": {
 			"Title": "Головна"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Остання ціна"
 		},
 		"Search": {
 			"Title": "Пошук"
@@ -296,7 +296,7 @@
 			"Title": "Топ локацій"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Кращі продукти"
 		}
 	},
 	"Search": {
@@ -312,12 +312,12 @@
 		"ServerError": "Error: server error",
 		"Title": "Увійти",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
-		"UsernameLabel": "Username",
+		"UsernameLabel": "Ім'я користувача",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
+		"Prices": "Ціни",
+		"ProductsWithPrices": "Товари з цінами",
 		"Title": "Stats",
 		"Products": "Товари",
 		"Locations": "Місцезнаходження",
@@ -328,7 +328,7 @@
 		"WithoutProduct": "Без продукту"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Остання ціна",
 		"LatestProofs": "Останні докази",
 		"LoadMore": "Завантажити більше",
 		"MyPrices": "Мої ціни",
@@ -340,7 +340,7 @@
 		"UserProofTotal": "{count} доказів"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Остання ціна",
 		"LoadMore": "Завантажити більше"
 	},
 	"UserList": {
