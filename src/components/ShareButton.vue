@@ -19,6 +19,9 @@
 import constants from '../constants'
 
 export default {
+  props: {
+    'overrideUrl': null,
+  },
   data () {
     return {
       APP_NAME: constants.APP_NAME,
@@ -27,7 +30,7 @@ export default {
   },
   methods: {
     shareViaWebShare() {
-      let URL = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}${this.$route.href}`
+      let URL = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}${this.overrideUrl ? this.overrideUrl : this.$route.href}`
       if (navigator.share) {
         navigator.share({
           title: this.APP_NAME,
