@@ -34,8 +34,8 @@
 			"PrivateWarning": "Účtenku můžete také nastavit jako soukromou. Soukromé důkazy budou viditelné pouze pro vás a pro moderátory.",
 			"Title": "Podrobnosti o důkazu",
 			"ProofStatus": "Stav důkazu",
-			"Public": "Veřejný",
-			"Private": "Soukromý",
+			"Public": "Public",
+			"Private": "Private",
 			"Privacy": "Soukromí"
 		},
 		"Title": "Přidat více cen"
@@ -254,24 +254,24 @@
 		"RECEIPT": "Účtenka",
 		"GDPR_REQUEST": "GDPR požadavek"
 	},
-	"ProofDeleteChip": {
-		"Confirmation": "Jste si jisti, že chcete smazat tento důkaz?",
+	"ProofDelete": {
+		"Confirmation": "Are you sure you want to delete this proof?",
 		"Delete": "Odstranit",
-		"DeleteTitle": "Odstranit důkaz",
-		"Success": "Důkaz odstraněn!"
+		"Title": "Delete a proof",
+		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Načíst další",
 		"Prices": "Ceny",
 		"ProofNotFound": "Důkaz nenalezen (nebo není vlastník)"
 	},
-	"ProofEditDialog": {
-		"Title": "Změňte váš důkaz",
-		"EditProof": "Upravte váš důkaz",
-		"Public": "Veřejný",
-		"Private": "Soukromý",
-		"PrivateWarning": "Když nastavíte svůj důkaz na soukromý, bude skryt před veřejností. Pokud je to možné, doporučujeme skrýt jakékoli osobní údaje zakrytím nebo přeložením dokumentu.",
-		"Save": "Uložit"
+	"ProofEdit": {
+		"Title": "Edit a proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Uložit",
+		"Success": "Proof edited!"
 	},
 	"Router": {
 		"AddPrice": {
