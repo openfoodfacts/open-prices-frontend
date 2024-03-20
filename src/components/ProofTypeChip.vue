@@ -1,6 +1,6 @@
 <template>
   <v-chip label size="small" density="comfortable">
-    <v-icon start icon="mdi-paperclip"></v-icon>
+    <v-icon start icon="mdi-image"></v-icon>
     <span v-if="proof.type === 'GDPR_REQUEST'">
       <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">
         {{ proofTypeName }}
