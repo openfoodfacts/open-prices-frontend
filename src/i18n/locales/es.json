@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Los tickets pueden contener información personal. Te recomendamos que antes de hacer la foto ocultes esa información (p. ej., doblando el ticket).",
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Detalles del comprobante",
-			"ProofStatus": "Proof status",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Privacy"
+			"Title": "Detalles del comprobante"
 		},
 		"Title": "Añadir varios precios"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "Cargar más",
 		"Prices": "Precios",
-		"ProofNotFound": "Proof not found (or not the owner)"
+		"ProofNotFound": "Proof not found (or not the owner)",
+		"Public": "Public",
+		"Private": "Private",
+		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "Guardar",
 		"Success": "Proof edited!"
