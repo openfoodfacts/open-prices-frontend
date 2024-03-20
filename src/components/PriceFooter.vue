@@ -4,7 +4,7 @@
       <PriceLocationChip v-if="!hidePriceLocation" class="mr-1" :price="price" :readonly="readonly"></PriceLocationChip>
       <PriceOwnerChip class="mr-1" :price="price" :readonly="readonly"></PriceOwnerChip>
       <RelativeDateTimeChip class="mr-1" :dateTime="price.created"></RelativeDateTimeChip>
-      <PriceProof v-if="price.proof && price.proof.is_public && !hidePriceProof" :proof="price.proof"></PriceProof>
+      <PriceProof v-if="price.proof && !hidePriceProof" :proof="price.proof"></PriceProof>
     </v-col>
   </v-row>
 

@@ -8,12 +8,13 @@
       <v-divider></v-divider>
 
       <v-card-text v-if="proof.type === 'RECEIPT'">
+        <h3>{{ $t('ProofEdit.PrivateWarning') }}</h3>
         <v-switch
           v-model="isPublic"
           color="green"
           density="compact"
           inset
-          :label="isPublic ? $t('ProofEdit.Public') : $t('ProofEdit.Private')"
+          :label="isPublic ? $t('ProofDetail.Public') : $t('ProofDetail.Private')"
           hide-details
         ></v-switch>
         <p class="text-caption text-warning">

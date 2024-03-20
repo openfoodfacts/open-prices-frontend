@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <ProofCard v-if="proof" :proof="proof" :hideProofHeader="true" :hideProofDelete="true" :readonly="true"></ProofCard>
+      <ProofCard v-if="proof" :proof="proof" :hideProofHeader="true" :readonly="true"></ProofCard>
       <p v-if="!loading && !proof" class="text-red">{{ $t('ProofDetail.ProofNotFound') }}</p>
     </v-col>
   </v-row>

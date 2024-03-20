@@ -10,7 +10,7 @@
   </v-chip>
 
   <v-dialog scrollable v-model="dialog" max-height="80%" width="80%">
-    <ProofCard :proof="proof" @close="closeDialog"></ProofCard>
+    <ProofCard :proof="proof" :hideProofActions="true" @close="closeDialog"></ProofCard>
   </v-dialog>
 </template>
 
