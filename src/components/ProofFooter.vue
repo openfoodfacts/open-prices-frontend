@@ -1,18 +1,7 @@
 <template>
   <v-row style="margin-top:0;">
     <v-col :cols="userIsProofOwner ? '11' : '12'">
-      <v-chip class="mr-1" label size="small" density="comfortable">
-        <v-icon start icon="mdi-paperclip"></v-icon>
-        <span v-if="proof.type === 'GDPR_REQUEST'">
-          <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">
-            {{ proofType }}
-            <v-icon size="x-small" icon="mdi-open-in-new"></v-icon>
-          </a>
-        </span>
-        <span v-if="proof.type !== 'GDPR_REQUEST'">
-          {{ proofType }}
-        </span>
-      </v-chip>
+      <ProofTypeChip class="mr-1" :proof="proof"></ProofTypeChip>
       <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()"></PriceCountChip>
       <RelativeDateTimeChip :dateTime="proof.created"></RelativeDateTimeChip>
     </v-col>
@@ -29,6 +18,7 @@ import constants from '../constants'
 
 export default {
   components: {
+    'ProofTypeChip': defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'RelativeDateTimeChip': defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     'ProofActionMenuButton': defineAsyncComponent(() => import('../components/ProofActionMenuButton.vue'))
@@ -44,11 +34,6 @@ export default {
       default: false,
     },
   },
-  data() {
-    return {
-      OFF_WIKI_GDPR_REQUEST_URL: constants.OFF_WIKI_GDPR_REQUEST_URL,
-    }
-  },
   computed: {
     ...mapStores(useAppStore),
     username() {
@@ -56,9 +41,6 @@ export default {
     },
     userIsProofOwner() {
       return this.username && (this.proof.owner === this.username)
-    },
-    proofType() {
-      return this.$t(`ProofCard.${this.proof.type}`)
     }
   },
   methods: {
