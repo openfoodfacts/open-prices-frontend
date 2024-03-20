@@ -254,24 +254,24 @@
 		"RECEIPT": "crwdns247004:0crwdne247004:0",
 		"GDPR_REQUEST": "crwdns247712:0crwdne247712:0"
 	},
-	"ProofDeleteChip": {
-		"Confirmation": "crwdns247484:0crwdne247484:0",
-		"Delete": "crwdns247486:0crwdne247486:0",
-		"DeleteTitle": "crwdns247488:0crwdne247488:0",
-		"Success": "crwdns247490:0crwdne247490:0"
+	"ProofDelete": {
+		"Confirmation": "crwdns247944:0crwdne247944:0",
+		"Delete": "crwdns247946:0crwdne247946:0",
+		"Title": "crwdns247948:0crwdne247948:0",
+		"Success": "crwdns247950:0crwdne247950:0"
 	},
 	"ProofDetail": {
 		"LoadMore": "crwdns247796:0crwdne247796:0",
 		"Prices": "crwdns247798:0crwdne247798:0",
 		"ProofNotFound": "crwdns247800:0crwdne247800:0"
 	},
-	"ProofEditDialog": {
-		"Title": "crwdns247880:0crwdne247880:0",
-		"EditProof": "crwdns247882:0crwdne247882:0",
-		"Public": "crwdns247884:0crwdne247884:0",
-		"Private": "crwdns247886:0crwdne247886:0",
-		"PrivateWarning": "crwdns247888:0crwdne247888:0",
-		"Save": "crwdns247890:0crwdne247890:0"
+	"ProofEdit": {
+		"Title": "crwdns247952:0crwdne247952:0",
+		"Public": "crwdns247954:0crwdne247954:0",
+		"Private": "crwdns247956:0crwdne247956:0",
+		"PrivateWarning": "crwdns247958:0crwdne247958:0",
+		"Save": "crwdns247960:0crwdne247960:0",
+		"Success": "crwdns247962:0crwdne247962:0"
 	},
 	"Router": {
 		"AddPrice": {
