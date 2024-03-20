@@ -8,7 +8,7 @@
       <v-divider></v-divider>
 
       <v-card-text v-if="proof.type === 'RECEIPT'">
-        <h3>{{ $t('ProofEdit.PrivateWarning') }}</h3>
+        <h3>{{ $t('ProofDetail.Privacy') }}</h3>
         <v-switch
           v-model="isPublic"
           color="green"
