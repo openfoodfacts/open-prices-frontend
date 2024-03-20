@@ -34,8 +34,8 @@
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
 			"Title": "Dettagli della prova",
 			"ProofStatus": "Proof status",
-			"Public": "Pubblica",
-			"Private": "Privata",
+			"Public": "Public",
+			"Private": "Private",
 			"Privacy": "Privacy"
 		},
 		"Title": "Aggiungi più prezzi"
@@ -254,24 +254,24 @@
 		"RECEIPT": "Ricevuta",
 		"GDPR_REQUEST": "Richiesta RGPD"
 	},
-	"ProofDeleteChip": {
-		"Confirmation": "Sei sicuro di voler eliminare questa prova?",
+	"ProofDelete": {
+		"Confirmation": "Are you sure you want to delete this proof?",
 		"Delete": "Elimina",
-		"DeleteTitle": "Elimina una prova",
-		"Success": "Prova eliminata!"
+		"Title": "Delete a proof",
+		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Scarica altro",
 		"Prices": "Prezzi",
 		"ProofNotFound": "Prova non trovata (o non si è il proprietario)"
 	},
-	"ProofEditDialog": {
-		"Title": "Modifica la tua prova",
-		"EditProof": "Modifica la tua prova",
-		"Public": "Pubblica",
-		"Private": "Privata",
-		"PrivateWarning": "Quando si imposta la prova su Privata, sarà nascosta dalla vista pubblica. Raccomandiamo di nascondere le informazioni personali modificando o ripiegando il documento, se possibile.",
-		"Save": "Salva"
+	"ProofEdit": {
+		"Title": "Edit a proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Salva",
+		"Success": "Proof edited!"
 	},
 	"Router": {
 		"AddPrice": {
