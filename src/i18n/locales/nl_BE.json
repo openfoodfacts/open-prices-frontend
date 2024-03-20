@@ -34,8 +34,8 @@
 			"PrivateWarning": "U kunt de bon ook instellen op Privé. Privébewijzen zijn alleen zichtbaar voor jou en moderators.",
 			"Title": "Bewijs details",
 			"ProofStatus": "Bewijsstatus",
-			"Public": "Openbaar",
-			"Private": "Privé",
+			"Public": "Public",
+			"Private": "Private",
 			"Privacy": "Privacy"
 		},
 		"Title": "Voeg meerdere prijzen toe"
@@ -254,24 +254,24 @@
 		"RECEIPT": "Bon",
 		"GDPR_REQUEST": "GDPR request"
 	},
-	"ProofDeleteChip": {
-		"Confirmation": "Weet u zeker dat u dit bewijs wilt verwijderen?",
+	"ProofDelete": {
+		"Confirmation": "Are you sure you want to delete this proof?",
 		"Delete": "Verwijder",
-		"DeleteTitle": "Een bewijs verwijderen",
-		"Success": "Bewijs verwijderd!"
+		"Title": "Delete a proof",
+		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Meer laden",
 		"Prices": "Prijzen",
 		"ProofNotFound": "Bewijs niet gevonden (of niet de eigenaar)"
 	},
-	"ProofEditDialog": {
-		"Title": "Wijzig uw bewijs",
-		"EditProof": "Bewerk uw bewijs",
-		"Public": "Openbaar",
-		"Private": "Privé",
-		"PrivateWarning": "Wanneer je je bewijs instelt op Privé, zal het verborgen worden in de publieke weergave. Wij raden aan persoonlijke informatie te verbergen door het document te veranderen of indien mogelijk te vouwen.",
-		"Save": "Opslaan"
+	"ProofEdit": {
+		"Title": "Edit a proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Opslaan",
+		"Success": "Proof edited!"
 	},
 	"Router": {
 		"AddPrice": {

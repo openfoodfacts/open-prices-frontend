@@ -34,8 +34,8 @@
 			"PrivateWarning": "Anda juga bisa mengatur tanda terima menjadi Pribadi. Bukti pribadi hanya akan terlihat oleh Anda dan moderator.",
 			"Title": "Rincian bukti",
 			"ProofStatus": "Status bukti",
-			"Public": "Publik",
-			"Private": "Privat",
+			"Public": "Public",
+			"Private": "Private",
 			"Privacy": "Privacy"
 		},
 		"Title": "Tambahkan beberapa harga"
@@ -254,24 +254,24 @@
 		"RECEIPT": "Resi",
 		"GDPR_REQUEST": "Permintaan GDPR"
 	},
-	"ProofDeleteChip": {
-		"Confirmation": "Apakah Anda yakin ingin menghapus bukti ini?",
+	"ProofDelete": {
+		"Confirmation": "Are you sure you want to delete this proof?",
 		"Delete": "Hapus",
-		"DeleteTitle": "Menghapus bukti",
-		"Success": "Bukti telah dihapus!"
+		"Title": "Delete a proof",
+		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Muat lebih banyak",
 		"Prices": "Harga",
 		"ProofNotFound": "Proof not found (or not the owner)"
 	},
-	"ProofEditDialog": {
-		"Title": "Ubah bukti Anda",
-		"EditProof": "Edit bukti Anda",
-		"Public": "Publik",
-		"Private": "Privat",
-		"PrivateWarning": "Jika pengaturan bukti Anda Privat, bukti tersebut akan disembunyikan dari publik. Kami sarankan untuk menyembunyikan informasi pribadi apa pun dengan menyunting atau melipat dokumen, jika memungkinkan.",
-		"Save": "menyimpan "
+	"ProofEdit": {
+		"Title": "Edit a proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "menyimpan ",
+		"Success": "Proof edited!"
 	},
 	"Router": {
 		"AddPrice": {

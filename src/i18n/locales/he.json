@@ -34,8 +34,8 @@
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
 			"Title": "פרטי הוכחה",
 			"ProofStatus": "Proof status",
-			"Public": "ציבורית",
-			"Private": "פרטית",
+			"Public": "Public",
+			"Private": "Private",
 			"Privacy": "פרטיות"
 		},
 		"Title": "הוספת מגוון מחירים"
@@ -254,24 +254,24 @@
 		"RECEIPT": "קבלה",
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)"
 	},
-	"ProofDeleteChip": {
-		"Confirmation": "למחוק את ההוכחה הזאת?",
+	"ProofDelete": {
+		"Confirmation": "Are you sure you want to delete this proof?",
 		"Delete": "מחיקה",
-		"DeleteTitle": "מחיקת הוכחה",
-		"Success": "ההוכחה נמחקה!"
+		"Title": "Delete a proof",
+		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "לטעון עוד",
 		"Prices": "מחירים",
 		"ProofNotFound": "לא נמצאה הוכחה (או שהבעלות לא אצלך)"
 	},
-	"ProofEditDialog": {
-		"Title": "שינוי ההוכחה שלך",
-		"EditProof": "עריכת ההוכחה שלך",
-		"Public": "ציבורית",
-		"Private": "פרטית",
-		"PrivateWarning": "בעת הגדרת ההוכחה שלך לפרטית, היא תוסתר מעיני הציבור. אנו ממליצים להסתיר פרטים אישיים על ידי כיסוי או קיפול המסמך, אם ניתן.",
-		"Save": "שמירה"
+	"ProofEdit": {
+		"Title": "Edit a proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "שמירה",
+		"Success": "Proof edited!"
 	},
 	"Router": {
 		"AddPrice": {

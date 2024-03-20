@@ -34,8 +34,8 @@
 			"PrivateWarning": "Sie können den Beleg auch auf „Privat” festlegen. Private Nachweise sind nur für Sie und für Moderatoren sichtbar.",
 			"Title": "Details zum Nachweis",
 			"ProofStatus": "Status des Nachweises",
-			"Public": "Öffentlich",
-			"Private": "Privat",
+			"Public": "Public",
+			"Private": "Private",
 			"Privacy": "Datenschutz"
 		},
 		"Title": "Mehrere Preise hinzufügen"
@@ -254,24 +254,24 @@
 		"RECEIPT": "Kassenbon",
 		"GDPR_REQUEST": "DSGVO-Anfrage"
 	},
-	"ProofDeleteChip": {
-		"Confirmation": "Möchten Sie diesen Nachweis wirklich löschen?",
+	"ProofDelete": {
+		"Confirmation": "Are you sure you want to delete this proof?",
 		"Delete": "Löschen",
-		"DeleteTitle": "Einen Nachweis löschen",
-		"Success": "Nachweis gelöscht!"
+		"Title": "Delete a proof",
+		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Weitere laden",
 		"Prices": "Preise",
 		"ProofNotFound": "Nachweis nicht gefunden (oder nicht der Eigentümer)"
 	},
-	"ProofEditDialog": {
-		"Title": "Ändern Sie Ihren Nachweis",
-		"EditProof": "Bearbeiten Sie Ihren Nachweis",
-		"Public": "Öffentlich",
-		"Private": "Privat",
-		"PrivateWarning": "Wenn Sie Ihren Korrekturabzug auf „Privat” setzen, ist er für die Öffentlichkeit nicht zugänglich. Wir empfehlen, personenbezogene Informationen nach Möglichkeit durch Schwärzen oder Falten des Dokuments zu verbergen.",
-		"Save": "Speichern"
+	"ProofEdit": {
+		"Title": "Edit a proof",
+		"Public": "Public",
+		"Private": "Private",
+		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Save": "Speichern",
+		"Success": "Proof edited!"
 	},
 	"Router": {
 		"AddPrice": {
