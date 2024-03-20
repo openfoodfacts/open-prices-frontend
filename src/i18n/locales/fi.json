@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Kuitit voivat sisältää henkilökohtaisia tietoja, suosittelemme piilottamaan ne (peitä, taita...) ennen kuvan ottamista.",
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Todistuksen yksityiskohdat",
-			"ProofStatus": "Proof status",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Yksityisyys"
+			"Title": "Todistuksen yksityiskohdat"
 		},
 		"Title": "Lisää useita hintoja"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "Lataa enemmän",
 		"Prices": "Hinnat",
-		"ProofNotFound": "Todistetta ei löydy (tai ei omistajaa)"
+		"ProofNotFound": "Todistetta ei löydy (tai ei omistajaa)",
+		"Public": "Public",
+		"Private": "Private",
+		"Privacy": "Yksityisyys"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "Tallenna",
 		"Success": "Proof edited!"
