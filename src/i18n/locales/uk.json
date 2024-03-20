@@ -34,8 +34,8 @@
 			"PrivateWarning": "Ви також можете встановити чек як Приватний. Приватні докази будуть видимі лише вам і модераторам.",
 			"Title": "Подробиці перевірки",
 			"ProofStatus": "Статус підтвердження",
-			"Public": "Public",
-			"Private": "Private",
+			"Public": "Загальнодоступний",
+			"Private": "Приватний",
 			"Privacy": "Конфіденційність"
 		},
 		"Title": "Додати кілька цін"
@@ -255,10 +255,10 @@
 		"GDPR_REQUEST": "Запит GDPR"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Ви впевнені, що хочете видалити це підтвердження?",
 		"Delete": "Видалити",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "Видалити підтвердження",
+		"Success": "Доказ видалено!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Завантажити більше",
@@ -266,12 +266,12 @@
 		"ProofNotFound": "Доказ не знайдено (або не власник)"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Редагувати підтвердження",
+		"Public": "Загальнодоступний",
+		"Private": "Приватний",
+		"PrivateWarning": "Коли ви встановлюєте Ваше підтвердження до Приватного, його буде приховано з загального перегляду. За можливості ми рекомендуємо приховувати будь-яку особисту інформацію шляхом повторного згинання або згинання документа.",
 		"Save": "Зберегти",
-		"Success": "Proof edited!"
+		"Success": "Доказ відредаговано!"
 	},
 	"Router": {
 		"AddPrice": {
