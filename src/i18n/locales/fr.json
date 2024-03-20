@@ -34,8 +34,8 @@
 			"PrivateWarning": "Vous pouvez également définir le reçu en privé. Les preuves privées ne seront visibles que pour vous et les modérateurs.",
 			"Title": "Preuve",
 			"ProofStatus": "Preuve de statut",
-			"Public": "Public",
-			"Private": "Private",
+			"Public": "Publique",
+			"Private": "Privé",
 			"Privacy": "Confidentialité"
 		},
 		"Title": "Ajouter plusieurs prix"
@@ -255,10 +255,10 @@
 		"GDPR_REQUEST": "Requête RGPD"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Êtes-vous sûr de vouloir supprimer cette preuve ?",
 		"Delete": "Supprimer",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "Supprimer une preuve",
+		"Success": "Preuve supprimée !"
 	},
 	"ProofDetail": {
 		"LoadMore": "Voir plus",
@@ -266,9 +266,9 @@
 		"ProofNotFound": "Preuve introuvable (ou pas le propriétaire)"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
+		"Title": "Modifier une preuve",
+		"Public": "Publique",
+		"Private": "Privé",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "Enregistrer",
 		"Success": "Proof edited!"
