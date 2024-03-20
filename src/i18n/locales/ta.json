@@ -31,11 +31,12 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"PrivateWarning": "இல்லையெனில், ஆதார நிலையைத் தனிப்பட்டதாக அமைக்கவும். தனிப்பட்ட சான்றுகள் உங்களுக்கும் மதிப்பீட்டாளர்களுக்கும் மட்டுமே தெரியும்.",
+			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
 			"Title": "Proof details",
 			"ProofStatus": "ஆதார நிலை",
 			"Public": "Public",
-			"Private": "Private"
+			"Private": "Private",
+			"Privacy": "Privacy"
 		},
 		"Title": "Add multiple prices"
 	},

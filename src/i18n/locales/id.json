@@ -31,11 +31,12 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Tanda terima mungkin berisi informasi pribadi, kami sarankan untuk menyembunyikannya (edit, lipat...) sebelum mengambil gambar.",
-			"PrivateWarning": "Jika tidak, atur Status Bukti ke Privat. Bukti privat hanya dapat dilihat oleh Anda dan moderator.",
+			"PrivateWarning": "Anda juga bisa mengatur tanda terima menjadi Pribadi. Bukti pribadi hanya akan terlihat oleh Anda dan moderator.",
 			"Title": "Rincian bukti",
 			"ProofStatus": "Status bukti",
 			"Public": "Publik",
-			"Private": "Privat"
+			"Private": "Privat",
+			"Privacy": "Privacy"
 		},
 		"Title": "Tambahkan beberapa harga"
 	},

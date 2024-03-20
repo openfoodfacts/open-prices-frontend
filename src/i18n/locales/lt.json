@@ -31,11 +31,12 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Kvituose gali būti asmeninės informacijos, todėl rekomenduojame prieš fotografuojant ją paslėpti (redaguoti, užlenkti...).",
-			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"PrivateWarning": "Kvitą galite nustatytti kaip Privatų. Privatūs kvitai bus matomi tik jums ir moderatoriams.",
 			"Title": "Išsami įdorymų informacija",
-			"ProofStatus": "Proof status",
+			"ProofStatus": "Įrodymo būsena",
 			"Public": "Vieša",
-			"Private": "Privatus"
+			"Private": "Privatus",
+			"Privacy": "Privacy"
 		},
 		"Title": "Pridėti kelia skainas"
 	},

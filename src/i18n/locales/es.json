@@ -31,11 +31,12 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Los tickets pueden contener información personal. Te recomendamos que antes de hacer la foto ocultes esa información (p. ej., doblando el ticket).",
-			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
 			"Title": "Detalles del comprobante",
 			"ProofStatus": "Proof status",
 			"Public": "Público",
-			"Private": "Privado"
+			"Private": "Privado",
+			"Privacy": "Privacy"
 		},
 		"Title": "Añadir varios precios"
 	},

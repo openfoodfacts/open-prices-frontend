@@ -31,11 +31,12 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "रसीदों में व्यक्तिगत जानकारी हो सकती है, हम तस्वीर लेने से पहले उन्हें छिपाने (रीडैक्ट, फोल्ड...) की सलाह देते हैं।",
-			"PrivateWarning": "Otherwise, set the Proof Status to Private. Private proofs are only visible to you and the moderators.",
+			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
 			"Title": "प्रमाण विवरण",
 			"ProofStatus": "Proof status",
 			"Public": "Public",
-			"Private": "Private"
+			"Private": "Private",
+			"Privacy": "Privacy"
 		},
 		"Title": "Add multiple prices"
 	},
