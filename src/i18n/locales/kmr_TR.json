@@ -254,10 +254,10 @@
 		"RECEIPT": "Receipt",
 		"GDPR_REQUEST": "GDPR request"
 	},
-	"ProofDeleteChip": {
+	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
 		"Delete": "Paqijkirin",
-		"DeleteTitle": "Delete a proof",
+		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
@@ -265,13 +265,13 @@
 		"Prices": "Prices",
 		"ProofNotFound": "Proof not found (or not the owner)"
 	},
-	"ProofEditDialog": {
-		"Title": "Modify your proof",
-		"EditProof": "Edit your proof",
+	"ProofEdit": {
+		"Title": "Edit a proof",
 		"Public": "Public",
 		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
-		"Save": "Rekor"
+		"Save": "Rekor",
+		"Success": "Proof edited!"
 	},
 	"Router": {
 		"AddPrice": {
