@@ -12,7 +12,7 @@
 
     <v-divider></v-divider>
 
-    <v-card-actions style="padding-bottom: 0;">
+    <v-card-actions>
       <ProofFooter :proof="proof" :hideProofActions="hideProofActions" :readonly="readonly"></ProofFooter>
     </v-card-actions>
   </v-card>

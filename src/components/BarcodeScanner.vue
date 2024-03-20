@@ -1,5 +1,5 @@
 <template>
-  <v-dialog persistent>
+  <v-dialog scrollable persistent>
     <v-card>
       <v-card-title>
         {{ $t('BarcodeScanner.Scan') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
