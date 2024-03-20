@@ -32,11 +32,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Os recibos podem conter informações pessoais, pelo que recomendamos que os oculte (rabiscar, dobrar...) antes de tirar a fotografia.",
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Detalhes do comprovativo",
-			"ProofStatus": "Proof status",
-			"Public": "Public",
-			"Private": "Private",
-			"Privacy": "Privacy"
+			"Title": "Detalhes do comprovativo"
 		},
 		"Title": "Adicione vários preços"
 	},
@@ -263,12 +259,13 @@
 	"ProofDetail": {
 		"LoadMore": "Carregar mais",
 		"Prices": "Preços",
-		"ProofNotFound": "Comprovativo não encontrado (ou não é o proprietário)"
+		"ProofNotFound": "Comprovativo não encontrado (ou não é o proprietário)",
+		"Public": "Public",
+		"Private": "Private",
+		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Public": "Public",
-		"Private": "Private",
 		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "Guardar",
 		"Success": "Proof edited!"
