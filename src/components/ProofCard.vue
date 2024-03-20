@@ -7,25 +7,24 @@
     <v-divider v-if="!hideProofHeader"></v-divider>
 
     <v-card-text>
-      <v-img :src="getProofUrl(proof)"></v-img>
+      <v-img v-if="proof.file_path" :src="getProofUrl(proof)"></v-img>
     </v-card-text>
 
     <v-divider></v-divider>
 
-    <v-card-actions>
-      <ProofFooter :proof="proof" :hideProofDelete="hideProofDelete" :readonly="readonly"></ProofFooter>
+    <v-card-actions style="padding-bottom: 0;">
+      <ProofFooter :proof="proof" :hideProofActions="hideProofActions" :readonly="readonly"></ProofFooter>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
-import ProofFooter from '../components/ProofFooter.vue'
 import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    ProofFooter,
     'ProofEditDialog': defineAsyncComponent(() => import('../components/ProofEditDialog.vue')),
+    'ProofFooter': defineAsyncComponent(() => import('../components/ProofFooter.vue')),
   },
   props: {
     'proof': null,
@@ -33,7 +32,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    hideProofDelete: {
+    hideProofActions: {
       type: Boolean,
       default: false,
     },
@@ -67,12 +66,9 @@ export default {
       }
     },
     getProofUrl(proof) {
-      return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
+      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
       // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
-    },
-    showProofEditDialog(proof) {
-      this.proofEditDialog = true
     },
     close() {
       this.$emit('close')

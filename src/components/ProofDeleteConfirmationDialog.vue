@@ -9,7 +9,7 @@
 
       <v-card-text>
         <p class="mb-1">{{ $t('ProofDelete.Confirmation') }}</p>
-        <ProofCard :proof="proof" :hideProofHeader="true" :hideProofDelete="true" :readonly="true"></ProofCard>
+        <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true"></ProofCard>
       </v-card-text>
 
       <v-divider></v-divider>
