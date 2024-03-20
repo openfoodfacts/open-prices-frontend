@@ -2,18 +2,14 @@
   <v-dialog scrollable max-height="80%" max-width="80%">
     <v-card>
       <v-card-title>
-        {{ $t('PriceDelete.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog"></v-btn>
+        {{ $t('ProofDelete.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog"></v-btn>
       </v-card-title>
 
       <v-divider></v-divider>
 
       <v-card-text>
-        <p class="mb-1">{{ $t('PriceDelete.Confirmation') }}</p>
-        <v-row>
-          <v-col cols="12" md="6">
-            <PriceCard :price="price" :product="price.product" :hidePriceFooter="true" :readonly="true"></PriceCard>
-          </v-col>
-        </v-row>
+        <p class="mb-1">{{ $t('ProofDelete.Confirmation') }}</p>
+        <ProofCard :proof="proof" :hideProofHeader="true" :hideProofDelete="true" :readonly="true"></ProofCard>
       </v-card-text>
 
       <v-divider></v-divider>
@@ -24,8 +20,8 @@
           elevation="1"
           prepend-icon="mdi-delete"
           :loading="loading"
-          @click="deletePrice"
-        >{{ $t('PriceDelete.Delete') }}</v-btn>
+          @click="deleteProof"
+        >{{ $t('ProofDelete.Delete') }}</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -33,14 +29,15 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { useAppStore } from '../store'
 import api from '../services/api'
 
 export default {
   components: {
-    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    'ProofCard': defineAsyncComponent(() => import('../components/ProofCard.vue'))
   },
   props: {
-    'price': null,
+    'proof': null,
   },
   data() {
     return {
@@ -48,25 +45,26 @@ export default {
     }
   },
   emits: ['delete', 'close'],
+  computed: {
+  },
   methods: {
-    deletePrice() {
+    deleteProof() {
       this.loading = true
       api
-        .deletePrice(this.price.id)
+        .deleteProof(this.proof.id)
         .then((response) => {
           // if response.status == 204
           this.loading = false
-          this.removePriceCard()
+          this.deleteSuccessMessage = true
+          const store = useAppStore()
+          store.removeProof(this.proof.id)
           this.$emit('delete')
           this.closeDialog()
         })
     },
-    removePriceCard() {
-      document.getElementById(`price_${this.price.id}`).remove()
-    },
     closeDialog() {
       this.$emit('close')
-    },
+    }
   }
 }
 </script>
