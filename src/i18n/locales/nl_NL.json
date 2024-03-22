@@ -251,24 +251,24 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Weet u zeker dat u dit bewijs wilt verwijderen?",
 		"Delete": "Verwijder",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "Een bewijs verwijderen",
+		"Success": "Bewijs verwijderd!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Meer laden",
 		"Prices": "Prijzen",
 		"ProofNotFound": "Bewijs niet gevonden (of niet de eigenaar)",
-		"Public": "Public",
-		"Private": "Private",
+		"Public": "Openbaar",
+		"Private": "Privé",
 		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Een bewijs bewerken",
+		"PrivateWarning": "Wanneer je je bewijs instelt op Privé, zal het verborgen worden in de publieke weergave. Wij raden aan persoonlijke informatie te verbergen door het document te veranderen of indien mogelijk te vouwen.",
 		"Save": "Opslaan",
-		"Success": "Proof edited!"
+		"Success": "Bewijs aangepast!"
 	},
 	"Router": {
 		"AddPrice": {
