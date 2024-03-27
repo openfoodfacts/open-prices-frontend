@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.51.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.51.0...v1.51.1) (2024-03-27)
+
+
+### Bug Fixes
+
+* scrolling on some components ([6f39836](https://github.com/openfoodfacts/open-prices-frontend/commit/6f39836e48af3655cbaf420d4309313b45062739))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#470](https://github.com/openfoodfacts/open-prices-frontend/issues/470)) ([2ed4902](https://github.com/openfoodfacts/open-prices-frontend/commit/2ed49026bbd58bd21e7e4df3cd02ece58596723d))
+* **l10n:** New Crowdin translations to review and merge ([#472](https://github.com/openfoodfacts/open-prices-frontend/issues/472)) ([21c5549](https://github.com/openfoodfacts/open-prices-frontend/commit/21c554922ddc1d147854e80e6d66f54c337690af))
+
 ## [1.51.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.50.2...v1.51.0) (2024-03-20)
 
 
