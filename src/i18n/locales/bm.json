@@ -141,7 +141,7 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
+		"Settings": "Labɛnw",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out"
 	},
@@ -212,9 +212,9 @@
 	},
 	"ProductCard": {
 		"Brands": "Brands",
-		"BrandLower": "brand",
+		"BrandLower": "mariki",
 		"BrandTotal": "{count} brands",
-		"Categories": "Categories",
+		"Categories": "Suguyaw",
 		"CategoriesLower": "categories",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
@@ -331,7 +331,7 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
-		"Settings": "Settings",
+		"Settings": "Labɛnw",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} proofs"
@@ -354,7 +354,7 @@
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Languages",
 		"Save": "Save",
-		"Title": "Settings",
+		"Title": "Labɛnw",
 		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
 	}

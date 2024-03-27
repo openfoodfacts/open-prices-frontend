@@ -31,7 +31,7 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Kuitit voivat sisältää henkilökohtaisia tietoja, suosittelemme piilottamaan ne (peitä, taita...) ennen kuvan ottamista.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "Voit myös asettaa kuitin yksityiseksi. Yksityiset todisteet näkyvät vain sinulle ja valvojille.",
 			"Title": "Todistuksen yksityiskohdat"
 		},
 		"Title": "Lisää useita hintoja"
@@ -196,15 +196,15 @@
 		"PriceCount": "{count} hinnat"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Haluatko varmasti poistaa tämän hinnan?",
 		"Delete": "Poista",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Hinta poistettu!",
+		"Title": "Poista hinta"
 	},
 	"PriceEdit": {
 		"Save": "Tallenna",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Hinta muokattu!",
+		"Title": "Muokkaa hintaa"
 	},
 	"PriceList": {
 		"LoadMore": "Lataa enemmän",
@@ -251,24 +251,24 @@
 		"GDPR_REQUEST": "GDPR-pyyntö"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Haluatko varmasti poistaa tämän todisteen?",
 		"Delete": "Poista",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "Poista todiste",
+		"Success": "Todiste poistettu!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Lataa enemmän",
 		"Prices": "Hinnat",
 		"ProofNotFound": "Todistetta ei löydy (tai ei omistajaa)",
-		"Public": "Public",
-		"Private": "Private",
+		"Public": "Julkinen",
+		"Private": "Yksityinen",
 		"Privacy": "Yksityisyys"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "Muokkaa todistetta",
+		"PrivateWarning": "Kun asetat todisteesi yksityiseksi, se piilotetaan yleisöltä. Suosittelemme piilottamaan henkilötiedot muokkaamalla tai taittamalla asiakirjan, jos mahdollista.",
 		"Save": "Tallenna",
-		"Success": "Proof edited!"
+		"Success": "Todiste muokattu!"
 	},
 	"Router": {
 		"AddPrice": {
@@ -330,7 +330,7 @@
 		"LoadMore": "Lataa enemmän",
 		"MyPrices": "Minun hinnat",
 		"MyProofs": "Minun todisteeni",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "Todiste päivitetty!",
 		"Settings": "Asetukset",
 		"Title": "Kojelauta",
 		"UserPriceTotal": "{count} hinnat",
