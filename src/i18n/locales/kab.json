@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Ticraḍ",
 		"BrandLower": "tacreḍt",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Taggayin",
 		"CategoriesLower": "taggayin",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Tibzimin",
 		"LabelsLower": "tibzimin",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Nadi"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Bḍu"
 	},
 	"SignIn": {
 		"Button": "Sign in",
