@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Mărci",
 		"BrandLower": "marca",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Categorii",
 		"CategoriesLower": "categorii",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Etichete",
 		"LabelsLower": "etichete",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Produs cu nume necunoscut"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Caută"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Distribuiți"
 	},
 	"SignIn": {
 		"Button": "Conectare",
