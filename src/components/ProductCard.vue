@@ -15,17 +15,12 @@
             </span>
             <span v-if="hasProductSource">
               <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
-            </span>
-            <span v-if="hasProductSource" class="mr-1">
-              <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
-            </span>
-            <br />
-            <span v-if="hasProductSource" class="mr-1">
-              <ProductCategoriesChip :productCategories="product.categories_tags"></ProductCategoriesChip>
-            </span>
-            <span v-if="hasProductSource">
+              <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
+              <br />
+              <ProductCategoriesChip class="mr-1" :productCategories="product.categories_tags"></ProductCategoriesChip>
               <ProductLabelsChip :productLabels="product.labels_tags"></ProductLabelsChip>
             </span>
+            <ProductMissingChip v-else></ProductMissingChip>
           </p>
         </v-col>
       </v-row>
@@ -50,6 +45,7 @@ export default {
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
     'ProductCategoriesChip': defineAsyncComponent(() => import('../components/ProductCategoriesChip.vue')),
     'ProductLabelsChip': defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
+    'ProductMissingChip': defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
     'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue')),
   },
