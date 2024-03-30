@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Tuotemerkit",
 		"BrandLower": "tuotemerkki",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} tuotemerkkejä",
 		"Categories": "Tuoteluokat",
 		"CategoriesLower": "tuoteluokat",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} kategoriaa",
 		"Labels": "Merkit",
 		"LabelsLower": "merkit",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Tuotteen määrä puuttuu",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Tuntematon tuotenimi"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Etsi"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Linkki kopioitu"
+		"LinkCopySuccess": "Linkki kopioitu",
+		"Title": "Jaa"
 	},
 	"SignIn": {
 		"Button": "Kirjaudu sisään",
