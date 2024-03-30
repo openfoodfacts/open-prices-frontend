@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Brands",
 		"BrandLower": "brand",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Categories",
 		"CategoriesLower": "categories",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
 		"LabelsLower": "labels",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "தயாரிப்பு அளவு இல்லை",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "தேடுக"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "லிங்க் காப்பி ஆகிவிட்டது"
+		"LinkCopySuccess": "லிங்க் காப்பி ஆகிவிட்டது",
+		"Title": "பகிர்க"
 	},
 	"SignIn": {
 		"Button": "உள்நுழை",
