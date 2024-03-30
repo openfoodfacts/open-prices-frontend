@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Merken",
 		"BrandLower": "merk",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} merken",
 		"Categories": "Categorieën",
 		"CategoriesLower": "categorieën",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categorieën",
 		"Labels": "Keurmerken",
 		"LabelsLower": "keurmerken",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} l",
 		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityMissing": "Producthoeveelheid ontbreekt",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Onbekende productnaam"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Zoeken"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link gekopieerd"
+		"LinkCopySuccess": "Link gekopieerd",
+		"Title": "Delen"
 	},
 	"SignIn": {
 		"Button": "Inloggen",
