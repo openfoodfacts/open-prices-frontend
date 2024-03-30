@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "ब्रांड",
 		"BrandLower": "ब्रांड",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "श्रेणियाँ",
 		"CategoriesLower": "श्रेणियाँ",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "लेबल",
 		"LabelsLower": "labels",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "ढूंढें"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "शेयर"
 	},
 	"SignIn": {
 		"Button": "साइन इन करें",

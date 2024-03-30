@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Prekės ženklai",
 		"BrandLower": "prekės ženklas",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} prekių ženklai (-ų)",
 		"Categories": "Kategorijos",
 		"CategoriesLower": "kategorijos",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
 		"LabelsLower": "etiketes",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Trūksta produkto kiekio",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Nežinomas produkto pavadinimas"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Paieška"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Nuoroda nukopijuota"
+		"LinkCopySuccess": "Nuoroda nukopijuota",
+		"Title": "Dalintis"
 	},
 	"SignIn": {
 		"Button": "Prisijungti",

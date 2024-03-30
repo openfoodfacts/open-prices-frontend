@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Marki",
 		"BrandLower": "marka",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Kategorie",
 		"CategoriesLower": "kategorie",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Etykieta",
 		"LabelsLower": "etykiety",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Nieznana nazwa produktu"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Wyszukiwanie"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link skopiowany"
+		"LinkCopySuccess": "Link skopiowany",
+		"Title": "Udostępnij"
 	},
 	"SignIn": {
 		"Button": "Zaloguj się",

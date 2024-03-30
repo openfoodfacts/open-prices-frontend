@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Brandaí",
 		"BrandLower": "branda",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Catagóirí",
 		"CategoriesLower": "catagóirí",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Lipéid",
 		"LabelsLower": "labels",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Cuardaigh"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Comhroinn"
 	},
 	"SignIn": {
 		"Button": "Sínigh isteach",

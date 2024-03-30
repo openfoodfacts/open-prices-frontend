@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Thương hiệu",
 		"BrandLower": "nhãn hiệu",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Thể loại",
 		"CategoriesLower": "thể loại",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Nhãn",
 		"LabelsLower": "nhãn hiệu",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Tên sản phẩm không xác định"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Tìm kiếm"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Chia sẻ"
 	},
 	"SignIn": {
 		"Button": "Đăng nhập",

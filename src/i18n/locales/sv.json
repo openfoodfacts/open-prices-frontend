@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Varumärken",
 		"BrandLower": "varumärke",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Kategorier",
 		"CategoriesLower": "kategorier",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Etiketter",
 		"LabelsLower": "etiketter",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Okänt produktnamn"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Sök"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Dela"
 	},
 	"SignIn": {
 		"Button": "Logga in",

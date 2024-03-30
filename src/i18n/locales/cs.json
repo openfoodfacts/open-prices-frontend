@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Značky",
 		"BrandLower": "značka",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} značek",
 		"Categories": "Kategorie",
 		"CategoriesLower": "kategorie",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} kategorií",
 		"Labels": "Štítky",
 		"LabelsLower": "štítky",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} l",
 		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityMissing": "Chybí množství produktu",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Neznámý název produktu"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Vyhledat"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Odkaz zkopírován"
+		"LinkCopySuccess": "Odkaz zkopírován",
+		"Title": "Sdílet"
 	},
 	"SignIn": {
 		"Button": "Přihlásit se",

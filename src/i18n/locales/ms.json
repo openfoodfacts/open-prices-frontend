@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Jenama",
 		"BrandLower": "jenama",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Kategori-kategori",
 		"CategoriesLower": "kategori-kategori",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
 		"LabelsLower": "label-label",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Nama produk yang tidak diketahui"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Gelintar"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Kongsi"
 	},
 	"SignIn": {
 		"Button": "Sign in",

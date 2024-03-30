@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Markak",
 		"BrandLower": "marka",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Kategoriak",
 		"CategoriesLower": "kategoriak",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Etiketak",
 		"LabelsLower": "etiketak",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Produktu-izen ezezaguna"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Bilatu"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Partekatu"
 	},
 	"SignIn": {
 		"Button": "Hasi saioa",

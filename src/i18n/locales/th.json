@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "ยี่ห้อสินค้า",
 		"BrandLower": "ยี่ห้อสินค้า",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "หมวดหมู่",
 		"CategoriesLower": "หมวดหมู่",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
 		"LabelsLower": "labels",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "ผลิตภัณฑ์ที่ไม่รู้จัก"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "ค้นหา"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Share"
 	},
 	"SignIn": {
 		"Button": "เข้าสู่ระบบ",

@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Merkoù",
 		"BrandLower": "merk",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Rummadoù",
 		"CategoriesLower": "rummadoù",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Skritellouigoù",
 		"LabelsLower": "skritellouigoù",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Klask"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Rannañ"
 	},
 	"SignIn": {
 		"Button": "Kevreañ",

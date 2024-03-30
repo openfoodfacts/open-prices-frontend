@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Markalar",
 		"BrandLower": "marka",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} marka",
 		"Categories": "Kategoriler",
 		"CategoriesLower": "kategoriler",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} kategoriler",
 		"Labels": "Etiketler",
 		"LabelsLower": "etiketler",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Ürün miktarı eksik",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Bilinmeyen ürün adı"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Ara"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Bağlantı kopyalandı"
+		"LinkCopySuccess": "Bağlantı kopyalandı",
+		"Title": "Paylaş"
 	},
 	"SignIn": {
 		"Button": "Giriş Yap",
