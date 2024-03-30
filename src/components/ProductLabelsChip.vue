@@ -1,6 +1,6 @@
 <template>
   <v-chip v-if="productLabels.length" label size="small" density="comfortable" @click="showProductLabelsDialog">
-    {{ $t('ProductCard.LabelTotal', { count: productLabels.length }) }}
+    <i>{{ $t('ProductCard.LabelTotal', { count: productLabels.length }) }}</i>
     <ProductLabelsDialog
       v-if="productLabelsDialog"
       :labels="productLabels"
@@ -9,7 +9,7 @@
     </ProductLabelsDialog>
   </v-chip>
   <v-chip v-else label size="small" density="comfortable"><!-- prepend-icon="mdi-help" color="warning" -->
-    {{ $t('ProductCard.LabelTotal', { count: 0 }) }}
+    <i>{{ $t('ProductCard.LabelTotal', { count: 0 }) }}</i>
   </v-chip>
 </template>
 

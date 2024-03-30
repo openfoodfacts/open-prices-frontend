@@ -5,6 +5,7 @@
     density="comfortable"
     color="teal"
     icon="mdi-share-variant"
+    :title="$t('ShareButton.Title')"
     @click="shareViaWebShare">
   </v-btn>
 

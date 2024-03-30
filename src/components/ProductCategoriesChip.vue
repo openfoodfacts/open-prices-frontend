@@ -1,6 +1,6 @@
 <template>
   <v-chip v-if="productCategories.length" label size="small" density="comfortable" @click="showProductCategoriesDialog">
-    {{ $t('ProductCard.CategoryTotal', { count: productCategories.length }) }}
+    <i>{{ $t('ProductCard.CategoryTotal', { count: productCategories.length }) }}</i>
     <ProductCategoriesDialog
       v-if="productCategories.length && productCategoriesDialog"
       :categories="productCategories"
@@ -9,8 +9,8 @@
     </ProductCategoriesDialog>
   </v-chip>
   <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning">
-    {{ $t('ProductCard.CategoriesLower') }}
-    <v-tooltip activator="parent" open-on-click location="top">{{ $t('ProductCard.ProductCategoriesMissing') }}</v-tooltip>
+    <i>{{ $t('ProductCard.CategoriesLower') }}</i>
+    <v-tooltip activator="parent" open-on-click location="top">{{ $t('ProductCard.CategoriesMissing') }}</v-tooltip>
   </v-chip>
 </template>
 
