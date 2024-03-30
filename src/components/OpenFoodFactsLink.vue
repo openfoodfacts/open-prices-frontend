@@ -2,7 +2,7 @@
   <a v-if="display === 'link'" :href="getOFFUrl()" target="_blank">
     {{ getOFFName() }}
   </a>
-  <v-btn v-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getOFFUrl()" target="_blank">
+  <v-btn v-else-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getOFFUrl()" target="_blank">
     {{ getOFFName() }}
   </v-btn>
 </template>

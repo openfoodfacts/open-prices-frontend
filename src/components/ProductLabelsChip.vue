@@ -1,17 +1,16 @@
 <template>
   <v-chip v-if="productLabels.length" label size="small" density="comfortable" @click="showProductLabelsDialog">
     {{ $t('ProductCard.LabelTotal', { count: productLabels.length }) }}
+    <ProductLabelsDialog
+      v-if="productLabelsDialog"
+      :labels="productLabels"
+      v-model="productLabelsDialog"
+      @close="productLabelsDialog = false">
+    </ProductLabelsDialog>
   </v-chip>
   <v-chip v-else label size="small" density="comfortable"><!-- prepend-icon="mdi-help" color="warning" -->
     {{ $t('ProductCard.LabelTotal', { count: 0 }) }}
   </v-chip>
-
-  <ProductLabelsDialog
-    v-if="productLabels.length && productLabelsDialog"
-    :labels="productLabels"
-    v-model="productLabelsDialog"
-    @close="productLabelsDialog = false"
-  ></ProductLabelsDialog>
 </template>
 
 <script>
