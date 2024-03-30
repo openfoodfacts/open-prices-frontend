@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.52.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.51.1...v1.52.0) (2024-03-30)
+
+
+### Features
+
+* show an error chip if the product is missing ([#474](https://github.com/openfoodfacts/open-prices-frontend/issues/474)) ([ef02b07](https://github.com/openfoodfacts/open-prices-frontend/commit/ef02b07ab1853c03dce67852c523055eb8a577df))
+
 ## [1.51.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.51.0...v1.51.1) (2024-03-27)
 
 
