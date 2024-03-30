@@ -14,9 +14,7 @@
 
   <v-row v-if="location" class="mt-0">
     <v-col v-if="locationFound" cols="12">
-      <v-btn size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
-        OpenStreetMap
-      </v-btn>
+      <OpenStreetMapLink :location="location" display="button"></OpenStreetMapLink>
       <ShareButton></ShareButton>
     </v-col>
     <v-col v-else cols="12">
@@ -82,6 +80,7 @@ export default {
   components: {
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    'OpenStreetMapLink': defineAsyncComponent(() => import('../components/OpenStreetMapLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue')),
   },
   data() {
@@ -155,9 +154,6 @@ export default {
         return utils.getLocationTitle(location, true, false, true, true)
       }
       return this.$route.params.id
-    },
-    getLocationOSMUrl(location) {
-      return `https://www.openstreetmap.org/${location.osm_type.toLowerCase()}/${location.osm_id}`
     },
     togglePriceFilter(filterKey) {
       this.priceFilter = this.priceFilter ? '' : filterKey

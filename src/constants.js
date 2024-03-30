@@ -24,6 +24,8 @@ export default {
     { key: '-date', value: 'OrderPriceDateDESC', icon: 'mdi-calendar' },
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],
+  OSM_NAME: 'OpenStreetMap',
+  OSM_URL: 'https://www.openstreetmap.org',
   // https://wiki.openstreetmap.org/wiki/Key:place
   // https://wiki.openstreetmap.org/wiki/Key:highway
   // https://wiki.openstreetmap.org/wiki/Buildings
