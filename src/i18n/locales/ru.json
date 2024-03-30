@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Марки",
 		"BrandLower": "марка",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Категории",
 		"CategoriesLower": "категории",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Маркировки",
 		"LabelsLower": "маркировки",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Неизвестный продукт"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Поиск"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Поделиться"
 	},
 	"SignIn": {
 		"Button": "Войти",
