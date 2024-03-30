@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "品牌",
 		"BrandLower": "品牌",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "類別",
 		"CategoriesLower": "分类",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "标签",
 		"LabelsLower": "标签",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "未知产品名称"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "搜尋"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "推荐给好友"
 	},
 	"SignIn": {
 		"Button": "登录",
