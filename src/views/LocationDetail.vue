@@ -12,15 +12,17 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0" v-if="location">
-    <v-col cols="12">
-      <v-btn v-if="location.osm_id" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
+  <v-row v-if="location" class="mt-0">
+    <v-col v-if="locationFound" cols="12">
+      <v-btn size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl(location)" target="_blank">
         OpenStreetMap
       </v-btn>
-      <ShareButton v-if="location.osm_id"></ShareButton>
-      <p v-if="!location.osm_id" class="text-red">
+      <ShareButton></ShareButton>
+    </v-col>
+    <v-col v-else cols="12">
+      <v-alert type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('LocationDetail.LocationNotFound') }}</i>
-      </p>
+      </v-alert>
     </v-col>
   </v-row>
 
@@ -105,6 +107,9 @@ export default {
   computed: {
     locationId() {
       return this.$route.params.id
+    },
+    locationFound() {
+      return this.location && this.location.osm_id
     },
     getCurrentPriceOrderIcon() {
       let currentPriceOrder = this.priceOrderList.find(o => o.key === this.priceOrder)
