@@ -1,0 +1,39 @@
+<template>
+  <a v-if="display === 'link'" :href="getLocationOSMUrl" target="_blank">
+    {{ OSM_NAME }}
+  </a>
+  <v-btn v-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank">
+    {{ OSM_NAME }}
+  </v-btn>
+</template>
+
+<script>
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
+import constants from '../constants'
+
+export default {
+  props: {
+    location: {
+      type: Object,
+      required: true
+    },
+    display: {
+      type: String,
+      default: 'link'
+    },
+  },
+  data () {
+    return {
+      OSM_NAME: constants.OSM_NAME,
+      OSM_URL: constants.OSM_URL,
+    }
+  },
+  computed: {
+    ...mapStores(useAppStore),
+    getLocationOSMUrl() {
+      return `https://www.openstreetmap.org/${this.location.osm_type.toLowerCase()}/${this.location.osm_id}`
+    }
+  },
+}
+</script>
