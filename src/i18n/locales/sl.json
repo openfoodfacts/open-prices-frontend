@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Blagovne znamke",
 		"BrandLower": "znamka",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Kategorije",
 		"CategoriesLower": "kategorije",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Oznake",
 		"LabelsLower": "oznake",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Neznano ime izdelka"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Iskanje"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Deli"
 	},
 	"SignIn": {
 		"Button": "Vpis",
