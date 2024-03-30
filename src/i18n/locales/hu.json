@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Márkanevek",
 		"BrandLower": "márkanév",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Kategóriák",
 		"CategoriesLower": "kategóriák",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Címkék",
 		"LabelsLower": "címkék",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Ismeretlen terméknév"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Keresés"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Megosztás"
 	},
 	"SignIn": {
 		"Button": "Bejelentkezés",
