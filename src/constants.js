@@ -14,12 +14,12 @@ export default {
   PRICE_FILTER_LIST: [
     { key: 'only_last_30d', value: 'FilterPriceMoreThan30DaysHide' },
   ],
-  ORDER_BY_PARAM: 'order_by',
-  PRODUCT_ORDER_BY_LIST: [
+  ORDER_PARAM: 'order',
+  PRODUCT_ORDER_LIST: [
     { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
     { key: '-price_count', value: 'OrderProductPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
   ],
-  PRICE_ORDER_BY_LIST: [
+  PRICE_ORDER_LIST: [
     { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
     { key: '-date', value: 'OrderPriceDateDESC', icon: 'mdi-calendar' },
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },

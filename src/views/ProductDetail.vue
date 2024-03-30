@@ -102,13 +102,13 @@ export default {
       // filter & order
       priceFilter: '',
       priceFilterList: constants.PRICE_FILTER_LIST,
-      priceOrder: constants.PRICE_ORDER_BY_LIST[1].key,
-      priceOrderList: constants.PRICE_ORDER_BY_LIST,
+      priceOrder: constants.PRICE_ORDER_LIST[1].key,
+      priceOrderList: constants.PRICE_ORDER_LIST,
     }
   },
   mounted() {
     this.priceFilter = this.$route.query[constants.FILTER_PARAM] || this.priceFilter
-    this.priceOrder = this.$route.query[constants.ORDER_BY_PARAM] || this.priceOrder
+    this.priceOrder = this.$route.query[constants.ORDER_PARAM] || this.priceOrder
     this.getProduct(),
     this.initProductPrices()
   },
@@ -177,7 +177,7 @@ export default {
     selectPriceOrder(orderKey) {
       if (this.priceOrder !== orderKey) {
         this.priceOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_BY_PARAM]: this.priceOrder } })
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.priceOrder } })
         // this.initProductPrices() will be called in watch $route
       }
     }
