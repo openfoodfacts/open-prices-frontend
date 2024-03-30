@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "ブランド",
 		"BrandLower": "ブランド",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} ブランド",
 		"Categories": "カテゴリー",
 		"CategoriesLower": "カテゴリー",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} カテゴリ",
 		"Labels": "ラベル",
 		"LabelsLower": "ラベル",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} / L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "商品数量が不足しています",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "不明な製品名"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "検索"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "リンクをコピーしました"
+		"LinkCopySuccess": "リンクをコピーしました",
+		"Title": "共有"
 	},
 	"SignIn": {
 		"Button": "サインイン",
