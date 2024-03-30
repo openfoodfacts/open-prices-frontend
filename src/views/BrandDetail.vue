@@ -30,16 +30,7 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <v-menu scroll-strategy="close">
-        <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!productFilter">{{ $t('Common.Filter') }}</v-btn>
-        </template>
-        <v-list>
-          <v-list-item :slim="true" v-for="filter in productFilterList" :key="filter.key" :prepend-icon="(productFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="productFilter === filter.key" @click="toggleProductFilter(filter.key)">
-            {{ $t('Common.' + filter.value) }}
-          </v-list-item>
-        </v-list>
-      </v-menu>
+      <ProductFilterMenu :productFilter="productFilter" @update:productFilter="toggleProductFilter($event)"></ProductFilterMenu>
 
       <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
@@ -74,6 +65,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
+    'ProductFilterMenu': defineAsyncComponent(() => import('../components/ProductFilterMenu.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
@@ -82,7 +74,6 @@ export default {
     return {
       // filter & order
       productFilter: '',
-      productFilterList: constants.PRODUCT_FILTER_LIST,
       productOrder: constants.PRODUCT_ORDER_BY_LIST[1].key,
       productOrderList: constants.PRODUCT_ORDER_BY_LIST,
       // data
