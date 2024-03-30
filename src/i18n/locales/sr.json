@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Брендови",
 		"BrandLower": "бренд",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Категорије",
 		"CategoriesLower": "категорије",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
 		"LabelsLower": "labels",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Pretraživanje"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Podeli"
 	},
 	"SignIn": {
 		"Button": "Sign in",
