@@ -6,27 +6,27 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0" v-if="!productNotFound">
-    <v-col cols="12">
-      <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
-      <OpenFoodFactsLink v-if="product.code && product.source" display="button" facet="product" :value="product.code"></OpenFoodFactsLink>
-      <ShareButton></ShareButton>
-    </v-col>
-  </v-row>
-
   <v-row class="mt-0" v-if="productOrCategoryNotFound">
     <v-col cols="12" sm="6">
-      <p v-if="productNotFound" class="text-red">
+      <v-alert v-if="productNotFound" type="error" variant="outlined" icon="mdi-alert">
         <i>
           <i18n-t keypath="ProductDetail.ProductNotFound" tag="span">
             <template #name>{{ OFF_NAME }}</template>
           </i18n-t>
         </i>
         <OpenFoodFactsLink class="ml-2" display="button" action="add"></OpenFoodFactsLink>
-      </p>
-      <p v-if="categoryNotFound" class="text-red">
+      </v-alert>
+      <v-alert v-if="categoryNotFound" type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
-      </p>
+      </v-alert>
+    </v-col>
+  </v-row>
+
+  <v-row class="mt-0" v-if="!productNotFound">
+    <v-col cols="12">
+      <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
+      <OpenFoodFactsLink v-if="product.code && product.source" display="button" facet="product" :value="product.code"></OpenFoodFactsLink>
+      <ShareButton></ShareButton>
     </v-col>
   </v-row>
 
