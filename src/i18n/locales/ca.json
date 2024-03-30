@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Marques",
 		"BrandLower": "marca",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Categories",
 		"CategoriesLower": "categories",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Etiquetes",
 		"LabelsLower": "etiquetes",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Nom de producte desconegut"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Cerca"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Comparteix"
 	},
 	"SignIn": {
 		"Button": "Inicia la sessió",
