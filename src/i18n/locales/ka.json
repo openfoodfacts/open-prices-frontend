@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "ბრენდები",
 		"BrandLower": "brand",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Categories",
 		"CategoriesLower": "categories",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
 		"LabelsLower": "labels",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "ძებნა"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Share"
 	},
 	"SignIn": {
 		"Button": "Sign in",
