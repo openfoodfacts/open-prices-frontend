@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "Μάρκες",
 		"BrandLower": "μαρκα",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Κατηγορίες",
 		"CategoriesLower": "κατηγοριες",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Ετικέτες",
 		"LabelsLower": "ετικετες",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Άγνωστο όνομα προϊόντος"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "Αναζήτηση"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "Κοινοποίηση"
 	},
 	"SignIn": {
 		"Button": "Σύνδεση",
