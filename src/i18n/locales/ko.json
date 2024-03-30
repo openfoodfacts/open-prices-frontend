@@ -213,9 +213,11 @@
 	"ProductCard": {
 		"Brands": "브랜드",
 		"BrandLower": "브랜드",
+		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "카테고리",
 		"CategoriesLower": "카테고리",
+		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "라벨",
 		"LabelsLower": "라벨",
@@ -228,6 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
+		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "알 수 없는 상품명"
 	},
 	"ProductDetail": {
@@ -301,7 +304,8 @@
 		"Title": "검색"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied"
+		"LinkCopySuccess": "Link copied",
+		"Title": "공유하기"
 	},
 	"SignIn": {
 		"Button": "가입하기",
