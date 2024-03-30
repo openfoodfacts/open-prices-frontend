@@ -31,17 +31,7 @@
   <v-row v-if="!loading">
     <v-col>
       <ProductFilterMenu :productFilter="productFilter" @update:productFilter="toggleProductFilter($event)"></ProductFilterMenu>
-
-      <v-menu scroll-strategy="close">
-        <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentProductOrderIcon"  :active="!!productOrder">{{ $t('Common.Order') }}</v-btn>
-        </template>
-        <v-list>
-          <v-list-item :slim="true" v-for="order in productOrderList" :key="order.key" :prepend-icon="order.icon" :active="productOrder === order.key" @click="selectProductOrder(order.key)">
-            {{ $t('Common.' + order.value) }}
-          </v-list-item>
-        </v-list>
-      </v-menu>
+      <ProductOrderMenu :productOrder="productOrder" @update:productOrder="selectProductOrder($event)"></ProductOrderMenu>
     </v-col>
   </v-row>
 
@@ -66,6 +56,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     'ProductFilterMenu': defineAsyncComponent(() => import('../components/ProductFilterMenu.vue')),
+    'ProductFilterMenu': defineAsyncComponent(() => import('../components/ProductFilterMenu.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
@@ -74,8 +65,7 @@ export default {
     return {
       // filter & order
       productFilter: '',
-      productOrder: constants.PRODUCT_ORDER_BY_LIST[1].key,
-      productOrderList: constants.PRODUCT_ORDER_BY_LIST,
+      productOrder: constants.PRODUCT_ORDER_LIST[1].key,
       // data
       brand: null,  // see init
       brandProductList: [],
@@ -85,10 +75,6 @@ export default {
     }
   },
   computed: {
-    getCurrentProductOrderIcon() {
-      let currentProductOrder = this.productOrderList.find(o => o.key === this.productOrder)
-      return currentProductOrder ? currentProductOrder.icon : ''
-    },
     getProductsParams() {
       let defaultParams = { brands__like: this.brand, order_by: `${this.productOrder}`, page: this.brandProductPage }
       if (this.productFilter && this.productFilter === 'hide_price_count_gte_1') {
@@ -99,7 +85,7 @@ export default {
   },
   mounted() {
     this.productFilter = this.$route.query[constants.FILTER_PARAM] || this.productFilter
-    this.productOrder = this.$route.query[constants.ORDER_BY_PARAM] || this.productOrder
+    this.productOrder = this.$route.query[constants.ORDER_PARAM] || this.productOrder
     this.initBrand()
   },
   methods: {
@@ -128,7 +114,7 @@ export default {
     selectProductOrder(orderKey) {
       if (this.productOrder !== orderKey) {
         this.productOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_BY_PARAM]: this.productOrder } })
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.productOrder } })
         // this.initBrand() will be called in watch $route
       }
     }
