@@ -4,23 +4,22 @@
       <v-row>
         <v-col v-if="!hideProductImage" style="max-width:25%">
           <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;width:100px" @click="goToProduct()"></v-img>
-          <v-img v-if="!product || !product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
+          <v-img v-else :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
         </v-col>
         <v-col style="max-width:75%">
           <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
           <p v-if="!hideProductDetails" class="mb-2">
-            <span v-if="hasProductSource">
-              <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
+            <span v-if="hasProductCode">
+              <span v-if="hasProductSource">
+                <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
+                <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
+              </span>
+              <ProductMissingChip v-else></ProductMissingChip>
             </span>
-            <span v-if="hasProductName" class="mr-1">
-              <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
-            </span>
-            <span v-if="hasPriceOrigin" class="mr-1">
-              <PriceOrigins :priceOrigins="price.origins_tags"></PriceOrigins>
-            </span>
-            <span v-if="hasPriceLabels" class="mr-1">
-              <PriceLabels :priceLabels="price.labels_tags"></PriceLabels>
+            <span v-else>
+              <PriceOrigins v-if="hasPriceOrigin" class="mr-1" :priceOrigins="price.origins_tags"></PriceOrigins>
+              <PriceLabels v-if="hasPriceLabels" class="mr-1" :priceLabels="price.labels_tags"></PriceLabels>
             </span>
           </p>
 
@@ -41,6 +40,7 @@ export default {
   components: {
     'ProductBrands': defineAsyncComponent(() => import('../components/ProductBrands.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
+    'ProductMissingChip': defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
     'PriceOrigins': defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
     'PriceLabels': defineAsyncComponent(() => import('../components/PriceLabels.vue')),
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
@@ -66,9 +66,6 @@ export default {
   mounted() {
   },
   computed: {
-    categoryTag() {
-      return this.price.category_tag
-    },
     hasProduct() {
       return !!this.product
     },
@@ -76,16 +73,16 @@ export default {
       return !!this.price
     },
     hasCategoryTag() {
-      return !!this.categoryTag
+      return !!this.price.category_tag
     },
     hasProductName() {
       return this.hasProduct && !!this.product.product_name
     },
+    hasProductCode() {
+      return this.hasProduct && !!this.product.code
+    },
     hasProductSource() {
       return this.hasProduct && !!this.product.source
-    },
-    hasProductQuantity() {
-      return this.hasProduct && !!this.product.product_quantity
     },
     hasPriceOrigin() {
       return this.hasPrice && !!this.price.origins_tags && this.price.origins_tags.length
