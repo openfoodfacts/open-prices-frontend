@@ -6,8 +6,8 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-food-outline">
-        {{ productTotal }}<span class="d-none d-sm-inline">&nbsp;products</span>
+      <v-chip label variant="text" prepend-icon="mdi-food-outline">
+        {{ $t('ProductList.ProductTotal', { count: productTotal }) }}
       </v-chip>
       <FilterMenu kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)"></FilterMenu>
       <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)"></OrderMenu>

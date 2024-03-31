@@ -6,7 +6,7 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-account-badge-outline">
+      <v-chip label variant="text" prepend-icon="mdi-account-badge-outline">
         {{ $t('UserList.UserTotal', { count: userTotal }) }}
       </v-chip>
     </v-col>
