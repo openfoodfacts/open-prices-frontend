@@ -1,288 +1,288 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "一个架子上有多个价格标签",
+			"Title": "多种产品"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "价格已创建！",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "一种或多种产品",
+			"Title": "收据"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "登录",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "只有一个价格标签",
+			"Title": "单件商品"
 		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"Thanks": "谢谢",
+		"Title": "添加价格",
+		"TitleSingle": "添加单价",
+		"TitleMultiple": "批量添加多个价格"
 	},
 	"AddPriceMultiple": {
 		"Done": "完成",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "添加新价格",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 价格已上传 | {priceAlreadyUploadedNumber} 价格已上传",
 			"Create": "创建",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"NewPrice": "新价格",
+			"PriceUploaded": "价格已创建！",
+			"Upload": "上传"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Proof details"
+			"ReceiptWarning": "收据可能包含个人信息，我们建议在拍照前将其隐藏 (编辑、折叠...)。",
+			"PrivateWarning": "您还可以将收据设置为私人收据。私人证明只有您和版主才能看到。",
+			"Title": "证明细节"
 		},
-		"Title": "Add multiple prices"
+		"Title": "添加多个价格"
 	},
 	"AddPriceSingle": {
 		"Create": "创建",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Currency": "Currency",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofDateChanged": "Date updated!",
-			"ProofSelected": "Proof selected!",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"Discount": "折扣？",
+			"Currency": "货币",
+			"Label": "价格",
+			"LabelDiscounted": "打折后价格",
+			"LabelFull": "全价",
+			"Proof": "证明",
+			"ProofDateChanged": "更新日期！",
+			"ProofSelected": "证明已选！",
+			"ProofUploaded": "证明已上传！",
+			"Title": "价格详情",
+			"UploadProof": "上传证明",
+			"Picture": "图片",
 			"TakePicture": "请拍照",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"Gallery": "设备图库",
+			"SelectFromGallery": "从设备库中选择",
+			"RecentProof": "最近的证明",
+			"SelectRecentProof": "选择最近的证明"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "分類",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"OriginLabel": "起源",
+			"ProductBarcode": "产品条码",
 			"Scan": "扫描",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "扫描条形码",
 			"Type": "類型",
-			"TypeBarcode": "Type a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"TypeBarcode": "输入条形码",
+			"SetProduct": "设置产品",
+			"Title": "产品信息"
 		},
 		"ProductModeList": {
 			"Barcode": "條碼",
 			"Category": "分類"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "每公斤价格",
+			"PerUnit": "每单位价格"
 		},
-		"Title": "Add a single price",
+		"Title": "添加单价",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "日期",
+			"DateLabel": "日期",
 			"Find": "查找",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "店铺位置",
+			"SelectLocation": "选择您的位置",
+			"Title": "地点和时间？"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "由 {url} 供电"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "扫描条形码"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "條碼",
 		"Submit": "送出",
-		"Title": "Type a barcode"
+		"Title": "输入条形码"
 	},
 	"BrandDetail": {
 		"LoadMore": "載入更多",
-		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products"
+		"TopProducts": "热门产品",
+		"BrandProductTotal": "{count} 产品"
 	},
 	"CategoryDetail": {
 		"LoadMore": "載入更多",
-		"TopProducts": "Top products",
-		"CategoryProductTotal": "{count} products"
+		"TopProducts": "热门产品",
+		"CategoryProductTotal": "{count} 产品"
 	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "添加到 {name}",
 		"Delete": "删除",
 		"Edit": "編輯",
 		"Filter": "过滤器",
-		"FilterProductWithPriceCountHide": "Hide products with prices",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
-		"Order": "Order",
-		"OrderProductUniqueScansDESC": "Number of scans",
-		"OrderProductPriceCountDESC": "Number of prices",
-		"OrderPriceASC": "Price",
-		"OrderPriceCreatedDESC": "Addition date",
-		"OrderPriceDateDESC": "Price date",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"FilterProductWithPriceCountHide": "隐藏带有价格的产品",
+		"FilterPriceMoreThan30DaysHide": "隐藏 30 天前的价格",
+		"Order": "命令",
+		"OrderProductUniqueScansDESC": "扫描次数",
+		"OrderProductPriceCountDESC": "价格数量",
+		"OrderPriceASC": "价格",
+		"OrderPriceCreatedDESC": "添加日期",
+		"OrderPriceDateDESC": "价格日期",
+		"SignInOFFAccount": "使用您的 {url} 帐户登录",
 		"Yes": "是",
 		"No": "否"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"Title": "选择您最喜欢的货币之一",
+		"Currency": "货币",
+		"AddCurrencies": "在设置中添加货币",
+		"AddCurrenciesWarning": "您将被重定向到“设置”页面，但会丢失您在此页面上输入的所有信息。",
+		"Select": "选择 {currency_code}"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "选择您最近的一个校样"
 	},
 	"Footer": {
 		"About": "关于",
-		"Stats": "Stats",
-		"TagLine": "{name} is an {url} project."
+		"Stats": "统计数据",
+		"TagLine": "{name} 是一个 {url} 项目。"
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "仪表板",
 		"Settings": "設定",
 		"SignIn": "登录",
 		"SignOut": "登出"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"LatestPrices": "Latest prices",
-		"SearchProduct": "Search for a product",
-		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"AddPrice": "添加价格",
+		"LatestPrices": "最新价格",
+		"SearchProduct": "搜索产品",
+		"SettingsUpdated": "设置更新！",
+		"TodayPriceStat": "今天没有添加价格 | {todayPriceNumber} 今天添加了新价格 | {todayPriceNumber} 今天添加了新价格！",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Subtitle": "一个开放的众包食品价格数据库🏷🍊💲",
+			"Title": "欢迎来到 {name}！"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新价格",
 		"LoadMore": "載入更多",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "在 OpenStreetMap 中找不到位置... 请立即添加它:)"
 	},
 	"LocationList": {
-		"Title": "Top locations",
+		"Title": "热门地点",
 		"LoadMore": "載入更多",
-		"LocationTotal": "{count} locations"
+		"LocationTotal": "{count} 地点"
 	},
 	"LocationSelector": {
 		"Clear": "清除",
-		"NoResult": "No results found",
+		"NoResult": "未找到结果",
 		"OSM": {
-			"text": "powered by {url}"
+			"text": "由 {url} 供电"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"RecentLocations": "没有最近的地点 |最近位置 {recentLocationNumber}|最近地点 {recentLocationNumber}",
+		"Result": "结果 {resultNumber} | 结果 {resultNumber}",
+		"SearchByName": "按名称和城市搜索您的商店",
+		"Title": "找到您的商店位置",
+		"Warning": "目前搜索引擎找店铺还不是很精准。{newline}请毫不犹豫地添加街道名称以缩小结果范围。{newline}示例：Carrefour City 15e Paris；塞恩斯伯里卡姆登 伦敦"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "您请求的页面似乎不存在...",
+		"Title": "未找到"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
-		"PriceValueDisplayKilogram": "{0} / kg",
+		"Discount": "折扣",
+		"PriceDate": "上 {date}",
+		"PriceValueDisplayKilogram": "{0} / 公斤",
 		"PriceValueDisplayLitre": "{0} / L",
-		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
-		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"PriceValueDisplayUnit": "{0} / 单位",
+		"Proof": "证明",
+		"FullPrice": "全价",
+		"UnknownProduct": "未知产品"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} 价格"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "您确定要删除此价格吗？",
 		"Delete": "删除",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "价格已删除！",
+		"Title": "删除价格"
 	},
 	"PriceEdit": {
 		"Save": "儲存",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "价格已修改！",
+		"Title": "编辑价格"
 	},
 	"PriceList": {
 		"LoadMore": "載入更多",
-		"Title": "Latest prices"
+		"Title": "最新价格"
 	},
 	"ProductCard": {
 		"Brands": "品牌",
 		"BrandLower": "品牌",
-		"BrandMissing": "Brand missing",
-		"BrandTotal": "{count} brands",
+		"BrandMissing": "品牌缺失",
+		"BrandTotal": "{count} 品牌",
 		"Categories": "類別",
 		"CategoriesLower": "分类",
-		"CategoriesMissing": "Category missing",
-		"CategoryTotal": "{count} categories",
+		"CategoriesMissing": "类别缺失",
+		"CategoryTotal": "{count} 类别",
 		"Labels": "标签",
 		"LabelsLower": "标签",
-		"LabelTotal": "{count} labels",
-		"LatestPrice": "Latest price",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
-		"ProductQuantityGram": "{0} g",
-		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityLitre": "{0} L",
-		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
-		"QuantityMissing": "Quantity missing",
+		"LabelTotal": "{count} 标签",
+		"LatestPrice": "最新价格",
+		"ProductBrandMissing": "产品品牌缺失",
+		"ProductCategoriesMissing": "缺少产品类别",
+		"ProductQuantityGram": "{0} 克",
+		"ProductQuantityKilogram": "{0} 公斤",
+		"ProductQuantityLitre": "{0} 升",
+		"ProductQuantityMililitre": "{0} 毫升",
+		"ProductQuantityMissing": "产品数量缺失",
+		"QuantityMissing": "缺失数量",
 		"UnknownProduct": "未知产品名称"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"AddPrice": "添加价格",
+		"CategoryNotFound": "未找到类别...",
+		"LatestPrices": "最新价格",
 		"LoadMore": "載入更多",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "在 Open Food Facts 中找不到产品... 请随时添加:)"
 	},
 	"ProductList": {
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "隐藏带有价格的产品",
 		"LoadMore": "載入更多",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
-		"Title": "Top products",
-		"ProductTotal": "{count} products"
+		"PriceNumber": "添加的价格数量",
+		"ScanNumber": "添加的扫描次数",
+		"Title": "热门产品",
+		"ProductTotal": "{count} 产品"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
-		"GDPR_REQUEST": "GDPR request"
+		"Proof": "证明",
+		"PRICE_TAG": "价格标签",
+		"RECEIPT": "收据",
+		"GDPR_REQUEST": "GDPR 要求"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "您确实要删除该证明吗？",
 		"Delete": "删除",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "删除证明",
+		"Success": "证据已删除！"
 	},
 	"ProofDetail": {
 		"LoadMore": "載入更多",
-		"Prices": "Prices",
-		"ProofNotFound": "Proof not found (or not the owner)",
-		"Public": "Public",
-		"Private": "Private",
+		"Prices": "价格",
+		"ProofNotFound": "未找到证据(或不是所有者)",
+		"Public": "民众",
+		"Private": "私人的",
 		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
+		"Title": "编辑证明",
+		"PrivateWarning": "将校样设置为私密时，它将对公众隐藏。如果可能，我们建议通过编辑或折叠文档来隐藏任何个人信息。",
 		"Save": "儲存",
-		"Success": "Proof edited!"
+		"Success": "证明已编辑！"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "添加价格"
 		},
 		"Home": {
 			"Title": "主页"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "最新价格"
 		},
 		"Search": {
 			"Title": "搜尋"
@@ -291,76 +291,76 @@
 			"Title": "登录"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "杰出贡献者"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "热门地点"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "热门产品"
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "产品条码",
 		"Title": "搜尋"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "链接已复制",
 		"Title": "推荐给好友"
 	},
 	"SignIn": {
 		"Button": "登录",
 		"Password": "密码",
-		"ServerError": "Error: server error",
+		"ServerError": "错误：服务器错误",
 		"Title": "登录",
-		"SignInOFFAccount": "Sign in with your {url} account",
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"SignInOFFAccount": "使用您的 {url} 帐户登录",
+		"UsernameLabel": "用户名",
+		"WrongCredentials": "错误：凭据错误"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"Prices": "价格",
+		"ProductsWithPrices": "有价格的产品",
+		"Title": "统计数据",
 		"Products": "产品",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "地点",
+		"Users": "用户",
 		"Total": "总计",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "有价格",
+		"WithProduct": "有了产品",
+		"WithoutProduct": "无产品"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "最新价格",
+		"LatestProofs": "最新样张",
 		"LoadMore": "載入更多",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
-		"ProofUpdated": "Proof updated!",
+		"MyPrices": "我的价格",
+		"MyProofs": "我的样张",
+		"ProofUpdated": "证据已更新！",
 		"Settings": "設定",
-		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"Title": "仪表板",
+		"UserPriceTotal": "{count} 价格",
+		"UserProofTotal": "{count} 证明"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新价格",
 		"LoadMore": "載入更多"
 	},
 	"UserList": {
 		"LoadMore": "載入更多",
-		"Title": "Top contributors",
-		"UserTotal": "{count} contributors"
+		"Title": "杰出贡献者",
+		"UserTotal": "{count} 贡献者"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "添加价格",
 		"ChangeLanguage": "更改语言",
 		"CountryLabel": "地區",
-		"CurrencyLabel": "Currency",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"CurrencyLabel": "货币",
+		"FavoriteCurrencies": "最喜欢的货币",
+		"CurrencyRequired": "至少需要一种货币",
 		"LanguageLabel": "語言",
 		"Save": "儲存",
 		"Title": "設定",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationCompletion": "翻译已完成 {completion}%。",
+		"TranslationHelp": "帮助我们翻译更多语言"
 	}
 }
