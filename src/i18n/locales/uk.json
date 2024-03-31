@@ -213,11 +213,11 @@
 	"ProductCard": {
 		"Brands": "Виробники",
 		"BrandLower": "виробник",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "Бренд відсутній",
 		"BrandTotal": "{count} брендів",
 		"Categories": "Категорії",
 		"CategoriesLower": "категорії",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "Відсутня категорія",
 		"CategoryTotal": "{count} категорій",
 		"Labels": "Етикетки",
 		"LabelsLower": "категорії",
@@ -230,7 +230,7 @@
 		"ProductQuantityLitre": "{0} Л",
 		"ProductQuantityMililitre": "{0} мл",
 		"ProductQuantityMissing": "Відсутня кількість товару",
-		"QuantityMissing": "Quantity missing",
+		"QuantityMissing": "Відсутня кількість",
 		"UnknownProduct": "Невідомий продукт"
 	},
 	"ProductDetail": {

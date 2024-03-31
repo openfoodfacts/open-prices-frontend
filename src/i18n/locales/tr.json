@@ -213,11 +213,11 @@
 	"ProductCard": {
 		"Brands": "Markalar",
 		"BrandLower": "marka",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "Marka eksik",
 		"BrandTotal": "{count} marka",
 		"Categories": "Kategoriler",
 		"CategoriesLower": "kategoriler",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "Kategori eksik",
 		"CategoryTotal": "{count} kategoriler",
 		"Labels": "Etiketler",
 		"LabelsLower": "etiketler",
@@ -230,7 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Ürün miktarı eksik",
-		"QuantityMissing": "Quantity missing",
+		"QuantityMissing": "Miktar eksik",
 		"UnknownProduct": "Bilinmeyen ürün adı"
 	},
 	"ProductDetail": {
