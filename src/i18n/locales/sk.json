@@ -245,7 +245,8 @@
 		"LoadMore": "Načítať ďalšie",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Title": "Top products",
+		"ProductTotal": "{count} produktov"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
