@@ -10,7 +10,7 @@
         {{ productTotal }}<span class="d-none d-sm-inline">&nbsp;products</span>
       </v-chip>
       <FilterMenu kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)"></FilterMenu>
-      <ProductOrderMenu :productOrder="productOrder" @update:productOrder="selectProductOrder($event)"></ProductOrderMenu>
+      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)"></OrderMenu>
     </v-col>
   </v-row>
 
@@ -35,14 +35,14 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    'ProductOrderMenu': defineAsyncComponent(() => import('../components/ProductOrderMenu.vue')),
+    'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
   },
   data() {
     return {
       // filter & order
       currentFilter: '',
-      productOrder: constants.PRODUCT_ORDER_LIST[1].key,
+      currentOrder: constants.PRODUCT_ORDER_LIST[1].key,
       // data
       productList: [],
       productTotal: null,
@@ -52,7 +52,7 @@ export default {
   },
   computed: {
     getProductsParams() {
-      let defaultParams = { order_by: `${this.productOrder}`, page: this.productPage }
+      let defaultParams = { order_by: `${this.currentOrder}`, page: this.productPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
@@ -61,7 +61,7 @@ export default {
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
-    this.productOrder = this.$route.query[constants.ORDER_PARAM] || this.productOrder
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initProductList()
   },
   methods: {
@@ -87,9 +87,9 @@ export default {
       // this.initProductList() will be called in watch $route
     },
     selectProductOrder(orderKey) {
-      if (this.productOrder !== orderKey) {
-        this.productOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.productOrder } })
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initProductList() will be called in watch $route
       }
     }

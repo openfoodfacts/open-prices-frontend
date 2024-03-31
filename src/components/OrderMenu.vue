@@ -1,0 +1,47 @@
+<template>
+  <v-menu scroll-strategy="close">
+    <template v-slot:activator="{ props }">
+      <v-btn v-bind="props" size="small" rounded="xl" prepend-icon="mdi-arrow-down" :append-icon="getCurrentOrderIcon" :active="!!currentOrder">{{ $t('Common.Order') }}</v-btn>
+    </template>
+    <v-list>
+      <v-list-item :slim="true" v-for="order in orderList" :key="order.key" :prepend-icon="order.icon" :active="currentOrder === order.key" @click="selectOrder(order.key)">
+        {{ $t('Common.' + order.value) }}
+      </v-list-item>
+    </v-list>
+  </v-menu>
+</template>
+
+<script>
+import constants from '../constants'
+
+export default {
+  props: {
+    currentOrder: String,
+    kind: {
+      type: String,
+      default: 'product'
+    }
+  },
+  data() {
+    return {
+      productOrderList: constants.PRODUCT_ORDER_LIST,
+      priceOrderList: constants.PRICE_ORDER_LIST,
+    }
+  },
+  computed: {
+    orderList() {
+      return this.kind === 'product' ? this.productOrderList : this.priceOrderList
+    },
+    getCurrentOrderIcon() {
+      let currentOrder = this.orderList.find(o => o.key === this.currentOrder)
+      return currentOrder ? currentOrder.icon : ''
+    },
+  },
+  emits: ['update:currentOrder'],
+  methods: {
+    selectOrder(order) {
+      this.$emit('update:currentOrder', order)
+    }
+  }
+}
+</script>

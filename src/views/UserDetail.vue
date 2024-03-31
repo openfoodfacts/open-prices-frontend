@@ -26,17 +26,7 @@
   <v-row v-if="!loading">
     <v-col>
       <FilterMenu kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)"></FilterMenu>
-
-      <v-menu scroll-strategy="close">
-        <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" prepend-icon="mdi-arrow-down" :append-icon="getCurrentPriceOrderIcon"  :active="!!priceOrder">{{ $t('Common.Order') }}</v-btn>
-        </template>
-        <v-list>
-          <v-list-item :slim="true" v-for="order in priceOrderList" :key="order.key" :prepend-icon="order.icon" :active="priceOrder === order.key" @click="selectPriceOrder(order.key)">
-            {{ $t('Common.' + order.value) }}
-          </v-list-item>
-        </v-list>
-      </v-menu>
+      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)"></OrderMenu>
     </v-col>
   </v-row>
 
@@ -64,6 +54,7 @@ export default {
   components: {
     'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
     'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
@@ -76,8 +67,7 @@ export default {
       loading: false,
       // filter & order
       currentFilter: '',
-      priceOrder: constants.PRICE_ORDER_LIST[1].key,
-      priceOrderList: constants.PRICE_ORDER_LIST,
+      currentOrder: constants.PRICE_ORDER_LIST[1].key,
     }
   },
   computed: {
@@ -85,12 +75,8 @@ export default {
     username() {
       return this.$route.params.username
     },
-    getCurrentPriceOrderIcon() {
-      let currentPriceOrder = this.priceOrderList.find(o => o.key === this.priceOrder)
-      return currentPriceOrder ? currentPriceOrder.icon : ''
-    },
     getPricesParams() {
-      let defaultParams = { owner: this.username, order_by: `${this.priceOrder}`, page: this.userPricePage }
+      let defaultParams = { owner: this.username, order_by: `${this.currentOrder}`, page: this.userPricePage }
       if (this.currentFilter === 'show_last_month') {
         let oneMonthAgo = new Date()
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
@@ -101,7 +87,7 @@ export default {
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
-    this.priceOrder = this.$route.query[constants.ORDER_PARAM] || this.priceOrder
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.getUserPrices()
   },
   methods: {
@@ -127,9 +113,9 @@ export default {
       // this.initUserPrices() will be called in watch $route
     },
     selectPriceOrder(orderKey) {
-      if (this.priceOrder !== orderKey) {
-        this.priceOrder = orderKey
-        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.priceOrder } })
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initUserPrices() will be called in watch $route
       }
     }
