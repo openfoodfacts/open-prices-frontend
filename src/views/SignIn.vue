@@ -3,35 +3,40 @@
     {{ $t('SignIn.Title') }}
   </h1>
 
-  <v-alert
-    class="mb-2"
-    type="info"
-    variant="outlined">
-    <i18n-t keypath="Common.SignInOFFAccount" tag="span">
-      <template #url>
-        <OpenFoodFactsLink display="link"></OpenFoodFactsLink>
-      </template>
-    </i18n-t>
-  </v-alert>
+  <v-row>
+    <v-col cols="12" md="6">
+      <v-alert
+        class="mb-2"
+        type="info"
+        variant="outlined">
+        <i18n-t keypath="Common.SignInOFFAccount" tag="span">
+          <template #url>
+            <OpenFoodFactsLink display="link"></OpenFoodFactsLink>
+          </template>
+        </i18n-t>
+      </v-alert>
 
-  <v-form @submit.prevent="signIn">
-    <v-text-field
-      v-model="signinForm.username"
-      :label="$t('SignIn.UsernameLabel')"
-      type="text"
-    ></v-text-field>
-    <v-text-field
-      v-model="signinForm.password"
-      :label="$t('SignIn.Password')"
-      type="password"
-    ></v-text-field>
-    <v-btn
-      type="submit"
-      class="mt-2"
-      :loading="loading"
-      :disabled="!formFilled"
-    >{{ $t('SignIn.Button') }}</v-btn>
-  </v-form>
+      <v-form @submit.prevent="signIn">
+        <v-text-field
+          v-model="signinForm.username"
+          :label="$t('SignIn.UsernameLabel')"
+          type="text"
+          class="input-lowercase"
+        ></v-text-field>
+        <v-text-field
+          v-model="signinForm.password"
+          :label="$t('SignIn.Password')"
+          type="password"
+        ></v-text-field>
+        <v-btn
+          type="submit"
+          class="mt-2"
+          :loading="loading"
+          :disabled="!formFilled"
+        >{{ $t('SignIn.Button') }}</v-btn>
+      </v-form>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -63,10 +68,10 @@ export default {
     signIn() {
       this.loading = true
       api
-        .signIn(this.signinForm.username, this.signinForm.password)
+        .signIn(this.signinForm.username.toLowerCase().trim(), this.signinForm.password)
         .then((data) => {
           if (data['access_token']) {
-            this.appStore.signIn(this.signinForm.username, data['access_token'])
+            this.appStore.signIn(this.signinForm.username.toLowerCase().trim(), data['access_token'])
             this.$router.push({ path: '/add', query: { signinSuccess: 'true' } })
           } else {
             alert(this.$t('SignIn.WrongCredentials'))

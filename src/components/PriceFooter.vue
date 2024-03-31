@@ -12,9 +12,9 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
