@@ -245,7 +245,8 @@
 		"LoadMore": "Carrega mes ",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
-		"Title": "Els millors productes"
+		"Title": "Els millors productes",
+		"ProductTotal": "{count} products"
 	},
 	"ProofCard": {
 		"Proof": "Prova",
