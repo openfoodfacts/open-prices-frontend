@@ -39,16 +39,7 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <v-menu scroll-strategy="close">
-        <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="small" class="mr-2" prepend-icon="mdi-filter-variant" :active="!!priceFilter">{{ $t('Common.Filter') }}</v-btn>
-        </template>
-        <v-list>
-          <v-list-item :slim="true" v-for="filter in priceFilterList" :key="filter.key" :prepend-icon="(priceFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="priceFilter === filter.key" @click="togglePriceFilter(filter.key)">
-            {{ $t('Common.' + filter.value) }}
-          </v-list-item>
-        </v-list>
-      </v-menu>
+      <FilterMenu kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)"></FilterMenu>
 
       <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
@@ -84,6 +75,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
     'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
@@ -100,14 +92,13 @@ export default {
       // share
       shareLinkCopySuccessMessage: false,
       // filter & order
-      priceFilter: '',
-      priceFilterList: constants.PRICE_FILTER_LIST,
+      currentFilter: '',
       priceOrder: constants.PRICE_ORDER_LIST[1].key,
       priceOrderList: constants.PRICE_ORDER_LIST,
     }
   },
   mounted() {
-    this.priceFilter = this.$route.query[constants.FILTER_PARAM] || this.priceFilter
+    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.priceOrder = this.$route.query[constants.ORDER_PARAM] || this.priceOrder
     this.getProduct(),
     this.initProductPrices()
@@ -134,7 +125,7 @@ export default {
     },
     getPricesParams() {
       let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.priceOrder}`, page: this.productPricePage }
-      if (this.priceFilter === 'show_last_month') {
+      if (this.currentFilter === 'show_last_month') {
         let oneMonthAgo = new Date()
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
         defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
@@ -170,8 +161,8 @@ export default {
         })
     },
     togglePriceFilter(filterKey) {
-      this.priceFilter = this.priceFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.priceFilter } })
+      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initProductPrices() will be called in watch $route
     },
     selectPriceOrder(orderKey) {

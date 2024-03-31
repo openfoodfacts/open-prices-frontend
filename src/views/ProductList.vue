@@ -9,7 +9,7 @@
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-food-outline">
         {{ productTotal }}<span class="d-none d-sm-inline">&nbsp;products</span>
       </v-chip>
-      <ProductFilterMenu :productFilter="productFilter" @update:productFilter="toggleProductFilter($event)"></ProductFilterMenu>
+      <FilterMenu kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)"></FilterMenu>
       <ProductOrderMenu :productOrder="productOrder" @update:productOrder="selectProductOrder($event)"></ProductOrderMenu>
     </v-col>
   </v-row>
@@ -34,14 +34,14 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    'ProductFilterMenu': defineAsyncComponent(() => import('../components/ProductFilterMenu.vue')),
+    'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     'ProductOrderMenu': defineAsyncComponent(() => import('../components/ProductOrderMenu.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
   },
   data() {
     return {
       // filter & order
-      productFilter: '',
+      currentFilter: '',
       productOrder: constants.PRODUCT_ORDER_LIST[1].key,
       // data
       productList: [],
@@ -53,14 +53,14 @@ export default {
   computed: {
     getProductsParams() {
       let defaultParams = { order_by: `${this.productOrder}`, page: this.productPage }
-      if (this.productFilter && this.productFilter === 'hide_price_count_gte_1') {
+      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
       return defaultParams
     },
   },
   mounted() {
-    this.productFilter = this.$route.query[constants.FILTER_PARAM] || this.productFilter
+    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.productOrder = this.$route.query[constants.ORDER_PARAM] || this.productOrder
     this.initProductList()
   },
@@ -82,8 +82,8 @@ export default {
         })
     },
     toggleProductFilter(filterKey) {
-      this.productFilter = this.productFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.productFilter } })
+      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initProductList() will be called in watch $route
     },
     selectProductOrder(orderKey) {
