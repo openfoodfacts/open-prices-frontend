@@ -245,7 +245,8 @@
 		"LoadMore": "Завантажити більше",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
-		"Title": "Кращі продукти"
+		"Title": "Кращі продукти",
+		"ProductTotal": "{count} продуктів"
 	},
 	"ProofCard": {
 		"Proof": "Доказ",
