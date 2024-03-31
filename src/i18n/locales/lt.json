@@ -245,7 +245,8 @@
 		"LoadMore": "Įkelti daugiau",
 		"PriceNumber": "Pridėtų kainų skaičius",
 		"ScanNumber": "Pridėtų nuskaitymų skaičius",
-		"Title": "Populiariausi produktai"
+		"Title": "Populiariausi produktai",
+		"ProductTotal": "{count} produktai (-ų)"
 	},
 	"ProofCard": {
 		"Proof": "Įrodymai",
