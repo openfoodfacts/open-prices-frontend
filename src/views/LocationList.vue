@@ -6,7 +6,7 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-map-marker-outline">
+      <v-chip label variant="text" prepend-icon="mdi-map-marker-outline">
         {{ $t('LocationList.LocationTotal', { count: locationTotal }) }}
       </v-chip>
     </v-col>

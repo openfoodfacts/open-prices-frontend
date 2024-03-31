@@ -1,7 +1,7 @@
 <template>
   <v-menu scroll-strategy="close">
     <template v-slot:activator="{ props }">
-      <v-btn v-bind="props" size="small" class="mr-2" rounded="xl" prepend-icon="mdi-filter-variant" :active="!!currentFilter">{{ $t('Common.Filter') }}</v-btn>
+      <v-btn v-bind="props" size="x-small" class="mr-2" rounded="xl" prepend-icon="mdi-filter-variant" :active="!!currentFilter">{{ $t('Common.Filter') }}</v-btn>
     </template>
     <v-list>
       <v-list-item :slim="true" v-for="filter in filterList" :key="filter.key" :prepend-icon="(currentFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="currentFilter === filter.key" @click="selectFilter(filter.key)">
