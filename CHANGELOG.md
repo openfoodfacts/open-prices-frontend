@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.52.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.52.1...v1.52.2) (2024-03-31)
+
+
+### Bug Fixes
+
+* **Sign In:** set username to lowercase ([#491](https://github.com/openfoodfacts/open-prices-frontend/issues/491)) ([1f43210](https://github.com/openfoodfacts/open-prices-frontend/commit/1f4321015a793695969943e8f08085a2105642a6))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#486](https://github.com/openfoodfacts/open-prices-frontend/issues/486)) ([73f2975](https://github.com/openfoodfacts/open-prices-frontend/commit/73f297507ff530d9a01544c83833e93f357d8000))
+* move FilterMenu & OrderMenu on the same line ([#485](https://github.com/openfoodfacts/open-prices-frontend/issues/485)) ([c5b2747](https://github.com/openfoodfacts/open-prices-frontend/commit/c5b27477ce561a37340a03bdb7fc836f63422500))
+* new LocationCard component ([#490](https://github.com/openfoodfacts/open-prices-frontend/issues/490)) ([5c25493](https://github.com/openfoodfacts/open-prices-frontend/commit/5c2549322b96a59a050eef60c1333adb4bb3dbb8))
+* new UserCard component ([#489](https://github.com/openfoodfacts/open-prices-frontend/issues/489)) ([fd93dde](https://github.com/openfoodfacts/open-prices-frontend/commit/fd93dde688500e99a787b5cb92f13a85584f62b8))
+
 ## [1.52.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.52.0...v1.52.1) (2024-03-31)
 
 
