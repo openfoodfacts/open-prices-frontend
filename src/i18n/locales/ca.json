@@ -213,11 +213,11 @@
 	"ProductCard": {
 		"Brands": "Marques",
 		"BrandLower": "marca",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "Falta la marca",
 		"BrandTotal": "{count} brands",
 		"Categories": "Categories",
 		"CategoriesLower": "categories",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "Falta la categoria",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Etiquetes",
 		"LabelsLower": "etiquetes",
@@ -230,7 +230,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
-		"QuantityMissing": "Quantity missing",
+		"QuantityMissing": "Falta la quantitat",
 		"UnknownProduct": "Nom de producte desconegut"
 	},
 	"ProductDetail": {
