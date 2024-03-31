@@ -245,7 +245,8 @@
 		"LoadMore": "לטעון עוד",
 		"PriceNumber": "מספר המחירים שנוספו",
 		"ScanNumber": "מספר הסריקות שנוספו",
-		"Title": "מוצרים מובילים"
+		"Title": "מוצרים מובילים",
+		"ProductTotal": "{count} מוצרים"
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",
