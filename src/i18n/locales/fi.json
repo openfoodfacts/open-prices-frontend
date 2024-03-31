@@ -245,7 +245,8 @@
 		"LoadMore": "Lataa enemmän",
 		"PriceNumber": "Lisättyjen hintojen määrä",
 		"ScanNumber": "Lisättyjen skannausten määrä",
-		"Title": "Huipputuotteet"
+		"Title": "Huipputuotteet",
+		"ProductTotal": "{count} tuotteita"
 	},
 	"ProofCard": {
 		"Proof": "Todiste",
