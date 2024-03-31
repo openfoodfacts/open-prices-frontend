@@ -14,16 +14,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12" sm="6" md="4" v-for="user in userList" :key="user">
-      <v-card
-        :title="user.user_id"
-        prepend-icon="mdi-account"
-        elevation="1"
-        height="100%"
-        @click="goToUser(user)">
-        <v-card-text>
-          <PriceCountChip :count="user.price_count" :withLabel="true"></PriceCountChip>
-        </v-card-text>
-      </v-card>
+      <UserCard :user="user" height="100%"></UserCard>
     </v-col>
   </v-row>
 
@@ -35,12 +26,12 @@
 </template>
 
 <script>
-import api from '../services/api'
 import { defineAsyncComponent } from 'vue'
+import api from '../services/api'
 
 export default {
   components: {
-    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    'UserCard': defineAsyncComponent(() => import('../components/UserCard.vue')),
   },
   data() {
     return {
@@ -70,9 +61,6 @@ export default {
           this.userTotal = data.total
           this.loading = false
         })
-    },
-    goToUser(user) {
-      this.$router.push({ path: `/users/${user.user_id}` })
     },
   }
 }
