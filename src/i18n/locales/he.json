@@ -213,11 +213,11 @@
 	"ProductCard": {
 		"Brands": "מותגים",
 		"BrandLower": "מותג",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "חסר מותג",
 		"BrandTotal": "{count} brands",
 		"Categories": "קטגוריות",
 		"CategoriesLower": "קטגוריות",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "חסרה קטגוריה",
 		"CategoryTotal": "{count} קטגוריות",
 		"Labels": "תוויות",
 		"LabelsLower": "תוויות",
@@ -230,7 +230,7 @@
 		"ProductQuantityLitre": "{0} ליטר",
 		"ProductQuantityMililitre": "{0} מ״ל",
 		"ProductQuantityMissing": "כמות המוצר חסרה",
-		"QuantityMissing": "Quantity missing",
+		"QuantityMissing": "חסרה כמות",
 		"UnknownProduct": "שם המוצר אינו ידוע"
 	},
 	"ProductDetail": {
