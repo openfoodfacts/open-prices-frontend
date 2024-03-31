@@ -245,7 +245,8 @@
 		"LoadMore": "Cargar más",
 		"PriceNumber": "Número de precios añadidos",
 		"ScanNumber": "Número de escaneos añadidos",
-		"Title": "Productos destacados"
+		"Title": "Productos destacados",
+		"ProductTotal": "{count} productos"
 	},
 	"ProofCard": {
 		"Proof": "Comprobante",
