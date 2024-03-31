@@ -1,11 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card :title="username" prepend-icon="mdi-account">
-        <v-card-text>
-          <PriceCountChip :count="userPriceTotal" :withLabel="true"></PriceCountChip>
-        </v-card-text>
-      </v-card>
+      <UserCard :user="{user_id: username, price_count: userPriceTotal}" readonly></UserCard>
     </v-col>
   </v-row>
 
@@ -49,7 +45,7 @@ import constants from '../constants'
 
 export default {
   components: {
-    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    'UserCard': defineAsyncComponent(() => import('../components/UserCard.vue')),
     'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
