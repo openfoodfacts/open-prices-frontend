@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.52.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.52.0...v1.52.1) (2024-03-31)
+
+
+### Bug Fixes
+
+* fix console warnings following [#474](https://github.com/openfoodfacts/open-prices-frontend/issues/474) ([0fabf1a](https://github.com/openfoodfacts/open-prices-frontend/commit/0fabf1a6e017b8012583ecb456a53bb3c335428f))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#480](https://github.com/openfoodfacts/open-prices-frontend/issues/480)) ([719169b](https://github.com/openfoodfacts/open-prices-frontend/commit/719169b38da0c78a534f6297a4a8b140c1d87bb5))
+* **l10n:** New Crowdin translations to review and merge ([#484](https://github.com/openfoodfacts/open-prices-frontend/issues/484)) ([35735d1](https://github.com/openfoodfacts/open-prices-frontend/commit/35735d1c85795952942d28a0f06f0fe7c89b6813))
+* move missing error messages in alerts ([#476](https://github.com/openfoodfacts/open-prices-frontend/issues/476)) ([1249268](https://github.com/openfoodfacts/open-prices-frontend/commit/12492689012683ef1c8c58e5194fc7c852874661))
+* new OpenStreetMapLink component ([#478](https://github.com/openfoodfacts/open-prices-frontend/issues/478)) ([2f3c430](https://github.com/openfoodfacts/open-prices-frontend/commit/2f3c4304c189ee95dffe30a30317fd13034a294a))
+* new ProductFilterMenu component ([#479](https://github.com/openfoodfacts/open-prices-frontend/issues/479)) ([8dad122](https://github.com/openfoodfacts/open-prices-frontend/commit/8dad1225758a74fc6a79f8c8a7c2cc728f8295eb))
+* new ProductOrderMenu component ([#481](https://github.com/openfoodfacts/open-prices-frontend/issues/481)) ([979341f](https://github.com/openfoodfacts/open-prices-frontend/commit/979341f1b65aa2a29e5beae1addfbd409a994274))
+* show product missing data in italic. improve wording ([427e97f](https://github.com/openfoodfacts/open-prices-frontend/commit/427e97f3e3edc5351cb6d9656be10694b1d4207b))
+* use FilterMenu in price list pages ([#482](https://github.com/openfoodfacts/open-prices-frontend/issues/482)) ([5fc1180](https://github.com/openfoodfacts/open-prices-frontend/commit/5fc118054dc7beb4dbb09e1d5107617941bfbcf4))
+* use OrderMenu in price list pages ([#483](https://github.com/openfoodfacts/open-prices-frontend/issues/483)) ([8c80469](https://github.com/openfoodfacts/open-prices-frontend/commit/8c8046975e147044bc6395592e7c080861f0bbc6))
+
 ## [1.52.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.51.1...v1.52.0) (2024-03-30)
 
 
