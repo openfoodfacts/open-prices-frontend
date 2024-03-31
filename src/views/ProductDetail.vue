@@ -32,18 +32,16 @@
 
   <br />
 
-  <h2 class="text-h6 mb-1">
-    {{ $t('ProductDetail.LatestPrices') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-  </h2>
-
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
-      <FilterMenu kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)"></FilterMenu>
-      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)"></OrderMenu>
+      <h2 class="text-h6 d-inline mr-2">{{ $t('ProductDetail.LatestPrices') }}</h2>
+      <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+      <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)"></FilterMenu>
+      <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)"></OrderMenu>
     </v-col>
   </v-row>
-  <v-row>
+
+  <v-row class="mt-0">
     <v-col cols="12" sm="6" md="4" v-for="price in productPriceList" :key="price">
       <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetails="productIsCategory ? false : true" elevation="1" height="100%"></PriceCard>
     </v-col>

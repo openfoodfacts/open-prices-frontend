@@ -23,15 +23,12 @@
 
   <br />
 
-  <h2 class="text-h6 mb-1">
-    {{ $t('CategoryDetail.TopProducts') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-  </h2>
-
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
-      <FilterMenu kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)"></FilterMenu>
-      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)"></OrderMenu>
+      <h2 class="text-h6 d-inline mr-2">{{ $t('CategoryDetail.TopProducts') }}</h2>
+      <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+      <FilterMenu v-if="!loading" kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)"></FilterMenu>
+      <OrderMenu v-if="!loading" kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)"></OrderMenu>
     </v-col>
   </v-row>
 
