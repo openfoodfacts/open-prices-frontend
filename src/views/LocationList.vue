@@ -14,17 +14,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12" sm="6" md="4" v-for="location in locationList" :key="location">
-      <v-card
-        :title="getLocationTitle(location)"
-        :subtitle="location.osm_display_name"
-        prepend-icon="mdi-map-marker-outline"
-        elevation="1"
-        height="100%"
-        @click="goToLocation(location)">
-        <v-card-text>
-          <PriceCountChip :count="location.price_count" :withLabel="true"></PriceCountChip>
-        </v-card-text>
-      </v-card>
+      <LocationCard :location="location" height="100%"></LocationCard>
     </v-col>
   </v-row>
 
@@ -36,13 +26,12 @@
 </template>
 
 <script>
-import api from '../services/api'
-import utils from '../utils.js'
 import { defineAsyncComponent } from 'vue'
+import api from '../services/api'
 
 export default {
   components: {
-    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    'LocationCard': defineAsyncComponent(() => import('../components/LocationCard.vue')),
   },
   data() {
     return {
@@ -72,12 +61,6 @@ export default {
           this.locationTotal = data.total
           this.loading = false
         })
-    },
-    getLocationTitle(location) {
-      return utils.getLocationTitle(location, true, false, true, true)
-    },
-    goToLocation(location) {
-      this.$router.push({ path: `/locations/${location.id}` })
     },
   }
 }

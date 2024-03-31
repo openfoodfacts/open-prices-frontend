@@ -1,14 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card
-        :title="getLocationTitle(location)"
-        :subtitle="location ? location.osm_display_name : ''"
-        :prepend-icon="location ? 'mdi-map-marker-outline' : 'mdi-map-marker-remove-variant'">
-        <v-card-text>
-          <PriceCountChip :count="locationPriceTotal" :withLabel="true"></PriceCountChip>
-        </v-card-text>
-      </v-card>
+      <LocationCard :location="location" readonly></LocationCard>
     </v-col>
   </v-row>
 
@@ -49,14 +42,14 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import utils from '../utils.js'
-import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 
 export default {
   components: {
-    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    'LocationCard': defineAsyncComponent(() => import('../components/LocationCard.vue')),
     'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
@@ -122,12 +115,6 @@ export default {
           this.locationPriceTotal = data.total
           this.loading = false
         })
-    },
-    getLocationTitle(location) {
-      if (location) {
-        return utils.getLocationTitle(location, true, false, true, true)
-      }
-      return this.$route.params.id
     },
     togglePriceFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
