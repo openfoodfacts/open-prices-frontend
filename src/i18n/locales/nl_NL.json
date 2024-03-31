@@ -245,7 +245,8 @@
 		"LoadMore": "Meer laden",
 		"PriceNumber": "Aantal prijzen toegevoegd",
 		"ScanNumber": "Aantal scans toegevoegd",
-		"Title": "Top producten"
+		"Title": "Top producten",
+		"ProductTotal": "{count} producten"
 	},
 	"ProofCard": {
 		"Proof": "Bewijs",

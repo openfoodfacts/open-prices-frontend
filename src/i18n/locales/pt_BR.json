@@ -245,7 +245,8 @@
 		"LoadMore": "Carregar mais",
 		"PriceNumber": "Número de preços adicionados",
 		"ScanNumber": "Número de escaneamentos adicionadas",
-		"Title": "Principais produtos"
+		"Title": "Principais produtos",
+		"ProductTotal": "{count} produtos"
 	},
 	"ProofCard": {
 		"Proof": "Demonstração",

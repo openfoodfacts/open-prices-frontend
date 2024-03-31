@@ -245,7 +245,8 @@
 		"LoadMore": "Muat lebih banyak",
 		"PriceNumber": "Jumlah harga yang ditambahkan",
 		"ScanNumber": "Jumlah pemindaian yang ditambahkan",
-		"Title": "Produk teratas"
+		"Title": "Produk teratas",
+		"ProductTotal": "{count} produk"
 	},
 	"ProofCard": {
 		"Proof": "Bukti",

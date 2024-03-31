@@ -245,7 +245,8 @@
 		"LoadMore": "crwdns246684:0crwdne246684:0",
 		"PriceNumber": "crwdns246688:0crwdne246688:0",
 		"ScanNumber": "crwdns246690:0crwdne246690:0",
-		"Title": "crwdns246692:0crwdne246692:0"
+		"Title": "crwdns246692:0crwdne246692:0",
+		"ProductTotal": "crwdns247978:0{count}crwdne247978:0"
 	},
 	"ProofCard": {
 		"Proof": "crwdns247810:0crwdne247810:0",

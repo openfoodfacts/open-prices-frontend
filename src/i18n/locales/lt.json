@@ -135,7 +135,7 @@
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
-		"About": "About",
+		"About": "Apie",
 		"Stats": "Statistika",
 		"TagLine": "{name} – tai {url} projektas."
 	},
@@ -245,7 +245,8 @@
 		"LoadMore": "Įkelti daugiau",
 		"PriceNumber": "Pridėtų kainų skaičius",
 		"ScanNumber": "Pridėtų nuskaitymų skaičius",
-		"Title": "Populiariausi produktai"
+		"Title": "Populiariausi produktai",
+		"ProductTotal": "{count} produktai (-ų)"
 	},
 	"ProofCard": {
 		"Proof": "Įrodymai",

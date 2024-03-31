@@ -245,7 +245,8 @@
 		"LoadMore": "Load more",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
-		"Title": "Top products"
+		"Title": "Top products",
+		"ProductTotal": "{count} தயாரிப்புகள்"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

@@ -245,7 +245,8 @@
 		"LoadMore": "Daha fazla yükle",
 		"PriceNumber": "Eklenen fiyat sayısı",
 		"ScanNumber": "Eklenen tarama sayısı",
-		"Title": "En iyi ürünler"
+		"Title": "En iyi ürünler",
+		"ProductTotal": "{count} ürün"
 	},
 	"ProofCard": {
 		"Proof": "Kanıt",

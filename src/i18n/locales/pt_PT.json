@@ -245,7 +245,8 @@
 		"LoadMore": "Carregar mais",
 		"PriceNumber": "Número de preços adicionados",
 		"ScanNumber": "Número de digitalizações adicionadas",
-		"Title": "Top products"
+		"Title": "Top products",
+		"ProductTotal": "{count} produtos"
 	},
 	"ProofCard": {
 		"Proof": "Comprovativo",

@@ -245,7 +245,8 @@
 		"LoadMore": "Načíst další",
 		"PriceNumber": "Počet přidaných cen",
 		"ScanNumber": "Počet přidaných skenů",
-		"Title": "Nejlepší produkty"
+		"Title": "Nejlepší produkty",
+		"ProductTotal": "{count} produktů"
 	},
 	"ProofCard": {
 		"Proof": "Důkaz",
