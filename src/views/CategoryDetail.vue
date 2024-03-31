@@ -30,7 +30,7 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <ProductFilterMenu :productFilter="productFilter" @update:productFilter="toggleProductFilter($event)"></ProductFilterMenu>
+      <FilterMenu kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)"></FilterMenu>
       <ProductOrderMenu :productOrder="productOrder" @update:productOrder="selectProductOrder($event)"></ProductOrderMenu>
     </v-col>
   </v-row>
@@ -55,7 +55,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    'ProductFilterMenu': defineAsyncComponent(() => import('../components/ProductFilterMenu.vue')),
+    'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     'ProductOrderMenu': defineAsyncComponent(() => import('../components/ProductOrderMenu.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
@@ -64,7 +64,7 @@ export default {
   data() {
     return {
       // filter & order
-      productFilter: '',
+      currentFilter: '',
       productOrder: constants.PRODUCT_ORDER_LIST[1].key,
       // data
       category: null,  // see init
@@ -77,14 +77,14 @@ export default {
   computed: {
     getProductsParams() {
       let defaultParams = { categories_tags__contains: this.category, order_by: `${this.productOrder}`, page: this.categoryProductPage }
-      if (this.productFilter && this.productFilter === 'hide_price_count_gte_1') {
+      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
       return defaultParams
     },
   },
   mounted() {
-    this.productFilter = this.$route.query[constants.FILTER_PARAM] || this.productFilter
+    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.productOrder = this.$route.query[constants.ORDER_PARAM] || this.productOrder
     this.initCategory()
   },
@@ -107,8 +107,8 @@ export default {
         })
     },
     toggleProductFilter(filterKey) {
-      this.productFilter = this.productFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.productFilter } })
+      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initCategory() will be called in watch $route
     },
     selectProductOrder(orderKey) {
