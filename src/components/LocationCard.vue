@@ -20,7 +20,7 @@ export default {
   },
   props: {
     location: {
-      type: Object,
+      type: [Object, null],
       required: true
     },
     readonly: {

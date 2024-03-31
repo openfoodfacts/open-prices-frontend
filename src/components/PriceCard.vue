@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import utils from '../utils.js'
 import { defineAsyncComponent } from 'vue'
+import utils from '../utils.js'
 
 export default {
   components: {

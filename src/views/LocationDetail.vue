@@ -5,13 +5,13 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="location" class="mt-0">
+  <v-row class="mt-0">
     <v-col v-if="locationFound" cols="12">
       <OpenStreetMapLink :location="location" display="button"></OpenStreetMapLink>
       <ShareButton></ShareButton>
     </v-col>
     <v-col v-else cols="12">
-      <v-alert type="error" variant="outlined" icon="mdi-alert">
+      <v-alert v-if="!loading" type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('LocationDetail.LocationNotFound') }}</i>
       </v-alert>
     </v-col>
@@ -44,7 +44,6 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
-import utils from '../utils.js'
 import constants from '../constants'
 
 export default {
