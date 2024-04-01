@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.52.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.52.2...v1.52.3) (2024-04-01)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#492](https://github.com/openfoodfacts/open-prices-frontend/issues/492)) ([9ff52f8](https://github.com/openfoodfacts/open-prices-frontend/commit/9ff52f8eda51a7d8ff301c3510130d40179fd6f7))
+* **l10n:** New Crowdin translations to review and merge ([#494](https://github.com/openfoodfacts/open-prices-frontend/issues/494)) ([e9fd612](https://github.com/openfoodfacts/open-prices-frontend/commit/e9fd61287cb2b866b68b215b941e3eebe5720861))
+* **l10n:** New Crowdin translations to review and merge ([#496](https://github.com/openfoodfacts/open-prices-frontend/issues/496)) ([7438977](https://github.com/openfoodfacts/open-prices-frontend/commit/74389770151e94da2e957a8cb3c120b011824d73))
+* new PriceInputRow component ([#495](https://github.com/openfoodfacts/open-prices-frontend/issues/495)) ([7e3d266](https://github.com/openfoodfacts/open-prices-frontend/commit/7e3d266ba4b0a1c404eafcbdede1ebaf83fbe257))
+
 ## [1.52.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.52.1...v1.52.2) (2024-03-31)
 
 
