@@ -40,7 +40,6 @@
 		"Create": "Stwórz",
 		"PriceDetails": {
 			"Discount": "Promocja?",
-			"Currency": "Waluta",
 			"Label": "Cena",
 			"LabelDiscounted": "Cena promocyjna",
 			"LabelFull": "Pełna cena",
@@ -205,6 +204,12 @@
 		"Save": "Zapisz",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
+	},
+	"PriceForm": {
+		"Discount": "Promocja?",
+		"Label": "Cena",
+		"LabelDiscounted": "Cena promocyjna",
+		"LabelFull": "Pełna cena"
 	},
 	"PriceList": {
 		"LoadMore": "Załaduj więcej",
