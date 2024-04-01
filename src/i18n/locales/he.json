@@ -40,7 +40,6 @@
 		"Create": "יצירה",
 		"PriceDetails": {
 			"Discount": "הנחה?",
-			"Currency": "מטבע",
 			"Label": "מחיר",
 			"LabelDiscounted": "מחיר מוזל",
 			"LabelFull": "מחיר מלא",
@@ -205,6 +204,12 @@
 		"Save": "שמירה",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
+	},
+	"PriceForm": {
+		"Discount": "הנחה?",
+		"Label": "מחיר",
+		"LabelDiscounted": "מחיר מוזל",
+		"LabelFull": "מחיר מלא"
 	},
 	"PriceList": {
 		"LoadMore": "לטעון עוד",
