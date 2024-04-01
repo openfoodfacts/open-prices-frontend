@@ -40,7 +40,6 @@
 		"Create": "Sortu",
 		"PriceDetails": {
 			"Discount": "Deskonturik?",
-			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "Deskontua egindako prezioa",
 			"LabelFull": "Prezio osoa",
@@ -205,6 +204,12 @@
 		"Save": "Gorde",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
+	},
+	"PriceForm": {
+		"Discount": "Deskonturik?",
+		"Label": "Price",
+		"LabelDiscounted": "Deskontua egindako prezioa",
+		"LabelFull": "Prezio osoa"
 	},
 	"PriceList": {
 		"LoadMore": "Load more",
