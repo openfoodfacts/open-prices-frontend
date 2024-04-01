@@ -40,7 +40,6 @@
 		"Create": "Crea",
 		"PriceDetails": {
 			"Discount": "Descompte?",
-			"Currency": "Currency",
 			"Label": "Preu",
 			"LabelDiscounted": "Preu rebaixat",
 			"LabelFull": "Preu original",
@@ -205,6 +204,12 @@
 		"Save": "Desa",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
+	},
+	"PriceForm": {
+		"Discount": "Descompte?",
+		"Label": "Preu",
+		"LabelDiscounted": "Preu rebaixat",
+		"LabelFull": "Preu original"
 	},
 	"PriceList": {
 		"LoadMore": "Carrega mes ",
