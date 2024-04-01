@@ -23,7 +23,14 @@ export default {
     },
     productQuantityWithUnitDisplay() {
       if (this.productQuantityUnitDisplay === constants.PRODUCT_QUANTITY_UNIT_ML) {
-        return this.$t('ProductCard.ProductQuantityMililitre', [this.productQuantity])
+        if (this.productQuantity >= 1000) {
+          return this.$t('ProductCard.ProductQuantityLitre', [this.productQuantity / 1000])
+        } else {
+          return this.$t('ProductCard.ProductQuantityMililitre', [this.productQuantity])
+        }
+      }
+      if (this.productQuantity >= 1000) {
+        return this.$t('ProductCard.ProductQuantityKilogram', [this.productQuantity / 1000])
       }
       return this.$t('ProductCard.ProductQuantityGram', [this.productQuantity])
     },
