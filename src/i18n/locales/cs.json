@@ -40,7 +40,6 @@
 		"Create": "Vytvořit",
 		"PriceDetails": {
 			"Discount": "Sleva?",
-			"Currency": "Měna",
 			"Label": "Cena",
 			"LabelDiscounted": "Snížená cena",
 			"LabelFull": "Plná cena",
@@ -205,6 +204,12 @@
 		"Save": "Uložit",
 		"Success": "Cena upravena!",
 		"Title": "Upravit cenu"
+	},
+	"PriceForm": {
+		"Discount": "Sleva?",
+		"Label": "Cena",
+		"LabelDiscounted": "Snížená cena",
+		"LabelFull": "Plná cena"
 	},
 	"PriceList": {
 		"LoadMore": "Načíst další",
