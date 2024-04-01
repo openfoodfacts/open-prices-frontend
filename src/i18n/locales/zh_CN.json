@@ -40,7 +40,6 @@
 		"Create": "创建",
 		"PriceDetails": {
 			"Discount": "折扣？",
-			"Currency": "货币",
 			"Label": "价格",
 			"LabelDiscounted": "打折后价格",
 			"LabelFull": "全价",
@@ -205,6 +204,12 @@
 		"Save": "儲存",
 		"Success": "价格已修改！",
 		"Title": "编辑价格"
+	},
+	"PriceForm": {
+		"Discount": "折扣？",
+		"Label": "价格",
+		"LabelDiscounted": "打折后价格",
+		"LabelFull": "全价"
 	},
 	"PriceList": {
 		"LoadMore": "載入更多",
