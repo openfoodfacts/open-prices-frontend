@@ -3,7 +3,7 @@
     <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" sm="6">
       <v-text-field
         v-model="priceForm.price"
-        :label="priceForm.price_is_discounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
+        :label="priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label')"
         type="number"
         inputmode="decimal"
         min="0"
@@ -18,7 +18,7 @@
     <v-col v-if="priceForm.price_is_discounted" cols="6">
       <v-text-field
         v-model="priceForm.price_without_discount"
-        :label="$t('AddPriceSingle.PriceDetails.LabelFull')"
+        :label="$t('PriceForm.LabelFull')"
         type="number"
         inputmode="decimal"
         min="0"
@@ -28,7 +28,7 @@
     </v-col>
   </v-row>
   <div class="d-inline">
-    <v-checkbox v-model="priceForm.price_is_discounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
+    <v-checkbox v-model="priceForm.price_is_discounted" :label="$t('PriceForm.Discount')" hide-details="auto"></v-checkbox>
   </div>
 
   <ChangeCurrencyDialog
