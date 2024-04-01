@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.52.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.52.3...v1.52.4) (2024-04-01)
+
+
+### Bug Fixes
+
+* **l10n:** fix missing translation token. closes [#497](https://github.com/openfoodfacts/open-prices-frontend/issues/497) ([b70c3c8](https://github.com/openfoodfacts/open-prices-frontend/commit/b70c3c8b63f99b6d093c80120146f9e0162a78da))
+
+
+### Technical
+
+* **products:** show kg/L if quantity &gt; 1000 ([#499](https://github.com/openfoodfacts/open-prices-frontend/issues/499)) ([5aaa528](https://github.com/openfoodfacts/open-prices-frontend/commit/5aaa5287f1c82e489ac63ac496c27d38f3d13121))
+
 ## [1.52.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.52.2...v1.52.3) (2024-04-01)
 
 
