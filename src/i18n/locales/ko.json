@@ -40,7 +40,6 @@
 		"Create": "만들기",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
@@ -205,6 +204,12 @@
 		"Save": "저장",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
+	},
+	"PriceForm": {
+		"Discount": "Discount?",
+		"Label": "Price",
+		"LabelDiscounted": "Discounted price",
+		"LabelFull": "Full price"
 	},
 	"PriceList": {
 		"LoadMore": "더 불러오기",
