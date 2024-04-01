@@ -63,7 +63,7 @@
           </v-row>
           <v-row v-if="proofType === 'RECEIPT'" class="mt-0">
             <v-col>
-              <h3 class="mb-1">{{ $t('AddPriceMultiple.ProofDetails.Privacy') }}</h3>
+              <h3 class="mb-1">{{ $t('ProofDetail.Privacy') }}</h3>
               <p class="text-caption text-warning">
                 <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
                 <i>{{ $t('AddPriceMultiple.ProofDetails.PrivateWarning') }}</i>
