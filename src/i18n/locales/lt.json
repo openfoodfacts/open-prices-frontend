@@ -40,7 +40,6 @@
 		"Create": "Kurti",
 		"PriceDetails": {
 			"Discount": "Nuolaida?",
-			"Currency": "Valiuta",
 			"Label": "Kaina",
 			"LabelDiscounted": "Sumažinta kaina",
 			"LabelFull": "Visa kaina",
@@ -205,6 +204,12 @@
 		"Save": "Išsaugoti",
 		"Success": "Kaina redaguota!",
 		"Title": "Redaguoti kainą"
+	},
+	"PriceForm": {
+		"Discount": "Nuolaida?",
+		"Label": "Kaina",
+		"LabelDiscounted": "Sumažinta kaina",
+		"LabelFull": "Visa kaina"
 	},
 	"PriceList": {
 		"LoadMore": "Įkelti daugiau",
