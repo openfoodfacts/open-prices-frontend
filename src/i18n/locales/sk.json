@@ -40,7 +40,6 @@
 		"Create": "Vytvoriť",
 		"PriceDetails": {
 			"Discount": "Zľava?",
-			"Currency": "Mena",
 			"Label": "Cena",
 			"LabelDiscounted": "Zvýhodnená cena",
 			"LabelFull": "Plná cena",
@@ -205,6 +204,12 @@
 		"Save": "Uložiť",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
+	},
+	"PriceForm": {
+		"Discount": "Zľava?",
+		"Label": "Cena",
+		"LabelDiscounted": "Zvýhodnená cena",
+		"LabelFull": "Plná cena"
 	},
 	"PriceList": {
 		"LoadMore": "Načítať ďalšie",
