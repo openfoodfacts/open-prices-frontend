@@ -40,7 +40,6 @@
 		"Create": "Түзүү",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
@@ -205,6 +204,12 @@
 		"Save": "Сактоо",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
+	},
+	"PriceForm": {
+		"Discount": "Discount?",
+		"Label": "Price",
+		"LabelDiscounted": "Discounted price",
+		"LabelFull": "Full price"
 	},
 	"PriceList": {
 		"LoadMore": "Load more",
