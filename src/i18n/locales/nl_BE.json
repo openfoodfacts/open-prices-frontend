@@ -40,7 +40,6 @@
 		"Create": "Aanmaken",
 		"PriceDetails": {
 			"Discount": "Korting?",
-			"Currency": "Valuta",
 			"Label": "Prijs",
 			"LabelDiscounted": "Gereduceerde prijs",
 			"LabelFull": "Totale prijs",
@@ -205,6 +204,12 @@
 		"Save": "Opslaan",
 		"Success": "Prijs gewijzigd!",
 		"Title": "Bewerk een prijs"
+	},
+	"PriceForm": {
+		"Discount": "Korting?",
+		"Label": "Prijs",
+		"LabelDiscounted": "Gereduceerde prijs",
+		"LabelFull": "Totale prijs"
 	},
 	"PriceList": {
 		"LoadMore": "Meer laden",
