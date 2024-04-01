@@ -1,37 +1,47 @@
 <template>
   <v-dialog>
     <v-card>
-      <v-card-title>{{ $t("ChangeCurrencyDialog.Title") }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+      <v-card-title>
+        {{ $t("ChangeCurrencyDialog.Title") }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
       </v-card-title>
-      <v-card-text>
-        <v-select
-          v-model="userLastCurrencyUsed"
-          :label="$t('ChangeCurrencyDialog.Currency')"
-          :items="userFavoriteCurrencies"
-          hide-details="auto"
-          class="mb-5"
 
-        ></v-select>
-        <v-col cols="12">
-          <v-btn class="mb-2" size="small" prepend-icon="mdi-cog-outline" @click="goToSettings">
-            <span>{{ $t('ChangeCurrencyDialog.AddCurrencies') }}</span>
-          </v-btn>
-          <p class="text-caption text-warning">
-            <i>{{ $t('ChangeCurrencyDialog.AddCurrenciesWarning') }}</i>
-          </p>
-        </v-col>
-        <v-col cols="12">
-          <v-btn class="mt-2" @click="selectedCurrency">
-            {{ $t('ChangeCurrencyDialog.Select', { currency_code: userLastCurrencyUsed }) }}
-          </v-btn>
-        </v-col>
+      <v-divider></v-divider>
+
+      <v-card-text>
+        <v-row>
+          <v-col cols="12">
+            <v-select
+              v-model="userLastCurrencyUsed"
+              :label="$t('ChangeCurrencyDialog.Currency')"
+              :items="userFavoriteCurrencies"
+              hide-details="auto"
+            ></v-select>
+          </v-col>
+          <v-col cols="12">
+            <v-btn class="mb-2" size="small" prepend-icon="mdi-cog-outline" @click="goToSettings">
+              <span>{{ $t('ChangeCurrencyDialog.AddCurrencies') }}</span>
+            </v-btn>
+            <p class="text-caption text-warning">
+              <i>{{ $t('ChangeCurrencyDialog.AddCurrenciesWarning') }}</i>
+            </p>
+          </v-col>
+        </v-row>
       </v-card-text>
+
+      <v-divider></v-divider>
+
+      <v-card-actions>
+        <v-btn elevation="1" @click="selectedCurrency">
+          {{ $t('ChangeCurrencyDialog.Select', { currency_code: userLastCurrencyUsed }) }}
+        </v-btn>
+      </v-card-actions>
     </v-card>
   </v-dialog>
 </template>
 
 <script>
 import { useAppStore } from '../store'
+
 export default {
   data() {
     return {
@@ -41,6 +51,7 @@ export default {
   },
   computed: {
   },
+  emits: ['newCurrencySelected', 'close'],
   mounted() {
     this.getCurrencyData()
   },
@@ -57,7 +68,7 @@ export default {
       this.close()
     },
     goToSettings() {
-      this.$router.push({ path: "/settings/" })
+      this.$router.push({ path: "/settings" })
     },
     close() {
       this.$emit('close')
