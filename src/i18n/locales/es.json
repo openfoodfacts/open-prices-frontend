@@ -40,7 +40,6 @@
 		"Create": "Crear",
 		"PriceDetails": {
 			"Discount": "¿Descuento?",
-			"Currency": "Moneda",
 			"Label": "Precio",
 			"LabelDiscounted": "Precio con descuento",
 			"LabelFull": "Precio original",
@@ -205,6 +204,12 @@
 		"Save": "Guardar",
 		"Success": "¡Precio editado!",
 		"Title": "Editar un precio"
+	},
+	"PriceForm": {
+		"Discount": "¿Descuento?",
+		"Label": "Precio",
+		"LabelDiscounted": "Precio con descuento",
+		"LabelFull": "Precio original"
 	},
 	"PriceList": {
 		"LoadMore": "Cargar más",

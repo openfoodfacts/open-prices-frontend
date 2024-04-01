@@ -40,7 +40,6 @@
 		"Create": "Oluştur",
 		"PriceDetails": {
 			"Discount": "İndirim?",
-			"Currency": "Kur",
 			"Label": "Fiyat",
 			"LabelDiscounted": "İndirimli fiyat",
 			"LabelFull": "Tam fiyat",
@@ -205,6 +204,12 @@
 		"Save": "Kaydet",
 		"Success": "Fiyat düzenlendi!",
 		"Title": "Fiyatı düzenle"
+	},
+	"PriceForm": {
+		"Discount": "İndirim?",
+		"Label": "Fiyat",
+		"LabelDiscounted": "İndirimli fiyat",
+		"LabelFull": "Tam fiyat"
 	},
 	"PriceList": {
 		"LoadMore": "Daha fazla yükle",

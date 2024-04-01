@@ -40,7 +40,6 @@
 		"Create": "Créer",
 		"PriceDetails": {
 			"Discount": "Promo ?",
-			"Currency": "Devise",
 			"Label": "Prix",
 			"LabelDiscounted": "Prix en promo",
 			"LabelFull": "Prix d'origine",
@@ -205,6 +204,12 @@
 		"Save": "Enregistrer",
 		"Success": "Prix modifié !",
 		"Title": "Modifier un prix"
+	},
+	"PriceForm": {
+		"Discount": "Promo ?",
+		"Label": "Prix",
+		"LabelDiscounted": "Prix en promo",
+		"LabelFull": "Prix d'origine"
 	},
 	"PriceList": {
 		"LoadMore": "Voir plus",

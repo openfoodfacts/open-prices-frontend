@@ -40,7 +40,6 @@
 		"Create": "Create",
 		"PriceDetails": {
 			"Discount": "ディスカウント",
-			"Currency": "Currency",
 			"Label": "Price",
 			"LabelDiscounted": "割引価格",
 			"LabelFull": "正規価格",
@@ -205,6 +204,12 @@
 		"Save": "保存",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
+	},
+	"PriceForm": {
+		"Discount": "ディスカウント",
+		"Label": "Price",
+		"LabelDiscounted": "割引価格",
+		"LabelFull": "正規価格"
 	},
 	"PriceList": {
 		"LoadMore": "もっと読み込む",

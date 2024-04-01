@@ -40,7 +40,6 @@
 		"Create": "Buat",
 		"PriceDetails": {
 			"Discount": "Diskon?",
-			"Currency": "Mata uang",
 			"Label": "Harga",
 			"LabelDiscounted": "Harga sesudah diskon",
 			"LabelFull": "Harga penuh",
@@ -205,6 +204,12 @@
 		"Save": "menyimpan ",
 		"Success": "Harga diubah!",
 		"Title": "Ubah harga"
+	},
+	"PriceForm": {
+		"Discount": "Diskon?",
+		"Label": "Harga",
+		"LabelDiscounted": "Harga sesudah diskon",
+		"LabelFull": "Harga penuh"
 	},
 	"PriceList": {
 		"LoadMore": "Muat lebih banyak",

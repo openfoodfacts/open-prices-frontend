@@ -40,7 +40,6 @@
 		"Create": "Створити",
 		"PriceDetails": {
 			"Discount": "Знижка?",
-			"Currency": "Currency",
 			"Label": "Ціна",
 			"LabelDiscounted": "Ціна зі знижкою",
 			"LabelFull": "Повна ціна",
@@ -205,6 +204,12 @@
 		"Save": "Зберегти",
 		"Success": "Ціну відредаговано!",
 		"Title": "Редагувати ціни"
+	},
+	"PriceForm": {
+		"Discount": "Знижка?",
+		"Label": "Ціна",
+		"LabelDiscounted": "Ціна зі знижкою",
+		"LabelFull": "Повна ціна"
 	},
 	"PriceList": {
 		"LoadMore": "Завантажити більше",

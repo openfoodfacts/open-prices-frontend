@@ -40,7 +40,6 @@
 		"Create": "Create",
 		"PriceDetails": {
 			"Discount": "छूट?",
-			"Currency": "Currency",
 			"Label": "कीमत",
 			"LabelDiscounted": "छूट की दर",
 			"LabelFull": "पूरी कीमत",
@@ -205,6 +204,12 @@
 		"Save": "सेव़",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
+	},
+	"PriceForm": {
+		"Discount": "छूट?",
+		"Label": "कीमत",
+		"LabelDiscounted": "छूट की दर",
+		"LabelFull": "पूरी कीमत"
 	},
 	"PriceList": {
 		"LoadMore": "अधिक लोड करें",
