@@ -40,7 +40,6 @@
 		"Create": "Luo",
 		"PriceDetails": {
 			"Discount": "Alennus?",
-			"Currency": "Valuutta",
 			"Label": "Hinta",
 			"LabelDiscounted": "Alennettu hinta",
 			"LabelFull": "Täysi hinta",
@@ -205,6 +204,12 @@
 		"Save": "Tallenna",
 		"Success": "Hinta muokattu!",
 		"Title": "Muokkaa hintaa"
+	},
+	"PriceForm": {
+		"Discount": "Alennus?",
+		"Label": "Hinta",
+		"LabelDiscounted": "Alennettu hinta",
+		"LabelFull": "Täysi hinta"
 	},
 	"PriceList": {
 		"LoadMore": "Lataa enemmän",
