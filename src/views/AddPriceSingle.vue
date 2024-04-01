@@ -112,37 +112,7 @@
                 </v-item>
               </v-item-group>
             </h3>
-            <v-row>
-              <v-col :cols="addPriceSingleForm.price_is_discounted ? '6' : '12'" sm="6">
-                <v-text-field
-                  v-model="addPriceSingleForm.price"
-                  :label="addPriceSingleForm.price_is_discounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
-                  type="number"
-                  inputmode="decimal"
-                  min="0"
-                  hide-details="auto"
-                  :suffix="addPriceSingleForm.currency">
-                  <template v-slot:prepend-inner>
-                    <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
-                    <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true" />
-                  </template>
-              </v-text-field>
-              </v-col>
-              <v-col v-if="addPriceSingleForm.price_is_discounted" cols="6">
-                <v-text-field
-                  v-model="addPriceSingleForm.price_without_discount"
-                  :label="$t('AddPriceSingle.PriceDetails.LabelFull')"
-                  type="number"
-                  inputmode="decimal"
-                  min="0"
-                  hide-details="auto"
-                  :suffix="addPriceSingleForm.currency">
-                </v-text-field>
-              </v-col>
-            </v-row>
-            <div class="d-inline">
-              <v-checkbox v-model="addPriceSingleForm.price_is_discounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
-            </div>
+            <PriceInputRow :priceForm="addPriceSingleForm"></PriceInputRow>
             <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.PriceDetails.Proof') }}</h3>
             <v-row>
               <v-col>
@@ -285,12 +255,6 @@
     @recentProofSelected="handleRecentProofSelected($event)"
     @close="userRecentProofsDialog = false"
   ></UserRecentProofsDialog>
-  <ChangeCurrencyDialog
-    v-if="changeCurrencyDialog"
-    v-model="changeCurrencyDialog"
-    @newCurrencySelected="setCurrencyData($event)"
-    @close="changeCurrencyDialog = false"
-  ></ChangeCurrencyDialog>
 </template>
 
 <script>
@@ -313,12 +277,12 @@ Compressor.setDefaults({
 
 export default {
   components: {
+    'PriceInputRow': defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
     'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
     'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue')),
     'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
-    'ChangeCurrencyDialog': defineAsyncComponent(() => import('../components/ChangeCurrencyDialog.vue')),
   },
   data() {
     return {
@@ -368,8 +332,6 @@ export default {
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
       ],
-      // currency selection
-      changeCurrencyDialog: false,
     }
   },
   computed: {
@@ -547,9 +509,6 @@ export default {
     isSelectedLocation(location) {
       return this.locationSelectedDisplayName && this.locationSelectedDisplayName === location.display_name
     },
-    setCurrencyData(currency) {
-      this.addPriceSingleForm.currency = currency
-    },
     createPrice() {
       this.createPriceLoading = true
       this.appStore.setLastCurrencyUsed(this.addPriceSingleForm.currency)
@@ -602,11 +561,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.icon-info-currency {
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-}
-</style>

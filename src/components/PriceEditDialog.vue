@@ -18,33 +18,7 @@
       <v-divider></v-divider>
 
       <v-card-text>
-        <v-row>
-          <v-col :cols="updatePriceForm.price_is_discounted ? '6' : '12'" sm="6">
-            <v-text-field
-              v-model="updatePriceForm.price"
-              :label="updatePriceForm.price_is_discounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
-              type="number"
-              inputmode="decimal"
-              min="0"
-              hide-details="auto"
-              :suffix="updatePriceForm.currency">
-            </v-text-field>
-          </v-col>
-          <v-col v-if="updatePriceForm.price_is_discounted" cols="6">
-            <v-text-field
-              v-model="updatePriceForm.price_without_discount"
-              :label="$t('AddPriceSingle.PriceDetails.LabelFull')"
-              type="number"
-              inputmode="decimal"
-              min="0"
-              hide-details="auto"
-              :suffix="updatePriceForm.currency">
-            </v-text-field>
-          </v-col>
-        </v-row>
-        <div class="d-inline">
-          <v-checkbox v-model="updatePriceForm.price_is_discounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
-        </div>
+        <PriceInputRow :priceForm="updatePriceForm"></PriceInputRow>
       </v-card-text>
 
       <v-divider></v-divider>
@@ -66,10 +40,11 @@ import api from '../services/api'
 
 export default {
   components: {
-    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    'PriceInputRow': defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
   },
   props: {
-    'price': null,
+    price: null,
   },
   data() {
     return {

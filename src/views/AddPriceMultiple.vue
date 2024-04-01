@@ -244,38 +244,7 @@
                 </v-item>
             </v-item-group>
           </h3>
-          <v-row>
-            <v-col :cols="productPriceForm.price_is_discounted ? '6' : '12'" sm="6">
-              <v-text-field
-                v-model="productPriceForm.price"
-                :label="productPriceForm.price_is_discounted ? $t('AddPriceSingle.PriceDetails.LabelDiscounted') : $t('AddPriceSingle.PriceDetails.Label')"
-                type="number"
-                inputmode="decimal"
-                min="0"
-                hide-details="auto"
-                :suffix="productPriceForm.currency"
-                >
-                  <template v-slot:prepend-inner>
-                    <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
-                    <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true" />
-                  </template>
-              </v-text-field>
-            </v-col>
-            <v-col v-if="productPriceForm.price_is_discounted" cols="6">
-              <v-text-field
-                v-model="productPriceForm.price_without_discount"
-                :label="$t('AddPriceSingle.PriceDetails.LabelFull')"
-                type="number"
-                inputmode="decimal"
-                min="0"
-                hide-details="auto"
-                :suffix="productPriceForm.currency"
-              ></v-text-field>
-            </v-col>
-          </v-row>
-          <div class="d-inline">
-            <v-checkbox v-model="productPriceForm.price_is_discounted" :label="$t('AddPriceSingle.PriceDetails.Discount')" hide-details="auto"></v-checkbox>
-          </div>
+          <PriceInputRow :priceForm="productPriceForm"></PriceInputRow>
         </v-card-text>
         <v-divider></v-divider>
         <v-card-text>
@@ -356,12 +325,6 @@
     @recentProofSelected="handleRecentProofSelected($event)"
     @close="userRecentProofsDialog = false"
   ></UserRecentProofsDialog>
-  <ChangeCurrencyDialog
-    v-if="changeCurrencyDialog"
-    v-model="changeCurrencyDialog"
-    @newCurrencySelected="setCurrencyData($event)"
-    @close="changeCurrencyDialog = false"
-  ></ChangeCurrencyDialog>
 </template>
 
 <script>
@@ -383,12 +346,12 @@ Compressor.setDefaults({
 export default {
   components: {
     'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue')),
+    'PriceInputRow': defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
     'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
     'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
     'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
-    'ChangeCurrencyDialog': defineAsyncComponent(() => import('../components/ChangeCurrencyDialog.vue')),
   },
   data() {
     return {
@@ -446,8 +409,6 @@ export default {
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
       ],
-      // currency selection
-      changeCurrencyDialog: false,
      }
   },
   computed: {
@@ -652,14 +613,10 @@ export default {
     },
     initNewProductPriceForm() {
       this.productMode = this.appStore.user.last_product_mode_used
-      this.isChangeCurrency = false
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))
       this.productPriceForm.currency = this.appStore.getUserLastCurrencyUsed
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
-    },
-    setCurrencyData(currency) {
-      this.productPriceForm.currency = currency
     },
     createPrice() {
       this.createPriceLoading = true
@@ -719,11 +676,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.icon-info-currency {
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-}
-</style>
