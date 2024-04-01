@@ -213,11 +213,11 @@
 	"ProductCard": {
 		"Brands": "Merken",
 		"BrandLower": "merk",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "Merk ontbreekt",
 		"BrandTotal": "{count} merken",
 		"Categories": "Categorieën",
 		"CategoriesLower": "categorieën",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "Categorie ontbreekt",
 		"CategoryTotal": "{count} categorieën",
 		"Labels": "Keurmerken",
 		"LabelsLower": "keurmerken",
@@ -230,7 +230,7 @@
 		"ProductQuantityLitre": "{0} l",
 		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityMissing": "Producthoeveelheid ontbreekt",
-		"QuantityMissing": "Quantity missing",
+		"QuantityMissing": "Hoeveelheid ontbreekt",
 		"UnknownProduct": "Onbekende productnaam"
 	},
 	"ProductDetail": {
