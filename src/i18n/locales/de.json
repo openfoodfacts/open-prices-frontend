@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Preisdatum",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
 		"Yes": "Ja",
-		"No": "Nein"
+		"No": "Nein",
+		"Food": "Nahrungsmittel",
+		"PetFood": "Haustierfutter",
+		"Beauty": "Pflegeprodukte",
+		"Products": "Produkte"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Wählen Sie Ihre bevorzugte Währung",
