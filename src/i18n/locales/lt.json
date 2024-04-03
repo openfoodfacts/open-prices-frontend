@@ -279,7 +279,6 @@
 	},
 	"ProofEdit": {
 		"Title": "Redaguoti įrodymą",
-		"PrivateWarning": "Jei savo įrodymą nustatysite kaip privatų, jis bus paslėptas nuo viešos peržiūros. Rekomenduojame paslėpti savo asmeninę informaciją redaguojant arba užlenkiant dokumentą, jei įmanoma.",
 		"Save": "Išsaugoti",
 		"Success": "Įrodymas redaguotas!"
 	},
