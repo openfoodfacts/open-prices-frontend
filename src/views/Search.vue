@@ -43,8 +43,8 @@
 </template>
 
 <script>
-import api from '../services/api'
 import { defineAsyncComponent } from 'vue'
+import api from '../services/api'
 
 export default {
   components: {

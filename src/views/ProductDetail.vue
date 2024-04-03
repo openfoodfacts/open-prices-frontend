@@ -55,10 +55,10 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 import utils from '../utils.js'
 import api from '../services/api'
-import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {

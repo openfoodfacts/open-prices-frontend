@@ -6,7 +6,7 @@
 
   <v-row v-if="!loading">
     <v-col>
-      <v-chip label variant="text" prepend-icon="mdi-food-outline">
+      <v-chip label variant="text" prepend-icon="mdi-database-outline">
         {{ $t('ProductList.ProductTotal', { count: productTotal }) }}
       </v-chip>
       <FilterMenu kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)"></FilterMenu>
@@ -28,9 +28,9 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 import api from '../services/api'
-import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
