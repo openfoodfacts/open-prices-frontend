@@ -279,7 +279,6 @@
 	},
 	"ProofEdit": {
 		"Title": "Upravit důkaz",
-		"PrivateWarning": "Když nastavíte svůj důkaz na soukromý, bude skryt před veřejností. Pokud je to možné, doporučujeme skrýt jakékoli osobní údaje zakrytím nebo přeložením dokumentu.",
 		"Save": "Uložit",
 		"Success": "Důkaz upraven!"
 	},
