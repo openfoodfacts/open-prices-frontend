@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "价格日期",
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
 		"Yes": "是",
-		"No": "否"
+		"No": "否",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "产品"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "选择您最喜欢的货币之一",
