@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.53.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.53.0...v1.53.1) (2024-04-03)
+
+
+### Technical
+
+* **Footer:** change source button style. add link. ref [#503](https://github.com/openfoodfacts/open-prices-frontend/issues/503) ([fb42d7e](https://github.com/openfoodfacts/open-prices-frontend/commit/fb42d7e83aacbe945f752173367ba485d40b4b99))
+* **l10n:** New Crowdin translations to review and merge ([#507](https://github.com/openfoodfacts/open-prices-frontend/issues/507)) ([e42aeba](https://github.com/openfoodfacts/open-prices-frontend/commit/e42aeba9115e10f2d5b4085a8e0a2f9d9b9c0119))
+* **l10n:** New Crowdin translations to review and merge ([#509](https://github.com/openfoodfacts/open-prices-frontend/issues/509)) ([8ca06e7](https://github.com/openfoodfacts/open-prices-frontend/commit/8ca06e77f0cf6469d12681bbca1028439b7ee5ce))
+
 ## [1.53.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.52.4...v1.53.0) (2024-04-03)
 
 
