@@ -17,9 +17,6 @@
           :label="isPublic ? $t('ProofDetail.Public') : $t('ProofDetail.Private')"
           hide-details
         ></v-switch>
-        <p class="text-caption text-warning">
-          <i>{{ $t('ProofEdit.PrivateWarning') }}</i>
-        </p>
       </v-card-text>
 
       <v-divider></v-divider>
