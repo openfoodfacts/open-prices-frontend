@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Yes": "Bai",
-		"No": "Ez"
+		"No": "Ez",
+		"Food": "Janaria",
+		"PetFood": "Animalien janaria",
+		"Beauty": "Norberaren zainketa",
+		"Products": "Produktuak"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
