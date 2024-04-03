@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Yes": "ถูกต้อง",
-		"No": "ไม่ใช่"
+		"No": "ไม่ใช่",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "ผลิตภัณฑ์"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
