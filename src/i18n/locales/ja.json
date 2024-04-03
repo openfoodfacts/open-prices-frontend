@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "価格日",
 		"SignInOFFAccount": "Google アカウントでログイン",
 		"Yes": "はい",
-		"No": "いいえ"
+		"No": "いいえ",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "製品"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "お気に入りの通貨を 1 つ選択してください",

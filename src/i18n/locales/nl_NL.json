@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Prijsdatum",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
 		"Yes": "Ja",
-		"No": "Nee"
+		"No": "Nee",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "Producten"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Kies een van je favoriete valuta's",

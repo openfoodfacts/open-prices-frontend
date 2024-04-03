@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Yes": "Ναι",
-		"No": "Όχι"
+		"No": "Όχι",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "Προϊόντα"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Επιλέξτε ένα από τα αγαπημένα σας νομίσματα",

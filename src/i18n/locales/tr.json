@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Fiyat tarihi",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"Yes": "Evet",
-		"No": "Hayır"
+		"No": "Hayır",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "Ürünler"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Favori para birimlerinizden birini seçin",

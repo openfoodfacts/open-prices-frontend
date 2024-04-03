@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "תאריך המחיר",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
 		"Yes": "כן",
-		"No": "לא"
+		"No": "לא",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "מוצרים"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "נא לבחור את אחד המטבעות המועדפים עליך",

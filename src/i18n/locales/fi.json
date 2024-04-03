@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Hinnan päivämäärä",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
 		"Yes": "Kyllä",
-		"No": "Ei"
+		"No": "Ei",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "Tuotteet"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Valitse yksi suosikkivaluutoistasi",

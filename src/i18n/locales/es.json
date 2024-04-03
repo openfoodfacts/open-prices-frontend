@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Fecha del precio",
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
 		"Yes": "Sí",
-		"No": "No"
+		"No": "No",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "Productos"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Elige una de tus divisas favoritas",

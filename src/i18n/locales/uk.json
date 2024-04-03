@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Дата ціни",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
 		"Yes": "Так",
-		"No": "Ні"
+		"No": "Ні",
+		"Food": "Їжа",
+		"PetFood": "Корм для домашніх тварин",
+		"Beauty": "Засоби гігієни",
+		"Products": "Товари"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Оберіть одну з ваших улюблених валют",
