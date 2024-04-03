@@ -9,10 +9,10 @@
           </template>
         </i18n-t>
         <br />
-        <v-chip v-for="source in sourceList" class="mr-1" label size="small" density="comfortable" :prepend-icon="source.icon">
+        <v-btn v-for="source in sourceList" class="mr-1" size="x-small" rounded="xl" active :prepend-icon="source.icon" :href="source.url" target="_blank">
           {{ source.label }}
           <v-tooltip activator="parent" open-on-click location="top">{{ source.name }}</v-tooltip>
-        </v-chip>
+        </v-btn>
       </v-col>
       <v-col cols="12" md="6" align="center">
         <v-btn class="mx-2" variant="text" href="https://prices.openfoodfacts.org" target="_blank">{{ $t('Footer.About') }}</v-btn>
