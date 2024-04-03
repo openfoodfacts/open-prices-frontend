@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Tanggal harga",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
 		"Yes": "Ya",
-		"No": "Tidak"
+		"No": "Tidak",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "Produk - produk"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Pilih salah satu mata uang favorit Anda",
