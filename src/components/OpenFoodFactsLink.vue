@@ -1,9 +1,9 @@
 <template>
-  <a v-if="display === 'link'" :href="getOFFUrl()" target="_blank">
-    {{ getOFFName() }}
+  <a v-if="display === 'link'" :href="getUrl" target="_blank">
+    {{ getName }}
   </a>
-  <v-btn v-else-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getOFFUrl()" target="_blank">
-    {{ getOFFName() }}
+  <v-btn v-else-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getUrl" target="_blank">
+    {{ getName }}
   </v-btn>
 </template>
 
@@ -15,15 +15,29 @@ import constants from '../constants'
 export default {
   props: {
     display: {
+      // link, button
       type: String,
       default: 'link'
     },
-    facet: {
+    source: {
+      // off, obf, opff, opf
       type: String,
       default: null
     },
-    value: null,
-    action: null
+    facet: {
+      // category, label, brand...
+      type: String,
+      default: null
+    },
+    value: {
+      type: String,
+      default: null
+    },
+    action: {
+      // add, view
+      type: String,
+      default: 'view'
+    }
   },
   data () {
     return {
@@ -33,23 +47,33 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    getOFFUrlWithLocale() {
-      return this.OFF_URL.replace('world', this.appStore.user.language)
-    }
-  },
-  methods: {
-    getOFFUrl() {
-      if (this.facet && this.value) {
-        return `${this.getOFFUrlWithLocale}/${this.facet}/${this.value}`
+    getSourceUrl() {
+      if (this.source) {
+        return constants[`${this.source.toUpperCase()}_URL`]
       }
-      return this.getOFFUrlWithLocale
+      return this.OFF_URL
     },
-    getOFFName() {
-      if (this.action === 'add') {
-        return this.$t('Common.AddToOFF', {name: this.OFF_NAME})
+    getUrlWithLocale() {
+      return this.getSourceUrl.replace('world', this.appStore.user.language)
+    },
+    getUrl() {
+      if (this.facet && this.value) {
+        return `${this.getUrlWithLocale}/${this.facet}/${this.value}`
+      }
+      return this.getUrlWithLocale
+    },
+    getSourceName() {
+      if (this.source) {
+        return constants[`${this.source.toUpperCase()}_NAME`]
       }
       return this.OFF_NAME
+    },
+    getName() {
+      if (this.action === 'add') {
+        return this.$t('Common.AddToOFF', {name: this.getSourceName})
+      }
+      return this.getSourceName
     }
-  }  
+  },
 }
 </script>
