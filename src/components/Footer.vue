@@ -9,21 +9,9 @@
           </template>
         </i18n-t>
         <br />
-        <v-chip class="mr-1" label size="small" density="comfortable" prepend-icon="mdi-food-outline">
-          {{ $t('Common.Food') }}
-          <v-tooltip activator="parent" open-on-click location="top">{{ OFF_NAME }}</v-tooltip>
-        </v-chip>
-        <v-chip class="mr-1" label size="small" density="comfortable" prepend-icon="mdi-lotion-outline">
-          {{ $t('Common.Beauty') }}
-          <v-tooltip activator="parent" open-on-click location="top">{{ OBF_NAME }}</v-tooltip>
-        </v-chip>
-        <v-chip class="mr-1" label size="small" density="comfortable" prepend-icon="mdi-bookshelf">
-          {{ $t('Common.Products') }}
-          <v-tooltip activator="parent" open-on-click location="top">{{ OPF_NAME }}</v-tooltip>
-        </v-chip>
-        <v-chip label size="small" density="comfortable" prepend-icon="mdi-paw">
-          {{ $t('Common.PetFood') }}
-          <v-tooltip activator="parent" open-on-click location="top">{{ OPFF_NAME }}</v-tooltip>
+        <v-chip v-for="source in sourceList" class="mr-1" label size="small" density="comfortable" :prepend-icon="source.icon">
+          {{ source.label }}
+          <v-tooltip activator="parent" open-on-click location="top">{{ source.name }}</v-tooltip>
         </v-chip>
       </v-col>
       <v-col cols="12" md="6" align="center">
@@ -46,10 +34,36 @@ export default {
   data() {
     return {
       APP_NAME: constants.APP_NAME,
-      OFF_NAME: constants.OFF_NAME,
-      OBF_NAME: constants.OBF_NAME,
-      OPFF_NAME: constants.OPFF_NAME,
-      OPF_NAME: constants.OPF_NAME,
+      sourceList: [
+        {
+          source: 'off',
+          name: constants.OFF_NAME,
+          label: this.$t('Common.Food'),
+          url: constants.OFF_URL,
+          icon: constants.OFF_ICON,
+        },
+        {
+          source: 'obf',
+          name: constants.OBF_NAME,
+          label: this.$t('Common.Beauty'),
+          url: constants.OBF_URL,
+          icon: constants.OBF_ICON,
+        },
+        {
+          source: 'opf',
+          name: constants.OPF_NAME,
+          label: this.$t('Common.Products'),
+          url: constants.OPF_URL,
+          icon: constants.OPF_ICON,
+        },
+        {
+          source: 'opff',
+          name: constants.OPFF_NAME,
+          label: this.$t('Common.PetFood'),
+          url: constants.OPFF_URL,
+          icon: constants.OPFF_ICON,
+        }
+      ]
     }
   },
 }
