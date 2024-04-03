@@ -1,22 +1,34 @@
+const OFF_NAME = 'Open Food Facts'
+const OBF_NAME = 'Open Beauty Facts'
+const OPFF_NAME = 'Open Pet Food Facts'
+const OPF_NAME = 'Open Products Facts'
+
 export default {
   APP_NAME: 'Open Prices',
-  OFF_NAME: 'Open Food Facts',
+  OFF_NAME: OFF_NAME,
   OFF_URL: 'https://world.openfoodfacts.org',
   OFF_ICON: 'mdi-food-apple-outline',
   OFF_WIKI_URL: 'https://wiki.openfoodfacts.org/Main_Page',
   OFF_WIKI_APP_URL: 'https://wiki.openfoodfacts.org/Project:Open-Prices',
   OFF_WIKI_GDPR_REQUEST_URL: 'https://wiki.openfoodfacts.org/GDPR_request',
-  OBF_NAME: 'Open Beauty Facts',
+  OBF_NAME: OBF_NAME,
   OBF_URL: 'https://world.openbeautyfacts.org',
   OBF_ICON: 'mdi-lotion-outline',
-  OPFF_NAME: 'Open Pet Food Facts',
+  OPFF_NAME: OPFF_NAME,
   OPFF_URL: 'https://world.openpetfoodfacts.org',
   OPFF_ICON: 'mdi-paw',
-  OPF_NAME: 'Open Products Facts',
+  OPF_NAME: OPF_NAME,
   OPF_URL: 'https://world.openproductsfacts.org',
   OPF_ICON: 'mdi-bookshelf',
   PRODUCT_QUANTITY_UNIT_G: 'g',
   PRODUCT_QUANTITY_UNIT_ML: 'ml',
+  SOURCE_PARAM: 'source',
+  PRODUCT_SOURCE_LIST: [
+    { key: 'off', value: OFF_NAME },
+    { key: 'obf', value: OBF_NAME },
+    { key: 'opf', value: OPF_NAME },
+    { key: 'opff', value: OPFF_NAME },
+  ],
   FILTER_PARAM: 'filter',
   PRODUCT_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterProductWithPriceCountHide' },
