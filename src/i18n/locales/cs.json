@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Datum ceny",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
 		"Yes": "Ano",
-		"No": "Ne"
+		"No": "Ne",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "Produkty"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Vyberte jednu ze svých oblíbených měn",
