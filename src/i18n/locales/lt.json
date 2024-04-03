@@ -121,7 +121,11 @@
 		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"Yes": "Taip",
-		"No": "Ne"
+		"No": "Ne",
+		"Food": "Food",
+		"PetFood": "Pet food",
+		"Beauty": "Personal care",
+		"Products": "Produktai"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Pasirinkite vieną iš savo mėgstamų valiutų",
