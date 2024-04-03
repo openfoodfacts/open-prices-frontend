@@ -66,24 +66,7 @@
               <h3 class="mb-1">{{ $t('ProofDetail.Privacy') }}</h3>
               <p class="text-caption text-warning">
                 <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
-                <i>{{ $t('AddPriceMultiple.ProofDetails.PrivateWarning') }}</i>
               </p>
-              <div v-if="proofFormFilled">
-                <v-switch
-                  v-model="proofIsPublic"
-                  density="compact"
-                  color="green"
-                  inset
-                  hide-details
-                  @change="updateIsPublicProof">
-                  <template v-slot:label>
-                    <v-icon start size="small" :icon="proofIsPublic ? 'mdi-lock-open-check' : 'mdi-lock-alert'" :color="proofIsPublic ? 'green' : 'red'"></v-icon>
-                    <span :class="proofIsPublic ? 'text-green' : 'text-red'">
-                      {{ proofIsPublic ? $t('ProofDetail.Public') : $t('ProofDetail.Private') }}
-                    </span>
-                  </template>
-                </v-switch>
-              </div>
             </v-col>
           </v-row>
         </v-card-text>
@@ -376,7 +359,6 @@ export default {
       userRecentProofsDialog: false,
       proofSelectedSuccessMessage: false,
       proofisSelected: false,
-      proofIsPublic: true,
       // location data
       locationSelector: false,
       locationSelectedDisplayName: '',
@@ -490,7 +472,6 @@ export default {
       this.proofImagePreview = this.getProofUrl(selectedProof)
       this.proofSelectedSuccessMessage = true
       this.proofisSelected = true
-      this.proofIsPublic = selectedProof.is_public
     },
     getProofUrl(proof) {
       return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
@@ -528,7 +509,6 @@ export default {
               const store = useAppStore()
               store.addProof(data)
               this.addPriceMultipleForm.proof_id = data['id']
-              this.proofIsPublic = data['is_public']
               this.proofImagePreview = URL.createObjectURL(proofImageCompressed)
               this.proofSuccessMessage = true
             } else {
@@ -549,21 +529,6 @@ export default {
       // .finally(() => {
       //   console.log('Compress complete')
       // })
-    },
-    updateIsPublicProof() {
-      const params = {
-        is_public: this.proofIsPublic
-      }
-      api
-        .updateProof(this.addPriceMultipleForm.proof_id, params)
-        .then((response) => {
-          // if response.status == 204
-          const store = useAppStore()
-          store.updateProof(this.addPriceMultipleForm.proof_id, params)
-        })
-        .catch((error) => {
-          console.log(error)
-        })
     },
     clearProof() {
       this.proofImage = null
