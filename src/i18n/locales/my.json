@@ -279,7 +279,6 @@
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"PrivateWarning": "When setting your proof to Private, it will be hidden from public view. We recommend hiding any personal information by redacting or folding the document, if possible.",
 		"Save": "သိမ်းဆည်းမည်",
 		"Success": "Proof edited!"
 	},

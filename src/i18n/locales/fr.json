@@ -279,7 +279,6 @@
 	},
 	"ProofEdit": {
 		"Title": "Modifier une preuve",
-		"PrivateWarning": "Lorsque vous définissez votre preuve à Privé, elle sera cachée de la vue publique. Nous vous recommandons de masquer toute information personnelle en modifiant ou en pliant le document si possible.",
 		"Save": "Enregistrer",
 		"Success": "Preuve modifiée !"
 	},

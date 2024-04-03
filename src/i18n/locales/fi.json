@@ -279,7 +279,6 @@
 	},
 	"ProofEdit": {
 		"Title": "Muokkaa todistetta",
-		"PrivateWarning": "Kun asetat todisteesi yksityiseksi, se piilotetaan yleisöltä. Suosittelemme piilottamaan henkilötiedot muokkaamalla tai taittamalla asiakirjan, jos mahdollista.",
 		"Save": "Tallenna",
 		"Success": "Todiste muokattu!"
 	},

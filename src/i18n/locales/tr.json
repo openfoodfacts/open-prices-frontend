@@ -279,7 +279,6 @@
 	},
 	"ProofEdit": {
 		"Title": "Bedeli düzenle",
-		"PrivateWarning": "Bedelinizi Özel olarak ayarladığınızda, herkese açık görünümden gizlenecektir. Mümkünse belgeyi düzenleyerek veya katlayarak tüm kişisel bilgileri gizlemenizi öneririz.",
 		"Save": "Kaydet",
 		"Success": "Bedel düzenlendi!"
 	},
