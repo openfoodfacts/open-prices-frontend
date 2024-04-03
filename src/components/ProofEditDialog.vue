@@ -7,7 +7,7 @@
 
       <v-divider></v-divider>
 
-      <v-card-text v-if="proof.type === 'RECEIPT'">
+      <v-card-text v-if="proofIsReceipt">
         <h3>{{ $t('ProofDetail.Privacy') }}</h3>
         <v-switch
           v-model="isPublic"
@@ -17,9 +17,6 @@
           :label="isPublic ? $t('ProofDetail.Public') : $t('ProofDetail.Private')"
           hide-details
         ></v-switch>
-        <p class="text-caption text-warning">
-          <i>{{ $t('ProofEdit.PrivateWarning') }}</i>
-        </p>
       </v-card-text>
 
       <v-divider></v-divider>
@@ -51,6 +48,9 @@ export default {
   },
   emits: ['update', 'close'],
   computed: {
+    proofIsReceipt() {
+      return this.proof.type === 'RECEIPT'
+    },
   },
   mounted() {
     this.isPublic = this.proof.is_public
