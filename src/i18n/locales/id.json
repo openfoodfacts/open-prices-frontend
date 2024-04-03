@@ -279,7 +279,6 @@
 	},
 	"ProofEdit": {
 		"Title": "Ubah bukti",
-		"PrivateWarning": "Jika pengaturan bukti Anda Pribadi, bukti tersebut akan disembunyikan dari publik. Kami sarankan untuk menyembunyikan informasi pribadi apa pun dengan menyunting atau melipat dokumen, jika memungkinkan.",
 		"Save": "menyimpan ",
 		"Success": "Bukti diperbarui!"
 	},
