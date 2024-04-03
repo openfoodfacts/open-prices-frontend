@@ -2,7 +2,7 @@
   <a v-if="display === 'link'" :href="getUrl" target="_blank">
     {{ getName }}
   </a>
-  <v-btn v-else-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getUrl" target="_blank">
+  <v-btn v-else-if="display === 'button'" size="small" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank">
     {{ getName }}
   </v-btn>
 </template>
@@ -43,10 +43,17 @@ export default {
     return {
       OFF_NAME: constants.OFF_NAME,
       OFF_URL: constants.OFF_URL,
+      OFF_ICON: constants.OFF_ICON,
     }
   },
   computed: {
     ...mapStores(useAppStore),
+    getSourceIcon() {
+      if (this.source) {
+        return constants[`${this.source.toUpperCase()}_ICON`]
+      }
+      return 'mdi-open-in-new'
+    },
     getSourceUrl() {
       if (this.source) {
         return constants[`${this.source.toUpperCase()}_URL`]
