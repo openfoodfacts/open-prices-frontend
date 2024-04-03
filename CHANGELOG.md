@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.53.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.52.4...v1.53.0) (2024-04-03)
+
+
+### Features
+
+* **Footer:** display the list of 4 sources (OFF, OBF, OPF, OPFF) ([#503](https://github.com/openfoodfacts/open-prices-frontend/issues/503)) ([b2e9c4e](https://github.com/openfoodfacts/open-prices-frontend/commit/b2e9c4e310f7e10e206f90087d496ac63b52e27c))
+
+
+### Technical
+
+* change OFF link url depending on product source ([#504](https://github.com/openfoodfacts/open-prices-frontend/issues/504)) ([8d92777](https://github.com/openfoodfacts/open-prices-frontend/commit/8d92777c53862c49155e9b80c1d3ed57a1d2338b))
+* disable allowing a user to set a receipt as private ([#506](https://github.com/openfoodfacts/open-prices-frontend/issues/506)) ([a0e2490](https://github.com/openfoodfacts/open-prices-frontend/commit/a0e2490afc7421709564fc71ca51a9ae940dc940))
+* **Footer:** update icons, use list. ref [#503](https://github.com/openfoodfacts/open-prices-frontend/issues/503) ([61989ad](https://github.com/openfoodfacts/open-prices-frontend/commit/61989adce56a411bd34c9f2c4a666b44f245fd6c))
+* improve drawer icons of top pages ([09dee6c](https://github.com/openfoodfacts/open-prices-frontend/commit/09dee6c01b13102b62c57320b3ff882bacdb1930))
+* **l10n:** New Crowdin translations to review and merge ([#500](https://github.com/openfoodfacts/open-prices-frontend/issues/500)) ([26ecf98](https://github.com/openfoodfacts/open-prices-frontend/commit/26ecf98d33bddeeee845504b4f536aae37071891))
+
 ## [1.52.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.52.3...v1.52.4) (2024-04-01)
 
 
