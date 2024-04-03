@@ -279,7 +279,6 @@
 	},
 	"ProofEdit": {
 		"Title": "Een bewijs bewerken",
-		"PrivateWarning": "Wanneer je je bewijs instelt op Privé, zal het verborgen worden in de publieke weergave. Wij raden aan persoonlijke informatie te verbergen door het document te veranderen of indien mogelijk te vouwen.",
 		"Save": "Opslaan",
 		"Success": "Bewijs aangepast!"
 	},
