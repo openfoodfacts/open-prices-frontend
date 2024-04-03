@@ -2,7 +2,7 @@
   <v-row>
     <v-col :cols="userIsProofOwner ? '11' : '12'">
       <ProofTypeChip class="mr-1" :proof="proof"></ProofTypeChip>
-      <ProofPrivateChip v-if="proof.type === 'RECEIPT'" class="mr-1" :proof="proof"></ProofPrivateChip>
+      <ProofPrivateChip v-if="proofIsPrivateReceipt" class="mr-1" :proof="proof"></ProofPrivateChip>
       <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()"></PriceCountChip>
       <RelativeDateTimeChip :dateTime="proof.created"></RelativeDateTimeChip>
     </v-col>
@@ -42,6 +42,12 @@ export default {
     },
     userIsProofOwner() {
       return this.username && (this.proof.owner === this.username)
+    },
+    proofIsReceipt() {
+      return this.proof.type === 'RECEIPT'
+    },
+    proofIsPrivateReceipt() {
+      return this.proofIsReceipt && !this.proof.is_public
     }
   },
   methods: {

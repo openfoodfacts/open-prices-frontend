@@ -3,7 +3,7 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <v-list-item v-if="proofIsReceipt && !proof.is_public" :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog" :disabled="!proofIsReceipt">{{ $t('Common.Edit') }}</v-list-item>
+        <v-list-item v-if="proofIsPrivateReceipt" :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog" :disabled="!proofIsReceipt">{{ $t('Common.Edit') }}</v-list-item>
         <v-list-item :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog" :disabled="!userCanDeleteProof">{{ $t('Common.Delete') }}</v-list-item>
       </v-list>
     </v-menu>
@@ -64,6 +64,9 @@ export default {
   computed: {
     proofIsReceipt() {
       return this.proof.type === 'RECEIPT'
+    },
+    proofIsPrivateReceipt() {
+      return this.proofIsReceipt && !this.proof.is_public
     },
     userCanDeleteProof() {
       // user must be proof owner
