@@ -9,7 +9,7 @@
       <v-chip label variant="text" prepend-icon="mdi-database-outline">
         {{ $t('ProductList.ProductTotal', { count: productTotal }) }}
       </v-chip>
-      <FilterMenu kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)"></FilterMenu>
+      <FilterMenu kind="product" :currentFilter="currentFilter" :currentSource="currentSource" @update:currentFilter="toggleProductFilter($event)" @update:currentSource="toggleProductSource($event)"></FilterMenu>
       <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)"></OrderMenu>
     </v-col>
   </v-row>
@@ -42,6 +42,7 @@ export default {
     return {
       // filter & order
       currentFilter: '',
+      currentSource: '',
       currentOrder: constants.PRODUCT_ORDER_LIST[1].key,
       // data
       productList: [],
@@ -56,11 +57,15 @@ export default {
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
+      if (this.currentSource) {
+        defaultParams['source'] = this.currentSource
+      }
       return defaultParams
     },
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentSource = this.$route.query[constants.SOURCE_PARAM] || this.currentSource
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initProductList()
   },
@@ -85,6 +90,13 @@ export default {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initProductList() will be called in watch $route
+    },
+    toggleProductSource(sourceKey) {
+      if (this.currentSource !== sourceKey) {
+        this.currentSource = sourceKey
+        this.$router.push({ query: { ...this.$route.query, [constants.SOURCE_PARAM]: this.currentSource } })
+        // this.initProductList() will be called in watch $route
+      }
     },
     selectProductOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
