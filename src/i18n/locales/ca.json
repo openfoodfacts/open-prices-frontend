@@ -122,9 +122,9 @@
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Yes": "Si",
 		"No": "No",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty",
+		"Food": "Menjar",
+		"PetFood": "Menjar per a mascotes",
+		"Beauty": "Bellesa",
 		"Products": "Productes"
 	},
 	"ChangeCurrencyDialog": {

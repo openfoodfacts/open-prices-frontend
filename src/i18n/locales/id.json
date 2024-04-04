@@ -122,9 +122,9 @@
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
 		"Yes": "Ya",
 		"No": "Tidak",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty",
+		"Food": "Makanan",
+		"PetFood": "Makanan hewan",
+		"Beauty": "Kecantikan",
 		"Products": "Produk - produk"
 	},
 	"ChangeCurrencyDialog": {
@@ -222,11 +222,11 @@
 	"ProductCard": {
 		"Brands": "Merek - merek",
 		"BrandLower": "merek",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "Merek tidak ada",
 		"BrandTotal": "{count} merek",
 		"Categories": "Kategori",
 		"CategoriesLower": "kategori",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "Kategori tidak ada",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Label - label",
 		"LabelsLower": "label - label",
@@ -239,7 +239,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Kuantitas produk tidak ada",
-		"QuantityMissing": "Quantity missing",
+		"QuantityMissing": "Jumlah tidak ada",
 		"UnknownProduct": "Nama produk tidak dikenal"
 	},
 	"ProductDetail": {
