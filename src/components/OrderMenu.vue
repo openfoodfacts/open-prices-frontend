@@ -1,10 +1,12 @@
 <template>
   <v-menu scroll-strategy="close">
     <template v-slot:activator="{ props }">
-      <v-btn v-bind="props" size="x-small" rounded="xl" prepend-icon="mdi-arrow-down" :append-icon="getCurrentOrderIcon" :active="!!currentOrder">{{ $t('Common.Order') }}</v-btn>
+      <v-btn v-bind="props" size="x-small" rounded="xl" prepend-icon="mdi-arrow-down" :append-icon="getCurrentOrderIcon" :active="!!currentOrder">
+        {{ $t('Common.Order') }}
+      </v-btn>
     </template>
     <v-list>
-      <v-list-item :slim="true" v-for="order in orderList" :key="order.key" :prepend-icon="order.icon" :active="currentOrder === order.key" @click="selectOrder(order.key)">
+      <v-list-item v-for="order in orderList" :key="order.key" :slim="true" :prepend-icon="order.icon" :active="currentOrder === order.key" @click="selectOrder(order.key)">
         {{ $t('Common.' + order.value) }}
       </v-list-item>
     </v-list>
@@ -33,8 +35,8 @@ export default {
       return this.kind === 'product' ? this.productOrderList : this.priceOrderList
     },
     getCurrentOrderIcon() {
-      let currentOrder = this.orderList.find(o => o.key === this.currentOrder)
-      return currentOrder ? currentOrder.icon : ''
+      let order = this.orderList.find(o => o.key === this.currentOrder)
+      return order ? order.icon : ''
     },
   },
   emits: ['update:currentOrder'],

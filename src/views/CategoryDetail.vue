@@ -27,7 +27,7 @@
     <v-col>
       <h2 class="text-h6 d-inline mr-2">{{ $t('CategoryDetail.TopProducts') }}</h2>
       <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-      <FilterMenu v-if="!loading" kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)"></FilterMenu>
+      <FilterMenu v-if="!loading" kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)" :hideSource="true"></FilterMenu>
       <OrderMenu v-if="!loading" kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)"></OrderMenu>
     </v-col>
   </v-row>
