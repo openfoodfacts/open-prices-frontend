@@ -120,11 +120,12 @@
 		"OrderPriceCreatedDESC": "Hinzugefügt am",
 		"OrderPriceDateDESC": "Preisdatum",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
+		"Source": "Quelle",
 		"Yes": "Ja",
 		"No": "Nein",
 		"Food": "Nahrungsmittel",
 		"PetFood": "Haustierfutter",
-		"Beauty": "Beauty",
+		"Beauty": "Schönheitspflege",
 		"Products": "Produkte"
 	},
 	"ChangeCurrencyDialog": {

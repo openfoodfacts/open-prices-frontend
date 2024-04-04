@@ -120,6 +120,7 @@
 		"OrderPriceCreatedDESC": "Lisäyspäivämäärä",
 		"OrderPriceDateDESC": "Hinnan päivämäärä",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
+		"Source": "Lähde",
 		"Yes": "Kyllä",
 		"No": "Ei",
 		"Food": "Food",
