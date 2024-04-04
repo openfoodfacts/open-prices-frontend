@@ -20,11 +20,11 @@
 		"TitleMultiple": "Add multiple prices in bulk"
 	},
 	"AddPriceMultiple": {
-		"Done": "Done",
+		"Done": "完成",
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "新增",
+			"Create": "创建",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
 			"Upload": "Upload"
@@ -37,7 +37,7 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "新增",
+		"Create": "创建",
 		"PriceDetails": {
 			"Discount": "Discount?",
 			"Label": "Price",
@@ -108,9 +108,9 @@
 	},
 	"Common": {
 		"AddToOFF": "Add to {name}",
-		"Delete": "刪除",
+		"Delete": "删除",
 		"Edit": "編輯",
-		"Filter": "Filter",
+		"Filter": "过滤器",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Order": "Order",
@@ -125,7 +125,7 @@
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty",
-		"Products": "產品"
+		"Products": "产品"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
@@ -145,7 +145,7 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "設定",
-		"SignIn": "登入",
+		"SignIn": "登录",
 		"SignOut": "登出"
 	},
 	"Home": {
@@ -200,7 +200,7 @@
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "刪除",
+		"Delete": "删除",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -240,7 +240,7 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "未知产品名称"
 	},
 	"ProductDetail": {
 		"AddPrice": "Add a price",
@@ -265,7 +265,7 @@
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "刪除",
+		"Delete": "删除",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
@@ -296,7 +296,7 @@
 			"Title": "搜尋"
 		},
 		"SignIn": {
-			"Title": "登入"
+			"Title": "登录"
 		},
 		"TopContributors": {
 			"Title": "Top contributors"
@@ -314,13 +314,13 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "分享"
+		"Title": "推荐给好友"
 	},
 	"SignIn": {
-		"Button": "登入",
-		"Password": "密碼",
+		"Button": "登录",
+		"Password": "密码",
 		"ServerError": "Error: server error",
-		"Title": "登入",
+		"Title": "登录",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
@@ -329,7 +329,7 @@
 		"Prices": "Prices",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "產品",
+		"Products": "产品",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
