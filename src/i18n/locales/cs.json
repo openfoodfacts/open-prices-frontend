@@ -122,9 +122,9 @@
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
 		"Yes": "Ano",
 		"No": "Ne",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty",
+		"Food": "Jídlo",
+		"PetFood": "Zvířecí krmivo",
+		"Beauty": "Krása",
 		"Products": "Produkty"
 	},
 	"ChangeCurrencyDialog": {
@@ -222,11 +222,11 @@
 	"ProductCard": {
 		"Brands": "Značky",
 		"BrandLower": "značka",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "Chybí značka",
 		"BrandTotal": "{count} značek",
 		"Categories": "Kategorie",
 		"CategoriesLower": "kategorie",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "Chybí kategorie",
 		"CategoryTotal": "{count} kategorií",
 		"Labels": "Štítky",
 		"LabelsLower": "štítky",
@@ -239,7 +239,7 @@
 		"ProductQuantityLitre": "{0} l",
 		"ProductQuantityMililitre": "{0} ml",
 		"ProductQuantityMissing": "Chybí množství produktu",
-		"QuantityMissing": "Quantity missing",
+		"QuantityMissing": "Chybí množství",
 		"UnknownProduct": "Neznámý název produktu"
 	},
 	"ProductDetail": {
