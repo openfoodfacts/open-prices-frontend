@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.54.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.53.1...v1.54.0) (2024-04-04)
+
+
+### Features
+
+* **products:** add new filter by source ([#510](https://github.com/openfoodfacts/open-prices-frontend/issues/510)) ([c2d13af](https://github.com/openfoodfacts/open-prices-frontend/commit/c2d13af35e6550372991fbbd820a94e2b53398fe))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#511](https://github.com/openfoodfacts/open-prices-frontend/issues/511)) ([6c2b2dc](https://github.com/openfoodfacts/open-prices-frontend/commit/6c2b2dc1970e2e9fc4abc519e998c3d8a3921964))
+* **l10n:** New Crowdin translations to review and merge ([#513](https://github.com/openfoodfacts/open-prices-frontend/issues/513)) ([8b96c7a](https://github.com/openfoodfacts/open-prices-frontend/commit/8b96c7a01e87b2a4f18ba7d50a028ad58d927a72))
+
 ## [1.53.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.53.0...v1.53.1) (2024-04-03)
 
 
