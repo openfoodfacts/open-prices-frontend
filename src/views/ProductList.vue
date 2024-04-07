@@ -92,11 +92,9 @@ export default {
       // this.initProductList() will be called in watch $route
     },
     toggleProductSource(sourceKey) {
-      if (this.currentSource !== sourceKey) {
-        this.currentSource = sourceKey
-        this.$router.push({ query: { ...this.$route.query, [constants.SOURCE_PARAM]: this.currentSource } })
-        // this.initProductList() will be called in watch $route
-      }
+      this.currentSource = (this.currentSource !== sourceKey) ? sourceKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.SOURCE_PARAM]: this.currentSource } })
+      // this.initProductList() will be called in watch $route
     },
     selectProductOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
