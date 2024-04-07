@@ -1279,6 +1279,10 @@
     },
     {
         "name": "New Zealand",
+        "name_original":[
+            "New Zealand / Aotearoa",
+            "Aotearoa"
+        ],
         "code": "NZ",
         "emoji": "🇳🇿",
         "unicode": "U+1F1F3 U+1F1FF",
