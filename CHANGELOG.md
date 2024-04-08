@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.54.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.54.0...v1.54.1) (2024-04-08)
+
+
+### Bug Fixes
+
+* **price card:** add NZ country name for flag. ref [#80](https://github.com/openfoodfacts/open-prices-frontend/issues/80) ([a19e61d](https://github.com/openfoodfacts/open-prices-frontend/commit/a19e61dc1d6eb843b45388a36eef22cd0ccabed2))
+* **products:** fix source filter untoggle action. ref [#510](https://github.com/openfoodfacts/open-prices-frontend/issues/510) ([7792891](https://github.com/openfoodfacts/open-prices-frontend/commit/779289138f586c11ff16b194d500549f6d4b9762))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#514](https://github.com/openfoodfacts/open-prices-frontend/issues/514)) ([71f3bd0](https://github.com/openfoodfacts/open-prices-frontend/commit/71f3bd06a131c21543aa5559f58e47af3441b574))
+
 ## [1.54.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.53.1...v1.54.0) (2024-04-04)
 
 
