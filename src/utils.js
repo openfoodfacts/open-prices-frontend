@@ -125,7 +125,7 @@ function getLocationCity(locationObject) {
   return locationObject.osm_address_city || ''
 }
 
-function getLocationTitle(locationObject, withName=true, withRoad=false, withCity=true, withEmoji=false) {
+function getLocationTitle(locationObject, withName=true, withRoad=false, withCity=true, withEmoji=false, source='nominatim') {
   let locationTitle = ''
   if (withName) {
     locationTitle += `${getLocationName(locationObject)}`
@@ -144,6 +144,13 @@ function getLocationTitle(locationObject, withName=true, withRoad=false, withCit
   return locationTitle
 }
 
+function getMapBounds(results, source='nominatim') {
+  return results.map(l => [l.lat, l.lon])
+}
+function getMapCenter(results, source='nominatim') {
+  return [results[0].lat, results[0][lon]]
+}
+
 
 export default {
   addObjectToArray,
@@ -158,4 +165,6 @@ export default {
   getLocaleOriginTags,
   getCountryEmojiFromName,
   getLocationTitle,
+  getMapBounds,
+  getMapCenter,
 }
