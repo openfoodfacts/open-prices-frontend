@@ -14,7 +14,7 @@
           inputmode="numeric"
           :prepend-inner-icon="formFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
           append-inner-icon="mdi-magnify"
-          @click:prepend-inner="showBarcodeScanner"
+          @click:prepend-inner="showBarcodeScannerDialog"
           @click:append-inner="search"
           :rules="[fieldRequired]"
           :loading="loading"
@@ -34,12 +34,12 @@
     </v-col>
   </v-row>
 
-  <BarcodeScanner
-    v-if="barcodeScanner"
-    v-model="barcodeScanner"
+  <BarcodeScannerDialog
+    v-if="barcodeScannerDialog"
+    v-model="barcodeScannerDialog"
     @barcode="setProductCode($event)"
-    @close="barcodeScanner = false"
-  ></BarcodeScanner>
+    @close="barcodeScannerDialog = false"
+  ></BarcodeScannerDialog>
 </template>
 
 <script>
@@ -49,7 +49,7 @@ import api from '../services/api'
 export default {
   components: {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue'))
+    'BarcodeScannerDialog': defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue'))
   },
   data() {
     return {
@@ -60,7 +60,7 @@ export default {
       productTotal: null,
       loading: false,
       // barcode scanner
-      barcodeScanner: false,
+      barcodeScannerDialog: false,
     }
   },
   computed: {
@@ -72,8 +72,8 @@ export default {
     fieldRequired(v) {
       return !!v
     },
-    showBarcodeScanner() {
-      this.barcodeScanner = true
+    showBarcodeScannerDialog() {
+      this.barcodeScannerDialog = true
     },
     setProductCode(code) {
       this.productSearchForm.q = code

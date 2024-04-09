@@ -29,11 +29,11 @@
               </v-item-group>
             </h3>
             <v-sheet v-if="productMode === 'barcode'">
-              <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">
+              <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScannerDialog">
                 <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Scan') }}</span>
                 <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</span>
               </v-btn>
-              <v-btn class="mb-2" size="small" prepend-icon="mdi-numeric" @click.prevent="showBarcodeManualInput">
+              <v-btn class="mb-2" size="small" prepend-icon="mdi-numeric" @click.prevent="showBarcodeManualInputDialog">
                 <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Type') }}</span>
                 <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</span>
               </v-btn>
@@ -45,7 +45,7 @@
                 type="text"
                 hint="EAN"
                 hide-details="auto"
-                @click:prepend-inner="showBarcodeScanner"
+                @click:prepend-inner="showBarcodeScannerDialog"
               ></v-text-field>
               <ProductCard v-if="product" class="mb-4" :product="product" :readonly="true" elevation="1"></ProductCard>
             </v-sheet>
@@ -185,7 +185,7 @@
               {{ getNominatimLocationTitle(location, true, true, true) }}
             </v-chip>
             <br v-if="recentLocations.length" />
-            <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelector">{{ $t('AddPriceSingle.WhereWhen.Find') }}</v-btn>
+            <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelectorDialog">{{ $t('AddPriceSingle.WhereWhen.Find') }}</v-btn>
             <p v-if="!locationFormFilled" class="text-red mb-2"><i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i></p>
 
             <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.WhereWhen.Date') }}</h3>
@@ -231,24 +231,24 @@
     :timeout="2000"
   >{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</v-snackbar>
 
-  <BarcodeScanner
-    v-if="barcodeScanner"
-    v-model="barcodeScanner"
+  <BarcodeScannerDialog
+    v-if="barcodeScannerDialog"
+    v-model="barcodeScannerDialog"
     @barcode="setProductCode($event)"
-    @close="barcodeScanner = false"
-  ></BarcodeScanner>
-  <BarcodeManualInput
-    v-if="barcodeManualInput"
-    v-model="barcodeManualInput"
+    @close="barcodeScannerDialog = false"
+  ></BarcodeScannerDialog>
+  <BarcodeManualInputDialog
+    v-if="barcodeManualInputDialog"
+    v-model="barcodeManualInputDialog"
     @barcode="setProductCode($event)"
-    @close="barcodeManualInput = false"
-  ></BarcodeManualInput>
-  <LocationSelector
-    v-if="locationSelector"
-    v-model="locationSelector"
+    @close="barcodeManualInputDialog = false"
+  ></BarcodeManualInputDialog>
+  <LocationSelectorDialog
+    v-if="locationSelectorDialog"
+    v-model="locationSelectorDialog"
     @location="setLocationData($event)"
-    @close="locationSelector = false"
-  ></LocationSelector>
+    @close="locationSelectorDialog = false"
+  ></LocationSelectorDialog>
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
@@ -279,9 +279,9 @@ export default {
   components: {
     'PriceInputRow': defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
-    'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
-    'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue')),
+    'BarcodeScannerDialog': defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
+    'BarcodeManualInputDialog': defineAsyncComponent(() => import('../components/BarcodeManualInputDialog.vue')),
+    'LocationSelectorDialog': defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
     'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
   },
   data() {
@@ -314,10 +314,10 @@ export default {
       categoryTags: [],  // list of category tags for autocomplete  // see initPriceSingleForm
       originTags: [],  // list of origins tags for autocomplete  // see initPriceSingleForm
       labelsTags: LabelsTags,
-      barcodeScanner: false,
-      barcodeManualInput: false,
+      barcodeScannerDialog: false,
+      barcodeManualInputDialog: false,
       // location data
-      locationSelector: false,
+      locationSelectorDialog: false,
       locationSelectedDisplayName: '',
       // proof data
       userRecentProofsDialog: false,
@@ -475,11 +475,11 @@ export default {
       this.proofImagePreview = null
       this.addPriceSingleForm.proof_id = null
     },
-    showBarcodeScanner() {
-      this.barcodeScanner = true
+    showBarcodeScannerDialog() {
+      this.barcodeScannerDialog = true
     },
-    showBarcodeManualInput() {
-      this.barcodeManualInput = true
+    showBarcodeManualInputDialog() {
+      this.barcodeManualInputDialog = true
     },
     setProductCode(code) {
       this.addPriceSingleForm.product_code = code
@@ -494,8 +494,8 @@ export default {
           alert("Error: Open Prices server error")
         })
     },
-    showLocationSelector() {
-      this.locationSelector = true
+    showLocationSelectorDialog() {
+      this.locationSelectorDialog = true
     },
     getNominatimLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)

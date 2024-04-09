@@ -96,7 +96,7 @@
             {{ getNominatimLocationTitle(location, true, true, true) }}
           </v-chip>
           <br v-if="recentLocations.length" />
-          <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelector">{{ $t('AddPriceSingle.WhereWhen.Find') }}</v-btn>
+          <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelectorDialog">{{ $t('AddPriceSingle.WhereWhen.Find') }}</v-btn>
           <p v-if="!locationFormFilled" class="text-red mb-2"><i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i></p>
 
           <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.WhereWhen.Date') }}</h3>
@@ -166,8 +166,8 @@
             </v-item-group>
           </h3>
           <v-sheet v-if="productMode === 'barcode'">
-            <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScanner">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</v-btn>
-            <a href="#" @click.prevent="showBarcodeManualInput">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</a>
+            <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScannerDialog">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</v-btn>
+            <a href="#" @click.prevent="showBarcodeManualInputDialog">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</a>
             <v-text-field
               v-if="dev"
               :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
@@ -176,7 +176,7 @@
               type="text"
               hint="EAN"
               hide-details="auto"
-              @click:prepend="showBarcodeScanner"
+              @click:prepend="showBarcodeScannerDialog"
             ></v-text-field>
             <ProductCard v-if="product" class="mb-4" :product="product" :readonly="true" elevation="1"></ProductCard>
           </v-sheet>
@@ -284,24 +284,24 @@
     :timeout="2000"
   >{{ $t('AddPriceMultiple.ProductPriceDetails.PriceUploaded') }}</v-snackbar>
 
-  <LocationSelector
-    v-if="locationSelector"
-    v-model="locationSelector"
+  <LocationSelectorDialog
+    v-if="locationSelectorDialog"
+    v-model="locationSelectorDialog"
     @location="setLocationData($event)"
-    @close="closeLocationSelector($event)"
-  ></LocationSelector>
-  <BarcodeScanner
-    v-if="barcodeScanner"
-    v-model="barcodeScanner"
+    @close="locationSelectorDialog = false"
+  ></LocationSelectorDialog>
+  <BarcodeScannerDialog
+    v-if="barcodeScannerDialog"
+    v-model="barcodeScannerDialog"
     @barcode="setProductCode($event)"
-    @close="barcodeScanner = false"
-  ></BarcodeScanner>
-  <BarcodeManualInput
-    v-if="barcodeManualInput"
-    v-model="barcodeManualInput"
+    @close="barcodeScannerDialog = false"
+  ></BarcodeScannerDialog>
+  <BarcodeManualInputDialog
+    v-if="barcodeManualInputDialog"
+    v-model="barcodeManualInputDialog"
     @barcode="setProductCode($event)"
-    @close="barcodeManualInput = false"
-  ></BarcodeManualInput>
+    @close="barcodeManualInputDialog = false"
+  ></BarcodeManualInputDialog>
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
@@ -328,12 +328,12 @@ Compressor.setDefaults({
 
 export default {
   components: {
-    'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelector.vue')),
+    'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
     'PriceInputRow': defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScanner.vue')),
-    'BarcodeManualInput': defineAsyncComponent(() => import('../components/BarcodeManualInput.vue')),
+    'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
+    'BarcodeManualInputDialog': defineAsyncComponent(() => import('../components/BarcodeManualInputDialog.vue')),
     'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
   },
   data() {
@@ -360,7 +360,7 @@ export default {
       proofSelectedSuccessMessage: false,
       proofisSelected: false,
       // location data
-      locationSelector: false,
+      locationSelectorDialog: false,
       locationSelectedDisplayName: '',
       // product price data
       productPriceUploadedList: [],
@@ -385,8 +385,8 @@ export default {
       categoryTags: [],  // list of category tags for autocomplete  // see initPriceMultipleForm
       originTags: [],  // list of origins tags for autocomplete  // see initPriceMultipleForm
       labelsTags: LabelsTags,
-      barcodeScanner: false,
-      barcodeManualInput: false,
+      barcodeScannerDialog: false,
+      barcodeManualInputDialog: false,
       categoryPricePerList: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
@@ -535,11 +535,8 @@ export default {
       this.proofImagePreview = null
       this.addPriceMultipleForm.proof_id = null
     },
-    showLocationSelector() {
-      this.locationSelector = true
-    },
-    closeLocationSelector(event) {
-      this.locationSelector = false
+    showLocationSelectorDialog() {
+      this.locationSelectorDialog = true
     },
     getNominatimLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
@@ -553,11 +550,11 @@ export default {
     isSelectedLocation(location) {
       return this.locationSelectedDisplayName && this.locationSelectedDisplayName === location.display_name
     },
-    showBarcodeScanner() {
-      this.barcodeScanner = true
+    showBarcodeScannerDialog() {
+      this.barcodeScannerDialog = true
     },
-    showBarcodeManualInput() {
-      this.barcodeManualInput = true
+    showBarcodeManualInputDialog() {
+      this.barcodeManualInputDialog = true
     },
     setProductCode(code) {
       this.productPriceForm.product_code = code
