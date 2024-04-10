@@ -173,7 +173,7 @@
 	"LocationSelector": {
 		"Clear": "清除",
 		"NoResult": "未找到结果",
-		"OSM": {
+		"PoweredBy": {
 			"text": "由 {url} 供电"
 		},
 		"RecentLocations": "没有最近的地点 |最近位置 {recentLocationNumber}|最近地点 {recentLocationNumber}",
