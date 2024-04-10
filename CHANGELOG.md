@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.55.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.55.0...v1.55.1) (2024-04-10)
+
+
+### Bug Fixes
+
+* forgot some recent component renaming ([a8d8331](https://github.com/openfoodfacts/open-prices-frontend/commit/a8d833189ebcfffea164ee03dcf3493136ff0e91))
+
 ## [1.55.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.54.1...v1.55.0) (2024-04-10)
 
 
