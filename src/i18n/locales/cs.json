@@ -173,7 +173,7 @@
 	"LocationSelector": {
 		"Clear": "Vymazat",
 		"NoResult": "Nenalezeny žádné výsledky",
-		"OSM": {
+		"PoweredBy": {
 			"text": "poháněno {url}"
 		},
 		"RecentLocations": "Žádná nedávné poloha | Nedávná poloha {recentLocationNumber}| Nedávné polohy {recentLocationNumber}",
