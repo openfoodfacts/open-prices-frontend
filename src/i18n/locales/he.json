@@ -173,7 +173,7 @@
 	"LocationSelector": {
 		"Clear": "פינוי",
 		"NoResult": "לא נמצאו תוצאות",
-		"OSM": {
+		"PoweredBy": {
 			"text": "מופעל על גבי {url}"
 		},
 		"RecentLocations": "אין מקומות אחרונים | מקום אחרון {recentLocationNumber}| {recentLocationNumber} מקומות אחרונים",
