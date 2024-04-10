@@ -9,7 +9,7 @@
         <v-col style="max-width:75%">
           <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
-          <p v-if="!hideProductDetails" class="mb-2">
+          <p v-if="!hideProductDetails && !hasCategoryTag" class="mb-2">
             <span v-if="hasProductCode">
               <span v-if="hasProductSource">
                 <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
