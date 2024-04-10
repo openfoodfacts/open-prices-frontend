@@ -50,18 +50,18 @@
                 <v-card-text>
                   <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                   {{ getLocationTitle(location, false, true, true) }}<br />
-                  <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
+                  <v-chip label size="small" density="comfortable">{{ getLocationType(location) }}</v-chip>
                 </v-card-text>
               </v-card>
             </v-col>
             <v-col cols="12" sm="6" style="min-height:200px">
               <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
                 <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
-                <l-marker v-for="location in results" :lat-lng="[location.lat, location.lon]">
+                <l-marker v-for="location in results" :lat-lng="getLocationLatLng(location)">
                   <l-popup>
                     <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                     {{ getLocationTitle(location, false, true, true) }}<br />
-                    <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
+                    <v-chip label size="small" density="comfortable">{{ getLocationType(location) }}</v-chip>
                   </l-popup>
                 </l-marker>
               </l-map>
@@ -102,9 +102,10 @@
 
       <v-card-actions class="justify-end">
         <div>
-          <i18n-t keypath="LocationSelector.OSM.text" tag="span">
+          <i18n-t keypath="LocationSelector.PoweredBy.text" tag="span">
             <template #url>
-              <a href="https://nominatim.openstreetmap.org" target="_blank">OpenStreetMap Nominatim</a>
+              <a v-if="searchProvider === 'nominatim'" href="https://nominatim.openstreetmap.org" target="_blank">Nominatim (OpenStreetMap)</a>
+              <a v-if="searchProvider === 'photon'" href="https://photon.komoot.io" target="_blank">Komoot Photon (OpenStreetMap)</a>
             </template>
           </i18n-t>
         </div>
@@ -142,7 +143,7 @@ export default {
       mapCenter: [45, 5],
       mapBounds: null,
       // search
-      searchProvider: 'nominatim',  // 'photon'
+      searchProvider: 'photon',  // 'nominatim', 'photon'
     }
   },
   computed: {
@@ -151,6 +152,7 @@ export default {
       return Object.values(this.locationSearchForm).every(x => !!x)
     },
     recentLocations() {
+      console.log(this.appStore.getRecentLocations())
       return this.appStore.getRecentLocations()
     },
   },
@@ -170,15 +172,17 @@ export default {
     search() {
       this.results = null
       this.loading = true
-      api.openstreetmapSearch(this.locationSearchForm.q, source=this.searchProvider)
+      api.openstreetmapSearch(this.locationSearchForm.q, this.searchProvider)
       .then((data) => {
         this.loading = false
         if (data.length) {
           this.results = data
+          console.log(this.results)
           if (this.results.length > 1) {
-            this.mapBounds = utils.getMapBounds(this.results, source=this.searchProvider)
+            this.mapBounds = utils.getMapBounds(this.results, this.searchProvider)
+            console.log(this.mapBounds)
           } else {
-            this.mapCenter = utils.getMapCenter(this.results, source=this.searchProvider)
+            this.mapCenter = utils.getMapCenter(this.results, this.searchProvider)
             this.mapZoom = 12
             this.mapBounds = null
           }
@@ -188,7 +192,13 @@ export default {
       })
     },
     getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
-      return utils.getLocationTitle(location, withName, withRoad, withCity, source=this.searchProvider)
+      return utils.getLocationTitle(location, withName, withRoad, withCity)
+    },
+    getLocationType(location) {
+      return utils.getLocationType(location)
+    },
+    getLocationLatLng(location) {
+      return utils.getLocationLatLng(location)
     },
     selectLocation(location) {
       this.$emit('location', location)

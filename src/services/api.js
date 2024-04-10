@@ -218,10 +218,11 @@ export default {
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
   openstreetmapPhotonSearch(q) {
-    return fetch(`${constants.OSM_PHOTON_SEARCH_URL}?q=${q}`, {
+    return fetch(`${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=10`, {
       method: 'GET',
     })
     .then((response) => response.json())
+    .then(data => data.features)
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.properties.osm_key)))
   },
   openstreetmapSearch(q, source='nominatim') {

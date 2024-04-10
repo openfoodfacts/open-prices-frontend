@@ -101,8 +101,12 @@ function getCountryEmojiFromName(countryString) {
 }
 
 function getLocationName(locationObject) {
+  // Photon
+  if (locationObject.properties) {
+    return locationObject.properties.name
+  }
   // Nominatim or OP
-  return locationObject.osm_name || locationObject.name
+  return locationObject.name || locationObject.osm_name
 }
 
 function getLocationRoad(locationObject) {
@@ -111,6 +115,10 @@ function getLocationRoad(locationObject) {
     let locationRoad = locationObject.address.house_number ? `${locationObject.address.house_number} ` : ''
     locationRoad += locationObject.address.road || ''
     return locationRoad
+  }
+  // Photon
+  else if (locationObject.properties) {
+    return locationObject.properties.street
   }
   // OP
   return ''
@@ -121,16 +129,20 @@ function getLocationCity(locationObject) {
   if (locationObject.address) {
     return locationObject.address.village || locationObject.address.town || locationObject.address.city || locationObject.address.municipality
   }
+  // Photon
+  else if (locationObject.properties) {
+    return locationObject.properties.village || locationObject.properties.town || locationObject.properties.city || locationObject.properties.municipality
+  }
   // OP
   return locationObject.osm_address_city || ''
 }
 
-function getLocationTitle(locationObject, withName=true, withRoad=false, withCity=true, withEmoji=false, source='nominatim') {
+function getLocationTitle(locationObject, withName=true, withRoad=false, withCity=true, withEmoji=false) {
   let locationTitle = ''
   if (withName) {
     locationTitle += `${getLocationName(locationObject)}`
   }
-  if (withRoad && locationObject.address) {
+  if (withRoad && (locationObject.address || locationObject.properties)) {
     locationTitle += locationTitle ? ', ' : ''
     locationTitle += getLocationRoad(locationObject)
   }
@@ -144,10 +156,37 @@ function getLocationTitle(locationObject, withName=true, withRoad=false, withCit
   return locationTitle
 }
 
+function getLocationType(locationObject) {
+  // Photon
+  if (locationObject.properties) {
+    return locationObject.properties.osm_key
+  }
+  // Nominatim or OP
+  return locationObject.type || locationObject.osm_type
+}
+
+function getLocationLatLng(locationObject) {
+  // Nominatim
+  if (locationObject.lat && locationObject.lon) {
+    return [locationObject.lat, locationObject.lon]
+  }
+  // Photon
+  else if (locationObject.geometry && locationObject.geometry.coordinates) {
+    return [locationObject.geometry.coordinates[1], locationObject.geometry.coordinates[0]]
+  }
+  return [locationObject.osm_lat, locationObject.osm_lon]
+}
+
 function getMapBounds(results, source='nominatim') {
+  if (source === 'photon') {
+    return results.map(l => [l.geometry.coordinates[1], l.geometry.coordinates[0]])
+  }
   return results.map(l => [l.lat, l.lon])
 }
 function getMapCenter(results, source='nominatim') {
+  if (source === 'photon') {
+    return [results[0].geometry.coordinates[1], results[0].geometry.coordinates[0]]
+  }
   return [results[0].lat, results[0][lon]]
 }
 
@@ -165,6 +204,8 @@ export default {
   getLocaleOriginTags,
   getCountryEmojiFromName,
   getLocationTitle,
+  getLocationType,
+  getLocationLatLng,
   getMapBounds,
   getMapCenter,
 }
