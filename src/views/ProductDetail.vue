@@ -14,7 +14,8 @@
             <template #name>{{ OFF_NAME }}</template>
           </i18n-t>
         </i>
-        <OpenFoodFactsLink class="ml-2" display="button" action="add"></OpenFoodFactsLink>
+        <br />
+        <OpenFoodFactsAddMenu></OpenFoodFactsAddMenu>
       </v-alert>
       <v-alert v-if="categoryNotFound" type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
@@ -68,6 +69,7 @@ export default {
     'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
     'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+    'OpenFoodFactsAddMenu': defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
     'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {

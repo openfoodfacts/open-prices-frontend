@@ -1,9 +1,9 @@
 <template>
   <a v-if="display === 'link'" :href="getUrl" target="_blank">
-    {{ getName }}
+    {{ getSourceName }}
   </a>
   <v-btn v-else-if="display === 'button'" size="small" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank">
-    {{ getName }}
+    {{ getSourceName }}
   </v-btn>
 </template>
 
@@ -32,14 +32,9 @@ export default {
     value: {
       type: String,
       default: null
-    },
-    action: {
-      // add, view
-      type: String,
-      default: 'view'
     }
   },
-  data () {
+  data() {
     return {
       OFF_NAME: constants.OFF_NAME,
       OFF_URL: constants.OFF_URL,
@@ -75,12 +70,6 @@ export default {
       }
       return this.OFF_NAME
     },
-    getName() {
-      if (this.action === 'add') {
-        return this.$t('Common.AddToOFF', {name: this.getSourceName})
-      }
-      return this.getSourceName
-    }
   },
 }
 </script>
