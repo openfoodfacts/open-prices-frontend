@@ -173,7 +173,7 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "Rezultatų nerasta",
-		"OSM": {
+		"PoweredBy": {
 			"text": "įgalino {url}"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",

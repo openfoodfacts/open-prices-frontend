@@ -173,7 +173,7 @@
 	"LocationSelector": {
 		"Clear": "Wissen",
 		"NoResult": "Geen zoekresultaten",
-		"OSM": {
+		"PoweredBy": {
 			"text": "mogelijk gemaakt door {url}"
 		},
 		"RecentLocations": "Geen recente locaties | Recente locatie {recentLocationNumber}| Recente locaties {recentLocationNumber}",

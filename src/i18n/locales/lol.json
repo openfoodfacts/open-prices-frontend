@@ -173,8 +173,8 @@
 	"LocationSelector": {
 		"Clear": "crwdns246888:0crwdne246888:0",
 		"NoResult": "crwdns246640:0crwdne246640:0",
-		"OSM": {
-			"text": "crwdns246642:0{url}crwdne246642:0"
+		"PoweredBy": {
+			"text": "crwdns248114:0{url}crwdne248114:0"
 		},
 		"RecentLocations": "crwdns246644:0{recentLocationNumber}crwdnd246644:0{recentLocationNumber}crwdne246644:0",
 		"Result": "crwdns246646:0{resultNumber}crwdnd246646:0{resultNumber}crwdne246646:0",

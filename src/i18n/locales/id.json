@@ -173,7 +173,7 @@
 	"LocationSelector": {
 		"Clear": "Hapus",
 		"NoResult": "Tidak ada hasil yang ditemukan",
-		"OSM": {
+		"PoweredBy": {
 			"text": "didukung oleh {url}"
 		},
 		"RecentLocations": "Tidak ada lokasi terbaru | Lokasi terbaru {recentLocationNumber}| Lokasi terbaru {recentLocationNumber}",
