@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.55.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.54.1...v1.55.0) (2024-04-10)
+
+
+### Features
+
+* **location:** repace Nominatim with Photon ([#517](https://github.com/openfoodfacts/open-prices-frontend/issues/517)) ([7ebb44c](https://github.com/openfoodfacts/open-prices-frontend/commit/7ebb44ca6dec72b432ba6f39c66f621604eebea6))
+
+
+### Technical
+
+* rename dialog components (Location, Barcode) ([c9d4587](https://github.com/openfoodfacts/open-prices-frontend/commit/c9d458756c556e0e2a095edfdf11ae56472073b1))
+
 ## [1.54.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.54.0...v1.54.1) (2024-04-08)
 
 
