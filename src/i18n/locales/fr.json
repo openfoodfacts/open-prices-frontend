@@ -173,7 +173,7 @@
 	"LocationSelector": {
 		"Clear": "Effacer",
 		"NoResult": "Aucun résultat trouvé",
-		"OSM": {
+		"PoweredBy": {
 			"text": "fonctionne avec {url}"
 		},
 		"RecentLocations": "Lieu récent {recentLocationNumber}| Lieux récents {recentLocationNumber}",
