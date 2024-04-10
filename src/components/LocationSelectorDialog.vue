@@ -23,7 +23,7 @@
           </v-text-field>
         </v-form>
 
-        <p class="text-caption text-warning mt-2">
+        <p v-if="searchProvider === 'nominatim'" class="text-caption text-warning mt-2">
           <i18n-t keypath="LocationSelector.Warning" tag="i">
             <template #newline><br /></template>
           </i18n-t>
@@ -48,20 +48,20 @@
                 elevation="1"
                 @click="selectLocation(location)">
                 <v-card-text>
-                  <h4>{{ getNominatimLocationTitle(location, true, false, false) }}</h4>
-                  {{ getNominatimLocationTitle(location, false, true, true) }}<br />
-                  <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
+                  <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
+                  {{ getLocationTitle(location, false, true, true) }}<br />
+                  <v-chip label size="small" density="comfortable">{{ getLocationCategory(location) }}</v-chip>
                 </v-card-text>
               </v-card>
             </v-col>
             <v-col cols="12" sm="6" style="min-height:200px">
               <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
                 <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
-                <l-marker v-for="location in results" :lat-lng="[location.lat, location.lon]">
+                <l-marker v-for="location in results" :lat-lng="getLocationLatLng(location)">
                   <l-popup>
-                    <h4>{{ getNominatimLocationTitle(location, true, false, false) }}</h4>
-                    {{ getNominatimLocationTitle(location, false, true, true) }}<br />
-                    <v-chip label size="small" density="comfortable">{{ location.type }}</v-chip>
+                    <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
+                    {{ getLocationTitle(location, false, true, true) }}<br />
+                    <v-chip label size="small" density="comfortable">{{ getLocationCategory(location) }}</v-chip>
                   </l-popup>
                 </l-marker>
               </l-map>
@@ -85,12 +85,12 @@
             class="mb-2"
             closable
             v-for="location in recentLocations"
-            :key="location.display_name"
+            :key="getLocationUniqueID(location)"
             prepend-icon="mdi-history"
             close-icon="mdi-delete"
             @click="selectLocation(location)"
             @click:close="removeRecentLocation(location)">
-            {{ getNominatimLocationTitle(location, true, true, true) }}
+            {{ getLocationTitle(location, true, true, true) }}
           </v-chip>
           <br />
           <v-btn size="small" @click="clearRecentLocations">
@@ -102,9 +102,10 @@
 
       <v-card-actions class="justify-end">
         <div>
-          <i18n-t keypath="LocationSelector.OSM.text" tag="span">
+          <i18n-t keypath="LocationSelector.PoweredBy.text" tag="span">
             <template #url>
-              <a href="https://nominatim.openstreetmap.org" target="_blank">OpenStreetMap Nominatim</a>
+              <a v-if="searchProvider === 'nominatim'" href="https://nominatim.openstreetmap.org" target="_blank">Nominatim (OpenStreetMap)</a>
+              <a v-if="searchProvider === 'photon'" href="https://photon.komoot.io" target="_blank">Komoot Photon (OpenStreetMap)</a>
             </template>
           </i18n-t>
         </div>
@@ -140,7 +141,9 @@ export default {
       map: null,
       mapZoom: 5,
       mapCenter: [45, 5],
-      mapBounds: null
+      mapBounds: null,
+      // search
+      searchProvider: 'photon',  // 'nominatim', 'photon'
     }
   },
   computed: {
@@ -168,15 +171,15 @@ export default {
     search() {
       this.results = null
       this.loading = true
-      api.openstreetmapNominatimSearch(this.locationSearchForm.q)
+      api.openstreetmapSearch(this.locationSearchForm.q, this.searchProvider)
       .then((data) => {
         this.loading = false
         if (data.length) {
           this.results = data
           if (this.results.length > 1) {
-            this.mapBounds = this.results.map(l => [l.lat, l.lon])
+            this.mapBounds = utils.getMapBounds(this.results, this.searchProvider)
           } else {
-            this.mapCenter = this.results.map(l => [l.lat, l.lon])[0]
+            this.mapCenter = utils.getMapCenter(this.results, this.searchProvider)
             this.mapZoom = 12
             this.mapBounds = null
           }
@@ -185,16 +188,17 @@ export default {
         }
       })
     },
-    getNominatimLocationName(location) {
-      return location.name
-    },
-    getNominatimLocationCity(location) {
-      if (location.address) {
-        return location.address.village || location.address.town || location.address.city || location.address.municipality
-      }
-    },
-    getNominatimLocationTitle(location, withName=true, withRoad=false, withCity=true) {
+    getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
+    },
+    getLocationUniqueID(location) {
+      return utils.getLocationUniqueID(location)
+    },
+    getLocationCategory(location) {
+      return utils.getLocationCategory(location)
+    },
+    getLocationLatLng(location) {
+      return utils.getLocationLatLng(location)
     },
     selectLocation(location) {
       this.$emit('location', location)

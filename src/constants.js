@@ -52,6 +52,8 @@ export default {
   ],
   OSM_NAME: 'OpenStreetMap',
   OSM_URL: 'https://www.openstreetmap.org',
+  OSM_NOMINATIM_SEARCH_URL: 'https://nominatim.openstreetmap.org/search',
+  OSM_PHOTON_SEARCH_URL: 'https://photon.komoot.io/api/',
   // https://wiki.openstreetmap.org/wiki/Key:place
   // https://wiki.openstreetmap.org/wiki/Key:highway
   // https://wiki.openstreetmap.org/wiki/Buildings

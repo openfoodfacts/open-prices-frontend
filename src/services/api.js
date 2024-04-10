@@ -2,7 +2,6 @@ import { useAppStore } from '../store'
 import constants from '../constants'
 
 const OPENFOODFACTS_PRODUCT_URL = 'https://world.openfoodfacts.org/api/v2/product'
-const NOMINATIM_SEARCH_URL = 'https://nominatim.openstreetmap.org/search'
 
 
 export default {
@@ -212,10 +211,26 @@ export default {
   },
 
   openstreetmapNominatimSearch(q) {
-    return fetch(`${NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=10`, {
+    return fetch(`${constants.OSM_NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=10`, {
       method: 'GET',
     })
     .then((response) => response.json())
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
+  openstreetmapPhotonSearch(q) {
+    return fetch(`${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=10`, {
+      method: 'GET',
+    })
+    .then((response) => response.json())
+    .then(data => data.features)
+    .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.properties.osm_key)))
+  },
+  openstreetmapSearch(q, source='nominatim') {
+    if (source === 'photon') {
+      return this.openstreetmapPhotonSearch(q)
+    } else {
+      // default to nominatim
+      return this.openstreetmapNominatimSearch(q)
+    }
+  }
 }
