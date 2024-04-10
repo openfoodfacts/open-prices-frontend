@@ -91,9 +91,10 @@
             class="mb-2"
             :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
             v-for="location in recentLocations"
+            :key="getLocationUniqueID(location)"
             @click="setLocationData(location)">
             <v-icon start :icon="isSelectedLocation(location) ? 'mdi-check-circle-outline' : 'mdi-history'" :color="isSelectedLocation(location) ? 'green' : ''"></v-icon>
-            {{ getNominatimLocationTitle(location, true, true, true) }}
+            {{ getLocationTitle(location, true, true, true) }}
           </v-chip>
           <br v-if="recentLocations.length" />
           <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelectorDialog">{{ $t('AddPriceSingle.WhereWhen.Find') }}</v-btn>
@@ -361,7 +362,6 @@ export default {
       proofisSelected: false,
       // location data
       locationSelectorDialog: false,
-      locationSelectedDisplayName: '',
       // product price data
       productPriceUploadedList: [],
       productPriceNew: {
@@ -538,17 +538,19 @@ export default {
     showLocationSelectorDialog() {
       this.locationSelectorDialog = true
     },
-    getNominatimLocationTitle(location, withName=true, withRoad=false, withCity=true) {
+    getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
+    },
+    getLocationUniqueID(location) {
+      return utils.getLocationUniqueID(location)
     },
     setLocationData(location) {
       this.appStore.addRecentLocation(location)
-      this.locationSelectedDisplayName = location.display_name
-      this.addPriceMultipleForm.location_osm_id = location.osm_id
-      this.addPriceMultipleForm.location_osm_type = location.osm_type.toUpperCase()
+      this.addPriceMultipleForm.location_osm_id = utils.getLocationID(location)
+      this.addPriceMultipleForm.location_osm_type = utils.getLocationType(location)
     },
     isSelectedLocation(location) {
-      return this.locationSelectedDisplayName && this.locationSelectedDisplayName === location.display_name
+      return (this.addPriceMultipleForm.location_osm_id === utils.getLocationID(location)) && (this.addPriceMultipleForm.location_osm_type === utils.getLocationType(location))
     },
     showBarcodeScannerDialog() {
       this.barcodeScannerDialog = true

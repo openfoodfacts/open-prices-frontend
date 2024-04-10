@@ -23,7 +23,7 @@
           </v-text-field>
         </v-form>
 
-        <p class="text-caption text-warning mt-2">
+        <p v-if="searchProvider === 'nominatim'" class="text-caption text-warning mt-2">
           <i18n-t keypath="LocationSelector.Warning" tag="i">
             <template #newline><br /></template>
           </i18n-t>
@@ -50,7 +50,7 @@
                 <v-card-text>
                   <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                   {{ getLocationTitle(location, false, true, true) }}<br />
-                  <v-chip label size="small" density="comfortable">{{ getLocationType(location) }}</v-chip>
+                  <v-chip label size="small" density="comfortable">{{ getLocationCategory(location) }}</v-chip>
                 </v-card-text>
               </v-card>
             </v-col>
@@ -61,7 +61,7 @@
                   <l-popup>
                     <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                     {{ getLocationTitle(location, false, true, true) }}<br />
-                    <v-chip label size="small" density="comfortable">{{ getLocationType(location) }}</v-chip>
+                    <v-chip label size="small" density="comfortable">{{ getLocationCategory(location) }}</v-chip>
                   </l-popup>
                 </l-marker>
               </l-map>
@@ -85,7 +85,7 @@
             class="mb-2"
             closable
             v-for="location in recentLocations"
-            :key="location.display_name"
+            :key="getLocationUniqueID(location)"
             prepend-icon="mdi-history"
             close-icon="mdi-delete"
             @click="selectLocation(location)"
@@ -152,7 +152,6 @@ export default {
       return Object.values(this.locationSearchForm).every(x => !!x)
     },
     recentLocations() {
-      console.log(this.appStore.getRecentLocations())
       return this.appStore.getRecentLocations()
     },
   },
@@ -177,10 +176,8 @@ export default {
         this.loading = false
         if (data.length) {
           this.results = data
-          console.log(this.results)
           if (this.results.length > 1) {
             this.mapBounds = utils.getMapBounds(this.results, this.searchProvider)
-            console.log(this.mapBounds)
           } else {
             this.mapCenter = utils.getMapCenter(this.results, this.searchProvider)
             this.mapZoom = 12
@@ -194,8 +191,11 @@ export default {
     getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
     },
-    getLocationType(location) {
-      return utils.getLocationType(location)
+    getLocationUniqueID(location) {
+      return utils.getLocationUniqueID(location)
+    },
+    getLocationCategory(location) {
+      return utils.getLocationCategory(location)
     },
     getLocationLatLng(location) {
       return utils.getLocationLatLng(location)

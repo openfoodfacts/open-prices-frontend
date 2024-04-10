@@ -156,7 +156,31 @@ function getLocationTitle(locationObject, withName=true, withRoad=false, withCit
   return locationTitle
 }
 
+function getLocationID(locationObject) {
+  // Photon
+  if (locationObject.properties) {
+    return locationObject.properties.osm_id
+  }
+  // Nominatim or OP
+  return locationObject.osm_id
+}
+
 function getLocationType(locationObject) {
+  if (locationObject.properties) {
+    const OSM_TYPE_MAPPING = {"N": "Node", "W": "Way", "R": "Relation"}
+    return OSM_TYPE_MAPPING[locationObject.properties.osm_type].toUpperCase()
+  }
+  // Nominatim or OP
+  return locationObject.osm_type.toUpperCase()
+}
+
+function getLocationUniqueID(locationObject) {
+  // examples: N12345
+  return `${getLocationType(locationObject)[0]}${getLocationID(locationObject).toString()}`
+}
+
+function getLocationCategory(locationObject) {
+  // examples: shop, amenity, building
   // Photon
   if (locationObject.properties) {
     return locationObject.properties.osm_key
@@ -204,7 +228,10 @@ export default {
   getLocaleOriginTags,
   getCountryEmojiFromName,
   getLocationTitle,
+  getLocationID,
   getLocationType,
+  getLocationUniqueID,
+  getLocationCategory,
   getLocationLatLng,
   getMapBounds,
   getMapCenter,
