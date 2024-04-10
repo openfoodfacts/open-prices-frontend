@@ -173,7 +173,7 @@
 	"LocationSelector": {
 		"Clear": "Temizle",
 		"NoResult": "Sonuç bulunamadı",
-		"OSM": {
+		"PoweredBy": {
 			"text": "{url} tarafından desteklenmektedir"
 		},
 		"RecentLocations": "Yeni konum yok | Son konum {recentLocationNumber}| Son konumlar {recentLocationNumber}",
