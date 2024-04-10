@@ -173,7 +173,7 @@
 	"LocationSelector": {
 		"Clear": "Tyhjennä",
 		"NoResult": "Ei tuloksia",
-		"OSM": {
+		"PoweredBy": {
 			"text": "powered by {url}"
 		},
 		"RecentLocations": "Ei viimeaikaisia sijainteja | Viimeaikainen sijainti {recentLocationNumber}| Viimeaikaiset sijainnit {recentLocationNumber}",
