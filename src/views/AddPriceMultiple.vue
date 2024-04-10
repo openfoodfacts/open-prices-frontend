@@ -329,11 +329,11 @@ Compressor.setDefaults({
 
 export default {
   components: {
-    'LocationSelector': defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
+    'LocationSelectorDialog': defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
     'PriceInputRow': defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    'BarcodeScanner': defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
+    'BarcodeScannerDialog': defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
     'BarcodeManualInputDialog': defineAsyncComponent(() => import('../components/BarcodeManualInputDialog.vue')),
     'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
   },
