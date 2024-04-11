@@ -8,8 +8,8 @@
       </v-btn>
     </template>
     <v-list>
-      <template v-for="(source, index) in sourceListWithDivider" :key="source.key">
-        <v-list-item :slim="true" :href="getSourceUrl(source)" target="_blank">
+      <template v-for="(source, index) in sourceList" :key="source.key">
+        <v-list-item :slim="true" :href="getSourceAddUrlWithLocale(source)" target="_blank">
           <template v-slot:prepend>
             <v-icon :icon="source.icon"></v-icon>
           </template>
@@ -27,19 +27,34 @@
 </template>
 
 <script>
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import constants from '../constants'
 
 export default {
+  props: {
+    product: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {
       OFF_NAME: constants.OFF_NAME,
-      sourceListWithDivider: constants.PRODUCT_SOURCE_LIST,
+      sourceList: constants.PRODUCT_SOURCE_LIST,
     }
+  },
+  computed: {
+    ...mapStores(useAppStore),
   },
   methods: {
     getSourceUrl(source) {
       return constants[`${source.key.toUpperCase()}_URL`]
-    }
+    },
+    getSourceAddUrlWithLocale(source) {
+      const SOURCE_ADD_URL = `${this.getSourceUrl(source)}/cgi/product.pl?type=search_or_add&action=process&code=${this.product.code}`
+      return SOURCE_ADD_URL.replace('world', this.appStore.user.language)
+    },
   }
 }
 </script>

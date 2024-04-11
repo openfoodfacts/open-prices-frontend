@@ -23,7 +23,7 @@ export default {
       default: 'link'
     },
   },
-  data () {
+  data() {
     return {
       OSM_NAME: constants.OSM_NAME,
       OSM_URL: constants.OSM_URL,

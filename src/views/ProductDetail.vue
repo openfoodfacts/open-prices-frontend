@@ -15,7 +15,7 @@
           </i18n-t>
         </i>
         <br />
-        <OpenFoodFactsAddMenu></OpenFoodFactsAddMenu>
+        <OpenFoodFactsAddMenu :product="product"></OpenFoodFactsAddMenu>
       </v-alert>
       <v-alert v-if="categoryNotFound" type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
@@ -92,7 +92,8 @@ export default {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.getProduct(),
-    this.initProductPrices()
+    this.initProductPrices(),
+    console.log(this.product)
   },
   computed: {
     productIsCategory() {
