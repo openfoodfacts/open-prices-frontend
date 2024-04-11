@@ -1,5 +1,6 @@
 <template>
   <v-btn
+    v-if="!$vuetify.display.smAndUp"
     class="ml-2"
     size="small"
     density="comfortable"
@@ -8,12 +9,24 @@
     :title="$t('ShareButton.Title')"
     @click="shareViaWebShare">
   </v-btn>
+  <v-btn
+    v-else
+    class="ml-2"
+    size="small"
+    rounded="xl"
+    color="teal"
+    prepend-icon="mdi-share-variant"
+    :title="$t('ShareButton.Title')"
+    @click="shareViaWebShare">
+    {{ $t('ShareButton.Title') }}
+  </v-btn>
 
   <v-snackbar
     v-model="shareLinkCopySuccessMessage"
     color="success"
-    :timeout="2000"
-  >{{ $t('ShareButton.LinkCopySuccess') }}</v-snackbar>
+    :timeout="2000">
+    {{ $t('ShareButton.LinkCopySuccess') }}
+  </v-snackbar>
 </template>
 
 <script>
