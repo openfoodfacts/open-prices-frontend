@@ -24,7 +24,7 @@
 
   <v-row class="mt-0" v-if="!productNotFound">
     <v-col cols="12">
-      <v-btn class="mr-2" size="small" color="primary" prepend-icon="mdi-plus" :to="'/add/single?code=' + product.code">{{ $t('ProductDetail.AddPrice') }}</v-btn>
+      <ProductPriceAddButton class="mr-2" :product="product"></ProductPriceAddButton>
       <OpenFoodFactsLink v-if="product.code && product.source" display="button" :source="product.source" facet="product" :value="product.code"></OpenFoodFactsLink>
       <ShareButton></ShareButton>
     </v-col>
@@ -63,6 +63,7 @@ import api from '../services/api'
 export default {
   components: {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    'ProductPriceAddButton': defineAsyncComponent(() => import('../components/ProductPriceAddButton.vue')),
     'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
