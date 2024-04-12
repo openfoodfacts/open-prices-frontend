@@ -11,7 +11,7 @@
         <p class="mb-1">{{ $t('PriceDelete.Confirmation') }}</p>
         <v-row>
           <v-col cols="12" md="6">
-            <PriceCard :price="price" :product="price.product" :hidePriceFooter="true" :readonly="true"></PriceCard>
+            <PriceCard :price="price" :product="price.product" :hidePriceFooterRow="true" :readonly="true"></PriceCard>
           </v-col>
         </v-row>
       </v-card-text>

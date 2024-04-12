@@ -27,7 +27,7 @@
         </v-col>
       </v-row>
 
-      <PriceFooter v-if="price && !hidePriceFooter" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly"></PriceFooter>
+      <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly"></PriceFooterRow>
     </v-container>
   </v-card>
 </template>
@@ -44,7 +44,7 @@ export default {
     'PriceOrigins': defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
     'PriceLabels': defineAsyncComponent(() => import('../components/PriceLabels.vue')),
     'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
-    'PriceFooter': defineAsyncComponent(() => import('../components/PriceFooter.vue'))
+    'PriceFooterRow': defineAsyncComponent(() => import('../components/PriceFooterRow.vue'))
   },
   props: {
     'price': null,
@@ -53,7 +53,7 @@ export default {
     'hideProductTitle': false,
     'hideProductDetails': false,
     'hidePriceDate': false,
-    'hidePriceFooter': false,
+    'hidePriceFooterRow': false,
     'hidePriceLocation': false,
     'hidePriceProof': false,
     'readonly': false

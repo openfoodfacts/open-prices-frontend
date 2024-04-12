@@ -135,7 +135,7 @@
         <v-card-text>
           <v-row>
             <v-col v-for="(productPriceUploaded, index) in productPriceUploadedList" cols="12" :key="productPriceUploaded">
-              <PriceCard :price="productPriceUploaded" :product="productPriceUploaded.product" :hidePriceDate="true" :hidePriceFooter="true" :readonly="true"></PriceCard>
+              <PriceCard :price="productPriceUploaded" :product="productPriceUploaded.product" :hidePriceDate="true" :hidePriceFooterRow="true" :readonly="true"></PriceCard>
             </v-col>
           </v-row>
         </v-card-text>
