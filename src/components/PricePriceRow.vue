@@ -1,19 +1,21 @@
 <template>
-  <p>
-    <span class="mr-1">{{ getPriceValueDisplay(priceValue) }}</span>
-    <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(priceValue) }})</span>
-    <span v-if="price.price_is_discounted">
-      <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">
-        {{ $t('PriceCard.Discount') }}
-        <v-tooltip v-if="priceWithoutDiscountValue" activator="parent" open-on-click location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(priceWithoutDiscountValue) }}</v-tooltip>
-      </v-chip>
-    </span>
-    <i18n-t v-if="!hidePriceDate" keypath="PriceCard.PriceDate" tag="span">
-      <template v-slot:date>
-        <i>{{ getDateFormatted(price.date) }}</i>
-      </template>
-    </i18n-t>
-  </p>
+  <v-row style="margin-top:0;">
+    <v-col cols="12">
+      <span class="mr-1">{{ getPriceValueDisplay(priceValue) }}</span>
+      <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(priceValue) }})</span>
+      <span v-if="price.price_is_discounted">
+        <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">
+          {{ $t('PriceCard.Discount') }}
+          <v-tooltip v-if="priceWithoutDiscountValue" activator="parent" open-on-click location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(priceWithoutDiscountValue) }}</v-tooltip>
+        </v-chip>
+      </span>
+      <i18n-t v-if="!hidePriceDate" keypath="PriceCard.PriceDate" tag="span">
+        <template v-slot:date>
+          <i>{{ getDateFormatted(price.date) }}</i>
+        </template>
+      </i18n-t>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

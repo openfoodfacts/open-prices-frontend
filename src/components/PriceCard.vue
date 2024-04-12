@@ -6,7 +6,7 @@
           <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;width:100px" @click="goToProduct()"></v-img>
           <v-img v-else :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
         </v-col>
-        <v-col style="max-width:75%">
+        <v-col :style="hideProductImage ? '' : 'max-width:75%'">
           <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
           <p v-if="!hideProductDetails && !hasCategoryTag" class="mb-2">
@@ -23,7 +23,7 @@
             </span>
           </p>
 
-          <PricePrice v-if="price" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceDate="hidePriceDate"></PricePrice>
+          <PricePriceRow v-if="price" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceDate="hidePriceDate"></PricePriceRow>
         </v-col>
       </v-row>
 
@@ -43,7 +43,7 @@ export default {
     'ProductMissingChip': defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
     'PriceOrigins': defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
     'PriceLabels': defineAsyncComponent(() => import('../components/PriceLabels.vue')),
-    'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
+    'PricePriceRow': defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     'PriceFooterRow': defineAsyncComponent(() => import('../components/PriceFooterRow.vue'))
   },
   props: {

@@ -28,7 +28,7 @@
       <v-sheet v-if="latestPrice">
         <v-divider class="mt-2 mb-2"></v-divider>
         <h4>{{ $t('ProductCard.LatestPrice') }}</h4>
-        <PricePrice :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></PricePrice>
+        <PricePriceRow :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></PricePriceRow>
         <PriceFooterRow :price="latestPrice"></PriceFooterRow>
       </v-sheet>
     </v-container>
@@ -46,7 +46,7 @@ export default {
     'ProductCategoriesChip': defineAsyncComponent(() => import('../components/ProductCategoriesChip.vue')),
     'ProductLabelsChip': defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
     'ProductMissingChip': defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
-    'PricePrice': defineAsyncComponent(() => import('../components/PricePrice.vue')),
+    'PricePriceRow': defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     'PriceFooterRow': defineAsyncComponent(() => import('../components/PriceFooterRow.vue')),
   },
   props: {
