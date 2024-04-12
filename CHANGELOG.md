@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.56.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.55.1...v1.56.0) (2024-04-12)
+
+
+### Features
+
+* improve price card (condense, show product price count) ([#523](https://github.com/openfoodfacts/open-prices-frontend/issues/523)) ([b3d206c](https://github.com/openfoodfacts/open-prices-frontend/commit/b3d206ccf373348acfa3cb95ebea616480380211))
+
+
+### Bug Fixes
+
+* hide product missing message on price categories. ref [#474](https://github.com/openfoodfacts/open-prices-frontend/issues/474) ([e22484e](https://github.com/openfoodfacts/open-prices-frontend/commit/e22484e77fb9fb5a36ae7b1de5368fd33e71252a))
+
+
+### Technical
+
+* new ProductPriceAddButton component ([#521](https://github.com/openfoodfacts/open-prices-frontend/issues/521)) ([258c0fe](https://github.com/openfoodfacts/open-prices-frontend/commit/258c0fe3416b71689c48c3a201e7bc926a2bcdba))
+* rename PriceFooter to PriceFooterRow ([c6ed008](https://github.com/openfoodfacts/open-prices-frontend/commit/c6ed00856f7b617cb4297f595ca9ee1cb1991f2f))
+* rename PricePrice to PricePriceRow ([13a3797](https://github.com/openfoodfacts/open-prices-frontend/commit/13a379781d8abd151e6e74bb4d0e2bac52c8c263))
+* show share button label on bigger screens. ref [#199](https://github.com/openfoodfacts/open-prices-frontend/issues/199) ([f86c2a0](https://github.com/openfoodfacts/open-prices-frontend/commit/f86c2a068589660af9213dbefc9bf9c8479c1757))
+
 ## [1.55.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.55.0...v1.55.1) (2024-04-10)
 
 
