@@ -11,6 +11,7 @@
 
           <p v-if="!hideProductDetails && !hasCategoryTag" class="mb-2">
             <span v-if="hasProductCode">
+              <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
               <span v-if="hasProductSource">
                 <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
                 <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
@@ -38,6 +39,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'ProductBrands': defineAsyncComponent(() => import('../components/ProductBrands.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
     'ProductMissingChip': defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
