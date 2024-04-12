@@ -2,15 +2,16 @@
   <v-card :id="'price_' + price.id">
     <v-container class="pa-2">
       <v-row>
-        <v-col v-if="!hideProductImage" style="max-width:25%">
-          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;width:100px" @click="goToProduct()"></v-img>
-          <v-img v-else :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
+        <v-col v-if="!hideProductImage" style="max-width:15%">
+          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:50px;width:50px" @click="goToProduct()"></v-img>
+          <v-img v-else :src="productImageDefault" style="height:50px;width:50px;filter:invert(.9);"></v-img>
         </v-col>
-        <v-col :style="hideProductImage ? '' : 'max-width:75%'">
+        <v-col :style="hideProductImage ? '' : 'max-width:85%'">
           <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
 
           <p v-if="!hideProductDetails && !hasCategoryTag" class="mb-2">
             <span v-if="hasProductCode">
+              <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
               <span v-if="hasProductSource">
                 <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
                 <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
@@ -22,10 +23,10 @@
               <PriceLabels v-if="hasPriceLabels" class="mr-1" :priceLabels="price.labels_tags"></PriceLabels>
             </span>
           </p>
-
-          <PricePriceRow v-if="price" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceDate="hidePriceDate"></PricePriceRow>
         </v-col>
       </v-row>
+
+      <PricePriceRow v-if="price" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceDate="hidePriceDate"></PricePriceRow>
 
       <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly"></PriceFooterRow>
     </v-container>
@@ -38,6 +39,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'ProductBrands': defineAsyncComponent(() => import('../components/ProductBrands.vue')),
     'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
     'ProductMissingChip': defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
