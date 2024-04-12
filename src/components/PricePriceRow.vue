@@ -1,6 +1,6 @@
 <template>
   <v-row style="margin-top:0;">
-    <v-col cols="12">
+    <v-col cols="12" class="pt-2 pb-2">
       <span class="mr-1">{{ getPriceValueDisplay(priceValue) }}</span>
       <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(priceValue) }})</span>
       <span v-if="price.price_is_discounted">
