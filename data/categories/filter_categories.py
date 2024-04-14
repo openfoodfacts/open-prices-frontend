@@ -1,6 +1,18 @@
+"""
+https://static.openfoodfacts.org/data/taxonomies/categories.full.json
+
+How-to run ?
+> pip install openfoodfacts
+> python data/categories/filter_categories.py
+"""
+
 import json
 from openfoodfacts.taxonomy import get_taxonomy
 
+
+OFF_TAXONOMY_NAME = "category"
+OP_LANGUAGES_FILE = "src/i18n/data/languages.json"
+OLD_CATEGORIES_FILE = "src/data/category-tags.json"
 
 PARENT_CATEGORIES_ID = [
     "en:vegetables",  # 391
@@ -26,12 +38,12 @@ ADDITIONAL_FILTERING = [
 
 
 def get_languages():
-    with open("src/i18n/data/languages.json") as f:
+    with open(OP_LANGUAGES_FILE) as f:
         return json.load(f)
 
 
 def get_category_taxonomy():
-    return get_taxonomy("category")
+    return get_taxonomy(OFF_TAXONOMY_NAME)
 
 
 def get_taxonomy_node_by_id(taxonomy, node_id):
@@ -113,7 +125,7 @@ def write_categories_to_files(categories):
 
 
 def compare_new_categories_with_old_categories():
-    with open("src/data/category-tags.json") as f:
+    with open(OLD_CATEGORIES_FILE) as f:
         old_categories = json.load(f)
     print("old_categories", len(old_categories))
 
@@ -140,11 +152,6 @@ def compare_new_categories_with_old_categories():
 
 
 if __name__ == "__main__":
-    """
-    How-to run ?
-    > pip install openfoodfacts
-    > python data/categories/filter_categories.py
-    """
     # init
     CATEGORIES_FULL = get_category_taxonomy()
     print("Total number of categories:", len(CATEGORIES_FULL))
