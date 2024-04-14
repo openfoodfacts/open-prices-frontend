@@ -474,7 +474,7 @@ export default {
       this.proofisSelected = true
     },
     getProofUrl(proof) {
-      return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
+      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
     },
     newProof(source) {
