@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.57.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.56.0...v1.57.0) (2024-04-15)
+
+
+### Features
+
+* when a product is not found, improve CTA to add the product to OFF ([#522](https://github.com/openfoodfacts/open-prices-frontend/issues/522)) ([36a4d90](https://github.com/openfoodfacts/open-prices-frontend/commit/36a4d9086e76879b721b499c8df1b43588e7f496))
+
+
+### Bug Fixes
+
+* **price add:** fix proof preview url. closes [#525](https://github.com/openfoodfacts/open-prices-frontend/issues/525) ([03b7194](https://github.com/openfoodfacts/open-prices-frontend/commit/03b7194d0c1d050f7f6478400e1686e36f51a008))
+
 ## [1.56.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.55.1...v1.56.0) (2024-04-12)
 
 
