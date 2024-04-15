@@ -1,7 +1,7 @@
 <template>
   <v-menu scroll-strategy="close">
     <template v-slot:activator="{ props }">
-      <v-btn v-bind="props" size="small" color="primary" prepend-icon="mdi-plus" append-icon="mdi-menu-down">
+      <v-btn v-bind="props" size="small" prepend-icon="mdi-plus" append-icon="mdi-menu-down">
         <i18n-t keypath="Common.AddToOFF" tag="span">
           <template #name>{{ OFF_NAME }}</template>
         </i18n-t>
@@ -52,7 +52,7 @@ export default {
       return constants[`${source.key.toUpperCase()}_URL`]
     },
     getSourceAddUrlWithLocale(source) {
-      const SOURCE_ADD_URL = `${this.getSourceUrl(source)}/cgi/product.pl?type=search_or_add&action=process&code=${this.product.code}`
+      const SOURCE_ADD_URL = `${this.getSourceUrl(source)}/cgi/product.pl?type=search_or_add&action=display&code=${this.product.code}`
       return SOURCE_ADD_URL.replace('world', this.appStore.user.language)
     },
   }
