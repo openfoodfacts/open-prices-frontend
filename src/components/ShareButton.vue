@@ -36,7 +36,7 @@ export default {
   props: {
     'overrideUrl': null,
   },
-  data () {
+  data() {
     return {
       APP_NAME: constants.APP_NAME,
       shareLinkCopySuccessMessage: false

@@ -3,7 +3,7 @@
     size="small"
     color="primary"
     prepend-icon="mdi-plus"
-    :to="'/add/single?code=' + product.code">
+    :to="getAddUrl">
     {{ $t('ProductDetail.AddPrice') }}
   </v-btn>
 </template>
@@ -13,6 +13,11 @@ export default {
   props: {
     product: Object,
     required: true
+  },
+  computed: {
+    getAddUrl() {
+      return `/add/single?code=${this.product.code}`
+    }
   }
 }
 </script>
