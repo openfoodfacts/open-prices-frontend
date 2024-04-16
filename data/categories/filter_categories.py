@@ -15,7 +15,8 @@ PARENT_CATEGORIES_ID = [
 EXTRA_CHILDREN = [
     "en:rolled-oats",
     "en:ginger",
-    "en:mushrooms"
+    "en:mushrooms",
+    "en:candies"
 ]
 
 ADDITIONAL_FILTERING = [
