@@ -31,7 +31,7 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Os recibos podem conter informações pessoais, pelo que recomendamos que os oculte (rabiscar, dobrar...) antes de tirar a fotografia.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "Também pode definir o recibo como Privado. As provas privadas só serão visíveis para si e para os moderadores.",
 			"Title": "Detalhes do comprovativo"
 		},
 		"Title": "Adicione vários preços"
@@ -39,20 +39,20 @@
 	"AddPriceSingle": {
 		"Create": "Criar",
 		"PriceDetails": {
-			"Discount": "Discount?",
+			"Discount": "Desconto?",
 			"Label": "Preço",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
+			"LabelDiscounted": "Preços com desconto",
+			"LabelFull": "Preço original",
 			"Proof": "Comprovativo",
 			"ProofDateChanged": "Data de atualização!",
 			"ProofSelected": "Comprovativo selecionado!",
 			"ProofUploaded": "Comprovativo carregado!",
 			"Title": "Detalhes do preço",
 			"UploadProof": "Carregar um comprovativo",
-			"Picture": "Picture",
+			"Picture": "Imagem",
 			"TakePicture": "Tirar uma foto",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
+			"Gallery": "Galeria do dispositivo",
+			"SelectFromGallery": "Selecionar da galeria do dispositivo",
 			"RecentProof": "Comprovativo recente",
 			"SelectRecentProof": "Selecionar um comprovativo recente"
 		},
@@ -63,7 +63,7 @@
 			"Scan": "Digitalizar",
 			"ScanBarcode": "Digitalizar um código de barras",
 			"Type": "Tipo",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Digite um código de barras",
 			"SetProduct": "Selecionar um produto",
 			"Title": "Informação do produto"
 		},
@@ -94,46 +94,46 @@
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
 		"Submit": "Enviar",
-		"Title": "Type a barcode"
+		"Title": "Digite um código de barras"
 	},
 	"BrandDetail": {
 		"LoadMore": "Carregar mais",
-		"TopProducts": "Top products",
+		"TopProducts": "Productos destacados",
 		"BrandProductTotal": "{count} produtos"
 	},
 	"CategoryDetail": {
 		"LoadMore": "Carregar mais",
-		"TopProducts": "Top products",
+		"TopProducts": "Productos destacados",
 		"CategoryProductTotal": "{count} produtos"
 	},
 	"Common": {
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Adicionar a {name}",
 		"Delete": "Eliminar",
 		"Edit": "Editar",
 		"Filter": "Filtro",
 		"FilterProductWithPriceCountHide": "Ocultar produtos com preços",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
-		"Order": "Order",
-		"OrderProductUniqueScansDESC": "Number of scans",
-		"OrderProductPriceCountDESC": "Number of prices",
+		"FilterPriceMoreThan30DaysHide": "Ocultar preços com mais de 30 dias",
+		"Order": "Ordem",
+		"OrderProductUniqueScansDESC": "Número de digitalizações",
+		"OrderProductPriceCountDESC": "Número de preços",
 		"OrderPriceASC": "Preço",
-		"OrderPriceCreatedDESC": "Addition date",
-		"OrderPriceDateDESC": "Price date",
+		"OrderPriceCreatedDESC": "Data de adição",
+		"OrderPriceDateDESC": "Data do preço",
 		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
 		"Source": "Fonte",
 		"Yes": "Sim",
 		"No": "Não",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty",
+		"Food": "Alimento",
+		"PetFood": "Comida para animais",
+		"Beauty": "Beleza",
 		"Products": "Produtos"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "Escolha uma das suas moedas preferidas",
 		"Currency": "Moeda",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrencies": "Adicionar moedas nas Configurações",
+		"AddCurrenciesWarning": "Será redirecionado para a página de Configurações, mas perderá todas as informações que inseriu nesta página.",
+		"Select": "Selecionar {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecionar um dos seus comprovativos recentes"
@@ -187,13 +187,13 @@
 		"Title": "Não encontrado"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "Desconto",
 		"PriceDate": "em {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unidade",
 		"Proof": "Comprovativo",
-		"FullPrice": "Full price",
+		"FullPrice": "Preço original",
 		"UnknownProduct": "Produto desconhecido"
 	},
 	"PriceCountChip": {
@@ -211,10 +211,10 @@
 		"Title": "Editar um preço"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
+		"Discount": "Desconto?",
 		"Label": "Preço",
-		"LabelDiscounted": "Discounted price",
-		"LabelFull": "Full price"
+		"LabelDiscounted": "Preços com desconto",
+		"LabelFull": "Preço original"
 	},
 	"PriceList": {
 		"LoadMore": "Carregar mais",
@@ -223,15 +223,15 @@
 	"ProductCard": {
 		"Brands": "Marcas",
 		"BrandLower": "marca",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "Falta a marca",
 		"BrandTotal": "{count} marcas",
 		"Categories": "Categorias",
 		"CategoriesLower": "categorias",
-		"CategoriesMissing": "Category missing",
-		"CategoryTotal": "{count} categories",
+		"CategoriesMissing": "Falta a categoria",
+		"CategoryTotal": "{count} categorias",
 		"Labels": "Etiquetas",
 		"LabelsLower": "etiquetas",
-		"LabelTotal": "{count} labels",
+		"LabelTotal": "{count} etiquetas",
 		"LatestPrice": "Preço mais recente",
 		"ProductBrandMissing": "Marca do produto em falta",
 		"ProductCategoriesMissing": "Categorias de produtos em falta",
@@ -240,7 +240,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Quantidade do produto em falta",
-		"QuantityMissing": "Quantity missing",
+		"QuantityMissing": "Falta a quantidade",
 		"UnknownProduct": "Nome de produto desconhecido"
 	},
 	"ProductDetail": {
@@ -255,7 +255,7 @@
 		"LoadMore": "Carregar mais",
 		"PriceNumber": "Número de preços adicionados",
 		"ScanNumber": "Número de digitalizações adicionadas",
-		"Title": "Top products",
+		"Title": "Productos destacados",
 		"ProductTotal": "{count} produtos"
 	},
 	"ProofCard": {
@@ -265,23 +265,23 @@
 		"GDPR_REQUEST": "Pedido RGPD"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Tem a certeza que pretende eliminar este comprovativo?",
 		"Delete": "Eliminar",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "Eliminar um comprovativo",
+		"Success": "Comprovativo eliminado!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Carregar mais",
 		"Prices": "Preços",
 		"ProofNotFound": "Comprovativo não encontrado (ou não é o proprietário)",
-		"Public": "Public",
-		"Private": "Private",
+		"Public": "Público",
+		"Private": "Privado",
 		"Privacy": "Privacidade"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
+		"Title": "Editar um comprovativo",
 		"Save": "Guardar",
-		"Success": "Proof edited!"
+		"Success": "Comprovativo editado!"
 	},
 	"Router": {
 		"AddPrice": {
@@ -300,13 +300,13 @@
 			"Title": "Iniciar sessão"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Maiores colaboradores"
 		},
 		"TopLocations": {
 			"Title": "Principais localizações"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Productos destacados"
 		}
 	},
 	"Search": {
@@ -356,7 +356,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Carregar mais",
-		"Title": "Top contributors",
+		"Title": "Maiores colaboradores",
 		"UserTotal": "{count} colaboradores"
 	},
 	"UserSettings": {
