@@ -31,7 +31,7 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Os recibos podem conter informações pessoais, recomendamos ocultá-las antes de tirar a foto.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "Você também pode definir o recibo como Privado. Provas privadas só serão visíveis para você e para moderadores.",
 			"Title": "Detalhes da documentação"
 		},
 		"Title": "Adicionar múltiplos preços"
@@ -51,8 +51,8 @@
 			"UploadProof": "Envie uma demonstração",
 			"Picture": "Picture",
 			"TakePicture": "Tirar uma foto",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
+			"Gallery": "Galeria do dispositivo",
+			"SelectFromGallery": "Selecione a partir da galeria do dispositivo",
 			"RecentProof": "Recent proof",
 			"SelectRecentProof": "Select a recent proof"
 		},
@@ -112,7 +112,7 @@
 		"Edit": "Editar",
 		"Filter": "Filtro",
 		"FilterProductWithPriceCountHide": "Ocultar produtos com preços",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
+		"FilterPriceMoreThan30DaysHide": "Esconder preços com mais de 30 dias",
 		"Order": "Order",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -233,13 +233,13 @@
 		"LabelsLower": "etiquetas",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Preço mais recente",
-		"ProductBrandMissing": "Product brand missing",
+		"ProductBrandMissing": "Marca do produto ausente",
 		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
+		"ProductQuantityMissing": "Quantidade do produto ausente",
 		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Nome de produto desconhecido"
 	},
@@ -274,8 +274,8 @@
 		"LoadMore": "Carregar mais",
 		"Prices": "Preços",
 		"ProofNotFound": "Proof not found (or not the owner)",
-		"Public": "Public",
-		"Private": "Private",
+		"Public": "Público",
+		"Private": "Privado",
 		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
@@ -364,8 +364,8 @@
 		"ChangeLanguage": "Mudar idioma",
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moeda",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"FavoriteCurrencies": "Moedas favoritas",
+		"CurrencyRequired": "Pelo menos uma moeda é necessária",
 		"LanguageLabel": "Línguas",
 		"Save": "Guardar",
 		"Title": "Definições",
