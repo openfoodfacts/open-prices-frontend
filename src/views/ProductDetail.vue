@@ -2,7 +2,7 @@
   <v-row>
     <v-col cols="12" sm="6">
       <ProductCard v-if="!productIsCategory" :product="product"></ProductCard>
-      <v-card v-else :title="getCategoryName" prepend-icon="mdi-fruit-watermelon" elevation="1"></v-card>
+      <v-card v-else :title="product.category_name" prepend-icon="mdi-fruit-watermelon" elevation="1"></v-card>
     </v-col>
   </v-row>
 
@@ -57,6 +57,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import constants from '../constants'
 import utils from '../utils.js'
 import api from '../services/api'
@@ -76,7 +78,7 @@ export default {
     return {
       OFF_NAME: constants.OFF_NAME,
       productId: this.$route.params.id,  // product_code or product_category
-      product: { code: this.$route.params.id },
+      product: { code: this.$route.params.id, category_name: null },
       productPriceList: [],
       productPriceTotal: null,
       productPricePage: 0,
@@ -91,22 +93,19 @@ export default {
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.getProduct(),
-    this.initProductPrices(),
-    console.log(this.product)
+    this.getProduct()
+    this.initProductPrices()
   },
   computed: {
+    ...mapStores(useAppStore),
     productIsCategory() {
       return this.productId.startsWith('en')
-    },
-    getCategoryName() {
-      return utils.getCategoryName(this.productId)
     },
     productNotFound() {
       return !this.productIsCategory && (!this.product.code || !this.product.source)
     },
     categoryNotFound() {
-      return this.productIsCategory && (this.getCategoryName === this.productId)
+      return this.productIsCategory && !this.product.category_name
     },
     productOrCategoryNotFound() {
       return !this.loading && (this.productNotFound || this.categoryNotFound)
@@ -129,7 +128,11 @@ export default {
       this.getProductPrices()
     },
     getProduct() {
-      if (!this.productIsCategory) {
+      if (this.productIsCategory) {
+        utils.getLocaleCategoryTagName(this.appStore.getUserLanguage, this.productId).then((categoryName) => {
+          this.product.category_name = categoryName
+        })
+      } else {
         return api.getProductByCode(this.productId)
           .then((data) => {
             if (data.id) {
