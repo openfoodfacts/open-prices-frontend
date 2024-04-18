@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.57.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.57.0...v1.57.1) (2024-04-18)
+
+
+### Bug Fixes
+
+* **product detail:** fix display and translation of price category name ([#545](https://github.com/openfoodfacts/open-prices-frontend/issues/545)) ([aff5cb7](https://github.com/openfoodfacts/open-prices-frontend/commit/aff5cb7d59d9a6b539dfd3849a4c1ee75f147c52))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#524](https://github.com/openfoodfacts/open-prices-frontend/issues/524)) ([f9b387b](https://github.com/openfoodfacts/open-prices-frontend/commit/f9b387bb4ad7dd019cca83d28db5aadfa2448038))
+
 ## [1.57.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.56.0...v1.57.0) (2024-04-15)
 
 
