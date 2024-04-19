@@ -7,7 +7,7 @@
           <v-img v-else :src="productImageDefault" style="height:50px;width:50px;filter:invert(.9);"></v-img>
         </v-col>
         <v-col :style="hideProductImage ? '' : 'max-width:85%'">
-          <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ getPriceProductTitle() }}</h3>
+          <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ productTitle }}</h3>
 
           <p v-if="!hideProductDetails && !hasCategoryTag" class="mb-2">
             <span v-if="hasProductCode">
@@ -35,6 +35,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import utils from '../utils.js'
 
 export default {
@@ -62,12 +64,15 @@ export default {
   },
   data() {
     return {
+      productTitle: null,  // see init
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
     }
   },
   mounted() {
+    this.getPriceProductTitle()
   },
   computed: {
+    ...mapStores(useAppStore),
     hasProduct() {
       return !!this.product
     },
@@ -92,22 +97,19 @@ export default {
     hasPriceLabels() {
       return this.hasPrice && !!this.price.labels_tags && this.price.labels_tags.length
     },
-    getPriceCategoryName() {
-      if (this.price && this.hasCategoryTag) {
-        return utils.getCategoryName(this.price.category_tag)
-      }
-    },
   },
   methods: {
     getPriceProductTitle() {
       if (this.hasProductName) {
-        return this.product.product_name
+        this.productTitle = this.product.product_name
       } else if (this.hasPrice && this.price.product_code) {
-        return this.price.product_code
+        this.productTitle = this.price.product_code
       } else if (this.hasPrice && this.hasCategoryTag) {
-        return this.getPriceCategoryName
+        utils.getLocaleCategoryTagName(this.appStore.getUserLanguage, this.price.category_tag).then((categoryName) => {
+          this.productTitle = categoryName
+        })
       }
-      return this.$t('PriceCard.UnknownProduct')
+      this.productTitle = this.$t('PriceCard.UnknownProduct')
     },
     getPriceProductCode() {
       if (this.hasProduct) {
