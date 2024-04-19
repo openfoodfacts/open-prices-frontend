@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.57.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.57.1...v1.57.2) (2024-04-19)
+
+
+### Bug Fixes
+
+* fix display of price category & label. ref [#474](https://github.com/openfoodfacts/open-prices-frontend/issues/474) ([07c2f8f](https://github.com/openfoodfacts/open-prices-frontend/commit/07c2f8fd4c2996932f02def41d3484d263eef6cc))
+* **price:** fix display and translation of price category name ([#549](https://github.com/openfoodfacts/open-prices-frontend/issues/549)) ([d4c8330](https://github.com/openfoodfacts/open-prices-frontend/commit/d4c8330b8b2b3154aeb3f7cc04f11b57fb78b9e0))
+* product name in last PR. ref [#549](https://github.com/openfoodfacts/open-prices-frontend/issues/549) ([b468a19](https://github.com/openfoodfacts/open-prices-frontend/commit/b468a190880dd2368333da30eec572d1c82b0f4d))
+
+
+### Technical
+
+* Simplified category filtering script and added candies category ([#543](https://github.com/openfoodfacts/open-prices-frontend/issues/543)) ([dd03eda](https://github.com/openfoodfacts/open-prices-frontend/commit/dd03eda00d10e1061c9f5810729fe694a9a1a854))
+
 ## [1.57.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.57.0...v1.57.1) (2024-04-18)
 
 
