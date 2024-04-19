@@ -108,8 +108,9 @@ export default {
         utils.getLocaleCategoryTagName(this.appStore.getUserLanguage, this.price.category_tag).then((categoryName) => {
           this.productTitle = categoryName
         })
+      } else {
+        this.productTitle = this.$t('PriceCard.UnknownProduct')
       }
-      this.productTitle = this.$t('PriceCard.UnknownProduct')
     },
     getPriceProductCode() {
       if (this.hasProduct) {
