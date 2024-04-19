@@ -9,8 +9,8 @@
         <v-col :style="hideProductImage ? '' : 'max-width:85%'">
           <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ productTitle }}</h3>
 
-          <p v-if="!hideProductDetails && !hasCategoryTag" class="mb-2">
-            <span v-if="hasProductCode">
+          <p v-if="!hideProductDetails" class="mb-2">
+            <span v-if="hasProductId">
               <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
               <span v-if="hasProductSource">
                 <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
@@ -82,11 +82,11 @@ export default {
     hasCategoryTag() {
       return !!this.price.category_tag
     },
+    hasProductId() {
+      return this.hasProduct && !!this.product.id
+    },
     hasProductName() {
       return this.hasProduct && !!this.product.product_name
-    },
-    hasProductCode() {
-      return this.hasProduct && !!this.product.code
     },
     hasProductSource() {
       return this.hasProduct && !!this.product.source
