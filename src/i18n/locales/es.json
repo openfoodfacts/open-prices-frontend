@@ -31,7 +31,7 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Los tickets pueden contener información personal. Te recomendamos que antes de hacer la foto ocultes esa información (p. ej., doblando el ticket).",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "También puedes hacer que el recibo sea privado. Los comprobantes privados sólo los podréis ver tú y el equipo moderador.",
 			"Title": "Detalles del comprobante"
 		},
 		"Title": "Añadir varios precios"
@@ -123,9 +123,9 @@
 		"Source": "Fuente",
 		"Yes": "Sí",
 		"No": "No",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty",
+		"Food": "Alimento",
+		"PetFood": "Alimento para mascotas",
+		"Beauty": "Belleza",
 		"Products": "Productos"
 	},
 	"ChangeCurrencyDialog": {
@@ -223,11 +223,11 @@
 	"ProductCard": {
 		"Brands": "Marcas",
 		"BrandLower": "marca",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "Falta la marca",
 		"BrandTotal": "{count} marcas",
 		"Categories": "Categorías",
 		"CategoriesLower": "categorías",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "Falta la categoría",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Etiquetas",
 		"LabelsLower": "etiquetas",
@@ -240,7 +240,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Falta la cantidad del producto",
-		"QuantityMissing": "Quantity missing",
+		"QuantityMissing": "Falta la cantidad",
 		"UnknownProduct": "Nombre de producto desconocido"
 	},
 	"ProductDetail": {
@@ -265,23 +265,23 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "¿Seguro que deseas eliminar este comprobante?",
 		"Delete": "Eliminar",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "Eliminar comprobante",
+		"Success": "Comprobante eliminado"
 	},
 	"ProofDetail": {
 		"LoadMore": "Cargar más",
 		"Prices": "Precios",
 		"ProofNotFound": "Proof not found (or not the owner)",
-		"Public": "Public",
-		"Private": "Private",
+		"Public": "Público",
+		"Private": "Privado",
 		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
+		"Title": "Editar comprobante",
 		"Save": "Guardar",
-		"Success": "Proof edited!"
+		"Success": "Comprobante editado"
 	},
 	"Router": {
 		"AddPrice": {
