@@ -265,10 +265,10 @@
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "למחוק את ההוכחה הזאת?",
 		"Delete": "מחיקה",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "למחוק הוכחה",
+		"Success": "ההוכחה נמחקה!"
 	},
 	"ProofDetail": {
 		"LoadMore": "לטעון עוד",
@@ -279,9 +279,9 @@
 		"Privacy": "פרטיות"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
+		"Title": "עריכת הוכחה",
 		"Save": "שמירה",
-		"Success": "Proof edited!"
+		"Success": "ההוכחה נערכה!"
 	},
 	"Router": {
 		"AddPrice": {
