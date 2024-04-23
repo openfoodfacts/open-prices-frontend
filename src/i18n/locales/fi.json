@@ -123,9 +123,9 @@
 		"Source": "Lähde",
 		"Yes": "Kyllä",
 		"No": "Ei",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty",
+		"Food": "Ruoka",
+		"PetFood": "Lemmikin ruoka",
+		"Beauty": "Kauneus",
 		"Products": "Tuotteet"
 	},
 	"ChangeCurrencyDialog": {
@@ -223,11 +223,11 @@
 	"ProductCard": {
 		"Brands": "Tuotemerkit",
 		"BrandLower": "tuotemerkki",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "Tuotemerkki puuttuu",
 		"BrandTotal": "{count} tuotemerkkejä",
 		"Categories": "Tuoteluokat",
 		"CategoriesLower": "tuoteluokat",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "Kategoria puuttuu",
 		"CategoryTotal": "{count} kategoriaa",
 		"Labels": "Merkit",
 		"LabelsLower": "merkit",
@@ -240,7 +240,7 @@
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Tuotteen määrä puuttuu",
-		"QuantityMissing": "Quantity missing",
+		"QuantityMissing": "Määrä puuttuu",
 		"UnknownProduct": "Tuntematon tuotenimi"
 	},
 	"ProductDetail": {
