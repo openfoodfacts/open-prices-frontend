@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} produktai (-ų)"
 	},
 	"Common": {
+		"AddPrice": "Pridėti kainą",
 		"AddToOFF": "Add to {name}",
+		"Date": "Data",
 		"Delete": "Ištrinti",
 		"Edit": "Redaguoti",
 		"Filter": "Filtras",
