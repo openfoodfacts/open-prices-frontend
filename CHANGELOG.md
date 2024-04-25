@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.58.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.57.2...v1.58.0) (2024-04-25)
+
+
+### Features
+
+* **price:** allow editing price date ([#555](https://github.com/openfoodfacts/open-prices-frontend/issues/555)) ([322ec71](https://github.com/openfoodfacts/open-prices-frontend/commit/322ec717025b5557d8bdc8a2514a2d69f413f096))
+* **proof:** add the price CTA button in the proof detail page ([#557](https://github.com/openfoodfacts/open-prices-frontend/issues/557)) ([dface48](https://github.com/openfoodfacts/open-prices-frontend/commit/dface48d55e6e6180c715d47323e55631c0681b4))
+* user setting to display product barcode ([#559](https://github.com/openfoodfacts/open-prices-frontend/issues/559)) ([21ea977](https://github.com/openfoodfacts/open-prices-frontend/commit/21ea977f8eb187b980147776e378dab87e1c9a68))
+
+
+### Bug Fixes
+
+* accept comma as decimal separator in prices ([#551](https://github.com/openfoodfacts/open-prices-frontend/issues/551)) ([#554](https://github.com/openfoodfacts/open-prices-frontend/issues/554)) ([c4f5e91](https://github.com/openfoodfacts/open-prices-frontend/commit/c4f5e91223d5602b8570159c89f5a5fea841b772))
+* fix revert display of product missing label on add. ref [#474](https://github.com/openfoodfacts/open-prices-frontend/issues/474) ([d725355](https://github.com/openfoodfacts/open-prices-frontend/commit/d725355194822d74b67c84e4f7f02655c4754b43))
+* turn remaining barcode links into buttons. ref [#352](https://github.com/openfoodfacts/open-prices-frontend/issues/352) ([13b98e9](https://github.com/openfoodfacts/open-prices-frontend/commit/13b98e9a6527da3c8802494957933ef166b51094))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#550](https://github.com/openfoodfacts/open-prices-frontend/issues/550)) ([f0fcbf7](https://github.com/openfoodfacts/open-prices-frontend/commit/f0fcbf716dd067c1e705a7d833856d32658c9f2d))
+* **l10n:** New Crowdin translations to review and merge ([#558](https://github.com/openfoodfacts/open-prices-frontend/issues/558)) ([d00968d](https://github.com/openfoodfacts/open-prices-frontend/commit/d00968da8fd10afb8d00fa03668784acf05df4e3))
+* **l10n:** New Crowdin translations to review and merge ([#560](https://github.com/openfoodfacts/open-prices-frontend/issues/560)) ([40075b5](https://github.com/openfoodfacts/open-prices-frontend/commit/40075b5e99cd07ab162564b2fbe1f91ff659aab1))
+
 ## [1.57.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.57.1...v1.57.2) (2024-04-19)
 
 
