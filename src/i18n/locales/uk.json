@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} продуктів"
 	},
 	"Common": {
+		"AddPrice": "Додати ціну",
 		"AddToOFF": "Додати до {name}",
+		"Date": "Date",
 		"Delete": "Видалити",
 		"Edit": "Редагувати",
 		"Filter": "Фільтр",
