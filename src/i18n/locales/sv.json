@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Country": "Land",
+		"Language": "Språk",
 		"Date": "Date",
 		"Delete": "Radera",
 		"Edit": "Redigera",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Load more",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Varumärken",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Byt språk",
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Currency",
+		"Display": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Språk",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Spara",
 		"Title": "Inställningar",
 		"TranslationCompletion": "Translation is {completion}% complete.",
