@@ -2,11 +2,12 @@
   <v-row>
     <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" sm="6">
       <v-text-field
-        v-model="priceForm.price"
+        :model-value="priceForm.price"
+        @update:model-value="newValue => priceForm.price = fixComma(newValue)"
         :label="priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label')"
-        type="number"
+        type="text"
         inputmode="decimal"
-        min="0"
+        :rules="priceRules"
         hide-details="auto"
         :suffix="priceForm.currency">
         <template v-slot:prepend-inner>
@@ -17,11 +18,12 @@
     </v-col>
     <v-col v-if="priceForm.price_is_discounted" cols="6">
       <v-text-field
-        v-model="priceForm.price_without_discount"
+        :model-value="priceForm.price_without_discount"
+        @update:model-value="newValue => priceForm.price_without_discount = fixComma(newValue)"
         :label="$t('PriceForm.LabelFull')"
-        type="number"
+        type="text"
         inputmode="decimal"
-        min="0"
+        :rules="priceRules"
         hide-details="auto"
         :suffix="priceForm.currency">
       </v-text-field>
@@ -58,6 +60,20 @@ export default {
   methods: {
     setCurrencyData(currency) {
       this.priceForm.currency = currency
+    },
+    fixComma(input) {
+      return input.replace(/,/g, '.');
+    },
+  },
+  computed: {
+    priceRules() {
+      return [
+        value => !!value && !!value.trim() || this.$t('PriceRules.AmountRequired'),
+        value => !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !isNaN(value) || this.$t('PriceRules.Number'),
+        value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
+        value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+      ];
     },
   }
 }
