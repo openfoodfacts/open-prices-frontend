@@ -382,6 +382,8 @@ export default {
       else {
         this.setProductCode(this.$route.query.code)
       }
+    } else if (this.$route.query.proof) {
+      this.handleProofSelected(this.$route.query.proof)
     }
     this.initPriceSingleForm()
   },
@@ -410,11 +412,14 @@ export default {
     showUserRecentProofs() {
       this.userRecentProofsDialog = true
     },
-    handleRecentProofSelected(selectedProof) {
-      this.addPriceSingleForm.proof_id = selectedProof.id
-      this.proofImagePreview = this.getProofUrl(selectedProof)
+    handleProofSelected(proofId) {
+      this.addPriceSingleForm.proof_id = proofId
       this.proofSelectedSuccessMessage = true
       this.proofSelectedMessage = true
+    },
+    handleRecentProofSelected(selectedProof) {
+      this.handleProofSelected(selectedProof.id)
+      this.proofImagePreview = this.getProofUrl(selectedProof)
     },
     getProofUrl(proof) {
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`

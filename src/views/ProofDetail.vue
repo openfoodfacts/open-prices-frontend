@@ -6,6 +6,12 @@
     </v-col>
   </v-row>
 
+  <v-row class="mt-0" v-if="proof">
+    <v-col cols="12">
+      <PriceAddButton class="mr-2" :proof="proof"></PriceAddButton>
+    </v-col>
+  </v-row>
+
   <br />
 
   <h2 class="text-h6 mb-1" v-if="proof">
@@ -32,6 +38,7 @@ import api from '../services/api'
 
 export default {
   components: {
+    'PriceAddButton': defineAsyncComponent(() => import('../components/PriceAddButton.vue')),
     'ProofCard': defineAsyncComponent(() => import('../components/ProofCard.vue')),
     'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
