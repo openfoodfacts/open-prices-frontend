@@ -222,6 +222,7 @@
 	},
 	"PriceRules": {
 		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
 		"Number": "Input a number",
 		"Positive": "Price may not be negative",
 		"TwoDecimals": "Only two decimals allowed"
