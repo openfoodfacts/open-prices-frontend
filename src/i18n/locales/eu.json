@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Country": "Country",
+		"Language": "Hizkuntza",
 		"Date": "Date",
 		"Delete": "Ezabatu",
 		"Edit": "Editatu",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Load more",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Markak",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Aldatu hizkuntza",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
+		"Display": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Hizkuntzak",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Gorde",
 		"Title": "Ezarpenak",
 		"TranslationCompletion": "Translation is {completion}% complete.",
