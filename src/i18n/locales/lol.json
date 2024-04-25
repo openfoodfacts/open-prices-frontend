@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "crwdns248260:0crwdne248260:0",
 		"AddToOFF": "crwdns247802:0{name}crwdne247802:0",
+		"Country": "crwdns248264:0crwdne248264:0",
+		"Language": "crwdns248266:0crwdne248266:0",
 		"Date": "crwdns248262:0crwdne248262:0",
 		"Delete": "crwdns247896:0crwdne247896:0",
 		"Edit": "crwdns247898:0crwdne247898:0",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "crwdns246664:0crwdne246664:0",
 		"Title": "crwdns246666:0crwdne246666:0"
+	},
+	"PriceRules": {
+		"AmountRequired": "crwdns248268:0crwdne248268:0",
+		"NoSpaces": "crwdns248270:0crwdne248270:0",
+		"Number": "crwdns248272:0crwdne248272:0",
+		"Positive": "crwdns248274:0crwdne248274:0",
+		"TwoDecimals": "crwdns248276:0crwdne248276:0"
 	},
 	"ProductCard": {
 		"Brands": "crwdns247860:0crwdne247860:0",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "crwdns246738:0crwdne246738:0",
 		"CountryLabel": "crwdns246740:0crwdne246740:0",
 		"CurrencyLabel": "crwdns246742:0crwdne246742:0",
+		"Display": "crwdns248278:0crwdne248278:0",
 		"FavoriteCurrencies": "crwdns247864:0crwdne247864:0",
 		"CurrencyRequired": "crwdns247866:0crwdne247866:0",
 		"LanguageLabel": "crwdns247724:0crwdne247724:0",
+		"ProductDisplayBarcode": "crwdns248280:0crwdne248280:0",
 		"Save": "crwdns246750:0crwdne246750:0",
 		"Title": "crwdns246752:0crwdne246752:0",
 		"TranslationCompletion": "crwdns246944:0{completion}crwdne246944:0",
