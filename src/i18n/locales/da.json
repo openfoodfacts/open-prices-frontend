@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Country": "Land",
+		"Language": "Sprog",
 		"Date": "Date",
 		"Delete": "Slet",
 		"Edit": "Redigér",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Indlæs mere",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Mærker",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Skift sprog",
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Currency",
+		"Display": "Vis",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Sprog",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Gem",
 		"Title": "Indstillinger",
 		"TranslationCompletion": "Translation is {completion}% complete.",

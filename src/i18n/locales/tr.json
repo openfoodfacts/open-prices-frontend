@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Fiyat ekleyin",
 		"AddToOFF": "{name}'e ekle",
+		"Country": "Ülke",
+		"Language": "Dil",
 		"Date": "Tarih",
 		"Delete": "Sil",
 		"Edit": "Düzenle",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Daha fazla yükle",
 		"Title": "Son fiyatlar"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Markalar",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Dili Değiştir",
 		"CountryLabel": "Ülke",
 		"CurrencyLabel": "Kur",
+		"Display": "Göster",
 		"FavoriteCurrencies": "Sık kullanılan para birimleri",
 		"CurrencyRequired": "En az bir para birimi gerekli",
 		"LanguageLabel": "Diller",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Kaydet",
 		"Title": "Ayarlar",
 		"TranslationCompletion": "Çeviri % {completion} tamamlandı.",

@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Country": "Ország",
+		"Language": "Nyelv",
 		"Date": "Date",
 		"Delete": "Törlés",
 		"Edit": "Szerkesztés",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Load more",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Márkanevek",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Nyelv módosítása",
 		"CountryLabel": "Ország",
 		"CurrencyLabel": "Currency",
+		"Display": "Megjelenítés",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Nyelvek",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Mentés",
 		"Title": "Beállítások",
 		"TranslationCompletion": "Translation is {completion}% complete.",

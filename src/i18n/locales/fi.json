@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Lisää hinta",
 		"AddToOFF": "Lisää kohtaan {name}",
+		"Country": "Maa",
+		"Language": "Kieli",
 		"Date": "Päivämäärä",
 		"Delete": "Poista",
 		"Edit": "Muokkaa",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Lataa enemmän",
 		"Title": "Viimeisimmät hinnat"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Tuotemerkit",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Vaihda kieli",
 		"CountryLabel": "Maa",
 		"CurrencyLabel": "Valuutta",
+		"Display": "Näytä",
 		"FavoriteCurrencies": "Suosikki valuutat",
 		"CurrencyRequired": "Vähintään yksi valuutta vaaditaan",
 		"LanguageLabel": "Kielet",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Tallenna",
 		"Title": "Asetukset",
 		"TranslationCompletion": "Käännös on {completion}% valmis.",

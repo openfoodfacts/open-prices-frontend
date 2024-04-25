@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Country": "Quốc gia",
+		"Language": "Ngôn ngữ",
 		"Date": "Date",
 		"Delete": "Xóa",
 		"Edit": "Chỉnh sửa",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Tải thêm",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Thương hiệu",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Thay đổi ngôn ngữ",
 		"CountryLabel": "Quốc gia",
 		"CurrencyLabel": "Currency",
+		"Display": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Ngôn ngữ",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Lưu",
 		"Title": "Cài đặt",
 		"TranslationCompletion": "Translation is {completion}% complete.",

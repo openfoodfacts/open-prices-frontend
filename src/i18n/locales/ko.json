@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Country": "국가",
+		"Language": "언어",
 		"Date": "Date",
 		"Delete": "삭제",
 		"Edit": "수정",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "더 불러오기",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "브랜드",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "언어 변경",
 		"CountryLabel": "국가",
 		"CurrencyLabel": "Currency",
+		"Display": "화면",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "언어",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "저장",
 		"Title": "설정",
 		"TranslationCompletion": "Translation is {completion}% complete.",

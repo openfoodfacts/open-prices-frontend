@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "添加价格",
 		"AddToOFF": "添加到 {name}",
+		"Country": "地區",
+		"Language": "语言",
 		"Date": "日期",
 		"Delete": "删除",
 		"Edit": "編輯",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "載入更多",
 		"Title": "最新价格"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "品牌",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "更改语言",
 		"CountryLabel": "地區",
 		"CurrencyLabel": "货币",
+		"Display": "显示",
 		"FavoriteCurrencies": "最喜欢的货币",
 		"CurrencyRequired": "至少需要一种货币",
 		"LanguageLabel": "語言",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "儲存",
 		"Title": "設定",
 		"TranslationCompletion": "翻译已完成 {completion}%。",

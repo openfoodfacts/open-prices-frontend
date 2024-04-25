@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Afegir un preu",
 		"AddToOFF": "Add to {name}",
+		"Country": "País",
+		"Language": "Idioma",
 		"Date": "Data",
 		"Delete": "Elimina",
 		"Edit": "Edita",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Carrega mes ",
 		"Title": "Últims preus"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Marques",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Canvi de llengua",
 		"CountryLabel": "País",
 		"CurrencyLabel": "Currency",
+		"Display": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Llengües",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Desa",
 		"Title": "Preferències",
 		"TranslationCompletion": "Translation is {completion}% complete.",

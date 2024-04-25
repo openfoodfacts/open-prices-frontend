@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "{name} に追加",
+		"Country": "国",
+		"Language": "言語",
 		"Date": "Date",
 		"Delete": "削除",
 		"Edit": "編集",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "もっと読み込む",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "ブランド",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "言語の変更",
 		"CountryLabel": "国",
 		"CurrencyLabel": "Currency",
+		"Display": "Display",
 		"FavoriteCurrencies": "お気に入りの通貨",
 		"CurrencyRequired": "少なくとも 1 つの通貨が必要です",
 		"LanguageLabel": "言語",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "保存",
 		"Title": "設定",
 		"TranslationCompletion": "翻訳は {completion}% 完了しています。",

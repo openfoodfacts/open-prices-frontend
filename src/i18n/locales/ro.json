@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Country": "Țară",
+		"Language": "Limbă",
 		"Date": "Date",
 		"Delete": "Ştergeţi",
 		"Edit": "Modificare",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Încarcă mai mult",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Mărci",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Modificați limba",
 		"CountryLabel": "Țară",
 		"CurrencyLabel": "Currency",
+		"Display": "Afişare",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Limbi",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Salvează",
 		"Title": "Configurări",
 		"TranslationCompletion": "Translation is {completion}% complete.",
