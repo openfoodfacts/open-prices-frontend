@@ -223,7 +223,8 @@
 	"PriceRules": {
 		"AmountRequired": "Price is required",
 		"Number": "Input a number",
-		"Positive": "Price may not be negative"
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Brands",

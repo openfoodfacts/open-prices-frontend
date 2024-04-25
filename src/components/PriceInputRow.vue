@@ -71,6 +71,7 @@ export default {
         value => !!value && !!value.trim() || this.$t('PriceRules.AmountRequired'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
+        value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
       ];
     },
   }
