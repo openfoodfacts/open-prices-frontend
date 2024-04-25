@@ -10,7 +10,7 @@
           <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ productTitle }}</h3>
 
           <p v-if="!hideProductDetails" class="mb-2">
-            <span v-if="hasProductId">
+            <span v-if="hasProductCode">
               <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
               <span v-if="hasProductSource">
                 <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
@@ -84,6 +84,9 @@ export default {
     },
     hasProductId() {
       return this.hasProduct && !!this.product.id
+    },
+    hasProductCode() {
+      return this.hasProduct && !!this.product.code
     },
     hasProductName() {
       return this.hasProduct && !!this.product.product_name

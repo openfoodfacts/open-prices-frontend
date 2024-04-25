@@ -492,7 +492,7 @@ export default {
       api
         .getProductByCode(code)
         .then((data) => {
-          this.product = data.id ? data : {'code': code}
+          this.product = data.id ? data : {'code': code, 'price_count': 0}
           console.log(this.product)
         })
         .catch((error) => {
