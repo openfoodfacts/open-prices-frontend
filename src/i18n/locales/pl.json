@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Dodaj cenę",
 		"AddToOFF": "Add to {name}",
+		"Country": "Kraj",
+		"Language": "Język",
 		"Date": "Data",
 		"Delete": "Usuń",
 		"Edit": "Edytuj",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Załaduj więcej",
 		"Title": "Najnowsze ceny"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Marki",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Zmiana języka",
 		"CountryLabel": "Kraj",
 		"CurrencyLabel": "Waluta",
+		"Display": "Wyświetl",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Języki",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Zapisz",
 		"Title": "Ustawienia",
 		"TranslationCompletion": "Tłumaczenie jest ukończone w {completion}%.",
