@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Pridėti kainą",
 		"AddToOFF": "Add to {name}",
+		"Country": "Šalis",
+		"Language": "Kalba",
 		"Date": "Data",
 		"Delete": "Ištrinti",
 		"Edit": "Redaguoti",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Įkelti daugiau",
 		"Title": "Naujausios kainos"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Prekės ženklai",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Šalis",
 		"CurrencyLabel": "Valiuta",
+		"Display": "Display",
 		"FavoriteCurrencies": "Mėgstamos valiutos",
 		"CurrencyRequired": "Būtina bent viena valiuta",
 		"LanguageLabel": "Kalbos",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Išsaugoti",
 		"Title": "Nustatymai",
 		"TranslationCompletion": "Užbaigta {completion} % vertimo.",
