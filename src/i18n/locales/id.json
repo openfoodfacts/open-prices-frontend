@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} produk"
 	},
 	"Common": {
+		"AddPrice": "Tambahkan harga",
 		"AddToOFF": "Tambahkan ke {name}",
+		"Date": "Tanggal",
 		"Delete": "Hapus",
 		"Edit": "Sunting",
 		"Filter": "Filter",
