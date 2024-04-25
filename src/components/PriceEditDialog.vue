@@ -18,7 +18,19 @@
       <v-divider></v-divider>
 
       <v-card-text>
+        <h3 class="mb-1">{{ $t('PriceForm.Label') }}</h3>
         <PriceInputRow :priceForm="updatePriceForm"></PriceInputRow>
+
+        <h3 class="mt-4 mb-1">{{ $t('Common.Date') }}</h3>
+        <v-row>
+          <v-col cols="12" sm="6">
+            <v-text-field
+              v-model="updatePriceForm.date"
+              :label="$t('Common.Date')"
+              type="date"
+            ></v-text-field>
+          </v-col>
+        </v-row>
       </v-card-text>
 
       <v-divider></v-divider>
@@ -54,6 +66,7 @@ export default {
         price_is_discounted: false,
         price_without_discount: null,
         currency: null,
+        date: null,
       },
       productMode: null,
       loading: false
