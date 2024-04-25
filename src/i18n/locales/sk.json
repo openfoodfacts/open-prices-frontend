@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Pridajte cenu",
 		"AddToOFF": "Add to {name}",
+		"Country": "Krajina",
+		"Language": "Jazyk",
 		"Date": "Dátum",
 		"Delete": "Vymazať",
 		"Edit": "Upraviť",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Načítať ďalšie",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Značky",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Zmeniť jazyk",
 		"CountryLabel": "Krajina",
 		"CurrencyLabel": "Mena",
+		"Display": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Jazyk",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Uložiť",
 		"Title": "Nastavenia",
 		"TranslationCompletion": "Preklad je dokončený na {completion}%.",
