@@ -185,7 +185,7 @@
               hide-details="auto"
               @click:prepend="showBarcodeScannerDialog"
             ></v-text-field>
-            <ProductCard v-if="product" class="mb-4" :product="product" :readonly="true" elevation="1"></ProductCard>
+            <ProductCard v-if="product" class="mb-4" :product="product" :hideProductBarcode="true" :readonly="true" elevation="1"></ProductCard>
           </v-sheet>
           <v-sheet v-if="productMode === 'category'">
             <v-row>

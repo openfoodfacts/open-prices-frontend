@@ -14,6 +14,7 @@ export const useAppStore = defineStore('app', {
       favorite_currencies: [import.meta.env.VITE_DEFAULT_CURRENCY], // ['EUR']
       proofs: [],
       proofTotal: null,
+      product_display_barcode: false,
     },
   }),
   getters: {

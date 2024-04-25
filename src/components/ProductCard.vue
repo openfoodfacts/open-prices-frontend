@@ -9,7 +9,7 @@
         <v-col style="max-width:75%">
           <h3 @click="goToProduct()">{{ getProductTitle() }}</h3>
 
-          <p class="mb-2">
+          <p>
             <span>
               <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
             </span>
@@ -21,6 +21,8 @@
               <ProductLabelsChip :productLabels="product.labels_tags"></ProductLabelsChip>
             </span>
             <ProductMissingChip v-else></ProductMissingChip>
+            <br v-if="showProductBarcode" />
+            <ProductBarcodeChip v-if="showProductBarcode" :product="product"></ProductBarcodeChip>
           </p>
         </v-col>
       </v-row>
@@ -37,6 +39,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 
 export default {
   components: {
@@ -46,12 +50,14 @@ export default {
     'ProductCategoriesChip': defineAsyncComponent(() => import('../components/ProductCategoriesChip.vue')),
     'ProductLabelsChip': defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
     'ProductMissingChip': defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
+    'ProductBarcodeChip': defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
     'PricePriceRow': defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     'PriceFooterRow': defineAsyncComponent(() => import('../components/PriceFooterRow.vue')),
   },
   props: {
     'product': null,
     'latestPrice': null,
+    'hideProductBarcode': false,
     'readonly': false
   },
   data() {
@@ -62,6 +68,7 @@ export default {
   mounted() {
   },
   computed: {
+    ...mapStores(useAppStore),
     hasProductName() {
       return !!this.product.product_name
     },
@@ -74,6 +81,9 @@ export default {
     hasProductQuantity() {
       return !!this.product.product_quantity
     },
+    showProductBarcode() {
+      return !this.hideProductBarcode && this.appStore.user.username && this.appStore.user.product_display_barcode
+    }
   },
   methods: {
     getProductTitle() {
