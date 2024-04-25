@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} products"
 	},
 	"Common": {
+		"AddPrice": "एक मूल्य जोड़े",
 		"AddToOFF": "Add to {name}",
+		"Date": "Date",
 		"Delete": "नष्ट करे",
 		"Edit": "संपादित करें",
 		"Filter": "Filter",
