@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Ajouter un prix",
 		"AddToOFF": "Ajouter à {name}",
+		"Country": "Pays",
+		"Language": "Langue",
 		"Date": "Date",
 		"Delete": "Supprimer",
 		"Edit": "Modifier",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Voir plus",
 		"Title": "Derniers prix ajoutés"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Marques",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Changer la langue",
 		"CountryLabel": "Pays",
 		"CurrencyLabel": "Devise",
+		"Display": "Afficher",
 		"FavoriteCurrencies": "Devises préférées",
 		"CurrencyRequired": "Au moins une devise est requise",
 		"LanguageLabel": "Langue",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Enregistrer",
 		"Title": "Paramètres",
 		"TranslationCompletion": "La traduction est terminée à {completion} %.",
