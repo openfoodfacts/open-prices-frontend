@@ -167,8 +167,14 @@
             </v-item-group>
           </h3>
           <v-sheet v-if="productMode === 'barcode'">
-            <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScannerDialog">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</v-btn>
-            <a href="#" @click.prevent="showBarcodeManualInputDialog">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</a>
+            <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScannerDialog">
+              <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Scan') }}</span>
+              <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</span>
+            </v-btn>
+            <v-btn class="mb-2" size="small" prepend-icon="mdi-numeric" @click.prevent="showBarcodeManualInputDialog">
+              <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Type') }}</span>
+              <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</span>
+            </v-btn>
             <v-text-field
               v-if="dev"
               :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
