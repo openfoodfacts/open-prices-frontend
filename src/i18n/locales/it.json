@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Aggiungi un prezzo",
 		"AddToOFF": "Aggiungi a {name}",
+		"Country": "Paese",
+		"Language": "Lingua",
 		"Date": "Data",
 		"Delete": "Elimina",
 		"Edit": "Modifica",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Scarica altro",
 		"Title": "Ultimi prezzi"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Marche",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Cambia lingua",
 		"CountryLabel": "Paese",
 		"CurrencyLabel": "Moneta",
+		"Display": "Mostra",
 		"FavoriteCurrencies": "Valute preferite",
 		"CurrencyRequired": "Almeno una valuta è necessaria",
 		"LanguageLabel": "Lingue",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Salva",
 		"Title": "Impostazioni",
 		"TranslationCompletion": "La traduzione è completa al {completion}%.",
