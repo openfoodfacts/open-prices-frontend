@@ -34,7 +34,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12" sm="6" md="4" v-for="product in brandProductList" :key="product">
-      <ProductCard :product="product" elevation="1" height="100%"></ProductCard>
+      <ProductCard :product="product" :hideProductBarcode="true" elevation="1" height="100%"></ProductCard>
     </v-col>
   </v-row>
 

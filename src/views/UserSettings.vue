@@ -4,27 +4,27 @@
   <v-form @submit.prevent="updateSettings">
     <v-row>
       <v-col cols="12" sm="6">
-        <v-card :title="$t('UserSettings.ChangeLanguage')" prepend-icon="mdi-earth">
+        <v-card :title="$t('UserSettings.Display')" prepend-icon="mdi-laptop">
           <v-divider></v-divider>
           <v-card-text>
+            <h3 class="mb-1">{{ $t('Common.Country') }}</h3>
             <v-autocomplete
               v-model="userSettingsForm.selectedCountry"
-              :label="$t('UserSettings.CountryLabel')"
+              :label="$t('Common.Country')"
               :items="countryList"
               item-title="native"
               item-value="code"
             ></v-autocomplete>
+            <h3 class="mb-1">{{ $t('Common.Language') }}</h3>
             <v-autocomplete
               v-model="userSettingsForm.selectedLanguage"
-              :label="$t('UserSettings.LanguageLabel')"
+              :label="$t('Common.Language')"
               :items="languageList"
               item-title="native"
               item-value="code"
               hide-details="auto"
             ></v-autocomplete>
-
-            <br />
-            <p>
+            <p class="mt-1">
               <i18n-t v-if="this.languageTranslationCompletion < 80" keypath="UserSettings.TranslationCompletion" tag="span">
                 <template #completion>{{ this.languageTranslationCompletion }}</template>
               </i18n-t>
@@ -34,10 +34,13 @@
                 <v-icon size="small" icon="mdi-open-in-new"></v-icon>
               </a>
             </p>
+            <h3 class="mt-4 mb-1">{{ $t('Common.Products') }}</h3>
+            <v-checkbox v-model="appStore.user.product_display_barcode" :label="$t('UserSettings.ProductDisplayBarcode')" hide-details="auto"></v-checkbox>
           </v-card-text>
         </v-card>
       </v-col>
     </v-row>
+
     <v-row>
       <v-col cols="12" sm="6">
         <v-card :title="$t('UserSettings.AddingPrices')" prepend-icon="mdi-tag-plus-outline">
