@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Country": "Country",
+		"Language": "Language",
 		"Date": "Date",
 		"Delete": "Delete",
 		"Edit": "Edit",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Load more",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Brandiau",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
+		"Display": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Languages",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Save",
 		"Title": "Settings",
 		"TranslationCompletion": "Translation is {completion}% complete.",
