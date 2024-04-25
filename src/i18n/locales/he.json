@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "הוספת מחיר",
 		"AddToOFF": "Add to {name}",
+		"Country": "מדינה",
+		"Language": "שפה",
 		"Date": "תאריך",
 		"Delete": "מחיקה",
 		"Edit": "עריכה",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "לטעון עוד",
 		"Title": "מחירים עדכניים"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "מותגים",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "החלפת שפה",
 		"CountryLabel": "מדינה",
 		"CurrencyLabel": "מטבע",
+		"Display": "תצוגה",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "שפות",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "שמירה",
 		"Title": "הגדרות",
 		"TranslationCompletion": "התרגום הושלם ב־{completion}%.",
