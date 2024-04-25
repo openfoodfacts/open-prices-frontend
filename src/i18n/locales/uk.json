@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Додати ціну",
 		"AddToOFF": "Додати до {name}",
+		"Country": "Країна",
+		"Language": "Мова",
 		"Date": "Date",
 		"Delete": "Видалити",
 		"Edit": "Редагувати",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Завантажити більше",
 		"Title": "Остання ціна"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Виробники",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Змінити мову",
 		"CountryLabel": "Країна",
 		"CurrencyLabel": "Currency",
+		"Display": "Display",
 		"FavoriteCurrencies": "Улюблені валюти",
 		"CurrencyRequired": "Потрібна принаймні одна валюта",
 		"LanguageLabel": "Мови",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "Зберегти",
 		"Title": "Налаштування",
 		"TranslationCompletion": "Переклад виконано на {completion}%.",
