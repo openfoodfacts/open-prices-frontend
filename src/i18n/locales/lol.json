@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "crwdns247816:0{count}crwdne247816:0"
 	},
 	"Common": {
+		"AddPrice": "crwdns248260:0crwdne248260:0",
 		"AddToOFF": "crwdns247802:0{name}crwdne247802:0",
+		"Date": "crwdns248262:0crwdne248262:0",
 		"Delete": "crwdns247896:0crwdne247896:0",
 		"Edit": "crwdns247898:0crwdne247898:0",
 		"Filter": "crwdns247746:0crwdne247746:0",
