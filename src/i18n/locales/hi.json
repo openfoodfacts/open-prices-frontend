@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "एक मूल्य जोड़े",
 		"AddToOFF": "Add to {name}",
+		"Country": "Country",
+		"Language": "भाषा",
 		"Date": "Date",
 		"Delete": "नष्ट करे",
 		"Edit": "संपादित करें",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "अधिक लोड करें",
 		"Title": "Latest prices"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "ब्रांड",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "भाषा बदलें",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
+		"Display": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Languages",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "सेव़",
 		"Title": "सेटिंग्स",
 		"TranslationCompletion": "Translation is {completion}% complete.",
