@@ -225,11 +225,11 @@
 		"Title": "Latest prices"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "価格が必要です",
+		"NoSpaces": "スペースを使用しないでください",
+		"Number": "",
+		"Positive": "価格はマイナスではありません",
+		"TwoDecimals": "小数点以下2桁までしか使用できません"
 	},
 	"ProductCard": {
 		"Brands": "ブランド",
@@ -379,7 +379,7 @@
 		"FavoriteCurrencies": "お気に入りの通貨",
 		"CurrencyRequired": "少なくとも 1 つの通貨が必要です",
 		"LanguageLabel": "言語",
-		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayBarcode": "バーコードを表示",
 		"Save": "保存",
 		"Title": "設定",
 		"TranslationCompletion": "翻訳は {completion}% 完了しています。",
