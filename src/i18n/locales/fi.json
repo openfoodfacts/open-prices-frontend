@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} tuotteita"
 	},
 	"Common": {
+		"AddPrice": "Lisää hinta",
 		"AddToOFF": "Lisää kohtaan {name}",
+		"Date": "Päivämäärä",
 		"Delete": "Poista",
 		"Edit": "Muokkaa",
 		"Filter": "Suodata",
