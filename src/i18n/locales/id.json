@@ -109,6 +109,8 @@
 	"Common": {
 		"AddPrice": "Tambahkan harga",
 		"AddToOFF": "Tambahkan ke {name}",
+		"Country": "Negara",
+		"Language": "Bahasa",
 		"Date": "Tanggal",
 		"Delete": "Hapus",
 		"Edit": "Sunting",
@@ -221,6 +223,13 @@
 	"PriceList": {
 		"LoadMore": "Muat lebih banyak",
 		"Title": "Harga terbaru"
+	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"NoSpaces": "Please don't use spaces",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative",
+		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
 		"Brands": "Merek - merek",
@@ -366,9 +375,11 @@
 		"ChangeLanguage": "Ganti bahasa",
 		"CountryLabel": "Negara",
 		"CurrencyLabel": "Mata uang",
+		"Display": "Tampilan",
 		"FavoriteCurrencies": "Mata uang favorit",
 		"CurrencyRequired": "Setidaknya diperlukan satu mata uang",
 		"LanguageLabel": "Bahasa",
+		"ProductDisplayBarcode": "Display barcode",
 		"Save": "menyimpan ",
 		"Title": "Pengaturan",
 		"TranslationCompletion": "Terjemahan sudah {completion}% selesai.",
