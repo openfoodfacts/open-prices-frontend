@@ -220,6 +220,11 @@
 		"LoadMore": "Load more",
 		"Title": "Latest prices"
 	},
+	"PriceRules": {
+		"AmountRequired": "Price is required",
+		"Number": "Input a number",
+		"Positive": "Price may not be negative"
+	},
 	"ProductCard": {
 		"Brands": "Brands",
 		"BrandLower": "brand",

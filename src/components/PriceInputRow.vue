@@ -68,9 +68,9 @@ export default {
   computed: {
     priceRules() {
       return [
-        value => !!value && !!value.trim() || 'Price is required',
-        value => !isNaN(value) || 'Input a number',
-        value => Number(value) >= 0 || 'Price may not be negative',
+        value => !!value && !!value.trim() || this.$t('PriceRules.AmountRequired'),
+        value => !isNaN(value) || this.$t('PriceRules.Number'),
+        value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
       ];
     },
   }
