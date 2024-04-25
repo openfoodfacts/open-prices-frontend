@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} products"
 	},
 	"Common": {
+		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Date": "Date",
 		"Delete": "삭제",
 		"Edit": "수정",
 		"Filter": "필터",

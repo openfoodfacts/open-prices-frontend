@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} products"
 	},
 	"Common": {
+		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Date": "Date",
 		"Delete": "删除",
 		"Edit": "編輯",
 		"Filter": "过滤器",

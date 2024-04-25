@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} ürün"
 	},
 	"Common": {
+		"AddPrice": "Fiyat ekleyin",
 		"AddToOFF": "{name}'e ekle",
+		"Date": "Tarih",
 		"Delete": "Sil",
 		"Edit": "Düzenle",
 		"Filter": "Filtrele",

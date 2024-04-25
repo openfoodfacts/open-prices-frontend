@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "商品 {count} 個"
 	},
 	"Common": {
+		"AddPrice": "Add a price",
 		"AddToOFF": "{name} に追加",
+		"Date": "Date",
 		"Delete": "削除",
 		"Edit": "編集",
 		"Filter": "フィルタ",

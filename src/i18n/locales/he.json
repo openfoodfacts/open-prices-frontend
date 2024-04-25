@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} מוצרים"
 	},
 	"Common": {
+		"AddPrice": "הוספת מחיר",
 		"AddToOFF": "Add to {name}",
+		"Date": "תאריך",
 		"Delete": "מחיקה",
 		"Edit": "עריכה",
 		"Filter": "סינון",

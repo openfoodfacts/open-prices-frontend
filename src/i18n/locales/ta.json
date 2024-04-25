@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} தயாரிப்புகள்"
 	},
 	"Common": {
+		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"Date": "Date",
 		"Delete": "நீக்கு",
 		"Edit": "திருத்து",
 		"Filter": "Filter",

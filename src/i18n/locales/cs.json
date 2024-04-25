@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} produktů"
 	},
 	"Common": {
+		"AddPrice": "Přidat cenu",
 		"AddToOFF": "Přidat do {name}",
+		"Date": "Datum",
 		"Delete": "Odstranit",
 		"Edit": "Upravit",
 		"Filter": "Filtr",

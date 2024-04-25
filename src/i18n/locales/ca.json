@@ -107,7 +107,9 @@
 		"CategoryProductTotal": "{count} products"
 	},
 	"Common": {
+		"AddPrice": "Afegir un preu",
 		"AddToOFF": "Add to {name}",
+		"Date": "Data",
 		"Delete": "Elimina",
 		"Edit": "Edita",
 		"Filter": "Filtre",
