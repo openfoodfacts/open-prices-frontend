@@ -225,11 +225,11 @@
 		"Title": "Latest prices"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "விலை தேவை",
+		"NoSpaces": "தயவுசெய்து இடைவெளிகளைப் பயன்படுத்த வேண்டாம்",
+		"Number": "எண்ணை உள்ளிடவும்",
+		"Positive": "விலை எதிர்மறையாக இருக்காது",
+		"TwoDecimals": "இரண்டு தசமங்கள் மட்டுமே அனுமதிக்கப்படுகின்றன"
 	},
 	"ProductCard": {
 		"Brands": "Brands",
