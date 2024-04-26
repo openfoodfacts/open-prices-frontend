@@ -225,11 +225,11 @@
 		"Title": "Derniers prix ajoutés"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "Le prix est obligatoire",
+		"NoSpaces": "S'il vous plaît, n'utilisez pas d'espaces",
+		"Number": "Saisir le numéro",
+		"Positive": "Le prix ne peut pas être négatif",
+		"TwoDecimals": "Seules deux décimales sont autorisées"
 	},
 	"ProductCard": {
 		"Brands": "Marques",
@@ -379,7 +379,7 @@
 		"FavoriteCurrencies": "Devises préférées",
 		"CurrencyRequired": "Au moins une devise est requise",
 		"LanguageLabel": "Langue",
-		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayBarcode": "Afficher le code à barres",
 		"Save": "Enregistrer",
 		"Title": "Paramètres",
 		"TranslationCompletion": "La traduction est terminée à {completion} %.",
