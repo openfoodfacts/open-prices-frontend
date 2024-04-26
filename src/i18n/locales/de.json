@@ -225,11 +225,11 @@
 		"Title": "Aktuelle Preise"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "Preis ist erforderlich",
+		"NoSpaces": "Bitte keine Leerzeichen verwenden",
+		"Number": "Geben Sie eine Zahl ein",
+		"Positive": "Preis darf nicht negativ sein",
+		"TwoDecimals": "Nur zwei Nachkommastellen erlaubt"
 	},
 	"ProductCard": {
 		"Brands": "Marken",
@@ -379,7 +379,7 @@
 		"FavoriteCurrencies": "Bevorzugte Währungen",
 		"CurrencyRequired": "Es ist mindestens eine Währung erforderlich",
 		"LanguageLabel": "Sprachen",
-		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayBarcode": "Strichcode anzeigen",
 		"Save": "Speichern",
 		"Title": "Einstellungen",
 		"TranslationCompletion": "Die Übersetzung ist zu {completion}% abgeschlossen.",
