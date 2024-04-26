@@ -225,11 +225,11 @@
 		"Title": "Остання ціна"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "Ціна обов'язкова",
+		"NoSpaces": "Не використовуйте пробіли",
+		"Number": "Введіть число",
+		"Positive": "Ціна не може бути від'ємною",
+		"TwoDecimals": "Дозволено лише два десяткові знаки"
 	},
 	"ProductCard": {
 		"Brands": "Виробники",
@@ -379,7 +379,7 @@
 		"FavoriteCurrencies": "Улюблені валюти",
 		"CurrencyRequired": "Потрібна принаймні одна валюта",
 		"LanguageLabel": "Мови",
-		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayBarcode": "Показати штрих-код",
 		"Save": "Зберегти",
 		"Title": "Налаштування",
 		"TranslationCompletion": "Переклад виконано на {completion}%.",
