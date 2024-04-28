@@ -15,7 +15,7 @@
       <v-menu scroll-strategy="close">
         <template v-slot:activator="{ props }">
           <v-btn v-if="!$vuetify.display.smAndUp" v-bind="props" icon="mdi-account-circle"></v-btn>
-          <v-btn v-else v-bind="props" prepend-icon="mdi-account-circle">{{ username }}</v-btn>
+          <v-btn v-else v-bind="props" class="text-lowercase" prepend-icon="mdi-account-circle">{{ username }}</v-btn>
         </template>
         <v-list>
           <v-list-item class="d-sm-none" :slim="true" prepend-icon="mdi-account" disabled>{{ username }}</v-list-item>
