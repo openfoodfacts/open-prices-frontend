@@ -190,7 +190,7 @@ function getLocationCategory(locationObject) {
   // examples: shop, amenity, building
   // Photon
   if (locationObject.properties) {
-    return locationObject.properties.osm_key
+    return locationObject.properties.type
   }
   // Nominatim or OP
   return locationObject.type || locationObject.osm_type
