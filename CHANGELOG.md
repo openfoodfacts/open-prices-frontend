@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.58.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.58.0...v1.58.1) (2024-04-28)
+
+
+### Bug Fixes
+
+* **header:** change username to lowercase. ref [#452](https://github.com/openfoodfacts/open-prices-frontend/issues/452) ([e52c398](https://github.com/openfoodfacts/open-prices-frontend/commit/e52c398b6d329ab8b37c1dd9cd9e50549376260b))
+* **header:** make only header title clickable. closes [#553](https://github.com/openfoodfacts/open-prices-frontend/issues/553) ([7bc8c39](https://github.com/openfoodfacts/open-prices-frontend/commit/7bc8c3945c31f7a1ea9e5db2c732fe085a988767))
+* **location:** fix Photon location type display. ref [#517](https://github.com/openfoodfacts/open-prices-frontend/issues/517) ([c2277e1](https://github.com/openfoodfacts/open-prices-frontend/commit/c2277e192227cd8ad96c840a431c3dfc14bc704e))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#561](https://github.com/openfoodfacts/open-prices-frontend/issues/561)) ([f0eeef7](https://github.com/openfoodfacts/open-prices-frontend/commit/f0eeef76812623416a508b20f0bb43507eae3ef3))
+* **l10n:** New Crowdin translations to review and merge ([#564](https://github.com/openfoodfacts/open-prices-frontend/issues/564)) ([40ddfca](https://github.com/openfoodfacts/open-prices-frontend/commit/40ddfca2e510a8e73c94422505afb26f3a777ed5))
+
 ## [1.58.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.57.2...v1.58.0) (2024-04-25)
 
 
