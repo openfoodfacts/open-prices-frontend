@@ -225,11 +225,11 @@
 		"Title": "מחירים עדכניים"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "חובה לציין מחיר",
+		"NoSpaces": "נא לא להשתמש ברווחים",
+		"Number": "נא למלא מספר",
+		"Positive": "מחיר לא יכול להיות שלילי",
+		"TwoDecimals": "מותר עד שתי ספרות אחרי הנקודה"
 	},
 	"ProductCard": {
 		"Brands": "מותגים",
@@ -379,7 +379,7 @@
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "שפות",
-		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayBarcode": "הצגת ברקוד",
 		"Save": "שמירה",
 		"Title": "הגדרות",
 		"TranslationCompletion": "התרגום הושלם ב־{completion}%.",

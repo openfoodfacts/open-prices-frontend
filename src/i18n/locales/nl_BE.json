@@ -225,11 +225,11 @@
 		"Title": "Laatste prijzen"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "Prijs is vereist",
+		"NoSpaces": "Gebruik alstublieft geen spaties",
+		"Number": "Voer een getal in",
+		"Positive": "Prijs mag niet negatief zijn",
+		"TwoDecimals": "Slechts twee decimalen toegestaan"
 	},
 	"ProductCard": {
 		"Brands": "Merken",
@@ -379,7 +379,7 @@
 		"FavoriteCurrencies": "Favoriete valuta",
 		"CurrencyRequired": "Er is minimaal één valuta vereist",
 		"LanguageLabel": "Talen",
-		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayBarcode": "Streepjescode weergeven",
 		"Save": "Opslaan",
 		"Title": "Instellingen",
 		"TranslationCompletion": "De vertaling is {completion}% voltooid.",
