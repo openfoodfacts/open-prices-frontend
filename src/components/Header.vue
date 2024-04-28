@@ -1,9 +1,11 @@
 <template>
   <v-app-bar :elevation="1" style="background-color: rgb(242, 233, 228);">
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu"></v-app-bar-nav-icon>
-    <v-app-bar-title style="cursor:pointer" @click="$router.push('/')">
-      <img src="/favicon.svg" height="28" width="28" style="vertical-align:bottom">
-      {{ APP_NAME }}
+    <v-app-bar-title>
+      <span style="cursor:pointer" @click="$router.push('/')">
+        <img src="/favicon.svg" height="28" width="28" style="vertical-align:bottom">
+        {{ APP_NAME }}
+      </span>
     </v-app-bar-title>
     <template v-if="!username" v-slot:append>
       <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-login" to="/sign-in" :aria-label="$t('Header.SignIn')"></v-btn>
