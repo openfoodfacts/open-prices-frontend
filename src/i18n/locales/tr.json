@@ -225,11 +225,11 @@
 		"Title": "Son fiyatlar"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "Fiyat gereklidir",
+		"NoSpaces": "Lütfen boşluk kullanmayın",
+		"Number": "Bir sayı girin",
+		"Positive": "Fiyat negatif olamaz",
+		"TwoDecimals": "Yalnızca iki ondalık sayıya izin verilir"
 	},
 	"ProductCard": {
 		"Brands": "Markalar",
@@ -379,7 +379,7 @@
 		"FavoriteCurrencies": "Sık kullanılan para birimleri",
 		"CurrencyRequired": "En az bir para birimi gerekli",
 		"LanguageLabel": "Diller",
-		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayBarcode": "Barkodu göster",
 		"Save": "Kaydet",
 		"Title": "Ayarlar",
 		"TranslationCompletion": "Çeviri % {completion} tamamlandı.",
