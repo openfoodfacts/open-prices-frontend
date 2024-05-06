@@ -52,7 +52,7 @@
 			"Picture": "Imagen",
 			"TakePicture": "Saca una foto",
 			"Gallery": "Galería de dispositivos",
-			"SelectFromGallery": "Select from device gallery",
+			"SelectFromGallery": "Selecciona desde la galería del dispositivo",
 			"RecentProof": "Recent proof",
 			"SelectRecentProof": "Select a recent proof"
 		},
@@ -287,7 +287,7 @@
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Público",
 		"Private": "Privado",
-		"Privacy": "Privacy"
+		"Privacy": "Privacidad"
 	},
 	"ProofEdit": {
 		"Title": "Editar comprobante",
