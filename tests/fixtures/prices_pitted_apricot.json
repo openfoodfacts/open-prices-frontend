@@ -1,0 +1,104 @@
+{
+    "items": [
+        {
+            "product_code": null,
+            "product_name": null,
+            "category_tag": "en:pitted-apricot",
+            "labels_tags": null,
+            "origins_tags": [
+                "en:unknown"
+            ],
+            "price": 4.0,
+            "price_is_discounted": false,
+            "price_without_discount": null,
+            "price_per": "UNIT",
+            "currency": "AED",
+            "location_osm_id": 32520537,
+            "location_osm_type": "WAY",
+            "date": "2024-03-31",
+            "proof_id": 224,
+            "id": 760,
+            "product_id": null,
+            "location_id": 32,
+            "owner": "user1",
+            "created": "2024-03-31T22:10:53.037731+02:00",
+            "product": null,
+            "proof": {
+                "id": 224,
+                "file_path": "0001/TWZOnskQhz.webp",
+                "mimetype": "image/webp",
+                "type": "RECEIPT",
+                "owner": "user1",
+                "price_count": 9,
+                "created": "2024-03-20T01:40:46.098715+01:00"
+            },
+            "location": {
+                "osm_id": 32520537,
+                "osm_type": "WAY",
+                "price_count": 16,
+                "id": 32,
+                "osm_name": "Monoprix",
+                "osm_display_name": "Monoprix, Rue Lafayette, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+                "osm_address_postcode": "38000",
+                "osm_address_city": "Grenoble",
+                "osm_address_country": "France",
+                "osm_lat": 45.1904063,
+                "osm_lon": 5.7286464,
+                "created": "2024-02-09T17:43:00.113125+01:00",
+                "updated": "2024-03-31T22:13:49.569736+02:00"
+            }
+        },
+        {
+            "product_code": null,
+            "product_name": null,
+            "category_tag": "en:pitted-apricot",
+            "labels_tags": null,
+            "origins_tags": [
+                "en:germany"
+            ],
+            "price": 3.0,
+            "price_is_discounted": false,
+            "price_without_discount": null,
+            "price_per": "KILOGRAM",
+            "currency": "AED",
+            "location_osm_id": 32520537,
+            "location_osm_type": "WAY",
+            "date": "2024-03-20",
+            "proof_id": 224,
+            "id": 759,
+            "product_id": null,
+            "location_id": 32,
+            "owner": "user1",
+            "created": "2024-03-20T14:27:21.575599+01:00",
+            "product": null,
+            "proof": {
+                "id": 224,
+                "file_path": "0001/TWZOnskQhz.webp",
+                "mimetype": "image/webp",
+                "type": "RECEIPT",
+                "owner": "user1",
+                "price_count": 9,
+                "created": "2024-03-20T01:40:46.098715+01:00"
+            },
+            "location": {
+                "osm_id": 32520537,
+                "osm_type": "WAY",
+                "price_count": 16,
+                "id": 32,
+                "osm_name": "Monoprix",
+                "osm_display_name": "Monoprix, Rue Lafayette, Hyper Centre, Secteur 2, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38000, France",
+                "osm_address_postcode": "38000",
+                "osm_address_city": "Grenoble",
+                "osm_address_country": "France",
+                "osm_lat": 45.1904063,
+                "osm_lon": 5.7286464,
+                "created": "2024-02-09T17:43:00.113125+01:00",
+                "updated": "2024-03-31T22:13:49.569736+02:00"
+            }
+        }
+    ],
+    "total": 2,
+    "page": 1,
+    "size": 10,
+    "pages": 1
+}

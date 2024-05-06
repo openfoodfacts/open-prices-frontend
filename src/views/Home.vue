@@ -45,7 +45,7 @@
         <template v-slot:subtitle v-if="!loading">
           <i18n-t keypath="Home.TodayPriceStat" :plural="todayPriceCount" tag="span">
             <template v-slot:todayPriceNumber>
-              <span>{{ todayPriceCount }}</span>
+              <span id="price-count">{{ todayPriceCount }}</span>
             </template>
           </i18n-t>
         </template>
@@ -95,7 +95,7 @@ export default {
   methods: {
     getTodayPriceCount() {
       this.loading = true
-      return api.getPrices({ created__gte: utils.currentStartOfDay(), size: 2 })
+      return api.getPrices({ created__gte: utils.currentStartOfDay(), size: 1 })
         .then((data) => {
           this.todayPriceCount = data.total
           this.loading = false
