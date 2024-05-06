@@ -53,8 +53,8 @@
 			"TakePicture": "Saca una foto",
 			"Gallery": "Galería de dispositivos",
 			"SelectFromGallery": "Selecciona desde la galería del dispositivo",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "Prueba reciente",
+			"SelectRecentProof": "Selecciona una prueba reciente"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoría",
@@ -108,7 +108,7 @@
 	},
 	"Common": {
 		"AddPrice": "Añadir un precio",
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Añadir a {name}",
 		"Country": "País",
 		"Language": "Idiomas",
 		"Date": "Fecha",
@@ -117,9 +117,9 @@
 		"Filter": "Filtros",
 		"FilterProductWithPriceCountHide": "Ocultar productos con precios",
 		"FilterPriceMoreThan30DaysHide": "Ocultar precios de más de 30 días",
-		"Order": "Order",
+		"Order": "Pedido",
 		"OrderProductUniqueScansDESC": "Número de escaneos",
-		"OrderProductPriceCountDESC": "Number of prices",
+		"OrderProductPriceCountDESC": "Número de precios",
 		"OrderPriceASC": "Precio",
 		"OrderPriceCreatedDESC": "Fecha de agregación",
 		"OrderPriceDateDESC": "Fecha del precio",
@@ -140,7 +140,7 @@
 		"Select": "Selecciona {currency_code}"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Selecciona una de tus pruebas recientes"
 	},
 	"Footer": {
 		"About": "Acerca de",
@@ -225,11 +225,11 @@
 		"Title": "Últimos precios"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "El precio es obligatorio",
+		"NoSpaces": "Por favor, no utilice espacios",
+		"Number": "Introduzca un número",
+		"Positive": "El precio puede no ser negativo",
+		"TwoDecimals": "Solo se permiten dos decimales"
 	},
 	"ProductCard": {
 		"Brands": "Marcas",
@@ -239,10 +239,10 @@
 		"Categories": "Categorías",
 		"CategoriesLower": "categorías",
 		"CategoriesMissing": "Falta la categoría",
-		"CategoryTotal": "{count} categories",
+		"CategoryTotal": "{count} categorías",
 		"Labels": "Etiquetas",
 		"LabelsLower": "etiquetas",
-		"LabelTotal": "{count} labels",
+		"LabelTotal": "{count} etiquetas",
 		"LatestPrice": "Último precio",
 		"ProductBrandMissing": "Falta la marca del producto",
 		"ProductCategoriesMissing": "Faltan las categorías del producto",
@@ -273,7 +273,7 @@
 		"Proof": "Comprobante",
 		"PRICE_TAG": "Etiqueta de precio",
 		"RECEIPT": "Ticket",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "Solicitud GDPR"
 	},
 	"ProofDelete": {
 		"Confirmation": "¿Seguro que deseas eliminar este comprobante?",
@@ -284,7 +284,7 @@
 	"ProofDetail": {
 		"LoadMore": "Cargar más",
 		"Prices": "Precios",
-		"ProofNotFound": "Proof not found (or not the owner)",
+		"ProofNotFound": "Prueba no encontrada (o no es el propietario)",
 		"Public": "Público",
 		"Private": "Privado",
 		"Privacy": "Privacidad"
