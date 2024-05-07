@@ -225,11 +225,11 @@
 		"Title": "Ultimi prezzi"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "Il prezzo è obbligatorio",
+		"NoSpaces": "Per favore non usare spazi",
+		"Number": "Inserisci un numero",
+		"Positive": "Il prezzo non può essere negativo",
+		"TwoDecimals": "Sono ammessi solo due decimali"
 	},
 	"ProductCard": {
 		"Brands": "Marche",
@@ -379,7 +379,7 @@
 		"FavoriteCurrencies": "Valute preferite",
 		"CurrencyRequired": "Almeno una valuta è necessaria",
 		"LanguageLabel": "Lingue",
-		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayBarcode": "Mostra codice a barre",
 		"Save": "Salva",
 		"Title": "Impostazioni",
 		"TranslationCompletion": "La traduzione è completa al {completion}%.",
