@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card data-name="product-card">
     <v-container class="pa-2">
       <v-row>
         <v-col style="max-width:25%">
