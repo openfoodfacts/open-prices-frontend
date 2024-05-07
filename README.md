@@ -11,7 +11,7 @@ Works with an Open Prices server, see https://github.com/openfoodfacts/open-pric
 
 ## Contribute
 
-See [CONTRIBUTING.md](https://github.com/openfoodfacts/open-prices-frontend/blob/main/CONTRIBUTING.md)
+See [CONTRIBUTING.md](https://github.com/openfoodfacts/open-prices-frontend/blob/master/CONTRIBUTING.md)
 
 <details><summary><h2>Weekly meetings</h2></summary>
 * see https://github.com/openfoodfacts/open-prices#weekly-meetings

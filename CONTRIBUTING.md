@@ -21,3 +21,9 @@ We use the [yarn](https://yarnpkg.com/getting-started/install) for package manag
 ```sh
 yarn build
 ```
+
+## Tests
+
+```sh
+yarn test
+```
