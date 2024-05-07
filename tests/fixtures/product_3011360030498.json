@@ -1,0 +1,20 @@
+{
+    "code": "3011360030498",
+    "price_count": 1,
+    "id": 368,
+    "source": "off",
+    "product_name": "Mayonnaise Classique",
+    "product_quantity": 175,
+    "product_quantity_unit": null,
+    "categories_tags": [],
+    "brands": "Lesieur",
+    "brands_tags": [],
+    "labels_tags": [],
+    "image_url": "https://images.openfoodfacts.net/images/products/301/136/003/0498/front_en.119.400.jpg",
+    "nutriscore_grade": null,
+    "ecoscore_grade": null,
+    "nova_group": null,
+    "unique_scans_n": 78,
+    "created": "2024-02-18T19:39:38.162303+01:00",
+    "updated": "2024-02-18T19:39:38.186691+01:00"
+}

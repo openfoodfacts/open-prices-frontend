@@ -1,0 +1,73 @@
+{
+    "items": [
+        {
+            "product_code": "3011360030498",
+            "product_name": "MAYO CLASSIQUE TUBE 175G",
+            "category_tag": null,
+            "labels_tags": null,
+            "origins_tags": null,
+            "price": 0.67,
+            "price_is_discounted": false,
+            "price_without_discount": null,
+            "price_per": null,
+            "currency": "EUR",
+            "location_osm_id": 1234038503,
+            "location_osm_type": "WAY",
+            "date": "2022-07-08",
+            "proof_id": 218,
+            "id": 748,
+            "product_id": 368,
+            "location_id": 38,
+            "owner": "user2",
+            "created": "2024-02-18T19:39:38.155260+01:00",
+            "product": {
+                "code": "3011360030498",
+                "price_count": 1,
+                "id": 368,
+                "source": "off",
+                "product_name": "Mayonnaise Classique",
+                "product_quantity": 175,
+                "product_quantity_unit": null,
+                "categories_tags": [],
+                "brands": "Lesieur",
+                "brands_tags": [],
+                "labels_tags": [],
+                "image_url": "https://images.openfoodfacts.net/images/products/301/136/003/0498/front_en.119.400.jpg",
+                "nutriscore_grade": null,
+                "ecoscore_grade": null,
+                "nova_group": null,
+                "unique_scans_n": 78,
+                "created": "2024-02-18T19:39:38.162303+01:00",
+                "updated": "2024-02-18T19:39:38.186691+01:00"
+            },
+            "proof": {
+                "id": 218,
+                "file_path": "0001/B1LWjiRGAa.png",
+                "mimetype": "image/png",
+                "type": "RECEIPT",
+                "owner": "user2",
+                "price_count": 122,
+                "created": "2024-02-18T19:32:45.909387+01:00"
+            },
+            "location": {
+                "osm_id": 1234038503,
+                "osm_type": "WAY",
+                "price_count": 62,
+                "id": 38,
+                "osm_name": "E. Leclerc",
+                "osm_display_name": "E. Leclerc, V 64, Pré Nouvel, Échirolles, Grenoble, Isère, Auvergne-Rhône-Alpes, France métropolitaine, 38130, France",
+                "osm_address_postcode": "38130",
+                "osm_address_city": "Échirolles",
+                "osm_address_country": "France",
+                "osm_lat": 45.1498691,
+                "osm_lon": 5.6920308,
+                "created": "2024-02-18T19:39:23.807454+01:00",
+                "updated": "2024-02-18T19:39:38.360423+01:00"
+            }
+        }
+    ],
+    "total": 1,
+    "page": 1,
+    "size": 10,
+    "pages": 1
+}
