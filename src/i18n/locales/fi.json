@@ -225,11 +225,11 @@
 		"Title": "Viimeisimmät hinnat"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "Hinta vaaditaan",
+		"NoSpaces": "Älä käytä välilyöntejä",
+		"Number": "Syötä luku",
+		"Positive": "Hinta ei voi olla alle nollan",
+		"TwoDecimals": "Korkeintaan kaksi desimaalia sallitaan"
 	},
 	"ProductCard": {
 		"Brands": "Tuotemerkit",
@@ -379,7 +379,7 @@
 		"FavoriteCurrencies": "Suosikki valuutat",
 		"CurrencyRequired": "Vähintään yksi valuutta vaaditaan",
 		"LanguageLabel": "Kielet",
-		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayBarcode": "Näytä viivakoodi",
 		"Save": "Tallenna",
 		"Title": "Asetukset",
 		"TranslationCompletion": "Käännös on {completion}% valmis.",
