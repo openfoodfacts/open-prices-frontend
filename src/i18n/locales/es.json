@@ -368,7 +368,7 @@
 	"UserList": {
 		"LoadMore": "Cargar más",
 		"Title": "Colaboradores destacados",
-		"UserTotal": "{count} contributors"
+		"UserTotal": "{count} colaboradores"
 	},
 	"UserSettings": {
 		"AddingPrices": "Añadiendo precios",
@@ -379,10 +379,10 @@
 		"FavoriteCurrencies": "Divisas favoritas",
 		"CurrencyRequired": "Se necsita por lo menos una divisa",
 		"LanguageLabel": "Idiomas",
-		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayBarcode": "Mostrar código de barras",
 		"Save": "Guardar",
 		"Title": "Configuración",
-		"TranslationCompletion": "Translation is {completion}% complete.",
+		"TranslationCompletion": "La traducción está {completion}% completa.",
 		"TranslationHelp": "Ayúdanos a traducir más idiomas"
 	}
 }
