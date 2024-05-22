@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.58.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.58.1...v1.58.2) (2024-05-22)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#565](https://github.com/openfoodfacts/open-prices-frontend/issues/565)) ([a73297f](https://github.com/openfoodfacts/open-prices-frontend/commit/a73297f7a00459e7a1b6f1d3d7f2ed45ea821ef4))
+* **l10n:** New Crowdin translations to review and merge ([#575](https://github.com/openfoodfacts/open-prices-frontend/issues/575)) ([7f924db](https://github.com/openfoodfacts/open-prices-frontend/commit/7f924dba44c5f61d652ecc10c4095756ef63bcbf))
+* setup E2E tests with Cypress ([#572](https://github.com/openfoodfacts/open-prices-frontend/issues/572)) ([c4f6a47](https://github.com/openfoodfacts/open-prices-frontend/commit/c4f6a47b2610a2cc2e5c76f5a13f63f959e7035f))
+
 ## [1.58.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.58.0...v1.58.1) (2024-04-28)
 
 
