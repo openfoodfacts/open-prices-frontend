@@ -6,6 +6,9 @@
     @click="goToLocation(location)">
     <v-card-text v-if="location">
       <PriceCountChip :count="location.price_count" :withLabel="true"></PriceCountChip>
+      <v-chip label size="small" density="comfortable" class="mr-1" title="OpenStreetMap tag">
+        {{ location.osm_tag_key }}:{{ location.osm_tag_value }}
+      </v-chip>
     </v-card-text>
   </v-card>
 </template>
