@@ -10,7 +10,7 @@
           <h3 v-if="!hideProductTitle" @click="goToProduct()">{{ productTitle }}</h3>
 
           <p v-if="!hideProductDetails" class="mb-2">
-            <span v-if="hasProductCode">
+            <span v-if="hasProduct">
               <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
               <span v-if="hasProductSource">
                 <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>

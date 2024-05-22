@@ -1,7 +1,7 @@
 <template>
   <v-card data-name="product-card">
     <v-container class="pa-2">
-      <v-row>
+      <v-row v-if="product">
         <v-col style="max-width:25%">
           <v-img v-if="product.image_url" :src="product.image_url" style="max-height:100px;width:100px" @click="goToProduct()"></v-img>
           <v-img v-if="!product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
