@@ -108,7 +108,7 @@
 	},
 	"Common": {
 		"AddPrice": "הוספת מחיר",
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "הוספה אל {name}",
 		"Country": "מדינה",
 		"Language": "שפות",
 		"Date": "תאריך",
@@ -129,7 +129,7 @@
 		"No": "לא",
 		"Food": "מזון",
 		"PetFood": "מזון לחיות מחמד",
-		"Beauty": "Beauty",
+		"Beauty": "טיפול",
 		"Products": "מוצרים"
 	},
 	"ChangeCurrencyDialog": {
@@ -211,8 +211,8 @@
 	},
 	"PriceEdit": {
 		"Save": "שמירה",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "המחיר נערך!",
+		"Title": "עריכת מחיר"
 	},
 	"PriceForm": {
 		"Discount": "הנחה?",
@@ -235,7 +235,7 @@
 		"Brands": "מותגים",
 		"BrandLower": "מותג",
 		"BrandMissing": "חסר מותג",
-		"BrandTotal": "{count} brands",
+		"BrandTotal": "{count} מותגים",
 		"Categories": "קטגוריות",
 		"CategoriesLower": "קטגוריות",
 		"CategoriesMissing": "חסרה קטגוריה",
@@ -244,8 +244,8 @@
 		"LabelsLower": "תוויות",
 		"LabelTotal": "{count} תוויות",
 		"LatestPrice": "המחיר העדכני",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"ProductBrandMissing": "מותג המוצר חסר",
+		"ProductCategoriesMissing": "חסרות קטגוריות מוצר",
 		"ProductQuantityGram": "{0} גרם",
 		"ProductQuantityKilogram": "{0} ק״ג",
 		"ProductQuantityLitre": "{0} ליטר",
@@ -285,8 +285,8 @@
 		"LoadMore": "לטעון עוד",
 		"Prices": "מחירים",
 		"ProofNotFound": "לא נמצאה הוכחה (או שהבעלות לא אצלך)",
-		"Public": "Public",
-		"Private": "Private",
+		"Public": "ציבורי",
+		"Private": "פרטי",
 		"Privacy": "פרטיות"
 	},
 	"ProofEdit": {
@@ -376,8 +376,8 @@
 		"CountryLabel": "מדינה",
 		"CurrencyLabel": "מטבע",
 		"Display": "תצוגה",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"FavoriteCurrencies": "מטבעות מועדפים",
+		"CurrencyRequired": "חובה לציין לפחות מטבע אחד",
 		"LanguageLabel": "שפות",
 		"ProductDisplayBarcode": "הצגת ברקוד",
 		"Save": "שמירה",
