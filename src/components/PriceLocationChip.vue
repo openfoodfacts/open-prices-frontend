@@ -23,7 +23,7 @@ export default {
     },
     priceLocationEmoji() {
       if (this.price && this.price.location) {
-        return utils.getCountryEmojiFromName(this.price.location.osm_address_country)
+        return utils.getCountryEmojiFromCode(this.price.location.osm_address_country_code)
       }
       return null
     }

@@ -107,6 +107,11 @@ function getCountryEmojiFromName(countryString) {
   return country ? country.emoji : null
 }
 
+function getCountryEmojiFromCode(countryCode) {
+  const country = CountriesWithEmoji.find(c => c.code === countryCode)
+  return country ? country.emoji : null
+}
+
 function getLocationName(locationObject) {
   // Photon
   if (locationObject.properties) {
@@ -158,7 +163,8 @@ function getLocationTitle(locationObject, withName=true, withRoad=false, withCit
     locationTitle += getLocationCity(locationObject)
   }
   if (withEmoji) {
-    locationTitle += ` ${getCountryEmojiFromName(locationObject.osm_address_country) || ''}`
+    // locationTitle += ` ${getCountryEmojiFromName(locationObject.osm_address_country) || ''}`
+    locationTitle += ` ${getCountryEmojiFromCode(locationObject.osm_address_country_code) || ''}`
   }
   return locationTitle
 }
@@ -235,6 +241,7 @@ export default {
   getLocaleCategoryTagName,
   getLocaleOriginTags,
   getCountryEmojiFromName,
+  getCountryEmojiFromCode,
   getLocationTitle,
   getLocationID,
   getLocationType,
