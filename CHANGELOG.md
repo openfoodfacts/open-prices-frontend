@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.59.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.58.2...v1.59.0) (2024-05-22)
+
+
+### Features
+
+* **Location:** display osm_tag in a new chip ([#579](https://github.com/openfoodfacts/open-prices-frontend/issues/579)) ([5f40587](https://github.com/openfoodfacts/open-prices-frontend/commit/5f4058700b9bd6801086bf5fe11124c258fd7040))
+
+
+### Bug Fixes
+
+* **Product detail:** avoid 'Unknown product' message displayed for raw categories ([#577](https://github.com/openfoodfacts/open-prices-frontend/issues/577)) ([1f148be](https://github.com/openfoodfacts/open-prices-frontend/commit/1f148beac939df36eb06cf6648123e26dedfd8c2))
+
+
+### Technical
+
+* **Location:** get country emoji from country_code instead of country ([#580](https://github.com/openfoodfacts/open-prices-frontend/issues/580)) ([ba3c075](https://github.com/openfoodfacts/open-prices-frontend/commit/ba3c075438f79b96ef1d475233f33fb5bca29694))
+
 ## [1.58.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.58.1...v1.58.2) (2024-05-22)
 
 
