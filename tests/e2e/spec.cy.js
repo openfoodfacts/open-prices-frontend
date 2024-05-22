@@ -2,10 +2,12 @@ describe('Basic tests', () => {
   beforeEach(() => {
     cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products?page=1&size=10&order_by=-price_count', { fixture: 'products.json' })
     cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products/code/3011360030498', { fixture: 'product_3011360030498.json' })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products/code/0000000000000', { statusCode: 404, body: { "detail": "Product with code 35647000112700 not found" }})
     cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=1&order_by=-created*', { fixture: 'prices.json' })
     cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=10&order_by=-created', { fixture: 'prices.json' })
     cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=10&order_by=-date&product_code=3011360030498', { fixture: 'product_3011360030498_prices.json' })
     cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=10&order_by=-date&category_tag=en%3Apitted-apricot', { fixture: 'pitted_apricot_prices.json' })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=10&order_by=-date&category_tag=en%3Aaaaaaaaaaaaa', { body: {"items":[],"total":0,"page":1,"size":10,"pages":0} })
   })
 
   it('loads the home page', () => {
@@ -20,6 +22,7 @@ describe('Basic tests', () => {
     cy.get('[data-name="price-card"]').should('have.length', 10)
     cy.contains('3564700428023')  // unknown product
     cy.get('[data-name="product-missing-chip"]').should('have.length', 1)
+    cy.contains('Load more')
   })
 
   it('displays the top products', () => {
@@ -38,6 +41,25 @@ describe('Basic tests', () => {
     cy.get('#price-count').contains('1')
     cy.get('[data-name="product-missing-chip"]').should('have.length', 0)
     cy.get('[data-name="price-card"]').should('have.length', 1)
+    cy.contains('Load more').should('not.exist')
+  })
+
+  it('displays an unknown product page', () => {
+    cy.on('uncaught:exception', (err, runnable, promise) => {
+      expect(err.message).to.include('Failed to fetch')
+      return false
+      // alternatively, we can use the following to ignore the error
+      // if (promise) {
+      //   return false
+      // }
+    })
+    cy.visit('/products/0000000000000')
+    cy.contains('Welcome to Open Prices!').should('not.exist')
+    cy.get('#product-title').contains('0000000000000')
+    cy.get('#price-count').contains('0')
+    cy.get('[data-name="product-missing-chip"]').should('have.length', 1)
+    cy.get('[data-name="price-card"]').should('have.length', 0)
+    cy.contains('Load more').should('not.exist')
   })
 
   it('displays a raw product page', () => {
@@ -47,5 +69,16 @@ describe('Basic tests', () => {
     cy.get('#price-count').contains('2')
     cy.get('[data-name="product-missing-chip"]').should('have.length', 0)
     cy.get('[data-name="price-card"]').should('have.length', 2)
+    cy.contains('Load more').should('not.exist')
+  })
+
+  it('displays an unknown raw product page', () => {
+    cy.visit('/products/en:aaaaaaaaaaaa')
+    cy.contains('Welcome to Open Prices!').should('not.exist')
+    cy.get('.v-card-title').contains('en:aaaaaaaaaaaa')
+    cy.get('#price-count').contains('0')
+    // cy.get('[data-name="product-missing-chip"]').should('have.length', 1)
+    cy.get('[data-name="price-card"]').should('have.length', 0)
+    cy.contains('Load more').should('not.exist')
   })
 })

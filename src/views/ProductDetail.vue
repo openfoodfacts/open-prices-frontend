@@ -84,10 +84,10 @@ export default {
     return {
       OFF_NAME: constants.OFF_NAME,
       productId: this.$route.params.id,  // product_code or product_category
-      product: null, // { code: this.$route.params.id, category_name: null },
+      product: null,
       categoryName: null,
       productPriceList: [],
-      productPriceTotal: null,
+      productPriceTotal: 0,
       productPricePage: 0,
       loading: false,
       // share
@@ -130,7 +130,7 @@ export default {
   methods: {
     initProductPrices() {
       this.productPriceList = []
-      this.productPriceTotal = null
+      this.productPriceTotal = 0
       this.productPricePage = 0
       this.getProductPrices()
     },
@@ -144,6 +144,8 @@ export default {
           .then((data) => {
             if (data.id) {
               this.product = data
+            } else {
+              this.product = { code: this.productId, price_count: this.productPriceTotal }
             }
           })
       }
