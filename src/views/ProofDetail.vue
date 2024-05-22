@@ -8,7 +8,7 @@
 
   <v-row class="mt-0" v-if="proof">
     <v-col cols="12">
-      <PriceAddButton class="mr-2" :proof="proof"></PriceAddButton>
+      <PriceAddButton class="mr-2" :proofId="proof.id"></PriceAddButton>
     </v-col>
   </v-row>
 

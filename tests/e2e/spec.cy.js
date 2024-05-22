@@ -44,8 +44,8 @@ describe('Basic tests', () => {
     cy.visit('/products/en:pitted-apricot')
     cy.contains('Welcome to Open Prices!').should('not.exist')
     cy.get('.v-card-title').contains('Pitted apricot')
-    // cy.get('#price-count').contains('1')
-    cy.get('[data-name="product-missing-chip"]').should('have.length', 2)  // TODO: fix
+    cy.get('#price-count').contains('2')
+    cy.get('[data-name="product-missing-chip"]').should('have.length', 0)
     cy.get('[data-name="price-card"]').should('have.length', 2)
   })
 })

@@ -2,7 +2,11 @@
   <v-row>
     <v-col cols="12" sm="6">
       <ProductCard v-if="!productIsCategory" :product="product"></ProductCard>
-      <v-card v-else :title="product.category_name" prepend-icon="mdi-fruit-watermelon" elevation="1"></v-card>
+      <v-card v-else :title="categoryName" prepend-icon="mdi-fruit-watermelon" elevation="1">
+        <v-card-text>
+          <PriceCountChip :count="productPriceTotal"></PriceCountChip>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 
@@ -23,10 +27,11 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0" v-if="!productNotFound">
+  <v-row class="mt-0" v-if="!productOrCategoryNotFound">
     <v-col cols="12">
-      <PriceAddButton class="mr-2" :product="product"></PriceAddButton>
-      <OpenFoodFactsLink v-if="product.code && product.source" display="button" :source="product.source" facet="product" :value="product.code"></OpenFoodFactsLink>
+      <PriceAddButton v-if="product && product.code" class="mr-2" :productCode="product.code"></PriceAddButton>
+      <PriceAddButton v-else class="mr-2" :productCode="categoryName"></PriceAddButton>
+      <OpenFoodFactsLink v-if="product && product.code && product.source" display="button" :source="product.source" facet="product" :value="product.code"></OpenFoodFactsLink>
       <ShareButton></ShareButton>
     </v-col>
   </v-row>
@@ -66,6 +71,7 @@ import api from '../services/api'
 export default {
   components: {
     'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     'PriceAddButton': defineAsyncComponent(() => import('../components/PriceAddButton.vue')),
     'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
@@ -78,7 +84,8 @@ export default {
     return {
       OFF_NAME: constants.OFF_NAME,
       productId: this.$route.params.id,  // product_code or product_category
-      product: { code: this.$route.params.id, category_name: null },
+      product: null, // { code: this.$route.params.id, category_name: null },
+      categoryName: null,
       productPriceList: [],
       productPriceTotal: null,
       productPricePage: 0,
@@ -102,10 +109,10 @@ export default {
       return this.productId.startsWith('en')
     },
     productNotFound() {
-      return !this.productIsCategory && (!this.product.code || !this.product.source)
+      return !this.productIsCategory && !this.product
     },
     categoryNotFound() {
-      return this.productIsCategory && !this.product.category_name
+      return this.productIsCategory && !this.categoryName
     },
     productOrCategoryNotFound() {
       return !this.loading && (this.productNotFound || this.categoryNotFound)
@@ -130,7 +137,7 @@ export default {
     getProduct() {
       if (this.productIsCategory) {
         utils.getLocaleCategoryTagName(this.appStore.getUserLanguage, this.productId).then((categoryName) => {
-          this.product.category_name = categoryName
+          this.categoryName = categoryName
         })
       } else {
         return api.getProductByCode(this.productId)

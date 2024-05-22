@@ -11,12 +11,12 @@
 <script>
 export default {
   props: {
-    product: {
-      type: Object,
+    productCode: {
+      type: String,
       default: null
     },
-    proof: {
-      type: Object,
+    proofId: {
+      type: Number,
       default: null
     }
   },
@@ -27,10 +27,10 @@ export default {
   },
   computed: {
     getAddUrl() {
-      if (this.proof) {
-        return `${this.ADD_PRICE_BASE_URL}?proof=${this.proof.id}`
+      if (this.proofId) {
+        return `${this.ADD_PRICE_BASE_URL}?proof=${this.proofId}`
       }
-      return `${this.ADD_PRICE_BASE_URL}?code=${this.product.code}`
+      return `${this.ADD_PRICE_BASE_URL}?code=${this.productCode}`
     }
   }
 }
