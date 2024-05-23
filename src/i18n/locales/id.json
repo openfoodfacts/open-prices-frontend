@@ -45,7 +45,7 @@
 			"LabelFull": "Harga penuh",
 			"Proof": "Bukti",
 			"ProofDateChanged": "Tanggal telah diperbarui!",
-			"ProofSelected": "Proof selected!",
+			"ProofSelected": "Bukti dipilih!",
 			"ProofUploaded": "Bukti telah diunggah!",
 			"Title": "Detail harga",
 			"UploadProof": "Unggah bukti",
@@ -53,8 +53,8 @@
 			"TakePicture": "Ambil gambar",
 			"Gallery": "Galeri perangkat",
 			"SelectFromGallery": "Pilih dari galeri perangkat",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"RecentProof": "Bukti terbaru",
+			"SelectRecentProof": "Pilih bukti terbaru"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
@@ -117,7 +117,7 @@
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
 		"FilterPriceMoreThan30DaysHide": "Sembunyikan harga yang sudah lebih dari 30 hari",
-		"Order": "Order",
+		"Order": "Urutan",
 		"OrderProductUniqueScansDESC": "Jumlah pindaian",
 		"OrderProductPriceCountDESC": "Jumlah harga",
 		"OrderPriceASC": "Harga",
@@ -140,7 +140,7 @@
 		"Select": "Pilih {currency_code}"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Pilih salah satu bukti terbaru Anda"
 	},
 	"Footer": {
 		"About": "Tentang",
@@ -239,10 +239,10 @@
 		"Categories": "Kategori",
 		"CategoriesLower": "kategori",
 		"CategoriesMissing": "Kategori tidak ada",
-		"CategoryTotal": "{count} categories",
+		"CategoryTotal": "{count} kategori",
 		"Labels": "Label - label",
 		"LabelsLower": "label - label",
-		"LabelTotal": "{count} labels",
+		"LabelTotal": "{count} label",
 		"LatestPrice": "Harga terbaru",
 		"ProductBrandMissing": "Merek produk tidak ada",
 		"ProductCategoriesMissing": "Kategori produk tidak ada",
@@ -284,10 +284,10 @@
 	"ProofDetail": {
 		"LoadMore": "Muat lebih banyak",
 		"Prices": "Harga",
-		"ProofNotFound": "Proof not found (or not the owner)",
+		"ProofNotFound": "Bukti tidak ditemukan (atau bukan pemiliknya)",
 		"Public": "Publik",
 		"Private": "Pribadi",
-		"Privacy": "Privacy"
+		"Privacy": "Privasi"
 	},
 	"ProofEdit": {
 		"Title": "Ubah bukti",
