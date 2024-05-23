@@ -169,6 +169,7 @@ export default {
       }
     },
     search() {
+      this.$refs.locationInput.blur()
       this.results = null
       this.loading = true
       api.openstreetmapSearch(this.locationSearchForm.q, this.searchProvider)
