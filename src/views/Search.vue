@@ -8,17 +8,21 @@
     <v-col>
       <v-form @submit.prevent="search">
         <v-text-field
+          ref="searchInput"
           v-model="productSearchForm.q"
           :label="$t('Search.ProductBarcode')"
           type="number"
           inputmode="numeric"
-          :prepend-inner-icon="formFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
-          append-inner-icon="mdi-magnify"
-          @click:prepend-inner="showBarcodeScannerDialog"
-          @click:append-inner="search"
           :rules="[fieldRequired]"
+          hide-details="auto"
           :loading="loading"
           required>
+          <template v-slot:prepend-inner>
+            <v-icon :icon="formFilled ? 'mdi-barcode' : 'mdi-barcode-scan'" @click="showBarcodeScannerDialog"></v-icon>
+          </template>
+          <template v-slot:append-inner>
+            <v-icon icon="mdi-magnify" @click="search"></v-icon>
+          </template>
         </v-text-field>
       </v-form>
     </v-col>
@@ -44,6 +48,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 import api from '../services/api'
 
 export default {
@@ -68,11 +73,18 @@ export default {
       return Object.values(this.productSearchForm).every(x => !!x)
     }
   },
+  mounted() {
+    this.productSearchForm.q = this.$route.query[constants.QUERY_PARAM] || ''
+    if (this.productSearchForm.q) {
+      this.getProducts()
+    }
+  },
   methods: {
     fieldRequired(v) {
       return !!v
     },
     showBarcodeScannerDialog() {
+      this.$refs.searchInput.blur()
       this.barcodeScannerDialog = true
     },
     setProductCode(code) {
@@ -80,9 +92,10 @@ export default {
       this.search()
     },
     search() {
+      this.$refs.searchInput.blur()
       this.productList = []
       this.productTotal = null
-      this.getProducts()
+      this.$router.push({ query: { ...this.$route.query, [constants.QUERY_PARAM]: this.productSearchForm.q } })
     },
     getProducts() {
       this.loading = true
@@ -110,6 +123,13 @@ export default {
             product.latest_price = data.items[0]
           }
         })
+    }
+  },
+  watch: {
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.getProducts()
+      }
     }
   }
 }

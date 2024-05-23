@@ -33,6 +33,7 @@ export default {
     { key: 'opf', value: OPF_NAME, icon: OPF_ICON },
     { key: 'opff', value: OPFF_NAME, icon: OPFF_ICON },
   ],
+  QUERY_PARAM: 'q',
   FILTER_PARAM: 'filter',
   PRODUCT_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterProductWithPriceCountHide' },
