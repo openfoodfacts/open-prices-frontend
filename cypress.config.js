@@ -1,6 +1,6 @@
-const { defineConfig } = require("cypress");
+import { defineConfig } from 'cypress'
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
     specPattern: '**/*.cy.js',
     fixturesFolder: 'tests/fixtures',
@@ -13,4 +13,4 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://localhost:5173',
   },
-});
+})

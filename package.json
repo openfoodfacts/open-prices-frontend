@@ -2,12 +2,14 @@
   "name": "open-prices",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "build-staging": "vite build  --base=/app/ --mode preprod",
     "build-prod": "vite build --base=/app/ --mode prod",
     "preview": "vite preview",
+    "lint": "eslint",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test": "start-server-and-test dev http://localhost:5173 cy:run"
@@ -37,6 +39,8 @@
     "autoprefixer": "^10.4.16",
     "cross-env": "^7.0.3",
     "cypress": "^13.8.1",
+    "eslint": "^9.3.0",
+    "eslint-plugin-vue": "^9.26.0",
     "postcss": "^8.4.31",
     "start-server-and-test": "^2.0.3",
     "vite": "^4.5.0"
