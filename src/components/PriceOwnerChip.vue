@@ -1,6 +1,6 @@
 <template>
   <v-chip label size="small" density="comfortable" @click="goToUser()">
-    <v-icon start icon="mdi-account"></v-icon>
+    <v-icon start icon="mdi-account" />
     {{ price.owner }}
   </v-chip>
 </template>
@@ -8,8 +8,14 @@
 <script>
 export default {
   props: {
-    'price': null,
-    'readonly': false
+    price: {
+      type: Object,
+      default: null
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
   },
   methods: {
     goToUser() {

@@ -3,10 +3,11 @@
     <v-col cols="12" sm="6">
       <v-card
         :title="brand"
-        prepend-icon="mdi-factory">
+        prepend-icon="mdi-factory"
+      >
         <v-card-text>
           <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-food-outline"></v-icon>
+            <v-icon start icon="mdi-food-outline" />
             {{ $t('BrandDetail.BrandProductTotal', { count: brandProductTotal }) }}
           </v-chip>
         </v-card-text>
@@ -16,31 +17,35 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <OpenFoodFactsLink display="button" facet="brand" :value="brand"></OpenFoodFactsLink>
-      <ShareButton></ShareButton>
+      <OpenFoodFactsLink display="button" facet="brand" :value="brand" />
+      <ShareButton />
     </v-col>
   </v-row>
 
-  <br />
+  <br>
 
   <v-row>
     <v-col>
-      <h2 class="text-h6 d-inline mr-2">{{ $t('BrandDetail.TopProducts') }}</h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-      <FilterMenu v-if="!loading" kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)" :hideSource="true"></FilterMenu>
-      <OrderMenu v-if="!loading" kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)"></OrderMenu>
+      <h2 class="text-h6 d-inline mr-2">
+        {{ $t('BrandDetail.TopProducts') }}
+      </h2>
+      <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <FilterMenu v-if="!loading" kind="product" :currentFilter="currentFilter" :hideSource="true" @update:currentFilter="toggleProductFilter($event)" />
+      <OrderMenu v-if="!loading" kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col cols="12" sm="6" md="4" v-for="product in brandProductList" :key="product">
-      <ProductCard :product="product" :hideProductBarcode="true" elevation="1" height="100%"></ProductCard>
+    <v-col v-for="product in brandProductList" :key="product" cols="12" sm="6" md="4">
+      <ProductCard :product="product" :hideProductBarcode="true" elevation="1" height="100%" />
     </v-col>
   </v-row>
 
   <v-row v-if="brandProductList.length < brandProductTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getBrandProducts">{{ $t('BrandDetail.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getBrandProducts">
+        {{ $t('BrandDetail.LoadMore') }}
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -52,11 +57,11 @@ import api from '../services/api'
 
 export default {
   components: {
-    'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
-    'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
+    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+    ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
     return {
@@ -79,6 +84,13 @@ export default {
       }
       return defaultParams
     },
+  },
+  watch: {
+    $route (newBrand, oldBrand) {
+      if (oldBrand && newBrand && newBrand.name == 'brand-detail' && oldBrand.fullPath != newBrand.fullPath) {
+        this.initBrand()
+      }
+    }
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
@@ -113,13 +125,6 @@ export default {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initBrand() will be called in watch $route
-      }
-    }
-  },
-  watch: {
-    $route (newBrand, oldBrand) {
-      if (oldBrand && newBrand && newBrand.name == 'brand-detail' && oldBrand.fullPath != newBrand.fullPath) {
-        this.initBrand()
       }
     }
   }

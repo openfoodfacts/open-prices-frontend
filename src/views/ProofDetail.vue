@@ -1,33 +1,37 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <ProofCard v-if="proof" :proof="proof" :hideProofHeader="true" :readonly="true"></ProofCard>
-      <p v-if="!loading && !proof" class="text-red">{{ $t('ProofDetail.ProofNotFound') }}</p>
+      <ProofCard v-if="proof" :proof="proof" :hideProofHeader="true" :readonly="true" />
+      <p v-if="!loading && !proof" class="text-red">
+        {{ $t('ProofDetail.ProofNotFound') }}
+      </p>
     </v-col>
   </v-row>
 
-  <v-row class="mt-0" v-if="proof">
+  <v-row v-if="proof" class="mt-0">
     <v-col cols="12">
-      <PriceAddButton class="mr-2" :proofId="proof.id"></PriceAddButton>
+      <PriceAddButton class="mr-2" :proofId="proof.id" />
     </v-col>
   </v-row>
 
-  <br />
+  <br>
 
-  <h2 class="text-h6 mb-1" v-if="proof">
+  <h2 v-if="proof" class="text-h6 mb-1">
     {{ $t('ProofDetail.Prices') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+    <v-progress-circular v-if="loading" indeterminate :size="30" />
   </h2>
 
   <v-row v-if="proof">
-    <v-col cols="12" sm="6" md="4" v-for="price in proofPriceList" :key="price">
-      <PriceCard :price="price" :product="price.product" :hidePriceProof="true" elevation="1" height="100%"></PriceCard>
+    <v-col v-for="price in proofPriceList" :key="price" cols="12" sm="6" md="4">
+      <PriceCard :price="price" :product="price.product" :hidePriceProof="true" elevation="1" height="100%" />
     </v-col>
   </v-row>
 
   <v-row v-if="proof && (proofPriceList.length < proofPriceTotal)" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getProofPrices">{{ $t('ProofDetail.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getProofPrices">
+        {{ $t('ProofDetail.LoadMore') }}
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -38,9 +42,9 @@ import api from '../services/api'
 
 export default {
   components: {
-    'PriceAddButton': defineAsyncComponent(() => import('../components/PriceAddButton.vue')),
-    'ProofCard': defineAsyncComponent(() => import('../components/ProofCard.vue')),
-    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    PriceAddButton: defineAsyncComponent(() => import('../components/PriceAddButton.vue')),
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
   data() {
     return {

@@ -2,17 +2,19 @@
   <v-dialog scrollable max-height="80%" max-width="80%">
     <v-card>
       <v-card-title>
-        {{ $t('ProofDelete.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog"></v-btn>
+        {{ $t('ProofDelete.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
-        <p class="mb-1">{{ $t('ProofDelete.Confirmation') }}</p>
-        <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true"></ProofCard>
+        <p class="mb-1">
+          {{ $t('ProofDelete.Confirmation') }}
+        </p>
+        <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
       </v-card-text>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-actions>
         <v-btn
@@ -21,7 +23,9 @@
           prepend-icon="mdi-delete"
           :loading="loading"
           @click="deleteProof"
-        >{{ $t('ProofDelete.Delete') }}</v-btn>
+        >
+          {{ $t('ProofDelete.Delete') }}
+        </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -34,17 +38,20 @@ import api from '../services/api'
 
 export default {
   components: {
-    'ProofCard': defineAsyncComponent(() => import('../components/ProofCard.vue'))
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue'))
   },
   props: {
-    'proof': null,
+    proof: {
+      type: Object,
+      default: null
+    },
   },
+  emits: ['delete', 'close'],
   data() {
     return {
       loading: false,
     }
   },
-  emits: ['delete', 'close'],
   computed: {
   },
   methods: {
@@ -52,7 +59,7 @@ export default {
       this.loading = true
       api
         .deleteProof(this.proof.id)
-        .then((response) => {
+        .then((response) => {  // eslint-disable-line no-unused-vars
           // if response.status == 204
           this.loading = false
           this.deleteSuccessMessage = true

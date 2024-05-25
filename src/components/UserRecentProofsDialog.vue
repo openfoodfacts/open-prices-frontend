@@ -2,15 +2,15 @@
   <v-dialog scrollable max-height="80%" width="80%">
     <v-card>
       <v-card-title>
-        {{ $t('UserRecentProofsDialog.SelectRecentProof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('UserRecentProofsDialog.SelectRecentProof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
         <v-row>
-          <v-col cols="12" sm="6" md="3" v-for="proof in userProofList" :key="proof">
-            <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof"></ProofCard>
+          <v-col v-for="proof in userProofList" :key="proof" cols="12" sm="6" md="3">
+            <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
           </v-col>
         </v-row>
       </v-card-text>
@@ -26,8 +26,9 @@ import api from '../services/api'
 
 export default {
   components: {
-    'ProofCard': defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
+  emits: ['recentProofSelected', 'close'],
   data() {
     return {
       userProofList: [],
@@ -37,7 +38,6 @@ export default {
       selectedProof: null,
     }
   },
-  emits: ['recentProofSelected', 'close'],
   computed: {
     ...mapStores(useAppStore),
     username() {

@@ -1,6 +1,6 @@
 <template>
   <v-chip label size="small" density="comfortable" @click="goToLocation()">
-    <v-icon start icon="mdi-map-marker-outline"></v-icon>
+    <v-icon start icon="mdi-map-marker-outline" />
     {{ priceLocationTitle }}
     <span v-if="priceLocationEmoji" style="margin-inline-start:5px">{{ priceLocationEmoji }}</span>
   </v-chip>
@@ -11,8 +11,14 @@ import utils from '../utils.js'
 
 export default {
   props: {
-    'price': null,
-    'readonly': false
+    price: {
+      type: Object,
+      default: null
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     priceLocationTitle() {

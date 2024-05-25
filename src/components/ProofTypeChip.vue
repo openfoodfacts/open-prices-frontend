@@ -1,10 +1,10 @@
 <template>
   <v-chip label size="small" density="comfortable">
-    <v-icon start icon="mdi-image"></v-icon>
+    <v-icon start icon="mdi-image" />
     <span v-if="proof.type === 'GDPR_REQUEST'">
       <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">
         {{ proofTypeName }}
-        <v-icon size="x-small" icon="mdi-open-in-new"></v-icon>
+        <v-icon size="x-small" icon="mdi-open-in-new" />
       </a>
     </span>
     <span v-else>
@@ -18,7 +18,10 @@ import constants from '../constants'
 
 export default {
   props: {
-    'proof': null,
+    proof: {
+      type: Object,
+      default: null
+    },
   },
   data() {
     return {

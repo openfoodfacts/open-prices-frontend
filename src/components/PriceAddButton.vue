@@ -3,7 +3,8 @@
     size="small"
     color="primary"
     prepend-icon="mdi-plus"
-    :to="getAddUrl">
+    :to="getAddUrl"
+  >
     {{ $t('Common.AddPrice') }}
   </v-btn>
 </template>

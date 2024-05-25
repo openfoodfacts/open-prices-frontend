@@ -5,12 +5,13 @@
     size="small"
     density="comfortable"
     :title="$t('PriceCard.Proof')"
-    @click="openDialog">
-    <v-icon icon="mdi-image"></v-icon>
+    @click="openDialog"
+  >
+    <v-icon icon="mdi-image" />
   </v-chip>
 
-  <v-dialog scrollable v-model="dialog" max-height="80%" width="80%">
-    <ProofCard :proof="proof" :hideProofActions="true" @close="closeDialog"></ProofCard>
+  <v-dialog v-model="dialog" scrollable max-height="80%" width="80%">
+    <ProofCard :proof="proof" :hideProofActions="true" @close="closeDialog" />
   </v-dialog>
 </template>
 
@@ -22,7 +23,10 @@ export default {
     ProofCard,
   },
   props: {
-    'proof': null,
+    proof: {
+      type: Object,
+      default: null
+    },
   },
   data() {
     return {

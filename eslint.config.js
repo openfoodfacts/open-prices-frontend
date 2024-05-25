@@ -9,6 +9,8 @@ export default [
   },
   {
     rules: {
+      'no-unused-vars': 'warn',
+      'vue/no-mutating-props': ['error', { 'shallowOnly': true }],
       'vue/no-reserved-component-names': 'off',
       'vue/multi-word-component-names': 'off',
       'vue/max-attributes-per-line': 'off',

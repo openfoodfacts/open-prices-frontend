@@ -2,10 +2,10 @@
   <v-dialog scrollable persistent>
     <v-card>
       <v-card-title>
-        {{ $t('LocationSelector.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('LocationSelector.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
         <v-form @submit.prevent="search">
@@ -15,26 +15,28 @@
             :label="$t('LocationSelector.SearchByName')"
             type="text"
             append-inner-icon="mdi-magnify"
-            @click:append-inner="search"
             :rules="[fieldRequired]"
             hide-details="auto"
             :loading="loading"
-            required>
-          </v-text-field>
+            required
+            @click:append-inner="search"
+          />
         </v-form>
 
         <p v-if="searchProvider === 'nominatim'" class="text-caption text-warning mt-2">
           <i18n-t keypath="LocationSelector.Warning" tag="i">
-            <template #newline><br /></template>
+            <template #newline>
+              <br>
+            </template>
           </i18n-t>
         </p>
 
         <v-sheet v-if="results && Array.isArray(results)">
-          <v-divider></v-divider>
+          <v-divider />
 
           <h3>
             <i18n-t keypath="LocationSelector.Result" tag="span">
-              <template v-slot:resultNumber>
+              <template #resultNumber>
                 <small>{{ results.length }}</small>
               </template>
             </i18n-t>
@@ -42,26 +44,32 @@
           <v-row>
             <v-col cols="12" sm="6">
               <v-card
+                v-for="location in results"
+                :key="getLocationUniqueID(location)"
                 class="mb-2"
                 width="100%"
-                v-for="location in results"
                 elevation="1"
-                @click="selectLocation(location)">
+                @click="selectLocation(location)"
+              >
                 <v-card-text>
                   <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
-                  {{ getLocationTitle(location, false, true, true) }}<br />
-                  <v-chip label size="small" density="comfortable">{{ getLocationCategory(location) }}</v-chip>
+                  {{ getLocationTitle(location, false, true, true) }}<br>
+                  <v-chip label size="small" density="comfortable">
+                    {{ getLocationCategory(location) }}
+                  </v-chip>
                 </v-card-text>
               </v-card>
             </v-col>
             <v-col cols="12" sm="6" style="min-height:200px">
               <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
-                <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap"></l-tile-layer>
-                <l-marker v-for="location in results" :lat-lng="getLocationLatLng(location)">
+                <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap" />
+                <l-marker v-for="location in results" :key="getLocationUniqueID(location)" :lat-lng="getLocationLatLng(location)">
                   <l-popup>
                     <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
-                    {{ getLocationTitle(location, false, true, true) }}<br />
-                    <v-chip label size="small" density="comfortable">{{ getLocationCategory(location) }}</v-chip>
+                    {{ getLocationTitle(location, false, true, true) }}<br>
+                    <v-chip label size="small" density="comfortable">
+                      {{ getLocationCategory(location) }}
+                    </v-chip>
                   </l-popup>
                 </l-marker>
               </l-map>
@@ -69,36 +77,40 @@
           </v-row>
         </v-sheet>
 
-        <v-sheet v-if="results && (typeof results === 'string')">{{ results }}</v-sheet>
+        <v-sheet v-if="results && (typeof results === 'string')">
+          {{ results }}
+        </v-sheet>
 
         <v-sheet v-if="recentLocations.length">
-          <v-divider class="mt-2 mb-2"></v-divider>
+          <v-divider class="mt-2 mb-2" />
 
           <h3 class="mb-1">
             <i18n-t keypath="LocationSelector.RecentLocations" tag="span">
-              <template v-slot:recentLocationNumber>
+              <template #recentLocationNumber>
                 <small>{{ recentLocations.length }}</small>
               </template>
             </i18n-t>
           </h3>
           <v-chip
-            class="mb-2"
-            closable
             v-for="location in recentLocations"
             :key="getLocationUniqueID(location)"
+            class="mb-2"
+            closable
             prepend-icon="mdi-history"
             close-icon="mdi-delete"
             @click="selectLocation(location)"
-            @click:close="removeRecentLocation(location)">
+            @click:close="removeRecentLocation(location)"
+          >
             {{ getLocationTitle(location, true, true, true) }}
           </v-chip>
-          <br />
+          <br>
           <v-btn size="small" @click="clearRecentLocations">
-            {{ $t('LocationSelector.Clear') }} </v-btn>
+            {{ $t('LocationSelector.Clear') }}
+          </v-btn>
         </v-sheet>
       </v-card-text>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-actions class="justify-end">
         <div>
@@ -129,6 +141,7 @@ export default {
     LMarker,
     LPopup,
   },
+  emits: ['location', 'close'],
   data() {
     return {
       // location form

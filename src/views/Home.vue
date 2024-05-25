@@ -1,12 +1,14 @@
 <template>
   <h1 class="text-h5 mb-1">
     <i18n-t keypath="Home.Welcome.Title" tag="span">
-      <template #name>{{ APP_NAME }}</template>
+      <template #name>
+        {{ APP_NAME }}
+      </template>
     </i18n-t>
   </h1>
   <p>{{ $t('Home.Welcome.Subtitle') }}</p>
   
-  <br />
+  <br>
 
   <v-row>
     <v-col cols="12" sm="6" lg="4">
@@ -14,8 +16,8 @@
         :title="$t('Home.SearchProduct')"
         prepend-icon="mdi-magnify"
         height="100%"
-        to="/search">
-      </v-card>
+        to="/search"
+      />
     </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
@@ -24,11 +26,12 @@
         color="primary"
         variant="outlined"
         elevation="1"
-        to="/add">
-        <template v-slot:subtitle v-if="!username">
+        to="/add"
+      >
+        <template v-if="!username" #subtitle>
           <i18n-t keypath="Common.SignInOFFAccount" tag="span">
             <template #url>
-              <OpenFoodFactsLink display="link"></OpenFoodFactsLink>
+              <OpenFoodFactsLink display="link" />
             </template>
           </i18n-t>
         </template>
@@ -41,10 +44,11 @@
       <v-card
         :title="$t('Home.LatestPrices')"
         prepend-icon="mdi-tag-multiple-outline"
-        to="/prices">
-        <template v-slot:subtitle v-if="!loading">
+        to="/prices"
+      >
+        <template v-if="!loading" #subtitle>
           <i18n-t keypath="Home.TodayPriceStat" :plural="todayPriceCount" tag="span">
-            <template v-slot:todayPriceNumber>
+            <template #todayPriceNumber>
               <span id="price-count">{{ todayPriceCount }}</span>
             </template>
           </i18n-t>
@@ -57,7 +61,9 @@
     v-model="settingsSuccessMessage"
     color="success"
     :timeout="2000"
-  >{{ $t('Home.SettingsUpdated') }}</v-snackbar>
+  >
+    {{ $t('Home.SettingsUpdated') }}
+  </v-snackbar>
 </template>
 
 <script>
@@ -70,7 +76,7 @@ import api from '../services/api'
 
 export default {
   components: {
-    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
   },
   data() {
     return {

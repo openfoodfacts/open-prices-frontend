@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-h5 mb-1">
     {{ $t('ProductList.Title') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+    <v-progress-circular v-if="loading" indeterminate :size="30" />
   </h1>
 
   <v-row v-if="!loading">
@@ -9,20 +9,22 @@
       <v-chip label variant="text" prepend-icon="mdi-database-outline">
         {{ $t('ProductList.ProductTotal', { count: productTotal }) }}
       </v-chip>
-      <FilterMenu kind="product" :currentFilter="currentFilter" :currentSource="currentSource" @update:currentFilter="toggleProductFilter($event)" @update:currentSource="toggleProductSource($event)"></FilterMenu>
-      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)"></OrderMenu>
+      <FilterMenu kind="product" :currentFilter="currentFilter" :currentSource="currentSource" @update:currentFilter="toggleProductFilter($event)" @update:currentSource="toggleProductSource($event)" />
+      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col cols="12" sm="6" md="4" v-for="product in productList" :key="product">
-      <ProductCard :product="product" :hideProductBarcode="true" elevation="1" height="100%"></ProductCard>
+    <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4">
+      <ProductCard :product="product" :hideProductBarcode="true" elevation="1" height="100%" />
     </v-col>
   </v-row>
 
   <v-row v-if="productList.length < productTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getProducts">{{ $t('ProductList.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getProducts">
+        {{ $t('ProductList.LoadMore') }}
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -34,9 +36,9 @@ import api from '../services/api'
 
 export default {
   components: {
-    'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
+    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
   },
   data() {
     return {
@@ -62,6 +64,13 @@ export default {
       }
       return defaultParams
     },
+  },
+  watch: {
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initProductList()
+      }
+    }
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
@@ -101,13 +110,6 @@ export default {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initProductList() will be called in watch $route
-      }
-    }
-  },
-  watch: {
-    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initProductList()
       }
     }
   }

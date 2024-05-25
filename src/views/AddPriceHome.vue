@@ -9,14 +9,14 @@
         :title="$t('AddPriceHome.SingleProductMode.Title')"
         :subtitle="$t('AddPriceHome.SingleProductMode.Subtitle')"
         prepend-icon="mdi-barcode"
-        to="/add/single">
-      </v-card>
+        to="/add/single"
+      />
     </v-col>
   </v-row>
 
-  <br />
-  <v-divider></v-divider>
-  <br />
+  <br>
+  <v-divider />
+  <br>
 
   <v-row>
     <v-col cols="12" sm="6" lg="4">
@@ -24,16 +24,16 @@
         :title="$t('AddPriceHome.MultipleProductMode.Title')"
         :subtitle="$t('AddPriceHome.MultipleProductMode.Subtitle')"
         prepend-icon="mdi-library-shelves"
-        to="/add/multiple/price-tag">
-      </v-card>
+        to="/add/multiple/price-tag"
+      />
     </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('AddPriceHome.ReceiptMode.Title')"
         :subtitle="$t('AddPriceHome.ReceiptMode.Subtitle')"
         prepend-icon="mdi-receipt-text-outline"
-        to="/add/multiple/receipt">
-      </v-card>
+        to="/add/multiple/receipt"
+      />
     </v-col>
   </v-row>
 
@@ -41,17 +41,23 @@
     v-model="signinSuccessMessage"
     color="success"
     :timeout="2000"
-  >{{ $t('AddPriceHome.SignedIn') }}</v-snackbar>
+  >
+    {{ $t('AddPriceHome.SignedIn') }}
+  </v-snackbar>
   <v-snackbar
     v-model="singleSuccessMessage"
     color="success"
     :timeout="2000"
-  >{{ $t('AddPriceHome.PriceCreated') }}</v-snackbar>
+  >
+    {{ $t('AddPriceHome.PriceCreated') }}
+  </v-snackbar>
   <v-snackbar
     v-model="multipleSuccessMessage"
     color="success"
     :timeout="2000"
-  >{{ $t('AddPriceHome.Thanks') }}</v-snackbar>
+  >
+    {{ $t('AddPriceHome.Thanks') }}
+  </v-snackbar>
 </template>
 
 <script>

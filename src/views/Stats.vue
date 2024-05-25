@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-h5 mb-1">
     {{ $t('Stats.Title') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+    <v-progress-circular v-if="loading" indeterminate :size="30" />
   </h1>
 
   <v-row>
@@ -12,11 +12,15 @@
             {{ $t('Stats.Total') }} <strong>{{ priceTotal }}</strong>
           </p>
           <p>
-            {{ $t('Stats.WithProduct') }} <v-chip label size="small" density="comfortable" class="mr-1">barcode</v-chip>
+            {{ $t('Stats.WithProduct') }} <v-chip label size="small" density="comfortable" class="mr-1">
+              barcode
+            </v-chip>
             <strong>{{ priceWithProduct }}</strong>
           </p>
           <p>
-            {{ $t('Stats.WithoutProduct') }} <v-chip label size="small" density="comfortable" class="mr-1">category</v-chip>
+            {{ $t('Stats.WithoutProduct') }} <v-chip label size="small" density="comfortable" class="mr-1">
+              category
+            </v-chip>
             <strong>{{ priceWithoutProduct }}</strong>
           </p>
         </v-card-text>

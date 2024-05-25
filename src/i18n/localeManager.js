@@ -156,8 +156,6 @@ const localeManager = {
   
     const enKeys = Object.keys(enFlat)
     const localeKeys = Object.keys(localeFlat)
-    const enValues = Object.values(enFlat)
-    const localeValues = Object.values(localeFlat)
     let identicalValues = 0
     let missingKeys = 0
     for (let i = 0; i < enKeys.length; i++) {

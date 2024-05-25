@@ -1,8 +1,10 @@
 <template>
   <v-chip label size="small" density="comfortable">
-    <v-icon start icon="mdi-clock-outline"></v-icon>
+    <v-icon start icon="mdi-clock-outline" />
     {{ getRelativeDateTimeFormatted(dateTime) }}
-    <v-tooltip activator="parent" open-on-click location="top">{{ getDateTimeFormatted(dateTime) }}</v-tooltip>
+    <v-tooltip activator="parent" open-on-click location="top">
+      {{ getDateTimeFormatted(dateTime) }}
+    </v-tooltip>
   </v-chip>
 </template>
 
@@ -11,7 +13,10 @@ import utils from '../utils.js'
 
 export default {
   props: {
-    'dateTime': null
+    dateTime: {
+      type: String,
+      default: null
+    },
   },
   methods: {
     getDateTimeFormatted(dateTimeString) {

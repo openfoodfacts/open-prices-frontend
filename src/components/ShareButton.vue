@@ -7,8 +7,8 @@
     color="teal"
     icon="mdi-share-variant"
     :title="$t('ShareButton.Title')"
-    @click="shareViaWebShare">
-  </v-btn>
+    @click="shareViaWebShare"
+  />
   <v-btn
     v-else
     class="ml-2"
@@ -17,14 +17,16 @@
     color="teal"
     prepend-icon="mdi-share-variant"
     :title="$t('ShareButton.Title')"
-    @click="shareViaWebShare">
+    @click="shareViaWebShare"
+  >
     {{ $t('ShareButton.Title') }}
   </v-btn>
 
   <v-snackbar
     v-model="shareLinkCopySuccessMessage"
     color="success"
-    :timeout="2000">
+    :timeout="2000"
+  >
     {{ $t('ShareButton.LinkCopySuccess') }}
   </v-snackbar>
 </template>
@@ -34,7 +36,10 @@ import constants from '../constants'
 
 export default {
   props: {
-    'overrideUrl': null,
+    overrideUrl: {
+      type: String,
+      default: null
+    },
   },
   data() {
     return {

@@ -3,9 +3,10 @@
     :title="getLocationTitle(location)"
     :subtitle="location ? location.osm_display_name : ''"
     :prepend-icon="location ? 'mdi-map-marker-outline' : 'mdi-map-marker-remove-variant'"
-    @click="goToLocation(location)">
+    @click="goToLocation(location)"
+  >
     <v-card-text v-if="location">
-      <PriceCountChip :count="location.price_count" :withLabel="true"></PriceCountChip>
+      <PriceCountChip :count="location.price_count" :withLabel="true" />
       <v-chip label size="small" density="comfortable" class="mr-1" title="OpenStreetMap tag">
         {{ location.osm_tag_key }}:{{ location.osm_tag_value }}
       </v-chip>
@@ -19,7 +20,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
   },
   props: {
     location: {

@@ -1,11 +1,16 @@
 <template>
-  <v-chip label size="small" density="comfortable">{{ product.code }}</v-chip>
+  <v-chip label size="small" density="comfortable">
+    {{ product.code }}
+  </v-chip>
 </template>
 
 <script>
 export default {
   props: {
-    product: Object
+    product: {
+      type: Object,
+      default: null
+    }
   }
 }
 </script>

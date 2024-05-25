@@ -3,10 +3,11 @@
     <v-col cols="12" sm="6">
       <v-card
         :title="category"
-        prepend-icon="mdi-list-box-outline">
+        prepend-icon="mdi-list-box-outline"
+      >
         <v-card-text>
           <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-food-outline"></v-icon>
+            <v-icon start icon="mdi-food-outline" />
             {{ $t('CategoryDetail.CategoryProductTotal', { count: categoryProductTotal }) }}
           </v-chip>
         </v-card-text>
@@ -16,31 +17,35 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <OpenFoodFactsLink display="button" facet="category" :value="category"></OpenFoodFactsLink>
-      <ShareButton></ShareButton>
+      <OpenFoodFactsLink display="button" facet="category" :value="category" />
+      <ShareButton />
     </v-col>
   </v-row>
 
-  <br />
+  <br>
 
   <v-row>
     <v-col>
-      <h2 class="text-h6 d-inline mr-2">{{ $t('CategoryDetail.TopProducts') }}</h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-      <FilterMenu v-if="!loading" kind="product" :currentFilter="currentFilter" @update:currentFilter="toggleProductFilter($event)" :hideSource="true"></FilterMenu>
-      <OrderMenu v-if="!loading" kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)"></OrderMenu>
+      <h2 class="text-h6 d-inline mr-2">
+        {{ $t('CategoryDetail.TopProducts') }}
+      </h2>
+      <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <FilterMenu v-if="!loading" kind="product" :currentFilter="currentFilter" :hideSource="true" @update:currentFilter="toggleProductFilter($event)" />
+      <OrderMenu v-if="!loading" kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col cols="12" sm="6" md="4" v-for="product in categoryProductList" :key="product">
-      <ProductCard :product="product" :hideProductBarcode="true" elevation="1" height="100%"></ProductCard>
+    <v-col v-for="product in categoryProductList" :key="product" cols="12" sm="6" md="4">
+      <ProductCard :product="product" :hideProductBarcode="true" elevation="1" height="100%" />
     </v-col>
   </v-row>
 
   <v-row v-if="categoryProductList.length < categoryProductTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getCategoryProducts">{{ $t('CategoryDetail.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getCategoryProducts">
+        {{ $t('CategoryDetail.LoadMore') }}
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -52,11 +57,11 @@ import api from '../services/api'
 
 export default {
   components: {
-    'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
-    'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue'))
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
+    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+    ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
   data() {
     return {
@@ -79,6 +84,13 @@ export default {
       }
       return defaultParams
     },
+  },
+  watch: {
+    $route (newCategory, oldCategory) {
+      if (oldCategory && newCategory && newCategory.name == 'category-detail' && oldCategory.fullPath != newCategory.fullPath) {
+        this.initCategory()
+      }
+    }
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
@@ -113,13 +125,6 @@ export default {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initCategory() will be called in watch $route
-      }
-    }
-  },
-  watch: {
-    $route (newCategory, oldCategory) {
-      if (oldCategory && newCategory && newCategory.name == 'category-detail' && oldCategory.fullPath != newCategory.fullPath) {
-        this.initCategory()
       }
     }
   }

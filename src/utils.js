@@ -224,7 +224,7 @@ function getMapCenter(results, source='nominatim') {
   if (source === 'photon') {
     return [results[0].geometry.coordinates[1], results[0].geometry.coordinates[0]]
   }
-  return [results[0].lat, results[0][lon]]
+  return [results[0].lat, results[0].lon]
 }
 
 

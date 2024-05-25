@@ -10,14 +10,16 @@
     </v-chip>
     <ProductBrandsDialog
       v-if="productBrands.length && productBrandsDialog"
-      :brands="getProductBrandsList"
       v-model="productBrandsDialog"
-      @close="productBrandsDialog = false">
-    </ProductBrandsDialog>
+      :brands="getProductBrandsList"
+      @close="productBrandsDialog = false"
+    />
   </span>
   <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning" class="mr-1">
     <i>{{ $t('ProductCard.BrandLower') }}</i>
-    <v-tooltip activator="parent" open-on-click location="top">{{ $t('ProductCard.BrandMissing') }}</v-tooltip>
+    <v-tooltip activator="parent" open-on-click location="top">
+      {{ $t('ProductCard.BrandMissing') }}
+    </v-tooltip>
   </v-chip>
 </template>
 
@@ -26,10 +28,13 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    'ProductBrandsDialog': defineAsyncComponent(() => import('../components/ProductBrandsDialog.vue')),
+    ProductBrandsDialog: defineAsyncComponent(() => import('../components/ProductBrandsDialog.vue')),
   },
   props: {
-    productBrands: String,
+    productBrands: {
+      type: String,
+      default: null
+    },
     readonly: {
       type: Boolean,
       default: false

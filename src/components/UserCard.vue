@@ -2,9 +2,10 @@
   <v-card
     :title="user.user_id"
     prepend-icon="mdi-account"
-    @click="goToUser(user)">
+    @click="goToUser(user)"
+  >
     <v-card-text>
-      <PriceCountChip :count="user.price_count" :withLabel="true"></PriceCountChip>
+      <PriceCountChip :count="user.price_count" :withLabel="true" />
     </v-card-text>
   </v-card>
 </template>
@@ -14,7 +15,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
   },
   props: {
     user: {

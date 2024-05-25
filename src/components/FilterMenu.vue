@@ -1,6 +1,6 @@
 <template>
   <v-menu scroll-strategy="close">
-    <template v-slot:activator="{ props }">
+    <template #activator="{ props }">
       <v-btn v-bind="props" size="x-small" class="mr-2" rounded="xl" prepend-icon="mdi-filter-variant" :append-icon="getCurrentFilterIcon" :active="currentFilterOrSource">
         {{ $t('Common.Filter') }}
       </v-btn>
@@ -10,8 +10,10 @@
         {{ $t('Common.' + filter.value) }}
       </v-list-item>
       <v-sheet v-if="showSource">
-        <v-divider></v-divider>
-        <v-list-subheader class="text-uppercase">{{ $t('Common.Source') }}</v-list-subheader>
+        <v-divider />
+        <v-list-subheader class="text-uppercase">
+          {{ $t('Common.Source') }}
+        </v-list-subheader>
         <v-list-item v-for="source in productSourceList" :key="source.key" :slim="true" :active="currentSource === source.key" @click="selectSource(source.key)">
           <v-icon>{{ source.icon }}</v-icon>
           {{ source.value }}
@@ -26,7 +28,10 @@ import constants from '../constants'
 
 export default {
   props: {
-    currentFilter: String,
+    currentFilter: {
+      type: String,
+      default: null
+    },
     currentSource: {
       type: String,
       default: null
@@ -41,6 +46,7 @@ export default {
       default: false
     }
   },
+  emits: ['update:currentFilter', 'update:currentSource'],
   data() {
     return {
       productSourceList: constants.PRODUCT_SOURCE_LIST,
@@ -63,7 +69,6 @@ export default {
       return source ? source.icon : ''
     },
   },
-  emits: ['update:currentFilter', 'update:currentSource'],
   methods: {
     selectFilter(filter) {
       this.$emit('update:currentFilter', filter)

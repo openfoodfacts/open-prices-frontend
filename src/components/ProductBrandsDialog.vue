@@ -2,10 +2,10 @@
   <v-dialog>
     <v-card>
       <v-card-title>
-        {{ $t('ProductCard.Brands') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('ProductCard.Brands') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
         <v-chip v-for="brand in brands" :key="brand" label class="mr-2 mb-2" @click="goToBrand(brand)">
@@ -19,8 +19,12 @@
 <script>
 export default {
   props: {
-    brands: Array,
+    brands: {
+      type: Array,
+      default: () => []
+    }
   },
+  emits: ['close'],
   methods: {
     goToBrand(brand) {
       this.$router.push({ path: `/brands/${brand}` })

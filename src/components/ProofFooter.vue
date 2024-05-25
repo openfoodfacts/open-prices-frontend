@@ -1,14 +1,14 @@
 <template>
   <v-row>
     <v-col :cols="userIsProofOwner ? '11' : '12'">
-      <ProofTypeChip class="mr-1" :proof="proof"></ProofTypeChip>
-      <ProofPrivateChip v-if="proofIsPrivateReceipt" class="mr-1" :proof="proof"></ProofPrivateChip>
-      <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()"></PriceCountChip>
-      <RelativeDateTimeChip :dateTime="proof.created"></RelativeDateTimeChip>
+      <ProofTypeChip class="mr-1" :proof="proof" />
+      <ProofPrivateChip v-if="proofIsPrivateReceipt" class="mr-1" :proof="proof" />
+      <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()" />
+      <RelativeDateTimeChip :dateTime="proof.created" />
     </v-col>
   </v-row>
 
-  <ProofActionMenuButton v-if="!readonly && !hideProofActions && userIsProofOwner" :proof="proof"></ProofActionMenuButton>
+  <ProofActionMenuButton v-if="!readonly && !hideProofActions && userIsProofOwner" :proof="proof" />
 </template>
 
 <script>
@@ -18,14 +18,17 @@ import { useAppStore } from '../store'
 
 export default {
   components: {
-    'ProofTypeChip': defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
-    'ProofPrivateChip': defineAsyncComponent(() => import('../components/ProofPrivateChip.vue')),
-    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    'RelativeDateTimeChip': defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
-    'ProofActionMenuButton': defineAsyncComponent(() => import('../components/ProofActionMenuButton.vue'))
+    ProofTypeChip: defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
+    ProofPrivateChip: defineAsyncComponent(() => import('../components/ProofPrivateChip.vue')),
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
+    ProofActionMenuButton: defineAsyncComponent(() => import('../components/ProofActionMenuButton.vue'))
   },
   props: {
-    'proof': null,
+    proof: {
+      type: Object,
+      default: null
+    },
     hideProofActions: {
       type: Boolean,
       default: false,

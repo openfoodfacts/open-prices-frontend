@@ -1,14 +1,14 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <LocationCard :location="location" readonly></LocationCard>
+      <LocationCard :location="location" readonly />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
     <v-col v-if="locationFound" cols="12">
-      <OpenStreetMapLink :location="location" display="button"></OpenStreetMapLink>
-      <ShareButton></ShareButton>
+      <OpenStreetMapLink :location="location" display="button" />
+      <ShareButton />
     </v-col>
     <v-col v-else cols="12">
       <v-alert v-if="!loading" type="error" variant="outlined" icon="mdi-alert">
@@ -17,26 +17,30 @@
     </v-col>
   </v-row>
 
-  <br />
+  <br>
 
   <v-row>
     <v-col>
-      <h2 class="text-h6 d-inline mr-2">{{ $t('LocationDetail.LatestPrices') }}</h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
-      <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)"></FilterMenu>
-      <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)"></OrderMenu>
+      <h2 class="text-h6 d-inline mr-2">
+        {{ $t('LocationDetail.LatestPrices') }}
+      </h2>
+      <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
+      <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col cols="12" sm="6" md="4" v-for="price in locationPriceList" :key="price">
-      <PriceCard :price="price" :product="price.product" :hidePriceLocation="true" elevation="1" height="100%"></PriceCard>
+    <v-col v-for="price in locationPriceList" :key="price" cols="12" sm="6" md="4">
+      <PriceCard :price="price" :product="price.product" :hidePriceLocation="true" elevation="1" height="100%" />
     </v-col>
   </v-row>
 
   <v-row v-if="locationPriceList.length < locationPriceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getLocationPrices">{{ $t('LocationDetail.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getLocationPrices">
+        {{ $t('LocationDetail.LoadMore') }}
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -48,12 +52,12 @@ import constants from '../constants'
 
 export default {
   components: {
-    'LocationCard': defineAsyncComponent(() => import('../components/LocationCard.vue')),
-    'FilterMenu': defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    'OrderMenu': defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    'OpenStreetMapLink': defineAsyncComponent(() => import('../components/OpenStreetMapLink.vue')),
-    'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue')),
+    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    OpenStreetMapLink: defineAsyncComponent(() => import('../components/OpenStreetMapLink.vue')),
+    ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue')),
   },
   data() {
     return {
@@ -66,12 +70,6 @@ export default {
       currentFilter: '',
       currentOrder: constants.PRICE_ORDER_LIST[1].key,
     }
-  },
-  mounted() {
-    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
-    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.getLocation(),
-    this.getLocationPrices()
   },
   computed: {
     locationId() {
@@ -89,6 +87,19 @@ export default {
       }
       return defaultParams
     },
+  },
+  watch: {
+    $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initLocationPrices()
+      }
+    }
+  },
+  mounted() {
+    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
+    this.getLocation(),
+    this.getLocationPrices()
   },
   methods: {
     initLocationPrices() {
@@ -125,13 +136,6 @@ export default {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initLocationPrices() will be called in watch $route
-      }
-    }
-  },
-  watch: {
-    $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initLocationPrices()
       }
     }
   }

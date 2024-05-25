@@ -5,8 +5,7 @@ GitHub Actions:
 
 Price addition:
 - 'src/views/AddPriceHome.vue'
-
-Multiple price addition:
+- 'src/views/AddPriceSingle.vue'
 - 'src/views/AddPriceMultiple.vue'
 
 Brands:
@@ -21,13 +20,11 @@ Brands:
 
 🔍 Search:
 - 'src/views/Search.vue'
-- 'src/views/SignIn.vue'
 
 Stats:
 - 'src/views/Stats.vue'
 
 User:
-- 'src/views/User.vue'
 - 'src/views/UserList.vue'
 - 'src/views/UserDetail.vue'
 
@@ -36,4 +33,3 @@ User dashboard:
 
 ⚙️ Settings:
 - 'src/views/UserSettings.vue'
-

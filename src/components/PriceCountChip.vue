@@ -1,6 +1,6 @@
 <template>
   <v-chip label size="small" density="comfortable" :color="getColor()" class="mr-1">
-    <v-icon start icon="mdi-tag-outline"></v-icon>
+    <v-icon start icon="mdi-tag-outline" />
     <span v-if="withLabel">{{ $t('PriceCountChip.PriceCount', { count: count }) }}</span>
     <span v-else id="price-count">{{ count }}</span>
   </v-chip>
@@ -9,8 +9,14 @@
 <script>
 export default {
   props: {
-    'count': null,
-    'withLabel': false
+    count: {
+      type: Number,
+      default: null
+    },
+    withLabel: {
+      type: Boolean,
+      default: false
+    },
   },
   methods: {
     getColor() {

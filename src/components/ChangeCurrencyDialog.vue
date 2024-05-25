@@ -2,10 +2,10 @@
   <v-dialog>
     <v-card>
       <v-card-title>
-        {{ $t("ChangeCurrencyDialog.Title") }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t("ChangeCurrencyDialog.Title") }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
         <v-row>
@@ -15,7 +15,7 @@
               :label="$t('ChangeCurrencyDialog.Currency')"
               :items="userFavoriteCurrencies"
               hide-details="auto"
-            ></v-select>
+            />
           </v-col>
           <v-col cols="12">
             <v-btn class="mb-2" size="small" prepend-icon="mdi-cog-outline" @click="goToSettings">
@@ -28,7 +28,7 @@
         </v-row>
       </v-card-text>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-actions>
         <v-btn elevation="1" @click="selectedCurrency">
@@ -43,6 +43,7 @@
 import { useAppStore } from '../store'
 
 export default {
+  emits: ['newCurrencySelected', 'close'],
   data() {
     return {
       userFavoriteCurrencies: [],
@@ -51,7 +52,6 @@ export default {
   },
   computed: {
   },
-  emits: ['newCurrencySelected', 'close'],
   mounted() {
     this.getCurrencyData()
   },

@@ -2,10 +2,10 @@
   <v-dialog>
     <v-card>
       <v-card-title>
-        {{ $t('ProductCard.Categories') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('ProductCard.Categories') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
         <v-chip v-for="category in categories" :key="category" label class="mr-2 mb-2" @click="goToCategory(category)">
@@ -19,8 +19,12 @@
 <script>
 export default {
   props: {
-    categories: Array,
+    categories: {
+      type: Array,
+      default: () => []
+    }
   },
+  emits: ['close'],
   methods: {
     goToCategory(category) {
       this.$router.push({ path: `/categories/${category}` })

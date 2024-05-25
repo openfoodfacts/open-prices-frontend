@@ -3,35 +3,37 @@
     <v-container class="pa-2">
       <v-row v-if="product">
         <v-col style="max-width:25%">
-          <v-img v-if="product.image_url" :src="product.image_url" style="max-height:100px;width:100px" @click="goToProduct()"></v-img>
-          <v-img v-if="!product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);"></v-img>
+          <v-img v-if="product.image_url" :src="product.image_url" style="max-height:100px;width:100px" @click="goToProduct()" />
+          <v-img v-if="!product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);" />
         </v-col>
         <v-col style="max-width:75%">
-          <h3 id="product-title" @click="goToProduct()">{{ getProductTitle() }}</h3>
+          <h3 id="product-title" @click="goToProduct()">
+            {{ getProductTitle() }}
+          </h3>
 
           <p>
             <span>
-              <PriceCountChip :count="product.price_count" @click="goToProduct()"></PriceCountChip>
+              <PriceCountChip :count="product.price_count" @click="goToProduct()" />
             </span>
             <span v-if="hasProductSource">
-              <ProductBrands :productBrands="product.brands" :readonly="readonly"></ProductBrands>
-              <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></ProductQuantityChip>
-              <br />
-              <ProductCategoriesChip class="mr-1" :productCategories="product.categories_tags"></ProductCategoriesChip>
-              <ProductLabelsChip :productLabels="product.labels_tags"></ProductLabelsChip>
+              <ProductBrands :productBrands="product.brands" :readonly="readonly" />
+              <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
+              <br>
+              <ProductCategoriesChip class="mr-1" :productCategories="product.categories_tags" />
+              <ProductLabelsChip :productLabels="product.labels_tags" />
             </span>
-            <ProductMissingChip v-else></ProductMissingChip>
-            <br v-if="showProductBarcode" />
-            <ProductBarcodeChip v-if="showProductBarcode" :product="product"></ProductBarcodeChip>
+            <ProductMissingChip v-else />
+            <br v-if="showProductBarcode">
+            <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
           </p>
         </v-col>
       </v-row>
 
       <v-sheet v-if="latestPrice">
-        <v-divider class="mt-2 mb-2"></v-divider>
+        <v-divider class="mt-2 mb-2" />
         <h4>{{ $t('ProductCard.LatestPrice') }}</h4>
-        <PricePriceRow :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit"></PricePriceRow>
-        <PriceFooterRow :price="latestPrice"></PriceFooterRow>
+        <PricePriceRow :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
+        <PriceFooterRow :price="latestPrice" />
       </v-sheet>
     </v-container>
   </v-card>
@@ -44,28 +46,38 @@ import { useAppStore } from '../store'
 
 export default {
   components: {
-    'PriceCountChip': defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    'ProductBrands': defineAsyncComponent(() => import('../components/ProductBrands.vue')),
-    'ProductQuantityChip': defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
-    'ProductCategoriesChip': defineAsyncComponent(() => import('../components/ProductCategoriesChip.vue')),
-    'ProductLabelsChip': defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
-    'ProductMissingChip': defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
-    'ProductBarcodeChip': defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
-    'PricePriceRow': defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
-    'PriceFooterRow': defineAsyncComponent(() => import('../components/PriceFooterRow.vue')),
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    ProductBrands: defineAsyncComponent(() => import('../components/ProductBrands.vue')),
+    ProductQuantityChip: defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
+    ProductCategoriesChip: defineAsyncComponent(() => import('../components/ProductCategoriesChip.vue')),
+    ProductLabelsChip: defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
+    ProductMissingChip: defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
+    ProductBarcodeChip: defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
+    PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
+    PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue')),
   },
   props: {
-    'product': null,
-    'latestPrice': null,
-    'hideProductBarcode': false,
-    'readonly': false
+    product: {
+      type: Object,
+      default: null
+    },
+    latestPrice: {
+      type: Object,
+      default: null
+    },
+    hideProductBarcode: {
+      type: Boolean,
+      default: false
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {
       productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
     }
-  },
-  mounted() {
   },
   computed: {
     ...mapStores(useAppStore),

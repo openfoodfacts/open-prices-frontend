@@ -3,12 +3,13 @@
     <i>{{ $t('ProductCard.LabelTotal', { count: productLabels.length }) }}</i>
     <ProductLabelsDialog
       v-if="productLabelsDialog"
-      :labels="productLabels"
       v-model="productLabelsDialog"
-      @close="productLabelsDialog = false">
-    </ProductLabelsDialog>
+      :labels="productLabels"
+      @close="productLabelsDialog = false"
+    />
   </v-chip>
-  <v-chip v-else label size="small" density="comfortable"><!-- prepend-icon="mdi-help" color="warning" -->
+  <v-chip v-else label size="small" density="comfortable">
+    <!-- prepend-icon="mdi-help" color="warning" -->
     <i>{{ $t('ProductCard.LabelTotal', { count: 0 }) }}</i>
   </v-chip>
 </template>
@@ -18,12 +19,12 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    'ProductLabelsDialog': defineAsyncComponent(() => import('../components/ProductLabelsDialog.vue')),
+    ProductLabelsDialog: defineAsyncComponent(() => import('../components/ProductLabelsDialog.vue')),
   },
   props: {
     productLabels: {
       type: Array,
-      default: []
+      default: () => []
     }
   },
   data() {
