@@ -22,6 +22,12 @@ We use the [yarn](https://yarnpkg.com/getting-started/install) for package manag
 yarn build
 ```
 
+## Lint
+
+```sh
+yarn lint
+```
+
 ## Tests
 
 ```sh
