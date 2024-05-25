@@ -2,10 +2,10 @@
   <v-dialog persistent>
     <v-card>
       <v-card-title>
-        {{ $t('BarcodeManualInput.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('BarcodeManualInput.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
         <v-form @submit.prevent="onSubmit">
@@ -18,13 +18,15 @@
             prepend-inner-icon="mdi-barcode"
             :hint="barcodeForm.barcode.length.toString()"
             persistent-hint
-          ></v-text-field>
+          />
 
           <v-btn
             type="submit"
             class="mt-2"
             :disabled="!formFilled"
-          >{{ $t('BarcodeManualInput.Submit') }}</v-btn>
+          >
+            {{ $t('BarcodeManualInput.Submit') }}
+          </v-btn>
         </v-form>
       </v-card-text>
     </v-card>
@@ -33,6 +35,7 @@
 
 <script>
 export default {
+  emits: ['barcode', 'close'],
   data() {
     return {
       barcodeForm: {

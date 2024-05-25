@@ -8,10 +8,11 @@
       <v-alert
         class="mb-2"
         type="info"
-        variant="outlined">
+        variant="outlined"
+      >
         <i18n-t keypath="Common.SignInOFFAccount" tag="span">
           <template #url>
-            <OpenFoodFactsLink display="link"></OpenFoodFactsLink>
+            <OpenFoodFactsLink display="link" />
           </template>
         </i18n-t>
       </v-alert>
@@ -22,18 +23,20 @@
           :label="$t('SignIn.UsernameLabel')"
           type="text"
           class="input-lowercase"
-        ></v-text-field>
+        />
         <v-text-field
           v-model="signinForm.password"
           :label="$t('SignIn.Password')"
           type="password"
-        ></v-text-field>
+        />
         <v-btn
           type="submit"
           class="mt-2"
           :loading="loading"
           :disabled="!formFilled"
-        >{{ $t('SignIn.Button') }}</v-btn>
+        >
+          {{ $t('SignIn.Button') }}
+        </v-btn>
       </v-form>
     </v-col>
   </v-row>
@@ -47,7 +50,7 @@ import api from '../services/api'
 
 export default {
   components: {
-    'OpenFoodFactsLink': defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
   },
   data() {
     return {
@@ -78,7 +81,7 @@ export default {
             this.loading = false
           }
         })
-        .catch((error) => {
+        .catch((error) => {  // eslint-disable-line no-unused-vars
           alert(this.$t('SignIn.ServerError'))
           this.loading = false
         });

@@ -3,14 +3,16 @@
     <i>{{ $t('ProductCard.CategoryTotal', { count: productCategories.length }) }}</i>
     <ProductCategoriesDialog
       v-if="productCategories.length && productCategoriesDialog"
-      :categories="productCategories"
       v-model="productCategoriesDialog"
-      @close="productCategoriesDialog = false">
-    </ProductCategoriesDialog>
+      :categories="productCategories"
+      @close="productCategoriesDialog = false"
+    />
   </v-chip>
   <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning">
     <i>{{ $t('ProductCard.CategoriesLower') }}</i>
-    <v-tooltip activator="parent" open-on-click location="top">{{ $t('ProductCard.CategoriesMissing') }}</v-tooltip>
+    <v-tooltip activator="parent" open-on-click location="top">
+      {{ $t('ProductCard.CategoriesMissing') }}
+    </v-tooltip>
   </v-chip>
 </template>
 
@@ -19,12 +21,12 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    'ProductCategoriesDialog': defineAsyncComponent(() => import('../components/ProductCategoriesDialog.vue')),
+    ProductCategoriesDialog: defineAsyncComponent(() => import('../components/ProductCategoriesDialog.vue')),
   },
   props: {
     productCategories: {
       type: Array,
-      default: []
+      default: () => []
     }
   },
   data() {

@@ -1,19 +1,19 @@
 <template>
   <v-card :id="'proof_' + proof.id" @click="selectProof">
     <v-card-title v-if="!hideProofHeader">
-      {{ $t('ProofCard.Proof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+      {{ $t('ProofCard.Proof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
     </v-card-title>
 
-    <v-divider v-if="!hideProofHeader"></v-divider>
+    <v-divider v-if="!hideProofHeader" />
 
     <v-card-text>
-      <v-img v-if="proof.file_path" :src="getProofUrl(proof)"></v-img>
+      <v-img v-if="proof.file_path" :src="getProofUrl(proof)" />
     </v-card-text>
 
-    <v-divider></v-divider>
+    <v-divider />
 
     <v-card-actions>
-      <ProofFooter :proof="proof" :hideProofActions="hideProofActions" :readonly="readonly"></ProofFooter>
+      <ProofFooter :proof="proof" :hideProofActions="hideProofActions" :readonly="readonly" />
     </v-card-actions>
   </v-card>
 </template>
@@ -23,11 +23,13 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    'ProofEditDialog': defineAsyncComponent(() => import('../components/ProofEditDialog.vue')),
-    'ProofFooter': defineAsyncComponent(() => import('../components/ProofFooter.vue')),
+    ProofFooter: defineAsyncComponent(() => import('../components/ProofFooter.vue')),
   },
   props: {
-    'proof': null,
+    proof: {
+      type: Object,
+      default: null
+    },
     hideProofHeader: {
       type: Boolean,
       default: false,
@@ -53,12 +55,12 @@ export default {
       default: 'auto',
     },
   },
+  emits: ['proofSelected', 'close'],
   data() {
     return {
       proofEditDialog: false,
     }
   },
-  emits: ['proofSelected', 'close'],
   methods: {
     selectProof() {
       if (this.isSelectable) {

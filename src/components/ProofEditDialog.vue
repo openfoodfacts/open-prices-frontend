@@ -2,10 +2,10 @@
   <v-dialog scrollable max-height="80%" max-width="80%">
     <v-card>
       <v-card-title>
-        {{ $t('ProofEdit.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('ProofEdit.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text v-if="proofIsReceipt">
         <h3>{{ $t('ProofDetail.Privacy') }}</h3>
@@ -16,17 +16,19 @@
           inset
           :label="isPublic ? $t('ProofDetail.Public') : $t('ProofDetail.Private')"
           hide-details
-        ></v-switch>
+        />
       </v-card-text>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-actions>
         <v-btn
           elevation="1"
           :loading="loading"
           @click="updateProof"
-        >{{ $t('ProofEdit.Save') }}</v-btn>
+        >
+          {{ $t('ProofEdit.Save') }}
+        </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -38,15 +40,18 @@ import api from '../services/api'
 
 export default {
   props: {
-    'proof': null,
+    proof: {
+      type: Object,
+      default: null
+    },
   },
+  emits: ['update', 'close'],
   data() {
     return {
       isPublic: false,
       loading: false
     }
   },
-  emits: ['update', 'close'],
   computed: {
     proofIsReceipt() {
       return this.proof.type === 'RECEIPT'

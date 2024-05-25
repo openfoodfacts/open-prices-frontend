@@ -1,21 +1,27 @@
 <template>
-  <h1 class="text-h5 mb-1">{{ $t('UserSettings.Title') }}</h1>
+  <h1 class="text-h5 mb-1">
+    {{ $t('UserSettings.Title') }}
+  </h1>
 
   <v-form @submit.prevent="updateSettings">
     <v-row>
       <v-col cols="12" sm="6">
         <v-card :title="$t('UserSettings.Display')" prepend-icon="mdi-laptop">
-          <v-divider></v-divider>
+          <v-divider />
           <v-card-text>
-            <h3 class="mb-1">{{ $t('Common.Country') }}</h3>
+            <h3 class="mb-1">
+              {{ $t('Common.Country') }}
+            </h3>
             <v-autocomplete
               v-model="userSettingsForm.selectedCountry"
               :label="$t('Common.Country')"
               :items="countryList"
               item-title="native"
               item-value="code"
-            ></v-autocomplete>
-            <h3 class="mb-1">{{ $t('Common.Language') }}</h3>
+            />
+            <h3 class="mb-1">
+              {{ $t('Common.Language') }}
+            </h3>
             <v-autocomplete
               v-model="userSettingsForm.selectedLanguage"
               :label="$t('Common.Language')"
@@ -23,19 +29,23 @@
               item-title="native"
               item-value="code"
               hide-details="auto"
-            ></v-autocomplete>
+            />
             <p class="mt-1">
-              <i18n-t v-if="this.languageTranslationCompletion < 80" keypath="UserSettings.TranslationCompletion" tag="span">
-                <template #completion>{{ this.languageTranslationCompletion }}</template>
+              <i18n-t v-if="languageTranslationCompletion < 80" keypath="UserSettings.TranslationCompletion" tag="span">
+                <template #completion>
+                  {{ languageTranslationCompletion }}
+                </template>
               </i18n-t>
-              <span v-if="this.languageTranslationCompletion < 80">&nbsp;</span>
+              <span v-if="languageTranslationCompletion < 80">&nbsp;</span>
               <a href="https://translate.openfoodfacts.org" target="_blank">
                 {{ $t('UserSettings.TranslationHelp') }}
-                <v-icon size="small" icon="mdi-open-in-new"></v-icon>
+                <v-icon size="small" icon="mdi-open-in-new" />
               </a>
             </p>
-            <h3 class="mt-4 mb-1">{{ $t('Common.Products') }}</h3>
-            <v-checkbox v-model="appStore.user.product_display_barcode" :label="$t('UserSettings.ProductDisplayBarcode')" hide-details="auto"></v-checkbox>
+            <h3 class="mt-4 mb-1">
+              {{ $t('Common.Products') }}
+            </h3>
+            <v-checkbox v-model="appStore.user.product_display_barcode" :label="$t('UserSettings.ProductDisplayBarcode')" hide-details="auto" />
           </v-card-text>
         </v-card>
       </v-col>
@@ -44,9 +54,11 @@
     <v-row>
       <v-col cols="12" sm="6">
         <v-card :title="$t('UserSettings.AddingPrices')" prepend-icon="mdi-tag-plus-outline">
-          <v-divider></v-divider>
+          <v-divider />
           <v-card-text>
-            <h3 class="mb-1">{{ $t('UserSettings.FavoriteCurrencies') }}</h3>
+            <h3 class="mb-1">
+              {{ $t('UserSettings.FavoriteCurrencies') }}
+            </h3>
             <v-autocomplete
               v-model="userSettingsForm.selectedCurrencies"
               :label="$t('UserSettings.CurrencyLabel')"
@@ -56,7 +68,7 @@
               closable-chips
               multiple
               hide-details="auto"
-            ></v-autocomplete>
+            />
           </v-card-text>
         </v-card>
       </v-col>
@@ -64,7 +76,9 @@
 
     <v-row>
       <v-col>
-        <v-btn type="submit" :color="formFilled ? 'success' : ''" :disabled="!formFilled">{{ $t('UserSettings.Save') }}</v-btn>
+        <v-btn type="submit" :color="formFilled ? 'success' : ''" :disabled="!formFilled">
+          {{ $t('UserSettings.Save') }}
+        </v-btn>
       </v-col>
     </v-row>
   </v-form>
@@ -91,6 +105,17 @@ export default {
       languageTranslationCompletion: null,
       countryList: countryData, // can be used to further filter the country list if needed
     }
+  },
+  computed: {
+    ...mapStores(useAppStore),
+    formFilled() {
+      return Object.values(this.userSettingsForm).every(x => {
+        if (x && Array.isArray(x)) {
+          return x.length > 0
+        }
+        return !!x
+      })
+    },
   },
   watch: {
     'userSettingsForm.selectedLanguage': async function () {
@@ -132,17 +157,6 @@ export default {
         }
       }
     }
-  },
-  computed: {
-    ...mapStores(useAppStore),
-    formFilled() {
-      return Object.values(this.userSettingsForm).every(x => {
-        if (x && Array.isArray(x)) {
-          return x.length > 0
-        }
-        return !!x
-      })
-    },
   },
   async mounted() {
     this.languageListCode = await localeManager.getLocales()

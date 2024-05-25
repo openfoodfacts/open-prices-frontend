@@ -11,26 +11,28 @@
       <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
         {{ $t('UserDashboard.Title') }}
       </v-btn>
-      <ShareButton :overrideUrl="'/users/' + username"></ShareButton>
+      <ShareButton :overrideUrl="'/users/' + username" />
     </v-col>
   </v-row>
 
-  <br />
+  <br>
 
   <h2 class="text-h6 mb-1">
     {{ $t('UserDashboard.LatestPrices') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+    <v-progress-circular v-if="loading" indeterminate :size="30" />
   </h2>
 
   <v-row>
-    <v-col cols="12" sm="6" md="4" v-for="price in userPriceList" :key="price">
-      <PriceCard :price="price" :product="price.product" elevation="1" height="100%"></PriceCard>
+    <v-col v-for="price in userPriceList" :key="price" cols="12" sm="6" md="4">
+      <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
   </v-row>
 
   <v-row v-if="userPriceList.length < userPriceTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getUserPrices">{{ $t('UserDashboard.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getUserPrices">
+        {{ $t('UserDashboard.LoadMore') }}
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -43,8 +45,8 @@ import api from '../services/api'
 
 export default {
   components: {
-    'ShareButton': defineAsyncComponent(() => import('../components/ShareButton.vue')),
-    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue')),
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
     return {

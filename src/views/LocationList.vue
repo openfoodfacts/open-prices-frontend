@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-h5 mb-1">
     {{ $t('LocationList.Title') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+    <v-progress-circular v-if="loading" indeterminate :size="30" />
   </h1>
 
   <v-row v-if="!loading">
@@ -13,14 +13,16 @@
   </v-row>
 
   <v-row class="mt-0">
-    <v-col cols="12" sm="6" md="4" v-for="location in locationList" :key="location">
-      <LocationCard :location="location" height="100%"></LocationCard>
+    <v-col v-for="location in locationList" :key="location" cols="12" sm="6" md="4">
+      <LocationCard :location="location" height="100%" />
     </v-col>
   </v-row>
 
   <v-row v-if="locationList.length < locationTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getLocations">{{ $t('LocationList.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getLocations">
+        {{ $t('LocationList.LoadMore') }}
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -31,7 +33,7 @@ import api from '../services/api'
 
 export default {
   components: {
-    'LocationCard': defineAsyncComponent(() => import('../components/LocationCard.vue')),
+    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
   },
   data() {
     return {

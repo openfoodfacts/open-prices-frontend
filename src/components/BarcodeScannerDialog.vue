@@ -2,16 +2,16 @@
   <v-dialog scrollable persistent>
     <v-card>
       <v-card-title>
-        {{ $t('BarcodeScanner.Scan') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('BarcodeScanner.Scan') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
-        <div id="reader" width="500px"></div>
+        <div id="reader" width="500px" />
       </v-card-text>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-actions class="justify-end">
         <div>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { Html5Qrcode, Html5QrcodeScanType, Html5QrcodeSupportedFormats } from 'html5-qrcode'
+import { Html5Qrcode, Html5QrcodeScanType } from 'html5-qrcode'
 
 const config = {
   fps: 10,
@@ -39,6 +39,7 @@ const config = {
 }
 
 export default {
+  emits: ['barcode', 'close'],
   data() {
     return {
       scanner: null,
@@ -52,11 +53,11 @@ export default {
       this.scanner = new Html5Qrcode('reader')
       this.scanner.start({ facingMode: 'environment' }, config, this.onScanSuccess, this.onScanFailure)
     },
-    onScanSuccess(decodedText, decodedResult) {
+    onScanSuccess(decodedText, decodedResult) {  // eslint-disable-line no-unused-vars
       this.$emit('barcode', decodedText)
       this.close()
     },
-    onScanFailure(error) {
+    onScanFailure(error) {  // eslint-disable-line no-unused-vars
       // console.warn(`Code scan error = ${error}`)
     },
     close() {

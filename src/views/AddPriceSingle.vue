@@ -5,24 +5,24 @@
 
   <v-form @submit.prevent="createPrice">
     <v-row>
-
       <!-- Step 1: product -->
       <v-col cols="12" md="6" lg="4">
         <v-card
           :title="$t('AddPriceSingle.ProductInfo.Title')"
           prepend-icon="mdi-database-outline"
           height="100%"
-          :style="productFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
-          <template v-slot:append v-if="productFormFilled">
-            <v-icon icon="mdi-checkbox-marked-circle" color="success"></v-icon>
+          :style="productFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+        >
+          <template v-if="productFormFilled" #append>
+            <v-icon icon="mdi-checkbox-marked-circle" color="success" />
           </template>
-          <v-divider></v-divider>
+          <v-divider />
           <v-card-text>
             <h3 class="mb-2">
               <v-item-group v-model="productMode" class="d-inline" mandatory>
-                <v-item v-for="pm in productModeList" :key="pm.key" :value="pm.key" v-slot="{ isSelected, toggle }">
-                  <v-chip class="mr-1" @click="toggle" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'">
-                    <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'"></v-icon>
+                <v-item v-for="pm in productModeList" :key="pm.key" v-slot="{ isSelected, toggle }" :value="pm.key">
+                  <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
+                    <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
                     {{ pm.value }}
                   </v-chip>
                 </v-item>
@@ -39,28 +39,28 @@
               </v-btn>
               <v-text-field
                 v-if="dev"
-                :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
                 v-model="addPriceSingleForm.product_code"
+                :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
                 :label="$t('AddPriceSingle.ProductInfo.ProductBarcode')"
                 type="text"
                 hint="EAN"
                 hide-details="auto"
                 @click:prepend-inner="showBarcodeScannerDialog"
-              ></v-text-field>
-              <ProductCard v-if="product" class="mb-4" :product="product" :hideProductBarcode="true" :readonly="true" elevation="1"></ProductCard>
+              />
+              <ProductCard v-if="product" class="mb-4" :product="product" :hideProductBarcode="true" :readonly="true" elevation="1" />
             </v-sheet>
             <v-sheet v-if="productMode === 'category'">
               <v-row>
                 <v-col cols="6">
                   <v-autocomplete
-                    :prepend-inner-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
                     v-model="addPriceSingleForm.category_tag"
+                    :prepend-inner-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
                     :label="$t('AddPriceSingle.ProductInfo.CategoryLabel')"
                     :items="categoryTags"
                     :item-title="item => item.name"
                     :item-value="item => item.id"
                     hide-details="auto"
-                  ></v-autocomplete>
+                  />
                 </v-col>
                 <v-col cols="6">
                   <v-autocomplete
@@ -70,17 +70,18 @@
                     :item-title="item => item.name"
                     :item-value="item => item.id"
                     hide-details="auto"
-                  ></v-autocomplete>
+                  />
                 </v-col>
               </v-row>
               <div class="d-inline">
                 <v-checkbox
                   v-for="lt in labelsTags"
+                  :key="lt.id"
                   v-model="addPriceSingleForm.labels_tags"
                   :label="lt.name"
                   :value="lt.id"
                   hide-details="auto"
-                ></v-checkbox>
+                />
               </div>
             </v-sheet>
             <p v-if="!productFormFilled" class="text-red mt-2 mb-2">
@@ -96,31 +97,34 @@
           :title="$t('AddPriceSingle.PriceDetails.Title')"
           prepend-icon="mdi-tag-outline"
           height="100%"
-          :style="priceProofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
-          <template v-slot:append v-if="priceProofFormFilled">
-            <v-icon icon="mdi-checkbox-marked-circle" color="success"></v-icon>
+          :style="priceProofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+        >
+          <template v-if="priceProofFormFilled" #append>
+            <v-icon icon="mdi-checkbox-marked-circle" color="success" />
           </template>
-          <v-divider></v-divider>
+          <v-divider />
           <v-card-text>
             <h3 class="mb-1">
               <v-item-group v-if="productMode === 'category'" v-model="addPriceSingleForm.price_per" class="d-inline" mandatory>
-                <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" :value="cpp.key" v-slot="{ isSelected, toggle }">
-                  <v-chip class="mr-1" @click="toggle" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'">
-                    <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'"></v-icon>
+                <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
+                  <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
+                    <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
                     {{ cpp.value }}
                   </v-chip>
                 </v-item>
               </v-item-group>
             </h3>
-            <PriceInputRow :priceForm="addPriceSingleForm"></PriceInputRow>
-            <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.PriceDetails.Proof') }}</h3>
+            <PriceInputRow :priceForm="addPriceSingleForm" />
+            <h3 class="mt-4 mb-1">
+              {{ $t('AddPriceSingle.PriceDetails.Proof') }}
+            </h3>
             <v-row>
               <v-col>
-                <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()" :loading="createProofLoading" :disabled="createProofLoading">
+                <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" :loading="createProofLoading" :disabled="createProofLoading" @click.prevent="$refs.proofCamera.click()">
                   <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
                   <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
                 </v-btn>
-                <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" @click.prevent="$refs.proofGallery.click()" :loading="createProofLoading" :disabled="createProofLoading">
+                <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" :loading="createProofLoading" :disabled="createProofLoading" @click.prevent="$refs.proofGallery.click()">
                   <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
                   <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
                 </v-btn>
@@ -129,24 +133,24 @@
                   <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
                 </v-btn>
                 <v-file-input
-                  class="d-none overflow-hidden"
                   ref="proofCamera"
                   v-model="proofImage"
+                  class="d-none overflow-hidden"
                   capture="environment"
                   accept="image/*"
+                  :loading="createProofLoading"
                   @change="newProof('camera')"
                   @click:clear="clearProof"
-                  :loading="createProofLoading">
-                </v-file-input>
+                />
                 <v-file-input
-                  class="d-none overflow-hidden"
                   ref="proofGallery"
                   v-model="proofImage"
+                  class="d-none overflow-hidden"
                   accept="image/*, .heic"
+                  :loading="createProofLoading"
                   @change="newProof('gallery')"
                   @click:clear="clearProof"
-                  :loading="createProofLoading">
-                </v-file-input>
+                />
                 <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2">
                   <i v-if="!proofSelectedMessage">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
                   <i v-if="proofSelectedMessage">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
@@ -156,7 +160,7 @@
                 </p>
               </v-col>
               <v-col v-if="proofFormFilled">
-                <v-img :src="proofImagePreview" style="max-height:200px"></v-img>
+                <v-img :src="proofImagePreview" style="max-height:200px" />
               </v-col>
             </v-row>
           </v-card-text>
@@ -169,34 +173,44 @@
           :title="$t('AddPriceSingle.WhereWhen.Title')"
           prepend-icon="mdi-map-marker-outline"
           height="100%"
-          :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'">
-          <template v-slot:append v-if="locationDateFormFilled">
-            <v-icon icon="mdi-checkbox-marked-circle" color="success"></v-icon>
+          :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+        >
+          <template v-if="locationDateFormFilled" #append>
+            <v-icon icon="mdi-checkbox-marked-circle" color="success" />
           </template>
-          <v-divider></v-divider>
+          <v-divider />
           <v-card-text>
-            <h3 class="mb-1">{{ $t('AddPriceSingle.WhereWhen.Location') }}</h3>
+            <h3 class="mb-1">
+              {{ $t('AddPriceSingle.WhereWhen.Location') }}
+            </h3>
             <v-chip
-              class="mb-2"
-              :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
               v-for="location in recentLocations"
               :key="getLocationUniqueID(location)"
-              @click="setLocationData(location)">
-              <v-icon start :icon="isSelectedLocation(location) ? 'mdi-check-circle-outline' : 'mdi-history'" :color="isSelectedLocation(location) ? 'green' : ''"></v-icon>
+              class="mb-2"
+              :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+              @click="setLocationData(location)"
+            >
+              <v-icon start :icon="isSelectedLocation(location) ? 'mdi-check-circle-outline' : 'mdi-history'" :color="isSelectedLocation(location) ? 'green' : ''" />
               {{ getLocationTitle(location, true, true, true) }}
             </v-chip>
-            <br v-if="recentLocations.length" />
-            <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelectorDialog">{{ $t('AddPriceSingle.WhereWhen.Find') }}</v-btn>
-            <p v-if="!locationFormFilled" class="text-red mb-2"><i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i></p>
+            <br v-if="recentLocations.length">
+            <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelectorDialog">
+              {{ $t('AddPriceSingle.WhereWhen.Find') }}
+            </v-btn>
+            <p v-if="!locationFormFilled" class="text-red mb-2">
+              <i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i>
+            </p>
 
-            <h3 class="mt-4 mb-1">{{ $t('AddPriceSingle.WhereWhen.Date') }}</h3>
+            <h3 class="mt-4 mb-1">
+              {{ $t('AddPriceSingle.WhereWhen.Date') }}
+            </h3>
             <v-row>
               <v-col cols="12" sm="6">
                 <v-text-field
                   v-model="addPriceSingleForm.date"
                   :label="$t('AddPriceSingle.WhereWhen.DateLabel')"
                   type="date"
-                ></v-text-field>
+                />
               </v-col>
             </v-row>
           </v-card-text>
@@ -211,7 +225,9 @@
           :color="formFilled ? 'success' : ''"
           :loading="createPriceLoading"
           :disabled="!formFilled"
-        >{{ $t('AddPriceSingle.Create') }}</v-btn>
+        >
+          {{ $t('AddPriceSingle.Create') }}
+        </v-btn>
       </v-col>
     </v-row>
   </v-form>
@@ -220,42 +236,48 @@
     v-model="proofDateSuccessMessage"
     color="info"
     :timeout="2000"
-  >{{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}</v-snackbar>
+  >
+    {{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}
+  </v-snackbar>
   <v-snackbar
     v-model="proofSuccessMessage"
     color="success"
     :timeout="2000"
-  >{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</v-snackbar>
+  >
+    {{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}
+  </v-snackbar>
   <v-snackbar
     v-model="proofSelectedSuccessMessage"
     color="success"
     :timeout="2000"
-  >{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</v-snackbar>
+  >
+    {{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}
+  </v-snackbar>
 
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
     v-model="barcodeScannerDialog"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
-  ></BarcodeScannerDialog>
+  />
   <BarcodeManualInputDialog
     v-if="barcodeManualInputDialog"
     v-model="barcodeManualInputDialog"
     @barcode="setProductCode($event)"
     @close="barcodeManualInputDialog = false"
-  ></BarcodeManualInputDialog>
+  />
   <LocationSelectorDialog
     v-if="locationSelectorDialog"
     v-model="locationSelectorDialog"
     @location="setLocationData($event)"
     @close="locationSelectorDialog = false"
-  ></LocationSelectorDialog>
+  />
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
     @recentProofSelected="handleRecentProofSelected($event)"
     @close="userRecentProofsDialog = false"
-  ></UserRecentProofsDialog>
+  />
 </template>
 
 <script>
@@ -278,12 +300,12 @@ Compressor.setDefaults({
 
 export default {
   components: {
-    'PriceInputRow': defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
-    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    'BarcodeScannerDialog': defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
-    'BarcodeManualInputDialog': defineAsyncComponent(() => import('../components/BarcodeManualInputDialog.vue')),
-    'LocationSelectorDialog': defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
-    'UserRecentProofsDialog': defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
+    PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
+    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
+    BarcodeManualInputDialog: defineAsyncComponent(() => import('../components/BarcodeManualInputDialog.vue')),
+    LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
+    UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
   },
   data() {
     return {
@@ -372,6 +394,18 @@ export default {
     formFilled() {
       return this.productFormFilled && this.priceProofFormFilled && this.locationDateFormFilled
     },
+  },
+  watch: {
+    productMode(newProductMode, oldProductMode) {
+      // reset product_code and category_tag when switching mode
+      if (oldProductMode) {
+        this.addPriceSingleForm.product_code = ""
+        this.addPriceSingleForm.category_tag = null
+        this.addPriceSingleForm.origins_tags = ''
+        this.addPriceSingleForm.labels_tags = []
+        this.product = null
+      }
+    }
   },
   mounted() {
     if (this.$route.query.code) {
@@ -495,7 +529,7 @@ export default {
           this.product = data.id ? data : {'code': code, 'price_count': 0}
           console.log(this.product)
         })
-        .catch((error) => {
+        .catch((error) => {  // eslint-disable-line no-unused-vars
           alert("Error: Open Prices server error")
         })
     },
@@ -553,18 +587,6 @@ export default {
           this.createPriceLoading = false
         })
     },
-  },
-  watch: {
-    productMode(newProductMode, oldProductMode) {
-      // reset product_code and category_tag when switching mode
-      if (oldProductMode) {
-        this.addPriceSingleForm.product_code = ""
-        this.addPriceSingleForm.category_tag = null
-        this.addPriceSingleForm.origins_tags = ''
-        this.addPriceSingleForm.labels_tags = []
-        this.product = null
-      }
-    }
   }
 }
 </script>

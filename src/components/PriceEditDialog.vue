@@ -2,45 +2,51 @@
   <v-dialog>
     <v-card>
       <v-card-title>
-        {{ $t('PriceEdit.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close"></v-btn>
+        {{ $t('PriceEdit.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
         <v-row>
           <v-col cols="12" md="6">
-            <PriceCard :price="price" :product="price.product" :hidePriceFooterRow="true" :readonly="true"></PriceCard>
+            <PriceCard :price="price" :product="price.product" :hidePriceFooterRow="true" :readonly="true" />
           </v-col>
         </v-row>
       </v-card-text>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
-        <h3 class="mb-1">{{ $t('PriceForm.Label') }}</h3>
-        <PriceInputRow :priceForm="updatePriceForm"></PriceInputRow>
+        <h3 class="mb-1">
+          {{ $t('PriceForm.Label') }}
+        </h3>
+        <PriceInputRow :priceForm="updatePriceForm" />
 
-        <h3 class="mt-4 mb-1">{{ $t('Common.Date') }}</h3>
+        <h3 class="mt-4 mb-1">
+          {{ $t('Common.Date') }}
+        </h3>
         <v-row>
           <v-col cols="12" sm="6">
             <v-text-field
               v-model="updatePriceForm.date"
               :label="$t('Common.Date')"
               type="date"
-            ></v-text-field>
+            />
           </v-col>
         </v-row>
       </v-card-text>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-actions>
         <v-btn
           elevation="1"
           :loading="loading"
           @click="updatePrice"
-        >{{ $t('PriceEdit.Save') }}</v-btn>
+        >
+          {{ $t('PriceEdit.Save') }}
+        </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -52,12 +58,16 @@ import api from '../services/api'
 
 export default {
   components: {
-    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    'PriceInputRow': defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
   },
   props: {
-    price: null,
+    price: {
+      type: Object,
+      default: null
+    },
   },
+  emits: ['update', 'close'],
   data() {
     return {
       updatePriceForm: {
@@ -72,7 +82,6 @@ export default {
       loading: false
     }
   },
-  emits: ['update', 'close'],
   mounted() {
     this.initUpdatePriceForm()
   },

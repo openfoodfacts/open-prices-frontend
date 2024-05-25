@@ -1,6 +1,6 @@
 <template>
   <v-menu scroll-strategy="close">
-    <template v-slot:activator="{ props }">
+    <template #activator="{ props }">
       <v-btn v-bind="props" size="x-small" rounded="xl" prepend-icon="mdi-arrow-down" :append-icon="getCurrentOrderIcon" :active="!!currentOrder">
         {{ $t('Common.Order') }}
       </v-btn>
@@ -18,12 +18,16 @@ import constants from '../constants'
 
 export default {
   props: {
-    currentOrder: String,
+    currentOrder: {
+      type: String,
+      default: null
+    },
     kind: {
       type: String,
       default: 'product'
     }
   },
+  emits: ['update:currentOrder'],
   data() {
     return {
       productOrderList: constants.PRODUCT_ORDER_LIST,
@@ -39,7 +43,6 @@ export default {
       return order ? order.icon : ''
     },
   },
-  emits: ['update:currentOrder'],
   methods: {
     selectOrder(order) {
       this.$emit('update:currentOrder', order)

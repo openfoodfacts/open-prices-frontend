@@ -10,7 +10,7 @@
         </v-chip>
       </span>
       <i18n-t v-if="!hidePriceDate" keypath="PriceCard.PriceDate" tag="span">
-        <template v-slot:date>
+        <template #date>
           <i>{{ getDateFormatted(price.date) }}</i>
         </template>
       </i18n-t>
@@ -24,10 +24,22 @@ import utils from '../utils.js'
 
 export default {
   props: {
-    'price': null,
-    'productQuantity': null,
-    'productQuantityUnit': constants.PRODUCT_QUANTITY_UNIT_G,
-    'hidePriceDate': false
+    price: {
+      type: Object,
+      default: null
+    },
+    productQuantity: {
+      type: Number,
+      default: null
+    },
+    productQuantityUnit: {
+      type: String,
+      default: constants.PRODUCT_QUANTITY_UNIT_G
+    },
+    hidePriceDate: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {}

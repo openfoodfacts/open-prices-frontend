@@ -3,38 +3,46 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <v-list-item v-if="proofIsPrivateReceipt" :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog" :disabled="!proofIsReceipt">{{ $t('Common.Edit') }}</v-list-item>
-        <v-list-item :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog" :disabled="!userCanDeleteProof">{{ $t('Common.Delete') }}</v-list-item>
+        <v-list-item v-if="proofIsPrivateReceipt" :slim="true" prepend-icon="mdi-pencil" :disabled="!proofIsReceipt" @click="openEditDialog">
+          {{ $t('Common.Edit') }}
+        </v-list-item>
+        <v-list-item :slim="true" prepend-icon="mdi-delete" :disabled="!userCanDeleteProof" @click="openDeleteConfirmationDialog">
+          {{ $t('Common.Delete') }}
+        </v-list-item>
       </v-list>
     </v-menu>
   </v-btn>
 
   <ProofEditDialog
     v-if="editDialog"
-    :proof="proof"
     v-model="editDialog"
+    :proof="proof"
     @update="showEditSuccessMessage"
     @close="closeEditDialog"
-  ></ProofEditDialog>
+  />
 
   <ProofDeleteConfirmationDialog
     v-if="deleteConfirmationDialog"
     v-model="deleteConfirmationDialog"
     :proof="proof"
     @delete="showDeleteSuccessMessage"
-    @close="closeDeleteConfirmationDialog">
-  </ProofDeleteConfirmationDialog>
+    @close="closeDeleteConfirmationDialog"
+  />
 
   <v-snackbar
     v-model="editSuccessMessage"
     color="success"
     :timeout="2000"
-  >{{ $t('ProofEdit.Success') }}</v-snackbar>
+  >
+    {{ $t('ProofEdit.Success') }}
+  </v-snackbar>
   <v-snackbar
     v-model="deleteSuccessMessage"
     color="success"
     :timeout="2000"
-  >{{ $t('ProofDelete.Success') }}</v-snackbar>
+  >
+    {{ $t('ProofDelete.Success') }}
+  </v-snackbar>
 </template>
 
 <script>
@@ -42,12 +50,15 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    'ProofEditDialog': defineAsyncComponent(() => import('../components/ProofEditDialog.vue')),
-    'ProofDeleteConfirmationDialog': defineAsyncComponent(() => import('../components/ProofDeleteConfirmationDialog.vue'))
+    ProofEditDialog: defineAsyncComponent(() => import('../components/ProofEditDialog.vue')),
+    ProofDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/ProofDeleteConfirmationDialog.vue'))
   },
   props: {
-    'proof': null,
-    'style': {
+    proof: {
+      type: Object,
+      default: null
+    },
+    style: {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
     }

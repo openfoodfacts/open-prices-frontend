@@ -6,7 +6,7 @@
   <v-row>
     <v-col>
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-multiple-outline">
-        {{ $t('UserDashboard.UserProofTotal', { count: this.appStore.getUserProofTotal }) }}
+        {{ $t('UserDashboard.UserProofTotal', { count: appStore.getUserProofTotal }) }}
       </v-chip>
       <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
         {{ $t('UserDashboard.Title') }}
@@ -14,21 +14,22 @@
     </v-col>
   </v-row>
 
-  <br />
+  <br>
 
   <h2 class="text-h6 mb-1">
     {{ $t('UserDashboard.LatestProofs') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+    <v-progress-circular v-if="loading" indeterminate :size="30" />
   </h2>
   <v-row>
-    <v-col cols="12" sm="6" md="4" v-for="proof in appStore.user.proofs" :key="proof">
-      <ProofCard :proof="proof" :hideProofHeader="true" :isEditable="true" @proofUpdated="handleProofUpdated" height="100%">
-      </ProofCard>
+    <v-col v-for="proof in appStore.user.proofs" :key="proof" cols="12" sm="6" md="4">
+      <ProofCard :proof="proof" :hideProofHeader="true" :isEditable="true" height="100%" @proofUpdated="handleProofUpdated" />
     </v-col>
   </v-row>
-  <v-row v-if="this.appStore.user.proofs.length < this.appStore.getUserProofTotal" class="mb-2">
+  <v-row v-if="appStore.user.proofs.length < appStore.getUserProofTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getUserProofs">{{ $t('UserDashboard.LoadMore') }}</v-btn>
+      <v-btn size="small" :loading="loading" @click="getUserProofs">
+        {{ $t('UserDashboard.LoadMore') }}
+      </v-btn>
     </v-col>
   </v-row>
 
@@ -36,7 +37,9 @@
     v-model="proofUpdated"
     color="success"
     :timeout="2000"
-  >{{ $t('UserDashboard.ProofUpdated') }}</v-snackbar>
+  >
+    {{ $t('UserDashboard.ProofUpdated') }}
+  </v-snackbar>
 </template>
 
 <script>

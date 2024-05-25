@@ -21,8 +21,8 @@
         :subtitle="userPriceTotal"
         prepend-icon="mdi-tag-multiple-outline"
         height="100%"
-        to="/dashboard/prices">
-      </v-card>
+        to="/dashboard/prices"
+      />
     </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
@@ -30,8 +30,8 @@
         :subtitle="userProofTotal"
         prepend-icon="mdi-image"
         height="100%"
-        to="/dashboard/proofs">
-      </v-card>
+        to="/dashboard/proofs"
+      />
     </v-col>
   </v-row>
 </template>

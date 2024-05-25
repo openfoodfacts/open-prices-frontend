@@ -9,7 +9,11 @@ import OriginTags from '../data/origins-tags.json'
 
 export default {
   props: {
-    priceOrigins: Array
+    priceOrigins: {
+      type: Array,
+      default: () => []
+    
+    }
   },
   computed: {
     priceOriginTagName() {

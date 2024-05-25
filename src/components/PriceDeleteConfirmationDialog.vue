@@ -2,21 +2,23 @@
   <v-dialog scrollable max-height="80%" max-width="80%">
     <v-card>
       <v-card-title>
-        {{ $t('PriceDelete.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog"></v-btn>
+        {{ $t('PriceDelete.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog" />
       </v-card-title>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-text>
-        <p class="mb-1">{{ $t('PriceDelete.Confirmation') }}</p>
+        <p class="mb-1">
+          {{ $t('PriceDelete.Confirmation') }}
+        </p>
         <v-row>
           <v-col cols="12" md="6">
-            <PriceCard :price="price" :product="price.product" :hidePriceFooterRow="true" :readonly="true"></PriceCard>
+            <PriceCard :price="price" :product="price.product" :hidePriceFooterRow="true" :readonly="true" />
           </v-col>
         </v-row>
       </v-card-text>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-card-actions>
         <v-btn
@@ -25,7 +27,9 @@
           prepend-icon="mdi-delete"
           :loading="loading"
           @click="deletePrice"
-        >{{ $t('PriceDelete.Delete') }}</v-btn>
+        >
+          {{ $t('PriceDelete.Delete') }}
+        </v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -37,23 +41,26 @@ import api from '../services/api'
 
 export default {
   components: {
-    'PriceCard': defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   props: {
-    'price': null,
+    price: {
+      type: Object,
+      default: null
+    },
   },
+  emits: ['delete', 'close'],
   data() {
     return {
       loading: false,
     }
   },
-  emits: ['delete', 'close'],
   methods: {
     deletePrice() {
       this.loading = true
       api
         .deletePrice(this.price.id)
-        .then((response) => {
+        .then((response) => {  // eslint-disable-line no-unused-vars
           // if response.status == 204
           this.loading = false
           this.removePriceCard()

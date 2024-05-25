@@ -1,7 +1,7 @@
 <template>
   <h1 class="text-h5 mb-1">
     {{ $t('Search.Title') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30"></v-progress-circular>
+    <v-progress-circular v-if="loading" indeterminate :size="30" />
   </h1>
 
   <v-row>
@@ -16,12 +16,13 @@
           :rules="[fieldRequired]"
           hide-details="auto"
           :loading="loading"
-          required>
-          <template v-slot:prepend-inner>
-            <v-icon :icon="formFilled ? 'mdi-barcode' : 'mdi-barcode-scan'" @click="showBarcodeScannerDialog"></v-icon>
+          required
+        >
+          <template #prepend-inner>
+            <v-icon :icon="formFilled ? 'mdi-barcode' : 'mdi-barcode-scan'" @click="showBarcodeScannerDialog" />
           </template>
-          <template v-slot:append-inner>
-            <v-icon icon="mdi-magnify" @click="search"></v-icon>
+          <template #append-inner>
+            <v-icon icon="mdi-magnify" @click="search" />
           </template>
         </v-text-field>
       </v-form>
@@ -33,8 +34,8 @@
   </p>
 
   <v-row v-if="productTotal > 0" class="mt-0">
-    <v-col cols="12" sm="6" md="4" v-for="product in productList" :key="product">
-      <ProductCard :product="product" :hideProductBarcode="true" :latestPrice="product.latest_price" elevation="1" height="100%"></ProductCard>
+    <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4">
+      <ProductCard :product="product" :hideProductBarcode="true" :latestPrice="product.latest_price" elevation="1" height="100%" />
     </v-col>
   </v-row>
 
@@ -43,7 +44,7 @@
     v-model="barcodeScannerDialog"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
-  ></BarcodeScannerDialog>
+  />
 </template>
 
 <script>
@@ -53,8 +54,8 @@ import api from '../services/api'
 
 export default {
   components: {
-    'ProductCard': defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    'BarcodeScannerDialog': defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue'))
+    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue'))
   },
   data() {
     return {
@@ -71,6 +72,13 @@ export default {
   computed: {
     formFilled() {
       return Object.values(this.productSearchForm).every(x => !!x)
+    }
+  },
+  watch: {
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.getProducts()
+      }
     }
   },
   mounted() {
@@ -110,7 +118,7 @@ export default {
         })
     },
     getProductLatestPrices() {
-      this.productList.forEach((product, index) => {
+      this.productList.forEach((product) => {
         if (product.price_count && !product.latest_price) {
           this.getPrices(product)
         }
@@ -123,13 +131,6 @@ export default {
             product.latest_price = data.items[0]
           }
         })
-    }
-  },
-  watch: {
-    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.getProducts()
-      }
     }
   }
 }
