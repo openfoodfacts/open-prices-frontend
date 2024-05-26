@@ -13,6 +13,11 @@
             <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
           </v-col>
         </v-row>
+        <v-row v-if="userProofList.length < userProofTotal" class="mb-2">
+          <v-col align="center">
+            <v-btn size="small" :loading="loading" @click="getUserProofs">{{ $t('ProofDetail.LoadMore') }}</v-btn>
+          </v-col>
+        </v-row>
       </v-card-text>
     </v-card>
   </v-dialog>
@@ -33,7 +38,8 @@ export default {
     return {
       userProofList: [],
       userProofTotal: null,
-      userProofPage: 1,
+      userProofPage: 0,
+      userProofType: this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG',
       loading: false,
       selectedProof: null,
     }
@@ -50,7 +56,8 @@ export default {
   methods: {
     getUserProofs() {
       this.loading = true
-      return api.getProofs({ owner: this.username, page: this.userProofPage })
+      this.userProofPage += 1
+      return api.getProofs({ owner: this.username, page: this.userProofPage, type: this.userProofType })
         .then((data) => {
           this.userProofList.push(...data.items)
           this.userProofTotal = data.total
@@ -59,7 +66,7 @@ export default {
         .catch((error) => {
           console.error(error)
           this.loading = false
-    })
+        })
     },
     selectProof(proof) {
       this.selectedProof = proof
