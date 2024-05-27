@@ -342,6 +342,7 @@
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
+    :filterType="proofType"
     @recentProofSelected="handleRecentProofSelected($event)"
     @close="userRecentProofsDialog = false"
   />

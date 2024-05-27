@@ -33,13 +33,18 @@ export default {
   components: {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
+  props: {
+    filterType: {
+      type: String,
+      default: null,
+    }
+  },
   emits: ['recentProofSelected', 'close'],
   data() {
     return {
       userProofList: [],
       userProofTotal: null,
       userProofPage: 0,
-      userProofType: this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG',
       loading: false,
       selectedProof: null,
     }
@@ -49,6 +54,13 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    getProofParams() {
+      let defaultParams = { owner: this.username, page: this.userProofPage }
+      if (this.filterType) {
+        defaultParams['type'] = this.filterType
+      }
+      return defaultParams
+    }
   },
   mounted() {
     this.getUserProofs()
@@ -57,7 +69,7 @@ export default {
     getUserProofs() {
       this.loading = true
       this.userProofPage += 1
-      return api.getProofs({ owner: this.username, page: this.userProofPage, type: this.userProofType })
+      return api.getProofs(this.getProofParams)
         .then((data) => {
           this.userProofList.push(...data.items)
           this.userProofTotal = data.total
