@@ -28,6 +28,8 @@ yarn build
 yarn lint
 ```
 
+There is also a pre-commit configuration set up with [husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/lint-staged/lint-staged).
+
 ## Tests
 
 ```sh
