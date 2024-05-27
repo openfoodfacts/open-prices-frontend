@@ -13,6 +13,11 @@
             <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
           </v-col>
         </v-row>
+        <v-row v-if="userProofList.length < userProofTotal" class="mb-2">
+          <v-col align="center">
+            <v-btn size="small" :loading="loading" @click="getUserProofs">{{ $t('ProofDetail.LoadMore') }}</v-btn>
+          </v-col>
+        </v-row>
       </v-card-text>
     </v-card>
   </v-dialog>
@@ -28,12 +33,18 @@ export default {
   components: {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
+  props: {
+    filterType: {
+      type: String,
+      default: null,
+    }
+  },
   emits: ['recentProofSelected', 'close'],
   data() {
     return {
       userProofList: [],
       userProofTotal: null,
-      userProofPage: 1,
+      userProofPage: 0,
       loading: false,
       selectedProof: null,
     }
@@ -43,6 +54,13 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    getProofParams() {
+      let defaultParams = { owner: this.username, page: this.userProofPage }
+      if (this.filterType) {
+        defaultParams['type'] = this.filterType
+      }
+      return defaultParams
+    }
   },
   mounted() {
     this.getUserProofs()
@@ -50,7 +68,8 @@ export default {
   methods: {
     getUserProofs() {
       this.loading = true
-      return api.getProofs({ owner: this.username, page: this.userProofPage })
+      this.userProofPage += 1
+      return api.getProofs(this.getProofParams)
         .then((data) => {
           this.userProofList.push(...data.items)
           this.userProofTotal = data.total
@@ -59,7 +78,7 @@ export default {
         .catch((error) => {
           console.error(error)
           this.loading = false
-    })
+        })
     },
     selectProof(proof) {
       this.selectedProof = proof
