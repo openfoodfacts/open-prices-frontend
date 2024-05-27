@@ -10,9 +10,16 @@
     "build-prod": "vite build --base=/app/ --mode prod",
     "preview": "vite preview",
     "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test": "start-server-and-test dev http://localhost:5173 cy:run"
+    "test": "start-server-and-test dev http://localhost:5173 cy:run",
+    "postinstall": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "yarn lint --max-warnings=0"
+    ]
   },
   "dependencies": {
     "@intlify/unplugin-vue-i18n": "^2.0.0",
@@ -41,6 +48,8 @@
     "cypress": "^13.8.1",
     "eslint": "^9.3.0",
     "eslint-plugin-vue": "^9.26.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
     "postcss": "^8.4.31",
     "start-server-and-test": "^2.0.3",
     "vite": "^4.5.0"
