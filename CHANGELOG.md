@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.60.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.59.0...v1.60.0) (2024-05-27)
+
+
+### Features
+
+* **proof:** recent proof dialog: add load more button, filter list depending on receipt or price tag ([#589](https://github.com/openfoodfacts/open-prices-frontend/issues/589)) ([c9fd2f4](https://github.com/openfoodfacts/open-prices-frontend/commit/c9fd2f41949d1712de1d3c4a671d21097ffeb94d))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#581](https://github.com/openfoodfacts/open-prices-frontend/issues/581)) ([4068748](https://github.com/openfoodfacts/open-prices-frontend/commit/4068748fd2e645454f1a52494c08110b68d0cb14))
+* **Search page:** Many small improvements on the search form ([#582](https://github.com/openfoodfacts/open-prices-frontend/issues/582)) ([e320975](https://github.com/openfoodfacts/open-prices-frontend/commit/e32097524cbf8f964bf12bad97a86143065c634c))
+* setup linting with ESLint & fix files ([#586](https://github.com/openfoodfacts/open-prices-frontend/issues/586)) ([ac4463c](https://github.com/openfoodfacts/open-prices-frontend/commit/ac4463c229630b3f48c69eaf409bdb4c6aec1da1))
+* setup pre-commit with linting ([#590](https://github.com/openfoodfacts/open-prices-frontend/issues/590)) ([74900fc](https://github.com/openfoodfacts/open-prices-frontend/commit/74900fcd3a20370730937c419eea1f93b68e3f30))
+
 ## [1.59.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.58.2...v1.59.0) (2024-05-22)
 
 
