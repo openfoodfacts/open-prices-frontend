@@ -383,7 +383,7 @@ export default {
         this.setProductCode(this.$route.query.code)
       }
     } else if (this.$route.query.proof) {
-      this.handleProofSelected(this.$route.query.proof)
+      this.getProofById(this.$route.query.proof);
     }
     this.initPriceSingleForm()
   },
