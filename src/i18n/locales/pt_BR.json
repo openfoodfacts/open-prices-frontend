@@ -204,15 +204,15 @@
 		"PriceCount": "{count} valores"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Tem certeza de que deseja excluir este preço?",
 		"Delete": "Eliminar",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Preço excluído!",
+		"Title": "Excluir um preço"
 	},
 	"PriceEdit": {
 		"Save": "Guardar",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Preço editado!",
+		"Title": "Editar um preço"
 	},
 	"PriceForm": {
 		"Discount": "Desconto?",
@@ -225,20 +225,20 @@
 		"Title": "Preços mais recentes"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "O preço é obrigatório",
+		"NoSpaces": "Por favor, não use espaços",
+		"Number": "Insira um número",
+		"Positive": "Preço não pode ser negativo",
+		"TwoDecimals": "Apenas duas casas decimais são permitidas"
 	},
 	"ProductCard": {
 		"Brands": "Marcas",
 		"BrandLower": "marca",
-		"BrandMissing": "Brand missing",
-		"BrandTotal": "{count} brands",
+		"BrandMissing": "A Marca está faltando",
+		"BrandTotal": "{count} marcas",
 		"Categories": "Categorias",
 		"CategoriesLower": "categorias",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "Categoria ausente",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Rótulos",
 		"LabelsLower": "etiquetas",
