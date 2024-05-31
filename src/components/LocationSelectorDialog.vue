@@ -45,7 +45,7 @@
             <v-col cols="12" sm="6">
               <v-card
                 v-for="location in results"
-                :key="getLocationUniqueID(location)"
+                :key="getLocationOSMID(location)"
                 class="mb-2"
                 width="100%"
                 elevation="1"
@@ -54,8 +54,11 @@
                 <v-card-text>
                   <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                   {{ getLocationTitle(location, false, true, true) }}<br>
-                  <v-chip label size="small" density="comfortable">
+                  <v-chip label size="small" density="comfortable" class="mr-1">
                     {{ getLocationCategory(location) }}
+                  </v-chip>
+                  <v-chip v-if="showLocationOSMID" label size="small" density="comfortable">
+                    {{ getLocationOSMID(location) }}
                   </v-chip>
                 </v-card-text>
               </v-card>
@@ -63,7 +66,7 @@
             <v-col cols="12" sm="6" style="min-height:200px">
               <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
                 <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap" />
-                <l-marker v-for="location in results" :key="getLocationUniqueID(location)" :lat-lng="getLocationLatLng(location)">
+                <l-marker v-for="location in results" :key="getLocationOSMID(location)" :lat-lng="getLocationLatLng(location)">
                   <l-popup>
                     <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                     {{ getLocationTitle(location, false, true, true) }}<br>
@@ -93,7 +96,7 @@
           </h3>
           <v-chip
             v-for="location in recentLocations"
-            :key="getLocationUniqueID(location)"
+            :key="getLocationOSMID(location)"
             class="mb-2"
             closable
             prepend-icon="mdi-history"
@@ -167,6 +170,9 @@ export default {
     recentLocations() {
       return this.appStore.getRecentLocations()
     },
+    showLocationOSMID() {
+      return this.appStore.user.username && this.appStore.user.location_display_osm_id
+    }
   },
   mounted() {
     this.$refs.locationInput.focus()
@@ -205,8 +211,8 @@ export default {
     getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
     },
-    getLocationUniqueID(location) {
-      return utils.getLocationUniqueID(location)
+    getLocationOSMID(location) {
+      return utils.getLocationOSMID(location)
     },
     getLocationCategory(location) {
       return utils.getLocationCategory(location)
