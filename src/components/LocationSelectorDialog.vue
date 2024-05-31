@@ -57,9 +57,6 @@
                   <v-chip label size="small" density="comfortable" class="mr-1">
                     {{ getLocationCategory(location) }}
                   </v-chip>
-                  <v-chip v-if="showLocationOSMID" label size="small" density="comfortable">
-                    {{ getLocationOSMID(location) }}
-                  </v-chip>
                   <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
                 </v-card-text>
               </v-card>
