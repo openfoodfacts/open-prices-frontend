@@ -8,7 +8,7 @@
     <v-card-text v-if="location">
       <PriceCountChip :count="location.price_count" :withLabel="true" />
       <v-chip label size="small" density="comfortable" class="mr-1" title="OpenStreetMap tag">
-        {{ location.osm_tag_key }}:{{ location.osm_tag_value }}
+        {{ getLocationCategory(location) }}
       </v-chip>
     </v-card-text>
   </v-card>
@@ -38,6 +38,9 @@ export default {
         return utils.getLocationTitle(location, true, false, true, true)
       }
       return this.$route.params.id
+    },
+    getLocationCategory(location) {
+      return utils.getLocationCategory(location)
     },
     goToLocation(location) {
       if (this.readonly) {
