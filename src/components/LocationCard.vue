@@ -7,9 +7,7 @@
   >
     <v-card-text v-if="location">
       <PriceCountChip :count="location.price_count" :withLabel="true" />
-      <v-chip label size="small" density="comfortable" class="mr-1" title="OpenStreetMap tag">
-        {{ getLocationCategory(location) }}
-      </v-chip>
+      <LocationOSMTagChip :location="location" class="mr-1" />
       <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
     </v-card-text>
   </v-card>
@@ -24,6 +22,7 @@ import utils from '../utils.js'
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
   },
   props: {
@@ -52,9 +51,6 @@ export default {
         return utils.getLocationTitle(location, true, false, true, true)
       }
       return this.$route.params.id
-    },
-    getLocationCategory(location) {
-      return utils.getLocationCategory(location)
     },
     goToLocation(location) {
       if (this.readonly) {

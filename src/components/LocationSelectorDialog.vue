@@ -54,9 +54,7 @@
                 <v-card-text>
                   <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                   {{ getLocationTitle(location, false, true, true) }}<br>
-                  <v-chip label size="small" density="comfortable" class="mr-1">
-                    {{ getLocationCategory(location) }}
-                  </v-chip>
+                  <LocationOSMTagChip :location="location" class="mr-1" />
                   <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
                 </v-card-text>
               </v-card>
@@ -142,6 +140,7 @@ export default {
     LTileLayer,
     LMarker,
     LPopup,
+    LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
   },
   emits: ['location', 'close'],
