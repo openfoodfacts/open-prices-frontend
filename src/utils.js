@@ -187,12 +187,12 @@ function getLocationType(locationObject) {
   return locationObject.osm_type.toUpperCase()
 }
 
-function getLocationOSMID(locationObject) {
+function getLocationUniqueID(locationObject) {
   // examples: N12345
   return `${getLocationType(locationObject)[0]}${getLocationID(locationObject).toString()}`
 }
 
-function getLocationCategory(locationObject) {
+function getLocationTag(locationObject) {
   // examples: shop:supermarket, shop:convenience, shop:bakery, shop:doityourself
   // Photon
   if (locationObject.properties) {
@@ -249,8 +249,8 @@ export default {
   getLocationTitle,
   getLocationID,
   getLocationType,
-  getLocationOSMID,
-  getLocationCategory,
+  getLocationUniqueID,
+  getLocationTag,
   getLocationLatLng,
   getMapBounds,
   getMapCenter,

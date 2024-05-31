@@ -1,6 +1,6 @@
 <template>
-  <v-chip label size="small" density="comfortable" title="OpenStreetMap ID">
-    {{ getLocationUniqueID(location) }}
+  <v-chip label size="small" density="comfortable" title="OpenStreetMap tag">
+    {{ getLocationTag(location) }}
   </v-chip>
 </template>
 
@@ -15,8 +15,8 @@ export default {
     }
   },
   methods: {
-    getLocationUniqueID(location) {
-      return utils.getLocationUniqueID(location)
+    getLocationTag(location) {
+      return utils.getLocationTag(location)
     },
   }
 }

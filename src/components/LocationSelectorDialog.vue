@@ -45,7 +45,7 @@
             <v-col cols="12" sm="6">
               <v-card
                 v-for="location in results"
-                :key="getLocationOSMID(location)"
+                :key="getLocationUniqueID(location)"
                 class="mb-2"
                 width="100%"
                 elevation="1"
@@ -54,12 +54,7 @@
                 <v-card-text>
                   <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                   {{ getLocationTitle(location, false, true, true) }}<br>
-                  <v-chip label size="small" density="comfortable" class="mr-1">
-                    {{ getLocationCategory(location) }}
-                  </v-chip>
-                  <v-chip v-if="showLocationOSMID" label size="small" density="comfortable">
-                    {{ getLocationOSMID(location) }}
-                  </v-chip>
+                  <LocationOSMTagChip :location="location" class="mr-1" />
                   <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
                 </v-card-text>
               </v-card>
@@ -67,12 +62,12 @@
             <v-col cols="12" sm="6" style="min-height:200px">
               <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
                 <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap" />
-                <l-marker v-for="location in results" :key="getLocationOSMID(location)" :lat-lng="getLocationLatLng(location)">
+                <l-marker v-for="location in results" :key="getLocationUniqueID(location)" :lat-lng="getLocationLatLng(location)">
                   <l-popup>
                     <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                     {{ getLocationTitle(location, false, true, true) }}<br>
                     <v-chip label size="small" density="comfortable">
-                      {{ getLocationCategory(location) }}
+                      {{ getLocationTag(location) }}
                     </v-chip>
                   </l-popup>
                 </l-marker>
@@ -97,7 +92,7 @@
           </h3>
           <v-chip
             v-for="location in recentLocations"
-            :key="getLocationOSMID(location)"
+            :key="getLocationUniqueID(location)"
             class="mb-2"
             closable
             prepend-icon="mdi-history"
@@ -145,6 +140,7 @@ export default {
     LTileLayer,
     LMarker,
     LPopup,
+    LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
   },
   emits: ['location', 'close'],
@@ -214,11 +210,11 @@ export default {
     getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
     },
-    getLocationOSMID(location) {
-      return utils.getLocationOSMID(location)
+    getLocationUniqueID(location) {
+      return utils.getLocationUniqueID(location)
     },
-    getLocationCategory(location) {
-      return utils.getLocationCategory(location)
+    getLocationTag(location) {
+      return utils.getLocationTag(location)
     },
     getLocationLatLng(location) {
       return utils.getLocationLatLng(location)
