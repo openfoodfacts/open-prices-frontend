@@ -380,7 +380,7 @@
 		"FavoriteCurrencies": "Devises préférées",
 		"CurrencyRequired": "Au moins une devise est requise",
 		"LanguageLabel": "Langue",
-		"LocationDisplayOSMID": "Display OSM ID",
+		"LocationDisplayOSMID": "Afficher l'ID MCO",
 		"ProductDisplayBarcode": "Afficher le code à barres",
 		"Save": "Enregistrer",
 		"Title": "Paramètres",
