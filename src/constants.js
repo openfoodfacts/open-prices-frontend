@@ -66,5 +66,6 @@ export default {
     'apartments', 'barracks', 'bungalow', 'cabin', 'detached', 'dormitory', 'ger', 'house', 'houseboat', 'residential',  // 'farm', 'hotel'
     'fuel', 'gas', 'casino', 'parking', 'parking_space', 'charging_station', 'atm',
     'car_sharing',
+    'yes',
   ],
 }

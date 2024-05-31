@@ -193,13 +193,17 @@ function getLocationUniqueID(locationObject) {
 }
 
 function getLocationCategory(locationObject) {
-  // examples: shop, amenity, building
+  // examples: shop:supermarket, shop:convenience, shop:bakery, shop:doityourself
   // Photon
   if (locationObject.properties) {
-    return locationObject.properties.type
+    return `${locationObject.properties.osm_key}:${locationObject.properties.osm_value}`
   }
-  // Nominatim or OP
-  return locationObject.type || locationObject.osm_type
+  // Nominatim
+  else if (locationObject.address) {
+    return `${locationObject.class}:${locationObject.type}`
+  }
+  // OP
+  return `${locationObject.osm_tag_key}:${locationObject.osm_tag_value}`
 }
 
 function getLocationLatLng(locationObject) {
