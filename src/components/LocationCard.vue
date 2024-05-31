@@ -10,20 +10,21 @@
       <v-chip label size="small" density="comfortable" class="mr-1" title="OpenStreetMap tag">
         {{ getLocationCategory(location) }}
       </v-chip>
-      <v-chip v-if="showLocationOSMID" label size="small" density="comfortable" class="mr-1" title="OpenStreetMap ID">
-        {{ getLocationOSMID(location) }}
-      </v-chip>
+      <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
     </v-card-text>
   </v-card>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import utils from '../utils.js'
 
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
   },
   props: {
     location: {
@@ -40,6 +41,7 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     showLocationOSMID() {
       return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id
     }
@@ -53,9 +55,6 @@ export default {
     },
     getLocationCategory(location) {
       return utils.getLocationCategory(location)
-    },
-    getLocationOSMID(location) {
-      return utils.getLocationOSMID(location)
     },
     goToLocation(location) {
       if (this.readonly) {

@@ -60,6 +60,7 @@
                   <v-chip v-if="showLocationOSMID" label size="small" density="comfortable">
                     {{ getLocationOSMID(location) }}
                   </v-chip>
+                  <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
                 </v-card-text>
               </v-card>
             </v-col>
@@ -132,6 +133,7 @@
 <script>
 import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet'
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
@@ -143,6 +145,7 @@ export default {
     LTileLayer,
     LMarker,
     LPopup,
+    LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
   },
   emits: ['location', 'close'],
   data() {
