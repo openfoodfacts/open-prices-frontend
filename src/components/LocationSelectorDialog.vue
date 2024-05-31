@@ -54,9 +54,8 @@
                 <v-card-text>
                   <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                   {{ getLocationTitle(location, false, true, true) }}<br>
-                  <v-chip label size="small" density="comfortable">
-                    {{ getLocationCategory(location) }}
-                  </v-chip>
+                  <LocationOSMTagChip :location="location" class="mr-1" />
+                  <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
                 </v-card-text>
               </v-card>
             </v-col>
@@ -68,7 +67,7 @@
                     <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                     {{ getLocationTitle(location, false, true, true) }}<br>
                     <v-chip label size="small" density="comfortable">
-                      {{ getLocationCategory(location) }}
+                      {{ getLocationTag(location) }}
                     </v-chip>
                   </l-popup>
                 </l-marker>
@@ -129,6 +128,7 @@
 <script>
 import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet'
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
@@ -140,6 +140,8 @@ export default {
     LTileLayer,
     LMarker,
     LPopup,
+    LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
+    LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
   },
   emits: ['location', 'close'],
   data() {
@@ -167,6 +169,9 @@ export default {
     recentLocations() {
       return this.appStore.getRecentLocations()
     },
+    showLocationOSMID() {
+      return this.appStore.user.username && this.appStore.user.location_display_osm_id
+    }
   },
   mounted() {
     this.$refs.locationInput.focus()
@@ -208,8 +213,8 @@ export default {
     getLocationUniqueID(location) {
       return utils.getLocationUniqueID(location)
     },
-    getLocationCategory(location) {
-      return utils.getLocationCategory(location)
+    getLocationTag(location) {
+      return utils.getLocationTag(location)
     },
     getLocationLatLng(location) {
       return utils.getLocationLatLng(location)

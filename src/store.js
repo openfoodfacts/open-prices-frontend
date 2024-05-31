@@ -15,6 +15,7 @@ export const useAppStore = defineStore('app', {
       proofs: [],
       proofTotal: null,
       product_display_barcode: false,
+      location_display_osm_id: false,
     },
   }),
   getters: {

@@ -7,29 +7,42 @@
   >
     <v-card-text v-if="location">
       <PriceCountChip :count="location.price_count" :withLabel="true" />
-      <v-chip label size="small" density="comfortable" class="mr-1" title="OpenStreetMap tag">
-        {{ location.osm_tag_key }}:{{ location.osm_tag_value }}
-      </v-chip>
+      <LocationOSMTagChip :location="location" class="mr-1" />
+      <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
     </v-card-text>
   </v-card>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import utils from '../utils.js'
 
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
+    LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
   },
   props: {
     location: {
       type: [Object, null],
       required: true
     },
+    hideLocationOSMID: {
+      type: Boolean,
+      default: false
+    },
     readonly: {
       type: Boolean,
       default: false
+    }
+  },
+  computed: {
+    ...mapStores(useAppStore),
+    showLocationOSMID() {
+      return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id
     }
   },
   methods: {

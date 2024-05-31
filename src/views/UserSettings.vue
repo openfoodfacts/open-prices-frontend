@@ -8,6 +8,7 @@
       <v-col cols="12" sm="6">
         <v-card :title="$t('UserSettings.Display')" prepend-icon="mdi-laptop">
           <v-divider />
+          <!-- Country -->
           <v-card-text>
             <h3 class="mb-1">
               {{ $t('Common.Country') }}
@@ -19,6 +20,7 @@
               item-title="native"
               item-value="code"
             />
+            <!-- Language -->
             <h3 class="mb-1">
               {{ $t('Common.Language') }}
             </h3>
@@ -42,16 +44,19 @@
                 <v-icon size="small" icon="mdi-open-in-new" />
               </a>
             </p>
+            <!-- Products -->
             <h3 class="mt-4 mb-1">
               {{ $t('Common.Products') }}
             </h3>
             <v-checkbox v-model="appStore.user.product_display_barcode" :label="$t('UserSettings.ProductDisplayBarcode')" hide-details="auto" />
+            <!-- Locations -->
+            <h3 class="mt-4 mb-1">
+              {{ $t('Common.Locations') }}
+            </h3>
+            <v-checkbox v-model="appStore.user.location_display_osm_id" :label="$t('UserSettings.LocationDisplayOSMID')" hide-details="auto" />
           </v-card-text>
         </v-card>
       </v-col>
-    </v-row>
-
-    <v-row>
       <v-col cols="12" sm="6">
         <v-card :title="$t('UserSettings.AddingPrices')" prepend-icon="mdi-tag-plus-outline">
           <v-divider />
