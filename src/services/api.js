@@ -223,7 +223,7 @@ export default {
     })
     .then((response) => response.json())
     .then(data => data.features)
-    .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.properties.osm_key)))
+    .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.properties.osm_value)))
   },
   openstreetmapSearch(q, source='nominatim') {
     if (source === 'photon') {
