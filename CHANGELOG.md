@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.61.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.60.0...v1.61.0) (2024-05-31)
+
+
+### Features
+
+* user setting to display location OSM ID ([#600](https://github.com/openfoodfacts/open-prices-frontend/issues/600)) ([a3ec3ec](https://github.com/openfoodfacts/open-prices-frontend/commit/a3ec3ecc753d2f3a26a940bd52ef6ecfdd361da6))
+
+
+### Bug Fixes
+
+* **location:** improve location search result filtering and display ([#597](https://github.com/openfoodfacts/open-prices-frontend/issues/597)) ([40403c6](https://github.com/openfoodfacts/open-prices-frontend/commit/40403c6043856826139db9866fb1a6f4bf9e324c))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#593](https://github.com/openfoodfacts/open-prices-frontend/issues/593)) ([8e5a160](https://github.com/openfoodfacts/open-prices-frontend/commit/8e5a1608a6cfa5914ff47dcfb9d97c9f585105ad))
+* **location:** new LocationOSMIDChip component ([#601](https://github.com/openfoodfacts/open-prices-frontend/issues/601)) ([48e6246](https://github.com/openfoodfacts/open-prices-frontend/commit/48e6246b95b58adeb08382be87c2dd4716f13e88))
+* **location:** new LocationOSMTagChip component ([#602](https://github.com/openfoodfacts/open-prices-frontend/issues/602)) ([b0872ca](https://github.com/openfoodfacts/open-prices-frontend/commit/b0872ca3fd3698ddd09841514f938c8381da5629))
+
 ## [1.60.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.59.0...v1.60.0) (2024-05-27)
 
 
