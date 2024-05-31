@@ -19,6 +19,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import utils from '../utils.js'
 
 export default {
@@ -40,6 +42,7 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     showLocationOSMID() {
       return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id
     }
