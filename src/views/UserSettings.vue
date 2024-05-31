@@ -48,8 +48,8 @@
             <h3 class="mt-4 mb-1">
               {{ $t('Common.Products') }}
             </h3>
-            <!-- Locations -->
             <v-checkbox v-model="appStore.user.product_display_barcode" :label="$t('UserSettings.ProductDisplayBarcode')" hide-details="auto" />
+            <!-- Locations -->
             <h3 class="mt-4 mb-1">
               {{ $t('Common.Locations') }}
             </h3>

@@ -10,6 +10,9 @@
       <v-chip label size="small" density="comfortable" class="mr-1" title="OpenStreetMap tag">
         {{ getLocationCategory(location) }}
       </v-chip>
+      <v-chip v-if="showLocationOSMID" label size="small" density="comfortable" class="mr-1" title="OpenStreetMap ID">
+        {{ getLocationOSMID(location) }}
+      </v-chip>
     </v-card-text>
   </v-card>
 </template>
@@ -27,9 +30,18 @@ export default {
       type: [Object, null],
       required: true
     },
+    hideLocationOSMID: {
+      type: Boolean,
+      default: false
+    },
     readonly: {
       type: Boolean,
       default: false
+    }
+  },
+  computed: {
+    showLocationOSMID() {
+      return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id
     }
   },
   methods: {
@@ -41,6 +53,9 @@ export default {
     },
     getLocationCategory(location) {
       return utils.getLocationCategory(location)
+    },
+    getLocationOSMID(location) {
+      return utils.getLocationOSMID(location)
     },
     goToLocation(location) {
       if (this.readonly) {

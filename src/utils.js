@@ -187,7 +187,7 @@ function getLocationType(locationObject) {
   return locationObject.osm_type.toUpperCase()
 }
 
-function getLocationUniqueID(locationObject) {
+function getLocationOSMID(locationObject) {
   // examples: N12345
   return `${getLocationType(locationObject)[0]}${getLocationID(locationObject).toString()}`
 }
@@ -249,7 +249,7 @@ export default {
   getLocationTitle,
   getLocationID,
   getLocationType,
-  getLocationUniqueID,
+  getLocationOSMID,
   getLocationCategory,
   getLocationLatLng,
   getMapBounds,

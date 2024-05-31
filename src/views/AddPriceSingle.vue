@@ -185,7 +185,7 @@
             </h3>
             <v-chip
               v-for="location in recentLocations"
-              :key="getLocationUniqueID(location)"
+              :key="getLocationOSMID(location)"
               class="mb-2"
               :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
               @click="setLocationData(location)"
@@ -539,8 +539,8 @@ export default {
     getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
     },
-    getLocationUniqueID(location) {
-      return utils.getLocationUniqueID(location)
+    getLocationOSMID(location) {
+      return utils.getLocationOSMID(location)
     },
     setLocationData(location) {
       this.appStore.addRecentLocation(location)
