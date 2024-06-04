@@ -24,7 +24,7 @@ export default {
     return fetch(url, {
       method: 'POST',
       body: formData,
-      headers: DEFAULT_HEADERS
+      headers: {}
     })
     .then((response) => response.json())
   },
@@ -44,12 +44,13 @@ export default {
     let formData = new FormData()
     formData.append('file', proofImage, proofImage.name)
     formData.append('type', type)
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams()}`
+    // const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams()}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload`
     return fetch(url, {
       method: 'POST',
-      headers: Object.assign({}, DEFAULT_HEADERS, {
+      headers: {
         'Authorization': `Bearer ${store.user.token}`
-      }),
+      },
       body: formData,
     })
     .then((response) => response.json())
