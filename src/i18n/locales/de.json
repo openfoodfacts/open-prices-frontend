@@ -380,7 +380,7 @@
 		"FavoriteCurrencies": "Bevorzugte Währungen",
 		"CurrencyRequired": "Es ist mindestens eine Währung erforderlich",
 		"LanguageLabel": "Sprachen",
-		"LocationDisplayOSMID": "Display OSM ID",
+		"LocationDisplayOSMID": "OSM-Kennung anzeigen",
 		"ProductDisplayBarcode": "Strichcode anzeigen",
 		"Save": "Speichern",
 		"Title": "Einstellungen",
