@@ -1,15 +1,15 @@
 describe('Basic tests', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products?page=1&size=10&order_by=-price_count', { fixture: 'products.json' })
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products?page=1&size=10&code=3011360030498', { fixture: 'products_3011360030498.json' })
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products/code/3011360030498', { fixture: 'product_3011360030498.json' })
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products/code/0000000000000', { statusCode: 404, body: { "detail": "Product with code 35647000112700 not found" }})
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=1&order_by=-created*', { fixture: 'prices.json' })
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=10&order_by=-created', { fixture: 'prices.json' })
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=1&order_by=-date&product_code=3011360030498', { fixture: 'product_3011360030498_prices.json' })
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=10&order_by=-date&product_code=3011360030498', { fixture: 'product_3011360030498_prices.json' })
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=10&order_by=-date&category_tag=en%3Apitted-apricot', { fixture: 'pitted_apricot_prices.json' })
-    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?page=1&size=10&order_by=-date&category_tag=en%3Aaaaaaaaaaaaa', { body: {"items":[],"total":0,"page":1,"size":10,"pages":0} })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-price_count', { fixture: 'products.json' })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products?app_name=Open+Prices+Web+App&page=1&size=10&code=3011360030498', { fixture: 'products_3011360030498.json' })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products/code/3011360030498?app_name=Open+Prices+Web+App', { fixture: 'product_3011360030498.json' })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/products/code/0000000000000?app_name=Open+Prices+Web+App', { statusCode: 404, body: { "detail": "Product with code 35647000112700 not found" }})
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=1&order_by=-created*', { fixture: 'prices.json' })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-created', { fixture: 'prices.json' })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=1&order_by=-date&product_code=3011360030498', { fixture: 'product_3011360030498_prices.json' })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-date&product_code=3011360030498', { fixture: 'product_3011360030498_prices.json' })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-date&category_tag=en%3Apitted-apricot', { fixture: 'pitted_apricot_prices.json' })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-date&category_tag=en%3Aaaaaaaaaaaaa', { body: {"items":[],"total":0,"page":1,"size":10,"pages":0} })
   })
 
   it('loads the home page', () => {

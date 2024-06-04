@@ -9,12 +9,14 @@ const OPF_ICON = 'mdi-bookshelf'
 
 export default {
   APP_NAME: 'Open Prices',
+  APP_USER_AGENT: 'Open Prices Web App',
   OFF_NAME: OFF_NAME,
   OFF_URL: 'https://world.openfoodfacts.org',
   OFF_ICON: OFF_ICON,
   OFF_WIKI_URL: 'https://wiki.openfoodfacts.org/Main_Page',
   OFF_WIKI_APP_URL: 'https://wiki.openfoodfacts.org/Project:Open-Prices',
   OFF_WIKI_GDPR_REQUEST_URL: 'https://wiki.openfoodfacts.org/GDPR_request',
+  OFF_API_URL: 'https://world.openfoodfacts.org/api/v2/product',
   OBF_NAME: OBF_NAME,
   OBF_URL: 'https://world.openbeautyfacts.org',
   OBF_ICON: OBF_ICON,

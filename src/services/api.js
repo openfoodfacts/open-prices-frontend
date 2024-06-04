@@ -1,7 +1,18 @@
 import { useAppStore } from '../store'
 import constants from '../constants'
 
-const OPENFOODFACTS_PRODUCT_URL = 'https://world.openfoodfacts.org/api/v2/product'
+
+const DEFAULT_HEADERS = {
+  'Content-Type': 'application/json'
+}
+
+const DEFAULT_PARAMS = {
+  'app_name': constants.APP_USER_AGENT
+}
+
+function buildURLParams(params = {}) {
+  return new URLSearchParams({...DEFAULT_PARAMS, ...params})
+}
 
 
 export default {
@@ -9,21 +20,21 @@ export default {
     let formData = new FormData()
     formData.append('username', username)
     formData.append('password', password)
-    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/auth`, {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/auth?${buildURLParams()}`
+    return fetch(url, {
       method: 'POST',
       body: formData,
+      headers: DEFAULT_HEADERS
     })
     .then((response) => response.json())
   },
 
   getUsers(params = {}) {
     const defaultParams = {page: 1, size: 10}  // order_by default ?
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/users?${new URLSearchParams({...defaultParams, ...params})}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/users?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: DEFAULT_HEADERS
     })
     .then((response) => response.json())
   },
@@ -33,11 +44,12 @@ export default {
     let formData = new FormData()
     formData.append('file', proofImage, proofImage.name)
     formData.append('type', type)
-    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload`, {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams()}`
+    return fetch(url, {
       method: 'POST',
-      headers: {
+      headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
-      },
+      }),
       body: formData,
     })
     .then((response) => response.json())
@@ -47,13 +59,12 @@ export default {
   getProofs(params = {}) {
     const store = useAppStore()
     const defaultParams = {page: 1, size: 10, order_by: '-created'}
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs?${new URLSearchParams({...defaultParams, ...params})}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
+      headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
-      },
+      }),
     })
     .then((response) => response.json())
   },
@@ -61,25 +72,24 @@ export default {
   // will return only the user's proof
   getProofById(proofId) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
     return fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
+      headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
-      },
+      }),
     })
     .then((response) => response.json())
   },
 
   updateProof(proofId, params = {}) {
     const store = useAppStore()
-    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}`, {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
+    return fetch(url, {
       method: 'PATCH',
-      headers: {
+      headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
-        'Content-Type': 'application/json',
-      },
+      }),
       body: JSON.stringify(params),
     })
     .then((response) => response.json())
@@ -87,11 +97,12 @@ export default {
 
   deleteProof(proofId) {
     const store = useAppStore()
-    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}`, {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
+    return fetch(url, {
       method: 'DELETE',
-      headers: {
+      headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
-      },
+      }),
     })
     // .then((response) => response.json())
   },
@@ -99,12 +110,12 @@ export default {
   createPrice(priceData) {
     const store = useAppStore()
     store.user.last_product_mode_used = priceData.product_code ? 'barcode' : 'category'
-    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices`, {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams()}`
+    return fetch(url, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${store.user.token}`
-      },
+      headers: Object.assign({}, DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`,
+      }),
       body: JSON.stringify(priceData),
     })
     .then((response) => response.json())
@@ -112,24 +123,22 @@ export default {
 
   getPrices(params = {}) {
     const defaultParams = {page: 1, size: 10, order_by: '-created'}
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${new URLSearchParams({...defaultParams, ...params})}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   updatePrice(priceId, params = {}) {
     const store = useAppStore()
-    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}`, {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
+    return fetch(url, {
       method: 'PATCH',
-      headers: {
+      headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
-        'Content-Type': 'application/json',
-      },
+      }),
       body: JSON.stringify(params),
     })
     .then((response) => response.json())
@@ -137,75 +146,67 @@ export default {
 
   deletePrice(priceId) {
     const store = useAppStore()
-    return fetch(`${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}`, {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
+    return fetch(url, {
       method: 'DELETE',
-      headers: {
+      headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
-      },
+      }),
     })
     // .then((response) => response.json())
   },
 
   getProducts(params = {}) {
     const defaultParams = {page: 1, size: 10}  // order_by default ?
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products?${new URLSearchParams({...defaultParams, ...params})}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   getProductById(productId) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/${productId}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/${productId}?${buildURLParams()}`
     return fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   getProductByCode(productCode) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}?${buildURLParams()}`
     return fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   getLocations(params = {}) {
     const defaultParams = {page: 1, size: 10}  // order_by default ?
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations?${new URLSearchParams({...defaultParams, ...params})}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   getLocationById(locationId) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/${locationId}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/${locationId}?${buildURLParams()}`
     return fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   openfoodfactsProductSearch(code) {
-    return fetch(`${OPENFOODFACTS_PRODUCT_URL}/${code}.json`, {
+    return fetch(`${constants.OFF_API_URL}/${code}.json`, {
       method: 'GET',
+      headers: DEFAULT_HEADERS
     })
     .then((response) => response.json())
   },
@@ -213,6 +214,7 @@ export default {
   openstreetmapNominatimSearch(q) {
     return fetch(`${constants.OSM_NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=10`, {
       method: 'GET',
+      headers: DEFAULT_HEADERS
     })
     .then((response) => response.json())
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
@@ -220,6 +222,7 @@ export default {
   openstreetmapPhotonSearch(q) {
     return fetch(`${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=10`, {
       method: 'GET',
+      headers: DEFAULT_HEADERS
     })
     .then((response) => response.json())
     .then(data => data.features)
