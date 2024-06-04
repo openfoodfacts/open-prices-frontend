@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.62.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.61.0...v1.62.0) (2024-06-04)
+
+
+### Features
+
+* **API:** send the app_name param in every API call ([#588](https://github.com/openfoodfacts/open-prices-frontend/issues/588)) ([5a6af2f](https://github.com/openfoodfacts/open-prices-frontend/commit/5a6af2fc8d8f06c059b83c25e4fd37b64b072710))
+
+
+### Bug Fixes
+
+* **API:** don't send Content-Type in headers when posting formdata. ref [#588](https://github.com/openfoodfacts/open-prices-frontend/issues/588) ([98fb2e3](https://github.com/openfoodfacts/open-prices-frontend/commit/98fb2e3199848db21184ecfc9d43e9dd263c51b6))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#603](https://github.com/openfoodfacts/open-prices-frontend/issues/603)) ([e2b9755](https://github.com/openfoodfacts/open-prices-frontend/commit/e2b9755caaaab85b0df1561246df2fdb18c37a48))
+
 ## [1.61.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.60.0...v1.61.0) (2024-05-31)
 
 
