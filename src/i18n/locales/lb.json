@@ -57,19 +57,19 @@
 			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "Kategorie",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
 			"Scan": "Scan",
 			"ScanBarcode": "Scan a barcode",
-			"Type": "Type",
+			"Type": "Typ",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
 		"ProductModeList": {
 			"Barcode": "Barcode",
-			"Category": "Category"
+			"Category": "Kategorie"
 		},
 		"CategoryPricePer": {
 			"PerKg": "Price per kg",
@@ -109,12 +109,12 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
-		"Country": "Country",
+		"Country": "Land",
 		"Language": "Language",
 		"Locations": "Locations",
 		"Date": "Date",
 		"Delete": "Delete",
-		"Edit": "Edit",
+		"Edit": "Änneren",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
@@ -126,8 +126,8 @@
 		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Source": "Source",
-		"Yes": "Yes",
-		"No": "No",
+		"Yes": "Jo",
+		"No": "Nee",
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty",
@@ -242,7 +242,7 @@
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
-		"LabelsLower": "labels",
+		"LabelsLower": "Etiketten",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
 		"ProductBrandMissing": "Product brand missing",
@@ -374,7 +374,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "Land",
 		"CurrencyLabel": "Currency",
 		"Display": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
