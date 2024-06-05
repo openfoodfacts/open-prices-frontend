@@ -7,10 +7,11 @@ import json
 from openfoodfacts.taxonomy import get_taxonomy, Taxonomy, TaxonomyNode
 
 PARENT_CATEGORIES_ID = [
-    "en:vegetables",  # 391
+    "en:vegetables",  # 391 descendants
     "en:fruits",  # 287
     "en:culinary-plants",  # 152
     "en:nuts",  # 77
+    "en:viennoiseries",  # 47
     "en:potatoes",  # 27
     "en:textured-vegetable-protein"  # 2
 ]
@@ -118,4 +119,4 @@ if __name__ == "__main__":
     # Extra
     # compare_new_categories_with_old_categories()
     # print(get_all_root_nodes(CATEGORIES_FULL))
-    # print(get_all_descendants(CATEGORIES_FULL, get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, ["en:viennoiseries"])[0]))
+    # print(len(get_all_descendants(CATEGORIES_FULL, get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, ["en:viennoiseries"])[0])))
