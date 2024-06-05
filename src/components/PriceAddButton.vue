@@ -29,7 +29,7 @@ export default {
   computed: {
     getAddUrl() {
       if (this.proofId) {
-        return `${this.ADD_PRICE_BASE_URL}?proof=${this.proofId}`
+        return `${this.ADD_PRICE_BASE_URL}?proof_id=${this.proofId}`
       }
       return `${this.ADD_PRICE_BASE_URL}?code=${this.productCode}`
     }

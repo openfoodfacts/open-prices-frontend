@@ -416,8 +416,8 @@ export default {
       else {
         this.setProductCode(this.$route.query.code)
       }
-    } else if (this.$route.query.proof) {
-      this.handleProofSelected(this.$route.query.proof)
+    } else if (this.$route.query.proof_id) {
+      this.getProofById(this.$route.query.proof_id)
     }
     this.initPriceSingleForm()
   },
@@ -446,17 +446,28 @@ export default {
     showUserRecentProofs() {
       this.userRecentProofsDialog = true
     },
-    handleProofSelected(proofId) {
-      this.addPriceSingleForm.proof_id = proofId
+    handleProofSelected(proof) {
+      this.addPriceSingleForm.proof_id = proof.id
+      this.addPriceSingleForm.date = new Date(proof.created).toISOString().split('T')[0]
+      // this.proofDateSuccessMessage = true
+      this.proofImagePreview = this.getProofUrl(proof)
       this.proofSelectedSuccessMessage = true
       this.proofSelectedMessage = true
     },
     handleRecentProofSelected(selectedProof) {
-      this.handleProofSelected(selectedProof.id)
+      this.handleProofSelected(selectedProof)
       this.proofImagePreview = this.getProofUrl(selectedProof)
     },
     getProofUrl(proof) {
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
+    },
+    getProofById(proofId) {
+      this.loading = true
+      api.getProofById(proofId)
+        .then(proof => {
+          this.handleProofSelected(proof)
+          this.loading = false
+        })
     },
     newProof(source) {
       if (source === 'gallery') {
