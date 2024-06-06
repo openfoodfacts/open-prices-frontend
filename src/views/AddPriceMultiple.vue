@@ -172,77 +172,9 @@
           </template>
           <v-divider />
           <v-card-text>
-            <h3 class="mb-2">
-              <v-item-group v-model="productMode" class="d-inline" mandatory>
-                <v-item v-for="pm in productModeList" :key="pm.key" v-slot="{ isSelected, toggle }" :value="pm.key">
-                  <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
-                    <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
-                    {{ pm.value }}
-                  </v-chip>
-                </v-item>
-              </v-item-group>
-            </h3>
-            <v-sheet v-if="productMode === 'barcode'">
-              <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScannerDialog">
-                <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Scan') }}</span>
-                <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</span>
-              </v-btn>
-              <v-btn class="mb-2" size="small" prepend-icon="mdi-numeric" @click.prevent="showBarcodeManualInputDialog">
-                <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Type') }}</span>
-                <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</span>
-              </v-btn>
-              <v-text-field
-                v-if="dev"
-                v-model="productPriceForm.product_code"
-                :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
-                :label="$t('AddPriceSingle.ProductInfo.ProductBarcode')"
-                type="text"
-                hint="EAN"
-                hide-details="auto"
-                @click:prepend="showBarcodeScannerDialog"
-              />
-              <ProductCard v-if="product" class="mb-4" :product="product" :hideProductBarcode="true" :readonly="true" elevation="1" />
-            </v-sheet>
-            <v-sheet v-if="productMode === 'category'">
-              <v-row>
-                <v-col cols="6">
-                  <v-autocomplete
-                    v-model="productPriceForm.category_tag"
-                    :prepend-inner-icon="productCategoryFormFilled ? 'mdi-basket-check-outline' : 'mdi-basket-outline'"
-                    :label="$t('AddPriceSingle.ProductInfo.CategoryLabel')"
-                    :items="categoryTags"
-                    :item-title="item => item.name"
-                    :item-value="item => item.id"
-                    hide-details="auto"
-                  />
-                </v-col>
-                <v-col cols="6">
-                  <v-autocomplete
-                    v-model="productPriceForm.origins_tags"
-                    :label="$t('AddPriceSingle.ProductInfo.OriginLabel')"
-                    :items="originTags"
-                    :item-title="item => item.name"
-                    :item-value="item => item.id"
-                    hide-details="auto"
-                  />
-                </v-col>
-              </v-row>
-              <div class="d-inline">
-                <v-checkbox
-                  v-for="lt in labelsTags"
-                  :key="lt.id"
-                  v-model="productPriceForm.labels_tags"
-                  :label="lt.name"
-                  :value="lt.id"
-                  hide-details="auto"
-                />
-              </div>
-            </v-sheet>
-            <p v-if="!productFormFilled" class="text-red mt-2 mb-2">
-              <i>{{ $t('AddPriceSingle.ProductInfo.SetProduct') }}</i>
-            </p>
+            <ProductInputRow :productForm="productPriceForm" />
             <h3 class="mb-1">
-              <v-item-group v-if="productMode === 'category'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
+              <v-item-group v-if="productPriceForm.mode === 'category'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
                 <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
                   <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
                     <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
@@ -329,18 +261,6 @@
     @location="setLocationData($event)"
     @close="locationSelectorDialog = false"
   />
-  <BarcodeScannerDialog
-    v-if="barcodeScannerDialog"
-    v-model="barcodeScannerDialog"
-    @barcode="setProductCode($event)"
-    @close="barcodeScannerDialog = false"
-  />
-  <BarcodeManualInputDialog
-    v-if="barcodeManualInputDialog"
-    v-model="barcodeManualInputDialog"
-    @barcode="setProductCode($event)"
-    @close="barcodeManualInputDialog = false"
-  />
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
@@ -358,7 +278,6 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import utils from '../utils.js'
-import LabelsTags from '../data/labels-tags.json'
 
 Compressor.setDefaults({
   checkOrientation: true,  // default
@@ -369,16 +288,13 @@ Compressor.setDefaults({
 export default {
   components: {
     LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
+    ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
-    BarcodeManualInputDialog: defineAsyncComponent(() => import('../components/BarcodeManualInputDialog.vue')),
     UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
   },
   data() {
     return {
-      dev: import.meta.env.DEV,
       proofType: null,  // 'PRICE_TAG' or 'RECEIPT'
       // price form
       addPriceMultipleForm: {
@@ -404,6 +320,8 @@ export default {
       // product price data
       productPriceUploadedList: [],
       productPriceNew: {
+        mode: '',
+        product: null,
         product_code: '',
         category_tag: null,
         origins_tags: '',
@@ -413,19 +331,7 @@ export default {
         price_is_discounted: false,
         price_without_discount: null,
         currency: null,  // see initPriceMultipleForm
-        uploaded: false
       },
-      product: null,
-      productModeList: [
-        {key: 'barcode', value: this.$t('AddPriceSingle.ProductModeList.Barcode'), icon: 'mdi-barcode-scan'},
-        {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}
-      ],
-      productMode: null,
-      categoryTags: [],  // list of category tags for autocomplete  // see initPriceMultipleForm
-      originTags: [],  // list of origins tags for autocomplete  // see initPriceMultipleForm
-      labelsTags: LabelsTags,
-      barcodeScannerDialog: false,
-      barcodeManualInputDialog: false,
       categoryPricePerList: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
@@ -481,40 +387,19 @@ export default {
       return true
     }
   },
-  watch: {
-    productMode(newProductMode, oldProductMode) {
-      // reset product_code and category_tag when switching mode
-      if (oldProductMode) {
-        this.productPriceForm.product_code = ""
-        this.productPriceForm.category_tag = null
-        this.productPriceForm.origins_tags = ''
-        this.productPriceForm.labels_tags = []
-        this.product = null
-      }
-    }
-  },
   mounted() {
     this.initPriceMultipleForm()
   },
   methods: {
     initPriceMultipleForm() {
       /**
-       * init form config (product mode, categories, origins, last locations)
+       * init form config (product mode, last locations)
        * (init form done in initNewProductPriceForm)
        */
       this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
-      utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
-        this.categoryTags = module.default
-      })
-      utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
-        this.originTags = module.default
-      })
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
       }
-    },
-    addPriceToUploadedList(price) {
-      this.productPriceUploadedList.push(price)
     },
     showUserRecentProofs() {
       this.userRecentProofsDialog = true
@@ -604,33 +489,13 @@ export default {
     isSelectedLocation(location) {
       return (this.addPriceMultipleForm.location_osm_id === utils.getLocationID(location)) && (this.addPriceMultipleForm.location_osm_type === utils.getLocationType(location))
     },
-    showBarcodeScannerDialog() {
-      this.barcodeScannerDialog = true
-    },
-    showBarcodeManualInputDialog() {
-      this.barcodeManualInputDialog = true
-    },
-    setProductCode(code) {
-      this.productPriceForm.product_code = code
-      this.product = null
-      api
-        .getProductByCode(code)
-        .then((data) => {
-          this.product = data.id ? data : {'code': code, 'price_count': 0}
-          console.log(this.product)
-        })
-        .catch((error) => {  // eslint-disable-line no-unused-vars
-          alert("Error: Open Prices server error")
-        })
-    },
     clearProductPriceForm() {
       this.productPriceForm = {}
-      this.product = null
     },
     initNewProductPriceForm() {
-      this.productMode = this.appStore.user.last_product_mode_used
       this.clearProductPriceForm()
-      this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))
+      this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))  // deep copy
+      this.productPriceForm.mode = this.appStore.user.last_product_mode_used
       this.productPriceForm.currency = this.appStore.getUserLastCurrencyUsed
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
     },
@@ -661,7 +526,7 @@ export default {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
           } else {
-            this.addPriceToUploadedList(Object.assign({}, this.productPriceForm, {product: this.product}))
+            this.productPriceUploadedList.push(JSON.parse(JSON.stringify(this.productPriceForm)))  // deep copy
             this.priceSuccessMessage = true
             // show new price form immediately
             this.initNewProductPriceForm()
