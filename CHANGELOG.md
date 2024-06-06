@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.63.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.62.0...v1.63.0) (2024-06-06)
+
+
+### Features
+
+* **proof:** fetch and insert proof data to 'add single price' page when using 'add the price' button ([#584](https://github.com/openfoodfacts/open-prices-frontend/issues/584)) ([004cef2](https://github.com/openfoodfacts/open-prices-frontend/commit/004cef2b0c50cc6cdc5d3a4bd060bf6e30fad11b))
+
+
+### Technical
+
+* **price add multiple:** small improvements on the form ([#610](https://github.com/openfoodfacts/open-prices-frontend/issues/610)) ([ccc4fad](https://github.com/openfoodfacts/open-prices-frontend/commit/ccc4fad74411ebc969b50241394c9f91c5da0357))
+* **price add:** new ProductInputRow component ([#611](https://github.com/openfoodfacts/open-prices-frontend/issues/611)) ([d8c628c](https://github.com/openfoodfacts/open-prices-frontend/commit/d8c628cf93e5b9aeb67303e294a940c3ed7a3b88))
+* **product:** add new categories (breads, viennoiseries, eggs) ([#609](https://github.com/openfoodfacts/open-prices-frontend/issues/609)) ([25913c1](https://github.com/openfoodfacts/open-prices-frontend/commit/25913c1cc50626ee592e99b4a3801cd7bff46847))
+
 ## [1.62.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.61.0...v1.62.0) (2024-06-04)
 
 
