@@ -129,7 +129,7 @@
     </v-col>
 
     <!-- Step 3a: product prices already uploaded -->
-    <v-col v-if="productPriceUploadedList.length" cols="12" md="6" lg="4">
+    <v-col cols="12" md="6" lg="4">
       <v-card
         prepend-icon="mdi-tag-check-outline"
         height="100%"
@@ -475,7 +475,8 @@ export default {
       return this.proofLocationFormFilled && !!this.productPriceUploadedList.length
     },
     disablePriceAlreadyUploadedCard() {
-      return !!this.productPriceUploadedList.length
+      // return !!this.productPriceUploadedList.length
+      return true
     }
   },
   watch: {
