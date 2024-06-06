@@ -10,6 +10,7 @@ PARENT_CATEGORIES_ID = [
     "en:vegetables",  # 391 descendants
     "en:fruits",  # 287
     "en:culinary-plants",  # 152
+    "en:breads",  # 103
     "en:nuts",  # 77
     "en:viennoiseries",  # 47
     "en:potatoes",  # 27
@@ -118,5 +119,9 @@ if __name__ == "__main__":
 
     # Extra
     # compare_new_categories_with_old_categories()
-    # print(get_all_root_nodes(CATEGORIES_FULL))
-    # print(len(get_all_descendants(CATEGORIES_FULL, get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, ["en:viennoiseries"])[0])))
+    # root_nodes = get_all_root_nodes(CATEGORIES_FULL)
+    # print(root_nodes)
+    # category_name = "en:breads"
+    # category_descendants = get_all_descendants(CATEGORIES_FULL, get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, [category_name])[0])
+    # print(category_descendants)
+    # print(len(category_descendants))
