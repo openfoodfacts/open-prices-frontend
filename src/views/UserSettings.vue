@@ -6,7 +6,7 @@
   <v-form @submit.prevent="updateSettings">
     <v-row>
       <v-col cols="12" sm="6">
-        <v-card :title="$t('UserSettings.Display')" prepend-icon="mdi-laptop">
+        <v-card :title="$t('UserSettings.DisplayTitle')" prepend-icon="mdi-laptop">
           <v-divider />
           <!-- Country -->
           <v-card-text>
