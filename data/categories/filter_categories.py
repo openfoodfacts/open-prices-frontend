@@ -7,11 +7,14 @@ import json
 from openfoodfacts.taxonomy import get_taxonomy, Taxonomy, TaxonomyNode
 
 PARENT_CATEGORIES_ID = [
-    "en:vegetables",  # 391 descendants
+    # "en:snacks",  # 717 descendants (including en:viennoiseries)
+    # "en:desserts",  # 467 (including en:pastries)
+    "en:vegetables",  # 391
     "en:fruits",  # 287
     "en:culinary-plants",  # 152
     "en:breads",  # 103
     "en:nuts",  # 77
+    "en:pastries",  # 58
     "en:viennoiseries",  # 47
     "en:potatoes",  # 27
     "en:eggs",  # 21
@@ -29,7 +32,8 @@ ADDITIONAL_FILTERING = [
     "Cooked",
     "Fresh",
     "Frozen",
-    "Canned"
+    "Canned",
+    "Prepacked"
 ]
 
 script_path = os.path.dirname(os.path.abspath(__file__))
@@ -122,7 +126,7 @@ if __name__ == "__main__":
     # compare_new_categories_with_old_categories()
     # root_nodes = get_all_root_nodes(CATEGORIES_FULL)
     # print(root_nodes)
-    # category_name = "en:eggs"
+    # category_name = "en:snacks"
     # category_descendants = get_all_descendants(CATEGORIES_FULL, get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, [category_name])[0])
     # print(category_descendants)
     # print(len(category_descendants))
