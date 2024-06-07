@@ -2,6 +2,11 @@ import CategoryTags from './data/category-tags.json'
 import CountriesWithEmoji from './data/countries-with-emoji.json'
 
 
+function isNumber(value) {
+  // return /^\d+$/.test(value)
+  return !isNaN(parseFloat(value)) && isFinite(value)
+}
+
 function addObjectToArray(arr, obj, unshift=false, avoidDuplicates=true) {
   // look for duplicate
   let duplicateItemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
@@ -240,6 +245,7 @@ function getMapCenter(results, source='nominatim') {
 
 
 export default {
+  isNumber,
   addObjectToArray,
   removeObjectFromArray,
   currentStartOfDay,
