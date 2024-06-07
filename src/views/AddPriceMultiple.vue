@@ -158,8 +158,19 @@
     </v-col>
 
     <!-- Step 3b: new product price form -->
-    <v-col v-if="Object.keys(productPriceForm).length" cols="12" md="6" lg="4">
-      <v-form @submit.prevent="createPrice">
+    <v-col cols="12" md="6" lg="4">
+      <v-btn
+        v-if="!Object.keys(productPriceForm).length && !productPriceUploadedList.length"
+        class="mr-2"
+        prepend-icon="mdi-plus"
+        color="primary"
+        :loading="createPriceLoading"
+        :disabled="!proofLocationFormFilled"
+        @click="initNewProductPriceForm"
+      >
+        {{ $t('AddPriceMultiple.ProductPriceDetails.Add') }}
+      </v-btn>
+      <v-form v-else @submit.prevent="createPrice">
         <v-card
           :title="$t('AddPriceMultiple.ProductPriceDetails.NewPrice')"
           prepend-icon="mdi-tag-outline"
@@ -172,7 +183,7 @@
           </template>
           <v-divider />
           <v-card-text>
-            <ProductInputRow :productForm="productPriceForm" />
+            <ProductInputRow :productForm="productPriceForm" @filled="productFormFilled = $event" />
             <h3 class="mb-1">
               <v-item-group v-if="productPriceForm.mode === 'category'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
                 <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
@@ -183,7 +194,7 @@
                 </v-item>
               </v-item-group>
             </h3>
-            <PriceInputRow :priceForm="productPriceForm" />
+            <PriceInputRow :priceForm="productPriceForm" @filled="pricePriceFormFilled = $event" />
           </v-card-text>
           <v-divider />
           <v-card-text>
@@ -204,18 +215,6 @@
   <v-row>
     <v-col>
       <v-btn
-        v-if="!Object.keys(productPriceForm).length"
-        class="mr-2"
-        prepend-icon="mdi-plus"
-        color="primary"
-        :loading="createPriceLoading"
-        :disabled="!proofLocationFormFilled || !productFormFilled"
-        @click="initNewProductPriceForm"
-      >
-        {{ $t('AddPriceMultiple.ProductPriceDetails.Add') }}
-      </v-btn>
-      <v-btn
-        class="float-right"
         type="submit"
         :loading="createPriceLoading"
         :disabled="!proofLocationFormFilled || !productPriceUploadedList.length"
@@ -304,6 +303,8 @@ export default {
         date: utils.currentDate(),
       },
       productPriceForm: {},
+      productFormFilled: false,
+      pricePriceFormFilled: false,
       createPriceLoading: false,
       priceSuccessMessage: false,
       // proof data
@@ -358,20 +359,12 @@ export default {
     proofLocationFormFilled() {
       return this.proofFormFilled && this.locationDateFormFilled
     },
-    productBarcodeFormFilled() {
-      let keys = ['product_code']
-      return Object.keys(this.productPriceForm).filter(k => keys.includes(k)).every(k => !!this.productPriceForm[k])
-    },
-    productCategoryFormFilled() {
-      let keys = ['category_tag', 'origins_tags']
-      return Object.keys(this.productPriceForm).filter(k => keys.includes(k)).every(k => !!this.productPriceForm[k])
-    },
-    productFormFilled() {
-      return this.productBarcodeFormFilled || this.productCategoryFormFilled
+    pricePerFormFilled() {
+      let keys = ['price_per']
+      return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
     priceFormFilled() {
-      let keys = ['price', 'currency']
-      return Object.keys(this.productPriceForm).filter(k => keys.includes(k)).every(k => !!this.productPriceForm[k])
+      return this.pricePerFormFilled && this.pricePriceFormFilled
     },
     productPriceFormFilled() {
       return this.productFormFilled && this.priceFormFilled
