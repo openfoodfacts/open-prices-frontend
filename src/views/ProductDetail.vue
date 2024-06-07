@@ -2,11 +2,7 @@
   <v-row>
     <v-col cols="12" sm="6">
       <ProductCard v-if="!productIsCategory" :product="product" />
-      <v-card v-else :title="categoryName" prepend-icon="mdi-fruit-watermelon" elevation="1">
-        <v-card-text>
-          <PriceCountChip :count="productPriceTotal" />
-        </v-card-text>
-      </v-card>
+      <CategoryCard v-else :category="category" :priceCount="productPriceTotal" />
     </v-col>
   </v-row>
 
@@ -30,7 +26,7 @@
   <v-row v-if="!productOrCategoryNotFound" class="mt-0">
     <v-col cols="12">
       <PriceAddButton v-if="product && product.code" class="mr-2" :productCode="product.code" />
-      <PriceAddButton v-else class="mr-2" :productCode="categoryName" />
+      <PriceAddButton v-else-if="category" class="mr-2" :productCode="category.name" />
       <OpenFoodFactsLink v-if="product && product.code && product.source" display="button" :source="product.source" facet="product" :value="product.code" />
       <ShareButton />
     </v-col>
@@ -75,7 +71,7 @@ import api from '../services/api'
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
     PriceAddButton: defineAsyncComponent(() => import('../components/PriceAddButton.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
@@ -89,7 +85,7 @@ export default {
       OFF_NAME: constants.OFF_NAME,
       productId: this.$route.params.id,  // product_code or product_category
       product: null,
-      categoryName: null,
+      category: null,
       productPriceList: [],
       productPriceTotal: 0,
       productPricePage: 0,
@@ -110,7 +106,7 @@ export default {
       return !this.productIsCategory && !this.product
     },
     categoryNotFound() {
-      return this.productIsCategory && !this.categoryName
+      return this.productIsCategory && this.category && this.category.status
     },
     productOrCategoryNotFound() {
       return !this.loading && (this.productNotFound || this.categoryNotFound)
@@ -147,8 +143,8 @@ export default {
     },
     getProduct() {
       if (this.productIsCategory) {
-        utils.getLocaleCategoryTagName(this.appStore.getUserLanguage, this.productId).then((categoryName) => {
-          this.categoryName = categoryName
+        utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.productId).then((category) => {
+          this.category = category
         })
       } else {
         return api.getProductByCode(this.productId)

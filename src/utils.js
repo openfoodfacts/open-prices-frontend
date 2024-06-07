@@ -91,6 +91,13 @@ function getLocaleCategoryTags(locale) {
   return import(`./data/categories/${locale}.json`)
 }
 
+function getLocaleCategoryTag(locale, categoryId) {
+  return getLocaleCategoryTags(locale).then((module) => {
+    let category = module.default.find(ct => ct.id === categoryId)
+    return category ? category : { 'id': categoryId, 'name': categoryId, 'status': 'unknown' }
+  })
+}
+
 function getLocaleCategoryTagName(locale, categoryId) {
   return getLocaleCategoryTags(locale).then((module) => {
     let category = module.default.find(ct => ct.id === categoryId)
@@ -242,6 +249,7 @@ export default {
   prettyRelativeDateTime,
   getCategoryName,
   getLocaleCategoryTags,
+  getLocaleCategoryTag,
   getLocaleCategoryTagName,
   getLocaleOriginTags,
   getCountryEmojiFromName,

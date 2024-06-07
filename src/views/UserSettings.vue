@@ -6,7 +6,7 @@
   <v-form @submit.prevent="updateSettings">
     <v-row>
       <v-col cols="12" sm="6">
-        <v-card :title="$t('UserSettings.Display')" prepend-icon="mdi-laptop">
+        <v-card :title="$t('UserSettings.DisplayTitle')" prepend-icon="mdi-laptop">
           <v-divider />
           <!-- Country -->
           <v-card-text>
@@ -49,6 +49,7 @@
               {{ $t('Common.Products') }}
             </h3>
             <v-checkbox v-model="appStore.user.product_display_barcode" :label="$t('UserSettings.ProductDisplayBarcode')" hide-details="auto" />
+            <v-checkbox v-model="appStore.user.product_display_category_tag" :label="$t('UserSettings.ProductDisplayCategoryTag')" hide-details="auto" />
             <!-- Locations -->
             <h3 class="mt-4 mb-1">
               {{ $t('Common.Locations') }}

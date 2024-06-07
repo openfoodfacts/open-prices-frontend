@@ -140,8 +140,8 @@ export default {
       } else if (this.hasPrice && this.price.product_code) {
         this.productTitle = this.price.product_code
       } else if (this.hasPrice && this.hasCategoryTag) {
-        utils.getLocaleCategoryTagName(this.appStore.getUserLanguage, this.price.category_tag).then((categoryName) => {
-          this.productTitle = categoryName
+        utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.price.category_tag).then((category) => {
+          this.productTitle = category.name
         })
       } else {
         this.productTitle = this.$t('PriceCard.UnknownProduct')
