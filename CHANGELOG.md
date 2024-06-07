@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.64.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.63.0...v1.64.0) (2024-06-07)
+
+
+### Features
+
+* **location search:** if the user searches by ID, then do a lookup with Nominatim ([#617](https://github.com/openfoodfacts/open-prices-frontend/issues/617)) ([8f8368a](https://github.com/openfoodfacts/open-prices-frontend/commit/8f8368a6a172b3cf43f032ad42d4fe6711c7bf3a))
+* **settings:** user setting to display raw product category tag ([#612](https://github.com/openfoodfacts/open-prices-frontend/issues/612)) ([7a4e367](https://github.com/openfoodfacts/open-prices-frontend/commit/7a4e367d4480b7d2c6352275254ff9f645b4c552))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#608](https://github.com/openfoodfacts/open-prices-frontend/issues/608)) ([c2ae7d6](https://github.com/openfoodfacts/open-prices-frontend/commit/c2ae7d6e04af9a9ccee8d621de519f0c2e528cdd))
+* **l10n:** New Crowdin translations to review and merge ([#615](https://github.com/openfoodfacts/open-prices-frontend/issues/615)) ([4b7b6d4](https://github.com/openfoodfacts/open-prices-frontend/commit/4b7b6d459267d726b345a06f74284ec11e0153f2))
+* **price add:** make product origin optional ([#614](https://github.com/openfoodfacts/open-prices-frontend/issues/614)) ([59ee584](https://github.com/openfoodfacts/open-prices-frontend/commit/59ee5848efdcf32103f1c9a491ed9b3e45d66b29))
+* **product:** add new categories (pastries) ([#616](https://github.com/openfoodfacts/open-prices-frontend/issues/616)) ([17d0b2f](https://github.com/openfoodfacts/open-prices-frontend/commit/17d0b2fcd5286d826ff28c7161f031fdd4a90e71))
+
 ## [1.63.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.62.0...v1.63.0) (2024-06-06)
 
 
