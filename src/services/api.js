@@ -220,6 +220,14 @@ export default {
     .then((response) => response.json())
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
+  openstreetmapNominatimLookup(id) {
+    return fetch(`${constants.OSM_NOMINATIM_LOOKUP_URL}?osm_ids=N${id},W${id},R${id}&addressdetails=1&format=json`, {
+      method: 'GET',
+      headers: DEFAULT_HEADERS
+    })
+    .then((response) => response.json())
+    .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
+  },
   openstreetmapPhotonSearch(q) {
     return fetch(`${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=10`, {
       method: 'GET',

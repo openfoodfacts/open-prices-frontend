@@ -186,26 +186,41 @@ export default {
         this.map.fitBounds(this.mapBounds)
       }
     },
+    processResults(data, source='nominatim') {
+      this.results = data
+      if (this.results.length > 1) {
+        this.mapBounds = utils.getMapBounds(this.results, source)
+      } else {
+        this.mapCenter = utils.getMapCenter(this.results, source)
+        this.mapZoom = 12
+        this.mapBounds = null
+      }
+    },
     search() {
       this.$refs.locationInput.blur()
       this.results = null
       this.loading = true
-      api.openstreetmapSearch(this.locationSearchForm.q, this.searchProvider)
-      .then((data) => {
-        this.loading = false
-        if (data.length) {
-          this.results = data
-          if (this.results.length > 1) {
-            this.mapBounds = utils.getMapBounds(this.results, this.searchProvider)
+      if (utils.isNumber(this.locationSearchForm.q)) {
+        api.openstreetmapNominatimLookup(this.locationSearchForm.q)
+        .then((data) => {
+          this.loading = false
+          if (data.length) {
+            this.processResults(data, 'nominatim')
           } else {
-            this.mapCenter = utils.getMapCenter(this.results, this.searchProvider)
-            this.mapZoom = 12
-            this.mapBounds = null
+            this.results = this.$t('LocationSelector.NoResult')
           }
-        } else {
-          this.results = this.$t('LocationSelector.NoResult')
-        }
-      })
+        })
+      } else {
+        api.openstreetmapSearch(this.locationSearchForm.q, this.searchProvider)
+        .then((data) => {
+          this.loading = false
+          if (data.length) {
+            this.processResults(data, this.searchProvider)
+          } else {
+            this.results = this.$t('LocationSelector.NoResult')
+          }
+        })
+      }
     },
     getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
       return utils.getLocationTitle(location, withName, withRoad, withCity)
