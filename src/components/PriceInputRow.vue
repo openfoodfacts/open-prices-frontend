@@ -55,6 +55,7 @@ export default {
       default: () => ({ price: null, currency: null, price_is_discounted: false, price_without_discount: null })
     },
   },
+  emits: ['filled'],
   data() {
     return {
       // currency selection
@@ -71,6 +72,15 @@ export default {
         value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
       ];
     },
+    priceFormFilled() {
+      let keys = ['price', 'currency']
+      return Object.keys(this.priceForm).filter(k => keys.includes(k)).every(k => !!this.priceForm[k])
+    },
+  },
+  watch: {
+    priceFormFilled(newPriceFormFilled, oldPriceFormFilled) {  // eslint-disable-line no-unused-vars
+      this.$emit('filled', newPriceFormFilled)
+    }
   },
   methods: {
     setCurrencyData(currency) {

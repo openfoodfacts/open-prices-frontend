@@ -18,7 +18,7 @@
           </template>
           <v-divider />
           <v-card-text>
-            <ProductInputRow :productForm="addPriceSingleForm" />
+            <ProductInputRow :productForm="addPriceSingleForm" @filled="productFormFilled = $event" />
           </v-card-text>
         </v-card>
       </v-col>
@@ -46,7 +46,7 @@
                 </v-item>
               </v-item-group>
             </h3>
-            <PriceInputRow :priceForm="addPriceSingleForm" />
+            <PriceInputRow :priceForm="addPriceSingleForm" @filled="pricePriceFormFilled = $event" />
             <h3 class="mt-4 mb-1">
               {{ $t('AddPriceSingle.PriceDetails.Proof') }}
             </h3>
@@ -245,6 +245,8 @@ export default {
         date: utils.currentDate(),
         proof_id: null,
       },
+      pricePriceFormFilled: false,
+      productFormFilled: false,
       createPriceLoading: false,
       // location data
       locationSelectorDialog: false,
@@ -265,20 +267,12 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    productBarcodeFormFilled() {
-      let keys = ['product_code']
+    pricePerFormFilled() {
+      let keys = ['price_per']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-    },
-    productCategoryFormFilled() {
-      let keys = ['category_tag', 'origins_tags']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-    },
-    productFormFilled() {
-      return this.productBarcodeFormFilled || this.productCategoryFormFilled
     },
     priceFormFilled() {
-      let keys = ['price', 'currency', 'price_per']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+      return this.pricePerFormFilled && this.pricePriceFormFilled
     },
     proofFormFilled() {
       let keys = ['proof_id']

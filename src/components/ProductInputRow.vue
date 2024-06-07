@@ -107,6 +107,7 @@ export default {
       default: () => ({ mode: '', product: null, product_code: '', category_tag: null, origins_tags: '', labels_tags: [] })
     }
   },
+  emits: ['filled'],
   data() {
     return {
       dev: import.meta.env.DEV,
@@ -128,7 +129,7 @@ export default {
       return Object.keys(this.productForm).filter(k => keys.includes(k)).every(k => !!this.productForm[k])
     },
     productCategoryFormFilled() {
-      let keys = ['category_tag', 'origins_tags']
+      let keys = ['category_tag']  // 'origins_tags'
       return Object.keys(this.productForm).filter(k => keys.includes(k)).every(k => !!this.productForm[k])
     },
     productFormFilled() {
@@ -145,6 +146,9 @@ export default {
         this.productForm.origins_tags = ''
         this.productForm.labels_tags = []
       }
+    },
+    productFormFilled(newProductFormFilled, oldProductFormFilled) {  // eslint-disable-line no-unused-vars
+      this.$emit('filled', newProductFormFilled)
     }
   },
   mounted() {
