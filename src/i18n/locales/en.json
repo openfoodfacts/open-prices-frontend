@@ -382,6 +382,7 @@
 		"LanguageLabel": "Languages",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "Display barcode",
+		"ProductDisplayCategoryTag": "Display category tag",
 		"Save": "Save",
 		"Title": "Settings",
 		"TranslationCompletion": "Translation is {completion}% complete.",
