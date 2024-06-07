@@ -28,7 +28,7 @@ EXTRA_CHILDREN = [
     "en:candies"
 ]
 
-ADDITIONAL_FILTERING = [
+EXCLUDE_LIST = [
     "Cooked",
     "Fresh",
     "Frozen",
@@ -48,19 +48,17 @@ def get_taxonomy_node_list_by_id_list(taxonomy: Taxonomy, node_id_list) -> list[
 def get_all_root_nodes(taxonomy: Taxonomy) -> list[TaxonomyNode]:
     return [node for node in taxonomy.iter_nodes() if not node.get_parents_hierarchy()]
 
-def get_all_descendants(taxonomy: Taxonomy, node_parent: TaxonomyNode) -> list[TaxonomyNode]:
+def get_all_descendants_for_node(taxonomy: Taxonomy, node_parent: TaxonomyNode) -> list[TaxonomyNode]:
     return [node for node in taxonomy.iter_nodes() if node_parent in node.get_parents_hierarchy()]
 
-def filter_categories(categories: Taxonomy, parent_categories: list[TaxonomyNode]) -> list[TaxonomyNode]:
-    # Get all descendants for every parent node in parent_categories
-    all_descendants = [descendant for parent_node in parent_categories for descendant in get_all_descendants(categories, parent_node)]
-    # Add extra children to the list of descendants
-    print("Add extra nodes:", EXTRA_CHILDREN)
-    all_descendants.extend(get_taxonomy_node_list_by_id_list(categories, EXTRA_CHILDREN))
-    print("Additional filtering on:", ADDITIONAL_FILTERING)
-    # additional filtering using regex word boundary that only keeps ids starting with "en:"
-    filtered_descendants = {node for node in all_descendants if not any(re.search(r'\b{}\b'.format(filter_word), node.get_localized_name("en"), flags=re.IGNORECASE) for filter_word in ADDITIONAL_FILTERING) and node.id.startswith("en:")}
-    return filtered_descendants
+def get_all_descendants_for_node_list(taxonomy: Taxonomy, node_parent_list: list[TaxonomyNode]) -> list[TaxonomyNode]:
+    return [descendant for node_parent in node_parent_list for descendant in get_all_descendants_for_node(taxonomy, node_parent=node_parent)]
+
+def filter_node_list_must_start_with_en(node_list: list[TaxonomyNode]) -> list[TaxonomyNode]:
+    return [node for node in node_list if node.id.startswith("en:")]
+
+def filter_node_list_by_exclude_string_list(node_list: list[TaxonomyNode], exclude_string_list: list[str]) -> list[TaxonomyNode]:
+    return [node for node in node_list if not any(re.search(r'\b{}\b'.format(exclude_string), node.get_localized_name("en"), flags=re.IGNORECASE) for exclude_string in exclude_string_list)]
 
 def write_categories_to_files(categories: Taxonomy, delete_parents=False):
     languages = get_languages()
@@ -114,11 +112,22 @@ if __name__ == "__main__":
     print("Filter with the following parent categories:", [node.id for node in PARENT_CATEGORIES])
 
     # Step 2: filter categories
-    categories_filtered: list[TaxonomyNode] = filter_categories(CATEGORIES_FULL, PARENT_CATEGORIES)
+    # Step 2a: get all descendants for the parent categories
+    categories_filtered: list[TaxonomyNode] = get_all_descendants_for_node_list(CATEGORIES_FULL, PARENT_CATEGORIES)
+    # Step 2b: add extra nodes
+    print("Add extra nodes:", EXTRA_CHILDREN)
+    categories_filtered.extend(get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, EXTRA_CHILDREN))
+    # Step 2c: keep only nodes starting with "en:"
+    categories_filtered = filter_node_list_must_start_with_en(categories_filtered)
+    # Step 2d: remove nodes containg some strings
+    print("Additional filtering on:", EXCLUDE_LIST)
+    categories_filtered = filter_node_list_by_exclude_string_list(categories_filtered, EXCLUDE_LIST)
+
+    # Step 3: transform to dict list
     categories_filtered_to_dict_list = [{"id": node.id, **node.to_dict()} for node in categories_filtered]
     print("Categories remaining:", len(categories_filtered_to_dict_list))
 
-    # Step 3: write to files (1 per language)
+    # Step 4: write to files (1 per language)
     write_categories_to_files(categories_filtered_to_dict_list, delete_parents=True)
     print("Wrote to language files")
 
@@ -126,7 +135,7 @@ if __name__ == "__main__":
     # compare_new_categories_with_old_categories()
     # root_nodes = get_all_root_nodes(CATEGORIES_FULL)
     # print(root_nodes)
-    # category_name = "en:snacks"
-    # category_descendants = get_all_descendants(CATEGORIES_FULL, get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, [category_name])[0])
+    # category_name = "en:caramels"
+    # category_descendants = get_all_descendants_for_node(CATEGORIES_FULL, get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, [category_name])[0])
     # print(category_descendants)
     # print(len(category_descendants))
