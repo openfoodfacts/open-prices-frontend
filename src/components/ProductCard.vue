@@ -25,6 +25,7 @@
             <ProductMissingChip v-else />
             <br v-if="showProductBarcode">
             <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
+            <ProductBarcodeNotValidChip v-if="barcodeNotValid" />
           </p>
         </v-col>
       </v-row>
@@ -43,6 +44,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -53,6 +55,7 @@ export default {
     ProductLabelsChip: defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
     ProductMissingChip: defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
     ProductBarcodeChip: defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
+    ProductBarcodeNotValidChip: defineAsyncComponent(() => import('../components/ProductBarcodeNotValidChip.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue')),
   },
@@ -95,6 +98,9 @@ export default {
     },
     showProductBarcode() {
       return !this.hideProductBarcode && this.appStore.user.username && this.appStore.user.product_display_barcode
+    },
+    barcodeNotValid() {
+      return this.product.code && !utils.isValidBarcode(this.product.code)
     }
   },
   methods: {
