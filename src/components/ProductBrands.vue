@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     getProductBrandsList() {
-      return this.productBrands.split(',')
+      return this.productBrands.split(',').filter(b => b.trim())
     }
   },
   methods: {
