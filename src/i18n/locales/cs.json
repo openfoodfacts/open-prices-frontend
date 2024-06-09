@@ -382,7 +382,7 @@
 		"LanguageLabel": "Jazyky",
 		"LocationDisplayOSMID": "Zobrazit OSM ID",
 		"ProductDisplayBarcode": "Zobrazit čárový kód",
-		"ProductDisplayCategoryTag": "Display category tag",
+		"ProductDisplayCategoryTag": "Zobrazit značku kategorie",
 		"Save": "Uložit",
 		"Title": "Nastavení",
 		"TranslationCompletion": "Překlad je z {completion}% dokončen.",
