@@ -7,6 +7,25 @@ function isNumber(value) {
   return !isNaN(parseFloat(value)) && isFinite(value)
 }
 
+/**
+ * https://stackoverflow.com/a/67933747/4293684
+ */
+function isValidBarcode(value) {
+  // We only allow correct length barcodes
+  if (!value.match(/^(\d{8}|\d{12,14})$/)) {
+    return false;
+  }
+
+  const paddedValue = value.padStart(14, '0');
+
+  let result = 0;
+  for (let i = 0; i < paddedValue.length - 1; i += 1) {
+    result += parseInt(paddedValue.charAt(i), 10) * ((i % 2 === 0) ? 3 : 1);
+  }
+
+  return ((10 - (result % 10)) % 10) === parseInt(paddedValue.charAt(13), 10);
+}
+
 function addObjectToArray(arr, obj, unshift=false, avoidDuplicates=true) {
   // look for duplicate
   let duplicateItemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
@@ -259,6 +278,7 @@ function getMapCenter(results, source='nominatim') {
 
 export default {
   isNumber,
+  isValidBarcode,
   addObjectToArray,
   removeObjectFromArray,
   currentStartOfDay,
