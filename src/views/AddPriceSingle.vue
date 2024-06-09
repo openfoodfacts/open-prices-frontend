@@ -226,7 +226,6 @@ export default {
   },
   data() {
     return {
-      dev: import.meta.env.DEV,
       // price form
       addPriceSingleForm: {
         mode: '',
@@ -303,7 +302,8 @@ export default {
         this.addPriceSingleForm.category_tag = this.$route.query.code
       }
       else {
-        this.setProductCode(this.$route.query.code)
+        this.addPriceSingleForm.mode = 'barcode'
+        this.addPriceSingleForm.product_code = this.$route.query.code
       }
     } else if (this.$route.query.proof_id) {
       this.getProofById(this.$route.query.proof_id)
@@ -316,16 +316,8 @@ export default {
     },
     initPriceSingleForm() {
       /**
-       * init form config (product mode, categories, origins, last locations)
-       * init form
+       * init form config
        */
-      this.addPriceSingleForm.mode = this.addPriceSingleForm.mode ? this.addPriceSingleForm.mode : (this.addPriceSingleForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used)
-      utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
-        this.categoryTags = module.default
-      })
-      utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
-        this.originTags = module.default
-      })
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
       }
@@ -421,13 +413,13 @@ export default {
       this.barcodeManualInputDialog = true
     },
     setProductCode(code) {
+      this.addPriceSingleForm.product = null
       this.addPriceSingleForm.product_code = code
-      this.product = null
       api
         .getProductByCode(code)
         .then((data) => {
-          this.product = data.id ? data : {'code': code, 'price_count': 0}
-          console.log(this.product)
+          this.addPriceSingleForm.product = data.id ? data : {'code': code, 'price_count': 0}
+          console.log(this.addPriceSingleForm.product)
         })
         .catch((error) => {  // eslint-disable-line no-unused-vars
           alert('Error: Open Prices server error')

@@ -20,16 +20,6 @@
           <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Type') }}</span>
           <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</span>
         </v-btn>
-        <v-text-field
-          v-if="dev"
-          v-model="productForm.product_code"
-          :prepend-inner-icon="productBarcodeFormFilled ? 'mdi-barcode' : 'mdi-barcode-scan'"
-          :label="$t('AddPriceSingle.ProductInfo.ProductBarcode')"
-          type="text"
-          hint="EAN"
-          hide-details="auto"
-          @click:prepend="showBarcodeScannerDialog"
-        />
         <ProductCard v-if="productForm.product" class="mb-4" :product="productForm.product" :hideProductBarcode="true" :readonly="true" elevation="1" />
       </v-sheet>
       <v-sheet v-if="productForm.mode === 'category'">
@@ -76,13 +66,13 @@
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
     v-model="barcodeScannerDialog"
-    @barcode="setProductCode($event)"
+    @barcode="productForm.product_code = $event"
     @close="barcodeScannerDialog = false"
   />
   <BarcodeManualInputDialog
     v-if="barcodeManualInputDialog"
     v-model="barcodeManualInputDialog"
-    @barcode="setProductCode($event)"
+    @barcode="productForm.product_code = $event"
     @close="barcodeManualInputDialog = false"
   />
 </template>
@@ -110,7 +100,6 @@ export default {
   emits: ['filled'],
   data() {
     return {
-      dev: import.meta.env.DEV,
       productModeList: [
         {key: 'barcode', value: this.$t('AddPriceSingle.ProductModeList.Barcode'), icon: 'mdi-barcode-scan'},
         {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}
@@ -140,15 +129,22 @@ export default {
     'productForm.mode'(newProductMode, oldProductMode) {
       // reset product_code and category_tag when switching mode
       if (oldProductMode) {
-        this.productForm.product = null
-        this.productForm.product_code = ""
-        this.productForm.category_tag = null
-        this.productForm.origins_tags = ''
-        this.productForm.labels_tags = []
+        this.initProductForm()
       }
     },
-    productFormFilled(newProductFormFilled, oldProductFormFilled) {  // eslint-disable-line no-unused-vars
-      this.$emit('filled', newProductFormFilled)
+    ['productForm.product_code']: {
+      handler(newProductCode, oldProductCode) {  // eslint-disable-line no-unused-vars
+        if (newProductCode) {
+          this.getProduct(newProductCode)
+        }
+      },
+      immediate: true
+    },
+    productFormFilled: {
+      handler(newProductFormFilled, oldProductFormFilled) {  // eslint-disable-line no-unused-vars
+        this.$emit('filled', newProductFormFilled)
+      },
+      immediate: true
     }
   },
   mounted() {
@@ -158,6 +154,7 @@ export default {
     utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
       this.originTags = module.default
     })
+    this.productForm.mode = this.productForm.mode ? this.productForm.mode : (this.productForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used)
   },
   methods: {
     showBarcodeScannerDialog() {
@@ -166,9 +163,15 @@ export default {
     showBarcodeManualInputDialog() {
       this.barcodeManualInputDialog = true
     },
-    setProductCode(code) {
+    initProductForm() {
       this.productForm.product = null
-      this.productForm.product_code = code
+      this.productForm.product_code = ''
+      this.productForm.category_tag = null
+      this.productForm.origins_tags = ''
+      this.productForm.labels_tags = []
+    },
+    getProduct(code) {
+      this.productForm.product = null
       api
         .getProductByCode(code)
         .then((data) => {
