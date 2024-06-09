@@ -382,7 +382,7 @@
 		"LanguageLabel": "Talen",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "Streepjescode weergeven",
-		"ProductDisplayCategoryTag": "Display category tag",
+		"ProductDisplayCategoryTag": "Categorielabel weergeven",
 		"Save": "Opslaan",
 		"Title": "Instellingen",
 		"TranslationCompletion": "De vertaling is {completion}% voltooid.",

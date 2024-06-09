@@ -382,7 +382,7 @@
 		"LanguageLabel": "Langue",
 		"LocationDisplayOSMID": "Afficher l'ID OSM",
 		"ProductDisplayBarcode": "Afficher le code-barres",
-		"ProductDisplayCategoryTag": "Display category tag",
+		"ProductDisplayCategoryTag": "Afficher le tag de catégorie",
 		"Save": "Enregistrer",
 		"Title": "Paramètres",
 		"TranslationCompletion": "La traduction est terminée à {completion} %.",
