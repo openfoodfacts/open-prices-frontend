@@ -29,6 +29,19 @@ function removeObjectFromArray(arr, obj) {
 }
 
 /**
+ * fr: 4,00 €
+ * en-US: €4.00
+ */
+function prettyPrice(price, currency) {
+  return price.toLocaleString(navigator.language, {
+    style: 'currency',
+    currency: currency,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  })
+}
+
+/**
  * output: '2023-12-25'
  */
 function currentDate() {
@@ -249,6 +262,7 @@ export default {
   addObjectToArray,
   removeObjectFromArray,
   currentStartOfDay,
+  prettyPrice,
   currentDate,
   prettyDate,
   prettyDateTime,
