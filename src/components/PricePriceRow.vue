@@ -69,12 +69,7 @@ export default {
   },
   methods: {
     getPriceValue(priceValue, priceCurrency) {
-      return priceValue.toLocaleString(navigator.language, {
-        style: 'currency',
-        currency: priceCurrency,
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2
-      })
+      return utils.prettyPrice(priceValue, priceCurrency)
     },
     getPricePerUnit(price) {
       if (this.hasCategoryTag) {
