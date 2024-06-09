@@ -245,7 +245,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"ProductBarcodeNotValid": "Barcode not valid",
+		"InvalidBarcode": "Invalid barcode",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
