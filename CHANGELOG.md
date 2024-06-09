@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.65.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.64.0...v1.65.0) (2024-06-09)
+
+
+### Features
+
+* **product:** new warning if the barcode is not valid ([#622](https://github.com/openfoodfacts/open-prices-frontend/issues/622)) ([10f96e7](https://github.com/openfoodfacts/open-prices-frontend/commit/10f96e7916d54ca8159e37fdb2e0665acba4e1b0))
+
+
+### Bug Fixes
+
+* **price add:** fix set product code or category from url (with ProductInputRow component). ref [#611](https://github.com/openfoodfacts/open-prices-frontend/issues/611) ([460a34f](https://github.com/openfoodfacts/open-prices-frontend/commit/460a34fb068cb8d39a3da1a24c9f30865a7d3265))
+* **product:** fix display of quantity if missing. ref [#412](https://github.com/openfoodfacts/open-prices-frontend/issues/412) ([2563c50](https://github.com/openfoodfacts/open-prices-frontend/commit/2563c50c3f9fa47df50b57e5c204969b7d986ac4))
+* **product:** hide empty product brands. ref [#422](https://github.com/openfoodfacts/open-prices-frontend/issues/422) ([2a5f83f](https://github.com/openfoodfacts/open-prices-frontend/commit/2a5f83f1e987452857987231457e1855c849a12d))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#618](https://github.com/openfoodfacts/open-prices-frontend/issues/618)) ([507b016](https://github.com/openfoodfacts/open-prices-frontend/commit/507b01622e7c22773a55ce3124581438f4a967f6))
+* **l10n:** New Crowdin translations to review and merge ([#621](https://github.com/openfoodfacts/open-prices-frontend/issues/621)) ([39d452c](https://github.com/openfoodfacts/open-prices-frontend/commit/39d452ce82abcd797acdc293b0a0093088b5bd78))
+* **l10n:** New Crowdin translations to review and merge ([#624](https://github.com/openfoodfacts/open-prices-frontend/issues/624)) ([5d93a71](https://github.com/openfoodfacts/open-prices-frontend/commit/5d93a71eb2eba671200def3dc35083fb765f5421))
+* **price add:** change the ui of the discount toggle (switch instead of checkbox) ([#623](https://github.com/openfoodfacts/open-prices-frontend/issues/623)) ([059c5d1](https://github.com/openfoodfacts/open-prices-frontend/commit/059c5d15a7d736b1c681082f993d3c9cbcba0637))
+* **price:** always show prices with 2 decimals ([#620](https://github.com/openfoodfacts/open-prices-frontend/issues/620)) ([77a6bcd](https://github.com/openfoodfacts/open-prices-frontend/commit/77a6bcd192384f674b072dbfd49ea57ca976dcf1))
+
 ## [1.64.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.63.0...v1.64.0) (2024-06-07)
 
 
