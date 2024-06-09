@@ -3,7 +3,7 @@
     {{ productQuantityWithUnitDisplay }}
   </v-chip>
   <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning">
-    <i>{{ productQuantityUnit }}</i>
+    <i>{{ productQuantityUnitDisplay }}</i>
     <v-tooltip activator="parent" open-on-click location="top">
       {{ $t('ProductCard.QuantityMissing') }}
     </v-tooltip>
@@ -21,10 +21,14 @@ export default {
     },
     productQuantityUnit: {
       type: String,
-      default: constants.PRODUCT_QUANTITY_UNIT_G
+      default: constants.PRODUCT_QUANTITY_UNIT_G,
+      examples: [constants.PRODUCT_QUANTITY_UNIT_G, constants.PRODUCT_QUANTITY_UNIT_ML]
     }
   },
   computed: {
+    productQuantityUnitDisplay() {
+      return this.productQuantityUnit || constants.PRODUCT_QUANTITY_UNIT_G
+    },
     productQuantityWithUnitDisplay() {
       if (this.productQuantityUnit === constants.PRODUCT_QUANTITY_UNIT_ML) {
         if (this.productQuantity >= 1000) {
