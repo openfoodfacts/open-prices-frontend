@@ -31,7 +31,7 @@
     </v-col>
   </v-row>
   <div class="d-inline">
-    <v-checkbox v-model="priceForm.price_is_discounted" :label="$t('PriceForm.Discount')" hide-details="auto" />
+    <v-switch v-model="priceForm.price_is_discounted" :label="$t('Common.Discount')" color="success" hide-details="auto" />
   </div>
 
   <ChangeCurrencyDialog
