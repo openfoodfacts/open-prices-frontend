@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.65.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.65.0...v1.65.1) (2024-06-10)
+
+
+### Bug Fixes
+
+* **product:** fix barcode invalid warning message. ref [#622](https://github.com/openfoodfacts/open-prices-frontend/issues/622) ([958e668](https://github.com/openfoodfacts/open-prices-frontend/commit/958e66821534bf3e92ee1b4f821b6e163fa99120))
+
 ## [1.65.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.64.0...v1.65.0) (2024-06-09)
 
 
