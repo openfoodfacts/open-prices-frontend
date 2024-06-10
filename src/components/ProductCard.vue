@@ -25,7 +25,7 @@
             <ProductMissingChip v-else />
             <br v-if="showProductBarcode">
             <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
-            <ProductBarcodeNotValidChip v-if="barcodeNotValid" />
+            <ProductBarcodeInvalidChip v-if="barcodeInvalid" />
           </p>
         </v-col>
       </v-row>
@@ -55,7 +55,7 @@ export default {
     ProductLabelsChip: defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
     ProductMissingChip: defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
     ProductBarcodeChip: defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
-    ProductBarcodeNotValidChip: defineAsyncComponent(() => import('../components/ProductBarcodeNotValidChip.vue')),
+    ProductBarcodeInvalidChip: defineAsyncComponent(() => import('../components/ProductBarcodeInvalidChip.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue')),
   },
@@ -99,7 +99,7 @@ export default {
     showProductBarcode() {
       return !this.hideProductBarcode && this.appStore.user.username && this.appStore.user.product_display_barcode
     },
-    barcodeNotValid() {
+    barcodeInvalid() {
       return this.product.code && !utils.isValidBarcode(this.product.code)
     }
   },
