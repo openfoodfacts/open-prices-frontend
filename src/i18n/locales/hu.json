@@ -52,7 +52,7 @@
 			"Picture": "Picture",
 			"TakePicture": "Készítsen képet",
 			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
+			"SelectFromGallery": "Válasszon az eszköz galériájából",
 			"RecentProof": "Recent proof",
 			"SelectRecentProof": "Select a recent proof"
 		},
@@ -63,7 +63,7 @@
 			"Scan": "Beolvasás",
 			"ScanBarcode": "Scan a barcode",
 			"Type": "Típus",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Írjon be egy vonalkódot",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
@@ -80,9 +80,9 @@
 			"Date": "Date",
 			"DateLabel": "Date",
 			"Find": "Keres",
-			"Location": "Shop location",
+			"Location": "Bolt helyzete",
 			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Title": "Hol & mikor?"
 		}
 	},
 	"BarcodeScanner": {
@@ -94,7 +94,7 @@
 	"BarcodeManualInput": {
 		"Barcode": "Vonalkód",
 		"Submit": "Elküldés",
-		"Title": "Type a barcode"
+		"Title": "Írjon be egy vonalkódot"
 	},
 	"BrandDetail": {
 		"LoadMore": "Load more",
