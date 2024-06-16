@@ -276,7 +276,7 @@
 		"Proof": "Bewijs",
 		"PRICE_TAG": "Prijskaartje",
 		"RECEIPT": "Bon",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "AVG-verzoek"
 	},
 	"ProofDelete": {
 		"Confirmation": "Weet u zeker dat u dit bewijs wilt verwijderen?",
@@ -382,7 +382,7 @@
 		"FavoriteCurrencies": "Favoriete valuta",
 		"CurrencyRequired": "Er is minimaal één valuta vereist",
 		"LanguageLabel": "Talen",
-		"LocationDisplayOSMID": "Display OSM ID",
+		"LocationDisplayOSMID": "OSM-ID weergeven",
 		"ProductDisplayBarcode": "Streepjescode weergeven",
 		"ProductDisplayCategoryTag": "Categorielabel weergeven",
 		"Save": "Opslaan",
