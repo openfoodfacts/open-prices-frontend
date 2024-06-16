@@ -12,7 +12,7 @@
 		"SignedIn": "Registrato in!",
 		"SingleProductMode": {
 			"Subtitle": "Solo un prezzo",
-			"Title": "Singolo prodotto"
+			"Title": "Prodotto singolo"
 		},
 		"Thanks": "Grazie",
 		"Title": "Aggiungi un prezzo",
@@ -30,7 +30,7 @@
 			"Upload": "Carica"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Le ricevute potrebbero contenere delle informazioni personali, consigliamo di nasconderle (cancellarle, piegare...), prima di scattare la foto.",
+			"ReceiptWarning": "Le ricevute potrebbero contenere delle informazioni personali, consigliamo di nasconderle (cancellarle, piegare...) prima di scattare la foto.",
 			"PrivateWarning": "Puoi anche impostare lo scontrino su Privato. Le prove private saranno visibili solo a te e ai moderatori.",
 			"Title": "Dettagli della prova"
 		},
@@ -82,7 +82,7 @@
 			"Find": "Trova",
 			"Location": "Posizione negozio",
 			"SelectLocation": "Seleziona la tua posizione",
-			"Title": "Dove quando?"
+			"Title": "Dove e quando?"
 		}
 	},
 	"BarcodeScanner": {
@@ -384,7 +384,7 @@
 		"LanguageLabel": "Lingue",
 		"LocationDisplayOSMID": "Visualizza ID OSM",
 		"ProductDisplayBarcode": "Mostra codice a barre",
-		"ProductDisplayCategoryTag": "Display category tag",
+		"ProductDisplayCategoryTag": "Visualizza il tag della categoria",
 		"Save": "Salva",
 		"Title": "Impostazioni",
 		"TranslationCompletion": "La traduzione è completa al {completion}%.",
