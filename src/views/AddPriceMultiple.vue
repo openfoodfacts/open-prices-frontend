@@ -400,6 +400,10 @@ export default {
     handleRecentProofSelected(selectedProof) {
       this.addPriceMultipleForm.proof_id = selectedProof.id
       this.proofImagePreview = this.getProofUrl(selectedProof)
+      if (selectedProof.date) {
+        this.addPriceMultipleForm.date = selectedProof.date
+        this.proofDateSuccessMessage = true
+      }
       this.proofSelectedSuccessMessage = true
       this.proofisSelected = true
     },
@@ -432,14 +436,14 @@ export default {
       })
       .then((proofImageCompressed) => {
         api
-          .createProof(proofImageCompressed, this.proofType)
+          .createProof(proofImageCompressed, this.proofType)  // this.addPriceMultipleForm.date
           .then((data) => {
             this.createProofLoading = false
-            if (data['id']) {
+            if (data.id) {
               const store = useAppStore()
               store.addProof(data)
-              this.addPriceMultipleForm.proof_id = data['id']
-              this.proofImagePreview = URL.createObjectURL(proofImageCompressed)
+              this.addPriceMultipleForm.proof_id = data.id
+              this.proofImagePreview = this.getProofUrl(data)
               this.proofSuccessMessage = true
             } else {
               alert('Error: server error')
