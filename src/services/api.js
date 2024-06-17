@@ -44,8 +44,7 @@ export default {
     let formData = new FormData()
     formData.append('file', proofImage, proofImage.name)
     formData.append('type', type)
-    // const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams()}`
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams()}`
     return fetch(url, {
       method: 'POST',
       headers: {
