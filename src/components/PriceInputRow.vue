@@ -110,15 +110,7 @@ export default {
     }
   },
   mounted(){
-    this.initCurrencies()
-  },
-    priceFormFilled() {
-      let keys = ['price', 'currency']
-      return Object.keys(this.priceForm).filter(k => keys.includes(k)).every(k => !!this.priceForm[k])
-    },
-  methods: {
-    initCurrencies() {
-      const appStore = useAppStore();
+    const appStore = useAppStore();
     this.userFavoriteCurrencies = appStore.getUserFavoriteCurrencies;
 
     const currencies = countryData
@@ -126,7 +118,12 @@ export default {
       .filter(currency => currency !== null && currency.length > 0);
     
     this.currencyList = [...new Set(currencies)];
+  },
+    priceFormFilled() {
+      let keys = ['price', 'currency']
+      return Object.keys(this.priceForm).filter(k => keys.includes(k)).every(k => !!this.priceForm[k])
     },
+  methods: {
     openEditCurrencies() {
       this.showEditCurrencies = true
     },
