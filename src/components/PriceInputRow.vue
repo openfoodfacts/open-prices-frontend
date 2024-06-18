@@ -10,12 +10,7 @@
         hide-details="auto"
         :suffix="priceForm.currency"
         @update:model-value="newValue => priceForm.price = fixComma(newValue)"
-      >
-        <template #prepend-inner>
-          <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
-          <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true">
-        </template>
-      </v-text-field>
+      />
     </v-col>
     <v-col v-if="priceForm.price_is_discounted" cols="6">
       <v-text-field
@@ -34,21 +29,55 @@
     <v-switch v-model="priceForm.price_is_discounted" :label="$t('Common.Discount')" color="success" hide-details="auto" />
   </div>
 
-  <ChangeCurrencyDialog
-    v-if="changeCurrencyDialog"
-    v-model="changeCurrencyDialog"
-    @newCurrencySelected="setCurrencyData($event)"
-    @close="changeCurrencyDialog = false"
-  />
+  <v-row v-if="!showEditCurrencies">
+    <v-col>
+      <v-select 
+        v-model="priceForm.currency" 
+        :disabled="userFavoriteCurrencies.length <= 1" 
+        :label="$t('ChangeCurrencyDialog.Currency')" 
+        :items="userFavoriteCurrencies" 
+      />
+    </v-col>
+    <v-col>
+      <v-btn 
+        size="small" 
+        icon="mdi-pencil" 
+        aria-label="Edit currencies" 
+        @click="openEditCurrencies" 
+      />
+    </v-col>
+  </v-row>
+  <v-row v-else>
+    <v-col>
+      <v-autocomplete 
+        v-model="userFavoriteCurrencies"
+        :label="$t('UserSettings.CurrencyLabel')"
+        :items="currencyList"
+        :rules="[v => !!(v && v.length) || $t('UserSettings.CurrencyRequired')]"
+        chips
+        closable-chips
+        multiple
+        hide-details="auto"
+      />
+    </v-col>
+    <v-col>
+      <v-btn 
+        size="small" 
+        :disabled="userFavoriteCurrencies.length === 0" 
+        icon="mdi-check" 
+        aria-label="Save currencies" 
+        @click="closeEditCurrencies" 
+      />
+    </v-col>
+  </v-row>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
+import countryData from '../i18n/data/countries.json'
 
 export default {
-  components: {
-    ChangeCurrencyDialog: defineAsyncComponent(() => import('../components/ChangeCurrencyDialog.vue')),
-  },
   props: {
     priceForm: {
       type: Object,
@@ -58,11 +87,14 @@ export default {
   emits: ['filled'],
   data() {
     return {
-      // currency selection
-      changeCurrencyDialog: false,
+      showEditCurrencies: false,
+      userFavoriteCurrencies: [],
+      currencyList: [],
     }
   },
   computed: {
+    ...mapStores(useAppStore),
+
     priceRules() {
       return [
         value => !!value && !!value.trim() || this.$t('PriceRules.AmountRequired'),
@@ -71,20 +103,45 @@ export default {
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
         value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
       ];
-    },
-    priceFormFilled() {
-      let keys = ['price', 'currency']
-      return Object.keys(this.priceForm).filter(k => keys.includes(k)).every(k => !!this.priceForm[k])
-    },
-  },
+  }},
   watch: {
     priceFormFilled(newPriceFormFilled, oldPriceFormFilled) {  // eslint-disable-line no-unused-vars
       this.$emit('filled', newPriceFormFilled)
     }
   },
+  mounted(){
+    this.initCurrencies()
+  },
+    priceFormFilled() {
+      let keys = ['price', 'currency']
+      return Object.keys(this.priceForm).filter(k => keys.includes(k)).every(k => !!this.priceForm[k])
+    },
   methods: {
-    setCurrencyData(currency) {
-      this.priceForm.currency = currency
+    initCurrencies() {
+      const appStore = useAppStore();
+    this.userFavoriteCurrencies = appStore.getUserFavoriteCurrencies;
+
+    const currencies = countryData
+      .flatMap(country => country.currency)
+      .filter(currency => currency !== null && currency.length > 0);
+    
+    this.currencyList = [...new Set(currencies)];
+    },
+    openEditCurrencies() {
+      this.showEditCurrencies = true
+    },
+    closeEditCurrencies(){
+      if (!this.userFavoriteCurrencies.length) return
+      
+      // prevent from being out of sync
+      if (!this.userFavoriteCurrencies.includes(this.priceForm.currency)) {
+        const newUserCurrency  = this.userFavoriteCurrencies[0]
+        this.priceForm.currency = newUserCurrency
+        this.appStore.setLastCurrencyUsed(newUserCurrency)
+      }
+
+      this.showEditCurrencies = false
+      this.appStore.setFavoriteCurrencies(this.userFavoriteCurrencies)
     },
     fixComma(input) {
       return input.replace(/,/g, '.');
