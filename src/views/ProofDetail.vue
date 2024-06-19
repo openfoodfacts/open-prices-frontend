@@ -8,7 +8,7 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="proof" class="mt-0">
+  <v-row v-if="allowPriceAdd" class="mt-0">
     <v-col cols="12">
       <PriceAddButton class="mr-2" :proofId="proof.id" :proofType="proof.type" />
     </v-col>
@@ -54,6 +54,11 @@ export default {
       proofPriceTotal: null,
       proofPricePage: 0,
       loading: false,
+    }
+  },
+  computed: {
+    allowPriceAdd() {
+      return this.proof && (this.proof.type === 'PRICE_TAG' || this.proof.type === 'RECEIPT')
     }
   },
   mounted() {
