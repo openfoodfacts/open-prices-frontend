@@ -10,7 +10,7 @@
 
   <v-row v-if="proof" class="mt-0">
     <v-col cols="12">
-      <PriceAddButton class="mr-2" :proofId="proof.id" />
+      <PriceAddButton class="mr-2" :proofId="proof.id" :proofType="proof.type" />
     </v-col>
   </v-row>
 
