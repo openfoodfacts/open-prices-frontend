@@ -44,7 +44,7 @@
           </template>
           <v-divider />
           <v-card-text>
-            <ProofInputRow :proofType="addProofSingleForm.type" :proofForm="addProofSingleForm" :hideRecentProofOption="true" />
+            <ProofInputRow :proofType="addProofSingleForm.type" :proofForm="addProofSingleForm" :hideRecentProofChoice="true" />
           </v-card-text>
           <v-overlay v-model="disableProofImageForm" scrim="#E8F5E9" contained persistent />
         </v-card>
@@ -64,14 +64,29 @@
           <v-divider />
           <v-card-text>
             <h3 class="mb-1">
-              {{ $t('AddPriceSingle.WhereWhen.Date') }}
+              {{ $t('Common.Date') }}
             </h3>
             <v-row>
               <v-col cols="12" sm="6">
                 <v-text-field
                   v-model="addProofSingleForm.date"
-                  :label="$t('AddPriceSingle.WhereWhen.DateLabel')"
+                  :label="$t('Common.Date')"
                   type="date"
+                  hide-details="auto"
+                />
+              </v-col>
+            </v-row>
+
+            <h3 class="mt-4 mb-1">
+              {{ $t('Common.Currency') }}
+            </h3>
+            <v-row>
+              <v-col cols="12" sm="6">
+                <v-select
+                  v-model="addProofSingleForm.currency"
+                  :label="$t('Common.Currency')"
+                  :items="userFavoriteCurrencies"
+                  hide-details="auto"
                 />
               </v-col>
             </v-row>
@@ -117,6 +132,7 @@ export default {
         type: 'PRICE_TAG',
         proof_id: null,
         date: utils.currentDate(),
+        currency: null,
       },
       loading: false,
     }
@@ -132,7 +148,7 @@ export default {
       return Object.keys(this.addProofSingleForm).filter(k => keys.includes(k)).every(k => !!this.addProofSingleForm[k])
     },
     proofDetailsFormFilled() {
-      let keys = ['date']
+      let keys = ['date', 'currency']
       return Object.keys(this.addProofSingleForm).filter(k => keys.includes(k)).every(k => !!this.addProofSingleForm[k])
     },
     formFilled() {
@@ -149,6 +165,9 @@ export default {
     },
     disableProofDetailsForm() {
       return !this.proofTypeFormFilled || !this.proofImageFormFilled
+    },
+    userFavoriteCurrencies() {
+      return this.appStore.getUserFavoriteCurrencies
     }
   },
   methods: {
