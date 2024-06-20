@@ -110,15 +110,18 @@
 		"AddPrice": "הוספת מחיר",
 		"AddToOFF": "הוספה אל {name}",
 		"Country": "מדינה",
+		"Currency": "מטבע",
 		"Language": "שפות",
 		"Locations": "מקומות",
 		"Date": "תאריך",
+		"Details": "Details",
 		"Delete": "מחיקה",
 		"Discount": "הנחה",
 		"Edit": "עריכה",
 		"Filter": "סינון",
 		"FilterProductWithPriceCountHide": "הסתרת מוצרים עם מחירים",
 		"FilterPriceMoreThan30DaysHide": "הסתרת מחירים ישנים מ־30 יום",
+		"Image": "תמונה",
 		"Order": "סדר",
 		"OrderProductUniqueScansDESC": "מספר הסריקות",
 		"OrderProductPriceCountDESC": "מספר המחירים",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "תאריך המחיר",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
 		"Source": "מקור",
+		"Type": "סוג",
 		"Yes": "כן",
 		"No": "לא",
 		"Food": "מזון",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "הוספת מחיר",
 		"LatestPrices": "מחירים עדכניים",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "חיפוש מוצר",
 		"SettingsUpdated": "ההגדרות עודכנו!",
 		"TodayPriceStat": "לא נוספו מחירים היום | מחיר חדש נוסף היום | {todayPriceNumber} מחירים חדשים נוספו היום!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "קבלה",
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "למחוק את ההוכחה הזאת?",
 		"Delete": "מחיקה",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "מחירים עדכניים"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "חיפוש"
