@@ -110,15 +110,18 @@
 		"AddPrice": "Tambahkan harga",
 		"AddToOFF": "Tambahkan ke {name}",
 		"Country": "Negara",
+		"Currency": "Mata uang",
 		"Language": "Bahasa",
 		"Locations": "Lokasi",
 		"Date": "Tanggal",
+		"Details": "Details",
 		"Delete": "Hapus",
 		"Discount": "Diskon",
 		"Edit": "Sunting",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
 		"FilterPriceMoreThan30DaysHide": "Sembunyikan harga yang sudah lebih dari 30 hari",
+		"Image": "Gambar",
 		"Order": "Urutan",
 		"OrderProductUniqueScansDESC": "Jumlah pindaian",
 		"OrderProductPriceCountDESC": "Jumlah harga",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Tanggal harga",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
 		"Source": "Sumber",
+		"Type": "Tipe",
 		"Yes": "Ya",
 		"No": "Tidak",
 		"Food": "Makanan",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Tambahkan harga",
 		"LatestPrices": "Harga terbaru",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Cari produk",
 		"SettingsUpdated": "Pengaturan berhasil diperbarui!",
 		"TodayPriceStat": "Tidak ada harga yang ditambahkan hari ini | {todayPriceNumber} harga baru ditambahkan hari ini | {todayPriceNumber} harga baru ditambahkan hari ini!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Resi",
 		"GDPR_REQUEST": "Permintaan GDPR"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Yakin ingin menghapus bukti ini?",
 		"Delete": "Hapus",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Harga terbaru"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Cari"
