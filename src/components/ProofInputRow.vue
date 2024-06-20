@@ -15,7 +15,7 @@
         <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
         <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
       </v-btn>
-      <v-btn class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofsDialog">
+      <v-btn v-if="!hideRecentProofOption" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofsDialog">
         <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
         <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
       </v-btn>
@@ -103,6 +103,10 @@ export default {
     proofForm: {
       type: Object,
       default: () => ({ proof_id: null, date: utils.currentDate() })
+    },
+    hideRecentProofOption: {
+      type: Boolean,
+      default: false
     },
   },
   data() {
