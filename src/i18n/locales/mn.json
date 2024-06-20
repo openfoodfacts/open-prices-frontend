@@ -110,15 +110,18 @@
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
 		"Country": "Country",
+		"Currency": "Currency",
 		"Language": "Languages",
 		"Locations": "Locations",
 		"Date": "Date",
+		"Details": "Details",
 		"Delete": "Delete",
 		"Discount": "Discount",
 		"Edit": "Засвар хийх",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
+		"Image": "Image",
 		"Order": "Order",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Source": "Source",
+		"Type": "Төрөл",
 		"Yes": "Тийм",
 		"No": "Үгүй",
 		"Food": "Food",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Add a price",
 		"LatestPrices": "Latest prices",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Receipt",
 		"GDPR_REQUEST": "GDPR request"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
 		"Delete": "Delete",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Latest prices"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Хайх"
