@@ -238,10 +238,10 @@ export default {
         origins_tags: '',
         labels_tags: [],
         price: null,
-        price_per: null, // see initPriceSingleForm
+        price_per: null, // see PriceInputRow
         price_is_discounted: false,
         price_without_discount: null,
-        currency: null,  // see initPriceMultipleForm
+        currency: null,  // see PriceInputRow
       },
       categoryPricePerList: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},

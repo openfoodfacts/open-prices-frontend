@@ -14,6 +14,16 @@ function buildURLParams(params = {}) {
   return new URLSearchParams({...DEFAULT_PARAMS, ...params})
 }
 
+function filterParamsWithAllowedKeys(params, allowedKeys) {
+  const filteredParams = {}
+  for (const key in params) {
+    if (allowedKeys.includes(key)) {
+      filteredParams[key] = params[key]
+    }
+  }
+  return filteredParams
+}
+
 
 export default {
   signIn(username, password) {
@@ -84,6 +94,7 @@ export default {
   },
 
   updateProof(proofId, params = {}) {
+    const PROOF_UPDATABLE_FIELDS = ['type', 'date', 'currency']
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
     return fetch(url, {
@@ -91,7 +102,7 @@ export default {
       headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
-      body: JSON.stringify(params),
+      body: JSON.stringify(filterParamsWithAllowedKeys(params, PROOF_UPDATABLE_FIELDS)),
     })
     .then((response) => response.json())
   },
