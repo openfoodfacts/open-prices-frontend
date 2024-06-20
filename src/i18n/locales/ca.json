@@ -110,15 +110,18 @@
 		"AddPrice": "Afegir un preu",
 		"AddToOFF": "Add to {name}",
 		"Country": "País",
+		"Currency": "Currency",
 		"Language": "Llengües",
 		"Locations": "Locations",
 		"Date": "Data",
+		"Details": "Details",
 		"Delete": "Elimina",
 		"Discount": "Descompte",
 		"Edit": "Edita",
 		"Filter": "Filtre",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
+		"Image": "Imatge",
 		"Order": "Order",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Source": "Origen",
+		"Type": "Tipus",
 		"Yes": "Si",
 		"No": "No",
 		"Food": "Menjar",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Afegir un preu",
 		"LatestPrices": "Últims preus",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Configuració modificada!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Receipt",
 		"GDPR_REQUEST": "GDPR request"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
 		"Delete": "Elimina",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Últims preus"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Cerca"
