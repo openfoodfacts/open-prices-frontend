@@ -110,15 +110,18 @@
 		"AddPrice": "Додати ціну",
 		"AddToOFF": "Додати до {name}",
 		"Country": "Країна",
+		"Currency": "Currency",
 		"Language": "Мови",
 		"Locations": "Місцезнаходження",
 		"Date": "Date",
+		"Details": "Details",
 		"Delete": "Видалити",
 		"Discount": "Знижка",
 		"Edit": "Редагувати",
 		"Filter": "Фільтр",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Приховати ціни старші за 30 днів",
+		"Image": "Зображення",
 		"Order": "Замовлення",
 		"OrderProductUniqueScansDESC": "Кількість сканувань",
 		"OrderProductPriceCountDESC": "Кількість цін",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Дата ціни",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
 		"Source": "Джерело",
+		"Type": "Тип",
 		"Yes": "Так",
 		"No": "Ні",
 		"Food": "Їжа",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Додати ціну",
 		"LatestPrices": "Остання ціна",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Пошук товару",
 		"SettingsUpdated": "Параметри оновлено!",
 		"TodayPriceStat": "Жодної ціни сьогодні не додано | {todayPriceNumber} нові ціни сьогодні | {todayPriceNumber} нові ціни, додані сьогодні!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Квитанція",
 		"GDPR_REQUEST": "Запит GDPR"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Ви впевнені, що хочете видалити це підтвердження?",
 		"Delete": "Видалити",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Остання ціна"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Пошук"
