@@ -110,15 +110,18 @@
 		"AddPrice": "Aggiungi un prezzo",
 		"AddToOFF": "Aggiungi a {name}",
 		"Country": "Paese",
+		"Currency": "Moneta",
 		"Language": "Lingue",
 		"Locations": "Posizioni",
 		"Date": "Data",
+		"Details": "Details",
 		"Delete": "Elimina",
 		"Discount": "Sconto",
 		"Edit": "Modifica",
 		"Filter": "Filtra",
 		"FilterProductWithPriceCountHide": "Nascondi i prodotti con i prezzi",
 		"FilterPriceMoreThan30DaysHide": "Nascondi i prezzi più vecchi di 30 giorni",
+		"Image": "Immagine",
 		"Order": "Ordine",
 		"OrderProductUniqueScansDESC": "Numero di scansioni",
 		"OrderProductPriceCountDESC": "Numero di prezzi",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Data del prezzo",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
 		"Source": "Fonte",
+		"Type": "Tipo",
 		"Yes": "Sì",
 		"No": "No",
 		"Food": "Cibo",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Aggiungi un prezzo",
 		"LatestPrices": "Ultimi prezzi",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Cerca un prodotto",
 		"SettingsUpdated": "Impostazioni aggiornate!",
 		"TodayPriceStat": "Nessun prezzo aggiunto oggi | {todayPriceNumber} nuovi prezzi aggiunti oggi | {todayPriceNumber} nuovi prezzi aggiunti oggi!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Ricevuta",
 		"GDPR_REQUEST": "Richiesta RGPD"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Sei sicuro di voler eliminare questa prova?",
 		"Delete": "Elimina",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Ultimi prezzi"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Cerca"
