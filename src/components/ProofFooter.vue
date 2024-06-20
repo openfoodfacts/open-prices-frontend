@@ -3,7 +3,9 @@
     <v-col :cols="userIsProofOwner ? '11' : '12'">
       <ProofTypeChip class="mr-1" :proof="proof" />
       <ProofPrivateChip v-if="proofIsPrivateReceipt" class="mr-1" :proof="proof" />
+      <ProofDateChip v-if="proof.date" class="mr-1" :proof="proof" />
       <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()" />
+      <CurrencyChip v-if="proof.currency" class="mr-1" :proof="proof" />
       <RelativeDateTimeChip :dateTime="proof.created" />
     </v-col>
   </v-row>
@@ -21,6 +23,8 @@ export default {
     ProofTypeChip: defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
     ProofPrivateChip: defineAsyncComponent(() => import('../components/ProofPrivateChip.vue')),
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    ProofDateChip: defineAsyncComponent(() => import('../components/ProofDateChip.vue')),
+    CurrencyChip: defineAsyncComponent(() => import('../components/CurrencyChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     ProofActionMenuButton: defineAsyncComponent(() => import('../components/ProofActionMenuButton.vue'))
   },
