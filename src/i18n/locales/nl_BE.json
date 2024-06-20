@@ -110,15 +110,18 @@
 		"AddPrice": "Voeg een prijs toe",
 		"AddToOFF": "Toevoegen aan {name}",
 		"Country": "Land",
+		"Currency": "Valuta",
 		"Language": "Talen",
 		"Locations": "Locaties",
 		"Date": "Datum",
+		"Details": "Details",
 		"Delete": "Verwijder",
 		"Discount": "Korting",
 		"Edit": "Bewerken",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Verberg producten met prijzen",
 		"FilterPriceMoreThan30DaysHide": "Verberg prijzen ouder dan 30 dagen",
+		"Image": "Afbeelding",
 		"Order": "Sorteren",
 		"OrderProductUniqueScansDESC": "Aantal scans",
 		"OrderProductPriceCountDESC": "Aantal prijzen",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Prijsdatum",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
 		"Source": "Bron",
+		"Type": "Type",
 		"Yes": "Ja",
 		"No": "Nee",
 		"Food": "Voedsel",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
 		"LatestPrices": "Laatste prijzen",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Zoek naar een product",
 		"SettingsUpdated": "Instellingen bijgewerkt!",
 		"TodayPriceStat": "Geen prijzen toegevoegd vandaag | Vandaag {todayPriceNumber} nieuwe prijzen toegevoegd | Vandaag {todayPriceNumber} nieuwe prijzen toegevoegd!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Bon",
 		"GDPR_REQUEST": "AVG-verzoek"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Weet u zeker dat u dit bewijs wilt verwijderen?",
 		"Delete": "Verwijder",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Laatste prijzen"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Zoeken"
