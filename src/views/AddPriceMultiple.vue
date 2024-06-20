@@ -19,7 +19,7 @@
         <v-card-text>
           <ProofInputRow :proofType="proofType" :proofForm="addPriceMultipleForm" />
         </v-card-text>
-        <v-overlay v-model="disableProofLocationDateForm" scrim="#E8F5E9" contained persistent />
+        <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
       </v-card>
     </v-col>
 
@@ -70,7 +70,7 @@
             </v-col>
           </v-row>
         </v-card-text>
-        <v-overlay v-model="disableProofLocationDateForm" scrim="#E8F5E9" contained persistent />
+        <v-overlay v-model="disableLocationDateForm" scrim="#E8F5E9" contained persistent />
       </v-card>
     </v-col>
 
@@ -282,8 +282,11 @@ export default {
     formFilled() {
       return this.proofLocationFormFilled && !!this.productPriceUploadedList.length && !Object.keys(this.productPriceForm).length
     },
-    disableProofLocationDateForm() {
-      return this.proofLocationFormFilled && !!this.productPriceUploadedList.length
+    disableProofForm() {
+      return this.proofFormFilled && !!this.productPriceUploadedList.length
+    },
+    disableLocationDateForm() {
+      return !this.proofFormFilled || this.disableProofForm
     },
     disablePriceAlreadyUploadedCard() {
       // return !!this.productPriceUploadedList.length
