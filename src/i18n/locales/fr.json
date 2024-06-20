@@ -110,15 +110,18 @@
 		"AddPrice": "Ajouter un prix",
 		"AddToOFF": "Ajouter à {name}",
 		"Country": "Pays",
+		"Currency": "Devise",
 		"Language": "Langue",
 		"Locations": "Emplacements",
 		"Date": "Date",
+		"Details": "Details",
 		"Delete": "Supprimer",
 		"Discount": "Promo",
 		"Edit": "Modifier",
 		"Filter": "Filtre",
 		"FilterProductWithPriceCountHide": "Cacher les produits qui ont un prix",
 		"FilterPriceMoreThan30DaysHide": "Masquer les prix datant de plus de 30 jours",
+		"Image": "Image",
 		"Order": "Ordre",
 		"OrderProductUniqueScansDESC": "Nombre de numérisations",
 		"OrderProductPriceCountDESC": "Nombre de prix",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Date du prix",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
 		"Source": "Source",
+		"Type": "Type",
 		"Yes": "Oui",
 		"No": "Non",
 		"Food": "Nourriture",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Ajouter un prix",
 		"LatestPrices": "Derniers prix ajoutés",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Chercher un produit",
 		"SettingsUpdated": "Paramètres mis à jour !",
 		"TodayPriceStat": "Aucun prix ajouté aujourd'hui | {todayPriceNumber} nouveau prix ajouté aujourd'hui | {todayPriceNumber} nouveaux prix ajoutés aujourd'hui !",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Ticket de caisse",
 		"GDPR_REQUEST": "Requête RGPD"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Êtes-vous sûr de vouloir supprimer cette preuve ?",
 		"Delete": "Supprimer",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Derniers prix ajoutés"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Rechercher"
