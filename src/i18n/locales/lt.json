@@ -110,15 +110,18 @@
 		"AddPrice": "Pridėti kainą",
 		"AddToOFF": "Add to {name}",
 		"Country": "Šalis",
+		"Currency": "Valiuta",
 		"Language": "Kalbos",
 		"Locations": "Vietos",
 		"Date": "Data",
+		"Details": "Details",
 		"Delete": "Ištrinti",
 		"Discount": "Nuolaida",
 		"Edit": "Redaguoti",
 		"Filter": "Filtras",
 		"FilterProductWithPriceCountHide": "Slėpti produktus su kainomis",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
+		"Image": "Vaizdas",
 		"Order": "Order",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"Source": "Šaltinis",
+		"Type": "Tipas",
 		"Yes": "Taip",
 		"No": "Ne",
 		"Food": "Food",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Pridėti kainą",
 		"LatestPrices": "Naujausios kainos",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Ieškoti produkto",
 		"SettingsUpdated": "Nuostatos atnaujintos!",
 		"TodayPriceStat": "Šiandien nepridėta jokių kainų | Šiandien pridėta {todayPriceNumber} naujų kainų | Šiandien pridėta {todayPriceNumber} naujos kainos!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Čekis",
 		"GDPR_REQUEST": "GDPR request"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Ar tikrai norite ištrinti šį įrodymą?",
 		"Delete": "Ištrinti",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Naujausios kainos"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Paieška"
