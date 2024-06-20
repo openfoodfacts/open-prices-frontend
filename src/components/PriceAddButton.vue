@@ -23,7 +23,7 @@ export default {
   },
   data() {
     return {
-      ADD_PRICE_BASE_URL: '/add/single'
+      ADD_PRICE_BASE_URL: '/prices/add/single'
     }
   },
   computed: {

@@ -9,7 +9,7 @@
         :title="$t('AddPriceHome.SingleProductMode.Title')"
         :subtitle="$t('AddPriceHome.SingleProductMode.Subtitle')"
         prepend-icon="mdi-barcode"
-        to="/add/single"
+        to="/prices/add/single"
       />
     </v-col>
   </v-row>
@@ -24,7 +24,7 @@
         :title="$t('AddPriceHome.MultipleProductMode.Title')"
         :subtitle="$t('AddPriceHome.MultipleProductMode.Subtitle')"
         prepend-icon="mdi-library-shelves"
-        to="/add/multiple/price-tag"
+        to="/prices/add/multiple/price-tag"
       />
     </v-col>
     <v-col cols="12" sm="6" lg="4">
@@ -32,7 +32,7 @@
         :title="$t('AddPriceHome.ReceiptMode.Title')"
         :subtitle="$t('AddPriceHome.ReceiptMode.Subtitle')"
         prepend-icon="mdi-receipt-text-outline"
-        to="/add/multiple/receipt"
+        to="/prices/add/multiple/receipt"
       />
     </v-col>
   </v-row>

@@ -26,7 +26,7 @@
         color="primary"
         variant="outlined"
         elevation="1"
-        to="/add"
+        to="/prices/add"
       >
         <template v-if="!username" #subtitle>
           <i18n-t keypath="Common.SignInOFFAccount" tag="span">
