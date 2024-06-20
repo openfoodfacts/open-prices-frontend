@@ -110,15 +110,18 @@
 		"AddPrice": "Add a price",
 		"AddToOFF": "{name} に追加",
 		"Country": "国",
+		"Currency": "Currency",
 		"Language": "言語",
 		"Locations": "場所：",
 		"Date": "Date",
+		"Details": "Details",
 		"Delete": "削除",
 		"Discount": "ディスカウント",
 		"Edit": "編集",
 		"Filter": "フィルタ",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "30日以上経過した価格を非表示にする",
+		"Image": "画像",
 		"Order": "注文品",
 		"OrderProductUniqueScansDESC": "スキャンの数:",
 		"OrderProductPriceCountDESC": "価格の数",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "価格日",
 		"SignInOFFAccount": "Google アカウントでログイン",
 		"Source": "情報源",
+		"Type": "種別",
 		"Yes": "はい",
 		"No": "いいえ",
 		"Food": "食べ物",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Add a price",
 		"LatestPrices": "Latest prices",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "商品を検索",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "今日は価格が追加されていません |本日追加された新しい価格は {todayPriceNumber} |本日、新たに {todayPriceNumber} 件の価格が追加されました！",
@@ -278,6 +283,9 @@
 		"RECEIPT": "領収書",
 		"GDPR_REQUEST": "GDPR リクエスト"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
 		"Delete": "削除",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Latest prices"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "検索"
