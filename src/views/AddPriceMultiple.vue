@@ -19,7 +19,7 @@
         <v-card-text>
           <ProofInputRow :proofType="proofType" :proofForm="addPriceMultipleForm" />
         </v-card-text>
-        <v-overlay v-model="disableProofLocationDateForm" scrim="#E8F5E9" contained persistent />
+        <v-overlay v-model="disableProofLocationForm" scrim="#E8F5E9" contained persistent />
       </v-card>
     </v-col>
 
@@ -29,9 +29,9 @@
         :title="$t('AddPriceSingle.WhereWhen.Title')"
         prepend-icon="mdi-map-marker-outline"
         height="100%"
-        :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+        :style="locationFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
       >
-        <template v-if="locationDateFormFilled" #append>
+        <template v-if="locationFormFilled" #append>
           <v-icon icon="mdi-checkbox-marked-circle" color="success" />
         </template>
         <v-divider />
@@ -56,21 +56,8 @@
           <p v-if="!locationFormFilled" class="text-red mb-2">
             <i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i>
           </p>
-
-          <h3 class="mt-4 mb-1">
-            {{ $t('AddPriceSingle.WhereWhen.Date') }}
-          </h3>
-          <v-row>
-            <v-col cols="12" sm="6">
-              <v-text-field
-                v-model="addPriceMultipleForm.date"
-                :label="$t('AddPriceSingle.WhereWhen.DateLabel')"
-                type="date"
-              />
-            </v-col>
-          </v-row>
         </v-card-text>
-        <v-overlay v-model="disableProofLocationDateForm" scrim="#E8F5E9" contained persistent />
+        <v-overlay v-model="disableProofLocationForm" scrim="#E8F5E9" contained persistent />
       </v-card>
     </v-col>
 
@@ -252,7 +239,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keys = ['proof_id']
+      let keys = ['proof_id', 'date']
       return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
     recentLocations() {
@@ -262,12 +249,8 @@ export default {
       let keys = ['location_osm_id', 'location_osm_type']
       return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
-    locationDateFormFilled() {
-      let keys = ['location_osm_id', 'location_osm_type', 'date']
-      return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
-    },
     proofLocationFormFilled() {
-      return this.proofFormFilled && this.locationDateFormFilled
+      return this.proofFormFilled && this.locationFormFilled
     },
     pricePerFormFilled() {
       let keys = ['price_per']
@@ -282,7 +265,7 @@ export default {
     formFilled() {
       return this.proofLocationFormFilled && !!this.productPriceUploadedList.length && !Object.keys(this.productPriceForm).length
     },
-    disableProofLocationDateForm() {
+    disableProofLocationForm() {
       return this.proofLocationFormFilled && !!this.productPriceUploadedList.length
     },
     disablePriceAlreadyUploadedCard() {

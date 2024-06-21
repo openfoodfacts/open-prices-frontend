@@ -1,52 +1,73 @@
 <template>
   <v-row>
-    <v-col cols="8">
-      <v-btn
-        class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" :loading="createProofLoading"
-        :disabled="createProofLoading" @click.prevent="$refs.proofCamera.click()"
-      >
-        <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
-        <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
-      </v-btn>
-      <v-btn
-        class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" :loading="createProofLoading"
-        :disabled="createProofLoading" @click.prevent="$refs.proofGallery.click()"
-      >
-        <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
-        <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
-      </v-btn>
-      <v-btn v-if="!hideRecentProofChoice" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofsDialog">
-        <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
-        <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
-      </v-btn>
-      <v-file-input
-        ref="proofCamera" v-model="proofImage" class="d-none overflow-hidden" capture="environment"
-        accept="image/*" :loading="createProofLoading" @change="newProof('camera')" @click:clear="clearProof"
-      />
-      <v-file-input
-        ref="proofGallery" v-model="proofImage" class="d-none overflow-hidden" accept="image/*, .heic"
-        :loading="createProofLoading" @change="newProof('gallery')" @click:clear="clearProof"
-      />
-      <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2">
-        <i v-if="!proofisSelected">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
-        <i v-if="proofisSelected">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
-      </p>
-      <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2">
-        <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
-      </p>
+    <!-- proof image -->
+    <v-col cols="12">
+      <v-row>
+        <v-col cols="8">
+          <v-btn
+            class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" :loading="loading"
+            :disabled="loading" @click.prevent="$refs.proofCamera.click()"
+          >
+            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
+            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
+          </v-btn>
+          <v-btn
+            class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" :loading="loading"
+            :disabled="loading" @click.prevent="$refs.proofGallery.click()"
+          >
+            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
+            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
+          </v-btn>
+          <v-btn v-if="!hideRecentProofChoice" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofsDialog">
+            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
+            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
+          </v-btn>
+          <v-file-input
+            ref="proofCamera" v-model="proofImage" class="d-none overflow-hidden" capture="environment"
+            accept="image/*" :loading="loading" @change="newProof('camera')" @click:clear="clearProof"
+          />
+          <v-file-input
+            ref="proofGallery" v-model="proofImage" class="d-none overflow-hidden" accept="image/*, .heic"
+            :loading="loading" @change="newProof('gallery')" @click:clear="clearProof"
+          />
+          <p v-if="proofFormFilled && !loading" class="text-green mt-2 mb-2">
+            <i v-if="!existingProof">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
+            <i v-if="existingProof">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
+          </p>
+          <p v-if="!proofFormFilled && !loading" class="text-red mt-2 mb-2">
+            <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
+          </p>
+        </v-col>
+        <v-col v-if="proofFormFilled" cols="4">
+          <v-img :src="proofImagePreview" style="max-height:200px" />
+        </v-col>
+      </v-row>
+      <v-row v-if="proofType === 'RECEIPT'" class="mt-0">
+        <v-col>
+          <h3 class="mb-1">
+            {{ $t('ProofDetail.Privacy') }}
+          </h3>
+          <p class="text-caption text-warning">
+            <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
+          </p>
+        </v-col>
+      </v-row>
     </v-col>
-    <v-col v-if="proofFormFilled" cols="4">
-      <v-img :src="proofImagePreview" style="max-height:200px" />
-    </v-col>
-  </v-row>
-  <v-row v-if="proofType === 'RECEIPT'" class="mt-0">
-    <v-col>
-      <h3 class="mb-1">
-        {{ $t('ProofDetail.Privacy') }}
+    <!-- proof date -->
+    <v-col cols="12">
+      <h3 class="mt-4 mb-1">
+        {{ $t('Common.Date') }}
       </h3>
-      <p class="text-caption text-warning">
-        <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
-      </p>
+      <v-row>
+        <v-col cols="12" sm="6">
+          <v-text-field
+            v-model="proofForm.date"
+            :label="$t('Common.Date')"
+            type="date"
+            :disabled="existingProof"
+          />
+        </v-col>
+      </v-row>
     </v-col>
   </v-row>
 
@@ -111,20 +132,20 @@ export default {
   },
   data() {
     return {
+      existingProof: false,
       proofImage: null,
       proofImagePreview: null,
-      createProofLoading: false,
       proofDateSuccessMessage: false,
       proofSuccessMessage: false,
       userRecentProofsDialog: false,
       proofSelectedSuccessMessage: false,
-      proofisSelected: false,
+      loading: false,
     }
   },
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keys = ['proof_id']
+      let keys = ['proof_id', 'date']
       return Object.keys(this.proofForm).filter(k => keys.includes(k)).every(k => !!this.proofForm[k])
     },
   },
@@ -138,6 +159,7 @@ export default {
       this.userRecentProofsDialog = true
     },
     handleRecentProofSelected(selectedProof) {
+      this.existingProof = true
       this.proofForm.proof_id = selectedProof.id
       this.proofImagePreview = this.getProofUrl(selectedProof)
       if (selectedProof.date) {
@@ -145,14 +167,13 @@ export default {
         this.proofDateSuccessMessage = true
       }
       this.proofSelectedSuccessMessage = true
-      this.proofisSelected = true
     },
     getProofById(proofId) {
-      this.createProofLoading = true
+      this.loading = true
       api.getProofById(proofId)
         .then(proof => {
           this.handleRecentProofSelected(proof)
-          this.createProofLoading = false
+          this.loading = false
         })
     },
     getProofUrl(proof) {
@@ -161,6 +182,7 @@ export default {
     },
     newProof(source) {
       if (source === 'gallery') {
+        // extract date from image exif
         ExifReader.load(this.proofImage[0]).then((tags) => {
           if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
             // exif DateTimeOriginal format: '2024:01:31 20:23:52'
@@ -175,7 +197,7 @@ export default {
       this.uploadProof()
     },
     uploadProof() {
-      this.createProofLoading = true
+      this.loading = true
       new Promise((resolve, reject) => {
         new Compressor(this.proofImage[0], {
           success: resolve,
@@ -184,9 +206,9 @@ export default {
       })
       .then((proofImageCompressed) => {
         api
-          .createProof(proofImageCompressed, this.proofType)  // this.proofForm.date
+          .createProof(proofImageCompressed, this.proofType, this.proofForm.date)
           .then((data) => {
-            this.createProofLoading = false
+            this.loading = false
             if (data.id) {
               const store = useAppStore()
               store.addProof(data)
@@ -201,7 +223,7 @@ export default {
           .catch((error) => {
             alert('Error: server error')
             console.log(error)
-            this.createProofLoading = false
+            this.loading = false
           })
       })
       .catch((error) => {
