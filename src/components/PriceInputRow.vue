@@ -42,7 +42,7 @@
       <v-btn 
         size="small" 
         icon="mdi-pencil" 
-        aria-label="Edit currencies" 
+        :aria-label="$t('Common.EditCurrencies')"
         @click="openEditCurrencies" 
       />
     </v-col>
@@ -65,7 +65,7 @@
         size="small" 
         :disabled="userFavoriteCurrencies.length === 0" 
         icon="mdi-check" 
-        aria-label="Save currencies" 
+        :aria-label="$t('UserSettings.Save')" 
         @click="closeEditCurrencies" 
       />
     </v-col>
