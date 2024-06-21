@@ -162,7 +162,7 @@
 	"Home": {
 		"AddPrice": "Preis hinzufügen",
 		"LatestPrices": "Aktuelle Preise",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Nachweis bearbeiten",
 		"SearchProduct": "Produkt suchen",
 		"SettingsUpdated": "Einstellungen aktualisiert!",
 		"TodayPriceStat": "Heute keine Preise hinzugefügt | Heute {todayPriceNumber} neue Preise hinzugefügt | Heute {todayPriceNumber} neue Preise hinzugefügt!",
@@ -284,7 +284,7 @@
 		"GDPR_REQUEST": "DSGVO-Anfrage"
 	},
 	"ProofCreate": {
-		"Success": "Proof created!"
+		"Success": "Nachweis erstellt!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Möchten Sie diesen Nachweis wirklich löschen?",
@@ -316,7 +316,7 @@
 			"Title": "Aktuelle Preise"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Nachweis bearbeiten"
 		},
 		"Search": {
 			"Title": "Suchen"
