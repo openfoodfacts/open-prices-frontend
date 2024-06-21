@@ -1,7 +1,7 @@
 <template>
   <v-row>
-    <!-- proof image -->
     <v-col cols="12">
+      <!-- proof image -->
       <v-row>
         <v-col cols="8">
           <v-btn
@@ -52,36 +52,30 @@
           </p>
         </v-col>
       </v-row>
-    </v-col>
-    <!-- proof date -->
-    <v-col cols="12">
-      <h3 class="mt-4 mb-1">
-        {{ $t('Common.Date') }}
-      </h3>
+
+      <!-- proof date & currency -->
       <v-row>
-        <v-col cols="12" sm="6">
+        <v-col cols="6">
+          <h3 class="mb-1">
+            {{ $t('Common.Date') }}
+          </h3>
           <v-text-field
             v-model="proofForm.date"
             :label="$t('Common.Date')"
             type="date"
-            :disabled="existingProof"
+            :disabled="!proofForm.proof_id || existingProof"
             hide-details="auto"
           />
         </v-col>
-      </v-row>
-    </v-col>
-    <!-- proof currency -->
-    <v-col cols="12">
-      <h3 class="mb-1">
-        {{ $t('Common.Currency') }}
-      </h3>
-      <v-row>
-        <v-col cols="12" sm="6">
+        <v-col cols="6">
+          <h3 class="mb-1">
+            {{ $t('Common.Currency') }}
+          </h3>
           <v-select
             v-model="proofForm.currency"
             :label="$t('Common.Currency')"
             :items="userFavoriteCurrencies"
-            :disabled="existingProof"
+            :disabled="!proofForm.proof_id || existingProof"
             hide-details="auto"
           />
         </v-col>
@@ -170,6 +164,16 @@ export default {
       return this.appStore.getUserFavoriteCurrencies
     }
   },
+  watch: {
+    'proofForm.date'(newProofDate, oldProofDate) {
+      console.log('watch proofForm.date', newProofDate, oldProofDate)
+      this.updateProof()
+    },
+    'proofForm.currency'(newProofCurrency, oldProofCurrency) {
+      console.log('watch proofForm.currency', newProofCurrency, oldProofCurrency)
+      this.updateProof()
+    },
+  },
   mounted() {
     if (this.$route.query.proof_id) {
       this.getProofById(this.$route.query.proof_id)
@@ -203,6 +207,7 @@ export default {
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
     },
     newProof(source) {
+      this.existingProof = false
       if (source === 'gallery') {
         // extract date from image exif
         ExifReader.load(this.proofImage[0]).then((tags) => {
@@ -219,6 +224,7 @@ export default {
       this.uploadProof()
     },
     uploadProof() {
+      console.log(this.proofForm)
       this.loading = true
       new Promise((resolve, reject) => {
         new Compressor(this.proofImage[0], {
@@ -238,12 +244,12 @@ export default {
               this.proofImagePreview = this.getProofUrl(data)
               this.proofSuccessMessage = true
             } else {
-              alert('Error: server error')
+              alert('Error: server error when creating proof')
               console.log(data)
             }
           })
           .catch((error) => {
-            alert('Error: server error')
+            alert('Error: server error when creating proof')
             console.log(error)
             this.loading = false
           })
@@ -256,7 +262,21 @@ export default {
       //   console.log('Compress complete')
       // })
     },
+    updateProof() {
+      this.loading = true
+      api.updateProof(this.proofForm.proof_id, this.proofForm)
+        .then((data) => {  // eslint-disable-line no-unused-vars
+          // nothing to do ?
+        })
+        .catch(err => {  // eslint-disable-line no-unused-vars
+          alert('Error: server error when updating proof')
+        })
+        .finally(() => {
+          this.loading = false
+        })
+    },
     clearProof() {
+      this.existingProof = false
       this.proofImage = null
       this.proofImagePreview = null
       this.proofForm.proof_id = null

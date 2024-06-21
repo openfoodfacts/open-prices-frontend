@@ -50,6 +50,7 @@ export default {
   },
 
   createProof(proofImage, type='PRICE_TAG', date=null, currency=null) {
+    console.log('createProof', proofImage, type, date, currency)
     const store = useAppStore()
     let formData = new FormData()
     formData.append('file', proofImage, proofImage.name)
