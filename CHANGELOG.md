@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.66.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.65.1...v1.66.0) (2024-06-21)
+
+
+### Features
+
+* **proof add:** new page to add a proof ([#639](https://github.com/openfoodfacts/open-prices-frontend/issues/639)) ([f9086a0](https://github.com/openfoodfacts/open-prices-frontend/commit/f9086a0df131220835ef11f119f7e9f95918cf0c))
+* **proof card:** display date & currency in the footer ([#640](https://github.com/openfoodfacts/open-prices-frontend/issues/640)) ([25b7b82](https://github.com/openfoodfacts/open-prices-frontend/commit/25b7b82d8865c8e97d2b72325cf395e8293a17d3))
+
+
+### Bug Fixes
+
+* **API:** Forgot to send app_name on proof POST. ref [#588](https://github.com/openfoodfacts/open-prices-frontend/issues/588) ([b221f64](https://github.com/openfoodfacts/open-prices-frontend/commit/b221f6433f481888a94988ccd2f18c7e24d74545))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#625](https://github.com/openfoodfacts/open-prices-frontend/issues/625)) ([697cb12](https://github.com/openfoodfacts/open-prices-frontend/commit/697cb1246dec91f7defc87f42e414a8302379b37))
+* **l10n:** New Crowdin translations to review and merge ([#641](https://github.com/openfoodfacts/open-prices-frontend/issues/641)) ([6d98f4b](https://github.com/openfoodfacts/open-prices-frontend/commit/6d98f4b10c70d5dfac552f3fae4723deaba1069c))
+* **price add:** new ProofInputRow component ([#632](https://github.com/openfoodfacts/open-prices-frontend/issues/632)) ([dd6622b](https://github.com/openfoodfacts/open-prices-frontend/commit/dd6622be0c79114612ce6497e73d57a7b1a6bbc4))
+* **price add:** prefix routes with /prices ([#638](https://github.com/openfoodfacts/open-prices-frontend/issues/638)) ([8355f56](https://github.com/openfoodfacts/open-prices-frontend/commit/8355f5617c80022928ff479ae8c28b3c31026dc3))
+* **proof add:** forgot to commit currency field. ref [#639](https://github.com/openfoodfacts/open-prices-frontend/issues/639) ([cd2be26](https://github.com/openfoodfacts/open-prices-frontend/commit/cd2be2698b7f10aa16928529f1b3342f46551625))
+* **proof:** On existing proof selected, init with proof date ([#631](https://github.com/openfoodfacts/open-prices-frontend/issues/631)) ([6898814](https://github.com/openfoodfacts/open-prices-frontend/commit/689881492b1953df1abaae95eb53b98a3635204c))
+
 ## [1.65.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.65.0...v1.65.1) (2024-06-10)
 
 
