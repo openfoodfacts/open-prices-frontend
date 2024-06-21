@@ -110,15 +110,18 @@
 		"AddPrice": "Añadir un precio",
 		"AddToOFF": "Añadir a {name}",
 		"Country": "País",
+		"Currency": "Moneda",
 		"Language": "Idiomas",
 		"Locations": "Ubicaciones",
 		"Date": "Fecha",
+		"Details": "Details",
 		"Delete": "Eliminar",
 		"Discount": "Descuento",
 		"Edit": "Editar",
 		"Filter": "Filtro",
 		"FilterProductWithPriceCountHide": "Ocultar productos con precios",
 		"FilterPriceMoreThan30DaysHide": "Ocultar precios de más de 30 días",
+		"Image": "Imagen",
 		"Order": "Pedido",
 		"OrderProductUniqueScansDESC": "Número de escaneos",
 		"OrderProductPriceCountDESC": "Número de precios",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Fecha del precio",
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
 		"Source": "Fuente",
+		"Type": "Tipo",
 		"Yes": "Sí",
 		"No": "No",
 		"Food": "Alimento",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Añadir un precio",
 		"LatestPrices": "Últimos precios",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Buscar un producto",
 		"SettingsUpdated": "¡Ajustes actualizados!",
 		"TodayPriceStat": "Hoy no se han añadido precios | Hoy se han añadido {todayPriceNumber} precios nuevos | ¡Hoy se han añadido {todayPriceNumber} precios nuevos!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Ticket",
 		"GDPR_REQUEST": "Solicitud GDPR"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "¿Seguro que deseas eliminar este comprobante?",
 		"Delete": "Eliminar",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Últimos precios"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Buscar"

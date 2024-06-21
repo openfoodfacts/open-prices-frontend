@@ -110,15 +110,18 @@
 		"AddPrice": "Lisää hinta",
 		"AddToOFF": "Lisää kohtaan {name}",
 		"Country": "Maa",
+		"Currency": "Valuutta",
 		"Language": "Kielet",
 		"Locations": "Sijainnit",
 		"Date": "Päivämäärä",
+		"Details": "Details",
 		"Delete": "Poista",
 		"Discount": "Alennus",
 		"Edit": "Muokkaa",
 		"Filter": "Suodata",
 		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
 		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
+		"Image": "Kuva",
 		"Order": "Järjestys",
 		"OrderProductUniqueScansDESC": "Skannausten määrä",
 		"OrderProductPriceCountDESC": "Hintojen määrä",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Hinnan päivämäärä",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
 		"Source": "Lähde",
+		"Type": "Tyyppi",
 		"Yes": "Kyllä",
 		"No": "Ei",
 		"Food": "Ruoka",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Lisää hinta",
 		"LatestPrices": "Viimeisimmät hinnat",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Etsi tuote",
 		"SettingsUpdated": "Asetukset päivitetty!",
 		"TodayPriceStat": "Ei hintoja lisätty tänään | {todayPriceNumber} uutta hintaa lisätty tänään | {todayPriceNumber} uusi hinta lisätty tänään!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Kuitti",
 		"GDPR_REQUEST": "GDPR-pyyntö"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Haluatko varmasti poistaa tämän todisteen?",
 		"Delete": "Poista",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Viimeisimmät hinnat"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Etsi"

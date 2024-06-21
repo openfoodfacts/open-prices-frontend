@@ -110,15 +110,18 @@
 		"AddPrice": "crwdns248260:0crwdne248260:0",
 		"AddToOFF": "crwdns247802:0{name}crwdne247802:0",
 		"Country": "crwdns248264:0crwdne248264:0",
+		"Currency": "crwdns249012:0crwdne249012:0",
 		"Language": "crwdns248782:0crwdne248782:0",
 		"Locations": "crwdns248730:0crwdne248730:0",
 		"Date": "crwdns248262:0crwdne248262:0",
+		"Details": "crwdns249000:0crwdne249000:0",
 		"Delete": "crwdns247896:0crwdne247896:0",
 		"Discount": "crwdns248790:0crwdne248790:0",
 		"Edit": "crwdns247898:0crwdne247898:0",
 		"Filter": "crwdns247746:0crwdne247746:0",
 		"FilterProductWithPriceCountHide": "crwdns247818:0crwdne247818:0",
 		"FilterPriceMoreThan30DaysHide": "crwdns247820:0crwdne247820:0",
+		"Image": "crwdns249002:0crwdne249002:0",
 		"Order": "crwdns247748:0crwdne247748:0",
 		"OrderProductUniqueScansDESC": "crwdns247822:0crwdne247822:0",
 		"OrderProductPriceCountDESC": "crwdns247824:0crwdne247824:0",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "crwdns247830:0crwdne247830:0",
 		"SignInOFFAccount": "crwdns246910:0{url}crwdne246910:0",
 		"Source": "crwdns247998:0crwdne247998:0",
+		"Type": "crwdns249004:0crwdne249004:0",
 		"Yes": "crwdns247790:0crwdne247790:0",
 		"No": "crwdns247792:0crwdne247792:0",
 		"Food": "crwdns247988:0crwdne247988:0",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "crwdns246624:0crwdne246624:0",
 		"LatestPrices": "crwdns246904:0crwdne246904:0",
+		"ProofAdd": "crwdns249006:0crwdne249006:0",
 		"SearchProduct": "crwdns246890:0crwdne246890:0",
 		"SettingsUpdated": "crwdns246626:0crwdne246626:0",
 		"TodayPriceStat": "crwdns246906:0{todayPriceNumber}crwdnd246906:0{todayPriceNumber}crwdne246906:0",
@@ -278,6 +283,9 @@
 		"RECEIPT": "crwdns247004:0crwdne247004:0",
 		"GDPR_REQUEST": "crwdns247712:0crwdne247712:0"
 	},
+	"ProofCreate": {
+		"Success": "crwdns249008:0crwdne249008:0"
+	},
 	"ProofDelete": {
 		"Confirmation": "crwdns247944:0crwdne247944:0",
 		"Delete": "crwdns247946:0crwdne247946:0",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "crwdns246840:0crwdne246840:0"
+		},
+		"ProofAddSingle": {
+			"Title": "crwdns249010:0crwdne249010:0"
 		},
 		"Search": {
 			"Title": "crwdns246894:0crwdne246894:0"

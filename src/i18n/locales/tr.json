@@ -110,15 +110,18 @@
 		"AddPrice": "Fiyat ekleyin",
 		"AddToOFF": "{name}'e ekle",
 		"Country": "Ülke",
+		"Currency": "Kur",
 		"Language": "Diller",
 		"Locations": "Konumlar",
 		"Date": "Tarih",
+		"Details": "Details",
 		"Delete": "Sil",
 		"Discount": "İndirim",
 		"Edit": "Düzenle",
 		"Filter": "Filtrele",
 		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
 		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
+		"Image": "Resim",
 		"Order": "Sipariş",
 		"OrderProductUniqueScansDESC": "Tarama sayısı",
 		"OrderProductPriceCountDESC": "Fiyat sayısı",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Fiyat tarihi",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"Source": "Bilgi Kaynağı",
+		"Type": "Tür",
 		"Yes": "Evet",
 		"No": "Hayır",
 		"Food": "Gıda",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Fiyat ekleyin",
 		"LatestPrices": "Son fiyatlar",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Bir ürün arayın",
 		"SettingsUpdated": "Ayarlar güncellendi!",
 		"TodayPriceStat": "Bugün fiyat eklenmedi | Bugün eklenen {todayPriceNumber} yeni fiyat | Bugün {todayPriceNumber} yeni fiyat eklendi!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Makbuz",
 		"GDPR_REQUEST": "GDPR talebi"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Bu bedeli silmek istediğinizden emin misiniz?",
 		"Delete": "Sil",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Son fiyatlar"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Ara"

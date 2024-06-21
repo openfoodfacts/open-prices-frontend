@@ -110,15 +110,18 @@
 		"AddPrice": "Preis hinzufügen",
 		"AddToOFF": "Zu {name} hinzufügen",
 		"Country": "Land",
+		"Currency": "Währung",
 		"Language": "Sprachen",
 		"Locations": "Orte",
 		"Date": "Datum",
+		"Details": "Details",
 		"Delete": "Löschen",
 		"Discount": "Rabatt",
 		"Edit": "Bearbeiten",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Produkte mit Preisen ausblenden",
 		"FilterPriceMoreThan30DaysHide": "Preise ausblenden, die älter als 30 Tage sind",
+		"Image": "Bild",
 		"Order": "Reihenfolge",
 		"OrderProductUniqueScansDESC": "Anzahl der Scans",
 		"OrderProductPriceCountDESC": "Anzahl der Preise",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Preisdatum",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
 		"Source": "Quelle",
+		"Type": "Art",
 		"Yes": "Ja",
 		"No": "Nein",
 		"Food": "Nahrungsmittel",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Preis hinzufügen",
 		"LatestPrices": "Aktuelle Preise",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Produkt suchen",
 		"SettingsUpdated": "Einstellungen aktualisiert!",
 		"TodayPriceStat": "Heute keine Preise hinzugefügt | Heute {todayPriceNumber} neue Preise hinzugefügt | Heute {todayPriceNumber} neue Preise hinzugefügt!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Kassenbon",
 		"GDPR_REQUEST": "DSGVO-Anfrage"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "Möchten Sie diesen Nachweis wirklich löschen?",
 		"Delete": "Löschen",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Aktuelle Preise"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Suchen"

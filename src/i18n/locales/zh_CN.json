@@ -110,15 +110,18 @@
 		"AddPrice": "添加价格",
 		"AddToOFF": "添加到 {name}",
 		"Country": "地區",
+		"Currency": "货币",
 		"Language": "語言",
 		"Locations": "地点",
 		"Date": "日期",
+		"Details": "Details",
 		"Delete": "删除",
 		"Discount": "折扣",
 		"Edit": "編輯",
 		"Filter": "过滤器",
 		"FilterProductWithPriceCountHide": "隐藏带有价格的产品",
 		"FilterPriceMoreThan30DaysHide": "隐藏 30 天前的价格",
+		"Image": "图片",
 		"Order": "命令",
 		"OrderProductUniqueScansDESC": "扫描次数",
 		"OrderProductPriceCountDESC": "价格数量",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "价格日期",
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
 		"Source": "来源",
+		"Type": "類型",
 		"Yes": "是",
 		"No": "否",
 		"Food": "Food",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "添加价格",
 		"LatestPrices": "最新价格",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "搜索产品",
 		"SettingsUpdated": "设置更新！",
 		"TodayPriceStat": "今天没有添加价格 | {todayPriceNumber} 今天添加了新价格 | {todayPriceNumber} 今天添加了新价格！",
@@ -278,6 +283,9 @@
 		"RECEIPT": "收据",
 		"GDPR_REQUEST": "GDPR 要求"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "您确实要删除该证明吗？",
 		"Delete": "删除",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "最新价格"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "搜尋"

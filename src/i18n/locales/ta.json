@@ -110,15 +110,18 @@
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
 		"Country": "Country",
+		"Currency": "Currency",
 		"Language": "Languages",
 		"Locations": "இடங்கள்",
 		"Date": "Date",
+		"Details": "Details",
 		"Delete": "நீக்கு",
 		"Discount": "Discount",
 		"Edit": "திருத்து",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
+		"Image": "Image",
 		"Order": "Order",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -127,6 +130,7 @@
 		"OrderPriceDateDESC": "Price date",
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
 		"Source": "Source",
+		"Type": "Type",
 		"Yes": "ஆம்",
 		"No": "இல்லை",
 		"Food": "Food",
@@ -158,6 +162,7 @@
 	"Home": {
 		"AddPrice": "Add a price",
 		"LatestPrices": "Latest prices",
+		"ProofAdd": "Add a proof",
 		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "இன்று விலை சேர்க்கப்படவில்லை | {todayPriceNumber} புதிய விலைகள் இன்று சேர்க்கப்பட்டுள்ளன | இன்று {todayPriceNumber} புதிய விலை சேர்க்கப்பட்டது!",
@@ -278,6 +283,9 @@
 		"RECEIPT": "Receipt",
 		"GDPR_REQUEST": "GDPR request"
 	},
+	"ProofCreate": {
+		"Success": "Proof created!"
+	},
 	"ProofDelete": {
 		"Confirmation": "இந்தச் சான்றை நிச்சயமாக நீக்க விரும்புகிறீர்களா?",
 		"Delete": "நீக்கு",
@@ -306,6 +314,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Latest prices"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "தேடுக"
