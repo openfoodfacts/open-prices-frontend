@@ -31,7 +31,7 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "קבלות יכולות לכלול מידע אישי, אנו ממליצים להסתיר אותו (להסתיר, לקפל…) טרם צילום התמונה.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "אפשר גם להגדיר את הקבלה לפרטית. הודעות פרטיות תהיינה גלויות לך ולמפקחים.",
 			"Title": "פרטי הוכחה"
 		},
 		"Title": "הוספת מגוון מחירים"
@@ -114,7 +114,7 @@
 		"Language": "שפות",
 		"Locations": "מקומות",
 		"Date": "תאריך",
-		"Details": "Details",
+		"Details": "פרטים",
 		"Delete": "מחיקה",
 		"Discount": "הנחה",
 		"Edit": "עריכה",
@@ -162,7 +162,7 @@
 	"Home": {
 		"AddPrice": "הוספת מחיר",
 		"LatestPrices": "מחירים עדכניים",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "הוספת הוכחה",
 		"SearchProduct": "חיפוש מוצר",
 		"SettingsUpdated": "ההגדרות עודכנו!",
 		"TodayPriceStat": "לא נוספו מחירים היום | מחיר חדש נוסף היום | {todayPriceNumber} מחירים חדשים נוספו היום!",
@@ -284,7 +284,7 @@
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)"
 	},
 	"ProofCreate": {
-		"Success": "Proof created!"
+		"Success": "ההוכחה נוצרה!"
 	},
 	"ProofDelete": {
 		"Confirmation": "למחוק את ההוכחה הזאת?",
@@ -316,7 +316,7 @@
 			"Title": "מחירים עדכניים"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "הוספת הוכחה"
 		},
 		"Search": {
 			"Title": "חיפוש"
