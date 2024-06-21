@@ -118,6 +118,8 @@
 		"Delete": "Delete",
 		"Discount": "Discount",
 		"Edit": "Edit",
+		"EditCurrencies": "Edit currencies",
+		"Save": "Save",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
