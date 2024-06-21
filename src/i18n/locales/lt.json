@@ -114,7 +114,7 @@
 		"Language": "Kalbos",
 		"Locations": "Vietos",
 		"Date": "Data",
-		"Details": "Details",
+		"Details": "Išsamesnė informacija",
 		"Delete": "Ištrinti",
 		"Discount": "Nuolaida",
 		"Edit": "Redaguoti",
@@ -162,7 +162,7 @@
 	"Home": {
 		"AddPrice": "Pridėti kainą",
 		"LatestPrices": "Naujausios kainos",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Pridėti įrodymą",
 		"SearchProduct": "Ieškoti produkto",
 		"SettingsUpdated": "Nuostatos atnaujintos!",
 		"TodayPriceStat": "Šiandien nepridėta jokių kainų | Šiandien pridėta {todayPriceNumber} naujų kainų | Šiandien pridėta {todayPriceNumber} naujos kainos!",
@@ -284,7 +284,7 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofCreate": {
-		"Success": "Proof created!"
+		"Success": "Įrodymas sukurtas!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Ar tikrai norite ištrinti šį įrodymą?",
@@ -316,7 +316,7 @@
 			"Title": "Naujausios kainos"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Pridėti įrodymą"
 		},
 		"Search": {
 			"Title": "Paieška"
