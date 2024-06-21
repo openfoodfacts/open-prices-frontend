@@ -114,7 +114,7 @@
 		"Language": "Мови",
 		"Locations": "Місцезнаходження",
 		"Date": "Date",
-		"Details": "Details",
+		"Details": "Подробиці",
 		"Delete": "Видалити",
 		"Discount": "Знижка",
 		"Edit": "Редагувати",
@@ -162,7 +162,7 @@
 	"Home": {
 		"AddPrice": "Додати ціну",
 		"LatestPrices": "Остання ціна",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Додати доказ",
 		"SearchProduct": "Пошук товару",
 		"SettingsUpdated": "Параметри оновлено!",
 		"TodayPriceStat": "Жодної ціни сьогодні не додано | {todayPriceNumber} нові ціни сьогодні | {todayPriceNumber} нові ціни, додані сьогодні!",
@@ -284,7 +284,7 @@
 		"GDPR_REQUEST": "Запит GDPR"
 	},
 	"ProofCreate": {
-		"Success": "Proof created!"
+		"Success": "Доказ створено!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Ви впевнені, що хочете видалити це підтвердження?",
@@ -316,7 +316,7 @@
 			"Title": "Остання ціна"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Додати доказ"
 		},
 		"Search": {
 			"Title": "Пошук"
