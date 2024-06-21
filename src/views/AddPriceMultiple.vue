@@ -127,7 +127,7 @@
                 </v-item>
               </v-item-group>
             </h3>
-            <PriceInputRow :priceForm="productPriceForm" @filled="pricePriceFormFilled = $event" />
+            <PriceInputRow :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
           </v-card-text>
           <v-divider />
           <v-card-text>
@@ -205,6 +205,7 @@ export default {
         location_osm_id: null,
         location_osm_type: '',
         date: utils.currentDate(),
+        currency: null  // see initPriceMultipleForm
       },
       productPriceForm: {},
       productFormFilled: false,
@@ -228,7 +229,7 @@ export default {
         price_per: null, // see PriceInputRow
         price_is_discounted: false,
         price_without_discount: null,
-        currency: null,  // see PriceInputRow
+        currency: null  // see initNewProductPriceForm
       },
       categoryPricePerList: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
@@ -283,6 +284,7 @@ export default {
        * (init form done in initNewProductPriceForm)
        */
       this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
+      this.addPriceMultipleForm.currency = this.appStore.getUserLastCurrencyUsed
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
       }
@@ -311,8 +313,8 @@ export default {
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))  // deep copy
       this.productPriceForm.mode = this.appStore.user.last_product_mode_used
-      this.productPriceForm.currency = this.appStore.getUserLastCurrencyUsed
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
+      this.productPriceForm.currency = this.addPriceMultipleForm.currency
     },
     createPrice() {
       this.createPriceLoading = true

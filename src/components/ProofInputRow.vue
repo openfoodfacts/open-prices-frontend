@@ -18,7 +18,7 @@
             <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
             <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
           </v-btn>
-          <v-btn v-if="!hideRecentProofChoice" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofsDialog">
+          <v-btn v-if="!hideRecentProofChoice" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="userRecentProofsDialog = true">
             <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
             <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
           </v-btn>
@@ -65,6 +65,24 @@
             :label="$t('Common.Date')"
             type="date"
             :disabled="existingProof"
+            hide-details="auto"
+          />
+        </v-col>
+      </v-row>
+    </v-col>
+    <!-- proof currency -->
+    <v-col cols="12">
+      <h3 class="mb-1">
+        {{ $t('Common.Currency') }}
+      </h3>
+      <v-row>
+        <v-col cols="12" sm="6">
+          <v-select
+            v-model="proofForm.currency"
+            :label="$t('Common.Currency')"
+            :items="userFavoriteCurrencies"
+            :disabled="existingProof"
+            hide-details="auto"
           />
         </v-col>
       </v-row>
@@ -123,7 +141,7 @@ export default {
     },
     proofForm: {
       type: Object,
-      default: () => ({ proof_id: null, date: utils.currentDate() })
+      default: () => ({ proof_id: null, date: utils.currentDate(), currency: null })
     },
     hideRecentProofChoice: {
       type: Boolean,
@@ -145,9 +163,12 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keys = ['proof_id', 'date']
+      let keys = ['proof_id', 'date', 'currency']
       return Object.keys(this.proofForm).filter(k => keys.includes(k)).every(k => !!this.proofForm[k])
     },
+    userFavoriteCurrencies() {
+      return this.appStore.getUserFavoriteCurrencies
+    }
   },
   mounted() {
     if (this.$route.query.proof_id) {
@@ -155,9 +176,6 @@ export default {
     }
   },
   methods: {
-    showUserRecentProofsDialog() {
-      this.userRecentProofsDialog = true
-    },
     handleRecentProofSelected(selectedProof) {
       this.existingProof = true
       this.proofForm.proof_id = selectedProof.id
@@ -165,6 +183,10 @@ export default {
       if (selectedProof.date) {
         this.proofForm.date = selectedProof.date
         this.proofDateSuccessMessage = true
+      }
+      if (selectedProof.currency) {
+        this.proofForm.currency = selectedProof.currency
+        // this.proofCurrencySuccessMessage = true
       }
       this.proofSelectedSuccessMessage = true
     },
@@ -206,7 +228,7 @@ export default {
       })
       .then((proofImageCompressed) => {
         api
-          .createProof(proofImageCompressed, this.proofType, this.proofForm.date)
+          .createProof(proofImageCompressed, this.proofType, this.proofForm.date, this.proofForm.currency)
           .then((data) => {
             this.loading = false
             if (data.id) {
