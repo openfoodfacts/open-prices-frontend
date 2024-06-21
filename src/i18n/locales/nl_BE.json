@@ -162,7 +162,7 @@
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
 		"LatestPrices": "Laatste prijzen",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Voeg een bewijs toe",
 		"SearchProduct": "Zoek naar een product",
 		"SettingsUpdated": "Instellingen bijgewerkt!",
 		"TodayPriceStat": "Geen prijzen toegevoegd vandaag | Vandaag {todayPriceNumber} nieuwe prijzen toegevoegd | Vandaag {todayPriceNumber} nieuwe prijzen toegevoegd!",
@@ -284,7 +284,7 @@
 		"GDPR_REQUEST": "AVG-verzoek"
 	},
 	"ProofCreate": {
-		"Success": "Proof created!"
+		"Success": "Bewijs aangemaakt!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Weet u zeker dat u dit bewijs wilt verwijderen?",
@@ -316,7 +316,7 @@
 			"Title": "Laatste prijzen"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Voeg een bewijs toe"
 		},
 		"Search": {
 			"Title": "Zoeken"
