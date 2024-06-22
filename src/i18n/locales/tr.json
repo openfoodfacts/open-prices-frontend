@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"Source": "Bilgi Kaynağı",
 		"Type": "Tür",
+		"Upload": "Yükle",
 		"Yes": "Evet",
 		"No": "Hayır",
 		"Food": "Gıda",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR talebi"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "Bedel seçildi!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
