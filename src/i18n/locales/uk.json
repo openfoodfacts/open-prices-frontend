@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
 		"Source": "Джерело",
 		"Type": "Тип",
+		"Upload": "Завантажити",
 		"Yes": "Так",
 		"No": "Ні",
 		"Food": "Їжа",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "Запит GDPR"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "Доказ вибрано!",
 		"Success": "Доказ створено!"
 	},
 	"ProofDelete": {
