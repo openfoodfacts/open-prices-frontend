@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}",
 		"Source": "Source",
 		"Type": "Druhy",
+		"Upload": "Nahrať",
 		"Yes": "Áno",
 		"No": "Nie",
 		"Food": "Food",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "žiadosť GDPR"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
