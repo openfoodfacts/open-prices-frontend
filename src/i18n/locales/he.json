@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
 		"Source": "מקור",
 		"Type": "סוג",
+		"Upload": "העלאה",
 		"Yes": "כן",
 		"No": "לא",
 		"Food": "מזון",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)"
 	},
 	"ProofCreate": {
+		"SelectProof": "בחירת הוכחה",
+		"ProofSelected": "נבחרה הוכחה!",
 		"Success": "ההוכחה נוצרה!"
 	},
 	"ProofDelete": {
