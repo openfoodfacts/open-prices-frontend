@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
 		"Source": "Bron",
 		"Type": "Type",
+		"Upload": "Uploaden",
 		"Yes": "Ja",
 		"No": "Nee",
 		"Food": "Voedsel",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "AVG-verzoek"
 	},
 	"ProofCreate": {
+		"SelectProof": "Selecteer een bewijs",
+		"ProofSelected": "Bewijs geselecteerd!",
 		"Success": "Bewijs aangemaakt!"
 	},
 	"ProofDelete": {
