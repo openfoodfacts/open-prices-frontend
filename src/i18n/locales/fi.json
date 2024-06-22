@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
 		"Source": "Lähde",
 		"Type": "Tyyppi",
+		"Upload": "Lähetä",
 		"Yes": "Kyllä",
 		"No": "Ei",
 		"Food": "Ruoka",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR-pyyntö"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "Todiste valittu!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
