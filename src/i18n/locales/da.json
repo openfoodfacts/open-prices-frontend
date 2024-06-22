@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Log på med din {url} konto",
 		"Source": "Kilde",
 		"Type": "Type",
+		"Upload": "Upload",
 		"Yes": "Ja",
 		"No": "Nej",
 		"Food": "Food",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
