@@ -1,52 +1,95 @@
 <template>
   <v-row>
-    <v-col cols="8">
-      <v-btn
-        class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" :loading="createProofLoading"
-        :disabled="createProofLoading" @click.prevent="$refs.proofCamera.click()"
-      >
-        <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
-        <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
-      </v-btn>
-      <v-btn
-        class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" :loading="createProofLoading"
-        :disabled="createProofLoading" @click.prevent="$refs.proofGallery.click()"
-      >
-        <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
-        <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
-      </v-btn>
-      <v-btn v-if="!hideRecentProofChoice" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="showUserRecentProofsDialog">
-        <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
-        <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
-      </v-btn>
-      <v-file-input
-        ref="proofCamera" v-model="proofImage" class="d-none overflow-hidden" capture="environment"
-        accept="image/*" :loading="createProofLoading" @change="newProof('camera')" @click:clear="clearProof"
-      />
-      <v-file-input
-        ref="proofGallery" v-model="proofImage" class="d-none overflow-hidden" accept="image/*, .heic"
-        :loading="createProofLoading" @change="newProof('gallery')" @click:clear="clearProof"
-      />
-      <p v-if="proofFormFilled && !createProofLoading" class="text-green mt-2 mb-2">
-        <i v-if="!proofisSelected">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
-        <i v-if="proofisSelected">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
-      </p>
-      <p v-if="!proofFormFilled && !createProofLoading" class="text-red mt-2 mb-2">
-        <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
-      </p>
+    <v-col v-if="!proofObject" cols="12">
+      <!-- proof image -->
+      <v-row>
+        <v-col cols="8">
+          <v-btn
+            class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" :loading="loading"
+            :disabled="loading" @click.prevent="$refs.proofCamera.click()"
+          >
+            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
+            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
+          </v-btn>
+          <v-btn
+            class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" :loading="loading"
+            :disabled="loading" @click.prevent="$refs.proofGallery.click()"
+          >
+            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
+            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
+          </v-btn>
+          <v-btn v-if="!hideRecentProofChoice" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="userRecentProofsDialog = true">
+            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
+            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
+          </v-btn>
+          <v-file-input
+            ref="proofCamera" v-model="proofFormImage" class="d-none overflow-hidden" capture="environment"
+            accept="image/*" :loading="loading" @change="newProof('camera')" @click:clear="clearProof"
+          />
+          <v-file-input
+            ref="proofGallery" v-model="proofFormImage" class="d-none overflow-hidden" accept="image/*, .heic"
+            :loading="loading" @change="newProof('gallery')" @click:clear="clearProof"
+          />
+          <p v-if="!loading" class="mt-2 mb-2">
+            <i v-if="!proofFormImage" class="text-red">{{ $t('ProofCreate.SelectProof') }}</i>
+            <i v-else class="text-green">{{ $t('ProofCreate.ProofSelected') }}</i>
+          </p>
+        </v-col>
+        <v-col v-if="proofFormImagePreview" cols="4">
+          <v-img :src="proofFormImagePreview" style="max-height:200px" />
+        </v-col>
+      </v-row>
+
+      <!-- proof RECEIPT: warning message -->
+      <v-row v-if="proofType === 'RECEIPT'" class="mt-0">
+        <v-col>
+          <h3 class="mb-1">
+            {{ $t('ProofDetail.Privacy') }}
+          </h3>
+          <p class="text-caption text-warning">
+            <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
+          </p>
+        </v-col>
+      </v-row>
+
+      <!-- proof date & currency -->
+      <v-row>
+        <v-col cols="6">
+          <h3 class="mb-1">
+            {{ $t('Common.Date') }}
+          </h3>
+          <v-text-field
+            v-model="proofForm.date"
+            :label="$t('Common.Date')"
+            type="date"
+            hide-details="auto"
+          />
+        </v-col>
+        <v-col cols="6">
+          <h3 class="mb-1">
+            {{ $t('Common.Currency') }}
+          </h3>
+          <v-select
+            v-model="proofForm.currency"
+            :label="$t('Common.Currency')"
+            :items="userFavoriteCurrencies"
+            hide-details="auto"
+          />
+        </v-col>
+      </v-row>
+
+      <!-- proof upload button -->
+      <v-row v-if="proofFormImage">
+        <v-col>
+          <v-btn color="success" :loading="loading" :disabled="!proofFormFilled" @click="uploadProof">
+            {{ $t('Common.Upload') }}
+          </v-btn>
+        </v-col>
+      </v-row>
     </v-col>
-    <v-col v-if="proofFormFilled" cols="4">
-      <v-img :src="proofImagePreview" style="max-height:200px" />
-    </v-col>
-  </v-row>
-  <v-row v-if="proofType === 'RECEIPT'" class="mt-0">
-    <v-col>
-      <h3 class="mb-1">
-        {{ $t('ProofDetail.Privacy') }}
-      </h3>
-      <p class="text-caption text-warning">
-        <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
-      </p>
+
+    <v-col v-else>
+      <ProofCard :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
     </v-col>
   </v-row>
 
@@ -94,6 +137,7 @@ Compressor.setDefaults({
 export default {
   components: {
     UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue'))
   },
   props: {
     proofType: {
@@ -102,7 +146,7 @@ export default {
     },
     proofForm: {
       type: Object,
-      default: () => ({ proof_id: null, date: utils.currentDate() })
+      default: () => ({ proof_id: null, date: utils.currentDate(), currency: null })
     },
     hideRecentProofChoice: {
       type: Boolean,
@@ -111,22 +155,28 @@ export default {
   },
   data() {
     return {
-      proofImage: null,
-      proofImagePreview: null,
-      createProofLoading: false,
+      proofFormImage: null,
+      proofFormImagePreview: null,
       proofDateSuccessMessage: false,
       proofSuccessMessage: false,
       userRecentProofsDialog: false,
       proofSelectedSuccessMessage: false,
-      proofisSelected: false,
+      proofObject: null,
+      loading: false,
     }
   },
   computed: {
     ...mapStores(useAppStore),
-    proofFormFilled() {
-      let keys = ['proof_id']
+    proofDateCurrencyFormFilled() {
+      let keys = ['date', 'currency']
       return Object.keys(this.proofForm).filter(k => keys.includes(k)).every(k => !!this.proofForm[k])
     },
+    proofFormFilled() {
+      return !!this.proofFormImage && this.proofDateCurrencyFormFilled
+    },
+    userFavoriteCurrencies() {
+      return this.appStore.getUserFavoriteCurrencies
+    }
   },
   mounted() {
     if (this.$route.query.proof_id) {
@@ -134,34 +184,32 @@ export default {
     }
   },
   methods: {
-    showUserRecentProofsDialog() {
-      this.userRecentProofsDialog = true
-    },
     handleRecentProofSelected(selectedProof) {
+      // update proofForm
       this.proofForm.proof_id = selectedProof.id
-      this.proofImagePreview = this.getProofUrl(selectedProof)
       if (selectedProof.date) {
         this.proofForm.date = selectedProof.date
-        this.proofDateSuccessMessage = true
+      }
+      if (selectedProof.currency) {
+        this.proofForm.currency = selectedProof.currency
       }
       this.proofSelectedSuccessMessage = true
-      this.proofisSelected = true
+      // set proofObject
+      this.proofObject = selectedProof
     },
     getProofById(proofId) {
-      this.createProofLoading = true
+      this.loading = true
       api.getProofById(proofId)
         .then(proof => {
           this.handleRecentProofSelected(proof)
-          this.createProofLoading = false
+          this.loading = false
         })
     },
-    getProofUrl(proof) {
-      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
-      return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
-    },
     newProof(source) {
+      this.proofFormImagePreview = this.getLocalProofUrl(this.proofFormImage[0])
       if (source === 'gallery') {
-        ExifReader.load(this.proofImage[0]).then((tags) => {
+        // extract date from image exif
+        ExifReader.load(this.proofFormImage[0]).then((tags) => {
           if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
             // exif DateTimeOriginal format: '2024:01:31 20:23:52'
             const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')
@@ -172,36 +220,35 @@ export default {
           }
         })
       }
-      this.uploadProof()
     },
     uploadProof() {
-      this.createProofLoading = true
+      this.loading = true
       new Promise((resolve, reject) => {
-        new Compressor(this.proofImage[0], {
+        new Compressor(this.proofFormImage[0], {
           success: resolve,
           error: reject
         })
       })
-      .then((proofImageCompressed) => {
+      .then((proofFormImageCompressed) => {
         api
-          .createProof(proofImageCompressed, this.proofType)  // this.proofForm.date
+          .createProof(proofFormImageCompressed, this.proofType, this.proofForm.date, this.proofForm.currency)
           .then((data) => {
-            this.createProofLoading = false
+            this.loading = false
             if (data.id) {
               const store = useAppStore()
               store.addProof(data)
               this.proofForm.proof_id = data.id
-              this.proofImagePreview = this.getProofUrl(data)
+              this.proofObject = data
               this.proofSuccessMessage = true
             } else {
-              alert('Error: server error')
+              alert('Error: server error when creating proof')
               console.log(data)
             }
           })
           .catch((error) => {
-            alert('Error: server error')
+            alert('Error: server error when creating proof')
             console.log(error)
-            this.createProofLoading = false
+            this.loading = false
           })
       })
       .catch((error) => {
@@ -213,10 +260,15 @@ export default {
       // })
     },
     clearProof() {
-      this.proofImage = null
-      this.proofImagePreview = null
+      this.proofFormImage = null
+      this.proofFormImagePreview = null
       this.proofForm.proof_id = null
+      this.proofObject = null
     },
+    getLocalProofUrl(blob) {
+      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
+      return URL.createObjectURL(blob)
+    }
   }
 }
 </script>

@@ -49,12 +49,14 @@ export default {
     .then((response) => response.json())
   },
 
-  createProof(proofImage, type='PRICE_TAG', date=null) {
+  createProof(proofImage, type='PRICE_TAG', date=null, currency=null) {
+    console.log('createProof', proofImage, type, date, currency)
     const store = useAppStore()
     let formData = new FormData()
     formData.append('file', proofImage, proofImage.name)
     formData.append('type', type)
-    formData.append('date', date)
+    formData.append('date', date ? date : '')
+    formData.append('currency', currency ? currency : '')
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams()}`
     return fetch(url, {
       method: 'POST',

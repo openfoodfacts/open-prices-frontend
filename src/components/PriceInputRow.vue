@@ -11,7 +11,7 @@
         :suffix="priceForm.currency"
         @update:model-value="newValue => priceForm.price = fixComma(newValue)"
       >
-        <template #prepend-inner>
+        <template v-if="!hideCurrencyChoice" #prepend-inner>
           <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
           <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true">
         </template>
@@ -54,6 +54,10 @@ export default {
       type: Object,
       default: () => ({ price: null, currency: null, price_is_discounted: false, price_without_discount: null })
     },
+    hideCurrencyChoice: {
+      type: Boolean,
+      default: false
+    }
   },
   emits: ['filled'],
   data() {

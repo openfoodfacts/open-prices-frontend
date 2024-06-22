@@ -19,7 +19,7 @@
         <v-card-text>
           <ProofInputRow :proofType="proofType" :proofForm="addPriceMultipleForm" />
         </v-card-text>
-        <v-overlay v-model="disableProofLocationDateForm" scrim="#E8F5E9" contained persistent />
+        <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
       </v-card>
     </v-col>
 
@@ -29,9 +29,9 @@
         :title="$t('AddPriceSingle.WhereWhen.Title')"
         prepend-icon="mdi-map-marker-outline"
         height="100%"
-        :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+        :style="locationFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
       >
-        <template v-if="locationDateFormFilled" #append>
+        <template v-if="locationFormFilled" #append>
           <v-icon icon="mdi-checkbox-marked-circle" color="success" />
         </template>
         <v-divider />
@@ -56,21 +56,8 @@
           <p v-if="!locationFormFilled" class="text-red mb-2">
             <i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i>
           </p>
-
-          <h3 class="mt-4 mb-1">
-            {{ $t('AddPriceSingle.WhereWhen.Date') }}
-          </h3>
-          <v-row>
-            <v-col cols="12" sm="6">
-              <v-text-field
-                v-model="addPriceMultipleForm.date"
-                :label="$t('AddPriceSingle.WhereWhen.DateLabel')"
-                type="date"
-              />
-            </v-col>
-          </v-row>
         </v-card-text>
-        <v-overlay v-model="disableProofLocationDateForm" scrim="#E8F5E9" contained persistent />
+        <v-overlay v-model="disableLocationForm" scrim="#E8F5E9" contained persistent />
       </v-card>
     </v-col>
 
@@ -140,7 +127,7 @@
                 </v-item>
               </v-item-group>
             </h3>
-            <PriceInputRow :priceForm="productPriceForm" @filled="pricePriceFormFilled = $event" />
+            <PriceInputRow :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
           </v-card-text>
           <v-divider />
           <v-card-text>
@@ -218,6 +205,7 @@ export default {
         location_osm_id: null,
         location_osm_type: '',
         date: utils.currentDate(),
+        currency: null  // see initPriceMultipleForm
       },
       productPriceForm: {},
       productFormFilled: false,
@@ -241,7 +229,7 @@ export default {
         price_per: null, // see PriceInputRow
         price_is_discounted: false,
         price_without_discount: null,
-        currency: null,  // see PriceInputRow
+        currency: null  // see initNewProductPriceForm
       },
       categoryPricePerList: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
@@ -252,7 +240,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keys = ['proof_id']
+      let keys = ['proof_id', 'date', 'currency']
       return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
     recentLocations() {
@@ -262,12 +250,8 @@ export default {
       let keys = ['location_osm_id', 'location_osm_type']
       return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
-    locationDateFormFilled() {
-      let keys = ['location_osm_id', 'location_osm_type', 'date']
-      return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
-    },
     proofLocationFormFilled() {
-      return this.proofFormFilled && this.locationDateFormFilled
+      return this.proofFormFilled && this.locationFormFilled
     },
     pricePerFormFilled() {
       let keys = ['price_per']
@@ -282,8 +266,11 @@ export default {
     formFilled() {
       return this.proofLocationFormFilled && !!this.productPriceUploadedList.length && !Object.keys(this.productPriceForm).length
     },
-    disableProofLocationDateForm() {
-      return this.proofLocationFormFilled && !!this.productPriceUploadedList.length
+    disableProofForm() {
+      return this.proofFormFilled
+    },
+    disableLocationForm() {
+      return !this.proofFormFilled || (this.proofLocationFormFilled && !!this.productPriceUploadedList.length)
     },
     disablePriceAlreadyUploadedCard() {
       // return !!this.productPriceUploadedList.length
@@ -300,6 +287,7 @@ export default {
        * (init form done in initNewProductPriceForm)
        */
       this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
+      this.addPriceMultipleForm.currency = this.appStore.getUserLastCurrencyUsed
       if (this.recentLocations.length) {
         this.setLocationData(this.recentLocations[0])
       }
@@ -328,8 +316,8 @@ export default {
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))  // deep copy
       this.productPriceForm.mode = this.appStore.user.last_product_mode_used
-      this.productPriceForm.currency = this.appStore.getUserLastCurrencyUsed
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
+      this.productPriceForm.currency = this.addPriceMultipleForm.currency
     },
     createPrice() {
       this.createPriceLoading = true
