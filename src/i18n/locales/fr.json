@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
 		"Source": "Source",
 		"Type": "Type",
+		"Upload": "Téléverser",
 		"Yes": "Oui",
 		"No": "Non",
 		"Food": "Nourriture",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "Requête RGPD"
 	},
 	"ProofCreate": {
+		"SelectProof": "Choisir une preuve",
+		"ProofSelected": "Preuve sélectionnée !",
 		"Success": "Preuve créée !"
 	},
 	"ProofDelete": {
