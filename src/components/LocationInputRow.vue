@@ -47,6 +47,10 @@ export default {
       type: Object,
       default: () => ({ location_osm_id: null, location_osm_type: null })
     },
+    maxRecentLocations: {
+      type: Number,
+      default: 3
+    }
   },
   data() {
     return {
@@ -56,7 +60,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     recentLocations() {
-      return this.appStore.getRecentLocations(3)
+      return this.appStore.getRecentLocations(this.maxRecentLocations)
     },
     locationFormFilled() {
       let keys = ['location_osm_id', 'location_osm_type']

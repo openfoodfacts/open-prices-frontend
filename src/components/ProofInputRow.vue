@@ -52,6 +52,8 @@
         </v-col>
       </v-row>
 
+      <LocationInputRow :locationForm="proofForm" />
+
       <!-- proof date & currency -->
       <v-row>
         <v-col cols="6">
@@ -137,7 +139,8 @@ Compressor.setDefaults({
 export default {
   components: {
     UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
-    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue'))
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
   },
   props: {
     proofType: {
@@ -146,7 +149,7 @@ export default {
     },
     proofForm: {
       type: Object,
-      default: () => ({ proof_id: null, date: utils.currentDate(), currency: null })
+      default: () => ({ proof_id: null, location_osm_id: null, location_osm_type: null, date: utils.currentDate(), currency: null })
     },
     hideRecentProofChoice: {
       type: Boolean,
@@ -231,7 +234,7 @@ export default {
       })
       .then((proofFormImageCompressed) => {
         api
-          .createProof(proofFormImageCompressed, this.proofType, this.proofForm.date, this.proofForm.currency)
+          .createProof(proofFormImageCompressed, this.proofType, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency)
           .then((data) => {
             this.loading = false
             if (data.id) {
