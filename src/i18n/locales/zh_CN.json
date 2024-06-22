@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
 		"Source": "来源",
 		"Type": "類型",
+		"Upload": "上传",
 		"Yes": "是",
 		"No": "否",
 		"Food": "Food",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR 要求"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "证明已选！",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
