@@ -30,18 +30,17 @@
             ref="proofGallery" v-model="proofImage" class="d-none overflow-hidden" accept="image/*, .heic"
             :loading="loading" @change="newProof('gallery')" @click:clear="clearProof"
           />
-          <p v-if="proofFormFilled && !loading" class="text-green mt-2 mb-2">
-            <i v-if="!existingProof">{{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}</i>
-            <i v-if="existingProof">{{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}</i>
-          </p>
-          <p v-if="!proofFormFilled && !loading" class="text-red mt-2 mb-2">
-            <i>{{ $t('AddPriceSingle.PriceDetails.UploadProof') }}</i>
+          <p v-if="!loading" class="mt-2 mb-2">
+            <i v-if="!proofImage" class="text-red">{{ $t('ProofCreate.SelectProof') }}</i>
+            <i v-else class="text-green">{{ $t('ProofCreate.ProofSelected') }}</i>
           </p>
         </v-col>
-        <v-col v-if="proofFormFilled" cols="4">
+        <v-col v-if="proofImagePreview" cols="4">
           <v-img :src="proofImagePreview" style="max-height:200px" />
         </v-col>
       </v-row>
+
+      <!-- proof RECEIPT: warning message -->
       <v-row v-if="proofType === 'RECEIPT'" class="mt-0">
         <v-col>
           <h3 class="mb-1">
@@ -63,7 +62,6 @@
             v-model="proofForm.date"
             :label="$t('Common.Date')"
             type="date"
-            :disabled="!proofForm.proof_id || existingProof"
             hide-details="auto"
           />
         </v-col>
@@ -75,9 +73,17 @@
             v-model="proofForm.currency"
             :label="$t('Common.Currency')"
             :items="userFavoriteCurrencies"
-            :disabled="!proofForm.proof_id || existingProof"
             hide-details="auto"
           />
+        </v-col>
+      </v-row>
+
+      <!-- proof upload button -->
+      <v-row v-if="proofImage">
+        <v-col>
+          <v-btn color="success" :loading="loading" :disabled="!proofFormFilled" @click="uploadProof">
+            {{ $t('Common.Upload') }}
+          </v-btn>
         </v-col>
       </v-row>
     </v-col>
@@ -144,7 +150,6 @@ export default {
   },
   data() {
     return {
-      existingProof: false,
       proofImage: null,
       proofImagePreview: null,
       proofDateSuccessMessage: false,
@@ -156,23 +161,16 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    proofFormFilled() {
-      let keys = ['proof_id', 'date', 'currency']
+    proofDateCurrencyFormFilled() {
+      let keys = ['date', 'currency']
       return Object.keys(this.proofForm).filter(k => keys.includes(k)).every(k => !!this.proofForm[k])
+    },
+    proofFormFilled() {
+      return !!this.proofImage && this.proofDateCurrencyFormFilled
     },
     userFavoriteCurrencies() {
       return this.appStore.getUserFavoriteCurrencies
     }
-  },
-  watch: {
-    'proofForm.date'(newProofDate, oldProofDate) {
-      console.log('watch proofForm.date', newProofDate, oldProofDate)
-      this.updateProof()
-    },
-    'proofForm.currency'(newProofCurrency, oldProofCurrency) {
-      console.log('watch proofForm.currency', newProofCurrency, oldProofCurrency)
-      this.updateProof()
-    },
   },
   mounted() {
     if (this.$route.query.proof_id) {
@@ -181,7 +179,6 @@ export default {
   },
   methods: {
     handleRecentProofSelected(selectedProof) {
-      this.existingProof = true
       this.proofForm.proof_id = selectedProof.id
       this.proofImagePreview = this.getProofUrl(selectedProof)
       if (selectedProof.date) {
@@ -207,7 +204,7 @@ export default {
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
     },
     newProof(source) {
-      this.existingProof = false
+      this.proofImagePreview = URL.createObjectURL(this.proofImage[0])
       if (source === 'gallery') {
         // extract date from image exif
         ExifReader.load(this.proofImage[0]).then((tags) => {
@@ -221,7 +218,6 @@ export default {
           }
         })
       }
-      this.uploadProof()
     },
     uploadProof() {
       console.log(this.proofForm)
@@ -262,21 +258,7 @@ export default {
       //   console.log('Compress complete')
       // })
     },
-    updateProof() {
-      this.loading = true
-      api.updateProof(this.proofForm.proof_id, this.proofForm)
-        .then((data) => {  // eslint-disable-line no-unused-vars
-          // nothing to do ?
-        })
-        .catch(err => {  // eslint-disable-line no-unused-vars
-          alert('Error: server error when updating proof')
-        })
-        .finally(() => {
-          this.loading = false
-        })
-    },
     clearProof() {
-      this.existingProof = false
       this.proofImage = null
       this.proofImagePreview = null
       this.proofForm.proof_id = null

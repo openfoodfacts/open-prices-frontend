@@ -19,7 +19,7 @@
         <v-card-text>
           <ProofInputRow :proofType="proofType" :proofForm="addPriceMultipleForm" />
         </v-card-text>
-        <v-overlay v-model="disableProofLocationForm" scrim="#E8F5E9" contained persistent />
+        <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
       </v-card>
     </v-col>
 
@@ -57,7 +57,7 @@
             <i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i>
           </p>
         </v-card-text>
-        <v-overlay v-model="disableProofLocationForm" scrim="#E8F5E9" contained persistent />
+        <v-overlay v-model="disableLocationForm" scrim="#E8F5E9" contained persistent />
       </v-card>
     </v-col>
 
@@ -240,7 +240,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keys = ['proof_id', 'date']
+      let keys = ['proof_id', 'date', 'currency']
       return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
     recentLocations() {
@@ -266,8 +266,11 @@ export default {
     formFilled() {
       return this.proofLocationFormFilled && !!this.productPriceUploadedList.length && !Object.keys(this.productPriceForm).length
     },
-    disableProofLocationForm() {
-      return this.proofLocationFormFilled && !!this.productPriceUploadedList.length
+    disableProofForm() {
+      return this.proofFormFilled
+    },
+    disableLocationForm() {
+      return !this.proofFormFilled || (this.proofLocationFormFilled && !!this.productPriceUploadedList.length)
     },
     disablePriceAlreadyUploadedCard() {
       // return !!this.productPriceUploadedList.length
