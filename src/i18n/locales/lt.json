@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"Source": "Šaltinis",
 		"Type": "Tipas",
+		"Upload": "Įkelti",
 		"Yes": "Taip",
 		"No": "Ne",
 		"Food": "Food",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "Proof selected!",
 		"Success": "Įrodymas sukurtas!"
 	},
 	"ProofDelete": {
