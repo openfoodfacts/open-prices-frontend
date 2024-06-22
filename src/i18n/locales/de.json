@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
 		"Source": "Quelle",
 		"Type": "Art",
+		"Upload": "Hochladen",
 		"Yes": "Ja",
 		"No": "Nein",
 		"Food": "Nahrungsmittel",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "DSGVO-Anfrage"
 	},
 	"ProofCreate": {
+		"SelectProof": "Wählen Sie einen Nachweis",
+		"ProofSelected": "Nachweis ausgewählt!",
 		"Success": "Nachweis erstellt!"
 	},
 	"ProofDelete": {
