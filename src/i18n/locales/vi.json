@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Source": "Nguồn",
 		"Type": "Loại",
+		"Upload": "Upload",
 		"Yes": "Có",
 		"No": "Không",
 		"Food": "Food",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
