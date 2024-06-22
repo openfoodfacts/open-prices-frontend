@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "crwdns246910:0{url}crwdne246910:0",
 		"Source": "crwdns247998:0crwdne247998:0",
 		"Type": "crwdns249004:0crwdne249004:0",
+		"Upload": "crwdns249046:0crwdne249046:0",
 		"Yes": "crwdns247790:0crwdne247790:0",
 		"No": "crwdns247792:0crwdne247792:0",
 		"Food": "crwdns247988:0crwdne247988:0",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "crwdns247712:0crwdne247712:0"
 	},
 	"ProofCreate": {
+		"SelectProof": "crwdns249048:0crwdne249048:0",
+		"ProofSelected": "crwdns249050:0crwdne249050:0",
 		"Success": "crwdns249008:0crwdne249008:0"
 	},
 	"ProofDelete": {
