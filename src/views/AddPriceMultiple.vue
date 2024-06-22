@@ -4,7 +4,7 @@
   </h1>
 
   <v-row>
-    <!-- Step 1: proof -->
+    <!-- Step 1: proof (image + date + currency) -->
     <v-col cols="12" md="6" lg="4">
       <v-card
         :title="(proofType === 'RECEIPT') ? $t('AddPriceHome.ReceiptMode.Title') : $t('AddPriceMultiple.ProofDetails.Title')"
@@ -23,7 +23,7 @@
       </v-card>
     </v-col>
 
-    <!-- Step 2: location & date -->
+    <!-- Step 2: location -->
     <v-col cols="12" md="6" lg="4">
       <v-card
         :title="$t('AddPriceSingle.WhereWhen.Title')"
@@ -36,26 +36,7 @@
         </template>
         <v-divider />
         <v-card-text>
-          <h3 class="mb-1">
-            {{ $t('AddPriceSingle.WhereWhen.Location') }}
-          </h3>
-          <v-chip
-            v-for="location in recentLocations"
-            :key="getLocationUniqueID(location)"
-            class="mb-2"
-            :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
-            @click="setLocationData(location)"
-          >
-            <v-icon start :icon="isSelectedLocation(location) ? 'mdi-check-circle-outline' : 'mdi-history'" :color="isSelectedLocation(location) ? 'green' : ''" />
-            {{ getLocationTitle(location, true, true, true) }}
-          </v-chip>
-          <br v-if="recentLocations.length">
-          <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelectorDialog">
-            {{ $t('AddPriceSingle.WhereWhen.Find') }}
-          </v-btn>
-          <p v-if="!locationFormFilled" class="text-red mb-2">
-            <i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i>
-          </p>
+          <LocationInputRow :locationForm="addPriceMultipleForm" />
         </v-card-text>
         <v-overlay v-model="disableLocationForm" scrim="#E8F5E9" contained persistent />
       </v-card>
@@ -172,13 +153,6 @@
   >
     {{ $t('AddPriceMultiple.ProductPriceDetails.PriceUploaded') }}
   </v-snackbar>
-
-  <LocationSelectorDialog
-    v-if="locationSelectorDialog"
-    v-model="locationSelectorDialog"
-    @location="setLocationData($event)"
-    @close="locationSelectorDialog = false"
-  />
 </template>
 
 <script>
@@ -190,8 +164,8 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
     ProofInputRow: defineAsyncComponent(() => import('../components/ProofInputRow.vue')),
+    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
@@ -214,8 +188,6 @@ export default {
       priceSuccessMessage: false,
       // proof data
       proofDateSuccessMessage: false,
-      // location data
-      locationSelectorDialog: false,
       // product price data
       productPriceUploadedList: [],
       productPriceNew: {
@@ -242,9 +214,6 @@ export default {
     proofFormFilled() {
       let keys = ['proof_id', 'date', 'currency']
       return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
-    },
-    recentLocations() {
-      return this.appStore.getRecentLocations(3)
     },
     locationFormFilled() {
       let keys = ['location_osm_id', 'location_osm_type']
@@ -283,31 +252,11 @@ export default {
   methods: {
     initPriceMultipleForm() {
       /**
-       * init form config (product mode, last locations)
+       * init form config (product mode, currency)
        * (init form done in initNewProductPriceForm)
        */
       this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
       this.addPriceMultipleForm.currency = this.appStore.getUserLastCurrencyUsed
-      if (this.recentLocations.length) {
-        this.setLocationData(this.recentLocations[0])
-      }
-    },
-    showLocationSelectorDialog() {
-      this.locationSelectorDialog = true
-    },
-    getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
-      return utils.getLocationTitle(location, withName, withRoad, withCity)
-    },
-    getLocationUniqueID(location) {
-      return utils.getLocationUniqueID(location)
-    },
-    setLocationData(location) {
-      this.appStore.addRecentLocation(location)
-      this.addPriceMultipleForm.location_osm_id = utils.getLocationID(location)
-      this.addPriceMultipleForm.location_osm_type = utils.getLocationType(location)
-    },
-    isSelectedLocation(location) {
-      return (this.addPriceMultipleForm.location_osm_id === utils.getLocationID(location)) && (this.addPriceMultipleForm.location_osm_type === utils.getLocationType(location))
     },
     clearProductPriceForm() {
       this.productPriceForm = {}

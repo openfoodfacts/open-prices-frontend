@@ -68,26 +68,7 @@
           </template>
           <v-divider />
           <v-card-text>
-            <h3 class="mb-1">
-              {{ $t('AddPriceSingle.WhereWhen.Location') }}
-            </h3>
-            <v-chip
-              v-for="location in recentLocations"
-              :key="getLocationUniqueID(location)"
-              class="mb-2"
-              :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
-              @click="setLocationData(location)"
-            >
-              <v-icon start :icon="isSelectedLocation(location) ? 'mdi-check-circle-outline' : 'mdi-history'" :color="isSelectedLocation(location) ? 'green' : ''" />
-              {{ getLocationTitle(location, true, true, true) }}
-            </v-chip>
-            <br v-if="recentLocations.length">
-            <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="showLocationSelectorDialog">
-              {{ $t('AddPriceSingle.WhereWhen.Find') }}
-            </v-btn>
-            <p v-if="!locationFormFilled" class="text-red mb-2">
-              <i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i>
-            </p>
+            <LocationInputRow :locationForm="addPriceSingleForm" />
 
             <h3 class="mt-4 mb-1">
               {{ $t('AddPriceSingle.WhereWhen.Date') }}
@@ -127,13 +108,6 @@
   >
     {{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}
   </v-snackbar>
-
-  <LocationSelectorDialog
-    v-if="locationSelectorDialog"
-    v-model="locationSelectorDialog"
-    @location="setLocationData($event)"
-    @close="locationSelectorDialog = false"
-  />
 </template>
 
 <script>
@@ -148,7 +122,7 @@ export default {
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     ProofInputRow: defineAsyncComponent(() => import('../components/ProofInputRow.vue')),
-    LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
+    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
   },
   data() {
     return {
@@ -174,8 +148,6 @@ export default {
       pricePriceFormFilled: false,
       productFormFilled: false,
       createPriceLoading: false,
-      // location data
-      locationSelectorDialog: false,
       // proof data
       proofDateSuccessMessage: false,
       categoryPricePerList: [
@@ -199,9 +171,6 @@ export default {
     },
     priceProofFormFilled() {
       return this.priceFormFilled && this.proofFormFilled
-    },
-    recentLocations() {
-      return this.appStore.getRecentLocations(3)
     },
     locationFormFilled() {
       let keys = ['location_osm_id', 'location_osm_type']
@@ -236,9 +205,6 @@ export default {
       /**
        * init form config
        */
-      if (this.recentLocations.length) {
-        this.setLocationData(this.recentLocations[0])
-      }
       this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.addPriceSingleForm.currency = this.appStore.getUserLastCurrencyUsed
     },
@@ -260,23 +226,6 @@ export default {
         .catch((error) => {  // eslint-disable-line no-unused-vars
           alert('Error: Open Prices server error')
         })
-    },
-    showLocationSelectorDialog() {
-      this.locationSelectorDialog = true
-    },
-    getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
-      return utils.getLocationTitle(location, withName, withRoad, withCity)
-    },
-    getLocationUniqueID(location) {
-      return utils.getLocationUniqueID(location)
-    },
-    setLocationData(location) {
-      this.appStore.addRecentLocation(location)
-      this.addPriceSingleForm.location_osm_id = utils.getLocationID(location)
-      this.addPriceSingleForm.location_osm_type = utils.getLocationType(location)
-    },
-    isSelectedLocation(location) {
-      return (this.addPriceSingleForm.location_osm_id === utils.getLocationID(location)) && (this.addPriceSingleForm.location_osm_type === utils.getLocationType(location))
     },
     createPrice() {
       this.createPriceLoading = true
