@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
 		"Source": "Fonte",
 		"Type": "Tipo",
+		"Upload": "Carica",
 		"Yes": "Sì",
 		"No": "No",
 		"Food": "Cibo",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "Richiesta RGPD"
 	},
 	"ProofCreate": {
+		"SelectProof": "Seleziona una prova",
+		"ProofSelected": "Prova selezionata!",
 		"Success": "Prova creata!"
 	},
 	"ProofDelete": {
