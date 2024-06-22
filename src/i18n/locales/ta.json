@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
 		"Source": "Source",
 		"Type": "Type",
+		"Upload": "Upload",
 		"Yes": "ஆம்",
 		"No": "இல்லை",
 		"Food": "Food",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
