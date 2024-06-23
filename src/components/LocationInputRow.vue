@@ -47,21 +47,33 @@ export default {
       type: Object,
       default: () => ({ location_osm_id: null, location_osm_type: null })
     },
+    maxRecentLocations: {
+      type: Number,
+      default: 3
+    }
   },
+  emits: ['location'],
   data() {
     return {
       locationSelectorDialog: false,
+      locationObject: null,
+      loading: false,
     }
   },
   computed: {
     ...mapStores(useAppStore),
     recentLocations() {
-      return this.appStore.getRecentLocations(3)
+      return this.appStore.getRecentLocations(this.maxRecentLocations)
     },
     locationFormFilled() {
       let keys = ['location_osm_id', 'location_osm_type']
       return Object.keys(this.locationForm).filter(k => keys.includes(k)).every(k => !!this.locationForm[k])
     },
+  },
+  watch: {
+    locationObject(newLocationObject, oldLocationObject) {  // eslint-disable-line no-unused-vars
+      this.$emit('location', newLocationObject)
+    }
   },
   mounted() {
     this.initLocationForm()
@@ -83,11 +95,14 @@ export default {
     },
     setLocationData(location) {
       this.appStore.addRecentLocation(location)
+      // update locationForm
       this.locationForm.location_osm_id = utils.getLocationID(location)
       this.locationForm.location_osm_type = utils.getLocationType(location)
+      // set locationObject
+      this.locationObject = location
     },
     isSelectedLocation(location) {
-      return (this.locationForm.location_osm_id === utils.getLocationID(location)) && (this.locationForm.location_osm_type === utils.getLocationType(location))
+      return utils.buildLocationUniqueId(this.locationForm.location_osm_id, this.locationForm.location_osm_type) === utils.getLocationUniqueID(location)
     },
   }
 }

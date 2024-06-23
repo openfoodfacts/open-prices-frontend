@@ -4,8 +4,8 @@
   </h1>
 
   <v-row>
-    <!-- Step 1: proof (image + date + currency) -->
-    <v-col cols="12" md="6" lg="4">
+    <!-- Step 1: proof (image, location, date & currency) -->
+    <v-col cols="12" md="6">
       <v-card
         :title="(proofType === 'RECEIPT') ? $t('AddPriceHome.ReceiptMode.Title') : $t('AddPriceMultiple.ProofDetails.Title')"
         :prepend-icon="(proofType === 'RECEIPT') ? 'mdi-receipt-text-outline' : 'mdi-library-shelves'"
@@ -23,27 +23,8 @@
       </v-card>
     </v-col>
 
-    <!-- Step 2: location -->
-    <v-col cols="12" md="6" lg="4">
-      <v-card
-        :title="$t('AddPriceSingle.WhereWhen.Title')"
-        prepend-icon="mdi-map-marker-outline"
-        height="100%"
-        :style="locationFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
-      >
-        <template v-if="locationFormFilled" #append>
-          <v-icon icon="mdi-checkbox-marked-circle" color="success" />
-        </template>
-        <v-divider />
-        <v-card-text>
-          <LocationInputRow :locationForm="addPriceMultipleForm" />
-        </v-card-text>
-        <v-overlay v-model="disableLocationForm" scrim="#E8F5E9" contained persistent />
-      </v-card>
-    </v-col>
-
-    <!-- Step 3a: product prices already uploaded -->
-    <v-col cols="12" md="6" lg="4">
+    <!-- Step 2a: product prices already uploaded -->
+    <v-col cols="12" md="6">
       <v-card
         prepend-icon="mdi-tag-check-outline"
         height="100%"
@@ -71,15 +52,15 @@
       </v-card>
     </v-col>
 
-    <!-- Step 3b: new product price form -->
-    <v-col cols="12" md="6" lg="4">
+    <!-- Step 2b: new product price form -->
+    <v-col cols="12" md="6">
       <v-btn
         v-if="!Object.keys(productPriceForm).length && !productPriceUploadedList.length"
         class="mr-2"
         prepend-icon="mdi-plus"
         color="primary"
         :loading="createPriceLoading"
-        :disabled="!proofLocationFormFilled"
+        :disabled="!proofFormFilled"
         @click="initNewProductPriceForm"
       >
         {{ $t('AddPriceMultiple.ProductPriceDetails.Add') }}
@@ -131,7 +112,7 @@
       <v-btn
         type="submit"
         :loading="createPriceLoading"
-        :disabled="!proofLocationFormFilled || !productPriceUploadedList.length"
+        :disabled="!proofFormFilled || !productPriceUploadedList.length"
         @click="done"
       >
         {{ $t('AddPriceMultiple.Done') }}
@@ -165,7 +146,6 @@ import utils from '../utils.js'
 export default {
   components: {
     ProofInputRow: defineAsyncComponent(() => import('../components/ProofInputRow.vue')),
-    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
@@ -212,15 +192,8 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keys = ['proof_id', 'date', 'currency']
+      let keys = ['proof_id', 'location_osm_id', 'location_osm_type', 'date', 'currency']
       return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
-    },
-    locationFormFilled() {
-      let keys = ['location_osm_id', 'location_osm_type']
-      return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
-    },
-    proofLocationFormFilled() {
-      return this.proofFormFilled && this.locationFormFilled
     },
     pricePerFormFilled() {
       let keys = ['price_per']
@@ -233,13 +206,10 @@ export default {
       return this.productFormFilled && this.priceFormFilled
     },
     formFilled() {
-      return this.proofLocationFormFilled && !!this.productPriceUploadedList.length && !Object.keys(this.productPriceForm).length
+      return this.proofFormFilled && !!this.productPriceUploadedList.length && !Object.keys(this.productPriceForm).length
     },
     disableProofForm() {
       return this.proofFormFilled
-    },
-    disableLocationForm() {
-      return !this.proofFormFilled || (this.proofLocationFormFilled && !!this.productPriceUploadedList.length)
     },
     disablePriceAlreadyUploadedCard() {
       // return !!this.productPriceUploadedList.length

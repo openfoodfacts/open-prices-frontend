@@ -68,8 +68,8 @@ export default {
       }
     },
     getProofUrl(proof) {
-      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
-      // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'
+      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'  // PRICE_TAG
+      // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'  // RECEIPT
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
     },
     close() {

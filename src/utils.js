@@ -231,9 +231,16 @@ function getLocationType(locationObject) {
   return locationObject.osm_type.toUpperCase()
 }
 
+function buildLocationUniqueId(locationId, locationType) {
+  // examples: N12345, W12345, R12345
+  if (locationId && locationType) {
+    return `${locationType[0]}${locationId.toString()}`
+  }
+  return null
+}
+
 function getLocationUniqueID(locationObject) {
-  // examples: N12345
-  return `${getLocationType(locationObject)[0]}${getLocationID(locationObject).toString()}`
+  return buildLocationUniqueId(getLocationID(locationObject), getLocationType(locationObject))
 }
 
 function getLocationTag(locationObject) {
@@ -297,6 +304,7 @@ export default {
   getLocationTitle,
   getLocationID,
   getLocationType,
+  buildLocationUniqueId,
   getLocationUniqueID,
   getLocationTag,
   getLocationLatLng,

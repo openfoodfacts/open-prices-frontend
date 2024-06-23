@@ -52,6 +52,8 @@
         </v-col>
       </v-row>
 
+      <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
+
       <!-- proof date & currency -->
       <v-row>
         <v-col cols="6">
@@ -137,7 +139,8 @@ Compressor.setDefaults({
 export default {
   components: {
     UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
-    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue'))
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
   },
   props: {
     proofType: {
@@ -146,13 +149,14 @@ export default {
     },
     proofForm: {
       type: Object,
-      default: () => ({ proof_id: null, date: utils.currentDate(), currency: null })
+      default: () => ({ proof_id: null, location_osm_id: null, location_osm_type: null, date: utils.currentDate(), currency: null })
     },
     hideRecentProofChoice: {
       type: Boolean,
       default: false
     },
   },
+  emits: ['proof'],
   data() {
     return {
       proofFormImage: null,
@@ -162,6 +166,7 @@ export default {
       userRecentProofsDialog: false,
       proofSelectedSuccessMessage: false,
       proofObject: null,
+      locationObject: null,
       loading: false,
     }
   },
@@ -176,6 +181,11 @@ export default {
     },
     userFavoriteCurrencies() {
       return this.appStore.getUserFavoriteCurrencies
+    }
+  },
+  watch: {
+    proofObject(newProofObject, oldProofObject) {  // eslint-disable-line no-unused-vars
+      this.$emit('proof', newProofObject)
     }
   },
   mounted() {
@@ -231,14 +241,14 @@ export default {
       })
       .then((proofFormImageCompressed) => {
         api
-          .createProof(proofFormImageCompressed, this.proofType, this.proofForm.date, this.proofForm.currency)
+          .createProof(proofFormImageCompressed, this.proofType, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency)
           .then((data) => {
             this.loading = false
             if (data.id) {
               const store = useAppStore()
               store.addProof(data)
               this.proofForm.proof_id = data.id
-              this.proofObject = data
+              this.proofObject = {...data, ...{location: this.locationObject}}
               this.proofSuccessMessage = true
             } else {
               alert('Error: server error when creating proof')
@@ -266,7 +276,8 @@ export default {
       this.proofObject = null
     },
     getLocalProofUrl(blob) {
-      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'
+      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'  // PRICE_TAG
+      // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'  // RECEIPT
       return URL.createObjectURL(blob)
     }
   }

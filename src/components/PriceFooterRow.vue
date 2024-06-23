@@ -1,7 +1,7 @@
 <template>
   <v-row style="margin-top:0;">
     <v-col :cols="userIsPriceOwner ? '11' : '12'">
-      <PriceLocationChip v-if="!hidePriceLocation" class="mr-1" :price="price" :readonly="readonly" />
+      <LocationChip v-if="!hidePriceLocation" class="mr-1" :location="price.location" :locationId="price.location_id" :readonly="readonly" />
       <PriceOwnerChip class="mr-1" :price="price" :readonly="readonly" />
       <RelativeDateTimeChip class="mr-1" :dateTime="price.created" />
       <PriceProof v-if="price.proof && !hidePriceProof" :proof="price.proof" />
@@ -18,7 +18,7 @@ import { useAppStore } from '../store'
 
 export default {
   components: {
-    PriceLocationChip: defineAsyncComponent(() => import('../components/PriceLocationChip.vue')),
+    LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     PriceOwnerChip: defineAsyncComponent(() => import('../components/PriceOwnerChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     PriceProof: defineAsyncComponent(() => import('../components/PriceProof.vue')),
