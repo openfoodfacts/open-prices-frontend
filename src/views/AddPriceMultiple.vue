@@ -17,7 +17,7 @@
         </template>
         <v-divider />
         <v-card-text>
-          <ProofInputRow :proofType="proofType" :proofForm="addPriceMultipleForm" />
+          <ProofInputRow :proofType="proofType" :proofForm="addPriceMultipleForm" @proof="proofObject = $event" />
         </v-card-text>
         <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
       </v-card>
@@ -31,9 +31,9 @@
         style="border: 1px solid #4CAF50"
       >
         <template #title>
-          <i18n-t keypath="AddPriceMultiple.ProductPriceDetails.AlreadyUploaded" :plural="productPriceUploadedList.length" tag="span">
+          <i18n-t keypath="AddPriceMultiple.ProductPriceDetails.AlreadyUploaded" :plural="productPriceUploadedCount" tag="span">
             <template #priceAlreadyUploadedNumber>
-              <span>{{ productPriceUploadedList.length }}</span>
+              <span>{{ productPriceUploadedCount }}</span>
             </template>
           </i18n-t>
         </template>
@@ -121,13 +121,6 @@
   </v-row>
 
   <v-snackbar
-    v-model="proofDateSuccessMessage"
-    color="info"
-    :timeout="2000"
-  >
-    {{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}
-  </v-snackbar>
-  <v-snackbar
     v-model="priceSuccessMessage"
     color="success"
     :timeout="2000"
@@ -167,7 +160,7 @@ export default {
       createPriceLoading: false,
       priceSuccessMessage: false,
       // proof data
-      proofDateSuccessMessage: false,
+      proofObject: null,
       // product price data
       productPriceUploadedList: [],
       productPriceNew: {
@@ -214,6 +207,9 @@ export default {
     disablePriceAlreadyUploadedCard() {
       // return !!this.productPriceUploadedList.length
       return true
+    },
+    productPriceUploadedCount() {
+      return (this.proofObject ? this.proofObject.price_count : 0) + this.productPriceUploadedList.length
     }
   },
   mounted() {
