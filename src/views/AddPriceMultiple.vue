@@ -4,7 +4,7 @@
   </h1>
 
   <v-row>
-    <!-- Step 1: proof (image + date + currency) -->
+    <!-- Step 1: proof (image, location, date & currency) -->
     <v-col cols="12" md="6">
       <v-card
         :title="(proofType === 'RECEIPT') ? $t('AddPriceHome.ReceiptMode.Title') : $t('AddPriceMultiple.ProofDetails.Title')"

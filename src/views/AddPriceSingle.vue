@@ -23,15 +23,33 @@
         </v-card>
       </v-col>
 
-      <!-- Step 2: price & proof -->
+      <!-- Step 2: proof (image, location, date & currency) -->
+      <v-col cols="12" md="6" lg="4">
+        <v-card
+          :title="$t('AddPriceMultiple.ProofDetails.Title')"
+          prepend-icon="mdi-image"
+          height="100%"
+          :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+        >
+          <template v-if="proofFormFilled" #append>
+            <v-icon icon="mdi-checkbox-marked-circle" color="success" />
+          </template>
+          <v-divider />
+          <v-card-text>
+            <ProofInputRow :proofType="proofType" :proofForm="addPriceSingleForm" />
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <!-- Step 3: price -->
       <v-col cols="12" md="6" lg="4">
         <v-card
           :title="$t('AddPriceSingle.PriceDetails.Title')"
           prepend-icon="mdi-tag-outline"
           height="100%"
-          :style="priceProofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+          :style="priceFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
         >
-          <template v-if="priceProofFormFilled" #append>
+          <template v-if="priceFormFilled" #append>
             <v-icon icon="mdi-checkbox-marked-circle" color="success" />
           </template>
           <v-divider />
@@ -50,38 +68,6 @@
             <h3 class="mt-4 mb-1">
               {{ $t('AddPriceSingle.PriceDetails.Proof') }}
             </h3>
-            <ProofInputRow :proofType="proofType" :proofForm="addPriceSingleForm" />
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-      <!-- Step 3: location & date -->
-      <v-col cols="12" md="6" lg="4">
-        <v-card
-          :title="$t('AddPriceSingle.WhereWhen.Title')"
-          prepend-icon="mdi-map-marker-outline"
-          height="100%"
-          :style="locationDateFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
-        >
-          <template v-if="locationDateFormFilled" #append>
-            <v-icon icon="mdi-checkbox-marked-circle" color="success" />
-          </template>
-          <v-divider />
-          <v-card-text>
-            <LocationInputRow :locationForm="addPriceSingleForm" />
-
-            <h3 class="mt-4 mb-1">
-              {{ $t('AddPriceSingle.WhereWhen.Date') }}
-            </h3>
-            <v-row>
-              <v-col cols="12" sm="6">
-                <v-text-field
-                  v-model="addPriceSingleForm.date"
-                  :label="$t('AddPriceSingle.WhereWhen.DateLabel')"
-                  type="date"
-                />
-              </v-col>
-            </v-row>
           </v-card-text>
         </v-card>
       </v-col>
@@ -120,9 +106,8 @@ import utils from '../utils.js'
 export default {
   components: {
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
-    PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     ProofInputRow: defineAsyncComponent(() => import('../components/ProofInputRow.vue')),
-    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
+    PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
   },
   data() {
     return {
@@ -158,6 +143,10 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    proofFormFilled() {
+      let keys = ['proof_id', 'location_osm_id', 'location_osm_type', 'date', 'currency']
+      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
+    },
     pricePerFormFilled() {
       let keys = ['price_per']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
@@ -165,23 +154,8 @@ export default {
     priceFormFilled() {
       return this.pricePerFormFilled && this.pricePriceFormFilled
     },
-    proofFormFilled() {
-      let keys = ['proof_id']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-    },
-    priceProofFormFilled() {
-      return this.priceFormFilled && this.proofFormFilled
-    },
-    locationFormFilled() {
-      let keys = ['location_osm_id', 'location_osm_type']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-    },
-    locationDateFormFilled() {
-      let keys = ['location_osm_id', 'location_osm_type', 'date']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-    },
     formFilled() {
-      return this.productFormFilled && this.priceProofFormFilled && this.locationDateFormFilled
+      return this.productFormFilled && this.proofFormFilled && this.priceFormFilled
     },
   },
   mounted() {
