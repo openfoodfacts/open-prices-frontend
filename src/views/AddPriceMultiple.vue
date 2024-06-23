@@ -5,7 +5,7 @@
 
   <v-row>
     <!-- Step 1: proof (image + date + currency) -->
-    <v-col cols="12" md="6" lg="4">
+    <v-col cols="12" md="6">
       <v-card
         :title="(proofType === 'RECEIPT') ? $t('AddPriceHome.ReceiptMode.Title') : $t('AddPriceMultiple.ProofDetails.Title')"
         :prepend-icon="(proofType === 'RECEIPT') ? 'mdi-receipt-text-outline' : 'mdi-library-shelves'"
