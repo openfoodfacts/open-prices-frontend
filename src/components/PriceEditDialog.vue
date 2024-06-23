@@ -21,7 +21,7 @@
         <h3 class="mb-1">
           {{ $t('PriceForm.Label') }}
         </h3>
-        <PriceInputRow :priceForm="updatePriceForm" />
+        <PriceInputRow :priceForm="updatePriceForm" :hideCurrencyChoice="true" />
 
         <h3 class="mt-4 mb-1">
           {{ $t('Common.Date') }}
@@ -32,6 +32,7 @@
               v-model="updatePriceForm.date"
               :label="$t('Common.Date')"
               type="date"
+              disabled
             />
           </v-col>
         </v-row>
