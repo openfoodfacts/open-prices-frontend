@@ -64,7 +64,7 @@
                 </v-item>
               </v-item-group>
             </h3>
-            <PriceInputRow :priceForm="addPriceSingleForm" @filled="pricePriceFormFilled = $event" />
+            <PriceInputRow :priceForm="addPriceSingleForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
             <h3 class="mt-4 mb-1">
               {{ $t('AddPriceSingle.PriceDetails.Proof') }}
             </h3>
