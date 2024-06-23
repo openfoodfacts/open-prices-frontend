@@ -5,6 +5,7 @@
 
   <v-form @submit.prevent="updateSettings">
     <v-row>
+      <!-- Display -->
       <v-col cols="12" sm="6">
         <v-card :title="$t('UserSettings.DisplayTitle')" prepend-icon="mdi-laptop">
           <v-divider />
@@ -48,16 +49,40 @@
             <h3 class="mt-4 mb-1">
               {{ $t('Common.Products') }}
             </h3>
-            <v-checkbox v-model="appStore.user.product_display_barcode" :label="$t('UserSettings.ProductDisplayBarcode')" hide-details="auto" />
-            <v-checkbox v-model="appStore.user.product_display_category_tag" :label="$t('UserSettings.ProductDisplayCategoryTag')" hide-details="auto" />
+            <v-checkbox
+              v-model="appStore.user.product_display_barcode"
+              class="mb-4"
+              :label="$t('UserSettings.ProductDisplayBarcode')"
+              :hint="$t('Common.ExampleWithColon') + ' 1234567890123'"
+              density="compact"
+              persistent-hint
+              hide-details="auto"
+            />
+            <v-checkbox
+              v-model="appStore.user.product_display_category_tag"
+              :label="$t('UserSettings.ProductDisplayCategoryTag')"
+              :hint="$t('Common.ExampleWithColon') + ' en:oranges'"
+              density="compact"
+              persistent-hint
+              hide-details="auto"
+            />
             <!-- Locations -->
             <h3 class="mt-4 mb-1">
               {{ $t('Common.Locations') }}
             </h3>
-            <v-checkbox v-model="appStore.user.location_display_osm_id" :label="$t('UserSettings.LocationDisplayOSMID')" hide-details="auto" />
+            <v-checkbox
+              v-model="appStore.user.location_display_osm_id"
+              :label="$t('UserSettings.LocationDisplayOSMID')"
+              :hint="$t('Common.ExampleWithColon') + ' W398056954'"
+              density="compact"
+              persistent-hint
+              hide-details="auto"
+            />
           </v-card-text>
         </v-card>
       </v-col>
+
+      <!-- Prices -->
       <v-col cols="12" sm="6">
         <v-card :title="$t('UserSettings.AddingPrices')" prepend-icon="mdi-tag-plus-outline">
           <v-divider />

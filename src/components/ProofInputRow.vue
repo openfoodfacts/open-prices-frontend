@@ -70,6 +70,12 @@
         <v-col cols="6">
           <h3 class="mb-1">
             {{ $t('Common.Currency') }}
+            <span class="text-caption font-weight-regular">
+              <a href="#">{{ $t('Common.Help') }}</a>
+              <v-tooltip activator="parent" open-on-click location="top">
+                {{ $t('ChangeCurrencyDialog.AddCurrencies') }}
+              </v-tooltip>
+            </span>
           </h3>
           <v-select
             v-model="proofForm.currency"
