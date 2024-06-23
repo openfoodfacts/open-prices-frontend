@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
 		"Source": "Źródło",
 		"Type": "Typ",
+		"Upload": "Prześlij",
 		"Yes": "Tak",
 		"No": "Nie",
 		"Food": "Food",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {

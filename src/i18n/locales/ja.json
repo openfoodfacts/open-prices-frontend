@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Google アカウントでログイン",
 		"Source": "情報源",
 		"Type": "種別",
+		"Upload": "アップロード",
 		"Yes": "はい",
 		"No": "いいえ",
 		"Food": "食べ物",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR リクエスト"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "証明が選択されました！",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {

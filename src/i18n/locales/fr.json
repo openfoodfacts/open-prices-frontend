@@ -54,7 +54,7 @@
 			"Gallery": "Galerie de l'appareil",
 			"SelectFromGallery": "Sélectionner dans votre galerie",
 			"RecentProof": "Preuve récente",
-			"SelectRecentProof": "Sélectionnez une preuve récente"
+			"SelectRecentProof": "Sélectionner une preuve récente"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Catégorie",
@@ -114,7 +114,7 @@
 		"Language": "Langue",
 		"Locations": "Emplacements",
 		"Date": "Date",
-		"Details": "Details",
+		"Details": "Détails",
 		"Delete": "Supprimer",
 		"Discount": "Promo",
 		"Edit": "Modifier",
@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
 		"Source": "Source",
 		"Type": "Type",
+		"Upload": "Téléverser",
 		"Yes": "Oui",
 		"No": "Non",
 		"Food": "Nourriture",
@@ -143,10 +144,10 @@
 		"Currency": "Devise",
 		"AddCurrencies": "Ajouter des devises dans les paramètres",
 		"AddCurrenciesWarning": "Vous allez être redirigé vers la page des paramètres, mais vous perdrez toutes les informations que vous avez saisies sur cette page.",
-		"Select": "Sélectionnez {currency_code}"
+		"Select": "Sélectionner {currency_code}"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Sélectionnez une de vos preuves récentes"
+		"SelectRecentProof": "Sélectionner une de vos preuves récentes"
 	},
 	"Footer": {
 		"About": "À propos",
@@ -162,7 +163,7 @@
 	"Home": {
 		"AddPrice": "Ajouter un prix",
 		"LatestPrices": "Derniers prix ajoutés",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Ajouter une preuve",
 		"SearchProduct": "Chercher un produit",
 		"SettingsUpdated": "Paramètres mis à jour !",
 		"TodayPriceStat": "Aucun prix ajouté aujourd'hui | {todayPriceNumber} nouveau prix ajouté aujourd'hui | {todayPriceNumber} nouveaux prix ajoutés aujourd'hui !",
@@ -284,7 +285,9 @@
 		"GDPR_REQUEST": "Requête RGPD"
 	},
 	"ProofCreate": {
-		"Success": "Proof created!"
+		"SelectProof": "Choisir une preuve",
+		"ProofSelected": "Preuve sélectionnée !",
+		"Success": "Preuve créée !"
 	},
 	"ProofDelete": {
 		"Confirmation": "Êtes-vous sûr de vouloir supprimer cette preuve ?",
@@ -316,7 +319,7 @@
 			"Title": "Derniers prix ajoutés"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Ajouter une preuve"
 		},
 		"Search": {
 			"Title": "Rechercher"

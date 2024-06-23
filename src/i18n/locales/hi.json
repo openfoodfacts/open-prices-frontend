@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Source": "Source",
 		"Type": "प्रकार",
+		"Upload": "अपलोड",
 		"Yes": "हाँ",
 		"No": "नहीं",
 		"Food": "Food",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "प्रमाण चयनित!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {

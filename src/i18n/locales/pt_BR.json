@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Entrar com sua {url} conta",
 		"Source": "Fonte",
 		"Type": "Tipo",
+		"Upload": "Atualizar",
 		"Yes": "Sim",
 		"No": "Não",
 		"Food": "Food",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofCreate": {
+		"SelectProof": "Selecionar um comprovativo",
+		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {

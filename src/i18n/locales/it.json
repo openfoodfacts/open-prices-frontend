@@ -114,7 +114,7 @@
 		"Language": "Lingue",
 		"Locations": "Posizioni",
 		"Date": "Data",
-		"Details": "Details",
+		"Details": "Dettagli",
 		"Delete": "Elimina",
 		"Discount": "Sconto",
 		"Edit": "Modifica",
@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
 		"Source": "Fonte",
 		"Type": "Tipo",
+		"Upload": "Carica",
 		"Yes": "Sì",
 		"No": "No",
 		"Food": "Cibo",
@@ -162,7 +163,7 @@
 	"Home": {
 		"AddPrice": "Aggiungi un prezzo",
 		"LatestPrices": "Ultimi prezzi",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Aggiungi una prova",
 		"SearchProduct": "Cerca un prodotto",
 		"SettingsUpdated": "Impostazioni aggiornate!",
 		"TodayPriceStat": "Nessun prezzo aggiunto oggi | {todayPriceNumber} nuovi prezzi aggiunti oggi | {todayPriceNumber} nuovi prezzi aggiunti oggi!",
@@ -284,7 +285,9 @@
 		"GDPR_REQUEST": "Richiesta RGPD"
 	},
 	"ProofCreate": {
-		"Success": "Proof created!"
+		"SelectProof": "Seleziona una prova",
+		"ProofSelected": "Prova selezionata!",
+		"Success": "Prova creata!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Sei sicuro di voler eliminare questa prova?",
@@ -316,7 +319,7 @@
 			"Title": "Ultimi prezzi"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Aggiungi una prova"
 		},
 		"Search": {
 			"Title": "Cerca"

@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"Source": "출처",
 		"Type": "종류",
+		"Upload": "Upload",
 		"Yes": "예",
 		"No": "아니요",
 		"Food": "Food",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "GDPR request"
 	},
 	"ProofCreate": {
+		"SelectProof": "Select a proof",
+		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {

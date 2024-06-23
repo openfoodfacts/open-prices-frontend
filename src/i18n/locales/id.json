@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
 		"Source": "Sumber",
 		"Type": "Tipe",
+		"Upload": "Unggah",
 		"Yes": "Ya",
 		"No": "Tidak",
 		"Food": "Makanan",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "Permintaan GDPR"
 	},
 	"ProofCreate": {
+		"SelectProof": "Pilih bukti",
+		"ProofSelected": "Bukti dipilih!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {

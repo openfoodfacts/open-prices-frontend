@@ -131,6 +131,7 @@
 		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
 		"Source": "Fonte",
 		"Type": "Tipo",
+		"Upload": "Carregar",
 		"Yes": "Sim",
 		"No": "Não",
 		"Food": "Alimento",
@@ -284,6 +285,8 @@
 		"GDPR_REQUEST": "Pedido RGPD"
 	},
 	"ProofCreate": {
+		"SelectProof": "Selecionar um comprovativo",
+		"ProofSelected": "Comprovativo selecionado!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
