@@ -16,7 +16,7 @@
     />
   </span>
   <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning" class="mr-1">
-    <i>{{ $t('ProductCard.BrandLower') }}</i>
+    <i class="text-lowercase">{{ $t('Common.Brand') }}</i>
     <v-tooltip activator="parent" open-on-click location="top">
       {{ $t('ProductCard.BrandMissing') }}
     </v-tooltip>
