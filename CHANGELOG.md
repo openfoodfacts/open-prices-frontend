@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.67.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.1...v1.67.2) (2024-06-24)
+
+
+### Bug Fixes
+
+* **proof card:** fix display of proof location after upload. ref [#657](https://github.com/openfoodfacts/open-prices-frontend/issues/657) ([e5510ef](https://github.com/openfoodfacts/open-prices-frontend/commit/e5510ef407ac176b7ff22681b78ab6d1cbeed853))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#661](https://github.com/openfoodfacts/open-prices-frontend/issues/661)) ([c163059](https://github.com/openfoodfacts/open-prices-frontend/commit/c16305992d489c5c1fe343107e875430aa14c1c7))
+
 ## [1.67.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.0...v1.67.1) (2024-06-24)
 
 
