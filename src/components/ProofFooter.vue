@@ -3,9 +3,9 @@
     <v-col :cols="userIsProofOwner ? '11' : '12'">
       <ProofTypeChip class="mr-1" :proof="proof" />
       <LocationChip class="mr-1" :location="proof.location" :locationId="proof.location_id" :readonly="readonly" />
-      <ProofDateChip v-if="proof.date" class="mr-1" :proof="proof" />
+      <ProofDateChip class="mr-1" :proof="proof" />
       <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()" />
-      <CurrencyChip v-if="proof.currency" class="mr-1" :proof="proof" />
+      <CurrencyChip class="mr-1" :proof="proof" :showErrorIfCurrencyMissing="true" />
       <RelativeDateTimeChip :dateTime="proof.created" />
     </v-col>
   </v-row>
