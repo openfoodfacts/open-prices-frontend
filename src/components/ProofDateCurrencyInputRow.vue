@@ -8,6 +8,7 @@
         v-model="proofDateCurrencyForm.date"
         :label="$t('Common.Date')"
         type="date"
+        :max="currentDate"
         hide-details="auto"
       />
     </v-col>
@@ -40,8 +41,13 @@ export default {
   props: {
     proofDateCurrencyForm: {
       type: Object,
-      default: () => ({ date: utils.currentDate(), currency: null })
+      default: () => ({ date: this.currentDate, currency: null })
     },
+  },
+  data() {
+    return {
+      currentDate: utils.currentDate(),
+    }
   },
   computed: {
     ...mapStores(useAppStore),
