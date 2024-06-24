@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.67.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.66.0...v1.67.0) (2024-06-24)
+
+
+### Features
+
+* **price add:** hide single price add workflow ([#635](https://github.com/openfoodfacts/open-prices-frontend/issues/635)) ([677ced7](https://github.com/openfoodfacts/open-prices-frontend/commit/677ced770f343077ccffa618f81bff68bddd5869))
+* **price add:** move date & currency to the proof section ([#645](https://github.com/openfoodfacts/open-prices-frontend/issues/645)) ([ee0366d](https://github.com/openfoodfacts/open-prices-frontend/commit/ee0366d97caa8d8cc98713c4adbe68a70ce5b6b7))
+* **price add:** move location to the proof section ([#648](https://github.com/openfoodfacts/open-prices-frontend/issues/648)) ([67a3d62](https://github.com/openfoodfacts/open-prices-frontend/commit/67a3d62c47f5b8f645cfd7bc49294a4ff33a4d29))
+
+
+### Bug Fixes
+
+* **proof edit:** forgot to disable button if user cannot edit. ref [#650](https://github.com/openfoodfacts/open-prices-frontend/issues/650) ([7701ec7](https://github.com/openfoodfacts/open-prices-frontend/commit/7701ec7f2e58753046a57ee76b7c589a08ef3aaa))
+
+
+### Technical
+
+* add tooltips and helps ([#649](https://github.com/openfoodfacts/open-prices-frontend/issues/649)) ([fc8960c](https://github.com/openfoodfacts/open-prices-frontend/commit/fc8960ce1f0dcd5b0eee11fb65e2fec56e57900e))
+* **l10n:** New Crowdin translations to review and merge ([#642](https://github.com/openfoodfacts/open-prices-frontend/issues/642)) ([c035a18](https://github.com/openfoodfacts/open-prices-frontend/commit/c035a184f4e83d86c35cc2803766fbfa6a2030f9))
+* **l10n:** New Crowdin translations to review and merge ([#651](https://github.com/openfoodfacts/open-prices-frontend/issues/651)) ([6fbcd18](https://github.com/openfoodfacts/open-prices-frontend/commit/6fbcd182060824283d8b5714cff845f0bff7ce05))
+* **price add:** new LocationInputRow component ([#647](https://github.com/openfoodfacts/open-prices-frontend/issues/647)) ([8dfe038](https://github.com/openfoodfacts/open-prices-frontend/commit/8dfe038cfd8cee29bc779b249220637d479437cc))
+* **price add:** when coming from the proof detail page, direct users to multiple add form ([#637](https://github.com/openfoodfacts/open-prices-frontend/issues/637)) ([8a9c674](https://github.com/openfoodfacts/open-prices-frontend/commit/8a9c674c366e515d29fb81e91dd0e2029083f98d))
+* **price edit:** hide/disable price date & currency changes ([#650](https://github.com/openfoodfacts/open-prices-frontend/issues/650)) ([b184fb0](https://github.com/openfoodfacts/open-prices-frontend/commit/b184fb0a3b05abc103ffd6e3f2e37c0200cc9bbd))
+* **proof edit:** cleanup is_public. Allow editing date if no prices ([#652](https://github.com/openfoodfacts/open-prices-frontend/issues/652)) ([5358ade](https://github.com/openfoodfacts/open-prices-frontend/commit/5358ade199a6e598144228e93a656b76e81263fd))
+* **proof store:** disable proof store because of inconsistencies ([#653](https://github.com/openfoodfacts/open-prices-frontend/issues/653)) ([2e85f57](https://github.com/openfoodfacts/open-prices-frontend/commit/2e85f57e0438f412dfdb49e6efbe1d71c90e17b5))
+
 ## [1.66.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.65.1...v1.66.0) (2024-06-21)
 
 
