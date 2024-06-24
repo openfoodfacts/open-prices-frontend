@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.67.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.0...v1.67.1) (2024-06-24)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#658](https://github.com/openfoodfacts/open-prices-frontend/issues/658)) ([69b4e68](https://github.com/openfoodfacts/open-prices-frontend/commit/69b4e689a35a0a26532210bce089dd707da09a44))
+* **l10n:** New Crowdin translations to review and merge ([#660](https://github.com/openfoodfacts/open-prices-frontend/issues/660)) ([9067d75](https://github.com/openfoodfacts/open-prices-frontend/commit/9067d757ced6937b5ab642c7721c3594b776c67d))
+* **proof card:** if currency missing, show chip with error & tooltip ([#654](https://github.com/openfoodfacts/open-prices-frontend/issues/654)) ([502e5d9](https://github.com/openfoodfacts/open-prices-frontend/commit/502e5d9579b362f433e66a2a918d4bd90a6106cd))
+* **proof card:** if date missing, show chip with error & tooltip ([#656](https://github.com/openfoodfacts/open-prices-frontend/issues/656)) ([932a930](https://github.com/openfoodfacts/open-prices-frontend/commit/932a930cb77b51f278ebee4c224073a0e2069e90))
+* **proof card:** if location missing, show chip with error & tooltip ([#657](https://github.com/openfoodfacts/open-prices-frontend/issues/657)) ([7e27d62](https://github.com/openfoodfacts/open-prices-frontend/commit/7e27d6276002621764f759b4199ee2ed543c8fd7))
+* **proof edit:** allow editing proof currency. additional cleanup ([#659](https://github.com/openfoodfacts/open-prices-frontend/issues/659)) ([5dc5d67](https://github.com/openfoodfacts/open-prices-frontend/commit/5dc5d67e0471da2ca37a30059635f3e6ccfe9e06))
+
 ## [1.67.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.66.0...v1.67.0) (2024-06-24)
 
 
