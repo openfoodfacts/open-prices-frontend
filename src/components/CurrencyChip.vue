@@ -1,6 +1,6 @@
 <template>
   <v-chip label size="small" prepend-icon="mdi-cash" density="comfortable" :color="currencyMissingAndShowError ? 'error' : 'default'">
-    <span v-if="proof.currency">{{ proof.currency }}</span>
+    <span v-if="currency">{{ currency }}</span>
     <span v-else-if="currencyMissingAndShowError">
       <i class="text-lowercase">{{ $t('Common.Currency') }}</i>
       <v-tooltip activator="parent" open-on-click location="top">
@@ -13,8 +13,8 @@
 <script>
 export default {
   props: {
-    proof: {
-      type: Object,
+    currency: {
+      type: String,
       default: null
     },
     showErrorIfCurrencyMissing: {
@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     currencyMissingAndShowError() {
-      return !this.proof.currency && this.showErrorIfCurrencyMissing
+      return !this.currency && this.showErrorIfCurrencyMissing
     }
   }
 }
