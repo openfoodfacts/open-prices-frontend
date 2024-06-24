@@ -10,7 +10,7 @@
     </v-col>
   </v-row>
 
-  <ProofActionMenuButton v-if="!readonly && !hideProofActions && userIsProofOwner" :proof="proof" />
+  <ProofActionMenuButton v-if="!hideProofActions && userIsProofOwner" :proof="proof" />
 </template>
 
 <script>
