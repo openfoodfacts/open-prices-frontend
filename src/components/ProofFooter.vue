@@ -2,7 +2,7 @@
   <v-row>
     <v-col :cols="userIsProofOwner ? '11' : '12'">
       <ProofTypeChip class="mr-1" :proof="proof" />
-      <LocationChip class="mr-1" :location="proof.location" :locationId="proof.location_id" :readonly="readonly" />
+      <LocationChip class="mr-1" :location="proof.location" :locationId="proof.location_id" :readonly="readonly" :showErrorIfLocationMissing="true" />
       <DateChip class="mr-1" :date="proof.date" :showErrorIfDateMissing="true" />
       <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()" />
       <CurrencyChip class="mr-1" :currency="proof.currency" :showErrorIfCurrencyMissing="true" />

@@ -1,8 +1,13 @@
 <template>
-  <v-chip label size="small" density="comfortable" @click="goToLocation()">
-    <v-icon start icon="mdi-map-marker-outline" />
-    {{ locationTitle }}
+  <v-chip label size="small" prepend-icon="mdi-map-marker-outline" density="comfortable" :color="locationMissingAndShowError ? 'error' : 'default'" @click="goToLocation()">
+    <span v-if="locationId">{{ locationTitle }}</span>
     <span v-if="locationEmoji" style="margin-inline-start:5px">{{ locationEmoji }}</span>
+    <span v-else-if="locationMissingAndShowError">
+      <i class="text-lowercase">{{ $t('Common.Location') }}</i>
+      <v-tooltip activator="parent" open-on-click location="top">
+        {{ $t('Common.LocationMissing') }}
+      </v-tooltip>
+    </span>
   </v-chip>
 </template>
 
@@ -23,6 +28,10 @@ export default {
       type: Boolean,
       default: false
     },
+    showErrorIfLocationMissing: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     locationTitle() {
@@ -36,11 +45,14 @@ export default {
         return utils.getCountryEmojiFromCode(this.location.osm_address_country_code)
       }
       return null
+    },
+    locationMissingAndShowError() {
+      return !this.locationId && this.showErrorIfLocationMissing
     }
   },
   methods: {
     goToLocation() {
-      if (this.readonly) {
+      if (!this.locationId || this.readonly) {
         return
       }
       this.$router.push({ path: `/locations/${this.locationId}` })
