@@ -33,7 +33,6 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import { useAppStore } from '../store'
 import api from '../services/api'
 
 export default {
@@ -63,8 +62,6 @@ export default {
           // if response.status == 204
           this.loading = false
           this.deleteSuccessMessage = true
-          const store = useAppStore()
-          store.removeProof(this.proof.id)
           this.$emit('delete')
           this.closeDialog()
         })

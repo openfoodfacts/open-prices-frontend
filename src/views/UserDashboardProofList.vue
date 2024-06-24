@@ -20,12 +20,14 @@
     {{ $t('UserDashboard.LatestProofs') }}
     <v-progress-circular v-if="loading" indeterminate :size="30" />
   </h2>
+
   <v-row>
-    <v-col v-for="proof in appStore.user.proofs" :key="proof" cols="12" sm="6" md="4">
-      <ProofCard :proof="proof" :hideProofHeader="true" :isEditable="true" height="100%" @proofUpdated="handleProofUpdated" />
+    <v-col v-for="proof in userProofList" :key="proof" cols="12" sm="6" md="4">
+      <ProofCard :proof="proof" :hideProofHeader="true" height="100%" @proofUpdated="handleProofUpdated" />
     </v-col>
   </v-row>
-  <v-row v-if="appStore.user.proofs.length < appStore.getUserProofTotal" class="mb-2">
+
+  <v-row v-if="userProofList.length < userProofTotal" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getUserProofs">
         {{ $t('UserDashboard.LoadMore') }}
@@ -54,6 +56,8 @@ export default {
   },
   data() {
     return {
+      userProofList: [],
+      userProofTotal: null,
       userProofPage: 0,
       loading: false,
       proofUpdated: false
@@ -74,9 +78,8 @@ export default {
       this.userProofPage += 1
       return api.getProofs({ owner: this.username, page: this.userProofPage })
         .then((data) => {
-          data.items.forEach(proof => this.appStore.addProof(proof))
-          this.appStore.user.proofs.sort((a, b) => new Date(b.created) - new Date(a.created))
-          this.appStore.setProofTotal(data.total)
+          this.userProofList.push(...data.items)
+          this.userProofTotal = data.total
           this.loading = false
         })
     },

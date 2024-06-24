@@ -251,8 +251,6 @@ export default {
           .then((data) => {
             this.loading = false
             if (data.id) {
-              const store = useAppStore()
-              store.addProof(data)
               this.proofForm.proof_id = data.id
               this.proofObject = {...data, ...{location: this.locationObject}}
               this.proofSuccessMessage = true
