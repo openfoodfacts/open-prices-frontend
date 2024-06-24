@@ -3,9 +3,9 @@
     <v-col :cols="userIsProofOwner ? '11' : '12'">
       <ProofTypeChip class="mr-1" :proof="proof" />
       <LocationChip class="mr-1" :location="proof.location" :locationId="proof.location_id" :readonly="readonly" />
-      <ProofDateChip class="mr-1" :proof="proof" />
+      <DateChip class="mr-1" :date="proof.date" :showErrorIfDateMissing="true" />
       <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()" />
-      <CurrencyChip class="mr-1" :proof="proof" :showErrorIfCurrencyMissing="true" />
+      <CurrencyChip class="mr-1" :currency="proof.currency" :showErrorIfCurrencyMissing="true" />
       <RelativeDateTimeChip :dateTime="proof.created" />
     </v-col>
   </v-row>
@@ -23,7 +23,7 @@ export default {
     ProofTypeChip: defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
     LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    ProofDateChip: defineAsyncComponent(() => import('../components/ProofDateChip.vue')),
+    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     CurrencyChip: defineAsyncComponent(() => import('../components/CurrencyChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     ProofActionMenuButton: defineAsyncComponent(() => import('../components/ProofActionMenuButton.vue'))
