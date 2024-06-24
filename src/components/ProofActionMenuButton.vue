@@ -3,7 +3,7 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <v-list-item v-if="proofIsPrivateReceipt" :slim="true" prepend-icon="mdi-pencil" :disabled="!proofIsReceipt" @click="openEditDialog">
+        <v-list-item :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
           {{ $t('Common.Edit') }}
         </v-list-item>
         <v-list-item :slim="true" prepend-icon="mdi-delete" :disabled="!userCanDeleteProof" @click="openDeleteConfirmationDialog">
@@ -73,11 +73,10 @@ export default {
     }
   },
   computed: {
-    proofIsReceipt() {
-      return this.proof.type === 'RECEIPT'
-    },
-    proofIsPrivateReceipt() {
-      return this.proofIsReceipt && !this.proof.is_public
+    userCanEditProof() {
+      // user must be proof owner
+      // and proof must not have any prices
+      return this.proof.price_count === 0
     },
     userCanDeleteProof() {
       // user must be proof owner
