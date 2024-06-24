@@ -7,16 +7,25 @@
 
       <v-divider />
 
-      <v-card-text v-if="proofIsReceipt">
-        <h3>{{ $t('ProofDetail.Privacy') }}</h3>
-        <v-switch
-          v-model="isPublic"
-          color="green"
-          density="compact"
-          inset
-          :label="isPublic ? $t('ProofDetail.Public') : $t('ProofDetail.Private')"
-          hide-details
-        />
+      <v-card-text>
+        <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" imageHeight="100px" />
+      </v-card-text>
+
+      <v-divider />
+
+      <v-card-text>
+        <h3 class="mb-1">
+          {{ $t('Common.Date') }}
+        </h3>
+        <v-row>
+          <v-col cols="12" sm="6">
+            <v-text-field
+              v-model="updateProofForm.date"
+              :label="$t('Common.Date')"
+              type="date"
+            />
+          </v-col>
+        </v-row>
       </v-card-text>
 
       <v-divider />
@@ -35,10 +44,14 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import { useAppStore } from '../store'
 import api from '../services/api'
 
 export default {
+  components: {
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue'))
+  },
   props: {
     proof: {
       type: Object,
@@ -48,30 +61,32 @@ export default {
   emits: ['update', 'close'],
   data() {
     return {
-      isPublic: false,
+      updateProofForm: {
+        type: null,
+        currency: null,
+        date: null,
+      },
       loading: false
     }
   },
   computed: {
-    proofIsReceipt() {
-      return this.proof.type === 'RECEIPT'
-    },
   },
   mounted() {
-    this.isPublic = this.proof.is_public
+    this.initUpdateProofForm()
   },
   methods: {
+    initUpdateProofForm() {
+      Object.keys(this.updateProofForm).forEach((key) => {
+        this.updateProofForm[key] = this.proof[key]
+      })
+    },
     updateProof() {
-      const params = {
-        is_public: this.isPublic
-      }
-      // update proof
       api
-        .updateProof(this.proof.id, params)
+        .updateProof(this.proof.id, this.updateProofForm)
         .then((response) => {
           // if response.status == 204
           const store = useAppStore()
-          store.updateProof(this.proof.id, params)
+          store.updateProof(this.proof.id, this.updateProofForm)
           this.$emit('update', response.data)
           this.close()
         })

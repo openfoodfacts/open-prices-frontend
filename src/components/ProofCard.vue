@@ -7,7 +7,7 @@
     <v-divider v-if="!hideProofHeader" />
 
     <v-card-text>
-      <v-img v-if="proof.file_path" :src="getProofUrl(proof)" />
+      <v-img v-if="proof.file_path" :src="getProofUrl(proof)" :style="'max-height:' + imageHeight" />
     </v-card-text>
 
     <v-divider />
@@ -50,9 +50,9 @@ export default {
       type: Boolean,
       default: false,
     },
-    height: {
+    imageHeight: {
       type: String,
-      default: 'auto',
+      default: '100%',
     },
   },
   emits: ['proofSelected', 'close'],
