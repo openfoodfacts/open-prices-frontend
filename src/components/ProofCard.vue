@@ -46,10 +46,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    isEditable: {
-      type: Boolean,
-      default: false,
-    },
     imageHeight: {
       type: String,
       default: '100%',

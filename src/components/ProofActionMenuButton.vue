@@ -3,7 +3,7 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <v-list-item :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
+        <v-list-item :slim="true" prepend-icon="mdi-pencil" :disabled="!userCanEditProof" @click="openEditDialog">
           {{ $t('Common.Edit') }}
         </v-list-item>
         <v-list-item :slim="true" prepend-icon="mdi-delete" :disabled="!userCanDeleteProof" @click="openDeleteConfirmationDialog">

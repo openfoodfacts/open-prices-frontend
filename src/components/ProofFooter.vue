@@ -50,9 +50,6 @@ export default {
     userIsProofOwner() {
       return this.username && (this.proof.owner === this.username)
     },
-    proofIsReceipt() {
-      return this.proof.type === 'RECEIPT'
-    },
   },
   methods: {
     goToProof() {
