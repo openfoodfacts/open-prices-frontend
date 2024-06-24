@@ -45,7 +45,6 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import { useAppStore } from '../store'
 import api from '../services/api'
 
 export default {
@@ -85,8 +84,6 @@ export default {
         .updateProof(this.proof.id, this.updateProofForm)
         .then((response) => {
           // if response.status == 204
-          const store = useAppStore()
-          store.updateProof(this.proof.id, this.updateProofForm)
           this.$emit('update', response.data)
           this.close()
         })
