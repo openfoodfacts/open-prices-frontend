@@ -55,36 +55,7 @@
       <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
 
       <!-- proof date & currency -->
-      <v-row>
-        <v-col cols="6">
-          <h3 class="mb-1">
-            {{ $t('Common.Date') }}
-          </h3>
-          <v-text-field
-            v-model="proofForm.date"
-            :label="$t('Common.Date')"
-            type="date"
-            hide-details="auto"
-          />
-        </v-col>
-        <v-col cols="6">
-          <h3 class="mb-1">
-            {{ $t('Common.Currency') }}
-            <span class="text-caption font-weight-regular">
-              <a href="#">{{ $t('Common.Help') }}</a>
-              <v-tooltip activator="parent" open-on-click location="top">
-                {{ $t('ChangeCurrencyDialog.AddCurrencies') }}
-              </v-tooltip>
-            </span>
-          </h3>
-          <v-select
-            v-model="proofForm.currency"
-            :label="$t('Common.Currency')"
-            :items="userFavoriteCurrencies"
-            hide-details="auto"
-          />
-        </v-col>
-      </v-row>
+      <ProofDateCurrencyInputRow :proofDateCurrencyForm="proofForm" />
 
       <!-- proof upload button -->
       <v-row v-if="proofFormImage">
@@ -129,8 +100,6 @@
 import Compressor from 'compressorjs'
 import ExifReader from 'exifreader'
 import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
 import api from '../services/api'
 import utils from '../utils.js'
 
@@ -145,6 +114,7 @@ Compressor.setDefaults({
 export default {
   components: {
     UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
+    ProofDateCurrencyInputRow: defineAsyncComponent(() => import('../components/ProofDateCurrencyInputRow.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
   },
@@ -177,7 +147,6 @@ export default {
     }
   },
   computed: {
-    ...mapStores(useAppStore),
     proofDateCurrencyFormFilled() {
       let keys = ['date', 'currency']
       return Object.keys(this.proofForm).filter(k => keys.includes(k)).every(k => !!this.proofForm[k])
@@ -185,9 +154,6 @@ export default {
     proofFormFilled() {
       return !!this.proofFormImage && this.proofDateCurrencyFormFilled
     },
-    userFavoriteCurrencies() {
-      return this.appStore.getUserFavoriteCurrencies
-    }
   },
   watch: {
     proofObject(newProofObject, oldProofObject) {  // eslint-disable-line no-unused-vars

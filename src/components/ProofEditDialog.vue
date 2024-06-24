@@ -14,18 +14,7 @@
       <v-divider />
 
       <v-card-text>
-        <h3 class="mb-1">
-          {{ $t('Common.Date') }}
-        </h3>
-        <v-row>
-          <v-col cols="12" sm="6">
-            <v-text-field
-              v-model="updateProofForm.date"
-              :label="$t('Common.Date')"
-              type="date"
-            />
-          </v-col>
-        </v-row>
+        <ProofDateCurrencyInputRow :proofDateCurrencyForm="updateProofForm" />
       </v-card-text>
 
       <v-divider />
@@ -33,6 +22,7 @@
       <v-card-actions>
         <v-btn
           elevation="1"
+          :disabled="!formFilled"
           :loading="loading"
           @click="updateProof"
         >
@@ -49,7 +39,8 @@ import api from '../services/api'
 
 export default {
   components: {
-    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue'))
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    ProofDateCurrencyInputRow: defineAsyncComponent(() => import('../components/ProofDateCurrencyInputRow.vue')),
   },
   props: {
     proof: {
@@ -62,13 +53,16 @@ export default {
     return {
       updateProofForm: {
         type: null,
-        currency: null,
         date: null,
+        currency: null,
       },
       loading: false
     }
   },
   computed: {
+    formFilled() {
+      return Object.values(this.updateProofForm).every(x => !!x)
+    }
   },
   mounted() {
     this.initUpdateProofForm()
