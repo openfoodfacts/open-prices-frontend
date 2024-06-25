@@ -4,7 +4,7 @@
     label
     size="small"
     density="comfortable"
-    :title="$t('PriceCard.Proof')"
+    :title="$t('Common.Proof')"
     @click="openDialog"
   >
     <v-icon icon="mdi-image" />

@@ -66,7 +66,7 @@
             </h3>
             <PriceInputRow :priceForm="addPriceSingleForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
             <h3 class="mt-4 mb-1">
-              {{ $t('AddPriceSingle.PriceDetails.Proof') }}
+              {{ $t('Common.Proof') }}
             </h3>
           </v-card-text>
         </v-card>

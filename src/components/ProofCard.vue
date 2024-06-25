@@ -1,7 +1,7 @@
 <template>
   <v-card :id="'proof_' + proof.id" @click="selectProof">
     <v-card-title v-if="!hideProofHeader">
-      {{ $t('ProofCard.Proof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
+      {{ $t('Common.Proof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
     </v-card-title>
 
     <v-divider v-if="!hideProofHeader" />

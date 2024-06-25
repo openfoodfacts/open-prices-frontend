@@ -1,15 +1,15 @@
 <template>
   <v-chip label size="small" density="comfortable" @click="goToUser()">
     <v-icon start icon="mdi-account" />
-    {{ price.owner }}
+    {{ username }}
   </v-chip>
 </template>
 
 <script>
 export default {
   props: {
-    price: {
-      type: Object,
+    username: {
+      type: String,
       default: null
     },
     readonly: {
@@ -22,7 +22,7 @@ export default {
       if (this.readonly) {
         return
       }
-      this.$router.push({ path: `/users/${this.price.owner}` })
+      this.$router.push({ path: `/users/${this.username}` })
     },
   }
 }
