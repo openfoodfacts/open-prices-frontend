@@ -4,7 +4,7 @@
       <LocationChip v-if="!hidePriceLocation" class="mr-1" :location="price.location" :locationId="price.location_id" :readonly="readonly" />
       <PriceOwnerChip class="mr-1" :price="price" :readonly="readonly" />
       <RelativeDateTimeChip class="mr-1" :dateTime="price.created" />
-      <PriceProof v-if="price.proof && !hidePriceProof" :proof="price.proof" />
+      <ProofChip v-if="price.proof && !hidePriceProof" :proof="price.proof" />
     </v-col>
   </v-row>
 
@@ -21,7 +21,7 @@ export default {
     LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     PriceOwnerChip: defineAsyncComponent(() => import('../components/PriceOwnerChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
-    PriceProof: defineAsyncComponent(() => import('../components/PriceProof.vue')),
+    ProofChip: defineAsyncComponent(() => import('../components/ProofChip.vue')),
     PriceActionMenuButton: defineAsyncComponent(() => import('../components/PriceActionMenuButton.vue')),
   },
   props: {
