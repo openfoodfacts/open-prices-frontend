@@ -113,25 +113,25 @@
 		"Proof": "Comprovativo",
 		"Country": "País",
 		"Currency": "Moeda",
-		"CurrencyMissing": "Currency missing",
+		"CurrencyMissing": "Falta a moeda",
 		"Language": "Idiomas",
-		"Location": "Location",
+		"Location": "Localização",
 		"Locations": "Localizações",
-		"LocationMissing": "Location missing",
+		"LocationMissing": "Falta a localização",
 		"Date": "Data",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateMissing": "Falta a data",
+		"Details": "Detalhes",
 		"Delete": "Eliminar",
 		"Discount": "Desconto",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Exemplo",
+		"Examples": "Exemplos",
 		"ExampleWithColon": "Exemplo:",
 		"ExamplesWithColon": "Exemplos:",
 		"Edit": "Editar",
 		"Filter": "Filtro",
 		"FilterProductWithPriceCountHide": "Ocultar produtos com preços",
 		"FilterPriceMoreThan30DaysHide": "Ocultar preços com mais de 30 dias",
-		"Help": "Help",
+		"Help": "Ajuda",
 		"Image": "Imagem",
 		"Order": "Ordem",
 		"OrderProductUniqueScansDESC": "Número de digitalizações",
@@ -174,7 +174,7 @@
 	"Home": {
 		"AddPrice": "Adicionar um preço",
 		"LatestPrices": "Preços mais recentes",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Adicionar um comprovativo",
 		"SearchProduct": "Pesquisar um produto",
 		"SettingsUpdated": "Definições atualizadas!",
 		"TodayPriceStat": "Nenhum preço adicionado hoje | {todayPriceNumber} novos preços adicionados hoje | {todayPriceNumber} novos preços adicionados hoje!",
@@ -298,7 +298,7 @@
 	"ProofCreate": {
 		"SelectProof": "Selecionar um comprovativo",
 		"ProofSelected": "Comprovativo selecionado!",
-		"Success": "Proof created!"
+		"Success": "Comprovativo criado!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Tem a certeza que pretende eliminar este comprovativo?",
@@ -330,7 +330,7 @@
 			"Title": "Preços mais recentes"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Adicionar um comprovativo"
 		},
 		"Search": {
 			"Title": "Procurar"
