@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.67.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.2...v1.67.3) (2024-06-25)
+
+
+### Bug Fixes
+
+* **proof card:** fill in location data from price if missing from proof ([#666](https://github.com/openfoodfacts/open-prices-frontend/issues/666)) ([6748ce0](https://github.com/openfoodfacts/open-prices-frontend/commit/6748ce0c148032bc16f45fd94d1baf9b69070c0e))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#663](https://github.com/openfoodfacts/open-prices-frontend/issues/663)) ([05df9f3](https://github.com/openfoodfacts/open-prices-frontend/commit/05df9f3e258e8a070df22afdf04aac94aba507fd))
+* **price card:** rename components for clarification ([#664](https://github.com/openfoodfacts/open-prices-frontend/issues/664)) ([f81dfb3](https://github.com/openfoodfacts/open-prices-frontend/commit/f81dfb32743fe54ccc342ebee7f528375f115ee4))
+
 ## [1.67.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.1...v1.67.2) (2024-06-24)
 
 
