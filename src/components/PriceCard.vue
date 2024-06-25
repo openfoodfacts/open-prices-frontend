@@ -132,6 +132,12 @@ export default {
   },
   mounted() {
     this.getPriceProductTitle()
+    // hack: add price.location object to price.proof if missing
+    if (this.price && this.price.location && this.price.proof && !this.price.proof.location) {
+      if (this.price.location_id === this.price.proof.location_id) {
+        this.price.proof.location = this.price.location
+      }
+    }
   },
   methods: {
     getPriceProductTitle() {
