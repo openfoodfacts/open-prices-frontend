@@ -2,6 +2,10 @@ import { useAppStore } from '../store'
 import constants from '../constants'
 
 
+const PRICE_UPDATE_FIELDS = ['price', 'price_is_discounted', 'price_without_discount', 'price_per', 'currency', 'date']
+const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'category_tag', 'labels_tags', 'origins_tags', 'location_osm_id', 'location_osm_type', 'proof_id'])
+const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency']
+
 const DEFAULT_HEADERS = {
   'Content-Type': 'application/json'
 }
@@ -14,14 +18,15 @@ function buildURLParams(params = {}) {
   return new URLSearchParams({...DEFAULT_PARAMS, ...params})
 }
 
-function filterParamsWithAllowedKeys(params, allowedKeys) {
-  const filteredParams = {}
-  for (const key in params) {
+function filterBodyWithAllowedKeys(data, allowedKeys) {
+  const filteredData = {}
+  for (const key in data) {
     if (allowedKeys.includes(key)) {
-      filteredParams[key] = params[key]
+      filteredData[key] = data[key]
     }
   }
-  return filteredParams
+  console.log(data, filteredData)
+  return filteredData
 }
 
 
@@ -96,8 +101,7 @@ export default {
     .then((response) => response.json())
   },
 
-  updateProof(proofId, params = {}) {
-    const PROOF_UPDATABLE_FIELDS = ['type', 'date', 'currency']
+  updateProof(proofId, data = {}) {
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
     return fetch(url, {
@@ -105,7 +109,7 @@ export default {
       headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
-      body: JSON.stringify(filterParamsWithAllowedKeys(params, PROOF_UPDATABLE_FIELDS)),
+      body: JSON.stringify(filterBodyWithAllowedKeys(data, PROOF_UPDATE_FIELDS)),
     })
     .then((response) => response.json())
   },
@@ -122,16 +126,16 @@ export default {
     // .then((response) => response.json())
   },
 
-  createPrice(priceData) {
+  createPrice(data) {
     const store = useAppStore()
-    store.user.last_product_mode_used = priceData.product_code ? 'barcode' : 'category'
+    store.user.last_product_mode_used = data.product_code ? 'barcode' : 'category'
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams()}`
     return fetch(url, {
       method: 'POST',
       headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
-      body: JSON.stringify(priceData),
+      body: JSON.stringify(filterBodyWithAllowedKeys(data, PRICE_CREATE_FIELDS)),
     })
     .then((response) => response.json())
   },
@@ -146,7 +150,7 @@ export default {
     .then((response) => response.json())
   },
 
-  updatePrice(priceId, params = {}) {
+  updatePrice(priceId, data = {}) {
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
     return fetch(url, {
@@ -154,7 +158,7 @@ export default {
       headers: Object.assign({}, DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
-      body: JSON.stringify(params),
+      body: JSON.stringify(filterBodyWithAllowedKeys(data, PRICE_UPDATE_FIELDS)),
     })
     .then((response) => response.json())
   },
