@@ -195,7 +195,6 @@ export default {
         .getProductByCode(code)
         .then((data) => {
           this.addPriceSingleForm.product = data.id ? data : {'code': code, 'price_count': 0}
-          console.log(this.addPriceSingleForm.product)
         })
         .catch((error) => {  // eslint-disable-line no-unused-vars
           alert('Error: Open Prices server error')

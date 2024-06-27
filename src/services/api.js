@@ -25,7 +25,6 @@ function filterBodyWithAllowedKeys(data, allowedKeys) {
       filteredData[key] = data[key]
     }
   }
-  console.log(data, filteredData)
   return filteredData
 }
 
