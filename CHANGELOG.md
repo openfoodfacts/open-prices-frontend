@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.67.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.3...v1.67.4) (2024-06-27)
+
+
+### Bug Fixes
+
+* remove console logs ([075ffae](https://github.com/openfoodfacts/open-prices-frontend/commit/075ffaee889637f3affad05edb44caa5017e8a75))
+
+
+### Technical
+
+* **API:** on create/update, only send needed fields (price, proof) ([#668](https://github.com/openfoodfacts/open-prices-frontend/issues/668)) ([d189704](https://github.com/openfoodfacts/open-prices-frontend/commit/d189704fb1b182f489bc6cf28d2c785892b90e76))
+* **l10n:** New Crowdin translations to review and merge ([#667](https://github.com/openfoodfacts/open-prices-frontend/issues/667)) ([4c04207](https://github.com/openfoodfacts/open-prices-frontend/commit/4c04207eb33849016222d9bcef837e1cedcde76b))
+
 ## [1.67.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.2...v1.67.3) (2024-06-25)
 
 
