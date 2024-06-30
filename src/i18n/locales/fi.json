@@ -296,7 +296,7 @@
 		"GDPR_REQUEST": "GDPR-pyyntö"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Valitse todiste",
 		"ProofSelected": "Todiste valittu!",
 		"Success": "Todiste luotu!"
 	},
