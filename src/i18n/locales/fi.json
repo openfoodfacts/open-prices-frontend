@@ -113,25 +113,25 @@
 		"Proof": "Todiste",
 		"Country": "Maa",
 		"Currency": "Valuutta",
-		"CurrencyMissing": "Currency missing",
+		"CurrencyMissing": "Valuutta puuttuu",
 		"Language": "Kielet",
-		"Location": "Location",
+		"Location": "Sijainti",
 		"Locations": "Sijainnit",
-		"LocationMissing": "Location missing",
+		"LocationMissing": "Sijainti puuttuu",
 		"Date": "Päivämäärä",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateMissing": "Päivämäärä puuttuu",
+		"Details": "Yksityiskohdat",
 		"Delete": "Poista",
 		"Discount": "Alennus",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Esimerkki",
+		"Examples": "Esimerkit",
 		"ExampleWithColon": "Esimerkki:",
 		"ExamplesWithColon": "Esimerkit:",
 		"Edit": "Muokkaa",
 		"Filter": "Suodata",
 		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
 		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
-		"Help": "Help",
+		"Help": "Ohje",
 		"Image": "Kuva",
 		"Order": "Järjestys",
 		"OrderProductUniqueScansDESC": "Skannausten määrä",
@@ -174,7 +174,7 @@
 	"Home": {
 		"AddPrice": "Lisää hinta",
 		"LatestPrices": "Viimeisimmät hinnat",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Lisää todiste",
 		"SearchProduct": "Etsi tuote",
 		"SettingsUpdated": "Asetukset päivitetty!",
 		"TodayPriceStat": "Ei hintoja lisätty tänään | {todayPriceNumber} uutta hintaa lisätty tänään | {todayPriceNumber} uusi hinta lisätty tänään!",
@@ -298,7 +298,7 @@
 	"ProofCreate": {
 		"SelectProof": "Select a proof",
 		"ProofSelected": "Todiste valittu!",
-		"Success": "Proof created!"
+		"Success": "Todiste luotu!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Haluatko varmasti poistaa tämän todisteen?",
@@ -330,7 +330,7 @@
 			"Title": "Viimeisimmät hinnat"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Lisää todiste"
 		},
 		"Search": {
 			"Title": "Etsi"
@@ -407,9 +407,9 @@
 		"FavoriteCurrencies": "Suosikki valuutat",
 		"CurrencyRequired": "Vähintään yksi valuutta vaaditaan",
 		"LanguageLabel": "Kielet",
-		"LocationDisplayOSMID": "Display OSM ID",
+		"LocationDisplayOSMID": "Näytä OSM-tunniste",
 		"ProductDisplayBarcode": "Näytä viivakoodi",
-		"ProductDisplayCategoryTag": "Display category tag",
+		"ProductDisplayCategoryTag": "Näytä kategoria-tunniste",
 		"Save": "Tallenna",
 		"Title": "Asetukset",
 		"TranslationCompletion": "Käännös on {completion}% valmis.",
