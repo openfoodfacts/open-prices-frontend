@@ -9,7 +9,7 @@
 
       <v-card-text>
         <v-row>
-          <v-col v-for="proof in userProofList" :key="proof" cols="12" sm="6" md="3">
+          <v-col v-for="proof in userProofList" :key="proof" cols="12" md="6" lg="4">
             <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
           </v-col>
         </v-row>

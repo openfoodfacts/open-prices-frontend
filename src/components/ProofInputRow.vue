@@ -18,7 +18,10 @@
             <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
             <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
           </v-btn>
-          <v-btn v-if="!hideRecentProofChoice" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" @click="userRecentProofsDialog = true">
+          <v-btn
+            v-if="!hideRecentProofChoice" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" :loading="loading"
+            :disabled="loading" @click="userRecentProofsDialog = true"
+          >
             <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
             <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
           </v-btn>
@@ -58,9 +61,9 @@
       <ProofDateCurrencyInputRow :proofDateCurrencyForm="proofForm" />
 
       <!-- proof upload button -->
-      <v-row v-if="proofFormImage">
+      <v-row>
         <v-col>
-          <v-btn color="success" :loading="loading" :disabled="!proofFormFilled" @click="uploadProof">
+          <v-btn color="success" :loading="loading" :disabled="!proofFormFilled || loading" @click="uploadProof">
             {{ $t('Common.Upload') }}
           </v-btn>
         </v-col>
