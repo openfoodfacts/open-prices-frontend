@@ -1,4 +1,5 @@
 name: Run release-please
+
 on:
   push:
     branches:

@@ -23,11 +23,11 @@
       </v-card>
     </v-col>
 
-    <!-- Step 2a: product prices already uploaded -->
-    <v-col cols="12" md="6">
+    <v-col v-if="proofFormFilled" cols="12" md="6">
+      <!-- Step 2a: product prices already uploaded -->
       <v-card
+        class="mb-4"
         prepend-icon="mdi-tag-check-outline"
-        height="100%"
         style="border: 1px solid #4CAF50"
       >
         <template #title>
@@ -50,12 +50,10 @@
         </v-card-text>
         <v-overlay v-model="disablePriceAlreadyUploadedCard" scrim="#E8F5E9" contained persistent />
       </v-card>
-    </v-col>
 
-    <!-- Step 2b: new product price form -->
-    <v-col cols="12" md="6">
+      <!-- Step 2b: new product price form -->
       <v-btn
-        v-if="!Object.keys(productPriceForm).length && !productPriceUploadedList.length"
+        v-if="!Object.keys(productPriceForm).length"
         class="mr-2"
         prepend-icon="mdi-plus"
         color="primary"
@@ -69,7 +67,6 @@
         <v-card
           :title="$t('AddPriceMultiple.ProductPriceDetails.NewPrice')"
           prepend-icon="mdi-tag-outline"
-          append-icon="mdi-delete"
           height="100%"
           style="border: 1px solid transparent"
         >
@@ -107,12 +104,12 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row v-if="productPriceUploadedList.length">
     <v-col>
       <v-btn
         type="submit"
         :loading="createPriceLoading"
-        :disabled="!proofFormFilled || !productPriceUploadedList.length"
+        :disabled="productPriceFormFilled"
         @click="done"
       >
         {{ $t('AddPriceMultiple.Done') }}
