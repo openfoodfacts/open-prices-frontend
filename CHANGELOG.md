@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.67.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.4...v1.67.5) (2024-07-01)
+
+
+### Technical
+
+* **price add:** reorganise a bit the price add workflow ([#673](https://github.com/openfoodfacts/open-prices-frontend/issues/673)) ([7d0a8d2](https://github.com/openfoodfacts/open-prices-frontend/commit/7d0a8d24d89fabfea47e358b538b7084c76342ff))
+
 ## [1.67.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.3...v1.67.4) (2024-06-27)
 
 
