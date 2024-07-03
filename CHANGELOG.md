@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.67.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.4...v1.67.5) (2024-07-03)
+
+
+### Bug Fixes
+
+* **price add:** set price location when selecting existing proof with location. ref [#648](https://github.com/openfoodfacts/open-prices-frontend/issues/648) ([ea96ad3](https://github.com/openfoodfacts/open-prices-frontend/commit/ea96ad3cc8820f44ca08edc1789cb531eb3e0265))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#670](https://github.com/openfoodfacts/open-prices-frontend/issues/670)) ([69ed7ba](https://github.com/openfoodfacts/open-prices-frontend/commit/69ed7ba0af0cabaf8e7cc3e122dd1cc2a136bdb3))
+* **price add:** reorganise a bit the price add workflow ([#673](https://github.com/openfoodfacts/open-prices-frontend/issues/673)) ([7d0a8d2](https://github.com/openfoodfacts/open-prices-frontend/commit/7d0a8d24d89fabfea47e358b538b7084c76342ff))
+
 ## [1.67.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.3...v1.67.4) (2024-06-27)
 
 
