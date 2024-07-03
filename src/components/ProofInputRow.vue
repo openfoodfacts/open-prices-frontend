@@ -172,6 +172,10 @@ export default {
     handleRecentProofSelected(selectedProof) {
       // update proofForm
       this.proofForm.proof_id = selectedProof.id
+      if (selectedProof.location) {
+        this.proofForm.location_osm_id = selectedProof.location_osm_id
+        this.proofForm.location_osm_type = selectedProof.location_osm_type
+      }
       if (selectedProof.date) {
         this.proofForm.date = selectedProof.date
       }
