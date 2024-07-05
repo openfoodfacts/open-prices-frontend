@@ -29,12 +29,13 @@
         {{ $t('Common.LatestPrices') }}
       </h2>
       <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
     <v-col v-for="price in datePriceList" :key="price" cols="12" sm="6" md="4">
-      <PriceCard :price="price" :product="price.product" :hidePriceLocation="true" elevation="1" height="100%" />
+      <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
   </v-row>
 
@@ -54,6 +55,7 @@ import constants from '../constants'
 
 export default {
   components: {
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
@@ -65,11 +67,13 @@ export default {
       datePriceTotal: null,
       datePricePage: 0,
       loading: false,
+      // filter & order
+      currentOrder: constants.PRICE_ORDER_LIST[1].key,
     }
   },
   computed: {
     getPricesParams() {
-      let defaultParams = { page: this.datePricePage }
+      let defaultParams = { order_by: this.currentOrder, page: this.datePricePage }
       // YYYY-MM-DD
       if (this.date.match(constants.DATE_FULL_REGEX_MATCH)) {
         defaultParams['date'] = this.date
@@ -95,6 +99,7 @@ export default {
     }
   },
   mounted() {
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initDate()
   },
   methods: {
@@ -115,6 +120,13 @@ export default {
           this.loading = false
         })
     },
+    selectPriceOrder(orderKey) {
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        // this.initDate() will be called in watch $route
+      }
+    }
   }
 }
 </script>
