@@ -50,7 +50,7 @@ export default {
   ],
   PRICE_ORDER_LIST: [
     { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
-    { key: '-date', value: 'OrderPriceDateDESC', icon: 'mdi-calendar' },
+    { key: '-date', value: 'OrderPriceDateDESC', icon: 'mdi-calendar-today' },
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   OSM_NAME: 'OpenStreetMap',
