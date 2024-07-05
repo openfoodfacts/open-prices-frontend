@@ -50,6 +50,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
+import constants from '../constants'
 
 export default {
   components: {
@@ -65,6 +66,26 @@ export default {
       datePricePage: 0,
       loading: false,
     }
+  },
+  computed: {
+    getPricesParams() {
+      let defaultParams = { page: this.datePricePage }
+      // YYYY-MM-DD
+      if (this.date.match(constants.DATE_FULL_REGEX_MATCH)) {
+        defaultParams['date'] = this.date
+      } else {
+        // YYYY-MM
+        const matches = this.date.match(constants.DATE_YEAR_MONTH_REGEX_MATCH)
+        if (matches) {
+          defaultParams['date__year'] = matches[1]
+          defaultParams['date__month'] = matches[2]
+        // YYYY
+        } else if (this.date.match(constants.DATE_YEAR_REGEX_MATCH)) {
+          defaultParams['date__year'] = this.date
+        }
+      }
+      return defaultParams
+    },
   },
   watch: {
     $route (newDate, oldDate) {
@@ -87,7 +108,7 @@ export default {
     getDatePrices() {
       this.loading = true
       this.datePricePage += 1
-      return api.getPrices({ date: this.date, page: this.datePricePage })
+      return api.getPrices(this.getPricesParams)
         .then((data) => {
           this.datePriceList.push(...data.items)
           this.datePriceTotal = data.total
