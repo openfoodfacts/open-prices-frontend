@@ -29,12 +29,13 @@
         {{ $t('Common.LatestPrices') }}
       </h2>
       <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
     <v-col v-for="price in datePriceList" :key="price" cols="12" sm="6" md="4">
-      <PriceCard :price="price" :product="price.product" :hidePriceLocation="true" elevation="1" height="100%" />
+      <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
   </v-row>
 
@@ -50,9 +51,11 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
+import constants from '../constants'
 
 export default {
   components: {
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },
@@ -64,7 +67,29 @@ export default {
       datePriceTotal: null,
       datePricePage: 0,
       loading: false,
+      // filter & order
+      currentOrder: constants.PRICE_ORDER_LIST[1].key,
     }
+  },
+  computed: {
+    getPricesParams() {
+      let defaultParams = { order_by: this.currentOrder, page: this.datePricePage }
+      // YYYY-MM-DD
+      if (this.date.match(constants.DATE_FULL_REGEX_MATCH)) {
+        defaultParams['date'] = this.date
+      } else {
+        // YYYY-MM
+        const matches = this.date.match(constants.DATE_YEAR_MONTH_REGEX_MATCH)
+        if (matches) {
+          defaultParams['date__year'] = matches[1]
+          defaultParams['date__month'] = matches[2]
+        // YYYY
+        } else if (this.date.match(constants.DATE_YEAR_REGEX_MATCH)) {
+          defaultParams['date__year'] = this.date
+        }
+      }
+      return defaultParams
+    },
   },
   watch: {
     $route (newDate, oldDate) {
@@ -74,6 +99,7 @@ export default {
     }
   },
   mounted() {
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initDate()
   },
   methods: {
@@ -87,13 +113,20 @@ export default {
     getDatePrices() {
       this.loading = true
       this.datePricePage += 1
-      return api.getPrices({ date: this.date, page: this.datePricePage })
+      return api.getPrices(this.getPricesParams)
         .then((data) => {
           this.datePriceList.push(...data.items)
           this.datePriceTotal = data.total
           this.loading = false
         })
     },
+    selectPriceOrder(orderKey) {
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        // this.initDate() will be called in watch $route
+      }
+    }
   }
 }
 </script>

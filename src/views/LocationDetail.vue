@@ -98,7 +98,7 @@ export default {
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.getLocation(),
+    this.getLocation()
     this.getLocationPrices()
   },
   methods: {
