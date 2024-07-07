@@ -13,7 +13,7 @@
     <v-divider />
 
     <v-card-actions>
-      <ProofFooter :proof="proof" :hideProofActions="hideProofActions" :readonly="readonly" />
+      <ProofFooterRow :proof="proof" :hideProofActions="hideProofActions" :readonly="readonly" />
     </v-card-actions>
   </v-card>
 </template>
@@ -23,7 +23,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    ProofFooter: defineAsyncComponent(() => import('../components/ProofFooter.vue')),
+    ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
   },
   props: {
     proof: {
