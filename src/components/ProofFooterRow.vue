@@ -2,10 +2,11 @@
   <v-row>
     <v-col :cols="userIsProofOwner ? '11' : '12'">
       <ProofTypeChip class="mr-1" :proof="proof" />
+      <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()" />
       <LocationChip class="mr-1" :location="proof.location" :locationId="proof.location_id" :readonly="readonly" :showErrorIfLocationMissing="true" />
       <DateChip class="mr-1" :date="proof.date" :showErrorIfDateMissing="true" />
-      <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()" />
       <CurrencyChip class="mr-1" :currency="proof.currency" :showErrorIfCurrencyMissing="true" />
+      <UserChip class="mr-1" :username="proof.owner" :readonly="readonly" />
       <RelativeDateTimeChip :dateTime="proof.created" />
     </v-col>
   </v-row>
@@ -21,10 +22,11 @@ import { useAppStore } from '../store'
 export default {
   components: {
     ProofTypeChip: defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
-    LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     CurrencyChip: defineAsyncComponent(() => import('../components/CurrencyChip.vue')),
+    UserChip: defineAsyncComponent(() => import('../components/UserChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     ProofActionMenuButton: defineAsyncComponent(() => import('../components/ProofActionMenuButton.vue'))
   },
