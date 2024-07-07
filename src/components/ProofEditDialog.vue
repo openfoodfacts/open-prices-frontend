@@ -14,21 +14,7 @@
       <v-divider />
 
       <v-card-text>
-        <v-row>
-          <v-col cols="6">
-            <h3 class="mb-1">
-              {{ $t('Common.Type') }}
-            </h3>
-            <v-item-group v-model="updateProofForm.type" class="d-inline" mandatory>
-              <v-item v-for="pt in proofTypeList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
-                <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
-                  <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
-                  {{ $t('ProofCard.' + pt.value) }}
-                </v-chip>
-              </v-item>
-            </v-item-group>
-          </v-col>
-        </v-row>
+        <ProofTypeInputRow :proofTypeForm="updateProofForm" />
         <ProofDateCurrencyInputRow :proofDateCurrencyForm="updateProofForm" />
       </v-card-text>
 
@@ -51,11 +37,11 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
-import constants from '../constants'
 
 export default {
   components: {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     ProofDateCurrencyInputRow: defineAsyncComponent(() => import('../components/ProofDateCurrencyInputRow.vue')),
   },
   props: {
@@ -72,7 +58,6 @@ export default {
         date: null,
         currency: null,
       },
-      proofTypeList: constants.PROOF_TYPE_LIST,
       loading: false
     }
   },
