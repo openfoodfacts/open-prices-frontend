@@ -14,6 +14,7 @@
       <v-divider />
 
       <v-card-text>
+        <ProofTypeInputRow :proofTypeForm="updateProofForm" />
         <ProofDateCurrencyInputRow :proofDateCurrencyForm="updateProofForm" />
       </v-card-text>
 
@@ -40,6 +41,7 @@ import api from '../services/api'
 export default {
   components: {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     ProofDateCurrencyInputRow: defineAsyncComponent(() => import('../components/ProofDateCurrencyInputRow.vue')),
   },
   props: {
@@ -62,7 +64,7 @@ export default {
   computed: {
     formFilled() {
       return Object.values(this.updateProofForm).every(x => !!x)
-    }
+    },
   },
   mounted() {
     this.initUpdateProofForm()

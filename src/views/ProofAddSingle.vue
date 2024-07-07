@@ -18,14 +18,7 @@
           </template>
           <v-divider />
           <v-card-text>
-            <v-item-group v-model="addProofSingleForm.type" class="d-inline" mandatory>
-              <v-item v-for="pt in proofTypeList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
-                <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
-                  <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
-                  {{ pt.value }}
-                </v-chip>
-              </v-item>
-            </v-item-group>
+            <ProofTypeInputRow :proofTypeForm="addProofSingleForm" />
           </v-card-text>
           <v-overlay v-model="disableProofTypeForm" scrim="#E8F5E9" contained persistent />
         </v-card>
@@ -120,14 +113,11 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     ProofInputRow: defineAsyncComponent(() => import('../components/ProofInputRow.vue')),
   },
   data() {
     return {
-      proofTypeList: [
-        {key: 'PRICE_TAG', value: this.$t('AddPriceHome.MultipleProductMode.Title'), icon: 'mdi-library-shelves'},
-        {key: 'RECEIPT', value: this.$t('AddPriceHome.ReceiptMode.Title'), icon: 'mdi-receipt-text-outline'}
-      ],
       addProofSingleForm: {
         type: 'PRICE_TAG',
         proof_id: null,

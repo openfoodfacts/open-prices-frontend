@@ -35,6 +35,10 @@ export default {
     { key: 'opf', value: OPF_NAME, icon: OPF_ICON },
     { key: 'opff', value: OPFF_NAME, icon: OPFF_ICON },
   ],
+  PROOF_TYPE_LIST: [
+    {key: 'PRICE_TAG', value: 'PRICE_TAG', icon: 'mdi-library-shelves'},
+    {key: 'RECEIPT', value: 'RECEIPT', icon: 'mdi-receipt-text-outline'}
+  ],
   QUERY_PARAM: 'q',
   FILTER_PARAM: 'filter',
   PRODUCT_FILTER_LIST: [
