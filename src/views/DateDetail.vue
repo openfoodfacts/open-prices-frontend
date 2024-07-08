@@ -6,9 +6,13 @@
         prepend-icon="mdi-calendar-today"
       >
         <v-card-text>
-          <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-food-outline" />
-            {{ $t('Common.PriceCount', { count: datePriceTotal }) }}
+          <PriceCountChip :count="datePriceTotal" :withLabel="true" />
+          <v-chip
+            v-for="dp in dateParentList"
+            :key="dp.name"
+            label size="small" density="comfortable" class="mr-1" @click="$router.push(dp.path)"
+          >
+            {{ dp.name }}
           </v-chip>
         </v-card-text>
       </v-card>
@@ -55,6 +59,7 @@ import constants from '../constants'
 
 export default {
   components: {
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue'))
@@ -72,21 +77,53 @@ export default {
     }
   },
   computed: {
+    dateType() {
+      if (this.date) {
+        if (this.date.match(constants.DATE_FULL_REGEX_MATCH)) {
+          return 'DAY'
+        } else {
+          // YYYY-MM
+          const matches = this.date.match(constants.DATE_YEAR_MONTH_REGEX_MATCH)
+          if (matches) {
+            return 'MONTH'
+          // YYYY
+          } else if (this.date.match(constants.DATE_YEAR_REGEX_MATCH)) {
+            return 'YEAR'
+          } else {
+            return null
+          }
+        }
+      }
+      return null
+    },
+    dateParentList() {
+      let dateParentList = []
+      if (this.dateType === 'DAY') {
+        const matches = this.date.match(constants.DATE_FULL_REGEX_MATCH)
+        const year = matches[1]
+        const month = `${year}-${matches[2]}`
+        dateParentList.push({ name: year, path: `/dates/${year}` })
+        dateParentList.push({ name: month, path: `/dates/${month}` })
+      } else if (this.dateType === 'MONTH') {
+        const matches = this.date.match(constants.DATE_YEAR_MONTH_REGEX_MATCH)
+        const year = matches[1]
+        dateParentList.push({ name: year, path: `/dates/${year}` })
+      }
+      return dateParentList
+    },
     getPricesParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.datePricePage }
       // YYYY-MM-DD
-      if (this.date.match(constants.DATE_FULL_REGEX_MATCH)) {
+      if (this.dateType === 'DAY') {
         defaultParams['date'] = this.date
-      } else {
+      } else if (this.dateType === 'MONTH') {
         // YYYY-MM
         const matches = this.date.match(constants.DATE_YEAR_MONTH_REGEX_MATCH)
-        if (matches) {
-          defaultParams['date__year'] = matches[1]
-          defaultParams['date__month'] = matches[2]
+        defaultParams['date__year'] = matches[1]
+        defaultParams['date__month'] = matches[2]
+      } else if (this.dateType === 'YEAR') {
         // YYYY
-        } else if (this.date.match(constants.DATE_YEAR_REGEX_MATCH)) {
-          defaultParams['date__year'] = this.date
-        }
+        defaultParams['date__year'] = this.date
       }
       return defaultParams
     },
