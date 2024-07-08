@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.68.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.5...v1.68.0) (2024-07-08)
+
+
+### Features
+
+* **Date detail:** add chips to navigate to year & month ([#682](https://github.com/openfoodfacts/open-prices-frontend/issues/682)) ([d7465c5](https://github.com/openfoodfacts/open-prices-frontend/commit/d7465c58ce9230134d7f787d4a0adf23d1bd0878))
+* **Date detail:** new page with prices for a given date ([#675](https://github.com/openfoodfacts/open-prices-frontend/issues/675)) ([dc275e7](https://github.com/openfoodfacts/open-prices-frontend/commit/dc275e7d68f4ccf3dc9cc2c3593e6ee4c51770c1))
+* **proof card:** show user (owner) chip ([ebb1ac7](https://github.com/openfoodfacts/open-prices-frontend/commit/ebb1ac73f9af0367d5938ab5a1169e39292644cc))
+* **proof edit:** allow editing a proof type ([#681](https://github.com/openfoodfacts/open-prices-frontend/issues/681)) ([d057eb3](https://github.com/openfoodfacts/open-prices-frontend/commit/d057eb324c1be75200d42a7bae9be37f7af5e17b))
+
+
+### Technical
+
+* **Date detail:** improve price page for a given month & year ([#680](https://github.com/openfoodfacts/open-prices-frontend/issues/680)) ([67fe303](https://github.com/openfoodfacts/open-prices-frontend/commit/67fe30352f75941f6ce171e38395cebbac09add4))
+* **l10n:** New Crowdin translations to review and merge ([#677](https://github.com/openfoodfacts/open-prices-frontend/issues/677)) ([018f78b](https://github.com/openfoodfacts/open-prices-frontend/commit/018f78b07c408b4d2d62a02e31eda20749976d0e))
+* rename ProofFooter to ProofFooterRow ([fdfd2f0](https://github.com/openfoodfacts/open-prices-frontend/commit/fdfd2f0f024d98e8d608414bad888a2dfd42bc72))
+
 ## [1.67.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.4...v1.67.5) (2024-07-03)
 
 
