@@ -113,27 +113,27 @@
 		"Proof": "Důkaz",
 		"Country": "Země",
 		"Currency": "Měna",
-		"CurrencyMissing": "Currency missing",
+		"CurrencyMissing": "Chybí měna",
 		"Language": "Jazyky",
 		"LatestPrices": "Nejnovější ceny",
 		"LoadMore": "Načíst další",
-		"Location": "Location",
+		"Location": "Poloha",
 		"Locations": "Polohy",
-		"LocationMissing": "Location missing",
+		"LocationMissing": "Chybí poloha",
 		"Date": "Datum",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateMissing": "Chybí datum",
+		"Details": "Podrobnosti",
 		"Delete": "Odstranit",
 		"Discount": "Sleva",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Příklad",
+		"Examples": "Příklady",
 		"ExampleWithColon": "Například:",
 		"ExamplesWithColon": "Například:",
 		"Edit": "Upravit",
 		"Filter": "Filtr",
 		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
 		"FilterPriceMoreThan30DaysHide": "Skrýt ceny starší než 30 dní",
-		"Help": "Help",
+		"Help": "Nápověda",
 		"Image": "Obrázek",
 		"Order": "Pořadí",
 		"OrderProductUniqueScansDESC": "Počet skenů",
@@ -178,7 +178,7 @@
 	"Home": {
 		"AddPrice": "Přidat cenu",
 		"LatestPrices": "Nejnovější ceny",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Přidat důkaz",
 		"SearchProduct": "Vyhledat produkt",
 		"SettingsUpdated": "Nastavení aktualizováno!",
 		"TodayPriceStat": "Dnes nebyly přidány žádné ceny | Dnes přidány {todayPriceNumber} nové ceny | Dnes přidáno {todayPriceNumber} nových cen!",
@@ -302,7 +302,7 @@
 	"ProofCreate": {
 		"SelectProof": "Vybrat důkaz",
 		"ProofSelected": "Důkaz vybrán!",
-		"Success": "Proof created!"
+		"Success": "Důkaz upraven!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Jste si jisti, že chcete smazat tento důkaz?",
@@ -334,7 +334,7 @@
 			"Title": "Nejnovější ceny"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Přidat důkaz"
 		},
 		"Search": {
 			"Title": "Vyhledat"
