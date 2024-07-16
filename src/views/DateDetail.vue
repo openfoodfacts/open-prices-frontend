@@ -102,8 +102,8 @@ export default {
         const matches = this.date.match(constants.DATE_FULL_REGEX_MATCH)
         const year = matches[1]
         const month = `${year}-${matches[2]}`
-        dateParentList.push({ name: year, path: `/dates/${year}` })
         dateParentList.push({ name: month, path: `/dates/${month}` })
+        dateParentList.push({ name: year, path: `/dates/${year}` })
       } else if (this.dateType === 'MONTH') {
         const matches = this.date.match(constants.DATE_YEAR_MONTH_REGEX_MATCH)
         const year = matches[1]

@@ -162,7 +162,7 @@ function getLocationName(locationObject) {
     return locationObject.properties.name
   }
   // Nominatim or OP
-  return locationObject.name || locationObject.osm_name
+  return locationObject.name || locationObject.osm_name || ''
 }
 
 function getLocationRoad(locationObject) {
@@ -209,6 +209,9 @@ function getLocationTitle(locationObject, withName=true, withRoad=false, withCit
   if (withEmoji) {
     // locationTitle += ` ${getCountryEmojiFromName(locationObject.osm_address_country) || ''}`
     locationTitle += ` ${getCountryEmojiFromCode(locationObject.osm_address_country_code) || ''}`
+  }
+  if (!locationTitle) {
+    locationTitle = locationObject.id
   }
   return locationTitle
 }

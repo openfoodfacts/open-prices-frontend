@@ -65,6 +65,7 @@
       </v-btn>
       <v-form v-else @submit.prevent="createPrice">
         <v-card
+          class="mb-4"
           :title="$t('AddPriceMultiple.ProductPriceDetails.NewPrice')"
           prepend-icon="mdi-tag-outline"
           height="100%"
@@ -101,12 +102,9 @@
           </v-card-text>
         </v-card>
       </v-form>
-    </v-col>
-  </v-row>
 
-  <v-row v-if="productPriceUploadedList.length">
-    <v-col>
       <v-btn
+        class="float-right"
         type="submit"
         :loading="createPriceLoading"
         :disabled="productPriceFormFilled"
