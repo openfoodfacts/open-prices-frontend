@@ -11,7 +11,7 @@
   <br>
 
   <v-row>
-    <v-col cols="12" sm="6" lg="4">
+    <v-col cols="12" sm="8" md="6" lg="4">
       <v-card
         :title="$t('Home.SearchProduct')"
         prepend-icon="mdi-magnify"
@@ -19,28 +19,7 @@
         to="/search"
       />
     </v-col>
-    <v-col cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Home.AddPrice')"
-        prepend-icon="mdi-plus"
-        color="primary"
-        variant="outlined"
-        elevation="1"
-        to="/prices/add"
-      >
-        <template v-if="!username" #subtitle>
-          <i18n-t keypath="Common.SignInOFFAccount" tag="span">
-            <template #url>
-              <OpenFoodFactsLink display="link" />
-            </template>
-          </i18n-t>
-        </template>
-      </v-card>
-    </v-col>
-  </v-row>
-
-  <v-row>
-    <v-col cols="12" sm="6" lg="4">
+    <v-col cols="12" sm="8" md="6" lg="4">
       <v-card
         :title="$t('Home.LatestPrices')"
         prepend-icon="mdi-tag-multiple-outline"
@@ -50,6 +29,27 @@
           <i18n-t keypath="Home.TodayPriceStat" :plural="todayPriceCount" tag="span">
             <template #todayPriceNumber>
               <span id="price-count">{{ todayPriceCount }}</span>
+            </template>
+          </i18n-t>
+        </template>
+      </v-card>
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col cols="12" sm="8" md="6" lg="4">
+      <v-card
+        :title="$t('Home.AddPrice')"
+        prepend-icon="mdi-tag-plus-outline"
+        color="primary"
+        variant="outlined"
+        elevation="1"
+        to="/prices/add"
+      >
+        <template v-if="!username" #subtitle>
+          <i18n-t keypath="Common.SignInOFFAccount" tag="span">
+            <template #url>
+              <OpenFoodFactsLink display="link" />
             </template>
           </i18n-t>
         </template>

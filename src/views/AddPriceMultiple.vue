@@ -55,7 +55,6 @@
       <v-btn
         v-if="!Object.keys(productPriceForm).length"
         class="mr-2"
-        prepend-icon="mdi-plus"
         color="primary"
         :loading="createPriceLoading"
         :disabled="!proofFormFilled"
