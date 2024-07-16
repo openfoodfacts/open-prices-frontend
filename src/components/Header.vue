@@ -14,6 +14,7 @@
       </v-btn>
     </template>
     <template v-else #append>
+      <v-btn color="primary" icon="mdi-tag-plus-outline" to="/prices/add" :aria-label="$t('Home.AddPrice')" />
       <v-menu scroll-strategy="close">
         <template #activator="{ props }">
           <v-btn v-if="!$vuetify.display.smAndUp" v-bind="props" icon="mdi-account-circle" />
