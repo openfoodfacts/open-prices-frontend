@@ -227,7 +227,7 @@ export default {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
           } else {
-            this.$router.push({ path: '/prices/add', query: { singleSuccess: 'true' } })
+            this.$router.push({ path: '/prices', query: { singleSuccess: 'true' } })
           }
           this.createPriceLoading = false
         })

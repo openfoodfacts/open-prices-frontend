@@ -21,49 +21,4 @@
       />
     </v-col>
   </v-row>
-
-  <v-snackbar
-    v-model="signinSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('AddPriceHome.SignedIn') }}
-  </v-snackbar>
-  <v-snackbar
-    v-model="singleSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('AddPriceHome.PriceCreated') }}
-  </v-snackbar>
-  <v-snackbar
-    v-model="multipleSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('AddPriceHome.Thanks') }}
-  </v-snackbar>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      signinSuccessMessage: false,
-      singleSuccessMessage: false,
-      multipleSuccessMessage: false,
-    }
-  },
-  mounted() {
-    if (this.$route.query.signinSuccess === 'true') {
-      this.signinSuccessMessage = true
-    }
-    if (this.$route.query.singleSuccess === 'true') {
-      this.singleSuccessMessage = true
-    }
-    if (this.$route.query.multipleSuccess === 'true') {
-      this.multipleSuccessMessage = true
-    }
-  }
-}
-</script>

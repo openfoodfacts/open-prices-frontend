@@ -270,7 +270,7 @@ export default {
         })
     },
     done() {
-      this.$router.push({ path: '/prices/add', query: { multipleSuccess: 'true' } })
+      this.$router.push({ path: '/prices', query: { multipleSuccess: 'true' } })
     }
   }
 }
