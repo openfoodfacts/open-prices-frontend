@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.69.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.68.0...v1.69.0) (2024-07-16)
+
+
+### Features
+
+* **price add:** show price add button in header (for logged in users) ([#686](https://github.com/openfoodfacts/open-prices-frontend/issues/686)) ([2c4e447](https://github.com/openfoodfacts/open-prices-frontend/commit/2c4e4479fc977034a5049e9db181b8104b5c29b4))
+
+
+### Bug Fixes
+
+* small fixes ([c8949b5](https://github.com/openfoodfacts/open-prices-frontend/commit/c8949b583753f262d2366e303a63f57911aa4f76))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#683](https://github.com/openfoodfacts/open-prices-frontend/issues/683)) ([dbfbc61](https://github.com/openfoodfacts/open-prices-frontend/commit/dbfbc61b11aad47aa318d47c95b12dfb122cc62d))
+* **price add:** redirect to latest prices on success ([6847e56](https://github.com/openfoodfacts/open-prices-frontend/commit/6847e56cace1469c152b8585cad50658c9872c35))
+
 ## [1.68.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.67.5...v1.68.0) (2024-07-08)
 
 
