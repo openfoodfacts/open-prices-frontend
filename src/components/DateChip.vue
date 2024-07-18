@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" prepend-icon="mdi-calendar-today" density="comfortable" :color="dateMissingAndShowError ? 'error' : 'default'">
+  <v-chip label size="small" prepend-icon="mdi-calendar-today" density="comfortable" :color="dateMissingAndShowError ? 'error' : 'default'" @click="goToDate()">
     <span v-if="date">{{ getDateFormatted(date) }}</span>
     <span v-else-if="dateMissingAndShowError">
       <i class="text-lowercase">{{ $t('Common.Date') }}</i>
@@ -22,7 +22,11 @@ export default {
     showErrorIfDateMissing: {
       type: Boolean,
       default: false
-    }
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     dateMissingAndShowError() {
@@ -32,6 +36,12 @@ export default {
   methods: {
     getDateFormatted(dateString) {
       return utils.prettyDate(dateString)
+    },
+    goToDate() {
+      if (this.readonly || !this.date) {
+        return
+      }
+      this.$router.push({ path: `/dates/${this.date}` })
     },
   }
 }

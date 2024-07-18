@@ -9,11 +9,6 @@
           <v-tooltip v-if="priceWithoutDiscountValue" activator="parent" open-on-click location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(priceWithoutDiscountValue) }}</v-tooltip>
         </v-chip>
       </span>
-      <i18n-t v-if="!hidePriceDate" keypath="PriceCard.PriceDate" tag="span">
-        <template #date>
-          <i>{{ getDateFormatted(price.date) }}</i>
-        </template>
-      </i18n-t>
     </v-col>
   </v-row>
 </template>
