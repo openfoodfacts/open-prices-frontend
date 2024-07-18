@@ -28,7 +28,7 @@
         </v-col>
       </v-row>
 
-      <PricePriceRow v-if="price" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceDate="hidePriceDate" />
+      <PricePriceRow v-if="price" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" />
 
       <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly" />
     </v-container>
@@ -70,10 +70,6 @@ export default {
       default: false
     },
     hideProductDetails: {
-      type: Boolean,
-      default: false
-    },
-    hidePriceDate: {
       type: Boolean,
       default: false
     },

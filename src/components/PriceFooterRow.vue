@@ -3,8 +3,9 @@
     <v-col :cols="userIsPriceOwner ? '11' : '12'">
       <LocationChip v-if="!hidePriceLocation" class="mr-1" :location="price.location" :locationId="price.location_id" :readonly="readonly" />
       <UserChip class="mr-1" :username="price.owner" :readonly="readonly" />
-      <RelativeDateTimeChip class="mr-1" :dateTime="price.created" />
-      <ProofChip v-if="price.proof && !hidePriceProof" :proof="price.proof" />
+      <DateChip class="mr-1" :date="price.date" :readonly="readonly" />
+      <ProofChip v-if="price.proof && !hidePriceProof" class="mr-1" :proof="price.proof" />
+      <RelativeDateTimeChip :dateTime="price.created" />
     </v-col>
   </v-row>
 
@@ -20,8 +21,9 @@ export default {
   components: {
     LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     UserChip: defineAsyncComponent(() => import('../components/UserChip.vue')),
-    RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
+    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     ProofChip: defineAsyncComponent(() => import('../components/ProofChip.vue')),
+    RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     PriceActionMenuButton: defineAsyncComponent(() => import('../components/PriceActionMenuButton.vue')),
   },
   props: {
