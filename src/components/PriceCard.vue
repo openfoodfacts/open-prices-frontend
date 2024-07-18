@@ -2,16 +2,16 @@
   <v-card :id="'price_' + price.id" data-name="price-card">
     <v-container class="pa-2">
       <v-row>
-        <v-col v-if="!hideProductImage" style="max-width:15%">
-          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:50px;width:50px" @click="goToProduct()" />
+        <v-col v-if="!hideProductImage" class="pr-2" style="max-width:20%;">
+          <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;" @click="goToProduct()" />
           <v-img v-else :src="productImageDefault" style="height:50px;width:50px;filter:invert(.9);" />
         </v-col>
-        <v-col :style="hideProductImage ? '' : 'max-width:85%'">
+        <v-col :style="hideProductImage ? '' : 'max-width:80%'">
           <h3 v-if="!hideProductTitle" @click="goToProduct()">
             {{ productTitle }}
           </h3>
 
-          <p v-if="!hideProductDetails" class="mb-2">
+          <p v-if="!hideProductDetails">
             <span v-if="hasProduct">
               <PriceCountChip :count="product.price_count" @click="goToProduct()" />
               <span v-if="hasProductSource">
@@ -25,10 +25,10 @@
               <PriceLabels v-if="hasPriceLabels" class="mr-1" :priceLabels="price.labels_tags" />
             </span>
           </p>
+
+          <PricePriceRow v-if="price" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" />
         </v-col>
       </v-row>
-
-      <PricePriceRow v-if="price" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" />
 
       <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly" />
     </v-container>
