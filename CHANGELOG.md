@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.69.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.69.0...v1.69.1) (2024-07-18)
+
+
+### Technical
+
+* **Price card:** move price date to footer ([#687](https://github.com/openfoodfacts/open-prices-frontend/issues/687)) ([c5ba3b0](https://github.com/openfoodfacts/open-prices-frontend/commit/c5ba3b002b8166915e78d4f59a7234cc2141fe49))
+
 ## [1.69.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.68.0...v1.69.0) (2024-07-16)
 
 
