@@ -2,11 +2,11 @@
   <v-card data-name="product-card">
     <v-container class="pa-2">
       <v-row v-if="product">
-        <v-col style="max-width:25%">
-          <v-img v-if="product.image_url" :src="product.image_url" style="max-height:100px;width:100px" @click="goToProduct()" />
+        <v-col class="pr-0" style="max-width:20%">
+          <v-img v-if="product.image_url" :src="product.image_url" style="max-height:100px;" @click="goToProduct()" />
           <v-img v-if="!product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);" />
         </v-col>
-        <v-col style="max-width:75%">
+        <v-col style="max-width:80%">
           <h3 id="product-title" @click="goToProduct()">
             {{ getProductTitle() }}
           </h3>

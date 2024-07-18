@@ -2,7 +2,7 @@
   <v-card :id="'price_' + price.id" data-name="price-card">
     <v-container class="pa-2">
       <v-row>
-        <v-col v-if="!hideProductImage" class="pr-2" style="max-width:20%;">
+        <v-col v-if="!hideProductImage" class="pr-0" style="max-width:20%;">
           <v-img v-if="product && product.image_url" :src="product.image_url" style="max-height:100px;" @click="goToProduct()" />
           <v-img v-else :src="productImageDefault" style="height:50px;width:50px;filter:invert(.9);" />
         </v-col>
