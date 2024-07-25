@@ -303,7 +303,7 @@
 		"GDPR_REQUEST": "Запит GDPR"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Виберіть доказ",
 		"ProofSelected": "Доказ вибрано!",
 		"Success": "Доказ створено!"
 	},
@@ -410,7 +410,7 @@
 		"ChangeLanguage": "Змінити мову",
 		"CountryLabel": "Країна",
 		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
+		"DisplayTitle": "Показати",
 		"FavoriteCurrencies": "Улюблені валюти",
 		"CurrencyRequired": "Потрібна принаймні одна валюта",
 		"LanguageLabel": "Мови",
