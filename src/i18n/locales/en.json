@@ -135,6 +135,8 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Help": "Help",
 		"Image": "Image",
+		"List": "List",
+		"Map": "Map",
 		"Order": "Order",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",

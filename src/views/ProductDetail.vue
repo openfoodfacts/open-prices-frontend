@@ -34,30 +34,48 @@
 
   <br>
 
-  <v-row>
-    <v-col>
-      <h2 class="text-h6 d-inline mr-2">
-        {{ $t('ProductDetail.LatestPrices') }}
-      </h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30" />
-      <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
-      <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
-    </v-col>
-  </v-row>
+  <v-tabs v-model="tab" align-tabs="start" grow>
+    <v-tab value="tab-list">
+      <v-icon icon="mdi-database-outline" />
+      {{ $t('Common.List') }}
+    </v-tab>
+    <v-tab value="tab-map">
+      <v-icon icon="mdi-map-marker-outline" />
+      {{ $t('Common.Map') }}
+    </v-tab>
+  </v-tabs>
 
-  <v-row class="mt-0">
-    <v-col v-for="price in productPriceList" :key="price" cols="12" sm="6" md="4">
-      <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetails="productIsCategory ? false : true" elevation="1" height="100%" />
-    </v-col>
-  </v-row>
+  <v-window v-model="tab">
+    <v-window-item value="tab-list">
+      <v-container fluid>
+        <v-row>
+          <v-col>
+            <h2 class="text-h6 d-inline mr-2">
+              {{ $t('ProductDetail.LatestPrices') }}
+            </h2>
+            <v-progress-circular v-if="loading" indeterminate :size="30" />
+            <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
+            <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
+          </v-col>
+        </v-row>
 
-  <v-row v-if="productPriceList.length < productPriceTotal" class="mb-2">
-    <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getProductPrices">
-        {{ $t('ProductDetail.LoadMore') }}
-      </v-btn>
-    </v-col>
-  </v-row>
+        <v-row class="mt-0">
+          <v-col v-for="price in productPriceList" :key="price" cols="12" sm="6" md="4">
+            <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetails="productIsCategory ? false : true" elevation="1" height="100%" />
+          </v-col>
+        </v-row>
+
+        <v-row v-if="productPriceList.length < productPriceTotal" class="mb-2">
+          <v-col align="center">
+            <v-btn size="small" :loading="loading" @click="getProductPrices">
+              {{ $t('ProductDetail.LoadMore') }}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-window-item>
+    <v-window-item key="tab-map" value="tab-map" />
+  </v-window>
 </template>
 
 <script>
@@ -92,6 +110,8 @@ export default {
       loading: false,
       // share
       shareLinkCopySuccessMessage: false,
+      // tabs
+      tab: null,
       // filter & order
       currentFilter: '',
       currentOrder: constants.PRICE_ORDER_LIST[1].key,
