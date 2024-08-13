@@ -137,16 +137,12 @@ export default {
   },
   methods: {
     getPriceProductTitle() {
-      if (this.hasProductName) {
-        this.productTitle = this.product.product_name
-      } else if (this.hasPrice && this.price.product_code) {
-        this.productTitle = this.price.product_code
+      if (this.hasProductCode) {
+        this.productTitle = this.product.product_name || this.price.product_code
       } else if (this.hasPrice && this.hasCategoryTag) {
         utils.getLocaleCategoryTag(this.appStore.getUserLanguage, this.price.category_tag).then((category) => {
           this.productTitle = category.name
         })
-      } else {
-        this.productTitle = this.$t('PriceCard.UnknownProduct')
       }
     },
     getPriceProductCode() {

@@ -105,7 +105,7 @@ export default {
   },
   methods: {
     getProductTitle() {
-      return this.hasProductSource ? (this.product.product_name || this.$t('ProductCard.UnknownProduct')) : this.product.code
+      return this.product.product_name || this.product.code
     },
     goToProduct() {
       if (this.readonly) {
