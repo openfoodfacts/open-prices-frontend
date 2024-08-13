@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable">
+  <v-chip label variant="text" size="small" density="comfortable">
     <v-icon start icon="mdi-clock-outline" />
     {{ getRelativeDateTimeFormatted(dateTime) }}
     <v-tooltip activator="parent" open-on-click location="top">
