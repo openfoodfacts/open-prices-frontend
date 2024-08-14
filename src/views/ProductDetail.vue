@@ -47,18 +47,18 @@
 
   <v-window v-model="currentDisplay">
     <v-window-item value="list">
-      <v-container fluid>
-        <v-row class="mt-0">
-          <v-col v-for="price in productPriceList" :key="price" cols="12" sm="6" md="4">
-            <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetails="productIsCategory ? false : true" elevation="1" height="100%" />
-          </v-col>
-        </v-row>
-      </v-container>
+      <v-row class="mt-0 mb-1">
+        <v-col v-for="price in productPriceList" :key="price" cols="12" sm="6" md="4">
+          <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetails="productIsCategory ? false : true" elevation="1" height="100%" />
+        </v-col>
+      </v-row>
     </v-window-item>
     <v-window-item value="map">
-      <v-container fluid style="height:400px">
-        <LeafletMap :locations="priceLocationList" />
-      </v-container>
+      <v-row class="mt-0 mb-1">
+        <v-col style="height:400px">
+          <LeafletMap :locations="priceLocationList" />
+        </v-col>
+      </v-row>
     </v-window-item>
   </v-window>
 
