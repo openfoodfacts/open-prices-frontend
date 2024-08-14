@@ -60,7 +60,7 @@
               </v-card>
             </v-col>
             <v-col cols="12" sm="6" style="min-height:400px">
-              <LeafletMap :locationList="results" />
+              <LeafletMap :locations="results" />
             </v-col>
           </v-row>
         </v-sheet>

@@ -1,7 +1,7 @@
 <template>
   <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
     <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap" />
-    <l-marker v-for="location in locationList" :key="getLocationUniqueID(location)" :lat-lng="getLocationLatLng(location)">
+    <l-marker v-for="location in locations" :key="getLocationUniqueID(location)" :lat-lng="getLocationLatLng(location)">
       <l-popup>
         <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
         {{ getLocationTitle(location, false, true, true) }}<br>
@@ -26,7 +26,7 @@ export default {
     LPopup,
   },
   props: {
-    locationList: {
+    locations: {
       type: Array,
       required: true
     },
@@ -40,11 +40,11 @@ export default {
     }
   },
   mounted() {
-    if (this.locationList.length) {
-      if (this.locationList.length > 1) {
-        this.mapBounds = utils.getMapBounds(this.locationList)
+    if (this.locations.length) {
+      if (this.locations.length > 1) {
+        this.mapBounds = utils.getMapBounds(this.locations)
       } else {
-        this.mapCenter = utils.getMapCenter(this.locationList)
+        this.mapCenter = utils.getMapCenter(this.locations)
         // this.mapZoom = 12
         this.mapBounds = null
       }

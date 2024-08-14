@@ -42,14 +42,26 @@
       <v-progress-circular v-if="loading" indeterminate :size="30" />
       <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
       <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
+      <DisplayMenu v-if="!loading" kind="price" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
-    <v-col v-for="price in productPriceList" :key="price" cols="12" sm="6" md="4">
-      <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetails="productIsCategory ? false : true" elevation="1" height="100%" />
-    </v-col>
-  </v-row>
+  <v-window v-model="currentDisplay">
+    <v-window-item value="list">
+      <v-container fluid>
+        <v-row class="mt-0">
+          <v-col v-for="price in productPriceList" :key="price" cols="12" sm="6" md="4">
+            <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetails="productIsCategory ? false : true" elevation="1" height="100%" />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-window-item>
+    <v-window-item value="map">
+      <v-container fluid style="height:400px">
+        <LeafletMap :locations="priceLocationList" />
+      </v-container>
+    </v-window-item>
+  </v-window>
 
   <v-row v-if="productPriceList.length < productPriceTotal" class="mb-2">
     <v-col align="center">
@@ -75,7 +87,9 @@ export default {
     PriceAddButton: defineAsyncComponent(() => import('../components/PriceAddButton.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
+    DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
     OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
     ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue'))
@@ -89,12 +103,14 @@ export default {
       productPriceList: [],
       productPriceTotal: 0,
       productPricePage: 0,
+      priceLocationList: [],
       loading: false,
       // share
       shareLinkCopySuccessMessage: false,
-      // filter & order
+      // filter, order & display
       currentFilter: '',
       currentOrder: constants.PRICE_ORDER_LIST[1].key,
+      currentDisplay: constants.PRICE_DISPLAY_LIST[0].key,
     }
   },
   computed: {
@@ -122,15 +138,22 @@ export default {
     },
   },
   watch: {
-    $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initProductPrices()
+    $route (newRoute, oldRoute) {
+      // only called when query changes to avoid having an API call when the path changes
+      // but ignore 'display' changes
+      if (oldRoute.path === newRoute.path) {
+        const oldRouteQueryFiltered = Object.fromEntries(Object.entries(oldRoute.query).filter(([key, value]) => key !== constants.DISPLAY_PARAM))  // eslint-disable-line no-unused-vars
+        const newRouteQueryFiltered = Object.fromEntries(Object.entries(newRoute.query).filter(([key, value]) => key !== constants.DISPLAY_PARAM))  // eslint-disable-line no-unused-vars
+        if (JSON.stringify(oldRouteQueryFiltered) !== JSON.stringify(newRouteQueryFiltered)) {
+          this.initProductPrices()
+        }
       }
     }
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
+    this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.currentDisplay
     this.getProduct()
     this.initProductPrices()
   },
@@ -139,6 +162,7 @@ export default {
       this.productPriceList = []
       this.productPriceTotal = 0
       this.productPricePage = 0
+      this.priceLocationList = []
       this.getProductPrices()
     },
     getProduct() {
@@ -164,6 +188,11 @@ export default {
         .then((data) => {
           this.productPriceList.push(...data.items)
           this.productPriceTotal = data.total
+          data.items.forEach((price) => {
+            if (price.location) {
+              utils.addObjectToArray(this.priceLocationList, price.location)
+            }
+          })
           this.loading = false
         })
     },
@@ -178,7 +207,12 @@ export default {
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initProductPrices() will be called in watch $route
       }
-    }
+    },
+    selectPriceDisplay(displayKey) {
+      this.currentDisplay = displayKey
+      this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
+      // this.initProductPrices() will NOT be called in watch $route
+    },
   }
 }
 </script>
