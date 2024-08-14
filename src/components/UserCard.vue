@@ -6,6 +6,7 @@
   >
     <v-card-text>
       <PriceCountChip :count="user.price_count" :withLabel="true" />
+      <UserActionMenuButton :user="user" />
     </v-card-text>
   </v-card>
 </template>
@@ -16,6 +17,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    UserActionMenuButton: defineAsyncComponent(() => import('../components/UserActionMenuButton.vue')),
   },
   props: {
     user: {
