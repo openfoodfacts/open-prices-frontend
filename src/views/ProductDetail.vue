@@ -42,14 +42,26 @@
       <v-progress-circular v-if="loading" indeterminate :size="30" />
       <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
       <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
+      <DisplayMenu v-if="!loading" kind="price" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
-    <v-col v-for="price in productPriceList" :key="price" cols="12" sm="6" md="4">
-      <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetails="productIsCategory ? false : true" elevation="1" height="100%" />
-    </v-col>
-  </v-row>
+  <v-window v-model="currentDisplay">
+    <v-window-item value="list">
+      <v-container fluid>
+        <v-row class="mt-0">
+          <v-col v-for="price in productPriceList" :key="price" cols="12" sm="6" md="4">
+            <PriceCard :price="price" :product="product" :hideProductImage="true" :hideProductTitle="true" :hideProductDetails="productIsCategory ? false : true" elevation="1" height="100%" />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-window-item>
+    <v-window-item value="map">
+      <v-container fluid>
+        <!-- LeafletMap -->
+      </v-container>
+    </v-window-item>
+  </v-window>
 
   <v-row v-if="productPriceList.length < productPriceTotal" class="mb-2">
     <v-col align="center">
@@ -75,6 +87,7 @@ export default {
     PriceAddButton: defineAsyncComponent(() => import('../components/PriceAddButton.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
+    DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
@@ -92,9 +105,10 @@ export default {
       loading: false,
       // share
       shareLinkCopySuccessMessage: false,
-      // filter & order
+      // filter, order & display
       currentFilter: '',
       currentOrder: constants.PRICE_ORDER_LIST[1].key,
+      currentDisplay: constants.PRICE_DISPLAY_LIST[0].key,
     }
   },
   computed: {
@@ -178,7 +192,10 @@ export default {
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initProductPrices() will be called in watch $route
       }
-    }
+    },
+    selectPriceDisplay(displayKey) {
+      this.currentDisplay = displayKey
+    },
   }
 }
 </script>
