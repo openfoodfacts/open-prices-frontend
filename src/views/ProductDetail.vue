@@ -27,7 +27,6 @@
     <v-col cols="12">
       <PriceAddButton v-if="product && product.code" class="mr-2" :productCode="product.code" />
       <PriceAddButton v-else-if="category" class="mr-2" :productCode="category.name" />
-      <OpenFoodFactsLink v-if="product && product.code && product.source" display="button" :source="product.source" facet="product" :value="product.code" />
       <ShareButton />
     </v-col>
   </v-row>
@@ -90,7 +89,6 @@ export default {
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
-    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
     ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue'))
   },

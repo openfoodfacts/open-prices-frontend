@@ -1,20 +1,18 @@
 <template>
   <v-card data-name="product-card">
-    <v-container class="pa-2">
+    <v-container class="pa-2" :style="latestPrice ? 'position:relative;' : ''">
       <v-row v-if="product">
         <v-col class="pr-0" style="max-width:20%">
           <v-img v-if="product.image_url" :src="product.image_url" style="max-height:100px;" @click="goToProduct()" />
           <v-img v-if="!product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);" />
         </v-col>
-        <v-col style="max-width:80%">
+        <v-col style="max-width:80%;">
           <h3 id="product-title" @click="goToProduct()">
             {{ getProductTitle() }}
           </h3>
 
           <p>
-            <span>
-              <PriceCountChip :count="product.price_count" @click="goToProduct()" />
-            </span>
+            <PriceCountChip :count="product.price_count" @click="goToProduct()" />
             <span v-if="hasProductSource">
               <ProductBrands :productBrands="product.brands" :readonly="readonly" />
               <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
@@ -26,16 +24,17 @@
             <br v-if="showProductBarcode">
             <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
             <ProductBarcodeInvalidChip v-if="barcodeInvalid" />
+            <ProductActionMenuButton v-if="hasProductSource" :product="product" />
           </p>
         </v-col>
       </v-row>
+    </v-container>
 
-      <v-sheet v-if="latestPrice">
-        <v-divider class="mt-2 mb-2" />
-        <h4>{{ $t('ProductCard.LatestPrice') }}</h4>
-        <PricePriceRow :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
-        <PriceFooterRow :price="latestPrice" />
-      </v-sheet>
+    <v-divider v-if="latestPrice" />
+    <v-container v-if="latestPrice" class="pa-2">
+      <h4>{{ $t('ProductCard.LatestPrice') }}</h4>
+      <PricePriceRow :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
+      <PriceFooterRow :price="latestPrice" />
     </v-container>
   </v-card>
 </template>
@@ -56,6 +55,7 @@ export default {
     ProductMissingChip: defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
     ProductBarcodeChip: defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
     ProductBarcodeInvalidChip: defineAsyncComponent(() => import('../components/ProductBarcodeInvalidChip.vue')),
+    ProductActionMenuButton: defineAsyncComponent(() => import('../components/ProductActionMenuButton.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue')),
   },
