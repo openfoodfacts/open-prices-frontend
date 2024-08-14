@@ -5,6 +5,9 @@
   <v-btn v-else-if="display === 'button'" size="small" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank">
     {{ getSourceName }}
   </v-btn>
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank">
+    {{ getSourceName }}
+  </v-list-item>
 </template>
 
 <script>
@@ -15,19 +18,19 @@ import constants from '../constants'
 export default {
   props: {
     display: {
-      // link, button
       type: String,
-      default: 'link'
+      default: 'link',
+      examples: ['link', 'button', 'list-item']
     },
     source: {
-      // off, obf, opff, opf
       type: String,
-      default: null
+      default: null,
+      examples: ['off', 'obf', 'opff', 'opf']
     },
     facet: {
-      // category, label, brand...
       type: String,
-      default: null
+      default: null,
+      examples: ['category', 'label', 'brand', 'editor']
     },
     value: {
       type: String,
@@ -47,7 +50,7 @@ export default {
       if (this.source) {
         return constants[`${this.source.toUpperCase()}_ICON`]
       }
-      return 'mdi-open-in-new'
+      return null
     },
     getSourceUrl() {
       if (this.source) {
