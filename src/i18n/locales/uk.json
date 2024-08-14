@@ -9,14 +9,14 @@
 			"Subtitle": "Один або кілька продуктів",
 			"Title": "Квитанція"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Ви ввійшли!",
 		"SingleProductMode": {
 			"Subtitle": "Лише один цінник",
 			"Title": "Один продукт"
 		},
 		"Thanks": "Дякую",
 		"Title": "Додати ціну",
-		"TitleSingle": "Add a single price",
+		"TitleSingle": "Додати єдину ціну",
 		"TitleMultiple": "Додайте кілька цін гуртом"
 	},
 	"AddPriceMultiple": {
@@ -46,26 +46,26 @@
 			"Proof": "Доказ",
 			"ProofDateChanged": "Дата оновлення!",
 			"ProofSelected": "Доказ вибрано!",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"ProofUploaded": "Доказ завантажено!",
+			"Title": "Деталі ціни",
+			"UploadProof": "Завантажити доказ",
 			"Picture": "Зображення",
 			"TakePicture": "Сфотографувати",
 			"Gallery": "Галерея пристрою",
 			"SelectFromGallery": "Виберіть з галереї пристрою",
 			"RecentProof": "Недавні докази",
-			"SelectRecentProof": "Select a recent proof"
+			"SelectRecentProof": "Вибрати останній доказ"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Категорія",
-			"OriginLabel": "Origin",
+			"OriginLabel": "Походження",
 			"ProductBarcode": "Штрих-код продукту",
 			"Scan": "Сканувати",
 			"ScanBarcode": "Просканувати штрих-код",
 			"Type": "Тип",
 			"TypeBarcode": "Введіть штрих-код",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"SetProduct": "Встановити продукт",
+			"Title": "Інформація про продукт"
 		},
 		"ProductModeList": {
 			"Barcode": "Код товару",
@@ -75,19 +75,19 @@
 			"PerKg": "Ціна за кг",
 			"PerUnit": "Ціна за одиницю"
 		},
-		"Title": "Add a single price",
+		"Title": "Додати єдину ціну",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Дата",
+			"DateLabel": "Дата",
 			"Find": "Знайти",
 			"Location": "Розташування магазину",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"SelectLocation": "Вибрати свою локацію",
+			"Title": "Де і коли?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "на основі {url}"
 		},
 		"Scan": "Просканувати штрих-код"
 	},
@@ -112,15 +112,18 @@
 		"Brand": "Виробник",
 		"Proof": "Доказ",
 		"Country": "Країна",
-		"Currency": "Currency",
+		"Currency": "Валюта",
 		"CurrencyMissing": "Відсутня валюта",
+		"Display": "Показати",
+		"DisplayPriceList": "Список",
+		"DisplayPriceMap": "Мапа",
 		"Language": "Мови",
 		"LatestPrices": "Остання ціна",
 		"LoadMore": "Завантажити більше",
 		"Location": "Розташування",
 		"Locations": "Місцезнаходження",
 		"LocationMissing": "Розташування відсутнє",
-		"Date": "Date",
+		"Date": "Дата",
 		"DateMissing": "Відсутня дата",
 		"Details": "Подробиці",
 		"Delete": "Видалити",
@@ -131,7 +134,7 @@
 		"ExamplesWithColon": "Приклади:",
 		"Edit": "Редагувати",
 		"Filter": "Фільтр",
-		"FilterProductWithPriceCountHide": "Hide products with prices",
+		"FilterProductWithPriceCountHide": "Приховати товари з цінами",
 		"FilterPriceMoreThan30DaysHide": "Приховати ціни старші за 30 днів",
 		"Help": "Допомога",
 		"Image": "Зображення",
@@ -145,7 +148,7 @@
 		"PriceCreated": "Ціна створена!",
 		"ProductCount": "{count} продуктів",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
-		"SignedIn": "Signed in!",
+		"SignedIn": "Ви ввійшли!",
 		"Source": "Джерело",
 		"Thanks": "Дякую",
 		"Type": "Тип",
@@ -159,21 +162,21 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Оберіть одну з ваших улюблених валют",
-		"Currency": "Currency",
+		"Currency": "Валюта",
 		"AddCurrencies": "Додайте валюту в налаштуваннях",
 		"AddCurrenciesWarning": "Ви будете перенаправлені на сторінку налаштувань, але втратите всю інформацію, яку ви ввели на цій сторінці.",
 		"Select": "Вибрати {currency_code}"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Виберіть один зі своїх останніх доказів"
 	},
 	"Footer": {
 		"About": "Про додаток",
-		"Stats": "Stats",
+		"Stats": "Статистика",
 		"TagLine": "{name} є проектом {url}."
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Панель приладів",
 		"Settings": "Налаштування",
 		"SignIn": "Увійти",
 		"SignOut": "Вийти"
@@ -186,14 +189,14 @@
 		"SettingsUpdated": "Параметри оновлено!",
 		"TodayPriceStat": "Жодної ціни сьогодні не додано | {todayPriceNumber} нові ціни сьогодні | {todayPriceNumber} нові ціни, додані сьогодні!",
 		"Welcome": {
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
+			"Subtitle": "Відкрита краудсорсингова база даних цін на харчові продукти 🏷🍊💲",
 			"Title": "Ласкаво просимо до {name}!"
 		}
 	},
 	"LocationDetail": {
 		"LatestPrices": "Остання ціна",
 		"LoadMore": "Завантажити більше",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Розташування не знайдено в OpenStreetMap... Не соромтеся додати його :)"
 	},
 	"LocationList": {
 		"Title": "Топ локацій",
@@ -204,21 +207,21 @@
 		"Clear": "Очистити",
 		"NoResult": "Результатів не знайдено",
 		"PoweredBy": {
-			"text": "powered by {url}"
+			"text": "на основі {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
+		"RecentLocations": "Немає останніх локацій | Останнє локація {recentLocationNumber}| Останні локації {recentLocationNumber}",
+		"Result": "Результат {resultNumber} | Результати {resultNumber}",
 		"SearchByName": "Шукайте свій магазин за назвою та містом",
 		"Title": "Знайдіть місце розташування свого магазину",
 		"Warning": "Пошукова система для пошуку магазину зараз не дуже точна.{newline}Не соромтеся додати назву вулиці, щоб звузити результати.{newline}Приклади: Carrefour City 15e Paris ; Сейнсбері Камден Лондон"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
+		"Subtitle": "Сторінка, яку ви запитували, здається, не існує...",
 		"Title": "Не знайдено"
 	},
 	"PriceCard": {
 		"Discount": "Знижка",
-		"PriceDate": "on {date}",
+		"PriceDate": "на {date}",
 		"PriceValueDisplayKilogram": "{0} / кг",
 		"PriceValueDisplayLitre": "{0} / л",
 		"PriceValueDisplayUnit": "{0} / одиниця",
@@ -283,16 +286,16 @@
 	},
 	"ProductDetail": {
 		"AddPrice": "Додати ціну",
-		"CategoryNotFound": "Category not found...",
+		"CategoryNotFound": "Категорія не знайдена...",
 		"LatestPrices": "Остання ціна",
 		"LoadMore": "Завантажити більше",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Продукт не знайдено в Open Food Facts... Не зволікайте, додайте його :)"
 	},
 	"ProductList": {
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Приховати товари з цінами",
 		"LoadMore": "Завантажити більше",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
+		"PriceNumber": "Кількість доданих цін",
+		"ScanNumber": "Кількість доданих сканувань",
 		"Title": "Кращі продукти",
 		"ProductTotal": "{count} продуктів"
 	},
@@ -303,7 +306,7 @@
 		"GDPR_REQUEST": "Запит GDPR"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Виберіть доказ",
 		"ProofSelected": "Доказ вибрано!",
 		"Success": "Доказ створено!"
 	},
@@ -366,16 +369,16 @@
 	"SignIn": {
 		"Button": "Увійти",
 		"Password": "Пароль",
-		"ServerError": "Error: server error",
+		"ServerError": "Помилка: помилка сервера",
 		"Title": "Увійти",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
 		"UsernameLabel": "Ім'я користувача",
-		"WrongCredentials": "Error: wrong credentials"
+		"WrongCredentials": "Помилка: неправильні облікові дані"
 	},
 	"Stats": {
 		"Prices": "Ціни",
 		"ProductsWithPrices": "Товари з цінами",
-		"Title": "Stats",
+		"Title": "Статистика",
 		"Products": "Товари",
 		"Locations": "Місцезнаходження",
 		"Users": "Користувачі",
@@ -392,7 +395,7 @@
 		"MyProofs": "Мої докази",
 		"ProofUpdated": "Доказ оновлено!",
 		"Settings": "Налаштування",
-		"Title": "Dashboard",
+		"Title": "Панель приладів",
 		"UserPriceTotal": "{count} цін",
 		"UserProofTotal": "{count} доказів"
 	},
@@ -406,11 +409,11 @@
 		"UserTotal": "{count} учасників"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Додавання цін",
 		"ChangeLanguage": "Змінити мову",
 		"CountryLabel": "Країна",
-		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
+		"CurrencyLabel": "Валюта",
+		"DisplayTitle": "Показати",
 		"FavoriteCurrencies": "Улюблені валюти",
 		"CurrencyRequired": "Потрібна принаймні одна валюта",
 		"LanguageLabel": "Мови",

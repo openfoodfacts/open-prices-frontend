@@ -1,7 +1,7 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "Un shelf con múltiples etiquetas de precio",
+			"Subtitle": "Un estante con múltiples etiquetas de precio",
 			"Title": "Varios productos"
 		},
 		"PriceCreated": "¡Precio creado!",
@@ -113,27 +113,30 @@
 		"Proof": "Comprobante",
 		"Country": "País",
 		"Currency": "Moneda",
-		"CurrencyMissing": "Currency missing",
+		"CurrencyMissing": "Falta moneda",
+		"Display": "Mostrar",
+		"DisplayPriceList": "List",
+		"DisplayPriceMap": "Mapa",
 		"Language": "Idiomas",
 		"LatestPrices": "Últimos precios",
 		"LoadMore": "Cargar más",
-		"Location": "Location",
+		"Location": "Ubicación",
 		"Locations": "Ubicaciones",
-		"LocationMissing": "Location missing",
+		"LocationMissing": "Falta ubicación",
 		"Date": "Fecha",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateMissing": "Falta fecha",
+		"Details": "Detalles",
 		"Delete": "Eliminar",
 		"Discount": "Descuento",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Ejemplo",
+		"Examples": "Ejemplos",
 		"ExampleWithColon": "Ejemplo:",
 		"ExamplesWithColon": "Ejemplos:",
 		"Edit": "Editar",
 		"Filter": "Filtro",
 		"FilterProductWithPriceCountHide": "Ocultar productos con precios",
 		"FilterPriceMoreThan30DaysHide": "Ocultar precios de más de 30 días",
-		"Help": "Help",
+		"Help": "Ayuda",
 		"Image": "Imagen",
 		"Order": "Pedido",
 		"OrderProductUniqueScansDESC": "Número de escaneos",
@@ -181,7 +184,7 @@
 	"Home": {
 		"AddPrice": "Añadir un precio",
 		"LatestPrices": "Últimos precios",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Añadir comprobante",
 		"SearchProduct": "Buscar un producto",
 		"SettingsUpdated": "¡Ajustes actualizados!",
 		"TodayPriceStat": "Hoy no se han añadido precios | Hoy se han añadido {todayPriceNumber} precios nuevos | ¡Hoy se han añadido {todayPriceNumber} precios nuevos!",
@@ -305,7 +308,7 @@
 	"ProofCreate": {
 		"SelectProof": "Select a proof",
 		"ProofSelected": "¡Prueba seleccionada!",
-		"Success": "Proof created!"
+		"Success": "¡Comprobante actualizado!"
 	},
 	"ProofDelete": {
 		"Confirmation": "¿Seguro que deseas eliminar este comprobante?",
@@ -337,7 +340,7 @@
 			"Title": "Últimos precios"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Añadir comprobante"
 		},
 		"Search": {
 			"Title": "Buscar"
@@ -381,12 +384,12 @@
 		"Users": "Usuarios",
 		"Total": "Total",
 		"WithPrice": "con precio",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithProduct": "Con producto",
+		"WithoutProduct": "Sin producto"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Últimos precios",
-		"LatestProofs": "Latest proofs",
+		"LatestProofs": "Últimos comprobantes",
 		"LoadMore": "Cargar más",
 		"MyPrices": "Mis precios",
 		"MyProofs": "Mis pruebas",
@@ -394,7 +397,7 @@
 		"Settings": "Configuración",
 		"Title": "Panel de control",
 		"UserPriceTotal": "{count} precios",
-		"UserProofTotal": "{count} proofs"
+		"UserProofTotal": "{count} Precios"
 	},
 	"UserDetail": {
 		"LatestPrices": "Últimos precios",
@@ -416,7 +419,7 @@
 		"LanguageLabel": "Idiomas",
 		"LocationDisplayOSMID": "Mostrar ID de OSM",
 		"ProductDisplayBarcode": "Mostrar código de barras",
-		"ProductDisplayCategoryTag": "Display category tag",
+		"ProductDisplayCategoryTag": "Mostrar categoría",
 		"Save": "Guardar",
 		"Title": "Configuración",
 		"TranslationCompletion": "La traducción está {completion}% completa.",
