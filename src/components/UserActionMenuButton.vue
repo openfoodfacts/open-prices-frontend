@@ -25,11 +25,6 @@ export default {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
     }
-  },
-  data() {
-    return {}
-  },
-  methods: {
   }
 }
 </script>
