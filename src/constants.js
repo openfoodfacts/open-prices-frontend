@@ -57,6 +57,7 @@ export default {
     { key: '-date', value: 'OrderPriceDateDESC', icon: 'mdi-calendar-today' },
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],
+  DISPLAY_PARAM: 'display',
   PRICE_DISPLAY_LIST: [
     { key: 'list', value: 'DisplayPriceList', icon: 'mdi-format-list-bulleted' },
     { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },

@@ -138,15 +138,22 @@ export default {
     },
   },
   watch: {
-    $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initProductPrices()
+    $route (newRoute, oldRoute) {
+      // only called when query changes to avoid having an API call when the path changes
+      // but ignore 'display' changes
+      if (oldRoute.path === newRoute.path) {
+        const oldRouteQueryFiltered = Object.fromEntries(Object.entries(oldRoute.query).filter(([key, value]) => key !== constants.DISPLAY_PARAM))  // eslint-disable-line no-unused-vars
+        const newRouteQueryFiltered = Object.fromEntries(Object.entries(newRoute.query).filter(([key, value]) => key !== constants.DISPLAY_PARAM))  // eslint-disable-line no-unused-vars
+        if (JSON.stringify(oldRouteQueryFiltered) !== JSON.stringify(newRouteQueryFiltered)) {
+          this.initProductPrices()
+        }
       }
     }
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
+    this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.currentDisplay
     this.getProduct()
     this.initProductPrices()
   },
@@ -203,6 +210,8 @@ export default {
     },
     selectPriceDisplay(displayKey) {
       this.currentDisplay = displayKey
+      this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
+      // this.initProductPrices() will NOT be called in watch $route
     },
   }
 }
