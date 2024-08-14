@@ -57,8 +57,8 @@
       </v-container>
     </v-window-item>
     <v-window-item value="map">
-      <v-container fluid>
-        <!-- LeafletMap -->
+      <v-container fluid style="height:400px">
+        <LeafletMap :locations="priceLocationList" />
       </v-container>
     </v-window-item>
   </v-window>
@@ -89,6 +89,7 @@ export default {
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
     OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
     ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue'))
@@ -102,6 +103,7 @@ export default {
       productPriceList: [],
       productPriceTotal: 0,
       productPricePage: 0,
+      priceLocationList: [],
       loading: false,
       // share
       shareLinkCopySuccessMessage: false,
@@ -153,6 +155,7 @@ export default {
       this.productPriceList = []
       this.productPriceTotal = 0
       this.productPricePage = 0
+      this.priceLocationList = []
       this.getProductPrices()
     },
     getProduct() {
@@ -178,6 +181,11 @@ export default {
         .then((data) => {
           this.productPriceList.push(...data.items)
           this.productPriceTotal = data.total
+          data.items.forEach((price) => {
+            if (price.location) {
+              utils.addObjectToArray(this.priceLocationList, price.location)
+            }
+          })
           this.loading = false
         })
     },
