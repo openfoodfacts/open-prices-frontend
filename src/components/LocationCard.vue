@@ -9,6 +9,7 @@
       <PriceCountChip :count="location.price_count" :withLabel="true" />
       <LocationOSMTagChip :location="location" class="mr-1" />
       <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
+      <LocationActionMenuButton :location="location" />
     </v-card-text>
   </v-card>
 </template>
@@ -24,6 +25,7 @@ export default {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
+    LocationActionMenuButton: defineAsyncComponent(() => import('../components/LocationActionMenuButton.vue')),
   },
   props: {
     location: {

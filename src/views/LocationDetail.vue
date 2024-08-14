@@ -7,7 +7,6 @@
 
   <v-row class="mt-0">
     <v-col v-if="locationFound" cols="12">
-      <OpenStreetMapLink :location="location" display="button" />
       <ShareButton />
     </v-col>
     <v-col v-else cols="12">
@@ -56,7 +55,6 @@ export default {
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    OpenStreetMapLink: defineAsyncComponent(() => import('../components/OpenStreetMapLink.vue')),
     ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue')),
   },
   data() {

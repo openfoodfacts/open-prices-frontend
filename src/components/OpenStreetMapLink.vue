@@ -5,6 +5,9 @@
   <v-btn v-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank">
     {{ OSM_NAME }}
   </v-btn>
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank">
+    {{ OSM_NAME }}
+  </v-list-item>
 </template>
 
 <script>
@@ -20,7 +23,8 @@ export default {
     },
     display: {
       type: String,
-      default: 'link'
+      default: 'link',
+      examples: ['link', 'button', 'list-item']
     },
   },
   data() {
