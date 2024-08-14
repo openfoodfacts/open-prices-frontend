@@ -269,20 +269,40 @@ function getLocationLatLng(locationObject) {
   else if (locationObject.geometry && locationObject.geometry.coordinates) {
     return [locationObject.geometry.coordinates[1], locationObject.geometry.coordinates[0]]
   }
+  // OP
   return [locationObject.osm_lat, locationObject.osm_lon]
 }
 
-function getMapBounds(results, source='nominatim') {
-  if (source === 'photon') {
-    return results.map(l => [l.geometry.coordinates[1], l.geometry.coordinates[0]])
+function getMapBounds(results) {
+  if (results.length > 0) {
+    // Nominatim
+    if (results[0].lat && results[0].lon) {
+      return results.map(l => [l.lat, l.lon])
+    }
+    // Photon
+    else if (results[0].geometry && results[0].geometry.coordinates) {
+      return results.map(l => [l.geometry.coordinates[1], l.geometry.coordinates[0]])
+    }
+    // OP
+    return results.map(l => [l.osm_lat, l.osm_lon])
   }
-  return results.map(l => [l.lat, l.lon])
+  return null
 }
-function getMapCenter(results, source='nominatim') {
-  if (source === 'photon') {
-    return [results[0].geometry.coordinates[1], results[0].geometry.coordinates[0]]
+
+function getMapCenter(results) {
+  if (results.length > 0) {
+    // Nominatim
+    if (results[0].lat && results[0].lon) {
+      return [results[0].lat, results[0].lon]
+    }
+    // Photon
+    else if (results[0].geometry && results[0].geometry.coordinates) {
+      return [results[0].geometry.coordinates[1], results[0].geometry.coordinates[0]]
+    }
+    // OP
+    return [results[0].osm_lat, results[0].osm_lon]
   }
-  return [results[0].lat, results[0].lon]
+  results [45, 5]
 }
 
 

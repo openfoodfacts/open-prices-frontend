@@ -59,19 +59,8 @@
                 </v-card-text>
               </v-card>
             </v-col>
-            <v-col cols="12" sm="6" style="min-height:200px">
-              <l-map ref="map" v-model:zoom="mapZoom" :center="mapCenter" :use-global-leaflet="false" @ready="initMap">
-                <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base" name="OpenStreetMap" />
-                <l-marker v-for="location in results" :key="getLocationUniqueID(location)" :lat-lng="getLocationLatLng(location)">
-                  <l-popup>
-                    <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
-                    {{ getLocationTitle(location, false, true, true) }}<br>
-                    <v-chip label size="small" density="comfortable">
-                      {{ getLocationTag(location) }}
-                    </v-chip>
-                  </l-popup>
-                </l-marker>
-              </l-map>
+            <v-col cols="12" sm="6" style="min-height:400px">
+              <LeafletMap :locationList="results" />
             </v-col>
           </v-row>
         </v-sheet>
@@ -126,8 +115,6 @@
 </template>
 
 <script>
-import 'leaflet/dist/leaflet.css'
-import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet'
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
@@ -136,12 +123,9 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    LMap,
-    LTileLayer,
-    LMarker,
-    LPopup,
     LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
+    LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
   },
   emits: ['location', 'close'],
   data() {
@@ -152,11 +136,6 @@ export default {
       },
       loading: false,
       results: null,
-      // map
-      map: null,
-      mapZoom: 5,
-      mapCenter: [45, 5],
-      mapBounds: null,
       // search
       searchProvider: 'photon',  // 'nominatim', 'photon'
     }
@@ -180,22 +159,6 @@ export default {
     fieldRequired(v) {
       return !!v
     },
-    initMap() {  // TODO: improve map setup
-      this.map = this.$refs.map.leafletObject
-      if (this.mapBounds) {
-        this.map.fitBounds(this.mapBounds)
-      }
-    },
-    processResults(data, source='nominatim') {
-      this.results = data
-      if (this.results.length > 1) {
-        this.mapBounds = utils.getMapBounds(this.results, source)
-      } else {
-        this.mapCenter = utils.getMapCenter(this.results, source)
-        this.mapZoom = 12
-        this.mapBounds = null
-      }
-    },
     search() {
       this.$refs.locationInput.blur()
       this.results = null
@@ -205,7 +168,7 @@ export default {
         .then((data) => {
           this.loading = false
           if (data.length) {
-            this.processResults(data, 'nominatim')
+            this.results = data
           } else {
             this.results = this.$t('LocationSelector.NoResult')
           }
@@ -215,7 +178,7 @@ export default {
         .then((data) => {
           this.loading = false
           if (data.length) {
-            this.processResults(data, this.searchProvider)
+            this.results = data
           } else {
             this.results = this.$t('LocationSelector.NoResult')
           }
@@ -227,12 +190,6 @@ export default {
     },
     getLocationUniqueID(location) {
       return utils.getLocationUniqueID(location)
-    },
-    getLocationTag(location) {
-      return utils.getLocationTag(location)
-    },
-    getLocationLatLng(location) {
-      return utils.getLocationLatLng(location)
     },
     selectLocation(location) {
       this.$emit('location', location)
