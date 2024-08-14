@@ -12,10 +12,11 @@ Brands:
 - 'src/views/BrandDetail.vue'
 
 📍 Locations:
-- 'src/views/LocationDetail.vue'
 - 'src/views/LocationList.vue'
+- 'src/views/LocationDetail.vue'
 
 🥫 Product page:
+- 'src/views/ProductList.vue'
 - 'src/views/ProductDetail.vue'
 
 🔍 Search:
@@ -29,7 +30,13 @@ User:
 - 'src/views/UserDetail.vue'
 
 User dashboard:
-- 'src/views/UserDashboard.vue'
+- 'src/views/UserDashboard*.vue'
 
 ⚙️ Settings:
 - 'src/views/UserSettings.vue'
+
+Action menus:
+- 'src/components/*ActionMenuButton.vue'
+
+Translations:
+- 'src/i18n/**/*'
