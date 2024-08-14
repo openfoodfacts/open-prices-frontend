@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.70.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.69.1...v1.70.0) (2024-08-14)
+
+
+### Features
+
+* **Product detail:** new display toggle between list & map ([#695](https://github.com/openfoodfacts/open-prices-frontend/issues/695)) ([1c22c58](https://github.com/openfoodfacts/open-prices-frontend/commit/1c22c5864a2bcc3a3eb07df0e4cb53642d8a6aa7))
+
+
+### Bug Fixes
+
+* **Product detail:** avoid window bottom crop in tabs, reduce x padding. ref [#695](https://github.com/openfoodfacts/open-prices-frontend/issues/695) ([8202a72](https://github.com/openfoodfacts/open-prices-frontend/commit/8202a72a872bc25444940203b6d8fbcd5e109b11))
+* **Product detail:** if product missing or without name, show barcode instead of Unknown Product. ref [#418](https://github.com/openfoodfacts/open-prices-frontend/issues/418) ([d84ad85](https://github.com/openfoodfacts/open-prices-frontend/commit/d84ad85223c65351dda70baaf5fbc34318961ea7))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#690](https://github.com/openfoodfacts/open-prices-frontend/issues/690)) ([9592475](https://github.com/openfoodfacts/open-prices-frontend/commit/9592475058a986c941faaf19a22a2015e5b0a9c7))
+* **Location card:** new action menu with OSM link ([#697](https://github.com/openfoodfacts/open-prices-frontend/issues/697)) ([6d7735d](https://github.com/openfoodfacts/open-prices-frontend/commit/6d7735d552eb34502f1032b84dc01cf0c6d96ecf))
+* **Location search:** new LeafletMap component ([#694](https://github.com/openfoodfacts/open-prices-frontend/issues/694)) ([3100634](https://github.com/openfoodfacts/open-prices-frontend/commit/3100634e5488bd4c534c18d12712ec0c4c4b7c71))
+* **Price card:** change style of RelativeDateTimeChip ([#692](https://github.com/openfoodfacts/open-prices-frontend/issues/692)) ([56939b6](https://github.com/openfoodfacts/open-prices-frontend/commit/56939b6e166bab3727f169ce2b6fca9b09648c5a))
+* **Product card:** new action menu with OFF link ([#698](https://github.com/openfoodfacts/open-prices-frontend/issues/698)) ([f8ce7f3](https://github.com/openfoodfacts/open-prices-frontend/commit/f8ce7f3a6e7b2e9a7a812017c8b8a35e103ff4b4))
+* **User card:** new action menu with OFF link ([#696](https://github.com/openfoodfacts/open-prices-frontend/issues/696)) ([9d1208f](https://github.com/openfoodfacts/open-prices-frontend/commit/9d1208f8c1b96187201cc72ddf3d1e2581409106))
+
 ## [1.69.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.69.0...v1.69.1) (2024-07-18)
 
 
