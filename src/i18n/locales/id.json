@@ -113,30 +113,30 @@
 		"Proof": "Bukti",
 		"Country": "Negara",
 		"Currency": "Mata uang",
-		"CurrencyMissing": "Currency missing",
+		"CurrencyMissing": "Mata uang tidak ada",
 		"Display": "Tampilan",
-		"DisplayPriceList": "List",
+		"DisplayPriceList": "Daftar",
 		"DisplayPriceMap": "Peta",
 		"Language": "Bahasa",
 		"LatestPrices": "Harga terbaru",
 		"LoadMore": "Muat lebih banyak",
-		"Location": "Location",
+		"Location": "Lokasi",
 		"Locations": "Lokasi",
-		"LocationMissing": "Location missing",
+		"LocationMissing": "Lokasi tidak ada",
 		"Date": "Tanggal",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateMissing": "Tanggal tidak ada",
+		"Details": "Rincian",
 		"Delete": "Hapus",
 		"Discount": "Diskon",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Contoh",
+		"Examples": "Contoh",
 		"ExampleWithColon": "Contoh:",
 		"ExamplesWithColon": "Contoh - contoh:",
 		"Edit": "Sunting",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
 		"FilterPriceMoreThan30DaysHide": "Sembunyikan harga yang sudah lebih dari 30 hari",
-		"Help": "Help",
+		"Help": "Bantuan",
 		"Image": "Gambar",
 		"Order": "Urutan",
 		"OrderProductUniqueScansDESC": "Jumlah pindaian",
@@ -184,7 +184,7 @@
 	"Home": {
 		"AddPrice": "Tambahkan harga",
 		"LatestPrices": "Harga terbaru",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Tambahkan bukti",
 		"SearchProduct": "Cari produk",
 		"SettingsUpdated": "Pengaturan berhasil diperbarui!",
 		"TodayPriceStat": "Tidak ada harga yang ditambahkan hari ini | {todayPriceNumber} harga baru ditambahkan hari ini | {todayPriceNumber} harga baru ditambahkan hari ini!",
@@ -308,7 +308,7 @@
 	"ProofCreate": {
 		"SelectProof": "Pilih bukti",
 		"ProofSelected": "Bukti dipilih!",
-		"Success": "Proof created!"
+		"Success": "Bukti telah ditambahkan!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Yakin ingin menghapus bukti ini?",
@@ -340,7 +340,7 @@
 			"Title": "Harga terbaru"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Tambahkan bukti"
 		},
 		"Search": {
 			"Title": "Cari"
@@ -417,9 +417,9 @@
 		"FavoriteCurrencies": "Mata uang favorit",
 		"CurrencyRequired": "Setidaknya diperlukan satu mata uang",
 		"LanguageLabel": "Bahasa",
-		"LocationDisplayOSMID": "Display OSM ID",
+		"LocationDisplayOSMID": "Tampilkan ID OSM",
 		"ProductDisplayBarcode": "Tampilkan kode batang",
-		"ProductDisplayCategoryTag": "Display category tag",
+		"ProductDisplayCategoryTag": "Tampilkan tag kategori",
 		"Save": "menyimpan ",
 		"Title": "Pengaturan",
 		"TranslationCompletion": "Terjemahan sudah {completion}% selesai.",
