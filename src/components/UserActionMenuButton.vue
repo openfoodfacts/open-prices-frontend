@@ -3,6 +3,8 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
+        <ShareLink :overrideUrl="'/users/' + user.user_id" display="list-item" />
+        <v-divider />
         <OpenFoodFactsLink facet="editor" :value="user.user_id" display="list-item" />
       </v-list>
     </v-menu>
@@ -14,6 +16,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
+    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
     OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue'))
   },
   props: {
