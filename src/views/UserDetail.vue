@@ -7,7 +7,7 @@
 
   <v-row class="mt-0">
     <v-col cols="12">
-      <ShareButton />
+      <ShareLink display="button" />
     </v-col>
   </v-row>
 
@@ -52,7 +52,7 @@ export default {
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue'))
+    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue'))
   },
   data() {
     return {

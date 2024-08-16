@@ -7,7 +7,7 @@
 
   <v-row class="mt-0">
     <v-col v-if="locationFound" cols="12">
-      <ShareButton />
+      <ShareLink display="button" />
     </v-col>
     <v-col v-else cols="12">
       <v-alert v-if="!loading" type="error" variant="outlined" icon="mdi-alert">
@@ -55,7 +55,7 @@ export default {
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue')),
+    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
   },
   data() {
     return {
