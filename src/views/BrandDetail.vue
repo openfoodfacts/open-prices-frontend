@@ -18,7 +18,7 @@
   <v-row class="mt-0">
     <v-col cols="12">
       <OpenFoodFactsLink facet="brand" :value="brand" display="button" />
-      <ShareButton />
+      <ShareLink display="button" />
     </v-col>
   </v-row>
 
@@ -61,7 +61,7 @@ export default {
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
-    ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue'))
+    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue'))
   },
   data() {
     return {

@@ -11,7 +11,7 @@
       <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
         {{ $t('UserDashboard.Title') }}
       </v-btn>
-      <ShareButton :overrideUrl="'/users/' + username" />
+      <ShareLink :overrideUrl="'/users/' + username" display="button" />
     </v-col>
   </v-row>
 
@@ -45,7 +45,7 @@ import api from '../services/api'
 
 export default {
   components: {
-    ShareButton: defineAsyncComponent(() => import('../components/ShareButton.vue')),
+    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
