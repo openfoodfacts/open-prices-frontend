@@ -25,8 +25,7 @@
 
   <v-row v-if="!productOrCategoryNotFound" class="mt-0">
     <v-col cols="12">
-      <PriceAddButton v-if="product && product.code" class="mr-2" :productCode="product.code" />
-      <PriceAddButton v-else-if="category" class="mr-2" :productCode="category.name" />
+      <PriceAddLink v-if="category" class="mr-2" :productCode="category.name" />
       <ShareButton />
     </v-col>
   </v-row>
@@ -83,7 +82,7 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
-    PriceAddButton: defineAsyncComponent(() => import('../components/PriceAddButton.vue')),
+    PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),

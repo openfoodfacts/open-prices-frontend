@@ -3,7 +3,7 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <OpenFoodFactsLink display="list-item" facet="editor" :value="user.user_id" />
+        <OpenFoodFactsLink facet="editor" :value="user.user_id" display="list-item" />
       </v-list>
     </v-menu>
   </v-btn>

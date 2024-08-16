@@ -17,11 +17,6 @@ import constants from '../constants'
 
 export default {
   props: {
-    display: {
-      type: String,
-      default: 'link',
-      examples: ['link', 'button', 'list-item']
-    },
     source: {
       type: String,
       default: null,
@@ -35,6 +30,11 @@ export default {
     value: {
       type: String,
       default: null
+    },
+    display: {
+      type: String,
+      default: 'link',
+      examples: ['link', 'button', 'list-item']
     }
   },
   data() {

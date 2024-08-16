@@ -3,7 +3,9 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <OpenFoodFactsLink display="list-item" :source="product.source" facet="product" :value="product.code" />
+        <PriceAddLink :productCode="product.code" display="list-item" />
+        <v-divider />
+        <OpenFoodFactsLink :source="product.source" facet="product" :value="product.code" display="list-item" />
       </v-list>
     </v-menu>
   </v-btn>
@@ -14,6 +16,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
+    PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
     OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue'))
   },
   props: {
