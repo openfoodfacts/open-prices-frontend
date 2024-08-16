@@ -10,7 +10,7 @@
 
   <v-row v-if="allowPriceAdd" class="mt-0">
     <v-col cols="12">
-      <PriceAddButton class="mr-2" :proofId="proof.id" :proofType="proof.type" />
+      <PriceAddLink class="mr-2" :proofId="proof.id" :proofType="proof.type" />
     </v-col>
   </v-row>
 
@@ -42,7 +42,7 @@ import api from '../services/api'
 
 export default {
   components: {
-    PriceAddButton: defineAsyncComponent(() => import('../components/PriceAddButton.vue')),
+    PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
