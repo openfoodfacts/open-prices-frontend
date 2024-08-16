@@ -3,6 +3,8 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
+        <PriceAddLink :proofId="proof.id" :proofType="proof.type" display="list-item" :disabled="!userCanAddPrice" />
+        <v-divider />
         <v-list-item :slim="true" prepend-icon="mdi-pencil" :disabled="!userCanEditProof" @click="openEditDialog">
           {{ $t('Common.Edit') }}
         </v-list-item>
@@ -50,6 +52,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
+    PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
     ProofEditDialog: defineAsyncComponent(() => import('../components/ProofEditDialog.vue')),
     ProofDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/ProofDeleteConfirmationDialog.vue'))
   },
@@ -73,6 +76,9 @@ export default {
     }
   },
   computed: {
+    userCanAddPrice() {
+      return this.proof && (this.proof.type === 'PRICE_TAG' || this.proof.type === 'RECEIPT')
+    },
     userCanEditProof() {
       // user must be proof owner
       // and proof must not have any prices
