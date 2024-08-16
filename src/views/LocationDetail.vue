@@ -5,18 +5,13 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
-    <v-col v-if="locationFound" cols="12">
-      <ShareLink display="button" />
-    </v-col>
-    <v-col v-else cols="12">
+  <v-row v-if="!locationFound" class="mt-0">
+    <v-col cols="12">
       <v-alert v-if="!loading" type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('LocationDetail.LocationNotFound') }}</i>
       </v-alert>
     </v-col>
   </v-row>
-
-  <br>
 
   <v-row>
     <v-col>
@@ -55,7 +50,6 @@ export default {
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
   },
   data() {
     return {
