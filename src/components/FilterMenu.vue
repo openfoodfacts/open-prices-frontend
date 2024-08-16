@@ -2,10 +2,14 @@
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
       <v-btn v-bind="props" size="x-small" class="mr-2" rounded="xl" prepend-icon="mdi-filter-variant" :append-icon="getCurrentFilterIcon" :active="currentFilterOrSource">
-        {{ $t('Common.Filter') }}
+        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Filter') }}</span>
       </v-btn>
     </template>
     <v-list>
+      <v-list-item class="d-sm-none" :slim="true" disabled>
+        {{ $t('Common.Filter') }}
+      </v-list-item>
+      <v-divider class="d-sm-none" />
       <v-list-item v-for="filter in filterList" :key="filter.key" :slim="true" :prepend-icon="(currentFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="currentFilter === filter.key" @click="selectFilter(filter.key)">
         {{ $t('Common.' + filter.value) }}
       </v-list-item>

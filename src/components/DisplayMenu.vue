@@ -2,10 +2,14 @@
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
       <v-btn v-bind="props" size="x-small" rounded="xl" prepend-icon="mdi-laptop" :append-icon="getCurrentDisplayIcon" :active="!!currentDisplay">
-        {{ $t('Common.Display') }}
+        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Display') }}</span>
       </v-btn>
     </template>
     <v-list>
+      <v-list-item class="d-sm-none" :slim="true" disabled>
+        {{ $t('Common.Display') }}
+      </v-list-item>
+      <v-divider class="d-sm-none" />
       <v-list-item v-for="display in displayList" :key="display.key" :slim="true" :prepend-icon="display.icon" :active="currentDisplay === display.key" @click="selectDisplay(display.key)">
         {{ $t('Common.' + display.value) }}
       </v-list-item>

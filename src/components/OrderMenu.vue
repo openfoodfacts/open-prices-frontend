@@ -2,10 +2,14 @@
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
       <v-btn v-bind="props" size="x-small" class="mr-2" rounded="xl" prepend-icon="mdi-arrow-down" :append-icon="getCurrentOrderIcon" :active="!!currentOrder">
-        {{ $t('Common.Order') }}
+        <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Order') }}</span>
       </v-btn>
     </template>
     <v-list>
+      <v-list-item class="d-sm-none" :slim="true" disabled>
+        {{ $t('Common.Order') }}
+      </v-list-item>
+      <v-divider class="d-sm-none" />
       <v-list-item v-for="order in orderList" :key="order.key" :slim="true" :prepend-icon="order.icon" :active="currentOrder === order.key" @click="selectOrder(order.key)">
         {{ $t('Common.' + order.value) }}
       </v-list-item>
