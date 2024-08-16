@@ -15,7 +15,7 @@
           </i18n-t>
         </i>
         <br>
-        <OpenFoodFactsAddMenu :product="product" />
+        <OpenFoodFactsAddMenu :productCode="productId" />
       </v-alert>
       <v-alert v-if="categoryNotFound" type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
@@ -23,14 +23,11 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="!productOrCategoryNotFound" class="mt-0">
+  <v-row v-if="!categoryNotFound" class="mt-0">
     <v-col cols="12">
       <PriceAddLink v-if="category" class="mr-2" :productCode="category.name" />
-      <ShareLink display="button" />
     </v-col>
   </v-row>
-
-  <br>
 
   <v-row>
     <v-col>
@@ -89,7 +86,6 @@ export default {
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
     OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
-    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue'))
   },
   data() {
     return {
