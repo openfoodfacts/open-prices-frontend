@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.70.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.70.1...v1.70.2) (2024-08-16)
+
+
+### Bug Fixes
+
+* **PriceAdd:** fix href bug. ref [#700](https://github.com/openfoodfacts/open-prices-frontend/issues/700) ([36e84fd](https://github.com/openfoodfacts/open-prices-frontend/commit/36e84fdb752ff470b25f6e2c22dbeaa15711df40))
+
+
+### Technical
+
+* reduce Filter, Order & Display menu buttons on small screens ([bc0d87b](https://github.com/openfoodfacts/open-prices-frontend/commit/bc0d87b71b56c01725d4d112f0afb8b2aa1d5e25))
+
 ## [1.70.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.70.0...v1.70.1) (2024-08-16)
 
 
