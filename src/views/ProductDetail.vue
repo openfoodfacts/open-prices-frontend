@@ -15,7 +15,7 @@
           </i18n-t>
         </i>
         <br>
-        <OpenFoodFactsAddMenu :product="product" />
+        <OpenFoodFactsAddMenu :productCode="productId" />
       </v-alert>
       <v-alert v-if="categoryNotFound" type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
@@ -23,9 +23,9 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="productIsCategory" class="mt-0">
+  <v-row v-if="!categoryNotFound" class="mt-0">
     <v-col cols="12">
-      <PriceAddLink class="mr-2" :productCode="category.name" />
+      <PriceAddLink v-if="category" class="mr-2" :productCode="category.name" />
     </v-col>
   </v-row>
 
