@@ -1,5 +1,5 @@
 <template>
-  <a v-if="display === 'link'" :href="getAddUrl">
+  <a v-if="display === 'link'" :to="getAddUrl">
     {{ $t('Common.AddPrice') }}
   </a>
   <v-btn
@@ -11,7 +11,7 @@
   >
     {{ $t('Common.AddPrice') }}
   </v-btn>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" base-color="primary" prepend-icon="mdi-tag-plus-outline" :href="getAddUrl">
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" base-color="primary" prepend-icon="mdi-tag-plus-outline" :to="getAddUrl">
     {{ $t('Common.AddPrice') }}
   </v-list-item>
 </template>
