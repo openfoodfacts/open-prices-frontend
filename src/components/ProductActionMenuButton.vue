@@ -4,6 +4,7 @@
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
         <PriceAddLink :productCode="product.code" display="list-item" />
+        <ShareLink :overrideUrl="'/products/' + product.code" display="list-item" />
         <v-divider />
         <OpenFoodFactsLink :source="product.source" facet="product" :value="product.code" display="list-item" />
       </v-list>
@@ -17,6 +18,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
+    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
     OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue'))
   },
   props: {

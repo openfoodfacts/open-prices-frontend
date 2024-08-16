@@ -23,14 +23,11 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="!productOrCategoryNotFound" class="mt-0">
+  <v-row v-if="productIsCategory" class="mt-0">
     <v-col cols="12">
-      <PriceAddLink v-if="category" class="mr-2" :productCode="category.name" />
-      <ShareLink display="button" />
+      <PriceAddLink class="mr-2" :productCode="category.name" />
     </v-col>
   </v-row>
-
-  <br>
 
   <v-row>
     <v-col>
@@ -89,7 +86,6 @@ export default {
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
     OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
-    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue'))
   },
   data() {
     return {
