@@ -115,10 +115,10 @@
 		"Currency": "Devise",
 		"CurrencyMissing": "Devise manquante",
 		"Display": "Afficher",
-		"DisplayPriceList": "List",
+		"DisplayPriceList": "Liste",
 		"DisplayPriceMap": "Carte",
 		"Language": "Langue",
-		"LatestPrices": "Derniers prix ajoutés",
+		"LatestPrices": "Dernier prix",
 		"LoadMore": "Voir plus",
 		"Location": "Lieu",
 		"Locations": "Lieux",
@@ -138,6 +138,7 @@
 		"FilterPriceMoreThan30DaysHide": "Masquer les prix datant de plus de 30 jours",
 		"Help": "Aide",
 		"Image": "Image",
+		"LinkCopySuccess": "Lien copié",
 		"Order": "Ordre",
 		"OrderProductUniqueScansDESC": "Nombre de numérisations",
 		"OrderProductPriceCountDESC": "Nombre de prix",
@@ -149,6 +150,7 @@
 		"ProductCount": "{count} produits",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
 		"SignedIn": "Connecté !",
+		"Share": "Partager",
 		"Source": "Source",
 		"Thanks": "Merci",
 		"Type": "Type",
@@ -183,7 +185,7 @@
 	},
 	"Home": {
 		"AddPrice": "Ajouter un prix",
-		"LatestPrices": "Derniers prix ajoutés",
+		"LatestPrices": "Dernier prix",
 		"ProofAdd": "Ajouter une preuve",
 		"SearchProduct": "Chercher un produit",
 		"SettingsUpdated": "Paramètres mis à jour !",
@@ -194,7 +196,7 @@
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Derniers prix ajoutés",
+		"LatestPrices": "Dernier prix",
 		"LoadMore": "Voir plus",
 		"LocationNotFound": "Ce lieu n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)"
 	},
@@ -251,7 +253,7 @@
 	},
 	"PriceList": {
 		"LoadMore": "Voir plus",
-		"Title": "Derniers prix ajoutés"
+		"Title": "Dernier prix"
 	},
 	"PriceRules": {
 		"AmountRequired": "Le prix est obligatoire",
@@ -287,7 +289,7 @@
 	"ProductDetail": {
 		"AddPrice": "Ajouter un prix",
 		"CategoryNotFound": "Cette catégorie n'existe pas",
-		"LatestPrices": "Derniers prix ajoutés",
+		"LatestPrices": "Dernier prix",
 		"LoadMore": "Voir plus",
 		"ProductNotFound": "Ce produit n'existe pas sur Open Food Facts... N'hésitez pas à le rajouter :)"
 	},
@@ -337,7 +339,7 @@
 			"Title": "Accueil"
 		},
 		"LatestPrices": {
-			"Title": "Derniers prix ajoutés"
+			"Title": "Dernier prix"
 		},
 		"ProofAddSingle": {
 			"Title": "Ajouter une preuve"
@@ -388,7 +390,7 @@
 		"WithoutProduct": "Sans produit"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Derniers prix ajoutés",
+		"LatestPrices": "Dernier prix",
 		"LatestProofs": "Dernières preuves",
 		"LoadMore": "Voir plus",
 		"MyPrices": "Mes prix",
@@ -400,7 +402,7 @@
 		"UserProofTotal": "{count} preuves"
 	},
 	"UserDetail": {
-		"LatestPrices": "Derniers prix ajoutés",
+		"LatestPrices": "Dernier prix",
 		"LoadMore": "Voir plus"
 	},
 	"UserList": {

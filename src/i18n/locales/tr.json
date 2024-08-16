@@ -115,29 +115,30 @@
 		"Currency": "Kur",
 		"CurrencyMissing": "Currency missing",
 		"Display": "Göster",
-		"DisplayPriceList": "List",
+		"DisplayPriceList": "Liste",
 		"DisplayPriceMap": "Harita",
 		"Language": "Diller",
 		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
-		"Location": "Location",
+		"Location": "Konum",
 		"Locations": "Konumlar",
-		"LocationMissing": "Location missing",
+		"LocationMissing": "Konum eksik",
 		"Date": "Tarih",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateMissing": "Tarih eksik",
+		"Details": "Ayrıntılar",
 		"Delete": "Sil",
 		"Discount": "İndirim",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Örnek",
+		"Examples": "Örnekler",
 		"ExampleWithColon": "Örnek:",
 		"ExamplesWithColon": "Örnekler:",
 		"Edit": "Düzenle",
 		"Filter": "Filtrele",
 		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
 		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
-		"Help": "Help",
+		"Help": "Yardım",
 		"Image": "Resim",
+		"LinkCopySuccess": "Bağlantı kopyalandı",
 		"Order": "Sipariş",
 		"OrderProductUniqueScansDESC": "Tarama sayısı",
 		"OrderProductPriceCountDESC": "Fiyat sayısı",
@@ -149,6 +150,7 @@
 		"ProductCount": "{count} ürün",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"SignedIn": "Giriş yapıldı!",
+		"Share": "Paylaş",
 		"Source": "Bilgi Kaynağı",
 		"Thanks": "Teşekkürler",
 		"Type": "Tür",
@@ -184,7 +186,7 @@
 	"Home": {
 		"AddPrice": "Fiyat ekleyin",
 		"LatestPrices": "Son fiyatlar",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Bir bedel ekle",
 		"SearchProduct": "Bir ürün arayın",
 		"SettingsUpdated": "Ayarlar güncellendi!",
 		"TodayPriceStat": "Bugün fiyat eklenmedi | Bugün eklenen {todayPriceNumber} yeni fiyat | Bugün {todayPriceNumber} yeni fiyat eklendi!",
@@ -306,7 +308,7 @@
 		"GDPR_REQUEST": "GDPR talebi"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Bedeli sil",
 		"ProofSelected": "Bedel seçildi!",
 		"Success": "Proof created!"
 	},
@@ -340,7 +342,7 @@
 			"Title": "Son fiyatlar"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Bir bedel ekle"
 		},
 		"Search": {
 			"Title": "Ara"

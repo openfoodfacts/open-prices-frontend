@@ -1,7 +1,7 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
+			"Subtitle": "एकाधिक मूल्य टैग वाला शेल्फ",
 			"Title": "एकाधिक उत्पाद"
 		},
 		"PriceCreated": "कीमत बनाई गई!",
@@ -17,7 +17,7 @@
 		"Thanks": "धन्यवाद",
 		"Title": "एक मूल्य जोड़े",
 		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "थोक में कई कीमतें जोड़ें"
 	},
 	"AddPriceMultiple": {
 		"Done": "Done",
@@ -138,6 +138,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"Help": "Help",
 		"Image": "Image",
+		"LinkCopySuccess": "Link copied",
 		"Order": "Order",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -149,6 +150,7 @@
 		"ProductCount": "{count} products",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "साइन इन किया!",
+		"Share": "शेयर",
 		"Source": "Source",
 		"Thanks": "धन्यवाद",
 		"Type": "प्रकार",
