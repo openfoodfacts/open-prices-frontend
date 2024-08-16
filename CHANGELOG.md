@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.70.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.70.0...v1.70.1) (2024-08-16)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#699](https://github.com/openfoodfacts/open-prices-frontend/issues/699)) ([2109488](https://github.com/openfoodfacts/open-prices-frontend/commit/2109488ce3102ebbb707dd0561ba3297bd523a66))
+* **Location card:** move Share action to menu ([#705](https://github.com/openfoodfacts/open-prices-frontend/issues/705)) ([ea0e2b8](https://github.com/openfoodfacts/open-prices-frontend/commit/ea0e2b88aa211ef2981f278e1eb3b4e65696fd55))
+* **Product card:** move PriceAdd action to menu ([#700](https://github.com/openfoodfacts/open-prices-frontend/issues/700)) ([5dec6b7](https://github.com/openfoodfacts/open-prices-frontend/commit/5dec6b71e2e5dde9ff869db20a793cf1c6babe0e))
+* **Product card:** move Share action to menu ([#704](https://github.com/openfoodfacts/open-prices-frontend/issues/704)) ([2823199](https://github.com/openfoodfacts/open-prices-frontend/commit/28231997b6821106dee41f236e10033184138e42))
+* **Proof card:** move PriceAdd action to menu ([#702](https://github.com/openfoodfacts/open-prices-frontend/issues/702)) ([04896b3](https://github.com/openfoodfacts/open-prices-frontend/commit/04896b3ed50563ad71822f72a4308628faf03514))
+* **Share button:** rename ShareButton to ShareLink ([#703](https://github.com/openfoodfacts/open-prices-frontend/issues/703)) ([44d402c](https://github.com/openfoodfacts/open-prices-frontend/commit/44d402c6f2a9273148778c0bb9f7f0adaec63531))
+* **User card:** move Share action to menu ([#706](https://github.com/openfoodfacts/open-prices-frontend/issues/706)) ([7e8df3c](https://github.com/openfoodfacts/open-prices-frontend/commit/7e8df3c5df9aa52d3796a0544d84586f11dbe716))
+
 ## [1.70.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.69.1...v1.70.0) (2024-08-14)
 
 
