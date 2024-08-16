@@ -8,12 +8,6 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="allowPriceAdd" class="mt-0">
-    <v-col cols="12">
-      <PriceAddLink class="mr-2" :proofId="proof.id" :proofType="proof.type" />
-    </v-col>
-  </v-row>
-
   <br>
 
   <h2 v-if="proof" class="text-h6 mb-1">
@@ -42,7 +36,6 @@ import api from '../services/api'
 
 export default {
   components: {
-    PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
@@ -54,11 +47,6 @@ export default {
       proofPriceTotal: null,
       proofPricePage: 0,
       loading: false,
-    }
-  },
-  computed: {
-    allowPriceAdd() {
-      return this.proof && (this.proof.type === 'PRICE_TAG' || this.proof.type === 'RECEIPT')
     }
   },
   mounted() {
