@@ -5,12 +5,18 @@
         <v-icon start icon="mdi-food-outline" />
         <span id="product-count">{{ $t('BrandDetail.BrandProductTotal', { count: productCount }) }}</span>
       </v-chip>
+      <BrandActionMenuButton :brand="brand" />
     </v-card-text>
   </v-card>
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
+
 export default {
+  components: {
+    BrandActionMenuButton: defineAsyncComponent(() => import('../components/BrandActionMenuButton.vue')),
+  },
   props: {
     brand: {
       type: String,

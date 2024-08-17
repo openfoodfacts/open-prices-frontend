@@ -5,15 +5,6 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
-    <v-col cols="12">
-      <OpenFoodFactsLink facet="brand" :value="brand" display="button" />
-      <ShareLink display="button" />
-    </v-col>
-  </v-row>
-
-  <br>
-
   <v-row>
     <v-col>
       <h2 class="text-h6 d-inline mr-2">
@@ -50,9 +41,7 @@ export default {
     BrandCard: defineAsyncComponent(() => import('../components/BrandCard.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
-    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue'))
+    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue'))
   },
   data() {
     return {
