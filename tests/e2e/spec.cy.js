@@ -11,6 +11,7 @@ describe('Basic tests', () => {
     cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-date&product_code=3011360030498', { fixture: 'product_3011360030498_prices.json' })
     cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-date&category_tag=en%3Apitted-apricot', { fixture: 'pitted_apricot_prices.json' })
     cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-date&category_tag=en%3Aaaaaaaaaaaaa', { body: {"items":[],"total":0,"page":1,"size":10,"pages":0} })
+    cy.intercept('GET', 'http://127.0.0.1:8000/api/v1/prices?app_name=Open+Prices+Web+App&page=1&size=10&order_by=-date&date=2024-01-31', { body: {"items":[],"total":0,"page":1,"size":10,"pages":0} })
   })
 
   it('loads the home page', () => {
@@ -105,6 +106,16 @@ describe('Basic tests', () => {
     cy.get('[data-name="brand-card"]').should('have.length', 1)
     cy.get('#product-count').contains('0')
     cy.contains('Top products')
+    cy.get('[data-name="price-card"]').should('have.length', 0)
+    cy.contains('Load more').should('not.exist')
+  })
+
+  it('displays a date page', () => {
+    cy.visit('/dates/2024-01-31')
+    cy.contains('Welcome to Open Prices!').should('not.exist')
+    cy.get('[data-name="date-card"]').should('have.length', 1)
+    cy.get('#price-count').contains('0')
+    cy.contains('Latest prices')
     cy.get('[data-name="price-card"]').should('have.length', 0)
     cy.contains('Load more').should('not.exist')
   })
