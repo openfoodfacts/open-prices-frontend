@@ -2,7 +2,8 @@
   <v-card v-if="category" :title="category.name" prepend-icon="mdi-fruit-watermelon" data-name="category-card">
     <v-card-text>
       <PriceCountChip :count="priceCount" />
-      <CategoryTagChip v-if="category && !category.status && showProductCategoryTag" :category="category" />
+      <CategoryTagChip v-if="categoryFound && showProductCategoryTag" :category="category" />
+      <CategoryActionMenuButton :category="category" />
     </v-card-text>
   </v-card>
 </template>
@@ -16,6 +17,7 @@ export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
+    CategoryActionMenuButton: defineAsyncComponent(() => import('../components/CategoryActionMenuButton.vue')),
   },
   props: {
     category: {
@@ -32,6 +34,9 @@ export default {
     ...mapStores(useAppStore),
     showProductCategoryTag() {
       return this.appStore.user.username && this.appStore.user.product_display_category_tag
+    },
+    categoryFound() {
+      return this.category && !this.category.status
     }
   }
 }

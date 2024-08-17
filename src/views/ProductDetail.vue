@@ -24,12 +24,6 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="categoryFound" class="mt-0">
-    <v-col cols="12">
-      <PriceAddLink v-if="category" class="mr-2" :productCode="category.name" display="button" />
-    </v-col>
-  </v-row>
-
   <v-row>
     <v-col>
       <h2 class="text-h6 d-inline mr-2">
@@ -80,7 +74,6 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
-    PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
@@ -116,7 +109,7 @@ export default {
       return !this.productIsCategory && this.product && !this.product.source
     },
     categoryFound() {
-      return this.productIsCategory && this.category && (this.category.status !== 'unknown')
+      return this.productIsCategory && this.category && !this.category.status
     },
     productOrCategoryNotFound() {
       return !this.loading && (this.productNotFound || !this.categoryFound)
