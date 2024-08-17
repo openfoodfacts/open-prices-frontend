@@ -2,7 +2,7 @@
   <v-row>
     <v-col cols="12" sm="6">
       <ProductCard v-if="!productIsCategory" :product="product" />
-      <CategoryCard v-else :category="category" :priceCount="productPriceTotal" />
+      <CategoryCard v-else :category="category" source="product" :priceCount="productPriceTotal" />
     </v-col>
   </v-row>
 
@@ -18,15 +18,9 @@
         </p>
         <OpenFoodFactsAddMenu :productCode="productId" />
       </v-alert>
-      <v-alert v-else-if="!categoryFound" data-name="category-not-found-alert" type="error" variant="outlined" icon="mdi-alert">
+      <v-alert v-else-if="categoryNotFound" data-name="category-not-found-alert" type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
       </v-alert>
-    </v-col>
-  </v-row>
-
-  <v-row v-if="categoryFound" class="mt-0">
-    <v-col cols="12">
-      <PriceAddLink v-if="category" class="mr-2" :productCode="category.name" display="button" />
     </v-col>
   </v-row>
 
@@ -80,7 +74,6 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
-    PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
@@ -116,10 +109,13 @@ export default {
       return !this.productIsCategory && this.product && !this.product.source
     },
     categoryFound() {
-      return this.productIsCategory && this.category && (this.category.status !== 'unknown')
+      return this.category && !this.category.status
+    },
+    categoryNotFound() {
+      return this.productIsCategory && !this.categoryFound
     },
     productOrCategoryNotFound() {
-      return !this.loading && (this.productNotFound || !this.categoryFound)
+      return !this.loading && (this.productNotFound || this.categoryNotFound)
     },
     getPricesParams() {
       let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}`, page: this.productPricePage }
