@@ -2,7 +2,8 @@
   <v-row>
     <v-col cols="12" sm="6">
       <v-card
-        :title="category"
+        v-if="category"
+        :title="category.id"
         prepend-icon="mdi-list-box-outline"
       >
         <v-card-text>
@@ -10,19 +11,11 @@
             <v-icon start icon="mdi-food-outline" />
             {{ $t('CategoryDetail.CategoryProductTotal', { count: categoryProductTotal }) }}
           </v-chip>
+          <CategoryActionMenuButton :category="category" source="category" />
         </v-card-text>
       </v-card>
     </v-col>
   </v-row>
-
-  <v-row class="mt-0">
-    <v-col cols="12">
-      <OpenFoodFactsLink facet="category" :value="category" display="button" />
-      <ShareLink display="button" />
-    </v-col>
-  </v-row>
-
-  <br>
 
   <v-row>
     <v-col>
@@ -57,11 +50,10 @@ import api from '../services/api'
 
 export default {
   components: {
+    CategoryActionMenuButton: defineAsyncComponent(() => import('../components/CategoryActionMenuButton.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
-    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue'))
+    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue'))
   },
   data() {
     return {
@@ -78,7 +70,7 @@ export default {
   },
   computed: {
     getProductsParams() {
-      let defaultParams = { categories_tags__contains: this.category, order_by: `${this.currentOrder}`, page: this.categoryProductPage }
+      let defaultParams = { categories_tags__contains: this.category.id, order_by: `${this.currentOrder}`, page: this.categoryProductPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
@@ -99,7 +91,7 @@ export default {
   },
   methods: {
     initCategory() {
-      this.category = this.$route.params.id
+      this.category = {'id': this.$route.params.id, 'name': this.$route.params.id}
       this.categoryProductList = []
       this.categoryProductTotal = null
       this.categoryProductPage = 0

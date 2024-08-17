@@ -3,8 +3,8 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <PriceAddLink class="mr-2" :productCode="category.id" display="list-item" :disabled="!categoryFound" />
-        <ShareLink :overrideUrl="'/products/' + category.id" display="list-item" :disabled="!categoryFound" />
+        <PriceAddLink v-if="!hidePriceAddLink" class="mr-2" :productCode="category.id" display="list-item" :disabled="!categoryFound" />
+        <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" :disabled="!categoryFound" />
         <v-divider />
         <OpenFoodFactsLink facet="category" :value="category.id" display="list-item" :disabled="!categoryFound" />
       </v-list>
@@ -29,11 +29,25 @@ export default {
     style: {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
+    },
+    source: {
+      type: String,
+      default: 'category',
+      examples: ['category', 'product']
     }
   },
   computed: {
     categoryFound() {
       return this.category && !this.category.status
+    },
+    hidePriceAddLink() {
+      return this.source === 'category'
+    },
+    getShareLinkUrl() {
+      if (this.source === 'category') {
+        return `/categories/${this.category.id}`
+      }
+      return `/products/${this.category.id}`
     }
   }
 }

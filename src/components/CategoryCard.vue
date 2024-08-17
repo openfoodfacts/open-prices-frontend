@@ -3,7 +3,7 @@
     <v-card-text>
       <PriceCountChip :count="priceCount" />
       <CategoryTagChip v-if="categoryFound && showProductCategoryTag" :category="category" />
-      <CategoryActionMenuButton :category="category" />
+      <CategoryActionMenuButton :category="category" source="product" />
     </v-card-text>
   </v-card>
 </template>
