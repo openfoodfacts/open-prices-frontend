@@ -5,14 +5,6 @@
     </v-col>
   </v-row>
 
-  <v-row class="mt-0">
-    <v-col cols="12">
-      <ShareLink display="button" />
-    </v-col>
-  </v-row>
-
-  <br>
-
   <v-row>
     <v-col>
       <h2 class="text-h6 d-inline mr-2">
@@ -48,8 +40,7 @@ export default {
   components: {
     DateCard: defineAsyncComponent(() => import('../components/DateCard.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue'))
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
     return {
