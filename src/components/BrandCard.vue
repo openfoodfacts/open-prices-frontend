@@ -3,7 +3,7 @@
     <v-card-text>
       <v-chip label size="small" density="comfortable" class="mr-1">
         <v-icon start icon="mdi-food-outline" />
-        {{ $t('BrandDetail.BrandProductTotal', { count: productCount }) }}
+        <span id="product-count">{{ $t('BrandDetail.BrandProductTotal', { count: productCount }) }}</span>
       </v-chip>
     </v-card-text>
   </v-card>
