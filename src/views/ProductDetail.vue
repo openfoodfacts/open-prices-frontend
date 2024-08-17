@@ -8,23 +8,25 @@
 
   <v-row v-if="productOrCategoryNotFound" class="mt-0">
     <v-col cols="12" sm="6">
-      <v-alert v-if="productNotFound" type="error" variant="outlined" icon="mdi-alert">
-        <i>
-          <i18n-t keypath="ProductDetail.ProductNotFound" tag="span">
-            <template #name>{{ OFF_NAME }}</template>
+      <v-alert v-if="productNotFound" data-name="product-not-found-alert" type="error" variant="outlined" icon="mdi-alert">
+        <p>
+          <i18n-t keypath="ProductDetail.ProductNotFound" tag="i">
+            <template #name>
+              {{ OFF_NAME }}
+            </template>
           </i18n-t>
-        </i>
-        <br>
+        </p>
         <OpenFoodFactsAddMenu :productCode="productId" />
       </v-alert>
-      <v-alert v-if="categoryNotFound" type="error" variant="outlined" icon="mdi-alert">
+      <v-alert v-else-if="!categoryFound" data-name="category-not-found-alert" type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
       </v-alert>
     </v-col>
   </v-row>
 
-  <v-row v-if="!categoryNotFound" class="mt-0">
+  <v-row v-if="categoryFound" class="mt-0">
     <v-col cols="12">
+      {{ category }}
       <PriceAddLink v-if="category" class="mr-2" :productCode="category.name" display="button" />
     </v-col>
   </v-row>
@@ -112,13 +114,13 @@ export default {
       return this.productId.startsWith('en')
     },
     productNotFound() {
-      return !this.productIsCategory && !this.product
+      return !this.productIsCategory && this.product && !this.product.source
     },
-    categoryNotFound() {
-      return this.productIsCategory && this.category && this.category.status
+    categoryFound() {
+      return this.productIsCategory && this.category && (this.category.status !== 'unknown')
     },
     productOrCategoryNotFound() {
-      return !this.loading && (this.productNotFound || this.categoryNotFound)
+      return !this.loading && (this.productNotFound || !this.categoryFound)
     },
     getPricesParams() {
       let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}`, page: this.productPricePage }
