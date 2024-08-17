@@ -1,17 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card
-        :title="brand"
-        prepend-icon="mdi-factory"
-      >
-        <v-card-text>
-          <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-food-outline" />
-            {{ $t('BrandDetail.BrandProductTotal', { count: brandProductTotal }) }}
-          </v-chip>
-        </v-card-text>
-      </v-card>
+      <BrandCard :brand="brand" :productCount="brandProductTotal" />
     </v-col>
   </v-row>
 
@@ -57,6 +47,7 @@ import api from '../services/api'
 
 export default {
   components: {
+    BrandCard: defineAsyncComponent(() => import('../components/BrandCard.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
