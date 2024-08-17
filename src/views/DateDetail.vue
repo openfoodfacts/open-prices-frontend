@@ -1,21 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card
-        :title="date"
-        prepend-icon="mdi-calendar-today"
-      >
-        <v-card-text>
-          <PriceCountChip :count="datePriceTotal" :withLabel="true" />
-          <v-chip
-            v-for="dp in dateParentList"
-            :key="dp.name"
-            label size="small" density="comfortable" class="mr-1" @click="$router.push(dp.path)"
-          >
-            {{ dp.name }}
-          </v-chip>
-        </v-card-text>
-      </v-card>
+      <DateCard :date="date" :priceCount="datePriceTotal" />
     </v-col>
   </v-row>
 
@@ -56,10 +42,11 @@
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   components: {
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    DateCard: defineAsyncComponent(() => import('../components/DateCard.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue'))
@@ -78,38 +65,7 @@ export default {
   },
   computed: {
     dateType() {
-      if (this.date) {
-        if (this.date.match(constants.DATE_FULL_REGEX_MATCH)) {
-          return 'DAY'
-        } else {
-          // YYYY-MM
-          const matches = this.date.match(constants.DATE_YEAR_MONTH_REGEX_MATCH)
-          if (matches) {
-            return 'MONTH'
-          // YYYY
-          } else if (this.date.match(constants.DATE_YEAR_REGEX_MATCH)) {
-            return 'YEAR'
-          } else {
-            return null
-          }
-        }
-      }
-      return null
-    },
-    dateParentList() {
-      let dateParentList = []
-      if (this.dateType === 'DAY') {
-        const matches = this.date.match(constants.DATE_FULL_REGEX_MATCH)
-        const year = matches[1]
-        const month = `${year}-${matches[2]}`
-        dateParentList.push({ name: month, path: `/dates/${month}` })
-        dateParentList.push({ name: year, path: `/dates/${year}` })
-      } else if (this.dateType === 'MONTH') {
-        const matches = this.date.match(constants.DATE_YEAR_MONTH_REGEX_MATCH)
-        const year = matches[1]
-        dateParentList.push({ name: year, path: `/dates/${year}` })
-      }
-      return dateParentList
+      return utils.dateType(this.date)
     },
     getPricesParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.datePricePage }

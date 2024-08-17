@@ -1,5 +1,6 @@
 import CategoryTags from './data/category-tags.json'
 import CountriesWithEmoji from './data/countries-with-emoji.json'
+import constants from './constants'
 
 
 function isNumber(value) {
@@ -117,6 +118,26 @@ function prettyRelativeDateTime(dateTimeString, size=null) {
   }
   return day_diff == 0 && (
   diff < 60 && "just now" || diff < 120 && "1 minute ago" || diff < 3600 && Math.floor(diff / 60) + " minutes ago" || diff < 7200 && "1 hour ago" || diff < 86400 && Math.floor(diff / 3600) + " hours ago") || day_diff == 1 && "Yesterday" || day_diff < 10 && day_diff + " days ago" || Math.ceil(day_diff / 7) + " weeks ago";
+}
+
+function dateType(dateString) {
+  if (dateString) {
+    if (dateString.match(constants.DATE_FULL_REGEX_MATCH)) {
+      return 'DAY'
+    } else {
+      // YYYY-MM
+      const matches = dateString.match(constants.DATE_YEAR_MONTH_REGEX_MATCH)
+      if (matches) {
+        return 'MONTH'
+      // YYYY
+      } else if (dateString.match(constants.DATE_YEAR_REGEX_MATCH)) {
+        return 'YEAR'
+      } else {
+        return null
+      }
+    }
+  }
+  return null
 }
 
 function getCategoryName(categoryId) {
@@ -317,6 +338,7 @@ export default {
   prettyDate,
   prettyDateTime,
   prettyRelativeDateTime,
+  dateType,
   getCategoryName,
   getLocaleCategoryTags,
   getLocaleCategoryTag,
