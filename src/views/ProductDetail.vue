@@ -26,7 +26,6 @@
 
   <v-row v-if="categoryFound" class="mt-0">
     <v-col cols="12">
-      {{ category }}
       <PriceAddLink v-if="category" class="mr-2" :productCode="category.name" display="button" />
     </v-col>
   </v-row>

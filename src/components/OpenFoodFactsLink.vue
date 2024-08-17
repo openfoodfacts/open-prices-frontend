@@ -1,11 +1,11 @@
 <template>
-  <a v-if="display === 'link'" :href="getUrl" target="_blank">
+  <a v-if="display === 'link'" :href="getUrl" target="_blank" :disabled="disabled">
     {{ getSourceName }}
   </a>
-  <v-btn v-else-if="display === 'button'" size="small" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank">
+  <v-btn v-else-if="display === 'button'" size="small" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank" :disabled="disabled">
     {{ getSourceName }}
   </v-btn>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank">
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="getSourceIcon" append-icon="mdi-open-in-new" :href="getUrl" target="_blank" :disabled="disabled">
     {{ getSourceName }}
   </v-list-item>
 </template>
@@ -35,6 +35,10 @@ export default {
       type: String,
       default: 'link',
       examples: ['link', 'button', 'list-item']
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   data() {

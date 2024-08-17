@@ -1,5 +1,5 @@
 <template>
-  <a v-if="display === 'link'" @click="shareViaWebShare">
+  <a v-if="display === 'link'" :disabled="disabled" @click="shareViaWebShare">
     {{ $t('Common.Share') }}
   </a>
   <v-sheet v-else-if="display === 'button'">
@@ -11,6 +11,7 @@
       color="teal"
       icon="mdi-share-variant"
       :title="$t('Common.Share')"
+      :disabled="disabled"
       @click="shareViaWebShare"
     />
     <v-btn
@@ -21,12 +22,13 @@
       color="teal"
       prepend-icon="mdi-share-variant"
       :title="$t('Common.Share')"
+      :disabled="disabled"
       @click="shareViaWebShare"
     >
       {{ $t('Common.Share') }}
     </v-btn>
   </v-sheet>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" base-color="teal" prepend-icon="mdi-share-variant" @click="shareViaWebShare">
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" base-color="teal" prepend-icon="mdi-share-variant" :disabled="disabled" @click="shareViaWebShare">
     {{ $t('Common.Share') }}
   </v-list-item>
 
@@ -53,6 +55,10 @@ export default {
       default: 'link',
       examples: ['link', 'button', 'list-item']
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
