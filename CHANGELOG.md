@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.70.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.70.2...v1.70.3) (2024-08-17)
+
+
+### Bug Fixes
+
+* **Product detail:** improve spacing, error messages when product not found ([5c3b8de](https://github.com/openfoodfacts/open-prices-frontend/commit/5c3b8de9c5e5cd0486b90d3b3dc80a85edf94105))
+
+
+### Technical
+
+* add disabled prop to Link components ([aaef501](https://github.com/openfoodfacts/open-prices-frontend/commit/aaef5012edbb03d5e726665aae6e235007ee218e))
+* **Brand Card:** new action menu with OFF & Share links ([#713](https://github.com/openfoodfacts/open-prices-frontend/issues/713)) ([ddef561](https://github.com/openfoodfacts/open-prices-frontend/commit/ddef56193d1defe6cee1d64902d92dc660ae7397))
+* **Brand detail:** new BrandCard component ([#712](https://github.com/openfoodfacts/open-prices-frontend/issues/712)) ([dc4e0c8](https://github.com/openfoodfacts/open-prices-frontend/commit/dc4e0c82e00be4e38991ee8fb1414f8c608516aa))
+* **Category Card:** new action menu with OFF & Share links ([#711](https://github.com/openfoodfacts/open-prices-frontend/issues/711)) ([3beedda](https://github.com/openfoodfacts/open-prices-frontend/commit/3beedda766a4a100b1f2eedac6f1967a430fe1b8))
+* **Date Card:** new action menu with Share link ([#715](https://github.com/openfoodfacts/open-prices-frontend/issues/715)) ([cab3da2](https://github.com/openfoodfacts/open-prices-frontend/commit/cab3da2ff6b88b11e58a60f07544f52ba391fd45))
+* **Date detail:** new DateCard component ([#714](https://github.com/openfoodfacts/open-prices-frontend/issues/714)) ([48c83f6](https://github.com/openfoodfacts/open-prices-frontend/commit/48c83f6aeb3586dc06ec9e63228865c54bc51669))
+* new ProductCountChip component ([#716](https://github.com/openfoodfacts/open-prices-frontend/issues/716)) ([fabdf44](https://github.com/openfoodfacts/open-prices-frontend/commit/fabdf443e6def6480f4c586184a3c70216ab4661))
+* **ShareLink:** remove v-sheet to avoid linebreak ([3cfb7b6](https://github.com/openfoodfacts/open-prices-frontend/commit/3cfb7b6d30397f8e83781f0c56f1d8572c8017d0))
+
 ## [1.70.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.70.1...v1.70.2) (2024-08-16)
 
 
