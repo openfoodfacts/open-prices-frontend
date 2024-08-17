@@ -1,10 +1,7 @@
 <template>
   <v-card v-if="category" :title="category.name" prepend-icon="mdi-fruit-watermelon" data-name="category-card">
     <v-card-text>
-      <v-chip v-if="sourceCategory" label size="small" density="comfortable" class="mr-1">
-        <v-icon start icon="mdi-food-outline" />
-        {{ $t('CategoryDetail.CategoryProductTotal', { count: productCount }) }}
-      </v-chip>
+      <ProductCountChip v-if="sourceCategory" :count="productCount" :withLabel="true" />
       <PriceCountChip v-else-if="sourceProduct" :count="priceCount" />
       <CategoryTagChip v-if="showProductCategoryTag" :category="category" />
       <CategoryActionMenuButton :category="category" :source="source" />
@@ -19,6 +16,7 @@ import { useAppStore } from '../store'
 
 export default {
   components: {
+    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
     CategoryActionMenuButton: defineAsyncComponent(() => import('../components/CategoryActionMenuButton.vue')),
