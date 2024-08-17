@@ -2,35 +2,33 @@
   <a v-if="display === 'link'" :disabled="disabled" @click="shareViaWebShare">
     {{ $t('Common.Share') }}
   </a>
-  <v-sheet v-else-if="display === 'button'">
-    <v-btn
-      v-if="!$vuetify.display.smAndUp"
-      class="ml-2"
-      size="small"
-      density="comfortable"
-      color="teal"
-      icon="mdi-share-variant"
-      :title="$t('Common.Share')"
-      :disabled="disabled"
-      @click="shareViaWebShare"
-    />
-    <v-btn
-      v-else
-      class="ml-2"
-      size="small"
-      rounded="xl"
-      color="teal"
-      prepend-icon="mdi-share-variant"
-      :title="$t('Common.Share')"
-      :disabled="disabled"
-      @click="shareViaWebShare"
-    >
-      {{ $t('Common.Share') }}
-    </v-btn>
-  </v-sheet>
   <v-list-item v-else-if="display === 'list-item'" :slim="true" base-color="teal" prepend-icon="mdi-share-variant" :disabled="disabled" @click="shareViaWebShare">
     {{ $t('Common.Share') }}
   </v-list-item>
+  <v-btn
+    v-else-if="display === 'button' && !$vuetify.display.smAndUp"
+    class="ml-2"
+    size="small"
+    density="comfortable"
+    color="teal"
+    icon="mdi-share-variant"
+    :title="$t('Common.Share')"
+    :disabled="disabled"
+    @click="shareViaWebShare"
+  />
+  <v-btn
+    v-else-if="display === 'button' && $vuetify.display.smAndUp"
+    class="ml-2"
+    size="small"
+    rounded="xl"
+    color="teal"
+    prepend-icon="mdi-share-variant"
+    :title="$t('Common.Share')"
+    :disabled="disabled"
+    @click="shareViaWebShare"
+  >
+    {{ $t('Common.Share') }}
+  </v-btn>
 
   <v-snackbar
     v-model="shareLinkCopySuccessMessage"
@@ -53,7 +51,7 @@ export default {
     display: {
       type: String,
       default: 'link',
-      examples: ['link', 'button', 'list-item']
+      examples: ['link', 'list-item', 'button']
     },
     disabled: {
       type: Boolean,

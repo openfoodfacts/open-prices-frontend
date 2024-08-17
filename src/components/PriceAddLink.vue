@@ -2,6 +2,9 @@
   <a v-if="display === 'link'" :to="getAddUrl" :disabled="disabled">
     {{ $t('Common.AddPrice') }}
   </a>
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" base-color="primary" prepend-icon="mdi-tag-plus-outline" :to="getAddUrl" :disabled="disabled">
+    {{ $t('Common.AddPrice') }}
+  </v-list-item>
   <v-btn
     v-else-if="display === 'button'"
     size="small"
@@ -12,9 +15,6 @@
   >
     {{ $t('Common.AddPrice') }}
   </v-btn>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" base-color="primary" prepend-icon="mdi-tag-plus-outline" :to="getAddUrl" :disabled="disabled">
-    {{ $t('Common.AddPrice') }}
-  </v-list-item>
 </template>
 
 <script>
@@ -36,7 +36,7 @@ export default {
     display: {
       type: String,
       default: 'link',
-      examples: ['link', 'button', 'list-item']
+      examples: ['link', 'list-item', 'button']
     },
     disabled: {
       type: Boolean,
