@@ -18,7 +18,7 @@
         </p>
         <OpenFoodFactsAddMenu :productCode="productId" />
       </v-alert>
-      <v-alert v-else-if="!categoryFound" data-name="category-not-found-alert" type="error" variant="outlined" icon="mdi-alert">
+      <v-alert v-else-if="categoryNotFound" data-name="category-not-found-alert" type="error" variant="outlined" icon="mdi-alert">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
       </v-alert>
     </v-col>
@@ -109,10 +109,13 @@ export default {
       return !this.productIsCategory && this.product && !this.product.source
     },
     categoryFound() {
-      return this.productIsCategory && this.category && !this.category.status
+      return this.category && !this.category.status
+    },
+    categoryNotFound() {
+      return this.productIsCategory && !this.categoryFound
     },
     productOrCategoryNotFound() {
-      return !this.loading && (this.productNotFound || !this.categoryFound)
+      return !this.loading && (this.productNotFound || this.categoryNotFound)
     },
     getPricesParams() {
       let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}`, page: this.productPricePage }
