@@ -9,6 +9,7 @@
       >
         {{ dp.name }}
       </v-chip>
+      <DateActionMenuButton :date="date" />
     </v-card-text>
   </v-card>
 </template>
@@ -21,6 +22,7 @@ import utils from '../utils.js'
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    DateActionMenuButton: defineAsyncComponent(() => import('../components/DateActionMenuButton.vue')),
   },
   props: {
     date: {
