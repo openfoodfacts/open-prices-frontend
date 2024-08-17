@@ -2,7 +2,7 @@
   <v-row>
     <v-col cols="12" sm="6">
       <ProductCard v-if="!productIsCategory" :product="product" />
-      <CategoryCard v-else :category="category" :priceCount="productPriceTotal" />
+      <CategoryCard v-else :category="category" source="product" :priceCount="productPriceTotal" />
     </v-col>
   </v-row>
 

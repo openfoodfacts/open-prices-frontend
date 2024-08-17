@@ -1,19 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card
-        v-if="category"
-        :title="category.id"
-        prepend-icon="mdi-list-box-outline"
-      >
-        <v-card-text>
-          <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-food-outline" />
-            {{ $t('CategoryDetail.CategoryProductTotal', { count: categoryProductTotal }) }}
-          </v-chip>
-          <CategoryActionMenuButton :category="category" source="category" />
-        </v-card-text>
-      </v-card>
+      <CategoryCard v-if="category" :category="category" source="category" :productCount="categoryProductTotal" />
     </v-col>
   </v-row>
 
@@ -50,7 +38,7 @@ import api from '../services/api'
 
 export default {
   components: {
-    CategoryActionMenuButton: defineAsyncComponent(() => import('../components/CategoryActionMenuButton.vue')),
+    CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue'))

@@ -26,14 +26,14 @@ export default {
       type: Object,
       default: null
     },
-    style: {
-      type: String,
-      default: 'position:absolute;bottom:6px;right:0;'
-    },
     source: {
       type: String,
       default: 'category',
       examples: ['category', 'product']
+    },
+    style: {
+      type: String,
+      default: 'position:absolute;bottom:6px;right:0;'
     }
   },
   computed: {

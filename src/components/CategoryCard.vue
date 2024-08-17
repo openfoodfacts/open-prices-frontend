@@ -1,9 +1,13 @@
 <template>
   <v-card v-if="category" :title="category.name" prepend-icon="mdi-fruit-watermelon" data-name="category-card">
     <v-card-text>
-      <PriceCountChip :count="priceCount" />
-      <CategoryTagChip v-if="categoryFound && showProductCategoryTag" :category="category" />
-      <CategoryActionMenuButton :category="category" source="product" />
+      <v-chip v-if="sourceCategory" label size="small" density="comfortable" class="mr-1">
+        <v-icon start icon="mdi-food-outline" />
+        {{ $t('CategoryDetail.CategoryProductTotal', { count: productCount }) }}
+      </v-chip>
+      <PriceCountChip v-else-if="sourceProduct" :count="priceCount" />
+      <CategoryTagChip v-if="showProductCategoryTag" :category="category" />
+      <CategoryActionMenuButton :category="category" :source="source" />
     </v-card-text>
   </v-card>
 </template>
@@ -25,6 +29,15 @@ export default {
       default: null,
       example: { 'id': 'en:croissants', 'name': 'Croissants' }
     },
+    source: {
+      type: String,
+      default: 'category',
+      examples: ['category', 'product']
+    },
+    productCount: {
+      type: Number,
+      default: 0
+    },
     priceCount: {
       type: Number,
       default: 0
@@ -32,11 +45,17 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    showProductCategoryTag() {
-      return this.appStore.user.username && this.appStore.user.product_display_category_tag
-    },
     categoryFound() {
       return this.category && !this.category.status
+    },
+    sourceCategory() {
+      return this.source === 'category'
+    },
+    sourceProduct() {
+      return this.source === 'product'
+    },
+    showProductCategoryTag() {
+      return this.appStore.user.username && this.sourceProduct && this.appStore.user.product_display_category_tag
     }
   }
 }
