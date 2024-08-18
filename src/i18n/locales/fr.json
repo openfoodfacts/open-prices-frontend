@@ -110,6 +110,8 @@
 		"AddPrice": "Ajouter un prix",
 		"AddToOFF": "Ajouter à {name}",
 		"Brand": "Marque",
+		"Price": "Prix",
+		"Product": "Produit",
 		"Proof": "Preuve",
 		"Country": "Pays",
 		"Currency": "Devise",
@@ -118,7 +120,7 @@
 		"DisplayPriceList": "Liste",
 		"DisplayPriceMap": "Carte",
 		"Language": "Langue",
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"LoadMore": "Voir plus",
 		"Location": "Lieu",
 		"Locations": "Lieux",
@@ -136,6 +138,7 @@
 		"Filter": "Filtre",
 		"FilterProductWithPriceCountHide": "Cacher les produits qui ont un prix",
 		"FilterPriceMoreThan30DaysHide": "Masquer les prix datant de plus de 30 jours",
+		"FilterProofWithPriceCountHide": "Masquer les produits avec les prix",
 		"Help": "Aide",
 		"Image": "Image",
 		"LinkCopySuccess": "Lien copié",
@@ -145,6 +148,9 @@
 		"OrderPriceASC": "Prix",
 		"OrderPriceCreatedDESC": "Date d'ajout",
 		"OrderPriceDateDESC": "Date du prix",
+		"OrderProofPriceCountDESC": "Nombre de prix",
+		"OrderProofCreatedDESC": "Date d'ajout",
+		"OrderProofDateDESC": "Proof date",
 		"PriceCount": "{count} prix",
 		"PriceCreated": "Prix créé !",
 		"ProductCount": "{count} produits",
@@ -185,7 +191,7 @@
 	},
 	"Home": {
 		"AddPrice": "Ajouter un prix",
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"ProofAdd": "Ajouter une preuve",
 		"SearchProduct": "Chercher un produit",
 		"SettingsUpdated": "Paramètres mis à jour !",
@@ -196,7 +202,7 @@
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"LoadMore": "Voir plus",
 		"LocationNotFound": "Ce lieu n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)"
 	},
@@ -253,7 +259,7 @@
 	},
 	"PriceList": {
 		"LoadMore": "Voir plus",
-		"Title": "Dernier prix"
+		"Title": "Derniers prix"
 	},
 	"PriceRules": {
 		"AmountRequired": "Le prix est obligatoire",
@@ -289,7 +295,7 @@
 	"ProductDetail": {
 		"AddPrice": "Ajouter un prix",
 		"CategoryNotFound": "Cette catégorie n'existe pas",
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"LoadMore": "Voir plus",
 		"ProductNotFound": "Ce produit n'existe pas sur Open Food Facts... N'hésitez pas à le rajouter :)"
 	},
@@ -339,7 +345,7 @@
 			"Title": "Accueil"
 		},
 		"LatestPrices": {
-			"Title": "Dernier prix"
+			"Title": "Derniers prix"
 		},
 		"ProofAddSingle": {
 			"Title": "Ajouter une preuve"
@@ -390,7 +396,7 @@
 		"WithoutProduct": "Sans produit"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"LatestProofs": "Dernières preuves",
 		"LoadMore": "Voir plus",
 		"MyPrices": "Mes prix",
@@ -402,7 +408,7 @@
 		"UserProofTotal": "{count} preuves"
 	},
 	"UserDetail": {
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"LoadMore": "Voir plus"
 	},
 	"UserList": {
