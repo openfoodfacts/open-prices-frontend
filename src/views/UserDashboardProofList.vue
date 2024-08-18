@@ -5,7 +5,7 @@
 
   <v-row>
     <v-col>
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-multiple-outline">
+      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-image">
         {{ $t('UserDashboard.UserProofTotal', { count: appStore.getUserProofTotal }) }}
       </v-chip>
       <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
