@@ -118,7 +118,7 @@
 		"DisplayPriceList": "Liste",
 		"DisplayPriceMap": "Carte",
 		"Language": "Langue",
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"LoadMore": "Voir plus",
 		"Location": "Lieu",
 		"Locations": "Lieux",
@@ -185,7 +185,7 @@
 	},
 	"Home": {
 		"AddPrice": "Ajouter un prix",
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"ProofAdd": "Ajouter une preuve",
 		"SearchProduct": "Chercher un produit",
 		"SettingsUpdated": "Paramètres mis à jour !",
@@ -196,7 +196,7 @@
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"LoadMore": "Voir plus",
 		"LocationNotFound": "Ce lieu n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)"
 	},
@@ -253,7 +253,7 @@
 	},
 	"PriceList": {
 		"LoadMore": "Voir plus",
-		"Title": "Dernier prix"
+		"Title": "Derniers prix"
 	},
 	"PriceRules": {
 		"AmountRequired": "Le prix est obligatoire",
@@ -289,7 +289,7 @@
 	"ProductDetail": {
 		"AddPrice": "Ajouter un prix",
 		"CategoryNotFound": "Cette catégorie n'existe pas",
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"LoadMore": "Voir plus",
 		"ProductNotFound": "Ce produit n'existe pas sur Open Food Facts... N'hésitez pas à le rajouter :)"
 	},
@@ -339,7 +339,7 @@
 			"Title": "Accueil"
 		},
 		"LatestPrices": {
-			"Title": "Dernier prix"
+			"Title": "Derniers prix"
 		},
 		"ProofAddSingle": {
 			"Title": "Ajouter une preuve"
@@ -390,7 +390,7 @@
 		"WithoutProduct": "Sans produit"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"LatestProofs": "Dernières preuves",
 		"LoadMore": "Voir plus",
 		"MyPrices": "Mes prix",
@@ -402,7 +402,7 @@
 		"UserProofTotal": "{count} preuves"
 	},
 	"UserDetail": {
-		"LatestPrices": "Dernier prix",
+		"LatestPrices": "Derniers prix",
 		"LoadMore": "Voir plus"
 	},
 	"UserList": {
