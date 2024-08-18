@@ -28,7 +28,8 @@ export default {
     },
     kind: {
       type: String,
-      default: 'product'
+      default: 'product',
+      examples: ['product', 'price', 'proof']
     }
   },
   emits: ['update:currentOrder'],
@@ -36,11 +37,12 @@ export default {
     return {
       productOrderList: constants.PRODUCT_ORDER_LIST,
       priceOrderList: constants.PRICE_ORDER_LIST,
+      proofOrderList: constants.PROOF_ORDER_LIST
     }
   },
   computed: {
     orderList() {
-      return this.kind === 'product' ? this.productOrderList : this.priceOrderList
+      return this[`${this.kind}OrderList`]
     },
     getCurrentOrderIcon() {
       let order = this.orderList.find(o => o.key === this.currentOrder)

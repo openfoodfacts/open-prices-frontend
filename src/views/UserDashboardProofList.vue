@@ -5,7 +5,7 @@
 
   <v-row>
     <v-col>
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-multiple-outline">
+      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-image">
         {{ $t('UserDashboard.UserProofTotal', { count: appStore.getUserProofTotal }) }}
       </v-chip>
       <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
@@ -19,6 +19,7 @@
   <h2 class="text-h6 mb-1">
     {{ $t('UserDashboard.LatestProofs') }}
     <v-progress-circular v-if="loading" indeterminate :size="30" />
+    <OrderMenu v-if="!loading" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" /> 
   </h2>
 
   <v-row>
@@ -45,14 +46,16 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 import api from '../services/api'
-import ProofCard from '../components/ProofCard.vue'
 
 export default {
   components: {
-    ProofCard,
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
   data() {
     return {
@@ -60,7 +63,9 @@ export default {
       userProofTotal: null,
       userProofPage: 0,
       loading: false,
-      proofUpdated: false
+      proofUpdated: false,
+      // order
+      currentOrder: constants.PROOF_ORDER_LIST[2].key,
     }
   },
   computed: {
@@ -68,15 +73,33 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    getUserProofsParams() {
+      let defaultParams = { owner: this.username, order_by: `${this.currentOrder}`, page: this.userProofPage }
+      return defaultParams
+    },
+  },
+  watch: {
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initUserProofs()
+      }
+    }
   },
   mounted() {
-    this.getUserProofs()
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
+    this.initUserProofs()
   },
   methods: {
+    initUserProofs() {
+      this.userProofList = []
+      this.userProofTotal = null
+      this.userProofPage = 0
+      this.getUserProofs()
+    },
     getUserProofs() {
       this.loading = true
       this.userProofPage += 1
-      return api.getProofs({ owner: this.username, page: this.userProofPage })
+      return api.getProofs(this.getUserProofsParams)
         .then((data) => {
           this.userProofList.push(...data.items)
           this.userProofTotal = data.total
@@ -85,7 +108,14 @@ export default {
     },
     handleProofUpdated() {
       this.proofUpdated = true
-  },
+    },
+    selectProofOrder(orderKey) {
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        // this.initUserProofs() will be called in watch $route
+      }
+    },
   }
 }
 </script>
