@@ -3,10 +3,22 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <v-list-item :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
+        <!-- Product actions -->
+        <v-list-item v-if="!hideProductActions" :slim="true" disabled>
+          {{ $t('Common.Product') }}
+        </v-list-item>
+        <v-divider v-if="!hideProductActions" />
+        <OpenFoodFactsLink v-if="!hideProductActions && price.product" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
+        <OpenFoodFactsLink v-else-if="!hideProductActions && price.category_tag" facet="category" :value="price.category_tag" display="list-item" />
+        <!-- Price actions -->
+        <v-list-item :slim="true" disabled>
+          {{ $t('Common.Price') }}
+        </v-list-item>
+        <v-divider />
+        <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
           {{ $t('Common.Edit') }}
         </v-list-item>
-        <v-list-item :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
+        <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
           {{ $t('Common.Delete') }}
         </v-list-item>
       </v-list>
@@ -47,9 +59,12 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 
 export default {
   components: {
+    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     PriceEditDialog: defineAsyncComponent(() => import('../components/PriceEditDialog.vue')),
     PriceDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/PriceDeleteConfirmationDialog.vue'))
   },
@@ -57,6 +72,10 @@ export default {
     price: {
       type: Object,
       default: null
+    },
+    hideProductActions: {
+      type: Boolean,
+      default: false
     },
     style: {
       type: String,
@@ -70,6 +89,15 @@ export default {
       editSuccessMessage: false,
       deleteConfirmationDialog: false,
       deleteSuccessMessage: false
+    }
+  },
+  computed: {
+    ...mapStores(useAppStore),
+    username() {
+      return this.appStore.user.username
+    },
+    userIsPriceOwner() {
+      return this.username && (this.price.owner === this.username)
     }
   },
   methods: {

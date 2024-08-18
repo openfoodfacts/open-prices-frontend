@@ -1,6 +1,6 @@
 <template>
   <v-row style="margin-top:0;">
-    <v-col :cols="userIsPriceOwner ? '11' : '12'">
+    <v-col cols="11">
       <LocationChip v-if="!hidePriceLocation" class="mr-1" :location="price.location" :locationId="price.location_id" :readonly="readonly" />
       <UserChip class="mr-1" :username="price.owner" :readonly="readonly" />
       <DateChip class="mr-1" :date="price.date" :readonly="readonly" />
@@ -9,7 +9,7 @@
     </v-col>
   </v-row>
 
-  <PriceActionMenuButton v-if="userIsPriceOwner" :price="price" />
+  <PriceActionMenuButton v-if="userIsPriceOwner" :price="price" :hideProductActions="hideProductDetails" />
 </template>
 
 <script>
@@ -36,6 +36,10 @@ export default {
       default: false
     },
     hidePriceProof: {
+      type: Boolean,
+      default: false
+    },
+    hideProductDetails: {
       type: Boolean,
       default: false
     },
