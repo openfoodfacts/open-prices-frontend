@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.71.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.70.3...v1.71.0) (2024-08-18)
+
+
+### Features
+
+* **Price add:** When selecting an existing proof, fetch its existing prices ([#718](https://github.com/openfoodfacts/open-prices-frontend/issues/718)) ([571b8db](https://github.com/openfoodfacts/open-prices-frontend/commit/571b8dbf05870970f66d9f4601c48117b8bb293b))
+
+
+### Technical
+
+* **Product detail:** display loaded & total price count ([b682160](https://github.com/openfoodfacts/open-prices-frontend/commit/b682160ed259318538197158807e6708b5c26837))
+
 ## [1.70.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.70.2...v1.70.3) (2024-08-17)
 
 
