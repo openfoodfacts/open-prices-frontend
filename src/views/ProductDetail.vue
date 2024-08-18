@@ -28,6 +28,7 @@
     <v-col>
       <h2 class="text-h6 d-inline mr-2">
         {{ $t('ProductDetail.LatestPrices') }}
+        <small>{{ productPriceList.length }}/{{ productPriceTotal }}</small>
       </h2>
       <v-progress-circular v-if="loading" indeterminate :size="30" />
       <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
