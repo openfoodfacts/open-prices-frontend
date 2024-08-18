@@ -41,9 +41,9 @@ export default {
       default: null
     },
     kind: {
-      // product, price
       type: String,
-      default: 'product'
+      default: 'product',
+      examples: ['product', 'price', 'proof']
     },
     hideSource: {
       type: Boolean,
@@ -56,6 +56,7 @@ export default {
       productSourceList: constants.PRODUCT_SOURCE_LIST,
       productFilterList: constants.PRODUCT_FILTER_LIST,
       priceFilterList: constants.PRICE_FILTER_LIST,
+      proofFilterList: constants.PROOF_FILTER_LIST,
     }
   },
   computed: {
@@ -63,7 +64,7 @@ export default {
       return this.kind === 'product' && !this.hideSource
     },
     filterList() {
-      return this.kind === 'product' ? this.productFilterList : this.priceFilterList
+      return this[`${this.kind}FilterList`]
     },
     currentFilterOrSource() {
       return !!this.currentFilter || !!this.currentSource

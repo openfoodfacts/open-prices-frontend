@@ -19,7 +19,8 @@
   <h2 class="text-h6 mb-1">
     {{ $t('UserDashboard.LatestProofs') }}
     <v-progress-circular v-if="loading" indeterminate :size="30" />
-    <OrderMenu v-if="!loading" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" /> 
+    <FilterMenu v-if="!loading" kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
+    <OrderMenu v-if="!loading" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
   </h2>
 
   <v-row>
@@ -54,6 +55,7 @@ import api from '../services/api'
 
 export default {
   components: {
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
@@ -64,7 +66,8 @@ export default {
       userProofPage: 0,
       loading: false,
       proofUpdated: false,
-      // order
+      // filter & order
+      currentFilter: '',
       currentOrder: constants.PROOF_ORDER_LIST[2].key,
     }
   },
@@ -75,6 +78,9 @@ export default {
     },
     getUserProofsParams() {
       let defaultParams = { owner: this.username, order_by: `${this.currentOrder}`, page: this.userProofPage }
+      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
+        defaultParams['price_count'] = 0
+      }
       return defaultParams
     },
   },
@@ -108,6 +114,11 @@ export default {
     },
     handleProofUpdated() {
       this.proofUpdated = true
+    },
+    toggleProofFilter(filterKey) {
+      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+      // this.initUserProofs() will be called in watch $route
     },
     selectProofOrder(orderKey) {
       if (this.currentOrder !== orderKey) {

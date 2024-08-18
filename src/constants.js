@@ -47,6 +47,9 @@ export default {
   PRICE_FILTER_LIST: [
     { key: 'only_last_30d', value: 'FilterPriceMoreThan30DaysHide' },
   ],
+  PROOF_FILTER_LIST: [
+    { key: 'hide_price_count_gte_1', value: 'FilterProofWithPriceCountHide' },
+  ],
   ORDER_PARAM: 'order',
   PRODUCT_ORDER_LIST: [
     { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
