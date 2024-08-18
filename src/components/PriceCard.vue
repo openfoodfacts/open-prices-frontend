@@ -30,7 +30,7 @@
         </v-col>
       </v-row>
 
-      <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :readonly="readonly" />
+      <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceProof="hidePriceProof" :hideProductDetails="hideProductDetails" :readonly="readonly" />
     </v-container>
   </v-card>
 </template>
