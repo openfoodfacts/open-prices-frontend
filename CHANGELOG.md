@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.72.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.71.0...v1.72.0) (2024-08-18)
+
+
+### Features
+
+* **Dashboard:** New filtering menu to hide proofs with prices ([#723](https://github.com/openfoodfacts/open-prices-frontend/issues/723)) ([53310db](https://github.com/openfoodfacts/open-prices-frontend/commit/53310db4692f64c64c624de9147695ebadc13728))
+* **Dashboard:** New ordering menu to choose between price_count, date & created ([#721](https://github.com/openfoodfacts/open-prices-frontend/issues/721)) ([91f511a](https://github.com/openfoodfacts/open-prices-frontend/commit/91f511ab92a2fbed99de852d4477ff6d93569d90))
+* **Price card:** new action to view product OFF page ([#724](https://github.com/openfoodfacts/open-prices-frontend/issues/724)) ([2f8528b](https://github.com/openfoodfacts/open-prices-frontend/commit/2f8528bdabf1f95e3ba0112b3c7463d420cf877e))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#717](https://github.com/openfoodfacts/open-prices-frontend/issues/717)) ([4113b1c](https://github.com/openfoodfacts/open-prices-frontend/commit/4113b1c5f5e183a5fcf878dd9d7a02a9b237a58a))
+
 ## [1.71.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.70.3...v1.71.0) (2024-08-18)
 
 
