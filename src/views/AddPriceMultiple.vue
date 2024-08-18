@@ -17,7 +17,7 @@
         </template>
         <v-divider />
         <v-card-text>
-          <ProofInputRow :proofType="proofType" :proofForm="addPriceMultipleForm" @proof="proofObject = $event" />
+          <ProofInputRow :proofType="proofType" :proofForm="addPriceMultipleForm" @proof="proofSelected($event)" />
         </v-card-text>
         <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
       </v-card>
@@ -43,7 +43,7 @@
         <v-divider />
         <v-card-text>
           <v-row>
-            <v-col v-for="productPriceUploaded in productPriceUploadedList" :key="productPriceUploaded" cols="12">
+            <v-col v-for="productPriceUploaded in proofPriceUploadedList" :key="productPriceUploaded" cols="12">
               <PriceCard :price="productPriceUploaded" :product="productPriceUploaded.product" :hidePriceFooterRow="true" :readonly="true" />
             </v-col>
           </v-row>
@@ -155,8 +155,9 @@ export default {
       priceSuccessMessage: false,
       // proof data
       proofObject: null,
+      proofPriceExistingList: [],
       // product price data
-      productPriceUploadedList: [],
+      proofPriceNewList: [],
       productPriceNew: {
         mode: '',
         product: null,
@@ -193,17 +194,20 @@ export default {
       return this.productFormFilled && this.priceFormFilled
     },
     formFilled() {
-      return this.proofFormFilled && !!this.productPriceUploadedList.length && !Object.keys(this.productPriceForm).length
+      return this.proofFormFilled && !!this.proofPriceUploadedList.length && !Object.keys(this.productPriceForm).length
     },
     disableProofForm() {
       return this.proofFormFilled
     },
     disablePriceAlreadyUploadedCard() {
-      // return !!this.productPriceUploadedList.length
+      // return !!this.proofPriceUploadedList.length
       return true
     },
+    proofPriceUploadedList() {
+      return this.proofPriceExistingList.concat(this.proofPriceNewList)
+    },
     productPriceUploadedCount() {
-      return (this.proofObject ? this.proofObject.price_count : 0) + this.productPriceUploadedList.length
+      return this.proofPriceUploadedList.length
     }
   },
   mounted() {
@@ -217,6 +221,21 @@ export default {
        */
       this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
       this.addPriceMultipleForm.currency = this.appStore.getUserLastCurrencyUsed
+    },
+    proofSelected(proof) {
+      this.proofObject = proof
+      this.proofPriceExistingList = []
+      if (this.proofObject.price_count) {
+        this.getProofPrices()
+      }
+    },
+    getProofPrices() {
+      this.loading = true
+      return api.getPrices({ proof_id: this.proofObject.id, size: this.proofObject.price_count })
+        .then((data) => {
+          this.proofPriceExistingList.push(...data.items)
+          this.loading = false
+        })
     },
     clearProductPriceForm() {
       this.productPriceForm = {}
@@ -255,7 +274,7 @@ export default {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
           } else {
-            this.productPriceUploadedList.push(JSON.parse(JSON.stringify(this.productPriceForm)))  // deep copy
+            this.proofPriceUploadedList.push(JSON.parse(JSON.stringify(this.productPriceForm)))  // deep copy
             this.priceSuccessMessage = true
             // show new price form immediately
             this.initNewProductPriceForm()
