@@ -57,6 +57,11 @@ export default {
     { key: '-date', value: 'OrderPriceDateDESC', icon: 'mdi-calendar-today' },
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],
+  PROOF_ORDER_LIST: [
+    { key: '-price_count', value: 'OrderProofPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
+    { key: '-date', value: 'OrderProofDateDESC', icon: 'mdi-calendar-today' },
+    { key: '-created', value: 'OrderProofCreatedDESC', icon: 'mdi-clock-outline' },
+  ],
   DISPLAY_PARAM: 'display',
   PRICE_DISPLAY_LIST: [
     { key: 'list', value: 'DisplayPriceList', icon: 'mdi-format-list-bulleted' },
