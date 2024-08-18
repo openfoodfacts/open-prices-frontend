@@ -9,13 +9,11 @@
     </v-col>
   </v-row>
 
-  <PriceActionMenuButton v-if="userIsPriceOwner" :price="price" :hideProductActions="hideProductDetails" />
+  <PriceActionMenuButton :price="price" :hideProductActions="hideProductDetails" />
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
 
 export default {
   components: {
@@ -47,15 +45,6 @@ export default {
       type: Boolean,
       default: false
     },
-  },
-  computed: {
-    ...mapStores(useAppStore),
-    username() {
-      return this.appStore.user.username
-    },
-    userIsPriceOwner() {
-      return this.username && (this.price.owner === this.username)
-    }
   }
 }
 </script>

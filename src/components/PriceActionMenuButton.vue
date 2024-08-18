@@ -4,23 +4,27 @@
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
         <!-- Product actions -->
-        <v-list-item v-if="!hideProductActions" :slim="true" disabled>
-          {{ $t('Common.Product') }}
-        </v-list-item>
-        <v-divider v-if="!hideProductActions" />
-        <OpenFoodFactsLink v-if="!hideProductActions && price.product" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
-        <OpenFoodFactsLink v-else-if="!hideProductActions && price.category_tag" facet="category" :value="price.category_tag" display="list-item" />
+        <v-sheet v-if="!hideProductActions">
+          <v-list-subheader class="text-uppercase" :slim="true" disabled>
+            {{ $t('Common.Product') }}
+          </v-list-subheader>
+          <v-divider />
+          <OpenFoodFactsLink v-if="price.product" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
+          <OpenFoodFactsLink v-else-if="price.category_tag" facet="category" :value="price.category_tag" display="list-item" />
+        </v-sheet>
         <!-- Price actions -->
-        <v-list-item :slim="true" disabled>
-          {{ $t('Common.Price') }}
-        </v-list-item>
-        <v-divider />
-        <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
-          {{ $t('Common.Edit') }}
-        </v-list-item>
-        <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
-          {{ $t('Common.Delete') }}
-        </v-list-item>
+        <v-sheet v-if="userIsPriceOwner">
+          <v-list-subheader class="text-uppercase" :slim="true" disabled>
+            {{ $t('Common.Price') }}
+          </v-list-subheader>
+          <v-divider />
+          <v-list-item :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
+            {{ $t('Common.Edit') }}
+          </v-list-item>
+          <v-list-item :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
+            {{ $t('Common.Delete') }}
+          </v-list-item>
+        </v-sheet>
       </v-list>
     </v-menu>
   </v-btn>
