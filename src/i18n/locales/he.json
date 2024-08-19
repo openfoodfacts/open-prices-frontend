@@ -150,7 +150,7 @@
 		"OrderPriceDateDESC": "תאריך המחיר",
 		"OrderProofPriceCountDESC": "מספר המחירים",
 		"OrderProofCreatedDESC": "תאריך ההוספה",
-		"OrderProofDateDESC": "Proof date",
+		"OrderProofDateDESC": "תאריך ההוכחה",
 		"PriceCount": "{count} מחירים",
 		"PriceCreated": "המחיר נוצר!",
 		"ProductCount": "{count} מוצרים",
