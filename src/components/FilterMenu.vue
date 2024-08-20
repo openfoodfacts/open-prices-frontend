@@ -1,7 +1,7 @@
 <template>
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
-      <v-btn v-bind="props" size="x-small" class="mr-2" rounded="xl" prepend-icon="mdi-filter-variant" :append-icon="getCurrentFilterIcon" :active="currentFilterOrSource">
+      <v-btn v-bind="props" size="x-small" class="mr-2" prepend-icon="mdi-filter-variant" :append-icon="getCurrentFilterIcon" :active="currentFilterOrSource">
         <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Filter') }}</span>
       </v-btn>
     </template>

@@ -1,7 +1,7 @@
 <template>
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
-      <v-btn v-bind="props" size="x-small" rounded="xl" prepend-icon="mdi-laptop" :append-icon="getCurrentDisplayIcon" :active="!!currentDisplay">
+      <v-btn v-bind="props" size="x-small" prepend-icon="mdi-laptop" :append-icon="getCurrentDisplayIcon" :active="!!currentDisplay">
         <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Display') }}</span>
       </v-btn>
     </template>

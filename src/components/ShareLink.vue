@@ -20,7 +20,6 @@
     v-else-if="display === 'button' && $vuetify.display.smAndUp"
     class="ml-2"
     size="small"
-    rounded="xl"
     color="teal"
     prepend-icon="mdi-share-variant"
     :title="$t('Common.Share')"

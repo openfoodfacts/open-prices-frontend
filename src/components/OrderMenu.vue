@@ -1,7 +1,7 @@
 <template>
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
-      <v-btn v-bind="props" size="x-small" class="mr-2" rounded="xl" prepend-icon="mdi-arrow-down" :append-icon="getCurrentOrderIcon" :active="!!currentOrder">
+      <v-btn v-bind="props" size="x-small" class="mr-2" prepend-icon="mdi-arrow-down" :append-icon="getCurrentOrderIcon" :active="!!currentOrder">
         <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Order') }}</span>
       </v-btn>
     </template>
