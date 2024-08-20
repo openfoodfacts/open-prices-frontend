@@ -8,12 +8,15 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 v-if="proof" class="text-h6 mb-1">
-    {{ $t('ProofDetail.Prices') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30" />
-  </h2>
+  <v-row v-if="proof">
+    <v-col>
+      <h2 class="text-h6 d-inline mr-1">
+        {{ $t('Common.Prices') }}
+      </h2>
+      <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <LoadedCountChip v-if="!loading" :loadedCount="proofPriceList.length" :totalCount="proofPriceTotal" />
+    </v-col>
+  </v-row>
 
   <v-row v-if="proof">
     <v-col v-for="price in proofPriceList" :key="price" cols="12" sm="6" md="4">
@@ -37,6 +40,7 @@ import api from '../services/api'
 export default {
   components: {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
   data() {

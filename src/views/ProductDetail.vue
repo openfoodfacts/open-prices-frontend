@@ -26,14 +26,14 @@
 
   <v-row>
     <v-col>
-      <h2 class="text-h6 d-inline mr-2">
-        {{ $t('ProductDetail.LatestPrices') }}
-        <small>{{ productPriceList.length }}/{{ productPriceTotal }}</small>
+      <h2 class="text-h6 d-inline mr-1">
+        {{ $t('Common.LatestPrices') }}
       </h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30" />
-      <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
-      <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
-      <DisplayMenu v-if="!loading" kind="price" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
+      <v-progress-circular v-if="loading" indeterminate :size="30" class="mr-2" />
+      <LoadedCountChip v-if="!loading" :loadedCount="productPriceList.length" :totalCount="productPriceTotal" />
+      <FilterMenu kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
+      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
+      <DisplayMenu kind="price" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
     </v-col>
   </v-row>
 
@@ -75,6 +75,7 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
