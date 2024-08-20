@@ -7,10 +7,11 @@
 
   <v-row>
     <v-col>
-      <h2 class="text-h6 d-inline mr-2">
-        {{ $t('BrandDetail.TopProducts') }}
+      <h2 class="text-h6 d-inline mr-1">
+        {{ $t('Common.TopProducts') }}
       </h2>
       <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <LoadedCountChip v-if="!loading" :loadedCount="brandProductList.length" :totalCount="brandProductTotal" />
       <FilterMenu v-if="!loading" kind="product" :currentFilter="currentFilter" :hideSource="true" @update:currentFilter="toggleProductFilter($event)" />
       <OrderMenu v-if="!loading" kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
     </v-col>
@@ -39,6 +40,7 @@ import api from '../services/api'
 export default {
   components: {
     BrandCard: defineAsyncComponent(() => import('../components/BrandCard.vue')),
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue'))

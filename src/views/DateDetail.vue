@@ -7,10 +7,11 @@
 
   <v-row>
     <v-col>
-      <h2 class="text-h6 d-inline mr-2">
+      <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
       <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <LoadedCountChip v-if="!loading" :loadedCount="datePriceList.length" :totalCount="datePriceTotal" />
       <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
@@ -39,6 +40,7 @@ import utils from '../utils.js'
 export default {
   components: {
     DateCard: defineAsyncComponent(() => import('../components/DateCard.vue')),
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },

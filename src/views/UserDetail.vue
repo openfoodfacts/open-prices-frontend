@@ -7,10 +7,11 @@
 
   <v-row>
     <v-col>
-      <h2 class="text-h6 d-inline mr-2">
-        {{ $t('UserDetail.LatestPrices') }}
+      <h2 class="text-h6 d-inline mr-1">
+        {{ $t('Common.LatestPrices') }}
       </h2>
       <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <LoadedCountChip v-if="!loading" :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
       <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
       <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
@@ -41,6 +42,7 @@ import constants from '../constants'
 export default {
   components: {
     UserCard: defineAsyncComponent(() => import('../components/UserCard.vue')),
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))

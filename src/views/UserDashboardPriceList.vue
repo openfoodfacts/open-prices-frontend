@@ -15,12 +15,15 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    {{ $t('UserDashboard.LatestPrices') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30" />
-  </h2>
+  <v-row>
+    <v-col>
+      <h2 class="text-h6 d-inline mr-1">
+        {{ $t('Common.LatestPrices') }}
+      </h2>
+      <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <LoadedCountChip v-if="!loading" :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
+    </v-col>
+  </v-row>
 
   <v-row>
     <v-col v-for="price in userPriceList" :key="price" cols="12" sm="6" md="4">
@@ -46,6 +49,7 @@ import api from '../services/api'
 export default {
   components: {
     ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
