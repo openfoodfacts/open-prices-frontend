@@ -27,7 +27,7 @@
     "@vueuse/core": "^10.6.1",
     "@vueuse/integrations": "^10.6.1",
     "compressorjs": "^1.2.1",
-    "exifreader": "^4.21.0",
+    "exifreader": "^4.23.3",
     "html5-qrcode": "^2.3.8",
     "leaflet": "^1.9.4",
     "pinia": "^2.1.7",
