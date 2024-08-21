@@ -76,8 +76,8 @@
           <v-divider />
           <v-card-text>
             <ProductInputRow :productForm="productPriceForm" @filled="productFormFilled = $event" />
-            <v-row v-if="productFormFilled && existingProductFound" class="mt-0">
-              <v-col col>
+            <v-row v-if="productFormFilled && existingProductFound" class="mt-0 pb-2">
+              <v-col>
                 <v-alert data-name="existing-product-alert" type="warning" variant="outlined" icon="mdi-alert">
                   <p>
                     <i>{{ $t('AddPriceMultiple.ProductPriceDetails.ExistingProductFound') }}</i>
@@ -221,6 +221,8 @@ export default {
     existingProductFound() {
       if (this.productPriceForm.product_code) {
         return this.proofPriceUploadedList.findIndex(price => price.product_code === this.productPriceForm.product_code) >= 0
+      } else if (this.productPriceForm.category_tag) {
+        return this.proofPriceUploadedList.findIndex(price => price.category_tag === this.productPriceForm.category_tag) >= 0
       }
       return false
     }
