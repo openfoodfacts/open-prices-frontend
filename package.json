@@ -32,7 +32,7 @@
     "leaflet": "^1.9.4",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
-    "universal-cookie": "^6.1.1",
+    "universal-cookie": "^7.2.0",
     "vue": "^3.4.19",
     "vue-i18n": "9",
     "vue-matomo": "^4.2.0",
