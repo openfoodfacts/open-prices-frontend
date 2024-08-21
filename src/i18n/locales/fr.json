@@ -25,6 +25,7 @@
 			"Add": "Ajouter un nouveau prix",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} prix déjà téléversé | {priceAlreadyUploadedNumber} prix déjà téléversés",
 			"Create": "Créer",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "Nouveau prix",
 			"PriceUploaded": "Prix créé !",
 			"Upload": "Téléverser"
