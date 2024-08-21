@@ -21,7 +21,7 @@
         <h3 class="mb-1">
           {{ $t('PriceForm.Label') }}
         </h3>
-        <PriceInputRow :priceForm="updatePriceForm" :hideCurrencyChoice="true" />
+        <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :hideCurrencyChoice="true" />
 
         <h3 class="mt-4 mb-1">
           {{ $t('Common.Date') }}

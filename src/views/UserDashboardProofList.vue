@@ -14,14 +14,17 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    {{ $t('UserDashboard.LatestProofs') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30" />
-    <FilterMenu v-if="!loading" kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
-    <OrderMenu v-if="!loading" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
-  </h2>
+  <v-row>
+    <v-col>
+      <h2 class="text-h6 d-inline mr-1">
+        {{ $t('Common.LatestProofs') }}
+      </h2>
+      <v-progress-circular v-if="loading" indeterminate :size="30" />
+      <LoadedCountChip v-if="!loading" :loadedCount="userProofList.length" :totalCount="userProofTotal" />
+      <FilterMenu v-if="!loading" kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
+      <OrderMenu v-if="!loading" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
+    </v-col>
+  </v-row>
 
   <v-row>
     <v-col v-for="proof in userProofList" :key="proof" cols="12" sm="6" md="4">
@@ -55,6 +58,7 @@ import api from '../services/api'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
