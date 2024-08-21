@@ -1,0 +1,50 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    open-pull-requests-limit: 20
+    groups:
+      mui-packages:
+        # Define patterns to include dependencies in the group (based on dependency name)
+        patterns:
+          - "@mui/*"
+      i18n:
+        patterns:
+          - "i18next"
+          - "react-i18next"
+      basics:
+        patterns:
+          - "@types/node"
+          - "@types/react"
+          - "@types/react-dom"
+          - "react"
+          - "react-dom"
+          - "typescript"
+      emotion:
+        patterns:
+          - "@emotion/*"
+      redux:
+        patterns:
+          - "@reduxjs/toolkit"
+          - "react-redux"
+      vite:
+        patterns:
+          - "@vitejs/plugin-react"
+          - "vite"
+      eslint:
+        patterns:
+          - "@typescript-eslint/*"
+          - "eslint"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    open-pull-requests-limit: 20
