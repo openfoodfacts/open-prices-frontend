@@ -25,6 +25,7 @@
 			"Add": "添加新价格",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 价格已上传 | {priceAlreadyUploadedNumber} 价格已上传",
 			"Create": "创建",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "新价格",
 			"PriceUploaded": "价格已创建！",
 			"Upload": "上传"
