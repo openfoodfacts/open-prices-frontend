@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@mdi/font": "^7.3.67",
-    "@vitejs/plugin-vue": "^4.5.0",
+    "@vitejs/plugin-vue": "^4.6.2",
     "@vue/compiler-sfc": "^3.3.9",
     "autoprefixer": "^10.4.16",
     "cross-env": "^7.0.3",
