@@ -9,6 +9,7 @@
         :rules="priceRules"
         hide-details="auto"
         :suffix="priceForm.currency"
+        :hint="getPricePerUnitHint()"
         @update:model-value="newValue => priceForm.price = fixComma(newValue)"
       >
         <template v-if="!hideCurrencyChoice" #prepend-inner>
@@ -44,6 +45,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -57,6 +60,10 @@ export default {
     hideCurrencyChoice: {
       type: Boolean,
       default: false
+    },
+    product: {
+      type: Object,
+      default: null
     }
   },
   emits: ['filled'],
@@ -92,6 +99,19 @@ export default {
     },
     fixComma(input) {
       return input.replace(/,/g, '.');
+    },
+    getPriceValue(priceValue, priceCurrency) {
+      return utils.prettyPrice(priceValue, priceCurrency)
+    },
+    getPricePerUnitHint() {
+      if (this.priceForm.price && this.product && this.product.product_quantity) {
+        const pricePerUnit = (this.priceForm.price / this.product.product_quantity) * 1000
+        if (this.product.product_quantity_unit === constants.PRODUCT_QUANTITY_UNIT_ML) {
+          return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
+        }
+        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
+      }
+      return null
     },
   }
 }
