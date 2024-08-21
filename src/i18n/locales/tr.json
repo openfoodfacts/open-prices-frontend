@@ -25,6 +25,7 @@
 			"Add": "Yeni bir fiyat ekle",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} fiyat zaten yüklendi | {priceAlreadyUploadedNumber} fiyat zaten yüklendi",
 			"Create": "Oluştur",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "Yeni fiyat",
 			"PriceUploaded": "Fiyat oluşturuldu!",
 			"Upload": "Yükle"
