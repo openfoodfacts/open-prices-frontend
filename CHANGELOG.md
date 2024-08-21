@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.73.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.72.0...v1.73.0) (2024-08-21)
+
+
+### Features
+
+* new LoadedCountChip component ([#728](https://github.com/openfoodfacts/open-prices-frontend/issues/728)) ([3186882](https://github.com/openfoodfacts/open-prices-frontend/commit/3186882b60ea750ae32f3bcf760bd108da9c7332))
+* **Price add:** display hint with price per unit ([#729](https://github.com/openfoodfacts/open-prices-frontend/issues/729)) ([9212104](https://github.com/openfoodfacts/open-prices-frontend/commit/9212104e507e626200c417bd73a2902f7184bb39))
+* **Price add:** if an existing product is found, show a warning ([#733](https://github.com/openfoodfacts/open-prices-frontend/issues/733)) ([514831f](https://github.com/openfoodfacts/open-prices-frontend/commit/514831f2e770670f98c649a0df87daf0757ed101))
+
+
+### Bug Fixes
+
+* **Price add:** hide Product card actions. ref [#698](https://github.com/openfoodfacts/open-prices-frontend/issues/698) ([58f359f](https://github.com/openfoodfacts/open-prices-frontend/commit/58f359f5514d10ee1db5d7c0f6b3308fee0f3735))
+
 ## [1.72.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.71.0...v1.72.0) (2024-08-18)
 
 
