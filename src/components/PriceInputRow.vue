@@ -7,9 +7,9 @@
         type="text"
         inputmode="decimal"
         :rules="priceRules"
-        hide-details="auto"
         :suffix="priceForm.currency"
-        :hint="getPricePerUnitHint()"
+        :hint="getPricePerUnit(priceForm.price)"
+        persistent-hint
         @update:model-value="newValue => priceForm.price = fixComma(newValue)"
       >
         <template v-if="!hideCurrencyChoice" #prepend-inner>
@@ -25,8 +25,9 @@
         type="text"
         inputmode="decimal"
         :rules="priceRules"
-        hide-details="auto"
         :suffix="priceForm.currency"
+        :hint="getPricePerUnit(priceForm.price_without_discount)"
+        persistent-hint
         @update:model-value="newValue => priceForm.price_without_discount = fixComma(newValue)"
       />
     </v-col>
@@ -61,7 +62,7 @@ export default {
       type: Boolean,
       default: false
     },
-    product: {
+    productForm: {
       type: Object,
       default: null
     }
@@ -103,13 +104,23 @@ export default {
     getPriceValue(priceValue, priceCurrency) {
       return utils.prettyPrice(priceValue, priceCurrency)
     },
-    getPricePerUnitHint() {
-      if (this.priceForm.price && this.product && this.product.product_quantity) {
-        const pricePerUnit = (this.priceForm.price / this.product.product_quantity) * 1000
-        if (this.product.product_quantity_unit === constants.PRODUCT_QUANTITY_UNIT_ML) {
-          return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
+    getPricePerUnit(price) {
+      if (price) {
+        price = parseFloat(price)
+        if (this.priceForm.category_tag) {
+          if (this.priceForm.price_per === 'UNIT') {
+            return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.priceForm.currency)])
+          }
+          // default to 'KILOGRAM'
+          return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.priceForm.currency)])
         }
-        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
+        if (this.priceForm.product && this.priceForm.product.product_quantity) {
+          const pricePerUnit = (price / this.priceForm.product.product_quantity) * 1000
+          if (this.priceForm.product.product_quantity_unit === constants.PRODUCT_QUANTITY_UNIT_ML) {
+            return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
+          }
+          return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
+        }
       }
       return null
     },

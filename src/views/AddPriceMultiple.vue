@@ -86,7 +86,7 @@
                 </v-item>
               </v-item-group>
             </h3>
-            <PriceInputRow :priceForm="productPriceForm" :hideCurrencyChoice="true" :product="productPriceForm.product" @filled="pricePriceFormFilled = $event" />
+            <PriceInputRow :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
           </v-card-text>
           <v-divider />
           <v-card-text>
@@ -245,7 +245,7 @@ export default {
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))  // deep copy
       this.productPriceForm.mode = this.appStore.user.last_product_mode_used
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
-      this.productPriceForm.currency = this.addPriceMultipleForm.currency
+      this.productPriceForm.currency = this.appStore.getUserLastCurrencyUsed
     },
     createPrice() {
       this.createPriceLoading = true
