@@ -24,7 +24,7 @@
             <br v-if="showProductBarcode">
             <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
             <ProductBarcodeInvalidChip v-if="barcodeInvalid" />
-            <ProductActionMenuButton v-if="hasProductSource" :product="product" />
+            <ProductActionMenuButton v-if="hasProductSource && !hideProductActions" :product="product" />
           </p>
         </v-col>
       </v-row>
@@ -69,6 +69,10 @@ export default {
       default: null
     },
     hideProductBarcode: {
+      type: Boolean,
+      default: false
+    },
+    hideProductActions: {
       type: Boolean,
       default: false
     },
