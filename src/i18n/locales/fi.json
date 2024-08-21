@@ -25,6 +25,7 @@
 			"Add": "Lisää uusi hinta",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} hinta jo ladattu | {priceAlreadyUploadedNumber} hinnat on jo ladattu",
 			"Create": "Luo",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "Uusi hinta",
 			"PriceUploaded": "Hinta luotu!",
 			"Upload": "Lähetä"
