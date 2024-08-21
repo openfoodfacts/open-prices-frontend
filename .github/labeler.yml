@@ -1,49 +1,66 @@
 # For reference, please look at https://github.com/actions/labeler
 
-GitHub Actions:
+'GitHub Actions':
   - changed-files:
-    - any-glob-to-any-file: .github/**/*
+    - any-glob-to-any-file:
+      - '.github/**/*'
 
-Price addition:
+'Price addition':
   - changed-files:
-    - any-glob-to-any-file: ['src/views/AddPriceHome.vue', 'src/views/AddPriceSingle.vue', 'src/views/AddPriceMultiple.vue']
+    - any-glob-to-any-file:
+      - 'src/views/AddPriceHome.vue'
+      - 'src/views/AddPriceSingle.vue'
+      - 'src/views/AddPriceMultiple.vue'
 
-Brands:
+'Brands':
   - changed-files:
-    - any-glob-to-any-file: ['src/views/BrandDetail.vue']
+    - any-glob-to-any-file:
+      - 'src/views/BrandDetail.vue'
 
-📍 Locations:
+'📍 Locations':
   - changed-files:
-    - any-glob-to-any-file: ['src/views/LocationList.vue', 'src/views/LocationDetail.vue']
+    - any-glob-to-any-file:
+      - 'src/views/LocationList.vue'
+      - 'src/views/LocationDetail.vue'
 
-🥫 Product page:
+'🥫 Product page':
   - changed-files:
-    - any-glob-to-any-file: ['src/views/ProductList.vue', 'src/views/ProductDetail.vue']
+    - any-glob-to-any-file:
+      - 'src/views/ProductList.vue'
+      - 'src/views/ProductDetail.vue'
 
-🔍 Search:
+'🔍 Search':
   - changed-files:
-    - any-glob-to-any-file: ['src/views/Search.vue']
+    - any-glob-to-any-file:
+      - 'src/views/Search.vue'
 
-Stats:
+'Stats':
   - changed-files:
-    - any-glob-to-any-file: ['src/views/Stats.vue']
+    - any-glob-to-any-file:
+      - 'src/views/Stats.vue'
 
-User:
+'User':
   - changed-files:
-    - any-glob-to-any-file: ['src/views/UserList.vue', 'src/views/UserDetail.vue']
+    - any-glob-to-any-file:
+      - 'src/views/UserList.vue'
+      - 'src/views/UserDetail.vue'
 
-User dashboard:
+'User dashboard':
   - changed-files:
-    - any-glob-to-any-file: ['src/views/UserDashboard*.vue']
+    - any-glob-to-any-file:
+      - 'src/views/UserDashboard*.vue'
 
-⚙️ Settings:
+'⚙️ Settings':
   - changed-files:
-    - any-glob-to-any-file: ['src/views/UserSettings.vue']
+    - any-glob-to-any-file:
+      - 'src/views/UserSettings.vue'
 
-Action menus:
+'Action menus':
   - changed-files:
-    - any-glob-to-any-file: ['src/components/*ActionMenuButton.vue']
+    - any-glob-to-any-file:
+      - 'src/components/*ActionMenuButton.vue'
 
-Translations:
+'Translations':
   - changed-files:
-    - any-glob-to-any-file: ['src/i18n/**/*']
+    - any-glob-to-any-file:
+      - 'src/i18n/**/*'
