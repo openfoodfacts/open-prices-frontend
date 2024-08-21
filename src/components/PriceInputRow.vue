@@ -62,7 +62,7 @@ export default {
       type: Boolean,
       default: false
     },
-    productForm: {
+    product: {
       type: Object,
       default: null
     }
@@ -114,9 +114,9 @@ export default {
           // default to 'KILOGRAM'
           return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.priceForm.currency)])
         }
-        if (this.priceForm.product && this.priceForm.product.product_quantity) {
-          const pricePerUnit = (price / this.priceForm.product.product_quantity) * 1000
-          if (this.priceForm.product.product_quantity_unit === constants.PRODUCT_QUANTITY_UNIT_ML) {
+        if (this.product && this.product.product_quantity) {
+          const pricePerUnit = (price / this.product.product_quantity) * 1000
+          if (this.product.product_quantity_unit === constants.PRODUCT_QUANTITY_UNIT_ML) {
             return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
           }
           return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
