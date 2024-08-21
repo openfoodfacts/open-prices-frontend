@@ -1,12 +1,12 @@
 <template>
   <v-row style="margin-top:0;">
     <v-col cols="12" class="pt-2 pb-2">
-      <span class="mr-1">{{ getPriceValueDisplay(priceValue) }}</span>
-      <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(priceValue) }})</span>
+      <span class="mr-1">{{ getPriceValueDisplay(price.price) }}</span>
+      <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(price.price) }})</span>
       <span v-if="price.price_is_discounted">
         <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">
           {{ $t('PriceCard.Discount') }}
-          <v-tooltip v-if="priceWithoutDiscountValue" activator="parent" open-on-click location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(priceWithoutDiscountValue) }}</v-tooltip>
+          <v-tooltip v-if="price.price_without_discount" activator="parent" open-on-click location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(price.price_without_discount) }}</v-tooltip>
         </v-chip>
       </span>
     </v-col>
@@ -49,12 +49,6 @@ export default {
     hasProductQuantity() {
       return !!this.productQuantity
     },
-    priceValue() {
-      return parseFloat(this.price.price)
-    },
-    priceWithoutDiscountValue() {
-      return parseFloat(this.price.price_without_discount)
-    },
     priceCurrency() {
       return this.price.currency
     },
@@ -67,6 +61,7 @@ export default {
       return utils.prettyPrice(priceValue, priceCurrency)
     },
     getPricePerUnit(price) {
+      price = parseFloat(price)
       if (this.hasCategoryTag) {
         if (this.pricePricePer === 'UNIT') {
           return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.priceCurrency)])
@@ -83,6 +78,7 @@ export default {
       }
     },
     getPriceValueDisplay(price) {
+      price = parseFloat(price)
       if (this.hasCategoryTag) {
         return this.getPricePerUnit(price)
       }
