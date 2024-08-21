@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.73.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.73.0...v1.73.1) (2024-08-21)
+
+
+### Bug Fixes
+
+* **deps:** revert Update packages ([#767](https://github.com/openfoodfacts/open-prices-frontend/issues/767)) ([46117a6](https://github.com/openfoodfacts/open-prices-frontend/commit/46117a65ae049a9407e53a78e5f012547fa2f060))
+
 ## [1.73.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.72.0...v1.73.0) (2024-08-21)
 
 
