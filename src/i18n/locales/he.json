@@ -25,7 +25,7 @@
 			"Add": "הוספת מחיר חדש",
 			"AlreadyUploaded": "מחיר כבר נשלח | {priceAlreadyUploadedNumber} מחירים כבר נשלחו",
 			"Create": "יצירה",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
+			"ExistingProductFound": "כפילות? המוצר הזה כבר נוסף להוכחה הזאת",
 			"NewPrice": "מחיר חדש",
 			"PriceUploaded": "המחיר נוצר!",
 			"Upload": "העלאה"
