@@ -1,42 +1,49 @@
 # For reference, please look at https://github.com/actions/labeler
 
 GitHub Actions:
-- .github/**/*
+  - changed-files:
+    - any-glob-to-any-file: .github/**/*
 
 Price addition:
-- 'src/views/AddPriceHome.vue'
-- 'src/views/AddPriceSingle.vue'
-- 'src/views/AddPriceMultiple.vue'
+  - changed-files:
+    - any-glob-to-any-file: ['src/views/AddPriceHome.vue', 'src/views/AddPriceSingle.vue', 'src/views/AddPriceMultiple.vue']
 
 Brands:
-- 'src/views/BrandDetail.vue'
+  - changed-files:
+    - any-glob-to-any-file: ['src/views/BrandDetail.vue']
 
 📍 Locations:
-- 'src/views/LocationList.vue'
-- 'src/views/LocationDetail.vue'
+  - changed-files:
+    - any-glob-to-any-file: ['src/views/LocationList.vue', 'src/views/LocationDetail.vue']
 
 🥫 Product page:
-- 'src/views/ProductList.vue'
-- 'src/views/ProductDetail.vue'
+  - changed-files:
+    - any-glob-to-any-file: ['src/views/ProductList.vue', 'src/views/ProductDetail.vue']
 
 🔍 Search:
-- 'src/views/Search.vue'
+  - changed-files:
+    - any-glob-to-any-file: ['src/views/Search.vue']
 
 Stats:
-- 'src/views/Stats.vue'
+  - changed-files:
+    - any-glob-to-any-file: ['src/views/Stats.vue']
 
 User:
-- 'src/views/UserList.vue'
-- 'src/views/UserDetail.vue'
+  - changed-files:
+    - any-glob-to-any-file: ['src/views/UserList.vue', 'src/views/UserDetail.vue']
 
 User dashboard:
-- 'src/views/UserDashboard*.vue'
+  - changed-files:
+    - any-glob-to-any-file: ['src/views/UserDashboard*.vue']
 
 ⚙️ Settings:
-- 'src/views/UserSettings.vue'
+  - changed-files:
+    - any-glob-to-any-file: ['src/views/UserSettings.vue']
 
 Action menus:
-- 'src/components/*ActionMenuButton.vue'
+  - changed-files:
+    - any-glob-to-any-file: ['src/components/*ActionMenuButton.vue']
 
 Translations:
-- 'src/i18n/**/*'
+  - changed-files:
+    - any-glob-to-any-file: ['src/i18n/**/*']
