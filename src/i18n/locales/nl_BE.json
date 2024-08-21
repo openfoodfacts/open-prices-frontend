@@ -25,6 +25,7 @@
 			"Add": "Nieuwe prijs toevoegen",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} prijs al geüpload | {priceAlreadyUploadedNumber} prijzen al geüpload",
 			"Create": "Aanmaken",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "Nieuwe prijs",
 			"PriceUploaded": "Prijs aangemaakt!",
 			"Upload": "Uploaden"

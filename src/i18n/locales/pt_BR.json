@@ -25,6 +25,7 @@
 			"Add": "Adicionar um novo preço",
 			"AlreadyUploaded": "Preços já alterados",
 			"Create": "Criar",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "Novo preço",
 			"PriceUploaded": "Preço criado!",
 			"Upload": "Atualizar"

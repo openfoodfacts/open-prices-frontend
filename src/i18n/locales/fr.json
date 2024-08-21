@@ -25,6 +25,7 @@
 			"Add": "Ajouter un nouveau prix",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} prix déjà téléversé | {priceAlreadyUploadedNumber} prix déjà téléversés",
 			"Create": "Créer",
+			"ExistingProductFound": "Doublon ? Ce produit a déjà été ajouté pour cette preuve",
 			"NewPrice": "Nouveau prix",
 			"PriceUploaded": "Prix créé !",
 			"Upload": "Téléverser"
@@ -115,7 +116,7 @@
 		"Product": "Produit",
 		"Products": "Produits",
 		"Proof": "Preuve",
-		"Proofs": "Proofs",
+		"Proofs": "Preuves",
 		"Country": "Pays",
 		"Currency": "Devise",
 		"CurrencyMissing": "Devise manquante",

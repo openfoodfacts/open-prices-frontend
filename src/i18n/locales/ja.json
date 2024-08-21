@@ -25,6 +25,7 @@
 			"Add": "新しい価格を追加",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 価格はすでにアップロードされています | {priceAlreadyUploadedNumber} 価格がすでにアップロードされています",
 			"Create": "Create",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "新しい価格",
 			"PriceUploaded": "Price created!",
 			"Upload": "アップロード"

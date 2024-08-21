@@ -25,6 +25,7 @@
 			"Add": "Додати нову ціну",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} ціна вже завантажена | {priceAlreadyUploadedNumber} ціни вже завантажено",
 			"Create": "Створити",
+			"ExistingProductFound": "Дублікат? Цей продукт вже було додано для цього доказу",
 			"NewPrice": "Нова ціна",
 			"PriceUploaded": "Ціна створена!",
 			"Upload": "Завантажити"

@@ -25,6 +25,7 @@
 			"Add": "Pridėti naują kainą",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} kaina jau įkelta | {priceAlreadyUploadedNumber} kaina jau įkelta",
 			"Create": "Kurti",
+			"ExistingProductFound": "Pakartoti? Šis produktas jau pridėtas prie šio įrodymo",
 			"NewPrice": "Nauja kaina",
 			"PriceUploaded": "Kaina sukurta!",
 			"Upload": "Įkelti"

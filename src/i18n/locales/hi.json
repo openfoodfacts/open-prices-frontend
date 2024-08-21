@@ -25,6 +25,7 @@
 			"Add": "नई कीमत जोड़ें",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} कीमत पहले ही अपलोड की जा चुकी है | {priceAlreadyUploadedNumber} कीमतें पहले ही अपलोड की जा चुकी हैं",
 			"Create": "Create",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "नया मूल्य",
 			"PriceUploaded": "कीमत बनाई गई!",
 			"Upload": "अपलोड"

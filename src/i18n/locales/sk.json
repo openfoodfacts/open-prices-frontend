@@ -25,6 +25,7 @@
 			"Add": "Pridajte novú cenu",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} cena už nahraná | {priceAlreadyUploadedNumber} ceny sú už nahrané",
 			"Create": "Vytvoriť",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "Nová cena",
 			"PriceUploaded": "Cena vytvorená!",
 			"Upload": "Nahrať"

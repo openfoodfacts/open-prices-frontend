@@ -25,6 +25,7 @@
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} விலை ஏற்கனவே பதிவேற்றப்பட்டது | {priceAlreadyUploadedNumber} விலை ஏற்கனவே பதிவேற்றப்பட்டது",
 			"Create": "உருவாக்கு",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
 			"Upload": "Upload"

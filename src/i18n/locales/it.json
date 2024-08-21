@@ -25,6 +25,7 @@
 			"Add": "Aggiungi un nuovo prezzo",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} prezzo già caricato | {priceAlreadyUploadedNumber} prezzi già caricati",
 			"Create": "Crea",
+			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "Nuovo prezzo",
 			"PriceUploaded": "Prezzo creato!",
 			"Upload": "Carica"
