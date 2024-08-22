@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.74.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.0...v1.74.1) (2024-08-22)
+
+
+### Technical
+
+* **City detail:** add map display option ([#773](https://github.com/openfoodfacts/open-prices-frontend/issues/773)) ([c1113db](https://github.com/openfoodfacts/open-prices-frontend/commit/c1113db965b430d5eb54028b797ff81c3085e2c6))
+* **Country detail:** add map display option ([#774](https://github.com/openfoodfacts/open-prices-frontend/issues/774)) ([5797a00](https://github.com/openfoodfacts/open-prices-frontend/commit/5797a00f7ed8a2655e9514247d81fcf6dadaf142))
+* **deps:** revert bump GoogleCloudPlatform/release-please-action from 3.7.13 to 4.1.3 ([#776](https://github.com/openfoodfacts/open-prices-frontend/issues/776)) ([cc411ad](https://github.com/openfoodfacts/open-prices-frontend/commit/cc411ad92d068709cb1596fb85212b63c7c8fff1))
+* **l10n:** New Crowdin translations to review and merge ([#775](https://github.com/openfoodfacts/open-prices-frontend/issues/775)) ([844e7e9](https://github.com/openfoodfacts/open-prices-frontend/commit/844e7e94fea39f1067b805f744ffbd63c11cf9e7))
+
 ## [1.74.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.73.1...v1.74.0) (2024-08-22)
 
 
