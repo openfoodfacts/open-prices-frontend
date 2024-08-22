@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.74.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.2...v1.74.3) (2024-08-22)
+
+
+### Bug Fixes
+
+* **Map:** fix window sliding on swipe. ref [#695](https://github.com/openfoodfacts/open-prices-frontend/issues/695) [#774](https://github.com/openfoodfacts/open-prices-frontend/issues/774) [#773](https://github.com/openfoodfacts/open-prices-frontend/issues/773) ([24c12fa](https://github.com/openfoodfacts/open-prices-frontend/commit/24c12fae4ec0818adde4b90a5eb353258d0cf8e1))
+
 ## [1.74.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.1...v1.74.2) (2024-08-22)
 
 
