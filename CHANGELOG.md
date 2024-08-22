@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.74.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.1...v1.74.2) (2024-08-22)
+
+
+### Bug Fixes
+
+* **City detail:** fix load more button action. ref [#771](https://github.com/openfoodfacts/open-prices-frontend/issues/771) ([f80e418](https://github.com/openfoodfacts/open-prices-frontend/commit/f80e4189b5559d135462175592f1f7d365e4512f))
+
+
+### Technical
+
+* **deps:** Update packages ([#779](https://github.com/openfoodfacts/open-prices-frontend/issues/779)) ([b13ee4e](https://github.com/openfoodfacts/open-prices-frontend/commit/b13ee4edd42379aefb2cbc2b0c1d5ed06a59e51d))
+
 ## [1.74.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.0...v1.74.1) (2024-08-22)
 
 
