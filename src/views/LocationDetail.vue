@@ -34,7 +34,7 @@
   <v-row v-if="locationPriceList.length < locationPriceTotal" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getLocationPrices">
-        {{ $t('LocationDetail.LoadMore') }}
+        {{ $t('Common.LoadMore') }}
       </v-btn>
     </v-col>
   </v-row>

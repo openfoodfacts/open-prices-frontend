@@ -27,7 +27,7 @@
   <v-row v-if="proof && (proofPriceList.length < proofPriceTotal)" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getProofPrices">
-        {{ $t('ProofDetail.LoadMore') }}
+        {{ $t('Common.LoadMore') }}
       </v-btn>
     </v-col>
   </v-row>
