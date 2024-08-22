@@ -16,7 +16,7 @@
         <v-row v-if="userProofList.length < userProofTotal" class="mb-2">
           <v-col align="center">
             <v-btn size="small" :loading="loading" @click="getUserProofs">
-              {{ $t('ProofDetail.LoadMore') }}
+              {{ $t('Common.LoadMore') }}
             </v-btn>
           </v-col>
         </v-row>

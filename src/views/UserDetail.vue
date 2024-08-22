@@ -26,7 +26,7 @@
   <v-row v-if="userPriceList.length < userPriceTotal" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getUserPrices">
-        {{ $t('UserDetail.LoadMore') }}
+        {{ $t('Common.LoadMore') }}
       </v-btn>
     </v-col>
   </v-row>
