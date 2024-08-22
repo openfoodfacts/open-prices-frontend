@@ -147,6 +147,7 @@
 		"Help": "Help",
 		"Image": "图片",
 		"LinkCopySuccess": "链接已复制",
+		"LocationCount": "{count} 地点",
 		"Order": "命令",
 		"OrderProductUniqueScansDESC": "扫描次数",
 		"OrderProductPriceCountDESC": "价格数量",
