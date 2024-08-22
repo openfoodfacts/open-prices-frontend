@@ -23,7 +23,7 @@
   <v-row v-if="productList.length < productTotal" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getProducts">
-        {{ $t('ProductList.LoadMore') }}
+        {{ $t('Common.LoadMore') }}
       </v-btn>
     </v-col>
   </v-row>

@@ -37,7 +37,7 @@
     </v-col>
   </v-row>
 
-  <v-window v-model="currentDisplay">
+  <v-window v-model="currentDisplay" disabled>
     <v-window-item value="list">
       <v-row class="mt-0 mb-1">
         <v-col v-for="price in productPriceList" :key="price" cols="12" sm="6" md="4">
@@ -57,7 +57,7 @@
   <v-row v-if="productPriceList.length < productPriceTotal" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getProductPrices">
-        {{ $t('ProductDetail.LoadMore') }}
+        {{ $t('Common.LoadMore') }}
       </v-btn>
     </v-col>
   </v-row>

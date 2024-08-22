@@ -14,14 +14,14 @@
 
   <v-row class="mt-0">
     <v-col v-for="location in locationList" :key="location" cols="12" sm="6" md="4">
-      <LocationCard :location="location" :hideLocationOSMID="true" height="100%" />
+      <LocationCard :location="location" :hideLocationOSMID="true" :hideCountryCity="true" height="100%" />
     </v-col>
   </v-row>
 
   <v-row v-if="locationList.length < locationTotal" class="mb-2">
     <v-col align="center">
       <v-btn size="small" :loading="loading" @click="getLocations">
-        {{ $t('LocationList.LoadMore') }}
+        {{ $t('Common.LoadMore') }}
       </v-btn>
     </v-col>
   </v-row>

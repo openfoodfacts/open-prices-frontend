@@ -1,5 +1,64 @@
 # Changelog
 
+## [1.74.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.2...v1.74.3) (2024-08-22)
+
+
+### Bug Fixes
+
+* **Map:** fix window sliding on swipe. ref [#695](https://github.com/openfoodfacts/open-prices-frontend/issues/695) [#774](https://github.com/openfoodfacts/open-prices-frontend/issues/774) [#773](https://github.com/openfoodfacts/open-prices-frontend/issues/773) ([24c12fa](https://github.com/openfoodfacts/open-prices-frontend/commit/24c12fae4ec0818adde4b90a5eb353258d0cf8e1))
+
+## [1.74.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.1...v1.74.2) (2024-08-22)
+
+
+### Bug Fixes
+
+* **City detail:** fix load more button action. ref [#771](https://github.com/openfoodfacts/open-prices-frontend/issues/771) ([f80e418](https://github.com/openfoodfacts/open-prices-frontend/commit/f80e4189b5559d135462175592f1f7d365e4512f))
+
+
+### Technical
+
+* **deps:** Update packages ([#779](https://github.com/openfoodfacts/open-prices-frontend/issues/779)) ([b13ee4e](https://github.com/openfoodfacts/open-prices-frontend/commit/b13ee4edd42379aefb2cbc2b0c1d5ed06a59e51d))
+
+## [1.74.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.0...v1.74.1) (2024-08-22)
+
+
+### Technical
+
+* **City detail:** add map display option ([#773](https://github.com/openfoodfacts/open-prices-frontend/issues/773)) ([c1113db](https://github.com/openfoodfacts/open-prices-frontend/commit/c1113db965b430d5eb54028b797ff81c3085e2c6))
+* **Country detail:** add map display option ([#774](https://github.com/openfoodfacts/open-prices-frontend/issues/774)) ([5797a00](https://github.com/openfoodfacts/open-prices-frontend/commit/5797a00f7ed8a2655e9514247d81fcf6dadaf142))
+* **deps:** revert bump GoogleCloudPlatform/release-please-action from 3.7.13 to 4.1.3 ([#776](https://github.com/openfoodfacts/open-prices-frontend/issues/776)) ([cc411ad](https://github.com/openfoodfacts/open-prices-frontend/commit/cc411ad92d068709cb1596fb85212b63c7c8fff1))
+* **l10n:** New Crowdin translations to review and merge ([#775](https://github.com/openfoodfacts/open-prices-frontend/issues/775)) ([844e7e9](https://github.com/openfoodfacts/open-prices-frontend/commit/844e7e94fea39f1067b805f744ffbd63c11cf9e7))
+
+## [1.74.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.73.1...v1.74.0) (2024-08-22)
+
+
+### Features
+
+* **City detail:** new basic City detail page ([#771](https://github.com/openfoodfacts/open-prices-frontend/issues/771)) ([4dbf004](https://github.com/openfoodfacts/open-prices-frontend/commit/4dbf004477f798a457866504bc9034fe98e7f859))
+* **Country detail:** new basic Country detail page ([#766](https://github.com/openfoodfacts/open-prices-frontend/issues/766)) ([4d8c1cd](https://github.com/openfoodfacts/open-prices-frontend/commit/4d8c1cd3a7f654259eba3b27940989b51b386a35))
+* **Location card:** display Country & City if available ([#772](https://github.com/openfoodfacts/open-prices-frontend/issues/772)) ([ec269fe](https://github.com/openfoodfacts/open-prices-frontend/commit/ec269fee2c8277d7787f2a98a5df622df729b641))
+
+## [1.73.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.73.0...v1.73.1) (2024-08-21)
+
+
+### Bug Fixes
+
+* **deps:** revert Update packages ([#767](https://github.com/openfoodfacts/open-prices-frontend/issues/767)) ([46117a6](https://github.com/openfoodfacts/open-prices-frontend/commit/46117a65ae049a9407e53a78e5f012547fa2f060))
+
+## [1.73.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.72.0...v1.73.0) (2024-08-21)
+
+
+### Features
+
+* new LoadedCountChip component ([#728](https://github.com/openfoodfacts/open-prices-frontend/issues/728)) ([3186882](https://github.com/openfoodfacts/open-prices-frontend/commit/3186882b60ea750ae32f3bcf760bd108da9c7332))
+* **Price add:** display hint with price per unit ([#729](https://github.com/openfoodfacts/open-prices-frontend/issues/729)) ([9212104](https://github.com/openfoodfacts/open-prices-frontend/commit/9212104e507e626200c417bd73a2902f7184bb39))
+* **Price add:** if an existing product is found, show a warning ([#733](https://github.com/openfoodfacts/open-prices-frontend/issues/733)) ([514831f](https://github.com/openfoodfacts/open-prices-frontend/commit/514831f2e770670f98c649a0df87daf0757ed101))
+
+
+### Bug Fixes
+
+* **Price add:** hide Product card actions. ref [#698](https://github.com/openfoodfacts/open-prices-frontend/issues/698) ([58f359f](https://github.com/openfoodfacts/open-prices-frontend/commit/58f359f5514d10ee1db5d7c0f6b3308fee0f3735))
+
 ## [1.72.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.71.0...v1.72.0) (2024-08-18)
 
 

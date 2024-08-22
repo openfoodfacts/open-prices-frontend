@@ -67,7 +67,11 @@ export default {
   ],
   DISPLAY_PARAM: 'display',
   PRICE_DISPLAY_LIST: [
-    { key: 'list', value: 'DisplayPriceList', icon: 'mdi-format-list-bulleted' },
+    { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
+    { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
+  ],
+  LOCATION_DISPLAY_LIST: [
+    { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
     { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
   ],
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
