@@ -35,7 +35,7 @@
 
   <v-row v-if="countryCityLocationList.length < countryCityLocationTotal" class="mb-2">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getCountryLocations">
+      <v-btn size="small" :loading="loading" @click="getCountryCityLocations">
         {{ $t('Common.LoadMore') }}
       </v-btn>
     </v-col>
