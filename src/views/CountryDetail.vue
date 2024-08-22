@@ -16,7 +16,7 @@
     </v-col>
   </v-row>
 
-  <v-window v-model="currentDisplay">
+  <v-window v-model="currentDisplay" disabled>
     <v-window-item value="list">
       <v-row class="mt-0 mb-1">
         <v-col v-for="location in countryLocationList" :key="location" cols="12" sm="6" md="4">
