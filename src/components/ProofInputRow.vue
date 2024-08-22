@@ -27,11 +27,11 @@
           </v-btn>
           <v-file-input
             ref="proofCamera" v-model="proofFormImage" class="d-none overflow-hidden" capture="environment"
-            accept="image/*" :loading="loading" @change="newProof('camera')" @click:clear="clearProof"
+            accept="image/*" :loading="loading" @update:modelValue="newProof('camera')" @click:clear="clearProof"
           />
           <v-file-input
             ref="proofGallery" v-model="proofFormImage" class="d-none overflow-hidden" accept="image/*, .heic"
-            :loading="loading" @change="newProof('gallery')" @click:clear="clearProof"
+            :loading="loading" @update:modelValue="newProof('gallery')" @click:clear="clearProof"
           />
           <p v-if="!loading" class="mt-2 mb-2">
             <i v-if="!proofFormImage" class="text-red">{{ $t('ProofCreate.SelectProof') }}</i>
@@ -195,10 +195,10 @@ export default {
         })
     },
     newProof(source) {
-      this.proofFormImagePreview = this.getLocalProofUrl(this.proofFormImage[0])
+      this.proofFormImagePreview = this.getLocalProofUrl(this.proofFormImage)
       if (source === 'gallery') {
         // extract date from image exif
-        ExifReader.load(this.proofFormImage[0]).then((tags) => {
+        ExifReader.load(this.proofFormImage).then((tags) => {
           if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
             // exif DateTimeOriginal format: '2024:01:31 20:23:52'
             const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')
@@ -213,7 +213,7 @@ export default {
     uploadProof() {
       this.loading = true
       new Promise((resolve, reject) => {
-        new Compressor(this.proofFormImage[0], {
+        new Compressor(this.proofFormImage, {
           success: resolve,
           error: reject
         })
