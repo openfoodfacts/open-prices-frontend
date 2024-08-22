@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.74.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.73.1...v1.74.0) (2024-08-22)
+
+
+### Features
+
+* **City detail:** new basic City detail page ([#771](https://github.com/openfoodfacts/open-prices-frontend/issues/771)) ([4dbf004](https://github.com/openfoodfacts/open-prices-frontend/commit/4dbf004477f798a457866504bc9034fe98e7f859))
+* **Country detail:** new basic Country detail page ([#766](https://github.com/openfoodfacts/open-prices-frontend/issues/766)) ([4d8c1cd](https://github.com/openfoodfacts/open-prices-frontend/commit/4d8c1cd3a7f654259eba3b27940989b51b386a35))
+* **Location card:** display Country & City if available ([#772](https://github.com/openfoodfacts/open-prices-frontend/issues/772)) ([ec269fe](https://github.com/openfoodfacts/open-prices-frontend/commit/ec269fee2c8277d7787f2a98a5df622df729b641))
+
 ## [1.73.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.73.0...v1.73.1) (2024-08-21)
 
 
