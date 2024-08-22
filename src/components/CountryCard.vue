@@ -3,7 +3,7 @@
     <v-card-text>
       <LocationCountChip :count="locationCount" :withLabel="true" />
       <v-chip
-        v-if="city"
+        v-if="countryUrl"
         label size="small" density="comfortable" class="mr-1" @click="$router.push(countryUrl)"
       >
         {{ country }}
@@ -38,7 +38,7 @@ export default {
       return this.city ? `${this.city}, ${this.country}` : this.country
     },
     countryUrl() {
-      return `/countries/${this.country}`
+      return this.city ? `/countries/${this.country}` : null
     }
   }
 }

@@ -9,6 +9,18 @@
       <PriceCountChip :count="location.price_count" :withLabel="true" />
       <LocationOSMTagChip :location="location" class="mr-1" />
       <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
+      <v-chip
+        v-if="!hideCountryCity && locationCountryCityUrl"
+        label size="small" density="comfortable" class="mr-1" :to="locationCountryCityUrl"
+      >
+        {{ location.osm_address_city }}
+      </v-chip>
+      <v-chip
+        v-if="!hideCountryCity && locationCountryUrl"
+        label size="small" density="comfortable" class="mr-1" :to="locationCountryUrl"
+      >
+        {{ location.osm_address_country }}
+      </v-chip>
       <LocationActionMenuButton :location="location" />
     </v-card-text>
   </v-card>
@@ -36,6 +48,10 @@ export default {
       type: Boolean,
       default: false
     },
+    hideCountryCity: {
+      type: Boolean,
+      default: false
+    },
     readonly: {
       type: Boolean,
       default: false
@@ -45,6 +61,12 @@ export default {
     ...mapStores(useAppStore),
     showLocationOSMID() {
       return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id
+    },
+    locationCountryUrl() {
+      return this.location && this.location.osm_address_country ? `/countries/${this.location.osm_address_country}` : null
+    },
+    locationCountryCityUrl() {
+      return this.locationCountryUrl && this.location.osm_address_city ? `${this.locationCountryUrl}/cities/${this.location.osm_address_city}` : null
     }
   },
   methods: {
