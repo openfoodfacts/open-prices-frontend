@@ -10,7 +10,7 @@
         :suffix="priceForm.currency"
         :hint="getPricePerUnit(priceForm.price)"
         persistent-hint
-        @update:model-value="newValue => priceForm.price = fixComma(newValue)"
+        @update:modelValue="newValue => priceForm.price = fixComma(newValue)"
       >
         <template v-if="!hideCurrencyChoice" #prepend-inner>
           <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
@@ -28,7 +28,7 @@
         :suffix="priceForm.currency"
         :hint="getPricePerUnit(priceForm.price_without_discount)"
         persistent-hint
-        @update:model-value="newValue => priceForm.price_without_discount = fixComma(newValue)"
+        @update:modelValue="newValue => priceForm.price_without_discount = fixComma(newValue)"
       />
     </v-col>
   </v-row>
