@@ -35,7 +35,7 @@ Stats:
 User:
 - changed-files:
   - any-glob-to-any-file: 'src/views/UserList.vue'
-- 'src/views/UserDetail.vue'
+  - any-glob-to-any-file: 'src/views/UserDetail.vue'
 
 User dashboard:
 - changed-files:
