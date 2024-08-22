@@ -147,6 +147,7 @@
 		"Help": "Ohje",
 		"Image": "Kuva",
 		"LinkCopySuccess": "Linkki kopioitu",
+		"LocationCount": "{count} sijaintia",
 		"Order": "Järjestys",
 		"OrderProductUniqueScansDESC": "Skannausten määrä",
 		"OrderProductPriceCountDESC": "Hintojen määrä",
