@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.74.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.3...v1.74.4) (2024-08-23)
+
+
+### Bug Fixes
+
+* Update labeler.yml ([bcee5f4](https://github.com/openfoodfacts/open-prices-frontend/commit/bcee5f47e7fb4845554ae15814bb832f38418f3f))
+
+
+### Technical
+
+* **deps:** Update packages (vuetify v3.7.0) ([#782](https://github.com/openfoodfacts/open-prices-frontend/issues/782)) ([6f998ba](https://github.com/openfoodfacts/open-prices-frontend/commit/6f998baa1c1a709b3ab6374aeb68d67d69424168))
+* update categories ([#783](https://github.com/openfoodfacts/open-prices-frontend/issues/783)) ([1ccb55c](https://github.com/openfoodfacts/open-prices-frontend/commit/1ccb55cd01f558ed13009b19a768b71ef0c8f316))
+
 ## [1.74.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.2...v1.74.3) (2024-08-22)
 
 
