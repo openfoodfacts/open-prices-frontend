@@ -149,6 +149,15 @@ export default {
     .then((response) => response.json())
   },
 
+  getPriceById(priceId) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
+    return fetch(url, {
+      method: 'GET',
+      headers: DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
+
   updatePrice(priceId, data = {}) {
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
