@@ -3,7 +3,8 @@ name: Add bugs to relevant GitHub Projects
 on:
   issues:
     types:
-      - [opened, labeled]
+      - opened
+      - labeled
 
 jobs:
   add-to-design-project:
