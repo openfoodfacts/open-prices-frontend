@@ -13,15 +13,18 @@
           <OpenFoodFactsLink v-else-if="price.category_tag" facet="category" :value="price.category_tag" display="list-item" />
         </v-sheet>
         <!-- Price actions -->
-        <v-sheet v-if="userIsPriceOwner">
+        <v-sheet v-if="!hidePriceActions">
           <v-list-subheader class="text-uppercase" :slim="true" disabled>
             {{ $t('Common.Price') }}
           </v-list-subheader>
           <v-divider />
-          <v-list-item :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
+          <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getPriceDetailUrl">
+            {{ $t('Common.Details') }}
+          </v-list-item>
+          <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
             {{ $t('Common.Edit') }}
           </v-list-item>
-          <v-list-item :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
+          <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
             {{ $t('Common.Delete') }}
           </v-list-item>
         </v-sheet>
@@ -81,6 +84,10 @@ export default {
       type: Boolean,
       default: false
     },
+    hidePriceActions: {
+      type: Boolean,
+      default: false
+    },
     style: {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
@@ -99,6 +106,9 @@ export default {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
+    },
+    getPriceDetailUrl() {
+      return `/prices/${this.price.id}`
     },
     userIsPriceOwner() {
       return this.username && (this.price.owner === this.username)
