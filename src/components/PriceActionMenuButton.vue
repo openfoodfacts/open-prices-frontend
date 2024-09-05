@@ -18,7 +18,7 @@
             {{ $t('Common.Price') }}
           </v-list-subheader>
           <v-divider />
-          <ShareLink v-if="showPriceShare" :overrideUrl="getPriceDetailUrl" display="list-item" />
+          <ShareLink v-if="showPriceShare" :overrideUrl="getShareLinkUrl" display="list-item" />
           <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getPriceDetailUrl">
             {{ $t('Common.Details') }}
           </v-list-item>
@@ -114,6 +114,9 @@ export default {
     },
     showPriceShare() {
       return this.$route.path === this.getPriceDetailUrl
+    },
+    getShareLinkUrl() {
+      return this.getPriceDetailUrl
     },
     userIsPriceOwner() {
       return this.username && (this.price.owner === this.username)

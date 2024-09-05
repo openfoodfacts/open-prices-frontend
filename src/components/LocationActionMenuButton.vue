@@ -3,7 +3,7 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <ShareLink :overrideUrl="'/locations/' + location.id" display="list-item" />
+        <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
         <v-divider />
         <OpenStreetMapLink :location="location" display="list-item" />
       </v-list>
@@ -27,6 +27,11 @@ export default {
     style: {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
+    }
+  },
+  computed: {
+    getShareLinkUrl() {
+      return `/locations/${this.location.id}`
     }
   }
 }

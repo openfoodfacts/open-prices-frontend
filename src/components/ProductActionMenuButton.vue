@@ -4,7 +4,7 @@
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
         <PriceAddLink :productCode="product.code" display="list-item" />
-        <ShareLink :overrideUrl="'/products/' + product.code" display="list-item" />
+        <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
         <v-divider />
         <OpenFoodFactsLink :source="product.source" facet="product" :value="product.code" display="list-item" />
       </v-list>
@@ -29,6 +29,11 @@ export default {
     style: {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
+    }
+  },
+  computed: {
+    getShareLinkUrl() {
+      return `/products/${this.product.code}`
     }
   }
 }

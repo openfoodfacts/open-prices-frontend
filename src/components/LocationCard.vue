@@ -3,6 +3,7 @@
     :title="getLocationTitle(location)"
     :subtitle="location ? location.osm_display_name : ''"
     :prepend-icon="location ? 'mdi-map-marker-outline' : 'mdi-map-marker-remove-variant'"
+    data-name="location-card"
     @click="goToLocation(location)"
   >
     <v-card-text v-if="location">

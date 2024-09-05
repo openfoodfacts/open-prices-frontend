@@ -11,7 +11,7 @@
       <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
         {{ $t('UserDashboard.Title') }}
       </v-btn>
-      <ShareLink :overrideUrl="'/users/' + username" display="button" />
+      <ShareLink :overrideUrl="getShareLinkUrl" display="button" />
     </v-col>
   </v-row>
 
@@ -65,6 +65,9 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    getShareLinkUrl() {
+      return `/users/${this.username}`
+    }
   },
   mounted() {
     this.getUserPrices()
