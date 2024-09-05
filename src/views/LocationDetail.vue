@@ -55,6 +55,7 @@ export default {
   },
   data() {
     return {
+      locationId: this.$route.params.id,
       location: null,
       locationPriceList: [],
       locationPriceTotal: null,
@@ -66,9 +67,6 @@ export default {
     }
   },
   computed: {
-    locationId() {
-      return this.$route.params.id
-    },
     locationFound() {
       return this.location && this.location.osm_id
     },
@@ -103,7 +101,7 @@ export default {
       this.getLocationPrices()
     },
     getLocation() {
-      return api.getLocationById(this.$route.params.id)
+      return api.getLocationById(this.locationId)
         .then((data) => {
           if (data.id) {
             this.location = data

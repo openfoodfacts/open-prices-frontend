@@ -47,6 +47,7 @@ export default {
   },
   data() {
     return {
+      categoryId: this.$route.params.id,
       // filter & order
       currentFilter: '',
       currentOrder: constants.PRODUCT_ORDER_LIST[1].key,
@@ -81,7 +82,7 @@ export default {
   },
   methods: {
     initCategory() {
-      this.category = {'id': this.$route.params.id, 'name': this.$route.params.id}
+      this.category = {'id': this.categoryId, 'name': this.categoryId}
       this.categoryProductList = []
       this.categoryProductTotal = null
       this.categoryProductPage = 0
