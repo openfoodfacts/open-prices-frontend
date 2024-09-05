@@ -18,6 +18,7 @@
             {{ $t('Common.Price') }}
           </v-list-subheader>
           <v-divider />
+          <ShareLink v-if="showPriceShare" :overrideUrl="getPriceDetailUrl" display="list-item" />
           <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getPriceDetailUrl">
             {{ $t('Common.Details') }}
           </v-list-item>
@@ -72,6 +73,7 @@ import { useAppStore } from '../store'
 export default {
   components: {
     OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
     PriceEditDialog: defineAsyncComponent(() => import('../components/PriceEditDialog.vue')),
     PriceDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/PriceDeleteConfirmationDialog.vue'))
   },
@@ -109,6 +111,9 @@ export default {
     },
     getPriceDetailUrl() {
       return `/prices/${this.price.id}`
+    },
+    showPriceShare() {
+      return this.$route.path === this.getPriceDetailUrl
     },
     userIsPriceOwner() {
       return this.username && (this.price.owner === this.username)

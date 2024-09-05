@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <PriceCard :price="price" />
+      <PriceCard v-if="price" :price="price" :product="price.product" />
     </v-col>
   </v-row>
 </template>
@@ -27,7 +27,7 @@ export default {
   methods: {
     getPrice() {
       this.loading = true
-      return api.getPriceById(this.$route.params.id)
+      return api.getPriceById(this.priceId)
         .then((data) => {
           this.price = data
           this.loading = false
