@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.75.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.4...v1.75.0) (2024-09-06)
+
+
+### Features
+
+* **prices:** new Price detail page ([#797](https://github.com/openfoodfacts/open-prices-frontend/issues/797)) ([5b9de39](https://github.com/openfoodfacts/open-prices-frontend/commit/5b9de390a7a3a7de7a391f07cdeef6b3eec48bd8))
+
+
+### Technical
+
+* fix deployment ([#800](https://github.com/openfoodfacts/open-prices-frontend/issues/800)) ([946f1d9](https://github.com/openfoodfacts/open-prices-frontend/commit/946f1d9a4aab304537fe5654ac106de4717c6e76))
+* homogenise getShareLinkUrl. Add missing data-name ([5a51628](https://github.com/openfoodfacts/open-prices-frontend/commit/5a516284261c5acd1e1b352730cb2148c061c414))
+
 ## [1.74.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.3...v1.74.4) (2024-08-23)
 
 
