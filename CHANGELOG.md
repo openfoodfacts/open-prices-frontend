@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.75.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.75.0...v1.75.1) (2024-09-07)
+
+
+### Bug Fixes
+
+* show ProductCard, PriceCard & ProofCard only if object. Avoids errors ([42d4cb5](https://github.com/openfoodfacts/open-prices-frontend/commit/42d4cb58274fb951493d63af46a04941ae2e1f8a))
+
+
+### Technical
+
+* *ActionMenu: Add menu title ([0b75dcd](https://github.com/openfoodfacts/open-prices-frontend/commit/0b75dcd4b0ed185827244de2a125834a37e251be))
+* *ActionMenus: remove dividers ([990c24a](https://github.com/openfoodfacts/open-prices-frontend/commit/990c24a3bcb4862c21e8a427e2a4e26799cd500d))
+* **l10n:** New Crowdin translations to review and merge ([#785](https://github.com/openfoodfacts/open-prices-frontend/issues/785)) ([9fd1093](https://github.com/openfoodfacts/open-prices-frontend/commit/9fd1093ab62c32f4d247461c4975c9490a916540))
+* **l10n:** New Crowdin translations to review and merge ([#803](https://github.com/openfoodfacts/open-prices-frontend/issues/803)) ([1e2c1f0](https://github.com/openfoodfacts/open-prices-frontend/commit/1e2c1f052740b1c05597235db6a4cc40fb229107))
+* **price add:** always show barcode of already added products ([24d4296](https://github.com/openfoodfacts/open-prices-frontend/commit/24d429616d944d79fdc4d036ea6fdea854d150c5))
+* **products:** ProductActionMenu: add action to details page ([760ecf9](https://github.com/openfoodfacts/open-prices-frontend/commit/760ecf9b3b945f2956b842776f8bc035a4a038a0))
+* **products:** ProductActionMenu: Add menu title ([6ac53b2](https://github.com/openfoodfacts/open-prices-frontend/commit/6ac53b207f8f756eb71d5c62bdf318bc6cef0bd8))
+* **proofs:** add a Proof Action to the details page ([#801](https://github.com/openfoodfacts/open-prices-frontend/issues/801)) ([d4b8e0a](https://github.com/openfoodfacts/open-prices-frontend/commit/d4b8e0a0b667db38050caffa9a25966a1fbf575a))
+* **proofs:** ProofActionMenu: Add menu title ([14f2a63](https://github.com/openfoodfacts/open-prices-frontend/commit/14f2a6317222bd2f86e9e2b8b3d477cb1ba9a45e))
+
 ## [1.75.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.74.4...v1.75.0) (2024-09-06)
 
 
