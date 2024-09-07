@@ -17,6 +17,8 @@
               <span v-if="hasProductSource">
                 <ProductBrands :productBrands="product.brands" :readonly="readonly" />
                 <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
+                <br v-if="!hideProductBarcode">
+                <ProductBarcodeChip v-if="!hideProductBarcode" :product="product" />
               </span>
               <ProductMissingChip v-else />
             </span>
@@ -46,6 +48,7 @@ export default {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     ProductBrands: defineAsyncComponent(() => import('../components/ProductBrands.vue')),
     ProductQuantityChip: defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
+    ProductBarcodeChip: defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
     ProductMissingChip: defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
     PriceOrigins: defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
     PriceLabels: defineAsyncComponent(() => import('../components/PriceLabels.vue')),
@@ -70,6 +73,10 @@ export default {
       default: false
     },
     hideProductDetails: {
+      type: Boolean,
+      default: false
+    },
+    hideProductBarcode: {
       type: Boolean,
       default: false
     },
