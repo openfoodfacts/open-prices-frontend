@@ -3,6 +3,10 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
+        <v-list-subheader class="text-uppercase" :slim="true" disabled>
+          {{ $t('Common.Brand') }}
+        </v-list-subheader>
+        <v-divider />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
         <v-divider />
         <OpenFoodFactsLink facet="brand" :value="brand" display="list-item" />
