@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <PriceCard v-if="price" :price="price" :product="price.product" />
+      <PriceCard :price="price" :product="price.product" />
     </v-col>
   </v-row>
 </template>

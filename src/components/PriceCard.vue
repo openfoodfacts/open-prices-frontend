@@ -1,5 +1,5 @@
 <template>
-  <v-card :id="'price_' + price.id" data-name="price-card">
+  <v-card v-if="price" :id="'price_' + price.id" data-name="price-card">
     <v-container class="pa-2">
       <v-row>
         <v-col v-if="!hideProductImage" class="pr-0" style="max-width:20%;">
