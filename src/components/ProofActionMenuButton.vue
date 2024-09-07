@@ -8,7 +8,6 @@
         </v-list-subheader>
         <v-divider />
         <PriceAddLink :proofId="proof.id" :proofType="proof.type" display="list-item" :disabled="!userCanAddPrice" />
-        <v-divider />
         <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
           {{ $t('Common.Details') }}
         </v-list-item>

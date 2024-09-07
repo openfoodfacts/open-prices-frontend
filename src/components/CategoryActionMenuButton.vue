@@ -9,7 +9,6 @@
         <v-divider />
         <PriceAddLink v-if="!hidePriceAddLink" class="mr-2" :productCode="category.id" display="list-item" :disabled="!categoryFound" />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" :disabled="!categoryFound" />
-        <v-divider />
         <OpenFoodFactsLink facet="category" :value="category.id" display="list-item" :disabled="!categoryFound" />
       </v-list>
     </v-menu>

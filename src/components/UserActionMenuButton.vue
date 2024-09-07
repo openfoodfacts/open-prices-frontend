@@ -8,7 +8,6 @@
         </v-list-subheader>
         <v-divider />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
-        <v-divider />
         <OpenFoodFactsLink facet="editor" :value="user.user_id" display="list-item" />
       </v-list>
     </v-menu>
