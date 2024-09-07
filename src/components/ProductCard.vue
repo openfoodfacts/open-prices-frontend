@@ -1,5 +1,5 @@
 <template>
-  <v-card data-name="product-card">
+  <v-card v-if="product" :id="'product_' + product.code" data-name="product-card">
     <v-container class="pa-2" :style="latestPrice ? 'position:relative;' : ''">
       <v-row v-if="product">
         <v-col class="pr-0" style="max-width:20%">

@@ -1,5 +1,5 @@
 <template>
-  <v-card :id="'proof_' + proof.id" @click="selectProof">
+  <v-card v-if="proof" :id="'proof_' + proof.id" data-name="proof-card" @click="selectProof">
     <v-card-title v-if="!hideProofHeader">
       {{ $t('Common.Proof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
     </v-card-title>

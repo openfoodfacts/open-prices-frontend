@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <BrandCard :brand="brand" :productCount="brandProductTotal" />
+      <BrandCard :brand="brandId" :productCount="brandProductTotal" />
     </v-col>
   </v-row>
 
@@ -47,6 +47,7 @@ export default {
   },
   data() {
     return {
+      brandId: this.$route.params.id,
       // filter & order
       currentFilter: '',
       currentOrder: constants.PRODUCT_ORDER_LIST[1].key,
@@ -60,7 +61,7 @@ export default {
   },
   computed: {
     getProductsParams() {
-      let defaultParams = { brands__like: this.brand, order_by: `${this.currentOrder}`, page: this.brandProductPage }
+      let defaultParams = { brands__like: this.brandId, order_by: `${this.currentOrder}`, page: this.brandProductPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
@@ -81,7 +82,6 @@ export default {
   },
   methods: {
     initBrand() {
-      this.brand = this.$route.params.id
       this.brandProductList = []
       this.brandProductTotal = null
       this.brandProductPage = 0

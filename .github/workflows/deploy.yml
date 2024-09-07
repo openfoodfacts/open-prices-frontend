@@ -71,6 +71,6 @@ jobs:
         proxy_username: ${{ env.SSH_USERNAME }}
         proxy_key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: "dist"
-        target: "/home/${{ env.SSH_USERNAME }}/${{ matrix.env }}/static/app"
+        target: "/home/${{ env.SSH_USERNAME }}/${{ matrix.env }}/www/app"
         rm: true
         strip_components: 1

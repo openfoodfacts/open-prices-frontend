@@ -3,9 +3,12 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
+        <v-list-subheader class="text-uppercase" :slim="true" disabled>
+          {{ $t('Common.Category') }}
+        </v-list-subheader>
+        <v-divider />
         <PriceAddLink v-if="!hidePriceAddLink" class="mr-2" :productCode="category.id" display="list-item" :disabled="!categoryFound" />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" :disabled="!categoryFound" />
-        <v-divider />
         <OpenFoodFactsLink facet="category" :value="category.id" display="list-item" :disabled="!categoryFound" />
       </v-list>
     </v-menu>

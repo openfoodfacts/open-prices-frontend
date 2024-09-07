@@ -3,8 +3,14 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <PriceAddLink :proofId="proof.id" :proofType="proof.type" display="list-item" :disabled="!userCanAddPrice" />
+        <v-list-subheader class="text-uppercase" :slim="true" disabled>
+          {{ $t('Common.Proof') }}
+        </v-list-subheader>
         <v-divider />
+        <PriceAddLink :proofId="proof.id" :proofType="proof.type" display="list-item" :disabled="!userCanAddPrice" />
+        <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
+          {{ $t('Common.Details') }}
+        </v-list-item>
         <v-list-item :slim="true" prepend-icon="mdi-pencil" :disabled="!userCanEditProof" @click="openEditDialog">
           {{ $t('Common.Edit') }}
         </v-list-item>
@@ -76,6 +82,9 @@ export default {
     }
   },
   computed: {
+    getProofDetailUrl() {
+      return `/proofs/${this.proof.id}`
+    },
     userCanAddPrice() {
       return this.proof && (this.proof.type === 'PRICE_TAG' || this.proof.type === 'RECEIPT')
     },

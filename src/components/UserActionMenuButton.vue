@@ -3,8 +3,11 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
-        <ShareLink :overrideUrl="'/users/' + user.user_id" display="list-item" />
+        <v-list-subheader class="text-uppercase" :slim="true" disabled>
+          {{ $t('Common.User') }}
+        </v-list-subheader>
         <v-divider />
+        <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
         <OpenFoodFactsLink facet="editor" :value="user.user_id" display="list-item" />
       </v-list>
     </v-menu>
@@ -27,6 +30,11 @@ export default {
     style: {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
+    }
+  },
+  computed: {
+    getShareLinkUrl() {
+      return `/users/${this.user.user_id}`
     }
   }
 }

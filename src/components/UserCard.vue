@@ -2,6 +2,7 @@
   <v-card
     :title="user.user_id"
     prepend-icon="mdi-account"
+    data-name="user-card"
     @click="goToUser(user)"
   >
     <v-card-text>

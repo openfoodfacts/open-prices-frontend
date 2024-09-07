@@ -16,6 +16,7 @@ const routes = [
   { path: '/prices/add/single', name: 'add-price-single', component: () => import('./views/AddPriceSingle.vue'), meta: { title: 'Add a single price (price tag)', requiresAuth: true }},
   { path: '/prices/add/multiple/price-tag', name: 'add-price-multiple-price-tag', component: () => import('./views/AddPriceMultiple.vue'), meta: { title: 'Add multiple prices (price tags)', requiresAuth: true }},
   { path: '/prices/add/multiple/receipt', name: 'add-price-multiple-receipt', component: () => import('./views/AddPriceMultiple.vue'), meta: { title: 'Add multiple prices (receipt)', requiresAuth: true }},
+  { path: '/prices/:id', name: 'prices-detail', component: () => import('./views/PriceDetail.vue'), meta: { title: 'Price detail' }},
   { path: '/products', name: 'products', component: () => import('./views/ProductList.vue'), meta: { title: 'TopProducts', icon: 'mdi-database-outline', drawerMenu: true }},
   { path: '/products/:id', name: 'product-detail', component: () => import('./views/ProductDetail.vue'), meta: { title: 'Product detail' }},
   { path: '/locations', name: 'locations', component: () => import('./views/LocationList.vue'), meta: { title: 'TopLocations', icon: 'mdi-map-marker-star-outline', drawerMenu: true }},
