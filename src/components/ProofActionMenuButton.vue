@@ -3,6 +3,10 @@
     <v-icon>mdi-dots-vertical</v-icon>
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
+        <v-list-subheader class="text-uppercase" :slim="true" disabled>
+          {{ $t('Common.Proof') }}
+        </v-list-subheader>
+        <v-divider />
         <PriceAddLink :proofId="proof.id" :proofType="proof.type" display="list-item" :disabled="!userCanAddPrice" />
         <v-divider />
         <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
