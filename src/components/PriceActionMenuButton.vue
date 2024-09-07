@@ -9,6 +9,9 @@
             {{ $t('Common.Product') }}
           </v-list-subheader>
           <v-divider />
+          <v-list-item v-if="price.product || price.category_tag" :slim="true" prepend-icon="mdi-eye-outline" :to="getProductOrCategoryDetailUrl">
+            {{ $t('Common.Details') }}
+          </v-list-item>
           <OpenFoodFactsLink v-if="price.product" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
           <OpenFoodFactsLink v-else-if="price.category_tag" facet="category" :value="price.category_tag" display="list-item" />
         </v-sheet>
@@ -108,6 +111,14 @@ export default {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
+    },
+    getProductOrCategoryDetailUrl() {
+      if (this.price.product) {
+        return `/products/${this.price.product.code}`
+      } else if (this.price.category_tag) {
+        return `/categories/${this.price.category_tag}`
+      }
+      return null
     },
     getPriceDetailUrl() {
       return `/prices/${this.price.id}`
