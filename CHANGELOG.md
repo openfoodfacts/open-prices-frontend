@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.75.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.75.1...v1.75.2) (2024-09-08)
+
+
+### Bug Fixes
+
+* **products:** only show barcode on price add ([ad1bc2e](https://github.com/openfoodfacts/open-prices-frontend/commit/ad1bc2ebc601582d7167643dd87ddce904c59bce))
+* show PriceCard only if price (to avoid errors on price.product) ([6d83ad1](https://github.com/openfoodfacts/open-prices-frontend/commit/6d83ad101e8855e774236eb2ccacc4ff676a0521))
+
 ## [1.75.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.75.0...v1.75.1) (2024-09-07)
 
 
