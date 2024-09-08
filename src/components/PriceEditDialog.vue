@@ -10,7 +10,7 @@
       <v-card-text>
         <v-row>
           <v-col cols="12" md="6">
-            <PriceCard :price="price" :product="price.product" :hidePriceFooterRow="true" :readonly="true" />
+            <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="true" :readonly="true" />
           </v-col>
         </v-row>
       </v-card-text>
