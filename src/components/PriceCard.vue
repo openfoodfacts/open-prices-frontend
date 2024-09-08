@@ -78,7 +78,7 @@ export default {
     },
     hideProductBarcode: {
       type: Boolean,
-      default: false
+      default: true
     },
     hidePriceFooterRow: {
       type: Boolean,

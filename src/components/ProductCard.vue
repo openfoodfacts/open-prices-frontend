@@ -70,7 +70,7 @@ export default {
     },
     hideProductBarcode: {
       type: Boolean,
-      default: false
+      default: true
     },
     hideProductActions: {
       type: Boolean,
