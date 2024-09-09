@@ -5,6 +5,7 @@ import constants from '../constants'
 const PRICE_UPDATE_FIELDS = ['price', 'price_is_discounted', 'price_without_discount', 'price_per', 'currency', 'date']
 const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'category_tag', 'labels_tags', 'origins_tags', 'location_osm_id', 'location_osm_type', 'proof_id'])
 const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency']
+const LOCATION_SEARCH_LIMIT = 10
 
 const OP_DEFAULT_PAGE_SIZE = 20  // 100 slows down the app
 const OP_DEFAULT_HEADERS = {
@@ -239,7 +240,7 @@ export default {
   },
 
   openstreetmapNominatimSearch(q) {
-    return fetch(`${constants.OSM_NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=10`, {
+    return fetch(`${constants.OSM_NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=${LOCATION_SEARCH_LIMIT}`, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
@@ -254,8 +255,9 @@ export default {
     .then((response) => response.json())
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
+  // Photon: restrict the search to shop & amenity
   openstreetmapPhotonSearch(q) {
-    return fetch(`${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=10`, {
+    return fetch(`${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&osm_key=shop&osm_tag=amenity&limit=${LOCATION_SEARCH_LIMIT}`, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
