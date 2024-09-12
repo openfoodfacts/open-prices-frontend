@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.76.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.75.2...v1.76.0) (2024-09-12)
+
+
+### Features
+
+* **users:** show location, product & proof counts ([#809](https://github.com/openfoodfacts/open-prices-frontend/issues/809)) ([62cb542](https://github.com/openfoodfacts/open-prices-frontend/commit/62cb542b6548bddfc267446a6faaad2735658224))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#807](https://github.com/openfoodfacts/open-prices-frontend/issues/807)) ([dbb6ea9](https://github.com/openfoodfacts/open-prices-frontend/commit/dbb6ea9e42878e16dc3d26f411ae2995f211fa38))
+* **l10n:** New Crowdin translations to review and merge ([#811](https://github.com/openfoodfacts/open-prices-frontend/issues/811)) ([2fd84fd](https://github.com/openfoodfacts/open-prices-frontend/commit/2fd84fd4a4228b5b3442d9e27ed21eecfe36b969))
+
 ## [1.75.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.75.1...v1.75.2) (2024-09-08)
 
 
