@@ -164,6 +164,7 @@
 		"PriceCount": "{count} prix",
 		"PriceCreated": "Prix créé !",
 		"ProductCount": "{count} produits",
+		"ProofCount": "{count} preuves",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
 		"SignedIn": "Connecté !",
 		"Share": "Partager",
@@ -429,7 +430,7 @@
 	"UserList": {
 		"LoadMore": "Voir plus",
 		"Title": "Top contributeurs",
-		"UserTotal": "{count} contributeur"
+		"UserTotal": "{count} contributeurs"
 	},
 	"UserSettings": {
 		"AddingPrices": "Ajout de prix",
