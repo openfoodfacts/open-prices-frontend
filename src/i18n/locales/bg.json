@@ -100,12 +100,12 @@
 	"BrandDetail": {
 		"LoadMore": "Зареди още",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products"
+		"BrandProductTotal": "{count} продукта"
 	},
 	"CategoryDetail": {
 		"LoadMore": "Зареди още",
 		"TopProducts": "Top products",
-		"CategoryProductTotal": "{count} products"
+		"CategoryProductTotal": "{count} продукта"
 	},
 	"Common": {
 		"AddPrice": "Add a price",
@@ -163,7 +163,7 @@
 		"OrderProofDateDESC": "Proof date",
 		"PriceCount": "{count} prices",
 		"PriceCreated": "Price created!",
-		"ProductCount": "{count} products",
+		"ProductCount": "{count} продукта",
 		"ProofCount": "{count} proofs",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "Signed in!",
@@ -209,7 +209,7 @@
 		"AddPrice": "Add a price",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Търсене на продукт",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -321,7 +321,7 @@
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products",
-		"ProductTotal": "{count} products"
+		"ProductTotal": "{count} продукта"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
@@ -415,7 +415,7 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Зареди още",
-		"MyPrices": "My prices",
+		"MyPrices": "Моите цени",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Настройки",
