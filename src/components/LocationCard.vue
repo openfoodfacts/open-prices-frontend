@@ -8,8 +8,8 @@
   >
     <v-card-text v-if="location">
       <PriceCountChip :count="location.price_count" :withLabel="true" />
-      <LocationOSMTagChip :location="location" class="mr-1" />
-      <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
+      <LocationOSMTagChip class="mr-1" :location="location" />
+      <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
       <v-chip
         v-if="!hideCountryCity && locationCountryCityUrl"
         label size="small" density="comfortable" class="mr-1" :to="locationCountryCityUrl"
