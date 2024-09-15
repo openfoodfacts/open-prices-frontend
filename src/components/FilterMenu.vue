@@ -61,6 +61,7 @@ export default {
       priceFilterList: constants.PRICE_FILTER_LIST,
       proofFilterList: constants.PROOF_FILTER_LIST,
       locationFilterList: constants.LOCATION_FILTER_LIST,
+      userFilterList: constants.USER_FILTER_LIST,
     }
   },
   computed: {

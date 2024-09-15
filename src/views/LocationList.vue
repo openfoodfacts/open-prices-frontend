@@ -88,7 +88,7 @@ export default {
     toggleLocationFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
-      // this.initUserProofs() will be called in watch $route
+      // this.initLocationList() will be called in watch $route
     },
   }
 }
