@@ -149,6 +149,7 @@
 		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
+		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Help": "Yardım",
 		"Image": "Resim",
 		"LinkCopySuccess": "Bağlantı kopyalandı",

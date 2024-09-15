@@ -149,6 +149,7 @@
 		"FilterPriceMoreThan30DaysHide": "Ocultar preços com mais de 30 dias",
 		"FilterProofWithPriceCountHide": "Ocultar comprovativos com preços",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
+		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Help": "Ajuda",
 		"Image": "Imagem",
 		"LinkCopySuccess": "Link copiado",

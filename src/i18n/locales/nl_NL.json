@@ -149,6 +149,7 @@
 		"FilterPriceMoreThan30DaysHide": "Verberg prijzen ouder dan 30 dagen",
 		"FilterProofWithPriceCountHide": "Verberg bewijzen met prijzen",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
+		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Help": "Help",
 		"Image": "Afbeelding",
 		"LinkCopySuccess": "Link gekopieerd",

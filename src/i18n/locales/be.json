@@ -149,6 +149,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
+		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Help": "Help",
 		"Image": "Выява",
 		"LinkCopySuccess": "Link copied",
