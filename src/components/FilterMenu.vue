@@ -6,14 +6,17 @@
       </v-btn>
     </template>
     <v-list>
+      <!-- title -->
       <v-list-item class="d-sm-none" :slim="true" disabled>
         {{ $t('Common.Filter') }}
       </v-list-item>
       <v-divider class="d-sm-none" />
+      <!-- default filters -->
       <v-list-item v-for="filter in filterList" :key="filter.key" :slim="true" :prepend-icon="(currentFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="currentFilter === filter.key" @click="selectFilter(filter.key)">
         {{ $t('Common.' + filter.value) }}
       </v-list-item>
-      <v-sheet v-if="showSource">
+      <!-- extra filters -->
+      <v-sheet v-if="showProductSourceFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
           {{ $t('Common.Source') }}
@@ -32,6 +35,11 @@ import constants from '../constants'
 
 export default {
   props: {
+    kind: {
+      type: String,
+      default: 'product',
+      examples: ['product', 'price', 'proof']
+    },
     currentFilter: {
       type: String,
       default: null
@@ -39,11 +47,6 @@ export default {
     currentSource: {
       type: String,
       default: null
-    },
-    kind: {
-      type: String,
-      default: 'product',
-      examples: ['product', 'price', 'proof']
     },
     hideSource: {
       type: Boolean,
@@ -57,10 +60,11 @@ export default {
       productFilterList: constants.PRODUCT_FILTER_LIST,
       priceFilterList: constants.PRICE_FILTER_LIST,
       proofFilterList: constants.PROOF_FILTER_LIST,
+      locationFilterList: constants.LOCATION_FILTER_LIST,
     }
   },
   computed: {
-    showSource() {
+    showProductSourceFilter() {
       return this.kind === 'product' && !this.hideSource
     },
     filterList() {

@@ -50,6 +50,9 @@ export default {
   PROOF_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterProofWithPriceCountHide' },
   ],
+  LOCATION_FILTER_LIST: [
+    { key: 'hide_price_count_gte_1', value: 'FilterLocationWithPriceCountHide' },
+  ],
   ORDER_PARAM: 'order',
   PRODUCT_ORDER_LIST: [
     { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
