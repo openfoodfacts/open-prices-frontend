@@ -148,6 +148,7 @@
 		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
 		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
+		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"Help": "Ohje",
 		"Image": "Kuva",
 		"LinkCopySuccess": "Linkki kopioitu",
