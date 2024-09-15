@@ -9,6 +9,7 @@
       <v-chip label variant="text" prepend-icon="mdi-account-badge-outline">
         {{ $t('UserList.UserTotal', { count: userTotal }) }}
       </v-chip>
+      <FilterMenu v-if="!loading" kind="user" :currentFilter="currentFilter" @update:currentFilter="toggleUserFilter($event)" />
     </v-col>
   </v-row>
 
@@ -29,11 +30,13 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 import api from '../services/api'
 
 export default {
   components: {
     UserCard: defineAsyncComponent(() => import('../components/UserCard.vue')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
   },
   data() {
     return {
@@ -42,10 +45,28 @@ export default {
       userTotal: null,
       userPage: 0,
       loading: false,
+      // filter & order
+      currentFilter: '',
     }
   },
-  computed: {},
+  computed: {
+    getUsersParams() {
+      let defaultParams = { order_by: '-price_count', page: this.userPage }
+      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
+        defaultParams['price_count'] = 0
+      }
+      return defaultParams
+    },
+  },
+  watch: {
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initUserList()
+      }
+    }
+  },
   mounted() {
+    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.initUserList()
   },
   methods: {
@@ -57,12 +78,17 @@ export default {
     getUsers() {
       this.loading = true
       this.userPage += 1
-      return api.getUsers({ price_count__gte: 1, order_by: '-price_count', page: this.userPage })
+      return api.getUsers(this.getUsersParams)
         .then((data) => {
           this.userList.push(...data.items)
           this.userTotal = data.total
           this.loading = false
         })
+    },
+    toggleUserFilter(filterKey) {
+      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+      // this.initUserList() will be called in watch $route
     },
   }
 }

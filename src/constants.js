@@ -53,6 +53,9 @@ export default {
   LOCATION_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterLocationWithPriceCountHide' },
   ],
+  USER_FILTER_LIST: [
+    { key: 'hide_price_count_gte_1', value: 'FilterUserWithPriceCountHide' },
+  ],
   ORDER_PARAM: 'order',
   PRODUCT_ORDER_LIST: [
     { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
