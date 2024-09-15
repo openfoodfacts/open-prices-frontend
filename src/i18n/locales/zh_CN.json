@@ -148,6 +148,7 @@
 		"FilterProductWithPriceCountHide": "隐藏带有价格的产品",
 		"FilterPriceMoreThan30DaysHide": "隐藏 30 天前的价格",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
+		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"Help": "Help",
 		"Image": "图片",
 		"LinkCopySuccess": "链接已复制",
