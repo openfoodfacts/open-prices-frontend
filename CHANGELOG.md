@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.77.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.76.0...v1.77.0) (2024-09-15)
+
+
+### Features
+
+* **locations:** add filter by price_count ([#814](https://github.com/openfoodfacts/open-prices-frontend/issues/814)) ([e4aff8a](https://github.com/openfoodfacts/open-prices-frontend/commit/e4aff8a104e559e3529f0fb9ac9012ce4d792e5d))
+* **users:** add filter by price_count ([#815](https://github.com/openfoodfacts/open-prices-frontend/issues/815)) ([c94046a](https://github.com/openfoodfacts/open-prices-frontend/commit/c94046a4feb08b319a6a56d68bc48db6d423e5df))
+
+
+### Bug Fixes
+
+* **locations:** fix OSM id chip margin ([9eb9d71](https://github.com/openfoodfacts/open-prices-frontend/commit/9eb9d712eda47f0a5a33bbbeba568803e9c6be3c))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#812](https://github.com/openfoodfacts/open-prices-frontend/issues/812)) ([862bc84](https://github.com/openfoodfacts/open-prices-frontend/commit/862bc843615ef19f343ec63d75f3951f3d1bf1e8))
+* **l10n:** New Crowdin translations to review and merge ([#816](https://github.com/openfoodfacts/open-prices-frontend/issues/816)) ([e126927](https://github.com/openfoodfacts/open-prices-frontend/commit/e1269272b0ae94ba6c860c1f7236a74cd64c448a))
+
 ## [1.76.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.75.2...v1.76.0) (2024-09-12)
 
 
