@@ -12,6 +12,11 @@ export default {
       default: () => []
     }
   },
+  computed: {
+    chartMark() {
+      return (this.priceList.length > 1) ? 'line' : 'point'
+    }
+  },
   mounted() {
     this.drawChart()
   },
@@ -23,7 +28,7 @@ export default {
         data: {
           values: this.priceList
         },
-        mark: 'line',
+        mark: this.chartMark,
         encoding: {
           x: {timeUnit: 'yearmonthdate', field: 'date', type: 'temporal', axis: { title: this.$t('Common.Date') }},
           // y: {field: 'price', type: 'quantitative'}
