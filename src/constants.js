@@ -75,6 +75,7 @@ export default {
   PRICE_DISPLAY_LIST: [
     { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
     { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
+    { key: 'chart', value: 'DisplayPriceChart', icon: 'mdi-chart-line' },
   ],
   LOCATION_DISPLAY_LIST: [
     { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
