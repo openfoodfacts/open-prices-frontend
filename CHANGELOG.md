@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.78.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.77.0...v1.78.0) (2024-09-16)
+
+
+### Features
+
+* **products:** basic price graph ([#818](https://github.com/openfoodfacts/open-prices-frontend/issues/818)) ([add9ca2](https://github.com/openfoodfacts/open-prices-frontend/commit/add9ca2fceaba345aac742d545e4de03559bc243))
+
 ## [1.77.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.76.0...v1.77.0) (2024-09-15)
 
 
