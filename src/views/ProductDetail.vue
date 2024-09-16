@@ -52,6 +52,13 @@
         </v-col>
       </v-row>
     </v-window-item>
+    <v-window-item value="chart">
+      <v-row class="mt-0 mb-1">
+        <v-col>
+          <PriceChart :priceList="productPriceList" />
+        </v-col>
+      </v-row>
+    </v-window-item>
   </v-window>
 
   <v-row v-if="productPriceList.length < productPriceTotal" class="mb-2">
@@ -81,6 +88,7 @@ export default {
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
+    PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue')),
     OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
   },
   data() {
