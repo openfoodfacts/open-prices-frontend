@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.78.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.78.0...v1.78.1) (2024-09-17)
+
+
+### Bug Fixes
+
+* **prices:** fix barcode display again in ProductCard. closes [#823](https://github.com/openfoodfacts/open-prices-frontend/issues/823) ([26b214d](https://github.com/openfoodfacts/open-prices-frontend/commit/26b214d3c6c529ca7608e5a12d0ecd47a830443a))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#817](https://github.com/openfoodfacts/open-prices-frontend/issues/817)) ([3d1786c](https://github.com/openfoodfacts/open-prices-frontend/commit/3d1786c6e03a8db3b74372d6a8d0a250742485a7))
+
 ## [1.78.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.77.0...v1.78.0) (2024-09-16)
 
 
