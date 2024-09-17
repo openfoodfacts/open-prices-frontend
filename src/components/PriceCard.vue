@@ -17,8 +17,8 @@
               <span v-if="hasProductSource">
                 <ProductBrands :productBrands="product.brands" :readonly="readonly" />
                 <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
-                <br v-if="!hideProductBarcode">
-                <ProductBarcodeChip v-if="!hideProductBarcode" :product="product" />
+                <br v-if="showProductBarcode">
+                <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
               </span>
               <ProductMissingChip v-else />
             </span>
@@ -131,6 +131,9 @@ export default {
     },
     hasPriceLabels() {
       return this.hasPrice && !!this.price.labels_tags && this.price.labels_tags.length
+    },
+    showProductBarcode() {
+      return !this.hideProductBarcode
     },
   },
   mounted() {

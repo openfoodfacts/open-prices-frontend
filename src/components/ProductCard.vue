@@ -101,7 +101,7 @@ export default {
       return !!this.product.product_quantity
     },
     showProductBarcode() {
-      return !this.hideProductBarcode && this.appStore.user.username && this.appStore.user.product_display_barcode
+      return !this.hideProductBarcode || this.appStore.user.username && this.appStore.user.product_display_barcode
     },
     barcodeInvalid() {
       return this.product.code && !utils.isValidBarcode(this.product.code)
