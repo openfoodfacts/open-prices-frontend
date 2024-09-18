@@ -6,16 +6,16 @@ const PRICE_UPDATE_FIELDS = ['price', 'price_is_discounted', 'price_without_disc
 const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'category_tag', 'labels_tags', 'origins_tags', 'location_osm_id', 'location_osm_type', 'proof_id'])
 const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency']
 
-const DEFAULT_HEADERS = {
+const OP_DEFAULT_PAGE_SIZE = 100
+const OP_DEFAULT_HEADERS = {
   'Content-Type': 'application/json'
 }
-
-const DEFAULT_PARAMS = {
+const OP_DEFAULT_PARAMS = {
   'app_name': constants.APP_USER_AGENT
 }
 
 function buildURLParams(params = {}) {
-  return new URLSearchParams({...DEFAULT_PARAMS, ...params})
+  return new URLSearchParams({...OP_DEFAULT_PARAMS, ...params})
 }
 
 function filterBodyWithAllowedKeys(data, allowedKeys) {
@@ -44,11 +44,11 @@ export default {
   },
 
   getUsers(params = {}) {
-    const defaultParams = {page: 1, size: 10}  // order_by default ?
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/users?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
-      headers: DEFAULT_HEADERS
+      headers: OP_DEFAULT_HEADERS
     })
     .then((response) => response.json())
   },
@@ -80,7 +80,7 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
-      headers: Object.assign({}, DEFAULT_HEADERS, {
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
       }),
     })
@@ -93,7 +93,7 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
     return fetch(url, {
       method: 'GET',
-      headers: Object.assign({}, DEFAULT_HEADERS, {
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
       }),
     })
@@ -105,7 +105,7 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
     return fetch(url, {
       method: 'PATCH',
-      headers: Object.assign({}, DEFAULT_HEADERS, {
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
       body: JSON.stringify(filterBodyWithAllowedKeys(data, PROOF_UPDATE_FIELDS)),
@@ -118,7 +118,7 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
     return fetch(url, {
       method: 'DELETE',
-      headers: Object.assign({}, DEFAULT_HEADERS, {
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
       }),
     })
@@ -131,7 +131,7 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams()}`
     return fetch(url, {
       method: 'POST',
-      headers: Object.assign({}, DEFAULT_HEADERS, {
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
       body: JSON.stringify(filterBodyWithAllowedKeys(data, PRICE_CREATE_FIELDS)),
@@ -140,11 +140,11 @@ export default {
   },
 
   getPrices(params = {}) {
-    const defaultParams = {page: 1, size: 10, order_by: '-created'}
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE, order_by: '-created'}
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
-      headers: DEFAULT_HEADERS,
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -153,7 +153,7 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
     return fetch(url, {
       method: 'GET',
-      headers: DEFAULT_HEADERS,
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -163,7 +163,7 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
     return fetch(url, {
       method: 'PATCH',
-      headers: Object.assign({}, DEFAULT_HEADERS, {
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
       body: JSON.stringify(filterBodyWithAllowedKeys(data, PRICE_UPDATE_FIELDS)),
@@ -176,7 +176,7 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
     return fetch(url, {
       method: 'DELETE',
-      headers: Object.assign({}, DEFAULT_HEADERS, {
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
       }),
     })
@@ -184,11 +184,11 @@ export default {
   },
 
   getProducts(params = {}) {
-    const defaultParams = {page: 1, size: 10}  // order_by default ?
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
-      headers: DEFAULT_HEADERS,
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -197,7 +197,7 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/${productId}?${buildURLParams()}`
     return fetch(url, {
       method: 'GET',
-      headers: DEFAULT_HEADERS,
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -206,17 +206,17 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}?${buildURLParams()}`
     return fetch(url, {
       method: 'GET',
-      headers: DEFAULT_HEADERS,
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
 
   getLocations(params = {}) {
-    const defaultParams = {page: 1, size: 10}  // order_by default ?
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations?${buildURLParams({...defaultParams, ...params})}`
     return fetch(url, {
       method: 'GET',
-      headers: DEFAULT_HEADERS,
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -225,7 +225,7 @@ export default {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/${locationId}?${buildURLParams()}`
     return fetch(url, {
       method: 'GET',
-      headers: DEFAULT_HEADERS,
+      headers: OP_DEFAULT_HEADERS,
     })
     .then((response) => response.json())
   },
@@ -233,7 +233,7 @@ export default {
   openfoodfactsProductSearch(code) {
     return fetch(`${constants.OFF_API_URL}/${code}.json`, {
       method: 'GET',
-      headers: DEFAULT_HEADERS
+      headers: OP_DEFAULT_HEADERS
     })
     .then((response) => response.json())
   },
@@ -241,7 +241,7 @@ export default {
   openstreetmapNominatimSearch(q) {
     return fetch(`${constants.OSM_NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=10`, {
       method: 'GET',
-      headers: DEFAULT_HEADERS
+      headers: OP_DEFAULT_HEADERS
     })
     .then((response) => response.json())
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
@@ -249,7 +249,7 @@ export default {
   openstreetmapNominatimLookup(id) {
     return fetch(`${constants.OSM_NOMINATIM_LOOKUP_URL}?osm_ids=N${id},W${id},R${id}&addressdetails=1&format=json`, {
       method: 'GET',
-      headers: DEFAULT_HEADERS
+      headers: OP_DEFAULT_HEADERS
     })
     .then((response) => response.json())
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
@@ -257,7 +257,7 @@ export default {
   openstreetmapPhotonSearch(q) {
     return fetch(`${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=10`, {
       method: 'GET',
-      headers: DEFAULT_HEADERS
+      headers: OP_DEFAULT_HEADERS
     })
     .then((response) => response.json())
     .then(data => data.features)
