@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.78.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.78.1...v1.78.2) (2024-09-18)
+
+
+### Technical
+
+* **api:** bump default page_size to 100 ([#828](https://github.com/openfoodfacts/open-prices-frontend/issues/828)) ([b7632a8](https://github.com/openfoodfacts/open-prices-frontend/commit/b7632a854a92502ba0efb51f189cba14fe101c01))
+* **graph:** add points, tooltip, autosize. ref [#818](https://github.com/openfoodfacts/open-prices-frontend/issues/818) ([667cf6d](https://github.com/openfoodfacts/open-prices-frontend/commit/667cf6d6b0b47861b3d41c1d8905902f2730ddd5))
+* **l10n:** New Crowdin translations to review and merge ([#825](https://github.com/openfoodfacts/open-prices-frontend/issues/825)) ([3203875](https://github.com/openfoodfacts/open-prices-frontend/commit/3203875c6c33471347763d0c0c2c323233448482))
+
 ## [1.78.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.78.0...v1.78.1) (2024-09-17)
 
 
