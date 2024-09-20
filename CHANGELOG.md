@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.79.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.78.2...v1.79.0) (2024-09-20)
+
+
+### Features
+
+* **list pages:** replace load more with infinite scroll ([#833](https://github.com/openfoodfacts/open-prices-frontend/issues/833)) ([8f7a8e9](https://github.com/openfoodfacts/open-prices-frontend/commit/8f7a8e978b0466c6f7a4c0a0ad2b274188ed7262))
+* **prices:** replace Load More with infinite scroll ([#832](https://github.com/openfoodfacts/open-prices-frontend/issues/832)) ([390a5b1](https://github.com/openfoodfacts/open-prices-frontend/commit/390a5b1e64fbfe775d29535f8ec62481e67e96f6))
+
+
+### Technical
+
+* **api:** bump back down API's default page_size to 20. ref [#828](https://github.com/openfoodfacts/open-prices-frontend/issues/828) ([f4fdf8b](https://github.com/openfoodfacts/open-prices-frontend/commit/f4fdf8b3001c9e7b6c967de7fcbabd0c0f7a50da))
+* **location search:** Photon: restrict via API URL on shop & amenity ([#808](https://github.com/openfoodfacts/open-prices-frontend/issues/808)) ([dfe1a98](https://github.com/openfoodfacts/open-prices-frontend/commit/dfe1a9885d9b4927fdfdadc5537f3953279340ff))
+* **prices:** hide progress-circular next to title. ref [#832](https://github.com/openfoodfacts/open-prices-frontend/issues/832) ([0ccfa4b](https://github.com/openfoodfacts/open-prices-frontend/commit/0ccfa4b4db55374cf5c59c9773b5604f8706097f))
+
 ## [1.78.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.78.1...v1.78.2) (2024-09-18)
 
 
