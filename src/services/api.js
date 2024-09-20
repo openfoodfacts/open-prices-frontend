@@ -5,6 +5,7 @@ import constants from '../constants'
 const PRICE_UPDATE_FIELDS = ['price', 'price_is_discounted', 'price_without_discount', 'price_per', 'currency', 'date']
 const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'category_tag', 'labels_tags', 'origins_tags', 'location_osm_id', 'location_osm_type', 'proof_id'])
 const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency']
+const LOCATION_SEARCH_LIMIT = 10
 
 const OP_DEFAULT_PAGE_SIZE = 20  // 100 slows down the app
 const OP_DEFAULT_HEADERS = {
@@ -231,7 +232,8 @@ export default {
   },
 
   openfoodfactsProductSearch(code) {
-    return fetch(`${constants.OFF_API_URL}/${code}.json`, {
+    const url = `${constants.OFF_API_URL}/${code}.json`
+    return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
@@ -239,7 +241,8 @@ export default {
   },
 
   openstreetmapNominatimSearch(q) {
-    return fetch(`${constants.OSM_NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=10`, {
+    const url = `${constants.OSM_NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=${LOCATION_SEARCH_LIMIT}`
+    return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
@@ -247,15 +250,21 @@ export default {
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
   openstreetmapNominatimLookup(id) {
-    return fetch(`${constants.OSM_NOMINATIM_LOOKUP_URL}?osm_ids=N${id},W${id},R${id}&addressdetails=1&format=json`, {
+    const url = `${constants.OSM_NOMINATIM_LOOKUP_URL}?osm_ids=N${id},W${id},R${id}&addressdetails=1&format=json`
+    return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
     .then((response) => response.json())
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
-  openstreetmapPhotonSearch(q) {
-    return fetch(`${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=10`, {
+  // Photon: restrict the search to shop & amenity
+  openstreetmapPhotonSearch(q, restrictToShop=true) {
+    let url = `${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=${LOCATION_SEARCH_LIMIT}`
+    if (restrictToShop) {
+      url += '&osm_key=shop&osm_tag=amenity'
+    }
+    return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
