@@ -10,11 +10,9 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="priceList.length < priceTotal" class="mb-2">
+  <v-row v-if="loading">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getPrices">
-        {{ $t('Common.LoadMore') }}
-      </v-btn>
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 
@@ -44,6 +42,8 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
+import utils from '../utils.js'
+
 
 export default {
   components: {
@@ -59,9 +59,13 @@ export default {
       signinSuccessMessage: false,
       singleSuccessMessage: false,
       multipleSuccessMessage: false,
+      // scroll
+      handleDebouncedScroll: null,
     }
   },
   mounted() {
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
     this.getPrices()
     if (this.$route.query.signinSuccess === 'true') {
       this.signinSuccessMessage = true
@@ -73,8 +77,17 @@ export default {
       this.multipleSuccessMessage = true
     }
   },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
+  },
   methods: {
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getPrices()
+      }
+    },
     getPrices() {
+      if (this.priceTotal && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
       return api.getPrices({ page: this.pricePage })

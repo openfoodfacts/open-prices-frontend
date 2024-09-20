@@ -3,6 +3,21 @@ import CountriesWithEmoji from './data/countries-with-emoji.json'
 import constants from './constants'
 
 
+function debounce(callback, wait) {
+  let timeoutId = null;
+  return (...args) => {
+    window.clearTimeout(timeoutId);
+    timeoutId = window.setTimeout(() => {
+      callback(...args)
+    }, wait)
+  }
+}
+
+function getDocumentScrollPercentage() {
+  return (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100
+}
+
+
 function isNumber(value) {
   // return /^\d+$/.test(value)
   return !isNaN(parseFloat(value)) && isFinite(value)
@@ -328,6 +343,8 @@ function getMapCenter(results) {
 
 
 export default {
+  debounce,
+  getDocumentScrollPercentage,
   isNumber,
   isValidBarcode,
   addObjectToArray,
