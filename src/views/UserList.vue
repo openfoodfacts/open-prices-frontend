@@ -1,7 +1,6 @@
 <template>
   <h1 class="text-h5 mb-1">
     {{ $t('UserList.Title') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30" />
   </h1>
 
   <v-row v-if="!loading">
@@ -19,11 +18,9 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="userList.length < userTotal" class="mb-2">
+  <v-row v-if="loading">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getUsers">
-        {{ $t('Common.LoadMore') }}
-      </v-btn>
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 </template>
@@ -32,6 +29,7 @@
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 import api from '../services/api'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -68,8 +66,19 @@ export default {
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.initUserList()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getUsers()
+      }
+    },
     initUserList() {
       this.userList = []
       this.userPage = 0
