@@ -232,7 +232,8 @@ export default {
   },
 
   openfoodfactsProductSearch(code) {
-    return fetch(`${constants.OFF_API_URL}/${code}.json`, {
+    const url = `${constants.OFF_API_URL}/${code}.json`
+    return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
@@ -240,7 +241,8 @@ export default {
   },
 
   openstreetmapNominatimSearch(q) {
-    return fetch(`${constants.OSM_NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=${LOCATION_SEARCH_LIMIT}`, {
+    const url = `${constants.OSM_NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=${LOCATION_SEARCH_LIMIT}`
+    return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
@@ -248,7 +250,8 @@ export default {
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
   openstreetmapNominatimLookup(id) {
-    return fetch(`${constants.OSM_NOMINATIM_LOOKUP_URL}?osm_ids=N${id},W${id},R${id}&addressdetails=1&format=json`, {
+    const url = `${constants.OSM_NOMINATIM_LOOKUP_URL}?osm_ids=N${id},W${id},R${id}&addressdetails=1&format=json`
+    return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
@@ -256,8 +259,12 @@ export default {
     .then((data) => data.filter(l => !constants.NOMINATIM_RESULT_TYPE_EXCLUDE_LIST.includes(l.type)))
   },
   // Photon: restrict the search to shop & amenity
-  openstreetmapPhotonSearch(q) {
-    return fetch(`${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&osm_key=shop&osm_tag=amenity&limit=${LOCATION_SEARCH_LIMIT}`, {
+  openstreetmapPhotonSearch(q, restrictToShop=true) {
+    let url = `${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=${LOCATION_SEARCH_LIMIT}`
+    if (restrictToShop) {
+      url += '&osm_key=shop&osm_tag=amenity'
+    }
+    return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS
     })
