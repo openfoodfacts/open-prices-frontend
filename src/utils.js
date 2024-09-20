@@ -3,6 +3,17 @@ import CountriesWithEmoji from './data/countries-with-emoji.json'
 import constants from './constants'
 
 
+function debounce(callback, wait) {
+  let timeoutId = null;
+  return (...args) => {
+    window.clearTimeout(timeoutId);
+    timeoutId = window.setTimeout(() => {
+      callback(...args)
+    }, wait)
+  }
+}
+
+
 function isNumber(value) {
   // return /^\d+$/.test(value)
   return !isNaN(parseFloat(value)) && isFinite(value)
@@ -328,6 +339,7 @@ function getMapCenter(results) {
 
 
 export default {
+  debounce,
   isNumber,
   isValidBarcode,
   addObjectToArray,
