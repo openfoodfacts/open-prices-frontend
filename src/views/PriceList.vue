@@ -63,9 +63,11 @@ export default {
     }
   },
   mounted() {
+    this.getPrices()
+    // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
     window.addEventListener('scroll', this.handleDebouncedScroll)
-    this.getPrices()
+    // success messages
     if (this.$route.query.signinSuccess === 'true') {
       this.signinSuccessMessage = true
     }
