@@ -69,7 +69,7 @@
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
+			"Barcode": "Kòd ba",
 			"Category": "Kategori"
 		},
 		"CategoryPricePer": {
@@ -93,8 +93,8 @@
 		"Scan": "Scan a barcode"
 	},
 	"BarcodeManualInput": {
-		"Barcode": "Barcode",
-		"Submit": "Submit",
+		"Barcode": "Kòd ba",
+		"Submit": "Soumèt",
 		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
@@ -110,10 +110,10 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
-		"Brand": "Brand",
+		"Brand": "Mak",
 		"Price": "Price",
 		"Prices": "Prices",
-		"Product": "Product",
+		"Product": "Pwodwi",
 		"Products": "Products",
 		"Proof": "Proof",
 		"Proofs": "Proofs",
@@ -129,7 +129,7 @@
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Language": "Languages",
+		"Language": "Lang",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Chaje plis",
@@ -268,7 +268,7 @@
 		"Title": "Delete a price"
 	},
 	"PriceEdit": {
-		"Save": "Save",
+		"Save": "Anrejistre",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
 	},
@@ -355,7 +355,7 @@
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Save": "Save",
+		"Save": "Anrejistre",
 		"Success": "Proof edited!"
 	},
 	"Router": {
@@ -445,11 +445,11 @@
 		"DisplayTitle": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Lang",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",
-		"Save": "Save",
+		"Save": "Anrejistre",
 		"Title": "Settings",
 		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
