@@ -262,7 +262,7 @@ export default {
   openstreetmapPhotonSearch(q, restrictToShop=true) {
     let url = `${constants.OSM_PHOTON_SEARCH_URL}?q=${q}&limit=${LOCATION_SEARCH_LIMIT}`
     if (restrictToShop) {
-      url += '&osm_key=shop&osm_tag=amenity'
+      url += '&osm_tag=shop&osm_tag=amenity'
     }
     return fetch(url, {
       method: 'GET',
