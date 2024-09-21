@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.79.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.79.0...v1.79.1) (2024-09-21)
+
+
+### Bug Fixes
+
+* **location search:** fix Photon filtered search typo. ref [#808](https://github.com/openfoodfacts/open-prices-frontend/issues/808) ([3992290](https://github.com/openfoodfacts/open-prices-frontend/commit/3992290bfa53cfa16aa200282a350dc9488fe89b))
+
 ## [1.79.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.78.2...v1.79.0) (2024-09-20)
 
 
