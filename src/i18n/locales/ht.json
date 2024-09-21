@@ -58,7 +58,7 @@
 			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "Kategori",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
 			"Scan": "Scan",
@@ -70,7 +70,7 @@
 		},
 		"ProductModeList": {
 			"Barcode": "Barcode",
-			"Category": "Category"
+			"Category": "Kategori"
 		},
 		"CategoryPricePer": {
 			"PerKg": "Price per kg",
@@ -98,12 +98,12 @@
 		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"TopProducts": "Top products",
 		"BrandProductTotal": "{count} products"
 	},
 	"CategoryDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"TopProducts": "Top products",
 		"CategoryProductTotal": "{count} products"
 	},
@@ -117,10 +117,10 @@
 		"Products": "Products",
 		"Proof": "Proof",
 		"Proofs": "Proofs",
-		"Category": "Category",
-		"Categories": "Categories",
+		"Category": "Kategori",
+		"Categories": "Kategori",
 		"Chart": "Chart",
-		"Country": "Country",
+		"Country": "Peyi",
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
 		"Display": "Display",
@@ -132,7 +132,7 @@
 		"Language": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"Location": "Location",
 		"Locations": "Locations",
 		"LocationMissing": "Location missing",
@@ -145,7 +145,7 @@
 		"Examples": "Examples",
 		"ExampleWithColon": "Example:",
 		"ExamplesWithColon": "Examples:",
-		"Edit": "Edit",
+		"Edit": "Modifye",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
@@ -183,8 +183,8 @@
 		"User": "User",
 		"Users": "Users",
 		"View": "View",
-		"Yes": "Yes",
-		"No": "No",
+		"Yes": "Wi",
+		"No": "Non",
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty"
@@ -224,12 +224,12 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
 		"Title": "Top locations",
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"LocationTotal": "{count} locations"
 	},
 	"LocationSelector": {
@@ -279,7 +279,7 @@
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"Title": "Latest prices"
 	},
 	"PriceRules": {
@@ -290,11 +290,11 @@
 		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
-		"Brands": "Brands",
-		"BrandLower": "brand",
+		"Brands": "Mak",
+		"BrandLower": "mak",
 		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
-		"Categories": "Categories",
+		"Categories": "Kategori",
 		"CategoriesLower": "categories",
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
@@ -317,12 +317,12 @@
 		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products",
@@ -346,7 +346,7 @@
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"Prices": "Prices",
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
@@ -372,7 +372,7 @@
 			"Title": "Add a proof"
 		},
 		"Search": {
-			"Title": "Search"
+			"Title": "Rechèch"
 		},
 		"SignIn": {
 			"Title": "Sign in"
@@ -389,7 +389,7 @@
 	},
 	"Search": {
 		"ProductBarcode": "Product barcode",
-		"Title": "Search"
+		"Title": "Rechèch"
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
@@ -419,7 +419,7 @@
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
@@ -430,17 +430,17 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LoadMore": "Chaje plis"
 	},
 	"UserList": {
-		"LoadMore": "Load more",
+		"LoadMore": "Chaje plis",
 		"Title": "Top contributors",
 		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "Peyi",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
