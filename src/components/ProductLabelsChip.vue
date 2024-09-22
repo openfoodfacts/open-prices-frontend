@@ -1,5 +1,5 @@
 <template>
-  <v-chip v-if="productLabels.length" label size="small" density="comfortable" @click="showProductLabelsDialog">
+  <v-chip v-if="productLabels && productLabels.length" label size="small" density="comfortable" @click="showProductLabelsDialog">
     <i>{{ $t('ProductCard.LabelTotal', { count: productLabels.length }) }}</i>
     <ProductLabelsDialog
       v-if="productLabelsDialog"
