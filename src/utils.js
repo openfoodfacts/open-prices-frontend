@@ -111,6 +111,15 @@ function prettyDateTime(dateTimeString) {
 }
 
 /**
+ * input: '2023-12-25T17:08:19.021410+01:00'
+ * output: 'December 25, 2023, 8:19:02 CEST'
+ */
+function offDateTime(dateTimeString) {
+  const date = new Date(dateTimeString)
+  return new Intl.DateTimeFormat(navigator.language, {dateStyle: 'long', timeStyle: 'medium'}).format(date)
+}
+
+/**
  * https://johnresig.com/blog/javascript-pretty-date/
  * input: '2023-12-25T17:08:19.021410+01:00'
  * output: '5 hours ago', 'Yesterday', '2 days ago'...
@@ -360,6 +369,7 @@ export default {
   currentDate,
   prettyDate,
   prettyDateTime,
+  offDateTime,
   prettyRelativeDateTime,
   dateType,
   getCategoryName,
