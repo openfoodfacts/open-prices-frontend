@@ -204,13 +204,15 @@ function getLocationName(locationObject) {
 function getLocationRoad(locationObject) {
   // Nominatim
   if (locationObject.address) {
-    let locationRoad = locationObject.address.house_number ? `${locationObject.address.house_number} ` : ''
+    let locationRoad = locationObject.address.house_number ? `${locationObject.address.house_number}, ` : ''
     locationRoad += locationObject.address.road || ''
     return locationRoad
   }
   // Photon
   else if (locationObject.properties) {
-    return locationObject.properties.street
+    let locationRoad = locationObject.properties.housenumber ? `${locationObject.properties.housenumber}, ` : ''
+    locationRoad += locationObject.properties.street || ''
+    return locationRoad
   }
   // OP
   return ''
@@ -229,6 +231,10 @@ function getLocationCity(locationObject) {
   return locationObject.osm_address_city || ''
 }
 
+/**
+ * input: {"geometry":{"coordinates":[2.3548062,48.8301752],"type":"Point"},"type":"Feature","properties":{"osm_id":11112946989,"country":"France","city":"Paris","countrycode":"FR","postcode":"75013","locality":"Quartier de la Maison-Blanche","type":"house","osm_type":"N","osm_key":"shop","housenumber":"30","street":"Avenue d'Italie","district":"Paris","osm_value":"department_store","name":"HEMA","state":"Ile-de-France"}}
+ * output: HEMA ; 30, Avenue d'Italie, Paris
+ */
 function getLocationTitle(locationObject, withName=true, withRoad=false, withCity=true, withEmoji=false) {
   let locationTitle = ''
   if (withName) {
