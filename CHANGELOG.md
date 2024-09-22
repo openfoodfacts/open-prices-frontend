@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.80.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.79.1...v1.80.0) (2024-09-22)
+
+
+### Features
+
+* **prices:** move owner & created info to a new History section ([#806](https://github.com/openfoodfacts/open-prices-frontend/issues/806)) ([d3ba635](https://github.com/openfoodfacts/open-prices-frontend/commit/d3ba6350f20da56fab66fbe9b471b3f914a5d404))
+
+
+### Bug Fixes
+
+* fix component error ([cb00067](https://github.com/openfoodfacts/open-prices-frontend/commit/cb0006743c48cef98d9c29889fc8ee1e57d54cfe))
+* **locations:** Photon: show housenumber in location results. ref [#517](https://github.com/openfoodfacts/open-prices-frontend/issues/517) ([31a957b](https://github.com/openfoodfacts/open-prices-frontend/commit/31a957b85bee9e99d8418e385f149dfa75f81bf6))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#830](https://github.com/openfoodfacts/open-prices-frontend/issues/830)) ([6411966](https://github.com/openfoodfacts/open-prices-frontend/commit/64119669adac3b98a2230b2025b6b06c09dbe863))
+
 ## [1.79.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.79.0...v1.79.1) (2024-09-21)
 
 
