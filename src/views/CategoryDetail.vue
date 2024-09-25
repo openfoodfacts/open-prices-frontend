@@ -71,6 +71,7 @@ export default {
   watch: {
     $route (newCategory, oldCategory) {
       if (oldCategory && newCategory && newCategory.name == 'category-detail' && oldCategory.fullPath != newCategory.fullPath) {
+        this.categoryId = newCategory.params.id
         this.initCategory()
       }
     }
