@@ -235,7 +235,7 @@
 	},
 	"LocationSelector": {
 		"Clear": "Clear",
-		"NoResult": "No results found",
+		"NoResult": "Pa gen rezilta yo jwenn",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -301,7 +301,7 @@
 		"CategoryTotal": "{count} categories",
 		"Labels": "Etikèt",
 		"LabelsLower": "labels",
-		"LabelTotal": "{count} labels",
+		"LabelTotal": "{count} etikèt",
 		"LatestPrice": "Latest price",
 		"InvalidBarcode": "Invalid barcode",
 		"ProductBrandMissing": "Product brand missing",
