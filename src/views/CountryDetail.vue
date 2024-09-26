@@ -10,7 +10,6 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.TopLocations') }}
       </h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30" />
       <LoadedCountChip v-if="!loading" :loadedCount="countryLocationList.length" :totalCount="countryLocationTotal" />
       <DisplayMenu kind="price" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
     </v-col>
@@ -33,19 +32,18 @@
     </v-window-item>
   </v-window>
 
-  <v-row v-if="countryLocationList.length < countryLocationTotal" class="mb-2">
+  <v-row v-if="loading">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getCountryLocations">
-        {{ $t('Common.LoadMore') }}
-      </v-btn>
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
 import api from '../services/api'
+import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -90,6 +88,12 @@ export default {
   mounted() {
     this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.currentDisplay
     this.initCountry()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     initCountry() {
@@ -113,6 +117,11 @@ export default {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
       // this.initCountryCity() will NOT be called in watch $route
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getCountryLocations()
+      }
     },
   }
 }

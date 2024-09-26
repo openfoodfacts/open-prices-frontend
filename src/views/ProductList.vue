@@ -83,11 +83,6 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
-      if (utils.getDocumentScrollPercentage() > 90) {
-        this.getProducts()
-      }
-    },
     initProductList() {
       this.productList = []
       this.productTotal = null
@@ -120,7 +115,12 @@ export default {
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initProductList() will be called in watch $route
       }
-    }
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getProducts()
+      }
+    },
   }
 }
 </script>

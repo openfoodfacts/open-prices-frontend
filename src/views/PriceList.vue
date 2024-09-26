@@ -82,11 +82,6 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
-      if (utils.getDocumentScrollPercentage() > 90) {
-        this.getPrices()
-      }
-    },
     getPrices() {
       if (this.priceTotal && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
@@ -97,7 +92,12 @@ export default {
           this.priceTotal = data.total
           this.loading = false
         })
-    }
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getPrices()
+      }
+    },
   }
 }
 </script>

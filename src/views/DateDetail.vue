@@ -10,7 +10,6 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30" />
       <LoadedCountChip v-if="!loading" :loadedCount="datePriceList.length" :totalCount="datePriceTotal" />
       <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
@@ -22,11 +21,9 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="datePriceList.length < datePriceTotal" class="mb-2">
+  <v-row v-if="loading">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getDatePrices">
-        {{ $t('Common.LoadMore') }}
-      </v-btn>
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 </template>
@@ -87,6 +84,12 @@ export default {
   mounted() {
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initDate()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     initDate() {
@@ -112,7 +115,12 @@ export default {
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initDate() will be called in watch $route
       }
-    }
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getDatePrices()
+      }
+    },
   }
 }
 </script>

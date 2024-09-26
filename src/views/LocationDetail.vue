@@ -18,7 +18,6 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30" />
       <LoadedCountChip v-if="!loading" :loadedCount="locationPriceList.length" :totalCount="locationPriceTotal" />
       <FilterMenu v-if="!loading" kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
       <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
@@ -31,19 +30,18 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="locationPriceList.length < locationPriceTotal" class="mb-2">
+  <v-row v-if="loading">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getLocationPrices">
-        {{ $t('Common.LoadMore') }}
-      </v-btn>
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
 import constants from '../constants'
+import api from '../services/api'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -92,6 +90,12 @@ export default {
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.getLocation()
     this.getLocationPrices()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     initLocationPrices() {
@@ -129,7 +133,12 @@ export default {
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initLocationPrices() will be called in watch $route
       }
-    }
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getLocationPrices()
+      }
+    },
   }
 }
 </script>
