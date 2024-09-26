@@ -7,7 +7,7 @@ const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product
 const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency']
 const LOCATION_SEARCH_LIMIT = 10
 
-const OP_DEFAULT_PAGE_SIZE = 20  // 100 slows down the app
+const OP_DEFAULT_PAGE_SIZE = 25  // 100 slows down the app
 const OP_DEFAULT_HEADERS = {
   'Content-Type': 'application/json'
 }
