@@ -20,7 +20,6 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30" />
       <LoadedCountChip v-if="!loading" :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
     </v-col>
   </v-row>
@@ -31,11 +30,9 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="userPriceList.length < userPriceTotal" class="mb-2">
+  <v-row v-if="loading">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getUserPrices">
-        {{ $t('Common.LoadMore') }}
-      </v-btn>
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 </template>
@@ -45,6 +42,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -71,6 +69,12 @@ export default {
   },
   mounted() {
     this.getUserPrices()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     getUserPrices() {
@@ -82,6 +86,11 @@ export default {
           this.userPriceTotal = data.total
           this.loading = false
         })
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getUserPrices()
+      }
     },
   }
 }

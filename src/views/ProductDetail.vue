@@ -71,8 +71,8 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import constants from '../constants'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
