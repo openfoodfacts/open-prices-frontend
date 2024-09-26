@@ -47,7 +47,7 @@ export default {
   },
   data() {
     return {
-      categoryId: this.$route.params.id,
+      categoryId: null,  // see init
       // filter & order
       currentFilter: '',
       currentOrder: constants.PRODUCT_ORDER_LIST[1].key,
@@ -69,8 +69,8 @@ export default {
     },
   },
   watch: {
-    $route (newCategory, oldCategory) {
-      if (oldCategory && newCategory && newCategory.name == 'category-detail' && oldCategory.fullPath != newCategory.fullPath) {
+    $route (newRoute, oldRoute) {
+      if (oldRoute && newRoute && newRoute.name == 'category-detail' && oldRoute.fullPath != newRoute.fullPath) {
         this.initCategory()
       }
     }
@@ -82,6 +82,7 @@ export default {
   },
   methods: {
     initCategory() {
+      this.categoryId = this.$route.params.id
       this.category = {'id': this.categoryId, 'name': this.categoryId}
       this.categoryProductList = []
       this.categoryProductTotal = null
