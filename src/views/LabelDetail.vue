@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card :title="labelId" prepend-icon="mdi-sticker-text-outline" data-name="label-card" />
+      <LabelCard :label="labelId" :productCount="labelProductTotal" />
     </v-col>
   </v-row>
 
@@ -39,6 +39,7 @@ import api from '../services/api'
 
 export default {
   components: {
+    LabelCard: defineAsyncComponent(() => import('../components/LabelCard.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
