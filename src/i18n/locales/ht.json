@@ -1,201 +1,201 @@
 {
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Yon etajè ki gen plizyè pri",
+			"Title": "Plizyè pwodwi"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Pri kreye!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Youn oswa plizyè pwodwi",
+			"Title": "Resi"
 		},
 		"SignedIn": "Signed in!",
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Title": "Yon sèl pwodwi"
 		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"Thanks": "Mèsi",
+		"Title": "Ajoute yon pri",
+		"TitleSingle": "Ajoute yon sèl pri",
+		"TitleMultiple": "Ajoute plizyè pri an gwo"
 	},
 	"AddPriceMultiple": {
 		"Done": "Done",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "Ajoute yon nouvo pri",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} pri a deja telechaje | {priceAlreadyUploadedNumber} pri yo deja telechaje",
 			"Create": "Create",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"ExistingProductFound": "Diplike? Pwodwi sa a te deja ajoute pou prèv sa a",
+			"NewPrice": "Nouvo pri",
+			"PriceUploaded": "Pri kreye!",
+			"Upload": "Telechaje"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Proof details"
+			"ReceiptWarning": "Resi yo ka genyen enfòmasyon pèsonèl, nou rekòmande pou kache yo (pliye...) anvan ou pran foto a.",
+			"PrivateWarning": "Ou kapab tou mete resi a nan Prive. Prèv prive yo pral vizib sèlman pou ou menm ak moderatè yo.",
+			"Title": "Detay prèv yo"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Ajoute plizyè pri"
 	},
 	"AddPriceSingle": {
 		"Create": "Create",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofDateChanged": "Date updated!",
-			"ProofSelected": "Proof selected!",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"Discount": "Rabè?",
+			"Label": "Pri",
+			"LabelDiscounted": "Pri rabè",
+			"LabelFull": "Pri konplè",
+			"Proof": "Prèv",
+			"ProofDateChanged": "Dat modifye!",
+			"ProofSelected": "Prèv chwazi!",
+			"ProofUploaded": "Prèv telechaje!",
+			"Title": "Pri detaye",
+			"UploadProof": "Telechaje yon prèv",
+			"Picture": "Foto",
 			"TakePicture": "Take a picture",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"Gallery": "Galri aparèy",
+			"SelectFromGallery": "Chwazi nan galri aparèy la",
+			"RecentProof": "Dènye prèv",
+			"SelectRecentProof": "Chwazi yon prèv ki resan"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"OriginLabel": "Orijin",
+			"ProductBarcode": "Kòd ba pwodwi",
 			"Scan": "Scan",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "Eskane yon kòd ba",
 			"Type": "Type",
-			"TypeBarcode": "Type a barcode",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"TypeBarcode": "Tape yon kòd ba",
+			"SetProduct": "Mete yon pwodwi",
+			"Title": "Enfòmasyon sou pwodwi"
 		},
 		"ProductModeList": {
 			"Barcode": "Kòd ba",
 			"Category": "Kategori"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Pri pou chak kg",
+			"PerUnit": "Pri pou chak inite"
 		},
-		"Title": "Add a single price",
+		"Title": "Ajoute yon sèl pri",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Dat",
+			"DateLabel": "Dat",
 			"Find": "Find",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Adrès magazen",
+			"SelectLocation": "Chwazi kote ou ye",
+			"Title": "Ki kote ak ki lè?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Eskane yon kòd ba"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kòd ba",
 		"Submit": "Soumèt",
-		"Title": "Type a barcode"
+		"Title": "Tape yon kòd ba"
 	},
 	"BrandDetail": {
 		"LoadMore": "Chaje plis",
-		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products"
+		"TopProducts": "Tòp pwodwi yo",
+		"BrandProductTotal": "{count} pwodwi"
 	},
 	"CategoryDetail": {
 		"LoadMore": "Chaje plis",
-		"TopProducts": "Top products",
-		"CategoryProductTotal": "{count} products"
+		"TopProducts": "Tòp pwodwi yo",
+		"CategoryProductTotal": "{count} pwodwi"
 	},
 	"Common": {
-		"AddPrice": "Add a price",
-		"AddToOFF": "Add to {name}",
+		"AddPrice": "Ajoute yon pri",
+		"AddToOFF": "Ajoute nan {name}",
 		"Brand": "Mak",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Pri",
+		"Prices": "Pri",
 		"Product": "Pwodwi",
 		"Products": "Products",
-		"Proof": "Proof",
-		"Proofs": "Proofs",
+		"Proof": "Prèv",
+		"Proofs": "Prèv",
 		"Category": "Kategori",
 		"Categories": "Kategori",
-		"Chart": "Chart",
+		"Chart": "Tablo",
 		"Country": "Peyi",
-		"Currency": "Currency",
-		"CurrencyMissing": "Currency missing",
+		"Currency": "Lajan",
+		"CurrencyMissing": "Lajan ki manke",
 		"Display": "Display",
-		"DisplayList": "List",
-		"DisplayPriceList": "List",
+		"DisplayList": "Lis",
+		"DisplayPriceList": "Lis",
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
-		"DisplayPriceChart": "Chart",
+		"DisplayPriceChart": "Tablo",
 		"Language": "Lang",
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "Dènye pri",
+		"LatestProofs": "Dènye prèv",
 		"LoadMore": "Chaje plis",
-		"Location": "Location",
-		"Locations": "Locations",
-		"LocationMissing": "Location missing",
-		"Date": "Date",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Location": "Zòn",
+		"Locations": "Zòn",
+		"LocationMissing": "Zòn ki manke",
+		"Date": "Dat",
+		"DateMissing": "Dat ki manke",
+		"Details": "Detay yo",
 		"Delete": "Delete",
 		"Discount": "Discount",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Egzanp",
+		"Examples": "Egzanp yo",
 		"ExampleWithColon": "Example:",
 		"ExamplesWithColon": "Examples:",
 		"Edit": "Modifye",
 		"Filter": "Filter",
-		"FilterProductWithPriceCountHide": "Hide products with prices",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
-		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterLocationWithPriceCountHide": "Hide locations with prices",
-		"FilterUserWithPriceCountHide": "Hide contributors with prices",
-		"Help": "Help",
+		"FilterProductWithPriceCountHide": "Kache pwodwi ak pri",
+		"FilterPriceMoreThan30DaysHide": "Kache pri ki gen plis pase 30 jou",
+		"FilterProofWithPriceCountHide": "Kache prèv ak pri",
+		"FilterLocationWithPriceCountHide": "Kache adrès ak pri yo",
+		"FilterUserWithPriceCountHide": "Kache kontribitè ak pri yo",
+		"Help": "Èd",
 		"History": "History",
 		"Image": "Image",
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "Link kopye",
 		"LocationCount": "{count} locations",
 		"Map": "Map",
 		"Order": "Order",
-		"OrderProductUniqueScansDESC": "Number of scans",
-		"OrderProductPriceCountDESC": "Number of prices",
-		"OrderPriceASC": "Price",
+		"OrderProductUniqueScansDESC": "Kantite skanè",
+		"OrderProductPriceCountDESC": "Kantite pri",
+		"OrderPriceASC": "Pri",
 		"OrderPriceCreatedDESC": "Addition date",
-		"OrderPriceDateDESC": "Price date",
-		"OrderProofPriceCountDESC": "Number of prices",
+		"OrderPriceDateDESC": "Dat pri",
+		"OrderProofPriceCountDESC": "Kantite pri",
 		"OrderProofCreatedDESC": "Addition date",
-		"OrderProofDateDESC": "Proof date",
-		"PriceCount": "{count} prices",
-		"PriceCreated": "Price created!",
-		"ProductCount": "{count} products",
-		"ProofCount": "{count} proofs",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"OrderProofDateDESC": "Dat prèv",
+		"PriceCount": "{count} pri",
+		"PriceCreated": "Pri kreye!",
+		"ProductCount": "{count} pwodwi",
+		"ProofCount": "{count} prèv",
+		"SignInOFFAccount": "Konekte ak kont {url} ou",
 		"SignedIn": "Signed in!",
 		"Share": "Share",
 		"Source": "Source",
-		"Thanks": "Thanks",
-		"TopContributors": "Top contributors",
+		"Thanks": "Mèsi",
+		"TopContributors": "Top kontribitè yo",
 		"TopLocations": "Top locations",
-		"TopProducts": "Top products",
+		"TopProducts": "Tòp pwodwi yo",
 		"Type": "Type",
-		"Upload": "Upload",
+		"Upload": "Telechaje",
 		"User": "User",
-		"Users": "Users",
+		"Users": "Itilizatè yo",
 		"View": "View",
 		"Yes": "Wi",
 		"No": "Non",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Food": "Manje",
+		"PetFood": "Manje bèt",
+		"Beauty": "Bote"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Title": "Chwazi youn nan lajan ou pi renmen",
+		"Currency": "Lajan",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"Select": "Chwazi {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -207,15 +207,15 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
+		"Settings": "Paramèt",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"LatestPrices": "Latest prices",
-		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"AddPrice": "Ajoute yon pri",
+		"LatestPrices": "Dènye pri",
+		"ProofAdd": "Ajoute yon prèv",
+		"SearchProduct": "Chèche yon pwodwi",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -224,7 +224,7 @@
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Dènye pri",
 		"LoadMore": "Chaje plis",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
@@ -247,48 +247,48 @@
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Title": "Pa jwenn"
 	},
 	"PriceCard": {
 		"Discount": "Discount",
 		"PriceDate": "on {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
-		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
-		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"PriceValueDisplayUnit": "{0} / inite",
+		"Proof": "Prèv",
+		"FullPrice": "Pri konplè",
+		"UnknownProduct": "Pwodwi enkoni"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} pri"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Èske w sèten ou vle efase pri sa a?",
 		"Delete": "Delete",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Pri efase!",
+		"Title": "Efase yon pri"
 	},
 	"PriceEdit": {
 		"Save": "Anrejistre",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Pri modifye!",
+		"Title": "Modifye yon pri"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
-		"LabelFull": "Full price"
+		"Discount": "Rabè?",
+		"Label": "Pri",
+		"LabelDiscounted": "Pri rabè",
+		"LabelFull": "Pri konplè"
 	},
 	"PriceList": {
 		"LoadMore": "Chaje plis",
-		"Title": "Latest prices"
+		"Title": "Dènye pri"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "Pri a obligatwa",
+		"NoSpaces": "Tanpri pa mete espas",
+		"Number": "Antre yon nimewo",
+		"Positive": "Pri a pa dwe negatif",
+		"TwoDecimals": "Se sèlman de desimal ki otorize"
 	},
 	"ProductCard": {
 		"Brands": "Mak",
@@ -310,67 +310,67 @@
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
 		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
-		"QuantityMissing": "Quantity missing",
+		"ProductQuantityMissing": "Kantite pwodwi ki manke",
+		"QuantityMissing": "Kantite ki manke",
 		"UnknownProduct": "Unknown product name"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"AddPrice": "Ajoute yon pri",
+		"CategoryNotFound": "Kategori pa egziste...",
+		"LatestPrices": "Dènye pri",
 		"LoadMore": "Chaje plis",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Pwodwi pa egziste nan Open Food Facts... Pa ezite ajoute li :)"
 	},
 	"ProductList": {
-		"HideProductsWithPrices": "Hide products with prices",
+		"HideProductsWithPrices": "Kache pwodwi ak pri",
 		"LoadMore": "Chaje plis",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
-		"Title": "Top products",
-		"ProductTotal": "{count} products"
+		"PriceNumber": "Kantite pri te ajoute",
+		"ScanNumber": "Kantite skanè ki te ajoute",
+		"Title": "Tòp pwodwi yo",
+		"ProductTotal": "{count} pwodwi"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
-		"GDPR_REQUEST": "GDPR request"
+		"Proof": "Prèv",
+		"PRICE_TAG": "Pri tag",
+		"RECEIPT": "Resi",
+		"GDPR_REQUEST": "Demann GDPR"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",
-		"ProofSelected": "Proof selected!",
-		"Success": "Proof created!"
+		"ProofSelected": "Prèv chwazi!",
+		"Success": "Prèv kreye!"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Èske w sèten ou vle efase prèv sa a?",
 		"Delete": "Delete",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "Efase yon prèv",
+		"Success": "Prèv efase!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Chaje plis",
-		"Prices": "Prices",
-		"ProofNotFound": "Proof not found (or not the owner)",
-		"Public": "Public",
-		"Private": "Private",
+		"Prices": "Pri",
+		"ProofNotFound": "Prèv la pa egziste (oswa pa pwopriyetè prèv la)",
+		"Public": "Piblik",
+		"Private": "Prive",
 		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
+		"Title": "Modifye yon prèv",
 		"Save": "Anrejistre",
-		"Success": "Proof edited!"
+		"Success": "Prèv modifye!"
 	},
 	"Router": {
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Ajoute yon pri"
 		},
 		"Home": {
 			"Title": "Home"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Dènye pri"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a proof"
+			"Title": "Ajoute yon prèv"
 		},
 		"Search": {
 			"Title": "Rechèch"
@@ -379,80 +379,80 @@
 			"Title": "Sign in"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Top kontribitè yo"
 		},
 		"TopLocations": {
 			"Title": "Top locations"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Tòp pwodwi yo"
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Kòd ba pwodwi",
 		"Title": "Rechèch"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "Link kopye",
 		"Title": "Share"
 	},
 	"SignIn": {
 		"Button": "Sign in",
 		"Password": "Password",
-		"ServerError": "Error: server error",
+		"ServerError": "Erè: erè sèvè",
 		"Title": "Sign in",
-		"SignInOFFAccount": "Sign in with your {url} account",
-		"UsernameLabel": "Username",
+		"SignInOFFAccount": "Konekte ak kont {url} ou",
+		"UsernameLabel": "Non itilizatè",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
-		"Prices": "Prices",
-		"ProductsWithPrices": "Products with prices",
+		"Prices": "Pri",
+		"ProductsWithPrices": "Pwodwi ak pri",
 		"Title": "Stats",
 		"Products": "Products",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Zòn",
+		"Users": "Itilizatè yo",
 		"Total": "Total",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithoutProduct": "Without a product"
+		"WithPrice": "Ak yon pri",
+		"WithProduct": "Ak yon pwodwi",
+		"WithoutProduct": "San yon pwodwi"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "Dènye pri",
+		"LatestProofs": "Dènye prèv",
 		"LoadMore": "Chaje plis",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
-		"ProofUpdated": "Proof updated!",
-		"Settings": "Settings",
+		"MyPrices": "Pri mwen yo",
+		"MyProofs": "Prèv mwen yo",
+		"ProofUpdated": "Prèv modifye!",
+		"Settings": "Paramèt",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} pri",
+		"UserProofTotal": "{count} prèv"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Dènye pri",
 		"LoadMore": "Chaje plis"
 	},
 	"UserList": {
 		"LoadMore": "Chaje plis",
-		"Title": "Top contributors",
-		"UserTotal": "{count} contributors"
+		"Title": "Top kontribitè yo",
+		"UserTotal": "{count} kontribitè"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Ajoute pri",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Peyi",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Lajan",
 		"DisplayTitle": "Display",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"FavoriteCurrencies": "Lajan favori",
+		"CurrencyRequired": "Omwen yon lajan obligatwa",
 		"LanguageLabel": "Lang",
-		"LocationDisplayOSMID": "Display OSM ID",
-		"ProductDisplayBarcode": "Display barcode",
-		"ProductDisplayCategoryTag": "Display category tag",
+		"LocationDisplayOSMID": "Montre OSM ID",
+		"ProductDisplayBarcode": "Montre kòd ba",
+		"ProductDisplayCategoryTag": "Montre tag kategori",
 		"Save": "Anrejistre",
-		"Title": "Settings",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"Title": "Paramèt",
+		"TranslationCompletion": "Tradiksyon an {completion}% konplè.",
+		"TranslationHelp": "Ede nou tradwi plis lang"
 	}
 }
