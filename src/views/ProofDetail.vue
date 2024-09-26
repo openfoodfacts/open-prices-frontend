@@ -13,7 +13,6 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.Prices') }}
       </h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30" />
       <LoadedCountChip v-if="!loading" :loadedCount="proofPriceList.length" :totalCount="proofPriceTotal" />
     </v-col>
   </v-row>
@@ -24,11 +23,9 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="proof && (proofPriceList.length < proofPriceTotal)" class="mb-2">
+  <v-row v-if="loading">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getProofPrices">
-        {{ $t('Common.LoadMore') }}
-      </v-btn>
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 </template>
@@ -36,6 +33,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -55,6 +53,12 @@ export default {
   },
   mounted() {
     this.getProof()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     getProof() {
@@ -75,6 +79,11 @@ export default {
           this.proofPriceTotal = data.total
           this.loading = false
         })
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getProofPrices()
+      }
     },
   }
 }
