@@ -19,7 +19,6 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestProofs') }}
       </h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30" />
       <LoadedCountChip v-if="!loading" :loadedCount="userProofList.length" :totalCount="userProofTotal" />
       <FilterMenu v-if="!loading" kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
       <OrderMenu v-if="!loading" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
@@ -32,11 +31,9 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="userProofList.length < userProofTotal" class="mb-2">
+  <v-row v-if="loading">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getUserProofs">
-        {{ $t('Common.LoadMore') }}
-      </v-btn>
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 
@@ -53,8 +50,9 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import constants from '../constants'
 import api from '../services/api'
+import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -98,6 +96,12 @@ export default {
   mounted() {
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initUserProofs()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     initUserProofs() {
@@ -107,6 +111,7 @@ export default {
       this.getUserProofs()
     },
     getUserProofs() {
+      if (this.userProofTotal && (this.userProofList.length >= this.userProofTotal)) return
       this.loading = true
       this.userProofPage += 1
       return api.getProofs(this.getUserProofsParams)
@@ -129,6 +134,11 @@ export default {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initUserProofs() will be called in watch $route
+      }
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getUserProofs()
       }
     },
   }

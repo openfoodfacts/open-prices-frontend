@@ -28,8 +28,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
@@ -83,11 +83,6 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
-      if (utils.getDocumentScrollPercentage() > 90) {
-        this.getProducts()
-      }
-    },
     initProductList() {
       this.productList = []
       this.productTotal = null
@@ -95,6 +90,7 @@ export default {
       this.getProducts()
     },
     getProducts() {
+      if (this.productTotal && (this.productList.length >= this.productTotal)) return
       this.loading = true
       this.productPage += 1
       return api.getProducts(this.getProductsParams)
@@ -120,7 +116,12 @@ export default {
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
         // this.initProductList() will be called in watch $route
       }
-    }
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getProducts()
+      }
+    },
   }
 }
 </script>

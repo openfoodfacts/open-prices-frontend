@@ -10,7 +10,6 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.TopLocations') }}
       </h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30" />
       <LoadedCountChip v-if="!loading" :loadedCount="countryCityLocationList.length" :totalCount="countryCityLocationTotal" />
       <DisplayMenu kind="price" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
     </v-col>
@@ -33,19 +32,18 @@
     </v-window-item>
   </v-window>
 
-  <v-row v-if="countryCityLocationList.length < countryCityLocationTotal" class="mb-2">
+  <v-row v-if="loading">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getCountryCityLocations">
-        {{ $t('Common.LoadMore') }}
-      </v-btn>
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
 import api from '../services/api'
+import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -91,6 +89,12 @@ export default {
   mounted() {
     this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.currentDisplay
     this.initCountryCity()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     initCountryCity() {
@@ -102,6 +106,7 @@ export default {
       this.getCountryCityLocations()
     },
     getCountryCityLocations() {
+      if (this.countryCityLocationTotal && (this.countryCityLocationList.length >= this.countryCityLocationTotal)) return
       this.loading = true
       this.countryCityLocationPage += 1
       return api.getLocations(this.getLocationsParams)
@@ -115,6 +120,11 @@ export default {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
       // this.initCountryCity() will NOT be called in watch $route
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getCountryCityLocations()
+      }
     },
   }
 }

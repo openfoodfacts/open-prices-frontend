@@ -74,17 +74,13 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
-      if (utils.getDocumentScrollPercentage() > 90) {
-        this.getUsers()
-      }
-    },
     initUserList() {
       this.userList = []
       this.userPage = 0
       this.getUsers()
     },
     getUsers() {
+      if (this.userTotal && (this.userList.length >= this.userTotal)) return
       this.loading = true
       this.userPage += 1
       return api.getUsers(this.getUsersParams)
@@ -98,6 +94,11 @@ export default {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initUserList() will be called in watch $route
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getUsers()
+      }
     },
   }
 }

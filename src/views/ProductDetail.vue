@@ -29,7 +29,6 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <v-progress-circular v-if="loading" indeterminate :size="30" class="mr-2" />
       <LoadedCountChip v-if="!loading" :loadedCount="productPriceList.length" :totalCount="productPriceTotal" />
       <FilterMenu kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
       <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
@@ -61,11 +60,9 @@
     </v-window-item>
   </v-window>
 
-  <v-row v-if="productPriceList.length < productPriceTotal" class="mb-2">
+  <v-row v-if="loading">
     <v-col align="center">
-      <v-btn size="small" :loading="loading" @click="getProductPrices">
-        {{ $t('Common.LoadMore') }}
-      </v-btn>
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 </template>
@@ -74,9 +71,9 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import api from '../services/api'
 import constants from '../constants'
 import utils from '../utils.js'
-import api from '../services/api'
 
 export default {
   components: {
@@ -156,6 +153,12 @@ export default {
     this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.currentDisplay
     this.getProduct()
     this.initProductPrices()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     initProductPrices() {
@@ -182,6 +185,7 @@ export default {
       }
     },
     getProductPrices() {
+      if (this.productPriceTotal && (this.productPriceList.length >= this.productPriceTotal)) return
       this.loading = true
       this.productPricePage += 1
       return api.getPrices(this.getPricesParams)
@@ -212,6 +216,11 @@ export default {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
       // this.initProductPrices() will NOT be called in watch $route
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getProductPrices()
+      }
     },
   }
 }

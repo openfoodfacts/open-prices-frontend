@@ -27,8 +27,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
@@ -74,17 +74,13 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    handleScroll(event) {  // eslint-disable-line no-unused-vars
-      if (utils.getDocumentScrollPercentage() > 90) {
-        this.getLocations()
-      }
-    },
     initLocationList() {
       this.locationList = []
       this.locationPage = 0
       this.getLocations()
     },
     getLocations() {
+      if (this.locationTotal && (this.locationList.length >= this.locationTotal)) return
       this.loading = true
       this.locationPage += 1
       return api.getLocations(this.getLocationsParams)
@@ -98,6 +94,11 @@ export default {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initLocationList() will be called in watch $route
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getLocations()
+      }
     },
   }
 }

@@ -25,7 +25,7 @@ export default {
     facet: {
       type: String,
       default: null,
-      examples: ['category', 'label', 'brand', 'editor']
+      examples: ['category', 'label', 'brand', 'label', 'editor']
     },
     value: {
       type: String,
