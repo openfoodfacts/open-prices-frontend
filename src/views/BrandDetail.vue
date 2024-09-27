@@ -69,6 +69,7 @@ export default {
   watch: {
     $route (newBrand, oldBrand) {
       if (oldBrand && newBrand && newBrand.name == 'brand-detail' && oldBrand.fullPath != newBrand.fullPath) {
+        this.brandId = newBrand.params.id
         this.initBrand()
       }
     }
