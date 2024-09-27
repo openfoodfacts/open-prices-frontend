@@ -9,7 +9,7 @@
       <PriceCountChip :count="user.price_count" :withLabel="true" />
       <v-chip v-if="user.location_count" label size="small" density="comfortable" class="mr-1">
         <v-icon start icon="mdi-map-marker-outline" />
-        <span id="product-count">{{ $t('Common.LocationCount', { count: user.location_count }) }}</span>
+        <span id="location-count">{{ $t('Common.LocationCount', { count: user.location_count }) }}</span>
       </v-chip>
       <v-chip v-if="user.product_count" label size="small" density="comfortable" class="mr-1">
         <v-icon start icon="mdi-database-outline" />
@@ -17,7 +17,7 @@
       </v-chip>
       <v-chip v-if="user.proof_count" label size="small" density="comfortable">
         <v-icon start icon="mdi-image" />
-        <span id="product-count">{{ $t('Common.ProofCount', { count: user.proof_count }) }}</span>
+        <span id="proof-count">{{ $t('Common.ProofCount', { count: user.proof_count }) }}</span>
       </v-chip>
       <UserActionMenuButton :user="user" />
     </v-card-text>

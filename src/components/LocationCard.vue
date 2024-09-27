@@ -8,6 +8,19 @@
   >
     <v-card-text v-if="location">
       <PriceCountChip :count="location.price_count" :withLabel="true" />
+      <v-chip label size="small" density="comfortable" class="mr-1">
+        <v-icon start icon="mdi-account" />
+        <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>
+      </v-chip>
+      <v-chip label size="small" density="comfortable" class="mr-1">
+        <v-icon start icon="mdi-database-outline" />
+        <span id="product-count">{{ $t('Common.ProductCount', { count: location.product_count }) }}</span>
+      </v-chip>
+      <v-chip label size="small" density="comfortable">
+        <v-icon start icon="mdi-image" />
+        <span id="proof-count">{{ $t('Common.ProofCount', { count: location.proof_count }) }}</span>
+      </v-chip>
+      <br>
       <LocationOSMTagChip class="mr-1" :location="location" />
       <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
       <v-chip
