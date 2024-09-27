@@ -9,6 +9,7 @@
         {{ $t('UserList.UserTotal', { count: userTotal }) }}
       </v-chip>
       <FilterMenu v-if="!loading" kind="user" :currentFilter="currentFilter" @update:currentFilter="toggleUserFilter($event)" />
+      <OrderMenu kind="user" :currentOrder="currentOrder" @update:currentOrder="selectUserOrder($event)" />
     </v-col>
   </v-row>
 
@@ -35,6 +36,7 @@ export default {
   components: {
     UserCard: defineAsyncComponent(() => import('../components/UserCard.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
   },
   data() {
     return {
@@ -45,11 +47,12 @@ export default {
       loading: false,
       // filter & order
       currentFilter: '',
+      currentOrder: constants.USER_ORDER_LIST[0].key,  // price_count
     }
   },
   computed: {
     getUsersParams() {
-      let defaultParams = { order_by: '-price_count', page: this.userPage }
+      let defaultParams = { order_by: this.currentOrder, page: this.userPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
@@ -94,6 +97,13 @@ export default {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initUserList() will be called in watch $route
+    },
+    selectUserOrder(orderKey) {
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        // this.initUserList() will be called in watch $route
+      }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
