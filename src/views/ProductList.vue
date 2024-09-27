@@ -40,15 +40,15 @@ export default {
   },
   data() {
     return {
-      // filter & order
-      currentFilter: '',
-      currentSource: '',
-      currentOrder: constants.PRODUCT_ORDER_LIST[0].key,  // price_count
       // data
       productList: [],
       productTotal: null,
       productPage: 0,
       loading: false,
+      // filter & order
+      currentFilter: '',
+      currentSource: '',
+      currentOrder: constants.PRODUCT_ORDER_LIST[0].key,  // price_count
     }
   },
   computed: {
