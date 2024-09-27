@@ -58,19 +58,19 @@
 			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "Category",
+			"CategoryLabel": "Sokajy",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
 			"Scan": "Misafo",
 			"ScanBarcode": "Scan a barcode",
-			"Type": "Type",
+			"Type": "Karazana",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
 		"ProductModeList": {
 			"Barcode": "Kaody bara",
-			"Category": "Category"
+			"Category": "Sokajy"
 		},
 		"CategoryPricePer": {
 			"PerKg": "Price per kg",
@@ -110,17 +110,17 @@
 	"Common": {
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
-		"Brand": "Brand",
+		"Brand": "Marika",
 		"Price": "Price",
 		"Prices": "Prices",
-		"Product": "Product",
+		"Product": "Vokatra",
 		"Products": "Products",
 		"Proof": "Proof",
 		"Proofs": "Proofs",
-		"Category": "Category",
+		"Category": "Sokajy",
 		"Categories": "Sokajy",
 		"Chart": "Chart",
-		"Country": "Country",
+		"Country": "Firenena",
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
 		"Display": "Display",
@@ -129,7 +129,10 @@
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Language": "Languages",
+		"Label": "Etikety",
+		"Labels": "Labels",
+		"Language": "Language",
+		"Languages": "Fiteny",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
@@ -145,7 +148,7 @@
 		"Examples": "Examples",
 		"ExampleWithColon": "Example:",
 		"ExamplesWithColon": "Examples:",
-		"Edit": "Edit",
+		"Edit": "Ovaina",
 		"Filter": "Filter",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
@@ -153,6 +156,7 @@
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Help": "Help",
+		"History": "History",
 		"Image": "Image",
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations",
@@ -178,13 +182,13 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
-		"Type": "Type",
+		"Type": "Karazana",
 		"Upload": "Upload",
 		"User": "User",
 		"Users": "Users",
-		"View": "View",
-		"Yes": "Yes",
-		"No": "No",
+		"View": "Jery",
+		"Yes": "Eny",
+		"No": "Tsia",
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty"
@@ -206,7 +210,7 @@
 	},
 	"Header": {
 		"Dashboard": "Dashboard",
-		"Settings": "Settings",
+		"Settings": "Fikiràna",
 		"SignIn": "Sign in",
 		"SignOut": "Sign out"
 	},
@@ -268,7 +272,7 @@
 		"Title": "Delete a price"
 	},
 	"PriceEdit": {
-		"Save": "Save",
+		"Save": "Tehirizo",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
 	},
@@ -355,7 +359,7 @@
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Save": "Save",
+		"Save": "Tehirizo",
 		"Success": "Proof edited!"
 	},
 	"Router": {
@@ -372,7 +376,7 @@
 			"Title": "Add a proof"
 		},
 		"Search": {
-			"Title": "Search"
+			"Title": "Karoka"
 		},
 		"SignIn": {
 			"Title": "Sign in"
@@ -389,7 +393,7 @@
 	},
 	"Search": {
 		"ProductBarcode": "Product barcode",
-		"Title": "Search"
+		"Title": "Karoka"
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
@@ -423,7 +427,7 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
-		"Settings": "Settings",
+		"Settings": "Fikiràna",
 		"Title": "Dashboard",
 		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} proofs"
@@ -440,17 +444,17 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "Firenena",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Fiteny",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",
-		"Save": "Save",
-		"Title": "Settings",
+		"Save": "Tehirizo",
+		"Title": "Fikiràna",
 		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
 	}
