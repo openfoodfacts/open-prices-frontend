@@ -92,6 +92,7 @@ export default {
       this.getBrandProducts()
     },
     getBrandProducts() {
+      if (this.brandProductTotal && (this.brandProductList.length >= this.brandProductTotal)) return
       this.loading = true
       this.brandProductPage += 1
       return api.getProducts(this.getProductsParams)

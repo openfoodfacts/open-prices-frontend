@@ -80,6 +80,7 @@ export default {
       this.getUsers()
     },
     getUsers() {
+      if (this.userTotal && (this.userList.length >= this.userTotal)) return
       this.loading = true
       this.userPage += 1
       return api.getUsers(this.getUsersParams)

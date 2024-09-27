@@ -90,6 +90,7 @@ export default {
       this.getProducts()
     },
     getProducts() {
+      if (this.productTotal && (this.productList.length >= this.productTotal)) return
       this.loading = true
       this.productPage += 1
       return api.getProducts(this.getProductsParams)

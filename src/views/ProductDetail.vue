@@ -185,6 +185,7 @@ export default {
       }
     },
     getProductPrices() {
+      if (this.productPriceTotal && (this.productPriceList.length >= this.productPriceTotal)) return
       this.loading = true
       this.productPricePage += 1
       return api.getPrices(this.getPricesParams)
