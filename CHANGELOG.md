@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.81.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.80.0...v1.81.0) (2024-09-27)
+
+
+### Features
+
+* **dashboard:** replace load more with infinite scroll ([#851](https://github.com/openfoodfacts/open-prices-frontend/issues/851)) ([f481219](https://github.com/openfoodfacts/open-prices-frontend/commit/f4812199e84fd3097eff09a4bd33fadba8290edc))
+* **detail pages:** replace load more with infinite scroll ([#850](https://github.com/openfoodfacts/open-prices-frontend/issues/850)) ([9e91cf3](https://github.com/openfoodfacts/open-prices-frontend/commit/9e91cf39ce097c834472ca40cf0405aadcd23a8e))
+* **label card:** new label card with action menu ([#849](https://github.com/openfoodfacts/open-prices-frontend/issues/849)) ([e7b53f6](https://github.com/openfoodfacts/open-prices-frontend/commit/e7b53f68e46e127cef70735b1634c94f6f3631b7))
+* **label detail:** new label detail page ([#848](https://github.com/openfoodfacts/open-prices-frontend/issues/848)) ([3dbbc25](https://github.com/openfoodfacts/open-prices-frontend/commit/3dbbc25260f9ae50f8c712e164b0a39bb3a066bf))
+
+
+### Bug Fixes
+
+* fix infinite scroll when reaching the end ([#852](https://github.com/openfoodfacts/open-prices-frontend/issues/852)) ([0574533](https://github.com/openfoodfacts/open-prices-frontend/commit/0574533f7bfff1d225731211d8f6a28506c874e5))
+
+
+### Technical
+
+* **api:** bump API's default page_size to 25 (instead of 20). ref [#828](https://github.com/openfoodfacts/open-prices-frontend/issues/828) ([1d5fac1](https://github.com/openfoodfacts/open-prices-frontend/commit/1d5fac1281bb181759101a5c4dee7ed3a879d406))
+* **l10n:** New Crowdin translations to review and merge ([#837](https://github.com/openfoodfacts/open-prices-frontend/issues/837)) ([f4a294d](https://github.com/openfoodfacts/open-prices-frontend/commit/f4a294d9dbb145ffcd1c9c6e8833ea38ff045b95))
+
 ## [1.80.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.79.1...v1.80.0) (2024-09-22)
 
 
