@@ -173,6 +173,7 @@
 		"OrderProofCountDESC": "Proof count",
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
+		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} prices",
 		"PriceCreated": "Price created!",
 		"ProductCount": "{count} products",

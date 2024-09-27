@@ -71,7 +71,15 @@ export default {
     { key: '-date', value: 'OrderProofDateDESC', icon: 'mdi-calendar-today' },
     { key: '-created', value: 'OrderProofCreatedDESC', icon: 'mdi-clock-outline' },
   ],
+  LOCATION_ORDER_LIST: [
+    // same order as LocationCard chips
+    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
+    { key: '-user_count', value: 'OrderUserCountDESC', icon: 'mdi-account' },
+    { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
+    { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
+  ],
   USER_ORDER_LIST: [
+    // same order as UserCard chips
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
     { key: '-location_count', value: 'OrderLocationCountDESC', icon: 'mdi-map-marker-outline' },
     { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
