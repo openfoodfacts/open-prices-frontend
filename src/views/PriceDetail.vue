@@ -23,6 +23,7 @@ export default {
   data() {
     return {
       priceId: this.$route.params.id,
+      // data
       price: null,
       loading: false,
     }

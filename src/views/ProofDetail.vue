@@ -44,6 +44,7 @@ export default {
   data() {
     return {
       proofId: this.$route.params.id,
+      // data
       proof: null,
       proofPriceList: [],
       proofPriceTotal: null,

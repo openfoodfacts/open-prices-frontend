@@ -55,16 +55,16 @@ export default {
   },
   data() {
     return {
-      // order & display
-      currentOrder: '-price_count',
-      currentDisplay: constants.LOCATION_DISPLAY_LIST[0].key,
+      country: this.$route.params.country,
+      countryCity: this.$route.params.city,
       // data
-      country: null,  // see init
-      countryCity: null,  // see init
       countryCityLocationList: [],
       countryCityLocationTotal: null,
       countryCityLocationPage: 0,
       loading: false,
+      // order & display
+      currentOrder: '-price_count',
+      currentDisplay: constants.LOCATION_DISPLAY_LIST[0].key,
     }
   },
   computed: {

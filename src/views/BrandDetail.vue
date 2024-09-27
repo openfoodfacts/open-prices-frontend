@@ -46,15 +46,14 @@ export default {
   data() {
     return {
       brandId: this.$route.params.id,
-      // filter & order
-      currentFilter: '',
-      currentOrder: constants.PRODUCT_ORDER_LIST[1].key,
       // data
-      brand: null,  // see init
       brandProductList: [],
       brandProductTotal: null,
       brandProductPage: 0,
       loading: false,
+      // filter & order
+      currentFilter: '',
+      currentOrder: constants.PRODUCT_ORDER_LIST[0].key,  // price_count
     }
   },
   computed: {
@@ -67,9 +66,8 @@ export default {
     },
   },
   watch: {
-    $route (newBrand, oldBrand) {
-      if (oldBrand && newBrand && newBrand.name == 'brand-detail' && oldBrand.fullPath != newBrand.fullPath) {
-        this.brandId = newBrand.params.id
+    $route (newRoute, oldRoute) {
+      if (oldRoute && newRoute && newRoute.name == 'brand-detail' && oldRoute.fullPath != newRoute.fullPath) {
         this.initBrand()
       }
     }
@@ -87,6 +85,7 @@ export default {
   },
   methods: {
     initBrand() {
+      this.brandId = this.$route.params.id
       this.brandProductList = []
       this.brandProductTotal = null
       this.brandProductPage = 0

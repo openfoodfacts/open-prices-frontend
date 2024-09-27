@@ -54,6 +54,7 @@ export default {
   data() {
     return {
       locationId: this.$route.params.id,
+      // data
       location: null,
       locationPriceList: [],
       locationPriceTotal: null,
@@ -99,6 +100,7 @@ export default {
   },
   methods: {
     initLocationPrices() {
+      this.locationId = this.$route.params.id
       this.locationPriceList = []
       this.locationPriceTotal = null
       this.locationPricePage = 0
