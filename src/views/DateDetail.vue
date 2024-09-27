@@ -100,6 +100,7 @@ export default {
       this.getDatePrices()
     },
     getDatePrices() {
+      if (this.datePriceTotal && (this.datePriceList.length >= this.datePriceTotal)) return
       this.loading = true
       this.datePricePage += 1
       return api.getPrices(this.getPricesParams)

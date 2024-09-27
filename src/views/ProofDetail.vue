@@ -71,6 +71,7 @@ export default {
         })
     },
     getProofPrices() {
+      if (this.proofPriceTotal && (this.proofPriceList.length >= this.proofPriceTotal)) return
       this.loading = true
       this.proofPricePage += 1
       return api.getPrices({ proof_id: this.proofId, page: this.proofPricePage })

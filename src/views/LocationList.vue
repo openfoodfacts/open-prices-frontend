@@ -80,6 +80,7 @@ export default {
       this.getLocations()
     },
     getLocations() {
+      if (this.locationTotal && (this.locationList.length >= this.locationTotal)) return
       this.loading = true
       this.locationPage += 1
       return api.getLocations(this.getLocationsParams)
