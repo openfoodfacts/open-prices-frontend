@@ -92,6 +92,7 @@ export default {
     return {
       OFF_NAME: constants.OFF_NAME,
       productId: this.$route.params.id,  // product_code or product_category
+      // data
       product: null,
       category: null,
       productPriceList: [],
@@ -162,6 +163,7 @@ export default {
   },
   methods: {
     initProductPrices() {
+      this.productId = this.$route.params.id
       this.productPriceList = []
       this.productPriceTotal = 0
       this.productPricePage = 0

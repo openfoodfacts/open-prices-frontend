@@ -43,14 +43,14 @@ export default {
   },
   data() {
     return {
+      date: this.$route.params.date,
       // data
-      date: null,  // see init
       datePriceList: [],
       datePriceTotal: null,
       datePricePage: 0,
       loading: false,
       // filter & order
-      currentOrder: constants.PRICE_ORDER_LIST[1].key,
+      currentOrder: constants.PRICE_ORDER_LIST[1].key,  // date
     }
   },
   computed: {
@@ -75,8 +75,8 @@ export default {
     },
   },
   watch: {
-    $route (newDate, oldDate) {
-      if (oldDate && newDate && newDate.name == 'date-detail' && oldDate.fullPath != newDate.fullPath) {
+    $route (newRoute, oldRoute) {
+      if (oldRoute && newRoute && newRoute.name == 'date-detail' && oldRoute.fullPath != newRoute.fullPath) {
         this.initDate()
       }
     }

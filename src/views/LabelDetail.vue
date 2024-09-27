@@ -46,15 +46,15 @@ export default {
   data() {
     return {
       labelId: this.$route.params.id,
-      // filter & order
-      currentFilter: '',
-      currentOrder: constants.PRODUCT_ORDER_LIST[1].key,
       // data
       label: null,  // see init
       labelProductList: [],
       labelProductTotal: null,
       labelProductPage: 0,
       loading: false,
+      // filter & order
+      currentFilter: '',
+      currentOrder: constants.PRODUCT_ORDER_LIST[0].key,  // price_count
     }
   },
   computed: {
@@ -69,7 +69,6 @@ export default {
   watch: {
     $route (newRoute, oldRoute) {
       if (oldRoute && newRoute && newRoute.name == 'label-detail' && oldRoute.fullPath != newRoute.fullPath) {
-        this.labelId = this.$route.params.id
         this.initLabel()
       }
     }
@@ -87,6 +86,7 @@ export default {
   },
   methods: {
     initLabel() {
+      this.labelId = this.$route.params.id
       this.label = {'id': this.labelId, 'name': this.labelId}
       this.labelProductList = []
       this.labelProductTotal = null

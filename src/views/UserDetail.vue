@@ -31,8 +31,6 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
 import utils from '../utils.js'
@@ -47,6 +45,8 @@ export default {
   },
   data() {
     return {
+      username: this.$route.params.username,
+      // data
       userPriceList: [],
       userPriceTotal: null,
       userPricePage: 0,
@@ -57,10 +57,6 @@ export default {
     }
   },
   computed: {
-    ...mapStores(useAppStore),
-    username() {
-      return this.$route.params.username
-    },
     getPricesParams() {
       let defaultParams = { owner: this.username, order_by: `${this.currentOrder}`, page: this.userPricePage }
       if (this.currentFilter === 'show_last_month') {
@@ -91,6 +87,7 @@ export default {
   },
   methods: {
     initUserPrices() {
+      this.username = this.$route.params.username
       this.userPriceList = []
       this.userPriceTotal = null
       this.userPricePage = 0
