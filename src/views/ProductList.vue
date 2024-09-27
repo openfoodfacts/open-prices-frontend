@@ -43,7 +43,7 @@ export default {
       // filter & order
       currentFilter: '',
       currentSource: '',
-      currentOrder: constants.PRODUCT_ORDER_LIST[1].key,
+      currentOrder: constants.PRODUCT_ORDER_LIST[0].key,  // price_count
       // data
       productList: [],
       productTotal: null,
@@ -53,7 +53,7 @@ export default {
   },
   computed: {
     getProductsParams() {
-      let defaultParams = { order_by: `${this.currentOrder}`, page: this.productPage }
+      let defaultParams = { order_by: this.currentOrder, page: this.productPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }

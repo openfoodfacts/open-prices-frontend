@@ -58,8 +58,8 @@ export default {
   ],
   ORDER_PARAM: 'order',
   PRODUCT_ORDER_LIST: [
+    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
     { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
-    { key: '-price_count', value: 'OrderProductPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
   ],
   PRICE_ORDER_LIST: [
     { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
@@ -67,9 +67,15 @@ export default {
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   PROOF_ORDER_LIST: [
-    { key: '-price_count', value: 'OrderProofPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
+    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
     { key: '-date', value: 'OrderProofDateDESC', icon: 'mdi-calendar-today' },
     { key: '-created', value: 'OrderProofCreatedDESC', icon: 'mdi-clock-outline' },
+  ],
+  USER_ORDER_LIST: [
+    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
+    { key: '-location_count', value: 'OrderLocationCountDESC', icon: 'mdi-map-marker-outline' },
+    { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
+    { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
   ],
   DISPLAY_PARAM: 'display',
   PRICE_DISPLAY_LIST: [
