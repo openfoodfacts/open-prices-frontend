@@ -19,13 +19,13 @@
         </v-btn>
       </v-col>
       <v-col cols="12" md="6" align="center">
-        <v-btn class="mx-2" variant="text" href="https://prices.openfoodfacts.org" target="_blank">
-          {{ $t('Footer.About') }}
-        </v-btn>
-        <v-btn class="mx-2" variant="text" to="/stats">
+        <v-btn class="mx-2" variant="text" prepend-icon="mdi-chart-box-outline" to="/stats">
           {{ $t('Footer.Stats') }}
         </v-btn>
-        <v-btn class="mx-2" variant="text" href="https://github.com/openfoodfacts/open-prices-frontend" target="_blank">
+        <v-btn class="mx-2" variant="text" prepend-icon="mdi-information-outline" href="https://prices.openfoodfacts.org" target="_blank">
+          {{ $t('Footer.About') }}
+        </v-btn>
+        <v-btn class="mx-2" variant="text" prepend-icon="mdi-github" href="https://github.com/openfoodfacts/open-prices-frontend" target="_blank">
           Github
         </v-btn>
       </v-col>
