@@ -423,7 +423,8 @@
 		"Total": "Total",
 		"WithPrice": "Com um preço",
 		"WithProduct": "Com o produto",
-		"WithoutProduct": "Sem o produto"
+		"WithoutProduct": "Sem o produto",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Preços mais recentes",
