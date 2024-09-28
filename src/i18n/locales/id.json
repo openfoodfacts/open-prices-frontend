@@ -123,6 +123,7 @@
 		"Country": "Negara",
 		"Currency": "Mata uang",
 		"CurrencyMissing": "Mata uang tidak ada",
+		"Dashboard": "Dasbor",
 		"Display": "Tampilan",
 		"DisplayList": "Daftar",
 		"DisplayPriceList": "Daftar",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "Jumlah user",
 		"PriceCount": "{count} harga",
 		"PriceCreated": "Harga dibuat!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} produk",
 		"ProofCount": "{count} bukti",
+		"Search": "Cari",
+		"Settings": "Pengaturan",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
 		"SignedIn": "Masuk!",
+		"SignIn": "Masuk",
+		"SignOut": "Keluar",
 		"Share": "Bagikan",
 		"Source": "Sumber",
+		"Stats": "Statistik",
 		"Thanks": "Terima Kasih",
 		"TopContributors": "Kontributor teratas",
 		"TopLocations": "Lokasi teratas",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Pengaturan berhasil diperbarui!",
 		"TodayPriceStat": "Tidak ada harga yang ditambahkan hari ini | {todayPriceNumber} harga baru ditambahkan hari ini | {todayPriceNumber} harga baru ditambahkan hari ini!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "Basis data harga makanan yang terbuka dan bersumber dari banyak orang 🏷🍊💲",
 			"Title": "Selamat datang di {name}!"
 		}
@@ -386,6 +394,9 @@
 		"SignIn": {
 			"Title": "Masuk"
 		},
+		"Stats": {
+			"Title": "Statistik"
+		},
 		"TopContributors": {
 			"Title": "Kontributor teratas"
 		},
@@ -415,6 +426,8 @@
 	},
 	"Stats": {
 		"Prices": "Harga",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Produk dengan harga",
 		"Title": "Statistik",
 		"Products": "Produk - produk",
