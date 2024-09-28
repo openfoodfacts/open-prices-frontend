@@ -177,7 +177,7 @@
 		"OrderUserCountDESC": "Anzahl der Benutzer",
 		"PriceCount": "{count} Preise",
 		"PriceCreated": "Preis erstellt!",
-		"PricesMore": "More prices",
+		"PricesMore": "Weitere Preise",
 		"ProductCount": "{count} Produkte",
 		"ProofCount": "{count} Belege",
 		"Search": "Suchen",
@@ -234,7 +234,7 @@
 		"SettingsUpdated": "Einstellungen aktualisiert!",
 		"TodayPriceStat": "Heute keine Preise hinzugefügt | Heute {todayPriceNumber} neue Preise hinzugefügt | Heute {todayPriceNumber} neue Preise hinzugefügt!",
 		"Welcome": {
-			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
+			"Generic": "Eine offene kollektive Datenbank mit Preisen 🏷🍊💲",
 			"Subtitle": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise 🏷🍊💲",
 			"Title": "Willkommen bei {name}!"
 		}
@@ -426,8 +426,8 @@
 	},
 	"Stats": {
 		"Prices": "Preise",
-		"PricesToday": "Prices added today",
-		"PricesTotal": "Total prices",
+		"PricesToday": "Heute hinzugefügte Preise",
+		"PricesTotal": "Gesamtpreise",
 		"ProductsWithPrices": "Produkte mit Preisen",
 		"Title": "Statistiken",
 		"Products": "Produkte",
@@ -437,7 +437,7 @@
 		"WithPrice": "Mit einem Preis",
 		"WithProduct": "Mit einem Produkt",
 		"WithoutProduct": "Ohne Produkt",
-		"LastUpdated": "Last updated on {date}"
+		"LastUpdated": "Zuletzt aktualisiert am {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Aktuelle Preise",
