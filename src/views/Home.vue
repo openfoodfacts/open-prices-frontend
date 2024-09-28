@@ -1,59 +1,29 @@
 <template>
   <h1 class="text-h5 mb-1">
-    <i18n-t keypath="Home.Welcome.Title" tag="span">
-      <template #name>
-        {{ APP_NAME }}
-      </template>
-    </i18n-t>
+    {{ $t('Home.Welcome.Generic') }}
   </h1>
-  <p>{{ $t('Home.Welcome.Subtitle') }}</p>
-  
+
   <br>
 
   <v-row>
-    <v-col cols="12" sm="8" md="6" lg="4">
-      <v-card
-        :title="$t('Home.SearchProduct')"
-        prepend-icon="mdi-magnify"
-        height="100%"
-        to="/search"
-      />
+    <v-col sm="6" md="4" lg="3">
+      <v-card :title="todayPriceCount" :subtitle="$t('Stats.PricesToday')" variant="tonal" />
     </v-col>
-    <v-col cols="12" sm="8" md="6" lg="4">
-      <v-card
-        :title="$t('Home.LatestPrices')"
-        prepend-icon="mdi-tag-multiple-outline"
-        to="/prices"
-      >
-        <template v-if="!loading" #subtitle>
-          <i18n-t keypath="Home.TodayPriceStat" :plural="todayPriceCount" tag="span">
-            <template #todayPriceNumber>
-              <span id="price-count">{{ todayPriceCount }}</span>
-            </template>
-          </i18n-t>
-        </template>
-      </v-card>
+    <v-col sm="6" md="4" lg="3">
+      <v-card :title="totalPriceCount" :subtitle="$t('Stats.PricesTotal')" variant="tonal" />
     </v-col>
   </v-row>
 
+  <br>
+
   <v-row>
-    <v-col cols="12" sm="8" md="6" lg="4">
-      <v-card
-        :title="$t('Home.AddPrice')"
-        prepend-icon="mdi-tag-plus-outline"
-        color="primary"
-        variant="outlined"
-        elevation="1"
-        to="/prices/add"
-      >
-        <template v-if="!username" #subtitle>
-          <i18n-t keypath="Common.SignInOFFAccount" tag="span">
-            <template #url>
-              <OpenFoodFactsLink display="link" />
-            </template>
-          </i18n-t>
-        </template>
-      </v-card>
+    <v-col v-for="price in latestPriceList" :key="price" cols="12" sm="6" md="4">
+      <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+    </v-col>
+    <v-col cols="12" sm="6" md="4" align="center" justify="center">
+      <v-btn to="/prices" prepend-icon="mdi-tag-multiple-outline" append-icon="mdi-arrow-right">
+        {{ $t('Home.LatestPrices') }}
+      </v-btn>
     </v-col>
   </v-row>
 
@@ -83,12 +53,15 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
     return {
       APP_NAME: constants.APP_NAME,
+      // data
+      latestPriceList: [],
       todayPriceCount: null,
+      totalPriceCount: null,
       loading: false,
       // success messages
       proofSingleSuccessMessage: false,
@@ -108,9 +81,19 @@ export default {
     if (this.$route.query.settingsSuccess === 'true') {
       this.settingsSuccessMessage = true
     }
+    this.getPrices()
     this.getTodayPriceCount()
   },
   methods: {
+    getPrices() {
+      this.loading = true
+      return api.getPrices({ size: 5 })
+        .then((data) => {
+          this.latestPriceList.push(...data.items)
+          this.totalPriceCount = data.total
+          this.loading = false
+        })
+    },
     getTodayPriceCount() {
       this.loading = true
       return api.getPrices({ created__gte: utils.currentStartOfDay(), size: 1 })

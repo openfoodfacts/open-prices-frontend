@@ -7,14 +7,21 @@
         {{ APP_NAME }}
       </span>
     </v-app-bar-title>
+    <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')" />
+    <v-btn v-else prepend-icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')">
+      {{ $t('Common.Search') }}
+    </v-btn>
+    <v-btn v-if="!$vuetify.display.smAndUp" color="primary" icon="mdi-tag-plus-outline" to="/prices/add" :aria-label="$t('Common.AddPrice')" />
+    <v-btn v-else color="primary" prepend-icon="mdi-tag-plus-outline" to="/prices/add" :aria-label="$t('Common.AddPrice')">
+      {{ $t('Common.AddPrice') }}
+    </v-btn>
     <template v-if="!username" #append>
-      <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-login" to="/sign-in" :aria-label="$t('Header.SignIn')" />
-      <v-btn v-else prepend-icon="mdi-login" to="/sign-in" :aria-label="$t('Header.SignIn')">
-        {{ $t('Header.SignIn') }}
+      <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-login" to="/sign-in" :aria-label="$t('Common.SignIn')" />
+      <v-btn v-else prepend-icon="mdi-login" to="/sign-in" :aria-label="$t('Common.SignIn')">
+        {{ $t('Common.SignIn') }}
       </v-btn>
     </template>
     <template v-else #append>
-      <v-btn color="primary" icon="mdi-tag-plus-outline" to="/prices/add" :aria-label="$t('Home.AddPrice')" />
       <v-menu scroll-strategy="close">
         <template #activator="{ props }">
           <v-btn v-if="!$vuetify.display.smAndUp" v-bind="props" icon="mdi-account-circle" />
@@ -27,14 +34,14 @@
             {{ username }}
           </v-list-item>
           <v-divider class="d-sm-none" />
-          <v-list-item :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard" :aria-label="$t('Header.Dashboard')">
-            {{ $t('Header.Dashboard') }}
+          <v-list-item :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard" :aria-label="$t('Common.Dashboard')">
+            {{ $t('Common.Dashboard') }}
           </v-list-item>
-          <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/settings" :aria-label="$t('Header.Settings')">
-            {{ $t('Header.Settings') }}
+          <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/settings" :aria-label="$t('Common.Settings')">
+            {{ $t('Common.Settings') }}
           </v-list-item>
-          <v-list-item :slim="true" prepend-icon="mdi-logout" :aria-label="$t('Header.SignOut')" @click="signOut">
-            {{ $t('Header.SignOut') }}
+          <v-list-item :slim="true" prepend-icon="mdi-logout" :aria-label="$t('Common.SignOut')" @click="signOut">
+            {{ $t('Common.SignOut') }}
           </v-list-item>
         </v-list>
       </v-menu>
