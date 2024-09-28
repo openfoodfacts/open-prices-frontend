@@ -423,7 +423,8 @@
 		"Total": "总计",
 		"WithPrice": "有价格",
 		"WithProduct": "有了产品",
-		"WithoutProduct": "无产品"
+		"WithoutProduct": "无产品",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "最新价格",

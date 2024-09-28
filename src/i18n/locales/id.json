@@ -423,7 +423,8 @@
 		"Total": "Total",
 		"WithPrice": "Dengan harga",
 		"WithProduct": "Dengan produk",
-		"WithoutProduct": "Tanpa produk"
+		"WithoutProduct": "Tanpa produk",
+		"LastUpdated": "Terakhir diperbarui pada {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Harga terbaru",

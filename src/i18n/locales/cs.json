@@ -423,7 +423,8 @@
 		"Total": "Celkem",
 		"WithPrice": "S cenou",
 		"WithProduct": "S produktem",
-		"WithoutProduct": "Bez produktu"
+		"WithoutProduct": "Bez produktu",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Nejnovější ceny",

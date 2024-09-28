@@ -423,7 +423,8 @@
 		"Total": "Усього",
 		"WithPrice": "З ціною",
 		"WithProduct": "З продуктом",
-		"WithoutProduct": "Без продукту"
+		"WithoutProduct": "Без продукту",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Остання ціна",

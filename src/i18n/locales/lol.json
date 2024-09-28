@@ -423,7 +423,8 @@
 		"Total": "crwdns246968:0crwdne246968:0",
 		"WithPrice": "crwdns246970:0crwdne246970:0",
 		"WithProduct": "crwdns246972:0crwdne246972:0",
-		"WithoutProduct": "crwdns246974:0crwdne246974:0"
+		"WithoutProduct": "crwdns246974:0crwdne246974:0",
+		"LastUpdated": "crwdns249580:0{date}crwdne249580:0"
 	},
 	"UserDashboard": {
 		"LatestPrices": "crwdns246726:0crwdne246726:0",

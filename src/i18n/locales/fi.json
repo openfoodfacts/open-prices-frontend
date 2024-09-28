@@ -423,7 +423,8 @@
 		"Total": "Yhteensä",
 		"WithPrice": "Hinnalla",
 		"WithProduct": "Tuotteen kanssa",
-		"WithoutProduct": "Ilman tuotetta"
+		"WithoutProduct": "Ilman tuotetta",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Viimeisimmät hinnat",

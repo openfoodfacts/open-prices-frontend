@@ -423,7 +423,8 @@
 		"Total": "Total",
 		"WithPrice": "ஒரு விலையுடன்",
 		"WithProduct": "ஒரு தயாரிப்புடன்",
-		"WithoutProduct": "ஒரு தயாரிப்பு இல்லாமல்"
+		"WithoutProduct": "ஒரு தயாரிப்பு இல்லாமல்",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
