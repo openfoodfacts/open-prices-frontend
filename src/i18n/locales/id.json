@@ -165,7 +165,7 @@
 		"OrderLocationCountDESC": "Jumlah lokasi",
 		"OrderProductUniqueScansDESC": "Jumlah pindaian",
 		"OrderProductPriceCountDESC": "Jumlah harga",
-		"OrderPriceCountDESC": "Jumlah harga",
+		"OrderPriceCountDESC": "Price count",
 		"OrderPriceASC": "Harga",
 		"OrderPriceCreatedDESC": "Tanggal penambahan",
 		"OrderPriceDateDESC": "Tanggal harga",
