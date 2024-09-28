@@ -123,6 +123,7 @@
 		"Country": "Country",
 		"Currency": "Currency",
 		"CurrencyMissing": "நாணயத்தைக் காணவில்லை",
+		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} prices",
 		"PriceCreated": "Price created!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} தயாரிப்புகள்",
 		"ProofCount": "{count} சான்றுகள்",
+		"Search": "தேடுக",
+		"Settings": "அமைப்புகள்",
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
 		"SignedIn": "Signed in!",
+		"SignIn": "உள்நுழை",
+		"SignOut": "Sign out",
 		"Share": "பகிர்க",
 		"Source": "Source",
+		"Stats": "Stats",
 		"Thanks": "Thanks",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "இன்று விலை சேர்க்கப்படவில்லை | {todayPriceNumber} புதிய விலைகள் இன்று சேர்க்கப்பட்டுள்ளன | இன்று {todayPriceNumber} புதிய விலை சேர்க்கப்பட்டது!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to {name}!"
 		}
@@ -386,6 +394,9 @@
 		"SignIn": {
 			"Title": "உள்நுழை"
 		},
+		"Stats": {
+			"Title": "Stats"
+		},
 		"TopContributors": {
 			"Title": "Top contributors"
 		},
@@ -415,6 +426,8 @@
 	},
 	"Stats": {
 		"Prices": "Prices",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "Products",
