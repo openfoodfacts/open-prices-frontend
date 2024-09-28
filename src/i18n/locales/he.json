@@ -166,7 +166,7 @@
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "מספר הסריקות",
 		"OrderProductPriceCountDESC": "מספר המחירים",
-		"OrderPriceCountDESC": "Price count",
+		"OrderPriceCountDESC": "כמות מחירים",
 		"OrderPriceASC": "מחיר",
 		"OrderPriceCreatedDESC": "תאריך ההוספה",
 		"OrderPriceDateDESC": "תאריך המחיר",
@@ -177,7 +177,7 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} מחירים",
 		"PriceCreated": "המחיר נוצר!",
-		"PricesMore": "More prices",
+		"PricesMore": "מחירים נוספים",
 		"ProductCount": "{count} מוצרים",
 		"ProofCount": "{count} הוכחות",
 		"Search": "חיפוש",
@@ -234,7 +234,7 @@
 		"SettingsUpdated": "ההגדרות עודכנו!",
 		"TodayPriceStat": "לא נוספו מחירים היום | מחיר חדש נוסף היום | {todayPriceNumber} מחירים חדשים נוספו היום!",
 		"Welcome": {
-			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
+			"Generic": "מסד נתונים פתוח למחירים במיקור המונים 🏷🍊",
 			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
 			"Title": "ברוך בואך אל {name}!"
 		}
@@ -426,8 +426,8 @@
 	},
 	"Stats": {
 		"Prices": "מחירים",
-		"PricesToday": "Prices added today",
-		"PricesTotal": "Total prices",
+		"PricesToday": "מחירים שנוספו היום",
+		"PricesTotal": "סך כל המחירים",
 		"ProductsWithPrices": "מוצרים עם מחירים",
 		"Title": "סטטיסטיקה",
 		"Products": "מוצרים",
@@ -437,7 +437,7 @@
 		"WithPrice": "עם מחיר",
 		"WithProduct": "עם מוצר",
 		"WithoutProduct": "בלי מוצר",
-		"LastUpdated": "Last updated on {date}"
+		"LastUpdated": "עדכון אחרון ב־{date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "מחירים עדכניים",
