@@ -123,6 +123,7 @@
 		"Country": "Страна",
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
+		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} prices",
 		"PriceCreated": "Price created!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} продукта",
 		"ProofCount": "{count} proofs",
+		"Search": "Търсене",
+		"Settings": "Настройки",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "Signed in!",
+		"SignIn": "Вход",
+		"SignOut": "Изход",
 		"Share": "Сподели",
 		"Source": "Източник",
+		"Stats": "Stats",
 		"Thanks": "Thanks",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to {name}!"
 		}
@@ -386,6 +394,9 @@
 		"SignIn": {
 			"Title": "Вход"
 		},
+		"Stats": {
+			"Title": "Stats"
+		},
 		"TopContributors": {
 			"Title": "Top contributors"
 		},
@@ -415,6 +426,8 @@
 	},
 	"Stats": {
 		"Prices": "Prices",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "Продукти",
