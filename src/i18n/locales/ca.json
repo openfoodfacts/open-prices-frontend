@@ -123,6 +123,7 @@
 		"Country": "País",
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
+		"Dashboard": "Tauler",
 		"Display": "Mostra",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} prices",
 		"PriceCreated": "Preu afegit!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} products",
 		"ProofCount": "{count} proofs",
+		"Search": "Cerca",
+		"Settings": "Preferències",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "Sessió iniciada!",
+		"SignIn": "Inicia la sessió",
+		"SignOut": "Tanca la sessió",
 		"Share": "Comparteix",
 		"Source": "Origen",
+		"Stats": "Estadístiques",
 		"Thanks": "Thanks",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Configuració modificada!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "Una base de dades oberta amb els preus dels aliments 🏷🍊💲",
 			"Title": "Welcome to {name}!"
 		}
@@ -386,6 +394,9 @@
 		"SignIn": {
 			"Title": "Inicia la sessió"
 		},
+		"Stats": {
+			"Title": "Estadístiques"
+		},
 		"TopContributors": {
 			"Title": "Top contributors"
 		},
@@ -415,6 +426,8 @@
 	},
 	"Stats": {
 		"Prices": "Prices",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Estadístiques",
 		"Products": "Productes",
