@@ -423,7 +423,8 @@
 		"Total": "合計",
 		"WithPrice": "価格付き",
 		"WithProduct": "製品付き",
-		"WithoutProduct": "製品なし"
+		"WithoutProduct": "製品なし",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
