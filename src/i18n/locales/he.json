@@ -423,7 +423,8 @@
 		"Total": "סך הכול",
 		"WithPrice": "עם מחיר",
 		"WithProduct": "עם מוצר",
-		"WithoutProduct": "בלי מוצר"
+		"WithoutProduct": "בלי מוצר",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "מחירים עדכניים",
