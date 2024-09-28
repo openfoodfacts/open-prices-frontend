@@ -165,7 +165,7 @@
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Počet skenů",
 		"OrderProductPriceCountDESC": "Počet cen",
-		"OrderPriceCountDESC": "Počet cen",
+		"OrderPriceCountDESC": "Price count",
 		"OrderPriceASC": "Cena",
 		"OrderPriceCreatedDESC": "Datum přidání",
 		"OrderPriceDateDESC": "Datum ceny",

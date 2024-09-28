@@ -165,7 +165,7 @@
 		"OrderLocationCountDESC": "Vietų skaičius",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
-		"OrderPriceCountDESC": "Number of prices",
+		"OrderPriceCountDESC": "Kainų skaičius",
 		"OrderPriceASC": "Kaina",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",

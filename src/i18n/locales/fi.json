@@ -165,7 +165,7 @@
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Skannausten määrä",
 		"OrderProductPriceCountDESC": "Hintojen määrä",
-		"OrderPriceCountDESC": "Hintojen määrä",
+		"OrderPriceCountDESC": "Price count",
 		"OrderPriceASC": "Hinta",
 		"OrderPriceCreatedDESC": "Lisäyspäivämäärä",
 		"OrderPriceDateDESC": "Hinnan päivämäärä",
