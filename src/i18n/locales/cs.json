@@ -123,6 +123,7 @@
 		"Country": "Země",
 		"Currency": "Měna",
 		"CurrencyMissing": "Chybí měna",
+		"Dashboard": "Nástěnka",
 		"Display": "Zobrazit",
 		"DisplayList": "Seznam",
 		"DisplayPriceList": "Seznam",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} cen",
 		"PriceCreated": "Cena vytvořena!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} produktů",
 		"ProofCount": "{count} důkazů",
+		"Search": "Vyhledat",
+		"Settings": "Nastavení",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
 		"SignedIn": "Přihlášeno!",
+		"SignIn": "Přihlásit se",
+		"SignOut": "Odhlásit",
 		"Share": "Sdílet",
 		"Source": "Zdroj",
+		"Stats": "Statistiky",
 		"Thanks": "Děkujeme",
 		"TopContributors": "Nejlepší přispěvatelé",
 		"TopLocations": "Nejlepší polohy",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Nastavení aktualizováno!",
 		"TodayPriceStat": "Dnes nebyly přidány žádné ceny | Dnes přidány {todayPriceNumber} nové ceny | Dnes přidáno {todayPriceNumber} nových cen!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "Otevřená crowdsourcovaná databáze cen potravin 🏷🍊💲",
 			"Title": "Vítejte v {name}!"
 		}
@@ -386,6 +394,9 @@
 		"SignIn": {
 			"Title": "Přihlásit se"
 		},
+		"Stats": {
+			"Title": "Statistiky"
+		},
 		"TopContributors": {
 			"Title": "Nejlepší přispěvatelé"
 		},
@@ -415,6 +426,8 @@
 	},
 	"Stats": {
 		"Prices": "Ceny",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Produkty s cenami",
 		"Title": "Statistiky",
 		"Products": "Produkty",
