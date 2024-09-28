@@ -424,7 +424,7 @@
 		"WithPrice": "Avec un prix",
 		"WithProduct": "Avec un produit",
 		"WithoutProduct": "Sans produit",
-		"LastUpdated": "Last updated on {date}"
+		"LastUpdated": "Dernière mise à jour le {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Derniers prix",
