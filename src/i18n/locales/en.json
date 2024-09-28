@@ -386,6 +386,9 @@
 		"SignIn": {
 			"Title": "Sign in"
 		},
+		"Stats": {
+			"Title": "Stats"
+		},
 		"TopContributors": {
 			"Title": "Top contributors"
 		},
