@@ -123,6 +123,7 @@
 		"Country": "地區",
 		"Currency": "货币",
 		"CurrencyMissing": "Currency missing",
+		"Dashboard": "仪表板",
 		"Display": "显示",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} 价格",
 		"PriceCreated": "价格已创建！",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} 产品",
 		"ProofCount": "{count} 证明",
+		"Search": "搜尋",
+		"Settings": "設定",
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
 		"SignedIn": "登录",
+		"SignIn": "登录",
+		"SignOut": "登出",
 		"Share": "推荐给好友",
 		"Source": "来源",
+		"Stats": "统计数据",
 		"Thanks": "谢谢",
 		"TopContributors": "杰出贡献者",
 		"TopLocations": "热门地点",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "设置更新！",
 		"TodayPriceStat": "今天没有添加价格 | {todayPriceNumber} 今天添加了新价格 | {todayPriceNumber} 今天添加了新价格！",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "一个开放的众包食品价格数据库🏷🍊💲",
 			"Title": "欢迎来到 {name}！"
 		}
@@ -386,6 +394,9 @@
 		"SignIn": {
 			"Title": "登录"
 		},
+		"Stats": {
+			"Title": "统计数据"
+		},
 		"TopContributors": {
 			"Title": "杰出贡献者"
 		},
@@ -415,6 +426,8 @@
 	},
 	"Stats": {
 		"Prices": "价格",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "有价格的产品",
 		"Title": "统计数据",
 		"Products": "产品",
