@@ -423,7 +423,8 @@
 		"Total": "Total",
 		"WithPrice": "Ak yon pri",
 		"WithProduct": "Ak yon pwodwi",
-		"WithoutProduct": "San yon pwodwi"
+		"WithoutProduct": "San yon pwodwi",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Dènye pri",
