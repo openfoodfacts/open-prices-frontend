@@ -423,7 +423,8 @@
 		"Total": "Toplam",
 		"WithPrice": "Bir fiyat ile",
 		"WithProduct": "Bir ürün ile",
-		"WithoutProduct": "Ürün olmadan"
+		"WithoutProduct": "Ürün olmadan",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Son fiyatlar",
