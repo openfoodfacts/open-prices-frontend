@@ -123,6 +123,7 @@
 		"Country": "Pays",
 		"Currency": "Devise",
 		"CurrencyMissing": "Devise manquante",
+		"Dashboard": "Tableau de bord",
 		"Display": "Afficher",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "Nombre d'utilisateurs",
 		"PriceCount": "{count} prix",
 		"PriceCreated": "Prix créé !",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} produits",
 		"ProofCount": "{count} preuves",
+		"Search": "Rechercher",
+		"Settings": "Paramètres",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
 		"SignedIn": "Connecté !",
+		"SignIn": "Se connecter",
+		"SignOut": "Se déconnecter",
 		"Share": "Partager",
 		"Source": "Source",
+		"Stats": "Statistiques",
 		"Thanks": "Merci",
 		"TopContributors": "Top contributeurs",
 		"TopLocations": "Top lieux",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Paramètres mis à jour !",
 		"TodayPriceStat": "Aucun prix ajouté aujourd'hui | {todayPriceNumber} nouveau prix ajouté aujourd'hui | {todayPriceNumber} nouveaux prix ajoutés aujourd'hui !",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "Une base de données open source collaborative de prix de produits alimentaires 🏷🍊💲",
 			"Title": "Bienvenue sur {name} !"
 		}
@@ -386,6 +394,9 @@
 		"SignIn": {
 			"Title": "Se connecter"
 		},
+		"Stats": {
+			"Title": "Statistiques"
+		},
 		"TopContributors": {
 			"Title": "Top contributeurs"
 		},
@@ -415,6 +426,8 @@
 	},
 	"Stats": {
 		"Prices": "Prix",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Produits avec prix",
 		"Title": "Statistiques",
 		"Products": "Produits",
