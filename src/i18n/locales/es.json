@@ -165,7 +165,7 @@
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Número de escaneos",
 		"OrderProductPriceCountDESC": "Número de precios",
-		"OrderPriceCountDESC": "Número de precios",
+		"OrderPriceCountDESC": "Price count",
 		"OrderPriceASC": "Precio",
 		"OrderPriceCreatedDESC": "Fecha de agregación",
 		"OrderPriceDateDESC": "Fecha del precio",
