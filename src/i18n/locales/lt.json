@@ -423,7 +423,8 @@
 		"Total": "Iš viso",
 		"WithPrice": "Su kaina",
 		"WithProduct": "Su produktu",
-		"WithoutProduct": "Be produkto"
+		"WithoutProduct": "Be produkto",
+		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Naujausios kainos",
