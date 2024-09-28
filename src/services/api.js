@@ -231,6 +231,15 @@ export default {
     .then((response) => response.json())
   },
 
+  getStats() {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/stats?${buildURLParams()}`
+    return fetch(url, {
+      method: 'GET',
+      headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
+
   openfoodfactsProductSearch(code) {
     const url = `${constants.OFF_API_URL}/${code}.json`
     return fetch(url, {
