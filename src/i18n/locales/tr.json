@@ -193,6 +193,8 @@
 		"TopContributors": "En çok katkıda bulunanlar",
 		"TopLocations": "En iyi yerler",
 		"TopProducts": "En iyi ürünler",
+		"Today": "Today",
+		"Total": "Toplam",
 		"Type": "Tür",
 		"Upload": "Yükle",
 		"User": "Kullanıcı",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Hata: yanlış kimlik bilgileri"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Fiyatlar",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "Toplam",
 		"WithPrice": "Bir fiyat ile",
 		"WithProduct": "Bir ürün ile",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "Ürün olmadan",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

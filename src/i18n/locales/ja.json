@@ -193,6 +193,8 @@
 		"TopContributors": "上位貢献者:",
 		"TopLocations": "上位の場所",
 		"TopProducts": "Top products",
+		"Today": "Today",
+		"Total": "合計",
 		"Type": "種別",
 		"Upload": "アップロード",
 		"User": "ユーザー",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Prices",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "合計",
 		"WithPrice": "価格付き",
 		"WithProduct": "製品付き",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "製品なし",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

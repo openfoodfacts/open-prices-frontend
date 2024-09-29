@@ -193,6 +193,8 @@
 		"TopContributors": "Top kontribitè yo",
 		"TopLocations": "Top locations",
 		"TopProducts": "Tòp pwodwi yo",
+		"Today": "Today",
+		"Total": "Total",
 		"Type": "Type",
 		"Upload": "Telechaje",
 		"User": "User",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Pri",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "Total",
 		"WithPrice": "Ak yon pri",
 		"WithProduct": "Ak yon pwodwi",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "San yon pwodwi",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

@@ -193,6 +193,8 @@
 		"TopContributors": "תורמים מובילים",
 		"TopLocations": "מקומות מובילים",
 		"TopProducts": "מוצרים מובילים",
+		"Today": "Today",
+		"Total": "סך הכול",
 		"Type": "סוג",
 		"Upload": "העלאה",
 		"User": "משתמש",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "שגיאה: פרטי גישה שגויים"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "מחירים",
 		"PricesToday": "מחירים שנוספו היום",
 		"PricesTotal": "סך כל המחירים",
@@ -439,7 +442,11 @@
 		"Total": "סך הכול",
 		"WithPrice": "עם מחיר",
 		"WithProduct": "עם מוצר",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "בלי מוצר",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "עדכון אחרון ב־{date}"
 	},
 	"UserDashboard": {

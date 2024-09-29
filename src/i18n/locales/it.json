@@ -193,6 +193,8 @@
 		"TopContributors": "Collaboratori principali",
 		"TopLocations": "Posizioni migliori",
 		"TopProducts": "Prodotti migliori",
+		"Today": "Today",
+		"Total": "Totale",
 		"Type": "Tipo",
 		"Upload": "Carica",
 		"User": "Utente",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Errore: credenziali errate"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Prezzi",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "Totale",
 		"WithPrice": "Con un prezzo",
 		"WithProduct": "Con un prodotto",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "Senza prodotto",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

@@ -193,6 +193,8 @@
 		"TopContributors": "crwdns249190:0crwdne249190:0",
 		"TopLocations": "crwdns249192:0crwdne249192:0",
 		"TopProducts": "crwdns249194:0crwdne249194:0",
+		"Today": "crwdns249608:0crwdne249608:0",
+		"Total": "crwdns249610:0crwdne249610:0",
 		"Type": "crwdns249004:0crwdne249004:0",
 		"Upload": "crwdns249046:0crwdne249046:0",
 		"User": "crwdns249410:0crwdne249410:0",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "crwdns246718:0crwdne246718:0"
 	},
 	"Stats": {
+		"AddedToday": "crwdns249612:0crwdne249612:0",
 		"Prices": "crwdns246720:0crwdne246720:0",
 		"PricesToday": "crwdns249600:0crwdne249600:0",
 		"PricesTotal": "crwdns249602:0crwdne249602:0",
@@ -439,7 +442,11 @@
 		"Total": "crwdns246968:0crwdne246968:0",
 		"WithPrice": "crwdns246970:0crwdne246970:0",
 		"WithProduct": "crwdns246972:0crwdne246972:0",
+		"WithProductBarcode": "crwdns249614:0crwdne249614:0",
+		"WithProductCategory": "crwdns249616:0crwdne249616:0",
 		"WithoutProduct": "crwdns246974:0crwdne246974:0",
+		"WithBarcode": "crwdns249618:0crwdne249618:0",
+		"WithCategory": "crwdns249620:0crwdne249620:0",
 		"LastUpdated": "crwdns249580:0{date}crwdne249580:0"
 	},
 	"UserDashboard": {

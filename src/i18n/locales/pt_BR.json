@@ -193,6 +193,8 @@
 		"TopContributors": "Top contribuidores",
 		"TopLocations": "Principais locais",
 		"TopProducts": "Principais produtos",
+		"Today": "Today",
+		"Total": "Total",
 		"Type": "Tipo",
 		"Upload": "Atualizar",
 		"User": "Utilizador",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Erro: credenciais erradas"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Preços",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "Total",
 		"WithPrice": "Com um preço",
 		"WithProduct": "Com o produto",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "Sem o produto",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

@@ -193,6 +193,8 @@
 		"TopContributors": "Najlepsi współtwórcy",
 		"TopLocations": "Najczęstsze lokalizacje",
 		"TopProducts": "Najlepsze produkty",
+		"Today": "Today",
+		"Total": "Razem",
 		"Type": "Typ",
 		"Upload": "Prześlij",
 		"User": "Użytkownik",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Błąd: nieprawidłowe dane logowania"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Ceny",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "Razem",
 		"WithPrice": "Z ceną",
 		"WithProduct": "Z produktem",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "Bez produktu",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

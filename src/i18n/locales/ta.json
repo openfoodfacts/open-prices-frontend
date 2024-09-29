@@ -193,6 +193,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"Today": "Today",
+		"Total": "Total",
 		"Type": "Type",
 		"Upload": "Upload",
 		"User": "பயனர்",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Prices",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "Total",
 		"WithPrice": "ஒரு விலையுடன்",
 		"WithProduct": "ஒரு தயாரிப்புடன்",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "ஒரு தயாரிப்பு இல்லாமல்",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
