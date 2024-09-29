@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "crwdns246696:0crwdne246696:0"
 		},
+		"Dashboard": {
+			"Title": "crwdns249604:0crwdne249604:0"
+		},
 		"LatestPrices": {
 			"Title": "crwdns246840:0crwdne246840:0"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "crwdns246726:0crwdne246726:0",
 		"LatestProofs": "crwdns246946:0crwdne246946:0",
 		"LoadMore": "crwdns246728:0crwdne246728:0",
+		"MyDashboard": "crwdns249606:0crwdne249606:0",
 		"MyPrices": "crwdns246940:0crwdne246940:0",
 		"MyProofs": "crwdns246948:0crwdne246948:0",
 		"ProofUpdated": "crwdns247892:0crwdne247892:0",
