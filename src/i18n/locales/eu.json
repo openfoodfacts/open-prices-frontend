@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Hasiera"
 		},
+		"Dashboard": {
+			"Title": "Dashboard"
+		},
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
