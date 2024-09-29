@@ -17,10 +17,12 @@
   <br>
 
   <v-row>
-    <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4">
+    <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" :hidePriceCreated="false" elevation="1" height="100%" />
     </v-col>
-    <v-col cols="12" sm="6" md="4" align="center" justify="center">
+    <v-col cols="12" sm="6" md="4" xl="3" align="center">
+      <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
+      <br v-if="$vuetify.display.smAndUp">
       <v-btn to="/prices" prepend-icon="mdi-tag-multiple-outline" append-icon="mdi-arrow-right">
         {{ $t('Home.LatestPrices') }}
       </v-btn>
