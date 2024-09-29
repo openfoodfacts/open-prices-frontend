@@ -193,6 +193,8 @@
 		"TopContributors": "杰出贡献者",
 		"TopLocations": "热门地点",
 		"TopProducts": "热门产品",
+		"Today": "Today",
+		"Total": "总计",
 		"Type": "類型",
 		"Upload": "上传",
 		"User": "用户",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "错误：凭据错误"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "价格",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "总计",
 		"WithPrice": "有价格",
 		"WithProduct": "有了产品",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "无产品",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
