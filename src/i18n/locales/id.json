@@ -193,6 +193,8 @@
 		"TopContributors": "Kontributor teratas",
 		"TopLocations": "Lokasi teratas",
 		"TopProducts": "Produk teratas",
+		"Today": "Today",
+		"Total": "Total",
 		"Type": "Tipe",
 		"Upload": "Unggah",
 		"User": "Pengguna",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Kesalahan: kredensial salah"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Harga",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "Total",
 		"WithPrice": "Dengan harga",
 		"WithProduct": "Dengan produk",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "Tanpa produk",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Terakhir diperbarui pada {date}"
 	},
 	"UserDashboard": {
