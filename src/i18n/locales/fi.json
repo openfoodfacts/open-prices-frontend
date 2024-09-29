@@ -193,6 +193,8 @@
 		"TopContributors": "Huippuavustajat",
 		"TopLocations": "Huippupaikat",
 		"TopProducts": "Huipputuotteet",
+		"Today": "Today",
+		"Total": "Yhteensä",
 		"Type": "Tyyppi",
 		"Upload": "Lähetä",
 		"User": "Käyttäjä",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Virhe: väärät tunnistetiedot"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Hinnat",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "Yhteensä",
 		"WithPrice": "Hinnalla",
 		"WithProduct": "Tuotteen kanssa",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "Ilman tuotetta",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
