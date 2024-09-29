@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "ホーム"
 		},
+		"Dashboard": {
+			"Title": "Dashboard"
+		},
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "最新の証拠",
 		"LoadMore": "もっと読み込む",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "私の価格",
 		"MyProofs": "自分の証拠",
 		"ProofUpdated": "証拠が更新されました！",
