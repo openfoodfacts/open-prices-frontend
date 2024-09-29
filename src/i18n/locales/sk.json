@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Domov"
 		},
+		"Dashboard": {
+			"Title": "Hlavný panel"
+		},
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Načítať ďalšie",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
