@@ -1,5 +1,36 @@
 # Changelog
 
+## [1.83.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.82.0...v1.83.0) (2024-09-29)
+
+
+### Features
+
+* **Home:** reorganize home page sections. move buttons to header ([#865](https://github.com/openfoodfacts/open-prices-frontend/issues/865)) ([aa973b0](https://github.com/openfoodfacts/open-prices-frontend/commit/aa973b0e1fa865d8d933814cbacd3db2cf6b9828))
+
+
+### Bug Fixes
+
+* **CI:** fix again restriction labeling of Translations. ref [#237](https://github.com/openfoodfacts/open-prices-frontend/issues/237) ([ac8258b](https://github.com/openfoodfacts/open-prices-frontend/commit/ac8258bac09b7b4178f301984c7feab95e111bcc))
+* **CI:** restrict labeling of Translations. ref [#237](https://github.com/openfoodfacts/open-prices-frontend/issues/237) ([2e60cd7](https://github.com/openfoodfacts/open-prices-frontend/commit/2e60cd749e73d07c2f69d09a5230c467ae30e9d2))
+* **Footer:** reduce height, fix bottom padding, add inside padding. ref [#843](https://github.com/openfoodfacts/open-prices-frontend/issues/843) ([6d05367](https://github.com/openfoodfacts/open-prices-frontend/commit/6d0536748591f1264e8872b10831d73e46589c0c))
+
+
+### Technical
+
+* **drawer:** add link to Dashboard. ref [#866](https://github.com/openfoodfacts/open-prices-frontend/issues/866) ([902827c](https://github.com/openfoodfacts/open-prices-frontend/commit/902827c92ff013a028841cdb613d8719e5de44c6))
+* **drawer:** add link to stats page ([#867](https://github.com/openfoodfacts/open-prices-frontend/issues/867)) ([eafb4e2](https://github.com/openfoodfacts/open-prices-frontend/commit/eafb4e2e70706a6cd63386430808e32ef9de3c8c))
+* **drawer:** move up 'Add a price' (above Search & Latest prices). ref [#866](https://github.com/openfoodfacts/open-prices-frontend/issues/866) ([152df71](https://github.com/openfoodfacts/open-prices-frontend/commit/152df719d73ea20ef9dc5c52209f71dacc4d4ba8))
+* **Home:** load 25 latest prices (but show only 5 on small screens). ref [#865](https://github.com/openfoodfacts/open-prices-frontend/issues/865) ([588c97a](https://github.com/openfoodfacts/open-prices-frontend/commit/588c97a9f6ed14fe73bd39b0f0d5351973758071))
+* **Home:** show 4 columns of latest prices on xl screens. ref [#843](https://github.com/openfoodfacts/open-prices-frontend/issues/843) ([c3d04ed](https://github.com/openfoodfacts/open-prices-frontend/commit/c3d04ed4a2ee4489a6972613fbcd8295036ee81c))
+* **Home:** show latest price created date. ref [#843](https://github.com/openfoodfacts/open-prices-frontend/issues/843) & [#806](https://github.com/openfoodfacts/open-prices-frontend/issues/806) ([b1b2337](https://github.com/openfoodfacts/open-prices-frontend/commit/b1b233727846274a01eddcae1ac5e15cf244b625))
+* **l10n:** New Crowdin translations to review and merge ([#864](https://github.com/openfoodfacts/open-prices-frontend/issues/864)) ([19a4832](https://github.com/openfoodfacts/open-prices-frontend/commit/19a4832716d8894e85ad2ae3792649beb8b95750))
+* **l10n:** New Crowdin translations to review and merge ([#870](https://github.com/openfoodfacts/open-prices-frontend/issues/870)) ([930f15b](https://github.com/openfoodfacts/open-prices-frontend/commit/930f15b25a37ab6676d1ea2e0e3857f4a69638d7))
+* **l10n:** New Crowdin translations to review and merge ([#873](https://github.com/openfoodfacts/open-prices-frontend/issues/873)) ([b801f2c](https://github.com/openfoodfacts/open-prices-frontend/commit/b801f2c6c0179ee3cc8e88159db19143b48a5af9))
+* **Price card:** allow toggling price owner, date & created fields. ref [#806](https://github.com/openfoodfacts/open-prices-frontend/issues/806) ([ee44680](https://github.com/openfoodfacts/open-prices-frontend/commit/ee4468019fc222af6c96dcb3bc523578500c9bfe))
+* show 4 columns on xl screens ([#872](https://github.com/openfoodfacts/open-prices-frontend/issues/872)) ([8c9bfbc](https://github.com/openfoodfacts/open-prices-frontend/commit/8c9bfbc67657ee62f8debe534ba92b60fe4a4cfd))
+* **Stats:** change StatCard density to compact. ref [#871](https://github.com/openfoodfacts/open-prices-frontend/issues/871) ([0df1724](https://github.com/openfoodfacts/open-prices-frontend/commit/0df1724756f6f848d8541973998922c86934dd46))
+* **Stats:** new StatCard component. Use in stats page ([#871](https://github.com/openfoodfacts/open-prices-frontend/issues/871)) ([55ffabe](https://github.com/openfoodfacts/open-prices-frontend/commit/55ffabe1bcf961112c58376a9a270357592f62d4))
+
 ## [1.82.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.81.0...v1.82.0) (2024-09-28)
 
 
