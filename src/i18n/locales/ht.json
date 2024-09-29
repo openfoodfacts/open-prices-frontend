@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Home"
 		},
+		"Dashboard": {
+			"Title": "Dashboard"
+		},
 		"LatestPrices": {
 			"Title": "Dènye pri"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Dènye pri",
 		"LatestProofs": "Dènye prèv",
 		"LoadMore": "Chaje plis",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Pri mwen yo",
 		"MyProofs": "Prèv mwen yo",
 		"ProofUpdated": "Prèv modifye!",
