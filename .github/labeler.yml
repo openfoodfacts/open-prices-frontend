@@ -50,6 +50,7 @@ Action menus:
   - any-glob-to-any-file: 'src/components/*ActionMenuButton.vue'
 
 Translations:
-- changed-files:
-  - any-glob-to-any-file: 'src/i18n/**/*'
-  - all-globs-to-all-files: '!src/i18n/locales/en.json'
+- all:
+  - changed-files:
+    - any-glob-to-any-file: 'src/i18n/**/*'
+    - all-globs-to-all-files: '!src/i18n/locales/en.json'
