@@ -3,6 +3,7 @@
     :title="value"
     :subtitle="subtitle"
     variant="tonal"
+    density="compact"
   />
 </template>
 

@@ -11,7 +11,7 @@
           </template>
         </i18n-t>
         <br>
-        <v-btn v-for="source in sourceList" :key="source.source" class="mr-1" size="x-small" active :prepend-icon="source.icon" :href="source.url" target="_blank">
+        <v-btn v-for="source in sourceList" :key="source.source" class="mr-1 mb-2" size="x-small" active :prepend-icon="source.icon" :href="source.url" target="_blank">
           {{ source.label }}
           <v-tooltip activator="parent" open-on-click location="top">
             {{ source.name }}

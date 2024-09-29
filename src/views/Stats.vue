@@ -1,4 +1,8 @@
 <template>
+  <h1 class="text-h5 mb-1">
+    {{ $t('Common.Stats') }}
+  </h1>
+
   <h2 class="text-h6 mb-1">
     <v-icon size="x-small" icon="mdi-tag-outline" />
     {{ $t('Common.Prices') }}
