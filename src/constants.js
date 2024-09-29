@@ -9,9 +9,13 @@ const OPF_ICON = 'mdi-bookshelf'
 
 export default {
   APP_NAME: 'Open Prices',
+  APP_URL: 'https://prices.openfoodfacts.org',
+  APP_API_URL: 'https://prices.openfoodfacts.org/api/docs',
   APP_USER_AGENT: 'Open Prices Web App',
   OFF_NAME: OFF_NAME,
   OFF_URL: 'https://world.openfoodfacts.org',
+  OFF_CONTACT_EMAIL: 'contact@openfoodfacts.org',
+  OFF_SIGN_UP_URL: 'https://world.openfoodfacts.org/cgi/user.pl',
   OFF_ICON: OFF_ICON,
   OFF_WIKI_URL: 'https://wiki.openfoodfacts.org/Main_Page',
   OFF_WIKI_APP_URL: 'https://wiki.openfoodfacts.org/Project:Open-Prices',
@@ -116,4 +120,8 @@ export default {
     'car_sharing',
     'yes',
   ],
+  LICENSE_ODBL_NAME: 'Open Database License (ODbL)',
+  LICENSE_ODBL_URL: 'https://opendatacommons.org/licenses/odbl/1.0/',
+  LICENSE_CC_BY_SA_NAME: 'Creative Commons Attribution-ShareAlike 4.0 International',
+  LICENSE_CC_BY_SA_URL: 'https://creativecommons.org/licenses/by-sa/4.0/',
 }

@@ -1,6 +1,6 @@
 <template>
   <h2 class="text-h6">
-    {{ $t('Home.Welcome.Generic') }}
+    {{ $t('Common.Tagline') }}
   </h2>
 
   <br>
