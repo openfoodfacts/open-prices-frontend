@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Homepage"
 		},
+		"Dashboard": {
+			"Title": "Cruscotto"
+		},
 		"LatestPrices": {
 			"Title": "Ultimi prezzi"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Ultimi prezzi",
 		"LatestProofs": "Ultime prove",
 		"LoadMore": "Scarica altro",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "I miei prezzi",
 		"MyProofs": "Le mie prove",
 		"ProofUpdated": "Prova aggiornata!",
