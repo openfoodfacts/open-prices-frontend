@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.82.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.81.0...v1.82.0) (2024-09-28)
+
+
+### Features
+
+* **locations:** new order menu by counts ([#857](https://github.com/openfoodfacts/open-prices-frontend/issues/857)) ([1e310ce](https://github.com/openfoodfacts/open-prices-frontend/commit/1e310ce45502022d3ed37cdf90906aa3ce995cb3))
+* **locations:** show user, product & proof counts ([#853](https://github.com/openfoodfacts/open-prices-frontend/issues/853)) ([65d3fe9](https://github.com/openfoodfacts/open-prices-frontend/commit/65d3fe903f63ee3375cdf1890ba4587fd4b4448e))
+* **users:** new order menu by counts ([#856](https://github.com/openfoodfacts/open-prices-frontend/issues/856)) ([5d2bde1](https://github.com/openfoodfacts/open-prices-frontend/commit/5d2bde14632ccb6b0620e729a3342c7d817b6f6e))
+
+
+### Bug Fixes
+
+* **Brand detail:** properly refresh the list when choosing another brand ([#858](https://github.com/openfoodfacts/open-prices-frontend/issues/858)) ([cb00fb8](https://github.com/openfoodfacts/open-prices-frontend/commit/cb00fb81f559b4f97db772be58f730a4d7995878))
+* **Category detail:** properly refresh the list when choosing another category ([#844](https://github.com/openfoodfacts/open-prices-frontend/issues/844)) ([105d828](https://github.com/openfoodfacts/open-prices-frontend/commit/105d828f2d8dedb0b6fe036e5df4db55d66a4587))
+
+
+### Technical
+
+* homogeize detail page init with route params. fixes. ref [#844](https://github.com/openfoodfacts/open-prices-frontend/issues/844), [#858](https://github.com/openfoodfacts/open-prices-frontend/issues/858), [#856](https://github.com/openfoodfacts/open-prices-frontend/issues/856) ([a65ae6b](https://github.com/openfoodfacts/open-prices-frontend/commit/a65ae6b3690e47a61dae09409a87b554c1017594))
+* **l10n:** New Crowdin translations to review and merge ([#855](https://github.com/openfoodfacts/open-prices-frontend/issues/855)) ([0ca0b9b](https://github.com/openfoodfacts/open-prices-frontend/commit/0ca0b9b797027d4d8dae3fd9a7898671689e991f))
+* **l10n:** New Crowdin translations to review and merge ([#859](https://github.com/openfoodfacts/open-prices-frontend/issues/859)) ([09dcffc](https://github.com/openfoodfacts/open-prices-frontend/commit/09dcffcc723371724a3022a1bbf61d5f5773b220))
+* **l10n:** New Crowdin translations to review and merge ([#861](https://github.com/openfoodfacts/open-prices-frontend/issues/861)) ([031d5d8](https://github.com/openfoodfacts/open-prices-frontend/commit/031d5d8257d7224d8b8ea09350a5424d17a94113))
+* **l10n:** New Crowdin translations to review and merge ([#863](https://github.com/openfoodfacts/open-prices-frontend/issues/863)) ([e687fa8](https://github.com/openfoodfacts/open-prices-frontend/commit/e687fa83db2e703360439da81696790cce9acdcc))
+* **stats:** Use new /stats endpoint. Show last updated date ([#862](https://github.com/openfoodfacts/open-prices-frontend/issues/862)) ([255d9f4](https://github.com/openfoodfacts/open-prices-frontend/commit/255d9f4a8713e2aa7770e62b1b4cbbdd3bc922f0))
+
 ## [1.81.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.80.0...v1.81.0) (2024-09-27)
 
 
