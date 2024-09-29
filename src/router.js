@@ -6,7 +6,7 @@ import localeManager from './i18n/localeManager.js'
 const routes = [
   { path: '/', name: 'home', component: () => import('./views/Home.vue'), meta: { title: 'Home', icon: 'mdi-home', drawerMenu: true } },
   { path: '/sign-in', name: 'sign-in', component: () => import('./views/SignIn.vue'), meta: { title: 'SignIn', icon: 'mdi-login', drawerMenu: true, requiresAuth: false } },
-  { path: '/dashboard', name: 'dashboard', component: () => import('./views/UserDashboard.vue'), meta: { title: 'Dashboard', requiresAuth: true } },
+  { path: '/dashboard', name: 'dashboard', component: () => import('./views/UserDashboard.vue'), meta: { title: 'Dashboard', icon: 'mdi-view-dashboard-outline', drawerMenu: true, requiresAuth: true } },
   { path: '/dashboard/prices', name: 'dashboard-prices', component: () => import('./views/UserDashboardPriceList.vue'), meta: { title: 'MyPrices', requiresAuth: true } },
   { path: '/dashboard/proofs', name: 'dashboard-proofs', component: () => import('./views/UserDashboardProofList.vue'), meta: { title: 'MyProofs', requiresAuth: true } },
   { path: '/settings', name: 'settings', component: () => import('./views/UserSettings.vue'), meta: { title: 'Settings', requiresAuth: true } },
