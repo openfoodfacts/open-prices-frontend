@@ -17,7 +17,7 @@
   <br>
 
   <v-row>
-    <v-col v-for="price in latestPriceList" :key="price" cols="12" sm="6" md="4">
+    <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
     <v-col cols="12" sm="6" md="4" align="center" justify="center">
@@ -73,6 +73,13 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    displayedPriceList() {
+      if (!this.$vuetify.display.smAndUp) {
+        return this.latestPriceList.slice(0, 5)
+      } else {
+        return this.latestPriceList
+      }
+    }
   },
   mounted() {
     if (this.$route.query.proofSingleSuccess === 'true') {
@@ -87,9 +94,9 @@ export default {
   methods: {
     getPrices() {
       this.loading = true
-      return api.getPrices({ size: 5 })
+      return api.getPrices({ size: 25 })
         .then((data) => {
-          this.latestPriceList.push(...data.items)
+          this.latestPriceList = data.items
           this.totalPriceCount = data.total
           this.loading = false
         })
