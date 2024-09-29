@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "ראשי"
 		},
+		"Dashboard": {
+			"Title": "לוח בקרה"
+		},
 		"LatestPrices": {
 			"Title": "מחירים עדכניים"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "מחירים עדכניים",
 		"LatestProofs": "ההוכחות העדכניות ביותר",
 		"LoadMore": "לטעון עוד",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
 		"ProofUpdated": "ההוכחה עודכנה!",
