@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Úvod"
 		},
+		"Dashboard": {
+			"Title": "Nástěnka"
+		},
 		"LatestPrices": {
 			"Title": "Nejnovější ceny"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Nejnovější ceny",
 		"LatestProofs": "Nejnovější důkazy",
 		"LoadMore": "Načíst další",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje důkazy",
 		"ProofUpdated": "Důkaz aktualizován!",
