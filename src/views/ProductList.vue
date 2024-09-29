@@ -14,7 +14,7 @@
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4">
+    <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4" xl="3">
       <ProductCard :product="product" elevation="1" height="100%" />
     </v-col>
   </v-row>

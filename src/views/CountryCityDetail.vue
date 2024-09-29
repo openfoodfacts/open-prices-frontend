@@ -18,7 +18,7 @@
   <v-window v-model="currentDisplay" disabled>
     <v-window-item value="list">
       <v-row class="mt-0 mb-1">
-        <v-col v-for="location in countryCityLocationList" :key="location" cols="12" sm="6" md="4">
+        <v-col v-for="location in countryCityLocationList" :key="location" cols="12" sm="6" md="4" xl="3">
           <LocationCard :location="location" :hideLocationOSMID="true" :hideCountryCity="true" height="100%" />
         </v-col>
       </v-row>

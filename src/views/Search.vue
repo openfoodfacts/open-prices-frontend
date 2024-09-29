@@ -34,7 +34,7 @@
   </p>
 
   <v-row v-if="productTotal > 0" class="mt-0">
-    <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4">
+    <v-col v-for="product in productList" :key="product" cols="12" sm="6" md="4" xl="3">
       <ProductCard :product="product" :latestPrice="product.latest_price" elevation="1" height="100%" />
     </v-col>
   </v-row>
