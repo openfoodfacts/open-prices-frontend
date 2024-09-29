@@ -193,7 +193,7 @@
 		"TopContributors": "Найактивніші користувачі",
 		"TopLocations": "Топ локацій",
 		"TopProducts": "Кращі продукти",
-		"Today": "Today",
+		"Today": "Сьогодні",
 		"Total": "Усього",
 		"Type": "Тип",
 		"Upload": "Завантажити",
@@ -430,7 +430,7 @@
 		"WrongCredentials": "Помилка: неправильні облікові дані"
 	},
 	"Stats": {
-		"AddedToday": "Added today",
+		"AddedToday": "Додано сьогодні",
 		"Prices": "Ціни",
 		"PricesToday": "Ціни, додані сьогодні",
 		"PricesTotal": "Загальна ціна",
@@ -442,11 +442,11 @@
 		"Total": "Усього",
 		"WithPrice": "З ціною",
 		"WithProduct": "З продуктом",
-		"WithProductBarcode": "With a product barcode",
-		"WithProductCategory": "With a product category",
+		"WithProductBarcode": "Зі штрих-кодом товару",
+		"WithProductCategory": "З категорією товару",
 		"WithoutProduct": "Без продукту",
-		"WithBarcode": "With a barcode",
-		"WithCategory": "With a category",
+		"WithBarcode": "Зі штрих-кодом",
+		"WithCategory": "З категорією",
 		"LastUpdated": "Оновлено {date}"
 	},
 	"UserDashboard": {
