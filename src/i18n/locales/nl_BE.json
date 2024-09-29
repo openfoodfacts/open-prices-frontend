@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Hoofdmenu"
 		},
+		"Dashboard": {
+			"Title": "Dashboard"
+		},
 		"LatestPrices": {
 			"Title": "Laatste prijzen"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Laatste prijzen",
 		"LatestProofs": "Laatste bewijzen",
 		"LoadMore": "Meer laden",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Mijn prijzen",
 		"MyProofs": "Mijn bewijzen",
 		"ProofUpdated": "Bewijs bijgewerkt!",
