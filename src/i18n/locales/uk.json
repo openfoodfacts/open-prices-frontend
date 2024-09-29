@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Головна"
 		},
+		"Dashboard": {
+			"Title": "Панель приладів"
+		},
 		"LatestPrices": {
 			"Title": "Остання ціна"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Остання ціна",
 		"LatestProofs": "Останні докази",
 		"LoadMore": "Завантажити більше",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
 		"ProofUpdated": "Доказ оновлено!",
