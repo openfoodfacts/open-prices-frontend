@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Strona główna"
 		},
+		"Dashboard": {
+			"Title": "Panel"
+		},
 		"LatestPrices": {
 			"Title": "Najnowsze ceny"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Najnowsze ceny",
 		"LatestProofs": "Najnowsze dowody",
 		"LoadMore": "Załaduj więcej",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje dowody",
 		"ProofUpdated": "Proof updated!",
