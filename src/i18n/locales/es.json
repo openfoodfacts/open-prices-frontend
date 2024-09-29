@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Inicio"
 		},
+		"Dashboard": {
+			"Title": "Panel de control"
+		},
 		"LatestPrices": {
 			"Title": "Últimos precios"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Últimos precios",
 		"LatestProofs": "Últimos comprobantes",
 		"LoadMore": "Cargar más",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Mis precios",
 		"MyProofs": "Mis pruebas",
 		"ProofUpdated": "¡Comprobante actualizado!",
