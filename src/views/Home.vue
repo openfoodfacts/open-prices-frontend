@@ -1,16 +1,16 @@
 <template>
-  <h1 class="text-h5 mb-1">
+  <h2 class="text-h6">
     {{ $t('Home.Welcome.Generic') }}
-  </h1>
+  </h2>
 
   <br>
 
   <v-row>
-    <v-col sm="6" md="4" lg="3">
-      <v-card :title="todayPriceCount" :subtitle="$t('Stats.PricesToday')" variant="tonal" />
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="todayPriceCount" :subtitle="$t('Stats.Today')" />
     </v-col>
-    <v-col sm="6" md="4" lg="3">
-      <v-card :title="totalPriceCount" :subtitle="$t('Stats.PricesTotal')" variant="tonal" />
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="totalPriceCount" :subtitle="$t('Stats.Total')" />
     </v-col>
   </v-row>
 
@@ -53,6 +53,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {

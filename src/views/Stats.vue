@@ -1,82 +1,79 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('Stats.Title') }}
-    <v-progress-circular v-if="loading" indeterminate :size="30" />
-  </h1>
+  <h2 class="text-h6 mb-1">
+    <v-icon size="x-small" icon="mdi-tag-outline" />
+    {{ $t('Common.Prices') }}
+  </h2>
 
   <v-row>
-    <v-col cols="12" md="6" lg="4">
-      <v-card :title="$t('Common.Prices')" height="100%">
-        <v-card-text>
-          <p>
-            {{ $t('Stats.Total') }} <strong>{{ stats.price_count }}</strong>
-          </p>
-          <p>
-            {{ $t('Stats.WithProduct') }} <v-chip label size="small" density="comfortable" class="mr-1">
-              barcode
-            </v-chip>
-            <strong>{{ stats.price_barcode_count }}</strong>
-          </p>
-          <p>
-            {{ $t('Stats.WithoutProduct') }} <v-chip label size="small" density="comfortable" class="mr-1">
-              category
-            </v-chip>
-            <strong>{{ stats.price_category_count }}</strong>
-          </p>
-        </v-card-text>
-      </v-card>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_count" :subtitle="$t('Stats.Total')" />
     </v-col>
-
-    <v-col cols="12" md="6" lg="4">
-      <v-card :title="$t('Common.Products')" height="100%">
-        <v-card-text>
-          <p>
-            {{ $t('Stats.Total') }} <strong>{{ stats.product_count }}</strong>
-          </p>
-          <p>
-            {{ $t('Stats.WithPrice') }} <strong>{{ stats.product_with_price_count }}</strong>
-          </p>
-        </v-card-text>
-      </v-card>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_barcode_count" :subtitle="$t('Stats.WithBarcode')" />
     </v-col>
-
-    <v-col cols="12" md="6" lg="4">
-      <v-card :title="$t('Common.Locations')" height="100%">
-        <v-card-text>
-          <p>
-            {{ $t('Stats.Total') }} <strong>{{ stats.location_count }}</strong>
-          </p>
-          <p>
-            {{ $t('Stats.WithPrice') }} <strong>{{ stats.location_with_price_count }}</strong>
-          </p>
-        </v-card-text>
-      </v-card>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_category_count" :subtitle="$t('Stats.WithCategory')" />
     </v-col>
+  </v-row>
 
-    <v-col cols="12" md="6" lg="4">
-      <v-card :title="$t('Common.Proofs')" height="100%">
-        <v-card-text>
-          <p>
-            {{ $t('Stats.Total') }} <strong>{{ stats.proof_count }}</strong>
-          </p>
-          <p>
-            {{ $t('Stats.WithPrice') }} <strong>{{ stats.proof_with_price_count }}</strong>
-          </p>
-        </v-card-text>
-      </v-card>
+  <br>
+
+  <h2 class="text-h6 mb-1">
+    <v-icon size="x-small" icon="mdi-database-outline" />
+    {{ $t('Common.Products') }}
+  </h2>
+
+  <v-row>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" />
     </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+    </v-col>
+  </v-row>
 
-    <v-col cols="12" md="6" lg="4">
-      <v-card :title="$t('Stats.Users')" height="100%">
-        <v-card-text>
-          <p>
-            {{ $t('Stats.Total') }} <strong>{{ stats.user_count }}</strong>
-          </p>
-          <p>
-            {{ $t('Stats.WithPrice') }} <strong>{{ stats.user_with_price_count }}</strong>
-          </p>
-        </v-card-text>
-      </v-card>
+  <br>
+
+  <h2 class="text-h6 mb-1">
+    <v-icon size="x-small" icon="mdi-map-marker-outline" />
+    {{ $t('Common.Locations') }}
+  </h2>
+
+  <v-row>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.location_count" :subtitle="$t('Stats.Total')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.location_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+    </v-col>
+  </v-row>
+
+  <br>
+
+  <h2 class="text-h6 mb-1">
+    <v-icon size="x-small" icon="mdi-image" />
+    {{ $t('Common.Proofs') }}
+  </h2>
+
+  <v-row>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_count" :subtitle="$t('Stats.Total')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+    </v-col>
+  </v-row>
+
+  <br>
+
+  <h2 class="text-h6 mb-1">
+    <v-icon size="x-small" icon="mdi-account-outline" />
+    {{ $t('Common.Users') }}
+  </h2>
+
+  <v-row>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.user_with_price_count" :subtitle="$t('Stats.WithPrice')" />
     </v-col>
   </v-row>
 
@@ -92,10 +89,14 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import utils from '../utils.js'
 
 export default {
+  components: {
+    StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
+  },
   data() {
     return {
       stats: {
