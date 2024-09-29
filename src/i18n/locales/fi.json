@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Koti"
 		},
+		"Dashboard": {
+			"Title": "Kojelauta"
+		},
 		"LatestPrices": {
 			"Title": "Viimeisimmät hinnat"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Viimeisimmät hinnat",
 		"LatestProofs": "Uusimmat todisteet",
 		"LoadMore": "Lataa enemmän",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Minun hinnat",
 		"MyProofs": "Minun todisteeni",
 		"ProofUpdated": "Todiste päivitetty!",
