@@ -193,6 +193,8 @@
 		"TopContributors": "Top contributeurs",
 		"TopLocations": "Top lieux",
 		"TopProducts": "Top produits",
+		"Today": "Today",
+		"Total": "Total",
 		"Type": "Type",
 		"Upload": "Téléverser",
 		"User": "Utilisateur",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Erreur : Problème d'identifiant"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Prix",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
@@ -439,7 +442,11 @@
 		"Total": "Total",
 		"WithPrice": "Avec un prix",
 		"WithProduct": "Avec un produit",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "Sans produit",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Dernière mise à jour le {date}"
 	},
 	"UserDashboard": {
