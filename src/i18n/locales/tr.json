@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Ana Sayfa"
 		},
+		"Dashboard": {
+			"Title": "Gösterge paneli"
+		},
 		"LatestPrices": {
 			"Title": "Son fiyatlar"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Son fiyatlar",
 		"LatestProofs": "En son bedeller",
 		"LoadMore": "Daha fazla yükle",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Fiyatlarım",
 		"MyProofs": "Bedellerim",
 		"ProofUpdated": "Bedel güncellendi!",
