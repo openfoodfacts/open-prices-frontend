@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Начало"
 		},
+		"Dashboard": {
+			"Title": "Dashboard"
+		},
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Зареди още",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Моите цени",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
