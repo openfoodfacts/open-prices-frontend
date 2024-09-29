@@ -123,6 +123,7 @@
 		"Country": "Ülke",
 		"Currency": "Kur",
 		"CurrencyMissing": "Currency missing",
+		"Dashboard": "Gösterge paneli",
 		"Display": "Göster",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} fiyat",
 		"PriceCreated": "Fiyat oluşturuldu!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} ürün",
 		"ProofCount": "{count} bedel",
+		"Search": "Ara",
+		"Settings": "Ayarlar",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
 		"SignedIn": "Giriş yapıldı!",
+		"SignIn": "Giriş Yap",
+		"SignOut": "Çıkış yap",
 		"Share": "Paylaş",
 		"Source": "Bilgi Kaynağı",
+		"Stats": "İstatistikler",
 		"Thanks": "Teşekkürler",
 		"TopContributors": "En çok katkıda bulunanlar",
 		"TopLocations": "En iyi yerler",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Ayarlar güncellendi!",
 		"TodayPriceStat": "Bugün fiyat eklenmedi | Bugün eklenen {todayPriceNumber} yeni fiyat | Bugün {todayPriceNumber} yeni fiyat eklendi!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "Gıda fiyatlarına ilişkin açık ve kitle kaynaklı bir veritabanı 🏷🍊💲",
 			"Title": "{name}'a Hoş Geldiniz!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "Ana Sayfa"
 		},
+		"Dashboard": {
+			"Title": "Gösterge paneli"
+		},
 		"LatestPrices": {
 			"Title": "Son fiyatlar"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "Giriş Yap"
+		},
+		"Stats": {
+			"Title": "İstatistikler"
 		},
 		"TopContributors": {
 			"Title": "En çok katkıda bulunanlar"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Fiyatlar",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Fiyatları olan ürünler",
 		"Title": "İstatistikler",
 		"Products": "Ürünler",
@@ -430,6 +446,7 @@
 		"LatestPrices": "Son fiyatlar",
 		"LatestProofs": "En son bedeller",
 		"LoadMore": "Daha fazla yükle",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Fiyatlarım",
 		"MyProofs": "Bedellerim",
 		"ProofUpdated": "Bedel güncellendi!",

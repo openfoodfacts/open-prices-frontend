@@ -123,6 +123,7 @@
 		"Country": "Maa",
 		"Currency": "Valuutta",
 		"CurrencyMissing": "Valuutta puuttuu",
+		"Dashboard": "Kojelauta",
 		"Display": "Näytä",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} hinnat",
 		"PriceCreated": "Hinta luotu!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} tuotteita",
 		"ProofCount": "{count} todisteita",
+		"Search": "Etsi",
+		"Settings": "Asetukset",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
 		"SignedIn": "Kirjautunut sisään!",
+		"SignIn": "Kirjaudu sisään",
+		"SignOut": "Kirjaudu ulos",
 		"Share": "Jaa",
 		"Source": "Lähde",
+		"Stats": "Tilastot",
 		"Thanks": "Kiitos",
 		"TopContributors": "Huippuavustajat",
 		"TopLocations": "Huippupaikat",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Asetukset päivitetty!",
 		"TodayPriceStat": "Ei hintoja lisätty tänään | {todayPriceNumber} uutta hintaa lisätty tänään | {todayPriceNumber} uusi hinta lisätty tänään!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "Avoin joukkolähdetietokanta elintarvikkeiden hinnoista 🏷🍊💲",
 			"Title": "Tervetuloa {name}:aan!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "Koti"
 		},
+		"Dashboard": {
+			"Title": "Kojelauta"
+		},
 		"LatestPrices": {
 			"Title": "Viimeisimmät hinnat"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "Kirjaudu sisään"
+		},
+		"Stats": {
+			"Title": "Tilastot"
 		},
 		"TopContributors": {
 			"Title": "Huippuavustajat"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Hinnat",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Tuotteet hinnoilla",
 		"Title": "Tilastot",
 		"Products": "Tuotteet",
@@ -430,6 +446,7 @@
 		"LatestPrices": "Viimeisimmät hinnat",
 		"LatestProofs": "Uusimmat todisteet",
 		"LoadMore": "Lataa enemmän",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Minun hinnat",
 		"MyProofs": "Minun todisteeni",
 		"ProofUpdated": "Todiste päivitetty!",

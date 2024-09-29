@@ -123,6 +123,7 @@
 		"Country": "Peyi",
 		"Currency": "Lajan",
 		"CurrencyMissing": "Lajan ki manke",
+		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "Lis",
 		"DisplayPriceList": "Lis",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} pri",
 		"PriceCreated": "Pri kreye!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} pwodwi",
 		"ProofCount": "{count} prèv",
+		"Search": "Rechèch",
+		"Settings": "Paramèt",
 		"SignInOFFAccount": "Konekte ak kont {url} ou",
 		"SignedIn": "Signed in!",
+		"SignIn": "Sign in",
+		"SignOut": "Sign out",
 		"Share": "Share",
 		"Source": "Source",
+		"Stats": "Stats",
 		"Thanks": "Mèsi",
 		"TopContributors": "Top kontribitè yo",
 		"TopLocations": "Top locations",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to {name}!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "Home"
 		},
+		"Dashboard": {
+			"Title": "Dashboard"
+		},
 		"LatestPrices": {
 			"Title": "Dènye pri"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "Sign in"
+		},
+		"Stats": {
+			"Title": "Stats"
 		},
 		"TopContributors": {
 			"Title": "Top kontribitè yo"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Pri",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Pwodwi ak pri",
 		"Title": "Stats",
 		"Products": "Products",
@@ -430,6 +446,7 @@
 		"LatestPrices": "Dènye pri",
 		"LatestProofs": "Dènye prèv",
 		"LoadMore": "Chaje plis",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Pri mwen yo",
 		"MyProofs": "Prèv mwen yo",
 		"ProofUpdated": "Prèv modifye!",

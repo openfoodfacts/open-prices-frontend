@@ -123,6 +123,7 @@
 		"Country": "国",
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
+		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "リスト",
 		"DisplayPriceList": "リスト",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "商品 {count} 個",
 		"PriceCreated": "Price created!",
+		"PricesMore": "More prices",
 		"ProductCount": "商品 {count} 個",
 		"ProofCount": "{count} 件の証明",
+		"Search": "検索",
+		"Settings": "設定",
 		"SignInOFFAccount": "Google アカウントでログイン",
 		"SignedIn": "Signed in!",
+		"SignIn": "サインイン",
+		"SignOut": "サインアウト",
 		"Share": "共有",
 		"Source": "情報源",
+		"Stats": "Stats",
 		"Thanks": "ありがとうございます",
 		"TopContributors": "上位貢献者:",
 		"TopLocations": "上位の場所",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "今日は価格が追加されていません |本日追加された新しい価格は {todayPriceNumber} |本日、新たに {todayPriceNumber} 件の価格が追加されました！",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "{name} へようこそ"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "ホーム"
 		},
+		"Dashboard": {
+			"Title": "Dashboard"
+		},
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "サインイン"
+		},
+		"Stats": {
+			"Title": "Stats"
 		},
 		"TopContributors": {
 			"Title": "上位貢献者:"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Prices",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "製品",
@@ -430,6 +446,7 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "最新の証拠",
 		"LoadMore": "もっと読み込む",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "私の価格",
 		"MyProofs": "自分の証拠",
 		"ProofUpdated": "証拠が更新されました！",

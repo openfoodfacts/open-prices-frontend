@@ -123,6 +123,7 @@
 		"Country": "Šalis",
 		"Currency": "Valiuta",
 		"CurrencyMissing": "Currency missing",
+		"Dashboard": "Prietaisų skydelis",
 		"Display": "Display",
 		"DisplayList": "Sąrašas",
 		"DisplayPriceList": "Sąrašas",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "Vartotojų skaičius",
 		"PriceCount": "{count} prices",
 		"PriceCreated": "Kaina sukurta!",
+		"PricesMore": "Daugiau kainų",
 		"ProductCount": "{count} produktai (-ų)",
 		"ProofCount": "{count} įrodymai (-ų)",
+		"Search": "Paieška",
+		"Settings": "Nustatymai",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"SignedIn": "Prisijungta!",
+		"SignIn": "Prisijungti",
+		"SignOut": "Atsijungti",
 		"Share": "Dalintis",
 		"Source": "Šaltinis",
+		"Stats": "Statistika",
 		"Thanks": "Ačiū",
 		"TopContributors": "Geriausi bendraautoriai",
 		"TopLocations": "Geriausios vietos",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Nuostatos atnaujintos!",
 		"TodayPriceStat": "Šiandien nepridėta jokių kainų | Šiandien pridėta {todayPriceNumber} naujų kainų | Šiandien pridėta {todayPriceNumber} naujos kainos!",
 		"Welcome": {
+			"Generic": "Atviroji sutelktinių išteklių gautų kainų duomenų bazė 🏷🍊💲",
 			"Subtitle": "Atviroji sutelktinių išteklių gautų maisto kainų duomenų bazė 🏷🍊💲",
 			"Title": "Sveiki prisijungę prie {name}!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "Pagrindinis"
 		},
+		"Dashboard": {
+			"Title": "Prietaisų skydelis"
+		},
 		"LatestPrices": {
 			"Title": "Naujausios kainos"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "Prisijungti"
+		},
+		"Stats": {
+			"Title": "Statistika"
 		},
 		"TopContributors": {
 			"Title": "Geriausi bendraautoriai"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Kainos",
+		"PricesToday": "Kainos pridėtos šiandien",
+		"PricesTotal": "Visos kainos",
 		"ProductsWithPrices": "Produktai su kainomis",
 		"Title": "Statistika",
 		"Products": "Produktai",
@@ -424,12 +440,13 @@
 		"WithPrice": "Su kaina",
 		"WithProduct": "Su produktu",
 		"WithoutProduct": "Be produkto",
-		"LastUpdated": "Last updated on {date}"
+		"LastUpdated": "Paskutinį kartą atnaujinta {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Naujausios kainos",
 		"LatestProofs": "Naujausi įrodymai",
 		"LoadMore": "Įkelti daugiau",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
 		"ProofUpdated": "Įrodymas atnaujintas!",

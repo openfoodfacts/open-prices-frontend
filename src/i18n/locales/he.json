@@ -123,6 +123,7 @@
 		"Country": "מדינה",
 		"Currency": "מטבע",
 		"CurrencyMissing": "חסר מטבע",
+		"Dashboard": "לוח בקרה",
 		"Display": "תצוגה",
 		"DisplayList": "רשימה",
 		"DisplayPriceList": "רשימה",
@@ -165,7 +166,7 @@
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "מספר הסריקות",
 		"OrderProductPriceCountDESC": "מספר המחירים",
-		"OrderPriceCountDESC": "Price count",
+		"OrderPriceCountDESC": "כמות מחירים",
 		"OrderPriceASC": "מחיר",
 		"OrderPriceCreatedDESC": "תאריך ההוספה",
 		"OrderPriceDateDESC": "תאריך המחיר",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} מחירים",
 		"PriceCreated": "המחיר נוצר!",
+		"PricesMore": "מחירים נוספים",
 		"ProductCount": "{count} מוצרים",
 		"ProofCount": "{count} הוכחות",
+		"Search": "חיפוש",
+		"Settings": "הגדרות",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
 		"SignedIn": "נכנסת!",
+		"SignIn": "כניסה",
+		"SignOut": "יציאה",
 		"Share": "שיתוף",
 		"Source": "מקור",
+		"Stats": "סטטיסטיקה",
 		"Thanks": "תודה",
 		"TopContributors": "תורמים מובילים",
 		"TopLocations": "מקומות מובילים",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "ההגדרות עודכנו!",
 		"TodayPriceStat": "לא נוספו מחירים היום | מחיר חדש נוסף היום | {todayPriceNumber} מחירים חדשים נוספו היום!",
 		"Welcome": {
+			"Generic": "מסד נתונים פתוח למחירים במיקור המונים 🏷🍊",
 			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
 			"Title": "ברוך בואך אל {name}!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "ראשי"
 		},
+		"Dashboard": {
+			"Title": "לוח בקרה"
+		},
 		"LatestPrices": {
 			"Title": "מחירים עדכניים"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "כניסה"
+		},
+		"Stats": {
+			"Title": "סטטיסטיקה"
 		},
 		"TopContributors": {
 			"Title": "תורמים מובילים"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "מחירים",
+		"PricesToday": "מחירים שנוספו היום",
+		"PricesTotal": "סך כל המחירים",
 		"ProductsWithPrices": "מוצרים עם מחירים",
 		"Title": "סטטיסטיקה",
 		"Products": "מוצרים",
@@ -424,12 +440,13 @@
 		"WithPrice": "עם מחיר",
 		"WithProduct": "עם מוצר",
 		"WithoutProduct": "בלי מוצר",
-		"LastUpdated": "Last updated on {date}"
+		"LastUpdated": "עדכון אחרון ב־{date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "מחירים עדכניים",
 		"LatestProofs": "ההוכחות העדכניות ביותר",
 		"LoadMore": "לטעון עוד",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
 		"ProofUpdated": "ההוכחה עודכנה!",

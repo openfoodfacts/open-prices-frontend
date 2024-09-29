@@ -123,6 +123,7 @@
 		"Country": "Land",
 		"Currency": "Währung",
 		"CurrencyMissing": "Währung fehlt",
+		"Dashboard": "Übersicht",
 		"Display": "Anzeigen",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "Anzahl der Benutzer",
 		"PriceCount": "{count} Preise",
 		"PriceCreated": "Preis erstellt!",
+		"PricesMore": "Weitere Preise",
 		"ProductCount": "{count} Produkte",
 		"ProofCount": "{count} Belege",
+		"Search": "Suchen",
+		"Settings": "Einstellungen",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
 		"SignedIn": "Angemeldet!",
+		"SignIn": "Anmelden",
+		"SignOut": "Abmelden",
 		"Share": "Teilen",
 		"Source": "Quelle",
+		"Stats": "Statistiken",
 		"Thanks": "Danke",
 		"TopContributors": "Aktivste Mitwirkende",
 		"TopLocations": "Top-Standorte",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Einstellungen aktualisiert!",
 		"TodayPriceStat": "Heute keine Preise hinzugefügt | Heute {todayPriceNumber} neue Preise hinzugefügt | Heute {todayPriceNumber} neue Preise hinzugefügt!",
 		"Welcome": {
+			"Generic": "Eine offene kollektive Datenbank mit Preisen 🏷🍊💲",
 			"Subtitle": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise 🏷🍊💲",
 			"Title": "Willkommen bei {name}!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "Startseite"
 		},
+		"Dashboard": {
+			"Title": "Übersicht"
+		},
 		"LatestPrices": {
 			"Title": "Aktuelle Preise"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "Anmelden"
+		},
+		"Stats": {
+			"Title": "Statistiken"
 		},
 		"TopContributors": {
 			"Title": "Aktivste Mitwirkende"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Preise",
+		"PricesToday": "Heute hinzugefügte Preise",
+		"PricesTotal": "Gesamtpreise",
 		"ProductsWithPrices": "Produkte mit Preisen",
 		"Title": "Statistiken",
 		"Products": "Produkte",
@@ -424,12 +440,13 @@
 		"WithPrice": "Mit einem Preis",
 		"WithProduct": "Mit einem Produkt",
 		"WithoutProduct": "Ohne Produkt",
-		"LastUpdated": "Last updated on {date}"
+		"LastUpdated": "Zuletzt aktualisiert am {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Aktuelle Preise",
 		"LatestProofs": "Letzte Belege",
 		"LoadMore": "Weitere laden",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Mein Preise",
 		"MyProofs": "Meine Belege",
 		"ProofUpdated": "Nachweis aktualisiert!",

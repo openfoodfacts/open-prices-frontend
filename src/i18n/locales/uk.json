@@ -123,6 +123,7 @@
 		"Country": "Країна",
 		"Currency": "Валюта",
 		"CurrencyMissing": "Відсутня валюта",
+		"Dashboard": "Панель приладів",
 		"Display": "Показати",
 		"DisplayList": "Список",
 		"DisplayPriceList": "Список",
@@ -162,26 +163,32 @@
 		"LocationCount": "{count} місць",
 		"Map": "Мапа",
 		"Order": "Замовлення",
-		"OrderLocationCountDESC": "Location count",
+		"OrderLocationCountDESC": "Кількість місць",
 		"OrderProductUniqueScansDESC": "Кількість сканувань",
 		"OrderProductPriceCountDESC": "Кількість цін",
 		"OrderPriceCountDESC": "Price count",
 		"OrderPriceASC": "Ціна",
 		"OrderPriceCreatedDESC": "Дата додавання",
 		"OrderPriceDateDESC": "Дата ціни",
-		"OrderProductCountDESC": "Product count",
-		"OrderProofCountDESC": "Proof count",
+		"OrderProductCountDESC": "Кількість продуктів",
+		"OrderProofCountDESC": "Число доказів",
 		"OrderProofCreatedDESC": "Дата додавання",
 		"OrderProofDateDESC": "Дата підтвердження",
-		"OrderUserCountDESC": "User count",
+		"OrderUserCountDESC": "Кількість користувачів",
 		"PriceCount": "{count} цін",
 		"PriceCreated": "Ціна створена!",
+		"PricesMore": "Більше цін",
 		"ProductCount": "{count} продуктів",
 		"ProofCount": "{count} доказів",
+		"Search": "Пошук",
+		"Settings": "Налаштування",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
 		"SignedIn": "Ви ввійшли!",
+		"SignIn": "Увійти",
+		"SignOut": "Вийти",
 		"Share": "Поділитися",
 		"Source": "Джерело",
+		"Stats": "Статистика",
 		"Thanks": "Дякую",
 		"TopContributors": "Найактивніші користувачі",
 		"TopLocations": "Топ локацій",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Параметри оновлено!",
 		"TodayPriceStat": "Жодної ціни сьогодні не додано | {todayPriceNumber} нові ціни сьогодні | {todayPriceNumber} нові ціни, додані сьогодні!",
 		"Welcome": {
+			"Generic": "Відкрита краудсорсингова база даних цін 🏷🍊💲",
 			"Subtitle": "Відкрита краудсорсингова база даних цін на харчові продукти 🏷🍊💲",
 			"Title": "Ласкаво просимо до {name}!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "Головна"
 		},
+		"Dashboard": {
+			"Title": "Панель приладів"
+		},
 		"LatestPrices": {
 			"Title": "Остання ціна"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "Увійти"
+		},
+		"Stats": {
+			"Title": "Статистика"
 		},
 		"TopContributors": {
 			"Title": "Найактивніші користувачі"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Ціни",
+		"PricesToday": "Ціни, додані сьогодні",
+		"PricesTotal": "Загальна ціна",
 		"ProductsWithPrices": "Товари з цінами",
 		"Title": "Статистика",
 		"Products": "Товари",
@@ -424,12 +440,13 @@
 		"WithPrice": "З ціною",
 		"WithProduct": "З продуктом",
 		"WithoutProduct": "Без продукту",
-		"LastUpdated": "Last updated on {date}"
+		"LastUpdated": "Оновлено {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Остання ціна",
 		"LatestProofs": "Останні докази",
 		"LoadMore": "Завантажити більше",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
 		"ProofUpdated": "Доказ оновлено!",

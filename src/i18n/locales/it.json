@@ -123,6 +123,7 @@
 		"Country": "Paese",
 		"Currency": "Moneta",
 		"CurrencyMissing": "Valuta mancante",
+		"Dashboard": "Cruscotto",
 		"Display": "Mostra",
 		"DisplayList": "Lista",
 		"DisplayPriceList": "Lista",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} prezzi",
 		"PriceCreated": "Prezzo creato!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} prodotti",
 		"ProofCount": "{count} prove",
+		"Search": "Cerca",
+		"Settings": "Impostazioni",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
 		"SignedIn": "Registrato in!",
+		"SignIn": "Accedi",
+		"SignOut": "Esci",
 		"Share": "Condividi",
 		"Source": "Fonte",
+		"Stats": "Statistiche",
 		"Thanks": "Grazie",
 		"TopContributors": "Collaboratori principali",
 		"TopLocations": "Posizioni migliori",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Impostazioni aggiornate!",
 		"TodayPriceStat": "Nessun prezzo aggiunto oggi | {todayPriceNumber} nuovi prezzi aggiunti oggi | {todayPriceNumber} nuovi prezzi aggiunti oggi!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "Un database aperto in crowdsourcing dei prezzi dei prodotti alimentari 🏷🍊💲",
 			"Title": "Benvenuto/a in {name}!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "Homepage"
 		},
+		"Dashboard": {
+			"Title": "Cruscotto"
+		},
 		"LatestPrices": {
 			"Title": "Ultimi prezzi"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "Accedi"
+		},
+		"Stats": {
+			"Title": "Statistiche"
 		},
 		"TopContributors": {
 			"Title": "Collaboratori principali"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Prezzi",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Prodotti con prezzi",
 		"Title": "Statistiche",
 		"Products": "Prodotti",
@@ -430,6 +446,7 @@
 		"LatestPrices": "Ultimi prezzi",
 		"LatestProofs": "Ultime prove",
 		"LoadMore": "Scarica altro",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "I miei prezzi",
 		"MyProofs": "Le mie prove",
 		"ProofUpdated": "Prova aggiornata!",

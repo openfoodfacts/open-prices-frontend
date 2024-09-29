@@ -123,6 +123,7 @@
 		"Country": "Krajina",
 		"Currency": "Mena",
 		"CurrencyMissing": "Currency missing",
+		"Dashboard": "Hlavný panel",
 		"Display": "Display",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} prices",
 		"PriceCreated": "Cena vytvorená!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} produktov",
 		"ProofCount": "{count} proofs",
+		"Search": "Vyhľadať",
+		"Settings": "Nastavenia",
 		"SignInOFFAccount": "Prihláste sa pomocou svojho účtu {url}",
 		"SignedIn": "Prihlásený!",
+		"SignIn": "Prihlásiť sa",
+		"SignOut": "Odhlásiť sa",
 		"Share": "Share",
 		"Source": "Source",
+		"Stats": "Stats",
 		"Thanks": "Ďakujeme",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Nastavenia aktualizované!",
 		"TodayPriceStat": "Dnes neboli pridané žiadne ceny | {todayPriceNumber} dnes pridané nové ceny | {todayPriceNumber} dnes pridané nové ceny!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "Otvorená crowdsourcovaná databáza cien potravín 🏷🍊💲",
 			"Title": "Vitajte v {name}!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "Domov"
 		},
+		"Dashboard": {
+			"Title": "Hlavný panel"
+		},
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "Prihlásiť sa"
+		},
+		"Stats": {
+			"Title": "Stats"
 		},
 		"TopContributors": {
 			"Title": "Top contributors"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Prices",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "Výrobky",
@@ -430,6 +446,7 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Načítať ďalšie",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",

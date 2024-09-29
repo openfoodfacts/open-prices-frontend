@@ -123,6 +123,7 @@
 		"Country": "País",
 		"Currency": "Moeda",
 		"CurrencyMissing": "Falta a moeda",
+		"Dashboard": "Painel de controlo",
 		"Display": "Mostrar",
 		"DisplayList": "Lista",
 		"DisplayPriceList": "Lista",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} preços",
 		"PriceCreated": "Preço criado!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} produtos",
 		"ProofCount": "{count} comprovativos",
+		"Search": "Procurar",
+		"Settings": "Definições",
 		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
 		"SignedIn": "Sessão iniciada!",
+		"SignIn": "Iniciar sessão",
+		"SignOut": "Terminar sessão",
 		"Share": "Partilhar",
 		"Source": "Fonte",
+		"Stats": "Estatísticas",
 		"Thanks": "Obrigado",
 		"TopContributors": "Maiores colaboradores",
 		"TopLocations": "Principais localizações",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Definições atualizadas!",
 		"TodayPriceStat": "Nenhum preço adicionado hoje | {todayPriceNumber} novos preços adicionados hoje | {todayPriceNumber} novos preços adicionados hoje!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "Uma base de dados colaborativa de fonte aberta sobre os preços dos alimentos 🏷🍊💲",
 			"Title": "Bem-vindo(a) ao {nome}!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "Início"
 		},
+		"Dashboard": {
+			"Title": "Painel de controlo"
+		},
 		"LatestPrices": {
 			"Title": "Preços mais recentes"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "Iniciar sessão"
+		},
+		"Stats": {
+			"Title": "Estatísticas"
 		},
 		"TopContributors": {
 			"Title": "Maiores colaboradores"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Preços",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Produtos com preços",
 		"Title": "Estatísticas",
 		"Products": "Produtos",
@@ -430,6 +446,7 @@
 		"LatestPrices": "Preços mais recentes",
 		"LatestProofs": "Últimos comprovativos",
 		"LoadMore": "Carregar mais",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Os meus preços",
 		"MyProofs": "Os meus comprovativos",
 		"ProofUpdated": "Comprovativo atualizado!",

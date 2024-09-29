@@ -123,6 +123,7 @@
 		"Country": "Kraj",
 		"Currency": "Waluta",
 		"CurrencyMissing": "Currency missing",
+		"Dashboard": "Panel",
 		"Display": "Wyświetl",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "User count",
 		"PriceCount": "{count} cen",
 		"PriceCreated": "Cena utworzona!",
+		"PricesMore": "More prices",
 		"ProductCount": "{count} produktów",
 		"ProofCount": "{count} dowodów",
+		"Search": "Wyszukiwanie",
+		"Settings": "Ustawienia",
 		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
 		"SignedIn": "Zalogowano!",
+		"SignIn": "Zaloguj się",
+		"SignOut": "Wyloguj się",
 		"Share": "Udostępnij",
 		"Source": "Źródło",
+		"Stats": "Statystyki",
 		"Thanks": "Dziękujemy",
 		"TopContributors": "Najlepsi współtwórcy",
 		"TopLocations": "Najczęstsze lokalizacje",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "Zaktualizowano ustawienia!",
 		"TodayPriceStat": "Dzisiaj nie dodano żadnych cen | {todayPriceNumber} nowych cen dodanych dzisiaj | {todayPriceNumber} nowych cen dodanych dzisiaj!",
 		"Welcome": {
+			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "Otwarta, crowdsourcingowa baza cen żywności 🏷🍊💲",
 			"Title": "Witaj w {name}!"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "Strona główna"
 		},
+		"Dashboard": {
+			"Title": "Panel"
+		},
 		"LatestPrices": {
 			"Title": "Najnowsze ceny"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "Zaloguj się"
+		},
+		"Stats": {
+			"Title": "Statystyki"
 		},
 		"TopContributors": {
 			"Title": "Najlepsi współtwórcy"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "Ceny",
+		"PricesToday": "Prices added today",
+		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Produkty z cenami",
 		"Title": "Statystyki",
 		"Products": "Produkty",
@@ -430,6 +446,7 @@
 		"LatestPrices": "Najnowsze ceny",
 		"LatestProofs": "Najnowsze dowody",
 		"LoadMore": "Załaduj więcej",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje dowody",
 		"ProofUpdated": "Proof updated!",

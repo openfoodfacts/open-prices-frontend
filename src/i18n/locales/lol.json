@@ -123,6 +123,7 @@
 		"Country": "crwdns248264:0crwdne248264:0",
 		"Currency": "crwdns249012:0crwdne249012:0",
 		"CurrencyMissing": "crwdns249064:0crwdne249064:0",
+		"Dashboard": "crwdns249582:0crwdne249582:0",
 		"Display": "crwdns249154:0crwdne249154:0",
 		"DisplayList": "crwdns249200:0crwdne249200:0",
 		"DisplayPriceList": "crwdns249156:0crwdne249156:0",
@@ -176,12 +177,18 @@
 		"OrderUserCountDESC": "crwdns249576:0crwdne249576:0",
 		"PriceCount": "crwdns249110:0{count}crwdne249110:0",
 		"PriceCreated": "crwdns249118:0crwdne249118:0",
+		"PricesMore": "crwdns249584:0crwdne249584:0",
 		"ProductCount": "crwdns249112:0{count}crwdne249112:0",
 		"ProofCount": "crwdns249426:0{count}crwdne249426:0",
+		"Search": "crwdns249586:0crwdne249586:0",
+		"Settings": "crwdns249588:0crwdne249588:0",
 		"SignInOFFAccount": "crwdns246910:0{url}crwdne246910:0",
 		"SignedIn": "crwdns249120:0crwdne249120:0",
+		"SignIn": "crwdns249590:0crwdne249590:0",
+		"SignOut": "crwdns249592:0crwdne249592:0",
 		"Share": "crwdns249162:0crwdne249162:0",
 		"Source": "crwdns247998:0crwdne247998:0",
+		"Stats": "crwdns249594:0crwdne249594:0",
 		"Thanks": "crwdns249122:0crwdne249122:0",
 		"TopContributors": "crwdns249190:0crwdne249190:0",
 		"TopLocations": "crwdns249192:0crwdne249192:0",
@@ -227,6 +234,7 @@
 		"SettingsUpdated": "crwdns246626:0crwdne246626:0",
 		"TodayPriceStat": "crwdns246906:0{todayPriceNumber}crwdnd246906:0{todayPriceNumber}crwdne246906:0",
 		"Welcome": {
+			"Generic": "crwdns249596:0crwdne249596:0",
 			"Subtitle": "crwdns246628:0crwdne246628:0",
 			"Title": "crwdns246936:0{name}crwdne246936:0"
 		}
@@ -374,6 +382,9 @@
 		"Home": {
 			"Title": "crwdns246696:0crwdne246696:0"
 		},
+		"Dashboard": {
+			"Title": "crwdns249604:0crwdne249604:0"
+		},
 		"LatestPrices": {
 			"Title": "crwdns246840:0crwdne246840:0"
 		},
@@ -385,6 +396,9 @@
 		},
 		"SignIn": {
 			"Title": "crwdns246830:0crwdne246830:0"
+		},
+		"Stats": {
+			"Title": "crwdns249598:0crwdne249598:0"
 		},
 		"TopContributors": {
 			"Title": "crwdns246842:0crwdne246842:0"
@@ -415,6 +429,8 @@
 	},
 	"Stats": {
 		"Prices": "crwdns246720:0crwdne246720:0",
+		"PricesToday": "crwdns249600:0crwdne249600:0",
+		"PricesTotal": "crwdns249602:0crwdne249602:0",
 		"ProductsWithPrices": "crwdns246722:0crwdne246722:0",
 		"Title": "crwdns246724:0crwdne246724:0",
 		"Products": "crwdns246962:0crwdne246962:0",
@@ -430,6 +446,7 @@
 		"LatestPrices": "crwdns246726:0crwdne246726:0",
 		"LatestProofs": "crwdns246946:0crwdne246946:0",
 		"LoadMore": "crwdns246728:0crwdne246728:0",
+		"MyDashboard": "crwdns249606:0crwdne249606:0",
 		"MyPrices": "crwdns246940:0crwdne246940:0",
 		"MyProofs": "crwdns246948:0crwdne246948:0",
 		"ProofUpdated": "crwdns247892:0crwdne247892:0",
