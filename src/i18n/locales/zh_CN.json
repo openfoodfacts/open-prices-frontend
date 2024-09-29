@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "主页"
 		},
+		"Dashboard": {
+			"Title": "仪表板"
+		},
 		"LatestPrices": {
 			"Title": "最新价格"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "最新价格",
 		"LatestProofs": "最新样张",
 		"LoadMore": "載入更多",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "我的价格",
 		"MyProofs": "我的样张",
 		"ProofUpdated": "证据已更新！",
