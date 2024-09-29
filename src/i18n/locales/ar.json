@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "الصفحة الرئيسية"
 		},
+		"Dashboard": {
+			"Title": "Dashboard"
+		},
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "حمّل المزيد",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
