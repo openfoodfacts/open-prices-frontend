@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Pagrindinis"
 		},
+		"Dashboard": {
+			"Title": "Prietaisų skydelis"
+		},
 		"LatestPrices": {
 			"Title": "Naujausios kainos"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Naujausios kainos",
 		"LatestProofs": "Naujausi įrodymai",
 		"LoadMore": "Įkelti daugiau",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
 		"ProofUpdated": "Įrodymas atnaujintas!",
