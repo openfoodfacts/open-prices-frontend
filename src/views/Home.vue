@@ -7,10 +7,10 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="todayPriceCount" :subtitle="$t('Stats.Today')" />
+      <StatCard :value="todayPriceCount" :subtitle="$t('Common.Today')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="totalPriceCount" :subtitle="$t('Stats.Total')" />
+      <StatCard :value="totalPriceCount" :subtitle="$t('Common.Total')" />
     </v-col>
   </v-row>
 
@@ -18,7 +18,7 @@
 
   <v-row>
     <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4">
-      <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+      <PriceCard :price="price" :product="price.product" :hidePriceCreated="false" elevation="1" height="100%" />
     </v-col>
     <v-col cols="12" sm="6" md="4" align="center" justify="center">
       <v-btn to="/prices" prepend-icon="mdi-tag-multiple-outline" append-icon="mdi-arrow-right">
