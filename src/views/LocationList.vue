@@ -14,7 +14,7 @@
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="location in locationList" :key="location" cols="12" sm="6" md="4">
+    <v-col v-for="location in locationList" :key="location" cols="12" sm="6" md="4" xl="3">
       <LocationCard :location="location" :hideLocationOSMID="true" :hideCountryCity="true" height="100%" />
     </v-col>
   </v-row>

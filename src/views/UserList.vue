@@ -14,7 +14,7 @@
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="user in userList" :key="user" cols="12" sm="6" md="4">
+    <v-col v-for="user in userList" :key="user" cols="12" sm="6" md="4" xl="3">
       <UserCard :user="user" height="100%" />
     </v-col>
   </v-row>

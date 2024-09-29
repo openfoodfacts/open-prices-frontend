@@ -4,7 +4,7 @@
   </h1>
 
   <v-row>
-    <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4">
+    <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
   </v-row>
