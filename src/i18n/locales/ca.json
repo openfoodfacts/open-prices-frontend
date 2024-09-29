@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Inici"
 		},
+		"Dashboard": {
+			"Title": "Tauler"
+		},
 		"LatestPrices": {
 			"Title": "Últims preus"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Últims preus",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Carrega mes ",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
