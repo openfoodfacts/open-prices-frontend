@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "Beranda"
 		},
+		"Dashboard": {
+			"Title": "Dasbor"
+		},
 		"LatestPrices": {
 			"Title": "Harga terbaru"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Harga terbaru",
 		"LatestProofs": "Bukti terbaru",
 		"LoadMore": "Muat lebih banyak",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "Harga saya",
 		"MyProofs": "Bukti saya",
 		"ProofUpdated": "Bukti diperbarui!",
