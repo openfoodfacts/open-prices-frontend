@@ -382,6 +382,9 @@
 		"Home": {
 			"Title": "முகப்பு"
 		},
+		"Dashboard": {
+			"Title": "Dashboard"
+		},
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
@@ -443,6 +446,7 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
+		"MyDashboard": "My dashboard",
 		"MyPrices": "எனது விலைகள்",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
