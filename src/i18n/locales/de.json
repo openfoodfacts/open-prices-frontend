@@ -193,6 +193,8 @@
 		"TopContributors": "Aktivste Mitwirkende",
 		"TopLocations": "Top-Standorte",
 		"TopProducts": "Top-Produkte",
+		"Today": "Today",
+		"Total": "Gesamt",
 		"Type": "Art",
 		"Upload": "Hochladen",
 		"User": "Benutzer",
@@ -428,6 +430,7 @@
 		"WrongCredentials": "Fehler: üngültige Anmeldeinformationen"
 	},
 	"Stats": {
+		"AddedToday": "Added today",
 		"Prices": "Preise",
 		"PricesToday": "Heute hinzugefügte Preise",
 		"PricesTotal": "Gesamtpreise",
@@ -439,7 +442,11 @@
 		"Total": "Gesamt",
 		"WithPrice": "Mit einem Preis",
 		"WithProduct": "Mit einem Produkt",
+		"WithProductBarcode": "With a product barcode",
+		"WithProductCategory": "With a product category",
 		"WithoutProduct": "Ohne Produkt",
+		"WithBarcode": "With a barcode",
+		"WithCategory": "With a category",
 		"LastUpdated": "Zuletzt aktualisiert am {date}"
 	},
 	"UserDashboard": {
