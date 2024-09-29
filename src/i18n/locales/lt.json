@@ -177,7 +177,7 @@
 		"OrderUserCountDESC": "Vartotojų skaičius",
 		"PriceCount": "{count} prices",
 		"PriceCreated": "Kaina sukurta!",
-		"PricesMore": "More prices",
+		"PricesMore": "Daugiau kainų",
 		"ProductCount": "{count} produktai (-ų)",
 		"ProofCount": "{count} įrodymai (-ų)",
 		"Search": "Paieška",
@@ -234,7 +234,7 @@
 		"SettingsUpdated": "Nuostatos atnaujintos!",
 		"TodayPriceStat": "Šiandien nepridėta jokių kainų | Šiandien pridėta {todayPriceNumber} naujų kainų | Šiandien pridėta {todayPriceNumber} naujos kainos!",
 		"Welcome": {
-			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
+			"Generic": "Atviroji sutelktinių išteklių gautų kainų duomenų bazė 🏷🍊💲",
 			"Subtitle": "Atviroji sutelktinių išteklių gautų maisto kainų duomenų bazė 🏷🍊💲",
 			"Title": "Sveiki prisijungę prie {name}!"
 		}
@@ -426,8 +426,8 @@
 	},
 	"Stats": {
 		"Prices": "Kainos",
-		"PricesToday": "Prices added today",
-		"PricesTotal": "Total prices",
+		"PricesToday": "Kainos pridėtos šiandien",
+		"PricesTotal": "Visos kainos",
 		"ProductsWithPrices": "Produktai su kainomis",
 		"Title": "Statistika",
 		"Products": "Produktai",
@@ -437,7 +437,7 @@
 		"WithPrice": "Su kaina",
 		"WithProduct": "Su produktu",
 		"WithoutProduct": "Be produkto",
-		"LastUpdated": "Last updated on {date}"
+		"LastUpdated": "Paskutinį kartą atnaujinta {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Naujausios kainos",
