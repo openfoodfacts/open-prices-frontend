@@ -19,7 +19,7 @@ export default {
   props: {
     location: {
       type: Object,
-      required: true
+      default: null
     },
     display: {
       type: String,
@@ -36,7 +36,10 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     getLocationOSMUrl() {
-      return `https://www.openstreetmap.org/${this.location.osm_type.toLowerCase()}/${this.location.osm_id}`
+      if (this.location) {
+        return `https://www.openstreetmap.org/${this.location.osm_type.toLowerCase()}/${this.location.osm_id}`
+      }
+      return this.OSM_URL
     }
   },
 }
