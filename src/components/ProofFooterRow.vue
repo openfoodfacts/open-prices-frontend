@@ -11,7 +11,7 @@
     </v-col>
   </v-row>
 
-  <ProofActionMenuButton v-if="!hideProofActions && userIsProofOwner" :proof="proof" />
+  <ProofActionMenuButton v-if="!hideProofActions && userIsProofOwner" :proof="proof" @delete="$emit('delete')" />
 </template>
 
 <script>
@@ -44,6 +44,7 @@ export default {
       default: false,
     },
   },
+  emits: ['delete'],
   computed: {
     ...mapStores(useAppStore),
     username() {

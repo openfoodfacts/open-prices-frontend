@@ -32,7 +32,7 @@
         </v-col>
       </v-row>
 
-      <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceProof="hidePriceProof" :hidePriceCreated="hidePriceCreated" :hideProductDetails="hideProductDetails" :readonly="readonly" />
+      <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceProof="hidePriceProof" :hidePriceCreated="hidePriceCreated" :hideProductDetails="hideProductDetails" :readonly="readonly" @delete="$emit('delete')" />
     </v-container>
   </v-card>
 </template>
@@ -109,6 +109,7 @@ export default {
       default: false
     },
   },
+  emits: ['delete'],
   data() {
     return {
       productTitle: null,  // see init

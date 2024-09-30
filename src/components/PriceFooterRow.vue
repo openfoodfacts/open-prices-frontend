@@ -9,7 +9,7 @@
     </v-col>
   </v-row>
 
-  <PriceActionMenuButton :price="price" :hideProductActions="hideProductDetails" />
+  <PriceActionMenuButton :price="price" :hideProductActions="hideProductDetails" @delete="$emit('delete')" />
 </template>
 
 <script>
@@ -57,6 +57,7 @@ export default {
       type: Boolean,
       default: false
     },
-  }
+  },
+  emits: ['delete']
 }
 </script>

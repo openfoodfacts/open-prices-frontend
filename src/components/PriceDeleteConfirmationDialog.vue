@@ -63,13 +63,9 @@ export default {
         .then((response) => {  // eslint-disable-line no-unused-vars
           // if response.status == 204
           this.loading = false
-          this.removePriceCard()
           this.$emit('delete')
           this.closeDialog()
         })
-    },
-    removePriceCard() {
-      document.getElementById(`price_${this.price.id}`).remove()
     },
     closeDialog() {
       this.$emit('close')

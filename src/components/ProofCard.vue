@@ -13,7 +13,7 @@
     <v-divider />
 
     <v-card-actions>
-      <ProofFooterRow :proof="proof" :hideProofActions="hideProofActions" :readonly="readonly" />
+      <ProofFooterRow :proof="proof" :hideProofActions="hideProofActions" :readonly="readonly" @delete="$emit('delete')" />
     </v-card-actions>
   </v-card>
 </template>
@@ -51,7 +51,7 @@ export default {
       default: '100%',
     },
   },
-  emits: ['proofSelected', 'close'],
+  emits: ['proofSelected', 'close', 'delete'],
   data() {
     return {
       proofEditDialog: false,

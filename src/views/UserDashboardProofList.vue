@@ -27,7 +27,7 @@
 
   <v-row>
     <v-col v-for="proof in userProofList" :key="proof" cols="12" sm="6" md="4" xl="3">
-      <ProofCard :proof="proof" :hideProofHeader="true" height="100%" @proofUpdated="handleProofUpdated" />
+      <ProofCard :proof="proof" :hideProofHeader="true" height="100%" @proofUpdated="handleProofUpdated" @delete="handleProofDelete(proof)" />
     </v-col>
   </v-row>
 
@@ -141,6 +141,10 @@ export default {
         this.getUserProofs()
       }
     },
+    handleProofDelete(proof) {
+      this.userProofList = this.userProofList.filter(p => p.id != proof.id)
+      this.userProofTotal = this.userProofList.length
+    }
   }
 }
 </script>

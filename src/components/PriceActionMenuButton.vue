@@ -48,7 +48,7 @@
     v-if="deleteConfirmationDialog"
     v-model="deleteConfirmationDialog"
     :price="price"
-    @delete="showDeleteSuccessMessage"
+    @delete="handlePriceDelete"
     @close="closeDeleteConfirmationDialog"
   />
 
@@ -98,6 +98,7 @@ export default {
       default: 'position:absolute;bottom:6px;right:0;'
     }
   },
+  emits: ['delete'],
   data() {
     return {
       loading: false,
@@ -149,8 +150,9 @@ export default {
     closeDeleteConfirmationDialog() {
       this.deleteConfirmationDialog = false
     },
-    showDeleteSuccessMessage() {
+    handlePriceDelete() {
       this.deleteSuccessMessage = true
+      this.$emit("delete")
     }
   }
 }

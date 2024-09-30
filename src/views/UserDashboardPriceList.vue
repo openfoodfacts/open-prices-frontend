@@ -26,7 +26,7 @@
 
   <v-row>
     <v-col v-for="price in userPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
-      <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+      <PriceCard :price="price" :product="price.product" elevation="1" height="100%" @delete="handlePriceDelete(price)" />
     </v-col>
   </v-row>
 
@@ -93,6 +93,10 @@ export default {
         this.getUserPrices()
       }
     },
+    handlePriceDelete(price) {
+      this.userPriceList = this.userPriceList.filter(p => p.id != price.id)
+      this.userPriceTotal = this.userPriceList.length
+    }
   }
 }
 </script>
