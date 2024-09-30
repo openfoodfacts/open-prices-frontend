@@ -126,7 +126,7 @@ function offDateTime(dateTimeString) {
  * changes: add short (replace 'days' with 'd', remove 'Yesterday') & shortest (remove 'ago'), extend days & weeks
  */
 function prettyRelativeDateTime(dateTimeString, size=null) {
-  var date = new Date((dateTimeString || "")),
+  var date = new Date(dateTimeString || ''),
       diff = (((new Date()).getTime() - date.getTime()) / 1000),
       day_diff = Math.floor(diff / 86400);
 
