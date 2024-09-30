@@ -15,6 +15,7 @@ export default {
   APP_DUMP_PRICES_URL: 'https://prices.openfoodfacts.org/data/prices.jsonl.gz',
   APP_DUMP_PROOFS_URL: 'https://prices.openfoodfacts.org/data/proofs.jsonl.gz',
   APP_DUMP_LOCATIONS_URL: 'https://prices.openfoodfacts.org/data/locations.jsonl.gz',
+  APP_GITHUB_FRONTEND_URL: 'https://github.com/openfoodfacts/open-prices-frontend',
   OFF_NAME: OFF_NAME,
   OFF_URL: 'https://world.openfoodfacts.org',
   OFF_CONTACT_EMAIL: 'contact@openfoodfacts.org',
@@ -127,4 +128,5 @@ export default {
   LICENSE_ODBL_URL: 'https://opendatacommons.org/licenses/odbl/1.0/',
   LICENSE_CC_BY_SA_NAME: 'Creative Commons Attribution-ShareAlike 4.0 International',
   LICENSE_CC_BY_SA_URL: 'https://creativecommons.org/licenses/by-sa/4.0/',
+  GITHUB_NAME: 'Github',
 }
