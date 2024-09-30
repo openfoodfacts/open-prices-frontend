@@ -33,7 +33,6 @@
 		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
 		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
 		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
-
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {

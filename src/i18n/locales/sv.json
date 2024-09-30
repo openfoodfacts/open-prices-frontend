@@ -1,4 +1,39 @@
 {
+	"About": {
+		"WhyTitle": "Why {op_name}?",
+		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
+		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
+		"HowTitle": "How does {op_name} work?",
+		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
+		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
+		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
+		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
+		"LicenseTitle": "License",
+		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
+		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
+		"WhatTitle": "What is {op_name}?",
+		"WhatOFFTitle": "What is {off_name}?",
+		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhyOFFTitle": "Why is {off_name} doing this?",
+		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
+		"HowContribute": "How can I contribute?",
+		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
+		"HowUseData": "How can I use the data?",
+		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
+		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
+		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
+		"HowContact": "How can I get in touch?",
+		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
+		"HowSupport": "How can I support {op_name}?",
+		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
+		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
+		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
+		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
+		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
+		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
+		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
+		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
+	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
 			"Subtitle": "A shelf with multiple price tags",
@@ -108,6 +143,7 @@
 		"CategoryProductTotal": "{count} products"
 	},
 	"Common": {
+		"About": "Om",
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
 		"Brand": "Varumärke",
@@ -156,6 +192,8 @@
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
+		"FAQ": "FAQ",
+		"FrequentlyAskedQuestions": "Vanliga frågor",
 		"Help": "Hjälp",
 		"History": "Historik",
 		"Image": "Bild",
@@ -189,6 +227,7 @@
 		"Share": "Dela",
 		"Source": "Källa",
 		"Stats": "Stats",
+		"Tagline": "The open crowdsourced database of prices",
 		"Thanks": "Thanks",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
@@ -378,6 +417,9 @@
 		"Success": "Proof edited!"
 	},
 	"Router": {
+		"About": {
+			"Title": "Om"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
