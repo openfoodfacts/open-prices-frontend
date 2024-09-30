@@ -193,7 +193,7 @@
 		"TopContributors": "Top bijdragers",
 		"TopLocations": "Top locaties",
 		"TopProducts": "Top producten",
-		"Today": "Today",
+		"Today": "Vandaag",
 		"Total": "Totaal",
 		"Type": "Type",
 		"Upload": "Uploaden",
@@ -430,7 +430,7 @@
 		"WrongCredentials": "Fout: verkeerde inloggegevens"
 	},
 	"Stats": {
-		"AddedToday": "Added today",
+		"AddedToday": "Vandaag toegevoegd",
 		"Prices": "Prijzen",
 		"PricesToday": "Vandaag toegevoegde prijzen",
 		"PricesTotal": "Totale prijzen",
@@ -442,11 +442,11 @@
 		"Total": "Totaal",
 		"WithPrice": "Met een prijs",
 		"WithProduct": "Met een product",
-		"WithProductBarcode": "With a product barcode",
-		"WithProductCategory": "With a product category",
+		"WithProductBarcode": "Met een productstreepjescode",
+		"WithProductCategory": "Met een productcategorie",
 		"WithoutProduct": "Zonder product",
-		"WithBarcode": "With a barcode",
-		"WithCategory": "With a category",
+		"WithBarcode": "Met een streepjescode",
+		"WithCategory": "Met een categorie",
 		"LastUpdated": "Laatst bijgewerkt op {date}"
 	},
 	"UserDashboard": {
