@@ -21,7 +21,7 @@
 		"HowUseData": "How can I use the data?",
 		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
 		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: prices, proofs, and locations.",
+		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
 		"HowContact": "How can I get in touch?",
 		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
 		"HowSupport": "How can I support {op_name}?",

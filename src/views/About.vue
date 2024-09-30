@@ -54,6 +54,15 @@
         <template #op_api_url>
           <a :href="APP_API_URL" target="_blank">API</a>
         </template>
+        <template #op_dumb_prices_url>
+          <a :href="APP_DUMP_PRICES_URL" class="text-lowercase" target="_blank">{{ $t('Common.Prices') }}</a>
+        </template>
+        <template #op_dumb_proofs_url>
+          <a :href="APP_DUMP_PROOFS_URL" class="text-lowercase" target="_blank">{{ $t('Common.Proofs') }}</a>
+        </template>
+        <template #op_dumb_locations_url>
+          <a :href="APP_DUMP_LOCATIONS_URL" class="text-lowercase" target="_blank">{{ $t('Common.Locations') }}</a>
+        </template>
         <template #off_url>
           <OpenFoodFactsLink display="link" />
         </template>
@@ -87,6 +96,9 @@ export default {
     return {
       APP_NAME: constants.APP_NAME,
       APP_API_URL: constants.APP_API_URL,
+      APP_DUMP_PRICES_URL: constants.APP_DUMP_PRICES_URL,
+      APP_DUMP_PROOFS_URL: constants.APP_DUMP_PROOFS_URL,
+      APP_DUMP_LOCATIONS_URL: constants.APP_DUMP_LOCATIONS_URL,
       OFF_NAME: constants.OFF_NAME,
       OFF_CONTACT_EMAIL: constants.OFF_CONTACT_EMAIL,
       OSM_NAME: constants.OSM_NAME,
