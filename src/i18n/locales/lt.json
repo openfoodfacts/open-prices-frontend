@@ -193,7 +193,7 @@
 		"TopContributors": "Geriausi bendraautoriai",
 		"TopLocations": "Geriausios vietos",
 		"TopProducts": "Populiariausi produktai",
-		"Today": "Today",
+		"Today": "Šiandien",
 		"Total": "Iš viso",
 		"Type": "Tipas",
 		"Upload": "Įkelti",
@@ -430,7 +430,7 @@
 		"WrongCredentials": "Klaida: neteisingi kredencialai"
 	},
 	"Stats": {
-		"AddedToday": "Added today",
+		"AddedToday": "Pridėta šiandien",
 		"Prices": "Kainos",
 		"PricesToday": "Kainos pridėtos šiandien",
 		"PricesTotal": "Visos kainos",
@@ -442,11 +442,11 @@
 		"Total": "Iš viso",
 		"WithPrice": "Su kaina",
 		"WithProduct": "Su produktu",
-		"WithProductBarcode": "With a product barcode",
-		"WithProductCategory": "With a product category",
+		"WithProductBarcode": "Su produkto brūkšniniu kodu",
+		"WithProductCategory": "Su produkto kategorija",
 		"WithoutProduct": "Be produkto",
-		"WithBarcode": "With a barcode",
-		"WithCategory": "With a category",
+		"WithBarcode": "Su brūkšniniu kodu",
+		"WithCategory": "Su kategorija",
 		"LastUpdated": "Paskutinį kartą atnaujinta {date}"
 	},
 	"UserDashboard": {
