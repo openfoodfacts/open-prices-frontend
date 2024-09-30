@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.84.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.83.0...v1.84.0) (2024-09-30)
+
+
+### Features
+
+* **About:** new /about page ([#874](https://github.com/openfoodfacts/open-prices-frontend/issues/874)) ([020fc79](https://github.com/openfoodfacts/open-prices-frontend/commit/020fc79ca68988003f12d6619111771fdf908375))
+
+
+### Bug Fixes
+
+* **Price add:** load existing prices chronologically. ref [#718](https://github.com/openfoodfacts/open-prices-frontend/issues/718) ([769fa5e](https://github.com/openfoodfacts/open-prices-frontend/commit/769fa5eaf93291da13a19a8ae379ce35fd198bd2))
+* **utils:** relative time display ([#880](https://github.com/openfoodfacts/open-prices-frontend/issues/880)) ([c787dea](https://github.com/openfoodfacts/open-prices-frontend/commit/c787dea1c3edd5e9a4ca03e4267f21d56a9aa095))
+
+
+### Technical
+
+* **Footer:** update link to new About page. ref [#364](https://github.com/openfoodfacts/open-prices-frontend/issues/364) ([e734a5f](https://github.com/openfoodfacts/open-prices-frontend/commit/e734a5f22186c5b1fb84bc44dae2d6bebba02f56))
+* **l10n:** New Crowdin translations to review and merge ([#875](https://github.com/openfoodfacts/open-prices-frontend/issues/875)) ([dccd574](https://github.com/openfoodfacts/open-prices-frontend/commit/dccd5749a39c8ee17d541bf70b53296877e65ce1))
+* **l10n:** New Crowdin translations to review and merge ([#884](https://github.com/openfoodfacts/open-prices-frontend/issues/884)) ([0d6ef2d](https://github.com/openfoodfacts/open-prices-frontend/commit/0d6ef2d03b0932758753dfafaf6b4ffa3e17d53b))
+* **router:** Add redirect for future users coming from /app ([#882](https://github.com/openfoodfacts/open-prices-frontend/issues/882)) ([c2b92c9](https://github.com/openfoodfacts/open-prices-frontend/commit/c2b92c98d18fb010c1eb46dba2e92a07f68b42cc))
+
 ## [1.83.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.82.0...v1.83.0) (2024-09-29)
 
 
