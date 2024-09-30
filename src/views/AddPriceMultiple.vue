@@ -248,7 +248,7 @@ export default {
     },
     getProofPrices() {
       this.loading = true
-      return api.getPrices({ proof_id: this.proofObject.id, size: this.proofObject.price_count })
+      return api.getPrices({ proof_id: this.proofObject.id, size: this.proofObject.price_count, order_by: 'created' })
         .then((data) => {
           this.proofPriceExistingList.push(...data.items)
           this.loading = false

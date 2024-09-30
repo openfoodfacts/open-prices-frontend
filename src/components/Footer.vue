@@ -22,11 +22,11 @@
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-chart-box-outline" to="/stats">
           {{ $t('Footer.Stats') }}
         </v-btn>
-        <v-btn class="mx-2" variant="text" prepend-icon="mdi-information-outline" href="https://prices.openfoodfacts.org" target="_blank">
+        <v-btn class="mx-2" variant="text" prepend-icon="mdi-information-outline" to="/about">
           {{ $t('Footer.About') }}
         </v-btn>
-        <v-btn class="mx-2" variant="text" prepend-icon="mdi-github" href="https://github.com/openfoodfacts/open-prices-frontend" target="_blank">
-          Github
+        <v-btn class="mx-2" variant="text" prepend-icon="mdi-github" :href="APP_GITHUB_FRONTEND_URL" target="_blank">
+          {{ GITHUB_NAME }}
         </v-btn>
       </v-col>
     </v-row>
@@ -44,6 +44,8 @@ export default {
   data() {
     return {
       APP_NAME: constants.APP_NAME,
+      APP_GITHUB_FRONTEND_URL: constants.APP_GITHUB_FRONTEND_URL,
+      GITHUB_NAME: constants.GITHUB_NAME,
       sourceList: [
         {
           source: 'off',
