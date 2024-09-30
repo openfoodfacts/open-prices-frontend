@@ -33,6 +33,12 @@ const routes = [
   { path: '/users/:username', name: 'user-detail', component: () => import('./views/UserDetail.vue'), meta: { title: 'User detail' }},
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true }},
+  // Why this redirect?
+  // The app used to be available at https://prices.openfoodfacts.org/app
+  // It is now available at https://prices.openfoodfacts.org
+  // Therefore we redirect old users to the new URL, by removing any incoming /app routes
+  { path: '/app:path(.*)', redirect: to => { return { path: to.params.path }} },
+  // 404
   { path: '/:path(.*)', component: () => import('./views/NotFound.vue') },
 ]
 
