@@ -37,7 +37,7 @@
     "vega-embed": "^6.26.0",
     "vega-lite": "^5.21.0",
     "vue": "^3.4.38",
-    "vue-i18n": "9.14.0",
+    "vue-i18n": "9.14.1",
     "vue-matomo": "^4.2.0",
     "vue-router": "^4.4.3",
     "vuetify": "^3.7.0"
