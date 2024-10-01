@@ -8,7 +8,7 @@
       <v-chip label variant="text" prepend-icon="mdi-account-badge-outline">
         {{ $t('UserList.UserTotal', { count: userTotal }) }}
       </v-chip>
-      <FilterMenu v-if="!loading" kind="user" :currentFilter="currentFilter" @update:currentFilter="toggleUserFilter($event)" />
+      <FilterMenu kind="user" :currentFilter="currentFilter" @update:currentFilter="toggleUserFilter($event)" />
       <OrderMenu kind="user" :currentOrder="currentOrder" @update:currentOrder="selectUserOrder($event)" />
     </v-col>
   </v-row>

@@ -14,14 +14,14 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row v-if="!loading">
     <v-col>
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestProofs') }}
       </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="userProofList.length" :totalCount="userProofTotal" />
-      <FilterMenu v-if="!loading" kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
-      <OrderMenu v-if="!loading" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
+      <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
+      <FilterMenu kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
+      <OrderMenu kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
     </v-col>
   </v-row>
 
