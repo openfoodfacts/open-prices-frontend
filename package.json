@@ -49,7 +49,7 @@
     "autoprefixer": "^10.4.20",
     "cross-env": "^7.0.3",
     "cypress": "^13.13.3",
-    "eslint": "^9.9.0",
+    "eslint": "^9.11.1",
     "eslint-plugin-vue": "^9.27.0",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
