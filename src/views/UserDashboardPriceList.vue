@@ -3,24 +3,15 @@
     {{ $t('UserDashboard.MyPrices') }}
   </h1>
 
-  <v-row>
+  <v-row v-if="!loading">
     <v-col>
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-tag-multiple-outline">
+      <v-chip label variant="text" prepend-icon="mdi-tag-multiple-outline">
         {{ $t('UserDashboard.UserPriceTotal', { count: userPriceTotal }) }}
       </v-chip>
-      <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
+      <LoadedCountChip v-if="!loading" :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
+      <v-btn size="x-small" prepend-icon="mdi-arrow-left" to="/dashboard">
         {{ $t('UserDashboard.Title') }}
       </v-btn>
-      <ShareLink :overrideUrl="getShareLinkUrl" display="button" />
-    </v-col>
-  </v-row>
-
-  <v-row>
-    <v-col>
-      <h2 class="text-h6 d-inline mr-1">
-        {{ $t('Common.LatestPrices') }}
-      </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
     </v-col>
   </v-row>
 
@@ -46,12 +37,12 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
     return {
+      // data
       userPriceList: [],
       userPriceTotal: null,
       userPricePage: 0,
@@ -62,9 +53,6 @@ export default {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
-    },
-    getShareLinkUrl() {
-      return `/users/${this.username}`
     }
   },
   mounted() {
