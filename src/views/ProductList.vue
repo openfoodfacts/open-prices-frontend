@@ -54,8 +54,12 @@ export default {
   computed: {
     getProductsParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.productPage }
-      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
-        defaultParams['price_count'] = 0
+      if (this.currentFilter) {
+        if (this.currentFilter === 'price_count_gte_1') {
+          defaultParams['price_count__gte'] = 1
+        } else if (this.currentFilter === 'price_count_0') {
+          defaultParams['price_count'] = 0
+        }
       }
       if (this.currentSource) {
         defaultParams['source'] = this.currentSource
@@ -101,7 +105,7 @@ export default {
         })
     },
     toggleProductFilter(filterKey) {
-      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.currentFilter = (this.currentFilter !== filterKey) ? filterKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initProductList() will be called in watch $route
     },

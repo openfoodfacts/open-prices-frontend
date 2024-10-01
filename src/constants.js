@@ -50,7 +50,8 @@ export default {
   QUERY_PARAM: 'q',
   FILTER_PARAM: 'filter',
   PRODUCT_FILTER_LIST: [
-    { key: 'hide_price_count_gte_1', value: 'FilterProductWithPriceCountHide' },
+    { key: 'price_count_gte_1', value: 'FilterProductWithPriceCount' },
+    { key: 'price_count_0', value: 'FilterProductWithoutPriceCount' },
   ],
   PRICE_FILTER_LIST: [
     { key: 'only_last_30d', value: 'FilterPriceMoreThan30DaysHide' },

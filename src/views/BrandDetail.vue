@@ -5,14 +5,14 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row v-if="!loading">
     <v-col>
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.TopProducts') }}
       </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="brandProductList.length" :totalCount="brandProductTotal" />
-      <FilterMenu v-if="!loading" kind="product" :currentFilter="currentFilter" :hideSource="true" @update:currentFilter="toggleProductFilter($event)" />
-      <OrderMenu v-if="!loading" kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
+      <LoadedCountChip :loadedCount="brandProductList.length" :totalCount="brandProductTotal" />
+      <FilterMenu kind="product" :currentFilter="currentFilter" :hideSource="true" @update:currentFilter="toggleProductFilter($event)" />
+      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
     </v-col>
   </v-row>
 
@@ -59,8 +59,12 @@ export default {
   computed: {
     getProductsParams() {
       let defaultParams = { brands__like: this.brandId, order_by: `${this.currentOrder}`, page: this.brandProductPage }
-      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
-        defaultParams['price_count'] = 0
+      if (this.currentFilter) {
+        if (this.currentFilter === 'price_count_gte_1') {
+          defaultParams['price_count__gte'] = 1
+        } else if (this.currentFilter === 'price_count_0') {
+          defaultParams['price_count'] = 0
+        }
       }
       return defaultParams
     },
@@ -103,7 +107,7 @@ export default {
         })
     },
     toggleProductFilter(filterKey) {
-      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.currentFilter = (this.currentFilter !== filterKey) ? filterKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initBrand() will be called in watch $route
     },
