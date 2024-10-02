@@ -1,7 +1,7 @@
 {
     "name": "Open Prices (Local)",
     "short_name": "OpenPrices (Local)",
-    "description": "An open crowdsourced database of food prices",
+    "description": "An open crowdsourced database of prices",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
