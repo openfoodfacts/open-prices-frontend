@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.84.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.84.0...v1.84.1) (2024-10-01)
+
+
+### Bug Fixes
+
+* **CI:** fix typo in yarn build staging & prod. ref [#906](https://github.com/openfoodfacts/open-prices-frontend/issues/906) ([011d5a1](https://github.com/openfoodfacts/open-prices-frontend/commit/011d5a1e25419824670fc1956a7098225058a064))
+* kill the landing page ([#906](https://github.com/openfoodfacts/open-prices-frontend/issues/906)) ([02199aa](https://github.com/openfoodfacts/open-prices-frontend/commit/02199aa6aec9afd206527a72a92efdc38edce01c))
+* kill the landing page (remove remaining /app) ([#910](https://github.com/openfoodfacts/open-prices-frontend/issues/910)) ([fa8e162](https://github.com/openfoodfacts/open-prices-frontend/commit/fa8e162eb1da8874a72f872dedc85b5d1c5af30c))
+
+
+### Technical
+
+* **Dashboard:** fix Proof count. Cleanup Price & Proof headers ([#907](https://github.com/openfoodfacts/open-prices-frontend/issues/907)) ([fe0c712](https://github.com/openfoodfacts/open-prices-frontend/commit/fe0c7122e47f989f99c607f4293bd7781ff10cc7))
+* **Product list:** add filter to hide products without prices ([#904](https://github.com/openfoodfacts/open-prices-frontend/issues/904)) ([03bcec7](https://github.com/openfoodfacts/open-prices-frontend/commit/03bcec7946a26651f01b2b3113f13803cc42fcd7))
+
 ## [1.84.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.83.0...v1.84.0) (2024-09-30)
 
 
