@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.84.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.84.2...v1.84.3) (2024-10-03)
+
+
+### Bug Fixes
+
+* **Home:** fix app tagline. ref [#909](https://github.com/openfoodfacts/open-prices-frontend/issues/909) ([5162c7f](https://github.com/openfoodfacts/open-prices-frontend/commit/5162c7f0c6ffe986acfdf6f35c942357c9d39897))
+
+
+### Technical
+
+* **deps:** Update packages ([#916](https://github.com/openfoodfacts/open-prices-frontend/issues/916)) ([9829df4](https://github.com/openfoodfacts/open-prices-frontend/commit/9829df474ac3113207832dc6b5530879d02cc3b3))
+
 ## [1.84.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.84.1...v1.84.2) (2024-10-03)
 
 
