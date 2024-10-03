@@ -3,25 +3,17 @@
     {{ $t('UserDashboard.MyProofs') }}
   </h1>
 
-  <v-row>
+  <v-row v-if="!loading">
     <v-col>
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-image">
-        {{ $t('UserDashboard.UserProofTotal', { count: appStore.getUserProofTotal }) }}
+      <v-chip label variant="text" prepend-icon="mdi-image">
+        {{ $t('UserDashboard.UserProofTotal', { count: userProofTotal }) }}
       </v-chip>
-      <v-btn size="small" prepend-icon="mdi-arrow-left" to="/dashboard">
+      <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
+      <FilterMenu kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
+      <OrderMenu kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
+      <v-btn size="x-small" prepend-icon="mdi-arrow-left" to="/dashboard">
         {{ $t('UserDashboard.Title') }}
       </v-btn>
-    </v-col>
-  </v-row>
-
-  <v-row>
-    <v-col>
-      <h2 class="text-h6 d-inline mr-1">
-        {{ $t('Common.LatestProofs') }}
-      </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="userProofList.length" :totalCount="userProofTotal" />
-      <FilterMenu v-if="!loading" kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
-      <OrderMenu v-if="!loading" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
     </v-col>
   </v-row>
 
@@ -63,6 +55,7 @@ export default {
   },
   data() {
     return {
+      // data
       userProofList: [],
       userProofTotal: null,
       userProofPage: 0,

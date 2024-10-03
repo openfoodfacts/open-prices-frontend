@@ -71,6 +71,21 @@ jobs:
         proxy_username: ${{ env.SSH_USERNAME }}
         proxy_key: ${{ secrets.SSH_PRIVATE_KEY }}
         source: "dist"
-        target: "/home/${{ env.SSH_USERNAME }}/${{ matrix.env }}/www/app"
+        target: "/home/${{ env.SSH_USERNAME }}/${{ matrix.env }}/www"
         rm: true
         strip_components: 1
+
+    # We need to restart nginx to prevent permission issues after deploying
+    # front-end code directly by untarring it in the www directory.
+    # This is a workaround, we should use a better solution in the long-term
+    - name: Restart nginx
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ env.SSH_HOST }}
+        username: ${{ env.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        proxy_host: ${{ env.SSH_PROXY_HOST }}
+        proxy_username: ${{ env.SSH_USERNAME }}
+        proxy_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd ${{ matrix.env }} && docker compose restart nginx
