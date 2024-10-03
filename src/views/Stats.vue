@@ -45,7 +45,7 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+      <StatCard :value="stats.location_with_price_count" :subtitle="$t('Stats.Total')" />
     </v-col>
   </v-row>
 
@@ -58,7 +58,7 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+      <StatCard :value="stats.proof_with_price_count" :subtitle="$t('Stats.Total')" />
     </v-col>
   </v-row>
 
@@ -71,7 +71,7 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.user_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+      <StatCard :value="stats.user_with_price_count" :subtitle="$t('Stats.Total')" />
     </v-col>
   </v-row>
 
