@@ -29,10 +29,10 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" />
+      <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+      <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" />
     </v-col>
   </v-row>
 
@@ -44,9 +44,6 @@
   </h2>
 
   <v-row>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_count" :subtitle="$t('Stats.Total')" />
-    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.location_with_price_count" :subtitle="$t('Stats.WithPrice')" />
     </v-col>
@@ -60,9 +57,6 @@
   </h2>
 
   <v-row>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_count" :subtitle="$t('Stats.Total')" />
-    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.proof_with_price_count" :subtitle="$t('Stats.WithPrice')" />
     </v-col>
