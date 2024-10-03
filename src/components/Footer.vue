@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="bg-grey-lighten-1 py-4">
+  <v-footer class="bg-footer py-4">
     <v-row no-gutters>
       <v-col cols="12" md="6" align="center">
         <i18n-t keypath="Footer.TagLine" tag="span">
