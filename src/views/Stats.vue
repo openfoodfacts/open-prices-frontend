@@ -13,10 +13,10 @@
       <StatCard :value="stats.price_count" :subtitle="$t('Stats.Total')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_barcode_count" :subtitle="$t('Stats.WithBarcode')" />
+      <StatCard :value="stats.price_type_product_code_count" :subtitle="$t('Stats.WithBarcode')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_category_count" :subtitle="$t('Stats.WithCategory')" />
+      <StatCard :value="stats.price_type_category_tag_count" :subtitle="$t('Stats.WithCategory')" />
     </v-col>
   </v-row>
 
@@ -29,10 +29,10 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" />
+      <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+      <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" />
     </v-col>
   </v-row>
 
@@ -45,10 +45,7 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_count" :subtitle="$t('Stats.Total')" />
-    </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+      <StatCard :value="stats.location_with_price_count" :subtitle="$t('Stats.Total')" />
     </v-col>
   </v-row>
 
@@ -61,10 +58,13 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_count" :subtitle="$t('Stats.Total')" />
+      <StatCard :value="stats.proof_with_price_count" :subtitle="$t('Stats.Total')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+      <StatCard :value="stats.proof_type_price_tag_count" :subtitle="$t('ProofCard.PRICE_TAG')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_type_receipt_count" :subtitle="$t('ProofCard.RECEIPT')" />
     </v-col>
   </v-row>
 
@@ -77,7 +77,7 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.user_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+      <StatCard :value="stats.user_with_price_count" :subtitle="$t('Stats.Total')" />
     </v-col>
   </v-row>
 
