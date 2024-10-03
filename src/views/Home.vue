@@ -1,6 +1,6 @@
 <template>
   <h2 class="text-h6">
-    {{ $t('Common.Tagline') }} 🏷🍊💲
+    {{ $t('Common.TaglineAlt1') }} 🏷🍊💲
   </h2>
 
   <br>
