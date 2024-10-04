@@ -7,9 +7,6 @@
       <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
       <FilterMenu kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
       <OrderMenu kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
-      <v-btn size="x-small" prepend-icon="mdi-arrow-left" to="/dashboard">
-        {{ $t('UserDashboard.Title') }}
-      </v-btn>
     </v-col>
   </v-row>
 

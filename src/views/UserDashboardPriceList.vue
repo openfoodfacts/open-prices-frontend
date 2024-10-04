@@ -5,9 +5,6 @@
         {{ $t('UserDashboard.UserPriceTotal', { count: userPriceTotal }) }}
       </v-chip>
       <LoadedCountChip v-if="!loading" :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
-      <v-btn size="x-small" prepend-icon="mdi-arrow-left" to="/dashboard">
-        {{ $t('UserDashboard.Title') }}
-      </v-btn>
     </v-col>
   </v-row>
 
