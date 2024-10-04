@@ -1,8 +1,4 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('UserDashboard.MyProofs') }}
-  </h1>
-
   <v-row v-if="!loading">
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-image">
@@ -11,9 +7,6 @@
       <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
       <FilterMenu kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
       <OrderMenu kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
-      <v-btn size="x-small" prepend-icon="mdi-arrow-left" to="/dashboard">
-        {{ $t('UserDashboard.Title') }}
-      </v-btn>
     </v-col>
   </v-row>
 

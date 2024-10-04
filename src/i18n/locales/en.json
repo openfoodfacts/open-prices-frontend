@@ -438,6 +438,12 @@
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
+		"MyPrices": {
+			"Title": "My prices"
+		},
+		"MyProofs": {
+			"Title": "My proofs"
+		},
 		"ProofAddSingle": {
 			"Title": "Add a proof"
 		},
