@@ -199,6 +199,7 @@
 		"Help": "உதவி",
 		"History": "வரலாறு",
 		"Image": "Image",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "லிங்க் காப்பி ஆகிவிட்டது",
 		"LocationCount": "{count} இடங்கள்",
 		"Map": "Map",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Latest prices"
+		},
+		"MyPrices": {
+			"Title": "எனது விலைகள்"
+		},
+		"MyProofs": {
+			"Title": "My proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a proof"
