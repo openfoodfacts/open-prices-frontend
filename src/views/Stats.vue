@@ -105,14 +105,16 @@ export default {
     return {
       stats: {
         price_count: 0,
-        price_barcode_count: 0,
-        price_category_count: 0,
+        price_type_product_code_count: 0,
+        price_type_category_tag_count: 0,
         product_count: 0,
         product_with_price_count: 0,
         location_count: 0,
         location_with_price_count: 0,
         proof_count: 0,
         proof_with_price_count: 0,
+        proof_type_price_tag_count: 0,
+        proof_type_receipt_count: 0,
         user_count: 0,
         user_with_price_count: 0,
         updated: null,
