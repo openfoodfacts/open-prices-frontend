@@ -1,8 +1,4 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('UserDashboard.MyProofs') }}
-  </h1>
-
   <v-row v-if="!loading">
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-image">
