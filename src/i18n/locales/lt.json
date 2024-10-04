@@ -199,6 +199,7 @@
 		"Help": "Help",
 		"History": "Istorija",
 		"Image": "Vaizdas",
+		"ImageFull": "Viso dydžio vaizdas",
 		"LinkCopySuccess": "Nuoroda nukopijuota",
 		"LocationCount": "{count} vietos (-ų)",
 		"Map": "Žemėlapis",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Naujausios kainos"
+		},
+		"MyPrices": {
+			"Title": "Mano kainos"
+		},
+		"MyProofs": {
+			"Title": "Mano įrodymai"
 		},
 		"ProofAddSingle": {
 			"Title": "Pridėti įrodymą"
