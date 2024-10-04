@@ -11,6 +11,9 @@
         <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
           {{ $t('Common.Details') }}
         </v-list-item>
+        <v-list-item :slim="true" prepend-icon="mdi-open-in-new" :href="getProofFullUrl" target="_blank">
+          {{ $t('Common.ImageFull') }}
+        </v-list-item>
         <v-list-item :slim="true" prepend-icon="mdi-pencil" :disabled="!userCanEditProof" @click="openEditDialog">
           {{ $t('Common.Edit') }}
         </v-list-item>
@@ -82,6 +85,11 @@ export default {
     }
   },
   computed: {
+    getProofFullUrl() {
+      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'  // PRICE_TAG
+      // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'  // RECEIPT
+      return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${this.proof.file_path}`
+    },
     getProofDetailUrl() {
       return `/proofs/${this.proof.id}`
     },
