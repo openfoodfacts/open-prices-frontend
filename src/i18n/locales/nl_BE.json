@@ -199,6 +199,7 @@
 		"Help": "Help",
 		"History": "Geschiedenis",
 		"Image": "Afbeelding",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "Link gekopieerd",
 		"LocationCount": "{count} locaties",
 		"Map": "Kaart",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Laatste prijzen"
+		},
+		"MyPrices": {
+			"Title": "Mijn prijzen"
+		},
+		"MyProofs": {
+			"Title": "Mijn bewijzen"
 		},
 		"ProofAddSingle": {
 			"Title": "Voeg een bewijs toe"
