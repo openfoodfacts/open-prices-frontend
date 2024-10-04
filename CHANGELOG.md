@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.84.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.84.3...v1.84.4) (2024-10-04)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#920](https://github.com/openfoodfacts/open-prices-frontend/issues/920)) ([66203c4](https://github.com/openfoodfacts/open-prices-frontend/commit/66203c436352093ed63e058149f2b03ca5f499e6))
+* **Proofs:** show image_thumb instead of (full) file image ([#924](https://github.com/openfoodfacts/open-prices-frontend/issues/924)) ([de4359e](https://github.com/openfoodfacts/open-prices-frontend/commit/de4359e6235f96b6948a143e50250582ad9fb6bb))
+* **Stats:** remove some totals, add new count per proof type ([#922](https://github.com/openfoodfacts/open-prices-frontend/issues/922)) ([933a77e](https://github.com/openfoodfacts/open-prices-frontend/commit/933a77efefb67d8409bb16f43badde8a9fb30ee1))
+
 ## [1.84.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.84.2...v1.84.3) (2024-10-03)
 
 
