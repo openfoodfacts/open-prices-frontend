@@ -199,6 +199,7 @@
 		"Help": "Èd",
 		"History": "History",
 		"Image": "Image",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "Link kopye",
 		"LocationCount": "{count} locations",
 		"Map": "Map",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Dènye pri"
+		},
+		"MyPrices": {
+			"Title": "Pri mwen yo"
+		},
+		"MyProofs": {
+			"Title": "Prèv mwen yo"
 		},
 		"ProofAddSingle": {
 			"Title": "Ajoute yon prèv"
