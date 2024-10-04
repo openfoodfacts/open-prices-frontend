@@ -199,6 +199,7 @@
 		"Help": "Допомога",
 		"History": "Історія",
 		"Image": "Зображення",
+		"ImageFull": "Повнорозмірне зображення",
 		"LinkCopySuccess": "Посилання скопійоване",
 		"LocationCount": "{count} місць",
 		"Map": "Мапа",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Остання ціна"
+		},
+		"MyPrices": {
+			"Title": "Мої ціни"
+		},
+		"MyProofs": {
+			"Title": "Мої докази"
 		},
 		"ProofAddSingle": {
 			"Title": "Додати доказ"
