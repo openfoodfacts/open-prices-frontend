@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.85.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.84.4...v1.85.0) (2024-10-04)
+
+
+### Features
+
+* **Dashboard:** first basic breadcrumb for user dashboard pages ([#927](https://github.com/openfoodfacts/open-prices-frontend/issues/927)) ([58065a8](https://github.com/openfoodfacts/open-prices-frontend/commit/58065a8ff55df76a8dd27e04623c5b7b43348412))
+
+
+### Bug Fixes
+
+* **Stats:** fix stat counts. ref [#922](https://github.com/openfoodfacts/open-prices-frontend/issues/922) ([f76277a](https://github.com/openfoodfacts/open-prices-frontend/commit/f76277a00c99064d1eef4eafe7a6183d14248a7d))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#928](https://github.com/openfoodfacts/open-prices-frontend/issues/928)) ([01d7c51](https://github.com/openfoodfacts/open-prices-frontend/commit/01d7c51e247f558b99bab97997f0ab9a9fa04657))
+
 ## [1.84.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.84.3...v1.84.4) (2024-10-04)
 
 
