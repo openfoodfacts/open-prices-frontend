@@ -199,6 +199,7 @@
 		"Help": "Ohje",
 		"History": "Historia",
 		"Image": "Kuva",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "Linkki kopioitu",
 		"LocationCount": "{count} sijaintia",
 		"Map": "Kartta",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Viimeisimmät hinnat"
+		},
+		"MyPrices": {
+			"Title": "Minun hinnat"
+		},
+		"MyProofs": {
+			"Title": "Minun todisteeni"
 		},
 		"ProofAddSingle": {
 			"Title": "Lisää todiste"
