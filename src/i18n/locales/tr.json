@@ -199,6 +199,7 @@
 		"Help": "Yardım",
 		"History": "Geçmiş",
 		"Image": "Resim",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "Bağlantı kopyalandı",
 		"LocationCount": "{count} konum",
 		"Map": "Harita",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Son fiyatlar"
+		},
+		"MyPrices": {
+			"Title": "Fiyatlarım"
+		},
+		"MyProofs": {
+			"Title": "Bedellerim"
 		},
 		"ProofAddSingle": {
 			"Title": "Bir bedel ekle"

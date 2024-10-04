@@ -199,6 +199,7 @@
 		"Help": "עזרה",
 		"History": "היסטוריה",
 		"Image": "תמונה",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "הקישור הועתק",
 		"LocationCount": "{count} מקומות",
 		"Map": "מפה",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "מחירים עדכניים"
+		},
+		"MyPrices": {
+			"Title": "המחירים שלי"
+		},
+		"MyProofs": {
+			"Title": "ההוכחות שלי"
 		},
 		"ProofAddSingle": {
 			"Title": "הוספת הוכחה"

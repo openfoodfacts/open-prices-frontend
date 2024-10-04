@@ -199,6 +199,7 @@
 		"Help": "crwdns249060:0crwdne249060:0",
 		"History": "crwdns249518:0crwdne249518:0",
 		"Image": "crwdns249002:0crwdne249002:0",
+		"ImageFull": "crwdns250202:0crwdne250202:0",
 		"LinkCopySuccess": "crwdns249160:0crwdne249160:0",
 		"LocationCount": "crwdns249198:0{count}crwdne249198:0",
 		"Map": "crwdns249440:0crwdne249440:0",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "crwdns246840:0crwdne246840:0"
+		},
+		"MyPrices": {
+			"Title": "crwdns250204:0crwdne250204:0"
+		},
+		"MyProofs": {
+			"Title": "crwdns250206:0crwdne250206:0"
 		},
 		"ProofAddSingle": {
 			"Title": "crwdns249010:0crwdne249010:0"

@@ -199,6 +199,7 @@
 		"Help": "Help",
 		"History": "Tarixçə",
 		"Image": "Image",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations",
 		"Map": "Map",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Latest prices"
+		},
+		"MyPrices": {
+			"Title": "My prices"
+		},
+		"MyProofs": {
+			"Title": "My proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a proof"
