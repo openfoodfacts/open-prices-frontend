@@ -12,26 +12,34 @@
   </v-app>
 </template>
 
-<script setup>
-import { useTheme } from 'vuetify'
-
-const theme = useTheme()
-
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)')
-theme.global.name.value = prefersDarkScheme.matches ? 'dark' : 'light'
-prefersDarkScheme.addEventListener('change', (e) => {
-  theme.global.name.value = e.matches ? 'dark' : 'light'
-})
-</script>
 <script>
+import { useTheme } from 'vuetify'
 import { defineComponent } from 'vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from './store'
 
 export default defineComponent({
   components: {
     Header,
     Footer,
   },
+  data() {
+    return {
+      prefersDarkScheme: window.matchMedia('(prefers-color-scheme: dark)'),
+      theme: useTheme(),
+    }
+  },
+  computed: {
+    ...mapStores(useAppStore),
+  },
+  mounted() {
+    if (this.appStore.getUserPreferedTheme) {
+      this.theme.global.name = this.appStore.getUserPreferedTheme
+    } else {
+      this.theme.global.name = this.prefersDarkScheme.matches ? 'dark' : 'light'
+    }
+  }
 })
 </script>
