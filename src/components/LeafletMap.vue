@@ -32,22 +32,15 @@ export default {
       required: true
     },
   },
-  setup() {
-    const theme = useTheme()
-    let tiles = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    let attribution = '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    if (theme.global.name.value === "dark") {
-      tiles = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
-      attribution += ', &copy; <a href="https://carto.com/attributions">CARTO</a>'
-    }
-    return {tiles: tiles, attribution: attribution}
-  },
   data() {
     return {
       map: null,
       mapZoom: 5,
       mapCenter: [45, 5],
       mapBounds: null,
+      theme: useTheme(),
+      tiles: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      attribution: '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }
   },
   mounted() {
@@ -59,6 +52,10 @@ export default {
         // this.mapZoom = 12
         this.mapBounds = null
       }
+    }
+    if (this.theme.global.name === "dark") {
+      this.tiles = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
+      this.attribution += ', &copy; <a href="https://carto.com/attributions">CARTO</a>'
     }
   },
   methods: {
