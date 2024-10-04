@@ -199,6 +199,7 @@
 		"Help": "Hilfe",
 		"History": "Verlauf",
 		"Image": "Bild",
+		"ImageFull": "Bild in Originalgröße",
 		"LinkCopySuccess": "Link kopiert",
 		"LocationCount": "{count} Standorte",
 		"Map": "Karte",
@@ -231,8 +232,8 @@
 		"Stats": "Statistiken",
 		"TaglineOriginal": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise",
 		"TaglineAlt1": "Eine offene öffentlich zugängliche Datenbank der Preise",
-		"TaglineAlt2": "The open crowdsourced database of food and product prices",
-		"TaglineAlt3": "Prices should be free",
+		"TaglineAlt2": "Die offene Gemeinschaftsdatenbank für Lebensmittel- und Produktpreise",
+		"TaglineAlt3": "Preise sollten frei zugänglich sein",
 		"Thanks": "Danke",
 		"TopContributors": "Aktivste Mitwirkende",
 		"TopLocations": "Top-Standorte",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Aktuelle Preise"
+		},
+		"MyPrices": {
+			"Title": "Mein Preise"
+		},
+		"MyProofs": {
+			"Title": "Meine Belege"
 		},
 		"ProofAddSingle": {
 			"Title": "Nachweis bearbeiten"

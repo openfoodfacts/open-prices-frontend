@@ -1,17 +1,10 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('UserDashboard.MyPrices') }}
-  </h1>
-
   <v-row v-if="!loading">
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-tag-multiple-outline">
         {{ $t('UserDashboard.UserPriceTotal', { count: userPriceTotal }) }}
       </v-chip>
       <LoadedCountChip v-if="!loading" :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
-      <v-btn size="x-small" prepend-icon="mdi-arrow-left" to="/dashboard">
-        {{ $t('UserDashboard.Title') }}
-      </v-btn>
     </v-col>
   </v-row>
 

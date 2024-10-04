@@ -1,8 +1,4 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('UserDashboard.Title') }}
-  </h1>
-
   <v-row>
     <v-col>
       <v-chip class="mr-2" label variant="text" prepend-icon="mdi-account">

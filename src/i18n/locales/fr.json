@@ -199,6 +199,7 @@
 		"Help": "Aide",
 		"History": "Historique",
 		"Image": "Image",
+		"ImageFull": "Image en taille réelle",
 		"LinkCopySuccess": "Lien copié",
 		"LocationCount": "{count} lieux",
 		"Map": "Carte",
@@ -440,6 +441,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Derniers prix"
+		},
+		"MyPrices": {
+			"Title": "Mes prix"
+		},
+		"MyProofs": {
+			"Title": "Mes preuves"
 		},
 		"ProofAddSingle": {
 			"Title": "Ajouter une preuve"

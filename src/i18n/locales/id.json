@@ -199,6 +199,7 @@
 		"Help": "Bantuan",
 		"History": "Riwayat",
 		"Image": "Gambar",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "Tautan disalin",
 		"LocationCount": "{count} lokasi",
 		"Map": "Peta",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Harga terbaru"
+		},
+		"MyPrices": {
+			"Title": "Harga saya"
+		},
+		"MyProofs": {
+			"Title": "Bukti saya"
 		},
 		"ProofAddSingle": {
 			"Title": "Tambahkan bukti"

@@ -4,6 +4,7 @@
 
     <v-main class="d-flex justify-center">
       <v-container>
+        <Breadcrumbs />
         <router-view />
       </v-container>
     </v-main>
@@ -17,6 +18,7 @@ import { useTheme } from 'vuetify'
 import { defineComponent } from 'vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import Breadcrumbs from './components/Breadcrumbs.vue';
 import { mapStores } from 'pinia'
 import { useAppStore } from './store'
 
@@ -24,6 +26,7 @@ export default defineComponent({
   components: {
     Header,
     Footer,
+    Breadcrumbs,
   },
   data() {
     return {

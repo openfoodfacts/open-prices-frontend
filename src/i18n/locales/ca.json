@@ -199,6 +199,7 @@
 		"Help": "Help",
 		"History": "Historial",
 		"Image": "Imatge",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations",
 		"Map": "Mapa",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Últims preus"
+		},
+		"MyPrices": {
+			"Title": "My prices"
+		},
+		"MyProofs": {
+			"Title": "My proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a proof"
