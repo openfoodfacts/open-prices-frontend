@@ -199,6 +199,7 @@
 		"Help": "Help",
 		"History": "履歴",
 		"Image": "画像",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "リンクをコピーしました",
 		"LocationCount": "{count} か所",
 		"Map": "地図",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Latest prices"
+		},
+		"MyPrices": {
+			"Title": "私の価格"
+		},
+		"MyProofs": {
+			"Title": "自分の証拠"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a proof"
