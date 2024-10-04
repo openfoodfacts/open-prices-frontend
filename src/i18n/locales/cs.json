@@ -199,6 +199,7 @@
 		"Help": "Nápověda",
 		"History": "Historie",
 		"Image": "Obrázek",
+		"ImageFull": "Full-size image",
 		"LinkCopySuccess": "Odkaz zkopírován",
 		"LocationCount": "{count} poloh",
 		"Map": "Mapa",
@@ -436,6 +437,12 @@
 		},
 		"LatestPrices": {
 			"Title": "Nejnovější ceny"
+		},
+		"MyPrices": {
+			"Title": "Moje ceny"
+		},
+		"MyProofs": {
+			"Title": "Moje důkazy"
 		},
 		"ProofAddSingle": {
 			"Title": "Přidat důkaz"
