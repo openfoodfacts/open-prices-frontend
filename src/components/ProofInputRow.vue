@@ -1,71 +1,11 @@
 <template>
   <v-row>
+    <!-- FORM -->
     <v-col v-if="!proofObject" cols="12">
-      <!-- proof type -->
       <ProofTypeInputRow :proofTypeForm="proofForm" />
-      <!-- proof image -->
-      <v-row>
-        <v-col cols="8">
-          <h3 class="mb-1">
-            {{ $t('Common.Image') }}
-          </h3>
-          <v-btn
-            class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" :loading="loading"
-            :disabled="loading" @click.prevent="$refs.proofCamera.click()"
-          >
-            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
-            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
-          </v-btn>
-          <v-btn
-            class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" :loading="loading"
-            :disabled="loading" @click.prevent="$refs.proofGallery.click()"
-          >
-            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
-            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
-          </v-btn>
-          <v-btn
-            v-if="!hideRecentProofChoice" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" :loading="loading"
-            :disabled="loading" @click="userRecentProofsDialog = true"
-          >
-            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
-            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
-          </v-btn>
-          <v-file-input
-            ref="proofCamera" v-model="proofFormImage" class="d-none overflow-hidden" capture="environment"
-            accept="image/*" :loading="loading" @update:modelValue="newProof('camera')" @click:clear="clearProof"
-          />
-          <v-file-input
-            ref="proofGallery" v-model="proofFormImage" class="d-none overflow-hidden" accept="image/*, .heic"
-            :loading="loading" @update:modelValue="newProof('gallery')" @click:clear="clearProof"
-          />
-          <p v-if="!loading" class="mt-2 mb-2">
-            <i v-if="!proofFormImage" class="text-red">{{ $t('ProofCreate.SelectProof') }}</i>
-            <i v-else class="text-green">{{ $t('ProofCreate.ProofSelected') }}</i>
-          </p>
-        </v-col>
-        <v-col v-if="proofFormImagePreview" cols="4">
-          <v-img :src="proofFormImagePreview" style="max-height:200px" />
-        </v-col>
-      </v-row>
-
-      <!-- proof RECEIPT: warning message -->
-      <v-row v-if="proofForm.type === 'RECEIPT'" class="mt-0">
-        <v-col>
-          <h3 class="mb-1">
-            {{ $t('ProofDetail.Privacy') }}
-          </h3>
-          <p class="text-caption text-warning">
-            <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
-          </p>
-        </v-col>
-      </v-row>
-
+      <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" @proof="proofImage = $event" />
       <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
-
-      <!-- proof date & currency -->
       <ProofDateCurrencyInputRow :proofDateCurrencyForm="proofForm" />
-
-      <!-- proof upload button -->
       <v-row>
         <v-col>
           <v-btn color="success" :loading="loading" :disabled="!proofFormFilled || loading" @click="uploadProof">
@@ -74,18 +14,18 @@
         </v-col>
       </v-row>
     </v-col>
-
+    <!-- CARD -->
     <v-col v-else>
       <ProofCard :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
     </v-col>
   </v-row>
 
   <v-snackbar
-    v-model="proofSuccessMessage"
-    color="success"
+    v-model="proofDateSuccessMessage"
+    color="info"
     :timeout="2000"
   >
-    {{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}
+    {{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}
   </v-snackbar>
   <v-snackbar
     v-model="proofSelectedSuccessMessage"
@@ -94,14 +34,13 @@
   >
     {{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}
   </v-snackbar>
-
-  <UserRecentProofsDialog
-    v-if="userRecentProofsDialog"
-    v-model="userRecentProofsDialog"
-    :filterType="proofForm.type"
-    @recentProofSelected="handleRecentProofSelected($event)"
-    @close="userRecentProofsDialog = false"
-  />
+  <v-snackbar
+    v-model="proofSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >
+    {{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}
+  </v-snackbar>
 </template>
 
 <script>
@@ -122,7 +61,7 @@ Compressor.setDefaults({
 export default {
   components: {
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
-    UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
+    ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
     ProofDateCurrencyInputRow: defineAsyncComponent(() => import('../components/ProofDateCurrencyInputRow.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
@@ -140,14 +79,12 @@ export default {
   emits: ['proof'],
   data() {
     return {
-      proofFormImage: null,
-      proofFormImagePreview: null,
       proofDateSuccessMessage: false,
-      proofSuccessMessage: false,
-      userRecentProofsDialog: false,
       proofSelectedSuccessMessage: false,
-      proofObject: null,
+      proofSuccessMessage: false,
+      proofImage: null,
       locationObject: null,
+      proofObject: null,
       loading: false,
     }
   },
@@ -155,59 +92,50 @@ export default {
     proofTypeFormFilled() {
       return !!this.proofForm.type
     },
-    proofFormImageFilled() {
-      return !!this.proofFormImage
+    proofImageFormFilled() {
+      return !!this.proofImage
     },
     proofDateCurrencyFormFilled() {
       let keys = ['date', 'currency']
       return Object.keys(this.proofForm).filter(k => keys.includes(k)).every(k => !!this.proofForm[k])
     },
     proofFormFilled() {
-      return this.proofTypeFormFilled && this.proofFormImageFilled && this.proofDateCurrencyFormFilled
+      return this.proofTypeFormFilled && this.proofImageFormFilled && this.proofDateCurrencyFormFilled
     },
   },
   watch: {
+    proofImage(newProofImage, oldProofImage) {  // eslint-disable-line no-unused-vars
+      this.handleProofSelected(newProofImage)
+    },
     proofObject(newProofObject, oldProofObject) {  // eslint-disable-line no-unused-vars
       this.$emit('proof', newProofObject)
     }
   },
-  mounted() {
-    if (this.$route.query.proof_id) {
-      this.getProofById(this.$route.query.proof_id)
-    }
-  },
   methods: {
-    handleRecentProofSelected(selectedProof) {
-      // update proofForm
-      this.proofForm.type = selectedProof.type
-      this.proofForm.proof_id = selectedProof.id
-      if (selectedProof.location) {
-        this.proofForm.location_osm_id = selectedProof.location_osm_id
-        this.proofForm.location_osm_type = selectedProof.location_osm_type
+    handleProofSelected(proofSelected) {
+      // can be an existing proof, or a file
+      // existing proof: update proofForm
+      if (proofSelected.id) {
+        // update proofForm
+        this.proofForm.type = proofSelected.type
+        this.proofForm.proof_id = proofSelected.id
+        if (proofSelected.location) {
+          this.proofForm.location_osm_id = proofSelected.location_osm_id
+          this.proofForm.location_osm_type = proofSelected.location_osm_type
+        }
+        if (proofSelected.date) {
+          this.proofForm.date = proofSelected.date
+        }
+        if (proofSelected.currency) {
+          this.proofForm.currency = proofSelected.currency
+        }
+        // set proofObject
+        this.proofSelectedSuccessMessage = true
+        this.proofObject = proofSelected
       }
-      if (selectedProof.date) {
-        this.proofForm.date = selectedProof.date
-      }
-      if (selectedProof.currency) {
-        this.proofForm.currency = selectedProof.currency
-      }
-      this.proofSelectedSuccessMessage = true
-      // set proofObject
-      this.proofObject = selectedProof
-    },
-    getProofById(proofId) {
-      this.loading = true
-      api.getProofById(proofId)
-        .then(proof => {
-          this.handleRecentProofSelected(proof)
-          this.loading = false
-        })
-    },
-    newProof(source) {
-      this.proofFormImagePreview = this.getLocalProofUrl(this.proofFormImage)
-      if (source === 'gallery') {
-        // extract date from image exif
-        ExifReader.load(this.proofFormImage).then((tags) => {
+      // new proof: extract exif data from file
+      else {
+        ExifReader.load(proofSelected).then((tags) => {
           if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
             // exif DateTimeOriginal format: '2024:01:31 20:23:52'
             const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')
@@ -222,14 +150,14 @@ export default {
     uploadProof() {
       this.loading = true
       new Promise((resolve, reject) => {
-        new Compressor(this.proofFormImage, {
+        new Compressor(this.proofImage, {
           success: resolve,
           error: reject
         })
       })
-      .then((proofFormImageCompressed) => {
+      .then((proofImageCompressed) => {
         api
-          .createProof(proofFormImageCompressed, this.proofForm.type, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency)
+          .createProof(proofImageCompressed, this.proofForm.type, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency)
           .then((data) => {
             this.loading = false
             if (data.id) {
@@ -255,17 +183,6 @@ export default {
       //   console.log('Compress complete')
       // })
     },
-    clearProof() {
-      this.proofFormImage = null
-      this.proofFormImagePreview = null
-      this.proofForm.proof_id = null
-      this.proofObject = null
-    },
-    getLocalProofUrl(blob) {
-      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'  // PRICE_TAG
-      // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'  // RECEIPT
-      return URL.createObjectURL(blob)
-    }
   }
 }
 </script>
