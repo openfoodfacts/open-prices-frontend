@@ -7,7 +7,7 @@
           {{ $t('Common.Proof') }}
         </v-list-subheader>
         <v-divider />
-        <PriceAddLink :proofId="proof.id" :proofType="proof.type" display="list-item" :disabled="!userCanAddPrice" />
+        <PriceAddLink :proofId="proof.id" display="list-item" :disabled="!userCanAddPrice" />
         <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
           {{ $t('Common.Details') }}
         </v-list-item>
