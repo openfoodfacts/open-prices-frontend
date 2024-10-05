@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="bg-grey-lighten-1 py-4">
+  <v-footer class="bg-footer py-4">
     <v-row no-gutters>
       <v-col cols="12" md="6" align="center">
         <i18n-t keypath="Footer.TagLine" tag="span">
@@ -28,6 +28,9 @@
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-github" :href="APP_GITHUB_FRONTEND_URL" target="_blank">
           {{ GITHUB_NAME }}
         </v-btn>
+        <v-btn class="mx-2" variant="text" :prepend-icon="themeInfo.icon" @click="swapTheme">
+          {{ $t(themeInfo.label) }}
+        </v-btn>
       </v-col>
     </v-row>
   </v-footer>
@@ -36,6 +39,9 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
+import { useTheme } from 'vuetify'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 
 export default {
   components: {
@@ -75,8 +81,31 @@ export default {
           url: constants.OPFF_URL,
           icon: constants.OPFF_ICON,
         }
-      ]
+      ],
+      theme: useTheme()
     }
   },
+  computed: {
+    ...mapStores(useAppStore),
+    themeInfo() {
+      if (this.theme.global.name === "light") {
+        return {
+          icon: 'mdi-white-balance-sunny',
+          label: 'Theme.LightMode' 
+        }
+      }
+      return {
+        icon: 'mdi-moon-waning-crescent',
+        label: 'Theme.DarkMode' 
+      }
+    }
+  },
+  methods: {
+    swapTheme() {
+      const newTheme = this.theme.global.name === "light" ? 'dark' : 'light'
+      this.appStore.user.preferedTheme = newTheme
+      this.theme.global.name = newTheme
+    }
+  }
 }
 </script>
