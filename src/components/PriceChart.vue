@@ -1,5 +1,5 @@
 <template>
-  <div id="vega-lite-chart" style="width:100%;" />
+  <div id="vega-lite-chart" style="width: 100%;" />
 </template>
 
 <script>
@@ -41,7 +41,7 @@ export default {
       var vlSpec = {
         $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
         description: 'A simple bar chart with embedded data.',
-        width: 'container',
+        width: "container",
         autosize: { type: 'fit', resize: true},
         data: {
           values: this.priceList
