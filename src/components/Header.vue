@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar :elevation="1" style="background-color: rgb(242, 233, 228);">
+  <v-app-bar :elevation="1" class="bg-header">
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu" />
     <v-app-bar-title>
       <span style="cursor:pointer" @click="$router.push('/')">

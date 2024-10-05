@@ -15,4 +15,20 @@ export const vuetify = createVuetify({
       mdi,
     },
   },
+  theme: {
+    themes: {
+      light: {
+        colors: {
+          header: "rgb(242, 233, 228)",
+          footer: '#bdbdbd'
+        }
+      },
+      dark: {
+        colors: {
+          header: "#0d161b",
+          footer: '#424242'
+        }
+      },
+    },
+  },
 })

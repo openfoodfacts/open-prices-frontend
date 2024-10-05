@@ -17,6 +17,7 @@ export const useAppStore = defineStore('app', {
       product_display_barcode: false,
       product_display_category_tag: false,
       location_display_osm_id: false,
+      preferedTheme: null
     },
   }),
   getters: {
@@ -42,6 +43,9 @@ export const useAppStore = defineStore('app', {
     },
     getUserLastCurrencyUsed: (state) => {
       return state.user.last_currency_used
+    },
+    getUserPreferedTheme: (state) => {
+      return state.user.preferedTheme
     }
   },
   actions: {
@@ -89,6 +93,9 @@ export const useAppStore = defineStore('app', {
     removeProof(proofId) {
       this.user.proofs = this.user.proofs.filter(proof => proof.id !== proofId)
       this.user.proofTotal -= 1
+    },
+    setPreferedTheme(theme) {
+      this.user.preferedTheme = theme
     }
   },
   // pinia-plugin-persistedstate
