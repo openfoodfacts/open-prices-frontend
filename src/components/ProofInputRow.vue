@@ -1,9 +1,14 @@
 <template>
   <v-row>
     <v-col v-if="!proofObject" cols="12">
+      <!-- proof type -->
+      <ProofTypeInputRow :proofTypeForm="proofForm" />
       <!-- proof image -->
       <v-row>
         <v-col cols="8">
+          <h3 class="mb-1">
+            {{ $t('Common.Image') }}
+          </h3>
           <v-btn
             class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" :loading="loading"
             :disabled="loading" @click.prevent="$refs.proofCamera.click()"
@@ -44,7 +49,7 @@
       </v-row>
 
       <!-- proof RECEIPT: warning message -->
-      <v-row v-if="proofType === 'RECEIPT'" class="mt-0">
+      <v-row v-if="proofForm.type === 'RECEIPT'" class="mt-0">
         <v-col>
           <h3 class="mb-1">
             {{ $t('ProofDetail.Privacy') }}
@@ -93,7 +98,7 @@
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
-    :filterType="proofType"
+    :filterType="proofForm.type"
     @recentProofSelected="handleRecentProofSelected($event)"
     @close="userRecentProofsDialog = false"
   />
@@ -116,19 +121,16 @@ Compressor.setDefaults({
 
 export default {
   components: {
+    ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
     ProofDateCurrencyInputRow: defineAsyncComponent(() => import('../components/ProofDateCurrencyInputRow.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
   },
   props: {
-    proofType: {
-      type: String,
-      default: null
-    },
     proofForm: {
       type: Object,
-      default: () => ({ proof_id: null, location_osm_id: null, location_osm_type: null, date: utils.currentDate(), currency: null })
+      default: () => ({ type: null, proof_id: null, location_osm_id: null, location_osm_type: null, date: utils.currentDate(), currency: null })
     },
     hideRecentProofChoice: {
       type: Boolean,
@@ -150,12 +152,18 @@ export default {
     }
   },
   computed: {
+    proofTypeFormFilled() {
+      return !!this.proofForm.type
+    },
+    proofFormImageFilled() {
+      return !!this.proofFormImage
+    },
     proofDateCurrencyFormFilled() {
       let keys = ['date', 'currency']
       return Object.keys(this.proofForm).filter(k => keys.includes(k)).every(k => !!this.proofForm[k])
     },
     proofFormFilled() {
-      return !!this.proofFormImage && this.proofDateCurrencyFormFilled
+      return this.proofTypeFormFilled && this.proofFormImageFilled && this.proofDateCurrencyFormFilled
     },
   },
   watch: {
@@ -220,7 +228,7 @@ export default {
       })
       .then((proofFormImageCompressed) => {
         api
-          .createProof(proofFormImageCompressed, this.proofType, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency)
+          .createProof(proofFormImageCompressed, this.proofForm.type, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency)
           .then((data) => {
             this.loading = false
             if (data.id) {
