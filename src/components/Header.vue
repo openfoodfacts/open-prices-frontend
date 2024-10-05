@@ -11,8 +11,8 @@
     <v-btn v-else prepend-icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')">
       {{ $t('Common.Search') }}
     </v-btn>
-    <v-btn v-if="!$vuetify.display.smAndUp" color="primary" icon="mdi-tag-plus-outline" to="/prices/add" :aria-label="$t('Common.AddPrice')" />
-    <v-btn v-else color="primary" prepend-icon="mdi-tag-plus-outline" to="/prices/add" :aria-label="$t('Common.AddPrice')">
+    <v-btn v-if="!$vuetify.display.smAndUp" color="primary" icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrice')" />
+    <v-btn v-else color="primary" prepend-icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrice')">
       {{ $t('Common.AddPrice') }}
     </v-btn>
     <template v-if="!username" #append>

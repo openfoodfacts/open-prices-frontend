@@ -7,8 +7,8 @@
     <!-- Step 1: proof (image, location, date & currency) -->
     <v-col cols="12" md="6">
       <v-card
-        :title="(proofType === 'RECEIPT') ? $t('AddPriceHome.ReceiptMode.Title') : $t('AddPriceMultiple.ProofDetails.Title')"
-        :prepend-icon="(proofType === 'RECEIPT') ? 'mdi-receipt-text-outline' : 'mdi-library-shelves'"
+        :title="$t('AddPriceMultiple.ProofDetails.Title')"
+        prepend-icon="mdi-image"
         height="100%"
         :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
       >
@@ -17,7 +17,7 @@
         </template>
         <v-divider />
         <v-card-text>
-          <ProofInputRow :proofType="proofType" :proofForm="addPriceMultipleForm" @proof="proofSelected($event)" />
+          <ProofInputRow :proofForm="addPriceMultipleForm" @proof="proofSelected($event)" />
         </v-card-text>
         <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
       </v-card>
@@ -148,9 +148,9 @@ export default {
   },
   data() {
     return {
-      proofType: null,  // 'PRICE_TAG' or 'RECEIPT'
       // price form
       addPriceMultipleForm: {
+        type: null,
         proof_id: null,
         location_osm_id: null,
         location_osm_type: '',
@@ -189,7 +189,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keys = ['proof_id', 'location_osm_id', 'location_osm_type', 'date', 'currency']
+      let keys = Object.keys(this.addPriceMultipleForm)
       return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
     pricePerFormFilled() {
@@ -236,7 +236,6 @@ export default {
        * init form config (product mode, currency)
        * (init form done in initNewProductPriceForm)
        */
-      this.proofType = this.$route.path.endsWith('/receipt') ? 'RECEIPT' : 'PRICE_TAG'
       this.addPriceMultipleForm.currency = this.appStore.getUserLastCurrencyUsed
     },
     proofSelected(proof) {
