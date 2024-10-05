@@ -274,8 +274,8 @@
 		"SignOut": "Вийти"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "Світла тема",
+		"DarkMode": "Темна тема"
 	},
 	"Home": {
 		"AddPrice": "Додати ціну",
