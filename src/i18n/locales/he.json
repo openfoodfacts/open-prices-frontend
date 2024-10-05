@@ -274,8 +274,8 @@
 		"SignOut": "יציאה"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "מצב בהיר",
+		"DarkMode": "מצב כהה"
 	},
 	"Home": {
 		"AddPrice": "הוספת מחיר",
