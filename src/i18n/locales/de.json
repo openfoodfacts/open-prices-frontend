@@ -274,8 +274,8 @@
 		"SignOut": "Abmelden"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "Heller Modus",
+		"DarkMode": "Dunkler Modus"
 	},
 	"Home": {
 		"AddPrice": "Preis hinzufügen",
