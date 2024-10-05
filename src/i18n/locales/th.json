@@ -273,6 +273,10 @@
 		"SignIn": "เข้าสู่ระบบ",
 		"SignOut": "ล๊อคเอ้าท์"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Add a price",
 		"LatestPrices": "Latest prices",
