@@ -273,6 +273,10 @@
 		"SignIn": "साइन इन करें",
 		"SignOut": "Sign out"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "एक मूल्य जोड़े",
 		"LatestPrices": "Latest prices",
