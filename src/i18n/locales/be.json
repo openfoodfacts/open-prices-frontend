@@ -273,6 +273,10 @@
 		"SignIn": "Sign in",
 		"SignOut": "Выйсці"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Add a price",
 		"LatestPrices": "Latest prices",
