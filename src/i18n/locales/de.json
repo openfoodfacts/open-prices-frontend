@@ -273,6 +273,10 @@
 		"SignIn": "Anmelden",
 		"SignOut": "Abmelden"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Preis hinzufügen",
 		"LatestPrices": "Aktuelle Preise",
