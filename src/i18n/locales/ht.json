@@ -273,6 +273,10 @@
 		"SignIn": "Sign in",
 		"SignOut": "Sign out"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Ajoute yon pri",
 		"LatestPrices": "Dènye pri",
