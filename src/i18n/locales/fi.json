@@ -273,6 +273,10 @@
 		"SignIn": "Kirjaudu sisään",
 		"SignOut": "Kirjaudu ulos"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Lisää hinta",
 		"LatestPrices": "Viimeisimmät hinnat",
