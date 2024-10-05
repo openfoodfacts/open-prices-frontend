@@ -21,6 +21,20 @@
   </v-row>
 
   <v-snackbar
+    v-model="proofDateSuccessMessage"
+    color="info"
+    :timeout="2000"
+  >
+    {{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}
+  </v-snackbar>
+  <v-snackbar
+    v-model="proofSelectedSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >
+    {{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}
+  </v-snackbar>
+  <v-snackbar
     v-model="proofSuccessMessage"
     color="success"
     :timeout="2000"
@@ -31,6 +45,7 @@
 
 <script>
 import Compressor from 'compressorjs'
+import ExifReader from 'exifreader'
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import utils from '../utils.js'
@@ -65,6 +80,7 @@ export default {
   data() {
     return {
       proofDateSuccessMessage: false,
+      proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
       proofImage: null,
       locationObject: null,
@@ -98,7 +114,7 @@ export default {
   methods: {
     handleProofSelected(proofSelected) {
       // can be an existing proof, or a file
-      // if existing proof: update proofForm
+      // existing proof: update proofForm
       if (proofSelected.id) {
         // update proofForm
         this.proofForm.type = proofSelected.type
@@ -113,27 +129,24 @@ export default {
         if (proofSelected.currency) {
           this.proofForm.currency = proofSelected.currency
         }
-        this.proofSelectedSuccessMessage = true
         // set proofObject
+        this.proofSelectedSuccessMessage = true
         this.proofObject = proofSelected
       }
+      // new proof: extract exif data from file
+      else {
+        ExifReader.load(proofSelected).then((tags) => {
+          if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
+            // exif DateTimeOriginal format: '2024:01:31 20:23:52'
+            const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')
+            if (imageDateString !== this.proofForm.date) {
+              this.proofForm.date = imageDateString
+              this.proofDateSuccessMessage = true
+            }
+          }
+        })
+      }
     },
-    // newProof(source) {
-    //   this.proofImageFormPreview = this.getLocalProofUrl(this.proofImageForm)
-    //   if (source === 'gallery') {
-    //     // extract date from image exif
-    //     ExifReader.load(this.proofImageForm).then((tags) => {
-    //       if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
-    //         // exif DateTimeOriginal format: '2024:01:31 20:23:52'
-    //         const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')
-    //         if (imageDateString !== this.proofForm.date) {
-    //           this.proofForm.date = imageDateString
-    //           this.proofDateSuccessMessage = true
-    //         }
-    //       }
-    //     })
-    //   }
-    // },
     uploadProof() {
       this.loading = true
       new Promise((resolve, reject) => {

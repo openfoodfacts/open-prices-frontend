@@ -43,7 +43,7 @@
     </v-col>
   </v-row>
 
-  <!-- proof RECEIPT: warning message -->
+  <!-- RECEIPT: warning message -->
   <v-row v-if="proofImageForm && proofImageForm.type === 'RECEIPT'" class="mt-0">
     <v-col>
       <h3 class="mb-1">
@@ -55,14 +55,6 @@
     </v-col>
   </v-row>
 
-  <v-snackbar
-    v-model="proofSelectedSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}
-  </v-snackbar>
-
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
@@ -73,7 +65,6 @@
 </template>
 
 <script>
-import ExifReader from 'exifreader'
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 
@@ -84,7 +75,7 @@ export default {
   props: {
     proofImageForm: {
       type: Object,
-      default: () => ({ proof_id: null })
+      default: () => ({ type: null, proof_id: null })
     },
     hideRecentProofChoice: {
       type: Boolean,
@@ -96,7 +87,6 @@ export default {
     return {
       proofImage: null,
       proofImagePreview: null,
-      proofSelectedSuccessMessage: false,
       userRecentProofsDialog: false,
       loading: false
     }
@@ -123,29 +113,14 @@ export default {
     newProof(source, proof=null) {
       if (source === 'recent') {
         this.proofImage = proof
-        this.proofSelectedSuccessMessage = true
       } else {
         this.proofImagePreview = this.getLocalProofUrl(this.proofImage)
-        if (source === 'gallery') {
-          // extract date from image exif
-          ExifReader.load(this.proofImage).then((tags) => {
-            if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
-              // exif DateTimeOriginal format: '2024:01:31 20:23:52'
-              const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')
-              if (imageDateString !== this.proofImageForm.date) {
-                this.proofImageForm.date = imageDateString
-                this.proofDateSuccessMessage = true
-              }
-            }
-          })
-        }
       }
     },
     clearProof() {
       this.proofImage = null
       this.proofImagePreview = null
       this.proofImageForm.proof_id = null
-      this.proofObject = null
     },
     getLocalProofUrl(blob) {
       // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'  // PRICE_TAG
