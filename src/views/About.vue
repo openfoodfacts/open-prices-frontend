@@ -5,7 +5,7 @@
 
   <br>
 
-  <v-sheet v-for="fieldset in fieldsetsGeneral" :id="fieldset.id" :key="fieldset.title" tag="section" class="mb-4">
+  <v-sheet v-for="fieldset in fieldsetsGeneral" :id="fieldset.id" :key="fieldset.title" tag="section" class="mb-4 bg-background">
     <i18n-t :keypath="fieldset.title" tag="h2" class="mb-1">
       <template #op_name>
         {{ APP_NAME }}
@@ -35,7 +35,7 @@
       {{ $t('Common.FrequentlyAskedQuestions') }}
     </h2>
 
-    <v-sheet v-for="fieldset in fieldsetsFAQ" :key="fieldset.title" tag="div" class="mb-2">
+    <v-sheet v-for="fieldset in fieldsetsFAQ" :key="fieldset.title" tag="div" class="mb-2 bg-background">
       <i18n-t :keypath="fieldset.title" tag="h3" class="mb-1">
         <template #op_name>
           {{ APP_NAME }}

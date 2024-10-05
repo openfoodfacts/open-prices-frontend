@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar :elevation="1" style="background-color: rgb(242, 233, 228);">
+  <v-app-bar :elevation="1" class="bg-header">
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu" />
     <v-app-bar-title>
       <span style="cursor:pointer" @click="$router.push('/')">
@@ -11,8 +11,8 @@
     <v-btn v-else prepend-icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')">
       {{ $t('Common.Search') }}
     </v-btn>
-    <v-btn v-if="!$vuetify.display.smAndUp" color="primary" icon="mdi-tag-plus-outline" to="/prices/add" :aria-label="$t('Common.AddPrice')" />
-    <v-btn v-else color="primary" prepend-icon="mdi-tag-plus-outline" to="/prices/add" :aria-label="$t('Common.AddPrice')">
+    <v-btn v-if="!$vuetify.display.smAndUp" color="primary" icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrice')" />
+    <v-btn v-else color="primary" prepend-icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrice')">
       {{ $t('Common.AddPrice') }}
     </v-btn>
     <template v-if="!username" #append>
