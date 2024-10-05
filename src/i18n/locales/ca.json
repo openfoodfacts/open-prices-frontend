@@ -273,6 +273,10 @@
 		"SignIn": "Inicia la sessió",
 		"SignOut": "Tanca la sessió"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Afegir un preu",
 		"LatestPrices": "Últims preus",
