@@ -8,42 +8,34 @@
   </h2>
 
   <v-row>
-    <v-col md="6">
-      TODO: Explain the challenge, how to contribute etc..
-      TODO: maybe add a place for proofs with missing prices (ideally proofs would be tagged for the challenge)
-      TODO: what about rewards ? badges for top 3 ? participation badges ?
-      TODO: Maybe a goal should be a number of product / prices, instead of the day
+    <v-col cols="12" lg="6">
+      <blockquote class="blockquote">
+        <p class="mb-2">
+          {{ challenge.icon }} Join other food price enthousiast (such as {{ challenge.topContributors[0]?.user_id || "you?" }}) in gathering information about {{ challenge.title }} {{ challenge.subtitle }}.
+        </p>
+        <p class="mb-2">
+          {{ challenge.icon }} Your goal is to go nearby stores, find corresponding products and 
+          <v-btn to="/prices/add" variant="text" density="compact">
+            adding prices
+          </v-btn>
+        </p>
+        <p class="mb-2">
+          {{ challenge.icon }} This challenge categories are 
+          <v-chip v-for="category in challenge.categories" :key="category" density="compact" label class="mr-2 mb-2" @click="$router.push({ path: `/categories/${category}` })">
+            {{ category }}
+          </v-chip>
+        </p>
+      </blockquote>
     </v-col>
-    <v-col md="6">
-      <v-timeline direction="horizontal" truncate-line="both">
-        <v-timeline-item dot-color="success">
-          <div class="text-h6">
-            Start
-          </div>
-          <template #opposite>
-            {{ challenge.start_date }}
-          </template>
-        </v-timeline-item>
-        <v-timeline-item dot-color="error">
-          <template #opposite>
-            <div class="text-h6">
-              End
-            </div>
-          </template>
-          {{ challenge.end_date }}
-        </v-timeline-item>
-      </v-timeline>
-      <v-progress-linear
-        color="info"
-        height="25"
-        :model-value="progress"
-        striped
-        style="width: 50%; margin-left: 25%; top: -55px; margin-top: -25px"
-      >
-        <strong>{{ days_left_text }}</strong>
-      </v-progress-linear>
+    <v-col cols="12" lg="6">
+      <ChallengeTimeline :challenge="challenge" />
     </v-col>
   </v-row>
+  
+  <ChallengeExample :exampleId="challenge.exampleId" />
+
+  <v-divider :thickness="2" class="border-opacity-100 mt-5 mb-3" />
+
   <v-row>
     <v-col cols="12" md="6">
       <h2 class="text-h6 mb-1">
@@ -52,10 +44,10 @@
 
       <v-row>
         <v-col cols="6">
-          <StatCard :value="challenge.number_of_contributions" :subtitle="'Total number of prices added'" />
+          <StatCard :value="challenge.numberOfContributions" :subtitle="'Total number of prices added'" />
         </v-col>
         <v-col cols="6">
-          <StatCard :value="challenge.number_of_contributors" :subtitle="'Total number of contributors'" />
+          <StatCard :value="challenge.numberOfContributors" :subtitle="'Total number of contributors'" />
         </v-col>
       </v-row>
     </v-col>
@@ -66,10 +58,10 @@
       </h2>
       <v-row v-if="username">
         <v-col cols="6">
-          <StatCard :value="challenge.user_contributions" :subtitle="'Prices added by you'" />
+          <StatCard :value="challenge.userContributions" :subtitle="'Prices added by you'" />
         </v-col>
         <v-col cols="6">
-          <v-card :title="`${challenge.user_rank == 0 ? '50+' : challenge.user_rank} / ${challenge.number_of_contributors}`" :subtitle="'Your rank'" variant="tonal" density="compact" />
+          <v-card :title="`${challenge.userRank == 0 ? '50+' : challenge.userRank} / ${challenge.numberOfContributors}`" :subtitle="'Your rank'" variant="tonal" density="compact" />
         </v-col>
       </v-row>
     </v-col>
@@ -77,55 +69,22 @@
   
   <v-row>
     <v-col cols="12" md="6">
-      <v-card
-        :title="'Top 5 contributors'"
-        variant="tonal"
-        density="compact"
-      >
-        <v-card-text>
-          <v-list density="compact">
-            <v-list-item
-              v-for="(contributor, i) in challenge.top_contributors.slice(0, 5)"
-              :key="i"
-              :value="contributor"
-              color="primary"
-            >
-              <template #prepend>
-                {{ 
-                  i === 0 ? '🥇' :
-                  i === 1 ? '🥈' :
-                  i === 2 ? '🥉' :
-                  '🏅'
-                }}
-              </template>
-
-              <v-list-item-title>
-                {{ i+1 }}. {{ contributor.user_id }}, {{ contributor.price_count }} prices
-              </v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-card-text>
-      </v-card>    
+      <ChallengeTopContributors :topContributors="challenge.topContributors" />
     </v-col>
     
-    <v-col v-if="challenge.latest_contributions.length" cols="12" md="6">
-      <v-card
-        :title="'Number of contributions per day'"
-        variant="tonal"
-        density="compact"
-      >
-        <v-card-text>
-          <PriceChart :priceList="challenge.latest_contributions" aggregate="count" dateField="created" />
-        </v-card-text>
-      </v-card>
+    <v-col v-if="challenge.latestContributions.length" cols="12" md="6">
+      <h2 class="text-h6 mb-1">
+        Number of contributions per day
+      </h2>
+      <PriceChart :priceList="challenge.latestContributions" aggregate="count" dateField="created" />
     </v-col>
   </v-row>
 
   <h2 class="text-h6 mb-1">
     Most recent contributions
   </h2>
-  <v-row v-if="challenge.latest_contributions">
-    <v-col v-for="price in challenge.latest_contributions.slice(0, 10)" :key="price" cols="12" sm="6" md="4" xl="3">
+  <v-row v-if="challenge.latestContributions">
+    <v-col v-for="price in challenge.latestContributions.slice(0, 10)" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
   </v-row>
@@ -142,7 +101,10 @@ export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
-    PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue'))
+    PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue')),
+    ChallengeTimeline: defineAsyncComponent(() => import('../components/ChallengeTimeline.vue')),
+    ChallengeExample: defineAsyncComponent(() => import('../components/ChallengeExample.vue')),
+    ChallengeTopContributors: defineAsyncComponent(() => import('../components/ChallengeTopContributors.vue')),
   },
   data() {
     return {
@@ -150,15 +112,16 @@ export default {
         title: "MILK",
         subtitle: "(and milk alternatives)",
         icon: "🥛",
-        start_date: "2024-09-01",
-        end_date: "2024-10-31",
+        startDate: "2024-09-01",
+        endDate: "2024-10-31",
         categories: ["en:milk-substitutes", "en:milks"],
-        top_contributors: [],
-        number_of_contributors: 0,
-        number_of_contributions: 0,
-        latest_contributions: [],
-        user_contributions: 0,
-        user_rank: 0
+        topContributors: [],
+        numberOfContributors: 0,
+        numberOfContributions: 0,
+        latestContributions: [],
+        userContributions: 0,
+        userRank: 0,
+        exampleId: 32900
       },
       loading: false,
     }
@@ -168,21 +131,6 @@ export default {
     username() {
       return this.appStore.user.username
     },
-    nb_days() {
-      return Math.round((new Date(this.challenge.end_date) - new Date(this.challenge.start_date)) / (1000 * 60 * 60 * 24))
-    },
-    today_index() {
-      return Math.round((new Date() - new Date(this.challenge.start_date)) / (1000 * 60 * 60 * 24))
-    },
-    days_left_text() {
-      const days_left = this.nb_days - this.today_index
-      if (days_left <= 0) return "Challenge over"
-      if (days_left >= this.nb_days) return "Not started"
-      return `${days_left} days left`
-    },
-    progress() {
-      return Math.min(100, this.today_index * 100 / this.nb_days)
-    }
   },
   mounted() {
     this.getStats()
@@ -191,36 +139,37 @@ export default {
     getStats() {
       this.loading = true
       // TODO: This should fetch only prices matching one of the product categories in this.challenge.categories
-      api.getPrices({ size: 100, created__gte: this.challenge.start_date, created__lte: this.challenge.end_date })
+      // TODO: Also, this is both used to show a few recent contribution and to display the number of contributions per day
+      //       The first requires only a size of 10, the second requires the entire data, so it probably should be another API point
+      api.getPrices({ size: 200, created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
       .then((data) => {
-        this.challenge.latest_contributions = data.items
-        this.challenge.number_of_contributions = data.total
+        this.challenge.latestContributions = data.items
+        this.challenge.numberOfContributions = data.total
         this.loading = false
       })
 
       // TODO: this should only fetch users that contributed to one of the product categories in this.challenge.categories, in the designated time range
       api.getUsers({ order_by: constants.USER_ORDER_LIST[0].key, size: 50})
       .then((data) => {
-        this.challenge.top_contributors = data.items
-        this.challenge.number_of_contributors = data.total
+        this.challenge.topContributors = data.items
+        this.challenge.numberOfContributors = data.total
         for (let i = 0; i < data.items.length; i++) {
           const user = data.items[i]
           if (this.username && this.username == user.user_id) {
-            this.challenge.user_rank = i
+            this.challenge.userRank = i
             break
           }
         }
       })
       if (this.username) {
         // TODO: This should fetch only prices matching one of the product categories in this.challenge.categories
-        api.getPrices({ owner: this.username, created__gte: this.challenge.start_date, created__lte: this.challenge.end_date })
+        api.getPrices({ owner: this.username, created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
         .then((data) => {
-          this.challenge.user_contributions = data.total
+          this.challenge.userContributions = data.total
         })
       }
       
     }
-      
   }
 }
 </script>
