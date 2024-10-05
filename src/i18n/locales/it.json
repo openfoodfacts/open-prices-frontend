@@ -273,6 +273,10 @@
 		"SignIn": "Accedi",
 		"SignOut": "Esci"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Aggiungi un prezzo",
 		"LatestPrices": "Ultimi prezzi",
