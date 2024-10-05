@@ -10,6 +10,14 @@ export default {
     priceList: {
       type: Array,
       default: () => []
+    },
+    aggregate: {
+      type: String,
+      default: () => "mean"
+    },
+    dateField: {
+      type: String,
+      default: () => "date"
     }
   },
   computed: {
@@ -35,9 +43,9 @@ export default {
           tooltip: true
         },
         encoding: {
-          x: {timeUnit: 'yearmonthdate', field: 'date', type: 'temporal', axis: { title: this.$t('Common.Date') }},
+          x: {timeUnit: 'yearmonthdate', field: this.dateField, type: 'temporal', axis: { title: this.$t('Common.Date') }},
           // y: {field: 'price', type: 'quantitative'}
-          y: {aggregate: 'mean', field: 'price', type: 'quantitative', axis: { title: this.$t('Common.Price') }},
+          y: {aggregate: this.aggregate, field: 'price', type: 'quantitative', axis: { title: this.$t('Common.Price') }},
         }
       }
       embed('#vega-lite-chart', vlSpec, {actions: false})
