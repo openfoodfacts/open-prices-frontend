@@ -179,6 +179,7 @@ export default {
   methods: {
     handleRecentProofSelected(selectedProof) {
       // update proofForm
+      this.proofForm.type = selectedProof.type
       this.proofForm.proof_id = selectedProof.id
       if (selectedProof.location) {
         this.proofForm.location_osm_id = selectedProof.location_osm_id
