@@ -15,21 +15,21 @@
 		"WhatOFFTitle": "Wat is {off_name}?",
 		"WhatOFFAnswer": "{off_url} is een non-profitorganisatie die informatie over voedselproducten van over de hele wereld verzamelt en deelt. Het is een samenwerkingsproject dat afhankelijk is van vrijwilligers om gegevens te verzamelen. {off_url} is de grootste open database met voedselproducten ter wereld, met meer dan 3 miljoen producten in 200 landen.",
 		"WhyOFFTitle": "Waarom doet {off_name} dit?",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
+		"WhyOFFAnswer": "Prijsinformatie is van het grootste belang om voedselsystemen te begrijpen. Het is een belangrijke factor om de kosten van voedsel te begrijpen en gezondere diëten te promoten. Het openen van prijsgegevens is een manier om het voor onderzoekers, journalisten en burgers gemakkelijker te maken om beter te begrijpen hoe voedselprijzen geografisch en in de tijd variëren.",
 		"HowContribute": "Hoe kan ik bijdragen?",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
+		"HowContributeAnswer": "U kunt bijdragen door prijzen toe te voegen aan de dataset. U kunt dit doen via de web-app of via de officiële mobiele app. Een {op_api_url} is ook beschikbaar als u {op_name} wilt integreren in uw app. U heeft een {off_url} -account nodig om bij te dragen.",
 		"HowUseData": "Hoe kan ik de gegevens gebruiken?",
-		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
+		"HowUseDataAnswer1": "De gegevens zijn beschikbaar onder {odbl_url}, wat betekent dat ze voor elk doel gebruikt kunnen worden, zolang u {op_name} vermeldt en eventuele wijzigingen die u in de dataset aanbrengt deelt.",
 		"HowUseDataAnswer2": "Met {op_api_url} krijgt u eenvoudig toegang tot de gegevens.",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
+		"HowUseDataAnswer3": "De gegevens zijn ook beschikbaar als 3 gecomprimeerde JSONL-dumps: {op_dumb_prices_url}, {op_dumb_proofs_url} en {op_dumb_locations_url}.",
 		"HowContact": "Hoe kan ik contact opnemen?",
 		"HowContactAnswer": "U kunt contact met ons opnemen door een e-mail te sturen naar {off_contact_email_url}.",
 		"HowSupport": "Hoe kan ik {op_name} ondersteunen?",
 		"HowSupportAnswer": "U kunt {op_name} steunen door een bijdrage te leveren aan het project, door het te delen met uw vrienden en familie en door te doneren aan {off_url}.",
-		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
-		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
+		"WhyOSM": "Waarom vragen jullie om een {osm_name}-ID wanneer ik een prijs toevoeg?",
+		"WhyOSMAnswer": "We vragen om een {osm_url}-ID om de prijs aan een specifieke winkel te kunnen koppelen. Dit is handig om de prijs op een kaart te kunnen weergeven en om regionale of retailerprijsverschillen te kunnen analyseren.",
 		"HowRetailer": "Ik ben een retailer en ik wil prijzen bijdragen. Hoe kan ik dat doen?",
-		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
+		"HowRetailerAnswer": "U kunt prijzen bijdragen door onze {op_api_url} te gebruiken. Als u prijzen wilt bijdragen op grote schaal, neem dan contact met ons op via {off_contact_email_url}.",
 		"WhyNoScraping": "Overweegt u om prijzen van de websites van retailers te halen?",
 		"WhyNoScrapingAnswer1": "Om juridische en technische redenen beschouwen we het scrapen van prijzen van websites van retailers niet als een geldige manier om bij te dragen aan {op_name}. We willen er zeker van zijn dat de prijzen die we verzamelen nauwkeurig en up-to-date zijn, en het ontvangen van scraped prijzen van bijdragers staat ons niet toe om dat te doen.",
 		"WhyNoScrapingAnswer2": "Prijsscraping is een optie die in een toekomstige versie van {op_name} wordt overwogen, maar dit zou door {op_name} zelf worden gedaan, zodat we een bewijs van de prijs kunnen hebben op basis van de HTML-pagina."
@@ -274,8 +274,8 @@
 		"SignOut": "Uitloggen"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "Lichte modus",
+		"DarkMode": "Donkere modus"
 	},
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
