@@ -1,12 +1,7 @@
 <template>
-  <v-row>
-    <v-col>
-      <v-chip class="mr-2" label variant="text" prepend-icon="mdi-account">
-        {{ username }}
-      </v-chip>
-      <v-btn size="small" prepend-icon="mdi-cog-outline" to="/settings">
-        {{ $t('UserDashboard.Settings') }}
-      </v-btn>
+  <v-row v-if="user">
+    <v-col cols="12" sm="6">
+      <UserCard :user="user" readonly />
     </v-col>
   </v-row>
 
@@ -33,13 +28,18 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 
 export default {
+  components: {
+    UserCard: defineAsyncComponent(() => import('../components/UserCard.vue')),
+  },
   data() {
     return {
+      user: null,
       userPriceTotal: null,
       userProofTotal: null,
       loading: false,
@@ -52,10 +52,19 @@ export default {
     },
   },
   mounted() {
+    this.getUser()
     this.getUserPriceCount()
     this.getUserProofCount()
   },
   methods: {
+    getUser() {
+      this.loading = true
+      return api.getUserById(this.username)
+        .then((data) => {
+          this.user = data
+          this.loading = false
+        })
+    },
     getUserPriceCount() {
       this.loading = true
       return api.getPrices({ owner: this.username, size: 1 })
