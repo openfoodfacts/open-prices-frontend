@@ -54,6 +54,19 @@ export default {
     .then((response) => response.json())
   },
 
+  // can only fetch the user's own data
+  getUserById(userId) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/users/${userId}?${buildURLParams()}`
+    return fetch(url, {
+      method: 'GET',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`
+      }),
+    })
+    .then((response) => response.json())
+  },
+
   createProof(proofImage, type='PRICE_TAG', location_osm_id=null, location_osm_type=null, date=null, currency=null) {
     const store = useAppStore()
     let formData = new FormData()
