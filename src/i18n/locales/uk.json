@@ -273,6 +273,10 @@
 		"SignIn": "Увійти",
 		"SignOut": "Вийти"
 	},
+	"Theme": {
+		"LightMode": "Світла тема",
+		"DarkMode": "Темна тема"
+	},
 	"Home": {
 		"AddPrice": "Додати ціну",
 		"LatestPrices": "Остання ціна",

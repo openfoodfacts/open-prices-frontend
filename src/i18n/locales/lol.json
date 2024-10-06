@@ -273,6 +273,10 @@
 		"SignIn": "crwdns247914:0crwdne247914:0",
 		"SignOut": "crwdns247916:0crwdne247916:0"
 	},
+	"Theme": {
+		"LightMode": "crwdns250208:0crwdne250208:0",
+		"DarkMode": "crwdns250210:0crwdne250210:0"
+	},
 	"Home": {
 		"AddPrice": "crwdns246624:0crwdne246624:0",
 		"LatestPrices": "crwdns246904:0crwdne246904:0",

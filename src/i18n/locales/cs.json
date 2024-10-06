@@ -273,6 +273,10 @@
 		"SignIn": "Přihlásit se",
 		"SignOut": "Odhlásit"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Přidat cenu",
 		"LatestPrices": "Nejnovější ceny",

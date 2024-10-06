@@ -273,6 +273,10 @@
 		"SignIn": "Prihlásiť sa",
 		"SignOut": "Odhlásiť sa"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Pridajte cenu",
 		"LatestPrices": "Latest prices",

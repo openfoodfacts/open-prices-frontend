@@ -273,6 +273,10 @@
 		"SignIn": "Masuk",
 		"SignOut": "Keluar"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Tambahkan harga",
 		"LatestPrices": "Harga terbaru",

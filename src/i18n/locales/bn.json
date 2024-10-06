@@ -273,6 +273,10 @@
 		"SignIn": "সাইন ইন",
 		"SignOut": "সাইন আউট করুন"
 	},
+	"Theme": {
+		"LightMode": "Light mode",
+		"DarkMode": "Dark mode"
+	},
 	"Home": {
 		"AddPrice": "Add a price",
 		"LatestPrices": "Latest prices",
