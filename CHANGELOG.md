@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.86.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.85.0...v1.86.0) (2024-10-06)
+
+
+### Features
+
+* **Add prices:** add proof type choice directly in the form ([#932](https://github.com/openfoodfacts/open-prices-frontend/issues/932)) ([104b0a7](https://github.com/openfoodfacts/open-prices-frontend/commit/104b0a78e9d2b185a3fc818734d26b18b1a4e614))
+* **App:** Dark mode support  ([#921](https://github.com/openfoodfacts/open-prices-frontend/issues/921)) ([9a28f1d](https://github.com/openfoodfacts/open-prices-frontend/commit/9a28f1d94f5954419049fbeba541601baa48c9f1))
+
+
+### Bug Fixes
+
+* **Add prices:** fix set proof type on recent proof selected. ref [#933](https://github.com/openfoodfacts/open-prices-frontend/issues/933) ([0a9f6e6](https://github.com/openfoodfacts/open-prices-frontend/commit/0a9f6e6b55833e26046610dab3f7ebfdd4a6ca9f))
+
+
+### Technical
+
+* **Add prices:** new ProofImageInputRow component ([#936](https://github.com/openfoodfacts/open-prices-frontend/issues/936)) ([5b209a5](https://github.com/openfoodfacts/open-prices-frontend/commit/5b209a5d3325d23ed55c3da2f13a3b4158779f00))
+* **l10n:** New Crowdin translations to review and merge ([#929](https://github.com/openfoodfacts/open-prices-frontend/issues/929)) ([eb31d5b](https://github.com/openfoodfacts/open-prices-frontend/commit/eb31d5bc80f839361974a8cbef5bcb2a03e140da))
+
 ## [1.85.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.84.4...v1.85.0) (2024-10-04)
 
 
