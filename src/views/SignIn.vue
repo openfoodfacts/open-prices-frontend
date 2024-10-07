@@ -75,7 +75,7 @@ export default {
         .then((data) => {
           if (data['access_token']) {
             this.appStore.signIn(this.signinForm.username.toLowerCase().trim(), data['access_token'])
-            this.$router.push({ path: '/prices', query: { signinSuccess: 'true' } })
+            this.done()
           } else {
             alert(this.$t('SignIn.WrongCredentials'))
             this.loading = false
@@ -86,6 +86,9 @@ export default {
           this.loading = false
         });
     },
+    done() {
+      this.$router.push({ path: '/dashboard', query: { signinSuccess: 'true' } })
+    }
   },
 };
 </script>
