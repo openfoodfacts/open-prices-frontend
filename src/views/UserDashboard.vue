@@ -7,22 +7,10 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <v-card
-        :title="$t('UserDashboard.MyPrices')"
-        :subtitle="userPriceCount"
-        prepend-icon="mdi-tag-multiple-outline"
-        height="100%"
-        to="/dashboard/prices"
-      />
+      <StatCard :value="userPriceCount" :subtitle="$t('Common.Prices')" to="/dashboard/prices" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <v-card
-        :title="$t('UserDashboard.MyProofs')"
-        :subtitle="userProofCount"
-        prepend-icon="mdi-image"
-        height="100%"
-        to="/dashboard/proofs"
-      />
+      <StatCard :value="userProofCount" :subtitle="$t('Common.Proofs')" to="/dashboard/proofs" />
     </v-col>
   </v-row>
 
@@ -51,6 +39,7 @@ import api from '../services/api'
 export default {
   components: {
     UserCard: defineAsyncComponent(() => import('../components/UserCard.vue')),
+    StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
