@@ -43,6 +43,13 @@
   >
     {{ $t('Common.Thanks') }}
   </v-snackbar>
+  <v-snackbar
+    v-model="proofSingleSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >
+    {{ $t('ProofCreate.Success') }}
+  </v-snackbar>
 </template>
 
 <script>
@@ -68,6 +75,7 @@ export default {
       // success messages
       singleSuccessMessage: false,
       multipleSuccessMessage: false,
+      proofSingleSuccessMessage: false,
     }
   },
   computed: {
@@ -93,6 +101,9 @@ export default {
     }
     if (this.$route.query.multipleSuccess === 'true') {
       this.multipleSuccessMessage = true
+    }
+    if (this.$route.query.proofSingleSuccess === 'true') {
+      this.proofSingleSuccessMessage = true
     }
   },
   methods: {

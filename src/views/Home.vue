@@ -30,13 +30,6 @@
   </v-row>
 
   <v-snackbar
-    v-model="proofSingleSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('ProofCreate.Success') }}
-  </v-snackbar>
-  <v-snackbar
     v-model="settingsSuccessMessage"
     color="success"
     :timeout="2000"
@@ -67,7 +60,6 @@ export default {
       totalPriceCount: null,
       loading: false,
       // success messages
-      proofSingleSuccessMessage: false,
       settingsSuccessMessage: false,
     }
   },
@@ -85,9 +77,6 @@ export default {
     }
   },
   mounted() {
-    if (this.$route.query.proofSingleSuccess === 'true') {
-      this.proofSingleSuccessMessage = true
-    }
     if (this.$route.query.settingsSuccess === 'true') {
       this.settingsSuccessMessage = true
     }

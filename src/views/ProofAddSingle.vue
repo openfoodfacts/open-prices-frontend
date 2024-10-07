@@ -165,7 +165,7 @@ export default {
       this.loading = true
       api.updateProof(this.addProofSingleForm.proof_id, this.addProofSingleForm)
         .then(() => {
-          this.$router.push({ path: '/', query: { proofSingleSuccess: 'true' } })
+          this.done()
         })
         .catch(err => {
           this.$store.app.showError(err)
@@ -173,6 +173,9 @@ export default {
         .finally(() => {
           this.loading = false
         })
+    },
+    done() {
+      this.$router.push({ path: '/dashboard', query: { proofSingleSuccess: 'true' } })
     }
   }
 }
