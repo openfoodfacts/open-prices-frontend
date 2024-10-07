@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.87.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.86.0...v1.87.0) (2024-10-07)
+
+
+### Features
+
+* **User dashboard:** improve look & feel ([#939](https://github.com/openfoodfacts/open-prices-frontend/issues/939)) ([63ff257](https://github.com/openfoodfacts/open-prices-frontend/commit/63ff257548e090b324032ce6d71bd36778013b36))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#938](https://github.com/openfoodfacts/open-prices-frontend/issues/938)) ([256b0f8](https://github.com/openfoodfacts/open-prices-frontend/commit/256b0f8613762c8e5374f6e1945196dfa860924f))
+* **Price add:** On price add done, redirect to User Dashboard ([#941](https://github.com/openfoodfacts/open-prices-frontend/issues/941)) ([bb9d2ff](https://github.com/openfoodfacts/open-prices-frontend/commit/bb9d2ffbe5b02d1e76c03683a5644e8f1b5a9291))
+* **Proof add:** on Proof add success, redirect to dashboard. ref [#878](https://github.com/openfoodfacts/open-prices-frontend/issues/878) ([ffe8c13](https://github.com/openfoodfacts/open-prices-frontend/commit/ffe8c13ce5219ce5660f843075568983f6dd9516))
+* **Sign in:** on Sign in success, redirect to dashboard. ref [#878](https://github.com/openfoodfacts/open-prices-frontend/issues/878) ([8816898](https://github.com/openfoodfacts/open-prices-frontend/commit/8816898baafff10faf233d5c27742072d3daafee))
+* **User settings:** on User settings save, redirect to dashboard. ref [#878](https://github.com/openfoodfacts/open-prices-frontend/issues/878) ([5d4e815](https://github.com/openfoodfacts/open-prices-frontend/commit/5d4e815dba9ef89c654c8d953230788df48160ea))
+
 ## [1.86.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.85.0...v1.86.0) (2024-10-06)
 
 
