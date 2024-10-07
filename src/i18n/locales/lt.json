@@ -274,8 +274,8 @@
 		"SignOut": "Atsijungti"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "Šviesusis režimas",
+		"DarkMode": "Tamsusis režimas"
 	},
 	"Home": {
 		"AddPrice": "Pridėti kainą",
