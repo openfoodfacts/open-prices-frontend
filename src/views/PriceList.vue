@@ -22,20 +22,6 @@
   >
     {{ $t('Common.SignedIn') }}
   </v-snackbar>
-  <v-snackbar
-    v-model="singleSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('Common.PriceCreated') }}
-  </v-snackbar>
-  <v-snackbar
-    v-model="multipleSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('Common.Thanks') }}
-  </v-snackbar>
 </template>
 
 <script>
@@ -56,8 +42,6 @@ export default {
       loading: false,
       // success messages
       signinSuccessMessage: false,
-      singleSuccessMessage: false,
-      multipleSuccessMessage: false,
       // scroll
       handleDebouncedScroll: null,
     }
@@ -70,12 +54,6 @@ export default {
     // success messages
     if (this.$route.query.signinSuccess === 'true') {
       this.signinSuccessMessage = true
-    }
-    if (this.$route.query.singleSuccess === 'true') {
-      this.singleSuccessMessage = true
-    }
-    if (this.$route.query.multipleSuccess === 'true') {
-      this.multipleSuccessMessage = true
     }
   },
   unmounted() {

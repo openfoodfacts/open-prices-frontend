@@ -182,24 +182,6 @@ export default {
       this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.addPriceSingleForm.currency = this.appStore.getUserLastCurrencyUsed
     },
-    showBarcodeScannerDialog() {
-      this.barcodeScannerDialog = true
-    },
-    showBarcodeManualInputDialog() {
-      this.barcodeManualInputDialog = true
-    },
-    setProductCode(code) {
-      this.addPriceSingleForm.product = null
-      this.addPriceSingleForm.product_code = code
-      api
-        .getProductByCode(code)
-        .then((data) => {
-          this.addPriceSingleForm.product = data.id ? data : {'code': code, 'price_count': 0}
-        })
-        .catch((error) => {  // eslint-disable-line no-unused-vars
-          alert('Error: Open Prices server error')
-        })
-    },
     createPrice() {
       this.createPriceLoading = true
       this.appStore.setLastCurrencyUsed(this.addPriceSingleForm.currency)
@@ -227,7 +209,7 @@ export default {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
           } else {
-            this.$router.push({ path: '/prices', query: { singleSuccess: 'true' } })
+            this.done()
           }
           this.createPriceLoading = false
         })
@@ -237,6 +219,9 @@ export default {
           this.createPriceLoading = false
         })
     },
+    done() {
+      this.$router.push({ path: '/dasboard', query: { singleSuccess: 'true' } })
+    }
   }
 }
 </script>

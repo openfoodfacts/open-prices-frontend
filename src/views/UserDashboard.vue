@@ -28,6 +28,21 @@
       </v-btn>
     </v-col>
   </v-row>
+
+  <v-snackbar
+    v-model="singleSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >
+    {{ $t('Common.PriceCreated') }}
+  </v-snackbar>
+  <v-snackbar
+    v-model="multipleSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >
+    {{ $t('Common.Thanks') }}
+  </v-snackbar>
 </template>
 
 <script>
@@ -44,11 +59,15 @@ export default {
   },
   data() {
     return {
+      // data
       user: null,
       userPriceCount: null,
       userProofCount: null,
       userPriceList: [],
       loading: false,
+      // success messages
+      singleSuccessMessage: false,
+      multipleSuccessMessage: false,
     }
   },
   computed: {
@@ -68,6 +87,13 @@ export default {
     this.getUser()
     this.getUserProofCount()
     this.getPrices()
+    // success messages
+    if (this.$route.query.singleSuccess === 'true') {
+      this.singleSuccessMessage = true
+    }
+    if (this.$route.query.multipleSuccess === 'true') {
+      this.multipleSuccessMessage = true
+    }
   },
   methods: {
     getUser() {

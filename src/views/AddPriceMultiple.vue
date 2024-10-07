@@ -304,7 +304,7 @@ export default {
         })
     },
     done() {
-      this.$router.push({ path: '/prices', query: { multipleSuccess: 'true' } })
+      this.$router.push({ path: '/dashboard', query: { multipleSuccess: 'true' } })
     }
   }
 }
