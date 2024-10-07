@@ -212,7 +212,10 @@ export default {
       this.appStore.setLanguage(this.userSettingsForm.selectedLanguage)
       this.appStore.setCountry(this.userSettingsForm.selectedCountry)
       this.appStore.setFavoriteCurrencies(this.userSettingsForm.selectedCurrencies)
-      this.$router.push({ path: '/', query: { settingsSuccess: 'true' } })
+      this.done()
+    },
+    done() {
+      this.$router.push({ path: '/dashboard', query: { settingsSuccess: 'true' } })
     }
   }
 }

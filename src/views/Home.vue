@@ -28,14 +28,6 @@
       </v-btn>
     </v-col>
   </v-row>
-
-  <v-snackbar
-    v-model="settingsSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('Home.SettingsUpdated') }}
-  </v-snackbar>
 </template>
 
 <script>
@@ -59,8 +51,6 @@ export default {
       todayPriceCount: null,
       totalPriceCount: null,
       loading: false,
-      // success messages
-      settingsSuccessMessage: false,
     }
   },
   computed: {
@@ -77,9 +67,6 @@ export default {
     }
   },
   mounted() {
-    if (this.$route.query.settingsSuccess === 'true') {
-      this.settingsSuccessMessage = true
-    }
     this.getPrices()
     this.getTodayPriceCount()
   },

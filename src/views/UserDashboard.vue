@@ -50,6 +50,13 @@
   >
     {{ $t('ProofCreate.Success') }}
   </v-snackbar>
+  <v-snackbar
+    v-model="settingsSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >
+    {{ $t('Home.SettingsUpdated') }}
+  </v-snackbar>
 </template>
 
 <script>
@@ -76,6 +83,7 @@ export default {
       singleSuccessMessage: false,
       multipleSuccessMessage: false,
       proofSingleSuccessMessage: false,
+      settingsSuccessMessage: false,
     }
   },
   computed: {
@@ -104,6 +112,9 @@ export default {
     }
     if (this.$route.query.proofSingleSuccess === 'true') {
       this.proofSingleSuccessMessage = true
+    }
+    if (this.$route.query.settingsSuccess === 'true') {
+      this.settingsSuccessMessage = true
     }
   },
   methods: {
