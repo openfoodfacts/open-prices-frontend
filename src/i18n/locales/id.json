@@ -274,8 +274,8 @@
 		"SignOut": "Keluar"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "Mode terang",
+		"DarkMode": "Mode gelap"
 	},
 	"Home": {
 		"AddPrice": "Tambahkan harga",
