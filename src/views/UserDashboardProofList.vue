@@ -5,7 +5,7 @@
         {{ $t('UserDashboard.UserProofTotal', { count: userProofTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
-      <FilterMenu kind="proof" :currentFilter="currentFilter" @update:currentFilter="toggleProofFilter($event)" />
+      <FilterMenu kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
       <OrderMenu kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
     </v-col>
   </v-row>
@@ -56,6 +56,7 @@ export default {
       proofUpdated: false,
       // filter & order
       currentFilter: '',
+      currentType: '',
       currentOrder: constants.PROOF_ORDER_LIST[2].key,
     }
   },
@@ -69,6 +70,9 @@ export default {
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
+      if (this.currentType) {
+        defaultParams['type'] = this.currentType
+      }
       return defaultParams
     },
   },
@@ -80,6 +84,8 @@ export default {
     }
   },
   mounted() {
+    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initUserProofs()
     // load more
@@ -114,6 +120,11 @@ export default {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initUserProofs() will be called in watch $route
+    },
+    toggleProofType(sourceKey) {
+      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
+      // this.initProductList() will be called in watch $route
     },
     selectProofOrder(orderKey) {
       if (this.currentOrder !== orderKey) {

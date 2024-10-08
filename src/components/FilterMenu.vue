@@ -1,7 +1,7 @@
 <template>
   <v-menu scroll-strategy="close">
     <template #activator="{ props }">
-      <v-btn v-bind="props" size="x-small" class="mr-2" prepend-icon="mdi-filter-variant" :append-icon="getCurrentFilterIcon" :active="currentFilterOrSource">
+      <v-btn v-bind="props" size="x-small" class="mr-2" prepend-icon="mdi-filter-variant" :append-icon="getCurrentFilterIcon" :active="hasCurrentFilter">
         <span v-if="$vuetify.display.smAndUp">{{ $t('Common.Filter') }}</span>
       </v-btn>
     </template>
@@ -21,9 +21,19 @@
         <v-list-subheader class="text-uppercase">
           {{ $t('Common.Source') }}
         </v-list-subheader>
-        <v-list-item v-for="source in productSourceList" :key="source.key" :slim="true" :active="currentSource === source.key" @click="selectSource(source.key)">
-          <v-icon>{{ source.icon }}</v-icon>
-          {{ source.value }}
+        <v-list-item v-for="item in productSourceList" :key="item.key" :slim="true" :active="currentSource === item.key" @click="selectSource(item.key)">
+          <v-icon>{{ item.icon }}</v-icon>
+          {{ item.value }}
+        </v-list-item>
+      </v-sheet>
+      <v-sheet v-if="showProofTypeFilter">
+        <v-divider />
+        <v-list-subheader class="text-uppercase">
+          {{ $t('Common.Type') }}
+        </v-list-subheader>
+        <v-list-item v-for="item in proofTypeList" :key="item.key" :slim="true" :active="currentType === item.key" @click="selectType(item.key)">
+          <v-icon>{{ item.icon }}</v-icon>
+          {{ item.value }}
         </v-list-item>
       </v-sheet>
     </v-list>
@@ -48,12 +58,20 @@ export default {
       type: String,
       default: null
     },
+    currentType: {
+      type: String,
+      default: null
+    },
     hideSource: {
+      type: Boolean,
+      default: false
+    },
+    hideType: {
       type: Boolean,
       default: false
     }
   },
-  emits: ['update:currentFilter', 'update:currentSource'],
+  emits: ['update:currentFilter', 'update:currentSource', 'update:currentType'],
   data() {
     return {
       // default filters
@@ -64,21 +82,31 @@ export default {
       userFilterList: constants.USER_FILTER_LIST,
       // other filters
       productSourceList: constants.PRODUCT_SOURCE_LIST,
+      proofTypeList: constants.PROOF_TYPE_LIST,
     }
   },
   computed: {
     showProductSourceFilter() {
       return this.kind === 'product' && !this.hideSource
     },
+    showProofTypeFilter() {
+      return this.kind === 'proof' && !this.hideType
+    },
     filterList() {
       return this[`${this.kind}FilterList`]
     },
-    currentFilterOrSource() {
-      return !!this.currentFilter || !!this.currentSource
+    hasCurrentFilter() {
+      return !!this.currentFilter || !!this.currentSource || !!this.currentType
     },
     getCurrentFilterIcon() {
-      let source = this.productSourceList.find(o => o.key === this.currentSource)
-      return source ? source.icon : ''
+      if (this.kind === 'product') {
+        let source = this.productSourceList.find(o => o.key === this.currentSource)
+        return source ? source.icon : ''
+      } else if (this.kind === 'proof') {
+        let type = this.proofTypeList.find(o => o.key === this.currentType)
+        return type ? type.icon : ''
+      }
+      return ''
     },
   },
   methods: {
@@ -87,6 +115,9 @@ export default {
     },
     selectSource(source) {
       this.$emit('update:currentSource', source)
+    },
+    selectType(source) {
+      this.$emit('update:currentType', source)
     }
   }
 }
