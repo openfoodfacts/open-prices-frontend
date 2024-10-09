@@ -72,6 +72,7 @@
   <BarcodeManualInputDialog
     v-if="barcodeManualInputDialog"
     v-model="barcodeManualInputDialog"
+    :preFillValue="productForm.product_code"
     @barcode="setProductCode($event)"
     @close="barcodeManualInputDialog = false"
   />
