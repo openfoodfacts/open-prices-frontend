@@ -189,7 +189,7 @@
 		"Filter": "Filtro",
 		"FilterProductWithPriceCount": "Com um preço",
 		"FilterProductWithPriceCountHide": "Ocultar produtos com preços",
-		"FilterProductWithoutPriceCount": "Without prices",
+		"FilterProductWithoutPriceCount": "Sem preços",
 		"FilterPriceMoreThan30DaysHide": "Ocultar preços com mais de 30 dias",
 		"FilterProofWithPriceCountHide": "Ocultar comprovativos com preços",
 		"FilterLocationWithPriceCountHide": "Ocultar locais com preços",
@@ -199,7 +199,7 @@
 		"Help": "Ajuda",
 		"History": "Histórico",
 		"Image": "Imagem",
-		"ImageFull": "Full-size image",
+		"ImageFull": "Imagem em tamanho real",
 		"LinkCopySuccess": "Link copiado",
 		"LocationCount": "{count} localizações",
 		"Map": "Mapa",
@@ -230,10 +230,10 @@
 		"Share": "Partilhar",
 		"Source": "Fonte",
 		"Stats": "Estatísticas",
-		"TaglineOriginal": "An open crowdsourced database of food prices",
-		"TaglineAlt1": "The open crowdsourced database of prices",
-		"TaglineAlt2": "The open crowdsourced database of food and product prices",
-		"TaglineAlt3": "Prices should be free",
+		"TaglineOriginal": "Uma base de dados aberta e colaborativa de preços de alimentos",
+		"TaglineAlt1": "A base de dados aberta e colectiva de preços",
+		"TaglineAlt2": "A base de dados aberta e colectiva de alimentos e preços de produtos",
+		"TaglineAlt3": "Os preços devem ser livres",
 		"Thanks": "Obrigado",
 		"TopContributors": "Maiores colaboradores",
 		"TopLocations": "Principais localizações",
@@ -274,8 +274,8 @@
 		"SignOut": "Terminar sessão"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "Modo claro",
+		"DarkMode": "Modo escuro"
 	},
 	"Home": {
 		"AddPrice": "Adicionar um preço",
