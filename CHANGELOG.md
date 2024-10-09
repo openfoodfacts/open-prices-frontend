@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.87.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.87.0...v1.87.1) (2024-10-09)
+
+
+### Bug Fixes
+
+* **Price add:** Always set the default price currency as the proof currency. closes [#946](https://github.com/openfoodfacts/open-prices-frontend/issues/946) ([a7a9fb3](https://github.com/openfoodfacts/open-prices-frontend/commit/a7a9fb357e270f998c530fcb15db27972ba0e4f0))
+* **User dashboard:** if 0 prices, hide filters & show more buttons. ref [#878](https://github.com/openfoodfacts/open-prices-frontend/issues/878) ([e354100](https://github.com/openfoodfacts/open-prices-frontend/commit/e3541009f73a54882bb9f44e5c08e0521a213719))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#942](https://github.com/openfoodfacts/open-prices-frontend/issues/942)) ([5b44d17](https://github.com/openfoodfacts/open-prices-frontend/commit/5b44d1778104edb8c738df8acf8440526469c738))
+* **Price add:** Improve barcode manual input by prefilling with current code ([#949](https://github.com/openfoodfacts/open-prices-frontend/issues/949)) ([a10c514](https://github.com/openfoodfacts/open-prices-frontend/commit/a10c514e0f783b62ddce6a931a2c88dab40e197e))
+* **Price add:** move proof_id & code init to ProductInputRow component. ref [#584](https://github.com/openfoodfacts/open-prices-frontend/issues/584) & [#168](https://github.com/openfoodfacts/open-prices-frontend/issues/168) ([8042b82](https://github.com/openfoodfacts/open-prices-frontend/commit/8042b82acbe353e832fe237fbf544a9f11ce05b9))
+* **User dashboard:** My proofs: add filter by type ([#944](https://github.com/openfoodfacts/open-prices-frontend/issues/944)) ([74a40fd](https://github.com/openfoodfacts/open-prices-frontend/commit/74a40fd90ce4cfb3076b9372c9dbf8ac19b2e0ee))
+
 ## [1.87.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.86.0...v1.87.0) (2024-10-07)
 
 
