@@ -168,14 +168,14 @@ export default {
       // product price data
       proofPriceNewList: [],
       productPriceNew: {
-        mode: '',
+        mode: '',  // see ProductInputRow
         product: null,
         product_code: '',
         category_tag: null,
         origins_tags: '',
         labels_tags: [],
         price: null,
-        price_per: null, // see PriceInputRow
+        price_per: null,
         price_is_discounted: false,
         price_without_discount: null,
         currency: null  // see initNewProductPriceForm
@@ -261,7 +261,7 @@ export default {
     initNewProductPriceForm() {
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))  // deep copy
-      this.productPriceForm.mode = this.appStore.user.last_product_mode_used
+      this.productPriceForm.mode = this.appStore.user.last_product_mode_used  // can be overriden in ProductInputRow
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.productPriceForm.currency = this.addPriceMultipleForm.currency || this.appStore.getUserLastCurrencyUsed  // get currency from proof first
     },

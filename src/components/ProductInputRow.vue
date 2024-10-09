@@ -2,7 +2,7 @@
   <v-row>
     <v-col>
       <h3 class="mb-2">
-        <v-item-group v-model="productForm.mode" class="d-inline" mandatory>
+        <v-item-group v-model="productForm.mode" class="d-inline" mandatory @update:modelValue="setMode($event)">
           <v-item v-for="pm in productModeList" :key="pm.key" v-slot="{ isSelected, toggle }" :value="pm.key">
             <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
               <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
@@ -66,13 +66,13 @@
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
     v-model="barcodeScannerDialog"
-    @barcode="productForm.product_code = $event"
+    @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
   />
   <BarcodeManualInputDialog
     v-if="barcodeManualInputDialog"
     v-model="barcodeManualInputDialog"
-    @barcode="productForm.product_code = $event"
+    @barcode="setProductCode($event)"
     @close="barcodeManualInputDialog = false"
   />
 </template>
@@ -126,20 +126,6 @@ export default {
     },
   },
   watch: {
-    'productForm.mode'(newProductMode, oldProductMode) {
-      // reset product_code and category_tag when switching mode
-      if (oldProductMode) {
-        this.initProductForm()
-      }
-    },
-    ['productForm.product_code']: {
-      handler(newProductCode, oldProductCode) {  // eslint-disable-line no-unused-vars
-        if (newProductCode) {
-          this.getProduct(newProductCode)
-        }
-      },
-      immediate: true
-    },
     productFormFilled: {
       handler(newProductFormFilled, oldProductFormFilled) {  // eslint-disable-line no-unused-vars
         this.$emit('filled', newProductFormFilled)
@@ -148,6 +134,16 @@ export default {
     }
   },
   mounted() {
+    if (this.$route.query.code) {
+      if (this.$route.query.code.startsWith('en')) {
+        this.productForm.mode = 'category'
+        this.productForm.category_tag = this.$route.query.code
+      }
+      else {
+        this.productForm.mode = 'barcode'
+        this.productForm.product_code = this.$route.query.code
+      }
+    }
     utils.getLocaleCategoryTags(this.appStore.getUserLanguage).then((module) => {
       this.categoryTags = module.default
     })
@@ -155,6 +151,9 @@ export default {
       this.originTags = module.default
     })
     this.productForm.mode = this.productForm.mode ? this.productForm.mode : (this.productForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used)
+    if (this.productForm.product_code) {
+      this.getProduct(this.productForm.product_code)
+    }
   },
   methods: {
     showBarcodeScannerDialog() {
@@ -169,6 +168,14 @@ export default {
       this.productForm.category_tag = null
       this.productForm.origins_tags = ''
       this.productForm.labels_tags = []
+    },
+    setMode(mode) {
+      this.productForm.mode = mode
+      this.initProductForm()
+    },
+    setProductCode(code) {
+      this.productForm.product_code = code
+      this.getProduct(code)
     },
     getProduct(code) {
       this.productForm.product = null

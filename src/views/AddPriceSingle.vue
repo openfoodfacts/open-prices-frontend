@@ -159,16 +159,6 @@ export default {
     },
   },
   mounted() {
-    if (this.$route.query.code) {
-      if (this.$route.query.code.startsWith('en')) {
-        this.addPriceSingleForm.mode = 'category'
-        this.addPriceSingleForm.category_tag = this.$route.query.code
-      }
-      else {
-        this.addPriceSingleForm.mode = 'barcode'
-        this.addPriceSingleForm.product_code = this.$route.query.code
-      }
-    }
     this.initPriceSingleForm()
   },
   methods: {
