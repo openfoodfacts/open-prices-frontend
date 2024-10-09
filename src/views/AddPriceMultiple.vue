@@ -155,7 +155,7 @@ export default {
         location_osm_id: null,
         location_osm_type: '',
         date: utils.currentDate(),
-        currency: null  // see initPriceMultipleForm
+        currency: null
       },
       productPriceForm: {},
       productFormFilled: false,
@@ -233,8 +233,8 @@ export default {
   methods: {
     initPriceMultipleForm() {
       /**
-       * init form config (product mode, currency)
-       * (init form done in initNewProductPriceForm)
+       * init form config (currency)
+       * (init form done in proofSelected > initNewProductPriceForm)
        */
       this.addPriceMultipleForm.currency = this.appStore.getUserLastCurrencyUsed
     },
@@ -244,6 +244,8 @@ export default {
       if (this.proofObject.price_count) {
         this.getProofPrices()
       }
+      // init product price form
+      this.initNewProductPriceForm()
     },
     getProofPrices() {
       this.loading = true
@@ -261,7 +263,7 @@ export default {
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))  // deep copy
       this.productPriceForm.mode = this.appStore.user.last_product_mode_used
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
-      this.productPriceForm.currency = this.appStore.getUserLastCurrencyUsed
+      this.productPriceForm.currency = this.addPriceMultipleForm.currency || this.appStore.getUserLastCurrencyUsed  // get currency from proof first
     },
     createPrice() {
       this.createPriceLoading = true
