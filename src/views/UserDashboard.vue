@@ -23,7 +23,7 @@
     <v-col cols="12" sm="6" md="4" xl="3" align="center">
       <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
       <br v-if="$vuetify.display.smAndUp">
-      <v-btn to="/dashboard/prices" prepend-icon="mdi-tag-multiple-outline" append-icon="mdi-arrow-right">
+      <v-btn v-if="userPriceList.length" to="/dashboard/prices" prepend-icon="mdi-tag-multiple-outline" append-icon="mdi-arrow-right">
         {{ $t('UserDashboard.MyPrices') }}
       </v-btn>
     </v-col>

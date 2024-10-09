@@ -5,8 +5,8 @@
         {{ $t('UserDashboard.UserProofTotal', { count: userProofTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
-      <FilterMenu kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
-      <OrderMenu kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
+      <FilterMenu v-if="userProofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
+      <OrderMenu v-if="userProofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
     </v-col>
   </v-row>
 

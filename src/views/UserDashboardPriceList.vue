@@ -4,7 +4,7 @@
       <v-chip label variant="text" prepend-icon="mdi-tag-multiple-outline">
         {{ $t('UserDashboard.UserPriceTotal', { count: userPriceTotal }) }}
       </v-chip>
-      <LoadedCountChip v-if="!loading" :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
+      <LoadedCountChip :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
     </v-col>
   </v-row>
 
