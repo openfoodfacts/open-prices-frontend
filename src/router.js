@@ -34,6 +34,7 @@ const routes = [
   { path: '/users/:username', name: 'user-detail', component: () => import('./views/UserDetail.vue'), meta: { title: 'User detail' }},
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true }},
+  { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', icon: 'mdi-cog-outline', drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
   // Why this redirect?
   // The app used to be available at https://prices.openfoodfacts.org/app
   // It is now available at https://prices.openfoodfacts.org
