@@ -74,7 +74,7 @@ export default {
         .signIn(this.signinForm.username.toLowerCase().trim(), this.signinForm.password)
         .then((data) => {
           if (data['access_token']) {
-            this.appStore.signIn(data['access_token'].split("__")[0], data['access_token'])
+            this.appStore.signIn(data['access_token'])
             this.done()
           } else {
             alert(this.$t('SignIn.WrongCredentials'))
