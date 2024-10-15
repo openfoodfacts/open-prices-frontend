@@ -20,16 +20,16 @@
       </v-col>
       <v-col cols="12" md="6" align="center">
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-chart-box-outline" to="/stats">
-          {{ $t('Footer.Stats') }}
+          {{ $t('Common.Stats') }}
         </v-btn>
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-information-outline" to="/about">
-          {{ $t('Footer.About') }}
+          {{ $t('Common.About') }}
+        </v-btn>
+        <v-btn class="mx-2" variant="text" prepend-icon="mdi-cog-outline" to="/settings">
+          {{ $t('Common.Settings') }}
         </v-btn>
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-github" :href="APP_GITHUB_FRONTEND_URL" target="_blank">
           {{ GITHUB_NAME }}
-        </v-btn>
-        <v-btn class="mx-2" variant="text" :prepend-icon="themeInfo.icon" @click="swapTheme">
-          {{ $t(themeInfo.label) }}
         </v-btn>
       </v-col>
     </v-row>
@@ -38,10 +38,10 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
 import { useTheme } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 
 export default {
   components: {
