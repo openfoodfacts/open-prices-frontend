@@ -7,7 +7,7 @@
     <v-divider v-if="!hideProofHeader" />
 
     <v-card-text>
-      <v-img v-if="proof.file_path" :src="getProofUrl(proof)" :style="'max-height:' + imageHeight" />
+      <v-img v-if="proof.file_path" :src="getProofUrl(proof, showThumbImage)" :style="'max-height:' + imageHeight" />
     </v-card-text>
 
     <v-divider />
@@ -50,6 +50,10 @@ export default {
       type: String,
       default: '100%',
     },
+    showThumbImage: {
+      type: Boolean,
+      default: false,
+    },
   },
   emits: ['proofSelected', 'close'],
   data() {
@@ -63,10 +67,10 @@ export default {
         this.$emit('proofSelected', this.proof)
       }
     },
-    getProofUrl(proof) {
+    getProofUrl(proof, showThumbImage) {
       // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.400.webp'  // PRICE_TAG
       // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.400.webp'  // RECEIPT
-      if (proof.image_thumb_path) {
+      if (proof.image_thumb_path && showThumbImage) {
         return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.image_thumb_path}`
       }
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`

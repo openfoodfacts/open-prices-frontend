@@ -12,7 +12,7 @@
 
   <v-row>
     <v-col v-for="proof in userProofList" :key="proof" cols="12" sm="6" md="4" xl="3">
-      <ProofCard :proof="proof" :hideProofHeader="true" height="100%" @proofUpdated="handleProofUpdated" />
+      <ProofCard :proof="proof" :hideProofHeader="true" :showThumbImage="true" height="100%" @proofUpdated="handleProofUpdated" />
     </v-col>
   </v-row>
 
