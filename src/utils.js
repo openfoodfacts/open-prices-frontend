@@ -164,6 +164,13 @@ function dateType(dateString) {
   return null
 }
 
+/**
+ * OFF auth token format: 'username__uuid'
+ */
+function getOFFUsernameFromAuthToken(token) {
+  return token.split("__")[0]
+}
+
 function getCategoryName(categoryId) {
   let category = CategoryTags.find(ct => ct.id === categoryId)
   return category ? category.name : categoryId
@@ -372,6 +379,7 @@ export default {
   offDateTime,
   prettyRelativeDateTime,
   dateType,
+  getOFFUsernameFromAuthToken,
   getCategoryName,
   getLocaleCategoryTags,
   getLocaleCategoryTag,

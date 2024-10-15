@@ -49,8 +49,8 @@ export const useAppStore = defineStore('app', {
     }
   },
   actions: {
-    signIn(username, token) {
-      this.user.username = username
+    signIn(token) {
+      this.user.username = utils.getOFFUsernameFromAuthToken(token)
       this.user.token = token
     },
     signOut() {
