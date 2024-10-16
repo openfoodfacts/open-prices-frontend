@@ -28,6 +28,12 @@
       <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
+
+  <v-row v-if="proof">
+    <v-col cols="12" sm="6">
+      <HistoryCard :price="proof" />
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -40,6 +46,7 @@ export default {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    HistoryCard: defineAsyncComponent(() => import('../components/HistoryCard.vue')),
   },
   data() {
     return {
