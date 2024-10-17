@@ -7,7 +7,7 @@
     <v-divider v-if="!hideProofHeader" />
 
     <v-card-text>
-      <v-img v-if="proof.file_path" :src="getProofUrl()" :style="'max-height:' + imageHeight" />
+      <v-img v-if="proof.file_path" :src="getProofUrl" :style="'max-height:' + imageHeight" />
     </v-card-text>
 
     <v-divider />
@@ -34,6 +34,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    showImageThumb: {
+      type: Boolean,
+      default: false,
+    },
     hideProofActions: {
       type: Boolean,
       default: false,
@@ -50,10 +54,6 @@ export default {
       type: String,
       default: '100%',
     },
-    showImageThumb: {
-      type: Boolean,
-      default: false,
-    },
   },
   emits: ['proofSelected', 'close'],
   data() {
@@ -61,12 +61,7 @@ export default {
       proofEditDialog: false,
     }
   },
-  methods: {
-    selectProof() {
-      if (this.isSelectable) {
-        this.$emit('proofSelected', this.proof)
-      }
-    },
+  computed: {
     getProofUrl() {
       // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.400.webp'  // PRICE_TAG
       // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.400.webp'  // RECEIPT
@@ -74,6 +69,13 @@ export default {
         return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${this.proof.image_thumb_path}`
       }
       return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${this.proof.file_path}`
+    },
+  },
+  methods: {
+    selectProof() {
+      if (this.isSelectable) {
+        this.$emit('proofSelected', this.proof)
+      }
     },
     close() {
       this.$emit('close')
