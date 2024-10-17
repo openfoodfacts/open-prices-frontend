@@ -210,7 +210,7 @@ export default {
         })
     },
     done() {
-      this.$router.push({ path: '/dasboard', query: { singleSuccess: 'true' } })
+      this.$router.push({ path: '/dashboard', query: { singleSuccess: 'true' } })
     }
   }
 }
