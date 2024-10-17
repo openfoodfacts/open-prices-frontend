@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.88.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.87.1...v1.88.0) (2024-10-17)
+
+
+### Features
+
+* **SignIn:** parse and use username from access_token on signin, allows usage of emails to login ([#956](https://github.com/openfoodfacts/open-prices-frontend/issues/956)) ([e4ca52d](https://github.com/openfoodfacts/open-prices-frontend/commit/e4ca52d58d3be80b92e952160bb039e2977609dd))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#954](https://github.com/openfoodfacts/open-prices-frontend/issues/954)) ([d7f0718](https://github.com/openfoodfacts/open-prices-frontend/commit/d7f0718690541c8932987091634426218ba19030))
+* **Proof card:** hide by default the proof owner chip ([#959](https://github.com/openfoodfacts/open-prices-frontend/issues/959)) ([3cbef3f](https://github.com/openfoodfacts/open-prices-frontend/commit/3cbef3fca2e4d25f89b4e31178698543886698d4))
+* **Proof detail:** add history section at the bottom ([#960](https://github.com/openfoodfacts/open-prices-frontend/issues/960)) ([b71b4b6](https://github.com/openfoodfacts/open-prices-frontend/commit/b71b4b690d9dc43e23225c328d8098e5ad61f836))
+* **ProofCard:** Only show proof thumb image in User Dashboard Proof List ([#955](https://github.com/openfoodfacts/open-prices-frontend/issues/955)) ([64824b8](https://github.com/openfoodfacts/open-prices-frontend/commit/64824b873fcf620d48a8907a61d9bf5747f3fe7c))
+
 ## [1.87.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.87.0...v1.87.1) (2024-10-09)
 
 
