@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.88.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.0...v1.88.1) (2024-10-17)
+
+
+### Bug Fixes
+
+* **Price add:** fix redirect after single price add. ref [#941](https://github.com/openfoodfacts/open-prices-frontend/issues/941) ([4238571](https://github.com/openfoodfacts/open-prices-frontend/commit/4238571b1defc4b77d906631610d81656c62791b))
+
 ## [1.88.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.87.1...v1.88.0) (2024-10-17)
 
 
