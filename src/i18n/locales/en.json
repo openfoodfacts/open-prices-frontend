@@ -291,6 +291,10 @@
 			"Title": "Welcome to {name}!"
 		}
 	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
+	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -401,7 +405,8 @@
 		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Receipt",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "GDPR request",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",

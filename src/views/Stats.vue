@@ -47,6 +47,12 @@
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.location_with_price_count" :subtitle="$t('Stats.Total')" />
     </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.location_type_osm_count" :subtitle="$t('LocationCard.OSM')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.location_type_online_count" :subtitle="$t('LocationCard.ONLINE')" />
+    </v-col>
   </v-row>
 
   <br>
@@ -64,7 +70,10 @@
       <StatCard :value="stats.proof_type_price_tag_count" :subtitle="$t('ProofCard.PRICE_TAG')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_type_receipt_count" :subtitle="$t('ProofCard.RECEIPT')" />
+      <StatCard :value="stats.proof_type_gdpr_request_count" :subtitle="$t('ProofCard.GDPR_REQUEST')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_type_shop_import_count" :subtitle="$t('ProofCard.SHOP_IMPORT')" />
     </v-col>
   </v-row>
 
