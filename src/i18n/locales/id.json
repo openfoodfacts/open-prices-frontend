@@ -246,6 +246,7 @@
 		"Users": "Pengguna",
 		"UserCount": "{count} pengguna",
 		"View": "Lihat",
+		"Website": "Situs Web",
 		"Yes": "Ya",
 		"No": "Tidak",
 		"Food": "Makanan",
@@ -289,6 +290,10 @@
 			"Subtitle": "Basis data harga makanan yang terbuka dan bersumber dari banyak orang 🏷🍊💲",
 			"Title": "Selamat datang di {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Harga terbaru",
@@ -400,7 +405,8 @@
 		"Proof": "Bukti",
 		"PRICE_TAG": "Label harga",
 		"RECEIPT": "Resi",
-		"GDPR_REQUEST": "Permintaan GDPR"
+		"GDPR_REQUEST": "Permintaan GDPR",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Pilih bukti",
