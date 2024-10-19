@@ -246,6 +246,7 @@
 		"Users": "Benutzer",
 		"UserCount": "{count} Benutzer",
 		"View": "Anzeigen",
+		"Website": "Website",
 		"Yes": "Ja",
 		"No": "Nein",
 		"Food": "Nahrungsmittel",
@@ -289,6 +290,10 @@
 			"Subtitle": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise 🏷🍊💲",
 			"Title": "Willkommen bei {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Aktuelle Preise",
@@ -400,7 +405,8 @@
 		"Proof": "Nachweis",
 		"PRICE_TAG": "Preisschild",
 		"RECEIPT": "Kassenbon",
-		"GDPR_REQUEST": "DSGVO-Anfrage"
+		"GDPR_REQUEST": "DSGVO-Anfrage",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Wählen Sie einen Nachweis",
