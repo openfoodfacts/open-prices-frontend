@@ -246,6 +246,7 @@
 		"Users": "Users",
 		"UserCount": "{count} users",
 		"View": "Vista",
+		"Website": "Lloc web",
 		"Yes": "Si",
 		"No": "No",
 		"Food": "Menjar",
@@ -289,6 +290,10 @@
 			"Subtitle": "Una base de dades oberta amb els preus dels aliments 🏷🍊💲",
 			"Title": "Welcome to {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Últims preus",
@@ -400,7 +405,8 @@
 		"Proof": "Prova",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Receipt",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "GDPR request",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",
