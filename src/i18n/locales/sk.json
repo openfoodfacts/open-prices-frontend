@@ -246,6 +246,7 @@
 		"Users": "Users",
 		"UserCount": "{count} users",
 		"View": "Zobrazenie",
+		"Website": "Website",
 		"Yes": "Áno",
 		"No": "Nie",
 		"Food": "Food",
@@ -289,6 +290,10 @@
 			"Subtitle": "Otvorená crowdsourcovaná databáza cien potravín 🏷🍊💲",
 			"Title": "Vitajte v {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
@@ -400,7 +405,8 @@
 		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Účtenka",
-		"GDPR_REQUEST": "žiadosť GDPR"
+		"GDPR_REQUEST": "žiadosť GDPR",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",
