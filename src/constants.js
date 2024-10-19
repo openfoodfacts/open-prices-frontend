@@ -50,7 +50,7 @@ export default {
   ],
   LOCATION_TYPE_LIST: [
     {key: 'OSM', value: 'OSM', icon: 'mdi-map-marker-outline'},
-    {key: 'ONLINE', value: 'ONLINE', icon: 'mdi-laptop'},
+    {key: 'ONLINE', value: 'ONLINE', icon: 'mdi-web'},
   ],
   QUERY_PARAM: 'q',
   FILTER_PARAM: 'filter',
