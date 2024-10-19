@@ -246,6 +246,7 @@
 		"Users": "Kullanıcılar",
 		"UserCount": "{count} users",
 		"View": "Görüntüle",
+		"Website": "Web sitesi",
 		"Yes": "Evet",
 		"No": "Hayır",
 		"Food": "Gıda",
@@ -289,6 +290,10 @@
 			"Subtitle": "Gıda fiyatlarına ilişkin açık ve kitle kaynaklı bir veritabanı 🏷🍊💲",
 			"Title": "{name}'a Hoş Geldiniz!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Son fiyatlar",
@@ -400,7 +405,8 @@
 		"Proof": "Kanıt",
 		"PRICE_TAG": "Fiyat etiketi",
 		"RECEIPT": "Makbuz",
-		"GDPR_REQUEST": "GDPR talebi"
+		"GDPR_REQUEST": "GDPR talebi",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Bedeli sil",

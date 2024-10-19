@@ -246,6 +246,7 @@
 		"Users": "Users",
 		"UserCount": "{count} users",
 		"View": "View",
+		"Website": "Website",
 		"Yes": "Yes",
 		"No": "No",
 		"Food": "Food",
@@ -289,6 +290,10 @@
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
@@ -400,7 +405,8 @@
 		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Receipt",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "GDPR request",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",

@@ -246,6 +246,7 @@
 		"Users": "ユーザー",
 		"UserCount": "{count} users",
 		"View": "表示",
+		"Website": "ウェブサイト",
 		"Yes": "はい",
 		"No": "いいえ",
 		"Food": "食べ物",
@@ -289,6 +290,10 @@
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "{name} へようこそ"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
@@ -400,7 +405,8 @@
 		"Proof": "Proof",
 		"PRICE_TAG": "値札",
 		"RECEIPT": "領収書",
-		"GDPR_REQUEST": "GDPR リクエスト"
+		"GDPR_REQUEST": "GDPR リクエスト",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",

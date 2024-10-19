@@ -246,6 +246,7 @@
 		"Users": "Itilizatè yo",
 		"UserCount": "{count} users",
 		"View": "View",
+		"Website": "Website",
 		"Yes": "Wi",
 		"No": "Non",
 		"Food": "Manje",
@@ -289,6 +290,10 @@
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Dènye pri",
@@ -400,7 +405,8 @@
 		"Proof": "Prèv",
 		"PRICE_TAG": "Pri tag",
 		"RECEIPT": "Resi",
-		"GDPR_REQUEST": "Demann GDPR"
+		"GDPR_REQUEST": "Demann GDPR",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",

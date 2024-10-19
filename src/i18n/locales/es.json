@@ -246,6 +246,7 @@
 		"Users": "Usuarios",
 		"UserCount": "{count} users",
 		"View": "Ver",
+		"Website": "Sitio web",
 		"Yes": "Sí",
 		"No": "No",
 		"Food": "Alimento",
@@ -289,6 +290,10 @@
 			"Subtitle": "Una base de datos abierta y colaborativa de precios de alimentos 🏷🍊💲",
 			"Title": "¡Bienvenido a {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Últimos precios",
@@ -400,7 +405,8 @@
 		"Proof": "Comprobante",
 		"PRICE_TAG": "Etiqueta de precio",
 		"RECEIPT": "Ticket",
-		"GDPR_REQUEST": "Solicitud GDPR"
+		"GDPR_REQUEST": "Solicitud GDPR",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",

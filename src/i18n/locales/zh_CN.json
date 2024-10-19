@@ -246,6 +246,7 @@
 		"Users": "用户",
 		"UserCount": "{count} users",
 		"View": "檢視",
+		"Website": "网站",
 		"Yes": "是",
 		"No": "否",
 		"Food": "Food",
@@ -289,6 +290,10 @@
 			"Subtitle": "一个开放的众包食品价格数据库🏷🍊💲",
 			"Title": "欢迎来到 {name}！"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "最新价格",
@@ -400,7 +405,8 @@
 		"Proof": "证明",
 		"PRICE_TAG": "价格标签",
 		"RECEIPT": "收据",
-		"GDPR_REQUEST": "GDPR 要求"
+		"GDPR_REQUEST": "GDPR 要求",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",

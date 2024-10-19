@@ -246,6 +246,7 @@
 		"Users": "Käyttäjät",
 		"UserCount": "{count} users",
 		"View": "Näytä",
+		"Website": "Nettisivusto",
 		"Yes": "Kyllä",
 		"No": "Ei",
 		"Food": "Ruoka",
@@ -289,6 +290,10 @@
 			"Subtitle": "Avoin joukkolähdetietokanta elintarvikkeiden hinnoista 🏷🍊💲",
 			"Title": "Tervetuloa {name}:aan!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Viimeisimmät hinnat",
@@ -400,7 +405,8 @@
 		"Proof": "Todiste",
 		"PRICE_TAG": "Hintalappu",
 		"RECEIPT": "Kuitti",
-		"GDPR_REQUEST": "GDPR-pyyntö"
+		"GDPR_REQUEST": "GDPR-pyyntö",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Valitse todiste",

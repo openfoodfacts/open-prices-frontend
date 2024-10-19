@@ -246,6 +246,7 @@
 		"Users": "Vartotojai",
 		"UserCount": "{count} vartotojai (-ų)",
 		"View": "Žiūrėti",
+		"Website": "Interneto svetainė",
 		"Yes": "Taip",
 		"No": "Ne",
 		"Food": "Food",
@@ -289,6 +290,10 @@
 			"Subtitle": "Atviroji sutelktinių išteklių gautų maisto kainų duomenų bazė 🏷🍊💲",
 			"Title": "Sveiki prisijungę prie {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Naujausios kainos",
@@ -400,7 +405,8 @@
 		"Proof": "Įrodymai",
 		"PRICE_TAG": "Kainos etiketė",
 		"RECEIPT": "Čekis",
-		"GDPR_REQUEST": "GDPR request"
+		"GDPR_REQUEST": "GDPR request",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",
