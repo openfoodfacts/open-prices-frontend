@@ -8,7 +8,7 @@
       <v-chip label variant="text" prepend-icon="mdi-map-marker-outline">
         {{ $t('LocationList.LocationTotal', { count: locationTotal }) }}
       </v-chip>
-      <FilterMenu kind="location" :currentFilter="currentFilter" @update:currentFilter="toggleLocationFilter($event)" />
+      <FilterMenu kind="location" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleLocationFilter($event)" @update:currentType="toggleLocationType($event)" />
       <OrderMenu kind="location" :currentOrder="currentOrder" @update:currentOrder="selectLocationOrder($event)" />
     </v-col>
   </v-row>
@@ -47,6 +47,7 @@ export default {
       loading: false,
       // filter & order
       currentFilter: '',
+      currentType: '',
       currentOrder: constants.LOCATION_ORDER_LIST[0].key,  // price_count
     }
   },
@@ -55,6 +56,9 @@ export default {
       let defaultParams = { order_by: this.currentOrder, page: this.locationPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
+      }
+      if (this.currentType) {
+        defaultParams[constants.TYPE_PARAM] = this.currentType
       }
       return defaultParams
     },
@@ -97,6 +101,11 @@ export default {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
       // this.initLocationList() will be called in watch $route
+    },
+    toggleLocationType(sourceKey) {
+      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
+      // this.initProductList() will be called in watch $route
     },
     selectLocationOrder(orderKey) {
       if (this.currentOrder !== orderKey) {

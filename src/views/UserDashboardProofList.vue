@@ -71,7 +71,7 @@ export default {
         defaultParams['price_count'] = 0
       }
       if (this.currentType) {
-        defaultParams['type'] = this.currentType
+        defaultParams[constants.TYPE_PARAM] = this.currentType
       }
       return defaultParams
     },

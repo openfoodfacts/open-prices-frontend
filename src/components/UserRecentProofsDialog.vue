@@ -29,6 +29,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 import api from '../services/api'
 
 export default {
@@ -59,7 +60,7 @@ export default {
     getProofParams() {
       let defaultParams = { owner: this.username, page: this.userProofPage }
       if (this.filterType) {
-        defaultParams['type'] = this.filterType
+        defaultParams[constants.TYPE_PARAM] = this.filterType
       }
       return defaultParams
     }

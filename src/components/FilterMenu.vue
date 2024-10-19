@@ -36,6 +36,16 @@
           {{ item.value }}
         </v-list-item>
       </v-sheet>
+      <v-sheet v-if="showLocationTypeFilter">
+        <v-divider />
+        <v-list-subheader class="text-uppercase">
+          {{ $t('Common.Type') }}
+        </v-list-subheader>
+        <v-list-item v-for="item in locationTypeList" :key="item.key" :slim="true" :active="currentType === item.key" @click="selectType(item.key)">
+          <v-icon>{{ item.icon }}</v-icon>
+          {{ item.value }}
+        </v-list-item>
+      </v-sheet>
     </v-list>
   </v-menu>
 </template>
@@ -83,6 +93,7 @@ export default {
       // other filters
       productSourceList: constants.PRODUCT_SOURCE_LIST,
       proofTypeList: constants.PROOF_TYPE_LIST,
+      locationTypeList: constants.LOCATION_TYPE_LIST,
     }
   },
   computed: {
@@ -91,6 +102,9 @@ export default {
     },
     showProofTypeFilter() {
       return this.kind === 'proof' && !this.hideType
+    },
+    showLocationTypeFilter() {
+      return this.kind === 'location' && !this.hideType
     },
     filterList() {
       return this[`${this.kind}FilterList`]
@@ -104,6 +118,9 @@ export default {
         return source ? source.icon : ''
       } else if (this.kind === 'proof') {
         let type = this.proofTypeList.find(o => o.key === this.currentType)
+        return type ? type.icon : ''
+      } else if (this.kind === 'location') {
+        let type = this.locationTypeList.find(o => o.key === this.currentType)
         return type ? type.icon : ''
       }
       return ''
