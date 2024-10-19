@@ -246,6 +246,7 @@
 		"Users": "Uživatelé",
 		"UserCount": "{count} users",
 		"View": "Zobrazit",
+		"Website": "Webová stránka",
 		"Yes": "Ano",
 		"No": "Ne",
 		"Food": "Jídlo",
@@ -289,6 +290,10 @@
 			"Subtitle": "Otevřená crowdsourcovaná databáze cen potravin 🏷🍊💲",
 			"Title": "Vítejte v {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Nejnovější ceny",
@@ -400,7 +405,8 @@
 		"Proof": "Důkaz",
 		"PRICE_TAG": "Cenovka",
 		"RECEIPT": "Účtenka",
-		"GDPR_REQUEST": "GDPR požadavek"
+		"GDPR_REQUEST": "GDPR požadavek",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Vybrat důkaz",
