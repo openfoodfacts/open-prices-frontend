@@ -8,7 +8,10 @@
         </v-list-subheader>
         <v-divider />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
-        <OpenStreetMapLink :location="location" display="list-item" />
+        <OpenStreetMapLink v-if="isTypeOSM" :location="location" display="list-item" />
+        <v-list-item v-if="isTypeONLINE" append-icon="mdi-open-in-new" :href="location.url" target="_blank" rel="noopener noreferrer">
+          {{ $t('Common.Website') }}
+        </v-list-item>
       </v-list>
     </v-menu>
   </v-btn>
@@ -33,6 +36,12 @@ export default {
     }
   },
   computed: {
+    isTypeOSM() {
+      return this.location.type === 'OSM'
+    },
+    isTypeONLINE() {
+      return this.location.type === 'ONLINE'
+    },
     getShareLinkUrl() {
       return `/locations/${this.location.id}`
     }

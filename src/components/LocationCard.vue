@@ -1,8 +1,8 @@
 <template>
   <v-card
-    :title="getLocationTitle(location)"
-    :subtitle="location ? location.osm_display_name : ''"
-    :prepend-icon="location ? 'mdi-map-marker-outline' : 'mdi-map-marker-remove-variant'"
+    :title="getLocationTitle"
+    :subtitle="getLocationSubtitle"
+    :prepend-icon="getLocationIcon"
     data-name="location-card"
     @click="goToLocation(location)"
   >
@@ -20,21 +20,22 @@
         <v-icon start icon="mdi-image" />
         <span id="proof-count">{{ $t('Common.ProofCount', { count: location.proof_count }) }}</span>
       </v-chip>
-      <br>
-      <LocationOSMTagChip class="mr-1" :location="location" />
-      <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
-      <v-chip
-        v-if="!hideCountryCity && locationCountryCityUrl"
-        label size="small" density="comfortable" class="mr-1" :to="locationCountryCityUrl"
-      >
-        {{ location.osm_address_city }}
-      </v-chip>
-      <v-chip
-        v-if="!hideCountryCity && locationCountryUrl"
-        label size="small" density="comfortable" class="mr-1" :to="locationCountryUrl"
-      >
-        {{ location.osm_address_country }}
-      </v-chip>
+      <v-sheet v-if="isTypeOSM">
+        <LocationOSMTagChip class="mr-1" :location="location" />
+        <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
+        <v-chip
+          v-if="!hideCountryCity && locationCountryCityUrl"
+          label size="small" density="comfortable" class="mr-1" :to="locationCountryCityUrl"
+        >
+          {{ location.osm_address_city }}
+        </v-chip>
+        <v-chip
+          v-if="!hideCountryCity && locationCountryUrl"
+          label size="small" density="comfortable" class="mr-1" :to="locationCountryUrl"
+        >
+          {{ location.osm_address_country }}
+        </v-chip>
+      </v-sheet>
       <LocationActionMenuButton :location="location" />
     </v-card-text>
   </v-card>
@@ -73,6 +74,32 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    isTypeOSM() {
+      return this.location && this.location.type === 'OSM'
+    },
+    getLocationTitle() {
+      if (this.location) {
+        if (this.location.type === 'OSM') {
+          return utils.getLocationTitle(this.location, true, false, true, true)
+        } else if (this.location.type === 'ONLINE') {
+          return this.location.website_url
+        }
+      }
+      return this.$route.params.id
+    },
+    getLocationSubtitle() {
+      return this.location && this.isTypeOSM ? this.location.osm_display_name : ''
+    },
+    getLocationIcon() {
+      if (this.location) {
+        if (this.location.type === 'OSM') {
+          return 'mdi-map-marker-outline'
+        } else if (this.location.type === 'ONLINE') {
+          return 'mdi-web'
+        }
+      }
+      return 'mdi-map-marker-remove-variant'
+    },
     showLocationOSMID() {
       return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id
     },
@@ -84,12 +111,6 @@ export default {
     }
   },
   methods: {
-    getLocationTitle(location) {
-      if (location) {
-        return utils.getLocationTitle(location, true, false, true, true)
-      }
-      return this.$route.params.id
-    },
     goToLocation(location) {
       if (this.readonly) {
         return
