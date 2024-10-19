@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.88.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.0...v1.88.1) (2024-10-19)
+
+
+### Bug Fixes
+
+* **CI:** fix typo in labeler config. ref [#237](https://github.com/openfoodfacts/open-prices-frontend/issues/237) ([3bec224](https://github.com/openfoodfacts/open-prices-frontend/commit/3bec224b652223d896af3f7c7a44e2c951314acc))
+* **Price add:** fix redirect after single price add. ref [#941](https://github.com/openfoodfacts/open-prices-frontend/issues/941) ([4238571](https://github.com/openfoodfacts/open-prices-frontend/commit/4238571b1defc4b77d906631610d81656c62791b))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#968](https://github.com/openfoodfacts/open-prices-frontend/issues/968)) ([c3c9fc0](https://github.com/openfoodfacts/open-prices-frontend/commit/c3c9fc08aa8e86dcf861bfd2b8306fea6f96d7d5))
+* **Location card:** manage ONLINE locations (title, hide OSM metadata, actions) ([#966](https://github.com/openfoodfacts/open-prices-frontend/issues/966)) ([7d0ca91](https://github.com/openfoodfacts/open-prices-frontend/commit/7d0ca91512ac558e01b7aee76b8f72c9308412b2))
+* **Location list:** new filter by location type ([#964](https://github.com/openfoodfacts/open-prices-frontend/issues/964)) ([ee7a50b](https://github.com/openfoodfacts/open-prices-frontend/commit/ee7a50bfdb8745766184b3cb25aabd9cd705a30f))
+* **Price add:** allow adding prices to proofs with existing ONLINE location. ref [#965](https://github.com/openfoodfacts/open-prices-frontend/issues/965) ([819ca45](https://github.com/openfoodfacts/open-prices-frontend/commit/819ca45702cc10ace5e5bd754ffe30300bddaea0))
+* **Stats page:** add extra count by location & proof type ([#967](https://github.com/openfoodfacts/open-prices-frontend/issues/967)) ([8eb9b63](https://github.com/openfoodfacts/open-prices-frontend/commit/8eb9b6302a0f85e6dc5b69b7e537426280875788))
+
 ## [1.88.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.87.1...v1.88.0) (2024-10-17)
 
 
