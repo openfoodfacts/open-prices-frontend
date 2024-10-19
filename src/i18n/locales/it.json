@@ -246,6 +246,7 @@
 		"Users": "Utenti",
 		"UserCount": "{count} users",
 		"View": "Mostra",
+		"Website": "Sito web",
 		"Yes": "Sì",
 		"No": "No",
 		"Food": "Cibo",
@@ -289,6 +290,10 @@
 			"Subtitle": "Un database aperto in crowdsourcing dei prezzi dei prodotti alimentari 🏷🍊💲",
 			"Title": "Benvenuto/a in {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Ultimi prezzi",
@@ -400,7 +405,8 @@
 		"Proof": "Prova",
 		"PRICE_TAG": "Etichetta del prezzo",
 		"RECEIPT": "Ricevuta",
-		"GDPR_REQUEST": "Richiesta RGPD"
+		"GDPR_REQUEST": "Richiesta RGPD",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Seleziona una prova",
