@@ -14,7 +14,7 @@ Brands:
 - changed-files:
   - any-glob-to-any-file: 'src/views/BrandDetail.vue'
 
-📍 Locations::
+📍 Locations:
 - changed-files:
   - any-glob-to-any-file: 'src/views/LocationList.vue'
   - any-glob-to-any-file: 'src/views/LocationDetail.vue'
