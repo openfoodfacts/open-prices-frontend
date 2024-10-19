@@ -293,7 +293,7 @@
 	},
 	"LocationCard": {
 		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
+		"ONLINE": "מקוון"
 	},
 	"LocationDetail": {
 		"LatestPrices": "מחירים עדכניים",
@@ -406,7 +406,7 @@
 		"PRICE_TAG": "תווית מחיר",
 		"RECEIPT": "קבלה",
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)",
-		"SHOP_IMPORT": "Shop import"
+		"SHOP_IMPORT": "ייבוא חנות"
 	},
 	"ProofCreate": {
 		"SelectProof": "בחירת הוכחה",
