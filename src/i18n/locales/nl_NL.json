@@ -246,6 +246,7 @@
 		"Users": "Gebruikers",
 		"UserCount": "{count} gebruikers",
 		"View": "Bekijk",
+		"Website": "Website",
 		"Yes": "Ja",
 		"No": "Nee",
 		"Food": "Voedsel",
@@ -289,6 +290,10 @@
 			"Subtitle": "Een open crowdsourced database met voedselprijzen 🏷🍊💲",
 			"Title": "Welkom bij {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Laatste prijzen",
@@ -400,7 +405,8 @@
 		"Proof": "Bewijs",
 		"PRICE_TAG": "Prijskaartje",
 		"RECEIPT": "Bon",
-		"GDPR_REQUEST": "AVG-verzoek"
+		"GDPR_REQUEST": "AVG-verzoek",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Selecteer een bewijs",
