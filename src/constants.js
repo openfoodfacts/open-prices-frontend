@@ -48,6 +48,10 @@ export default {
     {key: 'PRICE_TAG', value: 'PRICE_TAG', icon: 'mdi-library-shelves'},
     {key: 'RECEIPT', value: 'RECEIPT', icon: 'mdi-receipt-text-outline'}
   ],
+  LOCATION_TYPE_LIST: [
+    {key: 'OSM', value: 'OSM', icon: 'mdi-map-marker-outline'},
+    {key: 'ONLINE', value: 'ONLINE', icon: 'mdi-laptop'},
+  ],
   QUERY_PARAM: 'q',
   FILTER_PARAM: 'filter',
   PRODUCT_FILTER_LIST: [
