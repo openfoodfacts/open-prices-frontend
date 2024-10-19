@@ -246,6 +246,7 @@
 		"Users": "משתמשים",
 		"UserCount": "{count} משתמשים",
 		"View": "הצגה",
+		"Website": "אתר",
 		"Yes": "כן",
 		"No": "לא",
 		"Food": "מזון",
@@ -289,6 +290,10 @@
 			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
 			"Title": "ברוך בואך אל {name}!"
 		}
+	},
+	"LocationCard": {
+		"OSM": "OpenStreetMap",
+		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "מחירים עדכניים",
@@ -400,7 +405,8 @@
 		"Proof": "הוכחה",
 		"PRICE_TAG": "תווית מחיר",
 		"RECEIPT": "קבלה",
-		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)"
+		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)",
+		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
 		"SelectProof": "בחירת הוכחה",
