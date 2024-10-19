@@ -120,8 +120,9 @@ export default {
         this.proofForm.type = proofSelected.type
         this.proofForm.proof_id = proofSelected.id
         if (proofSelected.location) {
-          this.proofForm.location_osm_id = proofSelected.location_osm_id
-          this.proofForm.location_osm_type = proofSelected.location_osm_type
+          this.proofForm.location_id = proofSelected.location.id
+          this.proofForm.location_osm_id = (proofSelected.location.type === 'OSM') ? proofSelected.location_osm_id : null
+          this.proofForm.location_osm_type = (proofSelected.location.type === 'OSM') ? proofSelected.location_osm_type : ''
         }
         if (proofSelected.date) {
           this.proofForm.date = proofSelected.date

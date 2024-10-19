@@ -152,6 +152,7 @@ export default {
       addPriceMultipleForm: {
         type: null,
         proof_id: null,
+        location_id: null,
         location_osm_id: null,
         location_osm_type: '',
         date: utils.currentDate(),
@@ -189,8 +190,9 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keys = Object.keys(this.addPriceMultipleForm)
-      return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
+      let keysOSM = Object.keys(this.addPriceMultipleForm).filter(k => k !== 'location_id')
+      let keysONLINE = Object.keys(this.addPriceMultipleForm).filter(k => ['location_osm_id', 'location_osm_type'].indexOf(k) < 0)
+      return Object.keys(this.addPriceMultipleForm).filter(k => keysOSM.includes(k)).every(k => !!this.addPriceMultipleForm[k]) || Object.keys(this.addPriceMultipleForm).filter(k => keysONLINE.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
     pricePerFormFilled() {
       let keys = ['price_per']

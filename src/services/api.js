@@ -3,7 +3,7 @@ import constants from '../constants'
 
 
 const PRICE_UPDATE_FIELDS = ['price', 'price_is_discounted', 'price_without_discount', 'price_per', 'currency', 'date']
-const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'category_tag', 'labels_tags', 'origins_tags', 'location_osm_id', 'location_osm_type', 'proof_id'])
+const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'category_tag', 'labels_tags', 'origins_tags', 'location_id', 'location_osm_id', 'location_osm_type', 'proof_id'])
 const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency']
 const LOCATION_SEARCH_LIMIT = 10
 
