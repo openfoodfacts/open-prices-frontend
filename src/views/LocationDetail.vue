@@ -67,7 +67,7 @@ export default {
   },
   computed: {
     locationFound() {
-      return this.location && this.location.osm_id
+      return this.location && (this.location.osm_id || this.location.website_url)
     },
     getPricesParams() {
       let defaultParams = { location_id: this.locationId, order_by: this.currentOrder, page: this.locationPricePage }
