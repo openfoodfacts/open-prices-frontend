@@ -9,7 +9,7 @@
         <v-divider />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
         <OpenStreetMapLink v-if="isTypeOSM" :location="location" display="list-item" />
-        <v-list-item v-if="isTypeONLINE" append-icon="mdi-open-in-new" :href="location.url" target="_blank" rel="noopener noreferrer">
+        <v-list-item v-if="isTypeONLINE" append-icon="mdi-open-in-new" :href="location.website_url" target="_blank" rel="noopener noreferrer">
           {{ $t('Common.Website') }}
         </v-list-item>
       </v-list>
