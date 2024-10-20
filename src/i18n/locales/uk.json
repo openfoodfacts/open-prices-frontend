@@ -293,7 +293,7 @@
 	},
 	"LocationCard": {
 		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
+		"ONLINE": "Онлайн"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Остання ціна",
@@ -406,7 +406,7 @@
 		"PRICE_TAG": "Цінник",
 		"RECEIPT": "Квитанція",
 		"GDPR_REQUEST": "Запит GDPR",
-		"SHOP_IMPORT": "Shop import"
+		"SHOP_IMPORT": "Імпорт магазину"
 	},
 	"ProofCreate": {
 		"SelectProof": "Виберіть доказ",
