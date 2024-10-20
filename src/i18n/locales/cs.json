@@ -22,11 +22,11 @@
 		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
 		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
 		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
-		"HowContact": "How can I get in touch?",
+		"HowContact": "Jak se mohu spojit?",
 		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
-		"HowSupport": "How can I support {op_name}?",
+		"HowSupport": "Jak mohu podpořit {op_name}?",
 		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
-		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
+		"WhyOSM": "Proč požadujete {osm_name} ID, když přidám cenu?",
 		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
 		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
 		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
@@ -211,7 +211,7 @@
 		"OrderPriceASC": "Cena",
 		"OrderPriceCreatedDESC": "Datum přidání",
 		"OrderPriceDateDESC": "Datum ceny",
-		"OrderProductCountDESC": "Product count",
+		"OrderProductCountDESC": "Počet produktů",
 		"OrderProofCountDESC": "Proof count",
 		"OrderProofCreatedDESC": "Datum přidání",
 		"OrderProofDateDESC": "Proof date",
@@ -511,7 +511,7 @@
 		"WithoutProduct": "Bez produktu",
 		"WithBarcode": "S čárovým kódem",
 		"WithCategory": "S kategorií",
-		"LastUpdated": "Last updated on {date}"
+		"LastUpdated": "Naposledy aktualizováno {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Nejnovější ceny",
