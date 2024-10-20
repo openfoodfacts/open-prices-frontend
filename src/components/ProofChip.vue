@@ -8,7 +8,7 @@
     @click="openDialog"
   >
     <v-icon icon="mdi-image" />
-    <v-dialog v-model="dialog" scrollable max-height="80%" width="auto">
+    <v-dialog v-model="dialog" scrollable max-height="80%" min-width="50%" width="auto">
       <ProofCard :proof="proof" :hideProofActions="true" @close="closeDialog" />
     </v-dialog>
   </v-chip>

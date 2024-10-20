@@ -1,5 +1,5 @@
 <template>
-  <v-dialog>
+  <v-dialog scrollable max-height="80%" min-width="50%" width="auto">
     <v-card>
       <v-card-title>
         {{ $t('PriceEdit.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
@@ -9,7 +9,7 @@
 
       <v-card-text>
         <v-row>
-          <v-col cols="12" md="6">
+          <v-col cols="12">
             <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="true" :readonly="true" />
           </v-col>
         </v-row>
@@ -27,7 +27,7 @@
           {{ $t('Common.Date') }}
         </h3>
         <v-row>
-          <v-col cols="12" sm="6">
+          <v-col cols="12">
             <v-text-field
               v-model="updatePriceForm.date"
               :label="$t('Common.Date')"

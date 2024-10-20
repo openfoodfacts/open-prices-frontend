@@ -1,5 +1,5 @@
 <template>
-  <v-dialog>
+  <v-dialog scrollable max-height="80%" min-width="50%" width="auto">
     <v-card>
       <v-card-title>
         {{ $t('ProductCard.Brands') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
