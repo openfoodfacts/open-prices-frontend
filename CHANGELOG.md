@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.88.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.1...v1.88.2) (2024-10-20)
+
+
+### Bug Fixes
+
+* **Location card:** fix link to online location website. ref [#966](https://github.com/openfoodfacts/open-prices-frontend/issues/966) ([cb86050](https://github.com/openfoodfacts/open-prices-frontend/commit/cb8605037094c41014951b69977b77edc8df5d8d))
+
+
+### Technical
+
+* homogenize v-dialogs ([4dfc48e](https://github.com/openfoodfacts/open-prices-frontend/commit/4dfc48ef76534ddcd8a2fb953a3554ab538eae0c))
+* **l10n:** New Crowdin translations to review and merge ([#969](https://github.com/openfoodfacts/open-prices-frontend/issues/969)) ([83e6fa1](https://github.com/openfoodfacts/open-prices-frontend/commit/83e6fa103afcbe6872f9d8dab1447c837449007c))
+* **Locations:** move some logic to utils & constants. ref [#965](https://github.com/openfoodfacts/open-prices-frontend/issues/965) ([b690706](https://github.com/openfoodfacts/open-prices-frontend/commit/b690706de1969d16039cf9770a6a65b7e4a0c578))
+* **Stats page:** fix recent stat displaty. use OSM name for location stat. ref [#967](https://github.com/openfoodfacts/open-prices-frontend/issues/967) ([3d42bf6](https://github.com/openfoodfacts/open-prices-frontend/commit/3d42bf6d8d2d898134e6c765507f1a27a5adb5f9))
+* use green color for success buttons ([cec0adc](https://github.com/openfoodfacts/open-prices-frontend/commit/cec0adc063b32415b681dd60b28e03d1e6b26735))
+
 ## [1.88.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.0...v1.88.1) (2024-10-19)
 
 
