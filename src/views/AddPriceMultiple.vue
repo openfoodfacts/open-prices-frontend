@@ -114,6 +114,7 @@
       <v-btn
         class="float-right"
         type="submit"
+        color="success"
         :loading="createPriceLoading"
         :disabled="productPriceFormFilled"
         @click="done"

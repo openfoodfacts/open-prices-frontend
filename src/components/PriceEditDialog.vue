@@ -42,6 +42,7 @@
 
       <v-card-actions>
         <v-btn
+          color="success"
           elevation="1"
           :loading="loading"
           @click="updatePrice"
