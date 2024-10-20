@@ -72,6 +72,8 @@ export default {
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initLocationList()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
