@@ -14,14 +14,6 @@
       <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
-
-  <v-snackbar
-    v-model="signinSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('Common.SignedIn') }}
-  </v-snackbar>
 </template>
 
 <script>
@@ -40,8 +32,6 @@ export default {
       priceTotal: null,
       pricePage: 0,
       loading: false,
-      // success messages
-      signinSuccessMessage: false,
       // scroll
       handleDebouncedScroll: null,
     }
@@ -51,10 +41,6 @@ export default {
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
     window.addEventListener('scroll', this.handleDebouncedScroll)
-    // success messages
-    if (this.$route.query.signinSuccess === 'true') {
-      this.signinSuccessMessage = true
-    }
   },
   unmounted() {
     window.removeEventListener('scroll', this.handleDebouncedScroll)

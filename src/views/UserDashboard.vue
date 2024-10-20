@@ -104,17 +104,20 @@ export default {
     this.getUserProofCount()
     this.getPrices()
     // success messages
-    if (this.$route.query.singleSuccess === 'true') {
-      this.singleSuccessMessage = true
-    }
-    if (this.$route.query.multipleSuccess === 'true') {
-      this.multipleSuccessMessage = true
-    }
-    if (this.$route.query.proofSingleSuccess === 'true') {
-      this.proofSingleSuccessMessage = true
-    }
-    if (this.$route.query.settingsSuccess === 'true') {
-      this.settingsSuccessMessage = true
+    if (Object.keys(this.$route.query).length) {
+      if (this.$route.query.singleSuccess === 'true') {
+        this.singleSuccessMessage = true
+      }
+      if (this.$route.query.multipleSuccess === 'true') {
+        this.multipleSuccessMessage = true
+      }
+      if (this.$route.query.proofSingleSuccess === 'true') {
+        this.proofSingleSuccessMessage = true
+      }
+      if (this.$route.query.settingsSuccess === 'true') {
+        this.settingsSuccessMessage = true
+      }
+      this.$router.replace({ query: {} })
     }
   },
   methods: {
