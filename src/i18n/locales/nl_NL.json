@@ -406,7 +406,7 @@
 		"PRICE_TAG": "Prijskaartje",
 		"RECEIPT": "Bon",
 		"GDPR_REQUEST": "AVG-verzoek",
-		"SHOP_IMPORT": "Shop import"
+		"SHOP_IMPORT": "Winkel import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Selecteer een bewijs",
