@@ -48,7 +48,7 @@
       <StatCard :value="stats.location_with_price_count" :subtitle="$t('Stats.Total')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_type_osm_count" :subtitle="$t('LocationCard.OSM')" />
+      <StatCard :value="stats.location_type_osm_count" :subtitle="OSM_NAME" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.location_type_online_count" :subtitle="$t('LocationCard.ONLINE')" />
@@ -104,6 +104,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
@@ -118,17 +119,22 @@ export default {
         price_type_category_tag_count: 0,
         product_count: 0,
         product_with_price_count: 0,
-        location_count: 0,
+        // location_count: 0,
         location_with_price_count: 0,
-        proof_count: 0,
+        location_type_osm_count: 0,
+        location_type_online_count: 0,
+        // proof_count: 0,
         proof_with_price_count: 0,
         proof_type_price_tag_count: 0,
         proof_type_receipt_count: 0,
+        proof_type_gdpr_request_count: 0,
+        proof_type_shop_import_count: 0,
         user_count: 0,
         user_with_price_count: 0,
         updated: null,
       },
       loading: false,
+      OSM_NAME: constants.OSM_NAME,
     }
   },
   mounted() {
