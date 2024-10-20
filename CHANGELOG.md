@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.88.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.2...v1.88.3) (2024-10-20)
+
+
+### Bug Fixes
+
+* **Location list:** fix filtering on page load (if url params). ref [#964](https://github.com/openfoodfacts/open-prices-frontend/issues/964) ([042226b](https://github.com/openfoodfacts/open-prices-frontend/commit/042226b9656899945f4a556e22b0ef3b682c6313))
+
+
+### Technical
+
+* **User dashboard:** after success message display, replace url param. ref [#878](https://github.com/openfoodfacts/open-prices-frontend/issues/878) ([e92516a](https://github.com/openfoodfacts/open-prices-frontend/commit/e92516a547a5a75cd191c8f686deecd5ae77c8a9))
+
 ## [1.88.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.1...v1.88.2) (2024-10-20)
 
 
