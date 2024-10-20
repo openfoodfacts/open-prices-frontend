@@ -186,7 +186,7 @@ export default {
       }
     },
     getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
-      return utils.getLocationTitle(location, withName, withRoad, withCity)
+      return utils.getLocationOSMTitle(location, withName, withRoad, withCity)
     },
     getLocationUniqueID(location) {
       return utils.getLocationUniqueID(location)

@@ -80,9 +80,9 @@ export default {
     getLocationTitle() {
       if (this.location) {
         if (this.location.type === 'OSM') {
-          return utils.getLocationTitle(this.location, true, false, true, true)
+          return utils.getLocationOSMTitle(this.location, true, false, true, true)
         } else if (this.location.type === 'ONLINE') {
-          return this.location.website_url
+          return utils.getLocationONLINETitle(this.location)
         }
       }
       return this.$route.params.id
@@ -91,14 +91,7 @@ export default {
       return this.location && this.isTypeOSM ? this.location.osm_display_name : ''
     },
     getLocationIcon() {
-      if (this.location) {
-        if (this.location.type === 'OSM') {
-          return 'mdi-map-marker-outline'
-        } else if (this.location.type === 'ONLINE') {
-          return 'mdi-web'
-        }
-      }
-      return 'mdi-map-marker-remove-variant'
+      return utils.getLocationIcon(this.location)
     },
     showLocationOSMID() {
       return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id

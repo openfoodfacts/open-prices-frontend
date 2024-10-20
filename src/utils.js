@@ -251,7 +251,7 @@ function getLocationCity(locationObject) {
  * input: {"geometry":{"coordinates":[2.3548062,48.8301752],"type":"Point"},"type":"Feature","properties":{"osm_id":11112946989,"country":"France","city":"Paris","countrycode":"FR","postcode":"75013","locality":"Quartier de la Maison-Blanche","type":"house","osm_type":"N","osm_key":"shop","housenumber":"30","street":"Avenue d'Italie","district":"Paris","osm_value":"department_store","name":"HEMA","state":"Ile-de-France"}}
  * output: HEMA ; 30, Avenue d'Italie, Paris
  */
-function getLocationTitle(locationObject, withName=true, withRoad=false, withCity=true, withEmoji=false) {
+function getLocationOSMTitle(locationObject, withName=true, withRoad=false, withCity=true, withEmoji=false) {
   let locationTitle = ''
   if (withName) {
     locationTitle += `${getLocationName(locationObject)}`
@@ -363,6 +363,23 @@ function getMapCenter(results) {
   results [45, 5]
 }
 
+// OP location
+function getLocationONLINETitle(locationObject) {
+  return locationObject.website_url
+}
+
+// OP location
+function getLocationIcon(locationObject) {
+  if (locationObject) {
+    if (locationObject.type === 'OSM') {
+      return constants.LOCATION_TYPE_OSM_ICON
+    } else if (locationObject.type === 'ONLINE') {
+      return constants.LOCATION_TYPE_ONLINE_ICON
+    }
+  }
+  return constants.LOCATION_UNKNOWN_ICON
+}
+
 
 export default {
   debounce,
@@ -387,7 +404,7 @@ export default {
   getLocaleOriginTags,
   getCountryEmojiFromName,
   getCountryEmojiFromCode,
-  getLocationTitle,
+  getLocationOSMTitle,
   getLocationID,
   getLocationType,
   buildLocationUniqueId,
@@ -396,4 +413,6 @@ export default {
   getLocationLatLng,
   getMapBounds,
   getMapCenter,
+  getLocationONLINETitle,
+  getLocationIcon,
 }

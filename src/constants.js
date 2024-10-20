@@ -6,6 +6,8 @@ const OPFF_NAME = 'Open Pet Food Facts'
 const OPFF_ICON = 'mdi-paw'
 const OPF_NAME = 'Open Products Facts'
 const OPF_ICON = 'mdi-bookshelf'
+const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
+const LOCATION_TYPE_ONLINE_ICON = 'mdi-web'
 
 export default {
   APP_NAME: 'Open Prices',
@@ -48,9 +50,12 @@ export default {
     {key: 'PRICE_TAG', value: 'PRICE_TAG', icon: 'mdi-library-shelves'},
     {key: 'RECEIPT', value: 'RECEIPT', icon: 'mdi-receipt-text-outline'}
   ],
+  LOCATION_TYPE_OSM_ICON: LOCATION_TYPE_OSM_ICON,
+  LOCATION_TYPE_ONLINE_ICON: LOCATION_TYPE_ONLINE_ICON,
+  LOCATION_UNKNOWN_ICON: 'mdi-map-marker-remove-variant',
   LOCATION_TYPE_LIST: [
-    {key: 'OSM', value: 'OSM', icon: 'mdi-map-marker-outline'},
-    {key: 'ONLINE', value: 'ONLINE', icon: 'mdi-web'},
+    {key: 'OSM', value: 'OSM', icon: LOCATION_TYPE_OSM_ICON},
+    {key: 'ONLINE', value: 'ONLINE', icon: LOCATION_TYPE_ONLINE_ICON},
   ],
   QUERY_PARAM: 'q',
   FILTER_PARAM: 'filter',

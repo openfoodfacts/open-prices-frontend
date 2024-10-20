@@ -1,7 +1,7 @@
 <template>
   <v-chip label size="small" :prepend-icon="getLocationIcon" density="comfortable" :color="locationMissingAndShowError ? 'error' : 'default'" @click="goToLocation()">
     <span v-if="locationNotMissing">{{ getLocationTitle }}</span>
-    <span v-if="locationEmoji" style="margin-inline-start:5px">{{ locationEmoji }}</span>
+    <span v-if="getLocationEmoji" style="margin-inline-start:5px">{{ getLocationEmoji }}</span>
     <span v-else-if="locationMissingAndShowError">
       <i class="text-lowercase">{{ $t('Common.Location') }}</i>
       <v-tooltip activator="parent" open-on-click location="top">
@@ -37,24 +37,17 @@ export default {
     getLocationTitle() {
       if (this.location) {
         if (this.location.type === 'OSM') {
-          return utils.getLocationTitle(this.location)
+          return utils.getLocationOSMTitle(this.location)
         } else if (this.location.type === 'ONLINE') {
-          return this.location.website_url
+          return utils.getLocationONLINETitle(this.location)
         }
       }
       return this.locationId
     },
     getLocationIcon() {
-      if (this.location) {
-        if (this.location.type === 'OSM') {
-          return 'mdi-map-marker-outline'
-        } else if (this.location.type === 'ONLINE') {
-          return 'mdi-web'
-        }
-      }
-      return 'mdi-map-marker-remove-variant'
+      return utils.getLocationIcon(this.location)
     },
-    locationEmoji() {
+    getLocationEmoji() {
       if (this.location) {
         if (this.location.type === 'OSM') {
           return utils.getCountryEmojiFromCode(this.location.osm_address_country_code)
