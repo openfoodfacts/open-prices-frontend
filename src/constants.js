@@ -6,6 +6,10 @@ const OPFF_NAME = 'Open Pet Food Facts'
 const OPFF_ICON = 'mdi-paw'
 const OPF_NAME = 'Open Products Facts'
 const OPF_ICON = 'mdi-bookshelf'
+const PROOF_TYPE_PRICE_TAG = 'PRICE_TAG'
+const PROOF_TYPE_PRICE_TAG_ICON = 'mdi-library-shelves'
+const PROOF_TYPE_RECEIPT = 'RECEIPT'
+const PROOF_TYPE_RECEIPT_ICON = 'mdi-receipt-text-outline'
 const LOCATION_TYPE_OSM = 'OSM'
 const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
 const LOCATION_TYPE_ONLINE = 'ONLINE'
@@ -48,10 +52,15 @@ export default {
     { key: 'opff', value: OPFF_NAME, icon: OPFF_ICON },
   ],
   TYPE_PARAM: 'type',
+  PROOF_TYPE_PRICE_TAG: PROOF_TYPE_PRICE_TAG,
+  PROOF_TYPE_PRICE_TAG_ICON: PROOF_TYPE_PRICE_TAG_ICON,
+  PROOF_TYPE_RECEIPT: PROOF_TYPE_RECEIPT,
+  PROOF_TYPE_RECEIPT_ICON: PROOF_TYPE_RECEIPT_ICON,
   PROOF_TYPE_LIST: [
-    {key: 'PRICE_TAG', value: 'PRICE_TAG', icon: 'mdi-library-shelves'},
-    {key: 'RECEIPT', value: 'RECEIPT', icon: 'mdi-receipt-text-outline'}
+    {key: PROOF_TYPE_PRICE_TAG, value: PROOF_TYPE_PRICE_TAG, icon: PROOF_TYPE_PRICE_TAG_ICON},
+    {key: PROOF_TYPE_RECEIPT, value: PROOF_TYPE_RECEIPT, icon: PROOF_TYPE_RECEIPT_ICON}
   ],
+  PROOF_TYPE_USER_EDITABLE_LIST: [PROOF_TYPE_PRICE_TAG, PROOF_TYPE_RECEIPT],
   LOCATION_TYPE_OSM: LOCATION_TYPE_OSM,
   LOCATION_TYPE_OSM_ICON: LOCATION_TYPE_OSM_ICON,
   LOCATION_TYPE_ONLINE: LOCATION_TYPE_ONLINE,

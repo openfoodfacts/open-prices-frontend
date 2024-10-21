@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     priceOriginTagName() {
-      return OriginTags.find(ot => this.priceOrigins[0].indexOf(ot.id) > -1).name
+      return OriginTags.find(ot => this.priceOrigins[0].includes(ot.id)).name
     },
   }
 }

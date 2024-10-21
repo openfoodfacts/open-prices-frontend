@@ -199,7 +199,7 @@ function getLocaleOriginTags(locale) {
 }
 
 function getCountryEmojiFromName(countryString) {
-  const country = CountriesWithEmoji.find(c => c.name === countryString || (c.name_original && c.name_original.length && c.name_original.indexOf(countryString) > -1))
+  const country = CountriesWithEmoji.find(c => c.name === countryString || (c.name_original && c.name_original.length && c.name_original.includes(countryString)))
   return country ? country.emoji : null
 }
 

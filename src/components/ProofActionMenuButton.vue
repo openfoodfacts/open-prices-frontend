@@ -58,6 +58,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 
 export default {
   components: {
@@ -77,8 +78,9 @@ export default {
   },
   data() {
     return {
-      loading: false,
       editDialog: false,
+      loading: false,
+      // success messages
       editSuccessMessage: false,
       deleteConfirmationDialog: false,
       deleteSuccessMessage: false
@@ -94,7 +96,7 @@ export default {
       return `/proofs/${this.proof.id}`
     },
     userCanAddPrice() {
-      return this.proof && (this.proof.type === 'PRICE_TAG' || this.proof.type === 'RECEIPT')
+      return this.proof && constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
     },
     userCanEditProof() {
       // user must be proof owner

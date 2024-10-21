@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     priceLabelsTagsList() {
-      return LabelTags.filter(lt => this.priceLabels.indexOf(lt.id) > -1)
+      return LabelTags.filter(lt => this.priceLabels.includes(lt.id))
     },
   }
 }

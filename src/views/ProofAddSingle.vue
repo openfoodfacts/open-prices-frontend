@@ -9,7 +9,7 @@
       <v-col cols="12" md="6" lg="4">
         <v-card
           :title="$t('Common.Type')"
-          :prepend-icon="(addProofSingleForm.type === 'RECEIPT') ? 'mdi-receipt-text-outline' : 'mdi-library-shelves'"
+          :prepend-icon="(addProofSingleForm.type === PROOF_TYPE_RECEIPT) ? PROOF_TYPE_RECEIPT_ICON : PROOF_TYPE_PRICE_TAG_ICON"
           height="100%"
           :style="proofTypeFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
         >
@@ -109,6 +109,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
@@ -118,8 +119,12 @@ export default {
   },
   data() {
     return {
+      PROOF_TYPE_RECEIPT: constants.PROOF_TYPE_RECEIPT,
+      PROOF_TYPE_PRICE_TAG_ICON: constants.PROOF_TYPE_PRICE_TAG_ICON,
+      PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
+      // data
       addProofSingleForm: {
-        type: 'PRICE_TAG',
+        type: constants.PROOF_TYPE_RECEIPT,
         proof_id: null,
         date: utils.currentDate(),
         currency: null,

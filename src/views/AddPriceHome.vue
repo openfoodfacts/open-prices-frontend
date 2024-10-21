@@ -8,7 +8,7 @@
       <v-card
         :title="$t('AddPriceHome.MultipleProductMode.Title')"
         :subtitle="$t('AddPriceHome.MultipleProductMode.Subtitle')"
-        prepend-icon="mdi-library-shelves"
+        :prepend-icon="PROOF_TYPE_PRICE_TAG_ICON"
         to="/prices/add/multiple/price-tag"
       />
     </v-col>
@@ -16,9 +16,23 @@
       <v-card
         :title="$t('AddPriceHome.ReceiptMode.Title')"
         :subtitle="$t('AddPriceHome.ReceiptMode.Subtitle')"
-        prepend-icon="mdi-receipt-text-outline"
+        :prepend-icon="PROOF_TYPE_RECEIPT_ICON"
         to="/prices/add/multiple/receipt"
       />
     </v-col>
   </v-row>
 </template>
+
+
+<script>
+import constants from '../constants'
+
+export default {
+  data() {
+    return {
+      PROOF_TYPE_PRICE_TAG_ICON: constants.PROOF_TYPE_PRICE_TAG_ICON,
+      PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
+    }
+  },
+}
+</script>

@@ -44,7 +44,7 @@
   </v-row>
 
   <!-- RECEIPT: warning message -->
-  <v-row v-if="proofImageForm && proofImageForm.type === 'RECEIPT'" class="mt-0">
+  <v-row v-if="proofImageForm && proofImageForm.type === PROOF_TYPE_RECEIPT" class="mt-0">
     <v-col>
       <h3 class="mb-1">
         {{ $t('ProofDetail.Privacy') }}
@@ -67,6 +67,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
+import constants from '../constants'
 
 export default {
   components: {
@@ -85,6 +86,8 @@ export default {
   emits: ['proof'],
   data() {
     return {
+      PROOF_TYPE_RECEIPT: constants.PROOF_TYPE_RECEIPT,
+      // data
       proofImage: null,
       proofImagePreview: null,
       userRecentProofsDialog: false,

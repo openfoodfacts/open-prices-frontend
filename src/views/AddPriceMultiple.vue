@@ -192,7 +192,7 @@ export default {
     ...mapStores(useAppStore),
     proofFormFilled() {
       let keysOSM = Object.keys(this.addPriceMultipleForm).filter(k => k !== 'location_id')
-      let keysONLINE = Object.keys(this.addPriceMultipleForm).filter(k => ['location_osm_id', 'location_osm_type'].indexOf(k) < 0)
+      let keysONLINE = Object.keys(this.addPriceMultipleForm).filter(k => !['location_osm_id', 'location_osm_type'].includes(k))
       return Object.keys(this.addPriceMultipleForm).filter(k => keysOSM.includes(k)).every(k => !!this.addPriceMultipleForm[k]) || Object.keys(this.addPriceMultipleForm).filter(k => keysONLINE.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
     pricePerFormFilled() {
