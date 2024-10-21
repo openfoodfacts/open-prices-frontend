@@ -5,7 +5,7 @@
       <ProofTypeInputRow :proofTypeForm="proofForm" />
       <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" @proof="proofImage = $event" />
       <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
-      <ProofMetadataInputRow :proofMetadataForm="proofForm" />
+      <ProofMetadataInputRow :proofType="proofForm.type" :proofMetadataForm="proofForm" />
       <v-row>
         <v-col>
           <v-btn color="success" :loading="loading" :disabled="!proofFormFilled || loading" @click="uploadProof">
@@ -48,6 +48,7 @@ import Compressor from 'compressorjs'
 import ExifReader from 'exifreader'
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 Compressor.setDefaults({
@@ -69,7 +70,16 @@ export default {
   props: {
     proofForm: {
       type: Object,
-      default: () => ({ type: null, proof_id: null, location_osm_id: null, location_osm_type: null, date: utils.currentDate(), currency: null })
+      default: () => ({
+        type: null,
+        proof_id: null,
+        location_osm_id: null,
+        location_osm_type: null,
+        date: utils.currentDate(),
+        currency: null,
+        receipt_price_count: null,
+        receipt_price_total: null,
+      })
     },
     hideRecentProofChoice: {
       type: Boolean,
@@ -121,8 +131,8 @@ export default {
         this.proofForm.proof_id = proofSelected.id
         if (proofSelected.location) {
           this.proofForm.location_id = proofSelected.location.id
-          this.proofForm.location_osm_id = (proofSelected.location.type === 'OSM') ? proofSelected.location_osm_id : null
-          this.proofForm.location_osm_type = (proofSelected.location.type === 'OSM') ? proofSelected.location_osm_type : ''
+          this.proofForm.location_osm_id = (proofSelected.location.type === constants.LOCATION_TYPE_OSM) ? proofSelected.location_osm_id : null
+          this.proofForm.location_osm_type = (proofSelected.location.type === constants.LOCATION_TYPE_OSM) ? proofSelected.location_osm_type : ''
         }
         if (proofSelected.date) {
           this.proofForm.date = proofSelected.date
@@ -158,7 +168,7 @@ export default {
       })
       .then((proofImageCompressed) => {
         api
-          .createProof(proofImageCompressed, this.proofForm.type, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency)
+          .createProof(proofImageCompressed, this.proofForm.type, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency, this.proofForm.receipt_price_count, this.proofForm.receipt_price_total)
           .then((data) => {
             this.loading = false
             if (data.id) {

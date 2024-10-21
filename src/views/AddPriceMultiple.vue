@@ -157,7 +157,9 @@ export default {
         location_osm_id: null,
         location_osm_type: '',
         date: utils.currentDate(),
-        currency: null
+        currency: null,
+        receipt_price_count: null,
+        receipt_price_total: null,
       },
       productPriceForm: {},
       productFormFilled: false,
@@ -191,8 +193,8 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keysOSM = Object.keys(this.addPriceMultipleForm).filter(k => k !== 'location_id')
-      let keysONLINE = Object.keys(this.addPriceMultipleForm).filter(k => !['location_osm_id', 'location_osm_type'].includes(k))
+      let keysOSM = Object.keys(this.addPriceMultipleForm).filter(k => !['location_id', 'receipt_price_count', 'receipt_price_total'].includes(k))
+      let keysONLINE = Object.keys(this.addPriceMultipleForm).filter(k => !['location_osm_id', 'location_osm_type', 'receipt_price_count', 'receipt_price_total'].includes(k))
       return Object.keys(this.addPriceMultipleForm).filter(k => keysOSM.includes(k)).every(k => !!this.addPriceMultipleForm[k]) || Object.keys(this.addPriceMultipleForm).filter(k => keysONLINE.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
     pricePerFormFilled() {

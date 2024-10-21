@@ -56,7 +56,12 @@ export default {
   props: {
     priceForm: {
       type: Object,
-      default: () => ({ price: null, currency: null, price_is_discounted: false, price_without_discount: null })
+      default: () => ({
+        price: null,
+        currency: null,
+        price_is_discounted: false,
+        price_without_discount: null
+      })
     },
     hideCurrencyChoice: {
       type: Boolean,
