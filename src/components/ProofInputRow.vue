@@ -5,7 +5,7 @@
       <ProofTypeInputRow :proofTypeForm="proofForm" />
       <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" @proof="proofImage = $event" />
       <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
-      <ProofDateCurrencyInputRow :proofDateCurrencyForm="proofForm" />
+      <ProofMetadataInputRow :proofMetadataForm="proofForm" />
       <v-row>
         <v-col>
           <v-btn color="success" :loading="loading" :disabled="!proofFormFilled || loading" @click="uploadProof">
@@ -62,7 +62,7 @@ export default {
   components: {
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
-    ProofDateCurrencyInputRow: defineAsyncComponent(() => import('../components/ProofDateCurrencyInputRow.vue')),
+    ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
   },
@@ -95,12 +95,12 @@ export default {
     proofImageFormFilled() {
       return !!this.proofImage
     },
-    proofDateCurrencyFormFilled() {
+    proofMetadataFormFilled() {
       let keys = ['date', 'currency']
       return Object.keys(this.proofForm).filter(k => keys.includes(k)).every(k => !!this.proofForm[k])
     },
     proofFormFilled() {
-      return this.proofTypeFormFilled && this.proofImageFormFilled && this.proofDateCurrencyFormFilled
+      return this.proofTypeFormFilled && this.proofImageFormFilled && this.proofMetadataFormFilled
     },
   },
   watch: {

@@ -15,7 +15,7 @@
 
       <v-card-text>
         <ProofTypeInputRow :proofTypeForm="updateProofForm" />
-        <ProofDateCurrencyInputRow :proofDateCurrencyForm="updateProofForm" />
+        <ProofMetadataInputRow :proofMetadataForm="updateProofForm" />
       </v-card-text>
 
       <v-divider />
@@ -43,7 +43,7 @@ export default {
   components: {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
-    ProofDateCurrencyInputRow: defineAsyncComponent(() => import('../components/ProofDateCurrencyInputRow.vue')),
+    ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
   },
   props: {
     proof: {
