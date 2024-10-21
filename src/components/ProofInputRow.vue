@@ -5,7 +5,7 @@
       <ProofTypeInputRow :proofTypeForm="proofForm" />
       <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" @proof="proofImage = $event" />
       <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
-      <ProofMetadataInputRow :proofMetadataForm="proofForm" />
+      <ProofMetadataInputRow :proofType="proofForm.type" :proofMetadataForm="proofForm" />
       <v-row>
         <v-col>
           <v-btn color="success" :loading="loading" :disabled="!proofFormFilled || loading" @click="uploadProof">
@@ -69,7 +69,16 @@ export default {
   props: {
     proofForm: {
       type: Object,
-      default: () => ({ type: null, proof_id: null, location_osm_id: null, location_osm_type: null, date: utils.currentDate(), currency: null })
+      default: () => ({
+        type: null,
+        proof_id: null,
+        location_osm_id: null,
+        location_osm_type: null,
+        date: utils.currentDate(),
+        currency: null,
+        receipt_price_count: null,
+        receipt_price_total: null,
+      })
     },
     hideRecentProofChoice: {
       type: Boolean,
@@ -113,6 +122,7 @@ export default {
   },
   methods: {
     handleProofSelected(proofSelected) {
+      console.log('handleProofSelected', proofSelected)
       // can be an existing proof, or a file
       // existing proof: update proofForm
       if (proofSelected.id) {
@@ -147,6 +157,7 @@ export default {
           }
         })
       }
+      console.log(this.proofForm)
     },
     uploadProof() {
       this.loading = true
@@ -157,8 +168,9 @@ export default {
         })
       })
       .then((proofImageCompressed) => {
+        console.log(this.proofForm)
         api
-          .createProof(proofImageCompressed, this.proofForm.type, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency)
+          .createProof(proofImageCompressed, this.proofForm.type, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency, this.proofForm.receipt_price_count, this.proofForm.receipt_price_total)
           .then((data) => {
             this.loading = false
             if (data.id) {

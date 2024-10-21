@@ -76,7 +76,10 @@ export default {
   props: {
     proofImageForm: {
       type: Object,
-      default: () => ({ type: null, proof_id: null })
+      default: () => ({
+        type: null,
+        proof_id: null
+      })
     },
     hideRecentProofChoice: {
       type: Boolean,

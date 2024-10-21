@@ -45,7 +45,10 @@ export default {
   props: {
     locationForm: {
       type: Object,
-      default: () => ({ location_osm_id: null, location_osm_type: null })
+      default: () => ({
+        location_osm_id: null,
+        location_osm_type: null
+      })
     },
     maxRecentLocations: {
       type: Number,

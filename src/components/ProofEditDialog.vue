@@ -15,7 +15,7 @@
 
       <v-card-text>
         <ProofTypeInputRow :proofTypeForm="updateProofForm" />
-        <ProofMetadataInputRow :proofMetadataForm="updateProofForm" />
+        <ProofMetadataInputRow :proofType="updateProofForm.type" :proofMetadataForm="updateProofForm" />
       </v-card-text>
 
       <v-divider />
@@ -58,13 +58,16 @@ export default {
         type: null,
         date: null,
         currency: null,
+        receipt_price_count: null,
+        receipt_price_total: null,
       },
       loading: false
     }
   },
   computed: {
     formFilled() {
-      return Object.values(this.updateProofForm).every(x => !!x)
+      let keys = ['type', 'date', 'currency']
+      return Object.values(this.updateProofForm).filter(k => keys.includes(k)).every(k => !!this.updateProofForm[k])
     },
   },
   mounted() {
@@ -77,6 +80,7 @@ export default {
       })
     },
     updateProof() {
+      console.log(this.updateProofForm)
       api
         .updateProof(this.proof.id, this.updateProofForm)
         .then((response) => {
