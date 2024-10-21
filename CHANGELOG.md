@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.89.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.3...v1.89.0) (2024-10-21)
+
+
+### Features
+
+* **Proof add:** add new consumption-related fields to the form ([#976](https://github.com/openfoodfacts/open-prices-frontend/issues/976)) ([c50b188](https://github.com/openfoodfacts/open-prices-frontend/commit/c50b1889a20cec23f65dc33d6be2e146800e0206))
+
+
+### Technical
+
+* **Locations:** use constants instead of hard-coded OSM/ONLINE variables. ref [#965](https://github.com/openfoodfacts/open-prices-frontend/issues/965) ([72114ca](https://github.com/openfoodfacts/open-prices-frontend/commit/72114ca604107e4c77d694314e9c8baec235be42))
+* **Proof add:** rename ProofDateCurrencyInputRow to ProofMetadataInputRow ([#973](https://github.com/openfoodfacts/open-prices-frontend/issues/973)) ([8085baf](https://github.com/openfoodfacts/open-prices-frontend/commit/8085baf69b1ea64d6c2c5ff7f10fd8d77fcb4f79))
+* **Proofs:** use type constants instead of hard-coded PRICE_TAG/RECEIPT ([24461af](https://github.com/openfoodfacts/open-prices-frontend/commit/24461af12de2de9d62648f1b06f535ccb0c44f56))
+
 ## [1.88.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.2...v1.88.3) (2024-10-20)
 
 
