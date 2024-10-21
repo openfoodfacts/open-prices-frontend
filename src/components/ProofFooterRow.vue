@@ -2,10 +2,10 @@
   <v-row>
     <v-col :cols="userIsProofOwner ? '11' : '12'">
       <ProofTypeChip class="mr-1" :proof="proof" />
-      <v-chip v-if="showReceiptPriceCount" class="mr-1" label size="small" variant="flat" density="comfortable">
+      <v-chip v-if="showReceiptPriceCount" class="mr-1" label size="small" variant="flat" density="comfortable" :title="$t('Common.ReceiptPriceCount')">
         {{ $t('Common.PriceCount', { count: proof.receipt_price_count }) }}
       </v-chip>
-      <v-chip v-if="showReceiptPriceTotal" class="mr-1" label size="small" variant="flat" density="comfortable">
+      <v-chip v-if="showReceiptPriceTotal" class="mr-1" label size="small" variant="flat" density="comfortable" :title="$t('Common.ReceiptPriceTotal')">
         {{ getPriceValueDisplay(proof.receipt_price_total) }}
       </v-chip>
       <PriceCountChip :count="proof.price_count" :withLabel="true" @click="goToProof()" />
