@@ -19,6 +19,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 
 export default {
   components: {
@@ -37,10 +38,10 @@ export default {
   },
   computed: {
     isTypeOSM() {
-      return this.location.type === 'OSM'
+      return this.location.type === constants.LOCATION_TYPE_OSM
     },
     isTypeONLINE() {
-      return this.location.type === 'ONLINE'
+      return this.location.type === constants.LOCATION_TYPE_ONLINE
     },
     getShareLinkUrl() {
       return `/locations/${this.location.id}`

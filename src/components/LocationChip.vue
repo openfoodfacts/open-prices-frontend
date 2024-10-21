@@ -13,6 +13,7 @@
 
 <script>
 import utils from '../utils.js'
+import constants from '../constants'
 
 export default {
   props: {
@@ -36,9 +37,9 @@ export default {
   computed: {
     getLocationTitle() {
       if (this.location) {
-        if (this.location.type === 'OSM') {
+        if (this.location.type === constants.LOCATION_TYPE_OSM) {
           return utils.getLocationOSMTitle(this.location)
-        } else if (this.location.type === 'ONLINE') {
+        } else if (this.location.type === constants.LOCATION_TYPE_ONLINE) {
           return utils.getLocationONLINETitle(this.location)
         }
       }
@@ -49,7 +50,7 @@ export default {
     },
     getLocationEmoji() {
       if (this.location) {
-        if (this.location.type === 'OSM') {
+        if (this.location.type === constants.LOCATION_TYPE_OSM) {
           return utils.getCountryEmojiFromCode(this.location.osm_address_country_code)
         }
       }

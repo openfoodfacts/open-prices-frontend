@@ -46,6 +46,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import utils from '../utils.js'
+import constants from '../constants'
 
 export default {
   components: {
@@ -75,13 +76,13 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     isTypeOSM() {
-      return this.location && this.location.type === 'OSM'
+      return this.location && this.location.type === constants.LOCATION_TYPE_OSM
     },
     getLocationTitle() {
       if (this.location) {
-        if (this.location.type === 'OSM') {
+        if (this.location.type === constants.LOCATION_TYPE_OSM) {
           return utils.getLocationOSMTitle(this.location, true, false, true, true)
-        } else if (this.location.type === 'ONLINE') {
+        } else if (this.location.type === constants.LOCATION_TYPE_ONLINE) {
           return utils.getLocationONLINETitle(this.location)
         }
       }

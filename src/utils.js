@@ -371,9 +371,9 @@ function getLocationONLINETitle(locationObject) {
 // OP location
 function getLocationIcon(locationObject) {
   if (locationObject) {
-    if (locationObject.type === 'OSM') {
+    if (locationObject.type === constants.LOCATION_TYPE_OSM) {
       return constants.LOCATION_TYPE_OSM_ICON
-    } else if (locationObject.type === 'ONLINE') {
+    } else if (locationObject.type === constants.LOCATION_TYPE_ONLINE) {
       return constants.LOCATION_TYPE_ONLINE_ICON
     }
   }
