@@ -40,7 +40,7 @@
   <v-row v-if="isTypeReceipt" class="mt-0">
     <v-col cols="6">
       <v-text-field
-        :model-value="proofMetadataForm.receipt_price_count"
+        v-model="proofMetadataForm.receipt_price_count"
         :label="$t('Common.ReceiptPriceCount')"
         type="text"
         inputmode="numeric"
@@ -48,7 +48,7 @@
     </v-col>
     <v-col cols="6">
       <v-text-field
-        :model-value="proofMetadataForm.receipt_price_total"
+        v-model="proofMetadataForm.receipt_price_total"
         :label="$t('Common.ReceiptPriceTotal')"
         type="text"
         inputmode="decimal"

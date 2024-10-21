@@ -48,6 +48,7 @@ import Compressor from 'compressorjs'
 import ExifReader from 'exifreader'
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 Compressor.setDefaults({
@@ -122,7 +123,6 @@ export default {
   },
   methods: {
     handleProofSelected(proofSelected) {
-      console.log('handleProofSelected', proofSelected)
       // can be an existing proof, or a file
       // existing proof: update proofForm
       if (proofSelected.id) {
@@ -131,8 +131,8 @@ export default {
         this.proofForm.proof_id = proofSelected.id
         if (proofSelected.location) {
           this.proofForm.location_id = proofSelected.location.id
-          this.proofForm.location_osm_id = (proofSelected.location.type === 'OSM') ? proofSelected.location_osm_id : null
-          this.proofForm.location_osm_type = (proofSelected.location.type === 'OSM') ? proofSelected.location_osm_type : ''
+          this.proofForm.location_osm_id = (proofSelected.location.type === constants.LOCATION_TYPE_OSM) ? proofSelected.location_osm_id : null
+          this.proofForm.location_osm_type = (proofSelected.location.type === constants.LOCATION_TYPE_OSM) ? proofSelected.location_osm_type : ''
         }
         if (proofSelected.date) {
           this.proofForm.date = proofSelected.date
@@ -157,7 +157,6 @@ export default {
           }
         })
       }
-      console.log(this.proofForm)
     },
     uploadProof() {
       this.loading = true
@@ -168,7 +167,6 @@ export default {
         })
       })
       .then((proofImageCompressed) => {
-        console.log(this.proofForm)
         api
           .createProof(proofImageCompressed, this.proofForm.type, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency, this.proofForm.receipt_price_count, this.proofForm.receipt_price_total)
           .then((data) => {

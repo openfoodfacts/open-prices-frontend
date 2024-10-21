@@ -80,7 +80,6 @@ export default {
       })
     },
     updateProof() {
-      console.log(this.updateProofForm)
       api
         .updateProof(this.proof.id, this.updateProofForm)
         .then((response) => {
