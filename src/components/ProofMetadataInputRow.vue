@@ -5,7 +5,7 @@
         {{ $t('Common.Date') }}
       </h3>
       <v-text-field
-        v-model="proofDateCurrencyForm.date"
+        v-model="proofMetadataForm.date"
         :label="$t('Common.Date')"
         type="date"
         :max="currentDate"
@@ -23,7 +23,7 @@
         </span>
       </h3>
       <v-select
-        v-model="proofDateCurrencyForm.currency"
+        v-model="proofMetadataForm.currency"
         :label="$t('Common.Currency')"
         :items="userFavoriteCurrencies"
         hide-details="auto"
@@ -39,7 +39,7 @@ import utils from '../utils.js'
 
 export default {
   props: {
-    proofDateCurrencyForm: {
+    proofMetadataForm: {
       type: Object,
       default: () => ({ date: this.currentDate, currency: null })
     },
@@ -51,9 +51,9 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    proofDateCurrencyFormFilled() {
+    proofMetadataFormFilled() {
       let keys = ['date', 'currency']
-      return Object.keys(this.proofDateCurrencyForm).filter(k => keys.includes(k)).every(k => !!this.proofDateCurrencyForm[k])
+      return Object.keys(this.proofMetadataForm).filter(k => keys.includes(k)).every(k => !!this.proofMetadataForm[k])
     },
     userFavoriteCurrencies() {
       return this.appStore.getUserFavoriteCurrencies
