@@ -18,6 +18,12 @@
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_type_category_tag_count" :subtitle="$t('Stats.WithCategory')" />
     </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <br><!-- TODO: center vertically instead of br -->
+      <v-btn to="/prices" append-icon="mdi-arrow-right">
+        {{ $t('Common.LatestPrices') }}
+      </v-btn>
+    </v-col>
   </v-row>
 
   <br>
@@ -33,6 +39,12 @@
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <br><!-- TODO: center vertically instead of br -->
+      <v-btn to="/products" append-icon="mdi-arrow-right">
+        {{ $t('Common.TopProducts') }}
+      </v-btn>
     </v-col>
   </v-row>
 
@@ -52,6 +64,12 @@
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.location_type_online_count" :subtitle="$t('LocationCard.ONLINE')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <br><!-- TODO: center vertically instead of br -->
+      <v-btn to="/locations" append-icon="mdi-arrow-right">
+        {{ $t('Common.TopLocations') }}
+      </v-btn>
     </v-col>
   </v-row>
 
@@ -84,12 +102,18 @@
 
   <h2 class="text-h6 mb-1">
     <v-icon size="x-small" icon="mdi-account-outline" />
-    {{ $t('Common.Users') }}
+    {{ $t('Common.Contributors') }}
   </h2>
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.user_with_price_count" :subtitle="$t('Stats.Total')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <br><!-- TODO: center vertically instead of br -->
+      <v-btn to="/users" append-icon="mdi-arrow-right">
+        {{ $t('Common.TopContributors') }}
+      </v-btn>
     </v-col>
   </v-row>
 

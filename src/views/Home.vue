@@ -24,7 +24,7 @@
       <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
       <br v-if="$vuetify.display.smAndUp">
       <v-btn to="/prices" prepend-icon="mdi-tag-multiple-outline" append-icon="mdi-arrow-right">
-        {{ $t('Home.LatestPrices') }}
+        {{ $t('Common.LatestPrices') }}
       </v-btn>
     </v-col>
   </v-row>
