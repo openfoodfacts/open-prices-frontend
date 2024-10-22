@@ -5,6 +5,7 @@
       <span style="cursor:pointer" @click="$router.push('/')">
         <img src="/favicon.svg" height="28" width="28" style="vertical-align:bottom">
         {{ APP_NAME }}
+        <span v-if="ENV !== 'prod'" class="text-caption">{{ ENV }}</span>
       </span>
     </v-app-bar-title>
     <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')" />
@@ -62,6 +63,7 @@ export default {
   data() {
     return {
       APP_NAME: constants.APP_NAME,
+      ENV: import.meta.env.VITE_OPEN_PRICES_ENV,
       showDrawerMenu: false,
       showProfileMenu: false,
     }
