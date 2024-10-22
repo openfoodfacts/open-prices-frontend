@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.89.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.3...v1.89.0) (2024-10-22)
+
+
+### Features
+
+* **Header:** show local or staging suffix if not in prod. ref [#876](https://github.com/openfoodfacts/open-prices-frontend/issues/876) ([bc02bb0](https://github.com/openfoodfacts/open-prices-frontend/commit/bc02bb031d3ba695f717204924bae13d2611da93))
+* **Proof add:** add new consumption-related fields to the form ([#976](https://github.com/openfoodfacts/open-prices-frontend/issues/976)) ([c50b188](https://github.com/openfoodfacts/open-prices-frontend/commit/c50b1889a20cec23f65dc33d6be2e146800e0206))
+* **Proof card:** show new consumption-related fields in the footer ([#977](https://github.com/openfoodfacts/open-prices-frontend/issues/977)) ([e0ee131](https://github.com/openfoodfacts/open-prices-frontend/commit/e0ee1312e65226a4b7eb0be624c4f37c79115786))
+
+
+### Bug Fixes
+
+* fix barcode scanner dialog width ([7ec6a3e](https://github.com/openfoodfacts/open-prices-frontend/commit/7ec6a3e5cfb71a204309d4567e52bbb232ba3a53))
+* **Price add:** send price location_id to fix server error. ref [#965](https://github.com/openfoodfacts/open-prices-frontend/issues/965) ([d9850b7](https://github.com/openfoodfacts/open-prices-frontend/commit/d9850b7bf97bb525ad0dae8f8419b1c7444f1d33))
+* **Stats:** fix accidently removed proof receipt count. ref [#967](https://github.com/openfoodfacts/open-prices-frontend/issues/967) ([499130e](https://github.com/openfoodfacts/open-prices-frontend/commit/499130eeb7dda0e615deed8e3f10a502978d9b01))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#972](https://github.com/openfoodfacts/open-prices-frontend/issues/972)) ([c09e053](https://github.com/openfoodfacts/open-prices-frontend/commit/c09e0539540860090e75da0fe8d4133285cb3a16))
+* **Locations:** use constants instead of hard-coded OSM/ONLINE variables. ref [#965](https://github.com/openfoodfacts/open-prices-frontend/issues/965) ([72114ca](https://github.com/openfoodfacts/open-prices-frontend/commit/72114ca604107e4c77d694314e9c8baec235be42))
+* **Price add:** show red asterisk next to required field labels ([#978](https://github.com/openfoodfacts/open-prices-frontend/issues/978)) ([83c6cf5](https://github.com/openfoodfacts/open-prices-frontend/commit/83c6cf5a7e25e4c06ab0d131644dd4da4dd49319))
+* **Proof add:** rename ProofDateCurrencyInputRow to ProofMetadataInputRow ([#973](https://github.com/openfoodfacts/open-prices-frontend/issues/973)) ([8085baf](https://github.com/openfoodfacts/open-prices-frontend/commit/8085baf69b1ea64d6c2c5ff7f10fd8d77fcb4f79))
+* **Proofs:** use type constants instead of hard-coded PRICE_TAG/RECEIPT ([24461af](https://github.com/openfoodfacts/open-prices-frontend/commit/24461af12de2de9d62648f1b06f535ccb0c44f56))
+* **Stats:** add links to latest prices. and top products, locations & contributors. ref [#50](https://github.com/openfoodfacts/open-prices-frontend/issues/50) ([07fa5d8](https://github.com/openfoodfacts/open-prices-frontend/commit/07fa5d847df5f3a9b9700a598ec390dc729bcdf9))
+
 ## [1.88.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.2...v1.88.3) (2024-10-20)
 
 
