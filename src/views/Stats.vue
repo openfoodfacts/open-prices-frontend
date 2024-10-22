@@ -70,6 +70,9 @@
       <StatCard :value="stats.proof_type_price_tag_count" :subtitle="$t('ProofCard.PRICE_TAG')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_type_receipt_count" :subtitle="$t('ProofCard.RECEIPT')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.proof_type_gdpr_request_count" :subtitle="$t('ProofCard.GDPR_REQUEST')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
