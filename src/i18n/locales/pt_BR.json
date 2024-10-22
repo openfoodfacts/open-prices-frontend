@@ -146,6 +146,7 @@
 		"About": "Sobre",
 		"AddPrice": "Adicionar um preço",
 		"AddToOFF": "Adicionar a {name}",
+		"AdditionalInfo": "Informação adicional",
 		"Brand": "Marca",
 		"Price": "Preço",
 		"Prices": "Preços",
@@ -156,6 +157,7 @@
 		"Category": "Categoria",
 		"Categories": "Categorias",
 		"Chart": "Gráfico",
+		"Contributors": "Colaboradores",
 		"Country": "País",
 		"Currency": "Moeda",
 		"CurrencyMissing": "Moeda faltando",
@@ -200,6 +202,7 @@
 		"History": "Histórico",
 		"Image": "Imagem",
 		"ImageFull": "Imagem em tamanho real",
+		"Latest": "Mais recentes",
 		"LinkCopySuccess": "Link copiado",
 		"LocationCount": "{count} localizações",
 		"Map": "Mapa",
@@ -216,11 +219,16 @@
 		"OrderProofCreatedDESC": "Data de adição",
 		"OrderProofDateDESC": "Data da prova",
 		"OrderUserCountDESC": "Contagem de usuários",
+		"PersonalInfo": "Informações pessoais",
 		"PriceCount": "{count} valores",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
 		"ProductCount": "{count} produtos",
 		"ProofCount": "{count} demonstrações",
+		"Receipt": "Recibo",
+		"Receipts": "Recibos",
+		"ReceiptPriceCount": "Número de preços",
+		"ReceiptPriceTotal": "Valor total",
 		"Search": "Procurar",
 		"Settings": "Definições",
 		"SignInOFFAccount": "Entrar com sua {url} conta",
@@ -239,6 +247,7 @@
 		"TopLocations": "Principais locais",
 		"TopProducts": "Principais produtos",
 		"Today": "Hoje",
+		"Top": "Melhor",
 		"Total": "Total",
 		"Type": "Tipo",
 		"Upload": "Atualizar",
@@ -292,8 +301,8 @@
 		}
 	},
 	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
+		"OSM": "AbrirMapaDeRua",
+		"ONLINE": "‘Online’"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Preços mais recentes",
@@ -406,7 +415,7 @@
 		"PRICE_TAG": "Etiqueta de preço",
 		"RECEIPT": "Recibo",
 		"GDPR_REQUEST": "Solicitação do GDPR",
-		"SHOP_IMPORT": "Shop import"
+		"SHOP_IMPORT": "Importação de loja"
 	},
 	"ProofCreate": {
 		"SelectProof": "Selecionar um comprovativo",

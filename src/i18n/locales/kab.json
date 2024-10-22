@@ -115,7 +115,7 @@
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "Af-d",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -146,6 +146,7 @@
 		"About": "Ɣef",
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
+		"AdditionalInfo": "Additional information",
 		"Brand": "Tacreḍt",
 		"Price": "Price",
 		"Prices": "Prices",
@@ -156,7 +157,8 @@
 		"Category": "Taggayt",
 		"Categories": "Taggayin",
 		"Chart": "Chart",
-		"Country": "Country",
+		"Contributors": "Contributors",
+		"Country": "Tamurt",
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
 		"Dashboard": "Dashboard",
@@ -200,6 +202,7 @@
 		"History": "Amazray",
 		"Image": "Image",
 		"ImageFull": "Full-size image",
+		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations",
 		"Map": "Takarḍa",
@@ -216,11 +219,16 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
+		"PersonalInfo": "Personal information",
 		"PriceCount": "{count} prices",
 		"PriceCreated": "Price created!",
 		"PricesMore": "More prices",
 		"ProductCount": "{count} products",
 		"ProofCount": "{count} proofs",
+		"Receipt": "Receipt",
+		"Receipts": "Receipts",
+		"ReceiptPriceCount": "Number of prices",
+		"ReceiptPriceTotal": "Total amount",
 		"Search": "Nadi",
 		"Settings": "Iɣewwaren",
 		"SignInOFFAccount": "Sign in with your {url} account",
@@ -239,6 +247,7 @@
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
 		"Today": "Today",
+		"Top": "Top",
 		"Total": "Total",
 		"Type": "Type",
 		"Upload": "Upload",
@@ -440,7 +449,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Tazwara"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -537,8 +546,8 @@
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
-		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"ChangeLanguage": "Beddel tutlayt",
+		"CountryLabel": "Tamurt",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
