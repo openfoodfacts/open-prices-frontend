@@ -115,7 +115,7 @@
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Find",
+			"Find": "Af-d",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -158,7 +158,7 @@
 		"Categories": "Taggayin",
 		"Chart": "Chart",
 		"Contributors": "Contributors",
-		"Country": "Country",
+		"Country": "Tamurt",
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
 		"Dashboard": "Dashboard",
@@ -449,7 +449,7 @@
 			"Title": "Add a price"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Tazwara"
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -546,8 +546,8 @@
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
-		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"ChangeLanguage": "Beddel tutlayt",
+		"CountryLabel": "Tamurt",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"FavoriteCurrencies": "Favorite currencies",
