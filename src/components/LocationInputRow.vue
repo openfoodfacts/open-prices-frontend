@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <h3 class="mb-1">
+      <h3 class="required mb-1">
         {{ $t('AddPriceSingle.WhereWhen.Location') }}
       </h3>
       <v-chip
