@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="6">
-      <h3 class="mb-1">
+      <h3 class="required mb-1">
         {{ $t('Common.Date') }}
       </h3>
       <v-text-field
@@ -13,7 +13,7 @@
       />
     </v-col>
     <v-col cols="6">
-      <h3 class="mb-1">
+      <h3 class="required mb-1">
         {{ $t('Common.Currency') }}
         <span class="text-caption font-weight-regular">
           <a href="#">{{ $t('Common.Help') }}</a>

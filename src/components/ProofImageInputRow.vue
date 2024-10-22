@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="8">
-      <h3 class="mb-1">
+      <h3 class="required mb-1">
         {{ $t('Common.Image') }}
       </h3>
       <v-btn

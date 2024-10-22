@@ -1,6 +1,9 @@
 <template>
   <v-row>
     <v-col>
+      <h3 class="required mb-1">
+        {{ $t('Common.Product') }}
+      </h3>
       <h3 class="mb-2">
         <v-item-group v-model="productForm.mode" class="d-inline" mandatory @update:modelValue="setMode($event)">
           <v-item v-for="pm in productModeList" :key="pm.key" v-slot="{ isSelected, toggle }" :value="pm.key">
@@ -57,9 +60,6 @@
           />
         </div>
       </v-sheet>
-      <p v-if="!productFormFilled" class="text-red mt-2 mb-2">
-        <i>{{ $t('AddPriceSingle.ProductInfo.SetProduct') }}</i>
-      </p>
     </v-col>
   </v-row>
 
