@@ -4,7 +4,7 @@
     <v-col v-if="!proofObject" cols="12">
       <ProofTypeInputRow :proofTypeForm="proofForm" />
       <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" @proof="proofImage = $event" />
-      <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
+      <LocationInputRow :locationForm="proofForm" />
       <ProofMetadataInputRow :proofType="proofForm.type" :proofMetadataForm="proofForm" />
       <v-row>
         <v-col>
@@ -93,7 +93,6 @@ export default {
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
       proofImage: null,
-      locationObject: null,
       proofObject: null,
       loading: false,
     }
@@ -173,7 +172,8 @@ export default {
             this.loading = false
             if (data.id) {
               this.proofForm.proof_id = data.id
-              this.proofObject = {...data, ...{location: this.locationObject}}
+              this.proofForm.location_id = data.location_id
+              this.proofObject = data
               this.proofSuccessMessage = true
             } else {
               alert('Error: server error when creating proof')

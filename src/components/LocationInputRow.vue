@@ -55,11 +55,9 @@ export default {
       default: 3
     }
   },
-  emits: ['location'],
   data() {
     return {
       locationSelectorDialog: false,
-      locationObject: null,
       loading: false,
     }
   },
@@ -72,11 +70,6 @@ export default {
       let keys = ['location_osm_id', 'location_osm_type']
       return Object.keys(this.locationForm).filter(k => keys.includes(k)).every(k => !!this.locationForm[k])
     },
-  },
-  watch: {
-    locationObject(newLocationObject, oldLocationObject) {  // eslint-disable-line no-unused-vars
-      this.$emit('location', newLocationObject)
-    }
   },
   mounted() {
     this.initLocationForm()
@@ -101,8 +94,6 @@ export default {
       // update locationForm
       this.locationForm.location_osm_id = utils.getLocationID(location)
       this.locationForm.location_osm_type = utils.getLocationType(location)
-      // set locationObject
-      this.locationObject = location
     },
     isSelectedLocation(location) {
       return utils.buildLocationUniqueId(this.locationForm.location_osm_id, this.locationForm.location_osm_type) === utils.getLocationUniqueID(location)
