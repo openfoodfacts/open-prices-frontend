@@ -17,12 +17,12 @@ const LOCATION_TYPE_ONLINE_ICON = 'mdi-web'
 
 export default {
   APP_NAME: 'Open Prices',
-  APP_URL: 'https://prices.openfoodfacts.org',
-  APP_API_URL: 'https://prices.openfoodfacts.org/api/docs',
+  APP_URL: import.meta.env.VITE_OPEN_PRICES_APP_URL,
+  APP_API_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/api/docs`,
   APP_USER_AGENT: 'Open Prices Web App',
-  APP_DUMP_PRICES_URL: 'https://prices.openfoodfacts.org/data/prices.jsonl.gz',
-  APP_DUMP_PROOFS_URL: 'https://prices.openfoodfacts.org/data/proofs.jsonl.gz',
-  APP_DUMP_LOCATIONS_URL: 'https://prices.openfoodfacts.org/data/locations.jsonl.gz',
+  APP_DUMP_PRICES_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/prices.jsonl.gz`,
+  APP_DUMP_PROOFS_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/proofs.jsonl.gz`,
+  APP_DUMP_LOCATIONS_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/locations.jsonl.gz`,
   APP_GITHUB_FRONTEND_URL: 'https://github.com/openfoodfacts/open-prices-frontend',
   OFF_NAME: OFF_NAME,
   OFF_URL: 'https://world.openfoodfacts.org',

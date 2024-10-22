@@ -1,6 +1,6 @@
 {
-    "name": "Open Prices (Preprod)",
-    "short_name": "OpenPrices (Preprod)",
+    "name": "Open Prices (Staging)",
+    "short_name": "OpenPrices (Staging)",
     "description": "An open crowdsourced database of prices",
     "icons": [
         {
