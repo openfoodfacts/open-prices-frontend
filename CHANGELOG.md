@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.89.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.89.0...v1.89.1) (2024-10-24)
+
+
+### Bug Fixes
+
+* **Chart:** display price chart in full width. ref [#302](https://github.com/openfoodfacts/open-prices-frontend/issues/302) ([b0ae8c2](https://github.com/openfoodfacts/open-prices-frontend/commit/b0ae8c230f63e6bf8a448c433216f3d9976d36d3))
+* fix price filter by last 30 days. ref [#358](https://github.com/openfoodfacts/open-prices-frontend/issues/358). closes [#981](https://github.com/openfoodfacts/open-prices-frontend/issues/981) ([f627c17](https://github.com/openfoodfacts/open-prices-frontend/commit/f627c1771105f930bb178cfdbde6c01d4818b214))
+
 ## [1.89.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.88.3...v1.89.0) (2024-10-22)
 
 
