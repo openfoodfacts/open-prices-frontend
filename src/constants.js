@@ -77,7 +77,7 @@ export default {
     { key: 'price_count_0', value: 'FilterProductWithoutPriceCount' },
   ],
   PRICE_FILTER_LIST: [
-    { key: 'only_last_30d', value: 'FilterPriceMoreThan30DaysHide' },
+    { key: 'show_last_month', value: 'FilterPriceMoreThan30DaysHide' },
   ],
   PROOF_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterProofWithPriceCountHide' },
