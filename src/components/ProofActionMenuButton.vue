@@ -99,12 +99,12 @@ export default {
       return this.proof && constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
     },
     userCanEditProof() {
-      // user must be proof owner
-      // and proof must not have any prices
-      return this.proof.price_count === 0
+      // user must be proof owner (already checked in parent component)
+      // only allow edition of certain proof types
+      return constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
     },
     userCanDeleteProof() {
-      // user must be proof owner
+      // user must be proof owner (already checked in parent component)
       // and proof must not have any prices
       return this.proof.price_count === 0
     },
