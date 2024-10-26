@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.90.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.89.1...v1.90.0) (2024-10-26)
+
+
+### Features
+
+* **Proofs:** allow editing proofs with existing prices. ref [#689](https://github.com/openfoodfacts/open-prices-frontend/issues/689) ([1dafd62](https://github.com/openfoodfacts/open-prices-frontend/commit/1dafd62f9eb4a6796ab31883837ee24be4a1060a))
+
+
+### Technical
+
+* **Dialogs:** change dialog action button style (fill instead of outline) ([ee37c37](https://github.com/openfoodfacts/open-prices-frontend/commit/ee37c37f3971410c2b9ceafdfa110876ba5c6ad0))
+* **User card:** remove settings from action menu. closes [#986](https://github.com/openfoodfacts/open-prices-frontend/issues/986) ([d1470e3](https://github.com/openfoodfacts/open-prices-frontend/commit/d1470e3c030120255fe7d2d18cbe656d47515dd5))
+
 ## [1.89.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.89.0...v1.89.1) (2024-10-24)
 
 
