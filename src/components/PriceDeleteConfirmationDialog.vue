@@ -23,6 +23,7 @@
       <v-card-actions>
         <v-btn
           color="error"
+          variant="flat"
           elevation="1"
           prepend-icon="mdi-delete"
           :loading="loading"

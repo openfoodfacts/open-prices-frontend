@@ -23,6 +23,7 @@
       <v-card-actions>
         <v-btn
           color="success"
+          variant="flat"
           elevation="1"
           :disabled="!formFilled"
           :loading="loading"
