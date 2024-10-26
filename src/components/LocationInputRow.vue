@@ -4,8 +4,21 @@
       <h3 class="required mb-1">
         {{ $t('AddPriceSingle.WhereWhen.Location') }}
       </h3>
+
+      <!-- current/recent locations -->
+      <v-chip
+        v-if="currentLocation"
+        class="mb-2"
+        :style="isSelectedLocation(currentLocation) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+        @click="setLocationData(currentLocation)"
+      >
+        <v-icon start :icon="isSelectedLocation(currentLocation) ? 'mdi-check-circle-outline' : 'mdi-history'" :color="isSelectedLocation(currentLocation) ? 'green' : ''" />
+        {{ getLocationTitle(currentLocation, true, true, true) }}
+      </v-chip>
       <LocationRecentChip v-for="(location, index) in recentLocations" :key="index" :location="location" :currentLocation="locationForm" @click="setLocationData(location)" />
-      <br v-if="recentLocations.length">
+
+      <!-- CTA -->
+      <br v-if="currentLocation || recentLocations.length">
       <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="locationSelectorDialog = true">
         {{ $t('AddPriceSingle.WhereWhen.Find') }}
       </v-btn>
@@ -42,6 +55,10 @@ export default {
         location_osm_id: null,
         location_osm_type: null
       })
+    },
+    currentLocation: {
+      type: Object,
+      default: null
     },
     maxRecentLocations: {
       type: Number,
