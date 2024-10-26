@@ -7,9 +7,6 @@
           {{ $t('Common.User') }}
         </v-list-subheader>
         <v-divider />
-        <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/settings">
-          {{ $t('UserDashboard.Settings') }}
-        </v-list-item>
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
         <OpenFoodFactsLink facet="editor" :value="user.user_id" display="list-item" />
       </v-list>
@@ -42,7 +39,7 @@ export default {
     username() {
       return this.appStore.user.username
     },
-    userIsPriceOwner() {
+    userIsOwner() {
       return this.username && (this.user.user_id === this.username)
     },
     getShareLinkUrl() {
