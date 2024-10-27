@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Etikett",
 		"Labels": "Labels",
-		"Language": "Languages",
+		"Language": "Language",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Beispill:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Beispiller:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Änneren",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Search"
+		},
+		"Settings": {
+			"Title": "Astellungen"
 		},
 		"SignIn": {
 			"Title": "Sign in"
