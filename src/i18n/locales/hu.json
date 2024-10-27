@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Címke",
 		"Labels": "Címkék",
-		"Language": "Nyelvek",
+		"Language": "Nyelv",
 		"Languages": "Nyelvek",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Például:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Például:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Szerkesztés",
 		"Filter": "Szűrés",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Keresés"
+		},
+		"Settings": {
+			"Title": "Beállítások"
 		},
 		"SignIn": {
 			"Title": "Bejelentkezés"
