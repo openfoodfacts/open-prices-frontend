@@ -70,6 +70,28 @@
         </v-card-text>
       </v-card>
     </v-col>
+
+    <!-- Prices -->
+    <v-col cols="12" sm="6">
+      <v-card :title="$t('Common.Prices')" prepend-icon="mdi-tag-multiple-outline">
+        <v-divider />
+        <v-card-text>
+          <h3 class="mb-1">
+            {{ $t('UserSettings.FavoriteCurrencies') }}
+          </h3>
+          <v-autocomplete
+            v-model="appStore.user.favorite_currencies"
+            :label="$t('UserSettings.CurrencyLabel')"
+            :items="currencyList"
+            :rules="[v => !!(v && v.length) || $t('UserSettings.CurrencyRequired')]"
+            chips
+            closable-chips
+            multiple
+            hide-details="auto"
+          />
+        </v-card-text>
+      </v-card>
+    </v-col>
   </v-row>
 </template>
 
@@ -87,6 +109,7 @@ export default {
       theme: useTheme(),
       countryList,
       languageList,
+      // currencyList,
     }
   },
   computed: {
@@ -102,15 +125,18 @@ export default {
         icon: 'mdi-moon-waning-crescent',
         label: 'Theme.DarkMode' 
       }
-    }
+    },
+    currencyList() {
+      return [...new Set(this.countryList
+        .map(country => country.currency)
+        .flat()
+        .filter(currency => currency !== null && currency.length !== 0))]
+      }
   },
   watch: {
     'appStore.user.language': function (newLanguage, oldLanguage) {  // eslint-disable-line no-unused-vars
       localeManager.changeLanguage(newLanguage)
     }
-  },
-  mounted() {
-    console.log(this.appStore.user)
   },
   methods: {
     swapTheme() {
