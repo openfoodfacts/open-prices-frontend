@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Tablo",
 		"Label": "Etikèt",
 		"Labels": "Etikèt",
-		"Language": "Lang",
+		"Language": "Language",
 		"Languages": "Lang",
 		"LatestPrices": "Dènye pri",
 		"LatestProofs": "Dènye prèv",
@@ -186,7 +186,9 @@
 		"Example": "Egzanp",
 		"Examples": "Egzanp yo",
 		"ExampleWithColon": "Example:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Examples:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modifye",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "Ak yon pri",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Rechèch"
+		},
+		"Settings": {
+			"Title": "Paramèt"
 		},
 		"SignIn": {
 			"Title": "Sign in"
