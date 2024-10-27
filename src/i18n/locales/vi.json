@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Thí dụ:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Ví dụ:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Chỉnh sửa",
 		"Filter": "Bộ lọc",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Tìm kiếm"
+		},
+		"Settings": {
+			"Title": "Cài đặt"
 		},
 		"SignIn": {
 			"Title": "Đăng nhập"
