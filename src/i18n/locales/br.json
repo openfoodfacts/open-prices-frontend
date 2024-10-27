@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Skritellig",
 		"Labels": "Skritellouigoù",
-		"Language": "Yezhoù",
+		"Language": "Yezh",
 		"Languages": "Yezhoù",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Skouer:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Skouerioù:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Aozañ",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Klask"
+		},
+		"Settings": {
+			"Title": "Arventennoù"
 		},
 		"SignIn": {
 			"Title": "Kevreañ"
