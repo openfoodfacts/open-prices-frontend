@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.91.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.90.0...v1.91.0) (2024-10-27)
+
+
+### Features
+
+* **Header:** hide old User settings, move Sign Out to drawer ([#989](https://github.com/openfoodfacts/open-prices-frontend/issues/989)) ([4e56086](https://github.com/openfoodfacts/open-prices-frontend/commit/4e56086266cff59a35045c77d30e2c2bd8f2011d))
+* **Settings page:** new Settings page easily accessible ([#950](https://github.com/openfoodfacts/open-prices-frontend/issues/950)) ([0a8c24e](https://github.com/openfoodfacts/open-prices-frontend/commit/0a8c24ee5863fc3630dd3f5908097e3874363592))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#980](https://github.com/openfoodfacts/open-prices-frontend/issues/980)) ([4706f54](https://github.com/openfoodfacts/open-prices-frontend/commit/4706f5451158a08e4a3d13fa78f0b24d1c7b0c59))
+
 ## [1.90.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.89.1...v1.90.0) (2024-10-26)
 
 
