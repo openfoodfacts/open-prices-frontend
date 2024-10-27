@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Etiketa",
 		"Labels": "Etiketak",
-		"Language": "Hizkuntzak",
+		"Language": "Hizkuntza",
 		"Languages": "Hizkuntzak",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Adibidea:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Adibideak:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Editatu",
 		"Filter": "Iragazi",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Bilatu"
+		},
+		"Settings": {
+			"Title": "Ezarpenak"
 		},
 		"SignIn": {
 			"Title": "Hasi saioa"
