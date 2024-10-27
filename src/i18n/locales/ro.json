@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Eticheta",
 		"Labels": "Etichete",
-		"Language": "Limbi",
+		"Language": "Limbă",
 		"Languages": "Limbi",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Exemplu:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Exemple:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modificare",
 		"Filter": "Filtrare",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Caută"
+		},
+		"Settings": {
+			"Title": "Configurări"
 		},
 		"SignIn": {
 			"Title": "Conectare"
