@@ -13,11 +13,13 @@
             ref="locationInput"
             v-model="locationSearchForm.q"
             :label="$t('LocationSelector.SearchByName')"
+            :hint="$t('Common.ExamplesWithColonAndValue', { value: 'Auchan Grenoble ; Carrefour rue la fayette 75010 paris ; N12208020359' })"
             type="text"
             append-inner-icon="mdi-magnify"
             :rules="[fieldRequired]"
             :loading="loading"
             required
+            persistent-hint
             @click:append-inner="search"
           />
         </v-form>
@@ -31,7 +33,7 @@
         </p>
 
         <v-sheet v-if="results">
-          <h3 class="mb-1">
+          <h3 class="mt-4 mb-1">
             <i18n-t keypath="LocationSelector.Result" tag="span">
               <template #resultNumber>
                 <small>{{ Array.isArray(results) ? results.length : 0 }}</small>
