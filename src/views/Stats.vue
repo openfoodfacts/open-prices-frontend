@@ -10,19 +10,13 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_count" :subtitle="$t('Stats.Total')" />
+      <StatCard :value="stats.price_count" :subtitle="$t('Stats.Total')" to="/prices" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_type_product_code_count" :subtitle="$t('Stats.WithBarcode')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_type_category_tag_count" :subtitle="$t('Stats.WithCategory')" />
-    </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <br><!-- TODO: center vertically instead of br -->
-      <v-btn to="/prices" append-icon="mdi-arrow-right">
-        {{ $t('Common.LatestPrices') }}
-      </v-btn>
     </v-col>
   </v-row>
 
@@ -35,16 +29,10 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+      <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" to="/products" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" />
-    </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <br><!-- TODO: center vertically instead of br -->
-      <v-btn to="/products" append-icon="mdi-arrow-right">
-        {{ $t('Common.TopProducts') }}
-      </v-btn>
     </v-col>
   </v-row>
 
@@ -57,19 +45,13 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_with_price_count" :subtitle="$t('Stats.Total')" />
+      <StatCard :value="stats.location_with_price_count" :subtitle="$t('Stats.Total')" to="/locations" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.location_type_osm_count" :subtitle="OSM_NAME" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.location_type_online_count" :subtitle="$t('LocationCard.ONLINE')" />
-    </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <br><!-- TODO: center vertically instead of br -->
-      <v-btn to="/locations" append-icon="mdi-arrow-right">
-        {{ $t('Common.TopLocations') }}
-      </v-btn>
     </v-col>
   </v-row>
 
@@ -107,13 +89,7 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.user_with_price_count" :subtitle="$t('Stats.Total')" />
-    </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <br><!-- TODO: center vertically instead of br -->
-      <v-btn to="/users" append-icon="mdi-arrow-right">
-        {{ $t('Common.TopContributors') }}
-      </v-btn>
+      <StatCard :value="stats.user_with_price_count" :subtitle="$t('Stats.Total')" to="/users" />
     </v-col>
   </v-row>
 
