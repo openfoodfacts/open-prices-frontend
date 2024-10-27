@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Štítek",
 		"Labels": "Štítky",
-		"Language": "Jazyky",
+		"Language": "Jazyk",
 		"Languages": "Jazyky",
 		"LatestPrices": "Nejnovější ceny",
 		"LatestProofs": "Nejnovější důkazy",
@@ -186,7 +186,9 @@
 		"Example": "Příklad",
 		"Examples": "Příklady",
 		"ExampleWithColon": "Například:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Například:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Upravit",
 		"Filter": "Filtr",
 		"FilterProductWithPriceCount": "S cenou",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Vyhledat"
+		},
+		"Settings": {
+			"Title": "Nastavení"
 		},
 		"SignIn": {
 			"Title": "Přihlásit se"
