@@ -38,7 +38,7 @@
           <v-list-item :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard" :aria-label="$t('Common.Dashboard')">
             {{ $t('Common.Dashboard') }}
           </v-list-item>
-          <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/settings" :aria-label="$t('Common.Settings')">
+          <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/dashboard/settings" :aria-label="$t('Common.Settings')">
             {{ $t('Common.Settings') }}
           </v-list-item>
           <v-list-item :slim="true" prepend-icon="mdi-logout" :aria-label="$t('Common.SignOut')" @click="signOut">
