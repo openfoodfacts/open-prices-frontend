@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Ετικετα",
 		"Labels": "Ετικέτες",
-		"Language": "Languages",
+		"Language": "Γλώσσα",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Παράδειγμα:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Παραδείγματα:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Επεξεργασία",
 		"Filter": "Φίλτρο",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Αναζήτηση"
+		},
+		"Settings": {
+			"Title": "Ρυθμίσεις"
 		},
 		"SignIn": {
 			"Title": "Σύνδεση"
