@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Графік",
 		"Label": "Мітка",
 		"Labels": "Етикетки",
-		"Language": "Мови",
+		"Language": "Мова",
 		"Languages": "Мови",
 		"LatestPrices": "Остання ціна",
 		"LatestProofs": "Останні докази",
@@ -186,7 +186,9 @@
 		"Example": "Приклад",
 		"Examples": "Приклади",
 		"ExampleWithColon": "Наприклад:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Приклади:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Редагувати",
 		"Filter": "Фільтр",
 		"FilterProductWithPriceCount": "З ціною",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Пошук"
+		},
+		"Settings": {
+			"Title": "Налаштування"
 		},
 		"SignIn": {
 			"Title": "Увійти"
