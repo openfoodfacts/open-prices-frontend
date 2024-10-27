@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Eksempel:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Eksempler:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Redigér",
 		"Filter": "Filtrere",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Søg"
+		},
+		"Settings": {
+			"Title": "Indstillinger"
 		},
 		"SignIn": {
 			"Title": "Log ind"
