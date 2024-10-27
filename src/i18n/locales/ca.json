@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Etiqueta",
 		"Labels": "Etiquetes",
-		"Language": "Llengües",
+		"Language": "Idioma",
 		"Languages": "Llengües",
 		"LatestPrices": "Últims preus",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Exemple:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Exemples:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edita",
 		"Filter": "Filtre",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Cerca"
+		},
+		"Settings": {
+			"Title": "Preferències"
 		},
 		"SignIn": {
 			"Title": "Inicia la sessió"
