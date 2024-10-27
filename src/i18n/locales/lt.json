@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Diagrama",
 		"Label": "Etiketė",
 		"Labels": "Labels",
-		"Language": "Kalbos",
+		"Language": "Kalba",
 		"Languages": "Kalbos",
 		"LatestPrices": "Naujausios kainos",
 		"LatestProofs": "Naujausi įrodymai",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Pavyzdys:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Pavyzdžiai:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Redaguoti",
 		"Filter": "Filtras",
 		"FilterProductWithPriceCount": "Su kaina",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Paieška"
+		},
+		"Settings": {
+			"Title": "Nustatymai"
 		},
 		"SignIn": {
 			"Title": "Prisijungti"

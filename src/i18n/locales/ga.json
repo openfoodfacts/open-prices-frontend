@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Label",
 		"Labels": "Lipéid",
-		"Language": "Teangacha",
+		"Language": "Teanga",
 		"Languages": "Teangacha",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Sampla:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Samplaí:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Cuardaigh"
+		},
+		"Settings": {
+			"Title": "Socruithe"
 		},
 		"SignIn": {
 			"Title": "Sínigh isteach"

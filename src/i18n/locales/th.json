@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "ตัวอย่าง:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "ตัวอย่าง:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "แก้ไข",
 		"Filter": "กรอง",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "ค้นหา"
+		},
+		"Settings": {
+			"Title": "ตั้งค่า"
 		},
 		"SignIn": {
 			"Title": "เข้าสู่ระบบ"

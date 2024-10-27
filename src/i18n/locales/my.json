@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Label",
 		"Labels": "Labels",
-		"Language": "Languages",
+		"Language": "ဘာသာစကား",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Example:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Examples:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "ရွာေဖြမည္"
+		},
+		"Settings": {
+			"Title": "အပြင်​အဆင်​များ"
 		},
 		"SignIn": {
 			"Title": "Sign in"

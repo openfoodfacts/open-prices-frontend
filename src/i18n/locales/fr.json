@@ -186,7 +186,9 @@
 		"Example": "Exemple",
 		"Examples": "Exemples",
 		"ExampleWithColon": "Exemple :",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Exemples :",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modifier",
 		"Filter": "Filtre",
 		"FilterProductWithPriceCount": "Avec un prix",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Rechercher"
+		},
+		"Settings": {
+			"Title": "Paramètres"
 		},
 		"SignIn": {
 			"Title": "Se connecter"

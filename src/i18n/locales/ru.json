@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Маркировка",
 		"Labels": "Маркировки",
-		"Language": "Языки",
+		"Language": "Язык",
 		"Languages": "Языки",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Пример:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Примеры:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Редактировать",
 		"Filter": "Фильтр",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Поиск"
+		},
+		"Settings": {
+			"Title": "Настройки"
 		},
 		"SignIn": {
 			"Title": "Войти"

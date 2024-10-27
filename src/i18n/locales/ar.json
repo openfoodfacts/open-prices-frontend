@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "al3alama",
 		"Labels": "علامات",
-		"Language": "اللغات",
+		"Language": "اللغة",
 		"Languages": "اللغات",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "مثال:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "أمثلة:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "تحرير",
 		"Filter": "تصفية",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "بحث"
+		},
+		"Settings": {
+			"Title": "الإعدادات"
 		},
 		"SignIn": {
 			"Title": "تسجيل الدخول"

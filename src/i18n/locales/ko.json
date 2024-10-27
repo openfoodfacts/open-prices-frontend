@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "예시:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "예시:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "수정",
 		"Filter": "필터",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "검색"
+		},
+		"Settings": {
+			"Title": "설정"
 		},
 		"SignIn": {
 			"Title": "가입하기"

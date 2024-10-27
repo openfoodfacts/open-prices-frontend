@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Label",
 		"Labels": "Labels",
-		"Language": "Languages",
+		"Language": "Leid",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Ensaumple:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Ensaumples:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Sairch"
+		},
+		"Settings": {
+			"Title": "Settins"
 		},
 		"SignIn": {
 			"Title": "Sign in"

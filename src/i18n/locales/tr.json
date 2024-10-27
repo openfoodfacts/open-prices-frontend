@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Etiket",
 		"Labels": "Etiketler",
-		"Language": "Diller",
+		"Language": "Dil",
 		"Languages": "Diller",
 		"LatestPrices": "Son fiyatlar",
 		"LatestProofs": "En son bedeller",
@@ -186,7 +186,9 @@
 		"Example": "Örnek",
 		"Examples": "Örnekler",
 		"ExampleWithColon": "Örnek:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Örnekler:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Düzenle",
 		"Filter": "Filtrele",
 		"FilterProductWithPriceCount": "Bir fiyat ile",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Ara"
+		},
+		"Settings": {
+			"Title": "Ayarlar"
 		},
 		"SignIn": {
 			"Title": "Giriş Yap"

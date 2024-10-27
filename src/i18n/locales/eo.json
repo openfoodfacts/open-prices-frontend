@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Etikedo",
 		"Labels": "Labels",
-		"Language": "Languages",
+		"Language": "Lingvo",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Ekzemplo:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Ekzemploj:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Search"
+		},
+		"Settings": {
+			"Title": "Agordoj"
 		},
 		"SignIn": {
 			"Title": "Ensaluti"

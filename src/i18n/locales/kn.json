@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "ಲೇಬಲ್",
 		"Labels": "ಲೇಬಲ್",
-		"Language": "Languages",
+		"Language": "ಭಾಷೆ",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Example:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Examples:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "ತಿದ್ದು",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "ಹುಡುಕಿ"
+		},
+		"Settings": {
+			"Title": "ಸೆಟ್ಟಿಂಗ್"
 		},
 		"SignIn": {
 			"Title": "ಸೈನ್ ಇನ್ ಮಾಡಿ"

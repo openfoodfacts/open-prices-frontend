@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Silt",
 		"Labels": "Sildid",
-		"Language": "Keeled",
+		"Language": "Language",
 		"Languages": "Keeled",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Näide:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Näited:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Muuda",
 		"Filter": "Filtreeri",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Otsi"
+		},
+		"Settings": {
+			"Title": "Seaded"
 		},
 		"SignIn": {
 			"Title": "Logi sisse"

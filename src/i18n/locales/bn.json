@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Label",
 		"Labels": "Labels",
-		"Language": "Languages",
+		"Language": "ভাষা",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "উদাহরন:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "উদাহরণগুলো:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "অনুসন্ধান"
+		},
+		"Settings": {
+			"Title": "সেটিংস"
 		},
 		"SignIn": {
 			"Title": "সাইন ইন"

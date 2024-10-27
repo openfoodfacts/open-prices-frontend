@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Grafiek",
 		"Label": "Keurmerk",
 		"Labels": "Keurmerken",
-		"Language": "Talen",
+		"Language": "Taal",
 		"Languages": "Talen",
 		"LatestPrices": "Laatste prijzen",
 		"LatestProofs": "Laatste bewijzen",
@@ -186,7 +186,9 @@
 		"Example": "Voorbeeld",
 		"Examples": "Voorbeelden",
 		"ExampleWithColon": "Voorbeeld:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Voorbeelden:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Bewerken",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "Met een prijs",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Zoeken"
+		},
+		"Settings": {
+			"Title": "Instellingen"
 		},
 		"SignIn": {
 			"Title": "Inloggen"

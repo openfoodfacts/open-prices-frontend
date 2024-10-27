@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Príklad:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Príklady:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Upraviť",
 		"Filter": "Filtrovať",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Vyhľadať"
+		},
+		"Settings": {
+			"Title": "Nastavenia"
 		},
 		"SignIn": {
 			"Title": "Prihlásiť sa"
