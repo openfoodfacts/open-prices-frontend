@@ -31,6 +31,12 @@
             item-value="code"
             hide-details="auto"
           />
+          <p class="mt-1">
+            <a :href="OFF_CROWDIN_URL" target="_blank">
+              {{ $t('UserSettings.TranslationHelp') }}
+              <v-icon size="small" icon="mdi-open-in-new" />
+            </a>
+          </p>
           <!-- Products -->
           <h3 class="mt-4 mb-1">
             {{ $t('Common.Products') }}
@@ -102,10 +108,12 @@ import { useAppStore } from '../store'
 import countryList from '../i18n/data/countries.json'
 import languageList from '../i18n/data/languages.json'
 import localeManager from '../i18n/localeManager.js'
+import constants from '../constants'
 
 export default {
   data() {
     return {
+      OFF_CROWDIN_URL: constants.OFF_CROWDIN_URL,
       theme: useTheme(),
       countryList,
       languageList,
