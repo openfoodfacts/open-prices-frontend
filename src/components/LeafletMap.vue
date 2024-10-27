@@ -45,13 +45,7 @@ export default {
   },
   mounted() {
     if (this.locations.length) {
-      if (this.locations.length > 1) {
-        this.mapBounds = utils.getMapBounds(this.locations)
-      } else {
-        this.mapCenter = utils.getMapCenter(this.locations)
-        // this.mapZoom = 12
-        this.mapBounds = null
-      }
+      this.mapBounds = utils.getMapBounds(this.locations)
     }
     if (this.theme.global.name === "dark") {
       this.tiles = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"

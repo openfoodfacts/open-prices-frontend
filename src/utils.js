@@ -360,7 +360,7 @@ function getMapCenter(results) {
     // OP
     return [results[0].osm_lat, results[0].osm_lon]
   }
-  results [45, 5]
+  return [45, 5]
 }
 
 // OP location

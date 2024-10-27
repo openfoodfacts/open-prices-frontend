@@ -13,12 +13,13 @@
             ref="locationInput"
             v-model="locationSearchForm.q"
             :label="$t('LocationSelector.SearchByName')"
+            :hint="$t('Common.ExamplesWithColonAndValue', { value: 'Auchan Grenoble ; Carrefour rue la fayette 75010 paris ; N12208020359' })"
             type="text"
             append-inner-icon="mdi-magnify"
             :rules="[fieldRequired]"
-            hide-details="auto"
             :loading="loading"
             required
+            persistent-hint
             @click:append-inner="search"
           />
         </v-form>
@@ -31,17 +32,15 @@
           </i18n-t>
         </p>
 
-        <v-sheet v-if="results && Array.isArray(results)">
-          <v-divider />
-
-          <h3>
+        <v-sheet v-if="results">
+          <h3 class="mt-4 mb-1">
             <i18n-t keypath="LocationSelector.Result" tag="span">
               <template #resultNumber>
-                <small>{{ results.length }}</small>
+                <small>{{ Array.isArray(results) ? results.length : 0 }}</small>
               </template>
             </i18n-t>
           </h3>
-          <v-row>
+          <v-row v-if="Array.isArray(results)">
             <v-col cols="12" sm="6">
               <v-card
                 v-for="location in results"
@@ -63,10 +62,10 @@
               <LeafletMap :locations="results" />
             </v-col>
           </v-row>
-        </v-sheet>
 
-        <v-sheet v-if="results && (typeof results === 'string')">
-          {{ results }}
+          <p v-else-if="typeof results === 'string'">
+            {{ results }}
+          </p>
         </v-sheet>
 
         <v-sheet v-if="recentLocations.length">
@@ -163,8 +162,10 @@ export default {
       this.$refs.locationInput.blur()
       this.results = null
       this.loading = true
-      if (utils.isNumber(this.locationSearchForm.q)) {
-        api.openstreetmapNominatimLookup(this.locationSearchForm.q)
+      // search by id (N12208020359, 12208020359)
+      if (utils.isNumber(this.locationSearchForm.q.substring(1))) {
+        const id = utils.isNumber(this.locationSearchForm.q.substring(0, 1)) ? this.locationSearchForm.q : this.locationSearchForm.q.substring(1) 
+        api.openstreetmapNominatimLookup(id)
         .then((data) => {
           this.loading = false
           if (data.length) {
@@ -173,6 +174,7 @@ export default {
             this.results = this.$t('LocationSelector.NoResult')
           }
         })
+      // search by name
       } else {
         api.openstreetmapSearch(this.locationSearchForm.q, this.searchProvider)
         .then((data) => {
