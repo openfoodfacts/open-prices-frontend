@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Oznaka",
 		"Labels": "Labels",
-		"Language": "Languages",
+		"Language": "Jezik",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Пример:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Примери:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Izmeni",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Pretraživanje"
+		},
+		"Settings": {
+			"Title": "Podešavanja"
 		},
 		"SignIn": {
 			"Title": "Sign in"
