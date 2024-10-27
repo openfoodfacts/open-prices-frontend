@@ -186,7 +186,9 @@
 		"Example": "Contoh",
 		"Examples": "Contoh",
 		"ExampleWithColon": "Contoh:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Contoh - contoh:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Sunting",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "Dengan harga",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Cari"
+		},
+		"Settings": {
+			"Title": "Pengaturan"
 		},
 		"SignIn": {
 			"Title": "Masuk"
