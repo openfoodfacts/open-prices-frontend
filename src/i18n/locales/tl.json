@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Tanda",
 		"Labels": "Labels",
-		"Language": "Languages",
+		"Language": "Wika",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Halimbawa:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Mga halimbawa:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Maghanap"
+		},
+		"Settings": {
+			"Title": "Mga Setting"
 		},
 		"SignIn": {
 			"Title": "Sign in"
