@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Uzlīme",
 		"Labels": "Etiķetes",
-		"Language": "Languages",
+		"Language": "Valoda",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Piemērs:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Piemēri:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Rediģēt",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Meklēt"
+		},
+		"Settings": {
+			"Title": "Iestatījumi"
 		},
 		"SignIn": {
 			"Title": "Ieiet"
