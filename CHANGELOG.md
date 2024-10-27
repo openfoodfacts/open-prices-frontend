@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.91.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.91.0...v1.91.1) (2024-10-27)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#990](https://github.com/openfoodfacts/open-prices-frontend/issues/990)) ([56f2c3f](https://github.com/openfoodfacts/open-prices-frontend/commit/56f2c3f8bc58054df2983f788612fe11ffc25f33))
+* **Location search:** add search hint, improve map zoom for single result ([#992](https://github.com/openfoodfacts/open-prices-frontend/issues/992)) ([bfb1dbb](https://github.com/openfoodfacts/open-prices-frontend/commit/bfb1dbbf073239a7d274b89370ec491081748997))
+* **Stats:** add links inside StatCard instead of dedicated buttons ([#994](https://github.com/openfoodfacts/open-prices-frontend/issues/994)) ([b34a8da](https://github.com/openfoodfacts/open-prices-frontend/commit/b34a8da671a13d81b4ce670b37310d15e5e33eaf))
+
 ## [1.91.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.90.0...v1.91.0) (2024-10-27)
 
 
