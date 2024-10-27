@@ -42,6 +42,31 @@ function isValidBarcode(value) {
   return ((10 - (result % 10)) % 10) === parseInt(paddedValue.charAt(13), 10);
 }
 
+/**
+ * Finds valid barcodes that are one digit away from input value
+ */
+function findAdjacentValidBarcodes(value) {
+  let barcodes = []
+  const prefix = Array(value.length).fill("")
+  const suffix = Array(value.length).fill("")
+  // Precompute prefix and suffix arrays
+  for (let i = 0; i < value.length; i++) {
+    prefix[i] = value.slice(0, i);
+    suffix[i] = value.slice(i + 1);
+  }
+  for (let i = 0; i < value.length; i++) {
+    for (let j = 0; j < 10; j++) {
+      if (String(j) !== value[i]) {  // Skip identical barcode
+        const barcodeTested = prefix[i] + j + suffix[i]
+        if (isValidBarcode(barcodeTested)) {
+          barcodes.push(barcodeTested)
+        }
+      }
+    }
+  }
+  return barcodes
+}
+
 function addObjectToArray(arr, obj, unshift=false, avoidDuplicates=true) {
   // look for duplicate
   let duplicateItemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
@@ -386,6 +411,7 @@ export default {
   getDocumentScrollPercentage,
   isNumber,
   isValidBarcode,
+  findAdjacentValidBarcodes,
   addObjectToArray,
   removeObjectFromArray,
   currentStartOfDay,
