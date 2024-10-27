@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "例:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "例:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "編集",
 		"Filter": "フィルタ",
 		"FilterProductWithPriceCount": "価格付き",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "検索"
+		},
+		"Settings": {
+			"Title": "設定"
 		},
 		"SignIn": {
 			"Title": "サインイン"
