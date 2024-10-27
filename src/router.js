@@ -9,7 +9,7 @@ const routes = [
   { path: '/dashboard', name: 'dashboard', component: () => import('./views/UserDashboard.vue'), meta: { title: 'Dashboard', icon: 'mdi-view-dashboard-outline', drawerMenu: true, requiresAuth: true, breadcrumbs: [{title: 'Dashboard', disabled: true }] } },
   { path: '/dashboard/prices', name: 'dashboard-prices', component: () => import('./views/UserDashboardPriceList.vue'), meta: { title: 'MyPrices', requiresAuth: true, breadcrumbs: [{title: 'Dashboard', disabled: false, to: '/dashboard' }, {title: 'MyPrices', disabled: true}] } },
   { path: '/dashboard/proofs', name: 'dashboard-proofs', component: () => import('./views/UserDashboardProofList.vue'), meta: { title: 'MyProofs', requiresAuth: true, breadcrumbs: [{title: 'Dashboard', disabled: false, to: '/dashboard' }, {title: 'MyProofs', disabled: true}] } },
-  { path: '/settings', name: 'settings', component: () => import('./views/UserSettings.vue'), meta: { title: 'Settings', requiresAuth: true } },
+  { path: '/dashboard/settings', name: 'dashboard-settings', component: () => import('./views/UserSettings.vue'), meta: { title: 'Settings', requiresAuth: true } },
   { path: '/prices/add', name: 'add-price', component: () => import('./views/AddPriceHome.vue'), meta: { title: 'AddPrice', requiresAuth: true }},
   { path: '/prices/add/single', name: 'add-price-single', component: () => import('./views/AddPriceSingle.vue'), meta: { title: 'Add a single price (price tag)', requiresAuth: true }},
   { path: '/prices/add/multiple', name: 'add-price-multiple', component: () => import('./views/AddPriceMultiple.vue'), meta: { title: 'AddPrice', icon: 'mdi-tag-plus-outline', drawerMenu: true, color: 'primary', requiresAuth: true }},
@@ -33,8 +33,8 @@ const routes = [
   { path: '/users', name: 'users', component: () => import('./views/UserList.vue'), meta: { title: 'TopContributors', icon: 'mdi-account-star-outline', drawerMenu: true }},
   { path: '/users/:username', name: 'user-detail', component: () => import('./views/UserDetail.vue'), meta: { title: 'User detail' }},
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true }},
-  { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true }},
   { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', icon: 'mdi-cog-outline', drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
+  { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true }},
   // Why this redirect?
   // The app used to be available at https://prices.openfoodfacts.org/app
   // It is now available at https://prices.openfoodfacts.org

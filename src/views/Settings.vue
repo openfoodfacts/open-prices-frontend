@@ -1,9 +1,50 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-btn class="mx-2" variant="text" :prepend-icon="themeInfo.icon" @click="swapTheme">
-        {{ $t(themeInfo.label) }}
-      </v-btn>
+      <v-card :title="$t('UserSettings.DisplayTitle')" prepend-icon="mdi-laptop">
+        <v-divider />
+        <v-card-text>
+          <v-btn :prepend-icon="themeInfo.icon" @click="swapTheme">
+            {{ $t(themeInfo.label) }}
+          </v-btn>
+          <!-- Products -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('Common.Products') }}
+          </h3>
+          <v-switch
+            v-model="appStore.user.product_display_barcode"
+            class="mb-4"
+            color="success"
+            :label="$t('UserSettings.ProductDisplayBarcode')"
+            :hint="$t('Common.ExampleWithColonAndValue', { value: '1234567890123' })"
+            density="compact"
+            persistent-hint
+            hide-details="auto"
+          />
+          <v-switch
+            v-model="appStore.user.product_display_category_tag"
+            color="success"
+            :label="$t('UserSettings.ProductDisplayCategoryTag')"
+            :hint="$t('Common.ExampleWithColonAndValue', { value: 'en:oranges' })"
+            density="compact"
+            persistent-hint
+            hide-details="auto"
+          />
+          <!-- Locations -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('Common.Locations') }}
+          </h3>
+          <v-switch
+            v-model="appStore.user.location_display_osm_id"
+            color="success"
+            :label="$t('UserSettings.LocationDisplayOSMID')"
+            :hint="$t('Common.ExampleWithColonAndValue', { value: 'N652825274' })"
+            density="compact"
+            persistent-hint
+            hide-details="auto"
+          />
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 </template>
@@ -22,7 +63,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     themeInfo() {
-      if (this.theme.global.name === "light") {
+      if (this.theme.global.name === 'light') {
         return {
           icon: 'mdi-white-balance-sunny',
           label: 'Theme.LightMode' 
@@ -36,7 +77,7 @@ export default {
   },
   methods: {
     swapTheme() {
-      const newTheme = this.theme.global.name === "light" ? 'dark' : 'light'
+      const newTheme = this.theme.global.name === 'light' ? 'dark' : 'light'
       this.appStore.user.preferedTheme = newTheme
       this.theme.global.name = newTheme
     }

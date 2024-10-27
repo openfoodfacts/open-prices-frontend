@@ -22,11 +22,11 @@
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-chart-box-outline" to="/stats">
           {{ $t('Common.Stats') }}
         </v-btn>
-        <v-btn class="mx-2" variant="text" prepend-icon="mdi-information-outline" to="/about">
-          {{ $t('Common.About') }}
-        </v-btn>
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-cog-outline" to="/settings">
           {{ $t('Common.Settings') }}
+        </v-btn>
+        <v-btn class="mx-2" variant="text" prepend-icon="mdi-information-outline" to="/about">
+          {{ $t('Common.About') }}
         </v-btn>
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-github" :href="APP_GITHUB_FRONTEND_URL" target="_blank">
           {{ GITHUB_NAME }}
