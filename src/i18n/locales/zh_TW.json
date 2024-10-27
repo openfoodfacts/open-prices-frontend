@@ -186,7 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "範例：",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "範例：",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "編輯",
 		"Filter": "篩選器",
 		"FilterProductWithPriceCount": "With a price",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "搜尋"
+		},
+		"Settings": {
+			"Title": "設定"
 		},
 		"SignIn": {
 			"Title": "登入"
