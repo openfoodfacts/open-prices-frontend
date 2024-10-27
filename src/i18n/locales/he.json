@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "תרשים",
 		"Label": "תווית",
 		"Labels": "תוויות",
-		"Language": "שפות",
+		"Language": "שפה",
 		"Languages": "שפות",
 		"LatestPrices": "מחירים עדכניים",
 		"LatestProofs": "ההוכחות העדכניות ביותר",
@@ -186,7 +186,9 @@
 		"Example": "דוגמה",
 		"Examples": "דוגמאות",
 		"ExampleWithColon": "דוגמה:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "דוגמאות:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "עריכה",
 		"Filter": "סינון",
 		"FilterProductWithPriceCount": "עם מחיר",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "חיפוש"
+		},
+		"Settings": {
+			"Title": "הגדרות"
 		},
 		"SignIn": {
 			"Title": "כניסה"
