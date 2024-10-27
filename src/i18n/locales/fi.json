@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Merkki",
 		"Labels": "Merkit",
-		"Language": "Kielet",
+		"Language": "Kieli",
 		"Languages": "Kielet",
 		"LatestPrices": "Viimeisimmät hinnat",
 		"LatestProofs": "Uusimmat todisteet",
@@ -186,7 +186,9 @@
 		"Example": "Esimerkki",
 		"Examples": "Esimerkit",
 		"ExampleWithColon": "Esimerkki:",
+		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "Esimerkit:",
+		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Muokkaa",
 		"Filter": "Suodata",
 		"FilterProductWithPriceCount": "Hinnalla",
@@ -468,6 +470,9 @@
 		},
 		"Search": {
 			"Title": "Etsi"
+		},
+		"Settings": {
+			"Title": "Asetukset"
 		},
 		"SignIn": {
 			"Title": "Kirjaudu sisään"
