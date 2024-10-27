@@ -4,9 +4,33 @@
       <v-card :title="$t('UserSettings.DisplayTitle')" prepend-icon="mdi-laptop">
         <v-divider />
         <v-card-text>
-          <v-btn :prepend-icon="themeInfo.icon" @click="swapTheme">
-            {{ $t(themeInfo.label) }}
+          <v-btn :prepend-icon="preferedThemeInfo.icon" @click="swapTheme">
+            {{ $t(preferedThemeInfo.label) }}
           </v-btn>
+          <!-- Country -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('Common.Country') }}
+          </h3>
+          <v-autocomplete
+            v-model="appStore.user.country"
+            :label="$t('Common.Country')"
+            :items="countryList"
+            item-title="native"
+            item-value="code"
+            hide-details="auto"
+          />
+          <!-- Language -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('Common.Language') }}
+          </h3>
+          <v-autocomplete
+            v-model="appStore.user.language"
+            :label="$t('Common.Language')"
+            :items="languageList"
+            item-title="native"
+            item-value="code"
+            hide-details="auto"
+          />
           <!-- Products -->
           <h3 class="mt-4 mb-1">
             {{ $t('Common.Products') }}
@@ -53,16 +77,21 @@
 import { useTheme } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import countryList from '../i18n/data/countries.json'
+import languageList from '../i18n/data/languages.json'
+import localeManager from '../i18n/localeManager.js'
 
 export default {
   data() {
     return {
-      theme: useTheme()
+      theme: useTheme(),
+      countryList,
+      languageList,
     }
   },
   computed: {
     ...mapStores(useAppStore),
-    themeInfo() {
+    preferedThemeInfo() {
       if (this.theme.global.name === 'light') {
         return {
           icon: 'mdi-white-balance-sunny',
@@ -74,6 +103,14 @@ export default {
         label: 'Theme.DarkMode' 
       }
     }
+  },
+  watch: {
+    'appStore.user.language': function (newLanguage, oldLanguage) {  // eslint-disable-line no-unused-vars
+      localeManager.changeLanguage(newLanguage)
+    }
+  },
+  mounted() {
+    console.log(this.appStore.user)
   },
   methods: {
     swapTheme() {
