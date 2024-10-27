@@ -23,34 +23,30 @@
       </v-btn>
     </template>
     <template v-else #append>
-      <v-menu scroll-strategy="close">
-        <template #activator="{ props }">
-          <v-btn v-if="!$vuetify.display.smAndUp" v-bind="props" icon="mdi-account-circle" />
-          <v-btn v-else v-bind="props" class="text-lowercase" prepend-icon="mdi-account-circle">
-            {{ username }}
-          </v-btn>
-        </template>
-        <v-list>
-          <v-list-item class="d-sm-none" :slim="true" prepend-icon="mdi-account" disabled>
-            {{ username }}
-          </v-list-item>
-          <v-divider class="d-sm-none" />
-          <v-list-item :slim="true" prepend-icon="mdi-view-dashboard-outline" to="/dashboard" :aria-label="$t('Common.Dashboard')">
-            {{ $t('Common.Dashboard') }}
-          </v-list-item>
-          <v-list-item :slim="true" prepend-icon="mdi-cog-outline" to="/dashboard/settings" :aria-label="$t('Common.Settings')">
-            {{ $t('Common.Settings') }}
-          </v-list-item>
-          <v-list-item :slim="true" prepend-icon="mdi-logout" :aria-label="$t('Common.SignOut')" @click="signOut">
-            {{ $t('Common.SignOut') }}
-          </v-list-item>
-        </v-list>
-      </v-menu>
+      <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-account-circle" to="/dashboard" :aria-label="$t('Common.Dashboard')" />
+      <v-btn v-else class="text-lowercase" prepend-icon="mdi-account-circle" to="/dashboard" :aria-label="$t('Common.Dashboard')">
+        {{ username }}
+      </v-btn>
     </template>
   </v-app-bar>
 
   <v-navigation-drawer v-model="showDrawerMenu" temporary>
-    <v-list :items="getDrawerMenuItems" />
+    <v-list>
+      <v-list-item
+        v-for="item in getDrawerMenuItems"
+        :key="item.title"
+        :slim="true"
+        :title="item.title"
+        :prepend-icon="item.props['prepend-icon']"
+        :base-color="item.props['base-color']"
+        :to="item.props.to"
+      />
+    </v-list>
+    <template #append>
+      <v-list>
+        <v-list-item v-if="username" base-color="error" :slim="true" :title="$t('Common.SignOut')" :aria-label="$t('Common.SignOut')" prepend-icon="mdi-logout" @click="signOut" />
+      </v-list>
+    </template>
   </v-navigation-drawer>
 </template>
 
