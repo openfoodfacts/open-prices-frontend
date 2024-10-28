@@ -35,3 +35,13 @@ There is also a pre-commit configuration set up with [husky](https://typicode.gi
 ```sh
 yarn test
 ```
+
+## Update packages
+
+```sh
+// 1) list packages to update
+yarn upgrade-interactive --latest
+// 2) update package.json by bumping all non-major updgrades
+// 3) update packages
+yarn install
+```
