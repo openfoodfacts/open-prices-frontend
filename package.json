@@ -30,7 +30,7 @@
     "exifreader": "^4.24.0",
     "html5-qrcode": "^2.3.8",
     "leaflet": "^1.9.4",
-    "pinia": "^2.2.4",
+    "pinia": "^2.2.5",
     "pinia-plugin-persistedstate": "^3.2.3",
     "universal-cookie": "^7.2.1",
     "vega": "^5.30.0",
