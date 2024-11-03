@@ -26,13 +26,17 @@
 
         <v-window v-model="currentDisplay" disabled>
           <v-window-item value="osm">
-            <v-form @submit.prevent="search">
+            <v-form @submit.prevent="osmSearch">
               <v-text-field
-                ref="locationInput" v-model="locationSearchForm.q"
+                ref="locationInput"
+                v-model="locationOsmSearchForm.q"
                 :label="$t('LocationSelector.SearchByName')"
                 :hint="$t('Common.ExamplesWithColonAndValue', { value: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359' })"
-                type="text" append-inner-icon="mdi-magnify" :rules="[fieldRequired]" :loading="loading" required
-                persistent-hint @click:append-inner="search"
+                type="text"
+                append-inner-icon="mdi-magnify"
+                :loading="loading"
+                persistent-hint
+                @click:append-inner="osmSearch"
               />
             </v-form>
 
@@ -77,6 +81,22 @@
             </v-sheet>
           </v-window-item>
 
+          <v-window-item value="online">
+            <v-form @submit.prevent="createOnline">
+              <v-text-field
+                ref="locationInput"
+                v-model="locationOnlineForm.website_url"
+                :label="$t('Common.Website')"
+                :hint="$t('Common.ExampleWithColonAndValue', { value: 'https://www.example.com' })"
+                type="text"
+                append-inner-icon="mdi-plus"
+                :loading="loading"
+                persistent-hint
+                @click:append-inner="createOnline"
+              />
+            </v-form>
+          </v-window-item>
+
           <v-window-item value="recent">
             <LocationRecentChip v-for="(location, index) in recentLocations" :key="index" :location="location" :withRemoveAction="true" @click="selectLocation(location)" @click:close="removeRecentLocation(location)" />
             <br>
@@ -87,9 +107,9 @@
         </v-window>
       </v-card-text>
 
-      <v-divider />
+      <v-divider v-if="currentDisplay === 'osm'" />
 
-      <v-card-actions class="justify-end">
+      <v-card-actions v-if="currentDisplay === 'osm'" class="justify-end">
         <div>
           <i18n-t keypath="LocationSelector.PoweredBy.text" tag="span">
             <template #url>
@@ -126,8 +146,11 @@ export default {
   emits: ['location', 'close'],
   data() {
     return {
-      // location form
-      locationSearchForm: {
+      // location forms
+      locationOnlineForm: {
+        website_url: '',
+      },
+      locationOsmSearchForm: {
         q: ''
       },
       loading: false,
@@ -141,7 +164,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     formFilled() {
-      return Object.values(this.locationSearchForm).every(x => !!x)
+      return Object.values(this.locationOsmSearchForm).every(x => !!x)
     },
     recentLocations() {
       return this.appStore.getRecentLocations()
@@ -157,13 +180,13 @@ export default {
     fieldRequired(v) {
       return !!v
     },
-    search() {
+    osmSearch() {
       this.$refs.locationInput.blur()
       this.results = null
       this.loading = true
       // search by id (N12208020359, 12208020359)
-      if (utils.isNumber(this.locationSearchForm.q.substring(1))) {
-        const id = utils.isNumber(this.locationSearchForm.q.substring(0, 1)) ? this.locationSearchForm.q : this.locationSearchForm.q.substring(1)
+      if (utils.isNumber(this.locationOsmSearchForm.q.substring(1))) {
+        const id = utils.isNumber(this.locationOsmSearchForm.q.substring(0, 1)) ? this.locationOsmSearchForm.q : this.locationOsmSearchForm.q.substring(1)
         api.openstreetmapNominatimLookup(id)
           .then((data) => {
             this.loading = false
@@ -175,7 +198,7 @@ export default {
           })
         // search by name
       } else {
-        api.openstreetmapSearch(this.locationSearchForm.q, this.searchProvider)
+        api.openstreetmapSearch(this.locationOsmSearchForm.q, this.searchProvider)
           .then((data) => {
             this.loading = false
             if (data.length) {
@@ -191,6 +214,14 @@ export default {
     },
     getLocationUniqueID(location) {
       return utils.getLocationUniqueID(location)
+    },
+    createOnline() {
+      this.loading = true
+      api.createLocationOnline({website_url: this.locationOnlineForm.website_url})
+        .then((location) => {
+          this.loading = false
+          this.selectLocation(location)
+        })
     },
     selectLocation(location) {
       this.$emit('location', location)

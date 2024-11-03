@@ -82,7 +82,6 @@ export default {
       this.appStore.addRecentLocation(location)
       // update locationForm
       if (location.id && location.type === 'ONLINE') {
-        console.log('in ONLINE')
         this.locationForm.location_id = location.id
         this.locationForm.location_osm_id = null
         this.locationForm.location_osm_type = null
