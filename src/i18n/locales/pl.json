@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Link skopiowany",
 		"LocationCount": "{count} lokalizacji",
 		"Map": "Mapa",
+		"Online": "Online",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Recent",
 		"Search": "Wyszukiwanie",
 		"Settings": "Ustawienia",
 		"SignInOFFAccount": "Zaloguj się przy pomocy konta {url}",
@@ -301,10 +303,6 @@
 			"Subtitle": "Otwarta, crowdsourcingowa baza cen żywności 🏷🍊💲",
 			"Title": "Witaj w {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Najnowsze ceny",
