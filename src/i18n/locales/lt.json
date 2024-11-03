@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Nuoroda nukopijuota",
 		"LocationCount": "{count} vietos (-ų)",
 		"Map": "Žemėlapis",
+		"Online": "Online",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Vietų skaičius",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Recent",
 		"Search": "Paieška",
 		"Settings": "Nustatymai",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
@@ -301,10 +303,6 @@
 			"Subtitle": "Atviroji sutelktinių išteklių gautų maisto kainų duomenų bazė 🏷🍊💲",
 			"Title": "Sveiki prisijungę prie {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Naujausios kainos",
