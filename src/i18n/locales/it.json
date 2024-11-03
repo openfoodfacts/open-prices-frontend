@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Link copiato",
 		"LocationCount": "{count} posizioni",
 		"Map": "Mappa",
+		"Online": "Online",
 		"Order": "Ordine",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Numero di scansioni",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Numero di prezzi",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Recent",
 		"Search": "Cerca",
 		"Settings": "Impostazioni",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
@@ -301,10 +303,6 @@
 			"Subtitle": "Un database aperto in crowdsourcing dei prezzi dei prodotti alimentari 🏷🍊💲",
 			"Title": "Benvenuto/a in {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Ultimi prezzi",
