@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Link gekopieerd",
 		"LocationCount": "{count} locaties",
 		"Map": "Kaart",
+		"Online": "Online",
 		"Order": "Sorteren",
 		"OrderLocationCountDESC": "Aantal locaties",
 		"OrderProductUniqueScansDESC": "Aantal scans",
@@ -231,6 +232,7 @@
 		"Receipts": "Bonnen",
 		"ReceiptPriceCount": "Aantal prijzen",
 		"ReceiptPriceTotal": "Totaalbedrag",
+		"Recent": "Recent",
 		"Search": "Zoeken",
 		"Settings": "Instellingen",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
@@ -301,10 +303,6 @@
 			"Subtitle": "Een open crowdsourced database met voedselprijzen 🏷🍊💲",
 			"Title": "Welkom bij {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Laatste prijzen",
