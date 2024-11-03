@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Enlace copiado",
 		"LocationCount": "{count} ubicaciones",
 		"Map": "Mapa",
+		"Online": "Online",
 		"Order": "Pedido",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Número de escaneos",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Número de precios",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Recent",
 		"Search": "Buscar",
 		"Settings": "Configuración",
 		"SignInOFFAccount": "Inicia sesión con tu cuenta de {url}",
@@ -301,10 +303,6 @@
 			"Subtitle": "Una base de datos abierta y colaborativa de precios de alimentos 🏷🍊💲",
 			"Title": "¡Bienvenido a {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Últimos precios",
