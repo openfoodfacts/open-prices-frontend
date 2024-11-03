@@ -107,9 +107,9 @@
         </v-window>
       </v-card-text>
 
-      <v-divider />
+      <v-divider v-if="currentDisplay === 'osm'" />
 
-      <v-card-actions class="justify-end">
+      <v-card-actions v-if="currentDisplay === 'osm'" class="justify-end">
         <div>
           <i18n-t keypath="LocationSelector.PoweredBy.text" tag="span">
             <template #url>
