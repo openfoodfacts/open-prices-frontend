@@ -304,11 +304,6 @@
 			"Title": "Welcome to {name}!"
 		}
 	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online",
-		"RECENT": "Recent"
-	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
