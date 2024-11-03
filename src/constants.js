@@ -135,6 +135,7 @@ export default {
   ],
   LOCATION_SELECTOR_DISPLAY_LIST: [
     { key: 'osm', value: OSM_NAME, icon: LOCATION_TYPE_OSM_ICON },
+    { key: 'online', value: 'Online', icon: LOCATION_TYPE_ONLINE_ICON },
     { key: 'recent', value: 'Recent', icon: 'mdi-history' },
   ],
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,

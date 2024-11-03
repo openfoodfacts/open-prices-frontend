@@ -6,6 +6,7 @@ const PRICE_UPDATE_FIELDS = ['price', 'price_is_discounted', 'price_without_disc
 const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'category_tag', 'labels_tags', 'origins_tags', 'location_id', 'location_osm_id', 'location_osm_type', 'proof_id'])
 const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency', 'receipt_price_count', 'receipt_price_total']
 // const PROOF_CREATE_FIELDS = PROOF_UPDATE_FIELDS.concat(['location_id', 'location_osm_id', 'location_osm_type'])  // 'file'
+const LOCATION_ONLINE_CREATE_FIELDS = ['type', 'website_url']
 const LOCATION_SEARCH_LIMIT = 10
 
 const OP_DEFAULT_PAGE_SIZE = 25  // 100 slows down the app
@@ -234,6 +235,20 @@ export default {
     return fetch(url, {
       method: 'GET',
       headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
+
+  createLocationOnline(data) {
+    const store = useAppStore()
+    data.type = constants.LOCATION_TYPE_ONLINE
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations?${buildURLParams()}`
+    return fetch(url, {
+      method: 'POST',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`,
+      }),
+      body: JSON.stringify(filterBodyWithAllowedKeys(data, LOCATION_ONLINE_CREATE_FIELDS)),
     })
     .then((response) => response.json())
   },
