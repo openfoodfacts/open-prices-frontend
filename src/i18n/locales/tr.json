@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Bağlantı kopyalandı",
 		"LocationCount": "{count} konum",
 		"Map": "Harita",
+		"Online": "Online",
 		"Order": "Sipariş",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Tarama sayısı",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Fiyat sayısı",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Recent",
 		"Search": "Ara",
 		"Settings": "Ayarlar",
 		"SignInOFFAccount": "{url} hesabınızla oturum açın",
@@ -301,10 +303,6 @@
 			"Subtitle": "Gıda fiyatlarına ilişkin açık ve kitle kaynaklı bir veritabanı 🏷🍊💲",
 			"Title": "{name}'a Hoş Geldiniz!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Son fiyatlar",
