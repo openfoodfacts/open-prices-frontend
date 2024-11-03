@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Odkaz zkopírován",
 		"LocationCount": "{count} poloh",
 		"Map": "Mapa",
+		"Online": "Online",
 		"Order": "Pořadí",
 		"OrderLocationCountDESC": "Počet míst",
 		"OrderProductUniqueScansDESC": "Počet skenů",
@@ -231,6 +232,7 @@
 		"Receipts": "Účtenky",
 		"ReceiptPriceCount": "Počet cen",
 		"ReceiptPriceTotal": "Celková částka",
+		"Recent": "Recent",
 		"Search": "Vyhledat",
 		"Settings": "Nastavení",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
@@ -301,10 +303,6 @@
 			"Subtitle": "Otevřená crowdsourcovaná databáze cen potravin 🏷🍊💲",
 			"Title": "Vítejte v {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Nejnovější ceny",
