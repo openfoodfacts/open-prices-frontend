@@ -5,6 +5,7 @@
       <l-popup>
         <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
         {{ getLocationTitle(location, false, true, true) }}<br>
+        <span v-if="location.info">{{ location.info }}<br></span>
         <v-chip label size="small" density="comfortable">
           {{ getLocationTag(location) }}
         </v-chip>
