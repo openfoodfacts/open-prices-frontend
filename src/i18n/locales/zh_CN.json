@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "链接已复制",
 		"LocationCount": "{count} 地点",
 		"Map": "地图",
+		"Online": "Online",
 		"Order": "命令",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "扫描次数",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "价格数量",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Recent",
 		"Search": "搜尋",
 		"Settings": "設定",
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
@@ -301,10 +303,6 @@
 			"Subtitle": "一个开放的众包食品价格数据库🏷🍊💲",
 			"Title": "欢迎来到 {name}！"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "最新价格",
