@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations",
 		"Map": "Map",
+		"Online": "Online",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Recent",
 		"Search": "Sairch",
 		"Settings": "Settins",
 		"SignInOFFAccount": "Sign in with your {url} account",
@@ -301,10 +303,6 @@
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
