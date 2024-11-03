@@ -73,6 +73,7 @@ export default {
       default: () => ({
         type: null,
         proof_id: null,
+        location_id: null,
         location_osm_id: null,
         location_osm_type: null,
         date: utils.currentDate(),
@@ -167,7 +168,7 @@ export default {
       })
       .then((proofImageCompressed) => {
         api
-          .createProof(proofImageCompressed, this.proofForm.type, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency, this.proofForm.receipt_price_count, this.proofForm.receipt_price_total)
+          .createProof(proofImageCompressed, this.proofForm.type, this.proofForm.location_id, this.proofForm.location_osm_id, this.proofForm.location_osm_type, this.proofForm.date, this.proofForm.currency, this.proofForm.receipt_price_count, this.proofForm.receipt_price_total)
           .then((data) => {
             this.loading = false
             if (data.id) {

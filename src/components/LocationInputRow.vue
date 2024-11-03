@@ -4,16 +4,7 @@
       <h3 class="required mb-1">
         {{ $t('AddPriceSingle.WhereWhen.Location') }}
       </h3>
-      <v-chip
-        v-for="location in recentLocations"
-        :key="getLocationUniqueID(location)"
-        class="mb-2"
-        :style="isSelectedLocation(location) ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
-        @click="setLocationData(location)"
-      >
-        <v-icon start :icon="isSelectedLocation(location) ? 'mdi-check-circle-outline' : 'mdi-history'" :color="isSelectedLocation(location) ? 'green' : ''" />
-        {{ getLocationTitle(location, true, true, true) }}
-      </v-chip>
+      <LocationRecentChip v-for="(location, index) in recentLocations" :key="index" :location="location" :currentLocation="locationForm" @click="setLocationData(location)" />
       <br v-if="recentLocations.length">
       <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="locationSelectorDialog = true">
         {{ $t('AddPriceSingle.WhereWhen.Find') }}
@@ -40,12 +31,14 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    LocationRecentChip: defineAsyncComponent(() => import('../components/LocationRecentChip.vue')),
     LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
   },
   props: {
     locationForm: {
       type: Object,
       default: () => ({
+        location_id: null,
         location_osm_id: null,
         location_osm_type: null
       })
@@ -67,8 +60,9 @@ export default {
       return this.appStore.getRecentLocations(this.maxRecentLocations)
     },
     locationFormFilled() {
-      let keys = ['location_osm_id', 'location_osm_type']
-      return Object.keys(this.locationForm).filter(k => keys.includes(k)).every(k => !!this.locationForm[k])
+      let keysOSM = ['location_osm_id', 'location_osm_type']
+      let keysONLINE = ['location_id']
+      return Object.keys(this.locationForm).filter(k => keysOSM.includes(k)).every(k => !!this.locationForm[k]) || Object.keys(this.locationForm).filter(k => keysONLINE.includes(k)).every(k => !!this.locationForm[k])
     },
   },
   mounted() {
@@ -83,20 +77,20 @@ export default {
     showLocationSelectorDialog() {
       this.locationSelectorDialog = true
     },
-    getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
-      return utils.getLocationOSMTitle(location, withName, withRoad, withCity)
-    },
-    getLocationUniqueID(location) {
-      return utils.getLocationUniqueID(location)
-    },
     setLocationData(location) {
+      console.log(location)
       this.appStore.addRecentLocation(location)
       // update locationForm
-      this.locationForm.location_osm_id = utils.getLocationID(location)
-      this.locationForm.location_osm_type = utils.getLocationType(location)
-    },
-    isSelectedLocation(location) {
-      return utils.buildLocationUniqueId(this.locationForm.location_osm_id, this.locationForm.location_osm_type) === utils.getLocationUniqueID(location)
+      if (location.id && location.type === 'ONLINE') {
+        console.log('in ONLINE')
+        this.locationForm.location_id = location.id
+        this.locationForm.location_osm_id = null
+        this.locationForm.location_osm_type = null
+      } else {
+        this.locationForm.location_id = null
+        this.locationForm.location_osm_id = utils.getLocationID(location)
+        this.locationForm.location_osm_type = utils.getLocationType(location)
+      }
     },
   }
 }

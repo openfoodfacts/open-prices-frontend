@@ -68,13 +68,17 @@ export default {
     .then((response) => response.json())
   },
 
-  createProof(proofImage, type='PRICE_TAG', location_osm_id=null, location_osm_type=null, date=null, currency=null, receipt_price_count=null, receipt_price_total=null) {
+  createProof(proofImage, type='PRICE_TAG', location_id=null, location_osm_id=null, location_osm_type=null, date=null, currency=null, receipt_price_count=null, receipt_price_total=null) {
     const store = useAppStore()
     let formData = new FormData()
     formData.append('file', proofImage, proofImage.name)
     formData.append('type', type)
-    formData.append('location_osm_id', location_osm_id ? location_osm_id : '')
-    formData.append('location_osm_type', location_osm_type ? location_osm_type : '')
+    if (location_id) {
+      formData.append('location_id', location_id ? location_id : '')
+    } else {
+      formData.append('location_osm_id', location_osm_id ? location_osm_id : '')
+      formData.append('location_osm_type', location_osm_type ? location_osm_type : '')
+    }
     formData.append('date', date ? date : '')
     formData.append('currency', currency ? currency : '')
     if (type === constants.PROOF_TYPE_RECEIPT) {

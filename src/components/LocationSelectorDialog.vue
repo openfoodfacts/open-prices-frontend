@@ -78,13 +78,7 @@
           </v-window-item>
 
           <v-window-item value="recent">
-            <v-chip
-              v-for="location in recentLocations" :key="getLocationUniqueID(location)" class="mb-2" closable
-              prepend-icon="mdi-history" close-icon="mdi-delete" @click="selectLocation(location)"
-              @click:close="removeRecentLocation(location)"
-            >
-              {{ getLocationTitle(location, true, true, true) }}
-            </v-chip>
+            <LocationRecentChip v-for="(location, index) in recentLocations" :key="index" :location="location" :withRemoveAction="true" @click="selectLocation(location)" @click:close="removeRecentLocation(location)" />
             <br>
             <v-btn size="small" @click="clearRecentLocations">
               {{ $t('LocationSelector.Clear') }}
@@ -124,6 +118,7 @@ import utils from '../utils.js'
 export default {
   components: {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
+    LocationRecentChip: defineAsyncComponent(() => import('../components/LocationRecentChip.vue')),
     LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
