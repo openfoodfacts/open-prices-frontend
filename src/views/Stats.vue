@@ -51,7 +51,7 @@
       <StatCard :value="stats.location_type_osm_count" :subtitle="OSM_NAME" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_type_online_count" :subtitle="$t('LocationCard.ONLINE')" />
+      <StatCard :value="stats.location_type_online_count" :subtitle="$t('Common.Online')" />
     </v-col>
   </v-row>
 

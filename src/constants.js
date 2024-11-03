@@ -14,6 +14,7 @@ const LOCATION_TYPE_OSM = 'OSM'
 const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
 const LOCATION_TYPE_ONLINE = 'ONLINE'
 const LOCATION_TYPE_ONLINE_ICON = 'mdi-web'
+const OSM_NAME = 'OpenStreetMap'
 
 export default {
   APP_NAME: 'Open Prices',
@@ -128,10 +129,18 @@ export default {
     { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
     { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
   ],
+  LOCATION_SEARCH_PROVIDER_LIST: [
+    { key: 'nominatim' },
+    { key: 'photon' },
+  ],
+  LOCATION_SELECTOR_DISPLAY_LIST: [
+    { key: 'osm', value: OSM_NAME, icon: LOCATION_TYPE_OSM_ICON },
+    { key: 'recent', value: 'Recent', icon: 'mdi-history' },
+  ],
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
   DATE_YEAR_MONTH_REGEX_MATCH: /(\d{4})-(\d{2})/,
   DATE_YEAR_REGEX_MATCH: /(\d{4})/,
-  OSM_NAME: 'OpenStreetMap',
+  OSM_NAME: OSM_NAME,
   OSM_URL: 'https://www.openstreetmap.org',
   OSM_NOMINATIM_SEARCH_URL: 'https://nominatim.openstreetmap.org/search',
   OSM_NOMINATIM_LOOKUP_URL: 'https://nominatim.openstreetmap.org/lookup',
