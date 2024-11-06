@@ -133,12 +133,12 @@
 		"Title": "Type a barcode"
 	},
 	"BrandDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"TopProducts": "Top products",
 		"BrandProductTotal": "{count} products"
 	},
 	"CategoryDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"TopProducts": "Top products",
 		"CategoryProductTotal": "{count} products"
 	},
@@ -174,7 +174,7 @@
 		"Languages": "Språk",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"Location": "Location",
 		"Locations": "Locations",
 		"LocationMissing": "Location missing",
@@ -306,12 +306,12 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationList": {
 		"Title": "Top locations",
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"LocationTotal": "{count} locations"
 	},
 	"LocationSelector": {
@@ -361,7 +361,7 @@
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"Title": "Latest prices"
 	},
 	"PriceRules": {
@@ -399,12 +399,12 @@
 		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProductList": {
 		"HideProductsWithPrices": "Hide products with prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products",
@@ -429,12 +429,12 @@
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"Prices": "Prices",
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Integritet"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -528,7 +528,7 @@
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
@@ -540,10 +540,10 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LoadMore": "Ladda fler"
 	},
 	"UserList": {
-		"LoadMore": "Load more",
+		"LoadMore": "Ladda fler",
 		"Title": "Top contributors",
 		"UserTotal": "{count} contributors"
 	},
