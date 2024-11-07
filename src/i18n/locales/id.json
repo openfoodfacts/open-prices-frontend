@@ -448,6 +448,12 @@
 		"AddPrice": {
 			"Title": "Tambahkan harga"
 		},
+		"AddPriceSingle": {
+			"Title": "Tambahkan satu harga"
+		},
+		"AddPriceMultiple": {
+			"Title": "Tambahkan beberapa harga"
+		},
 		"Home": {
 			"Title": "Beranda"
 		},
