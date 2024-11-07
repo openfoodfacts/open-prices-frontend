@@ -448,6 +448,12 @@
 		"AddPrice": {
 			"Title": "Add a price"
 		},
+		"AddPriceSingle": {
+			"Title": "Add a single price"
+		},
+		"AddPriceMultiple": {
+			"Title": "Add multiple prices"
+		},
 		"Home": {
 			"Title": "Hjem"
 		},
