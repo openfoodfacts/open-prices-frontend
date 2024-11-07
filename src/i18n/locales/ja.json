@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "リンクをコピーしました",
 		"LocationCount": "{count} か所",
 		"Map": "地図",
+		"Online": "Online",
 		"Order": "注文品",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "スキャンの数:",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "価格の数",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Recent",
 		"Search": "検索",
 		"Settings": "設定",
 		"SignInOFFAccount": "Google アカウントでログイン",
@@ -301,10 +303,6 @@
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "{name} へようこそ"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",

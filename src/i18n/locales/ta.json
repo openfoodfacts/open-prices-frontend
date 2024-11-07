@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "லிங்க் காப்பி ஆகிவிட்டது",
 		"LocationCount": "{count} இடங்கள்",
 		"Map": "Map",
+		"Online": "ஆன்லைன்",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -231,6 +232,7 @@
 		"Receipts": "ரசீதுகள்",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "சமீபத்திய",
 		"Search": "தேடுக",
 		"Settings": "அமைப்புகள்",
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
@@ -301,10 +303,6 @@
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
 			"Title": "Welcome to {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",

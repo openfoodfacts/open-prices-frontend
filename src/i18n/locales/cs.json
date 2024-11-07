@@ -7,32 +7,32 @@
 		"HowAnswer1": "Poskytujeme crowdsourcing open source datový soubor cen. Ceny mohou uživatelé přidávat prostřednictvím této webové aplikace nebo prostřednictvím oficiální mobilní aplikace {off_url}. Prodejci nebo aplikace třetích stran mohou také přispět pomocí našeho {op_api_url}.",
 		"HowAnswer2": "{op_name} neslouží pouze k ukládání jednotlivých cen, ale také spotřebních košů, tedy seznamu produktů, které si lidé koupí za jeden nákup. Tato data jsou pro výzkumníky mimořádně zajímavá k analýze stravovacích návyků.",
 		"HowAnswer3": "Pokud je to možné, žádáme přispěvatele, aby poskytli doklad o ceně ve formě fotografie cenovky nebo účtenky. To má zajistit kvalitu dat.",
-		"HowAnswer4": "Pokud poskytujete účtenku jako důkazní obrázek, znamená to, že souhlasíte s odesláním svého spotřebního koše do {op_name}. Účtenku anonymizujeme a zpřístupníme veřejnosti, aby mohla být použita pro výzkumné účely. Pokud nechcete svou účtenku veřejně sdílet, stále můžete přispět tím, že vyfotíte cenovku.",
+		"HowAnswer4": "Pokud poskytujete účtenku jako obrázek dokladu, znamená to, že souhlasíte s odesláním svého spotřebního koše do {op_name}. Účtenku anonymizujeme a zpřístupníme veřejnosti, aby mohla být použita pro výzkumné účely. Pokud nechcete svou účtenku veřejně sdílet, stále můžete přispět tím, že vyfotíte cenovku.",
 		"LicenseTitle": "Licence",
 		"LicenseAnswer1": "Cenová datová sada je licencována pod {odbl_url}, což znamená, že ji lze použít pro jakýkoli účel, pokud připíšete {op_name} a sdílíte veškeré úpravy, které v datové sadě provedete.",
-		"LicenseAnswer2": "Obrázky předložené jako důkaz jsou licencovány pod {ccbysa_url}.",
+		"LicenseAnswer2": "Obrázky předložené jako doklad jsou licencovány pod {ccbysa_url}.",
 		"WhatTitle": "Co je {op_name}?",
 		"WhatOFFTitle": "Co je {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
-		"WhyOFFTitle": "Why is {off_name} doing this?",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
-		"HowUseData": "How can I use the data?",
-		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
+		"WhatOFFAnswer": "{off_url} je nezisková organizace, která shromažďuje a sdílí informace o potravinářských výrobcích z celého světa. Jde o společný projekt, který se při sběru dat opírá o dobrovolníky. {off_url} je největší otevřená databáze potravinářských produktů na světě s více než 3 miliony produktů ve 200 zemích.",
+		"WhyOFFTitle": "Proč to {off_name} dělá?",
+		"WhyOFFAnswer": "Informace o ceně jsou nesmírně důležité pro pochopení potravinových systémů. Je to klíčový faktor pro pochopení nákladů na potraviny a pro podporu zdravější stravy. Otevření údajů o cenách je způsob, jak usnadnit výzkumníkům, novinářům a občanům lepší pochopení toho, jak se ceny potravin geograficky a v čase mění.",
+		"HowContribute": "Jak mohu přispět?",
+		"HowContributeAnswer": "Můžete přispět přidáním cen do datové sady. Můžete tak učinit pomocí webové aplikace nebo prostřednictvím oficiální mobilní aplikace. {op_api_url} je také k dispozici, pokud chcete {op_name} integrovat do vaší aplikace. Abyste mohli přispívat, potřebujete účet {off_url}.",
+		"HowUseData": "Jak mohu data používat?",
+		"HowUseDataAnswer1": "Data jsou dostupná pod {odbl_url}, což znamená, že je lze použít pro jakýkoli účel, pokud připíšete {op_name} a sdílíte veškeré změny, které v datové sadě provedete.",
+		"HowUseDataAnswer2": "{op_api_url} poskytuje způsob, jak snadno přistupovat k datům.",
+		"HowUseDataAnswer3": "Data jsou také dostupná jako 3 gzip JSONL výpisy: {op_dumb_prices_url}, {op_dumb_proofs_url} a {op_dumb_locations_url}.",
 		"HowContact": "Jak se mohu spojit?",
-		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
+		"HowContactAnswer": "Můžete nás kontaktovat zasláním e-mailu na {off_contact_email_url}.",
 		"HowSupport": "Jak mohu podpořit {op_name}?",
-		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
+		"HowSupportAnswer": "{op_name} můžete podpořit příspěvkem do projektu, sdílením se svými přáteli a rodinou a darem pro {off_url}.",
 		"WhyOSM": "Proč požadujete {osm_name} ID, když přidám cenu?",
-		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
-		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
-		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
-		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
-		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
-		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
+		"WhyOSMAnswer": "Požadujeme {osm_url} ID, abychom mohli propojit cenu s konkrétním obchodem. To je užitečné, abyste mohli zobrazit cenu na mapě a mohli analyzovat regionální nebo maloobchodní cenové rozdíly.",
+		"HowRetailer": "Jsem maloobchodník a chci přispět cenami. Jak to mohu udělat?",
+		"HowRetailerAnswer": "Ceny můžete přidat pomocí našeho {op_api_url}. Pokud chcete přispět celou škálou cen, kontaktujte nás prosím na adrese {off_contact_email_url}.",
+		"WhyNoScraping": "Uvažujete o scrapování cen z webových stránek prodejců?",
+		"WhyNoScrapingAnswer1": "Z právních a technických důvodů nepovažujeme scrapování cen z webových stránek prodejců za platný způsob, jak přispět do {op_name}. Chceme se ujistit, že ceny, které shromažďujeme, jsou přesné a aktuální, a přijímání scrapovaných cen od přispěvatelů nám to neumožňuje.",
+		"WhyNoScrapingAnswer2": "Cenový scraping je zvažovanou možností v budoucí verzi {op_name}, ale provedl by ho sám {op_name}, abychom mohli mít doklad o ceně na základě HTML stránky."
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
@@ -60,7 +60,7 @@
 			"Add": "Přidat novou cenu",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} cena již nahrána | {priceAlreadyUploadedNumber} cen již nahráno",
 			"Create": "Vytvořit",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
+			"ExistingProductFound": "Duplikát? Tento produkt již byl pro tento důkaz přidán",
 			"NewPrice": "Nová cena",
 			"PriceUploaded": "Cena vytvořena!",
 			"Upload": "Nahrát"
@@ -68,7 +68,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Účtenky mohou obsahovat osobní údaje, doporučujeme je před focením schovat (zakrýt, přeložit...).",
 			"PrivateWarning": "Účtenku můžete také nastavit jako soukromou. Soukromé důkazy budou viditelné pouze pro vás a pro moderátory.",
-			"Title": "Podrobnosti o důkazu"
+			"Title": "Detaily dokladu"
 		},
 		"Title": "Přidat více cen"
 	},
@@ -79,18 +79,18 @@
 			"Label": "Cena",
 			"LabelDiscounted": "Snížená cena",
 			"LabelFull": "Plná cena",
-			"Proof": "Důkaz",
+			"Proof": "Doklad",
 			"ProofDateChanged": "Datum aktualizováno!",
-			"ProofSelected": "Důkaz vybrán!",
-			"ProofUploaded": "Důkaz nahrán!",
+			"ProofSelected": "Doklad vybrán!",
+			"ProofUploaded": "Doklad nahrán!",
 			"Title": "Podrobnosti o ceně",
-			"UploadProof": "Nahrát důkaz",
+			"UploadProof": "Nahrát doklad",
 			"Picture": "Obrázek",
 			"TakePicture": "Vyfotit",
 			"Gallery": "Galerie zařízení",
 			"SelectFromGallery": "Vybrat z galerie zařízení",
-			"RecentProof": "Nedávný důkaz",
-			"SelectRecentProof": "Vybrat nedávný důkaz"
+			"RecentProof": "Nedávný doklad",
+			"SelectRecentProof": "Vybrat nedávný doklad"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorie",
@@ -146,17 +146,17 @@
 		"About": "O aplikaci",
 		"AddPrice": "Přidat cenu",
 		"AddToOFF": "Přidat do {name}",
-		"AdditionalInfo": "Additional information",
+		"AdditionalInfo": "Další informace",
 		"Brand": "Značka",
 		"Price": "Cena",
 		"Prices": "Ceny",
 		"Product": "Produkt",
 		"Products": "Produkty",
-		"Proof": "Důkaz",
-		"Proofs": "Proofs",
+		"Proof": "Doklad",
+		"Proofs": "Doklady",
 		"Category": "Kategorie",
 		"Categories": "Kategorie",
-		"Chart": "Chart",
+		"Chart": "Graf",
 		"Contributors": "Přispěvatelé",
 		"Country": "Země",
 		"Currency": "Měna",
@@ -167,13 +167,13 @@
 		"DisplayPriceList": "Seznam",
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
-		"DisplayPriceChart": "Chart",
+		"DisplayPriceChart": "Graf",
 		"Label": "Štítek",
 		"Labels": "Štítky",
 		"Language": "Jazyk",
 		"Languages": "Jazyky",
 		"LatestPrices": "Nejnovější ceny",
-		"LatestProofs": "Nejnovější důkazy",
+		"LatestProofs": "Nejnovější doklady",
 		"LoadMore": "Načíst další",
 		"Location": "Poloha",
 		"Locations": "Polohy",
@@ -186,16 +186,16 @@
 		"Example": "Příklad",
 		"Examples": "Příklady",
 		"ExampleWithColon": "Například:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "Příklad: {value}",
 		"ExamplesWithColon": "Například:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "Příklady: {value}",
 		"Edit": "Upravit",
 		"Filter": "Filtr",
 		"FilterProductWithPriceCount": "S cenou",
 		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
 		"FilterProductWithoutPriceCount": "Bez cen",
 		"FilterPriceMoreThan30DaysHide": "Skrýt ceny starší než 30 dní",
-		"FilterProofWithPriceCountHide": "Hide proofs with prices",
+		"FilterProofWithPriceCountHide": "Skrýt doklady s cenami",
 		"FilterLocationWithPriceCountHide": "Skrýt místa s cenami",
 		"FilterUserWithPriceCountHide": "Skrýt přispěvatele s cenami",
 		"FAQ": "Často kladené otázky",
@@ -204,10 +204,11 @@
 		"History": "Historie",
 		"Image": "Obrázek",
 		"ImageFull": "Obrázek plné velikosti",
-		"Latest": "Latest",
+		"Latest": "Poslední",
 		"LinkCopySuccess": "Odkaz zkopírován",
 		"LocationCount": "{count} poloh",
 		"Map": "Mapa",
+		"Online": "Online",
 		"Order": "Pořadí",
 		"OrderLocationCountDESC": "Počet míst",
 		"OrderProductUniqueScansDESC": "Počet skenů",
@@ -217,20 +218,21 @@
 		"OrderPriceCreatedDESC": "Datum přidání",
 		"OrderPriceDateDESC": "Datum ceny",
 		"OrderProductCountDESC": "Počet produktů",
-		"OrderProofCountDESC": "Proof count",
+		"OrderProofCountDESC": "Počet dokladů",
 		"OrderProofCreatedDESC": "Datum přidání",
-		"OrderProofDateDESC": "Proof date",
+		"OrderProofDateDESC": "Datum důkazu",
 		"OrderUserCountDESC": "Počet uživatelů",
-		"PersonalInfo": "Personal information",
+		"PersonalInfo": "Osobní údaje",
 		"PriceCount": "{count} cen",
 		"PriceCreated": "Cena vytvořena!",
 		"PricesMore": "Více cen",
 		"ProductCount": "{count} produktů",
-		"ProofCount": "{count} důkazů",
+		"ProofCount": "{count} dokladů",
 		"Receipt": "Účtenka",
-		"Receipts": "Receipts",
+		"Receipts": "Účtenky",
 		"ReceiptPriceCount": "Počet cen",
-		"ReceiptPriceTotal": "Total amount",
+		"ReceiptPriceTotal": "Celková částka",
+		"Recent": "Recent",
 		"Search": "Vyhledat",
 		"Settings": "Nastavení",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
@@ -240,16 +242,16 @@
 		"Share": "Sdílet",
 		"Source": "Zdroj",
 		"Stats": "Statistiky",
-		"TaglineOriginal": "An open crowdsourced database of food prices",
-		"TaglineAlt1": "The open crowdsourced database of prices",
-		"TaglineAlt2": "The open crowdsourced database of food and product prices",
+		"TaglineOriginal": "Otevřená crowdsourcovaná databáze cen potravin",
+		"TaglineAlt1": "Otevřená crowdsourcovaná databáze cen",
+		"TaglineAlt2": "Otevřená crowdsourcovaná databáze cen potravin a produktů",
 		"TaglineAlt3": "Ceny by měly být zdarma",
 		"Thanks": "Děkujeme",
 		"TopContributors": "Nejlepší přispěvatelé",
 		"TopLocations": "Nejlepší polohy",
 		"TopProducts": "Nejlepší produkty",
 		"Today": "Dnes",
-		"Top": "Top",
+		"Top": "Nahoru",
 		"Total": "Celkem",
 		"Type": "Typ",
 		"Upload": "Nahrát",
@@ -272,7 +274,7 @@
 		"Select": "Vybrat {currency_code}"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Vyberte jeden ze svých nedávných důkazů"
+		"SelectRecentProof": "Vyberte jeden ze svých nedávných dokladů"
 	},
 	"Footer": {
 		"About": "O aplikaci",
@@ -292,19 +294,15 @@
 	"Home": {
 		"AddPrice": "Přidat cenu",
 		"LatestPrices": "Nejnovější ceny",
-		"ProofAdd": "Přidat důkaz",
+		"ProofAdd": "Přidat doklad",
 		"SearchProduct": "Vyhledat produkt",
 		"SettingsUpdated": "Nastavení aktualizováno!",
 		"TodayPriceStat": "Dnes nebyly přidány žádné ceny | Dnes přidány {todayPriceNumber} nové ceny | Dnes přidáno {todayPriceNumber} nových cen!",
 		"Welcome": {
-			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
+			"Generic": "Otevřená crowdsourcovaná databáze cen 🏷🍊💲",
 			"Subtitle": "Otevřená crowdsourcovaná databáze cen potravin 🏷🍊💲",
 			"Title": "Vítejte v {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Nejnovější ceny",
@@ -338,7 +336,7 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / l",
 		"PriceValueDisplayUnit": "{0} / kus",
-		"Proof": "Důkaz",
+		"Proof": "Doklad",
 		"FullPrice": "Plná cena",
 		"UnknownProduct": "Neznámý produkt"
 	},
@@ -413,35 +411,35 @@
 		"ProductTotal": "{count} produktů"
 	},
 	"ProofCard": {
-		"Proof": "Důkaz",
+		"Proof": "Doklad",
 		"PRICE_TAG": "Cenovka",
 		"RECEIPT": "Účtenka",
 		"GDPR_REQUEST": "GDPR požadavek",
 		"SHOP_IMPORT": "Import obchodu"
 	},
 	"ProofCreate": {
-		"SelectProof": "Vybrat důkaz",
-		"ProofSelected": "Důkaz vybrán!",
-		"Success": "Důkaz upraven!"
+		"SelectProof": "Vybrat doklad",
+		"ProofSelected": "Doklad vybrán!",
+		"Success": "Doklad vytvořen!"
 	},
 	"ProofDelete": {
-		"Confirmation": "Jste si jisti, že chcete smazat tento důkaz?",
+		"Confirmation": "Opravdu chcete smazat tento doklad?",
 		"Delete": "Odstranit",
-		"Title": "Odstranit důkaz",
-		"Success": "Důkaz odstraněn!"
+		"Title": "Smazat doklad",
+		"Success": "Doklad smazán!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Načíst další",
 		"Prices": "Ceny",
-		"ProofNotFound": "Důkaz nenalezen (nebo není vlastník)",
+		"ProofNotFound": "Doklad nenalezen (nebo není vlastník)",
 		"Public": "Veřejný",
 		"Private": "Soukromý",
 		"Privacy": "Soukromí"
 	},
 	"ProofEdit": {
-		"Title": "Upravit důkaz",
+		"Title": "Upravit doklad",
 		"Save": "Uložit",
-		"Success": "Důkaz upraven!"
+		"Success": "Doklad upraven!"
 	},
 	"Router": {
 		"About": {
@@ -466,7 +464,7 @@
 			"Title": "Moje důkazy"
 		},
 		"ProofAddSingle": {
-			"Title": "Přidat důkaz"
+			"Title": "Přidat doklad"
 		},
 		"Search": {
 			"Title": "Vyhledat"
@@ -529,16 +527,16 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Nejnovější ceny",
-		"LatestProofs": "Nejnovější důkazy",
+		"LatestProofs": "Nejnovější doklady",
 		"LoadMore": "Načíst další",
 		"MyDashboard": "Můj ovládací panel",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje důkazy",
-		"ProofUpdated": "Důkaz aktualizován!",
+		"ProofUpdated": "Doklad aktualizován!",
 		"Settings": "Nastavení",
 		"Title": "Nástěnka",
 		"UserPriceTotal": "{count} cen",
-		"UserProofTotal": "{count} důkazů"
+		"UserProofTotal": "{count} dokladů"
 	},
 	"UserDetail": {
 		"LatestPrices": "Nejnovější ceny",

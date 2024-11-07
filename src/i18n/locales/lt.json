@@ -186,9 +186,9 @@
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Pavyzdys:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "Pavyzdys: {value}",
 		"ExamplesWithColon": "Pavyzdžiai:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "Pavyzdžiai: {value}",
 		"Edit": "Redaguoti",
 		"Filter": "Filtras",
 		"FilterProductWithPriceCount": "Su kaina",
@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Nuoroda nukopijuota",
 		"LocationCount": "{count} vietos (-ų)",
 		"Map": "Žemėlapis",
+		"Online": "Prisijungus",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Vietų skaičius",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Naujausi",
 		"Search": "Paieška",
 		"Settings": "Nustatymai",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
@@ -301,10 +303,6 @@
 			"Subtitle": "Atviroji sutelktinių išteklių gautų maisto kainų duomenų bazė 🏷🍊💲",
 			"Title": "Sveiki prisijungę prie {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Naujausios kainos",

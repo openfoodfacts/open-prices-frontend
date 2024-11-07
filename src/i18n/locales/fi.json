@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Linkki kopioitu",
 		"LocationCount": "{count} sijaintia",
 		"Map": "Kartta",
+		"Online": "Online",
 		"Order": "Järjestys",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Skannausten määrä",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Hintojen määrä",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Recent",
 		"Search": "Etsi",
 		"Settings": "Asetukset",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
@@ -301,10 +303,6 @@
 			"Subtitle": "Avoin joukkolähdetietokanta elintarvikkeiden hinnoista 🏷🍊💲",
 			"Title": "Tervetuloa {name}:aan!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Viimeisimmät hinnat",

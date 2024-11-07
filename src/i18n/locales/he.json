@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "הקישור הועתק",
 		"LocationCount": "{count} מקומות",
 		"Map": "מפה",
+		"Online": "מקוון",
 		"Order": "סדר",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "מספר הסריקות",
@@ -231,6 +232,7 @@
 		"Receipts": "קבלות",
 		"ReceiptPriceCount": "מספר המחירים",
 		"ReceiptPriceTotal": "סכום כולל",
+		"Recent": "אחרונים",
 		"Search": "חיפוש",
 		"Settings": "הגדרות",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
@@ -301,10 +303,6 @@
 			"Subtitle": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים 🏷🍊",
 			"Title": "ברוך בואך אל {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "מקוון"
 	},
 	"LocationDetail": {
 		"LatestPrices": "מחירים עדכניים",

@@ -208,6 +208,7 @@
 		"LinkCopySuccess": "Tautan disalin",
 		"LocationCount": "{count} lokasi",
 		"Map": "Peta",
+		"Online": "Online",
 		"Order": "Urutan",
 		"OrderLocationCountDESC": "Jumlah lokasi",
 		"OrderProductUniqueScansDESC": "Jumlah pindaian",
@@ -231,6 +232,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Jumlah harga",
 		"ReceiptPriceTotal": "Total amount",
+		"Recent": "Recent",
 		"Search": "Cari",
 		"Settings": "Pengaturan",
 		"SignInOFFAccount": "Masuk dengan akun {url} Anda",
@@ -301,10 +303,6 @@
 			"Subtitle": "Basis data harga makanan yang terbuka dan bersumber dari banyak orang 🏷🍊💲",
 			"Title": "Selamat datang di {name}!"
 		}
-	},
-	"LocationCard": {
-		"OSM": "OpenStreetMap",
-		"ONLINE": "Online"
 	},
 	"LocationDetail": {
 		"LatestPrices": "Harga terbaru",
