@@ -448,6 +448,12 @@
 		"AddPrice": {
 			"Title": "Add a price"
 		},
+		"AddPriceSingle": {
+			"Title": "Add a single price"
+		},
+		"AddPriceMultiple": {
+			"Title": "複数の価格を追加する"
+		},
 		"Home": {
 			"Title": "ホーム"
 		},
