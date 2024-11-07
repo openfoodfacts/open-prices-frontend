@@ -448,6 +448,12 @@
 		"AddPrice": {
 			"Title": "Pridajte cenu"
 		},
+		"AddPriceSingle": {
+			"Title": "Pridajte jednu cenu"
+		},
+		"AddPriceMultiple": {
+			"Title": "Pridajte viacero cien"
+		},
 		"Home": {
 			"Title": "Domov"
 		},
