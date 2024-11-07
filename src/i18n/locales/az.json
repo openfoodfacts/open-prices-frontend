@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Label",
 		"Labels": "Labels",
-		"Language": "Dil",
+		"Language": "Languages",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "Add a price"
+		},
+		"AddPriceSingle": {
+			"Title": "Add a single price"
+		},
+		"AddPriceMultiple": {
+			"Title": "Add multiple prices"
 		},
 		"Home": {
 			"Title": "Əsas səhifə"
