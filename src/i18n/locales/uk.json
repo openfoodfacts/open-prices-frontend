@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Графік",
 		"Label": "Мітка",
 		"Labels": "Етикетки",
-		"Language": "Мова",
+		"Language": "Мови",
 		"Languages": "Мови",
 		"LatestPrices": "Остання ціна",
 		"LatestProofs": "Останні докази",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "Додати ціну"
+		},
+		"AddPriceSingle": {
+			"Title": "Додати єдину ціну"
+		},
+		"AddPriceMultiple": {
+			"Title": "Додати кілька цін"
 		},
 		"Home": {
 			"Title": "Головна"
