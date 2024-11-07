@@ -1,8 +1,4 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('AddPriceMultiple.Title') }}
-  </h1>
-
   <v-row>
     <!-- Step 1: proof (image, location, date & currency) -->
     <v-col cols="12" md="6">
@@ -26,6 +22,7 @@
     <v-col v-if="proofFormFilled" cols="12" md="6">
       <!-- Step 2a: product prices already uploaded -->
       <v-card
+        v-if="productPriceUploadedCount"
         class="mb-4"
         prepend-icon="mdi-tag-check-outline"
         style="border: 1px solid #4CAF50"
@@ -66,7 +63,7 @@
         <v-card
           class="mb-4"
           :title="$t('AddPriceMultiple.ProductPriceDetails.NewPrice')"
-          prepend-icon="mdi-tag-outline"
+          prepend-icon="mdi-tag-plus-outline"
           height="100%"
           style="border: 1px solid transparent"
         >

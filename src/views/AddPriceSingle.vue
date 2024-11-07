@@ -1,8 +1,4 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('AddPriceSingle.Title') }}
-  </h1>
-
   <v-form @submit.prevent="createPrice">
     <v-row>
       <!-- Step 1: product -->
@@ -45,7 +41,7 @@
       <v-col cols="12" md="6" lg="4">
         <v-card
           :title="$t('AddPriceSingle.PriceDetails.Title')"
-          prepend-icon="mdi-tag-outline"
+          prepend-icon="mdi-tag-plus-outline"
           height="100%"
           :style="priceFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
         >
@@ -65,9 +61,6 @@
               </v-item-group>
             </h3>
             <PriceInputRow :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
-            <h3 class="mt-4 mb-1">
-              {{ $t('Common.Proof') }}
-            </h3>
           </v-card-text>
         </v-card>
       </v-col>
