@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="8">
+    <v-col :cols="proofImagePreview ? '8' : '12'">
       <h3 class="required mb-1">
         {{ $t('Common.Image') }}
       </h3>
@@ -33,25 +33,24 @@
         ref="proofGallery" v-model="proofImage" class="d-none overflow-hidden" accept="image/*, .heic"
         :loading="loading" @update:modelValue="newProof('gallery')" @click:clear="clearProof"
       />
-      <p v-if="!loading" class="mt-2 mb-2">
+
+      <!-- pending or success message -->
+      <p v-if="!loading" class="mb-2">
         <i v-if="!proofImage" class="text-red">{{ $t('ProofCreate.SelectProof') }}</i>
         <i v-else class="text-green">{{ $t('ProofCreate.ProofSelected') }}</i>
       </p>
+
+      <!-- RECEIPT: warning message -->
+      <v-alert
+        v-if="proofImageForm && proofImageForm.type === PROOF_TYPE_RECEIPT"
+        type="warning"
+        variant="outlined"
+        density="compact"
+        :text="$t('AddPriceMultiple.ProofDetails.ReceiptWarning')"
+      />
     </v-col>
     <v-col v-if="proofImagePreview" cols="4">
       <v-img :src="proofImagePreview" style="max-height:200px" />
-    </v-col>
-  </v-row>
-
-  <!-- RECEIPT: warning message -->
-  <v-row v-if="proofImageForm && proofImageForm.type === PROOF_TYPE_RECEIPT" class="mt-0">
-    <v-col>
-      <h3 class="mb-1">
-        {{ $t('ProofDetail.Privacy') }}
-      </h3>
-      <p class="text-caption text-warning">
-        <i>{{ $t('AddPriceMultiple.ProofDetails.ReceiptWarning') }}</i>
-      </p>
     </v-col>
   </v-row>
 

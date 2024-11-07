@@ -44,6 +44,7 @@
         :label="$t('Common.ReceiptPriceCount')"
         type="text"
         inputmode="numeric"
+        hide-details="auto"
       />
     </v-col>
     <v-col cols="6">
@@ -53,6 +54,7 @@
         type="text"
         inputmode="decimal"
         :rules="priceRules"
+        hide-details="auto"
         @update:modelValue="newValue => proofMetadataForm.receipt_price_total = fixComma(newValue)"
       />
     </v-col>
