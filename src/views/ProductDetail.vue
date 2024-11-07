@@ -99,6 +99,7 @@ export default {
       productPriceTotal: 0,
       productPricePage: 0,
       priceLocationList: [],
+      priceLocationTotals: {},
       loading: false,
       // share
       shareLinkCopySuccessMessage: false,
@@ -197,8 +198,10 @@ export default {
           data.items.forEach((price) => {
             if (price.location) {
               utils.addObjectToArray(this.priceLocationList, price.location)
+              this.addPriceToLocationTotals(price)
             }
           })
+          this.addLocationsInfoToPriceLocationList()
           this.loading = false
         })
     },
@@ -224,6 +227,27 @@ export default {
         this.getProductPrices()
       }
     },
+    addPriceToLocationTotals(price) {
+      const locationId = utils.getLocationUniqueID(price.location)
+      if (!this.priceLocationTotals[locationId]) {
+        this.priceLocationTotals[locationId] = {total: 0, count: 0, currency: price.currency}
+      }
+      this.priceLocationTotals[locationId].total += price.price
+      this.priceLocationTotals[locationId].count += 1
+    },
+    addLocationsInfoToPriceLocationList() {
+      this.priceLocationList = this.priceLocationList.map(location => {
+        const locationId = utils.getLocationUniqueID(location)
+        const priceLocationTotal = this.priceLocationTotals[locationId]
+        if (priceLocationTotal) {
+          location.info = `
+            ${this.$t('Common.PriceCount', { count: priceLocationTotal.count })}. 
+            ${this.$t('Common.Average')}: ${utils.prettyPrice(priceLocationTotal.total / priceLocationTotal.count, priceLocationTotal.currency)}.
+          `
+        }
+        return location
+      })
+    }
   }
 }
 </script>
