@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Etiketa",
 		"Labels": "Etiketak",
-		"Language": "Hizkuntza",
+		"Language": "Hizkuntzak",
 		"Languages": "Hizkuntzak",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "Add a price"
+		},
+		"AddPriceSingle": {
+			"Title": "Add a single price"
+		},
+		"AddPriceMultiple": {
+			"Title": "Gehitu hainbat prezio"
 		},
 		"Home": {
 			"Title": "Hasiera"
