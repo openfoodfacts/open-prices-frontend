@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Etikety",
 		"Labels": "Labels",
-		"Language": "Language",
+		"Language": "Fiteny",
 		"Languages": "Fiteny",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "Add a price"
+		},
+		"AddPriceSingle": {
+			"Title": "Add a single price"
+		},
+		"AddPriceMultiple": {
+			"Title": "Add multiple prices"
 		},
 		"Home": {
 			"Title": "Home"
