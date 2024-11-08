@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "लेबल",
 		"Labels": "लेबल",
-		"Language": "भाषा",
+		"Language": "Languages",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "एक मूल्य जोड़े"
+		},
+		"AddPriceSingle": {
+			"Title": "Add a single price"
+		},
+		"AddPriceMultiple": {
+			"Title": "Add multiple prices"
 		},
 		"Home": {
 			"Title": "मुख्य पृष्ठ"

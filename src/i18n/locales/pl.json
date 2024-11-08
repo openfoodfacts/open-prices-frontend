@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Etykieta",
 		"Labels": "Etykieta",
-		"Language": "Język",
+		"Language": "Języki",
 		"Languages": "Języki",
 		"LatestPrices": "Najnowsze ceny",
 		"LatestProofs": "Najnowsze dowody",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "Dodaj cenę"
+		},
+		"AddPriceSingle": {
+			"Title": "Dodaj pojedynczą cenę"
+		},
+		"AddPriceMultiple": {
+			"Title": "Dodaj więcej cen"
 		},
 		"Home": {
 			"Title": "Strona główna"

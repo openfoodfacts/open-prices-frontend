@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Skritellig",
 		"Labels": "Skritellouigoù",
-		"Language": "Yezh",
+		"Language": "Yezhoù",
 		"Languages": "Yezhoù",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "Add a price"
+		},
+		"AddPriceSingle": {
+			"Title": "Add a single price"
+		},
+		"AddPriceMultiple": {
+			"Title": "Add multiple prices"
 		},
 		"Home": {
 			"Title": "Degemer"

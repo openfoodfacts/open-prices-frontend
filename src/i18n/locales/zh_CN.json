@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "標籤",
 		"Labels": "标签",
-		"Language": "语言",
+		"Language": "語言",
 		"Languages": "語言",
 		"LatestPrices": "最新价格",
 		"LatestProofs": "最新样张",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "添加价格"
+		},
+		"AddPriceSingle": {
+			"Title": "添加单价"
+		},
+		"AddPriceMultiple": {
+			"Title": "添加多个价格"
 		},
 		"Home": {
 			"Title": "主页"

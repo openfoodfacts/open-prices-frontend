@@ -448,6 +448,12 @@
 		"AddPrice": {
 			"Title": "Ajouter un prix"
 		},
+		"AddPriceSingle": {
+			"Title": "Ajouter un seul prix"
+		},
+		"AddPriceMultiple": {
+			"Title": "Ajouter plusieurs prix"
+		},
 		"Home": {
 			"Title": "Accueil"
 		},

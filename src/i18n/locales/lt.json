@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Diagrama",
 		"Label": "Etiketė",
 		"Labels": "Labels",
-		"Language": "Kalba",
+		"Language": "Kalbos",
 		"Languages": "Kalbos",
 		"LatestPrices": "Naujausios kainos",
 		"LatestProofs": "Naujausi įrodymai",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "Pridėti kainą"
+		},
+		"AddPriceSingle": {
+			"Title": "Pridėti vieną kainą"
+		},
+		"AddPriceMultiple": {
+			"Title": "Pridėti kelia skainas"
 		},
 		"Home": {
 			"Title": "Pagrindinis"

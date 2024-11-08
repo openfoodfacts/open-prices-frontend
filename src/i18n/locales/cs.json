@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Graf",
 		"Label": "Štítek",
 		"Labels": "Štítky",
-		"Language": "Jazyk",
+		"Language": "Jazyky",
 		"Languages": "Jazyky",
 		"LatestPrices": "Nejnovější ceny",
 		"LatestProofs": "Nejnovější doklady",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "Přidat cenu"
+		},
+		"AddPriceSingle": {
+			"Title": "Přidat jednotnou cenu"
+		},
+		"AddPriceMultiple": {
+			"Title": "Přidat více cen"
 		},
 		"Home": {
 			"Title": "Úvod"

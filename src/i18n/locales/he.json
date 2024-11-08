@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "תרשים",
 		"Label": "תווית",
 		"Labels": "תוויות",
-		"Language": "שפה",
+		"Language": "שפות",
 		"Languages": "שפות",
 		"LatestPrices": "מחירים עדכניים",
 		"LatestProofs": "ההוכחות העדכניות ביותר",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "הוספת מחיר"
+		},
+		"AddPriceSingle": {
+			"Title": "הוספת מחיר בודד"
+		},
+		"AddPriceMultiple": {
+			"Title": "הוספת מגוון מחירים"
 		},
 		"Home": {
 			"Title": "ראשי"

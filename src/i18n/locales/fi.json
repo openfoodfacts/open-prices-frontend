@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Chart",
 		"Label": "Merkki",
 		"Labels": "Merkit",
-		"Language": "Kieli",
+		"Language": "Kielet",
 		"Languages": "Kielet",
 		"LatestPrices": "Viimeisimmät hinnat",
 		"LatestProofs": "Uusimmat todisteet",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "Lisää hinta"
+		},
+		"AddPriceSingle": {
+			"Title": "Lisää yksi hinta"
+		},
+		"AddPriceMultiple": {
+			"Title": "Lisää useita hintoja"
 		},
 		"Home": {
 			"Title": "Koti"

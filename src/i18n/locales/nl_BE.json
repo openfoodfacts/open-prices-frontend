@@ -170,7 +170,7 @@
 		"DisplayPriceChart": "Grafiek",
 		"Label": "Keurmerk",
 		"Labels": "Keurmerken",
-		"Language": "Taal",
+		"Language": "Talen",
 		"Languages": "Talen",
 		"LatestPrices": "Laatste prijzen",
 		"LatestProofs": "Laatste bewijzen",
@@ -447,6 +447,12 @@
 		},
 		"AddPrice": {
 			"Title": "Voeg een prijs toe"
+		},
+		"AddPriceSingle": {
+			"Title": "Voeg een enkele prijs toe"
+		},
+		"AddPriceMultiple": {
+			"Title": "Voeg meerdere prijzen toe"
 		},
 		"Home": {
 			"Title": "Hoofdmenu"
