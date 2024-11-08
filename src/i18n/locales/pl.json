@@ -441,7 +441,7 @@
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Prywatność"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
