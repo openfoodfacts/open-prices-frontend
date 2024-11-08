@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.92.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.91.2...v1.92.0) (2024-11-08)
+
+
+### Features
+
+* **Location selector:** allow adding new online locations ([#1012](https://github.com/openfoodfacts/open-prices-frontend/issues/1012)) ([e6c76fa](https://github.com/openfoodfacts/open-prices-frontend/commit/e6c76fadd15ae0e08f7e0b96848b0eead7b64f14))
+
+
+### Bug Fixes
+
+* remove dangling semicolons. fix prop errors ([c391b67](https://github.com/openfoodfacts/open-prices-frontend/commit/c391b67d291021a466b53a879c13145240be6875))
+* **Stats:** display all location & proof count to have logical numbers ([1f7c03d](https://github.com/openfoodfacts/open-prices-frontend/commit/1f7c03d7191e5eaa1e0f0c2b790146768df65aff))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1016](https://github.com/openfoodfacts/open-prices-frontend/issues/1016)) ([8194bb2](https://github.com/openfoodfacts/open-prices-frontend/commit/8194bb2b0792e4515f1be48aaa044f826a6bf155))
+* **l10n:** New Crowdin translations to review and merge ([#1017](https://github.com/openfoodfacts/open-prices-frontend/issues/1017)) ([5177204](https://github.com/openfoodfacts/open-prices-frontend/commit/5177204551bad4f9fdcba77d205788825e1f8f38))
+* **l10n:** New Crowdin translations to review and merge ([#1018](https://github.com/openfoodfacts/open-prices-frontend/issues/1018)) ([cdceaf0](https://github.com/openfoodfacts/open-prices-frontend/commit/cdceaf0b77a16b5eb4df2fe03c971f0e9aedf171))
+* **l10n:** New Crowdin translations to review and merge ([#997](https://github.com/openfoodfacts/open-prices-frontend/issues/997)) ([a6fb19d](https://github.com/openfoodfacts/open-prices-frontend/commit/a6fb19d082cee873b5f2f6901bcc9ee6643fbb06))
+* **Location selector:** Add tabs to choose between OSM & Recent ([#1010](https://github.com/openfoodfacts/open-prices-frontend/issues/1010)) ([7c0b99b](https://github.com/openfoodfacts/open-prices-frontend/commit/7c0b99b4d0f130db407fbb084c8178093b65fd65))
+* **Location selector:** improve ONLINE location input. Keep only URL domain. ref [#1012](https://github.com/openfoodfacts/open-prices-frontend/issues/1012) ([15d449f](https://github.com/openfoodfacts/open-prices-frontend/commit/15d449f0066effa3d784369ca6b5dae0c87cb5a1))
+* **Location selector:** new LocationRecentChip component ([#1013](https://github.com/openfoodfacts/open-prices-frontend/issues/1013)) ([aa328e2](https://github.com/openfoodfacts/open-prices-frontend/commit/aa328e26e1ebe5a4e239353bb3df32feaf5c7e14))
+* **Location selector:** use v-tabs instead of v-btn-toggle. Change wording. ref [#1010](https://github.com/openfoodfacts/open-prices-frontend/issues/1010) ([8823745](https://github.com/openfoodfacts/open-prices-frontend/commit/882374546a11cf187f1ce30c44ab574ad714839b))
+* **Price add:** small UI changes ([#1015](https://github.com/openfoodfacts/open-prices-frontend/issues/1015)) ([b270e5f](https://github.com/openfoodfacts/open-prices-frontend/commit/b270e5f6ad96fe4f70d9e8f0ec4ace979923006b))
+
 ## [1.91.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.91.1...v1.91.2) (2024-10-28)
 
 
