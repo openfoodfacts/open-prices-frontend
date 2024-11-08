@@ -147,6 +147,9 @@
 		"AddPrice": "Dodaj cenę",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"Barcode": "Kod kreskowy",
+		"Barcodes": "Barcodes",
+		"BarcodeInvalid": "Nieprawidłowy kod kreskowy",
 		"Brand": "Marka",
 		"Price": "Cena",
 		"Prices": "Ceny",
@@ -257,6 +260,8 @@
 		"Total": "Razem",
 		"Type": "Typ",
 		"Upload": "Prześlij",
+		"URL": "URL",
+		"URLInvalid": "Invalid URL",
 		"User": "Użytkownik",
 		"Users": "Użytkownicy",
 		"UserCount": "{count} users",
@@ -436,7 +441,7 @@
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Prywatność"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
