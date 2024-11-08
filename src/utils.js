@@ -24,6 +24,28 @@ function isNumber(value) {
 }
 
 /**
+ * https://stackoverflow.com/a/65528838
+ * - valid: https://www.example.com, https://example.com, http://example.com, https://wwww.example.com/coucou
+ * - invalid: www.example.com, example.com, coucou
+ */
+function isURL(value) {
+  try {
+    new URL(value)
+    return true
+  } catch (error) {  // eslint-disable-line no-unused-vars
+    return false
+  }
+}
+
+function getURLOrigin(value) {
+  try {
+    return new URL(value).origin
+  } catch (error) {  // eslint-disable-line no-unused-vars
+    return null
+  }
+}
+
+/**
  * https://stackoverflow.com/a/67933747/4293684
  */
 function isValidBarcode(value) {
@@ -385,6 +407,8 @@ export default {
   debounce,
   getDocumentScrollPercentage,
   isNumber,
+  isURL,
+  getURLOrigin,
   isValidBarcode,
   addObjectToArray,
   removeObjectFromArray,

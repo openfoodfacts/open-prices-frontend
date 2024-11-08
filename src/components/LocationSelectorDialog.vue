@@ -25,18 +25,20 @@
 
         <v-tabs-window v-model="currentDisplay" disabled>
           <v-tabs-window-item value="osm">
-            <v-form @submit.prevent="osmSearch">
+            <v-form v-model="locationOsmSearchFormValid" @submit.prevent="osmSearch">
               <v-text-field
-                ref="locationInput"
+                ref="locationOsmSearchInput"
                 v-model="locationOsmSearchForm.q"
                 :label="$t('LocationSelector.SearchByName')"
                 :hint="$t('Common.ExamplesWithColonAndValue', { value: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359' })"
                 type="text"
-                append-inner-icon="mdi-magnify"
                 :loading="loading"
                 persistent-hint
-                @click:append-inner="osmSearch"
-              />
+              >
+                <template #append-inner>
+                  <v-icon icon="mdi-magnify" :disabled="!locationOsmSearchFormValid" @click="osmSearch" />
+                </template>
+              </v-text-field>
             </v-form>
 
             <p v-if="searchProvider === 'nominatim'" class="text-caption text-warning mt-2">
@@ -81,18 +83,20 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="online">
-            <v-form @submit.prevent="createOnline">
+            <v-form v-model="locationOnlineFormValid" @submit.prevent="createOnline">
               <v-text-field
-                ref="locationInput"
                 v-model="locationOnlineForm.website_url"
                 :label="$t('Common.Website')"
                 :hint="$t('Common.ExampleWithColonAndValue', { value: 'https://www.example.com' })"
                 type="text"
-                append-inner-icon="mdi-plus"
+                :rules="urlRules"
                 :loading="loading"
                 persistent-hint
-                @click:append-inner="createOnline"
-              />
+              >
+                <template #append-inner>
+                  <v-icon icon="mdi-plus" :disabled="!locationOnlineFormValid" @click="createOnline" />
+                </template>
+              </v-text-field>
             </v-form>
           </v-tabs-window-item>
 
@@ -149,12 +153,14 @@ export default {
   data() {
     return {
       // location forms
-      locationOnlineForm: {
-        website_url: '',
-      },
       locationOsmSearchForm: {
         q: ''
       },
+      locationOsmSearchFormValid: false,
+      locationOnlineForm: {
+        website_url: '',
+      },
+      locationOnlineFormValid: false,
       loading: false,
       results: null,
       // config
@@ -165,25 +171,29 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    formFilled() {
-      return Object.values(this.locationOsmSearchForm).every(x => !!x)
-    },
     recentLocations() {
       return this.appStore.getRecentLocations()
     },
     showLocationOSMID() {
       return this.appStore.user.username && this.appStore.user.location_display_osm_id
-    }
+    },
+    urlRules() {
+      return [
+        (v) => !!v || '',
+        (v) => utils.isURL(v) || this.$t('Common.URLInvalid'),
+      ]
+    },
   },
   mounted() {
-    this.$refs.locationInput.focus()
+    this.$refs.locationOsmSearchInput.focus()
   },
   methods: {
     fieldRequired(v) {
       return !!v
     },
     osmSearch() {
-      this.$refs.locationInput.blur()
+      if (!this.locationOsmSearchInput) return
+      this.$refs.locationOsmSearchInput.blur()
       this.results = null
       this.loading = true
       // search by id (N12208020359, 12208020359)
@@ -218,8 +228,10 @@ export default {
       return utils.getLocationUniqueID(location)
     },
     createOnline() {
+      if (!this.locationOnlineFormValid) return
       this.loading = true
-      api.createLocationOnline({website_url: this.locationOnlineForm.website_url})
+      const website_url_cleaned = utils.getURLOrigin(this.locationOnlineForm.website_url)
+      api.createLocationOnline({website_url: website_url_cleaned})
         .then((location) => {
           this.loading = false
           this.selectLocation(location)
