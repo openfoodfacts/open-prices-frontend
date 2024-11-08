@@ -15,6 +15,7 @@
 
       <v-card-text>
         <ProofTypeInputRow :proofTypeForm="updateProofForm" />
+        <LocationInputRow :locationForm="updateProofForm" :currentLocation="proof.location" maxRecentLocations="1" />
         <ProofMetadataInputRow :proofType="updateProofForm.type" :proofMetadataForm="updateProofForm" />
       </v-card-text>
 
@@ -44,6 +45,7 @@ export default {
   components: {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
+    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
   },
   props: {
@@ -57,6 +59,9 @@ export default {
     return {
       updateProofForm: {
         type: null,
+        location_id: null,
+        location_osm_id: null,
+        location_osm_type: null,
         date: null,
         currency: null,
         receipt_price_count: null,
@@ -67,8 +72,9 @@ export default {
   },
   computed: {
     formFilled() {
-      let keys = ['type', 'date', 'currency']
-      return Object.values(this.updateProofForm).filter(k => keys.includes(k)).every(k => !!this.updateProofForm[k])
+      let keysOSM = Object.keys(this.updateProofForm).filter(k => !['location_id', 'receipt_price_count', 'receipt_price_total'].includes(k))
+      let keysONLINE = Object.keys(this.updateProofForm).filter(k => !['location_osm_id', 'location_osm_type', 'receipt_price_count', 'receipt_price_total'].includes(k))
+      return Object.keys(this.updateProofForm).filter(k => keysOSM.includes(k)).every(k => !!this.updateProofForm[k]) || Object.keys(this.updateProofForm).filter(k => keysONLINE.includes(k)).every(k => !!this.updateProofForm[k])
     },
   },
   mounted() {
