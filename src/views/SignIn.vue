@@ -84,7 +84,7 @@ export default {
         .catch((error) => {  // eslint-disable-line no-unused-vars
           alert(this.$t('SignIn.ServerError'))
           this.loading = false
-        });
+        })
     },
     done() {
       this.$router.push({ path: '/dashboard', query: { signinSuccess: 'true' } })

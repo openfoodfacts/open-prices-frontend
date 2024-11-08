@@ -87,7 +87,7 @@ export default {
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
         value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
-      ];
+      ]
     },
     priceFormFilled() {
       let keys = ['price', 'currency']
@@ -104,7 +104,7 @@ export default {
       this.priceForm.currency = currency
     },
     fixComma(input) {
-      return input.replace(/,/g, '.');
+      return input.replace(/,/g, '.')
     },
     getPriceValue(priceValue, priceCurrency) {
       return utils.prettyPrice(priceValue, priceCurrency)

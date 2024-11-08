@@ -37,7 +37,7 @@
           </template>
           <v-divider />
           <v-card-text>
-            <ProofInputRow :proofType="addProofSingleForm.type" :proofForm="addProofSingleForm" :hideRecentProofChoice="true" />
+            <ProofInputRow :proofForm="addProofSingleForm" :hideRecentProofChoice="true" />
           </v-card-text>
           <v-overlay v-model="disableProofImageForm" scrim="#E8F5E9" contained persistent />
         </v-card>

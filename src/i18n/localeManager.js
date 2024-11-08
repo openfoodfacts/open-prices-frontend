@@ -121,7 +121,7 @@ const localeManager = {
   
       return locales;
     } catch (error) {
-      console.error('Error fetching locales:', error);
+      console.error('Error fetching locales:', error)
     }
   },
   /**
@@ -144,15 +144,15 @@ const localeManager = {
      */ 
     const flattenObject = (obj, prefix = '') => {
       return Object.keys(obj).reduce((acc, k) => {
-        const pre = prefix.length ? prefix + '.' : '';
-        if (typeof obj[k] === 'object') Object.assign(acc, flattenObject(obj[k], pre + k));
-        else acc[pre + k] = obj[k];
-        return acc;
-      }, {});
+        const pre = prefix.length ? prefix + '.' : ''
+        if (typeof obj[k] === 'object') Object.assign(acc, flattenObject(obj[k], pre + k))
+        else acc[pre + k] = obj[k]
+        return acc
+      }, {})
     }
   
-    const enFlat = flattenObject(enJson.default);
-    const localeFlat = flattenObject(localeJson.default);
+    const enFlat = flattenObject(enJson.default)
+    const localeFlat = flattenObject(localeJson.default)
   
     const enKeys = Object.keys(enFlat)
     const localeKeys = Object.keys(localeFlat)
@@ -162,8 +162,8 @@ const localeManager = {
       if(!localeKeys.includes(enKeys[i])) {
         missingKeys++
       } else {
-        const enValue = String(enFlat[enKeys[i]]).trim();
-        const localeValue = String(localeFlat[enKeys[i]]).trim();
+        const enValue = String(enFlat[enKeys[i]]).trim()
+        const localeValue = String(localeFlat[enKeys[i]]).trim()
         if (enValue === localeValue) {
           identicalValues++
         }

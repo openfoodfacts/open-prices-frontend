@@ -32,7 +32,7 @@
           </template>
           <v-divider />
           <v-card-text>
-            <ProofInputRow :proofType="proofType" :proofForm="addPriceSingleForm" />
+            <ProofInputRow :proofForm="addPriceSingleForm" />
           </v-card-text>
         </v-card>
       </v-col>

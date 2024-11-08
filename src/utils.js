@@ -6,7 +6,7 @@ import constants from './constants'
 function debounce(callback, wait) {
   let timeoutId = null;
   return (...args) => {
-    window.clearTimeout(timeoutId);
+    window.clearTimeout(timeoutId)
     timeoutId = window.setTimeout(() => {
       callback(...args)
     }, wait)
@@ -32,14 +32,14 @@ function isValidBarcode(value) {
     return false;
   }
 
-  const paddedValue = value.padStart(14, '0');
+  const paddedValue = value.padStart(14, '0')
 
   let result = 0;
   for (let i = 0; i < paddedValue.length - 1; i += 1) {
-    result += parseInt(paddedValue.charAt(i), 10) * ((i % 2 === 0) ? 3 : 1);
+    result += parseInt(paddedValue.charAt(i), 10) * ((i % 2 === 0) ? 3 : 1)
   }
 
-  return ((10 - (result % 10)) % 10) === parseInt(paddedValue.charAt(13), 10);
+  return ((10 - (result % 10)) % 10) === parseInt(paddedValue.charAt(13), 10)
 }
 
 function addObjectToArray(arr, obj, unshift=false, avoidDuplicates=true) {
@@ -128,7 +128,7 @@ function offDateTime(dateTimeString) {
 function prettyRelativeDateTime(dateTimeString, size=null) {
   var date = new Date(dateTimeString || ''),
       diff = (((new Date()).getTime() - date.getTime()) / 1000),
-      day_diff = Math.floor(diff / 86400);
+      day_diff = Math.floor(diff / 86400)
 
   if (isNaN(day_diff) || day_diff < 0) return;
 

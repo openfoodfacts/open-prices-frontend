@@ -78,7 +78,6 @@ export default {
       this.locationSelectorDialog = true
     },
     setLocationData(location) {
-      console.log(location)
       this.appStore.addRecentLocation(location)
       // update locationForm
       if (location.id && location.type === 'ONLINE') {
