@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable max-height="80%" width="80%">
+  <v-dialog scrollable min-height="300px" max-height="80%" width="80%">
     <v-card>
       <v-card-title>
         {{ $t('LocationSelector.Title') }} <v-btn
@@ -11,21 +11,20 @@
       <v-divider />
 
       <v-card-text>
-        <v-btn-toggle v-model="currentDisplay" class="mb-2">
-          <v-btn v-for="item in displayItems" :key="item.key" :value="item.key">
+        <v-tabs v-model="currentDisplay">
+          <v-tab v-for="item in displayItems" :key="item.key" :value="item.key">
             <v-icon start>
               {{ item.icon }}
             </v-icon>
-            <span v-if="item.key === 'osm'">{{ item.value }}</span>
-            <span v-else>{{ $t('Common.' + item.value) }}</span>
+            <span>{{ $t('Common.' + item.value) }}</span>
             <span v-if="item.key === 'recent'">
               <LoadedCountChip :totalCount="recentLocations.length" />
             </span>
-          </v-btn>
-        </v-btn-toggle>
+          </v-tab>
+        </v-tabs>
 
-        <v-window v-model="currentDisplay" disabled>
-          <v-window-item value="osm">
+        <v-tabs-window v-model="currentDisplay" disabled>
+          <v-tabs-window-item value="osm">
             <v-form @submit.prevent="osmSearch">
               <v-text-field
                 ref="locationInput"
@@ -79,9 +78,9 @@
                 {{ results }}
               </p>
             </v-sheet>
-          </v-window-item>
+          </v-tabs-window-item>
 
-          <v-window-item value="online">
+          <v-tabs-window-item value="online">
             <v-form @submit.prevent="createOnline">
               <v-text-field
                 ref="locationInput"
@@ -95,16 +94,19 @@
                 @click:append-inner="createOnline"
               />
             </v-form>
-          </v-window-item>
+          </v-tabs-window-item>
 
-          <v-window-item value="recent">
+          <v-tabs-window-item value="recent">
             <LocationRecentChip v-for="(location, index) in recentLocations" :key="index" :location="location" :withRemoveAction="true" @click="selectLocation(location)" @click:close="removeRecentLocation(location)" />
             <br>
-            <v-btn size="small" @click="clearRecentLocations">
+            <v-btn v-if="recentLocations.length" size="small" class="" @click="clearRecentLocations">
               {{ $t('LocationSelector.Clear') }}
             </v-btn>
-          </v-window-item>
-        </v-window>
+            <p v-else>
+              {{ $t('LocationSelector.RecentLocations', recentLocations.length) }}
+            </p>
+          </v-tabs-window-item>
+        </v-tabs-window>
       </v-card-text>
 
       <v-divider v-if="currentDisplay === 'osm'" />

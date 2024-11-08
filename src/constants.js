@@ -134,7 +134,7 @@ export default {
     { key: 'photon' },
   ],
   LOCATION_SELECTOR_DISPLAY_LIST: [
-    { key: 'osm', value: OSM_NAME, icon: LOCATION_TYPE_OSM_ICON },
+    { key: 'osm', value: 'Physical', icon: LOCATION_TYPE_OSM_ICON },
     { key: 'online', value: 'Online', icon: LOCATION_TYPE_ONLINE_ICON },
     { key: 'recent', value: 'Recent', icon: 'mdi-history' },
   ],
