@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable min-height="300px" max-height="80%" width="80%">
+  <v-dialog scrollable min-height="300px" max-height="80%" min-width="80%">
     <v-card>
       <v-card-title>
         {{ $t('LocationSelector.Title') }} <v-btn
@@ -32,6 +32,7 @@
                 :label="$t('LocationSelector.SearchByName')"
                 :hint="$t('Common.ExamplesWithColonAndValue', { value: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359' })"
                 type="text"
+                :rules="osmSearchRules"
                 :loading="loading"
                 persistent-hint
               >
@@ -177,6 +178,11 @@ export default {
     showLocationOSMID() {
       return this.appStore.user.username && this.appStore.user.location_display_osm_id
     },
+    osmSearchRules() {
+      return [
+        (v) => !!v || '',
+      ]
+    },
     urlRules() {
       return [
         (v) => !!v || '',
@@ -192,7 +198,7 @@ export default {
       return !!v
     },
     osmSearch() {
-      if (!this.locationOsmSearchInput) return
+      if (!this.locationOsmSearchFormValid) return
       this.$refs.locationOsmSearchInput.blur()
       this.results = null
       this.loading = true
