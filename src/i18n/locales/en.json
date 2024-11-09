@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Add multiple prices"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "Home"
 		},
