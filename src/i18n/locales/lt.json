@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Pridėti kelia skainas"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "Pagrindinis"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "Mano įrodymai"
-		},
-		"ProofAddSingle": {
-			"Title": "Pridėti įrodymą"
 		},
 		"Search": {
 			"Title": "Paieška"
