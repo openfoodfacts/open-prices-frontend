@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Pridajte viacero cien"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "Domov"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "My proofs"
-		},
-		"ProofAddSingle": {
-			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Vyhľadať"
