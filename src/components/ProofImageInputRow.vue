@@ -49,7 +49,7 @@
         :text="$t('AddPriceMultiple.ProofDetails.ReceiptWarning')"
       />
     </v-col>
-    <v-col v-if="proofImagePreview" cols="4">
+    <v-col v-if="!hideProofImagePreview && proofImagePreview" cols="4">
       <v-img :src="proofImagePreview" style="max-height:200px" />
     </v-col>
   </v-row>
@@ -84,6 +84,10 @@ export default {
       type: Boolean,
       default: false
     },
+    hideProofImagePreview: {
+      type: Boolean,
+      default: false
+    }
   },
   emits: ['proof'],
   data() {
