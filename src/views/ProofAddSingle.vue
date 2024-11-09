@@ -1,8 +1,4 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('Home.ProofAdd') }}
-  </h1>
-
   <v-form @submit.prevent="createProof">
     <v-row>
       <!-- Step 1: proof type -->
