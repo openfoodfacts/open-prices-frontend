@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.92.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.92.0...v1.92.1) (2024-11-09)
+
+
+### Bug Fixes
+
+* **Price add:** fix show newly added prices. ref [#1015](https://github.com/openfoodfacts/open-prices-frontend/issues/1015) ([550d9b5](https://github.com/openfoodfacts/open-prices-frontend/commit/550d9b510f9ad0da4ce8094efd775ebd3b7827dd))
+
 ## [1.92.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.91.2...v1.92.0) (2024-11-08)
 
 
