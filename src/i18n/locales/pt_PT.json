@@ -134,12 +134,12 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Carregar mais",
-		"TopProducts": "Productos destacados",
+		"TopProducts": "Produtos com mais preços",
 		"BrandProductTotal": "{count} produtos"
 	},
 	"CategoryDetail": {
 		"LoadMore": "Carregar mais",
-		"TopProducts": "Productos destacados",
+		"TopProducts": "Produtos com mais preços",
 		"CategoryProductTotal": "{count} produtos"
 	},
 	"Common": {
@@ -254,7 +254,7 @@
 		"Thanks": "Obrigado",
 		"TopContributors": "Maiores colaboradores",
 		"TopLocations": "Principais localizações",
-		"TopProducts": "Productos destacados",
+		"TopProducts": "Produtos com mais preços",
 		"Today": "Hoje",
 		"Top": "Top",
 		"Total": "Total",
@@ -295,8 +295,8 @@
 		"SignOut": "Terminar sessão"
 	},
 	"Theme": {
-		"LightMode": "Modo claro",
-		"DarkMode": "Modo escuro"
+		"LightMode": "Tema claro",
+		"DarkMode": "Tema escuro"
 	},
 	"Home": {
 		"AddPrice": "Adicionar um preço",
@@ -414,7 +414,7 @@
 		"LoadMore": "Carregar mais",
 		"PriceNumber": "Número de preços adicionados",
 		"ScanNumber": "Número de digitalizações adicionadas",
-		"Title": "Productos destacados",
+		"Title": "Produtos com mais preços",
 		"ProductTotal": "{count} produtos"
 	},
 	"ProofCard": {
@@ -422,7 +422,7 @@
 		"PRICE_TAG": "Etiqueta de preço",
 		"RECEIPT": "Talão",
 		"GDPR_REQUEST": "Pedido RGPD",
-		"SHOP_IMPORT": "Importação de loja"
+		"SHOP_IMPORT": "Importado pela loja"
 	},
 	"ProofCreate": {
 		"SelectProof": "Selecionar um comprovativo",
@@ -501,7 +501,7 @@
 			"Title": "Principais localizações"
 		},
 		"TopProducts": {
-			"Title": "Productos destacados"
+			"Title": "Produtos com mais preços"
 		}
 	},
 	"Search": {
@@ -573,7 +573,7 @@
 		"CurrencyRequired": "É necessária pelo menos uma moeda",
 		"LanguageLabel": "Idiomas",
 		"LocationDisplayOSMID": "Mostrar ID do OSM",
-		"ProductDisplayBarcode": "Mostrar código de barra",
+		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar etiqueta de categoria",
 		"Save": "Guardar",
 		"Title": "Definições",
