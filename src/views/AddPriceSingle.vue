@@ -34,6 +34,7 @@
           <v-card-text>
             <ProofInputRow :proofForm="addPriceSingleForm" />
           </v-card-text>
+          <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
         </v-card>
       </v-col>
 
@@ -118,9 +119,12 @@ export default {
         price_is_discounted: false,
         price_without_discount: null,
         currency: null,  // see initPriceSingleForm
+        location_id: null,
         location_osm_id: null,
         location_osm_type: '',
         date: utils.currentDate(),
+        receipt_price_count: null,
+        receipt_price_total: null,
         proof_id: null,
       },
       pricePriceFormFilled: false,
@@ -137,7 +141,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     proofFormFilled() {
-      let keys = ['proof_id', 'location_osm_id', 'location_osm_type', 'date', 'currency']
+      let keys = ['proof_id']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     pricePerFormFilled() {
@@ -149,6 +153,9 @@ export default {
     },
     formFilled() {
       return this.productFormFilled && this.proofFormFilled && this.priceFormFilled
+    },
+    disableProofForm() {
+      return this.proofFormFilled
     },
   },
   mounted() {
