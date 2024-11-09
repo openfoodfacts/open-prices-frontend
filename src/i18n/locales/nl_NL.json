@@ -148,7 +148,7 @@
 		"AddToOFF": "Toevoegen aan {name}",
 		"AdditionalInfo": "Aanvullende informatie",
 		"Barcode": "Streepjescode",
-		"Barcodes": "Barcodes",
+		"Barcodes": "Streepjescodes",
 		"BarcodeInvalid": "Ongeldige barcode",
 		"Brand": "Merk",
 		"Price": "Prijs",
@@ -261,7 +261,7 @@
 		"Type": "Type",
 		"Upload": "Uploaden",
 		"URL": "URL",
-		"URLInvalid": "Invalid URL",
+		"URLInvalid": "Ongeldige URL",
 		"User": "Gebruiker",
 		"Users": "Gebruikers",
 		"UserCount": "{count} gebruikers",
@@ -462,10 +462,10 @@
 			"Title": "Voeg meerdere prijzen toe"
 		},
 		"AddProofSingle": {
-			"Title": "Add a single proof"
+			"Title": "Voeg één bewijs toe"
 		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "Experimenten"
 		},
 		"Home": {
 			"Title": "Hoofdmenu"
