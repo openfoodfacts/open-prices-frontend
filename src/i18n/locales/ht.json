@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Ajoute plizyè pri"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "Home"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "Prèv mwen yo"
-		},
-		"ProofAddSingle": {
-			"Title": "Ajoute yon prèv"
 		},
 		"Search": {
 			"Title": "Rechèch"
