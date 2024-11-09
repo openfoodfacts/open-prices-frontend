@@ -42,7 +42,7 @@
 		"PriceCreated": "Preço criado!",
 		"ReceiptMode": {
 			"Subtitle": "Um ou vários produtos",
-			"Title": "Recibo"
+			"Title": "Talão"
 		},
 		"SignedIn": "Sessão iniciada!",
 		"SingleProductMode": {
@@ -66,8 +66,8 @@
 			"Upload": "Carregar"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Os recibos podem conter informações pessoais, pelo que recomendamos que os oculte (rabiscar, dobrar...) antes de tirar a fotografia.",
-			"PrivateWarning": "Também pode definir o recibo como Privado. As provas privadas só serão visíveis para si e para os moderadores.",
+			"ReceiptWarning": "Os talões podem conter informações pessoais, pelo que recomendamos que os oculte (rabiscar, dobrar...) antes de tirar a fotografia.",
+			"PrivateWarning": "Também pode definir o talão como Privado. As provas de compra marcadas como privadas só serão visíveis para si e para os moderadores.",
 			"Title": "Detalhes do comprovativo"
 		},
 		"Title": "Adicione vários preços"
@@ -233,8 +233,8 @@
 		"PricesMore": "Mais preços",
 		"ProductCount": "{count} produtos",
 		"ProofCount": "{count} comprovativos",
-		"Receipt": "Recibo",
-		"Receipts": "Receipts",
+		"Receipt": "Talão",
+		"Receipts": "Talões",
 		"ReceiptPriceCount": "Número de preços",
 		"ReceiptPriceTotal": "Montante total",
 		"Recent": "Recente",
@@ -420,7 +420,7 @@
 	"ProofCard": {
 		"Proof": "Comprovativo",
 		"PRICE_TAG": "Etiqueta de preço",
-		"RECEIPT": "Recibo",
+		"RECEIPT": "Talão",
 		"GDPR_REQUEST": "Pedido RGPD",
 		"SHOP_IMPORT": "Importação de loja"
 	},
