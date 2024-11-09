@@ -14,6 +14,13 @@
         to="/proofs/add/single"
       />
     </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Router.ContributionAssistant.Title')"
+        prepend-icon="mdi-image-plus"
+        to="/experiments/contribution-assistant"
+      />
+    </v-col>
   </v-row>
 </template>
 

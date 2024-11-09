@@ -329,5 +329,23 @@ export default {
       // default to nominatim
       return this.openstreetmapNominatimSearch(q)
     }
+  },
+  processWithGemini(croppedBlobs) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/process_with_gemini`
+    const formData = new FormData()
+
+    croppedBlobs.forEach((blob) => {
+      formData.append('files', blob)
+    });
+
+    return fetch(url, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${store.user.token}`,
+      },
+      body: formData,
+    })
+    .then((response) => response.json())
   }
 }
