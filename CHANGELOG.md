@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.92.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.92.1...v1.92.2) (2024-11-09)
+
+
+### Bug Fixes
+
+* **Location selector:** fix physical search submit. ref [#1012](https://github.com/openfoodfacts/open-prices-frontend/issues/1012) ([04308ae](https://github.com/openfoodfacts/open-prices-frontend/commit/04308ae6dd679d514ed41267dab3d369bcbfd5d2))
+
 ## [1.92.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.92.0...v1.92.1) (2024-11-09)
 
 
