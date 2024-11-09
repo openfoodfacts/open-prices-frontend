@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "添加多个价格"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "主页"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "我的样张"
-		},
-		"ProofAddSingle": {
-			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "搜尋"
