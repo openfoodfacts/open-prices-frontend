@@ -301,7 +301,7 @@ export default {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
           } else {
-            this.proofPriceUploadedList.push(JSON.parse(JSON.stringify(this.productPriceForm)))  // deep copy
+            this.proofPriceNewList.push(JSON.parse(JSON.stringify(this.productPriceForm)))  // deep copy
             this.priceSuccessMessage = true
             // show new price form immediately
             this.initNewProductPriceForm()
