@@ -96,6 +96,10 @@ export default {
     productForm: {
       type: Object,
       default: () => ({ mode: '', product: null, product_code: '', category_tag: null, origins_tags: '', labels_tags: [] })
+    },
+    disableInitWhenSwitchingModes : {
+      type: Boolean,
+      default: () => false
     }
   },
   emits: ['filled'],
@@ -172,7 +176,9 @@ export default {
     },
     setMode(mode) {
       this.productForm.mode = mode
-      this.initProductForm()
+      if (!this.disableInitWhenSwitchingModes) {
+        this.initProductForm()
+      }
     },
     setProductCode(code) {
       this.productForm.product_code = code
