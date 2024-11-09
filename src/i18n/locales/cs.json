@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Přidat více cen"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "Úvod"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "Moje důkazy"
-		},
-		"ProofAddSingle": {
-			"Title": "Přidat doklad"
 		},
 		"Search": {
 			"Title": "Vyhledat"
