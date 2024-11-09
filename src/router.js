@@ -33,6 +33,7 @@ const routes = [
   { path: '/users', name: 'users', component: () => import('./views/UserList.vue'), meta: { title: 'TopContributors', icon: 'mdi-account-star-outline', drawerMenu: true }},
   { path: '/users/:username', name: 'user-detail', component: () => import('./views/UserDetail.vue'), meta: { title: 'User detail' }},
   { path: '/experiments', name: 'experiments', component: () => import('./views/Experiments.vue'), meta: { title: 'Experiments', icon: 'mdi-test-tube', breadcrumbs: [{title: 'Experiments', disabled: true }] }},
+  { path: '/experiments/contribution-assistant', name: 'contribution-assistant', component: () => import('./views/ContributionAssistant.vue'), meta: { title: 'ContributionAssistant', icon: 'mdi-test-tube', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'ContributionAssistant', disabled: true }] }},
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true }},
   { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', icon: 'mdi-cog-outline', drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true }},
