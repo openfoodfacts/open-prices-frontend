@@ -18,7 +18,7 @@
         <v-container>
           <v-col cols="12" md="6">
             <LocationInputRow :locationForm="locationForm" />
-            <ContributionAssistantDateForm @date="setDate($event)" />
+            <ContributionAssistantDateForm :initialDate="date" @date="setDate($event)" />
             <v-btn class="mt-4" :disabled="!locationForm.location_osm_id" @click="() => tab = 'Crop'">
               Next
             </v-btn>
@@ -30,9 +30,12 @@
           <v-row>
             <v-col cols="12" md="6">
               <h3 class="mb-4">
-                1. Select an image containing fruits and vegetables labels
+                1. Select an image containing labels
               </h3>
-              <ProofImageInputRow :hideProofImagePreview="true" :hideRecentProofChoice="true" @proof="setImage($event)" />
+              <ProofImageInputRow :hideProofImagePreview="true" :hideRecentProofChoice="false" @proof="setProof($event)" />
+              <p v-if="recentProof" class="mb-2">
+                <i>Selecting a recent proof has overwritten location and date.</i>
+              </p>
             </v-col>
           </v-row>
           <v-row>
@@ -70,6 +73,12 @@
               <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" />
             </v-col>
           </v-row>
+          <p v-if="recentProof" class="mt-2">
+            <i>{{ productPriceForms.length }} price{{ productPriceForms.length > 1 ? 's' : '' }} will be added to existing proof on the {{ recentProof.date }} at {{ locationName }}.</i>
+          </p>
+          <p v-if="!recentProof" class="mt-2">
+            <i>1 proof and {{ productPriceForms.length }} price{{ productPriceForms.length > 1 ? 's' : '' }} will be added on the {{ date }} at {{ locationName }}.</i>
+          </p>
           <v-btn class="mt-4" :loading="addPricesLoading" @click="addPrices">
             Add prices to open prices
           </v-btn>
@@ -101,6 +110,7 @@ export default {
     return {
       tab: 'LocationDate',
       originalProofImage: null,
+      recentProof: null,
       image: new Image(),
       croppedImages: [],
       croppedBlobs: [],
@@ -116,20 +126,45 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    locationName() {
+      const recentLocations = this.appStore.getRecentLocations()
+      const location = recentLocations.find((location) => location.properties.osm_id === this.locationForm.location_osm_id)
+      if (location) {
+        if (location.type === 'ONLINE') return location.website_url
+        return utils.getLocationOSMTitle(location, true, true, true)
+      }
+      return ""
+    }
   },
   methods: {
     setDate(date) {
       this.date = date
     },
-    setImage(imageFile) {
-      this.originalProofImage = imageFile
-      const reader = new FileReader()
-      reader.onload = (e) => {
+    setProof(event) {
+      if (event instanceof File) {
+        // A new file was selected
+        this.recentProof = null
+        this.originalProofImage = event
+        const reader = new FileReader()
+        reader.onload = (e) => {
+          const image = new Image()
+          image.src = e.target.result
+          this.image = image
+        };
+        reader.readAsDataURL(event)
+      } else {
+        // An existing proof was selected
+        this.recentProof = event
+        this.originalProofImage = null
         const image = new Image()
-        image.src = e.target.result
+        image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${event.file_path}`
+        image.crossOrigin = 'Anonymous'
         this.image = image
-      };
-      reader.readAsDataURL(imageFile)
+        this.date = event.date
+        this.locationForm.location_osm_id = event.location_osm_id
+        this.locationForm.location_osm_type = event.location_osm_type
+      }
+
       this.croppedImages = []
       this.croppedBlobs = []
       this.productPriceForms = []
@@ -175,13 +210,17 @@ export default {
     },
     async addPrices() {
       this.addPricesLoading = true
-      const proofImageCompressed = await new Promise((resolve, reject) => {
-        new Compressor(this.originalProofImage, {
-          success: resolve,
-          error: reject
+      let proof = this.recentProof // Can be null if new proof
+      if (!proof) { // Implies an originalProofImage was set
+        const proofImageCompressed = await new Promise((resolve, reject) => {
+          new Compressor(this.originalProofImage, {
+            success: resolve,
+            error: reject
+          })
         })
-      })
-      const proof = await api.createProof(proofImageCompressed, 'PRICE_TAG', null, this.locationForm.location_osm_id, this.locationForm.location_osm_type, this.date, this.appStore.getUserLastCurrencyUsed || "EUR")
+        proof = await api.createProof(proofImageCompressed, 'PRICE_TAG', null, this.locationForm.location_osm_id, this.locationForm.location_osm_type, this.date, this.appStore.getUserLastCurrencyUsed || "EUR")
+      }
+      
       for (let i = 0; i < this.productPriceForms.length; i++) {
         const productPriceForm = this.productPriceForms[i]
         let origins_tags = productPriceForm.origins_tags

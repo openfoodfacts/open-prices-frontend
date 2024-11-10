@@ -52,7 +52,6 @@
         
         const newWidth = this.image.width * this.scale
         const newHeight = this.image.height * this.scale
-        console.log(newWidth)
         canvas.width = newWidth
         canvas.height = newHeight
         
