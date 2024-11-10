@@ -16,11 +16,25 @@
   
 <script>
   export default {
+    props: {
+      initialDate : {
+        type: String,
+        default: () => new Date().toISOString().substring(0, 10)
+      }
+    },
     emits: ['date'],
     data() {
       return {
         currentDate: new Date().toISOString().substring(0, 10),
-        date: new Date().toISOString().substring(0, 10)
+        date: this.initialDate
+      }
+    },
+    watch: {
+      initialDate: {
+        immediate: true,
+        handler(newInitialDate) {
+          this.date = newInitialDate
+        }
       }
     },
     methods: {
