@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Add multiple prices"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "Басты бет"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "My proofs"
-		},
-		"ProofAddSingle": {
-			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Іздеу"

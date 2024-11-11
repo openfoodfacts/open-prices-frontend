@@ -148,7 +148,7 @@
 		"AddToOFF": "Ajouter à {name}",
 		"AdditionalInfo": "Informations supplémentaires",
 		"Barcode": "Code-barres",
-		"Barcodes": "Barcodes",
+		"Barcodes": "Code-barres",
 		"BarcodeInvalid": "Code-barres invalide",
 		"Brand": "Marque",
 		"Price": "Prix",
@@ -211,8 +211,8 @@
 		"LinkCopySuccess": "Lien copié",
 		"LocationCount": "{count} lieux",
 		"Map": "Carte",
-		"Offline": "Offline",
-		"Online": "Online",
+		"Offline": "Hors ligne",
+		"Online": "En ligne",
 		"Order": "Ordre",
 		"OrderLocationCountDESC": "Nombre d'emplacements",
 		"OrderProductUniqueScansDESC": "Nombre de numérisations",
@@ -227,7 +227,7 @@
 		"OrderProofDateDESC": "Date de la preuve",
 		"OrderUserCountDESC": "Nombre d'utilisateurs",
 		"PersonalInfo": "Informations personnelles",
-		"Physical": "Physical",
+		"Physical": "Physique",
 		"PriceCount": "{count} prix",
 		"PriceCreated": "Prix créé !",
 		"PricesMore": "Plus de prix",
@@ -237,7 +237,7 @@
 		"Receipts": "Tickets de caisse",
 		"ReceiptPriceCount": "Nombre de prix",
 		"ReceiptPriceTotal": "Montant total",
-		"Recent": "Recent",
+		"Recent": "Récent",
 		"Search": "Rechercher",
 		"Settings": "Paramètres",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
@@ -261,7 +261,7 @@
 		"Type": "Type",
 		"Upload": "Téléverser",
 		"URL": "URL",
-		"URLInvalid": "Invalid URL",
+		"URLInvalid": "URL invalide",
 		"User": "Utilisateur",
 		"Users": "Utilisateurs",
 		"UserCount": "{count} utilisateurs",
@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Ajouter plusieurs prix"
 		},
+		"AddProofSingle": {
+			"Title": "Ajouter une seule preuve"
+		},
+		"Experiments": {
+			"Title": "Expérimentations"
+		},
 		"Home": {
 			"Title": "Accueil"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "Mes preuves"
-		},
-		"ProofAddSingle": {
-			"Title": "Ajouter une preuve"
 		},
 		"Search": {
 			"Title": "Rechercher"

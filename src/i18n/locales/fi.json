@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Lisää useita hintoja"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "Koti"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "Minun todisteeni"
-		},
-		"ProofAddSingle": {
-			"Title": "Lisää todiste"
 		},
 		"Search": {
 			"Title": "Etsi"

@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Tambahkan beberapa harga"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "Beranda"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "Bukti saya"
-		},
-		"ProofAddSingle": {
-			"Title": "Tambahkan bukti"
 		},
 		"Search": {
 			"Title": "Cari"

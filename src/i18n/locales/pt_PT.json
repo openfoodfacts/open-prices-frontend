@@ -42,7 +42,7 @@
 		"PriceCreated": "Preço criado!",
 		"ReceiptMode": {
 			"Subtitle": "Um ou vários produtos",
-			"Title": "Recibo"
+			"Title": "Talão"
 		},
 		"SignedIn": "Sessão iniciada!",
 		"SingleProductMode": {
@@ -66,8 +66,8 @@
 			"Upload": "Carregar"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Os recibos podem conter informações pessoais, pelo que recomendamos que os oculte (rabiscar, dobrar...) antes de tirar a fotografia.",
-			"PrivateWarning": "Também pode definir o recibo como Privado. As provas privadas só serão visíveis para si e para os moderadores.",
+			"ReceiptWarning": "Os talões podem conter informações pessoais, pelo que recomendamos que os oculte (rabiscar, dobrar...) antes de tirar a fotografia.",
+			"PrivateWarning": "Também pode definir o talão como Privado. As provas de compra marcadas como privadas só serão visíveis para si e para os moderadores.",
 			"Title": "Detalhes do comprovativo"
 		},
 		"Title": "Adicione vários preços"
@@ -134,21 +134,21 @@
 	},
 	"BrandDetail": {
 		"LoadMore": "Carregar mais",
-		"TopProducts": "Productos destacados",
+		"TopProducts": "Produtos com mais preços",
 		"BrandProductTotal": "{count} produtos"
 	},
 	"CategoryDetail": {
 		"LoadMore": "Carregar mais",
-		"TopProducts": "Productos destacados",
+		"TopProducts": "Produtos com mais preços",
 		"CategoryProductTotal": "{count} produtos"
 	},
 	"Common": {
 		"About": "Sobre",
 		"AddPrice": "Adicionar um preço",
 		"AddToOFF": "Adicionar a {name}",
-		"AdditionalInfo": "Additional information",
+		"AdditionalInfo": "Informação adicional",
 		"Barcode": "Código de barras",
-		"Barcodes": "Barcodes",
+		"Barcodes": "Códigos de barras",
 		"BarcodeInvalid": "Código de barras inválido",
 		"Brand": "Marca",
 		"Price": "Preço",
@@ -189,9 +189,9 @@
 		"Example": "Exemplo",
 		"Examples": "Exemplos",
 		"ExampleWithColon": "Exemplo:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "Exemplo: {value}",
 		"ExamplesWithColon": "Exemplos:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "Exemplos: {value}",
 		"Edit": "Editar",
 		"Filter": "Filtro",
 		"FilterProductWithPriceCount": "Com um preço",
@@ -207,7 +207,7 @@
 		"History": "Histórico",
 		"Image": "Imagem",
 		"ImageFull": "Imagem em tamanho real",
-		"Latest": "Latest",
+		"Latest": "Mais recente",
 		"LinkCopySuccess": "Link copiado",
 		"LocationCount": "{count} localizações",
 		"Map": "Mapa",
@@ -226,18 +226,18 @@
 		"OrderProofCreatedDESC": "Data de adição",
 		"OrderProofDateDESC": "Data do comprovativo",
 		"OrderUserCountDESC": "Número de utilizadores",
-		"PersonalInfo": "Personal information",
+		"PersonalInfo": "Informação pessoal",
 		"Physical": "Physical",
 		"PriceCount": "{count} preços",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
 		"ProductCount": "{count} produtos",
 		"ProofCount": "{count} comprovativos",
-		"Receipt": "Recibo",
-		"Receipts": "Receipts",
+		"Receipt": "Talão",
+		"Receipts": "Talões",
 		"ReceiptPriceCount": "Número de preços",
-		"ReceiptPriceTotal": "Total amount",
-		"Recent": "Recent",
+		"ReceiptPriceTotal": "Montante total",
+		"Recent": "Recente",
 		"Search": "Procurar",
 		"Settings": "Definições",
 		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
@@ -254,14 +254,14 @@
 		"Thanks": "Obrigado",
 		"TopContributors": "Maiores colaboradores",
 		"TopLocations": "Principais localizações",
-		"TopProducts": "Productos destacados",
+		"TopProducts": "Produtos com mais preços",
 		"Today": "Hoje",
 		"Top": "Top",
 		"Total": "Total",
 		"Type": "Tipo",
 		"Upload": "Carregar",
 		"URL": "URL",
-		"URLInvalid": "Invalid URL",
+		"URLInvalid": "URL inválido",
 		"User": "Utilizador",
 		"Users": "Utilizadores",
 		"UserCount": "{count} utilizadores",
@@ -295,8 +295,8 @@
 		"SignOut": "Terminar sessão"
 	},
 	"Theme": {
-		"LightMode": "Modo claro",
-		"DarkMode": "Modo escuro"
+		"LightMode": "Tema claro",
+		"DarkMode": "Tema escuro"
 	},
 	"Home": {
 		"AddPrice": "Adicionar um preço",
@@ -414,15 +414,15 @@
 		"LoadMore": "Carregar mais",
 		"PriceNumber": "Número de preços adicionados",
 		"ScanNumber": "Número de digitalizações adicionadas",
-		"Title": "Productos destacados",
+		"Title": "Produtos com mais preços",
 		"ProductTotal": "{count} produtos"
 	},
 	"ProofCard": {
 		"Proof": "Comprovativo",
 		"PRICE_TAG": "Etiqueta de preço",
-		"RECEIPT": "Recibo",
+		"RECEIPT": "Talão",
 		"GDPR_REQUEST": "Pedido RGPD",
-		"SHOP_IMPORT": "Shop import"
+		"SHOP_IMPORT": "Importado pela loja"
 	},
 	"ProofCreate": {
 		"SelectProof": "Selecionar um comprovativo",
@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Adicione vários preços"
 		},
+		"AddProofSingle": {
+			"Title": "Adicionar um único comprovativo"
+		},
+		"Experiments": {
+			"Title": "Experiências"
+		},
 		"Home": {
 			"Title": "Início"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "Os meus comprovativos"
-		},
-		"ProofAddSingle": {
-			"Title": "Adicionar um comprovativo"
 		},
 		"Search": {
 			"Title": "Procurar"
@@ -498,7 +501,7 @@
 			"Title": "Principais localizações"
 		},
 		"TopProducts": {
-			"Title": "Productos destacados"
+			"Title": "Produtos com mais preços"
 		}
 	},
 	"Search": {
@@ -570,7 +573,7 @@
 		"CurrencyRequired": "É necessária pelo menos uma moeda",
 		"LanguageLabel": "Idiomas",
 		"LocationDisplayOSMID": "Mostrar ID do OSM",
-		"ProductDisplayBarcode": "Mostrar código de barra",
+		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar etiqueta de categoria",
 		"Save": "Guardar",
 		"Title": "Definições",

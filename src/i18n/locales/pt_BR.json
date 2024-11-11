@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Adicionar múltiplos preços"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "Início"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "Minhas demonstrações"
-		},
-		"ProofAddSingle": {
-			"Title": "Adicionar um comprovante"
 		},
 		"Search": {
 			"Title": "Procurar"

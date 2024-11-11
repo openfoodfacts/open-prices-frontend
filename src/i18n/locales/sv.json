@@ -8,7 +8,7 @@
 		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
 		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
 		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
-		"LicenseTitle": "License",
+		"LicenseTitle": "Licens",
 		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
@@ -148,7 +148,7 @@
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Streckkod",
-		"Barcodes": "Barcodes",
+		"Barcodes": "Streckkoder",
 		"BarcodeInvalid": "Ogiltig streckkod",
 		"Brand": "Varumärke",
 		"Price": "Price",
@@ -234,7 +234,7 @@
 		"ProductCount": "{count} products",
 		"ProofCount": "{count} proofs",
 		"Receipt": "Receipt",
-		"Receipts": "Receipts",
+		"Receipts": "Kvitton",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"Recent": "Recent",
@@ -261,10 +261,10 @@
 		"Type": "Typ",
 		"Upload": "Upload",
 		"URL": "URL",
-		"URLInvalid": "Invalid URL",
+		"URLInvalid": "Ogiltig URL",
 		"User": "Användare",
 		"Users": "Users",
-		"UserCount": "{count} users",
+		"UserCount": "{count} användare",
 		"View": "Visa",
 		"Website": "Website",
 		"Yes": "Ja",
@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Add multiple prices"
 		},
+		"AddProofSingle": {
+			"Title": "Add a single proof"
+		},
+		"Experiments": {
+			"Title": "Experiments"
+		},
 		"Home": {
 			"Title": "Hem"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "My proofs"
-		},
-		"ProofAddSingle": {
-			"Title": "Add a proof"
 		},
 		"Search": {
 			"Title": "Sök"
@@ -534,8 +537,8 @@
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
 		"WithoutProduct": "Without a product",
-		"WithBarcode": "With a barcode",
-		"WithCategory": "With a category",
+		"WithBarcode": "Med en streckkod",
+		"WithCategory": "Med en kategori",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

@@ -461,6 +461,12 @@
 		"AddPriceMultiple": {
 			"Title": "Mehrere Preise hinzufügen"
 		},
+		"AddProofSingle": {
+			"Title": "Einzelnen Nachweis hinzufügen"
+		},
+		"Experiments": {
+			"Title": "Experimente"
+		},
 		"Home": {
 			"Title": "Startseite"
 		},
@@ -475,9 +481,6 @@
 		},
 		"MyProofs": {
 			"Title": "Meine Belege"
-		},
-		"ProofAddSingle": {
-			"Title": "Nachweis bearbeiten"
 		},
 		"Search": {
 			"Title": "Suchen"
