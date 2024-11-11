@@ -4,9 +4,31 @@
       <v-card :title="$t('UserSettings.DisplayTitle')" prepend-icon="mdi-laptop">
         <v-divider />
         <v-card-text>
-          <v-btn :prepend-icon="preferedThemeInfo.icon" @click="swapTheme">
-            {{ $t(preferedThemeInfo.label) }}
-          </v-btn>
+          <!-- Theme -->
+          <h3 class="mb-1">
+            {{ $t('Common.Theme') }}
+          </h3>
+          <v-switch
+            v-model="appStore.user.preferedTheme"
+            color="success"
+            false-value="light"
+            true-value="dark"
+            density="compact"
+            hide-details="auto"
+          >
+            <template #prepend>
+              <v-icon :icon="getThemeInfo('light').icon" />
+              <v-label>
+                {{ getThemeInfo('light').label }}
+              </v-label>
+            </template>
+            <template #label>
+              <v-label style="padding-inline-end:10px">
+                {{ getThemeInfo('dark').label }}
+              </v-label>
+              <v-icon :icon="getThemeInfo('dark').icon" />
+            </template>
+          </v-switch>
           <!-- Country -->
           <h3 class="mt-4 mb-1">
             {{ $t('Common.Country') }}
@@ -122,18 +144,6 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    preferedThemeInfo() {
-      if (this.theme.global.name === 'light') {
-        return {
-          icon: 'mdi-white-balance-sunny',
-          label: 'Theme.LightMode' 
-        }
-      }
-      return {
-        icon: 'mdi-moon-waning-crescent',
-        label: 'Theme.DarkMode' 
-      }
-    },
     currencyList() {
       return [...new Set(this.countryList
         .map(country => country.currency)
@@ -144,14 +154,24 @@ export default {
   watch: {
     'appStore.user.language': function (newLanguage, oldLanguage) {  // eslint-disable-line no-unused-vars
       localeManager.changeLanguage(newLanguage)
+    },
+    'appStore.user.preferedTheme': function (newTheme, oldTheme) {  // eslint-disable-line no-unused-vars
+      this.theme.global.name = newTheme
     }
   },
   methods: {
-    swapTheme() {
-      const newTheme = this.theme.global.name === 'light' ? 'dark' : 'light'
-      this.appStore.user.preferedTheme = newTheme
-      this.theme.global.name = newTheme
+    getThemeInfo(themeName) {
+      if (themeName === 'light') {
+        return {
+          icon: constants.THEME_LIGHT_ICON,
+          label: this.$t('Common.ThemeLight')
+        }
+      }
+      return {
+        icon: constants.THEME_DARK_ICON,
+        label: this.$t('Common.ThemeDark')
+      }
     }
-  }
+  },
 }
 </script>

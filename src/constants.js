@@ -25,6 +25,9 @@ export default {
   APP_DUMP_PROOFS_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/proofs.jsonl.gz`,
   APP_DUMP_LOCATIONS_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/locations.jsonl.gz`,
   APP_GITHUB_FRONTEND_URL: 'https://github.com/openfoodfacts/open-prices-frontend',
+  THEME_LIGHT_ICON: 'mdi-white-balance-sunny',
+  THEME_DARK_ICON: 'mdi-moon-waning-crescent',
+  // OFF
   OFF_NAME: OFF_NAME,
   OFF_URL: 'https://world.openfoodfacts.org',
   OFF_CONTACT_EMAIL: 'contact@openfoodfacts.org',
@@ -141,6 +144,7 @@ export default {
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
   DATE_YEAR_MONTH_REGEX_MATCH: /(\d{4})-(\d{2})/,
   DATE_YEAR_REGEX_MATCH: /(\d{4})/,
+  // OSM
   OSM_NAME: OSM_NAME,
   OSM_URL: 'https://www.openstreetmap.org',
   OSM_NOMINATIM_SEARCH_URL: 'https://nominatim.openstreetmap.org/search',
