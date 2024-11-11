@@ -59,8 +59,38 @@
               <v-icon size="small" icon="mdi-open-in-new" />
             </a>
           </p>
+        </v-card-text>
+      </v-card>
+    </v-col>
+
+    <!-- Prices -->
+    <v-col cols="12" sm="6">
+      <v-card :title="$t('Common.Prices')" prepend-icon="mdi-tag-multiple-outline">
+        <v-divider />
+        <v-card-text>
+          <h3 class="mb-1">
+            {{ $t('UserSettings.FavoriteCurrencies') }}
+          </h3>
+          <v-autocomplete
+            v-model="appStore.user.favorite_currencies"
+            :label="$t('UserSettings.CurrencyLabel')"
+            :items="currencyList"
+            :rules="[v => !!(v && v.length) || $t('UserSettings.CurrencyRequired')]"
+            chips
+            closable-chips
+            multiple
+            hide-details="auto"
+          />
+        </v-card-text>
+      </v-card>
+    </v-col>
+
+    <v-col cols="12" sm="6">
+      <v-card :title="$t('Common.DeveloperMode')" prepend-icon="mdi-test-tube">
+        <v-divider />
+        <v-card-text>
           <!-- Side menu -->
-          <h3 class="mt-4 mb-1">
+          <h3 class="mb-1">
             {{ $t('Common.SideMenu') }}
           </h3>
           <v-switch
@@ -104,28 +134,6 @@
             :hint="$t('Common.ExampleWithColonAndValue', { value: 'N652825274' })"
             density="compact"
             persistent-hint
-            hide-details="auto"
-          />
-        </v-card-text>
-      </v-card>
-    </v-col>
-
-    <!-- Prices -->
-    <v-col cols="12" sm="6">
-      <v-card :title="$t('Common.Prices')" prepend-icon="mdi-tag-multiple-outline">
-        <v-divider />
-        <v-card-text>
-          <h3 class="mb-1">
-            {{ $t('UserSettings.FavoriteCurrencies') }}
-          </h3>
-          <v-autocomplete
-            v-model="appStore.user.favorite_currencies"
-            :label="$t('UserSettings.CurrencyLabel')"
-            :items="currencyList"
-            :rules="[v => !!(v && v.length) || $t('UserSettings.CurrencyRequired')]"
-            chips
-            closable-chips
-            multiple
             hide-details="auto"
           />
         </v-card-text>
