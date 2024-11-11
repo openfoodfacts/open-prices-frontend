@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Map (Shiny)",
+        "description": "A world map of all the contributions in Open Prices",
+        "background_image_url": null,
+        "url": "https://dmayaux.shinyapps.io/open_prices",
+        "code_url": null,
+        "date": "2024",
+        "author": "Damien",
+        "display": true
+    },
+    {
+        "name": "Le prix des carottes",
+        "description": "Simple price index of fruits and vegetables (in french)",
+        "background_image_url": null,
+        "url": "https://leprixdescarottes.fr",
+        "code_url": "https://github.com/TTalex/leprixdescarottes",
+        "date": "2024",
+        "author": "Alex",
+        "display": true
+    },
+    {
+        "name": "Do you want your receipt?",
+        "description": "Compare prices between 2 shops",
+        "background_image_url": null,
+        "url": "https://www.doyouwantyourreceipt.info",
+        "code_url": null,
+        "date": "2024",
+        "author": "Quentin",
+        "display": true
+    },
+    {
+        "name": "Product price evolution",
+        "description": null,
+        "background_image_url": null,
+        "url": "https://project.med3d.eu/fooddata/price_plot.html?ean=5000159451666",
+        "code_url": null,
+        "date": "2024",
+        "author": null,
+        "display": true
+    }
+]
