@@ -59,6 +59,17 @@
               <v-icon size="small" icon="mdi-open-in-new" />
             </a>
           </p>
+          <!-- Side menu -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('Common.SideMenu') }}
+          </h3>
+          <v-switch
+            v-model="appStore.user.drawer_display_experiments"
+            color="success"
+            :label="$t('UserSettings.SideMenuExperimentsDisplay')"
+            density="compact"
+            hide-details="auto"
+          />
           <!-- Products -->
           <h3 class="mt-4 mb-1">
             {{ $t('Common.Products') }}
