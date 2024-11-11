@@ -17,8 +17,14 @@
       <v-tabs-window-item value="LocationDate">
         <v-container>
           <v-col cols="12" md="6">
+            <h3 class="mb-1">
+              1. Select a shop
+            </h3>
             <LocationInputRow :locationForm="locationForm" />
-            <ContributionAssistantDateForm :initialDate="date" @date="setDate($event)" />
+            <h3 class="mb-1 mt-4">
+              2. Select the date and currency of the prices
+            </h3>
+            <ProofMetadataInputRow :proofMetadataForm="proofMetadataForm" />
             <v-btn class="mt-4" :disabled="!locationForm.location_osm_id" @click="() => tab = 'Crop'">
               Next
             </v-btn>
@@ -34,7 +40,7 @@
               </h3>
               <ProofImageInputRow :hideProofImagePreview="true" :hideRecentProofChoice="false" @proof="setProof($event)" />
               <p v-if="recentProof" class="mb-2">
-                <i>Selecting a recent proof has overwritten location and date.</i>
+                <i>Selecting a recent proof has overwritten location, date and currency.</i>
               </p>
             </v-col>
           </v-row>
@@ -77,7 +83,7 @@
             <i>{{ productPriceForms.length }} price{{ productPriceForms.length > 1 ? 's' : '' }} will be added to existing proof on the {{ recentProof.date }} at {{ locationName }}.</i>
           </p>
           <p v-if="!recentProof" class="mt-2">
-            <i>1 proof and {{ productPriceForms.length }} price{{ productPriceForms.length > 1 ? 's' : '' }} will be added on the {{ date }} at {{ locationName }}.</i>
+            <i>1 proof and {{ productPriceForms.length }} price{{ productPriceForms.length > 1 ? 's' : '' }} will be added on the {{ proofMetadataForm.date }} at {{ locationName }}.</i>
           </p>
           <v-btn class="mt-4" :loading="addPricesLoading" @click="addPrices">
             Add prices to open prices
@@ -104,7 +110,7 @@ export default {
     ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
     ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
     ContributionAssistantCropImageList: defineAsyncComponent(() => import('../components/ContributionAssistantCropImageList.vue')),
-    ContributionAssistantDateForm: defineAsyncComponent(() => import('../components/ContributionAssistantDateForm.vue')),
+    ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
   },
   data() {
     return {
@@ -119,7 +125,12 @@ export default {
         location_osm_id: null,
         location_osm_type: null
       },
-      date: utils.currentDate(),
+      proofMetadataForm: {
+        date: utils.currentDate(),
+        currency: null,
+        receipt_price_count: null,
+        receipt_price_total: null
+      },
       processCroppedImagesLoading: false,
       addPricesLoading: false
     }
@@ -136,10 +147,10 @@ export default {
       return ""
     }
   },
+  mounted() {
+    this.proofMetadataForm.currency = this.appStore.getUserLastCurrencyUsed
+  },
   methods: {
-    setDate(date) {
-      this.date = date
-    },
     setProof(event) {
       if (event instanceof File) {
         // A new file was selected
@@ -160,7 +171,8 @@ export default {
         image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${event.file_path}`
         image.crossOrigin = 'Anonymous'
         this.image = image
-        this.date = event.date
+        this.proofMetadataForm.date = event.date
+        this.proofMetadataForm.currency = event.currency
         this.locationForm.location_osm_id = event.location_osm_id
         this.locationForm.location_osm_type = event.location_osm_type
       }
@@ -218,7 +230,7 @@ export default {
             error: reject
           })
         })
-        proof = await api.createProof(proofImageCompressed, 'PRICE_TAG', null, this.locationForm.location_osm_id, this.locationForm.location_osm_type, this.date, this.appStore.getUserLastCurrencyUsed || "EUR")
+        proof = await api.createProof(proofImageCompressed, 'PRICE_TAG', null, this.locationForm.location_osm_id, this.locationForm.location_osm_type, this.proofMetadataForm.date, this.proofMetadataForm.currency)
       }
       
       for (let i = 0; i < this.productPriceForms.length; i++) {
