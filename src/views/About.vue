@@ -1,10 +1,4 @@
 <template>
-  <h2 class="text-h6">
-    {{ $t('Common.About') }}
-  </h2>
-
-  <br>
-
   <v-sheet v-for="fieldset in fieldsetsGeneral" :id="fieldset.id" :key="fieldset.title" tag="section" class="mb-4 bg-background">
     <i18n-t :keypath="fieldset.title" tag="h2" class="mb-1">
       <template #op_name>

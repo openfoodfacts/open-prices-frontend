@@ -1,8 +1,4 @@
 <template>
-  <h1 class="text-h5 mb-1">
-    {{ $t('UserSettings.Title') }}
-  </h1>
-
   <v-form @submit.prevent="updateSettings">
     <v-row>
       <!-- Display -->
