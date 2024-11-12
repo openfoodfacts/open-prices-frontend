@@ -1,8 +1,8 @@
 [
     {
-        "name": "Map (Shiny)",
+        "name": "World map",
         "description": "A world map of all the contributions in Open Prices",
-        "background_image_url": null,
+        "background_image_url": "https://private-user-images.githubusercontent.com/7147385/385477163-f87e57a8-1e04-44c0-b48f-cf88c0d515ff.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzE0NDg5NTksIm5iZiI6MTczMTQ0ODY1OSwicGF0aCI6Ii83MTQ3Mzg1LzM4NTQ3NzE2My1mODdlNTdhOC0xZTA0LTQ0YzAtYjQ4Zi1jZjg4YzBkNTE1ZmYucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTExMiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDExMTJUMjE1NzM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MzIwY2RlZGE0MmViZTYxZjczODU3ZjJmMjhiNzQzMTg0NGU5MmJjZjEyM2M0YTk0YjkxM2U2NmZmOTliM2U2ZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.3u-ijnNPVJvnyWt7S4_VFqaD79YHU3qv-zb1FgVhD9g",
         "url": "https://dmayaux.shinyapps.io/open_prices",
         "code_url": null,
         "date": "2024",
@@ -12,27 +12,27 @@
     {
         "name": "Le prix des carottes",
         "description": "Simple price index of fruits and vegetables (in french)",
-        "background_image_url": null,
+        "background_image_url": "https://private-user-images.githubusercontent.com/7147385/385477402-95734480-d862-4156-a8c7-cae83c747f77.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzE0NDg5NTksIm5iZiI6MTczMTQ0ODY1OSwicGF0aCI6Ii83MTQ3Mzg1LzM4NTQ3NzQwMi05NTczNDQ4MC1kODYyLTQxNTYtYThjNy1jYWU4M2M3NDdmNzcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTExMiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDExMTJUMjE1NzM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODAzZTkzNzA5NTA3OWE0YjkwNDJkOGYzYjdkOGM2N2RlMTVkMTI3NmE4NGRmZGZkOGFkMDAzZTA5OGUzYjdjYyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.TeWMljQq479eJIuiO-dfOHsk074duCLoqZhKe74JcjY",
         "url": "https://leprixdescarottes.fr",
         "code_url": "https://github.com/TTalex/leprixdescarottes",
-        "date": "2024",
+        "date": "2024-10",
         "author": "Alex",
         "display": true
     },
     {
         "name": "Do you want your receipt?",
         "description": "Compare prices between 2 shops",
-        "background_image_url": null,
+        "background_image_url": "https://private-user-images.githubusercontent.com/7147385/385477580-643bf97c-818e-4138-9eb8-dfaf02470a81.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzE0NDg5NTksIm5iZiI6MTczMTQ0ODY1OSwicGF0aCI6Ii83MTQ3Mzg1LzM4NTQ3NzU4MC02NDNiZjk3Yy04MThlLTQxMzgtOWViOC1kZmFmMDI0NzBhODEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTExMiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDExMTJUMjE1NzM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YTA1NThlMTAyY2VhMGNiN2I4Y2IwYWRkYzAxMGU3OGJhNWYxZTUxOGMxODc2NWEzNTE2NGQ3YWZjOTYwZWZjZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.JqLNL35NN5ftnz1_LOW9UfjoQlasFVuasmNpVKoVjpk",
         "url": "https://www.doyouwantyourreceipt.info",
-        "code_url": null,
-        "date": "2024",
+        "code_url": "https://github.com/qloridant/shop_prices_comparaison",
+        "date": "2024-11",
         "author": "Quentin",
         "display": true
     },
     {
         "name": "Product price evolution",
         "description": null,
-        "background_image_url": null,
+        "background_image_url": "https://private-user-images.githubusercontent.com/7147385/385477891-82e982a3-7200-4f3d-8507-ccaef1d8babe.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzE0NDg5NTksIm5iZiI6MTczMTQ0ODY1OSwicGF0aCI6Ii83MTQ3Mzg1LzM4NTQ3Nzg5MS04MmU5ODJhMy03MjAwLTRmM2QtODUwNy1jY2FlZjFkOGJhYmUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTExMiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDExMTJUMjE1NzM5WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YmE2MTRkOTBkNWQ4YzcyOTJkMWM5N2ZjMDgwOTliMWE2NDI4Y2QxNGVmYWViZThlNWQ2N2Q4ZGY4MDJkZTE5ZiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.feRXYRmPJ9sHCKZQvIei4ECepESL12d-XarV69A0d58",
         "url": "https://project.med3d.eu/fooddata/price_plot.html?ean=5000159451666",
         "code_url": null,
         "date": "2024",

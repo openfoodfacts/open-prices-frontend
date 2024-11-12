@@ -1,8 +1,8 @@
 <template>
   <v-row>
     <v-col v-for="reuse in reusesList" :key="reuse.id" cols="12" sm="6" md="4" xl="3">
-      <v-card height="100%">
-        <v-img :src="reuse.background_image_url" height="200px" />
+      <v-card class="fill-height">
+        <v-img :src="reuse.background_image_url" height="200px" cover />
         <v-card-title>{{ reuse.name }}</v-card-title>
         <v-card-text>{{ reuse.description }}</v-card-text>
         <v-card-actions>
