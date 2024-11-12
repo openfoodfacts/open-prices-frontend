@@ -148,7 +148,7 @@
 		"AddToOFF": "Adicionar a {name}",
 		"AdditionalInfo": "Informação adicional",
 		"Barcode": "Código de barras",
-		"Barcodes": "Barcodes",
+		"Barcodes": "Códigos de barras",
 		"BarcodeInvalid": "Código de barras inválido",
 		"Brand": "Marca",
 		"Price": "Preço",
@@ -171,7 +171,7 @@
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Gráfico",
-		"Experiments": "Experiments",
+		"Experiments": "Experimentos",
 		"Label": "Rótulo",
 		"Labels": "Rótulos",
 		"Language": "Línguas",
@@ -186,14 +186,14 @@
 		"DateMissing": "Data faltando",
 		"Details": "Detalhes",
 		"Delete": "Eliminar",
-		"DeveloperMode": "Developer mode",
+		"DeveloperMode": "Modo de desenvolvedor",
 		"Discount": "Desconto",
 		"Example": "Exemplo",
 		"Examples": "Exemplos",
 		"ExampleWithColon": "Exemplo:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "Exemplo: {value}",
 		"ExamplesWithColon": "Exemplos:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "Exemplos: {value}",
 		"Edit": "Editar",
 		"Filter": "Filtro",
 		"FilterProductWithPriceCount": "Com um preço",
@@ -239,14 +239,14 @@
 		"Receipts": "Recibos",
 		"ReceiptPriceCount": "Número de preços",
 		"ReceiptPriceTotal": "Valor total",
-		"Recent": "Recent",
+		"Recent": "Recente",
 		"Search": "Procurar",
 		"Settings": "Definições",
 		"SignInOFFAccount": "Entrar com sua {url} conta",
 		"SignedIn": "Conectado!",
 		"SignIn": "Iniciar sessão",
 		"SignOut": "Sair",
-		"SideMenu": "Side menu",
+		"SideMenu": "Menu lateral",
 		"Share": "Partilhar",
 		"Source": "Fonte",
 		"Stats": "Estatísticas",
@@ -267,7 +267,7 @@
 		"Type": "Tipo",
 		"Upload": "Atualizar",
 		"URL": "URL",
-		"URLInvalid": "Invalid URL",
+		"URLInvalid": "URL inválida",
 		"User": "Utilizador",
 		"Users": "Usuários",
 		"UserCount": "{count} usuários",
@@ -468,10 +468,10 @@
 			"Title": "Adicionar múltiplos preços"
 		},
 		"AddProofSingle": {
-			"Title": "Add a single proof"
+			"Title": "Adicionar um único comprovante"
 		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "Experimentos"
 		},
 		"Home": {
 			"Title": "Início"
@@ -581,7 +581,7 @@
 		"LocationDisplayOSMID": "Exibir ID do OSM",
 		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar marcadores de categoria",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"SideMenuExperimentsDisplay": "Exibir 'Experimentos'",
 		"Save": "Guardar",
 		"Title": "Definições",
 		"TranslationCompletion": "Tradução está {completion}% completa.",
