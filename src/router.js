@@ -33,6 +33,7 @@ const routes = [
   { path: '/users', name: 'users', component: () => import('./views/UserList.vue'), meta: { title: 'TopContributors', icon: 'mdi-account-star-outline', drawerMenu: true, breadcrumbs: [{title: 'TopContributors', disabled: true }] }},
   { path: '/users/:username', name: 'user-detail', component: () => import('./views/UserDetail.vue'), meta: { title: 'User detail' }},
   { path: '/experiments', name: 'experiments', component: () => import('./views/Experiments.vue'), meta: { title: 'Experiments', icon: 'mdi-test-tube', drawerMenu: true, drawerMenuConditionalDisplay: 'drawer_display_experiments', breadcrumbs: [{title: 'Experiments', disabled: true }] }},
+  { path: '/reuses', name: 'reuses', component: () => import('./views/Reuses.vue'), meta: { title: 'Reuses', icon: 'mdi-account-group', drawerMenu: true, breadcrumbs: [{title: 'Reuses', disabled: true }] }},
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true, breadcrumbs: [{title: 'Stats', disabled: true }] }},
   { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', icon: 'mdi-cog-outline', drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true, breadcrumbs: [{title: 'About', disabled: true }] }},
