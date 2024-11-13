@@ -229,7 +229,7 @@
 		"OrderProofDateDESC": "Data da prova",
 		"OrderUserCountDESC": "Contagem de usuários",
 		"PersonalInfo": "Informações pessoais",
-		"Physical": "Physical",
+		"Physical": "Físico",
 		"PriceCount": "{count} valores",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
@@ -249,7 +249,7 @@
 		"SideMenu": "Menu lateral",
 		"Share": "Partilhar",
 		"Source": "Fonte",
-		"SourceCode": "Source code",
+		"SourceCode": "Código-fonte",
 		"Stats": "Estatísticas",
 		"TaglineOriginal": "Um banco de dados público e aberto de preços dos alimentos",
 		"TaglineAlt1": "O banco de dados público e aberto de preços",
@@ -456,8 +456,8 @@
 		"Success": "Comprovante editado!"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Sua reutilização está faltando? Avise-nos {url}!",
+		"Here": "aqui"
 	},
 	"Router": {
 		"About": {
@@ -494,7 +494,7 @@
 			"Title": "Minhas demonstrações"
 		},
 		"Reuses": {
-			"Title": "Reuses"
+			"Title": "Reutilizações"
 		},
 		"Search": {
 			"Title": "Procurar"
@@ -518,7 +518,7 @@
 			"Title": "Principais produtos"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Assistente de Contribuição"
 		}
 	},
 	"Search": {
