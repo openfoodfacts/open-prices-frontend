@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Deli",
 		"Source": "Vir",
+		"SourceCode": "Source code",
 		"Stats": "Stats",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
@@ -453,6 +454,10 @@
 		"Title": "Edit a proof",
 		"Save": "Shrani",
 		"Success": "Proof edited!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
