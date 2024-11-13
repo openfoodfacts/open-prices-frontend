@@ -511,6 +511,9 @@
 		},
 		"TopProducts": {
 			"Title": "Productos destacados"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {
