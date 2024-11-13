@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "推荐给好友",
 		"Source": "来源",
+		"SourceCode": "Source code",
 		"Stats": "统计数据",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
@@ -453,6 +454,10 @@
 		"Title": "编辑证明",
 		"Save": "儲存",
 		"Success": "证明已编辑！"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
