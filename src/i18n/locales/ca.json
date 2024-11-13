@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Comparteix",
 		"Source": "Origen",
+		"SourceCode": "Source code",
 		"Stats": "Estadístiques",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
@@ -453,6 +454,10 @@
 		"Title": "Edit a proof",
 		"Save": "Desa",
 		"Success": "Proof edited!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
