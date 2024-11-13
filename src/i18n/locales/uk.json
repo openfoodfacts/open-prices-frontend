@@ -249,6 +249,7 @@
 		"SideMenu": "Бокове меню",
 		"Share": "Поділитися",
 		"Source": "Джерело",
+		"SourceCode": "Source code",
 		"Stats": "Статистика",
 		"TaglineOriginal": "Відкрита краудсорсингова база даних цін на продукти харчування",
 		"TaglineAlt1": "Відкрита краудсорсингова база даних цін",
@@ -454,6 +455,10 @@
 		"Save": "Зберегти",
 		"Success": "Доказ відредаговано!"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "Про додаток"
@@ -513,7 +518,7 @@
 			"Title": "Кращі продукти"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Помічник внесків"
 		}
 	},
 	"Search": {
