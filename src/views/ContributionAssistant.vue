@@ -227,7 +227,7 @@ export default {
             error: reject
           })
         })
-        proof = await api.createProof(proofImageCompressed, 'PRICE_TAG', null, this.locationForm.location_osm_id, this.locationForm.location_osm_type, this.proofMetadataForm.date, this.proofMetadataForm.currency)
+        proof = await api.createProof(proofImageCompressed, Object.assign({type: 'PRICE_TAG'}, this.locationForm, this.proofMetadataForm))
       }
       
       for (let i = 0; i < this.productPriceForms.length; i++) {

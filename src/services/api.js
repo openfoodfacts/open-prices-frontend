@@ -5,7 +5,7 @@ import constants from '../constants'
 const PRICE_UPDATE_FIELDS = ['price', 'price_is_discounted', 'price_without_discount', 'price_per', 'currency', 'date']
 const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'category_tag', 'labels_tags', 'origins_tags', 'location_id', 'location_osm_id', 'location_osm_type', 'proof_id'])
 const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency', 'receipt_price_count', 'receipt_price_total']
-// const PROOF_CREATE_FIELDS = PROOF_UPDATE_FIELDS.concat(['location_id', 'location_osm_id', 'location_osm_type'])  // 'file'
+const PROOF_CREATE_FIELDS = PROOF_UPDATE_FIELDS.concat(['location_id', 'location_osm_id', 'location_osm_type'])  // 'file'
 const LOCATION_ONLINE_CREATE_FIELDS = ['type', 'website_url']
 const LOCATION_SEARCH_LIMIT = 10
 
@@ -68,26 +68,28 @@ export default {
     })
     .then((response) => response.json())
   },
-
-  createProof(proofImage, type='PRICE_TAG', location_id=null, location_osm_id=null, location_osm_type=null, date=null, currency=null, receipt_price_count=null, receipt_price_total=null) {
+  createProof(image, inputData) {
+    console.log('createProof', inputData)
+    const data = filterBodyWithAllowedKeys(inputData, PROOF_CREATE_FIELDS)
+    console.log('createProof', data)
     const store = useAppStore()
     let formData = new FormData()
-    formData.append('file', proofImage, proofImage.name)
-    formData.append('type', type)
-    if (location_id) {
-      formData.append('location_id', location_id ? location_id : '')
+    formData.append('file', image, image.name)
+    formData.append('type', data.type)
+    if (data.location_id) {
+      formData.append('location_id', data.location_id ? data.location_id : '')
     } else {
-      formData.append('location_osm_id', location_osm_id ? location_osm_id : '')
-      formData.append('location_osm_type', location_osm_type ? location_osm_type : '')
+      formData.append('location_osm_id', data.location_osm_id ? data.location_osm_id : '')
+      formData.append('location_osm_type', data.location_osm_type ? data.location_osm_type : '')
     }
-    formData.append('date', date ? date : '')
-    formData.append('currency', currency ? currency : '')
-    if (type === constants.PROOF_TYPE_RECEIPT) {
-      if (receipt_price_count) {
-        formData.append('receipt_price_count', receipt_price_count)
+    formData.append('date', data.date ? data.date : '')
+    formData.append('currency', data.currency ? data.currency : '')
+    if (data.type === constants.PROOF_TYPE_RECEIPT) {
+      if (data.receipt_price_count) {
+        formData.append('receipt_price_count', data.receipt_price_count)
       }
-      if (receipt_price_total) {
-        formData.append('receipt_price_total', receipt_price_total)
+      if (data.receipt_price_total) {
+        formData.append('receipt_price_total', data.receipt_price_total)
       }
     }
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams()}`
@@ -128,7 +130,8 @@ export default {
     .then((response) => response.json())
   },
 
-  updateProof(proofId, data = {}) {
+  updateProof(proofId, inputData = {}) {
+    const data = filterBodyWithAllowedKeys(inputData, PROOF_UPDATE_FIELDS)
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
     return fetch(url, {
@@ -136,7 +139,7 @@ export default {
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
-      body: JSON.stringify(filterBodyWithAllowedKeys(data, PROOF_UPDATE_FIELDS)),
+      body: JSON.stringify(data),
     })
     .then((response) => response.json())
   },
@@ -153,7 +156,8 @@ export default {
     // .then((response) => response.json())
   },
 
-  createPrice(data) {
+  createPrice(inputData) {
+    const data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS)
     const store = useAppStore()
     store.user.last_product_mode_used = data.product_code ? 'barcode' : 'category'
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams()}`
@@ -162,7 +166,7 @@ export default {
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
-      body: JSON.stringify(filterBodyWithAllowedKeys(data, PRICE_CREATE_FIELDS)),
+      body: JSON.stringify(data),
     })
     .then((response) => response.json())
   },
@@ -186,7 +190,8 @@ export default {
     .then((response) => response.json())
   },
 
-  updatePrice(priceId, data = {}) {
+  updatePrice(priceId, inputData = {}) {
+    const data = filterBodyWithAllowedKeys(inputData, PRICE_UPDATE_FIELDS)
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
     return fetch(url, {
@@ -194,7 +199,7 @@ export default {
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
-      body: JSON.stringify(filterBodyWithAllowedKeys(data, PRICE_UPDATE_FIELDS)),
+      body: JSON.stringify(data),
     })
     .then((response) => response.json())
   },
@@ -239,7 +244,8 @@ export default {
     .then((response) => response.json())
   },
 
-  createLocationOnline(data) {
+  createLocationOnline(inputData) {
+    const data = filterBodyWithAllowedKeys(inputData, LOCATION_ONLINE_CREATE_FIELDS)
     const store = useAppStore()
     data.type = constants.LOCATION_TYPE_ONLINE
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations?${buildURLParams()}`
@@ -248,7 +254,7 @@ export default {
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`,
       }),
-      body: JSON.stringify(filterBodyWithAllowedKeys(data, LOCATION_ONLINE_CREATE_FIELDS)),
+      body: JSON.stringify(data),
     })
     .then((response) => response.json())
   },
