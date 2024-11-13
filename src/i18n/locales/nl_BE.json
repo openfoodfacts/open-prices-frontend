@@ -249,6 +249,7 @@
 		"SideMenu": "Zijmenu",
 		"Share": "Delen",
 		"Source": "Bron",
+		"SourceCode": "Source code",
 		"Stats": "Statistieken",
 		"TaglineOriginal": "Een open, crowdsourced database van voedselprijzen",
 		"TaglineAlt1": "De open, crowdsourced database van prijzen",
@@ -453,6 +454,10 @@
 		"Title": "Een bewijs bewerken",
 		"Save": "Opslaan",
 		"Success": "Bewijs aangepast!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
