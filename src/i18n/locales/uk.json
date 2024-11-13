@@ -511,6 +511,9 @@
 		},
 		"TopProducts": {
 			"Title": "Кращі продукти"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {
