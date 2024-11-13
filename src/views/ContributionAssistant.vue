@@ -1,8 +1,6 @@
 <template>
   <v-container>
-    <v-tabs
-      v-model="tab"
-    >
+    <v-tabs v-model="tab">
       <v-tab value="LocationDate">
         1. Location & Date
       </v-tab>
@@ -103,7 +101,6 @@ import api from '../services/api'
 import utils from '../utils.js'
 
 export default {
-  name: "IndexPage",
   components: {
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
@@ -144,7 +141,7 @@ export default {
         if (location.type === 'ONLINE') return location.website_url
         return utils.getLocationOSMTitle(location, true, true, true)
       }
-      return ""
+      return ''
     }
   },
   mounted() {
@@ -199,7 +196,7 @@ export default {
       this.processCroppedImagesLoading = false
     },
     handleGeminiResponse(response) {
-      console.log(response)
+      console.log('handleGeminiResponse', response)
       this.productPriceForms = []
       for (let i = 0; i < response.labels.length; i++) {
         const label = response.labels[i]
@@ -212,13 +209,13 @@ export default {
           price: label.price.toString(),
           price_per: label.unit,
           price_is_discounted: false,
-          currency: this.appStore.getUserLastCurrencyUsed || "EUR",
+          currency: this.appStore.getUserLastCurrencyUsed || 'EUR',
           proofImage: this.croppedImages[i],
           product_code: label.barcode.toString()
         }
         this.productPriceForms.push(productPriceForm)
       }
-      this.tab = "Cleanup"
+      this.tab = 'Cleanup'
     },
     async addPrices() {
       this.addPricesLoading = true
@@ -239,7 +236,7 @@ export default {
         if (!Array.isArray(origins_tags)) {
           origins_tags = [origins_tags]
         }
-        if (origins_tags[0] == null || origins_tags[0] == "unknown" || origins_tags[0] == "other" || origins_tags[0] == "") {
+        if (origins_tags[0] == null || origins_tags[0] == 'unknown' || origins_tags[0] == 'other' || origins_tags[0] == '') {
           origins_tags = []
         }
         const priceData = {
@@ -252,11 +249,11 @@ export default {
           proof_id: proof.id
         }
         // Cleanup unwanted fields for API
-        if (productPriceForm.mode == "barcode"){
+        if (productPriceForm.mode == 'barcode') {
           delete priceData.price_per
           delete priceData.category_tag
           delete priceData.origins_tags
-        } else if (productPriceForm.mode == "category"){
+        } else if (productPriceForm.mode == 'category') {
           delete priceData.product_code
           delete priceData.product
         }
@@ -268,4 +265,3 @@ export default {
   }
 }
 </script>
-
