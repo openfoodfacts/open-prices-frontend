@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "பகிர்க",
 		"Source": "Source",
+		"SourceCode": "Source code",
 		"Stats": "Stats",
 		"TaglineOriginal": "உணவு விலைகளின் திறந்த கூட்டத் தரவுத்தளம்",
 		"TaglineAlt1": "விலைகளின் திறந்த மக்கள்தொகை தரவுத்தளம்",
@@ -453,6 +454,10 @@
 		"Title": "ஆதாரத்தைத் திருத்தவும்",
 		"Save": "சேமி",
 		"Success": "Proof edited!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
