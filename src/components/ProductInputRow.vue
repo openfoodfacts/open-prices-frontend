@@ -97,7 +97,7 @@ export default {
       type: Object,
       default: () => ({ mode: '', product: null, product_code: '', category_tag: null, origins_tags: '', labels_tags: [] })
     },
-    disableInitWhenSwitchingModes : {
+    disableInitWhenSwitchingModes: {
       type: Boolean,
       default: () => false
     }

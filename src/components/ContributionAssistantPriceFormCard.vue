@@ -31,7 +31,7 @@
               </v-item>
             </v-item-group>
           </h3>
-          <PriceInputRow :priceForm="productPriceForm" @filled="pricePriceFormFilled = $event" />
+          <PriceInputRow :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
         </v-col>
       </v-row>
     </v-card-text>

@@ -109,7 +109,7 @@
               :loading="createPriceLoading"
               :disabled="!productPriceFormFilled"
             >
-              {{ $t('AddPriceMultiple.ProductPriceDetails.Upload') }}
+              {{ $t('Common.Upload') }}
             </v-btn>
           </v-card-text>
         </v-card>

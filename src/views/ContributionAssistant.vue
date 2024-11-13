@@ -14,25 +14,22 @@
     <v-tabs-window v-model="tab">
       <v-tabs-window-item value="LocationDate">
         <v-container>
-          <v-col cols="12" md="6">
-            <h3 class="mb-1">
-              1. Select a shop
-            </h3>
-            <LocationInputRow :locationForm="locationForm" />
-            <h3 class="mb-1 mt-4">
-              2. Select the date and currency of the prices
-            </h3>
-            <ProofMetadataInputRow :proofMetadataForm="proofMetadataForm" />
-            <v-btn class="mt-4" :disabled="!locationForm.location_osm_id" @click="() => tab = 'Crop'">
-              Next
-            </v-btn>
-          </v-col>
+          <v-row>
+            <v-col cols="12" md="6">
+              <LocationInputRow :locationForm="locationForm" />
+              <ProofMetadataInputRow :proofMetadataForm="proofMetadataForm" />
+              <br>
+              <v-btn class="mt-4" color="success" :disabled="!locationForm.location_osm_id" @click="tab='Crop'">
+                Next
+              </v-btn>
+            </v-col>
+          </v-row>
         </v-container>
       </v-tabs-window-item>
       <v-tabs-window-item value="Crop">
         <v-container>
           <v-row>
-            <v-col cols="12" md="6">
+            <v-col cols="12">
               <h3 class="mb-4">
                 1. Select an image containing labels
               </h3>
@@ -56,13 +53,16 @@
               <ContributionAssistantCropImageList :croppedImages="croppedImages" @removeCrop="removeCrop($event)" />
             </v-col>
           </v-row>
-          
-          <h3 class="mb-4">
-            4. Send the cropped images for automatic processing
-          </h3>
-          <v-btn :disabled="!croppedImages.length" :loading="processCroppedImagesLoading" @click="processCroppedImages">
-            Process Cropped Images
-          </v-btn>
+          <v-row>
+            <v-col cols="12">
+              <h3 class="mb-4">
+                4. Send the cropped images for automatic processing
+              </h3>
+              <v-btn color="success" :disabled="!croppedImages.length" :loading="processCroppedImagesLoading" @click="processCroppedImages">
+                Process Cropped Images
+              </v-btn>
+            </v-col>
+          </v-row>
         </v-container>
       </v-tabs-window-item>
       <v-tabs-window-item value="Cleanup">
@@ -72,20 +72,30 @@
               v-for="(productPriceForm, index) in productPriceForms"
               :key="index"
               cols="12"
-              md="3"
+              md="6"
             >
               <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" />
             </v-col>
           </v-row>
-          <p v-if="recentProof" class="mt-2">
-            <i>{{ productPriceForms.length }} price{{ productPriceForms.length > 1 ? 's' : '' }} will be added to existing proof on the {{ recentProof.date }} at {{ locationName }}.</i>
-          </p>
-          <p v-if="!recentProof" class="mt-2">
-            <i>1 proof and {{ productPriceForms.length }} price{{ productPriceForms.length > 1 ? 's' : '' }} will be added on the {{ proofMetadataForm.date }} at {{ locationName }}.</i>
-          </p>
-          <v-btn class="mt-4" :loading="addPricesLoading" @click="addPrices">
-            Add prices to open prices
-          </v-btn>
+          <v-row>
+            <v-col>
+              <v-alert
+                class="mb-2"
+                type="info"
+                variant="outlined"
+              >
+                <p v-if="recentProof">
+                  {{ productPriceForms.length }} price{{ productPriceForms.length > 1 ? 's' : '' }} will be added to an existing proof on the {{ recentProof.date }} at {{ locationName }}.
+                </p>
+                <p v-if="!recentProof">
+                  1 proof and {{ productPriceForms.length }} price{{ productPriceForms.length > 1 ? 's' : '' }} will be added on the {{ proofMetadataForm.date }} at {{ locationName }}.
+                </p>
+              </v-alert>
+              <v-btn class="mt-4" color="success" :loading="addPricesLoading" @click="addPrices">
+                {{ $t('Common.Upload') }}
+              </v-btn>
+            </v-col>
+          </v-row>
         </v-container>
       </v-tabs-window-item>
     </v-tabs-window>
@@ -261,6 +271,7 @@ export default {
         this.productPriceForms[i].processed = true
       }
       this.addPricesLoading = false
+      this.$router.push({ path: '/dashboard', query: { multipleSuccess: 'true' } })
     }
   }
 }
