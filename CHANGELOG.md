@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.94.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.94.0...v1.94.1) (2024-11-13)
+
+
+### Technical
+
+* **ContributionAssistant:** small fixes and adjustements following feedback. ref [#1025](https://github.com/openfoodfacts/open-prices-frontend/issues/1025) ([a2ae48d](https://github.com/openfoodfacts/open-prices-frontend/commit/a2ae48d6890770706a60f7923c9b804152bdb8e9))
+* **Footer:** invert action buttons & OFF links ([e755d8b](https://github.com/openfoodfacts/open-prices-frontend/commit/e755d8bf07a271c338d48e38848999f57a160d5a))
+
 ## [1.94.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.93.0...v1.94.0) (2024-11-13)
 
 
