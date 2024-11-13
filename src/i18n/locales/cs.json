@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Sdílet",
 		"Source": "Zdroj",
+		"SourceCode": "Source code",
 		"Stats": "Statistiky",
 		"TaglineOriginal": "Otevřená crowdsourcovaná databáze cen potravin",
 		"TaglineAlt1": "Otevřená crowdsourcovaná databáze cen",
@@ -453,6 +454,10 @@
 		"Title": "Upravit doklad",
 		"Save": "Uložit",
 		"Success": "Doklad upraven!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
