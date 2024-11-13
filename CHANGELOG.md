@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.94.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.93.0...v1.94.0) (2024-11-13)
+
+
+### Features
+
+* **ContributionAssistant:** new experiment, a contribution assistant using gemini ([#1025](https://github.com/openfoodfacts/open-prices-frontend/issues/1025)) ([cdeec76](https://github.com/openfoodfacts/open-prices-frontend/commit/cdeec76ba430344428d619335efd9e4647c61ddc))
+* new page to list known reuses ([#1032](https://github.com/openfoodfacts/open-prices-frontend/issues/1032)) ([c8627e9](https://github.com/openfoodfacts/open-prices-frontend/commit/c8627e9217414baa04ad01de128bf6eb4333e85e))
+
+
+### Bug Fixes
+
+* **Reuses page:** add images to repo. Add tags. Add alert to push new reuses. ref [#1032](https://github.com/openfoodfacts/open-prices-frontend/issues/1032) ([f578ec5](https://github.com/openfoodfacts/open-prices-frontend/commit/f578ec50737d9fde426d55aa8520c9c20a234f15))
+* **Reuses page:** forgot to commit the image urls. ref [#1032](https://github.com/openfoodfacts/open-prices-frontend/issues/1032) ([a059c04](https://github.com/openfoodfacts/open-prices-frontend/commit/a059c04e3fa3412a6efa7dfbd5981fadf6aef0cc))
+
+
+### Technical
+
+* **API:** always filter input data fields before POST ([#1034](https://github.com/openfoodfacts/open-prices-frontend/issues/1034)) ([b8927ed](https://github.com/openfoodfacts/open-prices-frontend/commit/b8927ed10e0de7652f03ee33559275dafb3e348f))
+* **API:** send the page url on every POST ([#1035](https://github.com/openfoodfacts/open-prices-frontend/issues/1035)) ([faa9a43](https://github.com/openfoodfacts/open-prices-frontend/commit/faa9a430b35a528993af33c2c00ddf0618461719))
+* **l10n:** New Crowdin translations to review and merge ([#1031](https://github.com/openfoodfacts/open-prices-frontend/issues/1031)) ([249aca9](https://github.com/openfoodfacts/open-prices-frontend/commit/249aca9afb4e48700b6faa6c255b0e5bb8b24782))
+
 ## [1.93.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.92.2...v1.93.0) (2024-11-11)
 
 
