@@ -249,7 +249,7 @@
 		"SideMenu": "Zijmenu",
 		"Share": "Delen",
 		"Source": "Bron",
-		"SourceCode": "Source code",
+		"SourceCode": "Broncode",
 		"Stats": "Statistieken",
 		"TaglineOriginal": "Een open, crowdsourced database van voedselprijzen",
 		"TaglineAlt1": "De open, crowdsourced database van prijzen",
@@ -456,8 +456,8 @@
 		"Success": "Bewijs aangepast!"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Ontbreekt uw hergebruik? Laat het ons weten {url}!",
+		"Here": "hier"
 	},
 	"Router": {
 		"About": {
@@ -518,7 +518,7 @@
 			"Title": "Top producten"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Bijdrage-Assistent"
 		}
 	},
 	"Search": {
