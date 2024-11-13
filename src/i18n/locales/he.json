@@ -249,6 +249,7 @@
 		"SideMenu": "תפריט צד",
 		"Share": "שיתוף",
 		"Source": "מקור",
+		"SourceCode": "Source code",
 		"Stats": "סטטיסטיקה",
 		"TaglineOriginal": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים",
 		"TaglineAlt1": "מסד הנתונים הפתוח למחירים במיקור המונים",
@@ -453,6 +454,10 @@
 		"Title": "עריכת הוכחה",
 		"Save": "שמירה",
 		"Success": "ההוכחה נערכה!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
