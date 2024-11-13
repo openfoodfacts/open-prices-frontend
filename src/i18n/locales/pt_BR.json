@@ -249,6 +249,7 @@
 		"SideMenu": "Menu lateral",
 		"Share": "Partilhar",
 		"Source": "Fonte",
+		"SourceCode": "Source code",
 		"Stats": "Estatísticas",
 		"TaglineOriginal": "Um banco de dados público e aberto de preços dos alimentos",
 		"TaglineAlt1": "O banco de dados público e aberto de preços",
@@ -453,6 +454,10 @@
 		"Title": "Editar comprovante",
 		"Save": "Guardar",
 		"Success": "Comprovante editado!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
