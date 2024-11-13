@@ -15,6 +15,7 @@ const OP_DEFAULT_HEADERS = {
 }
 const OP_DEFAULT_PARAMS = {
   'app_name': constants.APP_USER_AGENT
+  // 'app_version'  // hack to store price/proof create source
 }
 
 function buildURLParams(params = {}) {
@@ -68,10 +69,8 @@ export default {
     })
     .then((response) => response.json())
   },
-  createProof(image, inputData) {
-    console.log('createProof', inputData)
+  createProof(image, inputData, source = null) {
     const data = filterBodyWithAllowedKeys(inputData, PROOF_CREATE_FIELDS)
-    console.log('createProof', data)
     const store = useAppStore()
     let formData = new FormData()
     formData.append('file', image, image.name)
@@ -92,7 +91,7 @@ export default {
         formData.append('receipt_price_total', data.receipt_price_total)
       }
     }
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams()}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams({'app_version': source})}`
     return fetch(url, {
       method: 'POST',
       headers: {
@@ -156,11 +155,11 @@ export default {
     // .then((response) => response.json())
   },
 
-  createPrice(inputData) {
+  createPrice(inputData, source = null) {
     const data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS)
     const store = useAppStore()
     store.user.last_product_mode_used = data.product_code ? 'barcode' : 'category'
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams()}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({'app_version': source})}`
     return fetch(url, {
       method: 'POST',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {

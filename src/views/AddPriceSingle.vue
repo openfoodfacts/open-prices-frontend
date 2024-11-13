@@ -194,7 +194,7 @@ export default {
       }
       // create price
       api
-        .createPrice(this.addPriceSingleForm)
+        .createPrice(this.addPriceSingleForm, this.$route.path)
         .then((data) => {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
