@@ -249,6 +249,7 @@
 		"SideMenu": "Menu latéral",
 		"Share": "Partager",
 		"Source": "Source",
+		"SourceCode": "Source code",
 		"Stats": "Statistiques",
 		"TaglineOriginal": "La base de données ouverte et collaborative de prix alimentaires",
 		"TaglineAlt1": "La base de données ouverte et participative de prix",
@@ -453,6 +454,10 @@
 		"Title": "Modifier une preuve",
 		"Save": "Enregistrer",
 		"Success": "Preuve modifiée !"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
