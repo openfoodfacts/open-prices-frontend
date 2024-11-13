@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Jaa",
 		"Source": "Lähde",
+		"SourceCode": "Source code",
 		"Stats": "Tilastot",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
@@ -453,6 +454,10 @@
 		"Title": "Muokkaa todistetta",
 		"Save": "Tallenna",
 		"Success": "Todiste muokattu!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
