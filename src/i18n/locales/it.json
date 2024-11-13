@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Condividi",
 		"Source": "Fonte",
+		"SourceCode": "Source code",
 		"Stats": "Statistiche",
 		"TaglineOriginal": "Un database aperto in crowdsourcing dei prezzi",
 		"TaglineAlt1": "Il database aperto in crowdsourcing dei prezzi",
@@ -453,6 +454,10 @@
 		"Title": "Modifica una prova",
 		"Save": "Salva",
 		"Success": "Prova modificata!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
