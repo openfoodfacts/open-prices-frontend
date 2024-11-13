@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.93.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.92.2...v1.93.0) (2024-11-11)
+
+
+### Features
+
+* new /experiments page ([#1023](https://github.com/openfoodfacts/open-prices-frontend/issues/1023)) ([f6d665c](https://github.com/openfoodfacts/open-prices-frontend/commit/f6d665ca4de17992e71e8d664c2515a3711b2a24))
+
+
+### Bug Fixes
+
+* **Experiments:** fix AddPriceSingle & ProofAddSingle forms. ref [#1022](https://github.com/openfoodfacts/open-prices-frontend/issues/1022) ([9d10f27](https://github.com/openfoodfacts/open-prices-frontend/commit/9d10f274f7e7e2ff41637a630832d7b77d76645b))
+
+
+### Technical
+
+* add breadcrumbs to all remaining pages ([#1026](https://github.com/openfoodfacts/open-prices-frontend/issues/1026)) ([831db75](https://github.com/openfoodfacts/open-prices-frontend/commit/831db75d1203d7b871db334663c6c08d60f819a8))
+* **Experiments:** add to Drawer. New settings to toggle from drawer ([#1029](https://github.com/openfoodfacts/open-prices-frontend/issues/1029)) ([a0dc39b](https://github.com/openfoodfacts/open-prices-frontend/commit/a0dc39b6ffe94c7c7ae855974404331dc04e5833))
+* **l10n:** New Crowdin translations to review and merge ([#1021](https://github.com/openfoodfacts/open-prices-frontend/issues/1021)) ([cfab09c](https://github.com/openfoodfacts/open-prices-frontend/commit/cfab09cff5e2158e24065d274f628ac482484662))
+* **l10n:** New Crowdin translations to review and merge ([#1028](https://github.com/openfoodfacts/open-prices-frontend/issues/1028)) ([656b452](https://github.com/openfoodfacts/open-prices-frontend/commit/656b4525b6bee05023edf86ed45e2ebc2ee50487))
+* **Proof add:** add option to hide image preview ([3ece9a0](https://github.com/openfoodfacts/open-prices-frontend/commit/3ece9a0d0240a0c4af7c67ab86046bb1002a4968))
+* **Settings:** Move some settings to a new 'Developer mode' section ([#1030](https://github.com/openfoodfacts/open-prices-frontend/issues/1030)) ([b757fd4](https://github.com/openfoodfacts/open-prices-frontend/commit/b757fd4e51c5b250f1446d7f985411bdfc44b02a))
+* **Settings:** use switch for Dark mode (instead of btn) ([#1027](https://github.com/openfoodfacts/open-prices-frontend/issues/1027)) ([4e8d8a7](https://github.com/openfoodfacts/open-prices-frontend/commit/4e8d8a7578bc9da42fe5c0cf32810b93c82bd030))
+
 ## [1.92.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.92.1...v1.92.2) (2024-11-09)
 
 
