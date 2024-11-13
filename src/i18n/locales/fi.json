@@ -511,6 +511,9 @@
 		},
 		"TopProducts": {
 			"Title": "Huipputuotteet"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {
