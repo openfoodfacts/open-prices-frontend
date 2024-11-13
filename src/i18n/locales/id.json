@@ -511,6 +511,9 @@
 		},
 		"TopProducts": {
 			"Title": "Produk teratas"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {
