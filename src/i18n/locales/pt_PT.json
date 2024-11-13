@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Partilhar",
 		"Source": "Fonte",
+		"SourceCode": "Source code",
 		"Stats": "Estatísticas",
 		"TaglineOriginal": "Uma base de dados aberta e colaborativa de preços de alimentos",
 		"TaglineAlt1": "A base de dados aberta e colectiva de preços",
@@ -453,6 +454,10 @@
 		"Title": "Editar um comprovativo",
 		"Save": "Guardar",
 		"Success": "Comprovativo editado!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
