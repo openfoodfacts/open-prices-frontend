@@ -1,26 +1,41 @@
 <template>
   <v-row>
     <v-col v-for="reuse in reusesList" :key="reuse.id" cols="12" sm="6" md="4" xl="3">
-      <v-card class="fill-height">
-        <v-img :src="reuse.background_image_url" height="200px" cover />
-        <v-card-title>{{ reuse.name }}</v-card-title>
-        <v-card-text>{{ reuse.description }}</v-card-text>
-        <v-card-actions>
-          <v-btn color="primary" append-icon="mdi-open-in-new" :href="reuse.url" target="_blank" title="View">
-            View
-          </v-btn>
-          <v-spacer />
-          <v-btn v-if="reuse.code_url" icon="mdi-xml" :href="reuse.code_url" target="_blank" title="Source code" />
-        </v-card-actions>
-      </v-card>
+      <ReuseCard :reuse="reuse" />
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col>
+      <v-alert
+        class="mb-2"
+        type="info"
+        variant="outlined"
+      >
+        <i18n-t keypath="Reuses.AlertNew" tag="span">
+          <template #url>
+            <a :href="APP_GITHUB_REUSE_DISCUSSION_URL" target="_blank">{{ $t('Reuses.Here') }}</a>
+          </template>
+        </i18n-t>
+      </v-alert>
     </v-col>
   </v-row>
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import Reuses from '../data/reuses.json'
+import constants from '../constants'
 
 export default {
+  components: {
+    ReuseCard: defineAsyncComponent(() => import('../components/ReuseCard.vue')),
+  },
+  data() {
+    return {
+      APP_GITHUB_REUSE_DISCUSSION_URL: constants.APP_GITHUB_REUSE_DISCUSSION_URL,
+    }
+  },
   computed: {
     reusesList() {
       return Reuses.filter(r => r.display)
