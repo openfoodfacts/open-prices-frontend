@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Dalintis",
 		"Source": "Šaltinis",
+		"SourceCode": "Source code",
 		"Stats": "Statistika",
 		"TaglineOriginal": "Atviroji sutelktinių išteklių gautų maisto produktų kainų duomenų bazė",
 		"TaglineAlt1": "Atviroji sutelktinių išteklių gautų kainų duomenų bazė",
@@ -453,6 +454,10 @@
 		"Title": "Redaguoti įrodymą",
 		"Save": "Išsaugoti",
 		"Success": "Įrodymas redaguotas!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
