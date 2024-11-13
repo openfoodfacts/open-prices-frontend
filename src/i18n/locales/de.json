@@ -249,6 +249,7 @@
 		"SideMenu": "Seitenmenü",
 		"Share": "Teilen",
 		"Source": "Quelle",
+		"SourceCode": "Source code",
 		"Stats": "Statistiken",
 		"TaglineOriginal": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise",
 		"TaglineAlt1": "Eine offene öffentlich zugängliche Datenbank der Preise",
@@ -453,6 +454,10 @@
 		"Title": "Preis bearbeiten",
 		"Save": "Speichern",
 		"Success": "Nachweis bearbeitet!"
+	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
 	},
 	"Router": {
 		"About": {
