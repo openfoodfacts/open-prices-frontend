@@ -2,23 +2,6 @@
   <v-footer class="bg-footer py-4">
     <v-row no-gutters>
       <v-col cols="12" md="6" align="center">
-        <i18n-t keypath="Footer.TagLine" tag="span">
-          <template #name>
-            {{ APP_NAME }}
-          </template>
-          <template #url>
-            <OpenFoodFactsLink display="link" />
-          </template>
-        </i18n-t>
-        <br>
-        <v-btn v-for="source in sourceList" :key="source.source" class="mr-1 mb-2" size="x-small" active :prepend-icon="source.icon" :href="source.url" target="_blank">
-          {{ source.label }}
-          <v-tooltip activator="parent" open-on-click location="top">
-            {{ source.name }}
-          </v-tooltip>
-        </v-btn>
-      </v-col>
-      <v-col cols="12" md="6" align="center">
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-chart-box-outline" to="/stats">
           {{ $t('Common.Stats') }}
         </v-btn>
@@ -28,8 +11,25 @@
         <v-btn class="mx-2" variant="text" prepend-icon="mdi-information-outline" to="/about">
           {{ $t('Common.About') }}
         </v-btn>
-        <v-btn class="mx-2" variant="text" prepend-icon="mdi-github" :href="APP_GITHUB_FRONTEND_URL" target="_blank">
+        <v-btn class="mx-2 my-2" variant="text" prepend-icon="mdi-github" :href="APP_GITHUB_FRONTEND_URL" target="_blank">
           {{ GITHUB_NAME }}
+        </v-btn>
+      </v-col>
+      <v-col cols="12" md="6" align="center">
+        <i18n-t keypath="Footer.TagLine" tag="span" class="mb-1">
+          <template #name>
+            {{ APP_NAME }}
+          </template>
+          <template #url>
+            <OpenFoodFactsLink display="link" />
+          </template>
+        </i18n-t>
+        <br>
+        <v-btn v-for="source in sourceList" :key="source.source" class="mr-1 my-2" size="x-small" active :prepend-icon="source.icon" :href="source.url" target="_blank">
+          {{ source.label }}
+          <v-tooltip activator="parent" open-on-click location="top">
+            {{ source.name }}
+          </v-tooltip>
         </v-btn>
       </v-col>
     </v-row>
