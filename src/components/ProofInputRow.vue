@@ -168,7 +168,7 @@ export default {
       })
       .then((proofImageCompressed) => {
         api
-          .createProof(proofImageCompressed, this.proofForm)
+          .createProof(proofImageCompressed, this.proofForm, this.$route.path)
           .then((data) => {
             this.loading = false
             if (data.id) {

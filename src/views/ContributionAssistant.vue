@@ -227,7 +227,7 @@ export default {
             error: reject
           })
         })
-        proof = await api.createProof(proofImageCompressed, Object.assign({type: 'PRICE_TAG'}, this.locationForm, this.proofMetadataForm))
+        proof = await api.createProof(proofImageCompressed, Object.assign({type: 'PRICE_TAG'}, this.locationForm, this.proofMetadataForm), this.$route.path)
       }
       
       for (let i = 0; i < this.productPriceForms.length; i++) {
@@ -257,7 +257,7 @@ export default {
           delete priceData.product_code
           delete priceData.product
         }
-        await api.createPrice(priceData) // TODO: error handling
+        await api.createPrice(priceData, this.$route.path) // TODO: error handling
         this.productPriceForms[i].processed = true
       }
       this.addPricesLoading = false

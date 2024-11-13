@@ -296,7 +296,7 @@ export default {
       }
       // create price
       api
-        .createPrice(Object.assign({}, this.addPriceMultipleForm, this.productPriceForm))
+        .createPrice(Object.assign({}, this.addPriceMultipleForm, this.productPriceForm), this.$route.path)
         .then((data) => {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
