@@ -249,7 +249,7 @@
 		"SideMenu": "Seitenmenü",
 		"Share": "Teilen",
 		"Source": "Quelle",
-		"SourceCode": "Source code",
+		"SourceCode": "Quellcode",
 		"Stats": "Statistiken",
 		"TaglineOriginal": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise",
 		"TaglineAlt1": "Eine offene öffentlich zugängliche Datenbank der Preise",
@@ -456,8 +456,8 @@
 		"Success": "Nachweis bearbeitet!"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Ihre Wiederverwendung fehlt? Lassen Sie es uns wissen {url}!",
+		"Here": "Hier"
 	},
 	"Router": {
 		"About": {
