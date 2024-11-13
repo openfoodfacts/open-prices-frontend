@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "推荐给好友",
 		"Source": "来源",
+		"SourceCode": "Source code",
 		"Stats": "统计数据",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
@@ -454,6 +455,10 @@
 		"Save": "儲存",
 		"Success": "证明已编辑！"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "关于"
@@ -488,6 +493,9 @@
 		"MyProofs": {
 			"Title": "我的样张"
 		},
+		"Reuses": {
+			"Title": "Reuses"
+		},
 		"Search": {
 			"Title": "搜尋"
 		},
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "热门产品"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {

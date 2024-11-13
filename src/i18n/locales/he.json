@@ -249,6 +249,7 @@
 		"SideMenu": "תפריט צד",
 		"Share": "שיתוף",
 		"Source": "מקור",
+		"SourceCode": "Source code",
 		"Stats": "סטטיסטיקה",
 		"TaglineOriginal": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים",
 		"TaglineAlt1": "מסד הנתונים הפתוח למחירים במיקור המונים",
@@ -454,6 +455,10 @@
 		"Save": "שמירה",
 		"Success": "ההוכחה נערכה!"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "על אודות"
@@ -488,6 +493,9 @@
 		"MyProofs": {
 			"Title": "ההוכחות שלי"
 		},
+		"Reuses": {
+			"Title": "Reuses"
+		},
 		"Search": {
 			"Title": "חיפוש"
 		},
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "מוצרים מובילים"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {

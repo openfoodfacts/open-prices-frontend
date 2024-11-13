@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Bagikan",
 		"Source": "Sumber",
+		"SourceCode": "Source code",
 		"Stats": "Statistik",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
@@ -454,6 +455,10 @@
 		"Save": "menyimpan ",
 		"Success": "Bukti diperbarui!"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "Tentang"
@@ -488,6 +493,9 @@
 		"MyProofs": {
 			"Title": "Bukti saya"
 		},
+		"Reuses": {
+			"Title": "Reuses"
+		},
 		"Search": {
 			"Title": "Cari"
 		},
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "Produk teratas"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {

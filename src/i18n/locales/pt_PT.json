@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Partilhar",
 		"Source": "Fonte",
+		"SourceCode": "Source code",
 		"Stats": "Estatísticas",
 		"TaglineOriginal": "Uma base de dados aberta e colaborativa de preços de alimentos",
 		"TaglineAlt1": "A base de dados aberta e colectiva de preços",
@@ -454,6 +455,10 @@
 		"Save": "Guardar",
 		"Success": "Comprovativo editado!"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "Sobre"
@@ -488,6 +493,9 @@
 		"MyProofs": {
 			"Title": "Os meus comprovativos"
 		},
+		"Reuses": {
+			"Title": "Reuses"
+		},
 		"Search": {
 			"Title": "Procurar"
 		},
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "Produtos com mais preços"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {

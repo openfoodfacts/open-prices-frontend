@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Share",
 		"Source": "Source",
+		"SourceCode": "Source code",
 		"Stats": "Stats",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
@@ -454,6 +455,10 @@
 		"Save": "Save",
 		"Success": "Proof edited!"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "About"
@@ -488,6 +493,9 @@
 		"MyProofs": {
 			"Title": "My proofs"
 		},
+		"Reuses": {
+			"Title": "Reuses"
+		},
 		"Search": {
 			"Title": "Bincika"
 		},
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top products"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {

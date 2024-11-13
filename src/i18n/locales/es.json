@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Compartir",
 		"Source": "Fuente",
+		"SourceCode": "Source code",
 		"Stats": "Estadísticas",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
@@ -454,6 +455,10 @@
 		"Save": "Guardar",
 		"Success": "Comprobante editado"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "Acerca de"
@@ -488,6 +493,9 @@
 		"MyProofs": {
 			"Title": "Mis pruebas"
 		},
+		"Reuses": {
+			"Title": "Reuses"
+		},
 		"Search": {
 			"Title": "Buscar"
 		},
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "Productos destacados"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {

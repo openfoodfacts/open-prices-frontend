@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "பகிர்க",
 		"Source": "Source",
+		"SourceCode": "Source code",
 		"Stats": "Stats",
 		"TaglineOriginal": "உணவு விலைகளின் திறந்த கூட்டத் தரவுத்தளம்",
 		"TaglineAlt1": "விலைகளின் திறந்த மக்கள்தொகை தரவுத்தளம்",
@@ -454,6 +455,10 @@
 		"Save": "சேமி",
 		"Success": "Proof edited!"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "இதைப் பற்றி"
@@ -488,6 +493,9 @@
 		"MyProofs": {
 			"Title": "My proofs"
 		},
+		"Reuses": {
+			"Title": "Reuses"
+		},
 		"Search": {
 			"Title": "தேடுக"
 		},
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top products"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {

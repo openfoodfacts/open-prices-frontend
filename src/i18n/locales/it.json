@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Condividi",
 		"Source": "Fonte",
+		"SourceCode": "Source code",
 		"Stats": "Statistiche",
 		"TaglineOriginal": "Un database aperto in crowdsourcing dei prezzi",
 		"TaglineAlt1": "Il database aperto in crowdsourcing dei prezzi",
@@ -454,6 +455,10 @@
 		"Save": "Salva",
 		"Success": "Prova modificata!"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "Informazioni"
@@ -488,6 +493,9 @@
 		"MyProofs": {
 			"Title": "Le mie prove"
 		},
+		"Reuses": {
+			"Title": "Reuses"
+		},
 		"Search": {
 			"Title": "Cerca"
 		},
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "Prodotti migliori"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {

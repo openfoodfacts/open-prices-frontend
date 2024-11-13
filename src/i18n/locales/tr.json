@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Paylaş",
 		"Source": "Bilgi Kaynağı",
+		"SourceCode": "Source code",
 		"Stats": "İstatistikler",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
@@ -454,6 +455,10 @@
 		"Save": "Kaydet",
 		"Success": "Bedel düzenlendi!"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "Hakkında"
@@ -488,6 +493,9 @@
 		"MyProofs": {
 			"Title": "Bedellerim"
 		},
+		"Reuses": {
+			"Title": "Reuses"
+		},
 		"Search": {
 			"Title": "Ara"
 		},
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "En iyi ürünler"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {

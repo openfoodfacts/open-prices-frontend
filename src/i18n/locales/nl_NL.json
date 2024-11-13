@@ -186,7 +186,7 @@
 		"DateMissing": "Datum ontbreekt",
 		"Details": "Details",
 		"Delete": "Verwijder",
-		"DeveloperMode": "Developer mode",
+		"DeveloperMode": "Ontwikkelaarsmodus",
 		"Discount": "Korting",
 		"Example": "Voorbeeld",
 		"Examples": "Voorbeelden",
@@ -246,9 +246,10 @@
 		"SignedIn": "Ingelogd!",
 		"SignIn": "Inloggen",
 		"SignOut": "Uitloggen",
-		"SideMenu": "Side menu",
+		"SideMenu": "Zijmenu",
 		"Share": "Delen",
 		"Source": "Bron",
+		"SourceCode": "Source code",
 		"Stats": "Statistieken",
 		"TaglineOriginal": "Een open, crowdsourced database van voedselprijzen",
 		"TaglineAlt1": "De open, crowdsourced database van prijzen",
@@ -454,6 +455,10 @@
 		"Save": "Opslaan",
 		"Success": "Bewijs aangepast!"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "Over"
@@ -488,6 +493,9 @@
 		"MyProofs": {
 			"Title": "Mijn bewijzen"
 		},
+		"Reuses": {
+			"Title": "Hergebruik"
+		},
 		"Search": {
 			"Title": "Zoeken"
 		},
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top producten"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {
@@ -581,7 +592,7 @@
 		"LocationDisplayOSMID": "OSM-ID weergeven",
 		"ProductDisplayBarcode": "Streepjescode weergeven",
 		"ProductDisplayCategoryTag": "Categorielabel weergeven",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"SideMenuExperimentsDisplay": "'Experimenten' weergeven",
 		"Save": "Opslaan",
 		"Title": "Instellingen",
 		"TranslationCompletion": "De vertaling is {completion}% voltooid.",

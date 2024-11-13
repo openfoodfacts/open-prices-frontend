@@ -171,7 +171,7 @@
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Graf",
-		"Experiments": "Experiments",
+		"Experiments": "Experimenty",
 		"Label": "Štítek",
 		"Labels": "Štítky",
 		"Language": "Jazyky",
@@ -186,7 +186,7 @@
 		"DateMissing": "Chybí datum",
 		"Details": "Podrobnosti",
 		"Delete": "Odstranit",
-		"DeveloperMode": "Developer mode",
+		"DeveloperMode": "Režim pro vývojáře",
 		"Discount": "Sleva",
 		"Example": "Příklad",
 		"Examples": "Příklady",
@@ -249,6 +249,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Sdílet",
 		"Source": "Zdroj",
+		"SourceCode": "Source code",
 		"Stats": "Statistiky",
 		"TaglineOriginal": "Otevřená crowdsourcovaná databáze cen potravin",
 		"TaglineAlt1": "Otevřená crowdsourcovaná databáze cen",
@@ -454,6 +455,10 @@
 		"Save": "Uložit",
 		"Success": "Doklad upraven!"
 	},
+	"Reuses": {
+		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"Here": "here"
+	},
 	"Router": {
 		"About": {
 			"Title": "O aplikaci"
@@ -471,7 +476,7 @@
 			"Title": "Add a single proof"
 		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "Experimenty"
 		},
 		"Home": {
 			"Title": "Úvod"
@@ -487,6 +492,9 @@
 		},
 		"MyProofs": {
 			"Title": "Moje důkazy"
+		},
+		"Reuses": {
+			"Title": "Reuses"
 		},
 		"Search": {
 			"Title": "Vyhledat"
@@ -508,6 +516,9 @@
 		},
 		"TopProducts": {
 			"Title": "Nejlepší produkty"
+		},
+		"ContributionAssistant": {
+			"Title": "Contribution Assistant"
 		}
 	},
 	"Search": {
