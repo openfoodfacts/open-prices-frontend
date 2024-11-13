@@ -249,7 +249,7 @@
 		"SideMenu": "Бокове меню",
 		"Share": "Поділитися",
 		"Source": "Джерело",
-		"SourceCode": "Source code",
+		"SourceCode": "Вихідний код",
 		"Stats": "Статистика",
 		"TaglineOriginal": "Відкрита краудсорсингова база даних цін на продукти харчування",
 		"TaglineAlt1": "Відкрита краудсорсингова база даних цін",
@@ -456,8 +456,8 @@
 		"Success": "Доказ відредаговано!"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Немає повторного використання? Дайте нам знати {url}!",
+		"Here": "тут"
 	},
 	"Router": {
 		"About": {
