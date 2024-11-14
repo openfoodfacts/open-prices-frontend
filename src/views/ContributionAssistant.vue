@@ -221,7 +221,8 @@ export default {
           price_is_discounted: false,
           currency: this.appStore.getUserLastCurrencyUsed || 'EUR',
           proofImage: this.croppedImages[i],
-          product_code: label.barcode.toString()
+          product_code: label.barcode.toString(),
+          detected_product_code: label.barcode.toString()
         }
         this.productPriceForms.push(productPriceForm)
       }

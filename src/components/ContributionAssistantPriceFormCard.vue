@@ -16,6 +16,14 @@
     />
     <v-card-text>
       <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingModes="true" @filled="productFormFilled = $event" />
+      <v-alert
+        v-if="productPriceForm.mode === 'barcode'"
+        class="mb-2"
+        type="info"
+        variant="plain"
+      >
+        Detected barcode: {{ productPriceForm.detected_product_code }}
+      </v-alert>
       <v-row>
         <v-col>
           <h3 class="required mb-1">
@@ -60,7 +68,8 @@ export default {
         price_without_discount: null,
         currency: null,
         proofImage: null,
-        processed: null
+        processed: null,
+        detected_product_code: null
       })
     },
   },
