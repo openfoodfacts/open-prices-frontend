@@ -130,7 +130,9 @@
 	"BarcodeManualInput": {
 		"Barcode": "Barcode",
 		"Submit": "Submit",
-		"Title": "Type a barcode"
+		"Title": "Type a barcode",
+		"InvalidBarcode": "EAN13 barcode looks invalid, looking for products with similar barcodes...",
+		"NoProductsFoundSubmit": "No products found, use barcode anyway"
 	},
 	"BrandDetail": {
 		"LoadMore": "Load more",
