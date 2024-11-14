@@ -10,6 +10,9 @@
       <v-tab value="Cleanup" :disabled="!productPriceForms.length">
         3. Cleanup
       </v-tab>
+      <v-tab value="Summary" :disabled="!(productPriceForms.length && (addPricesLoading || productPriceForms.length == numberOfPricesAdded))">
+        4. Summary
+      </v-tab>
     </v-tabs>
     <v-tabs-window v-model="tab">
       <v-tabs-window-item value="LocationDate">
@@ -99,6 +102,45 @@
           </v-row>
         </v-container>
       </v-tabs-window-item>
+      <v-tabs-window-item value="Summary">
+        <v-container>
+          <v-row>
+            <v-col>
+              <h3 class="mb-4">
+                Please wait for upload
+              </h3>
+              <v-progress-linear
+                v-if="addProofLoading"
+                color="info"
+                height="25"
+                stripped
+                indeterminate
+              >
+                <strong>Uploading proof...</strong>
+              </v-progress-linear>
+              <v-progress-linear
+                v-if="!addProofLoading"
+                v-model="numberOfPricesAdded"
+                :max="productPriceForms.length"
+                :color="productPriceForms.length == numberOfPricesAdded ? 'success' : 'info'"
+                height="25"
+                stripped
+              >
+                <strong>{{ numberOfPricesAdded }} / {{ productPriceForms.length }} prices added</strong>
+              </v-progress-linear>
+              <v-btn to="/dashboard" class="mt-4" :aria-label="$t('Common.Dashboard')" :disabled="productPriceForms.length != numberOfPricesAdded">
+                Go to your dashboard
+              </v-btn>
+              <v-btn v-if="recentProof" :to="'/proofs/' + recentProof.id" class="mt-4 ml-4" :disabled="productPriceForms.length != numberOfPricesAdded" @click="tab = 'Crop'">
+                Go to proof
+              </v-btn>
+              <v-btn class="mt-4 ml-4" :disabled="productPriceForms.length != numberOfPricesAdded" @click="tab = 'Crop'">
+                Add a new image for location
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-tabs-window-item>
     </v-tabs-window>
   </v-container>
 </template>
@@ -140,7 +182,9 @@ export default {
         receipt_price_total: null
       },
       processCroppedImagesLoading: false,
-      addPricesLoading: false
+      addPricesLoading: false,
+      addProofLoading: false,
+      numberOfPricesAdded: 0
     }
   },
   computed: {
@@ -234,8 +278,11 @@ export default {
     },
     async addPrices() {
       this.addPricesLoading = true
+      this.numberOfPricesAdded = 0
+      this.tab = "Summary"
       let proof = this.recentProof // Can be null if new proof
       if (!proof) { // Implies an originalProofImage was set
+        this.addProofLoading = true
         const proofImageCompressed = await new Promise((resolve, reject) => {
           new Compressor(this.originalProofImage, {
             success: resolve,
@@ -243,7 +290,9 @@ export default {
           })
         })
         proof = await api.createProof(proofImageCompressed, Object.assign({type: 'PRICE_TAG'}, this.locationForm, this.proofMetadataForm), this.$route.path)
+        this.addProofLoading = false
       }
+      this.recentProof = proof
       
       for (let i = 0; i < this.productPriceForms.length; i++) {
         const productPriceForm = this.productPriceForms[i]
@@ -274,9 +323,9 @@ export default {
         }
         await api.createPrice(priceData, this.$route.path) // TODO: error handling
         this.productPriceForms[i].processed = true
+        this.numberOfPricesAdded += 1
       }
       this.addPricesLoading = false
-      this.$router.push({ path: '/dashboard', query: { multipleSuccess: 'true' } })
     }
   }
 }
