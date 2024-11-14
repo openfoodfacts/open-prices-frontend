@@ -75,7 +75,7 @@
               md="6"
               xl="4"
             >
-              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" />
+              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" @removePrice="removePrice(index)" />
             </v-col>
           </v-row>
           <v-row>
@@ -228,6 +228,9 @@ export default {
         this.productPriceForms.push(productPriceForm)
       }
       this.tab = 'Cleanup'
+    },
+    removePrice(index) {
+      this.productPriceForms.splice(index, 1)
     },
     async addPrices() {
       this.addPricesLoading = true

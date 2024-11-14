@@ -2,12 +2,20 @@
 <template>
   <v-card
     class="mb-4"
-    title="Label"
-    prepend-icon="mdi-tag-outline"
     height="100%"
     style="border: 1px solid transparent"
-    :color="productPriceForm.processed ? 'success' : ''"
   >
+    <v-card-item>
+      <template #prepend>
+        <v-icon icon="mdi-tag-outline" />
+      </template>
+      <h2 class="text-h6">
+        Label
+      </h2>
+      <template #append>
+        <v-btn icon="mdi-delete" @click="removePrice()" />
+      </template>
+    </v-card-item>
     <v-divider />
     <v-img
       height="200px"
@@ -73,21 +81,21 @@ export default {
       })
     },
   },
+  emits: ['removePrice'],
   data() {
-  return {
-    productFormFilled: false,
-    pricePriceFormFilled: false,
-    categoryPricePerList: [
-    {key: 'KILOGRAM', value: "per kg", icon: 'mdi-weight-kilogram'},
-    {key: 'UNIT', value: "per unit", icon: 'mdi-numeric-1-circle'}
-    ],
-   }
-  },
-  computed: {
-  },
-  mounted() {
+    return {
+      productFormFilled: false,
+      pricePriceFormFilled: false,
+      categoryPricePerList: [
+      {key: 'KILOGRAM', value: "per kg", icon: 'mdi-weight-kilogram'},
+      {key: 'UNIT', value: "per unit", icon: 'mdi-numeric-1-circle'}
+      ],
+    }
   },
   methods: {
+    removePrice() {
+      this.$emit('removePrice')
+    }
   }
 }
 </script>
