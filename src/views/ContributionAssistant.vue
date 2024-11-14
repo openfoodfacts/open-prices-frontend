@@ -40,13 +40,13 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col cols="12" md="6">
+            <v-col cols="12" lg="6">
               <h3 class="mb-4">
                 2. Draw squares around the labels
               </h3>
               <ContributionAssistantDrawCanvas ref="ContributionAssistantdrawCanvas" :image="image" @croppedImages="onCroppedImages($event)" />
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col cols="12" lg="6">
               <h3 class="mb-4">
                 3. Check the readability of labels
               </h3>
@@ -73,6 +73,7 @@
               :key="index"
               cols="12"
               md="6"
+              xl="4"
             >
               <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" />
             </v-col>
