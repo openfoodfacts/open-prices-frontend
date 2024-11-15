@@ -4,7 +4,7 @@
     <v-col cols="12" md="6" lg="4">
       <v-card
         :title="$t('Common.Image')"
-        prepend-icon="mdi-image"
+        prepend-icon="mdi-image-multiple"
         height="100%"
         :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
       >

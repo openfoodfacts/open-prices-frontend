@@ -171,6 +171,7 @@
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
+		"Done": "Done",
 		"Experiments": "Experiments",
 		"Label": "Label",
 		"Labels": "Labels",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "History",
 		"Image": "Image",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
@@ -474,6 +476,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"
