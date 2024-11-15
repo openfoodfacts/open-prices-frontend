@@ -3,19 +3,13 @@
   <v-card
     class="mb-4"
     height="100%"
+    title="Label"
+    prepend-icon="mdi-tag-outline"
     style="border: 1px solid transparent"
   >
-    <v-card-item>
-      <template #prepend>
-        <v-icon icon="mdi-tag-outline" />
-      </template>
-      <h2 class="text-h6">
-        Label
-      </h2>
-      <template #append>
-        <v-btn icon="mdi-delete" @click="removePrice()" />
-      </template>
-    </v-card-item>
+    <template #append>
+      <v-icon icon="mdi-delete" color="error" @click="removePrice()" />
+    </template>
     <v-divider />
     <v-img
       height="200px"

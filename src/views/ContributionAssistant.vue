@@ -1,16 +1,16 @@
 <template>
   <v-container>
     <v-tabs v-model="tab">
-      <v-tab value="LocationDate">
+      <v-tab value="LocationDate" :disabled="disableLocationDateTab">
         1. Location & Date
       </v-tab>
-      <v-tab value="Crop" :disabled="!locationForm.location_osm_id">
+      <v-tab value="Crop" :disabled="disableCropTab">
         2. Image crop
       </v-tab>
-      <v-tab value="Cleanup" :disabled="!productPriceForms.length">
+      <v-tab value="Cleanup" :disabled="disableCleanupTab">
         3. Cleanup
       </v-tab>
-      <v-tab value="Summary" :disabled="!(productPriceForms.length && (addPricesLoading || productPriceForms.length == numberOfPricesAdded))">
+      <v-tab value="Summary" :disabled="disableSummaryTab">
         4. Summary
       </v-tab>
     </v-tabs>
@@ -128,13 +128,13 @@
               >
                 <strong>{{ numberOfPricesAdded }} / {{ productPriceForms.length }} prices added</strong>
               </v-progress-linear>
-              <v-btn to="/dashboard" class="mt-4" :aria-label="$t('Common.Dashboard')" :disabled="productPriceForms.length != numberOfPricesAdded">
+              <v-btn to="/dashboard" class="mt-4" :aria-label="$t('Common.Dashboard')" :disabled="addPricesLoading">
                 Go to your dashboard
               </v-btn>
-              <v-btn v-if="recentProof" :to="'/proofs/' + recentProof.id" class="mt-4 ml-4" :disabled="productPriceForms.length != numberOfPricesAdded" @click="tab = 'Crop'">
+              <v-btn v-if="recentProof" :to="'/proofs/' + recentProof.id" class="mt-4 ml-4" :disabled="addPricesLoading">
                 Go to proof
               </v-btn>
-              <v-btn class="mt-4 ml-4" :disabled="productPriceForms.length != numberOfPricesAdded" @click="tab = 'Crop'">
+              <v-btn class="mt-4 ml-4" :disabled="addPricesLoading" @click="tab = 'Crop'">
                 Add a new image for location
               </v-btn>
             </v-col>
@@ -197,6 +197,25 @@ export default {
         return utils.getLocationOSMTitle(location, true, true, true)
       }
       return ''
+    },
+    disableLocationDateTab() {
+      // LocationDate tab should disabled during api calls to add prices
+      return this.addPricesLoading
+    },
+    disableCropTab() {
+      // Crop tab should only be enabled after the location is selected
+      // It should also be disabled during api calls to add prices
+      return !this.locationForm.location_osm_id || this.addPricesLoading
+    },
+    disableCleanupTab() {
+      // Cleanup tab should only be enabled after the gemini analysis is done
+      // It should also be disabled during api calls to add prices
+      return !this.productPriceForms.length || this.addPricesLoading
+    },
+    disableSummaryTab() {
+      // Summary tab should be enabled when there are product prices to be added and the add prices process is either running or done
+      const enableSummaryTab = this.productPriceForms.length && (this.addPricesLoading || this.productPriceForms.length == this.numberOfPricesAdded)
+      return !enableSummaryTab
     }
   },
   mounted() {
