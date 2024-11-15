@@ -16,9 +16,9 @@
             <span v-if="hasProductSource">
               <ProductBrands :productBrands="product.brands" :readonly="readonly" />
               <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
-              <br>
-              <ProductCategoriesChip class="mr-1" :productCategories="product.categories_tags" />
-              <ProductLabelsChip :productLabels="product.labels_tags" />
+              <br v-if="!hideCategoriesAndLabels">
+              <ProductCategoriesChip v-if="!hideCategoriesAndLabels" class="mr-1" :productCategories="product.categories_tags" />
+              <ProductLabelsChip v-if="!hideCategoriesAndLabels" :productLabels="product.labels_tags" />
             </span>
             <ProductMissingChip v-else />
             <br v-if="showProductBarcode">
@@ -67,6 +67,10 @@ export default {
     latestPrice: {
       type: Object,
       default: null
+    },
+    hideCategoriesAndLabels: {
+      type: Boolean,
+      default: false
     },
     hideProductBarcode: {
       type: Boolean,

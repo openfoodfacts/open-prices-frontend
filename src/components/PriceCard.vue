@@ -17,6 +17,7 @@
               <span v-if="hasProductSource">
                 <ProductBrands :productBrands="product.brands" :readonly="readonly" />
                 <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
+                <!-- ProductCategoriesChip, ProductLabelsChip -->
                 <br v-if="showProductBarcode">
                 <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
               </span>
