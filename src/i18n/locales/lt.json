@@ -148,7 +148,7 @@
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Barkodas",
-		"Barcodes": "Barcodes",
+		"Barcodes": "Brūkšninis kodas",
 		"BarcodeInvalid": "Netinkamas brūkšninis kodas",
 		"Brand": "Brand",
 		"Price": "Kaina",
@@ -268,7 +268,7 @@
 		"Type": "Tipas",
 		"Upload": "Įkelti",
 		"URL": "URL",
-		"URLInvalid": "Invalid URL",
+		"URLInvalid": "Neteisingas URL",
 		"User": "Vartotojas",
 		"Users": "Vartotojai",
 		"UserCount": "{count} vartotojai (-ų)",
@@ -494,7 +494,7 @@
 			"Title": "Mano įrodymai"
 		},
 		"Reuses": {
-			"Title": "Reuses"
+			"Title": "Kartotinis naudojimas"
 		},
 		"Search": {
 			"Title": "Paieška"
