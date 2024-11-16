@@ -20,7 +20,7 @@
         default: null
       }
     },
-    emits: ['croppedImages'],
+    emits: ['croppedImages', 'loaded'],
     data() {
       return {
         isDrawing: false,
@@ -30,9 +30,11 @@
         rectangles: []
       }
     },
-    watch: {
-      image(newImage) {
-        newImage.onload = this.init
+    mounted() {
+      if (this.image.complete) {
+        this.init()
+      } else {
+        this.image.onload = this.init
       }
     },
     methods: {
@@ -59,6 +61,7 @@
         
         this.rectangles = [] // reset rectangles
         this.drawRectangles(); // Draw previous rectangles after resizing
+        this.$emit('loaded')
       },
       startDrawing(event) {
         if (event.type == "touchstart") {
