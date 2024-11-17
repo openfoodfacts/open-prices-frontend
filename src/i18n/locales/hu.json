@@ -59,7 +59,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Létrehoz",
+			"Create": "Létrehozás",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -73,7 +73,7 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Létrehoz",
+		"Create": "Létrehozás",
 		"PriceDetails": {
 			"Discount": "Discount?",
 			"Label": "Price",
@@ -207,7 +207,7 @@
 		"FrequentlyAskedQuestions": "Gyakran ismételt kérdések (FAQ)",
 		"Help": "Help",
 		"History": "Előzmények",
-		"Image": "Image",
+		"Image": "Kép",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
