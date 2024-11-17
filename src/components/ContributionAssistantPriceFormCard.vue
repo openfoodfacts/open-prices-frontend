@@ -2,12 +2,14 @@
 <template>
   <v-card
     class="mb-4"
+    height="100%"
     title="Label"
     prepend-icon="mdi-tag-outline"
-    height="100%"
     style="border: 1px solid transparent"
-    :color="productPriceForm.processed ? 'success' : ''"
   >
+    <template #append>
+      <v-icon icon="mdi-delete" color="error" @click="removePrice()" />
+    </template>
     <v-divider />
     <v-img
       height="200px"
@@ -16,12 +18,20 @@
     />
     <v-card-text>
       <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingModes="true" @filled="productFormFilled = $event" />
+      <v-alert
+        v-if="productPriceForm.mode === 'barcode'"
+        class="mb-2"
+        type="info"
+        variant="plain"
+      >
+        Detected barcode: {{ productPriceForm.detected_product_code }}
+      </v-alert>
       <v-row>
         <v-col>
           <h3 class="required mb-1">
             Price
           </h3>
-          <h3 class="mb-1">
+          <h3 v-if="productPriceForm.mode == 'category'" class="mb-1">
             <v-item-group v-model="productPriceForm.price_per" class="d-inline" mandatory>
               <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
                 <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
@@ -60,25 +70,26 @@ export default {
         price_without_discount: null,
         currency: null,
         proofImage: null,
-        processed: null
+        processed: null,
+        detected_product_code: null
       })
     },
   },
+  emits: ['removePrice'],
   data() {
-  return {
-    productFormFilled: false,
-    pricePriceFormFilled: false,
-    categoryPricePerList: [
-    {key: 'KILOGRAM', value: "per kg", icon: 'mdi-weight-kilogram'},
-    {key: 'UNIT', value: "per unit", icon: 'mdi-numeric-1-circle'}
-    ],
-   }
-  },
-  computed: {
-  },
-  mounted() {
+    return {
+      productFormFilled: false,
+      pricePriceFormFilled: false,
+      categoryPricePerList: [
+      {key: 'KILOGRAM', value: "per kg", icon: 'mdi-weight-kilogram'},
+      {key: 'UNIT', value: "per unit", icon: 'mdi-numeric-1-circle'}
+      ],
+    }
   },
   methods: {
+    removePrice() {
+      this.$emit('removePrice')
+    }
   }
 }
 </script>
