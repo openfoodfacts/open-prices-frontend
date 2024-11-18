@@ -93,19 +93,19 @@
 			"SelectRecentProof": "Select a recent proof"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "分類",
+			"CategoryLabel": "分類 ",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
 			"Scan": "掃描",
 			"ScanBarcode": "Scan a barcode",
-			"Type": "類型",
+			"Type": "類型 ",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "條碼",
-			"Category": "分類"
+			"Barcode": "條碼 ",
+			"Category": "分類 "
 		},
 		"CategoryPricePer": {
 			"PerKg": "Price per kg",
@@ -128,7 +128,7 @@
 		"Scan": "Scan a barcode"
 	},
 	"BarcodeManualInput": {
-		"Barcode": "條碼",
+		"Barcode": "條碼 ",
 		"Submit": "送出",
 		"Title": "Type a barcode"
 	},
@@ -147,7 +147,7 @@
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
-		"Barcode": "條碼",
+		"Barcode": "條碼 ",
 		"Barcodes": "Barcodes",
 		"BarcodeInvalid": "條碼無效",
 		"Brand": "品牌",
@@ -157,8 +157,8 @@
 		"Products": "產品",
 		"Proof": "Proof",
 		"Proofs": "Proofs",
-		"Category": "分類",
-		"Categories": "類別",
+		"Category": "分類 ",
+		"Categories": "種類",
 		"Chart": "Chart",
 		"Contributors": "合作者",
 		"Country": "地區",
@@ -172,7 +172,7 @@
 		"DisplayPriceMap": "地圖",
 		"DisplayPriceChart": "Chart",
 		"Experiments": "Experiments",
-		"Label": "標籤",
+		"Label": "標籤 ",
 		"Labels": "標籤",
 		"Language": "語言",
 		"Languages": "語言",
@@ -194,7 +194,7 @@
 		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "範例：",
 		"ExamplesWithColonAndValue": "Examples: {value}",
-		"Edit": "編輯",
+		"Edit": "編輯 ",
 		"Filter": "篩選器",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
@@ -265,17 +265,17 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "類型",
+		"Type": "類型 ",
 		"Upload": "Upload",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "使用者",
 		"Users": "Users",
 		"UserCount": "{count} users",
-		"View": "檢視",
+		"View": "查看 ",
 		"Website": "Website",
-		"Yes": "是",
-		"No": "否",
+		"Yes": "是 ",
+		"No": "否 ",
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty"
@@ -386,11 +386,11 @@
 		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
-		"Brands": "品牌",
-		"BrandLower": "品牌",
+		"Brands": "品牌 ",
+		"BrandLower": "品牌 ",
 		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
-		"Categories": "類別",
+		"Categories": "種類",
 		"CategoriesLower": "類別",
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
