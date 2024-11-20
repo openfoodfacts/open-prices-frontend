@@ -171,6 +171,7 @@
 		"DisplayMap": "Kaart",
 		"DisplayPriceMap": "Kaart",
 		"DisplayPriceChart": "Grafiek",
+		"Done": "Voltooid",
 		"Experiments": "Experimenten",
 		"Label": "Keurmerk",
 		"Labels": "Keurmerken",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "Geschiedenis",
 		"Image": "Afbeelding",
+		"Images": "Images",
 		"ImageFull": "Afbeelding op volledige grootte",
 		"Latest": "Laatste",
 		"LinkCopySuccess": "Link gekopieerd",
@@ -267,6 +269,7 @@
 		"Total": "Totaal",
 		"Type": "Type",
 		"Upload": "Uploaden",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Ongeldige URL",
 		"User": "Gebruiker",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Voeg één bewijs toe"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experimenten"
