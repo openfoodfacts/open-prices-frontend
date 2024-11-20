@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <!-- FORM -->
-    <v-col v-if="!proofObject" cols="12">
+    <v-col v-if="!proofObjectList.length" cols="12">
       <ProofTypeInputRow :proofTypeForm="proofForm" />
       <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
       <LocationInputRow :locationForm="proofForm" />
@@ -9,14 +9,15 @@
       <v-row>
         <v-col>
           <v-btn color="success" :loading="loading" :disabled="!proofFormFilled || loading" @click="uploadProofList">
-            {{ $t('Common.Upload') }}
+            <span v-if="!multiple">{{ $t('Common.Upload') }}</span>
+            <span v-else>{{ $t('Common.UploadMultipleImages', proofImageList.length) }}</span>
           </v-btn>
         </v-col>
       </v-row>
     </v-col>
     <!-- CARD -->
     <v-col v-else>
-      <ProofCard :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
+      <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
     </v-col>
   </v-row>
 
@@ -98,7 +99,7 @@ export default {
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
       proofImageList: [],
-      proofObject: null,
+      proofObjectList: [],
       loading: false,
     }
   },
@@ -121,14 +122,14 @@ export default {
     proofImageList(newProofImageList, oldProofImageList) {  // eslint-disable-line no-unused-vars
       this.handleProofSelectedList(newProofImageList)
     },
-    proofObject(newProofObject, oldProofObject) {  // eslint-disable-line no-unused-vars
-      this.$emit('proof', newProofObject)
+    proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
+      this.$emit('proof', newProofObjectList[0])
     }
   },
   methods: {
     handleProofSelectedList(proofSelectedList) {
       // can be an existing proof, or a file
-      // existing proof: update proofForm
+      // existing proof: update proofForm + set proofObject
       if (proofSelectedList[0].id) {
         // update proofForm
         this.proofForm.type = proofSelectedList[0].type
@@ -146,7 +147,7 @@ export default {
         }
         // set proofObject
         this.proofSelectedSuccessMessage = true
-        this.proofObject = proofSelectedList[0]
+        this.proofObjectList = [proofSelectedList[0]]
       }
       // new proof: extract exif data from file
       else {
@@ -183,7 +184,7 @@ export default {
             if (data.id) {
               this.proofForm.proof_id = data.id
               this.proofForm.location_id = data.location_id
-              this.proofObject = data
+              this.proofObjectList = this.proofObjectList.concat(data)
               this.proofSuccessMessage = true
             } else {
               alert('Error: server error when creating proof')

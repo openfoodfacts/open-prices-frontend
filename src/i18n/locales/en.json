@@ -269,6 +269,7 @@
 		"Total": "Total",
 		"Type": "Type",
 		"Upload": "Upload",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "User",

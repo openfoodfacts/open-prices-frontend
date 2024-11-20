@@ -1,7 +1,6 @@
 <template>
   <v-row>
-    <!-- Step 1: proof image -->
-    <v-col cols="12" md="6" lg="4">
+    <v-col cols="12" md="6">
       <v-card
         :title="$t('Common.Image')"
         prepend-icon="mdi-image"
@@ -13,7 +12,7 @@
         </template>
         <v-divider />
         <v-card-text>
-          <ProofInputRow :proofForm="addProofSingleForm" :hideRecentProofChoice="true" />
+          <ProofInputRow :proofForm="addProofForm" :hideRecentProofChoice="true" />
         </v-card-text>
         <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
       </v-card>
@@ -48,13 +47,13 @@ export default {
   data() {
     return {
       // data
-      addProofSingleForm: {
+      addProofForm: {
         type: null,
         location_id: null,
         location_osm_id: null,
         location_osm_type: '',
         date: utils.currentDate(),
-        currency: null,  // see initProofSingleForm
+        currency: null,  // see initProofForm
         receipt_price_count: null,
         receipt_price_total: null,
         proof_id: null
@@ -66,18 +65,18 @@ export default {
     ...mapStores(useAppStore),
     proofFormFilled() {
       let keys = ['proof_id']
-      return Object.keys(this.addProofSingleForm).filter(k => keys.includes(k)).every(k => !!this.addProofSingleForm[k])
+      return Object.keys(this.addProofForm).filter(k => keys.includes(k)).every(k => !!this.addProofForm[k])
     },
     disableProofForm() {
       return this.proofFormFilled
     },
   },
   mounted() {
-    this.initProofSingleForm()
+    this.initProofForm()
   },
   methods: {
-    initProofSingleForm() {
-      this.addProofSingleForm.currency = this.appStore.getUserLastCurrencyUsed
+    initProofForm() {
+      this.addProofForm.currency = this.appStore.getUserLastCurrencyUsed
     },
     done() {
       this.$router.push({ path: '/dashboard', query: { proofSingleSuccess: 'true' } })
