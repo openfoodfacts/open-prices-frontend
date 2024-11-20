@@ -171,6 +171,7 @@
 		"DisplayMap": "Bản đồ",
 		"DisplayPriceMap": "Bản đồ",
 		"DisplayPriceChart": "Chart",
+		"Done": "Xong",
 		"Experiments": "Experiments",
 		"Label": "Nhãn",
 		"Labels": "Nhãn",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "Lịch sử",
 		"Image": "Hình ảnh",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
@@ -267,6 +269,7 @@
 		"Total": "Total",
 		"Type": "Loại",
 		"Upload": "Upload",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Người dùng",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"
