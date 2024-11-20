@@ -231,9 +231,10 @@ export default {
       this.productPriceForms = []
       for (let i = 0; i < response.labels.length; i++) {
         const label = response.labels[i]
+        const barcodeString = label.barcode ? label.barcode.toString() : ''
         // TODO: some of these will be None if gemini did not give a proper reply, so detection and error handling is needed
         const productPriceForm = {
-          mode: 'category',
+          mode: barcodeString.length > 10 ? 'barcode' : 'category',
           category_tag: label.product,
           origins_tags: [label.origin],
           labels_tags: label.organic ? ["en:organic"] : [],
@@ -242,8 +243,8 @@ export default {
           price_is_discounted: false,
           currency: this.appStore.getUserLastCurrencyUsed || 'EUR',
           proofImage: this.croppedImages[i],
-          product_code: label.barcode.toString(),
-          detected_product_code: label.barcode.toString()
+          product_code: barcodeString,
+          detected_product_code: barcodeString
         }
         this.productPriceForms.push(productPriceForm)
       }
