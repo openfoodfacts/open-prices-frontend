@@ -13,7 +13,7 @@
         </template>
         <v-divider />
         <v-card-text>
-          <ProofInputRow :proofForm="addProofSingleForm" :hideRecentProofChoice="true" />
+          <ProofInputRow :proofForm="addProofSingleForm" :hideRecentProofChoice="true" :multiple="true" />
         </v-card-text>
         <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
       </v-card>

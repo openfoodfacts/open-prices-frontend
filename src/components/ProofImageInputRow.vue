@@ -1,9 +1,11 @@
 <template>
   <v-row>
-    <v-col :cols="showProofImagePreview ? '8' : '12'">
+    <v-col :cols="showProofImagePreviewList ? '8' : '12'">
       <h3 class="required mb-1">
         {{ $t('Common.Image') }}
       </h3>
+
+      <!-- User buttons -->
       <v-btn
         class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" :loading="loading"
         :disabled="loading" @click.prevent="$refs.proofCamera.click()"
@@ -25,18 +27,20 @@
         <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
         <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
       </v-btn>
+
+      <!-- Hidden inputs -->
       <v-file-input
-        ref="proofCamera" v-model="proofImage" class="d-none overflow-hidden" capture="environment"
-        accept="image/*" :loading="loading" @update:modelValue="newProof('camera')" @click:clear="clearProof"
+        ref="proofCamera" v-model="proofImageList" class="d-none overflow-hidden" capture="environment" accept="image/*"
+        :multiple="multiple" :loading="loading" @click:clear="clearProof"
       />
       <v-file-input
-        ref="proofGallery" v-model="proofImage" class="d-none overflow-hidden" accept="image/*, .heic"
-        :loading="loading" @update:modelValue="newProof('gallery')" @click:clear="clearProof"
+        ref="proofGallery" v-model="proofImageList" class="d-none overflow-hidden" accept="image/*, .heic"
+        :multiple="multiple" :loading="loading" @click:clear="clearProof"
       />
 
       <!-- pending or success message -->
       <p v-if="!loading" class="mb-2">
-        <i v-if="!proofImage" class="text-red">{{ $t('ProofCreate.SelectProof') }}</i>
+        <i v-if="!hasProofImageSelected" class="text-red">{{ $t('ProofCreate.SelectProof') }}</i>
         <i v-else class="text-green">{{ $t('ProofCreate.ProofSelected') }}</i>
       </p>
 
@@ -49,8 +53,8 @@
         :text="$t('AddPriceMultiple.ProofDetails.ReceiptWarning')"
       />
     </v-col>
-    <v-col v-if="showProofImagePreview" cols="4">
-      <v-img :src="proofImagePreview" style="max-height:200px" />
+    <v-col v-if="showProofImagePreviewList" cols="4">
+      <v-img v-for="proofImagePreview in proofImagePreviewList" :key="proofImagePreview" :src="proofImagePreview" style="padding:10px;max-height:200px" />
     </v-col>
   </v-row>
 
@@ -58,7 +62,7 @@
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
     :filterType="proofImageForm.type"
-    @recentProofSelected="newProof('recent', $event)"
+    @recentProofSelected="recentProofSelected($event)"
     @close="userRecentProofsDialog = false"
   />
 </template>
@@ -87,27 +91,39 @@ export default {
     hideProofImagePreview: {
       type: Boolean,
       default: false
+    },
+    multiple: {
+      type: Boolean,
+      default: false
     }
   },
-  emits: ['proof'],
+  emits: ['proofList'],
   data() {
     return {
       PROOF_TYPE_RECEIPT: constants.PROOF_TYPE_RECEIPT,
       // data
-      proofImage: null,
-      proofImagePreview: null,
+      proofImageList: [],
+      proofImagePreviewList: [],
       userRecentProofsDialog: false,
       loading: false
     }
   },
   computed: {
-    showProofImagePreview() {
-      return !this.hideProofImagePreview && this.proofImagePreview
+    hasProofImageSelected() {
+      return Array.isArray(this.proofImageList) ? this.proofImageList.length : !!this.proofImageList
+    },
+    showProofImagePreviewList() {
+      return !this.hideProofImagePreview && this.proofImagePreviewList.length
     }
   },
   watch: {
-    proofImage(newProofImage, oldProofImage) {  // eslint-disable-line no-unused-vars
-      this.$emit('proof', newProofImage)
+    proofImageList(newProofImageList, oldProofImageList) {  // eslint-disable-line no-unused-vars
+      // v-file-input returns an object (single) or an array (multiple)
+      if (!Array.isArray(newProofImageList)) {
+        newProofImageList = [newProofImageList]
+      }
+      this.proofImagePreviewList = newProofImageList.map(proofImage => this.getLocalProofUrl(proofImage))
+      this.$emit('proofList', newProofImageList)
     }
   },
   mounted() {
@@ -120,20 +136,16 @@ export default {
       this.loading = true
       api.getProofById(proofId)
         .then(proof => {
-          this.newProof('recent', proof)
+          this.recentProofSelected(proof)
           this.loading = false
         })
     },
-    newProof(source, proof=null) {
-      if (source === 'recent') {
-        this.proofImage = proof
-      } else {
-        this.proofImagePreview = this.getLocalProofUrl(this.proofImage)
-      }
+    recentProofSelected(proof) {
+      this.proofImageList = [proof]
     },
     clearProof() {
-      this.proofImage = null
-      this.proofImagePreview = null
+      this.proofImageList = []
+      this.proofImagePreviewList = []
       this.proofImageForm.proof_id = null
     },
     getLocalProofUrl(blob) {
