@@ -171,6 +171,7 @@
 		"DisplayMap": "지도",
 		"DisplayPriceMap": "지도",
 		"DisplayPriceChart": "Chart",
+		"Done": "완료",
 		"Experiments": "Experiments",
 		"Label": "상표",
 		"Labels": "라벨",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "최근 기록",
 		"Image": "이미지",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
@@ -267,6 +269,7 @@
 		"Total": "Total",
 		"Type": "종류",
 		"Upload": "Upload",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "사용자",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"
