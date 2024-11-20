@@ -171,6 +171,7 @@
 		"DisplayMap": "地图",
 		"DisplayPriceMap": "地图",
 		"DisplayPriceChart": "Chart",
+		"Done": "完成",
 		"Experiments": "Experiments",
 		"Label": "標籤",
 		"Labels": "标签",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "历史记录",
 		"Image": "图片",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "链接已复制",
@@ -267,6 +269,7 @@
 		"Total": "总计",
 		"Type": "類型",
 		"Upload": "上传",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "用户",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"
