@@ -171,6 +171,7 @@
 		"DisplayMap": "Žemėlapis",
 		"DisplayPriceMap": "Žemėlapis",
 		"DisplayPriceChart": "Diagrama",
+		"Done": "Atlikta",
 		"Experiments": "Eksperimentai",
 		"Label": "Etiketė",
 		"Labels": "Labels",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "Istorija",
 		"Image": "Vaizdas",
+		"Images": "Images",
 		"ImageFull": "Viso dydžio vaizdas",
 		"Latest": "Naujausi",
 		"LinkCopySuccess": "Nuoroda nukopijuota",
@@ -267,6 +269,7 @@
 		"Total": "Iš viso",
 		"Type": "Tipas",
 		"Upload": "Įkelti",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Neteisingas URL",
 		"User": "Vartotojas",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Pridėti vienintelį įrodymą"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Eksperimentai"
