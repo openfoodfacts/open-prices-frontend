@@ -171,6 +171,7 @@
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Gráfico",
+		"Done": "Concluído",
 		"Experiments": "Experimentos",
 		"Label": "Rótulo",
 		"Labels": "Rótulos",
@@ -208,6 +209,7 @@
 		"Help": "Ajuda",
 		"History": "Histórico",
 		"Image": "Imagem",
+		"Images": "Images",
 		"ImageFull": "Imagem em tamanho real",
 		"Latest": "Mais recentes",
 		"LinkCopySuccess": "Link copiado",
@@ -267,6 +269,7 @@
 		"Total": "Total",
 		"Type": "Tipo",
 		"Upload": "Atualizar",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "URL inválida",
 		"User": "Utilizador",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Adicionar um único comprovante"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experimentos"
