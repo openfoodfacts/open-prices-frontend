@@ -171,6 +171,7 @@
 		"DisplayMap": "Мапа",
 		"DisplayPriceMap": "Мапа",
 		"DisplayPriceChart": "Графік",
+		"Done": "Виконано",
 		"Experiments": "Експерименти",
 		"Label": "Мітка",
 		"Labels": "Етикетки",
@@ -208,6 +209,7 @@
 		"Help": "Допомога",
 		"History": "Історія",
 		"Image": "Зображення",
+		"Images": "Images",
 		"ImageFull": "Повнорозмірне зображення",
 		"Latest": "Останні",
 		"LinkCopySuccess": "Посилання скопійоване",
@@ -267,6 +269,7 @@
 		"Total": "Усього",
 		"Type": "Тип",
 		"Upload": "Завантажити",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL-адреса",
 		"URLInvalid": "Некоректна URL-адреса",
 		"User": "Користувач",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Додати одне підтвердження"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Експерименти"
