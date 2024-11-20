@@ -1,22 +1,23 @@
 <template>
   <v-row>
     <!-- FORM -->
-    <v-col v-if="!proofObject" cols="12">
+    <v-col v-if="!proofObjectList.length" cols="12">
       <ProofTypeInputRow :proofTypeForm="proofForm" />
-      <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" @proof="proofImage = $event" />
+      <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
       <LocationInputRow :locationForm="proofForm" />
       <ProofMetadataInputRow :proofType="proofForm.type" :proofMetadataForm="proofForm" />
       <v-row>
         <v-col>
-          <v-btn color="success" :loading="loading" :disabled="!proofFormFilled || loading" @click="uploadProof">
-            {{ $t('Common.Upload') }}
+          <v-btn color="success" :loading="loading" :disabled="!proofFormFilled || loading" @click="uploadProofList">
+            <span v-if="!multiple">{{ $t('Common.Upload') }}</span>
+            <span v-else>{{ $t('Common.UploadMultipleImages', proofImageList.length) }}</span>
           </v-btn>
         </v-col>
       </v-row>
     </v-col>
     <!-- CARD -->
     <v-col v-else>
-      <ProofCard :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
+      <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
     </v-col>
   </v-row>
 
@@ -86,6 +87,10 @@ export default {
       type: Boolean,
       default: false
     },
+    multiple: {
+      type: Boolean,
+      default: false
+    }
   },
   emits: ['proof'],
   data() {
@@ -93,8 +98,8 @@ export default {
       proofDateSuccessMessage: false,
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
-      proofImage: null,
-      proofObject: null,
+      proofImageList: [],
+      proofObjectList: [],
       loading: false,
     }
   },
@@ -103,7 +108,7 @@ export default {
       return !!this.proofForm.type
     },
     proofImageFormFilled() {
-      return !!this.proofImage
+      return !!this.proofImageList.length
     },
     proofMetadataFormFilled() {
       let keys = ['date', 'currency']
@@ -114,39 +119,39 @@ export default {
     },
   },
   watch: {
-    proofImage(newProofImage, oldProofImage) {  // eslint-disable-line no-unused-vars
-      this.handleProofSelected(newProofImage)
+    proofImageList(newProofImageList, oldProofImageList) {  // eslint-disable-line no-unused-vars
+      this.handleProofSelectedList(newProofImageList)
     },
-    proofObject(newProofObject, oldProofObject) {  // eslint-disable-line no-unused-vars
-      this.$emit('proof', newProofObject)
+    proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
+      this.$emit('proof', newProofObjectList[0])
     }
   },
   methods: {
-    handleProofSelected(proofSelected) {
+    handleProofSelectedList(proofSelectedList) {
       // can be an existing proof, or a file
-      // existing proof: update proofForm
-      if (proofSelected.id) {
+      // existing proof: update proofForm + set proofObject
+      if (proofSelectedList[0].id) {
         // update proofForm
-        this.proofForm.type = proofSelected.type
-        this.proofForm.proof_id = proofSelected.id
-        if (proofSelected.location) {
-          this.proofForm.location_id = proofSelected.location.id
-          this.proofForm.location_osm_id = (proofSelected.location.type === constants.LOCATION_TYPE_OSM) ? proofSelected.location_osm_id : null
-          this.proofForm.location_osm_type = (proofSelected.location.type === constants.LOCATION_TYPE_OSM) ? proofSelected.location_osm_type : ''
+        this.proofForm.type = proofSelectedList[0].type
+        this.proofForm.proof_id = proofSelectedList[0].id
+        if (proofSelectedList[0].location) {
+          this.proofForm.location_id = proofSelectedList[0].location.id
+          this.proofForm.location_osm_id = (proofSelectedList[0].location.type === constants.LOCATION_TYPE_OSM) ? proofSelectedList[0].location_osm_id : null
+          this.proofForm.location_osm_type = (proofSelectedList[0].location.type === constants.LOCATION_TYPE_OSM) ? proofSelectedList[0].location_osm_type : ''
         }
-        if (proofSelected.date) {
-          this.proofForm.date = proofSelected.date
+        if (proofSelectedList[0].date) {
+          this.proofForm.date = proofSelectedList[0].date
         }
-        if (proofSelected.currency) {
-          this.proofForm.currency = proofSelected.currency
+        if (proofSelectedList[0].currency) {
+          this.proofForm.currency = proofSelectedList[0].currency
         }
         // set proofObject
         this.proofSelectedSuccessMessage = true
-        this.proofObject = proofSelected
+        this.proofObjectList = [proofSelectedList[0]]
       }
       // new proof: extract exif data from file
       else {
-        ExifReader.load(proofSelected).then((tags) => {
+        ExifReader.load(proofSelectedList[0]).then((tags) => {
           if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
             // exif DateTimeOriginal format: '2024:01:31 20:23:52'
             const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')
@@ -158,10 +163,15 @@ export default {
         })
       }
     },
-    uploadProof() {
+    uploadProofList() {
+      for (let proofImage of this.proofImageList) {
+        this.uploadProof(proofImage)
+      }
+    },
+    uploadProof(proofImage) {
       this.loading = true
       new Promise((resolve, reject) => {
-        new Compressor(this.proofImage, {
+        new Compressor(proofImage, {
           success: resolve,
           error: reject
         })
@@ -174,7 +184,7 @@ export default {
             if (data.id) {
               this.proofForm.proof_id = data.id
               this.proofForm.location_id = data.location_id
-              this.proofObject = data
+              this.proofObjectList = this.proofObjectList.concat(data)
               this.proofSuccessMessage = true
             } else {
               alert('Error: server error when creating proof')

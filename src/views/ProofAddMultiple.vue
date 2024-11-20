@@ -3,7 +3,7 @@
     <v-col cols="12" md="6">
       <v-card
         :title="$t('Common.Image')"
-        prepend-icon="mdi-image"
+        prepend-icon="mdi-image-multiple"
         height="100%"
         :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
       >
@@ -12,7 +12,7 @@
         </template>
         <v-divider />
         <v-card-text>
-          <ProofInputRow :proofForm="addProofForm" :hideRecentProofChoice="true" />
+          <ProofInputRow :proofForm="addProofForm" :hideRecentProofChoice="true" :multiple="true" />
         </v-card-text>
         <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
       </v-card>

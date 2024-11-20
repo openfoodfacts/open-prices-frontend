@@ -123,7 +123,7 @@
         :disabled="productPriceFormFilled"
         @click="done"
       >
-        {{ $t('AddPriceMultiple.Done') }}
+        {{ $t('Common.Done') }}
       </v-btn>
     </v-col>
   </v-row>
