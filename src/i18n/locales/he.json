@@ -171,6 +171,7 @@
 		"DisplayMap": "מפה",
 		"DisplayPriceMap": "מפה",
 		"DisplayPriceChart": "תרשים",
+		"Done": "בוצע",
 		"Experiments": "ניסויים",
 		"Label": "תווית",
 		"Labels": "תוויות",
@@ -208,6 +209,7 @@
 		"Help": "עזרה",
 		"History": "היסטוריה",
 		"Image": "תמונה",
+		"Images": "Images",
 		"ImageFull": "תמונה בגודל מלא",
 		"Latest": "אחרונים",
 		"LinkCopySuccess": "הקישור הועתק",
@@ -267,6 +269,7 @@
 		"Total": "סך הכול",
 		"Type": "סוג",
 		"Upload": "העלאה",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "כתובת",
 		"URLInvalid": "כתובת שגויה",
 		"User": "משתמש",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "הוספת הוכחה יחידה"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "ניסויים"
