@@ -171,6 +171,7 @@
 		"DisplayMap": "Kort",
 		"DisplayPriceMap": "Kort",
 		"DisplayPriceChart": "Chart",
+		"Done": "Færdiggjort",
 		"Experiments": "Experiments",
 		"Label": "Etiket",
 		"Labels": "Etiketter",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "Historik",
 		"Image": "Billed",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
@@ -267,6 +269,7 @@
 		"Total": "I alt",
 		"Type": "Type",
 		"Upload": "Upload",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Bruger",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"
