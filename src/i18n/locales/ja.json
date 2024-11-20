@@ -171,6 +171,7 @@
 		"DisplayMap": "地図",
 		"DisplayPriceMap": "地図",
 		"DisplayPriceChart": "Chart",
+		"Done": "完了",
 		"Experiments": "Experiments",
 		"Label": "ラベル",
 		"Labels": "ラベル",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "履歴",
 		"Image": "画像",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "リンクをコピーしました",
@@ -267,6 +269,7 @@
 		"Total": "合計",
 		"Type": "種別",
 		"Upload": "アップロード",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "ユーザー",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"
