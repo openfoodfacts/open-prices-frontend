@@ -171,6 +171,7 @@
 		"DisplayMap": "Карта",
 		"DisplayPriceMap": "Карта",
 		"DisplayPriceChart": "Chart",
+		"Done": "Готово",
 		"Experiments": "Experiments",
 		"Label": "Етикет",
 		"Labels": "Етикети",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "История",
 		"Image": "Снимка",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
@@ -267,6 +269,7 @@
 		"Total": "Общо",
 		"Type": "Вид",
 		"Upload": "Upload",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Потребител",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"
