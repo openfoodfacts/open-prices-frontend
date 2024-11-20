@@ -171,6 +171,7 @@
 		"DisplayMap": "Karte",
 		"DisplayPriceMap": "Karte",
 		"DisplayPriceChart": "Diagramm",
+		"Done": "Fertig",
 		"Experiments": "Experimente",
 		"Label": "Kennzeichnung",
 		"Labels": "Labels",
@@ -208,6 +209,7 @@
 		"Help": "Hilfe",
 		"History": "Verlauf",
 		"Image": "Bild",
+		"Images": "Images",
 		"ImageFull": "Bild in Originalgröße",
 		"Latest": "Neuste",
 		"LinkCopySuccess": "Link kopiert",
@@ -267,6 +269,7 @@
 		"Total": "Gesamt",
 		"Type": "Art",
 		"Upload": "Hochladen",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Ungültige Adresse",
 		"User": "Benutzer",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Einzelnen Nachweis hinzufügen"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experimente"
