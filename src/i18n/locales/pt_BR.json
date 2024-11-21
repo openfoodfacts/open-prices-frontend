@@ -209,7 +209,7 @@
 		"Help": "Ajuda",
 		"History": "Histórico",
 		"Image": "Imagem",
-		"Images": "Images",
+		"Images": "Imagens",
 		"ImageFull": "Imagem em tamanho real",
 		"Latest": "Mais recentes",
 		"LinkCopySuccess": "Link copiado",
@@ -269,7 +269,7 @@
 		"Total": "Total",
 		"Type": "Tipo",
 		"Upload": "Atualizar",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleImages": "Carregar {count} imagem | Carregar {count} imagens",
 		"URL": "URL",
 		"URLInvalid": "URL inválida",
 		"User": "Utilizador",
@@ -479,7 +479,7 @@
 			"Title": "Adicionar um único comprovante"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Adicionar várias provas"
 		},
 		"Experiments": {
 			"Title": "Experimentos"
