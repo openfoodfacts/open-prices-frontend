@@ -171,6 +171,7 @@
 		"DisplayMap": "Karte",
 		"DisplayPriceMap": "Karte",
 		"DisplayPriceChart": "Diagramm",
+		"Done": "Fertig",
 		"Experiments": "Experimente",
 		"Label": "Kennzeichnung",
 		"Labels": "Labels",
@@ -208,6 +209,7 @@
 		"Help": "Hilfe",
 		"History": "Verlauf",
 		"Image": "Bild",
+		"Images": "Images",
 		"ImageFull": "Bild in Originalgröße",
 		"Latest": "Neuste",
 		"LinkCopySuccess": "Link kopiert",
@@ -249,7 +251,7 @@
 		"SideMenu": "Seitenmenü",
 		"Share": "Teilen",
 		"Source": "Quelle",
-		"SourceCode": "Source code",
+		"SourceCode": "Quellcode",
 		"Stats": "Statistiken",
 		"TaglineOriginal": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise",
 		"TaglineAlt1": "Eine offene öffentlich zugängliche Datenbank der Preise",
@@ -267,6 +269,7 @@
 		"Total": "Gesamt",
 		"Type": "Art",
 		"Upload": "Hochladen",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Ungültige Adresse",
 		"User": "Benutzer",
@@ -456,8 +459,8 @@
 		"Success": "Nachweis bearbeitet!"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Ihre Wiederverwendung fehlt? Lassen Sie es uns wissen {url}!",
+		"Here": "Hier"
 	},
 	"Router": {
 		"About": {
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Einzelnen Nachweis hinzufügen"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experimente"
@@ -518,7 +524,7 @@
 			"Title": "Top-Produkte"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Mitwirkungsassistent"
 		}
 	},
 	"Search": {

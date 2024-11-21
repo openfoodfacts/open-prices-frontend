@@ -171,6 +171,7 @@
 		"DisplayMap": "Kartta",
 		"DisplayPriceMap": "Kartta",
 		"DisplayPriceChart": "Chart",
+		"Done": "Valmis",
 		"Experiments": "Experiments",
 		"Label": "Merkki",
 		"Labels": "Merkit",
@@ -208,6 +209,7 @@
 		"Help": "Ohje",
 		"History": "Historia",
 		"Image": "Kuva",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Linkki kopioitu",
@@ -267,6 +269,7 @@
 		"Total": "Yhteensä",
 		"Type": "Tyyppi",
 		"Upload": "Lähetä",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Käyttäjä",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"

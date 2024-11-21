@@ -171,6 +171,7 @@
 		"DisplayMap": "מפה",
 		"DisplayPriceMap": "מפה",
 		"DisplayPriceChart": "תרשים",
+		"Done": "בוצע",
 		"Experiments": "ניסויים",
 		"Label": "תווית",
 		"Labels": "תוויות",
@@ -208,6 +209,7 @@
 		"Help": "עזרה",
 		"History": "היסטוריה",
 		"Image": "תמונה",
+		"Images": "תמונות",
 		"ImageFull": "תמונה בגודל מלא",
 		"Latest": "אחרונים",
 		"LinkCopySuccess": "הקישור הועתק",
@@ -267,6 +269,7 @@
 		"Total": "סך הכול",
 		"Type": "סוג",
 		"Upload": "העלאה",
+		"UploadMultipleImages": "העלאת תמונה | העלאת {count} תמונות",
 		"URL": "כתובת",
 		"URLInvalid": "כתובת שגויה",
 		"User": "משתמש",
@@ -475,6 +478,9 @@
 		"AddProofSingle": {
 			"Title": "הוספת הוכחה יחידה"
 		},
+		"AddProofMultiple": {
+			"Title": "הוספת מגוון הוכחות"
+		},
 		"Experiments": {
 			"Title": "ניסויים"
 		},
@@ -494,7 +500,7 @@
 			"Title": "ההוכחות שלי"
 		},
 		"Reuses": {
-			"Title": "Reuses"
+			"Title": "גזירות"
 		},
 		"Search": {
 			"Title": "חיפוש"
@@ -518,7 +524,7 @@
 			"Title": "מוצרים מובילים"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "מסייע תרומה"
 		}
 	},
 	"Search": {

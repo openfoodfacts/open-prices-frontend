@@ -171,6 +171,7 @@
 		"DisplayMap": "Kaart",
 		"DisplayPriceMap": "Kaart",
 		"DisplayPriceChart": "Grafiek",
+		"Done": "Voltooid",
 		"Experiments": "Experimenten",
 		"Label": "Keurmerk",
 		"Labels": "Keurmerken",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "Geschiedenis",
 		"Image": "Afbeelding",
+		"Images": "Images",
 		"ImageFull": "Afbeelding op volledige grootte",
 		"Latest": "Laatste",
 		"LinkCopySuccess": "Link gekopieerd",
@@ -249,7 +251,7 @@
 		"SideMenu": "Zijmenu",
 		"Share": "Delen",
 		"Source": "Bron",
-		"SourceCode": "Source code",
+		"SourceCode": "Broncode",
 		"Stats": "Statistieken",
 		"TaglineOriginal": "Een open, crowdsourced database van voedselprijzen",
 		"TaglineAlt1": "De open, crowdsourced database van prijzen",
@@ -267,6 +269,7 @@
 		"Total": "Totaal",
 		"Type": "Type",
 		"Upload": "Uploaden",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Ongeldige URL",
 		"User": "Gebruiker",
@@ -456,8 +459,8 @@
 		"Success": "Bewijs aangepast!"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Ontbreekt uw hergebruik? Laat het ons weten {url}!",
+		"Here": "hier"
 	},
 	"Router": {
 		"About": {
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Voeg één bewijs toe"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experimenten"
@@ -518,7 +524,7 @@
 			"Title": "Top producten"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Bijdrage-Assistent"
 		}
 	},
 	"Search": {

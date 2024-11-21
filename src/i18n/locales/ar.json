@@ -171,6 +171,7 @@
 		"DisplayMap": "خريطة",
 		"DisplayPriceMap": "خريطة",
 		"DisplayPriceChart": "Chart",
+		"Done": "تم",
 		"Experiments": "Experiments",
 		"Label": "al3alama",
 		"Labels": "علامات",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "السجل",
 		"Image": "الصورة",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
@@ -267,6 +269,7 @@
 		"Total": "Total",
 		"Type": "النوع",
 		"Upload": "Upload",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "المستخدم",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"

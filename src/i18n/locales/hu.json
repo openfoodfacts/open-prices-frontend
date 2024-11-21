@@ -59,7 +59,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Létrehoz",
+			"Create": "Létrehozás",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -73,7 +73,7 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Létrehoz",
+		"Create": "Létrehozás",
 		"PriceDetails": {
 			"Discount": "Discount?",
 			"Label": "Price",
@@ -171,6 +171,7 @@
 		"DisplayMap": "Térkép",
 		"DisplayPriceMap": "Térkép",
 		"DisplayPriceChart": "Chart",
+		"Done": "Kész",
 		"Experiments": "Experiments",
 		"Label": "Címke",
 		"Labels": "Címkék",
@@ -203,11 +204,12 @@
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
-		"FAQ": "FAQ",
+		"FAQ": "GYIK",
 		"FrequentlyAskedQuestions": "Gyakran ismételt kérdések (FAQ)",
 		"Help": "Help",
 		"History": "Előzmények",
-		"Image": "Image",
+		"Image": "Kép",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
@@ -267,13 +269,14 @@
 		"Total": "Total",
 		"Type": "Típus",
 		"Upload": "Upload",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Felhasználó",
 		"Users": "Users",
 		"UserCount": "{count} users",
 		"View": "Megtekintés",
-		"Website": "Website",
+		"Website": "Weboldal",
 		"Yes": "Igen",
 		"No": "Nem",
 		"Food": "Food",
@@ -432,7 +435,7 @@
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Igazolás kiválasztása",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"

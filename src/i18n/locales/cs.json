@@ -171,6 +171,7 @@
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Graf",
+		"Done": "Hotovo",
 		"Experiments": "Experimenty",
 		"Label": "Štítek",
 		"Labels": "Štítky",
@@ -208,6 +209,7 @@
 		"Help": "Nápověda",
 		"History": "Historie",
 		"Image": "Obrázek",
+		"Images": "Images",
 		"ImageFull": "Obrázek plné velikosti",
 		"Latest": "Poslední",
 		"LinkCopySuccess": "Odkaz zkopírován",
@@ -267,6 +269,7 @@
 		"Total": "Celkem",
 		"Type": "Typ",
 		"Upload": "Nahrát",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Neplatná URL",
 		"User": "Uživatel",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experimenty"

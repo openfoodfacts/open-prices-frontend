@@ -171,6 +171,7 @@
 		"DisplayMap": "Карта",
 		"DisplayPriceMap": "Карта",
 		"DisplayPriceChart": "Chart",
+		"Done": "Әзер",
 		"Experiments": "Experiments",
 		"Label": "Язма",
 		"Labels": "Labels",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "Тарих",
 		"Image": "Image",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
@@ -267,6 +269,7 @@
 		"Total": "Total",
 		"Type": "Төре",
 		"Upload": "Upload",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Кулланучы",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"

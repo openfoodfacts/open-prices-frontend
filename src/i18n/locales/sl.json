@@ -171,6 +171,7 @@
 		"DisplayMap": "Zemljevid",
 		"DisplayPriceMap": "Zemljevid",
 		"DisplayPriceChart": "Chart",
+		"Done": "Opravljeno",
 		"Experiments": "Experiments",
 		"Label": "Oznaka",
 		"Labels": "Oznake",
@@ -208,6 +209,7 @@
 		"Help": "Help",
 		"History": "Zgodovina",
 		"Image": "Slika",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
@@ -267,6 +269,7 @@
 		"Total": "Total",
 		"Type": "Tip",
 		"Upload": "Upload",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Uporabnik",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"

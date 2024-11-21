@@ -171,6 +171,7 @@
 		"DisplayMap": "Harita",
 		"DisplayPriceMap": "Harita",
 		"DisplayPriceChart": "Chart",
+		"Done": "Yapıldı",
 		"Experiments": "Experiments",
 		"Label": "Etiket",
 		"Labels": "Etiketler",
@@ -208,6 +209,7 @@
 		"Help": "Yardım",
 		"History": "Geçmiş",
 		"Image": "Resim",
+		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Bağlantı kopyalandı",
@@ -267,6 +269,7 @@
 		"Total": "Toplam",
 		"Type": "Tür",
 		"Upload": "Yükle",
+		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Kullanıcı",
@@ -474,6 +477,9 @@
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
+		},
+		"AddProofMultiple": {
+			"Title": "Add multiple proofs"
 		},
 		"Experiments": {
 			"Title": "Experiments"
