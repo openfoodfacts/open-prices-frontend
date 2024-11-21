@@ -269,7 +269,7 @@
 		"Total": "סך הכול",
 		"Type": "סוג",
 		"Upload": "העלאה",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleImages": "העלאת תמונה | העלאת {count} תמונות",
 		"URL": "כתובת",
 		"URLInvalid": "כתובת שגויה",
 		"User": "משתמש",
@@ -479,7 +479,7 @@
 			"Title": "הוספת הוכחה יחידה"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "הוספת מגוון הוכחות"
 		},
 		"Experiments": {
 			"Title": "ניסויים"
