@@ -209,7 +209,7 @@
 		"Help": "Help",
 		"History": "Geschiedenis",
 		"Image": "Afbeelding",
-		"Images": "Images",
+		"Images": "Afbeeldingen",
 		"ImageFull": "Afbeelding op volledige grootte",
 		"Latest": "Laatste",
 		"LinkCopySuccess": "Link gekopieerd",
@@ -269,7 +269,7 @@
 		"Total": "Totaal",
 		"Type": "Type",
 		"Upload": "Uploaden",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleImages": "Upload {count} afbeelding | Upload {count} afbeeldingen",
 		"URL": "URL",
 		"URLInvalid": "Ongeldige URL",
 		"User": "Gebruiker",
@@ -479,7 +479,7 @@
 			"Title": "Voeg één bewijs toe"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Meerdere bewijzen toevoegen"
 		},
 		"Experiments": {
 			"Title": "Experimenten"
