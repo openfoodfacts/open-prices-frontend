@@ -209,7 +209,7 @@
 		"Help": "Nápověda",
 		"History": "Historie",
 		"Image": "Obrázek",
-		"Images": "Images",
+		"Images": "Obrázky",
 		"ImageFull": "Obrázek plné velikosti",
 		"Latest": "Poslední",
 		"LinkCopySuccess": "Odkaz zkopírován",
@@ -248,10 +248,10 @@
 		"SignedIn": "Přihlášeno!",
 		"SignIn": "Přihlásit se",
 		"SignOut": "Odhlásit",
-		"SideMenu": "Side menu",
+		"SideMenu": "Postranní menu",
 		"Share": "Sdílet",
 		"Source": "Zdroj",
-		"SourceCode": "Source code",
+		"SourceCode": "Zdrojový kód",
 		"Stats": "Statistiky",
 		"TaglineOriginal": "Otevřená crowdsourcovaná databáze cen potravin",
 		"TaglineAlt1": "Otevřená crowdsourcovaná databáze cen",
@@ -269,7 +269,7 @@
 		"Total": "Celkem",
 		"Type": "Typ",
 		"Upload": "Nahrát",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleImages": "Nahrát {count} obrázek | Nahrajte {count} obrázků",
 		"URL": "URL",
 		"URLInvalid": "Neplatná URL",
 		"User": "Uživatel",
@@ -459,8 +459,8 @@
 		"Success": "Doklad upraven!"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Chybí vaše opětovné použití? Dejte nám vědět {url}!",
+		"Here": "zde"
 	},
 	"Router": {
 		"About": {
@@ -476,10 +476,10 @@
 			"Title": "Přidat více cen"
 		},
 		"AddProofSingle": {
-			"Title": "Add a single proof"
+			"Title": "Přidejte jeden důkaz"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Přidejte více důkazů"
 		},
 		"Experiments": {
 			"Title": "Experimenty"
@@ -500,7 +500,7 @@
 			"Title": "Moje důkazy"
 		},
 		"Reuses": {
-			"Title": "Reuses"
+			"Title": "Opakované použití"
 		},
 		"Search": {
 			"Title": "Vyhledat"
@@ -524,7 +524,7 @@
 			"Title": "Nejlepší produkty"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Příspěvkový asistent"
 		}
 	},
 	"Search": {
@@ -598,7 +598,7 @@
 		"LocationDisplayOSMID": "Zobrazit OSM ID",
 		"ProductDisplayBarcode": "Zobrazit čárový kód",
 		"ProductDisplayCategoryTag": "Zobrazit značku kategorie",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"SideMenuExperimentsDisplay": "Zobrazit 'Experimenty'",
 		"Save": "Uložit",
 		"Title": "Nastavení",
 		"TranslationCompletion": "Překlad je z {completion}% dokončen.",
