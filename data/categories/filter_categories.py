@@ -29,6 +29,7 @@ PARENT_CATEGORIES_ID = [
     "en:pumpkins",  # 9
     "en:dried-mushrooms",  # 7
     "en:textured-vegetable-protein",  # 2
+    "en:squash-pulp",
 ]
 
 EXTRA_CHILDREN = [
@@ -45,6 +46,16 @@ EXTRA_CHILDREN = [
 ]
 
 EXCLUDE_LIST = ["Cooked", "Fresh", "Frozen", "Canned", "Prepacked"]
+
+EXCLUDE_LIST_NODE_IDS = [
+    "en:vegetables-from-germany",
+    "en:vegetables-from-the-netherlands",
+    "en:spanish-vegetables",
+    "en:vegetables-from-spain",
+    "en:vegetables-from-italy",
+    "en:nut-macarons",
+    "en:red-kuri-pulp",
+]
 
 script_path = os.path.dirname(os.path.abspath(__file__))
 
@@ -195,8 +206,11 @@ if __name__ == "__main__":
     )
     # Step 2c: keep only nodes starting with "en:"
     categories_filtered = [
-        node for node in categories_filtered if node.id.startswith("en:")
+        node
+        for node in categories_filtered
+        if (node.id.startswith("en:") and node.id not in EXCLUDE_LIST_NODE_IDS)
     ]
+
     # Step 2d: remove nodes containg some strings
     print("Additional filtering on:", EXCLUDE_LIST)
     categories_filtered = filter_node_list_by_exclude_string_list(
