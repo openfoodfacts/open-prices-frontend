@@ -190,7 +190,7 @@ if __name__ == "__main__":
         CATEGORIES_FULL, PARENT_CATEGORIES_ID
     )
     print(
-        "Filter with the following parent categories:",
+        "Filter on the following parent categories:",
         [node.id for node in PARENT_CATEGORIES],
     )
 
@@ -204,34 +204,37 @@ if __name__ == "__main__":
     categories_filtered.extend(
         get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, EXTRA_CHILDREN)
     )
-    # Step 2c: keep only nodes starting with "en:"
+    # Step 2c: exlude
+    # - keep only nodes starting with "en:"
+    # - remove nodes in EXCLUDE_LIST_NODE_IDS
+    # - remove nodes containing some strings in EXCLUDE_LIST
     categories_filtered = [
         node
         for node in categories_filtered
-        if (node.id.startswith("en:") and node.id not in EXCLUDE_LIST_NODE_IDS)
+        if node.id.startswith("en:")
     ]
-
-    # Step 2d: remove nodes containg some strings
-    print("Additional filtering on:", EXCLUDE_LIST)
+    categories_filtered = [node for node in categories_filtered if node.id not in EXCLUDE_LIST_NODE_IDS]
     categories_filtered = filter_node_list_by_exclude_string_list(
         categories_filtered, EXCLUDE_LIST
     )
+    print("Finished filtering:", len(categories_filtered))
 
-    # Deduplicate
+    # Step 3: deduplicate
     categories_filtered_deduped = []
     seen = set()
     for category in categories_filtered:
         if category.id not in seen:
             categories_filtered_deduped.append(category)
             seen.add(category.id)
+    print("Finished deduplicating")
 
-    # Step 3: transform to dict list
+    # Step 4: transform to dict list
     categories_filtered_to_dict_list = [
         {"id": node.id, **node.to_dict()} for node in categories_filtered_deduped
     ]
     print("Categories remaining:", len(categories_filtered_to_dict_list))
 
-    # Step 4: write to files (1 per language)
+    # Step 5: write to files (1 per language)
     write_categories_to_files(categories_filtered_to_dict_list, delete_parents=True)
     print("Wrote to language files")
 
