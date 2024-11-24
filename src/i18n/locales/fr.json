@@ -251,11 +251,11 @@
 		"SideMenu": "Menu latéral",
 		"Share": "Partager",
 		"Source": "Source",
-		"SourceCode": "Source code",
+		"SourceCode": "Code source",
 		"Stats": "Statistiques",
 		"TaglineOriginal": "La base de données ouverte et collaborative de prix alimentaires",
-		"TaglineAlt1": "La base de données ouverte et participative de prix",
-		"TaglineAlt2": "The open crowdsourced database of food and product prices",
+		"TaglineAlt1": "La base de données ouverte et collaborative de prix",
+		"TaglineAlt2": "La base de données ouverte et collaborative de prix alimentaires et non alimentaires",
 		"TaglineAlt3": "Les prix doivent être gratuits",
 		"Thanks": "Merci",
 		"Theme": "Thème",
@@ -269,7 +269,7 @@
 		"Total": "Total",
 		"Type": "Type",
 		"Upload": "Téléverser",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleImages": "Téléverser {count} image | Téléverser {count} images",
 		"URL": "URL",
 		"URLInvalid": "URL invalide",
 		"User": "Utilisateur",
@@ -459,8 +459,8 @@
 		"Success": "Preuve modifiée !"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Votre réutilisation est absente ? Faites-le nous savoir {url} !",
+		"Here": "ici"
 	},
 	"Router": {
 		"About": {
@@ -479,7 +479,7 @@
 			"Title": "Ajouter une seule preuve"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Ajouter plusieurs preuves"
 		},
 		"Experiments": {
 			"Title": "Expérimentations"
@@ -500,7 +500,7 @@
 			"Title": "Mes preuves"
 		},
 		"Reuses": {
-			"Title": "Reuses"
+			"Title": "Réutilisations"
 		},
 		"Search": {
 			"Title": "Rechercher"
@@ -524,7 +524,7 @@
 			"Title": "Top produits"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Assistant de contribution"
 		}
 	},
 	"Search": {
