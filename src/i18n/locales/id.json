@@ -98,7 +98,7 @@
 			"ProductBarcode": "Barcode produk",
 			"Scan": "Pindai",
 			"ScanBarcode": "Pindai barcode",
-			"Type": "Tipe",
+			"Type": "Tipo",
 			"TypeBarcode": "Ketik barcode",
 			"SetProduct": "Tetapkan produk",
 			"Title": "Info produk"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "Tipe",
+		"Type": "Tipo",
 		"Upload": "Unggah",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
