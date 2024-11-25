@@ -209,7 +209,7 @@
 		"Help": "Допомога",
 		"History": "Історія",
 		"Image": "Зображення",
-		"Images": "Images",
+		"Images": "Зображення",
 		"ImageFull": "Повнорозмірне зображення",
 		"Latest": "Останні",
 		"LinkCopySuccess": "Посилання скопійоване",
@@ -269,7 +269,7 @@
 		"Total": "Усього",
 		"Type": "Тип",
 		"Upload": "Завантажити",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleImages": "Завантажити {count} зображення | Завантажити {count} зображеннь",
 		"URL": "URL-адреса",
 		"URLInvalid": "Некоректна URL-адреса",
 		"User": "Користувач",
@@ -479,7 +479,7 @@
 			"Title": "Додати одне підтвердження"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Додайте кілька доказів"
 		},
 		"Experiments": {
 			"Title": "Експерименти"

@@ -209,7 +209,7 @@
 		"Help": "Help",
 		"History": "Istorija",
 		"Image": "Vaizdas",
-		"Images": "Images",
+		"Images": "Vaizdai",
 		"ImageFull": "Viso dydžio vaizdas",
 		"Latest": "Naujausi",
 		"LinkCopySuccess": "Nuoroda nukopijuota",
@@ -269,7 +269,7 @@
 		"Total": "Iš viso",
 		"Type": "Tipas",
 		"Upload": "Įkelti",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleImages": "Įkelti {count} vaizdą | Įkelti {count} vaizdus (-ų)",
 		"URL": "URL",
 		"URLInvalid": "Neteisingas URL",
 		"User": "Vartotojas",
@@ -479,7 +479,7 @@
 			"Title": "Pridėti vienintelį įrodymą"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Pridėti kelis įrodymus"
 		},
 		"Experiments": {
 			"Title": "Eksperimentai"

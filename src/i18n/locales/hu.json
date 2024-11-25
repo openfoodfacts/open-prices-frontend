@@ -250,7 +250,7 @@
 		"SignOut": "Kijelentkezés",
 		"SideMenu": "Side menu",
 		"Share": "Megosztás",
-		"Source": "Source",
+		"Source": "Forrás",
 		"SourceCode": "Source code",
 		"Stats": "Stats",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -266,7 +266,7 @@
 		"TopProducts": "Top products",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "Összesen",
 		"Type": "Típus",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
@@ -451,7 +451,7 @@
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Privát",
-		"Privacy": "Magánélet"
+		"Privacy": "Adatvédelem"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -554,7 +554,7 @@
 		"Products": "Termékek",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "Összesen",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
