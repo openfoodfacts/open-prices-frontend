@@ -98,7 +98,7 @@
 			"ProductBarcode": "Штрих-код продукту",
 			"Scan": "Сканувати",
 			"ScanBarcode": "Просканувати штрих-код",
-			"Type": "Тип",
+			"Type": "Tipo",
 			"TypeBarcode": "Введіть штрих-код",
 			"SetProduct": "Встановити продукт",
 			"Title": "Інформація про продукт"
@@ -267,7 +267,7 @@
 		"Today": "Сьогодні",
 		"Top": "Top",
 		"Total": "Усього",
-		"Type": "Тип",
+		"Type": "Tipo",
 		"Upload": "Завантажити",
 		"UploadMultipleImages": "Завантажити {count} зображення | Завантажити {count} зображеннь",
 		"URL": "URL-адреса",
