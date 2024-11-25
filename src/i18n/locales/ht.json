@@ -98,7 +98,7 @@
 			"ProductBarcode": "Kòd ba pwodwi",
 			"Scan": "Scan",
 			"ScanBarcode": "Eskane yon kòd ba",
-			"Type": "Type",
+			"Type": "Tipo",
 			"TypeBarcode": "Tape yon kòd ba",
 			"SetProduct": "Mete yon pwodwi",
 			"Title": "Enfòmasyon sou pwodwi"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "Type",
+		"Type": "Tipo",
 		"Upload": "Telechaje",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
