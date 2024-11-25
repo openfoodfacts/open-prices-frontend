@@ -98,7 +98,7 @@
 			"ProductBarcode": "ברקוד מוצר",
 			"Scan": "סריקה",
 			"ScanBarcode": "סריקת ברקוד",
-			"Type": "סוג",
+			"Type": "Tipo",
 			"TypeBarcode": "סוג ברקוד",
 			"SetProduct": "הגדרת מוצר",
 			"Title": "פרטי מוצר"
@@ -267,7 +267,7 @@
 		"Today": "היום",
 		"Top": "מובילים",
 		"Total": "סך הכול",
-		"Type": "סוג",
+		"Type": "Tipo",
 		"Upload": "העלאה",
 		"UploadMultipleImages": "העלאת תמונה | העלאת {count} תמונות",
 		"URL": "כתובת",
