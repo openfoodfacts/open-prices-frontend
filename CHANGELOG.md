@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.95.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.94.1...v1.95.0) (2024-11-25)
+
+
+### Features
+
+* **ContributionAssistant:** Add a new summary step guiding users after price upload ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
+* **Proofs:** new experimental page to upload multiple images ([#1043](https://github.com/openfoodfacts/open-prices-frontend/issues/1043)) ([0fe705c](https://github.com/openfoodfacts/open-prices-frontend/commit/0fe705c70ede83e54b039d0ede30ef3609011919))
+
+
+### Bug Fixes
+
+* **Stats:** display all location & proof count to have logical numbers (v2) ([223d18e](https://github.com/openfoodfacts/open-prices-frontend/commit/223d18e2e3f0d01eb8511eb92043e5bae71efe91))
+* update categories ([#1049](https://github.com/openfoodfacts/open-prices-frontend/issues/1049)) ([5ff1c83](https://github.com/openfoodfacts/open-prices-frontend/commit/5ff1c83cf4e6fecfcdcc7df09f949d1b2fcaac59))
+
+
+### Technical
+
+* **ContributionAssistant:** allow for price removal at the cleanup step ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
+* **ContributionAssistant:** display detected barcode ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
+* **ContributionAssistant:** display more cols on large screens ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
+* **ContributionAssistant:** hide price per when barcode is selected ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
+* **ContributionAssistant:** made code more readable ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
+* **ContributionAssistant:** More UX tweaks following feedback ([#1039](https://github.com/openfoodfacts/open-prices-frontend/issues/1039)) ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
+* **ContributionAssistant:** Moved proof upload as first step ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
+* **ContributionAssistant:** use barcode mode when codes look credible ([#1042](https://github.com/openfoodfacts/open-prices-frontend/issues/1042)) ([496149a](https://github.com/openfoodfacts/open-prices-frontend/commit/496149ab2754efc3c610d6dd1925273afd847e71))
+* **l10n:** New Crowdin translations to review and merge ([#1036](https://github.com/openfoodfacts/open-prices-frontend/issues/1036)) ([478f1fd](https://github.com/openfoodfacts/open-prices-frontend/commit/478f1fdc345e5d26339fde71661e40714fcc07e7))
+* **l10n:** New Crowdin translations to review and merge ([#1046](https://github.com/openfoodfacts/open-prices-frontend/issues/1046)) ([942466a](https://github.com/openfoodfacts/open-prices-frontend/commit/942466a1aca461cddfa52ca61f2cd0464aad8e38))
+* **ProductCard:** new prop to hide categories & labels chip ([#1038](https://github.com/openfoodfacts/open-prices-frontend/issues/1038)) ([91dc7e6](https://github.com/openfoodfacts/open-prices-frontend/commit/91dc7e6a5e0d33103c7634319639b63615a6eb11))
+
 ## [1.94.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.94.0...v1.94.1) (2024-11-13)
 
 
