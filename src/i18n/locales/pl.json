@@ -98,7 +98,7 @@
 			"ProductBarcode": "Kod kreskowy produktu",
 			"Scan": "Skanuj",
 			"ScanBarcode": "Zeskanuj kod kreskowy",
-			"Type": "Typ",
+			"Type": "Tipo",
 			"TypeBarcode": "Wpisz kod kreskowy",
 			"SetProduct": "Ustaw produkt",
 			"Title": "Informacje o produkcie"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Razem",
-		"Type": "Typ",
+		"Type": "Tipo",
 		"Upload": "Prześlij",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
