@@ -98,7 +98,7 @@
 			"ProductBarcode": "Product barcode",
 			"Scan": "Тикшерү",
 			"ScanBarcode": "Scan a barcode",
-			"Type": "Төре",
+			"Type": "Tipo",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "Төре",
+		"Type": "Tipo",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
