@@ -98,7 +98,7 @@
 			"ProductBarcode": "Product barcode",
 			"Scan": "Escàner",
 			"ScanBarcode": "Escaneja el codi de barres",
-			"Type": "Tipus",
+			"Type": "Tipo",
 			"TypeBarcode": "Escriu el codi de barres",
 			"SetProduct": "Set a product",
 			"Title": "Informació del producte"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "Tipus",
+		"Type": "Tipo",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
