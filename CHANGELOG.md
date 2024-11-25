@@ -5,7 +5,6 @@
 
 ### Features
 
-* **ContributionAssistant:** Add a new summary step guiding users after price upload ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
 * **Proofs:** new experimental page to upload multiple images ([#1043](https://github.com/openfoodfacts/open-prices-frontend/issues/1043)) ([0fe705c](https://github.com/openfoodfacts/open-prices-frontend/commit/0fe705c70ede83e54b039d0ede30ef3609011919))
 
 
@@ -17,13 +16,7 @@
 
 ### Technical
 
-* **ContributionAssistant:** allow for price removal at the cleanup step ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
-* **ContributionAssistant:** display detected barcode ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
-* **ContributionAssistant:** display more cols on large screens ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
-* **ContributionAssistant:** hide price per when barcode is selected ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
-* **ContributionAssistant:** made code more readable ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
 * **ContributionAssistant:** More UX tweaks following feedback ([#1039](https://github.com/openfoodfacts/open-prices-frontend/issues/1039)) ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
-* **ContributionAssistant:** Moved proof upload as first step ([f25f6c7](https://github.com/openfoodfacts/open-prices-frontend/commit/f25f6c7a176bc7f42ce8d113499696db99450b36))
 * **ContributionAssistant:** use barcode mode when codes look credible ([#1042](https://github.com/openfoodfacts/open-prices-frontend/issues/1042)) ([496149a](https://github.com/openfoodfacts/open-prices-frontend/commit/496149ab2754efc3c610d6dd1925273afd847e71))
 * **l10n:** New Crowdin translations to review and merge ([#1036](https://github.com/openfoodfacts/open-prices-frontend/issues/1036)) ([478f1fd](https://github.com/openfoodfacts/open-prices-frontend/commit/478f1fdc345e5d26339fde71661e40714fcc07e7))
 * **l10n:** New Crowdin translations to review and merge ([#1046](https://github.com/openfoodfacts/open-prices-frontend/issues/1046)) ([942466a](https://github.com/openfoodfacts/open-prices-frontend/commit/942466a1aca461cddfa52ca61f2cd0464aad8e38))
