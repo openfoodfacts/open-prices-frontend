@@ -98,7 +98,7 @@
 			"ProductBarcode": "Brūkšninis produkto kodas",
 			"Scan": "Skenuoti",
 			"ScanBarcode": "Nuskaityti brūkšninį kodą",
-			"Type": "Tipas",
+			"Type": "Tipo",
 			"TypeBarcode": "Įveskite brūkšninį kodą",
 			"SetProduct": "Nustatyti produktą",
 			"Title": "Informacija apie produktą"
@@ -267,7 +267,7 @@
 		"Today": "Šiandien",
 		"Top": "Geriausi",
 		"Total": "Iš viso",
-		"Type": "Tipas",
+		"Type": "Tipo",
 		"Upload": "Įkelti",
 		"UploadMultipleImages": "Įkelti {count} vaizdą | Įkelti {count} vaizdus (-ų)",
 		"URL": "URL",
