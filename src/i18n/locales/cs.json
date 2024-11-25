@@ -98,7 +98,7 @@
 			"ProductBarcode": "Čárový kód produktu",
 			"Scan": "Skenovat",
 			"ScanBarcode": "Naskenovat čárový kód",
-			"Type": "Typ",
+			"Type": "Tipo",
 			"TypeBarcode": "Zadat čárový kód",
 			"SetProduct": "Nastavit produkt",
 			"Title": "Informace o produktu"
@@ -267,7 +267,7 @@
 		"Today": "Dnes",
 		"Top": "Nahoru",
 		"Total": "Celkem",
-		"Type": "Typ",
+		"Type": "Tipo",
 		"Upload": "Nahrát",
 		"UploadMultipleImages": "Nahrát {count} obrázek | Nahrajte {count} obrázků",
 		"URL": "URL",
