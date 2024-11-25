@@ -98,7 +98,7 @@
 			"ProductBarcode": "Product barcode",
 			"Scan": "مسح",
 			"ScanBarcode": "Scan a barcode",
-			"Type": "النوع",
+			"Type": "Tipo",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "النوع",
+		"Type": "Tipo",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
