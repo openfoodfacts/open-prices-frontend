@@ -98,7 +98,7 @@
 			"ProductBarcode": "Tuotteen viivakoodi",
 			"Scan": "Lue",
 			"ScanBarcode": "Skannaa viivakoodi",
-			"Type": "Tyyppi",
+			"Type": "Tipo",
 			"TypeBarcode": "Syötä viivakoodi",
 			"SetProduct": "Aseta tuote",
 			"Title": "Tuotetiedot"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Yhteensä",
-		"Type": "Tyyppi",
+		"Type": "Tipo",
 		"Upload": "Lähetä",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
