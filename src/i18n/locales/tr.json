@@ -98,7 +98,7 @@
 			"ProductBarcode": "Ürün barkodu",
 			"Scan": "Tara",
 			"ScanBarcode": "Barkod tara",
-			"Type": "Tür",
+			"Type": "Tipo",
 			"TypeBarcode": "Barkodu yazın",
 			"SetProduct": "Bir ürün ayarlayın",
 			"Title": "Ürün bilgisi"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Toplam",
-		"Type": "Tür",
+		"Type": "Tipo",
 		"Upload": "Yükle",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
