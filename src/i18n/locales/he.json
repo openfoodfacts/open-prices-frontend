@@ -459,7 +459,7 @@
 		"Success": "ההוכחה נערכה!"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"AlertNew": "הגזירה שלך חסרה? נשמח לשמוע על כך דרך {url}!",
 		"Here": "כאן"
 	},
 	"Router": {
