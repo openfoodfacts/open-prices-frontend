@@ -98,7 +98,7 @@
 			"ProductBarcode": "Code-barres du produit",
 			"Scan": "Scanner",
 			"ScanBarcode": "Scanner un code-barres",
-			"Type": "Type",
+			"Type": "Tipo",
 			"TypeBarcode": "Taper un code-barres",
 			"SetProduct": "Ajouter un produit",
 			"Title": "Information du produit"
@@ -267,7 +267,7 @@
 		"Today": "Aujourd’hui",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "Type",
+		"Type": "Tipo",
 		"Upload": "Téléverser",
 		"UploadMultipleImages": "Téléverser {count} image | Téléverser {count} images",
 		"URL": "URL",

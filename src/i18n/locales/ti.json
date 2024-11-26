@@ -98,7 +98,7 @@
 			"ProductBarcode": "Product barcode",
 			"Scan": "ቅረጽ",
 			"ScanBarcode": "Scan a barcode",
-			"Type": "Type",
+			"Type": "Tipo",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "Type",
+		"Type": "Tipo",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",

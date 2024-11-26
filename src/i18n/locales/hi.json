@@ -98,7 +98,7 @@
 			"ProductBarcode": "उत्पाद बारकोड",
 			"Scan": "स्कैन",
 			"ScanBarcode": "बारकोड स्कैन करें",
-			"Type": "प्रकार",
+			"Type": "Tipo",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "प्रकार",
+		"Type": "Tipo",
 		"Upload": "अपलोड",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",

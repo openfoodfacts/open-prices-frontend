@@ -98,7 +98,7 @@
 			"ProductBarcode": "Čiarový kód produktu",
 			"Scan": "Sken",
 			"ScanBarcode": "Naskenujte čiarový kód",
-			"Type": "Druhy",
+			"Type": "Tipo",
 			"TypeBarcode": "Zadajte čiarový kód",
 			"SetProduct": "Nastavte produkt",
 			"Title": "Informácie o produkte"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "Druhy",
+		"Type": "Tipo",
 		"Upload": "Nahrať",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",

@@ -98,7 +98,7 @@
 			"ProductBarcode": "Produkt-Strichcode",
 			"Scan": "Einlesen",
 			"ScanBarcode": "Strichcode einlesen",
-			"Type": "Art",
+			"Type": "Tipo",
 			"TypeBarcode": "Strichcode eingeben",
 			"SetProduct": "Produkt festlegen",
 			"Title": "Produktinformation"
@@ -267,7 +267,7 @@
 		"Today": "Heute",
 		"Top": "Top",
 		"Total": "Gesamt",
-		"Type": "Art",
+		"Type": "Tipo",
 		"Upload": "Hochladen",
 		"UploadMultipleImages": "Lade {count} Bild hoch | Lade {count} Bilder hoch",
 		"URL": "URL",

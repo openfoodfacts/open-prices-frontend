@@ -98,7 +98,7 @@
 			"ProductBarcode": "Streepjescode van product",
 			"Scan": "Scan",
 			"ScanBarcode": "Scan een streepjescode",
-			"Type": "Type",
+			"Type": "Tipo",
 			"TypeBarcode": "Voer een streepjescode in",
 			"SetProduct": "Stel een product in",
 			"Title": "Productinformatie"
@@ -267,7 +267,7 @@
 		"Today": "Vandaag",
 		"Top": "Top",
 		"Total": "Totaal",
-		"Type": "Type",
+		"Type": "Tipo",
 		"Upload": "Uploaden",
 		"UploadMultipleImages": "Upload {count} afbeelding | Upload {count} afbeeldingen",
 		"URL": "URL",

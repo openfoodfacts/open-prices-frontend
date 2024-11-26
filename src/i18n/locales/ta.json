@@ -98,7 +98,7 @@
 			"ProductBarcode": "தயாரிப்பு பார்கோடு",
 			"Scan": "ஸ்கேன்",
 			"ScanBarcode": "Scan a barcode",
-			"Type": "Type",
+			"Type": "டிப்போ",
 			"TypeBarcode": "Type a barcode",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "சிறந்த",
 		"Total": "Total",
-		"Type": "Type",
+		"Type": "டிப்போ",
 		"Upload": "Upload",
 		"UploadMultipleImages": "{count} படத்தைப் பதிவேற்றவும் | {count} படங்களைப் பதிவேற்றவும்",
 		"URL": "URL",

@@ -98,7 +98,7 @@
 			"ProductBarcode": "产品条码",
 			"Scan": "扫描",
 			"ScanBarcode": "扫描条形码",
-			"Type": "類型",
+			"Type": "Tipo",
 			"TypeBarcode": "输入条形码",
 			"SetProduct": "设置产品",
 			"Title": "产品信息"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "总计",
-		"Type": "類型",
+		"Type": "Tipo",
 		"Upload": "上传",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",

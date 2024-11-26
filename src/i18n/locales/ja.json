@@ -98,7 +98,7 @@
 			"ProductBarcode": "製品バーコード",
 			"Scan": "スキャン",
 			"ScanBarcode": "Scan a barcode",
-			"Type": "種別",
+			"Type": "Tipo",
 			"TypeBarcode": "バーコード入力",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -267,7 +267,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "合計",
-		"Type": "種別",
+		"Type": "Tipo",
 		"Upload": "アップロード",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
