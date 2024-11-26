@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.95.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.95.0...v1.95.1) (2024-11-26)
+
+
+### Bug Fixes
+
+* **Proofs:** fix selecting existing proof, following [#1043](https://github.com/openfoodfacts/open-prices-frontend/issues/1043) ([40301dc](https://github.com/openfoodfacts/open-prices-frontend/commit/40301dc00b4a094b6ff0b9bccdb36d63bc0c1807))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1050](https://github.com/openfoodfacts/open-prices-frontend/issues/1050)) ([1fa0106](https://github.com/openfoodfacts/open-prices-frontend/commit/1fa010695c63b4c78964bf9ee541d24b63b46f2a))
+
 ## [1.95.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.94.1...v1.95.0) (2024-11-25)
 
 
