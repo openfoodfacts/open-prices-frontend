@@ -16,12 +16,12 @@
       </h3>
       <v-sheet v-if="productForm.mode === 'barcode'">
         <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScannerDialog">
-          <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Scan') }}</span>
-          <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.ScanBarcode') }}</span>
+          <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.ScanBarcodeShort') }}</span>
+          <span class="d-none d-sm-inline-flex">{{ $t('Common.BarcodeScan') }}</span>
         </v-btn>
         <v-btn class="mb-2" size="small" prepend-icon="mdi-numeric" @click.prevent="showBarcodeManualInputDialog">
-          <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.Type') }}</span>
-          <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.ProductInfo.TypeBarcode') }}</span>
+          <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.TypeBarcodeShort') }}</span>
+          <span class="d-none d-sm-inline-flex">{{ $t('Common.BarcodeType') }}</span>
         </v-btn>
         <ProductCard v-if="productForm.product" class="mb-2" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductActions="true" :readonly="true" elevation="1" />
       </v-sheet>
