@@ -2,10 +2,10 @@
 	"About": {
 		"WhyTitle": "為什麼 {op_name}？",
 		"WhyAnswer1": "{op_name} 是一個蒐集和分享世界各地產品價格的計畫。這是公開的資料庫，任何人都可以用來進行研究、分析等等。{op_name} 由{off_url} 開發並維護。",
-		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
+		"WhyAnswer2": "目前，只有少數公司擁有基於條碼的大型產品價格資料庫。這些價格資料並非免費提供，而是以高價出售給能夠負擔得起的私人機構、研究人員和其他組織。",
 		"HowTitle": "{op_name} 是怎麼運作的？",
-		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
-		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
+		"HowAnswer1": "我們正在通過群眾外包的方式建立一個開源的價格資料庫。用戶可以通過此網頁或官方 {off_url} 應用程式添加價格。零售商或第三方應用程式也可以透過我們的 {op_api_url} 進行貢獻。",
+		"HowAnswer2": "{op_name} 的目標不僅是紀錄單個產品的價格，還包括購物車資料，也就是人們在單次購物中的產品清單。這些資料對研究人員分析食品消費習慣來說具有極大的研究價值。",
 		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
 		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
 		"LicenseTitle": "授權",
@@ -51,7 +51,7 @@
 		},
 		"Thanks": "謝謝",
 		"Title": "新增價格",
-		"TitleSingle": "Add a single price",
+		"TitleSingle": "增加單一價格",
 		"TitleMultiple": "批量添加多個價格"
 	},
 	"AddPriceMultiple": {
@@ -68,7 +68,7 @@
 		"ProofDetails": {
 			"ReceiptWarning": "收據可能包含個人訊息，我們建議在拍照前將其妥善遮掩(刪減、折疊⋯⋯)。",
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Proof details"
+			"Title": "證明細節"
 		},
 		"Title": "新增多個價格"
 	},
@@ -79,22 +79,22 @@
 			"Label": "價格",
 			"LabelDiscounted": "折扣價",
 			"LabelFull": "原價",
-			"Proof": "Proof",
-			"ProofDateChanged": "Date updated!",
-			"ProofSelected": "Proof selected!",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"Proof": "證明",
+			"ProofDateChanged": "已更新日期！",
+			"ProofSelected": "已選擇證明！",
+			"ProofUploaded": "已上傳證明！",
+			"Title": "價格詳情",
+			"UploadProof": "上傳證明",
 			"Picture": "圖片",
 			"TakePicture": "選一張圖",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"Gallery": "裝置圖庫",
+			"SelectFromGallery": "從裝置圖庫中選擇",
+			"RecentProof": "最近的證明",
+			"SelectRecentProof": "選擇最近的證明"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "分類 ",
-			"OriginLabel": "Origin",
+			"OriginLabel": "原產地",
 			"ProductBarcode": "產品條碼",
 			"Scan": "掃描",
 			"ScanBarcode": "掃描條碼",
@@ -108,15 +108,15 @@
 			"Category": "分類 "
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "每公斤價格",
+			"PerUnit": "每單位價格"
 		},
-		"Title": "Add a single price",
+		"Title": "增加單一價格",
 		"WhereWhen": {
 			"Date": "日期",
 			"DateLabel": "日期",
 			"Find": "尋找",
-			"Location": "Shop location",
+			"Location": "店鋪位置",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
 		}
@@ -155,7 +155,7 @@
 		"Prices": "Prices",
 		"Product": "產品",
 		"Products": "產品",
-		"Proof": "Proof",
+		"Proof": "證明",
 		"Proofs": "Proofs",
 		"Category": "分類 ",
 		"Categories": "種類",
@@ -353,7 +353,7 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "證明",
 		"FullPrice": "原價",
 		"UnknownProduct": "Unknown product"
 	},
@@ -428,7 +428,7 @@
 		"ProductTotal": "{count} products"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
+		"Proof": "證明",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "收據",
 		"GDPR_REQUEST": "GDPR request",
@@ -436,7 +436,7 @@
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",
-		"ProofSelected": "Proof selected!",
+		"ProofSelected": "已選擇證明！",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
@@ -470,7 +470,7 @@
 			"Title": "新增價格"
 		},
 		"AddPriceSingle": {
-			"Title": "Add a single price"
+			"Title": "增加單一價格"
 		},
 		"AddPriceMultiple": {
 			"Title": "新增多個價格"
