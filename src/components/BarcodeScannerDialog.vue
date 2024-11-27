@@ -2,7 +2,7 @@
   <v-dialog scrollable max-height="80%" min-width="50%">
     <v-card>
       <v-card-title>
-        {{ $t('BarcodeScanner.Scan') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
+        {{ $t('Common.BarcodeScan') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
       <v-divider />
