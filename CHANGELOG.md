@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.95.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.95.1...v1.95.2) (2024-11-27)
+
+
+### Bug Fixes
+
+* **Contribution assistant:** fix bug when selecting an image. ref [#1043](https://github.com/openfoodfacts/open-prices-frontend/issues/1043) ([4ae7a71](https://github.com/openfoodfacts/open-prices-frontend/commit/4ae7a71656e1f78595395853882c3682839bb24d))
+* **l10n:** fix typo ([b5af21d](https://github.com/openfoodfacts/open-prices-frontend/commit/b5af21d8c465b170cc3a21169cb292204bdecdd9))
+* **Proofs:** fix multiple upload workflow. ref [#983](https://github.com/openfoodfacts/open-prices-frontend/issues/983) ([d9ab916](https://github.com/openfoodfacts/open-prices-frontend/commit/d9ab916fc86ae2db9521caa74cb90067b067af62))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1054](https://github.com/openfoodfacts/open-prices-frontend/issues/1054)) ([21b7175](https://github.com/openfoodfacts/open-prices-frontend/commit/21b717589f3a7a67f2eb663d272c8ed12a638cdf))
+
 ## [1.95.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.95.0...v1.95.1) (2024-11-26)
 
 
