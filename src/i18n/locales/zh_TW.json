@@ -1,32 +1,32 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
-		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
+		"WhyTitle": "為什麼 {op_name}？",
+		"WhyAnswer1": "{op_name} 是一個蒐集和分享世界各地產品價格的計畫。這是公開的資料庫，任何人都可以用來進行研究、分析等等。{op_name} 由{off_url} 開發並維護。",
 		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
+		"HowTitle": "{op_name} 是怎麼運作的？",
 		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
 		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
 		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
 		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
-		"LicenseTitle": "License",
+		"LicenseTitle": "授權",
 		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
-		"WhatTitle": "What is {op_name}?",
-		"WhatOFFTitle": "What is {off_name}?",
+		"WhatTitle": "{op_name} 是什麼？",
+		"WhatOFFTitle": "{off_name} 是什麼？",
 		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
-		"WhyOFFTitle": "Why is {off_name} doing this?",
+		"WhyOFFTitle": "為什麼{off_name} 要這麼做？",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
+		"HowContribute": "我可以怎麼做出貢獻？",
 		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
-		"HowUseData": "How can I use the data?",
+		"HowUseData": "我可以怎麼使用這些資料？",
 		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
+		"HowUseDataAnswer2": "{op_api_url} 讓你可以輕鬆存取資料。",
 		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
-		"HowContact": "How can I get in touch?",
-		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
-		"HowSupport": "How can I support {op_name}?",
-		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
-		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
+		"HowContact": "我可以怎麼取得聯繫？",
+		"HowContactAnswer": "你可以將電子郵件寄至{off_contact_email_url} 與我們聯繫。",
+		"HowSupport": "我可以怎麼支持{op_name}？",
+		"HowSupportAnswer": "你可以做出貢獻來支持{op_name}，像是和你的親朋好友分享這項計畫，或是捐款給{off_url}。",
+		"WhyOSM": "為什麼我在新增價格時需要提供{osm_name} ID？",
 		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
 		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
 		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
@@ -37,55 +37,55 @@
 	"AddPriceHome": {
 		"MultipleProductMode": {
 			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Title": "多種產品"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "價格已建立！",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "一種或多種產品",
+			"Title": "收據"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "已登入！",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "只有一個價格標籤",
+			"Title": "單件產品"
 		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
+		"Thanks": "謝謝",
+		"Title": "新增價格",
 		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleMultiple": "批量添加多個價格"
 	},
 	"AddPriceMultiple": {
 		"Done": "已完成",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "增加新的價格",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 價格已上傳 {priceAlreadyUploadedNumber} 價格已上傳",
 			"Create": "Create",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"NewPrice": "新價格",
+			"PriceUploaded": "價格已建立！",
+			"Upload": "上傳"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
+			"ReceiptWarning": "收據可能包含個人訊息，我們建議在拍照前將其妥善遮掩(刪減、折疊⋯⋯)。",
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
 			"Title": "Proof details"
 		},
-		"Title": "Add multiple prices"
+		"Title": "新增多個價格"
 	},
 	"AddPriceSingle": {
 		"Create": "Create",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
+			"Discount": "有折扣嗎？",
+			"Label": "價格",
+			"LabelDiscounted": "折扣價",
+			"LabelFull": "原價",
 			"Proof": "Proof",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"Picture": "圖片",
 			"TakePicture": "選一張圖",
 			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery",
@@ -95,13 +95,13 @@
 		"ProductInfo": {
 			"CategoryLabel": "分類 ",
 			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "產品條碼",
 			"Scan": "掃描",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "掃描條碼",
 			"Type": "Tipo",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "輸入條碼",
 			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"Title": "產品資訊"
 		},
 		"ProductModeList": {
 			"Barcode": "條碼 ",
@@ -113,8 +113,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "日期",
+			"DateLabel": "日期",
 			"Find": "尋找",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -125,12 +125,12 @@
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "掃描條碼"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "條碼 ",
 		"Submit": "送出",
-		"Title": "Type a barcode"
+		"Title": "輸入條碼"
 	},
 	"BrandDetail": {
 		"LoadMore": "載入更多",
@@ -144,14 +144,14 @@
 	},
 	"Common": {
 		"About": "關於",
-		"AddPrice": "Add a price",
+		"AddPrice": "新增價格",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "條碼 ",
 		"Barcodes": "Barcodes",
 		"BarcodeInvalid": "條碼無效",
 		"Brand": "品牌",
-		"Price": "Price",
+		"Price": "價格",
 		"Prices": "Prices",
 		"Product": "產品",
 		"Products": "產品",
@@ -183,7 +183,7 @@
 		"Location": "Location",
 		"Locations": "Locations",
 		"LocationMissing": "Location missing",
-		"Date": "Date",
+		"Date": "日期",
 		"DateMissing": "Date missing",
 		"Details": "Details",
 		"Delete": "刪除",
@@ -222,7 +222,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "價格",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -233,11 +233,11 @@
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
 		"PriceCount": "{count} prices",
-		"PriceCreated": "Price created!",
+		"PriceCreated": "價格已建立！",
 		"PricesMore": "More prices",
 		"ProductCount": "{count} products",
 		"ProofCount": "{count} proofs",
-		"Receipt": "Receipt",
+		"Receipt": "收據",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -245,7 +245,7 @@
 		"Search": "搜尋",
 		"Settings": "設定",
 		"SignInOFFAccount": "Sign in with your {url} account",
-		"SignedIn": "Signed in!",
+		"SignedIn": "已登入！",
 		"SignIn": "登入",
 		"SignOut": "登出",
 		"SideMenu": "Side menu",
@@ -257,7 +257,7 @@
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
-		"Thanks": "Thanks",
+		"Thanks": "謝謝",
 		"Theme": "主題",
 		"ThemeLight": "淺色",
 		"ThemeDark": "深色",
@@ -268,7 +268,7 @@
 		"Top": "Top",
 		"Total": "Total",
 		"Type": "Tipo",
-		"Upload": "Upload",
+		"Upload": "上傳",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
@@ -309,7 +309,7 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "新增價格",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
 		"SearchProduct": "Search for a product",
@@ -354,7 +354,7 @@
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Proof",
-		"FullPrice": "Full price",
+		"FullPrice": "原價",
 		"UnknownProduct": "Unknown product"
 	},
 	"PriceCountChip": {
@@ -372,10 +372,10 @@
 		"Title": "Edit a price"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
-		"LabelFull": "Full price"
+		"Discount": "有折扣嗎？",
+		"Label": "價格",
+		"LabelDiscounted": "折扣價",
+		"LabelFull": "原價"
 	},
 	"PriceList": {
 		"LoadMore": "載入更多",
@@ -413,7 +413,7 @@
 		"UnknownProduct": "未知產品名稱"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "新增價格",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "載入更多",
@@ -430,7 +430,7 @@
 	"ProofCard": {
 		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"RECEIPT": "收據",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
@@ -467,13 +467,13 @@
 			"Title": "關於"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "新增價格"
 		},
 		"AddPriceSingle": {
 			"Title": "Add a single price"
 		},
 		"AddPriceMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "新增多個價格"
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
@@ -528,7 +528,7 @@
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "產品條碼",
 		"Title": "搜尋"
 	},
 	"ShareButton": {
