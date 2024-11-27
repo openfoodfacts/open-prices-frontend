@@ -123,6 +123,7 @@ export default {
       this.handleProofSelectedList(newProofImageList)
     },
     proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
+      // TODO: update to proofList?
       this.$emit('proof', newProofObjectList[0])
     }
   },

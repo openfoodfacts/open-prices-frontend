@@ -77,7 +77,8 @@ export default {
     formData.append('type', data.type)
     if (data.location_id) {
       formData.append('location_id', data.location_id ? data.location_id : '')
-    } else {
+    }
+    if (data.location_osm_id && data.location_osm_type) {
       formData.append('location_osm_id', data.location_osm_id ? data.location_osm_id : '')
       formData.append('location_osm_type', data.location_osm_type ? data.location_osm_type : '')
     }
