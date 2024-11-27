@@ -6,11 +6,11 @@
 		"HowTitle": "{op_name} 是怎麼運作的？",
 		"HowAnswer1": "我們正在通過群眾外包的方式建立一個開源的價格資料庫。用戶可以通過此網頁或官方 {off_url} 應用程式添加價格。零售商或第三方應用程式也可以透過我們的 {op_api_url} 進行貢獻。",
 		"HowAnswer2": "{op_name} 的目標不僅是紀錄單個產品的價格，還包括購物車資料，也就是人們在單次購物中的產品清單。這些資料對研究人員分析食品消費習慣來說具有極大的研究價值。",
-		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
-		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
+		"HowAnswer3": "在可能的情況下，我們會要求貢獻者提供價格的證明，例如價格標籤或收據照片。這樣做是為了確保資料的品質。",
+		"HowAnswer4": "如果您提供收據作為證明圖片，則表示您同意將您的購物資訊提供給 {op_name}。我們會對收據進行匿名處理，並將其公開以用於研究目的。如果您不希望公開分享收據，仍然可以通過拍攝價格標籤的照片來進行貢獻。",
 		"LicenseTitle": "授權",
-		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
+		"LicenseAnswer1": "價格資料庫由{odbl_url} 授權，您可以將其用於任何目的，只需註明 {op_name} 並分享您對資料庫所做的任何修改即可。",
+		"LicenseAnswer2": "作為證明的圖像由{ccbysa_url} 授權。",
 		"WhatTitle": "{op_name} 是什麼？",
 		"WhatOFFTitle": "{off_name} 是什麼？",
 		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
@@ -100,7 +100,7 @@
 			"ScanBarcode": "掃描條碼",
 			"Type": "Tipo",
 			"TypeBarcode": "輸入條碼",
-			"SetProduct": "Set a product",
+			"SetProduct": "設置產品",
 			"Title": "產品資訊"
 		},
 		"ProductModeList": {
@@ -117,13 +117,13 @@
 			"DateLabel": "日期",
 			"Find": "尋找",
 			"Location": "店鋪位置",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"SelectLocation": "選擇您的所在地",
+			"Title": "地點和時間？"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "由{url} 技術支持"
 		},
 		"Scan": "掃描條碼"
 	},
@@ -135,20 +135,20 @@
 	"BrandDetail": {
 		"LoadMore": "載入更多",
 		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} products"
+		"BrandProductTotal": "{count} 個產品"
 	},
 	"CategoryDetail": {
 		"LoadMore": "載入更多",
 		"TopProducts": "Top products",
-		"CategoryProductTotal": "{count} products"
+		"CategoryProductTotal": "{count} 個產品"
 	},
 	"Common": {
 		"About": "關於",
 		"AddPrice": "新增價格",
-		"AddToOFF": "Add to {name}",
-		"AdditionalInfo": "Additional information",
+		"AddToOFF": "添加到 {name}",
+		"AdditionalInfo": "附加資訊",
 		"Barcode": "條碼 ",
-		"Barcodes": "Barcodes",
+		"Barcodes": "條碼",
 		"BarcodeInvalid": "條碼無效",
 		"Brand": "品牌",
 		"Price": "價格",
@@ -156,68 +156,68 @@
 		"Product": "產品",
 		"Products": "產品",
 		"Proof": "證明",
-		"Proofs": "Proofs",
+		"Proofs": "證明",
 		"Category": "分類 ",
 		"Categories": "種類",
-		"Chart": "Chart",
+		"Chart": "圖表",
 		"Contributors": "合作者",
 		"Country": "地區",
 		"Currency": "Currency",
-		"CurrencyMissing": "Currency missing",
-		"Dashboard": "Dashboard",
+		"CurrencyMissing": "貨幣不明",
+		"Dashboard": "儀表板",
 		"Display": "Display",
-		"DisplayList": "List",
-		"DisplayPriceList": "List",
+		"DisplayList": "清單",
+		"DisplayPriceList": "清單",
 		"DisplayMap": "地圖",
 		"DisplayPriceMap": "地圖",
-		"DisplayPriceChart": "Chart",
+		"DisplayPriceChart": "圖表",
 		"Done": "已完成",
 		"Experiments": "Experiments",
 		"Label": "標籤 ",
 		"Labels": "標籤",
 		"Language": "語言",
 		"Languages": "語言",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新價格",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "載入更多",
-		"Location": "Location",
+		"Location": "位置",
 		"Locations": "Locations",
-		"LocationMissing": "Location missing",
+		"LocationMissing": "位置不明",
 		"Date": "日期",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateMissing": "日期不明",
+		"Details": "詳細資訊",
 		"Delete": "刪除",
-		"DeveloperMode": "Developer mode",
-		"Discount": "Discount",
-		"Example": "Example",
-		"Examples": "Examples",
+		"DeveloperMode": "開發者模式",
+		"Discount": "折扣",
+		"Example": "範例",
+		"Examples": "範例",
 		"ExampleWithColon": "範例：",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "例： {value}",
 		"ExamplesWithColon": "範例：",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "例： {value}",
 		"Edit": "編輯 ",
 		"Filter": "篩選器",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
-		"FilterProductWithoutPriceCount": "Without prices",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
-		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterLocationWithPriceCountHide": "Hide locations with prices",
-		"FilterUserWithPriceCountHide": "Hide contributors with prices",
+		"FilterProductWithoutPriceCount": "沒有價格",
+		"FilterPriceMoreThan30DaysHide": "隱藏 30 天前的價格",
+		"FilterProofWithPriceCountHide": "隱藏價格證明",
+		"FilterLocationWithPriceCountHide": "隱藏帶有價格的地點",
+		"FilterUserWithPriceCountHide": "隱藏提供價格的貢獻者",
 		"FAQ": "常見問題",
 		"FrequentlyAskedQuestions": "常見問答集",
-		"Help": "Help",
+		"Help": "幫助",
 		"History": "歷史紀錄",
 		"Image": "圖片",
-		"Images": "Images",
+		"Images": "圖片",
 		"ImageFull": "Full-size image",
-		"Latest": "Latest",
+		"Latest": "最新上傳",
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations",
 		"Map": "地圖",
-		"Offline": "Offline",
-		"Online": "Online",
-		"Order": "Order",
+		"Offline": "離線",
+		"Online": "在線",
+		"Order": "順序",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -232,10 +232,10 @@
 		"OrderUserCountDESC": "User count",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
-		"PriceCount": "{count} prices",
+		"PriceCount": "{count} 價格",
 		"PriceCreated": "價格已建立！",
 		"PricesMore": "More prices",
-		"ProductCount": "{count} products",
+		"ProductCount": "{count} 個產品",
 		"ProofCount": "{count} proofs",
 		"Receipt": "收據",
 		"Receipts": "Receipts",
@@ -252,7 +252,7 @@
 		"Share": "分享",
 		"Source": "Source",
 		"SourceCode": "Source code",
-		"Stats": "Stats",
+		"Stats": "統計數據",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -264,65 +264,65 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
-		"Today": "Today",
+		"Today": "今天",
 		"Top": "Top",
 		"Total": "Total",
 		"Type": "Tipo",
 		"Upload": "上傳",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
-		"URL": "URL",
-		"URLInvalid": "Invalid URL",
+		"URL": "網址",
+		"URLInvalid": "無效網址",
 		"User": "使用者",
 		"Users": "Users",
-		"UserCount": "{count} users",
+		"UserCount": "{count} 個用戶",
 		"View": "查看 ",
 		"Website": "Website",
 		"Yes": "是 ",
 		"No": "否 ",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Food": "食物",
+		"PetFood": "寵物食品",
+		"Beauty": "美妝"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
 		"Currency": "Currency",
-		"AddCurrencies": "Add currencies in Settings",
+		"AddCurrencies": "在設定中新增貨幣",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"Select": "選擇 {currency_code}"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "選擇您最近的一個證明"
 	},
 	"Footer": {
 		"About": "關於",
-		"Stats": "Stats",
-		"TagLine": "{name} is an {url} project."
+		"Stats": "統計數據",
+		"TagLine": "{name} 是一個{url} 計畫。"
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "儀表板",
 		"Settings": "設定",
 		"SignIn": "登入",
 		"SignOut": "登出"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "淺色模式",
+		"DarkMode": "深色模式"
 	},
 	"Home": {
 		"AddPrice": "新增價格",
-		"LatestPrices": "Latest prices",
-		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
-		"SettingsUpdated": "Settings updated!",
+		"LatestPrices": "最新價格",
+		"ProofAdd": "添加證明",
+		"SearchProduct": "搜尋產品",
+		"SettingsUpdated": "已更新設定！",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
 			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "歡迎來到{name}！"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新價格",
 		"LoadMore": "載入更多",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
@@ -335,7 +335,7 @@
 		"Clear": "清除",
 		"NoResult": "No results found",
 		"PoweredBy": {
-			"text": "powered by {url}"
+			"text": "由{url} 技術支持"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
@@ -345,31 +345,31 @@
 	},
 	"NotFound": {
 		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Title": "找不到項目"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
-		"PriceValueDisplayKilogram": "{0} / kg",
-		"PriceValueDisplayLitre": "{0} / L",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"Discount": "折扣",
+		"PriceDate": "於 {date}",
+		"PriceValueDisplayKilogram": "{0} / 公斤",
+		"PriceValueDisplayLitre": "{0} / 公升",
+		"PriceValueDisplayUnit": "{0} / 單位",
 		"Proof": "證明",
 		"FullPrice": "原價",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "不明產品"
 	},
 	"PriceCountChip": {
-		"PriceCount": "{count} prices"
+		"PriceCount": "{count} 價格"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "確定要刪除這個價格嗎？",
 		"Delete": "刪除",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "已刪除價格！",
+		"Title": "刪除價格"
 	},
 	"PriceEdit": {
 		"Save": "儲存",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "已編輯價格！",
+		"Title": "編輯價格"
 	},
 	"PriceForm": {
 		"Discount": "有折扣嗎？",
@@ -379,35 +379,35 @@
 	},
 	"PriceList": {
 		"LoadMore": "載入更多",
-		"Title": "Latest prices"
+		"Title": "最新價格"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"AmountRequired": "價格為必填欄位",
+		"NoSpaces": "請不要使用空格",
+		"Number": "輸入一個數字",
+		"Positive": "價格不能為負數",
+		"TwoDecimals": "只能到小數點第二位"
 	},
 	"ProductCard": {
 		"Brands": "品牌 ",
 		"BrandLower": "品牌 ",
-		"BrandMissing": "Brand missing",
+		"BrandMissing": "品牌不明",
 		"BrandTotal": "{count} brands",
 		"Categories": "種類",
 		"CategoriesLower": "類別",
-		"CategoriesMissing": "Category missing",
+		"CategoriesMissing": "類別不明",
 		"CategoryTotal": "{count} categories",
 		"Labels": "標籤",
 		"LabelsLower": "標籤",
 		"LabelTotal": "{count} labels",
-		"LatestPrice": "Latest price",
+		"LatestPrice": "最新價格",
 		"InvalidBarcode": "條碼無效",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
-		"ProductQuantityGram": "{0} g",
-		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityLitre": "{0} L",
-		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityGram": "{0} 公克",
+		"ProductQuantityKilogram": "{0} 公斤",
+		"ProductQuantityLitre": "{0} 公升",
+		"ProductQuantityMililitre": "{0} 毫升",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "未知產品名稱"
@@ -415,7 +415,7 @@
 	"ProductDetail": {
 		"AddPrice": "新增價格",
 		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新價格",
 		"LoadMore": "載入更多",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
@@ -425,7 +425,7 @@
 		"PriceNumber": "Number of prices added",
 		"ScanNumber": "Number of scans added",
 		"Title": "Top products",
-		"ProductTotal": "{count} products"
+		"ProductTotal": "{count} 個產品"
 	},
 	"ProofCard": {
 		"Proof": "證明",
@@ -488,10 +488,10 @@
 			"Title": "首頁"
 		},
 		"Dashboard": {
-			"Title": "Dashboard"
+			"Title": "儀表板"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "最新價格"
 		},
 		"MyPrices": {
 			"Title": "My prices"
@@ -512,7 +512,7 @@
 			"Title": "登入"
 		},
 		"Stats": {
-			"Title": "Stats"
+			"Title": "統計數據"
 		},
 		"TopContributors": {
 			"Title": "Top contributors"
@@ -550,7 +550,7 @@
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"Title": "統計數據",
 		"Products": "產品",
 		"Locations": "Locations",
 		"Users": "Users",
@@ -565,7 +565,7 @@
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新價格",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "載入更多",
 		"MyDashboard": "My dashboard",
@@ -573,12 +573,12 @@
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "設定",
-		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
+		"Title": "儀表板",
+		"UserPriceTotal": "{count} 價格",
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "最新價格",
 		"LoadMore": "載入更多"
 	},
 	"UserList": {
