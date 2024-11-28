@@ -15,28 +15,28 @@
 		"WhatOFFTitle": "{off_name} 是什麼？",
 		"WhatOFFAnswer": "{off_url} 為非營利組織，致力於收集並分享世界各地的食品資訊。這項協作計畫主要由志工收集資料。{off_url} 是全世界最大的開源食品資料庫，涵蓋超過 300 萬種產品，並遍及 200 個國家。",
 		"WhyOFFTitle": "為什麼{off_name} 要這麼做？",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
+		"WhyOFFAnswer": "價格資訊對於理解糧食系統十分重要。它是理解食品成本及促進健康飲食的關鍵因素。開放的價格資料能幫助研究人員、記者和公民更加理解食品價格在不同地理位置和時間上的變化。",
 		"HowContribute": "我可以怎麼做出貢獻？",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
+		"HowContributeAnswer": "您可以通過在資料庫中添加價格來進行貢獻。您可以使用網頁或官方應用程式進行操作。如果您希望將 {op_name} 整合到您的應用程式中，也可以使用 {op_api_url}。在進行貢獻前，您需要擁有一個 {off_url} 帳戶。",
 		"HowUseData": "我可以怎麼使用這些資料？",
-		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
+		"HowUseDataAnswer1": "資料在 {odbl_url} 下可以使用，您可以將其用於任何目的，只需註明 {op_name} 並分享您對資料庫所做的任何修改即可。",
 		"HowUseDataAnswer2": "{op_api_url} 讓你可以輕鬆存取資料。",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
+		"HowUseDataAnswer3": "資料也能以 3 個壓縮的 JSONL 文件下載：{op_dumb_prices_url}、{op_dumb_proofs_url} 和 {op_dumb_locations_url}。",
 		"HowContact": "我可以怎麼取得聯繫？",
 		"HowContactAnswer": "你可以將電子郵件寄至{off_contact_email_url} 與我們聯繫。",
 		"HowSupport": "我可以怎麼支持{op_name}？",
 		"HowSupportAnswer": "你可以做出貢獻來支持{op_name}，像是和你的親朋好友分享這項計畫，或是捐款給{off_url}。",
 		"WhyOSM": "為什麼我在新增價格時需要提供{osm_name} ID？",
-		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
-		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
-		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
-		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
-		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
-		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
+		"WhyOSMAnswer": "我們要求提供一個 {osm_url} ID，以便將價格與特定商店連結，方便在地圖上顯示價格，並分析地區或零售商之間的價格差異。",
+		"HowRetailer": "我是零售商，想要提供價格。我該怎麼做？",
+		"HowRetailerAnswer": "您可以使用我們的 {op_api_url} 來提供價格。如果您希望提供大量價格，請透過 {off_contact_email_url} 與我們聯繫。",
+		"WhyNoScraping": "你們有考慮從零售商的網站抓取價格嗎？",
+		"WhyNoScrapingAnswer1": "由於法律及技術原因，我們不認為從零售商網站抓取價格是貢獻 {op_name} 的有效方式。我們希望確保收集的價格是準確且最新的，而從貢獻者那裡抓取的價格無法達到這一點。",
+		"WhyNoScrapingAnswer2": "價格抓取是 {op_name} 未來版本中考慮的一種方式，但這將由 {op_name} 本身進行，以便我們可以獲得HTML 頁面上的價格證明。"
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
+			"Subtitle": "擁有多個價格標籤的貨架",
 			"Title": "多種產品"
 		},
 		"PriceCreated": "價格已建立！",
@@ -60,14 +60,14 @@
 			"Add": "增加新的價格",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 價格已上傳 {priceAlreadyUploadedNumber} 價格已上傳",
 			"Create": "Create",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
+			"ExistingProductFound": "重複？此產品已經在此證明中添加過了",
 			"NewPrice": "新價格",
 			"PriceUploaded": "價格已建立！",
 			"Upload": "上傳"
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "收據可能包含個人訊息，我們建議在拍照前將其妥善遮掩(刪減、折疊⋯⋯)。",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"PrivateWarning": "您也可以將收據設定為不公開。不公開證明只有您和版主可檢視。",
 			"Title": "證明細節"
 		},
 		"Title": "新增多個價格"
@@ -176,7 +176,7 @@
 		"DisplayPriceMap": "地圖",
 		"DisplayPriceChart": "圖表",
 		"Done": "已完成",
-		"Experiments": "Experiments",
+		"Experiments": "實驗",
 		"Label": "標籤 ",
 		"Labels": "標籤",
 		"Language": "語言",
@@ -341,14 +341,14 @@
 		"PoweredBy": {
 			"text": "由{url} 技術支持"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"RecentLocations": "沒有最近的地點 |最近地點 {recentLocationNumber}|最近地點 {recentLocationNumber}",
+		"Result": "結果 {resultNumber} |結果 {resultNumber}",
+		"SearchByName": "依名稱和城市搜尋您的商店",
+		"Title": "找到您的商店位置",
+		"Warning": "搜尋商店的引擎目前還不是很準確。{newline}歡迎添加街道名稱以縮小搜尋範圍。{newline}範例：Carrefour City 15e Paris ; Sainsbury's Camden London"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
+		"Subtitle": "您想造訪的頁面似乎不存在⋯⋯",
 		"Title": "找不到項目"
 	},
 	"PriceCard": {
@@ -436,35 +436,35 @@
 		"PRICE_TAG": "價格標籤",
 		"RECEIPT": "收據",
 		"GDPR_REQUEST": "GDPR 要求",
-		"SHOP_IMPORT": "Shop import"
+		"SHOP_IMPORT": "商家導入"
 	},
 	"ProofCreate": {
 		"SelectProof": "Select a proof",
 		"ProofSelected": "已選擇證明！",
-		"Success": "Proof created!"
+		"Success": "已建立證明！"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "您確定要刪除此證明？",
 		"Delete": "刪除",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "刪除證明",
+		"Success": "已刪除證明！"
 	},
 	"ProofDetail": {
 		"LoadMore": "載入更多",
 		"Prices": "價格",
-		"ProofNotFound": "Proof not found (or not the owner)",
-		"Public": "Public",
-		"Private": "Private",
+		"ProofNotFound": "找不到證明(或不是擁有者)",
+		"Public": "公開",
+		"Private": "不公開",
 		"Privacy": "Privacy"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
+		"Title": "編輯證明",
 		"Save": "儲存",
-		"Success": "Proof edited!"
+		"Success": "已編輯證明！"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "你的重複使用資訊遺失了嗎？告訴我們 {url}！",
+		"Here": "這裡"
 	},
 	"Router": {
 		"About": {
@@ -480,13 +480,13 @@
 			"Title": "新增多個價格"
 		},
 		"AddProofSingle": {
-			"Title": "Add a single proof"
+			"Title": "新增單一證明"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "新增多個證明"
 		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "實驗"
 		},
 		"Home": {
 			"Title": "首頁"
