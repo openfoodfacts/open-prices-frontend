@@ -30,6 +30,8 @@ PARENT_CATEGORIES_ID = [
     "en:dried-mushrooms",  # 7
     "en:textured-vegetable-protein",  # 2
     "en:squash-pulp",
+    "en:seeds",  # include all seeds, rice, quinoa, maize, etc.
+    "en:popcorn",
 ]
 
 EXTRA_CHILDREN = [
@@ -55,6 +57,11 @@ EXCLUDE_LIST_NODE_IDS = [
     "en:vegetables-from-italy",
     "en:nut-macarons",
     "en:red-kuri-pulp",
+    "en:cereal-grains",
+    "en:cucurbitacea-seeds",
+    "en:quinoa-fr-raw",
+    "en:shelled-seeds",
+    "en:shelf-stable-popcorn",
 ]
 
 script_path = os.path.dirname(os.path.abspath(__file__))
@@ -209,11 +216,11 @@ if __name__ == "__main__":
     # - remove nodes in EXCLUDE_LIST_NODE_IDS
     # - remove nodes containing some strings in EXCLUDE_LIST
     categories_filtered = [
-        node
-        for node in categories_filtered
-        if node.id.startswith("en:")
+        node for node in categories_filtered if node.id.startswith("en:")
     ]
-    categories_filtered = [node for node in categories_filtered if node.id not in EXCLUDE_LIST_NODE_IDS]
+    categories_filtered = [
+        node for node in categories_filtered if node.id not in EXCLUDE_LIST_NODE_IDS
+    ]
     categories_filtered = filter_node_list_by_exclude_string_list(
         categories_filtered, EXCLUDE_LIST
     )
