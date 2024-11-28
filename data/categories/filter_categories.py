@@ -32,6 +32,9 @@ PARENT_CATEGORIES_ID = [
     "en:squash-pulp",
     "en:seeds",  # include all seeds, rice, quinoa, maize, etc.
     "en:popcorn",
+    "en:meats",
+    "en:fishes",
+    "en:eggs",
 ]
 
 EXTRA_CHILDREN = [
