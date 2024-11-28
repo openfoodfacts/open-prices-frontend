@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.95.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.95.2...v1.95.3) (2024-11-28)
+
+
+### Bug Fixes
+
+* add new categories ([#1059](https://github.com/openfoodfacts/open-prices-frontend/issues/1059)) ([f1fb7b4](https://github.com/openfoodfacts/open-prices-frontend/commit/f1fb7b4ed71cc1277f31b034ba9d9613fc8d83e5))
+* add new categories ([#1061](https://github.com/openfoodfacts/open-prices-frontend/issues/1061)) ([3bc3028](https://github.com/openfoodfacts/open-prices-frontend/commit/3bc30288b147e6472f0e521bd0926e389a288512))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1058](https://github.com/openfoodfacts/open-prices-frontend/issues/1058)) ([ca7b4a8](https://github.com/openfoodfacts/open-prices-frontend/commit/ca7b4a842f6e992e1bd84664be62bbe2a615eae8))
+
 ## [1.95.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.95.1...v1.95.2) (2024-11-27)
 
 
