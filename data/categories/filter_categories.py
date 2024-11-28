@@ -5,6 +5,7 @@ https://wiki.openfoodfacts.org/Global_categories_taxonomy
 import json
 import os
 import re
+from typing import Any
 
 from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
 
@@ -35,6 +36,10 @@ PARENT_CATEGORIES_ID = [
     "en:meats",
     "en:fishes",
     "en:eggs",
+    "en:sausages",
+    "en:cordons-bleus",
+    "fr:merguez",
+    "fr:boudins",
 ]
 
 EXTRA_CHILDREN = [
@@ -48,6 +53,12 @@ EXTRA_CHILDREN = [
     "en:sprouts",
     "en:acar",
     "en:gherkins",
+    "en:popcorn",
+    "en:eggs",
+    "en:sausages",
+    "en:cordons-bleus",
+    "fr:merguez",
+    "fr:boudins",
 ]
 
 EXCLUDE_LIST = ["Cooked", "Fresh", "Frozen", "Canned", "Prepacked"]
@@ -124,19 +135,29 @@ def filter_node_list_by_exclude_string_list(
     ]
 
 
-def write_categories_to_files(categories: Taxonomy, delete_parents=False):
+def write_categories_to_files(
+    categories: list[dict[str, Any]], delete_parents: bool = False
+):
     languages = get_languages()
     for language in languages:
         language_code = language["code"]
         # for each category, get translation (or default to en)
-        language_categories = [
-            {
-                "id": category["id"],
-                "name": category["name"].get(language_code, category["name"]["en"]),
-                "parents": category.get("parents"),
-            }
-            for category in categories
-        ]
+        # In case the language translation (or the english fallback)
+        # is not available, the category is not included in the output
+        language_categories = []
+        for category in categories:
+            name = category["name"].get(language_code)
+            if name is None:
+                name = category["name"].get("en")
+
+            if name is not None:
+                language_categories.append(
+                    {
+                        "id": category["id"],
+                        "name": name,
+                        "parents": category.get("parents"),
+                    }
+                )
         # handle parents key
         for i, category in enumerate(language_categories):
             if not category["parents"] or delete_parents:
@@ -214,13 +235,12 @@ if __name__ == "__main__":
     categories_filtered.extend(
         get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, EXTRA_CHILDREN)
     )
-    # Step 2c: exlude
-    # - keep only nodes starting with "en:"
+    # Step 2c: exclude
     # - remove nodes in EXCLUDE_LIST_NODE_IDS
     # - remove nodes containing some strings in EXCLUDE_LIST
-    categories_filtered = [
-        node for node in categories_filtered if node.id.startswith("en:")
-    ]
+
+    # We don't filter anymore node IDs that don't start with "en:", as some
+    # categories don't have translations in English (e.g. "fr:merguez")
     categories_filtered = [
         node for node in categories_filtered if node.id not in EXCLUDE_LIST_NODE_IDS
     ]
