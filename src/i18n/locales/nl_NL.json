@@ -165,6 +165,7 @@
 		"Categories": "Categorieën",
 		"Chart": "Grafiek",
 		"Contributors": "Medewerkers",
+		"Community": "Community",
 		"Country": "Land",
 		"Currency": "Valuta",
 		"CurrencyMissing": "Valuta ontbreekt",
@@ -246,6 +247,8 @@
 		"ReceiptPriceCount": "Aantal prijzen",
 		"ReceiptPriceTotal": "Totaalbedrag",
 		"Recent": "Recent",
+		"Reuses": "Hergebruik",
+		"ReusesKnown": "Known reuses",
 		"Search": "Zoeken",
 		"Settings": "Instellingen",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
@@ -286,6 +289,10 @@
 		"Food": "Voedsel",
 		"PetFood": "Dierenvoeding",
 		"Beauty": "Schoonheidsindustrie"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Kies een van je favoriete valuta's",
@@ -484,6 +491,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Meerdere bewijzen toevoegen"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "Experimenten"
