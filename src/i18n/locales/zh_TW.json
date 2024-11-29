@@ -165,6 +165,7 @@
 		"Categories": "種類",
 		"Chart": "圖表",
 		"Contributors": "合作者",
+		"Community": "Community",
 		"Country": "地區",
 		"Currency": "幣別",
 		"CurrencyMissing": "缺少貨幣",
@@ -246,6 +247,8 @@
 		"ReceiptPriceCount": "價格數量",
 		"ReceiptPriceTotal": "總金額",
 		"Recent": "最近的",
+		"Reuses": "重複使用",
+		"ReusesKnown": "Known reuses",
 		"Search": "搜尋",
 		"Settings": "設定",
 		"SignInOFFAccount": "使用您的 {url} 帳號登入",
@@ -286,6 +289,10 @@
 		"Food": "食物",
 		"PetFood": "寵物食品",
 		"Beauty": "美妝"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "選擇您最喜歡的貨幣",
@@ -484,6 +491,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "新增多個證明"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "實驗"
