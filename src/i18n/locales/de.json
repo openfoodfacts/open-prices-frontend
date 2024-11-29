@@ -165,7 +165,7 @@
 		"Categories": "Kategorien",
 		"Chart": "Diagramm",
 		"Contributors": "Mitwirkende",
-		"Community": "Community",
+		"Community": "Gemeinschaft",
 		"Country": "Land",
 		"Currency": "Währung",
 		"CurrencyMissing": "Währung fehlt",
@@ -248,7 +248,7 @@
 		"ReceiptPriceTotal": "Gesamtbetrag",
 		"Recent": "Neueste",
 		"Reuses": "Wiederverwendung",
-		"ReusesKnown": "Known reuses",
+		"ReusesKnown": "Bekannte Wiederverwendungen",
 		"Search": "Suchen",
 		"Settings": "Einstellungen",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
@@ -291,8 +291,8 @@
 		"Beauty": "Schönheitspflege"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Machen Sie mit!",
+		"HowToUseTheData": "Daten verwenden"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Wählen Sie Ihre bevorzugte Währung",
@@ -493,7 +493,7 @@
 			"Title": "Mehrere Nachweise hinzufügen"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Gemeinschaft"
 		},
 		"Experiments": {
 			"Title": "Experimente"
