@@ -165,6 +165,7 @@
 		"Categories": "Категорії",
 		"Chart": "Графік",
 		"Contributors": "Співучасники",
+		"Community": "Community",
 		"Country": "Країна",
 		"Currency": "Валюта",
 		"CurrencyMissing": "Відсутня валюта",
@@ -246,6 +247,8 @@
 		"ReceiptPriceCount": "Кількість цін",
 		"ReceiptPriceTotal": "Всього",
 		"Recent": "Недавні",
+		"Reuses": "Повторне використання",
+		"ReusesKnown": "Known reuses",
 		"Search": "Пошук",
 		"Settings": "Налаштування",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
@@ -286,6 +289,10 @@
 		"Food": "Їжа",
 		"PetFood": "Корм для домашніх тварин",
 		"Beauty": "Краса"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Оберіть одну з ваших улюблених валют",
@@ -484,6 +491,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Додайте кілька доказів"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "Експерименти"
