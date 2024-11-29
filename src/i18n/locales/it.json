@@ -165,6 +165,7 @@
 		"Categories": "Categorie",
 		"Chart": "Grafico",
 		"Contributors": "Contributori",
+		"Community": "Community",
 		"Country": "Paese",
 		"Currency": "Moneta",
 		"CurrencyMissing": "Valuta mancante",
@@ -246,6 +247,8 @@
 		"ReceiptPriceCount": "Numero di prezzi",
 		"ReceiptPriceTotal": "Importo totale",
 		"Recent": "Recenti",
+		"Reuses": "Reuses",
+		"ReusesKnown": "Known reuses",
 		"Search": "Cerca",
 		"Settings": "Impostazioni",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
@@ -286,6 +289,10 @@
 		"Food": "Cibo",
 		"PetFood": "Cibo per animali domestici",
 		"Beauty": "Bellezza"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Scegli una delle tue valute preferite",
@@ -484,6 +491,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "Experiments"
