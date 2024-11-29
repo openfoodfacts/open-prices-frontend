@@ -281,6 +281,7 @@ export default {
           delete priceData.price_per
           delete priceData.category_tag
           delete priceData.origins_tags
+          delete priceData.labels_tags
         } else if (productPriceForm.mode == 'category') {
           delete priceData.product_code
           delete priceData.product
