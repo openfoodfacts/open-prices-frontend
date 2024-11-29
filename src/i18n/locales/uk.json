@@ -165,7 +165,7 @@
 		"Categories": "Категорії",
 		"Chart": "Графік",
 		"Contributors": "Співучасники",
-		"Community": "Community",
+		"Community": "Спільнота",
 		"Country": "Країна",
 		"Currency": "Валюта",
 		"CurrencyMissing": "Відсутня валюта",
@@ -248,7 +248,7 @@
 		"ReceiptPriceTotal": "Всього",
 		"Recent": "Недавні",
 		"Reuses": "Повторне використання",
-		"ReusesKnown": "Known reuses",
+		"ReusesKnown": "Відомі повторні використання",
 		"Search": "Пошук",
 		"Settings": "Налаштування",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
@@ -291,8 +291,8 @@
 		"Beauty": "Краса"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Приєднайся до нас!",
+		"HowToUseTheData": "Використовуйте дані"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Оберіть одну з ваших улюблених валют",
@@ -493,7 +493,7 @@
 			"Title": "Додайте кілька доказів"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Спільнота"
 		},
 		"Experiments": {
 			"Title": "Експерименти"
