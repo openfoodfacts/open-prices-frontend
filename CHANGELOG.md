@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.96.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.95.3...v1.96.0) (2024-11-29)
+
+
+### Features
+
+* **Community:** super quick /community page ([#1064](https://github.com/openfoodfacts/open-prices-frontend/issues/1064)) ([f78ca82](https://github.com/openfoodfacts/open-prices-frontend/commit/f78ca8237e8c43be2d4bda795c3ae10dc977820d))
+
+
+### Bug Fixes
+
+* add missing categories ([#1062](https://github.com/openfoodfacts/open-prices-frontend/issues/1062)) ([cd9d6e2](https://github.com/openfoodfacts/open-prices-frontend/commit/cd9d6e2c36a33a943f422244fd317655df21d07c))
+
 ## [1.95.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.95.2...v1.95.3) (2024-11-28)
 
 
