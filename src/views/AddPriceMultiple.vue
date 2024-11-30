@@ -100,17 +100,19 @@
                 <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
               </v-col>
             </v-row>
-          </v-card-text>
-          <v-divider />
-          <v-card-text class="float-right">
-            <v-btn
-              color="success"
-              type="submit"
-              :loading="createPriceLoading"
-              :disabled="!productPriceFormFilled"
-            >
-              {{ $t('Common.Upload') }}
-            </v-btn>
+            <v-row>
+              <v-col>
+                <v-btn
+                  class="float-right"
+                  color="success"
+                  type="submit"
+                  :loading="createPriceLoading"
+                  :disabled="!productPriceFormFilled"
+                >
+                  {{ $t('Common.Upload') }}
+                </v-btn>
+              </v-col>
+            </v-row>
           </v-card-text>
         </v-card>
       </v-form>
