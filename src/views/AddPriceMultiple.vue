@@ -102,7 +102,7 @@
             </v-row>
           </v-card-text>
           <v-divider />
-          <v-card-text>
+          <v-card-text class="float-right">
             <v-btn
               color="success"
               type="submit"
@@ -118,7 +118,6 @@
       <v-btn
         class="float-right"
         type="submit"
-        color="success"
         :loading="createPriceLoading"
         :disabled="productPriceFormFilled"
         @click="done"
