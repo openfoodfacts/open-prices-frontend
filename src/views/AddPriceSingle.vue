@@ -71,6 +71,7 @@
       <v-col>
         <v-btn
           type="submit"
+          class="float-right"
           :color="formFilled ? 'success' : ''"
           :loading="createPriceLoading"
           :disabled="!formFilled"

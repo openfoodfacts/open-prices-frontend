@@ -42,6 +42,7 @@
 
       <v-card-actions>
         <v-btn
+          class="float-right"
           color="success"
           variant="flat"
           elevation="1"
