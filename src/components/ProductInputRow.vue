@@ -23,7 +23,7 @@
           <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.TypeBarcodeShort') }}</span>
           <span class="d-none d-sm-inline-flex">{{ $t('Common.BarcodeType') }}</span>
         </v-btn>
-        <ProductCard v-if="productForm.product" class="mb-2" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductActions="true" :readonly="true" elevation="1" />
+        <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductActions="true" :readonly="true" elevation="1" />
       </v-sheet>
       <v-sheet v-if="productForm.mode === 'category'">
         <v-row>
