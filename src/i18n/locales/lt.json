@@ -165,7 +165,7 @@
 		"Categories": "Kategorijos",
 		"Chart": "Diagrama",
 		"Contributors": "Contributors",
-		"Community": "Community",
+		"Community": "Bendruomenė",
 		"Country": "Šalis",
 		"Currency": "Valiuta",
 		"CurrencyMissing": "Currency missing",
@@ -248,7 +248,7 @@
 		"ReceiptPriceTotal": "Total amount",
 		"Recent": "Naujausi",
 		"Reuses": "Kartotinis naudojimas",
-		"ReusesKnown": "Known reuses",
+		"ReusesKnown": "Žinomas kartotinis naudojimas",
 		"Search": "Paieška",
 		"Settings": "Nustatymai",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
@@ -291,8 +291,8 @@
 		"Beauty": "Beauty"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Prisijunkite prie mūsų!",
+		"HowToUseTheData": "Naudoti duomenis"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Pasirinkite vieną iš savo mėgstamų valiutų",
@@ -493,7 +493,7 @@
 			"Title": "Pridėti kelis įrodymus"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Bendruomenė"
 		},
 		"Experiments": {
 			"Title": "Eksperimentai"
