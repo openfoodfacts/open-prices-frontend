@@ -165,7 +165,7 @@
 		"Categories": "קטגוריות",
 		"Chart": "תרשים",
 		"Contributors": "תורמים",
-		"Community": "Community",
+		"Community": "קהילה",
 		"Country": "מדינה",
 		"Currency": "מטבע",
 		"CurrencyMissing": "חסר מטבע",
@@ -248,7 +248,7 @@
 		"ReceiptPriceTotal": "סכום כולל",
 		"Recent": "אחרונים",
 		"Reuses": "גזירות",
-		"ReusesKnown": "Known reuses",
+		"ReusesKnown": "נגזרות ידועות",
 		"Search": "חיפוש",
 		"Settings": "הגדרות",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
@@ -291,8 +291,8 @@
 		"Beauty": "טיפול"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "מזמינים אותך להצטרף אלינו!",
+		"HowToUseTheData": "שימוש בנתונים"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "נא לבחור את אחד המטבעות המועדפים עליך",
@@ -493,7 +493,7 @@
 			"Title": "הוספת מגוון הוכחות"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "קהילה"
 		},
 		"Experiments": {
 			"Title": "ניסויים"
