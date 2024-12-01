@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.96.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.0...v1.96.1) (2024-12-01)
+
+
+### Technical
+
+* **UI:** gain some vertical space above submit button ([#1070](https://github.com/openfoodfacts/open-prices-frontend/issues/1070)) ([eff962a](https://github.com/openfoodfacts/open-prices-frontend/commit/eff962af99d7721187fb112ef09c6d7eb12834eb))
+* **UI:** On new price, scroll UI to the form ([#1072](https://github.com/openfoodfacts/open-prices-frontend/issues/1072)) ([50bd742](https://github.com/openfoodfacts/open-prices-frontend/commit/50bd742f000360e914b08c9858269a17ce0583ff))
+* **UI:** right-align all submit buttons. change color of Done buttons ([#1068](https://github.com/openfoodfacts/open-prices-frontend/issues/1068)) ([492b628](https://github.com/openfoodfacts/open-prices-frontend/commit/492b6286adb74ed58eb6bc33f09a19857127e19f))
+
 ## [1.96.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.95.3...v1.96.0) (2024-11-29)
 
 
