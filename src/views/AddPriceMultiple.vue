@@ -21,32 +21,7 @@
 
     <v-col v-if="proofFormFilled" cols="12" md="6">
       <!-- Step 2a: product prices already uploaded -->
-      <v-card
-        v-if="productPriceUploadedCount"
-        class="mb-4"
-        prepend-icon="mdi-tag-check-outline"
-        style="border: 1px solid #4CAF50"
-      >
-        <template #title>
-          <i18n-t keypath="AddPriceMultiple.ProductPriceDetails.AlreadyUploaded" :plural="productPriceUploadedCount" tag="span">
-            <template #priceAlreadyUploadedNumber>
-              <span>{{ productPriceUploadedCount }}</span>
-            </template>
-          </i18n-t>
-        </template>
-        <template #append>
-          <v-icon icon="mdi-checkbox-marked-circle" color="success" />
-        </template>
-        <v-divider />
-        <v-card-text>
-          <v-row>
-            <v-col v-for="productPriceUploaded in proofPriceUploadedList" :key="productPriceUploaded" cols="12">
-              <PriceCard :price="productPriceUploaded" :product="productPriceUploaded.product" :hideProductBarcode="false" :hidePriceFooterRow="true" :readonly="true" />
-            </v-col>
-          </v-row>
-        </v-card-text>
-        <v-overlay v-model="disablePriceAlreadyUploadedCard" scrim="#E8F5E9" contained persistent />
-      </v-card>
+      <PriceAlreadyUploadedListCard :proofPriceUploadedList="proofPriceUploadedList" />
 
       <!-- Step 2b: new product price form -->
       <v-btn
@@ -150,9 +125,9 @@ import utils from '../utils.js'
 export default {
   components: {
     ProofInputRow: defineAsyncComponent(() => import('../components/ProofInputRow.vue')),
+    PriceAlreadyUploadedListCard: defineAsyncComponent(() => import('../components/PriceAlreadyUploadedListCard.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
   data() {
     return {
@@ -221,15 +196,8 @@ export default {
     disableProofForm() {
       return this.proofFormFilled
     },
-    disablePriceAlreadyUploadedCard() {
-      // return !!this.proofPriceUploadedList.length
-      return true
-    },
     proofPriceUploadedList() {
       return this.proofPriceExistingList.concat(this.proofPriceNewList)
-    },
-    productPriceUploadedCount() {
-      return this.proofPriceUploadedList.length
     },
     existingProductFound() {
       if (this.productPriceForm.product_code) {
