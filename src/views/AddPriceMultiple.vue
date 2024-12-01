@@ -61,6 +61,7 @@
       </v-btn>
       <v-form v-else @submit.prevent="createPrice">
         <v-card
+          id="product-price-form"
           class="mb-4"
           :title="$t('AddPriceMultiple.ProductPriceDetails.NewPrice')"
           prepend-icon="mdi-tag-plus-outline"
@@ -73,7 +74,7 @@
           <v-divider />
           <v-card-text>
             <ProductInputRow :productForm="productPriceForm" @filled="productFormFilled = $event" />
-            <v-row v-if="productFormFilled && existingProductFound" class="mt-0 pb-2">
+            <v-row v-if="productFormFilled && existingProductFound" class="mt-0">
               <v-col>
                 <v-alert data-name="existing-product-alert" type="warning" variant="outlined" icon="mdi-alert">
                   <p>
@@ -140,6 +141,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+ import { useGoTo } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
@@ -154,6 +156,7 @@ export default {
   },
   data() {
     return {
+      goTo: useGoTo(),
       // price form
       addPriceMultipleForm: {
         type: null,
@@ -274,6 +277,8 @@ export default {
       this.productPriceForm.mode = this.appStore.user.last_product_mode_used  // can be overriden in ProductInputRow
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.productPriceForm.currency = this.addPriceMultipleForm.currency || this.appStore.getUserLastCurrencyUsed  // get currency from proof first
+      // scroll to the form
+      this.goTo('#product-price-form')
     },
     createPrice() {
       this.createPriceLoading = true
