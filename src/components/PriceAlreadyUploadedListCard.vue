@@ -26,12 +26,8 @@
     <v-card-actions v-if="showCardFooter">
       <v-row>
         <v-col cols="12">
-          <v-chip class="mr-1" label size="small" density="comfortable">
-            {{ $t('Common.PriceCount', { count: proofPriceUploadedList.length }) }}
-          </v-chip>
-          <v-chip class="mr-1" label size="small" density="comfortable">
-            {{ getPriceValueDisplay(proofPriceUploadedListSum) }}
-          </v-chip>
+          <ProofReceiptPriceCountChip class="mr-1" :uploadedCount="proofPriceUploadedList.length" :totalCount="proof.receipt_price_count" />
+          <ProofReceiptPriceTotalChip :uploadedCount="proofPriceUploadedListSum" :totalCount="proof.receipt_price_total" :currency="proofPriceUploadedList[0].currency" />
         </v-col>
       </v-row>
     </v-card-actions>
@@ -43,11 +39,12 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
-import utils from '../utils.js'
 
 export default {
   components: {
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
+    ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
   },
   props: {
     proof: {
@@ -84,14 +81,5 @@ export default {
       }, 0)
     }
   },
-  methods: {
-    getPriceValue(priceValue, priceCurrency) {
-      return utils.prettyPrice(priceValue, priceCurrency)
-    },
-    getPriceValueDisplay(price) {
-      price = parseFloat(price)
-      return this.getPriceValue(price, this.proofPriceUploadedList[0].currency)
-    },
-  }
 }
 </script>
