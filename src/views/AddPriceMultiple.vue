@@ -21,7 +21,7 @@
 
     <v-col v-if="proofFormFilled" cols="12" md="6">
       <!-- Step 2a: product prices already uploaded -->
-      <PriceAlreadyUploadedListCard :proofPriceUploadedList="proofPriceUploadedList" />
+      <PriceAlreadyUploadedListCard :proof="proofObject" :proofPriceUploadedList="proofPriceUploadedList" />
 
       <!-- Step 2b: new product price form -->
       <v-btn

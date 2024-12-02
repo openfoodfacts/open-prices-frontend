@@ -21,9 +21,9 @@
       </v-row>
     </v-card-text>
 
-    <v-divider v-if="proofPriceUploadedList.length" />
+    <v-divider v-if="showCardFooter" />
 
-    <v-card-actions v-if="proofPriceUploadedList.length">
+    <v-card-actions v-if="showCardFooter">
       <v-row>
         <v-col cols="12">
           <v-chip class="mr-1" label size="small" density="comfortable">
@@ -42,6 +42,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
@@ -49,6 +50,10 @@ export default {
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
   props: {
+    proof: {
+      type: Object,
+      default: null
+    },
     proofPriceUploadedList: {
       type: Array,
       default: () => []
@@ -66,6 +71,12 @@ export default {
   computed: {
     showCard() {
       return this.hideCardIfNoProofPriceUploaded && this.proofPriceUploadedList.length > 0
+    },
+    proofIsTypeReceipt() {
+      return this.proof && this.proof.type === constants.PROOF_TYPE_RECEIPT
+    },
+    showCardFooter() {
+      return this.proofIsTypeReceipt && this.proofPriceUploadedList.length > 0
     },
     proofPriceUploadedListSum() {
       return this.proofPriceUploadedList.reduce((acc, priceUploaded) => {

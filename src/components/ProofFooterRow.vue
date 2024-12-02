@@ -64,14 +64,14 @@ export default {
     userIsProofOwner() {
       return this.username && (this.proof.owner === this.username)
     },
-    isTypeReceipt() {
+    proofIsTypeReceipt() {
       return this.proof && this.proof.type === constants.PROOF_TYPE_RECEIPT
     },
     showReceiptPriceCount() {
-      return this.userIsProofOwner && this.isTypeReceipt && this.proof.receipt_price_count
+      return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.receipt_price_count
     },
     showReceiptPriceTotal() {
-      return this.userIsProofOwner && this.isTypeReceipt && this.proof.receipt_price_total
+      return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.receipt_price_total
     },
   },
   methods: {
