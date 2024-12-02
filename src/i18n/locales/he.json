@@ -165,6 +165,7 @@
 		"Categories": "קטגוריות",
 		"Chart": "תרשים",
 		"Contributors": "תורמים",
+		"Community": "קהילה",
 		"Country": "מדינה",
 		"Currency": "מטבע",
 		"CurrencyMissing": "חסר מטבע",
@@ -246,6 +247,8 @@
 		"ReceiptPriceCount": "מספר המחירים",
 		"ReceiptPriceTotal": "סכום כולל",
 		"Recent": "אחרונים",
+		"Reuses": "גזירות",
+		"ReusesKnown": "נגזרות ידועות",
 		"Search": "חיפוש",
 		"Settings": "הגדרות",
 		"SignInOFFAccount": "כניסה עם החשבון שלך ב־{url}",
@@ -286,6 +289,10 @@
 		"Food": "מזון",
 		"PetFood": "מזון לחיות מחמד",
 		"Beauty": "טיפול"
+	},
+	"Community": {
+		"JoinUs": "מזמינים אותך להצטרף אלינו!",
+		"HowToUseTheData": "שימוש בנתונים"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "נא לבחור את אחד המטבעות המועדפים עליך",
@@ -484,6 +491,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "הוספת מגוון הוכחות"
+		},
+		"Community": {
+			"Title": "קהילה"
 		},
 		"Experiments": {
 			"Title": "ניסויים"

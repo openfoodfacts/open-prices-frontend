@@ -165,6 +165,7 @@
 		"Categories": "Categories",
 		"Chart": "Chart",
 		"Contributors": "Contributors",
+		"Community": "Community",
 		"Country": "Country",
 		"Currency": "Currency",
 		"CurrencyMissing": "நாணயத்தைக் காணவில்லை",
@@ -246,6 +247,8 @@
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"Recent": "சமீபத்திய",
+		"Reuses": "Reuses",
+		"ReusesKnown": "Known reuses",
 		"Search": "தேடுக",
 		"Settings": "அமைப்புகள்",
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
@@ -286,6 +289,10 @@
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
@@ -484,6 +491,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "பல சான்றுகளைச் சேர்க்கவும்"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "Experiments"

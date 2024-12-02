@@ -165,6 +165,7 @@
 		"Categories": "Categories",
 		"Chart": "Chart",
 		"Contributors": "Contributors",
+		"Community": "Community",
 		"Country": "Country",
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
@@ -246,6 +247,8 @@
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"Recent": "Recent",
+		"Reuses": "Reuses",
+		"ReusesKnown": "Known reuses",
 		"Search": "Sesha",
 		"Settings": "Settings",
 		"SignInOFFAccount": "Sign in with your {url} account",
@@ -286,6 +289,10 @@
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
@@ -484,6 +491,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "Experiments"
