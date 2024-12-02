@@ -1,6 +1,14 @@
 <template>
-  <v-chip label size="small" variant="flat" density="comfortable" :title="$t('Common.ReceiptPriceTotal')">
-    {{ getPriceValueDisplay(count) }}
+  <v-chip label size="small" :variant="totalCount ? 'flat' : ''" density="comfortable" :title="$t('Common.ReceiptPriceTotal')">
+    <span v-if="uploadedCount && totalCount">
+      {{ getPriceValueDisplay(uploadedCount) }}&nbsp;/&nbsp;{{ getPriceValueDisplay(totalCount) }}
+    </span>
+    <span v-else-if="uploadedCount">
+      {{ getPriceValueDisplay(uploadedCount) }}
+    </span>
+    <span v-else>
+      {{ getPriceValueDisplay(totalCount) }}
+    </span>
   </v-chip>
 </template>
 
@@ -9,7 +17,11 @@ import utils from '../utils.js'
 
 export default {
   props: {
-    count: {
+    uploadedCount: {
+      type: Number,
+      default: null
+    },
+    totalCount: {
       type: Number,
       default: null
     },
