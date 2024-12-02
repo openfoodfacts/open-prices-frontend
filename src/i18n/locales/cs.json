@@ -165,7 +165,7 @@
 		"Categories": "Kategorie",
 		"Chart": "Graf",
 		"Contributors": "Přispěvatelé",
-		"Community": "Community",
+		"Community": "Komunita",
 		"Country": "Země",
 		"Currency": "Měna",
 		"CurrencyMissing": "Chybí měna",
@@ -248,7 +248,7 @@
 		"ReceiptPriceTotal": "Celková částka",
 		"Recent": "Nedávné",
 		"Reuses": "Opakované použití",
-		"ReusesKnown": "Known reuses",
+		"ReusesKnown": "Známá opakovaná použití",
 		"Search": "Vyhledat",
 		"Settings": "Nastavení",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
@@ -291,8 +291,8 @@
 		"Beauty": "Krása"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Připojte se k nám!",
+		"HowToUseTheData": "Použijte data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Vyberte jednu ze svých oblíbených měn",
@@ -493,7 +493,7 @@
 			"Title": "Přidejte více důkazů"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Komunita"
 		},
 		"Experiments": {
 			"Title": "Experimenty"
