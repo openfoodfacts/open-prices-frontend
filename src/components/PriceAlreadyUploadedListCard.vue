@@ -10,7 +10,9 @@
     <template #append>
       <v-icon icon="mdi-checkbox-marked-circle" color="success" />
     </template>
+
     <v-divider />
+
     <v-card-text>
       <v-row>
         <v-col v-for="productPriceUploaded in proofPriceUploadedList" :key="productPriceUploaded" cols="12">
@@ -18,12 +20,29 @@
         </v-col>
       </v-row>
     </v-card-text>
+
+    <v-divider v-if="proofPriceUploadedList.length" />
+
+    <v-card-actions v-if="proofPriceUploadedList.length">
+      <v-row>
+        <v-col cols="12">
+          <v-chip class="mr-1" label size="small" density="comfortable">
+            {{ $t('Common.PriceCount', { count: proofPriceUploadedList.length }) }}
+          </v-chip>
+          <v-chip class="mr-1" label size="small" density="comfortable">
+            {{ getPriceValueDisplay(proofPriceUploadedListSum) }}
+          </v-chip>
+        </v-col>
+      </v-row>
+    </v-card-actions>
+
     <v-overlay v-model="disableCard" scrim="#E8F5E9" contained persistent />
   </v-card>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -47,7 +66,21 @@ export default {
   computed: {
     showCard() {
       return this.hideCardIfNoProofPriceUploaded && this.proofPriceUploadedList.length > 0
+    },
+    proofPriceUploadedListSum() {
+      return this.proofPriceUploadedList.reduce((acc, priceUploaded) => {
+        return acc + parseFloat(priceUploaded.price)
+      }, 0)
     }
+  },
+  methods: {
+    getPriceValue(priceValue, priceCurrency) {
+      return utils.prettyPrice(priceValue, priceCurrency)
+    },
+    getPriceValueDisplay(price) {
+      price = parseFloat(price)
+      return this.getPriceValue(price, this.proofPriceUploadedList[0].currency)
+    },
   }
 }
 </script>
