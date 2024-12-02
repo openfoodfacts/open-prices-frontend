@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.96.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.1...v1.96.2) (2024-12-02)
+
+
+### Bug Fixes
+
+* **Price add:** show PriceAlreadyUploadedListCard footer only for receipts. ref [#1074](https://github.com/openfoodfacts/open-prices-frontend/issues/1074) ([93585fa](https://github.com/openfoodfacts/open-prices-frontend/commit/93585fac1c6fe9309adba947a1244abcc6d51a07))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1066](https://github.com/openfoodfacts/open-prices-frontend/issues/1066)) ([f5578e9](https://github.com/openfoodfacts/open-prices-frontend/commit/f5578e9cc1b5cdd95c77c5f9e3e7ab8cd160ec50))
+* **Price add:** new PriceAlreadyUploadedListCard component ([382cbff](https://github.com/openfoodfacts/open-prices-frontend/commit/382cbff21d364b7aa109749c2f9674287d0e127e))
+* **Price add:** show count & sum of already added prices (receipts) ([#1074](https://github.com/openfoodfacts/open-prices-frontend/issues/1074)) ([9be00ed](https://github.com/openfoodfacts/open-prices-frontend/commit/9be00ed747c0e8ab1bbea1215961cb659b908c3c))
+* **Price add:** show receipt personal data in already added prices footer ([#1076](https://github.com/openfoodfacts/open-prices-frontend/issues/1076)) ([4c8c337](https://github.com/openfoodfacts/open-prices-frontend/commit/4c8c33774d6678a4951fe845698406687db4780e))
+* **Proof card:** new components for receipt price_count & price_total ([#1075](https://github.com/openfoodfacts/open-prices-frontend/issues/1075)) ([ad3618a](https://github.com/openfoodfacts/open-prices-frontend/commit/ad3618aa4e857b29ad7185d631b8e38d04e26fd2))
+
 ## [1.96.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.0...v1.96.1) (2024-12-01)
 
 
