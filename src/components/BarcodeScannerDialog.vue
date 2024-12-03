@@ -17,7 +17,7 @@
         <div>
           <i18n-t keypath="BarcodeScanner.Htlm5-qrcode.Text" tag="span">
             <template #url>
-              <a href="https://github.com/mebjas/html5-qrcode" target="_blank">html5-qrcode</a>
+              <a :href="HTML5_QRCODE_URL" target="_blank">{{ HTML5_QRCODE_NAME }}</a>
             </template>
           </i18n-t>
         </div>
@@ -43,6 +43,8 @@ export default {
   data() {
     return {
       scanner: null,
+      HTML5_QRCODE_URL: 'https://github.com/mebjas/html5-qrcode',
+      HTML5_QRCODE_NAME: 'html5-qrcode'
     }
   },
   mounted() {

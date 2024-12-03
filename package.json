@@ -43,6 +43,7 @@
     "vuetify": "^3.7.3"
   },
   "devDependencies": {
+    "@intlify/eslint-plugin-vue-i18n": "^3.1.0",
     "@mdi/font": "^7.4.47",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/compiler-sfc": "^3.5.12",
