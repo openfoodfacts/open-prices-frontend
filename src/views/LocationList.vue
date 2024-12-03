@@ -2,7 +2,7 @@
   <v-row v-if="!loading">
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-map-marker-outline">
-        {{ $t('LocationList.LocationTotal', { count: locationTotal }) }}
+        {{ $t('Common.LocationCount', { count: locationTotal }) }}
       </v-chip>
       <FilterMenu kind="location" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleLocationFilter($event)" @update:currentType="toggleLocationType($event)" />
       <OrderMenu kind="location" :currentOrder="currentOrder" @update:currentOrder="selectLocationOrder($event)" />
