@@ -134,16 +134,6 @@
 		"Submit": "הגשה",
 		"Title": "סוג ברקוד"
 	},
-	"BrandDetail": {
-		"LoadMore": "לטעון עוד",
-		"TopProducts": "מוצרים מובילים",
-		"BrandProductTotal": "{count} מוצרים"
-	},
-	"CategoryDetail": {
-		"LoadMore": "לטעון עוד",
-		"TopProducts": "מוצרים מובילים",
-		"CategoryProductTotal": "{count} מוצרים"
-	},
 	"Common": {
 		"About": "על אודות",
 		"AddPrice": "הוספת מחיר",
@@ -155,6 +145,8 @@
 		"BarcodeType": "סוג ברקוד",
 		"BarcodeInvalid": "ברקוד שגוי",
 		"Brand": "מותג",
+		"Brands": "מותגים",
+		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "מחיר",
 		"Prices": "מחירים",
 		"Product": "מוצר",
@@ -163,6 +155,7 @@
 		"Proofs": "הוכחות",
 		"Category": "קטגוריה",
 		"Categories": "קטגוריות",
+		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Chart": "תרשים",
 		"Contributors": "תורמים",
 		"Community": "קהילה",
@@ -180,6 +173,7 @@
 		"Experiments": "ניסויים",
 		"Label": "תווית",
 		"Labels": "תוויות",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "שפות",
 		"Languages": "שפות",
 		"LatestPrices": "מחירים עדכניים",
@@ -218,7 +212,7 @@
 		"ImageFull": "תמונה בגודל מלא",
 		"Latest": "אחרונים",
 		"LinkCopySuccess": "הקישור הועתק",
-		"LocationCount": "{count} מקומות",
+		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "מפה",
 		"Offline": "לא מקוון",
 		"Online": "מקוון",
@@ -237,11 +231,14 @@
 		"OrderUserCountDESC": "כמות משתמשים",
 		"PersonalInfo": "פרטים אישיים",
 		"Physical": "פיזי",
-		"PriceCount": "{count} מחירים",
+		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceCreated": "המחיר נוצר!",
 		"PricesMore": "מחירים נוספים",
-		"ProductCount": "{count} מוצרים",
-		"ProofCount": "{count} הוכחות",
+		"Private": "פרטי",
+		"Privacy": "פרטיות",
+		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"Public": "ציבורי",
 		"Receipt": "קבלה",
 		"Receipts": "קבלות",
 		"ReceiptPriceCount": "מספר המחירים",
@@ -281,7 +278,8 @@
 		"URLInvalid": "כתובת שגויה",
 		"User": "משתמש",
 		"Users": "משתמשים",
-		"UserCount": "{count} משתמשים",
+		"UserCount": "{count} users | {count} user | {count} users",
+		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "הצגה",
 		"Website": "אתר",
 		"Yes": "כן",
@@ -337,11 +335,6 @@
 		"LoadMore": "לטעון עוד",
 		"LocationNotFound": "המקום לא נמצא ב־OpenStreetMap… אפשר להוסיף אותו ללא חשש :)"
 	},
-	"LocationList": {
-		"Title": "מקומות מובילים",
-		"LoadMore": "לטעון עוד",
-		"LocationTotal": "{count} מקומות"
-	},
 	"LocationSelector": {
 		"Clear": "פינוי",
 		"NoResult": "לא נמצאו תוצאות",
@@ -367,9 +360,6 @@
 		"Proof": "הוכחה",
 		"FullPrice": "מחיר מלא",
 		"UnknownProduct": "מוצר לא ידוע"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} מחירים"
 	},
 	"PriceDelete": {
 		"Confirmation": "למחוק את המחיר הזה?",
@@ -429,14 +419,6 @@
 		"LatestPrices": "מחירים עדכניים",
 		"LoadMore": "לטעון עוד",
 		"ProductNotFound": "המוצר לא נמצא ב־Open Food Facts… אפשר להוסיף אותו ללא חשש :)"
-	},
-	"ProductList": {
-		"HideProductsWithPrices": "הסתרת מוצרים עם מחירים",
-		"LoadMore": "לטעון עוד",
-		"PriceNumber": "מספר המחירים שנוספו",
-		"ScanNumber": "מספר הסריקות שנוספו",
-		"Title": "מוצרים מובילים",
-		"ProductTotal": "{count} מוצרים"
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",
