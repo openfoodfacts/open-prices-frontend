@@ -146,7 +146,7 @@
 		"BarcodeInvalid": "Code-barres invalide",
 		"Brand": "Marque",
 		"Brands": "Marques",
-		"BrandTotal": "{count} brands | {count} brand | {count} brands",
+		"BrandTotal": "{count} marques | {count} marque | {count} marques",
 		"Price": "Prix",
 		"Prices": "Prix",
 		"Product": "Produit",
@@ -155,10 +155,10 @@
 		"Proofs": "Preuves",
 		"Category": "Catégorie",
 		"Categories": "Catégories",
-		"CategoryTotal": "{count} categories | {count} category | {count} categories",
+		"CategoryTotal": "{count} catégories | {count} catégorie | {count} catégories",
 		"Chart": "Graphique",
 		"Contributors": "Contributeurs",
-		"Community": "Community",
+		"Community": "Communauté",
 		"Country": "Pays",
 		"Currency": "Devise",
 		"CurrencyMissing": "Devise manquante",
@@ -212,7 +212,7 @@
 		"ImageFull": "Image en taille réelle",
 		"Latest": "Derniers",
 		"LinkCopySuccess": "Lien copié",
-		"LocationCount": "{count} locations | {count} location | {count} locations",
+		"LocationCount": "{count} lieux | {count} lieu | {count} lieux",
 		"Map": "Carte",
 		"Offline": "Hors ligne",
 		"Online": "En ligne",
@@ -231,13 +231,13 @@
 		"OrderUserCountDESC": "Nombre d'utilisateurs",
 		"PersonalInfo": "Informations personnelles",
 		"Physical": "Physique",
-		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceCount": "{count} prix | {count} prix | {count} prix",
 		"PriceCreated": "Prix créé !",
 		"PricesMore": "Plus de prix",
 		"Private": "Privé",
 		"Privacy": "Confidentialité",
-		"ProductCount": "{count} products | {count} product | {count} products",
-		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"ProductCount": "{count} produits | {count} produit | {count} produits",
+		"ProofCount": "{count} preuves | {count} preuve | {count} preuves",
 		"Public": "Public",
 		"Receipt": "Ticket de caisse",
 		"Receipts": "Tickets de caisse",
@@ -245,7 +245,7 @@
 		"ReceiptPriceTotal": "Montant total",
 		"Recent": "Récent",
 		"Reuses": "Réutilisations",
-		"ReusesKnown": "Known reuses",
+		"ReusesKnown": "Réutilisations connues",
 		"Search": "Rechercher",
 		"Settings": "Paramètres",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
@@ -278,8 +278,8 @@
 		"URLInvalid": "URL invalide",
 		"User": "Utilisateur",
 		"Users": "Utilisateurs",
-		"UserCount": "{count} users | {count} user | {count} users",
-		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserCount": "{count} utilisateurs | {count} utilisateur | {count} utilisateurs",
+		"UserContributorCount": "{count} contributeurs | {count} contributeur | {count} contributeurs",
 		"View": "Voir",
 		"Website": "Site Web",
 		"Yes": "Oui",
@@ -289,8 +289,8 @@
 		"Beauty": "Beauté"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Rejoignez-nous !",
+		"HowToUseTheData": "Utiliser les données"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choisissez l'une de vos devises préférées",
@@ -475,7 +475,7 @@
 			"Title": "Ajouter plusieurs preuves"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Communauté"
 		},
 		"Experiments": {
 			"Title": "Expérimentations"
