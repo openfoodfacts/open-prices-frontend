@@ -37,6 +37,8 @@
           <v-col>
             <v-btn
               type="submit"
+              class="float-right"
+              color="success"
               :loading="loading"
               :disabled="!formFilled"
             >
