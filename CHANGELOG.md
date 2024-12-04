@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.96.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.2...v1.96.3) (2024-12-04)
+
+
+### Technical
+
+* **l10n:** add new pluralization translations. Start cleaning unused translations ([#1079](https://github.com/openfoodfacts/open-prices-frontend/issues/1079)) ([04c384b](https://github.com/openfoodfacts/open-prices-frontend/commit/04c384b98c0ea4be12d3018311142bf80b6a73eb))
+* **l10n:** New Crowdin translations to review and merge ([#1081](https://github.com/openfoodfacts/open-prices-frontend/issues/1081)) ([e00fa3e](https://github.com/openfoodfacts/open-prices-frontend/commit/e00fa3e0e8ef4cfc3c39f0633e5910da39640b49))
+* **Sign in:** improve UI (columns, spacing, password visibility toggle) ([#1087](https://github.com/openfoodfacts/open-prices-frontend/issues/1087)) ([8bbb135](https://github.com/openfoodfacts/open-prices-frontend/commit/8bbb135d03b2bb7cd2d1bc11974d79cf687f07bc))
+
 ## [1.96.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.1...v1.96.2) (2024-12-02)
 
 
