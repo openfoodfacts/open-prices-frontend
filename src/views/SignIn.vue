@@ -14,25 +14,36 @@
       </v-alert>
 
       <v-form @submit.prevent="signIn">
-        <v-text-field
-          v-model="signinForm.username"
-          :label="$t('SignIn.UsernameLabel')"
-          type="text"
-          class="input-lowercase"
-        />
-        <v-text-field
-          v-model="signinForm.password"
-          :label="$t('SignIn.Password')"
-          type="password"
-        />
-        <v-btn
-          type="submit"
-          class="mt-2"
-          :loading="loading"
-          :disabled="!formFilled"
-        >
-          {{ $t('SignIn.Button') }}
-        </v-btn>
+        <v-row>
+          <v-col cols="12" sm="6">
+            <v-text-field
+              v-model="signinForm.username"
+              :label="$t('SignIn.UsernameLabel')"
+              type="text"
+              class="input-lowercase"
+              hide-details="auto"
+            />
+          </v-col>
+          <v-col cols="12" sm="6">
+            <v-text-field
+              v-model="signinForm.password"
+              :label="$t('SignIn.Password')"
+              type="password"
+              hide-details="auto"
+            />
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-btn
+              type="submit"
+              :loading="loading"
+              :disabled="!formFilled"
+            >
+              {{ $t('SignIn.Button') }}
+            </v-btn>
+          </v-col>
+        </v-row>
       </v-form>
     </v-col>
   </v-row>
