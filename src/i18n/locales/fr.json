@@ -134,16 +134,6 @@
 		"Submit": "Envoyer",
 		"Title": "Taper un code-barres"
 	},
-	"BrandDetail": {
-		"LoadMore": "Voir plus",
-		"TopProducts": "Top produits",
-		"BrandProductTotal": "{count} produits"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Voir plus",
-		"TopProducts": "Top produits",
-		"CategoryProductTotal": "{count} produits"
-	},
 	"Common": {
 		"About": "À propos",
 		"AddPrice": "Ajouter un prix",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Taper un code-barres",
 		"BarcodeInvalid": "Code-barres invalide",
 		"Brand": "Marque",
+		"Brands": "Marques",
+		"BrandTotal": "{count} marques | {count} marque | {count} marques",
 		"Price": "Prix",
 		"Prices": "Prix",
 		"Product": "Produit",
@@ -163,9 +155,10 @@
 		"Proofs": "Preuves",
 		"Category": "Catégorie",
 		"Categories": "Catégories",
+		"CategoryTotal": "{count} catégories | {count} catégorie | {count} catégories",
 		"Chart": "Graphique",
 		"Contributors": "Contributeurs",
-		"Community": "Community",
+		"Community": "Communauté",
 		"Country": "Pays",
 		"Currency": "Devise",
 		"CurrencyMissing": "Devise manquante",
@@ -180,6 +173,7 @@
 		"Experiments": "Expérimentations",
 		"Label": "Label",
 		"Labels": "Labels",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Langue",
 		"Languages": "Langue",
 		"LatestPrices": "Derniers prix",
@@ -218,7 +212,7 @@
 		"ImageFull": "Image en taille réelle",
 		"Latest": "Derniers",
 		"LinkCopySuccess": "Lien copié",
-		"LocationCount": "{count} lieux",
+		"LocationCount": "{count} lieux | {count} lieu | {count} lieux",
 		"Map": "Carte",
 		"Offline": "Hors ligne",
 		"Online": "En ligne",
@@ -237,18 +231,21 @@
 		"OrderUserCountDESC": "Nombre d'utilisateurs",
 		"PersonalInfo": "Informations personnelles",
 		"Physical": "Physique",
-		"PriceCount": "{count} prix",
+		"PriceCount": "{count} prix | {count} prix | {count} prix",
 		"PriceCreated": "Prix créé !",
 		"PricesMore": "Plus de prix",
-		"ProductCount": "{count} produits",
-		"ProofCount": "{count} preuves",
+		"Private": "Privé",
+		"Privacy": "Confidentialité",
+		"ProductCount": "{count} produits | {count} produit | {count} produits",
+		"ProofCount": "{count} preuves | {count} preuve | {count} preuves",
+		"Public": "Public",
 		"Receipt": "Ticket de caisse",
 		"Receipts": "Tickets de caisse",
 		"ReceiptPriceCount": "Nombre de prix",
 		"ReceiptPriceTotal": "Montant total",
 		"Recent": "Récent",
 		"Reuses": "Réutilisations",
-		"ReusesKnown": "Known reuses",
+		"ReusesKnown": "Réutilisations connues",
 		"Search": "Rechercher",
 		"Settings": "Paramètres",
 		"SignInOFFAccount": "Se connecter avec votre compte {url}",
@@ -281,7 +278,8 @@
 		"URLInvalid": "URL invalide",
 		"User": "Utilisateur",
 		"Users": "Utilisateurs",
-		"UserCount": "{count} utilisateurs",
+		"UserCount": "{count} utilisateurs | {count} utilisateur | {count} utilisateurs",
+		"UserContributorCount": "{count} contributeurs | {count} contributeur | {count} contributeurs",
 		"View": "Voir",
 		"Website": "Site Web",
 		"Yes": "Oui",
@@ -291,8 +289,8 @@
 		"Beauty": "Beauté"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Rejoignez-nous !",
+		"HowToUseTheData": "Utiliser les données"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choisissez l'une de vos devises préférées",
@@ -337,11 +335,6 @@
 		"LoadMore": "Voir plus",
 		"LocationNotFound": "Ce lieu n'est pas encore sur OpenStreetMap... N'hésitez pas à la rajouter :)"
 	},
-	"LocationList": {
-		"Title": "Top lieux",
-		"LoadMore": "Voir plus",
-		"LocationTotal": "{count} lieux"
-	},
 	"LocationSelector": {
 		"Clear": "Effacer",
 		"NoResult": "Aucun résultat trouvé",
@@ -367,9 +360,6 @@
 		"Proof": "Preuve",
 		"FullPrice": "Prix d'origine",
 		"UnknownProduct": "Produit inconnu"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} prix"
 	},
 	"PriceDelete": {
 		"Confirmation": "Êtes-vous sûr de vouloir supprimer ce prix ?",
@@ -430,14 +420,6 @@
 		"LoadMore": "Voir plus",
 		"ProductNotFound": "Ce produit n'existe pas sur Open Food Facts... N'hésitez pas à le rajouter :)"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "Masquer les produits qui ont un prix",
-		"LoadMore": "Voir plus",
-		"PriceNumber": "Nombre de prix ajoutés",
-		"ScanNumber": "Nombre de scans ajoutés",
-		"Title": "Top produits",
-		"ProductTotal": "{count} produits"
-	},
 	"ProofCard": {
 		"Proof": "Preuve",
 		"PRICE_TAG": "Étiquette de prix",
@@ -493,7 +475,7 @@
 			"Title": "Ajouter plusieurs preuves"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Communauté"
 		},
 		"Experiments": {
 			"Title": "Expérimentations"

@@ -134,16 +134,6 @@
 		"Submit": "Kirim",
 		"Title": "Ketik barcode"
 	},
-	"BrandDetail": {
-		"LoadMore": "Muat lebih banyak",
-		"TopProducts": "Produk teratas",
-		"BrandProductTotal": "{count} produk"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Muat lebih banyak",
-		"TopProducts": "Produk teratas",
-		"CategoryProductTotal": "{count} produk"
-	},
 	"Common": {
 		"About": "Tentang",
 		"AddPrice": "Tambahkan harga",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Ketik barcode",
 		"BarcodeInvalid": "Kode batang tidak valid",
 		"Brand": "Merek",
+		"Brands": "Merek - merek",
+		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Harga",
 		"Prices": "Harga",
 		"Product": "Produk",
@@ -163,6 +155,7 @@
 		"Proofs": "Bukti",
 		"Category": "Kategori",
 		"Categories": "Kategori",
+		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Chart": "Grafik",
 		"Contributors": "Kontributor",
 		"Community": "Community",
@@ -180,6 +173,7 @@
 		"Experiments": "Experiments",
 		"Label": "Label",
 		"Labels": "Label - label",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Bahasa",
 		"Languages": "Bahasa",
 		"LatestPrices": "Harga terbaru",
@@ -218,7 +212,7 @@
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Tautan disalin",
-		"LocationCount": "{count} lokasi",
+		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Peta",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -237,11 +231,14 @@
 		"OrderUserCountDESC": "Jumlah user",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
-		"PriceCount": "{count} harga",
+		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceCreated": "Harga dibuat!",
 		"PricesMore": "More prices",
-		"ProductCount": "{count} produk",
-		"ProofCount": "{count} bukti",
+		"Private": "Pribadi",
+		"Privacy": "Privasi",
+		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"Public": "Publik",
 		"Receipt": "Resi",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Jumlah harga",
@@ -281,7 +278,8 @@
 		"URLInvalid": "Invalid URL",
 		"User": "Pengguna",
 		"Users": "Pengguna",
-		"UserCount": "{count} pengguna",
+		"UserCount": "{count} users | {count} user | {count} users",
+		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "Lihat",
 		"Website": "Situs Web",
 		"Yes": "Ya",
@@ -337,11 +335,6 @@
 		"LoadMore": "Muat lebih banyak",
 		"LocationNotFound": "Lokasi tidak ditemukan di OpenStreetMap... Jangan ragu untuk menambahkannya :)"
 	},
-	"LocationList": {
-		"Title": "Lokasi teratas",
-		"LoadMore": "Muat lebih banyak",
-		"LocationTotal": "{count} lokasi"
-	},
 	"LocationSelector": {
 		"Clear": "Hapus",
 		"NoResult": "Tidak ada hasil yang ditemukan",
@@ -367,9 +360,6 @@
 		"Proof": "Bukti",
 		"FullPrice": "Harga penuh",
 		"UnknownProduct": "Produk tidak diketahui"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} harga"
 	},
 	"PriceDelete": {
 		"Confirmation": "Yakin ingin menghapus harga ini?",
@@ -429,14 +419,6 @@
 		"LatestPrices": "Harga terbaru",
 		"LoadMore": "Muat lebih banyak",
 		"ProductNotFound": "Produk tidak ditemukan di Open Food Facts... Jangan ragu untuk menambahkannya :)"
-	},
-	"ProductList": {
-		"HideProductsWithPrices": "Sembunyikan produk dengan harga",
-		"LoadMore": "Muat lebih banyak",
-		"PriceNumber": "Jumlah harga yang ditambahkan",
-		"ScanNumber": "Jumlah pemindaian yang ditambahkan",
-		"Title": "Produk teratas",
-		"ProductTotal": "{count} produk"
 	},
 	"ProofCard": {
 		"Proof": "Bukti",

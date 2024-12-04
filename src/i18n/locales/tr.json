@@ -134,16 +134,6 @@
 		"Submit": "Gönder",
 		"Title": "Barkodu yazın"
 	},
-	"BrandDetail": {
-		"LoadMore": "Daha fazla yükle",
-		"TopProducts": "En iyi ürünler",
-		"BrandProductTotal": "{count} ürün"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Daha fazla yükle",
-		"TopProducts": "En iyi ürünler",
-		"CategoryProductTotal": "{count} ürün"
-	},
 	"Common": {
 		"About": "Hakkında",
 		"AddPrice": "Fiyat ekleyin",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Barkodu yazın",
 		"BarcodeInvalid": "Geçersiz barkod",
 		"Brand": "Marka",
+		"Brands": "Markalar",
+		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Fiyat",
 		"Prices": "Fiyatlar",
 		"Product": "Ürün",
@@ -163,6 +155,7 @@
 		"Proofs": "Proofs",
 		"Category": "Kategori",
 		"Categories": "Kategoriler",
+		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Chart": "Chart",
 		"Contributors": "Katkıda bulunanlar",
 		"Community": "Community",
@@ -180,6 +173,7 @@
 		"Experiments": "Experiments",
 		"Label": "Etiket",
 		"Labels": "Etiketler",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Diller",
 		"Languages": "Diller",
 		"LatestPrices": "Son fiyatlar",
@@ -218,7 +212,7 @@
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Bağlantı kopyalandı",
-		"LocationCount": "{count} konum",
+		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Harita",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -237,11 +231,14 @@
 		"OrderUserCountDESC": "User count",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
-		"PriceCount": "{count} fiyat",
+		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceCreated": "Fiyat oluşturuldu!",
 		"PricesMore": "More prices",
-		"ProductCount": "{count} ürün",
-		"ProofCount": "{count} bedel",
+		"Private": "Özel",
+		"Privacy": "Mahremiyet",
+		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"Public": "Genel",
 		"Receipt": "Makbuz",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Fiyat sayısı",
@@ -281,7 +278,8 @@
 		"URLInvalid": "Invalid URL",
 		"User": "Kullanıcı",
 		"Users": "Kullanıcılar",
-		"UserCount": "{count} users",
+		"UserCount": "{count} users | {count} user | {count} users",
+		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "Görüntüle",
 		"Website": "Web sitesi",
 		"Yes": "Evet",
@@ -337,11 +335,6 @@
 		"LoadMore": "Daha fazla yükle",
 		"LocationNotFound": "OpenStreetMap'te konum bulunamadı... Eklemekten çekinmeyin :)"
 	},
-	"LocationList": {
-		"Title": "En iyi yerler",
-		"LoadMore": "Daha fazla yükle",
-		"LocationTotal": "{count} konum"
-	},
 	"LocationSelector": {
 		"Clear": "Temizle",
 		"NoResult": "Sonuç bulunamadı",
@@ -367,9 +360,6 @@
 		"Proof": "Kanıt",
 		"FullPrice": "Tam fiyat",
 		"UnknownProduct": "Bilinmeyen ürün"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} fiyat"
 	},
 	"PriceDelete": {
 		"Confirmation": "Bu fiyatı silmek istediğinizden emin misiniz?",
@@ -429,14 +419,6 @@
 		"LatestPrices": "Son fiyatlar",
 		"LoadMore": "Daha fazla yükle",
 		"ProductNotFound": "Open Food Facts'te ürün bulunamadı... Eklemekten çekinmeyin :)"
-	},
-	"ProductList": {
-		"HideProductsWithPrices": "Ürünleri fiyatlarıyla gizle",
-		"LoadMore": "Daha fazla yükle",
-		"PriceNumber": "Eklenen fiyat sayısı",
-		"ScanNumber": "Eklenen tarama sayısı",
-		"Title": "En iyi ürünler",
-		"ProductTotal": "{count} ürün"
 	},
 	"ProofCard": {
 		"Proof": "Kanıt",
