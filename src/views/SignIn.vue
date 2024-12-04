@@ -28,8 +28,10 @@
             <v-text-field
               v-model="signinForm.password"
               :label="$t('SignIn.Password')"
-              type="password"
+              :append-inner-icon="passwordVisible ? 'mdi-eye-off' : 'mdi-eye'"
+              :type="passwordVisible ? 'text' : 'password'"
               hide-details="auto"
+              @click:append-inner="passwordVisible = !passwordVisible"
             />
           </v-col>
         </v-row>
@@ -67,6 +69,7 @@ export default {
         username: '',
         password: '',
       },
+      passwordVisible: false,
       loading: false,
     };
   },
