@@ -1,19 +1,22 @@
 <template>
   <v-row>
     <v-col cols="12" md="6">
-      <v-alert
-        class="mb-2"
-        type="info"
-        variant="outlined"
-      >
-        <i18n-t keypath="Common.SignInOFFAccount" tag="span">
-          <template #url>
-            <OpenFoodFactsLink display="link" />
-          </template>
-        </i18n-t>
-      </v-alert>
-
       <v-form @submit.prevent="signIn">
+        <v-row>
+          <v-col>
+            <v-alert
+              type="info"
+              variant="outlined"
+            >
+              <i18n-t keypath="Common.SignInOFFAccount" tag="span">
+                <template #url>
+                  <OpenFoodFactsLink display="link" />
+                </template>
+              </i18n-t>
+            </v-alert>
+          </v-col>
+        </v-row>
+
         <v-row>
           <v-col cols="12" sm="6">
             <v-text-field
@@ -35,6 +38,7 @@
             />
           </v-col>
         </v-row>
+
         <v-row>
           <v-col>
             <v-btn
