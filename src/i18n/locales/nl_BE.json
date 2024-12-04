@@ -146,7 +146,7 @@
 		"BarcodeInvalid": "Ongeldige barcode",
 		"Brand": "Merk",
 		"Brands": "Merken",
-		"BrandTotal": "{count} brands | {count} brand | {count} brands",
+		"BrandTotal": "{count} merken | {count} merk | {count} merken",
 		"Price": "Prijs",
 		"Prices": "Prijzen",
 		"Product": "Product",
@@ -155,10 +155,10 @@
 		"Proofs": "Bewijzen",
 		"Category": "Categorie",
 		"Categories": "Categorieën",
-		"CategoryTotal": "{count} categories | {count} category | {count} categories",
+		"CategoryTotal": "{count} categorieën | {count} categorie | {count} categorieën",
 		"Chart": "Grafiek",
 		"Contributors": "Bijdragers",
-		"Community": "Community",
+		"Community": "Gemeenschap",
 		"Country": "Land",
 		"Currency": "Valuta",
 		"CurrencyMissing": "Valuta ontbreekt",
@@ -212,7 +212,7 @@
 		"ImageFull": "Afbeelding op volledige grootte",
 		"Latest": "Laatste",
 		"LinkCopySuccess": "Link gekopieerd",
-		"LocationCount": "{count} locations | {count} location | {count} locations",
+		"LocationCount": "{count} locaties | {count} locatie | {count} locaties",
 		"Map": "Kaart",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -231,13 +231,13 @@
 		"OrderUserCountDESC": "Gebruikersaantal",
 		"PersonalInfo": "Persoonlijke informatie",
 		"Physical": "Fysiek",
-		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceCount": "{count} prijzen | {count} prijs | {count} prijzen",
 		"PriceCreated": "Prijs aangemaakt!",
 		"PricesMore": "Meer prijzen",
 		"Private": "Privé",
 		"Privacy": "Privacy",
-		"ProductCount": "{count} products | {count} product | {count} products",
-		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"ProductCount": "{count} producten | {count} product | {count} producten",
+		"ProofCount": "{count} bewijzen | {count} bewijs | {count} bewijzen",
 		"Public": "Openbaar",
 		"Receipt": "Bon",
 		"Receipts": "Bonnen",
@@ -245,7 +245,7 @@
 		"ReceiptPriceTotal": "Totaalbedrag",
 		"Recent": "Recent",
 		"Reuses": "Hergebruik",
-		"ReusesKnown": "Known reuses",
+		"ReusesKnown": "Bekende hergebruiken",
 		"Search": "Zoeken",
 		"Settings": "Instellingen",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
@@ -278,8 +278,8 @@
 		"URLInvalid": "Ongeldige URL",
 		"User": "Gebruiker",
 		"Users": "Gebruikers",
-		"UserCount": "{count} users | {count} user | {count} users",
-		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserCount": "{count} gebruikers | {count} gebruiker | {count} gebruikers",
+		"UserContributorCount": "{count} bijdragers | {count} bijdrager | {count} bijdragers",
 		"View": "Bekijk",
 		"Website": "Website",
 		"Yes": "Ja",
@@ -289,8 +289,8 @@
 		"Beauty": "Schoonheidsindustrie"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Doe mee!",
+		"HowToUseTheData": "Gebruik de gegevens"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Kies een van uw favoriete valuta",
@@ -475,7 +475,7 @@
 			"Title": "Meerdere bewijzen toevoegen"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Gemeenschap"
 		},
 		"Experiments": {
 			"Title": "Experimenten"
