@@ -1,38 +1,57 @@
 <template>
   <v-row>
     <v-col cols="12" md="6">
-      <v-alert
-        class="mb-2"
-        type="info"
-        variant="outlined"
-      >
-        <i18n-t keypath="Common.SignInOFFAccount" tag="span">
-          <template #url>
-            <OpenFoodFactsLink display="link" />
-          </template>
-        </i18n-t>
-      </v-alert>
-
       <v-form @submit.prevent="signIn">
-        <v-text-field
-          v-model="signinForm.username"
-          :label="$t('SignIn.UsernameLabel')"
-          type="text"
-          class="input-lowercase"
-        />
-        <v-text-field
-          v-model="signinForm.password"
-          :label="$t('SignIn.Password')"
-          type="password"
-        />
-        <v-btn
-          type="submit"
-          class="mt-2"
-          :loading="loading"
-          :disabled="!formFilled"
-        >
-          {{ $t('SignIn.Button') }}
-        </v-btn>
+        <v-row>
+          <v-col>
+            <v-alert
+              type="info"
+              variant="outlined"
+            >
+              <i18n-t keypath="Common.SignInOFFAccount" tag="span">
+                <template #url>
+                  <OpenFoodFactsLink display="link" />
+                </template>
+              </i18n-t>
+            </v-alert>
+          </v-col>
+        </v-row>
+
+        <v-row>
+          <v-col cols="12" sm="6">
+            <v-text-field
+              v-model="signinForm.username"
+              :label="$t('SignIn.UsernameLabel')"
+              type="text"
+              class="input-lowercase"
+              hide-details="auto"
+            />
+          </v-col>
+          <v-col cols="12" sm="6">
+            <v-text-field
+              v-model="signinForm.password"
+              :label="$t('SignIn.Password')"
+              :append-inner-icon="passwordVisible ? 'mdi-eye-off' : 'mdi-eye'"
+              :type="passwordVisible ? 'text' : 'password'"
+              hide-details="auto"
+              @click:append-inner="passwordVisible = !passwordVisible"
+            />
+          </v-col>
+        </v-row>
+
+        <v-row>
+          <v-col>
+            <v-btn
+              type="submit"
+              class="float-right"
+              color="success"
+              :loading="loading"
+              :disabled="!formFilled"
+            >
+              {{ $t('SignIn.Button') }}
+            </v-btn>
+          </v-col>
+        </v-row>
       </v-form>
     </v-col>
   </v-row>
@@ -54,6 +73,7 @@ export default {
         username: '',
         password: '',
       },
+      passwordVisible: false,
       loading: false,
     };
   },
