@@ -24,5 +24,9 @@ export default [
         localeDir: './i18n/locales/*.json'
       }
     },
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+    }
   },
 ]
