@@ -6,3 +6,7 @@
     content:" *";
     color: #F44336;  /* red */
 }
+
+.v-btn-group--density-compact.v-btn-group {
+    height: 28px;  /* default is 36px; match v-btn size="small" height */
+}
