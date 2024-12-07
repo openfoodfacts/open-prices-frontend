@@ -16,20 +16,31 @@
             <v-icon start>
               {{ item.icon }}
             </v-icon>
-            <span>{{ $t('Common.' + item.value) }}</span>
-            <span v-if="item.key === 'recent'">
-              <LoadedCountChip :totalCount="recentLocations.length" />
+            <span v-if="$vuetify.display.smAndUp">{{ $t('Common.' + item.value) }}</span>
+            <span v-else>
+              <span v-if="item.valueSmallScreen">{{ $t('Common.' + item.valueSmallScreen) }}</span>
             </span>
           </v-tab>
         </v-tabs>
 
         <v-tabs-window v-model="currentDisplay" disabled>
+          <v-tabs-window-item value="recent">
+            <LocationRecentChip v-for="(location, index) in recentLocations" :key="index" :location="location" :withRemoveAction="true" @click="selectLocation(location)" @click:close="removeRecentLocation(location)" />
+            <br>
+            <v-btn v-if="recentLocations.length" size="small" class="" @click="clearRecentLocations">
+              {{ $t('LocationSelector.Clear') }}
+            </v-btn>
+            <p v-else>
+              {{ $t('LocationSelector.RecentLocations', recentLocations.length) }}
+            </p>
+          </v-tabs-window-item>
+
           <v-tabs-window-item value="osm">
             <v-form v-model="locationOsmSearchFormValid" @submit.prevent="osmSearch">
               <v-text-field
                 ref="locationOsmSearchInput"
                 v-model="locationOsmSearchForm.q"
-                :label="$t('LocationSelector.SearchByName')"
+                :label="$t('Common.LocationSearchByName')"
                 :hint="$t('Common.ExamplesWithColonAndValue', { value: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359' })"
                 type="text"
                 :rules="osmSearchRules"
@@ -100,17 +111,6 @@
               </v-text-field>
             </v-form>
           </v-tabs-window-item>
-
-          <v-tabs-window-item value="recent">
-            <LocationRecentChip v-for="(location, index) in recentLocations" :key="index" :location="location" :withRemoveAction="true" @click="selectLocation(location)" @click:close="removeRecentLocation(location)" />
-            <br>
-            <v-btn v-if="recentLocations.length" size="small" class="" @click="clearRecentLocations">
-              {{ $t('LocationSelector.Clear') }}
-            </v-btn>
-            <p v-else>
-              {{ $t('LocationSelector.RecentLocations', recentLocations.length) }}
-            </p>
-          </v-tabs-window-item>
         </v-tabs-window>
       </v-card-text>
 
@@ -120,12 +120,12 @@
         <div>
           <i18n-t keypath="LocationSelector.PoweredBy.text" tag="span">
             <template #url>
-              <a
-                v-if="searchProvider === 'nominatim'" href="https://nominatim.openstreetmap.org"
-                target="_blank"
-              >Nominatim (OpenStreetMap)</a>
-              <a v-if="searchProvider === 'photon'" href="https://photon.komoot.io" target="_blank">Komoot Photon
-                (OpenStreetMap)</a>
+              <a v-if="searchProvider === 'nominatim'" :href="OSM_NOMINATIM_URL" target="_blank">
+                {{ OSM_NOMINATIM_ATTRIBUTION }}
+              </a>
+              <a v-if="searchProvider === 'photon'" :href="OSM_PHOTON_URL" target="_blank">
+                {{ OSM_PHOTON_ATTRIBUTION }}
+              </a>
             </template>
           </i18n-t>
         </div>
@@ -144,7 +144,6 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     LocationRecentChip: defineAsyncComponent(() => import('../components/LocationRecentChip.vue')),
     LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
@@ -167,7 +166,11 @@ export default {
       // config
       searchProvider: constants.LOCATION_SEARCH_PROVIDER_LIST[1].key,  // photon
       displayItems: constants.LOCATION_SELECTOR_DISPLAY_LIST,
-      currentDisplay: constants.LOCATION_SELECTOR_DISPLAY_LIST[0].key,
+      currentDisplay: constants.LOCATION_SELECTOR_DISPLAY_LIST[1].key,  // physical
+      OSM_NOMINATIM_URL: constants.OSM_NOMINATIM_URL,
+      OSM_NOMINATIM_ATTRIBUTION: constants.OSM_NOMINATIM_ATTRIBUTION,
+      OSM_PHOTON_URL: constants.OSM_PHOTON_URL,
+      OSM_PHOTON_ATTRIBUTION: constants.OSM_PHOTON_ATTRIBUTION,
     }
   },
   computed: {
