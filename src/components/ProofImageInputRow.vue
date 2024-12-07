@@ -1,32 +1,30 @@
 <template>
   <v-row>
     <v-col :cols="showProofImagePreviewList ? '8' : '12'">
-      <h3 class="required mb-1">
-        {{ $t('Common.Image') }}
-      </h3>
-
-      <!-- User buttons -->
-      <v-btn
-        class="mb-2 mr-2" size="small" prepend-icon="mdi-camera" :loading="loading"
-        :disabled="loading" @click.prevent="$refs.proofCamera.click()"
-      >
-        <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
-        <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
-      </v-btn>
-      <v-btn
-        class="mb-2 mr-2" size="small" prepend-icon="mdi-image-plus" :loading="loading"
-        :disabled="loading" @click.prevent="$refs.proofGallery.click()"
-      >
-        <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
-        <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
-      </v-btn>
-      <v-btn
-        v-if="!hideRecentProofChoice" class="mb-2" size="small" prepend-icon="mdi-receipt-text-clock" :loading="loading"
-        :disabled="loading" @click="userRecentProofsDialog = true"
-      >
-        <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
-        <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
-      </v-btn>
+      <v-menu scroll-strategy="close" :disabled="loading">
+        <template #activator="{ props }">
+          <v-btn v-bind="props" size="small" prepend-icon="mdi-image" append-icon="mdi-menu-down" :style="hasProofImageSelected ? 'border: 1px solid #4CAF50' : 'border: 1px solid #F44336'">
+            <span v-if="hasProofImageSelected">{{ $t('Common.ProofSelectedCount', { count: proofImagePreviewList.length }) }}</span>
+            <span v-else>{{ $t('Common.ProofSelect') }}</span>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item :slim="true" prepend-icon="mdi-camera" @click.prevent="$refs.proofCamera.click()">
+            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Picture') }}</span>
+            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.TakePicture') }}</span>
+          </v-list-item>
+          <v-divider class="mt-2 mb-2" />
+          <v-list-item :slim="true" prepend-icon="mdi-image-plus" @click.prevent="$refs.proofGallery.click()">
+            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
+            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
+          </v-list-item>
+          <v-divider class="mt-2 mb-2" />
+          <v-list-item :slim="true" prepend-icon="mdi-receipt-text-clock" @click="userRecentProofsDialog = true">
+            <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
+            <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
+          </v-list-item>
+        </v-list>
+      </v-menu>
 
       <!-- Hidden inputs -->
       <v-file-input
@@ -37,12 +35,6 @@
         ref="proofGallery" v-model="proofImageList" class="d-none overflow-hidden" accept="image/*, .heic"
         :multiple="multiple" :loading="loading" @click:clear="clearProof"
       />
-
-      <!-- pending or success message -->
-      <p v-if="!loading" class="mb-2">
-        <i v-if="!hasProofImageSelected" class="text-red">{{ $t('ProofCreate.SelectProof') }}</i>
-        <i v-else class="text-green">{{ $t('ProofCreate.ProofSelected') }}</i>
-      </p>
 
       <!-- RECEIPT: warning message -->
       <v-alert
