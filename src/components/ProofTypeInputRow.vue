@@ -1,17 +1,11 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <h3 class="required mb-1">
-        {{ $t('Common.Type') }}
-      </h3>
-      <v-item-group v-model="proofTypeForm.type" class="d-inline" mandatory>
-        <v-item v-for="pt in proofTypeList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
-          <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
-            <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
-            {{ $t('ProofCard.' + pt.value) }}
-          </v-chip>
-        </v-item>
-      </v-item-group>
+      <v-btn-group divided density="compact" elevation="1" :style="proofTypeForm.type ? '' : 'border: 1px solid #F44336'">
+        <v-btn v-for="pt in proofTypeList" :key="pt.key" size="small" :value="pt.key" :prepend-icon="pt.icon" :style="isSelectedType(pt.key) ? 'border: 1px solid #4CAF50' : ''" @click="proofTypeForm.type = pt.key">
+          {{ $t('ProofCard.' + pt.value) }}
+        </v-btn>
+      </v-btn-group>
     </v-col>
   </v-row>
 </template>
@@ -29,6 +23,11 @@ export default {
   data() {
     return {
       proofTypeList: constants.PROOF_TYPE_LIST,
+    }
+  },
+  methods: {
+    isSelectedType(proofType) {
+      return this.proofTypeForm.type === proofType
     }
   }
 }
