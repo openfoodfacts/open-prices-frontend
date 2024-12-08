@@ -18,8 +18,8 @@
             <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.Gallery') }}</span>
             <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectFromGallery') }}</span>
           </v-list-item>
-          <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-receipt-text-clock" @click="userRecentProofsDialog = true">
+          <v-divider v-if="!hideRecentProofChoice" class="mt-2 mb-2" />
+          <v-list-item v-if="!hideRecentProofChoice" :slim="true" prepend-icon="mdi-receipt-text-clock" @click="userRecentProofsDialog = true">
             <span class="d-sm-none">{{ $t('AddPriceSingle.PriceDetails.RecentProof') }}</span>
             <span class="d-none d-sm-inline-flex">{{ $t('AddPriceSingle.PriceDetails.SelectRecentProof') }}</span>
           </v-list-item>

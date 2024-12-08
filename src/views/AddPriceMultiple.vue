@@ -242,7 +242,7 @@ export default {
     initNewProductPriceForm() {
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))  // deep copy
-      this.productPriceForm.type = this.appStore.user.last_product_mode_used  // can be overriden in ProductInputRow
+      this.productPriceForm.type = this.appStore.user.last_product_type_used  // can be overriden in ProductInputRow
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.productPriceForm.currency = this.addPriceMultipleForm.currency || this.appStore.getUserLastCurrencyUsed  // get currency from proof first
       // scroll to the form

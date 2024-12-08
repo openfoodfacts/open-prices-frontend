@@ -159,7 +159,7 @@ export default {
   createPrice(inputData, source = null) {
     const data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS)
     const store = useAppStore()
-    store.user.last_product_mode_used = data.product_code ? 'barcode' : 'category'
+    store.user.last_product_product_used = data.product_code ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({'app_version': source})}`
     return fetch(url, {
       method: 'POST',

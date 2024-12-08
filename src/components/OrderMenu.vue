@@ -6,7 +6,7 @@
       </v-btn>
     </template>
     <v-list>
-      <v-list-item class="d-sm-none" :slim="true" disabled>
+      <v-list-item class="d-sm-none text-uppercase" :slim="true" disabled>
         {{ $t('Common.Order') }}
       </v-list-item>
       <v-divider class="d-sm-none" />

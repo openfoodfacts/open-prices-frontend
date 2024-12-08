@@ -1,6 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable">
-    <v-icon start icon="mdi-image" />
+  <v-chip label size="small" :prepend-icon="getProofTypeIcon" density="comfortable">
     <span v-if="proof.type === 'GDPR_REQUEST'">
       <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">
         {{ proofTypeName }}
@@ -15,6 +14,7 @@
 
 <script>
 import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   props: {
@@ -29,6 +29,9 @@ export default {
     }
   },
   computed: {
+    getProofTypeIcon() {
+      return utils.getProofTypeIcon(this.proof.type)
+    },
     proofTypeName() {
       return this.$t(`ProofCard.${this.proof.type}`)
     }

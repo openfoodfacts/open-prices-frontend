@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import utils from '../utils.js'
 import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   props: {
