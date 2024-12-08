@@ -5,16 +5,16 @@
         {{ $t('Common.Product') }}
       </h3>
       <h3 class="mb-2">
-        <v-item-group v-model="productForm.mode" class="d-inline" mandatory @update:modelValue="setMode($event)">
-          <v-item v-for="pm in productModeList" :key="pm.key" v-slot="{ isSelected, toggle }" :value="pm.key">
+        <v-item-group v-model="productForm.type" class="d-inline" mandatory @update:modelValue="setType($event)">
+          <v-item v-for="pm in productTypeList" :key="pm.key" v-slot="{ isSelected, toggle }" :value="pm.key">
             <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
               <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
-              {{ pm.value }}
+              {{ $t('Common.' + pm.value) }}
             </v-chip>
           </v-item>
         </v-item-group>
       </h3>
-      <v-sheet v-if="productForm.mode === 'barcode'">
+      <v-sheet v-if="productForm.type === 'PRODUCT'">
         <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScannerDialog">
           <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.ScanBarcodeShort') }}</span>
           <span class="d-none d-sm-inline-flex">{{ $t('Common.BarcodeScan') }}</span>
@@ -25,7 +25,7 @@
         </v-btn>
         <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductActions="true" :readonly="true" elevation="1" />
       </v-sheet>
-      <v-sheet v-if="productForm.mode === 'category'">
+      <v-sheet v-if="productForm.type === 'CATEGORY'">
         <v-row>
           <v-col cols="6">
             <v-autocomplete
@@ -83,6 +83,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 import LabelsTags from '../data/labels-tags.json'
 
@@ -95,9 +96,9 @@ export default {
   props: {
     productForm: {
       type: Object,
-      default: () => ({ mode: '', product: null, product_code: '', category_tag: null, origins_tags: '', labels_tags: [] })
+      default: () => ({ type: '', product: null, product_code: '', category_tag: null, origins_tags: '', labels_tags: [] })
     },
-    disableInitWhenSwitchingModes: {
+    disableInitWhenSwitchingType: {
       type: Boolean,
       default: () => false
     }
@@ -105,10 +106,7 @@ export default {
   emits: ['filled'],
   data() {
     return {
-      productModeList: [
-        {key: 'barcode', value: this.$t('AddPriceSingle.ProductModeList.Barcode'), icon: 'mdi-barcode-scan'},
-        {key: 'category', value: this.$t('AddPriceSingle.ProductModeList.Category'), icon: 'mdi-basket-outline'}
-      ],
+      productTypeList: constants.PRICE_TYPE_LIST,
       categoryTags: [],  // list of category tags for autocomplete  // see initPriceMultipleForm
       originTags: [],  // list of origins tags for autocomplete  // see initPriceMultipleForm
       labelsTags: LabelsTags,
@@ -141,11 +139,11 @@ export default {
   mounted() {
     if (this.$route.query.code) {
       if (this.$route.query.code.startsWith('en')) {
-        this.productForm.mode = 'category'
+        this.productForm.type = 'CATEGORY'
         this.productForm.category_tag = this.$route.query.code
       }
       else {
-        this.productForm.mode = 'barcode'
+        this.productForm.type = 'PRODUCT'
         this.productForm.product_code = this.$route.query.code
       }
     }
@@ -155,7 +153,7 @@ export default {
     utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
       this.originTags = module.default
     })
-    this.productForm.mode = this.productForm.mode ? this.productForm.mode : (this.productForm.product_code ? 'barcode' : this.appStore.user.last_product_mode_used)
+    this.productForm.type = this.productForm.type ? this.productForm.type : (this.productForm.product_code ? 'PRODUCT' : this.appStore.user.last_product_mode_used)
     if (this.productForm.product_code) {
       this.getProduct(this.productForm.product_code)
     }
@@ -174,9 +172,9 @@ export default {
       this.productForm.origins_tags = ''
       this.productForm.labels_tags = []
     },
-    setMode(mode) {
-      this.productForm.mode = mode
-      if (!this.disableInitWhenSwitchingModes) {
+    setType(type) {
+      this.productForm.type = type
+      if (!this.disableInitWhenSwitchingType) {
         this.initProductForm()
       }
     },

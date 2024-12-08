@@ -19,7 +19,7 @@
     <v-card-text>
       <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingModes="true" @filled="productFormFilled = $event" />
       <v-alert
-        v-if="productPriceForm.mode === 'barcode'"
+        v-if="productPriceForm.type === 'PRODUCT'"
         class="mb-2"
         type="info"
         variant="plain"
@@ -31,7 +31,7 @@
           <h3 class="required mb-1">
             Price
           </h3>
-          <h3 v-if="productPriceForm.mode == 'category'" class="mb-1">
+          <h3 v-if="productPriceForm.type == 'CATEGORY'" class="mb-1">
             <v-item-group v-model="productPriceForm.price_per" class="d-inline" mandatory>
               <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
                 <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">

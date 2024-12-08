@@ -277,11 +277,11 @@ export default {
           proof_id: this.proofForm.id
         }
         // Cleanup unwanted fields for API
-        if (productPriceForm.mode == 'barcode') {
+        if (productPriceForm.type == 'PRODUCT') {
           delete priceData.price_per
           delete priceData.category_tag
           delete priceData.origins_tags
-        } else if (productPriceForm.mode == 'category') {
+        } else if (productPriceForm.type == 'CATEGORY') {
           delete priceData.product_code
           delete priceData.product
         }

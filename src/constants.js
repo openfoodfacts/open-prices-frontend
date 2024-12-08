@@ -6,6 +6,10 @@ const OPFF_NAME = 'Open Pet Food Facts'
 const OPFF_ICON = 'mdi-paw'
 const OPF_NAME = 'Open Products Facts'
 const OPF_ICON = 'mdi-bookshelf'
+const PRICE_TYPE_PRODUCT = 'PRODUCT'
+const PRICE_TYPE_PRODUCT_ICON = 'mdi-barcode-scan'
+const PRICE_TYPE_CATEGORY = 'CATEGORY'
+const PRICE_TYPE_CATEGORY_ICON = 'mdi-basket-outline'
 const PROOF_TYPE_PRICE_TAG = 'PRICE_TAG'
 const PROOF_TYPE_PRICE_TAG_ICON = 'mdi-library-shelves'
 const PROOF_TYPE_RECEIPT = 'RECEIPT'
@@ -52,9 +56,13 @@ export default {
   OPF_NAME: OPF_NAME,
   OPF_URL: 'https://world.openproductsfacts.org',
   OPF_ICON: OPF_ICON,
+  SOURCE_PARAM: 'source',
+  PRICE_TYPE_LIST: [
+    {key: PRICE_TYPE_PRODUCT, value: 'Barcode', icon: PRICE_TYPE_PRODUCT_ICON},
+    {key: PRICE_TYPE_CATEGORY, value: 'Category', icon: PRICE_TYPE_CATEGORY_ICON}
+  ],
   PRODUCT_QUANTITY_UNIT_G: 'g',
   PRODUCT_QUANTITY_UNIT_ML: 'ml',
-  SOURCE_PARAM: 'source',
   PRODUCT_SOURCE_LIST: [
     { key: 'off', value: OFF_NAME, icon: OFF_ICON },
     { key: 'obf', value: OBF_NAME, icon: OBF_ICON },
