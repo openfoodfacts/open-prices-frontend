@@ -109,7 +109,7 @@ export default {
       proofType: 'PRICE_TAG',
       // price form
       addPriceSingleForm: {
-        mode: '',
+        type: '',
         product: null,
         product_code: '',
         category_tag: null,

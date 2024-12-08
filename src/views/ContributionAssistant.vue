@@ -234,10 +234,10 @@ export default {
         const barcodeString = label.barcode ? label.barcode.toString().replace(/\s/g, '') : ''
         // TODO: some of these will be None if gemini did not give a proper reply, so detection and error handling is needed
         const productPriceForm = {
-          mode: barcodeString.length > 10 ? 'barcode' : 'category',
+          type: barcodeString.length > 10 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY,
           category_tag: label.product,
           origins_tags: [label.origin],
-          labels_tags: label.organic ? ["en:organic"] : [],
+          labels_tags: label.organic ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : [],
           price: label.price.toString(),
           price_per: label.unit,
           price_is_discounted: false,
@@ -277,12 +277,12 @@ export default {
           proof_id: this.proofForm.id
         }
         // Cleanup unwanted fields for API
-        if (productPriceForm.type == 'PRODUCT') {
+        if (productPriceForm.type == constants.PRICE_TYPE_PRODUCT) {
           delete priceData.price_per
           delete priceData.category_tag
           delete priceData.origins_tags
           delete priceData.labels_tags
-        } else if (productPriceForm.type == 'CATEGORY') {
+        } else if (productPriceForm.type == constants.PRICE_TYPE_CATEGORY) {
           delete priceData.product_code
           delete priceData.product
         }
