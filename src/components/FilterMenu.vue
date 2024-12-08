@@ -7,7 +7,7 @@
     </template>
     <v-list>
       <!-- title -->
-      <v-list-item class="d-sm-none" :slim="true" disabled>
+      <v-list-item class="d-sm-none text-uppercase" :slim="true" disabled>
         {{ $t('Common.Filter') }}
       </v-list-item>
       <v-divider class="d-sm-none" />
@@ -33,7 +33,7 @@
         </v-list-subheader>
         <v-list-item v-for="item in proofTypeList" :key="item.key" :slim="true" :active="currentType === item.key" @click="selectType(item.key)">
           <v-icon>{{ item.icon }}</v-icon>
-          {{ item.value }}
+          {{ $t('ProofCard.' + item.value) }}
         </v-list-item>
       </v-sheet>
       <v-sheet v-if="showLocationTypeFilter">
