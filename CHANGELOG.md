@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.96.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.4...v1.96.5) (2024-12-08)
+
+
+### Bug Fixes
+
+* **Price add:** fix init Product type (via store). ref [#1099](https://github.com/openfoodfacts/open-prices-frontend/issues/1099) ([675130d](https://github.com/openfoodfacts/open-prices-frontend/commit/675130d5048a3a8cfdd0bfd7bddb9c7f8444812d))
+* **Price add:** Proof image: hide recent proof on some pages. ref [#1093](https://github.com/openfoodfacts/open-prices-frontend/issues/1093) ([bf01fc7](https://github.com/openfoodfacts/open-prices-frontend/commit/bf01fc7c36b02a48c88c6abd2317d95eb052264d))
+
+
+### Technical
+
+* change proof type icon depending on type ([dc5e3ba](https://github.com/openfoodfacts/open-prices-frontend/commit/dc5e3ba0e981d6e1b1eab8de94d05d38794f18e9))
+* **l10n:** New Crowdin translations to review and merge ([#1100](https://github.com/openfoodfacts/open-prices-frontend/issues/1100)) ([ddeb1e8](https://github.com/openfoodfacts/open-prices-frontend/commit/ddeb1e8712ecbf19f3c62ad9edc692e480806821))
+* **l10n:** New Crowdin translations to review and merge ([#1103](https://github.com/openfoodfacts/open-prices-frontend/issues/1103)) ([27d94a8](https://github.com/openfoodfacts/open-prices-frontend/commit/27d94a883e086b61e6bd49117ca588246c9a62f6))
+* **Price add:** new Product form input (single button) ([#1102](https://github.com/openfoodfacts/open-prices-frontend/issues/1102)) ([79d4d26](https://github.com/openfoodfacts/open-prices-frontend/commit/79d4d262bf7e427c87e04be2861e19d680c78cc6))
+* set dropdown menu titles uppercase ([6a5e77b](https://github.com/openfoodfacts/open-prices-frontend/commit/6a5e77b1cd3f31452b5cc7fa57be1c07fdfb2fdc))
+
 ## [1.96.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.3...v1.96.4) (2024-12-08)
 
 
