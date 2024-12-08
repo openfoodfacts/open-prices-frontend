@@ -220,6 +220,10 @@ function getLocaleOriginTags(locale) {
   return import(`./data/origins/${locale}.json`)
 }
 
+function getProofTypeIcon(proofType) {
+  return constants[`PROOF_TYPE_${proofType}_ICON`] || 'mdi-image'
+}
+
 function getCountryEmojiFromName(countryString) {
   const country = CountriesWithEmoji.find(c => c.name === countryString || (c.name_original && c.name_original.length && c.name_original.includes(countryString)))
   return country ? country.emoji : null
@@ -393,11 +397,7 @@ function getLocationONLINETitle(locationObject) {
 // OP location
 function getLocationIcon(locationObject) {
   if (locationObject) {
-    if (locationObject.type === constants.LOCATION_TYPE_OSM) {
-      return constants.LOCATION_TYPE_OSM_ICON
-    } else if (locationObject.type === constants.LOCATION_TYPE_ONLINE) {
-      return constants.LOCATION_TYPE_ONLINE_ICON
-    }
+    return constants[`LOCATION_TYPE_${locationObject.type}_ICON`] || constants.LOCATION_UNKNOWN_ICON
   }
   return constants.LOCATION_UNKNOWN_ICON
 }
@@ -426,6 +426,7 @@ export default {
   getLocaleCategoryTag,
   getLocaleCategoryTagName,
   getLocaleOriginTags,
+  getProofTypeIcon,
   getCountryEmojiFromName,
   getCountryEmojiFromCode,
   getLocationOSMTitle,
