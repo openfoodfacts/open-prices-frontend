@@ -2,18 +2,53 @@
   <v-dialog scrollable max-height="80%" min-width="50%">
     <v-card>
       <v-card-title>
-        {{ $t('Common.BarcodeScan') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
+        {{ $t('Common.ProductFind') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
       </v-card-title>
 
       <v-divider />
 
       <v-card-text>
-        <div id="reader" width="500px" />
+        <v-tabs v-model="currentDisplay">
+          <v-tab v-for="item in displayItems" :key="item.key" :value="item.key">
+            <v-icon start>
+              {{ item.icon }}
+            </v-icon>
+            <span v-if="$vuetify.display.smAndUp">{{ $t('Common.' + item.value) }}</span>
+            <span v-else>
+              <span v-if="item.valueSmallScreen">{{ $t('Common.' + item.valueSmallScreen) }}</span>
+            </span>
+          </v-tab>
+        </v-tabs>
+
+        <v-tabs-window v-model="currentDisplay" disabled>
+          <v-tabs-window-item value="scan">
+            <div id="reader" width="500px" />
+          </v-tabs-window-item>
+
+          <v-tabs-window-item value="type">
+            <v-form @submit.prevent="onSubmit">
+              <v-text-field
+                ref="barcodeInput"
+                v-model="barcodeForm.barcode"
+                :label="$t('BarcodeManualInput.Barcode')"
+                type="number"
+                inputmode="numeric"
+                prepend-inner-icon="mdi-barcode"
+                :hint="barcodeForm.barcode.length.toString()"
+                persistent-hint
+              >
+                <template #append-inner>
+                  <v-icon icon="mdi-plus" :disabled="!formFilled" @click="onSubmit" />
+                </template>
+              </v-text-field>
+            </v-form>
+          </v-tabs-window-item>
+        </v-tabs-window>
       </v-card-text>
 
-      <v-divider />
+      <v-divider v-if="currentDisplay === 'scan'" />
 
-      <v-card-actions class="justify-end">
+      <v-card-actions v-if="currentDisplay === 'scan'" class="justify-end">
         <div>
           <i18n-t keypath="BarcodeScanner.Htlm5-qrcode.Text" tag="span">
             <template #url>
@@ -28,6 +63,7 @@
 
 <script>
 import { Html5Qrcode, Html5QrcodeScanType } from 'html5-qrcode'
+import constants from '../constants'
 
 const config = {
   fps: 10,
@@ -39,16 +75,37 @@ const config = {
 }
 
 export default {
+  props: {
+    preFillValue: {
+      type: String,
+      default: ''
+    }
+  },
   emits: ['barcode', 'close'],
   data() {
     return {
       scanner: null,
+      barcodeForm: {
+        barcode: '',
+      },
+      // config
+      displayItems: constants.PRODUCT_SELECTOR_DISPLAY_LIST,
+      currentDisplay: constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key,  // scan
       HTML5_QRCODE_URL: 'https://github.com/mebjas/html5-qrcode',
       HTML5_QRCODE_NAME: 'html5-qrcode'
     }
   },
+  computed: {
+    formFilled() {
+      return Object.values(this.barcodeForm).every(x => !!x)
+    }
+  },
   mounted() {
     this.createQrcodeScanner()
+    if (this.preFillValue) {
+      this.barcodeForm.barcode = this.preFillValue
+    }
+    // this.$refs.barcodeInput.focus()
   },
   methods: {
     createQrcodeScanner() {
@@ -61,6 +118,10 @@ export default {
     },
     onScanFailure(error) {  // eslint-disable-line no-unused-vars
       // console.warn(`Code scan error = ${error}`)
+    },
+    onSubmit() {
+      this.$emit('barcode', this.barcodeForm.barcode)
+      this.close()
     },
     close() {
       // https://scanapp.org/html5-qrcode-docs/docs/apis/enums/Html5QrcodeScannerState

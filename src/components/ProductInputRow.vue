@@ -14,20 +14,15 @@
           </v-item-group>
         </v-col>
       </v-row>
-      <v-row v-if="productForm.type === 'PRODUCT'">
+      <v-row v-if="productForm.type === 'PRODUCT'" class="mt-0">
         <v-col>
-          <v-btn class="mb-2 mr-2" size="small" prepend-icon="mdi-barcode-scan" @click="showBarcodeScannerDialog">
-            <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.ScanBarcodeShort') }}</span>
-            <span class="d-none d-sm-inline-flex">{{ $t('Common.BarcodeScan') }}</span>
-          </v-btn>
-          <v-btn class="mb-2" size="small" prepend-icon="mdi-numeric" @click.prevent="showBarcodeManualInputDialog">
-            <span class="d-sm-none">{{ $t('AddPriceSingle.ProductInfo.TypeBarcodeShort') }}</span>
-            <span class="d-none d-sm-inline-flex">{{ $t('Common.BarcodeType') }}</span>
+          <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
+            {{ $t('Common.ProductFind') }}
           </v-btn>
           <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductActions="true" :readonly="true" elevation="1" />
         </v-col>
       </v-row>
-      <v-row v-if="productForm.type === 'CATEGORY'">
+      <v-row v-if="productForm.type === 'CATEGORY'" class="mt-0">
         <v-col cols="6">
           <v-autocomplete
             v-model="productForm.category_tag"
@@ -65,15 +60,9 @@
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
     v-model="barcodeScannerDialog"
-    @barcode="setProductCode($event)"
-    @close="barcodeScannerDialog = false"
-  />
-  <BarcodeManualInputDialog
-    v-if="barcodeManualInputDialog"
-    v-model="barcodeManualInputDialog"
     :preFillValue="productForm.product_code"
     @barcode="setProductCode($event)"
-    @close="barcodeManualInputDialog = false"
+    @close="barcodeScannerDialog = false"
   />
 </template>
 
@@ -90,7 +79,6 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
-    BarcodeManualInputDialog: defineAsyncComponent(() => import('../components/BarcodeManualInputDialog.vue')),
   },
   props: {
     productForm: {
@@ -110,7 +98,6 @@ export default {
       originTags: [],  // list of origins tags for autocomplete  // see initPriceMultipleForm
       labelsTags: LabelsTags,
       barcodeScannerDialog: false,
-      barcodeManualInputDialog: false,
     }
   },
   computed: {
@@ -160,9 +147,6 @@ export default {
   methods: {
     showBarcodeScannerDialog() {
       this.barcodeScannerDialog = true
-    },
-    showBarcodeManualInputDialog() {
-      this.barcodeManualInputDialog = true
     },
     initProductForm() {
       this.productForm.product = null
