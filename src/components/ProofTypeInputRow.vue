@@ -6,7 +6,7 @@
           <v-chip class="mr-1" :class="isSelected ? 'border-success' : ''" variant="outlined" @click="toggle">
             <v-icon start :icon="pt.icon" />
             {{ $t('ProofCard.' + pt.value) }}
-            <v-icon v-if="isSelected" end icon="mdi-checkbox-marked-circle" color="green" />
+            <v-icon end :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" :color="isSelected ? 'green' : ''" />
           </v-chip>
         </v-item>
       </v-item-group>
