@@ -1,11 +1,13 @@
 <template>
   <v-row>
     <v-col cols="6">
-      <h3 class="required mb-1">
-        {{ $t('Common.Date') }}
-      </h3>
+      <v-btn size="small" prepend-icon="mdi-calendar-today" :class="proofMetadataForm.date ? 'border-success' : 'border-error'" @click.prevent="$refs.proofDate.showCalendar()">
+        {{ proofMetadataForm.date }}
+      </v-btn>
       <v-text-field
+        ref="proofDate"
         v-model="proofMetadataForm.date"
+        class="d-none overflow-hidden"
         :label="$t('Common.Date')"
         type="date"
         :max="currentDate"
