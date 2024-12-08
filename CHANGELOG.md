@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.96.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.5...v1.96.6) (2024-12-08)
+
+
+### Bug Fixes
+
+* **ContributionAssistant:** fix barcode or category selection. closes [#1104](https://github.com/openfoodfacts/open-prices-frontend/issues/1104) ([9bb39b2](https://github.com/openfoodfacts/open-prices-frontend/commit/9bb39b28ed6d6cb813af7284b02819f3236f43f9))
+
 ## [1.96.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.4...v1.96.5) (2024-12-08)
 
 
