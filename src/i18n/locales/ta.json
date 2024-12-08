@@ -134,16 +134,6 @@
 		"Submit": "Submit",
 		"Title": "Type a barcode"
 	},
-	"BrandDetail": {
-		"LoadMore": "Load more",
-		"TopProducts": "Top products",
-		"BrandProductTotal": "{count} தயாரிப்புகள்"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Load more",
-		"TopProducts": "Top products",
-		"CategoryProductTotal": "{count} தயாரிப்புகள்"
-	},
 	"Common": {
 		"About": "இதைப் பற்றி",
 		"AddPrice": "Add a price",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Type a barcode",
 		"BarcodeInvalid": "Invalid barcode",
 		"Brand": "தர அடையாளம்",
+		"Brands": "Brands",
+		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Price",
 		"Prices": "Prices",
 		"Product": "Product",
@@ -163,8 +155,10 @@
 		"Proofs": "Proofs",
 		"Category": "வகை",
 		"Categories": "Categories",
+		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Chart": "Chart",
 		"Contributors": "Contributors",
+		"Community": "Community",
 		"Country": "Country",
 		"Currency": "Currency",
 		"CurrencyMissing": "நாணயத்தைக் காணவில்லை",
@@ -179,6 +173,7 @@
 		"Experiments": "Experiments",
 		"Label": "Label",
 		"Labels": "Labels",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Languages",
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
@@ -186,7 +181,12 @@
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "இடங்கள்",
+		"LocationSelected": "Location selected",
+		"LocationShop": "Find your location",
+		"LocationFindShop": "உங்கள் கடையின் இருப்பிடத்தைக் கண்டறியவும்",
 		"LocationMissing": "Location missing",
+		"LocationSearchShopByName": "பெயர் மற்றும் நகரம் மூலம் உங்கள் கடையைத் தேடுங்கள்",
+		"LocationSearchByName": "Search by name and city",
 		"Date": "Date",
 		"DateMissing": "தேதியைக் காணவில்லை",
 		"Details": "Details",
@@ -217,7 +217,7 @@
 		"ImageFull": "Full-size image",
 		"Latest": "சமீபத்திய",
 		"LinkCopySuccess": "லிங்க் காப்பி ஆகிவிட்டது",
-		"LocationCount": "{count} இடங்கள்",
+		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Map",
 		"Offline": "Offline",
 		"Online": "ஆன்லைன்",
@@ -236,16 +236,25 @@
 		"OrderUserCountDESC": "User count",
 		"PersonalInfo": "தனிப்பட்ட தகவல்",
 		"Physical": "Physical",
-		"PriceCount": "{count} prices",
+		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceCreated": "Price created!",
 		"PricesMore": "More prices",
-		"ProductCount": "{count} தயாரிப்புகள்",
-		"ProofCount": "{count} சான்றுகள்",
+		"Private": "Private",
+		"Privacy": "Privacy",
+		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"ProofMissing": "Proof missing",
+		"ProofSelect": "Select a proof",
+		"ProofSelected": "Proof selected!",
+		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"Public": "Public",
 		"Receipt": "Receipt",
 		"Receipts": "ரசீதுகள்",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"Recent": "சமீபத்திய",
+		"Reuses": "Reuses",
+		"ReusesKnown": "Known reuses",
 		"Search": "தேடுக",
 		"Settings": "அமைப்புகள்",
 		"SignInOFFAccount": "உங்கள் Mi {url} கணக்கிற்குள் உள்நுழைக",
@@ -278,7 +287,8 @@
 		"URLInvalid": "Invalid URL",
 		"User": "பயனர்",
 		"Users": "பயனர்",
-		"UserCount": "{count} users",
+		"UserCount": "{count} users | {count} user | {count} users",
+		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "View",
 		"Website": "Website",
 		"Yes": "ஆம்",
@@ -286,6 +296,10 @@
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
@@ -330,11 +344,6 @@
 		"LoadMore": "Load more",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
-	"LocationList": {
-		"Title": "Top locations",
-		"LoadMore": "Load more",
-		"LocationTotal": "{count} இடங்கள்"
-	},
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
@@ -360,9 +369,6 @@
 		"Proof": "Proof",
 		"FullPrice": "Full price",
 		"UnknownProduct": "Unknown product"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} prices"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -423,14 +429,6 @@
 		"LoadMore": "Load more",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "Hide products with prices",
-		"LoadMore": "Load more",
-		"PriceNumber": "Number of prices added",
-		"ScanNumber": "Number of scans added",
-		"Title": "Top products",
-		"ProductTotal": "{count} தயாரிப்புகள்"
-	},
 	"ProofCard": {
 		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
@@ -484,6 +482,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "பல சான்றுகளைச் சேர்க்கவும்"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "Experiments"

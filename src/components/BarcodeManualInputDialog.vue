@@ -18,15 +18,11 @@
             prepend-inner-icon="mdi-barcode"
             :hint="barcodeForm.barcode.length.toString()"
             persistent-hint
-          />
-
-          <v-btn
-            type="submit"
-            class="mt-2"
-            :disabled="!formFilled"
           >
-            {{ $t('BarcodeManualInput.Submit') }}
-          </v-btn>
+            <template #append-inner>
+              <v-icon icon="mdi-plus" :disabled="!formFilled" @click="onSubmit" />
+            </template>
+          </v-text-field>
         </v-form>
       </v-card-text>
     </v-card>

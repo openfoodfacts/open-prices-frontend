@@ -1,16 +1,12 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <h3 class="required mb-1">
-        {{ $t('AddPriceSingle.WhereWhen.Location') }}
-      </h3>
-      <LocationRecentChip v-for="(location, index) in recentLocations" :key="index" :location="location" :currentLocation="locationForm" @click="setLocationData(location)" />
-      <br v-if="recentLocations.length">
-      <v-btn class="mb-2" size="small" prepend-icon="mdi-magnify" @click="locationSelectorDialog = true">
-        {{ $t('AddPriceSingle.WhereWhen.Find') }}
+      <v-btn size="small" :prepend-icon="LOCATION_TYPE_OSM_ICON" :class="selectedLocation ? 'border-success' : 'border-error'" @click="locationSelectorDialog = true">
+        <span v-if="selectedLocation">{{ $t('Common.LocationSelected') }}</span>
+        <span v-else>{{ $t('Common.LocationFindShop') }}</span>
       </v-btn>
-      <p v-if="!locationFormFilled" class="text-red mb-2">
-        <i>{{ $t('AddPriceSingle.WhereWhen.SelectLocation') }}</i>
+      <p v-if="selectedLocation">
+        <i>{{ getLocationTitle }}</i>
       </p>
     </v-col>
   </v-row>
@@ -28,10 +24,10 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import utils from '../utils.js'
+import constants from '../constants'
 
 export default {
   components: {
-    LocationRecentChip: defineAsyncComponent(() => import('../components/LocationRecentChip.vue')),
     LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
   },
   props: {
@@ -43,15 +39,13 @@ export default {
         location_osm_type: null
       })
     },
-    maxRecentLocations: {
-      type: Number,
-      default: 3
-    }
   },
   data() {
     return {
+      selectedLocation: null,
       locationSelectorDialog: false,
       loading: false,
+      LOCATION_TYPE_OSM_ICON: constants.LOCATION_TYPE_OSM_ICON,
     }
   },
   computed: {
@@ -64,9 +58,13 @@ export default {
       let keysONLINE = ['location_id']
       return Object.keys(this.locationForm).filter(k => keysOSM.includes(k)).every(k => !!this.locationForm[k]) || Object.keys(this.locationForm).filter(k => keysONLINE.includes(k)).every(k => !!this.locationForm[k])
     },
+    getLocationTitle() {
+      if (this.selectedLocation.type === 'ONLINE') return this.selectedLocation.website_url
+      return utils.getLocationOSMTitle(this.selectedLocation, true, true, true)
+    },
   },
   mounted() {
-    this.initLocationForm()
+    // this.initLocationForm()
   },
   methods: {
     initLocationForm() {
@@ -78,6 +76,7 @@ export default {
       this.locationSelectorDialog = true
     },
     setLocationData(location) {
+      this.selectedLocation = location
       this.appStore.addRecentLocation(location)
       // update locationForm
       if (location.id && location.type === 'ONLINE') {

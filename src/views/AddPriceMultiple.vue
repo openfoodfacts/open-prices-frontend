@@ -21,32 +21,7 @@
 
     <v-col v-if="proofFormFilled" cols="12" md="6">
       <!-- Step 2a: product prices already uploaded -->
-      <v-card
-        v-if="productPriceUploadedCount"
-        class="mb-4"
-        prepend-icon="mdi-tag-check-outline"
-        style="border: 1px solid #4CAF50"
-      >
-        <template #title>
-          <i18n-t keypath="AddPriceMultiple.ProductPriceDetails.AlreadyUploaded" :plural="productPriceUploadedCount" tag="span">
-            <template #priceAlreadyUploadedNumber>
-              <span>{{ productPriceUploadedCount }}</span>
-            </template>
-          </i18n-t>
-        </template>
-        <template #append>
-          <v-icon icon="mdi-checkbox-marked-circle" color="success" />
-        </template>
-        <v-divider />
-        <v-card-text>
-          <v-row>
-            <v-col v-for="productPriceUploaded in proofPriceUploadedList" :key="productPriceUploaded" cols="12">
-              <PriceCard :price="productPriceUploaded" :product="productPriceUploaded.product" :hideProductBarcode="false" :hidePriceFooterRow="true" :readonly="true" />
-            </v-col>
-          </v-row>
-        </v-card-text>
-        <v-overlay v-model="disablePriceAlreadyUploadedCard" scrim="#E8F5E9" contained persistent />
-      </v-card>
+      <PriceAlreadyUploadedListCard :proof="proofObject" :proofPriceUploadedList="proofPriceUploadedList" />
 
       <!-- Step 2b: new product price form -->
       <v-btn
@@ -61,6 +36,7 @@
       </v-btn>
       <v-form v-else @submit.prevent="createPrice">
         <v-card
+          id="product-price-form"
           class="mb-4"
           :title="$t('AddPriceMultiple.ProductPriceDetails.NewPrice')"
           prepend-icon="mdi-tag-plus-outline"
@@ -73,7 +49,7 @@
           <v-divider />
           <v-card-text>
             <ProductInputRow :productForm="productPriceForm" @filled="productFormFilled = $event" />
-            <v-row v-if="productFormFilled && existingProductFound" class="mt-0 pb-2">
+            <v-row v-if="productFormFilled && existingProductFound" class="mt-0">
               <v-col>
                 <v-alert data-name="existing-product-alert" type="warning" variant="outlined" icon="mdi-alert">
                   <p>
@@ -88,7 +64,7 @@
                   {{ $t('Common.Price') }}
                 </h3>
                 <h3 class="mb-1">
-                  <v-item-group v-if="productPriceForm.mode === 'category'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
+                  <v-item-group v-if="productPriceForm.type === 'CATEGORY'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
                     <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
                       <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
                         <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
@@ -100,17 +76,19 @@
                 <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
               </v-col>
             </v-row>
-          </v-card-text>
-          <v-divider />
-          <v-card-text>
-            <v-btn
-              color="success"
-              type="submit"
-              :loading="createPriceLoading"
-              :disabled="!productPriceFormFilled"
-            >
-              {{ $t('Common.Upload') }}
-            </v-btn>
+            <v-row>
+              <v-col>
+                <v-btn
+                  class="float-right"
+                  color="success"
+                  type="submit"
+                  :loading="createPriceLoading"
+                  :disabled="!productPriceFormFilled"
+                >
+                  {{ $t('Common.Upload') }}
+                </v-btn>
+              </v-col>
+            </v-row>
           </v-card-text>
         </v-card>
       </v-form>
@@ -118,7 +96,6 @@
       <v-btn
         class="float-right"
         type="submit"
-        color="success"
         :loading="createPriceLoading"
         :disabled="productPriceFormFilled"
         @click="done"
@@ -139,6 +116,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+ import { useGoTo } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
@@ -147,12 +125,13 @@ import utils from '../utils.js'
 export default {
   components: {
     ProofInputRow: defineAsyncComponent(() => import('../components/ProofInputRow.vue')),
+    PriceAlreadyUploadedListCard: defineAsyncComponent(() => import('../components/PriceAlreadyUploadedListCard.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
   data() {
     return {
+      goTo: useGoTo(),
       // price form
       addPriceMultipleForm: {
         type: null,
@@ -176,7 +155,7 @@ export default {
       // product price data
       proofPriceNewList: [],
       productPriceNew: {
-        mode: '',  // see ProductInputRow
+        type: '',  // see ProductInputRow
         product: null,
         product_code: '',
         category_tag: null,
@@ -217,15 +196,8 @@ export default {
     disableProofForm() {
       return this.proofFormFilled
     },
-    disablePriceAlreadyUploadedCard() {
-      // return !!this.proofPriceUploadedList.length
-      return true
-    },
     proofPriceUploadedList() {
       return this.proofPriceExistingList.concat(this.proofPriceNewList)
-    },
-    productPriceUploadedCount() {
-      return this.proofPriceUploadedList.length
     },
     existingProductFound() {
       if (this.productPriceForm.product_code) {
@@ -270,9 +242,11 @@ export default {
     initNewProductPriceForm() {
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))  // deep copy
-      this.productPriceForm.mode = this.appStore.user.last_product_mode_used  // can be overriden in ProductInputRow
+      this.productPriceForm.type = this.appStore.user.last_product_mode_used  // can be overriden in ProductInputRow
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.productPriceForm.currency = this.addPriceMultipleForm.currency || this.appStore.getUserLastCurrencyUsed  // get currency from proof first
+      // scroll to the form
+      this.goTo('#product-price-form')
     },
     createPrice() {
       this.createPriceLoading = true

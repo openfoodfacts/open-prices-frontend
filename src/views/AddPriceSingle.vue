@@ -52,7 +52,7 @@
           <v-divider />
           <v-card-text>
             <h3 class="mb-1">
-              <v-item-group v-if="addPriceSingleForm.mode === 'category'" v-model="addPriceSingleForm.price_per" class="d-inline" mandatory>
+              <v-item-group v-if="addPriceSingleForm.type === 'CATEGORY'" v-model="addPriceSingleForm.price_per" class="d-inline" mandatory>
                 <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
                   <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
                     <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
@@ -71,6 +71,7 @@
       <v-col>
         <v-btn
           type="submit"
+          class="float-right"
           :color="formFilled ? 'success' : ''"
           :loading="createPriceLoading"
           :disabled="!formFilled"

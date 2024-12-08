@@ -6,3 +6,17 @@
     content:" *";
     color: #F44336;  /* red */
 }
+
+.border-error {
+    border: 1px solid #F44336 !important;  /* red */
+}
+.border-success {
+    border: 1px solid #4CAF50 !important;  /* green */
+}
+.border-transparent {
+    border: 1px solid transparent !important;
+}
+
+.v-btn-group--density-compact.v-btn-group {
+    height: 28px !important;  /* default is 36px; match v-btn size="small" height */
+}

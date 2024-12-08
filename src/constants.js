@@ -6,6 +6,10 @@ const OPFF_NAME = 'Open Pet Food Facts'
 const OPFF_ICON = 'mdi-paw'
 const OPF_NAME = 'Open Products Facts'
 const OPF_ICON = 'mdi-bookshelf'
+const PRICE_TYPE_PRODUCT = 'PRODUCT'
+const PRICE_TYPE_PRODUCT_ICON = 'mdi-barcode'
+const PRICE_TYPE_CATEGORY = 'CATEGORY'
+const PRICE_TYPE_CATEGORY_ICON = 'mdi-basket-outline'
 const PROOF_TYPE_PRICE_TAG = 'PRICE_TAG'
 const PROOF_TYPE_PRICE_TAG_ICON = 'mdi-library-shelves'
 const PROOF_TYPE_RECEIPT = 'RECEIPT'
@@ -52,9 +56,13 @@ export default {
   OPF_NAME: OPF_NAME,
   OPF_URL: 'https://world.openproductsfacts.org',
   OPF_ICON: OPF_ICON,
+  SOURCE_PARAM: 'source',
+  PRICE_TYPE_LIST: [
+    {key: PRICE_TYPE_PRODUCT, value: 'Barcode', icon: PRICE_TYPE_PRODUCT_ICON},
+    {key: PRICE_TYPE_CATEGORY, value: 'Category', icon: PRICE_TYPE_CATEGORY_ICON}
+  ],
   PRODUCT_QUANTITY_UNIT_G: 'g',
   PRODUCT_QUANTITY_UNIT_ML: 'ml',
-  SOURCE_PARAM: 'source',
   PRODUCT_SOURCE_LIST: [
     { key: 'off', value: OFF_NAME, icon: OFF_ICON },
     { key: 'obf', value: OBF_NAME, icon: OBF_ICON },
@@ -142,9 +150,9 @@ export default {
     { key: 'photon' },
   ],
   LOCATION_SELECTOR_DISPLAY_LIST: [
-    { key: 'osm', value: 'Physical', icon: LOCATION_TYPE_OSM_ICON },
-    { key: 'online', value: 'Online', icon: LOCATION_TYPE_ONLINE_ICON },
-    { key: 'recent', value: 'Recent', icon: 'mdi-history' },
+    { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },  // Recent
+    { key: 'osm', value: 'Physical', valueSmallScreen: 'Physical', icon: LOCATION_TYPE_OSM_ICON },
+    { key: 'online', value: 'Online', valueSmallScreen: 'Online', icon: LOCATION_TYPE_ONLINE_ICON },
   ],
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
   DATE_YEAR_MONTH_REGEX_MATCH: /(\d{4})-(\d{2})/,
@@ -152,9 +160,13 @@ export default {
   // OSM
   OSM_NAME: OSM_NAME,
   OSM_URL: 'https://www.openstreetmap.org',
+  OSM_NOMINATIM_URL: 'https://nominatim.openstreetmap.org',
   OSM_NOMINATIM_SEARCH_URL: 'https://nominatim.openstreetmap.org/search',
   OSM_NOMINATIM_LOOKUP_URL: 'https://nominatim.openstreetmap.org/lookup',
+  OSM_NOMINATIM_ATTRIBUTION: 'Nominatim (OpenStreetMap)',
+  OSM_PHOTON_URL: 'https://photon.komoot.io',
   OSM_PHOTON_SEARCH_URL: 'https://photon.komoot.io/api/',
+  OSM_PHOTON_ATTRIBUTION: 'Komoot Photon (OpenStreetMap)',
   // https://wiki.openstreetmap.org/wiki/Key:place
   // https://wiki.openstreetmap.org/wiki/Key:highway
   // https://wiki.openstreetmap.org/wiki/Buildings

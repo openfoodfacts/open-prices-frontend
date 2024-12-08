@@ -30,14 +30,14 @@
       />
     </v-col>
   </v-row>
-  <v-row v-if="isTypeReceipt">
+  <v-row v-if="proofIsTypeReceipt">
     <v-col class="pb-0" cols="12">
       <h3 class="mb-1">
         {{ $t('Common.AdditionalInfo') }}
       </h3>
     </v-col>
   </v-row>
-  <v-row v-if="isTypeReceipt" class="mt-0">
+  <v-row v-if="proofIsTypeReceipt" class="mt-0">
     <v-col cols="6">
       <v-text-field
         v-model="proofMetadataForm.receipt_price_count"
@@ -97,7 +97,7 @@ export default {
     userFavoriteCurrencies() {
       return this.appStore.getUserFavoriteCurrencies
     },
-    isTypeReceipt() {
+    proofIsTypeReceipt() {
       return this.proofType === constants.PROOF_TYPE_RECEIPT
     },
     priceRules() {

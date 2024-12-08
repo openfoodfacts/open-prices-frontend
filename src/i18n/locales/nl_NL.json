@@ -134,16 +134,6 @@
 		"Submit": "Verzenden",
 		"Title": "Voer een streepjescode in"
 	},
-	"BrandDetail": {
-		"LoadMore": "Meer laden",
-		"TopProducts": "Top producten",
-		"BrandProductTotal": "{count} producten"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Meer laden",
-		"TopProducts": "Top producten",
-		"CategoryProductTotal": "{count} producten"
-	},
 	"Common": {
 		"About": "Over",
 		"AddPrice": "Voeg een prijs toe",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Voer een streepjescode in",
 		"BarcodeInvalid": "Ongeldige barcode",
 		"Brand": "Merk",
+		"Brands": "Merken",
+		"BrandTotal": "{count} merken | {count} merk | {count} merken",
 		"Price": "Prijs",
 		"Prices": "Prijzen",
 		"Product": "Product",
@@ -163,8 +155,10 @@
 		"Proofs": "Bewijzen",
 		"Category": "Categorie",
 		"Categories": "Categorieën",
+		"CategoryTotal": "{count} categorieën | {count} categorie | {count} categorieën",
 		"Chart": "Grafiek",
 		"Contributors": "Medewerkers",
+		"Community": "Gemeenschap",
 		"Country": "Land",
 		"Currency": "Valuta",
 		"CurrencyMissing": "Valuta ontbreekt",
@@ -179,6 +173,7 @@
 		"Experiments": "Experimenten",
 		"Label": "Keurmerk",
 		"Labels": "Keurmerken",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Talen",
 		"Languages": "Talen",
 		"LatestPrices": "Laatste prijzen",
@@ -186,7 +181,12 @@
 		"LoadMore": "Meer laden",
 		"Location": "Locatie",
 		"Locations": "Locaties",
+		"LocationSelected": "Location selected",
+		"LocationShop": "Find your location",
+		"LocationFindShop": "Vind uw winkellocatie",
 		"LocationMissing": "Locatie ontbreekt",
+		"LocationSearchShopByName": "Zoek uw winkel op naam en plaats",
+		"LocationSearchByName": "Search by name and city",
 		"Date": "Datum",
 		"DateMissing": "Datum ontbreekt",
 		"Details": "Details",
@@ -217,7 +217,7 @@
 		"ImageFull": "Afbeelding op volledige grootte",
 		"Latest": "Laatste",
 		"LinkCopySuccess": "Link gekopieerd",
-		"LocationCount": "{count} locaties",
+		"LocationCount": "{count} locaties | {count} locatie | {count} locaties",
 		"Map": "Kaart",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -236,16 +236,25 @@
 		"OrderUserCountDESC": "Gebruikersaantal",
 		"PersonalInfo": "Persoonlijke informatie",
 		"Physical": "Fysiek",
-		"PriceCount": "{count} prijzen",
+		"PriceCount": "{count} prijzen | {count} prijs | {count} prijzen",
 		"PriceCreated": "Prijs aangemaakt!",
 		"PricesMore": "Meer prijzen",
-		"ProductCount": "{count} producten",
-		"ProofCount": "{count} bewijzen",
+		"Private": "Privé",
+		"Privacy": "Privacy",
+		"ProductCount": "{count} producten | {count} product | {count} producten",
+		"ProofCount": "{count} bewijzen | {count} bewijs | {count} bewijzen",
+		"ProofMissing": "Proof missing",
+		"ProofSelect": "Selecteer een bewijs",
+		"ProofSelected": "Bewijs geselecteerd!",
+		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"Public": "Openbaar",
 		"Receipt": "Bon",
 		"Receipts": "Bonnen",
 		"ReceiptPriceCount": "Aantal prijzen",
 		"ReceiptPriceTotal": "Totaalbedrag",
 		"Recent": "Recent",
+		"Reuses": "Hergebruik",
+		"ReusesKnown": "Bekende hergebruiken",
 		"Search": "Zoeken",
 		"Settings": "Instellingen",
 		"SignInOFFAccount": "Meld u aan met uw {url} account",
@@ -278,7 +287,8 @@
 		"URLInvalid": "Ongeldige URL",
 		"User": "Gebruiker",
 		"Users": "Gebruikers",
-		"UserCount": "{count} gebruikers",
+		"UserCount": "{count} gebruikers | {count} gebruiker | {count} gebruikers",
+		"UserContributorCount": "{count} bijdragers | {count} bijdrager | {count} bijdragers",
 		"View": "Bekijk",
 		"Website": "Website",
 		"Yes": "Ja",
@@ -286,6 +296,10 @@
 		"Food": "Voedsel",
 		"PetFood": "Dierenvoeding",
 		"Beauty": "Schoonheidsindustrie"
+	},
+	"Community": {
+		"JoinUs": "Doe mee!",
+		"HowToUseTheData": "Gebruik de gegevens"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Kies een van je favoriete valuta's",
@@ -330,11 +344,6 @@
 		"LoadMore": "Meer laden",
 		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)"
 	},
-	"LocationList": {
-		"Title": "Top locaties",
-		"LoadMore": "Meer laden",
-		"LocationTotal": "{count} locaties"
-	},
 	"LocationSelector": {
 		"Clear": "Wissen",
 		"NoResult": "Geen zoekresultaten",
@@ -360,9 +369,6 @@
 		"Proof": "Bewijs",
 		"FullPrice": "Totale prijs",
 		"UnknownProduct": "Onbekend product"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} prijzen"
 	},
 	"PriceDelete": {
 		"Confirmation": "Weet u zeker dat u deze prijs wilt verwijderen?",
@@ -423,14 +429,6 @@
 		"LoadMore": "Meer laden",
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "Verberg producten met prijzen",
-		"LoadMore": "Meer laden",
-		"PriceNumber": "Aantal prijzen toegevoegd",
-		"ScanNumber": "Aantal scans toegevoegd",
-		"Title": "Top producten",
-		"ProductTotal": "{count} producten"
-	},
 	"ProofCard": {
 		"Proof": "Bewijs",
 		"PRICE_TAG": "Prijskaartje",
@@ -484,6 +482,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Meerdere bewijzen toevoegen"
+		},
+		"Community": {
+			"Title": "Gemeenschap"
 		},
 		"Experiments": {
 			"Title": "Experimenten"

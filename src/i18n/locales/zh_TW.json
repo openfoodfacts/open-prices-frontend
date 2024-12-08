@@ -134,16 +134,6 @@
 		"Submit": "送出",
 		"Title": "輸入條碼"
 	},
-	"BrandDetail": {
-		"LoadMore": "載入更多",
-		"TopProducts": "熱門產品",
-		"BrandProductTotal": "{count} 個產品"
-	},
-	"CategoryDetail": {
-		"LoadMore": "載入更多",
-		"TopProducts": "熱門產品",
-		"CategoryProductTotal": "{count} 個產品"
-	},
 	"Common": {
 		"About": "關於",
 		"AddPrice": "新增價格",
@@ -155,6 +145,8 @@
 		"BarcodeType": "輸入條碼",
 		"BarcodeInvalid": "條碼無效",
 		"Brand": "品牌",
+		"Brands": "品牌 ",
+		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "價格",
 		"Prices": "價格",
 		"Product": "產品",
@@ -163,8 +155,10 @@
 		"Proofs": "證明",
 		"Category": "分類 ",
 		"Categories": "種類",
+		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Chart": "圖表",
 		"Contributors": "合作者",
+		"Community": "Community",
 		"Country": "地區",
 		"Currency": "幣別",
 		"CurrencyMissing": "缺少貨幣",
@@ -179,6 +173,7 @@
 		"Experiments": "實驗",
 		"Label": "標籤 ",
 		"Labels": "標籤",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "語言",
 		"Languages": "語言",
 		"LatestPrices": "最新價格",
@@ -186,7 +181,12 @@
 		"LoadMore": "載入更多",
 		"Location": "地點",
 		"Locations": "地點",
+		"LocationSelected": "Location selected",
+		"LocationShop": "Find your location",
+		"LocationFindShop": "找到您的商店位置",
 		"LocationMissing": "缺少地點",
+		"LocationSearchShopByName": "依名稱和城市搜尋您的商店",
+		"LocationSearchByName": "Search by name and city",
 		"Date": "日期",
 		"DateMissing": "缺少日期",
 		"Details": "詳細資訊",
@@ -217,7 +217,7 @@
 		"ImageFull": "原尺寸圖片",
 		"Latest": "最新上傳",
 		"LinkCopySuccess": "已複製連結",
-		"LocationCount": "{count} 地點",
+		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "地圖",
 		"Offline": "離線",
 		"Online": "在線",
@@ -236,16 +236,25 @@
 		"OrderUserCountDESC": "用戶總數",
 		"PersonalInfo": "個人資訊",
 		"Physical": "實體的",
-		"PriceCount": "{count} 價格",
+		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceCreated": "價格已建立！",
 		"PricesMore": "更多價格",
-		"ProductCount": "{count} 個產品",
-		"ProofCount": "{count} 證明",
+		"Private": "不公開",
+		"Privacy": "Privacy",
+		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"ProofMissing": "Proof missing",
+		"ProofSelect": "Select a proof",
+		"ProofSelected": "已選擇證明！",
+		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"Public": "公開",
 		"Receipt": "收據",
 		"Receipts": "收據",
 		"ReceiptPriceCount": "價格數量",
 		"ReceiptPriceTotal": "總金額",
 		"Recent": "最近的",
+		"Reuses": "重複使用",
+		"ReusesKnown": "Known reuses",
 		"Search": "搜尋",
 		"Settings": "設定",
 		"SignInOFFAccount": "使用您的 {url} 帳號登入",
@@ -278,7 +287,8 @@
 		"URLInvalid": "無效網址",
 		"User": "使用者",
 		"Users": "用戶",
-		"UserCount": "{count} 個用戶",
+		"UserCount": "{count} users | {count} user | {count} users",
+		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "查看 ",
 		"Website": "Website",
 		"Yes": "是 ",
@@ -286,6 +296,10 @@
 		"Food": "食物",
 		"PetFood": "寵物食品",
 		"Beauty": "美妝"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "選擇您最喜歡的貨幣",
@@ -330,11 +344,6 @@
 		"LoadMore": "載入更多",
 		"LocationNotFound": "在 OpenStreetMap 中找不到此地點⋯⋯歡迎添加它 :)"
 	},
-	"LocationList": {
-		"Title": "熱門地點",
-		"LoadMore": "載入更多",
-		"LocationTotal": "{count} 地點"
-	},
 	"LocationSelector": {
 		"Clear": "清除",
 		"NoResult": "找不到結果",
@@ -360,9 +369,6 @@
 		"Proof": "證明",
 		"FullPrice": "原價",
 		"UnknownProduct": "不明產品"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} 價格"
 	},
 	"PriceDelete": {
 		"Confirmation": "確定要刪除這個價格嗎？",
@@ -423,14 +429,6 @@
 		"LoadMore": "載入更多",
 		"ProductNotFound": "在 Open Food Facts 中找不到此產品⋯⋯歡迎添加它 :)"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "隱藏有價格的產品",
-		"LoadMore": "載入更多",
-		"PriceNumber": "已添加價格數量",
-		"ScanNumber": "已添加掃描次數",
-		"Title": "熱門產品",
-		"ProductTotal": "{count} 個產品"
-	},
 	"ProofCard": {
 		"Proof": "證明",
 		"PRICE_TAG": "價格標籤",
@@ -484,6 +482,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "新增多個證明"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "實驗"

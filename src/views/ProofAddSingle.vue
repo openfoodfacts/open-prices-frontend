@@ -22,6 +22,7 @@
   <v-row>
     <v-col>
       <v-btn
+        class="float-right"
         type="submit"
         :color="proofFormFilled ? 'success' : ''"
         :loading="loading"

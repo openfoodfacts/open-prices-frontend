@@ -134,16 +134,6 @@
 		"Submit": "送出",
 		"Title": "输入条形码"
 	},
-	"BrandDetail": {
-		"LoadMore": "載入更多",
-		"TopProducts": "热门产品",
-		"BrandProductTotal": "{count} 产品"
-	},
-	"CategoryDetail": {
-		"LoadMore": "載入更多",
-		"TopProducts": "热门产品",
-		"CategoryProductTotal": "{count} 产品"
-	},
 	"Common": {
 		"About": "关于",
 		"AddPrice": "添加价格",
@@ -155,6 +145,8 @@
 		"BarcodeType": "输入条形码",
 		"BarcodeInvalid": "无效的条形码",
 		"Brand": "品牌",
+		"Brands": "品牌",
+		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "价格",
 		"Prices": "价格",
 		"Product": "产品",
@@ -163,8 +155,10 @@
 		"Proofs": "Proofs",
 		"Category": "分類",
 		"Categories": "類別",
+		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Chart": "Chart",
 		"Contributors": "贡献者",
+		"Community": "Community",
 		"Country": "地區",
 		"Currency": "货币",
 		"CurrencyMissing": "Currency missing",
@@ -179,6 +173,7 @@
 		"Experiments": "Experiments",
 		"Label": "標籤",
 		"Labels": "标签",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "語言",
 		"Languages": "語言",
 		"LatestPrices": "最新价格",
@@ -186,7 +181,12 @@
 		"LoadMore": "載入更多",
 		"Location": "Location",
 		"Locations": "地点",
+		"LocationSelected": "Location selected",
+		"LocationShop": "Find your location",
+		"LocationFindShop": "找到您的商店位置",
 		"LocationMissing": "Location missing",
+		"LocationSearchShopByName": "按名称和城市搜索您的商店",
+		"LocationSearchByName": "Search by name and city",
 		"Date": "日期",
 		"DateMissing": "Date missing",
 		"Details": "Details",
@@ -217,7 +217,7 @@
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "链接已复制",
-		"LocationCount": "{count} 地点",
+		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "地图",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -236,16 +236,25 @@
 		"OrderUserCountDESC": "User count",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
-		"PriceCount": "{count} 价格",
+		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceCreated": "价格已创建！",
 		"PricesMore": "More prices",
-		"ProductCount": "{count} 产品",
-		"ProofCount": "{count} 证明",
+		"Private": "私人的",
+		"Privacy": "隐私",
+		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"ProofMissing": "Proof missing",
+		"ProofSelect": "Select a proof",
+		"ProofSelected": "证明已选！",
+		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"Public": "民众",
 		"Receipt": "收据",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "价格数量",
 		"ReceiptPriceTotal": "Total amount",
 		"Recent": "Recent",
+		"Reuses": "Reuses",
+		"ReusesKnown": "Known reuses",
 		"Search": "搜尋",
 		"Settings": "設定",
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
@@ -278,7 +287,8 @@
 		"URLInvalid": "Invalid URL",
 		"User": "用户",
 		"Users": "用户",
-		"UserCount": "{count} users",
+		"UserCount": "{count} users | {count} user | {count} users",
+		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "檢視",
 		"Website": "网站",
 		"Yes": "是",
@@ -286,6 +296,10 @@
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "选择您最喜欢的货币之一",
@@ -330,11 +344,6 @@
 		"LoadMore": "載入更多",
 		"LocationNotFound": "在 OpenStreetMap 中找不到位置... 请立即添加它:)"
 	},
-	"LocationList": {
-		"Title": "热门地点",
-		"LoadMore": "載入更多",
-		"LocationTotal": "{count} 地点"
-	},
 	"LocationSelector": {
 		"Clear": "清除",
 		"NoResult": "未找到结果",
@@ -360,9 +369,6 @@
 		"Proof": "证明",
 		"FullPrice": "全价",
 		"UnknownProduct": "未知产品"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} 价格"
 	},
 	"PriceDelete": {
 		"Confirmation": "您确定要删除此价格吗？",
@@ -423,14 +429,6 @@
 		"LoadMore": "載入更多",
 		"ProductNotFound": "在 Open Food Facts 中找不到产品... 请随时添加:)"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "隐藏带有价格的产品",
-		"LoadMore": "載入更多",
-		"PriceNumber": "添加的价格数量",
-		"ScanNumber": "添加的扫描次数",
-		"Title": "热门产品",
-		"ProductTotal": "{count} 产品"
-	},
 	"ProofCard": {
 		"Proof": "证明",
 		"PRICE_TAG": "价格标签",
@@ -484,6 +482,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "Experiments"

@@ -1,5 +1,39 @@
 # Changelog
 
+## [1.96.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.2...v1.96.3) (2024-12-04)
+
+
+### Technical
+
+* **l10n:** add new pluralization translations. Start cleaning unused translations ([#1079](https://github.com/openfoodfacts/open-prices-frontend/issues/1079)) ([04c384b](https://github.com/openfoodfacts/open-prices-frontend/commit/04c384b98c0ea4be12d3018311142bf80b6a73eb))
+* **l10n:** New Crowdin translations to review and merge ([#1081](https://github.com/openfoodfacts/open-prices-frontend/issues/1081)) ([e00fa3e](https://github.com/openfoodfacts/open-prices-frontend/commit/e00fa3e0e8ef4cfc3c39f0633e5910da39640b49))
+* **Sign in:** improve UI (columns, spacing, password visibility toggle) ([#1087](https://github.com/openfoodfacts/open-prices-frontend/issues/1087)) ([8bbb135](https://github.com/openfoodfacts/open-prices-frontend/commit/8bbb135d03b2bb7cd2d1bc11974d79cf687f07bc))
+
+## [1.96.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.1...v1.96.2) (2024-12-02)
+
+
+### Bug Fixes
+
+* **Price add:** show PriceAlreadyUploadedListCard footer only for receipts. ref [#1074](https://github.com/openfoodfacts/open-prices-frontend/issues/1074) ([93585fa](https://github.com/openfoodfacts/open-prices-frontend/commit/93585fac1c6fe9309adba947a1244abcc6d51a07))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1066](https://github.com/openfoodfacts/open-prices-frontend/issues/1066)) ([f5578e9](https://github.com/openfoodfacts/open-prices-frontend/commit/f5578e9cc1b5cdd95c77c5f9e3e7ab8cd160ec50))
+* **Price add:** new PriceAlreadyUploadedListCard component ([382cbff](https://github.com/openfoodfacts/open-prices-frontend/commit/382cbff21d364b7aa109749c2f9674287d0e127e))
+* **Price add:** show count & sum of already added prices (receipts) ([#1074](https://github.com/openfoodfacts/open-prices-frontend/issues/1074)) ([9be00ed](https://github.com/openfoodfacts/open-prices-frontend/commit/9be00ed747c0e8ab1bbea1215961cb659b908c3c))
+* **Price add:** show receipt personal data in already added prices footer ([#1076](https://github.com/openfoodfacts/open-prices-frontend/issues/1076)) ([4c8c337](https://github.com/openfoodfacts/open-prices-frontend/commit/4c8c33774d6678a4951fe845698406687db4780e))
+* **Proof card:** new components for receipt price_count & price_total ([#1075](https://github.com/openfoodfacts/open-prices-frontend/issues/1075)) ([ad3618a](https://github.com/openfoodfacts/open-prices-frontend/commit/ad3618aa4e857b29ad7185d631b8e38d04e26fd2))
+
+## [1.96.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.0...v1.96.1) (2024-12-01)
+
+
+### Technical
+
+* **UI:** gain some vertical space above submit button ([#1070](https://github.com/openfoodfacts/open-prices-frontend/issues/1070)) ([eff962a](https://github.com/openfoodfacts/open-prices-frontend/commit/eff962af99d7721187fb112ef09c6d7eb12834eb))
+* **UI:** On new price, scroll UI to the form ([#1072](https://github.com/openfoodfacts/open-prices-frontend/issues/1072)) ([50bd742](https://github.com/openfoodfacts/open-prices-frontend/commit/50bd742f000360e914b08c9858269a17ce0583ff))
+* **UI:** right-align all submit buttons. change color of Done buttons ([#1068](https://github.com/openfoodfacts/open-prices-frontend/issues/1068)) ([492b628](https://github.com/openfoodfacts/open-prices-frontend/commit/492b6286adb74ed58eb6bc33f09a19857127e19f))
+
 ## [1.96.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.95.3...v1.96.0) (2024-11-29)
 
 

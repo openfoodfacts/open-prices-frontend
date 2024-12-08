@@ -231,7 +231,7 @@ export default {
       this.productPriceForms = []
       for (let i = 0; i < response.labels.length; i++) {
         const label = response.labels[i]
-        const barcodeString = label.barcode ? label.barcode.toString() : ''
+        const barcodeString = label.barcode ? label.barcode.toString().replace(/\s/g, '') : ''
         // TODO: some of these will be None if gemini did not give a proper reply, so detection and error handling is needed
         const productPriceForm = {
           mode: barcodeString.length > 10 ? 'barcode' : 'category',
@@ -277,12 +277,12 @@ export default {
           proof_id: this.proofForm.id
         }
         // Cleanup unwanted fields for API
-        if (productPriceForm.mode == 'barcode') {
+        if (productPriceForm.type == 'PRODUCT') {
           delete priceData.price_per
           delete priceData.category_tag
           delete priceData.origins_tags
           delete priceData.labels_tags
-        } else if (productPriceForm.mode == 'category') {
+        } else if (productPriceForm.type == 'CATEGORY') {
           delete priceData.product_code
           delete priceData.product
         }

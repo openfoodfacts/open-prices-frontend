@@ -2,7 +2,7 @@
   <v-row v-if="!loading">
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-image">
-        {{ $t('UserDashboard.UserProofTotal', { count: userProofTotal }) }}
+        {{ $t('Common.ProofCount', { count: userProofTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
       <FilterMenu v-if="userProofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />

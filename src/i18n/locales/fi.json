@@ -134,16 +134,6 @@
 		"Submit": "Lähetä",
 		"Title": "Syötä viivakoodi"
 	},
-	"BrandDetail": {
-		"LoadMore": "Lataa enemmän",
-		"TopProducts": "Huipputuotteet",
-		"BrandProductTotal": "{count} tuotteita"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Lataa enemmän",
-		"TopProducts": "Huipputuotteet",
-		"CategoryProductTotal": "{count} tuotteita"
-	},
 	"Common": {
 		"About": "Tietoja",
 		"AddPrice": "Lisää hinta",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Syötä viivakoodi",
 		"BarcodeInvalid": "Virheellinen viivakoodi",
 		"Brand": "Tuotemerkki",
+		"Brands": "Tuotemerkit",
+		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Hinta",
 		"Prices": "Hinnat",
 		"Product": "Tuote",
@@ -163,8 +155,10 @@
 		"Proofs": "Proofs",
 		"Category": "Tuoteluokka",
 		"Categories": "Tuoteluokat",
+		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Chart": "Chart",
 		"Contributors": "Osallistujat",
+		"Community": "Community",
 		"Country": "Maa",
 		"Currency": "Valuutta",
 		"CurrencyMissing": "Valuutta puuttuu",
@@ -179,6 +173,7 @@
 		"Experiments": "Experiments",
 		"Label": "Merkki",
 		"Labels": "Merkit",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Kielet",
 		"Languages": "Kielet",
 		"LatestPrices": "Viimeisimmät hinnat",
@@ -186,7 +181,12 @@
 		"LoadMore": "Lataa enemmän",
 		"Location": "Sijainti",
 		"Locations": "Sijainnit",
+		"LocationSelected": "Location selected",
+		"LocationShop": "Find your location",
+		"LocationFindShop": "Etsi myymäläsi sijainti",
 		"LocationMissing": "Sijainti puuttuu",
+		"LocationSearchShopByName": "Hae kauppaasi nimen ja kaupungin mukaan",
+		"LocationSearchByName": "Search by name and city",
 		"Date": "Päivämäärä",
 		"DateMissing": "Päivämäärä puuttuu",
 		"Details": "Yksityiskohdat",
@@ -217,7 +217,7 @@
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
 		"LinkCopySuccess": "Linkki kopioitu",
-		"LocationCount": "{count} sijaintia",
+		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Kartta",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -236,16 +236,25 @@
 		"OrderUserCountDESC": "User count",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
-		"PriceCount": "{count} hinnat",
+		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceCreated": "Hinta luotu!",
 		"PricesMore": "More prices",
-		"ProductCount": "{count} tuotteita",
-		"ProofCount": "{count} todisteita",
+		"Private": "Yksityinen",
+		"Privacy": "Yksityisyys",
+		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"ProofMissing": "Proof missing",
+		"ProofSelect": "Valitse todiste",
+		"ProofSelected": "Todiste valittu!",
+		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"Public": "Julkinen",
 		"Receipt": "Kuitti",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Hintojen määrä",
 		"ReceiptPriceTotal": "Total amount",
 		"Recent": "Recent",
+		"Reuses": "Reuses",
+		"ReusesKnown": "Known reuses",
 		"Search": "Etsi",
 		"Settings": "Asetukset",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
@@ -278,7 +287,8 @@
 		"URLInvalid": "Invalid URL",
 		"User": "Käyttäjä",
 		"Users": "Käyttäjät",
-		"UserCount": "{count} users",
+		"UserCount": "{count} users | {count} user | {count} users",
+		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "Näytä",
 		"Website": "Nettisivusto",
 		"Yes": "Kyllä",
@@ -286,6 +296,10 @@
 		"Food": "Ruoka",
 		"PetFood": "Lemmikin ruoka",
 		"Beauty": "Kauneus"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Valitse yksi suosikkivaluutoistasi",
@@ -330,11 +344,6 @@
 		"LoadMore": "Lataa enemmän",
 		"LocationNotFound": "Sijaintia ei löydy OpenStreetMapista... Älä epäröi lisätä sitä :)"
 	},
-	"LocationList": {
-		"Title": "Huippupaikat",
-		"LoadMore": "Lataa enemmän",
-		"LocationTotal": "{count} sijaintia"
-	},
 	"LocationSelector": {
 		"Clear": "Tyhjennä",
 		"NoResult": "Ei tuloksia",
@@ -360,9 +369,6 @@
 		"Proof": "Todiste",
 		"FullPrice": "Täysi hinta",
 		"UnknownProduct": "Tuntematon tuote"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} hinnat"
 	},
 	"PriceDelete": {
 		"Confirmation": "Haluatko varmasti poistaa tämän hinnan?",
@@ -423,14 +429,6 @@
 		"LoadMore": "Lataa enemmän",
 		"ProductNotFound": "Tuotetta ei löydy Open Food Factsista... Älä epäröi lisätä sitä :)"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "Piilota tuotteet hinnoilla",
-		"LoadMore": "Lataa enemmän",
-		"PriceNumber": "Lisättyjen hintojen määrä",
-		"ScanNumber": "Lisättyjen skannausten määrä",
-		"Title": "Huipputuotteet",
-		"ProductTotal": "{count} tuotteita"
-	},
 	"ProofCard": {
 		"Proof": "Todiste",
 		"PRICE_TAG": "Hintalappu",
@@ -484,6 +482,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "Experiments"

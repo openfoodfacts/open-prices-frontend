@@ -1,9 +1,11 @@
 import js from '@eslint/js'
 import pluginVue from 'eslint-plugin-vue'
+import vueI18n from '@intlify/eslint-plugin-vue-i18n'
 
 export default [
   js.configs.recommended,
   ...pluginVue.configs['flat/recommended'],
+  ...vueI18n.configs['flat/recommended'],
   {
     ignores: ['dist/**', '*.config.js', 'tests/**'],
   },
@@ -16,6 +18,15 @@ export default [
       'vue/max-attributes-per-line': 'off',
       'vue/attribute-hyphenation': 'off',
       'vue/v-on-event-hyphenation': 'off',
+    },
+    settings: {
+      'vue-i18n': {
+        localeDir: './i18n/locales/*.json'
+      }
+    },
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     }
   },
 ]

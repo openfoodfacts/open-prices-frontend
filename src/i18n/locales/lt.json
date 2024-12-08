@@ -134,16 +134,6 @@
 		"Submit": "Pateikti",
 		"Title": "Įveskite brūkšninį kodą"
 	},
-	"BrandDetail": {
-		"LoadMore": "Įkelti daugiau",
-		"TopProducts": "Populiariausi produktai",
-		"BrandProductTotal": "{count} produktai (-ų)"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Įkelti daugiau",
-		"TopProducts": "Populiariausi produktai",
-		"CategoryProductTotal": "{count} produktai (-ų)"
-	},
 	"Common": {
 		"About": "Apie",
 		"AddPrice": "Pridėti kainą",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Įveskite brūkšninį kodą",
 		"BarcodeInvalid": "Netinkamas brūkšninis kodas",
 		"Brand": "Brand",
+		"Brands": "Prekės ženklai",
+		"BrandTotal": "{count} prekių ženklas | {count} prekių ženklai | {count} prekių ženklų",
 		"Price": "Kaina",
 		"Prices": "Kainos",
 		"Product": "Produktas",
@@ -163,8 +155,10 @@
 		"Proofs": "Įrodymai",
 		"Category": "Kategorija",
 		"Categories": "Kategorijos",
+		"CategoryTotal": "{count} kategorijos | {count} kategorija | {count} kategorijų",
 		"Chart": "Diagrama",
 		"Contributors": "Contributors",
+		"Community": "Bendruomenė",
 		"Country": "Šalis",
 		"Currency": "Valiuta",
 		"CurrencyMissing": "Currency missing",
@@ -179,6 +173,7 @@
 		"Experiments": "Eksperimentai",
 		"Label": "Etiketė",
 		"Labels": "Labels",
+		"LabelTotal": "{count} etiketės | {count} etiketė | {count} etikečių",
 		"Language": "Kalbos",
 		"Languages": "Kalbos",
 		"LatestPrices": "Naujausios kainos",
@@ -186,7 +181,12 @@
 		"LoadMore": "Įkelti daugiau",
 		"Location": "Location",
 		"Locations": "Vietos",
+		"LocationSelected": "Pasirinkta vieta",
+		"LocationShop": "Rasti savo vietą",
+		"LocationFindShop": "Rasti savo parduotuvės vietą",
 		"LocationMissing": "Location missing",
+		"LocationSearchShopByName": "Ieškoti savo parduotuvės pagal pavadinimą ir miestą",
+		"LocationSearchByName": "Ieškoti pagal pavadinimą ir miestą",
 		"Date": "Data",
 		"DateMissing": "Date missing",
 		"Details": "Išsamesnė informacija",
@@ -217,7 +217,7 @@
 		"ImageFull": "Viso dydžio vaizdas",
 		"Latest": "Naujausi",
 		"LinkCopySuccess": "Nuoroda nukopijuota",
-		"LocationCount": "{count} vietos (-ų)",
+		"LocationCount": "{count} vietos | {count} vieta | {count} vietų",
 		"Map": "Žemėlapis",
 		"Offline": "Neprisijungę",
 		"Online": "Prisijungus",
@@ -236,16 +236,25 @@
 		"OrderUserCountDESC": "Vartotojų skaičius",
 		"PersonalInfo": "Personal information",
 		"Physical": "Fizinis",
-		"PriceCount": "{count} prices",
+		"PriceCount": "{count} kainos | {count} kaina | {count} kainų",
 		"PriceCreated": "Kaina sukurta!",
 		"PricesMore": "Daugiau kainų",
-		"ProductCount": "{count} produktai (-ų)",
-		"ProofCount": "{count} įrodymai (-ų)",
+		"Private": "Privatu",
+		"Privacy": "Privatumas",
+		"ProductCount": "{count} produktai | {count} produktas | {count} produktų",
+		"ProofCount": "{count} įrodymai | {count} įrodymas | {count} įrodymų",
+		"ProofMissing": "Trūksta įrodymo",
+		"ProofSelect": "Select a proof",
+		"ProofSelected": "Proof selected!",
+		"ProofSelectedCount": "{count} pasirinktų įrodymų | {count} pasirinktas įrodymas | Pasirinkti {count} įrodymai",
+		"Public": "Vieša",
 		"Receipt": "Čekis",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
 		"Recent": "Naujausi",
+		"Reuses": "Kartotinis naudojimas",
+		"ReusesKnown": "Žinomas kartotinis naudojimas",
 		"Search": "Paieška",
 		"Settings": "Nustatymai",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
@@ -255,7 +264,7 @@
 		"SideMenu": "Side menu",
 		"Share": "Dalintis",
 		"Source": "Šaltinis",
-		"SourceCode": "Source code",
+		"SourceCode": "Pirminis kodas",
 		"Stats": "Statistika",
 		"TaglineOriginal": "Atviroji sutelktinių išteklių gautų maisto produktų kainų duomenų bazė",
 		"TaglineAlt1": "Atviroji sutelktinių išteklių gautų kainų duomenų bazė",
@@ -278,7 +287,8 @@
 		"URLInvalid": "Neteisingas URL",
 		"User": "Vartotojas",
 		"Users": "Vartotojai",
-		"UserCount": "{count} vartotojai (-ų)",
+		"UserCount": "{count} vartotojai | {count} vartotojas | {count} vartotojų",
+		"UserContributorCount": "{count} bendraautoriai | {count} bendraautorius | {count} bendraautorių",
 		"View": "Žiūrėti",
 		"Website": "Interneto svetainė",
 		"Yes": "Taip",
@@ -286,6 +296,10 @@
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty"
+	},
+	"Community": {
+		"JoinUs": "Prisijunkite prie mūsų!",
+		"HowToUseTheData": "Naudoti duomenis"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Pasirinkite vieną iš savo mėgstamų valiutų",
@@ -330,11 +344,6 @@
 		"LoadMore": "Įkelti daugiau",
 		"LocationNotFound": "Vieta nerasta OpenStreetMap... Nedvejokite pridėti ją :)"
 	},
-	"LocationList": {
-		"Title": "Geriausios vietos",
-		"LoadMore": "Įkelti daugiau",
-		"LocationTotal": "{count} vietos (-ų)"
-	},
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "Rezultatų nerasta",
@@ -360,9 +369,6 @@
 		"Proof": "Įrodymai",
 		"FullPrice": "Visa kaina",
 		"UnknownProduct": "Nežinomas produktas"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} prices"
 	},
 	"PriceDelete": {
 		"Confirmation": "Ar tikrai norite ištrinti šią kainą?",
@@ -423,14 +429,6 @@
 		"LoadMore": "Įkelti daugiau",
 		"ProductNotFound": "Produktas nerastas Open Food Facts... Nedvejokite ir pridėkite :)"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "Slėpti produktus su kainomis",
-		"LoadMore": "Įkelti daugiau",
-		"PriceNumber": "Pridėtų kainų skaičius",
-		"ScanNumber": "Pridėtų nuskaitymų skaičius",
-		"Title": "Populiariausi produktai",
-		"ProductTotal": "{count} produktai (-ų)"
-	},
 	"ProofCard": {
 		"Proof": "Įrodymai",
 		"PRICE_TAG": "Kainos etiketė",
@@ -463,8 +461,8 @@
 		"Success": "Įrodymas redaguotas!"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Trūksta jūsų kartotinio naudojimo? Praneškite mums {url}!",
+		"Here": "čia"
 	},
 	"Router": {
 		"About": {
@@ -484,6 +482,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Pridėti kelis įrodymus"
+		},
+		"Community": {
+			"Title": "Bendruomenė"
 		},
 		"Experiments": {
 			"Title": "Eksperimentai"
@@ -528,7 +529,7 @@
 			"Title": "Populiariausi produktai"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Bendradarbiavimo asistentas"
 		}
 	},
 	"Search": {

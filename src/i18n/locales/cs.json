@@ -134,16 +134,6 @@
 		"Submit": "Odeslat",
 		"Title": "Zadat čárový kód"
 	},
-	"BrandDetail": {
-		"LoadMore": "Načíst další",
-		"TopProducts": "Nejlepší produkty",
-		"BrandProductTotal": "{count} produktů"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Načíst další",
-		"TopProducts": "Nejlepší produkty",
-		"CategoryProductTotal": "{count} produktů"
-	},
 	"Common": {
 		"About": "O aplikaci",
 		"AddPrice": "Přidat cenu",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Zadat čárový kód",
 		"BarcodeInvalid": "Neplatný čárový kód",
 		"Brand": "Značka",
+		"Brands": "Značky",
+		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Cena",
 		"Prices": "Ceny",
 		"Product": "Produkt",
@@ -163,8 +155,10 @@
 		"Proofs": "Doklady",
 		"Category": "Kategorie",
 		"Categories": "Kategorie",
+		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Chart": "Graf",
 		"Contributors": "Přispěvatelé",
+		"Community": "Komunita",
 		"Country": "Země",
 		"Currency": "Měna",
 		"CurrencyMissing": "Chybí měna",
@@ -179,6 +173,7 @@
 		"Experiments": "Experimenty",
 		"Label": "Štítek",
 		"Labels": "Štítky",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Jazyky",
 		"Languages": "Jazyky",
 		"LatestPrices": "Nejnovější ceny",
@@ -186,7 +181,12 @@
 		"LoadMore": "Načíst další",
 		"Location": "Poloha",
 		"Locations": "Polohy",
+		"LocationSelected": "Location selected",
+		"LocationShop": "Find your location",
+		"LocationFindShop": "Najít polohu vašeho obchodu",
 		"LocationMissing": "Chybí poloha",
+		"LocationSearchShopByName": "Vyhledejte svůj obchod podle názvu a města",
+		"LocationSearchByName": "Search by name and city",
 		"Date": "Datum",
 		"DateMissing": "Chybí datum",
 		"Details": "Podrobnosti",
@@ -217,7 +217,7 @@
 		"ImageFull": "Obrázek plné velikosti",
 		"Latest": "Poslední",
 		"LinkCopySuccess": "Odkaz zkopírován",
-		"LocationCount": "{count} poloh",
+		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Mapa",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -236,16 +236,25 @@
 		"OrderUserCountDESC": "Počet uživatelů",
 		"PersonalInfo": "Osobní údaje",
 		"Physical": "Fyzický",
-		"PriceCount": "{count} cen",
+		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceCreated": "Cena vytvořena!",
 		"PricesMore": "Více cen",
-		"ProductCount": "{count} produktů",
-		"ProofCount": "{count} dokladů",
+		"Private": "Soukromý",
+		"Privacy": "Soukromí",
+		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"ProofMissing": "Proof missing",
+		"ProofSelect": "Vybrat doklad",
+		"ProofSelected": "Doklad vybrán!",
+		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"Public": "Veřejný",
 		"Receipt": "Účtenka",
 		"Receipts": "Účtenky",
 		"ReceiptPriceCount": "Počet cen",
 		"ReceiptPriceTotal": "Celková částka",
 		"Recent": "Nedávné",
+		"Reuses": "Opakované použití",
+		"ReusesKnown": "Známá opakovaná použití",
 		"Search": "Vyhledat",
 		"Settings": "Nastavení",
 		"SignInOFFAccount": "Přihlásit se pomocí účtu {url}",
@@ -278,7 +287,8 @@
 		"URLInvalid": "Neplatná URL",
 		"User": "Uživatel",
 		"Users": "Uživatelé",
-		"UserCount": "{count} uživatelů",
+		"UserCount": "{count} users | {count} user | {count} users",
+		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "Zobrazit",
 		"Website": "Webová stránka",
 		"Yes": "Ano",
@@ -286,6 +296,10 @@
 		"Food": "Jídlo",
 		"PetFood": "Zvířecí krmivo",
 		"Beauty": "Krása"
+	},
+	"Community": {
+		"JoinUs": "Připojte se k nám!",
+		"HowToUseTheData": "Použijte data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Vyberte jednu ze svých oblíbených měn",
@@ -330,11 +344,6 @@
 		"LoadMore": "Načíst další",
 		"LocationNotFound": "Poloha nebyla nalezena v OpenStreetMap... Neváhejte ji přidat :)"
 	},
-	"LocationList": {
-		"Title": "Nejlepší polohy",
-		"LoadMore": "Načíst další",
-		"LocationTotal": "{count} poloh"
-	},
 	"LocationSelector": {
 		"Clear": "Vymazat",
 		"NoResult": "Nenalezeny žádné výsledky",
@@ -360,9 +369,6 @@
 		"Proof": "Doklad",
 		"FullPrice": "Plná cena",
 		"UnknownProduct": "Neznámý produkt"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} cen"
 	},
 	"PriceDelete": {
 		"Confirmation": "Jste si jisti, že chcete smazat tuto cenu?",
@@ -423,14 +429,6 @@
 		"LoadMore": "Načíst další",
 		"ProductNotFound": "Produkt nebyl nalezen v Open Food Facts... Neváhejte ho přidat :)"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "Skrýt produkty s cenami",
-		"LoadMore": "Načíst další",
-		"PriceNumber": "Počet přidaných cen",
-		"ScanNumber": "Počet přidaných skenů",
-		"Title": "Nejlepší produkty",
-		"ProductTotal": "{count} produktů"
-	},
 	"ProofCard": {
 		"Proof": "Doklad",
 		"PRICE_TAG": "Cenovka",
@@ -484,6 +482,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Přidejte více důkazů"
+		},
+		"Community": {
+			"Title": "Komunita"
 		},
 		"Experiments": {
 			"Title": "Experimenty"

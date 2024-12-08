@@ -134,16 +134,6 @@
 		"Submit": "Senden",
 		"Title": "Strichcode eingeben"
 	},
-	"BrandDetail": {
-		"LoadMore": "Weitere laden",
-		"TopProducts": "Top-Produkte",
-		"BrandProductTotal": "{count} Produkte"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Weitere laden",
-		"TopProducts": "Top-Produkte",
-		"CategoryProductTotal": "{count} Produkte"
-	},
 	"Common": {
 		"About": "Über",
 		"AddPrice": "Preis hinzufügen",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Strichcode eingeben",
 		"BarcodeInvalid": "Strichcode ungültig",
 		"Brand": "Marke",
+		"Brands": "Marken",
+		"BrandTotal": "{count} Marken | {count} Marke | {count} Marken",
 		"Price": "Preis",
 		"Prices": "Preise",
 		"Product": "Produkt",
@@ -163,8 +155,10 @@
 		"Proofs": "Nachweise",
 		"Category": "Kategorie",
 		"Categories": "Kategorien",
+		"CategoryTotal": "{count} Kategorien | {count} Kategorie | {count} Kategorien",
 		"Chart": "Diagramm",
 		"Contributors": "Mitwirkende",
+		"Community": "Gemeinschaft",
 		"Country": "Land",
 		"Currency": "Währung",
 		"CurrencyMissing": "Währung fehlt",
@@ -179,6 +173,7 @@
 		"Experiments": "Experimente",
 		"Label": "Kennzeichnung",
 		"Labels": "Labels",
+		"LabelTotal": "{count} Etiketten | {count} Etikett | {count} Etiketten",
 		"Language": "Sprachen",
 		"Languages": "Sprachen",
 		"LatestPrices": "Aktuelle Preise",
@@ -186,7 +181,12 @@
 		"LoadMore": "Weitere laden",
 		"Location": "Ort",
 		"Locations": "Orte",
+		"LocationSelected": "Standort ausgewählt",
+		"LocationShop": "Ihren Standort finden",
+		"LocationFindShop": "Finden Sie den Standort Ihres Geschäfts",
 		"LocationMissing": "Ort fehlt",
+		"LocationSearchShopByName": "Suchen Sie Ihr Geschäft nach Name und Stadt",
+		"LocationSearchByName": "Suchen nach Name und Stadt",
 		"Date": "Datum",
 		"DateMissing": "Datum fehlt",
 		"Details": "Details",
@@ -217,7 +217,7 @@
 		"ImageFull": "Bild in Originalgröße",
 		"Latest": "Neuste",
 		"LinkCopySuccess": "Link kopiert",
-		"LocationCount": "{count} Standorte",
+		"LocationCount": "{count} Orte | {count} Ort | {count} Orte",
 		"Map": "Karte",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -236,16 +236,25 @@
 		"OrderUserCountDESC": "Anzahl der Benutzer",
 		"PersonalInfo": "Persönliche Informationen",
 		"Physical": "Physisch",
-		"PriceCount": "{count} Preise",
+		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
 		"PriceCreated": "Preis erstellt!",
 		"PricesMore": "Weitere Preise",
-		"ProductCount": "{count} Produkte",
-		"ProofCount": "{count} Belege",
+		"Private": "Privat",
+		"Privacy": "Datenschutz",
+		"ProductCount": "{count} Produkte | {count} Produkt | {count} Produkte",
+		"ProofCount": "{count} Nachweise | {count} Nachweis | {count} Nachweise",
+		"ProofMissing": "Nachweis fehlt",
+		"ProofSelect": "Wählen Sie einen Nachweis",
+		"ProofSelected": "Nachweis ausgewählt!",
+		"ProofSelectedCount": "{count} Nachweise ausgewählt | {count} Nachweise ausgewählt | {count} Nachweise ausgewählt",
+		"Public": "Öffentlich",
 		"Receipt": "Kassenbon",
 		"Receipts": "Belege",
 		"ReceiptPriceCount": "Anzahl der Preise",
 		"ReceiptPriceTotal": "Gesamtbetrag",
 		"Recent": "Neueste",
+		"Reuses": "Wiederverwendung",
+		"ReusesKnown": "Bekannte Wiederverwendungen",
 		"Search": "Suchen",
 		"Settings": "Einstellungen",
 		"SignInOFFAccount": "Melden Sie sich mit Ihrem {url} Konto an",
@@ -278,7 +287,8 @@
 		"URLInvalid": "Ungültige Adresse",
 		"User": "Benutzer",
 		"Users": "Benutzer",
-		"UserCount": "{count} Benutzer",
+		"UserCount": "{count} Benutzer | {count} Benutzer | {count} Benutzer",
+		"UserContributorCount": "{count} Mitwirkende | {count} Mitwirkende | {count} Mitwirkende",
 		"View": "Anzeigen",
 		"Website": "Website",
 		"Yes": "Ja",
@@ -286,6 +296,10 @@
 		"Food": "Nahrungsmittel",
 		"PetFood": "Haustierfutter",
 		"Beauty": "Schönheitspflege"
+	},
+	"Community": {
+		"JoinUs": "Machen Sie mit!",
+		"HowToUseTheData": "Daten verwenden"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Wählen Sie Ihre bevorzugte Währung",
@@ -330,11 +344,6 @@
 		"LoadMore": "Weitere laden",
 		"LocationNotFound": "Standort nicht in OpenStreetMap gefunden ... Zögern Sie nicht, ihn hinzuzufügen 🙂"
 	},
-	"LocationList": {
-		"Title": "Top-Standorte",
-		"LoadMore": "Weitere laden",
-		"LocationTotal": "{count} Standorte"
-	},
 	"LocationSelector": {
 		"Clear": "Leeren",
 		"NoResult": "Keine Ergebnisse gefunden",
@@ -360,9 +369,6 @@
 		"Proof": "Nachweis",
 		"FullPrice": "Voller Preis",
 		"UnknownProduct": "Unbekanntes Produkt"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} Preise"
 	},
 	"PriceDelete": {
 		"Confirmation": "Möchten Sie diesen Preis wirklich löschen?",
@@ -423,14 +429,6 @@
 		"LoadMore": "Weitere laden",
 		"ProductNotFound": "Produkt nicht in Open Food Facts gefunden... Zögern Sie nicht, es hinzuzufügen 🙂"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "Produkte mit Preisen ausblenden",
-		"LoadMore": "Weitere laden",
-		"PriceNumber": "Anzahl der hinzugefügten Preise",
-		"ScanNumber": "Anzahl der hinzugefügten Scans",
-		"Title": "Top-Produkte",
-		"ProductTotal": "{count} Produkte"
-	},
 	"ProofCard": {
 		"Proof": "Nachweis",
 		"PRICE_TAG": "Preisschild",
@@ -484,6 +482,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Mehrere Nachweise hinzufügen"
+		},
+		"Community": {
+			"Title": "Gemeinschaft"
 		},
 		"Experiments": {
 			"Title": "Experimente"

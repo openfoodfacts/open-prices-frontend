@@ -134,16 +134,6 @@
 		"Submit": "Invia",
 		"Title": "Inserisci il codice a barre"
 	},
-	"BrandDetail": {
-		"LoadMore": "Scarica altro",
-		"TopProducts": "Prodotti migliori",
-		"BrandProductTotal": "{count} prodotti"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Scarica altro",
-		"TopProducts": "Prodotti migliori",
-		"CategoryProductTotal": "{count} prodotti"
-	},
 	"Common": {
 		"About": "Informazioni",
 		"AddPrice": "Aggiungi un prezzo",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Inserisci il codice a barre",
 		"BarcodeInvalid": "Codice a barre non valido",
 		"Brand": "Marche",
+		"Brands": "Marche",
+		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Prezzo",
 		"Prices": "Prezzi",
 		"Product": "Prodotto",
@@ -163,8 +155,10 @@
 		"Proofs": "Prove",
 		"Category": "Categoria",
 		"Categories": "Categorie",
+		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Chart": "Grafico",
 		"Contributors": "Contributori",
+		"Community": "Community",
 		"Country": "Paese",
 		"Currency": "Moneta",
 		"CurrencyMissing": "Valuta mancante",
@@ -179,6 +173,7 @@
 		"Experiments": "Experiments",
 		"Label": "Etichetta",
 		"Labels": "Etichette",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Lingue",
 		"Languages": "Lingue",
 		"LatestPrices": "Ultimi prezzi",
@@ -186,7 +181,12 @@
 		"LoadMore": "Scarica altro",
 		"Location": "Posizione",
 		"Locations": "Posizioni",
+		"LocationSelected": "Location selected",
+		"LocationShop": "Find your location",
+		"LocationFindShop": "Trova la posizione del tuo negozio",
 		"LocationMissing": "Posizione mancante",
+		"LocationSearchShopByName": "Cerca il tuo negozio per nome e città",
+		"LocationSearchByName": "Search by name and city",
 		"Date": "Data",
 		"DateMissing": "Data mancante",
 		"Details": "Dettagli",
@@ -217,7 +217,7 @@
 		"ImageFull": "Immagine a grandezza naturale",
 		"Latest": "Più recenti",
 		"LinkCopySuccess": "Link copiato",
-		"LocationCount": "{count} posizioni",
+		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Mappa",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -236,16 +236,25 @@
 		"OrderUserCountDESC": "Numero di utenti",
 		"PersonalInfo": "Informazioni personali",
 		"Physical": "Physical",
-		"PriceCount": "{count} prezzi",
+		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceCreated": "Prezzo creato!",
 		"PricesMore": "Altri prezzi",
-		"ProductCount": "{count} prodotti",
-		"ProofCount": "{count} prove",
+		"Private": "Privata",
+		"Privacy": "Privacy",
+		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"ProofMissing": "Proof missing",
+		"ProofSelect": "Seleziona una prova",
+		"ProofSelected": "Prova selezionata!",
+		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"Public": "Pubblica",
 		"Receipt": "Ricevuta",
 		"Receipts": "Scontrini",
 		"ReceiptPriceCount": "Numero di prezzi",
 		"ReceiptPriceTotal": "Importo totale",
 		"Recent": "Recenti",
+		"Reuses": "Reuses",
+		"ReusesKnown": "Known reuses",
 		"Search": "Cerca",
 		"Settings": "Impostazioni",
 		"SignInOFFAccount": "Accedi con il tuo profilo di {url}",
@@ -278,7 +287,8 @@
 		"URLInvalid": "Invalid URL",
 		"User": "Utente",
 		"Users": "Utenti",
-		"UserCount": "{count} utenti",
+		"UserCount": "{count} users | {count} user | {count} users",
+		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "Mostra",
 		"Website": "Sito web",
 		"Yes": "Sì",
@@ -286,6 +296,10 @@
 		"Food": "Cibo",
 		"PetFood": "Cibo per animali domestici",
 		"Beauty": "Bellezza"
+	},
+	"Community": {
+		"JoinUs": "Join us!",
+		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Scegli una delle tue valute preferite",
@@ -330,11 +344,6 @@
 		"LoadMore": "Scarica altro",
 		"LocationNotFound": "Posizione non trovata in OpenStreetMap... Non esitate ad aggiungerla :)"
 	},
-	"LocationList": {
-		"Title": "Posizioni migliori",
-		"LoadMore": "Scarica altro",
-		"LocationTotal": "{count} posizioni"
-	},
 	"LocationSelector": {
 		"Clear": "Cancella",
 		"NoResult": "Nessun risultato trovato",
@@ -360,9 +369,6 @@
 		"Proof": "Prova",
 		"FullPrice": "Prezzo pieno",
 		"UnknownProduct": "Prodotto sconosciuto"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} prezzi"
 	},
 	"PriceDelete": {
 		"Confirmation": "Sei sicuro di voler eliminare questo prezzo?",
@@ -423,14 +429,6 @@
 		"LoadMore": "Scarica altro",
 		"ProductNotFound": "Prodotto non trovato in Open Food Facts... Non esitate ad aggiungerlo :)"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "Nascondi i prodotti con i prezzi",
-		"LoadMore": "Scarica altro",
-		"PriceNumber": "Numero di prezzi aggiunti",
-		"ScanNumber": "Numero di scansioni aggiunte",
-		"Title": "Prodotti migliori",
-		"ProductTotal": "{count} prodotti"
-	},
 	"ProofCard": {
 		"Proof": "Prova",
 		"PRICE_TAG": "Etichetta del prezzo",
@@ -484,6 +482,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
+		},
+		"Community": {
+			"Title": "Community"
 		},
 		"Experiments": {
 			"Title": "Experiments"

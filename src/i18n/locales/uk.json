@@ -134,16 +134,6 @@
 		"Submit": "Підтвердити",
 		"Title": "Введіть штрих-код"
 	},
-	"BrandDetail": {
-		"LoadMore": "Завантажити більше",
-		"TopProducts": "Кращі продукти",
-		"BrandProductTotal": "{count} продуктів"
-	},
-	"CategoryDetail": {
-		"LoadMore": "Завантажити більше",
-		"TopProducts": "Кращі продукти",
-		"CategoryProductTotal": "{count} продуктів"
-	},
 	"Common": {
 		"About": "Про додаток",
 		"AddPrice": "Додати ціну",
@@ -155,6 +145,8 @@
 		"BarcodeType": "Введіть штрих-код",
 		"BarcodeInvalid": "Штрих-код не є дійсним",
 		"Brand": "Виробник",
+		"Brands": "Виробники",
+		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Ціна",
 		"Prices": "Ціни",
 		"Product": "Продукт",
@@ -163,8 +155,10 @@
 		"Proofs": "Докази",
 		"Category": "Категорія",
 		"Categories": "Категорії",
+		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Chart": "Графік",
 		"Contributors": "Співучасники",
+		"Community": "Спільнота",
 		"Country": "Країна",
 		"Currency": "Валюта",
 		"CurrencyMissing": "Відсутня валюта",
@@ -179,6 +173,7 @@
 		"Experiments": "Експерименти",
 		"Label": "Мітка",
 		"Labels": "Етикетки",
+		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Мови",
 		"Languages": "Мови",
 		"LatestPrices": "Остання ціна",
@@ -186,7 +181,12 @@
 		"LoadMore": "Завантажити більше",
 		"Location": "Розташування",
 		"Locations": "Місцезнаходження",
+		"LocationSelected": "Location selected",
+		"LocationShop": "Find your location",
+		"LocationFindShop": "Знайдіть місце розташування свого магазину",
 		"LocationMissing": "Розташування відсутнє",
+		"LocationSearchShopByName": "Шукайте свій магазин за назвою та містом",
+		"LocationSearchByName": "Search by name and city",
 		"Date": "Дата",
 		"DateMissing": "Відсутня дата",
 		"Details": "Подробиці",
@@ -217,7 +217,7 @@
 		"ImageFull": "Повнорозмірне зображення",
 		"Latest": "Останні",
 		"LinkCopySuccess": "Посилання скопійоване",
-		"LocationCount": "{count} місць",
+		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Мапа",
 		"Offline": "Офлайн",
 		"Online": "Онлайн",
@@ -236,16 +236,25 @@
 		"OrderUserCountDESC": "Кількість користувачів",
 		"PersonalInfo": "Особиста інформація",
 		"Physical": "Фізичний",
-		"PriceCount": "{count} цін",
+		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceCreated": "Ціна створена!",
 		"PricesMore": "Більше цін",
-		"ProductCount": "{count} продуктів",
-		"ProofCount": "{count} доказів",
+		"Private": "Приватний",
+		"Privacy": "Конфіденційність",
+		"ProductCount": "{count} products | {count} product | {count} products",
+		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
+		"ProofMissing": "Доказ відсутній",
+		"ProofSelect": "Виберіть доказ",
+		"ProofSelected": "Доказ вибрано!",
+		"ProofSelectedCount": "{count} вибрані докази | {count} доказ вибрано | {count} вибрані докази",
+		"Public": "Загальнодоступний",
 		"Receipt": "Квитанція",
 		"Receipts": "Чеки",
 		"ReceiptPriceCount": "Кількість цін",
 		"ReceiptPriceTotal": "Всього",
 		"Recent": "Недавні",
+		"Reuses": "Повторне використання",
+		"ReusesKnown": "Відомі повторні використання",
 		"Search": "Пошук",
 		"Settings": "Налаштування",
 		"SignInOFFAccount": "Увійдіть за допомогою свого {url} облікового запису",
@@ -278,7 +287,8 @@
 		"URLInvalid": "Некоректна URL-адреса",
 		"User": "Користувач",
 		"Users": "Користувачі",
-		"UserCount": "{count} користувачів",
+		"UserCount": "{count} users | {count} user | {count} users",
+		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "Переглянути",
 		"Website": "Сайт",
 		"Yes": "Так",
@@ -286,6 +296,10 @@
 		"Food": "Їжа",
 		"PetFood": "Корм для домашніх тварин",
 		"Beauty": "Краса"
+	},
+	"Community": {
+		"JoinUs": "Приєднайся до нас!",
+		"HowToUseTheData": "Використовуйте дані"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Оберіть одну з ваших улюблених валют",
@@ -330,11 +344,6 @@
 		"LoadMore": "Завантажити більше",
 		"LocationNotFound": "Розташування не знайдено в OpenStreetMap... Не соромтеся додати його :)"
 	},
-	"LocationList": {
-		"Title": "Топ локацій",
-		"LoadMore": "Завантажити більше",
-		"LocationTotal": "{count} місць"
-	},
 	"LocationSelector": {
 		"Clear": "Очистити",
 		"NoResult": "Результатів не знайдено",
@@ -360,9 +369,6 @@
 		"Proof": "Доказ",
 		"FullPrice": "Повна ціна",
 		"UnknownProduct": "Невідомий продукт"
-	},
-	"PriceCountChip": {
-		"PriceCount": "{count} цін"
 	},
 	"PriceDelete": {
 		"Confirmation": "Ви впевнені, що хочете видалити цю ціну?",
@@ -423,14 +429,6 @@
 		"LoadMore": "Завантажити більше",
 		"ProductNotFound": "Продукт не знайдено в Open Food Facts... Не зволікайте, додайте його :)"
 	},
-	"ProductList": {
-		"HideProductsWithPrices": "Приховати товари з цінами",
-		"LoadMore": "Завантажити більше",
-		"PriceNumber": "Кількість доданих цін",
-		"ScanNumber": "Кількість доданих сканувань",
-		"Title": "Кращі продукти",
-		"ProductTotal": "{count} продуктів"
-	},
 	"ProofCard": {
 		"Proof": "Доказ",
 		"PRICE_TAG": "Цінник",
@@ -484,6 +482,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Додайте кілька доказів"
+		},
+		"Community": {
+			"Title": "Спільнота"
 		},
 		"Experiments": {
 			"Title": "Експерименти"

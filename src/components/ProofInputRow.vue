@@ -8,7 +8,13 @@
       <ProofMetadataInputRow :proofType="proofForm.type" :proofMetadataForm="proofForm" />
       <v-row>
         <v-col>
-          <v-btn color="success" :loading="loading" :disabled="!proofFormFilled || loading" @click="uploadProofList">
+          <v-btn
+            class="float-right"
+            color="success"
+            :loading="loading"
+            :disabled="!proofFormFilled || loading"
+            @click="uploadProofList"
+          >
             <span v-if="!multiple">{{ $t('Common.Upload') }}</span>
             <span v-else>{{ $t('Common.UploadMultipleImages', proofImageList.length) }}</span>
           </v-btn>

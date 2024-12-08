@@ -2,7 +2,7 @@
   <v-row v-if="!loading">
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-database-outline">
-        {{ $t('ProductList.ProductTotal', { count: productTotal }) }}
+        {{ $t('Common.ProductCount', { count: productTotal }) }}
       </v-chip>
       <FilterMenu kind="product" :currentFilter="currentFilter" :currentSource="currentSource" @update:currentFilter="toggleProductFilter($event)" @update:currentSource="toggleProductSource($event)" />
       <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
