@@ -2,7 +2,7 @@
   <v-dialog scrollable min-height="300px" max-height="80%" min-width="80%">
     <v-card>
       <v-card-title>
-        {{ $t('LocationSelector.Title') }} <v-btn
+        {{ $t('Common.LocationFindShop') }} <v-btn
           style="float:right;" variant="text" density="compact" icon="mdi-close"
           @click="close"
         />
@@ -28,7 +28,7 @@
             <LocationRecentChip v-for="(location, index) in recentLocations" :key="index" :location="location" :withRemoveAction="true" @click="selectLocation(location)" @click:close="removeRecentLocation(location)" />
             <br>
             <v-btn v-if="recentLocations.length" size="small" class="" @click="clearRecentLocations">
-              {{ $t('LocationSelector.Clear') }}
+              {{ $t('Common.Clear') }}
             </v-btn>
             <p v-else>
               {{ $t('LocationSelector.RecentLocations', recentLocations.length) }}
