@@ -64,7 +64,7 @@
                   {{ $t('Common.Price') }}
                 </h3>
                 <h3 class="mb-1">
-                  <v-item-group v-if="productPriceForm.mode === 'category'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
+                  <v-item-group v-if="productPriceForm.type === 'CATEGORY'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
                     <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
                       <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
                         <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
@@ -155,7 +155,7 @@ export default {
       // product price data
       proofPriceNewList: [],
       productPriceNew: {
-        mode: '',  // see ProductInputRow
+        type: '',  // see ProductInputRow
         product: null,
         product_code: '',
         category_tag: null,
@@ -242,7 +242,7 @@ export default {
     initNewProductPriceForm() {
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))  // deep copy
-      this.productPriceForm.mode = this.appStore.user.last_product_mode_used  // can be overriden in ProductInputRow
+      this.productPriceForm.type = this.appStore.user.last_product_mode_used  // can be overriden in ProductInputRow
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.productPriceForm.currency = this.addPriceMultipleForm.currency || this.appStore.getUserLastCurrencyUsed  // get currency from proof first
       // scroll to the form

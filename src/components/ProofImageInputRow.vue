@@ -3,7 +3,7 @@
     <v-col :cols="showProofImagePreviewList ? '8' : '12'">
       <v-menu scroll-strategy="close" :disabled="loading">
         <template #activator="{ props }">
-          <v-btn v-bind="props" size="small" prepend-icon="mdi-image" append-icon="mdi-menu-down" :style="hasProofImageSelected ? 'border: 1px solid #4CAF50' : 'border: 1px solid #F44336'">
+          <v-btn v-bind="props" size="small" prepend-icon="mdi-image" append-icon="mdi-menu-down" :class="hasProofImageSelected ? 'border-success' : 'border-error'">
             <span v-if="hasProofImageSelected">{{ $t('Common.ProofSelectedCount', { count: proofImagePreviewList.length }) }}</span>
             <span v-else>{{ $t('Common.ProofSelect') }}</span>
           </v-btn>
@@ -39,6 +39,7 @@
       <!-- RECEIPT: warning message -->
       <v-alert
         v-if="proofImageForm && proofImageForm.type === PROOF_TYPE_RECEIPT"
+        class="mt-2"
         type="warning"
         variant="outlined"
         density="compact"
