@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.96.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.3...v1.96.4) (2024-12-08)
+
+
+### Bug Fixes
+
+* **ContributionAssistant:** remove labels_tags param when sending barcodes ([#1067](https://github.com/openfoodfacts/open-prices-frontend/issues/1067)) ([a58d965](https://github.com/openfoodfacts/open-prices-frontend/commit/a58d965f066f6215f206cb5eb4e9838512695c82))
+* **ContributionAssitant:** strip whitespaces from gemini detected barcodes ([#1089](https://github.com/openfoodfacts/open-prices-frontend/issues/1089)) ([e8256a0](https://github.com/openfoodfacts/open-prices-frontend/commit/e8256a03377d5bdc8d5ee1779a26675e38d5666e))
+* **l10n:** adjust some translations (locations) ([de47841](https://github.com/openfoodfacts/open-prices-frontend/commit/de4784137d1169d5eadd2dee6b5f95582484ba44))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1088](https://github.com/openfoodfacts/open-prices-frontend/issues/1088)) ([d764e2e](https://github.com/openfoodfacts/open-prices-frontend/commit/d764e2efc6f4ad3307daced60e9ea13f924a653d))
+* **l10n:** New Crowdin translations to review and merge ([#1097](https://github.com/openfoodfacts/open-prices-frontend/issues/1097)) ([b468a2a](https://github.com/openfoodfacts/open-prices-frontend/commit/b468a2a05405198f59adc1052cbdcf9f2372e0ed))
+* **Price add:** new PRICE_TYPE_LIST constants. rename mode to type. send type field on create ([eeff608](https://github.com/openfoodfacts/open-prices-frontend/commit/eeff608b69a4f9db462ff68b7e38b20b50371305))
+* **Price add:** new Product type form input (improved chips) ([#1099](https://github.com/openfoodfacts/open-prices-frontend/issues/1099)) ([2f811f6](https://github.com/openfoodfacts/open-prices-frontend/commit/2f811f69d162cd5e75cc6445aa8a2d8f6d32ba76))
+* **Price add:** new Proof image input form (single button) ([#1093](https://github.com/openfoodfacts/open-prices-frontend/issues/1093)) ([90b7adc](https://github.com/openfoodfacts/open-prices-frontend/commit/90b7adca988bed5cba0b1cf0f3d73d389eaf257c))
+* **Price add:** new Proof location input (single button) ([#1095](https://github.com/openfoodfacts/open-prices-frontend/issues/1095)) ([5ba2210](https://github.com/openfoodfacts/open-prices-frontend/commit/5ba221017ea7482a6dba0953d1cc4c7572212f32))
+* **Price add:** new Proof type form input (revert back to chips) ([#1098](https://github.com/openfoodfacts/open-prices-frontend/issues/1098)) ([4ea4c8a](https://github.com/openfoodfacts/open-prices-frontend/commit/4ea4c8a408e766dee5dae5b4efea260cc7daad1f))
+* **Price add:** new Proof type form input (single button) ([#1096](https://github.com/openfoodfacts/open-prices-frontend/issues/1096)) ([4f6c392](https://github.com/openfoodfacts/open-prices-frontend/commit/4f6c392261066ededacba2bc5943f4a41bf65dd1))
+* **Price add:** small refactoring and fixes following recent Price add changes ([da0c4b2](https://github.com/openfoodfacts/open-prices-frontend/commit/da0c4b28f5313232980b7f1d18c3f1ea03299ba2))
+
 ## [1.96.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.2...v1.96.3) (2024-12-04)
 
 
