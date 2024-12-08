@@ -152,7 +152,7 @@ export default {
     utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
       this.originTags = module.default
     })
-    this.productForm.type = this.productForm.type ? this.productForm.type : (this.productForm.product_code ? 'PRODUCT' : this.appStore.user.last_product_mode_used)
+    this.productForm.type = this.productForm.type ? this.productForm.type : (this.productForm.product_code ? 'PRODUCT' : this.appStore.user.last_product_product_used)
     if (this.productForm.product_code) {
       this.getProduct(this.productForm.product_code)
     }

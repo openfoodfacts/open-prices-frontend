@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import constants from './constants'
 import utils from './utils.js'
 
 export const useAppStore = defineStore('app', {
@@ -6,7 +7,7 @@ export const useAppStore = defineStore('app', {
     user: {
       username: null,
       token: null,
-      last_product_mode_used: 'barcode',
+      last_product_type_used: constants.PRICE_TYPE_PRODUCT,  // or 'BARCODE'
       last_currency_used: import.meta.env.VITE_DEFAULT_CURRENCY,  // 'EUR'
       recent_locations: [],
       language: import.meta.env.VITE_DEFAULT_LOCALE, // 'en'

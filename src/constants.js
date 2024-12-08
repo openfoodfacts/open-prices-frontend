@@ -57,6 +57,8 @@ export default {
   OPF_URL: 'https://world.openproductsfacts.org',
   OPF_ICON: OPF_ICON,
   SOURCE_PARAM: 'source',
+  PRICE_TYPE_PRODUCT: PRICE_TYPE_PRODUCT,
+  PRICE_TYPE_CATEGORY: PRICE_TYPE_CATEGORY,
   PRICE_TYPE_LIST: [
     {key: PRICE_TYPE_PRODUCT, value: 'Barcode', icon: PRICE_TYPE_PRODUCT_ICON},
     {key: PRICE_TYPE_CATEGORY, value: 'Category', icon: PRICE_TYPE_CATEGORY_ICON}
