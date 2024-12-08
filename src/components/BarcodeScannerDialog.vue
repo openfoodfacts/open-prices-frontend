@@ -75,6 +75,12 @@ const config = {
 }
 
 export default {
+  props: {
+    preFillValue: {
+      type: String,
+      default: ''
+    }
+  },
   emits: ['barcode', 'close'],
   data() {
     return {
@@ -96,6 +102,10 @@ export default {
   },
   mounted() {
     this.createQrcodeScanner()
+    if (this.preFillValue) {
+      this.barcodeForm.barcode = this.preFillValue
+    }
+    // this.$refs.barcodeInput.focus()
   },
   methods: {
     createQrcodeScanner() {
