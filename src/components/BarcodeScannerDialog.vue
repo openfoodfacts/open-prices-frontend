@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable max-height="80%" min-width="50%">
+  <v-dialog scrollable min-height="50%" max-height="80%" min-width="50%">
     <v-card>
       <v-card-title>
         {{ $t('Common.ProductFind') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
@@ -26,22 +26,23 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="type">
-            <v-form @submit.prevent="onSubmit">
+            <v-form v-model="barcodeManualFormValid" class="mb-2" @submit.prevent="barcodeSearchOrSend">
               <v-text-field
-                ref="barcodeInput"
-                v-model="barcodeForm.barcode"
-                :label="$t('BarcodeManualInput.Barcode')"
+                ref="barcodeManualInput"
+                v-model="barcodeManualForm.barcode"
+                :label="$t('Common.Barcode')"
                 type="number"
                 inputmode="numeric"
                 prepend-inner-icon="mdi-barcode"
-                :hint="barcodeForm.barcode.length.toString()"
+                :hint="barcodeManualForm.barcode.length.toString()"
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-icon icon="mdi-plus" :disabled="!formFilled" @click="onSubmit" />
+                  <v-icon :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualFormValid" @click="barcodeSearchOrSend" />
                 </template>
               </v-text-field>
             </v-form>
+            <ProductCard v-if="product" :product="product" :hideCategoriesAndLabels="true" :hideProductActions="true" :readonly="true" elevation="1" @click="barcodeSend(product.code)" />
           </v-tabs-window-item>
         </v-tabs-window>
       </v-card-text>
@@ -63,6 +64,8 @@
 
 <script>
 import { Html5Qrcode, Html5QrcodeScanType } from 'html5-qrcode'
+import { defineAsyncComponent } from 'vue'
+import api from '../services/api'
 import constants from '../constants'
 
 const config = {
@@ -75,8 +78,15 @@ const config = {
 }
 
 export default {
+  components: {
+    ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+  },
   props: {
-    preFillValue: {
+    barcodeManualInputMode: {
+      type: String,
+      default: 'search'  // 'add'
+    },
+    barcodeManualInputPrefillValue: {
       type: String,
       default: ''
     }
@@ -85,9 +95,11 @@ export default {
   data() {
     return {
       scanner: null,
-      barcodeForm: {
+      barcodeManualForm: {
         barcode: '',
       },
+      barcodeManualFormValid: false,
+      product: null,
       // config
       displayItems: constants.PRODUCT_SELECTOR_DISPLAY_LIST,
       currentDisplay: constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key,  // scan
@@ -96,16 +108,18 @@ export default {
     }
   },
   computed: {
-    formFilled() {
-      return Object.values(this.barcodeForm).every(x => !!x)
-    }
+    barcodeManualInputRules() {
+      return [
+        (v) => !!v || '',
+      ]
+    },
   },
   mounted() {
     this.createQrcodeScanner()
     if (this.preFillValue) {
-      this.barcodeForm.barcode = this.preFillValue
+      this.barcodeManualForm.barcode = this.preFillValue
     }
-    // this.$refs.barcodeInput.focus()
+    // this.$refs.barcodeManualInput.focus()
   },
   methods: {
     createQrcodeScanner() {
@@ -113,14 +127,32 @@ export default {
       this.scanner.start({ facingMode: 'environment' }, config, this.onScanSuccess, this.onScanFailure)
     },
     onScanSuccess(decodedText, decodedResult) {  // eslint-disable-line no-unused-vars
-      this.$emit('barcode', decodedText)
-      this.close()
+      this.barcodeSend(decodedText)
     },
     onScanFailure(error) {  // eslint-disable-line no-unused-vars
       // console.warn(`Code scan error = ${error}`)
     },
-    onSubmit() {
-      this.$emit('barcode', this.barcodeForm.barcode)
+    barcodeSearchOrSend() {
+      if (!this.barcodeManualFormValid) return
+      if (this.barcodeManualInputMode === 'search') {
+        this.getProduct(this.barcodeManualForm.barcode)
+      } else {
+        this.barcodeSend(this.barcodeManualForm.barcode)
+      }
+    },
+    getProduct(code) {
+      this.product = null
+      api
+        .getProductByCode(code)
+        .then((data) => {
+          this.product = data.id ? data : {'code': code, 'price_count': 0}
+        })
+        .catch((error) => {  // eslint-disable-line no-unused-vars
+          alert("Error: Open Prices server error")
+        })
+    },
+    barcodeSend(barcode) {
+      this.$emit('barcode', barcode)
       this.close()
     },
     close() {

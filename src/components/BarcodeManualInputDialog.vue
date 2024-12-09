@@ -32,7 +32,7 @@
 <script>
 export default {
   props: {
-    preFillValue: {
+    barcodeInputPrefillValue: {
       type: String,
       default: ''
     }
@@ -51,8 +51,8 @@ export default {
     }
   },
   mounted() {
-    if (this.preFillValue) {
-      this.barcodeForm.barcode = this.preFillValue
+    if (this.barcodeInputPrefillValue) {
+      this.barcodeForm.barcode = this.barcodeInputPrefillValue
     }
     this.$refs.barcodeInput.focus()
   },
