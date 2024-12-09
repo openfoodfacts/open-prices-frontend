@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" sm="6">
+    <v-col :cols="priceForm.price_is_discounted ? '6' : '12'">
       <v-text-field
         :model-value="priceForm.price"
         :label="priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label')"
@@ -31,10 +31,16 @@
         @update:modelValue="newValue => priceForm.price_without_discount = fixComma(newValue)"
       />
     </v-col>
+    <v-col class="pt-0" cols="6">
+      <v-checkbox
+        v-model="priceForm.price_is_discounted"
+        density="compact"
+        :label="$t('Common.Discount')"
+        :true-value="true"
+        hide-details="auto"
+      />
+    </v-col>
   </v-row>
-  <div class="d-inline">
-    <v-switch v-model="priceForm.price_is_discounted" :label="$t('Common.Discount')" color="success" hide-details="auto" />
-  </div>
 
   <ChangeCurrencyDialog
     v-if="changeCurrencyDialog"
