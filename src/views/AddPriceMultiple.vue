@@ -60,22 +60,17 @@
             </v-row>
             <v-row>
               <v-col>
-                <h3 class="required mb-1">
-                  {{ $t('Common.Price') }}
-                </h3>
-                <h3 class="mb-1">
-                  <v-item-group v-if="productPriceForm.type === 'CATEGORY'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
-                    <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
-                      <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
-                        <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
-                        {{ cpp.value }}
-                      </v-chip>
-                    </v-item>
-                  </v-item-group>
-                </h3>
-                <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
+                <v-item-group v-if="productPriceForm.type === 'CATEGORY'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
+                  <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
+                    <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
+                      <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
+                      {{ cpp.value }}
+                    </v-chip>
+                  </v-item>
+                </v-item-group>
               </v-col>
             </v-row>
+            <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
             <v-row>
               <v-col>
                 <v-btn

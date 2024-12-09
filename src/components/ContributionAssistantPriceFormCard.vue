@@ -28,20 +28,15 @@
       </v-alert>
       <v-row>
         <v-col>
-          <h3 class="required mb-1">
-            Price
-          </h3>
-          <h3 v-if="productPriceForm.type == 'CATEGORY'" class="mb-1">
-            <v-item-group v-model="productPriceForm.price_per" class="d-inline" mandatory>
-              <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
-                <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
-                  <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
-                  {{ cpp.value }}
-                </v-chip>
-              </v-item>
-            </v-item-group>
-          </h3>
-          <PriceInputRow :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
+          <v-item-group v-if="productPriceForm.type == 'CATEGORY'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
+            <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
+              <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
+                <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
+                {{ cpp.value }}
+              </v-chip>
+            </v-item>
+          </v-item-group>
+          <PriceInputRow class="mt-0" :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
         </v-col>
       </v-row>
     </v-card-text>
