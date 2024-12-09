@@ -43,16 +43,17 @@
             hide-details="auto"
           />
         </v-col>
-        <div class="d-inline">
+        <v-col class="pt-0" cols="6">
           <v-checkbox
             v-for="lt in labelsTags"
             :key="lt.id"
             v-model="productForm.labels_tags"
+            density="compact"
             :label="lt.name"
             :value="lt.id"
             hide-details="auto"
           />
-        </div>
+        </v-col>
       </v-row>
     </v-col>
   </v-row>
