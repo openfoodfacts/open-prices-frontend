@@ -26,7 +26,7 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="type">
-            <v-form v-model="barcodeManualFormValid" @submit.prevent="barcodeSearchOrAdd">
+            <v-form v-model="barcodeManualFormValid" class="mb-2" @submit.prevent="barcodeSearchOrSend">
               <v-text-field
                 ref="barcodeManualInput"
                 v-model="barcodeManualForm.barcode"
@@ -38,7 +38,7 @@
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-icon :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualFormValid" @click="barcodeSearchOrAdd" />
+                  <v-icon :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualFormValid" @click="barcodeSearchOrSend" />
                 </template>
               </v-text-field>
             </v-form>
@@ -132,7 +132,7 @@ export default {
     onScanFailure(error) {  // eslint-disable-line no-unused-vars
       // console.warn(`Code scan error = ${error}`)
     },
-    barcodeSearchOrAdd() {
+    barcodeSearchOrSend() {
       if (!this.barcodeManualFormValid) return
       if (this.barcodeManualInputMode === 'search') {
         this.getProduct(this.barcodeManualForm.barcode)
