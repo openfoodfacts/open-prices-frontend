@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :cols="priceForm.price_is_discounted ? '6' : '12'">
+    <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
       <v-text-field
         :model-value="priceForm.price"
         :label="priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label')"
@@ -18,7 +18,7 @@
         </template>
       </v-text-field>
     </v-col>
-    <v-col v-if="priceForm.price_is_discounted" cols="6">
+    <v-col v-if="priceForm.price_is_discounted" cols="6" class="pb-0">
       <v-text-field
         :model-value="priceForm.price_without_discount"
         :label="$t('PriceForm.LabelFull')"
@@ -40,14 +40,14 @@
         hide-details="auto"
       />
     </v-col>
-  </v-row>
 
-  <ChangeCurrencyDialog
-    v-if="changeCurrencyDialog"
-    v-model="changeCurrencyDialog"
-    @newCurrencySelected="setCurrencyData($event)"
-    @close="changeCurrencyDialog = false"
-  />
+    <ChangeCurrencyDialog
+      v-if="changeCurrencyDialog"
+      v-model="changeCurrencyDialog"
+      @newCurrencySelected="setCurrencyData($event)"
+      @close="changeCurrencyDialog = false"
+    />
+  </v-row>
 </template>
 
 <script>
