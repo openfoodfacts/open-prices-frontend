@@ -36,19 +36,19 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="osm">
-            <v-form v-model="locationOsmSearchFormValid" @submit.prevent="osmSearch">
+            <v-form v-model="locationOsmSearchFormValid" @submit.prevent="locationOsmSearch">
               <v-text-field
                 ref="locationOsmSearchInput"
                 v-model="locationOsmSearchForm.q"
                 :label="$t('Common.LocationSearchByName')"
                 :hint="$t('Common.ExamplesWithColonAndValue', { value: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359' })"
                 type="text"
-                :rules="osmSearchRules"
+                :rules="locationOsmSearchInputRules"
                 :loading="loading"
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-icon icon="mdi-magnify" :disabled="!locationOsmSearchFormValid" @click="osmSearch" />
+                  <v-icon icon="mdi-magnify" :disabled="!locationOsmSearchFormValid" @click="locationOsmSearch" />
                 </template>
               </v-text-field>
             </v-form>
@@ -181,7 +181,7 @@ export default {
     showLocationOSMID() {
       return this.appStore.user.username && this.appStore.user.location_display_osm_id
     },
-    osmSearchRules() {
+    locationOsmSearchInputRules() {
       return [
         (v) => !!v || '',
       ]
@@ -200,7 +200,7 @@ export default {
     fieldRequired(v) {
       return !!v
     },
-    osmSearch() {
+    locationOsmSearch() {
       if (!this.locationOsmSearchFormValid) return
       this.$refs.locationOsmSearchInput.blur()
       this.results = null
