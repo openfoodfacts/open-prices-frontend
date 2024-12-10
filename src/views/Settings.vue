@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card :title="$t('UserSettings.DisplayTitle')" prepend-icon="mdi-laptop">
+      <v-card :title="$t('Common.Display')" prepend-icon="mdi-laptop">
         <v-divider />
         <v-card-text>
           <!-- Theme -->
@@ -65,7 +65,7 @@
 
     <!-- Prices -->
     <v-col cols="12" sm="6">
-      <v-card :title="$t('Common.Prices')" prepend-icon="mdi-tag-multiple-outline">
+      <v-card :title="$t('UserSettings.AddingPrices')" prepend-icon="mdi-tag-multiple-outline">
         <v-divider />
         <v-card-text>
           <h3 class="mb-1">
@@ -79,6 +79,18 @@
             chips
             closable-chips
             multiple
+            hide-details="auto"
+          />
+          <!-- Language -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('UserSettings.BarcodeScanner') }}
+          </h3>
+          <v-select
+            v-model="appStore.user.barcode_scanner_default_mode"
+            :label="$t('UserSettings.DefaultMode')"
+            :items="barcodeScannerModeList"
+            :item-title="item => $t('Common.' + item.valueSmallScreen)"
+            :item-value="item => item.key"
             hide-details="auto"
           />
         </v-card-text>
@@ -159,6 +171,7 @@ export default {
       countryList,
       languageList,
       // currencyList,
+      barcodeScannerModeList: constants.PRODUCT_SELECTOR_DISPLAY_LIST
     }
   },
   computed: {
