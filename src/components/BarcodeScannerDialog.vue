@@ -130,8 +130,8 @@ export default {
     }
   },
   mounted() {
-    if (this.preFillValue) {
-      this.barcodeManualForm.barcode = this.preFillValue
+    if (this.barcodeManualInputPrefillValue) {
+      this.barcodeManualForm.barcode = this.barcodeManualInputPrefillValue
     }
     // init tab
     if (this.appStore.user.barcode_scanner_default_mode === constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key) {
