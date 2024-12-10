@@ -65,6 +65,8 @@
 <script>
 import { Html5Qrcode, Html5QrcodeScanType } from 'html5-qrcode'
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
 
@@ -102,24 +104,42 @@ export default {
       product: null,
       // config
       displayItems: constants.PRODUCT_SELECTOR_DISPLAY_LIST,
-      currentDisplay: constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key,  // scan
+      currentDisplay: null,  // see mounted
       HTML5_QRCODE_URL: 'https://github.com/mebjas/html5-qrcode',
       HTML5_QRCODE_NAME: 'html5-qrcode'
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     barcodeManualInputRules() {
       return [
         (v) => !!v || '',
       ]
     },
   },
+  watch: {
+    currentDisplay(value) {
+      if (value === constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key) {
+        window.setTimeout(() => this.createQrcodeScanner(), 200)
+      } else {  // type
+        window.setTimeout(() => this.$refs.barcodeManualInput.focus(), 200)
+        if (this.scanner) {
+          this.scanner.stop()
+        }
+      }
+    }
+  },
   mounted() {
-    this.createQrcodeScanner()
     if (this.preFillValue) {
       this.barcodeManualForm.barcode = this.preFillValue
     }
-    // this.$refs.barcodeManualInput.focus()
+    // init tab
+    if (this.appStore.user.barcode_scanner_default_mode === constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key) {
+      this.currentDisplay = constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key
+    } else {
+      // default to scan
+      this.currentDisplay = constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key
+    }
   },
   methods: {
     createQrcodeScanner() {
