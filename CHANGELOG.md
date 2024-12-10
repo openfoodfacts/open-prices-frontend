@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.97.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.6...v1.97.0) (2024-12-10)
+
+
+### Features
+
+* **Settings:** new Barcode scanner default mode settings (scan or type) ([#1111](https://github.com/openfoodfacts/open-prices-frontend/issues/1111)) ([faf86ce](https://github.com/openfoodfacts/open-prices-frontend/commit/faf86ce62729f71bcc81dbd63f75beec0ea5397a))
+
+
+### Bug Fixes
+
+* **Price add:** fix barcode type prefill feature (typo). ref [#1108](https://github.com/openfoodfacts/open-prices-frontend/issues/1108) ([8af89a7](https://github.com/openfoodfacts/open-prices-frontend/commit/8af89a7183d6a8cd3059f12bdfc4a8aa072717a3))
+
 ## [1.96.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.5...v1.96.6) (2024-12-10)
 
 
