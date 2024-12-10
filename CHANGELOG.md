@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.96.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.5...v1.96.6) (2024-12-10)
+
+
+### Bug Fixes
+
+* **ContributionAssistant:** fix barcode or category selection. closes [#1104](https://github.com/openfoodfacts/open-prices-frontend/issues/1104) ([9bb39b2](https://github.com/openfoodfacts/open-prices-frontend/commit/9bb39b28ed6d6cb813af7284b02819f3236f43f9))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1106](https://github.com/openfoodfacts/open-prices-frontend/issues/1106)) ([e36ced8](https://github.com/openfoodfacts/open-prices-frontend/commit/e36ced885f197b61fa0a80cb11be8ae7d022e369))
+* **Price add:** gain some space near the product & price checkboxes ([#1109](https://github.com/openfoodfacts/open-prices-frontend/issues/1109)) ([56b9bf2](https://github.com/openfoodfacts/open-prices-frontend/commit/56b9bf2d21cb788cefee387545bd0bde00af3397))
+* **Price add:** On barcode manual input, show result confirmation before send ([#1108](https://github.com/openfoodfacts/open-prices-frontend/issues/1108)) ([82dadf9](https://github.com/openfoodfacts/open-prices-frontend/commit/82dadf9d595b53f5a6d90fe2b81f4d007b081e61))
+
 ## [1.96.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.4...v1.96.5) (2024-12-08)
 
 
