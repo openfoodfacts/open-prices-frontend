@@ -81,7 +81,7 @@
             multiple
             hide-details="auto"
           />
-          <!-- Language -->
+          <!-- Barcode scanner -->
           <h3 class="mt-4 mb-1">
             {{ $t('UserSettings.BarcodeScanner') }}
           </h3>
