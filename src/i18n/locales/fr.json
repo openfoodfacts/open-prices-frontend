@@ -599,6 +599,8 @@
 		"CountryLabel": "Pays",
 		"CurrencyLabel": "Devise",
 		"DisplayTitle": "Afficher",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Devises préférées",
 		"CurrencyRequired": "Au moins une devise est requise",
 		"LanguageLabel": "Langue",
