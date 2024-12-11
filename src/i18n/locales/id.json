@@ -500,6 +500,9 @@
 		"LatestPrices": {
 			"Title": "Harga terbaru"
 		},
+		"LatestProofs": {
+			"Title": "Bukti terbaru"
+		},
 		"MyPrices": {
 			"Title": "Harga saya"
 		},
