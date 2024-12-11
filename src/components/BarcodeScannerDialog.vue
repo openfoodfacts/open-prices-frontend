@@ -123,7 +123,7 @@ export default {
         window.setTimeout(() => this.createQrcodeScanner(), 200)
       } else {  // type
         window.setTimeout(() => this.$refs.barcodeManualInput.focus(), 200)
-        if (this.scanner) {
+        if (this.scanner && this.scanner.getState() > 1) {
           this.scanner.stop()
         }
       }
@@ -177,7 +177,7 @@ export default {
     },
     close() {
       // https://scanapp.org/html5-qrcode-docs/docs/apis/enums/Html5QrcodeScannerState
-      if (this.scanner.getState() > 1) {
+      if (this.scanner && this.scanner.getState() > 1) {
         this.scanner.stop()
       }
       this.$emit('close')
