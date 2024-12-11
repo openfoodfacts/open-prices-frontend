@@ -500,6 +500,9 @@
 		"LatestPrices": {
 			"Title": "Laatste prijzen"
 		},
+		"LatestProofs": {
+			"Title": "Laatste bewijzen"
+		},
 		"MyPrices": {
 			"Title": "Mijn prijzen"
 		},
