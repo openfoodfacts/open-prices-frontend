@@ -23,6 +23,13 @@
     </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
+        :title="$t('Router.ProofsOpenForContribution.Title')"
+        prepend-icon="mdi-image-search-outline"
+        to="/experiments/proofs-open-for-contribution"
+      />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
         :title="$t('Router.ContributionAssistant.Title')"
         prepend-icon="mdi-draw"
         to="/experiments/contribution-assistant"

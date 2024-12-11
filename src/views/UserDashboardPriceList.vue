@@ -47,7 +47,7 @@ export default {
       loading: false,
       // filter & order
       currentFilter: '',
-      currentOrder: constants.PRICE_ORDER_LIST[2].key,  // created first
+      currentOrder: constants.PRICE_ORDER_LIST[2].key,  // -created
     }
   },
   computed: {

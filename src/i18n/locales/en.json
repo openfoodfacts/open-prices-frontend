@@ -530,6 +530,9 @@
 		"TopProducts": {
 			"Title": "Top products"
 		},
+		"ProofsOpenForContribution": {
+			"Title": "Proofs open for contribution"
+		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		}
