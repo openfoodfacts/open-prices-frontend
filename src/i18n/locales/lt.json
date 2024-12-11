@@ -599,6 +599,8 @@
 		"CountryLabel": "Šalis",
 		"CurrencyLabel": "Valiuta",
 		"DisplayTitle": "Display",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Mėgstamos valiutos",
 		"CurrencyRequired": "Būtina bent viena valiuta",
 		"LanguageLabel": "Kalbos",
