@@ -500,6 +500,9 @@
 		"LatestPrices": {
 			"Title": "Son fiyatlar"
 		},
+		"LatestProofs": {
+			"Title": "En son bedeller"
+		},
 		"MyPrices": {
 			"Title": "Fiyatlarım"
 		},
