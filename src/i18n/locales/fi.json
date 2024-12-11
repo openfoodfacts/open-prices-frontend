@@ -500,6 +500,9 @@
 		"LatestPrices": {
 			"Title": "Viimeisimmät hinnat"
 		},
+		"LatestProofs": {
+			"Title": "Uusimmat todisteet"
+		},
 		"MyPrices": {
 			"Title": "Minun hinnat"
 		},
