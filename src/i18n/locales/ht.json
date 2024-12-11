@@ -599,6 +599,8 @@
 		"CountryLabel": "Peyi",
 		"CurrencyLabel": "Lajan",
 		"DisplayTitle": "Display",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Lajan favori",
 		"CurrencyRequired": "Omwen yon lajan obligatwa",
 		"LanguageLabel": "Lang",
