@@ -500,6 +500,9 @@
 		"LatestPrices": {
 			"Title": "Naujausios kainos"
 		},
+		"LatestProofs": {
+			"Title": "Naujausi įrodymai"
+		},
 		"MyPrices": {
 			"Title": "Mano kainos"
 		},
