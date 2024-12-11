@@ -599,6 +599,8 @@
 		"CountryLabel": "Ülke",
 		"CurrencyLabel": "Kur",
 		"DisplayTitle": "Göster",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Sık kullanılan para birimleri",
 		"CurrencyRequired": "En az bir para birimi gerekli",
 		"LanguageLabel": "Diller",

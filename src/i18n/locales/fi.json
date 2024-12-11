@@ -599,6 +599,8 @@
 		"CountryLabel": "Maa",
 		"CurrencyLabel": "Valuutta",
 		"DisplayTitle": "Näytä",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Suosikki valuutat",
 		"CurrencyRequired": "Vähintään yksi valuutta vaaditaan",
 		"LanguageLabel": "Kielet",

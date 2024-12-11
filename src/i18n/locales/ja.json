@@ -599,6 +599,8 @@
 		"CountryLabel": "国",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "お気に入りの通貨",
 		"CurrencyRequired": "少なくとも 1 つの通貨が必要です",
 		"LanguageLabel": "言語",

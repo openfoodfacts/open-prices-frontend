@@ -599,6 +599,8 @@
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Weergave",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favoriete valuta",
 		"CurrencyRequired": "Er is minimaal één valuta vereist",
 		"LanguageLabel": "Talen",

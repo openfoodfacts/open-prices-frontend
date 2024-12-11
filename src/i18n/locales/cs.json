@@ -599,6 +599,8 @@
 		"CountryLabel": "Země",
 		"CurrencyLabel": "Měna",
 		"DisplayTitle": "Zobrazit",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Oblíbené měny",
 		"CurrencyRequired": "Je vyžadována alespoň jedna měna",
 		"LanguageLabel": "Jazyky",
