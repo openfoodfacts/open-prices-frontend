@@ -599,6 +599,8 @@
 		"CountryLabel": "Negara",
 		"CurrencyLabel": "Mata uang",
 		"DisplayTitle": "Tampilan",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Mata uang favorit",
 		"CurrencyRequired": "Setidaknya diperlukan satu mata uang",
 		"LanguageLabel": "Bahasa",

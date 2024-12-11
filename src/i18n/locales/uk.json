@@ -599,6 +599,8 @@
 		"CountryLabel": "Країна",
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показати",
+		"BarcodeScanner": "Сканер штрих-кодів",
+		"DefaultMode": "Стандартний режим",
 		"FavoriteCurrencies": "Улюблені валюти",
 		"CurrencyRequired": "Потрібна принаймні одна валюта",
 		"LanguageLabel": "Мови",

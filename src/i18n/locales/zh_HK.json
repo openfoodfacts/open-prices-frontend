@@ -599,6 +599,8 @@
 		"CountryLabel": "地區",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "語言",
