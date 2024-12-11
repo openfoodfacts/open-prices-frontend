@@ -43,7 +43,7 @@ export default {
   },
   computed: {
     getProofsParams() {
-      let defaultParams = { type: constants.PROOF_TYPE_PRICE_TAG, price_count: 0, order_by: this.currentOrder, page: this.proofPage }
+      let defaultParams = { type: constants.PROOF_TYPE_PRICE_TAG, price_count: 0, location_id__isnull: false, order_by: this.currentOrder, page: this.proofPage }
       return defaultParams
     },
   },
