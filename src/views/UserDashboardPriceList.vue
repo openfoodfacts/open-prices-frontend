@@ -5,6 +5,8 @@
         {{ $t('Common.PriceCount', { count: userPriceTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
+      <FilterMenu kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
+      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
 
@@ -26,12 +28,15 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
   components: {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
   },
   data() {
     return {
@@ -40,15 +45,36 @@ export default {
       userPriceTotal: null,
       userPricePage: 0,
       loading: false,
+      // filter & order
+      currentFilter: '',
+      currentOrder: constants.PRICE_ORDER_LIST[2].key,  // created first
     }
   },
   computed: {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
+    },
+    getPricesParams() {
+      let defaultParams = { owner: this.username, order_by: this.currentOrder, page: this.userPricePage }
+      if (this.currentFilter === 'show_last_month') {
+        let oneMonthAgo = new Date()
+        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
+        defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
+      }
+      return defaultParams
+    },
+  },
+  watch: {
+    $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initUserPrices()
+      }
     }
   },
   mounted() {
+    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.getUserPrices()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -58,16 +84,34 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
+    initUserPrices() {
+      this.userPriceList = []
+      this.userPriceTotal = null
+      this.userPricePage = 0
+      this.getUserPrices()
+    },
     getUserPrices() {
       if (this.userPriceTotal && (this.userPriceList.length >= this.userPriceTotal)) return
       this.loading = true
       this.userPricePage += 1
-      return api.getPrices({ owner: this.username, page: this.userPricePage })
+      return api.getPrices(this.getPricesParams)
         .then((data) => {
           this.userPriceList.push(...data.items)
           this.userPriceTotal = data.total
           this.loading = false
         })
+    },
+    togglePriceFilter(filterKey) {
+      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+      // this.initUserPrices() will be called in watch $route
+    },
+    selectPriceOrder(orderKey) {
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        // this.initUserPrices() will be called in watch $route
+      }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
