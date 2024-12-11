@@ -599,6 +599,8 @@
 		"CountryLabel": "מדינה",
 		"CurrencyLabel": "מטבע",
 		"DisplayTitle": "תצוגה",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "מטבעות מועדפים",
 		"CurrencyRequired": "חובה לציין לפחות מטבע אחד",
 		"LanguageLabel": "שפות",
