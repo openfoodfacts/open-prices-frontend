@@ -599,6 +599,8 @@
 		"CountryLabel": "Țară",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Afişare",
+		"BarcodeScanner": "Barcode scanner",
+		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
 		"LanguageLabel": "Limbi",
