@@ -60,7 +60,7 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.proof_count" :subtitle="$t('Stats.Total')" />
+      <StatCard :value="stats.proof_count" :subtitle="$t('Stats.Total')" to="/proofs" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.proof_type_price_tag_count" :subtitle="$t('ProofCard.PRICE_TAG')" />
