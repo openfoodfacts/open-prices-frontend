@@ -210,7 +210,7 @@ export default {
     reloadPage(){
       window.location.reload()
     },
-    setProof(event) {
+    async setProof(event) {
       const image = new Image()
       image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${event.file_path}`
       image.crossOrigin = 'Anonymous'
@@ -222,23 +222,27 @@ export default {
       this.productPriceForms = []
       this.tab = "Crop"
       this.predictionLoading = true
-      // Give the ml some time to run (5 seconds)
-      setTimeout(() => this.loadPredictions(event.id), 5000)
+      // Try to fetch proof right away (predections should be available for proofs previously uploaded)
+      await this.loadPredictions(event.id)
+      if (!this.seedCrops.length) {
+        // If no predictions are found right away (new proof), try again after 5 seconds
+        setTimeout(() => this.loadPredictions(event.id), 5000)
+        // If that also fails, user will have to click the button to retry
+      }
     },
-    loadPredictions(proofId) {
+    async loadPredictions(proofId) {
       this.predictionLoading = true
-      api.getProofById(proofId).then((proof) => {
-        if (proof.predictions && proof.predictions.length) {
-          for (let prediction of proof.predictions) {
-            if (prediction.type === "OBJECT_DETECTION") {
-              this.seedCrops = prediction.data.objects.map(predictionObject => {
-                return predictionObject.bounding_box
-              })
-            }
+      const proof = await api.getProofById(proofId)
+      if (proof.predictions && proof.predictions.length) {
+        for (let prediction of proof.predictions) {
+          if (prediction.type === "OBJECT_DETECTION") {
+            this.seedCrops = prediction.data.objects.map(predictionObject => {
+              return predictionObject.bounding_box
+            })
           }
         }
-        this.predictionLoading = false
-      })
+      }
+      this.predictionLoading = false
     },
     onCroppedImages(eventData) {
       this.croppedImages = eventData[0]
