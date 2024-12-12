@@ -221,10 +221,10 @@ export default {
       this.croppedBlobs = []
       this.productPriceForms = []
       this.tab = "Crop"
-      this.predictionLoading = true
       // Try to fetch proof right away (predections should be available for proofs previously uploaded)
       await this.loadPredictions(event.id)
       if (!this.seedCrops.length) {
+        this.predictionLoading = true
         // If no predictions are found right away (new proof), try again after 5 seconds
         setTimeout(() => this.loadPredictions(event.id), 5000)
         // If that also fails, user will have to click the button to retry
