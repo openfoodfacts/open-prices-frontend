@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.98.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.97.0...v1.98.0) (2024-12-12)
+
+
+### Features
+
+* **Proofs:** new /proofs to list recently uploaded proofs ([#1118](https://github.com/openfoodfacts/open-prices-frontend/issues/1118)) ([330b457](https://github.com/openfoodfacts/open-prices-frontend/commit/330b457bbb14ef196b25087d2200a2fb99caa357))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1117](https://github.com/openfoodfacts/open-prices-frontend/issues/1117)) ([33008f3](https://github.com/openfoodfacts/open-prices-frontend/commit/33008f3236d6dd8d92fb1ef9a690658f16bd0f85))
+* **Latest proofs:** access page from drawer. ref [#1120](https://github.com/openfoodfacts/open-prices-frontend/issues/1120) ([6ce9c42](https://github.com/openfoodfacts/open-prices-frontend/commit/6ce9c42f75e2c6a1bbe4e9cc1729e2336884c5cd))
+
 ## [1.97.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.96.6...v1.97.0) (2024-12-11)
 
 
