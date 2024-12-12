@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.98.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.98.1...v1.98.2) (2024-12-12)
+
+
+### Bug Fixes
+
+* **Price add:** fix again barcode type prefill feature (typo). ref [#1108](https://github.com/openfoodfacts/open-prices-frontend/issues/1108) ([0cee626](https://github.com/openfoodfacts/open-prices-frontend/commit/0cee62600ff1097883ebf35114fd768459119a44))
+* **Price add:** on barcode manual submit, blur form to hide keyboard. ref [#1108](https://github.com/openfoodfacts/open-prices-frontend/issues/1108) ([1faa429](https://github.com/openfoodfacts/open-prices-frontend/commit/1faa42950784ba1e0cd6552b562709d7303a7af6))
+
+
+### Technical
+
+* **Latest prices:** show loaded count chip ([738505d](https://github.com/openfoodfacts/open-prices-frontend/commit/738505d1d2422c8d8408cd0a123abffe85c7289e))
+* **Latest proofs:** show loaded count chip. ref [#1120](https://github.com/openfoodfacts/open-prices-frontend/issues/1120) ([9accc4b](https://github.com/openfoodfacts/open-prices-frontend/commit/9accc4b71bc8c13698f56d83532d18173faf5806))
+* **Location selector:** add a min height to avoid height differences on tab change. ref [#1095](https://github.com/openfoodfacts/open-prices-frontend/issues/1095) ([a6e2217](https://github.com/openfoodfacts/open-prices-frontend/commit/a6e221782206c4adcd9f25ee5001fa0dad42a102))
+* **Sign in:** add HTML autocomplete info ([91970c5](https://github.com/openfoodfacts/open-prices-frontend/commit/91970c5d1855db4c6772159a4b79672a472ec18d))
+
 ## [1.98.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.98.0...v1.98.1) (2024-12-12)
 
 
