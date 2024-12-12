@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable min-height="300px" max-height="80%" min-width="80%">
+  <v-dialog scrollable min-height="50%" max-height="80%" min-width="80%">
     <v-card>
       <v-card-title>
         {{ $t('Common.LocationFindShop') }} <v-btn
