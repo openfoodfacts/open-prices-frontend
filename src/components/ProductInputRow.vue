@@ -61,7 +61,7 @@
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
     v-model="barcodeScannerDialog"
-    :barcodeInputPrefillValue="productForm.product_code"
+    :barcodeManualInputPrefillValue="productForm.product_code"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
   />
