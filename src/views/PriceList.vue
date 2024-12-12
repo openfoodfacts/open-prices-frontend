@@ -1,5 +1,14 @@
 <template>
-  <v-row>
+  <v-row v-if="!loading">
+    <v-col>
+      <v-chip label variant="text" prepend-icon="mdi-tag-outline">
+        {{ $t('Common.PriceCount', { count: priceTotal }) }}
+      </v-chip>
+      <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+    </v-col>
+  </v-row>
+
+  <v-row class="mt-0">
     <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
@@ -20,6 +29,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
