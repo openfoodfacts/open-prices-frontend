@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.98.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.98.0...v1.98.1) (2024-12-12)
+
+
+### Technical
+
+* **Latest proofs:** display thumb images. allow users to click on location & date chips. ref [#1118](https://github.com/openfoodfacts/open-prices-frontend/issues/1118) ([2ca6fec](https://github.com/openfoodfacts/open-prices-frontend/commit/2ca6fec56c86c641b910b7f1a2cad98ee7b0303c))
+* **Stats:** add a link to the new /proofs page. ref [#1118](https://github.com/openfoodfacts/open-prices-frontend/issues/1118) ([04b52d4](https://github.com/openfoodfacts/open-prices-frontend/commit/04b52d4ab9c9adf1b1aa1e35b6a203139c93d154))
+
 ## [1.98.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.97.0...v1.98.0) (2024-12-12)
 
 
