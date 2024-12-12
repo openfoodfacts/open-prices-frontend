@@ -1,7 +1,7 @@
 <template>
   <v-row v-if="!loading">
     <v-col>
-      <v-chip label variant="text" prepend-icon="mdi-account-badge-outline">
+      <v-chip label variant="text" prepend-icon="mdi-account">
         {{ $t('UserList.UserTotal', { count: userTotal }) }}
       </v-chip>
       <FilterMenu kind="user" :currentFilter="currentFilter" @update:currentFilter="toggleUserFilter($event)" />

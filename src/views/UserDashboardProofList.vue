@@ -66,7 +66,7 @@ export default {
       return this.appStore.user.username
     },
     getUserProofsParams() {
-      let defaultParams = { owner: this.username, order_by: `${this.currentOrder}`, page: this.userProofPage }
+      let defaultParams = { owner: this.username, order_by: this.currentOrder, page: this.userProofPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }

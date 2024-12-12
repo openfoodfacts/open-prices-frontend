@@ -1,9 +1,10 @@
 <template>
   <v-row v-if="!loading">
     <v-col>
-      <v-chip label variant="text" prepend-icon="mdi-database-outline">
+      <v-chip label variant="text" prepend-icon="mdi-image">
         {{ $t('Common.ProofCount', { count: proofTotal }) }}
       </v-chip>
+      <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
     </v-col>
   </v-row>
 
@@ -28,6 +29,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
   data() {
