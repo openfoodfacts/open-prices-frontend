@@ -155,6 +155,7 @@ export default {
     barcodeSearchOrSend() {
       if (!this.barcodeManualFormValid) return
       if (this.barcodeManualInputMode === 'search') {
+        this.$refs.barcodeManualInput.blur()
         this.getProduct(this.barcodeManualForm.barcode)
       } else {
         this.barcodeSend(this.barcodeManualForm.barcode)
