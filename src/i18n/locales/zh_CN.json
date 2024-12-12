@@ -500,6 +500,9 @@
 		"LatestPrices": {
 			"Title": "最新价格"
 		},
+		"LatestProofs": {
+			"Title": "最新样张"
+		},
 		"MyPrices": {
 			"Title": "我的价格"
 		},

@@ -500,6 +500,9 @@
 		"LatestPrices": {
 			"Title": "Latest prices"
 		},
+		"LatestProofs": {
+			"Title": "最新の証拠"
+		},
 		"MyPrices": {
 			"Title": "私の価格"
 		},

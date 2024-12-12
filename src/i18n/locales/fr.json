@@ -500,6 +500,9 @@
 		"LatestPrices": {
 			"Title": "Derniers prix"
 		},
+		"LatestProofs": {
+			"Title": "Dernières preuves"
+		},
 		"MyPrices": {
 			"Title": "Mes prix"
 		},

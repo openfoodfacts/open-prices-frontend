@@ -49,7 +49,7 @@
 			"Subtitle": "Just one price tag",
 			"Title": "Single product"
 		},
-		"Thanks": "Thanks",
+		"Thanks": "Благодаря",
 		"Title": "Add a price",
 		"TitleSingle": "Add a single price",
 		"TitleMultiple": "Add multiple prices in bulk"
@@ -61,7 +61,7 @@
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Създай",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
-			"NewPrice": "New price",
+			"NewPrice": "Нова цена",
 			"PriceUploaded": "Price created!",
 			"Upload": "Upload"
 		},
@@ -76,10 +76,10 @@
 		"Create": "Създай",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
+			"Label": "Цена",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Доказателство",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -94,7 +94,7 @@
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Категория",
-			"OriginLabel": "Origin",
+			"OriginLabel": "Произход",
 			"ProductBarcode": "Product barcode",
 			"Scan": "Сканирай",
 			"ScanBarcode": "Scan a barcode",
@@ -115,12 +115,12 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Дата",
+			"DateLabel": "Дата",
 			"Find": "Намери",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Title": "Къде и кога?"
 		}
 	},
 	"BarcodeScanner": {
@@ -149,11 +149,11 @@
 		"Brand": "Марка",
 		"Brands": "Марки",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Цена",
+		"Prices": "Цени",
 		"Product": "Продукт",
 		"Products": "Продукти",
-		"Proof": "Proof",
+		"Proof": "Доказателство",
 		"Proofs": "Proofs",
 		"Category": "Категория",
 		"Categories": "Категории",
@@ -163,8 +163,8 @@
 		"Contributors": "Сътрудници",
 		"Community": "Community",
 		"Country": "Страна",
-		"Currency": "Currency",
-		"CurrencyMissing": "Currency missing",
+		"Currency": "Валута",
+		"CurrencyMissing": "Липсва валута",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
@@ -188,7 +188,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Дата",
 		"DateMissing": "Date missing",
 		"Details": "Details",
 		"Delete": "Изтрий",
@@ -227,7 +227,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Цена",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -272,7 +272,7 @@
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
-		"Thanks": "Thanks",
+		"Thanks": "Благодаря",
 		"Theme": "Тема",
 		"ThemeLight": "Светъл",
 		"ThemeDark": "Тъмен",
@@ -305,7 +305,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Валута",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -368,7 +368,7 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Доказателство",
 		"FullPrice": "Full price",
 		"UnknownProduct": "Unknown product"
 	},
@@ -385,7 +385,7 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
+		"Label": "Цена",
 		"LabelDiscounted": "Discounted price",
 		"LabelFull": "Full price"
 	},
@@ -432,7 +432,7 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
+		"Proof": "Доказателство",
 		"PRICE_TAG": "Price tag",
 		"RECEIPT": "Receipt",
 		"GDPR_REQUEST": "GDPR request",
@@ -451,7 +451,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Зареди още",
-		"Prices": "Prices",
+		"Prices": "Цени",
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Private",
@@ -499,6 +499,9 @@
 		},
 		"LatestPrices": {
 			"Title": "Latest prices"
+		},
+		"LatestProofs": {
+			"Title": "Latest proofs"
 		},
 		"MyPrices": {
 			"Title": "Моите цени"
@@ -553,7 +556,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Цени",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"ProductsWithPrices": "Products with prices",
@@ -597,12 +600,12 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Промяна на езика",
 		"CountryLabel": "Страна",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Валута",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"CurrencyRequired": "Изисква се поне една валута",
 		"LanguageLabel": "Езици",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "Display barcode",
