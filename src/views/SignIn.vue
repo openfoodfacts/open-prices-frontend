@@ -24,6 +24,7 @@
               :label="$t('SignIn.UsernameLabel')"
               type="text"
               class="input-lowercase"
+              autocomplete="username"
               hide-details="auto"
             />
           </v-col>
@@ -33,6 +34,7 @@
               :label="$t('SignIn.Password')"
               :append-inner-icon="passwordVisible ? 'mdi-eye-off' : 'mdi-eye'"
               :type="passwordVisible ? 'text' : 'password'"
+              autocomplete="current-password"
               hide-details="auto"
               @click:append-inner="passwordVisible = !passwordVisible"
             />
