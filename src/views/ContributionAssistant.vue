@@ -26,13 +26,24 @@
       </v-tabs-window-item>
       <v-tabs-window-item value="Crop">
         <v-container>
+          <v-alert v-if="drawCanvasLoaded && !seedCrops.length && !predictionLoading" type="info" variant="outlined" icon="mdi-alert">
+            No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.
+            <br />
+            <v-btn @click="loadPredictions(proofForm.id)">
+              Automatically find labels
+            </v-btn>
+          </v-alert>
+          <v-alert v-if="drawCanvasLoaded && predictionLoading" type="info" variant="outlined" icon="mdi-magnify">
+            Automatic label detection is running. Please wait...
+              <v-progress-circular indeterminate />
+          </v-alert>
           <v-row>
             <v-col cols="12" lg="6">
               <h3 class="mb-4">
                 1. Draw squares around the labels
               </h3>
               <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
-              <ContributionAssistantDrawCanvas ref="ContributionAssistantdrawCanvas" :image="image" @croppedImages="onCroppedImages($event)" @loaded="drawCanvasLoaded = true" />
+              <ContributionAssistantDrawCanvas ref="ContributionAssistantdrawCanvas" :image="image" :seedCrops="seedCrops" @croppedImages="onCroppedImages($event)" @loaded="drawCanvasLoaded = true" />
             </v-col>
             <v-col cols="12" lg="6">
               <h3 class="mb-4">
@@ -137,6 +148,7 @@ export default {
       tab: 'ProofSelect',
       drawCanvasLoaded: false,
       image: new Image(),
+      seedCrops: [],
       croppedImages: [],
       croppedBlobs: [],
       productPriceForms : [],
@@ -153,6 +165,7 @@ export default {
       },
       processCroppedImagesLoading: false,
       addPricesLoading: false,
+      predictionLoading: false,
       numberOfPricesAdded: 0
     }
   },
@@ -197,7 +210,7 @@ export default {
     reloadPage(){
       window.location.reload()
     },
-    setProof(event) {
+    async setProof(event) {
       const image = new Image()
       image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${event.file_path}`
       image.crossOrigin = 'Anonymous'
@@ -208,6 +221,28 @@ export default {
       this.croppedBlobs = []
       this.productPriceForms = []
       this.tab = "Crop"
+      // Try to fetch proof right away (predections should be available for proofs previously uploaded)
+      await this.loadPredictions(event.id)
+      if (!this.seedCrops.length) {
+        this.predictionLoading = true
+        // If no predictions are found right away (new proof), try again after 5 seconds
+        setTimeout(() => this.loadPredictions(event.id), 5000)
+        // If that also fails, user will have to click the button to retry
+      }
+    },
+    async loadPredictions(proofId) {
+      this.predictionLoading = true
+      const proof = await api.getProofById(proofId)
+      if (proof.predictions && proof.predictions.length) {
+        for (let prediction of proof.predictions) {
+          if (prediction.type === "OBJECT_DETECTION") {
+            this.seedCrops = prediction.data.objects.map(predictionObject => {
+              return predictionObject.bounding_box
+            })
+          }
+        }
+      }
+      this.predictionLoading = false
     },
     onCroppedImages(eventData) {
       this.croppedImages = eventData[0]

@@ -18,6 +18,10 @@
       image: {
         type: Image,
         default: null
+      },
+      seedCrops: {
+        type: Array,
+        default: null
       }
     },
     emits: ['croppedImages', 'loaded'],
@@ -30,6 +34,13 @@
         rectangles: []
       }
     },
+    watch: {
+      seedCrops() {
+        if (this.seedCrops) {
+          this.init(true)
+        }
+      }
+    },
     mounted() {
       if (this.image.complete) {
         this.init()
@@ -38,7 +49,7 @@
       }
     },
     methods: {
-      init() {
+      init(keepRectangles=false) {
         const canvas = this.$refs.canvas
         const ctx = canvas.getContext("2d")
         canvas.style.width = "100%"
@@ -59,11 +70,25 @@
         
         ctx.drawImage(this.image, 0, 0, newWidth, newHeight)
         
-        this.rectangles = [] // reset rectangles
+        if (!keepRectangles) {
+          this.rectangles = [] // reset rectangles
+        }
+        if (this.seedCrops) {
+          this.rectangles = this.rectangles.concat(this.seedCrops.map(seedCrop => {
+            return {
+              startY: seedCrop[0] * this.image.height,
+              startX: seedCrop[1] * this.image.width,
+              endY: seedCrop[2] * this.image.height,
+              endX: seedCrop[3] * this.image.width
+            }
+          }))
+          this.cropImages()
+        }
         this.drawRectangles(); // Draw previous rectangles after resizing
         this.$emit('loaded')
       },
       startDrawing(event) {
+        if (this.isDrawing) return
         if (event.type == "touchstart") {
           const rect = event.target.getBoundingClientRect()
           event.offsetX = event.targetTouches[0].clientX - rect.left 
