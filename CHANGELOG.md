@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.99.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.98.2...v1.99.0) (2024-12-13)
+
+
+### Features
+
+* **ContributionAssistant:** Add support for automatic label detection ([b14ba63](https://github.com/openfoodfacts/open-prices-frontend/commit/b14ba63d10dc903d6462a7027e23cceb2d0720d8))
+
 ## [1.98.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.98.1...v1.98.2) (2024-12-12)
 
 
