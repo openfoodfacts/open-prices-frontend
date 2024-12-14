@@ -33,6 +33,7 @@
   <v-row v-if="proofIsTypeReceipt">
     <v-col class="pb-0" cols="12">
       <h3 class="mb-1">
+        <v-icon size="x-small" :icon="PROOF_TYPE_RECEIPT_ICON" />
         {{ $t('Common.AdditionalInfo') }}
       </h3>
     </v-col>
@@ -54,6 +55,7 @@
         type="text"
         inputmode="decimal"
         :rules="priceRules"
+        :suffix="proofMetadataForm.currency"
         hide-details="auto"
         @update:modelValue="newValue => proofMetadataForm.receipt_price_total = fixComma(newValue)"
       />
@@ -86,6 +88,7 @@ export default {
   data() {
     return {
       currentDate: utils.currentDate(),
+      PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
     }
   },
   computed: {
