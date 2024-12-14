@@ -121,6 +121,7 @@ export default {
         price_is_discounted: false,
         price_without_discount: null,
         currency: null,  // see initPriceSingleForm
+        receipt_quantity: null,
         location_id: null,
         location_osm_id: null,
         location_osm_type: '',
