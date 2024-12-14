@@ -16,14 +16,14 @@
       contain
     />
     <v-card-text>
-      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingModes="true" @filled="productFormFilled = $event" />
+      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" @filled="productFormFilled = $event" />
       <v-alert
         v-if="productPriceForm.type === 'PRODUCT'"
         class="mb-2"
         type="info"
         variant="plain"
       >
-        Detected barcode: {{ productPriceForm.detected_product_code }}
+        {{ $t('ContributionAssistant.DetectedBarcode', { barcode: productPriceForm.detected_product_code }) }}
       </v-alert>
       <v-row v-if="productPriceForm.type == 'CATEGORY'">
         <v-col>
