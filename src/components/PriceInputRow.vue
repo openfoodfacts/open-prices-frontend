@@ -40,6 +40,17 @@
         hide-details="auto"
       />
     </v-col>
+    <v-col class="pt-0" cols="6">
+      <v-text-field
+        v-model="priceForm.receipt_quantity"
+        density="compact"
+        :label="$t('Common.QuantityBought')"
+        type="text"
+        inputmode="numeric"
+        :prepend-inner-icon="PROOF_TYPE_RECEIPT_ICON"
+        hide-details="auto"
+      />
+    </v-col>
 
     <ChangeCurrencyDialog
       v-if="changeCurrencyDialog"
@@ -64,9 +75,10 @@ export default {
       type: Object,
       default: () => ({
         price: null,
-        currency: null,
         price_is_discounted: false,
-        price_without_discount: null
+        price_without_discount: null,
+        currency: null,
+        receipt_quantity: null,
       })
     },
     hideCurrencyChoice: {
@@ -77,12 +89,17 @@ export default {
       type: Object,
       default: null
     },
+    proofType: {
+      type: String,
+      default: null
+    },
   },
   emits: ['filled'],
   data() {
     return {
       // currency selection
       changeCurrencyDialog: false,
+      PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
     }
   },
   computed: {
@@ -98,6 +115,9 @@ export default {
     priceFormFilled() {
       let keys = ['price', 'currency']
       return Object.keys(this.priceForm).filter(k => keys.includes(k)).every(k => !!this.priceForm[k])
+    },
+    proofIsTypeReceipt() {
+      return this.proofType === constants.PROOF_TYPE_RECEIPT
     },
   },
   watch: {

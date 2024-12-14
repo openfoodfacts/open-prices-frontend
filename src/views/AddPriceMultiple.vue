@@ -114,6 +114,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
@@ -159,7 +160,8 @@ export default {
         price_per: null,
         price_is_discounted: false,
         price_without_discount: null,
-        currency: null  // see initNewProductPriceForm
+        currency: null,  // see initNewProductPriceForm
+        receipt_quantity: null,
       },
       categoryPricePerList: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
@@ -239,6 +241,9 @@ export default {
       this.productPriceForm.type = this.appStore.user.last_product_type_used  // can be overriden in ProductInputRow
       this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.productPriceForm.currency = this.addPriceMultipleForm.currency || this.appStore.getUserLastCurrencyUsed  // get currency from proof first
+      if (this.proofObject.type === constants.PROOF_TYPE_RECEIPT) {
+        this.productPriceForm.receipt_quantity = 1
+      }
       // scroll to the form
       this.goTo('#product-price-form')
     },

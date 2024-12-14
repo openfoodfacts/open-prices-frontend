@@ -4,9 +4,14 @@
       <span class="mr-1">{{ getPriceValueDisplay(price.price) }}</span>
       <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(price.price) }})</span>
       <span v-if="price.price_is_discounted">
-        <v-chip class="mr-1" color="red" variant="outlined" size="small" density="comfortable">
+        <v-chip class="ml-1 mr-1" color="red" variant="outlined" size="small" density="comfortable">
           {{ $t('PriceCard.Discount') }}
           <v-tooltip v-if="price.price_without_discount" activator="parent" open-on-click location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(price.price_without_discount) }}</v-tooltip>
+        </v-chip>
+      </span>
+      <span v-if="!hidePriceReceiptQuantity && price.receipt_quantity && price.receipt_quantity > 1" class="mr-1">
+        <v-chip class="ml-1" variant="outlined" size="small" density="comfortable">
+          x{{ price.receipt_quantity }}
         </v-chip>
       </span>
     </v-col>
@@ -31,9 +36,9 @@ export default {
       type: String,
       default: constants.PRODUCT_QUANTITY_UNIT_G
     },
-    hidePriceDate: {
+    hidePriceReceiptQuantity: {
       type: Boolean,
-      default: false
+      default: true
     },
   },
   data() {
