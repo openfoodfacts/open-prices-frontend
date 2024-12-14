@@ -71,10 +71,6 @@ import utils from '../utils.js'
 
 export default {
   props: {
-    proofType: {
-      type: String,
-      default: null
-    },
     proofMetadataForm: {
       type: Object,
       default: () => ({
@@ -83,6 +79,10 @@ export default {
         receipt_price_count: null,
         receipt_price_total: null
       })
+    },
+    proofType: {
+      type: String,
+      default: null
     },
   },
   data() {

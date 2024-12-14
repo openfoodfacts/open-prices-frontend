@@ -51,9 +51,9 @@
           </template>
           <v-divider />
           <v-card-text>
-            <v-row>
+            <v-row v-if="addPriceSingleForm.type === 'CATEGORY'">
               <v-col>
-                <v-item-group v-if="addPriceSingleForm.type === 'CATEGORY'" v-model="addPriceSingleForm.price_per" class="d-inline" mandatory>
+                <v-item-group v-model="addPriceSingleForm.price_per" class="d-inline" mandatory>
                   <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
                     <v-chip class="mr-1" :class="isSelected ? 'border-grey' : 'border-transparent'" @click="toggle">
                       <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
@@ -108,7 +108,6 @@ export default {
   },
   data() {
     return {
-      proofType: 'PRICE_TAG',
       // price form
       addPriceSingleForm: {
         type: '',

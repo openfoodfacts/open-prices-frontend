@@ -5,7 +5,7 @@
       <ProofTypeInputRow :proofTypeForm="proofForm" />
       <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
       <LocationInputRow :locationForm="proofForm" />
-      <ProofMetadataInputRow :proofType="proofForm.type" :proofMetadataForm="proofForm" />
+      <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />
       <v-row>
         <v-col>
           <v-btn

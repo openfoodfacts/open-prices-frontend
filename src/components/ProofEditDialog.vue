@@ -15,7 +15,7 @@
 
       <v-card-text>
         <ProofTypeInputRow :proofTypeForm="updateProofForm" />
-        <ProofMetadataInputRow :proofType="updateProofForm.type" :proofMetadataForm="updateProofForm" />
+        <ProofMetadataInputRow :proofMetadataForm="updateProofForm" :proofType="updateProofForm.type" />
       </v-card-text>
 
       <v-divider />

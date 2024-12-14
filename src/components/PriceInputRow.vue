@@ -76,7 +76,7 @@ export default {
     product: {
       type: Object,
       default: null
-    }
+    },
   },
   emits: ['filled'],
   data() {

@@ -25,9 +25,9 @@
       >
         Detected barcode: {{ productPriceForm.detected_product_code }}
       </v-alert>
-      <v-row>
+      <v-row v-if="productPriceForm.type == 'CATEGORY'">
         <v-col>
-          <v-item-group v-if="productPriceForm.type == 'CATEGORY'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
+          <v-item-group v-model="productPriceForm.price_per" class="d-inline" mandatory>
             <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
               <v-chip class="mr-1" :class="isSelected ? 'border-grey' : 'border-transparent'" @click="toggle">
                 <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
@@ -35,9 +35,9 @@
               </v-chip>
             </v-item>
           </v-item-group>
-          <PriceInputRow class="mt-0" :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
         </v-col>
       </v-row>
+      <PriceInputRow class="mt-0" :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
   </v-card>
 </template>

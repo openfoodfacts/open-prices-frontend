@@ -57,9 +57,9 @@
                 </v-alert>
               </v-col>
             </v-row>
-            <v-row>
+            <v-row v-if="productPriceForm.type === 'CATEGORY'">
               <v-col>
-                <v-item-group v-if="productPriceForm.type === 'CATEGORY'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
+                <v-item-group v-model="productPriceForm.price_per" class="d-inline" mandatory>
                   <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
                     <v-chip class="mr-1" :class="isSelected ? 'border-grey' : 'border-transparent'" @click="toggle">
                       <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
@@ -69,7 +69,7 @@
                 </v-item-group>
               </v-col>
             </v-row>
-            <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
+            <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" :proofType="proofObject.type" @filled="pricePriceFormFilled = $event" />
             <v-row>
               <v-col>
                 <v-btn
