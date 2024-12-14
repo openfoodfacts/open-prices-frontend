@@ -163,8 +163,8 @@
 		"Contributors": "Bidragere",
 		"Community": "Community",
 		"Country": "Country",
-		"Currency": "Currency",
-		"CurrencyMissing": "Currency missing",
+		"Currency": "Valuta",
+		"CurrencyMissing": "Valuta mangler",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
 		"DisplayList": "List",
@@ -250,6 +250,9 @@
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"Public": "Public",
+		"Quantity": "Mengde",
+		"QuantityBought": "Quantity bought",
+		"QuantityMissing": "Quantity missing",
 		"Receipt": "Receipt",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
@@ -273,9 +276,9 @@
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "Tema",
+		"ThemeLight": "Lys",
+		"ThemeDark": "Mørk",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -304,11 +307,11 @@
 		"HowToUseTheData": "Use the data"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"Title": "Velg en av favorittvalutaene dine",
+		"Currency": "Valuta",
+		"AddCurrencies": "Legg til valutaer i Innstillinger",
+		"AddCurrenciesWarning": "Du vil bli omdirigert til Innstillinger-siden, men vil miste all informasjon du har skrevet inn på denne siden.",
+		"Select": "Velg {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -326,13 +329,13 @@
 	},
 	"Theme": {
 		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"DarkMode": "Mørk modus"
 	},
 	"Home": {
 		"AddPrice": "Add a price",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Søk etter et produkt",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -600,12 +603,12 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Bytt språk",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"CurrencyRequired": "Minst én valuta kreves",
 		"LanguageLabel": "Languages",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "Display barcode",

@@ -246,10 +246,13 @@
 		"ProductFind": "Find the product",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Igazolás kiválasztása",
+		"ProofSelect": "Bizonylat kiválasztása",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"Public": "Public",
+		"Quantity": "Mennyiség",
+		"QuantityBought": "Quantity bought",
+		"QuantityMissing": "Quantity missing",
 		"Receipt": "Receipt",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
@@ -439,7 +442,7 @@
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Igazolás kiválasztása",
+		"SelectProof": "Bizonylat kiválasztása",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
