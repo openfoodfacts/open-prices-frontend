@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" :variant="totalCount ? 'flat' : ''" density="comfortable" :title="$t('Common.ReceiptPriceTotal')">
+  <v-chip label size="small" :variant="totalCount ? 'flat' : 'tonal'" density="comfortable" :title="$t('Common.ReceiptPriceTotal')">
     <span v-if="uploadedCount && totalCount">
       {{ getPriceValueDisplay(uploadedCount) }}&nbsp;/&nbsp;{{ getPriceValueDisplay(totalCount) }}
     </span>

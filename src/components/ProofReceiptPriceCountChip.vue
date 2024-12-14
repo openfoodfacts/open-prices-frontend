@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" :variant="totalCount ? 'flat' : ''" density="comfortable" :title="$t('Common.ReceiptPriceCount')">
+  <v-chip label size="small" :variant="totalCount ? 'flat' : 'tonal'" density="comfortable" :title="$t('Common.ReceiptPriceCount')">
     <span v-if="uploadedCount && totalCount">
       {{ uploadedCount }}&nbsp;/&nbsp;{{ $t('Common.PriceCount', { count: totalCount }) }}
     </span>
