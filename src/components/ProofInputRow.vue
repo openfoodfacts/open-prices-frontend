@@ -23,7 +23,7 @@
     </v-col>
     <!-- CARD -->
     <v-col v-else>
-      <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
+      <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
     </v-col>
   </v-row>
 
@@ -123,6 +123,9 @@ export default {
     proofFormFilled() {
       return this.proofTypeFormFilled && this.proofImageFormFilled && this.proofMetadataFormFilled
     },
+    proofCardShowImageThumb() {
+      return this.multiple ? true : false
+    }
   },
   watch: {
     proofImageList(newProofImageList, oldProofImageList) {  // eslint-disable-line no-unused-vars
