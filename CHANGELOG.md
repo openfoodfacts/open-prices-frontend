@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.100.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.99.0...v1.100.0) (2024-12-14)
+
+
+### Features
+
+* **Price add:** simple "quantity bought" field (only for receipt proofs) ([#1128](https://github.com/openfoodfacts/open-prices-frontend/issues/1128)) ([84eab3e](https://github.com/openfoodfacts/open-prices-frontend/commit/84eab3e075d126298646f19705daed67f15121e0))
+
+
+### Bug Fixes
+
+* **Price add:** gain some additional space by hiding an empty row. ref [#1109](https://github.com/openfoodfacts/open-prices-frontend/issues/1109) ([a44ab07](https://github.com/openfoodfacts/open-prices-frontend/commit/a44ab0740ff62a18b6855d82fabdde646686bfd5))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1122](https://github.com/openfoodfacts/open-prices-frontend/issues/1122)) ([ea36d91](https://github.com/openfoodfacts/open-prices-frontend/commit/ea36d9199810551345c4e974bc5a86cd0fec444b))
+* **Multiple proof add:** show proof thumbnail image after upload (to reduce RAM). ref [#983](https://github.com/openfoodfacts/open-prices-frontend/issues/983) ([1d8cf1c](https://github.com/openfoodfacts/open-prices-frontend/commit/1d8cf1c1ad3149c3b15bbb97f8366d074150f31d))
+* **Price add:** avoid raising validation error for optional fields. More compact display for receipt-only fields. ref [#974](https://github.com/openfoodfacts/open-prices-frontend/issues/974) ([ca865b1](https://github.com/openfoodfacts/open-prices-frontend/commit/ca865b1f7b9bd636f0f9ffc8285cf926b4ca248f))
+* **Proof add:** already uploaded prices: fix price count chip in footer. ref [#1076](https://github.com/openfoodfacts/open-prices-frontend/issues/1076) ([2d28567](https://github.com/openfoodfacts/open-prices-frontend/commit/2d285673e93c7c2231cea41234e2dff11aee891b))
+* **Proof add:** receipt-specific fields: add icon, add currency suffix. ref [#976](https://github.com/openfoodfacts/open-prices-frontend/issues/976) ([9b6dde6](https://github.com/openfoodfacts/open-prices-frontend/commit/9b6dde6a025355c8a4e0a9e9a00d20d07e3c5e17))
+* use border classes instead of inline style ([4f958dc](https://github.com/openfoodfacts/open-prices-frontend/commit/4f958dc400ba30ddece1cc2336f433de8e99b15c))
+
 ## [1.99.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.98.2...v1.99.0) (2024-12-13)
 
 
