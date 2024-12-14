@@ -16,7 +16,7 @@
     <v-card-text>
       <v-row>
         <v-col v-for="productPriceUploaded in proofPriceUploadedList" :key="productPriceUploaded" cols="12">
-          <PriceCard :price="productPriceUploaded" :product="productPriceUploaded.product" :hideProductBarcode="false" :hidePriceFooterRow="true" :readonly="true" />
+          <PriceCard :price="productPriceUploaded" :product="productPriceUploaded.product" :hideProductBarcode="false" :hidePriceReceiptQuantity="false" :hidePriceFooterRow="true" :readonly="true" />
         </v-col>
       </v-row>
     </v-card-text>
@@ -77,7 +77,7 @@ export default {
     },
     proofPriceUploadedListSum() {
       return this.proofPriceUploadedList.reduce((acc, priceUploaded) => {
-        return acc + parseFloat(priceUploaded.price)
+        return acc + parseFloat(priceUploaded.price)*parseInt(priceUploaded.receipt_quantity)
       }, 0)
     }
   },
