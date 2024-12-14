@@ -3,10 +3,10 @@
     <!-- Step 1: proof (image, location, date & currency) -->
     <v-col cols="12" md="6">
       <v-card
+        :class="proofFormFilled ? 'border-success' : 'border-transparent'"
         :title="$t('AddPriceMultiple.ProofDetails.Title')"
         prepend-icon="mdi-image"
         height="100%"
-        :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
       >
         <template v-if="proofFormFilled" #append>
           <v-icon icon="mdi-checkbox-marked-circle" color="success" />
@@ -37,11 +37,10 @@
       <v-form v-else @submit.prevent="createPrice">
         <v-card
           id="product-price-form"
-          class="mb-4"
+          class="border-transparent mb-4"
           :title="$t('AddPriceMultiple.ProductPriceDetails.NewPrice')"
           prepend-icon="mdi-tag-plus-outline"
           height="100%"
-          style="border: 1px solid transparent"
         >
           <template #append>
             <v-icon icon="mdi-delete" color="error" @click="clearProductPriceForm" />
@@ -62,7 +61,7 @@
               <v-col>
                 <v-item-group v-if="productPriceForm.type === 'CATEGORY'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
                   <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
-                    <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
+                    <v-chip class="mr-1" :class="isSelected ? 'border-grey' : 'border-transparent'" @click="toggle">
                       <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
                       {{ cpp.value }}
                     </v-chip>

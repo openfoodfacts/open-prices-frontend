@@ -1,11 +1,10 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
   <v-card
-    class="mb-4"
+    class="border-transparent mb-4"
     height="100%"
     title="Label"
     prepend-icon="mdi-tag-outline"
-    style="border: 1px solid transparent"
   >
     <template #append>
       <v-icon icon="mdi-delete" color="error" @click="removePrice()" />
@@ -30,7 +29,7 @@
         <v-col>
           <v-item-group v-if="productPriceForm.type == 'CATEGORY'" v-model="productPriceForm.price_per" class="d-inline" mandatory>
             <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
-              <v-chip class="mr-1" :style="isSelected ? 'border: 1px solid #9E9E9E' : 'border: 1px solid transparent'" @click="toggle">
+              <v-chip class="mr-1" :class="isSelected ? 'border-grey' : 'border-transparent'" @click="toggle">
                 <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
                 {{ cpp.value }}
               </v-chip>

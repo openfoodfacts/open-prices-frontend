@@ -2,10 +2,10 @@
   <v-row>
     <v-col cols="12" md="6">
       <v-card
+        :class="proofFormFilled ? 'border-success' : 'border-transparent'"
         :title="$t('Common.Image')"
         prepend-icon="mdi-image"
         height="100%"
-        :style="proofFormFilled ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
       >
         <template v-if="proofFormFilled" #append>
           <v-icon icon="mdi-checkbox-marked-circle" color="success" />

@@ -1,5 +1,5 @@
 <template>
-  <v-card v-if="showCard" class="mb-4" prepend-icon="mdi-tag-check-outline" style="border: 1px solid #4CAF50">
+  <v-card v-if="showCard" class="border-success mb-4" prepend-icon="mdi-tag-check-outline">
     <template #title>
       <i18n-t keypath="AddPriceMultiple.ProductPriceDetails.AlreadyUploaded" :plural="proofPriceUploadedList.length" tag="span">
         <template #priceAlreadyUploadedNumber>

@@ -2,7 +2,7 @@
   <v-chip
     :key="getLocationUniqueID"
     class="mb-2"
-    :style="isSelectedLocation ? 'border: 1px solid #4CAF50' : 'border: 1px solid transparent'"
+    :class="isSelectedLocation ? 'border-success' : 'border-transparent'"
     :closable="withRemoveAction"
     close-icon="mdi-delete"
   >
