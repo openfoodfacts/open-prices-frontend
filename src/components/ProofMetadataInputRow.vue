@@ -31,30 +31,27 @@
     </v-col>
   </v-row>
   <v-row v-if="proofIsTypeReceipt">
-    <v-col class="pb-0" cols="12">
-      <h3 class="mb-1">
-        <v-icon size="x-small" :icon="PROOF_TYPE_RECEIPT_ICON" />
-        {{ $t('Common.AdditionalInfo') }}
-      </h3>
-    </v-col>
-  </v-row>
-  <v-row v-if="proofIsTypeReceipt" class="mt-0">
     <v-col cols="6">
       <v-text-field
         v-model="proofMetadataForm.receipt_price_count"
+        density="compact"
         :label="$t('Common.ReceiptPriceCount')"
         type="text"
         inputmode="numeric"
+        :rules="priceCountRules"
+        :prepend-inner-icon="PROOF_TYPE_RECEIPT_ICON"
         hide-details="auto"
       />
     </v-col>
     <v-col cols="6">
       <v-text-field
         v-model="proofMetadataForm.receipt_price_total"
+        density="compact"
         :label="$t('Common.ReceiptPriceTotal')"
         type="text"
         inputmode="decimal"
-        :rules="priceRules"
+        :rules="priceTotalRules"
+        :prepend-inner-icon="PROOF_TYPE_RECEIPT_ICON"
         :suffix="proofMetadataForm.currency"
         hide-details="auto"
         @update:modelValue="newValue => proofMetadataForm.receipt_price_total = fixComma(newValue)"
@@ -103,9 +100,16 @@ export default {
     proofIsTypeReceipt() {
       return this.proofType === constants.PROOF_TYPE_RECEIPT
     },
-    priceRules() {
+    priceCountRules() {
+      if (!this.proofMetadataForm.receipt_price_count) return [() => true]  // optional field
       return [
-        // value => !!value && !!value.trim() || this.$t('PriceRules.AmountRequired'),
+        value => !isNaN(value) || this.$t('PriceRules.Number'),
+        value => Number(value) >= 1 || this.$t('PriceRules.Positive'),
+      ]
+    },
+    priceTotalRules() {
+      if (!this.proofMetadataForm.receipt_price_total) return [() => true]  // optional field
+      return [
         value => !!value && !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
