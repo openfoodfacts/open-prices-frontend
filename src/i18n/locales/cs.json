@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "Přidejte více důkazů"
 		},
+		"PriceAdd": {
+			"Title": "Přidat cenu"
+		},
+		"PriceAddSingle": {
+			"Title": "Přidat jednotnou cenu"
+		},
+		"PriceAddMultiple": {
+			"Title": "Přidat více cen"
+		},
+		"ProofAddSingle": {
+			"Title": "Přidejte jeden důkaz"
+		},
+		"ProofAddMultiple": {
+			"Title": "Přidejte více důkazů"
+		},
 		"Community": {
 			"Title": "Komunita"
 		},
