@@ -288,6 +288,7 @@
 		"Type": "Type",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "User",

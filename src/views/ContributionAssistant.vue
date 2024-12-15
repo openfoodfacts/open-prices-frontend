@@ -89,7 +89,7 @@
                 </p>
               </v-alert>
               <v-btn class="float-right mt-4" color="success" :loading="addPricesLoading" @click="addPrices">
-                {{ $t('Common.Upload') }}
+                {{ $t('Common.UploadMultiplePrices', productPriceForms.length) }}
               </v-btn>
             </v-col>
           </v-row>
