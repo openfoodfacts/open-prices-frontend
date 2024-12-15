@@ -15,24 +15,12 @@
       />
       <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" @filled="productFormFilled = $event" />
       <v-alert
-        v-if="productPriceForm.type === 'PRODUCT'"
+        v-if="productIsTypeProduct"
         type="info"
         variant="outlined"
       >
         {{ $t('ContributionAssistant.DetectedBarcode', { barcode: productPriceForm.detected_product_code }) }}
       </v-alert>
-      <v-row v-if="productPriceForm.type == 'CATEGORY'">
-        <v-col>
-          <v-item-group v-model="productPriceForm.price_per" class="d-inline" mandatory>
-            <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
-              <v-chip class="mr-1" :class="isSelected ? 'border-grey' : 'border-transparent'" @click="toggle">
-                <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
-                {{ cpp.value }}
-              </v-chip>
-            </v-item>
-          </v-item-group>
-        </v-col>
-      </v-row>
       <PriceInputRow class="mt-0" :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
     <v-divider />
@@ -52,6 +40,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 
 export default {
   components: {
@@ -62,6 +51,7 @@ export default {
     productPriceForm: {
       type: Object,
       default: () => ({
+        type: null,
         category_tag: null,
         origins_tags: '',
         labels_tags: [],
@@ -81,10 +71,11 @@ export default {
     return {
       productFormFilled: false,
       pricePriceFormFilled: false,
-      categoryPricePerList: [
-      {key: 'KILOGRAM', value: "per kg", icon: 'mdi-weight-kilogram'},
-      {key: 'UNIT', value: "per unit", icon: 'mdi-numeric-1-circle'}
-      ],
+    }
+  },
+  computed: {
+    productIsTypeProduct() {
+      return this.productPriceForm.type === constants.PRICE_TYPE_PRODUCT
     }
   },
   methods: {

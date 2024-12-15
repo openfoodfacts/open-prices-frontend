@@ -51,19 +51,7 @@
           </template>
           <v-divider />
           <v-card-text>
-            <v-row v-if="addPriceSingleForm.type === 'CATEGORY'">
-              <v-col>
-                <v-item-group v-model="addPriceSingleForm.price_per" class="d-inline" mandatory>
-                  <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
-                    <v-chip class="mr-1" :class="isSelected ? 'border-grey' : 'border-transparent'" @click="toggle">
-                      <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
-                      {{ cpp.value }}
-                    </v-chip>
-                  </v-item>
-                </v-item-group>
-              </v-col>
-            </v-row>
-            <PriceInputRow class="mt-0" :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
+            <PriceInputRow class="mt-0" :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" :hideCurrencyChoice="true" @filled="priceFormFilled = $event" />
           </v-card-text>
         </v-card>
       </v-col>
@@ -117,7 +105,7 @@ export default {
         origins_tags: '',
         labels_tags: [],
         price: null,
-        price_per: null, // see initPriceSingleForm
+        price_per: null,
         price_is_discounted: false,
         price_without_discount: null,
         currency: null,  // see initPriceSingleForm
@@ -130,15 +118,11 @@ export default {
         receipt_price_total: null,
         proof_id: null,
       },
-      pricePriceFormFilled: false,
+      priceFormFilled: false,
       productFormFilled: false,
       createPriceLoading: false,
       // proof data
       proofDateSuccessMessage: false,
-      categoryPricePerList: [
-        {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
-        {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
-      ],
     }
   },
   computed: {
@@ -146,13 +130,6 @@ export default {
     proofFormFilled() {
       let keys = ['proof_id']
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-    },
-    pricePerFormFilled() {
-      let keys = ['price_per']
-      return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
-    },
-    priceFormFilled() {
-      return this.pricePerFormFilled && this.pricePriceFormFilled
     },
     formFilled() {
       return this.productFormFilled && this.proofFormFilled && this.priceFormFilled
@@ -172,7 +149,6 @@ export default {
       /**
        * init form config
        */
-      this.addPriceSingleForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.addPriceSingleForm.currency = this.appStore.getUserLastCurrencyUsed
     },
     createPrice() {

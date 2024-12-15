@@ -14,7 +14,7 @@
           </v-item-group>
         </v-col>
       </v-row>
-      <v-row v-if="productForm.type === 'PRODUCT'" class="mt-0">
+      <v-row v-if="productIsTypeProduct" class="mt-0">
         <v-col>
           <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
             {{ $t('Common.ProductFind') }}
@@ -22,7 +22,7 @@
           <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductActions="true" :readonly="true" elevation="1" />
         </v-col>
       </v-row>
-      <v-row v-if="productForm.type === 'CATEGORY'" class="mt-0">
+      <v-row v-else-if="productIsTypeCategory" class="mt-0">
         <v-col cols="6">
           <v-autocomplete
             v-model="productForm.category_tag"
@@ -84,7 +84,14 @@ export default {
   props: {
     productForm: {
       type: Object,
-      default: () => ({ type: '', product: null, product_code: '', category_tag: null, origins_tags: '', labels_tags: [] })
+      default: () => ({
+        type: null,
+        product: null,
+        product_code: '',
+        category_tag: null,
+        origins_tags: '',
+        labels_tags: []
+      })
     },
     disableInitWhenSwitchingType: {
       type: Boolean,
@@ -103,6 +110,12 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    productIsTypeProduct() {
+      return this.productForm && this.productForm.type === constants.PRICE_TYPE_PRODUCT
+    },
+    productIsTypeCategory() {
+      return this.productForm && this.productForm.type === constants.PRICE_TYPE_CATEGORY
+    },
     productBarcodeFormFilled() {
       let keys = ['product_code']
       return Object.keys(this.productForm).filter(k => keys.includes(k)).every(k => !!this.productForm[k])
@@ -126,11 +139,11 @@ export default {
   mounted() {
     if (this.$route.query.code) {
       if (this.$route.query.code.startsWith('en')) {
-        this.productForm.type = 'CATEGORY'
+        this.productForm.type = constants.PRICE_TYPE_CATEGORY
         this.productForm.category_tag = this.$route.query.code
       }
       else {
-        this.productForm.type = 'PRODUCT'
+        this.productForm.type = constants.PRICE_TYPE_PRODUCT
         this.productForm.product_code = this.$route.query.code
       }
     }
@@ -140,7 +153,7 @@ export default {
     utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
       this.originTags = module.default
     })
-    this.productForm.type = this.productForm.type ? this.productForm.type : (this.productForm.product_code ? 'PRODUCT' : this.appStore.user.last_product_product_used)
+    this.productForm.type = this.productForm.type ? this.productForm.type : (this.productForm.product_code ? constants.PRICE_TYPE_PRODUCT : this.appStore.user.last_product_product_used)
     if (this.productForm.product_code) {
       this.getProduct(this.productForm.product_code)
     }

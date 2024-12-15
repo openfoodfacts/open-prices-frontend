@@ -157,7 +157,7 @@ export default {
       image: new Image(),
       boundingBoxesFromServer: [],
       extractedLabels: [],
-      productPriceForms : [],
+      productPriceForms: [],
       proofForm: {
         type: constants.PROOF_TYPE_PRICE_TAG,
         id: null,
@@ -221,6 +221,7 @@ export default {
     setProof(event) {
       const image = new Image()
       // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'
+      // image.src = 'https://prices.openfoodfacts.org/img/0023/f6tJvMcsDk.webp'
       image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${event.file_path}`
       image.crossOrigin = 'Anonymous'
       this.image = image

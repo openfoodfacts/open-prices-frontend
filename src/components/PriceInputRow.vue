@@ -1,7 +1,19 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <v-row>
+      <v-row v-if="productIsTypeCategory">
+        <v-col>
+          <v-item-group v-model="priceForm.price_per" class="d-inline" mandatory>
+            <v-item v-for="cpp in CATEGORY_PRICE_PER_LIST" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
+              <v-chip class="mr-1" :class="isSelected ? 'border-grey' : 'border-transparent'" @click="toggle">
+                <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
+                {{ cpp.value }}
+              </v-chip>
+            </v-item>
+          </v-item-group>
+        </v-col>
+      </v-row>
+      <v-row class="mt-0">
         <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
           <v-text-field
             :model-value="priceForm.price"
@@ -81,7 +93,9 @@ export default {
     priceForm: {
       type: Object,
       default: () => ({
+        type: null,  // 'CATEGORY' or 'PRODUCT'  // transform into productType prop ?
         price: null,
+        price_per: null,
         price_is_discounted: false,
         price_without_discount: null,
         currency: null,
@@ -106,6 +120,10 @@ export default {
     return {
       // currency selection
       changeCurrencyDialog: false,
+      CATEGORY_PRICE_PER_LIST: [
+        {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
+        {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
+      ],
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
     }
   },
@@ -126,12 +144,16 @@ export default {
         value => Number(value) >= 1 || this.$t('PriceRules.Positive'),
       ]
     },
-    priceFormFilled() {
-      let keys = ['price', 'currency']
-      return Object.keys(this.priceForm).filter(k => keys.includes(k)).every(k => !!this.priceForm[k])
+    productIsTypeCategory() {
+      return this.priceForm && this.priceForm.type === constants.PRICE_TYPE_CATEGORY
     },
     proofIsTypeReceipt() {
       return this.proofType === constants.PROOF_TYPE_RECEIPT
+    },
+    priceFormFilled() {
+      let keysProduct = ['price', 'currency']
+      let keysCategory = ['price_per', 'price', 'currency']
+      return this.productIsTypeCategory ? Object.keys(this.priceForm).filter(k => keysCategory.includes(k)).every(k => !!this.priceForm[k]) : Object.keys(this.priceForm).filter(k => keysProduct.includes(k)).every(k => !!this.priceForm[k])
     },
   },
   watch: {
