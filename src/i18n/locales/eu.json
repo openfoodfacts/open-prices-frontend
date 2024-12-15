@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"PriceAdd": {
+			"Title": "Add a price"
+		},
+		"PriceAddSingle": {
+			"Title": "Add a single price"
+		},
+		"PriceAddMultiple": {
+			"Title": "Gehitu hainbat prezio"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a single proof"
+		},
+		"ProofAddMultiple": {
+			"Title": "Add multiple proofs"
+		},
 		"Community": {
 			"Title": "Community"
 		},
