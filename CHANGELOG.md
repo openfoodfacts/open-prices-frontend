@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.100.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.100.1...v1.100.2) (2024-12-15)
+
+
+### Technical
+
+* **Barcode scanner:** fix dialog height & width. Make search fields clearable ([6859c59](https://github.com/openfoodfacts/open-prices-frontend/commit/6859c59786adb0a8e1d214e8ee936dce3ff51f4b))
+* **l10n:** New Crowdin translations to review and merge ([#1130](https://github.com/openfoodfacts/open-prices-frontend/issues/1130)) ([f1b0a7a](https://github.com/openfoodfacts/open-prices-frontend/commit/f1b0a7af6031d129357d2a43c80852d60a06d779))
+* **l10n:** New Crowdin translations to review and merge ([#1133](https://github.com/openfoodfacts/open-prices-frontend/issues/1133)) ([0cb91ab](https://github.com/openfoodfacts/open-prices-frontend/commit/0cb91abbe0cf56a1fffa5f20bccffdeda89f364d))
+* **Location selector:** fix dialog height & width. Make search fields clearable ([b790f48](https://github.com/openfoodfacts/open-prices-frontend/commit/b790f482fb8bd9fbebb7c4f65a8825eeb794560d))
+* **Price add:** Match price_per selection style with other toggles. ref [#1085](https://github.com/openfoodfacts/open-prices-frontend/issues/1085) & [#1134](https://github.com/openfoodfacts/open-prices-frontend/issues/1134) ([9241ed1](https://github.com/openfoodfacts/open-prices-frontend/commit/9241ed14ce5f1a5d77f5ccf70d76223cf640786d))
+* **Price add:** move price_per selector in PriceInputRow ([#1134](https://github.com/openfoodfacts/open-prices-frontend/issues/1134)) ([5a474ff](https://github.com/openfoodfacts/open-prices-frontend/commit/5a474ff52ed479b3c8abc1b244773e86f714b33d))
+* **Price add:** remove Proof date & currency labels. ref [#1085](https://github.com/openfoodfacts/open-prices-frontend/issues/1085) ([cd7feb6](https://github.com/openfoodfacts/open-prices-frontend/commit/cd7feb6332704c31358934f5c764f6883dc91e54))
+* **PriceInputRow:** move everything under a single v-row ([15f62c2](https://github.com/openfoodfacts/open-prices-frontend/commit/15f62c2f918531a0e4bb6e9c2db9dc514db6493c))
+* **Recent proof dialog:** fix dialog height & width ([35ad522](https://github.com/openfoodfacts/open-prices-frontend/commit/35ad52266e41695ad81e0a796f48f986edc5d588))
+* rename AddPriceX components to PriceAddX ([623cc0f](https://github.com/openfoodfacts/open-prices-frontend/commit/623cc0f3b8cb2ce489b9b194b69cfde7f10b5af0))
+
 ## [1.100.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.100.0...v1.100.1) (2024-12-15)
 
 
