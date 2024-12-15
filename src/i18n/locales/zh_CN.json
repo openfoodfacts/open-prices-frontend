@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"PriceAdd": {
+			"Title": "添加价格"
+		},
+		"PriceAddSingle": {
+			"Title": "添加单价"
+		},
+		"PriceAddMultiple": {
+			"Title": "添加多个价格"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a single proof"
+		},
+		"ProofAddMultiple": {
+			"Title": "Add multiple proofs"
+		},
 		"Community": {
 			"Title": "Community"
 		},
