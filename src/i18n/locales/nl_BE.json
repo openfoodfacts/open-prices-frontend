@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "Meerdere bewijzen toevoegen"
 		},
+		"PriceAdd": {
+			"Title": "Voeg een prijs toe"
+		},
+		"PriceAddSingle": {
+			"Title": "Voeg een enkele prijs toe"
+		},
+		"PriceAddMultiple": {
+			"Title": "Voeg meerdere prijzen toe"
+		},
+		"ProofAddSingle": {
+			"Title": "Voeg één bewijs toe"
+		},
+		"ProofAddMultiple": {
+			"Title": "Meerdere bewijzen toevoegen"
+		},
 		"Community": {
 			"Title": "Gemeenschap"
 		},
