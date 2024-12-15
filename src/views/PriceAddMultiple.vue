@@ -54,18 +54,6 @@
                 </v-alert>
               </v-col>
             </v-row>
-            <v-row v-if="productPriceForm.type === 'CATEGORY'">
-              <v-col>
-                <v-item-group v-model="productPriceForm.price_per" class="d-inline" mandatory>
-                  <v-item v-for="cpp in categoryPricePerList" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
-                    <v-chip class="mr-1" :class="isSelected ? 'border-grey' : 'border-transparent'" @click="toggle">
-                      <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
-                      {{ cpp.value }}
-                    </v-chip>
-                  </v-item>
-                </v-item-group>
-              </v-col>
-            </v-row>
             <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" :proofType="proofObject.type" @filled="pricePriceFormFilled = $event" />
           </v-card-text>
           <v-divider />
@@ -173,10 +161,6 @@ export default {
         currency: null,  // see initNewProductPriceForm
         receipt_quantity: null,
       },
-      categoryPricePerList: [
-        {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
-        {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
-      ],
      }
   },
   computed: {
@@ -186,15 +170,8 @@ export default {
       let keysONLINE = Object.keys(this.addPriceMultipleForm).filter(k => !['location_osm_id', 'location_osm_type', 'receipt_price_count', 'receipt_price_total'].includes(k))
       return Object.keys(this.addPriceMultipleForm).filter(k => keysOSM.includes(k)).every(k => !!this.addPriceMultipleForm[k]) || Object.keys(this.addPriceMultipleForm).filter(k => keysONLINE.includes(k)).every(k => !!this.addPriceMultipleForm[k])
     },
-    pricePerFormFilled() {
-      let keys = ['price_per']
-      return Object.keys(this.addPriceMultipleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceMultipleForm[k])
-    },
-    priceFormFilled() {
-      return this.pricePerFormFilled && this.pricePriceFormFilled
-    },
     productPriceFormFilled() {
-      return this.productFormFilled && this.priceFormFilled
+      return this.productFormFilled && this.pricePriceFormFilled
     },
     formFilled() {
       return this.proofFormFilled && !!this.proofPriceUploadedList.length && !Object.keys(this.productPriceForm).length
@@ -249,7 +226,6 @@ export default {
       this.clearProductPriceForm()
       this.productPriceForm = JSON.parse(JSON.stringify(this.productPriceNew))  // deep copy
       this.productPriceForm.type = this.appStore.user.last_product_type_used  // can be overriden in ProductInputRow
-      this.productPriceForm.price_per = this.categoryPricePerList[0].key // init to 'KILOGRAM' because it's the most common use-case
       this.productPriceForm.currency = this.addPriceMultipleForm.currency || this.appStore.getUserLastCurrencyUsed  // get currency from proof first
       if (this.proofObject.type === constants.PROOF_TYPE_RECEIPT) {
         this.productPriceForm.receipt_quantity = 1
