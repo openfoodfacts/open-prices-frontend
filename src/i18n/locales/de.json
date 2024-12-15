@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "Mehrere Nachweise hinzufügen"
 		},
+		"PriceAdd": {
+			"Title": "Preis hinzufügen"
+		},
+		"PriceAddSingle": {
+			"Title": "Fügen Sie einen Einzelpreis hinzu"
+		},
+		"PriceAddMultiple": {
+			"Title": "Mehrere Preise hinzufügen"
+		},
+		"ProofAddSingle": {
+			"Title": "Einzelnen Nachweis hinzufügen"
+		},
+		"ProofAddMultiple": {
+			"Title": "Mehrere Nachweise hinzufügen"
+		},
 		"Community": {
 			"Title": "Gemeinschaft"
 		},
