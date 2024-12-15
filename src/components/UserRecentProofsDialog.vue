@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable max-height="80%" min-width="50%" width="auto">
+  <v-dialog scrollable height="80%" width="80%">
     <v-card>
       <v-card-title>
         {{ $t('UserRecentProofsDialog.SelectRecentProof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
@@ -29,8 +29,8 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import constants from '../constants'
 import api from '../services/api'
+import constants from '../constants'
 
 export default {
   components: {
