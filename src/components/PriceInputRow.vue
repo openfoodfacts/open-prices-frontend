@@ -93,7 +93,7 @@ export default {
     priceForm: {
       type: Object,
       default: () => ({
-        type: null,  // 'CATEGORY' or 'PRODUCT'
+        type: null,  // 'CATEGORY' or 'PRODUCT'  // transform into productType prop ?
         price: null,
         price_per: null,
         price_is_discounted: false,
@@ -145,7 +145,7 @@ export default {
       ]
     },
     productIsTypeCategory() {
-      return this.priceForm.type === 'CATEGORY'
+      return this.priceForm && this.priceForm.type === constants.PRICE_TYPE_CATEGORY
     },
     proofIsTypeReceipt() {
       return this.proofType === constants.PROOF_TYPE_RECEIPT
