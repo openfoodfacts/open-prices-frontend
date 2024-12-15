@@ -288,7 +288,7 @@
 		"Type": "סוג",
 		"Upload": "העלאה",
 		"UploadMultipleImages": "העלאת תמונה | העלאת {count} תמונות",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UploadMultiplePrices": "העלאת מחיר | העלאת {count} מחירים",
 		"URL": "כתובת",
 		"URLInvalid": "כתובת שגויה",
 		"User": "משתמש",
@@ -305,30 +305,30 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. בחירת הוכחה",
+			"LabelsExtraction": "2. חילוץ תוויות",
+			"Cleanup": "3. ניקוי",
+			"Summary": "4. סיכום"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"BoundingBoxesFromServerWarning": "לא זוהו תוויות אוטומטית. נא לצייר ריבועים סביב התוויות ידנית או ללחוץ על הכפתור להלן כדי לנסות שוב.",
+		"FindBoundingBoxes": "איתור תוויות אוטומטית",
+		"FindBoundingBoxesRunning": "מתבצע זיהוי תוויות אוטומטי. נא להמתין…",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. לצייר ריבועים מסביב לתוויות",
+			"CheckLabels": "2. לבדוק שהתוויות ברורות",
+			"SendLabels": "3. לשלוח את התוויות לעיבוד אוטומטי",
+			"SendLabelsButton": "שליחת התוויות"
 		},
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
-		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
-		"AutomaticBoundingBoxSource": "automatic",
-		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} מחירים יתווספו להוכחה הקיימת ב־{date} ב־{locationName}",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} מחירים נוספו",
+		"WaitForUpload": "נא להמתין להעלאה",
+		"GoToDashboard": "מעבר ללוח הבקרה שלך",
+		"GoToProof": "מעבר להוכחה",
+		"AddNewProof": "הוספת הוכחה חדשה",
+		"AutomaticBoundingBoxSource": "אוטומטית",
+		"ManualBoundingBoxSource": "ידנית",
+		"DetectedBarcode": "זוהה ברקוד: {barcode}",
+		"LabelProcessingErrorMessage": "שגיאה: עיבוד תוויות אוטומטי נכשל"
 	},
 	"Community": {
 		"JoinUs": "מזמינים אותך להצטרף אלינו!",
