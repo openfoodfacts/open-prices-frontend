@@ -17,7 +17,7 @@
             <v-icon :icon="formFilled ? 'mdi-barcode' : 'mdi-barcode-scan'" @click="showBarcodeScannerDialog" />
           </template>
           <template #append-inner>
-            <v-icon icon="mdi-magnify" @click="search" />
+            <v-btn icon="mdi-magnify" @click="search" />
           </template>
         </v-text-field>
       </v-form>
@@ -37,6 +37,7 @@
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
     v-model="barcodeScannerDialog"
+    barcodeManualInputMode="add"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
   />

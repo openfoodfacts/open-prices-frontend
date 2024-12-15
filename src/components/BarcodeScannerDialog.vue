@@ -35,10 +35,11 @@
                 inputmode="numeric"
                 prepend-inner-icon="mdi-barcode"
                 :hint="barcodeManualForm.barcode.length.toString()"
+                clearable
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-icon :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualFormValid" @click="barcodeSearchOrSend" />
+                  <v-btn :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualFormValid" @click="barcodeSearchOrSend" />
                 </template>
               </v-text-field>
             </v-form>
