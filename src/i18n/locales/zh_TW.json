@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "新增多個證明"
 		},
+		"PriceAdd": {
+			"Title": "新增價格"
+		},
+		"PriceAddSingle": {
+			"Title": "增加單一價格"
+		},
+		"PriceAddMultiple": {
+			"Title": "新增多個價格"
+		},
+		"ProofAddSingle": {
+			"Title": "新增單一證明"
+		},
+		"ProofAddMultiple": {
+			"Title": "新增多個證明"
+		},
 		"Community": {
 			"Title": "Community"
 		},

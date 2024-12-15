@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "Додайте кілька доказів"
 		},
+		"PriceAdd": {
+			"Title": "Додати ціну"
+		},
+		"PriceAddSingle": {
+			"Title": "Додати єдину ціну"
+		},
+		"PriceAddMultiple": {
+			"Title": "Додати кілька цін"
+		},
+		"ProofAddSingle": {
+			"Title": "Додати одне підтвердження"
+		},
+		"ProofAddMultiple": {
+			"Title": "Додайте кілька доказів"
+		},
 		"Community": {
 			"Title": "Спільнота"
 		},

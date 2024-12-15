@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "Adicionar várias provas"
 		},
+		"PriceAdd": {
+			"Title": "Adicionar um preço"
+		},
+		"PriceAddSingle": {
+			"Title": "Adicionar um único preço"
+		},
+		"PriceAddMultiple": {
+			"Title": "Adicionar múltiplos preços"
+		},
+		"ProofAddSingle": {
+			"Title": "Adicionar um único comprovante"
+		},
+		"ProofAddMultiple": {
+			"Title": "Adicionar várias provas"
+		},
 		"Community": {
 			"Title": "Comunidade"
 		},

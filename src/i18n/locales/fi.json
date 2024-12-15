@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"PriceAdd": {
+			"Title": "Lisää hinta"
+		},
+		"PriceAddSingle": {
+			"Title": "Lisää yksi hinta"
+		},
+		"PriceAddMultiple": {
+			"Title": "Lisää useita hintoja"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a single proof"
+		},
+		"ProofAddMultiple": {
+			"Title": "Add multiple proofs"
+		},
 		"Community": {
 			"Title": "Community"
 		},
