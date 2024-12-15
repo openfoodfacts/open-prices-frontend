@@ -40,7 +40,7 @@
         hide-details="auto"
       />
     </v-col>
-    <v-col class="pt-0" cols="6">
+    <v-col v-if="proofIsTypeReceipt" class="pt-0" cols="6">
       <v-text-field
         v-model="priceForm.receipt_quantity"
         density="compact"
