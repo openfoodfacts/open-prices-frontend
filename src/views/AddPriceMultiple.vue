@@ -42,9 +42,6 @@
           prepend-icon="mdi-tag-plus-outline"
           height="100%"
         >
-          <template #append>
-            <v-icon icon="mdi-delete" color="error" @click="clearProductPriceForm" />
-          </template>
           <v-divider />
           <v-card-text>
             <ProductInputRow :productForm="productPriceForm" @filled="productFormFilled = $event" />
@@ -70,11 +67,24 @@
               </v-col>
             </v-row>
             <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" :proofType="proofObject.type" @filled="pricePriceFormFilled = $event" />
+          </v-card-text>
+          <v-divider />
+          <v-card-actions>
             <v-row>
+              <v-col>
+                <v-btn
+                  size="small"
+                  color="error"
+                  icon="mdi-delete"
+                  @click="clearProductPriceForm"
+                />
+              </v-col>
+              <v-spacer />
               <v-col>
                 <v-btn
                   class="float-right"
                   color="success"
+                  variant="flat"
                   type="submit"
                   :loading="createPriceLoading"
                   :disabled="!productPriceFormFilled"
@@ -83,7 +93,7 @@
                 </v-btn>
               </v-col>
             </v-row>
-          </v-card-text>
+          </v-card-actions>
         </v-card>
       </v-form>
 
