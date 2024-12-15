@@ -251,7 +251,7 @@
 		"ProofSelectedCount": "{count} הוכחות נבחרו | הוכחה נבחרה | {count} הוכחות נבחרו",
 		"Public": "ציבורי",
 		"Quantity": "כמות",
-		"QuantityBought": "Quantity bought",
+		"QuantityBought": "כמות שנרכשה",
 		"QuantityMissing": "חסרה כמות",
 		"Receipt": "קבלה",
 		"Receipts": "קבלות",
@@ -288,6 +288,7 @@
 		"Type": "סוג",
 		"Upload": "העלאה",
 		"UploadMultipleImages": "העלאת תמונה | העלאת {count} תמונות",
+		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "כתובת",
 		"URLInvalid": "כתובת שגויה",
 		"User": "משתמש",
@@ -301,6 +302,33 @@
 		"Food": "מזון",
 		"PetFood": "מזון לחיות מחמד",
 		"Beauty": "טיפול"
+	},
+	"ContributionAssistant": {
+		"Steps": {
+			"ProofSelect": "1. Proof selection",
+			"LabelsExtraction": "2. Labels extraction",
+			"Cleanup": "3. Cleanup",
+			"Summary": "4. Summary"
+		},
+		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.",
+		"FindBoundingBoxes": "Automatically find labels",
+		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"LabelsExtractionSteps": {
+			"DrawBoundingBoxes": "1. Draw squares around the labels",
+			"CheckLabels": "2. Check the readability of labels",
+			"SendLabels": "3. Send the labels for automatic processing",
+			"SendLabelsButton": "Send labels"
+		},
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
+		"WaitForUpload": "Please wait for upload",
+		"GoToDashboard": "Go to your dashboard",
+		"GoToProof": "Go to proof",
+		"AddNewProof": "Add a new proof",
+		"AutomaticBoundingBoxSource": "automatic",
+		"ManualBoundingBoxSource": "manual",
+		"DetectedBarcode": "Detected barcode: {barcode}",
+		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
 	},
 	"Community": {
 		"JoinUs": "מזמינים אותך להצטרף אלינו!",
