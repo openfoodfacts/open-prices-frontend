@@ -5,9 +5,9 @@
         <v-col>
           <v-item-group v-model="priceForm.price_per" class="d-inline" mandatory>
             <v-item v-for="cpp in CATEGORY_PRICE_PER_LIST" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
-              <v-chip class="mr-1" :class="isSelected ? 'border-grey' : 'border-transparent'" @click="toggle">
-                <v-icon start :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" />
+              <v-chip class="mr-1" :class="isSelected ? 'border-grey' : ''" variant="outlined" @click="toggle">
                 {{ cpp.value }}
+                <v-icon end :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" :color="isSelected ? 'green' : ''" />
               </v-chip>
             </v-item>
           </v-item-group>
