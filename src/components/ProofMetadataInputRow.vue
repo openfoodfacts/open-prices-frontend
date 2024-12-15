@@ -1,9 +1,6 @@
 <template>
   <v-row>
     <v-col cols="6">
-      <h3 class="required mb-1">
-        {{ $t('Common.Date') }}
-      </h3>
       <v-text-field
         v-model="proofMetadataForm.date"
         :label="$t('Common.Date')"
@@ -13,15 +10,6 @@
       />
     </v-col>
     <v-col cols="6">
-      <h3 class="required mb-1">
-        {{ $t('Common.Currency') }}
-        <span class="text-caption font-weight-regular">
-          <a href="#">{{ $t('Common.Help') }}</a>
-          <v-tooltip activator="parent" open-on-click location="top">
-            {{ $t('ChangeCurrencyDialog.AddCurrencies') }}
-          </v-tooltip>
-        </span>
-      </h3>
       <v-select
         v-model="proofMetadataForm.currency"
         :label="$t('Common.Currency')"
