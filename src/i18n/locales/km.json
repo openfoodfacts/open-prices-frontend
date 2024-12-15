@@ -288,6 +288,7 @@
 		"Type": "Type",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "អ្នក​ប្រើ",
@@ -301,6 +302,33 @@
 		"Food": "Food",
 		"PetFood": "Pet food",
 		"Beauty": "Beauty"
+	},
+	"ContributionAssistant": {
+		"Steps": {
+			"ProofSelect": "1. Proof selection",
+			"LabelsExtraction": "2. Labels extraction",
+			"Cleanup": "3. Cleanup",
+			"Summary": "4. Summary"
+		},
+		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.",
+		"FindBoundingBoxes": "Automatically find labels",
+		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"LabelsExtractionSteps": {
+			"DrawBoundingBoxes": "1. Draw squares around the labels",
+			"CheckLabels": "2. Check the readability of labels",
+			"SendLabels": "3. Send the labels for automatic processing",
+			"SendLabelsButton": "Send labels"
+		},
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
+		"WaitForUpload": "Please wait for upload",
+		"GoToDashboard": "Go to your dashboard",
+		"GoToProof": "Go to proof",
+		"AddNewProof": "Add a new proof",
+		"AutomaticBoundingBoxSource": "automatic",
+		"ManualBoundingBoxSource": "manual",
+		"DetectedBarcode": "Detected barcode: {barcode}",
+		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
 	},
 	"Community": {
 		"JoinUs": "Join us!",
