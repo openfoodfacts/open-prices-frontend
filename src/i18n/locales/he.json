@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "הוספת מגוון הוכחות"
 		},
+		"PriceAdd": {
+			"Title": "הוספת מחיר"
+		},
+		"PriceAddSingle": {
+			"Title": "הוספת מחיר בודד"
+		},
+		"PriceAddMultiple": {
+			"Title": "הוספת מגוון מחירים"
+		},
+		"ProofAddSingle": {
+			"Title": "הוספת הוכחה יחידה"
+		},
+		"ProofAddMultiple": {
+			"Title": "הוספת מגוון הוכחות"
+		},
 		"Community": {
 			"Title": "קהילה"
 		},
