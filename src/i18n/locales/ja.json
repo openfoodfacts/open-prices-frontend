@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"PriceAdd": {
+			"Title": "Add a price"
+		},
+		"PriceAddSingle": {
+			"Title": "Add a single price"
+		},
+		"PriceAddMultiple": {
+			"Title": "複数の価格を追加する"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a single proof"
+		},
+		"ProofAddMultiple": {
+			"Title": "Add multiple proofs"
+		},
 		"Community": {
 			"Title": "Community"
 		},
