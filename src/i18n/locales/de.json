@@ -251,7 +251,7 @@
 		"ProofSelectedCount": "{count} Nachweise ausgewählt | {count} Nachweise ausgewählt | {count} Nachweise ausgewählt",
 		"Public": "Öffentlich",
 		"Quantity": "Mengenangabe",
-		"QuantityBought": "Quantity bought",
+		"QuantityBought": "Gekaufte Menge",
 		"QuantityMissing": "Menge fehlt",
 		"Receipt": "Kassenbon",
 		"Receipts": "Belege",
