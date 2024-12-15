@@ -336,13 +336,13 @@ export default {
       return this.openstreetmapNominatimSearch(q)
     }
   },
-  processWithGemini(croppedBlobs) {
+  processWithGemini(labels) {
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/process_with_gemini`
     const formData = new FormData()
 
-    croppedBlobs.forEach((blob) => {
-      formData.append('files', blob)
+    labels.forEach((label) => {
+      formData.append('files', label.blob)
     });
 
     return fetch(url, {

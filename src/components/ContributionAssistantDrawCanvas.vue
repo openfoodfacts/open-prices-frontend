@@ -19,42 +19,42 @@
         type: Image,
         default: null
       },
-      seedCrops: {
+      boundingBoxesFromServer: {
         type: Array,
         default: null
       }
     },
-    emits: ['croppedImages', 'loaded'],
+    emits: ['extractedLabels', 'loaded'],
     data() {
       return {
         isDrawing: false,
         startX: 0,
         startY: 0,
         scale: 1,
-        rectangles: []
+        boundingBoxes: []
       }
     },
     watch: {
-      seedCrops() {
-        if (this.seedCrops) {
-          this.init(true)
+      boundingBoxesFromServer() {
+        if (this.boundingBoxesFromServer) {
+          this.initCanvas(true)
         }
       }
     },
     mounted() {
       if (this.image.complete) {
-        this.init()
+        this.initCanvas()
       } else {
-        this.image.onload = this.init
+        this.image.onload = this.initCanvas
       }
     },
     methods: {
-      init(keepRectangles=false) {
+      initCanvas(keepBoundingBoxes=false) {
         const canvas = this.$refs.canvas
         const ctx = canvas.getContext("2d")
         canvas.style.width = "100%"
         this.scale = canvas.offsetWidth / this.image.width
-        const preferedHeight = 400
+        const preferedHeight = window.innerHeight - 250
 
         if (preferedHeight < this.image.height * this.scale) {
           // Image will be too tall
@@ -70,21 +70,22 @@
         
         ctx.drawImage(this.image, 0, 0, newWidth, newHeight)
         
-        if (!keepRectangles) {
-          this.rectangles = [] // reset rectangles
+        if (!keepBoundingBoxes) {
+          this.boundingBoxes = [] // reset boundingBoxes
         }
-        if (this.seedCrops) {
-          this.rectangles = this.rectangles.concat(this.seedCrops.map(seedCrop => {
+        if (this.boundingBoxesFromServer) {
+          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(boundingBox => {
             return {
-              startY: seedCrop[0] * this.image.height,
-              startX: seedCrop[1] * this.image.width,
-              endY: seedCrop[2] * this.image.height,
-              endX: seedCrop[3] * this.image.width
+              startY: boundingBox[0] * this.image.height,
+              startX: boundingBox[1] * this.image.width,
+              endY: boundingBox[2] * this.image.height,
+              endX: boundingBox[3] * this.image.width,
+              boundingSource: this.$t('ContributionAssistant.AutomaticBoundingBoxSource')
             }
           }))
-          this.cropImages()
+          this.extractLabels()
         }
-        this.drawRectangles(); // Draw previous rectangles after resizing
+        this.drawBoundingBoxes(); // Draw previous boundingBoxes after resizing
         this.$emit('loaded')
       },
       startDrawing(event) {
@@ -109,7 +110,7 @@
           const ctx = canvas.getContext("2d")
           
           ctx.drawImage(this.image, 0, 0, canvas.width, canvas.height); // Redraw image
-          this.drawRectangles(); // Redraw previous rectangles
+          this.drawBoundingBoxes(); // Redraw previous boundingBoxes
           
           const currentX = event.offsetX / this.scale
           const currentY = event.offsetY / this.scale
@@ -129,27 +130,26 @@
         }
         const endX = event.offsetX / this.scale
         const endY = event.offsetY / this.scale
-        this.rectangles.push({ startX: this.startX, startY: this.startY, endX, endY })
-        this.cropImages()
+        this.boundingBoxes.push({ startX: this.startX, startY: this.startY, endX, endY, boundingSource: this.$t('ContributionAssistant.ManualBoundingBoxSource') })
+        this.extractLabels()
       },
-      drawRectangles() {
+      drawBoundingBoxes() {
         const ctx = this.$refs.canvas.getContext("2d")
         ctx.strokeStyle = "red"
-        this.rectangles.forEach(rect => {
+        this.boundingBoxes.forEach(rect => {
           const { startX, startY, endX, endY } = rect
           const width = endX - startX
           const height = endY - startY
           ctx.strokeRect(startX * this.scale, startY * this.scale, width * this.scale, height * this.scale)
         });
       },
-      async cropImages() {
-        let croppedImages = []
-        let croppedBlobs = []
+      async extractLabels() {
+        let extractedLabels = []
         const originalCanvas = document.createElement("canvas")
         const ctx = originalCanvas.getContext("2d")
-        for (let i = 0; i < this.rectangles.length; i++) {
-          const rect = this.rectangles[i]
-          const { startX, startY, endX, endY } = rect
+        for (let i = 0; i < this.boundingBoxes.length; i++) {
+          const rect = this.boundingBoxes[i]
+          const { startX, startY, endX, endY, boundingSource } = rect
           const width = Math.abs(endX - startX)
           const height = Math.abs(endY - startY)
           
@@ -157,19 +157,22 @@
           originalCanvas.height = height
           ctx.drawImage(this.image, Math.min(startX, endX), Math.min(startY, endY), width, height, 0, 0, width, height)
           
-          croppedImages[i] = originalCanvas.toDataURL()
-          croppedBlobs[i] = await new Promise(resolve => originalCanvas.toBlob(resolve, 'image/webp'))
+          extractedLabels[i] = {
+            imageSrc: originalCanvas.toDataURL(),
+            blob: await new Promise(resolve => originalCanvas.toBlob(resolve, 'image/webp')),
+            boundingSource: boundingSource
+          }
         }
-        this.$emit('croppedImages', [croppedImages, croppedBlobs])
+        this.$emit('extractedLabels', extractedLabels)
       },
-      removeRectangle(index) {
-        this.rectangles.splice(index, 1)
+      removeBoundingBox(index) {
+        this.boundingBoxes.splice(index, 1)
           const canvas = this.$refs.canvas
           const ctx = canvas.getContext("2d")
           
           ctx.drawImage(this.image, 0, 0, canvas.width, canvas.height)
-          this.drawRectangles()
-          this.cropImages()
+          this.drawBoundingBoxes()
+          this.extractLabels()
       }
     }
   }

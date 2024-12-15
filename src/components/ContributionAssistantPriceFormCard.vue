@@ -1,29 +1,25 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
   <v-card
-    class="border-transparent mb-4"
     height="100%"
     title="Label"
     prepend-icon="mdi-tag-outline"
   >
-    <template #append>
-      <v-icon icon="mdi-delete" color="error" @click="removePrice()" />
-    </template>
     <v-divider />
-    <v-img
-      height="200px"
-      :src="productPriceForm.proofImage"
-      contain
-    />
     <v-card-text>
-      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingModes="true" @filled="productFormFilled = $event" />
+      <v-img
+        class="mb-4"
+        height="200px"
+        :src="productPriceForm.proofImage"
+        contain
+      />
+      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" @filled="productFormFilled = $event" />
       <v-alert
         v-if="productPriceForm.type === 'PRODUCT'"
-        class="mb-2"
         type="info"
-        variant="plain"
+        variant="outlined"
       >
-        Detected barcode: {{ productPriceForm.detected_product_code }}
+        {{ $t('ContributionAssistant.DetectedBarcode', { barcode: productPriceForm.detected_product_code }) }}
       </v-alert>
       <v-row v-if="productPriceForm.type == 'CATEGORY'">
         <v-col>
@@ -39,6 +35,17 @@
       </v-row>
       <PriceInputRow class="mt-0" :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
+    <v-divider />
+    <v-card-actions>
+      <v-btn
+        color="error"
+        variant="outlined"
+        prepend-icon="mdi-delete"
+        @click="removePrice"
+      >
+        {{ $t('Common.Delete') }}
+      </v-btn>
+    </v-card-actions>
   </v-card>
 </template>
 
