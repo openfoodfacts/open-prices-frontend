@@ -288,7 +288,7 @@
 		"Type": "Тип",
 		"Upload": "Завантажити",
 		"UploadMultipleImages": "Завантажити {count} зображення | Завантажити {count} зображеннь",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UploadMultiplePrices": "Завантажити ціну {count} | Завантажити ціни {count}",
 		"URL": "URL-адреса",
 		"URLInvalid": "Некоректна URL-адреса",
 		"User": "Користувач",
@@ -305,30 +305,30 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. Вибір доказів",
+			"LabelsExtraction": "2. Видобуток міток",
+			"Cleanup": "3. Очищення",
+			"Summary": "4. Підведення підсумків"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"BoundingBoxesFromServerWarning": "Не виявлено жодної мітки. Будь ласка, вручну намалюйте квадрати навколо міток або натисніть кнопку нижче, щоб повторити спробу.",
+		"FindBoundingBoxes": "Автоматично знаходити мітки",
+		"FindBoundingBoxesRunning": "Виконується автоматичне визначення міток. Будь ласка, зачекайте...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. Намалюйте квадрати навколо міток",
+			"CheckLabels": "2. Перевірте читабельність етикеток",
+			"SendLabels": "3. Надішліть етикетки на автоматичну обробку",
+			"SendLabelsButton": "Надіслати мітки"
 		},
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
-		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
-		"AutomaticBoundingBoxSource": "automatic",
-		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} ціна(и) буде додано до наявного доказу на {date} у {locationName}",
+		"PriceAddProgress": "Додано ціни {numberOfPricesAdded} / {totalNumberOfPrices}",
+		"WaitForUpload": "Зачекайте на завантаження",
+		"GoToDashboard": "Перейти до вашої панелі керування",
+		"GoToProof": "Перейти до доказу",
+		"AddNewProof": "Додати нове підтвердження",
+		"AutomaticBoundingBoxSource": "автоматичний",
+		"ManualBoundingBoxSource": "вручну",
+		"DetectedBarcode": "Виявлено штрих-код: {barcode}",
+		"LabelProcessingErrorMessage": "Помилка: при автоматичній обробці етикетки"
 	},
 	"Community": {
 		"JoinUs": "Приєднайся до нас!",
