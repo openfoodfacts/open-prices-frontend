@@ -1,56 +1,62 @@
 <template>
   <v-row>
-    <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
-      <v-text-field
-        :model-value="priceForm.price"
-        :label="priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label')"
-        type="text"
-        inputmode="decimal"
-        :rules="priceRules"
-        :suffix="priceForm.currency"
-        :hint="getPricePerUnit(priceForm.price)"
-        persistent-hint
-        @update:modelValue="newValue => priceForm.price = fixComma(newValue)"
-      >
-        <template v-if="!hideCurrencyChoice" #prepend-inner>
-          <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
-          <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true">
-        </template>
-      </v-text-field>
-    </v-col>
-    <v-col v-if="priceForm.price_is_discounted" cols="6" class="pb-0">
-      <v-text-field
-        :model-value="priceForm.price_without_discount"
-        :label="$t('PriceForm.LabelFull')"
-        type="text"
-        inputmode="decimal"
-        :rules="priceRules"
-        :suffix="priceForm.currency"
-        :hint="getPricePerUnit(priceForm.price_without_discount)"
-        persistent-hint
-        @update:modelValue="newValue => priceForm.price_without_discount = fixComma(newValue)"
-      />
-    </v-col>
-    <v-col class="pt-0" cols="6">
-      <v-checkbox
-        v-model="priceForm.price_is_discounted"
-        density="compact"
-        :label="$t('Common.Discount')"
-        :true-value="true"
-        hide-details="auto"
-      />
-    </v-col>
-    <v-col v-if="proofIsTypeReceipt" class="pt-0" cols="6">
-      <v-text-field
-        v-model="priceForm.receipt_quantity"
-        density="compact"
-        :label="$t('Common.QuantityBought')"
-        type="text"
-        inputmode="numeric"
-        :rules="receiptQuantityRules"
-        :prepend-inner-icon="PROOF_TYPE_RECEIPT_ICON"
-        hide-details="auto"
-      />
+    <v-col cols="12">
+      <v-row>
+        <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
+          <v-text-field
+            :model-value="priceForm.price"
+            :label="priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label')"
+            type="text"
+            inputmode="decimal"
+            :rules="priceRules"
+            :suffix="priceForm.currency"
+            :hint="getPricePerUnit(priceForm.price)"
+            persistent-hint
+            @update:modelValue="newValue => priceForm.price = fixComma(newValue)"
+          >
+            <template v-if="!hideCurrencyChoice" #prepend-inner>
+              <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
+              <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true">
+            </template>
+          </v-text-field>
+        </v-col>
+        <v-col v-if="priceForm.price_is_discounted" cols="6" class="pb-0">
+          <v-text-field
+            :model-value="priceForm.price_without_discount"
+            :label="$t('PriceForm.LabelFull')"
+            type="text"
+            inputmode="decimal"
+            :rules="priceRules"
+            :suffix="priceForm.currency"
+            :hint="getPricePerUnit(priceForm.price_without_discount)"
+            persistent-hint
+            @update:modelValue="newValue => priceForm.price_without_discount = fixComma(newValue)"
+          />
+        </v-col>
+      </v-row>
+      <v-row class="mt-0">
+        <v-col class="pt-0" cols="6">
+          <v-checkbox
+            v-model="priceForm.price_is_discounted"
+            density="compact"
+            :label="$t('Common.Discount')"
+            :true-value="true"
+            hide-details="auto"
+          />
+        </v-col>
+        <v-col v-if="proofIsTypeReceipt" class="pt-0" cols="6">
+          <v-text-field
+            v-model="priceForm.receipt_quantity"
+            density="compact"
+            :label="$t('Common.QuantityBought')"
+            type="text"
+            inputmode="numeric"
+            :rules="receiptQuantityRules"
+            :prepend-inner-icon="PROOF_TYPE_RECEIPT_ICON"
+            hide-details="auto"
+          />
+        </v-col>
+      </v-row>
     </v-col>
 
     <ChangeCurrencyDialog
