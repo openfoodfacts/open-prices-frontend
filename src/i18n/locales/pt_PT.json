@@ -7,10 +7,10 @@
 		"HowAnswer1": "Estamos a fazer crowdsourcing de um conjunto de dados de preços de fonte aberta. Os preços podem ser adicionados pelos utilizadores através desta aplicação Web ou da aplicação móvel oficial {off_url}. Os retalhistas ou as aplicações de terceiros também podem contribuir utilizando a nossa {op_api_url}.",
 		"HowAnswer2": "{op_name} não se destina apenas a armazenar preços individuais, mas também cabazes de consumo, ou seja, a lista de produtos que as pessoas compram numa única viagem de compras. Estes dados são extremamente interessantes para os investigadores analisarem os hábitos de consumo alimentar.",
 		"HowAnswer3": "Sempre que possível, pedimos aos contribuintes que forneçam uma prova do preço, sob a forma de uma fotografia da etiqueta de preço ou do recibo, fatura ou talão. Esta medida destina-se a garantir a qualidade dos dados.",
-		"HowAnswer4": "Se fornecer um talão como imagem de prova, significa que concorda em enviar o seu cesto de compras para {op_name}. Tornaremos o recibo anónimo e disponibilizá-lo-emos publicamente, para que possa ser utilizado para fins de investigação. Se não quiser partilhar publicamente o seu talão, pode contribuir na mesma tirando uma fotografia da etiqueta de preço.",
+		"HowAnswer4": "Se fornecer um talão como imagem de prova de compra, significa que concorda em enviar a sua lista de compras para {op_name}. Tornaremos o talão anónimo e disponibilizá-lo-emos publicamente, para que possa ser utilizado para fins de investigação. Se não quiser partilhar publicamente o seu talão, pode contribuir na mesma tirando uma fotografia da etiqueta com o preço.",
 		"LicenseTitle": "Licença",
 		"LicenseAnswer1": "O conjunto de dados de preços está licenciado ao abrigo de {odbl_url}, o que significa que pode ser utilizado para qualquer fim, desde que atribua o devido crédito a {op_name} e partilhe quaisquer modificações que faça ao conjunto de dados.",
-		"LicenseAnswer2": "As imagens apresentadas como prova estão licenciadas ao abrigo da {ccbysa_url}.",
+		"LicenseAnswer2": "As imagens apresentadas como provas de compra estão licenciadas ao abrigo da {ccbysa_url}.",
 		"WhatTitle": "O que é {op_name}?",
 		"WhatOFFTitle": "O que é {off_name}?",
 		"WhatOFFAnswer": "{off_url} é uma organização sem fins lucrativos que recolhe e partilha informações sobre produtos alimentares de todo o mundo. Trata-se de um projeto colaborativo que depende de voluntários para recolher dados. A {off_url} é a maior base de dados aberta de produtos alimentares do mundo, com mais de 3 milhões de produtos em 200 países.",
@@ -60,15 +60,15 @@
 			"Add": "Adicionar um novo preço",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} preço já carregado | {priceAlreadyUploadedNumber} preços já carregados",
 			"Create": "Criar",
-			"ExistingProductFound": "Duplicado? Este produto já foi adicionado para este comprovativo",
+			"ExistingProductFound": "Duplicado? Este produto já foi adicionado para esta prova de compra",
 			"NewPrice": "Novo preço",
 			"PriceUploaded": "Preço criado!",
 			"Upload": "Carregar"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Os talões podem conter informações pessoais, pelo que recomendamos que os oculte (rabiscar, dobrar...) antes de tirar a fotografia.",
+			"ReceiptWarning": "Os talões podem conter informações pessoais, pelo que recomendamos que ocule essas informações (rabisque, dobre...) antes de tirar a fotografia.",
 			"PrivateWarning": "Também pode definir o talão como Privado. As provas de compra marcadas como privadas só serão visíveis para si e para os moderadores.",
-			"Title": "Detalhes do comprovativo"
+			"Title": "Detalhes da prova de compra"
 		},
 		"Title": "Adicione vários preços"
 	},
@@ -79,18 +79,18 @@
 			"Label": "Preço",
 			"LabelDiscounted": "Preços com desconto",
 			"LabelFull": "Preço original",
-			"Proof": "Comprovativo",
+			"Proof": "Prova de compra",
 			"ProofDateChanged": "Data de atualização!",
-			"ProofSelected": "Comprovativo selecionado!",
-			"ProofUploaded": "Comprovativo carregado!",
+			"ProofSelected": "Prova de compra selecionada!",
+			"ProofUploaded": "Prova de compra enviada!",
 			"Title": "Detalhes do preço",
-			"UploadProof": "Carregar um comprovativo",
+			"UploadProof": "Enviar uma prova de compra",
 			"Picture": "Imagem",
 			"TakePicture": "Tirar uma foto",
 			"Gallery": "Galeria do dispositivo",
 			"SelectFromGallery": "Selecionar da galeria do dispositivo",
-			"RecentProof": "Comprovativo recente",
-			"SelectRecentProof": "Selecionar um comprovativo recente"
+			"RecentProof": "Prova de compra recente",
+			"SelectRecentProof": "Selecionar uma prova de compra recente"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Categoria",
@@ -148,20 +148,20 @@
 		"BarcodeInvalid": "Código de barras inválido",
 		"Brand": "Marca",
 		"Brands": "Marcas",
-		"BrandTotal": "{count} brands | {count} brand | {count} brands",
+		"BrandTotal": "{count} marcas | {count} marca | {count} marcas",
 		"Price": "Preço",
 		"Prices": "Preços",
 		"Product": "Produto",
 		"Products": "Produtos",
-		"Proof": "Comprovativo",
-		"Proofs": "Comprovativos",
+		"Proof": "Prova de compra",
+		"Proofs": "Provas de compra",
 		"Category": "Categoria",
 		"Categories": "Categorias",
-		"CategoryTotal": "{count} categories | {count} category | {count} categories",
+		"CategoryTotal": "{count} categorias | {count} categoria | {count} categorias",
 		"Chart": "Gráfico",
 		"Clear": "Limpar",
 		"Contributors": "Colaboradores",
-		"Community": "Community",
+		"Community": "Comunidade",
 		"Country": "País",
 		"Currency": "Moeda",
 		"CurrencyMissing": "Falta a moeda",
@@ -176,23 +176,23 @@
 		"Experiments": "Experiências",
 		"Label": "Rótulo",
 		"Labels": "Etiquetas",
-		"LabelTotal": "{count} labels | {count} label | {count} labels",
+		"LabelTotal": "{count} etiquetas| {count} etiqueta| {count} etiquetas",
 		"Language": "Idiomas",
 		"Languages": "Idiomas",
 		"LatestPrices": "Preços mais recentes",
-		"LatestProofs": "Últimos comprovativos",
+		"LatestProofs": "Últimas provas de compra",
 		"LoadMore": "Carregar mais",
 		"Location": "Localização",
 		"Locations": "Localizações",
-		"LocationSelected": "Location selected",
-		"LocationFindShop": "Find the shop location",
+		"LocationSelected": "Localização selecionada",
+		"LocationFindShop": "Pesquisar o local da loja",
 		"LocationMissing": "Falta a localização",
-		"LocationSearchByName": "Search by name and city",
+		"LocationSearchByName": "Pesquisar por nome e cidade",
 		"Date": "Data",
 		"DateMissing": "Falta a data",
 		"Details": "Detalhes",
 		"Delete": "Eliminar",
-		"DeveloperMode": "Developer mode",
+		"DeveloperMode": "Modo de programador",
 		"Discount": "Desconto",
 		"Example": "Exemplo",
 		"Examples": "Exemplos",
@@ -206,7 +206,7 @@
 		"FilterProductWithPriceCountHide": "Ocultar produtos com preços",
 		"FilterProductWithoutPriceCount": "Sem preços",
 		"FilterPriceMoreThan30DaysHide": "Ocultar preços com mais de 30 dias",
-		"FilterProofWithPriceCountHide": "Ocultar comprovativos com preços",
+		"FilterProofWithPriceCountHide": "Ocultar provas de compra com preços",
 		"FilterLocationWithPriceCountHide": "Ocultar locais com preços",
 		"FilterUserWithPriceCountHide": "Ocultar colaboradores com preços",
 		"FAQ": "Perguntas frequentes",
@@ -214,11 +214,11 @@
 		"Help": "Ajuda",
 		"History": "Histórico",
 		"Image": "Imagem",
-		"Images": "Images",
+		"Images": "Imagens",
 		"ImageFull": "Imagem em tamanho real",
 		"Latest": "Mais recente",
 		"LinkCopySuccess": "Link copiado",
-		"LocationCount": "{count} locations | {count} location | {count} locations",
+		"LocationCount": "{count} localizações | {count} localização | {count} localizações",
 		"Map": "Mapa",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -231,45 +231,45 @@
 		"OrderPriceCreatedDESC": "Data de adição",
 		"OrderPriceDateDESC": "Data do preço",
 		"OrderProductCountDESC": "Número de produtos",
-		"OrderProofCountDESC": "Número de provas",
+		"OrderProofCountDESC": "Número de provas de compra",
 		"OrderProofCreatedDESC": "Data de adição",
-		"OrderProofDateDESC": "Data do comprovativo",
+		"OrderProofDateDESC": "Data da prova de compra",
 		"OrderUserCountDESC": "Número de utilizadores",
 		"PersonalInfo": "Informação pessoal",
 		"Physical": "Physical",
-		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceCount": "{count} preços | {count} preços | {count} preços",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
 		"Private": "Privado",
 		"Privacy": "Privacidade",
-		"ProductCount": "{count} products | {count} product | {count} products",
-		"ProductFind": "Find the product",
-		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
-		"ProofMissing": "Proof missing",
-		"ProofSelect": "Selecionar um comprovativo",
-		"ProofSelected": "Comprovativo selecionado!",
-		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"ProductCount": "{count} produtos | {count} produto | {count} produtos",
+		"ProductFind": "Pesquisar o produto",
+		"ProofCount": "{count} provas de compra | {count} prova de compra | {count} provas de compra",
+		"ProofMissing": "Falta a prova de compra",
+		"ProofSelect": "Selecionar uma prova de compra",
+		"ProofSelected": "Prova de compra selecionada!",
+		"ProofSelectedCount": "{count} provas de compra selecionadas | {count} prova de compra selecionada | {count} provas de compra selecionadas",
 		"Public": "Público",
 		"Quantity": "Quantidade",
-		"QuantityBought": "Quantity bought",
+		"QuantityBought": "Quantidade comprada",
 		"QuantityMissing": "Falta a quantidade",
 		"Receipt": "Talão",
 		"Receipts": "Talões",
 		"ReceiptPriceCount": "Número de preços",
 		"ReceiptPriceTotal": "Montante total",
 		"Recent": "Recente",
-		"Reuses": "Reuses",
-		"ReusesKnown": "Known reuses",
+		"Reuses": "Reutilizações",
+		"ReusesKnown": "Reutilizações conhecidas",
 		"Search": "Procurar",
 		"Settings": "Definições",
 		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
 		"SignedIn": "Sessão iniciada!",
 		"SignIn": "Iniciar sessão",
 		"SignOut": "Terminar sessão",
-		"SideMenu": "Side menu",
+		"SideMenu": "Menu lateral",
 		"Share": "Partilhar",
 		"Source": "Fonte",
-		"SourceCode": "Source code",
+		"SourceCode": "Código-fonte",
 		"Stats": "Estatísticas",
 		"TaglineOriginal": "Uma base de dados aberta e colaborativa de preços de alimentos",
 		"TaglineAlt1": "A base de dados aberta e colectiva de preços",
@@ -283,18 +283,18 @@
 		"TopLocations": "Principais localizações",
 		"TopProducts": "Produtos com mais preços",
 		"Today": "Hoje",
-		"Top": "Top",
+		"Top": "Principais",
 		"Total": "Total",
 		"Type": "Tipo",
 		"Upload": "Carregar",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UploadMultipleImages": "Enviar {count} imagem | Carregar {count} imagens",
+		"UploadMultiplePrices": "Enviar {count} preço | Enviar {count} preços",
 		"URL": "URL",
 		"URLInvalid": "URL inválido",
 		"User": "Utilizador",
 		"Users": "Utilizadores",
-		"UserCount": "{count} users | {count} user | {count} users",
-		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserCount": "{count} utilizadores| {count} utilizador| {count} utilizadores",
+		"UserContributorCount": "{count} contribuidores | {count} contribuidor | {count} contribuidores",
 		"View": "Ver",
 		"Website": "Site",
 		"Yes": "Sim",
@@ -305,34 +305,34 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. Seleção de prova de compra",
+			"LabelsExtraction": "2. Extração de etiquetas",
+			"Cleanup": "3. Limpeza",
+			"Summary": "4. Resumo"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"BoundingBoxesFromServerWarning": "Não foi possível detetar automaticamente nenhuma etiqueta. Desenhe manualmente quadrados à volta das etiquetas ou prima o botão abaixo para tentar novamente.",
+		"FindBoundingBoxes": "Encontrar etiquetas automaticamente",
+		"FindBoundingBoxesRunning": "A deteção automática de etiquetas está a decorrer. Por favor, aguarde...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. Desenhe quadrados ao redor das etiquetas",
+			"CheckLabels": "2. Verifique a legibilidade das etiquetas",
+			"SendLabels": "3. Envie as etiquetas para processamento automático",
+			"SendLabelsButton": "Enviar etiquetas"
 		},
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
-		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
-		"AutomaticBoundingBoxSource": "automatic",
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} preço(s) serão adicionados a uma prova de compra existente a {date} em {locationName}",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
+		"WaitForUpload": "Por favor aguarde pelo envio",
+		"GoToDashboard": "Aceda ao seu painel de controlo",
+		"GoToProof": "Vá à prova de compra",
+		"AddNewProof": "Adicione uma nova prova de compra",
+		"AutomaticBoundingBoxSource": "automático",
 		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
+		"DetectedBarcode": "Código de barras detetado: {barcode}",
+		"LabelProcessingErrorMessage": "Erro: falha no processamento automático da etiqueta"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Junte-se a nós!",
+		"HowToUseTheData": "Usar os dados"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Escolha uma das suas moedas preferidas",
@@ -342,7 +342,7 @@
 		"Select": "Selecionar {currency_code}"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Selecionar um dos seus comprovativos recentes"
+		"SelectRecentProof": "Selecione uma das suas provas de compra recentes"
 	},
 	"Footer": {
 		"About": "Sobre",
@@ -362,7 +362,7 @@
 	"Home": {
 		"AddPrice": "Adicionar um preço",
 		"LatestPrices": "Preços mais recentes",
-		"ProofAdd": "Adicionar um comprovativo",
+		"ProofAdd": "Adicionar uma prova de compra",
 		"SearchProduct": "Pesquisar um produto",
 		"SettingsUpdated": "Definições atualizadas!",
 		"TodayPriceStat": "Nenhum preço adicionado hoje | {todayPriceNumber} novos preços adicionados hoje | {todayPriceNumber} novos preços adicionados hoje!",
@@ -399,7 +399,7 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unidade",
-		"Proof": "Comprovativo",
+		"Proof": "Prova de compra",
 		"FullPrice": "Preço original",
 		"UnknownProduct": "Produto desconhecido"
 	},
@@ -463,39 +463,39 @@
 		"ProductNotFound": "Produto não encontrado em Open Food Facts... Não hesite em adicioná-lo :)"
 	},
 	"ProofCard": {
-		"Proof": "Comprovativo",
+		"Proof": "Prova de compra",
 		"PRICE_TAG": "Etiqueta de preço",
 		"RECEIPT": "Talão",
 		"GDPR_REQUEST": "Pedido RGPD",
 		"SHOP_IMPORT": "Importado pela loja"
 	},
 	"ProofCreate": {
-		"SelectProof": "Selecionar um comprovativo",
-		"ProofSelected": "Comprovativo selecionado!",
-		"Success": "Comprovativo criado!"
+		"SelectProof": "Selecionar uma prova de compra",
+		"ProofSelected": "Prova de compra selecionada!",
+		"Success": "Prova de compra criada!"
 	},
 	"ProofDelete": {
-		"Confirmation": "Tem a certeza que pretende eliminar este comprovativo?",
+		"Confirmation": "Tem a certeza que pretende eliminar esta prova de compra?",
 		"Delete": "Eliminar",
-		"Title": "Eliminar um comprovativo",
-		"Success": "Comprovativo eliminado!"
+		"Title": "Eliminar uma prova de compra",
+		"Success": "Prova de compra eliminada!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Carregar mais",
 		"Prices": "Preços",
-		"ProofNotFound": "Comprovativo não encontrado (ou não é o proprietário)",
+		"ProofNotFound": "Prova de compra não encontrada (ou não é o proprietário)",
 		"Public": "Público",
 		"Private": "Privado",
 		"Privacy": "Privacidade"
 	},
 	"ProofEdit": {
-		"Title": "Editar um comprovativo",
+		"Title": "Editar uma prova de compra",
 		"Save": "Guardar",
-		"Success": "Comprovativo editado!"
+		"Success": "Prova de compra editada!"
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "A sua reutilização está a faltar? Avise-nos {url}!",
+		"Here": "aqui"
 	},
 	"Router": {
 		"About": {
@@ -511,13 +511,13 @@
 			"Title": "Adicione vários preços"
 		},
 		"AddProofSingle": {
-			"Title": "Adicionar um único comprovativo"
+			"Title": "Adicionar uma única prova de compra"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Adicionar várias provas de compra"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Comunidade"
 		},
 		"Experiments": {
 			"Title": "Experiências"
@@ -532,16 +532,16 @@
 			"Title": "Preços mais recentes"
 		},
 		"LatestProofs": {
-			"Title": "Últimos comprovativos"
+			"Title": "Últimas provas de compra"
 		},
 		"MyPrices": {
 			"Title": "Os meus preços"
 		},
 		"MyProofs": {
-			"Title": "Os meus comprovativos"
+			"Title": "As minhas provas de compra"
 		},
 		"Reuses": {
-			"Title": "Reuses"
+			"Title": "Reutilizações"
 		},
 		"Search": {
 			"Title": "Procurar"
@@ -565,7 +565,7 @@
 			"Title": "Produtos com mais preços"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Assistente de contribuição"
 		}
 	},
 	"Search": {
@@ -607,16 +607,16 @@
 	},
 	"UserDashboard": {
 		"LatestPrices": "Preços mais recentes",
-		"LatestProofs": "Últimos comprovativos",
+		"LatestProofs": "Últimas provas de compra",
 		"LoadMore": "Carregar mais",
 		"MyDashboard": "Meu painel de controlo",
 		"MyPrices": "Os meus preços",
-		"MyProofs": "Os meus comprovativos",
-		"ProofUpdated": "Comprovativo atualizado!",
+		"MyProofs": "As minhas provas de compra",
+		"ProofUpdated": "Prova de compra atualizada!",
 		"Settings": "Definições",
 		"Title": "Painel de controlo",
 		"UserPriceTotal": "{count} preços",
-		"UserProofTotal": "{count} comprovativos"
+		"UserProofTotal": "{count} provas de compra"
 	},
 	"UserDetail": {
 		"LatestPrices": "Preços mais recentes",
@@ -633,15 +633,15 @@
 		"CountryLabel": "País",
 		"CurrencyLabel": "Moeda",
 		"DisplayTitle": "Mostrar",
-		"BarcodeScanner": "Barcode scanner",
-		"DefaultMode": "Default mode",
+		"BarcodeScanner": "Leitor de código de barras",
+		"DefaultMode": "Modo predefinido",
 		"FavoriteCurrencies": "Moedas favoritas",
 		"CurrencyRequired": "É necessária pelo menos uma moeda",
 		"LanguageLabel": "Idiomas",
 		"LocationDisplayOSMID": "Mostrar ID do OSM",
 		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar etiqueta de categoria",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"SideMenuExperimentsDisplay": "Mostrar 'Experiências'",
 		"Save": "Guardar",
 		"Title": "Definições",
 		"TranslationCompletion": "A tradução está {completion}% concluída.",
