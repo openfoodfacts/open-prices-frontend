@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.100.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.100.0...v1.100.1) (2024-12-15)
+
+
+### Bug Fixes
+
+* **Price add:** Only display new quantity bought field for receipt proofs. ref [#1128](https://github.com/openfoodfacts/open-prices-frontend/issues/1128) ([213e7a9](https://github.com/openfoodfacts/open-prices-frontend/commit/213e7a99e4b99d6d2d24f6ab28324f272fca5eed))
+
+
+### Technical
+
+* **ContributionAssistant:** var names, translations, avoid async ([#1129](https://github.com/openfoodfacts/open-prices-frontend/issues/1129)) ([bf6db1a](https://github.com/openfoodfacts/open-prices-frontend/commit/bf6db1ab809e72fa8bc9308c1c9465865b841ced))
+* **Price add:** move new price add clear button at the bottom right. ref [#1085](https://github.com/openfoodfacts/open-prices-frontend/issues/1085) ([f2557cf](https://github.com/openfoodfacts/open-prices-frontend/commit/f2557cf382bb07864d27d59684d4df269b092baf))
+
 ## [1.100.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.99.0...v1.100.0) (2024-12-14)
 
 
