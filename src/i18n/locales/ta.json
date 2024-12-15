@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "பல சான்றுகளைச் சேர்க்கவும்"
 		},
+		"PriceAdd": {
+			"Title": "Add a price"
+		},
+		"PriceAddSingle": {
+			"Title": "Add a single price"
+		},
+		"PriceAddMultiple": {
+			"Title": "Add multiple prices"
+		},
+		"ProofAddSingle": {
+			"Title": "Add a single proof"
+		},
+		"ProofAddMultiple": {
+			"Title": "பல சான்றுகளைச் சேர்க்கவும்"
+		},
 		"Community": {
 			"Title": "Community"
 		},
