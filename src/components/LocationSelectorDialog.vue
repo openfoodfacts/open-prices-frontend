@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable min-height="50%" max-height="80%" min-width="80%">
+  <v-dialog scrollable height="80%" width="80%">
     <v-card>
       <v-card-title>
         {{ $t('Common.LocationFindShop') }} <v-btn
@@ -36,19 +36,19 @@
           </v-tabs-window-item>
 
           <v-tabs-window-item value="osm">
-            <v-form v-model="locationOsmSearchFormValid" @submit.prevent="locationOsmSearch">
+            <v-form @submit.prevent="locationOsmSearch">
               <v-text-field
                 ref="locationOsmSearchInput"
                 v-model="locationOsmSearchForm.q"
                 :label="$t('Common.LocationSearchByName')"
                 :hint="$t('Common.ExamplesWithColonAndValue', { value: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359' })"
                 type="text"
-                :rules="locationOsmSearchInputRules"
                 :loading="loading"
+                clearable
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-icon icon="mdi-magnify" :disabled="!locationOsmSearchFormValid" @click="locationOsmSearch" />
+                  <v-btn icon="mdi-magnify" :disabled="!locationOsmSearchForm.q" @click="locationOsmSearch" />
                 </template>
               </v-text-field>
             </v-form>
@@ -103,10 +103,11 @@
                 type="text"
                 :rules="urlRules"
                 :loading="loading"
+                clearable
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-icon icon="mdi-plus" :disabled="!locationOnlineFormValid" @click="createOnline" />
+                  <v-btn icon="mdi-plus" :disabled="!locationOnlineFormValid" @click="createOnline" />
                 </template>
               </v-text-field>
             </v-form>
@@ -156,7 +157,6 @@ export default {
       locationOsmSearchForm: {
         q: ''
       },
-      locationOsmSearchFormValid: false,
       locationOnlineForm: {
         website_url: '',
       },
@@ -181,14 +181,9 @@ export default {
     showLocationOSMID() {
       return this.appStore.user.username && this.appStore.user.location_display_osm_id
     },
-    locationOsmSearchInputRules() {
-      return [
-        (v) => !!v || '',
-      ]
-    },
     urlRules() {
+      if (!this.locationOnlineForm.website_url) return [() => true]  // optional field
       return [
-        (v) => !!v || '',
         (v) => utils.isURL(v) || this.$t('Common.URLInvalid'),
       ]
     },
@@ -201,7 +196,7 @@ export default {
       return !!v
     },
     locationOsmSearch() {
-      if (!this.locationOsmSearchFormValid) return
+      if (!this.locationOsmSearchForm.q) return
       this.$refs.locationOsmSearchInput.blur()
       this.results = null
       this.loading = true
