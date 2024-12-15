@@ -7,7 +7,7 @@
       md="6"
       xl="4"
     >
-      <v-card class="pa-2">
+      <v-card>
         <v-card-text>
           <v-img style="height:150px" :src="label.imageSrc" />
         </v-card-text>
@@ -23,9 +23,10 @@
             </template>
             <template #append>
               <div class="justify-self-end">
-                <v-btn 
-                  density="compact"
+                <v-btn
                   color="error"
+                  variant="outlined"
+                  prepend-icon="mdi-delete"
                   @click="removeLabel(index)"
                 >
                   {{ $t('Common.Delete') }}

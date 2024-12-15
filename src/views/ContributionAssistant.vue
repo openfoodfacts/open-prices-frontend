@@ -26,14 +26,14 @@
       </v-tabs-window-item>
       <v-tabs-window-item value="LabelsExtraction">
         <v-container>
-          <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" type="info" variant="outlined" icon="mdi-alert">
+          <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-alert">
             {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
             <br>
             <v-btn @click="loadProofWithBoundingBoxes(proofForm.id)">
               {{ $t('ContributionAssistant.FindBoundingBoxes') }}
             </v-btn>
           </v-alert>
-          <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" type="info" variant="outlined" icon="mdi-magnify">
+          <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-magnify">
             {{ $t('ContributionAssistant.FindBoundingBoxesRunning') }}
             <v-progress-circular indeterminate />
           </v-alert>
@@ -88,7 +88,7 @@
                   {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceForms.length, date: proofForm.date, locationName: locationName }) }}
                 </p>
               </v-alert>
-              <v-btn class="mt-4" color="success" :loading="addPricesLoading" @click="addPrices">
+              <v-btn class="float-right mt-4" color="success" :loading="addPricesLoading" @click="addPrices">
                 {{ $t('Common.Upload') }}
               </v-btn>
             </v-col>
@@ -220,6 +220,7 @@ export default {
     },
     setProof(event) {
       const image = new Image()
+      // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'
       image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${event.file_path}`
       image.crossOrigin = 'Anonymous'
       this.image = image
