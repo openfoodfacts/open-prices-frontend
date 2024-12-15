@@ -516,6 +516,21 @@
 		"AddProofMultiple": {
 			"Title": "Pridėti kelis įrodymus"
 		},
+		"PriceAdd": {
+			"Title": "Pridėti kainą"
+		},
+		"PriceAddSingle": {
+			"Title": "Pridėti vieną kainą"
+		},
+		"PriceAddMultiple": {
+			"Title": "Pridėti kelia skainas"
+		},
+		"ProofAddSingle": {
+			"Title": "Pridėti vienintelį įrodymą"
+		},
+		"ProofAddMultiple": {
+			"Title": "Pridėti kelis įrodymus"
+		},
 		"Community": {
 			"Title": "Bendruomenė"
 		},
