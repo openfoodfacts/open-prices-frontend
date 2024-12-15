@@ -73,7 +73,7 @@
             <v-row>
               <v-col>
                 <v-btn
-                  size="small"
+                  density="comfortable"
                   color="error"
                   icon="mdi-delete"
                   @click="clearProductPriceForm"

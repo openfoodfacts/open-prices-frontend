@@ -2,21 +2,21 @@
   <v-row>
     <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Router.AddPriceSingle.Title')"
+        :title="$t('Router.PriceAddSingle.Title')"
         prepend-icon="mdi-tag-plus-outline"
         to="/prices/add/single"
       />
     </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Router.AddProofSingle.Title')"
+        :title="$t('Router.ProofAddSingle.Title')"
         prepend-icon="mdi-image-plus"
         to="/proofs/add/single"
       />
     </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Router.AddProofMultiple.Title')"
+        :title="$t('Router.ProofAddMultiple.Title')"
         prepend-icon="mdi-image-multiple"
         to="/proofs/add/multiple"
       />

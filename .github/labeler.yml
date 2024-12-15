@@ -6,9 +6,9 @@ GitHub Actions:
 
 Price addition:
 - changed-files:
-  - any-glob-to-any-file: 'src/views/AddPriceHome.vue'
-  - any-glob-to-any-file: 'src/views/AddPriceSingle.vue'
-  - any-glob-to-any-file: 'src/views/AddPriceMultiple.vue'
+  - any-glob-to-any-file: 'src/views/PriceAddHome.vue'
+  - any-glob-to-any-file: 'src/views/PriceAddSingle.vue'
+  - any-glob-to-any-file: 'src/views/PriceAddMultiple.vue'
 
 Brands:
 - changed-files:
