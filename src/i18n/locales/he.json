@@ -251,7 +251,7 @@
 		"ProofSelectedCount": "{count} הוכחות נבחרו | הוכחה נבחרה | {count} הוכחות נבחרו",
 		"Public": "ציבורי",
 		"Quantity": "כמות",
-		"QuantityBought": "Quantity bought",
+		"QuantityBought": "כמות שנרכשה",
 		"QuantityMissing": "חסרה כמות",
 		"Receipt": "קבלה",
 		"Receipts": "קבלות",
@@ -288,6 +288,7 @@
 		"Type": "סוג",
 		"Upload": "העלאה",
 		"UploadMultipleImages": "העלאת תמונה | העלאת {count} תמונות",
+		"UploadMultiplePrices": "העלאת מחיר | העלאת {count} מחירים",
 		"URL": "כתובת",
 		"URLInvalid": "כתובת שגויה",
 		"User": "משתמש",
@@ -301,6 +302,33 @@
 		"Food": "מזון",
 		"PetFood": "מזון לחיות מחמד",
 		"Beauty": "טיפול"
+	},
+	"ContributionAssistant": {
+		"Steps": {
+			"ProofSelect": "1. בחירת הוכחה",
+			"LabelsExtraction": "2. חילוץ תוויות",
+			"Cleanup": "3. ניקוי",
+			"Summary": "4. סיכום"
+		},
+		"BoundingBoxesFromServerWarning": "לא זוהו תוויות אוטומטית. נא לצייר ריבועים סביב התוויות ידנית או ללחוץ על הכפתור להלן כדי לנסות שוב.",
+		"FindBoundingBoxes": "איתור תוויות אוטומטית",
+		"FindBoundingBoxesRunning": "מתבצע זיהוי תוויות אוטומטי. נא להמתין…",
+		"LabelsExtractionSteps": {
+			"DrawBoundingBoxes": "1. לצייר ריבועים מסביב לתוויות",
+			"CheckLabels": "2. לבדוק שהתוויות ברורות",
+			"SendLabels": "3. לשלוח את התוויות לעיבוד אוטומטי",
+			"SendLabelsButton": "שליחת התוויות"
+		},
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} מחירים יתווספו להוכחה הקיימת ב־{date} ב־{locationName}",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} מחירים נוספו",
+		"WaitForUpload": "נא להמתין להעלאה",
+		"GoToDashboard": "מעבר ללוח הבקרה שלך",
+		"GoToProof": "מעבר להוכחה",
+		"AddNewProof": "הוספת הוכחה חדשה",
+		"AutomaticBoundingBoxSource": "אוטומטית",
+		"ManualBoundingBoxSource": "ידנית",
+		"DetectedBarcode": "זוהה ברקוד: {barcode}",
+		"LabelProcessingErrorMessage": "שגיאה: עיבוד תוויות אוטומטי נכשל"
 	},
 	"Community": {
 		"JoinUs": "מזמינים אותך להצטרף אלינו!",

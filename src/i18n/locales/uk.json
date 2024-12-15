@@ -251,7 +251,7 @@
 		"ProofSelectedCount": "{count} вибрані докази | {count} доказ вибрано | {count} вибрані докази",
 		"Public": "Загальнодоступний",
 		"Quantity": "Кількість",
-		"QuantityBought": "Quantity bought",
+		"QuantityBought": "Куплена кількість",
 		"QuantityMissing": "Відсутня кількість",
 		"Receipt": "Квитанція",
 		"Receipts": "Чеки",
@@ -288,6 +288,7 @@
 		"Type": "Тип",
 		"Upload": "Завантажити",
 		"UploadMultipleImages": "Завантажити {count} зображення | Завантажити {count} зображеннь",
+		"UploadMultiplePrices": "Завантажити ціну {count} | Завантажити ціни {count}",
 		"URL": "URL-адреса",
 		"URLInvalid": "Некоректна URL-адреса",
 		"User": "Користувач",
@@ -301,6 +302,33 @@
 		"Food": "Їжа",
 		"PetFood": "Корм для домашніх тварин",
 		"Beauty": "Краса"
+	},
+	"ContributionAssistant": {
+		"Steps": {
+			"ProofSelect": "1. Вибір доказів",
+			"LabelsExtraction": "2. Видобуток міток",
+			"Cleanup": "3. Очищення",
+			"Summary": "4. Підведення підсумків"
+		},
+		"BoundingBoxesFromServerWarning": "Не виявлено жодної мітки. Будь ласка, вручну намалюйте квадрати навколо міток або натисніть кнопку нижче, щоб повторити спробу.",
+		"FindBoundingBoxes": "Автоматично знаходити мітки",
+		"FindBoundingBoxesRunning": "Виконується автоматичне визначення міток. Будь ласка, зачекайте...",
+		"LabelsExtractionSteps": {
+			"DrawBoundingBoxes": "1. Намалюйте квадрати навколо міток",
+			"CheckLabels": "2. Перевірте читабельність етикеток",
+			"SendLabels": "3. Надішліть етикетки на автоматичну обробку",
+			"SendLabelsButton": "Надіслати мітки"
+		},
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} ціна(и) буде додано до наявного доказу на {date} у {locationName}",
+		"PriceAddProgress": "Додано ціни {numberOfPricesAdded} / {totalNumberOfPrices}",
+		"WaitForUpload": "Зачекайте на завантаження",
+		"GoToDashboard": "Перейти до вашої панелі керування",
+		"GoToProof": "Перейти до доказу",
+		"AddNewProof": "Додати нове підтвердження",
+		"AutomaticBoundingBoxSource": "автоматичний",
+		"ManualBoundingBoxSource": "вручну",
+		"DetectedBarcode": "Виявлено штрих-код: {barcode}",
+		"LabelProcessingErrorMessage": "Помилка: при автоматичній обробці етикетки"
 	},
 	"Community": {
 		"JoinUs": "Приєднайся до нас!",
