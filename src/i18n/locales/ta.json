@@ -288,7 +288,7 @@
 		"Type": "Type",
 		"Upload": "Upload",
 		"UploadMultipleImages": "{count} படத்தைப் பதிவேற்றவும் | {count} படங்களைப் பதிவேற்றவும்",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UploadMultiplePrices": "பதிவேற்றம் {count} விலை | பதிவேற்றம் {count} விலைகளைப் பதிவேற்றவும்",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "பயனர்",
@@ -305,21 +305,21 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. ஆதாரம் தேர்வு",
+			"LabelsExtraction": "2. லேபிள்கள் பிரித்தெடுத்தல்",
+			"Cleanup": "3. சுத்தம்",
+			"Summary": "4. சுருக்கம்"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"BoundingBoxesFromServerWarning": "எந்த லேபிள்களையும் தானாக கண்டறிய முடியாது. லேபிள்களைச் சுற்றி கைமுறையாக சதுரங்களை வரையவும் அல்லது மீண்டும் முயற்சிக்க கீழே உள்ள பொத்தானை அழுத்தவும்.",
+		"FindBoundingBoxes": "லேபிள்களைத் தானாகக் கண்டறியவும்",
+		"FindBoundingBoxesRunning": "தானியங்கு லேபிள் கண்டறிதல் இயங்குகிறது. தயவுசெய்து காத்திருங்கள்...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. லேபிள்களைச் சுற்றி சதுரங்களை வரையவும்",
+			"CheckLabels": "2. லேபிள்களின் வாசிப்புத்திறனைச் சரிபார்க்கவும்",
+			"SendLabels": "3. தானியங்கி செயலாக்கத்திற்கு லேபிள்களை அனுப்பவும்",
+			"SendLabelsButton": "லேபிள்களை அனுப்பவும்"
 		},
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
+		"PriceAddConfirmationMessage": "{சேர்க்கப்பட்டவிலைகளின்எண்ணிக்கை} விலை(கள்) {நாள்} இல் {இடபெயர்} இல் ஏற்கனவே உள்ள ஆதாரத்துடன் சேர்க்கப்படும்",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
 		"GoToDashboard": "Go to your dashboard",
