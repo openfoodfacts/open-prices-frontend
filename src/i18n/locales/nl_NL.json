@@ -251,7 +251,7 @@
 		"ProofSelectedCount": "{count} bewijzen geselecteerd | {count} bewijs geselecteerd | {count} bewijzen geselecteerd",
 		"Public": "Openbaar",
 		"Quantity": "Hoeveelheid",
-		"QuantityBought": "Quantity bought",
+		"QuantityBought": "Gekochte hoeveelheid",
 		"QuantityMissing": "Hoeveelheid ontbreekt",
 		"Receipt": "Bon",
 		"Receipts": "Bonnen",
@@ -308,27 +308,27 @@
 			"ProofSelect": "1. Proof selection",
 			"LabelsExtraction": "2. Labels extraction",
 			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"Summary": "4. Samenvatting"
 		},
 		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"FindBoundingBoxes": "Automatisch labels vinden",
+		"FindBoundingBoxesRunning": "Automatische labeldetectie wordt uitgevoerd. Een ogenblik geduld...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. Teken vierkanten rond de labels",
+			"CheckLabels": "2. Controleer de leesbaarheid van labels",
+			"SendLabels": "3. Verzend de labels voor automatische verwerking",
+			"SendLabelsButton": "Labels verzenden"
 		},
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
-		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
-		"AutomaticBoundingBoxSource": "automatic",
-		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
+		"GoToDashboard": "Ga naar jouw dashboard",
+		"GoToProof": "Ga naar bewijs",
+		"AddNewProof": "Voeg een nieuw bewijs toe",
+		"AutomaticBoundingBoxSource": "automatisch",
+		"ManualBoundingBoxSource": "manueel",
+		"DetectedBarcode": "Gedetecteerde barcode: {barcode}",
+		"LabelProcessingErrorMessage": "Fout: automatische verwerking van label mislukt"
 	},
 	"Community": {
 		"JoinUs": "Doe mee!",
