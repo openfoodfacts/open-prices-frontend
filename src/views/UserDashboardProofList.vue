@@ -79,7 +79,7 @@ export default {
   watch: {
     $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initUserProofs()
+        this.initUserProofList()
       }
     }
   },
@@ -87,7 +87,7 @@ export default {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.initUserProofs()
+    this.initUserProofList()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
     window.addEventListener('scroll', this.handleDebouncedScroll)
@@ -96,7 +96,7 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initUserProofs() {
+    initUserProofList() {
       this.userProofList = []
       this.userProofTotal = null
       this.userProofPage = 0
@@ -119,18 +119,18 @@ export default {
     toggleProofFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
-      // this.initUserProofs() will be called in watch $route
+      // this.initUserProofList() will be called in watch $route
     },
     toggleProofType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initProductList() will be called in watch $route
+      // this.initUserProofList() will be called in watch $route
     },
     selectProofOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
-        // this.initUserProofs() will be called in watch $route
+        // this.initUserProofList() will be called in watch $route
       }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars

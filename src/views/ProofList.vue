@@ -5,6 +5,7 @@
         {{ $t('Common.ProofCount', { count: proofTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
+      <FilterMenu v-if="proofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
     </v-col>
   </v-row>
 
@@ -30,6 +31,7 @@ import utils from '../utils.js'
 export default {
   components: {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
   data() {
@@ -40,16 +42,33 @@ export default {
       proofPage: 0,
       loading: false,
       // filter & order
+      currentFilter: '',
+      currentType: '',
       currentOrder: constants.PROOF_ORDER_LIST[2].key,  // -created
     }
   },
   computed: {
     getProofsParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.proofPage }
+      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
+        defaultParams['price_count'] = 0
+      }
+      if (this.currentType) {
+        defaultParams[constants.TYPE_PARAM] = this.currentType
+      }
       return defaultParams
     },
   },
+  watch: {
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initProofList()
+      }
+    }
+  },
   mounted() {
+    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.initProofList()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -75,6 +94,16 @@ export default {
           this.proofTotal = data.total
           this.loading = false
         })
+    },
+    toggleProofFilter(filterKey) {
+      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+      // this.initProofList() will be called in watch $route
+    },
+    toggleProofType(sourceKey) {
+      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
+      // this.initProofList() will be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
