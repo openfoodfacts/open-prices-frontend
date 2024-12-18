@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col :cols="userIsProofOwner ? '11' : '12'">
-      <ProofTypeChip class="mr-1" :proof="proof" />
+      <ProofTypeChip class="mr-1" :proofType="proof.type" />
       <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" class="mr-1" :totalCount="proof.receipt_price_count" />
       <ProofReceiptPriceTotalChip v-if="showReceiptPriceTotal" class="mr-1" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
       <PriceCountChip class="mr-1" :count="proof.price_count" :withLabel="true" @click="goToProof()" />
