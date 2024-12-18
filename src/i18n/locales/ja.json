@@ -657,6 +657,7 @@
 		"FavoriteCurrencies": "お気に入りの通貨",
 		"CurrencyRequired": "少なくとも 1 つの通貨が必要です",
 		"LanguageLabel": "言語",
+		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "バーコードを表示",
 		"ProductDisplayCategoryTag": "Display category tag",
