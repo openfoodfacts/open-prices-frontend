@@ -68,7 +68,7 @@ export default {
   watch: {
     $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initUserPrices()
+        this.initUserPriceList()
       }
     }
   },
@@ -84,7 +84,7 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initUserPrices() {
+    initUserPriceList() {
       this.userPriceList = []
       this.userPriceTotal = null
       this.userPricePage = 0
@@ -104,13 +104,13 @@ export default {
     togglePriceFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
-      // this.initUserPrices() will be called in watch $route
+      // this.initUserPriceList() will be called in watch $route
     },
     selectPriceOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
-        // this.initUserPrices() will be called in watch $route
+        // this.initUserPriceList() will be called in watch $route
       }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
