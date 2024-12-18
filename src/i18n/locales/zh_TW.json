@@ -657,6 +657,7 @@
 		"FavoriteCurrencies": "最喜歡的貨幣",
 		"CurrencyRequired": "至少需要選擇一種貨幣",
 		"LanguageLabel": "語言",
+		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "顯示OSM ID",
 		"ProductDisplayBarcode": "顯示條碼",
 		"ProductDisplayCategoryTag": "顯示類別標籤",
