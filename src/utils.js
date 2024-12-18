@@ -220,8 +220,12 @@ function getLocaleOriginTags(locale) {
   return import(`./data/origins/${locale}.json`)
 }
 
+function getPriceTypeIcon(priceType) {
+  return constants[`PRICE_TYPE_${priceType}_ICON`] || constants.PRICE_ICON
+}
+
 function getProofTypeIcon(proofType) {
-  return constants[`PROOF_TYPE_${proofType}_ICON`] || 'mdi-image'
+  return constants[`PROOF_TYPE_${proofType}_ICON`] || constants.PROOF_ICON
 }
 
 function getCountryEmojiFromName(countryString) {
@@ -426,6 +430,7 @@ export default {
   getLocaleCategoryTag,
   getLocaleCategoryTagName,
   getLocaleOriginTags,
+  getPriceTypeIcon,
   getProofTypeIcon,
   getCountryEmojiFromName,
   getCountryEmojiFromCode,

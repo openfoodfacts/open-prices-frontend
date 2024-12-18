@@ -1,13 +1,13 @@
 <template>
   <v-chip label size="small" :prepend-icon="getProofTypeIcon" density="comfortable">
-    <span v-if="proof.type === 'GDPR_REQUEST'">
+    <span v-if="proofType === 'GDPR_REQUEST'">
       <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">
         {{ proofTypeName }}
         <v-icon size="x-small" icon="mdi-open-in-new" />
       </a>
     </span>
     <span v-else>
-      {{ proofTypeName }}
+      {{ getProofTypeName }}
     </span>
   </v-chip>
 </template>
@@ -18,8 +18,8 @@ import utils from '../utils.js'
 
 export default {
   props: {
-    proof: {
-      type: Object,
+    proofType: {
+      type: String,
       default: null
     },
   },
@@ -30,10 +30,10 @@ export default {
   },
   computed: {
     getProofTypeIcon() {
-      return utils.getProofTypeIcon(this.proof.type)
+      return utils.getProofTypeIcon(this.proofType)
     },
-    proofTypeName() {
-      return this.$t(`ProofCard.${this.proof.type}`)
+    getProofTypeName() {
+      return this.$t(`Common.${this.proofType}`)
     }
   }
 }
