@@ -657,6 +657,7 @@
 		"FavoriteCurrencies": "最喜欢的货币",
 		"CurrencyRequired": "至少需要一种货币",
 		"LanguageLabel": "語言",
+		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",
