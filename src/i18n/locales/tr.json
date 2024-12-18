@@ -657,6 +657,7 @@
 		"FavoriteCurrencies": "Sık kullanılan para birimleri",
 		"CurrencyRequired": "En az bir para birimi gerekli",
 		"LanguageLabel": "Diller",
+		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "Barkodu göster",
 		"ProductDisplayCategoryTag": "Display category tag",
