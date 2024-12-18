@@ -5,7 +5,7 @@
         {{ $t('Common.PriceCount', { count: userPriceTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
-      <FilterMenu kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
+      <FilterMenu kind="price" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="togglePriceFilter($event)" @update:currentType="togglePriceType($event)" />
       <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
@@ -47,6 +47,7 @@ export default {
       loading: false,
       // filter & order
       currentFilter: '',
+      currentType: '',
       currentOrder: constants.PRICE_ORDER_LIST[2].key,  // created first
     }
   },
@@ -62,6 +63,9 @@ export default {
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
         defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
       }
+      if (this.currentType) {
+        defaultParams[constants.TYPE_PARAM] = this.currentType
+      }
       return defaultParams
     },
   },
@@ -74,6 +78,7 @@ export default {
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.getUserPrices()
     // load more
@@ -104,6 +109,11 @@ export default {
     togglePriceFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+      // this.initUserPriceList() will be called in watch $route
+    },
+    togglePriceType(sourceKey) {
+      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
       // this.initUserPriceList() will be called in watch $route
     },
     selectPriceOrder(orderKey) {
