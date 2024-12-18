@@ -81,6 +81,18 @@
             multiple
             hide-details="auto"
           />
+          <!-- Location selector -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('UserSettings.LocationFinder') }}
+          </h3>
+          <v-select
+            v-model="appStore.user.location_finder_default_mode"
+            :label="$t('UserSettings.DefaultMode')"
+            :items="locationSelectorDisplayList"
+            :item-title="item => $t('Common.' + item.value)"
+            :item-value="item => item.key"
+            hide-details="auto"
+          />
           <!-- Barcode scanner -->
           <h3 class="mt-4 mb-1">
             {{ $t('UserSettings.BarcodeScanner') }}
@@ -88,7 +100,7 @@
           <v-select
             v-model="appStore.user.barcode_scanner_default_mode"
             :label="$t('UserSettings.DefaultMode')"
-            :items="barcodeScannerModeList"
+            :items="productSelectorDisplayList"
             :item-title="item => $t('Common.' + item.valueSmallScreen)"
             :item-value="item => item.key"
             hide-details="auto"
@@ -171,7 +183,8 @@ export default {
       countryList,
       languageList,
       // currencyList,
-      barcodeScannerModeList: constants.PRODUCT_SELECTOR_DISPLAY_LIST
+      locationSelectorDisplayList: constants.LOCATION_SELECTOR_DISPLAY_LIST,
+      productSelectorDisplayList: constants.PRODUCT_SELECTOR_DISPLAY_LIST
     }
   },
   computed: {

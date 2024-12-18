@@ -97,6 +97,7 @@
           <v-tabs-window-item value="online">
             <v-form v-model="locationOnlineFormValid" @submit.prevent="createOnline">
               <v-text-field
+                ref="locationOnlineFormInput"
                 v-model="locationOnlineForm.website_url"
                 :label="$t('Common.Website')"
                 :hint="$t('Common.ExampleWithColonAndValue', { value: 'https://www.example.com' })"
@@ -166,7 +167,7 @@ export default {
       // config
       searchProvider: constants.LOCATION_SEARCH_PROVIDER_LIST[1].key,  // photon
       displayItems: constants.LOCATION_SELECTOR_DISPLAY_LIST,
-      currentDisplay: constants.LOCATION_SELECTOR_DISPLAY_LIST[1].key,  // physical
+      currentDisplay: null,  // see mounted
       OSM_NOMINATIM_URL: constants.OSM_NOMINATIM_URL,
       OSM_NOMINATIM_ATTRIBUTION: constants.OSM_NOMINATIM_ATTRIBUTION,
       OSM_PHOTON_URL: constants.OSM_PHOTON_URL,
@@ -188,8 +189,17 @@ export default {
       ]
     },
   },
+  watch: {
+    currentDisplay(value) {
+      if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[1].key) {
+        window.setTimeout(() => this.$refs.locationOsmSearchInput.focus(), 200)
+      } else if (value === constants.LOCATION_SELECTOR_DISPLAY_LIST[2].key) {
+        window.setTimeout(() => this.$refs.locationOnlineFormInput.focus(), 200)
+      }
+    }
+  },
   mounted() {
-    this.$refs.locationOsmSearchInput.focus()
+    this.currentDisplay = this.appStore.user.location_finder_default_mode
   },
   methods: {
     fieldRequired(v) {
