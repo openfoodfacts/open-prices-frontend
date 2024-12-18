@@ -47,7 +47,7 @@
         </v-col>
       </v-row>
       <v-row class="mt-0">
-        <v-col class="pt-0" cols="6">
+        <v-col cols="6">
           <v-checkbox
             v-model="priceForm.price_is_discounted"
             density="compact"
@@ -56,7 +56,7 @@
             hide-details="auto"
           />
         </v-col>
-        <v-col v-if="proofIsTypeReceipt" class="pt-0" cols="6">
+        <v-col v-if="proofIsTypeReceipt" cols="6">
           <v-text-field
             v-model="priceForm.receipt_quantity"
             density="compact"
