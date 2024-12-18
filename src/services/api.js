@@ -353,5 +353,14 @@ export default {
       body: formData,
     })
     .then((response) => response.json())
+  },
+  getPriceTags(params = {}) {
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags?${buildURLParams({...defaultParams, ...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
   }
 }
