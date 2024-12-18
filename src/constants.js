@@ -6,11 +6,13 @@ const OPFF_NAME = 'Open Pet Food Facts'
 const OPFF_ICON = 'mdi-paw'
 const OPF_NAME = 'Open Products Facts'
 const OPF_ICON = 'mdi-bookshelf'
+const PRICE_ICON = 'mdi-tag-outline'
 const PRICE_TYPE_PRODUCT = 'PRODUCT'
 const PRICE_TYPE_PRODUCT_ICON = 'mdi-barcode'
 const PRICE_TYPE_CATEGORY = 'CATEGORY'
 const PRICE_TYPE_CATEGORY_ICON = 'mdi-basket-outline'
 const PRODUCT_CATEGORY_LABEL_ORGANIC = 'en:organic'
+const PROOF_ICON = 'mdi-image'
 const PROOF_TYPE_PRICE_TAG = 'PRICE_TAG'
 const PROOF_TYPE_PRICE_TAG_ICON = 'mdi-library-shelves'
 const PROOF_TYPE_RECEIPT = 'RECEIPT'
@@ -57,12 +59,20 @@ export default {
   OPF_NAME: OPF_NAME,
   OPF_URL: 'https://world.openproductsfacts.org',
   OPF_ICON: OPF_ICON,
+  TYPE_PARAM: 'type',
   SOURCE_PARAM: 'source',
+  QUERY_PARAM: 'q',
+  FILTER_PARAM: 'filter',
+  ORDER_PARAM: 'order',
+  DISPLAY_PARAM: 'display',
+  PRICE_ICON: PRICE_ICON,
   PRICE_TYPE_PRODUCT: PRICE_TYPE_PRODUCT,
+  PRICE_TYPE_PRODUCT_ICON: PRICE_TYPE_PRODUCT_ICON,
   PRICE_TYPE_CATEGORY: PRICE_TYPE_CATEGORY,
+  PRICE_TYPE_CATEGORY_ICON: PRICE_TYPE_CATEGORY_ICON,
   PRICE_TYPE_LIST: [
-    {key: PRICE_TYPE_PRODUCT, value: 'Barcode', icon: PRICE_TYPE_PRODUCT_ICON},
-    {key: PRICE_TYPE_CATEGORY, value: 'Category', icon: PRICE_TYPE_CATEGORY_ICON}
+    {key: PRICE_TYPE_PRODUCT, value: 'Barcode', icon: PRICE_TYPE_PRODUCT_ICON},  // PRICE_TYPE_PRODUCT
+    {key: PRICE_TYPE_CATEGORY, value: PRICE_TYPE_CATEGORY, icon: PRICE_TYPE_CATEGORY_ICON}
   ],
   PRODUCT_CATEGORY_LABEL_ORGANIC: PRODUCT_CATEGORY_LABEL_ORGANIC,
   PRODUCT_QUANTITY_UNIT_G: 'g',
@@ -73,7 +83,7 @@ export default {
     { key: 'opf', value: OPF_NAME, icon: OPF_ICON },
     { key: 'opff', value: OPFF_NAME, icon: OPFF_ICON },
   ],
-  TYPE_PARAM: 'type',
+  PROOF_ICON: PROOF_ICON,
   PROOF_TYPE_PRICE_TAG: PROOF_TYPE_PRICE_TAG,
   PROOF_TYPE_PRICE_TAG_ICON: PROOF_TYPE_PRICE_TAG_ICON,
   PROOF_TYPE_RECEIPT: PROOF_TYPE_RECEIPT,
@@ -92,8 +102,7 @@ export default {
     {key: LOCATION_TYPE_OSM, value: LOCATION_TYPE_OSM, icon: LOCATION_TYPE_OSM_ICON},
     {key: LOCATION_TYPE_ONLINE, value: LOCATION_TYPE_ONLINE, icon: LOCATION_TYPE_ONLINE_ICON},
   ],
-  QUERY_PARAM: 'q',
-  FILTER_PARAM: 'filter',
+  // filter
   PRODUCT_FILTER_LIST: [
     { key: 'price_count_gte_1', value: 'FilterProductWithPriceCount' },
     { key: 'price_count_0', value: 'FilterProductWithoutPriceCount' },
@@ -110,7 +119,7 @@ export default {
   USER_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterUserWithPriceCountHide' },
   ],
-  ORDER_PARAM: 'order',
+  // order
   PRODUCT_ORDER_LIST: [
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
     { key: '-unique_scans_n', value: 'OrderProductUniqueScansDESC', icon: 'mdi-barcode-scan' },
@@ -139,7 +148,7 @@ export default {
     { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
     { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
   ],
-  DISPLAY_PARAM: 'display',
+  // display
   PRICE_DISPLAY_LIST: [
     { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
     { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },

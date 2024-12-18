@@ -20,6 +20,7 @@ export const useAppStore = defineStore('app', {
       location_display_osm_id: false,
       drawer_display_experiments: true,
       preferedTheme: null,
+      location_finder_default_mode: constants.LOCATION_SELECTOR_DISPLAY_LIST[1].key,
       barcode_scanner_default_mode: constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key
     },
   }),

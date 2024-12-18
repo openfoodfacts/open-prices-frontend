@@ -135,12 +135,7 @@ export default {
       this.barcodeManualForm.barcode = this.barcodeManualInputPrefillValue
     }
     // init tab
-    if (this.appStore.user.barcode_scanner_default_mode === constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key) {
-      this.currentDisplay = constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key
-    } else {
-      // default to scan
-      this.currentDisplay = constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key
-    }
+    this.currentDisplay = this.appStore.user.barcode_scanner_default_mode
   },
   methods: {
     createQrcodeScanner() {
