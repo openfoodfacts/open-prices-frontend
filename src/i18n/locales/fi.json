@@ -657,6 +657,7 @@
 		"FavoriteCurrencies": "Suosikki valuutat",
 		"CurrencyRequired": "Vähintään yksi valuutta vaaditaan",
 		"LanguageLabel": "Kielet",
+		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Näytä OSM-tunniste",
 		"ProductDisplayBarcode": "Näytä viivakoodi",
 		"ProductDisplayCategoryTag": "Näytä kategoria-tunniste",
