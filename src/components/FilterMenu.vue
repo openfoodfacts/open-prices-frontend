@@ -26,6 +26,16 @@
           {{ item.value }}
         </v-list-item>
       </v-sheet>
+      <v-sheet v-if="showPriceTypeFilter">
+        <v-divider />
+        <v-list-subheader class="text-uppercase">
+          {{ $t('Common.Type') }}
+        </v-list-subheader>
+        <v-list-item v-for="item in priceTypeList" :key="item.key" :slim="true" :active="currentType === item.key" @click="selectType(item.key)">
+          <v-icon>{{ item.icon }}</v-icon>
+          {{ $t('Common.' + item.value) }}
+        </v-list-item>
+      </v-sheet>
       <v-sheet v-if="showProofTypeFilter">
         <v-divider />
         <v-list-subheader class="text-uppercase">
@@ -33,7 +43,7 @@
         </v-list-subheader>
         <v-list-item v-for="item in proofTypeList" :key="item.key" :slim="true" :active="currentType === item.key" @click="selectType(item.key)">
           <v-icon>{{ item.icon }}</v-icon>
-          {{ $t('ProofCard.' + item.value) }}
+          {{ $t('Common.' + item.value) }}
         </v-list-item>
       </v-sheet>
       <v-sheet v-if="showLocationTypeFilter">
@@ -92,6 +102,7 @@ export default {
       userFilterList: constants.USER_FILTER_LIST,
       // other filters
       productSourceList: constants.PRODUCT_SOURCE_LIST,
+      priceTypeList: constants.PRICE_TYPE_LIST,
       proofTypeList: constants.PROOF_TYPE_LIST,
       locationTypeList: constants.LOCATION_TYPE_LIST,
     }
@@ -99,6 +110,9 @@ export default {
   computed: {
     showProductSourceFilter() {
       return this.kind === 'product' && !this.hideSource
+    },
+    showPriceTypeFilter() {
+      return this.kind === 'price' && !this.hideType
     },
     showProofTypeFilter() {
       return this.kind === 'proof' && !this.hideType
@@ -116,6 +130,9 @@ export default {
       if (this.kind === 'product') {
         let source = this.productSourceList.find(o => o.key === this.currentSource)
         return source ? source.icon : ''
+      } else if (this.kind === 'price') {
+        let type = this.priceTypeList.find(o => o.key === this.currentType)
+        return type ? type.icon : ''
       } else if (this.kind === 'proof') {
         let type = this.proofTypeList.find(o => o.key === this.currentType)
         return type ? type.icon : ''
