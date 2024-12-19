@@ -30,8 +30,9 @@ PARENT_CATEGORIES_ID = [
     "en:pumpkins",  # 9
     "en:dried-mushrooms",  # 7
     "en:textured-vegetable-protein",  # 2
-    "en:squash-pulp",
+    "en:squash",
     "en:seeds",  # include all seeds, rice, quinoa, maize, etc.
+    "en:pastas",
     "en:popcorn",
     "en:meats",
     "en:fishes",
