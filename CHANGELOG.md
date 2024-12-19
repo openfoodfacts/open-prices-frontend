@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.101.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.100.2...v1.101.0) (2024-12-19)
+
+
+### Features
+
+* **Settings:** new Location selector default mode settings (recent, physical or online) ([#1143](https://github.com/openfoodfacts/open-prices-frontend/issues/1143)) ([14c89c5](https://github.com/openfoodfacts/open-prices-frontend/commit/14c89c530756818e58fef4d4aa280fdaf8e21631))
+
+
+### Technical
+
+* **Filter menu:** add new price filter by type (Barcode or Category) ([906ae20](https://github.com/openfoodfacts/open-prices-frontend/commit/906ae20b0a74fbeff21b4b8a717a57f6852b1792))
+* **l10n:** New Crowdin translations to review and merge ([#1135](https://github.com/openfoodfacts/open-prices-frontend/issues/1135)) ([b70f33a](https://github.com/openfoodfacts/open-prices-frontend/commit/b70f33a1b3c23f29cb18725e9db274022b158f74))
+* **l10n:** New Crowdin translations to review and merge ([#1144](https://github.com/openfoodfacts/open-prices-frontend/issues/1144)) ([7ff3359](https://github.com/openfoodfacts/open-prices-frontend/commit/7ff3359f919aa7fad94d56262815e9aeed9abf35))
+* **Price add:** re-add padding between price & discount field (need space for hint per kg). ref [#1109](https://github.com/openfoodfacts/open-prices-frontend/issues/1109) ([f6b8296](https://github.com/openfoodfacts/open-prices-frontend/commit/f6b8296f4977761607be5884c4f831bb1c7b768d))
+* **Price list:** add filter by type & price_count ([#1136](https://github.com/openfoodfacts/open-prices-frontend/issues/1136)) ([f135927](https://github.com/openfoodfacts/open-prices-frontend/commit/f135927b114c3c3975f8b853da00ffc4605554f7))
+* **Price list:** add filter by type & show_last_month ([#1140](https://github.com/openfoodfacts/open-prices-frontend/issues/1140)) ([3a9859b](https://github.com/openfoodfacts/open-prices-frontend/commit/3a9859bbc415ca114ff986056a84310fa0bd13b6))
+* **Prices:** new PriceTypeChip component. improve ProofTypeChip ([#1142](https://github.com/openfoodfacts/open-prices-frontend/issues/1142)) ([a1b3af3](https://github.com/openfoodfacts/open-prices-frontend/commit/a1b3af33ea693aae460427080f7d74f898b06f1f))
+* **User dashboard:** Prices: add new filter by type (Barcode or Category) ([#1139](https://github.com/openfoodfacts/open-prices-frontend/issues/1139)) ([ea3f287](https://github.com/openfoodfacts/open-prices-frontend/commit/ea3f28706532d109a252caa36d78c6208f318fce))
+
 ## [1.100.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.100.1...v1.100.2) (2024-12-15)
 
 
