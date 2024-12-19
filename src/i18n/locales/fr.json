@@ -292,7 +292,7 @@
 		"Type": "Type",
 		"Upload": "Téléverser",
 		"UploadMultipleImages": "Téléverser {count} image | Téléverser {count} images",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UploadMultiplePrices": "Téléverser {count} prix | Téléverser {count} prix",
 		"URL": "URL",
 		"URLInvalid": "URL invalide",
 		"User": "Utilisateur",
@@ -331,7 +331,7 @@
 		"AddNewProof": "Add a new proof",
 		"AutomaticBoundingBoxSource": "automatic",
 		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
+		"DetectedBarcode": "Code-barres détecté : {barcode}",
 		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
 	},
 	"Community": {
@@ -657,7 +657,7 @@
 		"FavoriteCurrencies": "Devises préférées",
 		"CurrencyRequired": "Au moins une devise est requise",
 		"LanguageLabel": "Langue",
-		"LocationFinder": "Location finder",
+		"LocationFinder": "Recherche de l'emplacement",
 		"LocationDisplayOSMID": "Afficher l'ID OSM",
 		"ProductDisplayBarcode": "Afficher le code-barres",
 		"ProductDisplayCategoryTag": "Afficher le tag de catégorie",
