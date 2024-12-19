@@ -1,10 +1,10 @@
 <template>
   <v-row>
     <v-col :cols="userIsProofOwner ? '11' : '12'">
-      <ProofTypeChip class="mr-1" :proofType="proof.type" />
+      <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
       <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" class="mr-1" :totalCount="proof.receipt_price_count" />
       <ProofReceiptPriceTotalChip v-if="showReceiptPriceTotal" class="mr-1" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
-      <PriceCountChip class="mr-1" :count="proof.price_count" :withLabel="true" @click="goToProof()" />
+      <PriceCountChip v-if="!hidePriceCount" class="mr-1" :count="proof.price_count" :withLabel="true" @click="goToProof()" />
       <LocationChip class="mr-1" :location="proof.location" :locationId="proof.location_id" :readonly="readonly" :showErrorIfLocationMissing="true" />
       <DateChip class="mr-1" :date="proof.date" :showErrorIfDateMissing="true" />
       <CurrencyChip class="mr-1" :currency="proof.currency" :showErrorIfCurrencyMissing="true" />
@@ -39,6 +39,14 @@ export default {
     proof: {
       type: Object,
       default: null
+    },
+    hideProofType: {
+      type: Boolean,
+      default: false
+    },
+    hidePriceCount: {
+      type: Boolean,
+      default: false
     },
     hideProofOwner: {
       type: Boolean,
