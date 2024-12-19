@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.102.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.101.1...v1.102.0) (2024-12-19)
+
+
+### Features
+
+* new Price Validator Assistant page ([#1145](https://github.com/openfoodfacts/open-prices-frontend/issues/1145)) ([2568db7](https://github.com/openfoodfacts/open-prices-frontend/commit/2568db746a3e87531cd4c6f7920af50012823ba2))
+
+
+### Bug Fixes
+
+* **Price Validation Assistant:** fix image display ([#1152](https://github.com/openfoodfacts/open-prices-frontend/issues/1152)) ([54005fc](https://github.com/openfoodfacts/open-prices-frontend/commit/54005fc7f3bbc7f0ef3d1b642057163613fc876c))
+* update categories ([#1149](https://github.com/openfoodfacts/open-prices-frontend/issues/1149)) ([696496a](https://github.com/openfoodfacts/open-prices-frontend/commit/696496a37fc12ed4f68f707562da5cd2ac3adbd2))
+
 ## [1.101.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.101.0...v1.101.1) (2024-12-19)
 
 
