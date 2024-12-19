@@ -109,7 +109,7 @@ export default {
               proof: data.items[i]['proof'],
               proofImage: data.items[i]['proof'].file_path,
               product_code: barcodeString,
-              detected_product_code: barcodeString
+              detected_product_code: barcodeString,
             }
             this.productPriceForms.push(productPriceForm)
           }
@@ -128,13 +128,23 @@ export default {
     },
     createPrice(productPriceData) {
       const priceData = {
-          ...productPriceData,
-          // origins_tags: origins_tags,
-          date: this.proof.date,
-          location_id: this.proof.location_id,
-          location_osm_id: this.proof.location_osm_id,
-          location_osm_type: this.proof.location_osm_type,
-          proof_id: this.proof.id
+        ...productPriceData,
+        // origins_tags: origins_tags,
+        date: productPriceData.proof.date,
+        location_id: productPriceData.proof.location_id,
+        location_osm_id: productPriceData.proof.location_osm_id,
+        location_osm_type: productPriceData.proof.location_osm_type,
+        proof_id: productPriceData.proof.id
+      }
+      // Cleanup unwanted fields for API
+      if (priceData.type == constants.PRICE_TYPE_PRODUCT) {
+          delete priceData.price_per
+          delete priceData.category_tag
+          delete priceData.origins_tags
+          delete priceData.labels_tags
+        } else if (priceData.type == constants.PRICE_TYPE_CATEGORY) {
+          delete priceData.product_code
+          delete priceData.product
         }
       return api
         .createPrice(Object.assign({}, priceData), this.$route.path)
