@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "地圖",
 		"DisplayPriceChart": "圖表",
 		"Done": "已完成",
+		"Error": "錯誤",
 		"Experiments": "實驗",
 		"Label": "標籤 ",
 		"Labels": "標籤",
@@ -241,6 +242,7 @@
 		"Physical": "實體的",
 		"PRICE_TAG": "價格標籤",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "價格已建立！",
 		"PricesMore": "更多價格",
 		"Private": "不公開",
@@ -290,6 +292,7 @@
 		"Top": "頂部",
 		"Total": "Total",
 		"Type": "類型 ",
+		"Unreadable": "Unreadable",
 		"Upload": "上傳",
 		"UploadMultipleImages": "上傳 {count} 圖片|上傳 {count} 圖片",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "貢獻助手"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {
