@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "地図",
 		"DisplayPriceChart": "Chart",
 		"Done": "完了",
+		"Error": "エラー",
 		"Experiments": "Experiments",
 		"Label": "ラベル",
 		"Labels": "ラベル",
@@ -241,6 +242,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "値札",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PricesMore": "More prices",
 		"Private": "非公開",
@@ -290,6 +292,7 @@
 		"Top": "Top",
 		"Total": "合計",
 		"Type": "種別",
+		"Unreadable": "Unreadable",
 		"Upload": "アップロード",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {

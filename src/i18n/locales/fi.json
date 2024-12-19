@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Kartta",
 		"DisplayPriceChart": "Chart",
 		"Done": "Valmis",
+		"Error": "Virhe",
 		"Experiments": "Experiments",
 		"Label": "Merkki",
 		"Labels": "Merkit",
@@ -241,6 +242,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Hintalappu",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Hinta luotu!",
 		"PricesMore": "More prices",
 		"Private": "Yksityinen",
@@ -290,6 +292,7 @@
 		"Top": "Top",
 		"Total": "Yhteensä",
 		"Type": "Tyyppi",
+		"Unreadable": "Unreadable",
 		"Upload": "Lähetä",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {

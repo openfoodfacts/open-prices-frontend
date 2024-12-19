@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Kaart",
 		"DisplayPriceChart": "Grafiek",
 		"Done": "Voltooid",
+		"Error": "Foutmelding",
 		"Experiments": "Experimenten",
 		"Label": "Keurmerk",
 		"Labels": "Keurmerken",
@@ -241,6 +242,7 @@
 		"Physical": "Fysiek",
 		"PRICE_TAG": "Prijskaartje",
 		"PriceCount": "{count} prijzen | {count} prijs | {count} prijzen",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Prijs aangemaakt!",
 		"PricesMore": "Meer prijzen",
 		"Private": "Privé",
@@ -290,6 +292,7 @@
 		"Top": "Top",
 		"Total": "Totaal",
 		"Type": "Type",
+		"Unreadable": "Unreadable",
 		"Upload": "Uploaden",
 		"UploadMultipleImages": "Upload {count} afbeelding | Upload {count} afbeeldingen",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Bijdrage-Assistent"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {

@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Peta",
 		"DisplayPriceChart": "Grafik",
 		"Done": "Selesai",
+		"Error": "Kesalahan",
 		"Experiments": "Eksperimen",
 		"Label": "Label",
 		"Labels": "Label - label",
@@ -241,6 +242,7 @@
 		"Physical": "Fisik",
 		"PRICE_TAG": "Label harga",
 		"PriceCount": "{count} harga | {count} harga | {count} harga",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Harga dibuat!",
 		"PricesMore": "Harga lebih lanjut",
 		"Private": "Pribadi",
@@ -290,6 +292,7 @@
 		"Top": "Teratas",
 		"Total": "Total",
 		"Type": "Tipe",
+		"Unreadable": "Unreadable",
 		"Upload": "Unggah",
 		"UploadMultipleImages": "Unggah {count} gambar | Unggah {count} gambar",
 		"UploadMultiplePrices": "Unggah {count} harga | Unggah {count} harga",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Asisten Kontribusi"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {
