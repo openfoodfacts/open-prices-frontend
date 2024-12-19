@@ -118,6 +118,7 @@ export default {
               currency: this.appStore.getUserLastCurrencyUsed || 'EUR',
               proof: data.items[i]['proof'],
               proofImage: data.items[i]['proof'].file_path,
+              // proofImage: 'https://prices.openfoodfacts.org/img/0024/2NToLMxOgN.webp',
               product_code: barcodeString,
               detected_product_code: barcodeString,
             }
@@ -137,25 +138,22 @@ export default {
         })
     },
     createPrice(productPriceData) {
+      let origins_tags = productPriceData.origins_tags
+      if (!Array.isArray(origins_tags)) {
+        origins_tags = [origins_tags]
+      }
+      if (origins_tags[0] == null || origins_tags[0] == 'unknown' || origins_tags[0] == 'other' || origins_tags[0] == '') {
+        origins_tags = []
+      }
       const priceData = {
         ...productPriceData,
-        // origins_tags: origins_tags,
+        origins_tags: origins_tags,
         date: productPriceData.proof.date,
         location_id: productPriceData.proof.location_id,
         location_osm_id: productPriceData.proof.location_osm_id,
         location_osm_type: productPriceData.proof.location_osm_type,
         proof_id: productPriceData.proof.id
       }
-      // Cleanup unwanted fields for API
-      if (priceData.type == constants.PRICE_TYPE_PRODUCT) {
-          delete priceData.price_per
-          delete priceData.category_tag
-          delete priceData.origins_tags
-          delete priceData.labels_tags
-        } else if (priceData.type == constants.PRICE_TYPE_CATEGORY) {
-          delete priceData.product_code
-          delete priceData.product
-        }
       return api
         .createPrice(Object.assign({}, priceData), this.$route.path)
         .then((data) => {

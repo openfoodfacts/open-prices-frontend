@@ -220,8 +220,8 @@ export default {
     },
     setProof(event) {
       const image = new Image()
-      // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'
-      // image.src = 'https://prices.openfoodfacts.org/img/0023/f6tJvMcsDk.webp'
+      // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'  // barcodes
+      // image.src = 'https://prices.openfoodfacts.org/img/0023/f6tJvMcsDk.webp'  // categories
       image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${event.file_path}`
       image.crossOrigin = 'Anonymous'
       this.image = image
@@ -328,16 +328,6 @@ export default {
           location_osm_id: this.proofForm.location_osm_id,
           location_osm_type: this.proofForm.location_osm_type,
           proof_id: this.proofForm.id
-        }
-        // Cleanup unwanted fields for API
-        if (productPriceForm.type == constants.PRICE_TYPE_PRODUCT) {
-          delete priceData.price_per
-          delete priceData.category_tag
-          delete priceData.origins_tags
-          delete priceData.labels_tags
-        } else if (productPriceForm.type == constants.PRICE_TYPE_CATEGORY) {
-          delete priceData.product_code
-          delete priceData.product
         }
         api.createPrice(priceData, this.$route.path).then(() => {
           // TODO: error handling

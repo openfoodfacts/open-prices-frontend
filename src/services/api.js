@@ -23,11 +23,25 @@ function buildURLParams(params = {}) {
 }
 
 function filterBodyWithAllowedKeys(data, allowedKeys) {
-  const filteredData = {}
+  let filteredData = {}
   for (const key in data) {
     if (allowedKeys.includes(key)) {
       filteredData[key] = data[key]
     }
+  }
+  return filteredData
+}
+
+function extraPriceCreateFiltering(data) {
+  let filteredData = {...data}
+  if (filteredData.type == constants.PRICE_TYPE_PRODUCT) {
+    delete filteredData.price_per
+    delete filteredData.category_tag
+    delete filteredData.origins_tags
+    delete filteredData.labels_tags
+  } else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
+    delete filteredData.product_code
+    delete filteredData.product
   }
   return filteredData
 }
@@ -157,7 +171,8 @@ export default {
   },
 
   createPrice(inputData, source = null) {
-    const data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS)
+    let data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS)
+    data = extraPriceCreateFiltering(data)
     const store = useAppStore()
     store.user.last_product_product_used = data.product_code ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({'app_version': source})}`
