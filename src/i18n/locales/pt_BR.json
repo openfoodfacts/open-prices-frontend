@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Gráfico",
 		"Done": "Concluído",
+		"Error": "Erro",
 		"Experiments": "Experimentos",
 		"Label": "Rótulo",
 		"Labels": "Rótulos",
@@ -241,6 +242,7 @@
 		"Physical": "Físico",
 		"PRICE_TAG": "Etiqueta de preço",
 		"PriceCount": "{count} preços | {count} preço | {count} preços",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
 		"Private": "Privado",
@@ -290,6 +292,7 @@
 		"Top": "Melhor",
 		"Total": "Total",
 		"Type": "Tipo",
+		"Unreadable": "Unreadable",
 		"Upload": "Atualizar",
 		"UploadMultipleImages": "Carregar {count} imagem | Carregar {count} imagens",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Assistente de Contribuição"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {
