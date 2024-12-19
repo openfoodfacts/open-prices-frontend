@@ -116,12 +116,17 @@ export default {
     proofImageFormFilled() {
       return !!this.proofImageList.length
     },
+    proofLocationFormFilled() {
+      let keysOSM = ['location_osm_id', 'location_osm_type']
+      let keysONLINE = ['location_id']
+      return Object.keys(this.proofForm).filter(k => keysOSM.includes(k)).every(k => !!this.proofForm[k]) || Object.keys(this.proofForm).filter(k => keysONLINE.includes(k)).every(k => !!this.proofForm[k])
+    },
     proofMetadataFormFilled() {
       let keys = ['date', 'currency']
       return Object.keys(this.proofForm).filter(k => keys.includes(k)).every(k => !!this.proofForm[k])
     },
     proofFormFilled() {
-      return this.proofTypeFormFilled && this.proofImageFormFilled && this.proofMetadataFormFilled
+      return this.proofTypeFormFilled && this.proofImageFormFilled && this.proofLocationFormFilled && this.proofMetadataFormFilled
     },
     proofCardShowImageThumb() {
       return this.multiple ? true : false
