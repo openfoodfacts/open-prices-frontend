@@ -8,11 +8,13 @@
     <v-divider />
     <v-card-text>
       <v-img
+        v-if="mode === 'Contribution'"
         class="mb-4"
         height="200px"
         :src="productPriceForm.proofImage"
         contain
       />
+      <ProofImageCropped v-else-if="mode === 'Validation'" class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" />
       <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" @filled="productFormFilled = $event" />
       <v-alert
         v-if="productIsTypeProduct"
@@ -72,6 +74,7 @@ import constants from '../constants'
 
 export default {
   components: {
+    ProofImageCropped: defineAsyncComponent(() => import('../components/ProofImageCropped.vue')),
   ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
   PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
   ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),

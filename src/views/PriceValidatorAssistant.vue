@@ -121,6 +121,7 @@ export default {
               // proofImage: 'https://prices.openfoodfacts.org/img/0024/2NToLMxOgN.webp',
               product_code: barcodeString,
               detected_product_code: barcodeString,
+              bounding_box: data.items[i].bounding_box
             }
             this.productPriceForms.push(productPriceForm)
           }
