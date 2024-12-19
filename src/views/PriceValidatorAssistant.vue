@@ -1,4 +1,12 @@
 <template>
+  <v-row v-if="!loading">
+    <v-col>
+      <v-chip label variant="text" prepend-icon="mdi-checkbox-marked-circle-plus-outline">
+        {{ $t('Common.PriceToValidateCount', { count: priceTagTotal }) }}
+      </v-chip>
+    </v-col>
+  </v-row>
+
   <v-row>
     <v-col v-for="(productPriceForm, index) in productPriceForms" :key="index" cols="12" md="6" xl="4">
       <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" mode="Validation" @removePriceTag="removePriceTag(index, $event)" @validatePriceTag="validatePriceTag(index)" />
@@ -36,7 +44,7 @@ export default {
     return {
       priceTagList: [],
       priceTagTotal: null,
-      priceTagPage: 0,
+      priceTagPage: 0,  // issue with pagination once the user starts removing/validating price tags...
       loading: false,
       productPriceForms: [],
       // filter & order
@@ -67,6 +75,7 @@ export default {
       this.updatePriceTag(this.priceTagList[index].id, status).then((priceTag) => {  // eslint-disable-line no-unused-vars
         this.priceTagList.splice(index, 1)
         this.productPriceForms.splice(index, 1)
+        this.priceTagTotal -= 1
         this.priceRemovedMessage = true
       })
     },
@@ -80,6 +89,7 @@ export default {
         this.updatePriceTag(this.productPriceForms[index].id, 1, price.id)
         this.priceTagList.splice(index, 1)
         this.productPriceForms.splice(index, 1)
+        this.priceTagTotal -= 1
         this.priceSuccessMessage = true
       })
     },
