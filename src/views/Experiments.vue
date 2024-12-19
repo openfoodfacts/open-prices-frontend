@@ -28,6 +28,13 @@
         to="/experiments/contribution-assistant"
       />
     </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Router.PriceValidatorAssistant.Title')"
+        prepend-icon="mdi-checkbox-marked-circle-plus-outline"
+        to="/experiments/price-validator-assistant"
+      />
+    </v-col>
   </v-row>
 </template>
 

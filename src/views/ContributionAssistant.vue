@@ -74,7 +74,7 @@
               md="6"
               xl="4"
             >
-              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" @removePrice="removePrice(index)" />
+              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" @removePriceTag="removePriceTag(index)" />
             </v-col>
           </v-row>
           <v-row>
@@ -140,8 +140,8 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
-import utils from '../utils.js'
 import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -220,8 +220,8 @@ export default {
     },
     setProof(event) {
       const image = new Image()
-      // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'
-      // image.src = 'https://prices.openfoodfacts.org/img/0023/f6tJvMcsDk.webp'
+      // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'  // barcodes
+      // image.src = 'https://prices.openfoodfacts.org/img/0023/f6tJvMcsDk.webp'  // categories
       image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${event.file_path}`
       image.crossOrigin = 'Anonymous'
       this.image = image
@@ -303,7 +303,7 @@ export default {
       }
       this.tab = 'Cleanup'
     },
-    removePrice(index) {
+    removePriceTag(index) {
       this.productPriceForms.splice(index, 1)
     },
     addPrices() {
@@ -328,16 +328,6 @@ export default {
           location_osm_id: this.proofForm.location_osm_id,
           location_osm_type: this.proofForm.location_osm_type,
           proof_id: this.proofForm.id
-        }
-        // Cleanup unwanted fields for API
-        if (productPriceForm.type == constants.PRICE_TYPE_PRODUCT) {
-          delete priceData.price_per
-          delete priceData.category_tag
-          delete priceData.origins_tags
-          delete priceData.labels_tags
-        } else if (productPriceForm.type == constants.PRICE_TYPE_CATEGORY) {
-          delete priceData.product_code
-          delete priceData.product
         }
         api.createPrice(priceData, this.$route.path).then(() => {
           // TODO: error handling

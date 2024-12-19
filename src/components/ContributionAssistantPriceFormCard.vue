@@ -23,15 +23,43 @@
       </v-alert>
       <PriceInputRow class="mt-0" :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
+    <v-divider v-if="mode === 'Validation'" />
+    <v-card-text v-if="mode === 'Validation'">
+      <ProofFooterRow :proof="productPriceForm.proof" :hideProofActions="true" :readonly="true" />
+    </v-card-text>
     <v-divider />
-    <v-card-actions>
+    <v-card-actions v-if="mode === 'Contribution'">
       <v-btn
         color="error"
         variant="outlined"
         prepend-icon="mdi-delete"
-        @click="removePrice"
+        @click="removePriceTag"
       >
         {{ $t('Common.Delete') }}
+      </v-btn>
+    </v-card-actions>
+    <v-card-actions v-else-if="mode === 'Validation'">
+      <v-btn
+        color="error"
+        variant="outlined"
+        @click="removePriceTag(3)"
+      >
+        {{ $t('Common.Error') }}
+      </v-btn>
+      <v-btn
+        color="warning"
+        variant="outlined"
+        @click="removePriceTag(2)"
+      >
+        {{ $t('Common.Unreadable') }}
+      </v-btn>
+      <v-spacer />
+      <v-btn
+        color="success"
+        variant="flat"
+        @click="validatePriceTag"
+      >
+        {{ $t('Common.Upload') }}
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -46,11 +74,13 @@ export default {
   components: {
   ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
   PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
+  ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
   },
   props: {
     productPriceForm: {
       type: Object,
       default: () => ({
+        id: null,
         type: null,
         category_tag: null,
         origins_tags: '',
@@ -65,8 +95,12 @@ export default {
         detected_product_code: null
       })
     },
+    mode: {
+      type: String,
+      default: 'Contribution'  // or 'Validation'
+    }
   },
-  emits: ['removePrice'],
+  emits: ['removePriceTag', 'validatePriceTag'],
   data() {
     return {
       productFormFilled: false,
@@ -79,8 +113,11 @@ export default {
     }
   },
   methods: {
-    removePrice() {
-      this.$emit('removePrice')
+    removePriceTag(status=null) {
+      this.$emit('removePriceTag', status)
+    },
+    validatePriceTag() {
+      this.$emit('validatePriceTag')
     }
   }
 }

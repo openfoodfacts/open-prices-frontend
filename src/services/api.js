@@ -23,11 +23,25 @@ function buildURLParams(params = {}) {
 }
 
 function filterBodyWithAllowedKeys(data, allowedKeys) {
-  const filteredData = {}
+  let filteredData = {}
   for (const key in data) {
     if (allowedKeys.includes(key)) {
       filteredData[key] = data[key]
     }
+  }
+  return filteredData
+}
+
+function extraPriceCreateFiltering(data) {
+  let filteredData = {...data}
+  if (filteredData.type == constants.PRICE_TYPE_PRODUCT) {
+    delete filteredData.price_per
+    delete filteredData.category_tag
+    delete filteredData.origins_tags
+    delete filteredData.labels_tags
+  } else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
+    delete filteredData.product_code
+    delete filteredData.product
   }
   return filteredData
 }
@@ -157,7 +171,8 @@ export default {
   },
 
   createPrice(inputData, source = null) {
-    const data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS)
+    let data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS)
+    data = extraPriceCreateFiltering(data)
     const store = useAppStore()
     store.user.last_product_product_used = data.product_code ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({'app_version': source})}`
@@ -351,6 +366,27 @@ export default {
         'Authorization': `Bearer ${store.user.token}`,
       },
       body: formData,
+    })
+    .then((response) => response.json())
+  },
+  getPriceTags(params = {}) {
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags?${buildURLParams({...defaultParams, ...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
+  updatePriceTag(priceTagId, inputData = {}) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags/${priceTagId}?${buildURLParams()}`
+    return fetch(url, {
+      method: 'PATCH',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`,
+      }),
+      body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
   }
