@@ -242,7 +242,7 @@
 		"Physical": "Físico",
 		"PRICE_TAG": "Etiqueta de preço",
 		"PriceCount": "{count} preços | {count} preço | {count} preços",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
+		"PriceToValidateCount": "{count} preços para validar | {count} preço para validar | {count} preços para validar",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
 		"Private": "Privado",
@@ -256,7 +256,7 @@
 		"ProofSelectedCount": "{count} provas selecionadas | {count} prova selecionada | {count} provas selecionadas",
 		"Public": "Público",
 		"Quantity": "Quantidade",
-		"QuantityBought": "Quantity bought",
+		"QuantityBought": "Quantidade comprada",
 		"QuantityMissing": "Quantidade faltando",
 		"RECEIPT": "Recibo",
 		"Receipt": "Recibo",
@@ -330,12 +330,12 @@
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
 		"WaitForUpload": "Por favor aguarde o upload",
 		"GoToDashboard": "Vá para seu painel",
-		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
-		"AutomaticBoundingBoxSource": "automatic",
+		"GoToProof": "Ir para o comprovante",
+		"AddNewProof": "Adicionar um novo comprovante",
+		"AutomaticBoundingBoxSource": "automático",
 		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
+		"DetectedBarcode": "Código de barras detectado: {barcode}",
+		"LabelProcessingErrorMessage": "Erro: falha no processamento automático do rótulo"
 	},
 	"Community": {
 		"JoinUs": "Junte-se a nós!",
@@ -590,7 +590,7 @@
 			"Title": "Assistente de Contribuição"
 		},
 		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+			"Title": "Assistente de Validação de Preços"
 		}
 	},
 	"Search": {
@@ -663,7 +663,7 @@
 		"FavoriteCurrencies": "Moedas favoritas",
 		"CurrencyRequired": "Pelo menos uma moeda é necessária",
 		"LanguageLabel": "Línguas",
-		"LocationFinder": "Location finder",
+		"LocationFinder": "Pesquisa de localização",
 		"LocationDisplayOSMID": "Exibir ID do OSM",
 		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar marcadores de categoria",
