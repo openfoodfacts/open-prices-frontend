@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Мапа",
 		"DisplayPriceChart": "Графік",
 		"Done": "Виконано",
+		"Error": "Помилка",
 		"Experiments": "Експерименти",
 		"Label": "Мітка",
 		"Labels": "Етикетки",
@@ -241,6 +242,7 @@
 		"Physical": "Фізичний",
 		"PRICE_TAG": "Цінник",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Ціна створена!",
 		"PricesMore": "Більше цін",
 		"Private": "Приватний",
@@ -290,6 +292,7 @@
 		"Top": "Top",
 		"Total": "Усього",
 		"Type": "Тип",
+		"Unreadable": "Unreadable",
 		"Upload": "Завантажити",
 		"UploadMultipleImages": "Завантажити {count} зображення | Завантажити {count} зображеннь",
 		"UploadMultiplePrices": "Завантажити ціну {count} | Завантажити ціни {count}",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Помічник внесків"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {

@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Graf",
 		"Done": "Hotovo",
+		"Error": "Chyba",
 		"Experiments": "Experimenty",
 		"Label": "Štítek",
 		"Labels": "Štítky",
@@ -241,6 +242,7 @@
 		"Physical": "Fyzický",
 		"PRICE_TAG": "Cenovka",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena vytvořena!",
 		"PricesMore": "Více cen",
 		"Private": "Soukromý",
@@ -290,6 +292,7 @@
 		"Top": "Nahoru",
 		"Total": "Celkem",
 		"Type": "Typ",
+		"Unreadable": "Unreadable",
 		"Upload": "Nahrát",
 		"UploadMultipleImages": "Nahrát {count} obrázek | Nahrajte {count} obrázků",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Příspěvkový asistent"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {
