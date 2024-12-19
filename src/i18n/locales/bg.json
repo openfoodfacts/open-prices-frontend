@@ -169,8 +169,8 @@
 		"CurrencyMissing": "Липсва валута",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
-		"DisplayList": "List",
-		"DisplayPriceList": "List",
+		"DisplayList": "Списък",
+		"DisplayPriceList": "Списък",
 		"DisplayMap": "Карта",
 		"DisplayPriceMap": "Карта",
 		"DisplayPriceChart": "Chart",
@@ -246,7 +246,7 @@
 		"PriceCreated": "Price created!",
 		"PricesMore": "More prices",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Поверителност",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
@@ -493,7 +493,7 @@
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Поверителност"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
