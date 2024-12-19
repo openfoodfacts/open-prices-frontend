@@ -169,12 +169,13 @@
 		"CurrencyMissing": "Липсва валута",
 		"Dashboard": "Dashboard",
 		"Display": "Display",
-		"DisplayList": "List",
-		"DisplayPriceList": "List",
+		"DisplayList": "Списък",
+		"DisplayPriceList": "Списък",
 		"DisplayMap": "Карта",
 		"DisplayPriceMap": "Карта",
 		"DisplayPriceChart": "Chart",
 		"Done": "Готово",
+		"Error": "Грешка",
 		"Experiments": "Experiments",
 		"Label": "Етикет",
 		"Labels": "Етикети",
@@ -241,10 +242,11 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Price tag",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PricesMore": "More prices",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Поверителност",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
@@ -290,6 +292,7 @@
 		"Top": "Top",
 		"Total": "Общо",
 		"Type": "Вид",
+		"Unreadable": "Unreadable",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -490,7 +493,7 @@
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Поверителност"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {

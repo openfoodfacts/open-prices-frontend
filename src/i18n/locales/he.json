@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "מפה",
 		"DisplayPriceChart": "תרשים",
 		"Done": "בוצע",
+		"Error": "שגיאה",
 		"Experiments": "ניסויים",
 		"Label": "תווית",
 		"Labels": "תוויות",
@@ -241,6 +242,7 @@
 		"Physical": "פיזי",
 		"PRICE_TAG": "תווית מחיר",
 		"PriceCount": "{count} מחירים | מחיר | {count} מחירים",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "המחיר נוצר!",
 		"PricesMore": "מחירים נוספים",
 		"Private": "פרטי",
@@ -290,6 +292,7 @@
 		"Top": "מובילים",
 		"Total": "סך הכול",
 		"Type": "סוג",
+		"Unreadable": "Unreadable",
 		"Upload": "העלאה",
 		"UploadMultipleImages": "העלאת תמונה | העלאת {count} תמונות",
 		"UploadMultiplePrices": "העלאת מחיר | העלאת {count} מחירים",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "מסייע תרומה"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {

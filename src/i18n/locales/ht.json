@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Tablo",
 		"Done": "Done",
+		"Error": "Error",
 		"Experiments": "Experiments",
 		"Label": "Etikèt",
 		"Labels": "Etikèt",
@@ -241,6 +242,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Pri tag",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Pri kreye!",
 		"PricesMore": "More prices",
 		"Private": "Prive",
@@ -290,6 +292,7 @@
 		"Top": "Top",
 		"Total": "Total",
 		"Type": "Type",
+		"Unreadable": "Unreadable",
 		"Upload": "Telechaje",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {

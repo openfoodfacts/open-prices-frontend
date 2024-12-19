@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
+		"Error": "Viga",
 		"Experiments": "Experiments",
 		"Label": "Silt",
 		"Labels": "Sildid",
@@ -241,6 +242,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Price tag",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PricesMore": "More prices",
 		"Private": "Private",
@@ -290,6 +292,7 @@
 		"Top": "Top",
 		"Total": "Total",
 		"Type": "Tüüp",
+		"Unreadable": "Unreadable",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {

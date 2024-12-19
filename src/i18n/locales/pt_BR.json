@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Gráfico",
 		"Done": "Concluído",
+		"Error": "Erro",
 		"Experiments": "Experimentos",
 		"Label": "Rótulo",
 		"Labels": "Rótulos",
@@ -241,6 +242,7 @@
 		"Physical": "Físico",
 		"PRICE_TAG": "Etiqueta de preço",
 		"PriceCount": "{count} preços | {count} preço | {count} preços",
+		"PriceToValidateCount": "{count} preços para validar | {count} preço para validar | {count} preços para validar",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
 		"Private": "Privado",
@@ -254,7 +256,7 @@
 		"ProofSelectedCount": "{count} provas selecionadas | {count} prova selecionada | {count} provas selecionadas",
 		"Public": "Público",
 		"Quantity": "Quantidade",
-		"QuantityBought": "Quantity bought",
+		"QuantityBought": "Quantidade comprada",
 		"QuantityMissing": "Quantidade faltando",
 		"RECEIPT": "Recibo",
 		"Receipt": "Recibo",
@@ -290,9 +292,10 @@
 		"Top": "Melhor",
 		"Total": "Total",
 		"Type": "Tipo",
+		"Unreadable": "Ilegível",
 		"Upload": "Atualizar",
 		"UploadMultipleImages": "Carregar {count} imagem | Carregar {count} imagens",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UploadMultiplePrices": "Carregar {count} preço | Carregar {count} preços",
 		"URL": "URL",
 		"URLInvalid": "URL inválida",
 		"User": "Utilizador",
@@ -309,30 +312,30 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. Seleção de comprovante",
+			"LabelsExtraction": "2. Extração de rótulos",
+			"Cleanup": "3. Limpeza",
+			"Summary": "4. Resumo"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"BoundingBoxesFromServerWarning": "Nenhum rótulo pode ser detectado automaticamente. Por favor, desenhe manualmente quadrados ao redor dos rótulos ou pressione o botão abaixo para tentar novamente.",
+		"FindBoundingBoxes": "Encontrar rótulos automaticamente",
+		"FindBoundingBoxesRunning": "Detecção automática de rótulos está em execução. Por favor, aguarde...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. Desenhe quadrados ao redor dos rótulos",
+			"CheckLabels": "2. Verifique a legibilidade dos rótulos",
+			"SendLabels": "3. Envie os rótulos para processamento automático",
+			"SendLabelsButton": "Enviar rótulos"
 		},
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
-		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
-		"AutomaticBoundingBoxSource": "automatic",
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} preço(s) serão adicionados a um comprovante existente no dia {date} em {locationName}",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
+		"WaitForUpload": "Por favor aguarde o upload",
+		"GoToDashboard": "Vá para seu painel",
+		"GoToProof": "Ir para o comprovante",
+		"AddNewProof": "Adicionar um novo comprovante",
+		"AutomaticBoundingBoxSource": "automático",
 		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
+		"DetectedBarcode": "Código de barras detectado: {barcode}",
+		"LabelProcessingErrorMessage": "Erro: falha no processamento automático do rótulo"
 	},
 	"Community": {
 		"JoinUs": "Junte-se a nós!",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Assistente de Contribuição"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Assistente de Validação de Preços"
 		}
 	},
 	"Search": {
@@ -657,7 +663,7 @@
 		"FavoriteCurrencies": "Moedas favoritas",
 		"CurrencyRequired": "Pelo menos uma moeda é necessária",
 		"LanguageLabel": "Línguas",
-		"LocationFinder": "Location finder",
+		"LocationFinder": "Pesquisa de localização",
 		"LocationDisplayOSMID": "Exibir ID do OSM",
 		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar marcadores de categoria",

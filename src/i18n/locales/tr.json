@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Harita",
 		"DisplayPriceChart": "Chart",
 		"Done": "Yapıldı",
+		"Error": "Hata",
 		"Experiments": "Experiments",
 		"Label": "Etiket",
 		"Labels": "Etiketler",
@@ -241,6 +242,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Fiyat etiketi",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Fiyat oluşturuldu!",
 		"PricesMore": "More prices",
 		"Private": "Özel",
@@ -290,6 +292,7 @@
 		"Top": "Top",
 		"Total": "Toplam",
 		"Type": "Tür",
+		"Unreadable": "Unreadable",
 		"Upload": "Yükle",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {

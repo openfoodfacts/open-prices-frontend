@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "Žemėlapis",
 		"DisplayPriceChart": "Diagrama",
 		"Done": "Atlikta",
+		"Error": "Klaida",
 		"Experiments": "Eksperimentai",
 		"Label": "Etiketė",
 		"Labels": "Labels",
@@ -241,6 +242,7 @@
 		"Physical": "Fizinis",
 		"PRICE_TAG": "Kainos etiketė",
 		"PriceCount": "{count} kainos | {count} kaina | {count} kainų",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Kaina sukurta!",
 		"PricesMore": "Daugiau kainų",
 		"Private": "Privatu",
@@ -290,6 +292,7 @@
 		"Top": "Geriausi",
 		"Total": "Iš viso",
 		"Type": "Tipas",
+		"Unreadable": "Unreadable",
 		"Upload": "Įkelti",
 		"UploadMultipleImages": "Įkelti {count} vaizdą | Įkelti {count} vaizdus (-ų)",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Bendradarbiavimo asistentas"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {
