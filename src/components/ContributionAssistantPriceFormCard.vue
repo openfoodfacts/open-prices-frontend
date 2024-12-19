@@ -14,7 +14,7 @@
         :src="productPriceForm.proofImage"
         contain
       />
-      <ProofImageCropped v-else-if="mode === 'Validation'" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" />
+      <ProofImageCropped v-else-if="mode === 'Validation'" class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" />
       <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" @filled="productFormFilled = $event" />
       <v-alert
         v-if="productIsTypeProduct"

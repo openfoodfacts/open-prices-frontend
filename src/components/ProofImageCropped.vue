@@ -1,6 +1,5 @@
 <template>
   <v-img
-    height="200px"
     :src="croppedImage"
     contain
   />
@@ -39,7 +38,6 @@ export default {
       this.proofImage.crossOrigin = 'Anonymous'
     },
     cropImage() {
-      console.log(this.proofImage.complete)
       const startY = this.boundingBox[0] * this.proofImage.height
       const startX = this.boundingBox[1] * this.proofImage.width
       const endY = this.boundingBox[2] * this.proofImage.height
@@ -50,7 +48,6 @@ export default {
       this.canvas.height = height
       this.ctx.drawImage(this.proofImage, Math.min(startX, endX), Math.min(startY, endY), width, height, 0, 0, width, height)
       this.croppedImage = this.canvas.toDataURL()
-      console.log(this.croppedImage)
     }
   }
 }
