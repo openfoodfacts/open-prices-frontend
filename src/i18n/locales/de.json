@@ -242,7 +242,7 @@
 		"Physical": "Physisch",
 		"PRICE_TAG": "Preisschild",
 		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
+		"PriceToValidateCount": "{count} zu bestätigende Preise | {count} zu bestätigender Preis | {count} zu bestätigende Preise",
 		"PriceCreated": "Preis erstellt!",
 		"PricesMore": "Weitere Preise",
 		"Private": "Privat",
@@ -292,7 +292,7 @@
 		"Top": "Top",
 		"Total": "Gesamt",
 		"Type": "Art",
-		"Unreadable": "Unreadable",
+		"Unreadable": "Nicht lesbar",
 		"Upload": "Hochladen",
 		"UploadMultipleImages": "Lade {count} Bild hoch | Lade {count} Bilder hoch",
 		"UploadMultiplePrices": "{count} Preis hochladen | {count} Preise hochladen",
@@ -590,7 +590,7 @@
 			"Title": "Mitwirkungsassistent"
 		},
 		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+			"Title": "Preisprüfungsassistent"
 		}
 	},
 	"Search": {
