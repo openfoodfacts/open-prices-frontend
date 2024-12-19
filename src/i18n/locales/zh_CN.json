@@ -175,6 +175,7 @@
 		"DisplayPriceMap": "地图",
 		"DisplayPriceChart": "Chart",
 		"Done": "完成",
+		"Error": "错误",
 		"Experiments": "Experiments",
 		"Label": "標籤",
 		"Labels": "标签",
@@ -241,6 +242,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "价格标签",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "价格已创建！",
 		"PricesMore": "More prices",
 		"Private": "私人的",
@@ -290,6 +292,7 @@
 		"Top": "Top",
 		"Total": "总计",
 		"Type": "類型",
+		"Unreadable": "Unreadable",
 		"Upload": "上传",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
@@ -585,6 +588,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"PriceValidatorAssistant": {
+			"Title": "Price Validator Assistant"
 		}
 	},
 	"Search": {
