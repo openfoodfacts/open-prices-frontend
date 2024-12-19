@@ -657,6 +657,7 @@
 		"FavoriteCurrencies": "Devises préférées",
 		"CurrencyRequired": "Au moins une devise est requise",
 		"LanguageLabel": "Langue",
+		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Afficher l'ID OSM",
 		"ProductDisplayBarcode": "Afficher le code-barres",
 		"ProductDisplayCategoryTag": "Afficher le tag de catégorie",
