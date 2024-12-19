@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.101.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.101.0...v1.101.1) (2024-12-19)
+
+
+### Technical
+
+* **Changelog:** fix wording in last release. ref [#1138](https://github.com/openfoodfacts/open-prices-frontend/issues/1138) ([b9f0ebb](https://github.com/openfoodfacts/open-prices-frontend/commit/b9f0ebb9c5f3bdcfb594988561a992491b2901ab))
+* **l10n:** New Crowdin translations to review and merge ([#1147](https://github.com/openfoodfacts/open-prices-frontend/issues/1147)) ([44682ec](https://github.com/openfoodfacts/open-prices-frontend/commit/44682ecb3a837bea386fc9a5a989cf06539515df))
+
 ## [1.101.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.100.2...v1.101.0) (2024-12-19)
 
 
