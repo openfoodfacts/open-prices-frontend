@@ -25,6 +25,14 @@ export default {
       croppedImage: null
     }
   },
+  watch: {
+    proofImageFilePath() {
+      this.getImage()
+    },
+    boundingBox() {
+      this.cropImage()
+    }
+  },
   mounted() {
     this.getImage()
   },
