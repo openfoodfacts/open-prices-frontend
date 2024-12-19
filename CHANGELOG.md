@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.102.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.102.0...v1.102.1) (2024-12-19)
+
+
+### Bug Fixes
+
+* **Price add:** fix a bug where proofs could be uploaded without locations. ref [#1085](https://github.com/openfoodfacts/open-prices-frontend/issues/1085) ([be2b1e3](https://github.com/openfoodfacts/open-prices-frontend/commit/be2b1e3d8e51d400f705a7db60176ff20559603f))
+* **Price Validator Assistant:** re-crop image on change to update the images displayed. ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([6924466](https://github.com/openfoodfacts/open-prices-frontend/commit/6924466189a2cc530436c209690b742ef5bba854))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1151](https://github.com/openfoodfacts/open-prices-frontend/issues/1151)) ([1fb7292](https://github.com/openfoodfacts/open-prices-frontend/commit/1fb7292f8b0d524f1bf416fa640c024fdcbc1e76))
+* **Price Validator Assistant:** gain some vertical px space (hide some proof info, compact alert). ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([05dd2cc](https://github.com/openfoodfacts/open-prices-frontend/commit/05dd2cc1dc60f6795808664dde99d49553f56e4b))
+* **Price Validator Assistant:** only load 10 price tags. ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([1a05446](https://github.com/openfoodfacts/open-prices-frontend/commit/1a054461474d7ad0c6d201ee3cafc12e94e97529))
+* **ProofFooterRow:** allow hiding type & price_count info ([42f972c](https://github.com/openfoodfacts/open-prices-frontend/commit/42f972c4b4d68f76b6d7c5526b8601bf85176c0a))
+
 ## [1.102.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.101.1...v1.102.0) (2024-12-19)
 
 
