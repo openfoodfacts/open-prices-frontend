@@ -20,6 +20,7 @@
         v-if="productIsTypeProduct"
         type="info"
         variant="outlined"
+        density="compact"
       >
         {{ $t('ContributionAssistant.DetectedBarcode', { barcode: productPriceForm.detected_product_code }) }}
       </v-alert>
@@ -27,7 +28,7 @@
     </v-card-text>
     <v-divider v-if="mode === 'Validation'" />
     <v-card-text v-if="mode === 'Validation'">
-      <ProofFooterRow :proof="productPriceForm.proof" :hideProofActions="true" :readonly="true" />
+      <ProofFooterRow :proof="productPriceForm.proof" :hideProofType="true" :hidePriceCount="true" :hideProofActions="true" :readonly="true" />
     </v-card-text>
     <v-divider />
     <v-card-actions v-if="mode === 'Contribution'">
