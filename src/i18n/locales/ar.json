@@ -246,7 +246,7 @@
 		"PriceCreated": "Price created!",
 		"PricesMore": "More prices",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "الخصوصية",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
@@ -493,7 +493,7 @@
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "الخصوصية"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
