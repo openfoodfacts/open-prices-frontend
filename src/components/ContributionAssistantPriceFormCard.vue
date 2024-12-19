@@ -23,6 +23,10 @@
       </v-alert>
       <PriceInputRow class="mt-0" :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
+    <v-divider v-if="mode === 'Validation'" />
+    <v-card-text v-if="mode === 'Validation'">
+      <ProofFooterRow :proof="productPriceForm.proof" :hideProofActions="true" :readonly="true" />
+    </v-card-text>
     <v-divider />
     <v-card-actions v-if="mode === 'Contribution'">
       <v-btn
@@ -70,6 +74,7 @@ export default {
   components: {
   ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
   PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
+  ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
   },
   props: {
     productPriceForm: {
