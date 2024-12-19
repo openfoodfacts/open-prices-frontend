@@ -74,7 +74,7 @@
               md="6"
               xl="4"
             >
-              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" @removePrice="removePrice(index)" />
+              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" @removePriceTag="removePriceTag(index)" />
             </v-col>
           </v-row>
           <v-row>
@@ -303,7 +303,7 @@ export default {
       }
       this.tab = 'Cleanup'
     },
-    removePrice(index) {
+    removePriceTag(index) {
       this.productPriceForms.splice(index, 1)
     },
     addPrices() {
