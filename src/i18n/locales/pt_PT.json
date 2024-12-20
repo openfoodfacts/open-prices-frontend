@@ -242,7 +242,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Etiqueta de preço",
 		"PriceCount": "{count} preços | {count} preços | {count} preços",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
+		"PriceToValidateCount": "{count} preços a validar | {count} preço a validar | {count} preços a validar",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
 		"Private": "Privado",
@@ -292,7 +292,7 @@
 		"Top": "Principais",
 		"Total": "Total",
 		"Type": "Tipo",
-		"Unreadable": "Unreadable",
+		"Unreadable": "Ilegível",
 		"Upload": "Carregar",
 		"UploadMultipleImages": "Enviar {count} imagem | Carregar {count} imagens",
 		"UploadMultiplePrices": "Enviar {count} preço | Enviar {count} preços",
@@ -590,7 +590,7 @@
 			"Title": "Assistente de contribuição"
 		},
 		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+			"Title": "Assistente de validação de preços"
 		}
 	},
 	"Search": {
