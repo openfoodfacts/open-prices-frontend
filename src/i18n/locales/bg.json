@@ -403,7 +403,7 @@
 	"PriceCard": {
 		"Discount": "Discount",
 		"PriceDate": "on {date}",
-		"PriceValueDisplayKilogram": "{0} / kg",
+		"PriceValueDisplayKilogram": "{0} / кг",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Доказателство",
@@ -454,10 +454,10 @@
 		"InvalidBarcode": "Невалиден баркод",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
-		"ProductQuantityGram": "{0} g",
-		"ProductQuantityKilogram": "{0} kg",
-		"ProductQuantityLitre": "{0} L",
-		"ProductQuantityMililitre": "{0} mL",
+		"ProductQuantityGram": "{0} г",
+		"ProductQuantityKilogram": "{0} кг",
+		"ProductQuantityLitre": "{0} Л",
+		"ProductQuantityMililitre": "{0} мл",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
 		"UnknownProduct": "Неразпознат продукт"
