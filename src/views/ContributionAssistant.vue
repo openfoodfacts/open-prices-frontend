@@ -297,7 +297,8 @@ export default {
           currency: this.appStore.getUserLastCurrencyUsed || 'EUR',
           proofImage: this.extractedLabels[i].imageSrc,
           product_code: barcodeString,
-          detected_product_code: barcodeString
+          detected_product_code: barcodeString,
+          product_name: label.product_name
         }
         this.productPriceForms.push(productPriceForm)
       }
