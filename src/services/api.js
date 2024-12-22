@@ -353,7 +353,7 @@ export default {
   },
   processWithGemini(labels) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/process_with_gemini`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/process-with-gemini`
     const formData = new FormData()
 
     labels.forEach((label) => {
