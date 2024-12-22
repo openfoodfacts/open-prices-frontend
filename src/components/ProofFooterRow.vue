@@ -1,6 +1,7 @@
 <template>
   <v-row>
     <v-col :cols="userIsProofOwner ? '11' : '12'">
+      <ProofChip v-if="showProofChip" class="mr-1" :proof="proof" />
       <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
       <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" class="mr-1" :totalCount="proof.receipt_price_count" />
       <ProofReceiptPriceTotalChip v-if="showReceiptPriceTotal" class="mr-1" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
@@ -24,6 +25,7 @@ import constants from '../constants'
 
 export default {
   components: {
+    ProofChip: defineAsyncComponent(() => import('../components/ProofChip.vue')),
     ProofTypeChip: defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
@@ -53,6 +55,10 @@ export default {
       default: true
     },
     hideProofActions: {
+      type: Boolean,
+      default: false,
+    },
+    showProofChip: {
       type: Boolean,
       default: false,
     },
