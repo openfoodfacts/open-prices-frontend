@@ -39,7 +39,7 @@
     </v-card-text>
     <v-divider v-if="mode === 'Validation'" />
     <v-card-text v-if="mode === 'Validation'">
-      <ProofFooterRow :proof="productPriceForm.proof" :hideProofType="true" :hideProofActions="true" :readonly="true" />
+      <ProofFooterRow :proof="productPriceForm.proof" :showProofChip="true" :hideProofType="true" :hideProofActions="true" :readonly="true" />
     </v-card-text>
     <v-divider />
     <v-card-actions v-if="mode === 'Contribution'">
