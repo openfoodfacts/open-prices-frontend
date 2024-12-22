@@ -104,7 +104,7 @@ export default {
       shareLinkCopySuccessMessage: false,
       // filter, order & display
       currentFilter: '',
-      currentOrder: constants.PRICE_ORDER_LIST[1].key,
+      currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
       currentDisplay: constants.PRICE_DISPLAY_LIST[0].key,
     }
   },

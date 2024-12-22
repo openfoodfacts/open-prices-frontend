@@ -53,7 +53,7 @@ export default {
       loading: false,
       // filter & order
       currentFilter: '',
-      currentOrder: constants.PRICE_ORDER_LIST[1].key,
+      currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
     }
   },
   computed: {

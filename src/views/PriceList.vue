@@ -43,7 +43,7 @@ export default {
       // filter & order
       currentFilter: '',
       currentType: '',
-      currentOrder: constants.PRICE_ORDER_LIST[2].key,  // created first
+      currentOrder: constants.PRICE_ORDER_LIST[3].key,  // created first
     }
   },
   computed: {

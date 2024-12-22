@@ -50,7 +50,7 @@ export default {
       datePricePage: 0,
       loading: false,
       // filter & order
-      currentOrder: constants.PRICE_ORDER_LIST[1].key,  // date
+      currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
     }
   },
   computed: {
