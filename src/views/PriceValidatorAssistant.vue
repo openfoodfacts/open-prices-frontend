@@ -7,9 +7,15 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row class="mt-0">
     <v-col v-for="(productPriceForm, index) in productPriceForms" :key="index" cols="12" md="6" xl="4">
       <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" mode="Validation" @removePriceTag="removePriceTag(index, $event)" @validatePriceTag="validatePriceTag(index)" />
+    </v-col>
+  </v-row>
+
+  <v-row v-if="loading">
+    <v-col align="center">
+      <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
 
@@ -35,6 +41,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -65,6 +72,12 @@ export default {
   },
   mounted() {
     this.getPriceTags()
+    // load more
+    this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
+    window.addEventListener('scroll', this.handleDebouncedScroll)
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
     removePriceTag(index, status) {
@@ -171,7 +184,12 @@ export default {
           console.log(error)
           this.createPriceLoading = false
         })
-    }
+    },
+    handleScroll(event) {  // eslint-disable-line no-unused-vars
+      if (utils.getDocumentScrollPercentage() > 90) {
+        this.getPriceTags()
+      }
+    },
   }
 }
 </script>
