@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.103.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.102.1...v1.103.0) (2024-12-22)
+
+
+### Features
+
+* **ContributionAssistant:** add support for product name gemini detection ([#1155](https://github.com/openfoodfacts/open-prices-frontend/issues/1155)) ([abb5a19](https://github.com/openfoodfacts/open-prices-frontend/commit/abb5a1953321982a744f9404e724ab9f30b015bb))
+
+
+### Bug Fixes
+
+* **Price add:** Fix price_per border color when selected. ref [#1085](https://github.com/openfoodfacts/open-prices-frontend/issues/1085) & [#1134](https://github.com/openfoodfacts/open-prices-frontend/issues/1134) ([969dd0f](https://github.com/openfoodfacts/open-prices-frontend/commit/969dd0f4f2409e051c95a5f9d3a2c9c75f2d26de))
+
+
+### Technical
+
+* **Breadcrumbs:** make them a bit smaller (h5 to h6). ref [#908](https://github.com/openfoodfacts/open-prices-frontend/issues/908) ([954c858](https://github.com/openfoodfacts/open-prices-frontend/commit/954c858bd35771644a54e8ec59265a4b0ceae4b6))
+* **l10n:** New Crowdin translations to review and merge ([#1154](https://github.com/openfoodfacts/open-prices-frontend/issues/1154)) ([d560456](https://github.com/openfoodfacts/open-prices-frontend/commit/d56045693558395bec77b7358ffe09c306094f65))
+* **Price list:** new order option by price descending ([1f73aa5](https://github.com/openfoodfacts/open-prices-frontend/commit/1f73aa5e53f7bd2ab9b6e2ab308cd10cbe1bd54b))
+* **Price Validator Assistant:** add load more on scroll. ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([b802ef6](https://github.com/openfoodfacts/open-prices-frontend/commit/b802ef6a02b34e4dc1c72ebc66e3a6689d41daa4))
+* **Price Validator Assistant:** order by proof creation date (latest first). ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([5e1af96](https://github.com/openfoodfacts/open-prices-frontend/commit/5e1af9652dbbc394a7a5c40011dc1437258e3283))
+* **Price Validator Assistant:** re-show the proof price_count in the footer. ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([f21a6d0](https://github.com/openfoodfacts/open-prices-frontend/commit/f21a6d008472abcc8abb71d59e29a1acd8f958f2))
+
 ## [1.102.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.102.0...v1.102.1) (2024-12-19)
 
 
