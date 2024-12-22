@@ -15,7 +15,18 @@
         contain
       />
       <ProofImageCropped v-else-if="mode === 'Validation'" class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" />
+      <v-row>
+        <v-col>
+          <v-text-field
+            :model-value="productPriceForm.product_name"
+            :label="$t('Common.ProductName')"
+            type="text"
+            hide-details="auto"
+          />
+        </v-col>
+      </v-row>
       <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" @filled="productFormFilled = $event" />
+
       <v-alert
         v-if="productIsTypeProduct"
         type="info"
@@ -96,7 +107,8 @@ export default {
         currency: null,
         proofImage: null,
         processed: null,
-        detected_product_code: null
+        detected_product_code: null,
+        product_name: null,
       })
     },
     mode: {
