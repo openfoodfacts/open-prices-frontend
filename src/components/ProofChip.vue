@@ -9,7 +9,7 @@
   >
     <v-icon icon="mdi-image" />
     <v-dialog v-model="dialog" scrollable max-height="80%" min-width="50%" width="auto">
-      <ProofCard :proof="proof" :hideProofActions="true" @close="closeDialog" />
+      <ProofCard :proof="proof" :hideProofActions="true" :readonly="readonly" @close="closeDialog" />
     </v-dialog>
   </v-chip>
 </template>
@@ -26,6 +26,10 @@ export default {
       type: Object,
       default: null
     },
+    readonly: {
+      type: Boolean,
+      default: false,
+    }
   },
   data() {
     return {
