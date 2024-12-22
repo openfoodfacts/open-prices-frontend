@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.104.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.103.0...v1.104.0) (2024-12-22)
+
+
+### Features
+
+* **Price Validator Assistant:** add support for product name gemini detection ([#1159](https://github.com/openfoodfacts/open-prices-frontend/issues/1159)) ([4897a9e](https://github.com/openfoodfacts/open-prices-frontend/commit/4897a9e09fef69f77305eb26c290d33fbdff6419))
+
+
+### Bug Fixes
+
+* **Gemini:** fix endpoint url following a change in the backend. ref [#1044](https://github.com/openfoodfacts/open-prices-frontend/issues/1044) ([495a821](https://github.com/openfoodfacts/open-prices-frontend/commit/495a8219b465f1aa1841b04f038422721c715bf4))
+
+
+### Technical
+
+* **Price Validation Assistant:** display the ProofChip in the ProofFooter ([#1158](https://github.com/openfoodfacts/open-prices-frontend/issues/1158)) ([5257040](https://github.com/openfoodfacts/open-prices-frontend/commit/5257040198683ae09dbf2df4d01eb98320243b77))
+
 ## [1.103.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.102.1...v1.103.0) (2024-12-22)
 
 
