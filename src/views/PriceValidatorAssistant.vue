@@ -48,7 +48,7 @@ export default {
       loading: false,
       productPriceForms: [],
       // filter & order
-      currentOrder: '-created',
+      currentOrder: '-proof_id',  // order by most recent proof
       // feedback
       priceRemovedMessage: false,
       priceSuccessMessage: false
