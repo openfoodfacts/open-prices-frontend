@@ -110,8 +110,8 @@
 			"Category": "Категория"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Цена за кг",
+			"PerUnit": "Единична цена"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -186,7 +186,7 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Зареди още",
 		"Location": "Location",
-		"Locations": "Locations",
+		"Locations": "Места",
 		"LocationSelected": "Location selected",
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
@@ -205,7 +205,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Редактирай",
 		"Filter": "Филтър",
-		"FilterProductWithPriceCount": "With a price",
+		"FilterProductWithPriceCount": "С цена",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
@@ -299,7 +299,7 @@
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Потребител",
-		"Users": "Users",
+		"Users": "Потребители",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"View": "Преглед",
@@ -405,7 +405,7 @@
 		"PriceDate": "on {date}",
 		"PriceValueDisplayKilogram": "{0} / кг",
 		"PriceValueDisplayLitre": "{0} / L",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / единица",
 		"Proof": "Доказателство",
 		"FullPrice": "Full price",
 		"UnknownProduct": "Unknown product"
@@ -618,14 +618,14 @@
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "Продукти",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Места",
+		"Users": "Потребители",
 		"Total": "Общо",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
+		"WithPrice": "С цена",
+		"WithProduct": "С продукт",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
-		"WithoutProduct": "Without a product",
+		"WithoutProduct": "Без продукт",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
 		"LastUpdated": "Last updated on {date}"
