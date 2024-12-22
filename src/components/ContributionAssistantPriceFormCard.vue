@@ -15,7 +15,7 @@
         contain
       />
       <ProofImageCropped v-else-if="mode === 'Validation'" class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" />
-      <v-row>
+      <v-row v-if="showProductNameField">
         <v-col>
           <v-text-field
             :model-value="productPriceForm.product_name"
@@ -114,6 +114,10 @@ export default {
     mode: {
       type: String,
       default: 'Contribution'  // or 'Validation'
+    },
+    showProductNameField: {
+      type: Boolean,
+      default: false
     }
   },
   emits: ['removePriceTag', 'validatePriceTag'],
