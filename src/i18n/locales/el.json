@@ -117,7 +117,7 @@
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Αναζήτηση",
+			"Find": "Εύρεση",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -135,7 +135,7 @@
 		"Title": "Type a barcode"
 	},
 	"Common": {
-		"About": "Σχετικά με την εφαρμογή",
+		"About": "Σχετικά",
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
@@ -169,7 +169,7 @@
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
 		"Dashboard": "Dashboard",
-		"Display": "Display",
+		"Display": "Προβολή",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayMap": "Χάρτης",
@@ -353,7 +353,7 @@
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
-		"About": "Σχετικά με την εφαρμογή",
+		"About": "Σχετικά",
 		"Stats": "Stats",
 		"TagLine": "{name} is an {url} project."
 	},
@@ -507,7 +507,7 @@
 	},
 	"Router": {
 		"About": {
-			"Title": "Σχετικά με την εφαρμογή"
+			"Title": "Σχετικά"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -658,7 +658,7 @@
 		"ChangeLanguage": "Αλλαγή γλώσσας",
 		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
-		"DisplayTitle": "Display",
+		"DisplayTitle": "Προβολή",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
