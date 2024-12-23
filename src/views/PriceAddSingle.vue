@@ -23,7 +23,7 @@
       <v-col cols="12" md="6" lg="4">
         <v-card
           :class="proofFormFilled ? 'border-success' : 'border-transparent'"
-          :title="$t('AddPriceMultiple.ProofDetails.Title')"
+          :title="$t('Common.ProofDetails')"
           prepend-icon="mdi-image"
           height="100%"
         >

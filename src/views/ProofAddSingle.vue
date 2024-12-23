@@ -3,7 +3,7 @@
     <v-col cols="12" md="6">
       <v-card
         :class="proofFormFilled ? 'border-success' : 'border-transparent'"
-        :title="$t('Common.Image')"
+        :title="$t('Common.ProofDetails')"
         prepend-icon="mdi-image"
         height="100%"
       >

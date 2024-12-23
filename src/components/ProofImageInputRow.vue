@@ -4,8 +4,9 @@
       <v-menu scroll-strategy="close" :disabled="loading">
         <template #activator="{ props }">
           <v-btn v-bind="props" size="small" prepend-icon="mdi-image" append-icon="mdi-menu-down" :class="hasProofImageSelected ? 'border-success' : 'border-error'">
-            <span v-if="hasProofImageSelected">{{ $t('Common.ProofSelectedCount', { count: proofImagePreviewList.length }) }}</span>
-            <span v-else>{{ $t('Common.ProofSelect') }}</span>
+            <span v-if="hasProofImageSelected">{{ $t('Common.ImageSelectedCount', { count: proofImagePreviewList.length }) }}</span>
+            <span v-else-if="multiple">{{ $t('Common.ImageSelectMultiple') }}</span>
+            <span v-else>{{ $t('Common.ImageSelect') }}</span>
           </v-btn>
         </template>
         <v-list>
