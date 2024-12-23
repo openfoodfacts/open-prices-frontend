@@ -15,8 +15,8 @@
             :disabled="!proofFormFilled || loading"
             @click="uploadProofList"
           >
-            <span v-if="!multiple">{{ $t('Common.Upload') }}</span>
-            <span v-else>{{ $t('Common.UploadMultipleImages', proofImageList.length) }}</span>
+            <span v-if="multiple">{{ $t('Common.UploadMultipleImages', proofImageList.length) }}</span>
+            <span v-else>{{ $t('Common.Upload') }}</span>
           </v-btn>
         </v-col>
       </v-row>
