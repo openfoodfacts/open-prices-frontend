@@ -1,6 +1,6 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
+		"WhyTitle": "Γιατί {op_name};",
 		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
 		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
 		"HowTitle": "How does {op_name} work?",
@@ -99,14 +99,14 @@
 			"Scan": "Σάρωση",
 			"ScanBarcode": "Scan a barcode",
 			"ScanBarcodeShort": "Σάρωση",
-			"Type": "Type",
+			"Type": "Τύπος",
 			"TypeBarcode": "Type a barcode",
-			"TypeBarcodeShort": "Type",
+			"TypeBarcodeShort": "Τύπος",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
 		},
 		"ProductModeList": {
-			"Barcode": "Barcode",
+			"Barcode": "Γραμμικός κωδικός",
 			"Category": "Κατηγορία"
 		},
 		"CategoryPricePer": {
@@ -130,8 +130,8 @@
 		"Scan": "Scan a barcode"
 	},
 	"BarcodeManualInput": {
-		"Barcode": "Barcode",
-		"Submit": "Submit",
+		"Barcode": "Γραμμικός κωδικός",
+		"Submit": "Υποβολή",
 		"Title": "Type a barcode"
 	},
 	"Common": {
@@ -139,12 +139,12 @@
 		"AddPrice": "Add a price",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
-		"Barcode": "Barcode",
+		"Barcode": "Γραμμικός κωδικός",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "Σάρωση",
 		"BarcodeType": "Type a barcode",
-		"BarcodeTypeShort": "Type",
+		"BarcodeTypeShort": "Τύπος",
 		"BarcodeInvalid": "Invalid barcode",
 		"Brand": "Μάρκα",
 		"Brands": "Μάρκες",
@@ -165,7 +165,7 @@
 		"Clear": "Εκκαθάριση",
 		"Contributors": "Χρηστες",
 		"Community": "Community",
-		"Country": "Country",
+		"Country": "Χώρα",
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
 		"Dashboard": "Dashboard",
@@ -178,14 +178,14 @@
 		"Done": "Done",
 		"Error": "Error",
 		"Experiments": "Experiments",
-		"Label": "Ετικετα",
+		"Label": "Ετικέτα",
 		"Labels": "Ετικέτες",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
-		"Language": "Languages",
-		"Languages": "Languages",
+		"Language": "Γλώσσες",
+		"Languages": "Γλώσσες",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
-		"LoadMore": "Load more",
+		"LoadMore": "Φόρτωση περισσοτέρων",
 		"Location": "Location",
 		"Locations": "Locations",
 		"LocationSelected": "Location selected",
@@ -292,7 +292,7 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
-		"Type": "Type",
+		"Type": "Τύπος",
 		"Unreadable": "Unreadable",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
@@ -382,7 +382,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Φόρτωση περισσοτέρων",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
@@ -429,7 +429,7 @@
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
-		"LoadMore": "Load more",
+		"LoadMore": "Φόρτωση περισσοτέρων",
 		"Title": "Latest prices"
 	},
 	"PriceRules": {
@@ -441,7 +441,7 @@
 	},
 	"ProductCard": {
 		"Brands": "Μάρκες",
-		"BrandLower": "μαρκα",
+		"BrandLower": "μάρκα",
 		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Κατηγορίες",
@@ -467,7 +467,7 @@
 		"AddPrice": "Add a price",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
+		"LoadMore": "Φόρτωση περισσοτέρων",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProofCard": {
@@ -489,7 +489,7 @@
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Φόρτωση περισσοτέρων",
 		"Prices": "Prices",
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
@@ -634,7 +634,7 @@
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
-		"LoadMore": "Load more",
+		"LoadMore": "Φόρτωση περισσοτέρων",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
@@ -646,24 +646,24 @@
 	},
 	"UserDetail": {
 		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LoadMore": "Φόρτωση περισσοτέρων"
 	},
 	"UserList": {
-		"LoadMore": "Load more",
+		"LoadMore": "Φόρτωση περισσοτέρων",
 		"Title": "Κορυφαίοι συντελεστές",
 		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Αλλαγή γλώσσας",
-		"CountryLabel": "Country",
+		"CountryLabel": "Χώρα",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Προβολή",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Γλώσσες",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "Display barcode",
