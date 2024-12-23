@@ -36,7 +36,7 @@
     },
     watch: {
       boundingBoxesFromServer() {
-        if (this.boundingBoxesFromServer) {
+        if (this.boundingBoxesFromServer.length) {
           this.initCanvas(true)
         }
       }
@@ -45,7 +45,7 @@
       if (this.image.complete) {
         this.initCanvas()
       } else {
-        this.image.onload = this.initCanvas
+        this.image.onload = () => this.initCanvas()
       }
     },
     methods: {
@@ -74,13 +74,14 @@
           this.boundingBoxes = [] // reset boundingBoxes
         }
         if (this.boundingBoxesFromServer) {
-          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(boundingBox => {
+          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(({boundingBox, id}) => {
             return {
               startY: boundingBox[0] * this.image.height,
               startX: boundingBox[1] * this.image.width,
               endY: boundingBox[2] * this.image.height,
               endX: boundingBox[3] * this.image.width,
-              boundingSource: this.$t('ContributionAssistant.AutomaticBoundingBoxSource')
+              boundingSource: this.$t('ContributionAssistant.AutomaticBoundingBoxSource'),
+              id: id
             }
           }))
           this.extractLabels()
@@ -160,7 +161,9 @@
           extractedLabels[i] = {
             imageSrc: originalCanvas.toDataURL(),
             blob: await new Promise(resolve => originalCanvas.toBlob(resolve, 'image/webp')),
-            boundingSource: boundingSource
+            boundingSource: boundingSource,
+            boundingBox: [startY / this.image.height, startX / this.image.width, endY / this.image.height, endX / this.image.width],
+            id: rect.id || null
           }
         }
         this.$emit('extractedLabels', extractedLabels)

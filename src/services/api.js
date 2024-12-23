@@ -389,5 +389,17 @@ export default {
       body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
+  },
+  createPriceTag(inputData) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags?${buildURLParams()}`
+    return fetch(url, {
+      method: 'POST',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`,
+      }),
+      body: JSON.stringify(inputData),
+    })
+    .then((response) => response.json())
   }
 }
