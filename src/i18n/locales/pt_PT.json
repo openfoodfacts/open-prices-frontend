@@ -324,7 +324,7 @@
 			"Cleanup": "3. Limpeza",
 			"Summary": "4. Resumo"
 		},
-		"BoundingBoxesFromServerWarning": "Não foi possível detetar automaticamente nenhuma etiqueta. Desenhe manualmente quadrados à volta das etiquetas ou prima o botão abaixo para tentar novamente.",
+		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
 		"FindBoundingBoxes": "Encontrar etiquetas automaticamente",
 		"FindBoundingBoxesRunning": "A deteção automática de etiquetas está a decorrer. Por favor, aguarde...",
 		"LabelsExtractionSteps": {
@@ -339,6 +339,7 @@
 		"GoToDashboard": "Aceda ao seu painel de controlo",
 		"GoToProof": "Vá ao comprovativo",
 		"AddNewProof": "Adicione um novo comprovativo",
+		"NextProof": "Next proof",
 		"AutomaticBoundingBoxSource": "automático",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Código de barras detetado: {barcode}",
