@@ -324,7 +324,7 @@
 			"Cleanup": "3. Pembersihan",
 			"Summary": "4. Ringkasan"
 		},
-		"BoundingBoxesFromServerWarning": "Tidak ada label yang dapat terdeteksi secara otomatis. Silakan gambar kotak secara manual di sekitar label atau tekan tombol di bawah ini untuk mencoba lagi.",
+		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
 		"FindBoundingBoxes": "Temukan label secara otomatis",
 		"FindBoundingBoxesRunning": "Deteksi label otomatis sedang berjalan. Mohon tunggu...",
 		"LabelsExtractionSteps": {
@@ -339,6 +339,7 @@
 		"GoToDashboard": "Buka dasbor Anda",
 		"GoToProof": "Buka bukti",
 		"AddNewProof": "Tambahkan bukti baru",
+		"NextProof": "Next proof",
 		"AutomaticBoundingBoxSource": "otomatis",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Kode batang terdeteksi: {barcode}",
