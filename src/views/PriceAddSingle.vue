@@ -109,17 +109,12 @@ export default {
       return this.productFormFilled && this.proofFormFilled && this.priceFormFilled
     },
   },
-  mounted() {
-    this.initPriceSingleForm()
-  },
   methods: {
     fieldRequired(v) {
       return !!v
     },
-    initPriceSingleForm() {
-      // nothing
-    },
     onProofUploaded(proof) {
+      // fill the price form with the proof data
       this.addPriceSingleForm.proof_id = proof.id
       this.addPriceSingleForm.location_id = proof.location_id
       this.addPriceSingleForm.location_osm_id = proof.location_osm_id
@@ -151,7 +146,6 @@ export default {
       api
         .createPrice(this.addPriceSingleForm, this.$route.path)
         .then((data) => {
-          console.log(data)
           if (!data['id']) {
             alert(`Form error: ${JSON.stringify(data)}`)
           } else {
