@@ -21,21 +21,7 @@
 
       <!-- Step 2: proof (image, location, date & currency) -->
       <v-col cols="12" md="6" lg="4">
-        <v-card
-          :class="proofFormFilled ? 'border-success' : 'border-transparent'"
-          :title="$t('Common.ProofDetails')"
-          prepend-icon="mdi-image"
-          height="100%"
-        >
-          <template v-if="proofFormFilled" #append>
-            <v-icon icon="mdi-checkbox-marked-circle" color="success" />
-          </template>
-          <v-divider />
-          <v-card-text>
-            <ProofInputRow :proofForm="addPriceSingleForm" />
-          </v-card-text>
-          <v-overlay v-model="disableProofForm" scrim="#E8F5E9" contained persistent />
-        </v-card>
+        <ProofUploadCard @proof="onProofUploaded($event)" />
       </v-col>
 
       <!-- Step 3: price -->
@@ -63,22 +49,14 @@
           type="submit"
           class="float-right"
           :color="formFilled ? 'success' : ''"
-          :loading="createPriceLoading"
+          :loading="loading"
           :disabled="!formFilled"
         >
-          {{ $t('AddPriceSingle.Create') }}
+          {{ $t('Common.Upload') }}
         </v-btn>
       </v-col>
     </v-row>
   </v-form>
-
-  <v-snackbar
-    v-model="proofDateSuccessMessage"
-    color="info"
-    :timeout="2000"
-  >
-    {{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}
-  </v-snackbar>
 </template>
 
 <script>
@@ -91,7 +69,7 @@ import utils from '../utils.js'
 export default {
   components: {
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
-    ProofInputRow: defineAsyncComponent(() => import('../components/ProofInputRow.vue')),
+    ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
   },
   data() {
@@ -108,21 +86,17 @@ export default {
         price_per: null,
         price_is_discounted: false,
         price_without_discount: null,
-        currency: null,  // see initPriceSingleForm
+        currency: null,  // see ProofUploadCard
         receipt_quantity: null,
         location_id: null,
         location_osm_id: null,
         location_osm_type: '',
         date: utils.currentDate(),
-        receipt_price_count: null,
-        receipt_price_total: null,
         proof_id: null,
       },
-      priceFormFilled: false,
       productFormFilled: false,
-      createPriceLoading: false,
-      // proof data
-      proofDateSuccessMessage: false,
+      priceFormFilled: false,
+      loading: false,
     }
   },
   computed: {
@@ -134,25 +108,22 @@ export default {
     formFilled() {
       return this.productFormFilled && this.proofFormFilled && this.priceFormFilled
     },
-    disableProofForm() {
-      return this.proofFormFilled
-    },
-  },
-  mounted() {
-    this.initPriceSingleForm()
   },
   methods: {
     fieldRequired(v) {
       return !!v
     },
-    initPriceSingleForm() {
-      /**
-       * init form config
-       */
-      this.addPriceSingleForm.currency = this.appStore.getUserLastCurrencyUsed
+    onProofUploaded(proof) {
+      // fill the price form with the proof data
+      this.addPriceSingleForm.proof_id = proof.id
+      this.addPriceSingleForm.location_id = proof.location_id
+      this.addPriceSingleForm.location_osm_id = proof.location_osm_id
+      this.addPriceSingleForm.location_osm_type = proof.location_osm_type
+      this.addPriceSingleForm.date = proof.date
+      this.addPriceSingleForm.currency = proof.currency
     },
     createPrice() {
-      this.createPriceLoading = true
+      this.loading = true
       this.appStore.setLastCurrencyUsed(this.addPriceSingleForm.currency)
       // cleanup form
       if (!this.addPriceSingleForm.product_code) {
@@ -175,17 +146,17 @@ export default {
       api
         .createPrice(this.addPriceSingleForm, this.$route.path)
         .then((data) => {
-          if (data['detail']) {
-            alert(`Error: with input ${data['detail'][0]['input']}`)
+          if (!data['id']) {
+            alert(`Form error: ${JSON.stringify(data)}`)
           } else {
             this.done()
           }
-          this.createPriceLoading = false
+          this.loading = false
         })
         .catch((error) => {
           alert('Error: server error')
           console.log(error)
-          this.createPriceLoading = false
+          this.loading = false
         })
     },
     done() {

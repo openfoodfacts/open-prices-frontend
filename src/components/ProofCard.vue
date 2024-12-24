@@ -1,8 +1,12 @@
 <template>
-  <v-card v-if="proof" :id="'proof_' + proof.id" data-name="proof-card" @click="selectProof">
-    <v-card-title v-if="!hideProofHeader">
-      {{ $t('Common.Proof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
-    </v-card-title>
+  <v-card v-if="proof" :id="'proof_' + proof.id" :class="mode == 'Uploaded' ? 'border-success' : 'border-transparent'" data-name="proof-card" @click="selectProof">
+    <template v-if="!hideProofHeader" #title>
+      {{ $t('Common.Proof') }}
+    </template>
+    <template v-if="!hideProofHeader" #append>
+      <v-icon v-if="mode == 'Display'" icon="mdi-close" @click="close" />
+      <v-icon v-else-if="mode == 'Uploaded'" icon="mdi-checkbox-marked-circle" color="success" />
+    </template>
 
     <v-divider v-if="!hideProofHeader" />
 
@@ -29,6 +33,10 @@ export default {
     proof: {
       type: Object,
       default: null
+    },
+    mode: {
+      type: String,
+      default: 'Display'  // or 'Uploaded'
     },
     hideProofHeader: {
       type: Boolean,

@@ -1,31 +1,36 @@
 <template>
-  <v-row>
-    <!-- FORM -->
-    <v-col v-if="!proofObjectList.length" cols="12">
+  <v-card
+    v-if="!proofObjectList.length"
+    :title="$t('Common.ProofDetails')"
+    :prepend-icon="cardPrependIcon"
+    height="100%"
+  >
+    <v-divider />
+    <v-card-text>
       <ProofTypeInputRow :proofTypeForm="proofForm" />
       <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
       <LocationInputRow :locationForm="proofForm" />
       <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />
-      <v-row>
-        <v-col>
-          <v-btn
-            class="float-right"
-            color="success"
-            :loading="loading"
-            :disabled="!proofFormFilled || loading"
-            @click="uploadProofList"
-          >
-            <span v-if="multiple">{{ $t('Common.UploadMultipleImages', proofImageList.length) }}</span>
-            <span v-else>{{ $t('Common.Upload') }}</span>
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-col>
-    <!-- CARD -->
-    <v-col v-else>
-      <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
-    </v-col>
-  </v-row>
+    </v-card-text>
+    <v-divider />
+    <v-card-actions>
+      <v-spacer />
+      <v-btn
+        class="float-right"
+        color="success"
+        variant="flat"
+        elevation="1"
+        :loading="loading"
+        :disabled="!proofFormFilled || loading"
+        @click="uploadProofList"
+      >
+        <span v-if="multiple">{{ $t('Common.UploadMultipleImages', proofImageList.length) }}</span>
+        <span v-else>{{ $t('Common.Upload') }}</span>
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+
+  <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideProofActions="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
 
   <v-snackbar
     v-model="proofDateSuccessMessage"
@@ -54,6 +59,8 @@
 import Compressor from 'compressorjs'
 import ExifReader from 'exifreader'
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
 import utils from '../utils.js'
@@ -75,20 +82,6 @@ export default {
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
   },
   props: {
-    proofForm: {
-      type: Object,
-      default: () => ({
-        type: null,
-        proof_id: null,
-        location_id: null,
-        location_osm_id: null,
-        location_osm_type: null,
-        date: utils.currentDate(),
-        currency: null,
-        receipt_price_count: null,
-        receipt_price_total: null,
-      })
-    },
     hideRecentProofChoice: {
       type: Boolean,
       default: false
@@ -101,6 +94,18 @@ export default {
   emits: ['proof'],
   data() {
     return {
+      proofForm: {
+        type: null,
+        location_id: null,
+        location_osm_id: null,
+        location_osm_type: '',
+        date: utils.currentDate(),
+        currency: null,  // see initProofForm
+        receipt_price_count: null,
+        receipt_price_total: null,
+        proof_id: null
+      },
+      // data
       proofDateSuccessMessage: false,
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
@@ -110,6 +115,10 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
+    cardPrependIcon() {
+      return this.multiple ? 'mdi-image-multiple' : 'mdi-image'
+    },
     proofTypeFormFilled() {
       return !!this.proofForm.type
     },
@@ -141,7 +150,13 @@ export default {
       this.$emit('proof', newProofObjectList[0])
     }
   },
+  mounted() {
+    this.initProofForm()
+  },
   methods: {
+    initProofForm() {
+      this.proofForm.currency = this.appStore.getUserLastCurrencyUsed
+    },
     handleProofSelectedList(proofSelectedList) {
       // can be an existing proof, or a file
       // existing proof: update proofForm + set proofObject
