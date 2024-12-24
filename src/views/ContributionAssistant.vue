@@ -125,6 +125,7 @@
       </v-tabs-window-item>
     </v-tabs-window>
   </v-container>
+
   <v-snackbar
     v-model="labelProcessingErrorMessage"
     color="error"
@@ -201,20 +202,20 @@ export default {
       const enableSummaryTab = this.productPriceForms.length && (this.loading || this.allDone)
       return !enableSummaryTab
     },
-    proofsIdsFromQueryParam() {
-      return JSON.parse(this.$router.currentRoute.value.query.proofs)
+    proofIdsFromQueryParam() {
+      return this.$route.query.proof_ids.split(',')
     }
   },
   mounted() {
-    if (this.$router.currentRoute.value.query.proofs) {
-      // When a query param proofs=[1,2] is passed, we load the first proof and skip the proof selection step
-      this.initWithProofIds(this.proofsIdsFromQueryParam)
+    if (this.$route.query.proof_ids) {
+      // When a query param proof_ids=1,2 is passed, we load the first proof and skip the proof selection step
+      this.initWithProofIds(this.proofIdsFromQueryParam)
     }
   },
   methods: {
-    initWithProofIds(proofsIds) {
-      if (proofsIds.length) {
-        api.getProofById(proofsIds[0]).then(proof => {
+    initWithProofIds(proofIds) {
+      if (proofIds.length) {
+        api.getProofById(proofIds[0]).then(proof => {
           this.setProof(proof)
         })
       }
@@ -304,13 +305,13 @@ export default {
         this.processLabelsLoading = true
         this.labelProcessingErrorMessage = false
         const expectedNumberOfPriceTagsWithPredictions = this.priceTags.length + newLabelsAddedWithCanvas.length
-        let newPriceTagsIds = []
+        let newPriceTagIds = []
         newLabelsAddedWithCanvas.forEach(label => {
           api.createPriceTag({
-              "bounding_box": label.boundingBox,
-              "proof_id": this.proofForm.id
+            bounding_box: label.boundingBox,
+            proof_id: this.proofForm.id
           }).then(priceTag => {
-            newPriceTagsIds.push(priceTag.id)
+            newPriceTagIds.push(priceTag.id)
           })
         })
         this.loadPriceTagsWithPredictions(expectedNumberOfPriceTagsWithPredictions, priceTags => {
@@ -320,7 +321,7 @@ export default {
           } else {
             // Only keep price tags that were selected by the user
             // Note: should we also update ignored price tags to a status of error ?
-            this.priceTags = priceTags.filter(priceTag => this.extractedLabels.find(label => label.id === priceTag.id) || newPriceTagsIds.includes(priceTag.id))
+            this.priceTags = priceTags.filter(priceTag => this.extractedLabels.find(label => label.id === priceTag.id) || newPriceTagIds.includes(priceTag.id))
             this.handlePriceTags()
           }
         })
@@ -407,11 +408,11 @@ export default {
     },
     nextProof() {
       // Remove the first proof from the list and go back to the initial step with the next one
-      const proofsIds = this.proofsIdsFromQueryParam
-      proofsIds.shift()
+      const proofIds = this.proofIdsFromQueryParam
+      proofIds.shift()
       // This only changes the url, in case of refresh, since the path stays the same, no reload is triggered
-      this.$router.push({ path: "/experiments/contribution-assistant", query: { proofs: JSON.stringify(proofsIds) } })
-      this.initWithProofIds(proofsIds)
+      this.$router.push({ path: '/experiments/contribution-assistant', query: { proof_ids: proofIds.join(',') } })
+      this.initWithProofIds(proofIds)
     },
   }
 }
