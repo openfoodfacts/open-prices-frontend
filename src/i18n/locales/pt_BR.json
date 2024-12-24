@@ -324,7 +324,7 @@
 			"Cleanup": "3. Limpeza",
 			"Summary": "4. Resumo"
 		},
-		"BoundingBoxesFromServerWarning": "Nenhum rótulo pode ser detectado automaticamente. Por favor, desenhe manualmente quadrados ao redor dos rótulos ou pressione o botão abaixo para tentar novamente.",
+		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
 		"FindBoundingBoxes": "Encontrar rótulos automaticamente",
 		"FindBoundingBoxesRunning": "Detecção automática de rótulos está em execução. Por favor, aguarde...",
 		"LabelsExtractionSteps": {
@@ -339,6 +339,7 @@
 		"GoToDashboard": "Vá para seu painel",
 		"GoToProof": "Ir para o comprovante",
 		"AddNewProof": "Adicionar um novo comprovante",
+		"NextProof": "Next proof",
 		"AutomaticBoundingBoxSource": "automático",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Código de barras detectado: {barcode}",
