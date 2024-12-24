@@ -324,7 +324,7 @@
 			"Cleanup": "3. ניקוי",
 			"Summary": "4. סיכום"
 		},
-		"BoundingBoxesFromServerWarning": "לא זוהו תוויות אוטומטית. נא לצייר ריבועים סביב התוויות ידנית או ללחוץ על הכפתור להלן כדי לנסות שוב.",
+		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
 		"FindBoundingBoxes": "איתור תוויות אוטומטית",
 		"FindBoundingBoxesRunning": "מתבצע זיהוי תוויות אוטומטי. נא להמתין…",
 		"LabelsExtractionSteps": {
@@ -339,6 +339,7 @@
 		"GoToDashboard": "מעבר ללוח הבקרה שלך",
 		"GoToProof": "מעבר להוכחה",
 		"AddNewProof": "הוספת הוכחה חדשה",
+		"NextProof": "Next proof",
 		"AutomaticBoundingBoxSource": "אוטומטית",
 		"ManualBoundingBoxSource": "ידנית",
 		"DetectedBarcode": "זוהה ברקוד: {barcode}",
