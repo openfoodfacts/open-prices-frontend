@@ -19,7 +19,7 @@
         <v-container>
           <v-row>
             <v-col cols="12" md="6">
-              <ProofInputRow :proofForm="proofForm" @proof="setProof($event)" />
+              <ProofUploadCard @proof="onProofUploaded($event)" />
             </v-col>
           </v-row>
         </v-container>
@@ -29,7 +29,7 @@
           <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-alert">
             {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
             <br>
-            <v-btn @click="loadProofWithBoundingBoxes(proofForm.id)">
+            <v-btn @click="loadProofWithBoundingBoxes(proofObject.id)">
               {{ $t('ContributionAssistant.FindBoundingBoxes') }}
             </v-btn>
           </v-alert>
@@ -85,10 +85,10 @@
                 variant="outlined"
               >
                 <p>
-                  {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceForms.length, date: proofForm.date, locationName: locationName }) }}
+                  {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceForms.length, date: proofObject.date, locationName: locationName }) }}
                 </p>
               </v-alert>
-              <v-btn class="float-right mt-4" color="success" :loading="addPricesLoading" @click="addPrices">
+              <v-btn class="float-right mt-4" color="success" :loading="loading" @click="addPrices">
                 {{ $t('Common.UploadMultiplePrices', productPriceForms.length) }}
               </v-btn>
             </v-col>
@@ -114,7 +114,7 @@
               <v-btn to="/dashboard" class="mt-4" :aria-label="$t('Common.Dashboard')" :disabled="!allDone">
                 {{ $t('ContributionAssistant.GoToDashboard') }}
               </v-btn>
-              <v-btn :to="'/proofs/' + proofForm.id" class="mt-4 ml-4" :disabled="!allDone">
+              <v-btn :to="'/proofs/' + proofObject.id" class="mt-4 ml-4" :disabled="!allDone">
                 {{ $t('ContributionAssistant.GoToProof') }}
               </v-btn>
               <v-btn class="mt-4 ml-4" :disabled="!allDone" @click="reloadPage">
@@ -148,31 +148,22 @@ export default {
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
     ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
     ContributionAssistantLabelList: defineAsyncComponent(() => import('../components/ContributionAssistantLabelList.vue')),
-    ProofInputRow: defineAsyncComponent(() => import('../components/ProofInputRow.vue')),
+    ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
   },
   data() {
     return {
-      tab: 'ProofSelect',
+      tab: 'ProofSelect',  // ProofSelect, LabelsExtraction, Cleanup, Summary
       drawCanvasLoaded: false,
-      image: new Image(),
       boundingBoxesFromServer: [],
       extractedLabels: [],
       productPriceForms: [],
-      proofForm: {
-        type: constants.PROOF_TYPE_PRICE_TAG,
-        id: null,
-        location_id: null,
-        location_osm_id: null,
-        location_osm_type: null,
-        date: utils.currentDate(),
-        currency: null,
-        receipt_price_count: null,
-        receipt_price_total: null,
-      },
-      processLabelsLoading: false,
-      addPricesLoading: false,
+      // proof data
+      proofObject: null,
+      image: new Image(),
       proofWithBoundingBoxesLoading: false,
       proofSecondCallTimeout: null,
+      processLabelsLoading: false,
+      loading: false,
       numberOfPricesAdded: 0,
       labelProcessingErrorMessage: false
     }
@@ -181,7 +172,7 @@ export default {
     ...mapStores(useAppStore),
     locationName() {
       const recentLocations = this.appStore.getRecentLocations()
-      const location = recentLocations.find((location) => location.properties.osm_id === this.proofForm.location_osm_id)
+      const location = recentLocations.find((location) => location.properties.osm_id === this.proofObject.location_osm_id)
       if (location) {
         if (location.type === 'ONLINE') return location.website_url
         return utils.getLocationOSMTitle(location, true, true, true)
@@ -190,50 +181,49 @@ export default {
     },
     disableProofSelectTab() {
       // ProofSelect tab should disabled on summary step
-      return this.tab == "Summary"
+      return this.tab == 'Summary'
     },
     disableLabelsExtractionTab() {
       // LabelsExtraction tab should only be enabled after the proof is selected
       // It should also be disabled on summary step
-      return !this.proofForm.id || this.tab == "Summary"
+      return !this.proofObject || this.tab == 'Summary'
     },
     disableCleanupTab() {
       // Cleanup tab should only be enabled after the ai analysis is done
       // It should also be disabled on summary step
-      return !this.productPriceForms.length || this.tab == "Summary"
+      return !this.productPriceForms.length || this.tab == 'Summary'
     },
     allDone() {
       return this.numberOfPricesAdded > 0 && this.productPriceForms.length == this.numberOfPricesAdded
     },
     disableSummaryTab() {
       // Summary tab should be enabled when there are product prices to be added and the add prices process is either running or done
-      const enableSummaryTab = this.productPriceForms.length && (this.addPricesLoading || this.allDone)
+      const enableSummaryTab = this.productPriceForms.length && (this.loading || this.allDone)
       return !enableSummaryTab
     }
-  },
-  mounted() {
-    this.proofForm.currency = this.appStore.getUserLastCurrencyUsed
   },
   methods: {
     reloadPage(){
       window.location.reload()
     },
-    setProof(event) {
+    onProofUploaded(proof) {
+      // store the proof
+      this.proofObject = proof
+      // proof image
       const image = new Image()
       // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'  // barcodes
       // image.src = 'https://prices.openfoodfacts.org/img/0023/f6tJvMcsDk.webp'  // categories
-      image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${event.file_path}`
+      image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
       image.crossOrigin = 'Anonymous'
       this.image = image
-      this.proofForm = event
-
+      // proof labels
       this.extractedLabels = []
       this.productPriceForms = []
-      this.tab = "LabelsExtraction"
+      this.tab = 'LabelsExtraction'
       // Try to fetch proof right away (bounding boxes should be available for proofs previously uploaded)
-      this.loadProofWithBoundingBoxes(event.id, true)
+      this.loadProofWithBoundingBoxes(proof.id, true)
       // If no bounding boxes are found right away (new proof), try again after 5 seconds
-      this.proofSecondCallTimeout = setTimeout(() => this.loadProofWithBoundingBoxes(event.id), 5000)
+      this.proofSecondCallTimeout = setTimeout(() => this.loadProofWithBoundingBoxes(proof.id), 5000)
       // If that also fails, user will have to click the button to retry
     },
     loadProofWithBoundingBoxes(proofId, firstCall=false) {
@@ -241,7 +231,7 @@ export default {
       api.getProofById(proofId).then(proof => {
         if (proof.predictions && proof.predictions.length) {
           for (let prediction of proof.predictions) {
-            if (prediction.type === "OBJECT_DETECTION") {
+            if (prediction.type === 'OBJECT_DETECTION') {
               this.boundingBoxesFromServer = prediction.data.objects.map(predictionObject => predictionObject.bounding_box)
               if (this.boundingBoxesFromServer.length) {
                 clearTimeout(this.proofSecondCallTimeout)
@@ -308,9 +298,9 @@ export default {
       this.productPriceForms.splice(index, 1)
     },
     addPrices() {
-      this.addPricesLoading = true
+      this.loading = true
       this.numberOfPricesAdded = 0
-      this.tab = "Summary"
+      this.tab = 'Summary'
       
       for (let i = 0; i < this.productPriceForms.length; i++) {
         const productPriceForm = this.productPriceForms[i]
@@ -324,11 +314,11 @@ export default {
         const priceData = {
           ...productPriceForm,
           origins_tags: origins_tags,
-          date: this.proofForm.date,
-          location_id: this.proofForm.location_id,
-          location_osm_id: this.proofForm.location_osm_id,
-          location_osm_type: this.proofForm.location_osm_type,
-          proof_id: this.proofForm.id
+          date: this.proofObject.date,
+          location_id: this.proofObject.location_id,
+          location_osm_id: this.proofObject.location_osm_id,
+          location_osm_type: this.proofObject.location_osm_type,
+          proof_id: this.proofObject.id
         }
         api.createPrice(priceData, this.$route.path).then(() => {
           // TODO: error handling
@@ -336,7 +326,7 @@ export default {
           this.numberOfPricesAdded += 1
         })
       }
-      this.addPricesLoading = false
+      this.loading = false
     }
   }
 }
