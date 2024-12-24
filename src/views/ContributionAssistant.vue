@@ -28,10 +28,6 @@
         <v-container>
           <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-alert">
             {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
-            <br>
-            <v-btn @click="loadProofWithBoundingBoxes(proofObject.id)">
-              {{ $t('ContributionAssistant.FindBoundingBoxes') }}
-            </v-btn>
           </v-alert>
           <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-magnify">
             {{ $t('ContributionAssistant.FindBoundingBoxesRunning') }}
@@ -43,7 +39,7 @@
                 {{ $t('ContributionAssistant.LabelsExtractionSteps.DrawBoundingBoxes') }}
               </h3>
               <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
-              <ContributionAssistantDrawCanvas ref="ContributionAssistantdrawCanvas" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
+              <ContributionAssistantDrawCanvas ref="ContributionAssistantdrawCanvas" :key="proofForm.id" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
             </v-col>
             <v-col cols="12" lg="6">
               <h3 class="mb-4">
@@ -120,12 +116,16 @@
               <v-btn class="mt-4 ml-4" :disabled="!allDone" @click="reloadPage">
                 {{ $t('ContributionAssistant.AddNewProof') }}
               </v-btn>
+              <v-btn class="mt-4 ml-4" :disabled="!allDone" @click="nextProof">
+                {{ $t('ContributionAssistant.NextProof') }}
+              </v-btn>
             </v-col>
           </v-row>
         </v-container>
       </v-tabs-window-item>
     </v-tabs-window>
   </v-container>
+
   <v-snackbar
     v-model="labelProcessingErrorMessage"
     color="error"
@@ -156,6 +156,7 @@ export default {
       drawCanvasLoaded: false,
       boundingBoxesFromServer: [],
       extractedLabels: [],
+      priceTags: [],
       productPriceForms: [],
       // proof data
       proofObject: null,
@@ -200,31 +201,24 @@ export default {
       // Summary tab should be enabled when there are product prices to be added and the add prices process is either running or done
       const enableSummaryTab = this.productPriceForms.length && (this.loading || this.allDone)
       return !enableSummaryTab
+    },
+    proofIdsFromQueryParam() {
+      return this.$route.query.proof_ids.split(',')
+    }
+  },
+  mounted() {
+    if (this.$route.query.proof_ids) {
+      // When a query param proof_ids=1,2 is passed, we load the first proof and skip the proof selection step
+      this.initWithProofIds(this.proofIdsFromQueryParam)
     }
   },
   methods: {
-    reloadPage(){
-      window.location.reload()
-    },
-    onProofUploaded(proof) {
-      // store the proof
-      this.proofObject = proof
-      // proof image
-      const image = new Image()
-      // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'  // barcodes
-      // image.src = 'https://prices.openfoodfacts.org/img/0023/f6tJvMcsDk.webp'  // categories
-      image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
-      image.crossOrigin = 'Anonymous'
-      this.image = image
-      // proof labels
-      this.extractedLabels = []
-      this.productPriceForms = []
-      this.tab = 'LabelsExtraction'
-      // Try to fetch proof right away (bounding boxes should be available for proofs previously uploaded)
-      this.loadProofWithBoundingBoxes(proof.id, true)
-      // If no bounding boxes are found right away (new proof), try again after 5 seconds
-      this.proofSecondCallTimeout = setTimeout(() => this.loadProofWithBoundingBoxes(proof.id), 5000)
-      // If that also fails, user will have to click the button to retry
+    initWithProofIds(proofIds) {
+      if (proofIds.length) {
+        api.getProofById(proofIds[0]).then(proof => {
+          this.setProof(proof)
+        })
+      }
     },
     loadProofWithBoundingBoxes(proofId, firstCall=false) {
       this.proofWithBoundingBoxesLoading = true
@@ -245,38 +239,107 @@ export default {
         }
       })
     },
+    onProofUploaded(proof) {
+      // A new proof was selected by the user, or loaded from the query param
+      this.extractedLabels = []
+      this.productPriceForms = []
+      this.boundingBoxesFromServer = []
+
+      // store the proof
+      this.proofObject = proof
+
+      // proof image
+      const image = new Image()
+      // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'  // barcodes
+      // image.src = 'https://prices.openfoodfacts.org/img/0023/f6tJvMcsDk.webp'  // categories
+      image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
+      image.crossOrigin = 'Anonymous'
+      this.image = image
+
+      this.tab = 'LabelsExtraction'
+      this.proofWithBoundingBoxesLoading = true
+      // Try to load any automatically detected price tags on proof upload
+      this.loadPriceTagsWithPredictions(1, priceTags => {
+        this.priceTags = priceTags
+        this.boundingBoxesFromServer = this.priceTags.map(priceTag => {
+          return {boundingBox: priceTag.bounding_box, id: priceTag.id}
+        })
+        this.proofWithBoundingBoxesLoading = false
+      })
+    },
+    loadPriceTagsWithPredictions(minNumberOfPriceTagWithPredictions, callback) {
+      // Call price tag API every 3 seconds until we have at least minNumberOfPriceTagWithPredictions, max 6 times
+      // Question: callback vs Promise ? Neither are really used in the rest of the code base
+      let tries = 0
+      const load = () => {
+        tries += 1
+        if (tries > 5) {
+          callback([])
+          return
+        }
+        api.getPriceTags({proof_id: this.proofForm.id, size: 100}).then(data => {
+          const numberOfPriceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions.length).length
+          if (numberOfPriceTagsWithPredictions >= minNumberOfPriceTagWithPredictions) {
+            callback(data.items)
+          } else {
+            setTimeout(load, 3000)
+          }
+        })
+      }
+      load()
+    },
     onExtractedLabels(extractedLabels) {
+      // Called every time a label is drawn on the canvas
       this.extractedLabels = extractedLabels
     },
     removeLabel(index) {
       this.$refs.ContributionAssistantdrawCanvas.removeBoundingBox(index) // This will trigger onExtractedLabels event
     },
     processLabels() {
-      this.processLabelsLoading = true
-      this.labelProcessingErrorMessage = false
-      api.processWithGemini(this.extractedLabels).then(res => {
-        if (res) {
-          this.handleGeminiResponse(res)
-        } else {
-          console.error("Error in gemini response")
-          this.labelProcessingErrorMessage = true
-        }
-        this.processLabelsLoading = false
-      })
-    },
-    handleGeminiResponse(response) {
-      console.log('handleGeminiResponse', response)
-      if (!response.labels) {
-        console.error("No labels found in gemini response")
-        this.labelProcessingErrorMessage = true
-        return
+      // User is done drawing labels and has pressed the "Send labels" button
+      // If new labels were drawn, we have to create the corresponding price tags on the server, and wait for ml processing
+      // Otherwise, we can move on to the Cleanup step right away
+      let newLabelsAddedWithCanvas = this.extractedLabels.filter(label => label.boundingSource === this.$t('ContributionAssistant.ManualBoundingBoxSource'))
+      if (newLabelsAddedWithCanvas.length) {
+        // Send new price tags to server and load them after ml processing
+        this.processLabelsLoading = true
+        this.labelProcessingErrorMessage = false
+        const expectedNumberOfPriceTagsWithPredictions = this.priceTags.length + newLabelsAddedWithCanvas.length
+        let newPriceTagIds = []
+        newLabelsAddedWithCanvas.forEach(label => {
+          api.createPriceTag({
+            bounding_box: label.boundingBox,
+            proof_id: this.proofForm.id
+          }).then(priceTag => {
+            newPriceTagIds.push(priceTag.id)
+          })
+        })
+        this.loadPriceTagsWithPredictions(expectedNumberOfPriceTagsWithPredictions, priceTags => {
+          this.processLabelsLoading = false
+          if (!priceTags.length) {
+            this.labelProcessingErrorMessage = true
+          } else {
+            // Only keep price tags that were selected by the user
+            // Note: should we also update ignored price tags to a status of error ?
+            this.priceTags = priceTags.filter(priceTag => this.extractedLabels.find(label => label.id === priceTag.id) || newPriceTagIds.includes(priceTag.id))
+            this.handlePriceTags()
+          }
+        })
+      } else {
+        // No new labels were drawn, we already have all the price tags data loaded
+
+        // Only keep price tags that were selected by the user
+        // Note: should we also update ignored price tags to a status of error ?
+        this.priceTags = this.priceTags.filter(priceTag => this.extractedLabels.find(label => label.id === priceTag.id))
+        this.handlePriceTags()
       }
-      this.productPriceForms = []
-      for (let i = 0; i < response.labels.length; i++) {
-        const label = response.labels[i]
+    },
+    handlePriceTags() {
+      this.priceTags.forEach(priceTag => {
+        const label = priceTag['predictions'][0]['data']
         const barcodeString = label.barcode ? label.barcode.toString().replace(/\s/g, '') : ''
-        // TODO: some of these will be None if gemini did not give a proper reply, so detection and error handling is needed
         const productPriceForm = {
+          id: priceTag.id,
           type: barcodeString.length > 10 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY,
           category_tag: label.product,
           origins_tags: [label.origin],
@@ -285,19 +348,23 @@ export default {
           price_per: label.unit,
           price_is_discounted: false,
           currency: this.appStore.getUserLastCurrencyUsed || 'EUR',
-          proofImage: this.extractedLabels[i].imageSrc,
+          proof: priceTag['proof'],
+          proofImage: priceTag['proof'].file_path,
           product_code: barcodeString,
           detected_product_code: barcodeString,
-          product_name: label.product_name
+          product_name: label.product_name,
+          bounding_box: priceTag.bounding_box
         }
         this.productPriceForms.push(productPriceForm)
-      }
+      })
       this.tab = 'Cleanup'
     },
     removePriceTag(index) {
+      // Called when the user deletes a price during the cleanup step
       this.productPriceForms.splice(index, 1)
     },
     addPrices() {
+      // Last step, create prices and match them to the corresponding price tags
       this.loading = true
       this.numberOfPricesAdded = 0
       this.tab = 'Summary'
@@ -320,14 +387,33 @@ export default {
           location_osm_type: this.proofObject.location_osm_type,
           proof_id: this.proofObject.id
         }
-        api.createPrice(priceData, this.$route.path).then(() => {
+        api.createPrice(priceData, this.$route.path).then((price) => {
           // TODO: error handling
           this.productPriceForms[i].processed = true
           this.numberOfPricesAdded += 1
+          api.updatePriceTag(productPriceForm.id, { status: 1, price_id: price.id })
+            .then((response) => {
+              // if response.status == 204
+              return response
+            })
+            .catch((error) => {
+              console.log(error)
+            })
         })
       }
       this.loading = false
-    }
+    },
+    reloadPage() {
+      window.location.reload()
+    },
+    nextProof() {
+      // Remove the first proof from the list and go back to the initial step with the next one
+      const proofIds = this.proofIdsFromQueryParam
+      proofIds.shift()
+      // This only changes the url, in case of refresh, since the path stays the same, no reload is triggered
+      this.$router.push({ path: '/experiments/contribution-assistant', query: { proof_ids: proofIds.join(',') } })
+      this.initWithProofIds(proofIds)
+    },
   }
 }
 </script>

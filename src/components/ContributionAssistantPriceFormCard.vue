@@ -7,14 +7,7 @@
   >
     <v-divider />
     <v-card-text>
-      <v-img
-        v-if="mode === 'Contribution'"
-        class="mb-4"
-        height="200px"
-        :src="productPriceForm.proofImage"
-        contain
-      />
-      <ProofImageCropped v-else-if="mode === 'Validation'" class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" />
+      <ProofImageCropped class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" />
       <v-row v-if="showProductNameField">
         <v-col>
           <v-text-field

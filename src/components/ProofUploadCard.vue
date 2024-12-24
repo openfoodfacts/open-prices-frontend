@@ -77,9 +77,9 @@ export default {
   components: {
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
+    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
-    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
   },
   props: {
     hideRecentProofChoice: {
