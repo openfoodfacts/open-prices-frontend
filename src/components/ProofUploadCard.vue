@@ -1,14 +1,10 @@
 <template>
   <v-card
     v-if="!proofObjectList.length"
-    :class="proofFormFilled ? 'border-success' : 'border-transparent'"
     :title="$t('Common.ProofDetails')"
     :prepend-icon="cardPrependIcon"
     height="100%"
   >
-    <template v-if="proofFormFilled" #append>
-      <v-icon icon="mdi-checkbox-marked-circle" color="success" />
-    </template>
     <v-divider />
     <v-card-text>
       <ProofTypeInputRow :proofTypeForm="proofForm" />
@@ -34,7 +30,7 @@
     </v-card-actions>
   </v-card>
 
-  <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
+  <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideProofActions="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
 
   <v-snackbar
     v-model="proofDateSuccessMessage"
