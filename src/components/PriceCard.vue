@@ -107,7 +107,7 @@ export default {
     },
     hidePriceCreated: {
       type: Boolean,
-      default: true
+      default: false
     },
     readonly: {
       type: Boolean,
