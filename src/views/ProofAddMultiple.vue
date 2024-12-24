@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" md="6">
-      <ProofUploadCard :hideRecentProofChoice="true" :multiple="true" @proof="uploaded = true" />
+      <ProofUploadCard :hideRecentProofChoice="true" :multiple="true" @proof="proofUploaded = true" />
     </v-col>
   </v-row>
 
@@ -10,8 +10,8 @@
       <v-btn
         class="float-right"
         type="submit"
-        :color="uploaded ? 'success' : ''"
-        :disabled="!uploaded"
+        :color="proofUploaded ? 'success' : ''"
+        :disabled="!proofUploaded"
         @click="done"
       >
         {{ $t('Common.Done') }}
@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      uploaded: false
+      proofUploaded: false
     }
   },
   methods: {
