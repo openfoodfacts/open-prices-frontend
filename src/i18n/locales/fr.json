@@ -324,7 +324,7 @@
 			"Cleanup": "3. Cleanup",
 			"Summary": "4. Summary"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.",
+		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
 		"FindBoundingBoxes": "Automatically find labels",
 		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
 		"LabelsExtractionSteps": {
@@ -339,6 +339,7 @@
 		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
 		"AddNewProof": "Add a new proof",
+		"NextProof": "Next proof",
 		"AutomaticBoundingBoxSource": "automatic",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Code-barres détecté : {barcode}",
