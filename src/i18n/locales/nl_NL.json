@@ -324,7 +324,7 @@
 			"Cleanup": "3. Cleanup",
 			"Summary": "4. Samenvatting"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels or press the button below to try again.",
+		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
 		"FindBoundingBoxes": "Automatisch labels vinden",
 		"FindBoundingBoxesRunning": "Automatische labeldetectie wordt uitgevoerd. Een ogenblik geduld...",
 		"LabelsExtractionSteps": {
@@ -339,6 +339,7 @@
 		"GoToDashboard": "Ga naar jouw dashboard",
 		"GoToProof": "Ga naar bewijs",
 		"AddNewProof": "Voeg een nieuw bewijs toe",
+		"NextProof": "Next proof",
 		"AutomaticBoundingBoxSource": "automatisch",
 		"ManualBoundingBoxSource": "manueel",
 		"DetectedBarcode": "Gedetecteerde barcode: {barcode}",
