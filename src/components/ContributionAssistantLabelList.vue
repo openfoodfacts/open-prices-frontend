@@ -10,30 +10,20 @@
       <v-card>
         <v-card-text>
           <v-img style="height:150px" :src="label.imageSrc" />
+          <v-chip label size="small" density="comfortable">
+            {{ $t('Common.Source') }} {{ label.boundingSource }}
+          </v-chip>
         </v-card-text>
         <v-divider />
         <v-card-actions>
-          <v-list-item class="w-100">
-            <template #prepend>
-              <v-chip label size="small" density="comfortable">
-                <span>
-                  {{ $t('Common.Source') }} {{ label.boundingSource }}
-                </span>
-              </v-chip>
-            </template>
-            <template #append>
-              <div class="justify-self-end">
-                <v-btn
-                  color="error"
-                  variant="outlined"
-                  prepend-icon="mdi-delete"
-                  @click="removeLabel(index)"
-                >
-                  {{ $t('Common.Delete') }}
-                </v-btn>
-              </div>
-            </template>
-          </v-list-item>
+          <v-btn
+            color="error"
+            variant="outlined"
+            prepend-icon="mdi-delete"
+            @click="removeLabel(index)"
+          >
+            {{ $t('Common.Delete') }}
+          </v-btn>
         </v-card-actions>
       </v-card>
     </v-col>
