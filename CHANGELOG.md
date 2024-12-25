@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.105.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.104.0...v1.105.0) (2024-12-25)
+
+
+### Features
+
+* **Currency detail:** New currency detail page ([#1170](https://github.com/openfoodfacts/open-prices-frontend/issues/1170)) ([206b81f](https://github.com/openfoodfacts/open-prices-frontend/commit/206b81ffc90f8f92d4b49734d27f4c0ebd7c63ad))
+
+
+### Bug Fixes
+
+* **Contribution Assistant:** fix typos following recent changes. ref [#1166](https://github.com/openfoodfacts/open-prices-frontend/issues/1166) ([80d5e81](https://github.com/openfoodfacts/open-prices-frontend/commit/80d5e813185b98af695ce018eb3b5be81448ab46))
+* **Contribution Assistant:** hide nextProof if no proof_ids param. ref [#1166](https://github.com/openfoodfacts/open-prices-frontend/issues/1166) ([d00fb04](https://github.com/openfoodfacts/open-prices-frontend/commit/d00fb04d49f751483b22bd7bb94f734d09126dc9))
+
+
+### Technical
+
+* **Barcode scanner:** new prop to allow hiding the scan tab. Use in CA & PV Assistants. ref [#1044](https://github.com/openfoodfacts/open-prices-frontend/issues/1044) & [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([3b7d9f9](https://github.com/openfoodfacts/open-prices-frontend/commit/3b7d9f960018dcc0d3ea547904b36150cfab41ff))
+* **Contribution Assistant:** better display label footer chip & CTA. ref [#1044](https://github.com/openfoodfacts/open-prices-frontend/issues/1044) ([126d601](https://github.com/openfoodfacts/open-prices-frontend/commit/126d601c665a63881e044728e8e8b6eadadd5284))
+* **Contribution Assistant:** hide detected barcode alert to gain some vertical space. ref [#1044](https://github.com/openfoodfacts/open-prices-frontend/issues/1044) ([758d4ea](https://github.com/openfoodfacts/open-prices-frontend/commit/758d4ea166cba00427553de9c54a61473b675e4b))
+* **Contribution Assistant:** hide price card header to gain some space. ref [#1044](https://github.com/openfoodfacts/open-prices-frontend/issues/1044) ([5ccaad4](https://github.com/openfoodfacts/open-prices-frontend/commit/5ccaad44750ad9a2bb34870b8891a3c461627661))
+* **ContributionAssistant:** Full integration with price tag data ([#1166](https://github.com/openfoodfacts/open-prices-frontend/issues/1166)) ([54a1035](https://github.com/openfoodfacts/open-prices-frontend/commit/54a1035b8f14bd739239386a1ff1c6e33ee33ea1))
+* **Currency detail:** new CurrencyCard with share link ([#1172](https://github.com/openfoodfacts/open-prices-frontend/issues/1172)) ([f70b22e](https://github.com/openfoodfacts/open-prices-frontend/commit/f70b22e7d300785bb913831c5f3ed66ec97bb62a))
+* **l10n:** New Crowdin translations to review and merge ([#1161](https://github.com/openfoodfacts/open-prices-frontend/issues/1161)) ([cd231ea](https://github.com/openfoodfacts/open-prices-frontend/commit/cd231ea52bf777f22495a8e918709ae0d3952115))
+* **Price card:** always show price created in the footer ([b90600e](https://github.com/openfoodfacts/open-prices-frontend/commit/b90600e025e34f087d519d89138e5151ab97ae0a))
+* **Price tag:** hide product_name form field behind prop. ref [#1078](https://github.com/openfoodfacts/open-prices-frontend/issues/1078), [#1155](https://github.com/openfoodfacts/open-prices-frontend/issues/1155), [#1159](https://github.com/openfoodfacts/open-prices-frontend/issues/1159) ([988bb74](https://github.com/openfoodfacts/open-prices-frontend/commit/988bb748b81fd56207d62862b2b7a0ab880151c6))
+* **Proof upload:** homogenise wording between different UIs. Use 'image' instead of 'proof' ([#1167](https://github.com/openfoodfacts/open-prices-frontend/issues/1167)) ([4211881](https://github.com/openfoodfacts/open-prices-frontend/commit/421188175b7eaf8e56db5f791fa72e4a044aeab2))
+* **Proof upload:** rename & upgrade ProofInputRow to ProofUploadCard ([#1168](https://github.com/openfoodfacts/open-prices-frontend/issues/1168)) ([924b76c](https://github.com/openfoodfacts/open-prices-frontend/commit/924b76cdb70ac973a94791c85490ff361c70d9b3))
+
 ## [1.104.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.103.0...v1.104.0) (2024-12-22)
 
 
