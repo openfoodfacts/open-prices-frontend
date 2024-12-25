@@ -39,7 +39,7 @@
                 {{ $t('ContributionAssistant.LabelsExtractionSteps.DrawBoundingBoxes') }}
               </h3>
               <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
-              <ContributionAssistantDrawCanvas ref="ContributionAssistantdrawCanvas" :key="proofForm.id" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
+              <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
             </v-col>
             <v-col cols="12" lg="6">
               <h3 class="mb-4">
@@ -277,7 +277,7 @@ export default {
           callback([])
           return
         }
-        api.getPriceTags({proof_id: this.proofForm.id, size: 100}).then(data => {
+        api.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
           const numberOfPriceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions.length).length
           if (numberOfPriceTagsWithPredictions >= minNumberOfPriceTagWithPredictions) {
             callback(data.items)
@@ -293,7 +293,7 @@ export default {
       this.extractedLabels = extractedLabels
     },
     removeLabel(index) {
-      this.$refs.ContributionAssistantdrawCanvas.removeBoundingBox(index) // This will trigger onExtractedLabels event
+      this.$refs.ContributionAssistantDrawCanvas.removeBoundingBox(index) // This will trigger onExtractedLabels event
     },
     processLabels() {
       // User is done drawing labels and has pressed the "Send labels" button
@@ -309,7 +309,7 @@ export default {
         newLabelsAddedWithCanvas.forEach(label => {
           api.createPriceTag({
             bounding_box: label.boundingBox,
-            proof_id: this.proofForm.id
+            proof_id: this.proofObject.id
           }).then(priceTag => {
             newPriceTagIds.push(priceTag.id)
           })
