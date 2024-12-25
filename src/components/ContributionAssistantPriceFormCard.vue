@@ -1,11 +1,6 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
-  <v-card
-    height="100%"
-    title="Label"
-    prepend-icon="mdi-tag-outline"
-  >
-    <v-divider />
+  <v-card height="100%">
     <v-card-text>
       <ProofImageCropped class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" />
       <v-row v-if="showProductNameField">
