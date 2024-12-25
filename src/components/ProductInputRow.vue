@@ -61,6 +61,7 @@
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
     v-model="barcodeScannerDialog"
+    :hideBarcodeScannerTab="hideBarcodeScannerTab"
     :barcodeManualInputPrefillValue="productForm.product_code"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
@@ -96,6 +97,10 @@ export default {
     disableInitWhenSwitchingType: {
       type: Boolean,
       default: () => false
+    },
+    hideBarcodeScannerTab: {
+      type: Boolean,
+      default: false
     }
   },
   emits: ['filled'],

@@ -85,6 +85,10 @@ export default {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
   },
   props: {
+    hideBarcodeScannerTab: {
+      type: Boolean,
+      default: false
+    },
     barcodeManualInputMode: {
       type: String,
       default: 'search'  // 'add'
@@ -104,7 +108,6 @@ export default {
       barcodeManualFormValid: false,
       product: null,
       // config
-      displayItems: constants.PRODUCT_SELECTOR_DISPLAY_LIST,
       currentDisplay: null,  // see mounted
       HTML5_QRCODE_URL: 'https://github.com/mebjas/html5-qrcode',
       HTML5_QRCODE_NAME: 'html5-qrcode'
@@ -112,6 +115,12 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    displayItems() {
+      if (this.hideBarcodeScannerTab) {
+        return constants.PRODUCT_SELECTOR_DISPLAY_LIST.filter(item => item.key !== constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key)
+      }
+      return constants.PRODUCT_SELECTOR_DISPLAY_LIST
+    },
     barcodeManualInputRules() {
       return [
         (v) => !!v || '',
@@ -121,7 +130,11 @@ export default {
   watch: {
     currentDisplay(value) {
       if (value === constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key) {
-        window.setTimeout(() => this.createQrcodeScanner(), 200)
+        if (this.hideBarcodeScannerTab) {
+          this.currentDisplay = constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key
+        } else {
+          window.setTimeout(() => this.createQrcodeScanner(), 200)
+        }
       } else {  // type
         window.setTimeout(() => this.$refs.barcodeManualInput.focus(), 200)
         if (this.scanner && this.scanner.getState() > 1) {
