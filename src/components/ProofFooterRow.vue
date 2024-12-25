@@ -8,7 +8,7 @@
       <PriceCountChip v-if="!hidePriceCount" class="mr-1" :count="proof.price_count" :withLabel="true" @click="goToProof()" />
       <LocationChip class="mr-1" :location="proof.location" :locationId="proof.location_id" :readonly="readonly" :showErrorIfLocationMissing="true" />
       <DateChip class="mr-1" :date="proof.date" :showErrorIfDateMissing="true" :readonly="readonly" />
-      <CurrencyChip class="mr-1" :currency="proof.currency" :showErrorIfCurrencyMissing="true" />
+      <CurrencyChip class="mr-1" :currency="proof.currency" :showErrorIfCurrencyMissing="true" :readonly="readonly" />
       <UserChip v-if="!hideProofOwner" class="mr-1" :username="proof.owner" :readonly="readonly" />
       <RelativeDateTimeChip :dateTime="proof.created" />
     </v-col>
