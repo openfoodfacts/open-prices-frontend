@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <v-card :title="currency" prepend-icon="mdi-cash" data-name="currency-card" />
+      <CurrencyCard :currency="currency" :priceCount="currencyPriceTotal" />
     </v-col>
   </v-row>
 
@@ -36,6 +36,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    CurrencyCard: defineAsyncComponent(() => import('../components/CurrencyCard.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
