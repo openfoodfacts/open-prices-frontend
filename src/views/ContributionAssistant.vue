@@ -116,7 +116,7 @@
               <v-btn class="mt-4 ml-4" :disabled="!allDone" @click="reloadPage">
                 {{ $t('ContributionAssistant.AddNewProof') }}
               </v-btn>
-              <v-btn class="mt-4 ml-4" :disabled="!allDone" @click="nextProof">
+              <v-btn v-if="proofIdsFromQueryParam" class="mt-4 ml-4" :disabled="!allDone" @click="nextProof">
                 {{ $t('ContributionAssistant.NextProof') }}
               </v-btn>
             </v-col>
@@ -203,6 +203,7 @@ export default {
       return !enableSummaryTab
     },
     proofIdsFromQueryParam() {
+      if (!this.$route.query.proof_ids) return null
       return this.$route.query.proof_ids.split(',')
     }
   },
