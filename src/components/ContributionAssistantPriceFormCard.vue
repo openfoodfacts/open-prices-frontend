@@ -19,15 +19,6 @@
         </v-col>
       </v-row>
       <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" @filled="productFormFilled = $event" />
-
-      <v-alert
-        v-if="productIsTypeProduct"
-        type="info"
-        variant="outlined"
-        density="compact"
-      >
-        {{ $t('ContributionAssistant.DetectedBarcode', { barcode: productPriceForm.detected_product_code }) }}
-      </v-alert>
       <PriceInputRow class="mt-0" :priceForm="productPriceForm" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
     <v-divider v-if="mode === 'Validation'" />
