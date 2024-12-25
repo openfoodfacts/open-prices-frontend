@@ -324,7 +324,7 @@
 			"Cleanup": "3. Очищення",
 			"Summary": "4. Підведення підсумків"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
+		"BoundingBoxesFromServerWarning": "Автоматично не виявлено жодної мітки. Будь ласка, вручну намалюйте квадрати навколо етикетки.",
 		"FindBoundingBoxes": "Автоматично знаходити мітки",
 		"FindBoundingBoxesRunning": "Виконується автоматичне визначення міток. Будь ласка, зачекайте...",
 		"LabelsExtractionSteps": {
@@ -339,7 +339,7 @@
 		"GoToDashboard": "Перейти до вашої панелі керування",
 		"GoToProof": "Перейти до доказу",
 		"AddNewProof": "Додати нове підтвердження",
-		"NextProof": "Next proof",
+		"NextProof": "Наступний доказ",
 		"AutomaticBoundingBoxSource": "автоматичний",
 		"ManualBoundingBoxSource": "вручну",
 		"DetectedBarcode": "Виявлено штрих-код: {barcode}",
