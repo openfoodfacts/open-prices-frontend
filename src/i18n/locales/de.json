@@ -324,7 +324,7 @@
 			"Cleanup": "3. Bereinigung",
 			"Summary": "4. Zusammenfassung"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
+		"BoundingBoxesFromServerWarning": "Es konnten keine Etiketten automatisch erkannt werden. Bitte zeichnen Sie manuell Quadrate um die Etiketten.",
 		"FindBoundingBoxes": "Etiketten automatisch erkennen",
 		"FindBoundingBoxesRunning": "Die automatische Etikettenerkennung wird ausgeführt. Bitte warten ...",
 		"LabelsExtractionSteps": {
@@ -339,7 +339,7 @@
 		"GoToDashboard": "Übersicht öffnen",
 		"GoToProof": "Nachweise öffnen",
 		"AddNewProof": "Neuen Nachweis hinzufügen",
-		"NextProof": "Next proof",
+		"NextProof": "Nächster Nachweis",
 		"AutomaticBoundingBoxSource": "automatisch",
 		"ManualBoundingBoxSource": "manuell",
 		"DetectedBarcode": "Erkannter Strichcode: {barcode}",
