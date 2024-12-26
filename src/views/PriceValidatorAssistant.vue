@@ -67,7 +67,7 @@ export default {
       return this.appStore.user.username
     },
     getPriceTagsParams() {
-      return { proof__owner: this.username, status__isnull: true, order_by: this.currentOrder, page: this.priceTagPage }
+      return { proof__owner: this.username, proof__ready_for_price_tag_validation: true, status__isnull: true, order_by: this.currentOrder, page: this.priceTagPage }
     },
   },
   mounted() {
