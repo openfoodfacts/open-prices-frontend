@@ -477,6 +477,9 @@
 		"LoadMore": "Įkelti daugiau",
 		"ProductNotFound": "Produktas nerastas Open Food Facts... Nedvejokite ir pridėkite :)"
 	},
+	"ProofAdd": {
+		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+	},
 	"ProofCard": {
 		"Proof": "Įrodymai",
 		"PRICE_TAG": "Kainos etiketė",
