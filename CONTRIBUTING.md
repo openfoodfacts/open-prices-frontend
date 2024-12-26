@@ -1,12 +1,21 @@
 # Contributing to Open Prices Frontend
 
-## Installation
+## Help with translating
+
+The translation for all openfoodfacts GitHub repositories, including this one, is done in a Crowdin project: <https://crowdin.com/project/openfoodfacts>
+
+In Crowdin, after selecting the target language, add `open-prices-frontend` as a filter to check the translations that only belong to this GitHub repository.
+
+
+## Help with developing
+
+### Installation
 
 If you don't already have Node.js install, we recommend using [`nvm`](https://github.com/nvm-sh/nvm) to manage different node versions.
 
 We use the [yarn](https://yarnpkg.com/getting-started/install) for package management.
 
-## Run the project
+### Run the project
 
 1. Install/update packages with command `yarn`
 2. Run in development mode with `yarn dev`
@@ -16,13 +25,13 @@ We use the [yarn](https://yarnpkg.com/getting-started/install) for package manag
 3. Run the back-end on your device. To do so, get and run the code of the server here: <https://github.com/openfoodfacts/open-prices>.
 4. You can start your first contribution :tada:
 
-## Build
+### Build
 
 ```sh
 yarn build
 ```
 
-## Lint
+### Lint
 
 ```sh
 yarn lint
@@ -30,13 +39,13 @@ yarn lint
 
 There is also a pre-commit configuration set up with [husky](https://typicode.github.io/husky/) and [lint-staged](https://github.com/lint-staged/lint-staged).
 
-## Tests
+### Tests
 
 ```sh
 yarn test
 ```
 
-## Update packages
+### Update packages
 
 ```sh
 // 1) list packages to update
