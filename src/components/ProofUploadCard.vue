@@ -7,7 +7,15 @@
   >
     <v-divider />
     <v-card-text>
-      <ProofTypeInputRow :proofTypeForm="proofForm" />
+      <v-alert
+        v-if="typePriceTagOnly && multiple"
+        class="mb-4"
+        type="warning"
+        variant="outlined"
+        density="compact"
+        :text="$t('ProofAdd.HowToMultiple')"
+      />
+      <ProofTypeInputRow v-if="!typePriceTagOnly" :proofTypeForm="proofForm" />
       <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
       <LocationInputRow :locationForm="proofForm" />
       <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />
@@ -82,6 +90,10 @@ export default {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
   props: {
+    typePriceTagOnly: {
+      type: Boolean,
+      default: false
+    },
     hideRecentProofChoice: {
       type: Boolean,
       default: false
@@ -155,6 +167,9 @@ export default {
   },
   methods: {
     initProofForm() {
+      if (this.typePriceTagOnly) {
+        this.proofForm.type = constants.PROOF_TYPE_PRICE_TAG
+      }
       this.proofForm.currency = this.appStore.getUserLastCurrencyUsed
     },
     handleProofSelectedList(proofSelectedList) {
