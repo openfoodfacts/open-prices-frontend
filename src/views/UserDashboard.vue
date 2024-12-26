@@ -6,6 +6,12 @@
   </v-row>
 
   <v-row>
+    <v-col v-if="displayTodayStats" cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="userTodayPriceCount" :subtitle="$t('Common.PricesToday')" />
+    </v-col>
+    <v-col v-if="displayTodayStats" cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="userTodayProofCount" :subtitle="$t('Common.ProofsToday')" />
+    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="userPriceCount" :subtitle="$t('Common.Prices')" to="/dashboard/prices" />
     </v-col>
@@ -64,6 +70,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -76,7 +83,9 @@ export default {
       // data
       user: null,
       userPriceCount: null,
+      userTodayPriceCount: null,
       userProofCount: null,
+      userTodayProofCount: null,
       userPriceList: [],
       loading: false,
       // success messages
@@ -91,6 +100,9 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    displayTodayStats() {
+      return this.userTodayPriceCount || this.userTodayProofCount
+    },
     displayedPriceList() {
       if (!this.$vuetify.display.smAndUp) {
         return this.userPriceList.slice(0, 5)
@@ -101,8 +113,8 @@ export default {
   },
   mounted() {
     this.getUser()
+    this.getUserPrices()
     this.getUserProofCount()
-    this.getPrices()
     // success messages
     if (Object.keys(this.$route.query).length) {
       if (this.$route.query.singleSuccess === 'true') {
@@ -129,20 +141,53 @@ export default {
           this.loading = false
         })
     },
-    getUserProofCount() {
+    getUserPrices() {
       this.loading = true
-      return api.getProofs({ owner: this.username, size: 1 })
-        .then((data) => {
-          this.userProofCount = data.total
-          this.loading = false
-        })
-    },
-    getPrices() {
-      this.loading = true
-      return api.getPrices({ owner: this.username, size: 25 })
+      const params = { owner: this.username, size: 25 }
+      return api.getPrices(params)
         .then((data) => {
           this.userPriceList = data.items
           this.userPriceCount = data.total
+          this.loading = false
+          // check if the user added a price today
+          if (data.items.length && data.items[0].created > utils.currentStartOfDay()) {
+            this.getUserPriceCount(true)
+          }
+        })
+    },
+    getUserPriceCount(today=false) {
+      this.loading = true
+      const params = { owner: this.username, size: 1 }
+      if (today) {
+        params.created__gte = utils.currentStartOfDay()
+      }
+      return api.getProofs(params)
+        .then((data) => {
+          if (today) {
+            this.userTodayPriceCount = data.total
+          } else {
+            this.userPriceCount = data.total
+          }
+          this.loading = false
+        })
+    },
+    getUserProofCount(today=false) {
+      this.loading = true
+      const params = { owner: this.username, size: 1 }
+      if (today) {
+        params.created__gte = utils.currentStartOfDay()
+      }
+      return api.getProofs(params)
+        .then((data) => {
+          if (today) {
+            this.userTodayProofCount = data.total
+          } else {
+            this.userProofCount = data.total
+            // check if the user added a proof today
+            if (data.items.length && data.items[0].created > utils.currentStartOfDay()) {
+              this.getUserProofCount(true)
+            }
+          }
           this.loading = false
         })
     },
