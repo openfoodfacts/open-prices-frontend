@@ -174,14 +174,14 @@ export default {
     getPricePerUnit(price) {
       if (price) {
         price = parseFloat(price)
-        if (this.priceForm.category_tag) {
+        if (this.priceForm.type === 'CATEGORY' && this.priceForm.category_tag) {
           if (this.priceForm.price_per === 'UNIT') {
             return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.priceForm.currency)])
           }
           // default to 'KILOGRAM'
           return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.priceForm.currency)])
         }
-        if (this.product && this.product.product_quantity) {
+        else if (this.priceForm.type === 'PRODUCT' && this.product && this.product.product_quantity) {
           const pricePerUnit = (price / this.product.product_quantity) * 1000
           if (this.product.product_quantity_unit === constants.PRODUCT_QUANTITY_UNIT_ML) {
             return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
