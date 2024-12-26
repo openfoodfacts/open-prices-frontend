@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.105.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.105.0...v1.105.1) (2024-12-26)
+
+
+### Bug Fixes
+
+* **Assistants:** match price currency with proof currency ([6e3ff25](https://github.com/openfoodfacts/open-prices-frontend/commit/6e3ff25ee841e316a4bda989e26984a09674149c))
+* **Barcode Scanner:** hide input stepper on the right. ref [#1085](https://github.com/openfoodfacts/open-prices-frontend/issues/1085) ([a164702](https://github.com/openfoodfacts/open-prices-frontend/commit/a1647024ccc233c2388a3f3a167f1e401c57a28d))
+* **Price add:** fix price per kg strange values. ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([cc8d633](https://github.com/openfoodfacts/open-prices-frontend/commit/cc8d633165e8fec667e4cd05e3e185fdc7ab828d))
+
 ## [1.105.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.104.0...v1.105.0) (2024-12-25)
 
 
