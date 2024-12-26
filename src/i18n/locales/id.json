@@ -477,6 +477,9 @@
 		"LoadMore": "Muat lebih banyak",
 		"ProductNotFound": "Produk tidak ditemukan di Open Food Facts... Jangan ragu untuk menambahkannya :)"
 	},
+	"ProofAdd": {
+		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+	},
 	"ProofCard": {
 		"Proof": "Bukti",
 		"PRICE_TAG": "Label harga",
