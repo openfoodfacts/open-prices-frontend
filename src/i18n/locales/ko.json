@@ -477,6 +477,9 @@
 		"LoadMore": "더 불러오기",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
+	"ProofAdd": {
+		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+	},
 	"ProofCard": {
 		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
