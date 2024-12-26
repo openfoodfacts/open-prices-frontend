@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" md="6">
-      <ProofUploadCard :hideRecentProofChoice="true" :multiple="true" @proof="proofUploaded = true" />
+      <ProofUploadCard :typePriceTagOnly="true" :hideRecentProofChoice="true" :multiple="true" @proof="proofUploaded = true" />
     </v-col>
   </v-row>
 
