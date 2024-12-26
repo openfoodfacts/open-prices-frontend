@@ -477,6 +477,9 @@
 		"LoadMore": "Scarica altro",
 		"ProductNotFound": "Prodotto non trovato in Open Food Facts... Non esitate ad aggiungerlo :)"
 	},
+	"ProofAdd": {
+		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+	},
 	"ProofCard": {
 		"Proof": "Prova",
 		"PRICE_TAG": "Etichetta del prezzo",

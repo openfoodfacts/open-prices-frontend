@@ -324,7 +324,7 @@
 			"Cleanup": "3. Cleanup",
 			"Summary": "4. Summary"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
+		"BoundingBoxesFromServerWarning": "No se pudieron detectar etiquetas automáticamente. Por favor, dibuja cuadrados manualmente alrededor de las etiquetas.",
 		"FindBoundingBoxes": "Automatically find labels",
 		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
 		"LabelsExtractionSteps": {
@@ -339,7 +339,7 @@
 		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
 		"AddNewProof": "Add a new proof",
-		"NextProof": "Next proof",
+		"NextProof": "Siguiente prueba",
 		"AutomaticBoundingBoxSource": "automatic",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Detected barcode: {barcode}",
@@ -476,6 +476,9 @@
 		"LatestPrices": "Últimos precios",
 		"LoadMore": "Cargar más",
 		"ProductNotFound": "No se ha encontrado el producgto en Open Food Facts... No dudes en agregarlo :)"
+	},
+	"ProofAdd": {
+		"HowToMultiple": "Todas las imágenes de etiquetas de precios que seleccione deben compartir la misma ubicación de la tienda y haber sido tomadas el mismo día."
 	},
 	"ProofCard": {
 		"Proof": "Comprobante",

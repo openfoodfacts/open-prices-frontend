@@ -477,6 +477,9 @@
 		"LoadMore": "Meer laden",
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
+	"ProofAdd": {
+		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+	},
 	"ProofCard": {
 		"Proof": "Bewijs",
 		"PRICE_TAG": "Prijskaartje",

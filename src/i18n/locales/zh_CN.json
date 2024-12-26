@@ -477,6 +477,9 @@
 		"LoadMore": "載入更多",
 		"ProductNotFound": "在 Open Food Facts 中找不到产品... 请随时添加:)"
 	},
+	"ProofAdd": {
+		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+	},
 	"ProofCard": {
 		"Proof": "证明",
 		"PRICE_TAG": "价格标签",

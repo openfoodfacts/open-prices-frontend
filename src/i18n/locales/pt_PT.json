@@ -218,10 +218,10 @@
 		"Help": "Ajuda",
 		"History": "Histórico",
 		"Image": "Imagem",
-		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
-		"ImageSelected": "Image selected!",
-		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
+		"ImageSelect": "Selecione uma imagem",
+		"ImageSelectMultiple": "Selecione as imagens",
+		"ImageSelected": "Imagem selecionada!",
+		"ImageSelectedCount": "{count} imagens selecionadas | {count} imagem selecionada | {count} imagens selecionadas",
 		"Images": "Imagens",
 		"ImageFull": "Imagem em tamanho real",
 		"Latest": "Mais recente",
@@ -258,7 +258,7 @@
 		"ProofDetails": "Detalhes do comprovativo",
 		"ProofMissing": "Falta o comprovativo",
 		"ProofSelect": "Selecionar um comprovativo",
-		"ProofSelectMultiple": "Select proofs",
+		"ProofSelectMultiple": "Selecionar comprovativos",
 		"ProofSelected": "Comprovativo selecionado!",
 		"ProofSelectedCount": "{count} comprovativos selecionados | {count} comprovativo selecionado | {count} comprovativos selecionados",
 		"Public": "Público",
@@ -324,7 +324,7 @@
 			"Cleanup": "3. Limpeza",
 			"Summary": "4. Resumo"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
+		"BoundingBoxesFromServerWarning": "Não foi possível detetar automaticamente nenhuma etiqueta. Desenhe manualmente os quadrados à volta das etiquetas.",
 		"FindBoundingBoxes": "Encontrar etiquetas automaticamente",
 		"FindBoundingBoxesRunning": "A deteção automática de etiquetas está a decorrer. Por favor, aguarde...",
 		"LabelsExtractionSteps": {
@@ -339,7 +339,7 @@
 		"GoToDashboard": "Aceda ao seu painel de controlo",
 		"GoToProof": "Vá ao comprovativo",
 		"AddNewProof": "Adicione um novo comprovativo",
-		"NextProof": "Next proof",
+		"NextProof": "Comprovativo seguinte",
 		"AutomaticBoundingBoxSource": "automático",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Código de barras detetado: {barcode}",
@@ -476,6 +476,9 @@
 		"LatestPrices": "Preços mais recentes",
 		"LoadMore": "Carregar mais",
 		"ProductNotFound": "Produto não encontrado em Open Food Facts... Não hesite em adicioná-lo :)"
+	},
+	"ProofAdd": {
+		"HowToMultiple": "Todas as imagens de etiquetas de preço que selecionar devem partilhar o mesmo local da loja e terem sido fotografadas no mesmo dia."
 	},
 	"ProofCard": {
 		"Proof": "Comprovativo",

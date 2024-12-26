@@ -241,7 +241,7 @@
 		"OrderProductCountDESC": "Anzahl der Produkte",
 		"OrderProofCountDESC": "Anzahl der Nachweise",
 		"OrderProofCreatedDESC": "Hinzugefügt am",
-		"OrderProofDateDESC": "Datum der Prüfung",
+		"OrderProofDateDESC": "Datum des Nachweises",
 		"OrderUserCountDESC": "Anzahl der Benutzer",
 		"PersonalInfo": "Persönliche Informationen",
 		"Physical": "Physisch",
@@ -476,6 +476,9 @@
 		"LatestPrices": "Aktuelle Preise",
 		"LoadMore": "Weitere laden",
 		"ProductNotFound": "Produkt nicht in Open Food Facts gefunden... Zögern Sie nicht, es hinzuzufügen 🙂"
+	},
+	"ProofAdd": {
+		"HowToMultiple": "Alle von Ihnen ausgewählten Preisschildbilder sollten den gleichen Standort haben und am gleichen Tag aufgenommen worden sein."
 	},
 	"ProofCard": {
 		"Proof": "Nachweis",

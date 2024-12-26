@@ -477,6 +477,9 @@
 		"LoadMore": "Načíst další",
 		"ProductNotFound": "Produkt nebyl nalezen v Open Food Facts... Neváhejte ho přidat :)"
 	},
+	"ProofAdd": {
+		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+	},
 	"ProofCard": {
 		"Proof": "Doklad",
 		"PRICE_TAG": "Cenovka",

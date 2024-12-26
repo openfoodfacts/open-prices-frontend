@@ -218,10 +218,10 @@
 		"Help": "Help",
 		"History": "Istorija",
 		"Image": "Vaizdas",
-		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
-		"ImageSelected": "Image selected!",
-		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
+		"ImageSelect": "Pasirinkti vaizdą",
+		"ImageSelectMultiple": "Pasirinkti vaizdus",
+		"ImageSelected": "Vaizdas pasirinktas!",
+		"ImageSelectedCount": "{count} pasirinkti vaizdai | {count} pasirinktas vaizdas | {count} pasirinkta vaizdų",
 		"Images": "Vaizdai",
 		"ImageFull": "Viso dydžio vaizdas",
 		"Latest": "Naujausi",
@@ -258,7 +258,7 @@
 		"ProofDetails": "Išsami įdorymų informacija",
 		"ProofMissing": "Trūksta įrodymo",
 		"ProofSelect": "Select a proof",
-		"ProofSelectMultiple": "Select proofs",
+		"ProofSelectMultiple": "Pasirinkti įrodymai",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} pasirinktų įrodymų | {count} pasirinktas įrodymas | Pasirinkti {count} įrodymai",
 		"Public": "Vieša",
@@ -324,7 +324,7 @@
 			"Cleanup": "3. Cleanup",
 			"Summary": "4. Summary"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
+		"BoundingBoxesFromServerWarning": "Nepavyko automatiškai aptikti jokių etikečių. Rankiniu būdu nubraižykite kvadratus aplink etiketes.",
 		"FindBoundingBoxes": "Automatically find labels",
 		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
 		"LabelsExtractionSteps": {
@@ -339,7 +339,7 @@
 		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
 		"AddNewProof": "Add a new proof",
-		"NextProof": "Next proof",
+		"NextProof": "Kitas įrodymas",
 		"AutomaticBoundingBoxSource": "automatic",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Detected barcode: {barcode}",
@@ -476,6 +476,9 @@
 		"LatestPrices": "Naujausios kainos",
 		"LoadMore": "Įkelti daugiau",
 		"ProductNotFound": "Produktas nerastas Open Food Facts... Nedvejokite ir pridėkite :)"
+	},
+	"ProofAdd": {
+		"HowToMultiple": "Visos jūsų pasirinktos kainų žym nuotraukos turi būti iš tos pačios parduotuvės vietos ir nufotografuotos tą pačią dieną."
 	},
 	"ProofCard": {
 		"Proof": "Įrodymai",
