@@ -128,7 +128,7 @@ export default {
               price: label.price.toString(),
               price_per: label.unit,
               price_is_discounted: false,
-              currency: this.appStore.getUserLastCurrencyUsed || 'EUR',
+              currency: data.items[i]['proof'].currency || this.appStore.getUserLastCurrencyUsed,
               proof: data.items[i]['proof'],
               proofImage: data.items[i]['proof'].file_path,
               // proofImage: 'https://prices.openfoodfacts.org/img/0024/2NToLMxOgN.webp',

@@ -348,7 +348,7 @@ export default {
           price: label.price.toString(),
           price_per: label.unit,
           price_is_discounted: false,
-          currency: this.appStore.getUserLastCurrencyUsed || 'EUR',
+          currency: priceTag['proof'].currency || this.appStore.getUserLastCurrencyUsed,
           proof: priceTag['proof'],
           proofImage: priceTag['proof'].file_path,
           product_code: barcodeString,
