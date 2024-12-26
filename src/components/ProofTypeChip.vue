@@ -1,8 +1,8 @@
 <template>
   <v-chip label size="small" :prepend-icon="getProofTypeIcon" density="comfortable">
-    <span v-if="proofType === 'GDPR_REQUEST'">
+    <span v-if="proofType === PROOF_TYPE_GDPR_REQUEST">
       <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">
-        {{ proofTypeName }}
+        {{ getProofTypeName }}
         <v-icon size="x-small" icon="mdi-open-in-new" />
       </a>
     </span>
@@ -25,6 +25,7 @@ export default {
   },
   data() {
     return {
+      PROOF_TYPE_GDPR_REQUEST: constants.PROOF_TYPE_GDPR_REQUEST,
       OFF_WIKI_GDPR_REQUEST_URL: constants.OFF_WIKI_GDPR_REQUEST_URL,
     }
   },
