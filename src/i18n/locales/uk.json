@@ -478,7 +478,7 @@
 		"ProductNotFound": "Продукт не знайдено в Open Food Facts... Не зволікайте, додайте його :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+		"HowToMultiple": "Усі зображення цінників, які ви виберете, мають мати одне місце розташування магазину та зроблені в один день."
 	},
 	"ProofCard": {
 		"Proof": "Доказ",
