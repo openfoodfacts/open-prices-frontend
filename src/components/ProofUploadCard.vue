@@ -7,6 +7,14 @@
   >
     <v-divider />
     <v-card-text>
+      <v-alert
+        v-if="typePriceTagOnly && multiple"
+        class="mb-4"
+        type="warning"
+        variant="outlined"
+        density="compact"
+        :text="$t('ProofAdd.HowToMultiple')"
+      />
       <ProofTypeInputRow v-if="!typePriceTagOnly" :proofTypeForm="proofForm" />
       <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
       <LocationInputRow :locationForm="proofForm" />
