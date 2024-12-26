@@ -31,8 +31,9 @@
                 ref="barcodeManualInput"
                 v-model="barcodeManualForm.barcode"
                 :label="$t('Common.Barcode')"
-                type="number"
+                type="text"
                 inputmode="numeric"
+                pattern="[0-9]+"
                 prepend-inner-icon="mdi-barcode"
                 :hint="barcodeManualForm.barcode.length.toString()"
                 clearable
