@@ -253,7 +253,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Απόρρητο",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
@@ -456,7 +456,7 @@
 		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Κατηγορίες",
-		"CategoriesLower": "κατηγοριες",
+		"CategoriesLower": "κατηγορίες",
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Ετικέτες",
@@ -508,7 +508,7 @@
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Απόρρητο"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
