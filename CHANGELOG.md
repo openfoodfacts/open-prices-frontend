@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.106.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.0...v1.106.1) (2024-12-27)
+
+
+### Bug Fixes
+
+* **User dashboard:** fix fetch user prices today. ref [#1179](https://github.com/openfoodfacts/open-prices-frontend/issues/1179) ([2d98203](https://github.com/openfoodfacts/open-prices-frontend/commit/2d982031846798926777c49e65e820bc468923a2))
+
 ## [1.106.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.105.1...v1.106.0) (2024-12-27)
 
 
