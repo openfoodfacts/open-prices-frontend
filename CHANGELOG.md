@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.106.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.1...v1.106.2) (2024-12-27)
+
+
+### Bug Fixes
+
+* **Contribution Assistant:** fix init with proof_ids typo. ref [#1166](https://github.com/openfoodfacts/open-prices-frontend/issues/1166) ([012b83f](https://github.com/openfoodfacts/open-prices-frontend/commit/012b83ff4a07433df436b6a5f4e36c4e21e9927c))
+* **User dashboard:** fix again user prices today display. ref [#1179](https://github.com/openfoodfacts/open-prices-frontend/issues/1179) ([673d4b4](https://github.com/openfoodfacts/open-prices-frontend/commit/673d4b408b1bd8c655bbb272ac2da56bcbe8df46))
+
 ## [1.106.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.0...v1.106.1) (2024-12-27)
 
 
