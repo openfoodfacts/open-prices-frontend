@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.106.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.2...v1.106.3) (2024-12-27)
+
+
+### Technical
+
+* **Home:** on mobile, load only the 5 latest prices (instead of loading 25 and slicing) ([4273a2e](https://github.com/openfoodfacts/open-prices-frontend/commit/4273a2e8615bd0b7459dfb5703ca7ffdcc3d49a0))
+* **Price validator assistant:** on mobile, load by batchs of 5 price tags (speed up). ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([8b774e6](https://github.com/openfoodfacts/open-prices-frontend/commit/8b774e6e140227fdffda4a3db79467f6a3044e67))
+* **Product card:** always display product barcode in Assistant pages to help validation. ref [#1044](https://github.com/openfoodfacts/open-prices-frontend/issues/1044) & [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([0664d49](https://github.com/openfoodfacts/open-prices-frontend/commit/0664d49629cbf756f1656a01a1670e1ab6ea6c9d))
+
 ## [1.106.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.1...v1.106.2) (2024-12-27)
 
 
