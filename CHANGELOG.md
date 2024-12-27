@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.106.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.105.1...v1.106.0) (2024-12-27)
+
+
+### Features
+
+* **User dashboard:** show today price & proof stats if any ([#1179](https://github.com/openfoodfacts/open-prices-frontend/issues/1179)) ([fd2bea9](https://github.com/openfoodfacts/open-prices-frontend/commit/fd2bea982cb6bbed74dfb52ee1669ea6bfdc0d54))
+
+
+### Bug Fixes
+
+* **Price add:** fix again price per kg strange values. ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([4c72125](https://github.com/openfoodfacts/open-prices-frontend/commit/4c7212528383e76e9a0071668a96f40ac53531b1))
+* **Proofs:** fix ProofTypeChip display (typo in code). ref [#1142](https://github.com/openfoodfacts/open-prices-frontend/issues/1142) ([4e953fd](https://github.com/openfoodfacts/open-prices-frontend/commit/4e953fdc553fffb6cb6ec583837dade63c684ee3))
+
+
+### Documentation
+
+* add section & link to translation platform (crowdin) ([#1180](https://github.com/openfoodfacts/open-prices-frontend/issues/1180)) ([d20fec1](https://github.com/openfoodfacts/open-prices-frontend/commit/d20fec1a6ec4fa2a60a75a047877f38eaba50df1))
+
+
+### Technical
+
+* add matomo to the metrics project ([#1055](https://github.com/openfoodfacts/open-prices-frontend/issues/1055)) ([45404b0](https://github.com/openfoodfacts/open-prices-frontend/commit/45404b07418fa7ad5a7ad1e9f9c6d940d3977a54))
+* **l10n:** New Crowdin translations to review and merge ([#1173](https://github.com/openfoodfacts/open-prices-frontend/issues/1173)) ([f8fc909](https://github.com/openfoodfacts/open-prices-frontend/commit/f8fc90978538c006a3cf8b0b3549621e77cc4af1))
+* **l10n:** New Crowdin translations to review and merge ([#1181](https://github.com/openfoodfacts/open-prices-frontend/issues/1181)) ([df4d3e6](https://github.com/openfoodfacts/open-prices-frontend/commit/df4d3e6e1aedad326366b22090e9f936112a0f8b))
+* **Multiple proof add:** skip type input. Add warning message ([#1175](https://github.com/openfoodfacts/open-prices-frontend/issues/1175)) ([1dc75c9](https://github.com/openfoodfacts/open-prices-frontend/commit/1dc75c9154ed5285db8c075eac2c47365470d663))
+* **Price Validation Assistant:** filter only on proofs ready (uploaded via Proof add pages) ([#1177](https://github.com/openfoodfacts/open-prices-frontend/issues/1177)) ([ff4b406](https://github.com/openfoodfacts/open-prices-frontend/commit/ff4b406fe165133e40f33d08fb2ea262e7731bea))
+* release-please config: add missing revert, perf, build & ci ([c8bfa40](https://github.com/openfoodfacts/open-prices-frontend/commit/c8bfa4083e85836f4886a13a161d5801cde68859))
+* release-please config: fix typo. ref [#1183](https://github.com/openfoodfacts/open-prices-frontend/issues/1183) ([79df43d](https://github.com/openfoodfacts/open-prices-frontend/commit/79df43d0df7b96486a3203d60f20ecc05f7cb1fc))
+* release-please config: new section for Documentation ([96f6423](https://github.com/openfoodfacts/open-prices-frontend/commit/96f642321343bfeb9cc39a2a9072d627d9ff626c))
+
 ## [1.105.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.105.0...v1.105.1) (2024-12-26)
 
 
