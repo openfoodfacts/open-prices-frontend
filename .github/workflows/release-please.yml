@@ -28,5 +28,5 @@ jobs:
               {"type":"chore","section":"Technical","hidden":false},
               {"type":"perf","section":"Technical","hidden":false},
               {"type":"build","section":"Technical","hidden":false},
-              {"type":"ci","section":"Technical","hidden":false},
+              {"type":"ci","section":"Technical","hidden":false}
             ]
