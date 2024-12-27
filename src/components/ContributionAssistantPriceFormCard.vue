@@ -13,7 +13,7 @@
           />
         </v-col>
       </v-row>
-      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
+      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
       <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
     <v-divider v-if="mode === 'Validation'" />
