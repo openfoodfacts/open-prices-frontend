@@ -217,7 +217,7 @@ export default {
     initWithProofIds(proofIds) {
       if (proofIds.length) {
         api.getProofById(proofIds[0]).then(proof => {
-          this.setProof(proof)
+          this.onProofUploaded(proof)
         })
       }
     },
