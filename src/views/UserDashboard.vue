@@ -101,7 +101,7 @@ export default {
       return this.appStore.user.username
     },
     displayTodayStats() {
-      return this.userTodayPriceCount || this.userTodayProofCount
+      return !!this.userTodayPriceCount || !!this.userTodayProofCount
     },
     displayedPriceList() {
       if (!this.$vuetify.display.smAndUp) {
@@ -161,7 +161,7 @@ export default {
       if (today) {
         params.created__gte = utils.currentStartOfDay()
       }
-      return api.getProofs(params)
+      return api.getPrices(params)
         .then((data) => {
           if (today) {
             this.userTodayPriceCount = data.total
