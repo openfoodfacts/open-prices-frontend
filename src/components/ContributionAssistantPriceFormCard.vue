@@ -21,17 +21,7 @@
       <ProofFooterRow :proof="productPriceForm.proof" :showProofChip="true" :hideProofType="true" :hideProofActions="true" :readonly="true" />
     </v-card-text>
     <v-divider />
-    <v-card-actions v-if="mode === 'Contribution'">
-      <v-btn
-        color="error"
-        variant="outlined"
-        prepend-icon="mdi-delete"
-        @click="removePriceTag"
-      >
-        {{ $t('Common.Delete') }}
-      </v-btn>
-    </v-card-actions>
-    <v-card-actions v-else-if="mode === 'Validation'">
+    <v-card-actions>
       <v-btn
         color="error"
         variant="outlined"
@@ -48,6 +38,7 @@
       </v-btn>
       <v-spacer />
       <v-btn
+        v-if="mode === 'Validation'"
         color="success"
         variant="flat"
         @click="validatePriceTag"
