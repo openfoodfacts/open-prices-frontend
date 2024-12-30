@@ -337,6 +337,7 @@
 			"SendLabels": "3. Envie as etiquetas para processamento automático",
 			"SendLabelsButton": "Enviar etiquetas"
 		},
+		"PricesAlreadyAdded": "Prices already added",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} preço(s) serão adicionados a um comprovativo existente a {date} em {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
 		"WaitForUpload": "Por favor aguarde pelo envio",
@@ -344,10 +345,16 @@
 		"GoToProof": "Vá ao comprovativo",
 		"AddNewProof": "Adicione um novo comprovativo",
 		"NextProof": "Comprovativo seguinte",
+		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automático",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Código de barras detetado: {barcode}",
-		"LabelProcessingErrorMessage": "Erro: falha no processamento automático da etiqueta"
+		"LabelProcessingErrorMessage": "Erro: falha no processamento automático da etiqueta",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagWithoutPrice": "Price tag without a price",
+			"NewPriceTag": "New price tag"
+		}
 	},
 	"Community": {
 		"JoinUs": "Junte-se a nós!",
