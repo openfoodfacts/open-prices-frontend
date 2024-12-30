@@ -337,6 +337,7 @@
 			"SendLabels": "3. לשלוח את התוויות לעיבוד אוטומטי",
 			"SendLabelsButton": "שליחת התוויות"
 		},
+		"PricesAlreadyAdded": "המחירים כבר נוספו",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} מחירים יתווספו להוכחה הקיימת ב־{date} ב־{locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} מחירים נוספו",
 		"WaitForUpload": "נא להמתין להעלאה",
@@ -344,10 +345,16 @@
 		"GoToProof": "מעבר להוכחה",
 		"AddNewProof": "הוספת הוכחה חדשה",
 		"NextProof": "ההוכחה הבאה",
+		"ChooseNextProof": "בחירת הוכחה נוספת לטיפול",
 		"AutomaticBoundingBoxSource": "אוטומטית",
 		"ManualBoundingBoxSource": "ידנית",
 		"DetectedBarcode": "זוהה ברקוד: {barcode}",
-		"LabelProcessingErrorMessage": "שגיאה: עיבוד תוויות אוטומטי נכשל"
+		"LabelProcessingErrorMessage": "שגיאה: עיבוד תוויות אוטומטי נכשל",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "תגית מחיר עם מחיר",
+			"PriceTagWithoutPrice": "תגית מחיר בלי מחיר",
+			"NewPriceTag": "תגית מחיר חדשה"
+		}
 	},
 	"Community": {
 		"JoinUs": "מזמינים אותך להצטרף אלינו!",
@@ -482,7 +489,7 @@
 		"ProductNotFound": "המוצר לא נמצא ב־Open Food Facts… אפשר להוסיף אותו ללא חשש :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+		"HowToMultiple": "כל תמונות תגיות המחירים שבחרת יחלקו את אותו מקום חנות ויתועדו לאותו היום."
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",

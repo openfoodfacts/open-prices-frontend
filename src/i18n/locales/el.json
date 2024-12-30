@@ -253,7 +253,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Απόρρητο",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
@@ -337,6 +337,7 @@
 			"SendLabels": "3. Send the labels for automatic processing",
 			"SendLabelsButton": "Send labels"
 		},
+		"PricesAlreadyAdded": "Prices already added",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
@@ -344,10 +345,16 @@
 		"GoToProof": "Go to proof",
 		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
+		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
+		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagWithoutPrice": "Price tag without a price",
+			"NewPriceTag": "New price tag"
+		}
 	},
 	"Community": {
 		"JoinUs": "Join us!",
@@ -456,11 +463,11 @@
 		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "Κατηγορίες",
-		"CategoriesLower": "κατηγοριες",
+		"CategoriesLower": "κατηγορίες",
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Ετικέτες",
-		"LabelsLower": "ετικετες",
+		"LabelsLower": "ετικέτες",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
 		"InvalidBarcode": "Invalid barcode",
@@ -508,7 +515,7 @@
 		"ProofNotFound": "Proof not found (or not the owner)",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Απόρρητο"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",

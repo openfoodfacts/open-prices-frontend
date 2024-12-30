@@ -247,7 +247,7 @@
 		"Physical": "Fizinis",
 		"PRICE_TAG": "Kainos etiketė",
 		"PriceCount": "{count} kainos | {count} kaina | {count} kainų",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
+		"PriceToValidateCount": "{count} kainos patvirtinti | {count} kaina patvirtinti | {count} kainų patvirtinti",
 		"PriceCreated": "Kaina sukurta!",
 		"PricesMore": "Daugiau kainų",
 		"PricesAddedToday": "Kainos pridėtos šiandien",
@@ -303,10 +303,10 @@
 		"Top": "Geriausi",
 		"Total": "Iš viso",
 		"Type": "Tipas",
-		"Unreadable": "Unreadable",
+		"Unreadable": "Neįskaitoma",
 		"Upload": "Įkelti",
 		"UploadMultipleImages": "Įkelti {count} vaizdą | Įkelti {count} vaizdus (-ų)",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UploadMultiplePrices": "Įkelti {count} kainą | Įkelti {count} kainas (-ų)",
 		"URL": "URL",
 		"URLInvalid": "Neteisingas URL",
 		"User": "Vartotojas",
@@ -323,31 +323,38 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. Įrodymo pasirinkimas",
+			"LabelsExtraction": "2. Etikečių išskleidimas",
+			"Cleanup": "3. Valymas",
+			"Summary": "4. Suvestinė"
 		},
 		"BoundingBoxesFromServerWarning": "Nepavyko automatiškai aptikti jokių etikečių. Rankiniu būdu nubraižykite kvadratus aplink etiketes.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"FindBoundingBoxes": "Automatiškai rasti etiketes",
+		"FindBoundingBoxesRunning": "Vyksta automatinis etikečių aptikimas. Palaukite...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. Nubrėžti kvadratus aplink etiketes",
+			"CheckLabels": "2. Patikrinti etikečių skaitomumą",
+			"SendLabels": "3. Siųsti etiketes automatiniam apdorojimui",
+			"SendLabelsButton": "Siųsti etiketes"
 		},
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
-		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
+		"PricesAlreadyAdded": "Kainos jau pridėtos",
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} kaina (-os) bus pridėta (-os) prie esamo įrodymo {date} {locationName}",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pridėta kainų",
+		"WaitForUpload": "Palaukite, kol bus įkeltas",
+		"GoToDashboard": "Eiti į savo valdymo sritį",
+		"GoToProof": "Eiti į įrodymą",
+		"AddNewProof": "Pridėti naują įrodymą",
 		"NextProof": "Kitas įrodymas",
-		"AutomaticBoundingBoxSource": "automatic",
-		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
+		"ChooseNextProof": "Pasirinkti kitą tvarkytiną įrodymą",
+		"AutomaticBoundingBoxSource": "automatinis",
+		"ManualBoundingBoxSource": "rankinis",
+		"DetectedBarcode": "Aptiktas brūkšninis kodas: {barcode}",
+		"LabelProcessingErrorMessage": "Klaida: nepavyko automatiškai apdoroti etiketės",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Kainos etiketė su kaina",
+			"PriceTagWithoutPrice": "Kainos etiketė be kainos",
+			"NewPriceTag": "Nauja kainos etiketė"
+		}
 	},
 	"Community": {
 		"JoinUs": "Prisijunkite prie mūsų!",
@@ -605,7 +612,7 @@
 			"Title": "Bendradarbiavimo asistentas"
 		},
 		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+			"Title": "Kainų tikrintuvo asistentas"
 		}
 	},
 	"Search": {
@@ -678,7 +685,7 @@
 		"FavoriteCurrencies": "Mėgstamos valiutos",
 		"CurrencyRequired": "Būtina bent viena valiuta",
 		"LanguageLabel": "Kalbos",
-		"LocationFinder": "Location finder",
+		"LocationFinder": "Vietos ieškiklis",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",
