@@ -337,7 +337,7 @@
 			"SendLabels": "3. Send the labels for automatic processing",
 			"SendLabelsButton": "Send labels"
 		},
-		"PricesAlreadyAdded": "Prices already added",
+		"PricesAlreadyAdded": "Precios ya añadidos",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
@@ -345,15 +345,15 @@
 		"GoToProof": "Go to proof",
 		"AddNewProof": "Add a new proof",
 		"NextProof": "Siguiente prueba",
-		"ChooseNextProof": "Choose another proof to handle",
+		"ChooseNextProof": "Elija otra prueba para manejar",
 		"AutomaticBoundingBoxSource": "automatic",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Detected barcode: {barcode}",
 		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Price tag with a price",
-			"PriceTagWithoutPrice": "Price tag without a price",
-			"NewPriceTag": "New price tag"
+			"PriceTagWithPrice": "Etiqueta de precio con un precio",
+			"PriceTagWithoutPrice": "Etiqueta de precio sin un precio",
+			"NewPriceTag": "Nueva etiqueta de precio"
 		}
 	},
 	"Community": {
