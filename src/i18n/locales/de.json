@@ -337,6 +337,7 @@
 			"SendLabels": "3. Senden Sie die Etiketten zur automatischen Verarbeitung",
 			"SendLabelsButton": "Etiketten senden"
 		},
+		"PricesAlreadyAdded": "Preise bereits hinzugefügt",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} Preis(e) wird/werden am {date} in {locationName} zu einem bestehenden Nachweis hinzugefügt",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} Preise hinzugefügt",
 		"WaitForUpload": "Bitte warten Sie bis das Hochladen abgeschlossen ist",
@@ -344,10 +345,16 @@
 		"GoToProof": "Nachweise öffnen",
 		"AddNewProof": "Neuen Nachweis hinzufügen",
 		"NextProof": "Nächster Nachweis",
+		"ChooseNextProof": "Einen anderen Nachweis zur Bearbeitung auswählen",
 		"AutomaticBoundingBoxSource": "automatisch",
 		"ManualBoundingBoxSource": "manuell",
 		"DetectedBarcode": "Erkannter Strichcode: {barcode}",
-		"LabelProcessingErrorMessage": "Fehler: Automatische Etikettenverarbeitung fehlgeschlagen"
+		"LabelProcessingErrorMessage": "Fehler: Automatische Etikettenverarbeitung fehlgeschlagen",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Preisschild mit Preis",
+			"PriceTagWithoutPrice": "Preisschild ohne Preis",
+			"NewPriceTag": "Neues Preisschild"
+		}
 	},
 	"Community": {
 		"JoinUs": "Machen Sie mit!",
