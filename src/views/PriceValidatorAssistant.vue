@@ -66,8 +66,12 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    getApiSize() {
+      if (!this.$vuetify.display.smAndUp) return 5
+      return 10
+    },
     getPriceTagsParams() {
-      return { proof__owner: this.username, proof__ready_for_price_tag_validation: true, status__isnull: true, order_by: this.currentOrder, page: this.priceTagPage }
+      return { proof__owner: this.username, proof__ready_for_price_tag_validation: true, status__isnull: true, order_by: this.currentOrder, size: this.getApiSize, page: this.priceTagPage }
     },
   },
   mounted() {

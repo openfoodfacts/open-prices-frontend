@@ -2,7 +2,7 @@
 <template>
   <v-card height="100%">
     <v-card-text>
-      <ProofImageCropped class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" />
+      <ProofImageCropped class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" @croppedImage="setCroppedImage($event)" />
       <v-row v-if="showProductNameField">
         <v-col>
           <v-text-field
@@ -13,7 +13,7 @@
           />
         </v-col>
       </v-row>
-      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
+      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
       <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
     <v-divider v-if="mode === 'Validation'" />
@@ -21,20 +21,11 @@
       <ProofFooterRow :proof="productPriceForm.proof" :showProofChip="true" :hideProofType="true" :hideProofActions="true" :readonly="true" />
     </v-card-text>
     <v-divider />
-    <v-card-actions v-if="mode === 'Contribution'">
+    <v-card-actions>
       <v-btn
         color="error"
         variant="outlined"
-        prepend-icon="mdi-delete"
-        @click="removePriceTag"
-      >
-        {{ $t('Common.Delete') }}
-      </v-btn>
-    </v-card-actions>
-    <v-card-actions v-else-if="mode === 'Validation'">
-      <v-btn
-        color="error"
-        variant="outlined"
+        prepend-icon="mdi-crop"
         @click="removePriceTag(3)"
       >
         {{ $t('Common.Error') }}
@@ -42,12 +33,14 @@
       <v-btn
         color="warning"
         variant="outlined"
+        prepend-icon="mdi-eye-off-outline"
         @click="removePriceTag(2)"
       >
         {{ $t('Common.Unreadable') }}
       </v-btn>
       <v-spacer />
       <v-btn
+        v-if="mode === 'Validation'"
         color="success"
         variant="flat"
         @click="validatePriceTag"
@@ -112,6 +105,9 @@ export default {
     }
   },
   methods: {
+    setCroppedImage(croppedImage) {
+      this.productPriceForm.croppedImage = croppedImage
+    },
     removePriceTag(status=null) {
       this.$emit('removePriceTag', status)
     },

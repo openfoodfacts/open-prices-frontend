@@ -1,5 +1,5 @@
 <template>
-  <v-dialog max-height="80%" min-width="50%" width="auto">
+  <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
     <v-card>
       <v-card-title>
         {{ $t('BarcodeManualInput.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
@@ -47,6 +47,12 @@ export default {
     }
   },
   computed: {
+    dialogHeight() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    dialogWidth() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
     formFilled() {
       return Object.values(this.barcodeForm).every(x => !!x)
     }

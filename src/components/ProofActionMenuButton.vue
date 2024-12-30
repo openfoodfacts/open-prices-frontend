@@ -7,17 +7,17 @@
           {{ $t('Common.Proof') }}
         </v-list-subheader>
         <v-divider />
-        <PriceAddLink :proofId="proof.id" display="list-item" :disabled="!userCanAddPrice" />
+        <PriceAddLink v-if="userIsProofOwner" :proofId="proof.id" display="list-item" :disabled="!userCanAddPrice" />
         <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
           {{ $t('Common.Details') }}
         </v-list-item>
         <v-list-item :slim="true" prepend-icon="mdi-open-in-new" :href="getProofFullUrl" target="_blank">
           {{ $t('Common.ImageFull') }}
         </v-list-item>
-        <v-list-item :slim="true" prepend-icon="mdi-pencil" :disabled="!userCanEditProof" @click="openEditDialog">
+        <v-list-item v-if="userIsProofOwner" :slim="true" prepend-icon="mdi-pencil" :disabled="!userCanEditProof" @click="openEditDialog">
           {{ $t('Common.Edit') }}
         </v-list-item>
-        <v-list-item :slim="true" prepend-icon="mdi-delete" :disabled="!userCanDeleteProof" @click="openDeleteConfirmationDialog">
+        <v-list-item v-if="userIsProofOwner" :slim="true" prepend-icon="mdi-delete" :disabled="!userCanDeleteProof" @click="openDeleteConfirmationDialog">
           {{ $t('Common.Delete') }}
         </v-list-item>
       </v-list>
@@ -58,6 +58,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import constants from '../constants'
 
 export default {
@@ -87,6 +89,13 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
+    username() {
+      return this.appStore.user.username
+    },
+    userIsProofOwner() {
+      return this.username && (this.proof.owner === this.username)
+    },
     getProofFullUrl() {
       // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'  // PRICE_TAG
       // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'  // RECEIPT
@@ -96,17 +105,17 @@ export default {
       return `/proofs/${this.proof.id}`
     },
     userCanAddPrice() {
-      return this.proof && constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
+      return this.proof && this.userIsProofOwner && constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
     },
     userCanEditProof() {
       // user must be proof owner (already checked in parent component)
       // only allow edition of certain proof types
-      return constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
+      return this.userIsProofOwner && constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
     },
     userCanDeleteProof() {
       // user must be proof owner (already checked in parent component)
       // and proof must not have any prices
-      return this.proof.price_count === 0
+      return this.userIsProofOwner && this.proof.price_count === 0
     },
   },
   methods: {

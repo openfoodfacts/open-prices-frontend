@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable max-height="80%" min-width="50%" width="auto">
+  <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
     <v-card>
       <v-card-title>
         {{ $t('ProofEdit.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
@@ -67,6 +67,12 @@ export default {
     }
   },
   computed: {
+    dialogHeight() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    dialogWidth() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
     formFilled() {
       let keys = ['type', 'date', 'currency']
       return Object.values(this.updateProofForm).filter(k => keys.includes(k)).every(k => !!this.updateProofForm[k])

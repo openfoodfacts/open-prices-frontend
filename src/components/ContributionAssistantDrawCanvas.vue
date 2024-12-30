@@ -37,7 +37,7 @@
     watch: {
       boundingBoxesFromServer() {
         if (this.boundingBoxesFromServer.length) {
-          this.initCanvas(true)
+          this.initCanvas(false)
         }
       }
     },
@@ -74,14 +74,15 @@
           this.boundingBoxes = [] // reset boundingBoxes
         }
         if (this.boundingBoxesFromServer) {
-          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(({boundingBox, id}) => {
+          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(({boundingBox, id, status}) => {
             return {
               startY: boundingBox[0] * this.image.height,
               startX: boundingBox[1] * this.image.width,
               endY: boundingBox[2] * this.image.height,
               endX: boundingBox[3] * this.image.width,
               boundingSource: this.$t('ContributionAssistant.AutomaticBoundingBoxSource'),
-              id: id
+              id: id,
+              status: status
             }
           }))
           this.extractLabels()
@@ -98,7 +99,7 @@
         }
         this.startX = event.offsetX / this.scale
         this.startY = event.offsetY / this.scale
-        this.isDrawing = true;
+        this.isDrawing = true
       },
       drawContent(event) {
         if (event.type == "touchmove") {
@@ -111,7 +112,7 @@
           const ctx = canvas.getContext("2d")
           
           ctx.drawImage(this.image, 0, 0, canvas.width, canvas.height); // Redraw image
-          this.drawBoundingBoxes(); // Redraw previous boundingBoxes
+          this.drawBoundingBoxes() // Redraw previous boundingBoxes
           
           const currentX = event.offsetX / this.scale
           const currentY = event.offsetY / this.scale
@@ -131,17 +132,39 @@
         }
         const endX = event.offsetX / this.scale
         const endY = event.offsetY / this.scale
-        this.boundingBoxes.push({ startX: this.startX, startY: this.startY, endX, endY, boundingSource: this.$t('ContributionAssistant.ManualBoundingBoxSource') })
+        // ignore bounding boxes that are too small
+        if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) > 10) {
+          this.boundingBoxes.push({ startX: this.startX, startY: this.startY, endX, endY, boundingSource: this.$t('ContributionAssistant.ManualBoundingBoxSource') })
+        }
         this.extractLabels()
+        this.drawBoundingBoxes()
       },
       drawBoundingBoxes() {
         const ctx = this.$refs.canvas.getContext("2d")
-        ctx.strokeStyle = "red"
         this.boundingBoxes.forEach(rect => {
           const { startX, startY, endX, endY } = rect
           const width = endX - startX
           const height = endY - startY
+          let text = ""
+          if (rect.status == 1) {
+            ctx.strokeStyle = "green"
+            ctx.fillStyle = "green"
+            text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithPrice')
+          } else if (rect.id) {
+            ctx.strokeStyle = "blue"
+            ctx.fillStyle = "blue"
+            text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice')
+          } else {
+            ctx.strokeStyle = "red"
+            ctx.fillStyle = "red"
+            text = this.$t('ContributionAssistant.PriceTagLabels.NewPriceTag')
+          }
           ctx.strokeRect(startX * this.scale, startY * this.scale, width * this.scale, height * this.scale)
+          const textWidth = ctx.measureText(text).width + 4
+          ctx.strokeRect(Math.min(startX, endX) * this.scale, Math.min(startY, endY) * this.scale - 10, textWidth, 10)
+          ctx.fillRect(Math.min(startX, endX) * this.scale, Math.min(startY, endY) * this.scale - 10, textWidth, 10)
+          ctx.fillStyle = "white"
+          ctx.fillText(text, Math.min(startX, endX) * this.scale + 2, Math.min(startY, endY) * this.scale - 2)
         });
       },
       async extractLabels() {
@@ -157,12 +180,18 @@
           originalCanvas.width = width
           originalCanvas.height = height
           ctx.drawImage(this.image, Math.min(startX, endX), Math.min(startY, endY), width, height, 0, 0, width, height)
+
+          const y_min = Math.min(startY, endY) / this.image.height
+          const y_max = Math.max(startY, endY) / this.image.height
+          const x_min = Math.min(startX, endX) / this.image.width
+          const x_max = Math.max(startX, endX) / this.image.width
           
           extractedLabels[i] = {
             imageSrc: originalCanvas.toDataURL(),
             blob: await new Promise(resolve => originalCanvas.toBlob(resolve, 'image/webp')),
             boundingSource: boundingSource,
-            boundingBox: [startY / this.image.height, startX / this.image.width, endY / this.image.height, endX / this.image.width],
+            boundingBox: [y_min, x_min, y_max, x_max],
+            status: rect.status,
             id: rect.id || null
           }
         }
@@ -170,12 +199,12 @@
       },
       removeBoundingBox(index) {
         this.boundingBoxes.splice(index, 1)
-          const canvas = this.$refs.canvas
-          const ctx = canvas.getContext("2d")
-          
-          ctx.drawImage(this.image, 0, 0, canvas.width, canvas.height)
-          this.drawBoundingBoxes()
-          this.extractLabels()
+        const canvas = this.$refs.canvas
+        const ctx = canvas.getContext("2d")
+        
+        ctx.drawImage(this.image, 0, 0, canvas.width, canvas.height)
+        this.drawBoundingBoxes()
+        this.extractLabels()
       }
     }
   }

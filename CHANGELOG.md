@@ -1,5 +1,69 @@
 # Changelog
 
+## [1.106.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.3...v1.106.4) (2024-12-30)
+
+
+### Technical
+
+* **API:** send the page url on every POST via the app_page param ([#1192](https://github.com/openfoodfacts/open-prices-frontend/issues/1192)) ([0882a34](https://github.com/openfoodfacts/open-prices-frontend/commit/0882a340d5fc8102a299e4fe9183780c11344440))
+* **ContributionAssistant:** More pricetags integrations ([#1188](https://github.com/openfoodfacts/open-prices-frontend/issues/1188)) ([236e9a4](https://github.com/openfoodfacts/open-prices-frontend/commit/236e9a4c2f4ff1e4fe0c7ed322706835b5eab46b))
+* **Dialogs:** full height & width on mobile ([#1193](https://github.com/openfoodfacts/open-prices-frontend/issues/1193)) ([3b5f6a9](https://github.com/openfoodfacts/open-prices-frontend/commit/3b5f6a9efc6bb2abd1e3d2326398e6f7015a2c38))
+* **Price tags:** add icons next to Error & Unreadable actions ([#1190](https://github.com/openfoodfacts/open-prices-frontend/issues/1190)) ([252c74b](https://github.com/openfoodfacts/open-prices-frontend/commit/252c74bec38c3034add31c70254fb0f8423b4dcd))
+
+## [1.106.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.2...v1.106.3) (2024-12-27)
+
+
+### Technical
+
+* **Home:** on mobile, load only the 5 latest prices (instead of loading 25 and slicing) ([4273a2e](https://github.com/openfoodfacts/open-prices-frontend/commit/4273a2e8615bd0b7459dfb5703ca7ffdcc3d49a0))
+* **Price validator assistant:** on mobile, load by batchs of 5 price tags (speed up). ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([8b774e6](https://github.com/openfoodfacts/open-prices-frontend/commit/8b774e6e140227fdffda4a3db79467f6a3044e67))
+* **Product card:** always display product barcode in Assistant pages to help validation. ref [#1044](https://github.com/openfoodfacts/open-prices-frontend/issues/1044) & [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([0664d49](https://github.com/openfoodfacts/open-prices-frontend/commit/0664d49629cbf756f1656a01a1670e1ab6ea6c9d))
+
+## [1.106.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.1...v1.106.2) (2024-12-27)
+
+
+### Bug Fixes
+
+* **Contribution Assistant:** fix init with proof_ids typo. ref [#1166](https://github.com/openfoodfacts/open-prices-frontend/issues/1166) ([012b83f](https://github.com/openfoodfacts/open-prices-frontend/commit/012b83ff4a07433df436b6a5f4e36c4e21e9927c))
+* **User dashboard:** fix again user prices today display. ref [#1179](https://github.com/openfoodfacts/open-prices-frontend/issues/1179) ([673d4b4](https://github.com/openfoodfacts/open-prices-frontend/commit/673d4b408b1bd8c655bbb272ac2da56bcbe8df46))
+
+## [1.106.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.0...v1.106.1) (2024-12-27)
+
+
+### Bug Fixes
+
+* **User dashboard:** fix fetch user prices today. ref [#1179](https://github.com/openfoodfacts/open-prices-frontend/issues/1179) ([2d98203](https://github.com/openfoodfacts/open-prices-frontend/commit/2d982031846798926777c49e65e820bc468923a2))
+
+## [1.106.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.105.1...v1.106.0) (2024-12-27)
+
+
+### Features
+
+* **User dashboard:** show today price & proof stats if any ([#1179](https://github.com/openfoodfacts/open-prices-frontend/issues/1179)) ([fd2bea9](https://github.com/openfoodfacts/open-prices-frontend/commit/fd2bea982cb6bbed74dfb52ee1669ea6bfdc0d54))
+
+
+### Bug Fixes
+
+* **Price add:** fix again price per kg strange values. ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([4c72125](https://github.com/openfoodfacts/open-prices-frontend/commit/4c7212528383e76e9a0071668a96f40ac53531b1))
+* **Proofs:** fix ProofTypeChip display (typo in code). ref [#1142](https://github.com/openfoodfacts/open-prices-frontend/issues/1142) ([4e953fd](https://github.com/openfoodfacts/open-prices-frontend/commit/4e953fdc553fffb6cb6ec583837dade63c684ee3))
+
+
+### Documentation
+
+* add section & link to translation platform (crowdin) ([#1180](https://github.com/openfoodfacts/open-prices-frontend/issues/1180)) ([d20fec1](https://github.com/openfoodfacts/open-prices-frontend/commit/d20fec1a6ec4fa2a60a75a047877f38eaba50df1))
+
+
+### Technical
+
+* add matomo to the metrics project ([#1055](https://github.com/openfoodfacts/open-prices-frontend/issues/1055)) ([45404b0](https://github.com/openfoodfacts/open-prices-frontend/commit/45404b07418fa7ad5a7ad1e9f9c6d940d3977a54))
+* **l10n:** New Crowdin translations to review and merge ([#1173](https://github.com/openfoodfacts/open-prices-frontend/issues/1173)) ([f8fc909](https://github.com/openfoodfacts/open-prices-frontend/commit/f8fc90978538c006a3cf8b0b3549621e77cc4af1))
+* **l10n:** New Crowdin translations to review and merge ([#1181](https://github.com/openfoodfacts/open-prices-frontend/issues/1181)) ([df4d3e6](https://github.com/openfoodfacts/open-prices-frontend/commit/df4d3e6e1aedad326366b22090e9f936112a0f8b))
+* **Multiple proof add:** skip type input. Add warning message ([#1175](https://github.com/openfoodfacts/open-prices-frontend/issues/1175)) ([1dc75c9](https://github.com/openfoodfacts/open-prices-frontend/commit/1dc75c9154ed5285db8c075eac2c47365470d663))
+* **Price Validation Assistant:** filter only on proofs ready (uploaded via Proof add pages) ([#1177](https://github.com/openfoodfacts/open-prices-frontend/issues/1177)) ([ff4b406](https://github.com/openfoodfacts/open-prices-frontend/commit/ff4b406fe165133e40f33d08fb2ea262e7731bea))
+* release-please config: add missing revert, perf, build & ci ([c8bfa40](https://github.com/openfoodfacts/open-prices-frontend/commit/c8bfa4083e85836f4886a13a161d5801cde68859))
+* release-please config: fix typo. ref [#1183](https://github.com/openfoodfacts/open-prices-frontend/issues/1183) ([79df43d](https://github.com/openfoodfacts/open-prices-frontend/commit/79df43d0df7b96486a3203d60f20ecc05f7cb1fc))
+* release-please config: new section for Documentation ([96f6423](https://github.com/openfoodfacts/open-prices-frontend/commit/96f642321343bfeb9cc39a2a9072d627d9ff626c))
+
 ## [1.105.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.105.0...v1.105.1) (2024-12-26)
 
 
