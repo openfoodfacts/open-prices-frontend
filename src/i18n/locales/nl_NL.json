@@ -337,6 +337,7 @@
 			"SendLabels": "3. Verzend de labels voor automatische verwerking",
 			"SendLabelsButton": "Labels verzenden"
 		},
+		"PricesAlreadyAdded": "Prices already added",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
 		"WaitForUpload": "Please wait for upload",
@@ -344,10 +345,16 @@
 		"GoToProof": "Ga naar bewijs",
 		"AddNewProof": "Voeg een nieuw bewijs toe",
 		"NextProof": "Next proof",
+		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatisch",
 		"ManualBoundingBoxSource": "manueel",
 		"DetectedBarcode": "Gedetecteerde barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Fout: automatische verwerking van label mislukt"
+		"LabelProcessingErrorMessage": "Fout: automatische verwerking van label mislukt",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagWithoutPrice": "Price tag without a price",
+			"NewPriceTag": "New price tag"
+		}
 	},
 	"Community": {
 		"JoinUs": "Doe mee!",
