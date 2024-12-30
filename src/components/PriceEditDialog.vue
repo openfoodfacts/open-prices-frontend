@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable max-height="80%" min-width="50%" width="auto">
+  <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
     <v-card>
       <v-card-title>
         {{ $t('PriceEdit.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
@@ -85,6 +85,14 @@ export default {
       productMode: null,
       loading: false
     }
+  },
+  computed: {
+    dialogHeight() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    dialogWidth() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
   },
   mounted() {
     this.initUpdatePriceForm()

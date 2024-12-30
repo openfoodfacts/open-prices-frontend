@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable height="80%" width="80%">
+  <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
     <v-card>
       <v-card-title>
         {{ $t('Common.LocationFindShop') }} <v-btn
@@ -176,6 +176,12 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    dialogHeight() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    dialogWidth() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
     recentLocations() {
       return this.appStore.getRecentLocations()
     },
