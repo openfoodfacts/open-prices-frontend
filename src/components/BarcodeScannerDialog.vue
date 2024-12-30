@@ -8,6 +8,12 @@
       <v-divider />
 
       <v-card-text>
+        <v-img
+          v-if="barcodeManualInputCroppedImage"
+          :src="barcodeManualInputCroppedImage"
+          contain
+          max-height="50%"
+        />
         <v-tabs v-model="currentDisplay">
           <v-tab v-for="item in displayItems" :key="item.key" :value="item.key">
             <v-icon start>
@@ -97,7 +103,11 @@ export default {
     barcodeManualInputPrefillValue: {
       type: String,
       default: ''
-    }
+    },
+    barcodeManualInputCroppedImage: {
+      type: String,
+      default: ''
+    },
   },
   emits: ['barcode', 'close'],
   data() {

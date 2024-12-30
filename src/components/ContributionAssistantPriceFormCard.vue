@@ -2,7 +2,7 @@
 <template>
   <v-card height="100%">
     <v-card-text>
-      <ProofImageCropped class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" />
+      <ProofImageCropped class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" @croppedImage="setCroppedImage($event)" />
       <v-row v-if="showProductNameField">
         <v-col>
           <v-text-field
@@ -105,6 +105,9 @@ export default {
     }
   },
   methods: {
+    setCroppedImage(croppedImage) {
+      this.productPriceForm.croppedImage = croppedImage
+    },
     removePriceTag(status=null) {
       this.$emit('removePriceTag', status)
     },
