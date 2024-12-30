@@ -337,6 +337,7 @@
 			"SendLabels": "3. Send the labels for automatic processing",
 			"SendLabelsButton": "Send labels"
 		},
+		"PricesAlreadyAdded": "Prices already added",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
@@ -344,10 +345,16 @@
 		"GoToProof": "Go to proof",
 		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
+		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
+		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagWithoutPrice": "Price tag without a price",
+			"NewPriceTag": "New price tag"
+		}
 	},
 	"Community": {
 		"JoinUs": "Join us!",
@@ -460,7 +467,7 @@
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Ετικέτες",
-		"LabelsLower": "ετικετες",
+		"LabelsLower": "ετικέτες",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
 		"InvalidBarcode": "Invalid barcode",
