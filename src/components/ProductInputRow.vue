@@ -63,6 +63,7 @@
     v-model="barcodeScannerDialog"
     :hideBarcodeScannerTab="hideBarcodeScannerTab"
     :barcodeManualInputPrefillValue="productForm.product_code"
+    :barcodeManualInputCroppedImage="productForm.croppedImage"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
   />
