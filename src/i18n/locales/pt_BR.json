@@ -337,6 +337,7 @@
 			"SendLabels": "3. Envie os rótulos para processamento automático",
 			"SendLabelsButton": "Enviar rótulos"
 		},
+		"PricesAlreadyAdded": "Prices already added",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} preço(s) serão adicionados a um comprovante existente no dia {date} em {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
 		"WaitForUpload": "Por favor aguarde o upload",
@@ -344,10 +345,16 @@
 		"GoToProof": "Ir para o comprovante",
 		"AddNewProof": "Adicionar um novo comprovante",
 		"NextProof": "Next proof",
+		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automático",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Código de barras detectado: {barcode}",
-		"LabelProcessingErrorMessage": "Erro: falha no processamento automático do rótulo"
+		"LabelProcessingErrorMessage": "Erro: falha no processamento automático do rótulo",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagWithoutPrice": "Price tag without a price",
+			"NewPriceTag": "New price tag"
+		}
 	},
 	"Community": {
 		"JoinUs": "Junte-se a nós!",
