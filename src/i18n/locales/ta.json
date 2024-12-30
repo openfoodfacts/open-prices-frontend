@@ -337,6 +337,7 @@
 			"SendLabels": "3. தானியங்கி செயலாக்கத்திற்கு லேபிள்களை அனுப்பவும்",
 			"SendLabelsButton": "லேபிள்களை அனுப்பவும்"
 		},
+		"PricesAlreadyAdded": "Prices already added",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} விலை(கள்) {date} இல் {locationName} இல் ஏற்கனவே உள்ள ஆதாரத்துடன் சேர்க்கப்படும்",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
@@ -344,10 +345,16 @@
 		"GoToProof": "Go to proof",
 		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
+		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed"
+		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagWithoutPrice": "Price tag without a price",
+			"NewPriceTag": "New price tag"
+		}
 	},
 	"Community": {
 		"JoinUs": "Join us!",
