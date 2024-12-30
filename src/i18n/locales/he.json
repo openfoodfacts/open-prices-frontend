@@ -337,6 +337,7 @@
 			"SendLabels": "3. לשלוח את התוויות לעיבוד אוטומטי",
 			"SendLabelsButton": "שליחת התוויות"
 		},
+		"PricesAlreadyAdded": "Prices already added",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} מחירים יתווספו להוכחה הקיימת ב־{date} ב־{locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} מחירים נוספו",
 		"WaitForUpload": "נא להמתין להעלאה",
@@ -344,10 +345,16 @@
 		"GoToProof": "מעבר להוכחה",
 		"AddNewProof": "הוספת הוכחה חדשה",
 		"NextProof": "ההוכחה הבאה",
+		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "אוטומטית",
 		"ManualBoundingBoxSource": "ידנית",
 		"DetectedBarcode": "זוהה ברקוד: {barcode}",
-		"LabelProcessingErrorMessage": "שגיאה: עיבוד תוויות אוטומטי נכשל"
+		"LabelProcessingErrorMessage": "שגיאה: עיבוד תוויות אוטומטי נכשל",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagWithoutPrice": "Price tag without a price",
+			"NewPriceTag": "New price tag"
+		}
 	},
 	"Community": {
 		"JoinUs": "מזמינים אותך להצטרף אלינו!",
