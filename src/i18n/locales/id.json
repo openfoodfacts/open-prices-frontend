@@ -337,6 +337,7 @@
 			"SendLabels": "3. Kirim label untuk pemrosesan otomatis",
 			"SendLabelsButton": "Kirim label"
 		},
+		"PricesAlreadyAdded": "Prices already added",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} harga akan ditambahkan ke bukti yang sudah ada pada {date} di {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} harga ditambahkan",
 		"WaitForUpload": "Harap tunggu untuk diunggah",
@@ -344,10 +345,16 @@
 		"GoToProof": "Buka bukti",
 		"AddNewProof": "Tambahkan bukti baru",
 		"NextProof": "Next proof",
+		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "otomatis",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Kode batang terdeteksi: {barcode}",
-		"LabelProcessingErrorMessage": "Eror: pemrosesan otomatis label gagal"
+		"LabelProcessingErrorMessage": "Eror: pemrosesan otomatis label gagal",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagWithoutPrice": "Price tag without a price",
+			"NewPriceTag": "New price tag"
+		}
 	},
 	"Community": {
 		"JoinUs": "Bergabunglah bersama kami!",
