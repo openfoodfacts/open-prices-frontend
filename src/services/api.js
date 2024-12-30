@@ -15,7 +15,9 @@ const OP_DEFAULT_HEADERS = {
 }
 const OP_DEFAULT_PARAMS = {
   'app_name': constants.APP_USER_AGENT
-  // 'app_version'  // hack to store price/proof create source
+  // 'app_version'
+  // 'app_platform'
+  // 'app_page'  // filled with the page url
 }
 
 function buildURLParams(params = {}) {
@@ -106,7 +108,7 @@ export default {
         formData.append('receipt_price_total', data.receipt_price_total)
       }
     }
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams({'app_version': source})}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams({'app_page': source})}`
     return fetch(url, {
       method: 'POST',
       headers: {
@@ -175,7 +177,7 @@ export default {
     data = extraPriceCreateFiltering(data)
     const store = useAppStore()
     store.user.last_product_product_used = data.product_code ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({'app_version': source})}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({'app_page': source})}`
     return fetch(url, {
       method: 'POST',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
