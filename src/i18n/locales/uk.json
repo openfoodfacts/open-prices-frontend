@@ -337,6 +337,7 @@
 			"SendLabels": "3. Надішліть етикетки на автоматичну обробку",
 			"SendLabelsButton": "Надіслати мітки"
 		},
+		"PricesAlreadyAdded": "Prices already added",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} ціна(и) буде додано до наявного доказу на {date} у {locationName}",
 		"PriceAddProgress": "Додано ціни {numberOfPricesAdded} / {totalNumberOfPrices}",
 		"WaitForUpload": "Зачекайте на завантаження",
@@ -344,10 +345,16 @@
 		"GoToProof": "Перейти до доказу",
 		"AddNewProof": "Додати нове підтвердження",
 		"NextProof": "Наступний доказ",
+		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "автоматичний",
 		"ManualBoundingBoxSource": "вручну",
 		"DetectedBarcode": "Виявлено штрих-код: {barcode}",
-		"LabelProcessingErrorMessage": "Помилка: при автоматичній обробці етикетки"
+		"LabelProcessingErrorMessage": "Помилка: при автоматичній обробці етикетки",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagWithoutPrice": "Price tag without a price",
+			"NewPriceTag": "New price tag"
+		}
 	},
 	"Community": {
 		"JoinUs": "Приєднайся до нас!",
