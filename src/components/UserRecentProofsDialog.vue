@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable height="80%" width="80%">
+  <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
     <v-card>
       <v-card-title>
         {{ $t('UserRecentProofsDialog.SelectRecentProof') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
@@ -56,6 +56,12 @@ export default {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
+    },
+    dialogHeight() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    dialogWidth() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
     getProofParams() {
       let defaultParams = { owner: this.username, page: this.userProofPage }

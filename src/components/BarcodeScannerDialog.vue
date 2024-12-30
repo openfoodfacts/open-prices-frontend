@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable min-height="50%" max-height="80%" min-width="50%">
+  <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
     <v-card>
       <v-card-title>
         {{ $t('Common.ProductFind') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
@@ -116,6 +116,12 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    dialogHeight() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    dialogWidth() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
     displayItems() {
       if (this.hideBarcodeScannerTab) {
         return constants.PRODUCT_SELECTOR_DISPLAY_LIST.filter(item => item.key !== constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key)

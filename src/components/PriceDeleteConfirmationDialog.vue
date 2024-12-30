@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable max-height="80%" min-width="50%" width="auto">
+  <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
     <v-card>
       <v-card-title>
         {{ $t('PriceDelete.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog" />
@@ -55,6 +55,14 @@ export default {
     return {
       loading: false,
     }
+  },
+  computed: {
+    dialogHeight() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    dialogWidth() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
   },
   methods: {
     deletePrice() {
