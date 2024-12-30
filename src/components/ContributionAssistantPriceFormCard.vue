@@ -35,6 +35,7 @@
       <v-btn
         color="error"
         variant="outlined"
+        prepend-icon="mdi-crop"
         @click="removePriceTag(3)"
       >
         {{ $t('Common.Error') }}
@@ -42,6 +43,7 @@
       <v-btn
         color="warning"
         variant="outlined"
+        prepend-icon="mdi-eye-off-outline"
         @click="removePriceTag(2)"
       >
         {{ $t('Common.Unreadable') }}
