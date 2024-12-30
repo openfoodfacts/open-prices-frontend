@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.106.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.3...v1.106.4) (2024-12-30)
+
+
+### Technical
+
+* **API:** send the page url on every POST via the app_page param ([#1192](https://github.com/openfoodfacts/open-prices-frontend/issues/1192)) ([0882a34](https://github.com/openfoodfacts/open-prices-frontend/commit/0882a340d5fc8102a299e4fe9183780c11344440))
+* **ContributionAssistant:** More pricetags integrations ([#1188](https://github.com/openfoodfacts/open-prices-frontend/issues/1188)) ([236e9a4](https://github.com/openfoodfacts/open-prices-frontend/commit/236e9a4c2f4ff1e4fe0c7ed322706835b5eab46b))
+* **Dialogs:** full height & width on mobile ([#1193](https://github.com/openfoodfacts/open-prices-frontend/issues/1193)) ([3b5f6a9](https://github.com/openfoodfacts/open-prices-frontend/commit/3b5f6a9efc6bb2abd1e3d2326398e6f7015a2c38))
+* **Price tags:** add icons next to Error & Unreadable actions ([#1190](https://github.com/openfoodfacts/open-prices-frontend/issues/1190)) ([252c74b](https://github.com/openfoodfacts/open-prices-frontend/commit/252c74bec38c3034add31c70254fb0f8423b4dcd))
+
 ## [1.106.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.2...v1.106.3) (2024-12-27)
 
 
