@@ -337,6 +337,7 @@
 			"SendLabels": "3. Siųsti etiketes automatiniam apdorojimui",
 			"SendLabelsButton": "Siųsti etiketes"
 		},
+		"PricesAlreadyAdded": "Kainos jau pridėtos",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} kaina (-os) bus pridėta (-os) prie esamo įrodymo {date} {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pridėta kainų",
 		"WaitForUpload": "Palaukite, kol bus įkeltas",
@@ -344,10 +345,16 @@
 		"GoToProof": "Eiti į įrodymą",
 		"AddNewProof": "Pridėti naują įrodymą",
 		"NextProof": "Kitas įrodymas",
+		"ChooseNextProof": "Pasirinkti kitą tvarkytiną įrodymą",
 		"AutomaticBoundingBoxSource": "automatinis",
 		"ManualBoundingBoxSource": "rankinis",
 		"DetectedBarcode": "Aptiktas brūkšninis kodas: {barcode}",
-		"LabelProcessingErrorMessage": "Klaida: nepavyko automatiškai apdoroti etiketės"
+		"LabelProcessingErrorMessage": "Klaida: nepavyko automatiškai apdoroti etiketės",
+		"PriceTagLabels": {
+			"PriceTagWithPrice": "Kainos etiketė su kaina",
+			"PriceTagWithoutPrice": "Kainos etiketė be kainos",
+			"NewPriceTag": "Nauja kainos etiketė"
+		}
 	},
 	"Community": {
 		"JoinUs": "Prisijunkite prie mūsų!",
