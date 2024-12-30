@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :cols="userIsProofOwner ? '11' : '12'">
+    <v-col cols="11">
       <ProofChip v-if="showProofChip" class="mr-1" :proof="proof" :readonly="true" />
       <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
       <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" class="mr-1" :totalCount="proof.receipt_price_count" />
@@ -14,7 +14,7 @@
     </v-col>
   </v-row>
 
-  <ProofActionMenuButton v-if="!hideProofActions && userIsProofOwner" :proof="proof" />
+  <ProofActionMenuButton v-if="!hideProofActions" :proof="proof" />
 </template>
 
 <script>
@@ -87,7 +87,7 @@ export default {
   },
   methods: {
     goToProof() {
-      if (this.readonly || !this.userIsProofOwner) {
+      if (this.readonly) {
         return
       }
       this.$router.push({ path: `/proofs/${this.proof.id}` })
