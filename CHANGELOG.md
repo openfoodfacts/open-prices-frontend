@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.106.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.4...v1.106.5) (2024-12-30)
+
+
+### Technical
+
+* **Barcode scanner:** display price tag cropped image if available ([#1195](https://github.com/openfoodfacts/open-prices-frontend/issues/1195)) ([f3ea4aa](https://github.com/openfoodfacts/open-prices-frontend/commit/f3ea4aa80a92b94b2477a9d37bd1fa1ce62c3c54))
+* **l10n:** New Crowdin translations to review and merge ([#1182](https://github.com/openfoodfacts/open-prices-frontend/issues/1182)) ([decaaaf](https://github.com/openfoodfacts/open-prices-frontend/commit/decaaaf288bb9c62ddc30709c7055896e0c62bc0))
+* **Proofs:** add action menu to open with the contribution asssitant ([#1198](https://github.com/openfoodfacts/open-prices-frontend/issues/1198)) ([8544586](https://github.com/openfoodfacts/open-prices-frontend/commit/854458620ae46a5e536ffdb653a3fd9e70c4fe81))
+* **Proofs:** display the proof action menu to everyone ([#1197](https://github.com/openfoodfacts/open-prices-frontend/issues/1197)) ([3c61f24](https://github.com/openfoodfacts/open-prices-frontend/commit/3c61f2475bab94b787571d7742f3841b84816a95))
+
 ## [1.106.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.3...v1.106.4) (2024-12-30)
 
 
