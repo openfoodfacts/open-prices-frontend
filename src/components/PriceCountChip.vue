@@ -17,6 +17,11 @@ export default {
       type: Boolean,
       default: false
     },
+    source: {
+      type: String,
+      default: null,
+      examples: ['proof', 'location', 'product', 'category', 'date', 'currency', 'user']
+    }
   },
   methods: {
     getColor() {
@@ -24,6 +29,7 @@ export default {
         return 'error'
       }
       if (this.count === 1) {
+        if (this.source === 'proof') return 'success'
         return 'warning'
       }
       if (this.count > 1) {
