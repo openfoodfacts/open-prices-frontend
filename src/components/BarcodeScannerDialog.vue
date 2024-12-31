@@ -1,9 +1,9 @@
 <template>
   <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
-    <v-card>
-      <v-card-title>
-        {{ $t('Common.ProductFind') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
-      </v-card-title>
+    <v-card :title="$t('Common.ProductFind')">
+      <template #append>
+        <v-icon icon="mdi-close" @click="close" />
+      </template>
 
       <v-divider />
 

@@ -1,9 +1,9 @@
 <template>
   <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
-    <v-card>
-      <v-card-title>
-        {{ $t('PriceDelete.Title') }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="closeDialog" />
-      </v-card-title>
+    <v-card :title="$t('PriceDelete.Title')">
+      <template #append>
+        <v-icon icon="mdi-close" @click="close" />
+      </template>
 
       <v-divider />
 
@@ -74,13 +74,13 @@ export default {
           this.loading = false
           this.removePriceCard()
           this.$emit('delete')
-          this.closeDialog()
+          this.close()
         })
     },
     removePriceCard() {
       document.getElementById(`price_${this.price.id}`).remove()
     },
-    closeDialog() {
+    close() {
       this.$emit('close')
     },
   }
