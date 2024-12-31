@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.107.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.7...v1.107.0) (2024-12-31)
+
+
+### Features
+
+* **User recent proofs:** Add proof filters in dialog header ([#1208](https://github.com/openfoodfacts/open-prices-frontend/issues/1208)) ([19406f6](https://github.com/openfoodfacts/open-prices-frontend/commit/19406f6b989acb97c39e6f9a19ab928848360197))
+
+
+### Bug Fixes
+
+* **Proof dialog:** full height & width on mobile. ref [#1193](https://github.com/openfoodfacts/open-prices-frontend/issues/1193) & [#1210](https://github.com/openfoodfacts/open-prices-frontend/issues/1210) ([1bd5cf1](https://github.com/openfoodfacts/open-prices-frontend/commit/1bd5cf19035f9cb662d9ecede3b3eeac8896628f))
+
+
+### Technical
+
+* **Dialogs:** homogenize the dialog title & close icon setup ([#1211](https://github.com/openfoodfacts/open-prices-frontend/issues/1211)) ([76e0f36](https://github.com/openfoodfacts/open-prices-frontend/commit/76e0f36b48c17f3b1f05c741b1a91b68dc6c263c))
+* **Proofs:** new ProofDialog component ([#1210](https://github.com/openfoodfacts/open-prices-frontend/issues/1210)) ([300d4bb](https://github.com/openfoodfacts/open-prices-frontend/commit/300d4bb34a9d13296b00149df3e8c68571dc98a8))
+
 ## [1.106.7](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.6...v1.106.7) (2024-12-31)
 
 
