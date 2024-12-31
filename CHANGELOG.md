@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.106.7](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.6...v1.106.7) (2024-12-31)
+
+
+### Bug Fixes
+
+* **Infinite scroll:** fix load prices on the ProductDetail page. closes [#1205](https://github.com/openfoodfacts/open-prices-frontend/issues/1205) ([85f76a4](https://github.com/openfoodfacts/open-prices-frontend/commit/85f76a405e5f87787bcf305bcd9e38a43fcc6a70))
+
+
+### Technical
+
+* **Proof card:** display PriceCountChip in green from the first price. closes [#1187](https://github.com/openfoodfacts/open-prices-frontend/issues/1187) ([aaf69e6](https://github.com/openfoodfacts/open-prices-frontend/commit/aaf69e6ae598d6aa37a2abc174526f70ce94dfe0))
+
 ## [1.106.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.5...v1.106.6) (2024-12-31)
 
 
