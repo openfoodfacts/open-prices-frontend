@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.107.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.107.0...v1.107.1) (2024-12-31)
+
+
+### Bug Fixes
+
+* **Infinite scroll:** fix again load prices on the ProductDetail page. ref [#1205](https://github.com/openfoodfacts/open-prices-frontend/issues/1205) ([cab5742](https://github.com/openfoodfacts/open-prices-frontend/commit/cab574288a347dd1fdddf623fc38c985746d0bb1))
+
 ## [1.107.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.7...v1.107.0) (2024-12-31)
 
 
