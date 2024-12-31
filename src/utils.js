@@ -64,6 +64,21 @@ function isValidBarcode(value) {
   return ((10 - (result % 10)) % 10) === parseInt(paddedValue.charAt(13), 10)
 }
 
+function cleanBarcode(value) {
+  // remove spaces
+  value = value.replace(/\s/g, '')
+  // keep only digits
+  value = value.replace(/\D/g, '')
+  // special case: 22 digits could be Carrefour
+  // 182492/3119789831280/051 -> 1824923119789831280051 -> 3119789831280
+  if (value.length === 22) {
+    value = value.substring(6, 6+13)
+  }
+  // remove leading zeros
+  value = value.replace(/^0+/, '')
+  return value
+}
+
 function addObjectToArray(arr, obj, unshift=false, avoidDuplicates=true) {
   // look for duplicate
   let duplicateItemIndex = arr.findIndex(item => JSON.stringify(item) === JSON.stringify(obj))
@@ -414,6 +429,7 @@ export default {
   isURL,
   getURLOrigin,
   isValidBarcode,
+  cleanBarcode,
   addObjectToArray,
   removeObjectFromArray,
   currentStartOfDay,

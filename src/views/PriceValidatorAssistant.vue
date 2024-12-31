@@ -121,11 +121,11 @@ export default {
           this.loading = false
           for (let i = 0; i < data.items.length; i++) {
             const label = data.items[i]['predictions'][0]['data']
-            const barcodeString = label.barcode ? label.barcode.toString().replace(/\s/g, '') : ''
+            const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''
             // TODO: some of these will be None if gemini did not give a proper reply, so detection and error handling is needed
             const productPriceForm = {
               id: data.items[i].id,
-              type: barcodeString.length > 10 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY,
+              type: barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY,
               category_tag: label.product,
               origins_tags: [label.origin],
               labels_tags: label.organic ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : [],
@@ -136,6 +136,7 @@ export default {
               proof: data.items[i]['proof'],
               proofImage: data.items[i]['proof'].file_path,
               // proofImage: 'https://prices.openfoodfacts.org/img/0024/2NToLMxOgN.webp',
+              croppedImage: null,
               product_code: barcodeString,
               detected_product_code: barcodeString,
               product_name: label.product_name,
