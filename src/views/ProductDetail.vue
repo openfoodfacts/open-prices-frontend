@@ -96,7 +96,7 @@ export default {
       product: null,
       category: null,
       productPriceList: [],
-      productPriceTotal: 0,
+      productPriceTotal: null,
       productPricePage: 0,
       priceLocationList: [],
       loading: false,
