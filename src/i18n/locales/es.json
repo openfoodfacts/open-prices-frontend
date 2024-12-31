@@ -354,7 +354,8 @@
 			"PriceTagWithPrice": "Etiqueta de precio con un precio",
 			"PriceTagWithoutPrice": "Etiqueta de precio sin un precio",
 			"NewPriceTag": "Nueva etiqueta de precio"
-		}
+		},
+		"OpenWithTheAssistant": "Open with the assistant"
 	},
 	"Community": {
 		"JoinUs": "Join us!",

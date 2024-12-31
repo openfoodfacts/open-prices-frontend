@@ -354,7 +354,8 @@
 			"PriceTagWithPrice": "Kainos etiketė su kaina",
 			"PriceTagWithoutPrice": "Kainos etiketė be kainos",
 			"NewPriceTag": "Nauja kainos etiketė"
-		}
+		},
+		"OpenWithTheAssistant": "Atidaryti su asistentu"
 	},
 	"Community": {
 		"JoinUs": "Prisijunkite prie mūsų!",

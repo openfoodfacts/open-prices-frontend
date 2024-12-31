@@ -354,7 +354,8 @@
 			"PriceTagWithPrice": "Preisschild mit Preis",
 			"PriceTagWithoutPrice": "Preisschild ohne Preis",
 			"NewPriceTag": "Neues Preisschild"
-		}
+		},
+		"OpenWithTheAssistant": "Mit Assistent öffnen"
 	},
 	"Community": {
 		"JoinUs": "Machen Sie mit!",
