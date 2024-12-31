@@ -7,6 +7,16 @@
 
       <v-divider />
 
+      <v-card-title>
+        <v-chip label variant="text" prepend-icon="mdi-image">
+          {{ $t('Common.ProofCount', { count: userProofTotal }) }}
+        </v-chip>
+        <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
+        <FilterMenu v-if="userProofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
+      </v-card-title>
+
+      <v-divider />
+
       <v-card-text>
         <v-row>
           <v-col v-for="proof in userProofList" :key="proof" cols="12" md="6" lg="4">
@@ -34,13 +44,9 @@ import constants from '../constants'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
-  },
-  props: {
-    filterType: {
-      type: String,
-      default: null,
-    }
   },
   emits: ['recentProofSelected', 'close'],
   data() {
@@ -50,6 +56,9 @@ export default {
       userProofPage: 0,
       loading: false,
       selectedProof: null,
+      // filter
+      currentFilter: '',
+      currentType: '',
     }
   },
   computed: {
@@ -65,16 +74,25 @@ export default {
     },
     getProofParams() {
       let defaultParams = { owner: this.username, page: this.userProofPage }
-      if (this.filterType) {
-        defaultParams[constants.TYPE_PARAM] = this.filterType
+      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
+        defaultParams['price_count'] = 0
+      }
+      if (this.currentType) {
+        defaultParams[constants.TYPE_PARAM] = this.currentType
       }
       return defaultParams
     }
   },
   mounted() {
-    this.getUserProofs()
+    this.initUserProofList()
   },
   methods: {
+    initUserProofList() {
+      this.userProofList = []
+      this.userProofTotal = null
+      this.userProofPage = 0
+      this.getUserProofs()
+    },
     getUserProofs() {
       this.loading = true
       this.userProofPage += 1
@@ -88,6 +106,14 @@ export default {
           console.error(error)
           this.loading = false
         })
+    },
+    toggleProofFilter(filterKey) {
+      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.initUserProofList()
+    },
+    toggleProofType(sourceKey) {
+      this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
+      this.initUserProofList()
     },
     selectProof(proof) {
       this.selectedProof = proof
