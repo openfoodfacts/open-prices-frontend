@@ -55,7 +55,6 @@
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
-    :filterType="proofImageForm.type"
     @recentProofSelected="recentProofSelected($event)"
     @close="userRecentProofsDialog = false"
   />
