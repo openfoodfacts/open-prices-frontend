@@ -1,25 +1,31 @@
 <template>
   <v-chip
-    style="padding-left:5px;padding-right:5px"
+    :class="class"
+    :style="style"
     label
     size="small"
     density="comfortable"
     :title="$t('Common.Proof')"
-    @click="openDialog"
+    @click="dialog = true"
   >
     <v-icon icon="mdi-image" />
-    <v-dialog v-model="dialog" scrollable max-height="80%" min-width="50%" width="auto">
-      <ProofCard :proof="proof" :hideProofActions="true" :readonly="readonly" @close="closeDialog" />
-    </v-dialog>
   </v-chip>
+
+  <ProofDialog
+    v-if="dialog"
+    v-model="dialog"
+    :proof="proof"
+    :readonly="readonly"
+    @close="dialog = false"
+  />
 </template>
 
 <script>
-import ProofCard from '../components/ProofCard.vue'
+import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
-    ProofCard,
+    ProofDialog: defineAsyncComponent(() => import('../components/ProofDialog.vue')),
   },
   props: {
     proof: {
@@ -29,19 +35,19 @@ export default {
     readonly: {
       type: Boolean,
       default: false,
-    }
+    },
+    class: {
+      type: String,
+      default: ''
+    },
+    style: {
+      type: String,
+      default: 'padding-left:5px;padding-right:5px;'
+    },
   },
   data() {
     return {
       dialog: false
-    }
-  },
-  methods: {
-    openDialog() {
-      this.dialog = true
-    },
-    closeDialog() {
-      this.dialog = false
     }
   }
 }
