@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.106.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.5...v1.106.6) (2024-12-31)
+
+
+### Bug Fixes
+
+* **Barcode scanner:** fix clearable action ([6e8d774](https://github.com/openfoodfacts/open-prices-frontend/commit/6e8d7743c2f2d3322cb6703bab204db86e64d104))
+* **Infinite scroll:** fix infinite loading when no data to display ([7e3a046](https://github.com/openfoodfacts/open-prices-frontend/commit/7e3a0468b095858beb6d8099d33d51a6d179f2fc))
+
+
+### Technical
+
+* **Assistants:** barcode pre-cleaning rules to improve matching ([#1204](https://github.com/openfoodfacts/open-prices-frontend/issues/1204)) ([7729c15](https://github.com/openfoodfacts/open-prices-frontend/commit/7729c155bc279a8ed78bc360eca8881865b87a75))
+* **l10n:** New Crowdin translations to review and merge ([#1199](https://github.com/openfoodfacts/open-prices-frontend/issues/1199)) ([e4d26d8](https://github.com/openfoodfacts/open-prices-frontend/commit/e4d26d882462b1cabb679eaf8935c68c288fba86))
+
 ## [1.106.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.106.4...v1.106.5) (2024-12-30)
 
 
