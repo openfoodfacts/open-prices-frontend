@@ -165,7 +165,7 @@ export default {
     initProductPrices() {
       this.productId = this.$route.params.id
       this.productPriceList = []
-      this.productPriceTotal = 0
+      this.productPriceTotal = null
       this.productPricePage = 0
       this.priceLocationList = []
       this.getProductPrices()
