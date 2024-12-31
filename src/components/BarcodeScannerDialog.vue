@@ -41,7 +41,7 @@
                 inputmode="numeric"
                 pattern="[0-9]+"
                 prepend-inner-icon="mdi-barcode"
-                :hint="barcodeManualForm.barcode.length.toString()"
+                :hint="barcodeManualInputLength"
                 clearable
                 persistent-hint
               >
@@ -137,6 +137,10 @@ export default {
         return constants.PRODUCT_SELECTOR_DISPLAY_LIST.filter(item => item.key !== constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key)
       }
       return constants.PRODUCT_SELECTOR_DISPLAY_LIST
+    },
+    barcodeManualInputLength() {
+      if (!this.barcodeManualForm.barcode) return '0'
+      return this.barcodeManualForm.barcode.length.toString()
     },
     barcodeManualInputRules() {
       return [
