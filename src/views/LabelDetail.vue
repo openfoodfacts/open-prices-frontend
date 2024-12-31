@@ -98,7 +98,7 @@ export default {
       this.getLabelProducts()
     },
     getLabelProducts() {
-      if (this.labelProductTotal && (this.labelProductList.length >= this.labelProductTotal)) return
+      if ((this.labelProductTotal != null) && (this.labelProductList.length >= this.labelProductTotal)) return
       this.loading = true
       this.labelProductPage += 1
       return api.getProducts(this.getProductsParams)

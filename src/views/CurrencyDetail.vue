@@ -85,7 +85,7 @@ export default {
       this.getCurrencyPrices()
     },
     getCurrencyPrices() {
-      if (this.currencyPriceTotal && (this.currencyPriceList.length >= this.currencyPriceTotal)) return
+      if ((this.currencyPriceTotal != null) && (this.currencyPriceList.length >= this.currencyPriceTotal)) return
       this.loading = true
       this.currencyPricePage += 1
       return api.getPrices(this.getPricesParams)

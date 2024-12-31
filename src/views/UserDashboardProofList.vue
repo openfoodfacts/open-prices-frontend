@@ -103,7 +103,7 @@ export default {
       this.getUserProofs()
     },
     getUserProofs() {
-      if (this.userProofTotal && (this.userProofList.length >= this.userProofTotal)) return
+      if ((this.userProofTotal != null) && (this.userProofList.length >= this.userProofTotal)) return
       this.loading = true
       this.userProofPage += 1
       return api.getProofs(this.getUserProofsParams)

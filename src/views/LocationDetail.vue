@@ -115,7 +115,7 @@ export default {
         })
     },
     getLocationPrices() {
-      if (this.locationPriceTotal && (this.locationPriceList.length >= this.locationPriceTotal)) return
+      if ((this.locationPriceTotal != null) && (this.locationPriceList.length >= this.locationPriceTotal)) return
       this.loading = true
       this.locationPricePage += 1
       return api.getPrices(this.getPricesParams)

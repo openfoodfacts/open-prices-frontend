@@ -104,7 +104,7 @@ export default {
       this.getCountryLocations()
     },
     getCountryLocations() {
-      if (this.countryLocationTotal && (this.countryLocationList.length >= this.countryLocationTotal)) return
+      if ((this.countryLocationTotal != null) && (this.countryLocationList.length >= this.countryLocationTotal)) return
       this.loading = true
       this.countryLocationPage += 1
       return api.getLocations(this.getLocationsParams)

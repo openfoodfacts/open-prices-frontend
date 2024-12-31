@@ -59,6 +59,12 @@ export default {
       loading: false,
     }
   },
+  computed: {
+    getPricesParams() {
+      let defaultParams = { proof_id: this.proofId, page: this.proofPricePage }
+      return defaultParams
+    }
+  },
   mounted() {
     this.getProof()
     // load more
@@ -79,10 +85,10 @@ export default {
         })
     },
     getProofPrices() {
-      if (this.proofPriceTotal && (this.proofPriceList.length >= this.proofPriceTotal)) return
+      if ((this.proofPriceTotal != null) && (this.proofPriceList.length >= this.proofPriceTotal)) return
       this.loading = true
       this.proofPricePage += 1
-      return api.getPrices({ proof_id: this.proofId, page: this.proofPricePage })
+      return api.getPrices(this.getPricesParams)
         .then((data) => {
           this.proofPriceList.push(...data.items)
           this.proofPriceTotal = data.total

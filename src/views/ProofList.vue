@@ -85,7 +85,7 @@ export default {
       this.getProofs()
     },
     getProofs() {
-      if (this.proofTotal && (this.proofList.length >= this.proofTotal)) return
+      if ((this.proofTotal != null) && (this.proofList.length >= this.proofTotal)) return
       this.loading = true
       this.proofPage += 1
       return api.getProofs(this.getProofsParams)

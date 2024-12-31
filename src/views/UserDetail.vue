@@ -94,7 +94,7 @@ export default {
       this.getUserPrices()
     },
     getUserPrices() {
-      if (this.userPriceTotal && (this.userPriceList.length >= this.userPriceTotal)) return
+      if ((this.userPriceTotal != null) && (this.userPriceList.length >= this.userPriceTotal)) return
       this.loading = true
       this.userPricePage += 1
       return api.getPrices(this.getPricesParams)

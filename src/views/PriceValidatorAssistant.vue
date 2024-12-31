@@ -111,7 +111,7 @@ export default {
       })
     },
     getPriceTags() {
-      if (this.priceTagTotal && (this.priceTagList.length >= this.priceTagTotal)) return
+      if ((this.priceTagTotal != null) && (this.priceTagList.length >= this.priceTagTotal)) return
       this.loading = true
       this.priceTagPage += 1
       return api.getPriceTags(this.getPriceTagsParams)
