@@ -1,5 +1,5 @@
 <template>
-  <v-dialog scrollable max-height="80%" min-width="50%" width="auto">
+  <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
     <ProofCard :proof="proof" :hideProofActions="true" :readonly="readonly" @close="close" />
   </v-dialog>
 </template>
@@ -22,6 +22,14 @@ export default {
     }
   },
   emits: ['close'],
+  computed: {
+    dialogHeight() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    dialogWidth() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+  },
   methods: {
     close() {
       this.$emit('close')
