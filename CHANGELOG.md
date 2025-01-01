@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.108.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.107.1...v1.108.0) (2025-01-01)
+
+
+### Features
+
+* **l10n:** translate label list in price add form depending on user locale ([#1216](https://github.com/openfoodfacts/open-prices-frontend/issues/1216)) ([15b6a1a](https://github.com/openfoodfacts/open-prices-frontend/commit/15b6a1a93613d172ef166e48a1a0014e6336c026))
+* script to filter and generate labels (with translations) ([#1215](https://github.com/openfoodfacts/open-prices-frontend/issues/1215)) ([56c4f04](https://github.com/openfoodfacts/open-prices-frontend/commit/56c4f0460759117d85374389bf30618d1533dc1a))
+
+
+### Bug Fixes
+
+* **Contribution Assistant:** next proof suggestion: show only ready proofs without prices. ref [#1166](https://github.com/openfoodfacts/open-prices-frontend/issues/1166) ([a7db0ef](https://github.com/openfoodfacts/open-prices-frontend/commit/a7db0efdaf8068c7c3a09b7961e91049516a5b6f))
+
+
+### Technical
+
+* **Price label chip:** translate chip content depending on user locale ([#1217](https://github.com/openfoodfacts/open-prices-frontend/issues/1217)) ([e03c01b](https://github.com/openfoodfacts/open-prices-frontend/commit/e03c01bd9c0fe4834d91570f7fee81b3b20ec210))
+* **Price origin chip:** translate chip content depending on user locale ([#1218](https://github.com/openfoodfacts/open-prices-frontend/issues/1218)) ([f900588](https://github.com/openfoodfacts/open-prices-frontend/commit/f900588e21c367d4260ae30f55021d298057d078))
+
 ## [1.107.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.107.0...v1.107.1) (2024-12-31)
 
 
