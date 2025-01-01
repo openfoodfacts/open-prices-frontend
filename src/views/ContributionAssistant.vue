@@ -434,9 +434,15 @@ export default {
       window.location.reload()
     },
     getNextProofSuggestions() {
-      api.getProofs({ user: this.appStore.user.username, ready_for_price_tag_validation: true, type: constants.PROOF_TYPE_PRICE_TAG }).then(proofs => {
-        this.nextProofSuggestions = proofs.items.filter(proof => proof.id != this.proofObject.id)
-      })
+      const params = {
+        user: this.appStore.user.username,
+        ready_for_price_tag_validation: true,
+        price_count__gte: 1
+      }
+      api.getProofs(params)
+        .then(proofs => {
+          this.nextProofSuggestions = proofs.items.filter(proof => proof.id != this.proofObject.id)
+        })
     },
     nextProof() {
       // Remove the first proof from the list and go back to the initial step with the next one
