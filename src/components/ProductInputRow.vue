@@ -45,7 +45,7 @@
         </v-col>
         <v-col class="pt-0" cols="6">
           <v-checkbox
-            v-for="lt in labelsTags"
+            v-for="lt in labelTags"
             :key="lt.id"
             v-model="productForm.labels_tags"
             density="compact"
@@ -76,7 +76,6 @@ import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
 import utils from '../utils.js'
-import LabelsTags from '../data/labels-tags.json'
 
 export default {
   components: {
@@ -114,7 +113,7 @@ export default {
       productTypeList: constants.PRICE_TYPE_LIST,
       categoryTags: [],  // list of category tags for autocomplete  // see initPriceMultipleForm
       originTags: [],  // list of origins tags for autocomplete  // see initPriceMultipleForm
-      labelsTags: LabelsTags,
+      labelTags: [],  // list of labels tags for checkboxes  // see initPriceMultipleForm
       barcodeScannerDialog: false,
     }
   },
@@ -162,6 +161,9 @@ export default {
     })
     utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
       this.originTags = module.default
+    })
+    utils.getLocaleLabelTags(this.appStore.getUserLanguage).then((module) => {
+      this.labelTags = module.default
     })
     this.productForm.type = this.productForm.type ? this.productForm.type : (this.productForm.product_code ? constants.PRICE_TYPE_PRODUCT : this.appStore.user.last_product_product_used)
     if (this.productForm.product_code) {

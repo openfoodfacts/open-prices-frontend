@@ -233,6 +233,10 @@ function getLocaleOriginTags(locale) {
   return import(`./data/origins/${locale}.json`)
 }
 
+function getLocaleLabelTags(locale) {
+  return import(`./data/labels/${locale}.json`)
+}
+
 function getPriceTypeIcon(priceType) {
   return constants[`PRICE_TYPE_${priceType}_ICON`] || constants.PRICE_ICON
 }
@@ -444,6 +448,7 @@ export default {
   getLocaleCategoryTag,
   getLocaleCategoryTagName,
   getLocaleOriginTags,
+  getLocaleLabelTags,
   getPriceTypeIcon,
   getProofTypeIcon,
   getCountryEmojiFromName,
