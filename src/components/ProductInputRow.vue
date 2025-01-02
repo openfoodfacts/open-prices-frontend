@@ -5,7 +5,7 @@
         <v-col>
           <v-item-group v-model="productForm.type" class="d-inline" mandatory @update:modelValue="setType($event)">
             <v-item v-for="pt in productTypeList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
-              <v-chip class="mr-1" :class="isSelected ? 'border-success' : ''" variant="outlined" @click="toggle">
+              <v-chip class="mr-1" :class="isSelected ? 'border-success' : ''" variant="outlined" density="comfortable" @click="toggle">
                 <v-icon start :icon="pt.icon" />
                 {{ $t('Common.' + pt.value) }}
                 <v-icon end :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" :color="isSelected ? 'green' : ''" />
