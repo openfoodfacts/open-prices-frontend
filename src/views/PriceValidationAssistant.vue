@@ -74,7 +74,14 @@ export default {
       return 6
     },
     getPriceTagsParams() {
-      return { proof__owner: this.username, proof__ready_for_price_tag_validation: true, status__isnull: true, created__lte: this.currentDateTime, order_by: this.currentOrder, size: this.getApiSize, page: this.priceTagPage }
+      return {
+        proof__ready_for_price_tag_validation: true,
+        status__isnull: true,
+        created__lte: this.currentDateTime,
+        order_by: this.currentOrder,
+        size: this.getApiSize,
+        page: this.priceTagPage
+      }
     },
   },
   mounted() {
