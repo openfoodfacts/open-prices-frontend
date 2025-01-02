@@ -40,7 +40,15 @@
                 {{ $t('ContributionAssistant.LabelsExtractionSteps.DrawBoundingBoxes') }}
               </h3>
               <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
-              <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
+              <v-card>
+                <v-card-text>
+                  <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
+                </v-card-text>
+                <v-divider />
+                <v-card-actions>
+                  <ProofFooterRow :proof="proofObject" :hideProofActions="true" :readonly="true" />
+                </v-card-actions>
+              </v-card>
             </v-col>
             <v-col cols="12" lg="6">
               <h3 class="mb-4">
@@ -174,6 +182,7 @@ export default {
   components: {
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
     ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
+    ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
     ContributionAssistantLabelList: defineAsyncComponent(() => import('../components/ContributionAssistantLabelList.vue')),
     ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
