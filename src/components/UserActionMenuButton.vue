@@ -1,6 +1,6 @@
 <template>
   <v-btn :style="style" icon size="small" density="comfortable" variant="text">
-    <v-icon>mdi-dots-vertical</v-icon>
+    <v-icon :icon="ACTION_MENU_ICON" />
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
         <v-list-subheader class="text-uppercase" :slim="true" disabled>
@@ -18,6 +18,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 
 export default {
   components: {
@@ -32,6 +33,11 @@ export default {
     style: {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
+    }
+  },
+  data() {
+    return {
+      ACTION_MENU_ICON: constants.ACTION_MENU_ICON
     }
   },
   computed: {

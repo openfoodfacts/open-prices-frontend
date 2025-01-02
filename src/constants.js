@@ -37,8 +37,6 @@ export default {
   APP_GITHUB_REUSE_DISCUSSION_URL: 'https://github.com/openfoodfacts/open-prices/discussions/562',
   APP_HUGGING_FACE_URL: 'https://huggingface.co/datasets/openfoodfacts/open-prices',
   APP_DATA_GOUV_URL: 'https://www.data.gouv.fr/fr/datasets/open-prices/',
-  THEME_LIGHT_ICON: 'mdi-white-balance-sunny',
-  THEME_DARK_ICON: 'mdi-moon-waning-crescent',
   // OFF
   OFF_NAME: OFF_NAME,
   OFF_URL: 'https://world.openfoodfacts.org',
@@ -60,6 +58,10 @@ export default {
   OPF_NAME: OPF_NAME,
   OPF_URL: 'https://world.openproductsfacts.org',
   OPF_ICON: OPF_ICON,
+  // OP
+  THEME_LIGHT_ICON: 'mdi-white-balance-sunny',
+  THEME_DARK_ICON: 'mdi-moon-waning-crescent',
+  ACTION_MENU_ICON: 'mdi-dots-vertical',
   TYPE_PARAM: 'type',
   SOURCE_PARAM: 'source',
   QUERY_PARAM: 'q',
