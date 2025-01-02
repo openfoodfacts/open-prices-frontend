@@ -32,6 +32,15 @@
             {{ $t('Common.Delete') }}
           </v-list-item>
         </v-sheet>
+        <v-sheet v-if="!hideProofActions">
+          <v-list-subheader class="text-uppercase" :slim="true" disabled>
+            {{ $t('Common.Proof') }}
+          </v-list-subheader>
+          <v-divider />
+          <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
+            {{ $t('Common.Details') }}
+          </v-list-item>
+        </v-sheet>
       </v-list>
     </v-menu>
   </v-btn>
@@ -93,6 +102,10 @@ export default {
       type: Boolean,
       default: false
     },
+    hideProofActions: {
+      type: Boolean,
+      default: false
+    },
     style: {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
@@ -122,6 +135,9 @@ export default {
     },
     getPriceDetailUrl() {
       return `/prices/${this.price.id}`
+    },
+    getProofDetailUrl() {
+      return `/proofs/${this.price.proof.id}`
     },
     showPriceShare() {
       return this.$route.path === this.getPriceDetailUrl
