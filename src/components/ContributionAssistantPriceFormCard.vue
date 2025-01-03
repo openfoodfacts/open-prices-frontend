@@ -59,9 +59,9 @@ import constants from '../constants'
 export default {
   components: {
     ProofImageCropped: defineAsyncComponent(() => import('../components/ProofImageCropped.vue')),
-  ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
-  PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
-  ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
+    ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
+    PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
+    ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
   },
   props: {
     productPriceForm: {
