@@ -444,7 +444,7 @@ export default {
       const params = {
         user: this.appStore.user.username,
         ready_for_price_tag_validation: true,
-        price_count__gte: 1
+        price_count: 0
       }
       api.getProofs(params)
         .then(proofs => {
