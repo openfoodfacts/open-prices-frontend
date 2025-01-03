@@ -2,8 +2,8 @@
   <v-row>
     <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Router.ProofAddMultiple.Title')"
-        prepend-icon="mdi-image-multiple"
+        :title="$t('Router.AddProofs.Title')"
+        prepend-icon="mdi-image-plus"
         to="/proofs/add/multiple"
       />
     </v-col>
