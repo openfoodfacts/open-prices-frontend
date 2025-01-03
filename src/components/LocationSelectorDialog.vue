@@ -22,8 +22,9 @@
 
         <v-tabs-window v-model="currentDisplay" disabled>
           <v-tabs-window-item value="recent">
-            <LocationRecentChip v-for="(location, index) in recentLocations" :key="index" :location="location" :withRemoveAction="true" @click="selectLocation(location)" @click:close="removeRecentLocation(location)" />
-            <br>
+            <p v-for="(location, index) in recentLocations" :key="index">
+              <LocationRecentChip :location="location" :withRemoveAction="true" @click="selectLocation(location)" @click:close="removeRecentLocation(location)" />
+            </p>
             <v-btn v-if="recentLocations.length" size="small" class="" @click="clearRecentLocations">
               {{ $t('Common.Clear') }}
             </v-btn>
