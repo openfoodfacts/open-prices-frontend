@@ -72,8 +72,12 @@ export default {
     dialogWidth() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
+    getApiSize() {
+      if (!this.$vuetify.display.smAndUp) return 5
+      return 10
+    },
     getProofParams() {
-      let defaultParams = { owner: this.username, page: this.userProofPage }
+      let defaultParams = { owner: this.username, size: this.getApiSize, page: this.userProofPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
