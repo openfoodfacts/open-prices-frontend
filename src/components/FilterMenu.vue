@@ -68,7 +68,7 @@ export default {
     kind: {
       type: String,
       default: 'product',
-      examples: ['product', 'price', 'proof', 'location', 'user']
+      examples: ['product', 'price', 'proof', 'priceTag', 'location', 'user']
     },
     currentFilter: {
       type: String,
@@ -98,6 +98,7 @@ export default {
       productFilterList: constants.PRODUCT_FILTER_LIST,
       priceFilterList: constants.PRICE_FILTER_LIST,
       proofFilterList: constants.PROOF_FILTER_LIST,
+      priceTagFilterList: constants.PRICE_TAG_FILTER_LIST,
       locationFilterList: constants.LOCATION_FILTER_LIST,
       userFilterList: constants.USER_FILTER_LIST,
       // other filters
