@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.108.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.108.0...v1.108.1) (2025-01-03)
+
+
+### Technical
+
+* **Action menus:** move menu icon to constants ([62901f3](https://github.com/openfoodfacts/open-prices-frontend/commit/62901f3321383cc111b28e4bc3d02e79d4c47f9a))
+* **Contribution Assistant:** add proof footer details below canvas image ([#1223](https://github.com/openfoodfacts/open-prices-frontend/issues/1223)) ([dfe2c45](https://github.com/openfoodfacts/open-prices-frontend/commit/dfe2c45c12920778ca6bbc6a376619f6f6cddd58))
+* **Contribution Assistant:** cleanup: small improvements for prices already added ([#1224](https://github.com/openfoodfacts/open-prices-frontend/issues/1224)) ([5c05171](https://github.com/openfoodfacts/open-prices-frontend/commit/5c051718aafc31825296b9920237f9ad915d0e76))
+* **Contribution Assistant:** make labels linked to prices readonly ([#1222](https://github.com/openfoodfacts/open-prices-frontend/issues/1222)) ([e954562](https://github.com/openfoodfacts/open-prices-frontend/commit/e954562ce65952f8e177668237328857252f9366))
+* **Price add:** more compact chips for Proof.type, Price.type & Price.price_per fields. ref [#1085](https://github.com/openfoodfacts/open-prices-frontend/issues/1085) ([4cca8ee](https://github.com/openfoodfacts/open-prices-frontend/commit/4cca8ee54f42c316e8914c0008624114c5d8ce74))
+* **Price card:** Add action to proof detail page ([#1220](https://github.com/openfoodfacts/open-prices-frontend/issues/1220)) ([dd65951](https://github.com/openfoodfacts/open-prices-frontend/commit/dd659512a8188a42b5047af76ae625cc789719d6))
+
 ## [1.108.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.107.1...v1.108.0) (2025-01-01)
 
 
