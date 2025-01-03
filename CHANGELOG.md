@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.108.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.108.1...v1.108.2) (2025-01-03)
+
+
+### Bug Fixes
+
+* **Contribution Assistant:** next proof suggestion: fix again show only ready proofs without prices. ref [#1166](https://github.com/openfoodfacts/open-prices-frontend/issues/1166) ([75143b4](https://github.com/openfoodfacts/open-prices-frontend/commit/75143b4ca5b95875e901260f174f5b147efb35e1))
+* **Price Validation Assistant:** fix missing translation. ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([2a57e7a](https://github.com/openfoodfacts/open-prices-frontend/commit/2a57e7af4b7932ca8d0dc409a8c4ecbb8d752639))
+
+
+### Technical
+
+* **Contribution assistant:** new hideProofDetails prop to show or hide the price tag proof details. ref [#1044](https://github.com/openfoodfacts/open-prices-frontend/issues/1044) ([793fa90](https://github.com/openfoodfacts/open-prices-frontend/commit/793fa9089a711e8feed0cd9ad53d5a11493badd6))
+* **Experiments:** move down single price & proof workflows ([e004d23](https://github.com/openfoodfacts/open-prices-frontend/commit/e004d23076b8aa8f2b610e5586894e16b897d2c1))
+* **Location selector:** better display recent locations (1 per line) ([9e56fc7](https://github.com/openfoodfacts/open-prices-frontend/commit/9e56fc7b873cf8db95d9f3bf09b58f8ff2beb27a))
+* **Price add:** use 'Add prices' wording everywhere (sidebar, header, breadcrumbs). ref [#1085](https://github.com/openfoodfacts/open-prices-frontend/issues/1085) ([0cafc7a](https://github.com/openfoodfacts/open-prices-frontend/commit/0cafc7a109c58fb047791f3593a9d6168171b5b8))
+* **Price Validation Assistant:** load less prices, but more often ([#1227](https://github.com/openfoodfacts/open-prices-frontend/issues/1227)) ([620a875](https://github.com/openfoodfacts/open-prices-frontend/commit/620a875c3c4a1f807eb3fbeddb008cf79ae43bb1))
+* **Price Validation Assistant:** rename PriceValidator to PriceValidation ([153df4f](https://github.com/openfoodfacts/open-prices-frontend/commit/153df4f51f703f55aec41fec200ae883440e19e9))
+* **User recent proofs:** load only 5 on small screens to speed up ([992626f](https://github.com/openfoodfacts/open-prices-frontend/commit/992626f7f6fe9b09bf42724920bf677cf844a4fe))
+
 ## [1.108.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.108.0...v1.108.1) (2025-01-03)
 
 
