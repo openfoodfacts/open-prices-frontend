@@ -85,7 +85,7 @@
               md="6"
               xl="4"
             >
-              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :disabled="!!productPriceForm.price_id" />
+              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :hideActions="true" :disabled="true" />
             </v-col>
           </v-row>
           <v-row>
