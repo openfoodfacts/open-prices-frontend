@@ -410,7 +410,7 @@
 		"PoweredBy": {
 			"text": "fonctionne avec {url}"
 		},
-		"RecentLocations": "Lieu récent {recentLocationNumber}| Lieux récents {recentLocationNumber}",
+		"RecentLocations": "Aucun lieu récent | Lieu récent {recentLocationNumber} | Lieux récents {recentLocationNumber}",
 		"Result": "Résultat {resultNumber} | Résultats {resultNumber}",
 		"SearchByName": "Recherchez votre magasin par nom et par ville",
 		"Title": "Trouvez l'emplacement de votre magasin",
