@@ -74,11 +74,9 @@
               <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" @removePriceTag="removePriceTag($event, productPriceForm)" />
             </v-col>
           </v-row>
-          <v-row v-if="productPriceFormsWithPriceId.length">
-            <h3 class="mb-4">
-              {{ $t('ContributionAssistant.PricesAlreadyAdded') }}
-            </h3>
-          </v-row>
+          <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
+            {{ $t('ContributionAssistant.PricesAlreadyAdded') }}
+          </h3>
           <v-row v-if="productPriceFormsWithPriceId.length">
             <v-col
               v-for="(productPriceForm, index) in productPriceFormsWithPriceId"
@@ -87,7 +85,7 @@
               md="6"
               xl="4"
             >
-              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :disabled="!!productPriceForm.price_id" />
+              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :hideActions="true" :disabled="true" />
             </v-col>
           </v-row>
           <v-row>

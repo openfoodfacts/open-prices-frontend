@@ -20,8 +20,8 @@
     <v-card-text v-if="mode === 'Validation'">
       <ProofFooterRow :proof="productPriceForm.proof" :showProofChip="true" :hideProofType="true" :hideProofActions="true" :readonly="true" />
     </v-card-text>
-    <v-divider />
-    <v-card-actions>
+    <v-divider v-if="!hideActions" />
+    <v-card-actions v-if="!hideActions">
       <v-btn
         color="error"
         variant="outlined"
@@ -88,6 +88,10 @@ export default {
       default: 'Contribution'  // or 'Validation'
     },
     showProductNameField: {
+      type: Boolean,
+      default: false
+    },
+    hideActions: {
       type: Boolean,
       default: false
     }
