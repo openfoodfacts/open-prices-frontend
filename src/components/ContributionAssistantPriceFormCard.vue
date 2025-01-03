@@ -16,8 +16,8 @@
       <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
       <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
-    <v-divider v-if="mode === 'Validation'" />
-    <v-card-text v-if="mode === 'Validation'">
+    <v-divider v-if="!hideProofDetails" />
+    <v-card-text v-if="!hideProofDetails">
       <ProofFooterRow :proof="productPriceForm.proof" :showProofChip="true" :hideProofType="true" :hideProofActions="true" :readonly="true" />
     </v-card-text>
     <v-divider v-if="!hideActions" />
@@ -88,6 +88,10 @@ export default {
       default: 'Contribution'  // or 'Validation'
     },
     showProductNameField: {
+      type: Boolean,
+      default: false
+    },
+    hideProofDetails: {
       type: Boolean,
       default: false
     },
