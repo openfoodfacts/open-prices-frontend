@@ -442,7 +442,7 @@ export default {
     },
     getNextProofSuggestions() {
       const params = {
-        user: this.appStore.user.username,
+        owner: this.appStore.user.username,
         ready_for_price_tag_validation: true,
         price_count: 0
       }
