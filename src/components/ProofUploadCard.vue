@@ -1,7 +1,7 @@
 <template>
   <v-card
     v-if="!proofObjectList.length"
-    :title="$t('Common.ProofDetails')"
+    :title="cardTitle"
     :prepend-icon="cardPrependIcon"
     height="100%"
   >
@@ -128,6 +128,9 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    cardTitle() {
+      return this.multiple ? this.$t('Common.Proofs') : this.$t('Common.Proof')
+    },
     cardPrependIcon() {
       return this.multiple ? 'mdi-image-multiple' : 'mdi-image'
     },
