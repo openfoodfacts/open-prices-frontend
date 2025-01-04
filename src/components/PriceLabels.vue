@@ -1,14 +1,16 @@
 <template>
   <span v-if="priceLabels">
-    <v-chip v-for="label in priceLabelsTagsList" :key="label" label size="small" density="comfortable" class="mr-1">
-      {{ label.name }}
-      <v-icon v-if="label.icon" end :icon="label.icon" />
+    <v-chip v-for="label in priceLabels" :key="label" class="mr-1" label size="small" density="comfortable">
+      {{ getPriceLabelTagName(label) }}
+      <v-icon v-if="label == 'en:organic'" icon="mdi-leaf-circle-outline" end />
     </v-chip>
   </span>
 </template>
 
 <script>
-import LabelTags from '../data/labels-tags.json'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
+import utils from '../utils.js'
 
 export default {
   props: {
@@ -17,10 +19,24 @@ export default {
       default: () => []
     }
   },
+  data() {
+    return {
+      labelTags: [],  // see mounted
+    }
+  },
   computed: {
-    priceLabelsTagsList() {
-      return LabelTags.filter(lt => this.priceLabels.includes(lt.id))
-    },
+    ...mapStores(useAppStore),
+  },
+  mounted() {
+    utils.getLocaleLabelTags(this.appStore.getUserLanguage).then((module) => {
+      this.labelTags = module.default
+    })
+  },
+  methods: {
+    getPriceLabelTagName(labelId) {
+      if (this.labelTags.length === 0) return ''
+      return this.labelTags.find(lt => lt.id === labelId).name
+    }
   }
 }
 </script>

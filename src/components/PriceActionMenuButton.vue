@@ -1,6 +1,6 @@
 <template>
   <v-btn :style="style" icon size="small" density="comfortable" variant="text">
-    <v-icon>mdi-dots-vertical</v-icon>
+    <v-icon :icon="ACTION_MENU_ICON" />
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
         <!-- Product actions -->
@@ -30,6 +30,15 @@
           </v-list-item>
           <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
             {{ $t('Common.Delete') }}
+          </v-list-item>
+        </v-sheet>
+        <v-sheet v-if="!hideProofActions">
+          <v-list-subheader class="text-uppercase" :slim="true" disabled>
+            {{ $t('Common.Proof') }}
+          </v-list-subheader>
+          <v-divider />
+          <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
+            {{ $t('Common.Details') }}
           </v-list-item>
         </v-sheet>
       </v-list>
@@ -72,6 +81,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 
 export default {
   components: {
@@ -93,6 +103,10 @@ export default {
       type: Boolean,
       default: false
     },
+    hideProofActions: {
+      type: Boolean,
+      default: false
+    },
     style: {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
@@ -100,6 +114,8 @@ export default {
   },
   data() {
     return {
+      ACTION_MENU_ICON: constants.ACTION_MENU_ICON,
+      // data
       loading: false,
       editDialog: false,
       editSuccessMessage: false,
@@ -122,6 +138,9 @@ export default {
     },
     getPriceDetailUrl() {
       return `/prices/${this.price.id}`
+    },
+    getProofDetailUrl() {
+      return `/proofs/${this.price.proof.id}`
     },
     showPriceShare() {
       return this.$route.path === this.getPriceDetailUrl

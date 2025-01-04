@@ -1,11 +1,15 @@
 <template>
-  <v-chip v-if="priceOrigins" label size="small" density="comfortable">
-    {{ priceOriginTagName }}
-  </v-chip>
+  <span v-if="priceOrigins">
+    <v-chip v-for="origin in priceOrigins" :key="origin" class="mr-1" label size="small" density="comfortable">
+      {{ getPriceOriginTagName(origin) }}
+    </v-chip>
+  </span>
 </template>
 
 <script>
-import OriginTags from '../data/origins-tags.json'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
+import utils from '../utils.js'
 
 export default {
   props: {
@@ -15,10 +19,24 @@ export default {
     
     }
   },
+  data() {
+    return {
+      originTags: [],  // see mounted
+    }
+  },
   computed: {
-    priceOriginTagName() {
-      return OriginTags.find(ot => this.priceOrigins[0].includes(ot.id)).name
-    },
+    ...mapStores(useAppStore),
+  },
+  mounted() {
+    utils.getLocaleOriginTags(this.appStore.getUserLanguage).then((module) => {
+      this.originTags = module.default
+    })
+  },
+  methods: {
+    getPriceOriginTagName(originId) {
+      if (this.originTags.length === 0) return ''
+      return this.originTags.find(ot => ot.id === originId).name
+    }
   }
 }
 </script>

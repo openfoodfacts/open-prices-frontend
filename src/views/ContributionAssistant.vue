@@ -40,7 +40,15 @@
                 {{ $t('ContributionAssistant.LabelsExtractionSteps.DrawBoundingBoxes') }}
               </h3>
               <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
-              <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
+              <v-card>
+                <v-card-text>
+                  <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
+                </v-card-text>
+                <v-divider />
+                <v-card-actions>
+                  <ProofFooterRow :proof="proofObject" :hideProofActions="true" :readonly="true" />
+                </v-card-actions>
+              </v-card>
             </v-col>
             <v-col cols="12" lg="6">
               <h3 class="mb-4">
@@ -71,14 +79,12 @@
               md="6"
               xl="4"
             >
-              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" @removePriceTag="removePriceTag($event, productPriceForm)" />
+              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :hideProofDetails="true" @removePriceTag="removePriceTag($event, productPriceForm)" />
             </v-col>
           </v-row>
-          <v-row v-if="productPriceFormsWithPriceId.length">
-            <h3 class="mb-4">
-              {{ $t('ContributionAssistant.PricesAlreadyAdded') }}
-            </h3>
-          </v-row>
+          <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
+            {{ $t('ContributionAssistant.PricesAlreadyAdded') }}
+          </h3>
           <v-row v-if="productPriceFormsWithPriceId.length">
             <v-col
               v-for="(productPriceForm, index) in productPriceFormsWithPriceId"
@@ -87,7 +93,7 @@
               md="6"
               xl="4"
             >
-              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :disabled="!!productPriceForm.price_id" />
+              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :hideProofDetails="true" :hideActions="true" :disabled="true" />
             </v-col>
           </v-row>
           <v-row>
@@ -176,6 +182,7 @@ export default {
   components: {
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
     ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
+    ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
     ContributionAssistantLabelList: defineAsyncComponent(() => import('../components/ContributionAssistantLabelList.vue')),
     ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
@@ -434,9 +441,15 @@ export default {
       window.location.reload()
     },
     getNextProofSuggestions() {
-      api.getProofs({ user: this.appStore.user.username, ready_for_price_tag_validation: true, type: constants.PROOF_TYPE_PRICE_TAG }).then(proofs => {
-        this.nextProofSuggestions = proofs.items.filter(proof => proof.id != this.proofObject.id)
-      })
+      const params = {
+        user: this.appStore.user.username,
+        ready_for_price_tag_validation: true,
+        price_count: 0
+      }
+      api.getProofs(params)
+        .then(proofs => {
+          this.nextProofSuggestions = proofs.items.filter(proof => proof.id != this.proofObject.id)
+        })
     },
     nextProof() {
       // Remove the first proof from the list and go back to the initial step with the next one

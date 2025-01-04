@@ -10,12 +10,16 @@
       <v-card>
         <v-card-text>
           <v-img style="height:150px" :src="label.imageSrc" />
-          <v-chip label size="small" density="comfortable">
-            {{ $t('Common.Source') }} {{ label.boundingSource }}
-          </v-chip>
         </v-card-text>
         <v-divider />
-        <v-card-actions>
+        <v-card-text>
+          <v-chip class="mr-1" label size="small" density="comfortable">
+            {{ $t('Common.Source') }} {{ label.boundingSource }}
+          </v-chip>
+          <PriceCountChip v-if="labelHasPrice(label)" :count="1" :withLabel="true" source="proof" />
+        </v-card-text>
+        <v-divider v-if="!labelHasPrice(label)" />
+        <v-card-actions v-if="!labelHasPrice(label)">
           <v-btn
             color="error"
             variant="outlined"
@@ -31,18 +35,26 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      labels: {
-        type: Array,
-        default: () => []
-      }
+import { defineAsyncComponent } from 'vue'
+
+export default {
+  components: {
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue'))
+  },
+  props: {
+    labels: {
+      type: Array,
+      default: () => []
+    }
+  },
+  emits: ['removeLabel'],
+  methods: {
+    labelHasPrice(label) {
+      return label.status === 1
     },
-    emits: ['removeLabel'],
-    methods: {
-      removeLabel(index) {
-        this.$emit('removeLabel', index)
-      }
+    removeLabel(index) {
+      this.$emit('removeLabel', index)
     }
   }
+}
 </script>

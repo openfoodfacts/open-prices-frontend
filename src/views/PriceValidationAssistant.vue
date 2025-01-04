@@ -67,8 +67,9 @@ export default {
       return this.appStore.user.username
     },
     getApiSize() {
-      if (!this.$vuetify.display.smAndUp) return 5
-      return 10
+      // reduce size to speed up the loading
+      if (!this.$vuetify.display.smAndUp) return 3
+      return 6
     },
     getPriceTagsParams() {
       return { proof__owner: this.username, proof__ready_for_price_tag_validation: true, status__isnull: true, order_by: this.currentOrder, size: this.getApiSize, page: this.priceTagPage }
@@ -87,20 +88,23 @@ export default {
     removePriceTag(index, status) {
       /**
        * - update the price_tag (API)
-       * - remove the price_tag
+       * - remove the price_tag (UI)
        */
       this.updatePriceTag(this.priceTagList[index].id, status).then((priceTag) => {  // eslint-disable-line no-unused-vars
         this.priceTagList.splice(index, 1)
         this.productPriceForms.splice(index, 1)
         this.priceTagTotal -= 1
         this.priceRemovedMessage = true
+        if (this.priceTagList.length === 1) {
+          this.getPriceTags()
+        }
       })
     },
     validatePriceTag(index) {
       /**
        * - create the price (API)
        * - update the price_tag (API)
-       * - remove the price_tag
+       * - remove the price_tag (UI)
        */
       this.createPrice(this.productPriceForms[index]).then((price) => {
         this.updatePriceTag(this.productPriceForms[index].id, 1, price.id)
@@ -108,6 +112,9 @@ export default {
         this.productPriceForms.splice(index, 1)
         this.priceTagTotal -= 1
         this.priceSuccessMessage = true
+        if (this.priceTagList.length === 1) {
+          this.getPriceTags()
+        }
       })
     },
     getPriceTags() {

@@ -1,6 +1,6 @@
 <template>
   <v-btn :style="style" icon size="small" density="comfortable" variant="text">
-    <v-icon>mdi-dots-vertical</v-icon>
+    <v-icon :icon="ACTION_MENU_ICON" />
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
         <v-list-subheader class="text-uppercase" :slim="true" disabled>
@@ -81,6 +81,8 @@ export default {
   },
   data() {
     return {
+      ACTION_MENU_ICON: constants.ACTION_MENU_ICON,
+      // data
       editDialog: false,
       loading: false,
       // success messages
