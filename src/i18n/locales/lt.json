@@ -139,7 +139,7 @@
 		"AddPrice": "Pridėti kainą",
 		"AddPrices": "Pridėti kainas",
 		"AddProof": "Pridėti įrodymą",
-		"AddProofs": "Add proofs",
+		"AddProofs": "Pridėti įrodymus",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Barkodas",
@@ -550,7 +550,7 @@
 			"Title": "Pridėti įrodymą"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "Pridėti įrodymus"
 		},
 		"AddProofSingle": {
 			"Title": "Pridėti vienintelį įrodymą"
@@ -625,7 +625,7 @@
 			"Title": "Bendradarbiavimo asistentas"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Kainų tvirtinimo asistentas"
 		}
 	},
 	"Search": {
