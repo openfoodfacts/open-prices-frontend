@@ -138,6 +138,8 @@
 		"About": "Tentang",
 		"AddPrice": "Tambahkan harga",
 		"AddPrices": "Add prices",
+		"AddProof": "Tambahkan bukti",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "Tambahkan ke {name}",
 		"AdditionalInfo": "Informasi tambahan",
 		"Barcode": "Kode batang",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "Tambahkan beberapa harga"
+		},
+		"AddProof": {
+			"Title": "Tambahkan bukti"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "Tambahkan sebuah bukti"
