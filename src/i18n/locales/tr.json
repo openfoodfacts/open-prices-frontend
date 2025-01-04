@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "Hakkında",
 		"AddPrice": "Fiyat ekleyin",
+		"AddPrices": "Add prices",
 		"AddToOFF": "{name}'e ekle",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Barkod",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "Fiyat ekleyin"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "Tek bir fiyat ekleyin"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {

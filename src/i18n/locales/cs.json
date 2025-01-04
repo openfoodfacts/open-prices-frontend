@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "O aplikaci",
 		"AddPrice": "Přidat cenu",
+		"AddPrices": "Add prices",
 		"AddToOFF": "Přidat do {name}",
 		"AdditionalInfo": "Další informace",
 		"Barcode": "Čárový kód",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "Přidat cenu"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "Přidat jednotnou cenu"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Příspěvkový asistent"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {

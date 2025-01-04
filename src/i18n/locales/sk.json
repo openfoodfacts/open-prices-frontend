@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "O",
 		"AddPrice": "Pridajte cenu",
+		"AddPrices": "Add prices",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Čiarový kód",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "Pridajte cenu"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "Pridajte jednu cenu"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {
