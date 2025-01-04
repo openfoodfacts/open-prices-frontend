@@ -138,6 +138,8 @@
 		"About": "O aplikaci",
 		"AddPrice": "Přidat cenu",
 		"AddPrices": "Add prices",
+		"AddProof": "Přidat doklad",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "Přidat do {name}",
 		"AdditionalInfo": "Další informace",
 		"Barcode": "Čárový kód",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "Přidat více cen"
+		},
+		"AddProof": {
+			"Title": "Přidat doklad"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "Přidejte jeden důkaz"
