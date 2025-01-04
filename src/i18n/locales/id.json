@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "Tentang",
 		"AddPrice": "Tambahkan harga",
+		"AddPrices": "Add prices",
 		"AddToOFF": "Tambahkan ke {name}",
 		"AdditionalInfo": "Informasi tambahan",
 		"Barcode": "Kode batang",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "Tambahkan harga"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "Tambahkan satu harga"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Asisten Kontribusi"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {
