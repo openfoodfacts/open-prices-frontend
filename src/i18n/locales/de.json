@@ -137,7 +137,9 @@
 	"Common": {
 		"About": "Über",
 		"AddPrice": "Preis hinzufügen",
-		"AddPrices": "Add prices",
+		"AddPrices": "Preise hinzufügen",
+		"AddProof": "Nachweis bearbeiten",
+		"AddProofs": "Nachweis hinzufügen",
 		"AddToOFF": "Zu {name} hinzufügen",
 		"AdditionalInfo": "Zusätzliche Informationen",
 		"Barcode": "Strichcode",
@@ -536,13 +538,19 @@
 			"Title": "Preis hinzufügen"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Preise hinzufügen"
 		},
 		"AddPriceSingle": {
 			"Title": "Fügen Sie einen Einzelpreis hinzu"
 		},
 		"AddPriceMultiple": {
 			"Title": "Mehrere Preise hinzufügen"
+		},
+		"AddProof": {
+			"Title": "Nachweis bearbeiten"
+		},
+		"AddProofs": {
+			"Title": "Nachweis hinzufügen"
 		},
 		"AddProofSingle": {
 			"Title": "Einzelnen Nachweis hinzufügen"
@@ -617,7 +625,7 @@
 			"Title": "Mitwirkungsassistent"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Preisprüfungsassistent"
 		}
 	},
 	"Search": {
