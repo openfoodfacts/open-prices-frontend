@@ -138,6 +138,8 @@
 		"About": "Over",
 		"AddPrice": "Voeg een prijs toe",
 		"AddPrices": "Add prices",
+		"AddProof": "Voeg een bewijs toe",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "Toevoegen aan {name}",
 		"AdditionalInfo": "Aanvullende informatie",
 		"Barcode": "Streepjescode",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "Voeg meerdere prijzen toe"
+		},
+		"AddProof": {
+			"Title": "Voeg een bewijs toe"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "Voeg één bewijs toe"
