@@ -138,6 +138,8 @@
 		"About": "A prepaus",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
+		"AddProof": "Add a proof",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Còdi de barras",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "Add multiple prices"
+		},
+		"AddProof": {
+			"Title": "Add a proof"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
