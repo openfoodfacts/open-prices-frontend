@@ -137,7 +137,9 @@
 	"Common": {
 		"About": "À propos",
 		"AddPrice": "Ajouter un prix",
-		"AddPrices": "Add prices",
+		"AddPrices": "Ajouter des prix",
+		"AddProof": "Ajouter une preuve",
+		"AddProofs": "Ajouter des preuves",
 		"AddToOFF": "Ajouter à {name}",
 		"AdditionalInfo": "Informations supplémentaires",
 		"Barcode": "Code-barres",
@@ -219,10 +221,10 @@
 		"Help": "Aide",
 		"History": "Historique",
 		"Image": "Image",
-		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
-		"ImageSelected": "Image selected!",
-		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
+		"ImageSelect": "Sélectionner une image",
+		"ImageSelectMultiple": "Sélectionner des images",
+		"ImageSelected": "Image sélectionnée !",
+		"ImageSelectedCount": "{count} images sélectionnées | {count} image sélectionnée | {count} images sélectionnées",
 		"Images": "Images",
 		"ImageFull": "Image en taille réelle",
 		"Latest": "Derniers",
@@ -252,7 +254,7 @@
 		"PriceCreated": "Prix créé !",
 		"PricesMore": "Plus de prix",
 		"PricesAddedToday": "Prix ajoutés aujourd'hui",
-		"PricesToday": "Prices today",
+		"PricesToday": "Prix aujourd'hui",
 		"Private": "Privé",
 		"Privacy": "Confidentialité",
 		"ProductCount": "{count} produits | {count} produit | {count} produits",
@@ -261,11 +263,11 @@
 		"ProofDetails": "Preuve",
 		"ProofMissing": "Preuve manquante",
 		"ProofSelect": "Choisir une preuve",
-		"ProofSelectMultiple": "Select proofs",
+		"ProofSelectMultiple": "Sélectionner des preuves",
 		"ProofSelected": "Preuve sélectionnée !",
 		"ProofSelectedCount": "{count} preuves sélectionnées | {count} preuve sélectionnée | {count} preuves sélectionnées",
-		"ProofsAddedToday": "Proofs added today",
-		"ProofsToday": "Proofs today",
+		"ProofsAddedToday": "Preuves ajoutées aujourd'hui",
+		"ProofsToday": "Preuves aujourd'hui",
 		"Public": "Public",
 		"Quantity": "Quantité",
 		"QuantityBought": "Quantité achetée",
@@ -338,9 +340,9 @@
 			"SendLabels": "3. Send the labels for automatic processing",
 			"SendLabelsButton": "Send labels"
 		},
-		"PricesAlreadyAdded": "Prices already added",
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
+		"PricesAlreadyAdded": "Prix déjà téléversés",
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} prix seront ajoutés à une preuve existante du {date} à {locationName}",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prix ajoutés",
 		"WaitForUpload": "Please wait for upload",
 		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
@@ -352,11 +354,11 @@
 		"DetectedBarcode": "Code-barres détecté : {barcode}",
 		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Price tag with a price",
-			"PriceTagWithoutPrice": "Price tag without a price",
-			"NewPriceTag": "New price tag"
+			"PriceTagWithPrice": "Étiquette de prix avec un prix",
+			"PriceTagWithoutPrice": "Étiquette de prix sans prix",
+			"NewPriceTag": "Nouvelle étiquette de prix"
 		},
-		"OpenWithTheAssistant": "Open with the assistant"
+		"OpenWithTheAssistant": "Ouvrir avec l'assistant"
 	},
 	"Community": {
 		"JoinUs": "Rejoignez-nous !",
@@ -491,7 +493,7 @@
 		"ProductNotFound": "Ce produit n'existe pas sur Open Food Facts... N'hésitez pas à le rajouter :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+		"HowToMultiple": "Toutes les images d'étiquettes de prix que vous sélectionnez doivent partager le même emplacement de magasin et avoir été prises le même jour."
 	},
 	"ProofCard": {
 		"Proof": "Preuve",
@@ -536,13 +538,19 @@
 			"Title": "Ajouter un prix"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Ajouter des prix"
 		},
 		"AddPriceSingle": {
 			"Title": "Ajouter un seul prix"
 		},
 		"AddPriceMultiple": {
 			"Title": "Ajouter plusieurs prix"
+		},
+		"AddProof": {
+			"Title": "Ajouter une preuve"
+		},
+		"AddProofs": {
+			"Title": "Ajouter des preuves"
 		},
 		"AddProofSingle": {
 			"Title": "Ajouter une seule preuve"
@@ -617,7 +625,7 @@
 			"Title": "Assistant de contribution"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Assistant de validation de prix"
 		}
 	},
 	"Search": {
