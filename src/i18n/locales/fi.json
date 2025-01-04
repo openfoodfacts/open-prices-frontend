@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "Tietoja",
 		"AddPrice": "Lisää hinta",
+		"AddPrices": "Add prices",
 		"AddToOFF": "Lisää kohtaan {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Viivakoodi",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "Lisää hinta"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "Lisää yksi hinta"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {
