@@ -137,7 +137,7 @@
 	"Common": {
 		"About": "Про додаток",
 		"AddPrice": "Додати ціну",
-		"AddPrices": "Add prices",
+		"AddPrices": "Додати ціни",
 		"AddToOFF": "Додати до {name}",
 		"AdditionalInfo": "Додаткова інформація",
 		"Barcode": "Код товару",
@@ -536,7 +536,7 @@
 			"Title": "Додати ціну"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Додати ціни"
 		},
 		"AddPriceSingle": {
 			"Title": "Додати єдину ціну"
@@ -617,7 +617,7 @@
 			"Title": "Помічник внесків"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validaton Assistant"
+			"Title": "Помічник Перевірки Ціни"
 		}
 	},
 	"Search": {
