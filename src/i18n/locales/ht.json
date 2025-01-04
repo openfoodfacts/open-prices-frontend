@@ -138,6 +138,8 @@
 		"About": "About",
 		"AddPrice": "Ajoute yon pri",
 		"AddPrices": "Add prices",
+		"AddProof": "Ajoute yon prèv",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "Ajoute nan {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Kòd ba",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "Ajoute plizyè pri"
+		},
+		"AddProof": {
+			"Title": "Ajoute yon prèv"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
