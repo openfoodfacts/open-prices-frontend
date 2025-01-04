@@ -138,6 +138,8 @@
 		"About": "Про додаток",
 		"AddPrice": "Додати ціну",
 		"AddPrices": "Додати ціни",
+		"AddProof": "Додати доказ",
+		"AddProofs": "Додайте докази",
 		"AddToOFF": "Додати до {name}",
 		"AdditionalInfo": "Додаткова інформація",
 		"Barcode": "Код товару",
@@ -544,6 +546,12 @@
 		"AddPriceMultiple": {
 			"Title": "Додати кілька цін"
 		},
+		"AddProof": {
+			"Title": "Додати доказ"
+		},
+		"AddProofs": {
+			"Title": "Додайте докази"
+		},
 		"AddProofSingle": {
 			"Title": "Додати одне підтвердження"
 		},
@@ -617,7 +625,7 @@
 			"Title": "Помічник внесків"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Помічник Перевірки Ціни"
 		}
 	},
 	"Search": {
