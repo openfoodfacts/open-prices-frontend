@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.109.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.109.0...v1.109.1) (2025-01-04)
+
+
+### Bug Fixes
+
+* **Proof add multiple:** show done button only when ALL proofs have been uploaded ([#1232](https://github.com/openfoodfacts/open-prices-frontend/issues/1232)) ([7d7e41a](https://github.com/openfoodfacts/open-prices-frontend/commit/7d7e41a4cbe4f438b0c66bed5ed899efa56523ec))
+
+
+### Technical
+
+* **Contribution Assistant:** simplify proof upload step (use only ProofUploadCard). ref [#1044](https://github.com/openfoodfacts/open-prices-frontend/issues/1044) ([95f8d39](https://github.com/openfoodfacts/open-prices-frontend/commit/95f8d393a5d646795883db6fcab43fe7eb840a32))
+* **l10n:** New Crowdin translations to review and merge ([#1230](https://github.com/openfoodfacts/open-prices-frontend/issues/1230)) ([e05eb46](https://github.com/openfoodfacts/open-prices-frontend/commit/e05eb4684dc7bf7d425c2c4d2c8295547b4d3924))
+
 ## [1.109.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.108.1...v1.109.0) (2025-01-04)
 
 
