@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "关于",
 		"AddPrice": "添加价格",
+		"AddPrices": "Add prices",
 		"AddToOFF": "添加到 {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "條碼",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "添加价格"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "添加单价"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {
