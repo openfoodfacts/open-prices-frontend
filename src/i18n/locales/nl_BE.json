@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "Over",
 		"AddPrice": "Voeg een prijs toe",
+		"AddPrices": "Add prices",
 		"AddToOFF": "Toevoegen aan {name}",
 		"AdditionalInfo": "Aanvullende informatie",
 		"Barcode": "Streepjescode",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "Voeg een prijs toe"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "Voeg een enkele prijs toe"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Bijdrage-Assistent"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {
