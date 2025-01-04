@@ -121,8 +121,8 @@ export default {
       proofDateSuccessMessage: false,
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
-      proofImageList: [],
-      proofObjectList: [],
+      proofImageList: [],  // images to upload
+      proofObjectList: [],  // images uploaded
       loading: false,
     }
   },
@@ -162,7 +162,7 @@ export default {
     },
     proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
       this.$emit('proof', newProofObjectList[0])
-      if (this.multiple && newProofObjectList.length === this.proofImageList.length) {
+      if (this.proofObjectList.length === this.proofImageList.length) {
         this.$emit('done')
       }
     }
