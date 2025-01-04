@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.109.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.108.1...v1.109.0) (2025-01-04)
+
+
+### Features
+
+* **Proof add multiple:** rename to 'Add proofs', promote to sidebar ([#1228](https://github.com/openfoodfacts/open-prices-frontend/issues/1228)) ([95942be](https://github.com/openfoodfacts/open-prices-frontend/commit/95942bebb3e0e7c019eef3654c0af976c12b5543))
+
+
+### Bug Fixes
+
+* **Contribution Assistant:** next proof suggestion: fix again show only ready proofs owned. ref [#1166](https://github.com/openfoodfacts/open-prices-frontend/issues/1166) ([c3bccd5](https://github.com/openfoodfacts/open-prices-frontend/commit/c3bccd56a03f03429d74050fb0c6d334bc862931))
+* **Contribution Assistant:** next proof suggestion: fix again show only ready proofs without prices. ref [#1166](https://github.com/openfoodfacts/open-prices-frontend/issues/1166) ([75143b4](https://github.com/openfoodfacts/open-prices-frontend/commit/75143b4ca5b95875e901260f174f5b147efb35e1))
+* **Price Validation Assistant:** fix missing translation. ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([2a57e7a](https://github.com/openfoodfacts/open-prices-frontend/commit/2a57e7af4b7932ca8d0dc409a8c4ecbb8d752639))
+
+
+### Technical
+
+* **Contribution assistant:** new hideProofDetails prop to show or hide the price tag proof details. ref [#1044](https://github.com/openfoodfacts/open-prices-frontend/issues/1044) ([793fa90](https://github.com/openfoodfacts/open-prices-frontend/commit/793fa9089a711e8feed0cd9ad53d5a11493badd6))
+* **Experiments:** move down single price & proof workflows ([e004d23](https://github.com/openfoodfacts/open-prices-frontend/commit/e004d23076b8aa8f2b610e5586894e16b897d2c1))
+* **l10n:** New Crowdin translations to review and merge ([#1213](https://github.com/openfoodfacts/open-prices-frontend/issues/1213)) ([498d28c](https://github.com/openfoodfacts/open-prices-frontend/commit/498d28cf8d14f361fd7df2e0ef2271fd54b88ce8))
+* **Location selector:** better display recent locations (1 per line) ([9e56fc7](https://github.com/openfoodfacts/open-prices-frontend/commit/9e56fc7b873cf8db95d9f3bf09b58f8ff2beb27a))
+* **Price add:** use 'Add prices' wording everywhere (sidebar, header, breadcrumbs). ref [#1085](https://github.com/openfoodfacts/open-prices-frontend/issues/1085) ([0cafc7a](https://github.com/openfoodfacts/open-prices-frontend/commit/0cafc7a109c58fb047791f3593a9d6168171b5b8))
+* **Price Validation Assistant:** load less prices, but more often ([#1227](https://github.com/openfoodfacts/open-prices-frontend/issues/1227)) ([620a875](https://github.com/openfoodfacts/open-prices-frontend/commit/620a875c3c4a1f807eb3fbeddb008cf79ae43bb1))
+* **Price Validation Assistant:** rename PriceValidator to PriceValidation ([153df4f](https://github.com/openfoodfacts/open-prices-frontend/commit/153df4f51f703f55aec41fec200ae883440e19e9))
+* **Proof card:** re-add the type input (set to PRICE_TAG) to be more explicit. ref [#983](https://github.com/openfoodfacts/open-prices-frontend/issues/983) ([bd53763](https://github.com/openfoodfacts/open-prices-frontend/commit/bd5376311b0dabb203cbebd818b0e13b5c349367))
+* **Proof upload:** change card title if single or multiple mode. ref [#983](https://github.com/openfoodfacts/open-prices-frontend/issues/983) ([d87c8cb](https://github.com/openfoodfacts/open-prices-frontend/commit/d87c8cbfe49299ea15ba3210fc9b35e23f90cb31))
+* **User recent proofs:** load only 5 on small screens to speed up ([992626f](https://github.com/openfoodfacts/open-prices-frontend/commit/992626f7f6fe9b09bf42724920bf677cf844a4fe))
+
 ## [1.108.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.108.0...v1.108.1) (2025-01-03)
 
 
