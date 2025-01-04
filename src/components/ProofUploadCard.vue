@@ -15,7 +15,7 @@
         density="compact"
         :text="$t('ProofAdd.HowToMultiple')"
       />
-      <ProofTypeInputRow v-if="!typePriceTagOnly" :proofTypeForm="proofForm" />
+      <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" />
       <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
       <LocationInputRow :locationForm="proofForm" />
       <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />

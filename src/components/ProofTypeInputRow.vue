@@ -23,11 +23,23 @@ export default {
       type: Object,
       default: () => ({ type: null })
     },
+    hideProofTypeReceiptChoice: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return {
-      proofTypeList: constants.PROOF_TYPE_LIST,
+      // proofTypeList: constants.PROOF_TYPE_LIST,
     }
   },
+  computed: {
+    proofTypeList() {
+      if (this.hideProofTypeReceiptChoice) {
+        return constants.PROOF_TYPE_LIST.filter(pt => pt.key !== constants.PROOF_TYPE_RECEIPT)
+      }
+      return constants.PROOF_TYPE_LIST
+    }
+  }
 }
 </script>
