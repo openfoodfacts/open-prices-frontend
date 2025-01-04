@@ -138,6 +138,8 @@
 		"About": "Apie",
 		"AddPrice": "Pridėti kainą",
 		"AddPrices": "Pridėti kainas",
+		"AddProof": "Pridėti įrodymą",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Barkodas",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "Pridėti kelia skainas"
+		},
+		"AddProof": {
+			"Title": "Pridėti įrodymą"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "Pridėti vienintelį įrodymą"
