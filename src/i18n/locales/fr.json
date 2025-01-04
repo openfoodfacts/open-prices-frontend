@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "À propos",
 		"AddPrice": "Ajouter un prix",
+		"AddPrices": "Add prices",
 		"AddToOFF": "Ajouter à {name}",
 		"AdditionalInfo": "Informations supplémentaires",
 		"Barcode": "Code-barres",
@@ -410,7 +411,7 @@
 		"PoweredBy": {
 			"text": "fonctionne avec {url}"
 		},
-		"RecentLocations": "Lieu récent {recentLocationNumber}| Lieux récents {recentLocationNumber}",
+		"RecentLocations": "Aucun lieu récent | Lieu récent {recentLocationNumber} | Lieux récents {recentLocationNumber}",
 		"Result": "Résultat {resultNumber} | Résultats {resultNumber}",
 		"SearchByName": "Recherchez votre magasin par nom et par ville",
 		"Title": "Trouvez l'emplacement de votre magasin",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "Ajouter un prix"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "Ajouter un seul prix"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Assistant de contribution"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+		"PriceValidationAssistant": {
+			"Title": "Price Validation Assistant"
 		}
 	},
 	"Search": {

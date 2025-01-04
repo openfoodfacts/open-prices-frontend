@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "About",
 		"AddPrice": "Add a price",
+		"AddPrices": "Add prices",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Barcode",
@@ -533,6 +534,9 @@
 		},
 		"AddPrice": {
 			"Title": "Add a price"
+		},
+		"AddPrices": {
+			"Title": "Add prices"
 		},
 		"AddPriceSingle": {
 			"Title": "Add a single price"
