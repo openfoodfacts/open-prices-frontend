@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "Apie",
 		"AddPrice": "Pridėti kainą",
+		"AddPrices": "Add prices",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Barkodas",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "Pridėti kainą"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "Pridėti vieną kainą"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Bendradarbiavimo asistentas"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Kainų tikrintuvo asistentas"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {
