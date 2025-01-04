@@ -19,8 +19,7 @@
         <v-container>
           <v-row>
             <v-col cols="12" md="6">
-              <ProofUploadCard v-if="!proofObject" @proof="onProofUploaded($event)" />
-              <ProofCard v-else :proof="proofObject" mode="Uploaded" :hideProofActions="true" :readonly="true" />
+              <ProofUploadCard @proof="onProofUploaded($event)" />
             </v-col>
           </v-row>
         </v-container>
