@@ -138,6 +138,8 @@
 		"About": "Hakkında",
 		"AddPrice": "Fiyat ekleyin",
 		"AddPrices": "Add prices",
+		"AddProof": "Bir bedel ekle",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "{name}'e ekle",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Barkod",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "Birden fazla fiyat ekle"
+		},
+		"AddProof": {
+			"Title": "Bir bedel ekle"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"

@@ -138,6 +138,8 @@
 		"About": "Tietoja",
 		"AddPrice": "Lisää hinta",
 		"AddPrices": "Add prices",
+		"AddProof": "Lisää todiste",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "Lisää kohtaan {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Viivakoodi",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "Lisää useita hintoja"
+		},
+		"AddProof": {
+			"Title": "Lisää todiste"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"

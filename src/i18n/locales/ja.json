@@ -138,6 +138,8 @@
 		"About": "アプリについて",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
+		"AddProof": "Add a proof",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "{name} に追加",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "バーコード",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "複数の価格を追加する"
+		},
+		"AddProof": {
+			"Title": "Add a proof"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"

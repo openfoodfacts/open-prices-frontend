@@ -138,6 +138,8 @@
 		"About": "Acerca de",
 		"AddPrice": "Añadir un precio",
 		"AddPrices": "Add prices",
+		"AddProof": "Añadir comprobante",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "Añadir a {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Código de barras",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "Añadir varios precios"
+		},
+		"AddProof": {
+			"Title": "Añadir comprobante"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"

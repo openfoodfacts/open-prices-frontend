@@ -138,6 +138,8 @@
 		"About": "על אודות",
 		"AddPrice": "הוספת מחיר",
 		"AddPrices": "Add prices",
+		"AddProof": "הוספת הוכחה",
+		"AddProofs": "Add proofs",
 		"AddToOFF": "הוספה אל {name}",
 		"AdditionalInfo": "מידע נוסף",
 		"Barcode": "ברקוד",
@@ -543,6 +545,12 @@
 		},
 		"AddPriceMultiple": {
 			"Title": "הוספת מגוון מחירים"
+		},
+		"AddProof": {
+			"Title": "הוספת הוכחה"
+		},
+		"AddProofs": {
+			"Title": "Add proofs"
 		},
 		"AddProofSingle": {
 			"Title": "הוספת הוכחה יחידה"
