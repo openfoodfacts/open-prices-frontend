@@ -103,7 +103,7 @@ export default {
       default: false
     }
   },
-  emits: ['proof'],
+  emits: ['proof', 'done'],
   data() {
     return {
       proofForm: {
@@ -121,8 +121,8 @@ export default {
       proofDateSuccessMessage: false,
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
-      proofImageList: [],
-      proofObjectList: [],
+      proofImageList: [],  // images to upload
+      proofObjectList: [],  // images uploaded
       loading: false,
     }
   },
@@ -158,11 +158,13 @@ export default {
   },
   watch: {
     proofImageList(newProofImageList, oldProofImageList) {  // eslint-disable-line no-unused-vars
-      this.handleProofSelectedList(newProofImageList)
+      this.handleProofImageList()
     },
     proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
-      // TODO: update to proofList?
       this.$emit('proof', newProofObjectList[0])
+      if (this.proofObjectList.length === this.proofImageList.length) {
+        this.$emit('done')
+      }
     }
   },
   mounted() {
@@ -175,31 +177,31 @@ export default {
       }
       this.proofForm.currency = this.appStore.getUserLastCurrencyUsed
     },
-    handleProofSelectedList(proofSelectedList) {
+    handleProofImageList() {
       // can be an existing proof, or a file
       // existing proof: update proofForm + set proofObject
-      if (proofSelectedList[0].id) {
+      if (this.proofImageList[0].id) {
         // update proofForm
-        this.proofForm.type = proofSelectedList[0].type
-        this.proofForm.proof_id = proofSelectedList[0].id
-        if (proofSelectedList[0].location) {
-          this.proofForm.location_id = proofSelectedList[0].location.id
-          this.proofForm.location_osm_id = (proofSelectedList[0].location.type === constants.LOCATION_TYPE_OSM) ? proofSelectedList[0].location_osm_id : null
-          this.proofForm.location_osm_type = (proofSelectedList[0].location.type === constants.LOCATION_TYPE_OSM) ? proofSelectedList[0].location_osm_type : ''
+        this.proofForm.type = this.proofImageList[0].type
+        this.proofForm.proof_id = this.proofImageList[0].id
+        if (this.proofImageList[0].location) {
+          this.proofForm.location_id = this.proofImageList[0].location.id
+          this.proofForm.location_osm_id = (this.proofImageList[0].location.type === constants.LOCATION_TYPE_OSM) ? this.proofImageList[0].location_osm_id : null
+          this.proofForm.location_osm_type = (this.proofImageList[0].location.type === constants.LOCATION_TYPE_OSM) ? this.proofImageList[0].location_osm_type : ''
         }
-        if (proofSelectedList[0].date) {
-          this.proofForm.date = proofSelectedList[0].date
+        if (this.proofImageList[0].date) {
+          this.proofForm.date = this.proofImageList[0].date
         }
-        if (proofSelectedList[0].currency) {
-          this.proofForm.currency = proofSelectedList[0].currency
+        if (this.proofImageList[0].currency) {
+          this.proofForm.currency = this.proofImageList[0].currency
         }
         // set proofObject
         this.proofSelectedSuccessMessage = true
-        this.proofObjectList = [proofSelectedList[0]]
+        this.proofObjectList = [this.proofImageList[0]]
       }
       // new proof: extract exif data from file
       else {
-        ExifReader.load(proofSelectedList[0]).then((tags) => {
+        ExifReader.load(this.proofImageList[0]).then((tags) => {
           if (tags['DateTimeOriginal'] && tags['DateTimeOriginal'].description) {
             // exif DateTimeOriginal format: '2024:01:31 20:23:52'
             const imageDateString = tags['DateTimeOriginal'].description.substring(0, 10).replaceAll(':', '-')

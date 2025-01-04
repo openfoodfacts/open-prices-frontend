@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" md="6">
-      <ProofUploadCard :typePriceTagOnly="true" :hideRecentProofChoice="true" :multiple="true" @proof="proofUploaded = true" />
+      <ProofUploadCard :typePriceTagOnly="true" :hideRecentProofChoice="true" :multiple="true" @done="proofListUploaded = true" />
     </v-col>
   </v-row>
 
@@ -10,8 +10,8 @@
       <v-btn
         class="float-right"
         type="submit"
-        :color="proofUploaded ? 'success' : ''"
-        :disabled="!proofUploaded"
+        :color="proofListUploaded ? 'success' : ''"
+        :disabled="!proofListUploaded"
         @click="done"
       >
         {{ $t('Common.Done') }}
@@ -29,7 +29,7 @@ export default {
   },
   data() {
     return {
-      proofUploaded: false
+      proofListUploaded: false
     }
   },
   methods: {
