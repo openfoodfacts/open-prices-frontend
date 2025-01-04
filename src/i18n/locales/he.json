@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "על אודות",
 		"AddPrice": "הוספת מחיר",
+		"AddPrices": "Add prices",
 		"AddToOFF": "הוספה אל {name}",
 		"AdditionalInfo": "מידע נוסף",
 		"Barcode": "ברקוד",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "הוספת מחיר"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "הוספת מחיר בודד"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "מסייע תרומה"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {
