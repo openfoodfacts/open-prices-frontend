@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "Sobre",
 		"AddPrice": "Adicionar um preço",
+		"AddPrices": "Add prices",
 		"AddToOFF": "Adicionar a {name}",
 		"AdditionalInfo": "Informação adicional",
 		"Barcode": "Código de barras",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "Adicionar um preço"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "Adicionar um único preço"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Assistente de Contribuição"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Assistente de Validação de Preços"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {
