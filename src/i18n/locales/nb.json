@@ -137,6 +137,7 @@
 	"Common": {
 		"About": "Om",
 		"AddPrice": "Add a price",
+		"AddPrices": "Add prices",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Strekkode",
@@ -534,6 +535,9 @@
 		"AddPrice": {
 			"Title": "Add a price"
 		},
+		"AddPrices": {
+			"Title": "Add prices"
+		},
 		"AddPriceSingle": {
 			"Title": "Add a single price"
 		},
@@ -612,8 +616,8 @@
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
-		"PriceValidatorAssistant": {
-			"Title": "Price Validator Assistant"
+		"PriceValidationAssistant": {
+			"Title": "Price Validaton Assistant"
 		}
 	},
 	"Search": {
