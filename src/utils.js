@@ -72,8 +72,9 @@ function cleanBarcode(value) {
   if (value.length === 22) {
     value = value.substring(6, 6+13)
   }
-  // remove leading zeros
-  value = value.replace(/^0+/, '')
+  // remove leading zeros? no
+  // https://openfoodfacts.github.io/openfoodfacts-server/api/ref-barcode-normalization/
+  // value = value.replace(/^0+/, '')
   return value
 }
 
