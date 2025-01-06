@@ -67,9 +67,10 @@ function isValidBarcode(value) {
 function cleanBarcode(value) {
   // keep only digits (remove letters, spaces, special characters)
   value = value.replace(/\D/g, '')
-  // special case: 22 digits could be Carrefour
+  // special case: 19 or 22 digits could be Carrefour
+  // 182492/3119789831280 -> 1824923119789831280 -> 3119789831280
   // 182492/3119789831280/051 -> 1824923119789831280051 -> 3119789831280
-  if (value.length === 22) {
+  if ((value.length === 19) || (value.length === 22)) {
     value = value.substring(6, 6+13)
   }
   // remove leading zeros? no
