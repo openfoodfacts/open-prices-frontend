@@ -121,6 +121,13 @@ function currentDate() {
 }
 
 /**
+ * output: '2023-12-25T17:08:19.021410+01:00'
+ */
+function currentDateTime() {
+  return new Date().toISOString()
+}
+
+/**
  * output: '2023-12-25T00:00:00.000Z'
  */
 function currentStartOfDay() {
@@ -443,9 +450,10 @@ export default {
   cleanBarcode,
   addObjectToArray,
   removeObjectFromArray,
-  currentStartOfDay,
   prettyPrice,
   currentDate,
+  currentDateTime,
+  currentStartOfDay,
   prettyDate,
   prettyDateTime,
   offDateTime,
