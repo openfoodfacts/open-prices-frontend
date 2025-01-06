@@ -17,6 +17,7 @@
         <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
           <v-text-field
             :model-value="priceForm.price"
+            density="comfortable"
             :label="priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label')"
             type="text"
             inputmode="decimal"
@@ -35,6 +36,7 @@
         <v-col v-if="priceForm.price_is_discounted" cols="6" class="pb-0">
           <v-text-field
             :model-value="priceForm.price_without_discount"
+            density="comfortable"
             :label="$t('PriceForm.LabelFull')"
             type="text"
             inputmode="decimal"
@@ -47,7 +49,7 @@
         </v-col>
       </v-row>
       <v-row class="mt-0">
-        <v-col cols="6">
+        <v-col cols="6" class="pb-0">
           <v-checkbox
             v-model="priceForm.price_is_discounted"
             density="compact"

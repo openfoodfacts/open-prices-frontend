@@ -26,6 +26,7 @@
         <v-col cols="6">
           <v-autocomplete
             v-model="productForm.category_tag"
+            density="comfortable"
             :label="$t('AddPriceSingle.ProductInfo.CategoryLabel')"
             :items="categoryTags"
             :item-title="item => item.name"
@@ -36,6 +37,7 @@
         <v-col cols="6">
           <v-autocomplete
             v-model="productForm.origins_tags"
+            density="comfortable"
             :label="$t('AddPriceSingle.ProductInfo.OriginLabel')"
             :items="originTags"
             :item-title="item => item.name"
