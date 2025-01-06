@@ -3,6 +3,7 @@
     <v-col cols="6">
       <v-text-field
         v-model="proofMetadataForm.date"
+        density="comfortable"
         :label="$t('Common.Date')"
         type="date"
         :max="currentDate"
@@ -12,6 +13,7 @@
     <v-col cols="6">
       <v-select
         v-model="proofMetadataForm.currency"
+        density="comfortable"
         :label="$t('Common.Currency')"
         :items="userFavoriteCurrencies"
         hide-details="auto"
