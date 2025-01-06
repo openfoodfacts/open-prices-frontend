@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.109.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.109.2...v1.109.3) (2025-01-06)
+
+
+### Bug Fixes
+
+* **Price Validation Assistant:** avoid duplicate prices tags during pagination ([#1238](https://github.com/openfoodfacts/open-prices-frontend/issues/1238)) ([0499fc1](https://github.com/openfoodfacts/open-prices-frontend/commit/0499fc17ee4cb92b6c79087338955701e0b3f074))
+* **Price Validation Assistant:** only show price tags with a prediction ([#1240](https://github.com/openfoodfacts/open-prices-frontend/issues/1240)) ([3d871a0](https://github.com/openfoodfacts/open-prices-frontend/commit/3d871a05c6d3f678f02bf2c6795c3e6ededb9cc8))
+
 ## [1.109.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.109.1...v1.109.2) (2025-01-06)
 
 
