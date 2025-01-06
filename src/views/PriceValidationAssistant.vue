@@ -49,6 +49,8 @@ export default {
   },
   data() {
     return {
+      currentDateTime: utils.currentDateTime(),  // usefull to avoid fetching duplicates during pagination
+      // data
       priceTagList: [],
       priceTagTotal: null,
       priceTagPage: 0,  // issue with pagination once the user starts removing/validating price tags...
@@ -72,7 +74,7 @@ export default {
       return 6
     },
     getPriceTagsParams() {
-      return { proof__owner: this.username, proof__ready_for_price_tag_validation: true, status__isnull: true, order_by: this.currentOrder, size: this.getApiSize, page: this.priceTagPage }
+      return { proof__owner: this.username, proof__ready_for_price_tag_validation: true, status__isnull: true, created__lte: this.currentDateTime, order_by: this.currentOrder, size: this.getApiSize, page: this.priceTagPage }
     },
   },
   mounted() {
