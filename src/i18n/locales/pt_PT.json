@@ -137,9 +137,9 @@
 	"Common": {
 		"About": "Sobre",
 		"AddPrice": "Adicionar um preço",
-		"AddPrices": "Add prices",
+		"AddPrices": "Adicionar preços",
 		"AddProof": "Adicionar um comprovativo",
-		"AddProofs": "Add proofs",
+		"AddProofs": "Adicionar comprovativos",
 		"AddToOFF": "Adicionar a {name}",
 		"AdditionalInfo": "Informação adicional",
 		"Barcode": "Código de barras",
@@ -538,7 +538,7 @@
 			"Title": "Adicionar um preço"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Adicionar preços"
 		},
 		"AddPriceSingle": {
 			"Title": "Adicionar um preço único"
@@ -550,7 +550,7 @@
 			"Title": "Adicionar um comprovativo"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "Adicionar comprovativos"
 		},
 		"AddProofSingle": {
 			"Title": "Adicionar um único comprovativo"
@@ -625,7 +625,7 @@
 			"Title": "Assistente de contribuição"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Assistente de validação de preços"
 		}
 	},
 	"Search": {
