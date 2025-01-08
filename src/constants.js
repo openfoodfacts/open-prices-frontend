@@ -37,6 +37,7 @@ export default {
   APP_GITHUB_REUSE_DISCUSSION_URL: 'https://github.com/openfoodfacts/open-prices/discussions/562',
   APP_HUGGING_FACE_URL: 'https://huggingface.co/datasets/openfoodfacts/open-prices',
   APP_DATA_GOUV_URL: 'https://www.data.gouv.fr/fr/datasets/open-prices/',
+  APP_HOME_ICONS: '🏷🍊💲',
   // OFF
   OFF_NAME: OFF_NAME,
   OFF_URL: 'https://world.openfoodfacts.org',
