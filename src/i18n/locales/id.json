@@ -137,9 +137,9 @@
 	"Common": {
 		"About": "Tentang",
 		"AddPrice": "Tambahkan harga",
-		"AddPrices": "Add prices",
+		"AddPrices": "Tambahkan harga",
 		"AddProof": "Tambahkan bukti",
-		"AddProofs": "Add proofs",
+		"AddProofs": "Tambahkan bukti",
 		"AddToOFF": "Tambahkan ke {name}",
 		"AdditionalInfo": "Informasi tambahan",
 		"Barcode": "Kode batang",
@@ -221,10 +221,10 @@
 		"Help": "Bantuan",
 		"History": "Riwayat",
 		"Image": "Gambar",
-		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
-		"ImageSelected": "Image selected!",
-		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
+		"ImageSelect": "Pilih gambar",
+		"ImageSelectMultiple": "Pilih gambar",
+		"ImageSelected": "Gambar terpilih!",
+		"ImageSelectedCount": "{count} gambar terpilih | {count} gambar terpilih | {count} gambar terpilih",
 		"Images": "Gambar",
 		"ImageFull": "Gambar ukuran penuh",
 		"Latest": "Terbaru",
@@ -250,11 +250,11 @@
 		"Physical": "Fisik",
 		"PRICE_TAG": "Label harga",
 		"PriceCount": "{count} harga | {count} harga | {count} harga",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
+		"PriceToValidateCount": "{count} harga untuk divalidasi | {count} harga untuk divalidasi | {count} harga untuk divalidasi",
 		"PriceCreated": "Harga dibuat!",
 		"PricesMore": "Harga lebih lanjut",
 		"PricesAddedToday": "Harga yang ditambahkan hari ini",
-		"PricesToday": "Prices today",
+		"PricesToday": "Harga hari ini",
 		"Private": "Pribadi",
 		"Privacy": "Privasi",
 		"ProductCount": "{count} produk | {count} produk | {count} produk",
@@ -263,11 +263,11 @@
 		"ProofDetails": "Rincian bukti",
 		"ProofMissing": "Bukti hilang",
 		"ProofSelect": "Pilih bukti",
-		"ProofSelectMultiple": "Select proofs",
+		"ProofSelectMultiple": "Pilih bukti",
 		"ProofSelected": "Bukti dipilih!",
 		"ProofSelectedCount": "{count} bukti dipilih | {count} bukti dipilih | {count} bukti dipilih",
-		"ProofsAddedToday": "Proofs added today",
-		"ProofsToday": "Proofs today",
+		"ProofsAddedToday": "Bukti ditambahkan hari ini",
+		"ProofsToday": "Bukti hari ini",
 		"Public": "Publik",
 		"Quantity": "Kuantitas",
 		"QuantityBought": "Kuantitas yang dibeli",
@@ -306,7 +306,7 @@
 		"Top": "Teratas",
 		"Total": "Total",
 		"Type": "Tipe",
-		"Unreadable": "Unreadable",
+		"Unreadable": "Tidak dapat dibaca",
 		"Upload": "Unggah",
 		"UploadMultipleImages": "Unggah {count} gambar | Unggah {count} gambar",
 		"UploadMultiplePrices": "Unggah {count} harga | Unggah {count} harga",
@@ -331,7 +331,7 @@
 			"Cleanup": "3. Pembersihan",
 			"Summary": "4. Ringkasan"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
+		"BoundingBoxesFromServerWarning": "Tidak ada label yang dapat terdeteksi secara otomatis. Silakan menggambar kotak secara manual di sekitar label.",
 		"FindBoundingBoxes": "Temukan label secara otomatis",
 		"FindBoundingBoxesRunning": "Deteksi label otomatis sedang berjalan. Mohon tunggu...",
 		"LabelsExtractionSteps": {
@@ -340,25 +340,25 @@
 			"SendLabels": "3. Kirim label untuk pemrosesan otomatis",
 			"SendLabelsButton": "Kirim label"
 		},
-		"PricesAlreadyAdded": "Prices already added",
+		"PricesAlreadyAdded": "Harga sudah ditambahkan",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} harga akan ditambahkan ke bukti yang sudah ada pada {date} di {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} harga ditambahkan",
 		"WaitForUpload": "Harap tunggu untuk diunggah",
 		"GoToDashboard": "Buka dasbor Anda",
 		"GoToProof": "Buka bukti",
 		"AddNewProof": "Tambahkan bukti baru",
-		"NextProof": "Next proof",
-		"ChooseNextProof": "Choose another proof to handle",
+		"NextProof": "Bukti selanjutnya",
+		"ChooseNextProof": "Pilih bukti lain untuk ditangani",
 		"AutomaticBoundingBoxSource": "otomatis",
 		"ManualBoundingBoxSource": "manual",
 		"DetectedBarcode": "Kode batang terdeteksi: {barcode}",
 		"LabelProcessingErrorMessage": "Eror: pemrosesan otomatis label gagal",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Price tag with a price",
-			"PriceTagWithoutPrice": "Price tag without a price",
-			"NewPriceTag": "New price tag"
+			"PriceTagWithPrice": "Label harga dengan harga",
+			"PriceTagWithoutPrice": "Label harga tanpa harga",
+			"NewPriceTag": "Label harga baru"
 		},
-		"OpenWithTheAssistant": "Open with the assistant"
+		"OpenWithTheAssistant": "Buka dengan Asisten"
 	},
 	"Community": {
 		"JoinUs": "Bergabunglah bersama kami!",
@@ -493,7 +493,7 @@
 		"ProductNotFound": "Produk tidak ditemukan di Open Food Facts... Jangan ragu untuk menambahkannya :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+		"HowToMultiple": "Semua gambar label harga yang Anda pilih harus memiliki lokasi toko yang sama, dan diambil pada hari yang sama."
 	},
 	"ProofCard": {
 		"Proof": "Bukti",
@@ -538,7 +538,7 @@
 			"Title": "Tambahkan harga"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Tambahkan harga"
 		},
 		"AddPriceSingle": {
 			"Title": "Tambahkan satu harga"
@@ -550,7 +550,7 @@
 			"Title": "Tambahkan bukti"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "Tambahkan bukti"
 		},
 		"AddProofSingle": {
 			"Title": "Tambahkan sebuah bukti"
@@ -625,7 +625,7 @@
 			"Title": "Asisten Kontribusi"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Asisten Validasi Harga"
 		}
 	},
 	"Search": {
@@ -698,7 +698,7 @@
 		"FavoriteCurrencies": "Mata uang favorit",
 		"CurrencyRequired": "Setidaknya diperlukan satu mata uang",
 		"LanguageLabel": "Bahasa",
-		"LocationFinder": "Location finder",
+		"LocationFinder": "Pencari lokasi",
 		"LocationDisplayOSMID": "Tampilkan ID OSM",
 		"ProductDisplayBarcode": "Tampilkan kode batang",
 		"ProductDisplayCategoryTag": "Tampilkan tag kategori",
