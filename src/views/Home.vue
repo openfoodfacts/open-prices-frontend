@@ -1,9 +1,7 @@
 <template>
-  <h2 class="text-h6">
-    {{ $t('Common.TaglineAlt1') }} 🏷🍊💲
+  <h2 class="text-h6 pb-4">
+    {{ $t('Common.TaglineAlt1') }} {{ APP_HOME_ICONS }}
   </h2>
-
-  <br>
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
@@ -46,6 +44,7 @@ export default {
   data() {
     return {
       APP_NAME: constants.APP_NAME,
+      APP_HOME_ICONS: constants.APP_HOME_ICONS,
       // data
       latestPriceList: [],
       todayPriceCount: null,
