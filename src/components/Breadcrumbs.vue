@@ -1,7 +1,7 @@
 <template>
   <v-row v-if="breadcrumbs">
     <v-col class="py-0">
-      <v-breadcrumbs class="text-h6 pa-0" density="compact" :items="breadcrumbs">
+      <v-breadcrumbs class="text-h6 px-0 pt-2 pb-0" density="compact" :items="breadcrumbs">
         <template #item="{ item }">
           <v-breadcrumbs-item
             class="pa-0"

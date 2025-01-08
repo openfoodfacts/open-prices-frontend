@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col class="pt-0">
+    <v-col class="pt-2 pb-0">
       <h2 class="text-h6">
         {{ $t('Common.TaglineAlt1') }} {{ APP_HOME_ICONS }}
       </h2>
