@@ -222,7 +222,7 @@ export default {
           if (!data['id']) {
             alert(`Form error: ${JSON.stringify(data)}`)
           } else {
-            this.proofPriceNewList.push(JSON.parse(JSON.stringify(this.productPriceForm)))  // deep copy
+            this.proofPriceNewList.push(JSON.parse(JSON.stringify(data)))  // deep copy
             this.priceSuccessMessage = true
             // show new price form immediately
             this.initNewProductPriceForm()
