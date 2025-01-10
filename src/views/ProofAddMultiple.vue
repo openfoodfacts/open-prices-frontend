@@ -19,14 +19,26 @@
 
   <v-row v-if="step === 2">
     <v-col>
-      <v-btn
-        class="float-right"
-        variant="outlined"
-        color="primary"
-        @click="goToDashboard"
-      >
-        {{ $t('Common.Done') }}
-      </v-btn>
+      <v-card>
+        <v-card-text class="text-right">
+          <v-btn
+            color="primary"
+            variant="outlined"
+            prepend-icon="mdi-image-plus"
+            @click="reloadPage"
+          >
+            {{ $t('Common.AddNewProofs') }}
+          </v-btn>
+          <v-btn
+            color="primary"
+            variant="outlined"
+            prepend-icon="mdi-account-circle"
+            @click="goToDashboard"
+          >
+            {{ $t('Common.Dashboard') }}
+          </v-btn>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 </template>
@@ -40,7 +52,7 @@ export default {
   },
   data() {
     return {
-      step: 1,
+      step: 2,
       stepItemList: [
         {
           title: this.$t('Common.Upload'),
@@ -54,6 +66,9 @@ export default {
     }
   },
   methods: {
+    reloadPage() {
+      window.location.reload()
+    },
     goToDashboard() {
       this.$router.push({ path: '/dashboard', query: { proofSingleSuccess: 'true' } })
     }

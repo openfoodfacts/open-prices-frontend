@@ -56,7 +56,6 @@
               <v-spacer />
               <v-col>
                 <v-btn
-                  class="float-right"
                   color="success"
                   variant="flat"
                   type="submit"

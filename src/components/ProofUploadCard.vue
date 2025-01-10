@@ -28,10 +28,8 @@
     <v-card-actions>
       <v-spacer />
       <v-btn
-        class="float-right"
         color="success"
         variant="flat"
-        elevation="1"
         :loading="loading"
         :disabled="!proofFormFilled || loading"
         @click="uploadProofList"
