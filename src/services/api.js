@@ -34,16 +34,29 @@ function filterBodyWithAllowedKeys(data, allowedKeys) {
   return filteredData
 }
 
-function extraPriceCreateFiltering(data) {
+function extraPriceCreateOrUpdateFiltering(data) {
   let filteredData = {...data}
+  // product-only rules
   if (filteredData.type == constants.PRICE_TYPE_PRODUCT) {
     delete filteredData.price_per
     delete filteredData.category_tag
     delete filteredData.origins_tags
     delete filteredData.labels_tags
-  } else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
+  }
+  // category-only rules
+  else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
     delete filteredData.product_code
     delete filteredData.product
+    if ((typeof filteredData.origins_tags === 'string') && (filteredData.origins_tags.length)) {
+      filteredData.origins_tags = [filteredData.origins_tags]
+    }
+    if (filteredData.labels_tags.length == 0) {
+      filteredData.labels_tags = null
+    }
+  }
+  // generic rules
+  if (!filteredData.price_is_discounted) {
+    filteredData.price_without_discount = null
   }
   return filteredData
 }
@@ -174,8 +187,9 @@ export default {
 
   createPrice(inputData, source = null) {
     let data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS)
-    data = extraPriceCreateFiltering(data)
+    data = extraPriceCreateOrUpdateFiltering(data)
     const store = useAppStore()
+    store.setLastCurrencyUsed(data.currency)
     store.user.last_product_product_used = data.product_code ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({'app_page': source})}`
     return fetch(url, {
@@ -208,7 +222,8 @@ export default {
   },
 
   updatePrice(priceId, inputData = {}) {
-    const data = filterBodyWithAllowedKeys(inputData, PRICE_UPDATE_FIELDS)
+    let data = filterBodyWithAllowedKeys(inputData, PRICE_UPDATE_FIELDS)
+    data = extraPriceCreateOrUpdateFiltering(data)
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
     return fetch(url, {
