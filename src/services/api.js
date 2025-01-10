@@ -49,6 +49,8 @@ function extraPriceCreateOrUpdateFiltering(data) {
     delete filteredData.product
     if ((typeof filteredData.origins_tags === 'string') && (filteredData.origins_tags.length)) {
       filteredData.origins_tags = [filteredData.origins_tags]
+    } else {
+      filteredData.origins_tags = ['en:unknown']
     }
     if (filteredData.labels_tags.length == 0) {
       filteredData.labels_tags = null
