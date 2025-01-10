@@ -32,7 +32,7 @@
     "leaflet": "^1.9.4",
     "pinia": "^2.2.4",
     "pinia-plugin-persistedstate": "^3.2.3",
-    "universal-cookie": "^7.2.1",
+    "universal-cookie": "^7.2.2",
     "vega": "^5.30.0",
     "vega-embed": "^6.26.0",
     "vega-lite": "^5.21.0",
