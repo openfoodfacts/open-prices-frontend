@@ -137,9 +137,9 @@
 	"Common": {
 		"About": "Over",
 		"AddPrice": "Voeg een prijs toe",
-		"AddPrices": "Add prices",
+		"AddPrices": "Prijzen toevoegen",
 		"AddProof": "Voeg een bewijs toe",
-		"AddProofs": "Add proofs",
+		"AddProofs": "Bewijzen toevoegen",
 		"AddToOFF": "Toevoegen aan {name}",
 		"AdditionalInfo": "Aanvullende informatie",
 		"Barcode": "Streepjescode",
@@ -221,10 +221,10 @@
 		"Help": "Help",
 		"History": "Geschiedenis",
 		"Image": "Afbeelding",
-		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
-		"ImageSelected": "Image selected!",
-		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
+		"ImageSelect": "Afbeelding selecteren",
+		"ImageSelectMultiple": "Afbeeldingen selecteren",
+		"ImageSelected": "Afbeelding geselecteerd!",
+		"ImageSelectedCount": "{count} afbeeldingen geselecteerd | {count} afbeelding geselecteerd | {count} afbeeldingen geselecteerd",
 		"Images": "Afbeeldingen",
 		"ImageFull": "Afbeelding op volledige grootte",
 		"Latest": "Laatste",
@@ -263,7 +263,7 @@
 		"ProofDetails": "Bewijs details",
 		"ProofMissing": "Bewijs ontbreekt",
 		"ProofSelect": "Selecteer een bewijs",
-		"ProofSelectMultiple": "Select proofs",
+		"ProofSelectMultiple": "Selecteer bewijzen",
 		"ProofSelected": "Bewijs geselecteerd!",
 		"ProofSelectedCount": "{count} bewijzen geselecteerd | {count} bewijs geselecteerd | {count} bewijzen geselecteerd",
 		"ProofsAddedToday": "Proofs added today",
@@ -326,9 +326,9 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
+			"ProofSelect": "1. Selectie van het bewijs",
 			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
+			"Cleanup": "3. Opschonen",
 			"Summary": "4. Samenvatting"
 		},
 		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
@@ -340,7 +340,7 @@
 			"SendLabels": "3. Verzend de labels voor automatische verwerking",
 			"SendLabelsButton": "Labels verzenden"
 		},
-		"PricesAlreadyAdded": "Prices already added",
+		"PricesAlreadyAdded": "Prijzen al toegevoegd",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
 		"WaitForUpload": "Please wait for upload",
@@ -356,9 +356,9 @@
 		"PriceTagLabels": {
 			"PriceTagWithPrice": "Price tag with a price",
 			"PriceTagWithoutPrice": "Price tag without a price",
-			"NewPriceTag": "New price tag"
+			"NewPriceTag": "Nieuw prijskaartje"
 		},
-		"OpenWithTheAssistant": "Open with the assistant"
+		"OpenWithTheAssistant": "Openen met de assistent"
 	},
 	"Community": {
 		"JoinUs": "Doe mee!",
@@ -538,7 +538,7 @@
 			"Title": "Voeg een prijs toe"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Prijzen toevoegen"
 		},
 		"AddPriceSingle": {
 			"Title": "Voeg een enkele prijs toe"
@@ -550,7 +550,7 @@
 			"Title": "Voeg een bewijs toe"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "Bewijzen toevoegen"
 		},
 		"AddProofSingle": {
 			"Title": "Voeg één bewijs toe"
@@ -625,7 +625,7 @@
 			"Title": "Bijdrage-Assistent"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Prijsvalidatie-assistent"
 		}
 	},
 	"Search": {
