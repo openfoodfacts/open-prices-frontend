@@ -1,11 +1,30 @@
 <template>
   <v-row>
+    <v-col cols="12">
+      <v-stepper v-model="step" hide-actions disabled>
+        <v-stepper-header>
+          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
+          <v-divider />
+          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
+          <v-divider />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step === 3" />
+        </v-stepper-header>
+      </v-stepper>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="step === 1">
     <!-- Step 1: proof (image, location, date & currency) -->
     <v-col cols="12" md="6">
       <ProofUploadCard @proof="onProofUploaded($event)" />
     </v-col>
+  </v-row>
 
-    <v-col v-if="proofFormFilled" cols="12" md="6">
+  <v-row v-if="step === 2">
+    <v-col cols="12" md="6">
+      <ProofCard :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
+    </v-col>
+    <v-col cols="12" md="6">
       <!-- Step 2a: product prices already uploaded -->
       <PriceAlreadyUploadedListCard :proof="proofObject" :proofPriceUploadedList="proofPriceUploadedList" />
 
@@ -15,7 +34,6 @@
         class="mr-2"
         color="primary"
         :loading="loading"
-        :disabled="!proofFormFilled"
         @click="initNewProductPriceForm"
       >
         {{ $t('AddPriceMultiple.ProductPriceDetails.Add') }}
@@ -76,10 +94,45 @@
         type="submit"
         :loading="loading"
         :disabled="productPriceFormFilled"
-        @click="goToDashboard"
+        @click="done"
       >
         {{ $t('Common.Done') }}
       </v-btn>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="step === 3">
+    <v-col>
+      <v-card
+        :title="$t('Common.PriceAddedCount', { count: proofPriceNewList.length })"
+        prepend-icon="mdi-tag-check-outline"
+      >
+        <v-divider />
+        <v-card-text :class="$vuetify.display.smAndUp ? 'text-center' : 'text-right'">
+          <v-row>
+            <v-col cols="12" md="6">
+              <v-btn
+                color="primary"
+                variant="outlined"
+                prepend-icon="mdi-tag-plus-outline"
+                @click="reloadPage"
+              >
+                {{ $t('Common.AddNewPrices') }}
+              </v-btn>
+            </v-col>
+            <v-col cols="12" md="6">
+              <v-btn
+                color="primary"
+                variant="outlined"
+                prepend-icon="mdi-account-circle"
+                @click="goToDashboard"
+              >
+                {{ $t('Common.Dashboard') }}
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 
@@ -104,6 +157,7 @@ import utils from '../utils.js'
 export default {
   components: {
     ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     PriceAlreadyUploadedListCard: defineAsyncComponent(() => import('../components/PriceAlreadyUploadedListCard.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
@@ -111,6 +165,21 @@ export default {
   data() {
     return {
       goTo: useGoTo(),
+      step: 1,
+      stepItemList: [
+        {
+          title: this.$t('Common.Proof'),
+          value: 1
+        },
+        {
+          title: this.$t('Common.Prices'),
+          value: 2
+        },
+        {
+          title: this.$t('Common.Done'),
+          value: 3
+        }
+      ],
       // price form
       addPriceMultipleForm: {
         type: null,
@@ -191,6 +260,8 @@ export default {
       }
       // get ready to add prices: init product price form
       this.initNewProductPriceForm()
+      // move to step 2
+      this.step = 2
     },
     getProofPrices() {
       this.loading = true
@@ -234,6 +305,12 @@ export default {
           console.log(error)
           this.loading = false
         })
+    },
+    done() {
+      this.step = 3
+    },
+    reloadPage() {
+      window.location.reload()
     },
     goToDashboard() {
       this.$router.push({ path: '/dashboard', query: { multipleSuccess: 'true' } })
