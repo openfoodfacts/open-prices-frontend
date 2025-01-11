@@ -137,7 +137,7 @@
 	"Common": {
 		"About": "על אודות",
 		"AddPrice": "הוספת מחיר",
-		"AddPrices": "Add prices",
+		"AddPrices": "הוספת מחירים",
 		"AddProof": "הוספת הוכחה",
 		"AddProofs": "Add proofs",
 		"AddToOFF": "הוספה אל {name}",
@@ -538,7 +538,7 @@
 			"Title": "הוספת מחיר"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "הוספת מחירים"
 		},
 		"AddPriceSingle": {
 			"Title": "הוספת מחיר בודד"
