@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "新增多個證明"
 		},
+		"Locations": {
+			"Title": "地點"
+		},
 		"PriceAdd": {
 			"Title": "新增價格"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "新增多個價格"
+		},
+		"Proofs": {
+			"Title": "證明"
 		},
 		"ProofAddSingle": {
 			"Title": "新增單一證明"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "熱門產品"
+		},
+		"Users": {
+			"Title": "用戶"
 		},
 		"ContributionAssistant": {
 			"Title": "貢獻助手"
