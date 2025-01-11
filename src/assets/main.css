@@ -23,3 +23,7 @@
 .v-btn-group--density-compact.v-btn-group {
     height: 28px !important;  /* default is 36px; match v-btn size="small" height */
 }
+
+.v-stepper-item {
+    padding: 1rem !important;
+}
