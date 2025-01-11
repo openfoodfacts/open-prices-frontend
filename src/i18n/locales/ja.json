@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "場所："
+		},
 		"PriceAdd": {
 			"Title": "Add a price"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "複数の価格を追加する"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top products"
+		},
+		"Users": {
+			"Title": "ユーザー"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
