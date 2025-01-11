@@ -67,13 +67,15 @@ function isValidBarcode(value) {
 function cleanBarcode(value) {
   // keep only digits (remove letters, spaces, special characters)
   value = value.replace(/\D/g, '')
-  // special case: 22 digits could be Carrefour
+  // special case: 19 or 22 digits could be Carrefour
+  // 182492/3119789831280 -> 1824923119789831280 -> 3119789831280
   // 182492/3119789831280/051 -> 1824923119789831280051 -> 3119789831280
-  if (value.length === 22) {
+  if ((value.length === 19) || (value.length === 22)) {
     value = value.substring(6, 6+13)
   }
-  // remove leading zeros
-  value = value.replace(/^0+/, '')
+  // remove leading zeros? no
+  // https://openfoodfacts.github.io/openfoodfacts-server/api/ref-barcode-normalization/
+  // value = value.replace(/^0+/, '')
   return value
 }
 
@@ -116,6 +118,13 @@ function prettyPrice(price, currency) {
  */
 function currentDate() {
   return new Date().toISOString().substring(0, 10)
+}
+
+/**
+ * output: '2023-12-25T17:08:19.021410+01:00'
+ */
+function currentDateTime() {
+  return new Date().toISOString()
 }
 
 /**
@@ -441,9 +450,10 @@ export default {
   cleanBarcode,
   addObjectToArray,
   removeObjectFromArray,
-  currentStartOfDay,
   prettyPrice,
   currentDate,
+  currentDateTime,
+  currentStartOfDay,
   prettyDate,
   prettyDateTime,
   offDateTime,

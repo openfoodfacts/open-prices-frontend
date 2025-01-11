@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.109.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.109.2...v1.109.3) (2025-01-06)
+
+
+### Bug Fixes
+
+* **Price Validation Assistant:** avoid duplicate prices tags during pagination ([#1238](https://github.com/openfoodfacts/open-prices-frontend/issues/1238)) ([0499fc1](https://github.com/openfoodfacts/open-prices-frontend/commit/0499fc17ee4cb92b6c79087338955701e0b3f074))
+* **Price Validation Assistant:** only show price tags with a prediction ([#1240](https://github.com/openfoodfacts/open-prices-frontend/issues/1240)) ([3d871a0](https://github.com/openfoodfacts/open-prices-frontend/commit/3d871a05c6d3f678f02bf2c6795c3e6ededb9cc8))
+
+## [1.109.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.109.1...v1.109.2) (2025-01-06)
+
+
+### Bug Fixes
+
+* **Assistants:** additional cleanup rule for Carrefour wrongly detected barcodes. ref [#1204](https://github.com/openfoodfacts/open-prices-frontend/issues/1204) ([d4f308c](https://github.com/openfoodfacts/open-prices-frontend/commit/d4f308cb21c78dadcfed12615c8c89511162a517))
+* **Assistants:** stop removing barcode leading zeros after all. ref [#1204](https://github.com/openfoodfacts/open-prices-frontend/issues/1204) ([7a7e48f](https://github.com/openfoodfacts/open-prices-frontend/commit/7a7e48f06dfe42f4e1519fd0b7768b18b474b2c6))
+
+
+### Technical
+
+* **Price add:** switch all proof & price fields to density comfortable (slightly smaller) ([#1237](https://github.com/openfoodfacts/open-prices-frontend/issues/1237)) ([d73d38e](https://github.com/openfoodfacts/open-prices-frontend/commit/d73d38e2ac2acdef9459db60a648a69e5848d021))
+* **Sidebar:** hide top products, locations & contributors ([#1236](https://github.com/openfoodfacts/open-prices-frontend/issues/1236)) ([51afd10](https://github.com/openfoodfacts/open-prices-frontend/commit/51afd103f4c05ec662dd19e449cd028eb788177d))
+
 ## [1.109.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.109.0...v1.109.1) (2025-01-04)
 
 

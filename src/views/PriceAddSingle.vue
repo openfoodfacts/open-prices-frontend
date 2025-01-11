@@ -124,25 +124,6 @@ export default {
     },
     createPrice() {
       this.loading = true
-      this.appStore.setLastCurrencyUsed(this.addPriceSingleForm.currency)
-      // cleanup form
-      if (!this.addPriceSingleForm.product_code) {
-        this.addPriceSingleForm.product_code = null
-      } else {
-        this.addPriceSingleForm.price_per = null
-      }
-      if ((typeof this.addPriceSingleForm.origins_tags === 'string') && (this.addPriceSingleForm.origins_tags.length)) {
-        this.addPriceSingleForm.origins_tags = [this.addPriceSingleForm.origins_tags]
-      } else {
-        this.addPriceSingleForm.origins_tags = null
-      }
-      if (this.addPriceSingleForm.labels_tags.length == 0) {
-        this.addPriceSingleForm.labels_tags = null
-      }
-      if (!this.addPriceSingleForm.price_is_discounted) {
-        this.addPriceSingleForm.price_without_discount = null
-      }
-      // create price
       api
         .createPrice(this.addPriceSingleForm, this.$route.path)
         .then((data) => {

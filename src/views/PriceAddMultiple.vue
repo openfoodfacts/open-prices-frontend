@@ -216,32 +216,13 @@ export default {
     },
     createPrice() {
       this.loading = true
-      this.appStore.setLastCurrencyUsed(this.productPriceForm.currency)
-      // cleanup form
-      if (!this.productPriceForm.product_code) {
-        this.productPriceForm.product_code = null
-      } else {
-        this.productPriceForm.price_per = null
-      }
-      if ((typeof this.productPriceForm.origins_tags === 'string') && (this.productPriceForm.origins_tags.length)) {
-        this.productPriceForm.origins_tags = [this.productPriceForm.origins_tags]
-      } else {
-        this.productPriceForm.origins_tags = null
-      }
-      if (this.productPriceForm.labels_tags.length == 0) {
-        this.productPriceForm.labels_tags = null
-      }
-      if (!this.productPriceForm.price_is_discounted) {
-        this.productPriceForm.price_without_discount = null
-      }
-      // create price
       api
         .createPrice(Object.assign({}, this.addPriceMultipleForm, this.productPriceForm), this.$route.path)
         .then((data) => {
           if (!data['id']) {
             alert(`Form error: ${JSON.stringify(data)}`)
           } else {
-            this.proofPriceNewList.push(JSON.parse(JSON.stringify(this.productPriceForm)))  // deep copy
+            this.proofPriceNewList.push(JSON.parse(JSON.stringify(data)))  // deep copy
             this.priceSuccessMessage = true
             // show new price form immediately
             this.initNewProductPriceForm()

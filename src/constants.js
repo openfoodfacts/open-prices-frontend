@@ -29,6 +29,7 @@ export default {
   APP_URL: import.meta.env.VITE_OPEN_PRICES_APP_URL,
   APP_API_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/api/docs`,
   APP_USER_AGENT: 'Open Prices Web App',
+  APP_HOME_ICONS: '🏷🍊💲',
   APP_DUMP_PRICES_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/prices.jsonl.gz`,
   APP_DUMP_PROOFS_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/proofs.jsonl.gz`,
   APP_DUMP_LOCATIONS_URL: `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/data/locations.jsonl.gz`,
