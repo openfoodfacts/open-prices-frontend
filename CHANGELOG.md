@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.111.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.110.0...v1.111.0) (2025-01-11)
+
+
+### Features
+
+* **Locations:** new page to list all of the location's proofs ([#1255](https://github.com/openfoodfacts/open-prices-frontend/issues/1255)) ([4318a66](https://github.com/openfoodfacts/open-prices-frontend/commit/4318a66cbc14acc08b3bb77edbfabd7b32b0beb3))
+* **Price add multiple:** add a stepper at the top to guide users + add explicit CTAs at the end ([#1254](https://github.com/openfoodfacts/open-prices-frontend/issues/1254)) ([da5b191](https://github.com/openfoodfacts/open-prices-frontend/commit/da5b1917ae552e5cfe3b4a017838c38724f57e09))
+* **Users:** new page to list all of the user's proofs ([#1256](https://github.com/openfoodfacts/open-prices-frontend/issues/1256)) ([69f63b6](https://github.com/openfoodfacts/open-prices-frontend/commit/69f63b6e5df5c14ffb5f307187f958fd635c57bc))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1253](https://github.com/openfoodfacts/open-prices-frontend/issues/1253)) ([b2982f1](https://github.com/openfoodfacts/open-prices-frontend/commit/b2982f1850be2611490fb2d3a77b6c3868bb5d7a))
+* **l10n:** New Crowdin translations to review and merge ([#1257](https://github.com/openfoodfacts/open-prices-frontend/issues/1257)) ([d02cf72](https://github.com/openfoodfacts/open-prices-frontend/commit/d02cf72a8253646418e40dcadd27dee6017fab06))
+* **Locations:** Action menu: add link to proofs page. ref [#1255](https://github.com/openfoodfacts/open-prices-frontend/issues/1255) ([f0d61cf](https://github.com/openfoodfacts/open-prices-frontend/commit/f0d61cf8b4f592689e504a0942b42b71ffae712a))
+* **Users:** Action menu: add link to proofs page. ref [#1256](https://github.com/openfoodfacts/open-prices-frontend/issues/1256) ([79cbba9](https://github.com/openfoodfacts/open-prices-frontend/commit/79cbba95724b1a72b6e629f06ca722a6152ec80c))
+
 ## [1.110.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.109.3...v1.110.0) (2025-01-11)
 
 
