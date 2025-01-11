@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Додайте кілька доказів"
 		},
+		"Locations": {
+			"Title": "Місцезнаходження"
+		},
 		"PriceAdd": {
 			"Title": "Додати ціну"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Додати кілька цін"
+		},
+		"Proofs": {
+			"Title": "Докази"
 		},
 		"ProofAddSingle": {
 			"Title": "Додати одне підтвердження"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Кращі продукти"
+		},
+		"Users": {
+			"Title": "Користувачі"
 		},
 		"ContributionAssistant": {
 			"Title": "Помічник внесків"
