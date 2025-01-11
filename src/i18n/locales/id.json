@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Tambahkan beberapa bukti"
 		},
+		"Locations": {
+			"Title": "Lokasi"
+		},
 		"PriceAdd": {
 			"Title": "Tambahkan harga"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Tambahkan beberapa harga"
+		},
+		"Proofs": {
+			"Title": "Bukti"
 		},
 		"ProofAddSingle": {
 			"Title": "Tambahkan sebuah bukti"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Produk teratas"
+		},
+		"Users": {
+			"Title": "Pengguna"
 		},
 		"ContributionAssistant": {
 			"Title": "Asisten Kontribusi"

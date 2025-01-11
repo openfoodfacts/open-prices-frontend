@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Meerdere bewijzen toevoegen"
 		},
+		"Locations": {
+			"Title": "Locaties"
+		},
 		"PriceAdd": {
 			"Title": "Voeg een prijs toe"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Voeg meerdere prijzen toe"
+		},
+		"Proofs": {
+			"Title": "Bewijzen"
 		},
 		"ProofAddSingle": {
 			"Title": "Voeg één bewijs toe"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top producten"
+		},
+		"Users": {
+			"Title": "Gebruikers"
 		},
 		"ContributionAssistant": {
 			"Title": "Bijdrage-Assistent"

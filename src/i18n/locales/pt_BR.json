@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Adicionar várias provas"
 		},
+		"Locations": {
+			"Title": "Localizações"
+		},
 		"PriceAdd": {
 			"Title": "Adicionar um preço"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Adicionar múltiplos preços"
+		},
+		"Proofs": {
+			"Title": "Provas"
 		},
 		"ProofAddSingle": {
 			"Title": "Adicionar um único comprovante"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Principais produtos"
+		},
+		"Users": {
+			"Title": "Usuários"
 		},
 		"ContributionAssistant": {
 			"Title": "Assistente de Contribuição"

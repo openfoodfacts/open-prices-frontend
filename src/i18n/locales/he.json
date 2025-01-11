@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "הוספת מגוון הוכחות"
 		},
+		"Locations": {
+			"Title": "מקומות"
+		},
 		"PriceAdd": {
 			"Title": "הוספת מחיר"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "הוספת מגוון מחירים"
+		},
+		"Proofs": {
+			"Title": "הוכחות"
 		},
 		"ProofAddSingle": {
 			"Title": "הוספת הוכחה יחידה"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "מוצרים מובילים"
+		},
+		"Users": {
+			"Title": "משתמשים"
 		},
 		"ContributionAssistant": {
 			"Title": "מסייע תרומה"

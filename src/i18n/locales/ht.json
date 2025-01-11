@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "Zòn"
+		},
 		"PriceAdd": {
 			"Title": "Ajoute yon pri"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Ajoute plizyè pri"
+		},
+		"Proofs": {
+			"Title": "Prèv"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Tòp pwodwi yo"
+		},
+		"Users": {
+			"Title": "Itilizatè yo"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"

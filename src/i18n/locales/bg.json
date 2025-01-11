@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "Места"
+		},
 		"PriceAdd": {
 			"Title": "Add a price"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Add multiple prices"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top products"
+		},
+		"Users": {
+			"Title": "Потребители"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
