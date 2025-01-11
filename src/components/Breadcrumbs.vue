@@ -20,14 +20,19 @@ export default {
     objectId() {
       return this.$route.params.id
     },
+    objectUsername() {
+      return this.$route.params.username
+    }
   },
   methods: {
     getItemTitle(item) {
       if (this.objectId && item.to && item.to.includes(':id')) return this.objectId
+      if (this.objectUsername && item.to && item.to.includes(':username')) return this.objectUsername
       return this.$t(`Router.${item.title}.Title`)
     },
     getItemTo(item) {
       if (this.objectId && item.to && item.to.includes(':id')) return item.to.replace(':id', this.objectId)
+      if (this.objectUsername && item.to && item.to.includes(':username')) return item.to.replace(':username', this.objectUsername)
       return item.to
     }
   }
