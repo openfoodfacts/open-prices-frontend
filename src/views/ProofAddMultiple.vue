@@ -10,17 +10,19 @@
       </v-stepper>
     </v-col>
   </v-row>
+
   <v-row v-if="step === 1">
     <v-col cols="12" md="6">
       <ProofUploadCard :typePriceTagOnly="true" :hideRecentProofChoice="true" :multiple="true" @done="step = 2" />
     </v-col>
   </v-row>
+
   <v-row v-if="step === 2">
     <v-col>
       <v-btn
         class="float-right"
-        color="primary"
         variant="outlined"
+        color="primary"
         @click="goToDashboard"
       >
         {{ $t('Common.Done') }}
