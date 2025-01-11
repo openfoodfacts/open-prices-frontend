@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Přidejte více důkazů"
 		},
+		"Locations": {
+			"Title": "Polohy"
+		},
 		"PriceAdd": {
 			"Title": "Přidat cenu"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Přidat více cen"
+		},
+		"Proofs": {
+			"Title": "Doklady"
 		},
 		"ProofAddSingle": {
 			"Title": "Přidejte jeden důkaz"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Nejlepší produkty"
+		},
+		"Users": {
+			"Title": "Uživatelé"
 		},
 		"ContributionAssistant": {
 			"Title": "Příspěvkový asistent"
