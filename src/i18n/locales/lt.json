@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Pridėti kelis įrodymus"
 		},
+		"Locations": {
+			"Title": "Vietos"
+		},
 		"PriceAdd": {
 			"Title": "Pridėti kainą"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Pridėti kelia skainas"
+		},
+		"Proofs": {
+			"Title": "Įrodymai"
 		},
 		"ProofAddSingle": {
 			"Title": "Pridėti vienintelį įrodymą"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Populiariausi produktai"
+		},
+		"Users": {
+			"Title": "Vartotojai"
 		},
 		"ContributionAssistant": {
 			"Title": "Bendradarbiavimo asistentas"
