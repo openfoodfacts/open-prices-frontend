@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "Sijainnit"
+		},
 		"PriceAdd": {
 			"Title": "Lisää hinta"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Lisää useita hintoja"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Huipputuotteet"
+		},
+		"Users": {
+			"Title": "Käyttäjät"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
