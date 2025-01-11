@@ -39,7 +39,7 @@
                 prepend-icon="mdi-checkbox-marked-circle-plus-outline"
                 @click="goToPriceValidation"
               >
-                {{ $t('Common.ValidatePrices') }}
+                {{ $t('Common.ValidatePrices') }} 🤖
               </v-btn>
             </v-col>
             <v-col cols="12" md="4">
@@ -68,7 +68,7 @@ export default {
   },
   data() {
     return {
-      step: 1,
+      step: 2,
       stepItemList: [
         {
           title: this.$t('Common.Upload'),
