@@ -23,8 +23,8 @@
     </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Router.Challenge.Title')"
-        prepend-icon="mdi-checkbox-marked-circle-plus-outline"
+        :title="$t('Router.Challenge Page.Title')"
+        prepend-icon="mdi-trophy"
         to="/experiments/challenge"
       />
     </v-col>
