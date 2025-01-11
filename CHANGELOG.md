@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.110.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.109.3...v1.110.0) (2025-01-11)
+
+
+### Features
+
+* **Proof add:** add explicit CTAs at the end ([#1248](https://github.com/openfoodfacts/open-prices-frontend/issues/1248)) ([41c6ca6](https://github.com/openfoodfacts/open-prices-frontend/commit/41c6ca63b18dfecc65b7ec21faa0a4bc8fc02d24))
+* **Proof upload:** add a stepper at the top to guide users ([#1249](https://github.com/openfoodfacts/open-prices-frontend/issues/1249)) ([1436970](https://github.com/openfoodfacts/open-prices-frontend/commit/1436970198c4b066c0c8ae51dec0c697418cd5da))
+
+
+### Bug Fixes
+
+* **Price add:** set origin_tag to unknown if empty. ref [#1247](https://github.com/openfoodfacts/open-prices-frontend/issues/1247) ([df3144c](https://github.com/openfoodfacts/open-prices-frontend/commit/df3144cd4085e124ccd669542875f69b2e730959))
+
+
+### Technical
+
+* **Breadcrumbs:** homogenize display and padding (better) ([#1243](https://github.com/openfoodfacts/open-prices-frontend/issues/1243)) ([9426bc8](https://github.com/openfoodfacts/open-prices-frontend/commit/9426bc8fd235f17a2426faf29accebc4a7f7650b))
+* **l10n:** New Crowdin translations to review and merge ([#1233](https://github.com/openfoodfacts/open-prices-frontend/issues/1233)) ([4fe898d](https://github.com/openfoodfacts/open-prices-frontend/commit/4fe898d8fec7367b9299ff41e671b6f0cf28ba42))
+* **Price add:** better cleanup payload before calling the API ([#1247](https://github.com/openfoodfacts/open-prices-frontend/issues/1247)) ([2eb0cf7](https://github.com/openfoodfacts/open-prices-frontend/commit/2eb0cf7a491d4a388caf1a2982b7f908fa97509c))
+* **Proof upload card:** allow hiding the header. ref [#1168](https://github.com/openfoodfacts/open-prices-frontend/issues/1168) ([797b181](https://github.com/openfoodfacts/open-prices-frontend/commit/797b181820ac15f9a4f446e02f18b765913c6a2b))
+* **Proof upload:** display the proof uploaded count at the end. ref [#1248](https://github.com/openfoodfacts/open-prices-frontend/issues/1248) ([462ca00](https://github.com/openfoodfacts/open-prices-frontend/commit/462ca00237df24b1eb0f194a420d70274bceaede))
+* **Proof upload:** Stepper: when on the last step, change the icon to a check. ref [#1249](https://github.com/openfoodfacts/open-prices-frontend/issues/1249) ([2a8f7a6](https://github.com/openfoodfacts/open-prices-frontend/commit/2a8f7a66de055909d3699c3b95231a2ca1d7a892))
+
 ## [1.109.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.109.2...v1.109.3) (2025-01-06)
 
 
