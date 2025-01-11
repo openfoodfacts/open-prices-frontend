@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "பல சான்றுகளைச் சேர்க்கவும்"
 		},
+		"Locations": {
+			"Title": "இடங்கள்"
+		},
 		"PriceAdd": {
 			"Title": "Add a price"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Add multiple prices"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top products"
+		},
+		"Users": {
+			"Title": "பயனர்"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
