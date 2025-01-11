@@ -636,6 +636,9 @@
 		"TopProducts": {
 			"Title": "Top products"
 		},
+		"Users": {
+			"Title": "Users"
+		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
