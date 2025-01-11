@@ -19,14 +19,42 @@
 
   <v-row v-if="step === 2">
     <v-col>
-      <v-btn
-        class="float-right"
-        variant="outlined"
-        color="primary"
-        @click="goToDashboard"
-      >
-        {{ $t('Common.Done') }}
-      </v-btn>
+      <v-card>
+        <v-card-text :class="$vuetify.display.smAndUp ? 'text-center' : 'text-right'">
+          <v-row>
+            <v-col cols="12" md="4">
+              <v-btn
+                color="primary"
+                variant="outlined"
+                prepend-icon="mdi-image-plus"
+                @click="reloadPage"
+              >
+                {{ $t('Common.AddNewProofs') }}
+              </v-btn>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-btn
+                color="primary"
+                variant="outlined"
+                prepend-icon="mdi-checkbox-marked-circle-plus-outline"
+                @click="goToPriceValidation"
+              >
+                {{ $t('Common.ValidatePrices') }} 🤖
+              </v-btn>
+            </v-col>
+            <v-col cols="12" md="4">
+              <v-btn
+                color="primary"
+                variant="outlined"
+                prepend-icon="mdi-account-circle"
+                @click="goToDashboard"
+              >
+                {{ $t('Common.Dashboard') }}
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 </template>
@@ -54,6 +82,12 @@ export default {
     }
   },
   methods: {
+    goToPriceValidation() {
+      this.$router.push({ path: '/experiments/price-validation-assistant' })
+    },
+    reloadPage() {
+      window.location.reload()
+    },
     goToDashboard() {
       this.$router.push({ path: '/dashboard', query: { proofSingleSuccess: 'true' } })
     }
