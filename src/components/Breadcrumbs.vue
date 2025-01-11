@@ -3,8 +3,8 @@
     <template #item="{ item }">
       <v-breadcrumbs-item
         class="pa-0"
-        :title="$t(`Router.${item.title}.Title`)"
-        :to="item.to"
+        :title="getItemTitle(item)"
+        :to="getItemTo(item)"
         :disabled="item.disabled"
       />
     </template>
@@ -16,7 +16,20 @@ export default {
   computed: {
     breadcrumbs() {
       return this.$route.meta.breadcrumbs
-    }
+    },
+    objectId() {
+      return this.$route.params.id
+    },
   },
+  methods: {
+    getItemTitle(item) {
+      if (this.objectId && item.to && item.to.includes(':id')) return this.objectId
+      return this.$t(`Router.${item.title}.Title`)
+    },
+    getItemTo(item) {
+      if (this.objectId && item.to && item.to.includes(':id')) return item.to.replace(':id', this.objectId)
+      return item.to
+    }
+  }
 }
 </script>
