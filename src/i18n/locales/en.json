@@ -318,6 +318,8 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "View",
 		"Website": "Website",
 		"Yes": "Yes",
