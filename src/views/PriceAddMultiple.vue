@@ -76,7 +76,7 @@
         type="submit"
         :loading="loading"
         :disabled="productPriceFormFilled"
-        @click="done"
+        @click="goToDashboard"
       >
         {{ $t('Common.Done') }}
       </v-btn>
@@ -235,7 +235,7 @@ export default {
           this.loading = false
         })
     },
-    done() {
+    goToDashboard() {
       this.$router.push({ path: '/dashboard', query: { multipleSuccess: 'true' } })
     }
   }
