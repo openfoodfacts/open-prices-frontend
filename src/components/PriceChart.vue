@@ -1,5 +1,5 @@
 <template>
-  <div id="vega-lite-chart" style="width: 100%;" />
+  <div id="vega-lite-chart" style="width:100%;" />
 </template>
 
 <script>
@@ -13,14 +13,6 @@ export default {
     priceList: {
       type: Array,
       default: () => []
-    },
-    aggregate: {
-      type: String,
-      default: () => "mean"
-    },
-    dateField: {
-      type: String,
-      default: () => "date"
     }
   },
   data() {
@@ -41,7 +33,7 @@ export default {
       var vlSpec = {
         $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
         description: 'A simple bar chart with embedded data.',
-        width: "container",
+        width: 'container',
         autosize: { type: 'fit', resize: true},
         data: {
           values: this.priceList
@@ -52,9 +44,9 @@ export default {
           tooltip: true
         },
         encoding: {
-          x: {timeUnit: 'yearmonthdate', field: this.dateField, type: 'temporal', axis: { title: this.$t('Common.Date') }},
+          x: {timeUnit: 'yearmonthdate', field: 'date', type: 'temporal', axis: { title: this.$t('Common.Date') }},
           // y: {field: 'price', type: 'quantitative'}
-          y: {aggregate: this.aggregate, field: 'price', type: 'quantitative', axis: { title: this.$t('Common.Price') }},
+          y: {aggregate: 'mean', field: 'price', type: 'quantitative', axis: { title: this.$t('Common.Price') }},
         }
       }
       embed('#vega-lite-chart', vlSpec, {actions: false, theme: this.theme.global.name})
