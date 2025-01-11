@@ -1,89 +1,93 @@
 <template>
   <h1 class="text-h5 mb-1">
-    The current Challenge is ...  {{ challenge.icon }} {{ challenge.title }}  {{ challenge.icon }}
+    {{ $t('Challenge.Title') }}  {{ challenge.icon }} {{ challenge.title }}  {{ challenge.icon }}
   </h1>
-
-  <h2 class="text-h6 mb-1">
-    {{ challenge.subtitle }}
-  </h2>
 
   <v-row>
     <v-col cols="12" lg="6">
-      <blockquote class="blockquote">
-        <p class="mb-2">
-          {{ challenge.icon }} Join other food price enthousiast (such as {{ challenge.topContributors[0]?.user_id || "you?" }}) in gathering information about {{ challenge.title }} {{ challenge.subtitle }}.
-        </p>
-        <p class="mb-2">
-          {{ challenge.icon }} Your goal is to go nearby stores, find corresponding products and 
-          <v-btn to="/prices/add" variant="text" density="compact">
-            adding prices
-          </v-btn>
-        </p>
-        <p class="mb-2">
-          {{ challenge.icon }} This challenge categories are 
-          <v-chip v-for="category in challenge.categories" :key="category" density="compact" label class="mr-2 mb-2" @click="$router.push({ path: `/categories/${category}` })">
-            {{ category }}
-          </v-chip>
-        </p>
-      </blockquote>
+      <p class="mb-2">
+        {{ $t('Challenge.Subtitle', {top_contributor_name: challenge.topContributors[0]?.owner || $t('Challenge.YouQuestion'), challenge_title: challenge.title, challenge_subtitle: challenge.subtitle}) }}
+      </p>
     </v-col>
     <v-col cols="12" lg="6">
       <ChallengeTimeline :challenge="challenge" />
     </v-col>
   </v-row>
   
-  <ChallengeExample :exampleId="challenge.exampleId" />
+  <v-divider :thickness="2" class="border-opacity-100 mt-5 mb-3" />
+
+  <v-row>
+    <v-col cols="12" lg="6">
+      <ChallengeTakePicturesCard :exampleProofUrl="challenge.exampleProofUrl" />
+    </v-col>
+    <v-col cols="12" lg="6">
+      <ChallengeValidateCard />
+    </v-col>
+  </v-row>
 
   <v-divider :thickness="2" class="border-opacity-100 mt-5 mb-3" />
 
   <v-row>
-    <v-col cols="12" md="6">
+    <v-col cols="12">
       <h2 class="text-h6 mb-1">
-        General stats
+        {{ $t('Challenge.GeneralStats') }}
       </h2>
 
       <v-row>
-        <v-col cols="6">
-          <StatCard :value="challenge.numberOfContributions" :subtitle="'Total number of prices added'" />
+        <v-col cols="4">
+          <StatCard :value="challenge.numberOfProofs" :subtitle="$t('Challenge.TotalPicturesAdded')" />
         </v-col>
-        <v-col cols="6">
-          <StatCard :value="challenge.numberOfContributors" :subtitle="'Total number of contributors'" />
+        <v-col cols="4">
+          <StatCard :value="challenge.numberOfContributions" :subtitle="$t('Challenge.TotalContributions')" />
         </v-col>
-      </v-row>
-    </v-col>
-    
-    <v-col cols="12" md="6">
-      <h2 v-if="username" class="text-h6 mb-1">
-        Your stats
-      </h2>
-      <v-row v-if="username">
-        <v-col cols="6">
-          <StatCard :value="challenge.userContributions" :subtitle="'Prices added by you'" />
-        </v-col>
-        <v-col cols="6">
-          <v-card :title="`${challenge.userRank == 0 ? '50+' : challenge.userRank} / ${challenge.numberOfContributors}`" :subtitle="'Your rank'" variant="tonal" density="compact" />
+        <v-col cols="4">
+          <StatCard :value="challenge.numberOfContributors" :subtitle="$t('Challenge.TotalContributors')" />
         </v-col>
       </v-row>
     </v-col>
   </v-row>
-  
   <v-row>
-    <v-col cols="12" md="6">
+    <v-col v-if="challenge.topContributors.length" cols="12" md="6">
       <ChallengeTopContributors :topContributors="challenge.topContributors" />
     </v-col>
     
-    <v-col v-if="challenge.latestContributions.length" cols="12" md="6">
+    <v-col v-if="challenge.pricesPerDay.length" cols="12" md="6">
       <h2 class="text-h6 mb-1">
-        Number of contributions per day
+        {{ $t('Challenge.NumberOfContributionsPerDay') }}
       </h2>
-      <PriceChart :priceList="challenge.latestContributions" aggregate="count" dateField="created" />
+      <PriceChart :priceList="challenge.pricesPerDay" aggregate="sum" dateField="date" field="price__count" />
+    </v-col>
+  </v-row>
+  
+  <v-divider :thickness="2" class="border-opacity-100 mt-5 mb-3" />
+
+  <v-row>
+    <v-col v-if="username" cols="12">
+      <h2 class="text-h6 mb-1">
+        {{ $t('Challenge.YourStats') }}
+      </h2>
+      <v-row>
+        <v-col cols="4">
+          <StatCard :value="challenge.userProofContributions" :subtitle="$t('Challenge.PicturesAddedByYou')" />
+        </v-col>
+        <v-col cols="4">
+          <StatCard :value="challenge.userContributions" :subtitle="$t('Challenge.PricesAddedByYou')" />
+        </v-col>
+        <v-col cols="4">
+          <v-card :title="`${challenge.userRank == 0 ? '50+' : challenge.userRank}`" :subtitle="$t('Challenge.YourRank', {number_of_contributors: challenge.numberOfContributors})" variant="tonal" density="compact" />
+        </v-col>
+      </v-row>
     </v-col>
   </v-row>
 
-  <h2 class="text-h6 mb-1">
-    Most recent contributions
-  </h2>
-  <v-row v-if="challenge.latestContributions">
+  <v-divider :thickness="2" class="border-opacity-100 mt-5 mb-3" />
+
+  <v-row v-if="challenge.latestContributions.length">
+    <v-col cols="12">
+      <h2 class="text-h6">
+        {{ $t('Challenge.MostRecentContributions') }}
+      </h2>
+    </v-col>
     <v-col v-for="price in challenge.latestContributions.slice(0, 10)" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
@@ -92,7 +96,6 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
 import api from '../services/api.js'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
@@ -103,25 +106,29 @@ export default {
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue')),
     ChallengeTimeline: defineAsyncComponent(() => import('../components/ChallengeTimeline.vue')),
-    ChallengeExample: defineAsyncComponent(() => import('../components/ChallengeExample.vue')),
+    ChallengeTakePicturesCard: defineAsyncComponent(() => import('../components/ChallengeTakePicturesCard.vue')),
+    ChallengeValidateCard: defineAsyncComponent(() => import('../components/ChallengeValidateCard.vue')),
     ChallengeTopContributors: defineAsyncComponent(() => import('../components/ChallengeTopContributors.vue')),
   },
   data() {
     return {
       challenge: {
-        title: "MILK",
-        subtitle: "(and milk alternatives)",
-        icon: "🥛",
-        startDate: "2024-09-01",
-        endDate: "2024-10-31",
-        categories: ["en:milk-substitutes", "en:milks"],
+        title: "Nutella",
+        subtitle: "(and other hazelnut spreads)",
+        icon: "🌰",
+        startDate: "2025-01-20",
+        endDate: "2025-01-31",
+        categories: ["en:hazelnut-spreads"],
         topContributors: [],
         numberOfContributors: 0,
         numberOfContributions: 0,
         latestContributions: [],
+        pricesPerDay: [],
+        numberOfProofs: 0,
         userContributions: 0,
+        userProofContributions: 0,
         userRank: 0,
-        exampleId: 32900
+        exampleProofUrl: "https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.webp"
       },
       loading: false,
     }
@@ -138,34 +145,49 @@ export default {
   methods: {
     getStats() {
       this.loading = true
-      // TODO: This should fetch only prices matching one of the product categories in this.challenge.categories
-      // TODO: Also, this is both used to show a few recent contribution and to display the number of contributions per day
-      //       The first requires only a size of 10, the second requires the entire data, so it probably should be another API point
-      api.getPrices({ size: 200, created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
+      api.getPriceStats({ product_categories_tags__contains: this.challenge.categories[0], created__gte: this.challenge.startDate, created__lte: this.challenge.endDate})
       .then((data) => {
-        this.challenge.latestContributions = data.items
-        this.challenge.numberOfContributions = data.total
+        this.challenge.numberOfContributions = data.price__count
         this.loading = false
       })
 
-      // TODO: this should only fetch users that contributed to one of the product categories in this.challenge.categories, in the designated time range
-      api.getUsers({ order_by: constants.USER_ORDER_LIST[0].key, size: 50})
+      api.getPrices({ size: 10, product_categories_tags__contains: this.challenge.categories[0], created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
       .then((data) => {
+        this.challenge.latestContributions = data.items
+      })
+
+      api.getProofs({ size: 1, created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
+      .then((data) => {
+        this.challenge.numberOfProofs = data.total
+      })
+
+      api.getPricesGroupedStats({ group_by: "owner", order_by: "-price__count", size: 50, product_categories_tags__contains: this.challenge.categories[0], created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
+      .then((data) => {
+        console.log(data)
         this.challenge.topContributors = data.items
         this.challenge.numberOfContributors = data.total
         for (let i = 0; i < data.items.length; i++) {
-          const user = data.items[i]
-          if (this.username && this.username == user.user_id) {
-            this.challenge.userRank = i
+          const stat = data.items[i]
+          if (this.username && this.username == stat.owner) {
+            this.challenge.userRank = i+1
             break
           }
         }
       })
+
+      api.getPricesGroupedStats({ group_by: "date", product_categories_tags__contains: this.challenge.categories[0], created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
+      .then((data) => {
+        this.challenge.pricesPerDay = data.items
+      })
+
       if (this.username) {
-        // TODO: This should fetch only prices matching one of the product categories in this.challenge.categories
-        api.getPrices({ owner: this.username, created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
+        api.getPriceStats({ product_categories_tags__contains: this.challenge.categories[0], created__gte: this.challenge.startDate, created__lte: this.challenge.endDate, owner: this.username})
         .then((data) => {
-          this.challenge.userContributions = data.total
+          this.challenge.userContributions = data.price__count
+        })
+        api.getProofs({ size: 1, created__gte: this.challenge.startDate, created__lte: this.challenge.endDate, owner: this.username })
+        .then((data) => {
+          this.challenge.userProofContributions = data.total
         })
       }
       

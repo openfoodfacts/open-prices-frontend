@@ -134,6 +134,36 @@
 		"Submit": "Submit",
 		"Title": "Type a barcode"
 	},
+	"Challenge": {
+		"Title": "The current Challenge is ...",
+		"Subtitle": "Join other food price enthousiast (such as '{top_contributor_name}') in gathering information about {challenge_title} {challenge_subtitle}.",
+		"YouQuestion": "you ?",
+		"Step1TakePictures": {
+			"Title": "Step 1: Take pictures of price tags in stores",
+			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
+			"line2": "Once ready, find your shop and upload your pictures using the button below.",
+			"AddPictures": "Add Pictures"
+		},
+		"Step2Validate": {
+			"Title": "Step 2 (optional): Validate the detected prices",
+			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
+			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
+			"line3": "If you're having trouble reading the label, mark it as unreable.",
+			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
+			"ValidatePrices": "Validate Prices"
+		},
+		"GeneralStats": "General stats",
+		"TotalPicturesAdded": "Total number of pictures added",
+		"TotalContributions": "Total number of prices added",
+		"TotalContributors": "Total number of contributors",
+		"Top5Contributors": "Top 5 contributors",
+		"NumberOfContributionsPerDay": "Number of contributions per day",
+		"YourStats": "Your stats",
+		"PicturesAddedByYou": "Pictures added by you",
+		"PricesAddedByYou": "Prices added by you",
+		"YourRank": "Your rank, out of {number_of_contributors} contributors",
+		"MostRecentContributions": "Most recent contributions"
+	},
 	"Common": {
 		"About": "About",
 		"AddPrice": "Add a price",
@@ -626,6 +656,9 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
+		},
+		"Challenge Page": {
+			"Title": "Challenge Page"
 		}
 	},
 	"Search": {

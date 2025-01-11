@@ -21,6 +21,10 @@ export default {
     dateField: {
       type: String,
       default: () => "date"
+    },
+    field: {
+      type: String,
+      default: () => "price"
     }
   },
   data() {
@@ -54,7 +58,7 @@ export default {
         encoding: {
           x: {timeUnit: 'yearmonthdate', field: this.dateField, type: 'temporal', axis: { title: this.$t('Common.Date') }},
           // y: {field: 'price', type: 'quantitative'}
-          y: {aggregate: this.aggregate, field: 'price', type: 'quantitative', axis: { title: this.$t('Common.Price') }},
+          y: {aggregate: this.aggregate, field: this.field, type: 'quantitative', axis: { title: this.$t('Common.Price') }},
         }
       }
       embed('#vega-lite-chart', vlSpec, {actions: false, theme: this.theme.global.name})
