@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "Konumlar"
+		},
 		"PriceAdd": {
 			"Title": "Fiyat ekleyin"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Birden fazla fiyat ekle"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "En iyi ürünler"
+		},
+		"Users": {
+			"Title": "Kullanıcılar"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
