@@ -13,13 +13,17 @@
 
   <v-row v-if="step === 1">
     <v-col cols="12" md="6">
-      <ProofUploadCard :typePriceTagOnly="true" :hideRecentProofChoice="true" :multiple="true" @done="step = 2" />
+      <ProofUploadCard :typePriceTagOnly="true" :hideRecentProofChoice="true" :multiple="true" @done="proofUploadDone($event)" />
     </v-col>
   </v-row>
 
   <v-row v-if="step === 2">
     <v-col>
-      <v-card>
+      <v-card
+        :title="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
+        prepend-icon="mdi-image-check"
+      >
+        <v-divider />
         <v-card-text :class="$vuetify.display.smAndUp ? 'text-center' : 'text-right'">
           <v-row>
             <v-col cols="12" md="4">
@@ -78,10 +82,15 @@ export default {
           title: this.$t('Common.Done'),
           value: 2
         }
-      ]
+      ],
+      proofUploadCount: 0
     }
   },
   methods: {
+    proofUploadDone(proofUploadCount) {
+      this.proofUploadCount = proofUploadCount
+      this.step = 2
+    },
     goToPriceValidation() {
       this.$router.push({ path: '/experiments/price-validation-assistant' })
     },

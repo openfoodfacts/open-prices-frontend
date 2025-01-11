@@ -34,7 +34,7 @@
         :disabled="!proofFormFilled || loading"
         @click="uploadProofList"
       >
-        <span v-if="multiple">{{ $t('Common.UploadMultipleImages', proofImageList.length) }}</span>
+        <span v-if="multiple">{{ $t('Common.UploadMultipleProofs', { count: proofImageList.length }) }}</span>
         <span v-else>{{ $t('Common.Upload') }}</span>
       </v-btn>
     </v-card-actions>
@@ -169,7 +169,7 @@ export default {
     proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
       this.$emit('proof', newProofObjectList[0])
       if (this.proofObjectList.length === this.proofImageList.length) {
-        this.$emit('done')
+        this.$emit('done', this.proofObjectList.length)
       }
     }
   },
