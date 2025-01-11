@@ -139,7 +139,7 @@
 		"AddPrice": "Ajouter un prix",
 		"AddPrices": "Ajouter des prix",
 		"AddNewPrice": "Ajouter un nouveau prix",
-		"AddNewPrices": "Add new prices",
+		"AddNewPrices": "Ajouter de nouveaux prix",
 		"AddProof": "Ajouter une preuve",
 		"AddProofs": "Ajouter des preuves",
 		"AddNewProof": "Add a new proof",
@@ -254,7 +254,7 @@
 		"Physical": "Physique",
 		"PRICE_TAG": "Étiquette de prix",
 		"PriceCount": "{count} prix | {count} prix | {count} prix",
-		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
+		"PriceAddedCount": "{count} prix ajoutés | {count} prix ajouté | {count} prix ajoutés",
 		"PriceToValidateCount": "{count} prix à valider | {count} prix à valider | {count} prix à valider",
 		"PriceCreated": "Prix créé !",
 		"PricesMore": "Plus de prix",
@@ -567,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Ajouter plusieurs preuves"
 		},
+		"Locations": {
+			"Title": "Lieux"
+		},
 		"PriceAdd": {
 			"Title": "Ajouter un prix"
 		},
@@ -575,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Ajouter plusieurs prix"
+		},
+		"Proofs": {
+			"Title": "Preuves"
 		},
 		"ProofAddSingle": {
 			"Title": "Ajouter une seule preuve"
@@ -629,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top produits"
+		},
+		"Users": {
+			"Title": "Utilisateurs"
 		},
 		"ContributionAssistant": {
 			"Title": "Assistant de contribution"
