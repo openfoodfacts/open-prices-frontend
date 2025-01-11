@@ -330,15 +330,6 @@ export default {
     .then((response) => response.json())
   },
 
-  getPricesGroupedStats(params = {}) {
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/grouped_stats?${buildURLParams({...params})}`
-    return fetch(url, {
-      method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
-    })
-    .then((response) => response.json())
-  },
-
   openfoodfactsProductSearch(code) {
     const url = `${constants.OFF_API_URL}/${code}.json`
     return fetch(url, {

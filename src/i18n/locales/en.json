@@ -136,8 +136,7 @@
 	},
 	"Challenge": {
 		"Title": "The current Challenge is ...",
-		"Subtitle": "Join other food price enthousiast (such as '{top_contributor_name}') in gathering information about {challenge_title} {challenge_subtitle}.",
-		"YouQuestion": "you ?",
+		"Subtitle": "Join other food price enthousiast in gathering information about {challenge_title} {challenge_subtitle}.",
 		"Step1TakePictures": {
 			"Title": "Step 1: Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
@@ -156,12 +155,9 @@
 		"TotalPicturesAdded": "Total number of pictures added",
 		"TotalContributions": "Total number of prices added",
 		"TotalContributors": "Total number of contributors",
-		"Top5Contributors": "Top 5 contributors",
-		"NumberOfContributionsPerDay": "Number of contributions per day",
 		"YourStats": "Your stats",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PricesAddedByYou": "Prices added by you",
-		"YourRank": "Your rank, out of {number_of_contributors} contributors",
 		"MostRecentContributions": "Most recent contributions"
 	},
 	"Common": {
