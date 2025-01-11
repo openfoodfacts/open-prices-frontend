@@ -1,11 +1,15 @@
 <template>
   <v-card
     v-if="!proofObjectList.length"
-    :title="cardTitle"
-    :prepend-icon="cardPrependIcon"
     height="100%"
   >
-    <v-divider />
+    <template v-if="!hideHeader" #title>
+      {{ cardTitle }}
+    </template>
+    <template v-if="!hideHeader" #prepend>
+      <v-icon>{{ cardPrependIcon }}</v-icon>
+    </template>
+    <v-divider v-if="!hideHeader" />
     <v-card-text>
       <v-alert
         v-if="typePriceTagOnly && multiple"
@@ -90,6 +94,10 @@ export default {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
   props: {
+    hideHeader: {
+      type: Boolean,
+      default: false
+    },
     typePriceTagOnly: {
       type: Boolean,
       default: false
