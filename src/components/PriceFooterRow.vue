@@ -1,7 +1,7 @@
 <template>
   <v-row style="margin-top:0;">
     <v-col cols="11">
-      <ProofChip v-if="price.proof && !hidePriceProof" :proof="price.proof" />
+      <ProofChip v-if="price.proof && !hidePriceProof" class="mr-1" :proof="price.proof" />
       <LocationChip v-if="!hidePriceLocation" class="mr-1" :location="price.location" :locationId="price.location_id" :readonly="readonly" />
       <UserChip v-if="!hidePriceOwner" class="mr-1" :username="price.owner" :readonly="readonly" />
       <DateChip v-if="!hidePriceDate" class="mr-1" :date="price.date" :readonly="readonly" />
@@ -29,6 +29,10 @@ export default {
       type: Object,
       default: null
     },
+    hidePriceProof: {
+      type: Boolean,
+      default: false
+    },
     hidePriceLocation: {
       type: Boolean,
       default: false
@@ -38,10 +42,6 @@ export default {
       default: true
     },
     hidePriceDate: {
-      type: Boolean,
-      default: false
-    },
-    hidePriceProof: {
       type: Boolean,
       default: false
     },
