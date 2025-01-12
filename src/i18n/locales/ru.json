@@ -173,7 +173,7 @@
 		"Contributors": "Участники",
 		"Community": "Community",
 		"Country": "Страна",
-		"Currency": "Currency",
+		"Currency": "Валюта",
 		"CurrencyMissing": "Currency missing",
 		"Dashboard": "Dashboard",
 		"Display": "Показать",
@@ -320,7 +320,7 @@
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Пользователь",
-		"Users": "Users",
+		"Users": "Пользователи",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"ValidatePrices": "Validate prices",
@@ -375,7 +375,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Валюта",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -637,7 +637,7 @@
 			"Title": "Top products"
 		},
 		"Users": {
-			"Title": "Users"
+			"Title": "Пользователи"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
@@ -672,7 +672,7 @@
 		"Title": "Stats",
 		"Products": "Продукты",
 		"Locations": "Locations",
-		"Users": "Users",
+		"Users": "Пользователи",
 		"Total": "Всего",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
@@ -706,24 +706,24 @@
 		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Добавление цен",
 		"ChangeLanguage": "Сменить язык",
 		"CountryLabel": "Страна",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показать",
-		"BarcodeScanner": "Barcode scanner",
-		"DefaultMode": "Default mode",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"BarcodeScanner": "Сканер штрихкодов",
+		"DefaultMode": "Режим по умолчанию",
+		"FavoriteCurrencies": "Любимые валюты",
+		"CurrencyRequired": "Требуется хотя бы одна валюта",
 		"LanguageLabel": "Языки",
-		"LocationFinder": "Location finder",
-		"LocationDisplayOSMID": "Display OSM ID",
-		"ProductDisplayBarcode": "Display barcode",
-		"ProductDisplayCategoryTag": "Display category tag",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"LocationFinder": "Поиск местонахождения",
+		"LocationDisplayOSMID": "Показать OSM ID",
+		"ProductDisplayBarcode": "Показать штрихкод",
+		"ProductDisplayCategoryTag": "Показать тег категории",
+		"SideMenuExperimentsDisplay": "Показать 'Эксперименты'",
 		"Save": "Сохранить",
 		"Title": "Настройки",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationCompletion": "Переведено {completion}%.",
+		"TranslationHelp": "Помогите перевести на больше языков"
 	}
 }
