@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :cols="showProofImagePreviewList ? '8' : '12'">
+    <v-col cols="12">
       <!-- RECEIPT: warning message -->
       <v-alert
         v-if="proofImageForm && proofImageForm.type === PROOF_TYPE_RECEIPT"
@@ -47,8 +47,15 @@
         :multiple="multiple" :loading="loading" @click:clear="clearProof"
       />
     </v-col>
-    <v-col v-if="showProofImagePreviewList" cols="4">
-      <v-img v-for="proofImagePreview in proofImagePreviewList" :key="proofImagePreview" :src="proofImagePreview" style="padding:10px;max-height:200px" />
+  </v-row>
+
+  <v-row v-if="showProofImagePreviewList" class="mt-0">
+    <v-col v-for="proofImagePreview in proofImagePreviewList" :key="proofImagePreview" cols="6">
+      <v-card>
+        <v-card-text class="pa-2">
+          <v-img :src="proofImagePreview" style="max-height:200px" />
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 
