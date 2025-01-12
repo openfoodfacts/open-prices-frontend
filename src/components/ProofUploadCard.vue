@@ -1,5 +1,6 @@
 <template>
   <v-card
+    v-if="step !== 3"
     height="100%"
   >
     <template v-if="!hideHeader" #title>
@@ -50,7 +51,7 @@
     </v-card-actions>
   </v-card>
 
-  <v-sheet v-if="step === 3">
+  <v-sheet v-else>
     <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideProofActions="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
   </v-sheet>
 
