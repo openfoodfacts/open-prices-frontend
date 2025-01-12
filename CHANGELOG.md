@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.111.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.111.0...v1.111.1) (2025-01-12)
+
+
+### Bug Fixes
+
+* **Price add multiple:** re-show the proof card header title after upload. ref [#1254](https://github.com/openfoodfacts/open-prices-frontend/issues/1254) ([46ad9cf](https://github.com/openfoodfacts/open-prices-frontend/commit/46ad9cf198f14a758b6e470ff2430ceff9581209))
+
+
+### Technical
+
+* **Price add multiple:** Done step: add success icon & border color. ref [#1254](https://github.com/openfoodfacts/open-prices-frontend/issues/1254) ([aa030f7](https://github.com/openfoodfacts/open-prices-frontend/commit/aa030f7beeda474cf50a7d3a6168e28ce7e72a2a))
+* **Proof add multiple:** Done step: add success icon & border color. ref [#1248](https://github.com/openfoodfacts/open-prices-frontend/issues/1248) ([e5f084f](https://github.com/openfoodfacts/open-prices-frontend/commit/e5f084fc95437756a8af5cb61d3cf17105f81d95))
+* **Proof upload:** add progress bar after clicking on Upload ([#1260](https://github.com/openfoodfacts/open-prices-frontend/issues/1260)) ([3af4fce](https://github.com/openfoodfacts/open-prices-frontend/commit/3af4fce934499416d26f3bd394fbcbcf43b1117e))
+
 ## [1.111.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.110.0...v1.111.0) (2025-01-11)
 
 
