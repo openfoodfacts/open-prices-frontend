@@ -1,6 +1,16 @@
 <template>
   <v-row>
     <v-col :cols="showProofImagePreviewList ? '8' : '12'">
+      <!-- RECEIPT: warning message -->
+      <v-alert
+        v-if="proofImageForm && proofImageForm.type === PROOF_TYPE_RECEIPT"
+        class="mb-4"
+        type="warning"
+        variant="outlined"
+        density="compact"
+        :text="$t('AddPriceMultiple.ProofDetails.ReceiptWarning')"
+      />
+
       <v-menu scroll-strategy="close" :disabled="loading">
         <template #activator="{ props }">
           <v-btn v-bind="props" size="small" prepend-icon="mdi-image" append-icon="mdi-menu-down" :class="hasProofImageSelected ? 'border-success' : 'border-error'">
@@ -35,16 +45,6 @@
       <v-file-input
         ref="proofGallery" v-model="proofImageList" class="d-none overflow-hidden" accept="image/*, .heic"
         :multiple="multiple" :loading="loading" @click:clear="clearProof"
-      />
-
-      <!-- RECEIPT: warning message -->
-      <v-alert
-        v-if="proofImageForm && proofImageForm.type === PROOF_TYPE_RECEIPT"
-        class="mt-2"
-        type="warning"
-        variant="outlined"
-        density="compact"
-        :text="$t('AddPriceMultiple.ProofDetails.ReceiptWarning')"
       />
     </v-col>
     <v-col v-if="showProofImagePreviewList" cols="4">
