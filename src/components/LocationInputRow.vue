@@ -5,9 +5,14 @@
         <span v-if="selectedLocation">{{ $t('Common.LocationSelected') }}</span>
         <span v-else>{{ $t('Common.LocationFindShop') }}</span>
       </v-btn>
-      <p v-if="selectedLocation">
-        <i>{{ getLocationTitle }}</i>
-      </p>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="selectedLocation" class="mt-0">
+    <v-col cols="12">
+      <v-chip v-if="selectedLocation" label density="comfortable">
+        {{ getLocationTitle }}
+      </v-chip>
     </v-col>
   </v-row>
 
