@@ -22,7 +22,7 @@
 
   <v-row v-if="step === 2">
     <v-col cols="12" md="6">
-      <ProofCard :proof="proofObject" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
+      <ProofCard :proof="proofObject" :hideProofActions="true" :readonly="true" />
     </v-col>
     <v-col cols="12" md="6">
       <!-- Step 2a: product prices already uploaded -->
