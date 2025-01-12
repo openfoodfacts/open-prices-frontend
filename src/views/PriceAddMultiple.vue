@@ -104,9 +104,13 @@
   <v-row v-if="step === 3">
     <v-col>
       <v-card
+        class="border-success"
         :title="$t('Common.PriceAddedCount', { count: proofPriceNewList.length })"
         prepend-icon="mdi-tag-check-outline"
       >
+        <template #append>
+          <v-icon icon="mdi-checkbox-marked-circle" color="success" />
+        </template>
         <v-divider />
         <v-card-text :class="$vuetify.display.smAndUp ? 'text-center' : 'text-right'">
           <v-row>
