@@ -20,9 +20,13 @@
   <v-row v-if="step === 2">
     <v-col>
       <v-card
+        class="border-success"
         :title="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
         prepend-icon="mdi-image-check"
       >
+        <template #append>
+          <v-icon icon="mdi-checkbox-marked-circle" color="success" />
+        </template>
         <v-divider />
         <v-card-text :class="$vuetify.display.smAndUp ? 'text-center' : 'text-right'">
           <v-row>
