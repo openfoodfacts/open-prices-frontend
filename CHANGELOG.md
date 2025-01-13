@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.111.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.111.1...v1.111.2) (2025-01-13)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1258](https://github.com/openfoodfacts/open-prices-frontend/issues/1258)) ([a1788ba](https://github.com/openfoodfacts/open-prices-frontend/commit/a1788ba430fcf653905fdef9cb870656eba8ae9a))
+* **Price card:** Move the proof chip to the left (first) ([#1264](https://github.com/openfoodfacts/open-prices-frontend/issues/1264)) ([dd71190](https://github.com/openfoodfacts/open-prices-frontend/commit/dd71190d157bb456b0aa8ab68774a747aec45a45))
+* **Proof upload:** better display selected images (row & cols) ([#1262](https://github.com/openfoodfacts/open-prices-frontend/issues/1262)) ([42323b5](https://github.com/openfoodfacts/open-prices-frontend/commit/42323b5c196ab09a968dafafcdf3b531427d8cf1))
+* **Proof upload:** better display selected location ([#1263](https://github.com/openfoodfacts/open-prices-frontend/issues/1263)) ([642d6e7](https://github.com/openfoodfacts/open-prices-frontend/commit/642d6e703b7735207486fe862db519f7938a7018))
+* **Proof upload:** move up the receipt warning message above the form button ([7fd82ba](https://github.com/openfoodfacts/open-prices-frontend/commit/7fd82ba8b28a3fa32b3f57dd1d644acc4422a59e))
+
 ## [1.111.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.111.0...v1.111.1) (2025-01-12)
 
 
