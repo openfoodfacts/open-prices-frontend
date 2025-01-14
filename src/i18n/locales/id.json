@@ -15,7 +15,7 @@
 		"WhatOFFTitle": "Apa itu {off_name}?",
 		"WhatOFFAnswer": "{off_url} adalah organisasi nirlaba yang mengumpulkan dan berbagi informasi tentang produk makanan dari seluruh dunia. Ini adalah proyek kolaboratif yang mengandalkan sukarelawan untuk mengumpulkan data. {off_url} adalah basis data produk makanan terbuka terbesar di dunia, dengan lebih dari 3 juta produk di 200 negara.",
 		"WhyOFFTitle": "Mengapa {off_name} melakukan hal ini?",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
+		"WhyOFFAnswer": "Informasi harga sangat penting untuk memahami sistem pangan. Informasi ini merupakan faktor kunci dalam memahami biaya pangan dan untuk mempromosikan pola makan yang lebih sehat. Membuka data harga merupakan cara untuk memudahkan para peneliti, jurnalis, dan warga negara untuk memiliki pemahaman yang lebih baik tentang bagaimana harga pangan bervariasi secara geografis dan dari waktu ke waktu.",
 		"HowContribute": "Bagaimana saya bisa berkontribusi?",
 		"HowContributeAnswer": "Anda dapat berkontribusi dengan menambahkan harga ke dataset. Anda dapat melakukannya dengan menggunakan aplikasi web, atau melalui aplikasi seluler resmi. Sebuah {op_api_url} juga tersedia jika Anda ingin mengintegrasikan {op_name} ke aplikasi Anda. Anda memerlukan akun {off_url} untuk berkontribusi.",
 		"HowUseData": "Bagaimana saya dapat menggunakan data tersebut?",
