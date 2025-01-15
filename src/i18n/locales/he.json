@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "הקישור הועתק",
 		"LocationCount": "{count} מקומות | מקום | {count} מקומות",
 		"Map": "מפה",
+		"MyDashboard": "לוח המחוונים שלי",
+		"MyPrices": "המחירים שלי",
+		"MyProofs": "ההוכחות שלי",
+		"MyStats": "My stats",
 		"Offline": "לא מקוון",
 		"Online": "מקוון",
 		"Order": "סדר",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "ההוכחות שלי"
+		},
+		"MyDashboard": {
+			"Title": "לוח המחוונים שלי"
 		},
 		"Reuses": {
 			"Title": "גזירות"
