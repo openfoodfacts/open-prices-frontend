@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.112.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.112.0...v1.112.1) (2025-01-15)
+
+
+### Bug Fixes
+
+* **Mobile:** fix typo. Also have 'Latest prices' as primary & block on mobile. ref [#1271](https://github.com/openfoodfacts/open-prices-frontend/issues/1271) ([e5483ed](https://github.com/openfoodfacts/open-prices-frontend/commit/e5483ed69d6ed2c2bb0a3de70ac455b983a134f2))
+
 ## [1.112.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.111.2...v1.112.0) (2025-01-15)
 
 
