@@ -33,7 +33,6 @@
             <v-col cols="12" md="4">
               <v-btn
                 color="primary"
-                variant="outlined"
                 prepend-icon="mdi-image-plus"
                 @click="reloadPage"
               >
@@ -43,7 +42,6 @@
             <v-col cols="12" md="4">
               <v-btn
                 color="primary"
-                variant="outlined"
                 prepend-icon="mdi-checkbox-marked-circle-plus-outline"
                 @click="goToPriceValidation"
               >
@@ -53,7 +51,6 @@
             <v-col cols="12" md="4">
               <v-btn
                 color="primary"
-                variant="outlined"
                 prepend-icon="mdi-account-circle"
                 @click="goToDashboard"
               >

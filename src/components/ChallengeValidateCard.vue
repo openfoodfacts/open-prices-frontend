@@ -22,7 +22,7 @@
         <v-col>
           <v-btn
             class="float-right"
-            color="success"
+            color="primary"
             variant="flat"
             to="/experiments/price-validation-assistant"
           >

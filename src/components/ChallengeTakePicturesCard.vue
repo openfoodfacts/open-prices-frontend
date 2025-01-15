@@ -17,7 +17,7 @@
         <v-col>
           <v-btn 
             class="float-right"
-            color="success"
+            color="primary"
             variant="flat"
             to="/proofs/add/multiple"
           >

@@ -70,7 +70,7 @@
 
     <v-row>
       <v-col>
-        <v-btn type="submit" :color="formFilled ? 'success' : ''" :disabled="!formFilled">
+        <v-btn type="submit" color="primary" :disabled="!formFilled">
           {{ $t('UserSettings.Save') }}
         </v-btn>
       </v-col>

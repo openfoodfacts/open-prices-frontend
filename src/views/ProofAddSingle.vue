@@ -29,7 +29,6 @@
             <v-col cols="12" md="6">
               <v-btn
                 color="primary"
-                variant="outlined"
                 prepend-icon="mdi-image-plus"
                 @click="reloadPage"
               >
@@ -39,7 +38,6 @@
             <v-col cols="12" md="6">
               <v-btn
                 color="primary"
-                variant="outlined"
                 prepend-icon="mdi-account-circle"
                 @click="goToDashboard"
               >

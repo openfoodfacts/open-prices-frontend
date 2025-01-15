@@ -10,7 +10,7 @@
           </h3>
           <v-switch
             v-model="appStore.user.preferedTheme"
-            color="success"
+            color="primary"
             false-value="light"
             true-value="dark"
             density="compact"
@@ -119,7 +119,7 @@
           </h3>
           <v-switch
             v-model="appStore.user.drawer_display_experiments"
-            color="success"
+            color="primary"
             :label="$t('UserSettings.SideMenuExperimentsDisplay')"
             density="compact"
             hide-details="auto"
@@ -131,7 +131,7 @@
           <v-switch
             v-model="appStore.user.product_display_barcode"
             class="mb-4"
-            color="success"
+            color="primary"
             :label="$t('UserSettings.ProductDisplayBarcode')"
             :hint="$t('Common.ExampleWithColonAndValue', { value: '1234567890123' })"
             density="compact"
@@ -140,7 +140,7 @@
           />
           <v-switch
             v-model="appStore.user.product_display_category_tag"
-            color="success"
+            color="primary"
             :label="$t('UserSettings.ProductDisplayCategoryTag')"
             :hint="$t('Common.ExampleWithColonAndValue', { value: 'en:oranges' })"
             density="compact"
@@ -153,7 +153,7 @@
           </h3>
           <v-switch
             v-model="appStore.user.location_display_osm_id"
-            color="success"
+            color="primary"
             :label="$t('UserSettings.LocationDisplayOSMID')"
             :hint="$t('Common.ExampleWithColonAndValue', { value: 'N652825274' })"
             density="compact"
