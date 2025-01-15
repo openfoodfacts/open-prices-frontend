@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "Link copiado",
 		"LocationCount": "{count} localizações | {count} localização | {count} localizações",
 		"Map": "Mapa",
+		"MyDashboard": "Meu painel de controlo",
+		"MyPrices": "Os meus preços",
+		"MyProofs": "Os meus comprovativos",
+		"MyStats": "My stats",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Ordem",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "Os meus comprovativos"
+		},
+		"MyDashboard": {
+			"Title": "Meu painel de controlo"
 		},
 		"Reuses": {
 			"Title": "Reutilizações"
