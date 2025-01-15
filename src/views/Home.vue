@@ -21,7 +21,13 @@
     <v-col cols="12" sm="6" md="4" xl="3" align="center">
       <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
       <br v-if="$vuetify.display.smAndUp">
-      <v-btn to="/prices" prepend-icon="mdi-tag-multiple-outline" append-icon="mdi-arrow-right">
+      <v-btn
+        color="primary"
+        :block="!$vuetify.display.smAndUp"
+        to="/prices"
+        prepend-icon="mdi-tag-multiple-outline"
+        append-icon="mdi-arrow-right"
+      >
         {{ $t('Common.LatestPrices') }}
       </v-btn>
     </v-col>
