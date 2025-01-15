@@ -135,7 +135,7 @@
 		"Title": "Введіть штрих-код"
 	},
 	"Challenge": {
-		"Title": "The current challenge is ...",
+		"Title": "Нинішній виклик це...",
 		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
@@ -152,7 +152,7 @@
 			"ValidatePrices": "Перевірити ціни"
 		},
 		"Stats": "Challenge stats",
-		"MyStats": "My stats",
+		"MyStats": "Мої статистики",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PricesAddedByYou": "Prices added by you",
 		"MostRecentContributions": "Most recent contributions"
