@@ -1,15 +1,15 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <v-stepper v-model="step" hide-actions disabled>
+      <v-stepper v-model="step" hide-actions editable>
         <v-stepper-header>
-          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
+          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" :disabled="disableProofSelectStep" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
+          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" :disabled="disableLabelsExtractionStep" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" :disabled="disableCleanupStep" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[3].title" :value="stepItemList[3].value" :complete="step == 4" />
+          <v-stepper-item :title="stepItemList[3].title" :value="stepItemList[3].value" :complete="step == 4" :disabled="disableSummaryStep" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
@@ -193,24 +193,7 @@ export default {
   data() {
     return {
       step: 1,
-      stepItemList: [
-        {
-          title: this.$t('ContributionAssistant.Steps.ProofSelect'),
-          value: 1
-        },
-        {
-          title: this.$t('ContributionAssistant.Steps.LabelsExtraction'),
-          value: 2
-        },
-        {
-          title: this.$t('ContributionAssistant.Steps.Cleanup'),
-          value: 3
-        },
-        {
-          title: this.$t('ContributionAssistant.Steps.Summary'),
-          value: 4
-        }
-      ],
+      // stepItemList: [],  // see computed
       // data
       drawCanvasLoaded: false,
       boundingBoxesFromServer: [],
@@ -230,6 +213,26 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    stepItemList() {
+      return [
+        {
+          title: this.$t('Common.Proof'),
+          value: 1
+        },
+        {
+          title: this.$vuetify.display.smAndUp ? this.$t('ContributionAssistant.Steps.LabelsExtraction') : this.$t('Common.Labels'),
+          value: 2
+        },
+        {
+          title: this.$vuetify.display.smAndUp ? this.$t('Common.ValidatePrices') : this.$t('Common.Validate'),
+          value: 3
+        },
+        {
+          title: this.$t('Common.Done'),
+          value: 4
+        }
+      ]
+    },
     locationName() {
       const recentLocations = this.appStore.getRecentLocations()
       const location = recentLocations.find((location) => location.properties.osm_id === this.proofObject.location_osm_id)
@@ -239,16 +242,16 @@ export default {
       }
       return ''
     },
-    disableProofSelectTab() {
+    disableProofSelectStep() {
       // ProofSelect tab should disabled on summary step
       return this.step === 4
     },
-    disableLabelsExtractionTab() {
+    disableLabelsExtractionStep() {
       // LabelsExtraction tab should only be enabled after the proof is selected
       // It should also be disabled on summary step
       return !this.proofObject || this.step === 4
     },
-    disableCleanupTab() {
+    disableCleanupStep() {
       // Cleanup tab should only be enabled after the ai analysis is done
       // It should also be disabled on summary step
       return !this.productPriceFormsWithoutPriceId.length || this.step === 4
@@ -256,10 +259,10 @@ export default {
     allDone() {
       return this.numberOfPricesAdded > 0 && this.productPriceFormsWithoutPriceId.length == this.numberOfPricesAdded
     },
-    disableSummaryTab() {
+    disableSummaryStep() {
       // Summary tab should be enabled when there are product prices to be added and the add prices process is either running or done
-      const enableSummaryTab = this.productPriceFormsWithoutPriceId.length && (this.loading || this.allDone)
-      return !enableSummaryTab
+      const enableSummaryStep = this.productPriceFormsWithoutPriceId.length && (this.loading || this.allDone)
+      return !enableSummaryStep
     },
     proofIdsFromQueryParam() {
       if (!this.$route.query.proof_ids) return null
