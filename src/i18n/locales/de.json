@@ -134,6 +134,29 @@
 		"Submit": "Senden",
 		"Title": "Strichcode eingeben"
 	},
+	"Challenge": {
+		"Title": "Die aktuelle Herausforderung ist ...",
+		"Subtitle": "Sammeln Sie gemeinsam mit anderen Lebensmittelpreis-Enthusiasten Informationen über {challenge_title} {challenge_subtitle}.",
+		"StepTakePictures": {
+			"Title": "Fotografieren Sie Preisschilder in Geschäften",
+			"line1": "Die Bilder können ein oder mehrere Preisschilder enthalten. Barcodes sollten lesbar sein. Zum Beispiel:",
+			"line2": "Once ready, find your shop and upload your pictures using the button below.",
+			"AddPictures": "Add pictures"
+		},
+		"StepValidate": {
+			"Title": "Validate the detected prices",
+			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
+			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
+			"line3": "If you're having trouble reading the label, mark it as unreable.",
+			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
+			"ValidatePrices": "Preise prüfen"
+		},
+		"Stats": "Challenge stats",
+		"MyStats": "My stats",
+		"PicturesAddedByYou": "Pictures added by you",
+		"PricesAddedByYou": "Prices added by you",
+		"MostRecentContributions": "Most recent contributions"
+	},
 	"Common": {
 		"About": "Über",
 		"AddPrice": "Preis hinzufügen",
@@ -168,6 +191,10 @@
 		"Category": "Kategorie",
 		"Categories": "Kategorien",
 		"CategoryTotal": "{count} Kategorien | {count} Kategorie | {count} Kategorien",
+		"Challenge": "Challenge",
+		"Challenges": "Challenges",
+		"ChallengeCurrent": "Current challenge",
+		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Diagramm",
 		"Clear": "Leeren",
 		"Contributors": "Mitwirkende",
@@ -252,12 +279,16 @@
 		"OrderUserCountDESC": "Anzahl der Benutzer",
 		"PersonalInfo": "Persönliche Informationen",
 		"Physical": "Physisch",
+		"Picture": "Bild",
+		"Pictures": "Pictures",
+		"PicturesAdded": "Pictures added",
 		"PRICE_TAG": "Preisschild",
 		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
 		"PriceAddedCount": "{count} Preise hinzugefügt | {count} Preis hinzugefügt | {count} Preise hinzugefügt",
 		"PriceToValidateCount": "{count} zu bestätigende Preise | {count} zu bestätigender Preis | {count} zu bestätigende Preise",
 		"PriceCreated": "Preis erstellt!",
 		"PricesMore": "Weitere Preise",
+		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Heute hinzugefügte Preise",
 		"PricesToday": "Aktuelle Preise",
 		"Private": "Privat",
@@ -644,6 +675,12 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Preisprüfungsassistent"
+		},
+		"Challenge": {
+			"Title": "Challenge"
+		},
+		"CurrentChallenge": {
+			"Title": "Current Challenge"
 		}
 	},
 	"Search": {

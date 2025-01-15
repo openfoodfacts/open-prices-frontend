@@ -134,6 +134,29 @@
 		"Submit": "הגשה",
 		"Title": "סוג ברקוד"
 	},
+	"Challenge": {
+		"Title": "The current challenge is ...",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"StepTakePictures": {
+			"Title": "Take pictures of price tags in stores",
+			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
+			"line2": "Once ready, find your shop and upload your pictures using the button below.",
+			"AddPictures": "Add pictures"
+		},
+		"StepValidate": {
+			"Title": "Validate the detected prices",
+			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
+			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
+			"line3": "If you're having trouble reading the label, mark it as unreable.",
+			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
+			"ValidatePrices": "אימות מחירים"
+		},
+		"Stats": "Challenge stats",
+		"MyStats": "My stats",
+		"PicturesAddedByYou": "Pictures added by you",
+		"PricesAddedByYou": "Prices added by you",
+		"MostRecentContributions": "Most recent contributions"
+	},
 	"Common": {
 		"About": "על אודות",
 		"AddPrice": "הוספת מחיר",
@@ -168,6 +191,10 @@
 		"Category": "קטגוריה",
 		"Categories": "קטגוריות",
 		"CategoryTotal": "{count} קטגוריות | קטגוריה | {count} קטגוריות",
+		"Challenge": "Challenge",
+		"Challenges": "Challenges",
+		"ChallengeCurrent": "Current challenge",
+		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "תרשים",
 		"Clear": "פינוי",
 		"Contributors": "תורמים",
@@ -252,12 +279,16 @@
 		"OrderUserCountDESC": "כמות משתמשים",
 		"PersonalInfo": "פרטים אישיים",
 		"Physical": "פיזי",
+		"Picture": "תמונה",
+		"Pictures": "Pictures",
+		"PicturesAdded": "Pictures added",
 		"PRICE_TAG": "תווית מחיר",
 		"PriceCount": "{count} מחירים | מחיר | {count} מחירים",
 		"PriceAddedCount": "נוספו {count} מחירים | נוסף מחיר | נוספו {count} מחירים",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "המחיר נוצר!",
 		"PricesMore": "מחירים נוספים",
+		"PricesAdded": "Prices added",
 		"PricesAddedToday": "מחירים שנוספו היום",
 		"PricesToday": "Prices today",
 		"Private": "פרטי",
@@ -644,6 +675,12 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
+		},
+		"Challenge": {
+			"Title": "Challenge"
+		},
+		"CurrentChallenge": {
+			"Title": "Current Challenge"
 		}
 	},
 	"Search": {
