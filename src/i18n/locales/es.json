@@ -135,27 +135,27 @@
 		"Title": "Introducir código de barras"
 	},
 	"Challenge": {
-		"Title": "The current challenge is ...",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "El desafío actual es ...",
+		"Subtitle": "Únase a otros entusiastas del precio de los alimentos para recopilar información sobre {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "Toma fotos de las etiquetas de precios en las tiendas",
+			"line1": "Las fotos pueden incluir una o más etiquetas de precios. Los códigos de barras deben ser legibles. Por ejemplo:",
+			"line2": "Una vez listo, busca tu tienda y sube tus fotos usando el botón de abajo.",
+			"AddPictures": "Añadir imágenes"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreable.",
-			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
+			"Title": "Validar los precios detectados",
+			"line1": "Las etiquetas de precios se detectan automáticamente, pero los robots todavía necesitan tu ayuda para validarlas.",
+			"line2": "Visita la página de validación de precios usando el botón de abajo, edita el código de barras y el precio si es necesario, y valídalo!",
+			"line3": "Si está teniendo problemas para leer la etiqueta, márquela como no legible.",
+			"line4": "Este es un esfuerzo colaborativo, incluso si no has enviado muchas fotos, puedes ayudar a otros al validarlas.",
 			"ValidatePrices": "Validate prices"
 		},
-		"Stats": "Challenge stats",
-		"MyStats": "My stats",
-		"PicturesAddedByYou": "Pictures added by you",
-		"PricesAddedByYou": "Prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"Stats": "Estadísticas del desafío",
+		"MyStats": "Mis estadísticas",
+		"PicturesAddedByYou": "Fotos añadidas por ti",
+		"PricesAddedByYou": "Precios añadidos por ti",
+		"MostRecentContributions": "Contribuciones más recientes"
 	},
 	"Common": {
 		"About": "Acerca de",
@@ -191,10 +191,10 @@
 		"Category": "Categoría",
 		"Categories": "Categorías",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
+		"Challenge": "Desafío",
+		"Challenges": "Desafíos",
+		"ChallengeCurrent": "Desafío actual",
+		"ChallengeOngoing": "Desafío en curso",
 		"Chart": "Chart",
 		"Clear": "Limpiar",
 		"Contributors": "Colaboradores",
@@ -280,15 +280,15 @@
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
 		"Picture": "Imagen",
-		"Pictures": "Pictures",
-		"PicturesAdded": "Pictures added",
+		"Pictures": "Imágenes",
+		"PicturesAdded": "Imágenes añadidas",
 		"PRICE_TAG": "Etiqueta de precio",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "¡Precio creado!",
 		"PricesMore": "More prices",
-		"PricesAdded": "Prices added",
+		"PricesAdded": "Precios añadidos",
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Precios hoy",
 		"Private": "Privado",
@@ -677,10 +677,10 @@
 			"Title": "Price Validation Assistant"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "Desafío"
 		},
 		"CurrentChallenge": {
-			"Title": "Current Challenge"
+			"Title": "Desafío actual"
 		}
 	},
 	"Search": {
