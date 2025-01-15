@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "Odkaz zkopírován",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Mapa",
+		"MyDashboard": "Můj ovládací panel",
+		"MyPrices": "Moje ceny",
+		"MyProofs": "Moje důkazy",
+		"MyStats": "My stats",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Pořadí",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "Moje důkazy"
+		},
+		"MyDashboard": {
+			"Title": "Můj ovládací panel"
 		},
 		"Reuses": {
 			"Title": "Opakované použití"
