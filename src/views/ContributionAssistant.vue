@@ -129,7 +129,7 @@
               >
                 <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceId.length }) }}</strong>
               </v-progress-linear>
-              <v-btn class="mt-4" color="primary" :aria-label="$t('Common.Dashboard')" to="/dashboard" :disabled="!allDone">
+              <v-btn class="mt-4" color="primary" :aria-label="$t('Common.MyDashboard')" to="/dashboard" :disabled="!allDone">
                 {{ $t('ContributionAssistant.GoToDashboard') }}
               </v-btn>
               <v-btn class="mt-4 ml-4" color="primary" :to="'/proofs/' + proofObject.id" :disabled="!allDone">

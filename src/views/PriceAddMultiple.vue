@@ -129,9 +129,9 @@
                 color="primary"
                 :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-account-circle"
-                @click="goToDashboard"
+                @click="goToUserDashboard"
               >
-                {{ $t('Common.Dashboard') }}
+                {{ $t('Common.MyDashboard') }}
               </v-btn>
             </v-col>
           </v-row>
@@ -316,7 +316,7 @@ export default {
     reloadPage() {
       window.location.reload()
     },
-    goToDashboard() {
+    goToUserDashboard() {
       this.$router.push({ path: '/dashboard', query: { multipleSuccess: 'true' } })
     }
   }
