@@ -37,10 +37,12 @@
     </v-card-text>
     <v-divider />
     <v-card-actions>
-      <v-spacer />
+      <v-spacer v-if="$vuetify.display.smAndUp" />
       <v-btn
-        color="success"
+        class="float-right"
+        color="primary"
         variant="flat"
+        :block="!$vuetify.display.smAndUp"
         :loading="loading || step === 2"
         :disabled="!proofFormFilled || loading || step === 2"
         @click="uploadProofList"

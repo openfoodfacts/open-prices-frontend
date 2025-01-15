@@ -41,11 +41,11 @@
       <v-divider />
 
       <v-card-actions>
+        <v-spacer v-if="$vuetify.display.smAndUp" />
         <v-btn
-          class="float-right"
-          color="success"
+          color="primary"
           variant="flat"
-          elevation="1"
+          :block="!$vuetify.display.smAndUp"
           :loading="loading"
           @click="updatePrice"
         >

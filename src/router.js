@@ -12,11 +12,11 @@ const routes = [
   { path: '/dashboard/settings', name: 'dashboard-settings', component: () => import('./views/UserSettings.vue'), meta: { title: 'Settings', requiresAuth: true, breadcrumbs: [{title: 'Settings', disabled: true }] } },  // not used anymore
   { path: '/prices/add', name: 'add-price', component: () => import('./views/PriceAddHome.vue'), meta: { title: 'AddPrice', requiresAuth: true, breadcrumbs: [{title: 'AddPrice', disabled: true }] }},  // not used anymore
   { path: '/prices/add/single', name: 'price-add-single', component: () => import('./views/PriceAddSingle.vue'), meta: { title: 'Add a single price (price tag)', icon: 'mdi-tag-plus-outline', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'PriceAddSingle', disabled: true }] }},
-  { path: '/prices/add/multiple', name: 'price-add-multiple', component: () => import('./views/PriceAddMultiple.vue'), meta: { title: 'AddPrices', icon: 'mdi-tag-plus-outline', drawerMenu: true, color: 'primary', requiresAuth: true, breadcrumbs: [{title: 'AddPrices', disabled: true }] }},
+  { path: '/prices/add/multiple', name: 'price-add-multiple', component: () => import('./views/PriceAddMultiple.vue'), meta: { title: 'AddPrices', icon: 'mdi-tag-plus-outline', drawerMenu: true, requiresAuth: true, breadcrumbs: [{title: 'AddPrices', disabled: true }] }},
   { path: '/prices/add/multiple/price-tag', name: 'price-add-multiple-price-tag', redirect: () => { return { path: '/prices/add/multiple' }}},
   { path: '/prices/add/multiple/receipt', name: 'price-add-multiple-receipt', redirect: () => { return { path: '/prices/add/multiple' }}},
   { path: '/proofs/add/single', name: 'proof-add-single', component: () => import('./views/ProofAddSingle.vue'), meta: { title: 'AddProofSingle', icon: 'mdi-image-plus', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'AddProofSingle', disabled: true }] }},
-  { path: '/proofs/add/multiple', name: 'proof-add-multiple', component: () => import('./views/ProofAddMultiple.vue'), meta: { title: 'AddProofs', icon: 'mdi-image-plus', drawerMenu: true, color: 'primary', requiresAuth: true, breadcrumbs: [{title: 'AddProofs', disabled: true }] }},
+  { path: '/proofs/add/multiple', name: 'proof-add-multiple', component: () => import('./views/ProofAddMultiple.vue'), meta: { title: 'AddProofs', icon: 'mdi-image-plus', drawerMenu: true, requiresAuth: true, breadcrumbs: [{title: 'AddProofs', disabled: true }] }},
   { path: '/search', name: 'search', component: () => import('./views/Search.vue'), meta: { title: 'Search', icon: 'mdi-magnify', drawerMenu: true, breadcrumbs: [{title: 'Search', disabled: true }] }},
   { path: '/prices/:id', name: 'prices-detail', component: () => import('./views/PriceDetail.vue'), meta: { title: 'Price detail' }},
   { path: '/prices', name: 'prices', component: () => import('./views/PriceList.vue'), meta: { title: 'LatestPrices', icon: 'mdi-tag-multiple-outline', drawerMenu: true, breadcrumbs: [{title: 'LatestPrices', disabled: true }] }},
@@ -45,6 +45,7 @@ const routes = [
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true, breadcrumbs: [{title: 'Stats', disabled: true }] }},
   { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', icon: 'mdi-cog-outline', drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true, breadcrumbs: [{title: 'About', disabled: true }] }},
+  { path: '/experiments/challenge', name: 'challenge', component: () => import('./views/CurrentChallenge.vue'), meta: { title: 'Community Challenge', icon: 'mdi-medal-outline',  breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'Challenge', disabled: true }] }},
   // Why this redirect?
   // The app used to be available at https://prices.openfoodfacts.org/app
   // It is now available at https://prices.openfoodfacts.org

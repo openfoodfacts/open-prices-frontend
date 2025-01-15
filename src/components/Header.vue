@@ -12,8 +12,8 @@
     <v-btn v-else prepend-icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')">
       {{ $t('Common.Search') }}
     </v-btn>
-    <v-btn v-if="!$vuetify.display.smAndUp" color="primary" icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrices')" />
-    <v-btn v-else color="primary" prepend-icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrices')">
+    <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrices')" />
+    <v-btn v-else prepend-icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrices')">
       {{ $t('Common.AddPrices') }}
     </v-btn>
     <template v-if="!username" #append>
@@ -38,7 +38,6 @@
         :slim="true"
         :title="item.title"
         :prepend-icon="item.props['prepend-icon']"
-        :base-color="item.props['base-color']"
         :to="item.props.to"
       />
     </v-list>
@@ -74,7 +73,7 @@ export default {
         .filter(r => r.meta && r.meta.drawerMenu)
         .filter(r => this.username ? r.meta.requiresAuth !== false : !r.meta.requiresAuth)
         .filter(r => !r.meta.drawerMenuConditionalDisplay || this.appStore.user[r.meta.drawerMenuConditionalDisplay])
-        .map((r => ({ title: this.$t(`Router.${r.meta.title}.Title`), props: { 'prepend-icon': r.meta.icon, 'base-color': r.meta.color, to: r.path }})))
+        .map((r => ({ title: this.$t(`Router.${r.meta.title}.Title`), props: { 'prepend-icon': r.meta.icon, to: r.path }})))
     }
   },
   methods: {

@@ -46,7 +46,7 @@
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-btn :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualFormValid" @click="barcodeSearchOrSend" />
+                  <v-btn color="primary" :icon="barcodeManualInputMode === 'search' ? 'mdi-magnify' : 'mdi-plus'" :disabled="!barcodeManualFormValid" @click="barcodeSearchOrSend" />
                 </template>
               </v-text-field>
             </v-form>

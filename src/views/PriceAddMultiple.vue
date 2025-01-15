@@ -75,7 +75,7 @@
               <v-col>
                 <v-btn
                   class="float-right"
-                  color="success"
+                  color="primary"
                   variant="flat"
                   type="submit"
                   :loading="loading"
@@ -112,22 +112,22 @@
           <v-icon icon="mdi-checkbox-marked-circle" color="success" />
         </template>
         <v-divider />
-        <v-card-text :class="$vuetify.display.smAndUp ? 'text-center' : 'text-right'">
+        <v-card-text class="text-center">
           <v-row>
-            <v-col cols="12" md="6">
+            <v-col cols="12" sm="6">
               <v-btn
                 color="primary"
-                variant="outlined"
+                :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-tag-plus-outline"
                 @click="reloadPage"
               >
                 {{ $t('Common.AddNewPrices') }}
               </v-btn>
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col cols="12" sm="6">
               <v-btn
                 color="primary"
-                variant="outlined"
+                :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-account-circle"
                 @click="goToDashboard"
               >
