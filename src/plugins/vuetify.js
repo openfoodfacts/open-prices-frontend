@@ -15,18 +15,27 @@ export const vuetify = createVuetify({
       mdi,
     },
   },
+  // https://vuetifyjs.com/en/features/theme
   theme: {
     themes: {
       light: {
         colors: {
-          header: "rgb(242, 233, 228)",
+          primary: '#341100',
+          header: '#f2e9e4',
           footer: '#bdbdbd'
+        },
+        variables: {
+          'border-color': '#201A17'
         }
       },
       dark: {
         colors: {
-          header: "#0d161b",
+          primary: '#A08D84',
+          header: '#201A17',
           footer: '#424242'
+        },
+        variables: {
+          'border-color': '#85746C'
         }
       },
     },
