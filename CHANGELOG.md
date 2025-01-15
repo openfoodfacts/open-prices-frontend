@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.112.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.111.2...v1.112.0) (2025-01-15)
+
+
+### Features
+
+* **Challenge Page:** A page for community challenges ([#935](https://github.com/openfoodfacts/open-prices-frontend/issues/935)) ([04626fa](https://github.com/openfoodfacts/open-prices-frontend/commit/04626fa428b298acf6194626f83a0a232d935adf))
+* **Mobile:** have full-width (block) CTAs on mobile ([#1271](https://github.com/openfoodfacts/open-prices-frontend/issues/1271)) ([945e54f](https://github.com/openfoodfacts/open-prices-frontend/commit/945e54f561552706e37c4d645f033ab6dacc1f18))
+* **Theme:** change most CTA button colors to primary (instead of success) ([#1269](https://github.com/openfoodfacts/open-prices-frontend/issues/1269)) ([5c088b5](https://github.com/openfoodfacts/open-prices-frontend/commit/5c088b50d3f56388da571952825593f2d4bc7346))
+* **Theme:** match primary color with OFF colors ([#1268](https://github.com/openfoodfacts/open-prices-frontend/issues/1268)) ([b4f3974](https://github.com/openfoodfacts/open-prices-frontend/commit/b4f3974a395fb96c8eb3ada7a03b752c003a6e42))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1265](https://github.com/openfoodfacts/open-prices-frontend/issues/1265)) ([ea54ddf](https://github.com/openfoodfacts/open-prices-frontend/commit/ea54ddf0fdc762b02852e9104268763a3198ee2c))
+
 ## [1.111.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.111.1...v1.111.2) (2025-01-13)
 
 
