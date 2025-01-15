@@ -43,7 +43,7 @@ User dashboard:
 
 ⚙️ Settings:
 - changed-files:
-  - any-glob-to-any-file: 'src/views/UserSettings.vue'
+  - any-glob-to-any-file: 'src/views/Settings.vue'
 
 Action menus:
 - changed-files:
