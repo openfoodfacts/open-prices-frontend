@@ -21,10 +21,11 @@
       <v-divider />
 
       <v-card-actions>
+        <v-spacer v-if="$vuetify.display.smAndUp" />
         <v-btn
           color="error"
           variant="flat"
-          elevation="1"
+          :block="!$vuetify.display.smAndUp"
           prepend-icon="mdi-delete"
           :loading="loading"
           @click="deletePrice"

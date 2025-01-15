@@ -21,11 +21,11 @@
       <v-divider />
 
       <v-card-actions>
+        <v-spacer v-if="$vuetify.display.smAndUp" />
         <v-btn
-          class="float-right"
           color="primary"
           variant="flat"
-          elevation="1"
+          :block="!$vuetify.display.smAndUp"
           :disabled="!formFilled"
           :loading="loading"
           @click="updateProof"

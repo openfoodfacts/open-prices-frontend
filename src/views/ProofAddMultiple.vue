@@ -28,29 +28,32 @@
           <v-icon icon="mdi-checkbox-marked-circle" color="success" />
         </template>
         <v-divider />
-        <v-card-text :class="$vuetify.display.smAndUp ? 'text-center' : 'text-right'">
+        <v-card-text class="text-center">
           <v-row>
-            <v-col cols="12" md="4">
+            <v-col cols="12" sm="4">
               <v-btn
                 color="primary"
+                :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-image-plus"
                 @click="reloadPage"
               >
                 {{ $t('Common.AddNewProofs') }}
               </v-btn>
             </v-col>
-            <v-col cols="12" md="4">
+            <v-col cols="12" sm="4">
               <v-btn
                 color="primary"
+                :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-checkbox-marked-circle-plus-outline"
                 @click="goToPriceValidation"
               >
                 {{ $t('Common.ValidatePrices') }} 🤖
               </v-btn>
             </v-col>
-            <v-col cols="12" md="4">
+            <v-col cols="12" sm="4">
               <v-btn
                 color="primary"
+                :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-account-circle"
                 @click="goToDashboard"
               >
@@ -73,7 +76,7 @@ export default {
   },
   data() {
     return {
-      step: 1,
+      step: 2,
       stepItemList: [
         {
           title: this.$t('Common.Upload'),

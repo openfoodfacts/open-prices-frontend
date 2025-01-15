@@ -12,19 +12,17 @@
         {{ $t('Challenge.StepTakePictures.line2') }}
       </p>
     </v-card-text>
+    <v-divider />
     <v-card-actions>
-      <v-row>
-        <v-col>
-          <v-btn 
-            class="float-right"
-            color="primary"
-            variant="flat"
-            to="/proofs/add/multiple"
-          >
-            {{ $t('Challenge.StepTakePictures.AddPictures') }}
-          </v-btn>
-        </v-col>
-      </v-row>
+      <v-spacer v-if="$vuetify.display.smAndUp" />
+      <v-btn
+        color="primary"
+        variant="flat"
+        :block="!$vuetify.display.smAndUp"
+        to="/proofs/add/multiple"
+      >
+        {{ $t('Challenge.StepTakePictures.AddPictures') }}
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>

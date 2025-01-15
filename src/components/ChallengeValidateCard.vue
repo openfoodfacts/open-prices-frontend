@@ -17,19 +17,17 @@
         {{ $t('Challenge.StepValidate.line4') }}
       </p>
     </v-card-text>
+    <v-divider />
     <v-card-actions>
-      <v-row>
-        <v-col>
-          <v-btn
-            class="float-right"
-            color="primary"
-            variant="flat"
-            to="/experiments/price-validation-assistant"
-          >
-            {{ $t('Challenge.StepValidate.ValidatePrices') }}
-          </v-btn>
-        </v-col>
-      </v-row>
+      <v-spacer v-if="$vuetify.display.smAndUp" />
+      <v-btn
+        color="primary"
+        variant="flat"
+        :block="!$vuetify.display.smAndUp"
+        to="/experiments/price-validation-assistant"
+      >
+        {{ $t('Challenge.StepValidate.ValidatePrices') }}
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>
