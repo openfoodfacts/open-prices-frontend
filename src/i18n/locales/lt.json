@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "Nuoroda nukopijuota",
 		"LocationCount": "{count} vietos | {count} vieta | {count} vietų",
 		"Map": "Žemėlapis",
+		"MyDashboard": "Mano pagrindinis meniu",
+		"MyPrices": "Mano kainos",
+		"MyProofs": "Mano įrodymai",
+		"MyStats": "My stats",
 		"Offline": "Neprisijungę",
 		"Online": "Prisijungus",
 		"Order": "Order",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "Mano įrodymai"
+		},
+		"MyDashboard": {
+			"Title": "Mano pagrindinis meniu"
 		},
 		"Reuses": {
 			"Title": "Kartotinis naudojimas"
