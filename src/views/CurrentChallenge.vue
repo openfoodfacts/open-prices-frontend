@@ -1,6 +1,6 @@
 <template>
   <h1 class="text-h5 mb-1">
-    {{ $t('Challenge.Title') }}  {{ challenge.icon }} {{ challenge.title }}  {{ challenge.icon }}
+    {{ $t('Challenge.Title') }} {{ challenge.icon }} {{ challenge.title }} {{ challenge.icon }}
   </h1>
 
   <v-row>
@@ -13,8 +13,6 @@
       <ChallengeTimeline :challenge="challenge" />
     </v-col>
   </v-row>
-  
-  <v-divider :thickness="2" class="border-opacity-100 mt-5 mb-3" />
 
   <v-row>
     <v-col cols="12" lg="6">
@@ -25,34 +23,30 @@
     </v-col>
   </v-row>
 
-  <v-divider :thickness="2" class="border-opacity-100 mt-5 mb-3" />
-
   <v-row>
     <v-col cols="12">
       <h2 class="text-h6 mb-1">
-        {{ $t('Challenge.GeneralStats') }}
+        {{ $t('Challenge.Stats') }}
       </h2>
 
       <v-row>
         <v-col cols="12" md="4">
-          <StatCard :value="challenge.numberOfProofs" :subtitle="$t('Challenge.TotalPicturesAdded')" />
+          <StatCard :value="challenge.numberOfProofs" :subtitle="$t('Common.PicturesAdded')" />
         </v-col>
         <v-col cols="12" md="4">
-          <StatCard :value="challenge.numberOfContributions" :subtitle="$t('Challenge.TotalContributions')" />
+          <StatCard :value="challenge.numberOfContributions" :subtitle="$t('Common.PricesAdded')" />
         </v-col>
         <v-col cols="12" md="4">
-          <StatCard :value="challenge.numberOfContributors" :subtitle="$t('Challenge.TotalContributors')" />
+          <StatCard :value="challenge.numberOfContributors" :subtitle="$t('Common.Contributors')" />
         </v-col>
       </v-row>
     </v-col>
   </v-row>
-  
-  <v-divider :thickness="2" class="border-opacity-100 mt-5 mb-3" />
 
   <v-row>
     <v-col v-if="username" cols="12">
       <h2 class="text-h6 mb-1">
-        {{ $t('Challenge.YourStats') }}
+        {{ $t('Challenge.MyStats') }}
       </h2>
       <v-row>
         <v-col cols="12" md="4">
@@ -64,8 +58,6 @@
       </v-row>
     </v-col>
   </v-row>
-
-  <v-divider :thickness="2" class="border-opacity-100 mt-5 mb-3" />
 
   <v-row v-if="challenge.latestContributions.length">
     <v-col cols="12">

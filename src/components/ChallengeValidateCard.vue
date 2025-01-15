@@ -1,20 +1,20 @@
 <template>
   <v-card class="fill-height d-flex flex-column">
     <v-card-title>
-      {{ $t('Challenge.Step2Validate.Title') }}
+      {{ $t('Challenge.StepValidate.Title') }}
     </v-card-title>
     <v-card-text class="flex-grow-1">
       <p class="mb-2">
-        {{ $t('Challenge.Step2Validate.line1') }}
+        {{ $t('Challenge.StepValidate.line1') }}
       </p>
       <p class="mb-4">
-        {{ $t('Challenge.Step2Validate.line2') }}
+        {{ $t('Challenge.StepValidate.line2') }}
       </p>
       <p class="mb-2">
-        {{ $t('Challenge.Step2Validate.line3') }}
+        {{ $t('Challenge.StepValidate.line3') }}
       </p>
       <p class="mb-4">
-        {{ $t('Challenge.Step2Validate.line4') }}
+        {{ $t('Challenge.StepValidate.line4') }}
       </p>
     </v-card-text>
     <v-card-actions>
@@ -26,7 +26,7 @@
             variant="flat"
             to="/experiments/price-validation-assistant"
           >
-            {{ $t('Challenge.Step2Validate.ValidatePrices') }}
+            {{ $t('Challenge.StepValidate.ValidatePrices') }}
           </v-btn>
         </v-col>
       </v-row>
