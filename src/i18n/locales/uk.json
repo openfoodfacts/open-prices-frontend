@@ -134,6 +134,29 @@
 		"Submit": "Підтвердити",
 		"Title": "Введіть штрих-код"
 	},
+	"Challenge": {
+		"Title": "The current challenge is ...",
+		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"StepTakePictures": {
+			"Title": "Take pictures of price tags in stores",
+			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
+			"line2": "Once ready, find your shop and upload your pictures using the button below.",
+			"AddPictures": "Add pictures"
+		},
+		"StepValidate": {
+			"Title": "Validate the detected prices",
+			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
+			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
+			"line3": "If you're having trouble reading the label, mark it as unreable.",
+			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
+			"ValidatePrices": "Перевірити ціни"
+		},
+		"Stats": "Challenge stats",
+		"MyStats": "My stats",
+		"PicturesAddedByYou": "Pictures added by you",
+		"PricesAddedByYou": "Prices added by you",
+		"MostRecentContributions": "Most recent contributions"
+	},
 	"Common": {
 		"About": "Про додаток",
 		"AddPrice": "Додати ціну",
@@ -168,6 +191,10 @@
 		"Category": "Категорія",
 		"Categories": "Категорії",
 		"CategoryTotal": "{count} категорії | {count} категорія | {count} категорії",
+		"Challenge": "Challenge",
+		"Challenges": "Challenges",
+		"ChallengeCurrent": "Current challenge",
+		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Графік",
 		"Clear": "Очистити",
 		"Contributors": "Співучасники",
@@ -252,12 +279,16 @@
 		"OrderUserCountDESC": "Кількість користувачів",
 		"PersonalInfo": "Особиста інформація",
 		"Physical": "Фізичний",
+		"Picture": "Зображення",
+		"Pictures": "Pictures",
+		"PicturesAdded": "Pictures added",
 		"PRICE_TAG": "Цінник",
 		"PriceCount": "{count} ціни | {count} ціна | {count} ціни",
 		"PriceAddedCount": "{count} додано ціни | {count} ціна додана | {count} ціни додано",
 		"PriceToValidateCount": "{count} ціни для перевірки | {count} ціна для перевірки | {count} ціни для перевірки",
 		"PriceCreated": "Ціна створена!",
 		"PricesMore": "Більше цін",
+		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Ціни, додані сьогодні",
 		"PricesToday": "Ціни сьогодні",
 		"Private": "Приватний",
@@ -644,6 +675,12 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Помічник Перевірки Ціни"
+		},
+		"Challenge": {
+			"Title": "Challenge"
+		},
+		"CurrentChallenge": {
+			"Title": "Current Challenge"
 		}
 	},
 	"Search": {
