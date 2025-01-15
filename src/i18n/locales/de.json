@@ -135,11 +135,11 @@
 		"Title": "Strichcode eingeben"
 	},
 	"Challenge": {
-		"Title": "The current challenge is ...",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "Die aktuelle Herausforderung ist ...",
+		"Subtitle": "Sammeln Sie gemeinsam mit anderen Lebensmittelpreis-Enthusiasten Informationen über {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
+			"Title": "Fotografieren Sie Preisschilder in Geschäften",
+			"line1": "Die Bilder können ein oder mehrere Preisschilder enthalten. Barcodes sollten lesbar sein. Zum Beispiel:",
 			"line2": "Once ready, find your shop and upload your pictures using the button below.",
 			"AddPictures": "Add pictures"
 		},
