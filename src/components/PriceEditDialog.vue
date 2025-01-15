@@ -43,7 +43,7 @@
       <v-card-actions>
         <v-btn
           class="float-right"
-          color="success"
+          color="primary"
           variant="flat"
           elevation="1"
           :loading="loading"

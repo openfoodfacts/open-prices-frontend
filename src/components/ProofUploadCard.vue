@@ -39,7 +39,7 @@
     <v-card-actions>
       <v-spacer />
       <v-btn
-        color="success"
+        color="primary"
         variant="flat"
         :loading="loading || step === 2"
         :disabled="!proofFormFilled || loading || step === 2"

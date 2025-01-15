@@ -46,7 +46,7 @@
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-btn icon="mdi-magnify" :disabled="!locationOsmSearchForm.q" @click="locationOsmSearch" />
+                  <v-btn color="primary" icon="mdi-magnify" :disabled="!locationOsmSearchForm.q" @click="locationOsmSearch" />
                 </template>
               </v-text-field>
             </v-form>
@@ -106,7 +106,7 @@
                 persistent-hint
               >
                 <template #append-inner>
-                  <v-btn icon="mdi-plus" :disabled="!locationOnlineFormValid" @click="createOnline" />
+                  <v-btn color="primary" icon="mdi-plus" :disabled="!locationOnlineFormValid" @click="createOnline" />
                 </template>
               </v-text-field>
             </v-form>

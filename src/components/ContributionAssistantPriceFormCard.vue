@@ -41,7 +41,7 @@
       <v-spacer />
       <v-btn
         v-if="mode === 'Validation'"
-        color="success"
+        color="primary"
         variant="flat"
         @click="validatePriceTag"
       >

@@ -75,7 +75,7 @@
               <v-col>
                 <v-btn
                   class="float-right"
-                  color="success"
+                  color="primary"
                   variant="flat"
                   type="submit"
                   :loading="loading"
@@ -117,7 +117,6 @@
             <v-col cols="12" md="6">
               <v-btn
                 color="primary"
-                variant="outlined"
                 prepend-icon="mdi-tag-plus-outline"
                 @click="reloadPage"
               >
@@ -127,7 +126,6 @@
             <v-col cols="12" md="6">
               <v-btn
                 color="primary"
-                variant="outlined"
                 prepend-icon="mdi-account-circle"
                 @click="goToDashboard"
               >
