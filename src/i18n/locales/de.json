@@ -138,8 +138,12 @@
 		"About": "Über",
 		"AddPrice": "Preis hinzufügen",
 		"AddPrices": "Preise hinzufügen",
+		"AddNewPrice": "Neuen Preis hinzufügen",
+		"AddNewPrices": "Neue Preise hinzufügen",
 		"AddProof": "Nachweis bearbeiten",
 		"AddProofs": "Nachweis hinzufügen",
+		"AddNewProof": "Neuen Nachweis hinzufügen",
+		"AddNewProofs": "Neue Nachweise hinzufügen",
 		"AddToOFF": "Zu {name} hinzufügen",
 		"AdditionalInfo": "Zusätzliche Informationen",
 		"Barcode": "Strichcode",
@@ -250,6 +254,7 @@
 		"Physical": "Physisch",
 		"PRICE_TAG": "Preisschild",
 		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
+		"PriceAddedCount": "{count} Preise hinzugefügt | {count} Preis hinzugefügt | {count} Preise hinzugefügt",
 		"PriceToValidateCount": "{count} zu bestätigende Preise | {count} zu bestätigender Preis | {count} zu bestätigende Preise",
 		"PriceCreated": "Preis erstellt!",
 		"PricesMore": "Weitere Preise",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Nachweise auswählen",
 		"ProofSelected": "Nachweis ausgewählt!",
 		"ProofSelectedCount": "{count} Nachweise ausgewählt | {count} Nachweise ausgewählt | {count} Nachweise ausgewählt",
+		"ProofUploadedCount": "{count} Nachweise hochgeladen | {count} Nachweis hochgeladen | {count} Nachweise hochgeladen",
 		"ProofsAddedToday": "Heute hinzugefügte Nachweise",
 		"ProofsToday": "Aktuelle Nachweise",
 		"Public": "Öffentlich",
@@ -309,6 +315,7 @@
 		"Unreadable": "Nicht lesbar",
 		"Upload": "Hochladen",
 		"UploadMultipleImages": "Lade {count} Bild hoch | Lade {count} Bilder hoch",
+		"UploadMultipleProofs": "{count} Nachweis hochladen | {count} Nachweise hochladen",
 		"UploadMultiplePrices": "{count} Preis hochladen | {count} Preise hochladen",
 		"URL": "URL",
 		"URLInvalid": "Ungültige Adresse",
@@ -316,6 +323,8 @@
 		"Users": "Benutzer",
 		"UserCount": "{count} Benutzer | {count} Benutzer | {count} Benutzer",
 		"UserContributorCount": "{count} Mitwirkende | {count} Mitwirkende | {count} Mitwirkende",
+		"ValidatePrices": "Preise prüfen",
+		"ValidatePricesWithAI": "Preise mit KI prüfen",
 		"View": "Anzeigen",
 		"Website": "Website",
 		"Yes": "Ja",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Mehrere Nachweise hinzufügen"
 		},
+		"Locations": {
+			"Title": "Orte"
+		},
 		"PriceAdd": {
 			"Title": "Preis hinzufügen"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Mehrere Preise hinzufügen"
+		},
+		"Proofs": {
+			"Title": "Nachweise"
 		},
 		"ProofAddSingle": {
 			"Title": "Einzelnen Nachweis hinzufügen"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top-Produkte"
+		},
+		"Users": {
+			"Title": "Benutzer"
 		},
 		"ContributionAssistant": {
 			"Title": "Mitwirkungsassistent"

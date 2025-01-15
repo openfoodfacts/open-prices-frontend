@@ -138,8 +138,12 @@
 		"About": "இதைப் பற்றி",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
+		"AddNewPrice": "Add a new price",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Add a proof",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "Add a new proof",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "கூடுதல் தகவல்",
 		"Barcode": "பார்கோடு",
@@ -250,6 +254,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Price tag",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PricesMore": "More prices",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "Public",
@@ -309,6 +315,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "Upload",
 		"UploadMultipleImages": "{count} படத்தைப் பதிவேற்றவும் | {count} படங்களைப் பதிவேற்றவும்",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "பதிவேற்றம் {count} விலை | பதிவேற்றம் {count} விலைகளைப் பதிவேற்றவும்",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
@@ -316,6 +323,8 @@
 		"Users": "பயனர்",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "View",
 		"Website": "Website",
 		"Yes": "ஆம்",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "பல சான்றுகளைச் சேர்க்கவும்"
 		},
+		"Locations": {
+			"Title": "இடங்கள்"
+		},
 		"PriceAdd": {
 			"Title": "Add a price"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Add multiple prices"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top products"
+		},
+		"Users": {
+			"Title": "பயனர்"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"

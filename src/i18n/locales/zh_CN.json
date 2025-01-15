@@ -138,8 +138,12 @@
 		"About": "关于",
 		"AddPrice": "添加价格",
 		"AddPrices": "Add prices",
+		"AddNewPrice": "添加新价格",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Add a proof",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "Add a new proof",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "添加到 {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "條碼",
@@ -250,6 +254,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "价格标签",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "价格已创建！",
 		"PricesMore": "More prices",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "证明已选！",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "民众",
@@ -309,6 +315,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "上传",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
@@ -316,6 +323,8 @@
 		"Users": "用户",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "檢視",
 		"Website": "网站",
 		"Yes": "是",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "地点"
+		},
 		"PriceAdd": {
 			"Title": "添加价格"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "添加多个价格"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "热门产品"
+		},
+		"Users": {
+			"Title": "用户"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"

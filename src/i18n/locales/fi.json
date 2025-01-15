@@ -138,8 +138,12 @@
 		"About": "Tietoja",
 		"AddPrice": "Lisää hinta",
 		"AddPrices": "Add prices",
+		"AddNewPrice": "Lisää uusi hinta",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Lisää todiste",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "Add a new proof",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Lisää kohtaan {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Viivakoodi",
@@ -250,6 +254,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Hintalappu",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Hinta luotu!",
 		"PricesMore": "More prices",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Todiste valittu!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "Julkinen",
@@ -309,6 +315,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "Lähetä",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
@@ -316,6 +323,8 @@
 		"Users": "Käyttäjät",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Näytä",
 		"Website": "Nettisivusto",
 		"Yes": "Kyllä",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "Sijainnit"
+		},
 		"PriceAdd": {
 			"Title": "Lisää hinta"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Lisää useita hintoja"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Huipputuotteet"
+		},
+		"Users": {
+			"Title": "Käyttäjät"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"

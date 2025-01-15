@@ -138,8 +138,12 @@
 		"About": "Hakkında",
 		"AddPrice": "Fiyat ekleyin",
 		"AddPrices": "Add prices",
+		"AddNewPrice": "Yeni bir fiyat ekle",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Bir bedel ekle",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "Add a new proof",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "{name}'e ekle",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Barkod",
@@ -250,6 +254,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Fiyat etiketi",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Fiyat oluşturuldu!",
 		"PricesMore": "More prices",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Bedel seçildi!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "Genel",
@@ -309,6 +315,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "Yükle",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
@@ -316,6 +323,8 @@
 		"Users": "Kullanıcılar",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Görüntüle",
 		"Website": "Web sitesi",
 		"Yes": "Evet",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "Konumlar"
+		},
 		"PriceAdd": {
 			"Title": "Fiyat ekleyin"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Birden fazla fiyat ekle"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "En iyi ürünler"
+		},
+		"Users": {
+			"Title": "Kullanıcılar"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"

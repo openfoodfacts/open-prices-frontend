@@ -138,8 +138,12 @@
 		"About": "Na temat",
 		"AddPrice": "Dodaj cenę",
 		"AddPrices": "Add prices",
+		"AddNewPrice": "Dodaj nową cenę",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Add a proof",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "Add a new proof",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Kod kreskowy",
@@ -250,6 +254,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Cenówka",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena utworzona!",
 		"PricesMore": "More prices",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "Public",
@@ -309,6 +315,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "Prześlij",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
@@ -316,6 +323,8 @@
 		"Users": "Użytkownicy",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Zobacz",
 		"Website": "Strona",
 		"Yes": "Tak",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "Lokalizacje"
+		},
 		"PriceAdd": {
 			"Title": "Dodaj cenę"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Dodaj więcej cen"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Najlepsze produkty"
+		},
+		"Users": {
+			"Title": "Użytkownicy"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"

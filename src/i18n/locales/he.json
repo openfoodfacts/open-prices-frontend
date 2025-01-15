@@ -137,9 +137,13 @@
 	"Common": {
 		"About": "על אודות",
 		"AddPrice": "הוספת מחיר",
-		"AddPrices": "Add prices",
+		"AddPrices": "הוספת מחירים",
+		"AddNewPrice": "הוספת מחיר חדש",
+		"AddNewPrices": "הוספת מחירים חדשים",
 		"AddProof": "הוספת הוכחה",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "הוספת הוכחה חדשה",
+		"AddNewProofs": "הוספת הוכחות חדשות",
 		"AddToOFF": "הוספה אל {name}",
 		"AdditionalInfo": "מידע נוסף",
 		"Barcode": "ברקוד",
@@ -250,6 +254,7 @@
 		"Physical": "פיזי",
 		"PRICE_TAG": "תווית מחיר",
 		"PriceCount": "{count} מחירים | מחיר | {count} מחירים",
+		"PriceAddedCount": "נוספו {count} מחירים | נוסף מחיר | נוספו {count} מחירים",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "המחיר נוצר!",
 		"PricesMore": "מחירים נוספים",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "בחירת הוכחות",
 		"ProofSelected": "נבחרה הוכחה!",
 		"ProofSelectedCount": "{count} הוכחות נבחרו | הוכחה נבחרה | {count} הוכחות נבחרו",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "ציבורי",
@@ -309,6 +315,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "העלאה",
 		"UploadMultipleImages": "העלאת תמונה | העלאת {count} תמונות",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "העלאת מחיר | העלאת {count} מחירים",
 		"URL": "כתובת",
 		"URLInvalid": "כתובת שגויה",
@@ -316,6 +323,8 @@
 		"Users": "משתמשים",
 		"UserCount": "{count} משתמשים | משתמש | {count} משתמשים",
 		"UserContributorCount": "{count} תרמו | תורם/ת | {count} תרמו",
+		"ValidatePrices": "אימות מחירים",
+		"ValidatePricesWithAI": "אימות מחירים עם בינה מלאכותית",
 		"View": "הצגה",
 		"Website": "אתר",
 		"Yes": "כן",
@@ -538,7 +547,7 @@
 			"Title": "הוספת מחיר"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "הוספת מחירים"
 		},
 		"AddPriceSingle": {
 			"Title": "הוספת מחיר בודד"
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "הוספת מגוון הוכחות"
 		},
+		"Locations": {
+			"Title": "מקומות"
+		},
 		"PriceAdd": {
 			"Title": "הוספת מחיר"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "הוספת מגוון מחירים"
+		},
+		"Proofs": {
+			"Title": "הוכחות"
 		},
 		"ProofAddSingle": {
 			"Title": "הוספת הוכחה יחידה"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "מוצרים מובילים"
+		},
+		"Users": {
+			"Title": "משתמשים"
 		},
 		"ContributionAssistant": {
 			"Title": "מסייע תרומה"

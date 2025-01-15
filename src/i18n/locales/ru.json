@@ -138,8 +138,12 @@
 		"About": "О приложении",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
+		"AddNewPrice": "Add a new price",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Add a proof",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "Add a new proof",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Штрих-код",
@@ -169,7 +173,7 @@
 		"Contributors": "Участники",
 		"Community": "Community",
 		"Country": "Страна",
-		"Currency": "Currency",
+		"Currency": "Валюта",
 		"CurrencyMissing": "Currency missing",
 		"Dashboard": "Dashboard",
 		"Display": "Показать",
@@ -250,6 +254,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Price tag",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PricesMore": "More prices",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "Public",
@@ -309,13 +315,16 @@
 		"Unreadable": "Unreadable",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Пользователь",
-		"Users": "Users",
+		"Users": "Пользователи",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Вид",
 		"Website": "Веб-сайт",
 		"Yes": "Да",
@@ -366,7 +375,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Валюта",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "Locations"
+		},
 		"PriceAdd": {
 			"Title": "Add a price"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Add multiple prices"
+		},
+		"Proofs": {
+			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -621,6 +636,9 @@
 		"TopProducts": {
 			"Title": "Top products"
 		},
+		"Users": {
+			"Title": "Пользователи"
+		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
@@ -654,7 +672,7 @@
 		"Title": "Stats",
 		"Products": "Продукты",
 		"Locations": "Locations",
-		"Users": "Users",
+		"Users": "Пользователи",
 		"Total": "Всего",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
@@ -688,24 +706,24 @@
 		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Добавление цен",
 		"ChangeLanguage": "Сменить язык",
 		"CountryLabel": "Страна",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показать",
-		"BarcodeScanner": "Barcode scanner",
-		"DefaultMode": "Default mode",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"BarcodeScanner": "Сканер штрихкодов",
+		"DefaultMode": "Режим по умолчанию",
+		"FavoriteCurrencies": "Любимые валюты",
+		"CurrencyRequired": "Требуется хотя бы одна валюта",
 		"LanguageLabel": "Языки",
-		"LocationFinder": "Location finder",
-		"LocationDisplayOSMID": "Display OSM ID",
-		"ProductDisplayBarcode": "Display barcode",
-		"ProductDisplayCategoryTag": "Display category tag",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"LocationFinder": "Поиск местонахождения",
+		"LocationDisplayOSMID": "Показать OSM ID",
+		"ProductDisplayBarcode": "Показать штрихкод",
+		"ProductDisplayCategoryTag": "Показать тег категории",
+		"SideMenuExperimentsDisplay": "Показать 'Эксперименты'",
 		"Save": "Сохранить",
 		"Title": "Настройки",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationCompletion": "Переведено {completion}%.",
+		"TranslationHelp": "Помогите перевести на больше языков"
 	}
 }

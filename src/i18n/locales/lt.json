@@ -138,8 +138,12 @@
 		"About": "Apie",
 		"AddPrice": "Pridėti kainą",
 		"AddPrices": "Pridėti kainas",
+		"AddNewPrice": "Pridėti naują kainą",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Pridėti įrodymą",
-		"AddProofs": "Add proofs",
+		"AddProofs": "Pridėti įrodymus",
+		"AddNewProof": "Pridėti naują įrodymą",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Barkodas",
@@ -250,6 +254,7 @@
 		"Physical": "Fizinis",
 		"PRICE_TAG": "Kainos etiketė",
 		"PriceCount": "{count} kainos | {count} kaina | {count} kainų",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} kainos patvirtinti | {count} kaina patvirtinti | {count} kainų patvirtinti",
 		"PriceCreated": "Kaina sukurta!",
 		"PricesMore": "Daugiau kainų",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Pasirinkti įrodymai",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} pasirinktų įrodymų | {count} pasirinktas įrodymas | Pasirinkti {count} įrodymai",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Šiandien pridėti įrodymai",
 		"ProofsToday": "Įrodymai šiandien",
 		"Public": "Vieša",
@@ -309,6 +315,7 @@
 		"Unreadable": "Neįskaitoma",
 		"Upload": "Įkelti",
 		"UploadMultipleImages": "Įkelti {count} vaizdą | Įkelti {count} vaizdus (-ų)",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Įkelti {count} kainą | Įkelti {count} kainas (-ų)",
 		"URL": "URL",
 		"URLInvalid": "Neteisingas URL",
@@ -316,6 +323,8 @@
 		"Users": "Vartotojai",
 		"UserCount": "{count} vartotojai | {count} vartotojas | {count} vartotojų",
 		"UserContributorCount": "{count} bendraautoriai | {count} bendraautorius | {count} bendraautorių",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Žiūrėti",
 		"Website": "Interneto svetainė",
 		"Yes": "Taip",
@@ -550,13 +559,16 @@
 			"Title": "Pridėti įrodymą"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "Pridėti įrodymus"
 		},
 		"AddProofSingle": {
 			"Title": "Pridėti vienintelį įrodymą"
 		},
 		"AddProofMultiple": {
 			"Title": "Pridėti kelis įrodymus"
+		},
+		"Locations": {
+			"Title": "Vietos"
 		},
 		"PriceAdd": {
 			"Title": "Pridėti kainą"
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Pridėti kelia skainas"
+		},
+		"Proofs": {
+			"Title": "Įrodymai"
 		},
 		"ProofAddSingle": {
 			"Title": "Pridėti vienintelį įrodymą"
@@ -621,11 +636,14 @@
 		"TopProducts": {
 			"Title": "Populiariausi produktai"
 		},
+		"Users": {
+			"Title": "Vartotojai"
+		},
 		"ContributionAssistant": {
 			"Title": "Bendradarbiavimo asistentas"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Kainų tvirtinimo asistentas"
 		}
 	},
 	"Search": {

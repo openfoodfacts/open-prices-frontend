@@ -1,12 +1,16 @@
 <template>
   <v-card
-    v-if="!proofObjectList.length"
-    :title="cardTitle"
-    :prepend-icon="cardPrependIcon"
+    v-if="step !== 3"
     height="100%"
   >
-    <v-divider />
-    <v-card-text>
+    <template v-if="!hideHeader" #title>
+      {{ cardTitle }}
+    </template>
+    <template v-if="!hideHeader" #prepend>
+      <v-icon>{{ cardPrependIcon }}</v-icon>
+    </template>
+    <v-divider v-if="!hideHeader" />
+    <v-card-text v-if="step === 1">
       <v-alert
         v-if="typePriceTagOnly && multiple"
         class="mb-4"
@@ -20,25 +24,36 @@
       <LocationInputRow :locationForm="proofForm" />
       <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />
     </v-card-text>
+    <v-card-text v-else-if="step === 2">
+      <v-progress-linear
+        v-model="proofObjectList.length"
+        :max="proofImageList.length"
+        :color="proofImageList.length == proofObjectList.length ? 'success' : 'info'"
+        height="25"
+        :indeterminate="proofObjectList.length ? false : true"
+        striped
+        rounded
+      />
+    </v-card-text>
     <v-divider />
     <v-card-actions>
       <v-spacer />
       <v-btn
-        class="float-right"
         color="success"
         variant="flat"
-        elevation="1"
-        :loading="loading"
-        :disabled="!proofFormFilled || loading"
+        :loading="loading || step === 2"
+        :disabled="!proofFormFilled || loading || step === 2"
         @click="uploadProofList"
       >
-        <span v-if="multiple">{{ $t('Common.UploadMultipleImages', proofImageList.length) }}</span>
+        <span v-if="multiple">{{ $t('Common.UploadMultipleProofs', { count: proofImageList.length }) }}</span>
         <span v-else>{{ $t('Common.Upload') }}</span>
       </v-btn>
     </v-card-actions>
   </v-card>
 
-  <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideProofActions="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
+  <v-sheet v-else>
+    <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideProofActions="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
+  </v-sheet>
 
   <v-snackbar
     v-model="proofDateSuccessMessage"
@@ -53,13 +68,6 @@
     :timeout="2000"
   >
     {{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}
-  </v-snackbar>
-  <v-snackbar
-    v-model="proofSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('AddPriceSingle.PriceDetails.ProofUploaded') }}
   </v-snackbar>
 </template>
 
@@ -90,6 +98,10 @@ export default {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
   props: {
+    hideHeader: {
+      type: Boolean,
+      default: false
+    },
     typePriceTagOnly: {
       type: Boolean,
       default: false
@@ -106,6 +118,8 @@ export default {
   emits: ['proof', 'done'],
   data() {
     return {
+      step: 1,  // 1: form; 2: uploading; 3: done
+      // form
       proofForm: {
         type: null,
         location_id: null,
@@ -163,7 +177,8 @@ export default {
     proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
       this.$emit('proof', newProofObjectList[0])
       if (this.proofObjectList.length === this.proofImageList.length) {
-        this.$emit('done')
+        this.step = 3
+        this.$emit('done', this.proofObjectList.length)
       }
     }
   },
@@ -214,6 +229,8 @@ export default {
       }
     },
     uploadProofList() {
+      this.step = 2
+      // loop on images
       for (let proofImage of this.proofImageList) {
         this.uploadProof(proofImage)
       }
@@ -235,7 +252,6 @@ export default {
               this.proofForm.proof_id = data.id
               this.proofForm.location_id = data.location_id
               this.proofObjectList = this.proofObjectList.concat(data)
-              this.proofSuccessMessage = true
             } else {
               alert('Error: server error when creating proof')
               console.log(data)

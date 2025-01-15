@@ -1,21 +1,54 @@
 <template>
   <v-row>
-    <v-col cols="12" md="6">
-      <ProofUploadCard :hideRecentProofChoice="true" @proof="proofUploaded = true" />
+    <v-col cols="12">
+      <v-stepper v-model="step" hide-actions disabled>
+        <v-stepper-header>
+          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step === 2" />
+          <v-divider />
+          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step === 2" />
+        </v-stepper-header>
+      </v-stepper>
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row v-if="step === 1">
+    <v-col cols="12" md="6">
+      <ProofUploadCard :hideRecentProofChoice="true" @done="proofUploadDone($event)" />
+    </v-col>
+  </v-row>
+
+  <v-row v-if="step === 2">
     <v-col>
-      <v-btn
-        class="float-right"
-        type="submit"
-        :color="proofUploaded ? 'success' : ''"
-        :disabled="!proofUploaded"
-        @click="done"
+      <v-card
+        :title="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
+        prepend-icon="mdi-image-check"
       >
-        {{ $t('Common.Done') }}
-      </v-btn>
+        <v-divider />
+        <v-card-text :class="$vuetify.display.smAndUp ? 'text-center' : 'text-right'">
+          <v-row>
+            <v-col cols="12" md="6">
+              <v-btn
+                color="primary"
+                variant="outlined"
+                prepend-icon="mdi-image-plus"
+                @click="reloadPage"
+              >
+                {{ $t('Common.AddNewProof') }}
+              </v-btn>
+            </v-col>
+            <v-col cols="12" md="6">
+              <v-btn
+                color="primary"
+                variant="outlined"
+                prepend-icon="mdi-account-circle"
+                @click="goToDashboard"
+              >
+                {{ $t('Common.Dashboard') }}
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 </template>
@@ -29,11 +62,29 @@ export default {
   },
   data() {
     return {
-      proofUploaded: false
+      step: 1,
+      stepItemList: [
+        {
+          title: this.$t('Common.Upload'),
+          value: 1
+        },
+        {
+          title: this.$t('Common.Done'),
+          value: 2
+        }
+      ],
+      proofUploadCount: 0
     }
   },
   methods: {
-    done() {
+    proofUploadDone(proofUploadCount) {
+      this.proofUploadCount = proofUploadCount
+      this.step = 2
+    },
+    reloadPage() {
+      window.location.reload()
+    },
+    goToDashboard() {
       this.$router.push({ path: '/dashboard', query: { proofSingleSuccess: 'true' } })
     }
   }

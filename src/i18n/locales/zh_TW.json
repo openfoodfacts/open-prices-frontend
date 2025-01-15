@@ -138,8 +138,12 @@
 		"About": "關於",
 		"AddPrice": "新增價格",
 		"AddPrices": "Add prices",
+		"AddNewPrice": "增加新的價格",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "添加證明",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "Add a new proof",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "添加到 {name}",
 		"AdditionalInfo": "附加資訊",
 		"Barcode": "條碼 ",
@@ -250,6 +254,7 @@
 		"Physical": "實體的",
 		"PRICE_TAG": "價格標籤",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "價格已建立！",
 		"PricesMore": "更多價格",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "已選擇證明！",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "公開",
@@ -309,6 +315,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "上傳",
 		"UploadMultipleImages": "上傳 {count} 圖片|上傳 {count} 圖片",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "網址",
 		"URLInvalid": "無效網址",
@@ -316,6 +323,8 @@
 		"Users": "用戶",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "查看 ",
 		"Website": "Website",
 		"Yes": "是 ",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "新增多個證明"
 		},
+		"Locations": {
+			"Title": "地點"
+		},
 		"PriceAdd": {
 			"Title": "新增價格"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "新增多個價格"
+		},
+		"Proofs": {
+			"Title": "證明"
 		},
 		"ProofAddSingle": {
 			"Title": "新增單一證明"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "熱門產品"
+		},
+		"Users": {
+			"Title": "用戶"
 		},
 		"ContributionAssistant": {
 			"Title": "貢獻助手"

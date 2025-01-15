@@ -137,9 +137,13 @@
 	"Common": {
 		"About": "Sobre",
 		"AddPrice": "Adicionar um preço",
-		"AddPrices": "Add prices",
+		"AddPrices": "Adicionar preços",
+		"AddNewPrice": "Adicionar um novo preço",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Adicionar um comprovativo",
-		"AddProofs": "Add proofs",
+		"AddProofs": "Adicionar comprovativos",
+		"AddNewProof": "Adicione um novo comprovativo",
+		"AddNewProofs": "Adicionar novos comprovativos",
 		"AddToOFF": "Adicionar a {name}",
 		"AdditionalInfo": "Informação adicional",
 		"Barcode": "Código de barras",
@@ -250,6 +254,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Etiqueta de preço",
 		"PriceCount": "{count} preços | {count} preços | {count} preços",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} preços a validar | {count} preço a validar | {count} preços a validar",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Selecionar comprovativos",
 		"ProofSelected": "Comprovativo selecionado!",
 		"ProofSelectedCount": "{count} comprovativos selecionados | {count} comprovativo selecionado | {count} comprovativos selecionados",
+		"ProofUploadedCount": "{count} comprovativos enviados| {count} comprovativo enviado | {count} comprovativos enviados",
 		"ProofsAddedToday": "Comprovativos adicionados hoje",
 		"ProofsToday": "Comprovativos hoje",
 		"Public": "Público",
@@ -309,6 +315,7 @@
 		"Unreadable": "Ilegível",
 		"Upload": "Carregar",
 		"UploadMultipleImages": "Enviar {count} imagem | Carregar {count} imagens",
+		"UploadMultipleProofs": "Enviar {count} comprovativo | Enviar {count} comprovativos",
 		"UploadMultiplePrices": "Enviar {count} preço | Enviar {count} preços",
 		"URL": "URL",
 		"URLInvalid": "URL inválido",
@@ -316,6 +323,8 @@
 		"Users": "Utilizadores",
 		"UserCount": "{count} utilizadores| {count} utilizador| {count} utilizadores",
 		"UserContributorCount": "{count} contribuidores | {count} contribuidor | {count} contribuidores",
+		"ValidatePrices": "Validar preços",
+		"ValidatePricesWithAI": "Validar preços com IA",
 		"View": "Ver",
 		"Website": "Site",
 		"Yes": "Sim",
@@ -538,7 +547,7 @@
 			"Title": "Adicionar um preço"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Adicionar preços"
 		},
 		"AddPriceSingle": {
 			"Title": "Adicionar um preço único"
@@ -550,13 +559,16 @@
 			"Title": "Adicionar um comprovativo"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "Adicionar comprovativos"
 		},
 		"AddProofSingle": {
 			"Title": "Adicionar um único comprovativo"
 		},
 		"AddProofMultiple": {
 			"Title": "Adicionar vários comprovativos"
+		},
+		"Locations": {
+			"Title": "Localizações"
 		},
 		"PriceAdd": {
 			"Title": "Adicionar um preço"
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Adicione vários preços"
+		},
+		"Proofs": {
+			"Title": "Comprovativos"
 		},
 		"ProofAddSingle": {
 			"Title": "Adicionar um único comprovativo"
@@ -621,11 +636,14 @@
 		"TopProducts": {
 			"Title": "Produtos com mais preços"
 		},
+		"Users": {
+			"Title": "Utilizadores"
+		},
 		"ContributionAssistant": {
 			"Title": "Assistente de contribuição"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Assistente de validação de preços"
 		}
 	},
 	"Search": {

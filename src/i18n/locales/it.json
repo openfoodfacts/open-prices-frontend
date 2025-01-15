@@ -138,8 +138,12 @@
 		"About": "Informazioni",
 		"AddPrice": "Aggiungi un prezzo",
 		"AddPrices": "Add prices",
+		"AddNewPrice": "Aggiungi un nuovo prezzo",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Aggiungi una prova",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "Add a new proof",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Aggiungi a {name}",
 		"AdditionalInfo": "Informazioni aggiuntive",
 		"Barcode": "Codice a Barre",
@@ -250,6 +254,7 @@
 		"Physical": "Physical",
 		"PRICE_TAG": "Etichetta del prezzo",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Prezzo creato!",
 		"PricesMore": "Altri prezzi",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Prova selezionata!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "Pubblica",
@@ -309,6 +315,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "Carica",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
 		"URLInvalid": "Invalid URL",
@@ -316,6 +323,8 @@
 		"Users": "Utenti",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Mostra",
 		"Website": "Sito web",
 		"Yes": "Sì",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"Locations": {
+			"Title": "Posizioni"
+		},
 		"PriceAdd": {
 			"Title": "Aggiungi un prezzo"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Aggiungi più prezzi"
+		},
+		"Proofs": {
+			"Title": "Prove"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Prodotti migliori"
+		},
+		"Users": {
+			"Title": "Utenti"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"

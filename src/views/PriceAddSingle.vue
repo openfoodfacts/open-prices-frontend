@@ -130,7 +130,7 @@ export default {
           if (!data['id']) {
             alert(`Form error: ${JSON.stringify(data)}`)
           } else {
-            this.done()
+            this.goToDashboard()
           }
           this.loading = false
         })
@@ -140,7 +140,7 @@ export default {
           this.loading = false
         })
     },
-    done() {
+    goToDashboard() {
       this.$router.push({ path: '/dashboard', query: { singleSuccess: 'true' } })
     }
   }

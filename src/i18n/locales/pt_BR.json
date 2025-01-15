@@ -138,8 +138,12 @@
 		"About": "Sobre",
 		"AddPrice": "Adicionar um preço",
 		"AddPrices": "Add prices",
+		"AddNewPrice": "Adicionar um novo preço",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Adicionar um comprovante",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "Adicionar um novo comprovante",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Adicionar a {name}",
 		"AdditionalInfo": "Informação adicional",
 		"Barcode": "Código de barras",
@@ -250,6 +254,7 @@
 		"Physical": "Físico",
 		"PRICE_TAG": "Etiqueta de preço",
 		"PriceCount": "{count} preços | {count} preço | {count} preços",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} preços para validar | {count} preço para validar | {count} preços para validar",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Comprovante selecionado!",
 		"ProofSelectedCount": "{count} provas selecionadas | {count} prova selecionada | {count} provas selecionadas",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "Público",
@@ -309,6 +315,7 @@
 		"Unreadable": "Ilegível",
 		"Upload": "Atualizar",
 		"UploadMultipleImages": "Carregar {count} imagem | Carregar {count} imagens",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Carregar {count} preço | Carregar {count} preços",
 		"URL": "URL",
 		"URLInvalid": "URL inválida",
@@ -316,6 +323,8 @@
 		"Users": "Usuários",
 		"UserCount": "{count} usuários | {count} usuário | {count} usuários",
 		"UserContributorCount": "{count} contribuidores | {count} contribuidor | {count} contribuidores",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Exibir",
 		"Website": "Site",
 		"Yes": "Sim",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Adicionar várias provas"
 		},
+		"Locations": {
+			"Title": "Localizações"
+		},
 		"PriceAdd": {
 			"Title": "Adicionar um preço"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Adicionar múltiplos preços"
+		},
+		"Proofs": {
+			"Title": "Provas"
 		},
 		"ProofAddSingle": {
 			"Title": "Adicionar um único comprovante"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Principais produtos"
+		},
+		"Users": {
+			"Title": "Usuários"
 		},
 		"ContributionAssistant": {
 			"Title": "Assistente de Contribuição"

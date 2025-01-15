@@ -138,8 +138,12 @@
 		"About": "À propos",
 		"AddPrice": "Ajouter un prix",
 		"AddPrices": "Ajouter des prix",
+		"AddNewPrice": "Ajouter un nouveau prix",
+		"AddNewPrices": "Ajouter de nouveaux prix",
 		"AddProof": "Ajouter une preuve",
 		"AddProofs": "Ajouter des preuves",
+		"AddNewProof": "Add a new proof",
+		"AddNewProofs": "Ajouter de nouvelles preuves",
 		"AddToOFF": "Ajouter à {name}",
 		"AdditionalInfo": "Informations supplémentaires",
 		"Barcode": "Code-barres",
@@ -250,6 +254,7 @@
 		"Physical": "Physique",
 		"PRICE_TAG": "Étiquette de prix",
 		"PriceCount": "{count} prix | {count} prix | {count} prix",
+		"PriceAddedCount": "{count} prix ajoutés | {count} prix ajouté | {count} prix ajoutés",
 		"PriceToValidateCount": "{count} prix à valider | {count} prix à valider | {count} prix à valider",
 		"PriceCreated": "Prix créé !",
 		"PricesMore": "Plus de prix",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Sélectionner des preuves",
 		"ProofSelected": "Preuve sélectionnée !",
 		"ProofSelectedCount": "{count} preuves sélectionnées | {count} preuve sélectionnée | {count} preuves sélectionnées",
+		"ProofUploadedCount": "{count} preuves téléversées | {count} preuve téléversée | {count} preuves téléversées",
 		"ProofsAddedToday": "Preuves ajoutées aujourd'hui",
 		"ProofsToday": "Preuves aujourd'hui",
 		"Public": "Public",
@@ -309,6 +315,7 @@
 		"Unreadable": "Illisible",
 		"Upload": "Téléverser",
 		"UploadMultipleImages": "Téléverser {count} image | Téléverser {count} images",
+		"UploadMultipleProofs": "Téléverser {count} preuve | Téléverser {count} preuves",
 		"UploadMultiplePrices": "Téléverser {count} prix | Téléverser {count} prix",
 		"URL": "URL",
 		"URLInvalid": "URL invalide",
@@ -316,6 +323,8 @@
 		"Users": "Utilisateurs",
 		"UserCount": "{count} utilisateurs | {count} utilisateur | {count} utilisateurs",
 		"UserContributorCount": "{count} contributeurs | {count} contributeur | {count} contributeurs",
+		"ValidatePrices": "Valider des prix",
+		"ValidatePricesWithAI": "Valider des prix avec l'IA",
 		"View": "Voir",
 		"Website": "Site Web",
 		"Yes": "Oui",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Ajouter plusieurs preuves"
 		},
+		"Locations": {
+			"Title": "Lieux"
+		},
 		"PriceAdd": {
 			"Title": "Ajouter un prix"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Ajouter plusieurs prix"
+		},
+		"Proofs": {
+			"Title": "Preuves"
 		},
 		"ProofAddSingle": {
 			"Title": "Ajouter une seule preuve"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Top produits"
+		},
+		"Users": {
+			"Title": "Utilisateurs"
 		},
 		"ContributionAssistant": {
 			"Title": "Assistant de contribution"

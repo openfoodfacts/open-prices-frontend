@@ -138,8 +138,12 @@
 		"About": "O aplikaci",
 		"AddPrice": "Přidat cenu",
 		"AddPrices": "Add prices",
+		"AddNewPrice": "Přidat novou cenu",
+		"AddNewPrices": "Add new prices",
 		"AddProof": "Přidat doklad",
 		"AddProofs": "Add proofs",
+		"AddNewProof": "Add a new proof",
+		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Přidat do {name}",
 		"AdditionalInfo": "Další informace",
 		"Barcode": "Čárový kód",
@@ -250,6 +254,7 @@
 		"Physical": "Fyzický",
 		"PRICE_TAG": "Cenovka",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
+		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena vytvořena!",
 		"PricesMore": "Více cen",
@@ -266,6 +271,7 @@
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Doklad vybrán!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
+		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
 		"Public": "Veřejný",
@@ -309,6 +315,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "Nahrát",
 		"UploadMultipleImages": "Nahrát {count} obrázek | Nahrajte {count} obrázků",
+		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
 		"URLInvalid": "Neplatná URL",
@@ -316,6 +323,8 @@
 		"Users": "Uživatelé",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"ValidatePrices": "Validate prices",
+		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Zobrazit",
 		"Website": "Webová stránka",
 		"Yes": "Ano",
@@ -558,6 +567,9 @@
 		"AddProofMultiple": {
 			"Title": "Přidejte více důkazů"
 		},
+		"Locations": {
+			"Title": "Polohy"
+		},
 		"PriceAdd": {
 			"Title": "Přidat cenu"
 		},
@@ -566,6 +578,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "Přidat více cen"
+		},
+		"Proofs": {
+			"Title": "Doklady"
 		},
 		"ProofAddSingle": {
 			"Title": "Přidejte jeden důkaz"
@@ -620,6 +635,9 @@
 		},
 		"TopProducts": {
 			"Title": "Nejlepší produkty"
+		},
+		"Users": {
+			"Title": "Uživatelé"
 		},
 		"ContributionAssistant": {
 			"Title": "Příspěvkový asistent"
