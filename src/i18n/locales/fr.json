@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "Lien copié",
 		"LocationCount": "{count} lieux | {count} lieu | {count} lieux",
 		"Map": "Carte",
+		"MyDashboard": "Mon tableau de bord",
+		"MyPrices": "Mes prix",
+		"MyProofs": "Mes preuves",
+		"MyStats": "My stats",
 		"Offline": "Hors ligne",
 		"Online": "En ligne",
 		"Order": "Ordre",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "Mes preuves"
+		},
+		"MyDashboard": {
+			"Title": "Mon tableau de bord"
 		},
 		"Reuses": {
 			"Title": "Réutilisations"
