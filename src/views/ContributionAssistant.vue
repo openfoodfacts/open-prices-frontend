@@ -57,11 +57,11 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col cols="12">
+            <v-col cols="12" lg="6">
               <h3 class="mb-4">
                 {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabels') }}
               </h3>
-              <v-btn color="primary" :disabled="!extractedLabels.length" :loading="processLabelsLoading" @click="processLabels">
+              <v-btn class="float-right" color="primary" :block="!$vuetify.display.smAndUp" :disabled="!extractedLabels.length" :loading="processLabelsLoading" @click="processLabels">
                 {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabelsButton') }}
               </v-btn>
             </v-col>
@@ -106,7 +106,7 @@
                   {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceId.length, date: proofObject.date, locationName: locationName }) }}
                 </p>
               </v-alert>
-              <v-btn class="float-right mt-4" color="primary" :loading="loading" @click="addPrices">
+              <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" :loading="loading" @click="addPrices">
                 {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceId.length) }}
               </v-btn>
             </v-col>
@@ -129,17 +129,27 @@
               >
                 <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceId.length }) }}</strong>
               </v-progress-linear>
-              <v-btn class="mt-4" color="primary" :aria-label="$t('Common.Dashboard')" to="/dashboard" :disabled="!allDone">
-                {{ $t('ContributionAssistant.GoToDashboard') }}
-              </v-btn>
-              <v-btn class="mt-4 ml-4" color="primary" :to="'/proofs/' + proofObject.id" :disabled="!allDone">
+            </v-col>
+          </v-row>
+          <v-row class="text-center">
+            <v-col>
+              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :to="'/proofs/' + proofObject.id" :disabled="!allDone">
                 {{ $t('ContributionAssistant.GoToProof') }}
               </v-btn>
-              <v-btn class="mt-4 ml-4" color="primary" :disabled="!allDone" @click="reloadPage">
+            </v-col>
+            <v-col>
+              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :disabled="!allDone" @click="reloadPage">
                 {{ $t('ContributionAssistant.AddNewProof') }}
               </v-btn>
-              <v-btn v-if="proofIdsFromQueryParam" class="mt-4 ml-4" color="primary" :disabled="!allDone" @click="nextProof">
+            </v-col>
+            <v-col v-if="proofIdsFromQueryParam.length > 1">
+              <v-btn :block="!$vuetify.display.smAndUp" color="primary" :disabled="!allDone" @click="nextProof">
                 {{ $t('ContributionAssistant.NextProof') }}
+              </v-btn>
+            </v-col>
+            <v-col>
+              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" to="/dashboard" :disabled="!allDone">
+                {{ $t('ContributionAssistant.GoToDashboard') }}
               </v-btn>
             </v-col>
           </v-row>

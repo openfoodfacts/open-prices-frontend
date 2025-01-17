@@ -22,7 +22,7 @@
 
   <v-row v-if="step === 2">
     <v-col cols="12" md="6">
-      <ProofCard :proof="proofObject" :hideProofActions="true" :readonly="true" />
+      <ProofCard mode="Uploaded" :proof="proofObject" :hideProofActions="true" :readonly="true" />
     </v-col>
     <v-col cols="12" md="6">
       <!-- Step 2a: product prices already uploaded -->
@@ -129,9 +129,9 @@
                 color="primary"
                 :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-account-circle"
-                @click="goToDashboard"
+                @click="goToUserDashboard"
               >
-                {{ $t('Common.Dashboard') }}
+                {{ $t('Common.MyDashboard') }}
               </v-btn>
             </v-col>
           </v-row>
@@ -316,7 +316,7 @@ export default {
     reloadPage() {
       window.location.reload()
     },
-    goToDashboard() {
+    goToUserDashboard() {
       this.$router.push({ path: '/dashboard', query: { multipleSuccess: 'true' } })
     }
   }

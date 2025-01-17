@@ -23,8 +23,8 @@
       </v-btn>
     </template>
     <template v-else #append>
-      <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-account-circle" to="/dashboard" :aria-label="$t('Common.Dashboard')" />
-      <v-btn v-else class="text-lowercase" prepend-icon="mdi-account-circle" to="/dashboard" :aria-label="$t('Common.Dashboard')">
+      <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-account-circle" to="/dashboard" :aria-label="$t('Common.MyDashboard')" />
+      <v-btn v-else class="text-lowercase" prepend-icon="mdi-account-circle" to="/dashboard" :aria-label="$t('Common.MyDashboard')">
         {{ username }}
       </v-btn>
     </template>

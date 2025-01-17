@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.112.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.112.1...v1.112.2) (2025-01-15)
+
+
+### Bug Fixes
+
+* **Price add multiple:** fix hide ProofCard close button in the top-right. ref [#1254](https://github.com/openfoodfacts/open-prices-frontend/issues/1254) ([d2a94d5](https://github.com/openfoodfacts/open-prices-frontend/commit/d2a94d5fde7969020af6d80b2f3c58e01c56a3c1))
+
+
+### Technical
+
+* **Contribution assistant:** button block on mobile. Small fixes. ref [#1271](https://github.com/openfoodfacts/open-prices-frontend/issues/1271) ([ae34c0a](https://github.com/openfoodfacts/open-prices-frontend/commit/ae34c0a787c9bf657c040899431ffa6c91b0a131))
+* **User dashboard:** remove unused UserSettings page. ref [#950](https://github.com/openfoodfacts/open-prices-frontend/issues/950) ([c78bb03](https://github.com/openfoodfacts/open-prices-frontend/commit/c78bb03b4f265b3ff392b313855faf3d49183795))
+* **User dashboard:** Use 'My dashboard' wording instead of 'Dashboard' ([dea64ba](https://github.com/openfoodfacts/open-prices-frontend/commit/dea64bacd9cadf234f0839be28a7de2b9c64799c))
+
 ## [1.112.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.112.0...v1.112.1) (2025-01-15)
 
 
