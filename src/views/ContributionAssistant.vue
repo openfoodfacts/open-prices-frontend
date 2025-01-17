@@ -1,174 +1,168 @@
 <template>
-  <v-container>
-    <v-tabs v-model="tab">
-      <v-tab value="ProofSelect" :disabled="disableProofSelectTab">
-        {{ $t('ContributionAssistant.Steps.ProofSelect') }}
-      </v-tab>
-      <v-tab value="LabelsExtraction" :disabled="disableLabelsExtractionTab">
-        {{ $t('ContributionAssistant.Steps.LabelsExtraction') }}
-      </v-tab>
-      <v-tab value="Cleanup" :disabled="disableCleanupTab">
-        {{ $t('ContributionAssistant.Steps.Cleanup') }}
-      </v-tab>
-      <v-tab value="Summary" :disabled="disableSummaryTab">
-        {{ $t('ContributionAssistant.Steps.Summary') }}
-      </v-tab>
-    </v-tabs>
-    <v-tabs-window v-model="tab">
-      <v-tabs-window-item value="ProofSelect">
-        <v-container>
-          <v-row>
-            <v-col cols="12" md="6">
-              <ProofUploadCard @proof="onProofUploaded($event)" />
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-tabs-window-item>
-      <v-tabs-window-item value="LabelsExtraction">
-        <v-container>
-          <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-alert">
-            {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
-          </v-alert>
-          <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-magnify">
-            {{ $t('ContributionAssistant.FindBoundingBoxesRunning') }}
-            <v-progress-circular indeterminate />
-          </v-alert>
-          <v-row>
-            <v-col cols="12" lg="6">
-              <h3 class="mb-4">
-                {{ $t('ContributionAssistant.LabelsExtractionSteps.DrawBoundingBoxes') }}
-              </h3>
-              <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
-              <v-card>
-                <v-card-text>
-                  <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
-                </v-card-text>
-                <v-divider />
-                <v-card-actions>
-                  <ProofFooterRow :proof="proofObject" :hideProofActions="true" :readonly="true" />
-                </v-card-actions>
-              </v-card>
-            </v-col>
-            <v-col cols="12" lg="6">
-              <h3 class="mb-4">
-                {{ $t('ContributionAssistant.LabelsExtractionSteps.CheckLabels') }}
-              </h3>
-              <ContributionAssistantLabelList :labels="extractedLabels" @removeLabel="removeLabel($event)" />
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="12" lg="6">
-              <h3 class="mb-4">
-                {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabels') }}
-              </h3>
-              <v-btn class="float-right" color="primary" :block="!$vuetify.display.smAndUp" :disabled="!extractedLabels.length" :loading="processLabelsLoading" @click="processLabels">
-                {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabelsButton') }}
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-tabs-window-item>
-      <v-tabs-window-item value="Cleanup">
-        <v-container>
-          <v-row>
-            <v-col
-              v-for="(productPriceForm, index) in productPriceFormsWithoutPriceId"
-              :key="index"
-              cols="12"
-              md="6"
-              xl="4"
-            >
-              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :hideProofDetails="true" @removePriceTag="removePriceTag($event, productPriceForm)" />
-            </v-col>
-          </v-row>
-          <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
-            {{ $t('ContributionAssistant.PricesAlreadyAdded') }}
+  <v-row>
+    <v-col cols="12">
+      <v-stepper v-model="step" hide-actions editable>
+        <v-stepper-header>
+          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" :disabled="disableProofSelectStep" />
+          <v-divider />
+          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" :disabled="disableLabelsExtractionStep" />
+          <v-divider />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" :disabled="disableCleanupStep" />
+          <v-divider />
+          <v-stepper-item :title="stepItemList[3].title" :value="stepItemList[3].value" :complete="step == 4" :disabled="disableSummaryStep" />
+        </v-stepper-header>
+      </v-stepper>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="step === 1">
+    <v-col cols="12" md="6">
+      <ProofUploadCard @proof="onProofUploaded($event)" />
+    </v-col>
+  </v-row>
+  
+  <v-row v-if="step === 2">
+    <v-col cols="12">
+      <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-alert">
+        {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
+      </v-alert>
+      <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-magnify">
+        {{ $t('ContributionAssistant.FindBoundingBoxesRunning') }}
+        <v-progress-circular indeterminate />
+      </v-alert>
+      <v-row>
+        <v-col cols="12" lg="6">
+          <h3 class="mb-4">
+            {{ $t('ContributionAssistant.LabelsExtractionSteps.DrawBoundingBoxes') }}
           </h3>
-          <v-row v-if="productPriceFormsWithPriceId.length">
-            <v-col
-              v-for="(productPriceForm, index) in productPriceFormsWithPriceId"
-              :key="index"
-              cols="12"
-              md="6"
-              xl="4"
-            >
-              <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :hideProofDetails="true" :hideActions="true" :disabled="true" />
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
-              <v-alert
-                class="mb-2"
-                type="info"
-                variant="outlined"
-              >
-                <p>
-                  {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceId.length, date: proofObject.date, locationName: locationName }) }}
-                </p>
-              </v-alert>
-              <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" :loading="loading" @click="addPrices">
-                {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceId.length) }}
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-tabs-window-item>
-      <v-tabs-window-item value="Summary">
-        <v-container>
-          <v-row>
-            <v-col>
-              <h3 class="mb-4">
-                {{ $t('ContributionAssistant.WaitForUpload') }}
-              </h3>
-              <v-progress-linear
-                v-model="numberOfPricesAdded"
-                :max="productPriceFormsWithoutPriceId.length"
-                :color="productPriceFormsWithoutPriceId.length == numberOfPricesAdded ? 'success' : 'info'"
-                height="25"
-                stripped
-              >
-                <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceId.length }) }}</strong>
-              </v-progress-linear>
-            </v-col>
-          </v-row>
-          <v-row class="text-center">
-            <v-col>
-              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :to="'/proofs/' + proofObject.id" :disabled="!allDone">
-                {{ $t('ContributionAssistant.GoToProof') }}
-              </v-btn>
-            </v-col>
-            <v-col>
-              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :disabled="!allDone" @click="reloadPage">
-                {{ $t('ContributionAssistant.AddNewProof') }}
-              </v-btn>
-            </v-col>
-            <v-col v-if="proofIdsFromQueryParam.length > 1">
-              <v-btn :block="!$vuetify.display.smAndUp" color="primary" :disabled="!allDone" @click="nextProof">
-                {{ $t('ContributionAssistant.NextProof') }}
-              </v-btn>
-            </v-col>
-            <v-col>
-              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" to="/dashboard" :disabled="!allDone">
-                {{ $t('ContributionAssistant.GoToDashboard') }}
-              </v-btn>
-            </v-col>
-          </v-row>
-          <v-row v-if="nextProofSuggestions.length">
-            <v-col>
-              <h3>
-                {{ $t('ContributionAssistant.ChooseNextProof') }}
-              </h3>
-            </v-col>
-          </v-row>
+          <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
+          <v-card>
+            <v-card-text>
+              <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
+            </v-card-text>
+            <v-divider />
+            <v-card-actions>
+              <ProofFooterRow :proof="proofObject" :hideProofActions="true" :readonly="true" />
+            </v-card-actions>
+          </v-card>
+        </v-col>
+        <v-col cols="12" lg="6">
+          <h3 class="mb-4">
+            {{ $t('ContributionAssistant.LabelsExtractionSteps.CheckLabels') }}
+          </h3>
+          <ContributionAssistantLabelList :labels="extractedLabels" @removeLabel="removeLabel($event)" />
+          <h3 class="mt-4 mb-4">
+            {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabels') }}
+          </h3>
+          <v-btn class="float-right" color="primary" :block="!$vuetify.display.smAndUp" :disabled="!extractedLabels.length" :loading="processLabelsLoading" @click="processLabels">
+            {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabelsButton') }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="step === 3">
+    <v-col cols="12">
+      <v-row>
+        <v-col
+          v-for="(productPriceForm, index) in productPriceFormsWithoutPriceId"
+          :key="index"
+          cols="12"
+          md="6"
+          xl="4"
+        >
+          <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :hideProofDetails="true" @removePriceTag="removePriceTag($event, productPriceForm)" />
+        </v-col>
+      </v-row>
+      <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
+        {{ $t('ContributionAssistant.PricesAlreadyAdded') }}
+      </h3>
+      <v-row v-if="productPriceFormsWithPriceId.length">
+        <v-col
+          v-for="(productPriceForm, index) in productPriceFormsWithPriceId"
+          :key="index"
+          cols="12"
+          md="6"
+          xl="4"
+        >
+          <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :hideProofDetails="true" :hideActions="true" :disabled="true" />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col>
+          <v-alert
+            class="mb-2"
+            type="info"
+            variant="outlined"
+          >
+            <p>
+              {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceId.length, date: proofObject.date, locationName: locationName }) }}
+            </p>
+          </v-alert>
+          <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" :loading="loading" @click="addPrices">
+            {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceId.length) }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="step === 4">
+    <v-col cols="12">
+      <v-row>
+        <v-col>
+          <h3 class="mb-4">
+            {{ $t('ContributionAssistant.WaitForUpload') }}
+          </h3>
+          <v-progress-linear
+            v-model="numberOfPricesAdded"
+            :max="productPriceFormsWithoutPriceId.length"
+            :color="productPriceFormsWithoutPriceId.length === numberOfPricesAdded ? 'success' : 'info'"
+            height="25"
+            :striped="productPriceFormsWithoutPriceId.length !== numberOfPricesAdded"
+            rounded
+          >
+            <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceId.length }) }}</strong>
+          </v-progress-linear>
+        </v-col>
+      </v-row>
+      <v-row class="text-center">
+        <v-col>
+          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :to="'/proofs/' + proofObject.id" :disabled="!allDone">
+            {{ $t('ContributionAssistant.GoToProof') }}
+          </v-btn>
+        </v-col>
+        <v-col>
+          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :disabled="!allDone" @click="reloadPage">
+            {{ $t('ContributionAssistant.AddNewProof') }}
+          </v-btn>
+        </v-col>
+        <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1">
+          <v-btn :block="!$vuetify.display.smAndUp" color="primary" :disabled="!allDone" @click="nextProof">
+            {{ $t('ContributionAssistant.NextProof') }}
+          </v-btn>
+        </v-col>
+        <v-col>
+          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" to="/dashboard" :disabled="!allDone">
+            {{ $t('ContributionAssistant.GoToDashboard') }}
+          </v-btn>
+        </v-col>
+      </v-row>
+      <v-row v-if="nextProofSuggestions.length">
+        <v-col>
+          <h3 class="mb-4">
+            {{ $t('ContributionAssistant.ChooseNextProof') }}
+          </h3>
           <v-row v-if="nextProofSuggestions.length">
             <v-col v-for="proof in nextProofSuggestions" :key="proof" cols="12" md="6" lg="4">
               <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
             </v-col>
           </v-row>
-        </v-container>
-      </v-tabs-window-item>
-    </v-tabs-window>
-  </v-container>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
 
   <v-snackbar
     v-model="labelProcessingErrorMessage"
@@ -198,7 +192,9 @@ export default {
   },
   data() {
     return {
-      tab: 'ProofSelect',  // ProofSelect, LabelsExtraction, Cleanup, Summary
+      step: 1,
+      // stepItemList: [],  // see computed
+      // data
       drawCanvasLoaded: false,
       boundingBoxesFromServer: [],
       extractedLabels: [],
@@ -217,6 +213,26 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    stepItemList() {
+      return [
+        {
+          title: this.$t('Common.Proof'),
+          value: 1
+        },
+        {
+          title: this.$vuetify.display.smAndUp ? this.$t('ContributionAssistant.Steps.LabelsExtraction') : this.$t('Common.Labels'),
+          value: 2
+        },
+        {
+          title: this.$vuetify.display.smAndUp ? this.$t('Common.ValidatePrices') : this.$t('Common.Validate'),
+          value: 3
+        },
+        {
+          title: this.$t('Common.Done'),
+          value: 4
+        }
+      ]
+    },
     locationName() {
       const recentLocations = this.appStore.getRecentLocations()
       const location = recentLocations.find((location) => location.properties.osm_id === this.proofObject.location_osm_id)
@@ -226,27 +242,27 @@ export default {
       }
       return ''
     },
-    disableProofSelectTab() {
+    disableProofSelectStep() {
       // ProofSelect tab should disabled on summary step
-      return this.tab == 'Summary'
+      return this.step === 4
     },
-    disableLabelsExtractionTab() {
+    disableLabelsExtractionStep() {
       // LabelsExtraction tab should only be enabled after the proof is selected
       // It should also be disabled on summary step
-      return !this.proofObject || this.tab == 'Summary'
+      return !this.proofObject || this.step === 4
     },
-    disableCleanupTab() {
+    disableCleanupStep() {
       // Cleanup tab should only be enabled after the ai analysis is done
       // It should also be disabled on summary step
-      return !this.productPriceFormsWithoutPriceId.length || this.tab == 'Summary'
+      return !this.productPriceFormsWithoutPriceId.length || this.step === 4
     },
     allDone() {
       return this.numberOfPricesAdded > 0 && this.productPriceFormsWithoutPriceId.length == this.numberOfPricesAdded
     },
-    disableSummaryTab() {
+    disableSummaryStep() {
       // Summary tab should be enabled when there are product prices to be added and the add prices process is either running or done
-      const enableSummaryTab = this.productPriceFormsWithoutPriceId.length && (this.loading || this.allDone)
-      return !enableSummaryTab
+      const enableSummaryStep = this.productPriceFormsWithoutPriceId.length && (this.loading || this.allDone)
+      return !enableSummaryStep
     },
     proofIdsFromQueryParam() {
       if (!this.$route.query.proof_ids) return null
@@ -290,7 +306,7 @@ export default {
       image.crossOrigin = 'Anonymous'
       this.image = image
 
-      this.tab = 'LabelsExtraction'
+      this.step = 2
       this.proofWithBoundingBoxesLoading = true
       // Try to load any automatically detected price tags on proof upload
       this.loadPriceTagsWithPredictions(1, priceTags => {
@@ -395,7 +411,7 @@ export default {
         }
         this.productPriceForms.push(productPriceForm)
       })
-      this.tab = 'Cleanup'
+      this.step = 3
     },
     removePriceTag(status, productPriceForm) {
       // Called when the user deletes a price during the cleanup step
@@ -417,7 +433,7 @@ export default {
       // Last step, create prices and match them to the corresponding price tags
       this.loading = true
       this.numberOfPricesAdded = 0
-      this.tab = 'Summary'
+      this.step = 4
       
       for (let i = 0; i < this.productPriceFormsWithoutPriceId.length; i++) {
         const productPriceForm = this.productPriceFormsWithoutPriceId[i]
