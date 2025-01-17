@@ -358,6 +358,7 @@
 		"Users": "Vartotojai",
 		"UserCount": "{count} vartotojai | {count} vartotojas | {count} vartotojų",
 		"UserContributorCount": "{count} bendraautoriai | {count} bendraautorius | {count} bendraautorių",
+		"Validate": "Patvirtinti",
 		"ValidatePrices": "Patvirtinti kainas",
 		"ValidatePricesWithAI": "Patvirtinti kainas su DI",
 		"View": "Žiūrėti",
