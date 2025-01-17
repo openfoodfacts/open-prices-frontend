@@ -358,6 +358,7 @@
 		"Users": "Gebruikers",
 		"UserCount": "{count} gebruikers | {count} gebruiker | {count} gebruikers",
 		"UserContributorCount": "{count} bijdragers | {count} bijdrager | {count} bijdragers",
+		"Validate": "Bevestigen",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Bekijk",
