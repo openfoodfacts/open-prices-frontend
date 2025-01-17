@@ -358,6 +358,7 @@
 		"Users": "Користувачі",
 		"UserCount": "{count} користувачів | {count} користувач | {count} користувачів",
 		"UserContributorCount": "{count} учасників | {count} учасник | {count} учасників",
+		"Validate": "Перевірити",
 		"ValidatePrices": "Перевірити ціни",
 		"ValidatePricesWithAI": "Перевірити ціни за допомогою ШІ",
 		"View": "Переглянути",
