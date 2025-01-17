@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "Link gekopieerd",
 		"LocationCount": "{count} locaties | {count} locatie | {count} locaties",
 		"Map": "Kaart",
+		"MyDashboard": "Mijn dashboard",
+		"MyPrices": "Mijn prijzen",
+		"MyProofs": "Mijn bewijzen",
+		"MyStats": "My stats",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Sorteren",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "Mijn bewijzen"
+		},
+		"MyDashboard": {
+			"Title": "Mijn dashboard"
 		},
 		"Reuses": {
 			"Title": "Hergebruik"

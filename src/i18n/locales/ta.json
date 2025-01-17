@@ -135,27 +135,27 @@
 		"Title": "Type a barcode"
 	},
 	"Challenge": {
-		"Title": "The current challenge is ...",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "தற்போதைய சவால்...",
+		"Subtitle": "{challenge_title} {challenge_subtitle} பற்றிய தகவல்களைச் சேகரிப்பதில் மற்ற உணவு விலை ஆர்வலர்களுடன் இணையுங்கள்.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "கடைகளில் விலைக் குறிச்சொற்களின் படங்களை எடுக்கவும்",
+			"line1": "படங்களில் ஒன்று அல்லது அதற்கு மேற்பட்ட விலைக் குறிச்சொற்கள் இருக்கலாம். பார்கோடுகள் படிக்கக்கூடியதாக இருக்க வேண்டும். உதாரணமாக:",
+			"line2": "தயாரானதும், உங்கள் கடையைக் கண்டுபிடித்து, கீழே உள்ள பொத்தானைப் பயன்படுத்தி உங்கள் படங்களைப் பதிவேற்றவும்.",
+			"AddPictures": "படங்களைச் சேர்க்கவும்"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreable.",
-			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
+			"Title": "கண்டறியப்பட்ட விலைகளை சரிபார்க்கவும்",
+			"line1": "விலைக் குறிச்சொற்கள் தானாகவே கண்டறியப்படும், ஆனால் ரோபோக்களுக்கு அவற்றைச் சரிபார்க்க உங்கள் உதவி இன்னும் தேவைப்படுகிறது.",
+			"line2": "கீழே உள்ள பொத்தானைப் பயன்படுத்தி விலை சரிபார்ப்புப் பக்கத்தைப் பார்வையிடவும், தேவைப்பட்டால் பார்கோடு மற்றும் விலையைத் திருத்தவும் மற்றும் சரிபார்க்கவும் !",
+			"line3": "லேபிளைப் படிப்பதில் சிக்கல் இருந்தால், அதைப் படிக்க முடியாததாகக் குறிக்கவும்.",
+			"line4": "இது ஒரு கூட்டு முயற்சியாகும், நீங்கள் அதிக படங்களை அனுப்பாவிட்டாலும், சரிபார்த்து மற்றவர்களுக்கு உதவலாம்.",
 			"ValidatePrices": "Validate prices"
 		},
-		"Stats": "Challenge stats",
-		"MyStats": "My stats",
-		"PicturesAddedByYou": "Pictures added by you",
-		"PricesAddedByYou": "Prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"Stats": "சவாலின் புள்ளிவிவரங்கள்",
+		"MyStats": "எனது புள்ளிவிவரங்கள்",
+		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
+		"PricesAddedByYou": "நீங்கள் சேர்த்த விலைகள்",
+		"MostRecentContributions": "மிகச் சமீபத்திய பங்களிப்புகள்"
 	},
 	"Common": {
 		"About": "இதைப் பற்றி",
@@ -191,10 +191,10 @@
 		"Category": "வகை",
 		"Categories": "Categories",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
+		"Challenge": "சவால்",
+		"Challenges": "சவால்கள்",
+		"ChallengeCurrent": "தற்போதைய சவால்",
+		"ChallengeOngoing": "தொடரும் சவால்",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Contributors": "Contributors",
@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "லிங்க் காப்பி ஆகிவிட்டது",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Map",
+		"MyDashboard": "My dashboard",
+		"MyPrices": "எனது விலைகள்",
+		"MyProofs": "My proofs",
+		"MyStats": "எனது புள்ளிவிவரங்கள்",
 		"Offline": "Offline",
 		"Online": "ஆன்லைன்",
 		"Order": "Order",
@@ -280,15 +284,15 @@
 		"PersonalInfo": "தனிப்பட்ட தகவல்",
 		"Physical": "Physical",
 		"Picture": "Picture",
-		"Pictures": "Pictures",
-		"PicturesAdded": "Pictures added",
+		"Pictures": "படங்கள்",
+		"PicturesAdded": "படங்கள் சேர்க்கப்பட்டன",
 		"PRICE_TAG": "Price tag",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PricesMore": "More prices",
-		"PricesAdded": "Prices added",
+		"PricesAdded": "விலைகள் சேர்க்கப்பட்டன",
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"Private": "Private",
@@ -643,6 +647,9 @@
 		"MyProofs": {
 			"Title": "My proofs"
 		},
+		"MyDashboard": {
+			"Title": "My dashboard"
+		},
 		"Reuses": {
 			"Title": "Reuses"
 		},
@@ -677,10 +684,10 @@
 			"Title": "Price Validation Assistant"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "சவால்"
 		},
 		"CurrentChallenge": {
-			"Title": "Current Challenge"
+			"Title": "தற்போதைய சவால்"
 		}
 	},
 	"Search": {

@@ -77,7 +77,7 @@ export default {
     },
     proofPriceUploadedListSum() {
       return this.proofPriceUploadedList.reduce((acc, priceUploaded) => {
-        return acc + parseFloat(priceUploaded.price)*parseInt(priceUploaded.receipt_quantity)
+        return acc + parseFloat(priceUploaded.price)*parseFloat(priceUploaded.receipt_quantity)
       }, 0)
     }
   },

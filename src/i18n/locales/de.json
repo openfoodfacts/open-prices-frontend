@@ -140,22 +140,22 @@
 		"StepTakePictures": {
 			"Title": "Fotografieren Sie Preisschilder in Geschäften",
 			"line1": "Die Bilder können ein oder mehrere Preisschilder enthalten. Barcodes sollten lesbar sein. Zum Beispiel:",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"line2": "Wenn Sie bereit sind, suchen Sie Ihren Shop und laden Sie Ihre Bilder über die untere Schaltfläche hoch.",
+			"AddPictures": "Fotos hinzufügen"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreable.",
-			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
+			"Title": "Bestätigen Sie die ermittelten Preise",
+			"line1": "Die Preisschilder werden automatisch erkannt, aber die Roboter benötigen dennoch Ihre Hilfe, um sie zu bestätigen.",
+			"line2": "Besuchen Sie die Preisvalidierungsseite über die Schaltfläche unten, bearbeiten Sie den Strichcode und den Preis, falls erforderlich, und bestätigen Sie!",
+			"line3": "Wenn Sie Schwierigkeiten haben, das Etikett zu lesen, kennzeichnen Sie es als nicht lesbar.",
+			"line4": "Dies ist eine Gemeinschaftsleistung. Auch wenn Sie nicht viele Bilder eingesandt haben, können Sie anderen helfen, indem Sie sie bestätigen.",
 			"ValidatePrices": "Preise prüfen"
 		},
-		"Stats": "Challenge stats",
-		"MyStats": "My stats",
-		"PicturesAddedByYou": "Pictures added by you",
-		"PricesAddedByYou": "Prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"Stats": "Statistik der Herausforderung",
+		"MyStats": "Meine Statistiken",
+		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
+		"PricesAddedByYou": "Eigene hinzugefügte Preise",
+		"MostRecentContributions": "Neueste Beiträge"
 	},
 	"Common": {
 		"About": "Über",
@@ -191,10 +191,10 @@
 		"Category": "Kategorie",
 		"Categories": "Kategorien",
 		"CategoryTotal": "{count} Kategorien | {count} Kategorie | {count} Kategorien",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
+		"Challenge": "Herausforderung",
+		"Challenges": "Herausforderungen",
+		"ChallengeCurrent": "Aktuelle Herausforderung",
+		"ChallengeOngoing": "Ständige Herausforderung",
 		"Chart": "Diagramm",
 		"Clear": "Leeren",
 		"Contributors": "Mitwirkende",
@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "Link kopiert",
 		"LocationCount": "{count} Orte | {count} Ort | {count} Orte",
 		"Map": "Karte",
+		"MyDashboard": "Meine Übersicht",
+		"MyPrices": "Mein Preise",
+		"MyProofs": "Meine Belege",
+		"MyStats": "Meine Statistiken",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Reihenfolge",
@@ -280,15 +284,15 @@
 		"PersonalInfo": "Persönliche Informationen",
 		"Physical": "Physisch",
 		"Picture": "Bild",
-		"Pictures": "Pictures",
-		"PicturesAdded": "Pictures added",
+		"Pictures": "Fotos",
+		"PicturesAdded": "Fotos hinzugefügt",
 		"PRICE_TAG": "Preisschild",
 		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
 		"PriceAddedCount": "{count} Preise hinzugefügt | {count} Preis hinzugefügt | {count} Preise hinzugefügt",
 		"PriceToValidateCount": "{count} zu bestätigende Preise | {count} zu bestätigender Preis | {count} zu bestätigende Preise",
 		"PriceCreated": "Preis erstellt!",
 		"PricesMore": "Weitere Preise",
-		"PricesAdded": "Prices added",
+		"PricesAdded": "Preise hinzugefügt",
 		"PricesAddedToday": "Heute hinzugefügte Preise",
 		"PricesToday": "Aktuelle Preise",
 		"Private": "Privat",
@@ -643,6 +647,9 @@
 		"MyProofs": {
 			"Title": "Meine Belege"
 		},
+		"MyDashboard": {
+			"Title": "Meine Übersicht"
+		},
 		"Reuses": {
 			"Title": "Wiederverwendung"
 		},
@@ -677,10 +684,10 @@
 			"Title": "Preisprüfungsassistent"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "Herausforderung"
 		},
 		"CurrentChallenge": {
-			"Title": "Current Challenge"
+			"Title": "Aktuelle Herausforderung"
 		}
 	},
 	"Search": {

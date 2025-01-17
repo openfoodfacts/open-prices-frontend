@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "Bağlantı kopyalandı",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Harita",
+		"MyDashboard": "My dashboard",
+		"MyPrices": "Fiyatlarım",
+		"MyProofs": "Bedellerim",
+		"MyStats": "My stats",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Sipariş",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "Bedellerim"
+		},
+		"MyDashboard": {
+			"Title": "My dashboard"
 		},
 		"Reuses": {
 			"Title": "Reuses"

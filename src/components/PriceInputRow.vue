@@ -64,7 +64,7 @@
             density="compact"
             :label="$t('Common.QuantityBought')"
             type="text"
-            inputmode="numeric"
+            inputmode="decimal"
             :rules="receiptQuantityRules"
             :prepend-inner-icon="PROOF_TYPE_RECEIPT_ICON"
             hide-details="auto"
@@ -143,7 +143,8 @@ export default {
       if (!this.priceForm.receipt_quantity) return [() => true]  // optional field
       return [
         value => !isNaN(value) || this.$t('PriceRules.Number'),
-        value => Number(value) >= 1 || this.$t('PriceRules.Positive'),
+        value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
+        value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
       ]
     },
     productIsTypeCategory() {
