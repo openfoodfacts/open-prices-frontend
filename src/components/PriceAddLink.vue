@@ -2,7 +2,7 @@
   <a v-if="display === 'link'" :to="getUrl" :disabled="disabled">
     {{ getText }}
   </a>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" base-color="primary" :prepend-icon="getIcon" :to="getUrl" :disabled="disabled">
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="getIcon" :to="getUrl" :disabled="disabled">
     {{ getText }}
   </v-list-item>
   <v-btn
