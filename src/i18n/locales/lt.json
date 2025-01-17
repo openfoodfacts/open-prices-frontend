@@ -144,18 +144,18 @@
 			"AddPictures": "Pridėti nuotraukas"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreable.",
-			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
+			"Title": "Patvirtinti aptiktas kainas",
+			"line1": "Kainų etiketės aptinkamos automatiškai, tačiau robotams vis tiek reikia jūsų pagalbos, kad jas patvirtintų.",
+			"line2": "Apsilankykite kainos patvirtinimo puslapyje naudodami tolesnį mygtuką, redaguokite brūkšninį kodą bei kainą, jei reikia, ir patvirtinkite!",
+			"line3": "Jei kyla problemų skaitant etiketę, pažymėkite ją kaip nepatikimą.",
+			"line4": "Tai yra bendros pastangos, net jei išsiuntėte nedaug nuotraukų, vis tiek galite padėti kitiems patvirtindami.",
 			"ValidatePrices": "Patvirtinti kainas"
 		},
-		"Stats": "Challenge stats",
-		"MyStats": "My stats",
-		"PicturesAddedByYou": "Pictures added by you",
-		"PricesAddedByYou": "Prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"Stats": "Iššūkių statistika",
+		"MyStats": "Mano statistika",
+		"PicturesAddedByYou": "Jūsų pridėtos nuotraukos",
+		"PricesAddedByYou": "Jūsų pridėtos kainos",
+		"MostRecentContributions": "Naujausi įnašai"
 	},
 	"Common": {
 		"About": "Apie",
@@ -191,10 +191,10 @@
 		"Category": "Kategorija",
 		"Categories": "Kategorijos",
 		"CategoryTotal": "{count} kategorijos | {count} kategorija | {count} kategorijų",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
+		"Challenge": "Iššūkis",
+		"Challenges": "Iššūkiai",
+		"ChallengeCurrent": "Dabartinis iššūkis",
+		"ChallengeOngoing": "Vykstantis iššūkis",
 		"Chart": "Diagrama",
 		"Clear": "Clear",
 		"Contributors": "Contributors",
@@ -265,7 +265,7 @@
 		"MyDashboard": "Mano pagrindinis meniu",
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
-		"MyStats": "My stats",
+		"MyStats": "Mano statistika",
 		"Offline": "Neprisijungę",
 		"Online": "Prisijungus",
 		"Order": "Order",
@@ -284,15 +284,15 @@
 		"PersonalInfo": "Personal information",
 		"Physical": "Fizinis",
 		"Picture": "Picture",
-		"Pictures": "Pictures",
-		"PicturesAdded": "Pictures added",
+		"Pictures": "Nuotraukos",
+		"PicturesAdded": "Pridėtos nuotraukos",
 		"PRICE_TAG": "Kainos etiketė",
 		"PriceCount": "{count} kainos | {count} kaina | {count} kainų",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} kainos patvirtinti | {count} kaina patvirtinti | {count} kainų patvirtinti",
 		"PriceCreated": "Kaina sukurta!",
 		"PricesMore": "Daugiau kainų",
-		"PricesAdded": "Prices added",
+		"PricesAdded": "Pridėtos kainos",
 		"PricesAddedToday": "Kainos pridėtos šiandien",
 		"PricesToday": "Kainos šiandien",
 		"Private": "Privatu",
@@ -684,10 +684,10 @@
 			"Title": "Kainų tvirtinimo asistentas"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "Iššūkis"
 		},
 		"CurrentChallenge": {
-			"Title": "Current Challenge"
+			"Title": "Dabartinis iššūkis"
 		}
 	},
 	"Search": {
