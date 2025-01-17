@@ -358,6 +358,7 @@
 		"Users": "Kullanıcılar",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"Validate": "Geçerlilik",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Görüntüle",
