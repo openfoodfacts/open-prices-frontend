@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "链接已复制",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "地图",
+		"MyDashboard": "My dashboard",
+		"MyPrices": "我的价格",
+		"MyProofs": "我的样张",
+		"MyStats": "My stats",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "命令",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "我的样张"
+		},
+		"MyDashboard": {
+			"Title": "My dashboard"
 		},
 		"Reuses": {
 			"Title": "Reuses"

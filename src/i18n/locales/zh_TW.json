@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "已複製連結",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "地圖",
+		"MyDashboard": "我的儀表板",
+		"MyPrices": "我的價格",
+		"MyProofs": "我的證明",
+		"MyStats": "My stats",
 		"Offline": "離線",
 		"Online": "在線",
 		"Order": "順序",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "我的證明"
+		},
+		"MyDashboard": {
+			"Title": "我的儀表板"
 		},
 		"Reuses": {
 			"Title": "重複使用"

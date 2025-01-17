@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "Tautan disalin",
 		"LocationCount": "{count} lokasi | {count} lokasi | {count} lokasi",
 		"Map": "Peta",
+		"MyDashboard": "Dasbor saya",
+		"MyPrices": "Harga saya",
+		"MyProofs": "Bukti saya",
+		"MyStats": "My stats",
 		"Offline": "Tidak Aktif",
 		"Online": "Aktif",
 		"Order": "Urutan",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "Bukti saya"
+		},
+		"MyDashboard": {
+			"Title": "Dasbor saya"
 		},
 		"Reuses": {
 			"Title": "Penggunaan kembali"

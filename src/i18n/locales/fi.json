@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "Linkki kopioitu",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "Kartta",
+		"MyDashboard": "My dashboard",
+		"MyPrices": "Minun hinnat",
+		"MyProofs": "Minun todisteeni",
+		"MyStats": "My stats",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Järjestys",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "Minun todisteeni"
+		},
+		"MyDashboard": {
+			"Title": "My dashboard"
 		},
 		"Reuses": {
 			"Title": "Reuses"

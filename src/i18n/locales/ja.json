@@ -262,6 +262,10 @@
 		"LinkCopySuccess": "リンクをコピーしました",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"Map": "地図",
+		"MyDashboard": "My dashboard",
+		"MyPrices": "私の価格",
+		"MyProofs": "自分の証拠",
+		"MyStats": "My stats",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "注文品",
@@ -642,6 +646,9 @@
 		},
 		"MyProofs": {
 			"Title": "自分の証拠"
+		},
+		"MyDashboard": {
+			"Title": "My dashboard"
 		},
 		"Reuses": {
 			"Title": "Reuses"
