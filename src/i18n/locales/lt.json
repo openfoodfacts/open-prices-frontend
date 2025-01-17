@@ -135,13 +135,13 @@
 		"Title": "Įveskite brūkšninį kodą"
 	},
 	"Challenge": {
-		"Title": "The current challenge is ...",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "Dabartinis iššūkis yra...",
+		"Subtitle": "Prisijunkite prie kitų maisto kainų entuziastų, renkačių informaciją apie {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "Fotografuoti kainų etiketes parduotuvėse",
+			"line1": "Nuotraukose gali būti viena ar kelios kainų etiketės. Brūkšniniai kodai turi būti įskaitomi. Pavyzdžiui:",
+			"line2": "Kai būsite pasiruošę, suraskite savo parduotuvę ir įkelkite nuotraukas tolesniu mygtuku.",
+			"AddPictures": "Pridėti nuotraukas"
 		},
 		"StepValidate": {
 			"Title": "Validate the detected prices",
