@@ -358,6 +358,7 @@
 		"Users": "Benutzer",
 		"UserCount": "{count} Benutzer | {count} Benutzer | {count} Benutzer",
 		"UserContributorCount": "{count} Mitwirkende | {count} Mitwirkende | {count} Mitwirkende",
+		"Validate": "Bestätigen",
 		"ValidatePrices": "Preise prüfen",
 		"ValidatePricesWithAI": "Preise mit KI prüfen",
 		"View": "Anzeigen",
