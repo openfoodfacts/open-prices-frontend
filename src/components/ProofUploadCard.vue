@@ -31,7 +31,7 @@
         :color="proofImageList.length === proofObjectList.length ? 'success' : 'info'"
         height="25"
         :indeterminate="proofObjectList.length ? false : true"
-        :striped="roofImageList.length !== proofObjectList.length"
+        :striped="proofImageList.length !== proofObjectList.length"
         rounded
       />
     </v-card-text>

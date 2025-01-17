@@ -138,7 +138,7 @@
             {{ $t('ContributionAssistant.AddNewProof') }}
           </v-btn>
         </v-col>
-        <v-col v-if="proofIdsFromQueryParam.length > 1">
+        <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1">
           <v-btn :block="!$vuetify.display.smAndUp" color="primary" :disabled="!allDone" @click="nextProof">
             {{ $t('ContributionAssistant.NextProof') }}
           </v-btn>
