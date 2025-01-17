@@ -135,27 +135,27 @@
 		"Title": "Digite um código de barras"
 	},
 	"Challenge": {
-		"Title": "The current challenge is ...",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "O desafio atual é...",
+		"Subtitle": "Junte-se a outros entusiastas dos preços dos alimentos para reunir informações sobre {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "Tire fotografias das etiquetas de preços nas lojas",
+			"line1": "As fotografias podem incluir uma ou mais etiquetas de preço. Os códigos de barras devem ser legíveis. Por exemplo:",
+			"line2": "Quando estiver pronto, encontre a sua loja e envie as suas fotografias utilizando o botão abaixo.",
+			"AddPictures": "Adicionar fotografias"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreable.",
-			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
+			"Title": "Validar os preços detetados",
+			"line1": "As etiquetas de preço são detectadas automaticamente, mas os robôs ainda precisam da sua ajuda para as validar.",
+			"line2": "Visite a página de validação do preço utilizando o botão abaixo, edite o código de barras e o preço, se necessário, e valide!",
+			"line3": "Se tiver dificuldades para ler a etiqueta, marque-a como ilegível.",
+			"line4": "Este é um esforço colaborativo, mesmo que não tenha enviado muitas fotografias, ainda pode ajudar outras pessoas validando.",
 			"ValidatePrices": "Validar preços"
 		},
-		"Stats": "Challenge stats",
-		"MyStats": "My stats",
-		"PicturesAddedByYou": "Pictures added by you",
-		"PricesAddedByYou": "Prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"Stats": "Estatísticas do desafio",
+		"MyStats": "Minhas estatísticas",
+		"PicturesAddedByYou": "Fotografias adicionadas por si",
+		"PricesAddedByYou": "Preços adicionados por si",
+		"MostRecentContributions": "Contribuições mais recentes"
 	},
 	"Common": {
 		"About": "Sobre",
@@ -191,10 +191,10 @@
 		"Category": "Categoria",
 		"Categories": "Categorias",
 		"CategoryTotal": "{count} categorias | {count} categoria | {count} categorias",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
+		"Challenge": "Desafio",
+		"Challenges": "Desafios",
+		"ChallengeCurrent": "Desafio atual",
+		"ChallengeOngoing": "Desafio a decorrer",
 		"Chart": "Gráfico",
 		"Clear": "Limpar",
 		"Contributors": "Colaboradores",
@@ -265,7 +265,7 @@
 		"MyDashboard": "Meu painel de controlo",
 		"MyPrices": "Os meus preços",
 		"MyProofs": "Os meus comprovativos",
-		"MyStats": "My stats",
+		"MyStats": "Minhas estatísticas",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Ordem",
@@ -284,15 +284,15 @@
 		"PersonalInfo": "Informação pessoal",
 		"Physical": "Physical",
 		"Picture": "Imagem",
-		"Pictures": "Pictures",
-		"PicturesAdded": "Pictures added",
+		"Pictures": "Fotografias",
+		"PicturesAdded": "Fotografias adicionadas",
 		"PRICE_TAG": "Etiqueta de preço",
 		"PriceCount": "{count} preços | {count} preços | {count} preços",
 		"PriceAddedCount": "{count} preços adicionados | {count} preço adicionado | {count} preços adicionados",
 		"PriceToValidateCount": "{count} preços a validar | {count} preço a validar | {count} preços a validar",
 		"PriceCreated": "Preço criado!",
 		"PricesMore": "Mais preços",
-		"PricesAdded": "Prices added",
+		"PricesAdded": "Preços adicionado",
 		"PricesAddedToday": "Preços adicionados hoje",
 		"PricesToday": "Preços hoje",
 		"Private": "Privado",
@@ -684,10 +684,10 @@
 			"Title": "Assistente de validação de preços"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "Desafio"
 		},
 		"CurrentChallenge": {
-			"Title": "Current Challenge"
+			"Title": "Desafio atual"
 		}
 	},
 	"Search": {
