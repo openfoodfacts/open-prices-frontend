@@ -10,44 +10,45 @@
       <v-icon>{{ cardPrependIcon }}</v-icon>
     </template>
     <v-divider v-if="!hideHeader" />
-    <v-card-text v-if="step === 1">
-      <v-alert
-        v-if="typePriceTagOnly && multiple"
-        class="mb-4"
-        type="warning"
-        variant="outlined"
-        density="compact"
-        :text="$t('ProofAdd.HowToMultiple')"
-      />
-      <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" />
-      <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
-      <LocationInputRow :locationForm="proofForm" />
-      <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />
+    <v-card-text>
+      <v-sheet v-if="step === 1">
+        <v-alert
+          v-if="typePriceTagOnly && multiple"
+          class="mb-4"
+          type="warning"
+          variant="outlined"
+          density="compact"
+          :text="$t('ProofAdd.HowToMultiple')"
+        />
+        <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" />
+        <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
+        <LocationInputRow :locationForm="proofForm" />
+        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />
+      </v-sheet>
+      <v-sheet v-else-if="step === 2">
+        <v-progress-linear
+          v-model="proofObjectList.length"
+          :max="proofImageList.length"
+          :color="proofImageList.length === proofObjectList.length ? 'success' : 'primary'"
+          height="25"
+          :indeterminate="proofObjectList.length ? false : true"
+          :striped="proofImageList.length !== proofObjectList.length"
+          rounded
+        />
+      </v-sheet>
     </v-card-text>
-    <v-card-text v-else-if="step === 2">
-      <v-progress-linear
-        v-model="proofObjectList.length"
-        :max="proofImageList.length"
-        :color="proofImageList.length === proofObjectList.length ? 'success' : 'primary'"
-        height="25"
-        :indeterminate="proofObjectList.length ? false : true"
-        :striped="proofImageList.length !== proofObjectList.length"
-        rounded
-      />
-    </v-card-text>
-    <v-divider />
-    <v-card-actions>
+    <v-divider v-if="step === 1" />
+    <v-card-actions v-if="step === 1">
       <v-spacer v-if="$vuetify.display.smAndUp" />
       <v-btn
         class="float-right"
         color="primary"
         variant="flat"
         :block="!$vuetify.display.smAndUp"
-        :loading="loading || step === 2"
-        :disabled="!proofFormFilled || loading || step === 2"
+        :disabled="!proofFormFilled"
         @click="uploadProofList"
       >
-        <span v-if="multiple">{{ $t('Common.UploadMultipleProofs', { count: proofImageList.length }) }}</span>
+        <span v-if="multiple && proofImageList.length">{{ $t('Common.UploadMultipleProofs', { count: proofImageList.length }) }}</span>
         <span v-else>{{ $t('Common.Upload') }}</span>
       </v-btn>
     </v-card-actions>
@@ -59,7 +60,7 @@
 
   <v-snackbar
     v-model="proofDateSuccessMessage"
-    color="info"
+    color="primary"
     :timeout="2000"
   >
     {{ $t('AddPriceSingle.PriceDetails.ProofDateChanged') }}
