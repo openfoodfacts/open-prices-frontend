@@ -19,6 +19,7 @@
         color="primary"
         variant="flat"
         :block="!$vuetify.display.smAndUp"
+        prepend-icon="mdi-image-plus"
         to="/proofs/add/multiple"
       >
         {{ $t('Challenge.StepTakePictures.AddPictures') }}
