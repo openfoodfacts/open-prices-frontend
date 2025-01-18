@@ -46,7 +46,7 @@
             <v-btn
               type="submit"
               class="float-right"
-              color="success"
+              color="primary"
               :loading="loading"
               :disabled="!formFilled"
             >
