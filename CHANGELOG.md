@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.112.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.112.3...v1.112.4) (2025-01-18)
+
+
+### Bug Fixes
+
+* **Theme:** also change progress-linear bar colors. ref [#1269](https://github.com/openfoodfacts/open-prices-frontend/issues/1269) ([8c5bbb7](https://github.com/openfoodfacts/open-prices-frontend/commit/8c5bbb79d71aba72c773da9e38edffbf6da77042))
+
+
+### Technical
+
+* **Action menus:** rename to 'Add prices' in most cases. closes [#1229](https://github.com/openfoodfacts/open-prices-frontend/issues/1229) ([ef8fce2](https://github.com/openfoodfacts/open-prices-frontend/commit/ef8fce265c5806055ccdb0b6df000145403b5d31))
+* **Proof upload:** hide CTA after upload started. improve CTA wording for multiple. ref [#1249](https://github.com/openfoodfacts/open-prices-frontend/issues/1249) ([7ed712d](https://github.com/openfoodfacts/open-prices-frontend/commit/7ed712daf16ec1554e79a223e313a477949d7f85))
+
 ## [1.112.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.112.2...v1.112.3) (2025-01-18)
 
 
