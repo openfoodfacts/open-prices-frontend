@@ -18,7 +18,7 @@
     </v-timeline-item>
   </v-timeline>
   <v-progress-linear
-    color="info"
+    color="primary"
     height="25"
     :model-value="progress"
     striped

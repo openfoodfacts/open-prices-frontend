@@ -28,7 +28,7 @@
       <v-progress-linear
         v-model="proofObjectList.length"
         :max="proofImageList.length"
-        :color="proofImageList.length === proofObjectList.length ? 'success' : 'info'"
+        :color="proofImageList.length === proofObjectList.length ? 'success' : 'primary'"
         height="25"
         :indeterminate="proofObjectList.length ? false : true"
         :striped="proofImageList.length !== proofObjectList.length"

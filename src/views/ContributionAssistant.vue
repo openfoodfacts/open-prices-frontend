@@ -118,7 +118,7 @@
           <v-progress-linear
             v-model="numberOfPricesAdded"
             :max="productPriceFormsWithoutPriceId.length"
-            :color="productPriceFormsWithoutPriceId.length === numberOfPricesAdded ? 'success' : 'info'"
+            :color="productPriceFormsWithoutPriceId.length === numberOfPricesAdded ? 'success' : 'primary'"
             height="25"
             :striped="productPriceFormsWithoutPriceId.length !== numberOfPricesAdded"
             rounded
