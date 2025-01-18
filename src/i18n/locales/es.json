@@ -148,8 +148,7 @@
 			"line1": "Las etiquetas de precios se detectan automáticamente, pero los robots todavía necesitan tu ayuda para validarlas.",
 			"line2": "Visita la página de validación de precios usando el botón de abajo, edita el código de barras y el precio si es necesario, y valídalo!",
 			"line3": "Si está teniendo problemas para leer la etiqueta, márquela como no legible.",
-			"line4": "Este es un esfuerzo colaborativo, incluso si no has enviado muchas fotos, puedes ayudar a otros al validarlas.",
-			"ValidatePrices": "Validate prices"
+			"line4": "Este es un esfuerzo colaborativo, incluso si no has enviado muchas fotos, puedes ayudar a otros al validarlas."
 		},
 		"Stats": "Estadísticas del desafío",
 		"MyStats": "Mis estadísticas",
@@ -239,6 +238,7 @@
 		"ExamplesWithColon": "Ejemplos:",
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Editar",
+		"End": "End",
 		"Filter": "Filtro",
 		"FilterProductWithPriceCount": "con precio",
 		"FilterProductWithPriceCountHide": "Ocultar productos con precios",
@@ -331,6 +331,7 @@
 		"Share": "Compartir",
 		"Source": "Fuente",
 		"SourceCode": "Source code",
+		"Start": "Empezar",
 		"Stats": "Estadísticas",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
