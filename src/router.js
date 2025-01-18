@@ -70,7 +70,7 @@ const router = createRouter({
     await localeManager.changeLanguage(locale)
   }
   if (to.meta.requiresAuth && !store.user.token) {
-    return next({ name: 'sign-in' })
+    return next({ name: 'sign-in', query: { redirect: to.fullPath } })
   }
 
   next()
