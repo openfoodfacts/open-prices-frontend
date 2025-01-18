@@ -61,7 +61,9 @@ const router = createRouter({
 
 /**
  * On each page change, check if it needs authentication.
- * If required, but the user is not authenticated (token unknown), then redirect to 'sign-in'
+ * If required, but the user is not authenticated (token unknown):
+ * - then redirect to 'sign-in'
+ * - the initial url is passed as query parameter ?next=, in order to redirect back after login
  */
  router.beforeEach(async (to, from, next) => {
   const store = useAppStore()
@@ -70,7 +72,7 @@ const router = createRouter({
     await localeManager.changeLanguage(locale)
   }
   if (to.meta.requiresAuth && !store.user.token) {
-    return next({ name: 'sign-in' })
+    return next({ name: 'sign-in', query: { next: to.fullPath } })
   }
 
   next()
