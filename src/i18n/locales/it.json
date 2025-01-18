@@ -148,8 +148,7 @@
 			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
 			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
 			"line3": "If you're having trouble reading the label, mark it as unreable.",
-			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
-			"ValidatePrices": "Validate prices"
+			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating."
 		},
 		"Stats": "Challenge stats",
 		"MyStats": "My stats",
@@ -239,6 +238,7 @@
 		"ExamplesWithColon": "Esempi:",
 		"ExamplesWithColonAndValue": "Esempi: {value}",
 		"Edit": "Modifica",
+		"End": "End",
 		"Filter": "Filtra",
 		"FilterProductWithPriceCount": "Con un prezzo",
 		"FilterProductWithPriceCountHide": "Nascondi i prodotti con i prezzi",
@@ -331,6 +331,7 @@
 		"Share": "Condividi",
 		"Source": "Fonte",
 		"SourceCode": "Source code",
+		"Start": "Avvia",
 		"Stats": "Statistiche",
 		"TaglineOriginal": "Un database aperto in crowdsourcing dei prezzi",
 		"TaglineAlt1": "Il database aperto in crowdsourcing dei prezzi",
