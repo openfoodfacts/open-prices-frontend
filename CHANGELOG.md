@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.112.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.112.2...v1.112.3) (2025-01-18)
+
+
+### Bug Fixes
+
+* **Price add:** Allow 'quantity bought' field to be decimal ([#1276](https://github.com/openfoodfacts/open-prices-frontend/issues/1276)) ([d823949](https://github.com/openfoodfacts/open-prices-frontend/commit/d823949deaa437959ddc832c355ce56ae733c15a))
+* **Theme:** also change 'Price add link' button in menus. ref [#1269](https://github.com/openfoodfacts/open-prices-frontend/issues/1269) ([b1b01c2](https://github.com/openfoodfacts/open-prices-frontend/commit/b1b01c24237a3b977e3fe89b0ce73dab80eab8bf))
+
+
+### Technical
+
+* **Contribution assistant:** replace tabs with a stepper ([#1275](https://github.com/openfoodfacts/open-prices-frontend/issues/1275)) ([354fb15](https://github.com/openfoodfacts/open-prices-frontend/commit/354fb1523f734e6330734e8ee76a6f048062b780))
+* **l10n:** New Crowdin translations to review and merge ([#1273](https://github.com/openfoodfacts/open-prices-frontend/issues/1273)) ([d77cf4c](https://github.com/openfoodfacts/open-prices-frontend/commit/d77cf4c87f3865ea27bdfa84d77791beb9062f4d))
+* **l10n:** New Crowdin translations to review and merge ([#1278](https://github.com/openfoodfacts/open-prices-frontend/issues/1278)) ([b353301](https://github.com/openfoodfacts/open-prices-frontend/commit/b3533019b2b0ad041aeb590cf087b1ade4f01f9e))
+
 ## [1.112.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.112.1...v1.112.2) (2025-01-15)
 
 
