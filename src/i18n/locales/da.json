@@ -358,6 +358,7 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"Validate": "Bekræftelse",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Vis",

@@ -358,6 +358,7 @@
 		"Users": "משתמשים",
 		"UserCount": "{count} משתמשים | משתמש | {count} משתמשים",
 		"UserContributorCount": "{count} תרמו | תורם/ת | {count} תרמו",
+		"Validate": "אימות",
 		"ValidatePrices": "אימות מחירים",
 		"ValidatePricesWithAI": "אימות מחירים עם בינה מלאכותית",
 		"View": "הצגה",

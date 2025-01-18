@@ -358,6 +358,7 @@
 		"Users": "ユーザー",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"Validate": "検証",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "表示",

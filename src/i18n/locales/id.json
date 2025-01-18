@@ -358,6 +358,7 @@
 		"Users": "Pengguna",
 		"UserCount": "{count} pengguna | {count} pengguna | {count} pengguna",
 		"UserContributorCount": "{count} kontributor | {count} kontributor | {count} kontributor",
+		"Validate": "Validasikan",
 		"ValidatePrices": "Validasi harga",
 		"ValidatePricesWithAI": "Validasi harga dengan AI",
 		"View": "Lihat",
