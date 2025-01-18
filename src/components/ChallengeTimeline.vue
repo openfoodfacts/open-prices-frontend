@@ -2,7 +2,7 @@
   <v-timeline direction="horizontal" truncate-line="both">
     <v-timeline-item dot-color="success">
       <div class="text-h6">
-        Start
+        {{ $t('Common.Start') }}
       </div>
       <template #opposite>
         {{ challenge.startDate }}
@@ -11,23 +11,23 @@
     <v-timeline-item dot-color="error">
       <template #opposite>
         <div class="text-h6">
-          End
+          {{ $t('Common.End') }}
         </div>
       </template>
       {{ challenge.endDate }}
     </v-timeline-item>
   </v-timeline>
   <v-progress-linear
+    style="width: 50%; margin-left: 25%; top: -55px; margin-top: -25px"
     color="primary"
     height="25"
     :model-value="progress"
     striped
-    style="width: 50%; margin-left: 25%; top: -55px; margin-top: -25px"
   >
     <strong>{{ daysLeftText }}</strong>
   </v-progress-linear>
 </template>
-  
+
 <script>
 export default {
   props: {
@@ -55,4 +55,3 @@ export default {
   }
 }
 </script>
-  
