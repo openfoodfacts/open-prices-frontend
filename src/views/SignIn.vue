@@ -105,7 +105,7 @@ export default {
         })
     },
     done() {
-      const path = this.$route.query.redirect || '/dashboard'
+      const path = this.$route.query.next || '/dashboard'
       this.$router.push({ path: path, query: { signinSuccess: 'true' } })
     }
   },
