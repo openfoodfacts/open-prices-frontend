@@ -54,7 +54,10 @@ export default {
       if (this.target === 'contribution-assistant') {
         return this.$t('ContributionAssistant.OpenWithTheAssistant')
       }
-      return this.$t('Common.AddPrice')
+      else if (this.target === 'prices-add-single') {
+        return this.$t('Common.AddPrice')
+      }
+      return this.$t('Common.AddPrices')
     },
     getUrl() {
       if (this.proofId) {
