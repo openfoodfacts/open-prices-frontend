@@ -19,7 +19,7 @@
   </v-timeline>
   <v-progress-linear
     style="width: 50%; margin-left: 25%; top: -55px; margin-top: -25px"
-    color="secondary"
+    color="success"
     height="25"
     :model-value="progress"
     striped
