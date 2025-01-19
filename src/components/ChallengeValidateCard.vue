@@ -6,10 +6,10 @@
     <v-card-text class="flex-grow-1">
       <v-row class="mb-2">
         <v-col cols="12" sm="6">
-          <StatCard :value="challenge.numberOfContributions" variant="outlined" :subtitle="$t('Challenge.PricesAdded', { challenge_title: challenge.title })" />
+          <StatCard :value="challenge.numberOfContributions" :subtitle="$t('Challenge.PricesAdded', { challenge_title: challenge.title })" />
         </v-col>
         <v-col cols="12" sm="6">
-          <StatCard :value="challenge.userContributions" variant="outlined" :subtitle="$t('Challenge.PricesAddedByYou', { challenge_title: challenge.title })" />
+          <StatCard :value="challenge.userContributions" :subtitle="$t('Challenge.PricesAddedByYou', { challenge_title: challenge.title })" />
         </v-col>
       </v-row>
       <p class="mb-2">

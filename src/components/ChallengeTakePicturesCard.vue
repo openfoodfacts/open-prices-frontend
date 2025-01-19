@@ -6,10 +6,10 @@
     <v-card-text>
       <v-row class="mb-2">
         <v-col cols="12" sm="6">
-          <StatCard :value="challenge.numberOfProofs" variant="outlined" :subtitle="$t('Common.PicturesAdded')" />
+          <StatCard :value="challenge.numberOfProofs" :subtitle="$t('Common.PicturesAdded')" />
         </v-col>
         <v-col cols="12" sm="6">
-          <StatCard :value="challenge.userProofContributions" variant="outlined" :subtitle="$t('Challenge.PicturesAddedByYou')" />
+          <StatCard :value="challenge.userProofContributions" :subtitle="$t('Challenge.PicturesAddedByYou')" />
         </v-col>
       </v-row>
       <p class="mb-2">
