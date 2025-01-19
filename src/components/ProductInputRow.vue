@@ -4,7 +4,7 @@
       <v-row>
         <v-col>
           <v-item-group v-model="productForm.type" class="d-inline" mandatory @update:modelValue="setType($event)">
-            <v-item v-for="pt in productTypeList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
+            <v-item v-for="pt in productTypeDisplayList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
               <v-chip class="mr-1" :class="isSelected ? 'border-success' : ''" variant="outlined" density="comfortable" @click="toggle">
                 <v-icon start :icon="pt.icon" />
                 {{ $t('Common.' + pt.value) }}
@@ -14,7 +14,7 @@
           </v-item-group>
         </v-col>
       </v-row>
-      <v-row v-if="productIsTypeProduct" class="mt-0">
+      <v-row v-if="!hideBarcodeMode && productIsTypeProduct" class="mt-0">
         <v-col>
           <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
             {{ $t('Common.ProductFind') }}
@@ -130,6 +130,10 @@ export default {
       type: Boolean,
       default: () => false
     },
+    hideBarcodeMode: {
+      type: Boolean,
+      default: false
+    },
     hideProductBarcode: {
       type: Boolean,
       default: true
@@ -142,7 +146,6 @@ export default {
   emits: ['filled'],
   data() {
     return {
-      productTypeList: constants.PRICE_TYPE_LIST,
       categoryTags: [],  // list of category tags for autocomplete  // see initPriceMultipleForm
       originTags: [],  // list of origins tags for autocomplete  // see initPriceMultipleForm
       labelTags: [],  // list of labels tags for checkboxes  // see initPriceMultipleForm
@@ -156,6 +159,12 @@ export default {
     },
     productIsTypeCategory() {
       return this.productForm && this.productForm.type === constants.PRICE_TYPE_CATEGORY
+    },
+    productTypeDisplayList() {
+      if (this.hideBarcodeMode) {
+        return constants.PRICE_TYPE_LIST.filter(pt => pt.key !== constants.PRICE_TYPE_PRODUCT)
+      }
+      return constants.PRICE_TYPE_LIST
     },
     productBarcodeFormFilled() {
       let keys = ['product_code']
