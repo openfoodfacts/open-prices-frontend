@@ -148,8 +148,7 @@
 			"line1": "As etiquetas de preço são detectadas automaticamente, mas os robôs ainda precisam da sua ajuda para as validar.",
 			"line2": "Visite a página de validação do preço utilizando o botão abaixo, edite o código de barras e o preço, se necessário, e valide!",
 			"line3": "Se tiver dificuldades para ler a etiqueta, marque-a como ilegível.",
-			"line4": "Este é um esforço colaborativo, mesmo que não tenha enviado muitas fotografias, ainda pode ajudar outras pessoas validando.",
-			"ValidatePrices": "Validar preços"
+			"line4": "Este é um esforço colaborativo, mesmo que não tenha enviado muitas fotografias, ainda pode ajudar outras pessoas validando."
 		},
 		"Stats": "Estatísticas do desafio",
 		"MyStats": "Minhas estatísticas",
@@ -239,6 +238,7 @@
 		"ExamplesWithColon": "Exemplos:",
 		"ExamplesWithColonAndValue": "Exemplos: {value}",
 		"Edit": "Editar",
+		"End": "End",
 		"Filter": "Filtro",
 		"FilterProductWithPriceCount": "Com um preço",
 		"FilterProductWithPriceCountHide": "Ocultar produtos com preços",
@@ -331,6 +331,7 @@
 		"Share": "Partilhar",
 		"Source": "Fonte",
 		"SourceCode": "Código-fonte",
+		"Start": "Começar",
 		"Stats": "Estatísticas",
 		"TaglineOriginal": "Uma base de dados aberta e colaborativa de preços de alimentos",
 		"TaglineAlt1": "A base de dados aberta e colectiva de preços",

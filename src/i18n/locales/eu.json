@@ -148,8 +148,7 @@
 			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
 			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
 			"line3": "If you're having trouble reading the label, mark it as unreable.",
-			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
-			"ValidatePrices": "Validate prices"
+			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating."
 		},
 		"Stats": "Challenge stats",
 		"MyStats": "My stats",
@@ -239,6 +238,7 @@
 		"ExamplesWithColon": "Adibideak:",
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Editatu",
+		"End": "End",
 		"Filter": "Iragazi",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
@@ -331,6 +331,7 @@
 		"Share": "Partekatu",
 		"Source": "Source",
 		"SourceCode": "Source code",
+		"Start": "Start",
 		"Stats": "Stats",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",

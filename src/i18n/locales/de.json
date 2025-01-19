@@ -148,8 +148,7 @@
 			"line1": "Die Preisschilder werden automatisch erkannt, aber die Roboter benötigen dennoch Ihre Hilfe, um sie zu bestätigen.",
 			"line2": "Besuchen Sie die Preisvalidierungsseite über die Schaltfläche unten, bearbeiten Sie den Strichcode und den Preis, falls erforderlich, und bestätigen Sie!",
 			"line3": "Wenn Sie Schwierigkeiten haben, das Etikett zu lesen, kennzeichnen Sie es als nicht lesbar.",
-			"line4": "Dies ist eine Gemeinschaftsleistung. Auch wenn Sie nicht viele Bilder eingesandt haben, können Sie anderen helfen, indem Sie sie bestätigen.",
-			"ValidatePrices": "Preise prüfen"
+			"line4": "Dies ist eine Gemeinschaftsleistung. Auch wenn Sie nicht viele Bilder eingesandt haben, können Sie anderen helfen, indem Sie sie bestätigen."
 		},
 		"Stats": "Statistik der Herausforderung",
 		"MyStats": "Meine Statistiken",
@@ -239,6 +238,7 @@
 		"ExamplesWithColon": "Beispiele:",
 		"ExamplesWithColonAndValue": "Beispiele: {value}",
 		"Edit": "Bearbeiten",
+		"End": "Ende",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "Mit einem Preis",
 		"FilterProductWithPriceCountHide": "Produkte mit Preisen ausblenden",
@@ -331,6 +331,7 @@
 		"Share": "Teilen",
 		"Source": "Quelle",
 		"SourceCode": "Quellcode",
+		"Start": "Start",
 		"Stats": "Statistiken",
 		"TaglineOriginal": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise",
 		"TaglineAlt1": "Eine offene öffentlich zugängliche Datenbank der Preise",

@@ -148,8 +148,7 @@
 			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
 			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
 			"line3": "If you're having trouble reading the label, mark it as unreable.",
-			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating.",
-			"ValidatePrices": "Перевірити ціни"
+			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating."
 		},
 		"Stats": "Challenge stats",
 		"MyStats": "Мої статистики",
@@ -239,6 +238,7 @@
 		"ExamplesWithColon": "Приклади:",
 		"ExamplesWithColonAndValue": "Приклади: {value}",
 		"Edit": "Редагувати",
+		"End": "Кінець",
 		"Filter": "Фільтр",
 		"FilterProductWithPriceCount": "З ціною",
 		"FilterProductWithPriceCountHide": "Приховати товари з цінами",
@@ -331,6 +331,7 @@
 		"Share": "Поділитися",
 		"Source": "Джерело",
 		"SourceCode": "Вихідний код",
+		"Start": "Старт",
 		"Stats": "Статистика",
 		"TaglineOriginal": "Відкрита краудсорсингова база даних цін на продукти харчування",
 		"TaglineAlt1": "Відкрита краудсорсингова база даних цін",

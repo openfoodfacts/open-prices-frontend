@@ -148,8 +148,7 @@
 			"line1": "Kainų etiketės aptinkamos automatiškai, tačiau robotams vis tiek reikia jūsų pagalbos, kad jas patvirtintų.",
 			"line2": "Apsilankykite kainos patvirtinimo puslapyje naudodami tolesnį mygtuką, redaguokite brūkšninį kodą bei kainą, jei reikia, ir patvirtinkite!",
 			"line3": "Jei kyla problemų skaitant etiketę, pažymėkite ją kaip nepatikimą.",
-			"line4": "Tai yra bendros pastangos, net jei išsiuntėte nedaug nuotraukų, vis tiek galite padėti kitiems patvirtindami.",
-			"ValidatePrices": "Patvirtinti kainas"
+			"line4": "Tai yra bendros pastangos, net jei išsiuntėte nedaug nuotraukų, vis tiek galite padėti kitiems patvirtindami."
 		},
 		"Stats": "Iššūkių statistika",
 		"MyStats": "Mano statistika",
@@ -239,6 +238,7 @@
 		"ExamplesWithColon": "Pavyzdžiai:",
 		"ExamplesWithColonAndValue": "Pavyzdžiai: {value}",
 		"Edit": "Redaguoti",
+		"End": "End",
 		"Filter": "Filtras",
 		"FilterProductWithPriceCount": "Su kaina",
 		"FilterProductWithPriceCountHide": "Slėpti produktus su kainomis",
@@ -331,6 +331,7 @@
 		"Share": "Dalintis",
 		"Source": "Šaltinis",
 		"SourceCode": "Pirminis kodas",
+		"Start": "Pradėti",
 		"Stats": "Statistika",
 		"TaglineOriginal": "Atviroji sutelktinių išteklių gautų maisto produktų kainų duomenų bazė",
 		"TaglineAlt1": "Atviroji sutelktinių išteklių gautų kainų duomenų bazė",
