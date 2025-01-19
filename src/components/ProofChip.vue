@@ -1,14 +1,15 @@
 <template>
   <v-chip
     :class="class"
-    :style="style"
+    :style="getStyle"
     label
     size="small"
     density="comfortable"
     :title="$t('Common.Proof')"
     @click="dialog = true"
   >
-    <v-icon icon="mdi-image" />
+    <v-icon :start="withLabel" icon="mdi-image" />
+    <span v-if="withLabel">{{ $t('Common.Proof') }}</span>
   </v-chip>
 
   <ProofDialog
@@ -32,6 +33,10 @@ export default {
       type: Object,
       default: null
     },
+    withLabel: {
+      type: Boolean,
+      default: false
+    },
     readonly: {
       type: Boolean,
       default: false,
@@ -48,6 +53,12 @@ export default {
   data() {
     return {
       dialog: false
+    }
+  },
+  computed: {
+    getStyle() {
+      if (this.withLabel) return null
+      return this.style
     }
   }
 }
