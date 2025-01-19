@@ -135,7 +135,7 @@
 		"Title": "Digite um código de barras"
 	},
 	"Challenge": {
-		"Title": "O desafio atual é...",
+		"Title": "Community challenge",
 		"Subtitle": "Junte-se a outros entusiastas dos preços dos alimentos para reunir informações sobre {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Tire fotografias das etiquetas de preços nas lojas",
@@ -144,16 +144,15 @@
 			"AddPictures": "Adicionar fotografias"
 		},
 		"StepValidate": {
-			"Title": "Validar os preços detetados",
+			"Title": "Validate the detected prices with AI",
 			"line1": "As etiquetas de preço são detectadas automaticamente, mas os robôs ainda precisam da sua ajuda para as validar.",
 			"line2": "Visite a página de validação do preço utilizando o botão abaixo, edite o código de barras e o preço, se necessário, e valide!",
-			"line3": "Se tiver dificuldades para ler a etiqueta, marque-a como ilegível.",
-			"line4": "Este é um esforço colaborativo, mesmo que não tenha enviado muitas fotografias, ainda pode ajudar outras pessoas validando."
+			"line3": "If you're having trouble reading the label, mark it as unreadable.",
+			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
 		},
-		"Stats": "Estatísticas do desafio",
-		"MyStats": "Minhas estatísticas",
 		"PicturesAddedByYou": "Fotografias adicionadas por si",
-		"PricesAddedByYou": "Preços adicionados por si",
+		"PricesAdded": "{challenge_title} prices added",
+		"PricesAddedByYou": "{challenge_title} prices added by you",
 		"MostRecentContributions": "Contribuições mais recentes"
 	},
 	"Common": {
@@ -685,11 +684,8 @@
 		"PriceValidationAssistant": {
 			"Title": "Assistente de validação de preços"
 		},
-		"Challenge": {
-			"Title": "Desafio"
-		},
-		"CurrentChallenge": {
-			"Title": "Desafio atual"
+		"CommunityChallenge": {
+			"Title": "Community Challenge"
 		}
 	},
 	"Search": {
