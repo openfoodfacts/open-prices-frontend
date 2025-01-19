@@ -22,22 +22,22 @@
     </v-card-text>
     <v-divider v-if="!hideActions" />
     <v-card-actions v-if="!hideActions">
-      <v-btn
-        color="error"
-        variant="outlined"
-        prepend-icon="mdi-crop"
-        @click="removePriceTag(3)"
-      >
-        {{ $t('Common.Error') }}
-      </v-btn>
-      <v-btn
-        color="warning"
-        variant="outlined"
-        prepend-icon="mdi-eye-off-outline"
-        @click="removePriceTag(2)"
-      >
-        {{ $t('Common.Unreadable') }}
-      </v-btn>
+      <v-menu scroll-strategy="close">
+        <template #activator="{ props }">
+          <v-btn v-bind="props" color="error" variant="outlined" append-icon="mdi-menu-down">
+            {{ $t('Common.Error') }}
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item :slim="true" prepend-icon="mdi-crop" @click="removePriceTag(3)">
+            {{ $t('Common.Truncated') }}
+          </v-list-item>
+          <v-divider class="mt-2 mb-2" />
+          <v-list-item :slim="true" prepend-icon="mdi-eye-off-outline" @click="removePriceTag(2)">
+            {{ $t('Common.Unreadable') }}
+          </v-list-item>
+        </v-list>
+      </v-menu>
       <v-spacer />
       <v-btn
         v-if="!hideUploadAction"
