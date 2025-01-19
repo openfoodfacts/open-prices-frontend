@@ -40,7 +40,7 @@
       </v-btn>
       <v-spacer />
       <v-btn
-        v-if="mode === 'Validation'"
+        v-if="!hideUploadAction"
         color="primary"
         variant="flat"
         @click="validatePriceTag"
@@ -83,10 +83,6 @@ export default {
         product_name: null,
       })
     },
-    mode: {
-      type: String,
-      default: 'Contribution'  // or 'Validation'
-    },
     showProductNameField: {
       type: Boolean,
       default: false
@@ -96,6 +92,10 @@ export default {
       default: false
     },
     hideActions: {
+      type: Boolean,
+      default: false
+    },
+    hideUploadAction: {
       type: Boolean,
       default: false
     }
