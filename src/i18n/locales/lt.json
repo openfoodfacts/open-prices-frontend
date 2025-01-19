@@ -135,7 +135,7 @@
 		"Title": "Įveskite brūkšninį kodą"
 	},
 	"Challenge": {
-		"Title": "Dabartinis iššūkis yra...",
+		"Title": "Community challenge",
 		"Subtitle": "Prisijunkite prie kitų maisto kainų entuziastų, renkačių informaciją apie {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Fotografuoti kainų etiketes parduotuvėse",
@@ -144,16 +144,15 @@
 			"AddPictures": "Pridėti nuotraukas"
 		},
 		"StepValidate": {
-			"Title": "Patvirtinti aptiktas kainas",
+			"Title": "Validate the detected prices with AI",
 			"line1": "Kainų etiketės aptinkamos automatiškai, tačiau robotams vis tiek reikia jūsų pagalbos, kad jas patvirtintų.",
 			"line2": "Apsilankykite kainos patvirtinimo puslapyje naudodami tolesnį mygtuką, redaguokite brūkšninį kodą bei kainą, jei reikia, ir patvirtinkite!",
-			"line3": "Jei kyla problemų skaitant etiketę, pažymėkite ją kaip nepatikimą.",
-			"line4": "Tai yra bendros pastangos, net jei išsiuntėte nedaug nuotraukų, vis tiek galite padėti kitiems patvirtindami."
+			"line3": "If you're having trouble reading the label, mark it as unreadable.",
+			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
 		},
-		"Stats": "Iššūkių statistika",
-		"MyStats": "Mano statistika",
 		"PicturesAddedByYou": "Jūsų pridėtos nuotraukos",
-		"PricesAddedByYou": "Jūsų pridėtos kainos",
+		"PricesAdded": "{challenge_title} prices added",
+		"PricesAddedByYou": "{challenge_title} prices added by you",
 		"MostRecentContributions": "Naujausi įnašai"
 	},
 	"Common": {
@@ -685,11 +684,8 @@
 		"PriceValidationAssistant": {
 			"Title": "Kainų tvirtinimo asistentas"
 		},
-		"Challenge": {
-			"Title": "Iššūkis"
-		},
-		"CurrentChallenge": {
-			"Title": "Dabartinis iššūkis"
+		"CommunityChallenge": {
+			"Title": "Community Challenge"
 		}
 	},
 	"Search": {
