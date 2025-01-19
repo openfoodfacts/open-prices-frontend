@@ -1,13 +1,23 @@
 <template>
-  <v-card v-if="exampleProofUrl">
+  <v-card v-if="challenge.exampleProofUrl">
     <v-card-title>
       {{ $t('Challenge.StepTakePictures.Title') }}
     </v-card-title>
     <v-card-text>
+      <v-row class="mb-2">
+        <v-col cols="12" sm="6">
+          <StatCard :value="challenge.numberOfProofs" variant="outlined" :subtitle="$t('Common.PicturesAdded')" />
+        </v-col>
+        <v-col cols="12" sm="6">
+          <StatCard :value="challenge.userProofContributions" variant="outlined" :subtitle="$t('Challenge.PicturesAddedByYou')" />
+        </v-col>
+      </v-row>
       <p class="mb-2">
         {{ $t('Challenge.StepTakePictures.line1') }}
       </p>
-      <v-img :src="exampleProofUrl" style="max-height: 200px" />
+      <a :href="challenge.exampleProofUrl" target="_blank">
+        <v-img :src="challenge.exampleProofUrl" style="max-height: 200px" />
+      </a>
       <p class="mb-2 mt-2">
         {{ $t('Challenge.StepTakePictures.line2') }}
       </p>
@@ -29,10 +39,14 @@
 </template>
   
 <script>
+import { defineAsyncComponent } from 'vue'
 export default {
+  components: {
+    StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
+  },
   props: {
-    exampleProofUrl: {
-      type: String,
+    challenge: {
+      type: Object,
       default: () => {}
     }
   },

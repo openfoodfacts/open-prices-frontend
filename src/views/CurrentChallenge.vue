@@ -1,12 +1,12 @@
 <template>
   <h1 class="text-h5 mb-1">
-    {{ $t('Challenge.Title') }} {{ challenge.icon }} {{ challenge.title }} {{ challenge.icon }}
+    {{ $t('Challenge.Title') }}
   </h1>
 
   <v-row>
     <v-col cols="12" lg="6">
       <p class="mb-2">
-        {{ $t('Challenge.Subtitle', {challenge_title: challenge.title, challenge_subtitle: challenge.subtitle}) }}
+        {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
       </p>
     </v-col>
     <v-col cols="12" lg="6">
@@ -16,46 +16,10 @@
 
   <v-row>
     <v-col cols="12" lg="6">
-      <ChallengeTakePicturesCard :exampleProofUrl="challenge.exampleProofUrl" />
+      <ChallengeTakePicturesCard :challenge="challenge" />
     </v-col>
     <v-col cols="12" lg="6">
-      <ChallengeValidateCard />
-    </v-col>
-  </v-row>
-
-  <v-row>
-    <v-col cols="12">
-      <h2 class="text-h6 mb-1">
-        {{ $t('Challenge.Stats') }}
-      </h2>
-
-      <v-row>
-        <v-col cols="12" md="4">
-          <StatCard :value="challenge.numberOfProofs" :subtitle="$t('Common.PicturesAdded')" />
-        </v-col>
-        <v-col cols="12" md="4">
-          <StatCard :value="challenge.numberOfContributions" :subtitle="$t('Common.PricesAdded')" />
-        </v-col>
-        <v-col cols="12" md="4">
-          <StatCard :value="challenge.numberOfContributors" :subtitle="$t('Common.Contributors')" />
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
-
-  <v-row>
-    <v-col v-if="username" cols="12">
-      <h2 class="text-h6 mb-1">
-        {{ $t('Challenge.MyStats') }}
-      </h2>
-      <v-row>
-        <v-col cols="12" md="4">
-          <StatCard :value="challenge.userProofContributions" :subtitle="$t('Challenge.PicturesAddedByYou')" />
-        </v-col>
-        <v-col cols="12" md="4">
-          <StatCard :value="challenge.userContributions" :subtitle="$t('Challenge.PricesAddedByYou')" />
-        </v-col>
-      </v-row>
+      <ChallengeValidateCard :challenge="challenge" />
     </v-col>
   </v-row>
 
@@ -79,7 +43,6 @@ import { useAppStore } from '../store'
 
 export default {
   components: {
-    StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     ChallengeTimeline: defineAsyncComponent(() => import('../components/ChallengeTimeline.vue')),
     ChallengeTakePicturesCard: defineAsyncComponent(() => import('../components/ChallengeTakePicturesCard.vue')),
@@ -89,12 +52,11 @@ export default {
     return {
       challenge: {
         title: "Nutella",
-        subtitle: "(and other hazelnut spreads)",
         icon: "🌰",
+        subtitle: "(and other hazelnut spreads)",
         startDate: "2025-01-20",
         endDate: "2025-01-31",
         categories: ["en:hazelnut-spreads"],
-        numberOfContributors: 0,
         numberOfContributions: 0,
         latestContributions: [],
         numberOfProofs: 0,

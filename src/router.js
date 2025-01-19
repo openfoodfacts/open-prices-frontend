@@ -44,7 +44,7 @@ const routes = [
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true, breadcrumbs: [{title: 'Stats', disabled: true }] }},
   { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', icon: 'mdi-cog-outline', drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true, breadcrumbs: [{title: 'About', disabled: true }] }},
-  { path: '/experiments/challenge', name: 'challenge', component: () => import('./views/CurrentChallenge.vue'), meta: { title: 'Community Challenge', icon: 'mdi-medal-outline',  breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'Challenge', disabled: true }] }},
+  { path: '/experiments/challenge', name: 'challenge', component: () => import('./views/CurrentChallenge.vue'), meta: { title: 'Community Challenge', icon: 'mdi-medal-outline',  breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'CommunityChallenge', disabled: true }] }},
   // Why this redirect?
   // The app used to be available at https://prices.openfoodfacts.org/app
   // It is now available at https://prices.openfoodfacts.org

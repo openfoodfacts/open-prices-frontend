@@ -2,7 +2,7 @@
   <v-card
     :title="value"
     :subtitle="subtitle"
-    variant="tonal"
+    :variant="variant"
     density="compact"
     :to="to ? to : null"
   >
@@ -33,7 +33,11 @@ export default {
     to: {
       type: String,
       default: ''
-    }
+    },
+    variant: {
+      type: String,
+      default: 'tonal'
+    },
   }
 }
 </script>
