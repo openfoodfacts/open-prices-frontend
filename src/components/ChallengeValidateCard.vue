@@ -4,6 +4,14 @@
       {{ $t('Challenge.StepValidate.Title') }}
     </v-card-title>
     <v-card-text class="flex-grow-1">
+      <v-row class="mb-2">
+        <v-col cols="12" sm="6">
+          <StatCard :value="challenge.numberOfContributions" :subtitle="$t('Challenge.PricesAdded', { challenge_title: challenge.title })" />
+        </v-col>
+        <v-col cols="12" sm="6">
+          <StatCard :value="challenge.userContributions" :subtitle="$t('Challenge.PricesAddedByYou', { challenge_title: challenge.title })" />
+        </v-col>
+      </v-row>
       <p class="mb-2">
         {{ $t('Challenge.StepValidate.line1') }}
       </p>
@@ -27,10 +35,22 @@
         prepend-icon="mdi-checkbox-marked-circle-plus-outline"
         to="/experiments/price-validation-assistant"
       >
-        {{ $t('Common.ValidatePrices') }} 🤖
+        {{ $t('Common.ValidatePrices') }}
       </v-btn>
     </v-card-actions>
   </v-card>
 </template>
 <script>
+import { defineAsyncComponent } from 'vue'
+export default {
+  components: {
+    StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
+  },
+  props: {
+    challenge: {
+      type: Object,
+      default: () => {}
+    }
+  },
+}
 </script>
