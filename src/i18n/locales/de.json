@@ -135,7 +135,7 @@
 		"Title": "Strichcode eingeben"
 	},
 	"Challenge": {
-		"Title": "Die aktuelle Herausforderung ist ...",
+		"Title": "Community challenge",
 		"Subtitle": "Sammeln Sie gemeinsam mit anderen Lebensmittelpreis-Enthusiasten Informationen über {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Fotografieren Sie Preisschilder in Geschäften",
@@ -144,16 +144,15 @@
 			"AddPictures": "Fotos hinzufügen"
 		},
 		"StepValidate": {
-			"Title": "Bestätigen Sie die ermittelten Preise",
+			"Title": "Validate the detected prices with AI",
 			"line1": "Die Preisschilder werden automatisch erkannt, aber die Roboter benötigen dennoch Ihre Hilfe, um sie zu bestätigen.",
 			"line2": "Besuchen Sie die Preisvalidierungsseite über die Schaltfläche unten, bearbeiten Sie den Strichcode und den Preis, falls erforderlich, und bestätigen Sie!",
-			"line3": "Wenn Sie Schwierigkeiten haben, das Etikett zu lesen, kennzeichnen Sie es als nicht lesbar.",
-			"line4": "Dies ist eine Gemeinschaftsleistung. Auch wenn Sie nicht viele Bilder eingesandt haben, können Sie anderen helfen, indem Sie sie bestätigen."
+			"line3": "If you're having trouble reading the label, mark it as unreadable.",
+			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
 		},
-		"Stats": "Statistik der Herausforderung",
-		"MyStats": "Meine Statistiken",
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
-		"PricesAddedByYou": "Eigene hinzugefügte Preise",
+		"PricesAdded": "{challenge_title} prices added",
+		"PricesAddedByYou": "{challenge_title} prices added by you",
 		"MostRecentContributions": "Neueste Beiträge"
 	},
 	"Common": {
@@ -685,11 +684,8 @@
 		"PriceValidationAssistant": {
 			"Title": "Preisprüfungsassistent"
 		},
-		"Challenge": {
-			"Title": "Herausforderung"
-		},
-		"CurrentChallenge": {
-			"Title": "Aktuelle Herausforderung"
+		"CommunityChallenge": {
+			"Title": "Community Challenge"
 		}
 	},
 	"Search": {
