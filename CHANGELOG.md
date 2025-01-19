@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.113.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.112.4...v1.113.0) (2025-01-19)
+
+
+### Features
+
+* **Challenge:** Match btn style with multiple proof upload ([#1281](https://github.com/openfoodfacts/open-prices-frontend/issues/1281)) ([67c4f28](https://github.com/openfoodfacts/open-prices-frontend/commit/67c4f28e5698af827728e1374b085c7cd6cfc356))
+* **SignIn:** proper redirect when sign-in is required ([#1280](https://github.com/openfoodfacts/open-prices-frontend/issues/1280)) ([1e9ff57](https://github.com/openfoodfacts/open-prices-frontend/commit/1e9ff5788ee704aaed5593f672254066851bd4e3))
+
+
+### Bug Fixes
+
+* **Theme:** also change Sign in CTA button color to new primary. ref [#1269](https://github.com/openfoodfacts/open-prices-frontend/issues/1269) ([e111ab0](https://github.com/openfoodfacts/open-prices-frontend/commit/e111ab0aa77b5d44d6552995bf6bcb13a5feaf47))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1283](https://github.com/openfoodfacts/open-prices-frontend/issues/1283)) ([2ae5ca0](https://github.com/openfoodfacts/open-prices-frontend/commit/2ae5ca0670de35eb35fda6eac05c661ef4e1a2e9))
+
 ## [1.112.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.112.3...v1.112.4) (2025-01-18)
 
 
