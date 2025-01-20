@@ -691,6 +691,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Gemeinschaftliche Herausforderung"
+		},
+		"ValidatePrices": {
+			"Title": "Preise prüfen"
 		}
 	},
 	"Search": {
