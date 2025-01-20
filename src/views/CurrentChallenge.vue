@@ -4,22 +4,22 @@
   </h1>
 
   <v-row>
-    <v-col cols="12" lg="6">
+    <v-col cols="12" md="6">
       <p class="mb-2">
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
       </p>
     </v-col>
-    <v-col cols="12" lg="6">
+    <v-col cols="12" md="6">
       <ChallengeTimeline :challenge="challenge" />
     </v-col>
   </v-row>
 
   <v-row>
-    <v-col cols="12" lg="6">
+    <v-col cols="12" md="6">
       <ChallengeTakePicturesCard :challenge="challenge" />
     </v-col>
-    <v-col cols="12" lg="6">
-      <ChallengeValidateCard :challenge="challenge" />
+    <v-col cols="12" md="6">
+      <ChallengeValidateCard :challenge="challenge" height="100%" />
     </v-col>
   </v-row>
 
@@ -75,6 +75,7 @@ export default {
   },
   mounted() {
     this.getStats()
+    this.getLatestPrices()
   },
   methods: {
     getStats() {
@@ -83,11 +84,6 @@ export default {
       .then((data) => {
         this.challenge.numberOfContributions = data.price__count
         this.loading = false
-      })
-
-      api.getPrices({ size: 10, product__categories_tags__contains: this.challenge.categories[0], created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
-      .then((data) => {
-        this.challenge.latestContributions = data.items
       })
 
       api.getProofs({ size: 1, created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
@@ -105,7 +101,12 @@ export default {
           this.challenge.userProofContributions = data.total
         })
       }
-      
+    },
+    getLatestPrices() {
+      api.getPrices({ size: 10, product__categories_tags__contains: this.challenge.categories[0], created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
+      .then((data) => {
+        this.challenge.latestContributions = data.items
+      })
     }
   }
 }

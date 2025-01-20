@@ -1,15 +1,15 @@
 <template>
-  <v-card v-if="challenge.exampleProofUrl">
+  <v-card>
     <v-card-title>
       {{ $t('Challenge.StepTakePictures.Title') }}
     </v-card-title>
     <v-card-text>
       <v-row class="mb-2">
-        <v-col cols="12" sm="6">
-          <StatCard :value="challenge.numberOfProofs" :subtitle="$t('Common.PicturesAdded')" />
+        <v-col cols="6">
+          <StatCard :value="challenge.numberOfProofs" :subtitle="statSubtitleProofCount" />
         </v-col>
-        <v-col cols="12" sm="6">
-          <StatCard :value="challenge.userProofContributions" :subtitle="$t('Challenge.PicturesAddedByYou')" />
+        <v-col cols="6">
+          <StatCard :value="challenge.userProofContributions" :subtitle="statSubtitleProofOwnerCount" />
         </v-col>
       </v-row>
       <p class="mb-2">
@@ -50,6 +50,14 @@ export default {
       default: () => {}
     }
   },
+  computed: {
+    statSubtitleProofCount() {
+      return this.$vuetify.display.smAndUp ? this.$t('Common.PicturesAdded') : this.$t('Common.Pictures')
+    },
+    statSubtitleProofOwnerCount() {
+      return this.$vuetify.display.smAndUp ? this.$t('Common.PicturesAddedByYou') : this.$t('Common.PicturesByYou')
+    }
+  }
 }
 </script>
   

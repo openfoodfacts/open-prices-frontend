@@ -1,27 +1,27 @@
 <template>
-  <v-card class="fill-height d-flex flex-column">
+  <v-card class="d-flex flex-column">
     <v-card-title>
       {{ $t('Challenge.StepValidate.Title') }}
     </v-card-title>
     <v-card-text class="flex-grow-1">
       <v-row class="mb-2">
-        <v-col cols="12" sm="6">
-          <StatCard :value="challenge.numberOfContributions" :subtitle="$t('Challenge.PricesAdded', { challenge_title: challenge.title })" />
+        <v-col cols="6">
+          <StatCard :value="challenge.numberOfContributions" :subtitle="statSubtitlePriceCount" />
         </v-col>
-        <v-col cols="12" sm="6">
-          <StatCard :value="challenge.userContributions" :subtitle="$t('Challenge.PricesAddedByYou', { challenge_title: challenge.title })" />
+        <v-col cols="6">
+          <StatCard :value="challenge.userContributions" :subtitle="statSubtitlePriceOwnerCount" />
         </v-col>
       </v-row>
       <p class="mb-2">
         {{ $t('Challenge.StepValidate.line1') }}
       </p>
-      <p class="mb-4">
+      <p class="mb-2">
         {{ $t('Challenge.StepValidate.line2') }}
       </p>
       <p class="mb-2">
         {{ $t('Challenge.StepValidate.line3') }}
       </p>
-      <p class="mb-4">
+      <p class="mb-2">
         {{ $t('Challenge.StepValidate.line4') }}
       </p>
     </v-card-text>
@@ -40,8 +40,10 @@
     </v-card-actions>
   </v-card>
 </template>
+
 <script>
 import { defineAsyncComponent } from 'vue'
+
 export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
@@ -52,5 +54,13 @@ export default {
       default: () => {}
     }
   },
+  computed: {
+    statSubtitlePriceCount() {
+      return this.$vuetify.display.smAndUp ? this.$t('Challenge.PricesAdded', { challenge_title: this.challenge.title }) : this.$t('Challenge.Prices', { challenge_title: this.challenge.title })
+    },
+    statSubtitlePriceOwnerCount() {
+      return this.$vuetify.display.smAndUp ? this.$t('Challenge.PricesAddedByYou', { challenge_title: this.challenge.title }) : this.$t('Challenge.PricesByYou', { challenge_title: this.challenge.title })
+    }
+  }
 }
 </script>
