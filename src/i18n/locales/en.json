@@ -214,6 +214,7 @@
 		"Done": "Done",
 		"Error": "Error",
 		"Experiments": "Experiments",
+		"Join": "Join",
 		"Label": "Label",
 		"Labels": "Labels",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
