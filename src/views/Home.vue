@@ -14,6 +14,10 @@
 
   <br>
 
+  <ChallengeBanner />
+
+  <br>
+
   <v-row>
     <v-col v-for="price in latestPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
@@ -45,6 +49,7 @@ import utils from '../utils.js'
 export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
+    ChallengeBanner: defineAsyncComponent(() => import('../components/ChallengeBanner.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
