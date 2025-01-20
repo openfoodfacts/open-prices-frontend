@@ -214,6 +214,7 @@
 		"Done": "Fertig",
 		"Error": "Fehler",
 		"Experiments": "Experimente",
+		"Join": "Join",
 		"Label": "Kennzeichnung",
 		"Labels": "Labels",
 		"LabelTotal": "{count} Etiketten | {count} Etikett | {count} Etiketten",
@@ -290,6 +291,11 @@
 		"Physical": "Physisch",
 		"Picture": "Bild",
 		"Pictures": "Fotos",
+		"PictureSelect": "Select a picture",
+		"PictureSelectMultiple": "Select pictures",
+		"PictureSelected": "Picture selected!",
+		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
+		"PictureFull": "Full-size picture",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Fotos hinzugefügt",
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
@@ -360,6 +366,7 @@
 		"Unreadable": "Nicht lesbar",
 		"Upload": "Hochladen",
 		"UploadMultipleImages": "Lade {count} Bild hoch | Lade {count} Bilder hoch",
+		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "{count} Nachweis hochladen | {count} Nachweise hochladen",
 		"UploadMultiplePrices": "{count} Preis hochladen | {count} Preise hochladen",
 		"URL": "URL",
@@ -548,7 +555,8 @@
 		"ProductNotFound": "Produkt nicht in Open Food Facts gefunden... Zögern Sie nicht, es hinzuzufügen 🙂"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "Alle von Ihnen ausgewählten Preisschildbilder sollten den gleichen Standort haben und am gleichen Tag aufgenommen worden sein."
+		"HowToMultiple": "Alle von Ihnen ausgewählten Preisschildbilder sollten den gleichen Standort haben und am gleichen Tag aufgenommen worden sein.",
+		"HowToMultipleShort": "Pictures should share the same shop location and date."
 	},
 	"ProofCard": {
 		"Proof": "Nachweis",
