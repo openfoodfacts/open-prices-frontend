@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row v-if="mode === 'Edit'">
     <v-col cols="12">
       <v-row v-if="productIsTypeCategory">
         <v-col>
@@ -80,6 +80,16 @@
       @close="changeCurrencyDialog = false"
     />
   </v-row>
+  <v-row v-else-if="mode === 'Display'">
+    <v-col cols="12">
+      <v-alert
+        icon="mdi-currency-usd"
+        density="compact"
+      >
+        <PricePriceRow :price="priceForm" />
+      </v-alert>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -89,6 +99,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     ChangeCurrencyDialog: defineAsyncComponent(() => import('../components/ChangeCurrencyDialog.vue')),
   },
   props: {
@@ -103,6 +114,10 @@ export default {
         currency: null,
         receipt_quantity: null,
       })
+    },
+    mode: {
+      type: String,
+      default: 'Edit'  // or 'Display'
     },
     hideCurrencyChoice: {
       type: Boolean,
@@ -130,6 +145,12 @@ export default {
     }
   },
   computed: {
+    categoryTag() {
+      return this.priceForm.category_tag
+    },
+    hasCategoryTag() {
+      return !!this.categoryTag
+    },
     priceRules() {
       return [
         value => !!value && !!value.trim() || this.$t('PriceRules.AmountRequired'),
@@ -191,6 +212,16 @@ export default {
           }
           return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
         }
+      }
+      return null
+    },
+    getPriceValueDisplay(price) {
+      if (price) {
+        price = parseFloat(price)
+        if (this.hasCategoryTag) {
+          return this.getPricePerUnit(price)
+        }
+        return this.getPriceValue(price, this.priceForm.currency)
       }
       return null
     },

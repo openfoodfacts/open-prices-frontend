@@ -29,7 +29,7 @@
             </span>
           </p>
 
-          <PricePriceRow v-if="price" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
+          <PricePriceRow v-if="price" class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
         </v-col>
       </v-row>
 

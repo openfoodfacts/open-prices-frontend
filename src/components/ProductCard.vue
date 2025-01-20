@@ -33,7 +33,7 @@
     <v-divider v-if="latestPrice" />
     <v-container v-if="latestPrice" class="pa-2">
       <h4>{{ $t('ProductCard.LatestPrice') }}</h4>
-      <PricePriceRow :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
+      <PricePriceRow class="mt-0" :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
       <PriceFooterRow :price="latestPrice" />
     </v-container>
   </v-card>

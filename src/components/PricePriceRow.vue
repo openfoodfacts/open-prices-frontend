@@ -1,5 +1,5 @@
 <template>
-  <v-row style="margin-top:0;">
+  <v-row>
     <v-col cols="12" class="pt-2 pb-2">
       <span class="mr-1">{{ getPriceValueDisplay(price.price) }}</span>
       <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(price.price) }})</span>
