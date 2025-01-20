@@ -23,7 +23,7 @@
   
   <v-row v-if="step === 2">
     <v-col cols="12">
-      <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-alert">
+      <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="warning" variant="outlined">
         {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
       </v-alert>
       <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-magnify">

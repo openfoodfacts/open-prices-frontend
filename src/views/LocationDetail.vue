@@ -7,7 +7,7 @@
 
   <v-row v-if="!locationFound" class="mt-0">
     <v-col cols="12">
-      <v-alert v-if="!loading" type="error" variant="outlined" icon="mdi-alert">
+      <v-alert v-if="!loading" type="error" variant="outlined">
         <i>{{ $t('LocationDetail.LocationNotFound') }}</i>
       </v-alert>
     </v-col>
