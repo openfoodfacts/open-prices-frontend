@@ -246,6 +246,7 @@
 		"FilterProductWithoutPriceCount": "Ohne Preise",
 		"FilterPriceMoreThan30DaysHide": "Preise ausblenden, die älter als 30 Tage sind",
 		"FilterProofWithPriceCountHide": "Nachweise mit Preisen ausblenden",
+		"FilterPriceTagWithProofOwner": "Show only my proofs",
 		"FilterLocationWithPriceCountHide": "Orte mit Preisen ausblenden",
 		"FilterUserWithPriceCountHide": "Mitwirkende mit Preisen ausblenden",
 		"Fix": "Fix",
