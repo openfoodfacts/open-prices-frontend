@@ -246,6 +246,7 @@
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
+		"FilterPriceTagWithProofOwner": "Show only my proofs",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
