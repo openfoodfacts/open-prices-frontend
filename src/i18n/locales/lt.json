@@ -151,7 +151,9 @@
 			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
 		},
 		"PicturesAddedByYou": "Jūsų pridėtos nuotraukos",
+		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
+		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "{challenge_title} prices added by you",
 		"MostRecentContributions": "Naujausi įnašai"
 	},
@@ -288,7 +290,9 @@
 		"Physical": "Fizinis",
 		"Picture": "Picture",
 		"Pictures": "Nuotraukos",
+		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pridėtos nuotraukos",
+		"PicturesAddedByYou": "Jūsų pridėtos nuotraukos",
 		"PRICE_TAG": "Kainos etiketė",
 		"PriceCount": "{count} kainos | {count} kaina | {count} kainų",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",

@@ -151,7 +151,9 @@
 			"line4": "இது ஒரு கூட்டு முயற்சியாகும், நீங்கள் அதிக படங்களை அனுப்பாவிட்டாலும், சரிபார்த்து மற்றவர்களுக்கு உதவலாம்."
 		},
 		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
+		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} விலைகள் சேர்க்கப்பட்டன",
+		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "உங்களால் {challenge_title} விலைகள் சேர்க்கப்பட்டன",
 		"MostRecentContributions": "மிகச் சமீபத்திய பங்களிப்புகள்"
 	},
@@ -288,7 +290,9 @@
 		"Physical": "Physical",
 		"Picture": "Picture",
 		"Pictures": "படங்கள்",
+		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "படங்கள் சேர்க்கப்பட்டன",
+		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
 		"PRICE_TAG": "Price tag",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
