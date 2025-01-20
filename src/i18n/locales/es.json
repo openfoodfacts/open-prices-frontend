@@ -214,6 +214,7 @@
 		"Done": "Hecho",
 		"Error": "Error",
 		"Experiments": "Experiments",
+		"Join": "Join",
 		"Label": "Sello",
 		"Labels": "Etiquetas",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
@@ -290,6 +291,11 @@
 		"Physical": "Physical",
 		"Picture": "Imagen",
 		"Pictures": "Imágenes",
+		"PictureSelect": "Select a picture",
+		"PictureSelectMultiple": "Select pictures",
+		"PictureSelected": "Picture selected!",
+		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
+		"PictureFull": "Full-size picture",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Imágenes añadidas",
 		"PicturesAddedByYou": "Fotos añadidas por ti",
@@ -360,6 +366,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "Cargar",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
@@ -548,7 +555,8 @@
 		"ProductNotFound": "No se ha encontrado el producgto en Open Food Facts... No dudes en agregarlo :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "Todas las imágenes de etiquetas de precios que seleccione deben compartir la misma ubicación de la tienda y haber sido tomadas el mismo día."
+		"HowToMultiple": "Todas las imágenes de etiquetas de precios que seleccione deben compartir la misma ubicación de la tienda y haber sido tomadas el mismo día.",
+		"HowToMultipleShort": "Pictures should share the same shop location and date."
 	},
 	"ProofCard": {
 		"Proof": "Comprobante",
