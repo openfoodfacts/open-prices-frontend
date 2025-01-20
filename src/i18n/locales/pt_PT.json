@@ -691,6 +691,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Desafio da comunidade"
+		},
+		"ValidatePrices": {
+			"Title": "Validar preços"
 		}
 	},
 	"Search": {
