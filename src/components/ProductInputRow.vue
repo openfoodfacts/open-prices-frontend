@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row v-if="mode === 'Edit'">
     <v-col>
       <v-row>
         <v-col>
@@ -60,6 +60,31 @@
     </v-col>
   </v-row>
 
+  <v-row v-else-if="mode === 'Display'">
+    <v-col v-if="productIsTypeProduct" cols="12">
+      <v-alert
+        class="mb-2"
+        icon="mdi-barcode"
+        density="compact"
+      >
+        {{ productForm.product_code }}
+      </v-alert>
+      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="true" :hideProductActions="true" :readonly="true" elevation="1" />
+    </v-col>
+    <v-col v-else-if="productIsTypeCategory" cols="12">
+      <v-alert
+        icon="mdi-basket-outline"
+        density="compact"
+      >
+        <v-chip label class="mr-1" size="small" density="comfortable">
+          {{ productForm.category_tag }}
+        </v-chip>
+        <PriceOrigins :priceOrigins="productForm.origins_tags" />
+        <PriceLabels :priceLabels="productForm.labels_tags" />
+      </v-alert>
+    </v-col>
+  </v-row>
+
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
     v-model="barcodeScannerDialog"
@@ -82,6 +107,8 @@ import utils from '../utils.js'
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    PriceOrigins: defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
+    PriceLabels: defineAsyncComponent(() => import('../components/PriceLabels.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
   },
   props: {
@@ -95,6 +122,10 @@ export default {
         origins_tags: '',
         labels_tags: []
       })
+    },
+    mode: {
+      type: String,
+      default: 'Edit'  // or 'Display'
     },
     disableInitWhenSwitchingType: {
       type: Boolean,
