@@ -390,10 +390,11 @@ export default {
         const label = priceTag['predictions'][0]['data']
         // remove anything that is not a number from label.barcode
         const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''
+        const priceType = barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
         const productPriceForm = {
           id: priceTag.id,
-          type: barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY,
-          category_tag: label.product,
+          type: priceType,
+          category_tag: priceType === constants.PRICE_TYPE_CATEGORY ? label.product : null,  // also set to null if product is 'other' ?
           origins_tags: [label.origin],
           labels_tags: label.organic ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : [],
           price: label.price.toString(),
