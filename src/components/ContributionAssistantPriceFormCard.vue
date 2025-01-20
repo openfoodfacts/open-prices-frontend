@@ -13,8 +13,8 @@
           />
         </v-col>
       </v-row>
-      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
-      <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
+      <ProductInputRow :productForm="productPriceForm" :mode="mode" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
+      <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :mode="mode" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
     <v-divider v-if="!hideProofDetails" />
     <v-card-text v-if="!hideProofDetails">
@@ -38,6 +38,16 @@
           </v-list-item>
         </v-list>
       </v-menu>
+      <v-spacer />
+      <v-btn
+        v-if="mode === 'Display'"
+        color="warning"
+        variant="outlined"
+        prepend-icon="mdi-pencil"
+        @click="mode = 'Edit'"
+      >
+        {{ $t('Common.Fix') }}
+      </v-btn>
       <v-spacer />
       <v-btn
         v-if="!hideUploadAction"
@@ -103,6 +113,7 @@ export default {
   emits: ['removePriceTag', 'validatePriceTag'],
   data() {
     return {
+      mode: 'Display',  // 'Edit'
       productFormFilled: false,
       pricePriceFormFilled: false,
     }
