@@ -47,7 +47,7 @@
                 prepend-icon="mdi-checkbox-marked-circle-plus-outline"
                 @click="goToPriceValidation"
               >
-                {{ $t('Common.ValidatePrices') }} 🤖
+                {{ $t('Common.ValidatePrices') }}
               </v-btn>
             </v-col>
             <v-col cols="12" sm="4">
