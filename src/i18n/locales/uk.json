@@ -214,6 +214,7 @@
 		"Done": "Виконано",
 		"Error": "Помилка",
 		"Experiments": "Експерименти",
+		"Join": "Join",
 		"Label": "Мітка",
 		"Labels": "Етикетки",
 		"LabelTotal": "{count} мітки | {count} мітка | {count} мітки",
@@ -290,6 +291,11 @@
 		"Physical": "Фізичний",
 		"Picture": "Зображення",
 		"Pictures": "Pictures",
+		"PictureSelect": "Select a picture",
+		"PictureSelectMultiple": "Select pictures",
+		"PictureSelected": "Picture selected!",
+		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
+		"PictureFull": "Full-size picture",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
@@ -360,6 +366,7 @@
 		"Unreadable": "Неможливо прочитати",
 		"Upload": "Завантажити",
 		"UploadMultipleImages": "Завантажити {count} зображення | Завантажити {count} зображеннь",
+		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Завантажити ціну {count} | Завантажити ціни {count}",
 		"UploadMultiplePrices": "Завантажити ціну {count} | Завантажити ціни {count}",
 		"URL": "URL-адреса",
@@ -548,7 +555,8 @@
 		"ProductNotFound": "Продукт не знайдено в Open Food Facts... Не зволікайте, додайте його :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "Усі зображення цінників, які ви виберете, мають мати одне місце розташування магазину та зроблені в один день."
+		"HowToMultiple": "Усі зображення цінників, які ви виберете, мають мати одне місце розташування магазину та зроблені в один день.",
+		"HowToMultipleShort": "Pictures should share the same shop location and date."
 	},
 	"ProofCard": {
 		"Proof": "Доказ",
