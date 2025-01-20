@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.113.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.113.1...v1.113.2) (2025-01-20)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1293](https://github.com/openfoodfacts/open-prices-frontend/issues/1293)) ([5ec56c2](https://github.com/openfoodfacts/open-prices-frontend/commit/5ec56c2db36301d45e6b510010b8f909594b3fdf))
+* **l10n:** New Crowdin translations to review and merge ([#1298](https://github.com/openfoodfacts/open-prices-frontend/issues/1298)) ([59ff577](https://github.com/openfoodfacts/open-prices-frontend/commit/59ff577215cac0f5df3ec663080ef52b1da3e444))
+* **Price Validation:** add link in drawer. rename to 'Validate prices'. remove emoji ([#1297](https://github.com/openfoodfacts/open-prices-frontend/issues/1297)) ([5933d03](https://github.com/openfoodfacts/open-prices-frontend/commit/5933d0304467b6bf30773c07260b3b9368a46c58))
+* **Product input row:** new PriceCategoryChip to display the category_tag localized ([#1296](https://github.com/openfoodfacts/open-prices-frontend/issues/1296)) ([16a6711](https://github.com/openfoodfacts/open-prices-frontend/commit/16a6711fad1a50686fefc4120ded60f2936a8d71))
+* **Product missing:** remove warning icon to scare less users ([#1295](https://github.com/openfoodfacts/open-prices-frontend/issues/1295)) ([dfbc4a2](https://github.com/openfoodfacts/open-prices-frontend/commit/dfbc4a2cfe28fd3704125b7ce20942dffa5d7d84))
+
 ## [1.113.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.113.0...v1.113.1) (2025-01-20)
 
 
