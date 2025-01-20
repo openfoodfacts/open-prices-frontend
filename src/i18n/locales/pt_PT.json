@@ -246,6 +246,7 @@
 		"FilterProductWithoutPriceCount": "Sem preços",
 		"FilterPriceMoreThan30DaysHide": "Ocultar preços com mais de 30 dias",
 		"FilterProofWithPriceCountHide": "Ocultar comprovativos com preços",
+		"FilterPriceTagWithProofOwner": "Show only my proofs",
 		"FilterLocationWithPriceCountHide": "Ocultar locais com preços",
 		"FilterUserWithPriceCountHide": "Ocultar colaboradores com preços",
 		"Fix": "Fix",
