@@ -76,9 +76,7 @@
         icon="mdi-basket-outline"
         density="compact"
       >
-        <v-chip label class="mr-1" size="small" density="comfortable">
-          {{ productForm.category_tag }}
-        </v-chip>
+        <PriceCategoryChip :priceCategory="productForm.category_tag" />
         <PriceOrigins :priceOrigins="productForm.origins_tags" />
         <PriceLabels :priceLabels="productForm.labels_tags" />
       </v-alert>
@@ -107,6 +105,7 @@ import utils from '../utils.js'
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
     PriceOrigins: defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
     PriceLabels: defineAsyncComponent(() => import('../components/PriceLabels.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
