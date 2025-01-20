@@ -151,7 +151,9 @@
 			"line4": "Auch wenn Sie keine Bilder eingesandt haben, können Sie anderen helfen, indem Sie sie bestätigen."
 		},
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
+		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} Preise hinzugefügt",
+		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "{challenge_title} Preise von Ihnen hinzugefügt",
 		"MostRecentContributions": "Neueste Beiträge"
 	},
@@ -288,7 +290,9 @@
 		"Physical": "Physisch",
 		"Picture": "Bild",
 		"Pictures": "Fotos",
+		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Fotos hinzugefügt",
+		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
 		"PRICE_TAG": "Preisschild",
 		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
 		"PriceAddedCount": "{count} Preise hinzugefügt | {count} Preis hinzugefügt | {count} Preise hinzugefügt",

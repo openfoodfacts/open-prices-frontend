@@ -151,7 +151,9 @@
 			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
 		},
 		"PicturesAddedByYou": "Pictures added by you",
+		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
+		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "{challenge_title} prices added by you",
 		"MostRecentContributions": "Most recent contributions"
 	},
@@ -288,7 +290,9 @@
 		"Physical": "Físico",
 		"Picture": "Foto",
 		"Pictures": "Pictures",
+		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
+		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Etiqueta de preço",
 		"PriceCount": "{count} preços | {count} preço | {count} preços",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
