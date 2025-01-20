@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.114.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.113.2...v1.114.0) (2025-01-20)
+
+
+### Features
+
+* **Challenge:** show simple banner on the home page ([#1304](https://github.com/openfoodfacts/open-prices-frontend/issues/1304)) ([ddd86df](https://github.com/openfoodfacts/open-prices-frontend/commit/ddd86df928ac7b0c3ed553a06b875368cbac7db7))
+* **Price Validation Assistant:** open price validation to all proofs (not just owned) ([#1219](https://github.com/openfoodfacts/open-prices-frontend/issues/1219)) ([53290db](https://github.com/openfoodfacts/open-prices-frontend/commit/53290dbe2837af2c39098f06ff79bf8b11d7b3a6))
+
+
+### Technical
+
+* **Challenge:** extra UI tweaks ([#1301](https://github.com/openfoodfacts/open-prices-frontend/issues/1301)) ([0d11304](https://github.com/openfoodfacts/open-prices-frontend/commit/0d113047e1624929e9d2ac0cbd9ad37dce6c4e70))
+* **l10n:** New Crowdin translations to review and merge ([#1300](https://github.com/openfoodfacts/open-prices-frontend/issues/1300)) ([c169ff8](https://github.com/openfoodfacts/open-prices-frontend/commit/c169ff85f901af4eb3c1544b2dd44b1c74de9306))
+* **l10n:** New Crowdin translations to review and merge ([#1302](https://github.com/openfoodfacts/open-prices-frontend/issues/1302)) ([d761160](https://github.com/openfoodfacts/open-prices-frontend/commit/d761160aa3db17000b0c34bfc9429fc43237c226))
+* **Price Validation Assistant:** reduce even more the number of price tags loaded. ref [#1227](https://github.com/openfoodfacts/open-prices-frontend/issues/1227) ([25e5d41](https://github.com/openfoodfacts/open-prices-frontend/commit/25e5d41bdd1f9daa09c43a26f5fd7996774291e7))
+* **Proofs:** wording: replace 'Image' with 'Picture' ([#1303](https://github.com/openfoodfacts/open-prices-frontend/issues/1303)) ([20adbb9](https://github.com/openfoodfacts/open-prices-frontend/commit/20adbb9f7446af2091818951ef8f43729409a5af))
+
 ## [1.113.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.113.1...v1.113.2) (2025-01-20)
 
 
