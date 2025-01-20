@@ -135,7 +135,7 @@
 		"Title": "Type a barcode"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
+		"Title": "சமூக சவால்",
 		"Subtitle": "{challenge_title} {challenge_subtitle} பற்றிய தகவல்களைச் சேகரிப்பதில் மற்ற உணவு விலை ஆர்வலர்களுடன் இணையுங்கள்.",
 		"StepTakePictures": {
 			"Title": "கடைகளில் விலைக் குறிச்சொற்களின் படங்களை எடுக்கவும்",
@@ -144,15 +144,15 @@
 			"AddPictures": "படங்களைச் சேர்க்கவும்"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
+			"Title": "கண்டறியப்பட்ட விலைகளைச் சரிபார்க்கவும்",
 			"line1": "விலைக் குறிச்சொற்கள் தானாகவே கண்டறியப்படும், ஆனால் ரோபோக்களுக்கு அவற்றைச் சரிபார்க்க உங்கள் உதவி இன்னும் தேவைப்படுகிறது.",
 			"line2": "கீழே உள்ள பொத்தானைப் பயன்படுத்தி விலை சரிபார்ப்புப் பக்கத்தைப் பார்வையிடவும், தேவைப்பட்டால் பார்கோடு மற்றும் விலையைத் திருத்தவும் மற்றும் சரிபார்க்கவும் !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"line3": "லேபிளைப் படிப்பதில் சிக்கல் இருந்தால், அதைப் படிக்க முடியாததாகக் குறிக்கவும்.",
+			"line4": "இது ஒரு கூட்டு முயற்சியாகும், நீங்கள் அதிக படங்களை அனுப்பாவிட்டாலும், சரிபார்த்து மற்றவர்களுக்கு உதவலாம்."
 		},
 		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
-		"PricesAdded": "{challenge_title} prices added",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAdded": "{challenge_title} விலைகள் சேர்க்கப்பட்டன",
+		"PricesAddedByYou": "உங்களால் {challenge_title} விலைகள் சேர்க்கப்பட்டன",
 		"MostRecentContributions": "மிகச் சமீபத்திய பங்களிப்புகள்"
 	},
 	"Common": {
@@ -246,6 +246,7 @@
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
+		"FilterPriceTagWithProofOwner": "Show only my proofs",
 		"FilterLocationWithPriceCountHide": "விலையுடைய இடங்களை மறை",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
@@ -690,7 +691,7 @@
 			"Title": "Price Validation Assistant"
 		},
 		"CommunityChallenge": {
-			"Title": "Community Challenge"
+			"Title": "சமூக சவால்"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
