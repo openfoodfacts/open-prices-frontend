@@ -85,7 +85,7 @@ export default {
         size: this.getApiSize,
         page: this.priceTagPage
       }
-      if (this.currentFilter === 'show_proof_owner') {
+      if (this.currentFilter === 'proof__owner') {
         defaultParams['proof__owner'] = this.username
       }
       return defaultParams
