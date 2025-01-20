@@ -246,6 +246,7 @@
 		"FilterProductWithoutPriceCount": "Senza prezzi",
 		"FilterPriceMoreThan30DaysHide": "Nascondi i prezzi più vecchi di 30 giorni",
 		"FilterProofWithPriceCountHide": "Nascondi le prove con i prezzi",
+		"FilterPriceTagWithProofOwner": "Show only my proofs",
 		"FilterLocationWithPriceCountHide": "Nascondi le posizioni con i prezzi",
 		"FilterUserWithPriceCountHide": "Nascondi i collaboratori con i prezzi",
 		"Fix": "Fix",
