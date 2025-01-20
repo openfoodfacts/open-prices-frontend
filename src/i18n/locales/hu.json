@@ -135,7 +135,7 @@
 		"Title": "Írjon be egy vonalkódot"
 	},
 	"Challenge": {
-		"Title": "The current challenge is ...",
+		"Title": "Community challenge",
 		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
@@ -144,16 +144,15 @@
 			"AddPictures": "Add pictures"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices",
+			"Title": "Validate the detected prices with AI",
 			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
 			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreable.",
-			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating."
+			"line3": "If you're having trouble reading the label, mark it as unreadable.",
+			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
 		},
-		"Stats": "Challenge stats",
-		"MyStats": "My stats",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PricesAddedByYou": "Prices added by you",
+		"PricesAdded": "{challenge_title} prices added",
+		"PricesAddedByYou": "{challenge_title} prices added by you",
 		"MostRecentContributions": "Most recent contributions"
 	},
 	"Common": {
@@ -199,6 +198,8 @@
 		"Contributors": "Hozzájárulók",
 		"Community": "Community",
 		"Country": "Ország",
+		"Crop": "Crop",
+		"Cropped": "Cropped",
 		"Currency": "Currency",
 		"CurrencyMissing": "Currency missing",
 		"Dashboard": "Dashboard",
@@ -347,6 +348,8 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Összesen",
+		"Truncate": "Truncate",
+		"Truncated": "Truncated",
 		"Type": "Típus",
 		"Unreadable": "Unreadable",
 		"Upload": "Upload",
@@ -685,11 +688,8 @@
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
 		},
-		"Challenge": {
-			"Title": "Challenge"
-		},
-		"CurrentChallenge": {
-			"Title": "Current Challenge"
+		"CommunityChallenge": {
+			"Title": "Community Challenge"
 		}
 	},
 	"Search": {

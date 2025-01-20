@@ -135,7 +135,7 @@
 		"Title": "Strichcode eingeben"
 	},
 	"Challenge": {
-		"Title": "Die aktuelle Herausforderung ist ...",
+		"Title": "Gemeinschaftliche Herausforderung",
 		"Subtitle": "Sammeln Sie gemeinsam mit anderen Lebensmittelpreis-Enthusiasten Informationen über {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Fotografieren Sie Preisschilder in Geschäften",
@@ -144,16 +144,15 @@
 			"AddPictures": "Fotos hinzufügen"
 		},
 		"StepValidate": {
-			"Title": "Bestätigen Sie die ermittelten Preise",
+			"Title": "Bestätigen Sie die ermittelten Preise mit KI",
 			"line1": "Die Preisschilder werden automatisch erkannt, aber die Roboter benötigen dennoch Ihre Hilfe, um sie zu bestätigen.",
 			"line2": "Besuchen Sie die Preisvalidierungsseite über die Schaltfläche unten, bearbeiten Sie den Strichcode und den Preis, falls erforderlich, und bestätigen Sie!",
 			"line3": "Wenn Sie Schwierigkeiten haben, das Etikett zu lesen, kennzeichnen Sie es als nicht lesbar.",
-			"line4": "Dies ist eine Gemeinschaftsleistung. Auch wenn Sie nicht viele Bilder eingesandt haben, können Sie anderen helfen, indem Sie sie bestätigen."
+			"line4": "Auch wenn Sie keine Bilder eingesandt haben, können Sie anderen helfen, indem Sie sie bestätigen."
 		},
-		"Stats": "Statistik der Herausforderung",
-		"MyStats": "Meine Statistiken",
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
-		"PricesAddedByYou": "Eigene hinzugefügte Preise",
+		"PricesAdded": "{challenge_title} Preise hinzugefügt",
+		"PricesAddedByYou": "{challenge_title} Preise von Ihnen hinzugefügt",
 		"MostRecentContributions": "Neueste Beiträge"
 	},
 	"Common": {
@@ -199,6 +198,8 @@
 		"Contributors": "Mitwirkende",
 		"Community": "Gemeinschaft",
 		"Country": "Land",
+		"Crop": "Crop",
+		"Cropped": "Cropped",
 		"Currency": "Währung",
 		"CurrencyMissing": "Währung fehlt",
 		"Dashboard": "Übersicht",
@@ -347,6 +348,8 @@
 		"Today": "Heute",
 		"Top": "Top",
 		"Total": "Gesamt",
+		"Truncate": "Truncate",
+		"Truncated": "Truncated",
 		"Type": "Art",
 		"Unreadable": "Nicht lesbar",
 		"Upload": "Hochladen",
@@ -685,11 +688,8 @@
 		"PriceValidationAssistant": {
 			"Title": "Preisprüfungsassistent"
 		},
-		"Challenge": {
-			"Title": "Herausforderung"
-		},
-		"CurrentChallenge": {
-			"Title": "Aktuelle Herausforderung"
+		"CommunityChallenge": {
+			"Title": "Gemeinschaftliche Herausforderung"
 		}
 	},
 	"Search": {

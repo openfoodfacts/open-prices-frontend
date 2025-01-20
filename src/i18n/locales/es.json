@@ -135,7 +135,7 @@
 		"Title": "Introducir código de barras"
 	},
 	"Challenge": {
-		"Title": "El desafío actual es ...",
+		"Title": "Community challenge",
 		"Subtitle": "Únase a otros entusiastas del precio de los alimentos para recopilar información sobre {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Toma fotos de las etiquetas de precios en las tiendas",
@@ -144,16 +144,15 @@
 			"AddPictures": "Añadir imágenes"
 		},
 		"StepValidate": {
-			"Title": "Validar los precios detectados",
+			"Title": "Validate the detected prices with AI",
 			"line1": "Las etiquetas de precios se detectan automáticamente, pero los robots todavía necesitan tu ayuda para validarlas.",
 			"line2": "Visita la página de validación de precios usando el botón de abajo, edita el código de barras y el precio si es necesario, y valídalo!",
-			"line3": "Si está teniendo problemas para leer la etiqueta, márquela como no legible.",
-			"line4": "Este es un esfuerzo colaborativo, incluso si no has enviado muchas fotos, puedes ayudar a otros al validarlas."
+			"line3": "If you're having trouble reading the label, mark it as unreadable.",
+			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
 		},
-		"Stats": "Estadísticas del desafío",
-		"MyStats": "Mis estadísticas",
 		"PicturesAddedByYou": "Fotos añadidas por ti",
-		"PricesAddedByYou": "Precios añadidos por ti",
+		"PricesAdded": "{challenge_title} prices added",
+		"PricesAddedByYou": "{challenge_title} prices added by you",
 		"MostRecentContributions": "Contribuciones más recientes"
 	},
 	"Common": {
@@ -199,6 +198,8 @@
 		"Contributors": "Colaboradores",
 		"Community": "Community",
 		"Country": "País",
+		"Crop": "Crop",
+		"Cropped": "Cropped",
 		"Currency": "Moneda",
 		"CurrencyMissing": "Falta moneda",
 		"Dashboard": "Panel de control",
@@ -347,6 +348,8 @@
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
+		"Truncate": "Truncate",
+		"Truncated": "Truncated",
 		"Type": "Tipo",
 		"Unreadable": "Unreadable",
 		"Upload": "Cargar",
@@ -685,11 +688,8 @@
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
 		},
-		"Challenge": {
-			"Title": "Desafío"
-		},
-		"CurrentChallenge": {
-			"Title": "Desafío actual"
+		"CommunityChallenge": {
+			"Title": "Community Challenge"
 		}
 	},
 	"Search": {

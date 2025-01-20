@@ -135,7 +135,7 @@
 		"Title": "Type a barcode"
 	},
 	"Challenge": {
-		"Title": "தற்போதைய சவால்...",
+		"Title": "Community challenge",
 		"Subtitle": "{challenge_title} {challenge_subtitle} பற்றிய தகவல்களைச் சேகரிப்பதில் மற்ற உணவு விலை ஆர்வலர்களுடன் இணையுங்கள்.",
 		"StepTakePictures": {
 			"Title": "கடைகளில் விலைக் குறிச்சொற்களின் படங்களை எடுக்கவும்",
@@ -144,16 +144,15 @@
 			"AddPictures": "படங்களைச் சேர்க்கவும்"
 		},
 		"StepValidate": {
-			"Title": "கண்டறியப்பட்ட விலைகளை சரிபார்க்கவும்",
+			"Title": "Validate the detected prices with AI",
 			"line1": "விலைக் குறிச்சொற்கள் தானாகவே கண்டறியப்படும், ஆனால் ரோபோக்களுக்கு அவற்றைச் சரிபார்க்க உங்கள் உதவி இன்னும் தேவைப்படுகிறது.",
 			"line2": "கீழே உள்ள பொத்தானைப் பயன்படுத்தி விலை சரிபார்ப்புப் பக்கத்தைப் பார்வையிடவும், தேவைப்பட்டால் பார்கோடு மற்றும் விலையைத் திருத்தவும் மற்றும் சரிபார்க்கவும் !",
-			"line3": "லேபிளைப் படிப்பதில் சிக்கல் இருந்தால், அதைப் படிக்க முடியாததாகக் குறிக்கவும்.",
-			"line4": "இது ஒரு கூட்டு முயற்சியாகும், நீங்கள் அதிக படங்களை அனுப்பாவிட்டாலும், சரிபார்த்து மற்றவர்களுக்கு உதவலாம்."
+			"line3": "If you're having trouble reading the label, mark it as unreadable.",
+			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
 		},
-		"Stats": "சவாலின் புள்ளிவிவரங்கள்",
-		"MyStats": "எனது புள்ளிவிவரங்கள்",
 		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
-		"PricesAddedByYou": "நீங்கள் சேர்த்த விலைகள்",
+		"PricesAdded": "{challenge_title} prices added",
+		"PricesAddedByYou": "{challenge_title} prices added by you",
 		"MostRecentContributions": "மிகச் சமீபத்திய பங்களிப்புகள்"
 	},
 	"Common": {
@@ -199,6 +198,8 @@
 		"Contributors": "Contributors",
 		"Community": "Community",
 		"Country": "Country",
+		"Crop": "Crop",
+		"Cropped": "Cropped",
 		"Currency": "Currency",
 		"CurrencyMissing": "நாணயத்தைக் காணவில்லை",
 		"Dashboard": "Dashboard",
@@ -347,6 +348,8 @@
 		"Today": "Today",
 		"Top": "சிறந்த",
 		"Total": "Total",
+		"Truncate": "Truncate",
+		"Truncated": "Truncated",
 		"Type": "Type",
 		"Unreadable": "Unreadable",
 		"Upload": "Upload",
@@ -685,11 +688,8 @@
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
 		},
-		"Challenge": {
-			"Title": "சவால்"
-		},
-		"CurrentChallenge": {
-			"Title": "தற்போதைய சவால்"
+		"CommunityChallenge": {
+			"Title": "Community Challenge"
 		}
 	},
 	"Search": {

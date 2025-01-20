@@ -135,7 +135,7 @@
 		"Title": "Введіть штрих-код"
 	},
 	"Challenge": {
-		"Title": "Нинішній виклик це...",
+		"Title": "Community challenge",
 		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
@@ -144,16 +144,15 @@
 			"AddPictures": "Add pictures"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices",
+			"Title": "Validate the detected prices with AI",
 			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
 			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreable.",
-			"line4": "This is a collaborative effort, even if you didn't send many pictures, you can still help others by validating."
+			"line3": "If you're having trouble reading the label, mark it as unreadable.",
+			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
 		},
-		"Stats": "Challenge stats",
-		"MyStats": "Мої статистики",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PricesAddedByYou": "Prices added by you",
+		"PricesAdded": "{challenge_title} prices added",
+		"PricesAddedByYou": "{challenge_title} prices added by you",
 		"MostRecentContributions": "Most recent contributions"
 	},
 	"Common": {
@@ -199,6 +198,8 @@
 		"Contributors": "Співучасники",
 		"Community": "Спільнота",
 		"Country": "Країна",
+		"Crop": "Crop",
+		"Cropped": "Cropped",
 		"Currency": "Валюта",
 		"CurrencyMissing": "Відсутня валюта",
 		"Dashboard": "Панель приладів",
@@ -347,6 +348,8 @@
 		"Today": "Сьогодні",
 		"Top": "Верх",
 		"Total": "Усього",
+		"Truncate": "Truncate",
+		"Truncated": "Truncated",
 		"Type": "Тип",
 		"Unreadable": "Неможливо прочитати",
 		"Upload": "Завантажити",
@@ -685,11 +688,8 @@
 		"PriceValidationAssistant": {
 			"Title": "Помічник Перевірки Ціни"
 		},
-		"Challenge": {
-			"Title": "Challenge"
-		},
-		"CurrentChallenge": {
-			"Title": "Current Challenge"
+		"CommunityChallenge": {
+			"Title": "Community Challenge"
 		}
 	},
 	"Search": {
