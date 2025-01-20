@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.113.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.113.0...v1.113.1) (2025-01-20)
+
+
+### Bug Fixes
+
+* **Price tag:** if barcode detected, then clear the category_tag to avoid confusions ([#1289](https://github.com/openfoodfacts/open-prices-frontend/issues/1289)) ([d4808e5](https://github.com/openfoodfacts/open-prices-frontend/commit/d4808e5929f908a3fd3e6585575e7439c406e1c0))
+
+
+### Technical
+
+* **Challenge:** improved UI following feedback ([#1284](https://github.com/openfoodfacts/open-prices-frontend/issues/1284)) ([cfbf8c2](https://github.com/openfoodfacts/open-prices-frontend/commit/cfbf8c2e399f49b2a4e68c9402786e5bfe0fc8ba))
+* **l10n:** New Crowdin translations to review and merge ([#1286](https://github.com/openfoodfacts/open-prices-frontend/issues/1286)) ([f565bab](https://github.com/openfoodfacts/open-prices-frontend/commit/f565bab6ef8002b9688a617467a4d7c4a8e643cf))
+* **Price input row:** new 'mode' prop to display the data in readonly ([#1290](https://github.com/openfoodfacts/open-prices-frontend/issues/1290)) ([4da6529](https://github.com/openfoodfacts/open-prices-frontend/commit/4da6529229dcd08945f6c3b522f3aa9fca0fe82e))
+* **Price tag:** move Error & Unreadable buttons under 1 menu ([#1288](https://github.com/openfoodfacts/open-prices-frontend/issues/1288)) ([351e8b1](https://github.com/openfoodfacts/open-prices-frontend/commit/351e8b1c286dc9e331191bdb3b47d90b7a3329e9))
+* **Price tag:** move Fix button to toggle Product & Price modes ([#1292](https://github.com/openfoodfacts/open-prices-frontend/issues/1292)) ([e70a519](https://github.com/openfoodfacts/open-prices-frontend/commit/e70a5199d838d17aaa1daacd7d89669898fea786))
+* **Price tag:** replace the 'mode' prop with 'hideUploadAction' ([d1cca78](https://github.com/openfoodfacts/open-prices-frontend/commit/d1cca78d957fa77bf6039b4bd3110c1a22ffb5c5))
+* **Product input row:** new 'mode' prop to display the data in readonly ([#1291](https://github.com/openfoodfacts/open-prices-frontend/issues/1291)) ([eac7904](https://github.com/openfoodfacts/open-prices-frontend/commit/eac7904dfe191bd13ecbc82a9cfb3b58cb79bc7e))
+* **Proof chip:** new withLabel prop to display the label next to the icon ([#1287](https://github.com/openfoodfacts/open-prices-frontend/issues/1287)) ([8972709](https://github.com/openfoodfacts/open-prices-frontend/commit/89727093c0b3ebda9614b445038622c111539014))
+
 ## [1.113.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.112.4...v1.113.0) (2025-01-19)
 
 
