@@ -13,7 +13,7 @@
           {{ $t('Common.Details') }}
         </v-list-item>
         <v-list-item :slim="true" prepend-icon="mdi-open-in-new" :href="getProofFullUrl" target="_blank">
-          {{ $t('Common.ImageFull') }}
+          {{ $t('Common.PictureFull') }}
         </v-list-item>
         <v-list-item v-if="userIsProofOwner" :slim="true" prepend-icon="mdi-pencil" :disabled="!userCanEditProof" @click="openEditDialog">
           {{ $t('Common.Edit') }}

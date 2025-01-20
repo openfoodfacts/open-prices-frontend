@@ -18,7 +18,7 @@
           type="warning"
           variant="outlined"
           density="compact"
-          :text="$t('ProofAdd.HowToMultiple')"
+          :text="$t('ProofAdd.HowToMultipleShort')"
         />
         <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" />
         <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />

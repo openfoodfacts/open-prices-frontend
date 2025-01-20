@@ -14,9 +14,9 @@
       <v-menu scroll-strategy="close" :disabled="loading">
         <template #activator="{ props }">
           <v-btn v-bind="props" size="small" prepend-icon="mdi-image" append-icon="mdi-menu-down" :class="hasProofImageSelected ? 'border-success' : 'border-error'">
-            <span v-if="hasProofImageSelected">{{ $t('Common.ImageSelectedCount', { count: proofImagePreviewList.length }) }}</span>
-            <span v-else-if="multiple">{{ $t('Common.ImageSelectMultiple') }}</span>
-            <span v-else>{{ $t('Common.ImageSelect') }}</span>
+            <span v-if="hasProofImageSelected">{{ $t('Common.PictureSelectedCount', { count: proofImagePreviewList.length }) }}</span>
+            <span v-else-if="multiple">{{ $t('Common.PictureSelectMultiple') }}</span>
+            <span v-else>{{ $t('Common.PictureSelect') }}</span>
           </v-btn>
         </template>
         <v-list>
