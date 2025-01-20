@@ -4,21 +4,19 @@
       <div class="text-h6">
         {{ $t('Common.Start') }}
       </div>
-      <template #opposite>
-        {{ challenge.startDate }}
-      </template>
+      <p>{{ getDateFormatted(challenge.startDate) }}</p>
     </v-timeline-item>
     <v-timeline-item dot-color="error">
       <template #opposite>
         <div class="text-h6">
           {{ $t('Common.End') }}
         </div>
+        <p>{{ getDateFormatted(challenge.endDate) }}</p>
       </template>
-      {{ challenge.endDate }}
     </v-timeline-item>
   </v-timeline>
   <v-progress-linear
-    style="width: 50%; margin-left: 25%; top: -55px; margin-top: -25px"
+    style="width: 50%; margin-left: 25%; top: -30px; margin-top: -25px"
     color="success"
     height="25"
     :model-value="progress"
@@ -29,6 +27,8 @@
 </template>
 
 <script>
+import utils from '../utils.js'
+
 export default {
   props: {
     challenge: {
@@ -52,6 +52,11 @@ export default {
     progress() {
       return Math.min(100, this.todayIndex * 100 / this.nbDays)
     }
+  },
+  methods: {
+    getDateFormatted(dateString) {
+      return utils.prettyDate(dateString)
+    },
   }
 }
 </script>
