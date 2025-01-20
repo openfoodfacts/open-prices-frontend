@@ -70,8 +70,8 @@ export default {
     },
     getApiSize() {
       // reduce size to speed up the loading
-      if (!this.$vuetify.display.smAndUp) return 3
-      return 6
+      if (!this.$vuetify.display.smAndUp) return 2
+      return 4
     },
     getPriceTagsParams() {
       return { proof__owner: this.username, proof__ready_for_price_tag_validation: true, status__isnull: true, created__lte: this.currentDateTime, order_by: this.currentOrder, size: this.getApiSize, page: this.priceTagPage }
