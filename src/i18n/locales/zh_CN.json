@@ -246,6 +246,7 @@
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "隐藏 30 天前的价格",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
+		"FilterPriceTagWithProofOwner": "Show only my proofs",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",

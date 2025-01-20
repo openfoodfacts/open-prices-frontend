@@ -246,6 +246,7 @@
 		"FilterProductWithoutPriceCount": "Tanpa harga",
 		"FilterPriceMoreThan30DaysHide": "Sembunyikan harga yang sudah lebih dari 30 hari",
 		"FilterProofWithPriceCountHide": "Sembunyikan bukti dengan harga",
+		"FilterPriceTagWithProofOwner": "Show only my proofs",
 		"FilterLocationWithPriceCountHide": "Sembunyikan lokasi dengan harga",
 		"FilterUserWithPriceCountHide": "Sembunyikan kontributor dengan harga",
 		"Fix": "Fix",

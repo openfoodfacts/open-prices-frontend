@@ -246,6 +246,7 @@
 		"FilterProductWithoutPriceCount": "沒有價格",
 		"FilterPriceMoreThan30DaysHide": "隱藏 30 天前的價格",
 		"FilterProofWithPriceCountHide": "隱藏價格證明",
+		"FilterPriceTagWithProofOwner": "Show only my proofs",
 		"FilterLocationWithPriceCountHide": "隱藏帶有價格的地點",
 		"FilterUserWithPriceCountHide": "隱藏提供價格的貢獻者",
 		"Fix": "Fix",
