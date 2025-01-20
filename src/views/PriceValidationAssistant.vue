@@ -4,6 +4,7 @@
       <v-chip label variant="text" prepend-icon="mdi-checkbox-marked-circle-plus-outline">
         {{ $t('Common.PriceToValidateCount', { count: priceTagTotal }) }}
       </v-chip>
+      <FilterMenu kind="priceTag" :currentFilter="currentFilter" @update:currentFilter="togglePriceTagFilter($event)" />
     </v-col>
   </v-row>
 
@@ -45,6 +46,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
   },
   data() {
@@ -57,6 +59,7 @@ export default {
       loading: false,
       productPriceForms: [],
       // filter & order
+      currentFilter: '',
       currentOrder: '-proof_id',  // order by most recent proof
       // feedback
       priceRemovedMessage: false,
@@ -74,10 +77,29 @@ export default {
       return 4
     },
     getPriceTagsParams() {
-      return { proof__owner: this.username, proof__ready_for_price_tag_validation: true, status__isnull: true, created__lte: this.currentDateTime, order_by: this.currentOrder, size: this.getApiSize, page: this.priceTagPage }
+      let defaultParams = {
+        proof__ready_for_price_tag_validation: true,
+        status__isnull: true,
+        created__lte: this.currentDateTime,
+        order_by: this.currentOrder,
+        size: this.getApiSize,
+        page: this.priceTagPage
+      }
+      if (this.currentFilter === 'proof__owner') {
+        defaultParams['proof__owner'] = this.username
+      }
+      return defaultParams
     },
   },
+  watch: {
+    $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initPriceTags()
+      }
+    }
+  },
   mounted() {
+    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.getPriceTags()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -87,6 +109,13 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
+    initPriceTags() {
+      this.locationId = this.$route.params.id
+      this.priceTagList = []
+      this.priceTagTotal = null
+      this.priceTagPage = 0
+      this.getPriceTags()
+    },
     removePriceTag(index, status) {
       /**
        * - update the price_tag (API)
@@ -203,6 +232,11 @@ export default {
           console.log(error)
           this.createPriceLoading = false
         })
+    },
+    togglePriceTagFilter(filterKey) {
+      this.currentFilter = this.currentFilter ? '' : filterKey
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+      // this.initPriceTags() will be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {

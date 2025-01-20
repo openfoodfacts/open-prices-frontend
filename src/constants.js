@@ -118,6 +118,9 @@ export default {
   PROOF_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterProofWithPriceCountHide' },
   ],
+  PRICE_TAG_FILTER_LIST: [
+    { key: 'proof__owner', value: 'FilterPriceTagWithProofOwner' },
+  ],
   LOCATION_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterLocationWithPriceCountHide' },
   ],
