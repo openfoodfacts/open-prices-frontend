@@ -214,6 +214,7 @@
 		"Done": "Voltooid",
 		"Error": "Foutmelding",
 		"Experiments": "Experimenten",
+		"Join": "Join",
 		"Label": "Keurmerk",
 		"Labels": "Keurmerken",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
@@ -290,6 +291,11 @@
 		"Physical": "Fysiek",
 		"Picture": "Afbeelding",
 		"Pictures": "Pictures",
+		"PictureSelect": "Select a picture",
+		"PictureSelectMultiple": "Select pictures",
+		"PictureSelected": "Picture selected!",
+		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
+		"PictureFull": "Full-size picture",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
@@ -360,6 +366,7 @@
 		"Unreadable": "Onleesbaar",
 		"Upload": "Uploaden",
 		"UploadMultipleImages": "Upload {count} afbeelding | Upload {count} afbeeldingen",
+		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} prijs | Upload {count} prijzen",
 		"URL": "URL",
@@ -548,7 +555,8 @@
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
+		"HowToMultipleShort": "Pictures should share the same shop location and date."
 	},
 	"ProofCard": {
 		"Proof": "Bewijs",
