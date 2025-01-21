@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.114.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.0...v1.114.1) (2025-01-21)
+
+
+### Bug Fixes
+
+* **Price tag:** fix price tag vertical responsiveness ([#1307](https://github.com/openfoodfacts/open-prices-frontend/issues/1307)) ([54899cf](https://github.com/openfoodfacts/open-prices-frontend/commit/54899cfb7e3b266d2e8a97c52dabc4b45f55f022))
+* **Price tag:** reset to 'Display' mode after each action (price create or dismiss). ref [#1292](https://github.com/openfoodfacts/open-prices-frontend/issues/1292) ([e10435f](https://github.com/openfoodfacts/open-prices-frontend/commit/e10435f47f62b72e5d0df7487c10b8e780a61f32))
+* **Price Validation Assistant:** fix filter on proof owned toggle. ref [#1219](https://github.com/openfoodfacts/open-prices-frontend/issues/1219) ([02e5976](https://github.com/openfoodfacts/open-prices-frontend/commit/02e59762e301b03e72fd5dbe9c0d22757922cd89))
+* **Proof footer:** give more space if action menu hidden ([ec7f366](https://github.com/openfoodfacts/open-prices-frontend/commit/ec7f366ba25b18002ba4325996eb014322bb0d48))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1305](https://github.com/openfoodfacts/open-prices-frontend/issues/1305)) ([65468ae](https://github.com/openfoodfacts/open-prices-frontend/commit/65468ae1d3cc304759c675f9b5173698bab6d7af))
+* **Price tag:** when creating or dismissing the price tag, show an overlay + loader ([#1309](https://github.com/openfoodfacts/open-prices-frontend/issues/1309)) ([9a67163](https://github.com/openfoodfacts/open-prices-frontend/commit/9a67163bd97ae8ce97641833ce87be6d1db51b9a))
+
 ## [1.114.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.113.2...v1.114.0) (2025-01-20)
 
 
