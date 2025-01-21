@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
-  <v-card height="100%">
-    <v-card-text>
+  <v-card class="d-flex flex-column">
+    <v-card-text class="flex-grow-1">
       <ProofImageCropped class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" @croppedImage="setCroppedImage($event)" />
       <v-row v-if="showProductNameField">
         <v-col>
@@ -17,7 +17,7 @@
       <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :mode="mode" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
     <v-divider v-if="!hideProofDetails" />
-    <v-card-text v-if="!hideProofDetails">
+    <v-card-text v-if="!hideProofDetails" class="flex-grow-0">
       <ProofFooterRow :proof="productPriceForm.proof" :showProofChip="true" :hideProofType="true" :hideProofActions="true" :readonly="true" />
     </v-card-text>
     <v-divider v-if="!hideActions" />

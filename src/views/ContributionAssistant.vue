@@ -72,7 +72,7 @@
           md="6"
           xl="4"
         >
-          <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :hideProofDetails="true" :hideUploadAction="true" @removePriceTag="removePriceTag($event, productPriceForm)" />
+          <ContributionAssistantPriceFormCard height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideUploadAction="true" @removePriceTag="removePriceTag($event, productPriceForm)" />
         </v-col>
       </v-row>
       <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
@@ -86,7 +86,7 @@
           md="6"
           xl="4"
         >
-          <ContributionAssistantPriceFormCard :productPriceForm="productPriceForm" :hideProofDetails="true" :hideActions="true" :disabled="true" />
+          <ContributionAssistantPriceFormCard height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideActions="true" :disabled="true" />
         </v-col>
       </v-row>
       <v-row>
