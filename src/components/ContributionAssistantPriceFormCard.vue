@@ -124,14 +124,19 @@ export default {
     }
   },
   methods: {
+    resetMode() {
+      this.mode = 'Display'
+    },
     setCroppedImage(croppedImage) {
       this.productPriceForm.croppedImage = croppedImage
     },
     removePriceTag(status=null) {
       this.$emit('removePriceTag', status)
+      this.resetMode()
     },
     validatePriceTag() {
       this.$emit('validatePriceTag')
+      this.resetMode()
     }
   }
 }
