@@ -214,6 +214,7 @@
 		"Done": "Готово",
 		"Error": "Ошибка",
 		"Experiments": "Experiments",
+		"Join": "Join",
 		"Label": "Маркировка",
 		"Labels": "Маркировки",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
@@ -290,6 +291,11 @@
 		"Physical": "Physical",
 		"Picture": "Picture",
 		"Pictures": "Pictures",
+		"PictureSelect": "Select a picture",
+		"PictureSelectMultiple": "Select pictures",
+		"PictureSelected": "Picture selected!",
+		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
+		"PictureFull": "Full-size picture",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
@@ -360,6 +366,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
+		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "URL",
@@ -548,7 +555,8 @@
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
+		"HowToMultipleShort": "Pictures should share the same shop location and date."
 	},
 	"ProofCard": {
 		"Proof": "Proof",

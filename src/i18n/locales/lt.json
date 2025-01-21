@@ -214,6 +214,7 @@
 		"Done": "Atlikta",
 		"Error": "Klaida",
 		"Experiments": "Eksperimentai",
+		"Join": "Join",
 		"Label": "Etiketė",
 		"Labels": "Labels",
 		"LabelTotal": "{count} etiketės | {count} etiketė | {count} etikečių",
@@ -290,6 +291,11 @@
 		"Physical": "Fizinis",
 		"Picture": "Picture",
 		"Pictures": "Nuotraukos",
+		"PictureSelect": "Select a picture",
+		"PictureSelectMultiple": "Select pictures",
+		"PictureSelected": "Picture selected!",
+		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
+		"PictureFull": "Full-size picture",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pridėtos nuotraukos",
 		"PicturesAddedByYou": "Jūsų pridėtos nuotraukos",
@@ -360,6 +366,7 @@
 		"Unreadable": "Neįskaitoma",
 		"Upload": "Įkelti",
 		"UploadMultipleImages": "Įkelti {count} vaizdą | Įkelti {count} vaizdus (-ų)",
+		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Įkelti {count} įrodymą | Įkelti {count} įrodymus (-ų)",
 		"UploadMultiplePrices": "Įkelti {count} kainą | Įkelti {count} kainas (-ų)",
 		"URL": "URL",
@@ -548,7 +555,8 @@
 		"ProductNotFound": "Produktas nerastas Open Food Facts... Nedvejokite ir pridėkite :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "Visos jūsų pasirinktos kainų žym nuotraukos turi būti iš tos pačios parduotuvės vietos ir nufotografuotos tą pačią dieną."
+		"HowToMultiple": "Visos jūsų pasirinktos kainų žym nuotraukos turi būti iš tos pačios parduotuvės vietos ir nufotografuotos tą pačią dieną.",
+		"HowToMultipleShort": "Pictures should share the same shop location and date."
 	},
 	"ProofCard": {
 		"Proof": "Įrodymai",

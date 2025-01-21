@@ -141,7 +141,7 @@
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
 			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"AddPictures": "Ajouter des photos"
 		},
 		"StepValidate": {
 			"Title": "Validate the detected prices with AI",
@@ -214,6 +214,7 @@
 		"Done": "Fait",
 		"Error": "Erreur",
 		"Experiments": "Expérimentations",
+		"Join": "Join",
 		"Label": "Label",
 		"Labels": "Labels",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
@@ -290,6 +291,11 @@
 		"Physical": "Physique",
 		"Picture": "Image",
 		"Pictures": "Pictures",
+		"PictureSelect": "Select a picture",
+		"PictureSelectMultiple": "Select pictures",
+		"PictureSelected": "Picture selected!",
+		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
+		"PictureFull": "Full-size picture",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
@@ -360,6 +366,7 @@
 		"Unreadable": "Illisible",
 		"Upload": "Téléverser",
 		"UploadMultipleImages": "Téléverser {count} image | Téléverser {count} images",
+		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Téléverser {count} preuve | Téléverser {count} preuves",
 		"UploadMultiplePrices": "Téléverser {count} prix | Téléverser {count} prix",
 		"URL": "URL",
@@ -548,7 +555,8 @@
 		"ProductNotFound": "Ce produit n'existe pas sur Open Food Facts... N'hésitez pas à le rajouter :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "Toutes les images d'étiquettes de prix que vous sélectionnez doivent partager le même emplacement de magasin et avoir été prises le même jour."
+		"HowToMultiple": "Toutes les images d'étiquettes de prix que vous sélectionnez doivent partager le même emplacement de magasin et avoir été prises le même jour.",
+		"HowToMultipleShort": "Pictures should share the same shop location and date."
 	},
 	"ProofCard": {
 		"Proof": "Preuve",

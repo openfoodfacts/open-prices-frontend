@@ -151,9 +151,9 @@
 			"line4": "Auch wenn Sie keine Bilder eingesandt haben, können Sie anderen helfen, indem Sie sie bestätigen."
 		},
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
-		"Prices": "{challenge_title} prices",
+		"Prices": "{challenge_title} Preise",
 		"PricesAdded": "{challenge_title} Preise hinzugefügt",
-		"PricesByYou": "{challenge_title} prices by you",
+		"PricesByYou": "{challenge_title} eigene Preise",
 		"PricesAddedByYou": "{challenge_title} Preise von Ihnen hinzugefügt",
 		"MostRecentContributions": "Neueste Beiträge"
 	},
@@ -214,6 +214,7 @@
 		"Done": "Fertig",
 		"Error": "Fehler",
 		"Experiments": "Experimente",
+		"Join": "Beitreten",
 		"Label": "Kennzeichnung",
 		"Labels": "Labels",
 		"LabelTotal": "{count} Etiketten | {count} Etikett | {count} Etiketten",
@@ -290,7 +291,12 @@
 		"Physical": "Physisch",
 		"Picture": "Bild",
 		"Pictures": "Fotos",
-		"PicturesByYou": "Pictures by you",
+		"PictureSelect": "Bild auswählen",
+		"PictureSelectMultiple": "Bilder auswählen",
+		"PictureSelected": "Bild ausgewählt!",
+		"PictureSelectedCount": "{count} Bilder ausgewählt | {count} Bild ausgewählt | {count} Bilder ausgewählt",
+		"PictureFull": "Bild in Originalgröße",
+		"PicturesByYou": "Eigene Fotos",
 		"PicturesAdded": "Fotos hinzugefügt",
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
 		"PRICE_TAG": "Preisschild",
@@ -360,6 +366,7 @@
 		"Unreadable": "Nicht lesbar",
 		"Upload": "Hochladen",
 		"UploadMultipleImages": "Lade {count} Bild hoch | Lade {count} Bilder hoch",
+		"UploadMultiplePictures": "{count} Bilder hochladen | {count} Bilder hochladen",
 		"UploadMultipleProofs": "{count} Nachweis hochladen | {count} Nachweise hochladen",
 		"UploadMultiplePrices": "{count} Preis hochladen | {count} Preise hochladen",
 		"URL": "URL",
@@ -548,7 +555,8 @@
 		"ProductNotFound": "Produkt nicht in Open Food Facts gefunden... Zögern Sie nicht, es hinzuzufügen 🙂"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "Alle von Ihnen ausgewählten Preisschildbilder sollten den gleichen Standort haben und am gleichen Tag aufgenommen worden sein."
+		"HowToMultiple": "Alle von Ihnen ausgewählten Preisschildbilder sollten den gleichen Standort haben und am gleichen Tag aufgenommen worden sein.",
+		"HowToMultipleShort": "Die Bilder sollten denselben Standort und dasselbe Datum aufweisen."
 	},
 	"ProofCard": {
 		"Proof": "Nachweis",

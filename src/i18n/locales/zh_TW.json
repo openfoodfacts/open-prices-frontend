@@ -214,6 +214,7 @@
 		"Done": "已完成",
 		"Error": "錯誤",
 		"Experiments": "實驗",
+		"Join": "Join",
 		"Label": "標籤 ",
 		"Labels": "標籤",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
@@ -290,6 +291,11 @@
 		"Physical": "實體的",
 		"Picture": "圖片",
 		"Pictures": "Pictures",
+		"PictureSelect": "Select a picture",
+		"PictureSelectMultiple": "Select pictures",
+		"PictureSelected": "Picture selected!",
+		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
+		"PictureFull": "Full-size picture",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
@@ -360,6 +366,7 @@
 		"Unreadable": "Unreadable",
 		"Upload": "上傳",
 		"UploadMultipleImages": "上傳 {count} 圖片|上傳 {count} 圖片",
+		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
 		"URL": "網址",
@@ -548,7 +555,8 @@
 		"ProductNotFound": "在 Open Food Facts 中找不到此產品⋯⋯歡迎添加它 :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day."
+		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
+		"HowToMultipleShort": "Pictures should share the same shop location and date."
 	},
 	"ProofCard": {
 		"Proof": "證明",

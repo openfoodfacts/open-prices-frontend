@@ -214,6 +214,7 @@
 		"Done": "Selesai",
 		"Error": "Kesalahan",
 		"Experiments": "Eksperimen",
+		"Join": "Join",
 		"Label": "Label",
 		"Labels": "Label - label",
 		"LabelTotal": "{count} label | {count} label | {count} label",
@@ -290,6 +291,11 @@
 		"Physical": "Fisik",
 		"Picture": "Gambar",
 		"Pictures": "Pictures",
+		"PictureSelect": "Select a picture",
+		"PictureSelectMultiple": "Select pictures",
+		"PictureSelected": "Picture selected!",
+		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
+		"PictureFull": "Full-size picture",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
@@ -360,6 +366,7 @@
 		"Unreadable": "Tidak dapat dibaca",
 		"Upload": "Unggah",
 		"UploadMultipleImages": "Unggah {count} gambar | Unggah {count} gambar",
+		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Unggah {count} bukti | Unggah {count} bukti",
 		"UploadMultiplePrices": "Unggah {count} harga | Unggah {count} harga",
 		"URL": "URL",
@@ -548,7 +555,8 @@
 		"ProductNotFound": "Produk tidak ditemukan di Open Food Facts... Jangan ragu untuk menambahkannya :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "Semua gambar label harga yang Anda pilih harus memiliki lokasi toko yang sama, dan diambil pada hari yang sama."
+		"HowToMultiple": "Semua gambar label harga yang Anda pilih harus memiliki lokasi toko yang sama, dan diambil pada hari yang sama.",
+		"HowToMultipleShort": "Pictures should share the same shop location and date."
 	},
 	"ProofCard": {
 		"Proof": "Bukti",
