@@ -58,6 +58,14 @@
         {{ $t('Common.Upload') }}
       </v-btn>
     </v-card-actions>
+
+    <v-overlay v-model="showOverlay" class="align-center justify-center" contained persistent>
+      <v-progress-circular
+        color="primary"
+        size="small"
+        indeterminate
+      />
+    </v-overlay>
   </v-card>
 </template>
 
@@ -108,6 +116,10 @@ export default {
     hideUploadAction: {
       type: Boolean,
       default: false
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
   emits: ['removePriceTag', 'validatePriceTag'],
@@ -121,6 +133,9 @@ export default {
   computed: {
     productIsTypeProduct() {
       return this.productPriceForm.type === constants.PRICE_TYPE_PRODUCT
+    },
+    showOverlay() {
+      return this.loading
     }
   },
   methods: {

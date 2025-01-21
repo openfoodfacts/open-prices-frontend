@@ -10,7 +10,7 @@
 
   <v-row class="mt-0">
     <v-col v-for="(productPriceForm, index) in productPriceForms" :key="index" cols="12" md="6" xl="4">
-      <ContributionAssistantPriceFormCard height="100%" :productPriceForm="productPriceForm" @removePriceTag="removePriceTag(index, $event)" @validatePriceTag="validatePriceTag(index)" />
+      <ContributionAssistantPriceFormCard height="100%" :productPriceForm="productPriceForm" :loading="productPriceForm.loading" @removePriceTag="removePriceTag(index, $event)" @validatePriceTag="validatePriceTag(index)" />
     </v-col>
   </v-row>
 
@@ -121,9 +121,10 @@ export default {
        * - update the price_tag (API)
        * - remove the price_tag (UI)
        */
+       this.productPriceForms[index].loading = true
       this.updatePriceTag(this.priceTagList[index].id, status).then((priceTag) => {  // eslint-disable-line no-unused-vars
-        this.priceTagList.splice(index, 1)
         this.productPriceForms.splice(index, 1)
+        this.priceTagList.splice(index, 1)
         this.priceTagTotal -= 1
         this.priceRemovedMessage = true
         if (this.priceTagList.length === 1) {
@@ -137,10 +138,11 @@ export default {
        * - update the price_tag (API)
        * - remove the price_tag (UI)
        */
+      this.productPriceForms[index].loading = true
       this.createPrice(this.productPriceForms[index]).then((price) => {
         this.updatePriceTag(this.productPriceForms[index].id, 1, price.id)
-        this.priceTagList.splice(index, 1)
         this.productPriceForms.splice(index, 1)
+        this.priceTagList.splice(index, 1)
         this.priceTagTotal -= 1
         this.priceSuccessMessage = true
         if (this.priceTagList.length === 1) {
@@ -181,7 +183,8 @@ export default {
                 product_code: barcodeString,
                 detected_product_code: barcodeString,
                 product_name: label.product_name,
-                bounding_box: data.items[i].bounding_box
+                bounding_box: data.items[i].bounding_box,
+                loading: false
               }
               this.productPriceForms.push(productPriceForm)
             }
@@ -222,15 +225,13 @@ export default {
           if (data['detail']) {
             alert(`Error: with input ${data['detail'][0]['input']}`)
           } else {
-            this.priceSuccessMessage = true
             return data
           }
-          this.createPriceLoading = false
         })
         .catch((error) => {
           alert('Error: server error')
           console.log(error)
-          this.createPriceLoading = false
+          productPriceData.loading = false
         })
     },
     togglePriceTagFilter(filterKey) {
