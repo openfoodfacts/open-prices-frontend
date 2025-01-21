@@ -110,10 +110,10 @@ export default {
   },
   methods: {
     initPriceTags() {
-      this.locationId = this.$route.params.id
       this.priceTagList = []
       this.priceTagTotal = null
       this.priceTagPage = 0
+      this.productPriceForm = []
       this.getPriceTags()
     },
     removePriceTag(index, status) {
