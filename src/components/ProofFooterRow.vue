@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="11">
+    <v-col :cols="hideProofActions ? '12' : '11'">
       <ProofChip v-if="showProofChip" class="mr-1" :proof="proof" :withLabel="showProofChip" :readonly="true" />
       <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
       <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" class="mr-1" :totalCount="proof.receipt_price_count" />
