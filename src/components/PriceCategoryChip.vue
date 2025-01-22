@@ -1,7 +1,9 @@
 <template>
-  <v-chip class="mr-1" label size="small" density="comfortable">
-    {{ getPriceCategoryTagName(priceCategory) }}
-  </v-chip>
+  <span v-if="priceCategory">
+    <v-chip class="mr-1" label size="small" density="comfortable">
+      {{ getPriceCategoryTagName(priceCategory) }}
+    </v-chip>
+  </span>
 </template>
 
 <script>
@@ -32,7 +34,7 @@ export default {
   methods: {
     getPriceCategoryTagName(categoryId) {
       if (!categoryId || this.categoryTags.length === 0) return ''
-      return this.categoryTags.find(lt => lt.id === categoryId).name
+      return this.categoryTags.find(ct => ct.id === categoryId).name
     }
   }
 }

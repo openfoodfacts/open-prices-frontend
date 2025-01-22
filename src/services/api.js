@@ -47,8 +47,10 @@ function extraPriceCreateOrUpdateFiltering(data) {
   else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
     delete filteredData.product_code
     delete filteredData.product
-    if ((typeof filteredData.origins_tags === 'string') && (filteredData.origins_tags.length)) {
-      filteredData.origins_tags = [filteredData.origins_tags]
+    if (filteredData.origins_tags.length) {
+      if (typeof filteredData.origins_tags === 'string') {
+        filteredData.origins_tags = [filteredData.origins_tags]
+      }
     } else {
       filteredData.origins_tags = ['en:unknown']
     }
