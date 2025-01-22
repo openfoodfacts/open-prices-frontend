@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.114.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.3...v1.114.4) (2025-01-22)
+
+
+### Bug Fixes
+
+* **Price validation:** fix mode when clicking on 'Fix' button. ref [#1312](https://github.com/openfoodfacts/open-prices-frontend/issues/1312) ([6ffb723](https://github.com/openfoodfacts/open-prices-frontend/commit/6ffb723aea62decc24a4b8bd387caf8fb379b488))
+
 ## [1.114.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.2...v1.114.3) (2025-01-22)
 
 
