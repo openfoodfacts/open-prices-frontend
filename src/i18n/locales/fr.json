@@ -781,6 +781,7 @@
 		"LanguageLabel": "Langue",
 		"LocationFinder": "Recherche de l'emplacement",
 		"LocationDisplayOSMID": "Afficher l'ID OSM",
+		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Afficher le code-barres",
 		"ProductDisplayCategoryTag": "Afficher le tag de catégorie",
 		"SideMenuExperimentsDisplay": "Afficher 'Expérimentations'",
