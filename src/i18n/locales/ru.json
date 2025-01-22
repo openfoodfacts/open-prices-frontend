@@ -781,6 +781,7 @@
 		"LanguageLabel": "Языки",
 		"LocationFinder": "Поиск местонахождения",
 		"LocationDisplayOSMID": "Показать OSM ID",
+		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Показать штрихкод",
 		"ProductDisplayCategoryTag": "Показать тег категории",
 		"SideMenuExperimentsDisplay": "Показать 'Эксперименты'",
