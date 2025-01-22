@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.114.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.1...v1.114.2) (2025-01-22)
+
+
+### Bug Fixes
+
+* **Price validation:** fix price form display setting reset after price creation or dismiss. ref [#1312](https://github.com/openfoodfacts/open-prices-frontend/issues/1312) ([f546b1b](https://github.com/openfoodfacts/open-prices-frontend/commit/f546b1b6b8acae5534f8ae89ff3b9abd5cbfc86a))
+
+
+### Technical
+
+* **Price validation:** add a new settings to display the price edit form by default ([#1312](https://github.com/openfoodfacts/open-prices-frontend/issues/1312)) ([2bc26d7](https://github.com/openfoodfacts/open-prices-frontend/commit/2bc26d789c1449e3562149d2533c359f5271b7a3))
+
 ## [1.114.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.0...v1.114.1) (2025-01-21)
 
 
