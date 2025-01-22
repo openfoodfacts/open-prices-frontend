@@ -169,8 +169,8 @@ export default {
               const productPriceForm = {
                 id: data.items[i].id,
                 type: barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY,
-                category_tag: priceType === constants.PRICE_TYPE_CATEGORY ? label.product : null,  // also set to null if product is 'other' ?
-                origins_tags: [label.origin],
+                category_tag: (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.product)) ? label.product : null,
+                origins_tags: ![null, '', 'unknown', 'other'].includes(label.origin) ? [label.origin] : [],
                 labels_tags: label.organic ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : [],
                 price: label.price.toString(),
                 price_per: label.unit,
@@ -203,16 +203,9 @@ export default {
         })
     },
     createPrice(productPriceData) {
-      let origins_tags = productPriceData.origins_tags
-      if (!Array.isArray(origins_tags)) {
-        origins_tags = [origins_tags]
-      }
-      if (origins_tags[0] == null || origins_tags[0] == 'unknown' || origins_tags[0] == 'other' || origins_tags[0] == '') {
-        origins_tags = []
-      }
       const priceData = {
         ...productPriceData,
-        origins_tags: origins_tags,
+        origins_tags: productPriceData.origins_tags,
         date: productPriceData.proof.date,
         location_id: productPriceData.proof.location_id,
         location_osm_id: productPriceData.proof.location_osm_id,

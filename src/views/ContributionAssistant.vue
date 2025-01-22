@@ -394,8 +394,8 @@ export default {
         const productPriceForm = {
           id: priceTag.id,
           type: priceType,
-          category_tag: priceType === constants.PRICE_TYPE_CATEGORY ? label.product : null,  // also set to null if product is 'other' ?
-          origins_tags: [label.origin],
+          category_tag: (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.product)) ? label.product : null,
+          origins_tags: ![null, '', 'unknown', 'other'].includes(label.origin) ? [label.origin] : [],
           labels_tags: label.organic ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : [],
           price: label.price.toString(),
           price_per: label.unit,
@@ -438,16 +438,9 @@ export default {
       
       for (let i = 0; i < this.productPriceFormsWithoutPriceId.length; i++) {
         const productPriceForm = this.productPriceFormsWithoutPriceId[i]
-        let origins_tags = productPriceForm.origins_tags
-        if (!Array.isArray(origins_tags)) {
-          origins_tags = [origins_tags]
-        }
-        if (origins_tags[0] == null || origins_tags[0] == 'unknown' || origins_tags[0] == 'other' || origins_tags[0] == '') {
-          origins_tags = []
-        }
         const priceData = {
           ...productPriceForm,
-          origins_tags: origins_tags,
+          origins_tags: productPriceForm.origins_tags,
           date: this.proofObject.date,
           location_id: this.proofObject.location_id,
           location_osm_id: this.proofObject.location_osm_id,
