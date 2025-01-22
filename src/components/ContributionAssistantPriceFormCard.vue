@@ -44,7 +44,7 @@
         color="warning"
         variant="outlined"
         prepend-icon="mdi-pencil"
-        @click="mode = 'Edit'"
+        @click="mode = 'edit'"
       >
         {{ $t('Common.Fix') }}
       </v-btn>
