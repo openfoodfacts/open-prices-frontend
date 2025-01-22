@@ -142,11 +142,11 @@ export default {
     }
   },
   mounted() {
-    this.mode = this.appStore.user.price_form_default_mode
+    this.resetMode()
   },
   methods: {
     resetMode() {
-      this.mode = 'Display'
+      this.mode = this.appStore.user.price_form_default_mode
     },
     setCroppedImage(croppedImage) {
       this.productPriceForm.croppedImage = croppedImage
