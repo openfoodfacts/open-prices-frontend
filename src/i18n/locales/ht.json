@@ -781,6 +781,7 @@
 		"LanguageLabel": "Lang",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Montre OSM ID",
+		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Montre kòd ba",
 		"ProductDisplayCategoryTag": "Montre tag kategori",
 		"SideMenuExperimentsDisplay": "Display 'Experiments'",
