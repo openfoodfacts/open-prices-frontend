@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.114.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.2...v1.114.3) (2025-01-22)
+
+
+### Bug Fixes
+
+* **Price validation:** fix origin & category display for raw products ([#1316](https://github.com/openfoodfacts/open-prices-frontend/issues/1316)) ([7e3ef43](https://github.com/openfoodfacts/open-prices-frontend/commit/7e3ef43f7345a9cd8ae16c44d8486dc1cb207495))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1311](https://github.com/openfoodfacts/open-prices-frontend/issues/1311)) ([d13bed7](https://github.com/openfoodfacts/open-prices-frontend/commit/d13bed757733a0d8e4acb1c637fa05ba14809228))
+
 ## [1.114.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.1...v1.114.2) (2025-01-22)
 
 
