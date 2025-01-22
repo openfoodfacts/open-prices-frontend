@@ -40,7 +40,7 @@
       </v-menu>
       <v-spacer />
       <v-btn
-        v-if="mode === 'Display'"
+        v-if="mode === 'display'"
         color="warning"
         variant="outlined"
         prepend-icon="mdi-pencil"
@@ -72,6 +72,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import constants from '../constants'
 
 export default {
@@ -125,18 +127,22 @@ export default {
   emits: ['removePriceTag', 'validatePriceTag'],
   data() {
     return {
-      mode: 'Display',  // 'Edit'
+      mode: null,  // see mounted
       productFormFilled: false,
       pricePriceFormFilled: false,
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     productIsTypeProduct() {
       return this.productPriceForm.type === constants.PRICE_TYPE_PRODUCT
     },
     showOverlay() {
       return this.loading
     }
+  },
+  mounted() {
+    this.mode = this.appStore.user.price_form_default_mode
   },
   methods: {
     resetMode() {

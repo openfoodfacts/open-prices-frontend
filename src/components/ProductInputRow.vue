@@ -1,5 +1,5 @@
 <template>
-  <v-row v-if="mode === 'Edit'">
+  <v-row v-if="mode === 'edit'">
     <v-col>
       <v-row>
         <v-col>
@@ -60,7 +60,7 @@
     </v-col>
   </v-row>
 
-  <v-row v-else-if="mode === 'Display'">
+  <v-row v-else-if="mode === 'display'">
     <v-col v-if="productIsTypeProduct" cols="12">
       <v-alert
         class="mb-2"
@@ -124,7 +124,7 @@ export default {
     },
     mode: {
       type: String,
-      default: 'Edit'  // or 'Display'
+      default: constants.PRICE_FORM_DISPLAY_LIST[1].key,  // 'edit'
     },
     disableInitWhenSwitchingType: {
       type: Boolean,

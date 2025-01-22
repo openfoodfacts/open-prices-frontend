@@ -181,6 +181,10 @@ export default {
     { key: 'scan', value: 'BarcodeScan', valueSmallScreen: 'BarcodeScanShort', icon: 'mdi-barcode-scan' },
     { key: 'type', value: 'BarcodeType', valueSmallScreen: 'BarcodeTypeShort', icon: 'mdi-numeric' },
   ],
+  PRICE_FORM_DISPLAY_LIST: [
+    { key: 'display', value: 'Display', icon: 'mdi-eye-outline' },
+    { key: 'edit', value: 'Edit', icon: 'mdi-pencil' },
+  ],
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
   DATE_YEAR_MONTH_REGEX_MATCH: /(\d{4})-(\d{2})/,
   DATE_YEAR_REGEX_MATCH: /(\d{4})/,

@@ -1,5 +1,5 @@
 <template>
-  <v-row v-if="mode === 'Edit'">
+  <v-row v-if="mode === 'edit'">
     <v-col cols="12">
       <v-row v-if="productIsTypeCategory">
         <v-col>
@@ -80,7 +80,7 @@
       @close="changeCurrencyDialog = false"
     />
   </v-row>
-  <v-row v-else-if="mode === 'Display'">
+  <v-row v-else-if="mode === 'display'">
     <v-col cols="12">
       <v-alert
         icon="mdi-currency-usd"
@@ -117,7 +117,7 @@ export default {
     },
     mode: {
       type: String,
-      default: 'Edit'  // or 'Display'
+      default: constants.PRICE_FORM_DISPLAY_LIST[1].key,  // 'edit'
     },
     hideCurrencyChoice: {
       type: Boolean,
