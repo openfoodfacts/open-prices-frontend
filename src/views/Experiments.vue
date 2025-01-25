@@ -25,7 +25,7 @@
       <v-card
         :title="$t('Router.CommunityChallenge.Title')"
         prepend-icon="mdi-trophy"
-        to="/experiments/challenge"
+        to="/challenge"
       />
     </v-col>
   </v-row>
