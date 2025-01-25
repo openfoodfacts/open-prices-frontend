@@ -135,34 +135,34 @@
 		"Title": "Zadat čárový kód"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "Komunitní výzva",
+		"Subtitle": "Připojte se k dalším nadšencům do cen potravin při shromažďování informací o {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "Vyfoťte si cenovky v obchodech",
+			"line1": "Obrázky mohou obsahovat jednu nebo více cenovek. Čárové kódy by měly být čitelné. Například:",
+			"line2": "Jakmile budete připraveni, najděte svůj obchod a nahrajte své obrázky pomocí tlačítka níže.",
+			"AddPictures": "Přidejte obrázky"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"Title": "Ověřte zjištěné ceny pomocí AI",
+			"line1": "Cenovky jsou detekovány automaticky, ale roboti stále potřebují vaši pomoc, aby je mohli ověřit.",
+			"line2": "Navštivte stránku pro ověření ceny pomocí tlačítka níže, v případě potřeby upravte čárový kód a cenu a potvrďte !",
+			"line3": "Pokud máte potíže se čtením štítku, označte jej jako nečitelný.",
+			"line4": "Jedná se o společné úsilí, i když jste neposlali obrázky, stále můžete pomáhat ostatním s ověřením."
 		},
-		"PicturesAddedByYou": "Pictures added by you",
-		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
-		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"PicturesAddedByYou": "Vámi přidané obrázky",
+		"Prices": "Ceny {challenge_title}",
+		"PricesAdded": "Ceny {challenge_title} přidány",
+		"PricesByYou": "Ceny {challenge_title} od vás",
+		"PricesAddedByYou": "Ceny {challenge_title} byly vámi přidány",
+		"MostRecentContributions": "Nejnovější příspěvky"
 	},
 	"Common": {
 		"About": "O aplikaci",
 		"AddPrice": "Přidat cenu",
-		"AddPrices": "Add prices",
+		"AddPrices": "Přidat ceny",
 		"AddNewPrice": "Přidat novou cenu",
-		"AddNewPrices": "Add new prices",
+		"AddNewPrices": "Přidejte nové ceny",
 		"AddProof": "Přidat doklad",
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
@@ -298,7 +298,7 @@
 		"PictureFull": "Full-size picture",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
-		"PicturesAddedByYou": "Pictures added by you",
+		"PicturesAddedByYou": "Vámi přidané obrázky",
 		"PRICE_TAG": "Cenovka",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -366,18 +366,18 @@
 		"Unreadable": "Unreadable",
 		"Upload": "Nahrát",
 		"UploadMultipleImages": "Nahrát {count} obrázek | Nahrajte {count} obrázků",
-		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
-		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UploadMultiplePictures": "Nahrát {count} obrázek | Nahrát {count} obrázky",
+		"UploadMultipleProofs": "Nahrajte {count} důkaz | Nahrajte {count} důkazy",
+		"UploadMultiplePrices": "Nahrát {count} cena | Nahrajte {count} ceny",
 		"URL": "URL",
 		"URLInvalid": "Neplatná URL",
 		"User": "Uživatel",
 		"Users": "Uživatelé",
-		"UserCount": "{count} users | {count} user | {count} users",
-		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserCount": "{count} uživatelů | {count} uživatel | {count} uživatelů",
+		"UserContributorCount": "{count} přispěvatelé | {count} přispěvatel | {count} přispěvatelé",
 		"Validate": "Ověřit",
-		"ValidatePrices": "Validate prices",
-		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePrices": "Potvrďte ceny",
+		"ValidatePricesWithAI": "Ověřte ceny pomocí AI",
 		"View": "Zobrazit",
 		"Website": "Webová stránka",
 		"Yes": "Ano",
@@ -388,14 +388,14 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. Výběr důkazů",
+			"LabelsExtraction": "2. Extrakce štítků",
+			"Cleanup": "3. Čištění",
+			"Summary": "4. Shrnutí"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"BoundingBoxesFromServerWarning": "Nebyly automaticky detekovány žádné štítky. Nakreslete ručně čtverce kolem štítků.",
+		"FindBoundingBoxes": "Automaticky najít štítky",
+		"FindBoundingBoxesRunning": "Je spuštěna automatická detekce štítků. Čekejte prosím...",
 		"LabelsExtractionSteps": {
 			"DrawBoundingBoxes": "1. Draw squares around the labels",
 			"CheckLabels": "2. Check the readability of labels",
@@ -601,7 +601,7 @@
 			"Title": "Přidat cenu"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Přidat ceny"
 		},
 		"AddPriceSingle": {
 			"Title": "Přidat jednotnou cenu"
@@ -706,7 +706,7 @@
 			"Title": "Community Challenge"
 		},
 		"ValidatePrices": {
-			"Title": "Validate prices"
+			"Title": "Potvrďte ceny"
 		}
 	},
 	"Search": {
