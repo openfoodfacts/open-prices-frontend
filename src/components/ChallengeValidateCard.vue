@@ -1,17 +1,11 @@
 <template>
-  <v-card class="d-flex flex-column">
-    <v-card-title>
-      {{ $t('Challenge.StepValidate.Title') }}
-    </v-card-title>
-    <v-card-text class="flex-grow-1">
-      <v-row class="mb-2">
-        <v-col cols="6">
-          <StatCard :value="challenge.numberOfContributions" :subtitle="statSubtitlePriceCount" />
-        </v-col>
-        <v-col cols="6">
-          <StatCard :value="challenge.userContributions" :subtitle="statSubtitlePriceOwnerCount" />
-        </v-col>
-      </v-row>
+  <v-card
+    class="d-flex flex-column"
+    :title="$t('Challenge.StepValidate.Title')"
+    prepend-icon="mdi-checkbox-marked-circle-plus-outline"
+  >
+    <v-divider />
+    <v-card-text class="flex-grow-1 pb-0">
       <p class="mb-2">
         {{ $t('Challenge.StepValidate.line1') }}
       </p>
@@ -24,6 +18,16 @@
       <p class="mb-2">
         {{ $t('Challenge.StepValidate.line4') }}
       </p>
+    </v-card-text>
+    <v-card-text class="flex-grow-0">
+      <v-row>
+        <v-col cols="6">
+          <StatCard :value="challenge.numberOfContributions" :subtitle="statSubtitlePriceCount" />
+        </v-col>
+        <v-col cols="6">
+          <StatCard :value="challenge.userContributions" :subtitle="statSubtitlePriceOwnerCount" />
+        </v-col>
+      </v-row>
     </v-card-text>
     <v-divider />
     <v-card-actions>
