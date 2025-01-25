@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.114.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.4...v1.114.5) (2025-01-25)
+
+
+### Technical
+
+* **Category chip:** make it cliquable ([909cc38](https://github.com/openfoodfacts/open-prices-frontend/commit/909cc384652069b88b442b649de296956378c158))
+* **CurrentChallenge:** display category tag ([#1323](https://github.com/openfoodfacts/open-prices-frontend/issues/1323)) ([a659b9a](https://github.com/openfoodfacts/open-prices-frontend/commit/a659b9aa703091c90aa2b0f3ce1f92fa27a5cdc7))
+* **CurrentChallenge:** Update end date ([#1320](https://github.com/openfoodfacts/open-prices-frontend/issues/1320)) ([c414cea](https://github.com/openfoodfacts/open-prices-frontend/commit/c414cea6ac4a3c959cb69beafacbe41efeff7567))
+* **l10n:** New Crowdin translations to review and merge ([#1319](https://github.com/openfoodfacts/open-prices-frontend/issues/1319)) ([f111e45](https://github.com/openfoodfacts/open-prices-frontend/commit/f111e456ec8a4c6bbec74e7593c317be48c1ae93))
+
 ## [1.114.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.3...v1.114.4) (2025-01-22)
 
 
