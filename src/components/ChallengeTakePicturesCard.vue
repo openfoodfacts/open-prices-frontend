@@ -1,17 +1,7 @@
 <template>
-  <v-card>
-    <v-card-title>
-      {{ $t('Challenge.StepTakePictures.Title') }}
-    </v-card-title>
-    <v-card-text>
-      <v-row class="mb-2">
-        <v-col cols="6">
-          <StatCard :value="challenge.numberOfProofs" :subtitle="statSubtitleProofCount" />
-        </v-col>
-        <v-col cols="6">
-          <StatCard :value="challenge.userProofContributions" :subtitle="statSubtitleProofOwnerCount" />
-        </v-col>
-      </v-row>
+  <v-card :title="$t('Challenge.StepTakePictures.Title')">
+    <v-divider />
+    <v-card-text class="pb-0">
       <p class="mb-2">
         {{ $t('Challenge.StepTakePictures.line1') }}
       </p>
@@ -21,6 +11,16 @@
       <p class="mb-2 mt-2">
         {{ $t('Challenge.StepTakePictures.line2') }}
       </p>
+    </v-card-text>
+    <v-card-text>
+      <v-row>
+        <v-col cols="6">
+          <StatCard :value="challenge.numberOfProofs" :subtitle="statSubtitleProofCount" />
+        </v-col>
+        <v-col cols="6">
+          <StatCard :value="challenge.userProofContributions" :subtitle="statSubtitleProofOwnerCount" />
+        </v-col>
+      </v-row>
     </v-card-text>
     <v-divider />
     <v-card-actions>
