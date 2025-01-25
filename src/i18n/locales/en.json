@@ -702,6 +702,9 @@
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
 		},
+		"Challenge": {
+			"Title": "Challenge"
+		},
 		"CommunityChallenge": {
 			"Title": "Community Challenge"
 		},
