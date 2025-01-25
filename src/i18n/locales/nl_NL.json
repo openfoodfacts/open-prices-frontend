@@ -702,8 +702,11 @@
 		"PriceValidationAssistant": {
 			"Title": "Prijsvalidatie-assistent"
 		},
+		"Challenge": {
+			"Title": "Uitdaging"
+		},
 		"CommunityChallenge": {
-			"Title": "Gemeenschapsuitdaging"
+			"Title": "Uitdaging voor de gemeenschap"
 		},
 		"ValidatePrices": {
 			"Title": "Prijzen valideren"
