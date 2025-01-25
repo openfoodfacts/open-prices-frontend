@@ -3,7 +3,7 @@
     <v-card-text>
       <ProductCountChip v-if="sourceCategory" :count="productCount" :withLabel="true" />
       <PriceCountChip v-else-if="sourceProduct" :count="priceCount" />
-      <CategoryTagChip v-if="showProductCategoryTag" :category="category" />
+      <CategoryTagChip v-if="showProductCategoryTag" class="mr-1" :category="category" :readonly="true" />
       <CategoryActionMenuButton :category="category" :source="source" />
     </v-card-text>
   </v-card>

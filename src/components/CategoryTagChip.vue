@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" class="mr-1">
+  <v-chip label size="small" density="comfortable" @click="goToCategory()">
     {{ category.id }}
   </v-chip>
 </template>
@@ -11,7 +11,19 @@ export default {
       type: Object,
       default: null,
       example: { 'id': 'en:croissants', 'name': 'Croissants' }
-    }
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
+  },
+  methods: {
+    goToCategory() {
+      if (this.readonly || !this.category) {
+        return
+      }
+      this.$router.push({ path: `/categories/${this.category.id}` })
+    },
   }
 }
 </script>
