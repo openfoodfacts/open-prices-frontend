@@ -702,8 +702,11 @@
 		"PriceValidationAssistant": {
 			"Title": "Asisten Validasi Harga"
 		},
+		"Challenge": {
+			"Title": "Tantangan"
+		},
 		"CommunityChallenge": {
-			"Title": "Tantangan Komunitas"
+			"Title": "Tantangan komunitas"
 		},
 		"ValidatePrices": {
 			"Title": "Validasi harga"

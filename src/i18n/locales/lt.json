@@ -702,8 +702,11 @@
 		"PriceValidationAssistant": {
 			"Title": "Kainų tvirtinimo asistentas"
 		},
+		"Challenge": {
+			"Title": "Iššūkis"
+		},
 		"CommunityChallenge": {
-			"Title": "Community Challenge"
+			"Title": "Community challenge"
 		},
 		"ValidatePrices": {
 			"Title": "Patvirtinti kainas"

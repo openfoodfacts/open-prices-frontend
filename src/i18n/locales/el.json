@@ -702,8 +702,11 @@
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
 		},
+		"Challenge": {
+			"Title": "Challenge"
+		},
 		"CommunityChallenge": {
-			"Title": "Community Challenge"
+			"Title": "Community challenge"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -719,7 +722,7 @@
 	},
 	"SignIn": {
 		"Button": "Σύνδεση",
-		"Password": "Κωδικός χρήστη",
+		"Password": "Κωδικός πρόσβασης",
 		"ServerError": "Error: server error",
 		"Title": "Σύνδεση",
 		"SignInOFFAccount": "Sign in with your {url} account",

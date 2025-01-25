@@ -702,8 +702,11 @@
 		"PriceValidationAssistant": {
 			"Title": "Помічник Перевірки Ціни"
 		},
+		"Challenge": {
+			"Title": "Challenge"
+		},
 		"CommunityChallenge": {
-			"Title": "Community Challenge"
+			"Title": "Community challenge"
 		},
 		"ValidatePrices": {
 			"Title": "Перевірити ціни"
