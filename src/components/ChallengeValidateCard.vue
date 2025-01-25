@@ -2,7 +2,6 @@
   <v-card
     class="d-flex flex-column"
     :title="$t('Challenge.StepValidate.Title')"
-    prepend-icon="mdi-checkbox-marked-circle-plus-outline"
   >
     <v-divider />
     <v-card-text class="flex-grow-1 pb-0">
