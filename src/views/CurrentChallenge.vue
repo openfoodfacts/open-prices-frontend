@@ -55,7 +55,7 @@ export default {
         icon: "🌰",
         subtitle: "(and other hazelnut spreads)",
         startDate: "2025-01-20",
-        endDate: "2025-01-31",
+        endDate: "2025-02-20",
         categories: ["en:hazelnut-spreads"],
         numberOfContributions: 0,
         latestContributions: [],
