@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.114.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.5...v1.114.6) (2025-01-25)
+
+
+### Technical
+
+* **CommunityChallenge:** reorganise a bit the 2 instruction cards (move stats at the bottom, add divider below title) ([#1327](https://github.com/openfoodfacts/open-prices-frontend/issues/1327)) ([dda6247](https://github.com/openfoodfacts/open-prices-frontend/commit/dda6247218d2669166acff863d5739ea424dfa3e))
+* **CurrentChallenge:** simplify the url to /challenge. Add to the sidebar ([#1325](https://github.com/openfoodfacts/open-prices-frontend/issues/1325)) ([9a9c3fb](https://github.com/openfoodfacts/open-prices-frontend/commit/9a9c3fb57ac8be6faad431cd5bb03418f81282be))
+* **l10n:** New Crowdin translations to review and merge ([#1324](https://github.com/openfoodfacts/open-prices-frontend/issues/1324)) ([349d026](https://github.com/openfoodfacts/open-prices-frontend/commit/349d026942bcfa1be6236aa93a8aecd0c46c84a0))
+
 ## [1.114.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.4...v1.114.5) (2025-01-25)
 
 
