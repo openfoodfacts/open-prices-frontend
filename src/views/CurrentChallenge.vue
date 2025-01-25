@@ -8,6 +8,9 @@
       <p class="mb-2">
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
       </p>
+      <p v-if="challenge.categories.length">
+        <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" />
+      </p>
     </v-col>
     <v-col cols="12" md="6">
       <ChallengeTimeline :challenge="challenge" />
@@ -43,10 +46,11 @@ import { useAppStore } from '../store'
 
 export default {
   components: {
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
     ChallengeTimeline: defineAsyncComponent(() => import('../components/ChallengeTimeline.vue')),
     ChallengeTakePicturesCard: defineAsyncComponent(() => import('../components/ChallengeTakePicturesCard.vue')),
     ChallengeValidateCard: defineAsyncComponent(() => import('../components/ChallengeValidateCard.vue')),
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
   data() {
     return {
