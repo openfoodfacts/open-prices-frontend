@@ -55,7 +55,7 @@
 		"TitleMultiple": "Add multiple prices in bulk"
 	},
 	"AddPriceMultiple": {
-		"Done": "Done",
+		"Done": "Τέλος",
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
@@ -211,7 +211,7 @@
 		"DisplayMap": "Χάρτης",
 		"DisplayPriceMap": "Χάρτης",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
+		"Done": "Τέλος",
 		"Error": "Error",
 		"Experiments": "Experiments",
 		"Join": "Join",
@@ -315,7 +315,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Επιλέξτε μια απόδειξη",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -351,7 +351,7 @@
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
+		"Theme": "Θέμα",
 		"ThemeLight": "Ανοιχτόχρωμο",
 		"ThemeDark": "Σκούρο",
 		"TopContributors": "Κορυφαίοι συντελεστές",
@@ -379,7 +379,7 @@
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Προβολή",
-		"Website": "Website",
+		"Website": "Ιστοσελίδα",
 		"Yes": "Ναι",
 		"No": "Όχι",
 		"Food": "Food",
@@ -416,8 +416,10 @@
 		"DetectedBarcode": "Detected barcode: {barcode}",
 		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Price tag with a price",
 			"PriceTagWithoutPrice": "Price tag without a price",
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -566,7 +568,7 @@
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Επιλέξτε μια απόδειξη",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -734,6 +736,7 @@
 		"Prices": "Prices",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
+		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "Προϊόντα",

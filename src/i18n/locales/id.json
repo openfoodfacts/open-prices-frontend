@@ -416,8 +416,10 @@
 		"DetectedBarcode": "Kode batang terdeteksi: {barcode}",
 		"LabelProcessingErrorMessage": "Eror: pemrosesan otomatis label gagal",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Label harga dengan harga",
 			"PriceTagWithoutPrice": "Label harga tanpa harga",
+			"PriceTagWithPrice": "Label harga dengan harga",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "Label harga baru"
 		},
 		"OpenWithTheAssistant": "Buka dengan Asisten"
@@ -734,6 +736,7 @@
 		"Prices": "Harga",
 		"PricesToday": "Harga yang ditambahkan hari ini",
 		"PricesTotal": "Total harga",
+		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Produk dengan harga",
 		"Title": "Statistik",
 		"Products": "Produk - produk",

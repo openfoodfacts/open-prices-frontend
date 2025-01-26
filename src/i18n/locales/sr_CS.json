@@ -416,8 +416,10 @@
 		"DetectedBarcode": "Detected barcode: {barcode}",
 		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Price tag with a price",
 			"PriceTagWithoutPrice": "Price tag without a price",
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -734,6 +736,7 @@
 		"Prices": "Prices",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
+		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "Proizvodi",

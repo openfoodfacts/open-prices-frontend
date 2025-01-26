@@ -416,8 +416,10 @@
 		"DetectedBarcode": "Detected barcode: {barcode}",
 		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Price tag with a price",
 			"PriceTagWithoutPrice": "Price tag without a price",
+			"PriceTagWithPrice": "Price tag with a price",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -734,6 +736,7 @@
 		"Prices": "價格",
 		"PricesToday": "今天新增的價格",
 		"PricesTotal": "總價",
+		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "有價格的產品",
 		"Title": "統計數據",
 		"Products": "產品",

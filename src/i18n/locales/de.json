@@ -416,8 +416,10 @@
 		"DetectedBarcode": "Erkannter Strichcode: {barcode}",
 		"LabelProcessingErrorMessage": "Fehler: Automatische Etikettenverarbeitung fehlgeschlagen",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Preisschild mit Preis",
 			"PriceTagWithoutPrice": "Preisschild ohne Preis",
+			"PriceTagWithPrice": "Preisschild mit Preis",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "Neues Preisschild"
 		},
 		"OpenWithTheAssistant": "Mit Assistent öffnen"
@@ -734,6 +736,7 @@
 		"Prices": "Preise",
 		"PricesToday": "Heute hinzugefügte Preise",
 		"PricesTotal": "Gesamtpreise",
+		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Produkte mit Preisen",
 		"Title": "Statistiken",
 		"Products": "Produkte",
