@@ -399,7 +399,7 @@ export default {
       }
     },
     handlePriceTags() {
-      this.priceTags.filter(priceTag => priceTag.status == 1 || priceTag.status == null).forEach(priceTag => {
+      this.priceTags.filter(priceTag => priceTag.status == constants.PRICE_TAG_STATUS_WITH_PRICE || priceTag.status == null).forEach(priceTag => {
         const label = priceTag['predictions'][0]['data']
         // remove anything that is not a number from label.barcode
         const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''

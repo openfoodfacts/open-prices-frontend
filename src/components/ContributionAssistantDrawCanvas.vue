@@ -159,7 +159,7 @@
             ctx.strokeStyle = "#883c1e"
             ctx.fillStyle = "#883c1e"
             text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagTruncated')
-          } else if (rect.id) {
+          } else if (rect.id) {  // status == null
             ctx.strokeStyle = "blue"
             ctx.fillStyle = "blue"
             text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice')
