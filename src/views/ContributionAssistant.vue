@@ -307,32 +307,45 @@ export default {
       this.image = image
 
       this.step = 2
-      this.proofWithBoundingBoxesLoading = true
-      // Try to load any automatically detected price tags on proof upload
-      this.loadPriceTagsWithPredictions(1, priceTags => {
-        this.priceTags = priceTags
-        this.boundingBoxesFromServer = this.priceTags.map(priceTag => {
-          return {boundingBox: priceTag.bounding_box, id: priceTag.id, status: priceTag.status}
+      if (proof.type === constants.PROOF_TYPE_RECEIPT) {
+        // No need to check for price tags on receipts
+        this.priceTags = []
+        this.boundingBoxesFromServer = []
+      } else {
+        let maxTries = 5
+        const oneDayInMs = 24 * 60 * 60 * 1000
+        const proofCreatedDate = new Date(proof.created)
+        if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
+          // Only try once on old proofs
+          maxTries = 1
+        }
+        this.proofWithBoundingBoxesLoading = true
+        // Try to load any automatically detected price tags on proof upload
+        this.loadPriceTagsWithPredictions(1, maxTries, priceTags => {
+          this.priceTags = priceTags
+          this.boundingBoxesFromServer = this.priceTags.map(priceTag => {
+            return {boundingBox: priceTag.bounding_box, id: priceTag.id, status: priceTag.status}
+          })
+          this.proofWithBoundingBoxesLoading = false
         })
-        this.proofWithBoundingBoxesLoading = false
-      })
+      }
     },
-    loadPriceTagsWithPredictions(minNumberOfPriceTagWithPredictions, callback) {
+    loadPriceTagsWithPredictions(minNumberOfPriceTagWithPredictions, maxTries, callback) {
       // Call price tag API every 3 seconds until we have at least minNumberOfPriceTagWithPredictions, max 6 times
       // Question: callback vs Promise ? Neither are really used in the rest of the code base
       let tries = 0
       const load = () => {
-        tries += 1
-        if (tries > 5) {
-          callback([])
-          return
-        }
         api.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
           const validPriceTags = data.items.filter(priceTag => priceTag.status == 1 || priceTag.status == null)
           const numberOfPriceTagsWithPredictions = validPriceTags.filter(priceTag => priceTag.predictions.length).length
           if (numberOfPriceTagsWithPredictions >= minNumberOfPriceTagWithPredictions) {
             callback(validPriceTags)
           } else {
+            tries += 1
+            if (tries >= maxTries) {
+              callback([])
+              return
+            }
             setTimeout(load, 3000)
           }
         })
@@ -365,7 +378,7 @@ export default {
             newPriceTagIds.push(priceTag.id)
           })
         })
-        this.loadPriceTagsWithPredictions(expectedNumberOfPriceTagsWithPredictions, priceTags => {
+        this.loadPriceTagsWithPredictions(expectedNumberOfPriceTagsWithPredictions, 5, priceTags => {
           this.processLabelsLoading = false
           if (!priceTags.length) {
             this.labelProcessingErrorMessage = true
