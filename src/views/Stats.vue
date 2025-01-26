@@ -89,6 +89,22 @@
     </v-col>
   </v-row>
 
+  <br>
+
+  <h2 class="text-h6 mb-1">
+    <v-icon size="x-small" icon="mdi-test-tube" />
+    {{ $t('Common.Experiments') }}
+  </h2>
+
+  <v-row>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="1" :subtitle="$t('Common.Challenges')" />
+    </v-col>
+    <v-col cols="6" sm="4">
+      <StatCard :value="stats.price_tag_status_linked_to_price_count" :subtitle="$t('Stats.PricesLinkedToPriceTag')" />
+    </v-col>
+  </v-row>
+
   <v-row>
     <v-col cols="12">
       <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(stats.updated)">
