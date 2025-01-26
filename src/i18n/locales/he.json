@@ -416,8 +416,10 @@
 		"DetectedBarcode": "זוהה ברקוד: {barcode}",
 		"LabelProcessingErrorMessage": "שגיאה: עיבוד תוויות אוטומטי נכשל",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "תגית מחיר עם מחיר",
 			"PriceTagWithoutPrice": "תגית מחיר בלי מחיר",
+			"PriceTagWithPrice": "תגית מחיר עם מחיר",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "תגית מחיר חדשה"
 		},
 		"OpenWithTheAssistant": "פתיחה עם המסייע"
