@@ -267,6 +267,7 @@
 		"Latest": "Laatste",
 		"LinkCopySuccess": "Link gekopieerd",
 		"LocationCount": "{count} locaties | {count} locatie | {count} locaties",
+		"LocationNotFound": "Location not found",
 		"Map": "Kaart",
 		"MyDashboard": "Mijn dashboard",
 		"MyPrices": "Mijn prijzen",
@@ -308,6 +309,7 @@
 		"PricesAdded": "Prijzen toegevoegd",
 		"PricesAddedToday": "Vandaag toegevoegde prijzen",
 		"PricesToday": "Prijzen vandaag",
+		"PriceNotFound": "Price not found",
 		"Private": "Privé",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} producten | {count} product | {count} producten",
@@ -322,6 +324,7 @@
 		"ProofUploadedCount": "{count} bewijzen geüpload | {count} bewijs geüpload | {count} bewijzen geüpload",
 		"ProofsAddedToday": "Bewijzen vandaag toegevoegd",
 		"ProofsToday": "Bewijzen vandaag",
+		"ProofNotFound": "Proof not found",
 		"Public": "Openbaar",
 		"Quantity": "Hoeveelheid",
 		"QuantityBought": "Gekochte hoeveelheid",
@@ -581,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Meer laden",
 		"Prices": "Prijzen",
-		"ProofNotFound": "Bewijs niet gevonden (of niet de eigenaar)",
+		"ProofNotFound": "Proof not found",
 		"Public": "Openbaar",
 		"Private": "Privé",
 		"Privacy": "Privacy"
