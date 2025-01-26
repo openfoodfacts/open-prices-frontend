@@ -17,6 +17,10 @@
     <v-col cols="6">
       <div class="text-subtitle-2">
         {{ $t('Common.Currency') }}
+        <v-icon class="float-right" size="small" icon="mdi-information-outline" />
+        <v-tooltip activator="parent" open-on-click location="top">
+          {{ $t('ChangeCurrencyDialog.AddCurrencies') }}
+        </v-tooltip>
       </div>
       <v-select
         v-model="proofMetadataForm.currency"
