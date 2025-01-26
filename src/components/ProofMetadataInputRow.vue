@@ -1,20 +1,28 @@
 <template>
   <v-row>
     <v-col cols="6">
+      <div class="text-subtitle-2">
+        {{ $t('Common.Date') }}
+      </div>
       <v-text-field
         v-model="proofMetadataForm.date"
-        density="comfortable"
-        :label="$t('Common.Date')"
+        :class="proofMetadataForm.date ? 'outline-border-success' : 'outline-border-error'"
+        density="compact"
+        variant="outlined"
         type="date"
         :max="currentDate"
         hide-details="auto"
       />
     </v-col>
     <v-col cols="6">
+      <div class="text-subtitle-2">
+        {{ $t('Common.Currency') }}
+      </div>
       <v-select
         v-model="proofMetadataForm.currency"
-        density="comfortable"
-        :label="$t('Common.Currency')"
+        :class="proofMetadataForm.date ? 'outline-border-success' : 'outline-border-error'"
+        density="compact"
+        variant="outlined"
         :items="userFavoriteCurrencies"
         hide-details="auto"
       />
@@ -22,26 +30,30 @@
   </v-row>
   <v-row v-if="proofIsTypeReceipt">
     <v-col cols="6">
+      <div class="text-subtitle-2">
+        <v-icon :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.ReceiptPriceCount') }}
+      </div>
       <v-text-field
         v-model="proofMetadataForm.receipt_price_count"
         density="compact"
-        :label="$t('Common.ReceiptPriceCount')"
+        variant="outlined"
         type="text"
         inputmode="numeric"
         :rules="priceCountRules"
-        :prepend-inner-icon="PROOF_TYPE_RECEIPT_ICON"
         hide-details="auto"
       />
     </v-col>
     <v-col cols="6">
+      <div class="text-subtitle-2">
+        <v-icon :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.ReceiptPriceTotal') }}
+      </div>
       <v-text-field
         v-model="proofMetadataForm.receipt_price_total"
         density="compact"
-        :label="$t('Common.ReceiptPriceTotal')"
+        variant="outlined"
         type="text"
         inputmode="decimal"
         :rules="priceTotalRules"
-        :prepend-inner-icon="PROOF_TYPE_RECEIPT_ICON"
         :suffix="proofMetadataForm.currency"
         hide-details="auto"
         @update:modelValue="newValue => proofMetadataForm.receipt_price_total = fixComma(newValue)"
