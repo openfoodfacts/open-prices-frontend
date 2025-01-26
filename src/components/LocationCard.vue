@@ -7,35 +7,42 @@
     @click="goToLocation(location)"
   >
     <v-card-text v-if="location">
-      <PriceCountChip :count="location.price_count" :withLabel="true" />
-      <v-chip label size="small" density="comfortable" class="mr-1">
-        <v-icon start icon="mdi-account" />
-        <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>
-      </v-chip>
-      <v-chip label size="small" density="comfortable" class="mr-1">
-        <v-icon start icon="mdi-database-outline" />
-        <span id="product-count">{{ $t('Common.ProductCount', { count: location.product_count }) }}</span>
-      </v-chip>
-      <v-chip label size="small" density="comfortable" :to="getLocationProofListUrl">
-        <v-icon start icon="mdi-image" />
-        <span id="proof-count">{{ $t('Common.ProofCount', { count: location.proof_count }) }}</span>
-      </v-chip>
-      <v-sheet v-if="isTypeOSM">
-        <LocationOSMTagChip class="mr-1" :location="location" />
-        <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
-        <v-chip
-          v-if="!hideCountryCity && locationCountryCityUrl"
-          label size="small" density="comfortable" class="mr-1" :to="locationCountryCityUrl"
-        >
-          {{ location.osm_address_city }}
-        </v-chip>
-        <v-chip
-          v-if="!hideCountryCity && locationCountryUrl"
-          label size="small" density="comfortable" class="mr-1" :to="locationCountryUrl"
-        >
-          {{ location.osm_address_country }}
-        </v-chip>
-      </v-sheet>
+      <v-row>
+        <v-col :cols="isTypeOSM ? '12' : '11'">
+          <PriceCountChip :count="location.price_count" :withLabel="true" />
+          <v-chip label size="small" density="comfortable" class="mr-1">
+            <v-icon start icon="mdi-account" />
+            <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>
+          </v-chip>
+          <v-chip label size="small" density="comfortable" class="mr-1">
+            <v-icon start icon="mdi-database-outline" />
+            <span id="product-count">{{ $t('Common.ProductCount', { count: location.product_count }) }}</span>
+          </v-chip>
+          <v-chip label size="small" density="comfortable" :to="getLocationProofListUrl">
+            <v-icon start icon="mdi-image" />
+            <span id="proof-count">{{ $t('Common.ProofCount', { count: location.proof_count }) }}</span>
+          </v-chip>
+        </v-col>
+      </v-row>
+      <v-row v-if="isTypeOSM" class="mt-0">
+        <v-col cols="11">
+          <LocationOSMTagChip class="mr-1" :location="location" />
+          <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
+          <v-chip
+            v-if="!hideCountryCity && locationCountryCityUrl"
+            label size="small" density="comfortable" class="mr-1" :to="locationCountryCityUrl"
+          >
+            {{ location.osm_address_city }}
+          </v-chip>
+          <v-chip
+            v-if="!hideCountryCity && locationCountryUrl"
+            label size="small" density="comfortable" class="mr-1" :to="locationCountryUrl"
+          >
+            {{ location.osm_address_country }}
+          </v-chip>
+        </v-col>
+      </v-row>
+
       <LocationActionMenuButton :location="location" />
     </v-card-text>
   </v-card>
