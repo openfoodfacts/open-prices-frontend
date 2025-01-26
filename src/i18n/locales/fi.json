@@ -267,6 +267,7 @@
 		"Latest": "Latest",
 		"LinkCopySuccess": "Linkki kopioitu",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
+		"LocationNotFound": "Location not found",
 		"Map": "Kartta",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Minun hinnat",
@@ -308,6 +309,7 @@
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
+		"PriceNotFound": "Price not found",
 		"Private": "Yksityinen",
 		"Privacy": "Yksityisyys",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -322,6 +324,7 @@
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
+		"ProofNotFound": "Proof not found",
 		"Public": "Julkinen",
 		"Quantity": "Määrä",
 		"QuantityBought": "Quantity bought",
@@ -581,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Lataa enemmän",
 		"Prices": "Hinnat",
-		"ProofNotFound": "Todistetta ei löydy (tai ei omistajaa)",
+		"ProofNotFound": "Proof not found",
 		"Public": "Julkinen",
 		"Private": "Yksityinen",
 		"Privacy": "Yksityisyys"
