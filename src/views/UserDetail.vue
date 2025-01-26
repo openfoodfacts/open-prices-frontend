@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <UserCard :user="user" readonly />
+      <UserCard v-if="user" :user="user" readonly />
     </v-col>
   </v-row>
 
@@ -99,7 +99,6 @@ export default {
       return api.getUserById(this.username)
         .then((data) => {
           this.user = data
-          this.loading = false
         })
     },
     getUserPrices() {
