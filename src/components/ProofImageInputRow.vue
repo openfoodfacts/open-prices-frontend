@@ -50,11 +50,25 @@
   </v-row>
 
   <v-row v-if="showProofImagePreviewList" class="mt-0">
-    <v-col v-for="proofImagePreview in proofImagePreviewList" :key="proofImagePreview" cols="6">
-      <v-card>
-        <v-card-text class="pa-2">
+    <v-col v-for="(proofImagePreview, index) in proofImagePreviewList" :key="proofImagePreview" cols="6">
+      <v-card class="d-flex flex-column" height="100%">
+        <v-card-text class="flex-grow-1 pa-2">
           <v-img :src="proofImagePreview" style="max-height:200px" />
         </v-card-text>
+        <v-divider />
+        <v-card-actions>
+          <v-btn v-if="!$vuetify.display.smAndUp" color="error" variant="outlined" icon="mdi-delete" size="small" density="comfortable" :aria-label="$t('Common.Search')" @click="removeImage(index)" />
+          <v-btn
+            v-else
+            color="error"
+            variant="outlined"
+            prepend-icon="mdi-delete"
+            size="small"
+            @click="removeImage(index)"
+          >
+            {{ $t('Common.Delete') }}
+          </v-btn>
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>
@@ -117,13 +131,16 @@ export default {
     }
   },
   watch: {
-    proofImageList(newProofImageList, oldProofImageList) {  // eslint-disable-line no-unused-vars
-      // v-file-input returns an object (single) or an array (multiple)
-      if (!Array.isArray(newProofImageList)) {
-        newProofImageList = [newProofImageList]
-      }
-      this.proofImagePreviewList = newProofImageList.map(proofImage => this.getLocalProofUrl(proofImage))
-      this.$emit('proofList', newProofImageList)
+    proofImageList: {
+      handler(newProofImageList, oldProofImageList) {  // eslint-disable-line no-unused-vars
+        // v-file-input returns an object (single) or an array (multiple)
+        if (!Array.isArray(newProofImageList)) {
+          newProofImageList = [newProofImageList]
+        }
+        this.proofImagePreviewList = newProofImageList.map(proofImage => this.getLocalProofUrl(proofImage))
+        this.$emit('proofList', newProofImageList)
+      },
+      // deep: true
     }
   },
   mounted() {
@@ -142,6 +159,11 @@ export default {
     },
     recentProofSelected(proof) {
       this.proofImageList = [proof]
+    },
+    removeImage(index) {
+      this.proofImageList.splice(index, 1)
+      this.proofImagePreviewList.splice(index, 1)
+      this.$emit('proofList', this.proofImageList)
     },
     clearProof() {
       this.proofImageList = []
