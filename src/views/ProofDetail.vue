@@ -3,7 +3,7 @@
     <v-col cols="12" sm="6">
       <ProofCard v-if="proof" :proof="proof" :hideProofHeader="true" :readonly="true" />
       <p v-if="!loading && !proof" class="text-red">
-        {{ $t('ProofDetail.ProofNotFound') }}
+        {{ $t('Common.ProofNotFound') }}
       </p>
     </v-col>
   </v-row>

@@ -2,6 +2,9 @@
   <v-row>
     <v-col cols="12" sm="6">
       <PriceCard v-if="price" :price="price" :product="price.product" />
+      <p v-if="!loading && !price" class="text-red">
+        {{ $t('Common.PriceNotFound') }}
+      </p>
     </v-col>
   </v-row>
   <v-row v-if="price">
@@ -36,7 +39,9 @@ export default {
       this.loading = true
       return api.getPriceById(this.priceId)
         .then((data) => {
-          this.price = data
+          if (data.id) {
+            this.price = data
+          }
           this.loading = false
         })
     },
