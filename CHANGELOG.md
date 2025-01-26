@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.115.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.115.0...v1.115.1) (2025-01-26)
+
+
+### Bug Fixes
+
+* **Location detail:** show error message if location not found ([8fac32a](https://github.com/openfoodfacts/open-prices-frontend/commit/8fac32aee6baf8e28836b23ab48eb522a902e802))
+* **Price detail:** show error message if price not found. ref [#797](https://github.com/openfoodfacts/open-prices-frontend/issues/797) ([a8a6d5b](https://github.com/openfoodfacts/open-prices-frontend/commit/a8a6d5b5d5c065f2fe4f2fc9dbce0e11a431122d))
+* **Stats:** fix display of price_tag_status_linked_to_price_count. ref [#1339](https://github.com/openfoodfacts/open-prices-frontend/issues/1339) ([7faa901](https://github.com/openfoodfacts/open-prices-frontend/commit/7faa9011471cbefc8ef4c745f6df2e7cbfc28f80))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1343](https://github.com/openfoodfacts/open-prices-frontend/issues/1343)) ([ca31bf6](https://github.com/openfoodfacts/open-prices-frontend/commit/ca31bf682f4a98d721617f5039cbd34858938182))
+* **Proof add:** change look & feel of input fields ([#1329](https://github.com/openfoodfacts/open-prices-frontend/issues/1329)) ([dfb66c5](https://github.com/openfoodfacts/open-prices-frontend/commit/dfb66c5360d758ca371925ed9d8f43620e018883))
+* **Proof add:** Currency field: add basic help icon + tooltip ([#1342](https://github.com/openfoodfacts/open-prices-frontend/issues/1342)) ([bebcda0](https://github.com/openfoodfacts/open-prices-frontend/commit/bebcda0dbf3172ea6512ca4293828c5eea22ec6d))
+* **Proof add:** smaller label icons. reduce padding between input fields. ref [#1329](https://github.com/openfoodfacts/open-prices-frontend/issues/1329) ([e64df41](https://github.com/openfoodfacts/open-prices-frontend/commit/e64df4197ccd3670d25e1bb22399d489b28050e6))
+
 ## [1.115.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.7...v1.115.0) (2025-01-26)
 
 
