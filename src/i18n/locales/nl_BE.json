@@ -136,7 +136,7 @@
 	},
 	"Challenge": {
 		"Title": "Uitdaging voor de gemeenschap",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Sluit je aan bij andere voedselprijzen-enthousiastelingen en verzamel informatie over {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Maak foto's van prijskaartjes in winkels",
 			"line1": "Afbeeldingen kunnen een of meer prijskaartjes bevatten. Barcodes moeten leesbaar zijn. Bijvoorbeeld:",
@@ -144,13 +144,13 @@
 			"AddPictures": "Afbeeldingen toevoegen"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"Title": "Valideer de gedetecteerde prijzen met AI",
+			"line1": "Prijskaartjes worden automatisch gedetecteerd, maar de robots hebben nog steeds uw hulp nodig om ze te valideren.",
+			"line2": "Ga naar de pagina voor prijsvalidatie met behulp van de onderstaande knop, bewerk indien nodig de barcode en prijs en valideer!",
+			"line3": "Als u moeite heeft met het lezen van het etiket, markeer het dan als onleesbaar.",
+			"line4": "Dit is een gezamenlijke inspanning, zelfs als u geen foto's hebt verzonden, kunt u anderen nog helpen door te valideren."
 		},
-		"PicturesAddedByYou": "Pictures added by you",
+		"PicturesAddedByYou": "Door jou toegevoegde foto's",
 		"Prices": "{challenge_title} prijzen",
 		"PricesAdded": "{challenge_title} prijzen toegevoegd",
 		"PricesByYou": "{challenge_title} prices by you",
@@ -242,7 +242,7 @@
 		"ExamplesWithColon": "Voorbeelden:",
 		"ExamplesWithColonAndValue": "Voorbeelden: {value}",
 		"Edit": "Bewerken",
-		"End": "End",
+		"End": "Einde",
 		"Filter": "Filter",
 		"FilterProductWithPriceCount": "Met een prijs",
 		"FilterProductWithPriceCountHide": "Verberg producten met prijzen",
@@ -252,7 +252,7 @@
 		"FilterPriceTagWithProofOwner": "Toon alleen mijn bewijzen",
 		"FilterLocationWithPriceCountHide": "Verberg locaties met prijzen",
 		"FilterUserWithPriceCountHide": "Verberg bijdragers met prijzen",
-		"Fix": "Fix",
+		"Fix": "Oplossen",
 		"FAQ": "Veelgestelde vragen (FAQ)",
 		"FrequentlyAskedQuestions": "Veelgestelde vragen",
 		"Help": "Help",
@@ -298,7 +298,7 @@
 		"PictureFull": "Afbeelding op ware grootte",
 		"PicturesByYou": "Foto's van jou",
 		"PicturesAdded": "Foto's toegevoegd",
-		"PicturesAddedByYou": "Pictures added by you",
+		"PicturesAddedByYou": "Door jou toegevoegde foto's",
 		"PRICE_TAG": "Prijskaartje",
 		"PriceCount": "{count} prijzen | {count} prijs | {count} prijzen",
 		"PriceAddedCount": "{count} prijzen toegevoegd | {count} prijs toegevoegd | {count} prijzen toegevoegd",
@@ -405,7 +405,7 @@
 		"PricesAlreadyAdded": "Prijzen al toegevoegd",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
-		"WaitForUpload": "Please wait for upload",
+		"WaitForUpload": "Even geduld a. u. b. voor het uploaden",
 		"GoToDashboard": "Ga naar jouw dashboard",
 		"GoToProof": "Ga naar bewijs",
 		"AddNewProof": "Voeg een nieuw bewijs toe",
@@ -416,8 +416,10 @@
 		"DetectedBarcode": "Gedetecteerde barcode: {barcode}",
 		"LabelProcessingErrorMessage": "Fout: automatische verwerking van label mislukt",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Prijskaartje met een prijs",
 			"PriceTagWithoutPrice": "Prijskaartje zonder prijs",
+			"PriceTagWithPrice": "Prijskaartje met een prijs",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "Nieuw prijskaartje"
 		},
 		"OpenWithTheAssistant": "Openen met de assistent"
