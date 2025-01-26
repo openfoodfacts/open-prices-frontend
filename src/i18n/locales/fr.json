@@ -267,6 +267,7 @@
 		"Latest": "Derniers",
 		"LinkCopySuccess": "Lien copié",
 		"LocationCount": "{count} lieux | {count} lieu | {count} lieux",
+		"LocationNotFound": "Location not found",
 		"Map": "Carte",
 		"MyDashboard": "Mon tableau de bord",
 		"MyPrices": "Mes prix",
@@ -308,6 +309,7 @@
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prix ajoutés aujourd'hui",
 		"PricesToday": "Prix aujourd'hui",
+		"PriceNotFound": "Price not found",
 		"Private": "Privé",
 		"Privacy": "Confidentialité",
 		"ProductCount": "{count} produits | {count} produit | {count} produits",
@@ -322,6 +324,7 @@
 		"ProofUploadedCount": "{count} preuves téléversées | {count} preuve téléversée | {count} preuves téléversées",
 		"ProofsAddedToday": "Preuves ajoutées aujourd'hui",
 		"ProofsToday": "Preuves aujourd'hui",
+		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Quantity": "Quantité",
 		"QuantityBought": "Quantité achetée",
@@ -581,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Voir plus",
 		"Prices": "Prix",
-		"ProofNotFound": "Preuve introuvable (ou pas le propriétaire)",
+		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Privé",
 		"Privacy": "Confidentialité"
