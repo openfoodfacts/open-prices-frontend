@@ -416,8 +416,10 @@
 		"DetectedBarcode": "Aptiktas brūkšninis kodas: {barcode}",
 		"LabelProcessingErrorMessage": "Klaida: nepavyko automatiškai apdoroti etiketės",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Kainos etiketė su kaina",
 			"PriceTagWithoutPrice": "Kainos etiketė be kainos",
+			"PriceTagWithPrice": "Kainos etiketė su kaina",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "Nauja kainos etiketė"
 		},
 		"OpenWithTheAssistant": "Atidaryti su asistentu"
