@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.115.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.7...v1.115.0) (2025-01-26)
+
+
+### Features
+
+* **ContributionAssistant:** also display errored price tags ([#1337](https://github.com/openfoodfacts/open-prices-frontend/issues/1337)) ([ac7458a](https://github.com/openfoodfacts/open-prices-frontend/commit/ac7458a8b93f36c8e55cea1d2269da688e8c996a))
+* **Stats:** new Experiments section, with challenges & prices with price tag count ([#1339](https://github.com/openfoodfacts/open-prices-frontend/issues/1339)) ([b388b7a](https://github.com/openfoodfacts/open-prices-frontend/commit/b388b7aa97ed466a5ecbf29f6ddc1d24d6e06307))
+
+
+### Bug Fixes
+
+* **Location card:** avoid overlap between chips and action menu ([8da9746](https://github.com/openfoodfacts/open-prices-frontend/commit/8da97469aa419a3148924c0e908a1bbcb87a61f7))
+* **User card:** avoid overlap between chips and action menu ([931825f](https://github.com/openfoodfacts/open-prices-frontend/commit/931825f8edf194ad7a22a60dc8c9cd449ecc38b9))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1330](https://github.com/openfoodfacts/open-prices-frontend/issues/1330)) ([ffa8dad](https://github.com/openfoodfacts/open-prices-frontend/commit/ffa8dad48ad2ef01785813193dc58f5a845c4b4e))
+* **Locations:** proofs: replace the action menu with the existing chip cliquable. ref [#1255](https://github.com/openfoodfacts/open-prices-frontend/issues/1255) ([1bffcd5](https://github.com/openfoodfacts/open-prices-frontend/commit/1bffcd50e5af7caa8b6649b8083bf36e3203412a))
+* **User detail:** fetch full user object from backend ([#1340](https://github.com/openfoodfacts/open-prices-frontend/issues/1340)) ([5abd51c](https://github.com/openfoodfacts/open-prices-frontend/commit/5abd51c779fe57adfd6cb9cd9844fd87046475a5))
+
 ## [1.114.7](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.6...v1.114.7) (2025-01-26)
 
 
