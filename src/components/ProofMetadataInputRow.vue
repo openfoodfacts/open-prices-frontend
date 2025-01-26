@@ -1,20 +1,28 @@
 <template>
   <v-row>
     <v-col cols="6">
+      <div class="text-subtitle-2">
+        {{ $t('Common.Date') }}
+      </div>
       <v-text-field
         v-model="proofMetadataForm.date"
-        density="comfortable"
-        :label="$t('Common.Date')"
+        :class="proofMetadataForm.date ? 'outline-border-success' : 'outline-border-error'"
+        density="compact"
+        variant="outlined"
         type="date"
         :max="currentDate"
         hide-details="auto"
       />
     </v-col>
     <v-col cols="6">
+      <div class="text-subtitle-2">
+        {{ $t('Common.Currency') }}
+      </div>
       <v-select
         v-model="proofMetadataForm.currency"
-        density="comfortable"
-        :label="$t('Common.Currency')"
+        :class="proofMetadataForm.date ? 'outline-border-success' : 'outline-border-error'"
+        density="compact"
+        variant="outlined"
         :items="userFavoriteCurrencies"
         hide-details="auto"
       />
