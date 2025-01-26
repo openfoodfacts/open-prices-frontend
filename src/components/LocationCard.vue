@@ -16,7 +16,7 @@
         <v-icon start icon="mdi-database-outline" />
         <span id="product-count">{{ $t('Common.ProductCount', { count: location.product_count }) }}</span>
       </v-chip>
-      <v-chip label size="small" density="comfortable">
+      <v-chip label size="small" density="comfortable" :to="getLocationProofListUrl">
         <v-icon start icon="mdi-image" />
         <span id="proof-count">{{ $t('Common.ProofCount', { count: location.proof_count }) }}</span>
       </v-chip>
@@ -96,6 +96,9 @@ export default {
     },
     showLocationOSMID() {
       return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id
+    },
+    getLocationProofListUrl() {
+      return `/locations/${this.location.id}/proofs`
     },
     locationCountryUrl() {
       return this.location && this.location.osm_address_country ? `/countries/${this.location.osm_address_country}` : null

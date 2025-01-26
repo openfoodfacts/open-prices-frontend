@@ -8,9 +8,6 @@
         </v-list-subheader>
         <v-divider />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
-        <v-list-item :slim="true" prepend-icon="mdi-image" :to="getLocationProofListUrl">
-          {{ $t('Common.Proofs') }}
-        </v-list-item>
         <OpenStreetMapLink v-if="isTypeOSM" :location="location" display="list-item" />
         <v-list-item v-if="isTypeONLINE" append-icon="mdi-open-in-new" :href="location.website_url" target="_blank" rel="noopener noreferrer">
           {{ $t('Common.Website') }}
@@ -53,9 +50,6 @@ export default {
     },
     getShareLinkUrl() {
       return `/locations/${this.location.id}`
-    },
-    getLocationProofListUrl() {
-      return `/locations/${this.location.id}/proofs`
     }
   }
 }
