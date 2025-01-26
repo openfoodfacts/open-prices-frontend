@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.114.7](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.6...v1.114.7) (2025-01-26)
+
+
+### Bug Fixes
+
+* **CurrentChallenge:** fix button icon in Experiments page ([417e0b4](https://github.com/openfoodfacts/open-prices-frontend/commit/417e0b40cc0b543ff3eb82781b354038917d938e))
+
+
+### Technical
+
+* **Challenge:** Repeat proof upload warning on challenge page ([#1332](https://github.com/openfoodfacts/open-prices-frontend/issues/1332)) ([7546554](https://github.com/openfoodfacts/open-prices-frontend/commit/754655401d97ef33abedcf3abd8415833e01001b))
+* **Contribution assistant:** improve the label card delete & chips display ([#1335](https://github.com/openfoodfacts/open-prices-frontend/issues/1335)) ([7d861e4](https://github.com/openfoodfacts/open-prices-frontend/commit/7d861e4a37c2f475545f9466941d373029850d21))
+* **ContributionAssistant:** Avoid wait on auto detection for old proofs ([#1331](https://github.com/openfoodfacts/open-prices-frontend/issues/1331)) ([a7d6a5a](https://github.com/openfoodfacts/open-prices-frontend/commit/a7d6a5a9c73eaf20d49501515d2abda232331d0a))
+* **Proof upload:** allow deleting the picture(s) selected ([#1334](https://github.com/openfoodfacts/open-prices-frontend/issues/1334)) ([518d5a6](https://github.com/openfoodfacts/open-prices-frontend/commit/518d5a604f2cb46f8664d2a195f8b5470dcf3559))
+
 ## [1.114.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.114.5...v1.114.6) (2025-01-25)
 
 
