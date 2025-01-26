@@ -336,10 +336,10 @@ export default {
       let tries = 0
       const load = () => {
         api.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
-          const validPriceTags = data.items.filter(priceTag => priceTag.status == 1 || priceTag.status == null)
-          const numberOfPriceTagsWithPredictions = validPriceTags.filter(priceTag => priceTag.predictions.length).length
+          const priceTags = data.items
+          const numberOfPriceTagsWithPredictions = priceTags.filter(priceTag => priceTag.predictions.length).length
           if (numberOfPriceTagsWithPredictions >= minNumberOfPriceTagWithPredictions) {
-            callback(validPriceTags)
+            callback(priceTags)
           } else {
             tries += 1
             if (tries >= maxTries) {
@@ -399,7 +399,7 @@ export default {
       }
     },
     handlePriceTags() {
-      this.priceTags.forEach(priceTag => {
+      this.priceTags.filter(priceTag => priceTag.status == 1 || priceTag.status == null).forEach(priceTag => {
         const label = priceTag['predictions'][0]['data']
         // remove anything that is not a number from label.barcode
         const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''
