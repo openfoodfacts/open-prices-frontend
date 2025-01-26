@@ -11,6 +11,9 @@
       <p class="mb-2 mt-2">
         {{ $t('Challenge.StepTakePictures.line2') }}
       </p>
+      <p class="mb-2">
+        {{ $t('ProofAdd.HowToMultipleShort') }}
+      </p>
     </v-card-text>
     <v-card-text>
       <v-row>
