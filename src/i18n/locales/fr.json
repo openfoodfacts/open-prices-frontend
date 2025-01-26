@@ -416,8 +416,10 @@
 		"DetectedBarcode": "Code-barres détecté : {barcode}",
 		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Étiquette de prix avec un prix",
 			"PriceTagWithoutPrice": "Étiquette de prix sans prix",
+			"PriceTagWithPrice": "Étiquette de prix avec un prix",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "Nouvelle étiquette de prix"
 		},
 		"OpenWithTheAssistant": "Ouvrir avec l'assistant"
