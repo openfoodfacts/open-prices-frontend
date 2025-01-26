@@ -57,7 +57,7 @@
         </v-card-text>
         <v-divider />
         <v-card-actions>
-          <v-btn v-if="!$vuetify.display.smAndUp" color="error" variant="outlined" icon="mdi-delete" size="small" density="comfortable" :aria-label="$t('Common.Search')" @click="removeImage(index)" />
+          <v-btn v-if="!$vuetify.display.smAndUp" color="error" variant="outlined" icon="mdi-delete" size="small" density="comfortable" :aria-label="$t('Common.Delete')" @click="removeImage(index)" />
           <v-btn
             v-else
             color="error"
