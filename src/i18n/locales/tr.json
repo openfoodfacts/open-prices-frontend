@@ -267,6 +267,7 @@
 		"Latest": "Latest",
 		"LinkCopySuccess": "Bağlantı kopyalandı",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
+		"LocationNotFound": "Location not found",
 		"Map": "Harita",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Fiyatlarım",
@@ -308,6 +309,7 @@
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
+		"PriceNotFound": "Price not found",
 		"Private": "Özel",
 		"Privacy": "Mahremiyet",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -322,6 +324,7 @@
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
+		"ProofNotFound": "Proof not found",
 		"Public": "Genel",
 		"Quantity": "Miktar",
 		"QuantityBought": "Quantity bought",
@@ -581,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Daha fazla yükle",
 		"Prices": "Fiyatlar",
-		"ProofNotFound": "Bedel bulunamadı (veya sahibi değil)",
+		"ProofNotFound": "Proof not found",
 		"Public": "Genel",
 		"Private": "Özel",
 		"Privacy": "Mahremiyet"

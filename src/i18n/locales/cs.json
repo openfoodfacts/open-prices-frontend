@@ -267,6 +267,7 @@
 		"Latest": "Poslední",
 		"LinkCopySuccess": "Odkaz zkopírován",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
+		"LocationNotFound": "Location not found",
 		"Map": "Mapa",
 		"MyDashboard": "Můj ovládací panel",
 		"MyPrices": "Moje ceny",
@@ -308,6 +309,7 @@
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Ceny přidány dnes",
 		"PricesToday": "Prices today",
+		"PriceNotFound": "Price not found",
 		"Private": "Soukromý",
 		"Privacy": "Soukromí",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -322,6 +324,7 @@
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
+		"ProofNotFound": "Proof not found",
 		"Public": "Veřejný",
 		"Quantity": "Množství",
 		"QuantityBought": "Quantity bought",
@@ -581,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Načíst další",
 		"Prices": "Ceny",
-		"ProofNotFound": "Doklad nenalezen (nebo není vlastník)",
+		"ProofNotFound": "Proof not found",
 		"Public": "Veřejný",
 		"Private": "Soukromý",
 		"Privacy": "Soukromí"

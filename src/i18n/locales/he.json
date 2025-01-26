@@ -267,6 +267,7 @@
 		"Latest": "אחרונים",
 		"LinkCopySuccess": "הקישור הועתק",
 		"LocationCount": "{count} מקומות | מקום | {count} מקומות",
+		"LocationNotFound": "Location not found",
 		"Map": "מפה",
 		"MyDashboard": "לוח המחוונים שלי",
 		"MyPrices": "המחירים שלי",
@@ -308,6 +309,7 @@
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "מחירים שנוספו היום",
 		"PricesToday": "Prices today",
+		"PriceNotFound": "Price not found",
 		"Private": "פרטי",
 		"Privacy": "פרטיות",
 		"ProductCount": "{count} מוצרים | מוצר | {count} מוצרים",
@@ -322,6 +324,7 @@
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
+		"ProofNotFound": "Proof not found",
 		"Public": "ציבורי",
 		"Quantity": "כמות",
 		"QuantityBought": "כמות שנרכשה",
@@ -581,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "לטעון עוד",
 		"Prices": "מחירים",
-		"ProofNotFound": "לא נמצאה הוכחה (או שהבעלות לא אצלך)",
+		"ProofNotFound": "Proof not found",
 		"Public": "ציבורי",
 		"Private": "פרטי",
 		"Privacy": "פרטיות"

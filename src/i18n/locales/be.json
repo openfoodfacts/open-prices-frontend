@@ -267,6 +267,7 @@
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
+		"LocationNotFound": "Location not found",
 		"Map": "Map",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -308,6 +309,7 @@
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
+		"PriceNotFound": "Price not found",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -322,6 +324,7 @@
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
+		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
@@ -581,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Загрузіць больш",
 		"Prices": "Prices",
-		"ProofNotFound": "Proof not found (or not the owner)",
+		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
 		"Privacy": "Privacy"

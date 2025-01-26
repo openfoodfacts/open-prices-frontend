@@ -267,6 +267,7 @@
 		"Latest": "最新上傳",
 		"LinkCopySuccess": "已複製連結",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
+		"LocationNotFound": "Location not found",
 		"Map": "地圖",
 		"MyDashboard": "我的儀表板",
 		"MyPrices": "我的價格",
@@ -308,6 +309,7 @@
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "今天新增的價格",
 		"PricesToday": "Prices today",
+		"PriceNotFound": "Price not found",
 		"Private": "不公開",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -322,6 +324,7 @@
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Proofs added today",
 		"ProofsToday": "Proofs today",
+		"ProofNotFound": "Proof not found",
 		"Public": "公開",
 		"Quantity": "容量",
 		"QuantityBought": "Quantity bought",
@@ -581,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "載入更多",
 		"Prices": "價格",
-		"ProofNotFound": "找不到證明(或不是擁有者)",
+		"ProofNotFound": "Proof not found",
 		"Public": "公開",
 		"Private": "不公開",
 		"Privacy": "Privacy"
