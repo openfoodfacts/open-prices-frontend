@@ -12,22 +12,22 @@
           <v-img style="height:150px" :src="label.imageSrc" />
         </v-card-text>
         <v-divider />
-        <v-card-text>
-          <v-chip class="mr-1" label size="small" density="comfortable">
-            {{ $t('Common.Source') }} {{ label.boundingSource }}
-          </v-chip>
-          <PriceCountChip v-if="labelHasPrice(label)" :count="1" :withLabel="true" source="proof" />
-        </v-card-text>
-        <v-divider v-if="!labelHasPrice(label)" />
-        <v-card-actions v-if="!labelHasPrice(label)">
+        <v-card-actions>
+          <v-btn v-if="!$vuetify.display.smAndUp && !labelHasPrice(label)" color="error" variant="outlined" icon="mdi-delete" size="small" density="comfortable" :aria-label="$t('Common.Delete')" @click="removeLabel(index)" />
           <v-btn
+            v-else-if="!labelHasPrice(label)"
             color="error"
             variant="outlined"
             prepend-icon="mdi-delete"
+            size="small"
             @click="removeLabel(index)"
           >
             {{ $t('Common.Delete') }}
           </v-btn>
+          <v-chip class="mr-1" label size="small" density="comfortable" prepend-icon="mdi-information-outline">
+            {{ label.boundingSource }}
+          </v-chip>
+          <PriceCountChip v-if="labelHasPrice(label)" :count="1" :withLabel="true" source="proof" />
         </v-card-actions>
       </v-card>
     </v-col>
