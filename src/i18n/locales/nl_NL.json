@@ -416,8 +416,10 @@
 		"DetectedBarcode": "Gedetecteerde barcode: {barcode}",
 		"LabelProcessingErrorMessage": "Fout: automatische verwerking van label mislukt",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "Prijskaartje met een prijs",
 			"PriceTagWithoutPrice": "Prijskaartje zonder prijs",
+			"PriceTagWithPrice": "Prijskaartje met een prijs",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "Nieuw prijskaartje"
 		},
 		"OpenWithTheAssistant": "Openen met de assistent"
