@@ -267,6 +267,7 @@
 		"Latest": "Latest",
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
+		"LocationNotFound": "Location not found",
 		"Map": "Map",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
