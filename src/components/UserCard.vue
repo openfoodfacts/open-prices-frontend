@@ -15,7 +15,7 @@
         <v-icon start icon="mdi-database-outline" />
         <span id="product-count">{{ $t('Common.ProductCount', { count: user.product_count }) }}</span>
       </v-chip>
-      <v-chip v-if="user.proof_count" label size="small" density="comfortable">
+      <v-chip v-if="user.proof_count" label size="small" density="comfortable" :to="getUserProofListUrl">
         <v-icon start icon="mdi-image" />
         <span id="proof-count">{{ $t('Common.ProofCount', { count: user.proof_count }) }}</span>
       </v-chip>
@@ -40,6 +40,11 @@ export default {
     readonly: {
       type: Boolean,
       default: false
+    }
+  },
+  computed: {
+    getUserProofListUrl() {
+      return `/users/${this.user.user_id}/proofs`
     }
   },
   methods: {
