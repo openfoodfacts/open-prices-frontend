@@ -140,7 +140,7 @@
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
+			"line2": "Once ready, find your shop and upload your pictures using the button below. Pictures should share the same shop location and date.",
 			"AddPictures": "Add pictures"
 		},
 		"StepValidate": {
