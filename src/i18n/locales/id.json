@@ -267,6 +267,7 @@
 		"Latest": "Terbaru",
 		"LinkCopySuccess": "Tautan disalin",
 		"LocationCount": "{count} lokasi | {count} lokasi | {count} lokasi",
+		"LocationNotFound": "Location not found",
 		"Map": "Peta",
 		"MyDashboard": "Dasbor saya",
 		"MyPrices": "Harga saya",
@@ -308,6 +309,7 @@
 		"PricesAdded": "Harga ditambahkan",
 		"PricesAddedToday": "Harga yang ditambahkan hari ini",
 		"PricesToday": "Harga hari ini",
+		"PriceNotFound": "Price not found",
 		"Private": "Pribadi",
 		"Privacy": "Privasi",
 		"ProductCount": "{count} produk | {count} produk | {count} produk",
@@ -322,6 +324,7 @@
 		"ProofUploadedCount": "{count} bukti diunggah | {count} bukti diunggah | {count} bukti diunggah",
 		"ProofsAddedToday": "Bukti ditambahkan hari ini",
 		"ProofsToday": "Bukti hari ini",
+		"ProofNotFound": "Proof not found",
 		"Public": "Publik",
 		"Quantity": "Kuantitas",
 		"QuantityBought": "Kuantitas yang dibeli",
@@ -581,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Muat lebih banyak",
 		"Prices": "Harga",
-		"ProofNotFound": "Bukti tidak ditemukan (atau bukan pemiliknya)",
+		"ProofNotFound": "Proof not found",
 		"Public": "Publik",
 		"Private": "Pribadi",
 		"Privacy": "Privasi"
