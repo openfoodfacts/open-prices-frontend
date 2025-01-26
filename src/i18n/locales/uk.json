@@ -267,6 +267,7 @@
 		"Latest": "Останні",
 		"LinkCopySuccess": "Посилання скопійоване",
 		"LocationCount": "{count} локації | {count} розташування | {count} локації",
+		"LocationNotFound": "Location not found",
 		"Map": "Мапа",
 		"MyDashboard": "Моя панель",
 		"MyPrices": "Мої ціни",
@@ -308,6 +309,7 @@
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Ціни, додані сьогодні",
 		"PricesToday": "Ціни сьогодні",
+		"PriceNotFound": "Price not found",
 		"Private": "Приватний",
 		"Privacy": "Конфіденційність",
 		"ProductCount": "{count} продукти | {count} продукт | {count} продукти",
@@ -322,6 +324,7 @@
 		"ProofUploadedCount": "{count} доказів завантажено | {count} доказ завантажено | {count} доказів завантажено",
 		"ProofsAddedToday": "Докази додано сьогодні",
 		"ProofsToday": "Докази сьогодні",
+		"ProofNotFound": "Proof not found",
 		"Public": "Загальнодоступний",
 		"Quantity": "Кількість",
 		"QuantityBought": "Куплена кількість",
@@ -581,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Завантажити більше",
 		"Prices": "Ціни",
-		"ProofNotFound": "Доказ не знайдено (або не власник)",
+		"ProofNotFound": "Proof not found",
 		"Public": "Загальнодоступний",
 		"Private": "Приватний",
 		"Privacy": "Конфіденційність"
