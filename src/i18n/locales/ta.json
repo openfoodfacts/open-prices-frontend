@@ -416,8 +416,10 @@
 		"DetectedBarcode": "Detected barcode: {barcode}",
 		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
 		"PriceTagLabels": {
-			"PriceTagWithPrice": "விலையுடன் கூடிய விலைக் குறி",
 			"PriceTagWithoutPrice": "விலையுடன் அல்லாத விலைக் குறி",
+			"PriceTagWithPrice": "விலையுடன் கூடிய விலைக் குறி",
+			"PriceTagTruncated": "Price tag marked as truncated",
+			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"NewPriceTag": "புதிய விலைக் குறி"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
