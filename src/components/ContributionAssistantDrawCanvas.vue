@@ -13,6 +13,7 @@
 </template>
 
 <script>
+  import constants from '../constants'
   export default {
     props: {
       image: {
@@ -146,11 +147,19 @@
           const width = endX - startX
           const height = endY - startY
           let text = ""
-          if (rect.status == 1) {
+          if (rect.status == constants.PRICE_TAG_STATUS_WITH_PRICE) {
             ctx.strokeStyle = "green"
             ctx.fillStyle = "green"
             text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithPrice')
-          } else if (rect.id) {
+          } else if (rect.status ==  constants.PRICE_TAG_STATUS_UNREADABLE) {
+            ctx.strokeStyle = "orange"
+            ctx.fillStyle = "orange"
+            text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagUnreadable')
+          } else if (rect.status == constants.PRICE_TAG_STATUS_TRUNCATED) {
+            ctx.strokeStyle = "#883c1e"
+            ctx.fillStyle = "#883c1e"
+            text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagTruncated')
+          } else if (rect.id) {  // status == null
             ctx.strokeStyle = "blue"
             ctx.fillStyle = "blue"
             text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice')
