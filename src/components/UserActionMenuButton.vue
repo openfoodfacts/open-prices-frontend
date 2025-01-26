@@ -8,9 +8,6 @@
         </v-list-subheader>
         <v-divider />
         <ShareLink :overrideUrl="getShareLinkUrl" display="list-item" />
-        <v-list-item :slim="true" prepend-icon="mdi-image" :to="getUserProofListUrl">
-          {{ $t('Common.Proofs') }}
-        </v-list-item>
         <OpenFoodFactsLink facet="editor" :value="user.user_id" display="list-item" />
       </v-list>
     </v-menu>
@@ -53,9 +50,6 @@ export default {
     },
     getShareLinkUrl() {
       return `/users/${this.user.user_id}`
-    },
-    getUserProofListUrl() {
-      return `/users/${this.user.user_id}/proofs`
     }
   }
 }

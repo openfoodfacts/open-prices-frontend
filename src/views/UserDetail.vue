@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <UserCard :user="{user_id: username, price_count: userPriceTotal}" readonly />
+      <UserCard v-if="user" :user="user" readonly />
     </v-col>
   </v-row>
 
@@ -47,6 +47,7 @@ export default {
     return {
       username: this.$route.params.username,
       // data
+      user: null,
       userPriceList: [],
       userPriceTotal: null,
       userPricePage: 0,
@@ -77,6 +78,7 @@ export default {
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
+    this.getUser()
     this.getUserPrices()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -92,6 +94,12 @@ export default {
       this.userPriceTotal = null
       this.userPricePage = 0
       this.getUserPrices()
+    },
+    getUser() {
+      return api.getUserById(this.username)
+        .then((data) => {
+          this.user = data
+        })
     },
     getUserPrices() {
       if ((this.userPriceTotal != null) && (this.userPriceList.length >= this.userPriceTotal)) return
