@@ -135,7 +135,7 @@
 		"Title": "סוג ברקוד"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
+		"Title": "אתגר הקהילה",
 		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
@@ -164,7 +164,7 @@
 		"AddNewPrice": "הוספת מחיר חדש",
 		"AddNewPrices": "הוספת מחירים חדשים",
 		"AddProof": "הוספת הוכחה",
-		"AddProofs": "Add proofs",
+		"AddProofs": "הוספת הוכחות",
 		"AddNewProof": "הוספת הוכחה חדשה",
 		"AddNewProofs": "הוספת הוכחות חדשות",
 		"AddToOFF": "הוספה אל {name}",
@@ -191,10 +191,10 @@
 		"Category": "קטגוריה",
 		"Categories": "קטגוריות",
 		"CategoryTotal": "{count} קטגוריות | קטגוריה | {count} קטגוריות",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
+		"Challenge": "אתגר",
+		"Challenges": "אתגרים",
+		"ChallengeCurrent": "אתגר נוכחי",
+		"ChallengeOngoing": "אתגר שמתקיים כרגע",
 		"Chart": "תרשים",
 		"Clear": "פינוי",
 		"Contributors": "תורמים",
@@ -214,7 +214,7 @@
 		"Done": "בוצע",
 		"Error": "שגיאה",
 		"Experiments": "ניסויים",
-		"Join": "Join",
+		"Join": "הצטרפות",
 		"Label": "תווית",
 		"Labels": "תוויות",
 		"LabelTotal": "{count} תוויות | תווית | {count} תוויות",
@@ -249,10 +249,10 @@
 		"FilterProductWithoutPriceCount": "בלי מחירים",
 		"FilterPriceMoreThan30DaysHide": "הסתרת מחירים ישנים מ־30 יום",
 		"FilterProofWithPriceCountHide": "הסתרת הוכחות עם מחירים",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofOwner": "הצגת ההוכחות שלי בלבד",
 		"FilterLocationWithPriceCountHide": "הסתרת מקומות עם מחירים",
 		"FilterUserWithPriceCountHide": "הסתרת תרומות עם מחירים",
-		"Fix": "Fix",
+		"Fix": "תיקון",
 		"FAQ": "שו״ת",
 		"FrequentlyAskedQuestions": "שאלות נפוצות",
 		"Help": "עזרה",
@@ -267,12 +267,12 @@
 		"Latest": "אחרונים",
 		"LinkCopySuccess": "הקישור הועתק",
 		"LocationCount": "{count} מקומות | מקום | {count} מקומות",
-		"LocationNotFound": "Location not found",
+		"LocationNotFound": "המקום לא נמצא",
 		"Map": "מפה",
 		"MyDashboard": "לוח המחוונים שלי",
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
-		"MyStats": "My stats",
+		"MyStats": "הסטטיסטיקה שלי",
 		"Offline": "לא מקוון",
 		"Online": "מקוון",
 		"Order": "סדר",
@@ -291,25 +291,25 @@
 		"PersonalInfo": "פרטים אישיים",
 		"Physical": "פיזי",
 		"Picture": "תמונה",
-		"Pictures": "Pictures",
-		"PictureSelect": "Select a picture",
-		"PictureSelectMultiple": "Select pictures",
-		"PictureSelected": "Picture selected!",
+		"Pictures": "תמונות",
+		"PictureSelect": "בחירת תמונה",
+		"PictureSelectMultiple": "בחירת תמונות",
+		"PictureSelected": "נבחרה תמונה!",
 		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
-		"PictureFull": "Full-size picture",
-		"PicturesByYou": "Pictures by you",
-		"PicturesAdded": "Pictures added",
+		"PictureFull": "תמונה בגודל מלא",
+		"PicturesByYou": "תמונות שהעלית",
+		"PicturesAdded": "נוספו תמונות",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "תווית מחיר",
 		"PriceCount": "{count} מחירים | מחיר | {count} מחירים",
 		"PriceAddedCount": "נוספו {count} מחירים | נוסף מחיר | נוספו {count} מחירים",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
+		"PriceToValidateCount": "{count} מחירים לאימות | מחיר לאימות | {count} מחירים לאימות",
 		"PriceCreated": "המחיר נוצר!",
 		"PricesMore": "מחירים נוספים",
-		"PricesAdded": "Prices added",
+		"PricesAdded": "נוספו מחירים",
 		"PricesAddedToday": "מחירים שנוספו היום",
-		"PricesToday": "Prices today",
-		"PriceNotFound": "Price not found",
+		"PricesToday": "מחירים היום",
+		"PriceNotFound": "המחיר לא נמצא",
 		"Private": "פרטי",
 		"Privacy": "פרטיות",
 		"ProductCount": "{count} מוצרים | מוצר | {count} מוצרים",
@@ -321,10 +321,10 @@
 		"ProofSelectMultiple": "בחירת הוכחות",
 		"ProofSelected": "נבחרה הוכחה!",
 		"ProofSelectedCount": "{count} הוכחות נבחרו | הוכחה נבחרה | {count} הוכחות נבחרו",
-		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
-		"ProofsAddedToday": "Proofs added today",
-		"ProofsToday": "Proofs today",
-		"ProofNotFound": "Proof not found",
+		"ProofUploadedCount": "{count} הוכחות נשלחו | הוכחה נשלחה | {count} הוכחות נשלחו",
+		"ProofsAddedToday": "הוכחות שנוספו היום",
+		"ProofsToday": "הוכחות היום",
+		"ProofNotFound": "ההוכחה לא נמצאה",
 		"Public": "ציבורי",
 		"Quantity": "כמות",
 		"QuantityBought": "כמות שנרכשה",
@@ -366,7 +366,7 @@
 		"Truncate": "קיצוץ",
 		"Truncated": "קטוע",
 		"Type": "סוג",
-		"Unreadable": "Unreadable",
+		"Unreadable": "בלתי קריא",
 		"Upload": "העלאה",
 		"UploadMultipleImages": "העלאת תמונה | העלאת {count} תמונות",
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
@@ -561,7 +561,7 @@
 	},
 	"ProofAdd": {
 		"HowToMultiple": "כל תמונות תגיות המחירים שבחרת יחלקו את אותו מקום חנות ויתועדו לאותו היום.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date."
+		"HowToMultipleShort": "התמונות צריכות לחלוק מקום ותאריך זהים לחנות."
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",
@@ -584,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "לטעון עוד",
 		"Prices": "מחירים",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "ההוכחה לא נמצאה",
 		"Public": "ציבורי",
 		"Private": "פרטי",
 		"Privacy": "פרטיות"
@@ -618,7 +618,7 @@
 			"Title": "הוספת הוכחה"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "הוספת הוכחות"
 		},
 		"AddProofSingle": {
 			"Title": "הוספת הוכחה יחידה"
@@ -705,13 +705,13 @@
 			"Title": "מסייע תרומה"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "מסייע אימות מחירים"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "אתגר"
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "אתגר הקהילה"
 		},
 		"ValidatePrices": {
 			"Title": "אימות מחירים"
@@ -739,7 +739,7 @@
 		"Prices": "מחירים",
 		"PricesToday": "מחירים שנוספו היום",
 		"PricesTotal": "סך כל המחירים",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
+		"PricesLinkedToPriceTag": "מחירים המקושרים לתג מחיר",
 		"ProductsWithPrices": "מוצרים עם מחירים",
 		"Title": "סטטיסטיקה",
 		"Products": "מוצרים",
@@ -790,7 +790,7 @@
 		"LanguageLabel": "שפות",
 		"LocationFinder": "מאתר מקום",
 		"LocationDisplayOSMID": "הצגת מזהה ב־OSM",
-		"PriceValidation": "Price validation",
+		"PriceValidation": "אימות מחיר",
 		"ProductDisplayBarcode": "הצגת ברקוד",
 		"ProductDisplayCategoryTag": "הצגת תגית קטגוריה",
 		"SideMenuExperimentsDisplay": "הצגת ‚ניסויים’",
