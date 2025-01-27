@@ -267,7 +267,7 @@
 		"Latest": "Neuste",
 		"LinkCopySuccess": "Link kopiert",
 		"LocationCount": "{count} Orte | {count} Ort | {count} Orte",
-		"LocationNotFound": "Location not found",
+		"LocationNotFound": "Ort nicht gefunden",
 		"Map": "Karte",
 		"MyDashboard": "Meine Übersicht",
 		"MyPrices": "Mein Preise",
@@ -309,7 +309,7 @@
 		"PricesAdded": "Preise hinzugefügt",
 		"PricesAddedToday": "Heute hinzugefügte Preise",
 		"PricesToday": "Aktuelle Preise",
-		"PriceNotFound": "Price not found",
+		"PriceNotFound": "Preis nicht gefunden",
 		"Private": "Privat",
 		"Privacy": "Datenschutz",
 		"ProductCount": "{count} Produkte | {count} Produkt | {count} Produkte",
@@ -324,7 +324,7 @@
 		"ProofUploadedCount": "{count} Nachweise hochgeladen | {count} Nachweis hochgeladen | {count} Nachweise hochgeladen",
 		"ProofsAddedToday": "Heute hinzugefügte Nachweise",
 		"ProofsToday": "Aktuelle Nachweise",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Nachweis nicht gefunden",
 		"Public": "Öffentlich",
 		"Quantity": "Mengenangabe",
 		"QuantityBought": "Gekaufte Menge",
@@ -421,8 +421,8 @@
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Preisschild ohne Preis",
 			"PriceTagWithPrice": "Preisschild mit Preis",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
+			"PriceTagTruncated": "Preisschild als abgeschnitten gekennzeichnet",
+			"PriceTagUnreadable": "Preisschild als unleserlich gekennzeichnet",
 			"NewPriceTag": "Neues Preisschild"
 		},
 		"OpenWithTheAssistant": "Mit Assistent öffnen"
@@ -584,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Weitere laden",
 		"Prices": "Preise",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Nachweis nicht gefunden",
 		"Public": "Öffentlich",
 		"Private": "Privat",
 		"Privacy": "Datenschutz"
@@ -739,7 +739,7 @@
 		"Prices": "Preise",
 		"PricesToday": "Heute hinzugefügte Preise",
 		"PricesTotal": "Gesamtpreise",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
+		"PricesLinkedToPriceTag": "Mit einem Preisschild verbundene Preise",
 		"ProductsWithPrices": "Produkte mit Preisen",
 		"Title": "Statistiken",
 		"Products": "Produkte",
