@@ -163,7 +163,7 @@ export default {
       return api.getStats()
         .then((data) => {
           for (const key in this.stats) {
-            this.stats[key] = data[key]
+            this.stats[key] = (key in data) ? data[key] : this.stats[key]
           }
           this.loading = false
         })
