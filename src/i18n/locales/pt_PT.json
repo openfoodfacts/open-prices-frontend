@@ -267,7 +267,7 @@
 		"Latest": "Mais recente",
 		"LinkCopySuccess": "Link copiado",
 		"LocationCount": "{count} localizações | {count} localização | {count} localizações",
-		"LocationNotFound": "Location not found",
+		"LocationNotFound": "Localização não encontrada",
 		"Map": "Mapa",
 		"MyDashboard": "Meu painel de controlo",
 		"MyPrices": "Os meus preços",
@@ -309,7 +309,7 @@
 		"PricesAdded": "Preços adicionado",
 		"PricesAddedToday": "Preços adicionados hoje",
 		"PricesToday": "Preços hoje",
-		"PriceNotFound": "Price not found",
+		"PriceNotFound": "Preço não encontrado",
 		"Private": "Privado",
 		"Privacy": "Privacidade",
 		"ProductCount": "{count} produtos | {count} produto | {count} produtos",
@@ -324,7 +324,7 @@
 		"ProofUploadedCount": "{count} comprovativos enviados| {count} comprovativo enviado | {count} comprovativos enviados",
 		"ProofsAddedToday": "Comprovativos adicionados hoje",
 		"ProofsToday": "Comprovativos hoje",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Comprovativo não encontrado",
 		"Public": "Público",
 		"Quantity": "Quantidade",
 		"QuantityBought": "Quantidade comprada",
@@ -421,8 +421,8 @@
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Etiqueta de preço sem preço",
 			"PriceTagWithPrice": "Etiqueta de preço com preço",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
+			"PriceTagTruncated": "Etiqueta de preço marcada como incompleta",
+			"PriceTagUnreadable": "Etiqueta de preço marcada como ilegível",
 			"NewPriceTag": "Nova etiqueta de preço"
 		},
 		"OpenWithTheAssistant": "Abra com o assistente"
@@ -584,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Carregar mais",
 		"Prices": "Preços",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Comprovativo não encontrado",
 		"Public": "Público",
 		"Private": "Privado",
 		"Privacy": "Privacidade"
@@ -739,7 +739,7 @@
 		"Prices": "Preços",
 		"PricesToday": "Preços adicionados hoje",
 		"PricesTotal": "Total de preços",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
+		"PricesLinkedToPriceTag": "Preços ligados a uma etiqueta de preço",
 		"ProductsWithPrices": "Produtos com preços",
 		"Title": "Estatísticas",
 		"Products": "Produtos",
