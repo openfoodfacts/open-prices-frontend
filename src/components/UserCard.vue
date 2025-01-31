@@ -24,7 +24,7 @@
         </v-col>
       </v-row>
 
-      <UserActionMenuButton :user="user" />
+      <UserActionMenuButton v-if="!hideActionMenuButton" :user="user" />
     </v-card-text>
   </v-card>
 </template>
@@ -41,6 +41,10 @@ export default {
     user: {
       type: Object,
       required: true
+    },
+    hideActionMenuButton: {
+      type: Boolean,
+      default: false
     },
     readonly: {
       type: Boolean,
