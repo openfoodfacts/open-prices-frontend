@@ -1,10 +1,15 @@
 <template>
   <v-card v-if="category" :title="category.name" prepend-icon="mdi-fruit-watermelon" data-name="category-card">
     <v-card-text>
-      <ProductCountChip v-if="sourceCategory" :count="productCount" :withLabel="true" />
-      <PriceCountChip v-else-if="sourceProduct" :count="priceCount" />
-      <CategoryTagChip v-if="showProductCategoryTag" class="mr-1" :category="category" :readonly="true" />
-      <CategoryActionMenuButton :category="category" :source="source" />
+      <v-row>
+        <v-col cols="11">
+          <ProductCountChip v-if="sourceCategory" :count="productCount" :withLabel="true" />
+          <PriceCountChip v-else-if="sourceProduct" :count="priceCount" />
+          <CategoryTagChip v-if="showProductCategoryTag" class="mr-1" :category="category" :readonly="true" />
+        </v-col>
+      </v-row>
+
+      <CategoryActionMenuButton v-if="!hideActionMenuButton" :category="category" :source="source" />
     </v-card-text>
   </v-card>
 </template>
@@ -39,7 +44,11 @@ export default {
     priceCount: {
       type: Number,
       default: 0
-    }
+    },
+    hideActionMenuButton: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     ...mapStores(useAppStore),
