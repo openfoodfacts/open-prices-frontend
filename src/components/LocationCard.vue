@@ -43,7 +43,7 @@
         </v-col>
       </v-row>
 
-      <LocationActionMenuButton :location="location" />
+      <LocationActionMenuButton v-if="!hideActionMenuButton" :location="location" />
     </v-card-text>
   </v-card>
 </template>
@@ -72,6 +72,10 @@ export default {
       default: false
     },
     hideCountryCity: {
+      type: Boolean,
+      default: false
+    },
+    hideActionMenuButton: {
       type: Boolean,
       default: false
     },
