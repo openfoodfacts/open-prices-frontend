@@ -1,15 +1,20 @@
 <template>
   <v-card :title="date" prepend-icon="mdi-calendar-today" data-name="date-card">
     <v-card-text>
-      <PriceCountChip :count="priceCount" :withLabel="true" />
-      <v-chip
-        v-for="dp in dateParentList"
-        :key="dp.name"
-        label size="small" density="comfortable" class="mr-1" @click="$router.push(dp.path)"
-      >
-        {{ dp.name }}
-      </v-chip>
-      <DateActionMenuButton :date="date" />
+      <v-row>
+        <v-col cols="11">
+          <PriceCountChip :count="priceCount" :withLabel="true" />
+          <v-chip
+            v-for="dp in dateParentList"
+            :key="dp.name"
+            label size="small" density="comfortable" class="mr-1" @click="$router.push(dp.path)"
+          >
+            {{ dp.name }}
+          </v-chip>
+        </v-col>
+      </v-row>
+
+      <DateActionMenuButton v-if="hideActionMenuButton" :date="date" />
     </v-card-text>
   </v-card>
 </template>
@@ -32,7 +37,11 @@ export default {
     priceCount: {
       type: Number,
       default: 0
-    }
+    },
+    hideActionMenuButton: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     dateType() {
