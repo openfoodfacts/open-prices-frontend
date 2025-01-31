@@ -267,7 +267,7 @@
 		"Latest": "Naujausi",
 		"LinkCopySuccess": "Nuoroda nukopijuota",
 		"LocationCount": "{count} vietos | {count} vieta | {count} vietų",
-		"LocationNotFound": "Location not found",
+		"LocationNotFound": "Vieta nerasta",
 		"Map": "Žemėlapis",
 		"MyDashboard": "Mano pagrindinis meniu",
 		"MyPrices": "Mano kainos",
@@ -309,7 +309,7 @@
 		"PricesAdded": "Pridėtos kainos",
 		"PricesAddedToday": "Kainos pridėtos šiandien",
 		"PricesToday": "Kainos šiandien",
-		"PriceNotFound": "Price not found",
+		"PriceNotFound": "Kaina nerasta",
 		"Private": "Privatu",
 		"Privacy": "Privatumas",
 		"ProductCount": "{count} produktai | {count} produktas | {count} produktų",
@@ -324,7 +324,7 @@
 		"ProofUploadedCount": "{count} įrodymai įkelti | {count} įrodymas įkeltas | {count} proofs uploadedįrodymų įkelta",
 		"ProofsAddedToday": "Šiandien pridėti įrodymai",
 		"ProofsToday": "Įrodymai šiandien",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Įrodymas nerastas",
 		"Public": "Vieša",
 		"Quantity": "Kiekis",
 		"QuantityBought": "Įsigytas kiekis",
@@ -421,8 +421,8 @@
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Kainos etiketė be kainos",
 			"PriceTagWithPrice": "Kainos etiketė su kaina",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
+			"PriceTagTruncated": "Kainos etiketė pažymėta kaip sutrumpinta",
+			"PriceTagUnreadable": "Kainos etiketė pažymėta kaip neįskaitoma",
 			"NewPriceTag": "Nauja kainos etiketė"
 		},
 		"OpenWithTheAssistant": "Atidaryti su asistentu"
@@ -584,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Įkelti daugiau",
 		"Prices": "Kainos",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Įrodymas nerastas",
 		"Public": "Vieša",
 		"Private": "Privatu",
 		"Privacy": "Privatumas"
@@ -739,7 +739,7 @@
 		"Prices": "Kainos",
 		"PricesToday": "Kainos pridėtos šiandien",
 		"PricesTotal": "Visos kainos",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
+		"PricesLinkedToPriceTag": "Kainos susietos su kainų etikete",
 		"ProductsWithPrices": "Produktai su kainomis",
 		"Title": "Statistika",
 		"Products": "Produktai",

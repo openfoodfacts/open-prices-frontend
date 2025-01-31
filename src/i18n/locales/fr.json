@@ -138,9 +138,9 @@
 		"Title": "Community challenge",
 		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
+			"Title": "Prendre des photos des étiquettes de prix dans les magasins",
+			"line1": "Les photos peuvent inclure une ou plusieurs étiquettes de prix. Les codes-barres doivent être lisibles. Par exemple :",
+			"line2": "Une fois prêt, trouvez votre magasin et téléversez vos photos en utilisant le bouton ci-dessous.",
 			"AddPictures": "Ajouter des photos"
 		},
 		"StepValidate": {
@@ -148,7 +148,7 @@
 			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
 			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
 			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"line4": "Il s'agit d'un effort collaboratif, même si vous n'avez pas envoyé de photos, vous pouvez toujours aider les autres en validant."
 		},
 		"PicturesAddedByYou": "Pictures added by you",
 		"Prices": "{challenge_title} prices",
@@ -291,14 +291,14 @@
 		"PersonalInfo": "Informations personnelles",
 		"Physical": "Physique",
 		"Picture": "Image",
-		"Pictures": "Pictures",
-		"PictureSelect": "Select a picture",
-		"PictureSelectMultiple": "Select pictures",
-		"PictureSelected": "Picture selected!",
-		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
-		"PictureFull": "Full-size picture",
+		"Pictures": "Photos",
+		"PictureSelect": "Sélectionner une photo",
+		"PictureSelectMultiple": "Sélectionner des photos",
+		"PictureSelected": "Photo sélectionnée !",
+		"PictureSelectedCount": "{count} photos sélectionnées | {count} photo sélectionnée | {count} photos sélectionnées",
+		"PictureFull": "Photo en taille réelle",
 		"PicturesByYou": "Pictures by you",
-		"PicturesAdded": "Pictures added",
+		"PicturesAdded": "Photos ajoutées",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Étiquette de prix",
 		"PriceCount": "{count} prix | {count} prix | {count} prix",
@@ -369,7 +369,7 @@
 		"Unreadable": "Illisible",
 		"Upload": "Téléverser",
 		"UploadMultipleImages": "Téléverser {count} image | Téléverser {count} images",
-		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
+		"UploadMultiplePictures": "Téléverser {count} photo | Téléverser {count} photos",
 		"UploadMultipleProofs": "Téléverser {count} preuve | Téléverser {count} preuves",
 		"UploadMultiplePrices": "Téléverser {count} prix | Téléverser {count} prix",
 		"URL": "URL",
@@ -561,7 +561,7 @@
 	},
 	"ProofAdd": {
 		"HowToMultiple": "Toutes les images d'étiquettes de prix que vous sélectionnez doivent partager le même emplacement de magasin et avoir été prises le même jour.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date."
+		"HowToMultipleShort": "Les photos doivent partager le même emplacement de magasin et la même date."
 	},
 	"ProofCard": {
 		"Proof": "Preuve",

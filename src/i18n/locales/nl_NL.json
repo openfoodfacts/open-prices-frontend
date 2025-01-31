@@ -267,7 +267,7 @@
 		"Latest": "Laatste",
 		"LinkCopySuccess": "Link gekopieerd",
 		"LocationCount": "{count} locaties | {count} locatie | {count} locaties",
-		"LocationNotFound": "Location not found",
+		"LocationNotFound": "Locatie niet gevonden",
 		"Map": "Kaart",
 		"MyDashboard": "Mijn dashboard",
 		"MyPrices": "Mijn prijzen",
@@ -309,7 +309,7 @@
 		"PricesAdded": "Prijzen toegevoegd",
 		"PricesAddedToday": "Vandaag toegevoegde prijzen",
 		"PricesToday": "Prijzen vandaag",
-		"PriceNotFound": "Price not found",
+		"PriceNotFound": "Prijs niet gevonden",
 		"Private": "Privé",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} producten | {count} product | {count} producten",
@@ -324,7 +324,7 @@
 		"ProofUploadedCount": "{count} bewijzen geüpload | {count} bewijs geüpload | {count} bewijzen geüpload",
 		"ProofsAddedToday": "Bewijzen vandaag toegevoegd",
 		"ProofsToday": "Bewijzen vandaag",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Bewijs niet gevonden",
 		"Public": "Openbaar",
 		"Quantity": "Hoeveelheid",
 		"QuantityBought": "Gekochte hoeveelheid",
@@ -421,8 +421,8 @@
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Prijskaartje zonder prijs",
 			"PriceTagWithPrice": "Prijskaartje met een prijs",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
+			"PriceTagTruncated": "Prijskaartje gemarkeerd als afgekapt",
+			"PriceTagUnreadable": "Prijskaartje gemarkeerd als onleesbaar",
 			"NewPriceTag": "Nieuw prijskaartje"
 		},
 		"OpenWithTheAssistant": "Openen met de assistent"
@@ -584,7 +584,7 @@
 	"ProofDetail": {
 		"LoadMore": "Meer laden",
 		"Prices": "Prijzen",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Bewijs niet gevonden",
 		"Public": "Openbaar",
 		"Private": "Privé",
 		"Privacy": "Privacy"
@@ -739,7 +739,7 @@
 		"Prices": "Prijzen",
 		"PricesToday": "Vandaag toegevoegde prijzen",
 		"PricesTotal": "Totale prijzen",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
+		"PricesLinkedToPriceTag": "Prijzen gekoppeld aan een prijskaartje",
 		"ProductsWithPrices": "Producten met prijzen",
 		"Title": "Statistieken",
 		"Products": "Producten",
