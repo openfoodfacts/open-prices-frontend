@@ -33,7 +33,7 @@
         </v-col>
       </v-row>
 
-      <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetails="hideProductDetails" :readonly="readonly" />
+      <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetails="hideProductDetails" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-container>
   </v-card>
 </template>
@@ -106,6 +106,10 @@ export default {
       default: false
     },
     hidePriceCreated: {
+      type: Boolean,
+      default: false
+    },
+    hideActionMenuButton: {
       type: Boolean,
       default: false
     },
