@@ -2,7 +2,7 @@
   <v-card v-if="category" :title="category.name" prepend-icon="mdi-fruit-watermelon" data-name="category-card">
     <v-card-text>
       <v-row>
-        <v-col cols="11">
+        <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <ProductCountChip v-if="sourceCategory" :count="productCount" :withLabel="true" />
           <PriceCountChip v-else-if="sourceProduct" :count="priceCount" />
           <CategoryTagChip v-if="showProductCategoryTag" class="mr-1" :category="category" :readonly="true" />

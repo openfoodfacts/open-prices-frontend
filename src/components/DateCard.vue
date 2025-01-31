@@ -2,7 +2,7 @@
   <v-card :title="date" prepend-icon="mdi-calendar-today" data-name="date-card">
     <v-card-text>
       <v-row>
-        <v-col cols="11">
+        <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <PriceCountChip :count="priceCount" :withLabel="true" />
           <v-chip
             v-for="dp in dateParentList"
@@ -14,7 +14,7 @@
         </v-col>
       </v-row>
 
-      <DateActionMenuButton v-if="hideActionMenuButton" :date="date" />
+      <DateActionMenuButton v-if="!hideActionMenuButton" :date="date" />
     </v-card-text>
   </v-card>
 </template>

@@ -7,7 +7,7 @@
   >
     <v-card-text>
       <v-row>
-        <v-col cols="11">
+        <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <PriceCountChip :count="user.price_count" :withLabel="true" />
           <v-chip v-if="user.location_count" label size="small" density="comfortable" class="mr-1">
             <v-icon start icon="mdi-map-marker-outline" />

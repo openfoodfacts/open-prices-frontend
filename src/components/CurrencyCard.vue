@@ -2,7 +2,7 @@
   <v-card :title="currency" prepend-icon="mdi-cash" data-name="currency-card">
     <v-card-text>
       <v-row>
-        <v-col cols="11">
+        <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <PriceCountChip :count="priceCount" :withLabel="true" />
         </v-col>
       </v-row>

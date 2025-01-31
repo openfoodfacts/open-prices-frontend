@@ -2,7 +2,7 @@
   <v-card :title="brand" prepend-icon="mdi-factory" data-name="brand-card">
     <v-card-text>
       <v-row>
-        <v-col cols="11">
+        <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <ProductCountChip :count="productCount" :withLabel="true" />
         </v-col>
       </v-row>
