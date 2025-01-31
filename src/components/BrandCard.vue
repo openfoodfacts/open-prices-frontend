@@ -1,8 +1,13 @@
 <template>
   <v-card :title="brand" prepend-icon="mdi-factory" data-name="brand-card">
     <v-card-text>
-      <ProductCountChip :count="productCount" :withLabel="true" />
-      <BrandActionMenuButton :brand="brand" />
+      <v-row>
+        <v-col cols="11">
+          <ProductCountChip :count="productCount" :withLabel="true" />
+        </v-col>
+      </v-row>
+
+      <BrandActionMenuButton v-if="!hideActionMenuButton" :brand="brand" />
     </v-card-text>
   </v-card>
 </template>
@@ -23,7 +28,11 @@ export default {
     productCount: {
       type: Number,
       default: 0
-    }
+    },
+    hideActionMenuButton: {
+      type: Boolean,
+      default: false
+    },
   }
 }
 </script>
