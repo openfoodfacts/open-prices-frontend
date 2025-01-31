@@ -19,7 +19,7 @@
           <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
             {{ $t('Common.ProductFind') }}
           </v-btn>
-          <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideProductActions="true" :readonly="true" elevation="1" />
+          <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </v-col>
       </v-row>
       <v-row v-else-if="productIsTypeCategory" class="mt-0">
@@ -69,7 +69,7 @@
       >
         {{ productForm.product_code }}
       </v-alert>
-      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="true" :hideProductActions="true" :readonly="true" elevation="1" />
+      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
     </v-col>
     <v-col v-else-if="productIsTypeCategory" cols="12">
       <v-alert
