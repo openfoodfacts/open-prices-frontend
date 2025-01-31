@@ -10,7 +10,7 @@
       <v-card-text>
         <v-row>
           <v-col cols="12">
-            <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="true" :readonly="true" />
+            <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
           </v-col>
         </v-row>
       </v-card-text>
@@ -18,24 +18,8 @@
       <v-divider />
 
       <v-card-text>
-        <h3 class="mb-1">
-          {{ $t('PriceForm.Label') }}
-        </h3>
+        <ProductInputRow v-if="productIsTypeCategory" :productForm="updatePriceForm" :hideBarcodeMode="true" />
         <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :hideCurrencyChoice="true" />
-
-        <h3 class="mt-4 mb-1">
-          {{ $t('Common.Date') }}
-        </h3>
-        <v-row>
-          <v-col cols="12">
-            <v-text-field
-              v-model="updatePriceForm.date"
-              :label="$t('Common.Date')"
-              type="date"
-              disabled
-            />
-          </v-col>
-        </v-row>
       </v-card-text>
 
       <v-divider />
@@ -59,10 +43,12 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
+import constants from '../constants'
 
 export default {
   components: {
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
   },
   props: {
@@ -75,12 +61,19 @@ export default {
   data() {
     return {
       updatePriceForm: {
+        type: null,
+        product: null,
+        product_code: '',
+        category_tag: null,
+        origins_tags: '',
+        labels_tags: [],
         price: null,
         price_per: null,
         price_is_discounted: false,
         price_without_discount: null,
         currency: null,
-        date: null,
+        receipt_quantity: null,
+        // date: null,
       },
       productMode: null,
       loading: false
@@ -92,6 +85,9 @@ export default {
     },
     dialogWidth() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    productIsTypeCategory() {
+      return this.updatePriceForm && this.updatePriceForm.type === constants.PRICE_TYPE_CATEGORY
     },
   },
   mounted() {
