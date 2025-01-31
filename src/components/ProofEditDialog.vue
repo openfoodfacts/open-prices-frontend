@@ -8,7 +8,7 @@
       <v-divider />
 
       <v-card-text>
-        <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" imageHeight="100px" />
+        <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" imageHeight="100px" />
       </v-card-text>
 
       <v-divider />

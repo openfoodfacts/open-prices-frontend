@@ -42,7 +42,7 @@
             </v-card-text>
             <v-divider />
             <v-card-actions>
-              <ProofFooterRow :proof="proofObject" :hideProofActions="true" :readonly="true" />
+              <ProofFooterRow :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
             </v-card-actions>
           </v-card>
         </v-col>
@@ -156,7 +156,7 @@
           </h3>
           <v-row v-if="nextProofSuggestions.length">
             <v-col v-for="proof in nextProofSuggestions" :key="proof" cols="12" md="6" lg="4">
-              <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
+              <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
             </v-col>
           </v-row>
         </v-col>

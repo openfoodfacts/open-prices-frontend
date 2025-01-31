@@ -20,7 +20,7 @@
       <v-card-text>
         <v-row>
           <v-col v-for="proof in userProofList" :key="proof" cols="12" md="6" lg="4">
-            <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
+            <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" :isSelectable="true" @proofSelected="selectProof" />
           </v-col>
         </v-row>
         <v-row v-if="userProofList.length < userProofTotal" class="mb-2">
