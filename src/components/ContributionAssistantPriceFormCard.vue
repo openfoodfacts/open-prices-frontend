@@ -18,7 +18,7 @@
     </v-card-text>
     <v-divider v-if="!hideProofDetails" />
     <v-card-text v-if="!hideProofDetails" class="flex-grow-0">
-      <ProofFooterRow :proof="productPriceForm.proof" :showProofChip="true" :hideProofType="true" :hideProofActions="true" :readonly="true" />
+      <ProofFooterRow :proof="productPriceForm.proof" :showProofChip="true" :hideProofType="true" :hideActionMenuButton="true" :readonly="true" />
     </v-card-text>
     <v-divider v-if="!hideActions" />
     <v-card-actions v-if="!hideActions">

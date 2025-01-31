@@ -50,7 +50,7 @@
                 </template>
               </v-text-field>
             </v-form>
-            <ProductCard v-if="product" :product="product" :hideCategoriesAndLabels="true" :hideProductActions="true" :readonly="true" elevation="1" @click="barcodeSend(product.code)" />
+            <ProductCard v-if="product" :product="product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" @click="barcodeSend(product.code)" />
           </v-tabs-window-item>
         </v-tabs-window>
       </v-card-text>

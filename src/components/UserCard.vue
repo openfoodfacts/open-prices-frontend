@@ -7,7 +7,7 @@
   >
     <v-card-text>
       <v-row>
-        <v-col cols="11">
+        <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <PriceCountChip :count="user.price_count" :withLabel="true" />
           <v-chip v-if="user.location_count" label size="small" density="comfortable" class="mr-1">
             <v-icon start icon="mdi-map-marker-outline" />
@@ -24,7 +24,7 @@
         </v-col>
       </v-row>
 
-      <UserActionMenuButton :user="user" />
+      <UserActionMenuButton v-if="!hideActionMenuButton" :user="user" />
     </v-card-text>
   </v-card>
 </template>
@@ -41,6 +41,10 @@ export default {
     user: {
       type: Object,
       required: true
+    },
+    hideActionMenuButton: {
+      type: Boolean,
+      default: false
     },
     readonly: {
       type: Boolean,

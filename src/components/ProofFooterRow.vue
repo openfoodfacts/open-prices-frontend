@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :cols="hideProofActions ? '12' : '11'">
+    <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <ProofChip v-if="showProofChip" class="mr-1" :proof="proof" :withLabel="showProofChip" :readonly="true" />
       <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
       <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" class="mr-1" :totalCount="proof.receipt_price_count" />
@@ -14,7 +14,7 @@
     </v-col>
   </v-row>
 
-  <ProofActionMenuButton v-if="!hideProofActions" :proof="proof" />
+  <ProofActionMenuButton v-if="!hideActionMenuButton" :proof="proof" />
 </template>
 
 <script>
@@ -54,7 +54,7 @@ export default {
       type: Boolean,
       default: true
     },
-    hideProofActions: {
+    hideActionMenuButton: {
       type: Boolean,
       default: false,
     },

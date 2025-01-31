@@ -17,7 +17,7 @@
     <v-divider />
 
     <v-card-actions>
-      <ProofFooterRow :proof="proof" :hideProofActions="hideProofActions" :readonly="readonly" />
+      <ProofFooterRow :proof="proof" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-card-actions>
   </v-card>
 </template>
@@ -46,7 +46,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    hideProofActions: {
+    hideActionMenuButton: {
       type: Boolean,
       default: false,
     },

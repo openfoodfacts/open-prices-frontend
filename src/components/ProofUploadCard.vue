@@ -55,7 +55,7 @@
   </v-card>
 
   <v-sheet v-else>
-    <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideProofActions="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
+    <ProofCard v-for="(proofObject, index) in proofObjectList" :key="index" mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :showImageThumb="proofCardShowImageThumb" :readonly="true" />
   </v-sheet>
 
   <v-snackbar

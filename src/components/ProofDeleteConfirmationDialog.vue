@@ -11,7 +11,7 @@
         <p class="mb-1">
           {{ $t('ProofDelete.Confirmation') }}
         </p>
-        <ProofCard :proof="proof" :hideProofHeader="true" :hideProofActions="true" :readonly="true" />
+        <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
       </v-card-text>
 
       <v-divider />
