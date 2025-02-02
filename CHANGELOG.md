@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.116.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.115.1...v1.116.0) (2025-02-02)
+
+
+### Features
+
+* **Prices:** allow editing raw product category, origin, label & price_per fields ([#1245](https://github.com/openfoodfacts/open-prices-frontend/issues/1245)) ([987a955](https://github.com/openfoodfacts/open-prices-frontend/commit/987a95528e8e7a2e883b0346a863677a678e2894))
+
+
+### Bug Fixes
+
+* **Stats:** fix display of challenge_count. ref [#1339](https://github.com/openfoodfacts/open-prices-frontend/issues/1339) ([ab65286](https://github.com/openfoodfacts/open-prices-frontend/commit/ab652868f27f87572f3ed4a5b40a7dcf4a1d021c))
+
+
+### Technical
+
+* **Action menus:** add a hideActionMenuButton prop in all the cards with actions ([#1347](https://github.com/openfoodfacts/open-prices-frontend/issues/1347)) ([e0ca142](https://github.com/openfoodfacts/open-prices-frontend/commit/e0ca142f511d654cab56364911d5f772d0892fee))
+* **l10n:** New Crowdin translations to review and merge ([#1344](https://github.com/openfoodfacts/open-prices-frontend/issues/1344)) ([73d443d](https://github.com/openfoodfacts/open-prices-frontend/commit/73d443de3e93a73c5e1cb59462d9e971af668af4))
+* **l10n:** New Crowdin translations to review and merge ([#1348](https://github.com/openfoodfacts/open-prices-frontend/issues/1348)) ([08a419b](https://github.com/openfoodfacts/open-prices-frontend/commit/08a419bbb95bae99f74f15c78d0ff27f7821f524))
+* **Price validation:** rename the CTA from Upload to Confirm. ref [#1137](https://github.com/openfoodfacts/open-prices-frontend/issues/1137) ([40f7679](https://github.com/openfoodfacts/open-prices-frontend/commit/40f76794a622f176aefb73c99c9594485101b932))
+
 ## [1.115.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.115.0...v1.115.1) (2025-01-26)
 
 
