@@ -199,6 +199,7 @@
 		"Clear": "Wissen",
 		"Contributors": "Medewerkers",
 		"Community": "Gemeenschap",
+		"Confirm": "Bevestig",
 		"Country": "Land",
 		"Crop": "Bijsnijden",
 		"Cropped": "Bijgesneden",
@@ -392,7 +393,7 @@
 	"ContributionAssistant": {
 		"Steps": {
 			"ProofSelect": "1. Selectie van het bewijs",
-			"LabelsExtraction": "2. Labels extraction",
+			"LabelsExtraction": "2. Etikettenextractie",
 			"Cleanup": "3. Opschonen",
 			"Summary": "4. Samenvatting"
 		},

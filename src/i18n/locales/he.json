@@ -136,19 +136,19 @@
 	},
 	"Challenge": {
 		"Title": "אתגר הקהילה",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "אפשר להצטרף לחובבי מחירי מזון נוספים על ידי איסוף מידע על {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
+			"Title": "צילום תמונות של תגי מחיר בחנויות",
+			"line1": "התמונות יכולות לכלול תגית מחיר אחת או יותר. הברקודים צריכים להיות קריאים. למשל:",
+			"line2": "לאחר סיום ההכנות, נא לאתר את החנות שלך ולהעלות את התמונות שלך בעזרת הכפתור שלהלן.",
 			"AddPictures": "הוספת תמונות"
 		},
 		"StepValidate": {
 			"Title": "אימות המחירים שזוהו באמצעות בינה מלאכותית",
 			"line1": "תגי מחיר מזוהים אוטומטית, אך הרובוטים עדיין זקוקים לעזרתך כדי לאמת אותם.",
 			"line2": "נא לבקר בעמוד אימות המחירים בעזרת הכפתור שלהלן, ולערוך את הברקוד והמחיר במקרה הצורך ולאמת!",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"line3": "אם התווית לא קריאה, אפשר לסמן אותה ככזאת.",
+			"line4": "זה מאמץ שיתופי, אפילו אם לא שלחת תמונות, עדיין אפשר לסייע לאחרים בעזרת אימות."
 		},
 		"PicturesAddedByYou": "תמונות שהעלית",
 		"Prices": "{challenge_title} מחירים",
@@ -199,6 +199,7 @@
 		"Clear": "פינוי",
 		"Contributors": "תורמים",
 		"Community": "קהילה",
+		"Confirm": "אישור",
 		"Country": "מדינה",
 		"Crop": "חיתוך",
 		"Cropped": "חתוך",
