@@ -14,6 +14,9 @@
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_type_category_tag_count" :subtitle="$t('Stats.WithCategory')" />
     </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_currency_count" :subtitle="$t('Common.Currencies')" />
+    </v-col>
   </v-row>
 
   <br>
@@ -48,6 +51,9 @@
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.location_type_online_count" :subtitle="$t('Common.Online')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.location_type_osm_country_count" :subtitle="$t('Common.Countries')" />
     </v-col>
   </v-row>
 
@@ -132,12 +138,14 @@ export default {
         price_count: 0,
         price_type_product_code_count: 0,
         price_type_category_tag_count: 0,
+        price_currency_count: 0,
         product_count: 0,
         product_with_price_count: 0,
         location_count: 0,
         location_with_price_count: 0,
         location_type_osm_count: 0,
         location_type_online_count: 0,
+        location_type_osm_country_count: 0,
         proof_count: 0,
         proof_with_price_count: 0,
         proof_type_price_tag_count: 0,
