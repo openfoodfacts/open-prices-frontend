@@ -55,7 +55,7 @@
         variant="flat"
         @click="validatePriceTag"
       >
-        {{ $t('Common.Upload') }}
+        {{ $t('Common.Confirm') }}
       </v-btn>
     </v-card-actions>
 
