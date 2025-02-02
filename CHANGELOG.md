@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.116.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.116.0...v1.116.1) (2025-02-02)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1353](https://github.com/openfoodfacts/open-prices-frontend/issues/1353)) ([48d7aec](https://github.com/openfoodfacts/open-prices-frontend/commit/48d7aecbcd7d849e194c8dfe0ec5908ae45c1aa3))
+* **Price validation:** only show Price tags with a prediction ([#1349](https://github.com/openfoodfacts/open-prices-frontend/issues/1349)) ([19a358a](https://github.com/openfoodfacts/open-prices-frontend/commit/19a358a17750723a7547abfd2379be083e3f67a5))
+* **Stats:** Add the currency_count & country_count stats ([#1351](https://github.com/openfoodfacts/open-prices-frontend/issues/1351)) ([a14e72b](https://github.com/openfoodfacts/open-prices-frontend/commit/a14e72bcf5711b02aa8d3513542a01f718e14400))
+* **User card:** Add the currency_count & country_count stats ([#1352](https://github.com/openfoodfacts/open-prices-frontend/issues/1352)) ([b7475b1](https://github.com/openfoodfacts/open-prices-frontend/commit/b7475b103b45c811fc371dd3e01f1772f71faa25))
+
 ## [1.116.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.115.1...v1.116.0) (2025-02-02)
 
 
