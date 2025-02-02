@@ -80,6 +80,7 @@ export default {
       let defaultParams = {
         proof__ready_for_price_tag_validation: true,
         status__isnull: true,
+        prediction_count__gte: 1,
         created__lte: this.currentDateTime,
         order_by: this.currentOrder,
         size: this.getApiSize,
