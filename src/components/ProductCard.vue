@@ -20,9 +20,10 @@
               <ProductCategoriesChip v-if="!hideCategoriesAndLabels" class="mr-1" :productCategories="product.categories_tags" />
               <ProductLabelsChip v-if="!hideCategoriesAndLabels" :productLabels="product.labels_tags" />
             </span>
-            <ProductMissingChip v-else />
+            <ProductMissingChip v-else class="mr-1" />
             <br v-if="showProductBarcode">
             <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
+            <ProductBarcodeTooLongChip v-if="barcodeTooLong" :barcode="product.code" class="mr-1" />
             <ProductBarcodeInvalidChip v-if="barcodeInvalid" />
             <ProductActionMenuButton v-if="hasProductSource && !hideActionMenuButton" :product="product" />
           </p>
@@ -54,6 +55,7 @@ export default {
     ProductLabelsChip: defineAsyncComponent(() => import('../components/ProductLabelsChip.vue')),
     ProductMissingChip: defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
     ProductBarcodeChip: defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
+    ProductBarcodeTooLongChip: defineAsyncComponent(() => import('../components/ProductBarcodeTooLongChip.vue')),
     ProductBarcodeInvalidChip: defineAsyncComponent(() => import('../components/ProductBarcodeInvalidChip.vue')),
     ProductActionMenuButton: defineAsyncComponent(() => import('../components/ProductActionMenuButton.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
@@ -107,9 +109,12 @@ export default {
     showProductBarcode() {
       return !this.hideProductBarcode || this.appStore.user.username && this.appStore.user.product_display_barcode
     },
+    barcodeTooLong() {
+      return this.product.code && utils.isBarcodeTooLong(this.product.code)
+    },
     barcodeInvalid() {
-      return this.product.code && !utils.isValidBarcode(this.product.code)
-    }
+      return this.product.code && !utils.isBarcodeValid(this.product.code)
+    },
   },
   methods: {
     getProductTitle() {
