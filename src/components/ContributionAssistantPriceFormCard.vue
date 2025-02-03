@@ -29,12 +29,16 @@
           </v-btn>
         </template>
         <v-list>
+          <v-list-item :slim="true" prepend-icon="mdi-eye-off-outline" @click="removePriceTag(2)">
+            {{ $t('Common.Unreadable') }}
+          </v-list-item>
+          <v-divider class="mt-2 mb-2" />
           <v-list-item :slim="true" prepend-icon="mdi-crop" @click="removePriceTag(3)">
             {{ $t('Common.Truncated') }}
           </v-list-item>
           <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-eye-off-outline" @click="removePriceTag(2)">
-            {{ $t('Common.Unreadable') }}
+          <v-list-item :slim="true" prepend-icon="mdi-currency-usd-off" @click="removePriceTag(4)">
+            {{ $t('Common.NotAPrice') }}
           </v-list-item>
         </v-list>
       </v-menu>
