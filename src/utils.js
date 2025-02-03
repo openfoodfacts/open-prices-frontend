@@ -48,7 +48,7 @@ function getURLOrigin(value) {
 /**
  * https://stackoverflow.com/a/67933747/4293684
  */
-function isValidBarcode(value) {
+function isBarcodeValid(value) {
   // We only allow correct length barcodes
   if (!value.match(/^(\d{8}|\d{12,14})$/)) {
     return false;
@@ -62,6 +62,10 @@ function isValidBarcode(value) {
   }
 
   return ((10 - (result % 10)) % 10) === parseInt(paddedValue.charAt(13), 10)
+}
+
+function isBarcodeTooLong(value) {
+  return value.length > 13
 }
 
 function cleanBarcode(value) {
@@ -446,7 +450,8 @@ export default {
   isNumber,
   isURL,
   getURLOrigin,
-  isValidBarcode,
+  isBarcodeValid,
+  isBarcodeTooLong,
   cleanBarcode,
   addObjectToArray,
   removeObjectFromArray,
