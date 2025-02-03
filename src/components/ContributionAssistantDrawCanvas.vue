@@ -147,26 +147,37 @@
           const width = endX - startX
           const height = endY - startY
           let text = ""
-          if (rect.status == constants.PRICE_TAG_STATUS_WITH_PRICE) {
-            ctx.strokeStyle = "green"
-            ctx.fillStyle = "green"
-            text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithPrice')
-          } else if (rect.status ==  constants.PRICE_TAG_STATUS_UNREADABLE) {
-            ctx.strokeStyle = "orange"
-            ctx.fillStyle = "orange"
-            text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagUnreadable')
-          } else if (rect.status == constants.PRICE_TAG_STATUS_TRUNCATED) {
-            ctx.strokeStyle = "#883c1e"
-            ctx.fillStyle = "#883c1e"
-            text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagTruncated')
-          } else if (rect.id) {  // status == null
-            ctx.strokeStyle = "blue"
-            ctx.fillStyle = "blue"
-            text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice')
-          } else {
-            ctx.strokeStyle = "red"
-            ctx.fillStyle = "red"
-            text = this.$t('ContributionAssistant.PriceTagLabels.NewPriceTag')
+          switch (rect.status) {
+            case constants.PRICE_TAG_STATUS_WITH_PRICE:
+              ctx.strokeStyle = "green"
+              ctx.fillStyle = "green"
+              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithPrice')
+              break
+            case constants.PRICE_TAG_STATUS_UNREADABLE:
+              ctx.strokeStyle = "orange"
+              ctx.fillStyle = "orange"
+              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagUnreadable')
+              break
+            case constants.PRICE_TAG_STATUS_TRUNCATED:
+              ctx.strokeStyle = "#883c1e"
+              ctx.fillStyle = "#883c1e"
+              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagTruncated')
+              break
+            case constants.PRICE_TAG_STATUS_NOT_A_PRICE:
+              ctx.strokeStyle = "#88631e"
+              ctx.fillStyle = "#88631e"
+              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagNotAPrice')
+              break
+            default:
+              if (rect.id) {  // status == null
+                ctx.strokeStyle = "blue"
+                ctx.fillStyle = "blue"
+                text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice')
+              } else {
+                ctx.strokeStyle = "red"
+                ctx.fillStyle = "red"
+                text = this.$t('ContributionAssistant.PriceTagLabels.NewPriceTag')
+              }
           }
           ctx.strokeRect(startX * this.scale, startY * this.scale, width * this.scale, height * this.scale)
           const textWidth = ctx.measureText(text).width + 4
