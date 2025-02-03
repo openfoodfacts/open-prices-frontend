@@ -278,6 +278,7 @@
 		"MyPrices": "Fiyatlarım",
 		"MyProofs": "Bedellerim",
 		"MyStats": "My stats",
+		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Sipariş",
@@ -534,6 +535,7 @@
 		"TwoDecimals": "Yalnızca iki ondalık sayıya izin verilir"
 	},
 	"ProductCard": {
+		"BarcodeLength": "Barcode length: {length}",
 		"Brands": "Markalar",
 		"BrandLower": "marka",
 		"BrandMissing": "Marka eksik",
@@ -547,6 +549,7 @@
 		"LabelTotal": "{count} etiketler",
 		"LatestPrice": "En son fiyat",
 		"InvalidBarcode": "Geçersiz barkod",
+		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Ürün markası eksik",
 		"ProductCategoriesMissing": "Ürün kategorileri eksik",
 		"ProductQuantityGram": "{0} gr",
