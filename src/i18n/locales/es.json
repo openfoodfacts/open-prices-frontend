@@ -278,6 +278,7 @@
 		"MyPrices": "Mis precios",
 		"MyProofs": "Mis pruebas",
 		"MyStats": "Mis estadísticas",
+		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Pedido",
@@ -534,6 +535,7 @@
 		"TwoDecimals": "Solo se permiten dos decimales"
 	},
 	"ProductCard": {
+		"BarcodeLength": "Barcode length: {length}",
 		"Brands": "Marcas",
 		"BrandLower": "marca",
 		"BrandMissing": "Falta la marca",
@@ -547,6 +549,7 @@
 		"LabelTotal": "{count} etiquetas",
 		"LatestPrice": "Último precio",
 		"InvalidBarcode": "Código de barras no válido",
+		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Falta la marca del producto",
 		"ProductCategoriesMissing": "Faltan las categorías del producto",
 		"ProductQuantityGram": "{0} g",
