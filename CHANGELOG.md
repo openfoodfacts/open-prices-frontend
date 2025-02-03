@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.116.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.116.1...v1.116.2) (2025-02-03)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1354](https://github.com/openfoodfacts/open-prices-frontend/issues/1354)) ([dcf9398](https://github.com/openfoodfacts/open-prices-frontend/commit/dcf939811744d08e12ab86d53ed5ffb473ad4818))
+* **Price tag:** add a new error choice 'Not a price' ([#1357](https://github.com/openfoodfacts/open-prices-frontend/issues/1357)) ([6e57e0a](https://github.com/openfoodfacts/open-prices-frontend/commit/6e57e0ae7d0bc4b0f02d3e44b7ee5cc8cd525e75))
+* **Product:** new warning if the barcode is too long (&gt; 13 characters) ([#1355](https://github.com/openfoodfacts/open-prices-frontend/issues/1355)) ([f3add84](https://github.com/openfoodfacts/open-prices-frontend/commit/f3add84da38e60746d09d9a7588ffb3617733c49))
+
 ## [1.116.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.116.0...v1.116.1) (2025-02-02)
 
 
