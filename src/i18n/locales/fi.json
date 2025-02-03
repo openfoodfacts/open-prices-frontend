@@ -278,6 +278,7 @@
 		"MyPrices": "Minun hinnat",
 		"MyProofs": "Minun todisteeni",
 		"MyStats": "My stats",
+		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Järjestys",
@@ -534,6 +535,7 @@
 		"TwoDecimals": "Korkeintaan kaksi desimaalia sallitaan"
 	},
 	"ProductCard": {
+		"BarcodeLength": "Barcode length: {length}",
 		"Brands": "Tuotemerkit",
 		"BrandLower": "tuotemerkki",
 		"BrandMissing": "Tuotemerkki puuttuu",
@@ -547,6 +549,7 @@
 		"LabelTotal": "{count} tunnisteita",
 		"LatestPrice": "Viimeisin hinta",
 		"InvalidBarcode": "Virheellinen viivakoodi",
+		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Tuotteen merkki puuttuu",
 		"ProductCategoriesMissing": "Tuoteluokat puuttuvat",
 		"ProductQuantityGram": "{0} g",
