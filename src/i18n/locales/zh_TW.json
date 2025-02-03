@@ -278,6 +278,7 @@
 		"MyPrices": "我的價格",
 		"MyProofs": "我的證明",
 		"MyStats": "My stats",
+		"NotAPrice": "Not a price",
 		"Offline": "離線",
 		"Online": "在線",
 		"Order": "順序",
@@ -534,6 +535,7 @@
 		"TwoDecimals": "只能到小數點第二位"
 	},
 	"ProductCard": {
+		"BarcodeLength": "Barcode length: {length}",
 		"Brands": "品牌 ",
 		"BrandLower": "品牌 ",
 		"BrandMissing": "品牌不明",
@@ -547,6 +549,7 @@
 		"LabelTotal": "{count} 標籤",
 		"LatestPrice": "最新價格",
 		"InvalidBarcode": "條碼無效",
+		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "缺少產品品牌",
 		"ProductCategoriesMissing": "缺少產品類別",
 		"ProductQuantityGram": "{0} 公克",
