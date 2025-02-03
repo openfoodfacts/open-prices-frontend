@@ -278,6 +278,7 @@
 		"MyPrices": "Pri mwen yo",
 		"MyProofs": "Prèv mwen yo",
 		"MyStats": "My stats",
+		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Order",
@@ -534,6 +535,7 @@
 		"TwoDecimals": "Se sèlman de desimal ki otorize"
 	},
 	"ProductCard": {
+		"BarcodeLength": "Barcode length: {length}",
 		"Brands": "Mak",
 		"BrandLower": "mak",
 		"BrandMissing": "Brand missing",
@@ -547,6 +549,7 @@
 		"LabelTotal": "{count} etikèt",
 		"LatestPrice": "Latest price",
 		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
