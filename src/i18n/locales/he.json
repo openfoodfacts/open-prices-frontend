@@ -278,6 +278,7 @@
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
 		"MyStats": "הסטטיסטיקה שלי",
+		"NotAPrice": "Not a price",
 		"Offline": "לא מקוון",
 		"Online": "מקוון",
 		"Order": "סדר",
@@ -534,6 +535,7 @@
 		"TwoDecimals": "מותר עד שתי ספרות אחרי הנקודה"
 	},
 	"ProductCard": {
+		"BarcodeLength": "Barcode length: {length}",
 		"Brands": "מותגים",
 		"BrandLower": "מותג",
 		"BrandMissing": "חסר מותג",
@@ -547,6 +549,7 @@
 		"LabelTotal": "{count} תוויות",
 		"LatestPrice": "המחיר העדכני",
 		"InvalidBarcode": "ברקוד שגוי",
+		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "מותג המוצר חסר",
 		"ProductCategoriesMissing": "חסרות קטגוריות מוצר",
 		"ProductQuantityGram": "{0} גרם",

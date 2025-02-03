@@ -278,6 +278,7 @@
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje důkazy",
 		"MyStats": "Moje statistiky",
+		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Pořadí",
@@ -534,6 +535,7 @@
 		"TwoDecimals": "Povolena pouze dvě desetinná místa"
 	},
 	"ProductCard": {
+		"BarcodeLength": "Barcode length: {length}",
 		"Brands": "Značky",
 		"BrandLower": "značka",
 		"BrandMissing": "Chybí značka",
@@ -547,6 +549,7 @@
 		"LabelTotal": "{count} štítků",
 		"LatestPrice": "Nejnovější cena",
 		"InvalidBarcode": "Neplatný čárový kód",
+		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Chybí značka produktu",
 		"ProductCategoriesMissing": "Chybí kategorie produktu",
 		"ProductQuantityGram": "{0} g",

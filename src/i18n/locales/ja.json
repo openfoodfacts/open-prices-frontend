@@ -278,6 +278,7 @@
 		"MyPrices": "私の価格",
 		"MyProofs": "自分の証拠",
 		"MyStats": "My stats",
+		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "注文品",
@@ -534,6 +535,7 @@
 		"TwoDecimals": "小数点以下2桁までしか使用できません"
 	},
 	"ProductCard": {
+		"BarcodeLength": "Barcode length: {length}",
 		"Brands": "ブランド",
 		"BrandLower": "ブランド",
 		"BrandMissing": "ブランドが見つかりません",
@@ -547,6 +549,7 @@
 		"LabelTotal": "{count} ラベル",
 		"LatestPrice": "最新価格",
 		"InvalidBarcode": "無効なバーコード",
+		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "製品ブランドがありません",
 		"ProductCategoriesMissing": "製品カテゴリがありません",
 		"ProductQuantityGram": "{0} g",
