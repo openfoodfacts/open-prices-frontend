@@ -278,6 +278,7 @@
 		"MyPrices": "我的价格",
 		"MyProofs": "我的样张",
 		"MyStats": "My stats",
+		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "命令",
@@ -534,6 +535,7 @@
 		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
+		"BarcodeLength": "Barcode length: {length}",
 		"Brands": "品牌",
 		"BrandLower": "品牌",
 		"BrandMissing": "品牌缺失",
@@ -547,6 +549,7 @@
 		"LabelTotal": "{count} 标签",
 		"LatestPrice": "最新价格",
 		"InvalidBarcode": "无效的条形码",
+		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "产品品牌缺失",
 		"ProductCategoriesMissing": "缺少产品类别",
 		"ProductQuantityGram": "{0} 克",
