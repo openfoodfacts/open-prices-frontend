@@ -278,6 +278,7 @@
 		"MyPrices": "எனது விலைகள்",
 		"MyProofs": "My proofs",
 		"MyStats": "எனது புள்ளிவிவரங்கள்",
+		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "ஆன்லைன்",
 		"Order": "Order",
@@ -534,6 +535,7 @@
 		"TwoDecimals": "இரண்டு தசமங்கள் மட்டுமே அனுமதிக்கப்படுகின்றன"
 	},
 	"ProductCard": {
+		"BarcodeLength": "Barcode length: {length}",
 		"Brands": "Brands",
 		"BrandLower": "brand",
 		"BrandMissing": "Brand missing",
@@ -547,6 +549,7 @@
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
 		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
 		"ProductQuantityGram": "{0} g",
