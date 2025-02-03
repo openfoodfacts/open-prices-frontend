@@ -278,7 +278,7 @@
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
 		"MyStats": "Мої статистики",
-		"NotAPrice": "Not a price",
+		"NotAPrice": "Не ціна",
 		"Offline": "Офлайн",
 		"Online": "Онлайн",
 		"Order": "Замовлення",
@@ -535,7 +535,7 @@
 		"TwoDecimals": "Дозволено лише два десяткові знаки"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "Довжина штрих-коду: {length}",
 		"Brands": "Виробники",
 		"BrandLower": "виробник",
 		"BrandMissing": "Бренд відсутній",
@@ -549,7 +549,7 @@
 		"LabelTotal": "{count} міток",
 		"LatestPrice": "Остання ціна",
 		"InvalidBarcode": "Штрих-код не є дійсним",
-		"InvalidBarcodeLength": "Invalid barcode length",
+		"InvalidBarcodeLength": "Недійсна довжина штрих-коду",
 		"ProductBrandMissing": "Бренд продукту відсутній",
 		"ProductCategoriesMissing": "Категорії товарів відсутні",
 		"ProductQuantityGram": "{0} г",
