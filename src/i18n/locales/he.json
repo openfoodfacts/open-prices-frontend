@@ -429,6 +429,7 @@
 			"PriceTagWithPrice": "תגית מחיר עם מחיר",
 			"PriceTagTruncated": "תג מחיר מסומן כחתוך",
 			"PriceTagUnreadable": "תג מחיר מסומן כבלתי קריא",
+			"PriceTagNotAPrice": "Price tag marked as not a price",
 			"NewPriceTag": "תגית מחיר חדשה"
 		},
 		"OpenWithTheAssistant": "פתיחה עם המסייע"
