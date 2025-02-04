@@ -429,7 +429,7 @@
 			"PriceTagWithPrice": "Прайс тег з ціною",
 			"PriceTagTruncated": "Тег ціни позначено як скорочений",
 			"PriceTagUnreadable": "Тег ціни позначено як нечитабельний",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNotAPrice": "Тег ціни позначено як не ціна",
 			"NewPriceTag": "Новий тег ціни"
 		},
 		"OpenWithTheAssistant": "Відкрити за допомогою помічника"
