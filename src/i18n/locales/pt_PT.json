@@ -429,6 +429,7 @@
 			"PriceTagWithPrice": "Etiqueta de preço com preço",
 			"PriceTagTruncated": "Etiqueta de preço marcada como incompleta",
 			"PriceTagUnreadable": "Etiqueta de preço marcada como ilegível",
+			"PriceTagNotAPrice": "Price tag marked as not a price",
 			"NewPriceTag": "Nova etiqueta de preço"
 		},
 		"OpenWithTheAssistant": "Abra com o assistente"
