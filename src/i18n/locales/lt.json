@@ -429,6 +429,7 @@
 			"PriceTagWithPrice": "Kainos etiketė su kaina",
 			"PriceTagTruncated": "Kainos etiketė pažymėta kaip sutrumpinta",
 			"PriceTagUnreadable": "Kainos etiketė pažymėta kaip neįskaitoma",
+			"PriceTagNotAPrice": "Price tag marked as not a price",
 			"NewPriceTag": "Nauja kainos etiketė"
 		},
 		"OpenWithTheAssistant": "Atidaryti su asistentu"
