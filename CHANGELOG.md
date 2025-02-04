@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.116.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.116.3...v1.116.4) (2025-02-04)
+
+
+### Bug Fixes
+
+* **Price tags:** fix bug in error actions. ref [#1359](https://github.com/openfoodfacts/open-prices-frontend/issues/1359) ([c89639c](https://github.com/openfoodfacts/open-prices-frontend/commit/c89639c5ce013ff62aa28d81c9b97a02b0d4dc12))
+
 ## [1.116.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.116.2...v1.116.3) (2025-02-04)
 
 
