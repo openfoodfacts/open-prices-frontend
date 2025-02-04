@@ -429,6 +429,7 @@
 			"PriceTagWithPrice": "Label harga dengan harga",
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
+			"PriceTagNotAPrice": "Price tag marked as not a price",
 			"NewPriceTag": "Label harga baru"
 		},
 		"OpenWithTheAssistant": "Buka dengan Asisten"
