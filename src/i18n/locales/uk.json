@@ -278,7 +278,7 @@
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
 		"MyStats": "Мої статистики",
-		"NotAPrice": "Not a price",
+		"NotAPrice": "Не ціна",
 		"Offline": "Офлайн",
 		"Online": "Онлайн",
 		"Order": "Замовлення",
@@ -429,6 +429,7 @@
 			"PriceTagWithPrice": "Прайс тег з ціною",
 			"PriceTagTruncated": "Тег ціни позначено як скорочений",
 			"PriceTagUnreadable": "Тег ціни позначено як нечитабельний",
+			"PriceTagNotAPrice": "Тег ціни позначено як не ціна",
 			"NewPriceTag": "Новий тег ціни"
 		},
 		"OpenWithTheAssistant": "Відкрити за допомогою помічника"
@@ -535,7 +536,7 @@
 		"TwoDecimals": "Дозволено лише два десяткові знаки"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "Довжина штрих-коду: {length}",
 		"Brands": "Виробники",
 		"BrandLower": "виробник",
 		"BrandMissing": "Бренд відсутній",
@@ -549,7 +550,7 @@
 		"LabelTotal": "{count} міток",
 		"LatestPrice": "Остання ціна",
 		"InvalidBarcode": "Штрих-код не є дійсним",
-		"InvalidBarcodeLength": "Invalid barcode length",
+		"InvalidBarcodeLength": "Недійсна довжина штрих-коду",
 		"ProductBrandMissing": "Бренд продукту відсутній",
 		"ProductCategoriesMissing": "Категорії товарів відсутні",
 		"ProductQuantityGram": "{0} г",

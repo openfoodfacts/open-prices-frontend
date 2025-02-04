@@ -278,7 +278,7 @@
 		"MyPrices": "Mein Preise",
 		"MyProofs": "Meine Belege",
 		"MyStats": "Meine Statistiken",
-		"NotAPrice": "Not a price",
+		"NotAPrice": "Kein Preis",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Reihenfolge",
@@ -429,6 +429,7 @@
 			"PriceTagWithPrice": "Preisschild mit Preis",
 			"PriceTagTruncated": "Preisschild als abgeschnitten gekennzeichnet",
 			"PriceTagUnreadable": "Preisschild als unleserlich gekennzeichnet",
+			"PriceTagNotAPrice": "Price tag marked as not a price",
 			"NewPriceTag": "Neues Preisschild"
 		},
 		"OpenWithTheAssistant": "Mit Assistent öffnen"
@@ -535,7 +536,7 @@
 		"TwoDecimals": "Nur zwei Nachkommastellen erlaubt"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "Strichcode-Länge: {length}",
 		"Brands": "Marken",
 		"BrandLower": "Marke",
 		"BrandMissing": "Marke fehlt",
@@ -549,7 +550,7 @@
 		"LabelTotal": "{count} Etiketten",
 		"LatestPrice": "Neuester Preis",
 		"InvalidBarcode": "Strichcode ungültig",
-		"InvalidBarcodeLength": "Invalid barcode length",
+		"InvalidBarcodeLength": "Ungültige Strichcode-Länge",
 		"ProductBrandMissing": "Produktmarke fehlt",
 		"ProductCategoriesMissing": "Produktkategorien fehlen",
 		"ProductQuantityGram": "{0} g",

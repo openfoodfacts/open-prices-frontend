@@ -278,7 +278,7 @@
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
 		"MyStats": "Mano statistika",
-		"NotAPrice": "Not a price",
+		"NotAPrice": "Ne kaina",
 		"Offline": "Neprisijungę",
 		"Online": "Prisijungus",
 		"Order": "Order",
@@ -429,6 +429,7 @@
 			"PriceTagWithPrice": "Kainos etiketė su kaina",
 			"PriceTagTruncated": "Kainos etiketė pažymėta kaip sutrumpinta",
 			"PriceTagUnreadable": "Kainos etiketė pažymėta kaip neįskaitoma",
+			"PriceTagNotAPrice": "Price tag marked as not a price",
 			"NewPriceTag": "Nauja kainos etiketė"
 		},
 		"OpenWithTheAssistant": "Atidaryti su asistentu"
@@ -535,7 +536,7 @@
 		"TwoDecimals": "Only two decimals allowed"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "Brūkšninio kodo ilgis: {length}",
 		"Brands": "Prekės ženklai",
 		"BrandLower": "prekės ženklas",
 		"BrandMissing": "Brand missing",
@@ -549,7 +550,7 @@
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Naujausia kaina",
 		"InvalidBarcode": "Netinkamas brūkšninis kodas",
-		"InvalidBarcodeLength": "Invalid barcode length",
+		"InvalidBarcodeLength": "Neteisingas brūkšninio kodo ilgis",
 		"ProductBrandMissing": "Trûksta produkto prekių ženklo",
 		"ProductCategoriesMissing": "Trūksta produktų kategorijų",
 		"ProductQuantityGram": "{0} g",
