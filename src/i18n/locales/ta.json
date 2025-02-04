@@ -429,7 +429,7 @@
 			"PriceTagWithPrice": "விலையுடன் கூடிய விலைக் குறி",
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNotAPrice": "விலை இல்லை என்று குறிக்கப்பட்ட விலைக் குறி",
 			"NewPriceTag": "புதிய விலைக் குறி"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
