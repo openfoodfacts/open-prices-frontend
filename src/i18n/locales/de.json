@@ -429,7 +429,7 @@
 			"PriceTagWithPrice": "Preisschild mit Preis",
 			"PriceTagTruncated": "Preisschild als abgeschnitten gekennzeichnet",
 			"PriceTagUnreadable": "Preisschild als unleserlich gekennzeichnet",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNotAPrice": "Preisschild als „Kein Preis“ gekennzeichnet",
 			"NewPriceTag": "Neues Preisschild"
 		},
 		"OpenWithTheAssistant": "Mit Assistent öffnen"
