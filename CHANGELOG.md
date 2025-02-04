@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.116.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.116.2...v1.116.3) (2025-02-04)
+
+
+### Technical
+
+* **ContributionAssistant:** Add support for new Not A Price option on canvas ([#1359](https://github.com/openfoodfacts/open-prices-frontend/issues/1359)) ([4275f2e](https://github.com/openfoodfacts/open-prices-frontend/commit/4275f2e46328a368864376253d27643ba06039c6))
+* **l10n:** New Crowdin translations to review and merge ([#1358](https://github.com/openfoodfacts/open-prices-frontend/issues/1358)) ([2ffa8b4](https://github.com/openfoodfacts/open-prices-frontend/commit/2ffa8b47d5e64c8795807ee7822c3a6f2e5643e2))
+
 ## [1.116.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.116.1...v1.116.2) (2025-02-03)
 
 
