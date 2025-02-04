@@ -429,6 +429,7 @@
 			"PriceTagWithPrice": "Étiquette de prix avec un prix",
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
+			"PriceTagNotAPrice": "Price tag marked as not a price",
 			"NewPriceTag": "Nouvelle étiquette de prix"
 		},
 		"OpenWithTheAssistant": "Ouvrir avec l'assistant"
