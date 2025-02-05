@@ -135,7 +135,7 @@
 		"Title": "Įveskite brūkšninį kodą"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
+		"Title": "Bendruomenės iššūkis",
 		"Subtitle": "Prisijunkite prie kitų maisto kainų entuziastų, renkačių informaciją apie {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Fotografuoti kainų etiketes parduotuvėse",
@@ -144,17 +144,17 @@
 			"AddPictures": "Pridėti nuotraukas"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
+			"Title": "Patvirtinti aptiktas kainas su DI",
 			"line1": "Kainų etiketės aptinkamos automatiškai, tačiau robotams vis tiek reikia jūsų pagalbos, kad jas patvirtintų.",
 			"line2": "Apsilankykite kainos patvirtinimo puslapyje naudodami tolesnį mygtuką, redaguokite brūkšninį kodą bei kainą, jei reikia, ir patvirtinkite!",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"line3": "Jei kyla problemų skaitant etiketę, pažymėkite ją kaip neperskaitomą.",
+			"line4": "Tai yra bendros pastangos, net jei nesiuntėte nuotraukų, vis tiek galite padėti kitiems patvirtindami."
 		},
 		"PicturesAddedByYou": "Jūsų pridėtos nuotraukos",
-		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
-		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"Prices": "{challenge_title} kainos",
+		"PricesAdded": "{challenge_title} pridėtos kainos",
+		"PricesByYou": "{challenge_title} jūsų kainos",
+		"PricesAddedByYou": "{challenge_title} kainos, kurias pridėjote jūs",
 		"MostRecentContributions": "Naujausi įnašai"
 	},
 	"Common": {
@@ -203,8 +203,8 @@
 		"Country": "Šalis",
 		"Countries": "Šalys",
 		"CountryCount": "{count} šalys| {count} šalis| {count} šalių",
-		"Crop": "Crop",
-		"Cropped": "Cropped",
+		"Crop": "Apkarpyti",
+		"Cropped": "Apkarpytas",
 		"Currency": "Valiuta",
 		"Currencies": "Valiutos",
 		"CurrencyMissing": "Currency missing",
@@ -219,7 +219,7 @@
 		"Done": "Atlikta",
 		"Error": "Klaida",
 		"Experiments": "Eksperimentai",
-		"Join": "Join",
+		"Join": "Prisijungti",
 		"Label": "Etiketė",
 		"Labels": "Labels",
 		"LabelTotal": "{count} etiketės | {count} etiketė | {count} etikečių",
@@ -254,10 +254,10 @@
 		"FilterProductWithoutPriceCount": "Be kainų",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Slėpti įrodymus su kainomis",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofOwner": "Rodyti tik mano įrodymus",
 		"FilterLocationWithPriceCountHide": "Slėpti vietoves su kainomis",
 		"FilterUserWithPriceCountHide": "Slėpti bendraautorius su kainomis",
-		"Fix": "Fix",
+		"Fix": "Taisyti",
 		"FAQ": "DUK",
 		"FrequentlyAskedQuestions": "Dažniausiai užduodami klausimai",
 		"Help": "Help",
@@ -298,12 +298,12 @@
 		"Physical": "Fizinis",
 		"Picture": "Picture",
 		"Pictures": "Nuotraukos",
-		"PictureSelect": "Select a picture",
-		"PictureSelectMultiple": "Select pictures",
-		"PictureSelected": "Picture selected!",
-		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
-		"PictureFull": "Full-size picture",
-		"PicturesByYou": "Pictures by you",
+		"PictureSelect": "Pasirinkti paveikslėlį",
+		"PictureSelectMultiple": "Pasirinkti paveikslėlius",
+		"PictureSelected": "Paveikslėlis pasirinktas!",
+		"PictureSelectedCount": "{count} pasirinkti paveikslėliai | {count} pasirinktas paveikslėlis | {count} pasirinkta paveikslėlių",
+		"PictureFull": "Viso dydžio paveikslėlis",
+		"PicturesByYou": "Jūsų nuotraukos",
 		"PicturesAdded": "Pridėtos nuotraukos",
 		"PicturesAddedByYou": "Jūsų pridėtos nuotraukos",
 		"PRICE_TAG": "Kainos etiketė",
@@ -369,13 +369,13 @@
 		"Today": "Šiandien",
 		"Top": "Geriausi",
 		"Total": "Iš viso",
-		"Truncate": "Truncate",
-		"Truncated": "Truncated",
+		"Truncate": "Sutrumpinti",
+		"Truncated": "Sutrumpintas",
 		"Type": "Tipas",
 		"Unreadable": "Neįskaitoma",
 		"Upload": "Įkelti",
 		"UploadMultipleImages": "Įkelti {count} vaizdą | Įkelti {count} vaizdus (-ų)",
-		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
+		"UploadMultiplePictures": "Įkelti {count} paveikslėlį | Įkelti {count} paveikslėlių (-ius)",
 		"UploadMultipleProofs": "Įkelti {count} įrodymą | Įkelti {count} įrodymus (-ų)",
 		"UploadMultiplePrices": "Įkelti {count} kainą | Įkelti {count} kainas (-ų)",
 		"URL": "URL",
@@ -570,7 +570,7 @@
 	},
 	"ProofAdd": {
 		"HowToMultiple": "Visos jūsų pasirinktos kainų žym nuotraukos turi būti iš tos pačios parduotuvės vietos ir nufotografuotos tą pačią dieną.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date."
+		"HowToMultipleShort": "Paveikslėliai turi būti iš tos pačios parduotuvės vietos ir tos pačios datos."
 	},
 	"ProofCard": {
 		"Proof": "Įrodymai",
@@ -720,7 +720,7 @@
 			"Title": "Iššūkis"
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "Bendruomenės iššūkis"
 		},
 		"ValidatePrices": {
 			"Title": "Patvirtinti kainas"
