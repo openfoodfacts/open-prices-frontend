@@ -429,7 +429,7 @@
 			"PriceTagWithPrice": "Prijskaartje met een prijs",
 			"PriceTagTruncated": "Prijskaartje gemarkeerd als afgekapt",
 			"PriceTagUnreadable": "Prijskaartje gemarkeerd als onleesbaar",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNotAPrice": "Prijskaartje gemarkeerd als geen prijs",
 			"NewPriceTag": "Nieuw prijskaartje"
 		},
 		"OpenWithTheAssistant": "Openen met de assistent"
