@@ -278,7 +278,7 @@
 		"MyPrices": "Mis precios",
 		"MyProofs": "Mis pruebas",
 		"MyStats": "Mis estadísticas",
-		"NotAPrice": "Not a price",
+		"NotAPrice": "No es un precio",
 		"Offline": "Offline",
 		"Online": "Online",
 		"Order": "Pedido",
@@ -372,6 +372,9 @@
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"Type": "Tipo",
+		"UnknownProduct": "Producto desconocido",
+		"UnknownProductSource": "Unknown product source",
+		"UnknownSource": "Unknown source",
 		"Unreadable": "Unreadable",
 		"Upload": "Cargar",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
@@ -429,7 +432,7 @@
 			"PriceTagWithPrice": "Etiqueta de precio con un precio",
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNotAPrice": "Etiqueta de precio marcada como no es un precio",
 			"NewPriceTag": "Nueva etiqueta de precio"
 		},
 		"OpenWithTheAssistant": "Abrir con el asistente"
@@ -536,7 +539,7 @@
 		"TwoDecimals": "Solo se permiten dos decimales"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "Longitud del código de barras: {length}",
 		"Brands": "Marcas",
 		"BrandLower": "marca",
 		"BrandMissing": "Falta la marca",
@@ -550,7 +553,7 @@
 		"LabelTotal": "{count} etiquetas",
 		"LatestPrice": "Último precio",
 		"InvalidBarcode": "Código de barras no válido",
-		"InvalidBarcodeLength": "Invalid barcode length",
+		"InvalidBarcodeLength": "Longitud de código de barras no válida",
 		"ProductBrandMissing": "Falta la marca del producto",
 		"ProductCategoriesMissing": "Faltan las categorías del producto",
 		"ProductQuantityGram": "{0} g",
@@ -802,6 +805,7 @@
 		"PriceValidation": "Validación de precios",
 		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar categoría",
+		"ProductDisplaySource": "Display source",
 		"SideMenuExperimentsDisplay": "Display 'Experiments'",
 		"Save": "Guardar",
 		"Title": "Configuración",

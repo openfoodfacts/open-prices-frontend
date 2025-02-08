@@ -372,6 +372,9 @@
 		"Truncate": "Kürzen",
 		"Truncated": "Gekürzt",
 		"Type": "Art",
+		"UnknownProduct": "Unbekanntes Produkt",
+		"UnknownProductSource": "Unknown product source",
+		"UnknownSource": "Unknown source",
 		"Unreadable": "Nicht lesbar",
 		"Upload": "Hochladen",
 		"UploadMultipleImages": "Lade {count} Bild hoch | Lade {count} Bilder hoch",
@@ -429,7 +432,7 @@
 			"PriceTagWithPrice": "Preisschild mit Preis",
 			"PriceTagTruncated": "Preisschild als abgeschnitten gekennzeichnet",
 			"PriceTagUnreadable": "Preisschild als unleserlich gekennzeichnet",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNotAPrice": "Preisschild als „Kein Preis“ gekennzeichnet",
 			"NewPriceTag": "Neues Preisschild"
 		},
 		"OpenWithTheAssistant": "Mit Assistent öffnen"
@@ -802,6 +805,7 @@
 		"PriceValidation": "Preisüberprüfung",
 		"ProductDisplayBarcode": "Strichcode anzeigen",
 		"ProductDisplayCategoryTag": "Kategorie-Schlagwort anzeigen",
+		"ProductDisplaySource": "Display source",
 		"SideMenuExperimentsDisplay": "„Experimente” anzeigen",
 		"Save": "Speichern",
 		"Title": "Einstellungen",

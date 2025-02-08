@@ -372,6 +372,9 @@
 		"Truncate": "Afkappen",
 		"Truncated": "Truncated",
 		"Type": "Type",
+		"UnknownProduct": "Onbekend product",
+		"UnknownProductSource": "Unknown product source",
+		"UnknownSource": "Unknown source",
 		"Unreadable": "Onleesbaar",
 		"Upload": "Uploaden",
 		"UploadMultipleImages": "Upload {count} afbeelding | Upload {count} afbeeldingen",
@@ -429,7 +432,7 @@
 			"PriceTagWithPrice": "Prijskaartje met een prijs",
 			"PriceTagTruncated": "Prijskaartje gemarkeerd als afgekapt",
 			"PriceTagUnreadable": "Prijskaartje gemarkeerd als onleesbaar",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNotAPrice": "Prijskaartje gemarkeerd als geen prijs",
 			"NewPriceTag": "Nieuw prijskaartje"
 		},
 		"OpenWithTheAssistant": "Openen met de assistent"
@@ -802,6 +805,7 @@
 		"PriceValidation": "Prijsvalidatie",
 		"ProductDisplayBarcode": "Streepjescode weergeven",
 		"ProductDisplayCategoryTag": "Categorielabel weergeven",
+		"ProductDisplaySource": "Display source",
 		"SideMenuExperimentsDisplay": "'Experimenten' weergeven",
 		"Save": "Opslaan",
 		"Title": "Instellingen",
