@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.117.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.116.4...v1.117.0) (2025-02-08)
+
+
+### Features
+
+* **Products:** new ProductSourceChip to display the product's source (OxF) ([#1363](https://github.com/openfoodfacts/open-prices-frontend/issues/1363)) ([e06623c](https://github.com/openfoodfacts/open-prices-frontend/commit/e06623c88a60c8c02b806b9bbc8e2f75d81d9f84))
+* **Settings:** user setting to display product source ([#1365](https://github.com/openfoodfacts/open-prices-frontend/issues/1365)) ([99b3ba6](https://github.com/openfoodfacts/open-prices-frontend/commit/99b3ba62eae3c4d4aeb9bce93ba9679864301cfe))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1361](https://github.com/openfoodfacts/open-prices-frontend/issues/1361)) ([e4ab35b](https://github.com/openfoodfacts/open-prices-frontend/commit/e4ab35b069f2d5d23ab9175e85dc6f23bebe31f0))
+* **Products:** show error message if product source unknown. ref [#1365](https://github.com/openfoodfacts/open-prices-frontend/issues/1365) ([46bedd0](https://github.com/openfoodfacts/open-prices-frontend/commit/46bedd06a919c1c5ad5fe5326994fb0920f5f2a1))
+
 ## [1.116.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.116.3...v1.116.4) (2025-02-04)
 
 
