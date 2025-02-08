@@ -152,9 +152,19 @@
           />
           <v-switch
             v-model="appStore.user.product_display_category_tag"
+            class="mb-4"
             color="primary"
             :label="$t('UserSettings.ProductDisplayCategoryTag')"
             :hint="$t('Common.ExampleWithColonAndValue', { value: 'en:oranges' })"
+            density="compact"
+            persistent-hint
+            hide-details="auto"
+          />
+          <v-switch
+            v-model="appStore.user.product_display_source"
+            color="primary"
+            :label="$t('UserSettings.ProductDisplaySource')"
+            :hint="$t('Common.ExampleWithColonAndValue', { value: 'OBF' })"
             density="compact"
             persistent-hint
             hide-details="auto"

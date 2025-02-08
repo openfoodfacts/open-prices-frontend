@@ -21,10 +21,11 @@
               <ProductLabelsChip v-if="!hideCategoriesAndLabels" :productLabels="product.labels_tags" />
             </span>
             <ProductMissingChip v-else class="mr-1" />
-            <br v-if="showProductBarcode">
+            <br v-if="showProductBarcode || barcodeTooLong || barcodeInvalid || showProductSource">
             <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
             <ProductBarcodeTooLongChip v-if="barcodeTooLong" :barcode="product.code" class="mr-1" />
-            <ProductBarcodeInvalidChip v-if="barcodeInvalid" />
+            <ProductBarcodeInvalidChip v-if="barcodeInvalid" class="mr-1" />
+            <ProductSourceChip v-if="showProductSource" :product="product" />
             <ProductActionMenuButton v-if="hasProductSource && !hideActionMenuButton" :product="product" />
           </p>
         </v-col>
@@ -57,6 +58,7 @@ export default {
     ProductBarcodeChip: defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
     ProductBarcodeTooLongChip: defineAsyncComponent(() => import('../components/ProductBarcodeTooLongChip.vue')),
     ProductBarcodeInvalidChip: defineAsyncComponent(() => import('../components/ProductBarcodeInvalidChip.vue')),
+    ProductSourceChip: defineAsyncComponent(() => import('../components/ProductSourceChip.vue')),
     ProductActionMenuButton: defineAsyncComponent(() => import('../components/ProductActionMenuButton.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue')),
@@ -114,6 +116,9 @@ export default {
     },
     barcodeInvalid() {
       return this.product.code && !utils.isBarcodeValid(this.product.code)
+    },
+    showProductSource() {
+      return this.appStore.user.username && this.appStore.user.product_display_source
     },
   },
   methods: {
