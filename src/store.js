@@ -17,6 +17,7 @@ export const useAppStore = defineStore('app', {
       proofTotal: null,
       product_display_barcode: false,
       product_display_category_tag: false,
+      product_display_source: false,
       location_display_osm_id: false,
       drawer_display_experiments: true,
       preferedTheme: null,
