@@ -66,13 +66,27 @@
     <v-col cols="12">
       <v-row>
         <v-col
-          v-for="(productPriceForm, index) in productPriceFormsWithoutPriceId"
+          v-for="(productPriceForm, index) in productPriceFormsWithoutPriceIdAndNoError"
           :key="index"
           cols="12"
           md="6"
           xl="4"
         >
-          <ContributionAssistantPriceFormCard height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideUploadAction="true" @removePriceTag="removePriceTag($event, productPriceForm)" />
+          <ContributionAssistantPriceFormCard :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''" height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideUploadAction="true" @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)" @validatePriceTag="validatePriceTag(index)" />
+        </v-col>
+      </v-row>
+      <h3 v-if="productPriceFormsMarkedAsError.length" class="mt-4 mb-4">
+        {{ $t('ContributionAssistant.PricesMarkedAsError') }}
+      </h3>
+      <v-row v-if="productPriceFormsMarkedAsError.length">
+        <v-col
+          v-for="(productPriceForm, index) in productPriceFormsMarkedAsError"
+          :key="index"
+          cols="12"
+          md="6"
+          xl="4"
+        >
+          <ContributionAssistantPriceFormCard :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''" height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideUploadAction="true" @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)" />
         </v-col>
       </v-row>
       <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
@@ -97,11 +111,11 @@
             variant="outlined"
           >
             <p>
-              {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceId.length, date: proofObject.date, locationName: locationName }) }}
+              {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceIdAndNoError.length, date: proofObject.date, locationName: locationName }) }}
             </p>
           </v-alert>
           <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" :loading="loading" @click="addPrices">
-            {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceId.length) }}
+            {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceIdAndNoError.length) }}
           </v-btn>
         </v-col>
       </v-row>
@@ -117,13 +131,13 @@
           </h3>
           <v-progress-linear
             v-model="numberOfPricesAdded"
-            :max="productPriceFormsWithoutPriceId.length"
-            :color="productPriceFormsWithoutPriceId.length === numberOfPricesAdded ? 'success' : 'primary'"
+            :max="productPriceFormsWithoutPriceIdAndNoError.length"
+            :color="productPriceFormsWithoutPriceIdAndNoError.length === numberOfPricesAdded ? 'success' : 'primary'"
             height="25"
-            :striped="productPriceFormsWithoutPriceId.length !== numberOfPricesAdded"
+            :striped="productPriceFormsWithoutPriceIdAndNoError.length !== numberOfPricesAdded"
             rounded
           >
-            <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceId.length }) }}</strong>
+            <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceIdAndNoError.length }) }}</strong>
           </v-progress-linear>
         </v-col>
       </v-row>
@@ -208,7 +222,8 @@ export default {
       loading: false,
       numberOfPricesAdded: 0,
       labelProcessingErrorMessage: false,
-      nextProofSuggestions: []
+      nextProofSuggestions: [],
+      lastUpdatedPriceTagId: null
     }
   },
   computed: {
@@ -254,14 +269,14 @@ export default {
     disableCleanupStep() {
       // Cleanup tab should only be enabled after the ai analysis is done
       // It should also be disabled on summary step
-      return !this.productPriceFormsWithoutPriceId.length || this.step === 4
+      return !this.productPriceFormsWithoutPriceIdAndNoError.length || this.step === 4
     },
     allDone() {
-      return this.numberOfPricesAdded > 0 && this.productPriceFormsWithoutPriceId.length == this.numberOfPricesAdded
+      return this.numberOfPricesAdded > 0 && this.productPriceFormsWithoutPriceIdAndNoError.length == this.numberOfPricesAdded
     },
     disableSummaryStep() {
       // Summary tab should be enabled when there are product prices to be added and the add prices process is either running or done
-      const enableSummaryStep = this.productPriceFormsWithoutPriceId.length && (this.loading || this.allDone)
+      const enableSummaryStep = this.productPriceFormsWithoutPriceIdAndNoError.length && (this.loading || this.allDone)
       return !enableSummaryStep
     },
     proofIdsFromQueryParam() {
@@ -271,8 +286,11 @@ export default {
     productPriceFormsWithPriceId() {
       return this.productPriceForms.filter(productPriceForm => productPriceForm.price_id)
     },
-    productPriceFormsWithoutPriceId() {
-      return this.productPriceForms.filter(productPriceForm => !productPriceForm.price_id)
+    productPriceFormsWithoutPriceIdAndNoError() {
+      return this.productPriceForms.filter(productPriceForm => !productPriceForm.price_id && productPriceForm.status <= 1)
+    },
+    productPriceFormsMarkedAsError() {
+      return this.productPriceForms.filter(productPriceForm => productPriceForm.status > 1)
     }
   },
   mounted() {
@@ -399,7 +417,7 @@ export default {
       }
     },
     handlePriceTags() {
-      this.priceTags.filter(priceTag => priceTag.status == constants.PRICE_TAG_STATUS_WITH_PRICE || priceTag.status == null).forEach(priceTag => {
+      this.priceTags.forEach(priceTag => {
         const label = priceTag['predictions'][0]['data']
         // remove anything that is not a number from label.barcode
         const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''
@@ -427,9 +445,10 @@ export default {
       })
       this.step = 3
     },
-    removePriceTag(status, productPriceForm) {
+    updatePriceTagStatus(status, productPriceForm) {
       // Called when the user deletes a price during the cleanup step
-      this.productPriceForms.splice(this.productPriceForms.indexOf(productPriceForm), 1)
+      this.lastUpdatedPriceTagId = productPriceForm.id
+      this.productPriceForms[this.productPriceForms.indexOf(productPriceForm)].status = status
       this.updatePriceTag(productPriceForm.id, status)
     },
     updatePriceTag(priceTagId, status, priceId) {
@@ -449,8 +468,8 @@ export default {
       this.numberOfPricesAdded = 0
       this.step = 4
       
-      for (let i = 0; i < this.productPriceFormsWithoutPriceId.length; i++) {
-        const productPriceForm = this.productPriceFormsWithoutPriceId[i]
+      for (let i = 0; i < this.productPriceFormsWithoutPriceIdAndNoError.length; i++) {
+        const productPriceForm = this.productPriceFormsWithoutPriceIdAndNoError[i]
         const priceData = {
           ...productPriceForm,
           origins_tags: productPriceForm.origins_tags,
