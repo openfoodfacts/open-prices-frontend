@@ -1,5 +1,6 @@
 <template>
   <v-chip
+    v-if="hasProductSource"
     :style="style"
     label
     size="small"
@@ -9,6 +10,9 @@
     <v-tooltip activator="parent" open-on-click location="top">
       {{ getProductSourceName }}
     </v-tooltip>
+  </v-chip>
+  <v-chip v-else label size="small" density="comfortable" color="error" data-name="product-source-missing-chip">
+    {{ $t('Common.UnknownSource') }}
   </v-chip>
 </template>
 
@@ -27,14 +31,17 @@ export default {
     },
   },
   computed: {
+    hasProductSource() {
+      return !!this.product.source
+    },
     getProductSourceIcon() {
-      if (this.product.source) {
+      if (this.hasProductSource) {
         return constants[`${this.product.source.toUpperCase()}_ICON`]
       }
       return null
     },
     getProductSourceName() {
-      if (this.product.source) {
+      if (this.hasProductSource) {
         return constants[`${this.product.source.toUpperCase()}_NAME`]
       }
       return null
