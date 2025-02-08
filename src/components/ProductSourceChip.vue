@@ -6,6 +6,9 @@
     density="comfortable"
   >
     <v-icon :icon="getProductSourceIcon" />
+    <v-tooltip activator="parent" open-on-click location="top">
+      {{ getProductSourceName }}
+    </v-tooltip>
   </v-chip>
 </template>
 
@@ -27,6 +30,12 @@ export default {
     getProductSourceIcon() {
       if (this.product.source) {
         return constants[`${this.product.source.toUpperCase()}_ICON`]
+      }
+      return null
+    },
+    getProductSourceName() {
+      if (this.product.source) {
+        return constants[`${this.product.source.toUpperCase()}_NAME`]
       }
       return null
     },
