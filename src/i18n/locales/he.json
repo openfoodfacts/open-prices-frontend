@@ -278,6 +278,7 @@
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
 		"MyStats": "הסטטיסטיקה שלי",
+		"NotAnError": "Not an error",
 		"NotAPrice": "לא מחיר",
 		"Offline": "לא מקוון",
 		"Online": "מקוון",
@@ -416,6 +417,7 @@
 			"SendLabelsButton": "שליחת התוויות"
 		},
 		"PricesAlreadyAdded": "המחירים כבר נוספו",
+		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} מחירים יתווספו להוכחה הקיימת ב־{date} ב־{locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} מחירים נוספו",
 		"WaitForUpload": "נא להמתין להעלאה",

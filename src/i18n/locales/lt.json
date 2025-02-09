@@ -278,6 +278,7 @@
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
 		"MyStats": "Mano statistika",
+		"NotAnError": "Not an error",
 		"NotAPrice": "Ne kaina",
 		"Offline": "Neprisijungę",
 		"Online": "Prisijungus",
@@ -416,6 +417,7 @@
 			"SendLabelsButton": "Siųsti etiketes"
 		},
 		"PricesAlreadyAdded": "Kainos jau pridėtos",
+		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} kaina (-os) bus pridėta (-os) prie esamo įrodymo {date} {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pridėta kainų",
 		"WaitForUpload": "Palaukite, kol bus įkeltas",

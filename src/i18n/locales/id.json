@@ -278,6 +278,7 @@
 		"MyPrices": "Harga saya",
 		"MyProofs": "Bukti saya",
 		"MyStats": "Statistik saya",
+		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Tidak Aktif",
 		"Online": "Aktif",
@@ -416,6 +417,7 @@
 			"SendLabelsButton": "Kirim label"
 		},
 		"PricesAlreadyAdded": "Harga sudah ditambahkan",
+		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} harga akan ditambahkan ke bukti yang sudah ada pada {date} di {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} harga ditambahkan",
 		"WaitForUpload": "Harap tunggu untuk diunggah",

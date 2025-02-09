@@ -278,6 +278,7 @@
 		"MyPrices": "Mein Preise",
 		"MyProofs": "Meine Belege",
 		"MyStats": "Meine Statistiken",
+		"NotAnError": "Not an error",
 		"NotAPrice": "Kein Preis",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -416,6 +417,7 @@
 			"SendLabelsButton": "Etiketten senden"
 		},
 		"PricesAlreadyAdded": "Preise bereits hinzugefügt",
+		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} Preis(e) wird/werden am {date} in {locationName} zu einem bestehenden Nachweis hinzugefügt",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} Preise hinzugefügt",
 		"WaitForUpload": "Bitte warten Sie bis das Hochladen abgeschlossen ist",

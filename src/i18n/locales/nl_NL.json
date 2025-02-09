@@ -278,6 +278,7 @@
 		"MyPrices": "Mijn prijzen",
 		"MyProofs": "Mijn bewijzen",
 		"MyStats": "Mijn statistieken",
+		"NotAnError": "Not an error",
 		"NotAPrice": "Geen prijs",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -416,6 +417,7 @@
 			"SendLabelsButton": "Labels verzenden"
 		},
 		"PricesAlreadyAdded": "Prijzen al toegevoegd",
+		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
 		"WaitForUpload": "Even geduld a. u. b. voor het uploaden",
