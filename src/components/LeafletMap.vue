@@ -5,7 +5,7 @@
       <l-popup>
         <v-card>
           <v-card-title>
-            <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
+            {{ getLocationTitle(location, true, false, false) }}
           </v-card-title>
           <v-card-subtitle>
             {{ getLocationTitle(location, false, true, true) }}<br>
@@ -24,7 +24,7 @@
               :block="!$vuetify.display.smAndUp"
               @click="locationSelected(location)"
             >
-              {{ $t('LocationSelector.Select') }}
+              {{ $t('Common.Select') }}
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -36,8 +36,8 @@
 <script>
 import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet'
-import utils from '../utils.js'
 import { useTheme } from 'vuetify'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -102,6 +102,7 @@ export default {
   }
 }
 </script>
+
 <style>
 .leaflet-popup-content {
   margin: 0;
