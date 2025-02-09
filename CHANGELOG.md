@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.118.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.117.0...v1.118.0) (2025-02-09)
+
+
+### Features
+
+* **CA:** Allow edit of error'd price tags ([#1366](https://github.com/openfoodfacts/open-prices-frontend/issues/1366)) ([fde7b60](https://github.com/openfoodfacts/open-prices-frontend/commit/fde7b600b02a1b77cdd5c12789a9bb7fdf8c63c0))
+* **LocationMap:** Display tooltips as cards and allow selection ([#1368](https://github.com/openfoodfacts/open-prices-frontend/issues/1368)) ([d256659](https://github.com/openfoodfacts/open-prices-frontend/commit/d25665985b999bf955fc085bdecb996c91e6285b))
+
+
+### Bug Fixes
+
+* **User Card:** fix missing currency count chip margin. ref [#1352](https://github.com/openfoodfacts/open-prices-frontend/issues/1352) ([25674cb](https://github.com/openfoodfacts/open-prices-frontend/commit/25674cbe4ce0961ac0da2c240514a648f065fd0b))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1367](https://github.com/openfoodfacts/open-prices-frontend/issues/1367)) ([f3c87e5](https://github.com/openfoodfacts/open-prices-frontend/commit/f3c87e5e3e1c65bb41fd417389e1995570622640))
+* **l10n:** New Crowdin translations to review and merge ([#1370](https://github.com/openfoodfacts/open-prices-frontend/issues/1370)) ([ef2f758](https://github.com/openfoodfacts/open-prices-frontend/commit/ef2f75878da955a878088d5ab6ad6f89ac7035d9))
+* **Location count chip:** use component in UserCard ([b91fdba](https://github.com/openfoodfacts/open-prices-frontend/commit/b91fdba8066a469121fbc20f5c9ce905b377c2a2))
+* **Price count chip:** set margin in parent components instead ([88f53d0](https://github.com/openfoodfacts/open-prices-frontend/commit/88f53d0958080c78ad8ed9802fde440a2fd88942))
+* **Product count chip:** set margin in parent components instead ([ad23063](https://github.com/openfoodfacts/open-prices-frontend/commit/ad23063eb04077b6eb7f21f3e02c884e4e1ab4f2))
+* **Product count chip:** use component in LocationCard & UserCard ([83df050](https://github.com/openfoodfacts/open-prices-frontend/commit/83df05033e708968c916651ef156867b5106d194))
+* **Products:** hide source chip if product does not have an id. ref [#1365](https://github.com/openfoodfacts/open-prices-frontend/issues/1365) ([b3dfa39](https://github.com/openfoodfacts/open-prices-frontend/commit/b3dfa39e84b2c893413f35336d9798340ba6586d))
+* **Proofs:** add Share button in action menu ([a4fe65b](https://github.com/openfoodfacts/open-prices-frontend/commit/a4fe65b6165cb1825da9537488ea945159990876))
+* **Proofs:** new ProofCountChip component ([#1371](https://github.com/openfoodfacts/open-prices-frontend/issues/1371)) ([88e074b](https://github.com/openfoodfacts/open-prices-frontend/commit/88e074bbe49321772990562d39185f14e1dcebd7))
+
 ## [1.117.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.116.4...v1.117.0) (2025-02-08)
 
 
