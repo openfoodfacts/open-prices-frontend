@@ -278,6 +278,7 @@
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
 		"MyStats": "Мої статистики",
+		"NotAnError": "Not an error",
 		"NotAPrice": "Не ціна",
 		"Offline": "Офлайн",
 		"Online": "Онлайн",
@@ -416,6 +417,7 @@
 			"SendLabelsButton": "Надіслати мітки"
 		},
 		"PricesAlreadyAdded": "Ціни вже додані",
+		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} ціна(и) буде додано до наявного доказу на {date} у {locationName}",
 		"PriceAddProgress": "Додано ціни {numberOfPricesAdded} / {totalNumberOfPrices}",
 		"WaitForUpload": "Зачекайте на завантаження",
