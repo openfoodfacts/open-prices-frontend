@@ -278,6 +278,7 @@
 		"MyPrices": "எனது விலைகள்",
 		"MyProofs": "My proofs",
 		"MyStats": "எனது புள்ளிவிவரங்கள்",
+		"NotAnError": "Not an error",
 		"NotAPrice": "விலை இல்லை",
 		"Offline": "Offline",
 		"Online": "ஆன்லைன்",
@@ -416,6 +417,7 @@
 			"SendLabelsButton": "லேபிள்களை அனுப்பவும்"
 		},
 		"PricesAlreadyAdded": "விலைகள் ஏற்கனவே சேர்க்கப்பட்டன",
+		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} விலை(கள்) {date} இல் {locationName} இல் ஏற்கனவே உள்ள ஆதாரத்துடன் சேர்க்கப்படும்",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
