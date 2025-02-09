@@ -1,6 +1,6 @@
 <template>
   <v-chip
-    v-if="hasProductSource"
+    v-if="hasProduct && hasProductSource"
     :style="style"
     label
     size="small"
@@ -11,7 +11,7 @@
       {{ getProductSourceName }}
     </v-tooltip>
   </v-chip>
-  <v-chip v-else label size="small" density="comfortable" color="error" data-name="product-source-missing-chip">
+  <v-chip v-else-if="hasProduct" label size="small" density="comfortable" color="error" data-name="product-source-missing-chip">
     {{ $t('Common.UnknownSource') }}
   </v-chip>
 </template>
@@ -31,6 +31,9 @@ export default {
     },
   },
   computed: {
+    hasProduct() {
+      return !!this.product.id
+    },
     hasProductSource() {
       return !!this.product.source
     },
