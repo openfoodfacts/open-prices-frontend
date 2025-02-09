@@ -278,6 +278,7 @@
 		"MyPrices": "我的價格",
 		"MyProofs": "我的證明",
 		"MyStats": "My stats",
+		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "離線",
 		"Online": "在線",
@@ -416,6 +417,7 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prices already added",
+		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
