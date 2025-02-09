@@ -13,10 +13,7 @@
             <v-icon start icon="mdi-cash" />
             <span id="currency-count">{{ $t('Common.CurrencyCount', { count: user.price_currency_count }) }}</span>
           </v-chip>
-          <v-chip v-if="user.location_count" label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-map-marker-outline" />
-            <span id="location-count">{{ $t('Common.LocationCount', { count: user.location_count }) }}</span>
-          </v-chip>
+          <LocationCountChip class="mr-1" :count="user.location_count" :withLabel="true" />
           <v-chip v-if="user.location_type_osm_country_count > 1" label size="small" density="comfortable" class="mr-1">
             <v-icon start icon="mdi-map-outline" />
             <span id="country-count">{{ $t('Common.CountryCount', { count: user.location_type_osm_country_count }) }}</span>
@@ -40,6 +37,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    LocationCountChip: defineAsyncComponent(() => import('../components/LocationCountChip.vue')),
     ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
     UserActionMenuButton: defineAsyncComponent(() => import('../components/UserActionMenuButton.vue')),
   },
