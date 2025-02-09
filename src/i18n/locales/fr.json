@@ -278,6 +278,7 @@
 		"MyPrices": "Mes prix",
 		"MyProofs": "Mes preuves",
 		"MyStats": "My stats",
+		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Hors ligne",
 		"Online": "En ligne",
@@ -416,6 +417,7 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prix déjà téléversés",
+		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} prix seront ajoutés à une preuve existante du {date} à {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prix ajoutés",
 		"WaitForUpload": "Please wait for upload",
