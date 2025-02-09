@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" class="mr-1">
+  <v-chip label size="small" density="comfortable">
     <v-icon start icon="mdi-food-outline" />
     <span v-if="withLabel" id="product-count">{{ $t('Common.ProductCount', { count: count }) }}</span>
     <span v-else id="product-count">{{ count }}</span>

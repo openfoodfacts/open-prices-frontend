@@ -3,7 +3,7 @@
     <v-card-text>
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
-          <ProductCountChip v-if="sourceCategory" :count="productCount" :withLabel="true" />
+          <ProductCountChip v-if="sourceCategory" class="mr-1" :count="productCount" :withLabel="true" />
           <PriceCountChip v-else-if="sourceProduct" class="mr-1" :count="priceCount" />
           <CategoryTagChip v-if="showProductCategoryTag" class="mr-1" :category="category" :readonly="true" />
         </v-col>
