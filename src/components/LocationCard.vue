@@ -15,10 +15,7 @@
             <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>
           </v-chip>
           <ProductCountChip class="mr-1" :count="location.product_count" :withLabel="true" />
-          <v-chip label size="small" density="comfortable" :to="getLocationProofListUrl">
-            <v-icon start icon="mdi-image" />
-            <span id="proof-count">{{ $t('Common.ProofCount', { count: location.proof_count }) }}</span>
-          </v-chip>
+          <ProofCountChip class="mr-1" :count="location.proof_count" :withLabel="true" :to="getLocationProofListUrl" />
         </v-col>
       </v-row>
       <v-row v-if="isTypeOSM" class="mt-0">
@@ -56,6 +53,7 @@ export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
+    ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
     LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
     LocationActionMenuButton: defineAsyncComponent(() => import('../components/LocationActionMenuButton.vue')),

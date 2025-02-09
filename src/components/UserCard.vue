@@ -19,10 +19,7 @@
             <span id="country-count">{{ $t('Common.CountryCount', { count: user.location_type_osm_country_count }) }}</span>
           </v-chip>
           <ProductCountChip v-if="user.product_count" class="mr-1" :count="user.product_count" :withLabel="true" />
-          <v-chip v-if="user.proof_count" label size="small" density="comfortable" :to="getUserProofListUrl">
-            <v-icon start icon="mdi-image" />
-            <span id="proof-count">{{ $t('Common.ProofCount', { count: user.proof_count }) }}</span>
-          </v-chip>
+          <ProofCountChip v-if="user.proof_count" class="mr-1" :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
         </v-col>
       </v-row>
 
@@ -39,6 +36,7 @@ export default {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     LocationCountChip: defineAsyncComponent(() => import('../components/LocationCountChip.vue')),
     ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
+    ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
     UserActionMenuButton: defineAsyncComponent(() => import('../components/UserActionMenuButton.vue')),
   },
   props: {
