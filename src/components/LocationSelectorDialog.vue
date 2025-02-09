@@ -82,7 +82,7 @@
                   </v-card>
                 </v-col>
                 <v-col cols="12" sm="6" style="min-height:400px">
-                  <LeafletMap :locations="results" />
+                  <LeafletMap :locations="results" :showActions="true" @locationSelected="selectLocation" />
                 </v-col>
               </v-row>
 
