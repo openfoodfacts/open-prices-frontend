@@ -11,7 +11,7 @@
           <PriceCountChip class="mr-1" :count="user.price_count" :withLabel="true" />
           <v-chip v-if="user.price_currency_count > 1" label size="small" density="comfortable" class="mr-1">
             <v-icon start icon="mdi-cash" />
-            <span id="product-count">{{ $t('Common.CurrencyCount', { count: user.price_currency_count }) }}</span>
+            <span id="currency-count">{{ $t('Common.CurrencyCount', { count: user.price_currency_count }) }}</span>
           </v-chip>
           <v-chip v-if="user.location_count" label size="small" density="comfortable" class="mr-1">
             <v-icon start icon="mdi-map-marker-outline" />
@@ -19,12 +19,9 @@
           </v-chip>
           <v-chip v-if="user.location_type_osm_country_count > 1" label size="small" density="comfortable" class="mr-1">
             <v-icon start icon="mdi-map-outline" />
-            <span id="product-count">{{ $t('Common.CountryCount', { count: user.location_type_osm_country_count }) }}</span>
+            <span id="country-count">{{ $t('Common.CountryCount', { count: user.location_type_osm_country_count }) }}</span>
           </v-chip>
-          <v-chip v-if="user.product_count" label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-database-outline" />
-            <span id="product-count">{{ $t('Common.ProductCount', { count: user.product_count }) }}</span>
-          </v-chip>
+          <ProductCountChip v-if="user.product_count" class="mr-1" :count="user.product_count" :withLabel="true" />
           <v-chip v-if="user.proof_count" label size="small" density="comfortable" :to="getUserProofListUrl">
             <v-icon start icon="mdi-image" />
             <span id="proof-count">{{ $t('Common.ProofCount', { count: user.proof_count }) }}</span>
@@ -43,6 +40,7 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
     UserActionMenuButton: defineAsyncComponent(() => import('../components/UserActionMenuButton.vue')),
   },
   props: {

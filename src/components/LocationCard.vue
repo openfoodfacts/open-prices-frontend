@@ -14,10 +14,7 @@
             <v-icon start icon="mdi-account" />
             <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>
           </v-chip>
-          <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-database-outline" />
-            <span id="product-count">{{ $t('Common.ProductCount', { count: location.product_count }) }}</span>
-          </v-chip>
+          <ProductCountChip class="mr-1" :count="location.product_count" :withLabel="true" />
           <v-chip label size="small" density="comfortable" :to="getLocationProofListUrl">
             <v-icon start icon="mdi-image" />
             <span id="proof-count">{{ $t('Common.ProofCount', { count: location.proof_count }) }}</span>
@@ -58,6 +55,7 @@ import constants from '../constants'
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
     LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
     LocationActionMenuButton: defineAsyncComponent(() => import('../components/LocationActionMenuButton.vue')),
