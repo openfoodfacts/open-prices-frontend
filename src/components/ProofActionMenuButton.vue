@@ -9,6 +9,7 @@
         <v-divider />
         <PriceAddLink v-if="userIsProofOwner" :proofId="proof.id" display="list-item" target="contribution-assistant" :disabled="!userCanAddPrice" />
         <PriceAddLink v-if="userIsProofOwner" :proofId="proof.id" display="list-item" :disabled="!userCanAddPrice" />
+        <ShareLink v-if="showProofShare" :overrideUrl="getShareLinkUrl" display="list-item" />
         <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
           {{ $t('Common.Details') }}
         </v-list-item>
@@ -66,6 +67,7 @@ import constants from '../constants'
 export default {
   components: {
     PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
+    ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
     ProofEditDialog: defineAsyncComponent(() => import('../components/ProofEditDialog.vue')),
     ProofDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/ProofDeleteConfirmationDialog.vue'))
   },
@@ -106,6 +108,12 @@ export default {
     },
     getProofDetailUrl() {
       return `/proofs/${this.proof.id}`
+    },
+    showProofShare() {
+      return this.$route.path === this.getProofDetailUrl
+    },
+    getShareLinkUrl() {
+      return this.getProofDetailUrl
     },
     userCanAddPrice() {
       return this.proof && this.userIsProofOwner && constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)

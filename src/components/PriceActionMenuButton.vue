@@ -32,6 +32,7 @@
             {{ $t('Common.Delete') }}
           </v-list-item>
         </v-sheet>
+        <!-- Proof actions -->
         <v-sheet v-if="!hideProofActions">
           <v-list-subheader class="text-uppercase" :slim="true" disabled>
             {{ $t('Common.Proof') }}
