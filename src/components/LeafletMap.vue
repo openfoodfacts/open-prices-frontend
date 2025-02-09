@@ -3,11 +3,31 @@
     <l-tile-layer :url="tiles" layer-type="base" name="OpenStreetMap" :attribution="attribution" />
     <l-marker v-for="location in locations" :key="getLocationUniqueID(location)" :lat-lng="getLocationLatLng(location)">
       <l-popup>
-        <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
-        {{ getLocationTitle(location, false, true, true) }}<br>
-        <v-chip label size="small" density="comfortable">
-          {{ getLocationTag(location) }}
-        </v-chip>
+        <v-card>
+          <v-card-title>
+            {{ getLocationTitle(location, true, false, false) }}
+          </v-card-title>
+          <v-card-subtitle>
+            {{ getLocationTitle(location, false, true, true) }}<br>
+          </v-card-subtitle>
+          <v-card-text>
+            <v-chip label size="small" density="comfortable">
+              {{ getLocationTag(location) }}
+            </v-chip>
+          </v-card-text>
+          <v-card-actions v-if="showActions">
+            <v-spacer v-if="$vuetify.display.smAndUp" />
+            <v-btn
+              class="float-right"
+              color="primary"
+              variant="flat"
+              :block="!$vuetify.display.smAndUp"
+              @click="locationSelected(location)"
+            >
+              {{ $t('Common.Select') }}
+            </v-btn>
+          </v-card-actions>
+        </v-card>
       </l-popup>
     </l-marker>
   </l-map>
@@ -16,8 +36,8 @@
 <script>
 import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet'
-import utils from '../utils.js'
 import { useTheme } from 'vuetify'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -31,7 +51,12 @@ export default {
       type: Array,
       required: true
     },
+    showActions: {
+      type: Boolean,
+      default: false
+    }
   },
+  emits: ['locationSelected'],
   data() {
     return {
       map: null,
@@ -71,6 +96,18 @@ export default {
     getLocationLatLng(location) {
       return utils.getLocationLatLng(location)
     },
+    locationSelected(location) {
+      this.$emit('locationSelected', location)
+    }
   }
 }
 </script>
+
+<style>
+.leaflet-popup-content {
+  margin: 0;
+}
+.leaflet-popup-content-wrapper {
+  padding: 0;
+}
+</style>
