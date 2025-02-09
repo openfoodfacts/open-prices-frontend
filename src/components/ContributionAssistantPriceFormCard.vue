@@ -25,19 +25,23 @@
       <v-menu scroll-strategy="close">
         <template #activator="{ props }">
           <v-btn v-bind="props" color="error" variant="outlined" append-icon="mdi-menu-down">
-            {{ $t('Common.Error') }}
+            {{ errorButtonText }}
           </v-btn>
         </template>
         <v-list>
-          <v-list-item :slim="true" prepend-icon="mdi-eye-off-outline" @click="removePriceTag(PRICE_TAG_STATUS_UNREADABLE)">
+          <v-list-item v-if="productPriceForm.status > 1" :slim="true" prepend-icon="mdi-check-circle-outline" @click="updatePriceTagStatus(0)">
+            {{ $t('Common.NotAnError') }}
+          </v-list-item>
+          <v-divider v-if="productPriceForm.status > 1" class="mt-2 mb-2" />
+          <v-list-item :slim="true" prepend-icon="mdi-eye-off-outline" @click="updatePriceTagStatus(PRICE_TAG_STATUS_UNREADABLE)">
             {{ $t('Common.Unreadable') }}
           </v-list-item>
           <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-crop" @click="removePriceTag(PRICE_TAG_STATUS_TRUNCATED)">
+          <v-list-item :slim="true" prepend-icon="mdi-crop" @click="updatePriceTagStatus(PRICE_TAG_STATUS_TRUNCATED)">
             {{ $t('Common.Truncated') }}
           </v-list-item>
           <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-currency-usd-off" @click="removePriceTag(PRICE_TAG_STATUS_NOT_A_PRICE)">
+          <v-list-item :slim="true" prepend-icon="mdi-currency-usd-off" @click="updatePriceTagStatus(PRICE_TAG_STATUS_NOT_A_PRICE)">
             {{ $t('Common.NotAPrice') }}
           </v-list-item>
         </v-list>
@@ -128,7 +132,7 @@ export default {
       default: false
     }
   },
-  emits: ['removePriceTag', 'validatePriceTag'],
+  emits: ['updatePriceTagStatus', 'validatePriceTag'],
   data() {
     return {
       PRICE_TAG_STATUS_UNREADABLE: constants.PRICE_TAG_STATUS_UNREADABLE,
@@ -147,6 +151,17 @@ export default {
     },
     showOverlay() {
       return this.loading
+    },
+    errorButtonText() {
+      if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_UNREADABLE) {
+        return this.$t('Common.Unreadable')
+      } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_TRUNCATED) {
+        return this.$t('Common.Truncated')
+      } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_NOT_A_PRICE) {
+        return this.$t('Common.NotAPrice')
+      } else {
+        return this.$t('Common.Error')
+      }
     }
   },
   mounted() {
@@ -159,8 +174,8 @@ export default {
     setCroppedImage(croppedImage) {
       this.productPriceForm.croppedImage = croppedImage
     },
-    removePriceTag(status=null) {
-      this.$emit('removePriceTag', status)
+    updatePriceTagStatus(status=null) {
+      this.$emit('updatePriceTagStatus', status)
       this.resetMode()
     },
     validatePriceTag() {
