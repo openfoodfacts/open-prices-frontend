@@ -9,7 +9,7 @@
     <v-card-text v-if="location">
       <v-row>
         <v-col :cols="isTypeOSM ? '12' : '11'">
-          <PriceCountChip :count="location.price_count" :withLabel="true" />
+          <PriceCountChip class="mr-1" :count="location.price_count" :withLabel="true" />
           <v-chip label size="small" density="comfortable" class="mr-1">
             <v-icon start icon="mdi-account" />
             <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>

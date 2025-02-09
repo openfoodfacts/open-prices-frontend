@@ -8,7 +8,7 @@
     <v-card-text>
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
-          <PriceCountChip :count="user.price_count" :withLabel="true" />
+          <PriceCountChip class="mr-1" :count="user.price_count" :withLabel="true" />
           <v-chip v-if="user.price_currency_count > 1" label size="small" density="comfortable" class="mr-1">
             <v-icon start icon="mdi-cash" />
             <span id="product-count">{{ $t('Common.CurrencyCount', { count: user.price_currency_count }) }}</span>

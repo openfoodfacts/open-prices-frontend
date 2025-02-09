@@ -27,7 +27,7 @@
           <v-chip class="mr-1" label size="small" density="comfortable" prepend-icon="mdi-information-outline">
             {{ label.boundingSource }}
           </v-chip>
-          <PriceCountChip v-if="labelHasPrice(label)" :count="1" :withLabel="true" source="proof" />
+          <PriceCountChip v-if="labelHasPrice(label)" :count="1" :withLabel="true" />
         </v-card-actions>
       </v-card>
     </v-col>

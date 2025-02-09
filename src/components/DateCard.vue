@@ -3,7 +3,7 @@
     <v-card-text>
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
-          <PriceCountChip :count="priceCount" :withLabel="true" />
+          <PriceCountChip class="mr-1" :count="priceCount" :withLabel="true" />
           <v-chip
             v-for="dp in dateParentList"
             :key="dp.name"

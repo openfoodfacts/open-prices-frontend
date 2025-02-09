@@ -12,7 +12,7 @@
           </h3>
 
           <p>
-            <PriceCountChip :count="product.price_count" @click="goToProduct()" />
+            <PriceCountChip class="mr-1" :count="product.price_count" @click="goToProduct()" />
             <span v-if="hasProductSource">
               <ProductBrands :productBrands="product.brands" :readonly="readonly" />
               <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
