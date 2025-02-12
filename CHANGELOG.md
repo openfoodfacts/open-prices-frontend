@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.119.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.118.0...v1.119.0) (2025-02-12)
+
+
+### Features
+
+* **Proof upload:** allow to opt-out from price tag validation ([#1373](https://github.com/openfoodfacts/open-prices-frontend/issues/1373)) ([0a40d2e](https://github.com/openfoodfacts/open-prices-frontend/commit/0a40d2ed60f73b6b531ffbf12d646838927270e6))
+
+
+### Bug Fixes
+
+* **Proof upload:** small adjustement on the ready_for_price_tag_validation checkbox label. ref [#1373](https://github.com/openfoodfacts/open-prices-frontend/issues/1373) ([077b709](https://github.com/openfoodfacts/open-prices-frontend/commit/077b7097b7b42fb7d5d436dfa5f5d8ba936afe1a))
+
 ## [1.118.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.117.0...v1.118.0) (2025-02-09)
 
 
