@@ -577,7 +577,7 @@
 	"ProofAdd": {
 		"HowToMultiple": "Усі зображення цінників, які ви виберете, мають мати одне місце розташування магазину та зроблені в один день.",
 		"HowToMultipleShort": "Зображення повинні містити одне й те ж місце розташування і дату.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Дозволити штучному інтелекту визначати ціни моїх фотографій і підтверджувати їх спільнотою"
 	},
 	"ProofCard": {
 		"Proof": "Доказ",
