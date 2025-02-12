@@ -130,6 +130,11 @@ export default {
         formData.append('receipt_price_total', data.receipt_price_total)
       }
     }
+    else if (data.type === constants.PROOF_TYPE_PRICE_TAG) {
+      if (data.ready_for_price_tag_validation) {
+        formData.append('ready_for_price_tag_validation', data.ready_for_price_tag_validation)
+      }
+    }
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams({'app_page': source})}`
     return fetch(url, {
       method: 'POST',

@@ -29,7 +29,7 @@
             <v-checkbox
               v-model="proofForm.ready_for_price_tag_validation"
               density="compact"
-              :label="$t('Common.ValidatePricesWithAI')"
+              :label="$t('ProofAdd.PriceValidationAllow')"
               :true-value="true"
               hide-details="auto"
             />
