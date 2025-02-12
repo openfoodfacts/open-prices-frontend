@@ -24,6 +24,17 @@
         <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <LocationInputRow :locationForm="proofForm" />
         <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />
+        <v-row v-if="typePriceTagOnly && multiple" class="mt-0">
+          <v-col cols="12" class="pb-0">
+            <v-checkbox
+              v-model="proofForm.ready_for_price_tag_validation"
+              density="compact"
+              :label="$t('ProofAdd.PriceValidationAllow')"
+              :true-value="true"
+              hide-details="auto"
+            />
+          </v-col>
+        </v-row>
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
@@ -124,7 +135,7 @@ export default {
       step: 1,  // 1: form; 2: uploading; 3: done
       // form
       proofForm: {
-        type: null,
+        type: null,  // see initProofForm
         location_id: null,
         location_osm_id: null,
         location_osm_type: '',
@@ -132,6 +143,7 @@ export default {
         currency: null,  // see initProofForm
         receipt_price_count: null,
         receipt_price_total: null,
+        ready_for_price_tag_validation: null,  // see initProofForm
         proof_id: null
       },
       // data
@@ -192,6 +204,9 @@ export default {
     initProofForm() {
       if (this.typePriceTagOnly) {
         this.proofForm.type = constants.PROOF_TYPE_PRICE_TAG
+        if (this.multiple) {
+          this.proofForm.ready_for_price_tag_validation = true
+        }
       }
       this.proofForm.currency = this.appStore.getUserLastCurrencyUsed
     },
