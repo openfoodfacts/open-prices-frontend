@@ -577,7 +577,7 @@
 	"ProofAdd": {
 		"HowToMultiple": "Visos jūsų pasirinktos kainų žym nuotraukos turi būti iš tos pačios parduotuvės vietos ir nufotografuotos tą pačią dieną.",
 		"HowToMultipleShort": "Paveikslėliai turi būti iš tos pačios parduotuvės vietos ir tos pačios datos.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Leisti, kad mano nuotraukų kainas gautų DI ir patvirtintų bendruomenė"
 	},
 	"ProofCard": {
 		"Proof": "Įrodymai",
