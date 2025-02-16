@@ -39,7 +39,7 @@
                 :label="$t('Common.Barcode')"
                 type="text"
                 inputmode="numeric"
-                pattern="[0-9]+"
+                :pattern="barcodeManualInputMode === 'search' ? '[0-9*]+' : '[0-9]+'"
                 prepend-inner-icon="mdi-barcode"
                 :hint="barcodeManualInputLength"
                 clearable
@@ -50,7 +50,7 @@
                 </template>
               </v-text-field>
             </v-form>
-            <ProductCard v-if="product" :product="product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" @click="barcodeSend(product.code)" />
+            <ProductCard v-for="product in productSearchResultList" :key="product" :product="product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" @click="barcodeSend(product.code)" />
           </v-tabs-window-item>
         </v-tabs-window>
       </v-card-text>
@@ -117,7 +117,7 @@ export default {
         barcode: '',
       },
       barcodeManualFormValid: false,
-      product: null,
+      productSearchResultList: [],
       // config
       currentDisplay: null,  // see mounted
       HTML5_QRCODE_URL: 'https://github.com/mebjas/html5-qrcode',
@@ -186,17 +186,43 @@ export default {
       if (!this.barcodeManualFormValid) return
       if (this.barcodeManualInputMode === 'search') {
         this.$refs.barcodeManualInput.blur()
-        this.getProduct(this.barcodeManualForm.barcode)
+        if (this.barcodeManualForm.barcode.includes('*')) {
+          this.searchProduct(this.barcodeManualForm.barcode)
+        } else {
+          this.getProduct(this.barcodeManualForm.barcode)
+        }
       } else {
         this.barcodeSend(this.barcodeManualForm.barcode)
       }
     },
     getProduct(code) {
-      this.product = null
+      this.productSearchResultList = []
       api
         .getProductByCode(code)
         .then((data) => {
-          this.product = data.id ? data : {'code': code, 'price_count': 0}
+          const product = data.id ? data : {'code': code, 'price_count': 0}
+          this.productSearchResultList.push(product)
+        })
+        .catch((error) => {  // eslint-disable-line no-unused-vars
+          alert("Error: Open Prices server error")
+        })
+    },
+    searchProduct(code) {
+      this.productSearchResultList = []
+      api
+        .searchaliciousProductSearch(code)
+        .then((data) => {
+          for (let product of data['hits']) {
+            if (product['code']) {
+              product['source'] = 'off'
+              product['brands'] = product['brands'].join(',')  // returns an array instead of a string
+              // product['product_quantity'] = product['product_quantity'] || product['quantity']  // product_quantity not yet returned
+              if (product['quantity']) {
+                product['product_name'] += ` (${product["quantity"]})`
+              }
+              this.productSearchResultList.push(product)
+            }
+          }
         })
         .catch((error) => {  // eslint-disable-line no-unused-vars
           alert("Error: Open Prices server error")

@@ -49,6 +49,7 @@ export default {
   OFF_WIKI_APP_URL: 'https://wiki.openfoodfacts.org/Project:Open-Prices',
   OFF_WIKI_GDPR_REQUEST_URL: 'https://wiki.openfoodfacts.org/GDPR_request',
   OFF_API_URL: 'https://world.openfoodfacts.org/api/v2/product',
+  OFF_SEARCHALICIOUS_API_URL: 'https://search.openfoodfacts.org',
   OFF_CROWDIN_URL: 'https://translate.openfoodfacts.org',
   OBF_NAME: OBF_NAME,
   OBF_URL: 'https://world.openbeautyfacts.org',
