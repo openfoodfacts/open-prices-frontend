@@ -576,7 +576,8 @@
 	},
 	"ProofAdd": {
 		"HowToMultiple": "Semua gambar label harga yang Anda pilih harus memiliki lokasi toko yang sama, dan diambil pada hari yang sama.",
-		"HowToMultipleShort": "Foto harus menunjukkan lokasi toko dan tanggal yang sama."
+		"HowToMultipleShort": "Foto harus menunjukkan lokasi toko dan tanggal yang sama.",
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
 	},
 	"ProofCard": {
 		"Proof": "Bukti",

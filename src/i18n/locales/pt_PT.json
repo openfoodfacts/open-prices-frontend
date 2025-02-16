@@ -278,7 +278,7 @@
 		"MyPrices": "Os meus preços",
 		"MyProofs": "Os meus comprovativos",
 		"MyStats": "Minhas estatísticas",
-		"NotAnError": "Not an error",
+		"NotAnError": "Não é um erro",
 		"NotAPrice": "Não é um preço",
 		"Offline": "Offline",
 		"Online": "Online",
@@ -345,7 +345,7 @@
 		"Reuses": "Reutilizações",
 		"ReusesKnown": "Reutilizações conhecidas",
 		"Search": "Procurar",
-		"Select": "Select",
+		"Select": "Selecionar",
 		"Settings": "Definições",
 		"SignInOFFAccount": "Iniciar sessão com a sua conta {url}",
 		"SignedIn": "Sessão iniciada!",
@@ -375,8 +375,8 @@
 		"Truncated": "Truncado",
 		"Type": "Tipo",
 		"UnknownProduct": "Produto desconhecido",
-		"UnknownProductSource": "Unknown product source",
-		"UnknownSource": "Unknown source",
+		"UnknownProductSource": "Origem do produto desconhecida",
+		"UnknownSource": "Origem desconhecida",
 		"Unreadable": "Ilegível",
 		"Upload": "Carregar",
 		"UploadMultipleImages": "Enviar {count} imagem | Carregar {count} imagens",
@@ -417,7 +417,7 @@
 			"SendLabelsButton": "Enviar etiquetas"
 		},
 		"PricesAlreadyAdded": "Preços já adicionados",
-		"PricesMarkedAsError": "Prices marked as error",
+		"PricesMarkedAsError": "Preços marcados como erro",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} preço(s) serão adicionados a um comprovativo existente a {date} em {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
 		"WaitForUpload": "Por favor aguarde pelo envio",
@@ -576,7 +576,8 @@
 	},
 	"ProofAdd": {
 		"HowToMultiple": "Todas as imagens de etiquetas de preço que selecionar devem partilhar o mesmo local da loja e terem sido fotografadas no mesmo dia.",
-		"HowToMultipleShort": "As fotografias devem partilhar o mesmo local da loja e a mesma data."
+		"HowToMultipleShort": "As fotografias devem partilhar o mesmo local da loja e a mesma data.",
+		"PriceValidationAllow": "Permitir que os preços nas minhas fotografias sejam extraídos pela IA e validados pela comunidade"
 	},
 	"ProofCard": {
 		"Proof": "Comprovativo",
@@ -808,7 +809,7 @@
 		"PriceValidation": "Validação de preço",
 		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar etiqueta de categoria",
-		"ProductDisplaySource": "Display source",
+		"ProductDisplaySource": "Mostrar origem",
 		"SideMenuExperimentsDisplay": "Mostrar 'Experiências'",
 		"Save": "Guardar",
 		"Title": "Definições",

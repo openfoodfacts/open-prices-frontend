@@ -576,7 +576,8 @@
 	},
 	"ProofAdd": {
 		"HowToMultiple": "כל תמונות תגיות המחירים שבחרת יחלקו את אותו מקום חנות ויתועדו לאותו היום.",
-		"HowToMultipleShort": "התמונות צריכות לחלוק מקום ותאריך זהים לחנות."
+		"HowToMultipleShort": "התמונות צריכות לחלוק מקום ותאריך זהים לחנות.",
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",

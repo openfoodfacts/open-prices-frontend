@@ -272,7 +272,7 @@
 		"Latest": "Latest",
 		"LinkCopySuccess": "リンクをコピーしました",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
-		"LocationNotFound": "Location not found",
+		"LocationNotFound": "場所が見つかりません",
 		"Map": "地図",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "私の価格",
@@ -521,7 +521,7 @@
 	},
 	"PriceEdit": {
 		"Save": "保存",
-		"Success": "Price edited!",
+		"Success": "価格を編集しました！",
 		"Title": "Edit a price"
 	},
 	"PriceForm": {
@@ -576,7 +576,8 @@
 	},
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date."
+		"HowToMultipleShort": "Pictures should share the same shop location and date.",
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

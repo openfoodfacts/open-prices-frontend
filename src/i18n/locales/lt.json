@@ -278,7 +278,7 @@
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
 		"MyStats": "Mano statistika",
-		"NotAnError": "Not an error",
+		"NotAnError": "Ne klaida",
 		"NotAPrice": "Ne kaina",
 		"Offline": "Neprisijungę",
 		"Online": "Prisijungus",
@@ -345,7 +345,7 @@
 		"Reuses": "Kartotinis naudojimas",
 		"ReusesKnown": "Žinomas kartotinis naudojimas",
 		"Search": "Paieška",
-		"Select": "Select",
+		"Select": "Pasirinkti",
 		"Settings": "Nustatymai",
 		"SignInOFFAccount": "Prisijungti su savo {url} paskyra",
 		"SignedIn": "Prisijungta!",
@@ -375,8 +375,8 @@
 		"Truncated": "Sutrumpintas",
 		"Type": "Tipas",
 		"UnknownProduct": "Nežinomas produktas",
-		"UnknownProductSource": "Unknown product source",
-		"UnknownSource": "Unknown source",
+		"UnknownProductSource": "Nežinomas produkto šaltinis",
+		"UnknownSource": "Nežinomas šaltinis",
 		"Unreadable": "Neįskaitoma",
 		"Upload": "Įkelti",
 		"UploadMultipleImages": "Įkelti {count} vaizdą | Įkelti {count} vaizdus (-ų)",
@@ -417,7 +417,7 @@
 			"SendLabelsButton": "Siųsti etiketes"
 		},
 		"PricesAlreadyAdded": "Kainos jau pridėtos",
-		"PricesMarkedAsError": "Prices marked as error",
+		"PricesMarkedAsError": "Kainos pažymėtos kaip klaida",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} kaina (-os) bus pridėta (-os) prie esamo įrodymo {date} {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pridėta kainų",
 		"WaitForUpload": "Palaukite, kol bus įkeltas",
@@ -576,7 +576,8 @@
 	},
 	"ProofAdd": {
 		"HowToMultiple": "Visos jūsų pasirinktos kainų žym nuotraukos turi būti iš tos pačios parduotuvės vietos ir nufotografuotos tą pačią dieną.",
-		"HowToMultipleShort": "Paveikslėliai turi būti iš tos pačios parduotuvės vietos ir tos pačios datos."
+		"HowToMultipleShort": "Paveikslėliai turi būti iš tos pačios parduotuvės vietos ir tos pačios datos.",
+		"PriceValidationAllow": "Leisti, kad mano nuotraukų kainas gautų DI ir patvirtintų bendruomenė"
 	},
 	"ProofCard": {
 		"Proof": "Įrodymai",
@@ -808,7 +809,7 @@
 		"PriceValidation": "Kainos patvirtinimas",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",
-		"ProductDisplaySource": "Display source",
+		"ProductDisplaySource": "Rodyti šaltinį",
 		"SideMenuExperimentsDisplay": "Rodyti „Eksperimentai“",
 		"Save": "Išsaugoti",
 		"Title": "Nustatymai",

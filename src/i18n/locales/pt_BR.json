@@ -576,7 +576,8 @@
 	},
 	"ProofAdd": {
 		"HowToMultiple": "Todas as imagens de etiquetas de preço que você selecionar devem compartilhar o mesmo local da loja e ter sido tiradas no mesmo dia.",
-		"HowToMultipleShort": "As fotos devem compartilhar o mesmo local da loja e a mesma data."
+		"HowToMultipleShort": "As fotos devem compartilhar o mesmo local da loja e a mesma data.",
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
 	},
 	"ProofCard": {
 		"Proof": "Demonstração",
