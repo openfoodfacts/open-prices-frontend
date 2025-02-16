@@ -224,7 +224,7 @@ export default {
       labelProcessingErrorMessage: false,
       nextProofSuggestions: [],
       lastUpdatedPriceTagId: null,
-      existingProofPrices: []
+      proofPriceExistingList: []
     }
   },
   computed: {
@@ -310,7 +310,7 @@ export default {
     },
     getExistingProofPrices(proofId) {
       api.getPrices({proof_id: proofId}).then(data => {
-        this.existingProofPrices = data.items
+        this.proofPriceExistingList = data.items
       })
     },
     onProofUploaded(proof) {
@@ -449,9 +449,9 @@ export default {
           price_id: priceTag.price_id
         }
         if (productPriceForm.price_id) {
-          const existingProofPrice = this.existingProofPrices.find(existingProofPrice => existingProofPrice.id === productPriceForm.price_id)
-          if (existingProofPrice) {
-            productPriceForm = Object.assign(productPriceForm, existingProofPrice)
+          const proofPriceExisting = this.proofPriceExistingList.find(price => price.id === productPriceForm.price_id)
+          if (proofPriceExisting) {
+            productPriceForm = Object.assign(productPriceForm, proofPriceExisting)
           }
         }
         this.productPriceForms.push(productPriceForm)

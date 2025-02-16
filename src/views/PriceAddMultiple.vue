@@ -260,14 +260,14 @@ export default {
       // load existing proof prices
       this.proofPriceExistingList = []
       if (this.proofObject.price_count) {
-        this.getProofPrices()
+        this.getExistingProofPrices()
       }
       // get ready to add prices: init product price form
       this.initNewProductPriceForm()
       // move to step 2
       this.step = 2
     },
-    getProofPrices() {
+    getExistingProofPrices() {
       this.loading = true
       return api.getPrices({ proof_id: this.proofObject.id, size: this.proofObject.price_count, order_by: 'created' })
         .then((data) => {
