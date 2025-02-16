@@ -72,6 +72,10 @@ function extraPriceCreateOrUpdateFiltering(data) {
 
 
 export default {
+  /**
+   * OPEN PRICES API
+  */ 
+
   signIn(username, password) {
     let formData = new FormData()
     formData.append('username', username)
@@ -262,6 +266,61 @@ export default {
     // .then((response) => response.json())
   },
 
+  processWithGemini(labels) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/process-with-gemini`
+    const formData = new FormData()
+
+    labels.forEach((label) => {
+      formData.append('files', label.blob)
+    });
+
+    return fetch(url, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${store.user.token}`,
+      },
+      body: formData,
+    })
+    .then((response) => response.json())
+  },
+
+  getPriceTags(params = {}) {
+    const defaultParams = {page: 1, size: 10}  // order_by default ?
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags?${buildURLParams({...defaultParams, ...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
+
+  updatePriceTag(priceTagId, inputData = {}) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags/${priceTagId}?${buildURLParams()}`
+    return fetch(url, {
+      method: 'PATCH',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`,
+      }),
+      body: JSON.stringify(inputData),
+    })
+    .then((response) => response.json())
+  },
+
+  createPriceTag(inputData) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags?${buildURLParams()}`
+    return fetch(url, {
+      method: 'POST',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`,
+      }),
+      body: JSON.stringify(inputData),
+    })
+    .then((response) => response.json())
+  },
+
   getProducts(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products?${buildURLParams({...defaultParams, ...params})}`
@@ -342,6 +401,11 @@ export default {
     .then((response) => response.json())
   },
 
+
+  /**
+   * OPEN FOOD FACTS API
+  */ 
+
   openfoodfactsProductSearch(code) {
     const url = `${constants.OFF_API_URL}/${code}.json`
     return fetch(url, {
@@ -350,6 +414,11 @@ export default {
     })
     .then((response) => response.json())
   },
+
+
+  /**
+   * OPENSTREETMAP API
+  */ 
 
   openstreetmapNominatimSearch(q) {
     const url = `${constants.OSM_NOMINATIM_SEARCH_URL}?q=${q}&addressdetails=1&format=json&limit=${LOCATION_SEARCH_LIMIT}`
@@ -391,55 +460,4 @@ export default {
       return this.openstreetmapNominatimSearch(q)
     }
   },
-  processWithGemini(labels) {
-    const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/process-with-gemini`
-    const formData = new FormData()
-
-    labels.forEach((label) => {
-      formData.append('files', label.blob)
-    });
-
-    return fetch(url, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${store.user.token}`,
-      },
-      body: formData,
-    })
-    .then((response) => response.json())
-  },
-  getPriceTags(params = {}) {
-    const defaultParams = {page: 1, size: 10}  // order_by default ?
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags?${buildURLParams({...defaultParams, ...params})}`
-    return fetch(url, {
-      method: 'GET',
-      headers: OP_DEFAULT_HEADERS,
-    })
-    .then((response) => response.json())
-  },
-  updatePriceTag(priceTagId, inputData = {}) {
-    const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags/${priceTagId}?${buildURLParams()}`
-    return fetch(url, {
-      method: 'PATCH',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
-      body: JSON.stringify(inputData),
-    })
-    .then((response) => response.json())
-  },
-  createPriceTag(inputData) {
-    const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/price-tags?${buildURLParams()}`
-    return fetch(url, {
-      method: 'POST',
-      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
-        'Authorization': `Bearer ${store.user.token}`,
-      }),
-      body: JSON.stringify(inputData),
-    })
-    .then((response) => response.json())
-  }
 }
