@@ -42,5 +42,16 @@
         "date": "2024",
         "author": null,
         "display": true
+    },
+    {
+        "name": "Prixdle",
+        "description": "Guess the product's price",
+        "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/prixdle.png",
+        "url": "https://prixdle.com",
+        "code_url": null,
+        "tags": ["API"],
+        "date": "2024",
+        "author": null,
+        "display": true
     }
 ]
