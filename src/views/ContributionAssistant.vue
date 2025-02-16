@@ -223,7 +223,8 @@ export default {
       numberOfPricesAdded: 0,
       labelProcessingErrorMessage: false,
       nextProofSuggestions: [],
-      lastUpdatedPriceTagId: null
+      lastUpdatedPriceTagId: null,
+      proofPriceExistingList: []
     }
   },
   computed: {
@@ -307,6 +308,11 @@ export default {
         })
       }
     },
+    getExistingProofPrices(proofId) {
+      api.getPrices({proof_id: proofId}).then(data => {
+        this.proofPriceExistingList = data.items
+      })
+    },
     onProofUploaded(proof) {
       // A new proof was selected by the user, or loaded from the query param
       this.extractedLabels = []
@@ -347,6 +353,7 @@ export default {
           this.proofWithBoundingBoxesLoading = false
         })
       }
+      this.getExistingProofPrices(this.proofObject.id)
     },
     loadPriceTagsWithPredictions(minNumberOfPriceTagWithPredictions, maxTries, callback) {
       // Call price tag API every 3 seconds until we have at least minNumberOfPriceTagWithPredictions, max 6 times
@@ -422,7 +429,7 @@ export default {
         // remove anything that is not a number from label.barcode
         const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''
         const priceType = barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
-        const productPriceForm = {
+        let productPriceForm = {
           id: priceTag.id,
           type: priceType,
           category_tag: (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.product)) ? label.product : null,
@@ -440,6 +447,12 @@ export default {
           bounding_box: priceTag.bounding_box,
           status: priceTag.status,
           price_id: priceTag.price_id
+        }
+        if (productPriceForm.price_id) {
+          const proofPriceExisting = this.proofPriceExistingList.find(price => price.id === productPriceForm.price_id)
+          if (proofPriceExisting) {
+            productPriceForm = Object.assign(productPriceForm, proofPriceExisting)
+          }
         }
         this.productPriceForms.push(productPriceForm)
       })
