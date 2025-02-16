@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.120.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.119.0...v1.120.0) (2025-02-16)
+
+
+### Features
+
+* **Barcode search:** allow wildcard search thanks to search-a-licious ([#1382](https://github.com/openfoodfacts/open-prices-frontend/issues/1382)) ([ce780ff](https://github.com/openfoodfacts/open-prices-frontend/commit/ce780ff5cd50d7874c930f6db1a75ad71f082bce))
+* **Reuses:** add prixdle.com ([#1379](https://github.com/openfoodfacts/open-prices-frontend/issues/1379)) ([8cde17a](https://github.com/openfoodfacts/open-prices-frontend/commit/8cde17ad6548bc827f7ab0189e0de2b070af84a4))
+
+
+### Technical
+
+* **API:** reorganize a bit the api.js file ([58fa023](https://github.com/openfoodfacts/open-prices-frontend/commit/58fa023844d96ba9347fa7d4ebd7e04b738cfd31))
+* compress images in the public folder ([#1381](https://github.com/openfoodfacts/open-prices-frontend/issues/1381)) ([8b14173](https://github.com/openfoodfacts/open-prices-frontend/commit/8b1417396d9d22a7e61ee24ca240b4887102db56))
+* **ContributionAssistant:** display correct values for existing prices ([#1377](https://github.com/openfoodfacts/open-prices-frontend/issues/1377)) ([975e77c](https://github.com/openfoodfacts/open-prices-frontend/commit/975e77c515f501ee9b9c5007e1a667ac9d164465))
+* **l10n:** New Crowdin translations to review and merge ([#1372](https://github.com/openfoodfacts/open-prices-frontend/issues/1372)) ([2705366](https://github.com/openfoodfacts/open-prices-frontend/commit/2705366595cf0607bd6d26fca34e7f2bff7f4058))
+
 ## [1.119.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.118.0...v1.119.0) (2025-02-12)
 
 
