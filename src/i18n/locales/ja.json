@@ -521,7 +521,7 @@
 	},
 	"PriceEdit": {
 		"Save": "保存",
-		"Success": "Price edited!",
+		"Success": "価格を編集しました！",
 		"Title": "Edit a price"
 	},
 	"PriceForm": {
