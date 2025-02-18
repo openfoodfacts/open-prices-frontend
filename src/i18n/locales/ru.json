@@ -49,21 +49,21 @@
 			"Subtitle": "Just one price tag",
 			"Title": "Single product"
 		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
+		"Thanks": "Спасибо",
+		"Title": "Добавить цену",
 		"TitleSingle": "Add a single price",
 		"TitleMultiple": "Add multiple prices in bulk"
 	},
 	"AddPriceMultiple": {
 		"Done": "Готово",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
+			"Add": "Добавить новую цену",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Создать",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
-			"NewPrice": "New price",
+			"NewPrice": "Новая цена",
 			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"Upload": "Загрузить"
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
@@ -85,7 +85,7 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"Picture": "Изображение",
 			"TakePicture": "Сфотографировать",
 			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery",
@@ -115,12 +115,12 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Дата",
+			"DateLabel": "Дата",
 			"Find": "Найти",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Место покупки",
+			"SelectLocation": "Выберите ваше местоположение",
+			"Title": "Где и когда?"
 		}
 	},
 	"BarcodeScanner": {
@@ -159,9 +159,9 @@
 	},
 	"Common": {
 		"About": "О приложении",
-		"AddPrice": "Add a price",
+		"AddPrice": "Добавить цену",
 		"AddPrices": "Add prices",
-		"AddNewPrice": "Add a new price",
+		"AddNewPrice": "Добавить новую цену",
 		"AddNewPrices": "Add new prices",
 		"AddProof": "Add a proof",
 		"AddProofs": "Add proofs",
@@ -219,7 +219,7 @@
 		"Done": "Готово",
 		"Error": "Ошибка",
 		"Experiments": "Experiments",
-		"Join": "Join",
+		"Join": "Вступить",
 		"Label": "Маркировка",
 		"Labels": "Маркировки",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
@@ -234,7 +234,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Дата",
 		"DateMissing": "Date missing",
 		"Details": "Details",
 		"Delete": "Удалить",
@@ -280,8 +280,8 @@
 		"MyStats": "My stats",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
-		"Offline": "Offline",
-		"Online": "Online",
+		"Offline": "Офлайн",
+		"Online": "Онлайн",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -297,7 +297,7 @@
 		"OrderUserCountDESC": "User count",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
-		"Picture": "Picture",
+		"Picture": "Изображение",
 		"Pictures": "Pictures",
 		"PictureSelect": "Select a picture",
 		"PictureSelectMultiple": "Select pictures",
@@ -361,7 +361,7 @@
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
-		"Thanks": "Thanks",
+		"Thanks": "Спасибо",
 		"Theme": "Тема",
 		"ThemeLight": "Дневной режим",
 		"ThemeDark": "Ночной режим",
@@ -378,7 +378,7 @@
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"Unreadable": "Unreadable",
-		"Upload": "Upload",
+		"Upload": "Загрузить",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
@@ -470,7 +470,7 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Добавить цену",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
 		"SearchProduct": "Search for a product",
@@ -568,7 +568,7 @@
 		"UnknownProduct": "Неизвестный продукт"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Добавить цену",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Загрузить ещё",
@@ -619,7 +619,7 @@
 			"Title": "О приложении"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Добавить цену"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -646,7 +646,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Добавить цену"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
