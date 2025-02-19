@@ -41,13 +41,16 @@ export default {
       return Math.round((new Date(this.challenge.endDate) - new Date(this.challenge.startDate)) / (1000 * 60 * 60 * 24))
     },
     todayIndex() {
-      return Math.round((new Date() - new Date(this.challenge.startDate)) / (1000 * 60 * 60 * 24))
+      let today = new Date()
+      today.setHours(0, 0, 0, 0)
+      return Math.round((today - new Date(this.challenge.startDate)) / (1000 * 60 * 60 * 24))
     },
     daysLeftText() {
       const daysLeft = this.nbDays - this.todayIndex
-      if (daysLeft <= 0) return "Challenge over"
+      if (daysLeft < 0) return "Challenge over"
+      if (daysLeft === 0) return "Last day"
       if (daysLeft >= this.nbDays) return "Not started"
-      return `${daysLeft} days left`
+      return `${daysLeft} day${daysLeft > 1 ? 's' : ''} left`
     },
     progress() {
       return Math.min(100, this.todayIndex * 100 / this.nbDays)
