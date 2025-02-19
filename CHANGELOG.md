@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.120.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.120.0...v1.120.1) (2025-02-19)
+
+
+### Bug Fixes
+
+* **Challenge:** Timeline: fix off-by-one end date error ([#1384](https://github.com/openfoodfacts/open-prices-frontend/issues/1384)) ([fd0f326](https://github.com/openfoodfacts/open-prices-frontend/commit/fd0f32678a376c129fab136265ff7546e4881d1c))
+
 ## [1.120.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.119.0...v1.120.0) (2025-02-16)
 
 
