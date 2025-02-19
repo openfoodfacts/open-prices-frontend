@@ -47,9 +47,10 @@ export default {
     },
     daysLeftText() {
       const daysLeft = this.nbDays - this.todayIndex
-      if (daysLeft <= 0) return "Challenge over"
+      if (daysLeft < 0) return "Challenge over"
+      if (daysLeft === 0) return "Last day"
       if (daysLeft >= this.nbDays) return "Not started"
-      return `${daysLeft} days left`
+      return `${daysLeft} day${daysLeft > 1 ? 's' : ''} left`
     },
     progress() {
       return Math.min(100, this.todayIndex * 100 / this.nbDays)
