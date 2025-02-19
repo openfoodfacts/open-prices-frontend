@@ -41,7 +41,9 @@ export default {
       return Math.round((new Date(this.challenge.endDate) - new Date(this.challenge.startDate)) / (1000 * 60 * 60 * 24))
     },
     todayIndex() {
-      return Math.round((new Date() - new Date(this.challenge.startDate)) / (1000 * 60 * 60 * 24))
+      let today = new Date()
+      today.setHours(0, 0, 0, 0)
+      return Math.round((today - new Date(this.challenge.startDate)) / (1000 * 60 * 60 * 24))
     },
     daysLeftText() {
       const daysLeft = this.nbDays - this.todayIndex
