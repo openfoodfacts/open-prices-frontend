@@ -71,6 +71,7 @@ export default {
         price_per: null,
         price_is_discounted: false,
         price_without_discount: null,
+        discount_type: null,
         currency: null,
         receipt_quantity: null,
         // date: null,
@@ -101,10 +102,6 @@ export default {
       })
     },
     updatePrice() {
-      // cleanup form
-      if (!this.updatePriceForm.price_is_discounted) {
-        this.updatePriceForm.price_without_discount = null
-      }
       // update price
       api
         .updatePrice(this.price.id, this.updatePriceForm)

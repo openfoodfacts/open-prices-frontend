@@ -58,7 +58,18 @@
             hide-details="auto"
           />
         </v-col>
-        <v-col v-if="proofIsTypeReceipt" cols="6">
+        <v-col v-if="priceForm.price_is_discounted" cols="6">
+          <v-select
+            v-model="priceForm.discount_type"
+            density="compact"
+            :label="$t('Common.DiscountType')"
+            :items="priceDiscountTypeSelectorDisplayList"
+            :item-title="item => item.value ? $t('Common.' + item.value) : ''"
+            :item-value="item => item.key"
+            hide-details="auto"
+          />
+        </v-col>
+        <v-col v-if="proofIsTypeReceipt" cols="6" :class="priceForm.price_is_discounted ? 'offset-6' : ''">
           <v-text-field
             v-model="priceForm.receipt_quantity"
             density="compact"
@@ -111,6 +122,7 @@ export default {
         price_per: null,
         price_is_discounted: false,
         price_without_discount: null,
+        discount_type: null,
         currency: null,
         receipt_quantity: null,
       })
@@ -135,12 +147,12 @@ export default {
   emits: ['filled'],
   data() {
     return {
-      // currency selection
       changeCurrencyDialog: false,
       CATEGORY_PRICE_PER_LIST: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
       ],
+      priceDiscountTypeSelectorDisplayList: constants.PRICE_DISCOUNT_TYPE_SELECTOR_DISPLAY_LIST,
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
     }
   },

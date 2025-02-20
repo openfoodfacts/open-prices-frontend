@@ -2,7 +2,7 @@ import { useAppStore } from '../store'
 import constants from '../constants'
 
 
-const PRICE_UPDATE_FIELDS = ['type', 'category_tag', 'labels_tags', 'origins_tags', 'price', 'price_is_discounted', 'price_without_discount', 'price_per', 'currency', 'receipt_quantity', 'date']
+const PRICE_UPDATE_FIELDS = ['type', 'category_tag', 'labels_tags', 'origins_tags', 'price', 'price_is_discounted', 'price_without_discount', 'discount_type', 'price_per', 'currency', 'receipt_quantity', 'date']
 const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'location_id', 'location_osm_id', 'location_osm_type', 'proof_id'])
 const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency', 'receipt_price_count', 'receipt_price_total', 'ready_for_price_tag_validation']
 const PROOF_CREATE_FIELDS = PROOF_UPDATE_FIELDS.concat(['location_id', 'location_osm_id', 'location_osm_type'])  // 'file'
@@ -66,6 +66,7 @@ function extraPriceCreateOrUpdateFiltering(data) {
   // generic rules
   if (!filteredData.price_is_discounted) {
     filteredData.price_without_discount = null
+    filteredData.discount_type = null
   }
   return filteredData
 }
