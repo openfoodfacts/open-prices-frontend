@@ -80,6 +80,7 @@ export default {
     {key: PRICE_TYPE_CATEGORY, value: PRICE_TYPE_CATEGORY, icon: PRICE_TYPE_CATEGORY_ICON}
   ],
   PRICE_DISCOUNT_TYPE_SELECTOR_DISPLAY_LIST: [
+    {key: null, value: ''},  // allow empty value
     {key: 'QUANTITY', value: 'DiscountTypeQuantity'},
     {key: 'SALE', value: 'DiscountTypeSale'},
     {key: 'SEASONAL', value: 'DiscountTypeSeasonal'},
@@ -87,7 +88,6 @@ export default {
     {key: 'EXPIRES_SOON', value: 'DiscountTypeExpiresSoon'},
     {key: 'PICK_IT_YOURSELF', value: 'DiscountTypePickItYourself'},
     {key: 'OTHER', value: 'DiscountTypeOther'},
-    {key: null, value: ''}
   ],
   PRICE_TAG_STATUS_WITH_PRICE: 1,
   PRICE_TAG_STATUS_UNREADABLE: 2,
