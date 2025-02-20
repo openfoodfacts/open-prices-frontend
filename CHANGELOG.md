@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.121.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.120.0...v1.121.0) (2025-02-20)
+
+
+### Features
+
+* **Prices:** Show the new discount_type field in the Price form ([#1386](https://github.com/openfoodfacts/open-prices-frontend/issues/1386)) ([038a984](https://github.com/openfoodfacts/open-prices-frontend/commit/038a9844c0e3b508ad937d5118b25a83aa6b7a7f))
+
+
+### Bug Fixes
+
+* **Challenge:** Timeline: fix off-by-one end date error ([#1384](https://github.com/openfoodfacts/open-prices-frontend/issues/1384)) ([fd0f326](https://github.com/openfoodfacts/open-prices-frontend/commit/fd0f32678a376c129fab136265ff7546e4881d1c))
+
+
+### Technical
+
+* fix deploy proxy host ([#1387](https://github.com/openfoodfacts/open-prices-frontend/issues/1387)) ([9d9e14d](https://github.com/openfoodfacts/open-prices-frontend/commit/9d9e14dc229b3669cb6eea967f5fcd371ea49b9a))
+
 ## [1.120.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.119.0...v1.120.0) (2025-02-16)
 
 
