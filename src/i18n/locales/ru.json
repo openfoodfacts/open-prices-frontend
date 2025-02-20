@@ -1,22 +1,22 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
-		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
+		"WhyTitle": "Почему {op_name}?",
+		"WhyAnswer1": "{op_name} - проект по сбору и распространению цен на продукты по всему миру. Это общедоступный набор данных, который можно использовать для исследований, анализа и многого другого. {op_name} разработан и поддерживается {off_url}.",
 		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
+		"HowTitle": "Как работает {op_name}?",
 		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
 		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
 		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
 		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
-		"LicenseTitle": "License",
+		"LicenseTitle": "Лицензия",
 		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
-		"WhatTitle": "What is {op_name}?",
-		"WhatOFFTitle": "What is {off_name}?",
+		"WhatTitle": "Что такое {op_name}?",
+		"WhatOFFTitle": "Что такое {off_name}?",
 		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
-		"WhyOFFTitle": "Why is {off_name} doing this?",
+		"WhyOFFTitle": "Почему {off_name} это делает?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
+		"HowContribute": "Как я могу внести свой вклад?",
 		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
 		"HowUseData": "How can I use the data?",
 		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
@@ -36,13 +36,13 @@
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Полка с несколькими ценниками",
+			"Title": "Несколько продуктов"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Цена создана!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Subtitle": "Один или несколько продуктов",
+			"Title": "Чек"
 		},
 		"SignedIn": "Signed in!",
 		"SingleProductMode": {
@@ -62,7 +62,7 @@
 			"Create": "Создать",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "Новая цена",
-			"PriceUploaded": "Price created!",
+			"PriceUploaded": "Цена создана!",
 			"Upload": "Загрузить"
 		},
 		"ProofDetails": {
@@ -75,8 +75,8 @@
 	"AddPriceSingle": {
 		"Create": "Создать",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
+			"Discount": "Скидка?",
+			"Label": "Цена",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
 			"Proof": "Proof",
@@ -179,7 +179,7 @@
 		"Brand": "Марка",
 		"Brands": "Марки",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
+		"Price": "Цена",
 		"Prices": "Prices",
 		"PRODUCT": "Продукт",
 		"Product": "Продукт",
@@ -287,7 +287,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Цена",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -311,7 +311,7 @@
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Цена создана!",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -336,8 +336,8 @@
 		"Quantity": "Количество",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"RECEIPT": "Чек",
+		"Receipt": "Чек",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -525,8 +525,8 @@
 		"Title": "Edit a price"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
-		"Label": "Price",
+		"Discount": "Скидка?",
+		"Label": "Цена",
 		"LabelDiscounted": "Discounted price",
 		"LabelFull": "Full price"
 	},
@@ -582,7 +582,7 @@
 	"ProofCard": {
 		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"RECEIPT": "Чек",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
