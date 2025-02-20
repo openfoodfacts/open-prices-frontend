@@ -49,18 +49,17 @@ jobs:
     # Deploy
     - name: Set common variables
       run: |
-        # We use the prod oauth server for all environments
-        echo "SSH_PROXY_HOST=ovh1.openfoodfacts.org" >> $GITHUB_ENV
         echo "SSH_USERNAME=off" >> $GITHUB_ENV
     - name: Set various variable for staging (net) deployment
       if: matrix.env == 'open-prices-net'
       run: |
+        echo "SSH_PROXY_HOST=ovh1.openfoodfacts.org" >> $GITHUB_ENV
         echo "SSH_HOST=10.1.0.200" >> $GITHUB_ENV
     - name: Set various variable for production deployment
       if: matrix.env == 'open-prices-org'
       run: |
+        echo "SSH_PROXY_HOST=ovh2.openfoodfacts.org" >> $GITHUB_ENV
         echo "SSH_HOST=10.1.0.201" >> $GITHUB_ENV
-
     - name: Copy dist via scp
       uses: appleboy/scp-action@master
       with:
