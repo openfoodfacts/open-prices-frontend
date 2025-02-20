@@ -9,6 +9,7 @@
             "price": 0.67,
             "price_is_discounted": false,
             "price_without_discount": null,
+            "discount_type": null,
             "price_per": null,
             "currency": "EUR",
             "location_osm_id": 1234038503,

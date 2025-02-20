@@ -217,6 +217,7 @@ export default {
         price_per: null,
         price_is_discounted: false,
         price_without_discount: null,
+        discount_type: null,
         currency: null,  // see initNewProductPriceForm
         receipt_quantity: null,
       },
