@@ -774,6 +774,7 @@
 		"WithProduct": "Z produktem",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
+		"WithDiscount": "With a discount",
 		"WithoutProduct": "Bez produktu",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
