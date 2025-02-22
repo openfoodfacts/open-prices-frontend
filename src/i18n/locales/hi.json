@@ -131,7 +131,7 @@
 	},
 	"BarcodeManualInput": {
 		"Barcode": "बारकोड",
-		"Submit": "Submit",
+		"Submit": "दर्ज करें",
 		"Title": "Type a barcode"
 	},
 	"Challenge": {
@@ -223,8 +223,8 @@
 		"Label": "लेबल",
 		"Labels": "लेबल",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
-		"Language": "Languages",
-		"Languages": "Languages",
+		"Language": "भाषा",
+		"Languages": "भाषा",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "अधिक लोड करें",
@@ -811,7 +811,7 @@
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "भाषा",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"PriceValidation": "Price validation",
