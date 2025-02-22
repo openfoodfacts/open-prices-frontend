@@ -240,12 +240,12 @@
 		"Delete": "Verwijder",
 		"DeveloperMode": "Ontwikkelaarsmodus",
 		"Discount": "Korting",
-		"DiscountType": "Discount type",
+		"DiscountType": "Soort korting",
 		"DiscountTypeQuantity": "Hoeveelheid",
-		"DiscountTypeSale": "Sale",
-		"DiscountTypeSeasonal": "Seasonal",
-		"DiscountTypeLoyaltyProgram": "Loyalty program",
-		"DiscountTypeExpiresSoon": "Expires soon",
+		"DiscountTypeSale": "Uitverkoop",
+		"DiscountTypeSeasonal": "Seizoensgebonden",
+		"DiscountTypeLoyaltyProgram": "Loyaliteitsprogramma",
+		"DiscountTypeExpiresSoon": "Vervalt binnenkort",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeOther": "Andere",
 		"Example": "Voorbeeld",
@@ -583,9 +583,9 @@
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"HowToMultiple": "Alle afbeeldingen van prijskaartjes die u selecteert, moeten op dezelfde winkellocatie en op dezelfde dag zijn genomen.",
+		"HowToMultipleShort": "Foto's moeten dezelfde winkellocatie en datum hebben.",
+		"PriceValidationAllow": "Laat de prijzen van mijn foto's door AI extraheren en door de community valideren"
 	},
 	"ProofCard": {
 		"Proof": "Bewijs",
@@ -774,6 +774,7 @@
 		"WithProduct": "Met een product",
 		"WithProductBarcode": "Met een productstreepjescode",
 		"WithProductCategory": "Met een productcategorie",
+		"WithDiscount": "With a discount",
 		"WithoutProduct": "Zonder product",
 		"WithBarcode": "Met een streepjescode",
 		"WithCategory": "Met een categorie",
