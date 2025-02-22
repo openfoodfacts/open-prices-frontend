@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.122.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.121.0...v1.122.0) (2025-02-22)
+
+
+### Features
+
+* **Stats:** display price count per product source (OxF flavors) ([#1389](https://github.com/openfoodfacts/open-prices-frontend/issues/1389)) ([af3ddfa](https://github.com/openfoodfacts/open-prices-frontend/commit/af3ddfa4a3880b649530d6ff3112d69e20bc23fb))
+
+
+### Bug Fixes
+
+* **Challenge:** fix timeline wording for first day. ref [#1384](https://github.com/openfoodfacts/open-prices-frontend/issues/1384) ([f501e21](https://github.com/openfoodfacts/open-prices-frontend/commit/f501e210391c141b26f17426bf70cda31c863f7d))
+* **Challenge:** improve start & end date queries. ref [#1384](https://github.com/openfoodfacts/open-prices-frontend/issues/1384) ([d98734c](https://github.com/openfoodfacts/open-prices-frontend/commit/d98734cbbf1c278dcd68d9b227913a95865de4d4))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1383](https://github.com/openfoodfacts/open-prices-frontend/issues/1383)) ([98fcd43](https://github.com/openfoodfacts/open-prices-frontend/commit/98fcd43b4e5dd03dec82c88b3a5ccafbdedadc35))
+
 ## [1.121.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.120.0...v1.121.0) (2025-02-20)
 
 
