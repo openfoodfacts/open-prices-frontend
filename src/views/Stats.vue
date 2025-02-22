@@ -28,10 +28,24 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" to="/products" />
+      <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" to="/products" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_count" :subtitle="$t('Stats.Total')" />
+      <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" />
+    </v-col>
+  </v-row>
+  <v-row>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_source_off_with_price_count.toString() + ' / ' + stats.product_source_off_count.toString()" :subtitle="$t('Common.Food')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_source_obf_with_price_count.toString() + ' / ' + stats.product_source_obf_count.toString()" :subtitle="$t('Common.Beauty')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_source_opf_with_price_count.toString() + ' / ' + stats.product_source_opf_count.toString()" :subtitle="$t('Common.Products')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.product_source_opff_with_price_count.toString() + ' / ' + stats.product_source_opff_count.toString()" :subtitle="$t('Common.PetFood')" />
     </v-col>
   </v-row>
 
@@ -140,7 +154,15 @@ export default {
         price_type_category_tag_count: 0,
         price_currency_count: 0,
         product_count: 0,
+        product_source_off_count: 0,
+        product_source_obf_count: 0,
+        product_source_opf_count: 0,
+        product_source_opff_count: 0,
         product_with_price_count: 0,
+        product_source_off_with_price_count: 0,
+        product_source_obf_with_price_count: 0,
+        product_source_opf_with_price_count: 0,
+        product_source_opff_with_price_count: 0,
         location_count: 0,
         location_with_price_count: 0,
         location_type_osm_count: 0,
