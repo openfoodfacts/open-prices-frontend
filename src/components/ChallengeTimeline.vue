@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     nbDays() {
-      return Math.round((new Date(this.challenge.endDate) - new Date(this.challenge.startDate)) / (1000 * 60 * 60 * 24))
+      return Math.round((new Date(this.challenge.endDate) - new Date(this.challenge.startDate)) / (1000 * 60 * 60 * 24)) + 1
     },
     todayIndex() {
       let today = new Date()
@@ -47,10 +47,11 @@ export default {
     },
     daysLeftText() {
       const daysLeft = this.nbDays - this.todayIndex
-      if (daysLeft < 0) return "Challenge over"
-      if (daysLeft === 0) return "Last day"
-      if (daysLeft >= this.nbDays) return "Not started"
-      return `${daysLeft} day${daysLeft > 1 ? 's' : ''} left`
+      if (daysLeft > this.nbDays) return "Not started"
+      if (daysLeft === this.nbDays) return "First day"
+      if (daysLeft === 1) return "Last day"
+      if (daysLeft <= 0) return "Challenge over"
+      return `${daysLeft - 1} day${daysLeft - 1 > 1 ? 's' : ''} left`
     },
     progress() {
       return Math.min(100, this.todayIndex * 100 / this.nbDays)
