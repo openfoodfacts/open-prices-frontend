@@ -142,6 +142,26 @@ function currentStartOfDay() {
 
 /**
  * input: '2023-12-25'
+ * output: '2023-12-25T00:00:00.000Z'
+ */
+function dateStartOfDay(dateString) {
+  let date = new Date(dateString)
+  date.setUTCHours(0, 0, 0, 0)
+  return date.toISOString()
+}
+
+/**
+ * input: '2023-12-25'
+ * output: '2023-12-25T23:59:59.999Z'
+ */
+function dateEndOfDay(dateString) {
+  let date = new Date(dateString)
+  date.setUTCHours(23, 59, 59, 999)
+  return date.toISOString()
+}
+
+/**
+ * input: '2023-12-25'
  * output: '12/25/2023'
  */
 function prettyDate(dateString) {
@@ -459,6 +479,8 @@ export default {
   currentDate,
   currentDateTime,
   currentStartOfDay,
+  dateStartOfDay,
+  dateEndOfDay,
   prettyDate,
   prettyDateTime,
   offDateTime,

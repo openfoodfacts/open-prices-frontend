@@ -36,9 +36,10 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api.js'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import api from '../services/api.js'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -72,6 +73,15 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    startDateMidnight() {
+      return utils.dateStartOfDay(this.challenge.startDate)
+    },
+    endDateMidnight() {
+      return utils.dateEndOfDay(this.challenge.endDate)
+    },
+    defaultParams() {
+      return { created__gte: this.startDateMidnight, created__lte: this.endDateMidnight }
+    }
   },
   mounted() {
     this.getStats()
@@ -80,30 +90,30 @@ export default {
   methods: {
     getStats() {
       this.loading = true
-      api.getPriceStats({ product__categories_tags__contains: this.challenge.categories[0], created__gte: this.challenge.startDate, created__lte: this.challenge.endDate})
+      api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0] })
       .then((data) => {
         this.challenge.numberOfContributions = data.price__count
         this.loading = false
       })
 
-      api.getProofs({ size: 1, created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
+      api.getProofs({ ...this.defaultParams, size: 1 })
       .then((data) => {
         this.challenge.numberOfProofs = data.total
       })
 
       if (this.username) {
-        api.getPriceStats({ product__categories_tags__contains: this.challenge.categories[0], created__gte: this.challenge.startDate, created__lte: this.challenge.endDate, owner: this.username})
+        api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0], owner: this.username })
         .then((data) => {
           this.challenge.userContributions = data.price__count
         })
-        api.getProofs({ size: 1, created__gte: this.challenge.startDate, created__lte: this.challenge.endDate, owner: this.username })
+        api.getProofs({ ...this.defaultParams, owner: this.username, size: 1 })
         .then((data) => {
           this.challenge.userProofContributions = data.total
         })
       }
     },
     getLatestPrices() {
-      api.getPrices({ size: 10, product__categories_tags__contains: this.challenge.categories[0], created__gte: this.challenge.startDate, created__lte: this.challenge.endDate })
+      api.getPrices({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0], size: 10 })
       .then((data) => {
         this.challenge.latestContributions = data.items
       })
