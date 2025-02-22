@@ -774,6 +774,7 @@
 		"WithProduct": "Tuotteen kanssa",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
+		"WithDiscount": "With a discount",
 		"WithoutProduct": "Ilman tuotetta",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
