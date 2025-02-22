@@ -89,7 +89,7 @@
 			"TakePicture": "Ota kuva",
 			"Gallery": "Laitteen galleria",
 			"SelectFromGallery": "Valitse galleriastasi",
-			"RecentProof": "Viimeaikainen todiste",
+			"RecentProof": "Tuore todiste",
 			"SelectRecentProof": "Valitse viimeaikainen todistus"
 		},
 		"ProductInfo": {
@@ -240,6 +240,14 @@
 		"Delete": "Poista",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Alennus",
+		"DiscountType": "Discount type",
+		"DiscountTypeQuantity": "Määrä",
+		"DiscountTypeSale": "Sale",
+		"DiscountTypeSeasonal": "Seasonal",
+		"DiscountTypeLoyaltyProgram": "Loyalty program",
+		"DiscountTypeExpiresSoon": "Expires soon",
+		"DiscountTypePickItYourself": "Pick it yourself",
+		"DiscountTypeOther": "Muu",
 		"Example": "Esimerkki",
 		"Examples": "Esimerkit",
 		"ExampleWithColon": "Esimerkki:",
