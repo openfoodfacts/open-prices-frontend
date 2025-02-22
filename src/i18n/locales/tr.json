@@ -774,6 +774,7 @@
 		"WithProduct": "Bir ürün ile",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
+		"WithDiscount": "With a discount",
 		"WithoutProduct": "Ürün olmadan",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
