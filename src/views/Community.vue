@@ -6,7 +6,7 @@
   <v-row>
     <v-col>
       <p><a :href="APP_GITHUB_BACKEND_URL" target="_blank">Github</a></p>
-      <p><a :href="APP_HUGGING_FACE_URL" target="_blank">Open Food Facts Slack (#prices)</a></p>
+      <p><a :href="OFF_SLACK_URL" target="_blank">Open Food Facts Slack (#prices)</a></p>
     </v-col>
   </v-row>
 
@@ -20,7 +20,7 @@
     <v-col>
       <p><a :href="APP_API_URL" target="_blank">API</a></p>
       <p><a :href="APP_HUGGING_FACE_URL" target="_blank">Hugging Face</a></p>
-      <p><a :href="APP_HUGGING_FACE_URL" target="_blank">data.gouv</a></p>
+      <p><a :href="APP_DATA_GOUV_URL" target="_blank">data.gouv</a></p>
     </v-col>
   </v-row>
 
