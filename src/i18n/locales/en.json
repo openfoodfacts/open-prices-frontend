@@ -619,6 +619,16 @@
 		"Save": "Save",
 		"Success": "Proof edited!"
 	},
+	"ReceiptAssistant": {
+		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"WaitForExtraction": "Automatically extracting items from the receipt, please wait...",
+		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
+		"UploadAllValidPrices": "Upload all valid prices ({nbPrices})",
+		"ReceiptItemsCheck": "Receipt items, check and fix",
+		"PriceMightAlreadyExist": "Price might already exist in proof",
+		"MissingBarcodeOrCategory": "Missing barcode or category",
+		"PriceReadyToBeAdded": "Price ready to be added"
+	},
 	"Reuses": {
 		"AlertNew": "Your reuse is missing? Let us know {url}!",
 		"Here": "here"
@@ -731,6 +741,9 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
+		},
+		"ReceiptAssistant": {
+			"Title": "Receipt Assistant"
 		},
 		"Challenge": {
 			"Title": "Challenge"
