@@ -87,6 +87,7 @@ export default {
     {key: 'LOYALTY_PROGRAM', value: 'DiscountTypeLoyaltyProgram'},
     {key: 'EXPIRES_SOON', value: 'DiscountTypeExpiresSoon'},
     {key: 'PICK_IT_YOURSELF', value: 'DiscountTypePickItYourself'},
+    {key: 'SECOND_HAND', value: 'DiscountTypeSecondHand'},
     {key: 'OTHER', value: 'DiscountTypeOther'},
   ],
   PRICE_TAG_STATUS_WITH_PRICE: 1,
