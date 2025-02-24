@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.122.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.0...v1.122.1) (2025-02-24)
+
+
+### Bug Fixes
+
+* **Community:** fix URLs to Slack & data.gouv. ref [#1064](https://github.com/openfoodfacts/open-prices-frontend/issues/1064) ([3b87310](https://github.com/openfoodfacts/open-prices-frontend/commit/3b87310b942e2fbb9fcbad22743435f039daa7d9))
+* **Stats:** switch Product stats order. ref [#1389](https://github.com/openfoodfacts/open-prices-frontend/issues/1389) ([6efb840](https://github.com/openfoodfacts/open-prices-frontend/commit/6efb84052963dca7f9ebc89db78d4d3b46aa1a9f))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1390](https://github.com/openfoodfacts/open-prices-frontend/issues/1390)) ([933fc43](https://github.com/openfoodfacts/open-prices-frontend/commit/933fc439ac56eef1aed804a9340566075297955c))
+* **Prices:** Add new discount_type 'Second hand'. ref [#1386](https://github.com/openfoodfacts/open-prices-frontend/issues/1386) ([b13cf06](https://github.com/openfoodfacts/open-prices-frontend/commit/b13cf06e8047dc2e0ded45578bd2e32cfd2bd48a))
+* **Stats:** Add the new price with_discount count ([#1392](https://github.com/openfoodfacts/open-prices-frontend/issues/1392)) ([a5914e6](https://github.com/openfoodfacts/open-prices-frontend/commit/a5914e6f8a06001c65fbdd7c6960e3cd428a7e96))
+
 ## [1.122.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.121.0...v1.122.0) (2025-02-22)
 
 
