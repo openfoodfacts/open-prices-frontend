@@ -4,6 +4,7 @@
       {{ getDateTimeFormatted(price.created) }} ({{ getRelativeDateTimeFormatted(price.created) }})
       <span>- </span>
       <a :href="getUserDetailUrl">{{ price.owner }}</a>
+      <span>({{ price.source }})</span>
     </v-card-text>
   </v-card>
 </template>
