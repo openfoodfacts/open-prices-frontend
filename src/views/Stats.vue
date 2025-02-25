@@ -17,6 +17,14 @@
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_with_discount_count" :subtitle="$t('Stats.WithDiscount')" />
     </v-col>
+  </v-row>
+  <v-row>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_type_group_community_count" :subtitle="$t('Common.Community')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_type_group_consumption_count" :subtitle="$t('Common.Consumption')" />
+    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_currency_count" :subtitle="$t('Common.Currencies')" />
     </v-col>
@@ -156,6 +164,8 @@ export default {
         price_type_product_code_count: 0,
         price_type_category_tag_count: 0,
         price_with_discount_count: 0,
+        price_type_group_community_count: 0,
+        price_type_group_consumption_count: 0,
         price_currency_count: 0,
         product_count: 0,
         product_source_off_count: 0,
