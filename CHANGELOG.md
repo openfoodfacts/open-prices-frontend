@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.122.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.1...v1.122.2) (2025-02-25)
+
+
+### Technical
+
+* **History:** show the price & proof source info ([#1395](https://github.com/openfoodfacts/open-prices-frontend/issues/1395)) ([49b6295](https://github.com/openfoodfacts/open-prices-frontend/commit/49b6295f3eaa662fda8a8694d7ce7d2760a3356f))
+* **l10n:** New Crowdin translations to review and merge ([#1398](https://github.com/openfoodfacts/open-prices-frontend/issues/1398)) ([46c79c0](https://github.com/openfoodfacts/open-prices-frontend/commit/46c79c083c8b2d6a561e05dcd3c69dd5a469f6cd))
+* **Stats:** new community & consumption price counts ([#1397](https://github.com/openfoodfacts/open-prices-frontend/issues/1397)) ([a7b092d](https://github.com/openfoodfacts/open-prices-frontend/commit/a7b092d90966a25366230ff6605aa7a6b5ed2a97))
+
 ## [1.122.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.0...v1.122.1) (2025-02-24)
 
 
