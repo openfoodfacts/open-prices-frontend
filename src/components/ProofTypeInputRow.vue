@@ -27,6 +27,10 @@ export default {
       type: Boolean,
       default: false
     },
+    hideProofTypePriceTagChoice: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
@@ -37,6 +41,9 @@ export default {
     proofTypeList() {
       if (this.hideProofTypeReceiptChoice) {
         return constants.PROOF_TYPE_LIST.filter(pt => pt.key !== constants.PROOF_TYPE_RECEIPT)
+      }
+      if (this.hideProofTypePriceTagChoice) {
+        return constants.PROOF_TYPE_LIST.filter(pt => pt.key !== constants.PROOF_TYPE_PRICE_TAG)
       }
       return constants.PROOF_TYPE_LIST
     }
