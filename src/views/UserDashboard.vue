@@ -5,18 +5,45 @@
     </v-col>
   </v-row>
 
-  <v-row>
-    <v-col v-if="displayTodayStats" cols="6" sm="4" md="3" lg="2">
+  <v-tabs v-if="user" v-model="currentDisplay">
+    <v-tab v-for="item in displayItems" :key="item.key" :value="item.key">
+      <v-icon start>
+        {{ item.icon }}
+      </v-icon>
+      {{ $t('Common.' + item.value) }}
+    </v-tab>
+  </v-tabs>
+
+  <v-tabs-window v-if="user" v-model="currentDisplay" disabled>
+    <v-tabs-window-item value="consumption">
+      <v-row>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="user.price_type_group_consumption_count" :subtitle="$t('Common.ConsumptionPrices')" to="/dashboard/prices" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="user.proof_type_group_consumption_count" :subtitle="$t('Common.ConsumptionProofs')" to="/dashboard/proofs" />
+        </v-col>
+      </v-row>
+    </v-tabs-window-item>
+
+    <v-tabs-window-item value="community">
+      <v-row>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="user.price_type_group_community_count" :subtitle="$t('Common.CommunityPrices')" to="/dashboard/prices" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="user.proof_type_group_community_count" :subtitle="$t('Common.CommunityProofs')" to="/dashboard/proofs" />
+        </v-col>
+      </v-row>
+    </v-tabs-window-item>
+  </v-tabs-window>
+
+  <v-row v-if="displayTodayStats">
+    <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="userTodayPriceCount" :subtitle="$t('Common.PricesToday')" />
     </v-col>
-    <v-col v-if="displayTodayStats" cols="6" sm="4" md="3" lg="2">
+    <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="userTodayProofCount" :subtitle="$t('Common.ProofsToday')" />
-    </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="userPriceCount" :subtitle="$t('Common.Prices')" to="/dashboard/prices" />
-    </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="userProofCount" :subtitle="$t('Common.Proofs')" to="/dashboard/proofs" />
     </v-col>
   </v-row>
 
@@ -77,6 +104,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
@@ -100,6 +128,9 @@ export default {
       multipleSuccessMessage: false,
       proofSingleSuccessMessage: false,
       settingsSuccessMessage: false,
+      // config
+      currentDisplay: constants.USER_DASHBOARD_DISPLAY_LIST[0].key,
+      displayItems: constants.USER_DASHBOARD_DISPLAY_LIST,
     }
   },
   computed: {
