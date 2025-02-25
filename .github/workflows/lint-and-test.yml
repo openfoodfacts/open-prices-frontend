@@ -1,4 +1,4 @@
-name: Linting & e2e tests
+name: 🧪 Linting & End to End tests
 
 on: push
 
@@ -16,7 +16,7 @@ jobs:
           runTests: false
       - name: Lint with ESLint
         run: yarn lint
-      - name: Run e2e tests
+      - name: Run End to End tests
         uses: cypress-io/github-action@v6
         with:
           # we have already installed all dependencies above
