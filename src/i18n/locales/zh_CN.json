@@ -31,7 +31,7 @@
 		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
 		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
 		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
-		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
+		"WhyNoScrapingAnswer1": "出于法律和技术原因，我们不认可从零售商网站抓取价格是向 {op_name}做出贡献的有效方式。我们希望确保收集的价格是准确且最新的，而从贡献者那里获取抓取的价格无法做到这一点。",
 		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
 	},
 	"AddPriceHome": {
@@ -154,7 +154,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "{challenge_title} 由您添加的价格",
 		"MostRecentContributions": "Most recent contributions"
 	},
 	"Common": {
@@ -270,7 +270,7 @@
 		"Fix": "Fix",
 		"FAQ": "常见问题",
 		"FrequentlyAskedQuestions": "常见问题",
-		"Help": "Help",
+		"Help": "帮助",
 		"History": "历史记录",
 		"Image": "图片",
 		"ImageSelect": "Select an image",
