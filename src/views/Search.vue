@@ -96,12 +96,12 @@ export default {
     },
     search() {
       this.$refs.searchInput.blur()
-      this.productList = []
-      this.productTotal = null
       this.$router.push({ query: { ...this.$route.query, [constants.QUERY_PARAM]: this.productSearchForm.q } })
     },
     getProducts() {
       if (this.productSearchForm.q) {
+        this.productList = []
+        this.productTotal = null
         this.loading = true
         return api.getProducts({ code: this.productSearchForm.q })
           .then((data) => {
