@@ -70,6 +70,7 @@ export default {
   FILTER_PARAM: 'filter',
   ORDER_PARAM: 'order',
   DISPLAY_PARAM: 'display',
+  TAB_PARAM: 'tab',
   PRICE_ICON: PRICE_ICON,
   PRICE_TYPE_PRODUCT: PRICE_TYPE_PRODUCT,
   PRICE_TYPE_PRODUCT_ICON: PRICE_TYPE_PRODUCT_ICON,
@@ -201,6 +202,11 @@ export default {
     { key: 'display', value: 'Display', icon: 'mdi-eye-outline' },
     { key: 'edit', value: 'Edit', icon: 'mdi-pencil' },
   ],
+  USER_DASHBOARD_TAB_LIST: [
+    { key: 'consumption', value: 'MyConsumption', icon: 'mdi-cart-outline' },
+    { key: 'community', value: 'OtherContributions', icon: 'mdi-account-group' },
+  ],
+  // date regex
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
   DATE_YEAR_MONTH_REGEX_MATCH: /(\d{4})-(\d{2})/,
   DATE_YEAR_REGEX_MATCH: /(\d{4})/,
