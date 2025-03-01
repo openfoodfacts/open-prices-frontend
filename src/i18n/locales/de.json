@@ -285,7 +285,7 @@
 		"LocationNotFound": "Ort nicht gefunden",
 		"Map": "Karte",
 		"Miscellaneous": "Verschiedenes",
-		"MobileApp": "Mobile app",
+		"MobileApp": "App für mobile Geräte",
 		"MyDashboard": "Meine Übersicht",
 		"MyPrices": "Mein Preise",
 		"MyProofs": "Meine Belege",
@@ -783,7 +783,7 @@
 		"WithoutProduct": "Ohne Produkt",
 		"WithBarcode": "Mit einem Strichcode",
 		"WithCategory": "Mit einer Kategorie",
-		"PricesProofsPerSource": "Prices and proofs per source",
+		"PricesProofsPerSource": "Preise und Nachweise je Quelle",
 		"LastUpdated": "Zuletzt aktualisiert am {date}"
 	},
 	"UserDashboard": {
