@@ -284,6 +284,8 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Mappa",
+		"Miscellaneous": "Varie",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "Dashboard",
 		"MyPrices": "I miei prezzi",
 		"MyProofs": "Le mie prove",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "Data di inserimento",
 		"OrderProofDateDESC": "Data di prova",
 		"OrderUserCountDESC": "Numero di utenti",
+		"Other": "Altro",
 		"PersonalInfo": "Informazioni personali",
 		"Physical": "Physical",
 		"Picture": "Foto",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "Senza prodotto",
 		"WithBarcode": "Con un codice a barre",
 		"WithCategory": "Con una categoria",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Ultimo aggiornamento: {date}"
 	},
 	"UserDashboard": {
