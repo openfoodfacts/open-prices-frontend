@@ -284,6 +284,8 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "地图",
+		"Miscellaneous": "其他",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "我的价格",
 		"MyProofs": "我的样张",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "添加日期",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
+		"Other": "其他",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
 		"Picture": "图片",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "无产品",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
