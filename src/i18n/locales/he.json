@@ -284,6 +284,8 @@
 		"LocationCount": "{count} מקומות | מקום | {count} מקומות",
 		"LocationNotFound": "המקום לא נמצא",
 		"Map": "מפה",
+		"Miscellaneous": "שונות",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "לוח המחוונים שלי",
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "תאריך ההוספה",
 		"OrderProofDateDESC": "תאריך ההוכחה",
 		"OrderUserCountDESC": "כמות משתמשים",
+		"Other": "אחר",
 		"PersonalInfo": "פרטים אישיים",
 		"Physical": "פיזי",
 		"Picture": "תמונה",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "בלי מוצר",
 		"WithBarcode": "עם ברקוד",
 		"WithCategory": "עם קטגוריה",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "עדכון אחרון ב־{date}"
 	},
 	"UserDashboard": {
