@@ -284,6 +284,8 @@
 		"LocationCount": "{count} lokasi | {count} lokasi | {count} lokasi",
 		"LocationNotFound": "Location not found",
 		"Map": "Peta",
+		"Miscellaneous": "Lain-lain",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "Dasbor saya",
 		"MyPrices": "Harga saya",
 		"MyProofs": "Bukti saya",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "Tanggal penambahan",
 		"OrderProofDateDESC": "Tanggal bukti",
 		"OrderUserCountDESC": "Jumlah user",
+		"Other": "Lainnya",
 		"PersonalInfo": "Informasi pribadi",
 		"Physical": "Fisik",
 		"Picture": "Gambar",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "Tanpa produk",
 		"WithBarcode": "Dengan kode batang",
 		"WithCategory": "Dengan kategori",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Terakhir diperbarui pada {date}"
 	},
 	"UserDashboard": {
