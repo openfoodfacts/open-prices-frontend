@@ -285,7 +285,7 @@
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
 		"Miscellaneous": "Miscellaneous",
-		"MobileApp": "Mobile app",
+		"MobileApp": "மொபைல் பயன்பாடு",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "எனது விலைகள்",
 		"MyProofs": "My proofs",
@@ -783,7 +783,7 @@
 		"WithoutProduct": "ஒரு தயாரிப்பு இல்லாமல்",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
-		"PricesProofsPerSource": "Prices and proofs per source",
+		"PricesProofsPerSource": "மூலத்திற்கான விலைகள் மற்றும் சான்றுகள்",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
