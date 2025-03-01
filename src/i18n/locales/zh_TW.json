@@ -284,6 +284,8 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "地圖",
+		"Miscellaneous": "Miscellaneous",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "我的儀表板",
 		"MyPrices": "我的價格",
 		"MyProofs": "我的證明",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "添加日期",
 		"OrderProofDateDESC": "證明日期",
 		"OrderUserCountDESC": "用戶總數",
+		"Other": "其它",
 		"PersonalInfo": "個人資訊",
 		"Physical": "實體的",
 		"Picture": "圖片",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "沒有產品",
 		"WithBarcode": "有條碼",
 		"WithCategory": "有類別",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "最後更新於 {date}"
 	},
 	"UserDashboard": {
