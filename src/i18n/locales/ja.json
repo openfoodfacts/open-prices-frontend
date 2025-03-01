@@ -284,6 +284,8 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "場所が見つかりません",
 		"Map": "地図",
+		"Miscellaneous": "その他",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "私の価格",
 		"MyProofs": "自分の証拠",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "追加日",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
+		"Other": "その他",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
 		"Picture": "画像",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "製品なし",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
