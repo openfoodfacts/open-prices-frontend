@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.122.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.2...v1.122.3) (2025-03-01)
+
+
+### Bug Fixes
+
+* **Search:** avoid product disappearing when clicking on the search icon ([6ca59f5](https://github.com/openfoodfacts/open-prices-frontend/commit/6ca59f5b4098c40c8afab852b4ecb2f6a014bc40))
+* **Search:** don't run a search if the field is empty ([9a00798](https://github.com/openfoodfacts/open-prices-frontend/commit/9a0079823001e250e8e656ee5d316da4e1fce2b4))
+
+
+### Technical
+
+* **Stats:** new Misc section. Show prices & proofs count per source ([#1403](https://github.com/openfoodfacts/open-prices-frontend/issues/1403)) ([b19a0fd](https://github.com/openfoodfacts/open-prices-frontend/commit/b19a0fd4d5c43043e9f8703a066f84bb9ef64ddc))
+
 ## [1.122.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.1...v1.122.2) (2025-02-25)
 
 
