@@ -284,6 +284,8 @@
 		"LocationCount": "{count} локації | {count} розташування | {count} локації",
 		"LocationNotFound": "Місце не знайдено",
 		"Map": "Мапа",
+		"Miscellaneous": "Різне",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "Моя панель",
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "Дата додавання",
 		"OrderProofDateDESC": "Дата підтвердження",
 		"OrderUserCountDESC": "Кількість користувачів",
+		"Other": "Інше",
 		"PersonalInfo": "Особиста інформація",
 		"Physical": "Фізичний",
 		"Picture": "Зображення",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "Без продукту",
 		"WithBarcode": "Зі штрих-кодом",
 		"WithCategory": "З категорією",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Оновлено {date}"
 	},
 	"UserDashboard": {
