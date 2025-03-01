@@ -285,7 +285,7 @@
 		"LocationNotFound": "Місце не знайдено",
 		"Map": "Мапа",
 		"Miscellaneous": "Різне",
-		"MobileApp": "Mobile app",
+		"MobileApp": "Мобільний додаток",
 		"MyDashboard": "Моя панель",
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
@@ -783,7 +783,7 @@
 		"WithoutProduct": "Без продукту",
 		"WithBarcode": "Зі штрих-кодом",
 		"WithCategory": "З категорією",
-		"PricesProofsPerSource": "Prices and proofs per source",
+		"PricesProofsPerSource": "Ціни та докази за джерелом",
 		"LastUpdated": "Оновлено {date}"
 	},
 	"UserDashboard": {
