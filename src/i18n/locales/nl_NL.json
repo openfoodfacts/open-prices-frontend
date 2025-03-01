@@ -284,6 +284,8 @@
 		"LocationCount": "{count} locaties | {count} locatie | {count} locaties",
 		"LocationNotFound": "Locatie niet gevonden",
 		"Map": "Kaart",
+		"Miscellaneous": "Diversen",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "Mijn dashboard",
 		"MyPrices": "Mijn prijzen",
 		"MyProofs": "Mijn bewijzen",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "Datum van toevoeging",
 		"OrderProofDateDESC": "Bewijsdatum",
 		"OrderUserCountDESC": "Gebruikersaantal",
+		"Other": "Andere",
 		"PersonalInfo": "Persoonlijke informatie",
 		"Physical": "Fysiek",
 		"Picture": "Afbeelding",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "Zonder product",
 		"WithBarcode": "Met een streepjescode",
 		"WithCategory": "Met een categorie",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Laatst bijgewerkt op {date}"
 	},
 	"UserDashboard": {
