@@ -147,6 +147,9 @@
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_currency_count" :subtitle="$t('Common.Currencies')" />
     </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_year_count" :subtitle="$t('Common.Years')" />
+    </v-col>
   </v-row>
 
   <p class="mt-2 mb-1">
@@ -207,6 +210,7 @@ export default {
         price_source_other_count: 0,
         price_location_country_count: 0,
         price_currency_count: 0,
+        price_year_count: 0,
         product_count: 0,
         product_source_off_count: 0,
         product_source_obf_count: 0,
