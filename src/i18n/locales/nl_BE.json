@@ -285,7 +285,7 @@
 		"LocationNotFound": "Locatie niet gevonden",
 		"Map": "Kaart",
 		"Miscellaneous": "Diversen",
-		"MobileApp": "Mobile app",
+		"MobileApp": "Mobiele app",
 		"MyDashboard": "Mijn dashboard",
 		"MyPrices": "Mijn prijzen",
 		"MyProofs": "Mijn bewijzen",
@@ -431,7 +431,7 @@
 		},
 		"PricesAlreadyAdded": "Prijzen al toegevoegd",
 		"PricesMarkedAsError": "Prijzen gemarkeerd als fout",
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} prijs/prijzen worden toegevoegd aan een bestaand bewijs op {date} bij {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
 		"WaitForUpload": "Even geduld a. u. b. voor het uploaden",
 		"GoToDashboard": "Ga naar jouw dashboard",
@@ -783,7 +783,7 @@
 		"WithoutProduct": "Zonder product",
 		"WithBarcode": "Met een streepjescode",
 		"WithCategory": "Met een categorie",
-		"PricesProofsPerSource": "Prices and proofs per source",
+		"PricesProofsPerSource": "Prijzen en bewijzen per bron",
 		"LastUpdated": "Laatst bijgewerkt op {date}"
 	},
 	"UserDashboard": {
