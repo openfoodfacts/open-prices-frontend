@@ -142,6 +142,9 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_location_country_count" :subtitle="$t('Common.Countries')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_currency_count" :subtitle="$t('Common.Currencies')" />
     </v-col>
   </v-row>
@@ -202,6 +205,7 @@ export default {
         price_source_mobile_count: 0,
         price_source_api_count: 0,
         price_source_other_count: 0,
+        price_location_country_count: 0,
         price_currency_count: 0,
         product_count: 0,
         product_source_off_count: 0,
