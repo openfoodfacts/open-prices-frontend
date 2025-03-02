@@ -135,8 +135,8 @@
 		"Title": "Taper un code-barres"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "Défi communautaire",
+		"Subtitle": "Rejoignez d’autres passionnés des prix des denrées alimentaires pour recueillir des informations sur  {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Prendre des photos des étiquettes de prix dans les magasins",
 			"line1": "Les photos peuvent inclure une ou plusieurs étiquettes de prix. Les codes-barres doivent être lisibles. Par exemple :",
@@ -144,18 +144,18 @@
 			"AddPictures": "Ajouter des photos"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
+			"Title": "Valider les prix détectés avec l'IA",
+			"line1": "Les étiquettes de prix sont détectées automatiquement, mais les robots ont toujours besoin de votre aide pour les valider.",
+			"line2": "Visitez la page de validation des prix en utilisant le bouton ci-dessous, modifiez le code-barres et le prix si besoin, et validez !",
+			"line3": "Si vous avez des difficultés à lire l’étiquette, marquez-la comme illisible.",
 			"line4": "Il s'agit d'un effort collaboratif, même si vous n'avez pas envoyé de photos, vous pouvez toujours aider les autres en validant."
 		},
-		"PicturesAddedByYou": "Pictures added by you",
-		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
-		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"PicturesAddedByYou": "Images ajoutées par vous",
+		"Prices": "{challenge_title} prix",
+		"PricesAdded": "{challenge_title} prix ajoutés",
+		"PricesByYou": "{challenge_title} prix par vous",
+		"PricesAddedByYou": "{challenge_title} prix ajoutés par vous",
+		"MostRecentContributions": "Contributions les plus récentes"
 	},
 	"Common": {
 		"About": "À propos",
@@ -191,10 +191,10 @@
 		"Category": "Catégorie",
 		"Categories": "Catégories",
 		"CategoryTotal": "{count} catégories | {count} catégorie | {count} catégories",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
+		"Challenge": "Défi",
+		"Challenges": "Défis",
+		"ChallengeCurrent": "Défi actuel",
+		"ChallengeOngoing": "Défi en cours",
 		"Chart": "Graphique",
 		"Clear": "Effacer",
 		"Contributors": "Contributeurs",
@@ -203,13 +203,13 @@
 		"Confirm": "Confirmer",
 		"Country": "Pays",
 		"Countries": "Pays",
-		"CountryCount": "{count} countries | {count} country | {count} countries",
-		"Crop": "Crop",
-		"Cropped": "Cropped",
+		"CountryCount": "{count} pays | {count} pays | {count} pays",
+		"Crop": "Recadrer",
+		"Cropped": "Recadré",
 		"Currency": "Devise",
-		"Currencies": "Currencies",
+		"Currencies": "Monnaies",
 		"CurrencyMissing": "Devise manquante",
-		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"CurrencyCount": "{count} monnaies | {count} monnaies | {count} monnaies",
 		"Dashboard": "Tableau de bord",
 		"Display": "Afficher",
 		"DisplayList": "Liste",
@@ -220,7 +220,7 @@
 		"Done": "Fait",
 		"Error": "Erreur",
 		"Experiments": "Expérimentations",
-		"Join": "Join",
+		"Join": "Rejoindre",
 		"Label": "Label",
 		"Labels": "Labels",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
@@ -241,14 +241,14 @@
 		"Delete": "Supprimer",
 		"DeveloperMode": "Mode développeur",
 		"Discount": "Promo",
-		"DiscountType": "Discount type",
+		"DiscountType": "Type de réduction",
 		"DiscountTypeQuantity": "Quantité",
-		"DiscountTypeSale": "Sale",
-		"DiscountTypeSeasonal": "Seasonal",
-		"DiscountTypeLoyaltyProgram": "Loyalty program",
-		"DiscountTypeExpiresSoon": "Expires soon",
-		"DiscountTypePickItYourself": "Pick it yourself",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSale": "Offres",
+		"DiscountTypeSeasonal": "Saisonnier",
+		"DiscountTypeLoyaltyProgram": "Programme de fidélité",
+		"DiscountTypeExpiresSoon": "Se termine bientôt",
+		"DiscountTypePickItYourself": "Choisissez vous-même",
+		"DiscountTypeSecondHand": "Occasion",
 		"DiscountTypeOther": "Autre",
 		"Example": "Exemple",
 		"Examples": "Exemples",
@@ -319,7 +319,7 @@
 		"PictureFull": "Photo en taille réelle",
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Photos ajoutées",
-		"PicturesAddedByYou": "Pictures added by you",
+		"PicturesAddedByYou": "Images ajoutées par vous",
 		"PRICE_TAG": "Étiquette de prix",
 		"PriceCount": "{count} prix | {count} prix | {count} prix",
 		"PriceAddedCount": "{count} prix ajoutés | {count} prix ajouté | {count} prix ajoutés",
@@ -737,10 +737,10 @@
 			"Title": "Assistant de validation de prix"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "Défi"
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "Défi communautaire"
 		},
 		"ValidatePrices": {
 			"Title": "Valider des prix"
