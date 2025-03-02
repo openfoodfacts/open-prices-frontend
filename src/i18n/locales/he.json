@@ -285,7 +285,7 @@
 		"LocationNotFound": "המקום לא נמצא",
 		"Map": "מפה",
 		"Miscellaneous": "שונות",
-		"MobileApp": "Mobile app",
+		"MobileApp": "יישומון לניידים",
 		"MyDashboard": "לוח המחוונים שלי",
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
@@ -783,7 +783,7 @@
 		"WithoutProduct": "בלי מוצר",
 		"WithBarcode": "עם ברקוד",
 		"WithCategory": "עם קטגוריה",
-		"PricesProofsPerSource": "Prices and proofs per source",
+		"PricesProofsPerSource": "מחירים והוכחות לפי מקור",
 		"LastUpdated": "עדכון אחרון ב־{date}"
 	},
 	"UserDashboard": {
