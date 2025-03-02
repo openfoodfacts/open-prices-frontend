@@ -55,7 +55,7 @@
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.47",
-    "start-server-and-test": "^2.0.8",
+    "start-server-and-test": "^2.0.10",
     "vite": "^5.4.10",
     "vue-eslint-parser": "^9.4.3"
   },
