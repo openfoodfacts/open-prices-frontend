@@ -284,6 +284,8 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Kartta",
+		"Miscellaneous": "Sekalaiset",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Minun hinnat",
 		"MyProofs": "Minun todisteeni",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "Lisäyspäivämäärä",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
+		"Other": "Muu",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
 		"Picture": "Kuva",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "Ilman tuotetta",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

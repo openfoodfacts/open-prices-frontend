@@ -284,6 +284,8 @@
 		"LocationCount": "{count} vietos | {count} vieta | {count} vietų",
 		"LocationNotFound": "Vieta nerasta",
 		"Map": "Žemėlapis",
+		"Miscellaneous": "Įvairūs",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "Mano pagrindinis meniu",
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Įrodymo data",
 		"OrderUserCountDESC": "Vartotojų skaičius",
+		"Other": "Kita",
 		"PersonalInfo": "Personal information",
 		"Physical": "Fizinis",
 		"Picture": "Picture",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "Be produkto",
 		"WithBarcode": "Su brūkšniniu kodu",
 		"WithCategory": "Su kategorija",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Paskutinį kartą atnaujinta {date}"
 	},
 	"UserDashboard": {

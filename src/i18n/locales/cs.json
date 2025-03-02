@@ -284,6 +284,8 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Poloha nenalezena",
 		"Map": "Mapa",
+		"Miscellaneous": "Ostatní",
+		"MobileApp": "Mobile app",
 		"MyDashboard": "Můj ovládací panel",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje důkazy",
@@ -305,6 +307,7 @@
 		"OrderProofCreatedDESC": "Datum přidání",
 		"OrderProofDateDESC": "Datum důkazu",
 		"OrderUserCountDESC": "Počet uživatelů",
+		"Other": "Ostatní",
 		"PersonalInfo": "Osobní údaje",
 		"Physical": "Fyzický",
 		"Picture": "Obrázek",
@@ -780,6 +783,7 @@
 		"WithoutProduct": "Bez produktu",
 		"WithBarcode": "S čárovým kódem",
 		"WithCategory": "S kategorií",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Naposledy aktualizováno {date}"
 	},
 	"UserDashboard": {
