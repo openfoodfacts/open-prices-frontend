@@ -62,6 +62,7 @@ export default {
         currency: null,
         receipt_price_count: null,
         receipt_price_total: null,
+        receipt_online_delivery_costs: null,
       },
       loading: false
     }

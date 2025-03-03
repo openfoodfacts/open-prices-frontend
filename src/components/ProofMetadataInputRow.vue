@@ -64,6 +64,24 @@
       />
     </v-col>
   </v-row>
+  <v-row v-if="proofIsTypeReceipt" class="mt-0">
+    <v-col cols="6">
+      <div class="text-subtitle-2">
+        <v-icon size="small" :icon="LOCATION_TYPE_ONLINE_ICON" /> {{ $t('Common.ReceiptOnlineDeliveryCosts') }}
+      </div>
+      <v-text-field
+        v-model="proofMetadataForm.receipt_online_delivery_costs"
+        density="compact"
+        variant="outlined"
+        type="text"
+        inputmode="decimal"
+        :rules="priceOnlineDeliveryCostsRules"
+        :suffix="proofMetadataForm.currency"
+        hide-details="auto"
+        @update:modelValue="newValue => proofMetadataForm.receipt_online_delivery_costs = fixComma(newValue)"
+      />
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -80,7 +98,8 @@ export default {
         date: this.currentDate,
         currency: null,
         receipt_price_count: null,
-        receipt_price_total: null
+        receipt_price_total: null,
+        receipt_online_delivery_costs: null,
       })
     },
     proofType: {
@@ -92,6 +111,7 @@ export default {
     return {
       currentDate: utils.currentDate(),
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
+      LOCATION_TYPE_ONLINE_ICON: constants.LOCATION_TYPE_ONLINE_ICON,
     }
   },
   computed: {
@@ -115,6 +135,15 @@ export default {
     },
     priceTotalRules() {
       if (!this.proofMetadataForm.receipt_price_total) return [() => true]  // optional field
+      return [
+        value => !!value && !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !isNaN(value) || this.$t('PriceRules.Number'),
+        value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
+        value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+      ]
+    },
+    priceOnlineDeliveryCostsRules() {
+      if (!this.proofMetadataForm.receipt_online_delivery_costs) return [() => true]  // optional field
       return [
         value => !!value && !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
