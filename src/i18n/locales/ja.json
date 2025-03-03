@@ -407,6 +407,8 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "表示",
 		"Website": "ウェブサイト",
+		"Year": "Year",
+		"Years": "Years",
 		"Yes": "はい",
 		"No": "いいえ",
 		"Food": "食べ物",
@@ -550,7 +552,7 @@
 	"PriceRules": {
 		"AmountRequired": "価格が必要です",
 		"NoSpaces": "スペースを使用しないでください",
-		"Number": "",
+		"Number": "Input a number",
 		"Positive": "価格はマイナスではありません",
 		"TwoDecimals": "小数点以下2桁までしか使用できません"
 	},
