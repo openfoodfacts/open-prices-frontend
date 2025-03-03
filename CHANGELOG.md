@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.122.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.3...v1.122.4) (2025-03-03)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1399](https://github.com/openfoodfacts/open-prices-frontend/issues/1399)) ([4ca5d5a](https://github.com/openfoodfacts/open-prices-frontend/commit/4ca5d5a4f508e48e408fa900711fc0676d53aea9))
+* **l10n:** New Crowdin translations to review and merge ([#1425](https://github.com/openfoodfacts/open-prices-frontend/issues/1425)) ([a0133a2](https://github.com/openfoodfacts/open-prices-frontend/commit/a0133a2fa7c8ec17b549dd23ae1fe9c951855dc8))
+* rename main branch from 'master' to 'main' ([#1421](https://github.com/openfoodfacts/open-prices-frontend/issues/1421)) ([e759b39](https://github.com/openfoodfacts/open-prices-frontend/commit/e759b3983f9d579d0196fbb8e30dd7a41f25645d))
+* **Stats:** new unique country stats (in Misc) ([#1423](https://github.com/openfoodfacts/open-prices-frontend/issues/1423)) ([384a658](https://github.com/openfoodfacts/open-prices-frontend/commit/384a658ed3d48026861d350a8271d591b18267b4))
+* **Stats:** new unique year count stat (in Misc) ([#1424](https://github.com/openfoodfacts/open-prices-frontend/issues/1424)) ([9eeb208](https://github.com/openfoodfacts/open-prices-frontend/commit/9eeb2085888ad740507ff7a596d2de635efb5316))
+
 ## [1.122.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.2...v1.122.3) (2025-03-01)
 
 
