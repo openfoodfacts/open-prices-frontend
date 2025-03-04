@@ -5,6 +5,7 @@
       <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
       <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" class="mr-1" :totalCount="proof.receipt_price_count" />
       <ProofReceiptPriceTotalChip v-if="showReceiptPriceTotal" class="mr-1" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
+      <ProofReceiptOnlineDeliveryCostsChip v-if="showReceiptOnlineDeliveryCosts" class="mr-1" :price="proof.receipt_online_delivery_costs" :currency="proof.currency" />
       <PriceCountChip v-if="!hidePriceCount" class="mr-1" :count="proof.price_count" :withLabel="true" source="proof" @click="goToProof()" />
       <LocationChip class="mr-1" :location="proof.location" :locationId="proof.location_id" :readonly="readonly" :showErrorIfLocationMissing="true" />
       <DateChip class="mr-1" :date="proof.date" :showErrorIfDateMissing="true" :readonly="readonly" />
@@ -29,6 +30,7 @@ export default {
     ProofTypeChip: defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
+    ProofReceiptOnlineDeliveryCostsChip: defineAsyncComponent(() => import('../components/ProofReceiptOnlineDeliveryCostsChip.vue')),
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
     LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
@@ -83,6 +85,9 @@ export default {
     },
     showReceiptPriceTotal() {
       return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.receipt_price_total
+    },
+    showReceiptOnlineDeliveryCosts() {
+      return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.receipt_online_delivery_costs
     },
   },
   methods: {
