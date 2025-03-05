@@ -1,3 +1,7 @@
+body {
+    font-family: "Public Sans", Helvetica, Roboto, Arial, sans-serif !important;
+}
+
 .input-lowercase input {
     text-transform: lowercase;
 }
