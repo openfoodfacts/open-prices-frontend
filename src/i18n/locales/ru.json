@@ -100,18 +100,18 @@
 			"ScanBarcode": "Scan a barcode",
 			"ScanBarcodeShort": "Сканировать",
 			"Type": "Тип",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Поиск по штрихкоду",
 			"TypeBarcodeShort": "Тип",
 			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"Title": "Информация о товаре"
 		},
 		"ProductModeList": {
 			"Barcode": "Штрих-код",
 			"Category": "Категория"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Цена за кг",
+			"PerUnit": "Цена за единицу товара"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -132,7 +132,7 @@
 	"BarcodeManualInput": {
 		"Barcode": "Штрих-код",
 		"Submit": "Подтвердить",
-		"Title": "Type a barcode"
+		"Title": "Поиск по штрихкоду"
 	},
 	"Challenge": {
 		"Title": "Community challenge",
@@ -173,7 +173,7 @@
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "Сканировать",
-		"BarcodeType": "Type a barcode",
+		"BarcodeType": "Поиск по штрихкоду",
 		"BarcodeTypeShort": "Тип",
 		"BarcodeInvalid": "Неверный штрихкод",
 		"Brand": "Марка",
@@ -354,6 +354,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
+		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
