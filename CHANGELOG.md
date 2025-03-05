@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.123.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.4...v1.123.0) (2025-03-04)
+
+
+### Features
+
+* **Proofs:** Display the new receipt_online_delivery_costs field in the form ([#1427](https://github.com/openfoodfacts/open-prices-frontend/issues/1427)) ([18ceba8](https://github.com/openfoodfacts/open-prices-frontend/commit/18ceba87c34369052444af5d78f3737a835e022e))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1426](https://github.com/openfoodfacts/open-prices-frontend/issues/1426)) ([b1e85af](https://github.com/openfoodfacts/open-prices-frontend/commit/b1e85af638247739ed6f85fa7a8995dff5a9089f))
+
 ## [1.122.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.3...v1.122.4) (2025-03-03)
 
 
