@@ -28,15 +28,15 @@
 		"HowSupportAnswer": "U kunt {op_name} steunen door een bijdrage te leveren aan het project, door het te delen met uw vrienden en familie en door te doneren aan {off_url}.",
 		"WhyOSM": "Waarom vragen jullie om een {osm_name}-ID wanneer ik een prijs toevoeg?",
 		"WhyOSMAnswer": "We vragen om een {osm_url}-ID om de prijs aan een specifieke winkel te kunnen koppelen. Dit is handig om de prijs op een kaart te kunnen weergeven en om regionale of retailerprijsverschillen te kunnen analyseren.",
-		"HowRetailer": "Ik ben een retailer en ik wil prijzen bijdragen. Hoe kan ik dat doen?",
+		"HowRetailer": "Ik ben een detailhandelaar en ik wil prijzen bijdragen. Hoe kan ik dat doen?",
 		"HowRetailerAnswer": "U kunt prijzen bijdragen door onze {op_api_url} te gebruiken. Als u prijzen wilt bijdragen op grote schaal, neem dan contact met ons op via {off_contact_email_url}.",
-		"WhyNoScraping": "Overweegt u om prijzen van de websites van retailers te halen?",
-		"WhyNoScrapingAnswer1": "Om juridische en technische redenen beschouwen we het scrapen van prijzen van websites van retailers niet als een geldige manier om bij te dragen aan {op_name}. We willen er zeker van zijn dat de prijzen die we verzamelen nauwkeurig en up-to-date zijn, en het ontvangen van scraped prijzen van bijdragers staat ons niet toe om dat te doen.",
+		"WhyNoScraping": "Overweegt u om prijzen van de websites van detailhandelaren te halen?",
+		"WhyNoScrapingAnswer1": "Om juridische en technische redenen beschouwen we het scrapen van prijzen van websites van detailhandelaren niet als een geldige manier om bij te dragen aan {op_name}. We willen er zeker van zijn dat de prijzen die we verzamelen nauwkeurig en up-to-date zijn, en het ontvangen van scraped prijzen van bijdragers staat ons niet toe om dat te doen.",
 		"WhyNoScrapingAnswer2": "Prijsscraping is een optie die in een toekomstige versie van {op_name} wordt overwogen, maar dit zou door {op_name} zelf worden gedaan, zodat we een bewijs van de prijs kunnen hebben op basis van de HTML-pagina."
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "Een plank met meerdere prijskaartjes",
+			"Subtitle": "Een schap met meerdere prijskaartjes",
 			"Title": "Meerdere producten"
 		},
 		"PriceCreated": "Prijs aangemaakt!",
@@ -118,7 +118,7 @@
 			"Date": "Datum",
 			"DateLabel": "Datum",
 			"Find": "Zoeken",
-			"Location": "Winkel locatie",
+			"Location": "Winkellocatie",
 			"SelectLocation": "Selecteer uw locatie",
 			"Title": "Waar en wanneer?"
 		}
@@ -153,7 +153,7 @@
 		"PicturesAddedByYou": "Door jou toegevoegde foto's",
 		"Prices": "{challenge_title} prijzen",
 		"PricesAdded": "{challenge_title} prijzen toegevoegd",
-		"PricesByYou": "{challenge_title} prices by you",
+		"PricesByYou": "{challenge_title} prijzen door jou",
 		"PricesAddedByYou": "{challenge_title} prijzen door u toegevoegd",
 		"MostRecentContributions": "Meest recente bijdragen"
 	},
@@ -226,8 +226,8 @@
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Talen",
 		"Languages": "Talen",
-		"LatestPrices": "Laatste prijzen",
-		"LatestProofs": "Laatste bewijzen",
+		"LatestPrices": "Nieuwste prijzen",
+		"LatestProofs": "Nieuwste bewijzen",
 		"LoadMore": "Meer laden",
 		"Location": "Locatie",
 		"Locations": "Locaties",
@@ -247,7 +247,7 @@
 		"DiscountTypeSeasonal": "Seizoensgebonden",
 		"DiscountTypeLoyaltyProgram": "Loyaliteitsprogramma",
 		"DiscountTypeExpiresSoon": "Vervalt binnenkort",
-		"DiscountTypePickItYourself": "Pick it yourself",
+		"DiscountTypePickItYourself": "Zelf plukken",
 		"DiscountTypeSecondHand": "Tweedehands",
 		"DiscountTypeOther": "Andere",
 		"Example": "Voorbeeld",
@@ -255,7 +255,7 @@
 		"ExampleWithColon": "Voorbeeld:",
 		"ExampleWithColonAndValue": "Voorbeeld: {value}",
 		"ExamplesWithColon": "Voorbeelden:",
-		"ExamplesWithColonAndValue": "Voorbeeld: {value}",
+		"ExamplesWithColonAndValue": "Voorbeelden: {value}",
 		"Edit": "Bewerken",
 		"End": "Einde",
 		"Filter": "Filter",
@@ -278,8 +278,8 @@
 		"ImageSelected": "Afbeelding geselecteerd!",
 		"ImageSelectedCount": "{count} afbeeldingen geselecteerd | {count} afbeelding geselecteerd | {count} afbeeldingen geselecteerd",
 		"Images": "Afbeeldingen",
-		"ImageFull": "Afbeelding op volledige grootte",
-		"Latest": "Laatste",
+		"ImageFull": "Afbeelding op ware grootte",
+		"Latest": "Nieuwste",
 		"LinkCopySuccess": "Link gekopieerd",
 		"LocationCount": "{count} locaties | {count} locatie | {count} locaties",
 		"LocationNotFound": "Locatie niet gevonden",
@@ -342,8 +342,8 @@
 		"ProofSelected": "Bewijs geselecteerd!",
 		"ProofSelectedCount": "{count} bewijzen geselecteerd | {count} bewijs geselecteerd | {count} bewijzen geselecteerd",
 		"ProofUploadedCount": "{count} bewijzen geüpload | {count} bewijs geüpload | {count} bewijzen geüpload",
-		"ProofsAddedToday": "Bewijzen vandaag toegevoegd",
-		"ProofsToday": "Bewijzen vandaag",
+		"ProofsAddedToday": "Vandaag toegevoegde bewijzen",
+		"ProofsToday": "Bewijzen van vandaag",
 		"ProofNotFound": "Bewijs niet gevonden",
 		"Public": "Openbaar",
 		"Quantity": "Hoeveelheid",
@@ -354,7 +354,7 @@
 		"Receipts": "Bonnen",
 		"ReceiptPriceCount": "Aantal prijzen",
 		"ReceiptPriceTotal": "Totaalbedrag",
-		"ReceiptOnlineDeliveryCosts": "Delivery costs",
+		"ReceiptOnlineDeliveryCosts": "Verzendkosten",
 		"Recent": "Recent",
 		"Reuses": "Hergebruik",
 		"ReusesKnown": "Bekende hergebruiken",
@@ -441,10 +441,10 @@
 		"GoToProof": "Ga naar bewijs",
 		"AddNewProof": "Voeg een nieuw bewijs toe",
 		"NextProof": "Volgend bewijs",
-		"ChooseNextProof": "Choose another proof to handle",
+		"ChooseNextProof": "Kies een ander bewijs om te verwerken",
 		"AutomaticBoundingBoxSource": "automatisch",
 		"ManualBoundingBoxSource": "manueel",
-		"DetectedBarcode": "Gedetecteerde barcode: {barcode}",
+		"DetectedBarcode": "Gedetecteerde streepjescode: {barcode}",
 		"LabelProcessingErrorMessage": "Fout: automatische verwerking van label mislukt",
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Prijskaartje zonder prijs",
@@ -487,7 +487,7 @@
 	},
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"ProofAdd": "Voeg een bewijs toe",
 		"SearchProduct": "Zoek naar een product",
 		"SettingsUpdated": "Instellingen bijgewerkt!",
@@ -499,7 +499,7 @@
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"LoadMore": "Meer laden",
 		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)"
 	},
@@ -548,7 +548,7 @@
 	},
 	"PriceList": {
 		"LoadMore": "Meer laden",
-		"Title": "Laatste prijzen"
+		"Title": "Nieuwste prijzen"
 	},
 	"PriceRules": {
 		"AmountRequired": "Prijs is vereist",
@@ -570,7 +570,7 @@
 		"Labels": "Keurmerken",
 		"LabelsLower": "keurmerken",
 		"LabelTotal": "{count} labels",
-		"LatestPrice": "Laatste prijzen",
+		"LatestPrice": "Nieuwste prijzen",
 		"InvalidBarcode": "Ongeldige barcode",
 		"InvalidBarcodeLength": "Ongeldige streepjescodelengte",
 		"ProductBrandMissing": "Productmerk ontbreekt",
@@ -586,7 +586,7 @@
 	"ProductDetail": {
 		"AddPrice": "Voeg een prijs toe",
 		"CategoryNotFound": "Categorie niet gevonden...",
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"LoadMore": "Meer laden",
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
@@ -624,7 +624,7 @@
 	"ProofEdit": {
 		"Title": "Een bewijs bewerken",
 		"Save": "Opslaan",
-		"Success": "Bewijs aangepast!"
+		"Success": "Bewijs bewerkt!"
 	},
 	"Reuses": {
 		"AlertNew": "Ontbreekt uw hergebruik? Laat het ons weten {url}!",
@@ -656,7 +656,7 @@
 			"Title": "Voeg één bewijs toe"
 		},
 		"AddProofMultiple": {
-			"Title": "Meerdere bewijzen toevoegen"
+			"Title": "Voeg meerdere bewijzen toe"
 		},
 		"Locations": {
 			"Title": "Locaties"
@@ -677,7 +677,7 @@
 			"Title": "Voeg één bewijs toe"
 		},
 		"ProofAddMultiple": {
-			"Title": "Meerdere bewijzen toevoegen"
+			"Title": "Voeg meerdere bewijzen toe"
 		},
 		"Community": {
 			"Title": "Gemeenschap"
@@ -692,10 +692,10 @@
 			"Title": "Dashboard"
 		},
 		"LatestPrices": {
-			"Title": "Laatste prijzen"
+			"Title": "Nieuwste prijzen"
 		},
 		"LatestProofs": {
-			"Title": "Laatste bewijzen"
+			"Title": "Nieuwste bewijzen"
 		},
 		"MyPrices": {
 			"Title": "Mijn prijzen"
@@ -790,8 +790,8 @@
 		"LastUpdated": "Laatst bijgewerkt op {date}"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Laatste prijzen",
-		"LatestProofs": "Laatste bewijzen",
+		"LatestPrices": "Nieuwste prijzen",
+		"LatestProofs": "Nieuwste bewijzen",
 		"LoadMore": "Meer laden",
 		"MyDashboard": "Mijn dashboard",
 		"MyPrices": "Mijn prijzen",
@@ -803,7 +803,7 @@
 		"UserProofTotal": "{count} bewijzen"
 	},
 	"UserDetail": {
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"LoadMore": "Meer laden"
 	},
 	"UserList": {
