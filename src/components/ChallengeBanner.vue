@@ -23,22 +23,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      challenge: {
-        title: "Nutella",
-        icon: "🌰",
-        subtitle: "(and other hazelnut spreads)",
-        startDate: "2025-01-20",
-        endDate: "2025-01-31",
-        categories: ["en:hazelnut-spreads"],
-        numberOfContributions: 0,
-        latestContributions: [],
-        numberOfProofs: 0,
-        userContributions: 0,
-        userProofContributions: 0,
-        exampleProofUrl: "https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.webp"
-      },
+  props: {
+    challenge: {
+      type: Object,
+      default: () => ({}),
     }
   }
 }
