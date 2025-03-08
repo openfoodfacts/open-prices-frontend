@@ -70,7 +70,7 @@ export default {
       return this.appStore.user.username
     },
     currentChallenge() {
-      return Challenge[0]
+      return Challenge.filter(c => utils.isBetweenTwoDates(c.startDate, c.endDate))[0]
     },
     getApiSize() {
       if (!this.$vuetify.display.smAndUp) return 5
