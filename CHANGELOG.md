@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.123.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.123.0...v1.123.1) (2025-03-08)
+
+
+### Technical
+
+* **Challenge:** display Home banner only if ongoing challenge ([#1434](https://github.com/openfoodfacts/open-prices-frontend/issues/1434)) ([d50ebda](https://github.com/openfoodfacts/open-prices-frontend/commit/d50ebda75bbb15f3003fd66bcc6671402e282593))
+* **Challenge:** move the configuration to a dedicated JSON file ([#1433](https://github.com/openfoodfacts/open-prices-frontend/issues/1433)) ([e143e26](https://github.com/openfoodfacts/open-prices-frontend/commit/e143e268845874e750c441fff1dbcc4b79cf97ea))
+* **Community:** add links to daily jsonl.gz dumps. ref [#1064](https://github.com/openfoodfacts/open-prices-frontend/issues/1064) ([cd91846](https://github.com/openfoodfacts/open-prices-frontend/commit/cd918462c4e8b768672aea1cbd958b28f4d45fd5))
+* **l10n:** New Crowdin translations to review and merge ([#1429](https://github.com/openfoodfacts/open-prices-frontend/issues/1429)) ([c216bef](https://github.com/openfoodfacts/open-prices-frontend/commit/c216bef6dd6f51fa6dd1d0d17fa4da87fb7718d8))
+
 ## [1.123.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.4...v1.123.0) (2025-03-04)
 
 
