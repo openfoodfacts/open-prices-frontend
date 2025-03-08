@@ -143,6 +143,7 @@ export default {
         currency: null,  // see initProofForm
         receipt_price_count: null,
         receipt_price_total: null,
+        owner_consumption: true,  // will be ignored if type is not receipt
         receipt_online_delivery_costs: null,
         ready_for_price_tag_validation: null,  // see initProofForm
         proof_id: null

@@ -354,6 +354,7 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
+		"ReceiptOwnerConsumption": "Count into my consumption stats",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Reuses": "Reuses",
