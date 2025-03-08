@@ -12,9 +12,9 @@
     </v-col>
   </v-row>
 
-  <br>
+  <br v-if="currentChallenge">
 
-  <ChallengeBanner />
+  <ChallengeBanner v-if="currentChallenge" :challenge="currentChallenge" />
 
   <br>
 
@@ -42,6 +42,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import Challenge from '../data/challenges.json'
 import api from '../services/api'
 import constants from '../constants'
 import utils from '../utils.js'
@@ -67,6 +68,9 @@ export default {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
+    },
+    currentChallenge() {
+      return Challenge[0]
     },
     getApiSize() {
       if (!this.$vuetify.display.smAndUp) return 5
