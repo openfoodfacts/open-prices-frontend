@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.124.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.123.1...v1.124.0) (2025-03-09)
+
+
+### Features
+
+* **Proofs:** display the new owner_consumption field (form, chip) ([#1435](https://github.com/openfoodfacts/open-prices-frontend/issues/1435)) ([89a5b07](https://github.com/openfoodfacts/open-prices-frontend/commit/89a5b0710700ab545916b9bd76e2cb04df9268eb))
+
+
+### Technical
+
+* **Forms:** add green color to v-switch (Proof, Price & Settings) ([#1438](https://github.com/openfoodfacts/open-prices-frontend/issues/1438)) ([447a06b](https://github.com/openfoodfacts/open-prices-frontend/commit/447a06bc6c63249baee8d30820eff9a9828d45ee))
+* **Forms:** replace v-checkbox with v-switch (Proof & Price) ([#1437](https://github.com/openfoodfacts/open-prices-frontend/issues/1437)) ([26ad4b9](https://github.com/openfoodfacts/open-prices-frontend/commit/26ad4b9fa346980afdbc331bc1f1db9bf39d4629))
+* **l10n:** New Crowdin translations to review and merge ([#1440](https://github.com/openfoodfacts/open-prices-frontend/issues/1440)) ([68f18a6](https://github.com/openfoodfacts/open-prices-frontend/commit/68f18a66ec29f5be84a06d7a56caf35076cdbf48))
+* **Proofs:** move up the location field above the image(s) ([#1439](https://github.com/openfoodfacts/open-prices-frontend/issues/1439)) ([7747015](https://github.com/openfoodfacts/open-prices-frontend/commit/7747015656ff1b9082aeb55d6e8558e99929943b))
+
 ## [1.123.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.123.0...v1.123.1) (2025-03-08)
 
 
