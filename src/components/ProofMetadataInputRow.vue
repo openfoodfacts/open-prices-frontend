@@ -89,6 +89,7 @@
       <v-switch
         v-model="proofMetadataForm.owner_consumption"
         density="compact"
+        color="success"
         :label="$t('Common.ReceiptOwnerConsumption')"
         :true-value="true"
         hide-details="auto"

@@ -51,6 +51,7 @@
             :key="lt.id"
             v-model="productForm.labels_tags"
             density="compact"
+            color="success"
             :label="lt.name"
             :value="lt.id"
             hide-details="auto"
