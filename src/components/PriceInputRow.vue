@@ -71,14 +71,16 @@
           />
         </v-col>
         <v-col v-if="proofIsTypeReceipt" cols="6" :class="priceForm.price_is_discounted ? 'offset-6' : ''">
+          <div class="text-subtitle-2">
+            <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.QuantityBought') }}
+          </div>
           <v-text-field
             v-model="priceForm.receipt_quantity"
             density="compact"
-            :label="$t('Common.QuantityBought')"
+            variant="outlined"
             type="text"
             inputmode="decimal"
             :rules="receiptQuantityRules"
-            :prepend-inner-icon="PROOF_TYPE_RECEIPT_ICON"
             hide-details="auto"
           />
         </v-col>
@@ -176,6 +178,7 @@ export default {
     receiptQuantityRules() {
       if (!this.priceForm.receipt_quantity) return [() => true]  // optional field
       return [
+        value => !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
         value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
