@@ -15,10 +15,14 @@
       </v-row>
       <v-row class="mt-0">
         <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
+          <div class="text-subtitle-2">
+            {{ priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label') }}
+          </div>
           <v-text-field
             :model-value="priceForm.price"
-            density="comfortable"
-            :label="priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label')"
+            :class="priceForm.price ? 'outline-border-success' : 'outline-border-error'"
+            density="compact"
+            variant="outlined"
             type="text"
             inputmode="decimal"
             :rules="priceRules"
@@ -34,10 +38,13 @@
           </v-text-field>
         </v-col>
         <v-col v-if="priceForm.price_is_discounted" cols="6" class="pb-0">
+          <div class="text-subtitle-2">
+            {{ $t('PriceForm.LabelFull') }}
+          </div>
           <v-text-field
             :model-value="priceForm.price_without_discount"
-            density="comfortable"
-            :label="$t('PriceForm.LabelFull')"
+            density="compact"
+            variant="outlined"
             type="text"
             inputmode="decimal"
             :rules="priceRules"
