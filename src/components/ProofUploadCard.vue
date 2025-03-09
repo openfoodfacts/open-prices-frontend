@@ -26,7 +26,7 @@
         <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />
         <v-row v-if="typePriceTagOnly && multiple" class="mt-0">
           <v-col cols="12" class="pb-0">
-            <v-checkbox
+            <v-switch
               v-model="proofForm.ready_for_price_tag_validation"
               density="compact"
               :label="$t('ProofAdd.PriceValidationAllow')"

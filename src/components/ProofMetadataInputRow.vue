@@ -86,7 +86,7 @@
   </v-row>
   <v-row v-if="proofIsTypeReceipt" class="mt-0">
     <v-col cols="12" class="pb-0">
-      <v-checkbox
+      <v-switch
         v-model="proofMetadataForm.owner_consumption"
         density="compact"
         :label="$t('Common.ReceiptOwnerConsumption')"

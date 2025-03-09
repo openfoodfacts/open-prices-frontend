@@ -46,7 +46,7 @@
           />
         </v-col>
         <v-col class="pt-0" cols="6">
-          <v-checkbox
+          <v-switch
             v-for="lt in labelTags"
             :key="lt.id"
             v-model="productForm.labels_tags"
