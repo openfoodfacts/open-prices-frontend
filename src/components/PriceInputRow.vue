@@ -13,7 +13,7 @@
   </v-row>
   <v-row v-if="mode === 'edit'" class="mt-0">
     <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
-      <div class="text-subtitle-2">
+      <div class="text-subtitle-2 required">
         {{ priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label') }}
       </div>
       <v-text-field
