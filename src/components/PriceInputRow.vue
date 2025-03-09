@@ -65,10 +65,13 @@
       />
     </v-col>
     <v-col v-if="priceForm.price_is_discounted" cols="6">
+      <div class="text-subtitle-2">
+        {{ $t('Common.DiscountType') }}
+      </div>
       <v-select
         v-model="priceForm.discount_type"
         density="compact"
-        :label="$t('Common.DiscountType')"
+        variant="outlined"
         :items="priceDiscountTypeSelectorDisplayList"
         :item-title="item => item.value ? $t('Common.' + item.value) : ''"
         :item-value="item => item.key"
