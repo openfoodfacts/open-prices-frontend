@@ -22,7 +22,7 @@
   </v-row>
   <v-row v-else-if="mode === 'edit' && productIsTypeCategory" class="mt-0">
     <v-col cols="6">
-      <div class="text-subtitle-2">
+      <div class="text-subtitle-2 required">
         {{ $t('AddPriceSingle.ProductInfo.CategoryLabel') }}
       </div>
       <v-autocomplete
