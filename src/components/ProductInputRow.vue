@@ -1,63 +1,59 @@
 <template>
   <v-row v-if="mode === 'edit'">
     <v-col>
-      <v-row>
-        <v-col>
-          <v-item-group v-model="productForm.type" class="d-inline" mandatory @update:modelValue="setType($event)">
-            <v-item v-for="pt in productTypeDisplayList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
-              <v-chip class="mr-1" :class="isSelected ? 'border-success' : ''" variant="outlined" density="comfortable" @click="toggle">
-                <v-icon start :icon="pt.icon" />
-                {{ $t('Common.' + pt.value) }}
-                <v-icon end :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" :color="isSelected ? 'green' : ''" />
-              </v-chip>
-            </v-item>
-          </v-item-group>
-        </v-col>
-      </v-row>
-      <v-row v-if="!hideBarcodeMode && productIsTypeProduct" class="mt-0">
-        <v-col>
-          <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
-            {{ $t('Common.ProductFind') }}
-          </v-btn>
-          <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="true" elevation="1" />
-        </v-col>
-      </v-row>
-      <v-row v-else-if="productIsTypeCategory" class="mt-0">
-        <v-col cols="6">
-          <v-autocomplete
-            v-model="productForm.category_tag"
-            density="comfortable"
-            :label="$t('AddPriceSingle.ProductInfo.CategoryLabel')"
-            :items="categoryTags"
-            :item-title="item => item.name"
-            :item-value="item => item.id"
-            hide-details="auto"
-          />
-        </v-col>
-        <v-col cols="6">
-          <v-autocomplete
-            v-model="productForm.origins_tags"
-            density="comfortable"
-            :label="$t('AddPriceSingle.ProductInfo.OriginLabel')"
-            :items="originTags"
-            :item-title="item => item.name"
-            :item-value="item => item.id"
-            hide-details="auto"
-          />
-        </v-col>
-        <v-col class="pt-0" cols="6">
-          <v-switch
-            v-for="lt in labelTags"
-            :key="lt.id"
-            v-model="productForm.labels_tags"
-            density="compact"
-            color="success"
-            :label="lt.name"
-            :value="lt.id"
-            hide-details="auto"
-          />
-        </v-col>
-      </v-row>
+      <v-item-group v-model="productForm.type" class="d-inline" mandatory @update:modelValue="setType($event)">
+        <v-item v-for="pt in productTypeDisplayList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
+          <v-chip class="mr-1" :class="isSelected ? 'border-success' : ''" variant="outlined" density="comfortable" @click="toggle">
+            <v-icon start :icon="pt.icon" />
+            {{ $t('Common.' + pt.value) }}
+            <v-icon end :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" :color="isSelected ? 'green' : ''" />
+          </v-chip>
+        </v-item>
+      </v-item-group>
+    </v-col>
+  </v-row>
+  <v-row v-if="mode === 'edit' && !hideBarcodeMode && productIsTypeProduct" class="mt-0">
+    <v-col>
+      <v-btn class="mb-2" size="small" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
+        {{ $t('Common.ProductFind') }}
+      </v-btn>
+      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+    </v-col>
+  </v-row>
+  <v-row v-else-if="mode === 'edit' && productIsTypeCategory" class="mt-0">
+    <v-col cols="6">
+      <v-autocomplete
+        v-model="productForm.category_tag"
+        density="comfortable"
+        :label="$t('AddPriceSingle.ProductInfo.CategoryLabel')"
+        :items="categoryTags"
+        :item-title="item => item.name"
+        :item-value="item => item.id"
+        hide-details="auto"
+      />
+    </v-col>
+    <v-col cols="6">
+      <v-autocomplete
+        v-model="productForm.origins_tags"
+        density="comfortable"
+        :label="$t('AddPriceSingle.ProductInfo.OriginLabel')"
+        :items="originTags"
+        :item-title="item => item.name"
+        :item-value="item => item.id"
+        hide-details="auto"
+      />
+    </v-col>
+    <v-col class="pt-0" cols="6">
+      <v-switch
+        v-for="lt in labelTags"
+        :key="lt.id"
+        v-model="productForm.labels_tags"
+        density="compact"
+        color="success"
+        :label="lt.name"
+        :value="lt.id"
+        hide-details="auto"
+      />
     </v-col>
   </v-row>
 

@@ -1,105 +1,94 @@
 <template>
-  <v-row v-if="mode === 'edit'">
-    <v-col cols="12">
-      <v-row v-if="productIsTypeCategory">
-        <v-col>
-          <v-item-group v-model="priceForm.price_per" class="d-inline" mandatory>
-            <v-item v-for="cpp in CATEGORY_PRICE_PER_LIST" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
-              <v-chip class="mr-1" :class="isSelected ? 'border-success' : ''" variant="outlined" density="comfortable" @click="toggle">
-                {{ cpp.value }}
-                <v-icon end :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" :color="isSelected ? 'green' : ''" />
-              </v-chip>
-            </v-item>
-          </v-item-group>
-        </v-col>
-      </v-row>
-      <v-row class="mt-0">
-        <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
-          <div class="text-subtitle-2">
-            {{ priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label') }}
-          </div>
-          <v-text-field
-            :model-value="priceForm.price"
-            :class="priceForm.price ? 'outline-border-success' : 'outline-border-error'"
-            density="compact"
-            variant="outlined"
-            type="text"
-            inputmode="decimal"
-            :rules="priceRules"
-            :suffix="priceForm.currency"
-            :hint="getPricePerUnit(priceForm.price)"
-            persistent-hint
-            @update:modelValue="newValue => priceForm.price = fixComma(newValue)"
-          >
-            <template v-if="!hideCurrencyChoice" #prepend-inner>
-              <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
-              <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true">
-            </template>
-          </v-text-field>
-        </v-col>
-        <v-col v-if="priceForm.price_is_discounted" cols="6" class="pb-0">
-          <div class="text-subtitle-2">
-            {{ $t('PriceForm.LabelFull') }}
-          </div>
-          <v-text-field
-            :model-value="priceForm.price_without_discount"
-            density="compact"
-            variant="outlined"
-            type="text"
-            inputmode="decimal"
-            :rules="priceRules"
-            :suffix="priceForm.currency"
-            :hint="getPricePerUnit(priceForm.price_without_discount)"
-            persistent-hint
-            @update:modelValue="newValue => priceForm.price_without_discount = fixComma(newValue)"
-          />
-        </v-col>
-      </v-row>
-      <v-row class="mt-0">
-        <v-col cols="6" class="pb-0">
-          <v-switch
-            v-model="priceForm.price_is_discounted"
-            density="compact"
-            color="success"
-            :label="$t('Common.Discount')"
-            :true-value="true"
-            hide-details="auto"
-          />
-        </v-col>
-        <v-col v-if="priceForm.price_is_discounted" cols="6">
-          <v-select
-            v-model="priceForm.discount_type"
-            density="compact"
-            :label="$t('Common.DiscountType')"
-            :items="priceDiscountTypeSelectorDisplayList"
-            :item-title="item => item.value ? $t('Common.' + item.value) : ''"
-            :item-value="item => item.key"
-            hide-details="auto"
-          />
-        </v-col>
-        <v-col v-if="proofIsTypeReceipt" cols="6" :class="priceForm.price_is_discounted ? 'offset-6' : ''">
-          <div class="text-subtitle-2">
-            <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.QuantityBought') }}
-          </div>
-          <v-text-field
-            v-model="priceForm.receipt_quantity"
-            density="compact"
-            variant="outlined"
-            type="text"
-            inputmode="decimal"
-            :rules="receiptQuantityRules"
-            hide-details="auto"
-          />
-        </v-col>
-      </v-row>
+  <v-row v-if="mode === 'edit' && productIsTypeCategory">
+    <v-col>
+      <v-item-group v-model="priceForm.price_per" class="d-inline" mandatory>
+        <v-item v-for="cpp in CATEGORY_PRICE_PER_LIST" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
+          <v-chip class="mr-1" :class="isSelected ? 'border-success' : ''" variant="outlined" density="comfortable" @click="toggle">
+            {{ cpp.value }}
+            <v-icon end :icon="isSelected ? 'mdi-checkbox-marked-circle' : 'mdi-circle-outline'" :color="isSelected ? 'green' : ''" />
+          </v-chip>
+        </v-item>
+      </v-item-group>
     </v-col>
-
-    <ChangeCurrencyDialog
-      v-if="changeCurrencyDialog"
-      v-model="changeCurrencyDialog"
-      @newCurrencySelected="setCurrencyData($event)"
-      @close="changeCurrencyDialog = false"
-    />
+  </v-row>
+  <v-row v-if="mode === 'edit'" class="mt-0">
+    <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
+      <div class="text-subtitle-2">
+        {{ priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label') }}
+      </div>
+      <v-text-field
+        :model-value="priceForm.price"
+        :class="priceForm.price ? 'outline-border-success' : 'outline-border-error'"
+        density="compact"
+        variant="outlined"
+        type="text"
+        inputmode="decimal"
+        :rules="priceRules"
+        :suffix="priceForm.currency"
+        :hint="getPricePerUnit(priceForm.price)"
+        persistent-hint
+        @update:modelValue="newValue => priceForm.price = fixComma(newValue)"
+      >
+        <template v-if="!hideCurrencyChoice" #prepend-inner>
+          <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
+          <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true">
+        </template>
+      </v-text-field>
+    </v-col>
+    <v-col v-if="priceForm.price_is_discounted" cols="6" class="pb-0">
+      <div class="text-subtitle-2">
+        {{ $t('PriceForm.LabelFull') }}
+      </div>
+      <v-text-field
+        :model-value="priceForm.price_without_discount"
+        density="compact"
+        variant="outlined"
+        type="text"
+        inputmode="decimal"
+        :rules="priceRules"
+        :suffix="priceForm.currency"
+        :hint="getPricePerUnit(priceForm.price_without_discount)"
+        persistent-hint
+        @update:modelValue="newValue => priceForm.price_without_discount = fixComma(newValue)"
+      />
+    </v-col>
+  </v-row>
+  <v-row v-if="mode === 'edit'" class="mt-0">
+    <v-col cols="6" class="pb-0">
+      <v-switch
+        v-model="priceForm.price_is_discounted"
+        density="compact"
+        color="success"
+        :label="$t('Common.Discount')"
+        :true-value="true"
+        hide-details="auto"
+      />
+    </v-col>
+    <v-col v-if="priceForm.price_is_discounted" cols="6">
+      <v-select
+        v-model="priceForm.discount_type"
+        density="compact"
+        :label="$t('Common.DiscountType')"
+        :items="priceDiscountTypeSelectorDisplayList"
+        :item-title="item => item.value ? $t('Common.' + item.value) : ''"
+        :item-value="item => item.key"
+        hide-details="auto"
+      />
+    </v-col>
+    <v-col v-if="proofIsTypeReceipt" cols="6" :class="priceForm.price_is_discounted ? 'offset-6' : ''">
+      <div class="text-subtitle-2">
+        <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.QuantityBought') }}
+      </div>
+      <v-text-field
+        v-model="priceForm.receipt_quantity"
+        density="compact"
+        variant="outlined"
+        type="text"
+        inputmode="decimal"
+        :rules="receiptQuantityRules"
+        hide-details="auto"
+      />
+    </v-col>
   </v-row>
   <v-row v-else-if="mode === 'display'">
     <v-col cols="12">
@@ -111,6 +100,13 @@
       </v-alert>
     </v-col>
   </v-row>
+
+  <ChangeCurrencyDialog
+    v-if="changeCurrencyDialog"
+    v-model="changeCurrencyDialog"
+    @newCurrencySelected="setCurrencyData($event)"
+    @close="changeCurrencyDialog = false"
+  />
 </template>
 
 <script>

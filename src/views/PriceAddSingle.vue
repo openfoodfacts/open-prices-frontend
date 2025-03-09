@@ -37,7 +37,7 @@
           </template>
           <v-divider />
           <v-card-text>
-            <PriceInputRow class="mt-0" :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" :hideCurrencyChoice="true" @filled="priceFormFilled = $event" />
+            <PriceInputRow :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" :hideCurrencyChoice="true" @filled="priceFormFilled = $event" />
           </v-card-text>
         </v-card>
       </v-col>
