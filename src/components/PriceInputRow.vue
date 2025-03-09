@@ -50,7 +50,7 @@
       </v-row>
       <v-row class="mt-0">
         <v-col cols="6" class="pb-0">
-          <v-checkbox
+          <v-switch
             v-model="priceForm.price_is_discounted"
             density="compact"
             :label="$t('Common.Discount')"
