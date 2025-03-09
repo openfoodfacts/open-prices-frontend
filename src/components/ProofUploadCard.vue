@@ -29,6 +29,7 @@
             <v-switch
               v-model="proofForm.ready_for_price_tag_validation"
               density="compact"
+              color="success"
               :label="$t('ProofAdd.PriceValidationAllow')"
               :true-value="true"
               hide-details="auto"

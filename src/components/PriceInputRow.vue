@@ -53,6 +53,7 @@
           <v-switch
             v-model="priceForm.price_is_discounted"
             density="compact"
+            color="success"
             :label="$t('Common.Discount')"
             :true-value="true"
             hide-details="auto"

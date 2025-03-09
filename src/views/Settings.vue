@@ -131,7 +131,7 @@
           </h3>
           <v-switch
             v-model="appStore.user.drawer_display_experiments"
-            color="primary"
+            color="success"
             :label="$t('UserSettings.SideMenuExperimentsDisplay')"
             density="compact"
             hide-details="auto"
@@ -143,7 +143,7 @@
           <v-switch
             v-model="appStore.user.product_display_barcode"
             class="mb-4"
-            color="primary"
+            color="success"
             :label="$t('UserSettings.ProductDisplayBarcode')"
             :hint="$t('Common.ExampleWithColonAndValue', { value: '1234567890123' })"
             density="compact"
@@ -153,7 +153,7 @@
           <v-switch
             v-model="appStore.user.product_display_category_tag"
             class="mb-4"
-            color="primary"
+            color="success"
             :label="$t('UserSettings.ProductDisplayCategoryTag')"
             :hint="$t('Common.ExampleWithColonAndValue', { value: 'en:oranges' })"
             density="compact"
@@ -162,7 +162,7 @@
           />
           <v-switch
             v-model="appStore.user.product_display_source"
-            color="primary"
+            color="success"
             :label="$t('UserSettings.ProductDisplaySource')"
             :hint="$t('Common.ExampleWithColonAndValue', { value: 'OBF' })"
             density="compact"
@@ -175,7 +175,7 @@
           </h3>
           <v-switch
             v-model="appStore.user.location_display_osm_id"
-            color="primary"
+            color="success"
             :label="$t('UserSettings.LocationDisplayOSMID')"
             :hint="$t('Common.ExampleWithColonAndValue', { value: 'N652825274' })"
             density="compact"
