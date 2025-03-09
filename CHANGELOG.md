@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.124.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.124.0...v1.124.1) (2025-03-09)
+
+
+### Technical
+
+* **Forms:** add a red asterisk next to the required field labels ([#1443](https://github.com/openfoodfacts/open-prices-frontend/issues/1443)) ([1c304fd](https://github.com/openfoodfacts/open-prices-frontend/commit/1c304fd222b716b9b9b08bf5cb11f142e683bfd1))
+* **Price add:** change look & feel of input select fields ([#1444](https://github.com/openfoodfacts/open-prices-frontend/issues/1444)) ([b391117](https://github.com/openfoodfacts/open-prices-frontend/commit/b3911172e5909643d3f8214863cbb9d5920c61c0))
+* **Price add:** change look & feel of input text fields ([#1441](https://github.com/openfoodfacts/open-prices-frontend/issues/1441)) ([ce166c4](https://github.com/openfoodfacts/open-prices-frontend/commit/ce166c463397bfa19c8ab50ac28d08a5ac9ba12e))
+* simplify row & col in ProductInputRow & PriceInputRow ([4ccb34a](https://github.com/openfoodfacts/open-prices-frontend/commit/4ccb34a248f6a22ed510d00825bd715b9e4a7eec))
+
 ## [1.124.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.123.1...v1.124.0) (2025-03-09)
 
 
