@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="6">
-      <div class="text-subtitle-2">
+      <div class="text-subtitle-2 required">
         {{ $t('Common.Date') }}
       </div>
       <v-text-field
@@ -15,7 +15,7 @@
       />
     </v-col>
     <v-col cols="6">
-      <div class="text-subtitle-2">
+      <div class="text-subtitle-2 required">
         {{ $t('Common.Currency') }}
         <v-icon class="float-right" size="small" icon="mdi-information-outline" />
         <v-tooltip activator="parent" open-on-click location="top">
