@@ -32,6 +32,8 @@
       />
     </v-col>
   </v-row>
+
+  <!--Receipt-only fields: receipt_price_count, receipt_price_total, receipt_online_delivery_costs -->
   <v-row v-if="proofIsTypeReceipt" class="mt-0">
     <v-col cols="6">
       <div class="text-subtitle-2">
@@ -82,6 +84,17 @@
       />
     </v-col>
   </v-row>
+  <v-row v-if="proofIsTypeReceipt" class="mt-0">
+    <v-col cols="12" class="pb-0">
+      <v-checkbox
+        v-model="proofMetadataForm.owner_consumption"
+        density="compact"
+        :label="$t('Common.ReceiptOwnerConsumption')"
+        :true-value="true"
+        hide-details="auto"
+      />
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -100,6 +113,7 @@ export default {
         receipt_price_count: null,
         receipt_price_total: null,
         receipt_online_delivery_costs: null,
+        owner_consumption: true,
       })
     },
     proofType: {

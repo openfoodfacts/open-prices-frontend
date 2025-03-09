@@ -3,6 +3,7 @@
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <ProofChip v-if="showProofChip" class="mr-1" :proof="proof" :withLabel="showProofChip" :readonly="true" />
       <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
+      <ProofUserConsumptionChip v-if="showReceiptOwnerConsumption" class="mr-1" />
       <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" class="mr-1" :totalCount="proof.receipt_price_count" />
       <ProofReceiptPriceTotalChip v-if="showReceiptPriceTotal" class="mr-1" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
       <ProofReceiptOnlineDeliveryCostsChip v-if="showReceiptOnlineDeliveryCosts" class="mr-1" :price="proof.receipt_online_delivery_costs" :currency="proof.currency" />
@@ -28,6 +29,7 @@ export default {
   components: {
     ProofChip: defineAsyncComponent(() => import('../components/ProofChip.vue')),
     ProofTypeChip: defineAsyncComponent(() => import('../components/ProofTypeChip.vue')),
+    ProofUserConsumptionChip: defineAsyncComponent(() => import('../components/ProofUserConsumptionChip.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
     ProofReceiptOnlineDeliveryCostsChip: defineAsyncComponent(() => import('../components/ProofReceiptOnlineDeliveryCostsChip.vue')),
@@ -79,6 +81,9 @@ export default {
     },
     proofIsTypeReceipt() {
       return this.proof && this.proof.type === constants.PROOF_TYPE_RECEIPT
+    },
+    showReceiptOwnerConsumption() {
+      return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.owner_consumption
     },
     showReceiptPriceCount() {
       return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.receipt_price_count
