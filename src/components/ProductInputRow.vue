@@ -22,10 +22,14 @@
   </v-row>
   <v-row v-else-if="mode === 'edit' && productIsTypeCategory" class="mt-0">
     <v-col cols="6">
+      <div class="text-subtitle-2">
+        {{ $t('AddPriceSingle.ProductInfo.CategoryLabel') }}
+      </div>
       <v-autocomplete
         v-model="productForm.category_tag"
-        density="comfortable"
-        :label="$t('AddPriceSingle.ProductInfo.CategoryLabel')"
+        :class="productForm.category_tag ? 'outline-border-success' : 'outline-border-error'"
+        density="compact"
+        variant="outlined"
         :items="categoryTags"
         :item-title="item => item.name"
         :item-value="item => item.id"
@@ -33,10 +37,13 @@
       />
     </v-col>
     <v-col cols="6">
+      <div class="text-subtitle-2">
+        {{ $t('AddPriceSingle.ProductInfo.OriginLabel') }}
+      </div>
       <v-autocomplete
         v-model="productForm.origins_tags"
-        density="comfortable"
-        :label="$t('AddPriceSingle.ProductInfo.OriginLabel')"
+        density="compact"
+        variant="outlined"
         :items="originTags"
         :item-title="item => item.name"
         :item-value="item => item.id"
