@@ -4,7 +4,7 @@ import constants from '../constants'
 
 const PRICE_UPDATE_FIELDS = ['type', 'category_tag', 'labels_tags', 'origins_tags', 'price', 'price_is_discounted', 'price_without_discount', 'discount_type', 'price_per', 'currency', 'receipt_quantity', 'date']
 const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'location_id', 'location_osm_id', 'location_osm_type', 'proof_id'])
-const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency', 'receipt_price_count', 'receipt_price_total', 'owner_consumption', 'receipt_online_delivery_costs', 'ready_for_price_tag_validation']
+const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency', 'receipt_price_count', 'receipt_price_total', 'receipt_online_delivery_costs', 'owner_consumption', 'ready_for_price_tag_validation']
 const PROOF_CREATE_FIELDS = PROOF_UPDATE_FIELDS.concat(['location_id', 'location_osm_id', 'location_osm_type'])  // 'file'
 const LOCATION_ONLINE_CREATE_FIELDS = ['type', 'website_url']
 const LOCATION_SEARCH_LIMIT = 10
@@ -134,11 +134,11 @@ export default {
       if (data.receipt_price_total) {
         formData.append('receipt_price_total', data.receipt_price_total)
       }
-      if (data.owner_consumption === true || data.owner_consumption === false) {
-        formData.append('owner_consumption', data.owner_consumption)
-      }
       if (data.receipt_online_delivery_costs) {
         formData.append('receipt_online_delivery_costs', data.receipt_online_delivery_costs)
+      }
+      if (data.owner_consumption === true || data.owner_consumption === false) {
+        formData.append('owner_consumption', data.owner_consumption)
       }
     }
     else if (data.type === constants.PROOF_TYPE_PRICE_TAG) {
