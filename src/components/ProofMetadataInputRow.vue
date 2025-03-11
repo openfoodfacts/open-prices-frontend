@@ -97,12 +97,12 @@
     </v-col>
   </v-row>
   <v-row class="mt-0">
-    <v-col v-if="!multiple && !displayOwnerCommentField" cols="12">
-      <a href="#" @click="displayOwnerCommentField = true">
+    <v-col v-if="!displayOwnerCommentField" cols="12">
+      <a class="fake-link" @click="displayOwnerCommentField = true">
         {{ $t('Common.AddComment') }}
       </a>
     </v-col>
-    <v-col v-else-if="!multiple" cols="12">
+    <v-col v-else cols="12">
       <div class="text-subtitle-2">
         {{ $t('Common.Comment') }}
       </div>
@@ -150,7 +150,7 @@ export default {
   },
   data() {
     return {
-      displayOwnerCommentField: false,
+      displayOwnerCommentField: null,  // see mounted
       currentDate: utils.currentDate(),
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
       LOCATION_TYPE_ONLINE_ICON: constants.LOCATION_TYPE_ONLINE_ICON,
@@ -193,6 +193,9 @@ export default {
         value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
       ]
     },
+  },
+  mounted() {
+    this.displayOwnerCommentField = !this.multiple && !!this.proofMetadataForm.owner_comment
   },
   methods: {
     fixComma(input) {
