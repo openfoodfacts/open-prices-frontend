@@ -23,9 +23,9 @@
         <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" />
         <LocationInputRow :locationForm="proofForm" />
         <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
-        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />
-        <v-row v-if="typePriceTagOnly && multiple" class="mt-0">
-          <v-col cols="12" class="pb-0">
+        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" />
+        <v-row v-if="typePriceTagOnly && multiple">
+          <v-col cols="12" class="pb-1">
             <v-switch
               v-model="proofForm.ready_for_price_tag_validation"
               density="compact"
@@ -146,6 +146,7 @@ export default {
         receipt_price_total: null,
         receipt_online_delivery_costs: null,
         owner_consumption: true,  // will be ignored if type is not receipt
+        owner_comment: null,
         ready_for_price_tag_validation: null,  // see initProofForm
         proof_id: null
       },

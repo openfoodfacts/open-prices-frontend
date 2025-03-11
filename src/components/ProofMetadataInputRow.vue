@@ -85,7 +85,7 @@
     </v-col>
   </v-row>
   <v-row v-if="proofIsTypeReceipt" class="mt-0">
-    <v-col cols="12" class="pb-0">
+    <v-col cols="12" class="pb-1">
       <v-switch
         v-model="proofMetadataForm.owner_consumption"
         density="compact"
@@ -93,6 +93,27 @@
         :label="$t('Common.ReceiptOwnerConsumption')"
         :true-value="true"
         hide-details="auto"
+      />
+    </v-col>
+  </v-row>
+  <v-row class="mt-0">
+    <v-col v-if="!multiple && !displayOwnerCommentField" cols="12">
+      <a href="#" @click="displayOwnerCommentField = true">
+        {{ $t('Common.AddComment') }}
+      </a>
+    </v-col>
+    <v-col v-else-if="!multiple" cols="12">
+      <div class="text-subtitle-2">
+        {{ $t('Common.Comment') }}
+      </div>
+      <v-textarea
+        v-model="proofMetadataForm.owner_comment"
+        rows="2"
+        density="compact"
+        variant="outlined"
+        type="text"
+        hide-details="auto"
+        clearable
       />
     </v-col>
   </v-row>
@@ -115,15 +136,21 @@ export default {
         receipt_price_total: null,
         receipt_online_delivery_costs: null,
         owner_consumption: true,
+        owner_comment: null,
       })
     },
     proofType: {
       type: String,
       default: null
     },
+    multiple: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
+      displayOwnerCommentField: false,
       currentDate: utils.currentDate(),
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
       LOCATION_TYPE_ONLINE_ICON: constants.LOCATION_TYPE_ONLINE_ICON,
