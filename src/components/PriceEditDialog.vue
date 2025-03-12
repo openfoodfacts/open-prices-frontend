@@ -74,6 +74,7 @@ export default {
         discount_type: null,
         currency: null,
         receipt_quantity: null,
+        owner_comment: null,
         // date: null,
       },
       productMode: null,

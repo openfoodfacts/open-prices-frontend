@@ -193,11 +193,6 @@ export default {
         location_osm_type: '',
         date: utils.currentDate(),
         currency: null,
-        receipt_price_count: null,
-        receipt_price_total: null,
-        receipt_online_delivery_costs: null,
-        owner_consumption: null,
-        owner_comment: null,
       },
       productPriceForm: {},
       productFormFilled: false,
@@ -223,6 +218,7 @@ export default {
         discount_type: null,
         currency: null,  // see initNewProductPriceForm
         receipt_quantity: null,
+        owner_comment: null,
       },
      }
   },

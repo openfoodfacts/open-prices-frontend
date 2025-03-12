@@ -93,6 +93,27 @@
       />
     </v-col>
   </v-row>
+  <v-row v-if="mode === 'edit'" class="mt-0">
+    <v-col v-if="!displayOwnerCommentField" cols="12">
+      <a class="fake-link" @click="displayOwnerCommentField = true">
+        {{ $t('Common.AddComment') }}
+      </a>
+    </v-col>
+    <v-col v-else cols="12">
+      <div class="text-subtitle-2">
+        {{ $t('Common.Comment') }}
+      </div>
+      <v-textarea
+        v-model="priceForm.owner_comment"
+        rows="2"
+        density="compact"
+        variant="outlined"
+        type="text"
+        hide-details="auto"
+        clearable
+      />
+    </v-col>
+  </v-row>
   <v-row v-else-if="mode === 'display'">
     <v-col cols="12">
       <v-alert
@@ -156,6 +177,7 @@ export default {
   emits: ['filled'],
   data() {
     return {
+      displayOwnerCommentField: null,  // see mounted
       changeCurrencyDialog: false,
       CATEGORY_PRICE_PER_LIST: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
@@ -206,6 +228,9 @@ export default {
     priceFormFilled(newPriceFormFilled, oldPriceFormFilled) {  // eslint-disable-line no-unused-vars
       this.$emit('filled', newPriceFormFilled)
     }
+  },
+  mounted() {
+    this.displayOwnerCommentField = !!this.priceForm.owner_comment
   },
   methods: {
     setCurrencyData(currency) {

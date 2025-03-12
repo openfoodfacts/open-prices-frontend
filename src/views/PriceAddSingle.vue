@@ -89,6 +89,7 @@ export default {
         discount_type: null,
         currency: null,  // see ProofUploadCard
         receipt_quantity: null,
+        owner_comment: null,
         location_id: null,
         location_osm_id: null,
         location_osm_type: '',
