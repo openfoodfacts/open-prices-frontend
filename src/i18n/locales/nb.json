@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "Om",
+		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "Tøm",
 		"Contributors": "Bidragsytere",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "Forbruk",
 		"Confirm": "Bekreft",

@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "जानकारी",
+		"AddComment": "Add a comment",
 		"AddPrice": "एक मूल्य जोड़े",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "नई कीमत जोड़ें",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "खाली करें",
 		"Contributors": "Contributors",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "Consumption",
 		"Confirm": "Confirm",

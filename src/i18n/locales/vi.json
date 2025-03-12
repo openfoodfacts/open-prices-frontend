@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "Giới thiệu",
+		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "Xóa",
 		"Contributors": "Người đóng góp",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "Tiêu thụ",
 		"Confirm": "Xác nhận",

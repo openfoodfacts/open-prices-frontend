@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "Na temat",
+		"AddComment": "Add a comment",
 		"AddPrice": "Dodaj cenę",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Dodaj nową cenę",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "Wyczyść",
 		"Contributors": "Współtwórcy",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "Konsumpcja",
 		"Confirm": "Potwierdź",

@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "O programu",
+		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "Počisti",
 		"Contributors": "Sodelavci",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "Poraba",
 		"Confirm": "Potrdi",

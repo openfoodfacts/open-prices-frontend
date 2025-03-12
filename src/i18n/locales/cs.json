@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "O aplikaci",
+		"AddComment": "Add a comment",
 		"AddPrice": "Přidat cenu",
 		"AddPrices": "Přidat ceny",
 		"AddNewPrice": "Přidat novou cenu",
@@ -198,6 +199,7 @@
 		"Chart": "Graf",
 		"Clear": "Vymazat",
 		"Contributors": "Přispěvatelé",
+		"Comment": "Comment",
 		"Community": "Komunita",
 		"Consumption": "Spotřeba",
 		"Confirm": "Potvrdit",
@@ -247,8 +249,8 @@
 		"DiscountTypeSeasonal": "Seasonal",
 		"DiscountTypeLoyaltyProgram": "Loyalty program",
 		"DiscountTypeExpiresSoon": "Expires soon",
-		"DiscountTypePickItYourself": "Pick it yourself",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypePickItYourself": "Vyberte si to sami",
+		"DiscountTypeSecondHand": "Z druhé ruky",
 		"DiscountTypeOther": "Ostatní",
 		"Example": "Příklad",
 		"Examples": "Příklady",
@@ -285,7 +287,7 @@
 		"LocationNotFound": "Poloha nenalezena",
 		"Map": "Mapa",
 		"Miscellaneous": "Ostatní",
-		"MobileApp": "Mobile app",
+		"MobileApp": "Mobilní aplikace",
 		"MyDashboard": "Můj ovládací panel",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje důkazy",
@@ -344,7 +346,7 @@
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofsAddedToday": "Doklady přidány dnes",
 		"ProofsToday": "Doklady dnes",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Doklad nenalezen",
 		"Public": "Veřejný",
 		"Quantity": "Množství",
 		"QuantityBought": "Zakoupené množství",
@@ -354,8 +356,8 @@
 		"Receipts": "Účtenky",
 		"ReceiptPriceCount": "Počet cen",
 		"ReceiptPriceTotal": "Celková částka",
-		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
-		"ReceiptOnlineDeliveryCosts": "Delivery costs",
+		"ReceiptOwnerConsumption": "Sledovat v panelu spotřeby",
+		"ReceiptOnlineDeliveryCosts": "Náklady na doručení",
 		"Recent": "Nedávné",
 		"Reuses": "Opakované použití",
 		"ReusesKnown": "Známá opakovaná použití",
@@ -386,8 +388,8 @@
 		"Today": "Dnes",
 		"Top": "Nahoru",
 		"Total": "Celkem",
-		"Truncate": "Truncate",
-		"Truncated": "Truncated",
+		"Truncate": "Zkrátit",
+		"Truncated": "Zkráceno",
 		"Type": "Typ",
 		"UnknownProduct": "Neznámý produkt",
 		"UnknownProductSource": "Neznámý zdroj produktu",
@@ -409,8 +411,8 @@
 		"ValidatePricesWithAI": "Ověřte ceny pomocí AI",
 		"View": "Zobrazit",
 		"Website": "Webová stránka",
-		"Year": "Year",
-		"Years": "Years",
+		"Year": "Rok",
+		"Years": "Let",
 		"Yes": "Ano",
 		"No": "Ne",
 		"Food": "Jídlo",
@@ -428,10 +430,10 @@
 		"FindBoundingBoxes": "Automaticky najít štítky",
 		"FindBoundingBoxesRunning": "Je spuštěna automatická detekce štítků. Čekejte prosím...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. Kolem štítků nakreslete čtverce",
+			"CheckLabels": "2. Zkontrolujte čitelnost štítků",
+			"SendLabels": "3. Odešlete štítky k automatickému zpracování",
+			"SendLabelsButton": "Odeslat štítky"
 		},
 		"PricesAlreadyAdded": "Ceny již byly přidány",
 		"PricesMarkedAsError": "Ceny označené jako chyba",
@@ -441,7 +443,7 @@
 		"GoToDashboard": "Přejděte na svůj ovládací panel",
 		"GoToProof": "Přejít na doklad",
 		"AddNewProof": "Add a new proof",
-		"NextProof": "Next proof",
+		"NextProof": "Další důkaz",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automaticky",
 		"ManualBoundingBoxSource": "ručně",
@@ -592,9 +594,9 @@
 		"ProductNotFound": "Produkt nebyl nalezen v Open Food Facts... Neváhejte ho přidat :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"HowToMultiple": "Všechny obrázky cenovek, které vyberete, by měly sdílet stejnou prodejnu a měly by být pořízeny ve stejný den.",
+		"HowToMultipleShort": "Obrázky by měly sdílet stejnou polohu a datum.",
+		"PriceValidationAllow": "Umožnit extrahování cen mých obrázků pomocí AI a ověření komunitou"
 	},
 	"ProofCard": {
 		"Proof": "Doklad",
@@ -617,7 +619,7 @@
 	"ProofDetail": {
 		"LoadMore": "Načíst další",
 		"Prices": "Ceny",
-		"ProofNotFound": "Proof not found",
+		"ProofNotFound": "Doklad nenalezen",
 		"Public": "Veřejný",
 		"Private": "Soukromý",
 		"Privacy": "Soukromí"
@@ -738,7 +740,7 @@
 			"Title": "Příspěvkový asistent"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Asistent pro ověření ceny"
 		},
 		"Challenge": {
 			"Title": "Výzva"
@@ -772,7 +774,7 @@
 		"Prices": "Ceny",
 		"PricesToday": "Ceny přidány dnes",
 		"PricesTotal": "Celkové ceny",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
+		"PricesLinkedToPriceTag": "Ceny spojené s cenovým štítkem",
 		"ProductsWithPrices": "Produkty s cenami",
 		"Title": "Statistiky",
 		"Products": "Produkty",
@@ -783,11 +785,11 @@
 		"WithProduct": "S produktem",
 		"WithProductBarcode": "S čárovým kódem produktu",
 		"WithProductCategory": "S kategorií produktů",
-		"WithDiscount": "With a discount",
+		"WithDiscount": "Se slevou",
 		"WithoutProduct": "Bez produktu",
 		"WithBarcode": "S čárovým kódem",
 		"WithCategory": "S kategorií",
-		"PricesProofsPerSource": "Prices and proofs per source",
+		"PricesProofsPerSource": "Ceny a doklady podle zdroje",
 		"LastUpdated": "Naposledy aktualizováno {date}"
 	},
 	"UserDashboard": {

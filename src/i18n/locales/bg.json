@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "Относно",
+		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "Изчисти",
 		"Contributors": "Сътрудници",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "Потребление",
 		"Confirm": "Потвърди",

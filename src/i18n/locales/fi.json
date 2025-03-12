@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "Tietoja",
+		"AddComment": "Add a comment",
 		"AddPrice": "Lisää hinta",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Lisää uusi hinta",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "Tyhjennä",
 		"Contributors": "Osallistujat",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "Kulutus",
 		"Confirm": "Vahvista",

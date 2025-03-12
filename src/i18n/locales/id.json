@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "Tentang",
+		"AddComment": "Add a comment",
 		"AddPrice": "Tambahkan harga",
 		"AddPrices": "Tambahkan harga",
 		"AddNewPrice": "Tambahkan harga baru",
@@ -198,6 +199,7 @@
 		"Chart": "Grafik",
 		"Clear": "Hapus",
 		"Contributors": "Kontributor",
+		"Comment": "Comment",
 		"Community": "Komunitas",
 		"Consumption": "Konsumsi",
 		"Confirm": "Konfirmasi",
