@@ -12,7 +12,7 @@
       <DateChip class="mr-1" :date="proof.date" :showErrorIfDateMissing="true" :readonly="readonly" />
       <CurrencyChip class="mr-1" :currency="proof.currency" :showErrorIfCurrencyMissing="true" :readonly="readonly" />
       <UserChip v-if="!hideProofOwner" class="mr-1" :username="proof.owner" :readonly="readonly" />
-      <ProofUserCommentChip v-if="proof.owner_comment" class="mr-1" :comment="proof.owner_comment" />
+      <UserCommentChip v-if="proof.owner_comment" class="mr-1" :comment="proof.owner_comment" />
       <RelativeDateTimeChip :dateTime="proof.created" />
     </v-col>
   </v-row>
@@ -39,7 +39,7 @@ export default {
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     CurrencyChip: defineAsyncComponent(() => import('../components/CurrencyChip.vue')),
     UserChip: defineAsyncComponent(() => import('../components/UserChip.vue')),
-    ProofUserCommentChip: defineAsyncComponent(() => import('../components/ProofUserCommentChip.vue')),
+    UserCommentChip: defineAsyncComponent(() => import('../components/UserCommentChip.vue')),
     RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
     ProofActionMenuButton: defineAsyncComponent(() => import('../components/ProofActionMenuButton.vue'))
   },
