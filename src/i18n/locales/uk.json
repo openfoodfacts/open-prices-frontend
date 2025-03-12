@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "Про додаток",
+		"AddComment": "Add a comment",
 		"AddPrice": "Додати ціну",
 		"AddPrices": "Додати ціни",
 		"AddNewPrice": "Додати нову ціну",
@@ -198,6 +199,7 @@
 		"Chart": "Графік",
 		"Clear": "Очистити",
 		"Contributors": "Співучасники",
+		"Comment": "Comment",
 		"Community": "Спільнота",
 		"Consumption": "Споживання",
 		"Confirm": "Підтвердити",
