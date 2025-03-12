@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "Apie",
+		"AddComment": "Add a comment",
 		"AddPrice": "Pridėti kainą",
 		"AddPrices": "Pridėti kainas",
 		"AddNewPrice": "Pridėti naują kainą",
@@ -198,6 +199,7 @@
 		"Chart": "Diagrama",
 		"Clear": "Clear",
 		"Contributors": "Contributors",
+		"Comment": "Comment",
 		"Community": "Bendruomenė",
 		"Consumption": "Vartojimas",
 		"Confirm": "Patvirtinti",
