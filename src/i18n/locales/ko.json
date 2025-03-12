@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "정보",
+		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "지우기",
 		"Contributors": "기여자",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "소비",
 		"Confirm": "확인",
