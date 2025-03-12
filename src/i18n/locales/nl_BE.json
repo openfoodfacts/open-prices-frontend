@@ -159,7 +159,7 @@
 	},
 	"Common": {
 		"About": "Over",
-		"AddComment": "Add a comment",
+		"AddComment": "Plaats een reactie",
 		"AddPrice": "Voeg een prijs toe",
 		"AddPrices": "Prijzen toevoegen",
 		"AddNewPrice": "Nieuwe prijs toevoegen",
@@ -199,7 +199,7 @@
 		"Chart": "Grafiek",
 		"Clear": "Wissen",
 		"Contributors": "Bijdragers",
-		"Comment": "Comment",
+		"Comment": "Reactie",
 		"Community": "Gemeenschap",
 		"Consumption": "Consumptie",
 		"Confirm": "Bevestig",
@@ -228,8 +228,8 @@
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Talen",
 		"Languages": "Talen",
-		"LatestPrices": "Laatste prijzen",
-		"LatestProofs": "Laatste bewijzen",
+		"LatestPrices": "Nieuwste prijzen",
+		"LatestProofs": "Nieuwste bewijzen",
 		"LoadMore": "Meer laden",
 		"Location": "Locatie",
 		"Locations": "Locaties",
@@ -490,7 +490,7 @@
 	},
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"ProofAdd": "Voeg een bewijs toe",
 		"SearchProduct": "Zoek naar een product",
 		"SettingsUpdated": "Instellingen bijgewerkt!",
@@ -502,7 +502,7 @@
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"LoadMore": "Meer laden",
 		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)"
 	},
@@ -551,7 +551,7 @@
 	},
 	"PriceList": {
 		"LoadMore": "Meer laden",
-		"Title": "Laatste prijzen"
+		"Title": "Nieuwste prijzen"
 	},
 	"PriceRules": {
 		"AmountRequired": "Prijs is vereist",
@@ -589,7 +589,7 @@
 	"ProductDetail": {
 		"AddPrice": "Voeg een prijs toe",
 		"CategoryNotFound": "Categorie niet gevonden...",
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"LoadMore": "Meer laden",
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
@@ -695,10 +695,10 @@
 			"Title": "Dashboard"
 		},
 		"LatestPrices": {
-			"Title": "Laatste prijzen"
+			"Title": "Nieuwste prijzen"
 		},
 		"LatestProofs": {
-			"Title": "Laatste bewijzen"
+			"Title": "Nieuwste bewijzen"
 		},
 		"MyPrices": {
 			"Title": "Mijn prijzen"
@@ -793,8 +793,8 @@
 		"LastUpdated": "Laatst bijgewerkt op {date}"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Laatste prijzen",
-		"LatestProofs": "Laatste bewijzen",
+		"LatestPrices": "Nieuwste prijzen",
+		"LatestProofs": "Nieuwste bewijzen",
 		"LoadMore": "Meer laden",
 		"MyDashboard": "Mijn dashboard",
 		"MyPrices": "Mijn prijzen",
@@ -806,7 +806,7 @@
 		"UserProofTotal": "{count} bewijzen"
 	},
 	"UserDetail": {
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"LoadMore": "Meer laden"
 	},
 	"UserList": {
