@@ -96,7 +96,7 @@
       />
     </v-col>
   </v-row>
-  <v-row class="mt-0">
+  <v-row v-if="!multiple" class="mt-0">
     <v-col v-if="!displayOwnerCommentField" cols="12">
       <a class="fake-link" @click="displayOwnerCommentField = true">
         {{ $t('Common.AddComment') }}
@@ -195,7 +195,7 @@ export default {
     },
   },
   mounted() {
-    this.displayOwnerCommentField = !this.multiple && !!this.proofMetadataForm.owner_comment
+    this.displayOwnerCommentField = !!this.proofMetadataForm.owner_comment
   },
   methods: {
     fixComma(input) {
