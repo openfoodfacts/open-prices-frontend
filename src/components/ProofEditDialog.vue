@@ -64,6 +64,7 @@ export default {
         receipt_price_total: null,
         receipt_online_delivery_costs: null,
         owner_consumption: null,
+        owner_comment: null,
       },
       loading: false
     }
