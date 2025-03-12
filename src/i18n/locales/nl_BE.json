@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "Over",
+		"AddComment": "Add a comment",
 		"AddPrice": "Voeg een prijs toe",
 		"AddPrices": "Prijzen toevoegen",
 		"AddNewPrice": "Nieuwe prijs toevoegen",
@@ -198,6 +199,7 @@
 		"Chart": "Grafiek",
 		"Clear": "Wissen",
 		"Contributors": "Bijdragers",
+		"Comment": "Comment",
 		"Community": "Gemeenschap",
 		"Consumption": "Consumptie",
 		"Confirm": "Bevestig",
