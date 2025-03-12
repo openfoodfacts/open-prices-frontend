@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "இதைப் பற்றி",
+		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "புதிய விலையைச் சேர்க்கவும்",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Contributors": "Contributors",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "Consumption",
 		"Confirm": "Confirm",
