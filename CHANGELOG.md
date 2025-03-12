@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.125.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.125.0...v1.125.1) (2025-03-12)
+
+
+### Bug Fixes
+
+* **Proofs:** hide the comment field on the multiple proof upload page. ref [#1446](https://github.com/openfoodfacts/open-prices-frontend/issues/1446) ([3ec2024](https://github.com/openfoodfacts/open-prices-frontend/commit/3ec2024cf06f70e6c102c4084ef54a688cd2d3fa))
+* **Proofs:** move up the comment field above the consumption toggle. ref [#1446](https://github.com/openfoodfacts/open-prices-frontend/issues/1446) ([2493be8](https://github.com/openfoodfacts/open-prices-frontend/commit/2493be870be4177134d97410f1c6222959d9b2e3))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1449](https://github.com/openfoodfacts/open-prices-frontend/issues/1449)) ([93f7ab3](https://github.com/openfoodfacts/open-prices-frontend/commit/93f7ab371f2f94a8bde88ff87b79a3752e6ec0a2))
+* **Proofs:** add GDPR_REQUEST to the type filter ([84c2f80](https://github.com/openfoodfacts/open-prices-frontend/commit/84c2f80033e849abf4a16aab43914de24de6181e))
+* **Proofs:** move the ready_for_price_tag_validation field to the ProofMetadataInputRow. ref [#1373](https://github.com/openfoodfacts/open-prices-frontend/issues/1373) ([b879d7e](https://github.com/openfoodfacts/open-prices-frontend/commit/b879d7e2efc357e9551e2d154335bbb15a4f0d46))
+
 ## [1.125.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.124.1...v1.125.0) (2025-03-12)
 
 
