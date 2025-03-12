@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "Hakkında",
+		"AddComment": "Add a comment",
 		"AddPrice": "Fiyat ekleyin",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Yeni bir fiyat ekle",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "Temizle",
 		"Contributors": "Katkıda bulunanlar",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "Tüketim",
 		"Confirm": "Onayla",
