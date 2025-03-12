@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "アプリについて",
+		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "新しい価格を追加",
@@ -198,6 +199,7 @@
 		"Chart": "Chart",
 		"Clear": "クリア",
 		"Contributors": "貢献者",
+		"Comment": "Comment",
 		"Community": "Community",
 		"Consumption": "消費",
 		"Confirm": "確定",
