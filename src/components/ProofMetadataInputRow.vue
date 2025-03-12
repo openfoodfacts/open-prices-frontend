@@ -84,18 +84,6 @@
       />
     </v-col>
   </v-row>
-  <v-row v-if="proofIsTypeReceipt" class="mt-0">
-    <v-col cols="12" class="pb-1">
-      <v-switch
-        v-model="proofMetadataForm.owner_consumption"
-        density="compact"
-        color="success"
-        :label="$t('Common.ReceiptOwnerConsumption')"
-        :true-value="true"
-        hide-details="auto"
-      />
-    </v-col>
-  </v-row>
   <v-row v-if="!multiple" class="mt-0">
     <v-col v-if="!displayOwnerCommentField" cols="12">
       <a class="fake-link" @click="displayOwnerCommentField = true">
@@ -114,6 +102,18 @@
         type="text"
         hide-details="auto"
         clearable
+      />
+    </v-col>
+  </v-row>
+  <v-row v-if="proofIsTypeReceipt" class="mt-0">
+    <v-col cols="12" class="pb-1">
+      <v-switch
+        v-model="proofMetadataForm.owner_consumption"
+        density="compact"
+        color="success"
+        :label="$t('Common.ReceiptOwnerConsumption')"
+        :true-value="true"
+        hide-details="auto"
       />
     </v-col>
   </v-row>
