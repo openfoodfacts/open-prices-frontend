@@ -24,18 +24,6 @@
         <LocationInputRow :locationForm="proofForm" />
         <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" />
-        <v-row v-if="typePriceTagOnly && multiple">
-          <v-col cols="12" class="pb-1">
-            <v-switch
-              v-model="proofForm.ready_for_price_tag_validation"
-              density="compact"
-              color="success"
-              :label="$t('ProofAdd.PriceValidationAllow')"
-              :true-value="true"
-              hide-details="auto"
-            />
-          </v-col>
-        </v-row>
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear

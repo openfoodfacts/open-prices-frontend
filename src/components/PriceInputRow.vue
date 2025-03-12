@@ -54,7 +54,7 @@
     </v-col>
   </v-row>
   <v-row v-if="mode === 'edit'" class="mt-0">
-    <v-col cols="6" class="pb-0">
+    <v-col cols="6" class="pb-1">
       <v-switch
         v-model="priceForm.price_is_discounted"
         density="compact"

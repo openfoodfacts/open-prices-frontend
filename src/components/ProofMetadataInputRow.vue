@@ -117,6 +117,18 @@
       />
     </v-col>
   </v-row>
+  <v-row v-if="proofIsTypePriceTag && multiple">
+    <v-col cols="12" class="pb-1">
+      <v-switch
+        v-model="proofMetadataForm.ready_for_price_tag_validation"
+        density="compact"
+        color="success"
+        :label="$t('ProofAdd.PriceValidationAllow')"
+        :true-value="true"
+        hide-details="auto"
+      />
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -137,6 +149,7 @@ export default {
         receipt_online_delivery_costs: null,
         owner_consumption: true,
         owner_comment: null,
+        ready_for_price_tag_validation: null,
       })
     },
     proofType: {
@@ -150,7 +163,7 @@ export default {
   },
   data() {
     return {
-      displayOwnerCommentField: null,  // see mounted
+      displayOwnerCommentField: null,  // see initProofMetadataForm
       currentDate: utils.currentDate(),
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
       LOCATION_TYPE_ONLINE_ICON: constants.LOCATION_TYPE_ONLINE_ICON,
@@ -164,6 +177,9 @@ export default {
     },
     userFavoriteCurrencies() {
       return this.appStore.getUserFavoriteCurrencies
+    },
+    proofIsTypePriceTag() {
+      return this.proofType === constants.PROOF_TYPE_PRICE_TAG
     },
     proofIsTypeReceipt() {
       return this.proofType === constants.PROOF_TYPE_RECEIPT
@@ -195,9 +211,12 @@ export default {
     },
   },
   mounted() {
-    this.displayOwnerCommentField = !!this.proofMetadataForm.owner_comment
+    this.initProofMetadataForm()
   },
   methods: {
+    initProofMetadataForm() {
+      this.displayOwnerCommentField = !!this.proofMetadataForm.owner_comment
+    },
     fixComma(input) {
       return input.replace(/,/g, '.')
     },
