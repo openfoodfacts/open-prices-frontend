@@ -159,6 +159,7 @@
 	},
 	"Common": {
 		"About": "O aplikaci",
+		"AddComment": "Add a comment",
 		"AddPrice": "Přidat cenu",
 		"AddPrices": "Přidat ceny",
 		"AddNewPrice": "Přidat novou cenu",
@@ -198,6 +199,7 @@
 		"Chart": "Graf",
 		"Clear": "Vymazat",
 		"Contributors": "Přispěvatelé",
+		"Comment": "Comment",
 		"Community": "Komunita",
 		"Consumption": "Spotřeba",
 		"Confirm": "Potvrdit",
