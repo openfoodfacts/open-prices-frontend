@@ -202,6 +202,7 @@ export default {
     { key: 'edit', value: 'Edit', icon: 'mdi-pencil' },
   ],
   USER_CONSUMPTION_ICON: 'mdi-cart-outline',
+  USER_COMMENT_ICON: 'mdi-comment-text-outline',
   // date regex
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
   DATE_YEAR_MONTH_REGEX_MATCH: /(\d{4})-(\d{2})/,
