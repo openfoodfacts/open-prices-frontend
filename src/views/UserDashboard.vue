@@ -156,12 +156,12 @@ export default {
     },
     getPriceParams() {
       let defaultParams = { owner: this.username }
-      defaultParams['proof__type'] = (this.currentTab === 'consumption') ? 'RECEIPT' : 'PRICE_TAG'
+      defaultParams['proof__type'] = (this.currentTab === 'consumption') ? ['RECEIPT', 'GDPR_REQUEST'] : ['PRICE_TAG', 'SHOP_IMPORT']
       return defaultParams
     },
     getProofParams() {
       let defaultParams = { owner: this.username }
-      defaultParams['type'] = (this.currentTab === 'consumption') ? 'RECEIPT' : 'PRICE_TAG'
+      defaultParams['type'] = (this.currentTab === 'consumption') ? ['RECEIPT', 'GDPR_REQUEST'] : ['PRICE_TAG', 'SHOP_IMPORT']
       return defaultParams
     },
   },
