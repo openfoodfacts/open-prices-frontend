@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.125.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.124.1...v1.125.0) (2025-03-12)
+
+
+### Features
+
+* **Prices:** display the new owner_comment field (form, chip, history) ([#1448](https://github.com/openfoodfacts/open-prices-frontend/issues/1448)) ([c6b2c71](https://github.com/openfoodfacts/open-prices-frontend/commit/c6b2c7192322f36ccc7377bf3dd179adefa994f8))
+* **Proofs:** display the new owner_comment field (form, chip, history) ([#1446](https://github.com/openfoodfacts/open-prices-frontend/issues/1446)) ([9ed2c7f](https://github.com/openfoodfacts/open-prices-frontend/commit/9ed2c7f287e0425765832c81acba4fc21be01133))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1445](https://github.com/openfoodfacts/open-prices-frontend/issues/1445)) ([c8fdf51](https://github.com/openfoodfacts/open-prices-frontend/commit/c8fdf51b2fa6dea4811862550a1cf76cb4d1b5d2))
+
 ## [1.124.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.124.0...v1.124.1) (2025-03-09)
 
 
