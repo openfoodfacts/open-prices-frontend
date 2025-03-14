@@ -36,9 +36,9 @@ export default {
   computed: {
     proofTypeList() {
       if (this.hideProofTypeReceiptChoice) {
-        return constants.PROOF_TYPE_LIST.filter(pt => pt.key !== constants.PROOF_TYPE_RECEIPT)
+        return constants.PROOF_TYPE_LIST.filter(pt => pt.key === constants.PROOF_TYPE_PRICE_TAG)
       }
-      return constants.PROOF_TYPE_LIST
+      return constants.PROOF_TYPE_LIST.filter(pt => [constants.PROOF_TYPE_PRICE_TAG, constants.PROOF_TYPE_RECEIPT].includes(pt.key))
     }
   }
 }
