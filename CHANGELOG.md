@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.125.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.125.1...v1.125.2) (2025-03-14)
+
+
+### Bug Fixes
+
+* **Proofs:** hide GDPR_REQUEST from ProofUploadCard type choices ([d365ebd](https://github.com/openfoodfacts/open-prices-frontend/commit/d365ebdb6cd8cce42fe6c5556ba7467a789b7f93))
+
 ## [1.125.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.125.0...v1.125.1) (2025-03-12)
 
 
