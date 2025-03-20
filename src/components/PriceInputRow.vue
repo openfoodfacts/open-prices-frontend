@@ -89,6 +89,7 @@
         type="text"
         inputmode="decimal"
         :rules="receiptQuantityRules"
+        :suffix="receiptQuantitySuffix"
         hide-details="auto"
       />
     </v-col>
@@ -194,6 +195,12 @@ export default {
     hasCategoryTag() {
       return !!this.categoryTag
     },
+    productIsTypeCategory() {
+      return this.priceForm && this.priceForm.type === constants.PRICE_TYPE_CATEGORY
+    },
+    proofIsTypeReceipt() {
+      return this.proofType === constants.PROOF_TYPE_RECEIPT
+    },
     priceRules() {
       return [
         value => !!value && !!value.trim() || this.$t('PriceRules.AmountRequired'),
@@ -212,11 +219,13 @@ export default {
         value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
       ]
     },
-    productIsTypeCategory() {
-      return this.priceForm && this.priceForm.type === constants.PRICE_TYPE_CATEGORY
-    },
-    proofIsTypeReceipt() {
-      return this.proofType === constants.PROOF_TYPE_RECEIPT
+    receiptQuantitySuffix() {
+      if (this.proofIsTypeReceipt) {
+        if (this.priceForm.price_per === 'KILOGRAM') {
+          return this.$t('Common.UnitKilogram')
+        }
+      }
+      return null
     },
     priceFormFilled() {
       let keysProduct = ['price', 'currency']
