@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.126.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.125.2...v1.126.0) (2025-03-20)
+
+
+### Features
+
+* **Prices:** allow editing receipt quantity field ([#1453](https://github.com/openfoodfacts/open-prices-frontend/issues/1453)) ([6d91efa](https://github.com/openfoodfacts/open-prices-frontend/commit/6d91efaa51912c8f7e26bff7f6face1403902667))
+* **Prices:** display a suffix next to the receipt quantity field (kg) ([#1455](https://github.com/openfoodfacts/open-prices-frontend/issues/1455)) ([e4b8b96](https://github.com/openfoodfacts/open-prices-frontend/commit/e4b8b968d83545a6b80dc23d1f788ea03dfd61a7))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1451](https://github.com/openfoodfacts/open-prices-frontend/issues/1451)) ([b801d6c](https://github.com/openfoodfacts/open-prices-frontend/commit/b801d6cffa429f9f505e8eda46fa772aaff5b04f))
+
 ## [1.125.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.125.1...v1.125.2) (2025-03-14)
 
 
