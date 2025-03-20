@@ -19,7 +19,7 @@
 
       <v-card-text>
         <ProductInputRow v-if="productIsTypeCategory" :productForm="updatePriceForm" :hideBarcodeMode="true" />
-        <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :hideCurrencyChoice="true" />
+        <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :proofType="price.proof ? price.proof.type : null" :hideCurrencyChoice="true" />
       </v-card-text>
 
       <v-divider />
