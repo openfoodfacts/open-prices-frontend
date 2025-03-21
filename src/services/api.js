@@ -14,14 +14,19 @@ const OP_DEFAULT_HEADERS = {
   'Content-Type': 'application/json'
 }
 const OP_DEFAULT_PARAMS = {
-  'app_name': constants.APP_USER_AGENT
+  'app_name': constants.APP_USER_AGENT,
   // 'app_version'
   // 'app_platform'
   // 'app_page'  // filled with the page url
 }
 
 function buildURLParams(params = {}) {
-  return new URLSearchParams({...OP_DEFAULT_PARAMS, ...params})
+  // first merge with OP default params
+  const allParams = {...OP_DEFAULT_PARAMS, ...params}
+  // flatten params to allow multiple entries for the same key
+  const flattenAllParams = Object.entries(allParams).flatMap(([key, values]) => Array.isArray(values) ? values.map((value) => [key, value]) : [[key, values]])
+  // build search params
+  return new URLSearchParams(flattenAllParams)
 }
 
 function filterBodyWithAllowedKeys(data, allowedKeys) {

@@ -5,71 +5,100 @@
     </v-col>
   </v-row>
 
-  <v-row>
-    <v-col v-if="displayTodayStats" cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="userTodayPriceCount" :subtitle="$t('Common.PricesToday')" />
-    </v-col>
-    <v-col v-if="displayTodayStats" cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="userTodayProofCount" :subtitle="$t('Common.ProofsToday')" />
-    </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="userPriceCount" :subtitle="$t('Common.Prices')" to="/dashboard/prices" />
-    </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="userProofCount" :subtitle="$t('Common.Proofs')" to="/dashboard/proofs" />
-    </v-col>
-  </v-row>
+  <v-tabs v-if="user" v-model="currentTab" :grow="!$vuetify.display.smAndUp">
+    <v-tab v-for="item in tabItems" :key="item.key" :value="item.key">
+      <v-icon start>
+        {{ item.icon }}
+      </v-icon>
+      {{ $t('Common.' + item.value) }}
+    </v-tab>
+  </v-tabs>
 
   <br>
 
-  <v-row>
-    <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
-      <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
-    </v-col>
-    <v-col cols="12" sm="6" md="4" xl="3" align="center">
-      <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
-      <br v-if="$vuetify.display.smAndUp">
-      <v-btn
-        v-if="userPriceList.length"
-        color="primary"
-        :block="!$vuetify.display.smAndUp"
-        to="/dashboard/prices"
-        prepend-icon="mdi-tag-multiple-outline"
-        append-icon="mdi-arrow-right"
-      >
-        {{ $t('UserDashboard.MyPrices') }}
-      </v-btn>
-    </v-col>
-  </v-row>
+  <v-tabs-window v-if="user" v-model="currentTab" disabled>
+    <v-tabs-window-item value="consumption">
+      <v-row v-if="displayTodayStats">
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userTodayConsumptionPriceCount" :subtitle="$t('Common.PricesToday')" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userTodayConsumptionProofCount" :subtitle="$t('Common.ProofsToday')" />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userConsumptionPriceCount" :subtitle="$t('Common.Prices')" to="/dashboard/prices" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userConsumptionProofCount" :subtitle="$t('Common.Proofs')" to="/dashboard/proofs" />
+        </v-col>
+      </v-row>
 
-  <v-snackbar
-    v-model="singleSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('Common.PriceCreated') }}
-  </v-snackbar>
-  <v-snackbar
-    v-model="multipleSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('Common.Thanks') }}
-  </v-snackbar>
-  <v-snackbar
-    v-model="proofSingleSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('ProofCreate.Success') }}
-  </v-snackbar>
-  <v-snackbar
-    v-model="settingsSuccessMessage"
-    color="success"
-    :timeout="2000"
-  >
-    {{ $t('Home.SettingsUpdated') }}
-  </v-snackbar>
+      <br>
+
+      <v-row>
+        <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
+          <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+        </v-col>
+        <v-col cols="12" sm="6" md="4" xl="3" align="center">
+          <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
+          <br v-if="$vuetify.display.smAndUp">
+          <v-btn
+            v-if="userConsumptionPriceList.length"
+            color="primary"
+            :block="!$vuetify.display.smAndUp"
+            to="/dashboard/prices"
+            prepend-icon="mdi-tag-multiple-outline"
+            append-icon="mdi-arrow-right"
+          >
+            {{ $t('UserDashboard.MyPrices') }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-tabs-window-item>
+
+    <v-tabs-window-item value="community">
+      <v-row v-if="displayTodayStats">
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userTodayCommunityPriceCount" :subtitle="$t('Common.PricesToday')" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userTodayCommunityProofCount" :subtitle="$t('Common.ProofsToday')" />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userCommunityPriceCount" :subtitle="$t('Common.Prices')" to="/dashboard/prices" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userCommunityProofCount" :subtitle="$t('Common.Proofs')" to="/dashboard/proofs" />
+        </v-col>
+      </v-row>
+
+      <br>
+
+      <v-row>
+        <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
+          <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+        </v-col>
+        <v-col cols="12" sm="6" md="4" xl="3" align="center">
+          <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
+          <br v-if="$vuetify.display.smAndUp">
+          <v-btn
+            v-if="userConsumptionPriceList.length"
+            color="primary"
+            :block="!$vuetify.display.smAndUp"
+            to="/dashboard/prices"
+            prepend-icon="mdi-tag-multiple-outline"
+            append-icon="mdi-arrow-right"
+          >
+            {{ $t('UserDashboard.MyPrices') }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-tabs-window-item>
+  </v-tabs-window>
 </template>
 
 <script>
@@ -77,6 +106,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
@@ -89,17 +119,20 @@ export default {
     return {
       // data
       user: null,
-      userPriceCount: null,
-      userTodayPriceCount: 0,
-      userProofCount: null,
-      userTodayProofCount: 0,
-      userPriceList: [],
+      userConsumptionPriceCount: null,
+      userCommunityPriceCount: null,
+      userTodayConsumptionPriceCount: 0,
+      userTodayCommunityPriceCount: 0,
+      userConsumptionProofCount: null,
+      userCommunityProofCount: null,
+      userTodayConsumptionProofCount: 0,
+      userTodayCommunityProofCount: 0,
+      userConsumptionPriceList: [],
+      userCommunityPriceList: [],
       loading: false,
-      // success messages
-      singleSuccessMessage: false,
-      multipleSuccessMessage: false,
-      proofSingleSuccessMessage: false,
-      settingsSuccessMessage: false,
+      // config
+      currentTab: null,  // see mounted
+      tabItems: constants.USER_DASHBOARD_TAB_LIST,
     }
   },
   computed: {
@@ -108,36 +141,44 @@ export default {
       return this.appStore.user.username
     },
     displayTodayStats() {
-      return (this.userTodayPriceCount > 0) || (this.userTodayProofCount > 0)
+      if (this.currentTab === 'consumption') {
+        return (this.userTodayConsumptionPriceCount > 0) || (this.userTodayConsumptionProofCount > 0)
+      }
+      // community
+      return (this.userTodayCommunityPriceCount > 0) || (this.userTodayCommunityProofCount > 0)
     },
     displayedPriceList() {
-      if (!this.$vuetify.display.smAndUp) {
-        return this.userPriceList.slice(0, 5)
-      } else {
-        return this.userPriceList
+      if (this.currentTab === 'consumption') {
+        return (!this.$vuetify.display.smAndUp) ? this.userConsumptionPriceList.slice(0, 5) : this.userConsumptionPriceList
+      }
+      // community
+      return (!this.$vuetify.display.smAndUp) ? this.userCommunityPriceList.slice(0, 5) : this.userCommunityPriceList
+    },
+    getPriceParams() {
+      let defaultParams = { owner: this.username }
+      defaultParams['proof__type'] = (this.currentTab === 'consumption') ? ['RECEIPT', 'GDPR_REQUEST'] : ['PRICE_TAG', 'SHOP_IMPORT']
+      return defaultParams
+    },
+    getProofParams() {
+      let defaultParams = { owner: this.username }
+      defaultParams['type'] = (this.currentTab === 'consumption') ? ['RECEIPT', 'GDPR_REQUEST'] : ['PRICE_TAG', 'SHOP_IMPORT']
+      return defaultParams
+    },
+  },
+  watch: {
+    currentTab(newTab, oldTab) {  // eslint-disable-line no-unused-vars
+      this.$router.push({ query: { [constants.TAB_PARAM]: newTab } })
+    },
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initTabData()
       }
     }
   },
   mounted() {
+    this.currentTab = this.$route.query[constants.TAB_PARAM] || this.currentTab
     this.getUser()
-    this.getUserPrices()
-    this.getUserProofCount()
-    // success messages
-    if (Object.keys(this.$route.query).length) {
-      if (this.$route.query.singleSuccess === 'true') {
-        this.singleSuccessMessage = true
-      }
-      if (this.$route.query.multipleSuccess === 'true') {
-        this.multipleSuccessMessage = true
-      }
-      if (this.$route.query.proofSingleSuccess === 'true') {
-        this.proofSingleSuccessMessage = true
-      }
-      if (this.$route.query.settingsSuccess === 'true') {
-        this.settingsSuccessMessage = true
-      }
-      this.$router.replace({ query: {} })
-    }
+    this.initTabData()
   },
   methods: {
     getUser() {
@@ -148,13 +189,22 @@ export default {
           this.loading = false
         })
     },
+    initTabData() {
+      this.getUserPrices()
+      this.getUserProofCount()
+    },
     getUserPrices() {
       this.loading = true
-      const params = { owner: this.username, size: 25 }
+      const params = {...this.getPriceParams, size: 25 }
       return api.getPrices(params)
         .then((data) => {
-          this.userPriceList = data.items
-          this.userPriceCount = data.total
+          if (this.currentTab === 'consumption') {
+            this.userConsumptionPriceList = data.items
+            this.userConsumptionPriceCount = data.total
+          } else {
+            this.userCommunityPriceList = data.items
+            this.userCommunityPriceCount = data.total
+          }
           this.loading = false
           // check if the user added a price today
           if (data.items.length && data.items[0].created > utils.currentStartOfDay()) {
@@ -164,32 +214,48 @@ export default {
     },
     getUserPriceCount(today=false) {
       this.loading = true
-      const params = { owner: this.username, size: 1 }
+      const params = {...this.getPriceParams, size: 1 }
       if (today) {
         params.created__gte = utils.currentStartOfDay()
       }
       return api.getPrices(params)
         .then((data) => {
           if (today) {
-            this.userTodayPriceCount = data.total
+            if (this.currentTab === 'consumption') {
+              this.userTodayConsumptionPriceCount = data.total
+            } else {
+              this.userTodayCommunityPriceCount = data.total
+            }
           } else {
-            this.userPriceCount = data.total
+            if (this.currentTab === 'consumption') {
+              this.userConsumptionPriceCount = data.total
+            } else {
+              this.userCommunityPriceCount = data.total
+            }
           }
           this.loading = false
         })
     },
     getUserProofCount(today=false) {
       this.loading = true
-      const params = { owner: this.username, size: 1 }
+      const params = {...this.getProofParams, size: 1 }
       if (today) {
         params.created__gte = utils.currentStartOfDay()
       }
       return api.getProofs(params)
         .then((data) => {
           if (today) {
-            this.userTodayProofCount = data.total
+            if (this.currentTab === 'consumption') {
+              this.userTodayConsumptionProofCount = data.total
+            } else {
+              this.userTodayCommunityProofCount = data.total
+            }
           } else {
-            this.userProofCount = data.total
+            if (this.currentTab === 'consumption') {
+              this.userConsumptionProofCount = data.total
+            } else {
+              this.userCommunityProofCount = data.total
+            }
             // check if the user added a proof today
             if (data.items.length && data.items[0].created > utils.currentStartOfDay()) {
               this.getUserProofCount(true)
