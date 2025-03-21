@@ -163,7 +163,8 @@
 			"UPCOMING": "Upcoming",
 			"ONGOING": "Ongoing",
 			"COMPLETED": "Completed"
-		}
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later !"
 	},
 	"Common": {
 		"About": "About",

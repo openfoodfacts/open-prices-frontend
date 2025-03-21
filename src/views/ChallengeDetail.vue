@@ -1,4 +1,9 @@
 <template>
+  <v-row v-if="!challenge && !loading">
+    <v-col cols="12" md="6">
+      {{ $t('Challenge.NoChallengeCurrentlyOngoing') }}
+    </v-col>
+  </v-row>
   <v-row v-if="challenge">
     <v-col cols="12" md="6">
       <p class="mb-2">
@@ -86,9 +91,11 @@ export default {
       api.getChallenges(params)
       .then((data) => {
         this.loading = false
-        this.challenge = data.items[0]
-        this.getStats()
-        this.getLatestPrices()
+        if (data.items.length) {
+          this.challenge = data.items[0]
+          this.getStats()
+          this.getLatestPrices()
+        }
       })
     },
     getStats() {
