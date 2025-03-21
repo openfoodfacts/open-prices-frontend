@@ -50,8 +50,7 @@ export default {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
-    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
-    // ChallengeCard: defineAsyncComponent(() => import('../components/ChallengeCard.vue'))
+    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue'))
   },
   data() {
     return {
@@ -59,10 +58,9 @@ export default {
       challengeTotal: null,
       challengePage: 0,
       loading: false,
-      // filter & order
       currentFilter: '',
       currentType: '',
-      currentOrder: 'id',  // created first
+      currentOrder: 'id',
     }
   },
   computed: {
@@ -116,12 +114,10 @@ export default {
     toggleChallengeFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
-      // this.initChallengeList() will be called in watch $route
     },
     toggleChallengeType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initChallengeList() will be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
