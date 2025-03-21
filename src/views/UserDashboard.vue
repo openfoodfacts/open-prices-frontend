@@ -5,7 +5,7 @@
     </v-col>
   </v-row>
 
-  <v-tabs v-if="user" v-model="currentTab">
+  <v-tabs v-if="user" v-model="currentTab" :grow="!$vuetify.display.smAndUp">
     <v-tab v-for="item in tabItems" :key="item.key" :value="item.key">
       <v-icon start>
         {{ item.icon }}
