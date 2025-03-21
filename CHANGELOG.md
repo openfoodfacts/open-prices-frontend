@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.127.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.126.0...v1.127.0) (2025-03-21)
+
+
+### Features
+
+* **User Dashboard:** start splitting data between consumption & community ([#1402](https://github.com/openfoodfacts/open-prices-frontend/issues/1402)) ([ea4dbb0](https://github.com/openfoodfacts/open-prices-frontend/commit/ea4dbb0b84cad5b5101aae5fbbe493c26a7b5fbd))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1457](https://github.com/openfoodfacts/open-prices-frontend/issues/1457)) ([ab68715](https://github.com/openfoodfacts/open-prices-frontend/commit/ab68715912694f406edc2b5e160767f7791140e2))
+
 ## [1.126.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.125.2...v1.126.0) (2025-03-20)
 
 
