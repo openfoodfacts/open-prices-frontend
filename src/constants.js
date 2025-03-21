@@ -146,6 +146,9 @@ export default {
   USER_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterUserWithPriceCountHide' },
   ],
+  CHALLENGE_FILTER_LIST: [
+    { key: 'show_all_status', value: 'FilterChallengesShowAllStatus' }
+  ],
   // order
   PRODUCT_ORDER_LIST: [
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
