@@ -155,7 +155,15 @@
 		"PricesAdded": "{challenge_title} pridėtos kainos",
 		"PricesByYou": "{challenge_title} jūsų kainos",
 		"PricesAddedByYou": "{challenge_title} kainos, kurias pridėjote jūs",
-		"MostRecentContributions": "Naujausi įnašai"
+		"MostRecentContributions": "Naujausi įnašai",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
 	},
 	"Common": {
 		"About": "Apie",
@@ -265,6 +273,7 @@
 		"Edit": "Redaguoti",
 		"End": "Pabaiga",
 		"Filter": "Filtras",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "Su kaina",
 		"FilterProductWithPriceCountHide": "Slėpti produktus su kainomis",
 		"FilterProductWithoutPriceCount": "Be kainų",
@@ -755,6 +764,9 @@
 		},
 		"Challenge": {
 			"Title": "Iššūkis"
+		},
+		"Challenges": {
+			"Title": "Iššūkiai"
 		},
 		"CommunityChallenge": {
 			"Title": "Bendruomenės iššūkis"
