@@ -1,5 +1,10 @@
 <template>
-  <v-row>
+  <v-row v-if="!challenge && !loading">
+    <v-col cols="12" md="6">
+      {{ $t('Challenge.NoChallengeCurrentlyOngoing') }}
+    </v-col>
+  </v-row>
+  <v-row v-if="challenge">
     <v-col cols="12" md="6">
       <p class="mb-2">
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
@@ -13,7 +18,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row v-if="challenge">
     <v-col cols="12" md="6">
       <ChallengeTakePicturesCard :challenge="challenge" />
     </v-col>
@@ -22,7 +27,7 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="challenge.latestContributions.length">
+  <v-row v-if="challenge?.latestContributions?.length">
     <v-col cols="12">
       <h2 class="text-h6">
         {{ $t('Challenge.MostRecentContributions') }}
@@ -38,7 +43,6 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import Challenge from '../data/challenges.json'
 import api from '../services/api.js'
 import utils from '../utils.js'
 
@@ -53,6 +57,7 @@ export default {
   data() {
     return {
       loading: false,
+      challenge: null
     }
   },
   computed: {
@@ -60,24 +65,39 @@ export default {
     username() {
       return this.appStore.user.username
     },
-    challenge() {
-      return Challenge[0]
-    },
     startDateMidnight() {
-      return utils.dateStartOfDay(this.challenge.startDate)
+      return utils.dateStartOfDay(this.challenge.start_date)
     },
     endDateMidnight() {
-      return utils.dateEndOfDay(this.challenge.endDate)
+      return utils.dateEndOfDay(this.challenge.end_date)
     },
     defaultParams() {
       return { created__gte: this.startDateMidnight, created__lte: this.endDateMidnight }
     }
   },
   mounted() {
-    this.getStats()
-    this.getLatestPrices()
+    this.getChallenge()
   },
   methods: {
+    getChallenge() {
+      this.loading = true
+      let params = {}
+      if (this.$route.params.id) {
+        params.id = this.$route.params.id
+      } else {
+        // No id specified, get the current challenge
+        params.status = "ONGOING"
+      }
+      api.getChallenges(params)
+      .then((data) => {
+        this.loading = false
+        if (data.items.length) {
+          this.challenge = data.items[0]
+          this.getStats()
+          this.getLatestPrices()
+        }
+      })
+    },
     getStats() {
       this.loading = true
       api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0] })

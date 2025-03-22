@@ -42,7 +42,6 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import Challenge from '../data/challenges.json'
 import api from '../services/api'
 import constants from '../constants'
 import utils from '../utils.js'
@@ -62,15 +61,13 @@ export default {
       todayPriceCount: null,
       totalPriceCount: null,
       loading: false,
+      currentChallenge: null,
     }
   },
   computed: {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
-    },
-    currentChallenge() {
-      return Challenge.filter(c => utils.isBetweenTwoDates(c.startDate, c.endDate))[0]
     },
     getApiSize() {
       if (!this.$vuetify.display.smAndUp) return 5
@@ -80,8 +77,15 @@ export default {
   mounted() {
     this.getPrices()
     this.getTodayPriceCount()
+    this.getCurrentChallenge()
   },
   methods: {
+    getCurrentChallenge() {
+      api.getChallenges({ status: "ONGOING", size: 1 })
+      .then((data) => {
+        this.currentChallenge = data.items[0]
+      })
+    },
     getPrices() {
       this.loading = true
       return api.getPrices({ size: this.getApiSize })

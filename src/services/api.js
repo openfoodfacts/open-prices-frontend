@@ -416,6 +416,14 @@ export default {
     .then((response) => response.json())
   },
 
+  getChallenges(params = {}) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/challenges?${buildURLParams({...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
 
   /**
    * OPEN FOOD FACTS API
