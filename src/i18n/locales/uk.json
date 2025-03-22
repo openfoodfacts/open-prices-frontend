@@ -155,7 +155,15 @@
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} ціни від вас",
 		"PricesAddedByYou": "{challenge_title} prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"MostRecentContributions": "Most recent contributions",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
 	},
 	"Common": {
 		"About": "Про додаток",
@@ -201,11 +209,11 @@
 		"Contributors": "Співучасники",
 		"Comment": "Коментар",
 		"Community": "Спільнота",
-		"CommunityPrices": "Community prices",
-		"CommunityProofs": "Community proofs",
+		"CommunityPrices": "Соціальні ціни",
+		"CommunityProofs": "Докази спільноти",
 		"Consumption": "Споживання",
-		"ConsumptionPrices": "Consumption prices",
-		"ConsumptionProofs": "Consumption proofs",
+		"ConsumptionPrices": "Ціни споживання",
+		"ConsumptionProofs": "Докази споживання",
 		"Confirm": "Підтвердити",
 		"Country": "Країна",
 		"Countries": "Країн",
@@ -265,6 +273,7 @@
 		"Edit": "Редагувати",
 		"End": "Кінець",
 		"Filter": "Фільтр",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "З ціною",
 		"FilterProductWithPriceCountHide": "Приховати товари з цінами",
 		"FilterProductWithoutPriceCount": "Без цін",
@@ -293,7 +302,7 @@
 		"Map": "Мапа",
 		"Miscellaneous": "Різне",
 		"MobileApp": "Мобільний додаток",
-		"MyConsumption": "My consumption",
+		"MyConsumption": "Моє споживання",
 		"MyDashboard": "Моя панель",
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
@@ -316,7 +325,7 @@
 		"OrderProofDateDESC": "Дата підтвердження",
 		"OrderUserCountDESC": "Кількість користувачів",
 		"Other": "Інше",
-		"OtherContributions": "Other contributions",
+		"OtherContributions": "Інші внески",
 		"PersonalInfo": "Особиста інформація",
 		"Physical": "Фізичний",
 		"Picture": "Зображення",
@@ -755,6 +764,9 @@
 		},
 		"Challenge": {
 			"Title": "Challenge"
+		},
+		"Challenges": {
+			"Title": "Challenges"
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"

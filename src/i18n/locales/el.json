@@ -155,7 +155,15 @@
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "{challenge_title} prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"MostRecentContributions": "Most recent contributions",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
 	},
 	"Common": {
 		"About": "Σχετικά",
@@ -265,6 +273,7 @@
 		"Edit": "Επεξεργασία",
 		"End": "End",
 		"Filter": "Φίλτρο",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
@@ -755,6 +764,9 @@
 		},
 		"Challenge": {
 			"Title": "Challenge"
+		},
+		"Challenges": {
+			"Title": "Challenges"
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"

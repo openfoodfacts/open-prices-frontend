@@ -155,7 +155,15 @@
 		"PricesAdded": "Ceny {challenge_title} přidány",
 		"PricesByYou": "Ceny {challenge_title} od vás",
 		"PricesAddedByYou": "Ceny {challenge_title} byly vámi přidány",
-		"MostRecentContributions": "Nejnovější příspěvky"
+		"MostRecentContributions": "Nejnovější příspěvky",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
 	},
 	"Common": {
 		"About": "O aplikaci",
@@ -265,6 +273,7 @@
 		"Edit": "Upravit",
 		"End": "Konec",
 		"Filter": "Filtr",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "S cenou",
 		"FilterProductWithPriceCountHide": "Skrýt produkty s cenami",
 		"FilterProductWithoutPriceCount": "Bez cen",
@@ -755,6 +764,9 @@
 		},
 		"Challenge": {
 			"Title": "Výzva"
+		},
+		"Challenges": {
+			"Title": "Výzvy"
 		},
 		"CommunityChallenge": {
 			"Title": "Komunitní výzva"

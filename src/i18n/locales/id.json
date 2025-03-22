@@ -155,7 +155,15 @@
 		"PricesAdded": "{challenge_title} harga ditambahkan",
 		"PricesByYou": "{challenge_title} harga oleh Anda",
 		"PricesAddedByYou": "{challenge_title} harga yang Anda tambahkan",
-		"MostRecentContributions": "Kontribusi terbaru"
+		"MostRecentContributions": "Kontribusi terbaru",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
 	},
 	"Common": {
 		"About": "Tentang",
@@ -265,6 +273,7 @@
 		"Edit": "Sunting",
 		"End": "Selesai",
 		"Filter": "Filter",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "Dengan harga",
 		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
 		"FilterProductWithoutPriceCount": "Tanpa harga",
@@ -754,6 +763,9 @@
 			"Title": "Asisten Validasi Harga"
 		},
 		"Challenge": {
+			"Title": "Tantangan"
+		},
+		"Challenges": {
 			"Title": "Tantangan"
 		},
 		"CommunityChallenge": {

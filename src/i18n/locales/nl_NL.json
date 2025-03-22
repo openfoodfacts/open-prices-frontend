@@ -155,7 +155,15 @@
 		"PricesAdded": "{challenge_title} prijzen toegevoegd",
 		"PricesByYou": "{challenge_title} prijzen door jou",
 		"PricesAddedByYou": "{challenge_title} prijzen door u toegevoegd",
-		"MostRecentContributions": "Meest recente bijdragen"
+		"MostRecentContributions": "Meest recente bijdragen",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
 	},
 	"Common": {
 		"About": "Over",
@@ -265,6 +273,7 @@
 		"Edit": "Bewerken",
 		"End": "Einde",
 		"Filter": "Filter",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "Met een prijs",
 		"FilterProductWithPriceCountHide": "Verberg producten met prijzen",
 		"FilterProductWithoutPriceCount": "Zonder prijzen",
@@ -755,6 +764,9 @@
 		},
 		"Challenge": {
 			"Title": "Uitdaging"
+		},
+		"Challenges": {
+			"Title": "Uitdagingen"
 		},
 		"CommunityChallenge": {
 			"Title": "Uitdaging voor de gemeenschap"
