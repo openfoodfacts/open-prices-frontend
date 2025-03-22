@@ -19,14 +19,12 @@
         <v-divider />
 
         <v-card-text>
-          <p class="mb-2">
-            {{ $t('Challenge.ChallengeStatus', { status: $t('Challenge.ChallengeStatuses.' + challenge.status) }) }}
-          </p>
-          <DateChip :date="challenge.start_date" />
+          <ChallengeStatusChip :challengeStatus="challenge.status" class="mr-1" />
+          <DateChip :date="challenge.start_date" class="mr-1" />
           <DateChip :date="challenge.end_date" />
-          <p v-if="challenge.categories.length">
-            <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" />
-          </p>
+          <div v-if="challenge.categories.length" class="mt-1">
+            <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
+          </div>
         </v-card-text>
       </v-card>
     </v-col>
@@ -50,7 +48,8 @@ export default {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
-    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue'))
+    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
+    ChallengeStatusChip: defineAsyncComponent(() => import('../components/ChallengeStatusChip.vue'))
   },
   data() {
     return {

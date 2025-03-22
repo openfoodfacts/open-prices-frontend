@@ -157,7 +157,6 @@
 		"PricesAddedByYou": "{challenge_title} prices added by you",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
-		"ChallengeStatus": "Status: {status}",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
 			"UPCOMING": "Upcoming",
