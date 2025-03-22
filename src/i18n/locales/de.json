@@ -155,7 +155,15 @@
 		"PricesAdded": "{challenge_title} Preise hinzugefügt",
 		"PricesByYou": "{challenge_title} eigene Preise",
 		"PricesAddedByYou": "{challenge_title} Preise von Ihnen hinzugefügt",
-		"MostRecentContributions": "Neueste Beiträge"
+		"MostRecentContributions": "Neueste Beiträge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
 	},
 	"Common": {
 		"About": "Über",
@@ -265,6 +273,7 @@
 		"Edit": "Bearbeiten",
 		"End": "Ende",
 		"Filter": "Filter",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "Mit einem Preis",
 		"FilterProductWithPriceCountHide": "Produkte mit Preisen ausblenden",
 		"FilterProductWithoutPriceCount": "Ohne Preise",
@@ -755,6 +764,9 @@
 		},
 		"Challenge": {
 			"Title": "Herausforderung"
+		},
+		"Challenges": {
+			"Title": "Herausforderungen"
 		},
 		"CommunityChallenge": {
 			"Title": "Gemeinschaftliche Herausforderung"
