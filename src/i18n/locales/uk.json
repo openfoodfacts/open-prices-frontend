@@ -155,7 +155,15 @@
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} ціни від вас",
 		"PricesAddedByYou": "{challenge_title} prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"MostRecentContributions": "Most recent contributions",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
 	},
 	"Common": {
 		"About": "Про додаток",
@@ -265,6 +273,7 @@
 		"Edit": "Редагувати",
 		"End": "Кінець",
 		"Filter": "Фільтр",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "З ціною",
 		"FilterProductWithPriceCountHide": "Приховати товари з цінами",
 		"FilterProductWithoutPriceCount": "Без цін",
@@ -755,6 +764,9 @@
 		},
 		"Challenge": {
 			"Title": "Challenge"
+		},
+		"Challenges": {
+			"Title": "Challenges"
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
