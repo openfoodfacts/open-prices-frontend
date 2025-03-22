@@ -11,22 +11,7 @@
 
   <v-row class="mt-0">
     <v-col v-for="challenge in challengeList" :key="challenge" cols="12" sm="6" md="4" xl="3">
-      <v-card :id="'challenge_' + challenge.id" :class="'border-transparent'" @click="goToChallenge(challenge)">
-        <template #title>
-          {{ challenge.icon }} {{ challenge.title }} {{ challenge.subtitle }}
-        </template>
-
-        <v-divider />
-
-        <v-card-text>
-          <ChallengeStatusChip :challengeStatus="challenge.status" class="mr-1" />
-          <DateChip :date="challenge.start_date" class="mr-1" />
-          <DateChip :date="challenge.end_date" />
-          <div v-if="challenge.categories.length" class="mt-1">
-            <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
-          </div>
-        </v-card-text>
-      </v-card>
+      <ChallengeCard :challenge="challenge" />
     </v-col>
   </v-row>
 
@@ -47,9 +32,7 @@ export default {
   components: {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
-    CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
-    DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
-    ChallengeStatusChip: defineAsyncComponent(() => import('../components/ChallengeStatusChip.vue'))
+    ChallengeCard: defineAsyncComponent(() => import('../components/ChallengeCard.vue')),
   },
   data() {
     return {
@@ -122,9 +105,6 @@ export default {
       if (utils.getDocumentScrollPercentage() > 90) {
         this.getChallenges()
       }
-    },
-    goToChallenge(challenge) {
-      this.$router.push({ path: `/challenges/${challenge.id}` })
     }
   }
 }
