@@ -155,7 +155,15 @@
 		"PricesAdded": "{challenge_title} விலைகள் சேர்க்கப்பட்டன",
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "உங்களால் {challenge_title} விலைகள் சேர்க்கப்பட்டன",
-		"MostRecentContributions": "மிகச் சமீபத்திய பங்களிப்புகள்"
+		"MostRecentContributions": "மிகச் சமீபத்திய பங்களிப்புகள்",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
 	},
 	"Common": {
 		"About": "இதைப் பற்றி",
@@ -265,6 +273,7 @@
 		"Edit": "திருத்து",
 		"End": "முடிவு",
 		"Filter": "Filter",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "ஒரு விலையுடன்",
 		"FilterProductWithPriceCountHide": "விலைகளுடன் கூடிய தயாரிப்புகளை மறை",
 		"FilterProductWithoutPriceCount": "விலைகள் இல்லாமல்",
@@ -755,6 +764,9 @@
 		},
 		"Challenge": {
 			"Title": "சவால்"
+		},
+		"Challenges": {
+			"Title": "சவால்கள்"
 		},
 		"CommunityChallenge": {
 			"Title": "சமூக சவால்"
