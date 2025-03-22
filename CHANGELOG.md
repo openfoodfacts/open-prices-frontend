@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.128.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.127.0...v1.128.0) (2025-03-22)
+
+
+### Features
+
+* **Challenges:** read from api, add challenges list page ([#1459](https://github.com/openfoodfacts/open-prices-frontend/issues/1459)) ([f07b029](https://github.com/openfoodfacts/open-prices-frontend/commit/f07b0294dd61567f7fca43475a36c1749eaf4966))
+
+
+### Technical
+
+* **Challenges:** challenge card ([#1463](https://github.com/openfoodfacts/open-prices-frontend/issues/1463)) ([0703f55](https://github.com/openfoodfacts/open-prices-frontend/commit/0703f55bb86eea4cc79bfcfd99b2f163a2ee7268))
+
 ## [1.127.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.126.0...v1.127.0) (2025-03-21)
 
 
