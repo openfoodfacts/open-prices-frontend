@@ -5,7 +5,7 @@
         {{ $t('Common.PriceCount', { count: userPriceTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
-      <FilterMenu kind="price" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="togglePriceFilter($event)" @update:currentType="togglePriceType($event)" />
+      <FilterMenu kind="price" :currentFilter="currentFilter" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilter="togglePriceFilter($event)" @update:currentType="togglePriceType($event)" @update:currentKind="togglePriceKind($event)" />
       <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
@@ -48,6 +48,7 @@ export default {
       // filter & order
       currentFilter: '',
       currentType: '',
+      currentKind: '',
       currentOrder: constants.PRICE_ORDER_LIST[3].key,  // created first
     }
   },
@@ -66,6 +67,9 @@ export default {
       if (this.currentType) {
         defaultParams[constants.TYPE_PARAM] = this.currentType
       }
+      if (this.currentKind) {
+        defaultParams[constants.KIND_PARAM] = this.currentKind
+      }
       return defaultParams
     },
   },
@@ -79,6 +83,7 @@ export default {
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
+    this.currentKind = this.$route.query[constants.KIND_PARAM] || this.currentKind
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.getUserPrices()
     // load more
@@ -114,6 +119,11 @@ export default {
     togglePriceType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
+      // this.initUserPriceList() will be called in watch $route
+    },
+    togglePriceKind(kindKey) {
+      this.currentKind = (this.currentKind !== kindKey) ? kindKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
       // this.initUserPriceList() will be called in watch $route
     },
     selectPriceOrder(orderKey) {
