@@ -163,7 +163,9 @@
 			"ONGOING": "Ongoing",
 			"COMPLETED": "Completed"
 		},
-		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
+		"PastOrFutureChallenges": "Past or future challenges",
+		"OngoingChallenges": "Ongoing challenges"
 	},
 	"Common": {
 		"About": "Quant a",
