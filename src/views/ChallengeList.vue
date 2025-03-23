@@ -1,33 +1,42 @@
 <template>
   <v-row v-if="!loading">
     <v-col>
-      <v-chip label variant="text" prepend-icon="mdi-tag-outline">
+      <v-chip label variant="text" prepend-icon="mdi-trophy-variant">
         {{ $t('Challenge.ChallengeCount', { count: challengeTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="challengeList.length" :totalCount="challengeTotal" />
     </v-col>
   </v-row>
 
-  <h2 class="text-h6">
-    {{ $t('Challenge.OngoingChallenges') }}
-  </h2>
+  <v-row>
+    <v-col>
+      <h2 class="text-h6">
+        {{ $t('Challenge.OngoingChallenges') }}
+      </h2>
+    </v-col>
+  </v-row>
   <v-row class="mt-0">
-    <v-col v-for="challenge in onGoingChallenges" :key="challenge" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="challenge in ongoingChallenges" :key="challenge" cols="12" sm="6" md="4" xl="3">
       <ChallengeCard :challenge="challenge" />
     </v-col>
-    <v-col v-if="onGoingChallenges.length === 0" cols="12" sm="6" md="4" xl="3">
+    <v-col v-if="ongoingChallenges.length === 0">
       {{ $t('Challenge.NoChallengeCurrentlyOngoing') }}
     </v-col>
   </v-row>
 
-  <h2 class="text-h6 mt-4">
-    {{ $t('Challenge.PastOrFutureChallenges') }}
-  </h2>
+  <v-row>
+    <v-col>
+      <h2 class="text-h6">
+        {{ $t('Challenge.PastOrFutureChallenges') }}
+      </h2>
+    </v-col>
+  </v-row>
   <v-row class="mt-0">
     <v-col v-for="challenge in otherChallenges" :key="challenge" cols="12" sm="6" md="4" xl="3">
       <ChallengeCard :challenge="challenge" />
     </v-col>
   </v-row>
+
   <v-row v-if="loading">
     <v-col align="center">
       <v-progress-circular indeterminate :size="30" />
@@ -59,19 +68,12 @@ export default {
       let defaultParams = { order_by: this.currentOrder, page: this.challengePage}
       return defaultParams
     },
-    onGoingChallenges() {
+    ongoingChallenges() {
       return this.challengeList.filter(challenge => challenge.status === "ONGOING")
     },
     otherChallenges() {
-      return this.challengeList.filter(challenge => challenge.status != "ONGOING")
+      return this.challengeList.filter(challenge => challenge.status !== "ONGOING")
     },
-  },
-  watch: {
-    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
-      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initChallengeList()
-      }
-    }
   },
   mounted() {
     this.initChallengeList()
