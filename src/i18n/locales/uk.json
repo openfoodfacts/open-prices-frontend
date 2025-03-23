@@ -164,8 +164,8 @@
 			"COMPLETED": "Завершені"
 		},
 		"NoChallengeCurrentlyOngoing": "Немає викликів, будь ласка приходьте пізніше!",
-		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"PastOrFutureChallenges": "Минулі або майбутні виклики",
+		"OngoingChallenges": "Поточні виклики"
 	},
 	"Common": {
 		"About": "Про додаток",
@@ -216,6 +216,7 @@
 		"Consumption": "Споживання",
 		"ConsumptionPrices": "Ціни споживання",
 		"ConsumptionProofs": "Докази споживання",
+		"Contributions": "Внески",
 		"Confirm": "Підтвердити",
 		"Country": "Країна",
 		"Countries": "Країн",
@@ -288,6 +289,7 @@
 		"FAQ": "ЧаПИ",
 		"FrequentlyAskedQuestions": "Найбільш поширені запитання",
 		"GDPR_REQUEST": "Запит GDPR",
+		"Group": "Group",
 		"Help": "Допомога",
 		"History": "Історія",
 		"Image": "Зображення",

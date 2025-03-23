@@ -164,8 +164,8 @@
 			"COMPLETED": "Abgeschlossen"
 		},
 		"NoChallengeCurrentlyOngoing": "Derzeit läuft keine Herausforderung, bitte kommen Sie später wieder!",
-		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"PastOrFutureChallenges": "Vergangene oder künftige Herausforderungen",
+		"OngoingChallenges": "Laufende Herausforderungen"
 	},
 	"Common": {
 		"About": "Über",
@@ -216,6 +216,7 @@
 		"Consumption": "Verbrauch",
 		"ConsumptionPrices": "Verbraucherpreise",
 		"ConsumptionProofs": "Nachweise durch Verbraucher",
+		"Contributions": "Beiträge",
 		"Confirm": "Bestätigen",
 		"Country": "Land",
 		"Countries": "Länder",
@@ -288,6 +289,7 @@
 		"FAQ": "Häufig gestellte Fragen",
 		"FrequentlyAskedQuestions": "Häufig gestellte Fragen",
 		"GDPR_REQUEST": "DSGVO-Anfrage",
+		"Group": "Group",
 		"Help": "Hilfe",
 		"History": "Verlauf",
 		"Image": "Bild",
