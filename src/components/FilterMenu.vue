@@ -101,7 +101,6 @@ export default {
       priceTagFilterList: constants.PRICE_TAG_FILTER_LIST,
       locationFilterList: constants.LOCATION_FILTER_LIST,
       userFilterList: constants.USER_FILTER_LIST,
-      challengeFilterList: constants.CHALLENGE_FILTER_LIST,
       // other filters
       productSourceList: constants.PRODUCT_SOURCE_LIST,
       priceTypeList: constants.PRICE_TYPE_LIST,
