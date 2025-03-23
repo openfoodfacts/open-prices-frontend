@@ -31,7 +31,7 @@
           <StatCard :value="userConsumptionPriceCount" :subtitle="$t('Common.Prices')" :to="getUserDashboardPriceUrl" />
         </v-col>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userConsumptionProofCount" :subtitle="$t('Common.Proofs')" to="/dashboard/proofs" />
+          <StatCard :value="userConsumptionProofCount" :subtitle="$t('Common.Proofs')" :to="getUserDashboardProofUrl" />
         </v-col>
       </v-row>
 
@@ -72,7 +72,7 @@
           <StatCard :value="userCommunityPriceCount" :subtitle="$t('Common.Prices')" :to="getUserDashboardPriceUrl" />
         </v-col>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userCommunityProofCount" :subtitle="$t('Common.Proofs')" to="/dashboard/proofs" />
+          <StatCard :value="userCommunityProofCount" :subtitle="$t('Common.Proofs')" :to="getUserDashboardProofUrl" />
         </v-col>
       </v-row>
 
@@ -173,7 +173,13 @@ export default {
         return `/dashboard/prices?${constants.KIND_PARAM}=${this.currentTab.toUpperCase()}`
       }
       return `/dashboard/prices`
-    }
+    },
+    getUserDashboardProofUrl() {
+      if (this.currentTab) {
+        return `/dashboard/proofs?${constants.KIND_PARAM}=${this.currentTab.toUpperCase()}`
+      }
+      return `/dashboard/proofs`
+    },
   },
   watch: {
     currentTab(newTab, oldTab) {  // eslint-disable-line no-unused-vars

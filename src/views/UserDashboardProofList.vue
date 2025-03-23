@@ -5,7 +5,7 @@
         {{ $t('Common.ProofCount', { count: userProofTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
-      <FilterMenu v-if="userProofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
+      <FilterMenu v-if="userProofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" @update:currentKind="toggleProofKind($event)" />
       <OrderMenu v-if="userProofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
     </v-col>
   </v-row>
@@ -57,6 +57,7 @@ export default {
       // filter & order
       currentFilter: '',
       currentType: '',
+      currentKind: '',
       currentOrder: constants.PROOF_ORDER_LIST[2].key,
     }
   },
@@ -73,6 +74,9 @@ export default {
       if (this.currentType) {
         defaultParams[constants.TYPE_PARAM] = this.currentType
       }
+      if (this.currentKind) {
+        defaultParams[constants.KIND_PARAM] = this.currentKind
+      }
       return defaultParams
     },
   },
@@ -86,6 +90,7 @@ export default {
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
+    this.currentKind = this.$route.query[constants.KIND_PARAM] || this.currentKind
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initUserProofList()
     // load more
@@ -125,6 +130,11 @@ export default {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
       // this.initUserProofList() will be called in watch $route
+    },
+    toggleProofKind(kindKey) {
+      this.currentKind = (this.currentKind !== kindKey) ? kindKey : ''
+      this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
+      // this.initUserPriceList() will be called in watch $route
     },
     selectProofOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
