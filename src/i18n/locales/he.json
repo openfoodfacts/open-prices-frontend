@@ -156,14 +156,14 @@
 		"PricesByYou": "{challenge_title} מחירים על ידיך",
 		"PricesAddedByYou": "{challenge_title} מחירים נוספו על ידיך",
 		"MostRecentContributions": "התרומות האחרונות",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeCount": "{count} אתגרים | אתגר | {count} אתגרים",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
-			"UPCOMING": "Upcoming",
-			"ONGOING": "Ongoing",
-			"COMPLETED": "Completed"
+			"DRAFT": "טיוטה",
+			"UPCOMING": "בקרוב",
+			"ONGOING": "מתמשך",
+			"COMPLETED": "הושלם"
 		},
-		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!"
+		"NoChallengeCurrentlyOngoing": "אין אתגר כרגע, נא לחזור מאוחר יותר!"
 	},
 	"Common": {
 		"About": "על אודות",
@@ -273,7 +273,7 @@
 		"Edit": "עריכה",
 		"End": "סוף",
 		"Filter": "סינון",
-		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterChallengesShowAllStatus": "הצגת כל האתגרים",
 		"FilterProductWithPriceCount": "עם מחיר",
 		"FilterProductWithPriceCountHide": "הסתרת מוצרים עם מחירים",
 		"FilterProductWithoutPriceCount": "בלי מחירים",
