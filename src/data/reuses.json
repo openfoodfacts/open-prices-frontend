@@ -1,6 +1,28 @@
 [
     {
         "name": "World map",
+        "description": "A world map of all the contributions in Open Prices, with clickable locations to inspect prices.",
+        "background_image_url": null,
+        "url": "https://albertaillet.github.io/open-prices-map/",
+        "code_url": "https://github.com/albertaillet/open-prices-map",
+        "tags": ["API"],
+        "date": "2025",
+        "author": "Albert",
+        "display": true
+    },
+    {
+        "name": "Diet optimization",
+        "description": "A web app to choose the most nutritious and cheapest products",
+        "background_image_url": null,
+        "url": "https://dietoptimization.com",
+        "code_url": null,
+        "tags": ["Hugging Face", "Open Food Facts Database Dump", "Ciqual"],
+        "date": "2025",
+        "author": "Albert",
+        "display": true
+    },
+    {
+        "name": "World map",
         "description": "A world map of all the contributions in Open Prices",
         "background_image_url": "https://raw.githubusercontent.com/openfoodfacts/open-prices-frontend/master/public/reuses/worldmap.png",
         "url": "https://dmayaux.shinyapps.io/open_prices",
