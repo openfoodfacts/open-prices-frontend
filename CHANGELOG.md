@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.129.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.128.0...v1.129.0) (2025-03-23)
+
+
+### Features
+
+* **User Dashboard:** add a new filter by kind (prices & proofs) (consumption or community) ([#1471](https://github.com/openfoodfacts/open-prices-frontend/issues/1471)) ([a54d2a8](https://github.com/openfoodfacts/open-prices-frontend/commit/a54d2a895a72326b1e74d500d33808d5e07c380e))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1470](https://github.com/openfoodfacts/open-prices-frontend/issues/1470)) ([c243ffe](https://github.com/openfoodfacts/open-prices-frontend/commit/c243ffe95ef22fdebcd1617d55c5c9dd9d739fea))
+
 ## [1.128.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.127.0...v1.128.0) (2025-03-23)
 
 
