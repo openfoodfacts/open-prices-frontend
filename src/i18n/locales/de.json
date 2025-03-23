@@ -164,8 +164,8 @@
 			"COMPLETED": "Abgeschlossen"
 		},
 		"NoChallengeCurrentlyOngoing": "Derzeit läuft keine Herausforderung, bitte kommen Sie später wieder!",
-		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"PastOrFutureChallenges": "Vergangene oder künftige Herausforderungen",
+		"OngoingChallenges": "Laufende Herausforderungen"
 	},
 	"Common": {
 		"About": "Über",
