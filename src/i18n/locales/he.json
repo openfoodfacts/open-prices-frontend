@@ -163,7 +163,9 @@
 			"ONGOING": "מתמשך",
 			"COMPLETED": "הושלם"
 		},
-		"NoChallengeCurrentlyOngoing": "אין אתגר כרגע, נא לחזור מאוחר יותר!"
+		"NoChallengeCurrentlyOngoing": "אין אתגר כרגע, נא לחזור מאוחר יותר!",
+		"PastOrFutureChallenges": "Past or future challenges",
+		"OngoingChallenges": "Ongoing challenges"
 	},
 	"Common": {
 		"About": "על אודות",
