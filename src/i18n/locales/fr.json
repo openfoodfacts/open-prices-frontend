@@ -581,7 +581,7 @@
 		"TwoDecimals": "Seules deux décimales sont autorisées"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "{length}",
 		"Brands": "Marques",
 		"BrandLower": "marque",
 		"BrandMissing": "Marque manquante",
