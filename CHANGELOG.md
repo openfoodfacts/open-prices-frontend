@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.128.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.127.0...v1.128.0) (2025-03-23)
+
+
+### Features
+
+* **Challenges:** read from api, add challenges list page ([#1459](https://github.com/openfoodfacts/open-prices-frontend/issues/1459)) ([f07b029](https://github.com/openfoodfacts/open-prices-frontend/commit/f07b0294dd61567f7fca43475a36c1749eaf4966))
+* **Reuses:** add 2 new reuses by Albert :rocket:  ([#1467](https://github.com/openfoodfacts/open-prices-frontend/issues/1467)) ([de58f84](https://github.com/openfoodfacts/open-prices-frontend/commit/de58f84b420031748019ffc1338c661310c3e724))
+
+
+### Bug Fixes
+
+* **Stats:** change price_type_group to price_kind (community & consumption) ([#1468](https://github.com/openfoodfacts/open-prices-frontend/issues/1468)) ([4e6a3a7](https://github.com/openfoodfacts/open-prices-frontend/commit/4e6a3a7f74f7a85c1154955c1223b487d32e1a9f))
+
+
+### Technical
+
+* **Challenges:** challenge card ([#1463](https://github.com/openfoodfacts/open-prices-frontend/issues/1463)) ([0703f55](https://github.com/openfoodfacts/open-prices-frontend/commit/0703f55bb86eea4cc79bfcfd99b2f163a2ee7268))
+* **Challenges:** Remove status filter + cleanup ([#1466](https://github.com/openfoodfacts/open-prices-frontend/issues/1466)) ([5803726](https://github.com/openfoodfacts/open-prices-frontend/commit/5803726d794ca202fcbcce44cc316ca9516ddeba))
+* **l10n:** New Crowdin translations to review and merge ([#1460](https://github.com/openfoodfacts/open-prices-frontend/issues/1460)) ([05bc89a](https://github.com/openfoodfacts/open-prices-frontend/commit/05bc89a2600d383c87720a943a85dd8302b062db))
+* **l10n:** New Crowdin translations to review and merge ([#1464](https://github.com/openfoodfacts/open-prices-frontend/issues/1464)) ([a2141ca](https://github.com/openfoodfacts/open-prices-frontend/commit/a2141ca5bc7b878f77037a27cedcdec432119da9))
+* **User Dashboard:** fetch price & proof data using the new `kind` filter ([#1469](https://github.com/openfoodfacts/open-prices-frontend/issues/1469)) ([2ae1c82](https://github.com/openfoodfacts/open-prices-frontend/commit/2ae1c8218f6d0697e5f897d8f3fee51282f6f2ff))
+
 ## [1.127.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.126.0...v1.127.0) (2025-03-21)
 
 
