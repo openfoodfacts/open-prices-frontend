@@ -163,7 +163,9 @@
 			"ONGOING": "Поточні",
 			"COMPLETED": "Завершені"
 		},
-		"NoChallengeCurrentlyOngoing": "Немає викликів, будь ласка приходьте пізніше!"
+		"NoChallengeCurrentlyOngoing": "Немає викликів, будь ласка приходьте пізніше!",
+		"PastOrFutureChallenges": "Past or future challenges",
+		"OngoingChallenges": "Ongoing challenges"
 	},
 	"Common": {
 		"About": "Про додаток",
