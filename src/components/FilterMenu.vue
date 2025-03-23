@@ -56,6 +56,16 @@
           {{ item.value }}
         </v-list-item>
       </v-sheet>
+      <v-sheet v-if="showPriceProofKindFilter">
+        <v-divider />
+        <v-list-subheader class="text-uppercase">
+          {{ $t('Common.Group') }}
+        </v-list-subheader>
+        <v-list-item v-for="item in priceProofKindList" :key="item.key" :slim="true" :active="currentKind === item.key" @click="selectKind(item.key)">
+          <v-icon>{{ item.icon }}</v-icon>
+          {{ item.value }}
+        </v-list-item>
+      </v-sheet>
     </v-list>
   </v-menu>
 </template>
@@ -82,6 +92,10 @@ export default {
       type: String,
       default: null
     },
+    currentKind: {
+      type: String,
+      default: null
+    },
     hideSource: {
       type: Boolean,
       default: false
@@ -89,9 +103,13 @@ export default {
     hideType: {
       type: Boolean,
       default: false
-    }
+    },
+    showKind: {
+      type: Boolean,
+      default: false
+    },
   },
-  emits: ['update:currentFilter', 'update:currentSource', 'update:currentType'],
+  emits: ['update:currentFilter', 'update:currentSource', 'update:currentType', 'update:currentKind'],
   data() {
     return {
       // default filters
@@ -106,6 +124,7 @@ export default {
       priceTypeList: constants.PRICE_TYPE_LIST,
       proofTypeList: constants.PROOF_TYPE_LIST,
       locationTypeList: constants.LOCATION_TYPE_LIST,
+      priceProofKindList: constants.PRICE_PROOF_KIND_LIST,
     }
   },
   computed: {
@@ -121,11 +140,14 @@ export default {
     showLocationTypeFilter() {
       return this.kind === 'location' && !this.hideType
     },
+    showPriceProofKindFilter() {
+      return ['price', 'proof'].includes(this.kind) && this.showKind
+    },
     filterList() {
       return this[`${this.kind}FilterList`]
     },
     hasCurrentFilter() {
-      return !!this.currentFilter || !!this.currentSource || !!this.currentType
+      return !!this.currentFilter || !!this.currentSource || !!this.currentType || !!this.currentKind
     },
     getCurrentFilterIcon() {
       if (this.kind === 'product') {
@@ -151,8 +173,11 @@ export default {
     selectSource(source) {
       this.$emit('update:currentSource', source)
     },
-    selectType(source) {
-      this.$emit('update:currentType', source)
+    selectType(type) {
+      this.$emit('update:currentType', type)
+    },
+    selectKind(kind) {
+      this.$emit('update:currentKind', kind)
     }
   }
 }

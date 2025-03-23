@@ -67,6 +67,7 @@ export default {
   THEME_DARK_ICON: 'mdi-moon-waning-crescent',
   ACTION_MENU_ICON: 'mdi-dots-vertical',
   TYPE_PARAM: 'type',
+  KIND_PARAM: 'kind',
   SOURCE_PARAM: 'source',
   QUERY_PARAM: 'q',
   FILTER_PARAM: 'filter',
@@ -92,6 +93,10 @@ export default {
     {key: 'PICK_IT_YOURSELF', value: 'DiscountTypePickItYourself'},
     {key: 'SECOND_HAND', value: 'DiscountTypeSecondHand'},
     {key: 'OTHER', value: 'DiscountTypeOther'},
+  ],
+  PRICE_PROOF_KIND_LIST: [
+    { key: 'CONSUMPTION', value: 'Consumption', icon: USER_CONSUMPTION_ICON },
+    { key: 'COMMUNITY', value: 'Contributions', icon: 'mdi-account-group' },
   ],
   PRICE_TAG_STATUS_WITH_PRICE: 1,
   PRICE_TAG_STATUS_UNREADABLE: 2,

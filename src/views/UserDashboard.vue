@@ -28,7 +28,7 @@
       </v-row>
       <v-row>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userConsumptionPriceCount" :subtitle="$t('Common.Prices')" to="/dashboard/prices" />
+          <StatCard :value="userConsumptionPriceCount" :subtitle="$t('Common.Prices')" :to="getUserDashboardPriceUrl" />
         </v-col>
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard :value="userConsumptionProofCount" :subtitle="$t('Common.Proofs')" to="/dashboard/proofs" />
@@ -48,7 +48,7 @@
             v-if="userConsumptionPriceList.length"
             color="primary"
             :block="!$vuetify.display.smAndUp"
-            to="/dashboard/prices"
+            :to="getUserDashboardPriceUrl"
             prepend-icon="mdi-tag-multiple-outline"
             append-icon="mdi-arrow-right"
           >
@@ -69,7 +69,7 @@
       </v-row>
       <v-row>
         <v-col cols="6" sm="4" md="3" lg="2">
-          <StatCard :value="userCommunityPriceCount" :subtitle="$t('Common.Prices')" to="/dashboard/prices" />
+          <StatCard :value="userCommunityPriceCount" :subtitle="$t('Common.Prices')" :to="getUserDashboardPriceUrl" />
         </v-col>
         <v-col cols="6" sm="4" md="3" lg="2">
           <StatCard :value="userCommunityProofCount" :subtitle="$t('Common.Proofs')" to="/dashboard/proofs" />
@@ -89,7 +89,7 @@
             v-if="userConsumptionPriceList.length"
             color="primary"
             :block="!$vuetify.display.smAndUp"
-            to="/dashboard/prices"
+            :to="getUserDashboardPriceUrl"
             prepend-icon="mdi-tag-multiple-outline"
             append-icon="mdi-arrow-right"
           >
@@ -168,6 +168,12 @@ export default {
       }
       return defaultParams
     },
+    getUserDashboardPriceUrl() {
+      if (this.currentTab) {
+        return `/dashboard/prices?${constants.KIND_PARAM}=${this.currentTab.toUpperCase()}`
+      }
+      return `/dashboard/prices`
+    }
   },
   watch: {
     currentTab(newTab, oldTab) {  // eslint-disable-line no-unused-vars
