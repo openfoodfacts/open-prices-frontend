@@ -533,6 +533,7 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultDetailed": "No results found for \"{query}\". Possible reasons:\n• The location might not exist in OpenStreetMap\n• There might be a spelling error or incomplete address\n• Try adding more details like city name, street name or postal code\n• For shops, try including the shop name and area",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
