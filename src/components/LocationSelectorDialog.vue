@@ -87,7 +87,10 @@
               </v-row>
 
               <p v-else-if="typeof results === 'string'">
-                {{ results }}
+                <v-alert type="info" variant="tonal" class="mb-3">
+                  <v-icon start icon="mdi-map-search-outline" />
+                  {{ results }}
+                </v-alert>
               </p>
             </v-sheet>
           </v-tabs-window-item>
@@ -223,7 +226,7 @@ export default {
             if (data.length) {
               this.results = data
             } else {
-              this.results = this.$t('LocationSelector.NoResult')
+              this.results = this.$t('LocationSelector.NoResultDetailed', { query: this.locationOsmSearchForm.q })
             }
           })
         // search by name
@@ -234,7 +237,7 @@ export default {
             if (data.length) {
               this.results = data
             } else {
-              this.results = this.$t('LocationSelector.NoResult')
+              this.results = this.$t('LocationSelector.NoResultDetailed', { query: this.locationOsmSearchForm.q })
             }
           })
       }
