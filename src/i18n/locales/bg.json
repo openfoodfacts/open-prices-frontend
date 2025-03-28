@@ -50,7 +50,7 @@
 			"Title": "Single product"
 		},
 		"Thanks": "Благодаря",
-		"Title": "Add a price",
+		"Title": "Добавяне на цена",
 		"TitleSingle": "Add a single price",
 		"TitleMultiple": "Add multiple prices in bulk"
 	},
@@ -170,7 +170,7 @@
 	"Common": {
 		"About": "Относно",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Добавяне на цена",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -513,7 +513,7 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Добавяне на цена",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
 		"SearchProduct": "Търсене на продукт",
@@ -611,7 +611,7 @@
 		"UnknownProduct": "Неразпознат продукт"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Добавяне на цена",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Зареди още",
@@ -662,7 +662,7 @@
 			"Title": "Относно"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Добавяне на цена"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -689,7 +689,7 @@
 			"Title": "Места"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Добавяне на цена"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
