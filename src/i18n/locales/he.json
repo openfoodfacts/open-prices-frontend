@@ -164,8 +164,8 @@
 			"COMPLETED": "הושלם"
 		},
 		"NoChallengeCurrentlyOngoing": "אין אתגר כרגע, נא לחזור מאוחר יותר!",
-		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"PastOrFutureChallenges": "אתגרי עבר או עתיד",
+		"OngoingChallenges": "אתגרים שמתקיימים כרגע"
 	},
 	"Common": {
 		"About": "על אודות",
