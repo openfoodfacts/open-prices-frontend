@@ -42,7 +42,7 @@
                 {{ $t('ReceiptAssistant.UploadOnlyNewPrices', {nbPrices: validNewReceiptItems.length}) }}
               </v-btn>
               <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
-                {{ $t('ReceiptAssistant.UploadAllValidPrices', {nbPrices: validReceiptItems.length}) }}
+                {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', {nbPrices: validReceiptItems.length}) }}
               </v-btn>
             </v-col>
           </v-row>
@@ -107,7 +107,6 @@ export default {
     return {
       step: 1,
       proofObject: null,
-      receiptItems: [],
       numberOfPricesAdded: 0,
       proofPriceExistingList: [],
       totalNumberOfPricesToAdd: 0,
@@ -140,16 +139,14 @@ export default {
       // Should I use item.product_code or item.productFound ?
       // item.product_code means any typed product_code would work, including ones with no product associated
       // item.productFound means the product was explicitly selected by the user
-      return this.receiptItems.filter(item => item.price && (item.product_code || item.category_tag))
+      if (!this.proofObject?.receiptItems) return []
+      return this.proofObject.receiptItems.filter(item => item.predicted_data.price && (item.product_code || item.category_tag))
     },
     validNewReceiptItems() {
-      return this.validReceiptItems.filter(item => !item.existingPrice)
+      return this.validReceiptItems.filter(item => !item.price_id)
     },
     proofHasReceiptPredictionItems() {
-      const receiptPrediction = this.proofObject?.predictions?.find(predication => predication.type === 'RECEIPT_EXTRACTION')
-      if (!receiptPrediction) return false
-      let receiptPredictionsItems = receiptPrediction.data.items
-      return receiptPredictionsItems.length > 0
+      return this.proofObject?.receiptItems && this.proofObject.receiptItems.length > 0
     }
   },
   mounted() {
@@ -167,7 +164,7 @@ export default {
     onProofUploaded(proof) {
       this.step = 2
       this.loadingPredictions = true
-      this.loadProofWithPredictions(proof.id, 5, proof => {
+      this.loadProofWithReceiptItems(proof.id, 5, proof => {
         api.getPrices({proof_id: proof.id}).then(data => {
           this.loadingPredictions = false
           this.proofPriceExistingList = data.items
@@ -175,53 +172,78 @@ export default {
         })
       })
     },
-    loadProofWithPredictions(proofId, maxTries, callback) {
+    loadProofWithReceiptItems(proofId, maxTries, callback) {
       let tries = 0
       const load = () => {
         api.getProofById(proofId).then(proof => {
-          const receiptPrediction = proof?.predictions?.find(predication => predication.type === 'RECEIPT_EXTRACTION')
           const oneDayInMs = 24 * 60 * 60 * 1000
           const proofCreatedDate = new Date(proof.created)
           if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
             // Only try once on old proofs
             maxTries = 1
           }
-          if (receiptPrediction) {
-            callback(proof)
-          } else {
-            tries += 1
-            if (tries >= maxTries) {
+          api.getReceiptItems({proof_id: proofId}).then(data => {
+            const receiptItems = data.items
+            if (receiptItems.length) {
+              proof.receiptItems = receiptItems
               callback(proof)
-              return
+            } else {
+              tries += 1
+              if (tries >= maxTries) {
+                callback(proof)
+                return
+              }
+              setTimeout(load, 3000)
             }
-            setTimeout(load, 3000)
-          }
+          })
         })
       }
       load()
     },
     receiptItemsUpdated(newReceiptItems) {
-      this.receiptItems = newReceiptItems
+      this.proofObject.receiptItems = newReceiptItems
     },
-    addPrices(prices) {
+    updateOrAddReceiptItem(receiptItemId, priceId) {
+      let receiptItemData = {
+          status: 1,  // linked_to_price
+          price_id: priceId
+      }
+      if (receiptItemId != null) {
+        api.updateReceiptItem(receiptItemId, receiptItemData)
+      } else {
+        receiptItemData.proof_id = this.proofObject.id
+        receiptItemData.order = 0
+        api.createReceiptItem(receiptItemData)
+      }
+    },
+    addPrices(receiptItems) {
       this.step = 3
-      this.totalNumberOfPricesToAdd = prices.length
+      this.totalNumberOfPricesToAdd = receiptItems.length
       this.numberOfPricesAdded = 0
-      for (let i = 0; i < prices.length; i++) {
-        const productPriceForm = prices[i]
+      for (let i = 0; i < receiptItems.length; i++) {
         const priceData = {
-          ...productPriceForm,
-          origins_tags: productPriceForm.origins_tags,
+          ...receiptItems[i],
+          origins_tags: receiptItems[i].origins_tags,
           date: this.proofObject.date,
           location_id: this.proofObject.location_id,
           location_osm_id: this.proofObject.location_osm_id,
           location_osm_type: this.proofObject.location_osm_type,
           proof_id: this.proofObject.id,
-          currency: this.proofObject.currency
+          currency: this.proofObject.currency,
+          price: receiptItems[i].price || receiptItems[i].predicted_data.price,
+          product_name: receiptItems[i].product_name || receiptItems[i].predicted_data.product_name
         }
-        api.createPrice(priceData, this.$route.path).then(() => {
-          this.numberOfPricesAdded += 1
-        })
+        if (receiptItems[i].price_id) {
+          api.updatePrice(receiptItems[i].price_id, priceData).then(() => {
+            this.numberOfPricesAdded += 1
+            this.updateOrAddReceiptItem(receiptItems[i].id, receiptItems[i].price_id)
+          })
+        } else {
+          api.createPrice(priceData, this.$route.path).then((price) => {
+            this.numberOfPricesAdded += 1
+            this.updateOrAddReceiptItem(receiptItems[i].id, price.id)
+          })
+        }
       }
     },
     reloadPage() {

@@ -322,6 +322,42 @@ export default {
     .then((response) => response.json())
   },
 
+  getReceiptItems(params = {}) {
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/receipt-items?${buildURLParams({...defaultParams, ...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
+
+  updateReceiptItem(receiptItemId, inputData = {}) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/receipt-items/${receiptItemId}?${buildURLParams()}`
+    return fetch(url, {
+      method: 'PATCH',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`,
+      }),
+      body: JSON.stringify(inputData),
+    })
+    .then((response) => response.json())
+  },
+
+  createReceiptItem(inputData) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/receipt-items?${buildURLParams()}`
+    return fetch(url, {
+      method: 'POST',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`,
+      }),
+      body: JSON.stringify(inputData),
+    })
+    .then((response) => response.json())
+  },
+
   getProducts(params = {}) {
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products?${buildURLParams({...defaultParams, ...params})}`

@@ -13,21 +13,22 @@
         <template #[`item.product_name`]="{ item }">
           <v-text-field v-if="item.manuallyAdded" v-model="item.product_name" :hide-details="true" :rules="rules" dense single-line />
           <p v-else>
-            {{ item.product_name }}
+            {{ item.predicted_data.product_name }}
           </p>
           <p v-if="showInfoDetails">
-            <span v-if="item.existingPrice" class="text-caption text-warning">{{ $t('ReceiptAssistant.PriceMightAlreadyExist') }}</span>
-            <span v-else-if="!item.product_code && !item.isCategory" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingBarcodeOrCategory') }}</span>
+            <span v-if="item.existingPrice" class="text-caption text-warning">{{ $t('ReceiptAssistant.PriceAlreadyCreatedForItem') }}</span>
+            <span v-else-if="!item.predicted_data.price" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingPrice') }}</span>
+            <span v-else-if="!item.product_code && !item.category_tag" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingBarcodeOrCategory') }}</span>
             <span v-else class="text-caption text-success">{{ $t('ReceiptAssistant.PriceReadyToBeAdded') }}</span>
           </p>
         </template>
         <template #[`item.price`]="{ item }">
-          <v-text-field v-model="item.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
+          <v-text-field v-model="item.predicted_data.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
         </template>
         <template #[`item.product`]="{ item }">
-          <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
+          <PriceCategoryChip v-if="item.category_tag" :priceCategory="item.category_tag" />
           <v-text-field 
-            v-if="!item.isCategory && !item.productFound" 
+            v-if="!item.category_tag && !item.productFound" 
             v-model="item.product_code" 
             :hide-details="true" 
             :rules="rules" 
@@ -35,7 +36,7 @@
             @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
             @keydown.enter="findProduct(item)" 
           />
-          <ProductCard v-if="!item.isCategory && item.productFound" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+          <ProductCard v-if="!item.category_tag && item.productFound" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </template>
         <template #[`item.actions`]="{ item }">
           <v-row>
@@ -87,9 +88,9 @@ export default {
       showInfoDetails: true,
       items: [],
       headers: [
-        { title: 'Product Name', key: 'product_name', sortable: true },
-        { title: 'Price', key: 'price', sortable: true },
-        { title: 'Barcode/Category', key: 'product', sortable: true },
+        { title: 'Product Name', key: 'product_name', sortable: false },
+        { title: 'Price', key: 'price', sortable: false },
+        { title: 'Barcode/Category', key: 'product', sortable: false },
         { title: 'Actions', key: 'actions', sortable: false },
       ],
       editProductDialog: false,
@@ -124,26 +125,27 @@ export default {
   },
   methods: {
     init() {
-      if (!this?.proof?.predictions?.length) return
-      const receiptPrediction = this.proof.predictions.find(predication => predication.type === 'RECEIPT_EXTRACTION')
-      if (!receiptPrediction) return
-      let receiptPredictionsItems = receiptPrediction.data.items
-      this.items = receiptPredictionsItems.map((item, index) => {
-        item.id = index
-        item.existingPrice = this.proofPriceExistingList.find(price => price.product_name === item.product_name)
-        if (item.existingPrice) {
+      if (!this?.proof?.receiptItems?.length) return
+      this.items = this.proof.receiptItems.map((item) => {
+        if (item.price_id) {
+          item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
           item.productFound = item.existingPrice.product
           item.product_code = item.existingPrice.product?.code
           item.category_tag = item.existingPrice.category_tag
           item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
           item.price_per = item.existingPrice.price_per
-          item.price = item.existingPrice.price
+          item.predicted_data.price = item.existingPrice.price
+          if (!item.predicted_data.product_name) {
+            item.predicted_data.product_name = item.existingPrice.product_name
+          }
         } else {
-          item.isCategory = ![null, '', 'unknown', 'other'].includes(item.product)
+          item.isCategory = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
           item.productFound = null
           if (item.isCategory) {
-            item.category_tag = item.product
+            item.category_tag = item.predicted_data.product
             item.price_per = "KILOGRAM"
+          } else {
+            item.product_code = ""
           }
         }
         return item
@@ -151,7 +153,7 @@ export default {
     },
     itemPriceSuffix(item) {
       let suffix = this.proof.currency
-      if (item.isCategory) {
+      if (item.isCategory && item.category_tag) {
         suffix += '/' + (item.price_per === 'UNIT' ? 'U' :'KG')
       }
       return suffix
@@ -162,7 +164,6 @@ export default {
         .then((data) => {
           const product = data.id ? data : {'code': item.product_code, 'price_count': 0}
           item.productFound = product
-          item.product_code = product.code
         })
         .catch((error) => {
           console.log(error)
@@ -181,6 +182,7 @@ export default {
         productFound: null,
         isCategory: false,
         category_tag: null,
+        predicted_data: {}
       })
     },
     showEditProductDialog(item) {
@@ -191,7 +193,7 @@ export default {
         category_tag: item.isCategory && ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
         origins_tags: [],
         labels_tags: [],
-        price: item.price,
+        price: item.predicted_data.price,
         price_per: item.price_per,
         price_is_discounted: false,
         currency: this.appStore.getUserLastCurrencyUsed,
@@ -200,7 +202,7 @@ export default {
         croppedImage: null,
         product_code: item.product_code,
         detected_product_code: item.product_code,
-        product_name: item.product_name,
+        product_name: item.predicted_data.product_name,
         loading: false
       }
     },
@@ -209,6 +211,8 @@ export default {
       this.items[this.editProductItem.item_id].productFound = this.editProductItem.product
       this.items[this.editProductItem.item_id].isCategory = this.editProductItem.type === constants.PRICE_TYPE_CATEGORY
       this.items[this.editProductItem.item_id].category_tag = this.editProductItem.type === constants.PRICE_TYPE_CATEGORY ? this.editProductItem.category_tag : null
+      this.items[this.editProductItem.item_id].predicted_data.product_name = this.editProductItem.product_name
+      this.items[this.editProductItem.item_id].predicted_data.price = this.editProductItem.price
       Object.assign(this.items[this.editProductItem.item_id], this.editProductItem)
       this.editProductItem = null
     },
