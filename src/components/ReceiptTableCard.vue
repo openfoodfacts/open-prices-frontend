@@ -210,7 +210,7 @@ export default {
         category_tag: item.isCategory && ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
         origins_tags: [],
         labels_tags: [],
-        price: item.predicted_data.price,
+        price: item.predicted_data.price.toString(),
         price_per: item.price_per,
         price_is_discounted: false,
         currency: this.appStore.getUserLastCurrencyUsed,
