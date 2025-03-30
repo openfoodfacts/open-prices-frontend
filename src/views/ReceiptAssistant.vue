@@ -140,7 +140,8 @@ export default {
       // item.product_code means any typed product_code would work, including ones with no product associated
       // item.productFound means the product was explicitly selected by the user
       if (!this.proofObject?.receiptItems) return []
-      return this.proofObject.receiptItems.filter(item => item.predicted_data.price && (item.product_code || item.category_tag))
+      const isProductValid = item => item.isCategory ? item.category_tag : item.product_code
+      return this.proofObject.receiptItems.filter(item => item.predicted_data.price && isProductValid(item))
     },
     validNewReceiptItems() {
       return this.validReceiptItems.filter(item => !item.price_id)
@@ -233,10 +234,17 @@ export default {
           price: receiptItems[i].price || receiptItems[i].predicted_data.price,
           product_name: receiptItems[i].product_name || receiptItems[i].predicted_data.product_name
         }
+        // cleanup for API
+        if (receiptItems[i].isCategory) {
+          delete priceData.product_code
+        } else {
+          delete priceData.category_tag
+          delete priceData.price_per
+        }
         if (receiptItems[i].price_id) {
-          api.updatePrice(receiptItems[i].price_id, priceData).then(() => {
+          api.updatePrice(receiptItems[i].price_id, priceData).then((price) => {
             this.numberOfPricesAdded += 1
-            this.updateOrAddReceiptItem(receiptItems[i].id, receiptItems[i].price_id)
+            this.updateOrAddReceiptItem(receiptItems[i].id, price.id)
           })
         } else {
           api.createPrice(priceData, this.$route.path).then((price) => {

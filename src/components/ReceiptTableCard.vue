@@ -15,7 +15,7 @@
           <p v-if="showInfoDetails">
             <span v-if="item.existingPrice" class="text-caption text-warning">{{ $t('ReceiptAssistant.PriceAlreadyCreatedForItem') }}</span>
             <span v-else-if="!item.predicted_data.price" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingPrice') }}</span>
-            <span v-else-if="!item.product_code && !item.category_tag" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingBarcodeOrCategory') }}</span>
+            <span v-else-if="item.isCategory ? !item.category_tag : !item.product_code" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingProduct') }}</span>
             <span v-else class="text-caption text-success">{{ $t('ReceiptAssistant.PriceReadyToBeAdded') }}</span>
           </p>
         </template>
@@ -150,19 +150,18 @@ export default {
           item.product_code = item.existingPrice.product?.code
           item.category_tag = item.existingPrice.category_tag
           item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
-          item.price_per = item.existingPrice.price_per
+          item.price_per = item.existingPrice.price_per || 'KILOGRAM'
           item.predicted_data.price = item.existingPrice.price
           if (!item.predicted_data.product_name) {
             item.predicted_data.product_name = item.existingPrice.product_name
           }
         } else {
-          item.isCategory = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
           item.productFound = null
-          if (item.isCategory) {
+          item.product_code = ""
+          const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
+          if (categoryPredicted) {
             item.category_tag = item.predicted_data.product
             item.price_per = "KILOGRAM"
-          } else {
-            item.product_code = ""
           }
         }
         return item
@@ -207,7 +206,7 @@ export default {
       this.editProductItem = {
         item_id: this.items.indexOf(item),
         type: item.isCategory ? constants.PRICE_TYPE_CATEGORY : constants.PRICE_TYPE_PRODUCT,
-        category_tag: item.isCategory && ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
+        category_tag: ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
         origins_tags: [],
         labels_tags: [],
         price: item.predicted_data.price.toString(),
