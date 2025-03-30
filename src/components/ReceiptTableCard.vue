@@ -9,7 +9,7 @@
     <v-divider />
 
     <v-card-text>
-      <v-data-table :headers="headers" :items="items" class="elevation-1" fixed-header mobile-breakpoint="md" :mobile="null" items-per-page="30">
+      <v-data-table :headers="headers" :items="items" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" items-per-page="100">
         <template #[`item.product_name`]="{ item }">
           <v-text-field v-if="item.manuallyAdded" v-model="item.product_name" :hide-details="true" :rules="rules" dense single-line />
           <p v-else>
