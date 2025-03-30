@@ -19,9 +19,6 @@
             <span v-else class="text-caption text-success">{{ $t('ReceiptAssistant.PriceReadyToBeAdded') }}</span>
           </p>
         </template>
-        <template #[`item.price`]="{ item }">
-          <v-text-field v-model="item.predicted_data.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
-        </template>
         <template #[`item.product`]="{ item }">
           <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
           <v-text-field 
@@ -34,6 +31,9 @@
             @keydown.enter="findProduct(item)" 
           />
           <ProductCard v-if="!item.isCategory && item.productFound" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+        </template>
+        <template #[`item.price`]="{ item }">
+          <v-text-field v-model="item.predicted_data.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
         </template>
         <template #[`item.actions`]="{ item }">
           <v-row>
@@ -106,8 +106,8 @@ export default {
       items: [],
       headers: [
         { title: 'Product Name', key: 'product_name', sortable: false },
+        { title: 'Product', key: 'product', sortable: false },
         { title: 'Price', key: 'price', sortable: false },
-        { title: 'Barcode/Category', key: 'product', sortable: false },
         { title: 'Actions', key: 'actions', sortable: false },
       ],
       editProductDialog: false,
