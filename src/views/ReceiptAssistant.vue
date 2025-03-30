@@ -38,7 +38,7 @@
           <ReceiptTableCard :proof="proofObject" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
           <v-row>
             <v-col>
-              <v-btn class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
+              <v-btn v-if="validNewReceiptItems.length != validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
                 {{ $t('ReceiptAssistant.UploadOnlyNewPrices', {nbPrices: validNewReceiptItems.length}) }}
               </v-btn>
               <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
