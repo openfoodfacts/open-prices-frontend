@@ -1,6 +1,9 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
   <v-card class="d-flex flex-column">
+    <v-card-title v-if="isinDialog">
+      {{ $t("PriceEdit.Title") }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
+    </v-card-title>
     <v-card-text class="flex-grow-1">
       <ProofImageCropped v-if="productPriceForm.proofImage" class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" @croppedImage="setCroppedImage($event)" />
       <v-row v-if="showProductNameField">
@@ -139,9 +142,14 @@ export default {
     hidePriceTagStatusMenu: {
       type: Boolean,
       default: false
+    },
+    isinDialog: {
+      type: Boolean,
+      default: false,
+      description: 'Whether this card is displayed in a dialog'
     }
   },
-  emits: ['updatePriceTagStatus', 'validatePriceTag'],
+  emits: ['updatePriceTagStatus', 'validatePriceTag', 'close'],
   data() {
     return {
       PRICE_TAG_STATUS_UNREADABLE: constants.PRICE_TAG_STATUS_UNREADABLE,
@@ -190,6 +198,9 @@ export default {
     validatePriceTag() {
       this.$emit('validatePriceTag')
       this.resetMode()
+    },
+    close() {
+      this.$emit('close')
     }
   }
 }

@@ -54,7 +54,18 @@
     </v-card-actions>
   </v-card>
   <v-dialog v-model="editProductDialog" max-width="500px">
-    <ContributionAssistantPriceFormCard v-if="editProductItem" :productPriceForm="editProductItem" :hideActions="false" :hideUploadAction="false" :hidePriceTagStatusMenu="true" forceMode="edit" showProductNameField @validatePriceTag="confirmProduct($event)" />
+    <ContributionAssistantPriceFormCard
+      v-if="editProductItem"
+      :productPriceForm="editProductItem"
+      :hideActions="false"
+      :hideUploadAction="false"
+      :hidePriceTagStatusMenu="true"
+      :isinDialog="true"
+      forceMode="edit"
+      showProductNameField
+      @validatePriceTag="confirmProduct($event)"
+      @close="editProductDialog = false"
+    />
   </v-dialog>
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
