@@ -2,9 +2,6 @@
   <v-card>
     <template #title>
       {{ $t('ReceiptAssistant.ReceiptItemsCheck') }}
-      <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addItem">
-        {{ $t('Common.AddNewPrice') }}
-      </v-btn>
     </template>
     <v-divider />
 
@@ -46,6 +43,15 @@
         </template>
       </v-data-table>
     </v-card-text>
+    <v-card-actions class="justify-end">
+      <v-btn
+        color="primary"
+        variant="flat"
+        @click="addItem"
+      >
+        {{ $t('ReceiptAssistant.AddNewItem') }}
+      </v-btn>
+    </v-card-actions>
   </v-card>
   <v-dialog v-model="editProductDialog" max-width="500px">
     <ContributionAssistantPriceFormCard v-if="editProductItem" :productPriceForm="editProductItem" :hideActions="false" :hideUploadAction="false" :hidePriceTagStatusMenu="true" forceMode="edit" showProductNameField @validatePriceTag="confirmProduct($event)" />
@@ -174,7 +180,7 @@ export default {
       this.items.splice(this.items.indexOf(item), 1)
     },
     addItem() {
-      this.items.unshift({
+      this.items.push({
         manuallyAdded: true,
         product_code: '',
         product_name: '',

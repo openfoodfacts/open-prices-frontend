@@ -620,6 +620,7 @@
 		"Success": "Proof edited!"
 	},
 	"ReceiptAssistant": {
+		"AddNewItem": "Add new item",
 		"MissingBarcodeOrCategory": "Missing barcode or category",
 		"MissingPrice": "Missing price",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
