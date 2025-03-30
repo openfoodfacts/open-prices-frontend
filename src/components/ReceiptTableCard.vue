@@ -26,9 +26,9 @@
           <v-text-field v-model="item.predicted_data.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
         </template>
         <template #[`item.product`]="{ item }">
-          <PriceCategoryChip v-if="item.category_tag" :priceCategory="item.category_tag" />
+          <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
           <v-text-field 
-            v-if="!item.category_tag && !item.productFound" 
+            v-if="!item.isCategory && !item.productFound" 
             v-model="item.product_code" 
             :hide-details="true" 
             :rules="rules" 
@@ -36,7 +36,7 @@
             @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
             @keydown.enter="findProduct(item)" 
           />
-          <ProductCard v-if="!item.category_tag && item.productFound" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+          <ProductCard v-if="!item.isCategory && item.productFound" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </template>
         <template #[`item.actions`]="{ item }">
           <v-row>
