@@ -34,18 +34,18 @@ export default {
   },
   data() {
     return {
-      // proofTypeList: constants.PROOF_TYPE_LIST,
+      proofTypeListForInput: constants.PROOF_TYPE_LIST.filter(pt => pt.key !== constants.PROOF_TYPE_GDPR_REQUEST),
     }
   },
   computed: {
     proofTypeList() {
       if (this.hideProofTypeReceiptChoice) {
-        return constants.PROOF_TYPE_LIST.filter(pt => pt.key === constants.PROOF_TYPE_PRICE_TAG)
+        return this.proofTypeListForInput.filter(pt => pt.key !== constants.PROOF_TYPE_RECEIPT)
       }
       if (this.hideProofTypePriceTagChoice) {
-        return constants.PROOF_TYPE_LIST.filter(pt => pt.key !== constants.PROOF_TYPE_PRICE_TAG)
+        return this.proofTypeListForInput.filter(pt => pt.key !== constants.PROOF_TYPE_PRICE_TAG)
       }
-      return constants.PROOF_TYPE_LIST.filter(pt => [constants.PROOF_TYPE_PRICE_TAG, constants.PROOF_TYPE_RECEIPT].includes(pt.key))
+      return this.proofTypeListForInput
     }
   }
 }
