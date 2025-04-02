@@ -653,6 +653,18 @@
 		"Save": "Guardar",
 		"Success": "Comprobante editado"
 	},
+	"ReceiptAssistant": {
+		"AddNewItem": "Add new item",
+		"MissingPrice": "Missing price",
+		"MissingProduct": "Missing product",
+		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreatedForItem": "Price already created for item",
+		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItemsCheck": "Receipt items, check and fix",
+		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
+		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+	},
 	"Reuses": {
 		"AlertNew": "Your reuse is missing? Let us know {url}!",
 		"Here": "here"
@@ -765,6 +777,9 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
+		},
+		"ReceiptAssistant": {
+			"Title": "Receipt Assistant"
 		},
 		"Challenge": {
 			"Title": "Desafío"

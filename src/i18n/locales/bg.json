@@ -50,7 +50,7 @@
 			"Title": "Single product"
 		},
 		"Thanks": "Благодаря",
-		"Title": "Add a price",
+		"Title": "Добавяне на цена",
 		"TitleSingle": "Add a single price",
 		"TitleMultiple": "Add multiple prices in bulk"
 	},
@@ -170,7 +170,7 @@
 	"Common": {
 		"About": "Относно",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Добавяне на цена",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -513,7 +513,7 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Добавяне на цена",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
 		"SearchProduct": "Търсене на продукт",
@@ -611,7 +611,7 @@
 		"UnknownProduct": "Неразпознат продукт"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Добавяне на цена",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Зареди още",
@@ -653,6 +653,18 @@
 		"Save": "Запис",
 		"Success": "Proof edited!"
 	},
+	"ReceiptAssistant": {
+		"AddNewItem": "Add new item",
+		"MissingPrice": "Missing price",
+		"MissingProduct": "Missing product",
+		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreatedForItem": "Price already created for item",
+		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItemsCheck": "Receipt items, check and fix",
+		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
+		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+	},
 	"Reuses": {
 		"AlertNew": "Your reuse is missing? Let us know {url}!",
 		"Here": "here"
@@ -662,7 +674,7 @@
 			"Title": "Относно"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Добавяне на цена"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -689,7 +701,7 @@
 			"Title": "Места"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Добавяне на цена"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -765,6 +777,9 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
+		},
+		"ReceiptAssistant": {
+			"Title": "Receipt Assistant"
 		},
 		"Challenge": {
 			"Title": "Challenge"

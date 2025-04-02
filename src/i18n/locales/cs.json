@@ -169,7 +169,7 @@
 	},
 	"Common": {
 		"About": "O aplikaci",
-		"AddComment": "Add a comment",
+		"AddComment": "Přidat komentář",
 		"AddPrice": "Přidat cenu",
 		"AddPrices": "Přidat ceny",
 		"AddNewPrice": "Přidat novou cenu",
@@ -209,7 +209,7 @@
 		"Chart": "Graf",
 		"Clear": "Vymazat",
 		"Contributors": "Přispěvatelé",
-		"Comment": "Comment",
+		"Comment": "Komentář",
 		"Community": "Komunita",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
@@ -258,12 +258,12 @@
 		"Delete": "Odstranit",
 		"DeveloperMode": "Režim pro vývojáře",
 		"Discount": "Sleva",
-		"DiscountType": "Discount type",
+		"DiscountType": "Typ slevy",
 		"DiscountTypeQuantity": "Množství",
-		"DiscountTypeSale": "Sale",
-		"DiscountTypeSeasonal": "Seasonal",
-		"DiscountTypeLoyaltyProgram": "Loyalty program",
-		"DiscountTypeExpiresSoon": "Expires soon",
+		"DiscountTypeSale": "Výprodej",
+		"DiscountTypeSeasonal": "Sezónní",
+		"DiscountTypeLoyaltyProgram": "Věrnostní program",
+		"DiscountTypeExpiresSoon": "Platnost brzy vyprší",
 		"DiscountTypePickItYourself": "Vyberte si to sami",
 		"DiscountTypeSecondHand": "Z druhé ruky",
 		"DiscountTypeOther": "Ostatní",
@@ -289,7 +289,7 @@
 		"FAQ": "Často kladené otázky",
 		"FrequentlyAskedQuestions": "Často kladené otázky",
 		"GDPR_REQUEST": "GDPR požadavek",
-		"Group": "Group",
+		"Group": "Skupina",
 		"Help": "Nápověda",
 		"History": "Historie",
 		"Image": "Obrázek",
@@ -306,7 +306,7 @@
 		"Map": "Mapa",
 		"Miscellaneous": "Ostatní",
 		"MobileApp": "Mobilní aplikace",
-		"MyConsumption": "My consumption",
+		"MyConsumption": "Moje spotřeba",
 		"MyDashboard": "Můj ovládací panel",
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje důkazy",
@@ -329,7 +329,7 @@
 		"OrderProofDateDESC": "Datum důkazu",
 		"OrderUserCountDESC": "Počet uživatelů",
 		"Other": "Ostatní",
-		"OtherContributions": "Other contributions",
+		"OtherContributions": "Ostatní příspěvky",
 		"PersonalInfo": "Osobní údaje",
 		"Physical": "Fyzický",
 		"Picture": "Obrázek",
@@ -416,7 +416,7 @@
 		"UnknownSource": "Neznámý zdroj",
 		"UnitGram": "g",
 		"UnitKilogram": "kg",
-		"UnitMililitre": "mL",
+		"UnitMililitre": "ml",
 		"UnitLitre": "L",
 		"Unreadable": "Nečitelné",
 		"Upload": "Nahrát",
@@ -476,9 +476,9 @@
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Cenovka bez ceny",
 			"PriceTagWithPrice": "Cenovka s cenou",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagTruncated": "Cenovka označena jako oříznutá",
+			"PriceTagUnreadable": "Cenovka označena jako nečitelná",
+			"PriceTagNotAPrice": "Cenovka označena jako není cena",
 			"NewPriceTag": "Nová cenovka"
 		},
 		"OpenWithTheAssistant": "Otevřete s asistentem"
@@ -653,6 +653,18 @@
 		"Save": "Uložit",
 		"Success": "Doklad upraven!"
 	},
+	"ReceiptAssistant": {
+		"AddNewItem": "Add new item",
+		"MissingPrice": "Missing price",
+		"MissingProduct": "Missing product",
+		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreatedForItem": "Price already created for item",
+		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItemsCheck": "Receipt items, check and fix",
+		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
+		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+	},
 	"Reuses": {
 		"AlertNew": "Chybí vaše opětovné použití? Dejte nám vědět {url}!",
 		"Here": "zde"
@@ -765,6 +777,9 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Asistent pro ověření ceny"
+		},
+		"ReceiptAssistant": {
+			"Title": "Receipt Assistant"
 		},
 		"Challenge": {
 			"Title": "Výzva"

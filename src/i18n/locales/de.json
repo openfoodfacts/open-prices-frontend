@@ -289,7 +289,7 @@
 		"FAQ": "Häufig gestellte Fragen",
 		"FrequentlyAskedQuestions": "Häufig gestellte Fragen",
 		"GDPR_REQUEST": "DSGVO-Anfrage",
-		"Group": "Group",
+		"Group": "Gruppe",
 		"Help": "Hilfe",
 		"History": "Verlauf",
 		"Image": "Bild",
@@ -653,6 +653,18 @@
 		"Save": "Speichern",
 		"Success": "Nachweis bearbeitet!"
 	},
+	"ReceiptAssistant": {
+		"AddNewItem": "Add new item",
+		"MissingPrice": "Missing price",
+		"MissingProduct": "Missing product",
+		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreatedForItem": "Price already created for item",
+		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItemsCheck": "Receipt items, check and fix",
+		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
+		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+	},
 	"Reuses": {
 		"AlertNew": "Ihre Wiederverwendung fehlt? Lassen Sie es uns wissen {url}!",
 		"Here": "Hier"
@@ -765,6 +777,9 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Preisprüfungsassistent"
+		},
+		"ReceiptAssistant": {
+			"Title": "Receipt Assistant"
 		},
 		"Challenge": {
 			"Title": "Herausforderung"
