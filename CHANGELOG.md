@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.130.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.129.0...v1.130.0) (2025-04-02)
+
+
+### Features
+
+* **Experiments:** Receipt Assistant ([#1394](https://github.com/openfoodfacts/open-prices-frontend/issues/1394)) ([47d8c02](https://github.com/openfoodfacts/open-prices-frontend/commit/47d8c02147497a777efdcf501a5a6aca03117580))
+
+
+### Technical
+
+* **Experiments:** remove Multiple proof add & Challenge (not experiments anymore) ([9e40ed9](https://github.com/openfoodfacts/open-prices-frontend/commit/9e40ed97d5dd0a83623f75787912b452576bf790))
+* **l10n:** New Crowdin translations to review and merge ([#1473](https://github.com/openfoodfacts/open-prices-frontend/issues/1473)) ([947af16](https://github.com/openfoodfacts/open-prices-frontend/commit/947af16245ecb33f9015e7e63bdb8f5940f8b847))
+* **User Dashboard:** point some CTAs directly to the correct tab. Use 'to' instead of 'click' ([#1491](https://github.com/openfoodfacts/open-prices-frontend/issues/1491)) ([580feb0](https://github.com/openfoodfacts/open-prices-frontend/commit/580feb0607201595f6d0c93b7549c9c2c2cb97a2))
+
 ## [1.129.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.128.0...v1.129.0) (2025-03-23)
 
 
