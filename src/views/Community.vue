@@ -21,6 +21,9 @@
       <p><a :href="APP_API_URL" target="_blank">API</a></p>
       <p><a :href="APP_HUGGING_FACE_URL" target="_blank">Hugging Face</a></p>
       <p><a :href="APP_DATA_GOUV_URL" target="_blank">data.gouv</a></p>
+      <p>
+        <a :href="APP_DUMP_PRICES_URL" target="_blank">prices.jsonl.gz</a> | <a :href="APP_DUMP_PROOFS_URL" target="_blank">proofs.jsonl.gz</a> | <a :href="APP_DUMP_LOCATIONS_URL" target="_blank">locations.jsonl.gz</a>
+      </p>
     </v-col>
   </v-row>
 
@@ -68,6 +71,9 @@ export default {
       APP_API_URL: constants.APP_API_URL,
       APP_HUGGING_FACE_URL: constants.APP_HUGGING_FACE_URL,
       APP_DATA_GOUV_URL: constants.APP_DATA_GOUV_URL,
+      APP_DUMP_PRICES_URL: constants.APP_DUMP_PRICES_URL,
+      APP_DUMP_PROOFS_URL: constants.APP_DUMP_PROOFS_URL,
+      APP_DUMP_LOCATIONS_URL: constants.APP_DUMP_LOCATIONS_URL,
       APP_GITHUB_REUSE_DISCUSSION_URL: constants.APP_GITHUB_REUSE_DISCUSSION_URL,
     }
   },

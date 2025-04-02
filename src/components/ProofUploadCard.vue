@@ -21,20 +21,9 @@
           :text="$t('ProofAdd.HowToMultipleShort')"
         />
         <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" :hideProofTypePriceTagChoice="typeReceiptOnly" />
-        <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <LocationInputRow :locationForm="proofForm" />
-        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" />
-        <v-row v-if="typePriceTagOnly && multiple" class="mt-0">
-          <v-col cols="12" class="pb-0">
-            <v-checkbox
-              v-model="proofForm.ready_for_price_tag_validation"
-              density="compact"
-              :label="$t('ProofAdd.PriceValidationAllow')"
-              :true-value="true"
-              hide-details="auto"
-            />
-          </v-col>
-        </v-row>
+        <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
+        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" />
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
@@ -106,8 +95,8 @@ Compressor.setDefaults({
 export default {
   components: {
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
-    ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
+    ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
@@ -147,6 +136,9 @@ export default {
         currency: null,  // see initProofForm
         receipt_price_count: null,
         receipt_price_total: null,
+        receipt_online_delivery_costs: null,
+        owner_consumption: true,  // will be ignored if type is not receipt
+        owner_comment: null,
         ready_for_price_tag_validation: null,  // see initProofForm
         proof_id: null
       },

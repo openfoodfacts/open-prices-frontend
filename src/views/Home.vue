@@ -12,9 +12,9 @@
     </v-col>
   </v-row>
 
-  <br>
+  <br v-if="currentChallenge">
 
-  <ChallengeBanner />
+  <ChallengeBanner v-if="currentChallenge" :challenge="currentChallenge" />
 
   <br>
 
@@ -61,6 +61,7 @@ export default {
       todayPriceCount: null,
       totalPriceCount: null,
       loading: false,
+      currentChallenge: null,
     }
   },
   computed: {
@@ -76,8 +77,15 @@ export default {
   mounted() {
     this.getPrices()
     this.getTodayPriceCount()
+    this.getCurrentChallenge()
   },
   methods: {
+    getCurrentChallenge() {
+      api.getChallenges({ status: "ONGOING", size: 1 })
+      .then((data) => {
+        this.currentChallenge = data.items[0]
+      })
+    },
     getPrices() {
       this.loading = true
       return api.getPrices({ size: this.getApiSize })

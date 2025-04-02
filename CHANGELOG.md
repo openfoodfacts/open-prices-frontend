@@ -1,5 +1,194 @@
 # Changelog
 
+## [1.129.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.128.0...v1.129.0) (2025-03-23)
+
+
+### Features
+
+* **User Dashboard:** add a new filter by kind (prices & proofs) (consumption or community) ([#1471](https://github.com/openfoodfacts/open-prices-frontend/issues/1471)) ([a54d2a8](https://github.com/openfoodfacts/open-prices-frontend/commit/a54d2a895a72326b1e74d500d33808d5e07c380e))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1470](https://github.com/openfoodfacts/open-prices-frontend/issues/1470)) ([c243ffe](https://github.com/openfoodfacts/open-prices-frontend/commit/c243ffe95ef22fdebcd1617d55c5c9dd9d739fea))
+
+## [1.128.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.127.0...v1.128.0) (2025-03-23)
+
+
+### Features
+
+* **Challenges:** read from api, add challenges list page ([#1459](https://github.com/openfoodfacts/open-prices-frontend/issues/1459)) ([f07b029](https://github.com/openfoodfacts/open-prices-frontend/commit/f07b0294dd61567f7fca43475a36c1749eaf4966))
+* **Reuses:** add 2 new reuses by Albert :rocket:  ([#1467](https://github.com/openfoodfacts/open-prices-frontend/issues/1467)) ([de58f84](https://github.com/openfoodfacts/open-prices-frontend/commit/de58f84b420031748019ffc1338c661310c3e724))
+
+
+### Bug Fixes
+
+* **Stats:** change price_type_group to price_kind (community & consumption) ([#1468](https://github.com/openfoodfacts/open-prices-frontend/issues/1468)) ([4e6a3a7](https://github.com/openfoodfacts/open-prices-frontend/commit/4e6a3a7f74f7a85c1154955c1223b487d32e1a9f))
+
+
+### Technical
+
+* **Challenges:** challenge card ([#1463](https://github.com/openfoodfacts/open-prices-frontend/issues/1463)) ([0703f55](https://github.com/openfoodfacts/open-prices-frontend/commit/0703f55bb86eea4cc79bfcfd99b2f163a2ee7268))
+* **Challenges:** Remove status filter + cleanup ([#1466](https://github.com/openfoodfacts/open-prices-frontend/issues/1466)) ([5803726](https://github.com/openfoodfacts/open-prices-frontend/commit/5803726d794ca202fcbcce44cc316ca9516ddeba))
+* **l10n:** New Crowdin translations to review and merge ([#1460](https://github.com/openfoodfacts/open-prices-frontend/issues/1460)) ([05bc89a](https://github.com/openfoodfacts/open-prices-frontend/commit/05bc89a2600d383c87720a943a85dd8302b062db))
+* **l10n:** New Crowdin translations to review and merge ([#1464](https://github.com/openfoodfacts/open-prices-frontend/issues/1464)) ([a2141ca](https://github.com/openfoodfacts/open-prices-frontend/commit/a2141ca5bc7b878f77037a27cedcdec432119da9))
+* **User Dashboard:** fetch price & proof data using the new `kind` filter ([#1469](https://github.com/openfoodfacts/open-prices-frontend/issues/1469)) ([2ae1c82](https://github.com/openfoodfacts/open-prices-frontend/commit/2ae1c8218f6d0697e5f897d8f3fee51282f6f2ff))
+
+## [1.127.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.126.0...v1.127.0) (2025-03-21)
+
+
+### Features
+
+* **User Dashboard:** start splitting data between consumption & community ([#1402](https://github.com/openfoodfacts/open-prices-frontend/issues/1402)) ([ea4dbb0](https://github.com/openfoodfacts/open-prices-frontend/commit/ea4dbb0b84cad5b5101aae5fbbe493c26a7b5fbd))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1457](https://github.com/openfoodfacts/open-prices-frontend/issues/1457)) ([ab68715](https://github.com/openfoodfacts/open-prices-frontend/commit/ab68715912694f406edc2b5e160767f7791140e2))
+
+## [1.126.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.125.2...v1.126.0) (2025-03-20)
+
+
+### Features
+
+* **Prices:** allow editing receipt quantity field ([#1453](https://github.com/openfoodfacts/open-prices-frontend/issues/1453)) ([6d91efa](https://github.com/openfoodfacts/open-prices-frontend/commit/6d91efaa51912c8f7e26bff7f6face1403902667))
+* **Prices:** display a suffix next to the receipt quantity field (kg) ([#1455](https://github.com/openfoodfacts/open-prices-frontend/issues/1455)) ([e4b8b96](https://github.com/openfoodfacts/open-prices-frontend/commit/e4b8b968d83545a6b80dc23d1f788ea03dfd61a7))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1451](https://github.com/openfoodfacts/open-prices-frontend/issues/1451)) ([b801d6c](https://github.com/openfoodfacts/open-prices-frontend/commit/b801d6cffa429f9f505e8eda46fa772aaff5b04f))
+
+## [1.125.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.125.1...v1.125.2) (2025-03-14)
+
+
+### Bug Fixes
+
+* **Proofs:** hide GDPR_REQUEST from ProofUploadCard type choices ([d365ebd](https://github.com/openfoodfacts/open-prices-frontend/commit/d365ebdb6cd8cce42fe6c5556ba7467a789b7f93))
+
+## [1.125.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.125.0...v1.125.1) (2025-03-12)
+
+
+### Bug Fixes
+
+* **Proofs:** hide the comment field on the multiple proof upload page. ref [#1446](https://github.com/openfoodfacts/open-prices-frontend/issues/1446) ([3ec2024](https://github.com/openfoodfacts/open-prices-frontend/commit/3ec2024cf06f70e6c102c4084ef54a688cd2d3fa))
+* **Proofs:** move up the comment field above the consumption toggle. ref [#1446](https://github.com/openfoodfacts/open-prices-frontend/issues/1446) ([2493be8](https://github.com/openfoodfacts/open-prices-frontend/commit/2493be870be4177134d97410f1c6222959d9b2e3))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1449](https://github.com/openfoodfacts/open-prices-frontend/issues/1449)) ([93f7ab3](https://github.com/openfoodfacts/open-prices-frontend/commit/93f7ab371f2f94a8bde88ff87b79a3752e6ec0a2))
+* **Proofs:** add GDPR_REQUEST to the type filter ([84c2f80](https://github.com/openfoodfacts/open-prices-frontend/commit/84c2f80033e849abf4a16aab43914de24de6181e))
+* **Proofs:** move the ready_for_price_tag_validation field to the ProofMetadataInputRow. ref [#1373](https://github.com/openfoodfacts/open-prices-frontend/issues/1373) ([b879d7e](https://github.com/openfoodfacts/open-prices-frontend/commit/b879d7e2efc357e9551e2d154335bbb15a4f0d46))
+
+## [1.125.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.124.1...v1.125.0) (2025-03-12)
+
+
+### Features
+
+* **Prices:** display the new owner_comment field (form, chip, history) ([#1448](https://github.com/openfoodfacts/open-prices-frontend/issues/1448)) ([c6b2c71](https://github.com/openfoodfacts/open-prices-frontend/commit/c6b2c7192322f36ccc7377bf3dd179adefa994f8))
+* **Proofs:** display the new owner_comment field (form, chip, history) ([#1446](https://github.com/openfoodfacts/open-prices-frontend/issues/1446)) ([9ed2c7f](https://github.com/openfoodfacts/open-prices-frontend/commit/9ed2c7f287e0425765832c81acba4fc21be01133))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1445](https://github.com/openfoodfacts/open-prices-frontend/issues/1445)) ([c8fdf51](https://github.com/openfoodfacts/open-prices-frontend/commit/c8fdf51b2fa6dea4811862550a1cf76cb4d1b5d2))
+
+## [1.124.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.124.0...v1.124.1) (2025-03-09)
+
+
+### Technical
+
+* **Forms:** add a red asterisk next to the required field labels ([#1443](https://github.com/openfoodfacts/open-prices-frontend/issues/1443)) ([1c304fd](https://github.com/openfoodfacts/open-prices-frontend/commit/1c304fd222b716b9b9b08bf5cb11f142e683bfd1))
+* **Price add:** change look & feel of input select fields ([#1444](https://github.com/openfoodfacts/open-prices-frontend/issues/1444)) ([b391117](https://github.com/openfoodfacts/open-prices-frontend/commit/b3911172e5909643d3f8214863cbb9d5920c61c0))
+* **Price add:** change look & feel of input text fields ([#1441](https://github.com/openfoodfacts/open-prices-frontend/issues/1441)) ([ce166c4](https://github.com/openfoodfacts/open-prices-frontend/commit/ce166c463397bfa19c8ab50ac28d08a5ac9ba12e))
+* simplify row & col in ProductInputRow & PriceInputRow ([4ccb34a](https://github.com/openfoodfacts/open-prices-frontend/commit/4ccb34a248f6a22ed510d00825bd715b9e4a7eec))
+
+## [1.124.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.123.1...v1.124.0) (2025-03-09)
+
+
+### Features
+
+* **Proofs:** display the new owner_consumption field (form, chip) ([#1435](https://github.com/openfoodfacts/open-prices-frontend/issues/1435)) ([89a5b07](https://github.com/openfoodfacts/open-prices-frontend/commit/89a5b0710700ab545916b9bd76e2cb04df9268eb))
+
+
+### Technical
+
+* **Forms:** add green color to v-switch (Proof, Price & Settings) ([#1438](https://github.com/openfoodfacts/open-prices-frontend/issues/1438)) ([447a06b](https://github.com/openfoodfacts/open-prices-frontend/commit/447a06bc6c63249baee8d30820eff9a9828d45ee))
+* **Forms:** replace v-checkbox with v-switch (Proof & Price) ([#1437](https://github.com/openfoodfacts/open-prices-frontend/issues/1437)) ([26ad4b9](https://github.com/openfoodfacts/open-prices-frontend/commit/26ad4b9fa346980afdbc331bc1f1db9bf39d4629))
+* **l10n:** New Crowdin translations to review and merge ([#1440](https://github.com/openfoodfacts/open-prices-frontend/issues/1440)) ([68f18a6](https://github.com/openfoodfacts/open-prices-frontend/commit/68f18a66ec29f5be84a06d7a56caf35076cdbf48))
+* **Proofs:** move up the location field above the image(s) ([#1439](https://github.com/openfoodfacts/open-prices-frontend/issues/1439)) ([7747015](https://github.com/openfoodfacts/open-prices-frontend/commit/7747015656ff1b9082aeb55d6e8558e99929943b))
+
+## [1.123.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.123.0...v1.123.1) (2025-03-08)
+
+
+### Technical
+
+* **Challenge:** display Home banner only if ongoing challenge ([#1434](https://github.com/openfoodfacts/open-prices-frontend/issues/1434)) ([d50ebda](https://github.com/openfoodfacts/open-prices-frontend/commit/d50ebda75bbb15f3003fd66bcc6671402e282593))
+* **Challenge:** move the configuration to a dedicated JSON file ([#1433](https://github.com/openfoodfacts/open-prices-frontend/issues/1433)) ([e143e26](https://github.com/openfoodfacts/open-prices-frontend/commit/e143e268845874e750c441fff1dbcc4b79cf97ea))
+* **Community:** add links to daily jsonl.gz dumps. ref [#1064](https://github.com/openfoodfacts/open-prices-frontend/issues/1064) ([cd91846](https://github.com/openfoodfacts/open-prices-frontend/commit/cd918462c4e8b768672aea1cbd958b28f4d45fd5))
+* **l10n:** New Crowdin translations to review and merge ([#1429](https://github.com/openfoodfacts/open-prices-frontend/issues/1429)) ([c216bef](https://github.com/openfoodfacts/open-prices-frontend/commit/c216bef6dd6f51fa6dd1d0d17fa4da87fb7718d8))
+
+## [1.123.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.4...v1.123.0) (2025-03-04)
+
+
+### Features
+
+* **Proofs:** Display the new receipt_online_delivery_costs field in the form ([#1427](https://github.com/openfoodfacts/open-prices-frontend/issues/1427)) ([18ceba8](https://github.com/openfoodfacts/open-prices-frontend/commit/18ceba87c34369052444af5d78f3737a835e022e))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1426](https://github.com/openfoodfacts/open-prices-frontend/issues/1426)) ([b1e85af](https://github.com/openfoodfacts/open-prices-frontend/commit/b1e85af638247739ed6f85fa7a8995dff5a9089f))
+
+## [1.122.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.3...v1.122.4) (2025-03-03)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1399](https://github.com/openfoodfacts/open-prices-frontend/issues/1399)) ([4ca5d5a](https://github.com/openfoodfacts/open-prices-frontend/commit/4ca5d5a4f508e48e408fa900711fc0676d53aea9))
+* **l10n:** New Crowdin translations to review and merge ([#1425](https://github.com/openfoodfacts/open-prices-frontend/issues/1425)) ([a0133a2](https://github.com/openfoodfacts/open-prices-frontend/commit/a0133a2fa7c8ec17b549dd23ae1fe9c951855dc8))
+* rename main branch from 'master' to 'main' ([#1421](https://github.com/openfoodfacts/open-prices-frontend/issues/1421)) ([e759b39](https://github.com/openfoodfacts/open-prices-frontend/commit/e759b3983f9d579d0196fbb8e30dd7a41f25645d))
+* **Stats:** new unique country stats (in Misc) ([#1423](https://github.com/openfoodfacts/open-prices-frontend/issues/1423)) ([384a658](https://github.com/openfoodfacts/open-prices-frontend/commit/384a658ed3d48026861d350a8271d591b18267b4))
+* **Stats:** new unique year count stat (in Misc) ([#1424](https://github.com/openfoodfacts/open-prices-frontend/issues/1424)) ([9eeb208](https://github.com/openfoodfacts/open-prices-frontend/commit/9eeb2085888ad740507ff7a596d2de635efb5316))
+
+## [1.122.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.2...v1.122.3) (2025-03-01)
+
+
+### Bug Fixes
+
+* **Search:** avoid product disappearing when clicking on the search icon ([6ca59f5](https://github.com/openfoodfacts/open-prices-frontend/commit/6ca59f5b4098c40c8afab852b4ecb2f6a014bc40))
+* **Search:** don't run a search if the field is empty ([9a00798](https://github.com/openfoodfacts/open-prices-frontend/commit/9a0079823001e250e8e656ee5d316da4e1fce2b4))
+
+
+### Technical
+
+* **Stats:** new Misc section. Show prices & proofs count per source ([#1403](https://github.com/openfoodfacts/open-prices-frontend/issues/1403)) ([b19a0fd](https://github.com/openfoodfacts/open-prices-frontend/commit/b19a0fd4d5c43043e9f8703a066f84bb9ef64ddc))
+
+## [1.122.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.1...v1.122.2) (2025-02-25)
+
+
+### Technical
+
+* **History:** show the price & proof source info ([#1395](https://github.com/openfoodfacts/open-prices-frontend/issues/1395)) ([49b6295](https://github.com/openfoodfacts/open-prices-frontend/commit/49b6295f3eaa662fda8a8694d7ce7d2760a3356f))
+* **l10n:** New Crowdin translations to review and merge ([#1398](https://github.com/openfoodfacts/open-prices-frontend/issues/1398)) ([46c79c0](https://github.com/openfoodfacts/open-prices-frontend/commit/46c79c083c8b2d6a561e05dcd3c69dd5a469f6cd))
+* **Stats:** new community & consumption price counts ([#1397](https://github.com/openfoodfacts/open-prices-frontend/issues/1397)) ([a7b092d](https://github.com/openfoodfacts/open-prices-frontend/commit/a7b092d90966a25366230ff6605aa7a6b5ed2a97))
+
+## [1.122.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.122.0...v1.122.1) (2025-02-24)
+
+
+### Bug Fixes
+
+* **Community:** fix URLs to Slack & data.gouv. ref [#1064](https://github.com/openfoodfacts/open-prices-frontend/issues/1064) ([3b87310](https://github.com/openfoodfacts/open-prices-frontend/commit/3b87310b942e2fbb9fcbad22743435f039daa7d9))
+* **Stats:** switch Product stats order. ref [#1389](https://github.com/openfoodfacts/open-prices-frontend/issues/1389) ([6efb840](https://github.com/openfoodfacts/open-prices-frontend/commit/6efb84052963dca7f9ebc89db78d4d3b46aa1a9f))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1390](https://github.com/openfoodfacts/open-prices-frontend/issues/1390)) ([933fc43](https://github.com/openfoodfacts/open-prices-frontend/commit/933fc439ac56eef1aed804a9340566075297955c))
+* **Prices:** Add new discount_type 'Second hand'. ref [#1386](https://github.com/openfoodfacts/open-prices-frontend/issues/1386) ([b13cf06](https://github.com/openfoodfacts/open-prices-frontend/commit/b13cf06e8047dc2e0ded45578bd2e32cfd2bd48a))
+* **Stats:** Add the new price with_discount count ([#1392](https://github.com/openfoodfacts/open-prices-frontend/issues/1392)) ([a5914e6](https://github.com/openfoodfacts/open-prices-frontend/commit/a5914e6f8a06001c65fbdd7c6960e3cd428a7e96))
+
 ## [1.122.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.121.0...v1.122.0) (2025-02-22)
 
 

@@ -4,14 +4,14 @@
       <div class="text-h6">
         {{ $t('Common.Start') }}
       </div>
-      <p>{{ getDateFormatted(challenge.startDate) }}</p>
+      <p>{{ getDateFormatted(challenge.start_date) }}</p>
     </v-timeline-item>
     <v-timeline-item dot-color="error">
       <template #opposite>
         <div class="text-h6">
           {{ $t('Common.End') }}
         </div>
-        <p>{{ getDateFormatted(challenge.endDate) }}</p>
+        <p>{{ getDateFormatted(challenge.end_date) }}</p>
       </template>
     </v-timeline-item>
   </v-timeline>
@@ -38,12 +38,12 @@ export default {
   },
   computed: {
     nbDays() {
-      return Math.round((new Date(this.challenge.endDate) - new Date(this.challenge.startDate)) / (1000 * 60 * 60 * 24)) + 1
+      return Math.round((new Date(this.challenge.end_date) - new Date(this.challenge.start_date)) / (1000 * 60 * 60 * 24)) + 1
     },
     todayIndex() {
       let today = new Date()
       today.setHours(0, 0, 0, 0)
-      return Math.round((today - new Date(this.challenge.startDate)) / (1000 * 60 * 60 * 24))
+      return Math.round((today - new Date(this.challenge.start_date)) / (1000 * 60 * 60 * 24))
     },
     daysLeftText() {
       const daysLeft = this.nbDays - this.todayIndex

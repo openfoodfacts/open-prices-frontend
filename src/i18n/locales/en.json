@@ -155,10 +155,21 @@
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "{challenge_title} prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"MostRecentContributions": "Most recent contributions",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
+		"PastOrFutureChallenges": "Past or future challenges",
+		"OngoingChallenges": "Ongoing challenges"
 	},
 	"Common": {
 		"About": "About",
+		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
@@ -198,7 +209,14 @@
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Contributors": "Contributors",
+		"Comment": "Comment",
 		"Community": "Community",
+		"CommunityPrices": "Community prices",
+		"CommunityProofs": "Community proofs",
+		"Consumption": "Consumption",
+		"ConsumptionPrices": "Consumption prices",
+		"ConsumptionProofs": "Consumption proofs",
+		"Contributions": "Contributions",
 		"Confirm": "Confirm",
 		"Country": "Country",
 		"Countries": "Countries",
@@ -258,6 +276,7 @@
 		"Edit": "Edit",
 		"End": "End",
 		"Filter": "Filter",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
@@ -269,6 +288,8 @@
 		"Fix": "Fix",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
+		"GDPR_REQUEST": "GDPR request",
+		"Group": "Group",
 		"Help": "Help",
 		"History": "History",
 		"Image": "Image",
@@ -283,6 +304,9 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
+		"Miscellaneous": "Miscellaneous",
+		"MobileApp": "Mobile app",
+		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
@@ -304,6 +328,8 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
+		"Other": "Other",
+		"OtherContributions": "Other contributions",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
 		"Picture": "Picture",
@@ -350,6 +376,8 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
+		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
+		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -386,6 +414,10 @@
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
+		"UnitGram": "g",
+		"UnitKilogram": "kg",
+		"UnitMililitre": "mL",
+		"UnitLitre": "L",
 		"Unreadable": "Unreadable",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
@@ -403,6 +435,8 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "View",
 		"Website": "Website",
+		"Year": "Year",
+		"Years": "Years",
 		"Yes": "Yes",
 		"No": "No",
 		"Food": "Food",
@@ -750,6 +784,9 @@
 		"Challenge": {
 			"Title": "Challenge"
 		},
+		"Challenges": {
+			"Title": "Challenges"
+		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
@@ -794,6 +831,7 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

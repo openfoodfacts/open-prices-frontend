@@ -2,9 +2,9 @@ import { useAppStore } from '../store'
 import constants from '../constants'
 
 
-const PRICE_UPDATE_FIELDS = ['type', 'category_tag', 'labels_tags', 'origins_tags', 'price', 'price_is_discounted', 'price_without_discount', 'discount_type', 'price_per', 'currency', 'receipt_quantity', 'date']
+const PRICE_UPDATE_FIELDS = ['type', 'category_tag', 'labels_tags', 'origins_tags', 'price', 'price_is_discounted', 'price_without_discount', 'discount_type', 'price_per', 'currency', 'receipt_quantity', 'owner_comment', 'date']
 const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'location_id', 'location_osm_id', 'location_osm_type', 'proof_id'])
-const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency', 'receipt_price_count', 'receipt_price_total', 'ready_for_price_tag_validation']
+const PROOF_UPDATE_FIELDS = ['type', 'date', 'currency', 'receipt_price_count', 'receipt_price_total', 'receipt_online_delivery_costs', 'owner_consumption', 'owner_comment', 'ready_for_price_tag_validation']
 const PROOF_CREATE_FIELDS = PROOF_UPDATE_FIELDS.concat(['location_id', 'location_osm_id', 'location_osm_type'])  // 'file'
 const LOCATION_ONLINE_CREATE_FIELDS = ['type', 'website_url']
 const LOCATION_SEARCH_LIMIT = 10
@@ -14,14 +14,19 @@ const OP_DEFAULT_HEADERS = {
   'Content-Type': 'application/json'
 }
 const OP_DEFAULT_PARAMS = {
-  'app_name': constants.APP_USER_AGENT
+  'app_name': constants.APP_USER_AGENT,
   // 'app_version'
   // 'app_platform'
   // 'app_page'  // filled with the page url
 }
 
 function buildURLParams(params = {}) {
-  return new URLSearchParams({...OP_DEFAULT_PARAMS, ...params})
+  // first merge with OP default params
+  const allParams = {...OP_DEFAULT_PARAMS, ...params}
+  // flatten params to allow multiple entries for the same key
+  const flattenAllParams = Object.entries(allParams).flatMap(([key, values]) => Array.isArray(values) ? values.map((value) => [key, value]) : [[key, values]])
+  // build search params
+  return new URLSearchParams(flattenAllParams)
 }
 
 function filterBodyWithAllowedKeys(data, allowedKeys) {
@@ -133,6 +138,15 @@ export default {
       }
       if (data.receipt_price_total) {
         formData.append('receipt_price_total', data.receipt_price_total)
+      }
+      if (data.receipt_online_delivery_costs) {
+        formData.append('receipt_online_delivery_costs', data.receipt_online_delivery_costs)
+      }
+      if (data.owner_consumption === true || data.owner_consumption === false) {
+        formData.append('owner_consumption', data.owner_consumption)
+      }
+      if (data.owner_comment) {
+        formData.append('owner_comment', data.owner_comment)
       }
     }
     else if (data.type === constants.PROOF_TYPE_PRICE_TAG) {
@@ -438,6 +452,14 @@ export default {
     .then((response) => response.json())
   },
 
+  getChallenges(params = {}) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/challenges?${buildURLParams({...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
 
   /**
    * OPEN FOOD FACTS API

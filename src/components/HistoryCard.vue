@@ -1,9 +1,14 @@
 <template>
   <v-card :title="$t('Common.History')" data-name="history-card">
     <v-card-text>
-      {{ getDateTimeFormatted(price.created) }} ({{ getRelativeDateTimeFormatted(price.created) }})
-      <span>- </span>
+      <span>{{ getDateTimeFormatted(price.created) }} ({{ getRelativeDateTimeFormatted(price.created) }})</span>
+      <span> - </span>
       <a :href="getUserDetailUrl">{{ price.owner }}</a>
+      <span> ({{ price.source }})</span>
+      <span v-if="price.owner_comment">
+        <span> - </span>
+        <span>{{ price.owner_comment }}</span>
+      </span>
     </v-card-text>
   </v-card>
 </template>

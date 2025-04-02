@@ -100,18 +100,18 @@
 			"ScanBarcode": "Scan a barcode",
 			"ScanBarcodeShort": "Сканировать",
 			"Type": "Тип",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Поиск по штрихкоду",
 			"TypeBarcodeShort": "Тип",
 			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"Title": "Информация о товаре"
 		},
 		"ProductModeList": {
 			"Barcode": "Штрих-код",
 			"Category": "Категория"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Цена за кг",
+			"PerUnit": "Цена за единицу товара"
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
@@ -132,7 +132,7 @@
 	"BarcodeManualInput": {
 		"Barcode": "Штрих-код",
 		"Submit": "Подтвердить",
-		"Title": "Type a barcode"
+		"Title": "Поиск по штрихкоду"
 	},
 	"Challenge": {
 		"Title": "Community challenge",
@@ -155,10 +155,21 @@
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "{challenge_title} prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"MostRecentContributions": "Most recent contributions",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
+		"PastOrFutureChallenges": "Past or future challenges",
+		"OngoingChallenges": "Ongoing challenges"
 	},
 	"Common": {
 		"About": "О приложении",
+		"AddComment": "Add a comment",
 		"AddPrice": "Добавить цену",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Добавить новую цену",
@@ -173,7 +184,7 @@
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "Сканировать",
-		"BarcodeType": "Type a barcode",
+		"BarcodeType": "Поиск по штрихкоду",
 		"BarcodeTypeShort": "Тип",
 		"BarcodeInvalid": "Неверный штрихкод",
 		"Brand": "Марка",
@@ -198,7 +209,14 @@
 		"Chart": "Chart",
 		"Clear": "Очистить",
 		"Contributors": "Участники",
+		"Comment": "Comment",
 		"Community": "Community",
+		"CommunityPrices": "Community prices",
+		"CommunityProofs": "Community proofs",
+		"Consumption": "Потребление",
+		"ConsumptionPrices": "Consumption prices",
+		"ConsumptionProofs": "Consumption proofs",
+		"Contributions": "Вклад",
 		"Confirm": "Подтвердить",
 		"Country": "Страна",
 		"Countries": "Страны",
@@ -247,6 +265,7 @@
 		"DiscountTypeLoyaltyProgram": "Loyalty program",
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
+		"DiscountTypeSecondHand": "Second hand",
 		"DiscountTypeOther": "Прочее",
 		"Example": "Example",
 		"Examples": "Examples",
@@ -257,6 +276,7 @@
 		"Edit": "Редактировать",
 		"End": "End",
 		"Filter": "Фильтр",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
@@ -268,6 +288,8 @@
 		"Fix": "Fix",
 		"FAQ": "Часто задаваемые вопросы",
 		"FrequentlyAskedQuestions": "Часто задаваемые вопросы",
+		"GDPR_REQUEST": "GDPR request",
+		"Group": "Group",
 		"Help": "Help",
 		"History": "История",
 		"Image": "Изображение",
@@ -282,6 +304,9 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Карта",
+		"Miscellaneous": "Прочее",
+		"MobileApp": "Mobile app",
+		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
@@ -303,6 +328,8 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
+		"Other": "Прочее",
+		"OtherContributions": "Other contributions",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
 		"Picture": "Изображение",
@@ -349,6 +376,8 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
+		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
+		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -385,6 +414,10 @@
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
+		"UnitGram": "g",
+		"UnitKilogram": "kg",
+		"UnitMililitre": "mL",
+		"UnitLitre": "L",
 		"Unreadable": "Unreadable",
 		"Upload": "Загрузить",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
@@ -402,6 +435,8 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Вид",
 		"Website": "Веб-сайт",
+		"Year": "Year",
+		"Years": "Years",
 		"Yes": "Да",
 		"No": "Нет",
 		"Food": "Food",
@@ -734,6 +769,9 @@
 		"Challenge": {
 			"Title": "Challenge"
 		},
+		"Challenges": {
+			"Title": "Challenges"
+		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
@@ -774,9 +812,11 @@
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
+		"WithDiscount": "With a discount",
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

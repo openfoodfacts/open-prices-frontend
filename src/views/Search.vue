@@ -80,9 +80,7 @@ export default {
   },
   mounted() {
     this.productSearchForm.q = this.$route.query[constants.QUERY_PARAM] || ''
-    if (this.productSearchForm.q) {
-      this.getProducts()
-    }
+    this.getProducts()
   },
   methods: {
     fieldRequired(v) {
@@ -98,21 +96,23 @@ export default {
     },
     search() {
       this.$refs.searchInput.blur()
-      this.productList = []
-      this.productTotal = null
       this.$router.push({ query: { ...this.$route.query, [constants.QUERY_PARAM]: this.productSearchForm.q } })
     },
     getProducts() {
-      this.loading = true
-      return api.getProducts({ code: this.productSearchForm.q })
-        .then((data) => {
-          this.productList.push(...data.items)
-          this.productTotal = data.total
-          this.loading = false
-          if (data.items.length) {
-            this.getProductLatestPrices()
-          }
-        })
+      if (this.productSearchForm.q) {
+        this.productList = []
+        this.productTotal = null
+        this.loading = true
+        return api.getProducts({ code: this.productSearchForm.q })
+          .then((data) => {
+            this.productList.push(...data.items)
+            this.productTotal = data.total
+            this.loading = false
+            if (data.items.length) {
+              this.getProductLatestPrices()
+            }
+          })
+      }
     },
     getProductLatestPrices() {
       this.productList.forEach((product) => {

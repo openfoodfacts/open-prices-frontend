@@ -18,10 +18,12 @@ const PROOF_TYPE_PRICE_TAG_ICON = 'mdi-library-shelves'
 const PROOF_TYPE_RECEIPT = 'RECEIPT'
 const PROOF_TYPE_RECEIPT_ICON = 'mdi-receipt-text-outline'
 const PROOF_TYPE_GDPR_REQUEST = 'GDPR_REQUEST'
+const PROOF_TYPE_GDPR_REQUEST_ICON = 'mdi-email-open-outline'
 const LOCATION_TYPE_OSM = 'OSM'
 const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
 const LOCATION_TYPE_ONLINE = 'ONLINE'
 const LOCATION_TYPE_ONLINE_ICON = 'mdi-web'
+const USER_CONSUMPTION_ICON = 'mdi-cart-outline'
 const OSM_NAME = 'OpenStreetMap'
 
 export default {
@@ -65,11 +67,13 @@ export default {
   THEME_DARK_ICON: 'mdi-moon-waning-crescent',
   ACTION_MENU_ICON: 'mdi-dots-vertical',
   TYPE_PARAM: 'type',
+  KIND_PARAM: 'kind',
   SOURCE_PARAM: 'source',
   QUERY_PARAM: 'q',
   FILTER_PARAM: 'filter',
   ORDER_PARAM: 'order',
   DISPLAY_PARAM: 'display',
+  TAB_PARAM: 'tab',
   PRICE_ICON: PRICE_ICON,
   PRICE_TYPE_PRODUCT: PRICE_TYPE_PRODUCT,
   PRICE_TYPE_PRODUCT_ICON: PRICE_TYPE_PRODUCT_ICON,
@@ -90,6 +94,10 @@ export default {
     {key: 'SECOND_HAND', value: 'DiscountTypeSecondHand'},
     {key: 'OTHER', value: 'DiscountTypeOther'},
   ],
+  PRICE_PROOF_KIND_LIST: [
+    { key: 'CONSUMPTION', value: 'Consumption', icon: USER_CONSUMPTION_ICON },
+    { key: 'COMMUNITY', value: 'Contributions', icon: 'mdi-account-group' },
+  ],
   PRICE_TAG_STATUS_WITH_PRICE: 1,
   PRICE_TAG_STATUS_UNREADABLE: 2,
   PRICE_TAG_STATUS_TRUNCATED: 3,
@@ -109,9 +117,11 @@ export default {
   PROOF_TYPE_RECEIPT: PROOF_TYPE_RECEIPT,
   PROOF_TYPE_RECEIPT_ICON: PROOF_TYPE_RECEIPT_ICON,
   PROOF_TYPE_GDPR_REQUEST: PROOF_TYPE_GDPR_REQUEST,
+  PROOF_TYPE_GDPR_REQUEST_ICON: PROOF_TYPE_GDPR_REQUEST_ICON,
   PROOF_TYPE_LIST: [
     {key: PROOF_TYPE_PRICE_TAG, value: PROOF_TYPE_PRICE_TAG, icon: PROOF_TYPE_PRICE_TAG_ICON},
-    {key: PROOF_TYPE_RECEIPT, value: PROOF_TYPE_RECEIPT, icon: PROOF_TYPE_RECEIPT_ICON}
+    {key: PROOF_TYPE_RECEIPT, value: PROOF_TYPE_RECEIPT, icon: PROOF_TYPE_RECEIPT_ICON},
+    {key: PROOF_TYPE_GDPR_REQUEST, value: PROOF_TYPE_GDPR_REQUEST, icon: PROOF_TYPE_GDPR_REQUEST_ICON},
   ],
   PROOF_TYPE_USER_EDITABLE_LIST: [PROOF_TYPE_PRICE_TAG, PROOF_TYPE_RECEIPT],
   LOCATION_TYPE_OSM: LOCATION_TYPE_OSM,
@@ -123,6 +133,8 @@ export default {
     {key: LOCATION_TYPE_OSM, value: LOCATION_TYPE_OSM, icon: LOCATION_TYPE_OSM_ICON},
     {key: LOCATION_TYPE_ONLINE, value: LOCATION_TYPE_ONLINE, icon: LOCATION_TYPE_ONLINE_ICON},
   ],
+  USER_CONSUMPTION_ICON: USER_CONSUMPTION_ICON,
+  USER_COMMENT_ICON: 'mdi-comment-text-outline',
   // filter
   PRODUCT_FILTER_LIST: [
     { key: 'price_count_gte_1', value: 'FilterProductWithPriceCount' },
@@ -201,6 +213,11 @@ export default {
     { key: 'display', value: 'Display', icon: 'mdi-eye-outline' },
     { key: 'edit', value: 'Edit', icon: 'mdi-pencil' },
   ],
+  USER_DASHBOARD_TAB_LIST: [
+    { key: 'consumption', value: 'MyConsumption', icon: USER_CONSUMPTION_ICON },
+    { key: 'community', value: 'OtherContributions', icon: 'mdi-account-group' },
+  ],
+  // date regex
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
   DATE_YEAR_MONTH_REGEX_MATCH: /(\d{4})-(\d{2})/,
   DATE_YEAR_REGEX_MATCH: /(\d{4})/,

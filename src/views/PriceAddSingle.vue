@@ -37,7 +37,7 @@
           </template>
           <v-divider />
           <v-card-text>
-            <PriceInputRow class="mt-0" :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" :hideCurrencyChoice="true" @filled="priceFormFilled = $event" />
+            <PriceInputRow :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" :hideCurrencyChoice="true" @filled="priceFormFilled = $event" />
           </v-card-text>
         </v-card>
       </v-col>
@@ -89,6 +89,7 @@ export default {
         discount_type: null,
         currency: null,  // see ProofUploadCard
         receipt_quantity: null,
+        owner_comment: null,
         location_id: null,
         location_osm_id: null,
         location_osm_type: '',

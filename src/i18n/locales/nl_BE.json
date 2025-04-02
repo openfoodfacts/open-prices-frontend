@@ -153,12 +153,23 @@
 		"PicturesAddedByYou": "Door jou toegevoegde foto's",
 		"Prices": "{challenge_title} prijzen",
 		"PricesAdded": "{challenge_title} prijzen toegevoegd",
-		"PricesByYou": "{challenge_title} prices by you",
+		"PricesByYou": "{challenge_title} prijzen door jou",
 		"PricesAddedByYou": "{challenge_title} prijzen door u toegevoegd",
-		"MostRecentContributions": "Meest recente bijdragen"
+		"MostRecentContributions": "Meest recente bijdragen",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
+		"PastOrFutureChallenges": "Past or future challenges",
+		"OngoingChallenges": "Ongoing challenges"
 	},
 	"Common": {
 		"About": "Over",
+		"AddComment": "Plaats een reactie",
 		"AddPrice": "Voeg een prijs toe",
 		"AddPrices": "Prijzen toevoegen",
 		"AddNewPrice": "Nieuwe prijs toevoegen",
@@ -198,7 +209,14 @@
 		"Chart": "Grafiek",
 		"Clear": "Wissen",
 		"Contributors": "Bijdragers",
+		"Comment": "Reactie",
 		"Community": "Gemeenschap",
+		"CommunityPrices": "Community prices",
+		"CommunityProofs": "Community proofs",
+		"Consumption": "Consumptie",
+		"ConsumptionPrices": "Consumption prices",
+		"ConsumptionProofs": "Consumption proofs",
+		"Contributions": "Bijdragen",
 		"Confirm": "Bevestig",
 		"Country": "Land",
 		"Countries": "Landen",
@@ -225,8 +243,8 @@
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
 		"Language": "Talen",
 		"Languages": "Talen",
-		"LatestPrices": "Laatste prijzen",
-		"LatestProofs": "Laatste bewijzen",
+		"LatestPrices": "Nieuwste prijzen",
+		"LatestProofs": "Nieuwste bewijzen",
 		"LoadMore": "Meer laden",
 		"Location": "Locatie",
 		"Locations": "Locaties",
@@ -240,13 +258,14 @@
 		"Delete": "Verwijder",
 		"DeveloperMode": "Ontwikkelaarsmodus",
 		"Discount": "Korting",
-		"DiscountType": "Discount type",
+		"DiscountType": "Soort korting",
 		"DiscountTypeQuantity": "Hoeveelheid",
-		"DiscountTypeSale": "Sale",
-		"DiscountTypeSeasonal": "Seasonal",
-		"DiscountTypeLoyaltyProgram": "Loyalty program",
-		"DiscountTypeExpiresSoon": "Expires soon",
-		"DiscountTypePickItYourself": "Pick it yourself",
+		"DiscountTypeSale": "Uitverkoop",
+		"DiscountTypeSeasonal": "Seizoensgebonden",
+		"DiscountTypeLoyaltyProgram": "Loyaliteitsprogramma",
+		"DiscountTypeExpiresSoon": "Vervalt binnenkort",
+		"DiscountTypePickItYourself": "Zelf plukken",
+		"DiscountTypeSecondHand": "Tweedehands",
 		"DiscountTypeOther": "Andere",
 		"Example": "Voorbeeld",
 		"Examples": "Voorbeelden",
@@ -257,6 +276,7 @@
 		"Edit": "Bewerken",
 		"End": "Einde",
 		"Filter": "Filter",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "Met een prijs",
 		"FilterProductWithPriceCountHide": "Verberg producten met prijzen",
 		"FilterProductWithoutPriceCount": "Zonder prijzen",
@@ -268,6 +288,8 @@
 		"Fix": "Oplossen",
 		"FAQ": "Veelgestelde vragen (FAQ)",
 		"FrequentlyAskedQuestions": "Veelgestelde vragen",
+		"GDPR_REQUEST": "AVG-verzoek",
+		"Group": "Group",
 		"Help": "Help",
 		"History": "Geschiedenis",
 		"Image": "Afbeelding",
@@ -277,11 +299,14 @@
 		"ImageSelectedCount": "{count} afbeeldingen geselecteerd | {count} afbeelding geselecteerd | {count} afbeeldingen geselecteerd",
 		"Images": "Afbeeldingen",
 		"ImageFull": "Afbeelding op volledige grootte",
-		"Latest": "Laatste",
+		"Latest": "Nieuwste",
 		"LinkCopySuccess": "Link gekopieerd",
 		"LocationCount": "{count} locaties | {count} locatie | {count} locaties",
 		"LocationNotFound": "Locatie niet gevonden",
 		"Map": "Kaart",
+		"Miscellaneous": "Diversen",
+		"MobileApp": "Mobiele app",
+		"MyConsumption": "My consumption",
 		"MyDashboard": "Mijn dashboard",
 		"MyPrices": "Mijn prijzen",
 		"MyProofs": "Mijn bewijzen",
@@ -303,6 +328,8 @@
 		"OrderProofCreatedDESC": "Datum van toevoeging",
 		"OrderProofDateDESC": "Bewijsdatum",
 		"OrderUserCountDESC": "Gebruikersaantal",
+		"Other": "Andere",
+		"OtherContributions": "Other contributions",
 		"PersonalInfo": "Persoonlijke informatie",
 		"Physical": "Fysiek",
 		"Picture": "Afbeelding",
@@ -349,6 +376,8 @@
 		"Receipts": "Bonnen",
 		"ReceiptPriceCount": "Aantal prijzen",
 		"ReceiptPriceTotal": "Totaalbedrag",
+		"ReceiptOwnerConsumption": "Volg mijn consumptiedashboard",
+		"ReceiptOnlineDeliveryCosts": "Verzendkosten",
 		"Recent": "Recent",
 		"Reuses": "Hergebruik",
 		"ReusesKnown": "Bekende hergebruiken",
@@ -385,6 +414,10 @@
 		"UnknownProduct": "Onbekend product",
 		"UnknownProductSource": "Onbekende productbron",
 		"UnknownSource": "Onbekende bron",
+		"UnitGram": "g",
+		"UnitKilogram": "kg",
+		"UnitMililitre": "ml",
+		"UnitLitre": "L",
 		"Unreadable": "Onleesbaar",
 		"Upload": "Uploaden",
 		"UploadMultipleImages": "Upload {count} afbeelding | Upload {count} afbeeldingen",
@@ -402,6 +435,8 @@
 		"ValidatePricesWithAI": "Prijzen valideren met AI",
 		"View": "Bekijk",
 		"Website": "Website",
+		"Year": "Jaar",
+		"Years": "Jaren",
 		"Yes": "Ja",
 		"No": "Nee",
 		"Food": "Voedsel",
@@ -426,14 +461,14 @@
 		},
 		"PricesAlreadyAdded": "Prijzen al toegevoegd",
 		"PricesMarkedAsError": "Prijzen gemarkeerd als fout",
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} prijs/prijzen worden toegevoegd aan een bestaand bewijs op {date} bij {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
 		"WaitForUpload": "Even geduld a. u. b. voor het uploaden",
 		"GoToDashboard": "Ga naar jouw dashboard",
 		"GoToProof": "Ga naar bewijs",
 		"AddNewProof": "Voeg een nieuw bewijs toe",
 		"NextProof": "Volgend bewijs",
-		"ChooseNextProof": "Choose another proof to handle",
+		"ChooseNextProof": "Kies een ander bewijs om te verwerken",
 		"AutomaticBoundingBoxSource": "automatisch",
 		"ManualBoundingBoxSource": "manueel",
 		"DetectedBarcode": "Gedetecteerde barcode: {barcode}",
@@ -479,7 +514,7 @@
 	},
 	"Home": {
 		"AddPrice": "Voeg een prijs toe",
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"ProofAdd": "Voeg een bewijs toe",
 		"SearchProduct": "Zoek naar een product",
 		"SettingsUpdated": "Instellingen bijgewerkt!",
@@ -491,7 +526,7 @@
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"LoadMore": "Meer laden",
 		"LocationNotFound": "Locatie niet gevonden in OpenStreetMap... Aarzel niet om deze toe te voegen :)"
 	},
@@ -540,7 +575,7 @@
 	},
 	"PriceList": {
 		"LoadMore": "Meer laden",
-		"Title": "Laatste prijzen"
+		"Title": "Nieuwste prijzen"
 	},
 	"PriceRules": {
 		"AmountRequired": "Prijs is vereist",
@@ -578,14 +613,14 @@
 	"ProductDetail": {
 		"AddPrice": "Voeg een prijs toe",
 		"CategoryNotFound": "Categorie niet gevonden...",
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"LoadMore": "Meer laden",
 		"ProductNotFound": "Product niet gevonden in Open Food Facts... Aarzel niet om het toe te voegen :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"HowToMultiple": "Alle afbeeldingen van prijskaartjes die u selecteert, moeten op dezelfde winkellocatie en op dezelfde dag zijn genomen.",
+		"HowToMultipleShort": "Foto's moeten dezelfde winkellocatie en datum hebben.",
+		"PriceValidationAllow": "Laat de prijzen van mijn foto's door AI extraheren en door de community valideren"
 	},
 	"ProofCard": {
 		"Proof": "Bewijs",
@@ -684,10 +719,10 @@
 			"Title": "Dashboard"
 		},
 		"LatestPrices": {
-			"Title": "Laatste prijzen"
+			"Title": "Nieuwste prijzen"
 		},
 		"LatestProofs": {
-			"Title": "Laatste bewijzen"
+			"Title": "Nieuwste bewijzen"
 		},
 		"MyPrices": {
 			"Title": "Mijn prijzen"
@@ -734,6 +769,9 @@
 		"Challenge": {
 			"Title": "Uitdaging"
 		},
+		"Challenges": {
+			"Title": "Uitdagingen"
+		},
 		"CommunityChallenge": {
 			"Title": "Uitdaging voor de gemeenschap"
 		},
@@ -774,14 +812,16 @@
 		"WithProduct": "Met een product",
 		"WithProductBarcode": "Met een productstreepjescode",
 		"WithProductCategory": "Met een productcategorie",
+		"WithDiscount": "Met een korting",
 		"WithoutProduct": "Zonder product",
 		"WithBarcode": "Met een streepjescode",
 		"WithCategory": "Met een categorie",
+		"PricesProofsPerSource": "Prijzen en bewijzen per bron",
 		"LastUpdated": "Laatst bijgewerkt op {date}"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Laatste prijzen",
-		"LatestProofs": "Laatste bewijzen",
+		"LatestPrices": "Nieuwste prijzen",
+		"LatestProofs": "Nieuwste bewijzen",
 		"LoadMore": "Meer laden",
 		"MyDashboard": "Mijn dashboard",
 		"MyPrices": "Mijn prijzen",
@@ -793,7 +833,7 @@
 		"UserProofTotal": "{count} bewijzen"
 	},
 	"UserDetail": {
-		"LatestPrices": "Laatste prijzen",
+		"LatestPrices": "Nieuwste prijzen",
 		"LoadMore": "Meer laden"
 	},
 	"UserList": {

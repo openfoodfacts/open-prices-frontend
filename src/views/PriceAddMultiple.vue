@@ -58,7 +58,7 @@
                 </v-alert>
               </v-col>
             </v-row>
-            <PriceInputRow class="mt-0" :priceForm="productPriceForm" :product="productPriceForm.product" :hideCurrencyChoice="true" :proofType="proofObject.type" @filled="pricePriceFormFilled = $event" />
+            <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :proofType="proofObject.type" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
           </v-card-text>
           <v-divider />
           <v-card-actions>
@@ -193,8 +193,6 @@ export default {
         location_osm_type: '',
         date: utils.currentDate(),
         currency: null,
-        receipt_price_count: null,
-        receipt_price_total: null,
       },
       productPriceForm: {},
       productFormFilled: false,
@@ -220,6 +218,7 @@ export default {
         discount_type: null,
         currency: null,  // see initNewProductPriceForm
         receipt_quantity: null,
+        owner_comment: null,
       },
      }
   },

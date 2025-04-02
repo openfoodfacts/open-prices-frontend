@@ -17,8 +17,13 @@
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_with_discount_count" :subtitle="$t('Stats.WithDiscount')" />
     </v-col>
+  </v-row>
+  <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_currency_count" :subtitle="$t('Common.Currencies')" />
+      <StatCard :value="stats.price_kind_community_count" :subtitle="$t('Common.Community')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_kind_consumption_count" :subtitle="$t('Common.Consumption')" />
     </v-col>
   </v-row>
 
@@ -128,6 +133,47 @@
     </v-col>
   </v-row>
 
+  <br>
+
+  <h2 class="text-h6 mb-1">
+    <v-icon size="x-small" icon="mdi-tune-vertical" />
+    {{ $t('Common.Miscellaneous') }}
+  </h2>
+
+  <v-row>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_location_country_count" :subtitle="$t('Common.Countries')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_currency_count" :subtitle="$t('Common.Currencies')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_year_count" :subtitle="$t('Common.Years')" />
+    </v-col>
+  </v-row>
+
+  <p class="mt-2 mb-1">
+    <v-icon size="x-small" icon="mdi-circle-small" />
+    {{ $t('Stats.PricesProofsPerSource') }}
+  </p>
+
+  <v-row>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_source_web_count.toString() + ' | ' + stats.proof_source_web_count.toString()" :subtitle="$t('Common.Website')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_source_mobile_count.toString() + ' | ' + stats.proof_source_mobile_count.toString()" :subtitle="$t('Common.MobileApp')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_source_api_count.toString() + ' | ' + stats.proof_source_api_count.toString()" subtitle="API" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.price_source_other_count.toString() + ' | ' + stats.proof_source_other_count.toString()" :subtitle="$t('Common.Other')" />
+    </v-col>
+  </v-row>
+
+  <br>
+
   <v-row>
     <v-col cols="12">
       <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(stats.updated)">
@@ -156,7 +202,15 @@ export default {
         price_type_product_code_count: 0,
         price_type_category_tag_count: 0,
         price_with_discount_count: 0,
+        price_kind_community_count: 0,
+        price_kind_consumption_count: 0,
+        price_source_web_count: 0,
+        price_source_mobile_count: 0,
+        price_source_api_count: 0,
+        price_source_other_count: 0,
+        price_location_country_count: 0,
         price_currency_count: 0,
+        price_year_count: 0,
         product_count: 0,
         product_source_off_count: 0,
         product_source_obf_count: 0,
@@ -178,6 +232,10 @@ export default {
         proof_type_receipt_count: 0,
         proof_type_gdpr_request_count: 0,
         proof_type_shop_import_count: 0,
+        proof_source_web_count: 0,
+        proof_source_mobile_count: 0,
+        proof_source_api_count: 0,
+        proof_source_other_count: 0,
         user_count: 0,
         user_with_price_count: 0,
         challenge_count: 1,  // hardcoded

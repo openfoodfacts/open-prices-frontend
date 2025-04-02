@@ -155,10 +155,21 @@
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "{challenge_title} prices added by you",
-		"MostRecentContributions": "Most recent contributions"
+		"MostRecentContributions": "Most recent contributions",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeStatuses": {
+			"DRAFT": "Draft",
+			"UPCOMING": "Upcoming",
+			"ONGOING": "Ongoing",
+			"COMPLETED": "Completed"
+		},
+		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
+		"PastOrFutureChallenges": "Past or future challenges",
+		"OngoingChallenges": "Ongoing challenges"
 	},
 	"Common": {
 		"About": "アプリについて",
+		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "新しい価格を追加",
@@ -198,7 +209,14 @@
 		"Chart": "Chart",
 		"Clear": "クリア",
 		"Contributors": "貢献者",
+		"Comment": "Comment",
 		"Community": "Community",
+		"CommunityPrices": "Community prices",
+		"CommunityProofs": "Community proofs",
+		"Consumption": "消費",
+		"ConsumptionPrices": "Consumption prices",
+		"ConsumptionProofs": "Consumption proofs",
+		"Contributions": "貢献",
 		"Confirm": "確定",
 		"Country": "国",
 		"Countries": "国",
@@ -247,6 +265,7 @@
 		"DiscountTypeLoyaltyProgram": "Loyalty program",
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
+		"DiscountTypeSecondHand": "Second hand",
 		"DiscountTypeOther": "その他",
 		"Example": "Example",
 		"Examples": "Examples",
@@ -257,6 +276,7 @@
 		"Edit": "編集",
 		"End": "End",
 		"Filter": "フィルタ",
+		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "価格付き",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
@@ -268,6 +288,8 @@
 		"Fix": "Fix",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "よくある質問",
+		"GDPR_REQUEST": "GDPR リクエスト",
+		"Group": "Group",
 		"Help": "Help",
 		"History": "履歴",
 		"Image": "画像",
@@ -282,6 +304,9 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "場所が見つかりません",
 		"Map": "地図",
+		"Miscellaneous": "その他",
+		"MobileApp": "Mobile app",
+		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "私の価格",
 		"MyProofs": "自分の証拠",
@@ -303,6 +328,8 @@
 		"OrderProofCreatedDESC": "追加日",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
+		"Other": "その他",
+		"OtherContributions": "Other contributions",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
 		"Picture": "画像",
@@ -349,6 +376,8 @@
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "価格の数",
 		"ReceiptPriceTotal": "Total amount",
+		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
+		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -385,6 +414,10 @@
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
+		"UnitGram": "g",
+		"UnitKilogram": "kg",
+		"UnitMililitre": "mL",
+		"UnitLitre": "L",
 		"Unreadable": "Unreadable",
 		"Upload": "アップロード",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
@@ -402,6 +435,8 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "表示",
 		"Website": "ウェブサイト",
+		"Year": "Year",
+		"Years": "Years",
 		"Yes": "はい",
 		"No": "いいえ",
 		"Food": "食べ物",
@@ -545,7 +580,7 @@
 	"PriceRules": {
 		"AmountRequired": "価格が必要です",
 		"NoSpaces": "スペースを使用しないでください",
-		"Number": "",
+		"Number": "Input a number",
 		"Positive": "価格はマイナスではありません",
 		"TwoDecimals": "小数点以下2桁までしか使用できません"
 	},
@@ -734,6 +769,9 @@
 		"Challenge": {
 			"Title": "Challenge"
 		},
+		"Challenges": {
+			"Title": "Challenges"
+		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
@@ -774,9 +812,11 @@
 		"WithProduct": "製品付き",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
+		"WithDiscount": "With a discount",
 		"WithoutProduct": "製品なし",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {

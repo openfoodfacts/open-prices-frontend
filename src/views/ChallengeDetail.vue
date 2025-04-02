@@ -1,5 +1,10 @@
 <template>
-  <v-row>
+  <v-row v-if="!challenge && !loading">
+    <v-col cols="12" md="6">
+      {{ $t('Challenge.NoChallengeCurrentlyOngoing') }}
+    </v-col>
+  </v-row>
+  <v-row v-if="challenge">
     <v-col cols="12" md="6">
       <p class="mb-2">
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
@@ -13,7 +18,7 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row v-if="challenge">
     <v-col cols="12" md="6">
       <ChallengeTakePicturesCard :challenge="challenge" />
     </v-col>
@@ -22,7 +27,7 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="challenge.latestContributions.length">
+  <v-row v-if="challenge?.latestContributions?.length">
     <v-col cols="12">
       <h2 class="text-h6">
         {{ $t('Challenge.MostRecentContributions') }}
@@ -51,21 +56,8 @@ export default {
   },
   data() {
     return {
-      challenge: {
-        title: "Nutella",
-        icon: "🌰",
-        subtitle: "(and other hazelnut spreads)",
-        startDate: "2025-01-20",
-        endDate: "2025-02-20",
-        categories: ["en:hazelnut-spreads"],
-        numberOfContributions: 0,
-        latestContributions: [],
-        numberOfProofs: 0,
-        userContributions: 0,
-        userProofContributions: 0,
-        exampleProofUrl: "https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.webp"
-      },
       loading: false,
+      challenge: null
     }
   },
   computed: {
@@ -74,20 +66,38 @@ export default {
       return this.appStore.user.username
     },
     startDateMidnight() {
-      return utils.dateStartOfDay(this.challenge.startDate)
+      return utils.dateStartOfDay(this.challenge.start_date)
     },
     endDateMidnight() {
-      return utils.dateEndOfDay(this.challenge.endDate)
+      return utils.dateEndOfDay(this.challenge.end_date)
     },
     defaultParams() {
       return { created__gte: this.startDateMidnight, created__lte: this.endDateMidnight }
     }
   },
   mounted() {
-    this.getStats()
-    this.getLatestPrices()
+    this.getChallenge()
   },
   methods: {
+    getChallenge() {
+      this.loading = true
+      let params = {}
+      if (this.$route.params.id) {
+        params.id = this.$route.params.id
+      } else {
+        // No id specified, get the current challenge
+        params.status = "ONGOING"
+      }
+      api.getChallenges(params)
+      .then((data) => {
+        this.loading = false
+        if (data.items.length) {
+          this.challenge = data.items[0]
+          this.getStats()
+          this.getLatestPrices()
+        }
+      })
+    },
     getStats() {
       this.loading = true
       api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0] })

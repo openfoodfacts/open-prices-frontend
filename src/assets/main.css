@@ -1,3 +1,12 @@
+.fake-link {
+    cursor: pointer;
+    color: -webkit-link;
+    text-decoration: underline;
+}
+.fake-link:hover {
+    color: -webkit-link;
+}
+
 .input-lowercase input {
     text-transform: lowercase;
 }
