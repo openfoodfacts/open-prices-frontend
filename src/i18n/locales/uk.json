@@ -654,12 +654,12 @@
 		"Success": "Доказ відредаговано!"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
-		"PriceReadyToBeAdded": "Price ready to be added",
+		"AddNewItem": "Додати новий елемент",
+		"MissingPrice": "Відсутня ціна",
+		"MissingProduct": "Відсутній товар",
+		"NoItemsFound": "Жоден елемент не може бути видобутий із чеку, будь ласка, спробуйте ще раз.",
+		"PriceAlreadyCreatedForItem": "Ціна вже створена для товару",
+		"PriceReadyToBeAdded": "Ціна готова до додавання",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
