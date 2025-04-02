@@ -129,7 +129,7 @@
                 color="primary"
                 :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-account-circle"
-                @click="goToUserDashboard"
+                :to="userDashboardUrl"
               >
                 {{ $t('Common.MyDashboard') }}
               </v-btn>
@@ -244,6 +244,10 @@ export default {
         return this.proofPriceUploadedList.findIndex(price => price.category_tag === this.productPriceForm.category_tag) >= 0
       }
       return false
+    },
+    userDashboardUrl() {
+      const dashboardTab = (this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
+      return `/dashboard?multipleSuccess=true&tab=${dashboardTab}`
     }
   },
   methods: {
@@ -315,9 +319,6 @@ export default {
     },
     reloadPage() {
       window.location.reload()
-    },
-    goToUserDashboard() {
-      this.$router.push({ path: '/dashboard', query: { multipleSuccess: 'true' } })
     }
   }
 }

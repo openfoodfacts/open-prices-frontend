@@ -55,7 +55,7 @@
                 color="primary"
                 :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-account-circle"
-                @click="goToUserDashboard"
+                :to="userDashboardUrl"
               >
                 {{ $t('Common.MyDashboard') }}
               </v-btn>
@@ -69,6 +69,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 
 export default {
   components: {
@@ -90,6 +91,12 @@ export default {
       proofUploadCount: 0
     }
   },
+  computed: {
+    userDashboardUrl() {
+      const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
+      return `/dashboard?proofSingleSuccess=true&tab=${dashboardTab}`
+    }
+  },
   methods: {
     proofUploadDone(proofUploadCount) {
       this.proofUploadCount = proofUploadCount
@@ -100,9 +107,6 @@ export default {
     },
     reloadPage() {
       window.location.reload()
-    },
-    goToUserDashboard() {
-      this.$router.push({ path: '/dashboard', query: { proofSingleSuccess: 'true' } })
     }
   }
 }
