@@ -151,7 +151,7 @@ export default {
       return this.proofObject?.receiptItems && this.proofObject.receiptItems.length > 0
     },
     userDashboardUrl() {
-      const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
+      const dashboardTab = (this.proofObject && this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
       return `/dashboard?tab=${dashboardTab}`
     }
   },

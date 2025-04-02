@@ -246,7 +246,7 @@ export default {
       return false
     },
     userDashboardUrl() {
-      const dashboardTab = (this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
+      const dashboardTab = (this.proofObject && this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
       return `/dashboard?multipleSuccess=true&tab=${dashboardTab}`
     }
   },
