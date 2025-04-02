@@ -653,6 +653,18 @@
 		"Save": "Uložit",
 		"Success": "Doklad upraven!"
 	},
+	"ReceiptAssistant": {
+		"AddNewItem": "Add new item",
+		"MissingPrice": "Missing price",
+		"MissingProduct": "Missing product",
+		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreatedForItem": "Price already created for item",
+		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItemsCheck": "Receipt items, check and fix",
+		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
+		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+	},
 	"Reuses": {
 		"AlertNew": "Chybí vaše opětovné použití? Dejte nám vědět {url}!",
 		"Here": "zde"
@@ -765,6 +777,9 @@
 		},
 		"PriceValidationAssistant": {
 			"Title": "Asistent pro ověření ceny"
+		},
+		"ReceiptAssistant": {
+			"Title": "Receipt Assistant"
 		},
 		"Challenge": {
 			"Title": "Výzva"
