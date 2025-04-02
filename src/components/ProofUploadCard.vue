@@ -20,7 +20,7 @@
           density="compact"
           :text="$t('ProofAdd.HowToMultipleShort')"
         />
-        <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" />
+        <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" :hideProofTypePriceTagChoice="typeReceiptOnly" />
         <LocationInputRow :locationForm="proofForm" />
         <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" />
@@ -106,6 +106,10 @@ export default {
       default: false
     },
     typePriceTagOnly: {
+      type: Boolean,
+      default: false
+    },
+    typeReceiptOnly: {
       type: Boolean,
       default: false
     },
@@ -199,6 +203,9 @@ export default {
         if (this.multiple) {
           this.proofForm.ready_for_price_tag_validation = true
         }
+      }
+      if (this.typeReceiptOnly) {
+        this.proofForm.type = constants.PROOF_TYPE_RECEIPT
       }
       this.proofForm.currency = this.appStore.getUserLastCurrencyUsed
     },

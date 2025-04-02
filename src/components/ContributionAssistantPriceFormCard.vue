@@ -1,8 +1,11 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
   <v-card class="d-flex flex-column">
+    <v-card-title v-if="isinDialog">
+      {{ $t("PriceEdit.Title") }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
+    </v-card-title>
     <v-card-text class="flex-grow-1">
-      <ProofImageCropped class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" @croppedImage="setCroppedImage($event)" />
+      <ProofImageCropped v-if="productPriceForm.proofImage" class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" @croppedImage="setCroppedImage($event)" />
       <v-row v-if="showProductNameField">
         <v-col>
           <v-text-field
@@ -22,7 +25,7 @@
     </v-card-text>
     <v-divider v-if="!hideActions" />
     <v-card-actions v-if="!hideActions">
-      <v-menu scroll-strategy="close">
+      <v-menu v-if="!hidePriceTagStatusMenu" scroll-strategy="close">
         <template #activator="{ props }">
           <v-btn v-bind="props" color="error" variant="outlined" append-icon="mdi-menu-down">
             {{ errorButtonText }}
@@ -131,9 +134,22 @@ export default {
     loading: {
       type: Boolean,
       default: false
+    },
+    forceMode: {
+      type: String,
+      default: null
+    },
+    hidePriceTagStatusMenu: {
+      type: Boolean,
+      default: false
+    },
+    isinDialog: {
+      type: Boolean,
+      default: false,
+      description: 'Whether this card is displayed in a dialog'
     }
   },
-  emits: ['updatePriceTagStatus', 'validatePriceTag'],
+  emits: ['updatePriceTagStatus', 'validatePriceTag', 'close'],
   data() {
     return {
       PRICE_TAG_STATUS_UNREADABLE: constants.PRICE_TAG_STATUS_UNREADABLE,
@@ -170,7 +186,7 @@ export default {
   },
   methods: {
     resetMode() {
-      this.mode = this.appStore.user.price_form_default_mode
+      this.mode = this.forceMode || this.appStore.user.price_form_default_mode
     },
     setCroppedImage(croppedImage) {
       this.productPriceForm.croppedImage = croppedImage
@@ -182,6 +198,9 @@ export default {
     validatePriceTag() {
       this.$emit('validatePriceTag')
       this.resetMode()
+    },
+    close() {
+      this.$emit('close')
     }
   }
 }
