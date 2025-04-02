@@ -82,7 +82,7 @@
           </v-btn>
         </v-col>
         <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" to="/dashboard" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded">
+          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" :to="userDashboardUrl" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded">
             {{ $t('ContributionAssistant.GoToDashboard') }}
           </v-btn>
         </v-col>
@@ -96,6 +96,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
+import constants from '../constants'
 
 export default {
   components: {
@@ -148,6 +149,10 @@ export default {
     },
     proofHasReceiptPredictionItems() {
       return this.proofObject?.receiptItems && this.proofObject.receiptItems.length > 0
+    },
+    userDashboardUrl() {
+      const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
+      return `/dashboard?tab=${dashboardTab}`
     }
   },
   mounted() {

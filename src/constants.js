@@ -23,7 +23,9 @@ const LOCATION_TYPE_OSM = 'OSM'
 const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
 const LOCATION_TYPE_ONLINE = 'ONLINE'
 const LOCATION_TYPE_ONLINE_ICON = 'mdi-web'
+const USER_CONSUMPTION = 'CONSUMPTION'
 const USER_CONSUMPTION_ICON = 'mdi-cart-outline'
+const USER_COMMUNITY = 'COMMUNITY'
 const OSM_NAME = 'OpenStreetMap'
 
 export default {
@@ -95,8 +97,8 @@ export default {
     {key: 'OTHER', value: 'DiscountTypeOther'},
   ],
   PRICE_PROOF_KIND_LIST: [
-    { key: 'CONSUMPTION', value: 'Consumption', icon: USER_CONSUMPTION_ICON },
-    { key: 'COMMUNITY', value: 'Contributions', icon: 'mdi-account-group' },
+    { key: USER_CONSUMPTION, value: 'Consumption', icon: USER_CONSUMPTION_ICON },
+    { key: USER_COMMUNITY, value: 'Contributions', icon: 'mdi-account-group' },
   ],
   PRICE_TAG_STATUS_WITH_PRICE: 1,
   PRICE_TAG_STATUS_UNREADABLE: 2,
@@ -133,7 +135,9 @@ export default {
     {key: LOCATION_TYPE_OSM, value: LOCATION_TYPE_OSM, icon: LOCATION_TYPE_OSM_ICON},
     {key: LOCATION_TYPE_ONLINE, value: LOCATION_TYPE_ONLINE, icon: LOCATION_TYPE_ONLINE_ICON},
   ],
+  USER_CONSUMPTION: USER_CONSUMPTION,
   USER_CONSUMPTION_ICON: USER_CONSUMPTION_ICON,
+  USER_COMMUNITY: USER_COMMUNITY,
   USER_COMMENT_ICON: 'mdi-comment-text-outline',
   // filter
   PRODUCT_FILTER_LIST: [
@@ -214,8 +218,8 @@ export default {
     { key: 'edit', value: 'Edit', icon: 'mdi-pencil' },
   ],
   USER_DASHBOARD_TAB_LIST: [
-    { key: 'consumption', value: 'MyConsumption', icon: USER_CONSUMPTION_ICON },
-    { key: 'community', value: 'OtherContributions', icon: 'mdi-account-group' },
+    { key: USER_CONSUMPTION.toLowerCase(), value: 'MyConsumption', icon: USER_CONSUMPTION_ICON },
+    { key: USER_COMMUNITY.toLowerCase(), value: 'OtherContributions', icon: 'mdi-account-group' },
   ],
   // date regex
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
