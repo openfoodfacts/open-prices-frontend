@@ -184,6 +184,11 @@ export default {
   mounted() {
     this.resetMode()
   },
+  unmounted() {
+    if (this.productPriceForm.croppedImage) {
+      URL.revokeObjectURL(this.productPriceForm.croppedImage)
+    }
+  },
   methods: {
     resetMode() {
       this.mode = this.forceMode || this.appStore.user.price_form_default_mode

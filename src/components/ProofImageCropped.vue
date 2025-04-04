@@ -56,8 +56,10 @@ export default {
       this.canvas.width = width
       this.canvas.height = height
       this.ctx.drawImage(this.proofImage, Math.min(startX, endX), Math.min(startY, endY), width, height, 0, 0, width, height)
-      this.croppedImage = this.canvas.toDataURL()
-      this.$emit('croppedImage', this.croppedImage)
+      this.canvas.toBlob(blob => {
+        this.croppedImage = URL.createObjectURL(blob)
+        this.$emit('croppedImage', this.croppedImage)
+      })
     }
   }
 }
