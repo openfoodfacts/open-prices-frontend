@@ -56,6 +56,9 @@ export default {
       this.canvas.width = width
       this.canvas.height = height
       this.ctx.drawImage(this.proofImage, Math.min(startX, endX), Math.min(startY, endY), width, height, 0, 0, width, height)
+      // Note: we started with 'this.croppedImage = URL.canvas.toDataURL()'
+      // but 'createObjectURL' is much more efficient than 'toDataURL'
+      // and it allows us to call 'revokeObjectURL'
       this.canvas.toBlob(blob => {
         this.croppedImage = URL.createObjectURL(blob)
         this.$emit('croppedImage', this.croppedImage)
