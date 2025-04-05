@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.130.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.130.0...v1.130.1) (2025-04-05)
+
+
+### Bug Fixes
+
+* **Receipt Assistant:** fix CTA user dashboard url. ref [#1491](https://github.com/openfoodfacts/open-prices-frontend/issues/1491) ([4a4ab92](https://github.com/openfoodfacts/open-prices-frontend/commit/4a4ab920d86eafaa85c3c990872df6f17ef2a9f8))
+
+
+### Technical
+
+* **Crops:** improve perfomances ([#1494](https://github.com/openfoodfacts/open-prices-frontend/issues/1494)) ([55b6b46](https://github.com/openfoodfacts/open-prices-frontend/commit/55b6b467ce74e4a1b452a423fc7e5c53f394b846))
+* **l10n:** New Crowdin translations to review and merge ([#1492](https://github.com/openfoodfacts/open-prices-frontend/issues/1492)) ([5484de1](https://github.com/openfoodfacts/open-prices-frontend/commit/5484de1a5b575338e53328dbbd40a2bde21adccb))
+
 ## [1.130.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.129.0...v1.130.0) (2025-04-02)
 
 
