@@ -654,16 +654,16 @@
 		"Success": "Preuve modifiée !"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
-		"PriceReadyToBeAdded": "Price ready to be added",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"AddNewItem": "Ajouter un nouvel article",
+		"MissingPrice": "Prix manquant",
+		"MissingProduct": "Produit manquant",
+		"NoItemsFound": "Aucun élément n'a pu être extrait du reçu, veuillez réessayer.",
+		"PriceAlreadyCreatedForItem": "Prix déjà créé pour l'article",
+		"PriceReadyToBeAdded": "Prix prêt à être ajouté",
+		"ReceiptItemsCheck": "Éléments de réception, vérifier et corriger",
+		"UploadOnlyNewPrices": "Téléverser uniquement les nouveaux prix ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Téléverser ou mettre à jour tous les prix valides ({nbPrices})",
+		"WaitForExtraction": "Extraction automatique des éléments du reçu, veuillez patienter..."
 	},
 	"Reuses": {
 		"AlertNew": "Votre réutilisation est absente ? Faites-le nous savoir {url} !",
@@ -779,7 +779,7 @@
 			"Title": "Assistant de validation de prix"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "Assistant de réception"
 		},
 		"Challenge": {
 			"Title": "Défi"

@@ -654,16 +654,16 @@
 		"Success": "Bewijs bewerkt!"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
-		"PriceReadyToBeAdded": "Price ready to be added",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"AddNewItem": "Nieuw artikel toevoegen",
+		"MissingPrice": "Ontbrekende prijs",
+		"MissingProduct": "Ontbrekend product",
+		"NoItemsFound": "Er konden geen items uit de bon worden gehaald. Probeer het opnieuw.",
+		"PriceAlreadyCreatedForItem": "Prijs is al aangemaakt voor artikel",
+		"PriceReadyToBeAdded": "Prijs klaar om toegevoegd te worden",
+		"ReceiptItemsCheck": "Ontvangstbewijzen, controleren en in orde maken",
+		"UploadOnlyNewPrices": "Upload alleen nieuwe prijzen ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Upload of update alle geldige prijzen ({nbPrices})",
+		"WaitForExtraction": "Artikelen automatisch extraheren uit het betaalbewijs, even geduld..."
 	},
 	"Reuses": {
 		"AlertNew": "Ontbreekt uw hergebruik? Laat het ons weten {url}!",
@@ -779,7 +779,7 @@
 			"Title": "Prijsvalidatie-assistent"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "Ontvangstbewijs assistent"
 		},
 		"Challenge": {
 			"Title": "Uitdaging"
