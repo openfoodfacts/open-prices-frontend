@@ -181,7 +181,7 @@
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
 		"Barcode": "Штрих-код",
-		"Barcodes": "Barcodes",
+		"Barcodes": "Штрих-коды",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "Сканировать",
 		"BarcodeType": "Поиск по штрихкоду",
@@ -191,7 +191,7 @@
 		"Brands": "Марки",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Цена",
-		"Prices": "Prices",
+		"Prices": "Цены",
 		"PRODUCT": "Продукт",
 		"Product": "Продукт",
 		"ProductName": "Название продукта",
@@ -222,15 +222,15 @@
 		"Countries": "Страны",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
-		"Cropped": "Cropped",
+		"Cropped": "Обрезанный",
 		"Currency": "Валюта",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"Dashboard": "Dashboard",
 		"Display": "Показать",
-		"DisplayList": "List",
-		"DisplayPriceList": "List",
+		"DisplayList": "Список",
+		"DisplayPriceList": "Список",
 		"DisplayMap": "Карта",
 		"DisplayPriceMap": "Карта",
 		"DisplayPriceChart": "Chart",
@@ -289,8 +289,8 @@
 		"FAQ": "Часто задаваемые вопросы",
 		"FrequentlyAskedQuestions": "Часто задаваемые вопросы",
 		"GDPR_REQUEST": "GDPR request",
-		"Group": "Group",
-		"Help": "Help",
+		"Group": "Группа",
+		"Help": "Помощь",
 		"History": "История",
 		"Image": "Изображение",
 		"ImageSelect": "Select an image",
@@ -393,7 +393,7 @@
 		"Source": "Источник",
 		"SourceCode": "Source code",
 		"Start": "Начать",
-		"Stats": "Stats",
+		"Stats": "Статистика",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -405,7 +405,7 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
-		"Today": "Today",
+		"Today": "Сегодня",
 		"Top": "Top",
 		"Total": "Всего",
 		"Truncate": "Truncate",
@@ -435,12 +435,12 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Вид",
 		"Website": "Веб-сайт",
-		"Year": "Year",
-		"Years": "Years",
+		"Year": "Год",
+		"Years": "Годы",
 		"Yes": "Да",
 		"No": "Нет",
 		"Food": "Food",
-		"PetFood": "Pet food",
+		"PetFood": "Корм",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -499,7 +499,7 @@
 	},
 	"Footer": {
 		"About": "О приложении",
-		"Stats": "Stats",
+		"Stats": "Статистика",
 		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
@@ -642,7 +642,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Загрузить ещё",
-		"Prices": "Prices",
+		"Prices": "Цены",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -667,7 +667,7 @@
 	},
 	"Reuses": {
 		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"Here": "здесь"
 	},
 	"Router": {
 		"About": {
@@ -758,7 +758,7 @@
 			"Title": "Войти"
 		},
 		"Stats": {
-			"Title": "Stats"
+			"Title": "Статистика"
 		},
 		"TopContributors": {
 			"Title": "Top contributors"
@@ -813,12 +813,12 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Цены",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"Title": "Статистика",
 		"Products": "Продукты",
 		"Locations": "Locations",
 		"Users": "Пользователи",
