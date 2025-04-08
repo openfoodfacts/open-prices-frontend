@@ -191,7 +191,7 @@
 		"Brands": "Marques",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Preu",
-		"Prices": "Prices",
+		"Prices": "Preus",
 		"PRODUCT": "Producte",
 		"Product": "Producte",
 		"ProductName": "Nom del producte",
@@ -223,7 +223,7 @@
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Moneda",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -489,7 +489,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Moneda",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -642,7 +642,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Carrega mes ",
-		"Prices": "Prices",
+		"Prices": "Preus",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -813,7 +813,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Preus",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -860,7 +860,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Canvi de llengua",
 		"CountryLabel": "País",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Moneda",
 		"DisplayTitle": "Mostra",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
