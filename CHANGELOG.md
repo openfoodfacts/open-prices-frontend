@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.130.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.130.1...v1.130.2) (2025-04-10)
+
+
+### Bug Fixes
+
+* **Price add:** Allow 'quantity bought' field to have 3 decimals ([#1499](https://github.com/openfoodfacts/open-prices-frontend/issues/1499)) ([d13162d](https://github.com/openfoodfacts/open-prices-frontend/commit/d13162df8319a1bd69b8fb04045ffb87fa430323))
+
 ## [1.130.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.130.0...v1.130.1) (2025-04-05)
 
 
