@@ -582,7 +582,8 @@
 		"NoSpaces": "Не використовуйте пробіли",
 		"Number": "Введіть число",
 		"Positive": "Ціна не може бути від'ємною",
-		"TwoDecimals": "Дозволено лише два десяткові знаки"
+		"TwoDecimals": "Дозволено лише два десяткові знаки",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Довжина штрих-коду: {length}",
