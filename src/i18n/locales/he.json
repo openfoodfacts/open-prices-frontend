@@ -582,7 +582,8 @@
 		"NoSpaces": "נא לא להשתמש ברווחים",
 		"Number": "נא למלא מספר",
 		"Positive": "מחיר לא יכול להיות שלילי",
-		"TwoDecimals": "מותר עד שתי ספרות אחרי הנקודה"
+		"TwoDecimals": "מותר עד שתי ספרות אחרי הנקודה",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "אורך ברקוד: {length}",
