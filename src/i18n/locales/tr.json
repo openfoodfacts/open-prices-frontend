@@ -582,7 +582,8 @@
 		"NoSpaces": "Lütfen boşluk kullanmayın",
 		"Number": "Bir sayı girin",
 		"Positive": "Fiyat negatif olamaz",
-		"TwoDecimals": "Yalnızca iki ondalık sayıya izin verilir"
+		"TwoDecimals": "Yalnızca iki ondalık sayıya izin verilir",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
