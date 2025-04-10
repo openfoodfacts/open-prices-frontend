@@ -216,7 +216,7 @@ export default {
         value => !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
-        value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+        value => !value.match(/\.\d{4}/) || this.$t('PriceRules.ThreeDecimals'),
       ]
     },
     receiptQuantitySuffix() {
