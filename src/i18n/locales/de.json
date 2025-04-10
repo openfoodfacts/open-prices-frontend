@@ -582,7 +582,8 @@
 		"NoSpaces": "Bitte keine Leerzeichen verwenden",
 		"Number": "Geben Sie eine Zahl ein",
 		"Positive": "Preis darf nicht negativ sein",
-		"TwoDecimals": "Nur zwei Nachkommastellen erlaubt"
+		"TwoDecimals": "Nur zwei Nachkommastellen erlaubt",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Strichcode-Länge: {length}",
