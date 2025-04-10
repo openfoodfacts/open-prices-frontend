@@ -582,7 +582,8 @@
 		"NoSpaces": "Älä käytä välilyöntejä",
 		"Number": "Syötä luku",
 		"Positive": "Hinta ei voi olla alle nollan",
-		"TwoDecimals": "Korkeintaan kaksi desimaalia sallitaan"
+		"TwoDecimals": "Korkeintaan kaksi desimaalia sallitaan",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
