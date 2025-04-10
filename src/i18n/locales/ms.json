@@ -582,7 +582,8 @@
 		"NoSpaces": "Tolong jangan gunakan ruang",
 		"Number": "Masukkan nombor",
 		"Positive": "Harga mungkin bukan negatif",
-		"TwoDecimals": "Hanya dua tempat perpuluhan dibenarkan"
+		"TwoDecimals": "Hanya dua tempat perpuluhan dibenarkan",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
