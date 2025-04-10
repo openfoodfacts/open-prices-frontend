@@ -582,7 +582,8 @@
 		"NoSpaces": "請不要使用空格",
 		"Number": "輸入一個數字",
 		"Positive": "價格不能為負數",
-		"TwoDecimals": "只能到小數點第二位"
+		"TwoDecimals": "只能到小數點第二位",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
