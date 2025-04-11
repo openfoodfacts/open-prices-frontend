@@ -583,7 +583,7 @@
 		"Number": "Geben Sie eine Zahl ein",
 		"Positive": "Preis darf nicht negativ sein",
 		"TwoDecimals": "Nur zwei Nachkommastellen erlaubt",
-		"ThreeDecimals": "Only three decimals allowed"
+		"ThreeDecimals": "Nur drei Nachkommastellen erlaubt"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Strichcode-Länge: {length}",
