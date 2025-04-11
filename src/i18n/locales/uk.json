@@ -583,7 +583,7 @@
 		"Number": "Введіть число",
 		"Positive": "Ціна не може бути від'ємною",
 		"TwoDecimals": "Дозволено лише два десяткові знаки",
-		"ThreeDecimals": "Only three decimals allowed"
+		"ThreeDecimals": "Дозволено лише три десяткових знаки"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Довжина штрих-коду: {length}",
