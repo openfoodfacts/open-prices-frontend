@@ -583,7 +583,7 @@
 		"Number": "נא למלא מספר",
 		"Positive": "מחיר לא יכול להיות שלילי",
 		"TwoDecimals": "מותר עד שתי ספרות אחרי הנקודה",
-		"ThreeDecimals": "Only three decimals allowed"
+		"ThreeDecimals": "מותר עד שלוש ספרות אחרי הנקודה"
 	},
 	"ProductCard": {
 		"BarcodeLength": "אורך ברקוד: {length}",
