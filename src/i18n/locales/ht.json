@@ -582,7 +582,8 @@
 		"NoSpaces": "Tanpri pa mete espas",
 		"Number": "Antre yon nimewo",
 		"Positive": "Pri a pa dwe negatif",
-		"TwoDecimals": "Se sèlman de desimal ki otorize"
+		"TwoDecimals": "Se sèlman de desimal ki otorize",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",

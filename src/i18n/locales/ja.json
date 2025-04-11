@@ -582,7 +582,8 @@
 		"NoSpaces": "スペースを使用しないでください",
 		"Number": "Input a number",
 		"Positive": "価格はマイナスではありません",
-		"TwoDecimals": "小数点以下2桁までしか使用できません"
+		"TwoDecimals": "小数点以下2桁までしか使用できません",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",

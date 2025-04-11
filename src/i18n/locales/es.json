@@ -582,7 +582,8 @@
 		"NoSpaces": "Por favor, no utilice espacios",
 		"Number": "Introduzca un número",
 		"Positive": "El precio puede no ser negativo",
-		"TwoDecimals": "Solo se permiten dos decimales"
+		"TwoDecimals": "Solo se permiten dos decimales",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Longitud del código de barras: {length}",
