@@ -583,7 +583,7 @@
 		"Number": "Input a number",
 		"Positive": "Price may not be negative",
 		"TwoDecimals": "Only two decimals allowed",
-		"ThreeDecimals": "Only three decimals allowed"
+		"ThreeDecimals": "Leidžiamos tik trys dešimtainės"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Brūkšninio kodo ilgis: {length}",
