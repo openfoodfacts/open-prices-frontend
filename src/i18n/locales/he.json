@@ -622,7 +622,10 @@
 		"HowToMultiple": "כל תמונות תגיות המחירים שבחרת יחלקו את אותו מקום חנות ויתועדו לאותו היום.",
 		"HowToMultipleShort": "התמונות צריכות לחלוק מקום ותאריך זהים לחנות.",
 		"PriceValidationAllow": "לאפשר את חילוץ המחירים בתמונה על ידי בינה מלאכותית ולאמת על אותם ידי הקהילה",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices"
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",
