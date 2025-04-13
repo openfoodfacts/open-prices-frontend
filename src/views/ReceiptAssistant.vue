@@ -32,7 +32,7 @@
       </v-alert>
     </v-col>
     <v-col cols="12" lg="4">
-      <ProofCard :proof="proofObject" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
+      <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
     </v-col>
     <v-col cols="12" lg="8">
       <ReceiptTableCard :proof="proofObject" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
