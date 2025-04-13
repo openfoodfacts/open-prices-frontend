@@ -622,10 +622,10 @@
 		"HowToMultiple": "Toutes les images d'étiquettes de prix que vous sélectionnez doivent partager le même emplacement de magasin et avoir été prises le même jour.",
 		"HowToMultipleShort": "Les photos doivent partager le même emplacement de magasin et la même date.",
 		"PriceValidationAllow": "Autoriser l'extraction par IA du prix sur mes photos et la validation par la communauté",
-		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
-		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"PriceTagAllowCommunityValidation": "Permettre à la communauté de valider les prix extraits par IA",
+		"PriceTagAIWarning": "L'IA sera exécutée sur vos preuves pour en extraire les prix.",
+		"ReceiptAllowAI": "Autoriser l'exécution de l'IA sur votre reçu pour extraire les prix",
+		"ReceiptAIWarning": "L'IA sera exécutée sur votre reçu pour en extraire les prix."
 	},
 	"ProofCard": {
 		"Proof": "Preuve",
