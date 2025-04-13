@@ -621,7 +621,8 @@
 	"ProofAdd": {
 		"HowToMultiple": "Všechny obrázky cenovek, které vyberete, by měly sdílet stejnou prodejnu a měly by být pořízeny ve stejný den.",
 		"HowToMultipleShort": "Obrázky by měly sdílet stejnou polohu a datum.",
-		"PriceValidationAllow": "Umožnit extrahování cen mých obrázků pomocí AI a ověření komunitou"
+		"PriceValidationAllow": "Umožnit extrahování cen mých obrázků pomocí AI a ověření komunitou",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices"
 	},
 	"ProofCard": {
 		"Proof": "Doklad",
