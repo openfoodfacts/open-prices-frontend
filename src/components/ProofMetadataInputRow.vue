@@ -105,6 +105,36 @@
       />
     </v-col>
   </v-row>
+  <v-row v-if="assistedByAI" class="mt-0">
+    <v-col cols="12" class="pb-1">
+      <v-alert
+        v-if="proofIsTypePriceTag"
+        type="info"
+        variant="outlined"
+        density="compact"
+        :text="$t('ProofAdd.PriceTagAIWarning')"
+      />
+      <v-alert
+        v-else-if="proofIsTypeReceipt"
+        type="info"
+        variant="outlined"
+        density="compact"
+        :text="$t('ProofAdd.ReceiptAIWarning')"
+      />
+    </v-col>
+  </v-row>
+  <v-row v-if="assistedByAI && proofIsTypePriceTag" class="mt-0">
+    <v-col cols="12" class="pb-1">
+      <v-switch
+        v-model="proofMetadataForm.ready_for_price_tag_validation"
+        density="compact"
+        color="success"
+        :label="$t('ProofAdd.PriceTagAllowCommunityValidation')"
+        :true-value="true"
+        hide-details="auto"
+      />
+    </v-col>
+  </v-row>
   <v-row v-if="proofIsTypeReceipt" class="mt-0">
     <v-col cols="12" class="pb-1">
       <v-switch
@@ -112,18 +142,6 @@
         density="compact"
         color="success"
         :label="$t('Common.ReceiptOwnerConsumption')"
-        :true-value="true"
-        hide-details="auto"
-      />
-    </v-col>
-  </v-row>
-  <v-row v-if="proofIsTypePriceTag && multiple">
-    <v-col cols="12" class="pb-1">
-      <v-switch
-        v-model="proofMetadataForm.ready_for_price_tag_validation"
-        density="compact"
-        color="success"
-        :label="$t('ProofAdd.PriceValidationAllow')"
         :true-value="true"
         hide-details="auto"
       />
@@ -157,6 +175,10 @@ export default {
       default: null
     },
     multiple: {
+      type: Boolean,
+      default: false
+    },
+    assistedByAI: {
       type: Boolean,
       default: false
     }

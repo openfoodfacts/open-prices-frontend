@@ -15,37 +15,35 @@
 
   <v-row v-if="step === 1">
     <v-col cols="12" md="6">
-      <ProofUploadCard :typeReceiptOnly="true" @proof="onProofUploaded($event)" />
+      <ProofUploadCard :typeReceiptOnly="true" :assistedByAI="true" @proof="onProofUploaded($event)" />
     </v-col>
   </v-row>
   
   <v-row v-if="step === 2">
-    <v-col cols="12">
+    <v-col v-if="loadingPredictions" cols="12">
+      <v-alert class="mb-2" type="info" variant="outlined">
+        {{ $t('ReceiptAssistant.WaitForExtraction') }}
+        <v-progress-circular indeterminate />
+      </v-alert>
+    </v-col>
+    <v-col v-else-if="!proofHasReceiptPredictionItems" cols="12">
+      <v-alert class="mb-2" type="warning" variant="outlined">
+        {{ $t('ReceiptAssistant.NoItemsFound') }}
+      </v-alert>
+    </v-col>
+    <v-col cols="12" lg="4">
+      <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
+    </v-col>
+    <v-col cols="12" lg="8">
+      <ReceiptTableCard :proof="proofObject" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
       <v-row>
-        <v-col cols="12">
-          <v-alert v-if="!loadingPredictions && !proofHasReceiptPredictionItems" class="mb-2" type="warning" variant="outlined">
-            {{ $t('ReceiptAssistant.NoItemsFound') }}
-          </v-alert>
-          <v-alert v-if="loadingPredictions" class="mb-2" type="info" variant="outlined">
-            {{ $t('ReceiptAssistant.WaitForExtraction') }}
-            <v-progress-circular indeterminate />
-          </v-alert>
-        </v-col>
-        <v-col cols="12" lg="4">
-          <ProofCard :proof="proofObject" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
-        </v-col>
-        <v-col cols="12" lg="8">
-          <ReceiptTableCard :proof="proofObject" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
-          <v-row>
-            <v-col>
-              <v-btn v-if="validNewReceiptItems.length != validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
-                {{ $t('ReceiptAssistant.UploadOnlyNewPrices', {nbPrices: validNewReceiptItems.length}) }}
-              </v-btn>
-              <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
-                {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', {nbPrices: validReceiptItems.length}) }}
-              </v-btn>
-            </v-col>
-          </v-row>
+        <v-col>
+          <v-btn v-if="validNewReceiptItems.length != validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
+            {{ $t('ReceiptAssistant.UploadOnlyNewPrices', {nbPrices: validNewReceiptItems.length}) }}
+          </v-btn>
+          <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
+            {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', {nbPrices: validReceiptItems.length}) }}
+          </v-btn>
         </v-col>
       </v-row>
     </v-col>
@@ -123,7 +121,7 @@ export default {
           value: 1
         },
         {
-          title: this.$vuetify.display.smAndUp ? this.$t('ContributionAssistant.Steps.LabelsExtraction') : this.$t('Common.Labels'),
+          title: this.$t('Common.Prices'),
           value: 2
         },
         {
@@ -168,13 +166,16 @@ export default {
       }
     },
     onProofUploaded(proof) {
+      // move to step 2
       this.step = 2
+      // store the proof
+      this.proofObject = proof
+      // load the receipt items
       this.loadingPredictions = true
       this.loadProofWithReceiptItems(proof.id, 5, proof => {
         api.getPrices({proof_id: proof.id}).then(data => {
           this.loadingPredictions = false
           this.proofPriceExistingList = data.items
-          this.proofObject = proof
         })
       })
     },
