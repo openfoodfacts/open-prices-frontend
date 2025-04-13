@@ -621,7 +621,8 @@
 	"ProofAdd": {
 		"HowToMultiple": "Visos jūsų pasirinktos kainų žym nuotraukos turi būti iš tos pačios parduotuvės vietos ir nufotografuotos tą pačią dieną.",
 		"HowToMultipleShort": "Paveikslėliai turi būti iš tos pačios parduotuvės vietos ir tos pačios datos.",
-		"PriceValidationAllow": "Leisti, kad mano nuotraukų kainas gautų DI ir patvirtintų bendruomenė"
+		"PriceValidationAllow": "Leisti, kad mano nuotraukų kainas gautų DI ir patvirtintų bendruomenė",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices"
 	},
 	"ProofCard": {
 		"Proof": "Įrodymai",
