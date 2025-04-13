@@ -622,7 +622,10 @@
 		"HowToMultiple": "Усі зображення цінників, які ви виберете, мають мати одне місце розташування магазину та зроблені в один день.",
 		"HowToMultipleShort": "Зображення повинні містити одне й те ж місце розташування і дату.",
 		"PriceValidationAllow": "Дозволити штучному інтелекту визначати ціни моїх фотографій і підтверджувати їх спільнотою",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices"
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
 	},
 	"ProofCard": {
 		"Proof": "Доказ",
