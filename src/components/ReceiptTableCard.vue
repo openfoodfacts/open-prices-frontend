@@ -6,7 +6,7 @@
     <v-divider />
 
     <v-card-text>
-      <v-data-table :headers="headers" :items="items" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" items-per-page="100">
+      <v-data-table :headers="headers" :items="items" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" items-per-page="100" :disable-sort="true">
         <template #[`item.product_name`]="{ item }">
           <v-text-field v-if="item.manuallyAdded" v-model="item.product_name" :hide-details="true" :rules="rules" dense single-line />
           <p v-else>
@@ -105,10 +105,10 @@ export default {
       showInfoDetails: true,
       items: [],
       headers: [
-        { title: 'Product Name', key: 'product_name', sortable: false },
-        { title: 'Product', key: 'product', sortable: false },
-        { title: 'Price', key: 'price', sortable: false },
-        { title: 'Actions', key: 'actions', sortable: false },
+        { title: 'Product Name', key: 'product_name' },
+        { title: 'Product', key: 'product' },
+        { title: 'Price', key: 'price' },
+        { title: 'Actions', key: 'actions' },
       ],
       editProductDialog: false,
       editProductItem: null,
@@ -248,14 +248,21 @@ export default {
 <style>
 @media (max-width: 960px) {
   .v-table__wrapper > table > tbody > tr > td:first-child {
-      padding-top: 40px !important;
+    padding-top: 40px !important;
   }
   .v-table__wrapper > table > tbody > tr > td:last-child {
-      padding-bottom: 40px !important;
+    padding-bottom: 40px !important;
   }
   .v-table__wrapper > table > tbody > tr > td:last-child > div:first-child {
-      height: 56px !important;
-      align-content: center !important;
+    height: 56px !important;
+    align-content: center !important;
+  }
+  /**
+  * hide "sort by" on mobile
+  * https://stackoverflow.com/a/78435096
+  */
+  .v-data-table-headers--mobile {
+    display: none;
   }
 }
 </style>
