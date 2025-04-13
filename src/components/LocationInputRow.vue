@@ -45,6 +45,7 @@ export default {
       })
     },
   },
+  emits: ['location'],
   data() {
     return {
       selectedLocation: null,
@@ -93,6 +94,7 @@ export default {
         this.locationForm.location_osm_id = utils.getLocationID(location)
         this.locationForm.location_osm_type = utils.getLocationType(location)
       }
+      this.$emit('location', this.selectedLocation)
     },
   }
 }
