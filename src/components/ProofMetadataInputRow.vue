@@ -66,7 +66,7 @@
       />
     </v-col>
   </v-row>
-  <v-row v-if="proofIsTypeReceipt" class="mt-0">
+  <v-row v-if="proofIsTypeReceipt && locationIsTypeOnline" class="mt-0">
     <v-col cols="6">
       <div class="text-subtitle-2">
         <v-icon size="small" :icon="LOCATION_TYPE_ONLINE_ICON" /> {{ $t('Common.ReceiptOnlineDeliveryCosts') }}
@@ -181,7 +181,11 @@ export default {
     assistedByAI: {
       type: Boolean,
       default: false
-    }
+    },
+    locationType: {
+      type: String,
+      default: null
+    },
   },
   data() {
     return {
@@ -205,6 +209,9 @@ export default {
     },
     proofIsTypeReceipt() {
       return this.proofType === constants.PROOF_TYPE_RECEIPT
+    },
+    locationIsTypeOnline() {
+      return this.locationType === constants.LOCATION_TYPE_ONLINE
     },
     priceCountRules() {
       if (!this.proofMetadataForm.receipt_price_count) return [() => true]  // optional field

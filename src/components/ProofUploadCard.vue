@@ -21,9 +21,9 @@
           :text="$t('ProofAdd.HowToMultipleShort')"
         />
         <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" :hideProofTypePriceTagChoice="typeReceiptOnly" />
-        <LocationInputRow :locationForm="proofForm" />
+        <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
         <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
-        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" />
+        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
@@ -147,6 +147,7 @@ export default {
         proof_id: null
       },
       // data
+      locationObject: null,  // location selected
       proofDateSuccessMessage: false,
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
