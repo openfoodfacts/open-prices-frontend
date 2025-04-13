@@ -105,6 +105,30 @@
       />
     </v-col>
   </v-row>
+  <v-row v-if="assistedByAI" class="mt-0">
+    <v-col v-if="proofIsTypePriceTag" cols="12" class="pb-1">
+      <v-switch
+        v-model="proofMetadataForm.ready_for_price_tag_validation"
+        density="compact"
+        color="success"
+        :label="$t('ProofAdd.PriceValidationAllow')"
+        :true-value="true"
+        hide-details="auto"
+      />
+    </v-col>
+    <v-col v-else-if="proofIsTypeReceipt" cols="12" class="pb-1">
+      <v-switch
+        v-model="switchReceiptAiAllowValue"
+        density="compact"
+        color="success"
+        :label="$t('ProofAdd.ReceiptAllowAI')"
+        :true-value="true"
+        hide-details="auto"
+        readonly
+        disabled
+      />
+    </v-col>
+  </v-row>
   <v-row v-if="proofIsTypeReceipt" class="mt-0">
     <v-col cols="12" class="pb-1">
       <v-switch
@@ -112,18 +136,6 @@
         density="compact"
         color="success"
         :label="$t('Common.ReceiptOwnerConsumption')"
-        :true-value="true"
-        hide-details="auto"
-      />
-    </v-col>
-  </v-row>
-  <v-row v-if="proofIsTypePriceTag && multiple">
-    <v-col cols="12" class="pb-1">
-      <v-switch
-        v-model="proofMetadataForm.ready_for_price_tag_validation"
-        density="compact"
-        color="success"
-        :label="$t('ProofAdd.PriceValidationAllow')"
         :true-value="true"
         hide-details="auto"
       />
@@ -159,11 +171,16 @@ export default {
     multiple: {
       type: Boolean,
       default: false
+    },
+    assistedByAI: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
     return {
       displayOwnerCommentField: null,  // see initProofMetadataForm
+      switchReceiptAiAllowValue: true,  // default until we manage it in the backend
       currentDate: utils.currentDate(),
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
       LOCATION_TYPE_ONLINE_ICON: constants.LOCATION_TYPE_ONLINE_ICON,

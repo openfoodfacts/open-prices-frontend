@@ -23,7 +23,7 @@
         <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" :hideProofTypePriceTagChoice="typeReceiptOnly" />
         <LocationInputRow :locationForm="proofForm" />
         <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
-        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" />
+        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" />
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
@@ -120,7 +120,11 @@ export default {
     multiple: {
       type: Boolean,
       default: false
-    }
+    },
+    assistedByAI: {
+      type: Boolean,
+      default: false
+    },
   },
   emits: ['proof', 'done'],
   data() {

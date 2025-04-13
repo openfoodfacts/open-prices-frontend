@@ -15,7 +15,7 @@
 
   <v-row v-if="step === 1">
     <v-col cols="12" md="6">
-      <ProofUploadCard :typeReceiptOnly="true" @proof="onProofUploaded($event)" />
+      <ProofUploadCard :typeReceiptOnly="true" :assistedByAI="true" @proof="onProofUploaded($event)" />
     </v-col>
   </v-row>
   
