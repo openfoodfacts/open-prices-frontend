@@ -622,10 +622,10 @@
 		"HowToMultiple": "Alle von Ihnen ausgewählten Preisschildbilder sollten den gleichen Standort haben und am gleichen Tag aufgenommen worden sein.",
 		"HowToMultipleShort": "Die Bilder sollten denselben Standort und dasselbe Datum aufweisen.",
 		"PriceValidationAllow": "Erlauben, dass die Preise meiner Bilder von der KI extrahiert und von der Gemeinschaft validiert werden",
-		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
-		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"PriceTagAllowCommunityValidation": "Erlauben Sie der Gemeinschaft, die von der KI ermittelten Preise zu überprüfen",
+		"PriceTagAIWarning": "KI prüft Ihre Nachweise, um Preise zu ermitteln.",
 		"ReceiptAllowAI": "Erlauben Sie der AI auf Ihrem Kassenbeleg, Preise zu ermitteln",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "KI prüft Ihren Kassenbeleg, um die Preise zu ermitteln."
 	},
 	"ProofCard": {
 		"Proof": "Nachweis",
