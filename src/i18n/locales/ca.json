@@ -191,7 +191,7 @@
 		"Brands": "Marques",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Preu",
-		"Prices": "Prices",
+		"Prices": "Preus",
 		"PRODUCT": "Producte",
 		"Product": "Producte",
 		"ProductName": "Nom del producte",
@@ -223,7 +223,7 @@
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Moneda",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -489,7 +489,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Moneda",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -582,7 +582,8 @@
 		"NoSpaces": "Please don't use spaces",
 		"Number": "Input a number",
 		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"TwoDecimals": "Only two decimals allowed",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -620,7 +621,11 @@
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
 	},
 	"ProofCard": {
 		"Proof": "Prova",
@@ -642,7 +647,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Carrega mes ",
-		"Prices": "Prices",
+		"Prices": "Preus",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -813,7 +818,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Preus",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -860,7 +865,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Canvi de llengua",
 		"CountryLabel": "País",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Moneda",
 		"DisplayTitle": "Mostra",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",

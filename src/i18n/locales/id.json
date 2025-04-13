@@ -582,7 +582,8 @@
 		"NoSpaces": "Tolong jangan beri spasi",
 		"Number": "Masukkan angka",
 		"Positive": "Harga tidak boleh minus",
-		"TwoDecimals": "Hanya boleh dua desimal"
+		"TwoDecimals": "Hanya boleh dua desimal",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -620,7 +621,11 @@
 	"ProofAdd": {
 		"HowToMultiple": "Semua gambar label harga yang Anda pilih harus memiliki lokasi toko yang sama, dan diambil pada hari yang sama.",
 		"HowToMultipleShort": "Foto harus menunjukkan lokasi toko dan tanggal yang sama.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
 	},
 	"ProofCard": {
 		"Proof": "Bukti",

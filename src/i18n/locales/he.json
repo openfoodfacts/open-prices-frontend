@@ -582,7 +582,8 @@
 		"NoSpaces": "נא לא להשתמש ברווחים",
 		"Number": "נא למלא מספר",
 		"Positive": "מחיר לא יכול להיות שלילי",
-		"TwoDecimals": "מותר עד שתי ספרות אחרי הנקודה"
+		"TwoDecimals": "מותר עד שתי ספרות אחרי הנקודה",
+		"ThreeDecimals": "מותר עד שלוש ספרות אחרי הנקודה"
 	},
 	"ProductCard": {
 		"BarcodeLength": "אורך ברקוד: {length}",
@@ -620,7 +621,11 @@
 	"ProofAdd": {
 		"HowToMultiple": "כל תמונות תגיות המחירים שבחרת יחלקו את אותו מקום חנות ויתועדו לאותו היום.",
 		"HowToMultipleShort": "התמונות צריכות לחלוק מקום ותאריך זהים לחנות.",
-		"PriceValidationAllow": "לאפשר את חילוץ המחירים בתמונה על ידי בינה מלאכותית ולאמת על אותם ידי הקהילה"
+		"PriceValidationAllow": "לאפשר את חילוץ המחירים בתמונה על ידי בינה מלאכותית ולאמת על אותם ידי הקהילה",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",

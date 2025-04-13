@@ -582,7 +582,8 @@
 		"NoSpaces": "Por favor não use espaços",
 		"Number": "Insira um número",
 		"Positive": "O preço não pode deve ser negativo",
-		"TwoDecimals": "Apenas são permitidas duas casas decimais"
+		"TwoDecimals": "Apenas são permitidas duas casas decimais",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Comprimento do código de barras: {length}",
@@ -620,7 +621,11 @@
 	"ProofAdd": {
 		"HowToMultiple": "Todas as imagens de etiquetas de preço que selecionar devem partilhar o mesmo local da loja e terem sido fotografadas no mesmo dia.",
 		"HowToMultipleShort": "As fotografias devem partilhar o mesmo local da loja e a mesma data.",
-		"PriceValidationAllow": "Permitir que os preços nas minhas fotografias sejam extraídos pela IA e validados pela comunidade"
+		"PriceValidationAllow": "Permitir que os preços nas minhas fotografias sejam extraídos pela IA e validados pela comunidade",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
 	},
 	"ProofCard": {
 		"Proof": "Comprovativo",

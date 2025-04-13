@@ -582,7 +582,8 @@
 		"NoSpaces": "தயவுசெய்து இடைவெளிகளைப் பயன்படுத்த வேண்டாம்",
 		"Number": "எண்ணை உள்ளிடவும்",
 		"Positive": "விலை எதிர்மறையாக இருக்காது",
-		"TwoDecimals": "இரண்டு தசமங்கள் மட்டுமே அனுமதிக்கப்படுகின்றன"
+		"TwoDecimals": "இரண்டு தசமங்கள் மட்டுமே அனுமதிக்கப்படுகின்றன",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "பார்கோடு நீளம்: {length}",
@@ -620,7 +621,11 @@
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
 	},
 	"ProofCard": {
 		"Proof": "Proof",

@@ -582,7 +582,8 @@
 		"NoSpaces": "Gebruik alstublieft geen spaties",
 		"Number": "Voer een getal in",
 		"Positive": "Prijs mag niet negatief zijn",
-		"TwoDecimals": "Slechts twee decimalen toegestaan"
+		"TwoDecimals": "Slechts twee decimalen toegestaan",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Lengte streepjescode: {length}",
@@ -620,7 +621,11 @@
 	"ProofAdd": {
 		"HowToMultiple": "Alle afbeeldingen van prijskaartjes die u selecteert, moeten op dezelfde winkellocatie en op dezelfde dag zijn genomen.",
 		"HowToMultipleShort": "Foto's moeten dezelfde winkellocatie en datum hebben.",
-		"PriceValidationAllow": "Laat de prijzen van mijn foto's door AI extraheren en door de community valideren"
+		"PriceValidationAllow": "Laat de prijzen van mijn foto's door AI extraheren en door de community valideren",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
 	},
 	"ProofCard": {
 		"Proof": "Bewijs",
