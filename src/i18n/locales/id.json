@@ -621,7 +621,8 @@
 	"ProofAdd": {
 		"HowToMultiple": "Semua gambar label harga yang Anda pilih harus memiliki lokasi toko yang sama, dan diambil pada hari yang sama.",
 		"HowToMultipleShort": "Foto harus menunjukkan lokasi toko dan tanggal yang sama.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices"
 	},
 	"ProofCard": {
 		"Proof": "Bukti",
