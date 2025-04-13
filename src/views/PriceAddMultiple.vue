@@ -151,7 +151,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
- import { useGoTo } from 'vuetify'
+import { useGoTo } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'

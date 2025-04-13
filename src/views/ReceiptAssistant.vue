@@ -123,7 +123,7 @@ export default {
           value: 1
         },
         {
-          title: this.$vuetify.display.smAndUp ? this.$t('ContributionAssistant.Steps.LabelsExtraction') : this.$t('Common.Labels'),
+          title: this.$t('Common.Prices'),
           value: 2
         },
         {
