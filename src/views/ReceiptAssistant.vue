@@ -166,13 +166,16 @@ export default {
       }
     },
     onProofUploaded(proof) {
+      // move to step 2
       this.step = 2
+      // store the proof
+      this.proofObject = proof
+      // load the receipt items
       this.loadingPredictions = true
       this.loadProofWithReceiptItems(proof.id, 5, proof => {
         api.getPrices({proof_id: proof.id}).then(data => {
           this.loadingPredictions = false
           this.proofPriceExistingList = data.items
-          this.proofObject = proof
         })
       })
     },
