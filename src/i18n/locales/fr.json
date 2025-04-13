@@ -621,7 +621,8 @@
 	"ProofAdd": {
 		"HowToMultiple": "Toutes les images d'étiquettes de prix que vous sélectionnez doivent partager le même emplacement de magasin et avoir été prises le même jour.",
 		"HowToMultipleShort": "Les photos doivent partager le même emplacement de magasin et la même date.",
-		"PriceValidationAllow": "Autoriser l'extraction par IA du prix sur mes photos et la validation par la communauté"
+		"PriceValidationAllow": "Autoriser l'extraction par IA du prix sur mes photos et la validation par la communauté",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices"
 	},
 	"ProofCard": {
 		"Proof": "Preuve",
