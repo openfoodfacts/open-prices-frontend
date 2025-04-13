@@ -106,26 +106,32 @@
     </v-col>
   </v-row>
   <v-row v-if="assistedByAI" class="mt-0">
-    <v-col v-if="proofIsTypePriceTag" cols="12" class="pb-1">
+    <v-col cols="12" class="pb-1">
+      <v-alert
+        v-if="proofIsTypePriceTag"
+        type="info"
+        variant="outlined"
+        density="compact"
+        :text="$t('ProofAdd.PriceTagAIWarning')"
+      />
+      <v-alert
+        v-else-if="proofIsTypeReceipt"
+        type="info"
+        variant="outlined"
+        density="compact"
+        :text="$t('ProofAdd.ReceiptAIWarning')"
+      />
+    </v-col>
+  </v-row>
+  <v-row v-if="assistedByAI && proofIsTypePriceTag" class="mt-0">
+    <v-col cols="12" class="pb-1">
       <v-switch
         v-model="proofMetadataForm.ready_for_price_tag_validation"
         density="compact"
         color="success"
-        :label="$t('ProofAdd.PriceValidationAllow')"
+        :label="$t('ProofAdd.PriceTagAllowCommunityValidation')"
         :true-value="true"
         hide-details="auto"
-      />
-    </v-col>
-    <v-col v-else-if="proofIsTypeReceipt" cols="12" class="pb-1">
-      <v-switch
-        v-model="switchReceiptAiAllowValue"
-        density="compact"
-        color="success"
-        :label="$t('ProofAdd.ReceiptAllowAI')"
-        :true-value="true"
-        hide-details="auto"
-        readonly
-        disabled
       />
     </v-col>
   </v-row>
@@ -180,7 +186,6 @@ export default {
   data() {
     return {
       displayOwnerCommentField: null,  // see initProofMetadataForm
-      switchReceiptAiAllowValue: true,  // default until we manage it in the backend
       currentDate: utils.currentDate(),
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
       LOCATION_TYPE_ONLINE_ICON: constants.LOCATION_TYPE_ONLINE_ICON,
