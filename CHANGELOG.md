@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.130.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.130.1...v1.130.2) (2025-04-13)
+
+
+### Bug Fixes
+
+* **Price add:** Allow 'quantity bought' field to have 3 decimals ([#1499](https://github.com/openfoodfacts/open-prices-frontend/issues/1499)) ([d13162d](https://github.com/openfoodfacts/open-prices-frontend/commit/d13162df8319a1bd69b8fb04045ffb87fa430323))
+* **Receipt Assistant:** fix step 2 label (Prices instead of Labels). ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([09a04ae](https://github.com/openfoodfacts/open-prices-frontend/commit/09a04aebdaa2df885a9e78753fe017367db9c316))
+* **Receipt Assistant:** fix top padding due to v-if in v-col. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([536432d](https://github.com/openfoodfacts/open-prices-frontend/commit/536432dc73261245064972789483c5a5b6ab2b17))
+* **Receipt Assistant:** mobile: hide 'sort by' header. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([0a4c67a](https://github.com/openfoodfacts/open-prices-frontend/commit/0a4c67ace22b849bdb11431b6317ba591e2c7c89))
+* **Receipt Assistant:** show green border around proof card. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([f96b813](https://github.com/openfoodfacts/open-prices-frontend/commit/f96b81345002eed9bf6021bd68cf19400f1be241))
+* **Receipt Assistant:** show proof card immediately after upload. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([da6c903](https://github.com/openfoodfacts/open-prices-frontend/commit/da6c903a1d08b78d66863f51291940e233d8e5d5))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1495](https://github.com/openfoodfacts/open-prices-frontend/issues/1495)) ([7530982](https://github.com/openfoodfacts/open-prices-frontend/commit/7530982f89fab15b89e1cf0bbd3c6c29244dee32))
+* **Proof upload:** seperate validation toggle and AI info ([#1506](https://github.com/openfoodfacts/open-prices-frontend/issues/1506)) ([0aff907](https://github.com/openfoodfacts/open-prices-frontend/commit/0aff907a3f64855e092f5fe1461d8b908f303e84))
+* **Receipt Assistant:** show a readonly toggle indicating that AI will run on the image ([#1501](https://github.com/openfoodfacts/open-prices-frontend/issues/1501)) ([dfd7709](https://github.com/openfoodfacts/open-prices-frontend/commit/dfd7709ffa85e5c0b4baf957ec84b87d0d19aad2))
+
 ## [1.130.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.130.0...v1.130.1) (2025-04-05)
 
 
