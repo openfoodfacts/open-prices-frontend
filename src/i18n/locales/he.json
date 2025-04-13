@@ -621,7 +621,8 @@
 	"ProofAdd": {
 		"HowToMultiple": "כל תמונות תגיות המחירים שבחרת יחלקו את אותו מקום חנות ויתועדו לאותו היום.",
 		"HowToMultipleShort": "התמונות צריכות לחלוק מקום ותאריך זהים לחנות.",
-		"PriceValidationAllow": "לאפשר את חילוץ המחירים בתמונה על ידי בינה מלאכותית ולאמת על אותם ידי הקהילה"
+		"PriceValidationAllow": "לאפשר את חילוץ המחירים בתמונה על ידי בינה מלאכותית ולאמת על אותם ידי הקהילה",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices"
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",
