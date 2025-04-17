@@ -120,6 +120,7 @@ export default {
         const userProofsStats = await api.getProofs({ ...this.defaultParams, owner: this.username, size: 1 })
         this.challenge.userProofContributions = userProofsStats.total
       }
+      this.loading = false
     },
     async getLatestPrices() {
       let items = []
