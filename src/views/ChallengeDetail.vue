@@ -98,37 +98,35 @@ export default {
         }
       })
     },
-    async getStats() {
+    getStats() {
       this.loading = true
-      let priceCount = 0
-      for (let i = 0; i < this.challenge.categories.length; i++) {
-        const data = await api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[i] })
-        priceCount += data.price__count
-      }
-      this.challenge.numberOfContributions = priceCount
+      api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0] })
+      .then((data) => {
+        this.challenge.numberOfContributions = data.price__count
+        this.loading = false
+      })
 
-      const proofsStats = await api.getProofs({ ...this.defaultParams, size: 1 })
-      this.challenge.numberOfProofs = proofsStats.total
+      api.getProofs({ ...this.defaultParams, size: 1 })
+      .then((data) => {
+        this.challenge.numberOfProofs = data.total
+      })
 
       if (this.username) {
-        let userPriceCount = 0
-        for (let i = 0; i < this.challenge.categories.length; i++) {
-          const data = await api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[i], owner: this.username })
-          userPriceCount += data.price__count
-        }
-        this.challenge.userContributions = userPriceCount
-        const userProofsStats = await api.getProofs({ ...this.defaultParams, owner: this.username, size: 1 })
-        this.challenge.userProofContributions = userProofsStats.total
+        api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0], owner: this.username })
+        .then((data) => {
+          this.challenge.userContributions = data.price__count
+        })
+        api.getProofs({ ...this.defaultParams, owner: this.username, size: 1 })
+        .then((data) => {
+          this.challenge.userProofContributions = data.total
+        })
       }
-      this.loading = false
     },
-    async getLatestPrices() {
-      let items = []
-      for (let i = 0; i < this.challenge.categories.length; i++) {
-        const data = await api.getPrices({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[i], size: 10 })
-        items = items.concat(data.items)
-      }
-      this.challenge.latestContributions = items.sort((a, b) => b.date.localeCompare(a.date)).slice(0, 10)
+    getLatestPrices() {
+      api.getPrices({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0], size: 10 })
+      .then((data) => {
+        this.challenge.latestContributions = data.items
+      })
     }
   }
 }
