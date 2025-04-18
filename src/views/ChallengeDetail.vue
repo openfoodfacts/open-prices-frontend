@@ -10,7 +10,7 @@
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
       </p>
       <p v-if="challenge.categories.length">
-        <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" />
+        <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
       </p>
     </v-col>
     <v-col cols="12" md="6">
