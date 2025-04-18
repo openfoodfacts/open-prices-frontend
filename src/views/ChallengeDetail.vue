@@ -10,7 +10,7 @@
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
       </p>
       <p v-if="challenge.categories.length">
-        <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" />
+        <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
       </p>
     </v-col>
     <v-col cols="12" md="6">
@@ -73,6 +73,9 @@ export default {
     },
     defaultParams() {
       return { created__gte: this.startDateMidnight, created__lte: this.endDateMidnight }
+    },
+    challengeCategoriesParam() {
+      return this.challenge.categories.join(',')
     }
   },
   mounted() {
@@ -100,7 +103,7 @@ export default {
     },
     getStats() {
       this.loading = true
-      api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0] })
+      api.getPriceStats({ ...this.defaultParams, product__categories_tags__overlap: this.challengeCategoriesParam })
       .then((data) => {
         this.challenge.numberOfContributions = data.price__count
         this.loading = false
@@ -112,7 +115,7 @@ export default {
       })
 
       if (this.username) {
-        api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0], owner: this.username })
+        api.getPriceStats({ ...this.defaultParams, product__categories_tags__overlap: this.challengeCategoriesParam, owner: this.username })
         .then((data) => {
           this.challenge.userContributions = data.price__count
         })
@@ -123,7 +126,7 @@ export default {
       }
     },
     getLatestPrices() {
-      api.getPrices({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0], size: 10 })
+      api.getPrices({ ...this.defaultParams, product__categories_tags__overlap: this.challengeCategoriesParam, size: 10 })
       .then((data) => {
         this.challenge.latestContributions = data.items
       })
