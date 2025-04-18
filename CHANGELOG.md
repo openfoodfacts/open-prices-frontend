@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.131.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.130.2...v1.131.0) (2025-04-18)
+
+
+### Features
+
+* **Challenge:** Add support for multiple product categories ([#1513](https://github.com/openfoodfacts/open-prices-frontend/issues/1513)) ([68c6c7e](https://github.com/openfoodfacts/open-prices-frontend/commit/68c6c7e3c9fdf473602b566e67734459adcf4c8a))
+
+
+### Bug Fixes
+
+* **Proof Upload:** only show 'Delivery costs' field if an online location is selected ([#1508](https://github.com/openfoodfacts/open-prices-frontend/issues/1508)) ([18f6386](https://github.com/openfoodfacts/open-prices-frontend/commit/18f6386001b4f34c1621597b837a7da9d8412909))
+
 ## [1.130.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.130.1...v1.130.2) (2025-04-13)
 
 
