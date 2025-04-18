@@ -94,6 +94,10 @@ export default {
       type: Object,
       default: null
     },
+    receiptItems: {
+      type: Array,
+      default: () => []
+    },
     proofPriceExistingList: {
       type: Array,
       default: () => []
@@ -124,26 +128,26 @@ export default {
     ...mapStores(useAppStore),
   },
   watch: {
-      items: {
-        handler(newReceiptItems) {
-          this.$emit('receiptItemsUpdated', newReceiptItems)
-        },
-        deep: true
+    items: {
+      handler(newReceiptItems) {
+        this.$emit('receiptItemsUpdated', newReceiptItems)
       },
-      proof() {
-        this.init()
-      },
-      proofPriceExistingList() {
-        this.init()
-      }
+      deep: true
+    },
+    proof() {
+      this.init()
+    },
+    proofPriceExistingList() {
+      this.init()
+    }
   }, 
   mounted() {
     this.init()
   },
   methods: {
     init() {
-      if (!this?.proof?.receiptItems?.length) return
-      this.items = this.proof.receiptItems.map((item) => {
+      if (!this?.receiptItems?.length) return
+      this.items = this.receiptItems.map((item) => {
         if (item.price_id) {
           item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
           item.productFound = item.existingPrice.product

@@ -35,10 +35,10 @@
       <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
     </v-col>
     <v-col cols="12" lg="8">
-      <ReceiptTableCard :proof="proofObject" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
+      <ReceiptTableCard :proof="proofObject" :receiptItems="receiptItems" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
       <v-row>
         <v-col>
-          <v-btn v-if="validNewReceiptItems.length != validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
+          <v-btn v-if="validNewReceiptItems.length !== validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
             {{ $t('ReceiptAssistant.UploadOnlyNewPrices', {nbPrices: validNewReceiptItems.length}) }}
           </v-btn>
           <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
@@ -108,6 +108,7 @@ export default {
       proofObject: null,
       numberOfPricesAdded: 0,
       proofPriceExistingList: [],
+      receiptItems: [],
       totalNumberOfPricesToAdd: 0,
       loadingPredictions: false,
     }
@@ -138,15 +139,15 @@ export default {
       // Should I use item.product_code or item.productFound ?
       // item.product_code means any typed product_code would work, including ones with no product associated
       // item.productFound means the product was explicitly selected by the user
-      if (!this.proofObject?.receiptItems) return []
+      if (!this.receiptItems) return []
       const isProductValid = item => item.isCategory ? item.category_tag : item.product_code
-      return this.proofObject.receiptItems.filter(item => item.predicted_data.price && isProductValid(item))
+      return this.receiptItems.filter(item => item.predicted_data.price && isProductValid(item))
     },
     validNewReceiptItems() {
       return this.validReceiptItems.filter(item => !item.price_id)
     },
     proofHasReceiptPredictionItems() {
-      return this.proofObject?.receiptItems && this.proofObject.receiptItems.length > 0
+      return this.receiptItems && this.receiptItems.length > 0
     },
     userDashboardUrl() {
       const dashboardTab = (this.proofObject && this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
@@ -192,7 +193,7 @@ export default {
           api.getReceiptItems({proof_id: proofId}).then(data => {
             const receiptItems = data.items
             if (receiptItems.length) {
-              proof.receiptItems = receiptItems
+              this.receiptItems = receiptItems
               callback(proof)
             } else {
               tries += 1
@@ -208,7 +209,7 @@ export default {
       load()
     },
     receiptItemsUpdated(newReceiptItems) {
-      this.proofObject.receiptItems = newReceiptItems
+      this.receiptItems = newReceiptItems
     },
     updateOrAddReceiptItem(receiptItemId, priceId) {
       let receiptItemData = {
