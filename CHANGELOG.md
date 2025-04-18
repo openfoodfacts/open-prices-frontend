@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.131.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.131.0...v1.131.1) (2025-04-18)
+
+
+### Bug Fixes
+
+* **Receipt Assistant:** store predictions in a dedicated variable. fix error not displaying. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([843cda6](https://github.com/openfoodfacts/open-prices-frontend/commit/843cda6b7f93b1fa69e36c5110ec9635e6fa2a45))
+
 ## [1.131.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.130.2...v1.131.0) (2025-04-18)
 
 
