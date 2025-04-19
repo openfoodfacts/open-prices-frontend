@@ -624,7 +624,7 @@
 		"PriceValidationAllow": "Erlauben, dass die Preise meiner Bilder von der KI extrahiert und von der Gemeinschaft validiert werden",
 		"PriceTagAllowCommunityValidation": "Erlauben Sie der Gemeinschaft, die von der KI ermittelten Preise zu überprüfen",
 		"PriceTagAIWarning": "KI prüft Ihre Nachweise, um Preise zu ermitteln.",
-		"ReceiptAllowAI": "Erlauben Sie der AI auf Ihrem Kassenbeleg, Preise zu ermitteln",
+		"ReceiptAllowAI": "Erlauben Sie der KI auf Ihrem Kassenbeleg, Preise zu ermitteln",
 		"ReceiptAIWarning": "KI prüft Ihren Kassenbeleg, um die Preise zu ermitteln."
 	},
 	"ProofCard": {

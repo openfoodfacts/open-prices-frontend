@@ -211,11 +211,11 @@
 		"Contributors": "תורמים",
 		"Comment": "הערה",
 		"Community": "קהילה",
-		"CommunityPrices": "Community prices",
-		"CommunityProofs": "Community proofs",
+		"CommunityPrices": "מחירי הקהילה",
+		"CommunityProofs": "הוכחות הקהילה",
 		"Consumption": "צריכה",
-		"ConsumptionPrices": "Consumption prices",
-		"ConsumptionProofs": "Consumption proofs",
+		"ConsumptionPrices": "מחירי צריכה",
+		"ConsumptionProofs": "הוכחות צריכה",
 		"Contributions": "תרומות",
 		"Confirm": "אישור",
 		"Country": "מדינה",
@@ -289,7 +289,7 @@
 		"FAQ": "שו״ת",
 		"FrequentlyAskedQuestions": "שאלות נפוצות",
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)",
-		"Group": "Group",
+		"Group": "קבוצה",
 		"Help": "עזרה",
 		"History": "היסטוריה",
 		"Image": "תמונה",
@@ -306,7 +306,7 @@
 		"Map": "מפה",
 		"Miscellaneous": "שונות",
 		"MobileApp": "יישומון לניידים",
-		"MyConsumption": "My consumption",
+		"MyConsumption": "הצריכה שלי",
 		"MyDashboard": "לוח המחוונים שלי",
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
@@ -329,7 +329,7 @@
 		"OrderProofDateDESC": "תאריך ההוכחה",
 		"OrderUserCountDESC": "כמות משתמשים",
 		"Other": "אחר",
-		"OtherContributions": "Other contributions",
+		"OtherContributions": "תרומות אחרות",
 		"PersonalInfo": "פרטים אישיים",
 		"Physical": "פיזי",
 		"Picture": "תמונה",
@@ -622,10 +622,10 @@
 		"HowToMultiple": "כל תמונות תגיות המחירים שבחרת יחלקו את אותו מקום חנות ויתועדו לאותו היום.",
 		"HowToMultipleShort": "התמונות צריכות לחלוק מקום ותאריך זהים לחנות.",
 		"PriceValidationAllow": "לאפשר את חילוץ המחירים בתמונה על ידי בינה מלאכותית ולאמת על אותם ידי הקהילה",
-		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
-		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"PriceTagAllowCommunityValidation": "לאפשר לקהילה לאמת מחירים שחולצו על ידי בינה מלאכותית",
+		"PriceTagAIWarning": "בינה מלאכותית תרוץ על ההוכחות שלך כדי לחלץ מחירים.",
+		"ReceiptAllowAI": "לאפשר להריץ בינה מלאכותית על הקבלה שלך כדי לחלץ מחירים",
+		"ReceiptAIWarning": "בינה מלאכותית תרוץ על הקבלה שלך כדי לחלץ מחירים."
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",
@@ -659,16 +659,16 @@
 		"Success": "ההוכחה נערכה!"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
-		"PriceReadyToBeAdded": "Price ready to be added",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"AddNewItem": "הוספת פריט חדש",
+		"MissingPrice": "חסר מחיר",
+		"MissingProduct": "חסר מוצר",
+		"NoItemsFound": "לא ניתן לחלץ פריטים מהקבלה, נא לנסות שוב.",
+		"PriceAlreadyCreatedForItem": "כבר נוצר מחיר לפריט",
+		"PriceReadyToBeAdded": "המחיר מוכן להוספה",
+		"ReceiptItemsCheck": "פריטים בקבלה, בדיקה ותיקון",
+		"UploadOnlyNewPrices": "להעלות מחירים חדשים בלבד ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "להעלות או לעדכן את כל המחירים התקפים ({nbPrices})",
+		"WaitForExtraction": "הפריטים מחולצים אוטומטית מהקבלה, נא להמתין…"
 	},
 	"Reuses": {
 		"AlertNew": "הגזירה שלך חסרה? נשמח לשמוע על כך דרך {url}!",
@@ -784,7 +784,7 @@
 			"Title": "מסייע אימות מחירים"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "מסייע קבלות"
 		},
 		"Challenge": {
 			"Title": "אתגר"
