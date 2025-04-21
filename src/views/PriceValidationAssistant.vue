@@ -114,7 +114,7 @@ export default {
       this.priceTagList = []
       this.priceTagTotal = null
       this.priceTagPage = 0
-      this.productPriceForm = []
+      this.productPriceForms = []
       this.getPriceTags()
     },
     updatePriceTagStatus(index, status) {
