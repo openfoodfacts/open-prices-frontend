@@ -266,7 +266,7 @@
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeSecondHand": "Second hand",
-		"DiscountTypeOther": "Other",
+		"DiscountTypeOther": "Andet",
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Eksempel:",
@@ -328,7 +328,7 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
-		"Other": "Other",
+		"Other": "Andet",
 		"OtherContributions": "Other contributions",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
@@ -353,7 +353,7 @@
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Privatliv",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
@@ -651,7 +651,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Privatliv"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
