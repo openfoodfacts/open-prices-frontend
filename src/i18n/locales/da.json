@@ -1,73 +1,73 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
-		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
-		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
-		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
-		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
-		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
-		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
-		"LicenseTitle": "License",
-		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
-		"WhatTitle": "What is {op_name}?",
-		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
-		"WhyOFFTitle": "Why is {off_name} doing this?",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
-		"HowUseData": "How can I use the data?",
-		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
-		"HowContact": "How can I get in touch?",
-		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
-		"HowSupport": "How can I support {op_name}?",
-		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
-		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
-		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
-		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
-		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
-		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
-		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
-		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
+		"WhyTitle": "Hvorfor {op_name}?",
+		"WhyAnswer1": "{op_name} er et projekt til at indsamle og dele priser på produkter rundt om i verden. Det er et offentligt tilgængeligt datasæt, der kan bruges til forskning, analyse med mere. {op_name} er udviklet og vedligeholdt af {off_url}.",
+		"WhyAnswer2": "Der er i øjeblikket få virksomheder, der ejer store databaser over produktpriser på stregkodeniveau. Disse priser er ikke frit tilgængelige, men sælges til en høj pris til private aktører, forskere og andre organisationer, der har råd til dem.",
+		"HowTitle": "Hvordan virker {op_name}?",
+		"HowAnswer1": "Vi crowdsourcer et open source-datasæt med priser. Priser kan tilføjes af brugere via denne webapp eller via den officielle {off_url} mobilapp. Forhandlere eller tredjepartsapps kan også bidrage ved at bruge vores {op_api_url}.",
+		"HowAnswer2": "{op_name} er ikke kun beregnet til at opbevare individuelle priser, men også vores forbrug, altså listen over produkter, som folk køber i en enkelt indkøbstur. Disse data er ekstremt interessante for forskere at analysere madforbrugsvaner.",
+		"HowAnswer3": "Når det er muligt, beder vi bidragydere om at fremlægge et bevis for prisen i form af et foto af prisskiltet eller kvittering. Dette for at sikre datakvaliteten.",
+		"HowAnswer4": "Hvis du angiver en kvittering som bevisbillede, betyder det, at du accepterer at indsende dine forbrugsoplysninger til {op_name}. Vi vil anonymisere kvitteringen og gøre den offentlig tilgængelig, så den kan bruges til forskningsformål. Hvis du ikke ønsker at dele din kvittering offentligt, kan du stadig bidrage ved at tage et billede af prisskiltet.",
+		"LicenseTitle": "Licens",
+		"LicenseAnswer1": "Prisdatasættet er licenseret under {odbl_url}, hvilket betyder, at det kan bruges til ethvert formål, så længe du krediterer {op_name} og deler eventuelle ændringer, du foretager til datasættet.",
+		"LicenseAnswer2": "Billeder indsendt som bevis er licenseret under {ccbysa_url}.",
+		"WhatTitle": "Hvad er {op_name}?",
+		"WhatOFFTitle": "Hvad er {off_name}?",
+		"WhatOFFAnswer": "{off_url} er en non-profit organisation, der indsamler og deler information om fødevarer fra hele verden. Det er et samarbejdsprojekt, hvor frivillige indsamler data. {off_url} er den største åbne fødevaredatabase i verden med over 3 millioner produkter i 200 lande.",
+		"WhyOFFTitle": "Hvorfor gør {off_name} dette?",
+		"WhyOFFAnswer": "Prisoplysninger er af afgørende betydning for at forstå fødevaresystemer. Det er en nøglefaktor for at forstå prisen på mad og fremme sundere kostvaner. Åbning af prisdata er en måde at gøre det lettere for forskere, journalister og borgere at få en bedre forståelse af, hvordan fødevarepriserne varierer geografisk og i tid.",
+		"HowContribute": "Hvordan kan jeg bidrage?",
+		"HowContributeAnswer": "Du kan bidrage ved at tilføje priser til datasættet. Du kan gøre det ved at bruge webappen eller via den officielle mobilapp. En {op_api_url} er også tilgængelig, hvis du ønsker at integrere {op_name} til din app. Du skal bruge en {off_url} konto for at bidrage.",
+		"HowUseData": "Hvordan kan jeg bruge disse data?",
+		"HowUseDataAnswer1": "Datasættet er licenseret under {odbl_url}, hvilket betyder, at det kan bruges til ethvert formål, så længe du krediterer {op_name} og deler eventuelle ændringer, du foretager til datasættet.",
+		"HowUseDataAnswer2": "{op_api_url} giver nem adgang til dataene.",
+		"HowUseDataAnswer3": "Dataene er også tilgængelige som 3 gzippede JSONL-dumps: {op_dumb_prices_url}, {op_dumb_proofs_url} og {op_dumb_locations_url}.",
+		"HowContact": "Hvordan kan jeg komme i kontakt?",
+		"HowContactAnswer": "Du kan komme i kontakt med os ved at sende en e-mail til {off_contact_email_url}.",
+		"HowSupport": "Hvordan kan jeg støtte {op_name}?",
+		"HowSupportAnswer": "Du kan støtte {op_name} ved at bidrage til projektet, ved at dele det med dine venner og familie og ved at donere til {off_url}.",
+		"WhyOSM": "Hvorfor beder du om et {osm_name} ID, når jeg tilføjer en pris?",
+		"WhyOSMAnswer": "Vi beder om et {osm_url} ID for at kunne knytte prisen til en bestemt butik. Dette er nyttigt for at kunne vise prisen på et kort og for at kunne analysere regionale eller forhandleres prisforskelle.",
+		"HowRetailer": "Jeg er forhandler, og jeg vil gerne bidrage med priser. Hvordan kan jeg gøre det?",
+		"HowRetailerAnswer": "Du kan bidrage med priser ved at bruge vores {op_api_url}. Hvis du ønsker at bidrage med priser i stor skala, bedes du kontakte os på {off_contact_email_url}.",
+		"WhyNoScraping": "Overvejer du at skrabe priser fra forhandlernes hjemmesider?",
+		"WhyNoScrapingAnswer1": "Af juridiske og tekniske årsager betragter vi ikke at skrabe priser fra forhandleres websteder som en gyldig måde at bidrage til {op_name}. Vi vil sikre os, at de priser, vi indsamler, er nøjagtige og opdaterede.",
+		"WhyNoScrapingAnswer2": "Prisskrabning er en overvejet mulighed i en fremtidig version af {op_name}, men det ville blive gjort af {op_name} selv, så vi kan have et bevis for prisen baseret på HTML-siden."
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "En hylde med flere prisskilte",
+			"Title": "Flere produkter"
 		},
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Pris oprettet!",
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
+			"Subtitle": "Et eller flere produkter",
 			"Title": "Receipt"
 		},
-		"SignedIn": "Signed in!",
+		"SignedIn": "Logget ind!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Kun et prismærke",
+			"Title": "Enkelt produkt"
 		},
-		"Thanks": "Thanks",
+		"Thanks": "Tak",
 		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		"TitleSingle": "Tilføj en enkelt pris",
+		"TitleMultiple": "Tilføj flere priser i løs vægt"
 	},
 	"AddPriceMultiple": {
 		"Done": "Færdiggjort",
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "Tilføj en ny pris",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} pris allerede uploadet | {priceAlreadyUploadedNumber} priser er allerede uploadet",
 			"Create": "Opret",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
+			"ExistingProductFound": "Duplikér? Dette produkt er allerede blevet tilføjet til dette bevis",
+			"NewPrice": "Ny pris",
+			"PriceUploaded": "Pris oprettet!",
 			"Upload": "Upload"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
+			"ReceiptWarning": "Kvitteringer kan indeholde personlige oplysninger, vi anbefaler at skjule dem (redigere, folde...) før du tager billedet.",
+			"PrivateWarning": "Du kan også indstille kvitteringen til Privat. Private beviser vil kun være synlige for dig og for moderatorer.",
 			"Title": "Proof details"
 		},
 		"Title": "Add multiple prices"
@@ -113,19 +113,19 @@
 			"PerKg": "Price per kg",
 			"PerUnit": "Price per unit"
 		},
-		"Title": "Add a single price",
+		"Title": "Tilføj en enkelt pris",
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
 			"Find": "Find",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Title": "Hvor & hvornår?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "drevet af {url}"
 		},
 		"Scan": "Scan a barcode"
 	},
@@ -135,7 +135,7 @@
 		"Title": "Type a barcode"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
+		"Title": "Fællesskabsudfordring",
 		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
@@ -165,23 +165,23 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Igangværende udfordringer"
 	},
 	"Common": {
 		"About": "Om",
-		"AddComment": "Add a comment",
+		"AddComment": "Tilføj en kommentar",
 		"AddPrice": "Add a price",
 		"AddPrices": "Tilføj priser",
-		"AddNewPrice": "Add a new price",
-		"AddNewPrices": "Add new prices",
-		"AddProof": "Add a proof",
-		"AddProofs": "Add proofs",
-		"AddNewProof": "Add a new proof",
-		"AddNewProofs": "Add new proofs",
-		"AddToOFF": "Add to {name}",
-		"AdditionalInfo": "Additional information",
+		"AddNewPrice": "Tilføj en ny pris",
+		"AddNewPrices": "Tilføj nye priser",
+		"AddProof": "Tilføj et bevis",
+		"AddProofs": "Tilføj beviser",
+		"AddNewProof": "Tilføj et nyt bevis",
+		"AddNewProofs": "Tilføj nye beviser",
+		"AddToOFF": "Føj til {name}",
+		"AdditionalInfo": "Yderligere information",
 		"Barcode": "Stregkode",
-		"Barcodes": "Barcodes",
+		"Barcodes": "Stregkoder",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "Skan",
 		"BarcodeType": "Type a barcode",
@@ -189,7 +189,7 @@
 		"BarcodeInvalid": "Ugyldig stregkode",
 		"Brand": "Mærke",
 		"Brands": "Mærker",
-		"BrandTotal": "{count} brands | {count} brand | {count} brands",
+		"BrandTotal": "{count} mærker | {count} mærke | {count} mærker",
 		"Price": "Price",
 		"Prices": "Prices",
 		"PRODUCT": "Produkt",
@@ -197,43 +197,43 @@
 		"ProductName": "Produktnavn",
 		"Products": "Produkter",
 		"Proof": "Proof",
-		"Proofs": "Proofs",
+		"Proofs": "Beviser",
 		"CATEGORY": "Kategori",
 		"Category": "Kategori",
 		"Categories": "Kategorier",
-		"CategoryTotal": "{count} categories | {count} category | {count} categories",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
-		"Chart": "Chart",
+		"CategoryTotal": "{count} kategorier | {count} kategori | {count} kategorier",
+		"Challenge": "Udfordring",
+		"Challenges": "Udfordringer",
+		"ChallengeCurrent": "Aktuel udfordring",
+		"ChallengeOngoing": "Igangværende udfordring",
+		"Chart": "Diagram",
 		"Clear": "Ryd",
 		"Contributors": "Bidragsydere",
-		"Comment": "Comment",
-		"Community": "Community",
-		"CommunityPrices": "Community prices",
-		"CommunityProofs": "Community proofs",
+		"Comment": "Kommentér",
+		"Community": "Fællesskab",
+		"CommunityPrices": "Fællesskabets priser",
+		"CommunityProofs": "Fællesskabsbeviser",
 		"Consumption": "Forbrug",
-		"ConsumptionPrices": "Consumption prices",
-		"ConsumptionProofs": "Consumption proofs",
+		"ConsumptionPrices": "Forbrugspriser",
+		"ConsumptionProofs": "Forbrugsbeviser",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekræft",
 		"Country": "Land",
 		"Countries": "Lande",
-		"CountryCount": "{count} countries | {count} country | {count} countries",
-		"Crop": "Crop",
-		"Cropped": "Cropped",
+		"CountryCount": "{count} lande | {count} land | {count} lande",
+		"Crop": "Beskær",
+		"Cropped": "Beskåret",
 		"Currency": "Currency",
-		"Currencies": "Currencies",
-		"CurrencyMissing": "Currency missing",
-		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
-		"Dashboard": "Dashboard",
+		"Currencies": "Valutaer",
+		"CurrencyMissing": "Valuta mangler",
+		"CurrencyCount": "{count} valutaer | {count} valuta | {count} valutaer",
+		"Dashboard": "Oversigt",
 		"Display": "Vis",
-		"DisplayList": "List",
-		"DisplayPriceList": "List",
+		"DisplayList": "Liste",
+		"DisplayPriceList": "Liste",
 		"DisplayMap": "Kort",
 		"DisplayPriceMap": "Kort",
-		"DisplayPriceChart": "Chart",
+		"DisplayPriceChart": "Diagram",
 		"Done": "Færdiggjort",
 		"Error": "Fejlmelding",
 		"Experiments": "Experiments",
@@ -266,7 +266,7 @@
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeSecondHand": "Second hand",
-		"DiscountTypeOther": "Other",
+		"DiscountTypeOther": "Andet",
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Eksempel:",
@@ -328,7 +328,7 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
-		"Other": "Other",
+		"Other": "Andet",
 		"OtherContributions": "Other contributions",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
@@ -346,14 +346,14 @@
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Pris oprettet!",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Privatliv",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
@@ -385,7 +385,7 @@
 		"Select": "Select",
 		"Settings": "Indstillinger",
 		"SignInOFFAccount": "Log på med din {url} konto",
-		"SignedIn": "Signed in!",
+		"SignedIn": "Logget ind!",
 		"SignIn": "Log ind",
 		"SignOut": "Log ud",
 		"SideMenu": "Side menu",
@@ -398,7 +398,7 @@
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
-		"Thanks": "Thanks",
+		"Thanks": "Tak",
 		"Theme": "Tema",
 		"ThemeLight": "Lyst",
 		"ThemeDark": "Mørkt",
@@ -466,7 +466,7 @@
 		"WaitForUpload": "Please wait for upload",
 		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
+		"AddNewProof": "Tilføj et nyt bevis",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -503,7 +503,7 @@
 		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Oversigt",
 		"Settings": "Indstillinger",
 		"SignIn": "Log ind",
 		"SignOut": "Log ud"
@@ -515,7 +515,7 @@
 	"Home": {
 		"AddPrice": "Add a price",
 		"LatestPrices": "Latest prices",
-		"ProofAdd": "Add a proof",
+		"ProofAdd": "Tilføj et bevis",
 		"SearchProduct": "Search for a product",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
@@ -534,7 +534,7 @@
 		"Clear": "Ryd",
 		"NoResult": "No results found",
 		"PoweredBy": {
-			"text": "powered by {url}"
+			"text": "drevet af {url}"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
@@ -651,7 +651,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Privatliv"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -685,16 +685,16 @@
 			"Title": "Tilføj priser"
 		},
 		"AddPriceSingle": {
-			"Title": "Add a single price"
+			"Title": "Tilføj en enkelt pris"
 		},
 		"AddPriceMultiple": {
 			"Title": "Add multiple prices"
 		},
 		"AddProof": {
-			"Title": "Add a proof"
+			"Title": "Tilføj et bevis"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "Tilføj beviser"
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
@@ -709,13 +709,13 @@
 			"Title": "Add a price"
 		},
 		"PriceAddSingle": {
-			"Title": "Add a single price"
+			"Title": "Tilføj en enkelt pris"
 		},
 		"PriceAddMultiple": {
 			"Title": "Add multiple prices"
 		},
 		"Proofs": {
-			"Title": "Proofs"
+			"Title": "Beviser"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
@@ -724,7 +724,7 @@
 			"Title": "Add multiple proofs"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Fællesskab"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -733,7 +733,7 @@
 			"Title": "Hjem"
 		},
 		"Dashboard": {
-			"Title": "Dashboard"
+			"Title": "Oversigt"
 		},
 		"LatestPrices": {
 			"Title": "Latest prices"
@@ -787,13 +787,13 @@
 			"Title": "Receipt Assistant"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "Udfordring"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Udfordringer"
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "Fællesskabsudfordring"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -848,7 +848,7 @@
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Indstillinger",
-		"Title": "Dashboard",
+		"Title": "Oversigt",
 		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} proofs"
 	},
