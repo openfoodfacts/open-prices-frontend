@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.131.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.131.1...v1.131.2) (2025-04-23)
+
+
+### Bug Fixes
+
+* **OFF Link:** use the user country_code instead of language_code for the URL prefix ([#1518](https://github.com/openfoodfacts/open-prices-frontend/issues/1518)) ([37bbe6f](https://github.com/openfoodfacts/open-prices-frontend/commit/37bbe6f27494767072bb9d2bf919ed9fec777fa1))
+* **Price Validation Assistant:** fix filter refresh and duplication ([#1516](https://github.com/openfoodfacts/open-prices-frontend/issues/1516)) ([f0cccbb](https://github.com/openfoodfacts/open-prices-frontend/commit/f0cccbbf7f28e3a1f8d6456c79cb15700509a356))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1510](https://github.com/openfoodfacts/open-prices-frontend/issues/1510)) ([2b5bbf7](https://github.com/openfoodfacts/open-prices-frontend/commit/2b5bbf7ea1dc0c4d8d7b78b07800a4863c18c1d1))
+
 ## [1.131.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.131.0...v1.131.1) (2025-04-18)
 
 
