@@ -49,6 +49,10 @@
 
     <v-card-actions>
       <v-row>
+        <v-col cols="6">
+          <ProofReceiptPriceCountChip v-if="proof && items" class="mr-1" :uploadedCount="items.length" :totalCount="proof.receipt_price_count" />
+          <ProofReceiptPriceTotalChip v-if="proof && items" :uploadedCount="proofPriceListSum" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
+        </v-col>
         <v-spacer />
         <v-col>
           <v-btn
@@ -88,16 +92,18 @@
 </template>
   
 <script>
-import api from '../services/api'
 import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import api from '../services/api'
+import constants from '../constants'
 
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
+    ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
+    ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
   },
@@ -135,9 +141,13 @@ export default {
       ],
     }
   },
-
   computed: {
     ...mapStores(useAppStore),
+    proofPriceListSum() {
+      return this.items.reduce((acc, price) => {
+        return acc + parseFloat(price.predicted_data.price)
+      }, 0)
+    }
   },
   watch: {
     items: {
