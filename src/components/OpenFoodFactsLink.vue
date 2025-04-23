@@ -63,7 +63,7 @@ export default {
       return this.OFF_URL
     },
     getUrlWithLocale() {
-      return this.getSourceUrl.replace('world', this.appStore.user.language)
+      return this.getSourceUrl.replace('world', this.appStore.user.country.toLowerCase())
     },
     getUrl() {
       if (this.facet && this.value) {
