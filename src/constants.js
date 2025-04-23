@@ -49,6 +49,7 @@ export default {
   OFF_CONTACT_EMAIL: 'contact@openfoodfacts.org',
   OFF_SIGN_UP_URL: 'https://world.openfoodfacts.org/cgi/user.pl',
   OFF_ICON: OFF_ICON,
+  OFF_CONTRIBUTE_URL: 'https://world.openfoodfacts.org/contribute',
   OFF_WIKI_URL: 'https://wiki.openfoodfacts.org/Main_Page',
   OFF_WIKI_APP_URL: 'https://wiki.openfoodfacts.org/Project:Open-Prices',
   OFF_WIKI_GDPR_REQUEST_URL: 'https://wiki.openfoodfacts.org/GDPR_request',
