@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.132.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.131.2...v1.132.0) (2025-04-25)
+
+
+### Features
+
+* **Prices:** new table view ([#1522](https://github.com/openfoodfacts/open-prices-frontend/issues/1522)) ([98ba0aa](https://github.com/openfoodfacts/open-prices-frontend/commit/98ba0aa1670abb6b5fb5a0162c65178415d2a350))
+* **Settings:** allow users to set a default price list display ([#1524](https://github.com/openfoodfacts/open-prices-frontend/issues/1524)) ([79bade6](https://github.com/openfoodfacts/open-prices-frontend/commit/79bade65d0f20ce2b9646ada4ba8020627141ae9))
+
+
+### Technical
+
+* **Display Menu dropdown:** seperate price & location behavior ([768e6f8](https://github.com/openfoodfacts/open-prices-frontend/commit/768e6f86d32630d5822f56e069ea9a2b5fdd4308))
+* **l10n:** New Crowdin translations to review and merge ([#1521](https://github.com/openfoodfacts/open-prices-frontend/issues/1521)) ([1be011f](https://github.com/openfoodfacts/open-prices-frontend/commit/1be011f3907d4bdd00d756c8fba152cb6ac20b86))
+* **Reuse card:** small improvement in layout and CTA look & feel ([8c7b7ed](https://github.com/openfoodfacts/open-prices-frontend/commit/8c7b7ed14b95dd5461b34b3682afe80fa46202fa))
+
 ## [1.131.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.131.1...v1.131.2) (2025-04-23)
 
 
