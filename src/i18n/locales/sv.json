@@ -231,6 +231,7 @@
 		"Display": "Display",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
+		"DisplayTable": "Table",
 		"DisplayMap": "Karta",
 		"DisplayPriceMap": "Karta",
 		"DisplayPriceChart": "Chart",
