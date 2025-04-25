@@ -24,16 +24,25 @@ export default {
   props: {
     currentDisplay: {
       type: String,
-      default: null
+      default: null,
     },
+    kind: {
+      type: String,
+      default: 'price',
+      examples: ['price', 'location']
+    }
   },
   emits: ['update:currentDisplay'],
   data() {
     return {
-      displayList: constants.PRICE_DISPLAY_LIST,
+      priceDisplayList: constants.PRICE_DISPLAY_LIST,
+      locationDisplayList: constants.LOCATION_DISPLAY_LIST,
     }
   },
   computed: {
+    displayList() {
+      return this[`${this.kind}DisplayList`]
+    },
     getCurrentDisplayIcon() {
       let display = this.displayList.find(o => o.key === this.currentDisplay)
       return display ? display.icon : ''

@@ -11,7 +11,7 @@
         {{ $t('Common.TopLocations') }}
       </h2>
       <LoadedCountChip v-if="!loading" :loadedCount="countryCityLocationList.length" :totalCount="countryCityLocationTotal" />
-      <DisplayMenu kind="price" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
+      <DisplayMenu kind="location" :currentDisplay="currentDisplay" @update:currentDisplay="selectLocationDisplay($event)" />
     </v-col>
   </v-row>
 
@@ -116,7 +116,7 @@ export default {
           this.loading = false
         })
     },
-    selectPriceDisplay(displayKey) {
+    selectLocationDisplay(displayKey) {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
       // this.initCountryCity() will NOT be called in watch $route
