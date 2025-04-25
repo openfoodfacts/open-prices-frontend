@@ -155,7 +155,7 @@ export default {
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.currentDisplay
+    this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.appStore.user.price_list_display_default_mode || this.currentDisplay
     this.getProduct()
     this.initProductPrices()
     // load more
