@@ -42,7 +42,7 @@
 		"PriceCreated": "Pris oprettet!",
 		"ReceiptMode": {
 			"Subtitle": "Et eller flere produkter",
-			"Title": "Receipt"
+			"Title": "Kvittering"
 		},
 		"SignedIn": "Logget ind!",
 		"SingleProductMode": {
@@ -79,7 +79,7 @@
 			"Label": "Price",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Bevis",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -115,8 +115,8 @@
 		},
 		"Title": "Tilføj en enkelt pris",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Dato",
+			"DateLabel": "Dato",
 			"Find": "Find",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -196,7 +196,7 @@
 		"Product": "Produkt",
 		"ProductName": "Produktnavn",
 		"Products": "Produkter",
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"Proofs": "Beviser",
 		"CATEGORY": "Kategori",
 		"Category": "Kategori",
@@ -252,7 +252,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Dato",
 		"DateMissing": "Date missing",
 		"Details": "Details",
 		"Delete": "Slet",
@@ -290,7 +290,7 @@
 		"FrequentlyAskedQuestions": "Ofte Stillede Spørgsmål",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Hjælp",
 		"History": "Historik",
 		"Image": "Billed",
 		"ImageSelect": "Select an image",
@@ -308,8 +308,8 @@
 		"MobileApp": "Mobile app",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Mine priser",
+		"MyProofs": "Mine beviser",
 		"MyStats": "My stats",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
@@ -359,7 +359,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Vælg et bevis",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -371,8 +371,8 @@
 		"Quantity": "Kvantitet",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"RECEIPT": "Kvittering",
+		"Receipt": "Kvittering",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -411,7 +411,7 @@
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Ukendt produkt",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -552,9 +552,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Ukendt produkt"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -628,14 +628,14 @@
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
 	},
 	"ProofCard": {
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"PRICE_TAG": "Prisskilt",
-		"RECEIPT": "Receipt",
+		"RECEIPT": "Kvittering",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Vælg et bevis",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -742,10 +742,10 @@
 			"Title": "Latest proofs"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Mine priser"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Mine beviser"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -844,8 +844,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Indlæs mere",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Mine priser",
+		"MyProofs": "Mine beviser",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Indstillinger",
 		"Title": "Oversigt",
