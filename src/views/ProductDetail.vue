@@ -44,6 +44,9 @@
         </v-col>
       </v-row>
     </v-window-item>
+    <v-window-item value="table">
+      <PriceTable class="mt-3" :priceList="productPriceList" />
+    </v-window-item>
     <v-window-item value="map">
       <v-row class="mt-0 mb-1">
         <v-col style="height:400px">
@@ -84,6 +87,7 @@ export default {
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    PriceTable: defineAsyncComponent(() => import('../components/PriceTable.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
     PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue')),
     OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),

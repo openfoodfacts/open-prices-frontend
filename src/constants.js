@@ -192,6 +192,7 @@ export default {
   // display
   PRICE_DISPLAY_LIST: [
     { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
+    { key: 'table', value: 'DisplayTable', icon: 'mdi-table' },
     { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
     { key: 'chart', value: 'DisplayPriceChart', icon: 'mdi-chart-line' },
   ],
