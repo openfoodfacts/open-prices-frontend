@@ -1,38 +1,38 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
-		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
-		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
-		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
-		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
-		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
-		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
+		"WhyTitle": "¿Por qué {op_name}?",
+		"WhyAnswer1": "{op_name} es un proyecto para recopilar y compartir precios de productos a nivel mundial. Es un conjunto de datos disponible públicamente que puede utilizarse para investigación, análisis y más. {op_name} es desarrollado y mantenido por {off_url}.",
+		"WhyAnswer2": "Actualmente son pocas las empresas que poseen grandes bases de datos de precios de productos a nivel de código de barras. Estos precios no están disponibles libremente, pero se venden a un alto precio a actores privados, investigadores y otras organizaciones que pueden pagarlos.",
+		"HowTitle": "¿Cómo funciona {op_name}?",
+		"HowAnswer1": "Estamos colaborando colectivamente para crear un conjunto de datos de precios de código abierto. Los usuarios pueden añadir precios a través de esta aplicación web o de la aplicación móvil oficial de {off_url} . Los comercios o aplicaciones de terceros también pueden contribuir usando nuestro {op_api_url}.",
+		"HowAnswer2": "{op_name} no solo almacena precios individuales, sino también cestas de compra, es decir, la lista de productos que las personas compran en una sola compra. Estos datos son sumamente interesantes para que los investigadores analicen los hábitos de consumo alimentario.",
+		"HowAnswer3": "Siempre y cuando sea posible, les pedimos a los colaboradores que proporcionen una prueba del precio, en forma de una foto de la etiqueta de precio o recibo. Esto es para garantizar la calidad de los datos.",
+		"HowAnswer4": "Si proporcionas un recibo como imagen de prueba, significa que aceptas enviar tu cesta de consumo a {op_name}. Anonimizaremos el recibo y lo pondremos a disposición del público, para que pueda ser utilizado con fines de investigación. Si no quieres compartir públicamente tu recibo, puedes contribuir tomando una foto de la etiqueta de precio.",
 		"LicenseTitle": "License",
-		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
-		"WhatTitle": "What is {op_name}?",
-		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
-		"WhyOFFTitle": "Why is {off_name} doing this?",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
-		"HowUseData": "How can I use the data?",
-		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
-		"HowContact": "How can I get in touch?",
-		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
-		"HowSupport": "How can I support {op_name}?",
-		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
-		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
-		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
-		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
-		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
-		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
-		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
-		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
+		"LicenseAnswer1": "El conjunto de datos de precios está licenciado bajo la {odbl_url}, lo que significa que puede ser utilizado para cualquier propósito, siempre y cuando acredites {op_name} y compartas cualquier modificación que hagas en el conjunto de datos.",
+		"LicenseAnswer2": "Las imágenes enviadas como prueba están bajo la licencia {ccbysa_url}.",
+		"WhatTitle": "¿Qué es {op_name}?",
+		"WhatOFFTitle": "¿Qué es {off_name}?",
+		"WhatOFFAnswer": "{off_url} es una organización sin ánimo de lucro que recopila y comparte información sobre productos alimenticios de todo el mundo. Es un proyecto colaborativo que se basa en voluntarios para recopilar datos. {off_url} es la mayor base de datos de productos alimenticios abiertos del mundo, con más de 3 millones de productos en 200 países.",
+		"WhyOFFTitle": "¿Por qué {off_name} hace esto?",
+		"WhyOFFAnswer": "La información sobre los precios es de suma importancia para entender los sistemas alimentarios, es un factor clave para entender el costo de los alimentos y promover dietas más saludables. La apertura de los datos de precios es una forma de facilitar a los investigadores, periodistas, y ciudadanos para tener una mejor comprensión de cómo los precios de los alimentos varían geográficamente y con el tiempo.",
+		"HowContribute": "¿Cómo puedo contribuir?",
+		"HowContributeAnswer": "Puede contribuir añadiendo precios al conjunto de datos. Puede hacerlo usando la aplicación web o a través de la aplicación móvil oficial. También hay un {op_api_url} disponible si quieres integrar {op_name} en tu aplicación. Necesitas una cuenta {off_url} para contribuir.",
+		"HowUseData": "¿Cómo puedo utilizar los datos?",
+		"HowUseDataAnswer1": "Los datos están disponibles bajo el {odbl_url}, lo que significa que pueden utilizarse para cualquier propósito, siempre y cuando acredites {op_name} y compartas cualquier modificación que hagas en el conjunto de datos.",
+		"HowUseDataAnswer2": "La {op_api_url} proporciona una forma de acceder fácilmente a los datos.",
+		"HowUseDataAnswer3": "Los datos también están disponibles como 3 volcados JSONL comprimidos: {op_dumb_prices_url}, {op_dumb_proofs_url}y {op_dumb_locations_url}.",
+		"HowContact": "¿Cómo puedo ponerme en contacto?",
+		"HowContactAnswer": "Puedes ponerte en contacto con nosotros enviando un correo electrónico a {off_contact_email_url}.",
+		"HowSupport": "¿Cómo puedo apoyar a {op_name}?",
+		"HowSupportAnswer": "Puedes ayudar a {op_name} contribuyendo al proyecto, compartiéndolo con tus amigos y familiares, y donando a {off_url}.",
+		"WhyOSM": "¿Por qué solicitas un ID {osm_name} cuando agrego un precio?",
+		"WhyOSMAnswer": "Pedimos un ID {osm_url} para poder vincular el precio a una tienda específica. Esto es útil para poder mostrar el precio en un mapa y para poder analizar las diferencias de precios regionales o de distribuidores.",
+		"HowRetailer": "Soy un distribuidor y quiero contribuir con los precios. ¿Cómo puedo hacerlo?",
+		"HowRetailerAnswer": "Puedes contribuir precios usando nuestra {op_api_url}. Si quieres contribuir precios a escala, ponte en contacto con nosotros en {off_contact_email_url}.",
+		"WhyNoScraping": "¿Considera usted eliminar los precios de los sitios web de los vendedores?",
+		"WhyNoScrapingAnswer1": "Por razones legales y técnicas, no consideramos que la eliminación de los precios de los distribuidores sea una forma válida de contribuir a {op_name}. Queremos asegurarnos de que los precios recogidos son exactos y están actualizados, y recibir precios exprimidos por parte de los contribuyentes no nos permite hacerlo.",
+		"WhyNoScrapingAnswer2": "El raspado de precios es una opción considerada en una versión futura de {op_name}, pero lo haría el propio {op_name} para que podamos tener una prueba del precio basado en la página HTML."
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
@@ -60,7 +60,7 @@
 			"Add": "Añadir un nuevo precio",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} precio ya subido | {priceAlreadyUploadedNumber} precios ya subidos",
 			"Create": "Crear",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
+			"ExistingProductFound": "¿Duplicar? Este producto ya ha sido añadido para esta prueba",
 			"NewPrice": "Nuevo precio",
 			"PriceUploaded": "¡Precio creado!",
 			"Upload": "Cargar"
@@ -135,7 +135,7 @@
 		"Title": "Introducir código de barras"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
+		"Title": "Desafíos de la comunidad",
 		"Subtitle": "Únase a otros entusiastas del precio de los alimentos para recopilar información sobre {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Toma fotos de las etiquetas de precios en las tiendas",
@@ -144,28 +144,28 @@
 			"AddPictures": "Añadir imágenes"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
+			"Title": "Validar los precios detectados con IA",
 			"line1": "Las etiquetas de precios se detectan automáticamente, pero los robots todavía necesitan tu ayuda para validarlas.",
 			"line2": "Visita la página de validación de precios usando el botón de abajo, edita el código de barras y el precio si es necesario, y valídalo!",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"line3": "Si está teniendo problemas para leer la etiqueta, márquela como no legible.",
+			"line4": "Este es un esfuerzo colaborativo, incluso si no has enviado muchas fotos, puedes ayudar a otros al validarlas."
 		},
 		"PicturesAddedByYou": "Fotos añadidas por ti",
-		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
-		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"Prices": "Precio {challenge_title}",
+		"PricesAdded": "Precio {challenge_title} añadido",
+		"PricesByYou": "Precios {challenge_title} por ti",
+		"PricesAddedByYou": "Precio {challenge_title} añadido por ti",
 		"MostRecentContributions": "Contribuciones más recientes",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeCount": "Desafíos {count} | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
-			"UPCOMING": "Upcoming",
-			"ONGOING": "Ongoing",
-			"COMPLETED": "Completed"
+			"DRAFT": "Borrador",
+			"UPCOMING": "Próximamente",
+			"ONGOING": "En curso",
+			"COMPLETED": "Terminado"
 		},
-		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
-		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"NoChallengeCurrentlyOngoing": "No hay ningún desafío en curso, ¡por favor vuelve más tarde!",
+		"PastOrFutureChallenges": "Desafíos pasados o futuros",
+		"OngoingChallenges": "Desafíos en curso"
 	},
 	"Common": {
 		"About": "Acerca de",
@@ -231,6 +231,7 @@
 		"Display": "Mostrar",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
+		"DisplayTable": "Table",
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Chart",
@@ -793,7 +794,7 @@
 			"Title": "Desafíos"
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "Desafíos de la comunidad"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -874,6 +875,7 @@
 		"LanguageLabel": "Idiomas",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Mostrar ID de OSM",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Validación de precios",
 		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar categoría",

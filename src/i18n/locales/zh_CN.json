@@ -93,21 +93,21 @@
 			"SelectRecentProof": "选择最近的证明"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "分類",
+			"CategoryLabel": "类别",
 			"OriginLabel": "起源",
 			"ProductBarcode": "产品条码",
 			"Scan": "扫描",
 			"ScanBarcode": "扫描条形码",
 			"ScanBarcodeShort": "扫描",
-			"Type": "類型",
+			"Type": "类型",
 			"TypeBarcode": "输入条形码",
-			"TypeBarcodeShort": "類型",
+			"TypeBarcodeShort": "类型",
 			"SetProduct": "设置产品",
 			"Title": "产品信息"
 		},
 		"ProductModeList": {
-			"Barcode": "條碼",
-			"Category": "分類"
+			"Barcode": "条形码",
+			"Category": "类别"
 		},
 		"CategoryPricePer": {
 			"PerKg": "每公斤价格",
@@ -130,8 +130,8 @@
 		"Scan": "扫描条形码"
 	},
 	"BarcodeManualInput": {
-		"Barcode": "條碼",
-		"Submit": "送出",
+		"Barcode": "条形码",
+		"Submit": "提交",
 		"Title": "输入条形码"
 	},
 	"Challenge": {
@@ -180,12 +180,12 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "添加到 {name}",
 		"AdditionalInfo": "Additional information",
-		"Barcode": "條碼",
+		"Barcode": "条形码",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "扫描条形码",
 		"BarcodeScanShort": "扫描",
 		"BarcodeType": "输入条形码",
-		"BarcodeTypeShort": "類型",
+		"BarcodeTypeShort": "类型",
 		"BarcodeInvalid": "无效的条形码",
 		"Brand": "品牌",
 		"Brands": "品牌",
@@ -198,9 +198,9 @@
 		"Products": "产品",
 		"Proof": "证明",
 		"Proofs": "Proofs",
-		"CATEGORY": "分類",
-		"Category": "分類",
-		"Categories": "類別",
+		"CATEGORY": "类别",
+		"Category": "类别",
+		"Categories": "类别",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Challenge": "Challenge",
 		"Challenges": "Challenges",
@@ -218,8 +218,8 @@
 		"ConsumptionProofs": "Consumption proofs",
 		"Contributions": "贡献",
 		"Confirm": "确认",
-		"Country": "地區",
-		"Countries": "國家地區",
+		"Country": "国家/地区",
+		"Countries": "国家/地区",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
@@ -231,6 +231,7 @@
 		"Display": "显示",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
+		"DisplayTable": "Table",
 		"DisplayMap": "地图",
 		"DisplayPriceMap": "地图",
 		"DisplayPriceChart": "Chart",
@@ -238,14 +239,14 @@
 		"Error": "错误",
 		"Experiments": "Experiments",
 		"Join": "Join",
-		"Label": "標籤",
+		"Label": "标签",
 		"Labels": "标签",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
-		"Language": "語言",
-		"Languages": "語言",
+		"Language": "语言",
+		"Languages": "语言",
 		"LatestPrices": "最新价格",
 		"LatestProofs": "最新样张",
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"Location": "Location",
 		"Locations": "地点",
 		"LocationSelected": "Location selected",
@@ -259,7 +260,7 @@
 		"DeveloperMode": "Developer mode",
 		"Discount": "折扣",
 		"DiscountType": "Discount type",
-		"DiscountTypeQuantity": "數量",
+		"DiscountTypeQuantity": "数量",
 		"DiscountTypeSale": "Sale",
 		"DiscountTypeSeasonal": "Seasonal",
 		"DiscountTypeLoyaltyProgram": "Loyalty program",
@@ -273,7 +274,7 @@
 		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "例如：",
 		"ExamplesWithColonAndValue": "Examples: {value}",
-		"Edit": "編輯",
+		"Edit": "编辑",
 		"End": "End",
 		"Filter": "过滤器",
 		"FilterChallengesShowAllStatus": "Show all challenges",
@@ -368,7 +369,7 @@
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
 		"Public": "民众",
-		"Quantity": "數量",
+		"Quantity": "数量",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "缺失数量",
 		"RECEIPT": "收据",
@@ -381,9 +382,9 @@
 		"Recent": "Recent",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
-		"Search": "搜尋",
+		"Search": "搜索",
 		"Select": "Select",
-		"Settings": "設定",
+		"Settings": "设置",
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
 		"SignedIn": "登录",
 		"SignIn": "登录",
@@ -410,7 +411,7 @@
 		"Total": "总计",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
-		"Type": "類型",
+		"Type": "类型",
 		"UnknownProduct": "未知产品",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
@@ -430,10 +431,10 @@
 		"Users": "用户",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
-		"Validate": "驗證",
+		"Validate": "验证",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
-		"View": "檢視",
+		"View": "查看",
 		"Website": "网站",
 		"Year": "Year",
 		"Years": "Years",
@@ -504,7 +505,7 @@
 	},
 	"Header": {
 		"Dashboard": "仪表板",
-		"Settings": "設定",
+		"Settings": "设置",
 		"SignIn": "登录",
 		"SignOut": "登出"
 	},
@@ -527,7 +528,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "最新价格",
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"LocationNotFound": "在 OpenStreetMap 中找不到位置... 请立即添加它:)"
 	},
 	"LocationSelector": {
@@ -563,7 +564,7 @@
 		"Title": "删除价格"
 	},
 	"PriceEdit": {
-		"Save": "儲存",
+		"Save": "保存",
 		"Success": "价格已修改！",
 		"Title": "编辑价格"
 	},
@@ -574,7 +575,7 @@
 		"LabelFull": "全价"
 	},
 	"PriceList": {
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"Title": "最新价格"
 	},
 	"PriceRules": {
@@ -591,7 +592,7 @@
 		"BrandLower": "品牌",
 		"BrandMissing": "品牌缺失",
 		"BrandTotal": "{count} 品牌",
-		"Categories": "類別",
+		"Categories": "类别",
 		"CategoriesLower": "分类",
 		"CategoriesMissing": "类别缺失",
 		"CategoryTotal": "{count} 类别",
@@ -615,7 +616,7 @@
 		"AddPrice": "添加价格",
 		"CategoryNotFound": "未找到类别...",
 		"LatestPrices": "最新价格",
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"ProductNotFound": "在 Open Food Facts 中找不到产品... 请随时添加:)"
 	},
 	"ProofAdd": {
@@ -646,7 +647,7 @@
 		"Success": "证据已删除！"
 	},
 	"ProofDetail": {
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"Prices": "价格",
 		"ProofNotFound": "Proof not found",
 		"Public": "民众",
@@ -655,7 +656,7 @@
 	},
 	"ProofEdit": {
 		"Title": "编辑证明",
-		"Save": "儲存",
+		"Save": "保存",
 		"Success": "证明已编辑！"
 	},
 	"ReceiptAssistant": {
@@ -754,10 +755,10 @@
 			"Title": "Reuses"
 		},
 		"Search": {
-			"Title": "搜尋"
+			"Title": "搜索"
 		},
 		"Settings": {
-			"Title": "設定"
+			"Title": "设置"
 		},
 		"SignIn": {
 			"Title": "登录"
@@ -801,7 +802,7 @@
 	},
 	"Search": {
 		"ProductBarcode": "产品条码",
-		"Title": "搜尋"
+		"Title": "搜索"
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "链接已复制",
@@ -842,45 +843,46 @@
 	"UserDashboard": {
 		"LatestPrices": "最新价格",
 		"LatestProofs": "最新样张",
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "我的价格",
 		"MyProofs": "我的样张",
 		"ProofUpdated": "证据已更新！",
-		"Settings": "設定",
+		"Settings": "设置",
 		"Title": "仪表板",
 		"UserPriceTotal": "{count} 价格",
 		"UserProofTotal": "{count} 证明"
 	},
 	"UserDetail": {
 		"LatestPrices": "最新价格",
-		"LoadMore": "載入更多"
+		"LoadMore": "显示更多"
 	},
 	"UserList": {
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"Title": "杰出贡献者",
 		"UserTotal": "{count} 贡献者"
 	},
 	"UserSettings": {
 		"AddingPrices": "添加价格",
 		"ChangeLanguage": "更改语言",
-		"CountryLabel": "地區",
+		"CountryLabel": "国家/地区",
 		"CurrencyLabel": "货币",
 		"DisplayTitle": "显示",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "最喜欢的货币",
 		"CurrencyRequired": "至少需要一种货币",
-		"LanguageLabel": "語言",
+		"LanguageLabel": "语言",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",
 		"ProductDisplaySource": "Display source",
 		"SideMenuExperimentsDisplay": "Display 'Experiments'",
-		"Save": "儲存",
-		"Title": "設定",
+		"Save": "保存",
+		"Title": "设置",
 		"TranslationCompletion": "翻译已完成 {completion}%。",
 		"TranslationHelp": "帮助我们翻译更多语言"
 	}
