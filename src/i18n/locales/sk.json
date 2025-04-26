@@ -390,7 +390,7 @@
 		"SignIn": "Prihlásiť sa",
 		"SignOut": "Odhlásiť sa",
 		"SideMenu": "Side menu",
-		"Share": "Share",
+		"Share": "Zdielať",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
@@ -806,7 +806,7 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "Zdielať"
 	},
 	"SignIn": {
 		"Button": "Prihlásiť sa",
