@@ -255,7 +255,7 @@
 		"LocationSearchByName": "Search by name and city",
 		"Date": "Dátum",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "Podrobnosti",
 		"Delete": "Vymazať",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -291,7 +291,7 @@
 		"FrequentlyAskedQuestions": "Často kladené otázky",
 		"GDPR_REQUEST": "žiadosť GDPR",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Nápoveda",
 		"History": "História",
 		"Image": "Obrázok",
 		"ImageSelect": "Select an image",
@@ -310,7 +310,7 @@
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
-		"MyProofs": "My proofs",
+		"MyProofs": "Moje potvrdenky",
 		"MyStats": "My stats",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
@@ -746,7 +746,7 @@
 			"Title": "Moje ceny"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Moje potvrdenky"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -846,7 +846,7 @@
 		"LoadMore": "Načítať ďalšie",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
-		"MyProofs": "My proofs",
+		"MyProofs": "Moje potvrdenky",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Nastavenia",
 		"Title": "Hlavný panel",
