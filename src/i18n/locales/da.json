@@ -76,8 +76,8 @@
 		"Create": "Opret",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Pris",
+			"LabelDiscounted": "Nedsat pris",
 			"LabelFull": "Full price",
 			"Proof": "Bevis",
 			"ProofDateChanged": "Date updated!",
@@ -190,7 +190,7 @@
 		"Brand": "Mærke",
 		"Brands": "Mærker",
 		"BrandTotal": "{count} mærker | {count} mærke | {count} mærker",
-		"Price": "Price",
+		"Price": "Pris",
 		"Prices": "Prices",
 		"PRODUCT": "Produkt",
 		"Product": "Produkt",
@@ -223,7 +223,7 @@
 		"CountryCount": "{count} lande | {count} land | {count} lande",
 		"Crop": "Beskær",
 		"Cropped": "Beskåret",
-		"Currency": "Currency",
+		"Currency": "Valuta",
 		"Currencies": "Valutaer",
 		"CurrencyMissing": "Valuta mangler",
 		"CurrencyCount": "{count} valutaer | {count} valuta | {count} valutaer",
@@ -255,7 +255,7 @@
 		"LocationSearchByName": "Search by name and city",
 		"Date": "Dato",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "Detaljer",
 		"Delete": "Slet",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -321,7 +321,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Pris",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -442,7 +442,7 @@
 		"No": "Nej",
 		"Food": "Food",
 		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Beauty": "Skønhed"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -490,7 +490,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Valuta",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -570,8 +570,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Pris",
+		"LabelDiscounted": "Nedsat pris",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -866,7 +866,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Skift sprog",
 		"CountryLabel": "Land",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Vis",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
