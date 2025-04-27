@@ -477,15 +477,15 @@
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Prisskilt uden en pris",
 			"PriceTagWithPrice": "Prisskilt med en pris",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
-			"NewPriceTag": "New price tag"
+			"PriceTagTruncated": "Prisskilt markeret som afkortet",
+			"PriceTagUnreadable": "Prismærke markeret som ulæselig",
+			"PriceTagNotAPrice": "Prisskilt markeret som ikke en pris",
+			"NewPriceTag": "Nyt prisskilt"
 		},
-		"OpenWithTheAssistant": "Open with the assistant"
+		"OpenWithTheAssistant": "Åbn med assistenten"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
+		"JoinUs": "Vær med!",
 		"HowToUseTheData": "Brug dataene"
 	},
 	"ChangeCurrencyDialog": {
