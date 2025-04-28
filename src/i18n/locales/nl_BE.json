@@ -231,7 +231,7 @@
 		"Display": "Weergave",
 		"DisplayList": "Lijst",
 		"DisplayPriceList": "Lijst",
-		"DisplayTable": "Table",
+		"DisplayTable": "Tabel",
 		"DisplayMap": "Kaart",
 		"DisplayPriceMap": "Kaart",
 		"DisplayPriceChart": "Grafiek",
@@ -625,8 +625,8 @@
 		"PriceValidationAllow": "Laat de prijzen van mijn foto's door AI extraheren en door de community valideren",
 		"PriceTagAllowCommunityValidation": "Laat de gemeenschap de prijzen die door AI zijn verkregen valideren",
 		"PriceTagAIWarning": "AI zal uw bewijzen gebruiken om prijzen te berekenen.",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAllowAI": "Laat AI op uw kassabon inspecteren om prijzen te extraheren",
+		"ReceiptAIWarning": "AI analyseert uw kassabon om prijzen te extraheren."
 	},
 	"ProofCard": {
 		"Proof": "Bewijs",
@@ -875,7 +875,7 @@
 		"LanguageLabel": "Talen",
 		"LocationFinder": "Locatiezoeker",
 		"LocationDisplayOSMID": "OSM-ID weergeven",
-		"PriceListDisplay": "Price list diplay",
+		"PriceListDisplay": "Prijslijst weergeven",
 		"PriceValidation": "Prijsvalidatie",
 		"ProductDisplayBarcode": "Streepjescode weergeven",
 		"ProductDisplayCategoryTag": "Categorielabel weergeven",
