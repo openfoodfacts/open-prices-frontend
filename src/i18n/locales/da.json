@@ -533,7 +533,7 @@
 	},
 	"LocationSelector": {
 		"Clear": "Ryd",
-		"NoResult": "No results found",
+		"NoResult": "Intet resultat",
 		"PoweredBy": {
 			"text": "drevet af {url}"
 		},
