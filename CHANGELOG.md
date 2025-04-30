@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.132.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.132.0...v1.132.1) (2025-04-30)
+
+
+### Technical
+
+* **Challenge:** use new tags api param ([#1527](https://github.com/openfoodfacts/open-prices-frontend/issues/1527)) ([59a65cc](https://github.com/openfoodfacts/open-prices-frontend/commit/59a65ccfd44859e33ecc5d59e3efb0b871cf2b48))
+
 ## [1.132.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.131.2...v1.132.0) (2025-04-25)
 
 
