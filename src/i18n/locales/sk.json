@@ -79,7 +79,7 @@
 			"Label": "Cena",
 			"LabelDiscounted": "Zvýhodnená cena",
 			"LabelFull": "Plná cena",
-			"Proof": "Potvrdenka",
+			"Proof": "Potvrdenie",
 			"ProofDateChanged": "Dátum bol aktualizovaný!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -96,9 +96,9 @@
 			"CategoryLabel": "Kategória",
 			"OriginLabel": "Pôvod",
 			"ProductBarcode": "Čiarový kód produktu",
-			"Scan": "Sken",
+			"Scan": "Skenovať",
 			"ScanBarcode": "Naskenujte čiarový kód",
-			"ScanBarcodeShort": "Sken",
+			"ScanBarcodeShort": "Skenovať",
 			"Type": "Druhy",
 			"TypeBarcode": "Zadajte čiarový kód",
 			"TypeBarcodeShort": "Druhy",
@@ -183,7 +183,7 @@
 		"Barcode": "Čiarový kód",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Naskenujte čiarový kód",
-		"BarcodeScanShort": "Sken",
+		"BarcodeScanShort": "Skenovať",
 		"BarcodeType": "Zadajte čiarový kód",
 		"BarcodeTypeShort": "Druhy",
 		"BarcodeInvalid": "Neplatný čiarový kód",
@@ -196,7 +196,7 @@
 		"Product": "Produkt",
 		"ProductName": "Product name",
 		"Products": "Výrobky",
-		"Proof": "Potvrdenka",
+		"Proof": "Potvrdenie",
 		"Proofs": "Proofs",
 		"CATEGORY": "Kategória",
 		"Category": "Kategória",
@@ -291,7 +291,7 @@
 		"FrequentlyAskedQuestions": "Často kladené otázky",
 		"GDPR_REQUEST": "žiadosť GDPR",
 		"Group": "Group",
-		"Help": "Nápoveda",
+		"Help": "Pomoc",
 		"History": "História",
 		"Image": "Obrázok",
 		"ImageSelect": "Select an image",
@@ -310,7 +310,7 @@
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
-		"MyProofs": "Moje potvrdenky",
+		"MyProofs": "Moje potvrdenia",
 		"MyStats": "My stats",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
@@ -360,7 +360,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Vyberte potvrdenku",
+		"ProofSelect": "Vyberte potvrdenie",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -440,7 +440,7 @@
 		"Years": "Years",
 		"Yes": "Áno",
 		"No": "Nie",
-		"Food": "Jedlo",
+		"Food": "Potravina",
 		"PetFood": "Krmivo pre domáce zvieratá",
 		"Beauty": "Beauty"
 	},
@@ -553,7 +553,7 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Potvrdenka",
+		"Proof": "Potvrdenie",
 		"FullPrice": "Plná cena",
 		"UnknownProduct": "Neznámy produkt"
 	},
@@ -629,14 +629,14 @@
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
 	},
 	"ProofCard": {
-		"Proof": "Potvrdenka",
+		"Proof": "Potvrdenie",
 		"PRICE_TAG": "Cenovka",
 		"RECEIPT": "Účtenka",
 		"GDPR_REQUEST": "žiadosť GDPR",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Vyberte potvrdenku",
+		"SelectProof": "Vyberte potvrdenie",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -746,7 +746,7 @@
 			"Title": "Moje ceny"
 		},
 		"MyProofs": {
-			"Title": "Moje potvrdenky"
+			"Title": "Moje potvrdenia"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -846,7 +846,7 @@
 		"LoadMore": "Načítať ďalšie",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
-		"MyProofs": "Moje potvrdenky",
+		"MyProofs": "Moje potvrdenia",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Nastavenia",
 		"Title": "Hlavný panel",
