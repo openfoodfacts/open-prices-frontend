@@ -72,11 +72,12 @@ export default {
       return utils.dateEndOfDay(this.challenge.end_date)
     },
     defaultParams() {
-      return { created__gte: this.startDateMidnight, created__lte: this.endDateMidnight }
+      return { 
+        created__gte: this.startDateMidnight, 
+        created__lte: this.endDateMidnight, 
+        tags__contains: `challenge-${this.challenge.id}`
+      }
     },
-    challengeCategoriesParam() {
-      return this.challenge.categories.join(',')
-    }
   },
   mounted() {
     this.getChallenge()
@@ -103,7 +104,7 @@ export default {
     },
     getStats() {
       this.loading = true
-      api.getPriceStats({ ...this.defaultParams, product__categories_tags__overlap: this.challengeCategoriesParam })
+      api.getPriceStats(this.defaultParams)
       .then((data) => {
         this.challenge.numberOfContributions = data.price__count
         this.loading = false
@@ -115,7 +116,7 @@ export default {
       })
 
       if (this.username) {
-        api.getPriceStats({ ...this.defaultParams, product__categories_tags__overlap: this.challengeCategoriesParam, owner: this.username })
+        api.getPriceStats({ ...this.defaultParams, owner: this.username })
         .then((data) => {
           this.challenge.userContributions = data.price__count
         })
@@ -126,7 +127,7 @@ export default {
       }
     },
     getLatestPrices() {
-      api.getPrices({ ...this.defaultParams, product__categories_tags__overlap: this.challengeCategoriesParam, size: 10 })
+      api.getPrices({ ...this.defaultParams, size: 10 })
       .then((data) => {
         this.challenge.latestContributions = data.items
       })
