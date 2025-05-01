@@ -715,6 +715,9 @@
 		"PriceAddMultiple": {
 			"Title": "Tilføj flere priser"
 		},
+		"Prices": {
+			"Title": "Priser"
+		},
 		"Proofs": {
 			"Title": "Beviser"
 		},
