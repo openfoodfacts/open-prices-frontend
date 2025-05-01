@@ -715,6 +715,9 @@
 		"PriceAddMultiple": {
 			"Title": "複数の価格を追加する"
 		},
+		"Prices": {
+			"Title": "Prices"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
