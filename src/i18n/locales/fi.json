@@ -715,6 +715,9 @@
 		"PriceAddMultiple": {
 			"Title": "Lisää useita hintoja"
 		},
+		"Prices": {
+			"Title": "Hinnat"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},

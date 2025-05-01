@@ -50,7 +50,7 @@
 			"Title": "Enkelt produkt"
 		},
 		"Thanks": "Tak",
-		"Title": "Add a price",
+		"Title": "Tilføj en pris",
 		"TitleSingle": "Tilføj en enkelt pris",
 		"TitleMultiple": "Tilføj flere priser i løs vægt"
 	},
@@ -68,58 +68,58 @@
 		"ProofDetails": {
 			"ReceiptWarning": "Kvitteringer kan indeholde personlige oplysninger, vi anbefaler at skjule dem (redigere, folde...) før du tager billedet.",
 			"PrivateWarning": "Du kan også indstille kvitteringen til Privat. Private beviser vil kun være synlige for dig og for moderatorer.",
-			"Title": "Proof details"
+			"Title": "Bevis detaljer"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Tilføj flere priser"
 	},
 	"AddPriceSingle": {
 		"Create": "Opret",
 		"PriceDetails": {
-			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
+			"Discount": "Rabat?",
+			"Label": "Pris",
+			"LabelDiscounted": "Nedsat pris",
+			"LabelFull": "Fuld pris",
 			"Proof": "Bevis",
-			"ProofDateChanged": "Date updated!",
-			"ProofSelected": "Proof selected!",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"ProofDateChanged": "Dato opdateret!",
+			"ProofSelected": "Bevis valgt!",
+			"ProofUploaded": "Bevis uploadet!",
+			"Title": "Prisoplysninger",
+			"UploadProof": "Upload et bevis",
+			"Picture": "Billede",
 			"TakePicture": "Tag et billede",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"Gallery": "Enhedsgalleri",
+			"SelectFromGallery": "Vælg fra din enheds galleri",
+			"RecentProof": "Nyligt bevis",
+			"SelectRecentProof": "Vælg et nyligt bevis"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"OriginLabel": "Oprindelse",
+			"ProductBarcode": "Produkt stregkode",
 			"Scan": "Skan",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "Scan en stregkode",
 			"ScanBarcodeShort": "Skan",
 			"Type": "Type",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Skriv en stregkode",
 			"TypeBarcodeShort": "Type",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"SetProduct": "Indstil et produkt",
+			"Title": "Produkt info"
 		},
 		"ProductModeList": {
 			"Barcode": "Stregkode",
 			"Category": "Kategori"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Pris pr kg",
+			"PerUnit": "Pris pr. enhed"
 		},
 		"Title": "Tilføj en enkelt pris",
 		"WhereWhen": {
 			"Date": "Dato",
 			"DateLabel": "Dato",
 			"Find": "Find",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
+			"Location": "Butiks beliggenhed",
+			"SelectLocation": "Vælg din placering",
 			"Title": "Hvor & hvornår?"
 		}
 	},
@@ -127,50 +127,50 @@
 		"Htlm5-qrcode": {
 			"Text": "drevet af {url}"
 		},
-		"Scan": "Scan a barcode"
+		"Scan": "Scan en stregkode"
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Stregkode",
 		"Submit": "Indsend",
-		"Title": "Type a barcode"
+		"Title": "Skriv en stregkode"
 	},
 	"Challenge": {
 		"Title": "Fællesskabsudfordring",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Slut dig til andre madprisentusiaster for at samle information om {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "Tag billeder af prisskilte i butikkerne",
+			"line1": "Billeder kan indeholde et eller flere prisskilte. Stregkoder skal kunne læses. For eksempel:",
+			"line2": "Når du er klar, skal du finde din butik og uploade dine billeder ved at bruge knappen nedenfor.",
+			"AddPictures": "Tilføj billeder"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"Title": "Valider de fundne priser med AI",
+			"line1": "Prismærker opdages automatisk, men robotterne har stadig brug for din hjælp til at validere dem.",
+			"line2": "Besøg prisvalideringssiden ved at bruge knappen nedenfor, rediger stregkoden og prisen, hvis det er nødvendigt, og bekræft !",
+			"line3": "Hvis du har problemer med at læse etiketten, skal du markere den som ulæselig.",
+			"line4": "Dette er et samarbejde, selvom du ikke har sendt billeder, kan du stadig hjælpe andre ved at validere."
 		},
-		"PicturesAddedByYou": "Pictures added by you",
-		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
-		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
-		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"PicturesAddedByYou": "Billeder tilføjet af dig",
+		"Prices": "{challenge_title} priser",
+		"PricesAdded": "{challenge_title} priser tilføjet",
+		"PricesByYou": "{challenge_title} priser fra dig",
+		"PricesAddedByYou": "{challenge_title} priser tilføjet af dig",
+		"MostRecentContributions": "Seneste bidrag",
+		"ChallengeCount": "{count} udfordringer | {count} udfordring | {count} udfordringer",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
-			"UPCOMING": "Upcoming",
-			"ONGOING": "Ongoing",
-			"COMPLETED": "Completed"
+			"DRAFT": "Udkast",
+			"UPCOMING": "Kommende",
+			"ONGOING": "Løbende",
+			"COMPLETED": "Færdiggjort"
 		},
-		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
-		"PastOrFutureChallenges": "Past or future challenges",
+		"NoChallengeCurrentlyOngoing": "Ingen udfordring igangværende i øjeblikket, vend venligst tilbage senere!",
+		"PastOrFutureChallenges": "Tidligere eller fremtidige udfordringer",
 		"OngoingChallenges": "Igangværende udfordringer"
 	},
 	"Common": {
 		"About": "Om",
 		"AddComment": "Tilføj en kommentar",
-		"AddPrice": "Add a price",
+		"AddPrice": "Tilføj en pris",
 		"AddPrices": "Tilføj priser",
 		"AddNewPrice": "Tilføj en ny pris",
 		"AddNewPrices": "Tilføj nye priser",
@@ -182,16 +182,16 @@
 		"AdditionalInfo": "Yderligere information",
 		"Barcode": "Stregkode",
 		"Barcodes": "Stregkoder",
-		"BarcodeScan": "Scan a barcode",
+		"BarcodeScan": "Scan en stregkode",
 		"BarcodeScanShort": "Skan",
-		"BarcodeType": "Type a barcode",
+		"BarcodeType": "Skriv en stregkode",
 		"BarcodeTypeShort": "Type",
 		"BarcodeInvalid": "Ugyldig stregkode",
 		"Brand": "Mærke",
 		"Brands": "Mærker",
 		"BrandTotal": "{count} mærker | {count} mærke | {count} mærker",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Pris",
+		"Prices": "Priser",
 		"PRODUCT": "Produkt",
 		"Product": "Produkt",
 		"ProductName": "Produktnavn",
@@ -223,7 +223,7 @@
 		"CountryCount": "{count} lande | {count} land | {count} lande",
 		"Crop": "Beskær",
 		"Cropped": "Beskåret",
-		"Currency": "Currency",
+		"Currency": "Valuta",
 		"Currencies": "Valutaer",
 		"CurrencyMissing": "Valuta mangler",
 		"CurrencyCount": "{count} valutaer | {count} valuta | {count} valutaer",
@@ -231,277 +231,277 @@
 		"Display": "Vis",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
-		"DisplayTable": "Table",
+		"DisplayTable": "Tabel",
 		"DisplayMap": "Kort",
 		"DisplayPriceMap": "Kort",
 		"DisplayPriceChart": "Diagram",
 		"Done": "Færdiggjort",
 		"Error": "Fejlmelding",
-		"Experiments": "Experiments",
-		"Join": "Join",
+		"Experiments": "Eksperimenter",
+		"Join": "Deltag",
 		"Label": "Etiket",
 		"Labels": "Etiketter",
-		"LabelTotal": "{count} labels | {count} label | {count} labels",
+		"LabelTotal": "{count} etiketter | {count} etiket | {count} etiketter",
 		"Language": "Sprog",
 		"Languages": "Sprog",
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "Seneste priser",
+		"LatestProofs": "Seneste beviser",
 		"LoadMore": "Indlæs mere",
-		"Location": "Location",
-		"Locations": "Locations",
-		"LocationSelected": "Location selected",
-		"LocationFindShop": "Find the shop location",
-		"LocationMissing": "Location missing",
-		"LocationSearchByName": "Search by name and city",
+		"Location": "Placering",
+		"Locations": "Placeringer",
+		"LocationSelected": "Placering valgt",
+		"LocationFindShop": "Find butikkens placering",
+		"LocationMissing": "Placering mangler",
+		"LocationSearchByName": "Søg efter navn og by",
 		"Date": "Dato",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateMissing": "Dato mangler",
+		"Details": "Detaljer",
 		"Delete": "Slet",
-		"DeveloperMode": "Developer mode",
-		"Discount": "Discount",
-		"DiscountType": "Discount type",
+		"DeveloperMode": "Udviklertilstand",
+		"Discount": "Rabat",
+		"DiscountType": "Rabattype",
 		"DiscountTypeQuantity": "Kvantitet",
-		"DiscountTypeSale": "Sale",
-		"DiscountTypeSeasonal": "Seasonal",
-		"DiscountTypeLoyaltyProgram": "Loyalty program",
-		"DiscountTypeExpiresSoon": "Expires soon",
-		"DiscountTypePickItYourself": "Pick it yourself",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSale": "Udsalg",
+		"DiscountTypeSeasonal": "Sæson",
+		"DiscountTypeLoyaltyProgram": "Loyalitetsprogram",
+		"DiscountTypeExpiresSoon": "Udløber snart",
+		"DiscountTypePickItYourself": "Vælg det selv",
+		"DiscountTypeSecondHand": "Brugt",
 		"DiscountTypeOther": "Andet",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Eksempel",
+		"Examples": "Eksempler",
 		"ExampleWithColon": "Eksempel:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "Eksempel: {value}",
 		"ExamplesWithColon": "Eksempler:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "Eksempler: {value}",
 		"Edit": "Redigér",
-		"End": "End",
+		"End": "Slut",
 		"Filter": "Filtrere",
-		"FilterChallengesShowAllStatus": "Show all challenges",
-		"FilterProductWithPriceCount": "With a price",
-		"FilterProductWithPriceCountHide": "Hide products with prices",
-		"FilterProductWithoutPriceCount": "Without prices",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
-		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterLocationWithPriceCountHide": "Hide locations with prices",
-		"FilterUserWithPriceCountHide": "Hide contributors with prices",
-		"Fix": "Fix",
+		"FilterChallengesShowAllStatus": "Vis alle udfordringer",
+		"FilterProductWithPriceCount": "Med en pris",
+		"FilterProductWithPriceCountHide": "Skjul produkter med priser",
+		"FilterProductWithoutPriceCount": "Uden priser",
+		"FilterPriceMoreThan30DaysHide": "Skjul priser, der er ældre end 30 dage",
+		"FilterProofWithPriceCountHide": "Skjul beviser med priser",
+		"FilterPriceTagWithProofOwner": "Vis kun mine beviser",
+		"FilterLocationWithPriceCountHide": "Skjul lokationer med priser",
+		"FilterUserWithPriceCountHide": "Skjul bidragydere med priser",
+		"Fix": "Ret",
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "Ofte Stillede Spørgsmål",
-		"GDPR_REQUEST": "GDPR request",
-		"Group": "Group",
+		"GDPR_REQUEST": "GDPR anmodning",
+		"Group": "Gruppe",
 		"Help": "Hjælp",
 		"History": "Historik",
 		"Image": "Billed",
-		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
-		"ImageSelected": "Image selected!",
-		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
-		"Images": "Images",
-		"ImageFull": "Full-size image",
-		"Latest": "Latest",
-		"LinkCopySuccess": "Link copied",
-		"LocationCount": "{count} locations | {count} location | {count} locations",
-		"LocationNotFound": "Location not found",
+		"ImageSelect": "Vælg et billede",
+		"ImageSelectMultiple": "Vælg billeder",
+		"ImageSelected": "Billede valgt!",
+		"ImageSelectedCount": "{count} billeder valgt | {count} billede valgt | {count} billeder er valgt",
+		"Images": "Billeder",
+		"ImageFull": "Billede i fuld størrelse",
+		"Latest": "Seneste",
+		"LinkCopySuccess": "Link kopieret",
+		"LocationCount": "{count} lokationer | {count} placering | {count} placeringer",
+		"LocationNotFound": "Placering ikke fundet",
 		"Map": "Kort",
 		"Miscellaneous": "Diverse",
-		"MobileApp": "Mobile app",
-		"MyConsumption": "My consumption",
-		"MyDashboard": "My dashboard",
+		"MobileApp": "Mobil app",
+		"MyConsumption": "Mit forbrug",
+		"MyDashboard": "Mit dashboard",
 		"MyPrices": "Mine priser",
 		"MyProofs": "Mine beviser",
-		"MyStats": "My stats",
-		"NotAnError": "Not an error",
-		"NotAPrice": "Not a price",
+		"MyStats": "Min statistik",
+		"NotAnError": "Ikke en fejl",
+		"NotAPrice": "Ikke en pris",
 		"Offline": "Offline",
 		"Online": "Online",
-		"Order": "Order",
-		"OrderLocationCountDESC": "Location count",
-		"OrderProductUniqueScansDESC": "Number of scans",
-		"OrderProductPriceCountDESC": "Number of prices",
-		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
-		"OrderPriceCreatedDESC": "Addition date",
-		"OrderPriceDateDESC": "Price date",
-		"OrderProductCountDESC": "Product count",
-		"OrderProofCountDESC": "Proof count",
-		"OrderProofCreatedDESC": "Addition date",
-		"OrderProofDateDESC": "Proof date",
-		"OrderUserCountDESC": "User count",
+		"Order": "Sorter",
+		"OrderLocationCountDESC": "Placeringsantal",
+		"OrderProductUniqueScansDESC": "Antal scanninger",
+		"OrderProductPriceCountDESC": "Antal priser",
+		"OrderPriceCountDESC": "Prisoptælling",
+		"OrderPriceASC": "Pris",
+		"OrderPriceCreatedDESC": "Tilføjelsesdato",
+		"OrderPriceDateDESC": "Pris dato",
+		"OrderProductCountDESC": "Produktantal",
+		"OrderProofCountDESC": "Bevis tæller",
+		"OrderProofCreatedDESC": "Tilføjelsesdato",
+		"OrderProofDateDESC": "Bevis dato",
+		"OrderUserCountDESC": "Brugerantal",
 		"Other": "Andet",
-		"OtherContributions": "Other contributions",
-		"PersonalInfo": "Personal information",
-		"Physical": "Physical",
-		"Picture": "Picture",
-		"Pictures": "Pictures",
-		"PictureSelect": "Select a picture",
-		"PictureSelectMultiple": "Select pictures",
-		"PictureSelected": "Picture selected!",
-		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
-		"PictureFull": "Full-size picture",
-		"PicturesByYou": "Pictures by you",
-		"PicturesAdded": "Pictures added",
-		"PicturesAddedByYou": "Pictures added by you",
+		"OtherContributions": "Andre bidrag",
+		"PersonalInfo": "Personlige oplysninger",
+		"Physical": "Fysisk",
+		"Picture": "Billede",
+		"Pictures": "Billeder",
+		"PictureSelect": "Vælg et billede",
+		"PictureSelectMultiple": "Vælg billeder",
+		"PictureSelected": "Billede valgt!",
+		"PictureSelectedCount": "{count} billeder valgt | {count} billede valgt | {count} billeder er valgt",
+		"PictureFull": "Billede i fuld størrelse",
+		"PicturesByYou": "Billeder tilføjet af dig",
+		"PicturesAdded": "Billeder tilføjet",
+		"PicturesAddedByYou": "Billeder tilføjet af dig",
 		"PRICE_TAG": "Prisskilt",
-		"PriceCount": "{count} prices | {count} price | {count} prices",
-		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
+		"PriceCount": "{count} priser | {count} pris | {count} priser",
+		"PriceAddedCount": "{count} tilføjede priser | {count} pris tilføjet | {count} priser tilføjet",
+		"PriceToValidateCount": "{count} priser at validere | {count} pris at validere | {count} priser skal valideres",
 		"PriceCreated": "Pris oprettet!",
-		"PricesMore": "More prices",
-		"PricesAdded": "Prices added",
-		"PricesAddedToday": "Prices added today",
-		"PricesToday": "Prices today",
-		"PriceNotFound": "Price not found",
-		"Private": "Private",
+		"PricesMore": "Flere priser",
+		"PricesAdded": "Priser tilføjet",
+		"PricesAddedToday": "Priser tilføjet i dag",
+		"PricesToday": "Priser i dag",
+		"PriceNotFound": "Pris ikke fundet",
+		"Private": "Privat",
 		"Privacy": "Privatliv",
-		"ProductCount": "{count} products | {count} product | {count} products",
-		"ProductFind": "Find the product",
-		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
-		"ProofDetails": "Proof details",
-		"ProofMissing": "Proof missing",
+		"ProductCount": "{count} produkter | {count} produkt | {count} produkter",
+		"ProductFind": "Find produktet",
+		"ProofCount": "{count} beviser | {count} bevis | {count} beviser",
+		"ProofDetails": "Bevis detaljer",
+		"ProofMissing": "Bevis mangler",
 		"ProofSelect": "Vælg et bevis",
-		"ProofSelectMultiple": "Select proofs",
-		"ProofSelected": "Proof selected!",
-		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
-		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
-		"ProofsAddedToday": "Proofs added today",
-		"ProofsToday": "Proofs today",
-		"ProofNotFound": "Proof not found",
-		"Public": "Public",
+		"ProofSelectMultiple": "Vælg beviser",
+		"ProofSelected": "Bevis valgt!",
+		"ProofSelectedCount": "{count} beviser valgt | {count} bevis valgt | {count} beviser valgt",
+		"ProofUploadedCount": "{count} beviser uploadet | {count} bevis uploadet | {count} beviser uploadet",
+		"ProofsAddedToday": "Beviser tilføjet i dag",
+		"ProofsToday": "Beviser i dag",
+		"ProofNotFound": "Bevis ikke fundet",
+		"Public": "Offentlig",
 		"Quantity": "Kvantitet",
-		"QuantityBought": "Quantity bought",
-		"QuantityMissing": "Quantity missing",
+		"QuantityBought": "Købt mængde",
+		"QuantityMissing": "Mængde mangler",
 		"RECEIPT": "Kvittering",
 		"Receipt": "Kvittering",
-		"Receipts": "Receipts",
-		"ReceiptPriceCount": "Number of prices",
-		"ReceiptPriceTotal": "Total amount",
-		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
-		"ReceiptOnlineDeliveryCosts": "Delivery costs",
-		"Recent": "Recent",
-		"Reuses": "Reuses",
-		"ReusesKnown": "Known reuses",
+		"Receipts": "Kvitteringer",
+		"ReceiptPriceCount": "Antal priser",
+		"ReceiptPriceTotal": "Samlet beløb",
+		"ReceiptOwnerConsumption": "Spor i mit forbrugsdashboard",
+		"ReceiptOnlineDeliveryCosts": "Leveringsomkostninger",
+		"Recent": "Seneste",
+		"Reuses": "Genbrug",
+		"ReusesKnown": "Kendt genbrug",
 		"Search": "Søg",
-		"Select": "Select",
+		"Select": "Vælg",
 		"Settings": "Indstillinger",
 		"SignInOFFAccount": "Log på med din {url} konto",
 		"SignedIn": "Logget ind!",
 		"SignIn": "Log ind",
 		"SignOut": "Log ud",
-		"SideMenu": "Side menu",
+		"SideMenu": "Sidemenu",
 		"Share": "Del",
 		"Source": "Kilde",
-		"SourceCode": "Source code",
+		"SourceCode": "Kildekode",
 		"Start": "Start",
-		"Stats": "Stats",
-		"TaglineOriginal": "An open crowdsourced database of food prices",
-		"TaglineAlt1": "The open crowdsourced database of prices",
-		"TaglineAlt2": "The open crowdsourced database of food and product prices",
-		"TaglineAlt3": "Prices should be free",
+		"Stats": "Statistik",
+		"TaglineOriginal": "En åben crowdsourced database over fødevarepriser",
+		"TaglineAlt1": "Den åbne crowdsourcede database over priser",
+		"TaglineAlt2": "Den åbne crowdsourcing-database over fødevare- og produktpriser",
+		"TaglineAlt3": "Priser bør være frie",
 		"Thanks": "Tak",
 		"Theme": "Tema",
 		"ThemeLight": "Lyst",
 		"ThemeDark": "Mørkt",
-		"TopContributors": "Top contributors",
-		"TopLocations": "Top locations",
-		"TopProducts": "Top products",
-		"Today": "Today",
+		"TopContributors": "Top bidragydere",
+		"TopLocations": "Topplaceringer",
+		"TopProducts": "Top produkter",
+		"Today": "I dag",
 		"Top": "Top",
 		"Total": "I alt",
-		"Truncate": "Truncate",
-		"Truncated": "Truncated",
+		"Truncate": "Afkort",
+		"Truncated": "Afkortet",
 		"Type": "Type",
 		"UnknownProduct": "Ukendt produkt",
-		"UnknownProductSource": "Unknown product source",
-		"UnknownSource": "Unknown source",
+		"UnknownProductSource": "Ukendt produktkilde",
+		"UnknownSource": "Ukendt kilde",
 		"UnitGram": "g",
 		"UnitKilogram": "kg",
-		"UnitMililitre": "mL",
+		"UnitMililitre": "ml",
 		"UnitLitre": "L",
-		"Unreadable": "Unreadable",
+		"Unreadable": "Ulæselig",
 		"Upload": "Upload",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
-		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
-		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UploadMultipleImages": "Upload {count} billede | Upload {count} billeder",
+		"UploadMultiplePictures": "Upload {count} billede | Upload {count} billeder",
+		"UploadMultipleProofs": "Upload {count} bevis | Upload {count} beviser",
+		"UploadMultiplePrices": "Upload {count} pris | Upload {count} priser",
 		"URL": "URL",
-		"URLInvalid": "Invalid URL",
+		"URLInvalid": "Ugyldig URL",
 		"User": "Bruger",
-		"Users": "Users",
-		"UserCount": "{count} users | {count} user | {count} users",
-		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"Users": "Brugere",
+		"UserCount": "{count} brugere | {count} bruger | {count} brugere",
+		"UserContributorCount": "{count} bidragydere | {count} bidragyder | {count} bidragydere",
 		"Validate": "Bekræftelse",
-		"ValidatePrices": "Validate prices",
-		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePrices": "Validér priser",
+		"ValidatePricesWithAI": "Validér priser med AI",
 		"View": "Vis",
 		"Website": "Websted",
-		"Year": "Year",
-		"Years": "Years",
+		"Year": "År",
+		"Years": "År",
 		"Yes": "Ja",
 		"No": "Nej",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Food": "Fødevare",
+		"PetFood": "Foder til kæledyr",
+		"Beauty": "Skønhed"
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. Bevisvalg",
+			"LabelsExtraction": "2. Kvitteringsudtrækning",
+			"Cleanup": "3. Oprydning",
+			"Summary": "4. Sammenfatning"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"BoundingBoxesFromServerWarning": "Ingen etiketter kunne registreres automatisk. Tegn venligst firkanter rundt om etiketterne manuelt.",
+		"FindBoundingBoxes": "Find etiketter automatisk",
+		"FindBoundingBoxesRunning": "Automatisk etiketdetektering kører. Vent venligst...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. Tegn firkanter rundt om etiketterne",
+			"CheckLabels": "2. Tjek læsbarheden af etiketter",
+			"SendLabels": "3. Send etiketterne til automatisk behandling",
+			"SendLabelsButton": "Send etiketter"
 		},
-		"PricesAlreadyAdded": "Prices already added",
-		"PricesMarkedAsError": "Prices marked as error",
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
-		"GoToProof": "Go to proof",
+		"PricesAlreadyAdded": "Priser allerede tilføjet",
+		"PricesMarkedAsError": "Priser markeret som fejl",
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} pris(er) vil blive tilføjet til et eksisterende bevis på {date} ved {locationName}",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} priser tilføjet",
+		"WaitForUpload": "Vent venligst på upload",
+		"GoToDashboard": "Gå til dit dashboard",
+		"GoToProof": "Gå til bevis",
 		"AddNewProof": "Tilføj et nyt bevis",
-		"NextProof": "Next proof",
-		"ChooseNextProof": "Choose another proof to handle",
-		"AutomaticBoundingBoxSource": "automatic",
-		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
+		"NextProof": "Næste bevis",
+		"ChooseNextProof": "Vælg at håndtere et andet bevis",
+		"AutomaticBoundingBoxSource": "automatisk",
+		"ManualBoundingBoxSource": "manuel",
+		"DetectedBarcode": "Registreret stregkode: {barcode}",
+		"LabelProcessingErrorMessage": "Fejl: Automatisk etiketbehandling mislykkedes",
 		"PriceTagLabels": {
-			"PriceTagWithoutPrice": "Price tag without a price",
-			"PriceTagWithPrice": "Price tag with a price",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
-			"NewPriceTag": "New price tag"
+			"PriceTagWithoutPrice": "Prisskilt uden en pris",
+			"PriceTagWithPrice": "Prisskilt med en pris",
+			"PriceTagTruncated": "Prisskilt markeret som afkortet",
+			"PriceTagUnreadable": "Prismærke markeret som ulæselig",
+			"PriceTagNotAPrice": "Prisskilt markeret som ikke en pris",
+			"NewPriceTag": "Nyt prisskilt"
 		},
-		"OpenWithTheAssistant": "Open with the assistant"
+		"OpenWithTheAssistant": "Åbn med assistenten"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Vær med!",
+		"HowToUseTheData": "Brug dataene"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"Title": "Vælg en af dine foretrukne valutaer",
+		"Currency": "Valuta",
+		"AddCurrencies": "Tilføj valutaer i Indstillinger",
+		"AddCurrenciesWarning": "Du vil blive omdirigeret til siden Indstillinger, men vil miste alle oplysninger, du har indtastet på denne side.",
+		"Select": "Vælg {currency_code}"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Vælg et af dine seneste beviser"
 	},
 	"Footer": {
 		"About": "Om",
-		"Stats": "Stats",
-		"TagLine": "{name} is an {url} project."
+		"Stats": "Statistik",
+		"TagLine": "{name} er et {url} projekt."
 	},
 	"Header": {
 		"Dashboard": "Oversigt",
@@ -510,96 +510,96 @@
 		"SignOut": "Log ud"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "Lys tilstand",
+		"DarkMode": "Mørk tilstand"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
-		"LatestPrices": "Latest prices",
+		"AddPrice": "Tilføj en pris",
+		"LatestPrices": "Seneste priser",
 		"ProofAdd": "Tilføj et bevis",
 		"SearchProduct": "Søg efter et produkt",
-		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"SettingsUpdated": "Indstillinger opdateret!",
+		"TodayPriceStat": "Ingen priser tilføjet i dag | {todayPriceNumber} nye priser tilføjet i dag | {todayPriceNumber} nye priser tilføjet i dag!",
 		"Welcome": {
-			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Generic": "",
+			"Subtitle": "En åben crowdsourced database over fødevarepriser 🏷🍊💲",
+			"Title": "Velkommen til {name}!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Seneste priser",
 		"LoadMore": "Indlæs mere",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "Placering ikke fundet i OpenStreetMap... Tøv ikke med at tilføje den :)"
 	},
 	"LocationSelector": {
 		"Clear": "Ryd",
-		"NoResult": "No results found",
+		"NoResult": "Intet resultat",
 		"PoweredBy": {
 			"text": "drevet af {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
+		"RecentLocations": "Ingen nylige placeringer | Seneste placering {recentLocationNumber}| Seneste placeringer {recentLocationNumber}",
+		"Result": "Resultat {resultNumber} | Resultater {resultNumber}",
 		"SearchByName": "Søg efter butik med navn og by",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"Title": "Find din butiks placering",
+		"Warning": "Søgemaskinen til at finde en butik er i øjeblikket ikke særlig præcis.{newline}Tøv ikke med at tilføje gadenavnet for at indsnævre resultaterne.{newline}Eksempler: Carrefour City 15e Paris ; Sainsbury's camden London"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "Den side, du anmodede om, ser ikke ud til at eksistere...",
+		"Title": "Ikke fundet"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
+		"Discount": "Rabat",
+		"PriceDate": "d. {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / enhed",
 		"Proof": "Bevis",
-		"FullPrice": "Full price",
+		"FullPrice": "Fuld pris",
 		"UnknownProduct": "Ukendt produkt"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Er du sikker på, at du vil slette denne pris?",
 		"Delete": "Slet",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Pris slettet!",
+		"Title": "Slet en pris"
 	},
 	"PriceEdit": {
 		"Save": "Gem",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Pris redigeret!",
+		"Title": "Rediger en pris"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
-		"LabelFull": "Full price"
+		"Discount": "Rabat?",
+		"Label": "Pris",
+		"LabelDiscounted": "Nedsat pris",
+		"LabelFull": "Fuld pris"
 	},
 	"PriceList": {
 		"LoadMore": "Indlæs mere",
-		"Title": "Latest prices"
+		"Title": "Seneste priser"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed",
-		"ThreeDecimals": "Only three decimals allowed"
+		"AmountRequired": "Pris er påkrævet",
+		"NoSpaces": "Brug venligst ikke mellemrum",
+		"Number": "Indtast et tal",
+		"Positive": "Pris kan ikke være negativ",
+		"TwoDecimals": "Kun to decimaler tilladt",
+		"ThreeDecimals": "Kun tre decimaler tilladt"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "Stregkodelængde: {length}",
 		"Brands": "Mærker",
 		"BrandLower": "varemærke",
-		"BrandMissing": "Brand missing",
-		"BrandTotal": "{count} brands",
+		"BrandMissing": "Mærke mangler",
+		"BrandTotal": "{count} mærker",
 		"Categories": "Kategorier",
 		"CategoriesLower": "kategorier",
-		"CategoriesMissing": "Category missing",
-		"CategoryTotal": "{count} categories",
+		"CategoriesMissing": "Kategori mangler",
+		"CategoryTotal": "{count} kategorier",
 		"Labels": "Etiketter",
 		"LabelsLower": "etiketter",
-		"LabelTotal": "{count} labels",
-		"LatestPrice": "Latest price",
+		"LabelTotal": "{count} etiketter",
+		"LatestPrice": "Seneste pris",
 		"InvalidBarcode": "Ugyldig stregkode",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
@@ -607,68 +607,68 @@
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
-		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
-		"QuantityMissing": "Quantity missing",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityMissing": "Produktmængde mangler",
+		"QuantityMissing": "Mængde mangler",
 		"UnknownProduct": "Ukendt produktnavn"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"AddPrice": "Tilføj en pris",
+		"CategoryNotFound": "Kategori ikke fundet...",
+		"LatestPrices": "Seneste priser",
 		"LoadMore": "Indlæs mere",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "Produkt ikke fundet i Open Food Facts... Men du tilføje det :)"
 	},
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
 		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
-		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"PriceTagAIWarning": "AI vil undersøge dine beviser for at udtrække priser.",
+		"ReceiptAllowAI": "Tillad at AI unders\nger din kvittering for at udtrække priser",
+		"ReceiptAIWarning": "AI vil undersøge din kvittering for at udtrække priser."
 	},
 	"ProofCard": {
 		"Proof": "Bevis",
 		"PRICE_TAG": "Prisskilt",
 		"RECEIPT": "Kvittering",
-		"GDPR_REQUEST": "GDPR request",
-		"SHOP_IMPORT": "Shop import"
+		"GDPR_REQUEST": "GDPR anmodning",
+		"SHOP_IMPORT": "Butik import"
 	},
 	"ProofCreate": {
 		"SelectProof": "Vælg et bevis",
-		"ProofSelected": "Proof selected!",
-		"Success": "Proof created!"
+		"ProofSelected": "Bevis valgt!",
+		"Success": "Bevis oprettet!"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Er du sikker på, at du vil slette dette bevis?",
 		"Delete": "Slet",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "Slet et bevis",
+		"Success": "Bevis slettet!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Indlæs mere",
-		"Prices": "Prices",
-		"ProofNotFound": "Proof not found",
-		"Public": "Public",
-		"Private": "Private",
+		"Prices": "Priser",
+		"ProofNotFound": "Bevis ikke fundet",
+		"Public": "Offentlig",
+		"Private": "Privat",
 		"Privacy": "Privatliv"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
+		"Title": "Rediger et bevis",
 		"Save": "Gem",
-		"Success": "Proof edited!"
+		"Success": "Bevis redigeret!"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
-		"PriceReadyToBeAdded": "Price ready to be added",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
+		"AddNewItem": "Tilføj nyt element",
+		"MissingPrice": "Manglende pris",
+		"MissingProduct": "Manglende produkt",
+		"NoItemsFound": "Ingen varer kunne udtrækkes fra kvitteringen, prøv venligst igen.",
+		"PriceAlreadyCreatedForItem": "Prisen er allerede oprettet for varen",
+		"PriceReadyToBeAdded": "Pris klar til at blive tilføjet",
+		"ReceiptItemsCheck": "Kvittering for varer, tjek og reparer",
+		"UploadOnlyNewPrices": "Upload kun nye priser ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Upload eller opdater alle gyldige priser ({nbPrices})",
 		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
 	},
 	"Reuses": {
@@ -680,7 +680,7 @@
 			"Title": "Om"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Tilføj en pris"
 		},
 		"AddPrices": {
 			"Title": "Tilføj priser"
@@ -689,7 +689,7 @@
 			"Title": "Tilføj en enkelt pris"
 		},
 		"AddPriceMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Tilføj flere priser"
 		},
 		"AddProof": {
 			"Title": "Tilføj et bevis"
@@ -704,16 +704,19 @@
 			"Title": "Add multiple proofs"
 		},
 		"Locations": {
-			"Title": "Locations"
+			"Title": "Placeringer"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Tilføj en pris"
 		},
 		"PriceAddSingle": {
 			"Title": "Tilføj en enkelt pris"
 		},
 		"PriceAddMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Tilføj flere priser"
+		},
+		"Prices": {
+			"Title": "Priser"
 		},
 		"Proofs": {
 			"Title": "Beviser"
@@ -728,7 +731,7 @@
 			"Title": "Fællesskab"
 		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "Eksperimenter"
 		},
 		"Home": {
 			"Title": "Hjem"
@@ -737,10 +740,10 @@
 			"Title": "Oversigt"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Seneste priser"
 		},
 		"LatestProofs": {
-			"Title": "Latest proofs"
+			"Title": "Seneste beviser"
 		},
 		"MyPrices": {
 			"Title": "Mine priser"
@@ -749,10 +752,10 @@
 			"Title": "Mine beviser"
 		},
 		"MyDashboard": {
-			"Title": "My dashboard"
+			"Title": "Mit dashboard"
 		},
 		"Reuses": {
-			"Title": "Reuses"
+			"Title": "Genbrug"
 		},
 		"Search": {
 			"Title": "Søg"
@@ -764,19 +767,19 @@
 			"Title": "Log ind"
 		},
 		"Stats": {
-			"Title": "Stats"
+			"Title": "Statistik"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Top bidragydere"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Topplaceringer"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Top produkter"
 		},
 		"Users": {
-			"Title": "Users"
+			"Title": "Brugere"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
@@ -797,15 +800,15 @@
 			"Title": "Fællesskabsudfordring"
 		},
 		"ValidatePrices": {
-			"Title": "Validate prices"
+			"Title": "Validér priser"
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Produkt stregkode",
 		"Title": "Søg"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "Link kopieret",
 		"Title": "Del"
 	},
 	"SignIn": {
@@ -819,17 +822,17 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
-		"PricesToday": "Prices added today",
+		"Prices": "Priser",
+		"PricesToday": "Priser tilføjet i dag",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"Title": "Statistik",
 		"Products": "Produkter",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Placeringer",
+		"Users": "Brugere",
 		"Total": "I alt",
-		"WithPrice": "With a price",
+		"WithPrice": "Med en pris",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
@@ -841,10 +844,10 @@
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "Seneste priser",
+		"LatestProofs": "Seneste beviser",
 		"LoadMore": "Indlæs mere",
-		"MyDashboard": "My dashboard",
+		"MyDashboard": "Mit dashboard",
 		"MyPrices": "Mine priser",
 		"MyProofs": "Mine beviser",
 		"ProofUpdated": "Proof updated!",
@@ -854,19 +857,19 @@
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Seneste priser",
 		"LoadMore": "Indlæs mere"
 	},
 	"UserList": {
 		"LoadMore": "Indlæs mere",
-		"Title": "Top contributors",
+		"Title": "Top bidragydere",
 		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Skift sprog",
 		"CountryLabel": "Land",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Vis",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",

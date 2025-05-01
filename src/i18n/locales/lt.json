@@ -715,6 +715,9 @@
 		"PriceAddMultiple": {
 			"Title": "Pridėti kelia skainas"
 		},
+		"Prices": {
+			"Title": "Kainos"
+		},
 		"Proofs": {
 			"Title": "Įrodymai"
 		},

@@ -715,6 +715,9 @@
 		"PriceAddMultiple": {
 			"Title": "新增多個價格"
 		},
+		"Prices": {
+			"Title": "價格"
+		},
 		"Proofs": {
 			"Title": "證明"
 		},

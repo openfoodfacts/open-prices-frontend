@@ -158,7 +158,7 @@
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
+			"DRAFT": "草稿",
 			"UPCOMING": "Upcoming",
 			"ONGOING": "Ongoing",
 			"COMPLETED": "Completed"
@@ -442,7 +442,7 @@
 		"No": "否",
 		"Food": "Food",
 		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Beauty": "美丽"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -714,6 +714,9 @@
 		},
 		"PriceAddMultiple": {
 			"Title": "添加多个价格"
+		},
+		"Prices": {
+			"Title": "价格"
 		},
 		"Proofs": {
 			"Title": "Proofs"

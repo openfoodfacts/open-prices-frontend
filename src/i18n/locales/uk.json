@@ -231,7 +231,7 @@
 		"Display": "Показати",
 		"DisplayList": "Список",
 		"DisplayPriceList": "Список",
-		"DisplayTable": "Table",
+		"DisplayTable": "Таблиця",
 		"DisplayMap": "Мапа",
 		"DisplayPriceMap": "Мапа",
 		"DisplayPriceChart": "Графік",
@@ -715,6 +715,9 @@
 		"PriceAddMultiple": {
 			"Title": "Додати кілька цін"
 		},
+		"Prices": {
+			"Title": "Ціни"
+		},
 		"Proofs": {
 			"Title": "Докази"
 		},
@@ -875,7 +878,7 @@
 		"LanguageLabel": "Мови",
 		"LocationFinder": "Пошук місцезнаходження",
 		"LocationDisplayOSMID": "Показати OSM ID",
-		"PriceListDisplay": "Price list diplay",
+		"PriceListDisplay": "Показати прайс-лист",
 		"PriceValidation": "Перевірка ціни",
 		"ProductDisplayBarcode": "Показати штрих-код",
 		"ProductDisplayCategoryTag": "Показати тег категорії",
