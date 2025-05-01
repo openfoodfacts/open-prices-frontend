@@ -715,6 +715,9 @@
 		"PriceAddMultiple": {
 			"Title": "הוספת מגוון מחירים"
 		},
+		"Prices": {
+			"Title": "מחירים"
+		},
 		"Proofs": {
 			"Title": "הוכחות"
 		},
