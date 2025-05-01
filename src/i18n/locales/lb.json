@@ -715,6 +715,9 @@
 		"PriceAddMultiple": {
 			"Title": "Add multiple prices"
 		},
+		"Prices": {
+			"Title": "Prices"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
