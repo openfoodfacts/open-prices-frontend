@@ -715,6 +715,9 @@
 		"PriceAddMultiple": {
 			"Title": "Birden fazla fiyat ekle"
 		},
+		"Prices": {
+			"Title": "Fiyatlar"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
