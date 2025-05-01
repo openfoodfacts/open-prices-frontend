@@ -715,6 +715,9 @@
 		"PriceAddMultiple": {
 			"Title": "Gehitu hainbat prezio"
 		},
+		"Prices": {
+			"Title": "Prices"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
