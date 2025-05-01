@@ -158,7 +158,7 @@
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
+			"DRAFT": "草稿",
 			"UPCOMING": "Upcoming",
 			"ONGOING": "Ongoing",
 			"COMPLETED": "Completed"
