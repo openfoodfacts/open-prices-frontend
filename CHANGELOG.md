@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.133.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.132.1...v1.133.0) (2025-05-01)
+
+
+### Features
+
+* **Challenges:** new page to list all of the challenge's prices ([#1538](https://github.com/openfoodfacts/open-prices-frontend/issues/1538)) ([050ada6](https://github.com/openfoodfacts/open-prices-frontend/commit/050ada66025ab3d273a9e1dea04dd5a0032ec866))
+* **Challenges:** new page to list all of the challenge's proofs ([#1537](https://github.com/openfoodfacts/open-prices-frontend/issues/1537)) ([bb2cef3](https://github.com/openfoodfacts/open-prices-frontend/commit/bb2cef3ad665467f4931d42ff7124f5b468966bd))
+
+
+### Technical
+
+* **Challenges:** make total proof & price stat counts clickable ([#1539](https://github.com/openfoodfacts/open-prices-frontend/issues/1539)) ([ca3bed2](https://github.com/openfoodfacts/open-prices-frontend/commit/ca3bed21387a0daa07b6892c015af49c775f3eff))
+* **l10n:** New Crowdin translations to review and merge ([#1525](https://github.com/openfoodfacts/open-prices-frontend/issues/1525)) ([387949e](https://github.com/openfoodfacts/open-prices-frontend/commit/387949e066fc7b4a3a03221647c1ae6575c83dc4))
+* **Prices:** make views listing prices more generic ([0063a1a](https://github.com/openfoodfacts/open-prices-frontend/commit/0063a1a41ff3afde026c282c96e902488d53d899))
+* **Proofs:** make LocationProofList, UserDashboardProofList & UserProofList views more generic ([58dec76](https://github.com/openfoodfacts/open-prices-frontend/commit/58dec7696f6da06c0efa70d62d7826379551c9cd))
+
 ## [1.132.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.132.0...v1.132.1) (2025-04-30)
 
 
