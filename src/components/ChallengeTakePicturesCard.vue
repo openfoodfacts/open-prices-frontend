@@ -18,7 +18,7 @@
     <v-card-text>
       <v-row>
         <v-col cols="6">
-          <StatCard :value="challenge.numberOfProofs" :subtitle="statSubtitleProofCount" />
+          <StatCard :value="challenge.numberOfProofs" :subtitle="statSubtitleProofCount" :to="getChallengeProofListUrl" />
         </v-col>
         <v-col cols="6">
           <StatCard :value="challenge.userProofContributions" :subtitle="statSubtitleProofOwnerCount" />
@@ -40,9 +40,10 @@
     </v-card-actions>
   </v-card>
 </template>
-  
+
 <script>
 import { defineAsyncComponent } from 'vue'
+
 export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
@@ -59,8 +60,10 @@ export default {
     },
     statSubtitleProofOwnerCount() {
       return this.$vuetify.display.smAndUp ? this.$t('Common.PicturesAddedByYou') : this.$t('Common.PicturesByYou')
+    },
+    getChallengeProofListUrl() {
+      return `/challenges/${this.challenge.id}/proofs`
     }
   }
 }
 </script>
-  
