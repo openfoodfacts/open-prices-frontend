@@ -13,12 +13,12 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.Prices') }}
       </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="proofPriceList.length" :totalCount="proofPriceTotal" />
+      <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
     </v-col>
   </v-row>
 
   <v-row v-if="proof">
-    <v-col v-for="price in proofPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" :hidePriceProof="true" elevation="1" height="100%" />
     </v-col>
   </v-row>
@@ -53,15 +53,15 @@ export default {
       proofId: this.$route.params.id,
       // data
       proof: null,
-      proofPriceList: [],
-      proofPriceTotal: null,
-      proofPricePage: 0,
+      priceList: [],
+      priceTotal: null,
+      pricePage: 0,
       loading: false,
     }
   },
   computed: {
     getPricesParams() {
-      let defaultParams = { proof_id: this.proofId, page: this.proofPricePage }
+      let defaultParams = { proof_id: this.proofId, page: this.pricePage }
       return defaultParams
     }
   },
@@ -80,24 +80,24 @@ export default {
         .then((data) => {
           if (data.id) {
             this.proof = data
-            this.getProofPrices()
+            this.getPrices()
           }
         })
     },
-    getProofPrices() {
-      if ((this.proofPriceTotal != null) && (this.proofPriceList.length >= this.proofPriceTotal)) return
+    getPrices() {
+      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
-      this.proofPricePage += 1
+      this.pricePage += 1
       return api.getPrices(this.getPricesParams)
         .then((data) => {
-          this.proofPriceList.push(...data.items)
-          this.proofPriceTotal = data.total
+          this.priceList.push(...data.items)
+          this.priceTotal = data.total
           this.loading = false
         })
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getProofPrices()
+        this.getPrices()
       }
     },
   }

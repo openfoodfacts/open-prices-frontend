@@ -10,14 +10,14 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <LoadedCountChip :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
+      <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
       <FilterMenu kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
       <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="price in userPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
   </v-row>
@@ -48,9 +48,9 @@ export default {
       username: this.$route.params.username,
       // data
       user: null,
-      userPriceList: [],
-      userPriceTotal: null,
-      userPricePage: 0,
+      priceList: [],
+      priceTotal: null,
+      pricePage: 0,
       loading: false,
       // filter & order
       currentFilter: '',
@@ -59,7 +59,7 @@ export default {
   },
   computed: {
     getPricesParams() {
-      let defaultParams = { owner: this.username, order_by: `${this.currentOrder}`, page: this.userPricePage }
+      let defaultParams = { owner: this.username, order_by: `${this.currentOrder}`, page: this.pricePage }
       if (this.currentFilter === 'show_last_month') {
         let oneMonthAgo = new Date()
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
@@ -71,7 +71,7 @@ export default {
   watch: {
     $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initUserPrices()
+        this.initPrices()
       }
     }
   },
@@ -79,7 +79,7 @@ export default {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.getUser()
-    this.getUserPrices()
+    this.getPrices()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
     window.addEventListener('scroll', this.handleDebouncedScroll)
@@ -88,12 +88,12 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initUserPrices() {
+    initPrices() {
       this.username = this.$route.params.username
-      this.userPriceList = []
-      this.userPriceTotal = null
-      this.userPricePage = 0
-      this.getUserPrices()
+      this.priceList = []
+      this.priceTotal = null
+      this.pricePage = 0
+      this.getPrices()
     },
     getUser() {
       return api.getUserById(this.username)
@@ -101,32 +101,32 @@ export default {
           this.user = data
         })
     },
-    getUserPrices() {
-      if ((this.userPriceTotal != null) && (this.userPriceList.length >= this.userPriceTotal)) return
+    getPrices() {
+      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
-      this.userPricePage += 1
+      this.pricePage += 1
       return api.getPrices(this.getPricesParams)
         .then((data) => {
-          this.userPriceList.push(...data.items)
-          this.userPriceTotal = data.total
+          this.priceList.push(...data.items)
+          this.priceTotal = data.total
           this.loading = false
         })
     },
     togglePriceFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
-      // this.initUserPrices() will be called in watch $route
+      // this.initPrices() will be called in watch $route
     },
     selectPriceOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
-        // this.initUserPrices() will be called in watch $route
+        // this.initPrices() will be called in watch $route
       }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getUserPrices()
+        this.getPrices()
       }
     },
   }

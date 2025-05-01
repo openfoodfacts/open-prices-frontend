@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <DateCard :date="date" :priceCount="datePriceTotal" />
+      <DateCard :date="date" :priceCount="priceTotal" />
     </v-col>
   </v-row>
 
@@ -10,13 +10,13 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="datePriceList.length" :totalCount="datePriceTotal" />
+      <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
       <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="price in datePriceList" :key="price" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
   </v-row>
@@ -45,9 +45,9 @@ export default {
     return {
       date: this.$route.params.date,
       // data
-      datePriceList: [],
-      datePriceTotal: null,
-      datePricePage: 0,
+      priceList: [],
+      priceTotal: null,
+      pricePage: 0,
       loading: false,
       // filter & order
       currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
@@ -58,7 +58,7 @@ export default {
       return utils.dateType(this.date)
     },
     getPricesParams() {
-      let defaultParams = { order_by: this.currentOrder, page: this.datePricePage }
+      let defaultParams = { order_by: this.currentOrder, page: this.pricePage }
       // YYYY-MM-DD
       if (this.dateType === 'DAY') {
         defaultParams['date'] = this.date
@@ -94,19 +94,19 @@ export default {
   methods: {
     initDate() {
       this.date = this.$route.params.date
-      this.datePriceList = []
-      this.datePriceTotal = null
-      this.datePricePage = 0
-      this.getDatePrices()
+      this.priceList = []
+      this.priceTotal = null
+      this.pricePage = 0
+      this.getPrices()
     },
-    getDatePrices() {
-      if ((this.datePriceTotal != null) && (this.datePriceList.length >= this.datePriceTotal)) return
+    getPrices() {
+      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
-      this.datePricePage += 1
+      this.pricePage += 1
       return api.getPrices(this.getPricesParams)
         .then((data) => {
-          this.datePriceList.push(...data.items)
-          this.datePriceTotal = data.total
+          this.priceList.push(...data.items)
+          this.priceTotal = data.total
           this.loading = false
         })
     },
@@ -119,7 +119,7 @@ export default {
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getDatePrices()
+        this.getPrices()
       }
     },
   }

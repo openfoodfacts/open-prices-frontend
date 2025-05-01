@@ -134,7 +134,7 @@ export default {
     toggleProofKind(kindKey) {
       this.currentKind = (this.currentKind !== kindKey) ? kindKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
-      // this.initUserPriceList() will be called in watch $route
+      // this.initProofList() will be called in watch $route
     },
     selectProofOrder(orderKey) {
       if (this.currentOrder !== orderKey) {

@@ -63,14 +63,14 @@ export default {
   watch: {
     $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initPriceList()
+        this.initPrices()
       }
     }
   },
   mounted() {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
-    this.initPriceList()
+    this.initPrices()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
     window.addEventListener('scroll', this.handleDebouncedScroll)
@@ -79,7 +79,7 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initPriceList() {
+    initPrices() {
       this.priceList = []
       this.priceTotal = null
       this.pricePage = 0
@@ -99,12 +99,12 @@ export default {
     togglePriceFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
-      // this.initPriceList() will be called in watch $route
+      // this.initPrices() will be called in watch $route
     },
     togglePriceType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initPriceList() will be called in watch $route
+      // this.initPrices() will be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {

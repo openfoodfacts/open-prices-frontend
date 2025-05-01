@@ -2,16 +2,16 @@
   <v-row v-if="!loading">
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-tag-multiple-outline">
-        {{ $t('Common.PriceCount', { count: userPriceTotal }) }}
+        {{ $t('Common.PriceCount', { count: priceTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="userPriceList.length" :totalCount="userPriceTotal" />
+      <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
       <FilterMenu kind="price" :currentFilter="currentFilter" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilter="togglePriceFilter($event)" @update:currentType="togglePriceType($event)" @update:currentKind="togglePriceKind($event)" />
       <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row>
-    <v-col v-for="price in userPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
   </v-row>
@@ -41,9 +41,9 @@ export default {
   data() {
     return {
       // data
-      userPriceList: [],
-      userPriceTotal: null,
-      userPricePage: 0,
+      priceList: [],
+      priceTotal: null,
+      pricePage: 0,
       loading: false,
       // filter & order
       currentFilter: '',
@@ -58,7 +58,7 @@ export default {
       return this.appStore.user.username
     },
     getPricesParams() {
-      let defaultParams = { owner: this.username, order_by: this.currentOrder, page: this.userPricePage }
+      let defaultParams = { owner: this.username, order_by: this.currentOrder, page: this.pricePage }
       if (this.currentFilter === 'show_last_month') {
         let oneMonthAgo = new Date()
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
@@ -76,7 +76,7 @@ export default {
   watch: {
     $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initUserPriceList()
+        this.initPrices()
       }
     }
   },
@@ -85,7 +85,7 @@ export default {
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentKind = this.$route.query[constants.KIND_PARAM] || this.currentKind
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.getUserPrices()
+    this.getPrices()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
     window.addEventListener('scroll', this.handleDebouncedScroll)
@@ -94,48 +94,48 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initUserPriceList() {
-      this.userPriceList = []
-      this.userPriceTotal = null
-      this.userPricePage = 0
-      this.getUserPrices()
+    initPrices() {
+      this.priceList = []
+      this.priceTotal = null
+      this.pricePage = 0
+      this.getPrices()
     },
-    getUserPrices() {
-      if ((this.userPriceTotal != null) && (this.userPriceList.length >= this.userPriceTotal)) return
+    getPrices() {
+      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
-      this.userPricePage += 1
+      this.pricePage += 1
       return api.getPrices(this.getPricesParams)
         .then((data) => {
-          this.userPriceList.push(...data.items)
-          this.userPriceTotal = data.total
+          this.priceList.push(...data.items)
+          this.priceTotal = data.total
           this.loading = false
         })
     },
     togglePriceFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
-      // this.initUserPriceList() will be called in watch $route
+      // this.initPrices() will be called in watch $route
     },
     togglePriceType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initUserPriceList() will be called in watch $route
+      // this.initPrices() will be called in watch $route
     },
     togglePriceKind(kindKey) {
       this.currentKind = (this.currentKind !== kindKey) ? kindKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
-      // this.initUserPriceList() will be called in watch $route
+      // this.initPrices() will be called in watch $route
     },
     selectPriceOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
-        // this.initUserPriceList() will be called in watch $route
+        // this.initPrices() will be called in watch $route
       }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getUserPrices()
+        this.getPrices()
       }
     },
   }
