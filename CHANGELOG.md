@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.133.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.133.0...v1.133.1) (2025-05-02)
+
+
+### Bug Fixes
+
+* **Price input:** additional checks if the currency is not provided ([1d46c56](https://github.com/openfoodfacts/open-prices-frontend/commit/1d46c56ac248f8ab420b6e8ef2bcff0a378ef4c8))
+
+
+### Technical
+
+* **Challenges:** only use tag__contains as filter param. ref [#1527](https://github.com/openfoodfacts/open-prices-frontend/issues/1527) ([0821774](https://github.com/openfoodfacts/open-prices-frontend/commit/08217745a3c779e0a2a2c551a035eca010ff374c))
+* **Receipt Assistant:** in price edit dialog, hide the proof details. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([55418d9](https://github.com/openfoodfacts/open-prices-frontend/commit/55418d92460e32e22eb6c57fe43f7b2b4429f546))
+* **Receipt Assistant:** in price edit dialog, show the quantity_bought field. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([5f52b29](https://github.com/openfoodfacts/open-prices-frontend/commit/5f52b2991097ac5e184141c366237e43d8ca55dd))
+
 ## [1.133.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.132.1...v1.133.0) (2025-05-01)
 
 
