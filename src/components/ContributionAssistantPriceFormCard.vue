@@ -17,7 +17,7 @@
         </v-col>
       </v-row>
       <ProductInputRow :productForm="productPriceForm" :mode="mode" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
-      <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :mode="mode" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
+      <PriceInputRow :priceForm="productPriceForm" :mode="mode" :hideCurrencyChoice="true" :product="productPriceForm.product" :proofType="productPriceForm.proof ? productPriceForm.proof.type : null" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
     <v-divider v-if="!hideProofDetails" />
     <v-card-text v-if="!hideProofDetails" class="flex-grow-0">

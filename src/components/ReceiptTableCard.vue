@@ -57,13 +57,13 @@
     <ContributionAssistantPriceFormCard
       v-if="editProductItem"
       :productPriceForm="editProductItem"
+      :showProductNameField="true"
       :hideProofDetails="true"
       :hideActions="false"
       :hideUploadAction="false"
       :hidePriceTagStatusMenu="true"
       :isinDialog="true"
       forceMode="edit"
-      showProductNameField
       @validatePriceTag="confirmProduct($event)"
       @close="editProductDialog = false"
     />
