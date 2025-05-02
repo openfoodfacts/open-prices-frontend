@@ -57,6 +57,7 @@
     <ContributionAssistantPriceFormCard
       v-if="editProductItem"
       :productPriceForm="editProductItem"
+      :hideProofDetails="true"
       :hideActions="false"
       :hideUploadAction="false"
       :hidePriceTagStatusMenu="true"
