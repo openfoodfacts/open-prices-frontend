@@ -60,7 +60,7 @@ export default {
     }
   },
   computed: {
-    getParams() {
+    getProofsParams() {
       let defaultParams = { location_id: this.locationId, order_by: this.currentOrder, page: this.proofPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0

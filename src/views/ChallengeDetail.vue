@@ -44,7 +44,6 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api.js'
-import utils from '../utils.js'
 
 export default {
   components: {
@@ -65,16 +64,8 @@ export default {
     username() {
       return this.appStore.user.username
     },
-    startDateMidnight() {
-      return utils.dateStartOfDay(this.challenge.start_date)
-    },
-    endDateMidnight() {
-      return utils.dateEndOfDay(this.challenge.end_date)
-    },
     defaultParams() {
       return { 
-        created__gte: this.startDateMidnight, 
-        created__lte: this.endDateMidnight, 
         tags__contains: `challenge-${this.challenge.id}`
       }
     },
