@@ -27,7 +27,7 @@
       <v-row>
         <v-col cols="12">
           <ProofReceiptPriceCountChip class="mr-1" :uploadedCount="proofPriceUploadedList.length" :totalCount="proof.receipt_price_count" />
-          <ProofReceiptPriceTotalChip :uploadedCount="proofPriceUploadedListSum" :totalCount="proof.receipt_price_total" :currency="proofPriceUploadedList[0].currency" />
+          <ProofReceiptPriceTotalChip :uploadedCount="proofPriceUploadedListSum" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
         </v-col>
       </v-row>
     </v-card-actions>
@@ -76,8 +76,8 @@ export default {
       return this.proofIsTypeReceipt && this.proofPriceUploadedList.length > 0
     },
     proofPriceUploadedListSum() {
-      return this.proofPriceUploadedList.reduce((acc, priceUploaded) => {
-        return acc + parseFloat(priceUploaded.price)*parseFloat(priceUploaded.receipt_quantity)
+      return this.proofPriceUploadedList.reduce((acc, price) => {
+        return acc + parseFloat(price.price)*parseFloat(price.receipt_quantity)
       }, 0)
     }
   },

@@ -3,6 +3,7 @@
     <template #title>
       {{ $t('ReceiptAssistant.ReceiptItemsCheck') }}
     </template>
+
     <v-divider />
 
     <v-card-text>
@@ -43,16 +44,26 @@
         </template>
       </v-data-table>
     </v-card-text>
-    <v-card-actions class="justify-end">
-      <v-btn
-        color="primary"
-        variant="flat"
-        @click="addItem"
-      >
-        {{ $t('ReceiptAssistant.AddNewItem') }}
-      </v-btn>
+
+    <v-divider />
+
+    <v-card-actions>
+      <v-row>
+        <v-spacer />
+        <v-col>
+          <v-btn
+            class="float-right"
+            color="primary"
+            variant="flat"
+            @click="addItem"
+          >
+            {{ $t('ReceiptAssistant.AddNewItem') }}
+          </v-btn>
+        </v-col>
+      </v-row>
     </v-card-actions>
   </v-card>
+
   <v-dialog v-model="editProductDialog" max-width="500px">
     <ContributionAssistantPriceFormCard
       v-if="editProductItem"
