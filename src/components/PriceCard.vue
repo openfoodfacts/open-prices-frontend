@@ -12,17 +12,7 @@
           </h3>
 
           <p v-if="!hideProductDetails">
-            <span v-if="hasProduct">
-              <PriceCountChip class="mr-1" :count="product.price_count" @click="goToProduct()" />
-              <span v-if="hasProductSource">
-                <ProductBrands :productBrands="product.brands" :readonly="readonly" />
-                <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
-                <!-- ProductCategoriesChip, ProductLabelsChip -->
-                <br v-if="showProductBarcode">
-                <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
-              </span>
-              <ProductMissingChip v-else />
-            </span>
+            <ProductDetails v-if="hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :readonly="readonly" />
             <span v-else>
               <PriceOrigins v-if="hasPriceOrigin" class="mr-1" :priceOrigins="price.origins_tags" />
               <PriceLabels v-if="hasPriceLabels" class="mr-1" :priceLabels="price.labels_tags" />
@@ -46,11 +36,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    ProductBrands: defineAsyncComponent(() => import('../components/ProductBrands.vue')),
-    ProductQuantityChip: defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
-    ProductBarcodeChip: defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
-    ProductMissingChip: defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
+    ProductDetails: defineAsyncComponent(() => import('../components/ProductDetails.vue')),
     PriceOrigins: defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
     PriceLabels: defineAsyncComponent(() => import('../components/PriceLabels.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
@@ -141,20 +127,11 @@ export default {
     hasProductCode() {
       return this.hasProduct && !!this.product.code
     },
-    hasProductName() {
-      return this.hasProduct && !!this.product.product_name
-    },
-    hasProductSource() {
-      return this.hasProduct && !!this.product.source
-    },
     hasPriceOrigin() {
       return this.hasPrice && !!this.price.origins_tags && this.price.origins_tags.length
     },
     hasPriceLabels() {
       return this.hasPrice && !!this.price.labels_tags && this.price.labels_tags.length
-    },
-    showProductBarcode() {
-      return !this.hideProductBarcode
     },
   },
   mounted() {
