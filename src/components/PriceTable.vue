@@ -29,7 +29,6 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import utils from '../utils.js'
 
 export default {
   components: {
@@ -81,9 +80,11 @@ export default {
       if (price.product && price.product.code) {
         return price.product.product_name || price.product_code
       } else if (price.category_tag) {
-        return utils.getLocaleCategoryTag(this.appStore.getUserLanguage, price.category_tag).then((category) => {
-          return category.name
-        })
+        return price.category_tag
+        // TODO: manage async
+        // return utils.getLocaleCategoryTag(this.appStore.getUserLanguage, price.category_tag).then((category) => {
+        //   return category.name
+        // })
       }
     },
   }
