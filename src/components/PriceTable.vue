@@ -5,10 +5,7 @@
     </template>
     <template #[`item.product_details`]="{ item }">
       <ProductDetails v-if="item.product" :product="item.product" :readonly="true" />
-      <span v-else>
-        <PriceOrigins v-if="item.origins_tags && item.origins_tags.length" class="mr-1" :priceOrigins="item.origins_tags" />
-        <PriceLabels v-if="item.labels_tags && item.labels_tags.length" class="mr-1" :priceLabels="item.labels_tags" />
-      </span>
+      <PriceCategoryDetails v-else :price="item" />
     </template>
     <template #[`item.location`]="{ item }">
       <LocationChip :location="item.location" :locationId="item.location_id" :readonly="true" />
@@ -33,8 +30,7 @@ import { useAppStore } from '../store'
 export default {
   components: {
     ProductDetails: defineAsyncComponent(() => import('../components/ProductDetails.vue')),
-    PriceOrigins: defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
-    PriceLabels: defineAsyncComponent(() => import('../components/PriceLabels.vue')),
+    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
     LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),

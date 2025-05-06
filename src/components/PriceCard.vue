@@ -13,10 +13,7 @@
 
           <p v-if="!hideProductDetails">
             <ProductDetails v-if="hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :readonly="readonly" />
-            <span v-else>
-              <PriceOrigins v-if="hasPriceOrigin" class="mr-1" :priceOrigins="price.origins_tags" />
-              <PriceLabels v-if="hasPriceLabels" class="mr-1" :priceLabels="price.labels_tags" />
-            </span>
+            <PriceCategoryDetails v-else :price="price" />
           </p>
 
           <PricePriceRow v-if="price" class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
@@ -37,8 +34,7 @@ import utils from '../utils.js'
 export default {
   components: {
     ProductDetails: defineAsyncComponent(() => import('../components/ProductDetails.vue')),
-    PriceOrigins: defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
-    PriceLabels: defineAsyncComponent(() => import('../components/PriceLabels.vue')),
+    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue'))
   },
@@ -126,12 +122,6 @@ export default {
     },
     hasProductCode() {
       return this.hasProduct && !!this.product.code
-    },
-    hasPriceOrigin() {
-      return this.hasPrice && !!this.price.origins_tags && this.price.origins_tags.length
-    },
-    hasPriceLabels() {
-      return this.hasPrice && !!this.price.labels_tags && this.price.labels_tags.length
     },
   },
   mounted() {
