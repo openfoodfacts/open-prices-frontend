@@ -10,6 +10,7 @@ export default defineConfig({
       template: {
         compilerOptions: {
           // declare barcode-scanner webcomponent as custom element
+          // See https://github.com/openfoodfacts/openfoodfacts-webcomponents for source
           isCustomElement: (tag) => tag === 'barcode-scanner'
         }
       }
