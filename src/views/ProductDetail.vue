@@ -115,7 +115,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     productIsCategory() {
-      return this.productId.startsWith('en')
+      return this.productId.includes(':')
     },
     productNotFound() {
       return !this.productIsCategory && this.product && !this.product.source

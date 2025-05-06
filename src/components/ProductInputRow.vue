@@ -190,7 +190,7 @@ export default {
   },
   mounted() {
     if (this.$route.query.code) {
-      if (this.$route.query.code.startsWith('en')) {
+      if (this.$route.query.code.includes(':')) {
         this.productForm.type = constants.PRICE_TYPE_CATEGORY
         this.productForm.category_tag = this.$route.query.code
       }
