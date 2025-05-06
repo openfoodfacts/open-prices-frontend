@@ -28,7 +28,8 @@
 
         <v-tabs-window v-model="currentDisplay" disabled>
           <v-tabs-window-item value="scan">
-            <div id="reader" width="500px" />
+            <div v-if="barcodeScannerLibrary === 'html5-qrcode'" id="reader" width="500px" />
+            <barcode-scanner v-else runScanner="true" @barcode-scanner-state="onScanStateChanged" />
           </v-tabs-window-item>
 
           <v-tabs-window-item value="type">
@@ -61,7 +62,8 @@
         <div>
           <i18n-t keypath="BarcodeScanner.Htlm5-qrcode.Text" tag="span">
             <template #url>
-              <a :href="HTML5_QRCODE_URL" target="_blank">{{ HTML5_QRCODE_NAME }}</a>
+              <a v-if="barcodeScannerLibrary === 'html5-qrcode'" :href="HTML5_QRCODE_URL" target="_blank">{{ HTML5_QRCODE_NAME }}</a>
+              <a v-else :href="BARCODE_SCANNER_URL" target="_blank">{{ BARCODE_SCANNER_NAME }}</a>
             </template>
           </i18n-t>
         </div>
@@ -71,6 +73,8 @@
 </template>
 
 <script>
+import "@webcomponents/webcomponentsjs/webcomponents-loader.js"
+import "@openfoodfacts/openfoodfacts-webcomponents"
 import { Html5Qrcode, Html5QrcodeScanType } from 'html5-qrcode'
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
@@ -121,7 +125,10 @@ export default {
       // config
       currentDisplay: null,  // see mounted
       HTML5_QRCODE_URL: 'https://github.com/mebjas/html5-qrcode',
-      HTML5_QRCODE_NAME: 'html5-qrcode'
+      HTML5_QRCODE_NAME: 'html5-qrcode',
+      BARCODE_SCANNER_URL: 'https://github.com/openfoodfacts/openfoodfacts-webcomponents',
+      BARCODE_SCANNER_NAME: 'openfoodfacts-webcomponents',
+      barcodeScannerLibrary: window.BarcodeDetector ? 'off-barcode-scanner' : 'html5-qrcode'
     }
   },
   computed: {
@@ -154,7 +161,9 @@ export default {
         if (this.hideBarcodeScannerTab) {
           this.currentDisplay = constants.PRODUCT_SELECTOR_DISPLAY_LIST[1].key
         } else {
-          window.setTimeout(() => this.createQrcodeScanner(), 200)
+          if (this.barcodeScannerLibrary === 'html5-qrcode') {
+            window.setTimeout(() => this.createQrcodeScanner(), 200)
+          }
         }
       } else {  // type
         window.setTimeout(() => this.$refs.barcodeManualInput.focus(), 200)
@@ -170,11 +179,19 @@ export default {
     }
     // init tab
     this.currentDisplay = this.appStore.user.barcode_scanner_default_mode
+    if (this.appStore.user.barcode_scanner_library != 'auto') {
+      this.barcodeScannerLibrary = this.appStore.user.barcode_scanner_library
+    }
   },
   methods: {
     createQrcodeScanner() {
       this.scanner = new Html5Qrcode('reader')
       this.scanner.start({ facingMode: 'environment' }, config, this.onScanSuccess, this.onScanFailure)
+    },
+    onScanStateChanged(state) {
+      if (state.detail.state === 'detected') {
+        this.barcodeSend(state.detail.barcode)
+      }
     },
     onScanSuccess(decodedText, decodedResult) {  // eslint-disable-line no-unused-vars
       this.barcodeSend(decodedText)

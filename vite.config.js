@@ -6,7 +6,15 @@ import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          // declare barcode-scanner webcomponent as custom element
+          // See https://github.com/openfoodfacts/openfoodfacts-webcomponents for source
+          isCustomElement: (tag) => tag === 'barcode-scanner'
+        }
+      }
+    }),
     VueI18nPlugin({
       runtimeOnly: false,
       include: resolve(dirname(fileURLToPath(import.meta.url)), './src/i18n/locales/**'),

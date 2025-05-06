@@ -214,6 +214,11 @@ export default {
     { key: 'scan', value: 'BarcodeScan', valueSmallScreen: 'BarcodeScanShort', icon: 'mdi-barcode-scan' },
     { key: 'type', value: 'BarcodeType', valueSmallScreen: 'BarcodeTypeShort', icon: 'mdi-numeric' },
   ],
+  BARCODE_SCANNER_DISPLAY_LIST: [
+    { key: 'auto', value: 'Auto', valueSmallScreen: 'Auto', icon: 'mdi-barcode-scan' },
+    { key: 'off-barcode-scanner', value: 'Off Barcode Scanner', valueSmallScreen: 'Off Scanner', icon: 'mdi-barcode-scan' },
+    { key: 'html5-qrcode', value: 'Html5-Qrcode', valueSmallScreen: 'Html5-Qrcode', icon: 'mdi-barcode-scan' },
+  ],
   PRICE_FORM_DISPLAY_LIST: [
     { key: 'display', value: 'Display', icon: 'mdi-eye-outline' },
     { key: 'edit', value: 'Edit', icon: 'mdi-pencil' },

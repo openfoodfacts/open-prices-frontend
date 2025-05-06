@@ -23,9 +23,11 @@
   },
   "dependencies": {
     "@intlify/unplugin-vue-i18n": "^4.0.0",
+    "@openfoodfacts/openfoodfacts-webcomponents": "^1.4.2",
     "@vue-leaflet/vue-leaflet": "^0.10.1",
     "@vueuse/core": "^11.1.0",
     "@vueuse/integrations": "^11.1.0",
+    "@webcomponents/webcomponentsjs": "^2.8.0",
     "compressorjs": "^1.2.1",
     "exifreader": "^4.24.0",
     "html5-qrcode": "^2.3.8",
