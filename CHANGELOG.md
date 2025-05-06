@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.134.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.133.1...v1.134.0) (2025-05-06)
+
+
+### Features
+
+* **Barcode Scanner:** use openfoodfacts-webcomponents (and allow user to switch back to html5-qrcode) ([#1545](https://github.com/openfoodfacts/open-prices-frontend/issues/1545)) ([6e94b98](https://github.com/openfoodfacts/open-prices-frontend/commit/6e94b98b981295ea38bb5c3350eda27585d93699))
+
+
+### Bug Fixes
+
+* **Products:** better manage non-en category tags ([#1549](https://github.com/openfoodfacts/open-prices-frontend/issues/1549)) ([e33733d](https://github.com/openfoodfacts/open-prices-frontend/commit/e33733da94047f467baf747dcbd824189c681f67))
+
+
+### Technical
+
+* **Products:** new PriceCategoryDetails component ([#1548](https://github.com/openfoodfacts/open-prices-frontend/issues/1548)) ([21a3495](https://github.com/openfoodfacts/open-prices-frontend/commit/21a349553002aad886d48c72e679ccbcb3638586))
+* **Products:** new ProductDetails component ([#1547](https://github.com/openfoodfacts/open-prices-frontend/issues/1547)) ([1b8c67c](https://github.com/openfoodfacts/open-prices-frontend/commit/1b8c67cada2b8cb709ed5a7d3ebf3885844b443c))
+* **Proof detail:** add display toggle. allow displaying prices by list or table ([#1543](https://github.com/openfoodfacts/open-prices-frontend/issues/1543)) ([39a6a17](https://github.com/openfoodfacts/open-prices-frontend/commit/39a6a1735bd1d6ea6840051e9c2c582f7765a46d))
+* **Receipt Assistant:** move table actions into row with spacer. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([aebf792](https://github.com/openfoodfacts/open-prices-frontend/commit/aebf7926ffc9b1797c5acc1b3912d5500893a8e4))
+* **Receipt Assistant:** show price count & price total below table ([#1542](https://github.com/openfoodfacts/open-prices-frontend/issues/1542)) ([d8b2382](https://github.com/openfoodfacts/open-prices-frontend/commit/d8b238214344e5d9324b7428a7785d7d15a70517))
+
 ## [1.133.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.133.0...v1.133.1) (2025-05-02)
 
 
