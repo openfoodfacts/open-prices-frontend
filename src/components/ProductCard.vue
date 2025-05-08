@@ -76,6 +76,9 @@ export default {
     hasProductName() {
       return !!this.product.product_name
     },
+    hasProductSource() {
+      return !!this.product.source
+    },
   },
   methods: {
     getProductTitle() {
