@@ -1,5 +1,5 @@
 <template>
-  <v-card :id="'challenge_' + challenge.id" :class="'border-transparent'" @click="goToChallenge(challenge)">
+  <v-card :id="'challenge_' + challenge.id" :class="'border-transparent'" :to="getChallengeUrl(challenge)">
     <template #title>
       {{ challenge.icon }} {{ challenge.title }} {{ challenge.subtitle }}
     </template>
@@ -47,8 +47,8 @@ export default {
     },
   },
   methods: {
-    goToChallenge(challenge) {
-      this.$router.push({ path: `/challenges/${challenge.id}` })
+    getChallengeUrl(challenge) {
+      return `/challenges/${challenge.id}`
     }
   }
 }
