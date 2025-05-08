@@ -208,7 +208,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Clear",
-		"Contributors": "Contributors",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -216,6 +215,8 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Contribute",
+		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
 		"Country": "Country",
@@ -237,6 +238,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
 		"Error": "Error",
+		"Experiment": "Experiment",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Label",
@@ -344,6 +346,7 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "Price tags",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -729,6 +732,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Contribute"
 		},
 		"Experiments": {
 			"Title": "Experiments"
