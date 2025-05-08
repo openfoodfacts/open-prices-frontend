@@ -8,7 +8,7 @@
       <v-divider />
 
       <v-card-text>
-        <v-chip v-for="category in categories" :key="category" label class="mr-2 mb-2" @click="goToCategory(category)">
+        <v-chip v-for="category in categories" :key="category" label class="mr-2 mb-2" :to="getCategoryUrl(category)">
           {{ category }}
         </v-chip>
       </v-card-text>
@@ -26,8 +26,8 @@ export default {
   },
   emits: ['close'],
   methods: {
-    goToCategory(category) {
-      this.$router.push({ path: `/categories/${category}` })
+    getCategoryUrl(category) {
+      return `/categories/${category}`
     },
     close() {
       this.$emit('close')

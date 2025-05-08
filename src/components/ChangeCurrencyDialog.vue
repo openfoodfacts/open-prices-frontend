@@ -18,7 +18,7 @@
             />
           </v-col>
           <v-col cols="12">
-            <v-btn class="mb-2" size="small" prepend-icon="mdi-cog-outline" @click="goToSettings">
+            <v-btn class="mb-2" size="small" prepend-icon="mdi-cog-outline" to="/settings">
               <span>{{ $t('ChangeCurrencyDialog.AddCurrencies') }}</span>
             </v-btn>
             <p class="text-caption text-warning">
@@ -66,9 +66,6 @@ export default {
       appStore.setLastCurrencyUsed(this.userLastCurrencyUsed)
       this.$emit('newCurrencySelected', this.userLastCurrencyUsed)
       this.close()
-    },
-    goToSettings() {
-      this.$router.push({ path: "/settings" })
     },
     close() {
       this.$emit('close')

@@ -41,7 +41,7 @@
                 color="primary"
                 :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-account-circle"
-                @click="goToUserDashboard"
+                :to="getUserDashboardUrl"
               >
                 {{ $t('Common.MyDashboard') }}
               </v-btn>
@@ -76,6 +76,11 @@ export default {
       proofUploadCount: 0
     }
   },
+  computed: {
+    getUserDashboardUrl() {
+      return '/dashboard?proofSingleSuccess=true'
+    }
+  },
   methods: {
     proofUploadDone(proofUploadCount) {
       this.proofUploadCount = proofUploadCount
@@ -84,9 +89,6 @@ export default {
     reloadPage() {
       window.location.reload()
     },
-    goToUserDashboard() {
-      this.$router.push({ path: '/dashboard', query: { proofSingleSuccess: 'true' } })
-    }
   }
 }
 </script>

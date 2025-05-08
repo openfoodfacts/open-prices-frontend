@@ -8,7 +8,7 @@
       <v-divider />
 
       <v-card-text>
-        <v-chip v-for="label in labels" :key="label" label class="mr-2 mb-2" @click="goToLabel(label)">
+        <v-chip v-for="label in labels" :key="label" label class="mr-2 mb-2" :to="getLabelUrl(label)">
           {{ label }}
         </v-chip>
       </v-card-text>
@@ -26,8 +26,8 @@ export default {
   },
   emits: ['close'],
   methods: {
-    goToLabel(label) {
-      this.$router.push({ path: `/labels/${label}` })
+    getLabelUrl(label) {
+      return `/labels/${label}`
     },
     close() {
       this.$emit('close')
