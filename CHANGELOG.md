@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.134.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.0...v1.134.1) (2025-05-08)
+
+
+### Bug Fixes
+
+* **Challenges:** card links: use 'to' instead of 'click' ([1419327](https://github.com/openfoodfacts/open-prices-frontend/commit/1419327f819c4092722171bda2f3e997362006c0))
+* **Products:** fix missing hasProductSource in ProductCard. ref [#1547](https://github.com/openfoodfacts/open-prices-frontend/issues/1547) ([5541cc5](https://github.com/openfoodfacts/open-prices-frontend/commit/5541cc5e32e836c7c5310dad02a572599fc706f8))
+
+
+### Technical
+
+* **Products:** move product default image url to constants ([0baa690](https://github.com/openfoodfacts/open-prices-frontend/commit/0baa69021cc88f27d08796f31e146e48d1092a78))
+* **URLs:** use 'to' instead of 'click' when possible ([42af6c1](https://github.com/openfoodfacts/open-prices-frontend/commit/42af6c1e88e93eef9b8faf52c2d5449884e6b15d))
+
 ## [1.134.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.133.1...v1.134.0) (2025-05-06)
 
 
