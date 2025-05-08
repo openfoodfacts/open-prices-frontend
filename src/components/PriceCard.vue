@@ -29,6 +29,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
@@ -103,7 +104,7 @@ export default {
   data() {
     return {
       productTitle: null,  // see init
-      productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
+      productImageDefault: constants.PRODUCT_IMAGE_DEFAULT_URL
     }
   },
   computed: {
