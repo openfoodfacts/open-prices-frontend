@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.134.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.1...v1.134.2) (2025-05-18)
+
+
+### Technical
+
+* **Proof form:** simplify a bit the ProofTypeInputRow code ([de144b5](https://github.com/openfoodfacts/open-prices-frontend/commit/de144b559d082890d6b73ac949956162292c774d))
+* **Receipt Assistant:** hide progress bar when all prices have been uploaded. mimick other workflows. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([f3c0f34](https://github.com/openfoodfacts/open-prices-frontend/commit/f3c0f34b998c4771ab1f8d4536908156347c7282))
+* **Receipt Assistant:** in the product edit modal, allow scanning the barcode. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([c3fbd4f](https://github.com/openfoodfacts/open-prices-frontend/commit/c3fbd4f59e898299d6a2ef480c9e7845aef71714))
+* **Receipt Assistant:** UserRecentProofsDialog: show only receipt proofs. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([abf1fc2](https://github.com/openfoodfacts/open-prices-frontend/commit/abf1fc2ae847012c8d5e30887f921e29b13ebc3f))
+
 ## [1.134.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.0...v1.134.1) (2025-05-08)
 
 
