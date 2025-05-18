@@ -72,7 +72,16 @@
           md="6"
           xl="4"
         >
-          <ContributionAssistantPriceFormCard :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''" height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideUploadAction="true" @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)" @validatePriceTag="validatePriceTag(index)" />
+          <ContributionAssistantPriceFormCard
+            :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
+            height="100%"
+            :productPriceForm="productPriceForm"
+            :hideProductBarcodeScannerTab="true"
+            :hideProofDetails="true"
+            :hideUploadAction="true"
+            @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
+            @validatePriceTag="validatePriceTag(index)"
+          />
         </v-col>
       </v-row>
       <h3 v-if="productPriceFormsMarkedAsError.length" class="mt-4 mb-4">
@@ -86,7 +95,15 @@
           md="6"
           xl="4"
         >
-          <ContributionAssistantPriceFormCard :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''" height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideUploadAction="true" @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)" />
+          <ContributionAssistantPriceFormCard
+            :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
+            height="100%"
+            :productPriceForm="productPriceForm"
+            :hideProductBarcodeScannerTab="true"
+            :hideProofDetails="true"
+            :hideUploadAction="true"
+            @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
+          />
         </v-col>
       </v-row>
       <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
@@ -100,7 +117,14 @@
           md="6"
           xl="4"
         >
-          <ContributionAssistantPriceFormCard height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideActions="true" :disabled="true" />
+          <ContributionAssistantPriceFormCard
+            height="100%"
+            :productPriceForm="productPriceForm"
+            :hideProductBarcodeScannerTab="true"
+            :hideProofDetails="true"
+            :hideActions="true"
+            :disabled="true"
+          />
         </v-col>
       </v-row>
       <v-row>

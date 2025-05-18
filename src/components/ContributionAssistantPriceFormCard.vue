@@ -16,7 +16,7 @@
           />
         </v-col>
       </v-row>
-      <ProductInputRow :productForm="productPriceForm" :mode="mode" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
+      <ProductInputRow :productForm="productPriceForm" :mode="mode" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="hideProductBarcodeScannerTab" @filled="productFormFilled = $event" />
       <PriceInputRow :priceForm="productPriceForm" :mode="mode" :hideCurrencyChoice="true" :product="productPriceForm.product" :proofType="productPriceForm.proof ? productPriceForm.proof.type : null" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
     <v-divider v-if="!hideProofDetails" />
@@ -116,6 +116,10 @@ export default {
       })
     },
     showProductNameField: {
+      type: Boolean,
+      default: false
+    },
+    hideProductBarcodeScannerTab: {
       type: Boolean,
       default: false
     },

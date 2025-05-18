@@ -73,6 +73,7 @@
       v-if="editProductItem"
       :productPriceForm="editProductItem"
       :showProductNameField="true"
+      :hideProductBarcodeScannerTab="false"
       :hideProofDetails="true"
       :hideActions="false"
       :hideUploadAction="false"
