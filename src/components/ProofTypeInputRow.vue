@@ -23,11 +23,11 @@ export default {
       type: Object,
       default: () => ({ type: null })
     },
-    hideProofTypeReceiptChoice: {
+    typePriceTagOnly: {
       type: Boolean,
       default: false
     },
-    hideProofTypePriceTagChoice: {
+    typeReceiptOnly: {
       type: Boolean,
       default: false
     }
@@ -39,11 +39,11 @@ export default {
   },
   computed: {
     proofTypeList() {
-      if (this.hideProofTypeReceiptChoice) {
-        return this.proofTypeListForInput.filter(pt => pt.key !== constants.PROOF_TYPE_RECEIPT)
+      if (this.typePriceTagOnly) {
+        return this.proofTypeListForInput.filter(pt => pt.key === constants.PROOF_TYPE_PRICE_TAG)
       }
-      if (this.hideProofTypePriceTagChoice) {
-        return this.proofTypeListForInput.filter(pt => pt.key !== constants.PROOF_TYPE_PRICE_TAG)
+      if (this.typeReceiptOnly) {
+        return this.proofTypeListForInput.filter(pt => pt.key === constants.PROOF_TYPE_RECEIPT)
       }
       return this.proofTypeListForInput
     }
