@@ -39,10 +39,10 @@
       <v-row>
         <v-col>
           <v-btn v-if="validNewReceiptItems.length !== validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
-            {{ $t('ReceiptAssistant.UploadOnlyNewPrices', {nbPrices: validNewReceiptItems.length}) }}
+            {{ $t('ReceiptAssistant.UploadOnlyNewPrices', { nbPrices: validNewReceiptItems.length }) }}
           </v-btn>
           <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
-            {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', {nbPrices: validReceiptItems.length}) }}
+            {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', { nbPrices: validReceiptItems.length }) }}
           </v-btn>
         </v-col>
       </v-row>
@@ -51,40 +51,45 @@
 
   <v-row v-if="step === 3">
     <v-col cols="12">
-      <v-row>
-        <v-col>
-          <h3 class="mb-4">
-            {{ $t('ContributionAssistant.WaitForUpload') }}
-          </h3>
-          <v-progress-linear
-            v-model="numberOfPricesAdded"
-            :max="totalNumberOfPricesToAdd"
-            :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
-            height="25"
-            :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
-            rounded
-          >
-            <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: totalNumberOfPricesToAdd }) }}</strong>
-          </v-progress-linear>
-        </v-col>
-      </v-row>
-      <v-row class="text-center">
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :to="'/proofs/' + proofObject.id" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded">
-            {{ $t('ContributionAssistant.GoToProof') }}
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded" @click="reloadPage">
-            {{ $t('ContributionAssistant.AddNewProof') }}
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" :to="userDashboardUrl" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded">
-            {{ $t('ContributionAssistant.GoToDashboard') }}
-          </v-btn>
-        </v-col>
-      </v-row>
+      <v-progress-linear
+        v-if="totalNumberOfPricesToAdd !== numberOfPricesAdded"
+        v-model="numberOfPricesAdded"
+        :max="totalNumberOfPricesToAdd"
+        :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
+        height="25"
+        :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
+        rounded
+      />
+      <v-card
+        v-else
+        class="border-success"
+        :title="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
+        prepend-icon="mdi-tag-check-outline"
+      >
+        <template #append>
+          <v-icon icon="mdi-checkbox-marked-circle" color="success" />
+        </template>
+        <v-divider />
+        <v-card-text class="text-center">
+          <v-row>
+            <v-col>
+              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :to="'/proofs/' + proofObject.id" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded">
+                {{ $t('ContributionAssistant.GoToProof') }}
+              </v-btn>
+            </v-col>
+            <v-col>
+              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded" @click="reloadPage">
+                {{ $t('ContributionAssistant.AddNewProof') }}
+              </v-btn>
+            </v-col>
+            <v-col>
+              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" :to="userDashboardUrl" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded">
+                {{ $t('ContributionAssistant.GoToDashboard') }}
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 </template>
