@@ -10,19 +10,21 @@
         </v-chip>
       </span>
       <span v-if="!hidePriceReceiptQuantity && price.receipt_quantity" class="mr-1">
-        <v-chip class="ml-1" variant="outlined" size="small" density="comfortable">
-          x{{ price.receipt_quantity }}
-        </v-chip>
+        <PriceQuantityPurchasedChip :priceQuantityPurchased="price.receipt_quantity" />
       </span>
     </v-col>
   </v-row>
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
+  components: {
+    PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
+  },
   props: {
     price: {
       type: Object,
