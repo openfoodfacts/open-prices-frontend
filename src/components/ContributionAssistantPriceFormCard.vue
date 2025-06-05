@@ -109,6 +109,7 @@ export default {
         price_without_discount: null,
         discount_type: null,
         currency: null,
+        receipt_quantity: null,
         proofImage: null,
         processed: null,
         detected_product_code: null,

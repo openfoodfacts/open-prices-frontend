@@ -94,8 +94,6 @@
   
 <script>
 import { defineAsyncComponent } from 'vue'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
 
@@ -143,7 +141,6 @@ export default {
     }
   },
   computed: {
-    ...mapStores(useAppStore),
     proofPriceListSum() {
       return this.items.reduce((acc, price) => {
         return acc + parseFloat(price.predicted_data.price)
@@ -169,7 +166,7 @@ export default {
   },
   methods: {
     init() {
-      if (!this?.receiptItems?.length) return
+      if (!this.receiptItems?.length) return
       this.items = this.receiptItems.map((item) => {
         if (item.price_id) {
           item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
@@ -177,7 +174,9 @@ export default {
           item.product_code = item.existingPrice.product?.code
           item.category_tag = item.existingPrice.category_tag
           item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
-          item.price_per = item.existingPrice.price_per || 'KILOGRAM'
+          item.price_per = item.existingPrice.price_per
+          item.receipt_quantity = item.existingPrice.receipt_quantity
+          // predictions
           item.predicted_data.price = item.existingPrice.price
           if (!item.predicted_data.product_name) {
             item.predicted_data.product_name = item.existingPrice.product_name
@@ -185,6 +184,7 @@ export default {
         } else {
           item.productFound = null
           item.product_code = ""
+          item.receipt_quantity = 1
           const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
           if (categoryPredicted) {
             item.category_tag = item.predicted_data.product
@@ -222,6 +222,7 @@ export default {
         product_code: '',
         product_name: '',
         price: null,
+        receipt_quantity: 1,
         productFound: null,
         isCategory: false,
         category_tag: null,
@@ -236,10 +237,11 @@ export default {
         category_tag: ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
         origins_tags: [],
         labels_tags: [],
-        price: item.predicted_data.price.toString(),
+        price: item.price ? item.price.toString() : item.predicted_data.price.toString(),
         price_per: item.price_per,
         price_is_discounted: false,
-        currency: this.appStore.getUserLastCurrencyUsed,
+        currency: this.proof.currency,
+        receipt_quantity: item.receipt_quantity.toString(),
         proof: this.proof,
         proofImage: null,
         croppedImage: null,

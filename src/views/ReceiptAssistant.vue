@@ -218,8 +218,8 @@ export default {
     },
     updateOrAddReceiptItem(receiptItemId, priceId) {
       let receiptItemData = {
-          status: 1,  // linked_to_price
-          price_id: priceId
+        status: 1,  // linked_to_price
+        price_id: priceId
       }
       if (receiptItemId != null) {
         api.updateReceiptItem(receiptItemId, receiptItemData)
