@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
   <v-card class="d-flex flex-column">
-    <v-card-title v-if="isinDialog">
+    <v-card-title v-if="isInDialog">
       {{ $t("PriceEdit.Title") }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
     </v-card-title>
     <v-card-text class="flex-grow-1">
@@ -147,7 +147,7 @@ export default {
       type: Boolean,
       default: false
     },
-    isinDialog: {
+    isInDialog: {
       type: Boolean,
       default: false,
       description: 'Whether this card is displayed in a dialog'

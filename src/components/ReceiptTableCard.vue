@@ -23,7 +23,7 @@
         <template #[`item.product`]="{ item }">
           <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
           <v-text-field 
-            v-if="!item.isCategory && !item.productFound" 
+            v-else-if="!item.productFound" 
             v-model="item.product_code" 
             :hide-details="true" 
             :rules="rules" 
@@ -31,7 +31,7 @@
             @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
             @keydown.enter="findProduct(item)" 
           />
-          <ProductCard v-if="!item.isCategory && item.productFound" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+          <ProductCard v-else :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </template>
         <template #[`item.price`]="{ item }">
           <v-text-field v-model="item.predicted_data.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
@@ -78,7 +78,7 @@
       :hideActions="false"
       :hideUploadAction="false"
       :hidePriceTagStatusMenu="true"
-      :isinDialog="true"
+      :isInDialog="true"
       forceMode="edit"
       @validatePriceTag="confirmProduct($event)"
       @close="editProductDialog = false"
@@ -197,7 +197,7 @@ export default {
     itemPriceSuffix(item) {
       let suffix = this.proof.currency
       if (item.isCategory && item.category_tag) {
-        suffix += '/' + (item.price_per === 'UNIT' ? 'U' :'KG')
+        suffix += '/' + (item.price_per === 'UNIT' ? 'U' : 'KG')
       }
       return suffix
     },
