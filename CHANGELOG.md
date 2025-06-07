@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.134.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.2...v1.134.3) (2025-06-05)
+
+
+### Technical
+
+* **Receipt Assistant:** init receipt_quantity to 1 ([58c8ec9](https://github.com/openfoodfacts/open-prices-frontend/commit/58c8ec937188a5ddfa1a0af336efb31358d21466))
+* **Receipt Assistant:** quick cleanup & typo fix ([6b02e3e](https://github.com/openfoodfacts/open-prices-frontend/commit/6b02e3ed7fbd900a9e6be1ab5420c7999135146e))
+* **Receipt Quantity:** new PriceQuantityPurchasedChip component ([#1558](https://github.com/openfoodfacts/open-prices-frontend/issues/1558)) ([ca0fc13](https://github.com/openfoodfacts/open-prices-frontend/commit/ca0fc139a44363e882ce7b740f25aa093066f21c))
+
 ## [1.134.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.1...v1.134.2) (2025-05-18)
 
 
