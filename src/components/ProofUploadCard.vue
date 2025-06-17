@@ -12,15 +12,15 @@
     <v-divider v-if="!hideHeader" />
     <v-card-text>
       <v-sheet v-if="step === 1">
+        <ProofTypeInputRow :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
         <v-alert
           v-if="typePriceTagOnly && multiple"
-          class="mb-4"
+          class="mt-4 mb-4"
           type="warning"
           variant="outlined"
           density="compact"
           :text="$t('ProofAdd.HowToMultipleShort')"
         />
-        <ProofTypeInputRow :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
         <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
         <ProofImageInputRow :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
