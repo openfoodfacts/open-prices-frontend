@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Εκκαθάριση",
-		"Contributors": "Χρηστες",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Κατανάλωση",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Συμβάλλετε",
+		"Contributors": "Χρηστες",
 		"Contributions": "Συνεισφορές",
 		"Confirm": "Επιβεβαίωση",
 		"Country": "Χώρα",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Τέλος",
 		"Error": "Σφάλμα",
+		"Experiment": "Πείραμα",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Ετικέτα",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Ετικέτα τιμής",
+		"PriceTags": "Ετικέτες τιμών",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Συμβάλλετε"
 		},
 		"Experiments": {
 			"Title": "Experiments"
