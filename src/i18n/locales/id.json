@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Tantangan masa lalu",
+		"UpcomingChallenges": "Tantangan yang akan datang"
 	},
 	"Common": {
 		"About": "Tentang",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Potong",
 		"Truncated": "Dipendekkan",
+		"TryItOut": "Cobalah",
 		"Type": "Tipe",
 		"UnknownProduct": "Produk tidak diketahui",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Untuk mengunggah beberapa label harga (lokasi toko dan tanggal yang sama), klik di sini!",
+		"PromoReceiptAssistant": "Eksperimen: cobalah asisten struk baru untuk secara otomatis mengekstrak harga dari struk Anda!"
 	},
 	"ProofCard": {
 		"Proof": "Bukti",
