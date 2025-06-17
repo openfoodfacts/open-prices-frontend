@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Vykstantis iššūkis",
 		"Chart": "Diagrama",
 		"Clear": "Clear",
-		"Contributors": "Contributors",
 		"Comment": "Comment",
 		"Community": "Bendruomenė",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Vartojimas",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Prisidėti",
+		"Contributors": "Contributors",
 		"Contributions": "Prisidėjo",
 		"Confirm": "Patvirtinti",
 		"Country": "Šalis",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Diagrama",
 		"Done": "Atlikta",
 		"Error": "Klaida",
+		"Experiment": "Eksperimentas",
 		"Experiments": "Eksperimentai",
 		"Join": "Prisijungti",
 		"Label": "Etiketė",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Pridėtos nuotraukos",
 		"PicturesAddedByYou": "Jūsų pridėtos nuotraukos",
 		"PRICE_TAG": "Kainos etiketė",
+		"PriceTags": "Kainų etiketės",
 		"PriceCount": "{count} kainos | {count} kaina | {count} kainų",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} kainos patvirtinti | {count} kaina patvirtinti | {count} kainų patvirtinti",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Bendruomenė"
+		},
+		"Contribute": {
+			"Title": "Prisidėti"
 		},
 		"Experiments": {
 			"Title": "Eksperimentai"
