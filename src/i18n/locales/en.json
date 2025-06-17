@@ -630,6 +630,7 @@
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "To upload multiple price tags (same shop location and date), click here!",
 		"PromoReceiptAssistant": "Experiment: try the new receipt assistant to automatically extract prices from your receipts!"
 	},
 	"ProofCard": {

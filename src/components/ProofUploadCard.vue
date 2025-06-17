@@ -21,6 +21,7 @@
           density="compact"
           :text="$t('ProofAdd.HowToMultipleShort')"
         />
+        <ProofPriceTagAddMultiplePromoBanner v-if="proofIsTypePriceTag && !multiple" class="mt-4 mb-4" />
         <ReceiptAssistantPromoBanner v-if="proofIsTypeReceipt && !assistedByAI" class="mt-4 mb-4" />
         <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
         <ProofImageInputRow :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
@@ -96,6 +97,7 @@ Compressor.setDefaults({
 export default {
   components: {
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
+    ProofPriceTagAddMultiplePromoBanner: defineAsyncComponent(() => import('../components/ProofPriceTagAddMultiplePromoBanner.vue')),
     ReceiptAssistantPromoBanner: defineAsyncComponent(() => import('../components/ReceiptAssistantPromoBanner.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
@@ -168,6 +170,9 @@ export default {
     },
     proofTypeFormFilled() {
       return !!this.proofForm.type
+    },
+    proofIsTypePriceTag() {
+      return this.proofTypeFormFilled && this.proofForm.type === constants.PROOF_TYPE_PRICE_TAG
     },
     proofIsTypeReceipt() {
       return this.proofTypeFormFilled && this.proofForm.type === constants.PROOF_TYPE_RECEIPT

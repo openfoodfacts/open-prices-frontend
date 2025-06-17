@@ -3,7 +3,6 @@
     icon="mdi-draw"
     bg-color="info"
     rounded
-    lines="2"
     density="compact"
     @click="$router.push('/experiments/receipt-assistant')"
   >
