@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Προηγούμενες προκλήσεις",
+		"UpcomingChallenges": "Επερχόμενες προκλήσεις"
 	},
 	"Common": {
 		"About": "Σχετικά",
@@ -411,6 +413,7 @@
 		"Total": "Σύνολο",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Δοκιμάστε το",
 		"Type": "Τύπος",
 		"UnknownProduct": "Άγνωστο προϊόν",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Για να ανεβάσετε πολλές ετικέτες τιμών (ίδια τοποθεσία και ημερομηνία καταστήματος), κάντε κλικ εδώ!",
+		"PromoReceiptAssistant": "Πείραμα: δοκιμάστε τον νέο βοηθό αποδείξεων για να εξάγετε αυτόματα τιμές από τις αποδείξεις σας!"
 	},
 	"ProofCard": {
 		"Proof": "Επαλήθευση",
