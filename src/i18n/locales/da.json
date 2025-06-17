@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "Ingen udfordring igangværende i øjeblikket, vend venligst tilbage senere!",
 		"PastOrFutureChallenges": "Tidligere eller fremtidige udfordringer",
-		"OngoingChallenges": "Igangværende udfordringer"
+		"OngoingChallenges": "Igangværende udfordringer",
+		"PastChallenges": "Tidligere udfordringer",
+		"UpcomingChallenges": "Kommende udfordringer"
 	},
 	"Common": {
 		"About": "Om",
@@ -411,6 +413,7 @@
 		"Total": "I alt",
 		"Truncate": "Afkort",
 		"Truncated": "Afkortet",
+		"TryItOut": "Prøv det",
 		"Type": "Type",
 		"UnknownProduct": "Ukendt produkt",
 		"UnknownProductSource": "Ukendt produktkilde",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Tillad fællesskabet at validere priser udtrukket af AI",
 		"PriceTagAIWarning": "AI vil undersøge dine beviser for at udtrække priser.",
 		"ReceiptAllowAI": "Tillad at AI unders\nger din kvittering for at udtrække priser",
-		"ReceiptAIWarning": "AI vil undersøge din kvittering for at udtrække priser."
+		"ReceiptAIWarning": "AI vil undersøge din kvittering for at udtrække priser.",
+		"PromoProofPriceTagAddMultiple": "For at uploade flere prismærker (samme butikslokation og dato), klik her!",
+		"PromoReceiptAssistant": "Eksperiment: Prøv den nye kvitteringsassistent til automatisk at udtrække priser fra dine kvitteringer!"
 	},
 	"ProofCard": {
 		"Proof": "Bevis",
