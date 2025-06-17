@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "अतीताः आव्हानाः",
+		"UpcomingChallenges": "आगामिनि आव्हानानि"
 	},
 	"Common": {
 		"About": "About",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "प्रयतस्व",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "बहुमूल्यं (एकमेव दुकानस्थानं तिथिश्च) अपलोड् कर्तुं अत्र क्लिक् कुर्वन्तु!",
+		"PromoReceiptAssistant": "प्रयोगः : स्वस्य रसीदानां मूल्यानि स्वयमेव निष्कासयितुं नूतनं रसीदसहायकं प्रयतस्व!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
