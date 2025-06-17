@@ -16,7 +16,7 @@
   <v-row v-if="step === 1">
     <!-- Step 1: proof (image, location, date & currency) -->
     <v-col cols="12" md="6">
-      <ProofUploadCard @proof="onProofUploaded($event)" />
+      <ProofUploadCard :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" @proof="onProofUploaded($event)" />
     </v-col>
   </v-row>
 
@@ -200,6 +200,8 @@ export default {
       loading: false,
       priceSuccessMessage: false,
       // proof data
+      typePriceTagOnly: false,  // see mounted
+      typeReceiptOnly: false,  // see mounted
       proofObject: null,
       proofPriceExistingList: [],
       // product price data
@@ -248,6 +250,15 @@ export default {
     userDashboardUrl() {
       const dashboardTab = (this.proofObject && this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
       return `/dashboard?multipleSuccess=true&tab=${dashboardTab}`
+    }
+  },
+  mounted() {
+    if (this.$route.query.proof_type) {
+      if (this.$route.query.proof_type === constants.PROOF_TYPE_PRICE_TAG) {
+        this.typePriceTagOnly = true
+      } else if (this.$route.query.proof_type === constants.PROOF_TYPE_RECEIPT) {
+        this.typeReceiptOnly = true
+      }
     }
   },
   methods: {
