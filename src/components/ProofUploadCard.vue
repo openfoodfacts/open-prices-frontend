@@ -21,6 +21,23 @@
           density="compact"
           :text="$t('ProofAdd.HowToMultipleShort')"
         />
+        <v-banner
+          v-if="proofIsTypeReceipt && !assistedByAI"
+          class="mt-4 mb-4"
+          icon="mdi-draw"
+          bg-color="info"
+          rounded
+          lines="2"
+          density="compact"
+          @click="$router.push('/experiments/receipt-assistant')"
+        >
+          <v-banner-text style="padding-inline-end:10px;">
+            {{ $t('ProofAdd.PromoReceiptAssistant') }}
+          </v-banner-text>
+          <v-banner-actions>
+            <v-btn icon="mdi-arrow-right" :aria-label="$t('Common.TryItOut')" to="/experiments/receipt-assistant" />
+          </v-banner-actions>
+        </v-banner>
         <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
         <ProofImageInputRow :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
@@ -166,6 +183,9 @@ export default {
     },
     proofTypeFormFilled() {
       return !!this.proofForm.type
+    },
+    proofIsTypeReceipt() {
+      return this.proofTypeFormFilled && this.proofForm.type === constants.PROOF_TYPE_RECEIPT
     },
     proofImageFormFilled() {
       return !!this.proofImageList.length
