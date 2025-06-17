@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Sfide passate",
+		"UpcomingChallenges": "Prossime sfide"
 	},
 	"Common": {
 		"About": "Informazioni",
@@ -411,6 +413,7 @@
 		"Total": "Totale",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Provalo",
 		"Type": "Tipo",
 		"UnknownProduct": "Prodotto sconosciuto",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Per caricare più cartellini dei prezzi (stesso negozio e stessa data), clicca qui!",
+		"PromoReceiptAssistant": "Esperimento: prova il nuovo assistente per ricevute che estrae automaticamente i prezzi dalle tue ricevute!"
 	},
 	"ProofCard": {
 		"Proof": "Prova",
