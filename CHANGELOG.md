@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.135.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.3...v1.135.0) (2025-06-17)
+
+
+### Features
+
+* **Proof upload:** Add a callout-promo to the multiple price tag proof upload ([#1562](https://github.com/openfoodfacts/open-prices-frontend/issues/1562)) ([ebd64f2](https://github.com/openfoodfacts/open-prices-frontend/commit/ebd64f2283a30a5376f80fdda1794e3d5142280e))
+* **Receipt Assistant:** Add a callout-promo in the ProofUploadCard ([#1560](https://github.com/openfoodfacts/open-prices-frontend/issues/1560)) ([6cab0f2](https://github.com/openfoodfacts/open-prices-frontend/commit/6cab0f25a777a8dc8c6c445729d7ebed742d91a3))
+
+
+### Technical
+
+* **Challenges:** new section to list upcoming challenges ([#1561](https://github.com/openfoodfacts/open-prices-frontend/issues/1561)) ([d789c8a](https://github.com/openfoodfacts/open-prices-frontend/commit/d789c8a67f620c94d8d8ca938788ff21bd2d288c))
+* **l10n:** New Crowdin translations to review and merge ([#1546](https://github.com/openfoodfacts/open-prices-frontend/issues/1546)) ([1dccd00](https://github.com/openfoodfacts/open-prices-frontend/commit/1dccd007115ecd60c6e68dac8217f1e33f9d3dab))
+* **Proof upload:** move down the multiple price tag upload warning alert. ref [#1175](https://github.com/openfoodfacts/open-prices-frontend/issues/1175) ([2883cc5](https://github.com/openfoodfacts/open-prices-frontend/commit/2883cc5a9e1ae0fc4838bd1b2247bec6f187135a))
+* **Receipt Assistant:** move to new promo-callout to a dedicated component. ref [#1560](https://github.com/openfoodfacts/open-prices-frontend/issues/1560) ([ed2f5ea](https://github.com/openfoodfacts/open-prices-frontend/commit/ed2f5ea4aff829a26807af26a1254d787607327d))
+
 ## [1.134.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.2...v1.134.3) (2025-06-05)
 
 
