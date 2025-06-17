@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "過去的挑戰",
+		"UpcomingChallenges": "即將到來的挑戰"
 	},
 	"Common": {
 		"About": "關於",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "嘗試一下",
 		"Type": "類型 ",
 		"UnknownProduct": "不明產品",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "要上傳多個價格標籤（相同的商店位置和日期），請點擊這裡！",
+		"PromoReceiptAssistant": "實驗：嘗試使用新的收據助手自動從收據中提取價格！"
 	},
 	"ProofCard": {
 		"Proof": "證明",
