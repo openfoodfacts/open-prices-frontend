@@ -76,6 +76,8 @@
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
+    :typePriceTagOnly="typePriceTagOnly"
+    :typeReceiptOnly="typeReceiptOnly"
     @recentProofSelected="recentProofSelected($event)"
     @close="userRecentProofsDialog = false"
   />
@@ -97,6 +99,14 @@ export default {
         type: null,
         proof_id: null
       })
+    },
+    typePriceTagOnly: {
+      type: Boolean,
+      default: false
+    },
+    typeReceiptOnly: {
+      type: Boolean,
+      default: false
     },
     hideRecentProofChoice: {
       type: Boolean,

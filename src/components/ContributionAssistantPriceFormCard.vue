@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
   <v-card class="d-flex flex-column">
-    <v-card-title v-if="isinDialog">
+    <v-card-title v-if="isInDialog">
       {{ $t("PriceEdit.Title") }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
     </v-card-title>
     <v-card-text class="flex-grow-1">
@@ -16,7 +16,7 @@
           />
         </v-col>
       </v-row>
-      <ProductInputRow :productForm="productPriceForm" :mode="mode" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
+      <ProductInputRow :productForm="productPriceForm" :mode="mode" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="hideProductBarcodeScannerTab" @filled="productFormFilled = $event" />
       <PriceInputRow :priceForm="productPriceForm" :mode="mode" :hideCurrencyChoice="true" :product="productPriceForm.product" :proofType="productPriceForm.proof ? productPriceForm.proof.type : null" @filled="pricePriceFormFilled = $event" />
     </v-card-text>
     <v-divider v-if="!hideProofDetails" />
@@ -109,6 +109,7 @@ export default {
         price_without_discount: null,
         discount_type: null,
         currency: null,
+        receipt_quantity: null,
         proofImage: null,
         processed: null,
         detected_product_code: null,
@@ -116,6 +117,10 @@ export default {
       })
     },
     showProductNameField: {
+      type: Boolean,
+      default: false
+    },
+    hideProductBarcodeScannerTab: {
       type: Boolean,
       default: false
     },
@@ -143,7 +148,7 @@ export default {
       type: Boolean,
       default: false
     },
-    isinDialog: {
+    isInDialog: {
       type: Boolean,
       default: false,
       description: 'Whether this card is displayed in a dialog'

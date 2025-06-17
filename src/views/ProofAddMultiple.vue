@@ -45,7 +45,7 @@
                 color="primary"
                 :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-checkbox-marked-circle-plus-outline"
-                @click="goToPriceValidation"
+                :to="getPriceValidationUrl"
               >
                 {{ $t('Common.ValidatePrices') }}
               </v-btn>
@@ -55,7 +55,7 @@
                 color="primary"
                 :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-account-circle"
-                :to="userDashboardUrl"
+                :to="getUserDashboardUrl"
               >
                 {{ $t('Common.MyDashboard') }}
               </v-btn>
@@ -92,7 +92,10 @@ export default {
     }
   },
   computed: {
-    userDashboardUrl() {
+    getPriceValidationUrl() {
+      return '/experiments/price-validation-assistant'
+    },
+    getUserDashboardUrl() {
       const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
       return `/dashboard?proofSingleSuccess=true&tab=${dashboardTab}`
     }
@@ -101,9 +104,6 @@ export default {
     proofUploadDone(proofUploadCount) {
       this.proofUploadCount = proofUploadCount
       this.step = 2
-    },
-    goToPriceValidation() {
-      this.$router.push({ path: '/experiments/price-validation-assistant' })
     },
     reloadPage() {
       window.location.reload()

@@ -23,7 +23,7 @@
         <template #[`item.product`]="{ item }">
           <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
           <v-text-field 
-            v-if="!item.isCategory && !item.productFound" 
+            v-else-if="!item.productFound" 
             v-model="item.product_code" 
             :hide-details="true" 
             :rules="rules" 
@@ -31,7 +31,7 @@
             @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
             @keydown.enter="findProduct(item)" 
           />
-          <ProductCard v-if="!item.isCategory && item.productFound" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+          <ProductCard v-else :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </template>
         <template #[`item.price`]="{ item }">
           <v-text-field v-model="item.predicted_data.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
@@ -49,6 +49,10 @@
 
     <v-card-actions>
       <v-row>
+        <v-col cols="6">
+          <ProofReceiptPriceCountChip v-if="proof && items" class="mr-1" :uploadedCount="items.length" :totalCount="proof.receipt_price_count" />
+          <ProofReceiptPriceTotalChip v-if="proof && items" :uploadedCount="proofPriceListSum" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
+        </v-col>
         <v-spacer />
         <v-col>
           <v-btn
@@ -69,11 +73,12 @@
       v-if="editProductItem"
       :productPriceForm="editProductItem"
       :showProductNameField="true"
+      :hideProductBarcodeScannerTab="false"
       :hideProofDetails="true"
       :hideActions="false"
       :hideUploadAction="false"
       :hidePriceTagStatusMenu="true"
-      :isinDialog="true"
+      :isInDialog="true"
       forceMode="edit"
       @validatePriceTag="confirmProduct($event)"
       @close="editProductDialog = false"
@@ -88,16 +93,16 @@
 </template>
   
 <script>
-import api from '../services/api'
 import { defineAsyncComponent } from 'vue'
+import api from '../services/api'
 import constants from '../constants'
-import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
 
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
+    ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
+    ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
   },
@@ -135,9 +140,12 @@ export default {
       ],
     }
   },
-
   computed: {
-    ...mapStores(useAppStore),
+    proofPriceListSum() {
+      return this.items.reduce((acc, price) => {
+        return acc + parseFloat(price.predicted_data.price)
+      }, 0)
+    }
   },
   watch: {
     items: {
@@ -158,7 +166,7 @@ export default {
   },
   methods: {
     init() {
-      if (!this?.receiptItems?.length) return
+      if (!this.receiptItems?.length) return
       this.items = this.receiptItems.map((item) => {
         if (item.price_id) {
           item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
@@ -166,7 +174,9 @@ export default {
           item.product_code = item.existingPrice.product?.code
           item.category_tag = item.existingPrice.category_tag
           item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
-          item.price_per = item.existingPrice.price_per || 'KILOGRAM'
+          item.price_per = item.existingPrice.price_per
+          item.receipt_quantity = item.existingPrice.receipt_quantity
+          // predictions
           item.predicted_data.price = item.existingPrice.price
           if (!item.predicted_data.product_name) {
             item.predicted_data.product_name = item.existingPrice.product_name
@@ -174,6 +184,7 @@ export default {
         } else {
           item.productFound = null
           item.product_code = ""
+          item.receipt_quantity = 1
           const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
           if (categoryPredicted) {
             item.category_tag = item.predicted_data.product
@@ -186,7 +197,7 @@ export default {
     itemPriceSuffix(item) {
       let suffix = this.proof.currency
       if (item.isCategory && item.category_tag) {
-        suffix += '/' + (item.price_per === 'UNIT' ? 'U' :'KG')
+        suffix += '/' + (item.price_per === 'UNIT' ? 'U' : 'KG')
       }
       return suffix
     },
@@ -211,6 +222,7 @@ export default {
         product_code: '',
         product_name: '',
         price: null,
+        receipt_quantity: 1,
         productFound: null,
         isCategory: false,
         category_tag: null,
@@ -225,10 +237,11 @@ export default {
         category_tag: ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
         origins_tags: [],
         labels_tags: [],
-        price: item.predicted_data.price.toString(),
+        price: item.price ? item.price.toString() : item.predicted_data.price.toString(),
         price_per: item.price_per,
         price_is_discounted: false,
-        currency: this.appStore.getUserLastCurrencyUsed,
+        currency: this.proof.currency,
+        receipt_quantity: item.receipt_quantity.toString(),
         proof: this.proof,
         proofImage: null,
         croppedImage: null,

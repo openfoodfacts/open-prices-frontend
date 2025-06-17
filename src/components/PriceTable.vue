@@ -1,5 +1,12 @@
 <template>
   <v-data-table :headers="headers" :items="priceList" hide-default-footer>
+    <template #[`item.product_name`]="{ item }">
+      {{ getPriceProductTitle(item) }}
+    </template>
+    <template #[`item.product_details`]="{ item }">
+      <ProductDetails v-if="item.product" :product="item.product" :readonly="true" />
+      <PriceCategoryDetails v-else :price="item" />
+    </template>
     <template #[`item.location`]="{ item }">
       <LocationChip :location="item.location" :locationId="item.location_id" :readonly="true" />
     </template>
@@ -17,9 +24,13 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 
 export default {
   components: {
+    ProductDetails: defineAsyncComponent(() => import('../components/ProductDetails.vue')),
+    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
     LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
@@ -30,17 +41,48 @@ export default {
       type: Array,
       default: () => []
     },
+    source: {
+      type: String,
+      default: 'product',
+      examples: ['product', 'proof']
+    }
   },
   data() {
     return {
-      headers: [
+      productPriceHeaders: [
         { title: 'Location', key: 'location' },
         { title: 'Date', key: 'date'},
         { title: 'Price', key: 'price' },
         { title: 'Added', key: 'created' },
         // { title: 'Actions', key: 'actions' },
       ],
+      proofPriceHeaders: [
+        { title: 'Product', key: 'product_name' },
+        { title: 'Details', key: 'product_details' },
+        { title: 'Price', key: 'price' },
+        { title: 'Added', key: 'created' },
+        // { title: 'Actions', key: 'actions' },
+      ]
     }
+  },
+  computed: {
+    ...mapStores(useAppStore),
+    headers() {
+      return this[`${this.source}PriceHeaders`]
+    }
+  },
+  methods: {
+    getPriceProductTitle(price) {
+      if (price.product && price.product.code) {
+        return price.product.product_name || price.product_code
+      } else if (price.category_tag) {
+        return price.category_tag
+        // TODO: manage async
+        // return utils.getLocaleCategoryTag(this.appStore.getUserLanguage, price.category_tag).then((category) => {
+        //   return category.name
+        // })
+      }
+    },
   }
 }
 </script>

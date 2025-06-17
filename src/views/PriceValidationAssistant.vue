@@ -10,7 +10,14 @@
 
   <v-row class="mt-0">
     <v-col v-for="(productPriceForm, index) in productPriceForms" :key="index" cols="12" md="6" xl="4">
-      <ContributionAssistantPriceFormCard height="100%" :productPriceForm="productPriceForm" :loading="productPriceForm.loading" @updatePriceTagStatus="updatePriceTagStatus(index, $event)" @validatePriceTag="validatePriceTag(index)" />
+      <ContributionAssistantPriceFormCard
+        height="100%"
+        :productPriceForm="productPriceForm"
+        :hideProductBarcodeScannerTab="true"
+        :loading="productPriceForm.loading"
+        @updatePriceTagStatus="updatePriceTagStatus(index, $event)"
+        @validatePriceTag="validatePriceTag(index)"
+      />
     </v-col>
   </v-row>
 

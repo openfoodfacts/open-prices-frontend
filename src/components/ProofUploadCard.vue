@@ -12,17 +12,19 @@
     <v-divider v-if="!hideHeader" />
     <v-card-text>
       <v-sheet v-if="step === 1">
+        <ProofTypeInputRow :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
         <v-alert
           v-if="typePriceTagOnly && multiple"
-          class="mb-4"
+          class="mt-4 mb-4"
           type="warning"
           variant="outlined"
           density="compact"
           :text="$t('ProofAdd.HowToMultipleShort')"
         />
-        <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" :hideProofTypePriceTagChoice="typeReceiptOnly" />
+        <ProofPriceTagAddMultiplePromoBanner v-if="proofIsTypePriceTag && !multiple" class="mt-4 mb-4" />
+        <ReceiptAssistantPromoBanner v-if="proofIsTypeReceipt && !assistedByAI" class="mt-4 mb-4" />
         <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
-        <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
+        <ProofImageInputRow :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
       </v-sheet>
       <v-sheet v-else-if="step === 2">
@@ -95,6 +97,8 @@ Compressor.setDefaults({
 export default {
   components: {
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
+    ProofPriceTagAddMultiplePromoBanner: defineAsyncComponent(() => import('../components/ProofPriceTagAddMultiplePromoBanner.vue')),
+    ReceiptAssistantPromoBanner: defineAsyncComponent(() => import('../components/ReceiptAssistantPromoBanner.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
@@ -166,6 +170,12 @@ export default {
     },
     proofTypeFormFilled() {
       return !!this.proofForm.type
+    },
+    proofIsTypePriceTag() {
+      return this.proofTypeFormFilled && this.proofForm.type === constants.PROOF_TYPE_PRICE_TAG
+    },
+    proofIsTypeReceipt() {
+      return this.proofTypeFormFilled && this.proofForm.type === constants.PROOF_TYPE_RECEIPT
     },
     proofImageFormFilled() {
       return !!this.proofImageList.length

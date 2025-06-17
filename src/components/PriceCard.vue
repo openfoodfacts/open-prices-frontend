@@ -12,21 +12,8 @@
           </h3>
 
           <p v-if="!hideProductDetails">
-            <span v-if="hasProduct">
-              <PriceCountChip class="mr-1" :count="product.price_count" @click="goToProduct()" />
-              <span v-if="hasProductSource">
-                <ProductBrands :productBrands="product.brands" :readonly="readonly" />
-                <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
-                <!-- ProductCategoriesChip, ProductLabelsChip -->
-                <br v-if="showProductBarcode">
-                <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
-              </span>
-              <ProductMissingChip v-else />
-            </span>
-            <span v-else>
-              <PriceOrigins v-if="hasPriceOrigin" class="mr-1" :priceOrigins="price.origins_tags" />
-              <PriceLabels v-if="hasPriceLabels" class="mr-1" :priceLabels="price.labels_tags" />
-            </span>
+            <ProductDetails v-if="hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :readonly="readonly" />
+            <PriceCategoryDetails v-else :price="price" />
           </p>
 
           <PricePriceRow v-if="price" class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
@@ -42,17 +29,13 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
   components: {
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    ProductBrands: defineAsyncComponent(() => import('../components/ProductBrands.vue')),
-    ProductQuantityChip: defineAsyncComponent(() => import('../components/ProductQuantityChip.vue')),
-    ProductBarcodeChip: defineAsyncComponent(() => import('../components/ProductBarcodeChip.vue')),
-    ProductMissingChip: defineAsyncComponent(() => import('../components/ProductMissingChip.vue')),
-    PriceOrigins: defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
-    PriceLabels: defineAsyncComponent(() => import('../components/PriceLabels.vue')),
+    ProductDetails: defineAsyncComponent(() => import('../components/ProductDetails.vue')),
+    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue'))
   },
@@ -121,7 +104,7 @@ export default {
   data() {
     return {
       productTitle: null,  // see init
-      productImageDefault: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
+      productImageDefault: constants.PRODUCT_IMAGE_DEFAULT_URL
     }
   },
   computed: {
@@ -140,21 +123,6 @@ export default {
     },
     hasProductCode() {
       return this.hasProduct && !!this.product.code
-    },
-    hasProductName() {
-      return this.hasProduct && !!this.product.product_name
-    },
-    hasProductSource() {
-      return this.hasProduct && !!this.product.source
-    },
-    hasPriceOrigin() {
-      return this.hasPrice && !!this.price.origins_tags && this.price.origins_tags.length
-    },
-    hasPriceLabels() {
-      return this.hasPrice && !!this.price.labels_tags && this.price.labels_tags.length
-    },
-    showProductBarcode() {
-      return !this.hideProductBarcode
     },
   },
   mounted() {

@@ -1,5 +1,59 @@
 # Changelog
 
+## [1.134.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.2...v1.134.3) (2025-06-05)
+
+
+### Technical
+
+* **Receipt Assistant:** init receipt_quantity to 1 ([58c8ec9](https://github.com/openfoodfacts/open-prices-frontend/commit/58c8ec937188a5ddfa1a0af336efb31358d21466))
+* **Receipt Assistant:** quick cleanup & typo fix ([6b02e3e](https://github.com/openfoodfacts/open-prices-frontend/commit/6b02e3ed7fbd900a9e6be1ab5420c7999135146e))
+* **Receipt Quantity:** new PriceQuantityPurchasedChip component ([#1558](https://github.com/openfoodfacts/open-prices-frontend/issues/1558)) ([ca0fc13](https://github.com/openfoodfacts/open-prices-frontend/commit/ca0fc139a44363e882ce7b740f25aa093066f21c))
+
+## [1.134.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.1...v1.134.2) (2025-05-18)
+
+
+### Technical
+
+* **Proof form:** simplify a bit the ProofTypeInputRow code ([de144b5](https://github.com/openfoodfacts/open-prices-frontend/commit/de144b559d082890d6b73ac949956162292c774d))
+* **Receipt Assistant:** hide progress bar when all prices have been uploaded. mimick other workflows. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([f3c0f34](https://github.com/openfoodfacts/open-prices-frontend/commit/f3c0f34b998c4771ab1f8d4536908156347c7282))
+* **Receipt Assistant:** in the product edit modal, allow scanning the barcode. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([c3fbd4f](https://github.com/openfoodfacts/open-prices-frontend/commit/c3fbd4f59e898299d6a2ef480c9e7845aef71714))
+* **Receipt Assistant:** UserRecentProofsDialog: show only receipt proofs. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([abf1fc2](https://github.com/openfoodfacts/open-prices-frontend/commit/abf1fc2ae847012c8d5e30887f921e29b13ebc3f))
+
+## [1.134.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.0...v1.134.1) (2025-05-08)
+
+
+### Bug Fixes
+
+* **Challenges:** card links: use 'to' instead of 'click' ([1419327](https://github.com/openfoodfacts/open-prices-frontend/commit/1419327f819c4092722171bda2f3e997362006c0))
+* **Products:** fix missing hasProductSource in ProductCard. ref [#1547](https://github.com/openfoodfacts/open-prices-frontend/issues/1547) ([5541cc5](https://github.com/openfoodfacts/open-prices-frontend/commit/5541cc5e32e836c7c5310dad02a572599fc706f8))
+
+
+### Technical
+
+* **Products:** move product default image url to constants ([0baa690](https://github.com/openfoodfacts/open-prices-frontend/commit/0baa69021cc88f27d08796f31e146e48d1092a78))
+* **URLs:** use 'to' instead of 'click' when possible ([42af6c1](https://github.com/openfoodfacts/open-prices-frontend/commit/42af6c1e88e93eef9b8faf52c2d5449884e6b15d))
+
+## [1.134.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.133.1...v1.134.0) (2025-05-06)
+
+
+### Features
+
+* **Barcode Scanner:** use openfoodfacts-webcomponents (and allow user to switch back to html5-qrcode) ([#1545](https://github.com/openfoodfacts/open-prices-frontend/issues/1545)) ([6e94b98](https://github.com/openfoodfacts/open-prices-frontend/commit/6e94b98b981295ea38bb5c3350eda27585d93699))
+
+
+### Bug Fixes
+
+* **Products:** better manage non-en category tags ([#1549](https://github.com/openfoodfacts/open-prices-frontend/issues/1549)) ([e33733d](https://github.com/openfoodfacts/open-prices-frontend/commit/e33733da94047f467baf747dcbd824189c681f67))
+
+
+### Technical
+
+* **Products:** new PriceCategoryDetails component ([#1548](https://github.com/openfoodfacts/open-prices-frontend/issues/1548)) ([21a3495](https://github.com/openfoodfacts/open-prices-frontend/commit/21a349553002aad886d48c72e679ccbcb3638586))
+* **Products:** new ProductDetails component ([#1547](https://github.com/openfoodfacts/open-prices-frontend/issues/1547)) ([1b8c67c](https://github.com/openfoodfacts/open-prices-frontend/commit/1b8c67cada2b8cb709ed5a7d3ebf3885844b443c))
+* **Proof detail:** add display toggle. allow displaying prices by list or table ([#1543](https://github.com/openfoodfacts/open-prices-frontend/issues/1543)) ([39a6a17](https://github.com/openfoodfacts/open-prices-frontend/commit/39a6a1735bd1d6ea6840051e9c2c582f7765a46d))
+* **Receipt Assistant:** move table actions into row with spacer. ref [#1507](https://github.com/openfoodfacts/open-prices-frontend/issues/1507) ([aebf792](https://github.com/openfoodfacts/open-prices-frontend/commit/aebf7926ffc9b1797c5acc1b3912d5500893a8e4))
+* **Receipt Assistant:** show price count & price total below table ([#1542](https://github.com/openfoodfacts/open-prices-frontend/issues/1542)) ([d8b2382](https://github.com/openfoodfacts/open-prices-frontend/commit/d8b238214344e5d9324b7428a7785d7d15a70517))
+
 ## [1.133.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.133.0...v1.133.1) (2025-05-02)
 
 

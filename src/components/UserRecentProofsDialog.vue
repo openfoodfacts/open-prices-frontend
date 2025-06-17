@@ -12,7 +12,7 @@
           {{ $t('Common.ProofCount', { count: userProofTotal }) }}
         </v-chip>
         <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
-        <FilterMenu v-if="userProofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
+        <FilterMenu v-if="!hideFilterMenu && userProofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
       </v-card-title>
 
       <v-divider />
@@ -48,6 +48,16 @@ export default {
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
+  props: {
+    typePriceTagOnly: {
+      type: Boolean,
+      default: false
+    },
+    typeReceiptOnly: {
+      type: Boolean,
+      default: false
+    }
+  },
   emits: ['recentProofSelected', 'close'],
   data() {
     return {
@@ -65,6 +75,9 @@ export default {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
+    },
+    hideFilterMenu() {
+      return this.typePriceTagOnly || this.typeReceiptOnly
     },
     dialogHeight() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
@@ -88,6 +101,11 @@ export default {
     }
   },
   mounted() {
+    if (this.typePriceTagOnly) {
+      this.currentType = constants.PROOF_TYPE_PRICE_TAG
+    } else if (this.typeReceiptOnly) {
+      this.currentType = constants.PROOF_TYPE_RECEIPT
+    }
     this.initUserProofList()
   },
   methods: {
