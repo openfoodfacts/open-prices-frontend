@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Korábbi kihívások",
+		"UpcomingChallenges": "Közelgő kihívások"
 	},
 	"Common": {
 		"About": "Névjegy",
@@ -411,6 +413,7 @@
 		"Total": "Összesen",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Próbáld ki",
 		"Type": "Típus",
 		"UnknownProduct": "Ismeretlen termék",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Több árcédula feltöltéséhez (ugyanazzal az üzlet helyszínével és dátumával), kattintson ide!",
+		"PromoReceiptAssistant": "Kísérlet: próbáld ki az új nyugtaasszisztenst, amely automatikusan kinyeri az árakat a nyugtáidból!"
 	},
 	"ProofCard": {
 		"Proof": "Bizonylat",
