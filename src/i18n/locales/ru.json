@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Прошлые проблемы",
+		"UpcomingChallenges": "Предстоящие задачи"
 	},
 	"Common": {
 		"About": "О приложении",
@@ -411,6 +413,7 @@
 		"Total": "Всего",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Попробуйте это",
 		"Type": "Тип",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Чтобы загрузить несколько ценников (одно и то же местоположение магазина и дата), нажмите здесь!",
+		"PromoReceiptAssistant": "Экспериментируйте: попробуйте новый помощник по чекам, который автоматически извлекает цены из ваших чеков!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
