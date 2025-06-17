@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.136.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.135.0...v1.136.0) (2025-06-17)
+
+
+### Features
+
+* new Contribute page ([#1520](https://github.com/openfoodfacts/open-prices-frontend/issues/1520)) ([044b88e](https://github.com/openfoodfacts/open-prices-frontend/commit/044b88e4bc7dc89bcbe6790e7dd113318f000cac))
+
+
+### Technical
+
+* **Proof upload:** allow setting the proof_type on init ([#1563](https://github.com/openfoodfacts/open-prices-frontend/issues/1563)) ([1787cec](https://github.com/openfoodfacts/open-prices-frontend/commit/1787ceccc6bc87951054822ed9a73b8d1a4f5db5))
+
 ## [1.135.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.134.3...v1.135.0) (2025-06-17)
 
 
