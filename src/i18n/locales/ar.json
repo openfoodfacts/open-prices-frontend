@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "التحديات الماضية",
+		"UpcomingChallenges": "التحديات القادمة"
 	},
 	"Common": {
 		"About": "حول",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "جربها",
 		"Type": "النوع",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "لتحميل بطاقات الأسعار المتعددة (نفس موقع المتجر والتاريخ)، انقر هنا!",
+		"PromoReceiptAssistant": "تجربة: جرب مساعد الإيصال الجديد لاستخراج الأسعار تلقائيًا من إيصالاتك!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
