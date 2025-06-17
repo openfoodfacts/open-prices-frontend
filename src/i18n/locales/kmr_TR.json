@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Zehmetiyên berê",
+		"UpcomingChallenges": "Zehmetiyên pêşerojê"
 	},
 	"Common": {
 		"About": "Li_ser",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Biceribîne",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Ji bo barkirina gelek etîketên bihayê (heman cîh û dîroka dikanê), li vir bikirtînin!",
+		"PromoReceiptAssistant": "Ceribandin: alîkarê wergirtinê yê nû biceribînin da ku bi otomatîkî bihayan ji wergirtinên xwe derxîne!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
