@@ -12,9 +12,9 @@
     <v-btn v-else prepend-icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')">
       {{ $t('Common.Search') }}
     </v-btn>
-    <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrices')" />
-    <v-btn v-else prepend-icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrices')">
-      {{ $t('Common.AddPrices') }}
+    <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-tag-plus-outline" to="/contribute" :aria-label="$t('Common.Contribute')" />
+    <v-btn v-else prepend-icon="mdi-tag-plus-outline" to="/contribute" :aria-label="$t('Common.Contribute')">
+      {{ $t('Common.Contribute') }}
     </v-btn>
     <template v-if="!username" #append>
       <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-login" to="/sign-in" :aria-label="$t('Common.SignIn')" />
