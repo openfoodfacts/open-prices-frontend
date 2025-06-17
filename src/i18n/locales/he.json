@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "אין אתגר כרגע, נא לחזור מאוחר יותר!",
 		"PastOrFutureChallenges": "אתגרי עבר או עתיד",
-		"OngoingChallenges": "אתגרים שמתקיימים כרגע"
+		"OngoingChallenges": "אתגרים שמתקיימים כרגע",
+		"PastChallenges": "אתגרים מהעבר",
+		"UpcomingChallenges": "אתגרים קרובים"
 	},
 	"Common": {
 		"About": "על אודות",
@@ -411,6 +413,7 @@
 		"Total": "סך הכול",
 		"Truncate": "קיצוץ",
 		"Truncated": "קטוע",
+		"TryItOut": "לנסות את זה",
 		"Type": "סוג",
 		"UnknownProduct": "מוצר לא ידוע",
 		"UnknownProductSource": "מקור המוצר לא ידוע",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "לאפשר לקהילה לאמת מחירים שחולצו על ידי בינה מלאכותית",
 		"PriceTagAIWarning": "בינה מלאכותית תרוץ על ההוכחות שלך כדי לחלץ מחירים.",
 		"ReceiptAllowAI": "לאפשר להריץ בינה מלאכותית על הקבלה שלך כדי לחלץ מחירים",
-		"ReceiptAIWarning": "בינה מלאכותית תרוץ על הקבלה שלך כדי לחלץ מחירים."
+		"ReceiptAIWarning": "בינה מלאכותית תרוץ על הקבלה שלך כדי לחלץ מחירים.",
+		"PromoProofPriceTagAddMultiple": "להעלאת מספר תגיות מחיר (אותו מיקום ותאריך חנות), לחצו כאן!",
+		"PromoReceiptAssistant": "ניסוי: אפשר לנסות את עוזר הקבלות החדש כדי לחלץ מחירים מהקבלות שלך אוטומטית!"
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",
