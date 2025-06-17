@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Buvę ar būsimi iššūkiai",
-		"OngoingChallenges": "Vykstantys iššūkiai"
+		"OngoingChallenges": "Vykstantys iššūkiai",
+		"PastChallenges": "Buvę iššūkiai",
+		"UpcomingChallenges": "Būsimi iššūkiai"
 	},
 	"Common": {
 		"About": "Apie",
@@ -411,6 +413,7 @@
 		"Total": "Iš viso",
 		"Truncate": "Sutrumpinti",
 		"Truncated": "Sutrumpintas",
+		"TryItOut": "Išbandykite",
 		"Type": "Tipas",
 		"UnknownProduct": "Nežinomas produktas",
 		"UnknownProductSource": "Nežinomas produkto šaltinis",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Norėdami įkelti kelias kainų etiketes (tą pačią parduotuvės vietą ir datą), spustelėkite čia!",
+		"PromoReceiptAssistant": "Eksperimentuokite: išbandykite naują kvitų asistentą, kuris automatiškai nuskaitys kainas iš jūsų kvitų!"
 	},
 	"ProofCard": {
 		"Proof": "Įrodymai",
