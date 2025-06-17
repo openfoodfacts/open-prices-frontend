@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Những thách thức trong quá khứ",
+		"UpcomingChallenges": "Những thách thức sắp tới"
 	},
 	"Common": {
 		"About": "Giới thiệu",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Hãy thử xem",
 		"Type": "Loại",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Để tải lên nhiều thẻ giá (cùng địa điểm cửa hàng và ngày), hãy nhấp vào đây!",
+		"PromoReceiptAssistant": "Thử nghiệm: hãy dùng thử trợ lý biên lai mới để tự động trích xuất giá từ biên lai của bạn!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
