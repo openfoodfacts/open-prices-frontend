@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Probíhající výzva",
 		"Chart": "Graf",
 		"Clear": "Vymazat",
-		"Contributors": "Přispěvatelé",
 		"Comment": "Komentář",
 		"Community": "Komunita",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Spotřeba",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Přispět",
+		"Contributors": "Přispěvatelé",
 		"Contributions": "Příspěvky",
 		"Confirm": "Potvrdit",
 		"Country": "Země",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Graf",
 		"Done": "Hotovo",
 		"Error": "Chyba",
+		"Experiment": "Experimentovat",
 		"Experiments": "Experimenty",
 		"Join": "Připojit",
 		"Label": "Štítek",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Obrázky přidány",
 		"PicturesAddedByYou": "Vámi přidané obrázky",
 		"PRICE_TAG": "Cenovka",
+		"PriceTags": "Cenovky",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Komunita"
+		},
+		"Contribute": {
+			"Title": "Přispět"
 		},
 		"Experiments": {
 			"Title": "Experimenty"
