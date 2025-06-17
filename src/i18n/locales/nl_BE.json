@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Lopende uitdaging",
 		"Chart": "Grafiek",
 		"Clear": "Wissen",
-		"Contributors": "Bijdragers",
 		"Comment": "Reactie",
 		"Community": "Gemeenschap",
 		"CommunityPrices": "Gemeenschapsprijzen",
@@ -218,6 +217,8 @@
 		"Consumption": "Consumptie",
 		"ConsumptionPrices": "Verbruiksprijzen",
 		"ConsumptionProofs": "Verbruiksbewijzen",
+		"Contribute": "Bijdragen",
+		"Contributors": "Bijdragers",
 		"Contributions": "Bijdragen",
 		"Confirm": "Bevestig",
 		"Country": "Land",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Grafiek",
 		"Done": "Voltooid",
 		"Error": "Foutmelding",
+		"Experiment": "Experiment",
 		"Experiments": "Experimenten",
 		"Join": "Deelnemen",
 		"Label": "Keurmerk",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Foto's toegevoegd",
 		"PicturesAddedByYou": "Door jou toegevoegde foto's",
 		"PRICE_TAG": "Prijskaartje",
+		"PriceTags": "Prijskaartjes",
 		"PriceCount": "{count} prijzen | {count} prijs | {count} prijzen",
 		"PriceAddedCount": "{count} prijzen toegevoegd | {count} prijs toegevoegd | {count} prijzen toegevoegd",
 		"PriceToValidateCount": "{count} te valideren prijzen | {count} te valideren prijs | {count} te valideren prijzen",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Gemeenschap"
+		},
+		"Contribute": {
+			"Title": "Bijdragen"
 		},
 		"Experiments": {
 			"Title": "Experimenten"
