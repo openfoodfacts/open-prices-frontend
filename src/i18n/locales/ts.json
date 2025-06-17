@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Mintlhontlho ya nkarhi lowu hundzeke",
+		"UpcomingChallenges": "Mintlhontlho leyi taka"
 	},
 	"Common": {
 		"About": "About",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Ringeta ku swi ringeta",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Ku layicha swikoweto swo tala swa nxavo (ndhawu ya xitolo na siku rin’we), tinya laha!",
+		"PromoReceiptAssistant": "Ringeta: ringeta mupfuni lontshwa wa tirhisithi ku humesa minxavo hi ku tisungulela eka tirhisithi ta wena!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

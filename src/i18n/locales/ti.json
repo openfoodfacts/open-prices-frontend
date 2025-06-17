@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "ሕሉፍ ብድሆታት",
+		"UpcomingChallenges": "ዝመጽእ ብድሆታት"
 	},
 	"Common": {
 		"About": "About",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "ፈትኖ",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "ብዙሓት ዋጋታት (ሓደ ዓይነት ቦታን ዕለትን ድኳን) ንምስቃል፡ ኣብዚ ጠውቑ!",
+		"PromoReceiptAssistant": "ፈተነ: ካብ ቅብሊታትካ ዋጋታት ብኣውቶማቲክ ንምውጻእ ሓድሽ ሓጋዚ ቅብሊት ፈትኖ!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

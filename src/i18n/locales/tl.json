@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Mga nakaraang hamon",
+		"UpcomingChallenges": "Mga darating na hamon"
 	},
 	"Common": {
 		"About": "Tungkol sa",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Subukan ito",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Upang mag-upload ng maraming tag ng presyo (parehong lokasyon at petsa ng tindahan), mag-click dito!",
+		"PromoReceiptAssistant": "Eksperimento: subukan ang bagong assistant ng resibo upang awtomatikong kunin ang mga presyo mula sa iyong mga resibo!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

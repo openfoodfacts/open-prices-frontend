@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "Ingen udfordring igangværende i øjeblikket, vend venligst tilbage senere!",
 		"PastOrFutureChallenges": "Tidligere eller fremtidige udfordringer",
-		"OngoingChallenges": "Igangværende udfordringer"
+		"OngoingChallenges": "Igangværende udfordringer",
+		"PastChallenges": "Tidligere udfordringer",
+		"UpcomingChallenges": "Kommende udfordringer"
 	},
 	"Common": {
 		"About": "Om",
@@ -411,6 +413,7 @@
 		"Total": "I alt",
 		"Truncate": "Afkort",
 		"Truncated": "Afkortet",
+		"TryItOut": "Prøv det",
 		"Type": "Type",
 		"UnknownProduct": "Ukendt produkt",
 		"UnknownProductSource": "Ukendt produktkilde",
@@ -601,9 +604,9 @@
 		"LabelTotal": "{count} etiketter",
 		"LatestPrice": "Seneste pris",
 		"InvalidBarcode": "Ugyldig stregkode",
-		"InvalidBarcodeLength": "Invalid barcode length",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"InvalidBarcodeLength": "Ugyldig stregkodelængde",
+		"ProductBrandMissing": "Produktmærke mangler",
+		"ProductCategoriesMissing": "Produktkategorier mangler",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
@@ -620,13 +623,15 @@
 		"ProductNotFound": "Produkt ikke fundet i Open Food Facts... Men du tilføje det :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
-		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"HowToMultiple": "Alle de billeder af prismærker, som du vælger, skal dele den samme butiksplacering og være taget samme dag.",
+		"HowToMultipleShort": "Billeder skal have samme butiksplacering og dato.",
+		"PriceValidationAllow": "Tillad, at mine billeders priser udtrækkes af AI og valideres af fællesskabet",
+		"PriceTagAllowCommunityValidation": "Tillad fællesskabet at validere priser udtrukket af AI",
 		"PriceTagAIWarning": "AI vil undersøge dine beviser for at udtrække priser.",
 		"ReceiptAllowAI": "Tillad at AI unders\nger din kvittering for at udtrække priser",
-		"ReceiptAIWarning": "AI vil undersøge din kvittering for at udtrække priser."
+		"ReceiptAIWarning": "AI vil undersøge din kvittering for at udtrække priser.",
+		"PromoProofPriceTagAddMultiple": "For at uploade flere prismærker (samme butikslokation og dato), klik her!",
+		"PromoReceiptAssistant": "Eksperiment: Prøv den nye kvitteringsassistent til automatisk at udtrække priser fra dine kvitteringer!"
 	},
 	"ProofCard": {
 		"Proof": "Bevis",
@@ -669,11 +674,11 @@
 		"ReceiptItemsCheck": "Kvittering for varer, tjek og reparer",
 		"UploadOnlyNewPrices": "Upload kun nye priser ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload eller opdater alle gyldige priser ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"WaitForExtraction": "Udtrækker automatisk varer fra kvitteringen, vent venligst..."
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Mangler din genbrug? Fortæl os {url}!",
+		"Here": "her"
 	},
 	"Router": {
 		"About": {
@@ -698,10 +703,10 @@
 			"Title": "Tilføj beviser"
 		},
 		"AddProofSingle": {
-			"Title": "Add a single proof"
+			"Title": "Tilføj et enkelt bevis"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Tilføj flere beviser"
 		},
 		"Locations": {
 			"Title": "Placeringer"
@@ -722,10 +727,10 @@
 			"Title": "Beviser"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a single proof"
+			"Title": "Tilføj et enkelt bevis"
 		},
 		"ProofAddMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Tilføj flere beviser"
 		},
 		"Community": {
 			"Title": "Fællesskab"
@@ -782,13 +787,13 @@
 			"Title": "Brugere"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Bidragsassistent"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Prisvalideringsassistent"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "Kvitteringsassistent"
 		},
 		"Challenge": {
 			"Title": "Udfordring"
@@ -814,34 +819,34 @@
 	"SignIn": {
 		"Button": "Log ind",
 		"Password": "Adgangskode",
-		"ServerError": "Error: server error",
+		"ServerError": "Fejl: serverfejl",
 		"Title": "Log ind",
 		"SignInOFFAccount": "Log på med din {url} konto",
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"UsernameLabel": "Brugernavn",
+		"WrongCredentials": "Fejl: forkerte loginoplysninger"
 	},
 	"Stats": {
-		"AddedToday": "Added today",
+		"AddedToday": "Tilføjet i dag",
 		"Prices": "Priser",
 		"PricesToday": "Priser tilføjet i dag",
-		"PricesTotal": "Total prices",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
-		"ProductsWithPrices": "Products with prices",
+		"PricesTotal": "Samlede priser",
+		"PricesLinkedToPriceTag": "Priser knyttet til en prisskiltning",
+		"ProductsWithPrices": "Produkter med priser",
 		"Title": "Statistik",
 		"Products": "Produkter",
 		"Locations": "Placeringer",
 		"Users": "Brugere",
 		"Total": "I alt",
 		"WithPrice": "Med en pris",
-		"WithProduct": "With a product",
-		"WithProductBarcode": "With a product barcode",
-		"WithProductCategory": "With a product category",
-		"WithDiscount": "With a discount",
-		"WithoutProduct": "Without a product",
-		"WithBarcode": "With a barcode",
-		"WithCategory": "With a category",
-		"PricesProofsPerSource": "Prices and proofs per source",
-		"LastUpdated": "Last updated on {date}"
+		"WithProduct": "Med et produkt",
+		"WithProductBarcode": "Med en produktstregkode",
+		"WithProductCategory": "Med en produktkategori",
+		"WithDiscount": "Med rabat",
+		"WithoutProduct": "Uden et produkt",
+		"WithBarcode": "Med en stregkode",
+		"WithCategory": "Med en kategori",
+		"PricesProofsPerSource": "Priser og beviser pr. kilde",
+		"LastUpdated": "Sidst opdateret {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Seneste priser",
@@ -850,11 +855,11 @@
 		"MyDashboard": "Mit dashboard",
 		"MyPrices": "Mine priser",
 		"MyProofs": "Mine beviser",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "Bevis opdateret!",
 		"Settings": "Indstillinger",
 		"Title": "Oversigt",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"UserPriceTotal": "{count} priser",
+		"UserProofTotal": "{count} beviser"
 	},
 	"UserDetail": {
 		"LatestPrices": "Seneste priser",
@@ -863,30 +868,30 @@
 	"UserList": {
 		"LoadMore": "Indlæs mere",
 		"Title": "Top bidragydere",
-		"UserTotal": "{count} contributors"
+		"UserTotal": "{count} bidragydere"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "Tilføjer priser",
 		"ChangeLanguage": "Skift sprog",
 		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Vis",
-		"BarcodeScanner": "Barcode scanner",
-		"DefaultMode": "Default mode",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"BarcodeScanner": "Stregkodescanner",
+		"DefaultMode": "Standardtilstand",
+		"FavoriteCurrencies": "Foretrukne valutaer",
+		"CurrencyRequired": "Mindst én valuta er påkrævet",
 		"LanguageLabel": "Sprog",
-		"LocationFinder": "Location finder",
-		"LocationDisplayOSMID": "Display OSM ID",
-		"PriceListDisplay": "Price list diplay",
-		"PriceValidation": "Price validation",
-		"ProductDisplayBarcode": "Display barcode",
-		"ProductDisplayCategoryTag": "Display category tag",
-		"ProductDisplaySource": "Display source",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"LocationFinder": "Lokationsfinder",
+		"LocationDisplayOSMID": "Vis OSM ID",
+		"PriceListDisplay": "Prislistevisning",
+		"PriceValidation": "Prisvalidering",
+		"ProductDisplayBarcode": "Vis stregkode",
+		"ProductDisplayCategoryTag": "Vis kategoritag",
+		"ProductDisplaySource": "Vis kilde",
+		"SideMenuExperimentsDisplay": "Vis 'Eksperimenter'",
 		"Save": "Gem",
 		"Title": "Indstillinger",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationCompletion": "Oversættelsen er {completion}% færdig.",
+		"TranslationHelp": "Hjælp os med at oversætte flere sprog"
 	}
 }

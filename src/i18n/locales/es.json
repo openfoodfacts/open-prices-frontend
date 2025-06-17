@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No hay ningún desafío en curso, ¡por favor vuelve más tarde!",
 		"PastOrFutureChallenges": "Desafíos pasados o futuros",
-		"OngoingChallenges": "Desafíos en curso"
+		"OngoingChallenges": "Desafíos en curso",
+		"PastChallenges": "Desafíos pasados",
+		"UpcomingChallenges": "Próximos desafíos"
 	},
 	"Common": {
 		"About": "Acerca de",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Pruébalo",
 		"Type": "Tipo",
 		"UnknownProduct": "Producto desconocido",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "¡Para cargar varias etiquetas de precio (misma ubicación de tienda y fecha), haga clic aquí!",
+		"PromoReceiptAssistant": "Experimenta: ¡prueba el nuevo asistente de recibos para extraer automáticamente los precios de tus recibos!"
 	},
 	"ProofCard": {
 		"Proof": "Comprobante",

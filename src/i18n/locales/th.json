@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "ความท้าทายที่ผ่านมา",
+		"UpcomingChallenges": "ความท้าทายที่กำลังจะเกิดขึ้น"
 	},
 	"Common": {
 		"About": "About",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "ลองดูสิ",
 		"Type": "ประเภท",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "หากต้องการอัพโหลดป้ายราคาหลายรายการ (ที่ตั้งร้านและวันที่เดียวกัน) คลิกที่นี่!",
+		"PromoReceiptAssistant": "ทดลอง: ทดลองใช้ระบบช่วยรับใบเสร็จใหม่เพื่อดึงราคาจากใบเสร็จของคุณโดยอัตโนมัติ!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "గత సవాళ్లు",
+		"UpcomingChallenges": "రాబోయే సవాళ్లు"
 	},
 	"Common": {
 		"About": "గురించి",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "దీన్ని ప్రయత్నించండి",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "బహుళ ధర ట్యాగ్‌లను (ఒకే షాప్ స్థానం మరియు తేదీ) అప్‌లోడ్ చేయడానికి, ఇక్కడ క్లిక్ చేయండి!",
+		"PromoReceiptAssistant": "ప్రయోగం: మీ రసీదుల నుండి ధరలను స్వయంచాలకంగా సంగ్రహించడానికి కొత్త రసీదు సహాయకాన్ని ప్రయత్నించండి!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "Er is momenteel geen lopende uitdaging. Kom later nog eens terug!",
 		"PastOrFutureChallenges": "Eerdere of toekomstige uitdagingen",
-		"OngoingChallenges": "Lopende uitdagingen"
+		"OngoingChallenges": "Lopende uitdagingen",
+		"PastChallenges": "Afgelopen uitdagingen",
+		"UpcomingChallenges": "Aankomende uitdagingen"
 	},
 	"Common": {
 		"About": "Over",
@@ -411,6 +413,7 @@
 		"Total": "Totaal",
 		"Truncate": "Afkappen",
 		"Truncated": "Afgekapt",
+		"TryItOut": "Probeer het",
 		"Type": "Type",
 		"UnknownProduct": "Onbekend product",
 		"UnknownProductSource": "Onbekende productbron",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Laat de gemeenschap de prijzen die door AI zijn verkregen valideren",
 		"PriceTagAIWarning": "AI zal uw bewijzen gebruiken om prijzen te berekenen.",
 		"ReceiptAllowAI": "Laat AI op uw kassabon inspecteren om prijzen te extraheren",
-		"ReceiptAIWarning": "AI analyseert uw kassabon om prijzen te extraheren."
+		"ReceiptAIWarning": "AI analyseert uw kassabon om prijzen te extraheren.",
+		"PromoProofPriceTagAddMultiple": "Als u meerdere prijskaartjes wilt uploaden (zelfde winkellocatie en datum), klik dan hier!",
+		"PromoReceiptAssistant": "Experimenteer: probeer de nieuwe kassabonassistent om automatisch prijzen uit uw kassabonnen te extraheren!"
 	},
 	"ProofCard": {
 		"Proof": "Bewijs",

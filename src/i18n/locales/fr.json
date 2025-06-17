@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "Aucun défi actuellement en cours, merci de revenir plus tard !",
 		"PastOrFutureChallenges": "Défis passé ou futur",
-		"OngoingChallenges": "Défis en cours"
+		"OngoingChallenges": "Défis en cours",
+		"PastChallenges": "Défis passés",
+		"UpcomingChallenges": "Défis à venir"
 	},
 	"Common": {
 		"About": "À propos",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Tronquer",
 		"Truncated": "Tronqué",
+		"TryItOut": "Essayez-le",
 		"Type": "Type",
 		"UnknownProduct": "Produit inconnu",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Permettre à la communauté de valider les prix extraits par IA",
 		"PriceTagAIWarning": "L'IA sera exécutée sur vos preuves pour en extraire les prix.",
 		"ReceiptAllowAI": "Autoriser l'exécution de l'IA sur votre reçu pour extraire les prix",
-		"ReceiptAIWarning": "L'IA sera exécutée sur votre reçu pour en extraire les prix."
+		"ReceiptAIWarning": "L'IA sera exécutée sur votre reçu pour en extraire les prix.",
+		"PromoProofPriceTagAddMultiple": "Pour télécharger plusieurs étiquettes de prix (même emplacement de magasin et même date), cliquez ici !",
+		"PromoReceiptAssistant": "Expérience : essayez le nouvel assistant de reçus pour extraire automatiquement les prix de vos reçus !"
 	},
 	"ProofCard": {
 		"Proof": "Preuve",

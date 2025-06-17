@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "چالش‌های گذشته",
+		"UpcomingChallenges": "چالش‌های پیش رو"
 	},
 	"Common": {
 		"About": "درباره ما",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "امتحانش کن.",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "برای آپلود چندین برچسب قیمت (همان مکان و تاریخ فروشگاه)، اینجا کلیک کنید!",
+		"PromoReceiptAssistant": "آزمایش: دستیار رسید جدید را امتحان کنید تا به طور خودکار قیمت‌ها را از رسیدهای شما استخراج کند!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

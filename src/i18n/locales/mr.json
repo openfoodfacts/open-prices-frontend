@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "मागील आव्हाने",
+		"UpcomingChallenges": "आगामी आव्हाने"
 	},
 	"Common": {
 		"About": "याविषयी",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "वापरून पहा",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "अनेक किंमत टॅग (एकच दुकानाचे स्थान आणि तारीख) अपलोड करण्यासाठी, येथे क्लिक करा!",
+		"PromoReceiptAssistant": "प्रयोग: तुमच्या पावत्यांमधून आपोआप किंमती काढण्यासाठी नवीन पावती सहाय्यक वापरून पहा!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

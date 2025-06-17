@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Dúshláin san am atá thart",
+		"UpcomingChallenges": "Dúshláin atá le teacht"
 	},
 	"Common": {
 		"About": "Faoi",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Bain triail as",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Chun clibeanna praghais iolracha a uaslódáil (an suíomh agus an dáta siopa céanna), cliceáil anseo!",
+		"PromoReceiptAssistant": "Turgnamh: bain triail as an gcúntóir admhála nua chun praghsanna a bhaint go huathoibríoch as d’admhálacha!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

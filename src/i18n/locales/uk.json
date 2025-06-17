@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "Немає викликів, будь ласка приходьте пізніше!",
 		"PastOrFutureChallenges": "Минулі або майбутні виклики",
-		"OngoingChallenges": "Поточні виклики"
+		"OngoingChallenges": "Поточні виклики",
+		"PastChallenges": "Минулі виклики",
+		"UpcomingChallenges": "Майбутні виклики"
 	},
 	"Common": {
 		"About": "Про додаток",
@@ -411,6 +413,7 @@
 		"Total": "Усього",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Спробуйте",
 		"Type": "Тип",
 		"UnknownProduct": "Невідомий продукт",
 		"UnknownProductSource": "Невідоме джерело продукту",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Дозвольте спільноті перевіряти ціни, отримані ШІ",
 		"PriceTagAIWarning": "ШІ працюватиме на ваших доказах, щоб отримати ціни.",
 		"ReceiptAllowAI": "Дозвольте запустити ШІ на квитанції, щоб отримати ціни",
-		"ReceiptAIWarning": "AI запуститься у вашому чеку, щоб отримати ціни."
+		"ReceiptAIWarning": "AI запуститься у вашому чеку, щоб отримати ціни.",
+		"PromoProofPriceTagAddMultiple": "Щоб завантажити кілька цінників (однакове місцезнаходження та дата магазину), натисніть тут!",
+		"PromoReceiptAssistant": "Експеримент: спробуйте новий помічник з чеків, щоб автоматично витягувати ціни з ваших чеків!"
 	},
 	"ProofCard": {
 		"Proof": "Доказ",

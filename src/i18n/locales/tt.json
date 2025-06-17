@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Pastткән проблемалар",
+		"UpcomingChallenges": "Киләчәк проблемалар"
 	},
 	"Common": {
 		"About": "Хакында",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Сынап кара",
 		"Type": "Төре",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Берничә бәя билгеләрен йөкләү өчен (бер үк кибетнең урыны һәм датасы) монда басыгыз!",
+		"PromoReceiptAssistant": "Эксперимент: квитанцияләрегездән бәяләрне автоматик рәвештә чыгару өчен яңа квитанция ярдәмчесен сынап карагыз!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

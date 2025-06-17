@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "विगतका चुनौतीहरू",
+		"UpcomingChallenges": "आगामी चुनौतीहरू"
 	},
 	"Common": {
 		"About": "बारेमा",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "प्रयास गर्नुहोस्",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "धेरै मूल्य ट्यागहरू (एउटै पसल स्थान र मिति) अपलोड गर्न, यहाँ क्लिक गर्नुहोस्!",
+		"PromoReceiptAssistant": "प्रयोग: आफ्नो रसिदबाट स्वचालित रूपमा मूल्यहरू निकाल्न नयाँ रसिद सहायक प्रयोग गरी हेर्नुहोस्!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

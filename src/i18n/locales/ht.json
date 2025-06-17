@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Defi sot pase yo",
+		"UpcomingChallenges": "Defi kap vini yo"
 	},
 	"Common": {
 		"About": "About",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Eseye li",
 		"Type": "Type",
 		"UnknownProduct": "Pwodwi enkoni",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Pou telechaje plizyè etikèt pri (menm kote magazen an ak menm dat la), klike la a!",
+		"PromoReceiptAssistant": "Eksperyans: eseye nouvo asistan resi a pou otomatikman ekstrè pri nan resi ou yo!"
 	},
 	"ProofCard": {
 		"Proof": "Prèv",

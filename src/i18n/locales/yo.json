@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Awọn italaya ti o kọja",
+		"UpcomingChallenges": "Awọn italaya ti n bọ"
 	},
 	"Common": {
 		"About": "Nipa",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Gbiyanju o jade",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Lati gbe awọn aami idiyele lọpọlọpọ (ipo itaja kanna ati ọjọ), tẹ ibi!",
+		"PromoReceiptAssistant": "Ṣàdánwò: gbìyànjú olùrànlọ́wọ́ ọ̀wọ̀ tuntun láti yọ àwọn iye owó jáde lọ́fẹ̀ẹ́ láti inú àwọn ọjà rẹ!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Dùbhlain san àm a dh'fhalbh",
+		"UpcomingChallenges": "Dùbhlain a tha ri thighinn"
 	},
 	"Common": {
 		"About": "About",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Feuch e",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Gus iomadh taga prìse a luchdachadh suas (an aon àite bùtha agus ceann-latha), briog an seo!",
+		"PromoReceiptAssistant": "Deuchainn: feuch an neach-cuideachaidh cuidhteis ùr gus prìsean a thoirt a-mach às na cuidhteisean agad gu fèin-ghluasadach!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

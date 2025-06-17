@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Өткен қиындықтар",
+		"UpcomingChallenges": "Алдағы қиындықтар"
 	},
 	"Common": {
 		"About": "Осы туралы",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Байқап көріңіз",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Бірнеше баға белгілерін (бір дүкен орны мен күні) жүктеп салу үшін осы жерді басыңыз!",
+		"PromoReceiptAssistant": "Эксперимент: түбіртектерден бағаларды автоматты түрде шығару үшін жаңа түбіртек көмекшісін қолданып көріңіз!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "ສິ່ງທ້າທາຍທີ່ຜ່ານມາ",
+		"UpcomingChallenges": "ສິ່ງທ້າທາຍທີ່ຈະມາເຖິງ"
 	},
 	"Common": {
 		"About": "About",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "ລອງໃຊ້ເບິ່ງ",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "ເພື່ອອັບໂຫລດຫຼາຍປ້າຍລາຄາ (ສະຖານທີ່ຮ້ານດຽວກັນ ແລະວັນທີ), ຄລິກທີ່ນີ້!",
+		"PromoReceiptAssistant": "ການທົດລອງ: ລອງໃຊ້ຜູ້ຊ່ວຍໃບຮັບເງິນໃໝ່ເພື່ອດຶງລາຄາອອກຈາກໃບຮັບເງິນຂອງທ່ານໂດຍອັດຕະໂນມັດ!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

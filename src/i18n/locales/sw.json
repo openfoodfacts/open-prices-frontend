@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Changamoto zilizopita",
+		"UpcomingChallenges": "Changamoto zinazokuja"
 	},
 	"Common": {
 		"About": "Kuhusu",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Ijaribu",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Ili kupakia lebo nyingi za bei (eneo la duka moja na tarehe), bofya hapa!",
+		"PromoReceiptAssistant": "Jaribio: jaribu msaidizi mpya wa risiti ili kutoa bei kiotomatiki kutoka kwa risiti zako!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

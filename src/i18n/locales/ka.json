@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "წარსული გამოწვევები",
+		"UpcomingChallenges": "მომავალი გამოწვევები"
 	},
 	"Common": {
 		"About": "About",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "სცადეთ",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "რამდენიმე ფასის ეტიკეტის ასატვირთად (იგივე მაღაზიის მდებარეობა და თარიღი), დააწკაპუნეთ აქ!",
+		"PromoReceiptAssistant": "ექსპერიმენტი: სცადეთ ახალი ქვითრების ასისტენტი, რათა ავტომატურად ამოიღოთ ფასები თქვენი ქვითრებიდან!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

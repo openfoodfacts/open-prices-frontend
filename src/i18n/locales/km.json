@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "បញ្ហាប្រឈមកន្លងមក",
+		"UpcomingChallenges": "បញ្ហាប្រឈមនាពេលខាងមុខ"
 	},
 	"Common": {
 		"About": "អំពី",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "សាកល្បង",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "ដើម្បីបង្ហោះស្លាកតម្លៃច្រើន (ទីតាំងហាង និងកាលបរិច្ឆេទដូចគ្នា) សូមចុចទីនេះ!",
+		"PromoReceiptAssistant": "ការពិសោធន៍៖ សាកល្បងជំនួយការបង្កាន់ដៃថ្មី ដើម្បីទាញយកតម្លៃដោយស្វ័យប្រវត្តិពីបង្កាន់ដៃរបស់អ្នក!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

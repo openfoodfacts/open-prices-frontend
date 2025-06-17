@@ -77,9 +77,9 @@
 		"PriceDetails": {
 			"Discount": "Desconto?",
 			"Label": "Preço",
-			"LabelDiscounted": "Preços com desconto",
+			"LabelDiscounted": "Preço descontado",
 			"LabelFull": "Preço original",
-			"Proof": "Comprovativo",
+			"Proof": "Demonstração",
 			"ProofDateChanged": "Data de atualização!",
 			"ProofSelected": "Comprovativo selecionado!",
 			"ProofUploaded": "Comprovativo carregado!",
@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Desafios passados",
+		"UpcomingChallenges": "Próximos desafios"
 	},
 	"Common": {
 		"About": "Sobre",
@@ -196,7 +198,7 @@
 		"Product": "Produto",
 		"ProductName": "Nome do produto",
 		"Products": "Produtos",
-		"Proof": "Comprovativo",
+		"Proof": "Demonstração",
 		"Proofs": "Comprovativos",
 		"CATEGORY": "Categoria",
 		"Category": "Categoria",
@@ -309,8 +311,8 @@
 		"MobileApp": "Aplicação móvel",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "Meu painel de controlo",
-		"MyPrices": "Os meus preços",
-		"MyProofs": "Os meus comprovativos",
+		"MyPrices": "Meus valores",
+		"MyProofs": "Minhas demonstrações",
 		"MyStats": "Minhas estatísticas",
 		"NotAnError": "Não é um erro",
 		"NotAPrice": "Não é um preço",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncar",
 		"Truncated": "Truncado",
+		"TryItOut": "Experimente",
 		"Type": "Tipo",
 		"UnknownProduct": "Produto desconhecido",
 		"UnknownProductSource": "Origem do produto desconhecida",
@@ -440,8 +443,8 @@
 		"Years": "Anos",
 		"Yes": "Sim",
 		"No": "Não",
-		"Food": "Alimento",
-		"PetFood": "Comida para animais",
+		"Food": "Alimentação",
+		"PetFood": "Alimentos de pets",
 		"Beauty": "Beleza"
 	},
 	"ContributionAssistant": {
@@ -517,7 +520,7 @@
 		"AddPrice": "Adicionar um preço",
 		"LatestPrices": "Preços mais recentes",
 		"ProofAdd": "Adicionar um comprovativo",
-		"SearchProduct": "Pesquisar um produto",
+		"SearchProduct": "Procurar por um produto",
 		"SettingsUpdated": "Definições atualizadas!",
 		"TodayPriceStat": "Nenhum preço adicionado hoje | {todayPriceNumber} novos preços adicionados hoje | {todayPriceNumber} novos preços adicionados hoje!",
 		"Welcome": {
@@ -553,7 +556,7 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unidade",
-		"Proof": "Comprovativo",
+		"Proof": "Demonstração",
 		"FullPrice": "Preço original",
 		"UnknownProduct": "Produto desconhecido"
 	},
@@ -571,7 +574,7 @@
 	"PriceForm": {
 		"Discount": "Desconto?",
 		"Label": "Preço",
-		"LabelDiscounted": "Preços com desconto",
+		"LabelDiscounted": "Preço descontado",
 		"LabelFull": "Preço original"
 	},
 	"PriceList": {
@@ -626,10 +629,12 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Para carregar várias etiquetas de preço (mesma localização da loja e data), clique aqui!",
+		"PromoReceiptAssistant": "Experimente: experimente o novo assistente de recibos para extrair automaticamente os preços dos seus recibos!"
 	},
 	"ProofCard": {
-		"Proof": "Comprovativo",
+		"Proof": "Demonstração",
 		"PRICE_TAG": "Etiqueta de preço",
 		"RECEIPT": "Talão",
 		"GDPR_REQUEST": "Pedido RGPD",
@@ -746,10 +751,10 @@
 			"Title": "Últimos comprovativos"
 		},
 		"MyPrices": {
-			"Title": "Os meus preços"
+			"Title": "Meus valores"
 		},
 		"MyProofs": {
-			"Title": "Os meus comprovativos"
+			"Title": "Minhas demonstrações"
 		},
 		"MyDashboard": {
 			"Title": "Meu painel de controlo"
@@ -848,8 +853,8 @@
 		"LatestProofs": "Últimos comprovativos",
 		"LoadMore": "Carregar mais",
 		"MyDashboard": "Meu painel de controlo",
-		"MyPrices": "Os meus preços",
-		"MyProofs": "Os meus comprovativos",
+		"MyPrices": "Meus valores",
+		"MyProofs": "Minhas demonstrações",
 		"ProofUpdated": "Comprovativo atualizado!",
 		"Settings": "Definições",
 		"Title": "Painel de controlo",

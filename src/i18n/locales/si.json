@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "අතීත අභියෝග",
+		"UpcomingChallenges": "ඉදිරියට එන අභියෝග"
 	},
 	"Common": {
 		"About": "About",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "එය උත්සාහ කර බලන්න",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "මිල ටැග් කිහිපයක් (එකම වෙළඳසැලේ ස්ථානය සහ දිනය) උඩුගත කිරීමට, මෙතන ක්ලික් කරන්න!",
+		"PromoReceiptAssistant": "අත්හදා බැලීම: ඔබේ රිසිට්පත්වලින් මිල ගණන් ස්වයංක්‍රීයව උපුටා ගැනීමට නව රිසිට්පත් සහායක උත්සාහ කරන්න!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

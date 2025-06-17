@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Aiemmat haasteet",
+		"UpcomingChallenges": "Tulevat haasteet"
 	},
 	"Common": {
 		"About": "Tietoja",
@@ -411,6 +413,7 @@
 		"Total": "Yhteensä",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Kokeile sitä",
 		"Type": "Tyyppi",
 		"UnknownProduct": "Tuntematon tuote",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Ladataksesi useita hintalappuja (sama myymälän sijainti ja päivämäärä), klikkaa tästä!",
+		"PromoReceiptAssistant": "Kokeile: kokeile uutta kuittiavustajaa, joka poimii hinnat kuiteistasi automaattisesti!"
 	},
 	"ProofCard": {
 		"Proof": "Todiste",

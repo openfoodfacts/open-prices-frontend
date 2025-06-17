@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "အတိတ်စိန်ခေါ်မှုများ",
+		"UpcomingChallenges": "လာမည့်စိန်ခေါ်မှုများ"
 	},
 	"Common": {
 		"About": "အကြောင်း",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "စမ်းကြည့်လိုက်ပါ။",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "စျေးနှုန်းတံဆိပ်များစွာ (ဆိုင်တည်နေရာနှင့် ရက်စွဲတူ) အပ်လုဒ်လုပ်ရန် ဤနေရာကိုနှိပ်ပါ။",
+		"PromoReceiptAssistant": "စမ်းသပ်မှု- သင့်ပြေစာများမှ စျေးနှုန်းများကို အလိုအလျောက်ထုတ်ယူရန် ပြေစာလက်ထောက်အသစ်ကို ကြိုးစားကြည့်ပါ။"
 	},
 	"ProofCard": {
 		"Proof": "Proof",

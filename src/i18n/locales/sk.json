@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Minulé výzvy",
+		"UpcomingChallenges": "Nadchádzajúce výzvy"
 	},
 	"Common": {
 		"About": "O",
@@ -194,7 +196,7 @@
 		"Prices": "Ceny",
 		"PRODUCT": "Produkt",
 		"Product": "Produkt",
-		"ProductName": "Product name",
+		"ProductName": "Názov výrobku",
 		"Products": "Výrobky",
 		"Proof": "Potvrdenie",
 		"Proofs": "Proofs",
@@ -228,7 +230,7 @@
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"Dashboard": "Hlavný panel",
-		"Display": "Display",
+		"Display": "Zobraziť",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Vyskúšajte to",
 		"Type": "Druhy",
 		"UnknownProduct": "Neznámy produkt",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Ak chcete nahrať viacero cenovok (rovnaké miesto a dátum predajne), kliknite sem!",
+		"PromoReceiptAssistant": "Experiment: vyskúšajte nového asistenta na spracovanie účteniek, ktorý automaticky extrahuje ceny z vašich účteniek!"
 	},
 	"ProofCard": {
 		"Proof": "Potvrdenie",
@@ -870,7 +875,7 @@
 		"ChangeLanguage": "Zmeniť jazyk",
 		"CountryLabel": "Krajina",
 		"CurrencyLabel": "Mena",
-		"DisplayTitle": "Display",
+		"DisplayTitle": "Zobraziť",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
