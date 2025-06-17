@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "אתגר שמתקיים כרגע",
 		"Chart": "תרשים",
 		"Clear": "פינוי",
-		"Contributors": "תורמים",
 		"Comment": "הערה",
 		"Community": "קהילה",
 		"CommunityPrices": "מחירי הקהילה",
@@ -218,6 +217,8 @@
 		"Consumption": "צריכה",
 		"ConsumptionPrices": "מחירי צריכה",
 		"ConsumptionProofs": "הוכחות צריכה",
+		"Contribute": "לתרום",
+		"Contributors": "תורמים",
 		"Contributions": "תרומות",
 		"Confirm": "אישור",
 		"Country": "מדינה",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "תרשים",
 		"Done": "בוצע",
 		"Error": "שגיאה",
+		"Experiment": "לְנַסוֹת",
 		"Experiments": "ניסויים",
 		"Join": "הצטרפות",
 		"Label": "תווית",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "נוספו תמונות",
 		"PicturesAddedByYou": "תמונות שהעלית",
 		"PRICE_TAG": "תווית מחיר",
+		"PriceTags": "תגי מחיר",
 		"PriceCount": "{count} מחירים | מחיר | {count} מחירים",
 		"PriceAddedCount": "נוספו {count} מחירים | נוסף מחיר | נוספו {count} מחירים",
 		"PriceToValidateCount": "{count} מחירים לאימות | מחיר לאימות | {count} מחירים לאימות",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "קהילה"
+		},
+		"Contribute": {
+			"Title": "לתרום"
 		},
 		"Experiments": {
 			"Title": "ניסויים"
