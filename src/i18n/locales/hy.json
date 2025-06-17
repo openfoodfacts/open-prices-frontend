@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Անցյալի մարտահրավերները",
+		"UpcomingChallenges": "Առաջիկա մարտահրավերները"
 	},
 	"Common": {
 		"About": "Մեր մասին",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Փորձեք այն",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Մի քանի գնապիտակներ (նույն խանութի գտնվելու վայրը և ամսաթիվը) վերբեռնելու համար սեղմեք այստեղ։",
+		"PromoReceiptAssistant": "Փորձ. փորձեք նոր անդորրագրերի օգնականը՝ ձեր անդորրագրերից գները ավտոմատ կերպով հանելու համար։"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
