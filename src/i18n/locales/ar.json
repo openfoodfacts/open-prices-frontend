@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "محو",
-		"Contributors": "المساهمون",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "استهلاك",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "المساهمة",
+		"Contributors": "المساهمون",
 		"Contributions": "مساهمات",
 		"Confirm": "Confirm",
 		"Country": "البلد",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "تم",
 		"Error": "خطأ",
+		"Experiment": "تجربة",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "al3alama",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "بطاقات الأسعار",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "المساهمة"
 		},
 		"Experiments": {
 			"Title": "Experiments"
