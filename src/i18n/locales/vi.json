@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Xóa",
-		"Contributors": "Người đóng góp",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Tiêu thụ",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Góp phần",
+		"Contributors": "Người đóng góp",
 		"Contributions": "Đóng góp",
 		"Confirm": "Xác nhận",
 		"Country": "Quốc gia",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Xong",
 		"Error": "Lỗi",
+		"Experiment": "Cuộc thí nghiệm",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Nhãn",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "Thẻ giá",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Góp phần"
 		},
 		"Experiments": {
 			"Title": "Experiments"
