@@ -4,13 +4,13 @@
     bg-color="info"
     rounded
     density="compact"
-    @click="$router.push('/experiments/receipt-assistant')"
+    @click="$router.push('/proofs/add/multiple')"
   >
     <v-banner-text style="padding-inline-end:10px;">
-      {{ $t('ProofAdd.PromoReceiptAssistant') }}
+      {{ $t('ProofAdd.PromoProofPriceTagAddMultiple') }}
     </v-banner-text>
     <v-banner-actions>
-      <v-btn icon="mdi-arrow-right" :aria-label="$t('Common.TryItOut')" to="/experiments/receipt-assistant" />
+      <v-btn icon="mdi-arrow-right" :aria-label="$t('Router.AddProofMultiple')" to="/proofs/add/multiple" />
     </v-banner-actions>
   </v-banner>
 </template>
