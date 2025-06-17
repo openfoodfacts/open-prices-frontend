@@ -166,8 +166,8 @@
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
-		"PastChallenges": "Tantangan masa lalu",
-		"UpcomingChallenges": "Tantangan yang akan datang"
+		"PastChallenges": "Tantangan sebelumnya",
+		"UpcomingChallenges": "Tantangan selanjutnya"
 	},
 	"Common": {
 		"About": "Tentang",
@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Tantangan yang sedang berlangsung",
 		"Chart": "Grafik",
 		"Clear": "Hapus",
-		"Contributors": "Kontributor",
 		"Comment": "Comment",
 		"Community": "Komunitas",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Konsumsi",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Berkontribusi",
+		"Contributors": "Kontributor",
 		"Contributions": "Kontribusi",
 		"Confirm": "Konfirmasi",
 		"Country": "Negara",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Grafik",
 		"Done": "Selesai",
 		"Error": "Kesalahan",
+		"Experiment": "Percobaan",
 		"Experiments": "Eksperimen",
 		"Join": "Gabung",
 		"Label": "Label",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Foto ditambahkan",
 		"PicturesAddedByYou": "Foto yang Anda tambahkan",
 		"PRICE_TAG": "Label harga",
+		"PriceTags": "Label harga",
 		"PriceCount": "{count} harga | {count} harga | {count} harga",
 		"PriceAddedCount": "{count} harga ditambahkan | {count} harga ditambahkan | {count} harga ditambahkan",
 		"PriceToValidateCount": "{count} harga untuk divalidasi | {count} harga untuk divalidasi | {count} harga untuk divalidasi",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Komunitas"
+		},
+		"Contribute": {
+			"Title": "Berkontribusi"
 		},
 		"Experiments": {
 			"Title": "Eksperimen"
