@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "ತೆರವು ಮಾಡಿ",
-		"Contributors": "Contributors",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Contribute",
+		"Contributors": "Contributors",
 		"Contributions": "ಕೊಡುಗೆಗಳು",
 		"Confirm": "Confirm",
 		"Country": "Country",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
 		"Error": "Error",
+		"Experiment": "ಪ್ರಯೋಗ",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "ಲೇಬಲ್",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "ಬೆಲೆ ಟ್ಯಾಗ್‌ಗಳು",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Contribute"
 		},
 		"Experiments": {
 			"Title": "Experiments"
