@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Cabaran lepas",
+		"UpcomingChallenges": "Cabaran akan datang"
 	},
 	"Common": {
 		"About": "Tentang",
@@ -411,6 +413,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Cubalah",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices."
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Untuk memuat naik berbilang tanda harga (lokasi dan tarikh kedai yang sama), klik di sini!",
+		"PromoReceiptAssistant": "Percubaan: cuba pembantu resit baharu untuk mengeluarkan harga secara automatik daripada resit anda!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
