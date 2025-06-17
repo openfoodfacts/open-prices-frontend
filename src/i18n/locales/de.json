@@ -165,7 +165,9 @@
 		},
 		"NoChallengeCurrentlyOngoing": "Derzeit läuft keine Herausforderung, bitte kommen Sie später wieder!",
 		"PastOrFutureChallenges": "Vergangene oder künftige Herausforderungen",
-		"OngoingChallenges": "Laufende Herausforderungen"
+		"OngoingChallenges": "Laufende Herausforderungen",
+		"PastChallenges": "Vergangene Herausforderungen",
+		"UpcomingChallenges": "Kommende Herausforderungen"
 	},
 	"Common": {
 		"About": "Über",
@@ -411,6 +413,7 @@
 		"Total": "Gesamt",
 		"Truncate": "Kürzen",
 		"Truncated": "Gekürzt",
+		"TryItOut": "Probieren Sie es aus",
 		"Type": "Art",
 		"UnknownProduct": "Unbekanntes Produkt",
 		"UnknownProductSource": "Unbekannte Herkunft des Produkts",
@@ -626,7 +629,9 @@
 		"PriceTagAllowCommunityValidation": "Erlauben Sie der Gemeinschaft, die von der KI ermittelten Preise zu überprüfen",
 		"PriceTagAIWarning": "KI prüft Ihre Nachweise, um Preise zu ermitteln.",
 		"ReceiptAllowAI": "Erlauben Sie der KI auf Ihrem Kassenbeleg, Preise zu ermitteln",
-		"ReceiptAIWarning": "KI prüft Ihren Kassenbeleg, um die Preise zu ermitteln."
+		"ReceiptAIWarning": "KI prüft Ihren Kassenbeleg, um die Preise zu ermitteln.",
+		"PromoProofPriceTagAddMultiple": "Um mehrere Preisschilder hochzuladen (gleicher Ladenstandort und Datum), klicken Sie hier!",
+		"PromoReceiptAssistant": "Experimentieren Sie: Probieren Sie den neuen Belegassistenten aus, um Preise automatisch aus Ihren Belegen zu extrahieren!"
 	},
 	"ProofCard": {
 		"Proof": "Nachweis",
