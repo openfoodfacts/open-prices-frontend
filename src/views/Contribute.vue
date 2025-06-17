@@ -33,9 +33,9 @@ export default {
   data() {
     return {
       contributeCommonList: [
-        {name: 'From a price tag', description: '', background_image_url: 'https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.400.webp', url: '/prices/add/multiple'},
-        {name: 'From a receipt', description: '', background_image_url: 'https://prices.openfoodfacts.org/img/0064/B7XwYylM6V.400.webp', url: '/proofs/add/multiple'},
-        {name: 'Validate prices from the community', description: '', background_image_url: 'https://imgur.com/s0lenjt.png', url: '/experiment/price-validation-assistant', community: true, experiment: true},
+        {name: 'From a price tag', description: '', background_image_url: 'https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.400.webp', url: '/prices/add/multiple?proof_type=PRICE_TAG'},
+        {name: 'From a receipt', description: '', background_image_url: 'https://prices.openfoodfacts.org/img/0064/B7XwYylM6V.400.webp', url: '/prices/add/multiple?proof_type=RECEIPT'},
+        {name: 'Validate prices from the community', description: '', background_image_url: 'https://imgur.com/s0lenjt.png', url: '/experiments/price-validation-assistant', community: true, experiment: true},
       ],
       PROOF_TYPE_PRICE_TAG_ICON: constants.PROOF_TYPE_PRICE_TAG_ICON,
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
