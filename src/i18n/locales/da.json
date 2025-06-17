@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Igangværende udfordring",
 		"Chart": "Diagram",
 		"Clear": "Ryd",
-		"Contributors": "Bidragsydere",
 		"Comment": "Kommentér",
 		"Community": "Fællesskab",
 		"CommunityPrices": "Fællesskabets priser",
@@ -218,6 +217,8 @@
 		"Consumption": "Forbrug",
 		"ConsumptionPrices": "Forbrugspriser",
 		"ConsumptionProofs": "Forbrugsbeviser",
+		"Contribute": "Bidrag",
+		"Contributors": "Bidragsydere",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekræft",
 		"Country": "Land",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Diagram",
 		"Done": "Færdiggjort",
 		"Error": "Fejlmelding",
+		"Experiment": "Eksperiment",
 		"Experiments": "Eksperimenter",
 		"Join": "Deltag",
 		"Label": "Etiket",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Billeder tilføjet",
 		"PicturesAddedByYou": "Billeder tilføjet af dig",
 		"PRICE_TAG": "Prisskilt",
+		"PriceTags": "Prismærker",
 		"PriceCount": "{count} priser | {count} pris | {count} priser",
 		"PriceAddedCount": "{count} tilføjede priser | {count} pris tilføjet | {count} priser tilføjet",
 		"PriceToValidateCount": "{count} priser at validere | {count} pris at validere | {count} priser skal valideres",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Fællesskab"
+		},
+		"Contribute": {
+			"Title": "Bidrag"
 		},
 		"Experiments": {
 			"Title": "Eksperimenter"
