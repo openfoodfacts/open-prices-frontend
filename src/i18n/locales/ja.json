@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "クリア",
-		"Contributors": "貢献者",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "消費",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "貢献する",
+		"Contributors": "貢献者",
 		"Contributions": "貢献",
 		"Confirm": "確定",
 		"Country": "国",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "完了",
 		"Error": "エラー",
+		"Experiment": "実験",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "ラベル",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "値札",
+		"PriceTags": "値札",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "貢献する"
 		},
 		"Experiments": {
 			"Title": "Experiments"

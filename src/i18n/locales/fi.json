@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Tyhjennä",
-		"Contributors": "Osallistujat",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Kulutus",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Osallistu",
+		"Contributors": "Osallistujat",
 		"Contributions": "Osallistumiset",
 		"Confirm": "Vahvista",
 		"Country": "Maa",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Valmis",
 		"Error": "Virhe",
+		"Experiment": "Kokeilu",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Merkki",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Hintalappu",
+		"PriceTags": "Hintalaput",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Osallistu"
 		},
 		"Experiments": {
 			"Title": "Experiments"

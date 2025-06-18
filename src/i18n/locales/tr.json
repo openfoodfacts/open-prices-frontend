@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Temizle",
-		"Contributors": "Katkıda bulunanlar",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Tüketim",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Destekleyebilirsiniz",
+		"Contributors": "Katkıda bulunanlar",
 		"Contributions": "Katkıda Bulunulanlar",
 		"Confirm": "Onayla",
 		"Country": "Ülke",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Yapıldı",
 		"Error": "Hata",
+		"Experiment": "Deney",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Etiket",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Fiyat etiketi",
+		"PriceTags": "Fiyat etiketleri",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Destekleyebilirsiniz"
 		},
 		"Experiments": {
 			"Title": "Experiments"

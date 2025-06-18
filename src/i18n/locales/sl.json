@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Počisti",
-		"Contributors": "Sodelavci",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Poraba",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Prispevaj",
+		"Contributors": "Sodelavci",
 		"Contributions": "Prispevki",
 		"Confirm": "Potrdi",
 		"Country": "Country",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Opravljeno",
 		"Error": "Napaka",
+		"Experiment": "Poskus",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Oznaka",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "Cenovne oznake",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Prispevaj"
 		},
 		"Experiments": {
 			"Title": "Experiments"

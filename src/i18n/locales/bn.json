@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "মুছে ফেলুন",
-		"Contributors": "Contributors",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "সহযগীতা",
+		"Contributors": "Contributors",
 		"Contributions": "অবদান",
 		"Confirm": "Confirm",
 		"Country": "Country",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
 		"Error": "ত্রুটি",
+		"Experiment": "পরীক্ষা",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Label",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "মূল্য ট্যাগ",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "সহযগীতা"
 		},
 		"Experiments": {
 			"Title": "Experiments"

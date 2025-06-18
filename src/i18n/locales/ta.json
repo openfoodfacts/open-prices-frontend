@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "தொடரும் சவால்",
 		"Chart": "Chart",
 		"Clear": "Clear",
-		"Contributors": "Contributors",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +217,8 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Contribute",
+		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
 		"Country": "Country",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
 		"Error": "Error",
+		"Experiment": "பரிசோதனை",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Label",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "படங்கள் சேர்க்கப்பட்டன",
 		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "விலை குறிச்சொற்கள்",
 		"PriceCount": "{count} விலைகள் | {count} விலை | {count} விலைகள்",
 		"PriceAddedCount": "{count} விலைகள் சேர்க்கப்பட்டன | {count} விலை சேர்க்கப்பட்டது | {count} விலைகள் சேர்க்கப்பட்டன",
 		"PriceToValidateCount": "{count} சரிபார்க்க வேண்டிய விலைகள் | {count} சரிபார்க்க வேண்டிய விலை | {count} சரிபார்க்க வேண்டிய விலைகள்",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Contribute"
 		},
 		"Experiments": {
 			"Title": "Experiments"

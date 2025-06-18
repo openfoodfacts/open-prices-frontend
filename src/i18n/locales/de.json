@@ -210,7 +210,6 @@
 		"ChallengeOngoing": "Ständige Herausforderung",
 		"Chart": "Diagramm",
 		"Clear": "Leeren",
-		"Contributors": "Mitwirkende",
 		"Comment": "Kommentar",
 		"Community": "Gemeinschaft",
 		"CommunityPrices": "Preise durch die Gemeinschaft",
@@ -218,6 +217,8 @@
 		"Consumption": "Verbrauch",
 		"ConsumptionPrices": "Verbraucherpreise",
 		"ConsumptionProofs": "Nachweise durch Verbraucher",
+		"Contribute": "Mitwirken",
+		"Contributors": "Mitwirkende",
 		"Contributions": "Beiträge",
 		"Confirm": "Bestätigen",
 		"Country": "Land",
@@ -239,6 +240,7 @@
 		"DisplayPriceChart": "Diagramm",
 		"Done": "Fertig",
 		"Error": "Fehler",
+		"Experiment": "Experiment",
 		"Experiments": "Experimente",
 		"Join": "Beitreten",
 		"Label": "Kennzeichnung",
@@ -346,6 +348,7 @@
 		"PicturesAdded": "Fotos hinzugefügt",
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
 		"PRICE_TAG": "Preisschild",
+		"PriceTags": "Preisschilder",
 		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
 		"PriceAddedCount": "{count} Preise hinzugefügt | {count} Preis hinzugefügt | {count} Preise hinzugefügt",
 		"PriceToValidateCount": "{count} zu bestätigende Preise | {count} zu bestätigender Preis | {count} zu bestätigende Preise",
@@ -734,6 +737,9 @@
 		},
 		"Community": {
 			"Title": "Gemeinschaft"
+		},
+		"Contribute": {
+			"Title": "Mitwirken"
 		},
 		"Experiments": {
 			"Title": "Experimente"
