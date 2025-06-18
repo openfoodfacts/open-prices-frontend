@@ -633,7 +633,7 @@
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
-		"PromoProofPriceTagAddMultiple": "Norėdami įkelti kelias kainų etiketes (tą pačią parduotuvės vietą ir datą), spustelėkite čia!",
+		"PromoProofPriceTagAddMultiple": "Kad įkeltumėte kelias kainų etiketes (tą pačią parduotuvės vietą ir datą), spustelėkite čia!",
 		"PromoReceiptAssistant": "Eksperimentuokite: išbandykite naują kvitų asistentą, kuris automatiškai nuskaitys kainas iš jūsų kvitų!"
 	},
 	"ProofCard": {
