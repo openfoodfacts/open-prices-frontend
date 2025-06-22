@@ -355,6 +355,7 @@
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "價格已建立！",
+		"PricesAlreadyUploaded": "價格已上傳",
 		"PricesMore": "更多價格",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "今天新增的價格",
