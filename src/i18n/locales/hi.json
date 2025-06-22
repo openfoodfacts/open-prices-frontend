@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "जानकारी",
+		"Action": "कार्रवाई",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "एक मूल्य जोड़े",
 		"AddPrices": "Add prices",
@@ -400,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Summary": "संग्रह",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
