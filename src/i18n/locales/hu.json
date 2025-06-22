@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Névjegy",
+		"Action": "Akció",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Ár hozzáadása",
 		"AddPrices": "Add prices",
@@ -400,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "Indítás",
 		"Stats": "Stats",
+		"Summary": "Összegzés",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
