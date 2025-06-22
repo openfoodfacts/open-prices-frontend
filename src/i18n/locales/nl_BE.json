@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Over",
+		"Action": "Actie",
+		"Actions": "Acties",
 		"AddComment": "Plaats een reactie",
 		"AddPrice": "Voeg een prijs toe",
 		"AddPrices": "Prijzen toevoegen",
@@ -400,6 +402,7 @@
 		"SourceCode": "Broncode",
 		"Start": "Beginnen",
 		"Stats": "Statistieken",
+		"Summary": "Samenvatting",
 		"TaglineOriginal": "Een open, crowdsourced database van voedselprijzen",
 		"TaglineAlt1": "De open, crowdsourced database van prijzen",
 		"TaglineAlt2": "De open, crowdsourced database van voedsel- en productprijzen",
