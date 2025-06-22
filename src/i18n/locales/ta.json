@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "இதைப் பற்றி",
+		"Action": "செயல்",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
@@ -210,7 +212,6 @@
 		"ChallengeOngoing": "தொடரும் சவால்",
 		"Chart": "Chart",
 		"Clear": "Clear",
-		"Contributors": "Contributors",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +219,8 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Contribute",
+		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
 		"Country": "Country",
@@ -239,6 +242,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
 		"Error": "Error",
+		"Experiment": "பரிசோதனை",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Label",
@@ -346,10 +350,12 @@
 		"PicturesAdded": "படங்கள் சேர்க்கப்பட்டன",
 		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "விலை குறிச்சொற்கள்",
 		"PriceCount": "{count} விலைகள் | {count} விலை | {count} விலைகள்",
 		"PriceAddedCount": "{count} விலைகள் சேர்க்கப்பட்டன | {count} விலை சேர்க்கப்பட்டது | {count} விலைகள் சேர்க்கப்பட்டன",
 		"PriceToValidateCount": "{count} சரிபார்க்க வேண்டிய விலைகள் | {count} சரிபார்க்க வேண்டிய விலை | {count} சரிபார்க்க வேண்டிய விலைகள்",
 		"PriceCreated": "விலை உருவாக்கப்பட்டது!",
+		"PricesAlreadyUploaded": "விலைகள் ஏற்கனவே பதிவேற்றப்பட்டுள்ளன",
 		"PricesMore": "கூடுதல் விலைகள்",
 		"PricesAdded": "விலைகள் சேர்க்கப்பட்டன",
 		"PricesAddedToday": "இன்று சேர்க்கப்பட்ட விலைகள்",
@@ -397,6 +403,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Summary": "சுருக்கம்",
 		"TaglineOriginal": "உணவு விலைகளின் திறந்த கூட்டத் தரவுத்தளம்",
 		"TaglineAlt1": "விலைகளின் திறந்த மக்கள்தொகை தரவுத்தளம்",
 		"TaglineAlt2": "உணவு மற்றும் தயாரிப்பு விலைகளின் திறந்த கூட்டத் தரவுத்தளம்",
@@ -734,6 +741,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Contribute"
 		},
 		"Experiments": {
 			"Title": "Experiments"

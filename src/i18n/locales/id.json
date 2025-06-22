@@ -166,11 +166,13 @@
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
-		"PastChallenges": "Tantangan masa lalu",
-		"UpcomingChallenges": "Tantangan yang akan datang"
+		"PastChallenges": "Tantangan sebelumnya",
+		"UpcomingChallenges": "Tantangan selanjutnya"
 	},
 	"Common": {
 		"About": "Tentang",
+		"Action": "Tindakan",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Tambahkan harga",
 		"AddPrices": "Tambahkan harga",
@@ -210,7 +212,6 @@
 		"ChallengeOngoing": "Tantangan yang sedang berlangsung",
 		"Chart": "Grafik",
 		"Clear": "Hapus",
-		"Contributors": "Kontributor",
 		"Comment": "Comment",
 		"Community": "Komunitas",
 		"CommunityPrices": "Community prices",
@@ -218,6 +219,8 @@
 		"Consumption": "Konsumsi",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Berkontribusi",
+		"Contributors": "Kontributor",
 		"Contributions": "Kontribusi",
 		"Confirm": "Konfirmasi",
 		"Country": "Negara",
@@ -239,6 +242,7 @@
 		"DisplayPriceChart": "Grafik",
 		"Done": "Selesai",
 		"Error": "Kesalahan",
+		"Experiment": "Percobaan",
 		"Experiments": "Eksperimen",
 		"Join": "Gabung",
 		"Label": "Label",
@@ -346,10 +350,12 @@
 		"PicturesAdded": "Foto ditambahkan",
 		"PicturesAddedByYou": "Foto yang Anda tambahkan",
 		"PRICE_TAG": "Label harga",
+		"PriceTags": "Label harga",
 		"PriceCount": "{count} harga | {count} harga | {count} harga",
 		"PriceAddedCount": "{count} harga ditambahkan | {count} harga ditambahkan | {count} harga ditambahkan",
 		"PriceToValidateCount": "{count} harga untuk divalidasi | {count} harga untuk divalidasi | {count} harga untuk divalidasi",
 		"PriceCreated": "Harga dibuat!",
+		"PricesAlreadyUploaded": "Harga sudah diunggah",
 		"PricesMore": "Harga lebih lanjut",
 		"PricesAdded": "Harga ditambahkan",
 		"PricesAddedToday": "Harga yang ditambahkan hari ini",
@@ -397,6 +403,7 @@
 		"SourceCode": "Sumber kode",
 		"Start": "Mulai",
 		"Stats": "Statistik",
+		"Summary": "Ringkasan",
 		"TaglineOriginal": "Basis data harga makanan yang terbuka dan bersumber dari banyak orang",
 		"TaglineAlt1": "Basis data harga yang terbuka dan bersumber dari banyak orang",
 		"TaglineAlt2": "Basis data crowdsourced terbuka untuk harga makanan dan produk",
@@ -734,6 +741,9 @@
 		},
 		"Community": {
 			"Title": "Komunitas"
+		},
+		"Contribute": {
+			"Title": "Berkontribusi"
 		},
 		"Experiments": {
 			"Title": "Eksperimen"

@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Om",
+		"Action": "Handling",
+		"Actions": "Handlinger",
 		"AddComment": "Tilføj en kommentar",
 		"AddPrice": "Tilføj en pris",
 		"AddPrices": "Tilføj priser",
@@ -210,7 +212,6 @@
 		"ChallengeOngoing": "Igangværende udfordring",
 		"Chart": "Diagram",
 		"Clear": "Ryd",
-		"Contributors": "Bidragsydere",
 		"Comment": "Kommentér",
 		"Community": "Fællesskab",
 		"CommunityPrices": "Fællesskabets priser",
@@ -218,6 +219,8 @@
 		"Consumption": "Forbrug",
 		"ConsumptionPrices": "Forbrugspriser",
 		"ConsumptionProofs": "Forbrugsbeviser",
+		"Contribute": "Bidrag",
+		"Contributors": "Bidragsydere",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekræft",
 		"Country": "Land",
@@ -239,6 +242,7 @@
 		"DisplayPriceChart": "Diagram",
 		"Done": "Færdiggjort",
 		"Error": "Fejlmelding",
+		"Experiment": "Eksperiment",
 		"Experiments": "Eksperimenter",
 		"Join": "Deltag",
 		"Label": "Etiket",
@@ -346,10 +350,12 @@
 		"PicturesAdded": "Billeder tilføjet",
 		"PicturesAddedByYou": "Billeder tilføjet af dig",
 		"PRICE_TAG": "Prisskilt",
+		"PriceTags": "Prismærker",
 		"PriceCount": "{count} priser | {count} pris | {count} priser",
 		"PriceAddedCount": "{count} tilføjede priser | {count} pris tilføjet | {count} priser tilføjet",
 		"PriceToValidateCount": "{count} priser at validere | {count} pris at validere | {count} priser skal valideres",
 		"PriceCreated": "Pris oprettet!",
+		"PricesAlreadyUploaded": "Priserne er allerede uploadet",
 		"PricesMore": "Flere priser",
 		"PricesAdded": "Priser tilføjet",
 		"PricesAddedToday": "Priser tilføjet i dag",
@@ -397,6 +403,7 @@
 		"SourceCode": "Kildekode",
 		"Start": "Start",
 		"Stats": "Statistik",
+		"Summary": "Oversigt",
 		"TaglineOriginal": "En åben crowdsourced database over fødevarepriser",
 		"TaglineAlt1": "Den åbne crowdsourcede database over priser",
 		"TaglineAlt2": "Den åbne crowdsourcing-database over fødevare- og produktpriser",
@@ -734,6 +741,9 @@
 		},
 		"Community": {
 			"Title": "Fællesskab"
+		},
+		"Contribute": {
+			"Title": "Bidrag"
 		},
 		"Experiments": {
 			"Title": "Eksperimenter"

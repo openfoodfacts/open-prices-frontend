@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Hakkında",
+		"Action": "Aksiyon",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Fiyat ekleyin",
 		"AddPrices": "Add prices",
@@ -210,7 +212,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Temizle",
-		"Contributors": "Katkıda bulunanlar",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +219,8 @@
 		"Consumption": "Tüketim",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Destekleyebilirsiniz",
+		"Contributors": "Katkıda bulunanlar",
 		"Contributions": "Katkıda Bulunulanlar",
 		"Confirm": "Onayla",
 		"Country": "Ülke",
@@ -239,6 +242,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Yapıldı",
 		"Error": "Hata",
+		"Experiment": "Deney",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Etiket",
@@ -346,10 +350,12 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Fiyat etiketi",
+		"PriceTags": "Fiyat etiketleri",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Fiyat oluşturuldu!",
+		"PricesAlreadyUploaded": "Fiyatlar zaten yüklendi",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -397,6 +403,7 @@
 		"SourceCode": "Source code",
 		"Start": "Başla",
 		"Stats": "İstatistikler",
+		"Summary": "Özet",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -734,6 +741,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Destekleyebilirsiniz"
 		},
 		"Experiments": {
 			"Title": "Experiments"

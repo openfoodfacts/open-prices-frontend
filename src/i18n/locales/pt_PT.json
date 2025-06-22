@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Sobre",
+		"Action": "Ação",
+		"Actions": "Actions",
 		"AddComment": "Adicionar um comentário",
 		"AddPrice": "Adicionar um preço",
 		"AddPrices": "Adicionar preços",
@@ -210,7 +212,6 @@
 		"ChallengeOngoing": "Desafio a decorrer",
 		"Chart": "Gráfico",
 		"Clear": "Limpar",
-		"Contributors": "Colaboradores",
 		"Comment": "Comentário",
 		"Community": "Comunidade",
 		"CommunityPrices": "Community prices",
@@ -218,6 +219,8 @@
 		"Consumption": "Consumo",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Contribuir",
+		"Contributors": "Colaboradores",
 		"Contributions": "Contribuições",
 		"Confirm": "Confirmar",
 		"Country": "País",
@@ -239,6 +242,7 @@
 		"DisplayPriceChart": "Gráfico",
 		"Done": "Concluído",
 		"Error": "Erro",
+		"Experiment": "Experiência",
 		"Experiments": "Experiências",
 		"Join": "Aderir",
 		"Label": "Rótulo",
@@ -346,10 +350,12 @@
 		"PicturesAdded": "Fotografias adicionadas",
 		"PicturesAddedByYou": "Fotografias adicionadas por si",
 		"PRICE_TAG": "Etiqueta de preço",
+		"PriceTags": "Etiquetas de preço",
 		"PriceCount": "{count} preços | {count} preços | {count} preços",
 		"PriceAddedCount": "{count} preços adicionados | {count} preço adicionado | {count} preços adicionados",
 		"PriceToValidateCount": "{count} preços a validar | {count} preço a validar | {count} preços a validar",
 		"PriceCreated": "Preço criado!",
+		"PricesAlreadyUploaded": "Preços já carregados",
 		"PricesMore": "Mais preços",
 		"PricesAdded": "Preços adicionado",
 		"PricesAddedToday": "Preços adicionados hoje",
@@ -397,6 +403,7 @@
 		"SourceCode": "Código-fonte",
 		"Start": "Começar",
 		"Stats": "Estatísticas",
+		"Summary": "Resumo",
 		"TaglineOriginal": "Uma base de dados aberta e colaborativa de preços de alimentos",
 		"TaglineAlt1": "A base de dados aberta e colectiva de preços",
 		"TaglineAlt2": "A base de dados aberta e colectiva de alimentos e preços de produtos",
@@ -734,6 +741,9 @@
 		},
 		"Community": {
 			"Title": "Comunidade"
+		},
+		"Contribute": {
+			"Title": "Contribuir"
 		},
 		"Experiments": {
 			"Title": "Experiências"

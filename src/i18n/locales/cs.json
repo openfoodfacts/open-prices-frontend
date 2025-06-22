@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "O aplikaci",
+		"Action": "Akce",
+		"Actions": "Actions",
 		"AddComment": "Přidat komentář",
 		"AddPrice": "Přidat cenu",
 		"AddPrices": "Přidat ceny",
@@ -210,7 +212,6 @@
 		"ChallengeOngoing": "Probíhající výzva",
 		"Chart": "Graf",
 		"Clear": "Vymazat",
-		"Contributors": "Přispěvatelé",
 		"Comment": "Komentář",
 		"Community": "Komunita",
 		"CommunityPrices": "Community prices",
@@ -218,6 +219,8 @@
 		"Consumption": "Spotřeba",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Přispět",
+		"Contributors": "Přispěvatelé",
 		"Contributions": "Příspěvky",
 		"Confirm": "Potvrdit",
 		"Country": "Země",
@@ -239,6 +242,7 @@
 		"DisplayPriceChart": "Graf",
 		"Done": "Hotovo",
 		"Error": "Chyba",
+		"Experiment": "Experimentovat",
 		"Experiments": "Experimenty",
 		"Join": "Připojit",
 		"Label": "Štítek",
@@ -346,10 +350,12 @@
 		"PicturesAdded": "Obrázky přidány",
 		"PicturesAddedByYou": "Vámi přidané obrázky",
 		"PRICE_TAG": "Cenovka",
+		"PriceTags": "Cenovky",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena vytvořena!",
+		"PricesAlreadyUploaded": "Ceny již nahrány",
 		"PricesMore": "Více cen",
 		"PricesAdded": "Ceny přidány",
 		"PricesAddedToday": "Ceny přidány dnes",
@@ -397,6 +403,7 @@
 		"SourceCode": "Zdrojový kód",
 		"Start": "Start",
 		"Stats": "Statistiky",
+		"Summary": "Přehled",
 		"TaglineOriginal": "Otevřená crowdsourcovaná databáze cen potravin",
 		"TaglineAlt1": "Otevřená crowdsourcovaná databáze cen",
 		"TaglineAlt2": "Otevřená crowdsourcovaná databáze cen potravin a produktů",
@@ -734,6 +741,9 @@
 		},
 		"Community": {
 			"Title": "Komunita"
+		},
+		"Contribute": {
+			"Title": "Přispět"
 		},
 		"Experiments": {
 			"Title": "Experimenty"

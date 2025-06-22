@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Acerca de",
+		"Action": "Acción",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Añadir un precio",
 		"AddPrices": "Add prices",
@@ -210,7 +212,6 @@
 		"ChallengeOngoing": "Desafío en curso",
 		"Chart": "Chart",
 		"Clear": "Limpiar",
-		"Contributors": "Colaboradores",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Precios comunitarios",
@@ -218,6 +219,8 @@
 		"Consumption": "Consumo",
 		"ConsumptionPrices": "Precios de consumo",
 		"ConsumptionProofs": "Comprobantes de consumo",
+		"Contribute": "Contribuir",
+		"Contributors": "Colaboradores",
 		"Contributions": "Contribuciones",
 		"Confirm": "Confirmar",
 		"Country": "País",
@@ -239,6 +242,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Hecho",
 		"Error": "Error",
+		"Experiment": "Experimento",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Sello",
@@ -346,10 +350,12 @@
 		"PicturesAdded": "Imágenes añadidas",
 		"PicturesAddedByYou": "Fotos añadidas por ti",
 		"PRICE_TAG": "Etiqueta de precio",
+		"PriceTags": "etiquetas de precios",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "¡Precio creado!",
+		"PricesAlreadyUploaded": "Precios ya subidos",
 		"PricesMore": "More prices",
 		"PricesAdded": "Precios añadidos",
 		"PricesAddedToday": "Prices added today",
@@ -397,6 +403,7 @@
 		"SourceCode": "Source code",
 		"Start": "Empezar",
 		"Stats": "Estadísticas",
+		"Summary": "Resumen",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -734,6 +741,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Contribuir"
 		},
 		"Experiments": {
 			"Title": "Experiments"

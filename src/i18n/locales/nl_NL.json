@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Over",
+		"Action": "Actie",
+		"Actions": "Acties",
 		"AddComment": "Plaats een reactie",
 		"AddPrice": "Voeg een prijs toe",
 		"AddPrices": "Prijzen toevoegen",
@@ -210,7 +212,6 @@
 		"ChallengeOngoing": "Lopende uitdaging",
 		"Chart": "Grafiek",
 		"Clear": "Wissen",
-		"Contributors": "Medewerkers",
 		"Comment": "Reactie",
 		"Community": "Gemeenschap",
 		"CommunityPrices": "Gemeenschapsprijzen",
@@ -218,6 +219,8 @@
 		"Consumption": "Consumptie",
 		"ConsumptionPrices": "Verbruiksprijzen",
 		"ConsumptionProofs": "Verbruiksbewijzen",
+		"Contribute": "Bijdragen",
+		"Contributors": "Medewerkers",
 		"Contributions": "Bijdragen",
 		"Confirm": "Bevestig",
 		"Country": "Land",
@@ -239,6 +242,7 @@
 		"DisplayPriceChart": "Grafiek",
 		"Done": "Voltooid",
 		"Error": "Foutmelding",
+		"Experiment": "Experiment",
 		"Experiments": "Experimenten",
 		"Join": "Deelnemen",
 		"Label": "Keurmerk",
@@ -346,10 +350,12 @@
 		"PicturesAdded": "Foto's toegevoegd",
 		"PicturesAddedByYou": "Door jou toegevoegde foto's",
 		"PRICE_TAG": "Prijskaartje",
+		"PriceTags": "Prijskaartjes",
 		"PriceCount": "{count} prijzen | {count} prijs | {count} prijzen",
 		"PriceAddedCount": "{count} prijzen toegevoegd | {count} prijs toegevoegd | {count} prijzen toegevoegd",
 		"PriceToValidateCount": "{count} te valideren prijzen | {count} te valideren prijs | {count} te valideren prijzen",
 		"PriceCreated": "Prijs aangemaakt!",
+		"PricesAlreadyUploaded": "Prijzen al geüpload",
 		"PricesMore": "Meer prijzen",
 		"PricesAdded": "Prijzen toegevoegd",
 		"PricesAddedToday": "Vandaag toegevoegde prijzen",
@@ -397,6 +403,7 @@
 		"SourceCode": "Broncode",
 		"Start": "Begin",
 		"Stats": "Statistieken",
+		"Summary": "Samenvatting",
 		"TaglineOriginal": "Een open, crowdsourced database van voedselprijzen",
 		"TaglineAlt1": "De open, crowdsourced database van prijzen",
 		"TaglineAlt2": "De open, crowdsourced database van voedsel- en productprijzen",
@@ -630,7 +637,7 @@
 		"PriceTagAIWarning": "AI zal uw bewijzen gebruiken om prijzen te berekenen.",
 		"ReceiptAllowAI": "Laat AI op uw kassabon inspecteren om prijzen te extraheren",
 		"ReceiptAIWarning": "AI analyseert uw kassabon om prijzen te extraheren.",
-		"PromoProofPriceTagAddMultiple": "Als u meerdere prijskaartjes wilt uploaden (zelfde winkellocatie en datum), klik dan hier!",
+		"PromoProofPriceTagAddMultiple": "Als u meerdere prijskaartjes wilt uploaden (op dezelfde winkellocatie en datum), klik dan hier!",
 		"PromoReceiptAssistant": "Experimenteer: probeer de nieuwe kassabonassistent om automatisch prijzen uit uw kassabonnen te extraheren!"
 	},
 	"ProofCard": {
@@ -734,6 +741,9 @@
 		},
 		"Community": {
 			"Title": "Gemeenschap"
+		},
+		"Contribute": {
+			"Title": "Bijdragen"
 		},
 		"Experiments": {
 			"Title": "Experimenten"

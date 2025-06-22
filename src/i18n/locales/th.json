@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "About",
+		"Action": "การกระทำ",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
@@ -210,7 +212,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "ล้างข้อมูล",
-		"Contributors": "Contributors",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -218,6 +219,8 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "ร่วมสนับสนุน",
+		"Contributors": "Contributors",
 		"Contributions": "การมีส่วนร่วม",
 		"Confirm": "ยืนยัน",
 		"Country": "Country",
@@ -239,6 +242,7 @@
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
 		"Error": "Error",
+		"Experiment": "การทดลอง",
 		"Experiments": "Experiments",
 		"Join": "Join",
 		"Label": "Label",
@@ -346,10 +350,12 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "ป้ายราคา",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
+		"PricesAlreadyUploaded": "ราคาอัพโหลดเรียบร้อยแล้ว",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -397,6 +403,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Summary": "ภาพรวม",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -734,6 +741,9 @@
 		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "ร่วมสนับสนุน"
 		},
 		"Experiments": {
 			"Title": "Experiments"
