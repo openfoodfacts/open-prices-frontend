@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Относно",
+		"Action": "Действие",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Добавяне на цена",
 		"AddPrices": "Add prices",
@@ -400,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "Старт",
 		"Stats": "Stats",
+		"Summary": "Обобщение",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
