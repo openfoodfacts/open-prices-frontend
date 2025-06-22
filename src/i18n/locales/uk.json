@@ -355,6 +355,7 @@
 		"PriceAddedCount": "{count} додано ціни | {count} ціна додана | {count} ціни додано",
 		"PriceToValidateCount": "{count} ціни для перевірки | {count} ціна для перевірки | {count} ціни для перевірки",
 		"PriceCreated": "Ціна створена!",
+		"PricesAlreadyUploaded": "Ціни вже завантажено",
 		"PricesMore": "Більше цін",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Ціни, додані сьогодні",
