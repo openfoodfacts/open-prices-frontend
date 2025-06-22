@@ -1,11 +1,8 @@
 <template>
   <v-card v-if="showCard" class="border-success mb-4" prepend-icon="mdi-tag-check-outline">
     <template #title>
-      <i18n-t keypath="AddPriceMultiple.ProductPriceDetails.AlreadyUploaded" :plural="proofPriceUploadedList.length" tag="span">
-        <template #priceAlreadyUploadedNumber>
-          <span>{{ proofPriceUploadedList.length }}</span>
-        </template>
-      </i18n-t>
+      {{ $t('Common.PricesAlreadyUploaded') }}
+      <LoadedCountChip :totalCount="proofPriceUploadedList.length" />
     </template>
     <template #append>
       <v-icon icon="mdi-checkbox-marked-circle" color="success" />
@@ -40,6 +37,7 @@ import constants from '../constants'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
