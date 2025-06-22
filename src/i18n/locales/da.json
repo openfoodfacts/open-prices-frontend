@@ -355,6 +355,7 @@
 		"PriceAddedCount": "{count} tilføjede priser | {count} pris tilføjet | {count} priser tilføjet",
 		"PriceToValidateCount": "{count} priser at validere | {count} pris at validere | {count} priser skal valideres",
 		"PriceCreated": "Pris oprettet!",
+		"PricesAlreadyUploaded": "Priserne er allerede uploadet",
 		"PricesMore": "Flere priser",
 		"PricesAdded": "Priser tilføjet",
 		"PricesAddedToday": "Priser tilføjet i dag",
