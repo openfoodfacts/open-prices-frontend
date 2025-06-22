@@ -3,6 +3,9 @@
     <template v-if="!hideProofHeader" #title>
       {{ $t('Common.Proof') }}
     </template>
+    <template v-if="!hideProofHeader" #prepend>
+      <v-icon icon="mdi-image" />
+    </template>
     <template v-if="!hideProofHeader" #append>
       <v-icon v-if="mode == 'Display'" icon="mdi-close" @click="close" />
       <v-icon v-else-if="mode == 'Uploaded'" icon="mdi-checkbox-marked-circle" color="success" />
