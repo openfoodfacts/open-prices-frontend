@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Tentang",
+		"Action": "Tindakan",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Tambahkan harga",
 		"AddPrices": "Tambahkan harga",
@@ -400,6 +402,7 @@
 		"SourceCode": "Sumber kode",
 		"Start": "Mulai",
 		"Stats": "Statistik",
+		"Summary": "Ringkasan",
 		"TaglineOriginal": "Basis data harga makanan yang terbuka dan bersumber dari banyak orang",
 		"TaglineAlt1": "Basis data harga yang terbuka dan bersumber dari banyak orang",
 		"TaglineAlt2": "Basis data crowdsourced terbuka untuk harga makanan dan produk",
