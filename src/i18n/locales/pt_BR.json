@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Sobre",
+		"Action": "Ação",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Adicionar um preço",
 		"AddPrices": "Adicionar preços",
@@ -400,6 +402,7 @@
 		"SourceCode": "Código-fonte",
 		"Start": "Começar",
 		"Stats": "Estatísticas",
+		"Summary": "Resumo",
 		"TaglineOriginal": "Um banco de dados público e aberto de preços dos alimentos",
 		"TaglineAlt1": "O banco de dados público e aberto de preços",
 		"TaglineAlt2": "O banco de dados público e aberto de preços dos alimentos",
