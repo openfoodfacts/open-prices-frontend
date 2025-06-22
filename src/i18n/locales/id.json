@@ -355,6 +355,7 @@
 		"PriceAddedCount": "{count} harga ditambahkan | {count} harga ditambahkan | {count} harga ditambahkan",
 		"PriceToValidateCount": "{count} harga untuk divalidasi | {count} harga untuk divalidasi | {count} harga untuk divalidasi",
 		"PriceCreated": "Harga dibuat!",
+		"PricesAlreadyUploaded": "Harga sudah diunggah",
 		"PricesMore": "Harga lebih lanjut",
 		"PricesAdded": "Harga ditambahkan",
 		"PricesAddedToday": "Harga yang ditambahkan hari ini",
