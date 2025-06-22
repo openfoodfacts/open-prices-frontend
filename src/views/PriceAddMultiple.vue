@@ -102,15 +102,18 @@
   </v-row>
 
   <v-row v-if="step === 3">
-    <v-col>
+    <v-col cols="12" md="6">
+      <v-alert
+        class="mb-4"
+        type="success"
+        variant="outlined"
+        density="compact"
+        :text="$t('Common.PriceAddedCount', { count: proofPriceNewList.length })"
+      />
       <v-card
-        class="border-success"
-        :title="$t('Common.PriceAddedCount', { count: proofPriceNewList.length })"
-        prepend-icon="mdi-tag-check-outline"
+        :title="$t('Common.Actions')"
+        prepend-icon="mdi-clipboard-text"
       >
-        <template #append>
-          <v-icon icon="mdi-checkbox-marked-circle" color="success" />
-        </template>
         <v-divider />
         <v-card-text class="text-center">
           <v-row>

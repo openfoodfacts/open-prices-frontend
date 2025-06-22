@@ -18,15 +18,18 @@
   </v-row>
 
   <v-row v-if="step === 2">
-    <v-col>
+    <v-col cols="12" md="6">
+      <v-alert
+        class="mb-4"
+        type="success"
+        variant="outlined"
+        density="compact"
+        :text="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
+      />
       <v-card
-        class="border-success"
-        :title="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
-        prepend-icon="mdi-image-check"
+        :title="$t('Common.Actions')"
+        prepend-icon="mdi-clipboard-text"
       >
-        <template #append>
-          <v-icon icon="mdi-checkbox-marked-circle" color="success" />
-        </template>
         <v-divider />
         <v-card-text class="text-center">
           <v-row>

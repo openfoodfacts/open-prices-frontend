@@ -50,9 +50,9 @@
   </v-row>
 
   <v-row v-if="step === 3">
-    <v-col cols="12">
+    <v-col cols="12" md="6">
       <v-progress-linear
-        v-if="totalNumberOfPricesToAdd !== numberOfPricesAdded"
+        v-if="!finishedUploading"
         v-model="numberOfPricesAdded"
         :max="totalNumberOfPricesToAdd"
         :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
@@ -60,31 +60,53 @@
         :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
         rounded
       />
+      <v-alert
+        v-if="finishedUploading"
+        class="mb-4"
+        type="success"
+        variant="outlined"
+        density="compact"
+        :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
+      />
       <v-card
-        v-else
-        class="border-success"
-        :title="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
-        prepend-icon="mdi-tag-check-outline"
+        v-if="finishedUploading"
+        :title="$t('Common.Actions')"
+        prepend-icon="mdi-clipboard-text"
       >
-        <template #append>
-          <v-icon icon="mdi-checkbox-marked-circle" color="success" />
-        </template>
         <v-divider />
         <v-card-text class="text-center">
           <v-row>
             <v-col>
-              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :to="'/proofs/' + proofObject.id" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded">
+              <v-btn
+                color="primary"
+                :block="!$vuetify.display.smAndUp"
+                prepend-icon="mdi-image"
+                :to="'/proofs/' + proofObject.id"
+                :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded"
+              >
                 {{ $t('ContributionAssistant.GoToProof') }}
               </v-btn>
             </v-col>
             <v-col>
-              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded" @click="reloadPage">
+              <v-btn
+                color="primary"
+                :block="!$vuetify.display.smAndUp"
+                prepend-icon="mdi-image-plus"
+                :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded"
+                @click="reloadPage"
+              >
                 {{ $t('ContributionAssistant.AddNewProof') }}
               </v-btn>
             </v-col>
             <v-col>
-              <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" :to="userDashboardUrl" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded">
-                {{ $t('ContributionAssistant.GoToDashboard') }}
+              <v-btn
+                color="primary"
+                :block="!$vuetify.display.smAndUp"
+                prepend-icon="mdi-account-circle"
+                :to="userDashboardUrl"
+                :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded"
+              >
+                {{ $t('Common.MyDashboard') }}
               </v-btn>
             </v-col>
           </v-row>
@@ -154,6 +176,9 @@ export default {
     },
     proofHasReceiptPredictionItems() {
       return this.receiptItems && this.receiptItems.length > 0
+    },
+    finishedUploading() {
+      return this.totalNumberOfPricesToAdd === this.numberOfPricesAdded
     },
     userDashboardUrl() {
       const dashboardTab = (this.proofObject && this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
