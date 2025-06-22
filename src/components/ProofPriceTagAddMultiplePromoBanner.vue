@@ -1,6 +1,6 @@
 <template>
   <v-banner
-    icon="mdi-image-plus"
+    icon="mdi-image-multiple"
     bg-color="info"
     rounded
     density="compact"
