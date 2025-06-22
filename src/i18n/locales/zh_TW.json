@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "關於",
+		"Action": "行動",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "新增價格",
 		"AddPrices": "Add prices",
@@ -400,6 +402,7 @@
 		"SourceCode": "原始碼",
 		"Start": "開始",
 		"Stats": "統計數據",
+		"Summary": "總覽",
 		"TaglineOriginal": "開放的群眾外包食品價格資料庫",
 		"TaglineAlt1": "開放的群眾外包價格資料庫",
 		"TaglineAlt2": "開放的群眾外包食品及產品價格資料庫",
