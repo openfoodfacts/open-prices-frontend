@@ -31,8 +31,6 @@
         </v-col>
       </v-row>
     </v-card-actions>
-
-    <v-overlay v-model="disableCard" scrim="#E8F5E9" contained persistent />
   </v-card>
 </template>
 
@@ -58,11 +56,6 @@ export default {
     hideCardIfNoProofPriceUploaded: {
       type: Boolean,
       default: true
-    }
-  },
-  data() {
-    return {
-      disableCard: true
     }
   },
   computed: {
