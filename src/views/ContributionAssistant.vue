@@ -147,13 +147,11 @@
   </v-row>
 
   <v-row v-if="step === 4">
-    <v-col cols="12">
+    <v-col>
       <v-row>
-        <v-col>
-          <h3 class="mb-4">
-            {{ $t('ContributionAssistant.WaitForUpload') }}
-          </h3>
+        <v-col cols="12" md="6">
           <v-progress-linear
+            v-if="!finishedUploading"
             v-model="numberOfPricesAdded"
             :max="productPriceFormsWithoutPriceIdAndNoError.length"
             :color="productPriceFormsWithoutPriceIdAndNoError.length === numberOfPricesAdded ? 'success' : 'primary'"
@@ -163,31 +161,67 @@
           >
             <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceIdAndNoError.length }) }}</strong>
           </v-progress-linear>
+          <v-alert
+            v-if="finishedUploading"
+            class="mb-4"
+            type="success"
+            variant="outlined"
+            density="compact"
+            :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
+          />
+          <v-card
+            v-if="finishedUploading"
+            :title="$t('Common.Actions')"
+            prepend-icon="mdi-clipboard-text"
+          >
+            <v-divider />
+            <v-card-text class="text-center">
+              <v-row>
+                <v-col>
+                  <v-btn
+                    color="primary"
+                    :block="!$vuetify.display.smAndUp"
+                    prepend-icon="mdi-image"
+                    :to="'/proofs/' + proofObject.id"
+                  >
+                    {{ $t('ContributionAssistant.GoToProof') }}
+                  </v-btn>
+                </v-col>
+                <v-col>
+                  <v-btn
+                    color="primary"
+                    :block="!$vuetify.display.smAndUp"
+                    prepend-icon="mdi-image-plus"
+                    @click="reloadPage"
+                  >
+                    {{ $t('ContributionAssistant.AddNewProof') }}
+                  </v-btn>
+                </v-col>
+                <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1">
+                  <v-btn
+                    :block="!$vuetify.display.smAndUp"
+                    color="primary"
+                    @click="nextProof"
+                  >
+                    {{ $t('ContributionAssistant.NextProof') }}
+                  </v-btn>
+                </v-col>
+                <v-col>
+                  <v-btn
+                    color="primary"
+                    :block="!$vuetify.display.smAndUp"
+                    prepend-icon="mdi-account-circle"
+                    to="/dashboard"
+                  >
+                    {{ $t('Common.MyDashboard') }}
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-card-text>
+          </v-card>
         </v-col>
       </v-row>
-      <v-row class="text-center">
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :to="'/proofs/' + proofObject.id" :disabled="!allDone">
-            {{ $t('ContributionAssistant.GoToProof') }}
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :disabled="!allDone" @click="reloadPage">
-            {{ $t('ContributionAssistant.AddNewProof') }}
-          </v-btn>
-        </v-col>
-        <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1">
-          <v-btn :block="!$vuetify.display.smAndUp" color="primary" :disabled="!allDone" @click="nextProof">
-            {{ $t('ContributionAssistant.NextProof') }}
-          </v-btn>
-        </v-col>
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" to="/dashboard" :disabled="!allDone">
-            {{ $t('ContributionAssistant.GoToDashboard') }}
-          </v-btn>
-        </v-col>
-      </v-row>
-      <v-row v-if="nextProofSuggestions.length">
+      <v-row v-if="finishedUploading && nextProofSuggestions.length">
         <v-col>
           <h3 class="mb-4">
             {{ $t('ContributionAssistant.ChooseNextProof') }}
@@ -296,8 +330,11 @@ export default {
       // It should also be disabled on summary step
       return !this.productPriceFormsWithoutPriceIdAndNoError.length || this.step === 4
     },
+    finishedUploading() {
+      return this.productPriceFormsWithoutPriceIdAndNoError.length === this.numberOfPricesAdded
+    },
     allDone() {
-      return this.numberOfPricesAdded > 0 && this.productPriceFormsWithoutPriceIdAndNoError.length == this.numberOfPricesAdded
+      return this.numberOfPricesAdded > 0 && this.finishedUploading
     },
     disableSummaryStep() {
       // Summary tab should be enabled when there are product prices to be added and the add prices process is either running or done
@@ -316,7 +353,7 @@ export default {
     },
     productPriceFormsMarkedAsError() {
       return this.productPriceForms.filter(productPriceForm => productPriceForm.status > 1)
-    }
+    },
   },
   mounted() {
     if (this.$route.query.proof_ids) {

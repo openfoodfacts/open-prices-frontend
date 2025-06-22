@@ -82,7 +82,6 @@
                 :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-image"
                 :to="'/proofs/' + proofObject.id"
-                :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded"
               >
                 {{ $t('ContributionAssistant.GoToProof') }}
               </v-btn>
@@ -92,7 +91,6 @@
                 color="primary"
                 :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-image-plus"
-                :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded"
                 @click="reloadPage"
               >
                 {{ $t('ContributionAssistant.AddNewProof') }}
@@ -104,7 +102,6 @@
                 :block="!$vuetify.display.smAndUp"
                 prepend-icon="mdi-account-circle"
                 :to="userDashboardUrl"
-                :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded"
               >
                 {{ $t('Common.MyDashboard') }}
               </v-btn>
