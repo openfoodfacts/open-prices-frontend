@@ -355,6 +355,7 @@
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "¡Precio creado!",
+		"PricesAlreadyUploaded": "Precios ya subidos",
 		"PricesMore": "More prices",
 		"PricesAdded": "Precios añadidos",
 		"PricesAddedToday": "Prices added today",
