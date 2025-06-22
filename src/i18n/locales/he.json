@@ -355,6 +355,7 @@
 		"PriceAddedCount": "נוספו {count} מחירים | נוסף מחיר | נוספו {count} מחירים",
 		"PriceToValidateCount": "{count} מחירים לאימות | מחיר לאימות | {count} מחירים לאימות",
 		"PriceCreated": "המחיר נוצר!",
+		"PricesAlreadyUploaded": "המחירים כבר הועלו",
 		"PricesMore": "מחירים נוספים",
 		"PricesAdded": "נוספו מחירים",
 		"PricesAddedToday": "מחירים שנוספו היום",
