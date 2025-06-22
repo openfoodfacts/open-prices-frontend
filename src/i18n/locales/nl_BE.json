@@ -355,6 +355,7 @@
 		"PriceAddedCount": "{count} prijzen toegevoegd | {count} prijs toegevoegd | {count} prijzen toegevoegd",
 		"PriceToValidateCount": "{count} te valideren prijzen | {count} te valideren prijs | {count} te valideren prijzen",
 		"PriceCreated": "Prijs aangemaakt!",
+		"PricesAlreadyUploaded": "Prijzen al geüpload",
 		"PricesMore": "Meer prijzen",
 		"PricesAdded": "Prijzen toegevoegd",
 		"PricesAddedToday": "Vandaag toegevoegde prijzen",
