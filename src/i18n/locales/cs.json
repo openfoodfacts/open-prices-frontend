@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "O aplikaci",
+		"Action": "Akce",
+		"Actions": "Actions",
 		"AddComment": "Přidat komentář",
 		"AddPrice": "Přidat cenu",
 		"AddPrices": "Přidat ceny",
@@ -400,6 +402,7 @@
 		"SourceCode": "Zdrojový kód",
 		"Start": "Start",
 		"Stats": "Statistiky",
+		"Summary": "Přehled",
 		"TaglineOriginal": "Otevřená crowdsourcovaná databáze cen potravin",
 		"TaglineAlt1": "Otevřená crowdsourcovaná databáze cen",
 		"TaglineAlt2": "Otevřená crowdsourcovaná databáze cen potravin a produktů",
