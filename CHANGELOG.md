@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.136.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.0...v1.136.1) (2025-06-22)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1565](https://github.com/openfoodfacts/open-prices-frontend/issues/1565)) ([ca2cb5f](https://github.com/openfoodfacts/open-prices-frontend/commit/ca2cb5fa801fc348512205dde30393baa78f0132))
+* **Price upload:** PriceAlreadyUploadedCard: add count chip after title (instead of in the title) ([649ff64](https://github.com/openfoodfacts/open-prices-frontend/commit/649ff649fcf6ddb36517fb72f205ef1f2d36bd70))
+* **Price upload:** PriceAlreadyUploadedCard: remove overlay ([337e01f](https://github.com/openfoodfacts/open-prices-frontend/commit/337e01ff3cc77c55ef807aaf26423826ff6b8820))
+* **Proof card:** prepend with image icon ([e954b75](https://github.com/openfoodfacts/open-prices-frontend/commit/e954b7552530e731da8bcd5f2af8f7f72a3ae651))
+* **Steppers:** rename last step to 'Actions' (instead of 'Done') ([a01de5a](https://github.com/openfoodfacts/open-prices-frontend/commit/a01de5abf3ea920e448ed26315528196ec586b52))
+
 ## [1.136.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.135.0...v1.136.0) (2025-06-17)
 
 
