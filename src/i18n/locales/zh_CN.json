@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "关于",
+		"Action": "行动",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "添加价格",
 		"AddPrices": "Add prices",
@@ -400,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "开始",
 		"Stats": "统计数据",
+		"Summary": "摘要",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
