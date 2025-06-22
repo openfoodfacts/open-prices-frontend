@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Hakkında",
+		"Action": "Aksiyon",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Fiyat ekleyin",
 		"AddPrices": "Add prices",
@@ -400,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "Başla",
 		"Stats": "İstatistikler",
+		"Summary": "Özet",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
