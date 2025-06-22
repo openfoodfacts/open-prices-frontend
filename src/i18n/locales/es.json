@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Acerca de",
+		"Action": "Acción",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Añadir un precio",
 		"AddPrices": "Add prices",
@@ -400,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "Empezar",
 		"Stats": "Estadísticas",
+		"Summary": "Resumen",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
