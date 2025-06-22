@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "À propos",
+		"Action": "Action",
+		"Actions": "Actions",
 		"AddComment": "Ajouter un commentaire",
 		"AddPrice": "Ajouter un prix",
 		"AddPrices": "Ajouter des prix",
@@ -400,6 +402,7 @@
 		"SourceCode": "Code source",
 		"Start": "Commencer",
 		"Stats": "Statistiques",
+		"Summary": "Résumé",
 		"TaglineOriginal": "La base de données ouverte et collaborative de prix alimentaires",
 		"TaglineAlt1": "La base de données ouverte et collaborative de prix",
 		"TaglineAlt2": "La base de données ouverte et collaborative de prix alimentaires et non alimentaires",
