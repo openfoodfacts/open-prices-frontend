@@ -171,6 +171,8 @@
 	},
 	"Common": {
 		"About": "Über",
+		"Action": "Aktion",
+		"Actions": "Aktionen",
 		"AddComment": "Kommentar hinzufügen",
 		"AddPrice": "Preis hinzufügen",
 		"AddPrices": "Preise hinzufügen",
@@ -400,6 +402,7 @@
 		"SourceCode": "Quellcode",
 		"Start": "Start",
 		"Stats": "Statistiken",
+		"Summary": "Zusammenfassung",
 		"TaglineOriginal": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise",
 		"TaglineAlt1": "Eine offene öffentlich zugängliche Datenbank der Preise",
 		"TaglineAlt2": "Die offene Gemeinschaftsdatenbank für Lebensmittel- und Produktpreise",
