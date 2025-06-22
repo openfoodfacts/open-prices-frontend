@@ -3,7 +3,7 @@
     <v-col cols="12">
       <v-stepper v-model="step" hide-actions disabled>
         <v-stepper-header>
-          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step === 2" />
+          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
           <v-divider />
           <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step === 2" />
         </v-stepper-header>
@@ -84,7 +84,7 @@ export default {
           value: 1
         },
         {
-          title: this.$t('Common.Done'),
+          title: this.$t('Common.Actions'),
           value: 2
         }
       ],

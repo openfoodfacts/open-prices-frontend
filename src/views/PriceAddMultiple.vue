@@ -180,7 +180,7 @@ export default {
           value: 2
         },
         {
-          title: this.$t('Common.Done'),
+          title: this.$t('Common.Actions'),
           value: 3
         }
       ],

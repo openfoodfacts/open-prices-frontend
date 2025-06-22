@@ -7,7 +7,7 @@
           <v-divider />
           <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step == 3" />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step === 3" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
@@ -110,6 +110,7 @@ export default {
   data() {
     return {
       step: 1,
+      // stepItemList: [],  // see computed
       proofObject: null,
       numberOfPricesAdded: 0,
       proofPriceExistingList: [],
@@ -131,7 +132,7 @@ export default {
           value: 2
         },
         {
-          title: this.$t('Common.Done'),
+          title: this.$t('Common.Actions'),
           value: 3
         }
       ]

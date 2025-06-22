@@ -9,7 +9,7 @@
           <v-divider />
           <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" :disabled="disableCleanupStep" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[3].title" :value="stepItemList[3].value" :complete="step == 4" :disabled="disableSummaryStep" />
+          <v-stepper-item :title="stepItemList[3].title" :value="stepItemList[3].value" :complete="step === 4" :disabled="disableSummaryStep" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
@@ -268,7 +268,7 @@ export default {
           value: 3
         },
         {
-          title: this.$t('Common.Done'),
+          title: this.$t('Common.Actions'),
           value: 4
         }
       ]
@@ -283,7 +283,7 @@ export default {
       return ''
     },
     disableProofSelectStep() {
-      // ProofSelect tab should disabled on summary step
+      // ProofSelect tab should be disabled on summary step
       return this.step === 4
     },
     disableLabelsExtractionStep() {
