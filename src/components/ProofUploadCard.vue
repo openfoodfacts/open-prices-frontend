@@ -206,6 +206,12 @@ export default {
         this.step = 3
         this.$emit('done', this.proofObjectList.length)
       }
+    },
+    typePriceTagOnly(newTypePriceTagOnly, oldTypePriceTagOnly) {  // eslint-disable-line no-unused-vars
+      this.initProofForm()
+    },
+    typeReceiptOnly(newTypeReceiptOnly, oldTypeReceiptOnly) {  // eslint-disable-line no-unused-vars
+      this.initProofForm()
     }
   },
   mounted() {
