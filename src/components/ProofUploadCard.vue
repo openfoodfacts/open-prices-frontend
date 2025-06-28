@@ -225,6 +225,10 @@ export default {
       this.proofForm.currency = this.appStore.getUserLastCurrencyUsed
     },
     handleProofImageList() {
+      if (this.proofImageList.length === 0) {
+        // The list was fully cleared, nothing to do
+        return
+      }
       // can be an existing proof, or a file
       // existing proof: update proofForm + set proofObject
       if (this.proofImageList[0].id) {
