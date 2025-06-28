@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.136.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.1...v1.136.2) (2025-06-28)
+
+
+### Bug Fixes
+
+* **PriceAddMultiple:** always consider proof_type in Proof upload card ([#1571](https://github.com/openfoodfacts/open-prices-frontend/issues/1571)) ([3f1201f](https://github.com/openfoodfacts/open-prices-frontend/commit/3f1201fd0d0b0eddf54e3d49cf2f6fa0f69010b6))
+* **PriceAddMultiple:** fixed picture delete button ([#1572](https://github.com/openfoodfacts/open-prices-frontend/issues/1572)) ([99564e4](https://github.com/openfoodfacts/open-prices-frontend/commit/99564e4c101fbc69a8c23587e1e63dd989e7435d))
+
+
+### Technical
+
+* **Steppers:** last step (Actions): seperate success alert & action card ([#1568](https://github.com/openfoodfacts/open-prices-frontend/issues/1568)) ([e27aca0](https://github.com/openfoodfacts/open-prices-frontend/commit/e27aca0071d5bb01b59bf495a5b3f82ff56ef92e))
+
 ## [1.136.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.0...v1.136.1) (2025-06-22)
 
 
