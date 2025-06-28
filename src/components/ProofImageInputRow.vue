@@ -171,9 +171,14 @@ export default {
       this.proofImageList = [proof]
     },
     removeImage(index) {
-      this.proofImageList.splice(index, 1)
-      this.proofImagePreviewList.splice(index, 1)
-      this.$emit('proofList', this.proofImageList)
+      if (!Array.isArray(this.proofImageList)) {
+        // Only one proof was selected with v-file-input, so we clear everything
+        this.clearProof()
+      } else {
+        this.proofImageList.splice(index, 1)
+        this.proofImagePreviewList.splice(index, 1)
+        this.$emit('proofList', this.proofImageList)
+      }
     },
     clearProof() {
       this.proofImageList = []
