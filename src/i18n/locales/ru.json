@@ -315,8 +315,8 @@
 		"MobileApp": "Mobile app",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Мои цены",
+		"MyProofs": "Мои доказательства",
 		"MyStats": "My stats",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
@@ -450,7 +450,7 @@
 		"Years": "Годы",
 		"Yes": "Да",
 		"No": "Нет",
-		"Food": "Food",
+		"Food": "Еда",
 		"PetFood": "Корм",
 		"Beauty": "Красота"
 	},
@@ -761,10 +761,10 @@
 			"Title": "Latest proofs"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Мои цены"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Мои доказательства"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -863,8 +863,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Загрузить ещё",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Мои цены",
+		"MyProofs": "Мои доказательства",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Настройки",
 		"Title": "Dashboard",
