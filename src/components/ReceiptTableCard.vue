@@ -129,6 +129,7 @@ export default {
         { title: 'Product Name', key: 'product_name' },
         { title: 'Product', key: 'product' },
         { title: 'Price', key: 'price' },
+        { title: 'Quantity', key: 'receipt_quantity' },
         { title: 'Actions', key: 'actions' },
       ],
       editProductDialog: false,
