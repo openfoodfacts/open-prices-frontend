@@ -191,7 +191,9 @@ export default {
   methods: {
     initWithProofIds(proofIds) {
       if (proofIds.length) {
-        this.onProofUploaded({id: proofIds[0]})
+        api.getProofById(proofIds[0]).then(proof => {
+          this.onProofUploaded(proof)
+        })
       }
     },
     onProofUploaded(proof) {
