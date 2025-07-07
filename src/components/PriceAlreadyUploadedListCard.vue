@@ -34,6 +34,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -67,9 +68,7 @@ export default {
       return this.proofIsTypeReceipt && (this.proofPriceUploadedList.length > 0)
     },
     proofPriceUploadedListSum() {
-      return this.proofPriceUploadedList.reduce((acc, price) => {
-        return acc + parseFloat(price.price)*parseFloat(price.receipt_quantity)
-      }, 0)
+      return utils.priceSum(this.proofPriceUploadedList)
     }
   },
 }
