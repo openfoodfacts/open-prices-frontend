@@ -36,6 +36,9 @@
         <template #[`item.price`]="{ item }">
           <v-text-field v-model="item.predicted_data.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
         </template>
+        <template #[`item.receipt_quantity`]="{ item }">
+          {{ item.receipt_quantity }}
+        </template>
         <template #[`item.actions`]="{ item }">
           <v-row>
             <v-btn size="x-small" icon="mdi-pencil" @click="showEditProductDialog(item)" />
@@ -129,6 +132,7 @@ export default {
         { title: 'Product Name', key: 'product_name' },
         { title: 'Product', key: 'product' },
         { title: 'Price', key: 'price' },
+        { title: 'Quantity', key: 'receipt_quantity' },
         { title: 'Actions', key: 'actions' },
       ],
       editProductDialog: false,
