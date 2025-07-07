@@ -196,7 +196,7 @@ export default {
       return !!this.categoryTag
     },
     productIsTypeCategory() {
-      return this.priceForm && this.priceForm.type === constants.PRICE_TYPE_CATEGORY
+      return this.priceForm && (this.priceForm.type === constants.PRICE_TYPE_CATEGORY)
     },
     proofIsTypeReceipt() {
       return this.proofType === constants.PROOF_TYPE_RECEIPT

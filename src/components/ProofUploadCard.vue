@@ -172,10 +172,10 @@ export default {
       return !!this.proofForm.type
     },
     proofIsTypePriceTag() {
-      return this.proofTypeFormFilled && this.proofForm.type === constants.PROOF_TYPE_PRICE_TAG
+      return this.proofTypeFormFilled && (this.proofForm.type === constants.PROOF_TYPE_PRICE_TAG)
     },
     proofIsTypeReceipt() {
-      return this.proofTypeFormFilled && this.proofForm.type === constants.PROOF_TYPE_RECEIPT
+      return this.proofTypeFormFilled && (this.proofForm.type === constants.PROOF_TYPE_RECEIPT)
     },
     proofImageFormFilled() {
       return !!this.proofImageList.length

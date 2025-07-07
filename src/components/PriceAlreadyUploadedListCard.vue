@@ -58,13 +58,13 @@ export default {
   },
   computed: {
     showCard() {
-      return this.hideCardIfNoProofPriceUploaded && this.proofPriceUploadedList.length > 0
+      return this.hideCardIfNoProofPriceUploaded && (this.proofPriceUploadedList.length > 0)
     },
     proofIsTypeReceipt() {
-      return this.proof && this.proof.type === constants.PROOF_TYPE_RECEIPT
+      return this.proof && (this.proof.type === constants.PROOF_TYPE_RECEIPT)
     },
     showCardFooter() {
-      return this.proofIsTypeReceipt && this.proofPriceUploadedList.length > 0
+      return this.proofIsTypeReceipt && (this.proofPriceUploadedList.length > 0)
     },
     proofPriceUploadedListSum() {
       return this.proofPriceUploadedList.reduce((acc, price) => {
