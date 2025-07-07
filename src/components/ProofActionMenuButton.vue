@@ -7,7 +7,8 @@
           {{ $t('Common.Proof') }}
         </v-list-subheader>
         <v-divider />
-        <PriceAddLink v-if="userIsProofOwner" :proofId="proof.id" display="list-item" target="contribution-assistant" :disabled="!userCanAddPrice" />
+        <PriceAddLink v-if="userIsProofOwner && proofIsTypePriceTag" :proofId="proof.id" display="list-item" target="contribution-assistant" :disabled="!userCanAddPrice" />
+        <PriceAddLink v-else-if="userIsProofOwner && proofIsTypeReceipt" :proofId="proof.id" display="list-item" target="receipt-assistant" :disabled="!userCanAddPrice" />
         <PriceAddLink v-if="userIsProofOwner" :proofId="proof.id" display="list-item" :disabled="!userCanAddPrice" />
         <ShareLink v-if="showProofShare" :overrideUrl="getShareLinkUrl" display="list-item" />
         <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
@@ -97,6 +98,12 @@ export default {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
+    },
+    proofIsTypePriceTag() {
+      return this.proof && this.proof.type === constants.PROOF_TYPE_PRICE_TAG
+    },
+    proofIsTypeReceipt() {
+      return this.proof && this.proof.type === constants.PROOF_TYPE_RECEIPT
     },
     userIsProofOwner() {
       return this.username && (this.proof.owner === this.username)
