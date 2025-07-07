@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.136.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.2...v1.136.3) (2025-07-07)
+
+
+### Bug Fixes
+
+* **Receipt Assistant:** fix init the assistant with a proof_id ([#1577](https://github.com/openfoodfacts/open-prices-frontend/issues/1577)) ([166cb48](https://github.com/openfoodfacts/open-prices-frontend/commit/166cb48e159b3ec115633b168f056821aae2372f))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1573](https://github.com/openfoodfacts/open-prices-frontend/issues/1573)) ([50e89f7](https://github.com/openfoodfacts/open-prices-frontend/commit/50e89f7e54e239f3a232e4140396b18520ba7301))
+* **Proof detail:** if the user is the receipt owner, display the quantity column ([#1580](https://github.com/openfoodfacts/open-prices-frontend/issues/1580)) ([765d24f](https://github.com/openfoodfacts/open-prices-frontend/commit/765d24f3fd9c153faab8f02cc140b092b9bba787))
+* **Receipt Assistant:** display the quantity column ([#1581](https://github.com/openfoodfacts/open-prices-frontend/issues/1581)) ([f490768](https://github.com/openfoodfacts/open-prices-frontend/commit/f4907681648f42bbbb6545b7f0735d8f6cb9ba21))
+* **Receipt Assistant:** in the proof action menu, change the link to point to the right assistant ([#1579](https://github.com/openfoodfacts/open-prices-frontend/issues/1579)) ([1e48c29](https://github.com/openfoodfacts/open-prices-frontend/commit/1e48c29868b55867beb5835f9b07989520b4748e))
+* **Receipt Assistant:** Take into account receipt_quantity in price total calculation ([#1582](https://github.com/openfoodfacts/open-prices-frontend/issues/1582)) ([703a1bf](https://github.com/openfoodfacts/open-prices-frontend/commit/703a1bfb8da886368bbf003c8df21e30622de6ac))
+
 ## [1.136.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.1...v1.136.2) (2025-06-28)
 
 
