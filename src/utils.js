@@ -117,6 +117,12 @@ function prettyPrice(price, currency) {
   })
 }
 
+function priceSum(priceList) {
+  return priceList.reduce((acc, price) => {
+    return acc + parseFloat(price.price) * (price.receipt_quantity ? parseFloat(price.receipt_quantity) : 1)
+  }, 0)
+}
+
 /**
  * output: '2023-12-25'
  */
@@ -486,6 +492,7 @@ export default {
   addObjectToArray,
   removeObjectFromArray,
   prettyPrice,
+  priceSum,
   currentDate,
   currentDateTime,
   currentStartOfDay,
