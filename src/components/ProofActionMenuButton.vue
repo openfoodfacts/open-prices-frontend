@@ -99,14 +99,14 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    userIsProofOwner() {
+      return this.username && this.proof && (this.proof.owner === this.username)
+    },
     proofIsTypePriceTag() {
-      return this.proof && this.proof.type === constants.PROOF_TYPE_PRICE_TAG
+      return this.proof && (this.proof.type === constants.PROOF_TYPE_PRICE_TAG)
     },
     proofIsTypeReceipt() {
-      return this.proof && this.proof.type === constants.PROOF_TYPE_RECEIPT
-    },
-    userIsProofOwner() {
-      return this.username && (this.proof.owner === this.username)
+      return this.proof && (this.proof.type === constants.PROOF_TYPE_RECEIPT)
     },
     getProofFullUrl() {
       // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'  // PRICE_TAG

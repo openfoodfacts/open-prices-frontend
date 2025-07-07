@@ -1,5 +1,5 @@
 <template>
-  <v-data-table :headers="headers" :items="priceList" hide-default-footer>
+  <v-data-table :headers="headers" :items="priceList" fixed-header hide-default-footer>
     <template #[`item.product_name`]="{ item }">
       {{ getPriceProductTitle(item) }}
     </template>
@@ -16,6 +16,9 @@
     <template #[`item.price`]="{ item }">
       <PricePriceRow :price="item" :productQuantity="item.product ? item.product.product_quantity : null" :productQuantityUnit="item.product ? item.product.product_quantity_unit : null" />
     </template>
+    <template #[`item.receipt_quantity`]="{ item }">
+      {{ item.receipt_quantity }}
+    </template>
     <template #[`item.created`]="{ item }">
       <RelativeDateTimeChip :dateTime="item.created" />
     </template>
@@ -26,6 +29,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
+import constants from '../constants'
 
 export default {
   components: {
@@ -45,7 +49,11 @@ export default {
       type: String,
       default: 'product',
       examples: ['product', 'proof']
-    }
+    },
+    proof: {
+      type: Object,
+      default: null
+    },
   },
   data() {
     return {
@@ -62,12 +70,35 @@ export default {
         { title: 'Price', key: 'price' },
         { title: 'Added', key: 'created' },
         // { title: 'Actions', key: 'actions' },
-      ]
+      ],
+      proofReceiptPriceOwnerHeaders: [
+        { title: 'Product', key: 'product_name' },
+        { title: 'Details', key: 'product_details' },
+        { title: 'Price', key: 'price' },
+        { title: 'Quantity', key: 'receipt_quantity' },
+        { title: 'Added', key: 'created' },
+        // { title: 'Actions', key: 'actions' },
+      ],
     }
   },
   computed: {
     ...mapStores(useAppStore),
+    username() {
+      return this.appStore.user.username
+    },
+    userIsProofOwner() {
+      return this.username && this.proof && (this.proof.owner === this.username)
+    },
+    sourceIsProof() {
+      return this.source === 'proof'
+    },
+    proofIsTypeReceipt() {
+      return this.proof && (this.proof.type === constants.PROOF_TYPE_RECEIPT)
+    },
     headers() {
+      if (this.sourceIsProof && this.userIsProofOwner && this.proofIsTypeReceipt) {
+        return this.proofReceiptPriceOwnerHeaders
+      }
       return this[`${this.source}PriceHeaders`]
     }
   },

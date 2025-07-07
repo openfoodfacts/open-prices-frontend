@@ -27,7 +27,7 @@
       </v-row>
     </v-window-item>
     <v-window-item value="table">
-      <PriceTable class="mt-3 mb-3" :priceList="priceList" source="proof" />
+      <PriceTable class="mt-3 mb-3" :priceList="priceList" source="proof" :proof="proof" />
     </v-window-item>
   </v-window>
 
