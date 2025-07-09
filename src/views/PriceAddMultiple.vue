@@ -102,44 +102,27 @@
   </v-row>
 
   <v-row v-if="step === 3">
-    <v-col cols="12" md="6">
+    <v-col cols="12">
       <v-alert
-        class="mb-4"
         type="success"
         variant="outlined"
         density="compact"
         :text="$t('Common.PriceAddedCount', { count: proofPriceNewList.length })"
       />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Common.Actions')"
-        prepend-icon="mdi-clipboard-text"
-      >
-        <v-divider />
-        <v-card-text class="text-center">
-          <v-row>
-            <v-col cols="12" sm="6">
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-tag-plus-outline"
-                @click="reloadPage"
-              >
-                {{ $t('Common.AddNewPrices') }}
-              </v-btn>
-            </v-col>
-            <v-col cols="12" sm="6">
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-account-circle"
-                :to="userDashboardUrl"
-              >
-                {{ $t('Common.MyDashboard') }}
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
+        :title="$t('Common.AddNewPrices')"
+        prepend-icon="mdi-tag-plus-outline"
+        @click="reloadPage"
+      />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Common.MyDashboard')"
+        prepend-icon="mdi-account-circle"
+        :to="getUserDashboardUrl"
+      />
     </v-col>
   </v-row>
 
@@ -250,7 +233,7 @@ export default {
       }
       return false
     },
-    userDashboardUrl() {
+    getUserDashboardUrl() {
       const dashboardTab = (this.proofObject && this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
       return `/dashboard?multipleSuccess=true&tab=${dashboardTab}`
     }

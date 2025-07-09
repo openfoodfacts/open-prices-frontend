@@ -46,6 +46,7 @@
         class="float-right"
         color="primary"
         variant="flat"
+        type="submit"
         :block="!$vuetify.display.smAndUp"
         :disabled="!proofFormFilled"
         @click="uploadProofList"

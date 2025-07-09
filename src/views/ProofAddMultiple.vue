@@ -18,54 +18,34 @@
   </v-row>
 
   <v-row v-if="step === 2">
-    <v-col cols="12" md="6">
+    <v-col cols="12">
       <v-alert
-        class="mb-4"
         type="success"
         variant="outlined"
         density="compact"
         :text="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
       />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Common.Actions')"
-        prepend-icon="mdi-clipboard-text"
-      >
-        <v-divider />
-        <v-card-text class="text-center">
-          <v-row>
-            <v-col cols="12" sm="4">
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-image-plus"
-                @click="reloadPage"
-              >
-                {{ $t('Common.AddNewProofs') }}
-              </v-btn>
-            </v-col>
-            <v-col cols="12" sm="4">
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-checkbox-marked-circle-plus-outline"
-                :to="getPriceValidationUrl"
-              >
-                {{ $t('Common.ValidatePrices') }}
-              </v-btn>
-            </v-col>
-            <v-col cols="12" sm="4">
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-account-circle"
-                :to="getUserDashboardUrl"
-              >
-                {{ $t('Common.MyDashboard') }}
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
+        :title="$t('Common.AddNewProofs')"
+        prepend-icon="mdi-image-plus"
+        @click="reloadPage"
+      />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Common.ValidatePrices')"
+        prepend-icon="mdi-checkbox-marked-circle-plus-outline"
+        :to="getPriceValidationUrl"
+      />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Common.MyDashboard')"
+        prepend-icon="mdi-account-circle"
+        :to="getUserDashboardUrl"
+      />
     </v-col>
   </v-row>
 </template>
