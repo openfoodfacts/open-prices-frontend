@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.136.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.3...v1.136.4) (2025-07-10)
+
+
+### Bug Fixes
+
+* **Receipt Assistant:** fix edition of product_name. fix remembering discount info ([#1585](https://github.com/openfoodfacts/open-prices-frontend/issues/1585)) ([12bc21d](https://github.com/openfoodfacts/open-prices-frontend/commit/12bc21d1c3570561d04475dea4202effa4e346aa))
+
+
+### Technical
+
+* **Steppers:** last step (Actions): show actions as cards instead of buttons ([#1583](https://github.com/openfoodfacts/open-prices-frontend/issues/1583)) ([3d56207](https://github.com/openfoodfacts/open-prices-frontend/commit/3d56207bc59fb1a215d1caf938b5b6074dbc4e9c))
+
 ## [1.136.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.2...v1.136.3) (2025-07-07)
 
 
