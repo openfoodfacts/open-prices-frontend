@@ -149,7 +149,7 @@
   <v-row v-if="step === 4">
     <v-col>
       <v-row>
-        <v-col cols="12" md="6">
+        <v-col cols="12">
           <v-progress-linear
             v-if="!finishedUploading"
             v-model="numberOfPricesAdded"
@@ -163,62 +163,41 @@
           </v-progress-linear>
           <v-alert
             v-if="finishedUploading"
-            class="mb-4"
             type="success"
             variant="outlined"
             density="compact"
             :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
           />
+        </v-col>
+      </v-row>
+      <v-row v-if="finishedUploading">
+        <v-col cols="12" sm="6" lg="4">
           <v-card
-            v-if="finishedUploading"
-            :title="$t('Common.Actions')"
-            prepend-icon="mdi-clipboard-text"
-          >
-            <v-divider />
-            <v-card-text class="text-center">
-              <v-row>
-                <v-col>
-                  <v-btn
-                    color="primary"
-                    :block="!$vuetify.display.smAndUp"
-                    prepend-icon="mdi-image"
-                    :to="'/proofs/' + proofObject.id"
-                  >
-                    {{ $t('ContributionAssistant.GoToProof') }}
-                  </v-btn>
-                </v-col>
-                <v-col>
-                  <v-btn
-                    color="primary"
-                    :block="!$vuetify.display.smAndUp"
-                    prepend-icon="mdi-image-plus"
-                    @click="reloadPage"
-                  >
-                    {{ $t('ContributionAssistant.AddNewProof') }}
-                  </v-btn>
-                </v-col>
-                <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1">
-                  <v-btn
-                    :block="!$vuetify.display.smAndUp"
-                    color="primary"
-                    @click="nextProof"
-                  >
-                    {{ $t('ContributionAssistant.NextProof') }}
-                  </v-btn>
-                </v-col>
-                <v-col>
-                  <v-btn
-                    color="primary"
-                    :block="!$vuetify.display.smAndUp"
-                    prepend-icon="mdi-account-circle"
-                    to="/dashboard"
-                  >
-                    {{ $t('Common.MyDashboard') }}
-                  </v-btn>
-                </v-col>
-              </v-row>
-            </v-card-text>
-          </v-card>
+            :title="$t('Common.AddNewProof')"
+            prepend-icon="mdi-image-plus"
+            @click="reloadPage"
+          />
+        </v-col>
+        <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1" cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('ContributionAssistant.NextProof')"
+            prepend-icon="mdi-image"
+            @click="nextProof"
+          />
+        </v-col>
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('ContributionAssistant.GoToProof')"
+            prepend-icon="mdi-image"
+            :to="'/proofs/' + proofObject.id"
+          />
+        </v-col>
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('Common.MyDashboard')"
+            prepend-icon="mdi-account-circle"
+            :to="getUserDashboardUrl"
+          />
         </v-col>
       </v-row>
       <v-row v-if="finishedUploading && nextProofSuggestions.length">
@@ -354,6 +333,10 @@ export default {
     productPriceFormsMarkedAsError() {
       return this.productPriceForms.filter(productPriceForm => productPriceForm.status > 1)
     },
+    getUserDashboardUrl() {
+      const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
+      return `/dashboard?tab=${dashboardTab}`
+    }
   },
   mounted() {
     if (this.$route.query.proof_ids) {
