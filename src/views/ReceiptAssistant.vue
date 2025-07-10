@@ -50,65 +50,50 @@
   </v-row>
 
   <v-row v-if="step === 3">
-    <v-col cols="12" md="6">
-      <v-progress-linear
-        v-if="!finishedUploading"
-        v-model="numberOfPricesAdded"
-        :max="totalNumberOfPricesToAdd"
-        :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
-        height="25"
-        :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
-        rounded
-      />
-      <v-alert
-        v-if="finishedUploading"
-        class="mb-4"
-        type="success"
-        variant="outlined"
-        density="compact"
-        :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
-      />
-      <v-card
-        v-if="finishedUploading"
-        :title="$t('Common.Actions')"
-        prepend-icon="mdi-clipboard-text"
-      >
-        <v-divider />
-        <v-card-text class="text-center">
-          <v-row>
-            <v-col>
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-image"
-                :to="'/proofs/' + proofObject.id"
-              >
-                {{ $t('ContributionAssistant.GoToProof') }}
-              </v-btn>
-            </v-col>
-            <v-col>
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-image-plus"
-                @click="reloadPage"
-              >
-                {{ $t('ContributionAssistant.AddNewProof') }}
-              </v-btn>
-            </v-col>
-            <v-col>
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-account-circle"
-                :to="userDashboardUrl"
-              >
-                {{ $t('Common.MyDashboard') }}
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
+    <v-col>
+      <v-row>
+        <v-col cols="12">
+          <v-progress-linear
+            v-if="!finishedUploading"
+            v-model="numberOfPricesAdded"
+            :max="totalNumberOfPricesToAdd"
+            :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
+            height="25"
+            :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
+            rounded
+          />
+          <v-alert
+            v-if="finishedUploading"
+            type="success"
+            variant="outlined"
+            density="compact"
+            :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
+          />
+        </v-col>
+      </v-row>
+      <v-row v-if="finishedUploading">
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('Common.AddNewProof')"
+            prepend-icon="mdi-image-plus"
+            @click="reloadPage"
+          />
+        </v-col>
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('ContributionAssistant.GoToProof')"
+            prepend-icon="mdi-image"
+            :to="'/proofs/' + proofObject.id"
+          />
+        </v-col>
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('Common.MyDashboard')"
+            prepend-icon="mdi-account-circle"
+            :to="getUserDashboardUrl"
+          />
+        </v-col>
+      </v-row>
     </v-col>
   </v-row>
 </template>
@@ -177,7 +162,7 @@ export default {
     finishedUploading() {
       return this.totalNumberOfPricesToAdd === this.numberOfPricesAdded
     },
-    userDashboardUrl() {
+    getUserDashboardUrl() {
       const dashboardTab = (this.proofObject && this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
       return `/dashboard?tab=${dashboardTab}`
     }
