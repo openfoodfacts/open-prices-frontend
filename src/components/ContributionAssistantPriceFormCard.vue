@@ -9,7 +9,7 @@
       <v-row v-if="showProductNameField">
         <v-col>
           <v-text-field
-            :model-value="productPriceForm.product_name"
+            v-model="productPriceForm.product_name"
             :label="$t('Common.ProductName')"
             type="text"
             hide-details="auto"
@@ -206,7 +206,7 @@ export default {
       this.resetMode()
     },
     validatePriceTag() {
-      this.$emit('validatePriceTag')
+      this.$emit('validatePriceTag', this.productPriceForm)
       this.resetMode()
     },
     close() {

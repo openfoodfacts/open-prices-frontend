@@ -11,11 +11,11 @@
         <template #[`item.product_name`]="{ item }">
           <v-text-field v-if="item.manuallyAdded" v-model="item.product_name" :hide-details="true" :rules="rules" dense single-line />
           <p v-else>
-            {{ item.predicted_data.product_name }}
+            {{ item.product_name }}
           </p>
           <p v-if="showInfoDetails">
             <span v-if="item.existingPrice" class="text-caption text-warning">{{ $t('ReceiptAssistant.PriceAlreadyCreatedForItem') }}</span>
-            <span v-else-if="!item.predicted_data.price" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingPrice') }}</span>
+            <span v-else-if="!item.price" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingPrice') }}</span>
             <span v-else-if="item.isCategory ? !item.category_tag : !item.product_code" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingProduct') }}</span>
             <span v-else class="text-caption text-success">{{ $t('ReceiptAssistant.PriceReadyToBeAdded') }}</span>
           </p>
@@ -34,7 +34,7 @@
           <ProductCard v-else :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </template>
         <template #[`item.price`]="{ item }">
-          <v-text-field v-model="item.predicted_data.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
+          <v-text-field v-model="item.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
         </template>
         <template #[`item.receipt_quantity`]="{ item }">
           {{ item.receipt_quantity }}
@@ -149,7 +149,7 @@ export default {
     proofPriceListSum() {
       return utils.priceSum(this.items.map(item => {
         return {
-          price: item.predicted_data.price,
+          price: item.price,
           receipt_quantity: item.receipt_quantity
         }
       }))
@@ -182,22 +182,31 @@ export default {
           item.product_code = item.existingPrice.product?.code
           item.category_tag = item.existingPrice.category_tag
           item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
+          item.price_is_discounted = item.existingPrice.price_is_discounted
+          item.price_without_discount = item.existingPrice.price_without_discount
+          item.discount_type = item.existingPrice.discount_type
           item.price_per = item.existingPrice.price_per
           item.receipt_quantity = item.existingPrice.receipt_quantity
           // predictions
-          item.predicted_data.price = item.existingPrice.price
-          if (!item.predicted_data.product_name) {
-            item.predicted_data.product_name = item.existingPrice.product_name
+          item.price = item.existingPrice.price
+          if (!item.product_name) {
+            item.product_name = item.existingPrice.product_name
           }
         } else {
           item.productFound = null
           item.product_code = ""
+          item.price_is_discounted = false
+          item.price_without_discount = null
+          item.discount_type = null
           item.receipt_quantity = 1
+          // predictions
           const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
           if (categoryPredicted) {
             item.category_tag = item.predicted_data.product
             item.price_per = "KILOGRAM"
           }
+          item.price = item.predicted_data.price || null
+          item.product_name = item.predicted_data.product_name || ''
         }
         return item
       })
@@ -240,14 +249,16 @@ export default {
     showEditProductDialog(item) {
       this.editProductDialog = true
       this.editProductItem = {
-        item_id: this.items.indexOf(item),
+        index: this.items.indexOf(item),
         type: item.isCategory ? constants.PRICE_TYPE_CATEGORY : constants.PRICE_TYPE_PRODUCT,
         category_tag: ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
         origins_tags: [],
         labels_tags: [],
         price: item.price ? item.price.toString() : item.predicted_data.price.toString(),
         price_per: item.price_per,
-        price_is_discounted: false,
+        price_is_discounted: item.price_is_discounted,
+        price_without_discount: item.price_without_discount ? item.price_without_discount.toString() : null,
+        discount_type: item.discount_type,
         currency: this.proof.currency,
         receipt_quantity: item.receipt_quantity.toString(),
         proof: this.proof,
@@ -255,19 +266,16 @@ export default {
         croppedImage: null,
         product_code: item.product_code,
         detected_product_code: item.product_code,
-        product_name: item.predicted_data.product_name,
-        loading: false
+        product_name: item.product_name
       }
     },
-    confirmProduct() {
+    confirmProduct(product) {
       this.editProductDialog = false
-      this.items[this.editProductItem.item_id].productFound = this.editProductItem.product
-      this.items[this.editProductItem.item_id].isCategory = this.editProductItem.type === constants.PRICE_TYPE_CATEGORY
-      this.items[this.editProductItem.item_id].category_tag = this.editProductItem.type === constants.PRICE_TYPE_CATEGORY ? this.editProductItem.category_tag : null
-      this.items[this.editProductItem.item_id].predicted_data.product_name = this.editProductItem.product_name
-      this.items[this.editProductItem.item_id].predicted_data.price = this.editProductItem.price
-      Object.assign(this.items[this.editProductItem.item_id], this.editProductItem)
-      this.editProductItem = null
+      this.items[this.editProductItem.index].productFound = product.product
+      this.items[this.editProductItem.index].isCategory = product.type === constants.PRICE_TYPE_CATEGORY
+      this.items[this.editProductItem.index].category_tag = product.type === constants.PRICE_TYPE_CATEGORY ? product.category_tag : null
+      Object.assign(this.items[this.editProductItem.index], product)
+      // this.editProductItem = null
     },
     launchBarcodeScanner(item) {
       this.barcodeScannerDialog = true
