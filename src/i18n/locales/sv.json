@@ -1,6 +1,6 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
+		"WhyTitle": "Varför {op_name}?",
 		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
 		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
 		"HowTitle": "How does {op_name} work?",
@@ -11,7 +11,7 @@
 		"LicenseTitle": "Licens",
 		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
-		"WhatTitle": "What is {op_name}?",
+		"WhatTitle": "Vad är {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
 		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
@@ -103,14 +103,14 @@
 			"TypeBarcode": "Type a barcode",
 			"TypeBarcodeShort": "Typ",
 			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"Title": "Produktinformation"
 		},
 		"ProductModeList": {
 			"Barcode": "Streckkod",
 			"Category": "Kategori"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
+			"PerKg": "Pris per kg",
 			"PerUnit": "Price per unit"
 		},
 		"Title": "Add a single price",
@@ -120,7 +120,7 @@
 			"Find": "Hitta",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Title": "Var och när?"
 		}
 	},
 	"BarcodeScanner": {
@@ -141,7 +141,7 @@
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
 			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"AddPictures": "Lägg till bilder"
 		},
 		"StepValidate": {
 			"Title": "Validate the detected prices with AI",
@@ -173,7 +173,7 @@
 		"About": "Om",
 		"Action": "Handling",
 		"Actions": "Actions",
-		"AddComment": "Add a comment",
+		"AddComment": "Lägg till en kommentar",
 		"AddPrice": "Lägg till ett pris",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
@@ -243,7 +243,7 @@
 		"Done": "Klar",
 		"Error": "Fel",
 		"Experiment": "Experimentera",
-		"Experiments": "Experiments",
+		"Experiments": "Experiment",
 		"Join": "Join",
 		"Label": "Etikett",
 		"Labels": "Etiketter",
@@ -260,31 +260,31 @@
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
 		"Date": "Date",
-		"DateMissing": "Date missing",
+		"DateMissing": "Datum saknas",
 		"Details": "Detaljer",
 		"Delete": "Radera",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
-		"DiscountType": "Discount type",
+		"DiscountType": "Rabattyp",
 		"DiscountTypeQuantity": "Kvantitet",
 		"DiscountTypeSale": "Sale",
 		"DiscountTypeSeasonal": "Seasonal",
 		"DiscountTypeLoyaltyProgram": "Loyalty program",
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSecondHand": "Andra hand",
 		"DiscountTypeOther": "Other",
 		"Example": "Exempel",
 		"Examples": "Examples",
 		"ExampleWithColon": "Exempel:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "Exempel: {value}",
 		"ExamplesWithColon": "Exempel:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "Exempel: {value}",
 		"Edit": "Redigera",
 		"End": "End",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
-		"FilterProductWithPriceCount": "With a price",
+		"FilterProductWithPriceCount": "Med ett pris",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
@@ -301,13 +301,13 @@
 		"History": "Historik",
 		"Image": "Bild",
 		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
+		"ImageSelectMultiple": "Välj bilder",
 		"ImageSelected": "Image selected!",
 		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
 		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "Länk kopierad",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Karta",
@@ -533,7 +533,7 @@
 		"Welcome": {
 			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "Välkommen till {name}!"
 		}
 	},
 	"LocationDetail": {
@@ -605,10 +605,10 @@
 		"Categories": "Kategorier",
 		"CategoriesLower": "kategorier",
 		"CategoriesMissing": "Kategori saknas",
-		"CategoryTotal": "{count} categories",
+		"CategoryTotal": "{count} kategorier",
 		"Labels": "Etiketter",
 		"LabelsLower": "etiketter",
-		"LabelTotal": "{count} labels",
+		"LabelTotal": "{count} etiketter",
 		"LatestPrice": "Senaste priset",
 		"InvalidBarcode": "Ogiltig streckkod",
 		"InvalidBarcodeLength": "Invalid barcode length",
@@ -746,7 +746,7 @@
 			"Title": "Bidra"
 		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "Experiment"
 		},
 		"Home": {
 			"Title": "Hem"
@@ -823,7 +823,7 @@
 		"Title": "Sök"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "Länk kopierad",
 		"Title": "Dela"
 	},
 	"SignIn": {
@@ -847,7 +847,7 @@
 		"Locations": "Platser",
 		"Users": "Användare",
 		"Total": "Total",
-		"WithPrice": "With a price",
+		"WithPrice": "Med ett pris",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
@@ -868,7 +868,7 @@
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Inställningar",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} priser",
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
