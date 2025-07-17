@@ -126,7 +126,7 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.challenge_count" :subtitle="$t('Common.Challenges')" />
+      <StatCard :value="stats.challenge_count" :subtitle="$t('Common.Challenges')" to="/challenges" />
     </v-col>
     <v-col cols="6" sm="4">
       <StatCard :value="stats.price_tag_status_linked_to_price_count" :subtitle="$t('Stats.PricesLinkedToPriceTag')" />
