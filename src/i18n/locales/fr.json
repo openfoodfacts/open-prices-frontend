@@ -456,22 +456,22 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. Sélection des preuves",
+			"LabelsExtraction": "2. Extraction d'étiquettes",
+			"Cleanup": "3. Nettoyage",
+			"Summary": "4. Résumé"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
+		"BoundingBoxesFromServerWarning": "Aucune étiquette n'a pu être détectée automatiquement. Veuillez dessiner manuellement des carrés autour des étiquettes.",
 		"FindBoundingBoxes": "Chercher automatique les étiquettes",
 		"FindBoundingBoxesRunning": "La recherche automatique des étiquettes est en cours. Merci de patienter...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
+			"DrawBoundingBoxes": "1. Dessinez des carrés autour des étiquettes",
+			"CheckLabels": "2. Vérifiez la lisibilité des étiquettes",
+			"SendLabels": "3. Envoyez les étiquettes pour traitement automatique",
 			"SendLabelsButton": "Envoyer les étiquettes"
 		},
 		"PricesAlreadyAdded": "Prix déjà téléversés",
-		"PricesMarkedAsError": "Prices marked as error",
+		"PricesMarkedAsError": "Prix marqués comme erreur",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} prix seront ajoutés à une preuve existante du {date} à {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prix ajoutés",
 		"WaitForUpload": "Merci d'attendre pour le téléversement",
@@ -479,17 +479,17 @@
 		"GoToProof": "Accéder à la preuve",
 		"AddNewProof": "Ajouter une nouvelle preuve",
 		"NextProof": "Preuve suivante",
-		"ChooseNextProof": "Choose another proof to handle",
+		"ChooseNextProof": "Choisissez une autre preuve à gérer",
 		"AutomaticBoundingBoxSource": "automatique",
 		"ManualBoundingBoxSource": "manuel",
 		"DetectedBarcode": "Code-barres détecté : {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
+		"LabelProcessingErrorMessage": "Erreur : le traitement automatique de l'étiquette a échoué",
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Étiquette de prix sans prix",
 			"PriceTagWithPrice": "Étiquette de prix avec un prix",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagTruncated": "Étiquette de prix marquée comme tronquée",
+			"PriceTagUnreadable": "Étiquette de prix marquée comme illisible",
+			"PriceTagNotAPrice": "Étiquette de prix marquée comme n'étant pas un prix",
 			"NewPriceTag": "Nouvelle étiquette de prix"
 		},
 		"OpenWithTheAssistant": "Ouvrir avec l'assistant"
@@ -594,7 +594,7 @@
 		"Number": "Saisir le numéro",
 		"Positive": "Le prix ne peut pas être négatif",
 		"TwoDecimals": "Seules deux décimales sont autorisées",
-		"ThreeDecimals": "Only three decimals allowed"
+		"ThreeDecimals": "Seulement trois décimales sont autorisées"
 	},
 	"ProductCard": {
 		"BarcodeLength": "{length}",
@@ -840,7 +840,7 @@
 		"Prices": "Prix",
 		"PricesToday": "Prix ajoutés aujourd'hui",
 		"PricesTotal": "Nombre de prix total",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
+		"PricesLinkedToPriceTag": "Prix liés à une étiquette de prix",
 		"ProductsWithPrices": "Produits avec prix",
 		"Title": "Statistiques",
 		"Products": "Produits",
@@ -855,7 +855,7 @@
 		"WithoutProduct": "Sans produit",
 		"WithBarcode": "Avec un code-barres",
 		"WithCategory": "Avec une catégorie",
-		"PricesProofsPerSource": "Prices and proofs per source",
+		"PricesProofsPerSource": "Prix et preuves par source",
 		"LastUpdated": "Dernière mise à jour le {date}"
 	},
 	"UserDashboard": {
@@ -893,7 +893,7 @@
 		"LanguageLabel": "Langue",
 		"LocationFinder": "Recherche de l'emplacement",
 		"LocationDisplayOSMID": "Afficher l'ID OSM",
-		"PriceListDisplay": "Price list diplay",
+		"PriceListDisplay": "L'affichage de la liste de prix",
 		"PriceValidation": "Validation des prix",
 		"ProductDisplayBarcode": "Afficher le code-barres",
 		"ProductDisplayCategoryTag": "Afficher le tag de catégorie",
