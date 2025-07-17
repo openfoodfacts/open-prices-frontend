@@ -238,7 +238,7 @@ export default {
         proof_source_other_count: 0,
         user_count: 0,
         user_with_price_count: 0,
-        challenge_count: 1,  // hardcoded
+        challenge_count: 0,
         price_tag_status_linked_to_price_count: 0,
         updated: null,
       },
