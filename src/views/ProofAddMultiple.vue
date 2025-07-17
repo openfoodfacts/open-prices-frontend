@@ -30,6 +30,7 @@
       <v-card
         :title="$t('Common.AddNewProofs')"
         prepend-icon="mdi-image-plus"
+        append-icon="mdi-arrow-right"
         @click="reloadPage"
       />
     </v-col>
@@ -37,6 +38,7 @@
       <v-card
         :title="$t('Common.ValidatePrices')"
         prepend-icon="mdi-checkbox-marked-circle-plus-outline"
+        append-icon="mdi-arrow-right"
         :to="getPriceValidationUrl"
       />
     </v-col>
@@ -44,6 +46,7 @@
       <v-card
         :title="$t('Common.MyDashboard')"
         prepend-icon="mdi-account-circle"
+        append-icon="mdi-arrow-right"
         :to="getUserDashboardUrl"
       />
     </v-col>
