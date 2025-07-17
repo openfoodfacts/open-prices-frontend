@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.136.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.4...v1.136.5) (2025-07-17)
+
+
+### Bug Fixes
+
+* **Stats:** remove reference to challenge_count being hardcoded. ref [#1339](https://github.com/openfoodfacts/open-prices-frontend/issues/1339) ([137f7e6](https://github.com/openfoodfacts/open-prices-frontend/commit/137f7e6afcca7e138bbcb5a12dfd674e5524736f))
+
+
+### Technical
+
+* **Cards:** add a right arrow when "simple" cards are clickable ([#1588](https://github.com/openfoodfacts/open-prices-frontend/issues/1588)) ([a372b66](https://github.com/openfoodfacts/open-prices-frontend/commit/a372b661c78fe67034d4ce2dbe8dc9bef091f3bc))
+* **Stats:** in the Challenge count card, add a link to the challenge page. ref [#1339](https://github.com/openfoodfacts/open-prices-frontend/issues/1339) ([de7333d](https://github.com/openfoodfacts/open-prices-frontend/commit/de7333d4144bf983aefbfc1b9a6997d899ab4e1b))
+
 ## [1.136.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.3...v1.136.4) (2025-07-10)
 
 
