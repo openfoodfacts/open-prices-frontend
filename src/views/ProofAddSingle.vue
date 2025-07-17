@@ -30,6 +30,7 @@
       <v-card
         :title="$t('Common.AddNewProof')"
         prepend-icon="mdi-image-plus"
+        append-icon="mdi-arrow-right"
         @click="reloadPage"
       />
     </v-col>
@@ -37,6 +38,7 @@
       <v-card
         :title="$t('Common.MyDashboard')"
         prepend-icon="mdi-account-circle"
+        append-icon="mdi-arrow-right"
         :to="getUserDashboardUrl"
       />
     </v-col>
