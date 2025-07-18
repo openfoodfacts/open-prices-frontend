@@ -1,6 +1,6 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
+		"WhyTitle": "Varför {op_name}?",
 		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
 		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
 		"HowTitle": "How does {op_name} work?",
@@ -11,8 +11,8 @@
 		"LicenseTitle": "Licens",
 		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
-		"WhatTitle": "What is {op_name}?",
-		"WhatOFFTitle": "What is {off_name}?",
+		"WhatTitle": "Vad är {op_name}?",
+		"WhatOFFTitle": "Vad är {off_name}?",
 		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
@@ -50,7 +50,7 @@
 			"Title": "Single product"
 		},
 		"Thanks": "Thanks",
-		"Title": "Add a price",
+		"Title": "Lägg till ett pris",
 		"TitleSingle": "Add a single price",
 		"TitleMultiple": "Add multiple prices in bulk"
 	},
@@ -61,7 +61,7 @@
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Skapa",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
-			"NewPrice": "New price",
+			"NewPrice": "Nytt pris",
 			"PriceUploaded": "Price created!",
 			"Upload": "Upload"
 		},
@@ -75,7 +75,7 @@
 	"AddPriceSingle": {
 		"Create": "Skapa",
 		"PriceDetails": {
-			"Discount": "Discount?",
+			"Discount": "Rabatt?",
 			"Label": "Price",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
@@ -85,7 +85,7 @@
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"Picture": "Bild",
 			"TakePicture": "Ta en bild",
 			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery",
@@ -103,14 +103,14 @@
 			"TypeBarcode": "Type a barcode",
 			"TypeBarcodeShort": "Typ",
 			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"Title": "Produktinformation"
 		},
 		"ProductModeList": {
 			"Barcode": "Streckkod",
 			"Category": "Kategori"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
+			"PerKg": "Pris per kg",
 			"PerUnit": "Price per unit"
 		},
 		"Title": "Add a single price",
@@ -120,7 +120,7 @@
 			"Find": "Hitta",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Title": "Var och när?"
 		}
 	},
 	"BarcodeScanner": {
@@ -141,7 +141,7 @@
 			"Title": "Take pictures of price tags in stores",
 			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
 			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"AddPictures": "Lägg till bilder"
 		},
 		"StepValidate": {
 			"Title": "Validate the detected prices with AI",
@@ -173,8 +173,8 @@
 		"About": "Om",
 		"Action": "Handling",
 		"Actions": "Actions",
-		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddComment": "Lägg till en kommentar",
+		"AddPrice": "Lägg till ett pris",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -195,7 +195,7 @@
 		"Brands": "Varumärken",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Price",
-		"Prices": "Prices",
+		"Prices": "Priser",
 		"PRODUCT": "Produkt",
 		"Product": "Produkt",
 		"ProductName": "Produktnamn",
@@ -210,13 +210,13 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
-		"Chart": "Chart",
+		"Chart": "Diagram",
 		"Clear": "Rensa",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
-		"Consumption": "Consumption",
+		"Consumption": "Konsumtion",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Bidra",
@@ -228,7 +228,7 @@
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Valuta",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -236,14 +236,14 @@
 		"Display": "Display",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
-		"DisplayTable": "Table",
+		"DisplayTable": "Tabell",
 		"DisplayMap": "Karta",
 		"DisplayPriceMap": "Karta",
-		"DisplayPriceChart": "Chart",
+		"DisplayPriceChart": "Diagram",
 		"Done": "Klar",
 		"Error": "Fel",
 		"Experiment": "Experimentera",
-		"Experiments": "Experiments",
+		"Experiments": "Experiment",
 		"Join": "Join",
 		"Label": "Etikett",
 		"Labels": "Etiketter",
@@ -254,37 +254,37 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Ladda fler",
 		"Location": "Location",
-		"Locations": "Locations",
+		"Locations": "Platser",
 		"LocationSelected": "Location selected",
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
 		"Date": "Date",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateMissing": "Datum saknas",
+		"Details": "Detaljer",
 		"Delete": "Radera",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
-		"DiscountType": "Discount type",
+		"DiscountType": "Rabattyp",
 		"DiscountTypeQuantity": "Kvantitet",
 		"DiscountTypeSale": "Sale",
 		"DiscountTypeSeasonal": "Seasonal",
 		"DiscountTypeLoyaltyProgram": "Loyalty program",
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSecondHand": "Andra hand",
 		"DiscountTypeOther": "Other",
-		"Example": "Example",
+		"Example": "Exempel",
 		"Examples": "Examples",
 		"ExampleWithColon": "Exempel:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "Exempel: {value}",
 		"ExamplesWithColon": "Exempel:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "Exempel: {value}",
 		"Edit": "Redigera",
 		"End": "End",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
-		"FilterProductWithPriceCount": "With a price",
+		"FilterProductWithPriceCount": "Med ett pris",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
@@ -296,18 +296,18 @@
 		"FAQ": "FAQ",
 		"FrequentlyAskedQuestions": "Vanliga frågor",
 		"GDPR_REQUEST": "GDPR request",
-		"Group": "Group",
+		"Group": "Grupp",
 		"Help": "Hjälp",
 		"History": "Historik",
 		"Image": "Bild",
 		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
+		"ImageSelectMultiple": "Välj bilder",
 		"ImageSelected": "Image selected!",
 		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
 		"Images": "Images",
 		"ImageFull": "Full-size image",
 		"Latest": "Latest",
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "Länk kopierad",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Karta",
@@ -315,7 +315,7 @@
 		"MobileApp": "Mobile app",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
+		"MyPrices": "Mina priser",
 		"MyProofs": "My proofs",
 		"MyStats": "My stats",
 		"NotAnError": "Not an error",
@@ -339,7 +339,7 @@
 		"OtherContributions": "Other contributions",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
-		"Picture": "Picture",
+		"Picture": "Bild",
 		"Pictures": "Pictures",
 		"PictureSelect": "Select a picture",
 		"PictureSelectMultiple": "Select pictures",
@@ -361,7 +361,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
-		"Private": "Private",
+		"Private": "Privat",
 		"Privacy": "Integritet",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
@@ -397,12 +397,12 @@
 		"SignedIn": "Signed in!",
 		"SignIn": "Logga in",
 		"SignOut": "Logga ut",
-		"SideMenu": "Side menu",
+		"SideMenu": "Sidomeny",
 		"Share": "Dela",
 		"Source": "Källa",
 		"SourceCode": "Source code",
 		"Start": "Start",
-		"Stats": "Stats",
+		"Stats": "Statistik",
 		"Summary": "Sammanfattning",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
@@ -415,7 +415,7 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
-		"Today": "Today",
+		"Today": "Idag",
 		"Top": "Top",
 		"Total": "Total",
 		"Truncate": "Truncate",
@@ -429,7 +429,7 @@
 		"UnitKilogram": "kg",
 		"UnitMililitre": "mL",
 		"UnitLitre": "L",
-		"Unreadable": "Unreadable",
+		"Unreadable": "Oläslig",
 		"Upload": "Upload",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
@@ -438,7 +438,7 @@
 		"URL": "URL",
 		"URLInvalid": "Ogiltig URL",
 		"User": "Användare",
-		"Users": "Users",
+		"Users": "Användare",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
 		"Validate": "Validera",
@@ -447,11 +447,11 @@
 		"View": "Visa",
 		"Website": "Website",
 		"Year": "Year",
-		"Years": "Years",
+		"Years": "År",
 		"Yes": "Ja",
 		"No": "Nej",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Mat",
+		"PetFood": "Djurmat",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -459,7 +459,7 @@
 			"ProofSelect": "1. Proof selection",
 			"LabelsExtraction": "2. Labels extraction",
 			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"Summary": "4. Sammanfattning"
 		},
 		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
 		"FindBoundingBoxes": "Automatically find labels",
@@ -480,9 +480,9 @@
 		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
-		"AutomaticBoundingBoxSource": "automatic",
+		"AutomaticBoundingBoxSource": "automatisk",
 		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
+		"DetectedBarcode": "Upptäckt streckkod: {barcode}",
 		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Price tag without a price",
@@ -500,17 +500,17 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Valuta",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"Select": "Välj {currency_code}"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
 	"Footer": {
 		"About": "Om",
-		"Stats": "Stats",
+		"Stats": "Statistik",
 		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
@@ -520,11 +520,11 @@
 		"SignOut": "Logga ut"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "Ljust läge",
+		"DarkMode": "Mörkt läge"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Lägg till ett pris",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
 		"SearchProduct": "Search for a product",
@@ -533,7 +533,7 @@
 		"Welcome": {
 			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
 			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Title": "Välkommen till {name}!"
 		}
 	},
 	"LocationDetail": {
@@ -579,7 +579,7 @@
 		"Title": "Edit a price"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
+		"Discount": "Rabatt?",
 		"Label": "Price",
 		"LabelDiscounted": "Discounted price",
 		"LabelFull": "Full price"
@@ -597,7 +597,7 @@
 		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "Streckkodslängd: {length}",
 		"Brands": "Varumärken",
 		"BrandLower": "varumärke",
 		"BrandMissing": "Varumärke saknas",
@@ -605,10 +605,10 @@
 		"Categories": "Kategorier",
 		"CategoriesLower": "kategorier",
 		"CategoriesMissing": "Kategori saknas",
-		"CategoryTotal": "{count} categories",
+		"CategoryTotal": "{count} kategorier",
 		"Labels": "Etiketter",
 		"LabelsLower": "etiketter",
-		"LabelTotal": "{count} labels",
+		"LabelTotal": "{count} etiketter",
 		"LatestPrice": "Senaste priset",
 		"InvalidBarcode": "Ogiltig streckkod",
 		"InvalidBarcodeLength": "Invalid barcode length",
@@ -623,7 +623,7 @@
 		"UnknownProduct": "Okänt produktnamn"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Lägg till ett pris",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Ladda fler",
@@ -660,10 +660,10 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Ladda fler",
-		"Prices": "Prices",
+		"Prices": "Priser",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
-		"Private": "Private",
+		"Private": "Privat",
 		"Privacy": "Integritet"
 	},
 	"ProofEdit": {
@@ -692,7 +692,7 @@
 			"Title": "Om"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Lägg till ett pris"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -716,10 +716,10 @@
 			"Title": "Add multiple proofs"
 		},
 		"Locations": {
-			"Title": "Locations"
+			"Title": "Platser"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Lägg till ett pris"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -728,7 +728,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Priser"
 		},
 		"Proofs": {
 			"Title": "Proofs"
@@ -746,7 +746,7 @@
 			"Title": "Bidra"
 		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "Experiment"
 		},
 		"Home": {
 			"Title": "Hem"
@@ -761,7 +761,7 @@
 			"Title": "Latest proofs"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Mina priser"
 		},
 		"MyProofs": {
 			"Title": "My proofs"
@@ -782,7 +782,7 @@
 			"Title": "Logga in"
 		},
 		"Stats": {
-			"Title": "Stats"
+			"Title": "Statistik"
 		},
 		"TopContributors": {
 			"Title": "Top contributors"
@@ -794,7 +794,7 @@
 			"Title": "Top products"
 		},
 		"Users": {
-			"Title": "Users"
+			"Title": "Användare"
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
@@ -823,7 +823,7 @@
 		"Title": "Sök"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "Länk kopierad",
 		"Title": "Dela"
 	},
 	"SignIn": {
@@ -837,17 +837,17 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Priser",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"Title": "Statistik",
 		"Products": "Produkter",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Platser",
+		"Users": "Användare",
 		"Total": "Total",
-		"WithPrice": "With a price",
+		"WithPrice": "Med ett pris",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
@@ -863,12 +863,12 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Ladda fler",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
+		"MyPrices": "Mina priser",
 		"MyProofs": "My proofs",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Inställningar",
 		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
+		"UserPriceTotal": "{count} priser",
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
@@ -884,7 +884,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Byt språk",
 		"CountryLabel": "Land",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Streckkodsläsare",
 		"DefaultMode": "Default mode",
