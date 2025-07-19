@@ -168,6 +168,11 @@
               ctx.fillStyle = "#88631e"
               text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagNotAPrice')
               break
+            case constants.PRICE_TAG_STATUS_OTHER:
+              ctx.strokeStyle = "gray"
+              ctx.fillStyle = "gray"
+              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagOther')
+              break
             default:
               if (rect.id) {  // status == null
                 ctx.strokeStyle = "blue"
