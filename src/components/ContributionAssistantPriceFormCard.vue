@@ -47,6 +47,10 @@
           <v-list-item :slim="true" prepend-icon="mdi-currency-usd-off" @click="updatePriceTagStatus(PRICE_TAG_STATUS_NOT_A_PRICE)">
             {{ $t('Common.NotAPrice') }}
           </v-list-item>
+          <v-divider class="mt-2 mb-2" />
+          <v-list-item :slim="true" prepend-icon="mdi-help-circle-outline" @click="updatePriceTagStatus(PRICE_TAG_STATUS_OTHER)">
+            {{ $t('Common.Other') }}
+          </v-list-item>
         </v-list>
       </v-menu>
       <v-spacer />
@@ -160,6 +164,7 @@ export default {
       PRICE_TAG_STATUS_UNREADABLE: constants.PRICE_TAG_STATUS_UNREADABLE,
       PRICE_TAG_STATUS_TRUNCATED: constants.PRICE_TAG_STATUS_TRUNCATED,
       PRICE_TAG_STATUS_NOT_A_PRICE: constants.PRICE_TAG_STATUS_NOT_A_PRICE,
+      PRICE_TAG_STATUS_OTHER: constants.PRICE_TAG_STATUS_OTHER,
       // data
       mode: null,  // see mounted
       productFormFilled: false,
@@ -181,6 +186,8 @@ export default {
         return this.$t('Common.Truncated')
       } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_NOT_A_PRICE) {
         return this.$t('Common.NotAPrice')
+      } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_OTHER) {
+        return this.$t('Common.Other')
       } else {
         return this.$t('Common.Error')
       }
