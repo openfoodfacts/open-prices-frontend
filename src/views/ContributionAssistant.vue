@@ -408,11 +408,10 @@ export default {
       // Question: callback vs Promise ? Neither are really used in the rest of the code base
       let tries = 0
       const load = () => {
-        api.getPriceTags({proof_id: this.proofObject.id, size: 100, prediction_count__gte: 1}).then(data => {
-          const priceTags = data.items
-          const numberOfPriceTagsWithPredictions = priceTags.filter(priceTag => priceTag.predictions.length).length
-          if (numberOfPriceTagsWithPredictions >= minNumberOfPriceTagWithPredictions) {
-            callback(priceTags)
+        api.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
+          const priceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions && priceTag.predictions.length)
+          if (priceTagsWithPredictions.length >= minNumberOfPriceTagWithPredictions) {
+            callback(priceTagsWithPredictions)
           } else {
             tries += 1
             if (tries >= maxTries) {
