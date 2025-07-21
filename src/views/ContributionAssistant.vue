@@ -409,10 +409,9 @@ export default {
       let tries = 0
       const load = () => {
         api.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
-          const priceTags = data.items
-          const numberOfPriceTagsWithPredictions = priceTags.filter(priceTag => priceTag.predictions.length).length
-          if (numberOfPriceTagsWithPredictions >= minNumberOfPriceTagWithPredictions) {
-            callback(priceTags)
+          const priceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions && priceTag.predictions.length)
+          if (priceTagsWithPredictions.length >= minNumberOfPriceTagWithPredictions) {
+            callback(priceTagsWithPredictions)
           } else {
             tries += 1
             if (tries >= maxTries) {
