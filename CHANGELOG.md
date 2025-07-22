@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.136.7](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.6...v1.136.7) (2025-07-22)
+
+
+### Bug Fixes
+
+* **Receipt Assistant:** align action buttons to the right ([0625f85](https://github.com/openfoodfacts/open-prices-frontend/commit/0625f85cc512b2cb12acca76c1cdc22cddd914eb))
+* **Receipt Assistant:** match price input look & feel to other input fields ([#1594](https://github.com/openfoodfacts/open-prices-frontend/issues/1594)) ([194f49e](https://github.com/openfoodfacts/open-prices-frontend/commit/194f49ee0e7a4b5a4bbcc81e0b7661201a6ca0e3))
+* **Receipt Assistant:** reduce product form field height. set minimum price form field width ([#1596](https://github.com/openfoodfacts/open-prices-frontend/issues/1596)) ([28d5df8](https://github.com/openfoodfacts/open-prices-frontend/commit/28d5df81c46fd24533ee22128e1c131a83868c5e))
+
 ## [1.136.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.5...v1.136.6) (2025-07-21)
 
 
