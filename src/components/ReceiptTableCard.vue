@@ -26,6 +26,7 @@
             v-else-if="!item.productFound"
             :model-value="item.product_code"
             :hide-details="true"
+            density="compact"
             :rules="rules"
             :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'"
             @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
@@ -141,7 +142,7 @@ export default {
       headers: [
         { title: 'Product Name', key: 'product_name' },
         { title: 'Product', key: 'product' },
-        { title: 'Price', key: 'price' },
+        { title: 'Price', key: 'price', minWidth: '150px' },
         { title: 'Quantity', key: 'receipt_quantity' },
         { title: 'Actions', key: 'actions' },
       ],
