@@ -9,7 +9,7 @@
     <v-card-text>
       <v-data-table :headers="headers" :items="items" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" items-per-page="100" :disable-sort="true">
         <template #[`item.product_name`]="{ item }">
-          <v-text-field v-if="item.manuallyAdded" v-model="item.product_name" :hide-details="true" :rules="rules" dense single-line />
+          <v-text-field v-if="item.manuallyAdded" v-model="item.product_name" :hide-details="true" :rules="rules" />
           <p v-else>
             {{ item.product_name }}
           </p>
@@ -23,18 +23,27 @@
         <template #[`item.product`]="{ item }">
           <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
           <v-text-field 
-            v-else-if="!item.productFound" 
-            v-model="item.product_code" 
-            :hide-details="true" 
-            :rules="rules" 
-            :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'" 
+            v-else-if="!item.productFound"
+            :model-value="item.product_code"
+            :hide-details="true"
+            :rules="rules"
+            :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'"
             @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
-            @keydown.enter="findProduct(item)" 
+            @keydown.enter="findProduct(item)"
           />
           <ProductCard v-else :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </template>
         <template #[`item.price`]="{ item }">
-          <v-text-field v-model="item.price" :suffix="itemPriceSuffix(item)" :hide-details="true" :rules="rules" dense single-line />
+          <v-text-field
+            :model-value="item.price"
+            :suffix="itemPriceSuffix(item)"
+            :hide-details="true"
+            density="compact"
+            variant="outlined"
+            type="text"
+            inputmode="decimal"
+            :rules="rules"
+          />
         </template>
         <template #[`item.receipt_quantity`]="{ item }">
           {{ item.receipt_quantity }}
