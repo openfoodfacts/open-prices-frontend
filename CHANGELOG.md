@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.136.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.5...v1.136.6) (2025-07-21)
+
+
+### Technical
+
+* **ContributionAssistant:** only fetch pricetags with predictions ([#1592](https://github.com/openfoodfacts/open-prices-frontend/issues/1592)) ([6f50512](https://github.com/openfoodfacts/open-prices-frontend/commit/6f50512fa06718fcd7ec153bf98b2b78bc8cffda))
+* **l10n:** New Crowdin translations to review and merge ([#1586](https://github.com/openfoodfacts/open-prices-frontend/issues/1586)) ([da0a151](https://github.com/openfoodfacts/open-prices-frontend/commit/da0a15102bfa1da54dd4cb28038ac79e001ad02c))
+
 ## [1.136.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.4...v1.136.5) (2025-07-17)
 
 
