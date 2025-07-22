@@ -50,7 +50,7 @@
           {{ item.receipt_quantity }}
         </template>
         <template #[`item.actions`]="{ item }">
-          <v-row>
+          <v-row class="float-right">
             <v-btn size="x-small" icon="mdi-pencil" @click="showEditProductDialog(item)" />
             <v-btn size="x-small" icon="mdi-delete" @click="deleteItem(item)" />
           </v-row>
