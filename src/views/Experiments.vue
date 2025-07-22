@@ -2,10 +2,10 @@
   <v-row>
     <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Router.ContributionAssistant.Title')"
+        :title="$t('Router.PriceTagAssistant.Title')"
         prepend-icon="mdi-draw"
         append-icon="mdi-arrow-right"
-        to="/experiments/contribution-assistant"
+        to="/experiments/price-tag-assistant"
       />
     </v-col>
     <v-col cols="12" sm="6" lg="4">
@@ -19,7 +19,7 @@
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Router.ReceiptAssistant.Title')"
-        prepend-icon="mdi-draw"
+        prepend-icon="mdi-receipt-text-outline"
         append-icon="mdi-arrow-right"
         to="/experiments/receipt-assistant"
       />

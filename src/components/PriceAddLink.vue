@@ -46,14 +46,14 @@ export default {
     return {
       ADD_PRICE_SINGLE_BASE_URL: '/prices/add/single',
       ADD_PRICE_MULTIPLE_BASE_URL: '/prices/add/multiple',
-      CONTRIBUTION_ASSISTANT_BASE_URL: '/experiments/contribution-assistant',
+      CONTRIBUTION_ASSISTANT_BASE_URL: '/experiments/price-tag-assistant',
       RECEIPT_ASSISTANT_BASE_URL: '/experiments/receipt-assistant'
     }
   },
   computed: {
     getText() {
       if (['contribution-assistant', 'receipt-assistant'].includes(this.target)) {
-        return this.$t('ContributionAssistant.OpenWithTheAssistant')
+        return this.$t('Common.OpenWithTheAssistant')
       }
       else if (this.target === 'prices-add-single') {
         return this.$t('Common.AddPrice')
