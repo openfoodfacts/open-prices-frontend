@@ -736,9 +736,6 @@
 		"ProofAddSingle": {
 			"Title": "新增單一證明"
 		},
-		"ProofAddMultiple": {
-			"Title": "新增多個證明"
-		},
 		"Community": {
 			"Title": "Community"
 		},
