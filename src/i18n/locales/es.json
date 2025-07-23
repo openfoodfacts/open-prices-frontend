@@ -244,6 +244,7 @@
 		"Error": "Error",
 		"Experiment": "Experimento",
 		"Experiments": "Experiments",
+		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Sello",
 		"Labels": "Etiquetas",
@@ -318,10 +319,12 @@
 		"MyPrices": "Mis precios",
 		"MyProofs": "Mis pruebas",
 		"MyStats": "Mis estadísticas",
+		"NextProof": "Siguiente prueba",
 		"NotAnError": "Not an error",
 		"NotAPrice": "No es un precio",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Abrir con el asistente",
 		"Order": "Pedido",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Número de escaneos",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Siguiente prueba",
 		"ChooseNextProof": "Elija otra prueba para manejar",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Asistente de etiquetas de precio de prueba"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
