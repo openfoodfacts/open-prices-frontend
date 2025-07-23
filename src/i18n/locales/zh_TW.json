@@ -244,6 +244,7 @@
 		"Error": "錯誤",
 		"Experiment": "實驗",
 		"Experiments": "實驗",
+		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "標籤 ",
 		"Labels": "標籤",
@@ -318,10 +319,12 @@
 		"MyPrices": "我的價格",
 		"MyProofs": "我的證明",
 		"MyStats": "My stats",
+		"NextProof": "Next proof",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "離線",
 		"Online": "在線",
+		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "順序",
 		"OrderLocationCountDESC": "地點總數",
 		"OrderProductUniqueScansDESC": "掃描次數",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "貢獻助手"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "證明價格標籤助手"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
