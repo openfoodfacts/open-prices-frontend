@@ -244,6 +244,7 @@
 		"Error": "Klaida",
 		"Experiment": "Eksperimentas",
 		"Experiments": "Eksperimentai",
+		"GoToProof": "Eiti į įrodymą",
 		"Join": "Prisijungti",
 		"Label": "Etiketė",
 		"Labels": "Labels",
@@ -318,10 +319,12 @@
 		"MyPrices": "Mano kainos",
 		"MyProofs": "Mano įrodymai",
 		"MyStats": "Mano statistika",
+		"NextProof": "Kitas įrodymas",
 		"NotAnError": "Ne klaida",
 		"NotAPrice": "Ne kaina",
 		"Offline": "Neprisijungę",
 		"Online": "Prisijungus",
+		"OpenWithTheAssistant": "Atidaryti su asistentu",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Vietų skaičius",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} kaina (-os) bus pridėta (-os) prie esamo įrodymo {date} {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pridėta kainų",
 		"WaitForUpload": "Palaukite, kol bus įkeltas",
-		"GoToDashboard": "Eiti į savo valdymo sritį",
 		"GoToProof": "Eiti į įrodymą",
-		"AddNewProof": "Pridėti naują įrodymą",
 		"NextProof": "Kitas įrodymas",
 		"ChooseNextProof": "Pasirinkti kitą tvarkytiną įrodymą",
 		"AutomaticBoundingBoxSource": "automatinis",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Bendradarbiavimo asistentas"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Įrodymų kainų žymėjimo asistentas"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Kainų tvirtinimo asistentas"
