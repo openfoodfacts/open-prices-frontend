@@ -797,8 +797,8 @@
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
-		"PriceTagAssistant": {
-			"Title": "Price Tag Assistant"
+		"ProofPriceTagAssistant": {
+			"Title": "Proof Price Tag Assistant"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"

@@ -46,13 +46,14 @@ const routes = [
   { path: '/challenges/:id/prices', name: 'challenge-prices', component: () => import('./views/ChallengePriceList.vue'), meta: { title: 'Challenge prices', breadcrumbs: [{title: 'Challenges', disabled: false, to: '/challenges' }, {title: 'ID', disabled: false, to: '/challenges/:id' }, {title: 'Prices', disabled: true }] }},
   { path: '/challenges/:id/proofs', name: 'challenge-proofs', component: () => import('./views/ChallengeProofList.vue'), meta: { title: 'Challenge proofs', breadcrumbs: [{title: 'Challenges', disabled: false, to: '/challenges' }, {title: 'ID', disabled: false, to: '/challenges/:id' }, {title: 'Proofs', disabled: true }] }},
   { path: '/experiments', name: 'experiments', component: () => import('./views/Experiments.vue'), meta: { title: 'Experiments', icon: 'mdi-test-tube', drawerMenu: true, drawerMenuConditionalDisplay: 'drawer_display_experiments', breadcrumbs: [{title: 'Experiments', disabled: true }] }},
-  { path: '/experiments/price-tag-assistant', name: 'price-tag-assistant', component: () => import('./views/PriceTagAssistant.vue'), meta: { title: 'PriceTagAssistant', icon: 'mdi-draw', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'PriceTagAssistant', disabled: true }] }},
+  { path: '/experiments/proof-price-tag-assistant', name: 'price-tag-assistant', component: () => import('./views/ProofPriceTagAssistant.vue'), meta: { title: 'ProofPriceTagAssistant', icon: 'mdi-draw', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'ProofPriceTagAssistant', disabled: true }] }},
   { path: '/experiments/receipt-assistant', name: 'receipt-assistant', component: () => import('./views/ReceiptAssistant.vue'), meta: { title: 'ReceiptAssistant', icon: 'mdi-draw', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'ReceiptAssistant', disabled: true }] }},
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true, breadcrumbs: [{title: 'Stats', disabled: true }] }},
   { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', icon: 'mdi-cog-outline', drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true, breadcrumbs: [{title: 'About', disabled: true }] }},
   // redirects
   { path: '/experiments/challenge', redirect: '/challenge' },
+  { path: '/experiments/contribution-assistant', redirect: '/experiments/proof-price-tag-assistant' },
   // Why this redirect?
   // The app used to be available at https://prices.openfoodfacts.org/app
   // It is now available at https://prices.openfoodfacts.org

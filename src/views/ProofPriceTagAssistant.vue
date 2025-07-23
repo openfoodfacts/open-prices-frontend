@@ -567,11 +567,11 @@ export default {
       const proofIds = this.proofIdsFromQueryParam
       proofIds.shift()
       // This only changes the url, in case of refresh, since the path stays the same, no reload is triggered
-      this.$router.push({ path: '/experiments/price-tag-assistant', query: { proof_ids: proofIds.join(',') } })
+      this.$router.push({ path: '/experiments/proof-price-tag-assistant', query: { proof_ids: proofIds.join(',') } })
       this.initWithProofIds(proofIds)
     },
     selectProof(proof) {
-      this.$router.push({ path: '/experiments/price-tag-assistant', query: { proof_ids: proof.id } })
+      this.$router.push({ path: '/experiments/proof-price-tag-assistant', query: { proof_ids: proof.id } })
       this.initWithProofIds([proof.id])
     }
   }

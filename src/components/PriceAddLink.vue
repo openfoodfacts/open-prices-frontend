@@ -46,7 +46,7 @@ export default {
     return {
       ADD_PRICE_SINGLE_BASE_URL: '/prices/add/single',
       ADD_PRICE_MULTIPLE_BASE_URL: '/prices/add/multiple',
-      CONTRIBUTION_ASSISTANT_BASE_URL: '/experiments/price-tag-assistant',
+      CONTRIBUTION_ASSISTANT_BASE_URL: '/experiments/proof-price-tag-assistant',
       RECEIPT_ASSISTANT_BASE_URL: '/experiments/receipt-assistant'
     }
   },

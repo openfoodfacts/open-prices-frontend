@@ -5,7 +5,7 @@
         :title="$t('Router.PriceTagAssistant.Title')"
         prepend-icon="mdi-draw"
         append-icon="mdi-arrow-right"
-        to="/experiments/price-tag-assistant"
+        to="/experiments/proof-price-tag-assistant"
       />
     </v-col>
     <v-col cols="12" sm="6" lg="4">
