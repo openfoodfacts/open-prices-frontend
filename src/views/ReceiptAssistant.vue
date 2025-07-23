@@ -82,7 +82,7 @@
         </v-col>
         <v-col cols="12" sm="6" lg="4">
           <v-card
-            :title="$t('ContributionAssistant.GoToProof')"
+            :title="$t('Common.GoToProof')"
             prepend-icon="mdi-image"
             append-icon="mdi-arrow-right"
             :to="'/proofs/' + proofObject.id"
