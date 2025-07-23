@@ -244,6 +244,7 @@
 		"Error": "Kesalahan",
 		"Experiment": "Percobaan",
 		"Experiments": "Eksperimen",
+		"GoToProof": "Buka bukti",
 		"Join": "Gabung",
 		"Label": "Label",
 		"Labels": "Label - label",
@@ -318,10 +319,12 @@
 		"MyPrices": "Harga saya",
 		"MyProofs": "Bukti saya",
 		"MyStats": "Statistik saya",
+		"NextProof": "Bukti selanjutnya",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Tidak Aktif",
 		"Online": "Aktif",
+		"OpenWithTheAssistant": "Buka dengan Asisten",
 		"Order": "Urutan",
 		"OrderLocationCountDESC": "Jumlah lokasi",
 		"OrderProductUniqueScansDESC": "Jumlah pindaian",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} harga akan ditambahkan ke bukti yang sudah ada pada {date} di {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} harga ditambahkan",
 		"WaitForUpload": "Harap tunggu untuk diunggah",
-		"GoToDashboard": "Buka dasbor Anda",
 		"GoToProof": "Buka bukti",
-		"AddNewProof": "Tambahkan bukti baru",
 		"NextProof": "Bukti selanjutnya",
 		"ChooseNextProof": "Pilih bukti lain untuk ditangani",
 		"AutomaticBoundingBoxSource": "otomatis",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Asisten Kontribusi"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Asisten Label Harga Bukti"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Asisten Validasi Harga"
