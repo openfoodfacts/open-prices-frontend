@@ -92,7 +92,7 @@ export default {
       return '/experiments/price-validation-assistant'
     },
     getPriceAddMultipleProofIdUrl() {
-      return `/prices/add/multiple?proof_ids=${this.firstProofUploaded.id}`
+      return `/prices/add/multiple?proof_id=${this.firstProofUploaded.id}`
     },
     getUserDashboardUrl() {
       const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
