@@ -85,7 +85,6 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
 import constants from '../constants'
 
 export default {
@@ -153,20 +152,7 @@ export default {
       // deep: true
     }
   },
-  mounted() {
-    if (this.$route.query.proof_id) {
-      this.getProofById(this.$route.query.proof_id)
-    }
-  },
   methods: {
-    getProofById(proofId) {
-      this.loading = true
-      api.getProofById(proofId)
-        .then(proof => {
-          this.recentProofSelected(proof)
-          this.loading = false
-        })
-    },
     recentProofSelected(proof) {
       this.proofImageList = [proof]
     },

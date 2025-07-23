@@ -248,8 +248,16 @@ export default {
         this.typeReceiptOnly = true
       }
     }
+    if (this.$route.query.proof_id) {
+      this.initWithProofId(this.$route.query.proof_id)
+    }
   },
   methods: {
+    initWithProofId(proofId) {
+      api.getProofById(proofId).then(proof => {
+        this.onProofUploaded(proof)
+      })
+    },
     onProofUploaded(proof) {
       // store the proof
       this.proofObject = proof
