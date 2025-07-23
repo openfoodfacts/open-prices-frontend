@@ -181,7 +181,7 @@
         </v-col>
         <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1" cols="12" sm="6" lg="4">
           <v-card
-            :title="$t('ContributionAssistant.NextProof')"
+            :title="$t('Common.NextProof')"
             prepend-icon="mdi-image"
             append-icon="mdi-arrow-right"
             @click="nextProof"
@@ -189,7 +189,7 @@
         </v-col>
         <v-col cols="12" sm="6" lg="4">
           <v-card
-            :title="$t('ContributionAssistant.GoToProof')"
+            :title="$t('Common.GoToProof')"
             prepend-icon="mdi-image"
             append-icon="mdi-arrow-right"
             :to="'/proofs/' + proofObject.id"
@@ -231,9 +231,9 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import api from '../services/api'
-import constants from '../constants'
+import { useAppStore } from '../store.js'
+import api from '../services/api.js'
+import constants from '../constants.js'
 import utils from '../utils.js'
 
 export default {
@@ -567,11 +567,11 @@ export default {
       const proofIds = this.proofIdsFromQueryParam
       proofIds.shift()
       // This only changes the url, in case of refresh, since the path stays the same, no reload is triggered
-      this.$router.push({ path: '/experiments/contribution-assistant', query: { proof_ids: proofIds.join(',') } })
+      this.$router.push({ path: '/experiments/proof-price-tag-assistant', query: { proof_ids: proofIds.join(',') } })
       this.initWithProofIds(proofIds)
     },
     selectProof(proof) {
-      this.$router.push({ path: '/experiments/contribution-assistant', query: { proof_ids: proof.id } })
+      this.$router.push({ path: '/experiments/proof-price-tag-assistant', query: { proof_ids: proof.id } })
       this.initWithProofIds([proof.id])
     }
   }
