@@ -13,7 +13,7 @@
 
   <v-row v-if="step === 1">
     <v-col cols="12" md="6">
-      <ProofUploadCard :typePriceTagOnly="true" :hideRecentProofChoice="true" :multiple="true" :assistedByAI="true" @done="proofUploadDone($event)" />
+      <ProofUploadCard :typePriceTagOnly="true" :hideRecentProofChoice="true" :multiple="true" :assistedByAI="true" @proof="onProofUploaded($event)" @done="proofUploadDone($event)" />
     </v-col>
   </v-row>
 
@@ -26,6 +26,22 @@
         :text="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
       />
     </v-col>
+    <v-col v-if="firstProofUploaded" cols="12" sm="6" lg="4">
+      <v-card
+        v-if="firstProofUploaded.ready_for_price_tag_validation"
+        :title="$t('Common.ValidatePrices')"
+        prepend-icon="mdi-checkbox-marked-circle-plus-outline"
+        append-icon="mdi-arrow-right"
+        :to="getPriceValidationUrl"
+      />
+      <v-card
+        v-else
+        :title="$t('Common.AddPrices')"
+        prepend-icon="mdi-tag-plus-outline"
+        append-icon="mdi-arrow-right"
+        :to="getPriceAddMultipleProofIdUrl"
+      />
+    </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.AddNewProofs')"
@@ -34,14 +50,7 @@
         @click="reloadPage"
       />
     </v-col>
-    <v-col cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Common.ValidatePrices')"
-        prepend-icon="mdi-checkbox-marked-circle-plus-outline"
-        append-icon="mdi-arrow-right"
-        :to="getPriceValidationUrl"
-      />
-    </v-col>
+    
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.MyDashboard')"
@@ -74,6 +83,7 @@ export default {
           value: 2
         }
       ],
+      firstProofUploaded: null,
       proofUploadCount: 0
     }
   },
@@ -81,12 +91,19 @@ export default {
     getPriceValidationUrl() {
       return '/experiments/price-validation-assistant'
     },
+    getPriceAddMultipleProofIdUrl() {
+      return `/prices/add/multiple?proof_id=${this.firstProofUploaded.id}`
+    },
     getUserDashboardUrl() {
       const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
       return `/dashboard?proofSingleSuccess=true&tab=${dashboardTab}`
     }
   },
   methods: {
+    onProofUploaded(proof) {
+      this.firstProofUploaded = proof
+      console.log('Proof uploaded:', proof)
+    },
     proofUploadDone(proofUploadCount) {
       this.proofUploadCount = proofUploadCount
       this.step = 2
