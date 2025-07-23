@@ -244,6 +244,7 @@
 		"Error": "Fehler",
 		"Experiment": "Experiment",
 		"Experiments": "Experimente",
+		"GoToProof": "Nachweise öffnen",
 		"Join": "Beitreten",
 		"Label": "Kennzeichnung",
 		"Labels": "Labels",
@@ -318,10 +319,12 @@
 		"MyPrices": "Mein Preise",
 		"MyProofs": "Meine Belege",
 		"MyStats": "Meine Statistiken",
+		"NextProof": "Nächster Nachweis",
 		"NotAnError": "Kein Fehler",
 		"NotAPrice": "Kein Preis",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Mit Assistent öffnen",
 		"Order": "Reihenfolge",
 		"OrderLocationCountDESC": "Anzahl der Standorte",
 		"OrderProductUniqueScansDESC": "Anzahl der Scans",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} Preis(e) wird/werden am {date} in {locationName} zu einem bestehenden Nachweis hinzugefügt",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} Preise hinzugefügt",
 		"WaitForUpload": "Bitte warten Sie bis das Hochladen abgeschlossen ist",
-		"GoToDashboard": "Übersicht öffnen",
 		"GoToProof": "Nachweise öffnen",
-		"AddNewProof": "Neuen Nachweis hinzufügen",
 		"NextProof": "Nächster Nachweis",
 		"ChooseNextProof": "Einen anderen Nachweis zur Bearbeitung auswählen",
 		"AutomaticBoundingBoxSource": "automatisch",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Mitwirkungsassistent"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Proof-Preisschild-Assistent"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Preisprüfungsassistent"
