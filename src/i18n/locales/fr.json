@@ -736,9 +736,6 @@
 		"ProofAddSingle": {
 			"Title": "Ajouter une seule preuve"
 		},
-		"ProofAddMultiple": {
-			"Title": "Ajouter plusieurs preuves"
-		},
 		"Community": {
 			"Title": "Communauté"
 		},
