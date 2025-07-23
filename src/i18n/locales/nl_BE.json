@@ -244,6 +244,7 @@
 		"Error": "Foutmelding",
 		"Experiment": "Experiment",
 		"Experiments": "Experimenten",
+		"GoToProof": "Ga naar bewijs",
 		"Join": "Deelnemen",
 		"Label": "Keurmerk",
 		"Labels": "Keurmerken",
@@ -318,10 +319,12 @@
 		"MyPrices": "Mijn prijzen",
 		"MyProofs": "Mijn bewijzen",
 		"MyStats": "Mijn statistieken",
+		"NextProof": "Volgend bewijs",
 		"NotAnError": "Geen fout",
 		"NotAPrice": "Geen prijs",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Openen met de assistent",
 		"Order": "Sorteren",
 		"OrderLocationCountDESC": "Aantal locaties",
 		"OrderProductUniqueScansDESC": "Aantal scans",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} prijs/prijzen worden toegevoegd aan een bestaand bewijs op {date} bij {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
 		"WaitForUpload": "Even geduld a. u. b. voor het uploaden",
-		"GoToDashboard": "Ga naar jouw dashboard",
 		"GoToProof": "Ga naar bewijs",
-		"AddNewProof": "Voeg een nieuw bewijs toe",
 		"NextProof": "Volgend bewijs",
 		"ChooseNextProof": "Kies een ander bewijs om te verwerken",
 		"AutomaticBoundingBoxSource": "automatisch",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Bijdrage-Assistent"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Assistent voor het bewijzen van de prijs"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Prijsvalidatie-assistent"
