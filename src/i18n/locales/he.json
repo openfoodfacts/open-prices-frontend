@@ -244,6 +244,7 @@
 		"Error": "שגיאה",
 		"Experiment": "לְנַסוֹת",
 		"Experiments": "ניסויים",
+		"GoToProof": "מעבר להוכחה",
 		"Join": "הצטרפות",
 		"Label": "תווית",
 		"Labels": "תוויות",
@@ -318,10 +319,12 @@
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
 		"MyStats": "הסטטיסטיקה שלי",
+		"NextProof": "ההוכחה הבאה",
 		"NotAnError": "לא שגיאה",
 		"NotAPrice": "לא מחיר",
 		"Offline": "לא מקוון",
 		"Online": "מקוון",
+		"OpenWithTheAssistant": "פתיחה עם המסייע",
 		"Order": "סדר",
 		"OrderLocationCountDESC": "כמות מקומות",
 		"OrderProductUniqueScansDESC": "מספר הסריקות",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} מחירים יתווספו להוכחה הקיימת ב־{date} ב־{locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} מחירים נוספו",
 		"WaitForUpload": "נא להמתין להעלאה",
-		"GoToDashboard": "מעבר ללוח הבקרה שלך",
 		"GoToProof": "מעבר להוכחה",
-		"AddNewProof": "הוספת הוכחה חדשה",
 		"NextProof": "ההוכחה הבאה",
 		"ChooseNextProof": "בחירת הוכחה נוספת לטיפול",
 		"AutomaticBoundingBoxSource": "אוטומטית",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "מסייע תרומה"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "עוזר תג מחיר הוכחה"
 		},
 		"PriceValidationAssistant": {
 			"Title": "מסייע אימות מחירים"
