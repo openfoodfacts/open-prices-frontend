@@ -31,8 +31,7 @@
   </v-app-bar>
 
   <v-app-bar v-if="ENV !== 'prod'" class="pl-3" location="bottom" color="error" density="compact">
-    <span>[{{ ENV }}]</span>
-    <span>&nbsp;This is a development environment.</span>
+    <span>⚠️ This is a development environment ({{ ENV }})</span>
   </v-app-bar>
 
   <v-navigation-drawer v-model="showDrawerMenu" temporary>
