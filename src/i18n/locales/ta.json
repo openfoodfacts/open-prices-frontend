@@ -244,6 +244,7 @@
 		"Error": "Error",
 		"Experiment": "பரிசோதனை",
 		"Experiments": "Experiments",
+		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
 		"Labels": "Labels",
@@ -318,10 +319,12 @@
 		"MyPrices": "எனது விலைகள்",
 		"MyProofs": "My proofs",
 		"MyStats": "எனது புள்ளிவிவரங்கள்",
+		"NextProof": "Next proof",
 		"NotAnError": "ஒரு பிழை இல்லை",
 		"NotAPrice": "விலை இல்லை",
 		"Offline": "ஆஃப்லைன்",
 		"Online": "ஆன்லைன்",
+		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "ஆர்டர்",
 		"OrderLocationCountDESC": "இருப்பிட எண்ணிக்கை",
 		"OrderProductUniqueScansDESC": "ஸ்கேன்களின் எண்ணிக்கை",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} விலை(கள்) {date} இல் {locationName} இல் ஏற்கனவே உள்ள ஆதாரத்துடன் சேர்க்கப்படும்",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "கையாள மற்றொரு ஆதாரத்தைத் தேர்வு செய்யவும்",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "விலைக் குறிச்சொல் ஆதார உதவியாளர்"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"

@@ -244,6 +244,7 @@
 		"Error": "Помилка",
 		"Experiment": "Експеримент",
 		"Experiments": "Експерименти",
+		"GoToProof": "Перейти до доказу",
 		"Join": "Приєднатися",
 		"Label": "Мітка",
 		"Labels": "Етикетки",
@@ -318,10 +319,12 @@
 		"MyPrices": "Мої ціни",
 		"MyProofs": "Мої докази",
 		"MyStats": "Мої статистики",
+		"NextProof": "Наступний доказ",
 		"NotAnError": "Не помилка",
 		"NotAPrice": "Не ціна",
 		"Offline": "Офлайн",
 		"Online": "Онлайн",
+		"OpenWithTheAssistant": "Відкрити за допомогою помічника",
 		"Order": "Замовлення",
 		"OrderLocationCountDESC": "Кількість місць",
 		"OrderProductUniqueScansDESC": "Кількість сканувань",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} ціна(и) буде додано до наявного доказу на {date} у {locationName}",
 		"PriceAddProgress": "Додано ціни {numberOfPricesAdded} / {totalNumberOfPrices}",
 		"WaitForUpload": "Зачекайте на завантаження",
-		"GoToDashboard": "Перейти до вашої панелі керування",
 		"GoToProof": "Перейти до доказу",
-		"AddNewProof": "Додати нове підтвердження",
 		"NextProof": "Наступний доказ",
 		"ChooseNextProof": "Виберіть інший доказ для обробки",
 		"AutomaticBoundingBoxSource": "автоматичний",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Помічник внесків"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Помічник із доказами цінників"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Помічник Перевірки Ціни"

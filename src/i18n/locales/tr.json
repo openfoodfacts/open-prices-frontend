@@ -244,6 +244,7 @@
 		"Error": "Hata",
 		"Experiment": "Deney",
 		"Experiments": "Deneyler",
+		"GoToProof": "Kanıta git",
 		"Join": "Katıl",
 		"Label": "Etiket",
 		"Labels": "Etiketler",
@@ -318,10 +319,12 @@
 		"MyPrices": "Fiyatlarım",
 		"MyProofs": "Bedellerim",
 		"MyStats": "İstatistiklerim",
+		"NextProof": "Bir sonraki kanıt",
 		"NotAnError": "Bir hata değil",
 		"NotAPrice": "Bir fiyat değil",
 		"Offline": "Çevrimdışı",
 		"Online": "Çevrimiçi",
+		"OpenWithTheAssistant": "Asistanla açın",
 		"Order": "Sipariş",
 		"OrderLocationCountDESC": "Konum sayısı",
 		"OrderProductUniqueScansDESC": "Tarama sayısı",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} fiyat(lar) {date} 'de {locationName}'de mevcut bir kanıta eklenecek",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} fiyatlar eklendi",
 		"WaitForUpload": "Lütfen yüklemeyi bekleyin",
-		"GoToDashboard": "Panonuza gidin",
 		"GoToProof": "Kanıta git",
-		"AddNewProof": "Yeni bir kanıt ekle",
 		"NextProof": "Bir sonraki kanıt",
 		"ChooseNextProof": "İşlemek için başka bir kanıt seçin",
 		"AutomaticBoundingBoxSource": "otomatik",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Katkı Asistanı"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Kanıt Fiyat Etiketi Asistanı"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Fiyat Doğrulama Asistanı"

@@ -244,6 +244,7 @@
 		"Error": "Fejlmelding",
 		"Experiment": "Eksperiment",
 		"Experiments": "Eksperimenter",
+		"GoToProof": "Gå til bevis",
 		"Join": "Deltag",
 		"Label": "Etiket",
 		"Labels": "Etiketter",
@@ -318,10 +319,12 @@
 		"MyPrices": "Mine priser",
 		"MyProofs": "Mine beviser",
 		"MyStats": "Min statistik",
+		"NextProof": "Næste bevis",
 		"NotAnError": "Ikke en fejl",
 		"NotAPrice": "Ikke en pris",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Åbn med assistenten",
 		"Order": "Sorter",
 		"OrderLocationCountDESC": "Placeringsantal",
 		"OrderProductUniqueScansDESC": "Antal scanninger",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} pris(er) vil blive tilføjet til et eksisterende bevis på {date} ved {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} priser tilføjet",
 		"WaitForUpload": "Vent venligst på upload",
-		"GoToDashboard": "Gå til dit dashboard",
 		"GoToProof": "Gå til bevis",
-		"AddNewProof": "Tilføj et nyt bevis",
 		"NextProof": "Næste bevis",
 		"ChooseNextProof": "Vælg at håndtere et andet bevis",
 		"AutomaticBoundingBoxSource": "automatisk",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Bidragsassistent"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Assistent for bevisprisskilte"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Prisvalideringsassistent"

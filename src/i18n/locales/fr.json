@@ -244,6 +244,7 @@
 		"Error": "Erreur",
 		"Experiment": "Expérience",
 		"Experiments": "Expérimentations",
+		"GoToProof": "Accéder à la preuve",
 		"Join": "Rejoindre",
 		"Label": "Label",
 		"Labels": "Labels",
@@ -318,10 +319,12 @@
 		"MyPrices": "Mes prix",
 		"MyProofs": "Mes preuves",
 		"MyStats": "Mes stats",
+		"NextProof": "Preuve suivante",
 		"NotAnError": "Pas une erreur",
 		"NotAPrice": "Pas un prix",
 		"Offline": "Hors ligne",
 		"Online": "En ligne",
+		"OpenWithTheAssistant": "Ouvrir avec l'assistant",
 		"Order": "Ordre",
 		"OrderLocationCountDESC": "Nombre de lieux",
 		"OrderProductUniqueScansDESC": "Nombre de numérisations",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} prix seront ajoutés à une preuve existante du {date} à {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prix ajoutés",
 		"WaitForUpload": "Merci d'attendre pour le téléversement",
-		"GoToDashboard": "Accéder à votre tableau de bord",
 		"GoToProof": "Accéder à la preuve",
-		"AddNewProof": "Ajouter une nouvelle preuve",
 		"NextProof": "Preuve suivante",
 		"ChooseNextProof": "Choisissez une autre preuve à gérer",
 		"AutomaticBoundingBoxSource": "automatique",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Assistant de contribution"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Assistant d'étiquette de prix de preuve"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Assistant de validation de prix"

@@ -244,6 +244,7 @@
 		"Error": "Ошибка",
 		"Experiment": "Эксперимент",
 		"Experiments": "Эксперименты",
+		"GoToProof": "Go to proof",
 		"Join": "Вступить",
 		"Label": "Маркировка",
 		"Labels": "Маркировки",
@@ -318,10 +319,12 @@
 		"MyPrices": "Мои цены",
 		"MyProofs": "Мои доказательства",
 		"MyStats": "Моя статистика",
+		"NextProof": "Next proof",
 		"NotAnError": "Не ошибка",
 		"NotAPrice": "Не цена",
 		"Offline": "Офлайн",
 		"Online": "Онлайн",
+		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Заказ",
 		"OrderLocationCountDESC": "Количество мест",
 		"OrderProductUniqueScansDESC": "Количество сканирований",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Добавить новое доказательство",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Помощник по проверке ценников"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"

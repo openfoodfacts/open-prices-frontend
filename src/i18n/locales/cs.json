@@ -244,6 +244,7 @@
 		"Error": "Chyba",
 		"Experiment": "Experimentovat",
 		"Experiments": "Experimenty",
+		"GoToProof": "Přejít na doklad",
 		"Join": "Připojit",
 		"Label": "Štítek",
 		"Labels": "Štítky",
@@ -318,10 +319,12 @@
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje důkazy",
 		"MyStats": "Moje statistiky",
+		"NextProof": "Další důkaz",
 		"NotAnError": "Není to chyba",
 		"NotAPrice": "Upravit cenu",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Otevřete s asistentem",
 		"Order": "Pořadí",
 		"OrderLocationCountDESC": "Počet míst",
 		"OrderProductUniqueScansDESC": "Počet skenů",
@@ -475,9 +478,7 @@
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Počkejte prosím na nahrání",
-		"GoToDashboard": "Přejděte na svůj ovládací panel",
 		"GoToProof": "Přejít na doklad",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Další důkaz",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automaticky",
@@ -795,6 +796,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Příspěvkový asistent"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Asistent cenovek s důkazem"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Asistent pro ověření ceny"
