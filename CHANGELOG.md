@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.137.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.7...v1.137.0) (2025-07-24)
+
+
+### Features
+
+* **Proof Upload:** add an action to 'Add prices' if the user does not want to use the community validation ([#1601](https://github.com/openfoodfacts/open-prices-frontend/issues/1601)) ([b1a0be9](https://github.com/openfoodfacts/open-prices-frontend/commit/b1a0be9dfba1819b88e03d6ad6be5cd566225424))
+
+
+### Technical
+
+* **Contribution Assistant:** rename to ProofPriceTagAssistant to clarify ([#1597](https://github.com/openfoodfacts/open-prices-frontend/issues/1597)) ([7fd9802](https://github.com/openfoodfacts/open-prices-frontend/commit/7fd98024b694cc6b75d1faa784560c03bb92b99f))
+* **Header:** add a local/staging text in a bottom red banner ([#1604](https://github.com/openfoodfacts/open-prices-frontend/issues/1604)) ([08a6af1](https://github.com/openfoodfacts/open-prices-frontend/commit/08a6af1d726a880aa10d75d1fe38f160f076be44))
+* **l10n:** New Crowdin translations to review and merge ([#1600](https://github.com/openfoodfacts/open-prices-frontend/issues/1600)) ([da8efc5](https://github.com/openfoodfacts/open-prices-frontend/commit/da8efc5dfd326c51b76aed989e6a296b58c5e76b))
+* **l10n:** New Crowdin translations to review and merge ([#1605](https://github.com/openfoodfacts/open-prices-frontend/issues/1605)) ([c9e1a8b](https://github.com/openfoodfacts/open-prices-frontend/commit/c9e1a8be975edb5a146f3ff988c0da8b6b53115d))
+* **Price add:** move the initWithProofId logic to the PriceAddMultiple view ([#1602](https://github.com/openfoodfacts/open-prices-frontend/issues/1602)) ([50a2848](https://github.com/openfoodfacts/open-prices-frontend/commit/50a28480a54afb0cb530b6963a4b94a549292dc2))
+* **Proof Upload:** rename ProofAddMultiple component to ProofPriceTagAddMultiple to clarify ([#1598](https://github.com/openfoodfacts/open-prices-frontend/issues/1598)) ([750aa4d](https://github.com/openfoodfacts/open-prices-frontend/commit/750aa4dcec0fb2911864174cb5f46710196d6b76))
+
 ## [1.136.7](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.136.6...v1.136.7) (2025-07-22)
 
 
