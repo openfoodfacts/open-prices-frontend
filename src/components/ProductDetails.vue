@@ -19,7 +19,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import utils from '../utils.js'
+import barcode_utils from '../utils/barcode.js'
 
 export default {
   components: {
@@ -71,10 +71,10 @@ export default {
       return !this.hideProductBarcode || this.appStore.user.username && this.appStore.user.product_display_barcode
     },
     barcodeTooLong() {
-      return this.product.code && utils.isBarcodeTooLong(this.product.code)
+      return this.product.code && barcode_utils.isBarcodeTooLong(this.product.code)
     },
     barcodeInvalid() {
-      return this.product.code && !utils.isBarcodeValid(this.product.code)
+      return this.product.code && !barcode_utils.isBarcodeValid(this.product.code)
     },
     showProductSource() {
       return this.appStore.user.username && this.appStore.user.product_display_source

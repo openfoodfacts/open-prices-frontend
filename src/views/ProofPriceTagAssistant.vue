@@ -234,8 +234,8 @@ import { defineAsyncComponent } from 'vue'
 import constants from '../constants.js'
 import api from '../services/api.js'
 import { useAppStore } from '../store.js'
+import barcode_utils from '../utils/barcode.js'
 import geo_utils from '../utils/geo.js'
-import utils from '../utils.js'
 
 export default {
   components: {
@@ -475,7 +475,7 @@ export default {
       this.priceTags.forEach(priceTag => {
         const priceTagPrediction = priceTag['predictions'][0]
         const label = priceTagPrediction['data']
-        const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''
+        const barcodeString = label.barcode ? barcode_utils.cleanBarcode(label.barcode.toString()) : ''
 
         // The first schema was not versioned, so if the field is missing,
         // we assume it's schema version 1.0
