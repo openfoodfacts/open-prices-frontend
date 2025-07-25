@@ -39,23 +39,16 @@
 			"Subtitle": "Een schap met meerdere prijskaartjes",
 			"Title": "Meerdere producten"
 		},
-		"PriceCreated": "Prijs aangemaakt!",
 		"ReceiptMode": {
 			"Subtitle": "Eén of meerdere producten",
 			"Title": "Bon"
 		},
-		"SignedIn": "Ingelogd!",
 		"SingleProductMode": {
 			"Subtitle": "Slechts één prijskaartje",
 			"Title": "Enkel product"
-		},
-		"Thanks": "Bedankt",
-		"Title": "Voeg een prijs toe",
-		"TitleSingle": "Voeg een enkele prijs toe",
-		"TitleMultiple": "Voeg meerdere prijzen in bulk toe"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Voltooid",
 		"ProductPriceDetails": {
 			"Add": "Nieuwe prijs toevoegen",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} prijs al geüpload | {priceAlreadyUploadedNumber} prijzen al geüpload",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "mogelijk gemaakt door {url}"
-		},
-		"Scan": "Scan een streepjescode"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Streepjescode",
-		"Submit": "Verzenden",
 		"Title": "Voer een streepjescode in"
 	},
 	"Challenge": {
