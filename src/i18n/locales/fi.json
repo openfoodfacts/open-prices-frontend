@@ -39,23 +39,16 @@
 			"Subtitle": "Hylly, jossa on useita hintalappuja",
 			"Title": "Useita tuotteita"
 		},
-		"PriceCreated": "Hinta luotu!",
 		"ReceiptMode": {
 			"Subtitle": "Yksi tai useampi tuote",
 			"Title": "Kuitti"
 		},
-		"SignedIn": "Kirjautunut sisään!",
 		"SingleProductMode": {
 			"Subtitle": "Vain yksi hintalappu",
 			"Title": "Yksittäinen tuote"
-		},
-		"Thanks": "Kiitos",
-		"Title": "Lisää hinta",
-		"TitleSingle": "Lisää yksi hinta",
-		"TitleMultiple": "Lisää useita hintoja kerralla"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Valmis",
 		"ProductPriceDetails": {
 			"Add": "Lisää uusi hinta",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} hinta jo ladattu | {priceAlreadyUploadedNumber} hinnat on jo ladattu",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		},
-		"Scan": "Skannaa viivakoodi"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Viivakoodi",
-		"Submit": "Lähetä",
 		"Title": "Syötä viivakoodi"
 	},
 	"Challenge": {
