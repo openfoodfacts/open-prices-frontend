@@ -39,23 +39,16 @@
 			"Subtitle": "Police s více cenovkami",
 			"Title": "Více produktů"
 		},
-		"PriceCreated": "Cena vytvořena!",
 		"ReceiptMode": {
 			"Subtitle": "Jeden nebo více produktů",
 			"Title": "Účtenka"
 		},
-		"SignedIn": "Přihlášeno!",
 		"SingleProductMode": {
 			"Subtitle": "Jen jedna cenovka",
 			"Title": "Jeden produkt"
-		},
-		"Thanks": "Děkujeme",
-		"Title": "Přidat cenu",
-		"TitleSingle": "Přidat jednotnou cenu",
-		"TitleMultiple": "Přidat hromadně více cen"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Hotovo",
 		"ProductPriceDetails": {
 			"Add": "Přidat novou cenu",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} cena již nahrána | {priceAlreadyUploadedNumber} cen již nahráno",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "poháněno {url}"
-		},
-		"Scan": "Naskenovat čárový kód"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Čárový kód",
-		"Submit": "Odeslat",
 		"Title": "Zadat čárový kód"
 	},
 	"Challenge": {
