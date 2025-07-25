@@ -39,23 +39,16 @@
 			"Subtitle": "Półka z wieloma cenami",
 			"Title": "Wiele produktów"
 		},
-		"PriceCreated": "Cena utworzona!",
 		"ReceiptMode": {
 			"Subtitle": "Jeden lub wiele produktów",
 			"Title": "Rachunek"
 		},
-		"SignedIn": "Zalogowano!",
 		"SingleProductMode": {
 			"Subtitle": "Tylko jedna cena",
 			"Title": "Pojedynczy produkt"
-		},
-		"Thanks": "Dziękujemy",
-		"Title": "Dodaj cenę",
-		"TitleSingle": "Dodaj pojedynczą cenę",
-		"TitleMultiple": "Dodaj więcej cen naraz"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Gotowe",
 		"ProductPriceDetails": {
 			"Add": "Dodaj nową cenę",
 			"AlreadyUploaded": "Cena {priceAlreadyUploadedNumber} została już przesłana | Ceny {priceAlreadyUploadedNumber} już przesłane",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "używa {url}"
-		},
-		"Scan": "Zeskanuj kod kreskowy"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kod kreskowy",
-		"Submit": "Prześlij",
 		"Title": "Wpisz kod kreskowy"
 	},
 	"Challenge": {
