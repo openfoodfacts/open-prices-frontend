@@ -39,23 +39,16 @@
 			"Subtitle": "一个架子上有多个价格标签",
 			"Title": "多种产品"
 		},
-		"PriceCreated": "价格已创建！",
 		"ReceiptMode": {
 			"Subtitle": "一种或多种产品",
 			"Title": "收据"
 		},
-		"SignedIn": "登录",
 		"SingleProductMode": {
 			"Subtitle": "只有一个价格标签",
 			"Title": "单件商品"
-		},
-		"Thanks": "谢谢",
-		"Title": "添加价格",
-		"TitleSingle": "添加单价",
-		"TitleMultiple": "批量添加多个价格"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "完成",
 		"ProductPriceDetails": {
 			"Add": "添加新价格",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 价格已上传 | {priceAlreadyUploadedNumber} 价格已上传",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "由 {url} 供电"
-		},
-		"Scan": "扫描条形码"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "条形码",
-		"Submit": "提交",
 		"Title": "输入条形码"
 	},
 	"Challenge": {
