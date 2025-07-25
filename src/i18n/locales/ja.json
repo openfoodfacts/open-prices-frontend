@@ -39,23 +39,16 @@
 			"Subtitle": "複数の値札が貼られた棚",
 			"Title": "複数の製品"
 		},
-		"PriceCreated": "Price created!",
 		"ReceiptMode": {
 			"Subtitle": "1つまたは複数の製品",
 			"Title": "領収書"
 		},
-		"SignedIn": "Signed in!",
 		"SingleProductMode": {
 			"Subtitle": "値札は 1 枚だけ",
 			"Title": "単一製品"
-		},
-		"Thanks": "ありがとうございます",
-		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "複数の価格を追加する"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "完了",
 		"ProductPriceDetails": {
 			"Add": "新しい価格を追加",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 価格はすでにアップロードされています | {priceAlreadyUploadedNumber} 価格がすでにアップロードされています",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		},
-		"Scan": "Scan a barcode"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "バーコード",
-		"Submit": "送信",
 		"Title": "バーコード入力"
 	},
 	"Challenge": {
