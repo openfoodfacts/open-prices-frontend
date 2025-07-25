@@ -14,7 +14,7 @@
     <v-divider v-if="!hideProofHeader" />
 
     <v-card-text>
-      <v-img v-if="proof.file_path" :src="getProofUrl" :style="'max-height:' + imageHeight" />
+      <v-img v-if="proof.file_path" :src="getProofImageFullUrl" :style="'max-height:' + imageHeight" />
     </v-card-text>
 
     <v-divider />
@@ -74,11 +74,11 @@ export default {
     }
   },
   computed: {
-    getProofUrl() {
+    getProofImageFullUrl() {
       if (this.proof.image_thumb_path && this.showImageThumb) {
-        return proof_utils.getImageFullUrl(this.proof.image_thumb_path, true)
+        return proof_utils.getProofImageFullUrl(this.proof, true)
       }
-      return proof_utils.getImageFullUrl(this.proof.file_path)
+      return proof_utils.getProofImageFullUrl(this.proof)
     },
   },
   methods: {
