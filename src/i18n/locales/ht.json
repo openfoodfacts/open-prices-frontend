@@ -39,23 +39,16 @@
 			"Subtitle": "Yon etajè ki gen plizyè pri",
 			"Title": "Plizyè pwodwi"
 		},
-		"PriceCreated": "Pri kreye!",
 		"ReceiptMode": {
 			"Subtitle": "Youn oswa plizyè pwodwi",
 			"Title": "Resi"
 		},
-		"SignedIn": "Signed in!",
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
 			"Title": "Yon sèl pwodwi"
-		},
-		"Thanks": "Mèsi",
-		"Title": "Ajoute yon pri",
-		"TitleSingle": "Ajoute yon sèl pri",
-		"TitleMultiple": "Ajoute plizyè pri an gwo"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Done",
 		"ProductPriceDetails": {
 			"Add": "Ajoute yon nouvo pri",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} pri a deja telechaje | {priceAlreadyUploadedNumber} pri yo deja telechaje",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		},
-		"Scan": "Eskane yon kòd ba"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kòd ba",
-		"Submit": "Soumèt",
 		"Title": "Tape yon kòd ba"
 	},
 	"Challenge": {
