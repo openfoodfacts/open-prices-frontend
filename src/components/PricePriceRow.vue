@@ -20,7 +20,7 @@
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
-import utils from '../utils.js'
+import price_utils from '../utils/price.js'
 
 export default {
   components: {
@@ -66,7 +66,7 @@ export default {
   },
   methods: {
     getPriceValue(priceValue, priceCurrency) {
-      return utils.prettyPrice(priceValue, priceCurrency)
+      return price_utils.prettyPrice(priceValue, priceCurrency)
     },
     getPricePerUnit(price) {
       price = parseFloat(price)

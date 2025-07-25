@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import utils from '../utils.js'
+import price_utils from '../utils/price.js'
 
 export default {
   props: {
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     getPriceValue(priceValue, priceCurrency) {
-      return utils.prettyPrice(priceValue, priceCurrency)
+      return price_utils.prettyPrice(priceValue, priceCurrency)
     },
     getPriceValueDisplay(price) {
       price = parseFloat(price)

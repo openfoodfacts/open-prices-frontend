@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import utils from '../utils.js'
+import price_utils from '../utils/price.js'
 
 export default {
   props: {
@@ -16,7 +16,7 @@ export default {
   },
   computed: {
     getPriceTypeIcon() {
-      return utils.getPriceTypeIcon(this.priceType)
+      return price_utils.getPriceTypeIcon(this.priceType)
     },
     getPriceTypeName() {
       return this.$t(`Common.${this.priceType}`)

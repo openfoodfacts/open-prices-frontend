@@ -109,7 +109,7 @@
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import constants from '../constants'
-import utils from '../utils.js'
+import price_utils from '../utils/price.js'
 
 export default {
   components: {
@@ -157,7 +157,7 @@ export default {
   },
   computed: {
     proofPriceListSum() {
-      return utils.priceSum(this.items.map(item => {
+      return price_utils.priceSum(this.items.map(item => {
         return {
           price: item.price,
           receipt_quantity: item.receipt_quantity
