@@ -39,23 +39,16 @@
 			"Subtitle": "Lentyna su keliomis kainų etiketėmis",
 			"Title": "Kelis produktus"
 		},
-		"PriceCreated": "Kaina sukurta!",
 		"ReceiptMode": {
 			"Subtitle": "Vienas ar keli produktai",
 			"Title": "Čekis"
 		},
-		"SignedIn": "Prisijungta!",
 		"SingleProductMode": {
 			"Subtitle": "Tik vieną kainos etiketę",
 			"Title": "Vieną produktą"
-		},
-		"Thanks": "Ačiū",
-		"Title": "Pridėti kainą",
-		"TitleSingle": "Pridėti vieną kainą",
-		"TitleMultiple": "Pridėti kelias kainas masiškai"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Atlikta",
 		"ProductPriceDetails": {
 			"Add": "Pridėti naują kainą",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} kaina jau įkelta | {priceAlreadyUploadedNumber} kaina jau įkelta",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "įgalino {url}"
-		},
-		"Scan": "Nuskaityti brūkšninį kodą"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barkodas",
-		"Submit": "Pateikti",
 		"Title": "Įveskite brūkšninį kodą"
 	},
 	"Challenge": {
