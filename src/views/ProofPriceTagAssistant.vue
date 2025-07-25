@@ -236,6 +236,7 @@ import api from '../services/api.js'
 import { useAppStore } from '../store.js'
 import barcode_utils from '../utils/barcode.js'
 import geo_utils from '../utils/geo.js'
+import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
@@ -373,9 +374,7 @@ export default {
 
       // proof image
       const image = new Image()
-      // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'  // barcodes
-      // image.src = 'https://prices.openfoodfacts.org/img/0023/f6tJvMcsDk.webp'  // categories
-      image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
+      image.src = proof_utils.getImageFullUrl(proof.file_path)
       image.crossOrigin = 'Anonymous'
       this.image = image
 
