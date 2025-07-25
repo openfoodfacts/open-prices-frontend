@@ -39,23 +39,16 @@
 			"Subtitle": "பல விலைக் குறிச்சொற்களைக் கொண்ட அலமாரி",
 			"Title": "பல தயாரிப்புகள்"
 		},
-		"PriceCreated": "விலை உருவாக்கப்பட்டது!",
 		"ReceiptMode": {
 			"Subtitle": "ஒன்று அல்லது அதற்கு மேற்பட்ட தயாரிப்புகள்",
 			"Title": "Receipt"
 		},
-		"SignedIn": "உள்நுழைந்தீர்கள்!",
 		"SingleProductMode": {
 			"Subtitle": "ஒரே ஒரு விலைக் குறி",
 			"Title": "ஒற்றை தயாரிப்பு"
-		},
-		"Thanks": "நன்றி",
-		"Title": "Add a price",
-		"TitleSingle": "ஒற்றை விலையைச் சேர்க்கவும்",
-		"TitleMultiple": "மொத்தமாக பல விலைகளைச் சேர்க்கவும்"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Done",
 		"ProductPriceDetails": {
 			"Add": "புதிய விலையைச் சேர்க்கவும்",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} விலை ஏற்கனவே பதிவேற்றப்பட்டது | {priceAlreadyUploadedNumber} விலை ஏற்கனவே பதிவேற்றப்பட்டது",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		},
-		"Scan": "Scan a barcode"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "பார்கோடு",
-		"Submit": "Submit",
 		"Title": "Type a barcode"
 	},
 	"Challenge": {

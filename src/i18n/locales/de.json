@@ -39,23 +39,16 @@
 			"Subtitle": "Ein Regal mit mehreren Preisschildern",
 			"Title": "Mehrere Produkte"
 		},
-		"PriceCreated": "Preis erstellt!",
 		"ReceiptMode": {
 			"Subtitle": "Ein oder mehrere Produkte",
 			"Title": "Kassenbon"
 		},
-		"SignedIn": "Angemeldet!",
 		"SingleProductMode": {
 			"Subtitle": "Nur ein Preisschild",
 			"Title": "Einzelnes Produkt"
-		},
-		"Thanks": "Danke",
-		"Title": "Preis hinzufügen",
-		"TitleSingle": "Fügen Sie einen Einzelpreis hinzu",
-		"TitleMultiple": "Mehrere Preise auf einmal hinzufügen"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Fertig",
 		"ProductPriceDetails": {
 			"Add": "Neuen Preis hinzufügen",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} Preis bereits hochgeladen | {priceAlreadyUploadedNumber} Preise bereits hochgeladen",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "Bereitgestellt von {url}"
-		},
-		"Scan": "Strichcode einlesen"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Strichcode",
-		"Submit": "Senden",
 		"Title": "Strichcode eingeben"
 	},
 	"Challenge": {

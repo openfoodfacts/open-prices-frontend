@@ -39,23 +39,16 @@
 			"Subtitle": "Birden fazla fiyat etiketi içeren bir raf",
 			"Title": "Birden fazla ürün"
 		},
-		"PriceCreated": "Fiyat oluşturuldu!",
 		"ReceiptMode": {
 			"Subtitle": "Bir veya birden fazla ürün",
 			"Title": "Makbuz"
 		},
-		"SignedIn": "Giriş yapıldı!",
 		"SingleProductMode": {
 			"Subtitle": "Sadece bir fiyat etiketi",
 			"Title": "Tek ürün"
-		},
-		"Thanks": "Teşekkürler",
-		"Title": "Fiyat ekleyin",
-		"TitleSingle": "Tek bir fiyat ekleyin",
-		"TitleMultiple": "Toplu olarak birden fazla fiyat ekleyin"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Yapıldı",
 		"ProductPriceDetails": {
 			"Add": "Yeni bir fiyat ekle",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} fiyat zaten yüklendi | {priceAlreadyUploadedNumber} fiyat zaten yüklendi",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "{url} tarafından desteklenmektedir"
-		},
-		"Scan": "Barkod tara"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barkod",
-		"Submit": "Gönder",
 		"Title": "Barkodu yazın"
 	},
 	"Challenge": {

@@ -39,23 +39,16 @@
 			"Subtitle": "Une étagère avec plusieurs étiquettes de prix",
 			"Title": "Plusieurs produits"
 		},
-		"PriceCreated": "Prix créé !",
 		"ReceiptMode": {
 			"Subtitle": "Un ou plusieurs produits",
 			"Title": "Ticket de caisse"
 		},
-		"SignedIn": "Connecté !",
 		"SingleProductMode": {
 			"Subtitle": "Une seule étiquette de prix",
 			"Title": "Produit unique"
-		},
-		"Thanks": "Merci",
-		"Title": "Ajouter un prix",
-		"TitleSingle": "Ajouter un seul prix",
-		"TitleMultiple": "Ajouter plusieurs prix en masse"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Fait",
 		"ProductPriceDetails": {
 			"Add": "Ajouter un nouveau prix",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} prix déjà téléversé | {priceAlreadyUploadedNumber} prix déjà téléversés",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "fonctionne avec {url}"
-		},
-		"Scan": "Scanner un code-barres"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Code-barres",
-		"Submit": "Envoyer",
 		"Title": "Taper un code-barres"
 	},
 	"Challenge": {

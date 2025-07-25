@@ -39,23 +39,16 @@
 			"Subtitle": "מדף עם מגוון תגיות מחיר",
 			"Title": "מגוון מוצרים"
 		},
-		"PriceCreated": "המחיר נוצר!",
 		"ReceiptMode": {
 			"Subtitle": "מוצר או יותר",
 			"Title": "קבלה"
 		},
-		"SignedIn": "נכנסת!",
 		"SingleProductMode": {
 			"Subtitle": "תגית מחיר אחת בלבד",
 			"Title": "מוצר יחיד"
-		},
-		"Thanks": "תודה",
-		"Title": "הוספת מחיר",
-		"TitleSingle": "הוספת מחיר בודד",
-		"TitleMultiple": "הוספת מספר מחירים במרוכז"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "בוצע",
 		"ProductPriceDetails": {
 			"Add": "הוספת מחיר חדש",
 			"AlreadyUploaded": "מחיר כבר נשלח | {priceAlreadyUploadedNumber} מחירים כבר נשלחו",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "מופעל על גבי {url}"
-		},
-		"Scan": "סריקת ברקוד"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "ברקוד",
-		"Submit": "הגשה",
 		"Title": "סוג ברקוד"
 	},
 	"Challenge": {

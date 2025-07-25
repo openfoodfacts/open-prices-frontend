@@ -39,23 +39,16 @@
 			"Subtitle": "A shelf with multiple price tags",
 			"Title": "Multiple products"
 		},
-		"PriceCreated": "Price created!",
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
 			"Title": "收據"
 		},
-		"SignedIn": "Signed in!",
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
 			"Title": "Single product"
-		},
-		"Thanks": "Thanks",
-		"Title": "新增價格",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "已完成",
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		},
-		"Scan": "Scan a barcode"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "條碼",
-		"Submit": "送出",
 		"Title": "Type a barcode"
 	},
 	"Challenge": {

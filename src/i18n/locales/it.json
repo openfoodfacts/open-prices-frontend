@@ -39,23 +39,16 @@
 			"Subtitle": "Uno scaffale con più cartellini dei prezzi",
 			"Title": "Prodotti multipli"
 		},
-		"PriceCreated": "Prezzo creato!",
 		"ReceiptMode": {
 			"Subtitle": "Uno o più prodotti",
 			"Title": "Ricevuta"
 		},
-		"SignedIn": "Registrato in!",
 		"SingleProductMode": {
 			"Subtitle": "Solo un prezzo",
 			"Title": "Prodotto singolo"
-		},
-		"Thanks": "Grazie",
-		"Title": "Aggiungi un prezzo",
-		"TitleSingle": "Aggiungi un prezzo unico",
-		"TitleMultiple": "Aggiungi più prezzi in blocco"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Fatto",
 		"ProductPriceDetails": {
 			"Add": "Aggiungi un nuovo prezzo",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} prezzo già caricato | {priceAlreadyUploadedNumber} prezzi già caricati",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "fornito da {url}"
-		},
-		"Scan": "Scansiona un codice a barre"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Codice a Barre",
-		"Submit": "Invia",
 		"Title": "Inserisci il codice a barre"
 	},
 	"Challenge": {

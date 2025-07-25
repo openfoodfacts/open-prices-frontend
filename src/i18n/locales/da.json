@@ -39,23 +39,16 @@
 			"Subtitle": "En hylde med flere prisskilte",
 			"Title": "Flere produkter"
 		},
-		"PriceCreated": "Pris oprettet!",
 		"ReceiptMode": {
 			"Subtitle": "Et eller flere produkter",
 			"Title": "Kvittering"
 		},
-		"SignedIn": "Logget ind!",
 		"SingleProductMode": {
 			"Subtitle": "Kun et prismærke",
 			"Title": "Enkelt produkt"
-		},
-		"Thanks": "Tak",
-		"Title": "Tilføj en pris",
-		"TitleSingle": "Tilføj en enkelt pris",
-		"TitleMultiple": "Tilføj flere priser i løs vægt"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Færdiggjort",
 		"ProductPriceDetails": {
 			"Add": "Tilføj en ny pris",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} pris allerede uploadet | {priceAlreadyUploadedNumber} priser er allerede uploadet",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "drevet af {url}"
-		},
-		"Scan": "Scan en stregkode"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Stregkode",
-		"Submit": "Indsend",
 		"Title": "Skriv en stregkode"
 	},
 	"Challenge": {
