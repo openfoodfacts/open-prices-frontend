@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import utils from '../utils.js'
+import geo_utils from '../utils/geo.js'
 
 export default {
   props: {
@@ -36,16 +36,16 @@ export default {
   computed: {
     getLocationTitle() {
       if (this.location.type === 'ONLINE') return this.location.website_url
-      return utils.getLocationOSMTitle(this.location, true, true, true)
+      return geo_utils.getLocationOSMTitle(this.location, true, true, true)
     },
     getLocationUniqueID() {
       if (this.location.id) return this.location.id
-      return utils.getLocationUniqueID(this.location)
+      return geo_utils.getLocationUniqueID(this.location)
     },
     isSelectedLocation() {
       if (!this.currentLocation) return false
       if (this.currentLocation.location_id) return this.getLocationUniqueID === this.currentLocation.location_id
-      return this.getLocationUniqueID === utils.buildLocationUniqueId(this.currentLocation.location_osm_id, this.currentLocation.location_osm_type)
+      return this.getLocationUniqueID === geo_utils.buildLocationUniqueId(this.currentLocation.location_osm_id, this.currentLocation.location_osm_type)
     },
   },
 }

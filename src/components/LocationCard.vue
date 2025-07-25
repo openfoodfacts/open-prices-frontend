@@ -46,8 +46,8 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import utils from '../utils.js'
 import constants from '../constants'
+import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
@@ -88,9 +88,9 @@ export default {
     getLocationTitle() {
       if (this.location) {
         if (this.location.type === constants.LOCATION_TYPE_OSM) {
-          return utils.getLocationOSMTitle(this.location, true, false, true, true)
+          return geo_utils.getLocationOSMTitle(this.location, true, false, true, true)
         } else if (this.location.type === constants.LOCATION_TYPE_ONLINE) {
-          return utils.getLocationONLINETitle(this.location)
+          return geo_utils.getLocationONLINETitle(this.location)
         }
       }
       return this.$route.params.id
@@ -99,7 +99,7 @@ export default {
       return this.location && this.isTypeOSM ? this.location.osm_display_name : ''
     },
     getLocationIcon() {
-      return utils.getLocationIcon(this.location)
+      return geo_utils.getLocationIcon(this.location)
     },
     showLocationOSMID() {
       return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id

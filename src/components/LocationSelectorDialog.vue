@@ -39,7 +39,7 @@
                 ref="locationOsmSearchInput"
                 v-model="locationOsmSearchForm.q"
                 :label="$t('Common.LocationSearchByName')"
-                :hint="$t('Common.ExamplesWithColonAndValue', { value: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359' })"
+                :hint="$t('Common.ExamplesWithColonAndValue', { value: OSM_EXAMPLES })"
                 type="text"
                 :loading="loading"
                 clearable
@@ -140,6 +140,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
+import geo_utils from '../utils/geo.js'
 import utils from '../utils.js'
 
 export default {
@@ -166,6 +167,7 @@ export default {
       searchProvider: constants.LOCATION_SEARCH_PROVIDER_LIST[1].key,  // photon
       displayItems: constants.LOCATION_SELECTOR_DISPLAY_LIST,
       currentDisplay: null,  // see mounted
+      OSM_EXAMPLES: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359',
       OSM_NOMINATIM_URL: constants.OSM_NOMINATIM_URL,
       OSM_NOMINATIM_ATTRIBUTION: constants.OSM_NOMINATIM_ATTRIBUTION,
       OSM_PHOTON_URL: constants.OSM_PHOTON_URL,
@@ -240,10 +242,10 @@ export default {
       }
     },
     getLocationTitle(location, withName = true, withRoad = false, withCity = true) {
-      return utils.getLocationOSMTitle(location, withName, withRoad, withCity)
+      return geo_utils.getLocationOSMTitle(location, withName, withRoad, withCity)
     },
     getLocationUniqueID(location) {
-      return utils.getLocationUniqueID(location)
+      return geo_utils.getLocationUniqueID(location)
     },
     createOnline() {
       if (!this.locationOnlineFormValid) return

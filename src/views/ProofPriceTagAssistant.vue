@@ -234,6 +234,7 @@ import { defineAsyncComponent } from 'vue'
 import constants from '../constants.js'
 import api from '../services/api.js'
 import { useAppStore } from '../store.js'
+import geo_utils from '../utils/geo.js'
 import utils from '../utils.js'
 
 export default {
@@ -295,7 +296,7 @@ export default {
       const location = recentLocations.find((location) => location.properties.osm_id === this.proofObject.location_osm_id)
       if (location) {
         if (location.type === 'ONLINE') return location.website_url
-        return utils.getLocationOSMTitle(location, true, true, true)
+        return geo_utils.getLocationOSMTitle(location, true, true, true)
       }
       return ''
     },
