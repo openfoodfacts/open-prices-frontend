@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 export default {
   props: {
@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     getDateFormatted(dateString) {
-      return utils.prettyDate(dateString)
+      return date_utils.prettyDate(dateString)
     },
   }
 }

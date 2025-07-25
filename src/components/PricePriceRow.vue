@@ -19,6 +19,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
+import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
 export default {
@@ -92,7 +93,7 @@ export default {
       return this.getPriceValue(price, this.priceCurrency)
     },
     getDateFormatted(dateString) {
-      return utils.prettyDate(dateString)
+      return date_utils.prettyDate(dateString)
     },
   }
 }

@@ -22,7 +22,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 export default {
   components: {
@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     dateType() {
-      return utils.dateType(this.date)
+      return date_utils.dateType(this.date)
     },
     dateParentList() {
       let dateParentList = []
