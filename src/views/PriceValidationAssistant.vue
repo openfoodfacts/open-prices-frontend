@@ -44,11 +44,11 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import api from '../services/api'
+import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
+import api from '../services/api'
+import { useAppStore } from '../store'
 import utils from '../utils.js'
 
 export default {
@@ -170,23 +170,21 @@ export default {
           for (let i = 0; i < data.items.length; i++) {
             // only validate price tags with predictions
             if (data.items[i]['predictions'].length > 0) {
-              const label = data.items[i]['predictions'][0]['data']
+              const priceTagPrediction = data.items[i]['predictions'][0]
+              const label = priceTagPrediction['data']
               const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''
-              const priceType = barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
-              // TODO: some of these will be None if gemini did not give a proper reply, so detection and error handling is needed
-              const productPriceForm = {
+
+              // The first schema was not versioned, so if the field is missing,
+              // we assume it's schema version 1.0
+              const schemaVersion = priceTagPrediction.schema_version || '1.0'
+
+              // fields that are common to all schema versions are initialized here
+              let productPriceForm = {
                 id: data.items[i].id,
-                type: barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY,
-                category_tag: (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.product)) ? label.product : null,
                 origins_tags: ![null, '', 'unknown', 'other'].includes(label.origin) ? [label.origin] : [],
-                labels_tags: label.organic ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : [],
-                price: label.price.toString(),
-                price_per: label.unit,
-                price_is_discounted: false,
                 currency: data.items[i]['proof'].currency || this.appStore.getUserLastCurrencyUsed,
                 proof: data.items[i]['proof'],
                 proofImage: data.items[i]['proof'].file_path,
-                // proofImage: 'https://prices.openfoodfacts.org/img/0024/2NToLMxOgN.webp',
                 croppedImage: null,
                 product_code: barcodeString,
                 detected_product_code: barcodeString,
@@ -194,6 +192,35 @@ export default {
                 bounding_box: data.items[i].bounding_box,
                 loading: false
               }
+
+              if (schemaVersion === '1.0') {
+                // For schema version 1.0
+                const priceType = barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
+                productPriceForm.type = priceType
+                productPriceForm.category_tag = (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.product)) ? label.product : null
+                productPriceForm.labels_tags = (priceType === constants.PRICE_TYPE_CATEGORY && label.organic) ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : []
+                productPriceForm.price = label.price.toString()
+                productPriceForm.price_per = label.unit
+                // price_is_discounted is not supported in schema version 1.0
+                productPriceForm.price_is_discounted = false
+              } else {
+                // version 2.0 and above
+                const priceType = label.type
+                // The selected price is a price constructed by all price information available in the label,
+                // including the discount price if available.
+                const selectedPrice = label.selected_price || {}
+                productPriceForm.type = selectedPrice.type
+                // we only populate category_tag and labels_tags if the price type is category
+                productPriceForm.category_tag = (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.category)) ? label.category : null
+                productPriceForm.labels_tags = (priceType === constants.PRICE_TYPE_CATEGORY && label.organic) ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : []
+                productPriceForm.price = selectedPrice.price ? selectedPrice.price.toString() : ""
+                productPriceForm.price_per = selectedPrice.price_per || null
+                // in schema 2.0, we detect discount information (price, type)
+                productPriceForm.price_is_discounted = selectedPrice ? selectedPrice.price_is_discounted : false
+                productPriceForm.price_without_discount = selectedPrice.price_without_discount ? selectedPrice.price_without_discount.toString() : ""
+                productPriceForm.discount_type = selectedPrice.discount_type || ""
+              }
+
               this.productPriceForms.push(productPriceForm)
             }
           }
