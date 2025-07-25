@@ -189,7 +189,7 @@
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import constants from '../constants'
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 export default {
   components: {
@@ -261,10 +261,10 @@ export default {
         })
     },
     getDateTimeFormatted(dateTimeString) {
-      return utils.offDateTime(dateTimeString)
+      return date_utils.offDateTime(dateTimeString)
     },
     getRelativeDateTimeFormatted(dateTimeString) {
-      return utils.prettyRelativeDateTime(dateTimeString, 'short')
+      return date_utils.prettyRelativeDateTime(dateTimeString, 'short')
     },
   }
 }

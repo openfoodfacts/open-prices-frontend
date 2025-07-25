@@ -107,7 +107,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 export default {
   components: {
@@ -223,7 +223,7 @@ export default {
           }
           this.loading = false
           // check if the user added a price today
-          if (data.items.length && data.items[0].created > utils.currentStartOfDay()) {
+          if (data.items.length && data.items[0].created > date_utils.currentStartOfDay()) {
             this.getUserPriceCount(true)
           }
         })
@@ -232,7 +232,7 @@ export default {
       this.loading = true
       const params = {...this.getPriceParams, size: 1 }
       if (today) {
-        params.created__gte = utils.currentStartOfDay()
+        params.created__gte = date_utils.currentStartOfDay()
       }
       return api.getPrices(params)
         .then((data) => {
@@ -256,7 +256,7 @@ export default {
       this.loading = true
       const params = {...this.getProofParams, size: 1 }
       if (today) {
-        params.created__gte = utils.currentStartOfDay()
+        params.created__gte = date_utils.currentStartOfDay()
       }
       return api.getProofs(params)
         .then((data) => {
@@ -273,7 +273,7 @@ export default {
               this.userCommunityProofCount = data.total
             }
             // check if the user added a proof today
-            if (data.items.length && data.items[0].created > utils.currentStartOfDay()) {
+            if (data.items.length && data.items[0].created > date_utils.currentStartOfDay()) {
               this.getUserProofCount(true)
             }
           }

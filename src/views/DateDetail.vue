@@ -32,6 +32,7 @@
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import constants from '../constants'
+import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
 export default {
@@ -55,7 +56,7 @@ export default {
   },
   computed: {
     dateType() {
-      return utils.dateType(this.date)
+      return date_utils.dateType(this.date)
     },
     getPricesParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.pricePage }

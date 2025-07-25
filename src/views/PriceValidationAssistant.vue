@@ -50,6 +50,7 @@ import constants from '../constants'
 import api from '../services/api'
 import { useAppStore } from '../store'
 import barcode_utils from '../utils/barcode.js'
+import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
 export default {
@@ -59,7 +60,7 @@ export default {
   },
   data() {
     return {
-      currentDateTime: utils.currentDateTime(),  // usefull to avoid fetching duplicates during pagination
+      currentDateTime: date_utils.currentDateTime(),  // usefull to avoid fetching duplicates during pagination
       // data
       priceTagList: [],
       priceTagTotal: null,

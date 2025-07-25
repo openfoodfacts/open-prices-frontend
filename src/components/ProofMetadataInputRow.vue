@@ -153,7 +153,7 @@
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 export default {
   props: {
@@ -190,7 +190,7 @@ export default {
   data() {
     return {
       displayOwnerCommentField: null,  // see initProofMetadataForm
-      currentDate: utils.currentDate(),
+      currentDate: date_utils.currentDate(),
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
       LOCATION_TYPE_ONLINE_ICON: constants.LOCATION_TYPE_ONLINE_ICON,
     }

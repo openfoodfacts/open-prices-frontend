@@ -85,7 +85,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 Compressor.setDefaults({
   checkOrientation: true,  // default
@@ -141,7 +141,7 @@ export default {
         location_id: null,
         location_osm_id: null,
         location_osm_type: '',
-        date: utils.currentDate(),
+        date: date_utils.currentDate(),
         currency: null,  // see initProofForm
         receipt_price_count: null,
         receipt_price_total: null,
