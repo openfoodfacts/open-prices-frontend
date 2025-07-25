@@ -39,23 +39,16 @@
 			"Subtitle": "Uma prateleira com várias etiquetas de preço",
 			"Title": "Múltiplos produtos"
 		},
-		"PriceCreated": "Preço criado!",
 		"ReceiptMode": {
 			"Subtitle": "Um ou vários produtos",
 			"Title": "Recibo"
 		},
-		"SignedIn": "Conectado!",
 		"SingleProductMode": {
 			"Subtitle": "Apenas uma etiqueta de preço",
 			"Title": "Produto único"
-		},
-		"Thanks": "Obrigado,",
-		"Title": "Adicionar um preço",
-		"TitleSingle": "Adicionar um único preço",
-		"TitleMultiple": "Adicionar preços em massa"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Concluído",
 		"ProductPriceDetails": {
 			"Add": "Adicionar um novo preço",
 			"AlreadyUploaded": "Preços já alterados",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "distribuído por {url}"
-		},
-		"Scan": "Escanear um código de barras"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
-		"Submit": "Envie",
 		"Title": "Digite um código de barras"
 	},
 	"Challenge": {
