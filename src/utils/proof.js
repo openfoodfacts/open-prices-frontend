@@ -6,13 +6,13 @@ function getImageFullUrl(imagePath) {
 
 function getProofImageFullUrl(proof, thumb=false) {
   if (thumb) {
-    // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.400.webp'  // PRICE_TAG
-    // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.400.webp'  // RECEIPT
+    // return constants.PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL
+    // return constants.PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL
     return getImageFullUrl(proof.image_thumb_path)
   }
-  // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'  // PRICE_TAG
-  // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'  // RECEIPT
-  return getImageFullUrl(proof.file_path)  // proof.image_thumb_path
+  // return constants.PROOF_TYPE_PRICE_TAG_IMAGE_URL
+  // return constants.PROOF_TYPE_RECEIPT_IMAGE_URL
+  return getImageFullUrl(proof.file_path)
 }
 
 function getProofTypeIcon(proofType) {
