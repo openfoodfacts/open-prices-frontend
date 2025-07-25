@@ -39,23 +39,16 @@
 			"Subtitle": "एकाधिक मूल्य टैग वाला शेल्फ",
 			"Title": "एकाधिक उत्पाद"
 		},
-		"PriceCreated": "कीमत बनाई गई!",
 		"ReceiptMode": {
 			"Subtitle": "एक या एकाधिक उत्पाद",
 			"Title": "रसीद"
 		},
-		"SignedIn": "साइन इन किया!",
 		"SingleProductMode": {
 			"Subtitle": "बस एक कीमत का टैग",
 			"Title": "एकल उत्पाद"
-		},
-		"Thanks": "धन्यवाद",
-		"Title": "एक मूल्य जोड़े",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "थोक में कई कीमतें जोड़ें"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Done",
 		"ProductPriceDetails": {
 			"Add": "नई कीमत जोड़ें",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} कीमत पहले ही अपलोड की जा चुकी है | {priceAlreadyUploadedNumber} कीमतें पहले ही अपलोड की जा चुकी हैं",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		},
-		"Scan": "बारकोड स्कैन करें"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "बारकोड",
-		"Submit": "दर्ज करें",
 		"Title": "Type a barcode"
 	},
 	"Challenge": {
