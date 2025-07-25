@@ -28,8 +28,8 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import utils from '../utils.js'
 import constants from '../constants'
+import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
@@ -66,7 +66,7 @@ export default {
     },
     getLocationTitle() {
       if (this.selectedLocation.type === 'ONLINE') return this.selectedLocation.website_url
-      return utils.getLocationOSMTitle(this.selectedLocation, true, true, true)
+      return geo_utils.getLocationOSMTitle(this.selectedLocation, true, true, true)
     },
   },
   mounted() {
@@ -91,8 +91,8 @@ export default {
         this.locationForm.location_osm_type = null
       } else {
         this.locationForm.location_id = null
-        this.locationForm.location_osm_id = utils.getLocationID(location)
-        this.locationForm.location_osm_type = utils.getLocationType(location)
+        this.locationForm.location_osm_id = geo_utils.getLocationID(location)
+        this.locationForm.location_osm_type = geo_utils.getLocationType(location)
       }
       this.$emit('location', this.selectedLocation)
     },

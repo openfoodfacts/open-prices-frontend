@@ -37,7 +37,7 @@
 import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer, LMarker, LPopup } from '@vue-leaflet/vue-leaflet'
 import { useTheme } from 'vuetify'
-import utils from '../utils.js'
+import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
@@ -70,7 +70,7 @@ export default {
   },
   mounted() {
     if (this.locations.length) {
-      this.mapBounds = utils.getMapBounds(this.locations)
+      this.mapBounds = geo_utils.getMapBounds(this.locations)
     }
     if (this.theme.global.name === "dark") {
       this.tiles = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
@@ -85,16 +85,16 @@ export default {
       }
     },
     getLocationTitle(location, withName=true, withRoad=false, withCity=true) {
-      return utils.getLocationOSMTitle(location, withName, withRoad, withCity)
+      return geo_utils.getLocationOSMTitle(location, withName, withRoad, withCity)
     },
     getLocationUniqueID(location) {
-      return utils.getLocationUniqueID(location)
+      return geo_utils.getLocationUniqueID(location)
     },
     getLocationTag(location) {
-      return utils.getLocationTag(location)
+      return geo_utils.getLocationTag(location)
     },
     getLocationLatLng(location) {
-      return utils.getLocationLatLng(location)
+      return geo_utils.getLocationLatLng(location)
     },
     locationSelected(location) {
       this.$emit('locationSelected', location)
