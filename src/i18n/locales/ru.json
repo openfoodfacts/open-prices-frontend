@@ -39,23 +39,16 @@
 			"Subtitle": "Полка с несколькими ценниками",
 			"Title": "Несколько продуктов"
 		},
-		"PriceCreated": "Цена создана!",
 		"ReceiptMode": {
 			"Subtitle": "Один или несколько продуктов",
 			"Title": "Чек"
 		},
-		"SignedIn": "Вход выполнен!",
 		"SingleProductMode": {
 			"Subtitle": "Только один ценник",
 			"Title": "Одиночный продукт"
-		},
-		"Thanks": "Спасибо",
-		"Title": "Добавить цену",
-		"TitleSingle": "Добавить одну цену",
-		"TitleMultiple": "Добавьте несколько цен оптом"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Готово",
 		"ProductPriceDetails": {
 			"Add": "Добавить новую цену",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} цена уже загружена | {priceAlreadyUploadedNumber} цены уже загружены",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "работает на {url}"
-		},
-		"Scan": "Сканировать штрихкод"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Штрих-код",
-		"Submit": "Подтвердить",
 		"Title": "Поиск по штрихкоду"
 	},
 	"Challenge": {
