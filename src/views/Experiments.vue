@@ -2,7 +2,7 @@
   <v-row>
     <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Router.PriceTagAssistant.Title')"
+        :title="$t('Router.ProofPriceTagAssistant.Title')"
         prepend-icon="mdi-draw"
         append-icon="mdi-arrow-right"
         to="/experiments/proof-price-tag-assistant"

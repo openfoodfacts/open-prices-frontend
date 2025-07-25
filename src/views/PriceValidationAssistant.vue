@@ -175,11 +175,11 @@ export default {
               const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''
 
               // The first schema was not versioned, so if the field is missing,
-              // we assume it's schema version 1.0 
+              // we assume it's schema version 1.0
               const schemaVersion = priceTagPrediction.schema_version || '1.0'
 
               // fields that are common to all schema versions are initialized here
-              const productPriceForm = {
+              let productPriceForm = {
                 id: data.items[i].id,
                 origins_tags: ![null, '', 'unknown', 'other'].includes(label.origin) ? [label.origin] : [],
                 currency: data.items[i]['proof'].currency || this.appStore.getUserLastCurrencyUsed,
@@ -209,17 +209,18 @@ export default {
                 // The selected price is a price constructed by all price information available in the label,
                 // including the discount price if available.
                 const selectedPrice = label.selected_price || {}
-                  productPriceForm.type = selectedPrice.type
-                  // we only populate category_tag and labels_tags if the price type is category
-                  productPriceForm.category_tag = (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.category)) ? label.category : null
-                  productPriceForm.labels_tags = (priceType === constants.PRICE_TYPE_CATEGORY && label.organic) ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : []
-                  productPriceForm.price = selectedPrice.price ? selectedPrice.price.toString() : ""
-                  productPriceForm.price_per = selectedPrice.price_per || null
-                  // in schema 2.0, we detect discount information (price, type)
-                  productPriceForm.price_is_discounted = selectedPrice ? selectedPrice.price_is_discounted : false
-                  productPriceForm.price_without_discount = selectedPrice.price_without_discount ? selectedPrice.price_without_discount.toString() : ""
-                  productPriceForm.discount_type = selectedPrice.discount_type || ""
+                productPriceForm.type = selectedPrice.type
+                // we only populate category_tag and labels_tags if the price type is category
+                productPriceForm.category_tag = (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.category)) ? label.category : null
+                productPriceForm.labels_tags = (priceType === constants.PRICE_TYPE_CATEGORY && label.organic) ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : []
+                productPriceForm.price = selectedPrice.price ? selectedPrice.price.toString() : ""
+                productPriceForm.price_per = selectedPrice.price_per || null
+                // in schema 2.0, we detect discount information (price, type)
+                productPriceForm.price_is_discounted = selectedPrice ? selectedPrice.price_is_discounted : false
+                productPriceForm.price_without_discount = selectedPrice.price_without_discount ? selectedPrice.price_without_discount.toString() : ""
+                productPriceForm.discount_type = selectedPrice.discount_type || ""
               }
+
               this.productPriceForms.push(productPriceForm)
             }
           }
