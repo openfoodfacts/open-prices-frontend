@@ -10,7 +10,7 @@
       {{ $t('ProofAdd.PromoProofPriceTagAddMultiple') }}
     </v-banner-text>
     <v-banner-actions>
-      <v-btn icon="mdi-arrow-right" :aria-label="$t('Router.AddProofMultiple')" to="/proofs/add/multiple" />
+      <v-btn icon="mdi-arrow-right" :aria-label="$t('Router.AddProofMultiple.Title')" to="/proofs/add/multiple" />
     </v-banner-actions>
   </v-banner>
 </template>
