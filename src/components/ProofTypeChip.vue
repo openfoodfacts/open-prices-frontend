@@ -14,7 +14,7 @@
 
 <script>
 import constants from '../constants'
-import utils from '../utils.js'
+import proof_utils from '../utils/proof.js'
 
 export default {
   props: {
@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     getProofTypeIcon() {
-      return utils.getProofTypeIcon(this.proofType)
+      return proof_utils.getProofTypeIcon(this.proofType)
     },
     getProofTypeName() {
       return this.$t(`Common.${this.proofType}`)
