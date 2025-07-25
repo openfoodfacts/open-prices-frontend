@@ -209,7 +209,7 @@ export default {
                 // The selected price is a price constructed by all price information available in the label,
                 // including the discount price if available.
                 const selectedPrice = label.selected_price || {}
-                productPriceForm.type = selectedPrice.type
+                productPriceForm.type = priceType
                 // we only populate category_tag and labels_tags if the price type is category
                 productPriceForm.category_tag = (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.category)) ? label.category : null
                 productPriceForm.labels_tags = (priceType === constants.PRICE_TYPE_CATEGORY && label.organic) ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : []
