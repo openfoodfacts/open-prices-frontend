@@ -39,23 +39,16 @@
 			"Subtitle": "Rak dengan beberapa label harga",
 			"Title": "Beberapa produk"
 		},
-		"PriceCreated": "Harga dibuat!",
 		"ReceiptMode": {
 			"Subtitle": "Satu atau beberapa produk",
 			"Title": "Resi"
 		},
-		"SignedIn": "Masuk!",
 		"SingleProductMode": {
 			"Subtitle": "Hanya satu label harga",
 			"Title": "Satu produk"
-		},
-		"Thanks": "Terima Kasih",
-		"Title": "Tambahkan harga",
-		"TitleSingle": "Tambahkan satu harga",
-		"TitleMultiple": "Tambahkan beberapa harga dalam jumlah besar"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Selesai",
 		"ProductPriceDetails": {
 			"Add": "Tambahkan harga baru",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} harga sudah diunggah | {priceAlreadyUploadedNumber} harga sudah diunggah",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "didukung oleh {url}"
-		},
-		"Scan": "Pindai barcode"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kode batang",
-		"Submit": "Kirim",
 		"Title": "Ketik barcode"
 	},
 	"Challenge": {
