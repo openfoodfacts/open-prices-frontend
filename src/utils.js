@@ -1,5 +1,4 @@
 import CategoryTags from './data/category-tags.json'
-import constants from './constants'
 
 
 function debounce(callback, wait) {
@@ -110,10 +109,6 @@ function getLocaleLabelTagName(locale, labelId) {
   })
 }
 
-function getProofTypeIcon(proofType) {
-  return constants[`PROOF_TYPE_${proofType}_ICON`] || constants.PROOF_ICON
-}
-
 export default {
   debounce,
   getDocumentScrollPercentage,
@@ -130,5 +125,4 @@ export default {
   getLocaleOriginTags,
   getLocaleLabelTags,
   getLocaleLabelTagName,
-  getProofTypeIcon,
 }
