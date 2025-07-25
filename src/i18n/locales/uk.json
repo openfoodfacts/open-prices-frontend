@@ -39,23 +39,16 @@
 			"Subtitle": "Полиця з кількома цінниками",
 			"Title": "Кілька продуктів"
 		},
-		"PriceCreated": "Ціна створена!",
 		"ReceiptMode": {
 			"Subtitle": "Один або кілька продуктів",
 			"Title": "Квитанція"
 		},
-		"SignedIn": "Ви ввійшли!",
 		"SingleProductMode": {
 			"Subtitle": "Лише один цінник",
 			"Title": "Один продукт"
-		},
-		"Thanks": "Дякую",
-		"Title": "Додати ціну",
-		"TitleSingle": "Додати єдину ціну",
-		"TitleMultiple": "Додайте кілька цін гуртом"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Виконано",
 		"ProductPriceDetails": {
 			"Add": "Додати нову ціну",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} ціна вже завантажена | {priceAlreadyUploadedNumber} ціни вже завантажено",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "на основі {url}"
-		},
-		"Scan": "Просканувати штрих-код"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Код товару",
-		"Submit": "Підтвердити",
 		"Title": "Введіть штрих-код"
 	},
 	"Challenge": {
