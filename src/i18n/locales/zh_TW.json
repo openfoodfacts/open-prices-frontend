@@ -39,23 +39,16 @@
 			"Subtitle": "擁有多個價格標籤的貨架",
 			"Title": "多種產品"
 		},
-		"PriceCreated": "價格已建立！",
 		"ReceiptMode": {
 			"Subtitle": "一種或多種產品",
 			"Title": "收據"
 		},
-		"SignedIn": "已登入！",
 		"SingleProductMode": {
 			"Subtitle": "只有一個價格標籤",
 			"Title": "單件產品"
-		},
-		"Thanks": "謝謝",
-		"Title": "新增價格",
-		"TitleSingle": "增加單一價格",
-		"TitleMultiple": "批量添加多個價格"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "已完成",
 		"ProductPriceDetails": {
 			"Add": "增加新的價格",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 價格已上傳 {priceAlreadyUploadedNumber} 價格已上傳",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "由{url} 技術支持"
-		},
-		"Scan": "掃描條碼"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "條碼 ",
-		"Submit": "送出",
 		"Title": "輸入條碼"
 	},
 	"Challenge": {
