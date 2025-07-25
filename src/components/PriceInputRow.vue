@@ -137,7 +137,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
-import utils from '../utils.js'
+import price_utils from '../utils/price.js'
 
 export default {
   components: {
@@ -250,7 +250,7 @@ export default {
       return input.replace(/,/g, '.')
     },
     getPriceValue(priceValue, priceCurrency) {
-      return utils.prettyPrice(priceValue, priceCurrency)
+      return price_utils.prettyPrice(priceValue, priceCurrency)
     },
     getPricePerUnit(price) {
       if (price && this.priceForm.currency) {
