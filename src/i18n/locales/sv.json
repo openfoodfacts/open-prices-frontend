@@ -73,7 +73,7 @@
 			"LabelDiscounted": "Rabatterat pris",
 			"LabelFull": "Full price",
 			"Proof": "Proof",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Datum uppdaterat!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
 			"Title": "Prisdetaljer",
@@ -87,7 +87,7 @@
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategori",
-			"OriginLabel": "Origin",
+			"OriginLabel": "Ursprung",
 			"ProductBarcode": "Product barcode",
 			"Scan": "Skanna",
 			"ScanBarcode": "Skanna en streckkod",
