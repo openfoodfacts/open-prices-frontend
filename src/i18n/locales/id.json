@@ -311,6 +311,7 @@
 		"MyProofs": "Bukti saya",
 		"MyStats": "Statistik saya",
 		"NextProof": "Bukti selanjutnya",
+		"NoBarcode": "Tidak ada kode batang",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Tidak Aktif",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Kirim label"
 		},
 		"PricesAlreadyAdded": "Harga sudah ditambahkan",
+		"PricesWithoutProductOrCategory": "Harga tanpa produk atau kategori",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} harga akan ditambahkan ke bukti yang sudah ada pada {date} di {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} harga ditambahkan",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Label harga ditandai tanpa kode batang",
+			"PriceTagOther": "Label harga ditandai sebagai lainnya",
 			"NewPriceTag": "Label harga baru"
 		},
 		"OpenWithTheAssistant": "Buka dengan Asisten"
