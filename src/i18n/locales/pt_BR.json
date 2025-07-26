@@ -311,6 +311,7 @@
 		"MyProofs": "Minhas demonstrações",
 		"MyStats": "My stats",
 		"NextProof": "Próximo comprovante",
+		"NoBarcode": "Sem código de barras",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Enviar rótulos"
 		},
 		"PricesAlreadyAdded": "Preços já adicionados",
+		"PricesWithoutProductOrCategory": "Preços sem produto ou categoria",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} preço(s) serão adicionados a um comprovante existente no dia {date} em {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Etiqueta de preço marcada como truncada",
 			"PriceTagUnreadable": "Etiqueta de preço marcada como ilegível",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Etiqueta de preço marcada como sem código de barras",
+			"PriceTagOther": "Etiqueta de preço marcada como outra",
 			"NewPriceTag": "Nova etiqueta de preço"
 		},
 		"OpenWithTheAssistant": "Abrir com o assistente"
