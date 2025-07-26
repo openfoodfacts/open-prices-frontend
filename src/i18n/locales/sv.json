@@ -311,6 +311,7 @@
 		"MyProofs": "My proofs",
 		"MyStats": "Min statistik",
 		"NextProof": "Next proof",
+		"NoBarcode": "Ingen streckkod",
 		"NotAnError": "Inte ett fel",
 		"NotAPrice": "Inte ett pris",
 		"Offline": "Offline",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Skicka etiketter"
 		},
 		"PricesAlreadyAdded": "Priser har redan lagts till",
+		"PricesWithoutProductOrCategory": "Priser utan produkt eller kategori",
 		"PricesMarkedAsError": "Priser markerade som fel",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Prislapp markerad som ingen streckkod",
+			"PriceTagOther": "Prislapp markerad som annat",
 			"NewPriceTag": "Ny prislapp"
 		},
 		"OpenWithTheAssistant": "Öppna med assistenten"
