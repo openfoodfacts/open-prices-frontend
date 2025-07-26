@@ -311,6 +311,7 @@
 		"MyProofs": "My proofs",
 		"MyStats": "My stats",
 		"NextProof": "Next proof",
+		"NoBarcode": "No barcode",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
@@ -483,6 +484,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Price tag marked as no barcode",
+			"PriceTagOther": "Price tag marked as other",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
