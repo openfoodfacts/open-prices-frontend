@@ -311,6 +311,7 @@
 		"MyProofs": "Mano įrodymai",
 		"MyStats": "Mano statistika",
 		"NextProof": "Kitas įrodymas",
+		"NoBarcode": "Nėra brūkšninio kodo",
 		"NotAnError": "Ne klaida",
 		"NotAPrice": "Ne kaina",
 		"Offline": "Neprisijungę",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Siųsti etiketes"
 		},
 		"PricesAlreadyAdded": "Kainos jau pridėtos",
+		"PricesWithoutProductOrCategory": "Kainos be produkto ar kategorijos",
 		"PricesMarkedAsError": "Kainos pažymėtos kaip klaida",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} kaina (-os) bus pridėta (-os) prie esamo įrodymo {date} {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pridėta kainų",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Kainos etiketė pažymėta kaip sutrumpinta",
 			"PriceTagUnreadable": "Kainos etiketė pažymėta kaip neįskaitoma",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Kainos etiketė pažymėta kaip be brūkšninio kodo",
+			"PriceTagOther": "Kainos etiketė pažymėta kaip kita",
 			"NewPriceTag": "Nauja kainos etiketė"
 		},
 		"OpenWithTheAssistant": "Atidaryti su asistentu"
