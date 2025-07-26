@@ -311,6 +311,7 @@
 		"MyProofs": "Meine Belege",
 		"MyStats": "Meine Statistiken",
 		"NextProof": "Nächster Nachweis",
+		"NoBarcode": "Kein Barcode",
 		"NotAnError": "Kein Fehler",
 		"NotAPrice": "Kein Preis",
 		"Offline": "Offline",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Etiketten senden"
 		},
 		"PricesAlreadyAdded": "Preise bereits hinzugefügt",
+		"PricesWithoutProductOrCategory": "Preise ohne Produkt oder Kategorie",
 		"PricesMarkedAsError": "Als Fehler gekennzeichnete Preise",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} Preis(e) wird/werden am {date} in {locationName} zu einem bestehenden Nachweis hinzugefügt",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} Preise hinzugefügt",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Preisschild als abgeschnitten gekennzeichnet",
 			"PriceTagUnreadable": "Preisschild als unleserlich gekennzeichnet",
 			"PriceTagNotAPrice": "Preisschild als „Kein Preis“ gekennzeichnet",
+			"PriceTagNoBarcode": "Preisschild als „Kein Barcode“ gekennzeichnet",
+			"PriceTagOther": "Preisschild als „Sonstiges“ gekennzeichnet",
 			"NewPriceTag": "Neues Preisschild"
 		},
 		"OpenWithTheAssistant": "Mit Assistent öffnen"
