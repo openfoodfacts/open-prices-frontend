@@ -66,7 +66,7 @@
     <v-col cols="12">
       <v-row>
         <v-col
-          v-for="(productPriceForm, index) in productPriceFormsWithoutPriceIdAndNoError"
+          v-for="(productPriceForm, index) in productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError"
           :key="index"
           cols="12"
           md="6"
@@ -81,6 +81,28 @@
             :hideUploadAction="true"
             @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
             @validatePriceTag="validatePriceTag(index)"
+          />
+        </v-col>
+      </v-row>
+      <h3 v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length" class="mt-4 mb-4">
+        {{ $t('ContributionAssistant.PricesWithoutProductOrCategory') }}
+      </h3>
+      <v-row v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length">
+        <v-col
+          v-for="(productPriceForm, index) in productPriceFormsWithoutProductOrCategoryAndNoError"
+          :key="index"
+          cols="12"
+          md="6"
+          xl="4"
+        >
+          <ContributionAssistantPriceFormCard
+            :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
+            height="100%"
+            :productPriceForm="productPriceForm"
+            :hideProductBarcodeScannerTab="true"
+            :hideProofDetails="true"
+            :hideUploadAction="true"
+            @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
           />
         </v-col>
       </v-row>
@@ -135,11 +157,11 @@
             variant="outlined"
           >
             <p>
-              {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceIdAndNoError.length, date: proofObject.date, locationName: locationName }) }}
+              {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length, date: proofObject.date, locationName: locationName }) }}
             </p>
           </v-alert>
           <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" :loading="loading" @click="addPrices">
-            {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceIdAndNoError.length) }}
+            {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length) }}
           </v-btn>
         </v-col>
       </v-row>
@@ -153,13 +175,13 @@
           <v-progress-linear
             v-if="!finishedUploading"
             v-model="numberOfPricesAdded"
-            :max="productPriceFormsWithoutPriceIdAndNoError.length"
-            :color="productPriceFormsWithoutPriceIdAndNoError.length === numberOfPricesAdded ? 'success' : 'primary'"
+            :max="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length"
+            :color="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length === numberOfPricesAdded ? 'success' : 'primary'"
             height="25"
-            :striped="productPriceFormsWithoutPriceIdAndNoError.length !== numberOfPricesAdded"
+            :striped="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length !== numberOfPricesAdded"
             rounded
           >
-            <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceIdAndNoError.length }) }}</strong>
+            <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length }) }}</strong>
           </v-progress-linear>
           <v-alert
             v-if="finishedUploading"
@@ -312,17 +334,17 @@ export default {
     disableCleanupStep() {
       // Cleanup tab should only be enabled after the ai analysis is done
       // It should also be disabled on summary step
-      return !this.productPriceFormsWithoutPriceIdAndNoError.length || this.step === 4
+      return !this.productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length || this.step === 4
     },
     finishedUploading() {
-      return this.productPriceFormsWithoutPriceIdAndNoError.length === this.numberOfPricesAdded
+      return this.productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length === this.numberOfPricesAdded
     },
     allDone() {
       return this.numberOfPricesAdded > 0 && this.finishedUploading
     },
     disableSummaryStep() {
       // Summary tab should be enabled when there are product prices to be added and the add prices process is either running or done
-      const enableSummaryStep = this.productPriceFormsWithoutPriceIdAndNoError.length && (this.loading || this.allDone)
+      const enableSummaryStep = this.productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length && (this.loading || this.allDone)
       return !enableSummaryStep
     },
     proofIdsFromQueryParam() {
@@ -332,11 +354,14 @@ export default {
     productPriceFormsWithPriceId() {
       return this.productPriceForms.filter(productPriceForm => productPriceForm.price_id)
     },
-    productPriceFormsWithoutPriceIdAndNoError() {
-      return this.productPriceForms.filter(productPriceForm => !productPriceForm.price_id && productPriceForm.status <= 1)
+    productPriceFormsWithoutProductOrCategoryAndNoError() {
+      return this.productPriceForms.filter(productPriceForm => ((productPriceForm.type === constants.PRICE_TYPE_PRODUCT && !productPriceForm.product_code) || (productPriceForm.type === constants.PRICE_TYPE_CATEGORY && !productPriceForm.category_tag)) && productPriceForm.status <= 1)
     },
     productPriceFormsMarkedAsError() {
       return this.productPriceForms.filter(productPriceForm => productPriceForm.status > 1)
+    },
+    productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError() {
+      return this.productPriceForms.filter(productPriceForm => !productPriceForm.price_id && (productPriceForm.type === constants.PRICE_TYPE_PRODUCT && productPriceForm.product_code || (productPriceForm.type === constants.PRICE_TYPE_CATEGORY && productPriceForm.category_tag)) && productPriceForm.status <= 1)
     },
     getUserDashboardUrl() {
       const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
@@ -508,8 +533,8 @@ export default {
       this.numberOfPricesAdded = 0
       this.step = 4
       
-      for (let i = 0; i < this.productPriceFormsWithoutPriceIdAndNoError.length; i++) {
-        const productPriceForm = this.productPriceFormsWithoutPriceIdAndNoError[i]
+      for (let i = 0; i < this.productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length; i++) {
+        const productPriceForm = this.productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError[i]
         const priceData = {
           ...productPriceForm,
           origins_tags: productPriceForm.origins_tags,

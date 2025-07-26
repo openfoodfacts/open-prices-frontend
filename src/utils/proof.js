@@ -36,7 +36,15 @@ function handlePriceTag(priceTag) {
   // fields that are common to all schema versions are initialized here
   let productPriceForm = {
     id: priceTag.id,
+    // type  // 'PRODUCT' or 'CATEGORY'
+    // category_tag
+    // labels_tags
     origins_tags: ![null, '', 'unknown', 'other'].includes(label.origin) ? [label.origin] : [],
+    // price
+    // price_per
+    // price_is_discounted
+    // price_without_discount
+    // discount_type
     currency: priceTag['proof'].currency, // || this.appStore.getUserLastCurrencyUsed,
     proof: priceTag['proof'],
     proofImage: priceTag['proof'].file_path,
@@ -54,6 +62,7 @@ function handlePriceTag(priceTag) {
     // For schema version 1.0
     const priceType = barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
     productPriceForm.type = priceType
+    // we only populate category_tag and labels_tags if the price type is category
     productPriceForm.category_tag = (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.product)) ? label.product : null
     productPriceForm.labels_tags = (priceType === constants.PRICE_TYPE_CATEGORY && label.organic) ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : []
     productPriceForm.price = label.price.toString()
