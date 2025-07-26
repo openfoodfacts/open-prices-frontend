@@ -44,8 +44,8 @@
 			"Title": "Kvitto"
 		},
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Bara en prislapp",
+			"Title": "Enskild produkt"
 		}
 	},
 	"AddPriceMultiple": {
@@ -71,7 +71,7 @@
 			"Discount": "Rabatt?",
 			"Label": "Pris",
 			"LabelDiscounted": "Rabatterat pris",
-			"LabelFull": "Full price",
+			"LabelFull": "Fullt pris",
 			"Proof": "Proof",
 			"ProofDateChanged": "Datum uppdaterat!",
 			"ProofSelected": "Proof selected!",
@@ -112,7 +112,7 @@
 			"DateLabel": "Datum",
 			"Find": "Hitta",
 			"Location": "Shop location",
-			"SelectLocation": "Select your location",
+			"SelectLocation": "Välj din plats",
 			"Title": "Var och när?"
 		}
 	},
@@ -156,7 +156,7 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges",
+		"OngoingChallenges": "Pågående utmaningar",
 		"PastChallenges": "Tidigare utmaningar",
 		"UpcomingChallenges": "Kommande utmaningar"
 	},
@@ -198,9 +198,9 @@
 		"Categories": "Kategorier",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
+		"Challenges": "Utmaningar",
+		"ChallengeCurrent": "Nuvarande utmaning",
+		"ChallengeOngoing": "Pågående utmaning",
 		"Chart": "Diagram",
 		"Clear": "Rensa",
 		"Comment": "Kommentar",
@@ -248,7 +248,7 @@
 		"Location": "Plats",
 		"Locations": "Platser",
 		"LocationSelected": "Plats vald",
-		"LocationFindShop": "Find the shop location",
+		"LocationFindShop": "Hitta butikens plats",
 		"LocationMissing": "Plats saknas",
 		"LocationSearchByName": "Search by name and city",
 		"Date": "Datum",
@@ -328,10 +328,10 @@
 		"OrderProofCountDESC": "Proof count",
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
-		"OrderUserCountDESC": "User count",
+		"OrderUserCountDESC": "Användarantal",
 		"Other": "Övrigt",
 		"OtherContributions": "Other contributions",
-		"PersonalInfo": "Personal information",
+		"PersonalInfo": "Personlig information",
 		"Physical": "Fysisk",
 		"Picture": "Bild",
 		"Pictures": "Bilder",
@@ -381,7 +381,7 @@
 		"ReceiptPriceTotal": "Total amount",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Leveranskostnader",
-		"Recent": "Recent",
+		"Recent": "Senaste",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Sök",
@@ -464,11 +464,11 @@
 			"SendLabels": "3. Send the labels for automatic processing",
 			"SendLabelsButton": "Skicka etiketter"
 		},
-		"PricesAlreadyAdded": "Prices already added",
+		"PricesAlreadyAdded": "Priser har redan lagts till",
 		"PricesMarkedAsError": "Priser markerade som fel",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"WaitForUpload": "Please wait for upload",
+		"WaitForUpload": "Vänta på uppladdning",
 		"GoToProof": "Go to proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
@@ -556,7 +556,7 @@
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Proof",
-		"FullPrice": "Full price",
+		"FullPrice": "Fullt pris",
 		"UnknownProduct": "Okänd produkt"
 	},
 	"PriceDelete": {
@@ -574,7 +574,7 @@
 		"Discount": "Rabatt?",
 		"Label": "Pris",
 		"LabelDiscounted": "Rabatterat pris",
-		"LabelFull": "Full price"
+		"LabelFull": "Fullt pris"
 	},
 	"PriceList": {
 		"LoadMore": "Ladda fler",
@@ -616,7 +616,7 @@
 	},
 	"ProductDetail": {
 		"AddPrice": "Lägg till ett pris",
-		"CategoryNotFound": "Category not found...",
+		"CategoryNotFound": "Kategori hittades inte...",
 		"LatestPrices": "Senaste priser",
 		"LoadMore": "Ladda fler",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
@@ -801,7 +801,7 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Utmaningar"
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
@@ -833,7 +833,7 @@
 		"PricesToday": "Priser tillagda idag",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
-		"ProductsWithPrices": "Products with prices",
+		"ProductsWithPrices": "Produkter med priser",
 		"Title": "Statistik",
 		"Products": "Produkter",
 		"Locations": "Platser",
@@ -890,7 +890,7 @@
 		"ProductDisplayBarcode": "Visa streckkod",
 		"ProductDisplayCategoryTag": "Visa kategoritagg",
 		"ProductDisplaySource": "Visa källa",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"SideMenuExperimentsDisplay": "Visa 'Experiment'",
 		"Save": "Spara",
 		"Title": "Inställningar",
 		"TranslationCompletion": "Translation is {completion}% complete.",
