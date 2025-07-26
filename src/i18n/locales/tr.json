@@ -311,6 +311,7 @@
 		"MyProofs": "Bedellerim",
 		"MyStats": "İstatistiklerim",
 		"NextProof": "Bir sonraki kanıt",
+		"NoBarcode": "Barkod yok",
 		"NotAnError": "Bir hata değil",
 		"NotAPrice": "Bir fiyat değil",
 		"Offline": "Çevrimdışı",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Etiketleri gönder"
 		},
 		"PricesAlreadyAdded": "Fiyatlar zaten eklendi",
+		"PricesWithoutProductOrCategory": "Ürün veya kategori olmaksızın fiyatlar",
 		"PricesMarkedAsError": "Fiyatlar hata olarak işaretlendi",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} fiyat(lar) {date} 'de {locationName}'de mevcut bir kanıta eklenecek",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} fiyatlar eklendi",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Fiyat etiketi kesilmiş olarak işaretlendi",
 			"PriceTagUnreadable": "Fiyat etiketi okunamaz olarak işaretlendi",
 			"PriceTagNotAPrice": "Fiyat etiketi fiyat değil olarak işaretlendi",
+			"PriceTagNoBarcode": "Fiyat etiketi barkodsuz olarak işaretlendi",
+			"PriceTagOther": "Fiyat etiketi diğer olarak işaretlendi",
 			"NewPriceTag": "Yeni fiyat etiketi"
 		},
 		"OpenWithTheAssistant": "Asistanla açın"
