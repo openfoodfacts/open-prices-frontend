@@ -311,6 +311,7 @@
 		"MyProofs": "Мои доказательства",
 		"MyStats": "Моя статистика",
 		"NextProof": "Next proof",
+		"NoBarcode": "Нет штрихкода",
 		"NotAnError": "Не ошибка",
 		"NotAPrice": "Не цена",
 		"Offline": "Офлайн",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prices already added",
+		"PricesWithoutProductOrCategory": "Цены без указания товара или категории",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Ценник отмечен как без штрихкода",
+			"PriceTagOther": "Ценник отмечен как другой",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
