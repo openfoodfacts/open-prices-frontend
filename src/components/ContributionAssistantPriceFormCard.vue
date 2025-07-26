@@ -48,9 +48,10 @@
             {{ $t('Common.NotAPrice') }}
           </v-list-item>
           <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-help-circle-outline" @click="updatePriceTagStatus(PRICE_TAG_STATUS_OTHER)">
-            {{ $t('Common.Other') }}
+          <v-list-item :slim="true" prepend-icon="mdi-barcode-off" @click="updatePriceTagStatus(PRICE_TAG_STATUS_NO_BARCODE)">
+            {{ $t('Common.NoBarcode') }}
           </v-list-item>
+          <!-- missing PRICE_TAG_STATUS_OTHER -->
         </v-list>
       </v-menu>
       <v-spacer />
@@ -164,6 +165,7 @@ export default {
       PRICE_TAG_STATUS_UNREADABLE: constants.PRICE_TAG_STATUS_UNREADABLE,
       PRICE_TAG_STATUS_TRUNCATED: constants.PRICE_TAG_STATUS_TRUNCATED,
       PRICE_TAG_STATUS_NOT_A_PRICE: constants.PRICE_TAG_STATUS_NOT_A_PRICE,
+      PRICE_TAG_STATUS_NO_BARCODE: constants.PRICE_TAG_STATUS_NO_BARCODE,
       PRICE_TAG_STATUS_OTHER: constants.PRICE_TAG_STATUS_OTHER,
       // data
       mode: null,  // see mounted
@@ -186,6 +188,8 @@ export default {
         return this.$t('Common.Truncated')
       } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_NOT_A_PRICE) {
         return this.$t('Common.NotAPrice')
+      } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_NO_BARCODE) {
+        return this.$t('Common.NoBarcode')
       } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_OTHER) {
         return this.$t('Common.Other')
       } else {
