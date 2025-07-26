@@ -311,6 +311,7 @@
 		"MyProofs": "Мої докази",
 		"MyStats": "Мої статистики",
 		"NextProof": "Наступний доказ",
+		"NoBarcode": "Без штрих-коду",
 		"NotAnError": "Не помилка",
 		"NotAPrice": "Не ціна",
 		"Offline": "Офлайн",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Надіслати мітки"
 		},
 		"PricesAlreadyAdded": "Ціни вже додані",
+		"PricesWithoutProductOrCategory": "Ціни без товару чи категорії",
 		"PricesMarkedAsError": "Ціни відмічені як помилки",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} ціна(и) буде додано до наявного доказу на {date} у {locationName}",
 		"PriceAddProgress": "Додано ціни {numberOfPricesAdded} / {totalNumberOfPrices}",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Тег ціни позначено як скорочений",
 			"PriceTagUnreadable": "Тег ціни позначено як нечитабельний",
 			"PriceTagNotAPrice": "Тег ціни позначено як не ціна",
+			"PriceTagNoBarcode": "Цінник позначено як відсутність штрих-коду",
+			"PriceTagOther": "Цінник позначено як інше",
 			"NewPriceTag": "Новий тег ціни"
 		},
 		"OpenWithTheAssistant": "Відкрити за допомогою помічника"
