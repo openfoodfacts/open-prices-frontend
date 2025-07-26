@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Kvitto"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -56,7 +56,7 @@
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "Nytt pris",
 			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"Upload": "Ladda upp"
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
@@ -69,7 +69,7 @@
 		"Create": "Skapa",
 		"PriceDetails": {
 			"Discount": "Rabatt?",
-			"Label": "Price",
+			"Label": "Pris",
 			"LabelDiscounted": "Discounted price",
 			"LabelFull": "Full price",
 			"Proof": "Proof",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Datum",
+			"DateLabel": "Datum",
 			"Find": "Hitta",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -150,7 +150,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
 			"DRAFT": "Draft",
-			"UPCOMING": "Upcoming",
+			"UPCOMING": "Kommande",
 			"ONGOING": "Ongoing",
 			"COMPLETED": "Completed"
 		},
@@ -166,7 +166,7 @@
 		"Actions": "Actions",
 		"AddComment": "Lägg till en kommentar",
 		"AddPrice": "Lägg till ett pris",
-		"AddPrices": "Add prices",
+		"AddPrices": "Lägg till priser",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
 		"AddProof": "Add a proof",
@@ -185,7 +185,7 @@
 		"Brand": "Varumärke",
 		"Brands": "Varumärken",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
+		"Price": "Pris",
 		"Prices": "Priser",
 		"PRODUCT": "Produkt",
 		"Product": "Produkt",
@@ -220,7 +220,7 @@
 		"Crop": "Crop",
 		"Cropped": "Cropped",
 		"Currency": "Valuta",
-		"Currencies": "Currencies",
+		"Currencies": "Valutor",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"Dashboard": "Dashboard",
@@ -245,18 +245,18 @@
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Ladda fler",
-		"Location": "Location",
+		"Location": "Plats",
 		"Locations": "Platser",
 		"LocationSelected": "Location selected",
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Datum",
 		"DateMissing": "Datum saknas",
 		"Details": "Detaljer",
 		"Delete": "Radera",
 		"DeveloperMode": "Developer mode",
-		"Discount": "Discount",
+		"Discount": "Rabatt",
 		"DiscountType": "Rabattyp",
 		"DiscountTypeQuantity": "Kvantitet",
 		"DiscountTypeSale": "Sale",
@@ -265,9 +265,9 @@
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeSecondHand": "Andra hand",
-		"DiscountTypeOther": "Other",
+		"DiscountTypeOther": "Övrigt",
 		"Example": "Exempel",
-		"Examples": "Examples",
+		"Examples": "Exempel",
 		"ExampleWithColon": "Exempel:",
 		"ExampleWithColonAndValue": "Exempel: {value}",
 		"ExamplesWithColon": "Exempel:",
@@ -296,9 +296,9 @@
 		"ImageSelectMultiple": "Välj bilder",
 		"ImageSelected": "Image selected!",
 		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
-		"Images": "Images",
+		"Images": "Bilder",
 		"ImageFull": "Full-size image",
-		"Latest": "Latest",
+		"Latest": "Senaste",
 		"LinkCopySuccess": "Länk kopierad",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
@@ -309,7 +309,7 @@
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Mina priser",
 		"MyProofs": "My proofs",
-		"MyStats": "My stats",
+		"MyStats": "Min statistik",
 		"NextProof": "Next proof",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
@@ -321,7 +321,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Pris",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -329,10 +329,10 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
-		"Other": "Other",
+		"Other": "Övrigt",
 		"OtherContributions": "Other contributions",
 		"PersonalInfo": "Personal information",
-		"Physical": "Physical",
+		"Physical": "Fysisk",
 		"Picture": "Bild",
 		"Pictures": "Pictures",
 		"PictureSelect": "Select a picture",
@@ -350,7 +350,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PricesAlreadyUploaded": "Priserna har redan laddats upp",
-		"PricesMore": "More prices",
+		"PricesMore": "Fler priser",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
@@ -374,8 +374,8 @@
 		"Quantity": "Kvantitet",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"RECEIPT": "Kvitto",
+		"Receipt": "Kvitto",
 		"Receipts": "Kvitton",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -387,7 +387,7 @@
 		"Search": "Sök",
 		"Select": "Select",
 		"Settings": "Inställningar",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Logga in med ditt {url} -konto",
 		"SignedIn": "Signed in!",
 		"SignIn": "Logga in",
 		"SignOut": "Logga ut",
@@ -402,7 +402,7 @@
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
-		"Thanks": "Thanks",
+		"Thanks": "Tack",
 		"Theme": "Tema",
 		"ThemeLight": "Ljust",
 		"ThemeDark": "Mörkt",
@@ -424,7 +424,7 @@
 		"UnitMililitre": "mL",
 		"UnitLitre": "L",
 		"Unreadable": "Oläslig",
-		"Upload": "Upload",
+		"Upload": "Ladda upp",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
@@ -440,13 +440,13 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Visa",
 		"Website": "Website",
-		"Year": "Year",
+		"Year": "År",
 		"Years": "År",
 		"Yes": "Ja",
 		"No": "Nej",
 		"Food": "Mat",
 		"PetFood": "Djurmat",
-		"Beauty": "Beauty"
+		"Beauty": "Skönhet"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -550,7 +550,7 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "Rabatt",
 		"PriceDate": "on {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
@@ -572,7 +572,7 @@
 	},
 	"PriceForm": {
 		"Discount": "Rabatt?",
-		"Label": "Price",
+		"Label": "Pris",
 		"LabelDiscounted": "Discounted price",
 		"LabelFull": "Full price"
 	},
@@ -635,7 +635,7 @@
 	"ProofCard": {
 		"Proof": "Proof",
 		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"RECEIPT": "Kvitto",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
@@ -677,7 +677,7 @@
 	},
 	"Reuses": {
 		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"Here": "här"
 	},
 	"Router": {
 		"About": {
@@ -687,7 +687,7 @@
 			"Title": "Lägg till ett pris"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Lägg till priser"
 		},
 		"AddPriceSingle": {
 			"Title": "Add a single price"
@@ -823,7 +823,7 @@
 		"Password": "Lösenord",
 		"ServerError": "Error: server error",
 		"Title": "Logga in",
-		"SignInOFFAccount": "Sign in with your {url} account",
+		"SignInOFFAccount": "Logga in med ditt {url} -konto",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
@@ -848,7 +848,7 @@
 		"WithBarcode": "Med en streckkod",
 		"WithCategory": "Med en kategori",
 		"PricesProofsPerSource": "Prices and proofs per source",
-		"LastUpdated": "Last updated on {date}"
+		"LastUpdated": "Senast uppdaterad {date}"
 	},
 	"UserDashboard": {
 		"LatestPrices": "Latest prices",
