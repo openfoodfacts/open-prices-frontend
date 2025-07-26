@@ -311,6 +311,7 @@
 		"MyProofs": "My proofs",
 		"MyStats": "My stats",
 		"NextProof": "Next proof",
+		"NoBarcode": "बारकोड छैन",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prices already added",
+		"PricesWithoutProductOrCategory": "उत्पादन वा कोटी बिनाको मूल्यहरू",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "मूल्य ट्यागलाई बारकोड छैन भनी चिन्ह लगाइयो",
+			"PriceTagOther": "मूल्य ट्याग अन्यको रूपमा चिन्ह लगाइएको छ",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
