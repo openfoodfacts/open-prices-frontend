@@ -159,14 +159,24 @@
               text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagUnreadable')
               break
             case constants.PRICE_TAG_STATUS_TRUNCATED:
-              ctx.strokeStyle = "#883c1e"
+              ctx.strokeStyle = "#883c1e"  // dark brown
               ctx.fillStyle = "#883c1e"
               text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagTruncated')
               break
             case constants.PRICE_TAG_STATUS_NOT_A_PRICE:
-              ctx.strokeStyle = "#88631e"
+              ctx.strokeStyle = "#88631e"  // light brown
               ctx.fillStyle = "#88631e"
               text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagNotAPrice')
+              break
+            case constants.PRICE_TAG_STATUS_NO_BARCODE:
+              ctx.strokeStyle = "yellow"
+              ctx.fillStyle = "yellow"
+              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagNoBarcode')
+              break
+            case constants.PRICE_TAG_STATUS_OTHER:
+              ctx.strokeStyle = "gray"
+              ctx.fillStyle = "gray"
+              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagOther')
               break
             default:
               if (rect.id) {  // status == null
