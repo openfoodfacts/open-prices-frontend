@@ -311,6 +311,7 @@
 		"MyProofs": "ההוכחות שלי",
 		"MyStats": "הסטטיסטיקה שלי",
 		"NextProof": "ההוכחה הבאה",
+		"NoBarcode": "אין ברקוד",
 		"NotAnError": "לא שגיאה",
 		"NotAPrice": "לא מחיר",
 		"Offline": "לא מקוון",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "שליחת התוויות"
 		},
 		"PricesAlreadyAdded": "המחירים כבר נוספו",
+		"PricesWithoutProductOrCategory": "מחירים ללא מוצר או קטגוריה",
 		"PricesMarkedAsError": "המחירים סומנו בטעות",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} מחירים יתווספו להוכחה הקיימת ב־{date} ב־{locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} מחירים נוספו",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "תג מחיר מסומן כחתוך",
 			"PriceTagUnreadable": "תג מחיר מסומן כבלתי קריא",
 			"PriceTagNotAPrice": "תג מחיר מסומן שאינו מחיר",
+			"PriceTagNoBarcode": "תג מחיר מסומן כלא ברקוד",
+			"PriceTagOther": "תג מחיר מסומן כאחר",
 			"NewPriceTag": "תגית מחיר חדשה"
 		},
 		"OpenWithTheAssistant": "פתיחה עם המסייע"
