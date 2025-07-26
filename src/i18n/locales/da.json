@@ -311,6 +311,7 @@
 		"MyProofs": "Mine beviser",
 		"MyStats": "Min statistik",
 		"NextProof": "Næste bevis",
+		"NoBarcode": "Ingen stregkode",
 		"NotAnError": "Ikke en fejl",
 		"NotAPrice": "Ikke en pris",
 		"Offline": "Offline",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Send etiketter"
 		},
 		"PricesAlreadyAdded": "Priser allerede tilføjet",
+		"PricesWithoutProductOrCategory": "Priser uden produkt eller kategori",
 		"PricesMarkedAsError": "Priser markeret som fejl",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} pris(er) vil blive tilføjet til et eksisterende bevis på {date} ved {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} priser tilføjet",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Prisskilt markeret som afkortet",
 			"PriceTagUnreadable": "Prismærke markeret som ulæselig",
 			"PriceTagNotAPrice": "Prisskilt markeret som ikke en pris",
+			"PriceTagNoBarcode": "Prismærke markeret som ingen stregkode",
+			"PriceTagOther": "Prismærke markeret som andet",
 			"NewPriceTag": "Nyt prisskilt"
 		},
 		"OpenWithTheAssistant": "Åbn med assistenten"
