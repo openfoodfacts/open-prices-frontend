@@ -311,6 +311,7 @@
 		"MyProofs": "Mijn bewijzen",
 		"MyStats": "Mijn statistieken",
 		"NextProof": "Volgend bewijs",
+		"NoBarcode": "Geen streepjescode",
 		"NotAnError": "Geen fout",
 		"NotAPrice": "Geen prijs",
 		"Offline": "Offline",
@@ -465,6 +466,7 @@
 			"SendLabelsButton": "Labels verzenden"
 		},
 		"PricesAlreadyAdded": "Prijzen al toegevoegd",
+		"PricesWithoutProductOrCategory": "Prijzen zonder product of categorie",
 		"PricesMarkedAsError": "Prijzen gemarkeerd als fout",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} prijs/prijzen worden toegevoegd aan een bestaand bewijs op {date} bij {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
@@ -482,6 +484,8 @@
 			"PriceTagTruncated": "Prijskaartje gemarkeerd als afgekapt",
 			"PriceTagUnreadable": "Prijskaartje gemarkeerd als onleesbaar",
 			"PriceTagNotAPrice": "Prijskaartje gemarkeerd als geen prijs",
+			"PriceTagNoBarcode": "Prijskaartje gemarkeerd als geen barcode",
+			"PriceTagOther": "Prijskaartje gemarkeerd als anders",
 			"NewPriceTag": "Nieuw prijskaartje"
 		},
 		"OpenWithTheAssistant": "Openen met de assistent"
