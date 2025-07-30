@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.138.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.138.0...v1.138.1) (2025-07-30)
+
+
+### Bug Fixes
+
+* typo ([515295f](https://github.com/openfoodfacts/open-prices-frontend/commit/515295fb2b9eb78e08cd59ff59aae58244bf03a8))
+
+
+### Documentation
+
+* README promo for design team and files ([#1523](https://github.com/openfoodfacts/open-prices-frontend/issues/1523)) ([5bc7ee0](https://github.com/openfoodfacts/open-prices-frontend/commit/5bc7ee0ec80f4ed991049cf80276e4d9bd66b4cf))
+* Update README.md ([cf5cd74](https://github.com/openfoodfacts/open-prices-frontend/commit/cf5cd7448c7c23327b5ef23a83ec79f8c4ef02a4))
+
 ## [1.138.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.137.0...v1.138.0) (2025-07-26)
 
 
