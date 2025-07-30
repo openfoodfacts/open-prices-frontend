@@ -5,7 +5,7 @@ A Vue.js frontend of the Open Prices application, to allow users to add prices.
 Works with an Open Prices server, see https://github.com/openfoodfacts/open-prices
 
 ## UXR (User Experience Research)
-- [![Figma](https://www.figma.com/board/gPtsX2q0ZF6WElF7YSAYjz/Open-Prices---UX-Audit?node-id=0-1&p=f&t=wzAYUqVEBRQWoOmM-0) Open Prices UX audit]
+- [![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?logo=figma&logoColor=white) Open Prices UX audit](https://www.figma.com/board/gPtsX2q0ZF6WElF7YSAYjz/Open-Prices---UX-Audit?node-id=0-1&p=f&t=wzAYUqVEBRQWoOmM-0)
 
 ## 🎨 Design & User interface
 - The Open Prices server is exposed through the Mobile App and the Open Prices frontend (and probably elsewhere in the future, thanks to web components)
