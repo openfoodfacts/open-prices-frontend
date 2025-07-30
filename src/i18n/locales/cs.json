@@ -39,23 +39,16 @@
 			"Subtitle": "Police s více cenovkami",
 			"Title": "Více produktů"
 		},
-		"PriceCreated": "Cena vytvořena!",
 		"ReceiptMode": {
 			"Subtitle": "Jeden nebo více produktů",
 			"Title": "Účtenka"
 		},
-		"SignedIn": "Přihlášeno!",
 		"SingleProductMode": {
 			"Subtitle": "Jen jedna cenovka",
 			"Title": "Jeden produkt"
-		},
-		"Thanks": "Děkujeme",
-		"Title": "Přidat cenu",
-		"TitleSingle": "Přidat jednotnou cenu",
-		"TitleMultiple": "Přidat hromadně více cen"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Hotovo",
 		"ProductPriceDetails": {
 			"Add": "Přidat novou cenu",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} cena již nahrána | {priceAlreadyUploadedNumber} cen již nahráno",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "poháněno {url}"
-		},
-		"Scan": "Naskenovat čárový kód"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Čárový kód",
-		"Submit": "Odeslat",
 		"Title": "Zadat čárový kód"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Minulé výzvy",
+		"UpcomingChallenges": "Nadcházející výzvy"
 	},
 	"Common": {
 		"About": "O aplikaci",
+		"Action": "Akce",
+		"Actions": "Actions",
 		"AddComment": "Přidat komentář",
 		"AddPrice": "Přidat cenu",
 		"AddPrices": "Přidat ceny",
@@ -201,6 +196,7 @@
 		"CATEGORY": "Kategorie",
 		"Category": "Kategorie",
 		"Categories": "Kategorie",
+		"CategoryMissing": "Chybí kategorie",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Challenge": "Výzva",
 		"Challenges": "Výzvy",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Probíhající výzva",
 		"Chart": "Graf",
 		"Clear": "Vymazat",
-		"Contributors": "Přispěvatelé",
 		"Comment": "Komentář",
 		"Community": "Komunita",
 		"CommunityPrices": "Community prices",
@@ -216,6 +211,8 @@
 		"Consumption": "Spotřeba",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Přispět",
+		"Contributors": "Přispěvatelé",
 		"Contributions": "Příspěvky",
 		"Confirm": "Potvrdit",
 		"Country": "Země",
@@ -231,12 +228,15 @@
 		"Display": "Zobrazit",
 		"DisplayList": "Seznam",
 		"DisplayPriceList": "Seznam",
+		"DisplayTable": "Table",
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Graf",
 		"Done": "Hotovo",
 		"Error": "Chyba",
+		"Experiment": "Experimentovat",
 		"Experiments": "Experimenty",
+		"GoToProof": "Přejít na doklad",
 		"Join": "Připojit",
 		"Label": "Štítek",
 		"Labels": "Štítky",
@@ -311,10 +311,13 @@
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje důkazy",
 		"MyStats": "Moje statistiky",
+		"NextProof": "Další důkaz",
+		"NoBarcode": "Bez čárového kódu",
 		"NotAnError": "Není to chyba",
 		"NotAPrice": "Upravit cenu",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Otevřete s asistentem",
 		"Order": "Pořadí",
 		"OrderLocationCountDESC": "Počet míst",
 		"OrderProductUniqueScansDESC": "Počet skenů",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Obrázky přidány",
 		"PicturesAddedByYou": "Vámi přidané obrázky",
 		"PRICE_TAG": "Cenovka",
+		"PriceTags": "Cenovky",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena vytvořena!",
+		"PriceMissing": "Chybí cena",
+		"PricesAlreadyUploaded": "Ceny již nahrány",
 		"PricesMore": "Více cen",
 		"PricesAdded": "Ceny přidány",
 		"PricesAddedToday": "Ceny přidány dnes",
@@ -356,6 +362,8 @@
 		"Privacy": "Soukromí",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Najít produkt",
+		"ProductMissing": "Chybí produkt",
+		"ProductOrCategoryMissing": "Chybí produkt nebo kategorie",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Detaily dokladu",
 		"ProofMissing": "Doklad chybí",
@@ -394,6 +402,7 @@
 		"SourceCode": "Zdrojový kód",
 		"Start": "Start",
 		"Stats": "Statistiky",
+		"Summary": "Přehled",
 		"TaglineOriginal": "Otevřená crowdsourcovaná databáze cen potravin",
 		"TaglineAlt1": "Otevřená crowdsourcovaná databáze cen",
 		"TaglineAlt2": "Otevřená crowdsourcovaná databáze cen potravin a produktů",
@@ -410,6 +419,7 @@
 		"Total": "Celkem",
 		"Truncate": "Zkrátit",
 		"Truncated": "Zkráceno",
+		"TryItOut": "Vyzkoušejte to",
 		"Type": "Typ",
 		"UnknownProduct": "Neznámý produkt",
 		"UnknownProductSource": "Neznámý zdroj produktu",
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Odeslat štítky"
 		},
 		"PricesAlreadyAdded": "Ceny již byly přidány",
+		"PricesWithoutProductOrCategory": "Ceny bez produktu nebo kategorie",
 		"PricesMarkedAsError": "Ceny označené jako chyba",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Počkejte prosím na nahrání",
-		"GoToDashboard": "Přejděte na svůj ovládací panel",
 		"GoToProof": "Přejít na doklad",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Další důkaz",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automaticky",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Cenovka označena jako oříznutá",
 			"PriceTagUnreadable": "Cenovka označena jako nečitelná",
 			"PriceTagNotAPrice": "Cenovka označena jako není cena",
+			"PriceTagNoBarcode": "Cenovka označená jako chybějící čárový kód",
+			"PriceTagOther": "Cenovka označená jako jiné",
 			"NewPriceTag": "Nová cenovka"
 		},
 		"OpenWithTheAssistant": "Otevřete s asistentem"
@@ -582,7 +593,8 @@
 		"NoSpaces": "Prosím, nepoužívejte mezery",
 		"Number": "Zadejte číslo",
 		"Positive": "Cena nemůže být záporná",
-		"TwoDecimals": "Povolena pouze dvě desetinná místa"
+		"TwoDecimals": "Povolena pouze dvě desetinná místa",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Délka čárového kódu: {length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "Všechny obrázky cenovek, které vyberete, by měly sdílet stejnou prodejnu a měly by být pořízeny ve stejný den.",
 		"HowToMultipleShort": "Obrázky by měly sdílet stejnou polohu a datum.",
-		"PriceValidationAllow": "Umožnit extrahování cen mých obrázků pomocí AI a ověření komunitou"
+		"PriceValidationAllow": "Umožnit extrahování cen mých obrázků pomocí AI a ověření komunitou",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Chcete-li nahrát více cenovek (stejné umístění a datum prodejny), klikněte sem!",
+		"PromoReceiptAssistant": "Experiment: vyzkoušejte nového asistenta pro účtenky, který automaticky extrahuje ceny z vašich účtenek!"
 	},
 	"ProofCard": {
 		"Proof": "Doklad",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Přidat více cen"
 		},
+		"Prices": {
+			"Title": "Ceny"
+		},
 		"Proofs": {
 			"Title": "Doklady"
 		},
 		"ProofAddSingle": {
 			"Title": "Přidejte jeden důkaz"
 		},
-		"ProofAddMultiple": {
-			"Title": "Přidejte více důkazů"
-		},
 		"Community": {
 			"Title": "Komunita"
+		},
+		"Contribute": {
+			"Title": "Přispět"
 		},
 		"Experiments": {
 			"Title": "Experimenty"
@@ -774,6 +795,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Příspěvkový asistent"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Asistent cenovek s důkazem"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Asistent pro ověření ceny"
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Jazyky",
 		"LocationFinder": "Vyhledávač polohy",
 		"LocationDisplayOSMID": "Zobrazit OSM ID",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Ověření ceny",
 		"ProductDisplayBarcode": "Zobrazit čárový kód",
 		"ProductDisplayCategoryTag": "Zobrazit značku kategorie",

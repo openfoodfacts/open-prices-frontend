@@ -1,30 +1,30 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
-		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
-		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
-		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
-		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
-		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
-		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
-		"LicenseTitle": "License",
-		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
-		"WhatTitle": "What is {op_name}?",
-		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
-		"WhyOFFTitle": "Why is {off_name} doing this?",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
-		"HowUseData": "How can I use the data?",
-		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
-		"HowContact": "How can I get in touch?",
-		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
-		"HowSupport": "How can I support {op_name}?",
+		"WhyTitle": "为什么是 {op_name}？",
+		"WhyAnswer1": "{op_name} 是一个收集和分享全球产品价格的项目。它是一个公开可用的数据集，可用于研究、分析等。 {op_name} 由 {off_url}开发和维护。",
+		"WhyAnswer2": "目前，拥有条形码级产品价格大型数据库的公司寥寥无几。这些价格并非免费提供，而是以高价出售给有能力的私人参与者、研究人员和其他组织。",
+		"HowTitle": "{op_name} 如何工作？",
+		"HowAnswer1": "我们正在众包一个开源价格数据集。用户可以通过此网页应用或官方 {off_url} 移动应用添加产品价格。零售商或第三方应用也可以使用我们的 {op_api_url}贡献价格信息。",
+		"HowAnswer2": "{op_name} 不仅用于存储单个商品的价格，还用于存储消费篮，即人们在一次购物中购买的商品清单。这些数据对于研究人员分析食品消费习惯非常有用。",
+		"HowAnswer3": "如果可能，我们会要求投稿者提供价格证明，例如价格标签或收据的照片。这是为了确保数据质量。",
+		"HowAnswer4": "如果您提供收据作为证明图片，即表示您同意将您的消费信息提交给 {op_name}。我们会将它匿名化并公开，以便用于研究。如果您不想公开分享您的收据，您仍然可以通过拍摄价格标签来做出贡献。",
+		"LicenseTitle": "许可",
+		"LicenseAnswer1": "价格数据集根据 {odbl_url}获得许可，这意味着它可以用于任何目的，只要您注明 {op_name} 并分享您对数据集所做的任何修改。",
+		"LicenseAnswer2": "作为证明提交的图像已获得 {ccbysa_url} 的许可。",
+		"WhatTitle": "{op_name}是什么？",
+		"WhatOFFTitle": "{off_name}是什么？",
+		"WhatOFFAnswer": "{off_url} 是一个非营利组织，致力于收集和分享来自世界各地的食品信息。这是一个依靠志愿者收集数据的合作项目。 {off_url} 是世界上最大的开放食品数据库，涵盖 200 个国家/地区的 300 多万种产品。",
+		"WhyOFFTitle": "为什么 {off_name} 要这样做？",
+		"WhyOFFAnswer": "价格信息对于理解粮食体系至关重要。它是了解食品成本和推广健康饮食的关键因素。公开价格数据可以让研究人员、记者和公民更好地了解食品价格在地理和时间上的差异。",
+		"HowContribute": "如何贡献",
+		"HowContributeAnswer": "您可以通过向数据集添加价格来做出贡献。您可以使用网页版应用或官方移动应用进行操作。如果您想将 {op_name} 集成到您的应用中，也可以使用 {op_api_url} 。您需要一个 {off_url} 帐户才能做出贡献。",
+		"HowUseData": "如何使用数据？",
+		"HowUseDataAnswer1": "数据在 {odbl_url}下可用，这意味着它可以用于任何目的，只要您注明 {op_name} 并分享您对数据集所做的任何修改。",
+		"HowUseDataAnswer2": "{op_api_url} 提供了一种轻松访问数据的方法。",
+		"HowUseDataAnswer3": "该数据也可作为 3 个 gzip 压缩的 JSONL 转储使用： {op_dumb_prices_url}、 {op_dumb_proofs_url} 和 {op_dumb_locations_url}。",
+		"HowContact": "我怎样才能联系到我们？",
+		"HowContactAnswer": "您可以通过发送电子邮件至 {off_contact_email_url}与我们联系。",
+		"HowSupport": "我如何支持 {op_name}？",
 		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
 		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
 		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
@@ -39,23 +39,16 @@
 			"Subtitle": "一个架子上有多个价格标签",
 			"Title": "多种产品"
 		},
-		"PriceCreated": "价格已创建！",
 		"ReceiptMode": {
 			"Subtitle": "一种或多种产品",
 			"Title": "收据"
 		},
-		"SignedIn": "登录",
 		"SingleProductMode": {
 			"Subtitle": "只有一个价格标签",
 			"Title": "单件商品"
-		},
-		"Thanks": "谢谢",
-		"Title": "添加价格",
-		"TitleSingle": "添加单价",
-		"TitleMultiple": "批量添加多个价格"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "完成",
 		"ProductPriceDetails": {
 			"Add": "添加新价格",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 价格已上传 | {priceAlreadyUploadedNumber} 价格已上传",
@@ -93,21 +86,21 @@
 			"SelectRecentProof": "选择最近的证明"
 		},
 		"ProductInfo": {
-			"CategoryLabel": "分類",
+			"CategoryLabel": "类别",
 			"OriginLabel": "起源",
 			"ProductBarcode": "产品条码",
 			"Scan": "扫描",
 			"ScanBarcode": "扫描条形码",
 			"ScanBarcodeShort": "扫描",
-			"Type": "類型",
+			"Type": "类型",
 			"TypeBarcode": "输入条形码",
-			"TypeBarcodeShort": "類型",
+			"TypeBarcodeShort": "类型",
 			"SetProduct": "设置产品",
 			"Title": "产品信息"
 		},
 		"ProductModeList": {
-			"Barcode": "條碼",
-			"Category": "分類"
+			"Barcode": "条形码",
+			"Category": "类别"
 		},
 		"CategoryPricePer": {
 			"PerKg": "每公斤价格",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "由 {url} 供电"
-		},
-		"Scan": "扫描条形码"
+		}
 	},
 	"BarcodeManualInput": {
-		"Barcode": "條碼",
-		"Submit": "送出",
+		"Barcode": "条形码",
 		"Title": "输入条形码"
 	},
 	"Challenge": {
@@ -158,17 +149,21 @@
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
+			"DRAFT": "草稿",
 			"UPCOMING": "Upcoming",
 			"ONGOING": "Ongoing",
 			"COMPLETED": "Completed"
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "过去的挑战",
+		"UpcomingChallenges": "即将到来的挑战"
 	},
 	"Common": {
 		"About": "关于",
+		"Action": "行动",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "添加价格",
 		"AddPrices": "Add prices",
@@ -180,12 +175,12 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "添加到 {name}",
 		"AdditionalInfo": "Additional information",
-		"Barcode": "條碼",
+		"Barcode": "条形码",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "扫描条形码",
 		"BarcodeScanShort": "扫描",
 		"BarcodeType": "输入条形码",
-		"BarcodeTypeShort": "類型",
+		"BarcodeTypeShort": "类型",
 		"BarcodeInvalid": "无效的条形码",
 		"Brand": "品牌",
 		"Brands": "品牌",
@@ -198,9 +193,10 @@
 		"Products": "产品",
 		"Proof": "证明",
 		"Proofs": "Proofs",
-		"CATEGORY": "分類",
-		"Category": "分類",
-		"Categories": "類別",
+		"CATEGORY": "类别",
+		"Category": "类别",
+		"Categories": "类别",
+		"CategoryMissing": "类别缺失",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Challenge": "Challenge",
 		"Challenges": "Challenges",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "清除",
-		"Contributors": "贡献者",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -216,10 +211,12 @@
 		"Consumption": "消耗量",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "贡献",
+		"Contributors": "贡献者",
 		"Contributions": "贡献",
 		"Confirm": "确认",
-		"Country": "地區",
-		"Countries": "國家地區",
+		"Country": "国家/地区",
+		"Countries": "国家/地区",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
@@ -231,21 +228,24 @@
 		"Display": "显示",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
+		"DisplayTable": "Table",
 		"DisplayMap": "地图",
 		"DisplayPriceMap": "地图",
 		"DisplayPriceChart": "Chart",
 		"Done": "完成",
 		"Error": "错误",
+		"Experiment": "实验",
 		"Experiments": "Experiments",
+		"GoToProof": "Go to proof",
 		"Join": "Join",
-		"Label": "標籤",
+		"Label": "标签",
 		"Labels": "标签",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
-		"Language": "語言",
-		"Languages": "語言",
+		"Language": "语言",
+		"Languages": "语言",
 		"LatestPrices": "最新价格",
 		"LatestProofs": "最新样张",
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"Location": "Location",
 		"Locations": "地点",
 		"LocationSelected": "Location selected",
@@ -259,7 +259,7 @@
 		"DeveloperMode": "Developer mode",
 		"Discount": "折扣",
 		"DiscountType": "Discount type",
-		"DiscountTypeQuantity": "數量",
+		"DiscountTypeQuantity": "数量",
 		"DiscountTypeSale": "Sale",
 		"DiscountTypeSeasonal": "Seasonal",
 		"DiscountTypeLoyaltyProgram": "Loyalty program",
@@ -273,9 +273,9 @@
 		"ExampleWithColonAndValue": "Example: {value}",
 		"ExamplesWithColon": "例如：",
 		"ExamplesWithColonAndValue": "Examples: {value}",
-		"Edit": "編輯",
+		"Edit": "编辑",
 		"End": "End",
-		"Filter": "过滤器",
+		"Filter": "筛选",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "有价格",
 		"FilterProductWithPriceCountHide": "隐藏带有价格的产品",
@@ -311,10 +311,13 @@
 		"MyPrices": "我的价格",
 		"MyProofs": "我的样张",
 		"MyStats": "My stats",
+		"NextProof": "Next proof",
+		"NoBarcode": "无条形码",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "命令",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "扫描次数",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "价格标签",
+		"PriceTags": "价格标签",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "价格已创建！",
+		"PriceMissing": "缺少价格",
+		"PricesAlreadyUploaded": "价格已上传",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -356,6 +362,8 @@
 		"Privacy": "隐私",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
+		"ProductMissing": "产品缺失",
+		"ProductOrCategoryMissing": "缺少产品或类别",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "证明细节",
 		"ProofMissing": "Proof missing",
@@ -368,7 +376,7 @@
 		"ProofsToday": "Proofs today",
 		"ProofNotFound": "Proof not found",
 		"Public": "民众",
-		"Quantity": "數量",
+		"Quantity": "数量",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "缺失数量",
 		"RECEIPT": "收据",
@@ -381,9 +389,9 @@
 		"Recent": "Recent",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
-		"Search": "搜尋",
+		"Search": "搜索",
 		"Select": "Select",
-		"Settings": "設定",
+		"Settings": "设置",
 		"SignInOFFAccount": "使用您的 {url} 帐户登录",
 		"SignedIn": "登录",
 		"SignIn": "登录",
@@ -394,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "开始",
 		"Stats": "统计数据",
+		"Summary": "摘要",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -410,7 +419,8 @@
 		"Total": "总计",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
-		"Type": "類型",
+		"TryItOut": "尝试一下",
+		"Type": "类型",
 		"UnknownProduct": "未知产品",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
@@ -430,10 +440,10 @@
 		"Users": "用户",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
-		"Validate": "驗證",
+		"Validate": "验证",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
-		"View": "檢視",
+		"View": "查看",
 		"Website": "网站",
 		"Year": "Year",
 		"Years": "Years",
@@ -441,7 +451,7 @@
 		"No": "否",
 		"Food": "Food",
 		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Beauty": "美丽"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prices already added",
+		"PricesWithoutProductOrCategory": "不含产品或类别的价格",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "价格标签标记为无条形码",
+			"PriceTagOther": "价格标签标记为其他",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -504,7 +515,7 @@
 	},
 	"Header": {
 		"Dashboard": "仪表板",
-		"Settings": "設定",
+		"Settings": "设置",
 		"SignIn": "登录",
 		"SignOut": "登出"
 	},
@@ -527,7 +538,7 @@
 	},
 	"LocationDetail": {
 		"LatestPrices": "最新价格",
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"LocationNotFound": "在 OpenStreetMap 中找不到位置... 请立即添加它:)"
 	},
 	"LocationSelector": {
@@ -563,7 +574,7 @@
 		"Title": "删除价格"
 	},
 	"PriceEdit": {
-		"Save": "儲存",
+		"Save": "保存",
 		"Success": "价格已修改！",
 		"Title": "编辑价格"
 	},
@@ -574,7 +585,7 @@
 		"LabelFull": "全价"
 	},
 	"PriceList": {
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"Title": "最新价格"
 	},
 	"PriceRules": {
@@ -582,7 +593,8 @@
 		"NoSpaces": "Please don't use spaces",
 		"Number": "Input a number",
 		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"TwoDecimals": "Only two decimals allowed",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -590,7 +602,7 @@
 		"BrandLower": "品牌",
 		"BrandMissing": "品牌缺失",
 		"BrandTotal": "{count} 品牌",
-		"Categories": "類別",
+		"Categories": "类别",
 		"CategoriesLower": "分类",
 		"CategoriesMissing": "类别缺失",
 		"CategoryTotal": "{count} 类别",
@@ -614,13 +626,19 @@
 		"AddPrice": "添加价格",
 		"CategoryNotFound": "未找到类别...",
 		"LatestPrices": "最新价格",
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"ProductNotFound": "在 Open Food Facts 中找不到产品... 请随时添加:)"
 	},
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "要上传多个价格标签（相同的商店位置和日期），请单击此处！",
+		"PromoReceiptAssistant": "实验：尝试使用新的收据助手自动从收据中提取价格！"
 	},
 	"ProofCard": {
 		"Proof": "证明",
@@ -641,7 +659,7 @@
 		"Success": "证据已删除！"
 	},
 	"ProofDetail": {
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"Prices": "价格",
 		"ProofNotFound": "Proof not found",
 		"Public": "民众",
@@ -650,7 +668,7 @@
 	},
 	"ProofEdit": {
 		"Title": "编辑证明",
-		"Save": "儲存",
+		"Save": "保存",
 		"Success": "证明已编辑！"
 	},
 	"ReceiptAssistant": {
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "添加多个价格"
 		},
+		"Prices": {
+			"Title": "价格"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
-		"ProofAddMultiple": {
-			"Title": "Add multiple proofs"
-		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "贡献"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -749,10 +770,10 @@
 			"Title": "Reuses"
 		},
 		"Search": {
-			"Title": "搜尋"
+			"Title": "搜索"
 		},
 		"Settings": {
-			"Title": "設定"
+			"Title": "设置"
 		},
 		"SignIn": {
 			"Title": "登录"
@@ -775,6 +796,9 @@
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
+		"ProofPriceTagAssistant": {
+			"Title": "证明价格标签助手"
+		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
 		},
@@ -796,7 +820,7 @@
 	},
 	"Search": {
 		"ProductBarcode": "产品条码",
-		"Title": "搜尋"
+		"Title": "搜索"
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "链接已复制",
@@ -837,45 +861,46 @@
 	"UserDashboard": {
 		"LatestPrices": "最新价格",
 		"LatestProofs": "最新样张",
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "我的价格",
 		"MyProofs": "我的样张",
 		"ProofUpdated": "证据已更新！",
-		"Settings": "設定",
+		"Settings": "设置",
 		"Title": "仪表板",
 		"UserPriceTotal": "{count} 价格",
 		"UserProofTotal": "{count} 证明"
 	},
 	"UserDetail": {
 		"LatestPrices": "最新价格",
-		"LoadMore": "載入更多"
+		"LoadMore": "显示更多"
 	},
 	"UserList": {
-		"LoadMore": "載入更多",
+		"LoadMore": "显示更多",
 		"Title": "杰出贡献者",
 		"UserTotal": "{count} 贡献者"
 	},
 	"UserSettings": {
 		"AddingPrices": "添加价格",
 		"ChangeLanguage": "更改语言",
-		"CountryLabel": "地區",
+		"CountryLabel": "国家/地区",
 		"CurrencyLabel": "货币",
 		"DisplayTitle": "显示",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "最喜欢的货币",
 		"CurrencyRequired": "至少需要一种货币",
-		"LanguageLabel": "語言",
+		"LanguageLabel": "语言",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",
 		"ProductDisplaySource": "Display source",
 		"SideMenuExperimentsDisplay": "Display 'Experiments'",
-		"Save": "儲存",
-		"Title": "設定",
+		"Save": "保存",
+		"Title": "设置",
 		"TranslationCompletion": "翻译已完成 {completion}%。",
 		"TranslationHelp": "帮助我们翻译更多语言"
 	}

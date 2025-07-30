@@ -39,23 +39,16 @@
 			"Subtitle": "Uma prateleira com várias etiquetas de preço",
 			"Title": "Múltiplos produtos"
 		},
-		"PriceCreated": "Preço criado!",
 		"ReceiptMode": {
 			"Subtitle": "Um ou vários produtos",
 			"Title": "Recibo"
 		},
-		"SignedIn": "Conectado!",
 		"SingleProductMode": {
 			"Subtitle": "Apenas uma etiqueta de preço",
 			"Title": "Produto único"
-		},
-		"Thanks": "Obrigado,",
-		"Title": "Adicionar um preço",
-		"TitleSingle": "Adicionar um único preço",
-		"TitleMultiple": "Adicionar preços em massa"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Concluído",
 		"ProductPriceDetails": {
 			"Add": "Adicionar um novo preço",
 			"AlreadyUploaded": "Preços já alterados",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "distribuído por {url}"
-		},
-		"Scan": "Escanear um código de barras"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
-		"Submit": "Envie",
 		"Title": "Digite um código de barras"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Desafios passados",
+		"UpcomingChallenges": "Próximos desafios"
 	},
 	"Common": {
 		"About": "Sobre",
+		"Action": "Ação",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Adicionar um preço",
 		"AddPrices": "Adicionar preços",
@@ -201,6 +196,7 @@
 		"CATEGORY": "Categoria",
 		"Category": "Categoria",
 		"Categories": "Categorias",
+		"CategoryMissing": "Categoria ausente",
 		"CategoryTotal": "{count} categorias | {count} categoria | {count} categorias",
 		"Challenge": "Desafio",
 		"Challenges": "Desafios",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Desafio em andamento",
 		"Chart": "Gráfico",
 		"Clear": "Limpar",
-		"Contributors": "Colaboradores",
 		"Comment": "Comment",
 		"Community": "Comunidade",
 		"CommunityPrices": "Community prices",
@@ -216,6 +211,8 @@
 		"Consumption": "Consumo",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Contribuir",
+		"Contributors": "Colaboradores",
 		"Contributions": "Contribuições",
 		"Confirm": "Confirmar",
 		"Country": "País",
@@ -231,12 +228,15 @@
 		"Display": "Mostrar",
 		"DisplayList": "Lista",
 		"DisplayPriceList": "Lista",
+		"DisplayTable": "Table",
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Gráfico",
 		"Done": "Concluído",
 		"Error": "Erro",
+		"Experiment": "Experimentar",
 		"Experiments": "Experimentos",
+		"GoToProof": "Ir para o comprovante",
 		"Join": "Juntar",
 		"Label": "Rótulo",
 		"Labels": "Rótulos",
@@ -311,10 +311,13 @@
 		"MyPrices": "Meus valores",
 		"MyProofs": "Minhas demonstrações",
 		"MyStats": "My stats",
+		"NextProof": "Próximo comprovante",
+		"NoBarcode": "Sem código de barras",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Abrir com o assistente",
 		"Order": "Pedido",
 		"OrderLocationCountDESC": "Contagem de localizações",
 		"OrderProductUniqueScansDESC": "Número de digitalizações",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Fotos adicionadas",
 		"PicturesAddedByYou": "Fotos adicionadas por você",
 		"PRICE_TAG": "Etiqueta de preço",
+		"PriceTags": "Etiquetas de preço",
 		"PriceCount": "{count} preços | {count} preço | {count} preços",
 		"PriceAddedCount": "{count} preços adicionados | {count} preço adicionado | {count} preços adicionados",
 		"PriceToValidateCount": "{count} preços para validar | {count} preço para validar | {count} preços para validar",
 		"PriceCreated": "Preço criado!",
+		"PriceMissing": "Preço faltando",
+		"PricesAlreadyUploaded": "Preços já carregados",
 		"PricesMore": "Mais preços",
 		"PricesAdded": "Preços adicionados",
 		"PricesAddedToday": "Preços adicionados hoje",
@@ -356,6 +362,8 @@
 		"Privacy": "Privacidade",
 		"ProductCount": "{count} produtos | {count} produto | {count} produtos",
 		"ProductFind": "Encontre o produto",
+		"ProductMissing": "Produto faltando",
+		"ProductOrCategoryMissing": "Produto ou categoria ausente",
 		"ProofCount": "{count} provas | {count} prova | {count} provas",
 		"ProofDetails": "Detalhes da documentação",
 		"ProofMissing": "Prova faltando",
@@ -394,6 +402,7 @@
 		"SourceCode": "Código-fonte",
 		"Start": "Começar",
 		"Stats": "Estatísticas",
+		"Summary": "Resumo",
 		"TaglineOriginal": "Um banco de dados público e aberto de preços dos alimentos",
 		"TaglineAlt1": "O banco de dados público e aberto de preços",
 		"TaglineAlt2": "O banco de dados público e aberto de preços dos alimentos",
@@ -410,6 +419,7 @@
 		"Total": "Total",
 		"Truncate": "Truncar",
 		"Truncated": "Truncado",
+		"TryItOut": "Experimente",
 		"Type": "Tipo",
 		"UnknownProduct": "Produto desconhecido",
 		"UnknownProductSource": "Unknown product source",
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Enviar rótulos"
 		},
 		"PricesAlreadyAdded": "Preços já adicionados",
+		"PricesWithoutProductOrCategory": "Preços sem produto ou categoria",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} preço(s) serão adicionados a um comprovante existente no dia {date} em {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
 		"WaitForUpload": "Por favor aguarde o upload",
-		"GoToDashboard": "Vá para seu painel",
 		"GoToProof": "Ir para o comprovante",
-		"AddNewProof": "Adicionar um novo comprovante",
 		"NextProof": "Próximo comprovante",
 		"ChooseNextProof": "Escolha outro comprovante para lidar",
 		"AutomaticBoundingBoxSource": "automático",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Etiqueta de preço marcada como truncada",
 			"PriceTagUnreadable": "Etiqueta de preço marcada como ilegível",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Etiqueta de preço marcada como sem código de barras",
+			"PriceTagOther": "Etiqueta de preço marcada como outra",
 			"NewPriceTag": "Nova etiqueta de preço"
 		},
 		"OpenWithTheAssistant": "Abrir com o assistente"
@@ -582,7 +593,8 @@
 		"NoSpaces": "Por favor, não use espaços",
 		"Number": "Insira um número",
 		"Positive": "Preço não pode ser negativo",
-		"TwoDecimals": "Apenas duas casas decimais são permitidas"
+		"TwoDecimals": "Apenas duas casas decimais são permitidas",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "Todas as imagens de etiquetas de preço que você selecionar devem compartilhar o mesmo local da loja e ter sido tiradas no mesmo dia.",
 		"HowToMultipleShort": "As fotos devem compartilhar o mesmo local da loja e a mesma data.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Para carregar várias etiquetas de preço (mesma localização da loja e data), clique aqui!",
+		"PromoReceiptAssistant": "Experimente: experimente o novo assistente de recibos para extrair automaticamente os preços dos seus recibos!"
 	},
 	"ProofCard": {
 		"Proof": "Demonstração",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Adicionar múltiplos preços"
 		},
+		"Prices": {
+			"Title": "Preços"
+		},
 		"Proofs": {
 			"Title": "Provas"
 		},
 		"ProofAddSingle": {
 			"Title": "Adicionar um único comprovante"
 		},
-		"ProofAddMultiple": {
-			"Title": "Adicionar várias provas"
-		},
 		"Community": {
 			"Title": "Comunidade"
+		},
+		"Contribute": {
+			"Title": "Contribuir"
 		},
 		"Experiments": {
 			"Title": "Experimentos"
@@ -774,6 +795,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Assistente de Contribuição"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Assistente de etiqueta de preço de prova"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Assistente de validação de preço"
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Línguas",
 		"LocationFinder": "Pesquisa de localização",
 		"LocationDisplayOSMID": "Exibir ID do OSM",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Validação de preços",
 		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar marcadores de categoria",

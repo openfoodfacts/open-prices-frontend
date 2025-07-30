@@ -10,7 +10,14 @@
 
   <v-row class="mt-0">
     <v-col v-for="(productPriceForm, index) in productPriceForms" :key="index" cols="12" md="6" xl="4">
-      <ContributionAssistantPriceFormCard height="100%" :productPriceForm="productPriceForm" :loading="productPriceForm.loading" @updatePriceTagStatus="updatePriceTagStatus(index, $event)" @validatePriceTag="validatePriceTag(index)" />
+      <ContributionAssistantPriceFormCard
+        height="100%"
+        :productPriceForm="productPriceForm"
+        :hideProductBarcodeScannerTab="true"
+        :loading="productPriceForm.loading"
+        @updatePriceTagStatus="updatePriceTagStatus(index, $event)"
+        @validatePriceTag="validatePriceTag(index)"
+      />
     </v-col>
   </v-row>
 
@@ -37,11 +44,13 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import api from '../services/api'
+import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
+import api from '../services/api'
+import { useAppStore } from '../store'
+import date_utils from '../utils/date.js'
+import proof_utils from '../utils/proof.js'
 import utils from '../utils.js'
 
 export default {
@@ -51,7 +60,7 @@ export default {
   },
   data() {
     return {
-      currentDateTime: utils.currentDateTime(),  // usefull to avoid fetching duplicates during pagination
+      currentDateTime: date_utils.currentDateTime(),  // usefull to avoid fetching duplicates during pagination
       // data
       priceTagList: [],
       priceTagTotal: null,
@@ -114,7 +123,7 @@ export default {
       this.priceTagList = []
       this.priceTagTotal = null
       this.priceTagPage = 0
-      this.productPriceForm = []
+      this.productPriceForms = []
       this.getPriceTags()
     },
     updatePriceTagStatus(index, status) {
@@ -163,34 +172,14 @@ export default {
           for (let i = 0; i < data.items.length; i++) {
             // only validate price tags with predictions
             if (data.items[i]['predictions'].length > 0) {
-              const label = data.items[i]['predictions'][0]['data']
-              const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''
-              const priceType = barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
-              // TODO: some of these will be None if gemini did not give a proper reply, so detection and error handling is needed
-              const productPriceForm = {
-                id: data.items[i].id,
-                type: barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY,
-                category_tag: (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.product)) ? label.product : null,
-                origins_tags: ![null, '', 'unknown', 'other'].includes(label.origin) ? [label.origin] : [],
-                labels_tags: label.organic ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : [],
-                price: label.price.toString(),
-                price_per: label.unit,
-                price_is_discounted: false,
-                currency: data.items[i]['proof'].currency || this.appStore.getUserLastCurrencyUsed,
-                proof: data.items[i]['proof'],
-                proofImage: data.items[i]['proof'].file_path,
-                // proofImage: 'https://prices.openfoodfacts.org/img/0024/2NToLMxOgN.webp',
-                croppedImage: null,
-                product_code: barcodeString,
-                detected_product_code: barcodeString,
-                product_name: label.product_name,
-                bounding_box: data.items[i].bounding_box,
-                loading: false
-              }
-              this.productPriceForms.push(productPriceForm)
+              this.handlePriceTag(data.items[i])
             }
           }
         })
+    },
+    handlePriceTag(priceTag) {
+      let productPriceForm = proof_utils.handlePriceTag(priceTag)
+      this.productPriceForms.push(productPriceForm)
     },
     updatePriceTag(priceTagId, status, priceId) {
       return api

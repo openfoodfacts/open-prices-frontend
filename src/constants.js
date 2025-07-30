@@ -49,6 +49,7 @@ export default {
   OFF_CONTACT_EMAIL: 'contact@openfoodfacts.org',
   OFF_SIGN_UP_URL: 'https://world.openfoodfacts.org/cgi/user.pl',
   OFF_ICON: OFF_ICON,
+  OFF_CONTRIBUTE_URL: 'https://world.openfoodfacts.org/contribute',
   OFF_WIKI_URL: 'https://wiki.openfoodfacts.org/Main_Page',
   OFF_WIKI_APP_URL: 'https://wiki.openfoodfacts.org/Project:Open-Prices',
   OFF_WIKI_GDPR_REQUEST_URL: 'https://wiki.openfoodfacts.org/GDPR_request',
@@ -104,6 +105,9 @@ export default {
   PRICE_TAG_STATUS_UNREADABLE: 2,
   PRICE_TAG_STATUS_TRUNCATED: 3,
   PRICE_TAG_STATUS_NOT_A_PRICE: 4,
+  PRICE_TAG_STATUS_NO_BARCODE: 5,
+  PRICE_TAG_STATUS_OTHER: 10,
+  PRODUCT_IMAGE_DEFAULT_URL: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
   PRODUCT_CATEGORY_LABEL_ORGANIC: PRODUCT_CATEGORY_LABEL_ORGANIC,
   PRODUCT_QUANTITY_UNIT_G: 'g',
   PRODUCT_QUANTITY_UNIT_ML: 'ml',
@@ -116,8 +120,12 @@ export default {
   PROOF_ICON: PROOF_ICON,
   PROOF_TYPE_PRICE_TAG: PROOF_TYPE_PRICE_TAG,
   PROOF_TYPE_PRICE_TAG_ICON: PROOF_TYPE_PRICE_TAG_ICON,
+  PROOF_TYPE_PRICE_TAG_IMAGE_URL: 'https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.webp',
+  PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL: 'https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.400.webp',
   PROOF_TYPE_RECEIPT: PROOF_TYPE_RECEIPT,
   PROOF_TYPE_RECEIPT_ICON: PROOF_TYPE_RECEIPT_ICON,
+  PROOF_TYPE_RECEIPT_IMAGE_URL: 'https://prices.openfoodfacts.org/img/0064/B7XwYylM6V.webp',
+  PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL: 'https://prices.openfoodfacts.org/img/0064/B7XwYylM6V.400.webp',
   PROOF_TYPE_GDPR_REQUEST: PROOF_TYPE_GDPR_REQUEST,
   PROOF_TYPE_GDPR_REQUEST_ICON: PROOF_TYPE_GDPR_REQUEST_ICON,
   PROOF_TYPE_LIST: [
@@ -192,6 +200,7 @@ export default {
   // display
   PRICE_DISPLAY_LIST: [
     { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
+    { key: 'table', value: 'DisplayTable', icon: 'mdi-table' },
     { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
     { key: 'chart', value: 'DisplayPriceChart', icon: 'mdi-chart-line' },
   ],
@@ -212,6 +221,11 @@ export default {
     // { key: 'recent', value: 'Recent', valueSmallScreen: '', icon: 'mdi-history' },  // Recent
     { key: 'scan', value: 'BarcodeScan', valueSmallScreen: 'BarcodeScanShort', icon: 'mdi-barcode-scan' },
     { key: 'type', value: 'BarcodeType', valueSmallScreen: 'BarcodeTypeShort', icon: 'mdi-numeric' },
+  ],
+  BARCODE_SCANNER_DISPLAY_LIST: [
+    { key: 'auto', value: 'Auto', valueSmallScreen: 'Auto', icon: 'mdi-barcode-scan' },
+    { key: 'off-barcode-scanner', value: 'Off Barcode Scanner', valueSmallScreen: 'Off Scanner', icon: 'mdi-barcode-scan' },
+    { key: 'html5-qrcode', value: 'Html5-Qrcode', valueSmallScreen: 'Html5-Qrcode', icon: 'mdi-barcode-scan' },
   ],
   PRICE_FORM_DISPLAY_LIST: [
     { key: 'display', value: 'Display', icon: 'mdi-eye-outline' },

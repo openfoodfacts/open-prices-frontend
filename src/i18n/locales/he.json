@@ -39,23 +39,16 @@
 			"Subtitle": "מדף עם מגוון תגיות מחיר",
 			"Title": "מגוון מוצרים"
 		},
-		"PriceCreated": "המחיר נוצר!",
 		"ReceiptMode": {
 			"Subtitle": "מוצר או יותר",
 			"Title": "קבלה"
 		},
-		"SignedIn": "נכנסת!",
 		"SingleProductMode": {
 			"Subtitle": "תגית מחיר אחת בלבד",
 			"Title": "מוצר יחיד"
-		},
-		"Thanks": "תודה",
-		"Title": "הוספת מחיר",
-		"TitleSingle": "הוספת מחיר בודד",
-		"TitleMultiple": "הוספת מספר מחירים במרוכז"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "בוצע",
 		"ProductPriceDetails": {
 			"Add": "הוספת מחיר חדש",
 			"AlreadyUploaded": "מחיר כבר נשלח | {priceAlreadyUploadedNumber} מחירים כבר נשלחו",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "מופעל על גבי {url}"
-		},
-		"Scan": "סריקת ברקוד"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "ברקוד",
-		"Submit": "הגשה",
 		"Title": "סוג ברקוד"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "אין אתגר כרגע, נא לחזור מאוחר יותר!",
 		"PastOrFutureChallenges": "אתגרי עבר או עתיד",
-		"OngoingChallenges": "אתגרים שמתקיימים כרגע"
+		"OngoingChallenges": "אתגרים שמתקיימים כרגע",
+		"PastChallenges": "אתגרים מהעבר",
+		"UpcomingChallenges": "אתגרים קרובים"
 	},
 	"Common": {
 		"About": "על אודות",
+		"Action": "פְּעוּלָה",
+		"Actions": "פעולות",
 		"AddComment": "הוספת הערה",
 		"AddPrice": "הוספת מחיר",
 		"AddPrices": "הוספת מחירים",
@@ -201,6 +196,7 @@
 		"CATEGORY": "קטגוריה",
 		"Category": "קטגוריה",
 		"Categories": "קטגוריות",
+		"CategoryMissing": "חסרה קטגוריה",
 		"CategoryTotal": "{count} קטגוריות | קטגוריה | {count} קטגוריות",
 		"Challenge": "אתגר",
 		"Challenges": "אתגרים",
@@ -208,14 +204,15 @@
 		"ChallengeOngoing": "אתגר שמתקיים כרגע",
 		"Chart": "תרשים",
 		"Clear": "פינוי",
-		"Contributors": "תורמים",
 		"Comment": "הערה",
 		"Community": "קהילה",
-		"CommunityPrices": "Community prices",
-		"CommunityProofs": "Community proofs",
+		"CommunityPrices": "מחירי הקהילה",
+		"CommunityProofs": "הוכחות הקהילה",
 		"Consumption": "צריכה",
-		"ConsumptionPrices": "Consumption prices",
-		"ConsumptionProofs": "Consumption proofs",
+		"ConsumptionPrices": "מחירי צריכה",
+		"ConsumptionProofs": "הוכחות צריכה",
+		"Contribute": "לתרום",
+		"Contributors": "תורמים",
 		"Contributions": "תרומות",
 		"Confirm": "אישור",
 		"Country": "מדינה",
@@ -231,12 +228,15 @@
 		"Display": "תצוגה",
 		"DisplayList": "רשימה",
 		"DisplayPriceList": "רשימה",
+		"DisplayTable": "טבלה",
 		"DisplayMap": "מפה",
 		"DisplayPriceMap": "מפה",
 		"DisplayPriceChart": "תרשים",
 		"Done": "בוצע",
 		"Error": "שגיאה",
+		"Experiment": "לְנַסוֹת",
 		"Experiments": "ניסויים",
+		"GoToProof": "מעבר להוכחה",
 		"Join": "הצטרפות",
 		"Label": "תווית",
 		"Labels": "תוויות",
@@ -289,7 +289,7 @@
 		"FAQ": "שו״ת",
 		"FrequentlyAskedQuestions": "שאלות נפוצות",
 		"GDPR_REQUEST": "בקשת GDPR (חוק הגנת הפרטיות)",
-		"Group": "Group",
+		"Group": "קבוצה",
 		"Help": "עזרה",
 		"History": "היסטוריה",
 		"Image": "תמונה",
@@ -306,15 +306,18 @@
 		"Map": "מפה",
 		"Miscellaneous": "שונות",
 		"MobileApp": "יישומון לניידים",
-		"MyConsumption": "My consumption",
+		"MyConsumption": "הצריכה שלי",
 		"MyDashboard": "לוח המחוונים שלי",
 		"MyPrices": "המחירים שלי",
 		"MyProofs": "ההוכחות שלי",
 		"MyStats": "הסטטיסטיקה שלי",
+		"NextProof": "ההוכחה הבאה",
+		"NoBarcode": "אין ברקוד",
 		"NotAnError": "לא שגיאה",
 		"NotAPrice": "לא מחיר",
 		"Offline": "לא מקוון",
 		"Online": "מקוון",
+		"OpenWithTheAssistant": "פתיחה עם המסייע",
 		"Order": "סדר",
 		"OrderLocationCountDESC": "כמות מקומות",
 		"OrderProductUniqueScansDESC": "מספר הסריקות",
@@ -329,7 +332,7 @@
 		"OrderProofDateDESC": "תאריך ההוכחה",
 		"OrderUserCountDESC": "כמות משתמשים",
 		"Other": "אחר",
-		"OtherContributions": "Other contributions",
+		"OtherContributions": "תרומות אחרות",
 		"PersonalInfo": "פרטים אישיים",
 		"Physical": "פיזי",
 		"Picture": "תמונה",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "נוספו תמונות",
 		"PicturesAddedByYou": "תמונות שהעלית",
 		"PRICE_TAG": "תווית מחיר",
+		"PriceTags": "תגי מחיר",
 		"PriceCount": "{count} מחירים | מחיר | {count} מחירים",
 		"PriceAddedCount": "נוספו {count} מחירים | נוסף מחיר | נוספו {count} מחירים",
 		"PriceToValidateCount": "{count} מחירים לאימות | מחיר לאימות | {count} מחירים לאימות",
 		"PriceCreated": "המחיר נוצר!",
+		"PriceMissing": "מחיר חסר",
+		"PricesAlreadyUploaded": "המחירים כבר הועלו",
 		"PricesMore": "מחירים נוספים",
 		"PricesAdded": "נוספו מחירים",
 		"PricesAddedToday": "מחירים שנוספו היום",
@@ -356,6 +362,8 @@
 		"Privacy": "פרטיות",
 		"ProductCount": "{count} מוצרים | מוצר | {count} מוצרים",
 		"ProductFind": "איתור המוצר",
+		"ProductMissing": "מוצר חסר",
+		"ProductOrCategoryMissing": "מוצר או קטגוריה חסרים",
 		"ProofCount": "{count} הוכחות | הוכחה | {count} הוכחות",
 		"ProofDetails": "פרטי הוכחה",
 		"ProofMissing": "חסרה הוכחה",
@@ -394,6 +402,7 @@
 		"SourceCode": "קוד מקור",
 		"Start": "התחלה",
 		"Stats": "סטטיסטיקה",
+		"Summary": "תקציר",
 		"TaglineOriginal": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים",
 		"TaglineAlt1": "מסד הנתונים הפתוח למחירים במיקור המונים",
 		"TaglineAlt2": "מסד הנתונים הפתוח למחירי מוצרי מזון ומוצרים במיקור המונים",
@@ -410,6 +419,7 @@
 		"Total": "סך הכול",
 		"Truncate": "קיצוץ",
 		"Truncated": "קטוע",
+		"TryItOut": "לנסות את זה",
 		"Type": "סוג",
 		"UnknownProduct": "מוצר לא ידוע",
 		"UnknownProductSource": "מקור המוצר לא ידוע",
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "שליחת התוויות"
 		},
 		"PricesAlreadyAdded": "המחירים כבר נוספו",
+		"PricesWithoutProductOrCategory": "מחירים ללא מוצר או קטגוריה",
 		"PricesMarkedAsError": "המחירים סומנו בטעות",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} מחירים יתווספו להוכחה הקיימת ב־{date} ב־{locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} מחירים נוספו",
 		"WaitForUpload": "נא להמתין להעלאה",
-		"GoToDashboard": "מעבר ללוח הבקרה שלך",
 		"GoToProof": "מעבר להוכחה",
-		"AddNewProof": "הוספת הוכחה חדשה",
 		"NextProof": "ההוכחה הבאה",
 		"ChooseNextProof": "בחירת הוכחה נוספת לטיפול",
 		"AutomaticBoundingBoxSource": "אוטומטית",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "תג מחיר מסומן כחתוך",
 			"PriceTagUnreadable": "תג מחיר מסומן כבלתי קריא",
 			"PriceTagNotAPrice": "תג מחיר מסומן שאינו מחיר",
+			"PriceTagNoBarcode": "תג מחיר מסומן כלא ברקוד",
+			"PriceTagOther": "תג מחיר מסומן כאחר",
 			"NewPriceTag": "תגית מחיר חדשה"
 		},
 		"OpenWithTheAssistant": "פתיחה עם המסייע"
@@ -582,7 +593,8 @@
 		"NoSpaces": "נא לא להשתמש ברווחים",
 		"Number": "נא למלא מספר",
 		"Positive": "מחיר לא יכול להיות שלילי",
-		"TwoDecimals": "מותר עד שתי ספרות אחרי הנקודה"
+		"TwoDecimals": "מותר עד שתי ספרות אחרי הנקודה",
+		"ThreeDecimals": "מותר עד שלוש ספרות אחרי הנקודה"
 	},
 	"ProductCard": {
 		"BarcodeLength": "אורך ברקוד: {length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "כל תמונות תגיות המחירים שבחרת יחלקו את אותו מקום חנות ויתועדו לאותו היום.",
 		"HowToMultipleShort": "התמונות צריכות לחלוק מקום ותאריך זהים לחנות.",
-		"PriceValidationAllow": "לאפשר את חילוץ המחירים בתמונה על ידי בינה מלאכותית ולאמת על אותם ידי הקהילה"
+		"PriceValidationAllow": "לאפשר את חילוץ המחירים בתמונה על ידי בינה מלאכותית ולאמת על אותם ידי הקהילה",
+		"PriceTagAllowCommunityValidation": "לאפשר לקהילה לאמת מחירים שחולצו על ידי בינה מלאכותית",
+		"PriceTagAIWarning": "בינה מלאכותית תרוץ על ההוכחות שלך כדי לחלץ מחירים.",
+		"ReceiptAllowAI": "לאפשר להריץ בינה מלאכותית על הקבלה שלך כדי לחלץ מחירים",
+		"ReceiptAIWarning": "בינה מלאכותית תרוץ על הקבלה שלך כדי לחלץ מחירים.",
+		"PromoProofPriceTagAddMultiple": "להעלאת מספר תגיות מחיר (אותו מקום חנות ותאריך), יש ללחוץ כאן!",
+		"PromoReceiptAssistant": "ניסוי: אפשר לנסות את עוזר הקבלות החדש כדי לחלץ מחירים מהקבלות שלך אוטומטית!"
 	},
 	"ProofCard": {
 		"Proof": "הוכחה",
@@ -654,16 +672,16 @@
 		"Success": "ההוכחה נערכה!"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
-		"PriceReadyToBeAdded": "Price ready to be added",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"AddNewItem": "הוספת פריט חדש",
+		"MissingPrice": "חסר מחיר",
+		"MissingProduct": "חסר מוצר",
+		"NoItemsFound": "לא ניתן לחלץ פריטים מהקבלה, נא לנסות שוב.",
+		"PriceAlreadyCreatedForItem": "כבר נוצר מחיר לפריט",
+		"PriceReadyToBeAdded": "המחיר מוכן להוספה",
+		"ReceiptItemsCheck": "פריטים בקבלה, בדיקה ותיקון",
+		"UploadOnlyNewPrices": "להעלות מחירים חדשים בלבד ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "להעלות או לעדכן את כל המחירים התקפים ({nbPrices})",
+		"WaitForExtraction": "הפריטים מחולצים אוטומטית מהקבלה, נא להמתין…"
 	},
 	"Reuses": {
 		"AlertNew": "הגזירה שלך חסרה? נשמח לשמוע על כך דרך {url}!",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "הוספת מגוון מחירים"
 		},
+		"Prices": {
+			"Title": "מחירים"
+		},
 		"Proofs": {
 			"Title": "הוכחות"
 		},
 		"ProofAddSingle": {
 			"Title": "הוספת הוכחה יחידה"
 		},
-		"ProofAddMultiple": {
-			"Title": "הוספת מגוון הוכחות"
-		},
 		"Community": {
 			"Title": "קהילה"
+		},
+		"Contribute": {
+			"Title": "לתרום"
 		},
 		"Experiments": {
 			"Title": "ניסויים"
@@ -775,11 +796,14 @@
 		"ContributionAssistant": {
 			"Title": "מסייע תרומה"
 		},
+		"ProofPriceTagAssistant": {
+			"Title": "עוזר תג מחיר הוכחה"
+		},
 		"PriceValidationAssistant": {
 			"Title": "מסייע אימות מחירים"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "מסייע קבלות"
 		},
 		"Challenge": {
 			"Title": "אתגר"
@@ -869,6 +893,7 @@
 		"LanguageLabel": "שפות",
 		"LocationFinder": "מאתר מקום",
 		"LocationDisplayOSMID": "הצגת מזהה ב־OSM",
+		"PriceListDisplay": "תצוגת מחירון",
 		"PriceValidation": "אימות מחיר",
 		"ProductDisplayBarcode": "הצגת ברקוד",
 		"ProductDisplayCategoryTag": "הצגת תגית קטגוריה",

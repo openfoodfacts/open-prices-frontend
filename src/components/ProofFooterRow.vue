@@ -79,10 +79,10 @@ export default {
       return this.appStore.user.username
     },
     userIsProofOwner() {
-      return this.username && (this.proof.owner === this.username)
+      return this.username && this.proof && (this.proof.owner === this.username)
     },
     proofIsTypeReceipt() {
-      return this.proof && this.proof.type === constants.PROOF_TYPE_RECEIPT
+      return this.proof && (this.proof.type === constants.PROOF_TYPE_RECEIPT)
     },
     showReceiptOwnerConsumption() {
       return this.userIsProofOwner && this.proofIsTypeReceipt && this.proof.owner_consumption

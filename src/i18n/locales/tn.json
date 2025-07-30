@@ -39,23 +39,16 @@
 			"Subtitle": "A shelf with multiple price tags",
 			"Title": "Multiple products"
 		},
-		"PriceCreated": "Price created!",
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
 			"Title": "Receipt"
 		},
-		"SignedIn": "Signed in!",
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
 			"Title": "Single product"
-		},
-		"Thanks": "Thanks",
-		"Title": "Add a price",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Done",
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		},
-		"Scan": "Scan a barcode"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barcode",
-		"Submit": "Submit",
 		"Title": "Type a barcode"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Dikgwetlho tsa nako e e fetileng",
+		"UpcomingChallenges": "Dikgwetlho tse di tlang"
 	},
 	"Common": {
 		"About": "About",
+		"Action": "Tiragalo",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
@@ -201,6 +196,7 @@
 		"CATEGORY": "Category",
 		"Category": "Category",
 		"Categories": "Categories",
+		"CategoryMissing": "Category missing",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Challenge": "Challenge",
 		"Challenges": "Challenges",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Clear",
-		"Contributors": "Contributors",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -216,6 +211,8 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Contribute",
+		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
 		"Country": "Country",
@@ -231,12 +228,15 @@
 		"Display": "Display",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
+		"DisplayTable": "Table",
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
 		"Error": "Error",
+		"Experiment": "Tekeletso",
 		"Experiments": "Experiments",
+		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
 		"Labels": "Labels",
@@ -311,10 +311,13 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"MyStats": "My stats",
+		"NextProof": "Next proof",
+		"NoBarcode": "Ga go na khoutu ya bara",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "Ditheke tsa ditlhwatlhwa",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
+		"PriceMissing": "Tlhwatlhwa e tlhaela",
+		"PricesAlreadyUploaded": "Ditlhwatlhwa di setse di laisitswe",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -356,6 +362,8 @@
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
+		"ProductMissing": "Kumo ga e yo",
+		"ProductOrCategoryMissing": "Kumo kgotsa setlhopha ga se yo",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
@@ -394,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Summary": "Summary",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -410,6 +419,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "E leke",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prices already added",
+		"PricesWithoutProductOrCategory": "Ditlhwatlhwa kwa ntle ga kumo kgotsa setlhopha",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Theke ya tlhotlhwa e tshwailwe jaaka e e senang khoutu ya dibara",
+			"PriceTagOther": "Theke ya tlhotlhwa e tshwailwe jaaka e nngwe",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -582,7 +593,8 @@
 		"NoSpaces": "Please don't use spaces",
 		"Number": "Input a number",
 		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"TwoDecimals": "Only two decimals allowed",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Go laisa ditheke tse dintsi tsa ditlhwatlhwa (lefelo le le tshwanang la lebenkele le letlha), tobetsa fano!",
+		"PromoReceiptAssistant": "Tekeletsa: leka mothusi yo mosha wa dirasiti go ntsha ditlhwatlhwa ka go itirisa mo dirasiti tsa gago!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Add multiple prices"
 		},
+		"Prices": {
+			"Title": "Prices"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
-		"ProofAddMultiple": {
-			"Title": "Add multiple proofs"
-		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Contribute"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -774,6 +795,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Mothusi wa Theke ya Ditlhwatlhwa tsa Bosupi"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Languages",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",

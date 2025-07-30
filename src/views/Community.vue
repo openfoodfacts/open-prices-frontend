@@ -32,9 +32,10 @@
   <h2 class="text-h6 mb-1">
     {{ $t('Common.ReusesKnown') }}
   </h2>
+
   <v-row>
     <v-col v-for="reuse in reusesList" :key="reuse.id" cols="12" sm="6" md="4" xl="3">
-      <ReuseCard :reuse="reuse" />
+      <ReuseCard :reuse="reuse" height="100%" />
     </v-col>
   </v-row>
 

@@ -1,11 +1,8 @@
 <template>
   <v-card v-if="showCard" class="border-success mb-4" prepend-icon="mdi-tag-check-outline">
     <template #title>
-      <i18n-t keypath="AddPriceMultiple.ProductPriceDetails.AlreadyUploaded" :plural="proofPriceUploadedList.length" tag="span">
-        <template #priceAlreadyUploadedNumber>
-          <span>{{ proofPriceUploadedList.length }}</span>
-        </template>
-      </i18n-t>
+      {{ $t('Common.PricesAlreadyUploaded') }}
+      <LoadedCountChip :totalCount="proofPriceUploadedList.length" />
     </template>
     <template #append>
       <v-icon icon="mdi-checkbox-marked-circle" color="success" />
@@ -27,21 +24,21 @@
       <v-row>
         <v-col cols="12">
           <ProofReceiptPriceCountChip class="mr-1" :uploadedCount="proofPriceUploadedList.length" :totalCount="proof.receipt_price_count" />
-          <ProofReceiptPriceTotalChip :uploadedCount="proofPriceUploadedListSum" :totalCount="proof.receipt_price_total" :currency="proofPriceUploadedList[0].currency" />
+          <ProofReceiptPriceTotalChip :uploadedCount="proofPriceUploadedListSum" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
         </v-col>
       </v-row>
     </v-card-actions>
-
-    <v-overlay v-model="disableCard" scrim="#E8F5E9" contained persistent />
   </v-card>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
+import price_utils from '../utils/price.js'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
@@ -60,25 +57,18 @@ export default {
       default: true
     }
   },
-  data() {
-    return {
-      disableCard: true
-    }
-  },
   computed: {
     showCard() {
-      return this.hideCardIfNoProofPriceUploaded && this.proofPriceUploadedList.length > 0
+      return this.hideCardIfNoProofPriceUploaded && (this.proofPriceUploadedList.length > 0)
     },
     proofIsTypeReceipt() {
-      return this.proof && this.proof.type === constants.PROOF_TYPE_RECEIPT
+      return this.proof && (this.proof.type === constants.PROOF_TYPE_RECEIPT)
     },
     showCardFooter() {
-      return this.proofIsTypeReceipt && this.proofPriceUploadedList.length > 0
+      return this.proofIsTypeReceipt && (this.proofPriceUploadedList.length > 0)
     },
     proofPriceUploadedListSum() {
-      return this.proofPriceUploadedList.reduce((acc, priceUploaded) => {
-        return acc + parseFloat(priceUploaded.price)*parseFloat(priceUploaded.receipt_quantity)
-      }, 0)
+      return price_utils.priceSum(this.proofPriceUploadedList)
     }
   },
 }

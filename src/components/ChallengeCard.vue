@@ -1,5 +1,5 @@
 <template>
-  <v-card :id="'challenge_' + challenge.id" :class="'border-transparent'" @click="goToChallenge(challenge)">
+  <v-card :id="'challenge_' + challenge.id" :class="'border-transparent'" :to="getChallengeUrl(challenge)">
     <template #title>
       {{ challenge.icon }} {{ challenge.title }} {{ challenge.subtitle }}
     </template>
@@ -19,6 +19,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 
 export default {
   components: {
@@ -38,7 +39,7 @@ export default {
         "start_date":"2022-03-11",
         "end_date":"2025-04-17",
         "categories":["en:hazelnut-spreads"],
-        "example_proof_url":"https://prices.openfoodfacts.org/img/0029/nCWeCVnpQJ.webp",
+        "example_proof_url": constants.PROOF_TYPE_PRICE_TAG_IMAGE_URL,
         "is_published":true,
         "status":"ONGOING",
         "created":"2025-03-17T21:21:58.071163Z",
@@ -47,8 +48,8 @@ export default {
     },
   },
   methods: {
-    goToChallenge(challenge) {
-      this.$router.push({ path: `/challenges/${challenge.id}` })
+    getChallengeUrl(challenge) {
+      return `/challenges/${challenge.id}`
     }
   }
 }

@@ -13,7 +13,7 @@
 
 <script>
 import constants from '../constants'
-import utils from '../utils.js'
+import geo_utils from '../utils/geo.js'
 
 export default {
   props: {
@@ -38,20 +38,20 @@ export default {
     getLocationTitle() {
       if (this.location) {
         if (this.location.type === constants.LOCATION_TYPE_OSM) {
-          return utils.getLocationOSMTitle(this.location)
+          return geo_utils.getLocationOSMTitle(this.location)
         } else if (this.location.type === constants.LOCATION_TYPE_ONLINE) {
-          return utils.getLocationONLINETitle(this.location)
+          return geo_utils.getLocationONLINETitle(this.location)
         }
       }
       return this.locationId
     },
     getLocationIcon() {
-      return utils.getLocationIcon(this.location)
+      return geo_utils.getLocationIcon(this.location)
     },
     getLocationEmoji() {
       if (this.location) {
         if (this.location.type === constants.LOCATION_TYPE_OSM) {
-          return utils.getCountryEmojiFromCode(this.location.osm_address_country_code)
+          return geo_utils.getCountryEmojiFromCode(this.location.osm_address_country_code)
         }
       }
       return null

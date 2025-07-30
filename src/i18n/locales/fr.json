@@ -39,23 +39,16 @@
 			"Subtitle": "Une étagère avec plusieurs étiquettes de prix",
 			"Title": "Plusieurs produits"
 		},
-		"PriceCreated": "Prix créé !",
 		"ReceiptMode": {
 			"Subtitle": "Un ou plusieurs produits",
 			"Title": "Ticket de caisse"
 		},
-		"SignedIn": "Connecté !",
 		"SingleProductMode": {
 			"Subtitle": "Une seule étiquette de prix",
 			"Title": "Produit unique"
-		},
-		"Thanks": "Merci",
-		"Title": "Ajouter un prix",
-		"TitleSingle": "Ajouter un seul prix",
-		"TitleMultiple": "Ajouter plusieurs prix en masse"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Fait",
 		"ProductPriceDetails": {
 			"Add": "Ajouter un nouveau prix",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} prix déjà téléversé | {priceAlreadyUploadedNumber} prix déjà téléversés",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "fonctionne avec {url}"
-		},
-		"Scan": "Scanner un code-barres"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Code-barres",
-		"Submit": "Envoyer",
 		"Title": "Taper un code-barres"
 	},
 	"Challenge": {
@@ -156,19 +147,23 @@
 		"PricesByYou": "{challenge_title} prix par vous",
 		"PricesAddedByYou": "{challenge_title} prix ajoutés par vous",
 		"MostRecentContributions": "Contributions les plus récentes",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeCount": "{count} défis | {count} défi | {count} défis",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
+			"DRAFT": "Ébauche",
 			"UPCOMING": "À venir",
 			"ONGOING": "En cours",
 			"COMPLETED": "Complété"
 		},
 		"NoChallengeCurrentlyOngoing": "Aucun défi actuellement en cours, merci de revenir plus tard !",
 		"PastOrFutureChallenges": "Défis passé ou futur",
-		"OngoingChallenges": "Défis en cours"
+		"OngoingChallenges": "Défis en cours",
+		"PastChallenges": "Défis passés",
+		"UpcomingChallenges": "Défis à venir"
 	},
 	"Common": {
 		"About": "À propos",
+		"Action": "Action",
+		"Actions": "Actions",
 		"AddComment": "Ajouter un commentaire",
 		"AddPrice": "Ajouter un prix",
 		"AddPrices": "Ajouter des prix",
@@ -201,6 +196,7 @@
 		"CATEGORY": "Catégorie",
 		"Category": "Catégorie",
 		"Categories": "Catégories",
+		"CategoryMissing": "Catégorie manquante",
 		"CategoryTotal": "{count} catégories | {count} catégorie | {count} catégories",
 		"Challenge": "Défi",
 		"Challenges": "Défis",
@@ -208,14 +204,15 @@
 		"ChallengeOngoing": "Défi en cours",
 		"Chart": "Graphique",
 		"Clear": "Effacer",
-		"Contributors": "Contributeurs",
 		"Comment": "Commentaire",
 		"Community": "Communauté",
-		"CommunityPrices": "Community prices",
-		"CommunityProofs": "Community proofs",
+		"CommunityPrices": "Tarifs communautaires",
+		"CommunityProofs": "Preuves de communauté",
 		"Consumption": "Consommation",
 		"ConsumptionPrices": "Prix de consommation",
 		"ConsumptionProofs": "Preuves de consommation",
+		"Contribute": "Contribuer",
+		"Contributors": "Contributeurs",
 		"Contributions": "Contributions",
 		"Confirm": "Confirmer",
 		"Country": "Pays",
@@ -231,12 +228,15 @@
 		"Display": "Afficher",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
+		"DisplayTable": "Tableau",
 		"DisplayMap": "Carte",
 		"DisplayPriceMap": "Carte",
 		"DisplayPriceChart": "Graphique",
 		"Done": "Fait",
 		"Error": "Erreur",
+		"Experiment": "Expérience",
 		"Experiments": "Expérimentations",
+		"GoToProof": "Accéder à la preuve",
 		"Join": "Rejoindre",
 		"Label": "Label",
 		"Labels": "Labels",
@@ -311,10 +311,13 @@
 		"MyPrices": "Mes prix",
 		"MyProofs": "Mes preuves",
 		"MyStats": "Mes stats",
+		"NextProof": "Preuve suivante",
+		"NoBarcode": "Pas de code-barres",
 		"NotAnError": "Pas une erreur",
 		"NotAPrice": "Pas un prix",
 		"Offline": "Hors ligne",
 		"Online": "En ligne",
+		"OpenWithTheAssistant": "Ouvrir avec l'assistant",
 		"Order": "Ordre",
 		"OrderLocationCountDESC": "Nombre de lieux",
 		"OrderProductUniqueScansDESC": "Nombre de numérisations",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Photos ajoutées",
 		"PicturesAddedByYou": "Images ajoutées par vous",
 		"PRICE_TAG": "Étiquette de prix",
+		"PriceTags": "Étiquettes de prix",
 		"PriceCount": "{count} prix | {count} prix | {count} prix",
 		"PriceAddedCount": "{count} prix ajoutés | {count} prix ajouté | {count} prix ajoutés",
 		"PriceToValidateCount": "{count} prix à valider | {count} prix à valider | {count} prix à valider",
 		"PriceCreated": "Prix créé !",
+		"PriceMissing": "Prix manquant",
+		"PricesAlreadyUploaded": "Les prix sont déjà téléchargés",
 		"PricesMore": "Plus de prix",
 		"PricesAdded": "Prix ajoutés",
 		"PricesAddedToday": "Prix ajoutés aujourd'hui",
@@ -356,6 +362,8 @@
 		"Privacy": "Confidentialité",
 		"ProductCount": "{count} produits | {count} produit | {count} produits",
 		"ProductFind": "Trouver le produit",
+		"ProductMissing": "Produit manquant",
+		"ProductOrCategoryMissing": "Produit ou catégorie manquant",
 		"ProofCount": "{count} preuves | {count} preuve | {count} preuves",
 		"ProofDetails": "Preuve",
 		"ProofMissing": "Preuve manquante",
@@ -394,6 +402,7 @@
 		"SourceCode": "Code source",
 		"Start": "Commencer",
 		"Stats": "Statistiques",
+		"Summary": "Résumé",
 		"TaglineOriginal": "La base de données ouverte et collaborative de prix alimentaires",
 		"TaglineAlt1": "La base de données ouverte et collaborative de prix",
 		"TaglineAlt2": "La base de données ouverte et collaborative de prix alimentaires et non alimentaires",
@@ -410,9 +419,10 @@
 		"Total": "Total",
 		"Truncate": "Tronquer",
 		"Truncated": "Tronqué",
+		"TryItOut": "Essayez-le",
 		"Type": "Type",
 		"UnknownProduct": "Produit inconnu",
-		"UnknownProductSource": "Unknown product source",
+		"UnknownProductSource": "Source du produit inconnue",
 		"UnknownSource": "Source inconnue",
 		"UnitGram": "g",
 		"UnitKilogram": "kg",
@@ -445,40 +455,41 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. Sélection des preuves",
+			"LabelsExtraction": "2. Extraction d'étiquettes",
+			"Cleanup": "3. Nettoyage",
+			"Summary": "4. Résumé"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
+		"BoundingBoxesFromServerWarning": "Aucune étiquette n'a pu être détectée automatiquement. Veuillez dessiner manuellement des carrés autour des étiquettes.",
 		"FindBoundingBoxes": "Chercher automatique les étiquettes",
 		"FindBoundingBoxesRunning": "La recherche automatique des étiquettes est en cours. Merci de patienter...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
+			"DrawBoundingBoxes": "1. Dessinez des carrés autour des étiquettes",
+			"CheckLabels": "2. Vérifiez la lisibilité des étiquettes",
+			"SendLabels": "3. Envoyez les étiquettes pour traitement automatique",
 			"SendLabelsButton": "Envoyer les étiquettes"
 		},
 		"PricesAlreadyAdded": "Prix déjà téléversés",
-		"PricesMarkedAsError": "Prices marked as error",
+		"PricesWithoutProductOrCategory": "Prix sans produit ni catégorie",
+		"PricesMarkedAsError": "Prix marqués comme erreur",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} prix seront ajoutés à une preuve existante du {date} à {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prix ajoutés",
 		"WaitForUpload": "Merci d'attendre pour le téléversement",
-		"GoToDashboard": "Accéder à votre tableau de bord",
 		"GoToProof": "Accéder à la preuve",
-		"AddNewProof": "Ajouter une nouvelle preuve",
 		"NextProof": "Preuve suivante",
-		"ChooseNextProof": "Choose another proof to handle",
+		"ChooseNextProof": "Choisissez une autre preuve à gérer",
 		"AutomaticBoundingBoxSource": "automatique",
 		"ManualBoundingBoxSource": "manuel",
 		"DetectedBarcode": "Code-barres détecté : {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
+		"LabelProcessingErrorMessage": "Erreur : le traitement automatique de l'étiquette a échoué",
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Étiquette de prix sans prix",
 			"PriceTagWithPrice": "Étiquette de prix avec un prix",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagTruncated": "Étiquette de prix marquée comme tronquée",
+			"PriceTagUnreadable": "Étiquette de prix marquée comme illisible",
+			"PriceTagNotAPrice": "Étiquette de prix marquée comme n'étant pas un prix",
+			"PriceTagNoBarcode": "Étiquette de prix marquée comme sans code-barres",
+			"PriceTagOther": "Étiquette de prix marquée comme autre",
 			"NewPriceTag": "Nouvelle étiquette de prix"
 		},
 		"OpenWithTheAssistant": "Ouvrir avec l'assistant"
@@ -582,7 +593,8 @@
 		"NoSpaces": "S'il vous plaît, n'utilisez pas d'espaces",
 		"Number": "Saisir le numéro",
 		"Positive": "Le prix ne peut pas être négatif",
-		"TwoDecimals": "Seules deux décimales sont autorisées"
+		"TwoDecimals": "Seules deux décimales sont autorisées",
+		"ThreeDecimals": "Seulement trois décimales sont autorisées"
 	},
 	"ProductCard": {
 		"BarcodeLength": "{length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "Toutes les images d'étiquettes de prix que vous sélectionnez doivent partager le même emplacement de magasin et avoir été prises le même jour.",
 		"HowToMultipleShort": "Les photos doivent partager le même emplacement de magasin et la même date.",
-		"PriceValidationAllow": "Autoriser l'extraction par IA du prix sur mes photos et la validation par la communauté"
+		"PriceValidationAllow": "Autoriser l'extraction par IA du prix sur mes photos et la validation par la communauté",
+		"PriceTagAllowCommunityValidation": "Permettre à la communauté de valider les prix extraits par IA",
+		"PriceTagAIWarning": "L'IA sera exécutée sur vos preuves pour en extraire les prix.",
+		"ReceiptAllowAI": "Autoriser l'exécution de l'IA sur votre reçu pour extraire les prix",
+		"ReceiptAIWarning": "L'IA sera exécutée sur votre reçu pour en extraire les prix.",
+		"PromoProofPriceTagAddMultiple": "Pour télécharger plusieurs étiquettes de prix (même emplacement de magasin et même date), cliquez ici !",
+		"PromoReceiptAssistant": "Expérience : essayez le nouvel assistant de reçus pour extraire automatiquement les prix de vos reçus !"
 	},
 	"ProofCard": {
 		"Proof": "Preuve",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Ajouter plusieurs prix"
 		},
+		"Prices": {
+			"Title": "Prix"
+		},
 		"Proofs": {
 			"Title": "Preuves"
 		},
 		"ProofAddSingle": {
 			"Title": "Ajouter une seule preuve"
 		},
-		"ProofAddMultiple": {
-			"Title": "Ajouter plusieurs preuves"
-		},
 		"Community": {
 			"Title": "Communauté"
+		},
+		"Contribute": {
+			"Title": "Contribuer"
 		},
 		"Experiments": {
 			"Title": "Expérimentations"
@@ -775,6 +796,9 @@
 		"ContributionAssistant": {
 			"Title": "Assistant de contribution"
 		},
+		"ProofPriceTagAssistant": {
+			"Title": "Assistant d'étiquette de prix de preuve"
+		},
 		"PriceValidationAssistant": {
 			"Title": "Assistant de validation de prix"
 		},
@@ -816,7 +840,7 @@
 		"Prices": "Prix",
 		"PricesToday": "Prix ajoutés aujourd'hui",
 		"PricesTotal": "Nombre de prix total",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
+		"PricesLinkedToPriceTag": "Prix liés à une étiquette de prix",
 		"ProductsWithPrices": "Produits avec prix",
 		"Title": "Statistiques",
 		"Products": "Produits",
@@ -831,7 +855,7 @@
 		"WithoutProduct": "Sans produit",
 		"WithBarcode": "Avec un code-barres",
 		"WithCategory": "Avec une catégorie",
-		"PricesProofsPerSource": "Prices and proofs per source",
+		"PricesProofsPerSource": "Prix et preuves par source",
 		"LastUpdated": "Dernière mise à jour le {date}"
 	},
 	"UserDashboard": {
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Langue",
 		"LocationFinder": "Recherche de l'emplacement",
 		"LocationDisplayOSMID": "Afficher l'ID OSM",
+		"PriceListDisplay": "L'affichage de la liste de prix",
 		"PriceValidation": "Validation des prix",
 		"ProductDisplayBarcode": "Afficher le code-barres",
 		"ProductDisplayCategoryTag": "Afficher le tag de catégorie",

@@ -39,23 +39,16 @@
 			"Subtitle": "பல விலைக் குறிச்சொற்களைக் கொண்ட அலமாரி",
 			"Title": "பல தயாரிப்புகள்"
 		},
-		"PriceCreated": "விலை உருவாக்கப்பட்டது!",
 		"ReceiptMode": {
 			"Subtitle": "ஒன்று அல்லது அதற்கு மேற்பட்ட தயாரிப்புகள்",
 			"Title": "Receipt"
 		},
-		"SignedIn": "உள்நுழைந்தீர்கள்!",
 		"SingleProductMode": {
 			"Subtitle": "ஒரே ஒரு விலைக் குறி",
 			"Title": "ஒற்றை தயாரிப்பு"
-		},
-		"Thanks": "நன்றி",
-		"Title": "Add a price",
-		"TitleSingle": "ஒற்றை விலையைச் சேர்க்கவும்",
-		"TitleMultiple": "மொத்தமாக பல விலைகளைச் சேர்க்கவும்"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Done",
 		"ProductPriceDetails": {
 			"Add": "புதிய விலையைச் சேர்க்கவும்",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} விலை ஏற்கனவே பதிவேற்றப்பட்டது | {priceAlreadyUploadedNumber} விலை ஏற்கனவே பதிவேற்றப்பட்டது",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		},
-		"Scan": "Scan a barcode"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "பார்கோடு",
-		"Submit": "Submit",
 		"Title": "Type a barcode"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "கடந்த கால சவால்கள்",
+		"UpcomingChallenges": "வரவிருக்கும் சவால்கள்"
 	},
 	"Common": {
 		"About": "இதைப் பற்றி",
+		"Action": "செயல்",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Add a price",
 		"AddPrices": "Add prices",
@@ -201,6 +196,7 @@
 		"CATEGORY": "வகை",
 		"Category": "வகை",
 		"Categories": "Categories",
+		"CategoryMissing": "Category missing",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Challenge": "சவால்",
 		"Challenges": "சவால்கள்",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "தொடரும் சவால்",
 		"Chart": "Chart",
 		"Clear": "Clear",
-		"Contributors": "Contributors",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -216,6 +211,8 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Contribute",
+		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
 		"Country": "Country",
@@ -231,12 +228,15 @@
 		"Display": "Display",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
+		"DisplayTable": "Table",
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
 		"Error": "Error",
+		"Experiment": "பரிசோதனை",
 		"Experiments": "Experiments",
+		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
 		"Labels": "Labels",
@@ -311,10 +311,13 @@
 		"MyPrices": "எனது விலைகள்",
 		"MyProofs": "My proofs",
 		"MyStats": "எனது புள்ளிவிவரங்கள்",
+		"NextProof": "Next proof",
+		"NoBarcode": "பார்கோடு இல்லை",
 		"NotAnError": "ஒரு பிழை இல்லை",
 		"NotAPrice": "விலை இல்லை",
 		"Offline": "ஆஃப்லைன்",
 		"Online": "ஆன்லைன்",
+		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "ஆர்டர்",
 		"OrderLocationCountDESC": "இருப்பிட எண்ணிக்கை",
 		"OrderProductUniqueScansDESC": "ஸ்கேன்களின் எண்ணிக்கை",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "படங்கள் சேர்க்கப்பட்டன",
 		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "விலை குறிச்சொற்கள்",
 		"PriceCount": "{count} விலைகள் | {count} விலை | {count} விலைகள்",
 		"PriceAddedCount": "{count} விலைகள் சேர்க்கப்பட்டன | {count} விலை சேர்க்கப்பட்டது | {count} விலைகள் சேர்க்கப்பட்டன",
 		"PriceToValidateCount": "{count} சரிபார்க்க வேண்டிய விலைகள் | {count} சரிபார்க்க வேண்டிய விலை | {count} சரிபார்க்க வேண்டிய விலைகள்",
 		"PriceCreated": "விலை உருவாக்கப்பட்டது!",
+		"PriceMissing": "விலை இல்லை",
+		"PricesAlreadyUploaded": "விலைகள் ஏற்கனவே பதிவேற்றப்பட்டுள்ளன",
 		"PricesMore": "கூடுதல் விலைகள்",
 		"PricesAdded": "விலைகள் சேர்க்கப்பட்டன",
 		"PricesAddedToday": "இன்று சேர்க்கப்பட்ட விலைகள்",
@@ -356,6 +362,8 @@
 		"Privacy": "Privacy",
 		"ProductCount": "{count} தயாரிப்புகள் | {count} தயாரிப்பு | {count} தயாரிப்புகள்",
 		"ProductFind": "தயாரிப்பைக் கண்டறியவும்",
+		"ProductMissing": "தயாரிப்பு இல்லை",
+		"ProductOrCategoryMissing": "தயாரிப்பு அல்லது வகை இல்லை.",
 		"ProofCount": "{count} தயாரிப்புகள் | {count} தயாரிப்பு | {count} தயாரிப்புகள்",
 		"ProofDetails": "ஆதார விவரங்கள்",
 		"ProofMissing": "Proof missing",
@@ -394,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Summary": "சுருக்கம்",
 		"TaglineOriginal": "உணவு விலைகளின் திறந்த கூட்டத் தரவுத்தளம்",
 		"TaglineAlt1": "விலைகளின் திறந்த மக்கள்தொகை தரவுத்தளம்",
 		"TaglineAlt2": "உணவு மற்றும் தயாரிப்பு விலைகளின் திறந்த கூட்டத் தரவுத்தளம்",
@@ -410,6 +419,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "முயற்சி செய்து பாருங்கள்",
 		"Type": "Type",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "லேபிள்களை அனுப்பவும்"
 		},
 		"PricesAlreadyAdded": "விலைகள் ஏற்கனவே சேர்க்கப்பட்டன",
+		"PricesWithoutProductOrCategory": "தயாரிப்பு அல்லது வகை இல்லாத விலைகள்",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} விலை(கள்) {date} இல் {locationName} இல் ஏற்கனவே உள்ள ஆதாரத்துடன் சேர்க்கப்படும்",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "கையாள மற்றொரு ஆதாரத்தைத் தேர்வு செய்யவும்",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "விலை இல்லை என்று குறிக்கப்பட்ட விலைக் குறி",
+			"PriceTagNoBarcode": "விலைக் குறிச்சொல் பார்கோடு இல்லை எனக் குறிக்கப்பட்டுள்ளது",
+			"PriceTagOther": "விலைக் குறிச்சொல் மற்றதாகக் குறிக்கப்பட்டுள்ளது",
 			"NewPriceTag": "புதிய விலைக் குறி"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -582,7 +593,8 @@
 		"NoSpaces": "தயவுசெய்து இடைவெளிகளைப் பயன்படுத்த வேண்டாம்",
 		"Number": "எண்ணை உள்ளிடவும்",
 		"Positive": "விலை எதிர்மறையாக இருக்காது",
-		"TwoDecimals": "இரண்டு தசமங்கள் மட்டுமே அனுமதிக்கப்படுகின்றன"
+		"TwoDecimals": "இரண்டு தசமங்கள் மட்டுமே அனுமதிக்கப்படுகின்றன",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "பார்கோடு நீளம்: {length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "பல விலைக் குறிச்சொற்களைப் பதிவேற்ற (ஒரே கடை இடம் மற்றும் தேதி), இங்கே கிளிக் செய்யவும்!",
+		"PromoReceiptAssistant": "பரிசோதனை: உங்கள் ரசீதுகளிலிருந்து விலைகளைத் தானாகவே பிரித்தெடுக்க புதிய ரசீது உதவியாளரை முயற்சிக்கவும்!"
 	},
 	"ProofCard": {
 		"Proof": "Proof",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Add multiple prices"
 		},
+		"Prices": {
+			"Title": "Prices"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
-		"ProofAddMultiple": {
-			"Title": "பல சான்றுகளைச் சேர்க்கவும்"
-		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Contribute"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -774,6 +795,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "விலைக் குறிச்சொல் ஆதார உதவியாளர்"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Languages",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",

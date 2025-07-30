@@ -35,7 +35,7 @@ export default {
     },
     target: {
       type: String,
-      default: 'prices-add-multiple'  // 'prices-add-single', 'contribution-assistant'
+      default: 'prices-add-multiple'  // 'prices-add-single', 'contribution-assistant', 'receipt-assistant'
     },
     disabled: {
       type: Boolean,
@@ -46,13 +46,14 @@ export default {
     return {
       ADD_PRICE_SINGLE_BASE_URL: '/prices/add/single',
       ADD_PRICE_MULTIPLE_BASE_URL: '/prices/add/multiple',
-      CONTRIBUTION_ASSISTANT_BASE_URL: '/experiments/contribution-assistant'
+      CONTRIBUTION_ASSISTANT_BASE_URL: '/experiments/proof-price-tag-assistant',
+      RECEIPT_ASSISTANT_BASE_URL: '/experiments/receipt-assistant'
     }
   },
   computed: {
     getText() {
-      if (this.target === 'contribution-assistant') {
-        return this.$t('ContributionAssistant.OpenWithTheAssistant')
+      if (['contribution-assistant', 'receipt-assistant'].includes(this.target)) {
+        return this.$t('Common.OpenWithTheAssistant')
       }
       else if (this.target === 'prices-add-single') {
         return this.$t('Common.AddPrice')
@@ -64,12 +65,15 @@ export default {
         if (this.target === 'contribution-assistant') {
           return `${this.CONTRIBUTION_ASSISTANT_BASE_URL}?proof_ids=${this.proofId}`
         }
+        else if (this.target === 'receipt-assistant') {
+          return `${this.RECEIPT_ASSISTANT_BASE_URL}?proof_ids=${this.proofId}`
+        }
         return `${this.ADD_PRICE_MULTIPLE_BASE_URL}?proof_id=${this.proofId}`
       }
       return `${this.ADD_PRICE_SINGLE_BASE_URL}?code=${this.productCode}`
     },
     getIcon() {
-      if (this.target === 'contribution-assistant') {
+      if (['contribution-assistant', 'receipt-assistant'].includes(this.target)) {
         return 'mdi-draw'
       }
       return 'mdi-tag-plus-outline'

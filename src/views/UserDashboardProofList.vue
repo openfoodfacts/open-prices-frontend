@@ -2,16 +2,16 @@
   <v-row v-if="!loading">
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-image">
-        {{ $t('Common.ProofCount', { count: userProofTotal }) }}
+        {{ $t('Common.ProofCount', { count: proofTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
-      <FilterMenu v-if="userProofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" @update:currentKind="toggleProofKind($event)" />
-      <OrderMenu v-if="userProofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
+      <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
+      <FilterMenu v-if="proofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" @update:currentKind="toggleProofKind($event)" />
+      <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row>
-    <v-col v-for="proof in userProofList" :key="proof" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="proof in proofList" :key="proof" cols="12" sm="6" md="4" xl="3">
       <ProofCard :proof="proof" :hideProofHeader="true" :showImageThumb="true" height="100%" @proofUpdated="handleProofUpdated" />
     </v-col>
   </v-row>
@@ -49,9 +49,9 @@ export default {
   data() {
     return {
       // data
-      userProofList: [],
-      userProofTotal: null,
-      userProofPage: 0,
+      proofList: [],
+      proofTotal: null,
+      proofPage: 0,
       loading: false,
       proofUpdated: false,
       // filter & order
@@ -66,8 +66,8 @@ export default {
     username() {
       return this.appStore.user.username
     },
-    getUserProofsParams() {
-      let defaultParams = { owner: this.username, order_by: this.currentOrder, page: this.userProofPage }
+    getProofsParams() {
+      let defaultParams = { owner: this.username, order_by: this.currentOrder, page: this.proofPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
@@ -83,7 +83,7 @@ export default {
   watch: {
     $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initUserProofList()
+        this.initProofList()
       }
     }
   },
@@ -92,7 +92,7 @@ export default {
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentKind = this.$route.query[constants.KIND_PARAM] || this.currentKind
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.initUserProofList()
+    this.initProofList()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
     window.addEventListener('scroll', this.handleDebouncedScroll)
@@ -101,20 +101,20 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initUserProofList() {
-      this.userProofList = []
-      this.userProofTotal = null
-      this.userProofPage = 0
-      this.getUserProofs()
+    initProofList() {
+      this.proofList = []
+      this.proofTotal = null
+      this.proofPage = 0
+      this.getProofs()
     },
-    getUserProofs() {
-      if ((this.userProofTotal != null) && (this.userProofList.length >= this.userProofTotal)) return
+    getProofs() {
+      if ((this.proofTotal != null) && (this.proofList.length >= this.proofTotal)) return
       this.loading = true
-      this.userProofPage += 1
-      return api.getProofs(this.getUserProofsParams)
+      this.proofPage += 1
+      return api.getProofs(this.getProofsParams)
         .then((data) => {
-          this.userProofList.push(...data.items)
-          this.userProofTotal = data.total
+          this.proofList.push(...data.items)
+          this.proofTotal = data.total
           this.loading = false
         })
     },
@@ -124,28 +124,28 @@ export default {
     toggleProofFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
-      // this.initUserProofList() will be called in watch $route
+      // this.initProofList() will be called in watch $route
     },
     toggleProofType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initUserProofList() will be called in watch $route
+      // this.initProofList() will be called in watch $route
     },
     toggleProofKind(kindKey) {
       this.currentKind = (this.currentKind !== kindKey) ? kindKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
-      // this.initUserPriceList() will be called in watch $route
+      // this.initProofList() will be called in watch $route
     },
     selectProofOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
-        // this.initUserProofList() will be called in watch $route
+        // this.initProofList() will be called in watch $route
       }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getUserProofs()
+        this.getProofs()
       }
     },
   }

@@ -1,23 +1,38 @@
 <!-- eslint-disable vue/no-mutating-props -->
 <template>
   <v-card class="d-flex flex-column">
-    <v-card-title v-if="isinDialog">
-      {{ $t("PriceEdit.Title") }} <v-btn style="float:right;" variant="text" density="compact" icon="mdi-close" @click="close" />
-    </v-card-title>
+    <template v-if="isInDialog" #title>
+      {{ $t("PriceEdit.Title") }}
+    </template>
+    <template v-if="isInDialog" #prepend>
+      <v-icon icon="mdi-pencil" />
+    </template>
+    <template v-if="isInDialog" #append>
+      <v-icon icon="mdi-close" @click="close" />
+    </template>
+    <v-divider v-if="isInDialog" />
     <v-card-text class="flex-grow-1">
       <ProofImageCropped v-if="productPriceForm.proofImage" class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" @croppedImage="setCroppedImage($event)" />
       <v-row v-if="showProductNameField">
         <v-col>
           <v-text-field
-            :model-value="productPriceForm.product_name"
+            v-model="productPriceForm.product_name"
             :label="$t('Common.ProductName')"
             type="text"
             hide-details="auto"
           />
         </v-col>
       </v-row>
-      <ProductInputRow :productForm="productPriceForm" :mode="mode" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="true" @filled="productFormFilled = $event" />
-      <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :mode="mode" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
+      <ProductInputRow :productForm="productPriceForm" :mode="mode" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="hideProductBarcodeScannerTab" @filled="productFormFilled = $event" />
+      <PriceInputRow :priceForm="productPriceForm" :mode="mode" :hideCurrencyChoice="true" :product="productPriceForm.product" :proofType="productPriceForm.proof ? productPriceForm.proof.type : null" @filled="pricePriceFormFilled = $event" />
+      <v-alert
+        v-if="!productPriceFormValid"
+        class="mt-4 mb-4"
+        type="warning"
+        variant="outlined"
+        density="compact"
+        :text="formInvalidAlertText"
+      />
     </v-card-text>
     <v-divider v-if="!hideProofDetails" />
     <v-card-text v-if="!hideProofDetails" class="flex-grow-0">
@@ -47,6 +62,11 @@
           <v-list-item :slim="true" prepend-icon="mdi-currency-usd-off" @click="updatePriceTagStatus(PRICE_TAG_STATUS_NOT_A_PRICE)">
             {{ $t('Common.NotAPrice') }}
           </v-list-item>
+          <v-divider class="mt-2 mb-2" />
+          <v-list-item :slim="true" prepend-icon="mdi-barcode-off" @click="updatePriceTagStatus(PRICE_TAG_STATUS_NO_BARCODE)">
+            {{ $t('Common.NoBarcode') }}
+          </v-list-item>
+          <!-- missing PRICE_TAG_STATUS_OTHER -->
         </v-list>
       </v-menu>
       <v-spacer />
@@ -64,6 +84,8 @@
         v-if="!hideUploadAction"
         color="primary"
         variant="flat"
+        :prepend-icon="!productPriceFormValid ? 'mdi-alert-circle' : ''"
+        :disabled="!productPriceFormValid"
         @click="validatePriceTag"
       >
         {{ $t('Common.Confirm') }}
@@ -109,13 +131,19 @@ export default {
         price_without_discount: null,
         discount_type: null,
         currency: null,
+        receipt_quantity: null,
         proofImage: null,
         processed: null,
+        product_code: null,
         detected_product_code: null,
         product_name: null,
       })
     },
     showProductNameField: {
+      type: Boolean,
+      default: false
+    },
+    hideProductBarcodeScannerTab: {
       type: Boolean,
       default: false
     },
@@ -143,7 +171,7 @@ export default {
       type: Boolean,
       default: false
     },
-    isinDialog: {
+    isInDialog: {
       type: Boolean,
       default: false,
       description: 'Whether this card is displayed in a dialog'
@@ -155,19 +183,39 @@ export default {
       PRICE_TAG_STATUS_UNREADABLE: constants.PRICE_TAG_STATUS_UNREADABLE,
       PRICE_TAG_STATUS_TRUNCATED: constants.PRICE_TAG_STATUS_TRUNCATED,
       PRICE_TAG_STATUS_NOT_A_PRICE: constants.PRICE_TAG_STATUS_NOT_A_PRICE,
+      PRICE_TAG_STATUS_NO_BARCODE: constants.PRICE_TAG_STATUS_NO_BARCODE,
+      PRICE_TAG_STATUS_OTHER: constants.PRICE_TAG_STATUS_OTHER,
       // data
-      mode: null,  // see mounted
+      mode: null,  // 'display' or 'edit'  // see mounted
       productFormFilled: false,
       pricePriceFormFilled: false,
     }
   },
   computed: {
     ...mapStores(useAppStore),
-    productIsTypeProduct() {
+    priceTagIsTypeProduct() {
       return this.productPriceForm.type === constants.PRICE_TYPE_PRODUCT
+    },
+    priceTagIsTypeCategory() {
+      return this.productPriceForm.type === constants.PRICE_TYPE_CATEGORY
+    },
+    productPriceFormValid() {
+      return this.productPriceForm &&
+             ((this.priceTagIsTypeProduct && this.productPriceForm.product_code) || (this.priceTagIsTypeCategory && this.productPriceForm.category_tag)) &&
+             this.productPriceForm.price
     },
     showOverlay() {
       return this.loading
+    },
+    formInvalidAlertText() {
+      if (this.priceTagIsTypeProduct && !this.productPriceForm.product_code) {
+        return this.$t('Common.ProductMissing')
+      } else if (this.priceTagIsTypeCategory && !this.productPriceForm.category_tag) {
+        return this.$t('Common.CategoryMissing')
+      } else if (!this.productPriceForm.price) {
+        return this.$t('Common.PriceMissing')
+      }
+      return this.$t('Common.Error')
     },
     errorButtonText() {
       if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_UNREADABLE) {
@@ -176,6 +224,10 @@ export default {
         return this.$t('Common.Truncated')
       } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_NOT_A_PRICE) {
         return this.$t('Common.NotAPrice')
+      } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_NO_BARCODE) {
+        return this.$t('Common.NoBarcode')
+      } else if (this.productPriceForm.status === constants.PRICE_TAG_STATUS_OTHER) {
+        return this.$t('Common.Other')
       } else {
         return this.$t('Common.Error')
       }
@@ -201,7 +253,7 @@ export default {
       this.resetMode()
     },
     validatePriceTag() {
-      this.$emit('validatePriceTag')
+      this.$emit('validatePriceTag', this.productPriceForm)
       this.resetMode()
     },
     close() {

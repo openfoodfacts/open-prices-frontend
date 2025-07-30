@@ -8,7 +8,7 @@
       <v-divider />
 
       <v-card-text>
-        <v-chip v-for="brand in brands" :key="brand" label class="mr-2 mb-2" @click="goToBrand(brand)">
+        <v-chip v-for="brand in brands" :key="brand" label class="mr-2 mb-2" :to="getBrandUrl(brand)">
           {{ brand }}
         </v-chip>
       </v-card-text>
@@ -26,8 +26,8 @@ export default {
   },
   emits: ['close'],
   methods: {
-    goToBrand(brand) {
-      this.$router.push({ path: `/brands/${brand}` })
+    getBrandUrl(brand) {
+      return `/brands/${brand}`
     },
     close() {
       this.$emit('close')

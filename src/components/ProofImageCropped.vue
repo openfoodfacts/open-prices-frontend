@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import proof_utils from '../utils/proof.js'
+
 export default {
   props: {
     proofImageFilePath: {
@@ -43,7 +45,7 @@ export default {
       this.ctx = this.canvas.getContext('2d')
       this.proofImage = new Image()
       this.proofImage.onload = this.cropImage
-      this.proofImage.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${this.proofImageFilePath}`
+      this.proofImage.src = proof_utils.getImageFullUrl(this.proofImageFilePath)
       this.proofImage.crossOrigin = 'Anonymous'
     },
     cropImage() {

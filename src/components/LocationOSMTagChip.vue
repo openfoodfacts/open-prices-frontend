@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import utils from '../utils.js'
+import geo_utils from '../utils/geo.js'
 
 export default {
   props: {
@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     getLocationTag(location) {
-      return utils.getLocationTag(location)
+      return geo_utils.getLocationTag(location)
     },
   }
 }

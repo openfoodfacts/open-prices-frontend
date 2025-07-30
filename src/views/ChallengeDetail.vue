@@ -10,7 +10,7 @@
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
       </p>
       <p v-if="challenge.categories.length">
-        <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" />
+        <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
       </p>
     </v-col>
     <v-col cols="12" md="6">
@@ -44,7 +44,6 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api.js'
-import utils from '../utils.js'
 
 export default {
   components: {
@@ -65,15 +64,11 @@ export default {
     username() {
       return this.appStore.user.username
     },
-    startDateMidnight() {
-      return utils.dateStartOfDay(this.challenge.start_date)
-    },
-    endDateMidnight() {
-      return utils.dateEndOfDay(this.challenge.end_date)
-    },
     defaultParams() {
-      return { created__gte: this.startDateMidnight, created__lte: this.endDateMidnight }
-    }
+      return { 
+        tags__contains: `challenge-${this.challenge.id}`
+      }
+    },
   },
   mounted() {
     this.getChallenge()
@@ -100,7 +95,7 @@ export default {
     },
     getStats() {
       this.loading = true
-      api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0] })
+      api.getPriceStats(this.defaultParams)
       .then((data) => {
         this.challenge.numberOfContributions = data.price__count
         this.loading = false
@@ -112,7 +107,7 @@ export default {
       })
 
       if (this.username) {
-        api.getPriceStats({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0], owner: this.username })
+        api.getPriceStats({ ...this.defaultParams, owner: this.username })
         .then((data) => {
           this.challenge.userContributions = data.price__count
         })
@@ -123,7 +118,7 @@ export default {
       }
     },
     getLatestPrices() {
-      api.getPrices({ ...this.defaultParams, product__categories_tags__contains: this.challenge.categories[0], size: 10 })
+      api.getPrices({ ...this.defaultParams, size: 10 })
       .then((data) => {
         this.challenge.latestContributions = data.items
       })

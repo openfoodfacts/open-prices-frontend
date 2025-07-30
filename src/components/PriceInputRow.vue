@@ -18,7 +18,7 @@
       </div>
       <v-text-field
         :model-value="priceForm.price"
-        :class="priceForm.price ? 'outline-border-success' : 'outline-border-error'"
+        :class="priceForm.price && priceForm.currency ? 'outline-border-success' : 'outline-border-error'"
         density="compact"
         variant="outlined"
         type="text"
@@ -137,7 +137,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
-import utils from '../utils.js'
+import price_utils from '../utils/price.js'
 
 export default {
   components: {
@@ -196,7 +196,7 @@ export default {
       return !!this.categoryTag
     },
     productIsTypeCategory() {
-      return this.priceForm && this.priceForm.type === constants.PRICE_TYPE_CATEGORY
+      return this.priceForm && (this.priceForm.type === constants.PRICE_TYPE_CATEGORY)
     },
     proofIsTypeReceipt() {
       return this.proofType === constants.PROOF_TYPE_RECEIPT
@@ -208,6 +208,7 @@ export default {
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
         value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+        value => !!value && !!this.priceForm.currency || this.$t('Common.CurrencyMissing'),
       ]
     },
     receiptQuantityRules() {
@@ -249,10 +250,10 @@ export default {
       return input.replace(/,/g, '.')
     },
     getPriceValue(priceValue, priceCurrency) {
-      return utils.prettyPrice(priceValue, priceCurrency)
+      return price_utils.prettyPrice(priceValue, priceCurrency)
     },
     getPricePerUnit(price) {
-      if (price) {
+      if (price && this.priceForm.currency) {
         price = parseFloat(price)
         if (this.priceForm.type === 'CATEGORY' && this.priceForm.category_tag) {
           if (this.priceForm.price_per === 'UNIT') {
@@ -268,16 +269,6 @@ export default {
           }
           return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
         }
-      }
-      return null
-    },
-    getPriceValueDisplay(price) {
-      if (price) {
-        price = parseFloat(price)
-        if (this.hasCategoryTag) {
-          return this.getPricePerUnit(price)
-        }
-        return this.getPriceValue(price, this.priceForm.currency)
       }
       return null
     },

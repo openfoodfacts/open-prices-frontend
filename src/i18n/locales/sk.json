@@ -39,23 +39,16 @@
 			"Subtitle": "Regál s viacerými cenovkami",
 			"Title": "Viaceré produkty"
 		},
-		"PriceCreated": "Cena vytvorená!",
 		"ReceiptMode": {
 			"Subtitle": "Jeden alebo viacero produktov",
 			"Title": "Účtenka"
 		},
-		"SignedIn": "Prihlásený!",
 		"SingleProductMode": {
 			"Subtitle": "Len jedna cenovka",
 			"Title": "Jeden produkt"
-		},
-		"Thanks": "Ďakujeme",
-		"Title": "Pridajte cenu",
-		"TitleSingle": "Pridajte jednu cenu",
-		"TitleMultiple": "Hromadne pridajte viacero cien"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Hotovo",
 		"ProductPriceDetails": {
 			"Add": "Pridajte novú cenu",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} cena už nahraná | {priceAlreadyUploadedNumber} ceny sú už nahrané",
@@ -79,7 +72,7 @@
 			"Label": "Cena",
 			"LabelDiscounted": "Zvýhodnená cena",
 			"LabelFull": "Plná cena",
-			"Proof": "Proof",
+			"Proof": "Potvrdenie",
 			"ProofDateChanged": "Dátum bol aktualizovaný!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -96,9 +89,9 @@
 			"CategoryLabel": "Kategória",
 			"OriginLabel": "Pôvod",
 			"ProductBarcode": "Čiarový kód produktu",
-			"Scan": "Sken",
+			"Scan": "Skenovať",
 			"ScanBarcode": "Naskenujte čiarový kód",
-			"ScanBarcodeShort": "Sken",
+			"ScanBarcodeShort": "Skenovať",
 			"Type": "Druhy",
 			"TypeBarcode": "Zadajte čiarový kód",
 			"TypeBarcodeShort": "Druhy",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		},
-		"Scan": "Naskenujte čiarový kód"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Čiarový kód",
-		"Submit": "Potvrdiť",
 		"Title": "Zadajte čiarový kód"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Minulé výzvy",
+		"UpcomingChallenges": "Nadchádzajúce výzvy"
 	},
 	"Common": {
 		"About": "O",
+		"Action": "Akcia",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Pridajte cenu",
 		"AddPrices": "Add prices",
@@ -183,7 +178,7 @@
 		"Barcode": "Čiarový kód",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Naskenujte čiarový kód",
-		"BarcodeScanShort": "Sken",
+		"BarcodeScanShort": "Skenovať",
 		"BarcodeType": "Zadajte čiarový kód",
 		"BarcodeTypeShort": "Druhy",
 		"BarcodeInvalid": "Neplatný čiarový kód",
@@ -191,16 +186,17 @@
 		"Brands": "Značky",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Cena",
-		"Prices": "Prices",
+		"Prices": "Ceny",
 		"PRODUCT": "Produkt",
 		"Product": "Produkt",
-		"ProductName": "Product name",
+		"ProductName": "Názov výrobku",
 		"Products": "Výrobky",
-		"Proof": "Proof",
+		"Proof": "Potvrdenie",
 		"Proofs": "Proofs",
 		"CATEGORY": "Kategória",
 		"Category": "Kategória",
 		"Categories": "Kategórie",
+		"CategoryMissing": "Category missing",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Challenge": "Challenge",
 		"Challenges": "Challenges",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Vymazať",
-		"Contributors": "Prispievatelia",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -216,8 +211,10 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Prispieť",
+		"Contributors": "Prispievatelia",
 		"Contributions": "Príspevky",
-		"Confirm": "Confirm",
+		"Confirm": "Potvrdiť",
 		"Country": "Krajina",
 		"Countries": "Krajiny",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -228,15 +225,18 @@
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
 		"Dashboard": "Hlavný panel",
-		"Display": "Display",
+		"Display": "Zobraziť",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
+		"DisplayTable": "Table",
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Chart",
 		"Done": "Hotovo",
 		"Error": "Chyba",
+		"Experiment": "Experiment",
 		"Experiments": "Experiments",
+		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Štítok",
 		"Labels": "Štítky",
@@ -254,7 +254,7 @@
 		"LocationSearchByName": "Search by name and city",
 		"Date": "Dátum",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "Podrobnosti",
 		"Delete": "Vymazať",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -286,11 +286,11 @@
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "Často kladené otázky",
 		"FrequentlyAskedQuestions": "Často kladené otázky",
 		"GDPR_REQUEST": "žiadosť GDPR",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Pomoc",
 		"History": "História",
 		"Image": "Obrázok",
 		"ImageSelect": "Select an image",
@@ -309,12 +309,15 @@
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
-		"MyProofs": "My proofs",
+		"MyProofs": "Moje potvrdenia",
 		"MyStats": "My stats",
+		"NextProof": "Next proof",
+		"NoBarcode": "Žiadny čiarový kód",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -342,11 +345,14 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Cenovka",
+		"PriceTags": "Cenovky",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena vytvorená!",
+		"PriceMissing": "Chýbajúca cena",
+		"PricesAlreadyUploaded": "Ceny už boli nahrané",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -356,10 +362,12 @@
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
+		"ProductMissing": "Chýba produkt",
+		"ProductOrCategoryMissing": "Chýba produkt alebo kategória",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Vyberte potvrdenie",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -389,11 +397,12 @@
 		"SignIn": "Prihlásiť sa",
 		"SignOut": "Odhlásiť sa",
 		"SideMenu": "Side menu",
-		"Share": "Share",
+		"Share": "Zdielať",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Summary": "Zhrnutie",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -410,8 +419,9 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Vyskúšajte to",
 		"Type": "Druhy",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Neznámy produkt",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -434,13 +444,13 @@
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Zobrazenie",
-		"Website": "Website",
+		"Website": "Webová stránka",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Áno",
 		"No": "Nie",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Potravina",
+		"PetFood": "Krmivo pre domáce zvieratá",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prices already added",
+		"PricesWithoutProductOrCategory": "Ceny bez produktu alebo kategórie",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Cenovka označená ako „bez čiarového kódu“",
+			"PriceTagOther": "Cenovka označená ako iné",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -552,9 +563,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Potvrdenie",
 		"FullPrice": "Plná cena",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Neznámy produkt"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -582,7 +593,8 @@
 		"NoSpaces": "Please don't use spaces",
 		"Number": "Input a number",
 		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"TwoDecimals": "Only two decimals allowed",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -620,17 +632,23 @@
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Ak chcete nahrať viacero cenovok (rovnaké miesto a dátum predajne), kliknite sem!",
+		"PromoReceiptAssistant": "Experiment: vyskúšajte nového asistenta na spracovanie účteniek, ktorý automaticky extrahuje ceny z vašich účteniek!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
+		"Proof": "Potvrdenie",
+		"PRICE_TAG": "Cenovka",
 		"RECEIPT": "Účtenka",
 		"GDPR_REQUEST": "žiadosť GDPR",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Vyberte potvrdenie",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -642,7 +660,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Načítať ďalšie",
-		"Prices": "Prices",
+		"Prices": "Ceny",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Pridajte viacero cien"
 		},
+		"Prices": {
+			"Title": "Ceny"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
-		"ProofAddMultiple": {
-			"Title": "Add multiple proofs"
-		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Prispieť"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -740,7 +761,7 @@
 			"Title": "Moje ceny"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Moje potvrdenia"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -775,6 +796,9 @@
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
+		"ProofPriceTagAssistant": {
+			"Title": "Asistent cenovky s dôkazom"
+		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
 		},
@@ -800,7 +824,7 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "Zdielať"
 	},
 	"SignIn": {
 		"Button": "Prihlásiť sa",
@@ -813,7 +837,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Ceny",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -840,7 +864,7 @@
 		"LoadMore": "Načítať ďalšie",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
-		"MyProofs": "My proofs",
+		"MyProofs": "Moje potvrdenia",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Nastavenia",
 		"Title": "Hlavný panel",
@@ -861,7 +885,7 @@
 		"ChangeLanguage": "Zmeniť jazyk",
 		"CountryLabel": "Krajina",
 		"CurrencyLabel": "Mena",
-		"DisplayTitle": "Display",
+		"DisplayTitle": "Zobraziť",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Jazyk",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",

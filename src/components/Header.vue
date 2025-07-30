@@ -1,20 +1,20 @@
 <template>
-  <v-app-bar :elevation="1" class="bg-header">
+  <v-app-bar class="bg-header">
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu" />
     <v-app-bar-title>
       <span style="cursor:pointer" @click="$router.push('/')">
         <img src="/favicon.svg" height="28" width="28" style="vertical-align:bottom">
         {{ APP_NAME }}
-        <span v-if="ENV !== 'prod'" class="text-caption">{{ ENV }}</span>
+        <span v-if="ENV !== 'prod'" class="text-caption text-error">{{ ENV }}</span>
       </span>
     </v-app-bar-title>
     <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')" />
     <v-btn v-else prepend-icon="mdi-magnify" to="/search" :aria-label="$t('Common.Search')">
       {{ $t('Common.Search') }}
     </v-btn>
-    <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrices')" />
-    <v-btn v-else prepend-icon="mdi-tag-plus-outline" to="/prices/add/multiple" :aria-label="$t('Common.AddPrices')">
-      {{ $t('Common.AddPrices') }}
+    <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-tag-plus-outline" to="/contribute" :aria-label="$t('Common.Contribute')" />
+    <v-btn v-else prepend-icon="mdi-tag-plus-outline" to="/contribute" :aria-label="$t('Common.Contribute')">
+      {{ $t('Common.Contribute') }}
     </v-btn>
     <template v-if="!username" #append>
       <v-btn v-if="!$vuetify.display.smAndUp" icon="mdi-login" to="/sign-in" :aria-label="$t('Common.SignIn')" />
@@ -28,6 +28,10 @@
         {{ username }}
       </v-btn>
     </template>
+  </v-app-bar>
+
+  <v-app-bar v-if="ENV !== 'prod'" class="pl-3" location="bottom" color="error" density="compact">
+    <span>⚠️ This is a development environment ({{ ENV }})</span>
   </v-app-bar>
 
   <v-navigation-drawer v-model="showDrawerMenu" temporary>

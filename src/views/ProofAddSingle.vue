@@ -3,7 +3,7 @@
     <v-col cols="12">
       <v-stepper v-model="step" hide-actions disabled>
         <v-stepper-header>
-          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step === 2" />
+          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
           <v-divider />
           <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step === 2" />
         </v-stepper-header>
@@ -18,37 +18,29 @@
   </v-row>
 
   <v-row v-if="step === 2">
-    <v-col>
+    <v-col cols="12">
+      <v-alert
+        type="success"
+        variant="outlined"
+        density="compact"
+        :text="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
+      />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
-        prepend-icon="mdi-image-check"
-      >
-        <v-divider />
-        <v-card-text class="text-center">
-          <v-row>
-            <v-col cols="12" sm="6">
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-image-plus"
-                @click="reloadPage"
-              >
-                {{ $t('Common.AddNewProof') }}
-              </v-btn>
-            </v-col>
-            <v-col cols="12" sm="6">
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-account-circle"
-                @click="goToUserDashboard"
-              >
-                {{ $t('Common.MyDashboard') }}
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
+        :title="$t('Common.AddNewProof')"
+        prepend-icon="mdi-image-plus"
+        append-icon="mdi-arrow-right"
+        @click="reloadPage"
+      />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Common.MyDashboard')"
+        prepend-icon="mdi-account-circle"
+        append-icon="mdi-arrow-right"
+        :to="getUserDashboardUrl"
+      />
     </v-col>
   </v-row>
 </template>
@@ -69,11 +61,16 @@ export default {
           value: 1
         },
         {
-          title: this.$t('Common.Done'),
+          title: this.$t('Common.Actions'),
           value: 2
         }
       ],
       proofUploadCount: 0
+    }
+  },
+  computed: {
+    getUserDashboardUrl() {
+      return '/dashboard?proofSingleSuccess=true'
     }
   },
   methods: {
@@ -84,9 +81,6 @@ export default {
     reloadPage() {
       window.location.reload()
     },
-    goToUserDashboard() {
-      this.$router.push({ path: '/dashboard', query: { proofSingleSuccess: 'true' } })
-    }
   }
 }
 </script>

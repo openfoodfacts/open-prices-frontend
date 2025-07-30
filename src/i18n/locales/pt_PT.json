@@ -39,23 +39,16 @@
 			"Subtitle": "Uma prateleira com várias etiquetas de preço",
 			"Title": "Vários produtos"
 		},
-		"PriceCreated": "Preço criado!",
 		"ReceiptMode": {
 			"Subtitle": "Um ou vários produtos",
 			"Title": "Talão"
 		},
-		"SignedIn": "Sessão iniciada!",
 		"SingleProductMode": {
 			"Subtitle": "Apenas uma etiqueta de preço",
 			"Title": "Produto único"
-		},
-		"Thanks": "Obrigado",
-		"Title": "Adicionar um preço",
-		"TitleSingle": "Adicionar um preço único",
-		"TitleMultiple": "Adicionar vários preços em massa"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Concluído",
 		"ProductPriceDetails": {
 			"Add": "Adicionar um novo preço",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} preço já carregado | {priceAlreadyUploadedNumber} preços já carregados",
@@ -77,9 +70,9 @@
 		"PriceDetails": {
 			"Discount": "Desconto?",
 			"Label": "Preço",
-			"LabelDiscounted": "Preços com desconto",
+			"LabelDiscounted": "Preço descontado",
 			"LabelFull": "Preço original",
-			"Proof": "Comprovativo",
+			"Proof": "Demonstração",
 			"ProofDateChanged": "Data de atualização!",
 			"ProofSelected": "Comprovativo selecionado!",
 			"ProofUploaded": "Comprovativo carregado!",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "fornecido por {url}"
-		},
-		"Scan": "Digitalizar um código de barras"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Código de barras",
-		"Submit": "Enviar",
 		"Title": "Digite um código de barras"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Desafios passados",
+		"UpcomingChallenges": "Próximos desafios"
 	},
 	"Common": {
 		"About": "Sobre",
+		"Action": "Ação",
+		"Actions": "Actions",
 		"AddComment": "Adicionar um comentário",
 		"AddPrice": "Adicionar um preço",
 		"AddPrices": "Adicionar preços",
@@ -196,11 +191,12 @@
 		"Product": "Produto",
 		"ProductName": "Nome do produto",
 		"Products": "Produtos",
-		"Proof": "Comprovativo",
+		"Proof": "Demonstração",
 		"Proofs": "Comprovativos",
 		"CATEGORY": "Categoria",
 		"Category": "Categoria",
 		"Categories": "Categorias",
+		"CategoryMissing": "Falta a categoria",
 		"CategoryTotal": "{count} categorias | {count} categoria | {count} categorias",
 		"Challenge": "Desafio",
 		"Challenges": "Desafios",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Desafio a decorrer",
 		"Chart": "Gráfico",
 		"Clear": "Limpar",
-		"Contributors": "Colaboradores",
 		"Comment": "Comentário",
 		"Community": "Comunidade",
 		"CommunityPrices": "Community prices",
@@ -216,6 +211,8 @@
 		"Consumption": "Consumo",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Contribuir",
+		"Contributors": "Colaboradores",
 		"Contributions": "Contribuições",
 		"Confirm": "Confirmar",
 		"Country": "País",
@@ -231,12 +228,15 @@
 		"Display": "Mostrar",
 		"DisplayList": "Lista",
 		"DisplayPriceList": "Lista",
+		"DisplayTable": "Table",
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Gráfico",
 		"Done": "Concluído",
 		"Error": "Erro",
+		"Experiment": "Experiência",
 		"Experiments": "Experiências",
+		"GoToProof": "Vá ao comprovativo",
 		"Join": "Aderir",
 		"Label": "Rótulo",
 		"Labels": "Etiquetas",
@@ -308,13 +308,16 @@
 		"MobileApp": "Aplicação móvel",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "Meu painel de controlo",
-		"MyPrices": "Os meus preços",
-		"MyProofs": "Os meus comprovativos",
+		"MyPrices": "Meus valores",
+		"MyProofs": "Minhas demonstrações",
 		"MyStats": "Minhas estatísticas",
+		"NextProof": "Comprovativo seguinte",
+		"NoBarcode": "Sem código de barras",
 		"NotAnError": "Não é um erro",
 		"NotAPrice": "Não é um preço",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Abra com o assistente",
 		"Order": "Ordem",
 		"OrderLocationCountDESC": "Número de locais",
 		"OrderProductUniqueScansDESC": "Número de digitalizações",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Fotografias adicionadas",
 		"PicturesAddedByYou": "Fotografias adicionadas por si",
 		"PRICE_TAG": "Etiqueta de preço",
+		"PriceTags": "Etiquetas de preço",
 		"PriceCount": "{count} preços | {count} preços | {count} preços",
 		"PriceAddedCount": "{count} preços adicionados | {count} preço adicionado | {count} preços adicionados",
 		"PriceToValidateCount": "{count} preços a validar | {count} preço a validar | {count} preços a validar",
 		"PriceCreated": "Preço criado!",
+		"PriceMissing": "Preço em falta",
+		"PricesAlreadyUploaded": "Preços já carregados",
 		"PricesMore": "Mais preços",
 		"PricesAdded": "Preços adicionado",
 		"PricesAddedToday": "Preços adicionados hoje",
@@ -356,6 +362,8 @@
 		"Privacy": "Privacidade",
 		"ProductCount": "{count} produtos | {count} produto | {count} produtos",
 		"ProductFind": "Pesquisar o produto",
+		"ProductMissing": "Produto em falta",
+		"ProductOrCategoryMissing": "Produto ou categoria em falta",
 		"ProofCount": "{count} comprovativos| {count} comprovativo | {count} comprovativos",
 		"ProofDetails": "Detalhes do comprovativo",
 		"ProofMissing": "Falta o comprovativo",
@@ -394,6 +402,7 @@
 		"SourceCode": "Código-fonte",
 		"Start": "Começar",
 		"Stats": "Estatísticas",
+		"Summary": "Resumo",
 		"TaglineOriginal": "Uma base de dados aberta e colaborativa de preços de alimentos",
 		"TaglineAlt1": "A base de dados aberta e colectiva de preços",
 		"TaglineAlt2": "A base de dados aberta e colectiva de alimentos e preços de produtos",
@@ -410,6 +419,7 @@
 		"Total": "Total",
 		"Truncate": "Truncar",
 		"Truncated": "Truncado",
+		"TryItOut": "Experimente",
 		"Type": "Tipo",
 		"UnknownProduct": "Produto desconhecido",
 		"UnknownProductSource": "Origem do produto desconhecida",
@@ -439,8 +449,8 @@
 		"Years": "Anos",
 		"Yes": "Sim",
 		"No": "Não",
-		"Food": "Alimento",
-		"PetFood": "Comida para animais",
+		"Food": "Alimentação",
+		"PetFood": "Alimentos de pets",
 		"Beauty": "Beleza"
 	},
 	"ContributionAssistant": {
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Enviar etiquetas"
 		},
 		"PricesAlreadyAdded": "Preços já adicionados",
+		"PricesWithoutProductOrCategory": "Preços sem produto ou categoria",
 		"PricesMarkedAsError": "Preços marcados como erro",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} preço(s) serão adicionados a um comprovativo existente a {date} em {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
 		"WaitForUpload": "Por favor aguarde pelo envio",
-		"GoToDashboard": "Aceda ao seu painel de controlo",
 		"GoToProof": "Vá ao comprovativo",
-		"AddNewProof": "Adicione um novo comprovativo",
 		"NextProof": "Comprovativo seguinte",
 		"ChooseNextProof": "Escolha outro comprovativo a processar",
 		"AutomaticBoundingBoxSource": "automático",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Etiqueta de preço marcada como incompleta",
 			"PriceTagUnreadable": "Etiqueta de preço marcada como ilegível",
 			"PriceTagNotAPrice": "Etiqueta de preço marcada como não sendo um preço",
+			"PriceTagNoBarcode": "Etiqueta de preço marcada como sem código de barras",
+			"PriceTagOther": "Etiqueta de preço marcada como outra",
 			"NewPriceTag": "Nova etiqueta de preço"
 		},
 		"OpenWithTheAssistant": "Abra com o assistente"
@@ -516,7 +527,7 @@
 		"AddPrice": "Adicionar um preço",
 		"LatestPrices": "Preços mais recentes",
 		"ProofAdd": "Adicionar um comprovativo",
-		"SearchProduct": "Pesquisar um produto",
+		"SearchProduct": "Procurar por um produto",
 		"SettingsUpdated": "Definições atualizadas!",
 		"TodayPriceStat": "Nenhum preço adicionado hoje | {todayPriceNumber} novos preços adicionados hoje | {todayPriceNumber} novos preços adicionados hoje!",
 		"Welcome": {
@@ -552,7 +563,7 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unidade",
-		"Proof": "Comprovativo",
+		"Proof": "Demonstração",
 		"FullPrice": "Preço original",
 		"UnknownProduct": "Produto desconhecido"
 	},
@@ -570,7 +581,7 @@
 	"PriceForm": {
 		"Discount": "Desconto?",
 		"Label": "Preço",
-		"LabelDiscounted": "Preços com desconto",
+		"LabelDiscounted": "Preço descontado",
 		"LabelFull": "Preço original"
 	},
 	"PriceList": {
@@ -582,7 +593,8 @@
 		"NoSpaces": "Por favor não use espaços",
 		"Number": "Insira um número",
 		"Positive": "O preço não pode deve ser negativo",
-		"TwoDecimals": "Apenas são permitidas duas casas decimais"
+		"TwoDecimals": "Apenas são permitidas duas casas decimais",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Comprimento do código de barras: {length}",
@@ -620,10 +632,16 @@
 	"ProofAdd": {
 		"HowToMultiple": "Todas as imagens de etiquetas de preço que selecionar devem partilhar o mesmo local da loja e terem sido fotografadas no mesmo dia.",
 		"HowToMultipleShort": "As fotografias devem partilhar o mesmo local da loja e a mesma data.",
-		"PriceValidationAllow": "Permitir que os preços nas minhas fotografias sejam extraídos pela IA e validados pela comunidade"
+		"PriceValidationAllow": "Permitir que os preços nas minhas fotografias sejam extraídos pela IA e validados pela comunidade",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Para carregar várias etiquetas de preço (mesma localização da loja e data), clique aqui!",
+		"PromoReceiptAssistant": "Experimente: experimente o novo assistente de recibos para extrair automaticamente os preços dos seus recibos!"
 	},
 	"ProofCard": {
-		"Proof": "Comprovativo",
+		"Proof": "Demonstração",
 		"PRICE_TAG": "Etiqueta de preço",
 		"RECEIPT": "Talão",
 		"GDPR_REQUEST": "Pedido RGPD",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Adicione vários preços"
 		},
+		"Prices": {
+			"Title": "Preços"
+		},
 		"Proofs": {
 			"Title": "Comprovativos"
 		},
 		"ProofAddSingle": {
 			"Title": "Adicionar um único comprovativo"
 		},
-		"ProofAddMultiple": {
-			"Title": "Adicionar vários comprovativos"
-		},
 		"Community": {
 			"Title": "Comunidade"
+		},
+		"Contribute": {
+			"Title": "Contribuir"
 		},
 		"Experiments": {
 			"Title": "Experiências"
@@ -737,10 +758,10 @@
 			"Title": "Últimos comprovativos"
 		},
 		"MyPrices": {
-			"Title": "Os meus preços"
+			"Title": "Meus valores"
 		},
 		"MyProofs": {
-			"Title": "Os meus comprovativos"
+			"Title": "Minhas demonstrações"
 		},
 		"MyDashboard": {
 			"Title": "Meu painel de controlo"
@@ -774,6 +795,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Assistente de contribuição"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Assistente de etiqueta de preço de prova"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Assistente de validação de preços"
@@ -839,8 +863,8 @@
 		"LatestProofs": "Últimos comprovativos",
 		"LoadMore": "Carregar mais",
 		"MyDashboard": "Meu painel de controlo",
-		"MyPrices": "Os meus preços",
-		"MyProofs": "Os meus comprovativos",
+		"MyPrices": "Meus valores",
+		"MyProofs": "Minhas demonstrações",
 		"ProofUpdated": "Comprovativo atualizado!",
 		"Settings": "Definições",
 		"Title": "Painel de controlo",
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Idiomas",
 		"LocationFinder": "Localizador de locais",
 		"LocationDisplayOSMID": "Mostrar ID do OSM",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Validação de preço",
 		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar etiqueta de categoria",

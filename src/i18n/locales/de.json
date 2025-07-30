@@ -39,23 +39,16 @@
 			"Subtitle": "Ein Regal mit mehreren Preisschildern",
 			"Title": "Mehrere Produkte"
 		},
-		"PriceCreated": "Preis erstellt!",
 		"ReceiptMode": {
 			"Subtitle": "Ein oder mehrere Produkte",
 			"Title": "Kassenbon"
 		},
-		"SignedIn": "Angemeldet!",
 		"SingleProductMode": {
 			"Subtitle": "Nur ein Preisschild",
 			"Title": "Einzelnes Produkt"
-		},
-		"Thanks": "Danke",
-		"Title": "Preis hinzufügen",
-		"TitleSingle": "Fügen Sie einen Einzelpreis hinzu",
-		"TitleMultiple": "Mehrere Preise auf einmal hinzufügen"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Fertig",
 		"ProductPriceDetails": {
 			"Add": "Neuen Preis hinzufügen",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} Preis bereits hochgeladen | {priceAlreadyUploadedNumber} Preise bereits hochgeladen",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "Bereitgestellt von {url}"
-		},
-		"Scan": "Strichcode einlesen"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Strichcode",
-		"Submit": "Senden",
 		"Title": "Strichcode eingeben"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "Derzeit läuft keine Herausforderung, bitte kommen Sie später wieder!",
 		"PastOrFutureChallenges": "Vergangene oder künftige Herausforderungen",
-		"OngoingChallenges": "Laufende Herausforderungen"
+		"OngoingChallenges": "Laufende Herausforderungen",
+		"PastChallenges": "Vergangene Herausforderungen",
+		"UpcomingChallenges": "Kommende Herausforderungen"
 	},
 	"Common": {
 		"About": "Über",
+		"Action": "Aktion",
+		"Actions": "Aktionen",
 		"AddComment": "Kommentar hinzufügen",
 		"AddPrice": "Preis hinzufügen",
 		"AddPrices": "Preise hinzufügen",
@@ -201,6 +196,7 @@
 		"CATEGORY": "Kategorie",
 		"Category": "Kategorie",
 		"Categories": "Kategorien",
+		"CategoryMissing": "Kategorie fehlt",
 		"CategoryTotal": "{count} Kategorien | {count} Kategorie | {count} Kategorien",
 		"Challenge": "Herausforderung",
 		"Challenges": "Herausforderungen",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Ständige Herausforderung",
 		"Chart": "Diagramm",
 		"Clear": "Leeren",
-		"Contributors": "Mitwirkende",
 		"Comment": "Kommentar",
 		"Community": "Gemeinschaft",
 		"CommunityPrices": "Preise durch die Gemeinschaft",
@@ -216,6 +211,8 @@
 		"Consumption": "Verbrauch",
 		"ConsumptionPrices": "Verbraucherpreise",
 		"ConsumptionProofs": "Nachweise durch Verbraucher",
+		"Contribute": "Mitwirken",
+		"Contributors": "Mitwirkende",
 		"Contributions": "Beiträge",
 		"Confirm": "Bestätigen",
 		"Country": "Land",
@@ -231,12 +228,15 @@
 		"Display": "Anzeigen",
 		"DisplayList": "Liste",
 		"DisplayPriceList": "Liste",
+		"DisplayTable": "Tabelle",
 		"DisplayMap": "Karte",
 		"DisplayPriceMap": "Karte",
 		"DisplayPriceChart": "Diagramm",
 		"Done": "Fertig",
 		"Error": "Fehler",
+		"Experiment": "Experiment",
 		"Experiments": "Experimente",
+		"GoToProof": "Nachweise öffnen",
 		"Join": "Beitreten",
 		"Label": "Kennzeichnung",
 		"Labels": "Labels",
@@ -311,10 +311,13 @@
 		"MyPrices": "Mein Preise",
 		"MyProofs": "Meine Belege",
 		"MyStats": "Meine Statistiken",
+		"NextProof": "Nächster Nachweis",
+		"NoBarcode": "Kein Strichcode",
 		"NotAnError": "Kein Fehler",
 		"NotAPrice": "Kein Preis",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Mit Assistent öffnen",
 		"Order": "Reihenfolge",
 		"OrderLocationCountDESC": "Anzahl der Standorte",
 		"OrderProductUniqueScansDESC": "Anzahl der Scans",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Fotos hinzugefügt",
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
 		"PRICE_TAG": "Preisschild",
+		"PriceTags": "Preisschilder",
 		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
 		"PriceAddedCount": "{count} Preise hinzugefügt | {count} Preis hinzugefügt | {count} Preise hinzugefügt",
 		"PriceToValidateCount": "{count} zu bestätigende Preise | {count} zu bestätigender Preis | {count} zu bestätigende Preise",
 		"PriceCreated": "Preis erstellt!",
+		"PriceMissing": "Preis fehlt",
+		"PricesAlreadyUploaded": "Preise bereits hochgeladen",
 		"PricesMore": "Weitere Preise",
 		"PricesAdded": "Preise hinzugefügt",
 		"PricesAddedToday": "Heute hinzugefügte Preise",
@@ -356,6 +362,8 @@
 		"Privacy": "Datenschutz",
 		"ProductCount": "{count} Produkte | {count} Produkt | {count} Produkte",
 		"ProductFind": "Produkt finden",
+		"ProductMissing": "Produkt fehlt",
+		"ProductOrCategoryMissing": "Produkt oder Kategorie fehlt",
 		"ProofCount": "{count} Nachweise | {count} Nachweis | {count} Nachweise",
 		"ProofDetails": "Details zum Nachweis",
 		"ProofMissing": "Nachweis fehlt",
@@ -394,6 +402,7 @@
 		"SourceCode": "Quellcode",
 		"Start": "Start",
 		"Stats": "Statistiken",
+		"Summary": "Zusammenfassung",
 		"TaglineOriginal": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise",
 		"TaglineAlt1": "Eine offene öffentlich zugängliche Datenbank der Preise",
 		"TaglineAlt2": "Die offene Gemeinschaftsdatenbank für Lebensmittel- und Produktpreise",
@@ -410,6 +419,7 @@
 		"Total": "Gesamt",
 		"Truncate": "Kürzen",
 		"Truncated": "Gekürzt",
+		"TryItOut": "Probieren Sie es aus",
 		"Type": "Art",
 		"UnknownProduct": "Unbekanntes Produkt",
 		"UnknownProductSource": "Unbekannte Herkunft des Produkts",
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Etiketten senden"
 		},
 		"PricesAlreadyAdded": "Preise bereits hinzugefügt",
+		"PricesWithoutProductOrCategory": "Preise ohne Produkt oder Kategorie",
 		"PricesMarkedAsError": "Als Fehler gekennzeichnete Preise",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} Preis(e) wird/werden am {date} in {locationName} zu einem bestehenden Nachweis hinzugefügt",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} Preise hinzugefügt",
 		"WaitForUpload": "Bitte warten Sie bis das Hochladen abgeschlossen ist",
-		"GoToDashboard": "Übersicht öffnen",
 		"GoToProof": "Nachweise öffnen",
-		"AddNewProof": "Neuen Nachweis hinzufügen",
 		"NextProof": "Nächster Nachweis",
 		"ChooseNextProof": "Einen anderen Nachweis zur Bearbeitung auswählen",
 		"AutomaticBoundingBoxSource": "automatisch",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Preisschild als abgeschnitten gekennzeichnet",
 			"PriceTagUnreadable": "Preisschild als unleserlich gekennzeichnet",
 			"PriceTagNotAPrice": "Preisschild als „Kein Preis“ gekennzeichnet",
+			"PriceTagNoBarcode": "Preisschild mit „Kein Strichcode“ gekennzeichnet",
+			"PriceTagOther": "Preisschild als „Sonstiges“ gekennzeichnet",
 			"NewPriceTag": "Neues Preisschild"
 		},
 		"OpenWithTheAssistant": "Mit Assistent öffnen"
@@ -582,7 +593,8 @@
 		"NoSpaces": "Bitte keine Leerzeichen verwenden",
 		"Number": "Geben Sie eine Zahl ein",
 		"Positive": "Preis darf nicht negativ sein",
-		"TwoDecimals": "Nur zwei Nachkommastellen erlaubt"
+		"TwoDecimals": "Nur zwei Nachkommastellen erlaubt",
+		"ThreeDecimals": "Nur drei Nachkommastellen erlaubt"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Strichcode-Länge: {length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "Alle von Ihnen ausgewählten Preisschildbilder sollten den gleichen Standort haben und am gleichen Tag aufgenommen worden sein.",
 		"HowToMultipleShort": "Die Bilder sollten denselben Standort und dasselbe Datum aufweisen.",
-		"PriceValidationAllow": "Erlauben, dass die Preise meiner Bilder von der KI extrahiert und von der Gemeinschaft validiert werden"
+		"PriceValidationAllow": "Erlauben, dass die Preise meiner Bilder von der KI extrahiert und von der Gemeinschaft validiert werden",
+		"PriceTagAllowCommunityValidation": "Erlauben Sie der Gemeinschaft, die von der KI ermittelten Preise zu überprüfen",
+		"PriceTagAIWarning": "KI prüft Ihre Nachweise, um Preise zu ermitteln.",
+		"ReceiptAllowAI": "Erlauben Sie der KI auf Ihrem Kassenbeleg, Preise zu ermitteln",
+		"ReceiptAIWarning": "KI prüft Ihren Kassenbeleg, um die Preise zu ermitteln.",
+		"PromoProofPriceTagAddMultiple": "Um mehrere Preisschilder hochzuladen (gleicher Ladenstandort und Datum), klicken Sie hier!",
+		"PromoReceiptAssistant": "Experimentieren Sie: Probieren Sie den neuen Belegassistenten aus, um Preise automatisch aus Ihren Belegen zu extrahieren!"
 	},
 	"ProofCard": {
 		"Proof": "Nachweis",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Mehrere Preise hinzufügen"
 		},
+		"Prices": {
+			"Title": "Preise"
+		},
 		"Proofs": {
 			"Title": "Nachweise"
 		},
 		"ProofAddSingle": {
 			"Title": "Einzelnen Nachweis hinzufügen"
 		},
-		"ProofAddMultiple": {
-			"Title": "Mehrere Nachweise hinzufügen"
-		},
 		"Community": {
 			"Title": "Gemeinschaft"
+		},
+		"Contribute": {
+			"Title": "Mitwirken"
 		},
 		"Experiments": {
 			"Title": "Experimente"
@@ -774,6 +795,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Mitwirkungsassistent"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Proof-Preisschild-Assistent"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Preisprüfungsassistent"
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Sprachen",
 		"LocationFinder": "Standortsuche",
 		"LocationDisplayOSMID": "OSM-Kennung anzeigen",
+		"PriceListDisplay": "Preislistenaushang",
 		"PriceValidation": "Preisüberprüfung",
 		"ProductDisplayBarcode": "Strichcode anzeigen",
 		"ProductDisplayCategoryTag": "Kategorie-Schlagwort anzeigen",

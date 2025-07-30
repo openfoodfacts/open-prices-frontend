@@ -39,23 +39,16 @@
 			"Subtitle": "A shelf with multiple price tags",
 			"Title": "Multiple products"
 		},
-		"PriceCreated": "Preu afegit!",
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
 			"Title": "Receipt"
 		},
-		"SignedIn": "Sessió iniciada!",
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
 			"Title": "Single product"
-		},
-		"Thanks": "Thanks",
-		"Title": "Afegir un preu",
-		"TitleSingle": "Afegeix un preu",
-		"TitleMultiple": "Add multiple prices in bulk"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Fet",
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "funciona amb {url}"
-		},
-		"Scan": "Escaneja el codi de barres"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Codi de barres",
-		"Submit": "Envia",
 		"Title": "Escriu el codi de barres"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Reptes passats",
+		"UpcomingChallenges": "Propers reptes"
 	},
 	"Common": {
 		"About": "Quant a",
+		"Action": "Acció",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Afegir un preu",
 		"AddPrices": "Add prices",
@@ -191,7 +186,7 @@
 		"Brands": "Marques",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "Preu",
-		"Prices": "Prices",
+		"Prices": "Preus",
 		"PRODUCT": "Producte",
 		"Product": "Producte",
 		"ProductName": "Nom del producte",
@@ -201,6 +196,7 @@
 		"CATEGORY": "Categoria",
 		"Category": "Categoria",
 		"Categories": "Categories",
+		"CategoryMissing": "Falta la categoria",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Challenge": "Challenge",
 		"Challenges": "Challenges",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Esborra",
-		"Contributors": "Contribuents",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -216,6 +211,8 @@
 		"Consumption": "Consum",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Contribuir",
+		"Contributors": "Contribuents",
 		"Contributions": "Aportacions",
 		"Confirm": "Confirma",
 		"Country": "País",
@@ -223,7 +220,7 @@
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Moneda",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -231,12 +228,15 @@
 		"Display": "Mostra",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
+		"DisplayTable": "Table",
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Chart",
 		"Done": "Fet",
 		"Error": "Error",
+		"Experiment": "Experiment",
 		"Experiments": "Experiments",
+		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Etiqueta",
 		"Labels": "Etiquetes",
@@ -311,10 +311,13 @@
 		"MyPrices": "My prices",
 		"MyProofs": "My proofs",
 		"MyStats": "My stats",
+		"NextProof": "Next proof",
+		"NoBarcode": "Sense codi de barres",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Price tag",
+		"PriceTags": "Etiquetes de preu",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Preu afegit!",
+		"PriceMissing": "Falta el preu",
+		"PricesAlreadyUploaded": "Preus ja carregats",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -356,6 +362,8 @@
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
+		"ProductMissing": "Producte que falta",
+		"ProductOrCategoryMissing": "Falta el producte o la categoria",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
@@ -394,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "Inicia",
 		"Stats": "Estadístiques",
+		"Summary": "Resum",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -410,6 +419,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Prova-ho",
 		"Type": "Tipus",
 		"UnknownProduct": "Unknown product",
 		"UnknownProductSource": "Unknown product source",
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prices already added",
+		"PricesWithoutProductOrCategory": "Preus sense producte ni categoria",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Etiqueta de preu marcada sense codi de barres",
+			"PriceTagOther": "Etiqueta de preu marcada com a altra",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -489,7 +500,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Moneda",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -582,7 +593,8 @@
 		"NoSpaces": "Please don't use spaces",
 		"Number": "Input a number",
 		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"TwoDecimals": "Only two decimals allowed",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Per carregar diverses etiquetes de preu (mateixa ubicació i data de la botiga), feu clic aquí!",
+		"PromoReceiptAssistant": "Experiment: prova el nou assistent de rebuts per extreure automàticament els preus dels teus rebuts!"
 	},
 	"ProofCard": {
 		"Proof": "Prova",
@@ -642,7 +660,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Carrega mes ",
-		"Prices": "Prices",
+		"Prices": "Preus",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Add multiple prices"
 		},
+		"Prices": {
+			"Title": "Preus"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
-		"ProofAddMultiple": {
-			"Title": "Add multiple proofs"
-		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Contribuir"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -775,6 +796,9 @@
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
+		"ProofPriceTagAssistant": {
+			"Title": "Assistent d'etiquetes de preu de prova"
+		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
 		},
@@ -813,7 +837,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Preus",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -860,7 +884,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Canvi de llengua",
 		"CountryLabel": "País",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Moneda",
 		"DisplayTitle": "Mostra",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Llengües",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",

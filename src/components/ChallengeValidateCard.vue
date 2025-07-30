@@ -21,7 +21,7 @@
     <v-card-text class="flex-grow-0">
       <v-row>
         <v-col cols="6">
-          <StatCard :value="challenge.numberOfContributions" :subtitle="statSubtitlePriceCount" />
+          <StatCard :value="challenge.numberOfContributions" :subtitle="statSubtitlePriceCount" :to="getChallengePriceListUrl" />
         </v-col>
         <v-col cols="6">
           <StatCard :value="challenge.userContributions" :subtitle="statSubtitlePriceOwnerCount" />
@@ -63,6 +63,9 @@ export default {
     },
     statSubtitlePriceOwnerCount() {
       return this.$vuetify.display.smAndUp ? this.$t('Challenge.PricesAddedByYou', { challenge_title: this.challenge.title }) : this.$t('Challenge.PricesByYou', { challenge_title: this.challenge.title })
+    },
+    getChallengePriceListUrl() {
+      return `/challenges/${this.challenge.id}/prices`
     }
   }
 }

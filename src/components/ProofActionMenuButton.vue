@@ -7,13 +7,14 @@
           {{ $t('Common.Proof') }}
         </v-list-subheader>
         <v-divider />
-        <PriceAddLink v-if="userIsProofOwner" :proofId="proof.id" display="list-item" target="contribution-assistant" :disabled="!userCanAddPrice" />
+        <PriceAddLink v-if="userIsProofOwner && proofIsTypePriceTag" :proofId="proof.id" display="list-item" target="contribution-assistant" :disabled="!userCanAddPrice" />
+        <PriceAddLink v-else-if="userIsProofOwner && proofIsTypeReceipt" :proofId="proof.id" display="list-item" target="receipt-assistant" :disabled="!userCanAddPrice" />
         <PriceAddLink v-if="userIsProofOwner" :proofId="proof.id" display="list-item" :disabled="!userCanAddPrice" />
         <ShareLink v-if="showProofShare" :overrideUrl="getShareLinkUrl" display="list-item" />
         <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getProofDetailUrl">
           {{ $t('Common.Details') }}
         </v-list-item>
-        <v-list-item :slim="true" prepend-icon="mdi-open-in-new" :href="getProofFullUrl" target="_blank">
+        <v-list-item :slim="true" prepend-icon="mdi-open-in-new" :href="getProofImageFullUrl" target="_blank">
           {{ $t('Common.PictureFull') }}
         </v-list-item>
         <v-list-item v-if="userIsProofOwner" :slim="true" prepend-icon="mdi-pencil" :disabled="!userCanEditProof" @click="openEditDialog">
@@ -63,6 +64,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
+import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
@@ -99,12 +101,16 @@ export default {
       return this.appStore.user.username
     },
     userIsProofOwner() {
-      return this.username && (this.proof.owner === this.username)
+      return this.username && this.proof && (this.proof.owner === this.username)
     },
-    getProofFullUrl() {
-      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'  // PRICE_TAG
-      // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'  // RECEIPT
-      return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${this.proof.file_path}`
+    proofIsTypePriceTag() {
+      return this.proof && (this.proof.type === constants.PROOF_TYPE_PRICE_TAG)
+    },
+    proofIsTypeReceipt() {
+      return this.proof && (this.proof.type === constants.PROOF_TYPE_RECEIPT)
+    },
+    getProofImageFullUrl() {
+      return proof_utils.getProofImageFullUrl(this.proof)
     },
     getProofDetailUrl() {
       return `/proofs/${this.proof.id}`

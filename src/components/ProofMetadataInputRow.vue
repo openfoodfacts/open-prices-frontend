@@ -66,7 +66,7 @@
       />
     </v-col>
   </v-row>
-  <v-row v-if="proofIsTypeReceipt" class="mt-0">
+  <v-row v-if="proofIsTypeReceipt && locationIsTypeOnline" class="mt-0">
     <v-col cols="6">
       <div class="text-subtitle-2">
         <v-icon size="small" :icon="LOCATION_TYPE_ONLINE_ICON" /> {{ $t('Common.ReceiptOnlineDeliveryCosts') }}
@@ -105,6 +105,36 @@
       />
     </v-col>
   </v-row>
+  <v-row v-if="assistedByAI" class="mt-0">
+    <v-col cols="12" class="pb-1">
+      <v-alert
+        v-if="proofIsTypePriceTag"
+        type="info"
+        variant="outlined"
+        density="compact"
+        :text="$t('ProofAdd.PriceTagAIWarning')"
+      />
+      <v-alert
+        v-else-if="proofIsTypeReceipt"
+        type="info"
+        variant="outlined"
+        density="compact"
+        :text="$t('ProofAdd.ReceiptAIWarning')"
+      />
+    </v-col>
+  </v-row>
+  <v-row v-if="assistedByAI && proofIsTypePriceTag" class="mt-0">
+    <v-col cols="12" class="pb-1">
+      <v-switch
+        v-model="proofMetadataForm.ready_for_price_tag_validation"
+        density="compact"
+        color="success"
+        :label="$t('ProofAdd.PriceTagAllowCommunityValidation')"
+        :true-value="true"
+        hide-details="auto"
+      />
+    </v-col>
+  </v-row>
   <v-row v-if="proofIsTypeReceipt" class="mt-0">
     <v-col cols="12" class="pb-1">
       <v-switch
@@ -117,25 +147,13 @@
       />
     </v-col>
   </v-row>
-  <v-row v-if="proofIsTypePriceTag && multiple">
-    <v-col cols="12" class="pb-1">
-      <v-switch
-        v-model="proofMetadataForm.ready_for_price_tag_validation"
-        density="compact"
-        color="success"
-        :label="$t('ProofAdd.PriceValidationAllow')"
-        :true-value="true"
-        hide-details="auto"
-      />
-    </v-col>
-  </v-row>
 </template>
 
 <script>
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 export default {
   props: {
@@ -159,12 +177,20 @@ export default {
     multiple: {
       type: Boolean,
       default: false
-    }
+    },
+    assistedByAI: {
+      type: Boolean,
+      default: false
+    },
+    locationType: {
+      type: String,
+      default: null
+    },
   },
   data() {
     return {
       displayOwnerCommentField: null,  // see initProofMetadataForm
-      currentDate: utils.currentDate(),
+      currentDate: date_utils.currentDate(),
       PROOF_TYPE_RECEIPT_ICON: constants.PROOF_TYPE_RECEIPT_ICON,
       LOCATION_TYPE_ONLINE_ICON: constants.LOCATION_TYPE_ONLINE_ICON,
     }
@@ -183,6 +209,9 @@ export default {
     },
     proofIsTypeReceipt() {
       return this.proofType === constants.PROOF_TYPE_RECEIPT
+    },
+    locationIsTypeOnline() {
+      return this.locationType === constants.LOCATION_TYPE_ONLINE
     },
     priceCountRules() {
       if (!this.proofMetadataForm.receipt_price_count) return [() => true]  // optional field

@@ -9,7 +9,7 @@
           <v-divider />
           <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" :disabled="disableCleanupStep" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[3].title" :value="stepItemList[3].value" :complete="step == 4" :disabled="disableSummaryStep" />
+          <v-stepper-item :title="stepItemList[3].title" :value="stepItemList[3].value" :complete="step === 4" :disabled="disableSummaryStep" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
@@ -66,13 +66,44 @@
     <v-col cols="12">
       <v-row>
         <v-col
-          v-for="(productPriceForm, index) in productPriceFormsWithoutPriceIdAndNoError"
+          v-for="(productPriceForm, index) in productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError"
           :key="index"
           cols="12"
           md="6"
           xl="4"
         >
-          <ContributionAssistantPriceFormCard :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''" height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideUploadAction="true" @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)" @validatePriceTag="validatePriceTag(index)" />
+          <ContributionAssistantPriceFormCard
+            :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
+            height="100%"
+            :productPriceForm="productPriceForm"
+            :hideProductBarcodeScannerTab="true"
+            :hideProofDetails="true"
+            :hideUploadAction="true"
+            @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
+            @validatePriceTag="validatePriceTag(index)"
+          />
+        </v-col>
+      </v-row>
+      <h3 v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length" class="mt-4 mb-4">
+        {{ $t('ContributionAssistant.PricesWithoutProductOrCategory') }}
+      </h3>
+      <v-row v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length">
+        <v-col
+          v-for="(productPriceForm, index) in productPriceFormsWithoutProductOrCategoryAndNoError"
+          :key="index"
+          cols="12"
+          md="6"
+          xl="4"
+        >
+          <ContributionAssistantPriceFormCard
+            :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
+            height="100%"
+            :productPriceForm="productPriceForm"
+            :hideProductBarcodeScannerTab="true"
+            :hideProofDetails="true"
+            :hideUploadAction="true"
+            @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
+          />
         </v-col>
       </v-row>
       <h3 v-if="productPriceFormsMarkedAsError.length" class="mt-4 mb-4">
@@ -86,7 +117,15 @@
           md="6"
           xl="4"
         >
-          <ContributionAssistantPriceFormCard :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''" height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideUploadAction="true" @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)" />
+          <ContributionAssistantPriceFormCard
+            :class="productPriceForm.id === lastUpdatedPriceTagId ? 'border-success border-dashed' : ''"
+            height="100%"
+            :productPriceForm="productPriceForm"
+            :hideProductBarcodeScannerTab="true"
+            :hideProofDetails="true"
+            :hideUploadAction="true"
+            @updatePriceTagStatus="updatePriceTagStatus($event, productPriceForm)"
+          />
         </v-col>
       </v-row>
       <h3 v-if="productPriceFormsWithPriceId.length" class="mt-4 mb-4">
@@ -100,7 +139,14 @@
           md="6"
           xl="4"
         >
-          <ContributionAssistantPriceFormCard height="100%" :productPriceForm="productPriceForm" :hideProofDetails="true" :hideActions="true" :disabled="true" />
+          <ContributionAssistantPriceFormCard
+            height="100%"
+            :productPriceForm="productPriceForm"
+            :hideProductBarcodeScannerTab="true"
+            :hideProofDetails="true"
+            :hideActions="true"
+            :disabled="true"
+          />
         </v-col>
       </v-row>
       <v-row>
@@ -111,11 +157,11 @@
             variant="outlined"
           >
             <p>
-              {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceIdAndNoError.length, date: proofObject.date, locationName: locationName }) }}
+              {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length, date: proofObject.date, locationName: locationName }) }}
             </p>
           </v-alert>
           <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" :loading="loading" @click="addPrices">
-            {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceIdAndNoError.length) }}
+            {{ $t('Common.UploadMultiplePrices', productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length) }}
           </v-btn>
         </v-col>
       </v-row>
@@ -123,47 +169,64 @@
   </v-row>
 
   <v-row v-if="step === 4">
-    <v-col cols="12">
+    <v-col>
       <v-row>
-        <v-col>
-          <h3 class="mb-4">
-            {{ $t('ContributionAssistant.WaitForUpload') }}
-          </h3>
+        <v-col cols="12">
           <v-progress-linear
+            v-if="!finishedUploading"
             v-model="numberOfPricesAdded"
-            :max="productPriceFormsWithoutPriceIdAndNoError.length"
-            :color="productPriceFormsWithoutPriceIdAndNoError.length === numberOfPricesAdded ? 'success' : 'primary'"
+            :max="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length"
+            :color="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length === numberOfPricesAdded ? 'success' : 'primary'"
             height="25"
-            :striped="productPriceFormsWithoutPriceIdAndNoError.length !== numberOfPricesAdded"
+            :striped="productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length !== numberOfPricesAdded"
             rounded
           >
-            <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceIdAndNoError.length }) }}</strong>
+            <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length }) }}</strong>
           </v-progress-linear>
+          <v-alert
+            v-if="finishedUploading"
+            type="success"
+            variant="outlined"
+            density="compact"
+            :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
+          />
         </v-col>
       </v-row>
-      <v-row class="text-center">
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :to="'/proofs/' + proofObject.id" :disabled="!allDone">
-            {{ $t('ContributionAssistant.GoToProof') }}
-          </v-btn>
+      <v-row v-if="finishedUploading">
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('Common.AddNewProof')"
+            prepend-icon="mdi-image-plus"
+            append-icon="mdi-arrow-right"
+            @click="reloadPage"
+          />
         </v-col>
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :disabled="!allDone" @click="reloadPage">
-            {{ $t('ContributionAssistant.AddNewProof') }}
-          </v-btn>
+        <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1" cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('Common.NextProof')"
+            prepend-icon="mdi-image"
+            append-icon="mdi-arrow-right"
+            @click="nextProof"
+          />
         </v-col>
-        <v-col v-if="proofIdsFromQueryParam && proofIdsFromQueryParam.length > 1">
-          <v-btn :block="!$vuetify.display.smAndUp" color="primary" :disabled="!allDone" @click="nextProof">
-            {{ $t('ContributionAssistant.NextProof') }}
-          </v-btn>
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('Common.GoToProof')"
+            prepend-icon="mdi-image"
+            append-icon="mdi-arrow-right"
+            :to="'/proofs/' + proofObject.id"
+          />
         </v-col>
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" to="/dashboard" :disabled="!allDone">
-            {{ $t('ContributionAssistant.GoToDashboard') }}
-          </v-btn>
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('Common.MyDashboard')"
+            prepend-icon="mdi-account-circle"
+            append-icon="mdi-arrow-right"
+            :to="getUserDashboardUrl"
+          />
         </v-col>
       </v-row>
-      <v-row v-if="nextProofSuggestions.length">
+      <v-row v-if="finishedUploading && nextProofSuggestions.length">
         <v-col>
           <h3 class="mb-4">
             {{ $t('ContributionAssistant.ChooseNextProof') }}
@@ -188,12 +251,13 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
-import { useAppStore } from '../store'
-import api from '../services/api'
-import constants from '../constants'
-import utils from '../utils.js'
+import { defineAsyncComponent } from 'vue'
+import constants from '../constants.js'
+import api from '../services/api.js'
+import { useAppStore } from '../store.js'
+import geo_utils from '../utils/geo.js'
+import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
@@ -244,7 +308,7 @@ export default {
           value: 3
         },
         {
-          title: this.$t('Common.Done'),
+          title: this.$t('Common.Actions'),
           value: 4
         }
       ]
@@ -254,12 +318,12 @@ export default {
       const location = recentLocations.find((location) => location.properties.osm_id === this.proofObject.location_osm_id)
       if (location) {
         if (location.type === 'ONLINE') return location.website_url
-        return utils.getLocationOSMTitle(location, true, true, true)
+        return geo_utils.getLocationOSMTitle(location, true, true, true)
       }
       return ''
     },
     disableProofSelectStep() {
-      // ProofSelect tab should disabled on summary step
+      // ProofSelect tab should be disabled on summary step
       return this.step === 4
     },
     disableLabelsExtractionStep() {
@@ -270,14 +334,17 @@ export default {
     disableCleanupStep() {
       // Cleanup tab should only be enabled after the ai analysis is done
       // It should also be disabled on summary step
-      return !this.productPriceFormsWithoutPriceIdAndNoError.length || this.step === 4
+      return !this.productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length || this.step === 4
+    },
+    finishedUploading() {
+      return this.productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length === this.numberOfPricesAdded
     },
     allDone() {
-      return this.numberOfPricesAdded > 0 && this.productPriceFormsWithoutPriceIdAndNoError.length == this.numberOfPricesAdded
+      return this.numberOfPricesAdded > 0 && this.finishedUploading
     },
     disableSummaryStep() {
       // Summary tab should be enabled when there are product prices to be added and the add prices process is either running or done
-      const enableSummaryStep = this.productPriceFormsWithoutPriceIdAndNoError.length && (this.loading || this.allDone)
+      const enableSummaryStep = this.productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length && (this.loading || this.allDone)
       return !enableSummaryStep
     },
     proofIdsFromQueryParam() {
@@ -287,11 +354,18 @@ export default {
     productPriceFormsWithPriceId() {
       return this.productPriceForms.filter(productPriceForm => productPriceForm.price_id)
     },
-    productPriceFormsWithoutPriceIdAndNoError() {
-      return this.productPriceForms.filter(productPriceForm => !productPriceForm.price_id && productPriceForm.status <= 1)
+    productPriceFormsWithoutProductOrCategoryAndNoError() {
+      return this.productPriceForms.filter(productPriceForm => ((productPriceForm.type === constants.PRICE_TYPE_PRODUCT && !productPriceForm.product_code) || (productPriceForm.type === constants.PRICE_TYPE_CATEGORY && !productPriceForm.category_tag)) && productPriceForm.status <= 1)
     },
     productPriceFormsMarkedAsError() {
       return this.productPriceForms.filter(productPriceForm => productPriceForm.status > 1)
+    },
+    productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError() {
+      return this.productPriceForms.filter(productPriceForm => !productPriceForm.price_id && (productPriceForm.type === constants.PRICE_TYPE_PRODUCT && productPriceForm.product_code || (productPriceForm.type === constants.PRICE_TYPE_CATEGORY && productPriceForm.category_tag)) && productPriceForm.status <= 1)
+    },
+    getUserDashboardUrl() {
+      const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
+      return `/dashboard?tab=${dashboardTab}`
     }
   },
   mounted() {
@@ -324,9 +398,7 @@ export default {
 
       // proof image
       const image = new Image()
-      // image.src = 'https://prices.openfoodfacts.org/img/0024/tM0NEloNU3.webp'  // barcodes
-      // image.src = 'https://prices.openfoodfacts.org/img/0023/f6tJvMcsDk.webp'  // categories
-      image.src = `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${proof.file_path}`
+      image.src = proof_utils.getImageFullUrl(proof.file_path)
       image.crossOrigin = 'Anonymous'
       this.image = image
 
@@ -361,10 +433,9 @@ export default {
       let tries = 0
       const load = () => {
         api.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
-          const priceTags = data.items
-          const numberOfPriceTagsWithPredictions = priceTags.filter(priceTag => priceTag.predictions.length).length
-          if (numberOfPriceTagsWithPredictions >= minNumberOfPriceTagWithPredictions) {
-            callback(priceTags)
+          const priceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions && priceTag.predictions.length)
+          if (priceTagsWithPredictions.length >= minNumberOfPriceTagWithPredictions) {
+            callback(priceTagsWithPredictions)
           } else {
             tries += 1
             if (tries >= maxTries) {
@@ -411,7 +482,9 @@ export default {
             // Only keep price tags that were selected by the user
             // Note: should we also update ignored price tags to a status of error ?
             this.priceTags = priceTags.filter(priceTag => this.extractedLabels.find(label => label.id === priceTag.id) || newPriceTagIds.includes(priceTag.id))
-            this.handlePriceTags()
+            this.priceTags.forEach(priceTag => {
+              this.handlePriceTag(priceTag)
+            })
           }
         })
       } else {
@@ -420,43 +493,22 @@ export default {
         // Only keep price tags that were selected by the user
         // Note: should we also update ignored price tags to a status of error ?
         this.priceTags = this.priceTags.filter(priceTag => this.extractedLabels.find(label => label.id === priceTag.id))
-        this.handlePriceTags()
+        this.priceTags.forEach(priceTag => {
+          this.handlePriceTag(priceTag)
+        })
       }
-    },
-    handlePriceTags() {
-      this.priceTags.forEach(priceTag => {
-        const label = priceTag['predictions'][0]['data']
-        // remove anything that is not a number from label.barcode
-        const barcodeString = label.barcode ? utils.cleanBarcode(label.barcode.toString()) : ''
-        const priceType = barcodeString.length >= 8 ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
-        let productPriceForm = {
-          id: priceTag.id,
-          type: priceType,
-          category_tag: (priceType === constants.PRICE_TYPE_CATEGORY && ![null, '', 'unknown', 'other'].includes(label.product)) ? label.product : null,
-          origins_tags: ![null, '', 'unknown', 'other'].includes(label.origin) ? [label.origin] : [],
-          labels_tags: label.organic ? [constants.PRODUCT_CATEGORY_LABEL_ORGANIC] : [],
-          price: label.price.toString(),
-          price_per: label.unit,
-          price_is_discounted: false,
-          currency: priceTag['proof'].currency || this.appStore.getUserLastCurrencyUsed,
-          proof: priceTag['proof'],
-          proofImage: priceTag['proof'].file_path,
-          product_code: barcodeString,
-          detected_product_code: barcodeString,
-          product_name: label.product_name,
-          bounding_box: priceTag.bounding_box,
-          status: priceTag.status,
-          price_id: priceTag.price_id
-        }
-        if (productPriceForm.price_id) {
-          const proofPriceExisting = this.proofPriceExistingList.find(price => price.id === productPriceForm.price_id)
-          if (proofPriceExisting) {
-            productPriceForm = Object.assign(productPriceForm, proofPriceExisting)
-          }
-        }
-        this.productPriceForms.push(productPriceForm)
-      })
+
       this.step = 3
+    },
+    handlePriceTag(priceTag) {
+      let productPriceForm = proof_utils.handlePriceTag(priceTag)
+      if (productPriceForm.price_id) {
+        const proofPriceExisting = this.proofPriceExistingList.find(price => price.id === productPriceForm.price_id)
+        if (proofPriceExisting) {
+          productPriceForm = Object.assign(productPriceForm, proofPriceExisting)
+        }
+      }
+      this.productPriceForms.push(productPriceForm)
     },
     updatePriceTagStatus(status, productPriceForm) {
       // Called when the user deletes a price during the cleanup step
@@ -481,8 +533,8 @@ export default {
       this.numberOfPricesAdded = 0
       this.step = 4
       
-      for (let i = 0; i < this.productPriceFormsWithoutPriceIdAndNoError.length; i++) {
-        const productPriceForm = this.productPriceFormsWithoutPriceIdAndNoError[i]
+      for (let i = 0; i < this.productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length; i++) {
+        const productPriceForm = this.productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError[i]
         const priceData = {
           ...productPriceForm,
           origins_tags: productPriceForm.origins_tags,
@@ -520,11 +572,11 @@ export default {
       const proofIds = this.proofIdsFromQueryParam
       proofIds.shift()
       // This only changes the url, in case of refresh, since the path stays the same, no reload is triggered
-      this.$router.push({ path: '/experiments/contribution-assistant', query: { proof_ids: proofIds.join(',') } })
+      this.$router.push({ path: '/experiments/proof-price-tag-assistant', query: { proof_ids: proofIds.join(',') } })
       this.initWithProofIds(proofIds)
     },
     selectProof(proof) {
-      this.$router.push({ path: '/experiments/contribution-assistant', query: { proof_ids: proof.id } })
+      this.$router.push({ path: '/experiments/proof-price-tag-assistant', query: { proof_ids: proof.id } })
       this.initWithProofIds([proof.id])
     }
   }

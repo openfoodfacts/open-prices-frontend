@@ -76,6 +76,8 @@
   <UserRecentProofsDialog
     v-if="userRecentProofsDialog"
     v-model="userRecentProofsDialog"
+    :typePriceTagOnly="typePriceTagOnly"
+    :typeReceiptOnly="typeReceiptOnly"
     @recentProofSelected="recentProofSelected($event)"
     @close="userRecentProofsDialog = false"
   />
@@ -83,8 +85,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
 import constants from '../constants'
+import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
@@ -97,6 +99,14 @@ export default {
         type: null,
         proof_id: null
       })
+    },
+    typePriceTagOnly: {
+      type: Boolean,
+      default: false
+    },
+    typeReceiptOnly: {
+      type: Boolean,
+      default: false
     },
     hideRecentProofChoice: {
       type: Boolean,
@@ -143,27 +153,19 @@ export default {
       // deep: true
     }
   },
-  mounted() {
-    if (this.$route.query.proof_id) {
-      this.getProofById(this.$route.query.proof_id)
-    }
-  },
   methods: {
-    getProofById(proofId) {
-      this.loading = true
-      api.getProofById(proofId)
-        .then(proof => {
-          this.recentProofSelected(proof)
-          this.loading = false
-        })
-    },
     recentProofSelected(proof) {
       this.proofImageList = [proof]
     },
     removeImage(index) {
-      this.proofImageList.splice(index, 1)
-      this.proofImagePreviewList.splice(index, 1)
-      this.$emit('proofList', this.proofImageList)
+      if (!Array.isArray(this.proofImageList)) {
+        // Only one proof was selected with v-file-input, so we clear everything
+        this.clearProof()
+      } else {
+        this.proofImageList.splice(index, 1)
+        this.proofImagePreviewList.splice(index, 1)
+        this.$emit('proofList', this.proofImageList)
+      }
     },
     clearProof() {
       this.proofImageList = []
@@ -172,10 +174,8 @@ export default {
     },
     getLocalProofUrl(blob) {
       if (blob.image_thumb_path) {
-        return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${blob.image_thumb_path}`
+        return proof_utils.getImageFullUrl(blob.image_thumb_path)
       }
-      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.webp'  // PRICE_TAG
-      // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'  // RECEIPT
       return URL.createObjectURL(blob)
     }
   }

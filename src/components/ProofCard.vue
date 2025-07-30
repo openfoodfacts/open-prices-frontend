@@ -3,6 +3,9 @@
     <template v-if="!hideProofHeader" #title>
       {{ $t('Common.Proof') }}
     </template>
+    <template v-if="!hideProofHeader" #prepend>
+      <v-icon icon="mdi-image" />
+    </template>
     <template v-if="!hideProofHeader" #append>
       <v-icon v-if="mode == 'Display'" icon="mdi-close" @click="close" />
       <v-icon v-else-if="mode == 'Uploaded'" icon="mdi-checkbox-marked-circle" color="success" />
@@ -11,7 +14,7 @@
     <v-divider v-if="!hideProofHeader" />
 
     <v-card-text>
-      <v-img v-if="proof.file_path" :src="getProofUrl" :style="'max-height:' + imageHeight" />
+      <v-img v-if="proof.file_path" :src="getProofImageFullUrl" :style="'max-height:' + imageHeight" />
     </v-card-text>
 
     <v-divider />
@@ -24,6 +27,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
@@ -70,13 +74,11 @@ export default {
     }
   },
   computed: {
-    getProofUrl() {
-      // return 'https://prices.openfoodfacts.org/img/0002/qU59gK8PQw.400.webp'  // PRICE_TAG
-      // return 'https://prices.openfoodfacts.net/img/0001/lZGFga9ZOT.webp'  // RECEIPT
+    getProofImageFullUrl() {
       if (this.proof.image_thumb_path && this.showImageThumb) {
-        return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${this.proof.image_thumb_path}`
+        return proof_utils.getProofImageFullUrl(this.proof, true)
       }
-      return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${this.proof.file_path}`
+      return proof_utils.getProofImageFullUrl(this.proof)
     },
   },
   methods: {

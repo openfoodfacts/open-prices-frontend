@@ -16,7 +16,7 @@
   <v-row v-if="step === 1">
     <!-- Step 1: proof (image, location, date & currency) -->
     <v-col cols="12" md="6">
-      <ProofUploadCard @proof="onProofUploaded($event)" />
+      <ProofUploadCard :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" @proof="onProofUploaded($event)" />
     </v-col>
   </v-row>
 
@@ -102,41 +102,29 @@
   </v-row>
 
   <v-row v-if="step === 3">
-    <v-col>
+    <v-col cols="12">
+      <v-alert
+        type="success"
+        variant="outlined"
+        density="compact"
+        :text="$t('Common.PriceAddedCount', { count: proofPriceNewList.length })"
+      />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
       <v-card
-        class="border-success"
-        :title="$t('Common.PriceAddedCount', { count: proofPriceNewList.length })"
-        prepend-icon="mdi-tag-check-outline"
-      >
-        <template #append>
-          <v-icon icon="mdi-checkbox-marked-circle" color="success" />
-        </template>
-        <v-divider />
-        <v-card-text class="text-center">
-          <v-row>
-            <v-col cols="12" sm="6">
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-tag-plus-outline"
-                @click="reloadPage"
-              >
-                {{ $t('Common.AddNewPrices') }}
-              </v-btn>
-            </v-col>
-            <v-col cols="12" sm="6">
-              <v-btn
-                color="primary"
-                :block="!$vuetify.display.smAndUp"
-                prepend-icon="mdi-account-circle"
-                :to="userDashboardUrl"
-              >
-                {{ $t('Common.MyDashboard') }}
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
+        :title="$t('Common.AddNewPrices')"
+        prepend-icon="mdi-tag-plus-outline"
+        append-icon="mdi-arrow-right"
+        @click="reloadPage"
+      />
+    </v-col>
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Common.MyDashboard')"
+        prepend-icon="mdi-account-circle"
+        append-icon="mdi-arrow-right"
+        :to="getUserDashboardUrl"
+      />
     </v-col>
   </v-row>
 
@@ -151,12 +139,12 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
- import { useGoTo } from 'vuetify'
+import { useGoTo } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 export default {
   components: {
@@ -180,7 +168,7 @@ export default {
           value: 2
         },
         {
-          title: this.$t('Common.Done'),
+          title: this.$t('Common.Actions'),
           value: 3
         }
       ],
@@ -191,7 +179,7 @@ export default {
         location_id: null,
         location_osm_id: null,
         location_osm_type: '',
-        date: utils.currentDate(),
+        date: date_utils.currentDate(),
         currency: null,
       },
       productPriceForm: {},
@@ -200,6 +188,8 @@ export default {
       loading: false,
       priceSuccessMessage: false,
       // proof data
+      typePriceTagOnly: false,  // see mounted
+      typeReceiptOnly: false,  // see mounted
       proofObject: null,
       proofPriceExistingList: [],
       // product price data
@@ -245,12 +235,29 @@ export default {
       }
       return false
     },
-    userDashboardUrl() {
+    getUserDashboardUrl() {
       const dashboardTab = (this.proofObject && this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
       return `/dashboard?multipleSuccess=true&tab=${dashboardTab}`
     }
   },
+  mounted() {
+    if (this.$route.query.proof_type) {
+      if (this.$route.query.proof_type === constants.PROOF_TYPE_PRICE_TAG) {
+        this.typePriceTagOnly = true
+      } else if (this.$route.query.proof_type === constants.PROOF_TYPE_RECEIPT) {
+        this.typeReceiptOnly = true
+      }
+    }
+    if (this.$route.query.proof_id) {
+      this.initWithProofId(this.$route.query.proof_id)
+    }
+  },
   methods: {
+    initWithProofId(proofId) {
+      api.getProofById(proofId).then(proof => {
+        this.onProofUploaded(proof)
+      })
+    },
     onProofUploaded(proof) {
       // store the proof
       this.proofObject = proof

@@ -12,18 +12,20 @@
     <v-divider v-if="!hideHeader" />
     <v-card-text>
       <v-sheet v-if="step === 1">
+        <ProofTypeInputRow :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
         <v-alert
           v-if="typePriceTagOnly && multiple"
-          class="mb-4"
+          class="mt-4 mb-4"
           type="warning"
           variant="outlined"
           density="compact"
           :text="$t('ProofAdd.HowToMultipleShort')"
         />
-        <ProofTypeInputRow :proofTypeForm="proofForm" :hideProofTypeReceiptChoice="typePriceTagOnly" :hideProofTypePriceTagChoice="typeReceiptOnly" />
-        <LocationInputRow :locationForm="proofForm" />
-        <ProofImageInputRow :proofImageForm="proofForm" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
-        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" />
+        <ProofPriceTagAddMultiplePromoBanner v-if="proofIsTypePriceTag && !multiple" class="mt-4 mb-4" />
+        <ReceiptAssistantPromoBanner v-if="proofIsTypeReceipt && !assistedByAI" class="mt-4 mb-4" />
+        <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
+        <ProofImageInputRow :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
+        <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
@@ -44,6 +46,7 @@
         class="float-right"
         color="primary"
         variant="flat"
+        type="submit"
         :block="!$vuetify.display.smAndUp"
         :disabled="!proofFormFilled"
         @click="uploadProofList"
@@ -82,7 +85,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 Compressor.setDefaults({
   checkOrientation: true,  // default
@@ -95,6 +98,8 @@ Compressor.setDefaults({
 export default {
   components: {
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
+    ProofPriceTagAddMultiplePromoBanner: defineAsyncComponent(() => import('../components/ProofPriceTagAddMultiplePromoBanner.vue')),
+    ReceiptAssistantPromoBanner: defineAsyncComponent(() => import('../components/ReceiptAssistantPromoBanner.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
@@ -120,7 +125,11 @@ export default {
     multiple: {
       type: Boolean,
       default: false
-    }
+    },
+    assistedByAI: {
+      type: Boolean,
+      default: false
+    },
   },
   emits: ['proof', 'done'],
   data() {
@@ -132,7 +141,7 @@ export default {
         location_id: null,
         location_osm_id: null,
         location_osm_type: '',
-        date: utils.currentDate(),
+        date: date_utils.currentDate(),
         currency: null,  // see initProofForm
         receipt_price_count: null,
         receipt_price_total: null,
@@ -143,6 +152,7 @@ export default {
         proof_id: null
       },
       // data
+      locationObject: null,  // location selected
       proofDateSuccessMessage: false,
       proofSelectedSuccessMessage: false,
       proofSuccessMessage: false,
@@ -161,6 +171,12 @@ export default {
     },
     proofTypeFormFilled() {
       return !!this.proofForm.type
+    },
+    proofIsTypePriceTag() {
+      return this.proofTypeFormFilled && (this.proofForm.type === constants.PROOF_TYPE_PRICE_TAG)
+    },
+    proofIsTypeReceipt() {
+      return this.proofTypeFormFilled && (this.proofForm.type === constants.PROOF_TYPE_RECEIPT)
     },
     proofImageFormFilled() {
       return !!this.proofImageList.length
@@ -191,6 +207,12 @@ export default {
         this.step = 3
         this.$emit('done', this.proofObjectList.length)
       }
+    },
+    typePriceTagOnly(newTypePriceTagOnly, oldTypePriceTagOnly) {  // eslint-disable-line no-unused-vars
+      this.initProofForm()
+    },
+    typeReceiptOnly(newTypeReceiptOnly, oldTypeReceiptOnly) {  // eslint-disable-line no-unused-vars
+      this.initProofForm()
     }
   },
   mounted() {
@@ -210,6 +232,10 @@ export default {
       this.proofForm.currency = this.appStore.getUserLastCurrencyUsed
     },
     handleProofImageList() {
+      if (this.proofImageList.length === 0) {
+        // The list was fully cleared, nothing to do
+        return
+      }
       // can be an existing proof, or a file
       // existing proof: update proofForm + set proofObject
       if (this.proofImageList[0].id) {

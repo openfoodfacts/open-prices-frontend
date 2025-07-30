@@ -44,7 +44,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 export default {
   components: {
@@ -97,7 +97,7 @@ export default {
     },
     getTodayPriceCount() {
       this.loading = true
-      return api.getPrices({ created__gte: utils.currentStartOfDay(), size: 1 })
+      return api.getPrices({ created__gte: date_utils.currentStartOfDay(), size: 1 })
         .then((data) => {
           this.todayPriceCount = data.total
           this.loading = false

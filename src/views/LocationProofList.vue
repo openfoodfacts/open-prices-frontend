@@ -2,16 +2,16 @@
   <v-row v-if="!loading">
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-image">
-        {{ $t('Common.ProofCount', { count: locationProofTotal }) }}
+        {{ $t('Common.ProofCount', { count: proofTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="locationProofList.length" :totalCount="locationProofTotal" />
-      <FilterMenu v-if="locationProofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
-      <OrderMenu v-if="locationProofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
+      <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
+      <FilterMenu v-if="proofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
+      <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row>
-    <v-col v-for="proof in locationProofList" :key="proof" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="proof in proofList" :key="proof" cols="12" sm="6" md="4" xl="3">
       <ProofCard :proof="proof" :hideProofHeader="true" :showImageThumb="true" height="100%" @proofUpdated="handleProofUpdated" />
     </v-col>
   </v-row>
@@ -21,6 +21,14 @@
       <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
+
+  <v-snackbar
+    v-model="proofUpdated"
+    color="success"
+    :timeout="2000"
+  >
+    {{ $t('UserDashboard.ProofUpdated') }}
+  </v-snackbar>
 </template>
 
 <script>
@@ -40,9 +48,9 @@ export default {
     return {
       locationId: this.$route.params.id,
       // data
-      locationProofList: [],
-      locationProofTotal: null,
-      locationProofPage: 0,
+      proofList: [],
+      proofTotal: null,
+      proofPage: 0,
       loading: false,
       proofUpdated: false,
       // filter & order
@@ -52,8 +60,8 @@ export default {
     }
   },
   computed: {
-    getLocationProofsParams() {
-      let defaultParams = { location_id: this.locationId, order_by: this.currentOrder, page: this.locationProofPage }
+    getProofsParams() {
+      let defaultParams = { location_id: this.locationId, order_by: this.currentOrder, page: this.proofPage }
       if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
         defaultParams['price_count'] = 0
       }
@@ -66,7 +74,7 @@ export default {
   watch: {
     $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initLocationProofList()
+        this.initProofList()
       }
     }
   },
@@ -74,7 +82,7 @@ export default {
     this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
-    this.initLocationProofList()
+    this.initProofList()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
     window.addEventListener('scroll', this.handleDebouncedScroll)
@@ -83,20 +91,20 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initLocationProofList() {
-      this.locationProofList = []
-      this.locationProofTotal = null
-      this.locationProofPage = 0
-      this.getLocationProofs()
+    initProofList() {
+      this.proofList = []
+      this.proofTotal = null
+      this.proofPage = 0
+      this.getProofs()
     },
-    getLocationProofs() {
-      if ((this.locationProofTotal != null) && (this.locationProofList.length >= this.locationProofTotal)) return
+    getProofs() {
+      if ((this.proofTotal != null) && (this.proofList.length >= this.proofTotal)) return
       this.loading = true
-      this.locationProofPage += 1
-      return api.getProofs(this.getLocationProofsParams)
+      this.proofPage += 1
+      return api.getProofs(this.getProofsParams)
         .then((data) => {
-          this.locationProofList.push(...data.items)
-          this.locationProofTotal = data.total
+          this.proofList.push(...data.items)
+          this.proofTotal = data.total
           this.loading = false
         })
     },
@@ -106,23 +114,23 @@ export default {
     toggleProofFilter(filterKey) {
       this.currentFilter = this.currentFilter ? '' : filterKey
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
-      // this.initLocationProofList() will be called in watch $route
+      // this.initProofList() will be called in watch $route
     },
     toggleProofType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initLocationProofList() will be called in watch $route
+      // this.initProofList() will be called in watch $route
     },
     selectProofOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
-        // this.initLocationProofList() will be called in watch $route
+        // this.initProofList() will be called in watch $route
       }
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getLocationProofs()
+        this.getProofs()
       }
     },
   }

@@ -39,23 +39,16 @@
 			"Subtitle": "Rak dengan beberapa label harga",
 			"Title": "Beberapa produk"
 		},
-		"PriceCreated": "Harga dibuat!",
 		"ReceiptMode": {
 			"Subtitle": "Satu atau beberapa produk",
 			"Title": "Resi"
 		},
-		"SignedIn": "Masuk!",
 		"SingleProductMode": {
 			"Subtitle": "Hanya satu label harga",
 			"Title": "Satu produk"
-		},
-		"Thanks": "Terima Kasih",
-		"Title": "Tambahkan harga",
-		"TitleSingle": "Tambahkan satu harga",
-		"TitleMultiple": "Tambahkan beberapa harga dalam jumlah besar"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Selesai",
 		"ProductPriceDetails": {
 			"Add": "Tambahkan harga baru",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} harga sudah diunggah | {priceAlreadyUploadedNumber} harga sudah diunggah",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "didukung oleh {url}"
-		},
-		"Scan": "Pindai barcode"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kode batang",
-		"Submit": "Kirim",
 		"Title": "Ketik barcode"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Tantangan sebelumnya",
+		"UpcomingChallenges": "Tantangan selanjutnya"
 	},
 	"Common": {
 		"About": "Tentang",
+		"Action": "Tindakan",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Tambahkan harga",
 		"AddPrices": "Tambahkan harga",
@@ -201,6 +196,7 @@
 		"CATEGORY": "Kategori",
 		"Category": "Kategori",
 		"Categories": "Kategori",
+		"CategoryMissing": "Kategori tidak ada",
 		"CategoryTotal": "{count} kategori | {count} kategori | {count} kategori",
 		"Challenge": "Tantangan",
 		"Challenges": "Tantangan",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Tantangan yang sedang berlangsung",
 		"Chart": "Grafik",
 		"Clear": "Hapus",
-		"Contributors": "Kontributor",
 		"Comment": "Comment",
 		"Community": "Komunitas",
 		"CommunityPrices": "Community prices",
@@ -216,6 +211,8 @@
 		"Consumption": "Konsumsi",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Berkontribusi",
+		"Contributors": "Kontributor",
 		"Contributions": "Kontribusi",
 		"Confirm": "Konfirmasi",
 		"Country": "Negara",
@@ -231,12 +228,15 @@
 		"Display": "Tampilan",
 		"DisplayList": "Daftar",
 		"DisplayPriceList": "Daftar",
+		"DisplayTable": "Table",
 		"DisplayMap": "Peta",
 		"DisplayPriceMap": "Peta",
 		"DisplayPriceChart": "Grafik",
 		"Done": "Selesai",
 		"Error": "Kesalahan",
+		"Experiment": "Percobaan",
 		"Experiments": "Eksperimen",
+		"GoToProof": "Buka bukti",
 		"Join": "Gabung",
 		"Label": "Label",
 		"Labels": "Label - label",
@@ -311,10 +311,13 @@
 		"MyPrices": "Harga saya",
 		"MyProofs": "Bukti saya",
 		"MyStats": "Statistik saya",
+		"NextProof": "Bukti selanjutnya",
+		"NoBarcode": "Tidak ada kode batang",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Tidak Aktif",
 		"Online": "Aktif",
+		"OpenWithTheAssistant": "Buka dengan Asisten",
 		"Order": "Urutan",
 		"OrderLocationCountDESC": "Jumlah lokasi",
 		"OrderProductUniqueScansDESC": "Jumlah pindaian",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Foto ditambahkan",
 		"PicturesAddedByYou": "Foto yang Anda tambahkan",
 		"PRICE_TAG": "Label harga",
+		"PriceTags": "Label harga",
 		"PriceCount": "{count} harga | {count} harga | {count} harga",
 		"PriceAddedCount": "{count} harga ditambahkan | {count} harga ditambahkan | {count} harga ditambahkan",
 		"PriceToValidateCount": "{count} harga untuk divalidasi | {count} harga untuk divalidasi | {count} harga untuk divalidasi",
 		"PriceCreated": "Harga dibuat!",
+		"PriceMissing": "Harga hilang",
+		"PricesAlreadyUploaded": "Harga sudah diunggah",
 		"PricesMore": "Harga lebih lanjut",
 		"PricesAdded": "Harga ditambahkan",
 		"PricesAddedToday": "Harga yang ditambahkan hari ini",
@@ -356,6 +362,8 @@
 		"Privacy": "Privasi",
 		"ProductCount": "{count} produk | {count} produk | {count} produk",
 		"ProductFind": "Temukan produk",
+		"ProductMissing": "Produk hilang",
+		"ProductOrCategoryMissing": "Produk atau kategori hilang",
 		"ProofCount": "{count} bukti | {count} bukti | {count} bukti",
 		"ProofDetails": "Rincian bukti",
 		"ProofMissing": "Bukti hilang",
@@ -394,6 +402,7 @@
 		"SourceCode": "Sumber kode",
 		"Start": "Mulai",
 		"Stats": "Statistik",
+		"Summary": "Ringkasan",
 		"TaglineOriginal": "Basis data harga makanan yang terbuka dan bersumber dari banyak orang",
 		"TaglineAlt1": "Basis data harga yang terbuka dan bersumber dari banyak orang",
 		"TaglineAlt2": "Basis data crowdsourced terbuka untuk harga makanan dan produk",
@@ -410,6 +419,7 @@
 		"Total": "Total",
 		"Truncate": "Potong",
 		"Truncated": "Dipendekkan",
+		"TryItOut": "Cobalah",
 		"Type": "Tipe",
 		"UnknownProduct": "Produk tidak diketahui",
 		"UnknownProductSource": "Unknown product source",
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Kirim label"
 		},
 		"PricesAlreadyAdded": "Harga sudah ditambahkan",
+		"PricesWithoutProductOrCategory": "Harga tanpa produk atau kategori",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} harga akan ditambahkan ke bukti yang sudah ada pada {date} di {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} harga ditambahkan",
 		"WaitForUpload": "Harap tunggu untuk diunggah",
-		"GoToDashboard": "Buka dasbor Anda",
 		"GoToProof": "Buka bukti",
-		"AddNewProof": "Tambahkan bukti baru",
 		"NextProof": "Bukti selanjutnya",
 		"ChooseNextProof": "Pilih bukti lain untuk ditangani",
 		"AutomaticBoundingBoxSource": "otomatis",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Label harga ditandai tanpa kode batang",
+			"PriceTagOther": "Label harga ditandai sebagai lainnya",
 			"NewPriceTag": "Label harga baru"
 		},
 		"OpenWithTheAssistant": "Buka dengan Asisten"
@@ -582,7 +593,8 @@
 		"NoSpaces": "Tolong jangan beri spasi",
 		"Number": "Masukkan angka",
 		"Positive": "Harga tidak boleh minus",
-		"TwoDecimals": "Hanya boleh dua desimal"
+		"TwoDecimals": "Hanya boleh dua desimal",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "Semua gambar label harga yang Anda pilih harus memiliki lokasi toko yang sama, dan diambil pada hari yang sama.",
 		"HowToMultipleShort": "Foto harus menunjukkan lokasi toko dan tanggal yang sama.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Untuk mengunggah beberapa label harga (lokasi toko dan tanggal yang sama), klik di sini!",
+		"PromoReceiptAssistant": "Eksperimen: cobalah asisten struk baru untuk secara otomatis mengekstrak harga dari struk Anda!"
 	},
 	"ProofCard": {
 		"Proof": "Bukti",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Tambahkan beberapa harga"
 		},
+		"Prices": {
+			"Title": "Harga"
+		},
 		"Proofs": {
 			"Title": "Bukti"
 		},
 		"ProofAddSingle": {
 			"Title": "Tambahkan sebuah bukti"
 		},
-		"ProofAddMultiple": {
-			"Title": "Tambahkan beberapa bukti"
-		},
 		"Community": {
 			"Title": "Komunitas"
+		},
+		"Contribute": {
+			"Title": "Berkontribusi"
 		},
 		"Experiments": {
 			"Title": "Eksperimen"
@@ -774,6 +795,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Asisten Kontribusi"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Asisten Label Harga Bukti"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Asisten Validasi Harga"
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Bahasa",
 		"LocationFinder": "Pencari lokasi",
 		"LocationDisplayOSMID": "Tampilkan ID OSM",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Validasi harga",
 		"ProductDisplayBarcode": "Tampilkan kode batang",
 		"ProductDisplayCategoryTag": "Tampilkan tag kategori",

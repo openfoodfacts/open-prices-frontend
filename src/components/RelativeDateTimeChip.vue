@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 export default {
   props: {
@@ -20,10 +20,10 @@ export default {
   },
   methods: {
     getDateTimeFormatted(dateTimeString) {
-      return utils.prettyDateTime(dateTimeString)
+      return date_utils.prettyDateTime(dateTimeString)
     },
     getRelativeDateTimeFormatted(dateTimeString) {
-      return utils.prettyRelativeDateTime(dateTimeString, 'shortest')
+      return date_utils.prettyRelativeDateTime(dateTimeString, 'shortest')
     },
   }
 }

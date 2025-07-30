@@ -7,6 +7,7 @@
       </p>
     </v-col>
   </v-row>
+
   <v-row v-if="price">
     <v-col cols="12" sm="6">
       <HistoryCard :price="price" />

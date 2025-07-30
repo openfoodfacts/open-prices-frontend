@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <CurrencyCard :currency="currency" :priceCount="currencyPriceTotal" />
+      <CurrencyCard :currency="currency" :priceCount="priceTotal" />
     </v-col>
   </v-row>
 
@@ -10,13 +10,13 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="currencyPriceList.length" :totalCount="currencyPriceTotal" />
+      <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
       <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @upcurrency:currentOrder="selectPriceOrder($event)" />
     </v-col>
   </v-row>
 
   <v-row class="mt-0">
-    <v-col v-for="price in currencyPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
     </v-col>
   </v-row>
@@ -45,9 +45,9 @@ export default {
     return {
       currency: this.$route.params.currency,
       // data
-      currencyPriceList: [],
-      currencyPriceTotal: null,
-      currencyPricePage: 0,
+      priceList: [],
+      priceTotal: null,
+      pricePage: 0,
       loading: false,
       // filter & order
       currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
@@ -55,7 +55,7 @@ export default {
   },
   computed: {
     getPricesParams() {
-      let defaultParams = { currency: this.currency, order_by: this.currentOrder, page: this.currencyPricePage }
+      let defaultParams = { currency: this.currency, order_by: this.currentOrder, page: this.pricePage }
       return defaultParams
     },
   },
@@ -79,19 +79,19 @@ export default {
   methods: {
     initCurrency() {
       this.currency = this.$route.params.currency
-      this.currencyPriceList = []
-      this.currencyPriceTotal = null
-      this.currencyPricePage = 0
-      this.getCurrencyPrices()
+      this.priceList = []
+      this.priceTotal = null
+      this.pricePage = 0
+      this.getPrices()
     },
-    getCurrencyPrices() {
-      if ((this.currencyPriceTotal != null) && (this.currencyPriceList.length >= this.currencyPriceTotal)) return
+    getPrices() {
+      if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
-      this.currencyPricePage += 1
+      this.pricePage += 1
       return api.getPrices(this.getPricesParams)
         .then((data) => {
-          this.currencyPriceList.push(...data.items)
-          this.currencyPriceTotal = data.total
+          this.priceList.push(...data.items)
+          this.priceTotal = data.total
           this.loading = false
         })
     },
@@ -104,7 +104,7 @@ export default {
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
-        this.getCurrencyPrices()
+        this.getPrices()
       }
     },
   }

@@ -7,7 +7,7 @@
           <v-divider />
           <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step == 3" />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step === 3" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
@@ -15,76 +15,86 @@
 
   <v-row v-if="step === 1">
     <v-col cols="12" md="6">
-      <ProofUploadCard :typeReceiptOnly="true" @proof="onProofUploaded($event)" />
+      <ProofUploadCard :typeReceiptOnly="true" :assistedByAI="true" @proof="onProofUploaded($event)" />
     </v-col>
   </v-row>
   
   <v-row v-if="step === 2">
-    <v-col cols="12">
+    <v-col v-if="loadingPredictions" cols="12">
+      <v-alert class="mb-2" type="info" variant="outlined">
+        {{ $t('ReceiptAssistant.WaitForExtraction') }}
+        <v-progress-circular indeterminate />
+      </v-alert>
+    </v-col>
+    <v-col v-else-if="!proofHasReceiptPredictionItems" cols="12">
+      <v-alert class="mb-2" type="warning" variant="outlined">
+        {{ $t('ReceiptAssistant.NoItemsFound') }}
+      </v-alert>
+    </v-col>
+    <v-col cols="12" lg="4">
+      <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
+    </v-col>
+    <v-col cols="12" lg="8">
+      <ReceiptTableCard :proof="proofObject" :receiptItems="receiptItems" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
       <v-row>
-        <v-col cols="12">
-          <v-alert v-if="!loadingPredictions && !proofHasReceiptPredictionItems" class="mb-2" type="warning" variant="outlined">
-            {{ $t('ReceiptAssistant.NoItemsFound') }}
-          </v-alert>
-          <v-alert v-if="loadingPredictions" class="mb-2" type="info" variant="outlined">
-            {{ $t('ReceiptAssistant.WaitForExtraction') }}
-            <v-progress-circular indeterminate />
-          </v-alert>
-        </v-col>
-        <v-col cols="12" lg="4">
-          <ProofCard :proof="proofObject" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
-        </v-col>
-        <v-col cols="12" lg="8">
-          <ReceiptTableCard :proof="proofObject" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
-          <v-row>
-            <v-col>
-              <v-btn v-if="validNewReceiptItems.length != validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
-                {{ $t('ReceiptAssistant.UploadOnlyNewPrices', {nbPrices: validNewReceiptItems.length}) }}
-              </v-btn>
-              <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
-                {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', {nbPrices: validReceiptItems.length}) }}
-              </v-btn>
-            </v-col>
-          </v-row>
+        <v-col>
+          <v-btn v-if="validNewReceiptItems.length !== validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
+            {{ $t('ReceiptAssistant.UploadOnlyNewPrices', { nbPrices: validNewReceiptItems.length }) }}
+          </v-btn>
+          <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
+            {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', { nbPrices: validReceiptItems.length }) }}
+          </v-btn>
         </v-col>
       </v-row>
     </v-col>
   </v-row>
 
   <v-row v-if="step === 3">
-    <v-col cols="12">
+    <v-col>
       <v-row>
-        <v-col>
-          <h3 class="mb-4">
-            {{ $t('ContributionAssistant.WaitForUpload') }}
-          </h3>
+        <v-col cols="12">
           <v-progress-linear
+            v-if="!finishedUploading"
             v-model="numberOfPricesAdded"
             :max="totalNumberOfPricesToAdd"
             :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
             height="25"
             :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
             rounded
-          >
-            <strong>{{ $t('ContributionAssistant.PriceAddProgress', { numberOfPricesAdded: numberOfPricesAdded, totalNumberOfPrices: totalNumberOfPricesToAdd }) }}</strong>
-          </v-progress-linear>
+          />
+          <v-alert
+            v-if="finishedUploading"
+            type="success"
+            variant="outlined"
+            density="compact"
+            :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
+          />
         </v-col>
       </v-row>
-      <v-row class="text-center">
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :to="'/proofs/' + proofObject.id" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded">
-            {{ $t('ContributionAssistant.GoToProof') }}
-          </v-btn>
+      <v-row v-if="finishedUploading">
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('Common.AddNewProof')"
+            prepend-icon="mdi-image-plus"
+            append-icon="mdi-arrow-right"
+            @click="reloadPage"
+          />
         </v-col>
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded" @click="reloadPage">
-            {{ $t('ContributionAssistant.AddNewProof') }}
-          </v-btn>
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('Common.GoToProof')"
+            prepend-icon="mdi-image"
+            append-icon="mdi-arrow-right"
+            :to="'/proofs/' + proofObject.id"
+          />
         </v-col>
-        <v-col>
-          <v-btn color="primary" :block="!$vuetify.display.smAndUp" :aria-label="$t('Common.MyDashboard')" :to="userDashboardUrl" :disabled="totalNumberOfPricesToAdd !== numberOfPricesAdded">
-            {{ $t('ContributionAssistant.GoToDashboard') }}
-          </v-btn>
+        <v-col cols="12" sm="6" lg="4">
+          <v-card
+            :title="$t('Common.MyDashboard')"
+            prepend-icon="mdi-account-circle"
+            append-icon="mdi-arrow-right"
+            :to="getUserDashboardUrl"
+          />
         </v-col>
       </v-row>
     </v-col>
@@ -107,9 +117,11 @@ export default {
   data() {
     return {
       step: 1,
+      // stepItemList: [],  // see computed
       proofObject: null,
       numberOfPricesAdded: 0,
       proofPriceExistingList: [],
+      receiptItems: [],
       totalNumberOfPricesToAdd: 0,
       loadingPredictions: false,
     }
@@ -123,11 +135,11 @@ export default {
           value: 1
         },
         {
-          title: this.$vuetify.display.smAndUp ? this.$t('ContributionAssistant.Steps.LabelsExtraction') : this.$t('Common.Labels'),
+          title: this.$t('Common.Prices'),
           value: 2
         },
         {
-          title: this.$t('Common.Done'),
+          title: this.$t('Common.Actions'),
           value: 3
         }
       ]
@@ -140,17 +152,20 @@ export default {
       // Should I use item.product_code or item.productFound ?
       // item.product_code means any typed product_code would work, including ones with no product associated
       // item.productFound means the product was explicitly selected by the user
-      if (!this.proofObject?.receiptItems) return []
+      if (!this.receiptItems) return []
       const isProductValid = item => item.isCategory ? item.category_tag : item.product_code
-      return this.proofObject.receiptItems.filter(item => item.predicted_data.price && isProductValid(item))
+      return this.receiptItems.filter(item => item.predicted_data.price && isProductValid(item))
     },
     validNewReceiptItems() {
       return this.validReceiptItems.filter(item => !item.price_id)
     },
     proofHasReceiptPredictionItems() {
-      return this.proofObject?.receiptItems && this.proofObject.receiptItems.length > 0
+      return this.receiptItems && this.receiptItems.length > 0
     },
-    userDashboardUrl() {
+    finishedUploading() {
+      return this.totalNumberOfPricesToAdd === this.numberOfPricesAdded
+    },
+    getUserDashboardUrl() {
       const dashboardTab = (this.proofObject && this.proofObject.type === constants.PROOF_TYPE_RECEIPT && this.proofObject.owner_consumption) ? constants.USER_CONSUMPTION.toLowerCase() : constants.USER_COMMUNITY.toLowerCase()
       return `/dashboard?tab=${dashboardTab}`
     }
@@ -164,17 +179,22 @@ export default {
   methods: {
     initWithProofIds(proofIds) {
       if (proofIds.length) {
-        this.onProofUploaded({id: proofIds[0]})
+        api.getProofById(proofIds[0]).then(proof => {
+          this.onProofUploaded(proof)
+        })
       }
     },
     onProofUploaded(proof) {
+      // move to step 2
       this.step = 2
+      // store the proof
+      this.proofObject = proof
+      // load the receipt items
       this.loadingPredictions = true
       this.loadProofWithReceiptItems(proof.id, 5, proof => {
         api.getPrices({proof_id: proof.id}).then(data => {
           this.loadingPredictions = false
           this.proofPriceExistingList = data.items
-          this.proofObject = proof
         })
       })
     },
@@ -191,7 +211,7 @@ export default {
           api.getReceiptItems({proof_id: proofId}).then(data => {
             const receiptItems = data.items
             if (receiptItems.length) {
-              proof.receiptItems = receiptItems
+              this.receiptItems = receiptItems
               callback(proof)
             } else {
               tries += 1
@@ -207,12 +227,12 @@ export default {
       load()
     },
     receiptItemsUpdated(newReceiptItems) {
-      this.proofObject.receiptItems = newReceiptItems
+      this.receiptItems = newReceiptItems
     },
     updateOrAddReceiptItem(receiptItemId, priceId) {
       let receiptItemData = {
-          status: 1,  // linked_to_price
-          price_id: priceId
+        status: 1,  // linked_to_price
+        price_id: priceId
       }
       if (receiptItemId != null) {
         api.updateReceiptItem(receiptItemId, receiptItemData)

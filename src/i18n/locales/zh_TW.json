@@ -39,23 +39,16 @@
 			"Subtitle": "擁有多個價格標籤的貨架",
 			"Title": "多種產品"
 		},
-		"PriceCreated": "價格已建立！",
 		"ReceiptMode": {
 			"Subtitle": "一種或多種產品",
 			"Title": "收據"
 		},
-		"SignedIn": "已登入！",
 		"SingleProductMode": {
 			"Subtitle": "只有一個價格標籤",
 			"Title": "單件產品"
-		},
-		"Thanks": "謝謝",
-		"Title": "新增價格",
-		"TitleSingle": "增加單一價格",
-		"TitleMultiple": "批量添加多個價格"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "已完成",
 		"ProductPriceDetails": {
 			"Add": "增加新的價格",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 價格已上傳 {priceAlreadyUploadedNumber} 價格已上傳",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "由{url} 技術支持"
-		},
-		"Scan": "掃描條碼"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "條碼 ",
-		"Submit": "送出",
 		"Title": "輸入條碼"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "過去的挑戰",
+		"UpcomingChallenges": "即將到來的挑戰"
 	},
 	"Common": {
 		"About": "關於",
+		"Action": "行動",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "新增價格",
 		"AddPrices": "Add prices",
@@ -201,6 +196,7 @@
 		"CATEGORY": "分類 ",
 		"Category": "分類 ",
 		"Categories": "種類",
+		"CategoryMissing": "類別不明",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Challenge": "Challenge",
 		"Challenges": "Challenges",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "圖表",
 		"Clear": "清除",
-		"Contributors": "合作者",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -216,6 +211,8 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "貢獻",
+		"Contributors": "合作者",
 		"Contributions": "貢獻",
 		"Confirm": "Confirm",
 		"Country": "地區",
@@ -231,12 +228,15 @@
 		"Display": "Display",
 		"DisplayList": "清單",
 		"DisplayPriceList": "清單",
+		"DisplayTable": "Table",
 		"DisplayMap": "地圖",
 		"DisplayPriceMap": "地圖",
 		"DisplayPriceChart": "圖表",
 		"Done": "已完成",
 		"Error": "錯誤",
+		"Experiment": "實驗",
 		"Experiments": "實驗",
+		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "標籤 ",
 		"Labels": "標籤",
@@ -311,10 +311,13 @@
 		"MyPrices": "我的價格",
 		"MyProofs": "我的證明",
 		"MyStats": "My stats",
+		"NextProof": "Next proof",
+		"NoBarcode": "無條碼",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "離線",
 		"Online": "在線",
+		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "順序",
 		"OrderLocationCountDESC": "地點總數",
 		"OrderProductUniqueScansDESC": "掃描次數",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "價格標籤",
+		"PriceTags": "價格標籤",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "價格已建立！",
+		"PriceMissing": "缺少價格",
+		"PricesAlreadyUploaded": "價格已上傳",
 		"PricesMore": "更多價格",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "今天新增的價格",
@@ -356,6 +362,8 @@
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
+		"ProductMissing": "產品缺失",
+		"ProductOrCategoryMissing": "缺少產品或類別",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "證明細節",
 		"ProofMissing": "Proof missing",
@@ -394,6 +402,7 @@
 		"SourceCode": "原始碼",
 		"Start": "開始",
 		"Stats": "統計數據",
+		"Summary": "總覽",
 		"TaglineOriginal": "開放的群眾外包食品價格資料庫",
 		"TaglineAlt1": "開放的群眾外包價格資料庫",
 		"TaglineAlt2": "開放的群眾外包食品及產品價格資料庫",
@@ -410,6 +419,7 @@
 		"Total": "Total",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "嘗試一下",
 		"Type": "類型 ",
 		"UnknownProduct": "不明產品",
 		"UnknownProductSource": "Unknown product source",
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prices already added",
+		"PricesWithoutProductOrCategory": "不含產品或類別的價格",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "價格標籤標記為無條碼",
+			"PriceTagOther": "價格標籤標記為其他",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -582,7 +593,8 @@
 		"NoSpaces": "請不要使用空格",
 		"Number": "輸入一個數字",
 		"Positive": "價格不能為負數",
-		"TwoDecimals": "只能到小數點第二位"
+		"TwoDecimals": "只能到小數點第二位",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "要上傳多個價格標籤（相同的商店位置和日期），請點擊這裡！",
+		"PromoReceiptAssistant": "實驗：嘗試使用新的收據助手自動從收據中提取價格！"
 	},
 	"ProofCard": {
 		"Proof": "證明",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "新增多個價格"
 		},
+		"Prices": {
+			"Title": "價格"
+		},
 		"Proofs": {
 			"Title": "證明"
 		},
 		"ProofAddSingle": {
 			"Title": "新增單一證明"
 		},
-		"ProofAddMultiple": {
-			"Title": "新增多個證明"
-		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "貢獻"
 		},
 		"Experiments": {
 			"Title": "實驗"
@@ -774,6 +795,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "貢獻助手"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "證明價格標籤助手"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
@@ -869,6 +893,7 @@
 		"LanguageLabel": "語言",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "顯示OSM ID",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "顯示條碼",
 		"ProductDisplayCategoryTag": "顯示類別標籤",

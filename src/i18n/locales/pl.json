@@ -39,23 +39,16 @@
 			"Subtitle": "Półka z wieloma cenami",
 			"Title": "Wiele produktów"
 		},
-		"PriceCreated": "Cena utworzona!",
 		"ReceiptMode": {
 			"Subtitle": "Jeden lub wiele produktów",
 			"Title": "Rachunek"
 		},
-		"SignedIn": "Zalogowano!",
 		"SingleProductMode": {
 			"Subtitle": "Tylko jedna cena",
 			"Title": "Pojedynczy produkt"
-		},
-		"Thanks": "Dziękujemy",
-		"Title": "Dodaj cenę",
-		"TitleSingle": "Dodaj pojedynczą cenę",
-		"TitleMultiple": "Dodaj więcej cen naraz"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Gotowe",
 		"ProductPriceDetails": {
 			"Add": "Dodaj nową cenę",
 			"AlreadyUploaded": "Cena {priceAlreadyUploadedNumber} została już przesłana | Ceny {priceAlreadyUploadedNumber} już przesłane",
@@ -126,12 +119,10 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "używa {url}"
-		},
-		"Scan": "Zeskanuj kod kreskowy"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Kod kreskowy",
-		"Submit": "Prześlij",
 		"Title": "Wpisz kod kreskowy"
 	},
 	"Challenge": {
@@ -165,10 +156,14 @@
 		},
 		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
 		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"OngoingChallenges": "Ongoing challenges",
+		"PastChallenges": "Poprzednie wyzwania",
+		"UpcomingChallenges": "Nadchodzące wyzwania"
 	},
 	"Common": {
 		"About": "Na temat",
+		"Action": "Działanie",
+		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Dodaj cenę",
 		"AddPrices": "Add prices",
@@ -201,6 +196,7 @@
 		"CATEGORY": "Kategoria",
 		"Category": "Kategoria",
 		"Categories": "Kategorie",
+		"CategoryMissing": "Category missing",
 		"CategoryTotal": "{count} categories | {count} category | {count} categories",
 		"Challenge": "Challenge",
 		"Challenges": "Challenges",
@@ -208,7 +204,6 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"Chart": "Chart",
 		"Clear": "Wyczyść",
-		"Contributors": "Współtwórcy",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -216,6 +211,8 @@
 		"Consumption": "Konsumpcja",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
+		"Contribute": "Wnieś wkład",
+		"Contributors": "Współtwórcy",
 		"Contributions": "Wkład",
 		"Confirm": "Potwierdź",
 		"Country": "Kraj",
@@ -231,12 +228,15 @@
 		"Display": "Wyświetl",
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
+		"DisplayTable": "Table",
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Chart",
 		"Done": "Gotowe",
 		"Error": "Błąd",
+		"Experiment": "Eksperyment",
 		"Experiments": "Experiments",
+		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Etykieta",
 		"Labels": "Etykieta",
@@ -311,10 +311,13 @@
 		"MyPrices": "Moje ceny",
 		"MyProofs": "Moje dowody",
 		"MyStats": "My stats",
+		"NextProof": "Next proof",
+		"NoBarcode": "Brak kodu kreskowego",
 		"NotAnError": "Not an error",
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
@@ -343,10 +346,13 @@
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Cenówka",
+		"PriceTags": "Metki cenowe",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena utworzona!",
+		"PriceMissing": "Brak ceny",
+		"PricesAlreadyUploaded": "Ceny już załadowane",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -356,6 +362,8 @@
 		"Privacy": "Prywatność",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
+		"ProductMissing": "Brak produktu",
+		"ProductOrCategoryMissing": "Brak produktu lub kategorii",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Szczegóły dowodu",
 		"ProofMissing": "Proof missing",
@@ -394,6 +402,7 @@
 		"SourceCode": "Source code",
 		"Start": "Rozpocznij",
 		"Stats": "Statystyki",
+		"Summary": "Podsumowanie",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -410,6 +419,7 @@
 		"Total": "Razem",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Wypróbuj to",
 		"Type": "Typ",
 		"UnknownProduct": "Nieznany produkt",
 		"UnknownProductSource": "Unknown product source",
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prices already added",
+		"PricesWithoutProductOrCategory": "Ceny bez produktu lub kategorii",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Metka z ceną oznaczona jako brak kodu kreskowego",
+			"PriceTagOther": "Cena oznaczona jako inna",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -582,7 +593,8 @@
 		"NoSpaces": "Please don't use spaces",
 		"Number": "Input a number",
 		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"TwoDecimals": "Only two decimals allowed",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -620,7 +632,13 @@
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Aby przesłać wiele cen (z tego samego sklepu i tej samej daty), kliknij tutaj!",
+		"PromoReceiptAssistant": "Eksperyment: wypróbuj nowego asystenta paragonów, który automatycznie pobiera ceny z paragonów!"
 	},
 	"ProofCard": {
 		"Proof": "Dowód",
@@ -709,17 +727,20 @@
 		"PriceAddMultiple": {
 			"Title": "Dodaj więcej cen"
 		},
+		"Prices": {
+			"Title": "Ceny"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
-		"ProofAddMultiple": {
-			"Title": "Add multiple proofs"
-		},
 		"Community": {
 			"Title": "Community"
+		},
+		"Contribute": {
+			"Title": "Wnieś wkład"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -774,6 +795,9 @@
 		},
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
+		},
+		"ProofPriceTagAssistant": {
+			"Title": "Asystent metki cenowej"
 		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Języki",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Display barcode",
 		"ProductDisplayCategoryTag": "Display category tag",

@@ -2,107 +2,100 @@
 	"About": {
 		"WhyTitle": "Почему {op_name}?",
 		"WhyAnswer1": "{op_name} - проект по сбору и распространению цен на продукты по всему миру. Это общедоступный набор данных, который можно использовать для исследований, анализа и многого другого. {op_name} разработан и поддерживается {off_url}.",
-		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
+		"WhyAnswer2": "В настоящее время лишь немногие компании владеют большими базами данных цен на продукты на уровне штрих-кодов. Эти цены не находятся в свободном доступе, а продаются по высокой цене частным лицам, исследователям и другим организациям, которые могут себе их позволить.",
 		"HowTitle": "Как работает {op_name}?",
-		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
-		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
-		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
-		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
+		"HowAnswer1": "Мы являемся краудсорсингом набора данных с открытым исходным кодом по ценам. Цены могут быть добавлены пользователями через это веб-приложение или через мобильное приложение {off_url} . Используя {op_api_url} вы можете внести свой вклад и в развитие торговых представительств или сторонних приложений.",
+		"HowAnswer2": "{op_name} предназначен не только для хранения индивидуальных цен, но и потребительских корзин, т. е. списка продуктов, которые люди покупают за один поход по магазинам. Эти данные чрезвычайно интересны для исследователей, желающих проанализировать привычки потребления продуктов питания.",
+		"HowAnswer3": "По возможности мы просим участников предоставить подтверждение цены в виде фотографии ценника или чека. Это необходимо для обеспечения качества данных.",
+		"HowAnswer4": "Если вы предоставляете чек в качестве изображения-доказательства, это означает, что вы соглашаетесь отправить свою потребительскую корзину {op_name}. Мы анонимизируем чек и сделаем его общедоступным, чтобы его можно было использовать в исследовательских целях. Если вы не хотите публиковать свой чек, вы все равно можете внести свой вклад, сфотографировав ценник.",
 		"LicenseTitle": "Лицензия",
-		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
+		"LicenseAnswer1": "Набор данных о ценах лицензирован по лицензии {odbl_url}, что означает, что его можно использовать в любых целях, при условии указания авторства {op_name} и предоставления информации о любых изменениях, внесенных вами в набор данных.",
+		"LicenseAnswer2": "Изображения, представленные в качестве доказательства, лицензированы в соответствии с {ccbysa_url}.",
 		"WhatTitle": "Что такое {op_name}?",
 		"WhatOFFTitle": "Что такое {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} — некоммерческая организация, которая собирает и распространяет информацию о продуктах питания по всему миру. Это совместный проект, который полагается на волонтеров для сбора данных. {off_url} — крупнейшая открытая база данных продуктов питания в мире, содержащая более 3 миллионов продуктов в 200 странах.",
 		"WhyOFFTitle": "Почему {off_name} это делает?",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
+		"WhyOFFAnswer": "Информация о ценах имеет первостепенное значение для понимания продовольственных систем. Это ключевой фактор в понимании стоимости продуктов питания и пропаганде более здорового питания. Открытие данных о ценах — это способ облегчить исследователям, журналистам и гражданам лучшее понимание того, как цены на продукты питания изменяются в зависимости от географического положения и времени.",
 		"HowContribute": "Как я могу внести свой вклад?",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
-		"HowUseData": "How can I use the data?",
-		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
-		"HowContact": "How can I get in touch?",
-		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
-		"HowSupport": "How can I support {op_name}?",
-		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
-		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
-		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
-		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
-		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
-		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
-		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
-		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
+		"HowContributeAnswer": "Вы можете внести свой вклад, добавив цены в набор данных. Вы можете сделать это с помощью веб-приложения или официального мобильного приложения. {op_api_url} также доступен, если вы хотите интегрировать {op_name} в свое приложение. Для внесения своего вклада вам понадобится учетная запись {off_url} .",
+		"HowUseData": "Как я могу использовать данные?",
+		"HowUseDataAnswer1": "Данные доступны под лицензией {odbl_url}, что означает, что их можно использовать в любых целях, при условии указания авторства {op_name} и публикации любых изменений, внесенных вами в набор данных.",
+		"HowUseDataAnswer2": "{op_api_url} обеспечивает простой доступ к данным.",
+		"HowUseDataAnswer3": "Данные также доступны в виде трех сжатых JSONL-дампов: {op_dumb_prices_url}, {op_dumb_proofs_url}и {op_dumb_locations_url}.",
+		"HowContact": "Как с вами связаться?",
+		"HowContactAnswer": "Вы можете связаться с нами, отправив электронное письмо на адрес {off_contact_email_url}.",
+		"HowSupport": "Как я могу поддержать {op_name}?",
+		"HowSupportAnswer": "Вы можете поддержать {op_name} , внеся свой вклад в проект, поделившись им с друзьями и семьей, а также сделав пожертвование в пользу {off_url}.",
+		"WhyOSM": "Почему вы запрашиваете идентификатор {osm_name} , когда я добавляю цену?",
+		"WhyOSMAnswer": "Мы запрашиваем идентификатор {osm_url} , чтобы иметь возможность связать цену с определенным магазином. Это полезно для отображения цены на карте и для анализа региональных или розничных ценовых различий.",
+		"HowRetailer": "Я розничный торговец и хочу внести цены. Как я могу это сделать?",
+		"HowRetailerAnswer": "Вы можете внести цены, используя наш {op_api_url}. Если вы хотите внести цены в масштабе, свяжитесь с нами по адресу {off_contact_email_url}.",
+		"WhyNoScraping": "Рассматриваете ли вы возможность копирования цен с сайтов розничных продавцов?",
+		"WhyNoScrapingAnswer1": "По юридическим и техническим причинам мы не считаем сбор цен с веб-сайтов розничных продавцов допустимым способом внесения вклада в {op_name}. Мы хотим убедиться, что собираемые нами цены точны и актуальны, а получение сконвертированных цен от участников не позволяет нам этого делать.",
+		"WhyNoScrapingAnswer2": "Возможность извлечения цен рассматривается в будущей версии {op_name}, но это будет сделано самой {op_name} , чтобы мы могли получить подтверждение цены на основе HTML-страницы."
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
 			"Subtitle": "Полка с несколькими ценниками",
 			"Title": "Несколько продуктов"
 		},
-		"PriceCreated": "Цена создана!",
 		"ReceiptMode": {
 			"Subtitle": "Один или несколько продуктов",
 			"Title": "Чек"
 		},
-		"SignedIn": "Signed in!",
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
-		},
-		"Thanks": "Спасибо",
-		"Title": "Добавить цену",
-		"TitleSingle": "Add a single price",
-		"TitleMultiple": "Add multiple prices in bulk"
+			"Subtitle": "Только один ценник",
+			"Title": "Одиночный продукт"
+		}
 	},
 	"AddPriceMultiple": {
-		"Done": "Готово",
 		"ProductPriceDetails": {
 			"Add": "Добавить новую цену",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} цена уже загружена | {priceAlreadyUploadedNumber} цены уже загружены",
 			"Create": "Создать",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
+			"ExistingProductFound": "Дубликат? Этот продукт уже добавлен для этого доказательства",
 			"NewPrice": "Новая цена",
 			"PriceUploaded": "Цена создана!",
 			"Upload": "Загрузить"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Proof details"
+			"ReceiptWarning": "Чеки могут содержать личную информацию, мы рекомендуем скрыть их (отредактировать, сложить...) перед фотографированием.",
+			"PrivateWarning": "Вы также можете сделать квитанцию приватной. Приватные доказательства будут видны только вам и модераторам.",
+			"Title": "Подробности доказательства"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Добавить несколько цен"
 	},
 	"AddPriceSingle": {
 		"Create": "Создать",
 		"PriceDetails": {
 			"Discount": "Скидка?",
 			"Label": "Цена",
-			"LabelDiscounted": "Discounted price",
-			"LabelFull": "Full price",
-			"Proof": "Proof",
-			"ProofDateChanged": "Date updated!",
-			"ProofSelected": "Proof selected!",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
+			"LabelDiscounted": "Цена со скидкой",
+			"LabelFull": "Полная цена",
+			"Proof": "Доказательство",
+			"ProofDateChanged": "Дата обновлена!",
+			"ProofSelected": "Доказательство выбрано!",
+			"ProofUploaded": "Доказательство загружено!",
+			"Title": "Подробности о ценах",
+			"UploadProof": "Загрузить доказательство",
 			"Picture": "Изображение",
 			"TakePicture": "Сфотографировать",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"Gallery": "Галерея устройства",
+			"SelectFromGallery": "Выбрать из галереи устройств",
+			"RecentProof": "Недавнее доказательство",
+			"SelectRecentProof": "Выберите недавнее доказательство"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Категория",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"OriginLabel": "Происхождение",
+			"ProductBarcode": "Штрихкод продукта",
 			"Scan": "Сканировать",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "Сканировать штрихкод",
 			"ScanBarcodeShort": "Сканировать",
 			"Type": "Тип",
 			"TypeBarcode": "Поиск по штрихкоду",
 			"TypeBarcodeShort": "Тип",
-			"SetProduct": "Set a product",
+			"SetProduct": "Установить продукт",
 			"Title": "Информация о товаре"
 		},
 		"ProductModeList": {
@@ -113,7 +106,7 @@
 			"PerKg": "Цена за кг",
 			"PerUnit": "Цена за единицу товара"
 		},
-		"Title": "Add a single price",
+		"Title": "Добавить одну цену",
 		"WhereWhen": {
 			"Date": "Дата",
 			"DateLabel": "Дата",
@@ -125,256 +118,271 @@
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
-		},
-		"Scan": "Scan a barcode"
+			"Text": "работает на {url}"
+		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Штрих-код",
-		"Submit": "Подтвердить",
 		"Title": "Поиск по штрихкоду"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "Вызов сообществу",
+		"Subtitle": "Присоединяйтесь к другим энтузиастам цен на продукты питания в сборе информации о {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "Фотографируйте ценники в магазинах",
+			"line1": "Фотографии могут включать один или несколько ценников. Штрихкоды должны быть читаемыми. Например:",
+			"line2": "Когда будете готовы, найдите свой магазин и загрузите фотографии, нажав на кнопку ниже.",
+			"AddPictures": "Добавить изображения"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"Title": "Проверка обнаруженных цен с помощью ИИ",
+			"line1": "Ценники распознаются автоматически, но роботам все равно нужна ваша помощь для их проверки.",
+			"line2": "Перейдите на страницу проверки цены, нажав на кнопку ниже, при необходимости отредактируйте штрихкод и цену, и подтвердите!",
+			"line3": "Если у вас возникли трудности с чтением этикетки, отметьте ее как нечитаемую.",
+			"line4": "Это совместная работа. Даже если вы не отправляли фотографии, вы все равно можете помочь другим, подтвердив свое участие."
 		},
-		"PicturesAddedByYou": "Pictures added by you",
-		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
-		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
-		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"PicturesAddedByYou": "Фотографии добавлены вами",
+		"Prices": "{challenge_title} цены",
+		"PricesAdded": "{challenge_title} цены добавлены",
+		"PricesByYou": "{challenge_title} цены по вашему желанию",
+		"PricesAddedByYou": "{challenge_title} цены добавлены вами",
+		"MostRecentContributions": "Последние взносы",
+		"ChallengeCount": "{count} вызовы | {count} вызов | {count} вызовы",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
-			"UPCOMING": "Upcoming",
-			"ONGOING": "Ongoing",
-			"COMPLETED": "Completed"
+			"DRAFT": "Черновик",
+			"UPCOMING": "Предстоящие",
+			"ONGOING": "В настоящее время",
+			"COMPLETED": "Завершенный"
 		},
-		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
-		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges"
+		"NoChallengeCurrentlyOngoing": "В настоящее время нет текущих соревнований, пожалуйста, зайдите позже!",
+		"PastOrFutureChallenges": "Прошлые или будущие вызовы",
+		"OngoingChallenges": "Текущие вызовы",
+		"PastChallenges": "Прошлые проблемы",
+		"UpcomingChallenges": "Предстоящие задачи"
 	},
 	"Common": {
 		"About": "О приложении",
-		"AddComment": "Add a comment",
+		"Action": "Действие",
+		"Actions": "Actions",
+		"AddComment": "Добавить комментарий",
 		"AddPrice": "Добавить цену",
-		"AddPrices": "Add prices",
+		"AddPrices": "Добавить цены",
 		"AddNewPrice": "Добавить новую цену",
-		"AddNewPrices": "Add new prices",
-		"AddProof": "Add a proof",
-		"AddProofs": "Add proofs",
-		"AddNewProof": "Add a new proof",
-		"AddNewProofs": "Add new proofs",
-		"AddToOFF": "Add to {name}",
-		"AdditionalInfo": "Additional information",
+		"AddNewPrices": "Добавление новых цен",
+		"AddProof": "Добавить доказательство",
+		"AddProofs": "Добавить доказательства",
+		"AddNewProof": "Добавить новое доказательство",
+		"AddNewProofs": "Добавить новые доказательства",
+		"AddToOFF": "Добавить в {name}",
+		"AdditionalInfo": "Дополнительная информация",
 		"Barcode": "Штрих-код",
-		"Barcodes": "Barcodes",
-		"BarcodeScan": "Scan a barcode",
+		"Barcodes": "Штрих-коды",
+		"BarcodeScan": "Сканировать штрихкод",
 		"BarcodeScanShort": "Сканировать",
 		"BarcodeType": "Поиск по штрихкоду",
 		"BarcodeTypeShort": "Тип",
 		"BarcodeInvalid": "Неверный штрихкод",
 		"Brand": "Марка",
 		"Brands": "Марки",
-		"BrandTotal": "{count} brands | {count} brand | {count} brands",
+		"BrandTotal": "{count} бренды | {count} бренд | {count} бренды",
 		"Price": "Цена",
-		"Prices": "Prices",
+		"Prices": "Цены",
 		"PRODUCT": "Продукт",
 		"Product": "Продукт",
 		"ProductName": "Название продукта",
 		"Products": "Продукты",
-		"Proof": "Proof",
-		"Proofs": "Proofs",
+		"Proof": "Доказательство",
+		"Proofs": "Доказательства",
 		"CATEGORY": "Категория",
 		"Category": "Категория",
 		"Categories": "Категории",
-		"CategoryTotal": "{count} categories | {count} category | {count} categories",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
-		"Chart": "Chart",
+		"CategoryMissing": "Category missing",
+		"CategoryTotal": "{count} категории | {count} категории | {count} категории",
+		"Challenge": "Вызов",
+		"Challenges": "Вызовы",
+		"ChallengeCurrent": "Текущий вызов",
+		"ChallengeOngoing": "Текущий вызов",
+		"Chart": "Диаграмма",
 		"Clear": "Очистить",
-		"Contributors": "Участники",
-		"Comment": "Comment",
-		"Community": "Community",
-		"CommunityPrices": "Community prices",
-		"CommunityProofs": "Community proofs",
+		"Comment": "Комментарий",
+		"Community": "Сообщество",
+		"CommunityPrices": "Цены сообщества",
+		"CommunityProofs": "Доказательства сообщества",
 		"Consumption": "Потребление",
-		"ConsumptionPrices": "Consumption prices",
-		"ConsumptionProofs": "Consumption proofs",
+		"ConsumptionPrices": "Потребительские цены",
+		"ConsumptionProofs": "Доказательства потребления",
+		"Contribute": "Способствовать",
+		"Contributors": "Участники",
 		"Contributions": "Вклад",
 		"Confirm": "Подтвердить",
 		"Country": "Страна",
 		"Countries": "Страны",
-		"CountryCount": "{count} countries | {count} country | {count} countries",
-		"Crop": "Crop",
-		"Cropped": "Cropped",
+		"CountryCount": "{count} страны | {count} страна | {count} страны",
+		"Crop": "Обрезать",
+		"Cropped": "Обрезанный",
 		"Currency": "Валюта",
-		"Currencies": "Currencies",
-		"CurrencyMissing": "Currency missing",
-		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
-		"Dashboard": "Dashboard",
+		"Currencies": "Валюты",
+		"CurrencyMissing": "Валюта отсутствует",
+		"CurrencyCount": "{count} валюты | {count} валюты | {count} валюты",
+		"Dashboard": "Панель инструментов",
 		"Display": "Показать",
-		"DisplayList": "List",
-		"DisplayPriceList": "List",
+		"DisplayList": "Список",
+		"DisplayPriceList": "Список",
+		"DisplayTable": "Таблица",
 		"DisplayMap": "Карта",
 		"DisplayPriceMap": "Карта",
-		"DisplayPriceChart": "Chart",
+		"DisplayPriceChart": "Диаграмма",
 		"Done": "Готово",
 		"Error": "Ошибка",
-		"Experiments": "Experiments",
+		"Experiment": "Эксперимент",
+		"Experiments": "Эксперименты",
+		"GoToProof": "Go to proof",
 		"Join": "Вступить",
 		"Label": "Маркировка",
 		"Labels": "Маркировки",
-		"LabelTotal": "{count} labels | {count} label | {count} labels",
+		"LabelTotal": "{count} метки | {count} метка | {count} метки",
 		"Language": "Языки",
 		"Languages": "Языки",
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "Последние цены",
+		"LatestProofs": "Последние доказательства",
 		"LoadMore": "Загрузить ещё",
-		"Location": "Location",
-		"Locations": "Locations",
-		"LocationSelected": "Location selected",
-		"LocationFindShop": "Find the shop location",
-		"LocationMissing": "Location missing",
-		"LocationSearchByName": "Search by name and city",
+		"Location": "Местоположение",
+		"Locations": "Места",
+		"LocationSelected": "Местоположение выбрано",
+		"LocationFindShop": "Найти местоположение магазина",
+		"LocationMissing": "Местоположение отсутствует",
+		"LocationSearchByName": "Поиск по имени и городу",
 		"Date": "Дата",
-		"DateMissing": "Date missing",
-		"Details": "Details",
+		"DateMissing": "Дата отсутствует",
+		"Details": "Подробности",
 		"Delete": "Удалить",
-		"DeveloperMode": "Developer mode",
-		"Discount": "Discount",
-		"DiscountType": "Discount type",
+		"DeveloperMode": "Режим разработчика",
+		"Discount": "Скидка",
+		"DiscountType": "Тип скидки",
 		"DiscountTypeQuantity": "Количество",
-		"DiscountTypeSale": "Sale",
-		"DiscountTypeSeasonal": "Seasonal",
-		"DiscountTypeLoyaltyProgram": "Loyalty program",
-		"DiscountTypeExpiresSoon": "Expires soon",
-		"DiscountTypePickItYourself": "Pick it yourself",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSale": "Скидка",
+		"DiscountTypeSeasonal": "Сезонное",
+		"DiscountTypeLoyaltyProgram": "Программа лояльности",
+		"DiscountTypeExpiresSoon": "Скоро истекает",
+		"DiscountTypePickItYourself": "Выбирай сам",
+		"DiscountTypeSecondHand": "Вторая рука",
 		"DiscountTypeOther": "Прочее",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Пример",
+		"Examples": "Примеры",
 		"ExampleWithColon": "Пример:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "Пример: {value}",
 		"ExamplesWithColon": "Примеры:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "Примеры: {value}",
 		"Edit": "Редактировать",
-		"End": "End",
+		"End": "Конец",
 		"Filter": "Фильтр",
-		"FilterChallengesShowAllStatus": "Show all challenges",
-		"FilterProductWithPriceCount": "With a price",
-		"FilterProductWithPriceCountHide": "Hide products with prices",
-		"FilterProductWithoutPriceCount": "Without prices",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
-		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterLocationWithPriceCountHide": "Hide locations with prices",
-		"FilterUserWithPriceCountHide": "Hide contributors with prices",
-		"Fix": "Fix",
+		"FilterChallengesShowAllStatus": "Показать все испытания",
+		"FilterProductWithPriceCount": "С ценой",
+		"FilterProductWithPriceCountHide": "Скрыть продукты с ценами",
+		"FilterProductWithoutPriceCount": "Без цен",
+		"FilterPriceMoreThan30DaysHide": "Скрыть цены старше 30 дней",
+		"FilterProofWithPriceCountHide": "Скрыть доказательства с ценами",
+		"FilterPriceTagWithProofOwner": "Показывать только мои доказательства",
+		"FilterLocationWithPriceCountHide": "Скрыть местоположения с ценами",
+		"FilterUserWithPriceCountHide": "Скрыть участников с ценами",
+		"Fix": "Исправить",
 		"FAQ": "Часто задаваемые вопросы",
 		"FrequentlyAskedQuestions": "Часто задаваемые вопросы",
 		"GDPR_REQUEST": "GDPR request",
-		"Group": "Group",
-		"Help": "Help",
+		"Group": "Группа",
+		"Help": "Помощь",
 		"History": "История",
 		"Image": "Изображение",
-		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
-		"ImageSelected": "Image selected!",
-		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
-		"Images": "Images",
-		"ImageFull": "Full-size image",
-		"Latest": "Latest",
-		"LinkCopySuccess": "Link copied",
-		"LocationCount": "{count} locations | {count} location | {count} locations",
-		"LocationNotFound": "Location not found",
+		"ImageSelect": "Выберите изображение",
+		"ImageSelectMultiple": "Выбрать изображения",
+		"ImageSelected": "Изображение выбрано!",
+		"ImageSelectedCount": "{count} выбрано изображений | {count} выбрано изображений | {count} выбрано изображений",
+		"Images": "Изображения",
+		"ImageFull": "Полноразмерное изображение",
+		"Latest": "Последние",
+		"LinkCopySuccess": "Ссылка скопирована",
+		"LocationCount": "{count} локации | {count} локации | {count} локации",
+		"LocationNotFound": "Местоположение не найдено",
 		"Map": "Карта",
 		"Miscellaneous": "Прочее",
-		"MobileApp": "Mobile app",
-		"MyConsumption": "My consumption",
-		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
-		"MyStats": "My stats",
-		"NotAnError": "Not an error",
-		"NotAPrice": "Not a price",
+		"MobileApp": "Мобильное приложение",
+		"MyConsumption": "Мое потребление",
+		"MyDashboard": "Моя панель инструментов",
+		"MyPrices": "Мои цены",
+		"MyProofs": "Мои доказательства",
+		"MyStats": "Моя статистика",
+		"NextProof": "Next proof",
+		"NoBarcode": "Нет штрихкода",
+		"NotAnError": "Не ошибка",
+		"NotAPrice": "Не цена",
 		"Offline": "Офлайн",
 		"Online": "Онлайн",
-		"Order": "Order",
-		"OrderLocationCountDESC": "Location count",
-		"OrderProductUniqueScansDESC": "Number of scans",
-		"OrderProductPriceCountDESC": "Number of prices",
-		"OrderPriceCountDESC": "Price count",
+		"OpenWithTheAssistant": "Open with the assistant",
+		"Order": "Заказ",
+		"OrderLocationCountDESC": "Количество мест",
+		"OrderProductUniqueScansDESC": "Количество сканирований",
+		"OrderProductPriceCountDESC": "Количество цен",
+		"OrderPriceCountDESC": "Цена подсчета",
 		"OrderPriceASC": "Цена",
-		"OrderPriceCreatedDESC": "Addition date",
-		"OrderPriceDateDESC": "Price date",
-		"OrderProductCountDESC": "Product count",
-		"OrderProofCountDESC": "Proof count",
-		"OrderProofCreatedDESC": "Addition date",
-		"OrderProofDateDESC": "Proof date",
-		"OrderUserCountDESC": "User count",
+		"OrderPriceCreatedDESC": "Дата добавления",
+		"OrderPriceDateDESC": "Дата цены",
+		"OrderProductCountDESC": "Количество продуктов",
+		"OrderProofCountDESC": "Количество доказательств",
+		"OrderProofCreatedDESC": "Дата добавления",
+		"OrderProofDateDESC": "Дата проверки",
+		"OrderUserCountDESC": "Количество пользователей",
 		"Other": "Прочее",
-		"OtherContributions": "Other contributions",
-		"PersonalInfo": "Personal information",
-		"Physical": "Physical",
+		"OtherContributions": "Другие вклады",
+		"PersonalInfo": "Персональная информация",
+		"Physical": "Физический",
 		"Picture": "Изображение",
-		"Pictures": "Pictures",
-		"PictureSelect": "Select a picture",
-		"PictureSelectMultiple": "Select pictures",
-		"PictureSelected": "Picture selected!",
-		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
-		"PictureFull": "Full-size picture",
-		"PicturesByYou": "Pictures by you",
-		"PicturesAdded": "Pictures added",
-		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
-		"PriceCount": "{count} prices | {count} price | {count} prices",
-		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
+		"Pictures": "Фотографии",
+		"PictureSelect": "Выберите изображение",
+		"PictureSelectMultiple": "Выбрать фотографии",
+		"PictureSelected": "Картинка выбрана!",
+		"PictureSelectedCount": "{count} выбрано фотографий | {count} выбрано фотографий | {count} выбрано фотографий",
+		"PictureFull": "Полноразмерное изображение",
+		"PicturesByYou": "Фотографии, сделанные вами",
+		"PicturesAdded": "Добавлены фотографии",
+		"PicturesAddedByYou": "Фотографии добавлены вами",
+		"PRICE_TAG": "Ценник",
+		"PriceTags": "Ценники",
+		"PriceCount": "{count} цены | {count} цены | {count} цены",
+		"PriceAddedCount": "{count} цены добавлены | {count} цены добавлены | {count} цены добавлены",
+		"PriceToValidateCount": "{count} цены для проверки | {count} цены для проверки | {count} цены для проверки",
 		"PriceCreated": "Цена создана!",
-		"PricesMore": "More prices",
-		"PricesAdded": "Prices added",
-		"PricesAddedToday": "Prices added today",
-		"PricesToday": "Prices today",
-		"PriceNotFound": "Price not found",
-		"Private": "Private",
+		"PriceMissing": "Цена отсутствует",
+		"PricesAlreadyUploaded": "Цены уже загружены",
+		"PricesMore": "Больше цен",
+		"PricesAdded": "Цены добавлены",
+		"PricesAddedToday": "Цены добавлены сегодня",
+		"PricesToday": "Цены сегодня",
+		"PriceNotFound": "Цена не найдена",
+		"Private": "Частный",
 		"Privacy": "Конфиденциальность",
-		"ProductCount": "{count} products | {count} product | {count} products",
-		"ProductFind": "Find the product",
-		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
-		"ProofDetails": "Proof details",
-		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
-		"ProofSelectMultiple": "Select proofs",
-		"ProofSelected": "Proof selected!",
-		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
-		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
-		"ProofsAddedToday": "Proofs added today",
-		"ProofsToday": "Proofs today",
-		"ProofNotFound": "Proof not found",
-		"Public": "Public",
+		"ProductCount": "{count} продуктов | {count} продуктов | {count} продуктов",
+		"ProductFind": "Найти продукт",
+		"ProductMissing": "Продукт отсутствует",
+		"ProductOrCategoryMissing": "Отсутствует продукт или категория",
+		"ProofCount": "{count} доказательства | {count} доказательство | {count} доказательства",
+		"ProofDetails": "Подробности доказательства",
+		"ProofMissing": "Доказательства отсутствуют",
+		"ProofSelect": "Выберите доказательство",
+		"ProofSelectMultiple": "Выбрать доказательства",
+		"ProofSelected": "Доказательство выбрано!",
+		"ProofSelectedCount": "{count} выбрано доказательств | {count} выбрано доказательств | {count} выбрано доказательств",
+		"ProofUploadedCount": "{count} доказательств загружено | {count} доказательств загружено | {count} доказательств загружено",
+		"ProofsAddedToday": "Доказательства добавлены сегодня",
+		"ProofsToday": "Доказательства сегодня",
+		"ProofNotFound": "Доказательства не найдены",
+		"Public": "Публичный",
 		"Quantity": "Количество",
-		"QuantityBought": "Quantity bought",
+		"QuantityBought": "Количество купленных",
 		"QuantityMissing": "Quantity missing",
 		"RECEIPT": "Чек",
 		"Receipt": "Чек",
 		"Receipts": "Receipts",
-		"ReceiptPriceCount": "Number of prices",
+		"ReceiptPriceCount": "Количество цен",
 		"ReceiptPriceTotal": "Total amount",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
@@ -385,7 +393,7 @@
 		"Select": "Select",
 		"Settings": "Настройки",
 		"SignInOFFAccount": "Sign in with your {url} account",
-		"SignedIn": "Signed in!",
+		"SignedIn": "Вход выполнен!",
 		"SignIn": "Войти",
 		"SignOut": "Выйти",
 		"SideMenu": "Side menu",
@@ -393,7 +401,8 @@
 		"Source": "Источник",
 		"SourceCode": "Source code",
 		"Start": "Начать",
-		"Stats": "Stats",
+		"Stats": "Статистика",
+		"Summary": "Резюме",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -405,13 +414,14 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
-		"Today": "Today",
+		"Today": "Сегодня",
 		"Top": "Top",
 		"Total": "Всего",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
+		"TryItOut": "Попробуйте это",
 		"Type": "Тип",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Неизвестный продукт",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -435,13 +445,13 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Вид",
 		"Website": "Веб-сайт",
-		"Year": "Year",
-		"Years": "Years",
+		"Year": "Год",
+		"Years": "Годы",
 		"Yes": "Да",
 		"No": "Нет",
-		"Food": "Food",
-		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Food": "Еда",
+		"PetFood": "Корм",
+		"Beauty": "Красота"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -460,13 +470,12 @@
 			"SendLabelsButton": "Send labels"
 		},
 		"PricesAlreadyAdded": "Prices already added",
+		"PricesWithoutProductOrCategory": "Цены без указания товара или категории",
 		"PricesMarkedAsError": "Prices marked as error",
 		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
 		"WaitForUpload": "Please wait for upload",
-		"GoToDashboard": "Go to your dashboard",
 		"GoToProof": "Go to proof",
-		"AddNewProof": "Add a new proof",
 		"NextProof": "Next proof",
 		"ChooseNextProof": "Choose another proof to handle",
 		"AutomaticBoundingBoxSource": "automatic",
@@ -479,6 +488,8 @@
 			"PriceTagTruncated": "Price tag marked as truncated",
 			"PriceTagUnreadable": "Price tag marked as unreadable",
 			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagNoBarcode": "Ценник отмечен как без штрихкода",
+			"PriceTagOther": "Ценник отмечен как другой",
 			"NewPriceTag": "New price tag"
 		},
 		"OpenWithTheAssistant": "Open with the assistant"
@@ -499,11 +510,11 @@
 	},
 	"Footer": {
 		"About": "О приложении",
-		"Stats": "Stats",
+		"Stats": "Статистика",
 		"TagLine": "{name} is an {url} project."
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Панель инструментов",
 		"Settings": "Настройки",
 		"SignIn": "Войти",
 		"SignOut": "Выйти"
@@ -514,9 +525,9 @@
 	},
 	"Home": {
 		"AddPrice": "Добавить цену",
-		"LatestPrices": "Latest prices",
-		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"LatestPrices": "Последние цены",
+		"ProofAdd": "Добавить доказательство",
+		"SearchProduct": "Искать товар",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -526,7 +537,7 @@
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Последние цены",
 		"LoadMore": "Загрузить ещё",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
@@ -534,7 +545,7 @@
 		"Clear": "Очистить",
 		"NoResult": "No results found",
 		"PoweredBy": {
-			"text": "powered by {url}"
+			"text": "работает на {url}"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
@@ -547,14 +558,14 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "Скидка",
 		"PriceDate": "on {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
-		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"Proof": "Доказательство",
+		"FullPrice": "Полная цена",
+		"UnknownProduct": "Неизвестный продукт"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -570,19 +581,20 @@
 	"PriceForm": {
 		"Discount": "Скидка?",
 		"Label": "Цена",
-		"LabelDiscounted": "Discounted price",
-		"LabelFull": "Full price"
+		"LabelDiscounted": "Цена со скидкой",
+		"LabelFull": "Полная цена"
 	},
 	"PriceList": {
 		"LoadMore": "Загрузить ещё",
-		"Title": "Latest prices"
+		"Title": "Последние цены"
 	},
 	"PriceRules": {
 		"AmountRequired": "Price is required",
 		"NoSpaces": "Please don't use spaces",
 		"Number": "Input a number",
 		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed"
+		"TwoDecimals": "Only two decimals allowed",
+		"ThreeDecimals": "Only three decimals allowed"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Barcode length: {length}",
@@ -613,25 +625,31 @@
 	"ProductDetail": {
 		"AddPrice": "Добавить цену",
 		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Последние цены",
 		"LoadMore": "Загрузить ещё",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
 	"ProofAdd": {
 		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
 		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community"
+		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
+		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
+		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
+		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PromoProofPriceTagAddMultiple": "Чтобы загрузить несколько ценников (одно и то же местоположение магазина и дата), нажмите здесь!",
+		"PromoReceiptAssistant": "Экспериментируйте: попробуйте новый помощник по чекам, который автоматически извлекает цены из ваших чеков!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
+		"Proof": "Доказательство",
+		"PRICE_TAG": "Ценник",
 		"RECEIPT": "Чек",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
-		"ProofSelected": "Proof selected!",
+		"SelectProof": "Выберите доказательство",
+		"ProofSelected": "Доказательство выбрано!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
@@ -642,10 +660,10 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Загрузить ещё",
-		"Prices": "Prices",
-		"ProofNotFound": "Proof not found",
-		"Public": "Public",
-		"Private": "Private",
+		"Prices": "Цены",
+		"ProofNotFound": "Доказательства не найдены",
+		"Public": "Публичный",
+		"Private": "Частный",
 		"Privacy": "Конфиденциальность"
 	},
 	"ProofEdit": {
@@ -667,7 +685,7 @@
 	},
 	"Reuses": {
 		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"Here": "здесь"
 	},
 	"Router": {
 		"About": {
@@ -677,19 +695,19 @@
 			"Title": "Добавить цену"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Добавить цены"
 		},
 		"AddPriceSingle": {
-			"Title": "Add a single price"
+			"Title": "Добавить одну цену"
 		},
 		"AddPriceMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Добавить несколько цен"
 		},
 		"AddProof": {
-			"Title": "Add a proof"
+			"Title": "Добавить доказательство"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "Добавить доказательства"
 		},
 		"AddProofSingle": {
 			"Title": "Add a single proof"
@@ -698,52 +716,55 @@
 			"Title": "Add multiple proofs"
 		},
 		"Locations": {
-			"Title": "Locations"
+			"Title": "Места"
 		},
 		"PriceAdd": {
 			"Title": "Добавить цену"
 		},
 		"PriceAddSingle": {
-			"Title": "Add a single price"
+			"Title": "Добавить одну цену"
 		},
 		"PriceAddMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Добавить несколько цен"
+		},
+		"Prices": {
+			"Title": "Цены"
 		},
 		"Proofs": {
-			"Title": "Proofs"
+			"Title": "Доказательства"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
 		},
-		"ProofAddMultiple": {
-			"Title": "Add multiple proofs"
-		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Сообщество"
+		},
+		"Contribute": {
+			"Title": "Способствовать"
 		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "Эксперименты"
 		},
 		"Home": {
 			"Title": "Главная"
 		},
 		"Dashboard": {
-			"Title": "Dashboard"
+			"Title": "Панель инструментов"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Последние цены"
 		},
 		"LatestProofs": {
-			"Title": "Latest proofs"
+			"Title": "Последние доказательства"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Мои цены"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Мои доказательства"
 		},
 		"MyDashboard": {
-			"Title": "My dashboard"
+			"Title": "Моя панель инструментов"
 		},
 		"Reuses": {
 			"Title": "Reuses"
@@ -758,7 +779,7 @@
 			"Title": "Войти"
 		},
 		"Stats": {
-			"Title": "Stats"
+			"Title": "Статистика"
 		},
 		"TopContributors": {
 			"Title": "Top contributors"
@@ -775,6 +796,9 @@
 		"ContributionAssistant": {
 			"Title": "Contribution Assistant"
 		},
+		"ProofPriceTagAssistant": {
+			"Title": "Помощник по проверке ценников"
+		},
 		"PriceValidationAssistant": {
 			"Title": "Price Validation Assistant"
 		},
@@ -782,24 +806,24 @@
 			"Title": "Receipt Assistant"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "Вызов"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Вызовы"
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "Вызов сообществу"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Штрихкод продукта",
 		"Title": "Поиск"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "Ссылка скопирована",
 		"Title": "Поделиться"
 	},
 	"SignIn": {
@@ -813,17 +837,17 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
-		"PricesToday": "Prices added today",
+		"Prices": "Цены",
+		"PricesToday": "Цены добавлены сегодня",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"Title": "Статистика",
 		"Products": "Продукты",
-		"Locations": "Locations",
+		"Locations": "Места",
 		"Users": "Пользователи",
 		"Total": "Всего",
-		"WithPrice": "With a price",
+		"WithPrice": "С ценой",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
@@ -835,20 +859,20 @@
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "Последние цены",
+		"LatestProofs": "Последние доказательства",
 		"LoadMore": "Загрузить ещё",
-		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyDashboard": "Моя панель инструментов",
+		"MyPrices": "Мои цены",
+		"MyProofs": "Мои доказательства",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Настройки",
-		"Title": "Dashboard",
+		"Title": "Панель инструментов",
 		"UserPriceTotal": "{count} prices",
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Последние цены",
 		"LoadMore": "Загрузить ещё"
 	},
 	"UserList": {
@@ -869,6 +893,7 @@
 		"LanguageLabel": "Языки",
 		"LocationFinder": "Поиск местонахождения",
 		"LocationDisplayOSMID": "Показать OSM ID",
+		"PriceListDisplay": "Price list diplay",
 		"PriceValidation": "Price validation",
 		"ProductDisplayBarcode": "Показать штрихкод",
 		"ProductDisplayCategoryTag": "Показать тег категории",

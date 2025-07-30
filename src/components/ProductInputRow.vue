@@ -81,8 +81,7 @@
         density="compact"
       >
         <PriceCategoryChip :priceCategory="productForm.category_tag" />
-        <PriceOrigins :priceOrigins="productForm.origins_tags" />
-        <PriceLabels :priceLabels="productForm.labels_tags" />
+        <PriceCategoryDetails :price="productForm" />
       </v-alert>
     </v-col>
   </v-row>
@@ -110,8 +109,7 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
-    PriceOrigins: defineAsyncComponent(() => import('../components/PriceOrigins.vue')),
-    PriceLabels: defineAsyncComponent(() => import('../components/PriceLabels.vue')),
+    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
   },
   props: {
@@ -192,7 +190,7 @@ export default {
   },
   mounted() {
     if (this.$route.query.code) {
-      if (this.$route.query.code.startsWith('en')) {
+      if (this.$route.query.code.includes(':')) {
         this.productForm.type = constants.PRICE_TYPE_CATEGORY
         this.productForm.category_tag = this.$route.query.code
       }

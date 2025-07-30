@@ -126,7 +126,7 @@
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.challenge_count" :subtitle="$t('Common.Challenges')" />
+      <StatCard :value="stats.challenge_count" :subtitle="$t('Common.Challenges')" to="/challenges" />
     </v-col>
     <v-col cols="6" sm="4">
       <StatCard :value="stats.price_tag_status_linked_to_price_count" :subtitle="$t('Stats.PricesLinkedToPriceTag')" />
@@ -189,7 +189,7 @@
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import constants from '../constants'
-import utils from '../utils.js'
+import date_utils from '../utils/date.js'
 
 export default {
   components: {
@@ -238,7 +238,7 @@ export default {
         proof_source_other_count: 0,
         user_count: 0,
         user_with_price_count: 0,
-        challenge_count: 1,  // hardcoded
+        challenge_count: 0,
         price_tag_status_linked_to_price_count: 0,
         updated: null,
       },
@@ -261,10 +261,10 @@ export default {
         })
     },
     getDateTimeFormatted(dateTimeString) {
-      return utils.offDateTime(dateTimeString)
+      return date_utils.offDateTime(dateTimeString)
     },
     getRelativeDateTimeFormatted(dateTimeString) {
-      return utils.prettyRelativeDateTime(dateTimeString, 'short')
+      return date_utils.prettyRelativeDateTime(dateTimeString, 'short')
     },
   }
 }
