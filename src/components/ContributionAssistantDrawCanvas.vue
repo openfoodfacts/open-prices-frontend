@@ -75,13 +75,13 @@
           this.boundingBoxes = [] // reset boundingBoxes
         }
         if (this.boundingBoxesFromServer) {
-          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(({boundingBox, id, status}) => {
+          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(({boundingBox, id, status, created_by	}) => {
             return {
               startY: boundingBox[0] * this.image.height,
               startX: boundingBox[1] * this.image.width,
               endY: boundingBox[2] * this.image.height,
               endX: boundingBox[3] * this.image.width,
-              boundingSource: this.$t('ContributionAssistant.AutomaticBoundingBoxSource'),
+              boundingSource: created_by ? this.$t('ContributionAssistant.ManualBoundingBoxSource') : this.$t('ContributionAssistant.AutomaticBoundingBoxSource'),
               id: id,
               status: status
             }

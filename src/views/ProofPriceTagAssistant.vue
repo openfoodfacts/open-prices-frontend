@@ -420,7 +420,7 @@ export default {
         this.loadPriceTagsWithPredictions(1, maxTries, priceTags => {
           this.priceTags = priceTags
           this.boundingBoxesFromServer = this.priceTags.map(priceTag => {
-            return {boundingBox: priceTag.bounding_box, id: priceTag.id, status: priceTag.status}
+            return {boundingBox: priceTag.bounding_box, id: priceTag.id, status: priceTag.status, created_by: priceTag.created_by}
           })
           this.proofWithBoundingBoxesLoading = false
         })
