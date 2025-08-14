@@ -192,7 +192,7 @@
 		"ProductName": "Produktnamn",
 		"Products": "Produkter",
 		"Proof": "Proof",
-		"Proofs": "Proofs",
+		"Proofs": "Bevis",
 		"CATEGORY": "Kategori",
 		"Category": "Kategori",
 		"Categories": "Kategorier",
@@ -731,7 +731,7 @@
 			"Title": "Priser"
 		},
 		"Proofs": {
-			"Title": "Proofs"
+			"Title": "Bevis"
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
