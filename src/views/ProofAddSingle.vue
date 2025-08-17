@@ -11,6 +11,17 @@
     </v-col>
   </v-row>
 
+  <v-row>
+    <v-col cols="12">
+      <v-alert
+        type="warning"
+        variant="outlined"
+        density="compact"
+        :text="$t('Common.PageNotMaintainedAnymore')"
+      />
+    </v-col>
+  </v-row>
+
   <v-row v-if="step === 1">
     <v-col cols="12" md="6">
       <ProofUploadCard :hideRecentProofChoice="true" @done="proofUploadDone($event)" />
