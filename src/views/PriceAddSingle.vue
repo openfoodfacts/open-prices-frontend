@@ -1,6 +1,14 @@
 <template>
   <v-form @submit.prevent="createPrice">
     <v-row>
+      <v-col cols="12">
+        <v-alert
+          type="warning"
+          variant="outlined"
+          density="compact"
+          :text="$t('Common.PageNotMaintainedAnymore')"
+        />
+      </v-col>
       <!-- Step 1: product -->
       <v-col cols="12" md="6" lg="4">
         <v-card
