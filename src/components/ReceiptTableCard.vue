@@ -24,7 +24,7 @@
           <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
           <v-text-field 
             v-else-if="!item.productFound"
-            :model-value="item.product_code"
+            v-model="item.product_code"
             :hide-details="true"
             density="compact"
             :rules="rules"
@@ -36,7 +36,7 @@
         </template>
         <template #[`item.price`]="{ item }">
           <v-text-field
-            :model-value="item.price"
+            v-model="item.price"
             :suffix="itemPriceSuffix(item)"
             :hide-details="true"
             density="compact"
