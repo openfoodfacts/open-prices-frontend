@@ -36,7 +36,8 @@
         :loading="loading"
         @click="initNewProductPriceForm"
       >
-        {{ $t('AddPriceMultiple.ProductPriceDetails.Add') }}
+        <span v-if="proofPriceNewList.length > 0">{{ $t('Common.AddAnotherPrice') }}</span>
+        <span v-else>{{ $t('AddPriceMultiple.ProductPriceDetails.Add') }}</span>
       </v-btn>
       <v-form v-else @submit.prevent="createPrice">
         <v-card
@@ -59,6 +60,16 @@
               </v-col>
             </v-row>
             <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :proofType="proofObject.type" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
+            
+            <!-- Informational alert about saving price -->
+            <v-alert
+              class="mt-4"
+              type="info"
+              variant="outlined"
+              density="compact"
+            >
+              {{ $t('Common.SavePriceToDatabase') }}
+            </v-alert>
           </v-card-text>
           <v-divider />
           <v-card-actions>
@@ -81,7 +92,7 @@
                   :loading="loading"
                   :disabled="!productPriceFormFilled"
                 >
-                  {{ $t('Common.Upload') }}
+                  {{ $t('Common.SavePrice') }}
                 </v-btn>
               </v-col>
             </v-row>
@@ -96,7 +107,7 @@
         :disabled="productPriceFormFilled"
         @click="done"
       >
-        {{ $t('Common.Done') }}
+        {{ $t('Common.CompleteProcess') }}
       </v-btn>
     </v-col>
   </v-row>
