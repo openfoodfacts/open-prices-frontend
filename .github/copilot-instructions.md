@@ -8,7 +8,7 @@ Always reference these instructions first and fallback to search or bash command
 
 ### Bootstrap and Build
 - Install dependencies: `yarn install` (5 seconds)
-  - **KNOWN ISSUE**: Cypress binary download fails in restricted environments. Use `CYPRESS_INSTALL_BINARY=0 yarn install` to skip Cypress binary installation.
+  - **KNOWN ISSUE**: Cypress binary download fails in restricted environments due to blocked CDNs (`download.cypress.io`, `cdn.cypress.io`). Use `CYPRESS_INSTALL_BINARY=0 yarn install` to skip Cypress binary installation.
 - Build for development: `yarn build` -- takes 50 seconds. NEVER CANCEL. Set timeout to 90+ minutes.
 - Build for staging: `yarn build-staging` -- takes 50 seconds. NEVER CANCEL. Set timeout to 90+ minutes.  
 - Build for production: `yarn build-prod` -- takes 50 seconds. NEVER CANCEL. Set timeout to 90+ minutes.
@@ -31,7 +31,7 @@ Always reference these instructions first and fallback to search or bash command
 
 ### Testing
 - Run end-to-end tests: `yarn test` (uses start-server-and-test + Cypress)
-  - **KNOWN LIMITATION**: E2E tests fail in environments where Cypress binary cannot be downloaded
+  - **KNOWN LIMITATION**: E2E tests fail in environments where Cypress binary cannot be downloaded (requires `download.cypress.io` and `cdn.cypress.io` to be accessible)
   - **WORKAROUND**: Install Cypress separately if needed: `npx cypress install`
   - Uses mocked API responses from tests/fixtures/ 
 
