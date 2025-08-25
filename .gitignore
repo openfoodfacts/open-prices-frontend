@@ -3,3 +3,7 @@ yarn-error.log
 dist
 .vscode
 .venv
+
+# Cypress test artifacts
+tests/screenshots/
+tests/videos/
