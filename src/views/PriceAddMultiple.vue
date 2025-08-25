@@ -1,13 +1,13 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <v-stepper v-model="step" hide-actions disabled>
+      <v-stepper v-model="step" hide-actions :clickable="step > 1">
         <v-stepper-header>
-          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
+          <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" @click="goToStep(1)" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
+          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" :disabled="!proofObject" @click="goToStep(2)" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step === 3" />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step === 3" :disabled="step < 3" @click="goToStep(3)" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
@@ -21,6 +21,17 @@
   </v-row>
 
   <v-row v-if="step === 2">
+    <v-col cols="12">
+      <!-- Back button for step 2 -->
+      <v-btn
+        variant="outlined"
+        prepend-icon="mdi-arrow-left"
+        class="mb-4"
+        @click="goToStep(1)"
+      >
+        {{ $t('Common.BackToProof') }}
+      </v-btn>
+    </v-col>
     <v-col cols="12" md="6">
       <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
     </v-col>
@@ -114,6 +125,15 @@
 
   <v-row v-if="step === 3">
     <v-col cols="12">
+      <!-- Back button for step 3 -->
+      <v-btn
+        variant="outlined"
+        prepend-icon="mdi-arrow-left"
+        class="mb-4"
+        @click="goToStep(2)"
+      >
+        {{ $t('Common.BackToAddPrices') }}
+      </v-btn>
       <v-alert
         type="success"
         variant="outlined"
@@ -337,6 +357,16 @@ export default {
     },
     reloadPage() {
       window.location.reload()
+    },
+    goToStep(targetStep) {
+      // Allow navigation between completed steps
+      if (targetStep === 1) {
+        this.step = 1
+      } else if (targetStep === 2 && this.proofObject) {
+        this.step = 2
+      } else if (targetStep === 3 && this.step >= 3) {
+        this.step = 3
+      }
     }
   }
 }
