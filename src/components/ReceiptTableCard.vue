@@ -24,7 +24,7 @@
           <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
           <v-text-field 
             v-else-if="!item.productFound"
-            :model-value="item.product_code"
+            v-model="item.product_code"
             :hide-details="true"
             density="compact"
             :rules="rules"
@@ -36,7 +36,7 @@
         </template>
         <template #[`item.price`]="{ item }">
           <v-text-field
-            :model-value="item.price"
+            v-model="item.price"
             :suffix="itemPriceSuffix(item)"
             :hide-details="true"
             density="compact"
@@ -264,7 +264,7 @@ export default {
         category_tag: ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
         origins_tags: [],
         labels_tags: [],
-        price: item.price ? item.price.toString() : item.predicted_data.price.toString(),
+        price: item.price ? item.price.toString() : (item.predicted_data.price ? item.predicted_data.price.toString() : null),
         price_per: item.price_per,
         price_is_discounted: item.price_is_discounted,
         price_without_discount: item.price_without_discount ? item.price_without_discount.toString() : null,
