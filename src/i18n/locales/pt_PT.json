@@ -155,15 +155,15 @@
 			"COMPLETED": "Concluído"
 		},
 		"NoChallengeCurrentlyOngoing": "Não há nenhum desafio em andamento no momento, volte mais tarde!",
-		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges",
+		"PastOrFutureChallenges": "Desafios passados ou futuros",
+		"OngoingChallenges": "Desafios em curso",
 		"PastChallenges": "Desafios passados",
 		"UpcomingChallenges": "Próximos desafios"
 	},
 	"Common": {
 		"About": "Sobre",
 		"Action": "Ação",
-		"Actions": "Actions",
+		"Actions": "Ações",
 		"AddComment": "Adicionar um comentário",
 		"AddPrice": "Adicionar um preço",
 		"AddPrices": "Adicionar preços",
@@ -206,11 +206,11 @@
 		"Clear": "Limpar",
 		"Comment": "Comentário",
 		"Community": "Comunidade",
-		"CommunityPrices": "Community prices",
-		"CommunityProofs": "Community proofs",
+		"CommunityPrices": "Preços comunitários",
+		"CommunityProofs": "Provas comunitárias",
 		"Consumption": "Consumo",
-		"ConsumptionPrices": "Consumption prices",
-		"ConsumptionProofs": "Consumption proofs",
+		"ConsumptionPrices": "Preços de consumo",
+		"ConsumptionProofs": "Provas de consumo",
 		"Contribute": "Contribuir",
 		"Contributors": "Colaboradores",
 		"Contributions": "Contribuições",
@@ -228,7 +228,7 @@
 		"Display": "Mostrar",
 		"DisplayList": "Lista",
 		"DisplayPriceList": "Lista",
-		"DisplayTable": "Table",
+		"DisplayTable": "Tabela",
 		"DisplayMap": "Mapa",
 		"DisplayPriceMap": "Mapa",
 		"DisplayPriceChart": "Gráfico",
@@ -260,7 +260,7 @@
 		"Discount": "Desconto",
 		"DiscountType": "Tipo de desconto",
 		"DiscountTypeQuantity": "Quantidade",
-		"DiscountTypeSale": "Sale",
+		"DiscountTypeSale": "Venda",
 		"DiscountTypeSeasonal": "Sazonal",
 		"DiscountTypeLoyaltyProgram": "Programa de fidelização",
 		"DiscountTypeExpiresSoon": "Expira em breve",
@@ -276,7 +276,7 @@
 		"Edit": "Editar",
 		"End": "Fim",
 		"Filter": "Filtro",
-		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterChallengesShowAllStatus": "Mostrar todos os desafios",
 		"FilterProductWithPriceCount": "Com um preço",
 		"FilterProductWithPriceCountHide": "Ocultar produtos com preços",
 		"FilterProductWithoutPriceCount": "Sem preços",
@@ -289,7 +289,7 @@
 		"FAQ": "Perguntas frequentes",
 		"FrequentlyAskedQuestions": "Perguntas frequentes",
 		"GDPR_REQUEST": "Pedido RGPD",
-		"Group": "Group",
+		"Group": "Grupo",
 		"Help": "Ajuda",
 		"History": "Histórico",
 		"Image": "Imagem",
@@ -306,7 +306,7 @@
 		"Map": "Mapa",
 		"Miscellaneous": "Diversos",
 		"MobileApp": "Aplicação móvel",
-		"MyConsumption": "My consumption",
+		"MyConsumption": "O meu consumo",
 		"MyDashboard": "Meu painel de controlo",
 		"MyPrices": "Meus valores",
 		"MyProofs": "Minhas demonstrações",
@@ -332,7 +332,7 @@
 		"OrderProofDateDESC": "Data do comprovativo",
 		"OrderUserCountDESC": "Número de utilizadores",
 		"Other": "Outro",
-		"OtherContributions": "Other contributions",
+		"OtherContributions": "Outras contribuições",
 		"PageNotMaintainedAnymore": "Esta página já não é mantida.",
 		"PersonalInfo": "Informação pessoal",
 		"Physical": "Físico",
@@ -595,7 +595,7 @@
 		"Number": "Insira um número",
 		"Positive": "O preço não pode deve ser negativo",
 		"TwoDecimals": "Apenas são permitidas duas casas decimais",
-		"ThreeDecimals": "Only three decimals allowed"
+		"ThreeDecimals": "Apenas três casas decimais permitidas"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Comprimento do código de barras: {length}",
@@ -634,10 +634,10 @@
 		"HowToMultiple": "Todas as imagens de etiquetas de preço que selecionar devem partilhar o mesmo local da loja e terem sido fotografadas no mesmo dia.",
 		"HowToMultipleShort": "As fotografias devem partilhar o mesmo local da loja e a mesma data.",
 		"PriceValidationAllow": "Permitir que os preços nas minhas fotografias sejam extraídos pela IA e validados pela comunidade",
-		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
-		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PriceTagAllowCommunityValidation": "Permita que a comunidade valide os preços extraídos pela IA",
+		"PriceTagAIWarning": "A IA irá analisar as suas provas para extrair os preços.",
+		"ReceiptAllowAI": "Permita a execução de IA no seu recibo para extrair preços",
+		"ReceiptAIWarning": "A IA irá analisar o seu recibo para extrair os preços.",
 		"PromoProofPriceTagAddMultiple": "Para carregar várias etiquetas de preço (mesma localização da loja e data), clique aqui!",
 		"PromoReceiptAssistant": "Experimente: experimente o novo assistente de recibos para extrair automaticamente os preços dos seus recibos!"
 	},
@@ -673,16 +673,16 @@
 		"Success": "Comprovativo editado!"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
-		"PriceReadyToBeAdded": "Price ready to be added",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"AddNewItem": "Adicionar novo item",
+		"MissingPrice": "Preço em falta",
+		"MissingProduct": "Produto em falta",
+		"NoItemsFound": "Não foi possível extrair nenhum item do recibo. Tente novamente.",
+		"PriceAlreadyCreatedForItem": "Preço já criado para o item",
+		"PriceReadyToBeAdded": "Preço pronto para ser adicionado",
+		"ReceiptItemsCheck": "Itens recebidos, verificar e corrigir",
+		"UploadOnlyNewPrices": "Carregar apenas novos preços ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Carregar ou atualizar todos os preços válidos ({nbPrices})",
+		"WaitForExtraction": "Extraindo automaticamente os itens do recibo, aguarde..."
 	},
 	"Reuses": {
 		"AlertNew": "A sua reutilização está a faltar? Avise-nos {url}!",
@@ -804,7 +804,7 @@
 			"Title": "Assistente de validação de preços"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "Assistente de recibos"
 		},
 		"Challenge": {
 			"Title": "Desafio"
@@ -894,7 +894,7 @@
 		"LanguageLabel": "Idiomas",
 		"LocationFinder": "Localizador de locais",
 		"LocationDisplayOSMID": "Mostrar ID do OSM",
-		"PriceListDisplay": "Price list diplay",
+		"PriceListDisplay": "Exibição da lista de preços",
 		"PriceValidation": "Validação de preço",
 		"ProductDisplayBarcode": "Mostrar código de barras",
 		"ProductDisplayCategoryTag": "Mostrar etiqueta de categoria",
