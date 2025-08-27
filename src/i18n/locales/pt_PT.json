@@ -147,14 +147,14 @@
 		"PricesByYou": "{challenge_title} preços por si",
 		"PricesAddedByYou": "{challenge_title} preços adicionados por si",
 		"MostRecentContributions": "Contribuições mais recentes",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"ChallengeCount": "{count} desafios | {count} desafio | {count} desafios",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
-			"UPCOMING": "Upcoming",
-			"ONGOING": "Ongoing",
-			"COMPLETED": "Completed"
+			"DRAFT": "Rascunho",
+			"UPCOMING": "Próximo",
+			"ONGOING": "Em curso",
+			"COMPLETED": "Concluído"
 		},
-		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
+		"NoChallengeCurrentlyOngoing": "Não há nenhum desafio em andamento no momento, volte mais tarde!",
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Desafios passados",
