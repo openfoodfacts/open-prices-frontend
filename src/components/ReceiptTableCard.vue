@@ -37,7 +37,7 @@
               <span
                 class="text-primary font-weight-medium"
                 style="cursor: pointer;"
-                @click="item.product_code = item.predicted_product_code"
+                @click="handleClickProductCodeSuggestion(item)"
               >
                 {{ item.predicted_product_code }}
               </span>
@@ -307,6 +307,10 @@ export default {
       this.barcodeScannerDialog = false
       this.barcodeScannerItem.product_code = code
       this.findProduct(this.barcodeScannerItem)
+    },
+    handleClickProductCodeSuggestion(item) {
+      item.product_code = item.predicted_product_code
+      this.findProduct(item)
     }
   }
 }
