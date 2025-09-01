@@ -29,7 +29,7 @@
     "@vueuse/integrations": "^11.1.0",
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "compressorjs": "^1.2.1",
-    "exifreader": "^4.24.0",
+    "exifreader": "^4.31.2",
     "html5-qrcode": "^2.3.8",
     "leaflet": "^1.9.4",
     "pinia": "^2.2.4",
