@@ -163,7 +163,7 @@
 	"Common": {
 		"About": "Tentang",
 		"Action": "Tindakan",
-		"Actions": "Actions",
+		"Actions": "Tindakan",
 		"AddComment": "Tambahkan komentar",
 		"AddPrice": "Tambahkan harga",
 		"AddPrices": "Tambahkan harga",
@@ -680,9 +680,9 @@
 		"PriceAlreadyCreatedForItem": "Harga sudah ditetapkan untuk item tersebut",
 		"PriceReadyToBeAdded": "Harga siap ditambahkan",
 		"ReceiptItemsCheck": "Item-item pada bukti pembayaran, periksa dan perbaiki",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"UploadOnlyNewPrices": "Unggah hanya harga baru ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Unggah atau perbarui semua harga yang valid ({nbPrices})",
+		"WaitForExtraction": "Mengekstrak item secara otomatis dari struk, mohon tunggu..."
 	},
 	"Reuses": {
 		"AlertNew": "Penggunaan ulang Anda hilang? Beri tahu kami {url}!",
@@ -804,7 +804,7 @@
 			"Title": "Asisten Validasi Harga"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "Asisten Bukti Pembayaran"
 		},
 		"Challenge": {
 			"Title": "Tantangan"
@@ -841,7 +841,7 @@
 		"Prices": "Harga",
 		"PricesToday": "Harga yang ditambahkan hari ini",
 		"PricesTotal": "Total harga",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
+		"PricesLinkedToPriceTag": "Harga yang tercantum pada label harga",
 		"ProductsWithPrices": "Produk dengan harga",
 		"Title": "Statistik",
 		"Products": "Produk - produk",
@@ -852,11 +852,11 @@
 		"WithProduct": "Dengan produk",
 		"WithProductBarcode": "Dengan kode batang produk",
 		"WithProductCategory": "Dengan kategori produk",
-		"WithDiscount": "With a discount",
+		"WithDiscount": "Dengan diskon",
 		"WithoutProduct": "Tanpa produk",
 		"WithBarcode": "Dengan kode batang",
 		"WithCategory": "Dengan kategori",
-		"PricesProofsPerSource": "Prices and proofs per source",
+		"PricesProofsPerSource": "Harga dan bukti per sumber",
 		"LastUpdated": "Terakhir diperbarui pada {date}"
 	},
 	"UserDashboard": {
@@ -894,11 +894,11 @@
 		"LanguageLabel": "Bahasa",
 		"LocationFinder": "Pencari lokasi",
 		"LocationDisplayOSMID": "Tampilkan ID OSM",
-		"PriceListDisplay": "Price list diplay",
+		"PriceListDisplay": "Tampilan daftar harga",
 		"PriceValidation": "Validasi harga",
 		"ProductDisplayBarcode": "Tampilkan kode batang",
 		"ProductDisplayCategoryTag": "Tampilkan tag kategori",
-		"ProductDisplaySource": "Display source",
+		"ProductDisplaySource": "Sumber tampilan",
 		"SideMenuExperimentsDisplay": "Tampilkan 'Eksperimen'",
 		"Save": "menyimpan ",
 		"Title": "Pengaturan",
