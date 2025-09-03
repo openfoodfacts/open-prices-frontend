@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.138.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.138.0...v1.138.1) (2025-09-03)
+
+
+### Bug Fixes
+
+* **PriceTagAssistant:** properly mark drawn price tags as Manual instead of Automatic ([#1638](https://github.com/openfoodfacts/open-prices-frontend/issues/1638)) ([c9d90d8](https://github.com/openfoodfacts/open-prices-frontend/commit/c9d90d826ab4f1da4d09b2920e777df80b7cd209))
+* **ReceiptAssistant:** fix editing price and product in place & new item addition ([#1643](https://github.com/openfoodfacts/open-prices-frontend/issues/1643)) ([9d4c8d5](https://github.com/openfoodfacts/open-prices-frontend/commit/9d4c8d59b8d8cd414d70c7e892f4928f7fc58184))
+* typo ([515295f](https://github.com/openfoodfacts/open-prices-frontend/commit/515295fb2b9eb78e08cd59ff59aae58244bf03a8))
+
+
+### Documentation
+
+* README promo for design team and files ([#1523](https://github.com/openfoodfacts/open-prices-frontend/issues/1523)) ([5bc7ee0](https://github.com/openfoodfacts/open-prices-frontend/commit/5bc7ee0ec80f4ed991049cf80276e4d9bd66b4cf))
+* Update README.md ([cf5cd74](https://github.com/openfoodfacts/open-prices-frontend/commit/cf5cd7448c7c23327b5ef23a83ec79f8c4ef02a4))
+
+
+### Technical
+
+* **deps:** bump actions/checkout from 4 to 5 ([#1660](https://github.com/openfoodfacts/open-prices-frontend/issues/1660)) ([a0e4688](https://github.com/openfoodfacts/open-prices-frontend/commit/a0e4688ef1ca875460a20695e97c807756bee5b8))
+* **deps:** bump amannn/action-semantic-pull-request from 5 to 6 ([#1659](https://github.com/openfoodfacts/open-prices-frontend/issues/1659)) ([c225525](https://github.com/openfoodfacts/open-prices-frontend/commit/c22552577100382575e7a8856b6834ae48b28b6f))
+* **Experiments:** remove single price & proof upload. add "not maintained anymore" banner. ([#1642](https://github.com/openfoodfacts/open-prices-frontend/issues/1642)) ([8b0442a](https://github.com/openfoodfacts/open-prices-frontend/commit/8b0442a5cd9a7e58b24a02863a78534c82640288))
+* **l10n:** New Crowdin translations to review and merge ([#1622](https://github.com/openfoodfacts/open-prices-frontend/issues/1622)) ([2d760fd](https://github.com/openfoodfacts/open-prices-frontend/commit/2d760fdec2e3224147733628366dc4e1ec7b2df0))
+
 ## [1.138.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.137.0...v1.138.0) (2025-07-26)
 
 
