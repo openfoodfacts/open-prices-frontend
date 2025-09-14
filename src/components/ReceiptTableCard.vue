@@ -22,16 +22,26 @@
         </template>
         <template #[`item.product`]="{ item }">
           <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
-          <v-text-field 
-            v-else-if="!item.productFound"
-            v-model="item.product_code"
-            :hide-details="true"
-            density="compact"
-            :rules="rules"
-            :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'"
-            @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
-            @keydown.enter="findProduct(item)"
-          />
+          <v-container v-else-if="!item.productFound">
+            <v-text-field 
+              v-model="item.product_code"
+              :hide-details="true"
+              density="compact"
+              :rules="rules"
+              :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'"
+              @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
+              @keydown.enter="findProduct(item)"
+            />
+            <div v-if="item.predicted_product_code" class="text-caption">
+              {{ $t('Common.SuggestedBarcode') }}
+              <span
+                class="fake-link"
+                @click="handleClickProductCodeSuggestion(item)"
+              >
+                {{ item.predicted_product_code }}
+              </span>
+            </div>
+          </v-container>
           <ProductCard v-else :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </template>
         <template #[`item.price`]="{ item }">
@@ -217,6 +227,7 @@ export default {
           }
           item.price = item.predicted_data.price || null
           item.product_name = item.predicted_data.product_name || ''
+          item.predicted_product_code = item.predicted_data.predicted_product_code || null
         }
         return item
       })
@@ -295,6 +306,10 @@ export default {
       this.barcodeScannerDialog = false
       this.barcodeScannerItem.product_code = code
       this.findProduct(this.barcodeScannerItem)
+    },
+    handleClickProductCodeSuggestion(item) {
+      item.product_code = item.predicted_product_code
+      this.findProduct(item)
     }
   }
 }
