@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.139.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.138.1...v1.139.0) (2025-09-14)
+
+
+### Features
+
+* **ReceiptAssitant:** suggest product codes based on product names ([#1650](https://github.com/openfoodfacts/open-prices-frontend/issues/1650)) ([22c6d05](https://github.com/openfoodfacts/open-prices-frontend/commit/22c6d050feb2ca510fc1ed1e8830885ac7681b0e))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1662](https://github.com/openfoodfacts/open-prices-frontend/issues/1662)) ([f15d073](https://github.com/openfoodfacts/open-prices-frontend/commit/f15d073d69d3087aadcdc167b4fb4b01e50aad41))
+* **Receipt Assistant:** Increase the time to fetch predicted prices (from 15s to 50s) ([#1664](https://github.com/openfoodfacts/open-prices-frontend/issues/1664)) ([0f92a7d](https://github.com/openfoodfacts/open-prices-frontend/commit/0f92a7d7a64ced4edb752d3c8ebda4b9f4867e15))
+
 ## [1.138.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.138.0...v1.138.1) (2025-09-03)
 
 
