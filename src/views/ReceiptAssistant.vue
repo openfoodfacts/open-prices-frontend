@@ -154,7 +154,7 @@ export default {
       // item.productFound means the product was explicitly selected by the user
       if (!this.receiptItems) return []
       const isProductValid = item => item.isCategory ? item.category_tag : item.product_code
-      return this.receiptItems.filter(item => item.predicted_data.price && isProductValid(item))
+      return this.receiptItems.filter(item => item.price && isProductValid(item))
     },
     validNewReceiptItems() {
       return this.validReceiptItems.filter(item => !item.price_id)

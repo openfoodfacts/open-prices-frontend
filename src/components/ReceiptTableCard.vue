@@ -47,7 +47,7 @@
         </template>
         <template #[`item.price`]="{ item }">
           <v-text-field
-            :model-value="item.price"
+            v-model="item.price"
             :suffix="itemPriceSuffix(item)"
             :hide-details="true"
             density="compact"
