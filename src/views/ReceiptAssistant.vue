@@ -191,7 +191,7 @@ export default {
       this.proofObject = proof
       // load the receipt items
       this.loadingPredictions = true
-      this.loadProofWithReceiptItems(proof.id, 5, proof => {
+      this.loadProofWithReceiptItems(proof.id, 10, proof => {
         api.getPrices({proof_id: proof.id}).then(data => {
           this.loadingPredictions = false
           this.proofPriceExistingList = data.items
@@ -219,7 +219,7 @@ export default {
                 callback(proof)
                 return
               }
-              setTimeout(load, 3000)
+              setTimeout(load, 5000)  // maximum wait time: maxTries * 5s (50s)
             }
           })
         })
