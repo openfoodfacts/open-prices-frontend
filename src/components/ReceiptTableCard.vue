@@ -35,8 +35,7 @@
             <div v-if="item.predicted_product_code" class="text-caption">
               {{ $t('Common.SuggestedBarcode') }}
               <span
-                class="text-primary font-weight-medium"
-                style="cursor: pointer;"
+                class="fake-link"
                 @click="handleClickProductCodeSuggestion(item)"
               >
                 {{ item.predicted_product_code }}
