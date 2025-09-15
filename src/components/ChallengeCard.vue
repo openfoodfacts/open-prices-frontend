@@ -4,8 +4,6 @@
       {{ challenge.icon }} {{ challenge.title }} {{ challenge.subtitle }}
     </template>
 
-    <v-divider />
-
     <v-card-text>
       <ChallengeStatusChip :challengeStatus="challenge.status" class="mr-1" />
       <DateChip :date="challenge.start_date" class="mr-1" />
@@ -13,6 +11,15 @@
       <div v-if="challenge.categories.length" class="mt-1">
         <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
       </div>
+    </v-card-text>
+
+    <v-divider v-if="challenge.status !== 'UPCOMING'" />
+
+    <v-card-text v-if="challenge.status !== 'UPCOMING'">
+      <PriceCountChip class="mr-1" :count="challenge.stats.price_count" :withLabel="true" />
+      <ProofCountChip class="mr-1" :count="challenge.stats.proof_count" :withLabel="true" />
+      <LocationCountChip class="mr-1" :count="challenge.stats.proof_location_count" :withLabel="true" />
+      <ProductCountChip class="mr-1" :count="challenge.stats.price_product_count" :withLabel="true" />
     </v-card-text>
   </v-card>
 </template>
@@ -25,7 +32,11 @@ export default {
   components: {
     CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
-    ChallengeStatusChip: defineAsyncComponent(() => import('../components/ChallengeStatusChip.vue'))
+    ChallengeStatusChip: defineAsyncComponent(() => import('../components/ChallengeStatusChip.vue')),
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
+    LocationCountChip: defineAsyncComponent(() => import('../components/LocationCountChip.vue')),
+    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
   },
   props: {
     challenge: {
