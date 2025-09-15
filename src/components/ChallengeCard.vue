@@ -14,6 +14,13 @@
         <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
       </div>
     </v-card-text>
+
+    <v-divider v-if="challenge.status !== 'UPCOMING'" />
+
+    <v-card-text v-if="challenge.status !== 'UPCOMING'">
+      <PriceCountChip class="mr-1" :count="challenge.stats.price_count" :withLabel="true" />
+      <ProofCountChip class="mr-1" :count="challenge.stats.proof_count" :withLabel="true" />
+    </v-card-text>
   </v-card>
 </template>
 
@@ -25,7 +32,9 @@ export default {
   components: {
     CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
-    ChallengeStatusChip: defineAsyncComponent(() => import('../components/ChallengeStatusChip.vue'))
+    ChallengeStatusChip: defineAsyncComponent(() => import('../components/ChallengeStatusChip.vue')),
+    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
   },
   props: {
     challenge: {
