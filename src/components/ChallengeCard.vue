@@ -13,13 +13,10 @@
       <div v-if="challenge.categories.length" class="mt-1">
         <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
       </div>
-    </v-card-text>
-
-    <v-divider v-if="challenge.status !== 'UPCOMING'" />
-
-    <v-card-text v-if="challenge.status !== 'UPCOMING'">
-      <PriceCountChip class="mr-1" :count="challenge.stats.price_count" :withLabel="true" />
-      <ProofCountChip class="mr-1" :count="challenge.stats.proof_count" :withLabel="true" />
+      <div v-if="challenge.status !== 'UPCOMING'" class="mt-1">
+        <PriceCountChip class="mr-1" :count="challenge.stats.price_count" :withLabel="true" />
+        <ProofCountChip class="mr-1" :count="challenge.stats.proof_count" :withLabel="true" />
+      </div>
     </v-card-text>
   </v-card>
 </template>
