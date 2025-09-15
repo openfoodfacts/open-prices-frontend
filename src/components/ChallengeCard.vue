@@ -4,8 +4,6 @@
       {{ challenge.icon }} {{ challenge.title }} {{ challenge.subtitle }}
     </template>
 
-    <v-divider />
-
     <v-card-text>
       <ChallengeStatusChip :challengeStatus="challenge.status" class="mr-1" />
       <DateChip :date="challenge.start_date" class="mr-1" />
