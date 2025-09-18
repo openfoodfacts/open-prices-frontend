@@ -59,3 +59,20 @@ Challenges:
 - all:
   - changed-files:
     - any-glob-to-any-file: 'src/components/ChallengeCard.vue'
+
+Receipt assistant:
+- all:
+  - changed-files:
+    - any-glob-to-any-file: 'src/views/ReceiptAssistant.vue'
+    - any-glob-to-any-file: 'src/components/ReceiptTableCard.vue'
+
+contribution assistant:
+- all:
+  - changed-files:
+    - any-glob-to-any-file: 'src/views/ProofPriceTagAssistant.vue'
+
+price validation assistant:
+- all:
+  - changed-files:
+    - any-glob-to-any-file: 'src/views/PriceValidationAssistant.vue'
+    
