@@ -13,7 +13,10 @@ Works with an Open Prices server, see https://github.com/openfoodfacts/open-pric
 - [![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?logo=figma&logoColor=white) Mockups for Open Prices](https://www.figma.com/design/cIB7CInl2BfueMzWnz09t6/Open-Prices?node-id=0-1&p=f&t=LC7UvPjngw57NGSs-0)
 - [![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?logo=figma&logoColor=white) Mobile Mockups for Open Prices](https://www.figma.com/design/nFMjewFAOa8c4ahtob7CAB/Mobile-App-Design--Quentin-?node-id=5816-22697&p=f&t=AkgTM9QzMK7tQeGC-0)
 - [![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?logo=figma&logoColor=white) Benchmark of the defunct Prixing app](https://www.figma.com/design/XQYkLGKlcotBPpwKMhDe1z/Prixing---Benchmark?m=auto&t=AkgTM9QzMK7tQeGC-6)
+- [![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?logo=figma&logoColor=white) Additional file by Guigz](https://www.figma.com/design/1mEjKuxKHxop3X60R6dr5s/OFF---Revamp-responsive-webapp?node-id=5-8&p=f&t=B58nHkWcUQQiwxe8-0)
+- [![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?logo=figma&logoColor=white) Mockups & Benchmarks](https://www.figma.com/files/team/743085508862409251/project/253685945/Open-Prices?fuid=969925716131479490)
 - Are you a designer ? [Join the design team](https://github.com/openfoodfacts/openfoodfacts-design)
+
 
 ## Dependencies
 
