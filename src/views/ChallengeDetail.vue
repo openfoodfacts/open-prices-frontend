@@ -36,6 +36,51 @@
     </v-col>
   </v-row>
 
+  <v-row v-if="challenge?.stats">
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        {{ $t('Challenge.StatsAndRankings') }}
+      </h2>
+    </v-col>
+    <v-col>
+      <v-row>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="challenge.numberOfProofs" :subtitle="$t('Common.Pictures')" :to="getChallengeProofListUrl" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="challenge.numberOfContributions" :subtitle="$t('Common.Prices')" :to="getChallengePriceListUrl" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="challenge.stats.user_count" :subtitle="$t('Common.Contributors')" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="challenge.stats.proof_location_count" :subtitle="$t('Common.Locations')" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="challenge.stats.price_product_count" :subtitle="$t('Common.Products')" />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="12" sm="6" md="4">
+          <RankingTableCard :title="$t('Challenge.MostPicturesAdded')" :items="challenge.stats.user_proof_count_ranking" />
+        </v-col>
+        <v-col cols="12" sm="6" md="4">
+          <RankingTableCard :title="$t('Challenge.MostPricesAdded')" :items="challenge.stats.user_price_count_ranking" />
+        </v-col>
+        <v-col cols="12" sm="6" md="4">
+          <RankingTableCard :title="$t('Common.TopCountries')" :items="challenge.stats.location_country_price_count_ranking" />
+        </v-col>
+      </v-row>
+    </v-col>
+    <v-col cols="12">
+      <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(challenge.stats.updated)">
+        <template #date>
+          {{ getDateTimeFormatted(challenge.stats.updated) }}
+        </template>
+      </i18n-t>
+    </v-col>
+  </v-row>
+
   <v-row v-if="challenge?.latestContributions?.length">
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
@@ -53,6 +98,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api.js'
+import date_utils from '../utils/date.js'
 
 export default {
   components: {
@@ -61,6 +107,8 @@ export default {
     ChallengeTimeline: defineAsyncComponent(() => import('../components/ChallengeTimeline.vue')),
     ChallengeTakePicturesCard: defineAsyncComponent(() => import('../components/ChallengeTakePicturesCard.vue')),
     ChallengeValidateCard: defineAsyncComponent(() => import('../components/ChallengeValidateCard.vue')),
+    StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
+    RankingTableCard: defineAsyncComponent(() => import('../components/RankingTableCard.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
   data() {
@@ -79,6 +127,12 @@ export default {
         tags__contains: `challenge-${this.challenge.id}`
       }
     },
+    getChallengeProofListUrl() {
+      return `/challenges/${this.challenge.id}/proofs`
+    },
+    getChallengePriceListUrl() {
+      return `/challenges/${this.challenge.id}/prices`
+    }
   },
   mounted() {
     this.getChallenge()
@@ -132,7 +186,13 @@ export default {
       .then((data) => {
         this.challenge.latestContributions = data.items
       })
-    }
+    },
+    getDateTimeFormatted(dateTimeString) {
+      return date_utils.offDateTime(dateTimeString)
+    },
+    getRelativeDateTimeFormatted(dateTimeString) {
+      return date_utils.prettyRelativeDateTime(dateTimeString, 'short')
+    },
   }
 }
 </script>
