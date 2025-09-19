@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "ราคาที่คุณเพิ่ม",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "ความท้าทายที่ผ่านมา",
-		"UpcomingChallenges": "ความท้าทายที่กำลังจะเกิดขึ้น"
+		"UpcomingChallenges": "ความท้าทายที่กำลังจะเกิดขึ้น",
+		"StatsAndRankings": "สถิติและอันดับ",
+		"MostPicturesAdded": "เพิ่มรูปภาพส่วนใหญ่",
+		"MostPricesAdded": "ราคาส่วนใหญ่เพิ่ม"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "ราคาที่คุณเพิ่ม",
 		"Private": "Private",
 		"Privacy": "นโยบายความเป็นส่วนตัว",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "เมืองยอดนิยม",
+		"TopCountries": "ประเทศยอดนิยม",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
