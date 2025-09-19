@@ -16,11 +16,8 @@
     </v-card-text>
     <v-card-text>
       <v-row>
-        <v-col cols="6">
-          <StatCard :value="challenge.numberOfProofs" :subtitle="statSubtitleProofCount" :to="getChallengeProofListUrl" />
-        </v-col>
-        <v-col cols="6">
-          <StatCard :value="challenge.userProofContributions" :subtitle="statSubtitleProofOwnerCount" />
+        <v-col>
+          <StatCard :value="challenge.userProofContributions" :subtitle="$t('Common.PicturesAddedByYou')" />
         </v-col>
       </v-row>
     </v-card-text>
@@ -53,16 +50,5 @@ export default {
       default: () => {}
     }
   },
-  computed: {
-    statSubtitleProofCount() {
-      return this.$vuetify.display.smAndUp ? this.$t('Common.PicturesAdded') : this.$t('Common.Pictures')
-    },
-    statSubtitleProofOwnerCount() {
-      return this.$vuetify.display.smAndUp ? this.$t('Common.PicturesAddedByYou') : this.$t('Common.PicturesByYou')
-    },
-    getChallengeProofListUrl() {
-      return `/challenges/${this.challenge.id}/proofs`
-    }
-  }
 }
 </script>
