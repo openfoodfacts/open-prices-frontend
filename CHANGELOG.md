@@ -27,7 +27,7 @@
 * **Challenges:** some small improvements on the list & detail pages ([#1672](https://github.com/openfoodfacts/open-prices-frontend/issues/1672)) ([26c6b7b](https://github.com/openfoodfacts/open-prices-frontend/commit/26c6b7bc49d98e6476190dd1fd300c1102306d4f))
 * **deps:** Update packages ([#1675](https://github.com/openfoodfacts/open-prices-frontend/issues/1675)) ([dd7e163](https://github.com/openfoodfacts/open-prices-frontend/commit/dd7e1636c9881e109cbcf4e57a3a41c0a02de950))
 * **l10n:** New Crowdin translations to review and merge ([#1665](https://github.com/openfoodfacts/open-prices-frontend/issues/1665)) ([d3ffcbd](https://github.com/openfoodfacts/open-prices-frontend/commit/d3ffcbd5687d83c3a4c3aac73652a8ee62c2d577))
-* remove when possible &lt;br&gt; (move <h2> inside <v-col>) ([#1673](https://github.com/openfoodfacts/open-prices-frontend/issues/1673)) ([b401be7](https://github.com/openfoodfacts/open-prices-frontend/commit/b401be7664caa7229cb5be535f5761cfed02f3c8))
+* remove when possible &lt;br&gt; (move h2 inside v-col) ([#1673](https://github.com/openfoodfacts/open-prices-frontend/issues/1673)) ([b401be7](https://github.com/openfoodfacts/open-prices-frontend/commit/b401be7664caa7229cb5be535f5761cfed02f3c8))
 
 ## [1.139.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.138.1...v1.139.0) (2025-09-14)
 
