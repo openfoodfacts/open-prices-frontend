@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Priser som du har lagt till",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Pågående utmaningar",
 		"PastChallenges": "Tidigare utmaningar",
-		"UpcomingChallenges": "Kommande utmaningar"
+		"UpcomingChallenges": "Kommande utmaningar",
+		"StatsAndRankings": "Statistik och rankningar",
+		"MostPicturesAdded": "De flesta bilder tillagda",
+		"MostPricesAdded": "De flesta priser tillagda"
 	},
 	"Common": {
 		"About": "Om",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Priser tillagda idag",
 		"PricesToday": "Priser idag",
 		"PriceNotFound": "Priset hittades inte",
+		"PricesAddedByYou": "Priser som du har lagt till",
 		"Private": "Privat",
 		"Privacy": "Integritet",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Topprodukter",
+		"TopCities": "Toppstäder",
+		"TopCountries": "Toppländer",
 		"Today": "Idag",
 		"Top": "Top",
 		"Total": "Total",
