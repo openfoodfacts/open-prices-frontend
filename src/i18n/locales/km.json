@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "តម្លៃបន្ថែមដោយអ្នក។",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "បញ្ហាប្រឈមកន្លងមក",
-		"UpcomingChallenges": "បញ្ហាប្រឈមនាពេលខាងមុខ"
+		"UpcomingChallenges": "បញ្ហាប្រឈមនាពេលខាងមុខ",
+		"StatsAndRankings": "ស្ថិតិ និងចំណាត់ថ្នាក់",
+		"MostPicturesAdded": "រូបភាពភាគច្រើនត្រូវបានបន្ថែម",
+		"MostPricesAdded": "តម្លៃភាគច្រើនត្រូវបានបន្ថែម"
 	},
 	"Common": {
 		"About": "អំពី",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "តម្លៃបន្ថែមដោយអ្នក។",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "ទីក្រុងកំពូល",
+		"TopCountries": "ប្រទេសកំពូល",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
