@@ -26,6 +26,22 @@
         <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
         <ProofImageInputRow :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <ProofMetadataInputRow :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
+        
+        <!-- Informational alerts about proof saving and multiple prices -->
+        <v-alert
+          v-if="!multiple"
+          class="mt-4"
+          type="info"
+          variant="outlined"
+          density="compact"
+        >
+          <div>
+            {{ $t('Common.ProofSavedAutomatically') }}
+          </div>
+          <div class="mt-2">
+            {{ $t('Common.CanAddMultiplePrices') }}
+          </div>
+        </v-alert>
       </v-sheet>
       <v-sheet v-else-if="step === 2">
         <v-progress-linear
@@ -52,7 +68,7 @@
         @click="uploadProofList"
       >
         <span v-if="multiple && proofImageList.length">{{ $t('Common.UploadMultipleProofs', { count: proofImageList.length }) }}</span>
-        <span v-else>{{ $t('Common.Upload') }}</span>
+        <span v-else>{{ $t('Common.SaveProof') }}</span>
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -74,6 +90,13 @@
     :timeout="2000"
   >
     {{ $t('AddPriceSingle.PriceDetails.ProofSelected') }}
+  </v-snackbar>
+  <v-snackbar
+    v-model="proofSuccessMessage"
+    color="success"
+    :timeout="4000"
+  >
+    {{ $t('Common.ProofSavedToDashboard') }}
   </v-snackbar>
 </template>
 
@@ -295,6 +318,8 @@ export default {
               this.proofForm.proof_id = data.id
               this.proofForm.location_id = data.location_id
               this.proofObjectList = this.proofObjectList.concat(data)
+              // Show success message
+              this.proofSuccessMessage = true
             } else {
               alert('Error: server error when creating proof')
               console.log(data)
