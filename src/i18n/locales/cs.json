@@ -145,7 +145,7 @@
 		"Prices": "Ceny {challenge_title}",
 		"PricesAdded": "Ceny {challenge_title} přidány",
 		"PricesByYou": "Ceny {challenge_title} od vás",
-		"PricesAddedByYou": "Ceny {challenge_title} byly vámi přidány",
+		"PricesAddedByYou": "Ceny, které jste přidali",
 		"MostRecentContributions": "Nejnovější příspěvky",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Minulé výzvy",
-		"UpcomingChallenges": "Nadcházející výzvy"
+		"UpcomingChallenges": "Nadcházející výzvy",
+		"StatsAndRankings": "Statistiky a žebříčky",
+		"MostPicturesAdded": "Většina přidáných obrázků",
+		"MostPricesAdded": "Většina cen byla přidána"
 	},
 	"Common": {
 		"About": "O aplikaci",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Ceny přidány dnes",
 		"PricesToday": "Ceny dnes",
 		"PriceNotFound": "Cena nenalezena",
+		"PricesAddedByYou": "Ceny, které jste přidali",
 		"Private": "Soukromý",
 		"Privacy": "Soukromí",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Nejlepší přispěvatelé",
 		"TopLocations": "Nejlepší polohy",
 		"TopProducts": "Nejlepší produkty",
+		"TopCities": "Největší města",
+		"TopCountries": "Nejvýznamnější země",
 		"Today": "Dnes",
 		"Top": "Nahoru",
 		"Total": "Celkem",
