@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Prețuri adăugate de dvs.",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Provocări din trecut",
-		"UpcomingChallenges": "Provocări viitoare"
+		"UpcomingChallenges": "Provocări viitoare",
+		"StatsAndRankings": "Statistici și clasamente",
+		"MostPicturesAdded": "Majoritatea imaginilor adăugate",
+		"MostPricesAdded": "Majoritatea prețurilor adăugate"
 	},
 	"Common": {
 		"About": "Despre",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Prețuri adăugate de dvs.",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Orașe de top",
+		"TopCountries": "Țări de top",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
