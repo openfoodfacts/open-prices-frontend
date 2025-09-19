@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Sizin əlavə etdiyiniz qiymətlər",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Keçmiş çətinliklər",
-		"UpcomingChallenges": "Qarşıdan gələn problemlər"
+		"UpcomingChallenges": "Qarşıdan gələn problemlər",
+		"StatsAndRankings": "Statistika və reytinqlər",
+		"MostPicturesAdded": "Ən çox şəkil əlavə edildi",
+		"MostPricesAdded": "Ən çox qiymətlər əlavə edildi"
 	},
 	"Common": {
 		"About": "Haqqında",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Sizin əlavə etdiyiniz qiymətlər",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Ən yaxşı şəhərlər",
+		"TopCountries": "Ən yaxşı ölkələr",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
