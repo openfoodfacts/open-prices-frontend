@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Цени, добавени от вас",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Минали предизвикателства",
-		"UpcomingChallenges": "Предстоящи предизвикателства"
+		"UpcomingChallenges": "Предстоящи предизвикателства",
+		"StatsAndRankings": "Статистика и класиране",
+		"MostPicturesAdded": "Повечето снимки са добавени",
+		"MostPricesAdded": "Повечето цени са добавени"
 	},
 	"Common": {
 		"About": "Относно",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Цени, добавени от вас",
 		"Private": "Private",
 		"Privacy": "Поверителност",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Най-популярни градове",
+		"TopCountries": "Водещи държави",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Общо",
