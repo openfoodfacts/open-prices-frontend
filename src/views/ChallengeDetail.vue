@@ -60,6 +60,17 @@
           <StatCard :value="challenge.stats.price_product_count" :subtitle="$t('Common.Products')" />
         </v-col>
       </v-row>
+      <v-row>
+        <v-col cols="12" sm="6" md="4">
+          <RankingTableCard :title="$t('Challenge.MostPicturesAdded')" :items="challenge.stats.user_proof_count_ranking" />
+        </v-col>
+        <v-col cols="12" sm="6" md="4">
+          <RankingTableCard :title="$t('Challenge.MostPricesAdded')" :items="challenge.stats.user_price_count_ranking" />
+        </v-col>
+        <v-col cols="12" sm="6" md="4">
+          <RankingTableCard :title="$t('Common.TopCountries')" :items="challenge.stats.location_country_price_count_ranking" />
+        </v-col>
+      </v-row>
     </v-col>
     <v-col cols="12">
       <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(challenge.stats.updated)">
@@ -97,6 +108,7 @@ export default {
     ChallengeTakePicturesCard: defineAsyncComponent(() => import('../components/ChallengeTakePicturesCard.vue')),
     ChallengeValidateCard: defineAsyncComponent(() => import('../components/ChallengeValidateCard.vue')),
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
+    RankingTableCard: defineAsyncComponent(() => import('../components/RankingTableCard.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
   data() {

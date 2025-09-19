@@ -159,7 +159,9 @@
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Past challenges",
 		"UpcomingChallenges": "Upcoming challenges",
-		"StatsAndRankings": "Stats & rankings"
+		"StatsAndRankings": "Stats & rankings",
+		"MostPicturesAdded": "Most pictures added",
+		"MostPricesAdded": "Most prices added"
 	},
 	"Common": {
 		"About": "About",
@@ -418,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Top cities",
+		"TopCountries": "Top countries",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
