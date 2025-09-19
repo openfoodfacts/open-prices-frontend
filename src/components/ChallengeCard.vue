@@ -1,7 +1,7 @@
 <template>
-  <v-card :id="'challenge_' + challenge.id" :class="'border-transparent'" :to="getChallengeUrl(challenge)">
+  <v-card :id="'challenge_' + challenge.id" :to="getChallengeUrl">
     <template #title>
-      {{ challenge.icon }} {{ challenge.title }} {{ challenge.subtitle }}
+      <span :title="getChallengeTitle">{{ getChallengeTitle }}</span>
     </template>
 
     <v-card-text>
@@ -10,6 +10,9 @@
       <DateChip :date="challenge.end_date" />
       <div v-if="challenge.categories.length" class="mt-1">
         <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
+      </div>
+      <div v-if="challenge.locations.length" class="mt-1">
+        <LocationCountChip class="mr-1" :count="challenge.locations.length" :withLabel="true" />
       </div>
     </v-card-text>
 
@@ -58,10 +61,13 @@ export default {
       }
     },
   },
-  methods: {
-    getChallengeUrl(challenge) {
-      return `/challenges/${challenge.id}`
+  computed: {
+    getChallengeTitle() {
+      return this.challenge ? `${this.challenge.icon} ${this.challenge.title}` : ''
+    },
+    getChallengeUrl() {
+      return this.challenge ? `/challenges/${this.challenge.id}` : ''
     }
-  }
+  },
 }
 </script>
