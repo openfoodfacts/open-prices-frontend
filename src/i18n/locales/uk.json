@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} ціни",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} ціни від вас",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Ціни, додані вами",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} виклики | {count} виклик | {count} виклики",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Минулі або майбутні виклики",
 		"OngoingChallenges": "Поточні виклики",
 		"PastChallenges": "Минулі виклики",
-		"UpcomingChallenges": "Майбутні виклики"
+		"UpcomingChallenges": "Майбутні виклики",
+		"StatsAndRankings": "Статистика та рейтинги",
+		"MostPicturesAdded": "Найбільше додано фотографій",
+		"MostPricesAdded": "Більшість цін додано"
 	},
 	"Common": {
 		"About": "Про додаток",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Ціни, додані сьогодні",
 		"PricesToday": "Ціни сьогодні",
 		"PriceNotFound": "Ціна не знайдена",
+		"PricesAddedByYou": "Ціни, додані вами",
 		"Private": "Приватний",
 		"Privacy": "Конфіденційність",
 		"ProductCount": "{count} продукти | {count} продукт | {count} продукти",
@@ -416,6 +420,8 @@
 		"TopContributors": "Найактивніші користувачі",
 		"TopLocations": "Топ локацій",
 		"TopProducts": "Кращі продукти",
+		"TopCities": "Найпопулярніші міста",
+		"TopCountries": "Найпопулярніші країни",
 		"Today": "Сьогодні",
 		"Top": "Верх",
 		"Total": "Усього",
