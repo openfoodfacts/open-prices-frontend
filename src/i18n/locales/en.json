@@ -239,6 +239,8 @@
 		"Error": "Error",
 		"Experiment": "Experiment",
 		"Experiments": "Experiments",
+		"FromPriceTag": "From a price tag",
+		"FromReceipt": "From a receipt",
 		"GoToProof": "Go to proof",
 		"Join": "Join",
 		"Label": "Label",
@@ -451,6 +453,7 @@
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePricesFromCommunity": "Validate prices from the community",
 		"View": "View",
 		"Website": "Website",
 		"Year": "Year",
@@ -722,6 +725,9 @@
 		},
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
+		},
+		"AddProofSingleMultiple": {
+			"Title": "Add one or multiple proofs"
 		},
 		"Locations": {
 			"Title": "Locations"
