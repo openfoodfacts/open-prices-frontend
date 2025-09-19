@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} kainos",
 		"PricesAdded": "{challenge_title} pridėtos kainos",
 		"PricesByYou": "{challenge_title} jūsų kainos",
-		"PricesAddedByYou": "{challenge_title} kainos, kurias pridėjote jūs",
+		"PricesAddedByYou": "Jūsų pridėtos kainos",
 		"MostRecentContributions": "Naujausi įnašai",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Buvę ar būsimi iššūkiai",
 		"OngoingChallenges": "Vykstantys iššūkiai",
 		"PastChallenges": "Buvę iššūkiai",
-		"UpcomingChallenges": "Būsimi iššūkiai"
+		"UpcomingChallenges": "Būsimi iššūkiai",
+		"StatsAndRankings": "Statistika ir reitingai",
+		"MostPicturesAdded": "Daugiausia pridėtų nuotraukų",
+		"MostPricesAdded": "Dauguma kainų pridėtos"
 	},
 	"Common": {
 		"About": "Apie",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Kainos pridėtos šiandien",
 		"PricesToday": "Kainos šiandien",
 		"PriceNotFound": "Kaina nerasta",
+		"PricesAddedByYou": "Jūsų pridėtos kainos",
 		"Private": "Privatu",
 		"Privacy": "Privatumas",
 		"ProductCount": "{count} produktai | {count} produktas | {count} produktų",
@@ -416,6 +420,8 @@
 		"TopContributors": "Geriausi bendraautoriai",
 		"TopLocations": "Geriausios vietos",
 		"TopProducts": "Populiariausi produktai",
+		"TopCities": "Populiariausi miestai",
+		"TopCountries": "Populiariausios šalys",
 		"Today": "Šiandien",
 		"Top": "Geriausi",
 		"Total": "Iš viso",
