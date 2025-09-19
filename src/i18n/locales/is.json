@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Verð sem þú bættir við",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Fyrri áskoranir",
-		"UpcomingChallenges": "Komandi áskoranir"
+		"UpcomingChallenges": "Komandi áskoranir",
+		"StatsAndRankings": "Tölfræði og röðun",
+		"MostPicturesAdded": "Flestar myndir bættar við",
+		"MostPricesAdded": "Flest verð bætt við"
 	},
 	"Common": {
 		"About": "Um forritið",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Verð sem þú bættir við",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Vinsælustu borgirnar",
+		"TopCountries": "Vinsælustu löndin",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
