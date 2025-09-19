@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Цэны, дададзеныя вамі",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Мінулыя выклікі",
-		"UpcomingChallenges": "Будучыя выклікі"
+		"UpcomingChallenges": "Будучыя выклікі",
+		"StatsAndRankings": "Статыстыка і рэйтынгі",
+		"MostPicturesAdded": "Большасць дададзеных здымкаў",
+		"MostPricesAdded": "Большасць цэн дададзены"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Цэны, дададзеныя вамі",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Найбольш папулярныя гарады",
+		"TopCountries": "Найбольш папулярныя краіны",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
