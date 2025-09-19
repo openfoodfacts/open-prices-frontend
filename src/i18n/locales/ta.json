@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} விலைகள் சேர்க்கப்பட்டன",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "உங்களால் {challenge_title} விலைகள் சேர்க்கப்பட்டன",
+		"PricesAddedByYou": "நீங்கள் சேர்த்த விலைகள்",
 		"MostRecentContributions": "மிகச் சமீபத்திய பங்களிப்புகள்",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "கடந்த கால சவால்கள்",
-		"UpcomingChallenges": "வரவிருக்கும் சவால்கள்"
+		"UpcomingChallenges": "வரவிருக்கும் சவால்கள்",
+		"StatsAndRankings": "புள்ளிவிவரங்கள் & தரவரிசைகள்",
+		"MostPicturesAdded": "பெரும்பாலான படங்கள் சேர்க்கப்பட்டன",
+		"MostPricesAdded": "பெரும்பாலான விலைகள் சேர்க்கப்பட்டுள்ளன"
 	},
 	"Common": {
 		"About": "இதைப் பற்றி",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "இன்று சேர்க்கப்பட்ட விலைகள்",
 		"PricesToday": "இன்றைய விலைகள்",
 		"PriceNotFound": "விலை கிடைக்கவில்லை.",
+		"PricesAddedByYou": "நீங்கள் சேர்த்த விலைகள்",
 		"Private": "தனியார்",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} தயாரிப்புகள் | {count} தயாரிப்பு | {count} தயாரிப்புகள்",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "சிறந்த நகரங்கள்",
+		"TopCountries": "சிறந்த நாடுகள்",
 		"Today": "Today",
 		"Top": "சிறந்த",
 		"Total": "Total",
