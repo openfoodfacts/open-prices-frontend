@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "আপোনাৰ দ্বাৰা যোগ কৰা দাম",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "অতীতৰ প্ৰত্যাহ্বান",
-		"UpcomingChallenges": "আগন্তুক প্ৰত্যাহ্বানসমূহ"
+		"UpcomingChallenges": "আগন্তুক প্ৰত্যাহ্বানসমূহ",
+		"StatsAndRankings": "ষ্টেটছ আৰু ৰেংকিং",
+		"MostPicturesAdded": "বেছিভাগ ছবিয়েই যোগ কৰা হৈছে",
+		"MostPricesAdded": "বেছিভাগ দাম যোগ কৰা হৈছে"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "আপোনাৰ দ্বাৰা যোগ কৰা দাম",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "শীৰ্ষ চহৰসমূহ",
+		"TopCountries": "শীৰ্ষ দেশ",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
