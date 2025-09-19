@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} priser",
 		"PricesAdded": "{challenge_title} priser tilføjet",
 		"PricesByYou": "{challenge_title} priser fra dig",
-		"PricesAddedByYou": "{challenge_title} priser tilføjet af dig",
+		"PricesAddedByYou": "Priser tilføjet af dig",
 		"MostRecentContributions": "Seneste bidrag",
 		"ChallengeCount": "{count} udfordringer | {count} udfordring | {count} udfordringer",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Tidligere eller fremtidige udfordringer",
 		"OngoingChallenges": "Igangværende udfordringer",
 		"PastChallenges": "Tidligere udfordringer",
-		"UpcomingChallenges": "Kommende udfordringer"
+		"UpcomingChallenges": "Kommende udfordringer",
+		"StatsAndRankings": "Statistikker og ranglister",
+		"MostPicturesAdded": "De fleste billeder tilføjet",
+		"MostPricesAdded": "De fleste priser er tilføjet"
 	},
 	"Common": {
 		"About": "Om",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Priser tilføjet i dag",
 		"PricesToday": "Priser i dag",
 		"PriceNotFound": "Pris ikke fundet",
+		"PricesAddedByYou": "Priser tilføjet af dig",
 		"Private": "Privat",
 		"Privacy": "Privatliv",
 		"ProductCount": "{count} produkter | {count} produkt | {count} produkter",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top bidragydere",
 		"TopLocations": "Topplaceringer",
 		"TopProducts": "Top produkter",
+		"TopCities": "Topbyer",
+		"TopCountries": "Toplande",
 		"Today": "I dag",
 		"Top": "Top",
 		"Total": "I alt",
