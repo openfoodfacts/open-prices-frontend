@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "ඔබ විසින් එකතු කරන ලද මිල ගණන්",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "අතීත අභියෝග",
-		"UpcomingChallenges": "ඉදිරියට එන අභියෝග"
+		"UpcomingChallenges": "ඉදිරියට එන අභියෝග",
+		"StatsAndRankings": "සංඛ්‍යාලේඛන සහ ශ්‍රේණිගත කිරීම්",
+		"MostPicturesAdded": "බොහෝ පින්තූර එකතු කර ඇත",
+		"MostPricesAdded": "බොහෝ මිල ගණන් එකතු කරන ලදී"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "ඔබ විසින් එකතු කරන ලද මිල ගණන්",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "ඉහළම නගර",
+		"TopCountries": "ඉහළම රටවල්",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
