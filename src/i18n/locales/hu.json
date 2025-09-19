@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Ön által hozzáadott árak",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Korábbi kihívások",
-		"UpcomingChallenges": "Közelgő kihívások"
+		"UpcomingChallenges": "Közelgő kihívások",
+		"StatsAndRankings": "Statisztikák és rangsorok",
+		"MostPicturesAdded": "A legtöbb kép hozzáadva",
+		"MostPricesAdded": "A legtöbb ár hozzáadva"
 	},
 	"Common": {
 		"About": "Névjegy",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Ön által hozzáadott árak",
 		"Private": "Privát",
 		"Privacy": "Adatvédelem",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Legnépszerűbb városok",
+		"TopCountries": "Legnépszerűbb országok",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Összesen",
