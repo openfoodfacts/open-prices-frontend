@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "आपके द्वारा जोड़े गए मूल्य",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "विगत चुनौतियाँ",
-		"UpcomingChallenges": "आगामी चुनौतियाँ"
+		"UpcomingChallenges": "आगामी चुनौतियाँ",
+		"StatsAndRankings": "आँकड़े और रैंकिंग",
+		"MostPicturesAdded": "सबसे अधिक चित्र जोड़े गए",
+		"MostPricesAdded": "अधिकांश कीमतें जोड़ी गईं"
 	},
 	"Common": {
 		"About": "जानकारी",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "आपके द्वारा जोड़े गए मूल्य",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "शीर्ष शहर",
+		"TopCountries": "शीर्ष देश",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
