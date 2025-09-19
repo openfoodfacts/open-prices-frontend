@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} harga",
 		"PricesAdded": "{challenge_title} harga ditambahkan",
 		"PricesByYou": "{challenge_title} harga oleh Anda",
-		"PricesAddedByYou": "{challenge_title} harga yang Anda tambahkan",
+		"PricesAddedByYou": "Harga yang Anda tambahkan",
 		"MostRecentContributions": "Kontribusi terbaru",
 		"ChallengeCount": "{count} tantangan | {count} tantangan | {count} tantangan",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Tantangan sebelumnya atau yang akan datang",
 		"OngoingChallenges": "Tantangan yang sedang berlangsung",
 		"PastChallenges": "Tantangan sebelumnya",
-		"UpcomingChallenges": "Tantangan selanjutnya"
+		"UpcomingChallenges": "Tantangan selanjutnya",
+		"StatsAndRankings": "Statistik & peringkat",
+		"MostPicturesAdded": "Sebagian besar gambar ditambahkan",
+		"MostPricesAdded": "Sebagian besar harga ditambahkan"
 	},
 	"Common": {
 		"About": "Tentang",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Harga yang ditambahkan hari ini",
 		"PricesToday": "Harga hari ini",
 		"PriceNotFound": "Harga tidak ditemukan",
+		"PricesAddedByYou": "Harga yang Anda tambahkan",
 		"Private": "Pribadi",
 		"Privacy": "Privasi",
 		"ProductCount": "{count} produk | {count} produk | {count} produk",
@@ -416,6 +420,8 @@
 		"TopContributors": "Kontributor teratas",
 		"TopLocations": "Lokasi teratas",
 		"TopProducts": "Produk teratas",
+		"TopCities": "Kota-kota teratas",
+		"TopCountries": "Negara-negara teratas",
 		"Today": "Hari Ini",
 		"Top": "Teratas",
 		"Total": "Total",
