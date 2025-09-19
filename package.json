@@ -25,7 +25,7 @@
     "@intlify/unplugin-vue-i18n": "^4.0.0",
     "@openfoodfacts/openfoodfacts-webcomponents": "^1.14.1",
     "@vue-leaflet/vue-leaflet": "^0.10.1",
-    "@vueuse/core": "^11.3.0",
+    "@vueuse/core": "^13.9.0",
     "@vueuse/integrations": "^11.3.0",
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "compressorjs": "^1.2.1",
