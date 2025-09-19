@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Таны нэмсэн үнэ",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Өнгөрсөн сорилтууд",
-		"UpcomingChallenges": "Удахгүй болох сорилтууд"
+		"UpcomingChallenges": "Удахгүй болох сорилтууд",
+		"StatsAndRankings": "Статистик ба зэрэглэл",
+		"MostPicturesAdded": "Ихэнх зураг нэмсэн",
+		"MostPricesAdded": "Ихэнх үнийг нэмсэн"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Таны нэмсэн үнэ",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Шилдэг хотууд",
+		"TopCountries": "Шилдэг улс орнууд",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
