@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Prìsean a chuir thu ris",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Dùbhlain san àm a dh'fhalbh",
-		"UpcomingChallenges": "Dùbhlain a tha ri thighinn"
+		"UpcomingChallenges": "Dùbhlain a tha ri thighinn",
+		"StatsAndRankings": "Staitistig & rangachadh",
+		"MostPicturesAdded": "A’ mhòr-chuid de dhealbhan air an cur ris",
+		"MostPricesAdded": "A’ mhòr-chuid de phrìsean air an cur ris"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Prìsean a chuir thu ris",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Prìomh bhailtean",
+		"TopCountries": "Prìomh dhùthchannan",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
