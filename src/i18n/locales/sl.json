@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Cene, ki ste jih dodali vi",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Pretekli izzivi",
-		"UpcomingChallenges": "Prihajajoči izzivi"
+		"UpcomingChallenges": "Prihajajoči izzivi",
+		"StatsAndRankings": "Statistika in uvrstitve",
+		"MostPicturesAdded": "Večina dodanih slik",
+		"MostPricesAdded": "Večina dodanih cen"
 	},
 	"Common": {
 		"About": "O programu",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Cene, ki ste jih dodali vi",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Najbolj priljubljena mesta",
+		"TopCountries": "Najbolj priljubljene države",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
