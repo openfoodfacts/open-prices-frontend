@@ -23,7 +23,7 @@
   </v-row>
 
   <v-row v-if="challenge">
-    <v-col cols="12">
+    <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         {{ $t('About.HowContribute') }}
       </h2>
@@ -37,7 +37,7 @@
   </v-row>
 
   <v-row v-if="challenge?.latestContributions?.length">
-    <v-col cols="12">
+    <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         {{ $t('Challenge.MostRecentContributions') }}
       </h2>

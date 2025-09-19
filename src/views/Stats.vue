@@ -1,10 +1,11 @@
 <template>
-  <h2 class="text-h6 mb-1">
-    <v-icon size="x-small" icon="mdi-tag-outline" />
-    {{ $t('Common.Prices') }}
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-tag-outline" />
+        {{ $t('Common.Prices') }}
+      </h2>
+    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_count" :subtitle="$t('Stats.Total')" to="/prices" />
     </v-col>
@@ -27,14 +28,13 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    <v-icon size="x-small" icon="mdi-database-outline" />
-    {{ $t('Common.Products') }}
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-database-outline" />
+        {{ $t('Common.Products') }}
+      </h2>
+    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.product_with_price_count" :subtitle="$t('Stats.WithPrice')" to="/products" />
     </v-col>
@@ -57,14 +57,13 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    <v-icon size="x-small" icon="mdi-map-marker-outline" />
-    {{ $t('Common.Locations') }}
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-map-marker-outline" />
+        {{ $t('Common.Locations') }}
+      </h2>
+    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.location_count" :subtitle="$t('Stats.Total')" to="/locations" />
     </v-col>
@@ -79,14 +78,13 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    <v-icon size="x-small" icon="mdi-image" />
-    {{ $t('Common.Proofs') }}
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-image" />
+        {{ $t('Common.Proofs') }}
+      </h2>
+    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.proof_count" :subtitle="$t('Stats.Total')" to="/proofs" />
     </v-col>
@@ -104,27 +102,25 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    <v-icon size="x-small" icon="mdi-account-outline" />
-    {{ $t('Common.Contributors') }}
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-account-outline" />
+        {{ $t('Common.Contributors') }}
+      </h2>
+    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.user_with_price_count" :subtitle="$t('Stats.Total')" to="/users" />
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    <v-icon size="x-small" icon="mdi-test-tube" />
-    {{ $t('Common.Experiments') }}
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-test-tube" />
+        {{ $t('Common.Experiments') }}
+      </h2>
+    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.challenge_count" :subtitle="$t('Common.Challenges')" to="/challenges" />
     </v-col>
@@ -133,14 +129,13 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    <v-icon size="x-small" icon="mdi-tune-vertical" />
-    {{ $t('Common.Miscellaneous') }}
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-tune-vertical" />
+        {{ $t('Common.Miscellaneous') }}
+      </h2>
+    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_location_country_count" :subtitle="$t('Common.Countries')" />
     </v-col>
@@ -152,12 +147,13 @@
     </v-col>
   </v-row>
 
-  <p class="mt-2 mb-1">
-    <v-icon size="x-small" icon="mdi-circle-small" />
-    {{ $t('Stats.PricesProofsPerSource') }}
-  </p>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-circle-small" />
+        {{ $t('Stats.PricesProofsPerSource') }}
+      </h2>
+    </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="stats.price_source_web_count.toString() + ' | ' + stats.proof_source_web_count.toString()" :subtitle="$t('Common.Website')" />
     </v-col>

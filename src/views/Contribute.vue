@@ -5,14 +5,13 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    <v-icon size="x-small" icon="mdi-hand-heart" />
-    Other ways to contribute
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-hand-heart" />
+        Other ways to contribute
+      </h2>
+    </v-col>
     <v-col>
       <p>You have a fidelty card? You can <a :href="OFF_WIKI_GDPR_REQUEST_URL" target="_blank">make a GDPR request and upload the list of prices</a></p>
       <p><router-link to="/challenges">Participate in one of our challenges</router-link></p>
