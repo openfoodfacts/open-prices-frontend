@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Vidiny ampianao",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Fanamby taloha",
-		"UpcomingChallenges": "Fanamby ho avy"
+		"UpcomingChallenges": "Fanamby ho avy",
+		"StatsAndRankings": "Stats & filaharana",
+		"MostPicturesAdded": "Nampiana ny ankamaroan'ny sary",
+		"MostPricesAdded": "Niampy ny ankamaroan'ny vidiny"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Vidiny ampianao",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Tanàna ambony",
+		"TopCountries": "Firenena ambony",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
