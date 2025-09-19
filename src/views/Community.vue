@@ -1,22 +1,22 @@
 <template>
-  <h2 class="text-h6 mb-1">
-    {{ $t('Community.JoinUs') }}
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        {{ $t('Community.JoinUs') }}
+      </h2>
+    </v-col>
     <v-col>
       <p><a :href="APP_GITHUB_BACKEND_URL" target="_blank">Github</a></p>
       <p><a :href="OFF_SLACK_URL" target="_blank">Open Food Facts Slack (#prices)</a></p>
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    {{ $t('Community.HowToUseTheData') }}
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        {{ $t('Community.HowToUseTheData') }}
+      </h2>
+    </v-col>
     <v-col>
       <p><a :href="APP_API_URL" target="_blank">API</a></p>
       <p><a :href="APP_HUGGING_FACE_URL" target="_blank">Hugging Face</a></p>
@@ -27,13 +27,12 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <h2 class="text-h6 mb-1">
-    {{ $t('Common.ReusesKnown') }}
-  </h2>
-
   <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        {{ $t('Common.ReusesKnown') }}
+      </h2>
+    </v-col>
     <v-col v-for="reuse in reusesList" :key="reuse.id" cols="12" sm="6" md="4" xl="3">
       <ReuseCard :reuse="reuse" height="100%" />
     </v-col>
