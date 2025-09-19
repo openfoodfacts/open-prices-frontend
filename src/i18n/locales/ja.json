@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "あなたが追加した価格",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "過去の課題",
-		"UpcomingChallenges": "今後の課題"
+		"UpcomingChallenges": "今後の課題",
+		"StatsAndRankings": "統計とランキング",
+		"MostPicturesAdded": "追加された写真が最も多い",
+		"MostPricesAdded": "最も多くの価格が追加された"
 	},
 	"Common": {
 		"About": "アプリについて",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "あなたが追加した価格",
 		"Private": "非公開",
 		"Privacy": "プライバシー",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "上位貢献者:",
 		"TopLocations": "上位の場所",
 		"TopProducts": "Top products",
+		"TopCities": "主要都市",
+		"TopCountries": "上位の国",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "合計",
