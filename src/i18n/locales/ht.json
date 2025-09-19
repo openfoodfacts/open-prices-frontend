@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Pri ou ajoute yo",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Defi sot pase yo",
-		"UpcomingChallenges": "Defi kap vini yo"
+		"UpcomingChallenges": "Defi kap vini yo",
+		"StatsAndRankings": "Estatistik ak klasman",
+		"MostPicturesAdded": "Pifò foto yo te ajoute",
+		"MostPricesAdded": "Pifò pri yo te ajoute"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Pri ou ajoute yo",
 		"Private": "Prive",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top kontribitè yo",
 		"TopLocations": "Top locations",
 		"TopProducts": "Tòp pwodwi yo",
+		"TopCities": "Pi gwo vil yo",
+		"TopCountries": "Peyi ki pi popilè yo",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
