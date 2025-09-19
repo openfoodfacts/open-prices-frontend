@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Сіз қосқан бағалар",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Өткен қиындықтар",
-		"UpcomingChallenges": "Алдағы қиындықтар"
+		"UpcomingChallenges": "Алдағы қиындықтар",
+		"StatsAndRankings": "Статистика және рейтингтер",
+		"MostPicturesAdded": "Көптеген суреттер қосылды",
+		"MostPricesAdded": "Көптеген бағалар қосылды"
 	},
 	"Common": {
 		"About": "Осы туралы",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Сіз қосқан бағалар",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Үздік қалалар",
+		"TopCountries": "Үздік елдер",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
