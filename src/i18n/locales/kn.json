@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} ಒಂದು ಲಾಭರಹಿತ ಸಂಸ್ಥೆಯಾಗಿದ್ದು, ಇದು ಪ್ರಪಂಚದಾದ್ಯಂತದ ಆಹಾರ ಉತ್ಪನ್ನಗಳ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸುತ್ತದೆ ಮತ್ತು ಹಂಚಿಕೊಳ್ಳುತ್ತದೆ. ಇದು ದತ್ತಾಂಶವನ್ನು ಸಂಗ್ರಹಿಸಲು ಸ್ವಯಂಸೇವಕರನ್ನು ಅವಲಂಬಿಸಿರುವ ಸಹಯೋಗಿ ಯೋಜನೆಯಾಗಿದೆ. {off_url} ವಿಶ್ವದ ಅತಿದೊಡ್ಡ ಮುಕ್ತ ಆಹಾರ ಉತ್ಪನ್ನಗಳ ಡೇಟಾಬೇಸ್ ಆಗಿದ್ದು, 200 ದೇಶಗಳಲ್ಲಿ 4 ಮಿಲಿಯನ್‌ಗಿಂತಲೂ ಹೆಚ್ಚು ಉತ್ಪನ್ನಗಳನ್ನು ಹೊಂದಿದೆ.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
