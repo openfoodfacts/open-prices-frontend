@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Les images envoyées en tant que preuve sont sous licence {ccbysa_url}.",
 		"WhatTitle": "Qu'est-ce que {op_name} ?",
 		"WhatOFFTitle": "Qu'est-ce que {off_name} ?",
-		"WhatOFFAnswer": "{off_url} est une organisation à but non lucratif qui collecte et partage des informations sur les produits alimentaires du monde entier. Il s'agit d'un projet collaboratif qui repose sur des bénévoles pour collecter les données des produits alimentaires. {off_url} est la plus grande base de données de produits alimentaires ouverte au monde, avec plus de 3 millions de produits dans 200 pays.",
+		"WhatOFFAnswer": "{off_url} est une organisation à but non lucratif qui collecte et partage des informations sur les produits alimentaires du monde entier. Ce projet collaboratif repose sur le bénévolat. {off_url} est la plus grande base de données ouverte de produits alimentaires au monde, avec plus de 4 millions de produits dans 200 pays.",
 		"WhyOFFTitle": "Pourquoi {off_name} fait-il cela ?",
 		"WhyOFFAnswer": "L'information sur les prix est d'une importance majeure pour comprendre les systèmes alimentaires. C'est un facteur clé pour analyser le coût des aliments et promouvoir des régimes alimentaires plus sains. Ouvrir les données sur les prix permet aux chercheurs, journalistes et citoyens d'avoir une meilleure compréhension de la variabilité géographique et temporelle des prix alimentaires.",
 		"HowContribute": "Comment puis-je contribuer ?",
