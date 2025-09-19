@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "’S e buidheann neo-phrothaideach a th’ ann an {off_url} a bhios a’ tional agus a’ roinneadh fiosrachaidh mu thoraidhean bìdh bho air feadh an t-saoghail. ’S e pròiseact co-obrachail a th’ ann a tha an urra ri saor-thoilich gus dàta a chruinneachadh. ’S e {off_url} an stòr-dàta fosgailte as motha san t-saoghal de thoraidhean bìdh, le còrr is 4 millean toradh ann an 200 dùthaich.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
