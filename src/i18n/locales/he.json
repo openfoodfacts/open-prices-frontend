@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} מחירים",
 		"PricesAdded": "{challenge_title} מחירים נוספו",
 		"PricesByYou": "{challenge_title} מחירים על ידיך",
-		"PricesAddedByYou": "{challenge_title} מחירים נוספו על ידיך",
+		"PricesAddedByYou": "מחירים שנוספו על ידך",
 		"MostRecentContributions": "התרומות האחרונות",
 		"ChallengeCount": "{count} אתגרים | אתגר | {count} אתגרים",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "אתגרי עבר או עתיד",
 		"OngoingChallenges": "אתגרים שמתקיימים כרגע",
 		"PastChallenges": "אתגרים מהעבר",
-		"UpcomingChallenges": "אתגרים קרובים"
+		"UpcomingChallenges": "אתגרים קרובים",
+		"StatsAndRankings": "סטטיסטיקות ודירוגים",
+		"MostPicturesAdded": "רוב התמונות נוספו",
+		"MostPricesAdded": "רוב המחירים נוספו"
 	},
 	"Common": {
 		"About": "על אודות",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "מחירים שנוספו היום",
 		"PricesToday": "מחירים היום",
 		"PriceNotFound": "המחיר לא נמצא",
+		"PricesAddedByYou": "מחירים שנוספו על ידך",
 		"Private": "פרטי",
 		"Privacy": "פרטיות",
 		"ProductCount": "{count} מוצרים | מוצר | {count} מוצרים",
@@ -416,6 +420,8 @@
 		"TopContributors": "תורמים מובילים",
 		"TopLocations": "מקומות מובילים",
 		"TopProducts": "מוצרים מובילים",
+		"TopCities": "ערים מובילות",
+		"TopCountries": "מדינות מובילות",
 		"Today": "היום",
 		"Top": "מובילים",
 		"Total": "סך הכול",
