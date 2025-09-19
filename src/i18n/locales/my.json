@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "စျေးနှုန်းများကို သင်ထည့်သွင်းထားသည်။",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "အတိတ်စိန်ခေါ်မှုများ",
-		"UpcomingChallenges": "လာမည့်စိန်ခေါ်မှုများ"
+		"UpcomingChallenges": "လာမည့်စိန်ခေါ်မှုများ",
+		"StatsAndRankings": "ကိန်းဂဏန်းများနှင့် အဆင့်သတ်မှတ်ချက်များ",
+		"MostPicturesAdded": "ပုံအများစုကို ထည့်ထားပါတယ်။",
+		"MostPricesAdded": "စျေးနှုန်းအများစုကို ထည့်သွင်းထားသည်။"
 	},
 	"Common": {
 		"About": "အကြောင်း",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "စျေးနှုန်းများကို သင်ထည့်သွင်းထားသည်။",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "ထိပ်တန်းမြို့များ",
+		"TopCountries": "ထိပ်တန်းနိုင်ငံများ",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
