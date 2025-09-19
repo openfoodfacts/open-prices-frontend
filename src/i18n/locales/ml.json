@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "നിങ്ങൾ ചേർത്ത വിലകൾ",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "മുൻകാല വെല്ലുവിളികൾ",
-		"UpcomingChallenges": "വരാനിരിക്കുന്ന വെല്ലുവിളികൾ"
+		"UpcomingChallenges": "വരാനിരിക്കുന്ന വെല്ലുവിളികൾ",
+		"StatsAndRankings": "സ്ഥിതിവിവരക്കണക്കുകളും റാങ്കിംഗുകളും",
+		"MostPicturesAdded": "ഏറ്റവും കൂടുതൽ ചിത്രങ്ങൾ ചേർത്തത്",
+		"MostPricesAdded": "മിക്ക വിലകളും ചേർത്തു"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "നിങ്ങൾ ചേർത്ത വിലകൾ",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "മുൻനിര നഗരങ്ങൾ",
+		"TopCountries": "മുൻനിര രാജ്യങ്ങൾ",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
