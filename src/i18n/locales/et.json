@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Teie lisatud hinnad",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Varasemad väljakutsed",
-		"UpcomingChallenges": "Eelseisvad väljakutsed"
+		"UpcomingChallenges": "Eelseisvad väljakutsed",
+		"StatsAndRankings": "Statistika ja edetabel",
+		"MostPicturesAdded": "Enamik pilte on lisatud",
+		"MostPricesAdded": "Enamik hindu on lisatud"
 	},
 	"Common": {
 		"About": "Info",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Teie lisatud hinnad",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Tipplinnad",
+		"TopCountries": "Peamised riigid",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
