@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} yra ne pelno siekianti organizacija, renkanti ir dalijanti informaciją apie maisto produktus iš viso pasaulio. Tai bendradarbiavimo projektas, kuriame savanoriai renka duomenis. {off_url} yra didžiausia atvira maisto produktų duomenų bazė pasaulyje, kurioje yra daugiau nei 4 milijonai produktų 200 šalių.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} kainos",
 		"PricesAdded": "{challenge_title} pridėtos kainos",
 		"PricesByYou": "{challenge_title} jūsų kainos",
-		"PricesAddedByYou": "{challenge_title} kainos, kurias pridėjote jūs",
+		"PricesAddedByYou": "Jūsų pridėtos kainos",
 		"MostRecentContributions": "Naujausi įnašai",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Buvę ar būsimi iššūkiai",
 		"OngoingChallenges": "Vykstantys iššūkiai",
 		"PastChallenges": "Buvę iššūkiai",
-		"UpcomingChallenges": "Būsimi iššūkiai"
+		"UpcomingChallenges": "Būsimi iššūkiai",
+		"StatsAndRankings": "Statistika ir reitingai",
+		"MostPicturesAdded": "Daugiausia pridėtų nuotraukų",
+		"MostPricesAdded": "Dauguma kainų pridėtos"
 	},
 	"Common": {
 		"About": "Apie",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Kainos pridėtos šiandien",
 		"PricesToday": "Kainos šiandien",
 		"PriceNotFound": "Kaina nerasta",
+		"PricesAddedByYou": "Jūsų pridėtos kainos",
 		"Private": "Privatu",
 		"Privacy": "Privatumas",
 		"ProductCount": "{count} produktai | {count} produktas | {count} produktų",
@@ -416,6 +420,8 @@
 		"TopContributors": "Geriausi bendraautoriai",
 		"TopLocations": "Geriausios vietos",
 		"TopProducts": "Populiariausi produktai",
+		"TopCities": "Populiariausi miestai",
+		"TopCountries": "Populiariausios šalys",
 		"Today": "Šiandien",
 		"Top": "Geriausi",
 		"Total": "Iš viso",

@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} ही एक ना-नफा संस्था आहे जी जगभरातील अन्न उत्पादनांची माहिती गोळा करते आणि सामायिक करते. हा एक सहयोगी प्रकल्प आहे जो डेटा गोळा करण्यासाठी स्वयंसेवकांवर अवलंबून असतो. {off_url} हा जगातील सर्वात मोठा खुला अन्न उत्पादनांचा डेटाबेस आहे, ज्यामध्ये २०० देशांमध्ये ४० लाखांहून अधिक उत्पादने आहेत.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "तुम्ही जोडलेल्या किमती",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "मागील आव्हाने",
-		"UpcomingChallenges": "आगामी आव्हाने"
+		"UpcomingChallenges": "आगामी आव्हाने",
+		"StatsAndRankings": "आकडेवारी आणि रँकिंग",
+		"MostPicturesAdded": "बहुतेक चित्रे जोडली",
+		"MostPricesAdded": "बहुतेक किमती जोडल्या गेल्या"
 	},
 	"Common": {
 		"About": "याविषयी",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "तुम्ही जोडलेल्या किमती",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "शीर्ष शहरे",
+		"TopCountries": "शीर्ष देश",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

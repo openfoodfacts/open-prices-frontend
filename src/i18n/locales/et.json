@@ -1,11 +1,11 @@
 {
 	"About": {
 		"WhyTitle": "Why {op_name}?",
-		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
+		"WhyAnswer1": "{op_name} on projekt, mille eesmärgiks on koguda ja jagada hindu üle maailma. Tegemist on avalikult kättesaadava andmekoguga, mida võib kasutada teadustööks, analüüsiks ja paljudel muudel eesmärkidel. {op_name} projekti arendajaks on {off_url}.",
 		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
 		"HowTitle": "How does {op_name} work?",
 		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
-		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
+		"HowAnswer2": "{op_name} ei ole mõeldud ainult üksikute hindade, vaid ka ostukorvide ehk ühe poeskäigu jooksul ostetu salvestamiseks. See teave on teadlastele äärmiselt huvitav toidutarbimise harjumuste analüüsimisel.",
 		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
 		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
 		"LicenseTitle": "License",
@@ -13,11 +13,11 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} on mittetulundusühing, mis kogub ja jagab teavet toiduainete kohta üle kogu maailma. See on koostööprojekt, mis tugineb andmete kogumisel vabatahtlikele. {off_url} on maailma suurim avatud toiduainete andmebaas, mis sisaldab üle 4 miljoni toote 200 riigist.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
+		"HowContribute": "Kuidas ma saan osaleda?",
+		"HowContributeAnswer": "Sa võid lisada hindu andmekogusse. Võid teha seda veebirakendusest või ametlikust nutirakendusest. Kui tahad seda ({op_name}) liidestada oma rakendusse, siis on olemas {op_api_url}. Kaas töö tegemiseks on vajalik {off_url} kasutajakonto.",
 		"HowUseData": "How can I use the data?",
 		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
 		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Teie lisatud hinnad",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Varasemad väljakutsed",
-		"UpcomingChallenges": "Eelseisvad väljakutsed"
+		"UpcomingChallenges": "Eelseisvad väljakutsed",
+		"StatsAndRankings": "Statistika ja edetabel",
+		"MostPicturesAdded": "Enamik pilte on lisatud",
+		"MostPricesAdded": "Enamik hindu on lisatud"
 	},
 	"Common": {
 		"About": "Info",
@@ -189,7 +192,7 @@
 		"Prices": "Prices",
 		"PRODUCT": "Toode",
 		"Product": "Toode",
-		"ProductName": "Product name",
+		"ProductName": "Toote nimi",
 		"Products": "Products",
 		"Proof": "Proof",
 		"Proofs": "Proofs",
@@ -211,11 +214,11 @@
 		"Consumption": "Consumption",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
-		"Contribute": "Contribute",
+		"Contribute": "Tee kaastööd",
 		"Contributors": "Contributors",
 		"Contributions": "Panused",
 		"Confirm": "Confirm",
-		"Country": "Country",
+		"Country": "Riik",
 		"Countries": "Riigid",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Teie lisatud hinnad",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Tipplinnad",
+		"TopCountries": "Peamised riigid",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
@@ -529,7 +535,7 @@
 		"AddPrice": "Add a price",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Otsi toodet",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -742,7 +748,7 @@
 			"Title": "Community"
 		},
 		"Contribute": {
-			"Title": "Contribute"
+			"Title": "Tee kaastööd"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -830,7 +836,7 @@
 	},
 	"SignIn": {
 		"Button": "Logi sisse",
-		"Password": "Password",
+		"Password": "Salasõna",
 		"ServerError": "Error: server error",
 		"Title": "Logi sisse",
 		"SignInOFFAccount": "Sign in with your {url} account",
@@ -885,7 +891,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "Riik",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

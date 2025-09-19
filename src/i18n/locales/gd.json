@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "’S e buidheann neo-phrothaideach a th’ ann an {off_url} a bhios a’ tional agus a’ roinneadh fiosrachaidh mu thoraidhean bìdh bho air feadh an t-saoghail. ’S e pròiseact co-obrachail a th’ ann a tha an urra ri saor-thoilich gus dàta a chruinneachadh. ’S e {off_url} an stòr-dàta fosgailte as motha san t-saoghal de thoraidhean bìdh, le còrr is 4 millean toradh ann an 200 dùthaich.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Prìsean a chuir thu ris",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Dùbhlain san àm a dh'fhalbh",
-		"UpcomingChallenges": "Dùbhlain a tha ri thighinn"
+		"UpcomingChallenges": "Dùbhlain a tha ri thighinn",
+		"StatsAndRankings": "Staitistig & rangachadh",
+		"MostPicturesAdded": "A’ mhòr-chuid de dhealbhan air an cur ris",
+		"MostPricesAdded": "A’ mhòr-chuid de phrìsean air an cur ris"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Prìsean a chuir thu ris",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Prìomh bhailtean",
+		"TopCountries": "Prìomh dhùthchannan",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

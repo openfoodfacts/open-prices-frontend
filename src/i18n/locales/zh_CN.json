@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "作为证明提交的图像已获得 {ccbysa_url} 的许可。",
 		"WhatTitle": "{op_name}是什么？",
 		"WhatOFFTitle": "{off_name}是什么？",
-		"WhatOFFAnswer": "{off_url} 是一个非营利组织，致力于收集和分享来自世界各地的食品信息。这是一个依靠志愿者收集数据的合作项目。 {off_url} 是世界上最大的开放食品数据库，涵盖 200 个国家/地区的 300 多万种产品。",
+		"WhatOFFAnswer": "{off_url} 是一个非营利组织，致力于收集和分享来自世界各地的食品信息。这是一个依靠志愿者收集数据的合作项目。 {off_url} 是世界上最大的开放食品数据库，涵盖 200 个国家/地区的 400 多万种产品。",
 		"WhyOFFTitle": "为什么 {off_name} 要这样做？",
 		"WhyOFFAnswer": "价格信息对于理解粮食体系至关重要。它是了解食品成本和推广健康饮食的关键因素。公开价格数据可以让研究人员、记者和公民更好地了解食品价格在地理和时间上的差异。",
 		"HowContribute": "如何贡献",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} 由您添加的价格",
+		"PricesAddedByYou": "您添加的价格",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "过去的挑战",
-		"UpcomingChallenges": "即将到来的挑战"
+		"UpcomingChallenges": "即将到来的挑战",
+		"StatsAndRankings": "统计数据和排名",
+		"MostPicturesAdded": "添加的图片最多",
+		"MostPricesAdded": "大部分价格已添加"
 	},
 	"Common": {
 		"About": "关于",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "您添加的价格",
 		"Private": "私人的",
 		"Privacy": "隐私",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "杰出贡献者",
 		"TopLocations": "热门地点",
 		"TopProducts": "热门产品",
+		"TopCities": "热门城市",
+		"TopCountries": "排名靠前的国家",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "总计",

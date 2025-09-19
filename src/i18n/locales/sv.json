@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "Vad är {op_name}?",
 		"WhatOFFTitle": "Vad är {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} är en ideell organisation som samlar in och delar information om livsmedelsprodukter från hela världen. Det är ett samarbetsprojekt som förlitar sig på volontärer för att samla in data. {off_url} är världens största öppna databas för livsmedelsprodukter, med över 4 miljoner produkter i 200 länder.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "Hur kan jag bidra?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Priser som du har lagt till",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Pågående utmaningar",
 		"PastChallenges": "Tidigare utmaningar",
-		"UpcomingChallenges": "Kommande utmaningar"
+		"UpcomingChallenges": "Kommande utmaningar",
+		"StatsAndRankings": "Statistik och rankningar",
+		"MostPicturesAdded": "De flesta bilder tillagda",
+		"MostPricesAdded": "De flesta priser tillagda"
 	},
 	"Common": {
 		"About": "Om",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Priser tillagda idag",
 		"PricesToday": "Priser idag",
 		"PriceNotFound": "Priset hittades inte",
+		"PricesAddedByYou": "Priser som du har lagt till",
 		"Private": "Privat",
 		"Privacy": "Integritet",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Topprodukter",
+		"TopCities": "Toppstäder",
+		"TopCountries": "Toppländer",
 		"Today": "Idag",
 		"Top": "Top",
 		"Total": "Total",

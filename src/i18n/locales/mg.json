@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} dia fikambanana tsy mitady tombontsoa izay manangona sy mizara vaovao momba ny vokatra sakafo avy amin'ny lafivalon'izao tontolo izao. Tetikasa fiaraha-miasa izay miantehitra amin'ny mpilatsaka an-tsitrapo hanangona angona. {off_url} no angona lehibe indrindra momba ny vokatra sakafo misokatra eran'izao tontolo izao, manana vokatra 4 tapitrisa mahery any amin'ny firenena 200.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Vidiny ampianao",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Fanamby taloha",
-		"UpcomingChallenges": "Fanamby ho avy"
+		"UpcomingChallenges": "Fanamby ho avy",
+		"StatsAndRankings": "Stats & filaharana",
+		"MostPicturesAdded": "Nampiana ny ankamaroan'ny sary",
+		"MostPricesAdded": "Niampy ny ankamaroan'ny vidiny"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Vidiny ampianao",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Tanàna ambony",
+		"TopCountries": "Firenena ambony",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

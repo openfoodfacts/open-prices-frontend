@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Billeder indsendt som bevis er licenseret under {ccbysa_url}.",
 		"WhatTitle": "Hvad er {op_name}?",
 		"WhatOFFTitle": "Hvad er {off_name}?",
-		"WhatOFFAnswer": "{off_url} er en non-profit organisation, der indsamler og deler information om fødevarer fra hele verden. Det er et samarbejdsprojekt, hvor frivillige indsamler data. {off_url} er den største åbne fødevaredatabase i verden med over 3 millioner produkter i 200 lande.",
+		"WhatOFFAnswer": "{off_url} er en nonprofitorganisation, der indsamler og deler information om fødevarer fra hele verden. Det er et samarbejdsprojekt, der er afhængig af frivillige til at indsamle data. {off_url} er den største åbne fødevaredatabase i verden med over 4 millioner produkter i 200 lande.",
 		"WhyOFFTitle": "Hvorfor gør {off_name} dette?",
 		"WhyOFFAnswer": "Prisoplysninger er af afgørende betydning for at forstå fødevaresystemer. Det er en nøglefaktor for at forstå prisen på mad og fremme sundere kostvaner. Åbning af prisdata er en måde at gøre det lettere for forskere, journalister og borgere at få en bedre forståelse af, hvordan fødevarepriserne varierer geografisk og i tid.",
 		"HowContribute": "Hvordan kan jeg bidrage?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} priser",
 		"PricesAdded": "{challenge_title} priser tilføjet",
 		"PricesByYou": "{challenge_title} priser fra dig",
-		"PricesAddedByYou": "{challenge_title} priser tilføjet af dig",
+		"PricesAddedByYou": "Priser tilføjet af dig",
 		"MostRecentContributions": "Seneste bidrag",
 		"ChallengeCount": "{count} udfordringer | {count} udfordring | {count} udfordringer",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Tidligere eller fremtidige udfordringer",
 		"OngoingChallenges": "Igangværende udfordringer",
 		"PastChallenges": "Tidligere udfordringer",
-		"UpcomingChallenges": "Kommende udfordringer"
+		"UpcomingChallenges": "Kommende udfordringer",
+		"StatsAndRankings": "Statistikker og ranglister",
+		"MostPicturesAdded": "De fleste billeder tilføjet",
+		"MostPricesAdded": "De fleste priser er tilføjet"
 	},
 	"Common": {
 		"About": "Om",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Priser tilføjet i dag",
 		"PricesToday": "Priser i dag",
 		"PriceNotFound": "Pris ikke fundet",
+		"PricesAddedByYou": "Priser tilføjet af dig",
 		"Private": "Privat",
 		"Privacy": "Privatliv",
 		"ProductCount": "{count} produkter | {count} produkt | {count} produkter",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top bidragydere",
 		"TopLocations": "Topplaceringer",
 		"TopProducts": "Top produkter",
+		"TopCities": "Topbyer",
+		"TopCountries": "Toplande",
 		"Today": "I dag",
 		"Top": "Top",
 		"Total": "I alt",

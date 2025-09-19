@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} একটি অলাভজনক সংস্থা যা বিশ্বজুড়ে খাদ্য পণ্য সম্পর্কিত তথ্য সংগ্রহ এবং ভাগ করে নেয়। এটি একটি সহযোগী প্রকল্প যা তথ্য সংগ্রহের জন্য স্বেচ্ছাসেবকদের উপর নির্ভর করে। {off_url} বিশ্বের বৃহত্তম উন্মুক্ত খাদ্য পণ্য ডাটাবেস, যেখানে ২০০টি দেশে ৪০ লক্ষেরও বেশি পণ্য রয়েছে।",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "আপনার দ্বারা যোগ করা দাম",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "অতীতের চ্যালেঞ্জগুলি",
-		"UpcomingChallenges": "আসন্ন চ্যালেঞ্জগুলি"
+		"UpcomingChallenges": "আসন্ন চ্যালেঞ্জগুলি",
+		"StatsAndRankings": "পরিসংখ্যান এবং র‍্যাঙ্কিং",
+		"MostPicturesAdded": "বেশিরভাগ ছবি যোগ করা হয়েছে",
+		"MostPricesAdded": "বেশিরভাগ দাম যোগ করা হয়েছে"
 	},
 	"Common": {
 		"About": "সম্পর্কে",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "আপনার দ্বারা যোগ করা দাম",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "শীর্ষ শহরগুলি",
+		"TopCountries": "শীর্ষ দেশগুলি",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

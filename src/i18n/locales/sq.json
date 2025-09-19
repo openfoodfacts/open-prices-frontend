@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} është një organizatë jofitimprurëse që mbledh dhe ndan informacione mbi produktet ushqimore nga e gjithë bota. Është një projekt bashkëpunues që mbështetet te vullnetarët për të mbledhur të dhëna. {off_url} është baza e të dhënave më e madhe e hapur e produkteve ushqimore në botë, me mbi 4 milionë produkte në 200 vende.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Çmimet e shtuara nga ju",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Sfidat e kaluara",
-		"UpcomingChallenges": "Sfidat e ardhshme"
+		"UpcomingChallenges": "Sfidat e ardhshme",
+		"StatsAndRankings": "Statistikat dhe renditjet",
+		"MostPicturesAdded": "Shumica e fotografive të shtuara",
+		"MostPricesAdded": "Shumica e çmimeve të shtuara"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Çmimet e shtuara nga ju",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Qytetet kryesore",
+		"TopCountries": "Vendet kryesore",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

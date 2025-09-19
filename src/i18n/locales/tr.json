@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Kanıt olarak gönderilen görseller {ccbysa_url}lisansı altındadır.",
 		"WhatTitle": "{op_name}nedir?",
 		"WhatOFFTitle": "{off_name}nedir?",
-		"WhatOFFAnswer": "{off_url} , dünyanın dört bir yanından gıda ürünleri hakkında bilgi toplayan ve paylaşan kâr amacı gütmeyen bir kuruluştur. Gönüllülerin veri toplamasına dayanan iş birliğine dayalı bir projedir. {off_url} , 200 ülkede 3 milyondan fazla ürüne ev sahipliği yapan dünyanın en büyük açık gıda ürünleri veritabanıdır.",
+		"WhatOFFAnswer": "{off_url} , dünyanın dört bir yanından gıda ürünleri hakkında bilgi toplayan ve paylaşan kâr amacı gütmeyen bir kuruluştur. Gönüllülerin veri toplamasına dayanan iş birliğine dayalı bir projedir. {off_url} , 200 ülkede 4 milyondan fazla ürüne ev sahipliği yapan dünyanın en büyük açık gıda ürünleri veritabanıdır.",
 		"WhyOFFTitle": "{off_name} bunu neden yapıyor?",
 		"WhyOFFAnswer": "Fiyat bilgisi, gıda sistemlerini anlamak için büyük önem taşır. Gıda maliyetlerini anlamada ve daha sağlıklı beslenmeyi teşvik etmede kilit bir faktördür. Fiyat verilerinin açıklanması, araştırmacıların, gazetecilerin ve vatandaşların gıda fiyatlarının coğrafi ve zamansal olarak nasıl değiştiğini daha iyi anlamalarını kolaylaştırmanın bir yoludur.",
 		"HowContribute": "Nasıl katkıda bulunabilirim?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} fiyatlar",
 		"PricesAdded": "{challenge_title} fiyatlar eklendi",
 		"PricesByYou": "{challenge_title} sizin tarafınızdan eklenen fiyatlar",
-		"PricesAddedByYou": "{challenge_title} sizin tarafınızdan eklenen fiyatlar",
+		"PricesAddedByYou": "Sizin tarafınızdan eklenen fiyatlar",
 		"MostRecentContributions": "En son katkılar",
 		"ChallengeCount": "{count} meydan okumalar | {count} meydan okuma | {count} meydan okumalar",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Geçmiş veya gelecekteki meydan okumalar",
 		"OngoingChallenges": "Devam eden meydan okumalar",
 		"PastChallenges": "Geçmiş zorluklar",
-		"UpcomingChallenges": "Yaklaşan zorluklar"
+		"UpcomingChallenges": "Yaklaşan zorluklar",
+		"StatsAndRankings": "İstatistikler ve sıralamalar",
+		"MostPicturesAdded": "En çok resim eklendi",
+		"MostPricesAdded": "En çok eklenen fiyatlar"
 	},
 	"Common": {
 		"About": "Hakkında",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Bugün eklenen fiyatlar",
 		"PricesToday": "Bugünkü fiyatlar",
 		"PriceNotFound": "Fiyat bulunamadı",
+		"PricesAddedByYou": "Sizin tarafınızdan eklenen fiyatlar",
 		"Private": "Özel",
 		"Privacy": "Mahremiyet",
 		"ProductCount": "{count} ürünler | {count} ürün | {count} ürünler",
@@ -416,6 +420,8 @@
 		"TopContributors": "En çok katkıda bulunanlar",
 		"TopLocations": "En iyi yerler",
 		"TopProducts": "En iyi ürünler",
+		"TopCities": "En iyi şehirler",
+		"TopCountries": "En iyi ülkeler",
 		"Today": "Bugün",
 		"Top": "Üst",
 		"Total": "Toplam",

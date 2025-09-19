@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} એક બિન-લાભકારી સંસ્થા છે જે વિશ્વભરમાંથી ખાદ્ય ઉત્પાદનો વિશે માહિતી એકત્રિત કરે છે અને શેર કરે છે. તે એક સહયોગી પ્રોજેક્ટ છે જે ડેટા એકત્રિત કરવા માટે સ્વયંસેવકો પર આધાર રાખે છે. {off_url} એ વિશ્વનો સૌથી મોટો ખુલ્લો ખાદ્ય ઉત્પાદનો ડેટાબેઝ છે, જેમાં 200 દેશોમાં 4 મિલિયનથી વધુ ઉત્પાદનો છે.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "તમારા દ્વારા ઉમેરાયેલ કિંમતો",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "ભૂતકાળના પડકારો",
-		"UpcomingChallenges": "આગામી પડકારો"
+		"UpcomingChallenges": "આગામી પડકારો",
+		"StatsAndRankings": "આંકડા અને રેન્કિંગ",
+		"MostPicturesAdded": "મોટાભાગના ચિત્રો ઉમેરાયા",
+		"MostPricesAdded": "મોટાભાગની કિંમતો ઉમેરવામાં આવી"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "તમારા દ્વારા ઉમેરાયેલ કિંમતો",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "ટોચના શહેરો",
+		"TopCountries": "ટોચના દેશો",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

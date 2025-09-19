@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} అనేది ప్రపంచవ్యాప్తంగా ఆహార ఉత్పత్తులపై సమాచారాన్ని సేకరించి పంచుకునే లాభాపేక్షలేని సంస్థ. ఇది డేటాను సేకరించడానికి స్వచ్ఛంద సేవకులపై ఆధారపడే సహకార ప్రాజెక్ట్. {off_url} అనేది ప్రపంచంలోనే అతిపెద్ద ఓపెన్ ఫుడ్ ప్రొడక్ట్స్ డేటాబేస్, 200 దేశాలలో 4 మిలియన్లకు పైగా ఉత్పత్తులు ఉన్నాయి.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "మీరు జోడించిన ధరలు",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "గత సవాళ్లు",
-		"UpcomingChallenges": "రాబోయే సవాళ్లు"
+		"UpcomingChallenges": "రాబోయే సవాళ్లు",
+		"StatsAndRankings": "గణాంకాలు & ర్యాంకింగ్‌లు",
+		"MostPicturesAdded": "చాలా చిత్రాలు జోడించబడ్డాయి",
+		"MostPricesAdded": "చాలా ధరలు జోడించబడ్డాయి"
 	},
 	"Common": {
 		"About": "గురించి",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "మీరు జోడించిన ధరలు",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "అగ్ర నగరాలు",
+		"TopCountries": "అగ్ర దేశాలు",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

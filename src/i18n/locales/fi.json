@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} on voittoa tavoittelematon järjestö, joka kerää ja jakaa tietoa elintarvikkeista ympäri maailmaa. Se on yhteistyöhanke, joka perustuu vapaaehtoisten tiedonkeruuseen. {off_url} on maailman suurin avoin elintarvikkeiden tuotetietokanta, jossa on yli 4 miljoonaa tuotetta 200 maassa.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Sinun lisäämät hinnat",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Aiemmat haasteet",
-		"UpcomingChallenges": "Tulevat haasteet"
+		"UpcomingChallenges": "Tulevat haasteet",
+		"StatsAndRankings": "Tilastot ja sijoitukset",
+		"MostPicturesAdded": "Eniten kuvia lisätty",
+		"MostPricesAdded": "Useimmat hinnat lisätty"
 	},
 	"Common": {
 		"About": "Tietoja",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Sinun lisäämät hinnat",
 		"Private": "Yksityinen",
 		"Privacy": "Yksityisyys",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Huippuavustajat",
 		"TopLocations": "Huippupaikat",
 		"TopProducts": "Huipputuotteet",
+		"TopCities": "Suosituimmat kaupungit",
+		"TopCountries": "Suosituimmat maat",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Yhteensä",

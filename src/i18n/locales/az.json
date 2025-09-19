@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} dünyanın hər yerindən qida məhsulları haqqında məlumat toplayan və paylaşan qeyri-kommersiya təşkilatıdır. Bu, məlumat toplamaq üçün könüllülərə güvənən birgə layihədir. {off_url} 200 ölkədə 4 milyondan çox məhsulu olan dünyanın ən böyük açıq qida məhsulları bazasıdır.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Sizin əlavə etdiyiniz qiymətlər",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Keçmiş çətinliklər",
-		"UpcomingChallenges": "Qarşıdan gələn problemlər"
+		"UpcomingChallenges": "Qarşıdan gələn problemlər",
+		"StatsAndRankings": "Statistika və reytinqlər",
+		"MostPicturesAdded": "Ən çox şəkil əlavə edildi",
+		"MostPricesAdded": "Ən çox qiymətlər əlavə edildi"
 	},
 	"Common": {
 		"About": "Haqqında",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Sizin əlavə etdiyiniz qiymətlər",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Ən yaxşı şəhərlər",
+		"TopCountries": "Ən yaxşı ölkələr",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

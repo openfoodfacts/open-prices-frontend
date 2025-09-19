@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} एकः अलाभकारी संस्था अस्ति या विश्वस्य खाद्यपदार्थानाम् सूचनां संग्रहयति, साझां च करोति। एषा सहकारिणी परियोजना अस्ति या दत्तांशसङ्ग्रहार्थं स्वयंसेवकानां उपरि अवलम्बते । {off_url} विश्वस्य बृहत्तमः मुक्तखाद्यपदार्थानाम् आँकडाधारः अस्ति, यत्र २०० देशेषु ४० लक्षं उत्पादाः सन्ति ।",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "भवता योजिताः मूल्यानि",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "अतीताः आव्हानाः",
-		"UpcomingChallenges": "आगामिनि आव्हानानि"
+		"UpcomingChallenges": "आगामिनि आव्हानानि",
+		"StatsAndRankings": "आँकड़ा एवं श्रेणी",
+		"MostPicturesAdded": "अधिकांशं चित्रं योजितम्",
+		"MostPricesAdded": "अधिकांशं मूल्यं योजितम्"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "भवता योजिताः मूल्यानि",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "शीर्षनगराणि",
+		"TopCountries": "शीर्षदेशाः",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

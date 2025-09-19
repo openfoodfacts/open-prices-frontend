@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Gambar yang dikirimkan sebagai bukti dilisensikan di bawah lisensi {ccbysa_url}.",
 		"WhatTitle": "Apa itu {op_name}?",
 		"WhatOFFTitle": "Apa itu {off_name}?",
-		"WhatOFFAnswer": "{off_url} adalah organisasi nirlaba yang mengumpulkan dan berbagi informasi tentang produk makanan dari seluruh dunia. Ini adalah proyek kolaboratif yang mengandalkan sukarelawan untuk mengumpulkan data. {off_url} adalah basis data produk makanan terbuka terbesar di dunia, dengan lebih dari 3 juta produk di 200 negara.",
+		"WhatOFFAnswer": "{off_url} adalah organisasi nirlaba yang mengumpulkan dan berbagi informasi tentang produk pangan dari seluruh dunia. Proyek kolaboratif ini mengandalkan relawan untuk mengumpulkan data. {off_url} adalah basis data produk pangan terbuka terbesar di dunia, dengan lebih dari 4 juta produk di 200 negara.",
 		"WhyOFFTitle": "Mengapa {off_name} melakukan hal ini?",
 		"WhyOFFAnswer": "Informasi harga sangat penting untuk memahami sistem pangan. Informasi ini merupakan faktor kunci dalam memahami biaya pangan dan untuk mempromosikan pola makan yang lebih sehat. Membuka data harga merupakan cara untuk memudahkan para peneliti, jurnalis, dan warga negara untuk memiliki pemahaman yang lebih baik tentang bagaimana harga pangan bervariasi secara geografis dan dari waktu ke waktu.",
 		"HowContribute": "Bagaimana saya bisa berkontribusi?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} harga",
 		"PricesAdded": "{challenge_title} harga ditambahkan",
 		"PricesByYou": "{challenge_title} harga oleh Anda",
-		"PricesAddedByYou": "{challenge_title} harga yang Anda tambahkan",
+		"PricesAddedByYou": "Harga yang Anda tambahkan",
 		"MostRecentContributions": "Kontribusi terbaru",
 		"ChallengeCount": "{count} tantangan | {count} tantangan | {count} tantangan",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Tantangan sebelumnya atau yang akan datang",
 		"OngoingChallenges": "Tantangan yang sedang berlangsung",
 		"PastChallenges": "Tantangan sebelumnya",
-		"UpcomingChallenges": "Tantangan selanjutnya"
+		"UpcomingChallenges": "Tantangan selanjutnya",
+		"StatsAndRankings": "Statistik & peringkat",
+		"MostPicturesAdded": "Sebagian besar gambar ditambahkan",
+		"MostPricesAdded": "Sebagian besar harga ditambahkan"
 	},
 	"Common": {
 		"About": "Tentang",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Harga yang ditambahkan hari ini",
 		"PricesToday": "Harga hari ini",
 		"PriceNotFound": "Harga tidak ditemukan",
+		"PricesAddedByYou": "Harga yang Anda tambahkan",
 		"Private": "Pribadi",
 		"Privacy": "Privasi",
 		"ProductCount": "{count} produk | {count} produk | {count} produk",
@@ -416,6 +420,8 @@
 		"TopContributors": "Kontributor teratas",
 		"TopLocations": "Lokasi teratas",
 		"TopProducts": "Produk teratas",
+		"TopCities": "Kota-kota teratas",
+		"TopCountries": "Negara-negara teratas",
 		"Today": "Hari Ini",
 		"Top": "Teratas",
 		"Total": "Total",

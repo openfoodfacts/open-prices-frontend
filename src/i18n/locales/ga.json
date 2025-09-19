@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "Is eagraíocht neamhbhrabúis í {off_url} a bhailíonn agus a roinneann faisnéis faoi tháirgí bia ó gach cearn den domhan. Is tionscadal comhoibríoch é a bhraitheann ar oibrithe deonacha chun sonraí a bhailiú. Is í {off_url} an bunachar sonraí táirgí bia oscailte is mó ar domhan, le breis agus 4 mhilliún táirge i 200 tír.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Praghsanna curtha leis agatsa",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Dúshláin san am atá thart",
-		"UpcomingChallenges": "Dúshláin atá le teacht"
+		"UpcomingChallenges": "Dúshláin atá le teacht",
+		"StatsAndRankings": "Staitisticí & rátálacha",
+		"MostPicturesAdded": "An chuid is mó de na pictiúir curtha leis",
+		"MostPricesAdded": "An chuid is mó de na praghsanna curtha leis"
 	},
 	"Common": {
 		"About": "Faoi",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Praghsanna curtha leis agatsa",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Cathracha is fearr",
+		"TopCountries": "Príomhthíortha",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

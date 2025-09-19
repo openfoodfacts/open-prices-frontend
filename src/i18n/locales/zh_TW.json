@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "作為證明的圖像由{ccbysa_url} 授權。",
 		"WhatTitle": "{op_name} 是什麼？",
 		"WhatOFFTitle": "{off_name} 是什麼？",
-		"WhatOFFAnswer": "{off_url} 為非營利組織，致力於收集並分享世界各地的食品資訊。這項協作計畫主要由志工收集資料。{off_url} 是全世界最大的開源食品資料庫，涵蓋超過 300 萬種產品，並遍及 200 個國家。",
+		"WhatOFFAnswer": "{off_url} 是一個非營利組織，致力於收集和分享來自世界各地的食品資訊。這是一個依靠志工收集數據的合作計畫。 {off_url} 是世界上最大的開放食品資料庫，涵蓋 200 個國家的 400 多萬種產品。",
 		"WhyOFFTitle": "為什麼{off_name} 要這麼做？",
 		"WhyOFFAnswer": "價格資訊對於理解糧食系統十分重要。它是理解食品成本及促進健康飲食的關鍵因素。開放的價格資料能幫助研究人員、記者和公民更加理解食品價格在不同地理位置和時間上的變化。",
 		"HowContribute": "我可以怎麼做出貢獻？",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "您添加的價格",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "過去的挑戰",
-		"UpcomingChallenges": "即將到來的挑戰"
+		"UpcomingChallenges": "即將到來的挑戰",
+		"StatsAndRankings": "統計數據和排名",
+		"MostPicturesAdded": "添加的圖片最多",
+		"MostPricesAdded": "大部分價格已添加"
 	},
 	"Common": {
 		"About": "關於",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "今天新增的價格",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "您添加的價格",
 		"Private": "不公開",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "傑出貢獻者",
 		"TopLocations": "熱門地點",
 		"TopProducts": "熱門產品",
+		"TopCities": "熱門城市",
+		"TopCountries": "排名靠前的國家",
 		"Today": "今天",
 		"Top": "頂部",
 		"Total": "Total",

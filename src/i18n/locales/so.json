@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} waa urur aan faa'iido doon ahayn oo ururiya oo wadaaga macluumaadka ku saabsan cuntada adduunka oo dhan. Waa mashruuc iskaashi oo ku tiirsan tabaruceyaasha si ay u ururiyaan xogta. {off_url} waa keydka ugu weyn ee wax soo saarka cuntada ee adduunka, oo leh in ka badan 4 milyan oo badeecado ah 200 oo waddan.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Qiimaha aad ku dartay",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Caqabadihii hore",
-		"UpcomingChallenges": "Caqabadaha soo socda"
+		"UpcomingChallenges": "Caqabadaha soo socda",
+		"StatsAndRankings": "Tirokoobyada & darajooyinka",
+		"MostPicturesAdded": "Inta badan sawirada ayaa lagu daray",
+		"MostPricesAdded": "Inta badan qiimaha lagu daray"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Qiimaha aad ku dartay",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Magaalooyinka ugu sarreeya",
+		"TopCountries": "Wadamada ugu sareeya",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

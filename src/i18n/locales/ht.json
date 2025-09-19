@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} se yon òganizasyon san bi likratif ki kolekte epi pataje enfòmasyon sou pwodui alimantè atravè lemond. Li se yon pwojè kolaborasyon ki konte sou volontè pou kolekte done. {off_url} se pi gwo baz done pwodui alimantè ouvè nan mond lan, ak plis pase 4 milyon pwodui nan 200 peyi.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Pri ou ajoute yo",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Defi sot pase yo",
-		"UpcomingChallenges": "Defi kap vini yo"
+		"UpcomingChallenges": "Defi kap vini yo",
+		"StatsAndRankings": "Estatistik ak klasman",
+		"MostPicturesAdded": "Pifò foto yo te ajoute",
+		"MostPricesAdded": "Pifò pri yo te ajoute"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Pri ou ajoute yo",
 		"Private": "Prive",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top kontribitè yo",
 		"TopLocations": "Top locations",
 		"TopProducts": "Tòp pwodwi yo",
+		"TopCities": "Pi gwo vil yo",
+		"TopCountries": "Peyi ki pi popilè yo",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

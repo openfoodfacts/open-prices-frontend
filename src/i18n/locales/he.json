@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "תמונות שהוגשו כהוכחה כפופות לרישיון {ccbysa_url}.",
 		"WhatTitle": "מה זה {op_name}?",
 		"WhatOFFTitle": "מה זה {off_name}?",
-		"WhatOFFAnswer": "{off_url} הוא ארגון ללא מטרות רווח שאוסף ומשתף מידע על מוצרי מזון מכל רחבי העולם. זה מיזם שיתופי שמסתמך על מתנדבים לאיסוף נתונים. {off_url} הוא מסד נתוני המזון הגדול ביותר בקוד פתוח בעולם עם למעלה מ־3 מיליון מוצרים מ־200 מדינות.",
+		"WhatOFFAnswer": "{off_url} הוא ארגון ללא מטרות רווח האוסף ומשתף מידע על מוצרי מזון מרחבי העולם. זהו מיזם שיתופי המסתמך על מתנדבים לאיסוף נתונים. {off_url} הוא מאגר המידע הפתוח הגדול ביותר של מוצרי מזון בעולם, עם למעלה מ־4 מיליון מוצרים מ־200 מדינות.",
 		"WhyOFFTitle": "למה {off_name} עושה את זה?",
 		"WhyOFFAnswer": "פרטי המחירים הם בעלי חשיבות עליונה להבנת מערכות המזון. זה גורם מפתח להבנת עלות המזון ולקידום תזונה בריאה יותר. פתיחת נתוני המחירים היא דרך להקל על חוקרים, עיתונאים ואזרחים להבין איך מחירי מוצרים משתנים מאזור לאזור ולאורך זמן.",
 		"HowContribute": "כיצד ניתן לתרום?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} מחירים",
 		"PricesAdded": "{challenge_title} מחירים נוספו",
 		"PricesByYou": "{challenge_title} מחירים על ידיך",
-		"PricesAddedByYou": "{challenge_title} מחירים נוספו על ידיך",
+		"PricesAddedByYou": "מחירים שנוספו על ידך",
 		"MostRecentContributions": "התרומות האחרונות",
 		"ChallengeCount": "{count} אתגרים | אתגר | {count} אתגרים",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "אתגרי עבר או עתיד",
 		"OngoingChallenges": "אתגרים שמתקיימים כרגע",
 		"PastChallenges": "אתגרים מהעבר",
-		"UpcomingChallenges": "אתגרים קרובים"
+		"UpcomingChallenges": "אתגרים קרובים",
+		"StatsAndRankings": "סטטיסטיקות ודירוגים",
+		"MostPicturesAdded": "רוב התמונות נוספו",
+		"MostPricesAdded": "רוב המחירים נוספו"
 	},
 	"Common": {
 		"About": "על אודות",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "מחירים שנוספו היום",
 		"PricesToday": "מחירים היום",
 		"PriceNotFound": "המחיר לא נמצא",
+		"PricesAddedByYou": "מחירים שנוספו על ידך",
 		"Private": "פרטי",
 		"Privacy": "פרטיות",
 		"ProductCount": "{count} מוצרים | מוצר | {count} מוצרים",
@@ -416,6 +420,8 @@
 		"TopContributors": "תורמים מובילים",
 		"TopLocations": "מקומות מובילים",
 		"TopProducts": "מוצרים מובילים",
+		"TopCities": "ערים מובילות",
+		"TopCountries": "מדינות מובילות",
 		"Today": "היום",
 		"Top": "מובילים",
 		"Total": "סך הכול",

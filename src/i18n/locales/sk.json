@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
 		"WhatTitle": "What is {op_name}?",
 		"WhatOFFTitle": "What is {off_name}?",
-		"WhatOFFAnswer": "{off_url} is a non-profit organisation that collects and shares information on food products from around the world. It is a collaborative project that relies on volunteers to collect data. {off_url} is the largest open food products database in the world, with over 3 million products in 200 countries.",
+		"WhatOFFAnswer": "{off_url} je nezisková organizácia, ktorá zhromažďuje a zdieľa informácie o potravinových výrobkoch z celého sveta. Ide o spoločný projekt, ktorý sa spolieha na dobrovoľníkov pri zbere údajov. {off_url} je najväčšia otvorená databáza potravinových výrobkov na svete s viac ako 4 miliónmi produktov v 200 krajinách.",
 		"WhyOFFTitle": "Why is {off_name} doing this?",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
 		"HowContribute": "How can I contribute?",
@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Ceny, ktoré ste pridali",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Minulé výzvy",
-		"UpcomingChallenges": "Nadchádzajúce výzvy"
+		"UpcomingChallenges": "Nadchádzajúce výzvy",
+		"StatsAndRankings": "Štatistiky a rebríčky",
+		"MostPicturesAdded": "Pridaných najviac obrázkov",
+		"MostPricesAdded": "Väčšina cien bola pridaná"
 	},
 	"Common": {
 		"About": "O",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Ceny, ktoré ste pridali",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Najväčšie mestá",
+		"TopCountries": "Najvyššie hodnotené krajiny",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",

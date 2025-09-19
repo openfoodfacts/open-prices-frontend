@@ -13,7 +13,7 @@
 		"LicenseAnswer2": "Las imágenes enviadas como prueba están bajo la licencia {ccbysa_url}.",
 		"WhatTitle": "¿Qué es {op_name}?",
 		"WhatOFFTitle": "¿Qué es {off_name}?",
-		"WhatOFFAnswer": "{off_url} es una organización sin ánimo de lucro que recopila y comparte información sobre productos alimenticios de todo el mundo. Es un proyecto colaborativo que se basa en voluntarios para recopilar datos. {off_url} es la mayor base de datos de productos alimenticios abiertos del mundo, con más de 3 millones de productos en 200 países.",
+		"WhatOFFAnswer": "{off_url} es una organización sin fines de lucro que recopila y comparte información sobre productos alimenticios de todo el mundo. Es un proyecto colaborativo que se basa en voluntarios para recopilar datos. {off_url} es la base de datos abierta de productos alimenticios más grande del mundo, con más de 4 millones de productos en 200 países.",
 		"WhyOFFTitle": "¿Por qué {off_name} hace esto?",
 		"WhyOFFAnswer": "La información sobre los precios es de suma importancia para entender los sistemas alimentarios, es un factor clave para entender el costo de los alimentos y promover dietas más saludables. La apertura de los datos de precios es una forma de facilitar a los investigadores, periodistas, y ciudadanos para tener una mejor comprensión de cómo los precios de los alimentos varían geográficamente y con el tiempo.",
 		"HowContribute": "¿Cómo puedo contribuir?",
@@ -145,7 +145,7 @@
 		"Prices": "Precio {challenge_title}",
 		"PricesAdded": "Precio {challenge_title} añadido",
 		"PricesByYou": "Precios {challenge_title} por ti",
-		"PricesAddedByYou": "Precio {challenge_title} añadido por ti",
+		"PricesAddedByYou": "Precios añadidos por usted",
 		"MostRecentContributions": "Contribuciones más recientes",
 		"ChallengeCount": "Desafíos {count} | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Desafíos pasados o futuros",
 		"OngoingChallenges": "Desafíos en curso",
 		"PastChallenges": "Desafíos pasados",
-		"UpcomingChallenges": "Próximos desafíos"
+		"UpcomingChallenges": "Próximos desafíos",
+		"StatsAndRankings": "Estadísticas y clasificaciones",
+		"MostPicturesAdded": "La mayoría de las imágenes añadidas",
+		"MostPricesAdded": "La mayoría de los precios añadidos"
 	},
 	"Common": {
 		"About": "Acerca de",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Precios hoy",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Precios añadidos por usted",
 		"Private": "Privado",
 		"Privacy": "Privacidad",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Colaboradores destacados",
 		"TopLocations": "Ubicaciones destacadas",
 		"TopProducts": "Productos destacados",
+		"TopCities": "Ciudades principales",
+		"TopCountries": "Principales países",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
