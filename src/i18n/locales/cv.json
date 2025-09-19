@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Эсир хушнӑ хаксем",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Иртнӗ йывӑрлӑхсем",
-		"UpcomingChallenges": "Ҫитес йывӑрлӑхсем"
+		"UpcomingChallenges": "Ҫитес йывӑрлӑхсем",
+		"StatsAndRankings": "Статистика тата рейтинг",
+		"MostPicturesAdded": "Ытларах ӳкерчӗк хушнӑ",
+		"MostPricesAdded": "Ытларах хаксем хушӑннӑ"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Эсир хушнӑ хаксем",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Чи лайӑх хуласем",
+		"TopCountries": "Чи лайӑх ҫӗршывсем",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
