@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prijzen",
 		"PricesAdded": "{challenge_title} prijzen toegevoegd",
 		"PricesByYou": "{challenge_title} prijzen door jou",
-		"PricesAddedByYou": "{challenge_title} prijzen door u toegevoegd",
+		"PricesAddedByYou": "Door u toegevoegde prijzen",
 		"MostRecentContributions": "Meest recente bijdragen",
 		"ChallengeCount": "{count} uitdagingen | {count} uitdaging | {count} uitdagingen",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Eerdere of toekomstige uitdagingen",
 		"OngoingChallenges": "Lopende uitdagingen",
 		"PastChallenges": "Afgelopen uitdagingen",
-		"UpcomingChallenges": "Aankomende uitdagingen"
+		"UpcomingChallenges": "Aankomende uitdagingen",
+		"StatsAndRankings": "Statistieken en ranglijsten",
+		"MostPicturesAdded": "Meeste foto's toegevoegd",
+		"MostPricesAdded": "Meeste prijzen toegevoegd"
 	},
 	"Common": {
 		"About": "Over",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Vandaag toegevoegde prijzen",
 		"PricesToday": "Prijzen vandaag",
 		"PriceNotFound": "Prijs niet gevonden",
+		"PricesAddedByYou": "Door u toegevoegde prijzen",
 		"Private": "Privé",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} producten | {count} product | {count} producten",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top bijdragers",
 		"TopLocations": "Top locaties",
 		"TopProducts": "Top producten",
+		"TopCities": "Top steden",
+		"TopCountries": "Toplanden",
 		"Today": "Vandaag",
 		"Top": "Top",
 		"Total": "Totaal",
