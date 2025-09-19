@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Intsengo lengetiwe nguwe",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Tinsayeya tesikhatsi lesengcile",
-		"UpcomingChallenges": "Tinsayeya letitako"
+		"UpcomingChallenges": "Tinsayeya letitako",
+		"StatsAndRankings": "Tibalo & emazinga",
+		"MostPicturesAdded": "Titfombe letinyenti lengetiwe",
+		"MostPricesAdded": "Emanani lamanyenti langetiwe"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Intsengo lengetiwe nguwe",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Emadolobha lamakhulu",
+		"TopCountries": "Emave lahamba embili",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
