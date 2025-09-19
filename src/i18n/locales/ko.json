@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "귀하가 추가한 가격",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "과거의 도전들",
-		"UpcomingChallenges": "다가오는 도전"
+		"UpcomingChallenges": "다가오는 도전",
+		"StatsAndRankings": "통계 및 순위",
+		"MostPicturesAdded": "가장 많은 사진이 추가되었습니다",
+		"MostPricesAdded": "대부분의 가격이 추가되었습니다"
 	},
 	"Common": {
 		"About": "정보",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "귀하가 추가한 가격",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "주요 도시",
+		"TopCountries": "상위 국가",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
