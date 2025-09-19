@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "ನೀವು ಸೇರಿಸಿದ ಬೆಲೆಗಳು",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "ಹಿಂದಿನ ಸವಾಲುಗಳು",
-		"UpcomingChallenges": "ಮುಂಬರುವ ಸವಾಲುಗಳು"
+		"UpcomingChallenges": "ಮುಂಬರುವ ಸವಾಲುಗಳು",
+		"StatsAndRankings": "ಅಂಕಿಅಂಶಗಳು ಮತ್ತು ಶ್ರೇಯಾಂಕಗಳು",
+		"MostPicturesAdded": "ಹೆಚ್ಚಿನ ಚಿತ್ರಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
+		"MostPricesAdded": "ಹೆಚ್ಚಿನ ಬೆಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ"
 	},
 	"Common": {
 		"About": "ಬಗ್ಗೆ",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "ನೀವು ಸೇರಿಸಿದ ಬೆಲೆಗಳು",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "ಪ್ರಮುಖ ನಗರಗಳು",
+		"TopCountries": "ಪ್ರಮುಖ ದೇಶಗಳು",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
