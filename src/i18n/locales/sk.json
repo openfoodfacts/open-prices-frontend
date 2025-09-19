@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Ceny, ktoré ste pridali",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Minulé výzvy",
-		"UpcomingChallenges": "Nadchádzajúce výzvy"
+		"UpcomingChallenges": "Nadchádzajúce výzvy",
+		"StatsAndRankings": "Štatistiky a rebríčky",
+		"MostPicturesAdded": "Pridaných najviac obrázkov",
+		"MostPricesAdded": "Väčšina cien bola pridaná"
 	},
 	"Common": {
 		"About": "O",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Ceny, ktoré ste pridali",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Najväčšie mestá",
+		"TopCountries": "Najvyššie hodnotené krajiny",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
