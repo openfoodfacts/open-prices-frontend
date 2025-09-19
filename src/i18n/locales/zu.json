@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Izintengo ezingezwe nguwe",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Izinselele ezedlule",
-		"UpcomingChallenges": "Izinselele ezizayo"
+		"UpcomingChallenges": "Izinselele ezizayo",
+		"StatsAndRankings": "Izibalo namazinga",
+		"MostPicturesAdded": "Izithombe eziningi zengeziwe",
+		"MostPricesAdded": "Amanani amaningi angeziwe"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Izintengo ezingezwe nguwe",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Amadolobha aphezulu",
+		"TopCountries": "Amazwe aphezulu",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
