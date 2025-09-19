@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Prisiau wedi'u hychwanegu gennych chi",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Heriau'r gorffennol",
-		"UpcomingChallenges": "Heriau sydd i ddod"
+		"UpcomingChallenges": "Heriau sydd i ddod",
+		"StatsAndRankings": "Ystadegau a safleoedd",
+		"MostPicturesAdded": "Ychwanegwyd y rhan fwyaf o luniau",
+		"MostPricesAdded": "Ychwanegwyd y rhan fwyaf o brisiau"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Prisiau wedi'u hychwanegu gennych chi",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Dinasoedd gorau",
+		"TopCountries": "Gwledydd gorau",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
