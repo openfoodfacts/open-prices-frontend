@@ -1,6 +1,5 @@
 <template>
   <v-card :title="$t('Challenge.StepTakePictures.Title')">
-    <v-divider />
     <v-card-text class="pb-0">
       <p class="mb-2">
         {{ $t('Challenge.StepTakePictures.line1') }}

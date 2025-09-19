@@ -4,6 +4,7 @@
       {{ $t('Challenge.NoChallengeCurrentlyOngoing') }}
     </v-col>
   </v-row>
+
   <v-row v-if="challenge">
     <v-col cols="12" md="6">
       <p class="mb-2">
@@ -12,6 +13,9 @@
       <p v-if="challenge.categories.length">
         <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
       </p>
+      <p v-if="challenge.locations.length">
+        <LocationChip v-for="location in challenge.locations" :key="location.id" :location="location" :locationId="location.id" class="mr-1" />
+      </p>
     </v-col>
     <v-col cols="12" md="6">
       <ChallengeTimeline :challenge="challenge" />
@@ -19,6 +23,11 @@
   </v-row>
 
   <v-row v-if="challenge">
+    <v-col cols="12">
+      <h2 class="text-h6">
+        {{ $t('About.HowContribute') }}
+      </h2>
+    </v-col>
     <v-col cols="12" md="6">
       <ChallengeTakePicturesCard :challenge="challenge" />
     </v-col>
@@ -48,6 +57,7 @@ import api from '../services/api.js'
 export default {
   components: {
     CategoryTagChip: defineAsyncComponent(() => import('../components/CategoryTagChip.vue')),
+    LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     ChallengeTimeline: defineAsyncComponent(() => import('../components/ChallengeTimeline.vue')),
     ChallengeTakePicturesCard: defineAsyncComponent(() => import('../components/ChallengeTakePicturesCard.vue')),
     ChallengeValidateCard: defineAsyncComponent(() => import('../components/ChallengeValidateCard.vue')),
