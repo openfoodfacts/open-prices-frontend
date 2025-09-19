@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} цены",
 		"PricesAdded": "{challenge_title} цены добавлены",
 		"PricesByYou": "{challenge_title} цены по вашему желанию",
-		"PricesAddedByYou": "{challenge_title} цены добавлены вами",
+		"PricesAddedByYou": "Цены добавлены вами",
 		"MostRecentContributions": "Последние взносы",
 		"ChallengeCount": "{count} вызовы | {count} вызов | {count} вызовы",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Прошлые или будущие вызовы",
 		"OngoingChallenges": "Текущие вызовы",
 		"PastChallenges": "Прошлые проблемы",
-		"UpcomingChallenges": "Предстоящие задачи"
+		"UpcomingChallenges": "Предстоящие задачи",
+		"StatsAndRankings": "Статистика и рейтинги",
+		"MostPicturesAdded": "Большинство добавленных фотографий",
+		"MostPricesAdded": "Большинство цен добавлено"
 	},
 	"Common": {
 		"About": "О приложении",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Цены добавлены сегодня",
 		"PricesToday": "Цены сегодня",
 		"PriceNotFound": "Цена не найдена",
+		"PricesAddedByYou": "Цены добавлены вами",
 		"Private": "Частный",
 		"Privacy": "Конфиденциальность",
 		"ProductCount": "{count} продуктов | {count} продуктов | {count} продуктов",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Лучшие города",
+		"TopCountries": "Лучшие страны",
 		"Today": "Сегодня",
 		"Top": "Top",
 		"Total": "Всего",
