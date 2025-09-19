@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} fiyatlar",
 		"PricesAdded": "{challenge_title} fiyatlar eklendi",
 		"PricesByYou": "{challenge_title} sizin tarafınızdan eklenen fiyatlar",
-		"PricesAddedByYou": "{challenge_title} sizin tarafınızdan eklenen fiyatlar",
+		"PricesAddedByYou": "Sizin tarafınızdan eklenen fiyatlar",
 		"MostRecentContributions": "En son katkılar",
 		"ChallengeCount": "{count} meydan okumalar | {count} meydan okuma | {count} meydan okumalar",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Geçmiş veya gelecekteki meydan okumalar",
 		"OngoingChallenges": "Devam eden meydan okumalar",
 		"PastChallenges": "Geçmiş zorluklar",
-		"UpcomingChallenges": "Yaklaşan zorluklar"
+		"UpcomingChallenges": "Yaklaşan zorluklar",
+		"StatsAndRankings": "İstatistikler ve sıralamalar",
+		"MostPicturesAdded": "En çok resim eklendi",
+		"MostPricesAdded": "En çok eklenen fiyatlar"
 	},
 	"Common": {
 		"About": "Hakkında",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Bugün eklenen fiyatlar",
 		"PricesToday": "Bugünkü fiyatlar",
 		"PriceNotFound": "Fiyat bulunamadı",
+		"PricesAddedByYou": "Sizin tarafınızdan eklenen fiyatlar",
 		"Private": "Özel",
 		"Privacy": "Mahremiyet",
 		"ProductCount": "{count} ürünler | {count} ürün | {count} ürünler",
@@ -416,6 +420,8 @@
 		"TopContributors": "En çok katkıda bulunanlar",
 		"TopLocations": "En iyi yerler",
 		"TopProducts": "En iyi ürünler",
+		"TopCities": "En iyi şehirler",
+		"TopCountries": "En iyi ülkeler",
 		"Today": "Bugün",
 		"Top": "Üst",
 		"Total": "Toplam",
