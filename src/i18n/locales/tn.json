@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Ditlhwatlhwa tse di tsentsweng ke wena",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Dikgwetlho tsa nako e e fetileng",
-		"UpcomingChallenges": "Dikgwetlho tse di tlang"
+		"UpcomingChallenges": "Dikgwetlho tse di tlang",
+		"StatsAndRankings": "Dipalopalo le maemo",
+		"MostPicturesAdded": "Ditshwantsho di le dintsi di tsentswe",
+		"MostPricesAdded": "Ditlhwatlhwa tse dintsi di tsentswe"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Ditlhwatlhwa tse di tsentsweng ke wena",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Ditoropo tse di kwa godimo",
+		"TopCountries": "Dinaga tse di kwa godimo",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
