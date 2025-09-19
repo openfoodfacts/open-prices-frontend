@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Minxavo leyi engeteriweke hi wena",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Mintlhontlho ya nkarhi lowu hundzeke",
-		"UpcomingChallenges": "Mintlhontlho leyi taka"
+		"UpcomingChallenges": "Mintlhontlho leyi taka",
+		"StatsAndRankings": "Stats & swiyimo swa xiyimo",
+		"MostPicturesAdded": "Swifaniso swo tala swi engeteriwile",
+		"MostPricesAdded": "Minxavo yo tala yi engeteriwile"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Minxavo leyi engeteriweke hi wena",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Madoroba ya le henhla",
+		"TopCountries": "Matiko ya le henhla",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
