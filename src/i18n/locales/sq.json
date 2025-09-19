@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Çmimet e shtuara nga ju",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Sfidat e kaluara",
-		"UpcomingChallenges": "Sfidat e ardhshme"
+		"UpcomingChallenges": "Sfidat e ardhshme",
+		"StatsAndRankings": "Statistikat dhe renditjet",
+		"MostPicturesAdded": "Shumica e fotografive të shtuara",
+		"MostPricesAdded": "Shumica e çmimeve të shtuara"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Çmimet e shtuara nga ju",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Qytetet kryesore",
+		"TopCountries": "Vendet kryesore",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
