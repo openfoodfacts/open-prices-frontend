@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Sani minnu farala ɲɔgɔn kan aw fɛ",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Gɛlɛya tɛmɛnenw",
-		"UpcomingChallenges": "Gɛlɛya nataw"
+		"UpcomingChallenges": "Gɛlɛya nataw",
+		"StatsAndRankings": "Statistiques & rankings (jatebɔsɛbɛnw).",
+		"MostPicturesAdded": "Ja fanba farala ɲɔgɔn kan",
+		"MostPricesAdded": "Sɔngɔ fanba farala ɲɔgɔn kan"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Sani minnu farala ɲɔgɔn kan aw fɛ",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Dugu minnu bɛ sanfɛ",
+		"TopCountries": "Jamana minnu bɛ sanfɛ",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
