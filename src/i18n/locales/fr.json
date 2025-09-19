@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prix",
 		"PricesAdded": "{challenge_title} prix ajoutés",
 		"PricesByYou": "{challenge_title} prix par vous",
-		"PricesAddedByYou": "{challenge_title} prix ajoutés par vous",
+		"PricesAddedByYou": "Prix ajoutés par vous",
 		"MostRecentContributions": "Contributions les plus récentes",
 		"ChallengeCount": "{count} défis | {count} défi | {count} défis",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Défis passé ou futur",
 		"OngoingChallenges": "Défis en cours",
 		"PastChallenges": "Défis passés",
-		"UpcomingChallenges": "Défis à venir"
+		"UpcomingChallenges": "Défis à venir",
+		"StatsAndRankings": "Statistiques et classements",
+		"MostPicturesAdded": "La plupart des images ajoutées",
+		"MostPricesAdded": "La plupart des prix ajoutés"
 	},
 	"Common": {
 		"About": "À propos",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prix ajoutés aujourd'hui",
 		"PricesToday": "Prix aujourd'hui",
 		"PriceNotFound": "Prix non trouvés",
+		"PricesAddedByYou": "Prix ajoutés par vous",
 		"Private": "Privé",
 		"Privacy": "Confidentialité",
 		"ProductCount": "{count} produits | {count} produit | {count} produits",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributeurs",
 		"TopLocations": "Top lieux",
 		"TopProducts": "Top produits",
+		"TopCities": "Les meilleures villes",
+		"TopCountries": "Principaux pays",
 		"Today": "Aujourd’hui",
 		"Top": "Top",
 		"Total": "Total",
