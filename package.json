@@ -26,7 +26,7 @@
     "@openfoodfacts/openfoodfacts-webcomponents": "^1.14.1",
     "@vue-leaflet/vue-leaflet": "^0.10.1",
     "@vueuse/core": "^11.3.0",
-    "@vueuse/integrations": "^11.3.0",
+    "@vueuse/integrations": "^13.9.0",
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "compressorjs": "^1.2.1",
     "exifreader": "^4.31.2",
