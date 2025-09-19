@@ -4,7 +4,6 @@
       <v-chip label variant="text" prepend-icon="mdi-trophy-variant">
         {{ $t('Challenge.ChallengeCount', { count: challengeTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="challengeList.length" :totalCount="challengeTotal" />
     </v-col>
   </v-row>
 
@@ -12,6 +11,7 @@
     <v-col>
       <h2 class="text-h6">
         {{ $t('Challenge.OngoingChallenges') }}
+        <LoadedCountChip :totalCount="ongoingChallenges.length" />
       </h2>
     </v-col>
   </v-row>
@@ -28,6 +28,7 @@
     <v-col>
       <h2 class="text-h6">
         {{ $t('Challenge.UpcomingChallenges') }}
+        <LoadedCountChip :totalCount="upcomingChallenges.length" />
       </h2>
     </v-col>
   </v-row>
@@ -41,6 +42,7 @@
     <v-col>
       <h2 class="text-h6">
         {{ $t('Challenge.PastChallenges') }}
+        <LoadedCountChip :totalCount="pastChallenges.length" />
       </h2>
     </v-col>
   </v-row>

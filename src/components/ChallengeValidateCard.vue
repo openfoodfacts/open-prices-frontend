@@ -3,7 +3,6 @@
     class="d-flex flex-column"
     :title="$t('Challenge.StepValidate.Title')"
   >
-    <v-divider />
     <v-card-text class="flex-grow-1 pb-0">
       <p class="mb-2">
         {{ $t('Challenge.StepValidate.line1') }}

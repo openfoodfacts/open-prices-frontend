@@ -27,6 +27,7 @@ export default {
   methods: {
     getItemTitle(item) {
       if (this.objectId && item.to && item.to.includes(':id')) return this.objectId
+      if (this.objectId && item.title === ':id') return item.title.replace(':id', this.objectId)
       if (this.objectUsername && item.to && item.to.includes(':username')) return this.objectUsername
       return this.$t(`Router.${item.title}.Title`)
     },
