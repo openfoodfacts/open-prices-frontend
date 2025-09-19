@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Qiimaha aad ku dartay",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Caqabadihii hore",
-		"UpcomingChallenges": "Caqabadaha soo socda"
+		"UpcomingChallenges": "Caqabadaha soo socda",
+		"StatsAndRankings": "Tirokoobyada & darajooyinka",
+		"MostPicturesAdded": "Inta badan sawirada ayaa lagu daray",
+		"MostPricesAdded": "Inta badan qiimaha lagu daray"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Qiimaha aad ku dartay",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "Magaalooyinka ugu sarreeya",
+		"TopCountries": "Wadamada ugu sareeya",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
