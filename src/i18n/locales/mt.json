@@ -145,7 +145,7 @@
 		"Prices": "{challenge_title} prices",
 		"PricesAdded": "{challenge_title} prices added",
 		"PricesByYou": "{challenge_title} prices by you",
-		"PricesAddedByYou": "{challenge_title} prices added by you",
+		"PricesAddedByYou": "Prezzijiet miżjuda minnek",
 		"MostRecentContributions": "Most recent contributions",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"ChallengeStatuses": {
@@ -158,7 +158,10 @@
 		"PastOrFutureChallenges": "Past or future challenges",
 		"OngoingChallenges": "Ongoing challenges",
 		"PastChallenges": "Sfidi tal-passat",
-		"UpcomingChallenges": "Sfidi li ġejjin"
+		"UpcomingChallenges": "Sfidi li ġejjin",
+		"StatsAndRankings": "Statistika u klassifiki",
+		"MostPicturesAdded": "Il-biċċa l-kbira tar-ritratti miżjuda",
+		"MostPricesAdded": "Il-biċċa l-kbira tal-prezzijiet miżjuda"
 	},
 	"Common": {
 		"About": "About",
@@ -359,6 +362,7 @@
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
+		"PricesAddedByYou": "Prezzijiet miżjuda minnek",
 		"Private": "Private",
 		"Privacy": "Privacy",
 		"ProductCount": "{count} products | {count} product | {count} products",
@@ -416,6 +420,8 @@
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
+		"TopCities": "L-aqwa bliet",
+		"TopCountries": "L-aqwa pajjiżi",
 		"Today": "Today",
 		"Top": "Top",
 		"Total": "Total",
