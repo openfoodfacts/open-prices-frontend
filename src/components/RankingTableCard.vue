@@ -20,7 +20,9 @@
           <ProductCard :product="item" :hidePriceCount="true" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </template>
         <template #[`item.count`]="{ item }">
-          {{ item.count }}
+          <div class="float-right">
+            {{ item.count }}
+          </div>
         </template>
       </v-data-table>
     </v-card-text>
