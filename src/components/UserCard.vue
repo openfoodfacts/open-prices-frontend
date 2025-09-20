@@ -9,17 +9,17 @@
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <PriceCountChip class="mr-1" :count="user.price_count" :withLabel="true" />
-          <v-chip v-if="user.price_currency_count > 1" label size="small" density="comfortable" class="mr-1">
+          <v-chip class="mr-1" label size="small" density="comfortable">
             <v-icon start icon="mdi-cash" />
-            <span id="currency-count">{{ $t('Common.CurrencyCount', { count: user.price_currency_count }) }}</span>
+            <span id="currency-count">{{ $t('Common.CurrencyCount', { count: user.currency_count }) }}</span>
           </v-chip>
           <LocationCountChip class="mr-1" :count="user.location_count" :withLabel="true" />
-          <v-chip v-if="user.location_type_osm_country_count > 1" label size="small" density="comfortable" class="mr-1">
+          <v-chip class="mr-1" label size="small" density="comfortable">
             <v-icon start icon="mdi-map-outline" />
             <span id="country-count">{{ $t('Common.CountryCount', { count: user.location_type_osm_country_count }) }}</span>
           </v-chip>
-          <ProductCountChip v-if="user.product_count" class="mr-1" :count="user.product_count" :withLabel="true" />
-          <ProofCountChip v-if="user.proof_count" class="mr-1" :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
+          <ProductCountChip class="mr-1" :count="user.product_count" :withLabel="true" />
+          <ProofCountChip class="mr-1" :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
         </v-col>
       </v-row>
 
