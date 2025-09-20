@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Yaklaşan zorluklar",
 		"StatsAndRankings": "İstatistikler ve sıralamalar",
 		"MostPicturesAdded": "En çok resim eklendi",
-		"MostPricesAdded": "En çok eklenen fiyatlar"
+		"MostPricesAdded": "En çok eklenen fiyatlar",
+		"MostPricesFromPicturesAdded": "Çoğu fiyat resimlerden eklendi"
 	},
 	"Common": {
 		"About": "Hakkında",
