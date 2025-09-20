@@ -12,7 +12,7 @@
           </h3>
 
           <p>
-            <ProductDetails :product="product" :hideCategoriesAndLabels="hideCategoriesAndLabels" :hideProductBarcode="hideProductBarcode" :hideBarcodeErrors="false" :readonly="readonly" />
+            <ProductDetails :product="product" :hidePriceCount="hidePriceCount" :hideCategoriesAndLabels="hideCategoriesAndLabels" :hideProductBarcode="hideProductBarcode" :hideBarcodeErrors="false" :readonly="readonly" />
             <ProductActionMenuButton v-if="hasProductSource && !hideActionMenuButton" :product="product" />
           </p>
         </v-col>
@@ -49,6 +49,10 @@ export default {
     latestPrice: {
       type: Object,
       default: null
+    },
+    hidePriceCount: {
+      type: Boolean,
+      default: false
     },
     hideCategoriesAndLabels: {
       type: Boolean,
