@@ -1,5 +1,5 @@
 <template>
-  <v-card :title="getTitle" prepend-icon="mdi-map-marker-outline" data-name="country-card">
+  <v-card :title="getCityCountryTitle" prepend-icon="mdi-map-marker-outline" data-name="country-card">
     <v-card-text>
       <LocationCountChip :count="locationCount" :withLabel="true" />
       <v-chip
@@ -34,7 +34,7 @@ export default {
     }
   },
   computed: {
-    getTitle() {
+    getCityCountryTitle() {
       return this.city ? `${this.city}, ${this.country}` : this.country
     },
     countryUrl() {

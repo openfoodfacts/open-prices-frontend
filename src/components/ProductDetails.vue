@@ -1,5 +1,5 @@
 <template>
-  <PriceCountChip class="mr-1" :count="product.price_count" @click="goToProduct()" />
+  <PriceCountChip v-if="showPriceCount" class="mr-1" :count="product.price_count" @click="goToProduct()" />
   <span v-if="hasProductSource">
     <ProductBrands :productBrands="product.brands" :readonly="readonly" />
     <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
@@ -39,6 +39,10 @@ export default {
       type: Object,
       default: null
     },
+    hidePriceCount: {
+      type: Boolean,
+      default: false
+    },
     hideCategoriesAndLabels: {
       type: Boolean,
       default: false
@@ -66,6 +70,9 @@ export default {
     },
     hasProductQuantity() {
       return !!this.product.product_quantity
+    },
+    showPriceCount() {
+      return !this.hidePriceCount
     },
     showProductBarcode() {
       return !this.hideProductBarcode || this.appStore.user.username && this.appStore.user.product_display_barcode
