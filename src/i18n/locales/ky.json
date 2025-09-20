@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Алдыдагы кыйынчылыктар",
 		"StatsAndRankings": "Статистика жана рейтингдер",
 		"MostPicturesAdded": "Көпчүлүк сүрөттөр кошулду",
-		"MostPricesAdded": "Көпчүлүк баалар кошулду"
+		"MostPricesAdded": "Көпчүлүк баалар кошулду",
+		"MostPricesFromPicturesAdded": "Сүрөттөрдөн көпчүлүк баалар кошулду"
 	},
 	"Common": {
 		"About": "About",
