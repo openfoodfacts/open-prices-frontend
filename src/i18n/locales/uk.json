@@ -205,6 +205,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} виклики | {count} виклик | {count} виклики",
 		"Chart": "Графік",
 		"Clear": "Очистити",
 		"Comment": "Коментар",
