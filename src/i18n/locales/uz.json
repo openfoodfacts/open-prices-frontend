@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Kelgusi qiyinchiliklar",
 		"StatsAndRankings": "Statistika va reyting",
 		"MostPicturesAdded": "Ko'pgina rasmlar qo'shildi",
-		"MostPricesAdded": "Ko'pchilik narxlar qo'shilgan"
+		"MostPricesAdded": "Ko'pchilik narxlar qo'shilgan",
+		"MostPricesFromPicturesAdded": "Rasmlardagi eng ko'p narxlar qo'shildi"
 	},
 	"Common": {
 		"About": "Ma’lumot",
