@@ -205,6 +205,7 @@
 		"Challenges": "சவால்கள்",
 		"ChallengeCurrent": "தற்போதைய சவால்",
 		"ChallengeOngoing": "தொடரும் சவால்",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",
