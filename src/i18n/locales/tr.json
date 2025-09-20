@@ -205,6 +205,7 @@
 		"Challenges": "Meydan Okumalar",
 		"ChallengeCurrent": "Mevcut meydan okuma",
 		"ChallengeOngoing": "Devam eden meydan okuma",
+		"ChallengeCount": "{count} meydan okumalar | {count} meydan okuma | {count} meydan okumalar",
 		"Chart": "Çizelge",
 		"Clear": "Temizle",
 		"Comment": "Yorum",
