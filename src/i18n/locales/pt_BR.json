@@ -205,6 +205,7 @@
 		"Challenges": "Desafios",
 		"ChallengeCurrent": "Desafio atual",
 		"ChallengeOngoing": "Desafio em andamento",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Gráfico",
 		"Clear": "Limpar",
 		"Comment": "Comment",
