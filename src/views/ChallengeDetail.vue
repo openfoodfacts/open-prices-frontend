@@ -66,12 +66,12 @@
           <RankingTableCard :title="$t('Challenge.MostPricesAdded')" :items="challenge.stats.user_price_count_ranking" />
         </v-col>
         <v-col cols="12" sm="6" md="4">
-          <RankingTableCard :title="$t('Common.TopProducts')" :items="challenge.stats.product_price_count_ranking" />
-        </v-col>
-        <v-col cols="12" sm="6" md="4">
           <RankingTableCard class="mb-4" :title="$t('Common.TopLocations')" :items="challenge.stats.location_price_count_ranking" />
           <RankingTableCard class="mb-4" :title="$t('Common.TopCountries')" :items="challenge.stats.location_country_price_count_ranking" />
           <RankingTableCard :title="$t('Common.TopCities')" :items="challenge.stats.location_city_price_count_ranking" />
+        </v-col>
+        <v-col cols="12" sm="6" md="4">
+          <RankingTableCard :title="$t('Common.TopProducts')" :items="challenge.stats.product_price_count_ranking" />
         </v-col>
       </v-row>
     </v-col>
