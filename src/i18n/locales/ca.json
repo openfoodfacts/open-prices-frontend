@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Propers reptes",
 		"StatsAndRankings": "Estadístiques i classificacions",
 		"MostPicturesAdded": "La majoria d'imatges afegides",
-		"MostPricesAdded": "La majoria de preus afegits"
+		"MostPricesAdded": "La majoria de preus afegits",
+		"MostPricesFromPicturesAdded": "La majoria dels preus de les imatges s'han afegit"
 	},
 	"Common": {
 		"About": "Quant a",
