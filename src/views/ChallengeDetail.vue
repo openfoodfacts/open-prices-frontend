@@ -68,8 +68,8 @@
         </v-col>
         <v-col cols="12" sm="6" md="4">
           <RankingTableCard class="mb-4" :title="$t('Common.TopLocations')" :items="challenge.stats.location_price_count_ranking" :hideRank="true" />
-          <RankingTableCard class="mb-4" :title="$t('Common.TopCountries')" :items="challenge.stats.location_country_price_count_ranking" :hideRank="true" />
-          <RankingTableCard :title="$t('Common.TopCities')" :items="challenge.stats.location_city_price_count_ranking" :hideRank="true" />
+          <RankingTableCard class="mb-4" :title="$t('Common.TopCities')" :items="challenge.stats.location_city_price_count_ranking" :hideRank="true" />
+          <RankingTableCard :title="$t('Common.TopCountries')" :items="challenge.stats.location_country_price_count_ranking" :hideRank="true" />
         </v-col>
         <v-col cols="12" sm="6" md="4">
           <RankingTableCard :title="$t('Common.TopProducts')" :items="challenge.stats.product_price_count_ranking" :hideRank="true" />

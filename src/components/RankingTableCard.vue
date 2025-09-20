@@ -72,10 +72,10 @@ export default {
   },
   methods: {
     getLocationTitle(location) {
-      return geo_utils.getLocationOSMTitle(location, true, false, true, true) 
+      return geo_utils.getLocationOSMTitle(location, true, false, true, false, true) 
     },
     getCityCountryTitle(location) {
-      return location.osm_address_city ? `${location.osm_address_city}, ${location.osm_address_country}` : location.osm_address_country
+      return geo_utils.getLocationOSMTitle(location, false, false, true, true, true) 
     },
   }
 }
