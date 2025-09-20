@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Удахгүй болох сорилтууд",
 		"StatsAndRankings": "Статистик ба зэрэглэл",
 		"MostPicturesAdded": "Ихэнх зураг нэмсэн",
-		"MostPricesAdded": "Ихэнх үнийг нэмсэн"
+		"MostPricesAdded": "Ихэнх үнийг нэмсэн",
+		"MostPricesFromPicturesAdded": "Зураг дээрх ихэнх үнийг нэмсэн"
 	},
 	"Common": {
 		"About": "About",
