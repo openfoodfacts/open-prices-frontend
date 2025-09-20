@@ -66,7 +66,7 @@ export default {
     },
     getLocationTitle() {
       if (this.selectedLocation.type === 'ONLINE') return this.selectedLocation.website_url
-      return geo_utils.getLocationOSMTitle(this.selectedLocation, true, true, true)
+      return geo_utils.getLocationOSMTitle(this.selectedLocation, true, true, false, true)
     },
   },
   mounted() {

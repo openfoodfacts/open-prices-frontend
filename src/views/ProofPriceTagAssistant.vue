@@ -318,7 +318,7 @@ export default {
       const location = recentLocations.find((location) => location.properties.osm_id === this.proofObject.location_osm_id)
       if (location) {
         if (location.type === 'ONLINE') return location.website_url
-        return geo_utils.getLocationOSMTitle(location, true, true, true)
+        return geo_utils.getLocationOSMTitle(location, true, true, false, true)
       }
       return ''
     },
