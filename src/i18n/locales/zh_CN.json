@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "即将到来的挑战",
 		"StatsAndRankings": "统计数据和排名",
 		"MostPicturesAdded": "添加的图片最多",
-		"MostPricesAdded": "大部分价格已添加"
+		"MostPricesAdded": "大部分价格已添加",
+		"MostPricesFromPicturesAdded": "大部分价格来自已添加的图片"
 	},
 	"Common": {
 		"About": "关于",
