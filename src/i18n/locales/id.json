@@ -205,6 +205,7 @@
 		"Challenges": "Tantangan",
 		"ChallengeCurrent": "Tantangan saat ini",
 		"ChallengeOngoing": "Tantangan yang sedang berlangsung",
+		"ChallengeCount": "{count} tantangan | {count} tantangan | {count} tantangan",
 		"Chart": "Grafik",
 		"Clear": "Hapus",
 		"Comment": "Komentar",
