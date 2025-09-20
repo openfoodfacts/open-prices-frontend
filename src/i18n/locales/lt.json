@@ -205,6 +205,7 @@
 		"Challenges": "Iššūkiai",
 		"ChallengeCurrent": "Dabartinis iššūkis",
 		"ChallengeOngoing": "Vykstantis iššūkis",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Diagrama",
 		"Clear": "Clear",
 		"Comment": "Comment",
