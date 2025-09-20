@@ -63,7 +63,8 @@
       <v-row>
         <v-col cols="12" sm="6" md="4">
           <RankingTableCard class="mb-4" :title="$t('Challenge.MostPicturesAdded')" :items="challenge.stats.user_proof_count_ranking" :hideRank="true" />
-          <RankingTableCard :title="$t('Challenge.MostPricesAdded')" :items="challenge.stats.user_price_count_ranking" :hideRank="true" />
+          <RankingTableCard class="mb-4" :title="$t('Challenge.MostPricesAdded')" :items="challenge.stats.user_price_count_ranking" :hideRank="true" />
+          <RankingTableCard :title="$t('Challenge.MostPricesFromPicturesAdded')" :items="challenge.stats.user_price_from_proof_count_ranking" :hideRank="true" />
         </v-col>
         <v-col cols="12" sm="6" md="4">
           <RankingTableCard class="mb-4" :title="$t('Common.TopLocations')" :items="challenge.stats.location_price_count_ranking" :hideRank="true" />
