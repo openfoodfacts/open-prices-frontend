@@ -9,21 +9,12 @@
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <PriceCountChip class="mr-1" :count="user.price_count" :withLabel="true" />
-          <v-chip class="mr-1" label size="small" density="comfortable">
-            <v-icon start icon="mdi-cash" />
-            <span id="currency-count">{{ $t('Common.CurrencyCount', { count: user.currency_count }) }}</span>
-          </v-chip>
+          <CurrencyCountChip class="mr-1" :count="user.currency_count" :withLabel="true" />
           <LocationCountChip class="mr-1" :count="user.location_count" :withLabel="true" />
-          <v-chip class="mr-1" label size="small" density="comfortable">
-            <v-icon start icon="mdi-map-outline" />
-            <span id="country-count">{{ $t('Common.CountryCount', { count: user.location_type_osm_country_count }) }}</span>
-          </v-chip>
+          <CountryCountChip class="mr-1" :count="user.location_type_osm_country_count" :withLabel="true" />
           <ProductCountChip class="mr-1" :count="user.product_count" :withLabel="true" />
           <ProofCountChip class="mr-1" :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
-          <v-chip class="mr-1" label size="small" density="comfortable">
-            <v-icon start icon="mdi-trophy-variant" />
-            <span id="challenge-count">{{ $t('Common.ChallengeCount', { count: user.challenge_count }) }}</span>
-          </v-chip>
+          <ChallengeCountChip class="mr-1" :count="user.challenge_count" :withLabel="true" />
         </v-col>
       </v-row>
 
@@ -38,9 +29,12 @@ import { defineAsyncComponent } from 'vue'
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    CurrencyCountChip: defineAsyncComponent(() => import('../components/CurrencyCountChip.vue')),
     LocationCountChip: defineAsyncComponent(() => import('../components/LocationCountChip.vue')),
+    CountryCountChip: defineAsyncComponent(() => import('../components/CountryCountChip.vue')),
     ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
     ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
+    ChallengeCountChip: defineAsyncComponent(() => import('../components/ChallengeCountChip.vue')),
     UserActionMenuButton: defineAsyncComponent(() => import('../components/UserActionMenuButton.vue')),
   },
   props: {
