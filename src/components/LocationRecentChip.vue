@@ -36,7 +36,7 @@ export default {
   computed: {
     getLocationTitle() {
       if (this.location.type === 'ONLINE') return this.location.website_url
-      return geo_utils.getLocationOSMTitle(this.location, true, true, true)
+      return geo_utils.getLocationOSMTitle(this.location, true, true, false, true)
     },
     getLocationUniqueID() {
       if (this.location.id) return this.location.id

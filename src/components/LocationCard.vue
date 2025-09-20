@@ -88,7 +88,7 @@ export default {
     getLocationTitle() {
       if (this.location) {
         if (this.location.type === constants.LOCATION_TYPE_OSM) {
-          return geo_utils.getLocationOSMTitle(this.location, true, false, true, true)
+          return geo_utils.getLocationOSMTitle(this.location, true, false, true, false, true)
         } else if (this.location.type === constants.LOCATION_TYPE_ONLINE) {
           return geo_utils.getLocationONLINETitle(this.location)
         }

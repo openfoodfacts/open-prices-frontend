@@ -51,11 +51,24 @@ function getLocationCity(locationObject) {
   return locationObject.osm_address_city || ''
 }
 
+function getLocationCountry(locationObject) {
+  // Nominatim
+  if (locationObject.address) {
+    return locationObject.address.country || ''
+  }
+  // Photon
+  else if (locationObject.properties) {
+    return locationObject.properties.country || ''
+  }
+  // OP
+  return locationObject.osm_address_country || ''
+}
+
 /**
  * input: {"geometry":{"coordinates":[2.3548062,48.8301752],"type":"Point"},"type":"Feature","properties":{"osm_id":11112946989,"country":"France","city":"Paris","countrycode":"FR","postcode":"75013","locality":"Quartier de la Maison-Blanche","type":"house","osm_type":"N","osm_key":"shop","housenumber":"30","street":"Avenue d'Italie","district":"Paris","osm_value":"department_store","name":"HEMA","state":"Ile-de-France"}}
  * output: HEMA ; 30, Avenue d'Italie, Paris
  */
-function getLocationOSMTitle(locationObject, withName=true, withRoad=false, withCity=true, withEmoji=false) {
+function getLocationOSMTitle(locationObject, withName=true, withRoad=false, withCity=true, withCountry=false, withEmoji=false) {
   let locationTitle = ''
   if (withName) {
     locationTitle += `${getLocationName(locationObject)}`
@@ -67,6 +80,10 @@ function getLocationOSMTitle(locationObject, withName=true, withRoad=false, with
   if (withCity) {
     locationTitle += locationTitle ? ', ' : ''
     locationTitle += getLocationCity(locationObject)
+  }
+  if (withCountry) {
+    locationTitle += locationTitle ? ', ' : ''
+    locationTitle += getLocationCountry(locationObject)
   }
   if (withEmoji) {
     // locationTitle += ` ${getCountryEmojiFromName(locationObject.osm_address_country) || ''}`
