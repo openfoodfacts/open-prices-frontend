@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Nadcházející výzvy",
 		"StatsAndRankings": "Statistiky a žebříčky",
 		"MostPicturesAdded": "Většina přidáných obrázků",
-		"MostPricesAdded": "Většina cen byla přidána"
+		"MostPricesAdded": "Většina cen byla přidána",
+		"MostPricesFromPicturesAdded": "Většina cen z obrázků byla přidána"
 	},
 	"Common": {
 		"About": "O aplikaci",
