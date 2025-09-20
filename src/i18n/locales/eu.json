@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Hurrengo erronkak",
 		"StatsAndRankings": "Estatistikak eta sailkapenak",
 		"MostPicturesAdded": "Gehitutako argazki gehienak",
-		"MostPricesAdded": "Gehitutako prezio gehienak"
+		"MostPricesAdded": "Gehitutako prezio gehienak",
+		"MostPricesFromPicturesAdded": "Irudietako prezio gehienak gehitu dira"
 	},
 	"Common": {
 		"About": "Honi buruz",
