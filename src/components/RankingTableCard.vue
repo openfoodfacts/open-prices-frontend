@@ -40,7 +40,7 @@ export default {
       let allHeaders = [
         { text: this.$t('Common.Rank'), key: 'rank', width: '10%' },
         { text: this.$t('Common.User'), key: 'owner' },
-        { text: this.$t('Common.Country'), key: 'country' },
+        { text: this.$t('Common.Country'), key: 'osm_address_country' },
         { text: this.$t('Common.Count'), key: 'count' },
       ]
       return allHeaders.filter((header, index) => index === 0 || this.items.some(item => item[header.key] !== undefined))
