@@ -205,6 +205,7 @@
 		"Challenges": "Uitdagingen",
 		"ChallengeCurrent": "Huidige uitdaging",
 		"ChallengeOngoing": "Lopende uitdaging",
+		"ChallengeCount": "{count} uitdagingen | {count} uitdaging | {count} uitdagingen",
 		"Chart": "Grafiek",
 		"Clear": "Wissen",
 		"Comment": "Reactie",
