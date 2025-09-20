@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "მომავალი გამოწვევები",
 		"StatsAndRankings": "სტატისტიკა და რეიტინგები",
 		"MostPicturesAdded": "ყველაზე მეტი სურათი დამატებულია",
-		"MostPricesAdded": "დამატებული ფასების უმეტესობა"
+		"MostPricesAdded": "დამატებული ფასების უმეტესობა",
+		"MostPricesFromPicturesAdded": "სურათებიდან მიღებული ფასების უმეტესობა დამატებულია"
 	},
 	"Common": {
 		"About": "About",
