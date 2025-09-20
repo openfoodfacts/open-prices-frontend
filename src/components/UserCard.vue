@@ -20,6 +20,10 @@
           </v-chip>
           <ProductCountChip class="mr-1" :count="user.product_count" :withLabel="true" />
           <ProofCountChip class="mr-1" :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
+          <v-chip class="mr-1" label size="small" density="comfortable">
+            <v-icon start icon="mdi-trophy-variant" />
+            <span id="challenge-count">{{ $t('Common.ChallengeCount', { count: user.challenge_count }) }}</span>
+          </v-chip>
         </v-col>
       </v-row>
 
