@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Matambudziko ari kuuya",
 		"StatsAndRankings": "Stats & rankings",
 		"MostPicturesAdded": "Mifananidzo yakawanda yakawedzerwa",
-		"MostPricesAdded": "Mitengo yakawanda yakawedzerwa"
+		"MostPricesAdded": "Mitengo yakawanda yakawedzerwa",
+		"MostPricesFromPicturesAdded": "Mitengo yakawanda kubva pamifananidzo yakawedzerwa"
 	},
 	"Common": {
 		"About": "About",
