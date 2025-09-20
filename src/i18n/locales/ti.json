@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "ዝመጽእ ብድሆታት",
 		"StatsAndRankings": "ስታቲስቲክስ & ደረጃታት",
 		"MostPicturesAdded": "መብዛሕትኡ ስእልታት ተወሰኸ",
-		"MostPricesAdded": "መብዛሕትኡ ዋጋታት ተወሰኸ"
+		"MostPricesAdded": "መብዛሕትኡ ዋጋታት ተወሰኸ",
+		"MostPricesFromPicturesAdded": "መብዛሕትኡ ዋጋታት ካብ ስእልታት ተወሰኸ"
 	},
 	"Common": {
 		"About": "About",
