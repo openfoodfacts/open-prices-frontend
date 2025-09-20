@@ -205,6 +205,7 @@
 		"Challenges": "Utmaningar",
 		"ChallengeCurrent": "Nuvarande utmaning",
 		"ChallengeOngoing": "Pågående utmaning",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Diagram",
 		"Clear": "Rensa",
 		"Comment": "Kommentar",
