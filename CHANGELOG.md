@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.140.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.0...v1.140.1) (2025-09-21)
+
+
+### Technical
+
+* **Challenges:** improve display of ranking stats ([#1677](https://github.com/openfoodfacts/open-prices-frontend/issues/1677)) ([d479e83](https://github.com/openfoodfacts/open-prices-frontend/commit/d479e836a39f3e1f90cdb12212617cc09640794d))
+* **l10n:** New Crowdin translations to review and merge ([#1676](https://github.com/openfoodfacts/open-prices-frontend/issues/1676)) ([2ceb975](https://github.com/openfoodfacts/open-prices-frontend/commit/2ceb975deabb1663a004272f968ca5fe96d99d93))
+* **Locations:** small improvements in geo utils (new withCountry param) ([#1682](https://github.com/openfoodfacts/open-prices-frontend/issues/1682)) ([82cb02e](https://github.com/openfoodfacts/open-prices-frontend/commit/82cb02eaf36f47ce5bca0b7b258d00e02e98902c))
+* **Products:** allow to hide price count chip in card ([#1683](https://github.com/openfoodfacts/open-prices-frontend/issues/1683)) ([0f08074](https://github.com/openfoodfacts/open-prices-frontend/commit/0f0807434ebc2cfc4abcbfe0eec6223eebc7436d))
+* **User card:** new CurrencyCountChip, CountryCountChip & ChallengeCountChip components ([#1681](https://github.com/openfoodfacts/open-prices-frontend/issues/1681)) ([6f46cc3](https://github.com/openfoodfacts/open-prices-frontend/commit/6f46cc3b2eb9328af51a6045d533e86b00b15d88))
+* **User card:** show all stats (even if 0 or 1) ([#1678](https://github.com/openfoodfacts/open-prices-frontend/issues/1678)) ([dd477a2](https://github.com/openfoodfacts/open-prices-frontend/commit/dd477a2411a5466998a90405b30793a3eb002a44))
+* **User card:** show new challenge_count stat ([#1680](https://github.com/openfoodfacts/open-prices-frontend/issues/1680)) ([e923629](https://github.com/openfoodfacts/open-prices-frontend/commit/e923629a784d6cfc0f5513f78d980441cf04dd71))
+
 ## [1.140.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.139.0...v1.140.0) (2025-09-19)
 
 
