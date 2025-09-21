@@ -16,13 +16,17 @@
   import constants from '../constants'
   export default {
     props: {
-      image: {
-        type: Image,
+      imageSrc: {
+        type: String,
         default: null
       },
       boundingBoxesFromServer: {
         type: Array,
         default: null
+      },
+      preventDrawing: {
+        type: Boolean,
+        default: false
       }
     },
     emits: ['extractedLabels', 'loaded'],
@@ -32,7 +36,8 @@
         startX: 0,
         startY: 0,
         scale: 1,
-        boundingBoxes: []
+        boundingBoxes: [],
+        image: new Image()
       }
     },
     watch: {
@@ -40,9 +45,20 @@
         if (this.boundingBoxesFromServer.length) {
           this.initCanvas(false)
         }
+      },
+      imageSrc() {
+          this.image.src = this.imageSrc
+          this.image.crossOrigin = "anonymous"
+          if (this.image.complete) {
+            this.initCanvas()
+          } else {
+            this.image.onload = () => this.initCanvas()
+          }
       }
     },
     mounted() {
+      this.image.src = this.imageSrc
+      this.image.crossOrigin = "anonymous"
       if (this.image.complete) {
         this.initCanvas()
       } else {
@@ -52,20 +68,22 @@
     methods: {
       initCanvas(keepBoundingBoxes=false) {
         const canvas = this.$refs.canvas
+        if (!canvas) return
         const ctx = canvas.getContext("2d")
         canvas.style.width = "100%"
         this.scale = canvas.offsetWidth / this.image.width
         const preferedHeight = window.innerHeight - 250
 
-        if (preferedHeight < this.image.height * this.scale) {
+        if (preferedHeight < this.image.height) {
           // Image will be too tall
           // Ajust to fit preferedHeight
           canvas.style.width = "auto"
           this.scale = preferedHeight / this.image.height
+          canvas.style.height = preferedHeight + "px"
         }
-        
-        const newWidth = this.image.width * this.scale
-        const newHeight = this.image.height * this.scale
+
+        const newWidth = this.image.width
+        const newHeight = this.image.height
         canvas.width = newWidth
         canvas.height = newHeight
         
@@ -92,7 +110,7 @@
         this.$emit('loaded')
       },
       startDrawing(event) {
-        if (this.isDrawing) return
+        if (this.isDrawing || this.preventDrawing) return
         if (event.type == "touchstart") {
           const rect = event.target.getBoundingClientRect()
           event.offsetX = event.targetTouches[0].clientX - rect.left 
@@ -103,6 +121,7 @@
         this.isDrawing = true
       },
       drawContent(event) {
+        if (this.preventDrawing) return
         if (event.type == "touchmove") {
           const rect = event.target.getBoundingClientRect()
           event.offsetX = event.targetTouches[0].clientX - rect.left 
@@ -121,10 +140,11 @@
           const height = currentY - this.startY
           
           ctx.strokeStyle = "red"
-          ctx.strokeRect(this.startX * this.scale, this.startY * this.scale, width * this.scale, height * this.scale)
+          ctx.strokeRect(this.startX, this.startY, width, height)
         }
       },
       finishDrawing(event) {
+        if (this.preventDrawing) return
         this.isDrawing = false
         if (event.type == "touchend") {
           const rect = event.target.getBoundingClientRect()
@@ -142,6 +162,7 @@
       },
       drawBoundingBoxes() {
         const ctx = this.$refs.canvas.getContext("2d")
+        ctx.lineWidth = 1 / this.scale
         this.boundingBoxes.forEach(rect => {
           const { startX, startY, endX, endY } = rect
           const width = endX - startX
@@ -189,12 +210,13 @@
                 text = this.$t('ContributionAssistant.PriceTagLabels.NewPriceTag')
               }
           }
-          ctx.strokeRect(startX * this.scale, startY * this.scale, width * this.scale, height * this.scale)
+          ctx.strokeRect(startX, startY, width, height)
+          ctx.font = `bold ${8/this.scale}px sans-serif `
           const textWidth = ctx.measureText(text).width + 4
-          ctx.strokeRect(Math.min(startX, endX) * this.scale, Math.min(startY, endY) * this.scale - 10, textWidth, 10)
-          ctx.fillRect(Math.min(startX, endX) * this.scale, Math.min(startY, endY) * this.scale - 10, textWidth, 10)
+          ctx.strokeRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
+          ctx.fillRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
           ctx.fillStyle = "white"
-          ctx.fillText(text, Math.min(startX, endX) * this.scale + 2, Math.min(startY, endY) * this.scale - 2)
+          ctx.fillText(text, Math.min(startX, endX) + 3, Math.min(startY, endY) - 3)
         });
       },
       async extractLabels() {
