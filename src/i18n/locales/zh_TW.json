@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "即將到來的挑戰",
 		"StatsAndRankings": "統計數據和排名",
 		"MostPicturesAdded": "添加的圖片最多",
-		"MostPricesAdded": "大部分價格已添加"
+		"MostPricesAdded": "大部分價格已添加",
+		"MostPricesFromPicturesAdded": "大部分價格來自已新增的圖片"
 	},
 	"Common": {
 		"About": "關於",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "圖表",
 		"Clear": "清除",
 		"Comment": "Comment",

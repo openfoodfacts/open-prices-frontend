@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "אתגרים קרובים",
 		"StatsAndRankings": "סטטיסטיקות ודירוגים",
 		"MostPicturesAdded": "רוב התמונות נוספו",
-		"MostPricesAdded": "רוב המחירים נוספו"
+		"MostPricesAdded": "רוב המחירים נוספו",
+		"MostPricesFromPicturesAdded": "רוב המחירים מהתמונות נוספו"
 	},
 	"Common": {
 		"About": "על אודות",
@@ -205,6 +206,7 @@
 		"Challenges": "אתגרים",
 		"ChallengeCurrent": "אתגר נוכחי",
 		"ChallengeOngoing": "אתגר שמתקיים כרגע",
+		"ChallengeCount": "{count} אתגרים | אתגר | {count} אתגרים",
 		"Chart": "תרשים",
 		"Clear": "פינוי",
 		"Comment": "הערה",

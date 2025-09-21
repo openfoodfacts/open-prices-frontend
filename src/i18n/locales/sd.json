@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "ايندڙ چئلينجز",
 		"StatsAndRankings": "انگ اکر ۽ درجه بندي",
 		"MostPicturesAdded": "گهڻيون تصويرون شامل ڪيون ويون آهن",
-		"MostPricesAdded": "گهڻيون قيمتون شامل ڪيون ويون آهن"
+		"MostPricesAdded": "گهڻيون قيمتون شامل ڪيون ويون آهن",
+		"MostPricesFromPicturesAdded": "شامل ڪيل تصويرن مان گهڻيون قيمتون"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

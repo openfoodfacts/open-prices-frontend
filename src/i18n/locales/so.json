@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Caqabadaha soo socda",
 		"StatsAndRankings": "Tirokoobyada & darajooyinka",
 		"MostPicturesAdded": "Inta badan sawirada ayaa lagu daray",
-		"MostPricesAdded": "Inta badan qiimaha lagu daray"
+		"MostPricesAdded": "Inta badan qiimaha lagu daray",
+		"MostPricesFromPicturesAdded": "Qiimaha ugu badan ee sawirada lagu daray"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

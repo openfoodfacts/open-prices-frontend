@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "ಮುಂಬರುವ ಸವಾಲುಗಳು",
 		"StatsAndRankings": "ಅಂಕಿಅಂಶಗಳು ಮತ್ತು ಶ್ರೇಯಾಂಕಗಳು",
 		"MostPicturesAdded": "ಹೆಚ್ಚಿನ ಚಿತ್ರಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
-		"MostPricesAdded": "ಹೆಚ್ಚಿನ ಬೆಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ"
+		"MostPricesAdded": "ಹೆಚ್ಚಿನ ಬೆಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
+		"MostPricesFromPicturesAdded": "ಚಿತ್ರಗಳಿಂದ ಹೆಚ್ಚಿನ ಬೆಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ"
 	},
 	"Common": {
 		"About": "ಬಗ್ಗೆ",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "ತೆರವು ಮಾಡಿ",
 		"Comment": "Comment",

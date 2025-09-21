@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Predstojeći izazovi",
 		"StatsAndRankings": "Statistike i rangiranje",
 		"MostPicturesAdded": "Najviše dodanih slika",
-		"MostPricesAdded": "Većina cijena je dodana"
+		"MostPricesAdded": "Većina cijena je dodana",
+		"MostPricesFromPicturesAdded": "Većina cijena sa slika je dodana"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

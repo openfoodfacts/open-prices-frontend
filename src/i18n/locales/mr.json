@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "आगामी आव्हाने",
 		"StatsAndRankings": "आकडेवारी आणि रँकिंग",
 		"MostPicturesAdded": "बहुतेक चित्रे जोडली",
-		"MostPricesAdded": "बहुतेक किमती जोडल्या गेल्या"
+		"MostPricesAdded": "बहुतेक किमती जोडल्या गेल्या",
+		"MostPricesFromPicturesAdded": "जोडलेल्या चित्रांमधील बहुतेक किंमती"
 	},
 	"Common": {
 		"About": "याविषयी",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "ଆଗାମୀ ଚ୍ୟାଲେଞ୍ଜଗୁଡ଼ିକ",
 		"StatsAndRankings": "ପରିସଂଖ୍ୟାନ ଏବଂ ରାଙ୍କିଙ୍ଗ",
 		"MostPicturesAdded": "ଅଧିକାଂଶ ଛବି ଯୋଡାଯାଇଛି",
-		"MostPricesAdded": "ଅଧିକାଂଶ ମୂଲ୍ୟ ଯୋଗ କରାଯାଇଛି"
+		"MostPricesAdded": "ଅଧିକାଂଶ ମୂଲ୍ୟ ଯୋଗ କରାଯାଇଛି",
+		"MostPricesFromPicturesAdded": "ଯୋଡାଯାଇଥିବା ଚିତ୍ରରୁ ଅଧିକାଂଶ ମୂଲ୍ୟ"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

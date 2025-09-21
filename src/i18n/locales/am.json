@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "መጪ ተግዳሮቶች",
 		"StatsAndRankings": "ስታቲስቲክስ እና ደረጃዎች",
 		"MostPicturesAdded": "አብዛኞቹ ምስሎች ታክለዋል።",
-		"MostPricesAdded": "አብዛኛዎቹ ዋጋዎች ታክለዋል።"
+		"MostPricesAdded": "አብዛኛዎቹ ዋጋዎች ታክለዋል።",
+		"MostPricesFromPicturesAdded": "ከፎቶዎች አብዛኛዎቹ ዋጋዎች"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

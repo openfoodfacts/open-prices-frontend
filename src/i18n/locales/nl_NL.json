@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Aankomende uitdagingen",
 		"StatsAndRankings": "Statistieken en ranglijsten",
 		"MostPicturesAdded": "Meeste foto's toegevoegd",
-		"MostPricesAdded": "Meeste prijzen toegevoegd"
+		"MostPricesAdded": "Meeste prijzen toegevoegd",
+		"MostPricesFromPicturesAdded": "Meeste prijzen van toegevoegde foto's"
 	},
 	"Common": {
 		"About": "Over",
@@ -205,6 +206,7 @@
 		"Challenges": "Uitdagingen",
 		"ChallengeCurrent": "Huidige uitdaging",
 		"ChallengeOngoing": "Lopende uitdaging",
+		"ChallengeCount": "{count} uitdagingen | {count} uitdaging | {count} uitdagingen",
 		"Chart": "Grafiek",
 		"Clear": "Wissen",
 		"Comment": "Reactie",

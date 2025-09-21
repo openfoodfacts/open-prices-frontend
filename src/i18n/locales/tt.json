@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Киләчәк проблемалар",
 		"StatsAndRankings": "Статистика һәм рейтингы",
 		"MostPicturesAdded": "Күпчелек рәсемнәр өстәлде",
-		"MostPricesAdded": "Күпчелек бәяләр өстәлде"
+		"MostPricesAdded": "Күпчелек бәяләр өстәлде",
+		"MostPricesFromPicturesAdded": "Рәсемнәрдән күпчелек бәяләр өстәлде"
 	},
 	"Common": {
 		"About": "Хакында",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Чистарту",
 		"Comment": "Comment",

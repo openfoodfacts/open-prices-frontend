@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "მომავალი გამოწვევები",
 		"StatsAndRankings": "სტატისტიკა და რეიტინგები",
 		"MostPicturesAdded": "ყველაზე მეტი სურათი დამატებულია",
-		"MostPricesAdded": "დამატებული ფასების უმეტესობა"
+		"MostPricesAdded": "დამატებული ფასების უმეტესობა",
+		"MostPricesFromPicturesAdded": "სურათებიდან მიღებული ფასების უმეტესობა დამატებულია"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

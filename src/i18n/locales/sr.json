@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Upcoming challenges",
 		"StatsAndRankings": "Stats & rankings",
 		"MostPicturesAdded": "Most pictures added",
-		"MostPricesAdded": "Most prices added"
+		"MostPricesAdded": "Most prices added",
+		"MostPricesFromPicturesAdded": "Most prices from pictures added"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Obriši",
 		"Comment": "Comment",

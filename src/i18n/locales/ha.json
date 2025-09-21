@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Kalubale masu zuwa",
 		"StatsAndRankings": "Ƙididdiga & martaba",
 		"MostPicturesAdded": "Yawancin hotuna sun kara",
-		"MostPricesAdded": "Yawancin farashin ƙara"
+		"MostPricesAdded": "Yawancin farashin ƙara",
+		"MostPricesFromPicturesAdded": "Yawancin farashi daga hotuna da aka ƙara"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

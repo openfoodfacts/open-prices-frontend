@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Sfidat e ardhshme",
 		"StatsAndRankings": "Statistikat dhe renditjet",
 		"MostPicturesAdded": "Shumica e fotografive të shtuara",
-		"MostPricesAdded": "Shumica e çmimeve të shtuara"
+		"MostPricesAdded": "Shumica e çmimeve të shtuara",
+		"MostPricesFromPicturesAdded": "Shumica e çmimeve nga fotografitë u shtuan"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

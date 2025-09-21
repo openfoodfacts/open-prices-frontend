@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Удахгүй болох сорилтууд",
 		"StatsAndRankings": "Статистик ба зэрэглэл",
 		"MostPicturesAdded": "Ихэнх зураг нэмсэн",
-		"MostPricesAdded": "Ихэнх үнийг нэмсэн"
+		"MostPricesAdded": "Ихэнх үнийг нэмсэн",
+		"MostPricesFromPicturesAdded": "Зураг дээрх ихэнх үнийг нэмсэн"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

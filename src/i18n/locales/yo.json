@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Awọn italaya ti n bọ",
 		"StatsAndRankings": "Awọn iṣiro & awọn ipo",
 		"MostPicturesAdded": "Pupọ awọn aworan kun",
-		"MostPricesAdded": "Pupọ owo kun"
+		"MostPricesAdded": "Pupọ owo kun",
+		"MostPricesFromPicturesAdded": "Ọpọlọpọ owo lati awọn aworan kun"
 	},
 	"Common": {
 		"About": "Nipa",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "வரவிருக்கும் சவால்கள்",
 		"StatsAndRankings": "புள்ளிவிவரங்கள் & தரவரிசைகள்",
 		"MostPicturesAdded": "பெரும்பாலான படங்கள் சேர்க்கப்பட்டன",
-		"MostPricesAdded": "பெரும்பாலான விலைகள் சேர்க்கப்பட்டுள்ளன"
+		"MostPricesAdded": "பெரும்பாலான விலைகள் சேர்க்கப்பட்டுள்ளன",
+		"MostPricesFromPicturesAdded": "படங்களிலிருந்து பெரும்பாலான விலைகள் சேர்க்கப்பட்டுள்ளன."
 	},
 	"Common": {
 		"About": "இதைப் பற்றி",
@@ -205,6 +206,7 @@
 		"Challenges": "சவால்கள்",
 		"ChallengeCurrent": "தற்போதைய சவால்",
 		"ChallengeOngoing": "தொடரும் சவால்",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

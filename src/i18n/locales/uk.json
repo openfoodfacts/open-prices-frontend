@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Майбутні виклики",
 		"StatsAndRankings": "Статистика та рейтинги",
 		"MostPicturesAdded": "Найбільше додано фотографій",
-		"MostPricesAdded": "Більшість цін додано"
+		"MostPricesAdded": "Більшість цін додано",
+		"MostPricesFromPicturesAdded": "Більшість цін із зображень додано"
 	},
 	"Common": {
 		"About": "Про додаток",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} виклики | {count} виклик | {count} виклики",
 		"Chart": "Графік",
 		"Clear": "Очистити",
 		"Comment": "Коментар",

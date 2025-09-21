@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Yaklaşan zorluklar",
 		"StatsAndRankings": "İstatistikler ve sıralamalar",
 		"MostPicturesAdded": "En çok resim eklendi",
-		"MostPricesAdded": "En çok eklenen fiyatlar"
+		"MostPricesAdded": "En çok eklenen fiyatlar",
+		"MostPricesFromPicturesAdded": "Çoğu fiyat resimlerden eklendi"
 	},
 	"Common": {
 		"About": "Hakkında",
@@ -205,6 +206,7 @@
 		"Challenges": "Meydan Okumalar",
 		"ChallengeCurrent": "Mevcut meydan okuma",
 		"ChallengeOngoing": "Devam eden meydan okuma",
+		"ChallengeCount": "{count} meydan okumalar | {count} meydan okuma | {count} meydan okumalar",
 		"Chart": "Çizelge",
 		"Clear": "Temizle",
 		"Comment": "Yorum",

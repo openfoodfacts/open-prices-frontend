@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Kommend Erausfuerderungen",
 		"StatsAndRankings": "Statistiken & Klassementer",
 		"MostPicturesAdded": "Déi meescht Biller derbäigesat",
-		"MostPricesAdded": "Déi meescht Präisser goufen derbäigesat"
+		"MostPricesAdded": "Déi meescht Präisser goufen derbäigesat",
+		"MostPricesFromPicturesAdded": "Déi meescht Präisser vu Biller goufen derbäigesat"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

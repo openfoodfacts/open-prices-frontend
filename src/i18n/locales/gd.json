@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Dùbhlain a tha ri thighinn",
 		"StatsAndRankings": "Staitistig & rangachadh",
 		"MostPicturesAdded": "A’ mhòr-chuid de dhealbhan air an cur ris",
-		"MostPricesAdded": "A’ mhòr-chuid de phrìsean air an cur ris"
+		"MostPricesAdded": "A’ mhòr-chuid de phrìsean air an cur ris",
+		"MostPricesFromPicturesAdded": "A’ mhòr-chuid de phrìsean bho dhealbhan air an cur ris"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "വരാനിരിക്കുന്ന വെല്ലുവിളികൾ",
 		"StatsAndRankings": "സ്ഥിതിവിവരക്കണക്കുകളും റാങ്കിംഗുകളും",
 		"MostPicturesAdded": "ഏറ്റവും കൂടുതൽ ചിത്രങ്ങൾ ചേർത്തത്",
-		"MostPricesAdded": "മിക്ക വിലകളും ചേർത്തു"
+		"MostPricesAdded": "മിക്ക വിലകളും ചേർത്തു",
+		"MostPricesFromPicturesAdded": "ചിത്രങ്ങളിൽ നിന്നുള്ള മിക്ക വിലകളും ചേർത്തു"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

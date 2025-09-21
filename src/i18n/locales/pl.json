@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Nadchodzące wyzwania",
 		"StatsAndRankings": "Statystyki i rankingi",
 		"MostPicturesAdded": "Najwięcej dodanych zdjęć",
-		"MostPricesAdded": "Większość cen dodana"
+		"MostPricesAdded": "Większość cen dodana",
+		"MostPricesFromPicturesAdded": "Większość cen pochodzi ze zdjęć dodanych"
 	},
 	"Common": {
 		"About": "Na temat",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Wyczyść",
 		"Comment": "Comment",

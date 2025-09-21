@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Mintlhontlho leyi taka",
 		"StatsAndRankings": "Stats & swiyimo swa xiyimo",
 		"MostPicturesAdded": "Swifaniso swo tala swi engeteriwile",
-		"MostPricesAdded": "Minxavo yo tala yi engeteriwile"
+		"MostPricesAdded": "Minxavo yo tala yi engeteriwile",
+		"MostPricesFromPicturesAdded": "Minxavo yo tala ku suka eka swifaniso yi engeteriwile"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

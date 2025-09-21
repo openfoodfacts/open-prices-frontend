@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Առաջիկա մարտահրավերները",
 		"StatsAndRankings": "Վիճակագրություն և վարկանիշներ",
 		"MostPicturesAdded": "Ամենաշատ ավելացված նկարները",
-		"MostPricesAdded": "Ավելացված գների մեծ մասը"
+		"MostPricesAdded": "Ավելացված գների մեծ մասը",
+		"MostPricesFromPicturesAdded": "Նկարներից ստացված գների մեծ մասը ավելացվել է"
 	},
 	"Common": {
 		"About": "Մեր մասին",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

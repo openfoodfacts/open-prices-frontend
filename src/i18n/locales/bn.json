@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "আসন্ন চ্যালেঞ্জগুলি",
 		"StatsAndRankings": "পরিসংখ্যান এবং র‍্যাঙ্কিং",
 		"MostPicturesAdded": "বেশিরভাগ ছবি যোগ করা হয়েছে",
-		"MostPricesAdded": "বেশিরভাগ দাম যোগ করা হয়েছে"
+		"MostPricesAdded": "বেশিরভাগ দাম যোগ করা হয়েছে",
+		"MostPricesFromPicturesAdded": "ছবি থেকে বেশিরভাগ দাম যোগ করা হয়েছে"
 	},
 	"Common": {
 		"About": "সম্পর্কে",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "মুছে ফেলুন",
 		"Comment": "Comment",

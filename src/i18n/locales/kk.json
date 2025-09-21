@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Алдағы қиындықтар",
 		"StatsAndRankings": "Статистика және рейтингтер",
 		"MostPicturesAdded": "Көптеген суреттер қосылды",
-		"MostPricesAdded": "Көптеген бағалар қосылды"
+		"MostPricesAdded": "Көптеген бағалар қосылды",
+		"MostPricesFromPicturesAdded": "Суреттердегі ең көп бағалар қосылды"
 	},
 	"Common": {
 		"About": "Осы туралы",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

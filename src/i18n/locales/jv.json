@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Tantangan sing bakal teka",
 		"StatsAndRankings": "Statistik & peringkat",
 		"MostPicturesAdded": "Paling gambar ditambahake",
-		"MostPricesAdded": "Paling prices ditambahake"
+		"MostPricesAdded": "Paling prices ditambahake",
+		"MostPricesFromPicturesAdded": "Paling prices saka gambar ditambahake"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

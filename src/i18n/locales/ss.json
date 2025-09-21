@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Tinsayeya letitako",
 		"StatsAndRankings": "Tibalo & emazinga",
 		"MostPicturesAdded": "Titfombe letinyenti lengetiwe",
-		"MostPricesAdded": "Emanani lamanyenti langetiwe"
+		"MostPricesAdded": "Emanani lamanyenti langetiwe",
+		"MostPricesFromPicturesAdded": "Intsengo lenyenti levela etitfombeni lengetiwe"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

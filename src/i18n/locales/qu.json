@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Hamuq sasachakuykuna",
 		"StatsAndRankings": "Estadísticas & rankings nisqakuna",
 		"MostPicturesAdded": "Yaqa llapan siq’ikuna yapasqa",
-		"MostPricesAdded": "Yaqa llapan preciokuna yapasqa"
+		"MostPricesAdded": "Yaqa llapan preciokuna yapasqa",
+		"MostPricesFromPicturesAdded": "Yaqa llapan chaninkuna siq'ikunamanta yapasqa"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

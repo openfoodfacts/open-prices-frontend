@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Nsɛnnennen a ɛreba",
 		"StatsAndRankings": "Stats & rankings a wɔde di dwuma",
 		"MostPicturesAdded": "Mfonini dodow no ara na wɔde kaa ho",
-		"MostPricesAdded": "Wɔde nneɛma bo dodow no ara kaa ho"
+		"MostPricesAdded": "Wɔde nneɛma bo dodow no ara kaa ho",
+		"MostPricesFromPicturesAdded": "Nneɛma bo dodow no ara a efi mfonini ahorow mu de kaa ho"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

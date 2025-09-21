@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Nga wero kei te heke mai",
 		"StatsAndRankings": "Nga tatauranga me nga reanga",
 		"MostPicturesAdded": "Ko te nuinga o nga pikitia kua taapirihia",
-		"MostPricesAdded": "Ko te nuinga o nga utu kua taapirihia"
+		"MostPricesAdded": "Ko te nuinga o nga utu kua taapirihia",
+		"MostPricesFromPicturesAdded": "Ko te nuinga o nga utu mai i nga pikitia kua taapirihia"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

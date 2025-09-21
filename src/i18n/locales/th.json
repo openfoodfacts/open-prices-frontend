@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "ความท้าทายที่กำลังจะเกิดขึ้น",
 		"StatsAndRankings": "สถิติและอันดับ",
 		"MostPicturesAdded": "เพิ่มรูปภาพส่วนใหญ่",
-		"MostPricesAdded": "ราคาส่วนใหญ่เพิ่ม"
+		"MostPricesAdded": "ราคาส่วนใหญ่เพิ่ม",
+		"MostPricesFromPicturesAdded": "ราคาส่วนใหญ่จากภาพที่เพิ่มเข้ามา"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "ล้างข้อมูล",
 		"Comment": "Comment",

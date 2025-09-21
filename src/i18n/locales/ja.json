@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "今後の課題",
 		"StatsAndRankings": "統計とランキング",
 		"MostPicturesAdded": "追加された写真が最も多い",
-		"MostPricesAdded": "最も多くの価格が追加された"
+		"MostPricesAdded": "最も多くの価格が追加された",
+		"MostPricesFromPicturesAdded": "写真からほとんどの価格を追加しました"
 	},
 	"Common": {
 		"About": "アプリについて",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "クリア",
 		"Comment": "Comment",

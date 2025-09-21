@@ -16,13 +16,13 @@
 		"WhatOFFAnswer": "Το {off_url} είναι ένας μη κερδοσκοπικός οργανισμός που συλλέγει και μοιράζεται πληροφορίες για τρόφιμα από όλο τον κόσμο. Πρόκειται για ένα συνεργατικό έργο που βασίζεται σε εθελοντές για τη συλλογή δεδομένων. Το {off_url} είναι η μεγαλύτερη ανοιχτή βάση δεδομένων τροφίμων στον κόσμο, με πάνω από 4 εκατομμύρια προϊόντα σε 200 χώρες.",
 		"WhyOFFTitle": "Γιατί το κάνει αυτό το {off_name};",
 		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
+		"HowContribute": "Πώς μπορώ να συνεισφέρω;",
 		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
-		"HowUseData": "How can I use the data?",
+		"HowUseData": "Πώς μπορώ να χρησιμοποιήσω τα δεδομένα;",
 		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
 		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
 		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
-		"HowContact": "How can I get in touch?",
+		"HowContact": "Πώς μπορώ να έρθω σε επαφή;",
 		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
 		"HowSupport": "How can I support {op_name}?",
 		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
@@ -54,9 +54,9 @@
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
 			"Create": "Δημιουργία",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"NewPrice": "Νέα τιμή",
+			"PriceUploaded": "Η τιμή δημιουργήθηκε!",
+			"Upload": "Ανέβασμα"
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
@@ -93,7 +93,7 @@
 			"ScanBarcode": "Scan a barcode",
 			"ScanBarcodeShort": "Σάρωση",
 			"Type": "Τύπος",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Εισάγετε ραβδωτό κώδικα",
 			"TypeBarcodeShort": "Τύπος",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -123,7 +123,7 @@
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Γραμμικός κωδικός",
-		"Title": "Type a barcode"
+		"Title": "Εισάγετε ραβδωτό κώδικα"
 	},
 	"Challenge": {
 		"Title": "Community challenge",
@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Επερχόμενες προκλήσεις",
 		"StatsAndRankings": "Στατιστικά & κατατάξεις",
 		"MostPicturesAdded": "Οι περισσότερες εικόνες προστέθηκαν",
-		"MostPricesAdded": "Οι περισσότερες τιμές που προστέθηκαν"
+		"MostPricesAdded": "Οι περισσότερες τιμές που προστέθηκαν",
+		"MostPricesFromPicturesAdded": "Οι περισσότερες τιμές από εικόνες προστέθηκαν"
 	},
 	"Common": {
 		"About": "Σχετικά",
@@ -182,7 +183,7 @@
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
 		"BarcodeScanShort": "Σάρωση",
-		"BarcodeType": "Type a barcode",
+		"BarcodeType": "Εισάγετε ραβδωτό κώδικα",
 		"BarcodeTypeShort": "Τύπος",
 		"BarcodeInvalid": "Μη έγκυρος γραμμικός κώδικας",
 		"Brand": "Μάρκα",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Εκκαθάριση",
 		"Comment": "Comment",
@@ -354,7 +356,7 @@
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
-		"PriceCreated": "Price created!",
+		"PriceCreated": "Η τιμή δημιουργήθηκε!",
 		"PriceMissing": "Λείπει η τιμή",
 		"PricesAlreadyUploaded": "Οι τιμές έχουν ήδη ανεβάσει",
 		"PricesMore": "More prices",
@@ -437,7 +439,7 @@
 		"UnitMililitre": "mL",
 		"UnitLitre": "L",
 		"Unreadable": "Unreadable",
-		"Upload": "Upload",
+		"Upload": "Ανέβασμα",
 		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",

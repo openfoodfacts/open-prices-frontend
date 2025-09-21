@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Nadchádzajúce výzvy",
 		"StatsAndRankings": "Štatistiky a rebríčky",
 		"MostPicturesAdded": "Pridaných najviac obrázkov",
-		"MostPricesAdded": "Väčšina cien bola pridaná"
+		"MostPricesAdded": "Väčšina cien bola pridaná",
+		"MostPricesFromPicturesAdded": "Väčšina cien z obrázkov bola pridaná"
 	},
 	"Common": {
 		"About": "O",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Vymazať",
 		"Comment": "Comment",

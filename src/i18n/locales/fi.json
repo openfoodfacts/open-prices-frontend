@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Tulevat haasteet",
 		"StatsAndRankings": "Tilastot ja sijoitukset",
 		"MostPicturesAdded": "Eniten kuvia lisätty",
-		"MostPricesAdded": "Useimmat hinnat lisätty"
+		"MostPricesAdded": "Useimmat hinnat lisätty",
+		"MostPricesFromPicturesAdded": "Useimmat kuvista lisätyt hinnat"
 	},
 	"Common": {
 		"About": "Tietoja",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Tyhjennä",
 		"Comment": "Comment",

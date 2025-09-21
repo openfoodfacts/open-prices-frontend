@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Hurrengo erronkak",
 		"StatsAndRankings": "Estatistikak eta sailkapenak",
 		"MostPicturesAdded": "Gehitutako argazki gehienak",
-		"MostPricesAdded": "Gehitutako prezio gehienak"
+		"MostPricesAdded": "Gehitutako prezio gehienak",
+		"MostPricesFromPicturesAdded": "Irudietako prezio gehienak gehitu dira"
 	},
 	"Common": {
 		"About": "Honi buruz",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Garbitu",
 		"Comment": "Comment",

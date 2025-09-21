@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Közelgő kihívások",
 		"StatsAndRankings": "Statisztikák és rangsorok",
 		"MostPicturesAdded": "A legtöbb kép hozzáadva",
-		"MostPricesAdded": "A legtöbb ár hozzáadva"
+		"MostPricesAdded": "A legtöbb ár hozzáadva",
+		"MostPricesFromPicturesAdded": "A képeken szereplő árak nagy részét hozzáadtuk"
 	},
 	"Common": {
 		"About": "Névjegy",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Törlés",
 		"Comment": "Comment",

@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Défis à venir",
 		"StatsAndRankings": "Statistiques et classements",
 		"MostPicturesAdded": "La plupart des images ajoutées",
-		"MostPricesAdded": "La plupart des prix ajoutés"
+		"MostPricesAdded": "La plupart des prix ajoutés",
+		"MostPricesFromPicturesAdded": "La plupart des prix sont issus d'images ajoutées"
 	},
 	"Common": {
 		"About": "À propos",
@@ -205,6 +206,7 @@
 		"Challenges": "Défis",
 		"ChallengeCurrent": "Défi actuel",
 		"ChallengeOngoing": "Défi en cours",
+		"ChallengeCount": "{count} défis | {count} défi | {count} défis",
 		"Chart": "Graphique",
 		"Clear": "Effacer",
 		"Comment": "Commentaire",

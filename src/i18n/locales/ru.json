@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Предстоящие задачи",
 		"StatsAndRankings": "Статистика и рейтинги",
 		"MostPicturesAdded": "Большинство добавленных фотографий",
-		"MostPricesAdded": "Большинство цен добавлено"
+		"MostPricesAdded": "Большинство цен добавлено",
+		"MostPricesFromPicturesAdded": "Большинство цен с добавленных изображений"
 	},
 	"Common": {
 		"About": "О приложении",
@@ -205,6 +206,7 @@
 		"Challenges": "Вызовы",
 		"ChallengeCurrent": "Текущий вызов",
 		"ChallengeOngoing": "Текущий вызов",
+		"ChallengeCount": "{count} вызовы | {count} вызов | {count} вызовы",
 		"Chart": "Диаграмма",
 		"Clear": "Очистить",
 		"Comment": "Комментарий",

@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Mga darating na hamon",
 		"StatsAndRankings": "Mga istatistika at ranggo",
 		"MostPicturesAdded": "Karamihan sa mga larawan ay idinagdag",
-		"MostPricesAdded": "Karamihan sa mga presyo ay idinagdag"
+		"MostPricesAdded": "Karamihan sa mga presyo ay idinagdag",
+		"MostPricesFromPicturesAdded": "Karamihan sa mga presyo mula sa mga larawan ay idinagdag"
 	},
 	"Common": {
 		"About": "Tungkol sa",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Burahin",
 		"Comment": "Comment",

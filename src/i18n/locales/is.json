@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Komandi áskoranir",
 		"StatsAndRankings": "Tölfræði og röðun",
 		"MostPicturesAdded": "Flestar myndir bættar við",
-		"MostPricesAdded": "Flest verð bætt við"
+		"MostPricesAdded": "Flest verð bætt við",
+		"MostPricesFromPicturesAdded": "Flest verð af myndum bætt við"
 	},
 	"Common": {
 		"About": "Um forritið",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",

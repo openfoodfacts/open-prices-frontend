@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Kommende udfordringer",
 		"StatsAndRankings": "Statistikker og ranglister",
 		"MostPicturesAdded": "De fleste billeder tilføjet",
-		"MostPricesAdded": "De fleste priser er tilføjet"
+		"MostPricesAdded": "De fleste priser er tilføjet",
+		"MostPricesFromPicturesAdded": "De fleste priser fra billeder er tilføjet"
 	},
 	"Common": {
 		"About": "Om",
@@ -205,6 +206,7 @@
 		"Challenges": "Udfordringer",
 		"ChallengeCurrent": "Aktuel udfordring",
 		"ChallengeOngoing": "Igangværende udfordring",
+		"ChallengeCount": "{count} udfordringer | {count} udfordring | {count} udfordringer",
 		"Chart": "Diagram",
 		"Clear": "Ryd",
 		"Comment": "Kommentér",

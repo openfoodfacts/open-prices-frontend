@@ -161,7 +161,8 @@
 		"UpcomingChallenges": "Imingeni ezayo",
 		"StatsAndRankings": "Amanani & namazinga",
 		"MostPicturesAdded": "Uninzi lwemifanekiso yongeziweyo",
-		"MostPricesAdded": "Amaxabiso amaninzi ongeziweyo"
+		"MostPricesAdded": "Amaxabiso amaninzi ongeziweyo",
+		"MostPricesFromPicturesAdded": "Amaxabiso amaninzi avela kwimifanekiso eyongeziweyo"
 	},
 	"Common": {
 		"About": "About",
@@ -205,6 +206,7 @@
 		"Challenges": "Challenges",
 		"ChallengeCurrent": "Current challenge",
 		"ChallengeOngoing": "Ongoing challenge",
+		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
 		"Comment": "Comment",
