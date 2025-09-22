@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
-      <ProofChip v-if="showProofChip" class="mr-1" :proof="proof" :withLabel="showProofChip" :readonly="true" />
+      <ProofChip v-if="showProofChip" cssClass="mr-1" :proof="proof" :withLabel="showProofChip" :readonly="true" />
       <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
       <ProofUserConsumptionChip v-if="showReceiptOwnerConsumption" class="mr-1" />
       <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" class="mr-1" :totalCount="proof.receipt_price_count" />

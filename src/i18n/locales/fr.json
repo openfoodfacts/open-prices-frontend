@@ -277,7 +277,7 @@
 		"ExampleWithColon": "Exemple :",
 		"ExampleWithColonAndValue": "Exemple : {value}",
 		"ExamplesWithColon": "Exemples :",
-		"ExamplesWithColonAndValue": "Exemples : {value}",
+		"ExamplesWithColonAndValue": "Exemples : {value}",
 		"Edit": "Modifier",
 		"End": "Fin",
 		"Filter": "Filtre",
@@ -409,7 +409,7 @@
 		"SourceCode": "Code source",
 		"Start": "Commencer",
 		"Stats": "Statistiques",
-		"SuggestedBarcode": "Code-barres suggéré :",
+		"SuggestedBarcode": "Code-barres suggéré :",
 		"Summary": "Résumé",
 		"TaglineOriginal": "La base de données ouverte et collaborative de prix alimentaires",
 		"TaglineAlt1": "La base de données ouverte et collaborative de prix",
@@ -490,8 +490,8 @@
 		"ChooseNextProof": "Choisissez une autre preuve à gérer",
 		"AutomaticBoundingBoxSource": "automatique",
 		"ManualBoundingBoxSource": "manuel",
-		"DetectedBarcode": "Code-barres détecté : {barcode}",
-		"LabelProcessingErrorMessage": "Erreur : le traitement automatique de l'étiquette a échoué",
+		"DetectedBarcode": "Code-barres détecté : {barcode}",
+		"LabelProcessingErrorMessage": "Erreur : le traitement automatique de l'étiquette a échoué",
 		"PriceTagLabels": {
 			"PriceTagWithoutPrice": "Étiquette de prix sans prix",
 			"PriceTagWithPrice": "Étiquette de prix avec un prix",
@@ -647,7 +647,7 @@
 		"PriceTagAIWarning": "L'IA sera exécutée sur vos preuves pour en extraire les prix.",
 		"ReceiptAllowAI": "Autoriser l'exécution de l'IA sur votre reçu pour extraire les prix",
 		"ReceiptAIWarning": "L'IA sera exécutée sur votre reçu pour en extraire les prix.",
-		"PromoProofPriceTagAddMultiple": "Pour télécharger plusieurs étiquettes de prix (même emplacement de magasin et même date), cliquez ici !",
+		"PromoProofPriceTagAddMultiple": "Pour télécharger plusieurs étiquettes de prix (même emplacement de magasin et même date), cliquez ici !",
 		"PromoReceiptAssistant": "Expérience : essayez le nouvel assistant de reçus pour extraire automatiquement les prix de vos reçus !"
 	},
 	"ProofCard": {
@@ -660,7 +660,7 @@
 	"ProofCreate": {
 		"SelectProof": "Choisir une preuve",
 		"ProofSelected": "Preuve sélectionnée !",
-		"Success": "Preuve créée !"
+		"Success": "Preuve créée !"
 	},
 	"ProofDelete": {
 		"Confirmation": "Êtes-vous sûr de vouloir supprimer cette preuve ?",
@@ -911,7 +911,7 @@
 		"SideMenuExperimentsDisplay": "Afficher 'Expérimentations'",
 		"Save": "Enregistrer",
 		"Title": "Paramètres",
-		"TranslationCompletion": "La traduction est terminée à {completion} %.",
+		"TranslationCompletion": "La traduction est terminée à {completion} %.",
 		"TranslationHelp": "Aidez-nous à traduire plus de langues"
 	}
 }
