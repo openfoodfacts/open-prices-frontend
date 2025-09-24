@@ -4,6 +4,12 @@ A Vue.js frontend of the Open Prices application, to allow users to add prices.
 
 Works with an Open Prices server, see https://github.com/openfoodfacts/open-prices
 
+## Looking for the Open Prices API ?
+- Open Prices API Documentation: <https://prices.openfoodfacts.org/api/docs>
+- Make sure you comply with the OdBL licence, mentioning the Source of your data, and ensuring to avoid combining non free data you can't release legally as open data. Another requirement is contributing back any product you add using this SDK.
+- Please get in touch at reuse@openfoodfacts.org
+- We are very interested in learning what the Open Prices data is used for. It is not mandatory, but we would very much appreciate it if you tell us about your re-uses (https://forms.gle/hwaeqBfs8ywwhbTg8) so that we can share them with the Open Food Facts community. You can also fill this form to get your Open Prices reuse featured on https://prices.openfoodfacts.org/community
+
 ## UXR (User Experience Research)
 - [![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?logo=figma&logoColor=white) Open Prices UX audit](https://www.figma.com/board/gPtsX2q0ZF6WElF7YSAYjz/Open-Prices---UX-Audit?node-id=0-1&p=f&t=wzAYUqVEBRQWoOmM-0)
 
