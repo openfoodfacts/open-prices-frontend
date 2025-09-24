@@ -67,7 +67,7 @@
       <v-row>
         <v-col
           v-for="(productPriceForm, index) in productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError"
-          :key="index"
+          :key="productPriceForm.id"
           cols="12"
           md="6"
           xl="4"
@@ -89,8 +89,8 @@
       </h3>
       <v-row v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length">
         <v-col
-          v-for="(productPriceForm, index) in productPriceFormsWithoutProductOrCategoryAndNoError"
-          :key="index"
+          v-for="productPriceForm in productPriceFormsWithoutProductOrCategoryAndNoError"
+          :key="productPriceForm.id"
           cols="12"
           md="6"
           xl="4"
@@ -111,8 +111,8 @@
       </h3>
       <v-row v-if="productPriceFormsMarkedAsError.length">
         <v-col
-          v-for="(productPriceForm, index) in productPriceFormsMarkedAsError"
-          :key="index"
+          v-for="productPriceForm in productPriceFormsMarkedAsError"
+          :key="productPriceForm.id"
           cols="12"
           md="6"
           xl="4"
@@ -459,7 +459,7 @@ export default {
       // User is done drawing labels and has pressed the "Send labels" button
       // If new labels were drawn, we have to create the corresponding price tags on the server, and wait for ml processing
       // Otherwise, we can move on to the Cleanup step right away
-      let newLabelsAddedWithCanvas = this.extractedLabels.filter(label => label.boundingSource === this.$t('ContributionAssistant.ManualBoundingBoxSource'))
+      let newLabelsAddedWithCanvas = this.extractedLabels.filter(label => label.id === null) // Only preexisting labels have an id
       if (newLabelsAddedWithCanvas.length) {
         // Send new price tags to server and load them after ml processing
         this.processLabelsLoading = true
@@ -474,7 +474,7 @@ export default {
             newPriceTagIds.push(priceTag.id)
           })
         })
-        this.loadPriceTagsWithPredictions(expectedNumberOfPriceTagsWithPredictions, 5, priceTags => {
+        this.loadPriceTagsWithPredictions(expectedNumberOfPriceTagsWithPredictions, 10, priceTags => {
           this.processLabelsLoading = false
           if (!priceTags.length) {
             this.labelProcessingErrorMessage = true
@@ -486,6 +486,7 @@ export default {
               this.handlePriceTag(priceTag)
             })
           }
+          this.step = 3
         })
       } else {
         // No new labels were drawn, we already have all the price tags data loaded
@@ -496,9 +497,10 @@ export default {
         this.priceTags.forEach(priceTag => {
           this.handlePriceTag(priceTag)
         })
+        this.step = 3
       }
 
-      this.step = 3
+      
     },
     handlePriceTag(priceTag) {
       let productPriceForm = proof_utils.handlePriceTag(priceTag)
