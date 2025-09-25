@@ -180,7 +180,7 @@ export default {
   ],
   PROOF_ORDER_LIST: [
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-date', value: 'OrderProofDateDESC', icon: 'mdi-calendar-today' },
+    { key: '-date,-created', value: 'OrderProofDateDESC', icon: 'mdi-calendar-today' },
     { key: '-created', value: 'OrderProofCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   LOCATION_ORDER_LIST: [
