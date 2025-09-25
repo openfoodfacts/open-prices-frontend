@@ -162,7 +162,7 @@
 		"StatsAndRankings": "Statistieken en ranglijsten",
 		"MostPicturesAdded": "Meeste foto's toegevoegd",
 		"MostPricesAdded": "Meeste prijzen toegevoegd",
-		"MostPricesFromPicturesAdded": "Meeste prijzen van toegevoegde foto's"
+		"MostPricesFromPicturesAdded": "Meeste prijzen van afbeeldingen toegevoegd"
 	},
 	"Common": {
 		"About": "Over",
@@ -423,7 +423,7 @@
 		"TopLocations": "Top locaties",
 		"TopProducts": "Top producten",
 		"TopCities": "Top steden",
-		"TopCountries": "Toplanden",
+		"TopCountries": "Top landen",
 		"Today": "Vandaag",
 		"Top": "Top",
 		"Total": "Totaal",
