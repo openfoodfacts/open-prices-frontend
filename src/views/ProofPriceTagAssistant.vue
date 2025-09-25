@@ -388,27 +388,25 @@ export default {
       })
     },
     onProofUploaded(proof) {
+      // move to step 2
+      this.step = 2
+      // store the proof
+      this.proofObject = proof
       // A new proof was selected by the user, or loaded from the query param
       this.extractedLabels = []
       this.productPriceForms = []
       this.boundingBoxesFromServer = []
-
-      // store the proof
-      this.proofObject = proof
-
       // proof image
       const image = new Image()
       image.src = proof_utils.getImageFullUrl(proof.file_path)
       image.crossOrigin = 'Anonymous'
       this.image = image
-
-      this.step = 2
       if (proof.type === constants.PROOF_TYPE_RECEIPT) {
         // No need to check for price tags on receipts
         this.priceTags = []
         this.boundingBoxesFromServer = []
       } else {
-        let maxTries = 5
+        let maxTries = 10
         const oneDayInMs = 24 * 60 * 60 * 1000
         const proofCreatedDate = new Date(proof.created)
         if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
@@ -442,7 +440,7 @@ export default {
               callback([])
               return
             }
-            setTimeout(load, 3000)
+            setTimeout(load, 5000)  //   // maximum wait time: maxTries * 5s (50s)
           }
         })
       }
