@@ -842,7 +842,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Logi sisse",
 		"SignInOFFAccount": "Sign in with your {url} account",
-		"UsernameLabel": "Username",
+		"UsernameLabel": "Kasutajanimi",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
