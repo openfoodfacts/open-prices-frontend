@@ -17,7 +17,7 @@
 
   <v-row v-if="step === 1">
     <v-col cols="12" md="6">
-      <ProofUploadCard @proof="onProofUploaded($event)" />
+      <ProofUploadCard :typePriceTagOnly="true" @proof="onProofUploaded($event)" />
     </v-col>
   </v-row>
   
