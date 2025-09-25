@@ -67,7 +67,7 @@
       <v-row>
         <v-col
           v-for="(productPriceForm, index) in productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError"
-          :key="index"
+          :key="productPriceForm.id"
           cols="12"
           md="6"
           xl="4"
@@ -89,8 +89,8 @@
       </h3>
       <v-row v-if="productPriceFormsWithoutProductOrCategoryAndNoError.length">
         <v-col
-          v-for="(productPriceForm, index) in productPriceFormsWithoutProductOrCategoryAndNoError"
-          :key="index"
+          v-for="productPriceForm in productPriceFormsWithoutProductOrCategoryAndNoError"
+          :key="productPriceForm.id"
           cols="12"
           md="6"
           xl="4"
@@ -111,8 +111,8 @@
       </h3>
       <v-row v-if="productPriceFormsMarkedAsError.length">
         <v-col
-          v-for="(productPriceForm, index) in productPriceFormsMarkedAsError"
-          :key="index"
+          v-for="productPriceForm in productPriceFormsMarkedAsError"
+          :key="productPriceForm.id"
           cols="12"
           md="6"
           xl="4"
@@ -388,27 +388,25 @@ export default {
       })
     },
     onProofUploaded(proof) {
+      // move to step 2
+      this.step = 2
+      // store the proof
+      this.proofObject = proof
       // A new proof was selected by the user, or loaded from the query param
       this.extractedLabels = []
       this.productPriceForms = []
       this.boundingBoxesFromServer = []
-
-      // store the proof
-      this.proofObject = proof
-
       // proof image
       const image = new Image()
       image.src = proof_utils.getImageFullUrl(proof.file_path)
       image.crossOrigin = 'Anonymous'
       this.image = image
-
-      this.step = 2
       if (proof.type === constants.PROOF_TYPE_RECEIPT) {
         // No need to check for price tags on receipts
         this.priceTags = []
         this.boundingBoxesFromServer = []
       } else {
-        let maxTries = 5
+        let maxTries = 10
         const oneDayInMs = 24 * 60 * 60 * 1000
         const proofCreatedDate = new Date(proof.created)
         if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
@@ -442,7 +440,7 @@ export default {
               callback([])
               return
             }
-            setTimeout(load, 3000)
+            setTimeout(load, 5000)  //   // maximum wait time: maxTries * 5s (50s)
           }
         })
       }
@@ -459,7 +457,7 @@ export default {
       // User is done drawing labels and has pressed the "Send labels" button
       // If new labels were drawn, we have to create the corresponding price tags on the server, and wait for ml processing
       // Otherwise, we can move on to the Cleanup step right away
-      let newLabelsAddedWithCanvas = this.extractedLabels.filter(label => label.boundingSource === this.$t('ContributionAssistant.ManualBoundingBoxSource'))
+      let newLabelsAddedWithCanvas = this.extractedLabels.filter(label => label.id === null) // Only preexisting labels have an id
       if (newLabelsAddedWithCanvas.length) {
         // Send new price tags to server and load them after ml processing
         this.processLabelsLoading = true
@@ -474,7 +472,7 @@ export default {
             newPriceTagIds.push(priceTag.id)
           })
         })
-        this.loadPriceTagsWithPredictions(expectedNumberOfPriceTagsWithPredictions, 5, priceTags => {
+        this.loadPriceTagsWithPredictions(expectedNumberOfPriceTagsWithPredictions, 10, priceTags => {
           this.processLabelsLoading = false
           if (!priceTags.length) {
             this.labelProcessingErrorMessage = true
@@ -486,6 +484,7 @@ export default {
               this.handlePriceTag(priceTag)
             })
           }
+          this.step = 3
         })
       } else {
         // No new labels were drawn, we already have all the price tags data loaded
@@ -496,9 +495,10 @@ export default {
         this.priceTags.forEach(priceTag => {
           this.handlePriceTag(priceTag)
         })
+        this.step = 3
       }
 
-      this.step = 3
+      
     },
     handlePriceTag(priceTag) {
       let productPriceForm = proof_utils.handlePriceTag(priceTag)
