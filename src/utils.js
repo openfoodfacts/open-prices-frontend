@@ -15,7 +15,6 @@ function getDocumentScrollPercentage() {
   return (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100
 }
 
-
 function isNumber(value) {
   // return /^\d+$/.test(value)
   return !isNaN(parseFloat(value)) && isFinite(value)
