@@ -33,7 +33,7 @@
     "html5-qrcode": "^2.3.8",
     "leaflet": "^1.9.4",
     "pinia": "^2.3.1",
-    "pinia-plugin-persistedstate": "^3.2.3",
+    "pinia-plugin-persistedstate": "^4.5.0",
     "universal-cookie": "^7.2.2",
     "vega": "^5.33.0",
     "vega-embed": "^6.29.0",
