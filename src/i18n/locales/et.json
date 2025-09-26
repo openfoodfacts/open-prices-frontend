@@ -288,6 +288,9 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Kehtiva vöötkoodiga",
+		"FilterPriceTagWithTagPredictionProductExists": "Kehtiva tootega",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Kehtiva kategooria sildiga",
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
@@ -842,7 +845,7 @@
 		"ServerError": "Error: server error",
 		"Title": "Logi sisse",
 		"SignInOFFAccount": "Sign in with your {url} account",
-		"UsernameLabel": "Username",
+		"UsernameLabel": "Kasutajanimi",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
