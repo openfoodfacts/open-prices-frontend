@@ -18,6 +18,11 @@ export default [
       'vue/max-attributes-per-line': 'off',
       'vue/attribute-hyphenation': 'off',
       'vue/v-on-event-hyphenation': 'off',
+      // Disable raw text warnings for punctuation, symbols, file names, proper nouns, and specific cases
+      '@intlify/vue-i18n/no-raw-text': ['warn', {
+        ignoreNodes: ['v-icon'],
+        ignorePattern: '^[\\s\\-\\(\\)\\[\\]\\{\\}\\/\\|⚠️]+$|^[0-9]+$|^[a-zA-Z\\-_\\.]+$|\\.jsonl\\.gz$|^[A-Z][a-z]+ [A-Z][a-z]+.*$|^⚠️.*$|data\\.gouv|Github|API',
+      }],
     },
     settings: {
       'vue-i18n': {
