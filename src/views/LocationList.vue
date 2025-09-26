@@ -4,7 +4,7 @@
       <v-chip label variant="text" prepend-icon="mdi-map-marker-outline">
         {{ $t('Common.LocationCount', { count: locationTotal }) }}
       </v-chip>
-      <FilterMenu kind="location" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleLocationFilter($event)" @update:currentType="toggleLocationType($event)" />
+      <FilterMenu kind="location" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleLocationType($event)" />
       <OrderMenu kind="location" :currentOrder="currentOrder" @update:currentOrder="selectLocationOrder($event)" />
     </v-col>
   </v-row>
@@ -42,7 +42,7 @@ export default {
       locationPage: 0,
       loading: false,
       // filter & order
-      currentFilter: '',
+      currentFilterList: [],
       currentType: '',
       currentOrder: constants.LOCATION_ORDER_LIST[0].key,  // price_count
     }
@@ -50,7 +50,7 @@ export default {
   computed: {
     getLocationsParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.locationPage }
-      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
+      if (this.currentFilterList.includes('hide_price_count_gte_1')) {
         defaultParams['price_count'] = 0
       }
       if (this.currentType) {
@@ -67,7 +67,7 @@ export default {
     }
   },
   mounted() {
-    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initLocationList()
@@ -95,9 +95,9 @@ export default {
           this.loading = false
         })
     },
-    toggleLocationFilter(filterKey) {
-      this.currentFilter = this.currentFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initLocationList() will be called in watch $route
     },
     toggleLocationType(sourceKey) {
