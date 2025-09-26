@@ -56,7 +56,7 @@ export default {
       return constants[`${source.key.toUpperCase()}_URL`]
     },
     getSourceAddUrlWithLocale(source) {
-      const SOURCE_ADD_URL = `${this.getSourceUrl(source)}/cgi/product.pl?type=search_or_add&action=display&code=${this.productCode}`
+      const SOURCE_ADD_URL = `${this.getSourceUrl(source)}/cgi/product.pl?type=search_or_add&action=process&code=${this.productCode}`
       return SOURCE_ADD_URL.replace('world', this.appStore.user.language)
     },
   }
