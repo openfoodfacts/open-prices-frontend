@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.140.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.2...v1.140.3) (2025-09-26)
+
+
+### Bug Fixes
+
+* **Products:** fix URL to add a new barcode in OxF ([#1700](https://github.com/openfoodfacts/open-prices-frontend/issues/1700)) ([b9f299e](https://github.com/openfoodfacts/open-prices-frontend/commit/b9f299ed87413986709b89c9699649651dec06a5))
+
+
+### Technical
+
+* **FilterMenu:** allow having multiple filters at the same time ([#1703](https://github.com/openfoodfacts/open-prices-frontend/issues/1703)) ([c85cae7](https://github.com/openfoodfacts/open-prices-frontend/commit/c85cae7402e82f5fb0a75867e96335fc94b4d224))
+* **l10n:** New Crowdin translations to review and merge ([#1699](https://github.com/openfoodfacts/open-prices-frontend/issues/1699)) ([306e9cc](https://github.com/openfoodfacts/open-prices-frontend/commit/306e9cce6c0e9c65662257878c4123bd0d83b023))
+* **Price Validation Assistant:** new filter to show only predictions with products that exists ([#1702](https://github.com/openfoodfacts/open-prices-frontend/issues/1702)) ([20933ee](https://github.com/openfoodfacts/open-prices-frontend/commit/20933ee645456bfd5b00a60d4d94f6c199545e14))
+
 ## [1.140.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.1...v1.140.2) (2025-09-25)
 
 
