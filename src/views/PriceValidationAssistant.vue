@@ -98,6 +98,9 @@ export default {
       if (this.currentFilterList.includes('proof__owner')) {
         defaultParams['proof__owner'] = this.username
       }
+      if (this.currentFilterList.includes('tag_prediction_product_exists')) {
+        defaultParams['tags__contains'] = 'prediction-product-exists'
+      }
       return defaultParams
     },
   },

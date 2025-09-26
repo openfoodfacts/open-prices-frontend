@@ -160,6 +160,9 @@ export default {
   ],
   PRICE_TAG_FILTER_LIST: [
     { key: 'proof__owner', value: 'FilterPriceTagWithProofOwner' },
+    // { key: 'tag_prediction_barcode_valid', value: 'FilterPriceTagWithTagPredictionBarcodeValid' },
+    { key: 'tag_prediction_product_exists', value: 'FilterPriceTagWithTagPredictionProductExists' },
+    // { key: 'tag_prediction_category_tag_valid', value: 'FilterPriceTagWithTagPredictionCategoryTagValid' },
   ],
   LOCATION_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterLocationWithPriceCountHide' },
