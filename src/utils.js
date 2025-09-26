@@ -21,6 +21,16 @@ function isNumber(value) {
   return !isNaN(parseFloat(value)) && isFinite(value)
 }
 
+function toArray(value) {
+  if (Array.isArray(value)) {
+    return value
+  } else if (value) {
+    return [value]
+  } else {
+    return []
+  }
+}
+
 /**
  * https://stackoverflow.com/a/65528838
  * - valid: https://www.example.com, https://example.com, http://example.com, https://wwww.example.com/coucou
@@ -113,6 +123,7 @@ export default {
   debounce,
   getDocumentScrollPercentage,
   isNumber,
+  toArray,
   isURL,
   getURLOrigin,
   addObjectToArray,

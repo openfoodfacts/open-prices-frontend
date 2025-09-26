@@ -5,7 +5,7 @@
         {{ $t('Common.PriceCount', { count: priceTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <FilterMenu kind="price" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="togglePriceFilter($event)" @update:currentType="togglePriceType($event)" />
+      <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" />
     </v-col>
   </v-row>
 
@@ -41,7 +41,7 @@ export default {
       pricePage: 0,
       loading: false,
       // filter & order
-      currentFilter: '',
+      currentFilterList: [],
       currentType: '',
       currentOrder: constants.PRICE_ORDER_LIST[3].key,  // created first
     }
@@ -49,7 +49,7 @@ export default {
   computed: {
     getPricesParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.pricePage }
-      if (this.currentFilter === 'show_last_month') {
+      if (this.currentFilterList.includes('show_last_month')) {
         let oneMonthAgo = new Date()
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
         defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
@@ -68,7 +68,7 @@ export default {
     }
   },
   mounted() {
-    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.initPrices()
     // load more
@@ -96,9 +96,9 @@ export default {
           this.loading = false
         })
     },
-    togglePriceFilter(filterKey) {
-      this.currentFilter = this.currentFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initPrices() will be called in watch $route
     },
     togglePriceType(sourceKey) {

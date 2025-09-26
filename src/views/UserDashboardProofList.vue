@@ -5,7 +5,7 @@
         {{ $t('Common.ProofCount', { count: proofTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
-      <FilterMenu v-if="proofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" @update:currentKind="toggleProofKind($event)" />
+      <FilterMenu v-if="proofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" @update:currentKind="toggleProofKind($event)" />
       <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
     </v-col>
   </v-row>
@@ -55,7 +55,7 @@ export default {
       loading: false,
       proofUpdated: false,
       // filter & order
-      currentFilter: '',
+      currentFilterList: [],
       currentType: '',
       currentKind: '',
       currentOrder: constants.PROOF_ORDER_LIST[2].key,
@@ -68,7 +68,7 @@ export default {
     },
     getProofsParams() {
       let defaultParams = { owner: this.username, order_by: this.currentOrder, page: this.proofPage }
-      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
+      if (this.currentFilterList.includes('hide_price_count_gte_1')) {
         defaultParams['price_count'] = 0
       }
       if (this.currentType) {
@@ -88,7 +88,7 @@ export default {
     }
   },
   mounted() {
-    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.currentKind = this.$route.query[constants.KIND_PARAM] || this.currentKind
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
@@ -121,9 +121,9 @@ export default {
     handleProofUpdated() {
       this.proofUpdated = true
     },
-    toggleProofFilter(filterKey) {
-      this.currentFilter = this.currentFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initProofList() will be called in watch $route
     },
     toggleProofType(sourceKey) {

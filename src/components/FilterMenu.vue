@@ -12,7 +12,7 @@
       </v-list-item>
       <v-divider class="d-sm-none" />
       <!-- default filters -->
-      <v-list-item v-for="filter in filterList" :key="filter.key" :slim="true" :prepend-icon="(currentFilter === filter.key) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="currentFilter === filter.key" @click="selectFilter(filter.key)">
+      <v-list-item v-for="filter in filterList" :key="filter.key" :slim="true" :prepend-icon="(currentFilterList.includes(filter.key)) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="currentFilterList.includes(filter.key)" @click="selectFilter(filter.key)">
         {{ $t('Common.' + filter.value) }}
       </v-list-item>
       <!-- extra filters -->
@@ -80,9 +80,9 @@ export default {
       default: 'product',
       examples: ['product', 'price', 'proof', 'priceTag', 'location', 'user']
     },
-    currentFilter: {
-      type: String,
-      default: null
+    currentFilterList: {
+      type: Array,
+      default: () => []
     },
     currentSource: {
       type: String,
@@ -109,7 +109,7 @@ export default {
       default: false
     },
   },
-  emits: ['update:currentFilter', 'update:currentSource', 'update:currentType', 'update:currentKind'],
+  emits: ['update:currentFilterList', 'update:currentSource', 'update:currentType', 'update:currentKind'],
   data() {
     return {
       // default filters
@@ -147,7 +147,7 @@ export default {
       return this[`${this.kind}FilterList`]
     },
     hasCurrentFilter() {
-      return !!this.currentFilter || !!this.currentSource || !!this.currentType || !!this.currentKind
+      return !!this.currentFilterList.length || !!this.currentSource || !!this.currentType || !!this.currentKind
     },
     getCurrentFilterIcon() {
       if (this.kind === 'product') {
@@ -168,7 +168,8 @@ export default {
   },
   methods: {
     selectFilter(filter) {
-      this.$emit('update:currentFilter', filter)
+      let newFilterList = this.currentFilterList.includes(filter) ? this.currentFilterList.filter(f => f !== filter) : [...this.currentFilterList, filter]
+      this.$emit('update:currentFilterList', newFilterList)
     },
     selectSource(source) {
       this.$emit('update:currentSource', source)

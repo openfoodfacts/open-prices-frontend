@@ -11,7 +11,7 @@
         {{ $t('Common.TopProducts') }}
       </h2>
       <LoadedCountChip :loadedCount="brandProductList.length" :totalCount="brandProductTotal" />
-      <FilterMenu kind="product" :currentFilter="currentFilter" :hideSource="true" @update:currentFilter="toggleProductFilter($event)" />
+      <FilterMenu kind="product" :currentFilterList="currentFilterList" :hideSource="true" @update:currentFilterList="updateFilterList($event)" />
       <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
     </v-col>
   </v-row>
@@ -52,19 +52,17 @@ export default {
       brandProductPage: 0,
       loading: false,
       // filter & order
-      currentFilter: '',
+      currentFilterList: [],
       currentOrder: constants.PRODUCT_ORDER_LIST[0].key,  // price_count
     }
   },
   computed: {
     getProductsParams() {
       let defaultParams = { brands__like: this.brandId, order_by: `${this.currentOrder}`, page: this.brandProductPage }
-      if (this.currentFilter) {
-        if (this.currentFilter === 'price_count_gte_1') {
-          defaultParams['price_count__gte'] = 1
-        } else if (this.currentFilter === 'price_count_0') {
-          defaultParams['price_count'] = 0
-        }
+      if (this.currentFilterList.includes('price_count_gte_1')) {
+        defaultParams['price_count__gte'] = 1
+      } else if (this.currentFilterList.includes('price_count_0')) {
+        defaultParams['price_count'] = 0
       }
       return defaultParams
     },
@@ -77,7 +75,7 @@ export default {
     }
   },
   mounted() {
-    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initBrand()
     // load more
@@ -106,9 +104,9 @@ export default {
           this.loading = false
         })
     },
-    toggleProductFilter(filterKey) {
-      this.currentFilter = (this.currentFilter !== filterKey) ? filterKey : ''
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initBrand() will be called in watch $route
     },
     selectProductOrder(orderKey) {
