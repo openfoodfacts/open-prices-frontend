@@ -407,6 +407,12 @@ export default {
         this.boundingBoxesFromServer = []
       } else {
         let maxTries = 10
+        const oneDayInMs = 24 * 60 * 60 * 1000
+        const proofCreatedDate = new Date(this.proofObject.created)
+        if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
+          // Only try once on old proofs
+          maxTries = 1
+        }
         this.proofWithBoundingBoxesLoading = true
         // Try to load any automatically detected price tags on proof upload
         this.loadPriceTagsWithPredictions(1, maxTries, priceTags => {
@@ -424,12 +430,6 @@ export default {
       // Question: callback vs Promise ? Neither are really used in the rest of the code base
       let tries = 0
       const load = () => {
-        const oneDayInMs = 24 * 60 * 60 * 1000
-        const proofCreatedDate = new Date(this.proofObject.created)
-        if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
-          // Only try once on old proofs
-          maxTries = 1
-        }
         api.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
           const priceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions && priceTag.predictions.length)
           if (priceTagsWithPredictions.length >= minNumberOfPriceTagWithPredictions) {
