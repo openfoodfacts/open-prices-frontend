@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.140.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.3...v1.140.4) (2025-09-28)
+
+
+### Bug Fixes
+
+* **ProofPriceTagAssistant:** Properly wait when new boxes are drawn on old proofs ([#1704](https://github.com/openfoodfacts/open-prices-frontend/issues/1704)) ([f8d7f18](https://github.com/openfoodfacts/open-prices-frontend/commit/f8d7f18eb43b1db7a5aad73ebf2a9e292ac835ce))
+
 ## [1.140.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.2...v1.140.3) (2025-09-26)
 
 
