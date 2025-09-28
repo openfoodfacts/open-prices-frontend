@@ -401,21 +401,27 @@ export default {
   },
 
   updateOffProduct(productCode, inputData = {}) {
+    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/off_update/${productCode}?${buildURLParams()}`
     return fetch(url, {
       method: 'PATCH',
-      headers: OP_DEFAULT_HEADERS,
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`
+      }),
       body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
   },
 
-  updateOffProductImage(productCode, imageSrc) {
+  updateOffProductImage(productCode, imageDataBase64) {
+    const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/off_update_image/${productCode}?${buildURLParams()}`
     return fetch(url, {
       method: 'PATCH',
-      headers: OP_DEFAULT_HEADERS,
-      body: JSON.stringify({image_src: imageSrc}),
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`
+      }),
+      body: JSON.stringify({image_data_base64: imageDataBase64}),
     })
     .then((response) => response.json())
   },

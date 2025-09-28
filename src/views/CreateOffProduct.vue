@@ -450,7 +450,8 @@ export default {
         .updateOffProduct(this.productForm.product_code, form)
         .then(() => {
           if (this.drawnImageSrc) {
-            api.updateOffProductImage(this.productForm.product_code, this.drawnImageSrc)
+            const drawnImageBase64 = this.drawnImageSrc.split(';base64,')[1]
+            api.updateOffProductImage(this.productForm.product_code, drawnImageBase64)
               .then(() => {
                 this.loading = false
                 this.getProduct()
