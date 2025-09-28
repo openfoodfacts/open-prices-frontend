@@ -190,9 +190,8 @@ export default {
       // store the proof
       this.proofObject = proof
       // load the receipt items
-      let maxTries = 10
       this.loadingPredictions = true
-      this.loadProofWithReceiptItems(maxTries, receiptItems => {
+      this.loadProofWithReceiptItems(receiptItems => {
         this.receiptItems = receiptItems
         api.getPrices({proof_id: this.proofObject.id}).then(data => {
           this.loadingPredictions = false
@@ -200,15 +199,16 @@ export default {
         })
       })
     },
-    loadProofWithReceiptItems(maxTries, callback) {
+    loadProofWithReceiptItems(callback) {
       // Call receipt items API until we have at least one item
       // Question: callback vs Promise ? Neither are really used in the rest of the code base
+      let maxTries = 10
       let tries = 0
       const load = () => {
+        // Old proof? only try once
         const oneDayInMs = 24 * 60 * 60 * 1000
         const proofCreatedDate = new Date(this.proofObject.created)
         if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
-          // Only try once on old proofs
           maxTries = 1
         }
         api.getReceiptItems({proof_id: this.proofObject.id}).then(data => {
