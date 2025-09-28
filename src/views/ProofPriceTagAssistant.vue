@@ -406,16 +406,9 @@ export default {
         this.priceTags = []
         this.boundingBoxesFromServer = []
       } else {
-        let maxTries = 10
-        const oneDayInMs = 24 * 60 * 60 * 1000
-        const proofCreatedDate = new Date(this.proofObject.created)
-        if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
-          // Only try once on old proofs
-          maxTries = 1
-        }
         this.proofWithBoundingBoxesLoading = true
         // Try to load any automatically detected price tags on proof upload
-        this.loadPriceTagsWithPredictions(1, maxTries, priceTags => {
+        this.loadPriceTagsWithPredictions(1, false, priceTags => {
           this.priceTags = priceTags
           this.boundingBoxesFromServer = this.priceTags.map(priceTag => {
             return {boundingBox: priceTag.bounding_box, id: priceTag.id, status: priceTag.status, created_by: priceTag.created_by}
@@ -425,11 +418,19 @@ export default {
       }
       this.getExistingProofPrices(this.proofObject.id)
     },
-    loadPriceTagsWithPredictions(minNumberOfPriceTagWithPredictions, maxTries, callback) {
+    loadPriceTagsWithPredictions(minNumberOfPriceTagWithPredictions, forceLoad, callback) {
       // Call price tag API until we have at least minNumberOfPriceTagWithPredictions
       // Question: callback vs Promise ? Neither are really used in the rest of the code base
+      let maxTries = 10
       let tries = 0
       const load = () => {
+        // Old proof? only try once
+        const oneDayInMs = 24 * 60 * 60 * 1000
+        const proofCreatedDate = new Date(this.proofObject.created)
+        if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
+          // forceLoad is true when coming from processLabels (to fetch any new user-created priceTags)
+          maxTries = forceLoad ? maxTries : 1
+        }
         api.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
           const priceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions && priceTag.predictions.length)
           if (priceTagsWithPredictions.length >= minNumberOfPriceTagWithPredictions) {
@@ -472,7 +473,7 @@ export default {
             newPriceTagIds.push(priceTag.id)
           })
         })
-        this.loadPriceTagsWithPredictions(expectedNumberOfPriceTagsWithPredictions, 10, priceTags => {
+        this.loadPriceTagsWithPredictions(expectedNumberOfPriceTagsWithPredictions, true, priceTags => {
           this.processLabelsLoading = false
           if (!priceTags.length) {
             this.labelProcessingErrorMessage = true
