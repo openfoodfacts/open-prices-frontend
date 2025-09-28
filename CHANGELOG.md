@@ -1,5 +1,48 @@
 # Changelog
 
+## [1.140.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.3...v1.140.4) (2025-09-28)
+
+
+### Bug Fixes
+
+* **ProofPriceTagAssistant:** Properly wait when new boxes are drawn on old proofs ([#1704](https://github.com/openfoodfacts/open-prices-frontend/issues/1704)) ([f8d7f18](https://github.com/openfoodfacts/open-prices-frontend/commit/f8d7f18eb43b1db7a5aad73ebf2a9e292ac835ce))
+
+## [1.140.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.2...v1.140.3) (2025-09-26)
+
+
+### Bug Fixes
+
+* **Products:** fix URL to add a new barcode in OxF ([#1700](https://github.com/openfoodfacts/open-prices-frontend/issues/1700)) ([b9f299e](https://github.com/openfoodfacts/open-prices-frontend/commit/b9f299ed87413986709b89c9699649651dec06a5))
+
+
+### Technical
+
+* **FilterMenu:** allow having multiple filters at the same time ([#1703](https://github.com/openfoodfacts/open-prices-frontend/issues/1703)) ([c85cae7](https://github.com/openfoodfacts/open-prices-frontend/commit/c85cae7402e82f5fb0a75867e96335fc94b4d224))
+* **l10n:** New Crowdin translations to review and merge ([#1699](https://github.com/openfoodfacts/open-prices-frontend/issues/1699)) ([306e9cc](https://github.com/openfoodfacts/open-prices-frontend/commit/306e9cce6c0e9c65662257878c4123bd0d83b023))
+* **Price Validation Assistant:** new filter to show only predictions with products that exists ([#1702](https://github.com/openfoodfacts/open-prices-frontend/issues/1702)) ([20933ee](https://github.com/openfoodfacts/open-prices-frontend/commit/20933ee645456bfd5b00a60d4d94f6c199545e14))
+
+## [1.140.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.1...v1.140.2) (2025-09-25)
+
+
+### Bug Fixes
+
+* **Barcode scanner:** remove whitespaces with trim() ([#1693](https://github.com/openfoodfacts/open-prices-frontend/issues/1693)) ([135721c](https://github.com/openfoodfacts/open-prices-frontend/commit/135721cdf1f4efd8b8976c54e757ad5152cae9a0))
+* **Proof Price Tag Assistant:** restrict to PRICE_TAG proofs ([#1696](https://github.com/openfoodfacts/open-prices-frontend/issues/1696)) ([697a722](https://github.com/openfoodfacts/open-prices-frontend/commit/697a7223d0be753b5dfc26bce79ef3ea3fa3043b))
+* **ProofPriceTagAssistant:** fixed manual boxes addition + increase the time to fetch predicted price tags ([#1691](https://github.com/openfoodfacts/open-prices-frontend/issues/1691)) ([af8e536](https://github.com/openfoodfacts/open-prices-frontend/commit/af8e5361957e2e9a5cfcfd913e57217e4fc88daa))
+
+
+### Documentation
+
+* **README:** Add more info on Open Prices API & reuse ([#1688](https://github.com/openfoodfacts/open-prices-frontend/issues/1688)) ([cd31994](https://github.com/openfoodfacts/open-prices-frontend/commit/cd31994567e34f2c039c4564e8f6c415828f544a))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1684](https://github.com/openfoodfacts/open-prices-frontend/issues/1684)) ([2eec14f](https://github.com/openfoodfacts/open-prices-frontend/commit/2eec14f9e6e659f8474b4395c7c019eaad52a466))
+* **Price List:** when ordering by -date, add an extra -created ordering to avoid reordering on refresh ([#1697](https://github.com/openfoodfacts/open-prices-frontend/issues/1697)) ([884fccb](https://github.com/openfoodfacts/open-prices-frontend/commit/884fccb4b5a73abaa4cbf879a33aa6fd16f80c40))
+* **Proof List:** when ordering by -date, add an extra -created ordering to avoid reordering on refresh ([#1698](https://github.com/openfoodfacts/open-prices-frontend/issues/1698)) ([ff97c6d](https://github.com/openfoodfacts/open-prices-frontend/commit/ff97c6d0896cb1069250e4bbd4caa3c1695ab700))
+* **Receipt Assistant:** avoid calling the proof API twice ([#1695](https://github.com/openfoodfacts/open-prices-frontend/issues/1695)) ([3e31c65](https://github.com/openfoodfacts/open-prices-frontend/commit/3e31c6556cc755fb8f8ac5717dd3844cea9332f6))
+
 ## [1.140.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.0...v1.140.1) (2025-09-21)
 
 

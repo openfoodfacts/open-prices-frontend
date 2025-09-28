@@ -4,7 +4,7 @@
       <v-chip label variant="text" prepend-icon="mdi-account">
         {{ $t('UserList.UserTotal', { count: userTotal }) }}
       </v-chip>
-      <FilterMenu kind="user" :currentFilter="currentFilter" @update:currentFilter="toggleUserFilter($event)" />
+      <FilterMenu kind="user" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
       <OrderMenu kind="user" :currentOrder="currentOrder" @update:currentOrder="selectUserOrder($event)" />
     </v-col>
   </v-row>
@@ -42,14 +42,14 @@ export default {
       userPage: 0,
       loading: false,
       // filter & order
-      currentFilter: '',
+      currentFilterList: [],
       currentOrder: constants.USER_ORDER_LIST[0].key,  // price_count
     }
   },
   computed: {
     getUsersParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.userPage }
-      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
+      if (this.currentFilterList.includes('hide_price_count_gte_1')) {
         defaultParams['price_count'] = 0
       }
       return defaultParams
@@ -63,7 +63,7 @@ export default {
     }
   },
   mounted() {
-    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initUserList()
     // load more
@@ -90,9 +90,9 @@ export default {
           this.loading = false
         })
     },
-    toggleUserFilter(filterKey) {
-      this.currentFilter = this.currentFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initUserList() will be called in watch $route
     },
     selectUserOrder(orderKey) {

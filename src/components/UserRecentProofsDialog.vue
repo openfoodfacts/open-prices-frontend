@@ -12,7 +12,7 @@
           {{ $t('Common.ProofCount', { count: userProofTotal }) }}
         </v-chip>
         <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
-        <FilterMenu v-if="!hideFilterMenu && userProofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
+        <FilterMenu v-if="!hideFilterMenu && userProofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
       </v-card-title>
 
       <v-divider />
@@ -67,7 +67,7 @@ export default {
       loading: false,
       selectedProof: null,
       // filter
-      currentFilter: '',
+      currentFilterList: [],
       currentType: '',
     }
   },
@@ -91,7 +91,7 @@ export default {
     },
     getProofParams() {
       let defaultParams = { owner: this.username, size: this.getApiSize, page: this.userProofPage }
-      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
+      if (this.currentFilterList.includes('hide_price_count_gte_1')) {
         defaultParams['price_count'] = 0
       }
       if (this.currentType) {
@@ -129,8 +129,8 @@ export default {
           this.loading = false
         })
     },
-    toggleProofFilter(filterKey) {
-      this.currentFilter = this.currentFilter ? '' : filterKey
+    updateFilterList(newFilterList) {
+      this.currentFilter = newFilterList
       this.initUserProofList()
     },
     toggleProofType(sourceKey) {

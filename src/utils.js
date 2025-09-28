@@ -15,10 +15,19 @@ function getDocumentScrollPercentage() {
   return (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100
 }
 
-
 function isNumber(value) {
   // return /^\d+$/.test(value)
   return !isNaN(parseFloat(value)) && isFinite(value)
+}
+
+function toArray(value) {
+  if (Array.isArray(value)) {
+    return value
+  } else if (value) {
+    return [value]
+  } else {
+    return []
+  }
 }
 
 /**
@@ -113,6 +122,7 @@ export default {
   debounce,
   getDocumentScrollPercentage,
   isNumber,
+  toArray,
   isURL,
   getURLOrigin,
   addObjectToArray,

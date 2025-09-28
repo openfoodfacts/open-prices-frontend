@@ -162,7 +162,7 @@
 		"StatsAndRankings": "Statistieken en ranglijsten",
 		"MostPicturesAdded": "Meeste foto's toegevoegd",
 		"MostPricesAdded": "Meeste prijzen toegevoegd",
-		"MostPricesFromPicturesAdded": "Meeste prijzen van toegevoegde foto's"
+		"MostPricesFromPicturesAdded": "Meeste prijzen van afbeeldingen toegevoegd"
 	},
 	"Common": {
 		"About": "Over",
@@ -288,6 +288,9 @@
 		"FilterPriceMoreThan30DaysHide": "Verberg prijzen ouder dan 30 dagen",
 		"FilterProofWithPriceCountHide": "Verberg bewijzen met prijzen",
 		"FilterPriceTagWithProofOwner": "Toon alleen mijn bewijzen",
+		"FilterPriceTagWithTagPredictionBarcodeValid": "Met een geldige barcode",
+		"FilterPriceTagWithTagPredictionProductExists": "Met een geldig product",
+		"FilterPriceTagWithTagPredictionCategoryTagValid": "Met een geldige categorietag",
 		"FilterLocationWithPriceCountHide": "Verberg locaties met prijzen",
 		"FilterUserWithPriceCountHide": "Verberg bijdragers met prijzen",
 		"Fix": "Oplossen",
@@ -423,7 +426,7 @@
 		"TopLocations": "Top locaties",
 		"TopProducts": "Top producten",
 		"TopCities": "Top steden",
-		"TopCountries": "Toplanden",
+		"TopCountries": "Top landen",
 		"Today": "Vandaag",
 		"Top": "Top",
 		"Total": "Totaal",

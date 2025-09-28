@@ -160,6 +160,9 @@ export default {
   ],
   PRICE_TAG_FILTER_LIST: [
     { key: 'proof__owner', value: 'FilterPriceTagWithProofOwner' },
+    // { key: 'tag_prediction_barcode_valid', value: 'FilterPriceTagWithTagPredictionBarcodeValid' },
+    { key: 'tag_prediction_product_exists', value: 'FilterPriceTagWithTagPredictionProductExists' },
+    // { key: 'tag_prediction_category_tag_valid', value: 'FilterPriceTagWithTagPredictionCategoryTagValid' },
   ],
   LOCATION_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterLocationWithPriceCountHide' },
@@ -175,12 +178,12 @@ export default {
   PRICE_ORDER_LIST: [
     { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
     { key: '-price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-descending' },
-    { key: '-date', value: 'OrderPriceDateDESC', icon: 'mdi-calendar-today' },
+    { key: '-date,-created', value: 'OrderPriceDateDESC', icon: 'mdi-calendar-today' },
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   PROOF_ORDER_LIST: [
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
-    { key: '-date', value: 'OrderProofDateDESC', icon: 'mdi-calendar-today' },
+    { key: '-date,-created', value: 'OrderProofDateDESC', icon: 'mdi-calendar-today' },
     { key: '-created', value: 'OrderProofCreatedDESC', icon: 'mdi-clock-outline' },
   ],
   LOCATION_ORDER_LIST: [

@@ -200,6 +200,7 @@ export default {
       // console.warn(`Code scan error = ${error}`)
     },
     barcodeSearchOrSend() {
+      this.barcodeManualForm.barcode = this.barcodeManualForm.barcode.trim()
       if (!this.barcodeManualFormValid) return
       if (this.barcodeManualInputMode === 'search') {
         this.$refs.barcodeManualInput.blur()

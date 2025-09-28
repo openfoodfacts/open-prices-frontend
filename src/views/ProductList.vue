@@ -4,7 +4,7 @@
       <v-chip label variant="text" prepend-icon="mdi-database-outline">
         {{ $t('Common.ProductCount', { count: productTotal }) }}
       </v-chip>
-      <FilterMenu kind="product" :currentFilter="currentFilter" :currentSource="currentSource" @update:currentFilter="toggleProductFilter($event)" @update:currentSource="toggleProductSource($event)" />
+      <FilterMenu kind="product" :currentFilterList="currentFilterList" :currentSource="currentSource" @update:currentFilterList="updateFilterList($event)" @update:currentSource="toggleProductSource($event)" />
       <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
     </v-col>
   </v-row>
@@ -42,7 +42,7 @@ export default {
       productPage: 0,
       loading: false,
       // filter & order
-      currentFilter: '',
+      currentFilterList: [],
       currentSource: '',
       currentOrder: constants.PRODUCT_ORDER_LIST[0].key,  // price_count
     }
@@ -50,12 +50,10 @@ export default {
   computed: {
     getProductsParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.productPage }
-      if (this.currentFilter) {
-        if (this.currentFilter === 'price_count_gte_1') {
-          defaultParams['price_count__gte'] = 1
-        } else if (this.currentFilter === 'price_count_0') {
-          defaultParams['price_count'] = 0
-        }
+      if (this.currentFilterList.includes('price_count_gte_1')) {
+        defaultParams['price_count__gte'] = 1
+      } else if (this.currentFilterList.includes('price_count_0')) {
+        defaultParams['price_count'] = 0
       }
       if (this.currentSource) {
         defaultParams['source'] = this.currentSource
@@ -71,7 +69,7 @@ export default {
     }
   },
   mounted() {
-    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentSource = this.$route.query[constants.SOURCE_PARAM] || this.currentSource
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initProductList()
@@ -100,9 +98,9 @@ export default {
           this.loading = false
         })
     },
-    toggleProductFilter(filterKey) {
-      this.currentFilter = (this.currentFilter !== filterKey) ? filterKey : ''
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initProductList() will be called in watch $route
     },
     toggleProductSource(sourceKey) {

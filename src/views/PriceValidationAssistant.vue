@@ -4,7 +4,7 @@
       <v-chip label variant="text" prepend-icon="mdi-checkbox-marked-circle-plus-outline">
         {{ $t('Common.PriceToValidateCount', { count: priceTagTotal }) }}
       </v-chip>
-      <FilterMenu kind="priceTag" :currentFilter="currentFilter" @update:currentFilter="togglePriceTagFilter($event)" />
+      <FilterMenu kind="priceTag" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
     </v-col>
   </v-row>
 
@@ -68,7 +68,7 @@ export default {
       loading: false,
       productPriceForms: [],
       // filter & order
-      currentFilter: '',
+      currentFilterList: [],
       currentOrder: '-proof_id',  // order by most recent proof
       // feedback
       priceRemovedMessage: false,
@@ -95,8 +95,11 @@ export default {
         size: this.getApiSize,
         page: this.priceTagPage
       }
-      if (this.currentFilter === 'proof__owner') {
+      if (this.currentFilterList.includes('proof__owner')) {
         defaultParams['proof__owner'] = this.username
+      }
+      if (this.currentFilterList.includes('tag_prediction_product_exists')) {
+        defaultParams['tags__contains'] = 'prediction-product-exists'
       }
       return defaultParams
     },
@@ -109,7 +112,7 @@ export default {
     }
   },
   mounted() {
-    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.getPriceTags()
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
@@ -217,9 +220,9 @@ export default {
           productPriceData.loading = false
         })
     },
-    togglePriceTagFilter(filterKey) {
-      this.currentFilter = this.currentFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initPriceTags() will be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars

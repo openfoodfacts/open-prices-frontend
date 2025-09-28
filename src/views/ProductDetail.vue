@@ -33,7 +33,7 @@
         {{ $t('Common.LatestPrices') }}
       </h2>
       <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <FilterMenu kind="price" :currentFilter="currentFilter" @update:currentFilter="togglePriceFilter($event)" />
+      <FilterMenu kind="price" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
       <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
       <DisplayMenu kind="price" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
     </v-col>
@@ -110,7 +110,7 @@ export default {
       // share
       shareLinkCopySuccessMessage: false,
       // filter, order & display
-      currentFilter: '',
+      currentFilterList: [],
       currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
       currentDisplay: constants.PRICE_DISPLAY_LIST[0].key,
     }
@@ -134,7 +134,7 @@ export default {
     },
     getPricesParams() {
       let defaultParams = { [this.productIsCategory ? 'category_tag' : 'product_code']: this.productId, order_by: `${this.currentOrder}`, page: this.pricePage }
-      if (this.currentFilter === 'show_last_month') {
+      if (this.currentFilterList.includes('show_last_month')) {
         let oneMonthAgo = new Date()
         oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
         defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
@@ -156,7 +156,7 @@ export default {
     }
   },
   mounted() {
-    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.currentDisplay = this.$route.query[constants.DISPLAY_PARAM] || this.appStore.user.price_list_display_default_mode || this.currentDisplay
     this.getProduct()
@@ -209,9 +209,9 @@ export default {
           this.loading = false
         })
     },
-    togglePriceFilter(filterKey) {
-      this.currentFilter = this.currentFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initPrices() will be called in watch $route
     },
     selectPriceOrder(orderKey) {

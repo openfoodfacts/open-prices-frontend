@@ -5,7 +5,7 @@
         {{ $t('Common.ProofCount', { count: proofTotal }) }}
       </v-chip>
       <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
-      <FilterMenu v-if="proofList.length" kind="proof" :currentFilter="currentFilter" :currentType="currentType" @update:currentFilter="toggleProofFilter($event)" @update:currentType="toggleProofType($event)" />
+      <FilterMenu v-if="proofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
     </v-col>
   </v-row>
 
@@ -42,7 +42,7 @@ export default {
       proofPage: 0,
       loading: false,
       // filter & order
-      currentFilter: '',
+      currentFilterList: [],
       currentType: '',
       currentOrder: constants.PROOF_ORDER_LIST[2].key,  // -created
     }
@@ -50,7 +50,7 @@ export default {
   computed: {
     getProofsParams() {
       let defaultParams = { order_by: this.currentOrder, page: this.proofPage }
-      if (this.currentFilter && this.currentFilter === 'hide_price_count_gte_1') {
+      if (this.currentFilterList.includes('hide_price_count_gte_1')) {
         defaultParams['price_count'] = 0
       }
       if (this.currentType) {
@@ -67,7 +67,7 @@ export default {
     }
   },
   mounted() {
-    this.currentFilter = this.$route.query[constants.FILTER_PARAM] || this.currentFilter
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.initProofList()
     // load more
@@ -95,9 +95,9 @@ export default {
           this.loading = false
         })
     },
-    toggleProofFilter(filterKey) {
-      this.currentFilter = this.currentFilter ? '' : filterKey
-      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilter } })
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initProofList() will be called in watch $route
     },
     toggleProofType(sourceKey) {

@@ -191,37 +191,38 @@ export default {
       this.proofObject = proof
       // load the receipt items
       this.loadingPredictions = true
-      this.loadProofWithReceiptItems(proof.id, 10, proof => {
-        api.getPrices({proof_id: proof.id}).then(data => {
+      this.loadProofWithReceiptItems(receiptItems => {
+        this.receiptItems = receiptItems
+        api.getPrices({proof_id: this.proofObject.id}).then(data => {
           this.loadingPredictions = false
           this.proofPriceExistingList = data.items
         })
       })
     },
-    loadProofWithReceiptItems(proofId, maxTries, callback) {
+    loadProofWithReceiptItems(callback) {
+      // Call receipt items API until we have at least one item
+      // Question: callback vs Promise ? Neither are really used in the rest of the code base
+      let maxTries = 10
       let tries = 0
       const load = () => {
-        api.getProofById(proofId).then(proof => {
-          const oneDayInMs = 24 * 60 * 60 * 1000
-          const proofCreatedDate = new Date(proof.created)
-          if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
-            // Only try once on old proofs
-            maxTries = 1
-          }
-          api.getReceiptItems({proof_id: proofId}).then(data => {
-            const receiptItems = data.items
-            if (receiptItems.length) {
-              this.receiptItems = receiptItems
-              callback(proof)
-            } else {
-              tries += 1
-              if (tries >= maxTries) {
-                callback(proof)
-                return
-              }
-              setTimeout(load, 5000)  // maximum wait time: maxTries * 5s (50s)
+        // Old proof? only try once
+        const oneDayInMs = 24 * 60 * 60 * 1000
+        const proofCreatedDate = new Date(this.proofObject.created)
+        if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
+          maxTries = 1
+        }
+        api.getReceiptItems({proof_id: this.proofObject.id}).then(data => {
+          const receiptItems = data.items
+          if (receiptItems.length) {
+            callback(receiptItems)
+          } else {
+            tries += 1
+            if (tries >= maxTries) {
+              callback([])
+              return
             }
-          })
+            setTimeout(load, 5000)  // maximum wait time: maxTries * 5s (50s)
+          }
         })
       }
       load()
