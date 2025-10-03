@@ -16,14 +16,6 @@
         to="/experiments/receipt-assistant"
       />
     </v-col>
-    <v-col cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Router.CreateOffProduct.Title')"
-        prepend-icon="mdi-draw"
-        append-icon="mdi-arrow-right"
-        to="/experiments/create-off-product"
-      />
-    </v-col>
   </v-row>
 
   <br>

@@ -17,9 +17,6 @@
           </i18n-t>
         </p>
         <OpenFoodFactsAddMenu :productCode="productId" />
-        <v-btn size="small" prepend-icon="mdi-plus" class="ml-2" :href="`/experiments/create-off-product?product_code=${productId}`">
-          {{ $t('Add product using assistant') }}
-        </v-btn>
       </v-alert>
       <v-alert v-else-if="categoryNotFound" data-name="category-not-found-alert" type="error" variant="outlined">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
