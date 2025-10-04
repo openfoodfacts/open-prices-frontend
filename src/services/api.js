@@ -413,7 +413,7 @@ export default {
     .then((response) => response.json())
   },
 
-  updateOffProductImage(productCode, imageDataBase64) {
+  updateOffProductImage(productCode, inputData = {}) {
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}/off-upload-image?${buildURLParams()}`
     return fetch(url, {
@@ -421,7 +421,7 @@ export default {
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
         'Authorization': `Bearer ${store.user.token}`
       }),
-      body: JSON.stringify({image_data_base64: imageDataBase64}),
+      body: JSON.stringify(inputData),
     })
     .then((response) => response.json())
   },

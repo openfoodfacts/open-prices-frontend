@@ -440,18 +440,22 @@ export default {
     },
     createProduct() {
       const flavorkey = constants.PRODUCT_SOURCE_LIST.find(source => source.value === this.productForm.flavor).key
-      const form = {
+      let inputData = {
         update_params: this.productForm,
         flavor: flavorkey
       }
       this.step = 3
       this.loading = true
       api
-        .updateOffProduct(this.productForm.product_code, form)
+        .updateOffProduct(this.productForm.product_code, inputData)
         .then(() => {
           if (this.drawnImageSrc) {
             const drawnImageBase64 = this.drawnImageSrc.split(';base64,')[1]
-            api.updateOffProductImage(this.productForm.product_code, drawnImageBase64)
+            inputData = {
+              image_data_base64: drawnImageBase64,
+              flavor: flavorkey
+            }
+            api.updateOffProductImage(this.productForm.product_code, inputData)
               .then(() => {
                 this.loading = false
                 this.getProduct()
