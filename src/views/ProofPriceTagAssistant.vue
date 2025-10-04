@@ -38,7 +38,7 @@
           <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
           <v-card>
             <v-card-text>
-              <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :image="image" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
+              <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :imageSrc="imageSrc" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
             </v-card-text>
             <v-divider />
             <v-card-actions>
@@ -280,7 +280,7 @@ export default {
       productPriceForms: [],
       // proof data
       proofObject: null,
-      image: new Image(),
+      imageSrc: null,
       proofWithBoundingBoxesLoading: false,
       processLabelsLoading: false,
       loading: false,
@@ -397,10 +397,8 @@ export default {
       this.productPriceForms = []
       this.boundingBoxesFromServer = []
       // proof image
-      const image = new Image()
-      image.src = proof_utils.getImageFullUrl(proof.file_path)
-      image.crossOrigin = 'Anonymous'
-      this.image = image
+      this.imageSrc = proof_utils.getImageFullUrl(proof.file_path)
+
       if (proof.type === constants.PROOF_TYPE_RECEIPT) {
         // No need to check for price tags on receipts
         this.priceTags = []
