@@ -118,8 +118,9 @@ export default {
     .then((response) => response.json())
   },
   createProof(image, inputData, source = null) {
-    const data = filterBodyWithAllowedKeys(inputData, PROOF_CREATE_FIELDS)
     const store = useAppStore()
+    // build body
+    const data = filterBodyWithAllowedKeys(inputData, PROOF_CREATE_FIELDS)
     let formData = new FormData()
     formData.append('file', image, image.name)
     formData.append('type', data.type)
@@ -154,6 +155,11 @@ export default {
         formData.append('ready_for_price_tag_validation', data.ready_for_price_tag_validation)
       }
     }
+    // update store
+    if (data.currency) {
+      store.setLastCurrencyUsed(data.currency)
+    }
+    // API call
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/upload?${buildURLParams({'app_page': source})}`
     return fetch(url, {
       method: 'POST',
@@ -193,8 +199,10 @@ export default {
   },
 
   updateProof(proofId, inputData = {}) {
-    const data = filterBodyWithAllowedKeys(inputData, PROOF_UPDATE_FIELDS)
     const store = useAppStore()
+    // build body
+    const data = filterBodyWithAllowedKeys(inputData, PROOF_UPDATE_FIELDS)
+    // API call
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
     return fetch(url, {
       method: 'PATCH',
@@ -219,11 +227,13 @@ export default {
   },
 
   createPrice(inputData, source = null) {
+    const store = useAppStore()
+    // build body
     let data = filterBodyWithAllowedKeys(inputData, PRICE_CREATE_FIELDS)
     data = extraPriceCreateOrUpdateFiltering(data)
-    const store = useAppStore()
-    store.setLastCurrencyUsed(data.currency)
+    // update store
     store.user.last_product_product_used = data.product_code ? constants.PRICE_TYPE_PRODUCT : constants.PRICE_TYPE_CATEGORY
+    // API call
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?${buildURLParams({'app_page': source})}`
     return fetch(url, {
       method: 'POST',
@@ -255,9 +265,11 @@ export default {
   },
 
   updatePrice(priceId, inputData = {}) {
+    const store = useAppStore()
+    // build body
     let data = filterBodyWithAllowedKeys(inputData, PRICE_UPDATE_FIELDS)
     data = extraPriceCreateOrUpdateFiltering(data)
-    const store = useAppStore()
+    // API call
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}?${buildURLParams()}`
     return fetch(url, {
       method: 'PATCH',
@@ -401,8 +413,8 @@ export default {
   },
 
   createLocationOnline(inputData) {
-    const data = filterBodyWithAllowedKeys(inputData, LOCATION_ONLINE_CREATE_FIELDS)
     const store = useAppStore()
+    const data = filterBodyWithAllowedKeys(inputData, LOCATION_ONLINE_CREATE_FIELDS)
     data.type = constants.LOCATION_TYPE_ONLINE
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations?${buildURLParams()}`
     return fetch(url, {
