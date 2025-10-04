@@ -44,6 +44,7 @@
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import constants from '../constants'
+import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
 export default {
@@ -75,9 +76,7 @@ export default {
     getPricesParams() {
       let defaultParams = { location_id: this.locationId, order_by: this.currentOrder, page: this.pricePage }
       if (this.currentFilterList.includes('show_last_month')) {
-        let oneMonthAgo = new Date()
-        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
-        defaultParams['date__gte'] = oneMonthAgo.toISOString().substring(0, 10)
+        defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
       }
       return defaultParams
     },
