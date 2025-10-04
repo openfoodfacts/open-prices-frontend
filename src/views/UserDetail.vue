@@ -62,9 +62,7 @@ export default {
     getPricesParams() {
       let defaultParams = { owner: this.username, order_by: `${this.currentOrder}`, page: this.pricePage }
       if (this.currentFilterList.includes('show_last_month')) {
-        let oneMonthAgo = new Date()
-        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1)
-        defaultParams['date__gte'] = date_utils.toDateString(oneMonthAgo)
+        defaultParams['date__gte'] = date_utils.oneMonthAgoDate()
       }
       return defaultParams
     },
