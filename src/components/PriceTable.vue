@@ -1,5 +1,5 @@
 <template>
-  <v-data-table :headers="headers" :items="priceList" fixed-header hide-default-footer>
+  <v-data-table :headers="headers" :items="priceList" :items-per-page="tablePageLimit" fixed-header hide-default-footer>
     <template #[`item.product_name`]="{ item }">
       {{ getPriceProductTitle(item) }}
     </template>
@@ -57,6 +57,7 @@ export default {
   },
   data() {
     return {
+      tablePageLimit: -1,  // all items
       productPriceHeaders: [
         { title: 'Location', key: 'location' },
         { title: 'Date', key: 'date'},
