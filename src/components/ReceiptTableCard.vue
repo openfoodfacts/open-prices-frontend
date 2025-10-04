@@ -7,7 +7,7 @@
     <v-divider />
 
     <v-card-text>
-      <v-data-table :headers="headers" :items="items" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" items-per-page="100" :disable-sort="true">
+      <v-data-table :headers="headers" :items="items" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true">
         <template #[`item.product_name`]="{ item }">
           <v-text-field v-if="item.manuallyAdded" v-model="item.product_name" :hide-details="true" :rules="rules" />
           <p v-else>
@@ -147,7 +147,6 @@ export default {
   emits: ['receiptItemsUpdated'],
   data() {
     return {
-      showInfoDetails: true,
       items: [],
       headers: [
         { title: 'Product Name', key: 'product_name' },
@@ -156,6 +155,8 @@ export default {
         { title: 'Quantity', key: 'receipt_quantity' },
         { title: 'Actions', key: 'actions' },
       ],
+      tablePageLimit: -1,  // all items
+      showInfoDetails: true,
       editProductDialog: false,
       editProductItem: null,
       barcodeScannerDialog: false,
