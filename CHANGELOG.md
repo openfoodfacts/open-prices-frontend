@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.140.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.4...v1.140.5) (2025-10-04)
+
+
+### Bug Fixes
+
+* **FilterMenu:** on Product detail page, hide the type filter ([#1721](https://github.com/openfoodfacts/open-prices-frontend/issues/1721)) ([01989fa](https://github.com/openfoodfacts/open-prices-frontend/commit/01989faa81ef6a22e4efab362b985c8928adbd8f))
+* **Price table:** fix location column sort (v1: by id) ([#1725](https://github.com/openfoodfacts/open-prices-frontend/issues/1725)) ([e0eb40e](https://github.com/openfoodfacts/open-prices-frontend/commit/e0eb40ec8891654e1117af60f6f44c36e285da0c))
+* **Settings:** call setLastCurrencyUsed when the user uploads a proof (instead of creates a price) ([#1728](https://github.com/openfoodfacts/open-prices-frontend/issues/1728)) ([533e9fc](https://github.com/openfoodfacts/open-prices-frontend/commit/533e9fcb3cbdaa6c5df3755ac9d8a7d331f2ce38))
+* **Tables:** display all items available ([#1722](https://github.com/openfoodfacts/open-prices-frontend/issues/1722)) ([89c11a6](https://github.com/openfoodfacts/open-prices-frontend/commit/89c11a6aff871b0b125781ee0ff1d5dfea5c59d0))
+
+
+### Technical
+
+* **deps:** bump actions/labeler from 5 to 6 ([#1718](https://github.com/openfoodfacts/open-prices-frontend/issues/1718)) ([03cf5a7](https://github.com/openfoodfacts/open-prices-frontend/commit/03cf5a7024a220204ad86081d0b31be4bf92ffc9))
+* **l10n:** New Crowdin translations to review and merge ([#1706](https://github.com/openfoodfacts/open-prices-frontend/issues/1706)) ([a3bc06c](https://github.com/openfoodfacts/open-prices-frontend/commit/a3bc06c2cc5bd62a5e3157d4945e1b610870eb26))
+* **Utils:** new date.oneMonthAgoDate method ([#1726](https://github.com/openfoodfacts/open-prices-frontend/issues/1726)) ([b7115a4](https://github.com/openfoodfacts/open-prices-frontend/commit/b7115a435c897f777c4d9d8b71bbe8a4220d0091))
+
 ## [1.140.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.3...v1.140.4) (2025-09-28)
 
 
