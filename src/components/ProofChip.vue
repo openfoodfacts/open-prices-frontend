@@ -1,6 +1,6 @@
 <template>
   <v-chip
-    :class="class"
+    :class="cssClass"
     :style="getStyle"
     label
     size="small"
@@ -41,7 +41,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    class: {
+    cssClass: {
       type: String,
       default: ''
     },
