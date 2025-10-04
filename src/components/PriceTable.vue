@@ -59,7 +59,7 @@ export default {
     return {
       tablePageLimit: -1,  // all items
       productPriceHeaders: [
-        { title: 'Location', key: 'location' },
+        { title: 'Location', key: 'location', sortRaw (a, b) { return a.location_id - b.location_id } },
         { title: 'Date', key: 'date'},
         { title: 'Price', key: 'price' },
         { title: 'Added', key: 'created' },
@@ -67,14 +67,14 @@ export default {
       ],
       proofPriceHeaders: [
         { title: 'Product', key: 'product_name' },
-        { title: 'Details', key: 'product_details' },
+        { title: 'Details', key: 'product_details', sortable: false },
         { title: 'Price', key: 'price' },
         { title: 'Added', key: 'created' },
         // { title: 'Actions', key: 'actions' },
       ],
       proofReceiptPriceOwnerHeaders: [
         { title: 'Product', key: 'product_name' },
-        { title: 'Details', key: 'product_details' },
+        { title: 'Details', key: 'product_details', sortable: false },
         { title: 'Price', key: 'price' },
         { title: 'Quantity', key: 'receipt_quantity' },
         { title: 'Added', key: 'created' },
