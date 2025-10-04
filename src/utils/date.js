@@ -1,5 +1,14 @@
 import constants from '../constants'
 
+
+/**
+ * input: Date object
+ * output: '2023-12-25'
+ */
+function toDateString(date) {
+  return date.toISOString().substring(0, 10)
+}
+
 /**
  * output: '2023-12-25'
  */
@@ -126,15 +135,16 @@ function dateType(dateString) {
 }
 
 export default {
-    currentDate,
-    currentDateTime,
-    currentStartOfDay,
-    dateStartOfDay,
-    dateEndOfDay,
-    prettyDate,
-    prettyDateTime,
-    offDateTime,
-    prettyRelativeDateTime,
-    isBetweenTwoDates,
-    dateType,
+  toDateString,
+  currentDate,
+  currentDateTime,
+  currentStartOfDay,
+  dateStartOfDay,
+  dateEndOfDay,
+  prettyDate,
+  prettyDateTime,
+  offDateTime,
+  prettyRelativeDateTime,
+  isBetweenTwoDates,
+  dateType,
 }
