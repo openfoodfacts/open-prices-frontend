@@ -30,7 +30,11 @@ export default {
       type: String,
       default: 'price',
       examples: ['price', 'location']
-    }
+    },
+    hide: {
+      type: Array,
+      default: () => []
+    },
   },
   emits: ['update:currentDisplay'],
   data() {
@@ -41,7 +45,7 @@ export default {
   },
   computed: {
     displayList() {
-      return this[`${this.kind}DisplayList`]
+      return this[`${this.kind}DisplayList`].filter(o => !this.hide.includes(o.key))
     },
     getCurrentDisplayIcon() {
       let display = this.displayList.find(o => o.key === this.currentDisplay)
