@@ -48,7 +48,7 @@ export default {
     source: {
       type: String,
       default: 'product',
-      examples: ['product', 'proof']
+      examples: ['product', 'proof', 'location']
     },
     proof: {
       type: Object,
@@ -66,6 +66,13 @@ export default {
         // { title: 'Actions', key: 'actions' },
       ],
       proofPriceHeaders: [
+        { title: 'Product', key: 'product_name' },
+        { title: 'Details', key: 'product_details', sortable: false },
+        { title: 'Price', key: 'price' },
+        { title: 'Added', key: 'created' },
+        // { title: 'Actions', key: 'actions' },
+      ],
+      locationPriceHeaders: [
         { title: 'Product', key: 'product_name' },
         { title: 'Details', key: 'product_details', sortable: false },
         { title: 'Price', key: 'price' },
