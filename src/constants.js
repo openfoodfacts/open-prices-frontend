@@ -201,15 +201,11 @@ export default {
     { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
   ],
   // display
-  PRICE_DISPLAY_LIST: [
+  DISPLAY_LIST: [
     { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
     { key: 'table', value: 'DisplayTable', icon: 'mdi-table' },
     { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
     { key: 'chart', value: 'DisplayPriceChart', icon: 'mdi-chart-line' },
-  ],
-  LOCATION_DISPLAY_LIST: [
-    { key: 'list', value: 'DisplayList', icon: 'mdi-format-list-bulleted' },
-    { key: 'map', value: 'DisplayPriceMap', icon: 'mdi-map-marker' },
   ],
   LOCATION_SEARCH_PROVIDER_LIST: [
     { key: 'nominatim' },

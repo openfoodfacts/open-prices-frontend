@@ -22,26 +22,24 @@ import constants from '../constants'
 
 export default {
   props: {
+    show: {
+      type: Array,
+      default: () => ['list', 'table', 'map', 'chart'],
+    },
     currentDisplay: {
       type: String,
       default: null,
     },
-    kind: {
-      type: String,
-      default: 'price',
-      examples: ['price', 'location']
-    }
   },
   emits: ['update:currentDisplay'],
   data() {
     return {
-      priceDisplayList: constants.PRICE_DISPLAY_LIST,
-      locationDisplayList: constants.LOCATION_DISPLAY_LIST,
+      defaultDisplayList: constants.DISPLAY_LIST,
     }
   },
   computed: {
     displayList() {
-      return this[`${this.kind}DisplayList`]
+      return this.defaultDisplayList.filter(o => this.show.includes(o.key))
     },
     getCurrentDisplayIcon() {
       let display = this.displayList.find(o => o.key === this.currentDisplay)
