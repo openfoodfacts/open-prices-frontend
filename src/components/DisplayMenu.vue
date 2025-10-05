@@ -22,13 +22,13 @@ import constants from '../constants'
 
 export default {
   props: {
-    currentDisplay: {
-      type: String,
-      default: null,
-    },
     show: {
       type: Array,
       default: () => ['list', 'table', 'map', 'chart'],
+    },
+    currentDisplay: {
+      type: String,
+      default: null,
     },
   },
   emits: ['update:currentDisplay'],
