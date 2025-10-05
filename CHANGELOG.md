@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.140.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.5...v1.140.6) (2025-10-05)
+
+
+### Bug Fixes
+
+* **Display Menu:** fix forgot to rename some variables following [#1731](https://github.com/openfoodfacts/open-prices-frontend/issues/1731) ([63ea64d](https://github.com/openfoodfacts/open-prices-frontend/commit/63ea64df9e044c54ae9b5b12a3d765e435930c9c))
+
+
+### Technical
+
+* **Dashboard:** Price list: add price display toggle (list, table or map) ([#1734](https://github.com/openfoodfacts/open-prices-frontend/issues/1734)) ([110fdb0](https://github.com/openfoodfacts/open-prices-frontend/commit/110fdb00c14acf5da663c0de2d7b8e54c110bbd2))
+* **Dashboard:** Proof list: add price display toggle (list or map) ([#1736](https://github.com/openfoodfacts/open-prices-frontend/issues/1736)) ([bd66be7](https://github.com/openfoodfacts/open-prices-frontend/commit/bd66be72487dcf670d08aa32e67f86271baeef6f))
+* **Dashboard:** Proof list: add the new table view in the display choices ([#1738](https://github.com/openfoodfacts/open-prices-frontend/issues/1738)) ([40c2b65](https://github.com/openfoodfacts/open-prices-frontend/commit/40c2b658604acf4830afed3fac6834f60af544aa))
+* **Date detail:** add price display toggle (list, table or map) ([#1733](https://github.com/openfoodfacts/open-prices-frontend/issues/1733)) ([ef6b618](https://github.com/openfoodfacts/open-prices-frontend/commit/ef6b618037fe8c6099ddf553638f0d5ae8df128b))
+* **Display Menu:** new ProofTable component ([#1737](https://github.com/openfoodfacts/open-prices-frontend/issues/1737)) ([2915052](https://github.com/openfoodfacts/open-prices-frontend/commit/29150525ce54f41e2fdbecf665aab077e7162d6f))
+* **Display Menu:** new prop to explicitly set the display options ([#1731](https://github.com/openfoodfacts/open-prices-frontend/issues/1731)) ([ef3ad30](https://github.com/openfoodfacts/open-prices-frontend/commit/ef3ad30a9cec2d531a2c24487d250e9c5cdf9562))
+* **Location detail:** add price display toggle (list or table) ([#1729](https://github.com/openfoodfacts/open-prices-frontend/issues/1729)) ([62e8c14](https://github.com/openfoodfacts/open-prices-frontend/commit/62e8c14e2fd1eba12233c7d66e5312dc44a24f66))
+
 ## [1.140.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.4...v1.140.5) (2025-10-04)
 
 
