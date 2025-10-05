@@ -79,7 +79,7 @@ export default {
       // filter, order & display
       currentFilterList: [],
       currentOrder: constants.PRICE_ORDER_LIST[2].key,  // date
-      currentDisplay: constants.DISPLAY_LIST[0].key,
+      currentDisplay: constants.DISPLAY_LIST[0].key,  // list
     }
   },
   computed: {
