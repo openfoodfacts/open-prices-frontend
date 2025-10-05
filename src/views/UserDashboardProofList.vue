@@ -7,7 +7,7 @@
       <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
       <FilterMenu v-if="proofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" @update:currentKind="toggleProofKind($event)" />
       <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
-      <DisplayMenu :show="['list', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="selectProofDisplay($event)" />
+      <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="selectProofDisplay($event)" />
     </v-col>
   </v-row>
 
@@ -18,6 +18,9 @@
           <ProofCard :proof="proof" :hideProofHeader="true" :showImageThumb="true" height="100%" @proofUpdated="handleProofUpdated" />
         </v-col>
       </v-row>
+    </v-window-item>
+    <v-window-item value="table">
+      <ProofTable class="mt-3 mb-3" :proofList="proofList" />
     </v-window-item>
     <v-window-item value="map">
       <v-row class="mt-0 mb-1">
@@ -58,6 +61,7 @@ export default {
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    ProofTable: defineAsyncComponent(() => import('../components/ProofTable.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
   },
   data() {
