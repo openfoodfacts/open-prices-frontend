@@ -307,7 +307,6 @@ export default {
       shownProof: null,
       boundingBoxesFromServer: null,
       proofImageSrc: null,
-      challengeList: [],
       suggestedCategories: [],
       drawnImageSrc: null,
       imageEditMode: false,
@@ -346,7 +345,7 @@ export default {
     if (this.$route.query.flavor) {
         this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
     } else {
-        this.productForm.flavor = constants.PRODUCT_SOURCE_LIST[0].value
+        this.productForm.flavor = constants.PRODUCT_SOURCE_LIST[2].value
     }
     if (this.$route.query.product_code) {
         this.productForm.product_code = this.$route.query.product_code
@@ -414,10 +413,11 @@ export default {
         })
     },
     getChallenges() {
-      return api.getChallenges()
+      return api.getChallenges({order_by: '-created'})
         .then((data) => {
-          this.challengeList.push(...data.items)
-          this.suggestedCategories = new Set(data.items.map(challenge => challenge.categories).flat())
+          const challenges = data.items
+          const challengeCategories = challenges.map(challenge => challenge.categories) // Array of arrays
+          this.suggestedCategories = new Set(challengeCategories.flat()) // unique categories
         })
     },
     getMissingProductsWithPrices() {
