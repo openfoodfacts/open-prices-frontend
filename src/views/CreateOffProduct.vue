@@ -18,14 +18,14 @@
       <v-form @submit.prevent="loadProductInfo">
         <v-card
           class="border-transparent mb-4"
-          title="SelectProductBarcodeTranslate"
+          :title="$t('Common.BarcodeType')"
           prepend-icon="mdi-tag-plus-outline"
           height="100%"
         >
           <v-divider />
           <v-card-text>
             <div class="text-subtitle-2">
-              {{ $t('ProductCode') }}
+              {{ $t('AddPriceSingle.ProductInfo.ProductBarcode') }}
             </div>
             <v-text-field
               v-model="productForm.product_code"
@@ -66,17 +66,17 @@
       <v-form @submit.prevent="createProduct">
         <v-card
           class="border-transparent mb-4"
-          title="SelectProductBarcodeTranslate"
+          :title="$t('AddPriceSingle.ProductInfo.Title')"
           prepend-icon="mdi-tag-plus-outline"
           height="100%"
         >
           <v-divider />
           <v-card-text>
             <v-alert v-if="productExists" type="info" variant="outlined" density="compact">
-              {{ $t('Product already exists') }}
+              {{ $t('CreateOffProduct.ProductAlreadyExists') }}
             </v-alert>
             <div class="text-subtitle-2">
-              {{ $t('Barcode') }}
+              {{ $t('Common.Barcode') }}
             </div>
             <v-text-field
               v-model="productForm.product_code"
@@ -88,7 +88,7 @@
               persistent-hint
             />
             <div class="text-subtitle-2">
-              {{ $t('Flavor') }}
+              {{ $t('CreateOffProduct.Flavor') }}
             </div>
             <v-select
               v-model="productForm.flavor"
@@ -98,7 +98,7 @@
               variant="outlined"
             />
             <div class="text-subtitle-2">
-              {{ $t('ProductName') }}
+              {{ $t('Common.ProductName') }}
             </div>
             <v-text-field
               v-model="productForm.product_name"
@@ -109,7 +109,7 @@
               persistent-hint
             />
             <div class="text-subtitle-2">
-              {{ $t('ProductQuantity') }}
+              {{ $t('Common.Quantity') }}
             </div>
             <v-text-field
               v-model="productForm.quantity"
@@ -121,7 +121,7 @@
             />
             <div v-if="!productExists">
               <div class="text-subtitle-2">
-                {{ $t('country where sold') }}
+                {{ $t('CreateOffProduct.CountriesWhereSold') }}
               </div>
               <v-text-field
                 v-model="productForm.countries"
@@ -132,7 +132,7 @@
                 persistent-hint
               />
               <div class="text-subtitle-2">
-                {{ $t('stores where sold') }}
+                {{ $t('CreateOffProduct.StoresWhereSold') }}
               </div>
               <v-text-field
                 v-model="productForm.stores"
@@ -144,7 +144,7 @@
               />
             </div>
             <div class="text-subtitle-2">
-              {{ $t('categories') }}
+              {{ $t('Common.Categories') }}
             </div>
             <v-text-field
               v-model="productForm.categories"
@@ -161,9 +161,9 @@
             </v-chip-group>
             <div v-if="!productExists">
               <div class="text-subtitle-2">
-                {{ $t('product Image') }}
+                {{ $t('Common.Image') }}
               </div>
-              <i>{{ $t('To add a product image, enable draw mode below proof picture and draw a rectangle around the product.') }}</i>
+              <i>{{ $t('CreateOffProduct.UseDrawModeToAddImage') }}</i>
               <v-img v-if="drawnImageSrc" :src="drawnImageSrc" style="max-height:200px" />
             </div>
           </v-card-text>
@@ -177,7 +177,7 @@
                   variant="flat"
                   type="submit"
                 >
-                  {{ $t('Common.Upload') }}
+                  {{ $t('CreateOffProduct.CreateProduct') }}
                 </v-btn>
               </v-col>
             </v-row>
@@ -188,7 +188,7 @@
     <v-col v-if="priceList.length" cols="12" md="6">
       <v-card
         class="border-transparent mb-4"
-        :title="'Proof (' + (shownProofIndex + 1) + '/' + priceList.length + ')'"
+        :title="$t('CreateOffProduct.ProofNumberOfOutProofs', {numberOfOutProofs: shownProofIndex + 1, totalNumberOfProofs: priceList.length})"
         prepend-icon="mdi-tag-plus-outline"
         height="100%"
       >
@@ -211,7 +211,7 @@
                 :disabled="shownProofIndex === 0"
                 @click="previousProof()"
               >
-                {{ $t('Common.PreviousProof') }}
+                {{ $t('CreateOffProduct.PreviousProof') }}
               </v-btn>
             </v-col>
             <v-col>
@@ -219,7 +219,7 @@
                 v-model="imageEditMode"
                 density="compact"
                 color="success"
-                :label="$t('Enable draw mode')"
+                :label="$t('CreateOffProduct.EnableDrawMode')"
                 :true-value="true"
                 hide-details="auto"
               />
@@ -232,7 +232,7 @@
                 :disabled="shownProofIndex === priceList.length - 1"
                 @click="nextProof()"
               >
-                {{ $t('Common.NextProof') }}
+                {{ $t('CreateOffProduct.NextProof') }}
               </v-btn>
             </v-col>
           </v-row>
@@ -271,7 +271,7 @@
                 variant="flat"
                 @click="reloadPage"
               >
-                {{ $t('Common.AddNewProduct') }}
+                {{ $t('CreateOffProduct.CreateNewProduct') }}
               </v-btn>
             </v-col>
           </v-row>
@@ -324,11 +324,11 @@ export default {
     stepItemList() {
       return [
         {
-          title: this.$t('Common.SelectBarcode'),
+          title: this.$t('Common.BarcodeType'),
           value: 1
         },
         {
-          title: this.$t('Common.FillInfo'),
+          title: this.$t('AddPriceSingle.ProductInfo.Title'),
           value: 2
         },
         {
