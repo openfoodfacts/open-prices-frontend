@@ -26,26 +26,20 @@ export default {
       type: String,
       default: null,
     },
-    kind: {
-      type: String,
-      default: 'price',
-      examples: ['price', 'location']
-    },
-    hide: {
+    show: {
       type: Array,
-      default: () => []
+      default: () => ['list', 'table', 'map', 'chart'],
     },
   },
   emits: ['update:currentDisplay'],
   data() {
     return {
-      priceDisplayList: constants.PRICE_DISPLAY_LIST,
-      locationDisplayList: constants.LOCATION_DISPLAY_LIST,
+      defaultDisplayList: constants.DISPLAY_LIST,
     }
   },
   computed: {
     displayList() {
-      return this[`${this.kind}DisplayList`].filter(o => !this.hide.includes(o.key))
+      return this.defaultDisplayList.filter(o => this.show.includes(o.key))
     },
     getCurrentDisplayIcon() {
       let display = this.displayList.find(o => o.key === this.currentDisplay)

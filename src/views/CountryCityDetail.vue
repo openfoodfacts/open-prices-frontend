@@ -11,7 +11,7 @@
         {{ $t('Common.TopLocations') }}
       </h2>
       <LoadedCountChip v-if="!loading" :loadedCount="countryCityLocationList.length" :totalCount="countryCityLocationTotal" />
-      <DisplayMenu kind="location" :currentDisplay="currentDisplay" @update:currentDisplay="selectLocationDisplay($event)" />
+      <DisplayMenu :show="['list', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="selectLocationDisplay($event)" />
     </v-col>
   </v-row>
 
