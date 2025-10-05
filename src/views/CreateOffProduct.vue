@@ -345,7 +345,7 @@ export default {
     if (this.$route.query.flavor) {
         this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
     } else {
-        this.productForm.flavor = constants.PRODUCT_SOURCE_LIST[2].value
+        this.productForm.flavor = constants.PRODUCT_SOURCE_LIST[0].value
     }
     if (this.$route.query.product_code) {
         this.productForm.product_code = this.$route.query.product_code
