@@ -421,7 +421,7 @@ export default {
         })
     },
     getMissingProductsWithPrices() {
-      return api.getProducts({ price_count__gte: 1, source__isnull: true, order_by: '-price_count' })
+      return api.getProducts({ price_count__gte: 1, source__isnull: true, order_by: '-proof_count' })
         .then((data) => {
           console.log(data.items)
           this.missingProductsWithPrices = data.items
