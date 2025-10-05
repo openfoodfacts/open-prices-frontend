@@ -63,7 +63,7 @@ export default {
       loading: false,
       // order & display
       currentOrder: '-price_count',
-      currentDisplay: constants.LOCATION_DISPLAY_LIST[0].key,
+      currentDisplay: constants.DISPLAY_LIST[0].key,
     }
   },
   computed: {

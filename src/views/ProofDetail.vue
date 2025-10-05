@@ -71,7 +71,7 @@ export default {
       pricePage: 0,
       loading: false,
       // display
-      currentDisplay: constants.PRICE_DISPLAY_LIST[0].key,
+      currentDisplay: constants.DISPLAY_LIST[0].key,
     }
   },
   computed: {

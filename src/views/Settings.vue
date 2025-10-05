@@ -225,7 +225,7 @@ export default {
       countryList,
       languageList,
       // currencyList,
-      priceListDisplayList: constants.PRICE_DISPLAY_LIST,
+      priceListDisplayList: constants.DISPLAY_LIST,
       locationSelectorDisplayList: constants.LOCATION_SELECTOR_DISPLAY_LIST,
       productSelectorDisplayList: constants.PRODUCT_SELECTOR_DISPLAY_LIST,
       barcodeScannerDisplayList: constants.BARCODE_SCANNER_DISPLAY_LIST,
