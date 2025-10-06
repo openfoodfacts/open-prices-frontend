@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Страны продажи",
+		"CreateNewProduct": "Создать новый продукт",
+		"CreateProduct": "Создать продукт",
+		"EnableDrawMode": "Включить режим рисования",
+		"Flavor": "Вкус",
+		"NextProof": "Next proof",
+		"PreviousProof": "Предыдущее доказательство",
+		"ProductAlreadyExists": "Продукт уже существует",
+		"ProofNumberOfOutProofs": "Доказательство ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Магазины, где продается",
+		"UseDrawModeToAddImage": "Чтобы добавить изображение продукта, включите режим рисования под пробным изображением и нарисуйте прямоугольник вокруг продукта."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Способствовать"
+		},
+		"CreateOffProduct": {
+			"Title": "Помощник по созданию продукта"
 		},
 		"Experiments": {
 			"Title": "Эксперименты"
