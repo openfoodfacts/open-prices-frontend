@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Oħloq prodott ġdid",
+		"CreateProduct": "Oħloq prodott",
+		"EnableDrawMode": "Ippermetti l-modalità tat-tpinġija",
+		"Flavor": "Togħma",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prova preċedenti",
+		"ProductAlreadyExists": "Il-prodott diġà jeżisti",
+		"ProofNumberOfOutProofs": "Prova ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Ħwienet fejn jinbiegħu",
+		"UseDrawModeToAddImage": "Biex iżżid immaġni ta' prodott, attiva l-modalità tat-tpinġija taħt l-istampa ta' prova u pinġi rettangolu madwar il-prodott."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Oħloq Assistent tal-Prodott"
 		},
 		"Experiments": {
 			"Title": "Experiments"
