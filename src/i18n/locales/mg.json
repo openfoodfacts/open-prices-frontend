@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Firenana ivarotana",
+		"CreateNewProduct": "Mamorona vokatra vaovao",
+		"CreateProduct": "Mamorona vokatra",
+		"EnableDrawMode": "Alefaso ny fomba fisarihana",
+		"Flavor": "tsirony",
+		"NextProof": "Next proof",
+		"PreviousProof": "Porofo teo aloha",
+		"ProductAlreadyExists": "Efa misy ny vokatra",
+		"ProofNumberOfOutProofs": "Porofo ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Fivarotana amidy",
+		"UseDrawModeToAddImage": "Mba hanampiana sary vokatra, ampio ny fomba fisarihana eo ambanin'ny sary porofo ary manaova mahitsizoro manodidina ny vokatra."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Mamorona Product Assistant"
 		},
 		"Experiments": {
 			"Title": "Experiments"
