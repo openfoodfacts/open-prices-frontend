@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Ṣẹda titun ọja",
+		"CreateProduct": "Ṣẹda ọja",
+		"EnableDrawMode": "Mu ipo iyaworan ṣiṣẹ",
+		"Flavor": "Adun",
+		"NextProof": "Next proof",
+		"PreviousProof": "Ẹri iṣaaju",
+		"ProductAlreadyExists": "Ọja ti wa tẹlẹ",
+		"ProofNumberOfOutProofs": "Ẹri ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Awọn ile itaja nibiti o ti ta",
+		"UseDrawModeToAddImage": "Lati fi aworan ọja kun, mu ipo iyaworan ṣiṣẹ ni isalẹ aworan ẹri ki o fa onigun mẹta yika ọja naa."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Ṣẹda Oluranlọwọ Ọja"
 		},
 		"Experiments": {
 			"Title": "Experiments"
