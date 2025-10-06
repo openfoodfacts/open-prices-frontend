@@ -421,13 +421,13 @@
     source-map-js "^1.0.1"
     yaml-eslint-parser "^1.2.2"
 
-"@intlify/core-base@9.14.1":
-  version "9.14.1"
-  resolved "https://registry.yarnpkg.com/@intlify/core-base/-/core-base-9.14.1.tgz#405b43dca3a38ab70dbb06a818d0a5b8a835fcc9"
-  integrity sha512-rG5/hlNW6Qfve41go37szEf0mVLcfhYuOu83JcY0jZKasnwsrcZYYWDzebCcuO5I/6Sy1JFWo9p+nvkQS1Dy+w==
+"@intlify/core-base@11.1.12":
+  version "11.1.12"
+  resolved "https://registry.yarnpkg.com/@intlify/core-base/-/core-base-11.1.12.tgz#e02529021a4e69f8a1adcca5ce61963c71cd72ba"
+  integrity sha512-whh0trqRsSqVLNEUCwU59pyJZYpU8AmSWl8M3Jz2Mv5ESPP6kFh4juas2NpZ1iCvy7GlNRffUD1xr84gceimjg==
   dependencies:
-    "@intlify/message-compiler" "9.14.1"
-    "@intlify/shared" "9.14.1"
+    "@intlify/message-compiler" "11.1.12"
+    "@intlify/shared" "11.1.12"
 
 "@intlify/core-base@^9.12.0":
   version "9.14.5"
@@ -462,12 +462,12 @@
     vue-eslint-parser "^9.3.1"
     yaml-eslint-parser "^1.2.2"
 
-"@intlify/message-compiler@9.14.1":
-  version "9.14.1"
-  resolved "https://registry.yarnpkg.com/@intlify/message-compiler/-/message-compiler-9.14.1.tgz#e361133e2849453c55cb3feb856898ff563e70d1"
-  integrity sha512-MY8hwukJBnXvGAncVKlHsqKDQ5ZcQx4peqEmI8wBUTXn4pezrtTGYXNoz81cLyEEHB+L/zlKWVBSh5TiX4gYoQ==
+"@intlify/message-compiler@11.1.12":
+  version "11.1.12"
+  resolved "https://registry.yarnpkg.com/@intlify/message-compiler/-/message-compiler-11.1.12.tgz#27e69790b711a92cddb07175187dd09a7b270b55"
+  integrity sha512-Fv9iQSJoJaXl4ZGkOCN1LDM3trzze0AS2zRz2EHLiwenwL6t0Ki9KySYlyr27yVOj5aVz0e55JePO+kELIvfdQ==
   dependencies:
-    "@intlify/shared" "9.14.1"
+    "@intlify/shared" "11.1.12"
     source-map-js "^1.0.2"
 
 "@intlify/message-compiler@9.14.5", "@intlify/message-compiler@^9.12.0", "@intlify/message-compiler@^9.4.0":
@@ -478,10 +478,10 @@
     "@intlify/shared" "9.14.5"
     source-map-js "^1.0.2"
 
-"@intlify/shared@9.14.1":
-  version "9.14.1"
-  resolved "https://registry.yarnpkg.com/@intlify/shared/-/shared-9.14.1.tgz#11c3d6103615d8b0203224826d2955987c058b72"
-  integrity sha512-XjHu6PEQup9MnP1x0W9y0nXXfq9jFftAYSfV11hryjtH4XqXP8HrzMvXI+ZVifF+jZLszaTzIhvukllplxTQTg==
+"@intlify/shared@11.1.12":
+  version "11.1.12"
+  resolved "https://registry.yarnpkg.com/@intlify/shared/-/shared-11.1.12.tgz#ab41083e017d622cf63c7dc88a0ee0bc27f4127a"
+  integrity sha512-Om86EjuQtA69hdNj3GQec9ZC0L0vPSAnXzB3gP/gyJ7+mA7t06d9aOAiqMZ+xEOsumGP4eEBlfl8zF2LOTzf2A==
 
 "@intlify/shared@9.14.5", "@intlify/shared@^9.4.0":
   version "9.14.5"
@@ -3429,7 +3429,16 @@ string-argv@^0.3.2:
   resolved "https://registry.yarnpkg.com/string-argv/-/string-argv-0.3.2.tgz#2b6d0ef24b656274d957d54e0a4bbf6153dc02b6"
   integrity sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==
 
-"string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+"string-width-cjs@npm:string-width@^4.2.0":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -3456,7 +3465,14 @@ string-width@^7.0.0:
     get-east-asian-width "^1.0.0"
     strip-ansi "^7.1.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -4075,13 +4091,13 @@ vue-eslint-parser@^9.3.1, vue-eslint-parser@^9.4.3:
     lodash "^4.17.21"
     semver "^7.3.6"
 
-vue-i18n@9.14.1:
-  version "9.14.1"
-  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-9.14.1.tgz#5bd2d7659e1a1dcda28df66e78aa786d1792ef31"
-  integrity sha512-xjxV0LYc1xQ8TbAVfIyZiOSS8qoU1R0YwV7V5I8I6Fd64+zvsTsdPgtylPsie3Vdt9wekeYhr+smKDeaK6RBuA==
+vue-i18n@11.1.12:
+  version "11.1.12"
+  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-11.1.12.tgz#230b21d65dd89343ebd40d19c9e3cfb13db8c1fd"
+  integrity sha512-BnstPj3KLHLrsqbVU2UOrPmr0+Mv11bsUZG0PyCOzsawCivk8W00GMXHeVUWIDOgNaScCuZah47CZFE+Wnl8mw==
   dependencies:
-    "@intlify/core-base" "9.14.1"
-    "@intlify/shared" "9.14.1"
+    "@intlify/core-base" "11.1.12"
+    "@intlify/shared" "11.1.12"
     "@vue/devtools-api" "^6.5.0"
 
 vue-matomo@^4.2.0:
@@ -4160,7 +4176,7 @@ word-wrap@^1.2.5:
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.5.tgz#d2c45c6dd4fbce621a66f136cbe328afd0410b34"
   integrity sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
@@ -4173,6 +4189,15 @@ wrap-ansi@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-6.2.0.tgz#e9393ba07102e6c91a3b221478f0257cd2856e53"
   integrity sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
+wrap-ansi@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
+  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
   dependencies:
     ansi-styles "^4.0.0"
     string-width "^4.1.0"
