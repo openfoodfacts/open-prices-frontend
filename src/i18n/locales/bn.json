@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "যে দেশে বিক্রি হয়েছে",
+		"CreateNewProduct": "একটি নতুন পণ্য তৈরি করুন",
+		"CreateProduct": "পণ্য তৈরি করুন",
+		"EnableDrawMode": "ড্র মোড সক্ষম করুন",
+		"Flavor": "স্বাদ",
+		"NextProof": "Next proof",
+		"PreviousProof": "পূর্ববর্তী প্রমাণ",
+		"ProductAlreadyExists": "পণ্যটি ইতিমধ্যেই বিদ্যমান",
+		"ProofNumberOfOutProofs": "প্রমাণ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "যেসব দোকানে বিক্রি হয়",
+		"UseDrawModeToAddImage": "একটি পণ্যের ছবি যোগ করতে, প্রমাণ ছবির নিচে ড্র মোড সক্ষম করুন এবং পণ্যটির চারপাশে একটি আয়তক্ষেত্র আঁকুন।"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "সহযগীতা"
+		},
+		"CreateOffProduct": {
+			"Title": "পণ্য সহকারী তৈরি করুন"
 		},
 		"Experiments": {
 			"Title": "Experiments"
