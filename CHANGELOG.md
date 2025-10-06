@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.141.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.6...v1.141.0) (2025-10-06)
+
+
+### Features
+
+* **Experiment:** Add product to product opener using prices information ([#1685](https://github.com/openfoodfacts/open-prices-frontend/issues/1685)) ([8b6f009](https://github.com/openfoodfacts/open-prices-frontend/commit/8b6f00933b15a965446a8392e7f58f9cfda2e2fe))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1730](https://github.com/openfoodfacts/open-prices-frontend/issues/1730)) ([1f1858f](https://github.com/openfoodfacts/open-prices-frontend/commit/1f1858f08fd7a5ea294e4c99789103a2a00b8a8b))
+* **Price Table:** simplify header generation depending on source ([#1740](https://github.com/openfoodfacts/open-prices-frontend/issues/1740)) ([434ff63](https://github.com/openfoodfacts/open-prices-frontend/commit/434ff6314aba4b028e81172b42e8407d471a3705))
+* **User detail:** add price display toggle (list or table) ([#1742](https://github.com/openfoodfacts/open-prices-frontend/issues/1742)) ([5ca09f9](https://github.com/openfoodfacts/open-prices-frontend/commit/5ca09f96fb11433768ab87ceaee681143839a4a1))
+
 ## [1.140.6](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.5...v1.140.6) (2025-10-05)
 
 
