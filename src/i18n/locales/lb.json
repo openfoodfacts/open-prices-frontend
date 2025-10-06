@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "E neit Produkt erstellen",
+		"CreateProduct": "Produkt erstellen",
+		"EnableDrawMode": "Zeechenmodus aktivéieren",
+		"Flavor": "Aroma",
+		"NextProof": "Next proof",
+		"PreviousProof": "Virdrun Beweis",
+		"ProductAlreadyExists": "Produkt existéiert schonn",
+		"ProofNumberOfOutProofs": "Beweis ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Geschäfter wou verkaaft gëtt",
+		"UseDrawModeToAddImage": "Fir e Produktbild bäizefügen, aktivéiert den Zeechmodus ënner dem Beweisbild a moolt e Rechteck ronderëm d'Produkt."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Produktassistent erstellen"
 		},
 		"Experiments": {
 			"Title": "Experiments"
