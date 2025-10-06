@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "Θα ανακατευθυνθείτε στη σελίδα Ρυθμίσεις αλλά θα χάσετε όλες τις πληροφορίες που έχετε εισαγάγει σε αυτήν τη σελίδα.",
 		"Select": "Επιλέξτε {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Χώρες όπου πωλείται",
+		"CreateNewProduct": "Δημιουργήστε ένα νέο προϊόν",
+		"CreateProduct": "Δημιουργία προϊόντος",
+		"EnableDrawMode": "Ενεργοποίηση λειτουργίας σχεδίασης",
+		"Flavor": "Γεύση",
+		"NextProof": "Next proof",
+		"PreviousProof": "Προηγούμενη απόδειξη",
+		"ProductAlreadyExists": "Το προϊόν υπάρχει ήδη",
+		"ProofNumberOfOutProofs": "Απόδειξη ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Καταστήματα όπου πωλούνται",
+		"UseDrawModeToAddImage": "Για να προσθέσετε μια εικόνα προϊόντος, ενεργοποιήστε τη λειτουργία σχεδίασης κάτω από την εικόνα δοκιμίου και σχεδιάστε ένα ορθογώνιο γύρω από το προϊόν."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Συμβάλλετε"
+		},
+		"CreateOffProduct": {
+			"Title": "Δημιουργία Βοηθού Προϊόντος"
 		},
 		"Experiments": {
 			"Title": "Experiments"
