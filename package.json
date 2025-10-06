@@ -22,7 +22,7 @@
     ]
   },
   "dependencies": {
-    "@intlify/unplugin-vue-i18n": "^4.0.0",
+    "@intlify/unplugin-vue-i18n": "^11.0.1",
     "@openfoodfacts/openfoodfacts-webcomponents": "^1.14.1",
     "@vue-leaflet/vue-leaflet": "^0.10.1",
     "@vueuse/core": "^11.3.0",
