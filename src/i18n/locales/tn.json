@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Tlhama kuno e ntšhwa",
+		"CreateProduct": "Tlhama kumo",
+		"EnableDrawMode": "Kgontsha mokgwa wa go thala",
+		"Flavor": "Tatso",
+		"NextProof": "Next proof",
+		"PreviousProof": "Bosupi jo bo fetileng",
+		"ProductAlreadyExists": "Kumo e setse e le teng",
+		"ProofNumberOfOutProofs": "Bosupi ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Mabenkele a go rekisiwang mo go one",
+		"UseDrawModeToAddImage": "Go tsenya setshwantsho sa sedirisiwa, kgontsha mokgwa wa go thala ka fa tlase ga setshwantsho sa bosupi o bo o thala khutlonnetsepa go dikologa sedirisiwa."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Tlhama Mothusi wa Kumo"
 		},
 		"Experiments": {
 			"Title": "Experiments"
