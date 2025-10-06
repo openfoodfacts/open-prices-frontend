@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "కొత్త ఉత్పత్తిని సృష్టించండి",
+		"CreateProduct": "ఉత్పత్తిని సృష్టించండి",
+		"EnableDrawMode": "డ్రా మోడ్‌ను ప్రారంభించండి",
+		"Flavor": "రుచి",
+		"NextProof": "Next proof",
+		"PreviousProof": "మునుపటి రుజువు",
+		"ProductAlreadyExists": "ఉత్పత్తి ఇప్పటికే ఉంది",
+		"ProofNumberOfOutProofs": "రుజువు ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "అమ్మకానికి ఉన్న దుకాణాలు",
+		"UseDrawModeToAddImage": "ఉత్పత్తి చిత్రాన్ని జోడించడానికి, ప్రూఫ్ చిత్రం క్రింద డ్రా మోడ్‌ను ప్రారంభించండి మరియు ఉత్పత్తి చుట్టూ దీర్ఘచతురస్రాన్ని గీయండి."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "ఉత్పత్తి సహాయకుడిని సృష్టించండి"
 		},
 		"Experiments": {
 			"Title": "Experiments"
