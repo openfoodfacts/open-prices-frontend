@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "नूतनं उत्पादं रचयन्तु",
+		"CreateProduct": "उत्पादं रचयन्तु",
+		"EnableDrawMode": "draw mode सक्षमं कुर्वन्तु",
+		"Flavor": "स्वादः",
+		"NextProof": "Next proof",
+		"PreviousProof": "पूर्वप्रमाणम्",
+		"ProductAlreadyExists": "उत्पादः पूर्वमेव अस्ति",
+		"ProofNumberOfOutProofs": "प्रमाण ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "भण्डाराः यत्र विक्रीयन्ते",
+		"UseDrawModeToAddImage": "उत्पादप्रतिबिम्बं योजयितुं प्रमाणचित्रस्य अधः draw mode सक्षमं कुर्वन्तु तथा च उत्पादस्य परितः आयतं आकर्षयन्तु ।"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "उत्पाद सहायकं रचयन्तु"
 		},
 		"Experiments": {
 			"Title": "Experiments"
