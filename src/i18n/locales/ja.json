@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "[設定] ページにリダイレクトされますが、このページに入力した情報はすべて失われます。",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "販売の国",
+		"CreateNewProduct": "新しい製品を作成する",
+		"CreateProduct": "製品を作成する",
+		"EnableDrawMode": "描画モードを有効にする",
+		"Flavor": "風味",
+		"NextProof": "Next proof",
+		"PreviousProof": "以前の証明",
+		"ProductAlreadyExists": "製品はすでに存在します",
+		"ProofNumberOfOutProofs": "証明 ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "販売店舗",
+		"UseDrawModeToAddImage": "製品画像を追加するには、プルーフ写真の下の描画モードを有効にし、製品の周囲に四角形を描画します。"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "最近の証明のいずれかを選択"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "貢献する"
+		},
+		"CreateOffProduct": {
+			"Title": "製品アシスタントを作成する"
 		},
 		"Experiments": {
 			"Title": "Experiments"
