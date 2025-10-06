@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Nggawe produk anyar",
+		"CreateProduct": "Nggawe produk",
+		"EnableDrawMode": "Aktifake mode tarik",
+		"Flavor": "rasa",
+		"NextProof": "Next proof",
+		"PreviousProof": "Bukti sadurunge",
+		"ProductAlreadyExists": "Produk wis ana",
+		"ProofNumberOfOutProofs": "Bukti ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Toko sing didol",
+		"UseDrawModeToAddImage": "Kanggo nambah gambar produk, aktifake mode gambar ing ngisor gambar bukti lan tarik persegi dowo sak produk."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Nggawe Product Assistant"
 		},
 		"Experiments": {
 			"Title": "Experiments"
