@@ -15,12 +15,12 @@
     <v-window-item value="list">
       <v-row class="mt-0 mb-1">
         <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
-          <PriceCard :price="price" :product="price.product" :hideProductLocation="true" elevation="1" height="100%" />
+          <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
         </v-col>
       </v-row>
     </v-window-item>
     <v-window-item value="table">
-      <PriceTable class="mt-3 mb-3" :priceList="priceList" source="location" />
+      <PriceTable class="mt-3 mb-3" :priceList="priceList" source="user" />
     </v-window-item>
     <v-window-item value="map">
       <v-row class="mt-0 mb-1">

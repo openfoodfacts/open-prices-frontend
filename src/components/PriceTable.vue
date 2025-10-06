@@ -48,7 +48,7 @@ export default {
     source: {
       type: String,
       default: 'product',
-      examples: ['product', 'proof', 'location']
+      examples: ['product', 'proof', 'location', 'user', 'date']
     },
     proof: {
       type: Object,
@@ -58,23 +58,11 @@ export default {
   data() {
     return {
       tablePageLimit: -1,  // all items
-      productPriceHeaders: [
+      defaultPriceHeaders: [
+        { title: 'Product', key: 'product_name' },
+        { title: 'Details', key: 'product_details', sortable: false },
         { title: 'Location', key: 'location', sortRaw (a, b) { return a.location_id - b.location_id } },
         { title: 'Date', key: 'date'},
-        { title: 'Price', key: 'price' },
-        { title: 'Added', key: 'created' },
-        // { title: 'Actions', key: 'actions' },
-      ],
-      proofPriceHeaders: [
-        { title: 'Product', key: 'product_name' },
-        { title: 'Details', key: 'product_details', sortable: false },
-        { title: 'Price', key: 'price' },
-        { title: 'Added', key: 'created' },
-        // { title: 'Actions', key: 'actions' },
-      ],
-      locationPriceHeaders: [
-        { title: 'Product', key: 'product_name' },
-        { title: 'Details', key: 'product_details', sortable: false },
         { title: 'Price', key: 'price' },
         { title: 'Added', key: 'created' },
         // { title: 'Actions', key: 'actions' },
@@ -106,8 +94,17 @@ export default {
     headers() {
       if (this.sourceIsProof && this.userIsProofOwner && this.proofIsTypeReceipt) {
         return this.proofReceiptPriceOwnerHeaders
+      } else if (this.source === 'product') {
+        return this.defaultPriceHeaders.filter(h => !['product_name', 'product_details'].includes(h.key))
+      } else if (this.source === 'location') {
+        return this.defaultPriceHeaders.filter(h => !['location'].includes(h.key))
+      } else if (this.source === 'proof') {
+        return this.defaultPriceHeaders.filter(h => !['location', 'date'].includes(h.key))
+      } else if (this.source === 'date') {
+        return this.defaultPriceHeaders.filter(h => !['date'].includes(h.key))
+      } else {
+        return this.defaultPriceHeaders
       }
-      return this[`${this.source}PriceHeaders`]
     }
   },
   methods: {
