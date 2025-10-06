@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "नवीन उत्पादन तयार करा",
+		"CreateProduct": "उत्पादन तयार करा",
+		"EnableDrawMode": "ड्रॉ मोड सक्षम करा",
+		"Flavor": "चव",
+		"NextProof": "Next proof",
+		"PreviousProof": "मागील पुरावा",
+		"ProductAlreadyExists": "उत्पादन आधीच अस्तित्वात आहे",
+		"ProofNumberOfOutProofs": "पुरावा ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "विक्री केलेली दुकाने",
+		"UseDrawModeToAddImage": "उत्पादनाची प्रतिमा जोडण्यासाठी, प्रूफ चित्राच्या खाली ड्रॉ मोड सक्षम करा आणि उत्पादनाभोवती एक आयत काढा."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "उत्पादन सहाय्यक तयार करा"
 		},
 		"Experiments": {
 			"Title": "Experiments"
