@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Aw bɛ fɛn kura dɔ da",
+		"CreateProduct": "Fɛn dilannen dabɔ",
+		"EnableDrawMode": "A’ ye ja cogoya daminɛ",
+		"Flavor": "Flavor (Dɔgɔtɔrɔso).",
+		"NextProof": "Next proof",
+		"PreviousProof": "Dalilu tɛmɛnenw",
+		"ProductAlreadyExists": "Fɛn min dilannen don, o bɛ yen kaban",
+		"ProofNumberOfOutProofs": "Dalilu ({numberOfOutProofs}/{totalNumberOfProofs}) .",
+		"StoresWhereSold": "Butigiw bɛ feere yɔrɔ minnu na",
+		"UseDrawModeToAddImage": "Walasa ka fɛn dilannen ja dɔ fara a kan, i ka ja cogoya kɛ dalilu ja jukɔrɔ ani ka rectangle ja fɛn dilannen lamini na."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Fɛnw dɛmɛbaga (Product Assistant) dabɔ"
 		},
 		"Experiments": {
 			"Title": "Experiments"
