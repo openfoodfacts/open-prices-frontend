@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Ƙirƙiri sabon samfuri",
+		"CreateProduct": "Ƙirƙiri samfur",
+		"EnableDrawMode": "Kunna yanayin zane",
+		"Flavor": "Dadi",
+		"NextProof": "Next proof",
+		"PreviousProof": "Hujja ta baya",
+		"ProductAlreadyExists": "samfur ya riga ya wanzu",
+		"ProofNumberOfOutProofs": "Hujja ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Stores inda aka sayar",
+		"UseDrawModeToAddImage": "Don ƙara hoton samfur, kunna yanayin zana ƙasan hoton shaida kuma zana rectangle kewaye da samfurin."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Ƙirƙiri Mataimakin Samfura"
 		},
 		"Experiments": {
 			"Title": "Experiments"
