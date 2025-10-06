@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Cruthaigh táirge nua",
+		"CreateProduct": "Cruthaigh táirge",
+		"EnableDrawMode": "Cumasaigh mód tarraingthe",
+		"Flavor": "Blas",
+		"NextProof": "Next proof",
+		"PreviousProof": "Cruthúnas roimhe seo",
+		"ProductAlreadyExists": "Tá an táirge ann cheana féin",
+		"ProofNumberOfOutProofs": "Cruthúnas ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Siopaí inar díoladh iad",
+		"UseDrawModeToAddImage": "Chun íomhá táirge a chur leis, cumasaigh mód tarraingthe faoin bpictiúr cruthúnais agus tarraing dronuilleog timpeall an táirge."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Cur"
+		},
+		"CreateOffProduct": {
+			"Title": "Cruthaigh Cúntóir Táirgí"
 		},
 		"Experiments": {
 			"Title": "Experiments"
