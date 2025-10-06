@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Országok, ahol kapható",
+		"CreateNewProduct": "Új termék létrehozása",
+		"CreateProduct": "Termék létrehozása",
+		"EnableDrawMode": "Rajzolás mód engedélyezése",
+		"Flavor": "Aroma",
+		"NextProof": "Next proof",
+		"PreviousProof": "Korábbi bizonyíték",
+		"ProductAlreadyExists": "A termék már létezik",
+		"ProofNumberOfOutProofs": "Bizonyítás ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Üzletek, ahol árusítják",
+		"UseDrawModeToAddImage": "Termékkép hozzáadásához engedélyezze a rajzolási módot a próbakép alatt, és rajzoljon egy téglalapot a termék köré."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Hozzájárulás"
+		},
+		"CreateOffProduct": {
+			"Title": "Terméksegéd létrehozása"
 		},
 		"Experiments": {
 			"Title": "Experiments"
