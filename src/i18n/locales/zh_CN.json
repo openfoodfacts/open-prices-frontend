@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "您将被重定向到“设置”页面，但会丢失您在此页面上输入的所有信息。",
 		"Select": "选择 {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "可出售的国家",
+		"CreateNewProduct": "创建新产品",
+		"CreateProduct": "创建产品",
+		"EnableDrawMode": "启用绘图模式",
+		"Flavor": "味道",
+		"NextProof": "Next proof",
+		"PreviousProof": "先前的证明",
+		"ProductAlreadyExists": "产品已存在",
+		"ProofNumberOfOutProofs": "证明（{numberOfOutProofs}/{totalNumberOfProofs}）",
+		"StoresWhereSold": "销售商店",
+		"UseDrawModeToAddImage": "要添加产品图像，请在校样图片下方启用绘图模式并在产品周围绘制一个矩形。"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "选择您最近的一个校样"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "贡献"
+		},
+		"CreateOffProduct": {
+			"Title": "创建产品助理"
 		},
 		"Experiments": {
 			"Title": "Experiments"
