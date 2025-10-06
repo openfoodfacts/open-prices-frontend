@@ -17,7 +17,7 @@
     <v-col cols="12" md="6">
       <v-form @submit.prevent="loadProductInfo">
         <v-card
-          class="border-transparent mb-4"
+          class="mb-4"
           :title="$t('Common.BarcodeType')"
           prepend-icon="mdi-tag-plus-outline"
           height="100%"
@@ -36,7 +36,7 @@
               persistent-hint
             />
             <v-row class="mt-0">
-              <v-col v-for="missingProduct in missingProductsWithPrices" :key="missingProduct" cols="12" sm="6" md="4" xl="3">
+              <v-col v-for="missingProduct in missingProductsWithPrices" :key="missingProduct" cols="12" sm="6">
                 <ProductCard :product="missingProduct" elevation="1" height="100%" readonly @click="missingProductClicked(missingProduct)" />
               </v-col>
             </v-row>
@@ -65,9 +65,9 @@
     <v-col cols="12" md="6">
       <v-form @submit.prevent="createProduct">
         <v-card
-          class="border-transparent mb-4"
+          class="mb-4"
           :title="$t('AddPriceSingle.ProductInfo.Title')"
-          prepend-icon="mdi-tag-plus-outline"
+          prepend-icon="mdi-database-plus-outline"
           height="100%"
         >
           <v-divider />
@@ -85,7 +85,6 @@
               variant="outlined"
               type="text"
               inputmode="decimal"
-              persistent-hint
             />
             <div class="text-subtitle-2">
               {{ $t('CreateOffProduct.Flavor') }}
@@ -106,7 +105,6 @@
               variant="outlined"
               type="text"
               inputmode="decimal"
-              persistent-hint
             />
             <div class="text-subtitle-2">
               {{ $t('Common.Quantity') }}
@@ -117,7 +115,6 @@
               variant="outlined"
               type="text"
               inputmode="decimal"
-              persistent-hint
             />
             <div v-if="!productExists">
               <div class="text-subtitle-2">
@@ -129,7 +126,6 @@
                 variant="outlined"
                 type="text"
                 inputmode="decimal"
-                persistent-hint
               />
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.StoresWhereSold') }}
@@ -140,7 +136,6 @@
                 variant="outlined"
                 type="text"
                 inputmode="decimal"
-                persistent-hint
               />
             </div>
             <div class="text-subtitle-2">
@@ -152,7 +147,7 @@
               variant="outlined"
               type="text"
               inputmode="decimal"
-              persistent-hint
+              hide-details="auto"
             />
             <v-chip-group>
               <v-chip v-for="category in suggestedCategories" :key="category" append-icon="mdi-plus" @click="addCategory(category)">
@@ -163,8 +158,10 @@
               <div class="text-subtitle-2">
                 {{ $t('Common.Image') }}
               </div>
-              <i>{{ $t('CreateOffProduct.UseDrawModeToAddImage') }}</i>
               <v-img v-if="drawnImageSrc" :src="drawnImageSrc" style="max-height:200px" />
+              <v-alert v-else class="mb-2" type="info" variant="outlined" density="compact">
+                {{ $t('CreateOffProduct.UseDrawModeToAddImage') }}
+              </v-alert>
             </div>
           </v-card-text>
           <v-divider />
@@ -187,9 +184,9 @@
     </v-col>
     <v-col v-if="priceList.length" cols="12" md="6">
       <v-card
-        class="border-transparent mb-4"
+        class="mb-4"
         :title="$t('CreateOffProduct.ProofNumberOfOutProofs', {numberOfOutProofs: shownProofIndex + 1, totalNumberOfProofs: priceList.length})"
-        prepend-icon="mdi-tag-plus-outline"
+        prepend-icon="mdi-image"
         height="100%"
       >
         <v-divider />
@@ -244,9 +241,9 @@
   <v-row v-if="step === 3">
     <v-col cols="12" md="12">
       <v-card
-        class="border-transparent mb-4"
-        title="Done"
-        prepend-icon="mdi-tag-plus-outline"
+        class="mb-4"
+        :title="$t('Common.Done')"
+        prepend-icon="mdi-check-circle-outline"
         height="100%"
       >
         <v-divider />
@@ -318,9 +315,6 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    IMG_URL() {
-      return import.meta.env.VITE_OPEN_PRICES_APP_URL + '/img/'
-    },
     stepItemList() {
       return [
         {
@@ -343,13 +337,13 @@ export default {
   },
   mounted() {
     if (this.$route.query.flavor) {
-        this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
+      this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
     } else {
-        this.productForm.flavor = constants.PRODUCT_SOURCE_LIST[0].value
+      this.productForm.flavor = constants.PRODUCT_SOURCE_LIST[0].value
     }
     if (this.$route.query.product_code) {
-        this.productForm.product_code = this.$route.query.product_code
-        this.loadProductInfo()
+      this.productForm.product_code = this.$route.query.product_code
+      this.loadProductInfo()
     } else {
       this.getMissingProductsWithPrices()
     }
@@ -423,7 +417,6 @@ export default {
     getMissingProductsWithPrices() {
       return api.getProducts({ price_count__gte: 1, source__isnull: true, order_by: '-proof_count' })
         .then((data) => {
-          console.log(data.items)
           this.missingProductsWithPrices = data.items
         })
     },
