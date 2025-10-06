@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Mga bansa kung saan ibinebenta",
+		"CreateNewProduct": "Gumawa ng bagong produkto",
+		"CreateProduct": "Lumikha ng produkto",
+		"EnableDrawMode": "I-enable ang draw mode",
+		"Flavor": "lasa",
+		"NextProof": "Next proof",
+		"PreviousProof": "Nakaraang patunay",
+		"ProductAlreadyExists": "Umiiral na ang produkto",
+		"ProofNumberOfOutProofs": "Patunay ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Mga tindahan kung saan ibinebenta",
+		"UseDrawModeToAddImage": "Upang magdagdag ng larawan ng produkto, paganahin ang draw mode sa ibaba ng patunay na larawan at gumuhit ng parihaba sa palibot ng produkto."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Mag-ambag"
+		},
+		"CreateOffProduct": {
+			"Title": "Gumawa ng Product Assistant"
 		},
 		"Experiments": {
 			"Title": "Experiments"
