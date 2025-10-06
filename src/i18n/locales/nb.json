@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "Du vil bli omdirigert til Innstillinger-siden, men vil miste all informasjon du har skrevet inn på denne siden.",
 		"Select": "Velg {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Land hvor produktet selges",
+		"CreateNewProduct": "Opprett et nytt produkt",
+		"CreateProduct": "Opprett produkt",
+		"EnableDrawMode": "Aktiver tegne modus",
+		"Flavor": "Smak",
+		"NextProof": "Next proof",
+		"PreviousProof": "Tidligere bevis",
+		"ProductAlreadyExists": "Produktet finnes allerede",
+		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Butikker hvor produktet selges",
+		"UseDrawModeToAddImage": "For å legge til et produktbilde kan du tegne modusen under et sikkert bilde og tegne et rektangel rundt produktet."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Bidra"
+		},
+		"CreateOffProduct": {
+			"Title": "Opprett produktassistent"
 		},
 		"Experiments": {
 			"Title": "Experiments"
