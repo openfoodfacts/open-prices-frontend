@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Loo uus toode",
+		"CreateProduct": "Loo toode",
+		"EnableDrawMode": "Joonistusrežiimi lubamine",
+		"Flavor": "Maitse",
+		"NextProof": "Next proof",
+		"PreviousProof": "Eelmine tõestus",
+		"ProductAlreadyExists": "Toode on juba olemas",
+		"ProofNumberOfOutProofs": "Tõestus ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Kauplused, kus müüakse",
+		"UseDrawModeToAddImage": "Tootepildi lisamiseks luba joonistusrežiim proovipildi all ja joonista toote ümber ristkülik."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Tee kaastööd"
+		},
+		"CreateOffProduct": {
+			"Title": "Tooteassistendi loomine"
 		},
 		"Experiments": {
 			"Title": "Experiments"
