@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "תתבצע הפניה לעמוד ההגדרות אך המידע שמילאת בדף הזה יאבד.",
 		"Select": "בחירה ב{currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "ארצות בהן נמכר",
+		"CreateNewProduct": "צור מוצר חדש",
+		"CreateProduct": "צור מוצר",
+		"EnableDrawMode": "הפעלת מצב ציור",
+		"Flavor": "טַעַם",
+		"NextProof": "ההוכחה הבאה",
+		"PreviousProof": "הוכחה קודמת",
+		"ProductAlreadyExists": "המוצר כבר קיים",
+		"ProofNumberOfOutProofs": "הוכחה ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "חנויות בהן נמכרו",
+		"UseDrawModeToAddImage": "כדי להוסיף תמונת מוצר, הפעל את מצב הציור מתחת לתמונת ההוכחה וצייר מלבן סביב המוצר."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "נא לבחור אחת מההוכחות העדכניות שלך"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "לתרום"
+		},
+		"CreateOffProduct": {
+			"Title": "צור עוזר מוצר"
 		},
 		"Experiments": {
 			"Title": "ניסויים"
