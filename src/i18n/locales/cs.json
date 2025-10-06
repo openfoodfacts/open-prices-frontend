@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "Budete přesměrováni na stránku Nastavení, ale ztratíte veškeré informace, které jste zadali na této stránce.",
 		"Select": "Vybrat {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Země prodeje",
+		"CreateNewProduct": "Vytvořte nový produkt",
+		"CreateProduct": "Vytvořit produkt",
+		"EnableDrawMode": "Povolit režim kreslení",
+		"Flavor": "Chuť",
+		"NextProof": "Další důkaz",
+		"PreviousProof": "Předchozí důkaz",
+		"ProductAlreadyExists": "Produkt již existuje",
+		"ProofNumberOfOutProofs": "Důkaz ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Obchody, kde se prodává",
+		"UseDrawModeToAddImage": "Chcete-li přidat obrázek produktu, povolte režim kreslení pod zkušebním obrázkem a nakreslete obdélník kolem produktu."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Vyberte jeden ze svých nedávných dokladů"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Přispět"
+		},
+		"CreateOffProduct": {
+			"Title": "Vytvořit asistenta produktu"
 		},
 		"Experiments": {
 			"Title": "Experimenty"
