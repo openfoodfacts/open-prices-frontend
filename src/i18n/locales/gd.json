@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Cruthaich toradh ùr",
+		"CreateProduct": "Cruthaich toradh",
+		"EnableDrawMode": "Cuir modh tarraing an gnìomh",
+		"Flavor": "Blas",
+		"NextProof": "Next proof",
+		"PreviousProof": "Fianais roimhe",
+		"ProductAlreadyExists": "Tha an toradh ann mu thràth",
+		"ProofNumberOfOutProofs": "Dearbhadh ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Bùthan far an deach an reic",
+		"UseDrawModeToAddImage": "Gus ìomhaigh toraidh a chur ris, cuir modh tarraing an gnìomh fon dealbh dearbhaidh agus tarraing ceart-cheàrnach timcheall an toraidh."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Cruthaich Neach-cuideachaidh Bathar"
 		},
 		"Experiments": {
 			"Title": "Experiments"
