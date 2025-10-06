@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Búa til nýja vöru",
+		"CreateProduct": "Búa til vöru",
+		"EnableDrawMode": "Virkja teikningarstillingu",
+		"Flavor": "Bragð",
+		"NextProof": "Next proof",
+		"PreviousProof": "Fyrri sönnun",
+		"ProductAlreadyExists": "Vara er þegar til staðar",
+		"ProofNumberOfOutProofs": "Sönnun ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Verslanir þar sem seld var",
+		"UseDrawModeToAddImage": "Til að bæta við mynd af vörunni skaltu virkja teiknistillingu fyrir neðan sönnunarmyndina og teikna rétthyrning í kringum vöruna."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Búa til vöruaðstoðarmann"
 		},
 		"Experiments": {
 			"Title": "Experiments"
