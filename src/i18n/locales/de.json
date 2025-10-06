@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "Sie werden zur Seite „Einstellungen“ weitergeleitet, verlieren jedoch alle Informationen, die Sie auf dieser Seite eingegeben haben.",
 		"Select": "{currency_code} auswählen"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Vertriebsländer",
+		"CreateNewProduct": "Neues Produkt erstellen",
+		"CreateProduct": "Produkt erstellen",
+		"EnableDrawMode": "Zeichenmodus aktivieren",
+		"Flavor": "Geschmack",
+		"NextProof": "Nächster Nachweis",
+		"PreviousProof": "Vorheriger Beweis",
+		"ProductAlreadyExists": "Produkt existiert bereits",
+		"ProofNumberOfOutProofs": "Beweis ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Geschäfte, in denen verkauft wird",
+		"UseDrawModeToAddImage": "Um ein Produktbild hinzuzufügen, aktivieren Sie den Zeichenmodus unter dem Proofbild und zeichnen Sie ein Rechteck um das Produkt."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Wählen Sie einen Ihrer aktuellen Nachweise"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Mitwirken"
+		},
+		"CreateOffProduct": {
+			"Title": "Produktassistent erstellen"
 		},
 		"Experiments": {
 			"Title": "Experimente"
