@@ -412,6 +412,32 @@ export default {
     .then((response) => response.json())
   },
 
+  updateOffProduct(productCode, inputData = {}) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}/off-update?${buildURLParams()}`
+    return fetch(url, {
+      method: 'PATCH',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`
+      }),
+      body: JSON.stringify(inputData),
+    })
+    .then((response) => response.json())
+  },
+
+  updateOffProductImage(productCode, inputData = {}) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/products/code/${productCode}/off-upload-image?${buildURLParams()}`
+    return fetch(url, {
+      method: 'PATCH',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`
+      }),
+      body: JSON.stringify(inputData),
+    })
+    .then((response) => response.json())
+  },
+
   createLocationOnline(inputData) {
     const store = useAppStore()
     const data = filterBodyWithAllowedKeys(inputData, LOCATION_ONLINE_CREATE_FIELDS)
