@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Gadzira chigadzirwa chitsva",
+		"CreateProduct": "Gadzira chigadzirwa",
+		"EnableDrawMode": "Bvisa maitiro ekudhirowa",
+		"Flavor": "Flavour",
+		"NextProof": "Next proof",
+		"PreviousProof": "Umbowo hwapfuura",
+		"ProductAlreadyExists": "Chigadzirwa chatovako",
+		"ProofNumberOfOutProofs": "Humbowo ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Zvitoro zvinotengeswa",
+		"UseDrawModeToAddImage": "Kuti uwedzere mufananidzo wechigadzirwa, gonesa kudhirowa modhi pazasi chiratidzo chemufananidzo uye dhirowa rectangle yakatenderedza chigadzirwa."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Gadzira Chigadzirwa Mubatsiri"
 		},
 		"Experiments": {
 			"Title": "Experiments"

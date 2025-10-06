@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Països on es va vendre",
+		"CreateNewProduct": "Crea un producte nou",
+		"CreateProduct": "Crear producte",
+		"EnableDrawMode": "Activa el mode de dibuix",
+		"Flavor": "Sabor",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prova prèvia",
+		"ProductAlreadyExists": "El producte ja existeix",
+		"ProofNumberOfOutProofs": "Prova ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Botigues on es venen",
+		"UseDrawModeToAddImage": "Per afegir una imatge de producte, activeu el mode de dibuix a sota de la imatge de prova i dibuixeu un rectangle al voltant del producte."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribuir"
+		},
+		"CreateOffProduct": {
+			"Title": "Crea Assistent de Producte"
 		},
 		"Experiments": {
 			"Title": "Experiments"

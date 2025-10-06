@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "Ayarlar sayfasına yönlendirileceksiniz ancak bu sayfaya girdiğiniz tüm bilgileri kaybedeceksiniz.",
 		"Select": "{currency_code} öğesini seçin"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Satılan ülkeler",
+		"CreateNewProduct": "Yeni bir ürün yaratın",
+		"CreateProduct": "Ürün oluştur",
+		"EnableDrawMode": "Çizim modunu etkinleştir",
+		"Flavor": "Lezzet",
+		"NextProof": "Bir sonraki kanıt",
+		"PreviousProof": "Önceki kanıt",
+		"ProductAlreadyExists": "Ürün zaten mevcut",
+		"ProofNumberOfOutProofs": "Kanıt ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Satılan mağazalar",
+		"UseDrawModeToAddImage": "Ürün resmi eklemek için prova resminin altındaki çizim modunu aktif hale getirin ve ürünün etrafına bir dikdörtgen çizin."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Son bedellerinizden birini seçin"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Destekleyebilirsiniz"
+		},
+		"CreateOffProduct": {
+			"Title": "Ürün Asistanı Oluştur"
 		},
 		"Experiments": {
 			"Title": "Deneyler"

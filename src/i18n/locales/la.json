@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Novum productum crea",
+		"CreateProduct": "Crea productum",
+		"EnableDrawMode": "Modum delineationis activa",
+		"Flavor": "Sapor",
+		"NextProof": "Next proof",
+		"PreviousProof": "Probatio prior",
+		"ProductAlreadyExists": "Productum iam exstat.",
+		"ProofNumberOfOutProofs": "Demonstratio ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Tabernae ubi venditi sunt",
+		"UseDrawModeToAddImage": "Ad imaginem producti addendam, modum delineationis sub imagine probationis activa et rectangulum circum productum designa."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Crea Adiutorem Producti"
 		},
 		"Experiments": {
 			"Title": "Experiments"

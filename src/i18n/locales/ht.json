@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Chwazi {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Kreye yon nouvo pwodwi",
+		"CreateProduct": "Kreye pwodwi",
+		"EnableDrawMode": "Aktive mòd desen an",
+		"Flavor": "Gou",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prèv anvan an",
+		"ProductAlreadyExists": "Pwodwi a deja egziste",
+		"ProofNumberOfOutProofs": "Prèv ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Magazen kote yo vann",
+		"UseDrawModeToAddImage": "Pou ajoute yon imaj pwodwi, aktive mòd desen anba foto prèv la epi trase yon rektang otou pwodwi a."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Kreye Asistan Pwodwi"
 		},
 		"Experiments": {
 			"Title": "Experiments"

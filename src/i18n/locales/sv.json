@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Välj {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Länder där såld",
+		"CreateNewProduct": "Skapa en ny produkt",
+		"CreateProduct": "Skapa produkt",
+		"EnableDrawMode": "Aktivera ritläge",
+		"Flavor": "Smak",
+		"NextProof": "Next proof",
+		"PreviousProof": "Tidigare bevis",
+		"ProductAlreadyExists": "Produkten finns redan",
+		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Butiker där såldes",
+		"UseDrawModeToAddImage": "För att lägga till en produktbild, aktivera ritläget under korrekturbilden och rita en rektangel runt produkten."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Bidra"
+		},
+		"CreateOffProduct": {
+			"Title": "Skapa produktassistent"
 		},
 		"Experiments": {
 			"Title": "Experiment"

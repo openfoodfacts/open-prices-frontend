@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Etsa sehlahisoa se secha",
+		"CreateProduct": "Etsa sehlahisoa",
+		"EnableDrawMode": "Lumella mokhoa oa ho hula",
+		"Flavor": "Tatso",
+		"NextProof": "Next proof",
+		"PreviousProof": "Bopaki bo fetileng",
+		"ProductAlreadyExists": "Sehlahisoa se se se le teng",
+		"ProofNumberOfOutProofs": "Bopaki ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Mabenkele moo a rekisoang teng",
+		"UseDrawModeToAddImage": "Ho kenya setšoantšo sa sehlahisoa, lumella mokhoa oa ho taka ka tlase ho setšoantšo sa bopaki 'me u toroe khutlonnetsepa ho potoloha sehlahisoa."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Etsa Mothusi oa Sehlahisoa"
 		},
 		"Experiments": {
 			"Title": "Experiments"

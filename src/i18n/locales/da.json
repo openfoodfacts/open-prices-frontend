@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "Du vil blive omdirigeret til siden Indstillinger, men vil miste alle oplysninger, du har indtastet på denne side.",
 		"Select": "Vælg {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Lande, hvorfra der sælges",
+		"CreateNewProduct": "Opret et nyt produkt",
+		"CreateProduct": "Opret produkt",
+		"EnableDrawMode": "Aktivér tegnetilstand",
+		"Flavor": "Smag",
+		"NextProof": "Næste bevis",
+		"PreviousProof": "Tidligere bevis",
+		"ProductAlreadyExists": "Produktet findes allerede",
+		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Butikker hvor der blev solgt",
+		"UseDrawModeToAddImage": "For at tilføje et produktbillede skal du aktivere tegnetilstand under prøvebilledet og tegne et rektangel omkring produktet."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Vælg et af dine seneste beviser"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Bidrag"
+		},
+		"CreateOffProduct": {
+			"Title": "Opret produktassistent"
 		},
 		"Experiments": {
 			"Title": "Eksperimenter"

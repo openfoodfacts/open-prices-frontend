@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "ಹೊಸ ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಿ",
+		"CreateProduct": "ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಿ",
+		"EnableDrawMode": "ಡ್ರಾ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+		"Flavor": "ಸುವಾಸನೆ",
+		"NextProof": "Next proof",
+		"PreviousProof": "ಹಿಂದಿನ ಪುರಾವೆ",
+		"ProductAlreadyExists": "ಉತ್ಪನ್ನ ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ.",
+		"ProofNumberOfOutProofs": "ಪುರಾವೆ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "ಮಾರಾಟವಾಗುವ ಅಂಗಡಿಗಳು",
+		"UseDrawModeToAddImage": "ಉತ್ಪನ್ನ ಚಿತ್ರವನ್ನು ಸೇರಿಸಲು, ಪ್ರೂಫ್ ಚಿತ್ರದ ಕೆಳಗೆ ಡ್ರಾ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಉತ್ಪನ್ನದ ಸುತ್ತಲೂ ಒಂದು ಆಯತವನ್ನು ಎಳೆಯಿರಿ."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "ಉತ್ಪನ್ನ ಸಹಾಯಕವನ್ನು ರಚಿಸಿ"
 		},
 		"Experiments": {
 			"Title": "Experiments"

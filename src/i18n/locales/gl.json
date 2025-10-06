@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Crear un novo produto",
+		"CreateProduct": "Crear produto",
+		"EnableDrawMode": "Activar o modo de debuxo",
+		"Flavor": "Sabor",
+		"NextProof": "Next proof",
+		"PreviousProof": "Proba anterior",
+		"ProductAlreadyExists": "O produto xa existe",
+		"ProofNumberOfOutProofs": "Proba ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Tendas onde se venden",
+		"UseDrawModeToAddImage": "Para engadir unha imaxe do produto, activa o modo de debuxo debaixo da imaxe de proba e debuxa un rectángulo arredor do produto."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Colaborar"
+		},
+		"CreateOffProduct": {
+			"Title": "Crear asistente de produto"
 		},
 		"Experiments": {
 			"Title": "Experiments"

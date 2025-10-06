@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "يېڭى مەھسۇلات يارىتىڭ",
+		"CreateProduct": "مەھسۇلات يارىتىش",
+		"EnableDrawMode": "سىزىش ھالىتىنى قوزغىتىڭ",
+		"Flavor": "تەم",
+		"NextProof": "Next proof",
+		"PreviousProof": "ئالدىنقى ئىسپات",
+		"ProductAlreadyExists": "مەھسۇلات ئاللىبۇرۇن مەۋجۇت",
+		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "سېتىلىدىغان دۇكانلار",
+		"UseDrawModeToAddImage": "مەھسۇلات رەسىمىنى قوشۇش ئۈچۈن ، رەسىمنىڭ ئاستىدىكى رەسىم سىزىش ھالىتىنى قوزغىتىپ ، مەھسۇلاتنىڭ ئەتراپىغا تىك تۆت بۇلۇڭ سىزىڭ."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "مەھسۇلات ياردەمچىسى قۇرۇش"
 		},
 		"Experiments": {
 			"Title": "Experiments"

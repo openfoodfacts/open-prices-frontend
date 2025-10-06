@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "නව නිෂ්පාදනයක් සාදන්න",
+		"CreateProduct": "නිෂ්පාදනය සාදන්න",
+		"EnableDrawMode": "ඇඳීමේ ප්‍රකාරය සබල කරන්න",
+		"Flavor": "රසය",
+		"NextProof": "Next proof",
+		"PreviousProof": "පෙර සාක්ෂිය",
+		"ProductAlreadyExists": "නිෂ්පාදනය දැනටමත් පවතී",
+		"ProofNumberOfOutProofs": "සාධනය ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "විකුණන ලද වෙළඳසැල්",
+		"UseDrawModeToAddImage": "නිෂ්පාදන රූපයක් එක් කිරීමට, සාධන පින්තූරයට පහළින් ඇඳීමේ මාදිලිය සක්‍රීය කර නිෂ්පාදනය වටා සෘජුකෝණාස්‍රයක් අඳින්න."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "නිෂ්පාදන සහායක සාදන්න"
 		},
 		"Experiments": {
 			"Title": "Experiments"

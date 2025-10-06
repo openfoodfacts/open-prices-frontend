@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Dala umkhicito lomusha",
+		"CreateProduct": "Dala umkhicito",
+		"EnableDrawMode": "Nika emandla imodi yekudvweba",
+		"Flavor": "Kunambitseka",
+		"NextProof": "Next proof",
+		"PreviousProof": "Bufakazi bangaphambilini",
+		"ProductAlreadyExists": "Umkhicito sewuvele ukhona",
+		"ProofNumberOfOutProofs": "Bufakazi ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Titolo lapho kutsengiswa khona",
+		"UseDrawModeToAddImage": "Kufaka sitfombe semkhicito, nika emandla imodi yekudvweba ngephansi kwesitfombe sebufakazi bese udvweba unxande lozungete lomkhicito."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Dala Umsiti Wemkhicito"
 		},
 		"Experiments": {
 			"Title": "Experiments"

@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "Būsite nukreipti į puslapį „Nuostatos“, bet prarasite visą šiame puslapyje įvestą informaciją.",
 		"Select": "Pasirinkti {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Sukurkite naują produktą",
+		"CreateProduct": "Sukurti produktą",
+		"EnableDrawMode": "Įjungti piešimo režimą",
+		"Flavor": "Skonis",
+		"NextProof": "Kitas įrodymas",
+		"PreviousProof": "Ankstesnis įrodymas",
+		"ProductAlreadyExists": "Produktas jau yra",
+		"ProofNumberOfOutProofs": "Įrodymas ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Parduotuvės, kuriose parduodama",
+		"UseDrawModeToAddImage": "Norėdami pridėti produkto paveikslėlį, įjunkite piešimo režimą po bandomąja nuotrauka ir nubrėžkite stačiakampį aplink produktą."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Prisidėti"
+		},
+		"CreateOffProduct": {
+			"Title": "Sukurti produkto asistentą"
 		},
 		"Experiments": {
 			"Title": "Eksperimentai"

@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Државе у којима се продаје",
+		"CreateNewProduct": "Create a new product",
+		"CreateProduct": "Create product",
+		"EnableDrawMode": "Enable draw mode",
+		"Flavor": "Flavor",
+		"NextProof": "Next proof",
+		"PreviousProof": "Previous proof",
+		"ProductAlreadyExists": "Product already exists",
+		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Stores where sold",
+		"UseDrawModeToAddImage": "To add a product image, enable draw mode below proof picture and draw a rectangle around the product."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product Assistant"
 		},
 		"Experiments": {
 			"Title": "Experiments"

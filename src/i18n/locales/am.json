@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "አዲስ ምርት ይፍጠሩ",
+		"CreateProduct": "ምርት ይፍጠሩ",
+		"EnableDrawMode": "የስዕል ሁነታን አንቃ",
+		"Flavor": "ጣዕም",
+		"NextProof": "Next proof",
+		"PreviousProof": "የቀድሞ ማረጋገጫ",
+		"ProductAlreadyExists": "ምርቱ አስቀድሞ አለ።",
+		"ProofNumberOfOutProofs": "ማረጋገጫ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "የሚሸጡባቸው መደብሮች",
+		"UseDrawModeToAddImage": "የምርት ምስል ለመጨመር፣ ከማስረጃው ምስል በታች የስዕል ሁነታን ያንቁ እና በምርቱ ዙሪያ አራት ማዕዘን ይሳሉ።"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "የምርት ረዳት ይፍጠሩ"
 		},
 		"Experiments": {
 			"Title": "Experiments"

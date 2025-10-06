@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Creu cynnyrch newydd",
+		"CreateProduct": "Creu cynnyrch",
+		"EnableDrawMode": "Galluogi modd tynnu llun",
+		"Flavor": "Blas",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prawf blaenorol",
+		"ProductAlreadyExists": "Mae'r cynnyrch eisoes yn bodoli",
+		"ProofNumberOfOutProofs": "Prawf ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Siopau lle gwerthir",
+		"UseDrawModeToAddImage": "I ychwanegu delwedd cynnyrch, galluogwch y modd lluniadu islaw'r llun prawf a lluniwch betryal o amgylch y cynnyrch."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Creu Cynorthwyydd Cynnyrch"
 		},
 		"Experiments": {
 			"Title": "Experiments"

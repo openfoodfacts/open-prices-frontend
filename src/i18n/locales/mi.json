@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Waihangahia he hua hou",
+		"CreateProduct": "Waihanga hua",
+		"EnableDrawMode": "Whakahohehia te aratau tuhi",
+		"Flavor": "Te kakara",
+		"NextProof": "Next proof",
+		"PreviousProof": "Tuhinga o mua",
+		"ProductAlreadyExists": "Kua noho kē te hua",
+		"ProofNumberOfOutProofs": "Tohu ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Nga toa i hokona",
+		"UseDrawModeToAddImage": "Hei taapiri i te ahua hua, whakaahei te aratau tuhi i raro i te pikitia tohu ka toia he tapawha huri noa i te hua."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Waihanga Kaiawhina Hua"
 		},
 		"Experiments": {
 			"Title": "Experiments"

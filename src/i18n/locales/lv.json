@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Izveidot jaunu produktu",
+		"CreateProduct": "Izveidot produktu",
+		"EnableDrawMode": "Iespējot zīmēšanas režīmu",
+		"Flavor": "Garša",
+		"NextProof": "Next proof",
+		"PreviousProof": "Iepriekšējais pierādījums",
+		"ProductAlreadyExists": "Produkts jau pastāv",
+		"ProofNumberOfOutProofs": "Pierādījums ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Veikali, kuros tiek pārdots",
+		"UseDrawModeToAddImage": "Lai pievienotu produkta attēlu, zem korektūras attēla iespējojiet zīmēšanas režīmu un uzzīmējiet taisnstūri ap produktu."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Veicināt / atbalstīt"
+		},
+		"CreateOffProduct": {
+			"Title": "Izveidot produkta palīgu"
 		},
 		"Experiments": {
 			"Title": "Experiments"

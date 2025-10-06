@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Ստեղծեք նոր ապրանք",
+		"CreateProduct": "Ստեղծել ապրանք",
+		"EnableDrawMode": "Միացնել նկարելու ռեժիմը",
+		"Flavor": "Համը",
+		"NextProof": "Next proof",
+		"PreviousProof": "Նախորդ ապացույցը",
+		"ProductAlreadyExists": "Ապրանքն արդեն գոյություն ունի",
+		"ProofNumberOfOutProofs": "Ապացույց ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Խանութներ, որտեղ վաճառվում են",
+		"UseDrawModeToAddImage": "Արտադրանքի պատկեր ավելացնելու համար միացրեք «Նկարել» ռեժիմը «Պրոֆեսիոնալ նկարի տակ» և ապրանքի շուրջը գծեք ուղղանկյուն։"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Ստեղծեք ապրանքի օգնական"
 		},
 		"Experiments": {
 			"Title": "Experiments"

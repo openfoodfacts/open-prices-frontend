@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "ประเทศที่ขาย",
+		"CreateNewProduct": "สร้างผลิตภัณฑ์ใหม่",
+		"CreateProduct": "สร้างผลิตภัณฑ์",
+		"EnableDrawMode": "เปิดใช้งานโหมดการวาดภาพ",
+		"Flavor": "รสชาติ",
+		"NextProof": "Next proof",
+		"PreviousProof": "หลักฐานก่อนหน้า",
+		"ProductAlreadyExists": "สินค้ามีอยู่แล้ว",
+		"ProofNumberOfOutProofs": "พิสูจน์ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "ร้านค้าที่จำหน่าย",
+		"UseDrawModeToAddImage": "หากต้องการเพิ่มรูปภาพผลิตภัณฑ์ ให้เปิดใช้งานโหมดวาดภาพใต้ภาพตัวอย่าง และวาดรูปสี่เหลี่ยมผืนผ้ารอบๆ ผลิตภัณฑ์"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "ร่วมสนับสนุน"
+		},
+		"CreateOffProduct": {
+			"Title": "สร้างผู้ช่วยผลิตภัณฑ์"
 		},
 		"Experiments": {
 			"Title": "Experiments"

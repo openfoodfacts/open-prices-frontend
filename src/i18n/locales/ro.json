@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Țările unde se vinde",
+		"CreateNewProduct": "Creați un produs nou",
+		"CreateProduct": "Creați produsul",
+		"EnableDrawMode": "Activează modul de desenare",
+		"Flavor": "Aromă",
+		"NextProof": "Next proof",
+		"PreviousProof": "Dovada anterioară",
+		"ProductAlreadyExists": "Produsul există deja",
+		"ProofNumberOfOutProofs": "Dovadă ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Magazine unde se vând",
+		"UseDrawModeToAddImage": "Pentru a adăuga o imagine a produsului, activați modul de desenare sub imaginea de probă și desenați un dreptunghi în jurul produsului."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribuiți"
+		},
+		"CreateOffProduct": {
+			"Title": "Creați un asistent de produs"
 		},
 		"Experiments": {
 			"Title": "Experiments"

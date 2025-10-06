@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Creà un novu pruduttu",
+		"CreateProduct": "Creà un pruduttu",
+		"EnableDrawMode": "Attivà a modalità di disegnu",
+		"Flavor": "Sapore",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prova precedente",
+		"ProductAlreadyExists": "U pruduttu esiste digià",
+		"ProofNumberOfOutProofs": "Pruva ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Negozii induve si vendenu",
+		"UseDrawModeToAddImage": "Per aghjunghje una maghjina di pruduttu, attivate a modalità di disegnu sottu à l'imagine di prova è disegnate un rettangulu intornu à u pruduttu."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Crea Assistente di Produttu"
 		},
 		"Experiments": {
 			"Title": "Experiments"

@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Države, kjer se prodaja",
+		"CreateNewProduct": "Ustvari nov izdelek",
+		"CreateProduct": "Ustvari izdelek",
+		"EnableDrawMode": "Omogoči način risanja",
+		"Flavor": "Okus",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prejšnji dokaz",
+		"ProductAlreadyExists": "Izdelek že obstaja",
+		"ProofNumberOfOutProofs": "Dokaz ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Trgovine, kjer se prodaja",
+		"UseDrawModeToAddImage": "Če želite dodati sliko izdelka, omogočite način risanja pod poskusno sliko in narišite pravokotnik okoli izdelka."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Prispevaj"
+		},
+		"CreateOffProduct": {
+			"Title": "Ustvari pomočnika za izdelke"
 		},
 		"Experiments": {
 			"Title": "Experiments"

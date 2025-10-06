@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "هڪ نئين پراڊڪٽ ٺاهيو",
+		"CreateProduct": "پراڊڪٽ ٺاهيو",
+		"EnableDrawMode": "ڊرا موڊ کي فعال ڪريو",
+		"Flavor": "ذائقو",
+		"NextProof": "Next proof",
+		"PreviousProof": "پوئين ثبوت",
+		"ProductAlreadyExists": "پراڊڪٽ اڳ ۾ ئي موجود آهي.",
+		"ProofNumberOfOutProofs": "ثبوت ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "دڪان جتي وڪرو ڪيا ويا",
+		"UseDrawModeToAddImage": "پراڊڪٽ جي تصوير شامل ڪرڻ لاءِ، پروف تصوير جي هيٺان ڊرا موڊ کي فعال ڪريو ۽ پراڊڪٽ جي چوڌاري هڪ مستطيل ٺاهيو."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "پراڊڪٽ اسسٽنٽ ٺاهيو"
 		},
 		"Experiments": {
 			"Title": "Experiments"

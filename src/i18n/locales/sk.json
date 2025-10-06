@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Krajiny, kde sa predáva",
+		"CreateNewProduct": "Vytvoriť nový produkt",
+		"CreateProduct": "Vytvoriť produkt",
+		"EnableDrawMode": "Povoliť režim kreslenia",
+		"Flavor": "Príchuť",
+		"NextProof": "Next proof",
+		"PreviousProof": "Predchádzajúci dôkaz",
+		"ProductAlreadyExists": "Produkt už existuje",
+		"ProofNumberOfOutProofs": "Dôkaz ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Obchody, kde sa predáva",
+		"UseDrawModeToAddImage": "Ak chcete pridať obrázok produktu, povoľte režim kreslenia pod náhľadovým obrázkom a nakreslite obdĺžnik okolo produktu."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Prispieť"
+		},
+		"CreateOffProduct": {
+			"Title": "Vytvoriť asistenta produktu"
 		},
 		"Experiments": {
 			"Title": "Experiments"

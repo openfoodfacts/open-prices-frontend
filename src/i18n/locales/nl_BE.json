@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "U wordt doorgestuurd naar de pagina Instellingen, maar alle informatie die u op deze pagina heeft ingevoerd, gaat verloren.",
 		"Select": "Selecteer {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Verkooplanden",
+		"CreateNewProduct": "Een nieuw product maken",
+		"CreateProduct": "Product maken",
+		"EnableDrawMode": "Tekenmodus inschakelen",
+		"Flavor": "Smaak",
+		"NextProof": "Volgend bewijs",
+		"PreviousProof": "Vorig bewijs",
+		"ProductAlreadyExists": "Product bestaat al",
+		"ProofNumberOfOutProofs": "Bewijs ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Winkels waar verkocht",
+		"UseDrawModeToAddImage": "Om een productafbeelding toe te voegen, activeert u de tekenmodus onder de proeffoto en tekent u een rechthoek om het product."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Bijdragen"
+		},
+		"CreateOffProduct": {
+			"Title": "Productassistent maken"
 		},
 		"Experiments": {
 			"Title": "Experimenten"

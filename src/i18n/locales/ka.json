@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "შექმენით ახალი პროდუქტი",
+		"CreateProduct": "პროდუქტის შექმნა",
+		"EnableDrawMode": "ხატვის რეჟიმის ჩართვა",
+		"Flavor": "არომატი",
+		"NextProof": "Next proof",
+		"PreviousProof": "წინა მტკიცებულება",
+		"ProductAlreadyExists": "პროდუქტი უკვე არსებობს",
+		"ProofNumberOfOutProofs": "დამტკიცება ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "მაღაზიები, სადაც იყიდება",
+		"UseDrawModeToAddImage": "პროდუქტის სურათის დასამატებლად, ჩართეთ ხატვის რეჟიმი „პროპორციული სურათის ქვემოთ“ და დახაზეთ მართკუთხედი პროდუქტის გარშემო."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "პროდუქტის ასისტენტის შექმნა"
 		},
 		"Experiments": {
 			"Title": "Experiments"

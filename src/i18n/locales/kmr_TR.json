@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Berhemeke nû biafirîne",
+		"CreateProduct": "Berhemê biafirîne",
+		"EnableDrawMode": "Moda xêzkirinê çalak bike",
+		"Flavor": "Tam",
+		"NextProof": "Next proof",
+		"PreviousProof": "Delîla berê",
+		"ProductAlreadyExists": "Berhem jixwe heye",
+		"ProofNumberOfOutProofs": "Delîl ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Dikanên ku lê hatine firotin",
+		"UseDrawModeToAddImage": "Ji bo lêzêdekirina wêneyekî hilberê, moda xêzkirinê ya li jêr wêneyê îspatkirî çalak bike û li dora hilberê çargoşeyekî xêz bike."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Alîkarê Berhemê Biafirîne"
 		},
 		"Experiments": {
 			"Title": "Experiments"

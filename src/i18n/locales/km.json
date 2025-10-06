@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "បង្កើតផលិតផលថ្មី។",
+		"CreateProduct": "បង្កើតផលិតផល",
+		"EnableDrawMode": "បើករបៀបគូរ",
+		"Flavor": "រសជាតិ",
+		"NextProof": "Next proof",
+		"PreviousProof": "ភស្តុតាងពីមុន",
+		"ProductAlreadyExists": "ផលិតផលមានរួចហើយ",
+		"ProofNumberOfOutProofs": "ភស្តុតាង ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "ហាងដែលលក់",
+		"UseDrawModeToAddImage": "ដើម្បីបន្ថែមរូបភាពផលិតផល សូមបើករបៀបគូរខាងក្រោមរូបភាពភស្តុតាង ហើយគូរចតុកោណកែងជុំវិញផលិតផល។"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "បង្កើតជំនួយការផលិតផល"
 		},
 		"Experiments": {
 			"Title": "Experiments"

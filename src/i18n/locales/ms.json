@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Buat produk baharu",
+		"CreateProduct": "Buat produk",
+		"EnableDrawMode": "Dayakan mod cabutan",
+		"Flavor": "rasa",
+		"NextProof": "Next proof",
+		"PreviousProof": "Bukti sebelumnya",
+		"ProductAlreadyExists": "Produk sudah wujud",
+		"ProofNumberOfOutProofs": "Bukti ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Kedai di mana dijual",
+		"UseDrawModeToAddImage": "Untuk menambah imej produk, dayakan mod lukis di bawah gambar bukti dan lukis segi empat tepat di sekeliling produk."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Sumbang"
+		},
+		"CreateOffProduct": {
+			"Title": "Buat Pembantu Produk"
 		},
 		"Experiments": {
 			"Title": "Experiments"

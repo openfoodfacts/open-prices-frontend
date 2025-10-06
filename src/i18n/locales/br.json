@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Krouiñ ur produ nevez",
+		"CreateProduct": "Krouiñ ur produ",
+		"EnableDrawMode": "Gweredekaat ar mod tresañ",
+		"Flavor": "Blaz",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prouenn a-raok",
+		"ProductAlreadyExists": "Bez' ez eus eus ar produ dija",
+		"ProofNumberOfOutProofs": "Prouenn ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Gwerzhet e veze ar stalioù",
+		"UseDrawModeToAddImage": "Evit ouzhpennañ ur skeudenn produ, gweredekait ar mod tresañ dindan ar skeudenn prouiñ ha tresit ur reizhkorn tro-dro d'ar produ."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Kenoberiañ"
+		},
+		"CreateOffProduct": {
+			"Title": "Krouiñ skoazellerez produ"
 		},
 		"Experiments": {
 			"Title": "Experiments"

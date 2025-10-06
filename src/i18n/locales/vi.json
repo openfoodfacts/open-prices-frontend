@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Các quốc gia bán",
+		"CreateNewProduct": "Tạo sản phẩm mới",
+		"CreateProduct": "Tạo sản phẩm",
+		"EnableDrawMode": "Bật chế độ vẽ",
+		"Flavor": "Hương vị",
+		"NextProof": "Next proof",
+		"PreviousProof": "Bằng chứng trước đó",
+		"ProductAlreadyExists": "Sản phẩm đã tồn tại",
+		"ProofNumberOfOutProofs": "Bằng chứng ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Các cửa hàng đã bán",
+		"UseDrawModeToAddImage": "Để thêm hình ảnh sản phẩm, hãy bật chế độ vẽ bên dưới hình ảnh minh họa và vẽ một hình chữ nhật xung quanh sản phẩm."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Góp phần"
+		},
+		"CreateOffProduct": {
+			"Title": "Tạo Trợ lý sản phẩm"
 		},
 		"Experiments": {
 			"Title": "Experiments"

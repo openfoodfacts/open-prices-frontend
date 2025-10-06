@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "بلدان بيع",
+		"CreateNewProduct": "إنشاء منتج جديد",
+		"CreateProduct": "إنشاء المنتج",
+		"EnableDrawMode": "تمكين وضع الرسم",
+		"Flavor": "نكهة",
+		"NextProof": "Next proof",
+		"PreviousProof": "الدليل السابق",
+		"ProductAlreadyExists": "المنتج موجود بالفعل",
+		"ProofNumberOfOutProofs": "الدليل ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "المتاجر التي تباع فيها",
+		"UseDrawModeToAddImage": "لإضافة صورة المنتج، قم بتمكين وضع الرسم أسفل صورة الإثبات وارسم مستطيلاً حول المنتج."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "المساهمة"
+		},
+		"CreateOffProduct": {
+			"Title": "إنشاء مساعد المنتج"
 		},
 		"Experiments": {
 			"Title": "Experiments"

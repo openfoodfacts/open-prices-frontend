@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Стварыць новы прадукт",
+		"CreateProduct": "Стварыць прадукт",
+		"EnableDrawMode": "Уключыць рэжым малявання",
+		"Flavor": "Густ",
+		"NextProof": "Next proof",
+		"PreviousProof": "Папярэдні доказ",
+		"ProductAlreadyExists": "Прадукт ужо існуе",
+		"ProofNumberOfOutProofs": "Доказ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Крамы, дзе прадаецца",
+		"UseDrawModeToAddImage": "Каб дадаць выяву прадукту, уключыце рэжым малявання пад пробным малюнкам і намалюйце прастакутнік вакол прадукту."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Стварыць памочніка па прадуктах"
 		},
 		"Experiments": {
 			"Title": "Experiments"

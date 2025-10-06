@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "שאַפֿן אַ נײַעם פּראָדוקט",
+		"CreateProduct": "שאַפֿן פּראָדוקט",
+		"EnableDrawMode": "אַקטיווירן צייכענען מאָדע",
+		"Flavor": "טעם",
+		"NextProof": "Next proof",
+		"PreviousProof": "פריערדיגע באַווייַז",
+		"ProductAlreadyExists": "פּראָדוקט עקזיסטירט שוין",
+		"ProofNumberOfOutProofs": "באַווייַז ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "געשעפטן וואו פארקויפט",
+		"UseDrawModeToAddImage": "כדי צו לייגן צו א פּראָדוקט בילד, אַקטיווירן דעם צייכענונג מאָדע אונטערן באַווייַז בילד און צייכענען אַ רעכטעק אַרום דעם פּראָדוקט."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "שאַפֿן פּראָדוקט אַסיסטאַנט"
 		},
 		"Experiments": {
 			"Title": "Experiments"

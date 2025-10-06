@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "Ви будете перенаправлені на сторінку налаштувань, але втратите всю інформацію, яку ви ввели на цій сторінці.",
 		"Select": "Вибрати {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Країни, в яких продається:",
+		"CreateNewProduct": "Створити новий продукт",
+		"CreateProduct": "Створити продукт",
+		"EnableDrawMode": "Увімкнути режим малювання",
+		"Flavor": "Смак",
+		"NextProof": "Наступний доказ",
+		"PreviousProof": "Попередній доказ",
+		"ProductAlreadyExists": "Продукт вже існує",
+		"ProofNumberOfOutProofs": "Доказ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Магазини, де продається",
+		"UseDrawModeToAddImage": "Щоб додати зображення продукту, увімкніть режим малювання під пробним зображенням і намалюйте прямокутник навколо продукту."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Виберіть один зі своїх останніх доказів"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Підтримати проєкт"
+		},
+		"CreateOffProduct": {
+			"Title": "Створити помічника продукту"
 		},
 		"Experiments": {
 			"Title": "Експерименти"
