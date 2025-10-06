@@ -518,6 +518,19 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Endla xitirhisiwa lexintshwa",
+		"CreateProduct": "Endla xiendliwa",
+		"EnableDrawMode": "Endla leswaku movha wa ku dirowa wu tirha",
+		"Flavor": "Nantswo wa nantswo",
+		"NextProof": "Next proof",
+		"PreviousProof": "Vumbhoni bya khale",
+		"ProductAlreadyExists": "Xiendliwa se xi kona",
+		"ProofNumberOfOutProofs": "Vumbhoni ({numberOfOutProofs}/{totalNumberOfProofs}) .",
+		"StoresWhereSold": "Switolo laha swi xavisiwaka kona",
+		"UseDrawModeToAddImage": "Ku engetela xifaniso xa xiendliwa, pfumelela movha wo dirowa ehansi ka xifaniso xa vumbhoni naswona dirowa rectangle ku rhendzela xiendliwa."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -754,6 +767,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Endla Mupfuni wa Swikumiwa"
 		},
 		"Experiments": {
 			"Title": "Experiments"
