@@ -72,14 +72,17 @@
         const ctx = canvas.getContext("2d")
         canvas.style.width = "100%"
         this.scale = canvas.offsetWidth / this.image.width
-        const preferedHeight = window.innerHeight - 250
+        const maxHeight = window.innerHeight - 350
 
-        if (preferedHeight < this.image.height) {
+        if (maxHeight < this.image.height) {
           // Image will be too tall
-          // Ajust to fit preferedHeight
+          // Ajust to fit optimal height
+          const aspectRatio = this.image.height / this.image.width
+          const heightFor100PercentWidth = canvas.offsetWidth * aspectRatio
+          const idealHeight = Math.min(maxHeight, heightFor100PercentWidth)
           canvas.style.width = "auto"
-          this.scale = preferedHeight / this.image.height
-          canvas.style.height = preferedHeight + "px"
+          this.scale = idealHeight / this.image.height
+          canvas.style.height = idealHeight + "px"
         }
 
         const newWidth = this.image.width
