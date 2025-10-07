@@ -520,16 +520,16 @@
 	},
 	"CreateOffProduct": {
 		"CountriesWhereSold": "ארצות בהן נמכר",
-		"CreateNewProduct": "צור מוצר חדש",
-		"CreateProduct": "צור מוצר",
+		"CreateNewProduct": "יצירת מוצר חדש",
+		"CreateProduct": "יצירת מוצר",
 		"EnableDrawMode": "הפעלת מצב ציור",
-		"Flavor": "טַעַם",
+		"Flavor": "טעם",
 		"NextProof": "ההוכחה הבאה",
 		"PreviousProof": "הוכחה קודמת",
 		"ProductAlreadyExists": "המוצר כבר קיים",
 		"ProofNumberOfOutProofs": "הוכחה ({numberOfOutProofs}/{totalNumberOfProofs})",
-		"StoresWhereSold": "חנויות בהן נמכרו",
-		"UseDrawModeToAddImage": "כדי להוסיף תמונת מוצר, הפעל את מצב הציור מתחת לתמונת ההוכחה וצייר מלבן סביב המוצר."
+		"StoresWhereSold": "חנויות בהן נמכר",
+		"UseDrawModeToAddImage": "כדי להוסיף תמונת מוצר, יש להפעיל את מצב הציור מתחת לתמונת ההוכחה ולצייר מלבן סביב המוצר."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "נא לבחור אחת מההוכחות העדכניות שלך"
@@ -769,7 +769,7 @@
 			"Title": "לתרום"
 		},
 		"CreateOffProduct": {
-			"Title": "צור עוזר מוצר"
+			"Title": "יצירת מסייע מוצר"
 		},
 		"Experiments": {
 			"Title": "ניסויים"
