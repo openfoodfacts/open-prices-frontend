@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Limpar",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Non atopas a túa tenda? Tenta usar palabras clave en lugar do enderezo completo (por exemplo, \"Carrefour 75013 París\" ou \"Walmart San Francisco\").",
+		"NoResultHelpOSM": "Aínda non atopas a túa tenda? Pode que aínda non estea en {osm_name} . Primeiro podes engadila a {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
