@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.141.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.141.0...v1.141.1) (2025-10-08)
+
+
+### Bug Fixes
+
+* **ProofPriceTagAssistant:** no longer truncate wide proofs in canvas ([#1744](https://github.com/openfoodfacts/open-prices-frontend/issues/1744)) ([b278a16](https://github.com/openfoodfacts/open-prices-frontend/commit/b278a163320ea7dd9a62ec9019b664018a143c17))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1743](https://github.com/openfoodfacts/open-prices-frontend/issues/1743)) ([f203549](https://github.com/openfoodfacts/open-prices-frontend/commit/f203549021ee0fa899f5baa297ae5ec0e9afae9f))
+* **Location selector:** Help message displayed when 0 results (OpenStreetMap) ([#1746](https://github.com/openfoodfacts/open-prices-frontend/issues/1746)) ([30981ef](https://github.com/openfoodfacts/open-prices-frontend/commit/30981ef17f4b8072cd167c7eedb3ffc703bc25dc))
+
 ## [1.141.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.140.6...v1.141.0) (2025-10-06)
 
 
