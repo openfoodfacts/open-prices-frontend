@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ora bisa nemokake toko sampeyan? Coba gunakake tembung kunci tinimbang alamat lengkap (contone 'Carrefour 75013 Paris' utawa 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Isih ora nemokake toko sampeyan? Bisa uga durung ana ing {osm_name} . Sampeyan bisa nambah ing {osm_url} dhisik.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
