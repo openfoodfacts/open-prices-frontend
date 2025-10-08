@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ei leia oma poodi? Proovi täieliku aadressi asemel märksõnu (nt „Carrefour 75013 Pariis” või „Walmart San Francisco”).",
+		"NoResultHelpOSM": "Ikka ei leia oma poodi? See ei pruugi veel {osm_name} piirkonnas olla. Saate selle esmalt {osm_url} piirkonnas lisada.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
