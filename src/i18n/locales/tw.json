@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Wontumi nhu wo sotɔɔ no? Bɔ mmɔden sɛ wode nsɛmfua titiriw bedi dwuma sen sɛ wode address mũ no nyinaa bedi dwuma (sɛ nhwɛso no, ‘Carrefour 75013 Paris’ anaa ‘Walmart San Francisco’).",
+		"NoResultHelpOSM": "Woda so ara ntumi nhu wo sotɔɔ no? Ebia ɛnyɛ {osm_name} mu de besi nnɛ. Wubetumi de aka ho wɔ {osm_url} so kan.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

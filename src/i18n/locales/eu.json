@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Garbitu",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ezin duzu zure denda aurkitu? Saiatu helbide osoaren ordez gako-hitzak erabiltzen (adibidez, 'Carrefour 75013 Paris' edo 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Oraindik ezin duzu zure denda aurkitu? Baliteke oraindik ez egotea {osm_name} -n. Lehenik {osm_url} -n gehi dezakezu.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

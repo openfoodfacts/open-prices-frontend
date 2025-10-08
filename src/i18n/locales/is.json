@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Finnurðu ekki verslunina þína? Prófaðu að nota leitarorð í stað fulls heimilisfangsins (t.d. „Carrefour 75013 París“ eða „Walmart San Francisco“).",
+		"NoResultHelpOSM": "Finnurðu enn ekki búðina þína? Hún er hugsanlega ekki í {osm_name} ennþá. Þú getur bætt henni við á {osm_url} fyrst.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

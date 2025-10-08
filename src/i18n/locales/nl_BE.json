@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Wissen",
 		"NoResult": "Geen zoekresultaten",
+		"NoResultHelpKeywords": "Kunt u uw winkel niet vinden? Probeer trefwoorden te gebruiken in plaats van het volledige adres (bijvoorbeeld 'Carrefour 75013 Parijs' of 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Kun je je winkel nog steeds niet vinden? Hij staat misschien nog niet in {osm_name} . Je kunt hem eerst toevoegen op {osm_url} .",
 		"PoweredBy": {
 			"text": "mogelijk gemaakt door {url}"
 		},

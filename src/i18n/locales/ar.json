@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "محو",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "لم تجد متجرك؟ حاول استخدام كلمات رئيسية بدلاً من العنوان الكامل (مثل \"كارفور ٧٥٠١٣ باريس\" أو \"وول مارت سان فرانسيسكو\").",
+		"NoResultHelpOSM": "ما زلتَ لا تجد متجرك؟ ربما لم يكن موجودًا في {osm_name} بعد. يمكنك إضافته إلى {osm_url} أولًا.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Tabernam tuam non invenire potes? Conare uti verbis clavibus loco inscriptionis plenae (exempli gratia 'Carrefour 75013 Paris' aut 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Tabernam tuam adhuc non invenire potes? Fortasse nondum in {osm_name} est. Primum eam in {osm_url} addere potes.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "ඔබේ කඩේ හොයාගන්න බැරිද? සම්පූර්ණ ලිපිනය වෙනුවට මූල පද භාවිතා කිරීමට උත්සාහ කරන්න (උදා: 'Carrefour 75013 Paris' හෝ 'Walmart San Francisco').",
+		"NoResultHelpOSM": "තාමත් ඔයාගේ කඩේ හොයාගන්න බැරි වුනාද? ඒක තාම {osm_name} එකේ නැතුව ඇති. ඔයාට මුලින්ම ඒක {osm_url} එකට එකතු කරන්න පුළුවන්.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

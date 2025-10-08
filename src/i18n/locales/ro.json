@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Ștergeți",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nu găsești magazinul tău? Încearcă să folosești cuvinte cheie în loc de adresa completă (de exemplu, „Carrefour 75013 Paris” sau „Walmart San Francisco”).",
+		"NoResultHelpOSM": "Încă nu găsești magazinul tău? S-ar putea să nu fie încă în {osm_name} . Îl poți adăuga mai întâi pe {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

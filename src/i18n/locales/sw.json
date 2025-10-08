@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Je, hupati duka lako? Jaribu kutumia manenomsingi badala ya anwani kamili (km 'Carrefour 75013 Paris' au 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Je, bado hupati duka lako? Huenda haijaingia {osm_name} bado. Unaweza kuiongeza kwenye {osm_url} kwanza.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

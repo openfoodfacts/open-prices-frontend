@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "তোমাৰ দোকান বিচাৰি পোৱা নাই? সম্পূৰ্ণ ঠিকনাৰ পৰিবৰ্তে কীৱৰ্ড ব্যৱহাৰ কৰি চাওক (যেনে 'Carrefour 75013 Paris' বা 'Walmart San Francisco')।",
+		"NoResultHelpOSM": "এতিয়াও তোমাৰ দোকান বিচাৰি পোৱা নাই? ই হয়তো এতিয়াও {osm_name} ত নাই। আপুনি প্ৰথমে {osm_url} ত যোগ কৰিব পাৰে।",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

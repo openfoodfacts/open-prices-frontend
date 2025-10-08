@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Не можаце знайсці сваю краму? Паспрабуйце выкарыстоўваць ключавыя словы замест поўнага адраса (напрыклад, «Carrefour 75013 Парыж» або «Walmart Сан-Францыска»).",
+		"NoResultHelpOSM": "Усё яшчэ не можаце знайсці сваю краму? Магчыма, яе яшчэ няма ў {osm_name} . Спачатку вы можаце дадаць яе ў {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

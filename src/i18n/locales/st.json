@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ha u fumane lebenkele la hau? Leka ho sebelisa mantsoe a sehlooho sebakeng sa aterese e felletseng (mohlala, 'Carrefour 75013 Paris' kapa 'Walmart San Francisco').",
+		"NoResultHelpOSM": "U ntse u sa fumane lebenkele la hau? E kanna ea se be ho {osm_name} hajoale. O ka e kenya ho {osm_url} pele.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nuk e gjen dot dyqanin tënd? Provo të përdorësh fjalë kyçe në vend të adresës së plotë (p.sh. 'Carrefour 75013 Paris' ose 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Ende nuk mund ta gjesh dyqanin tënd? Mund të mos jetë ende në {osm_name} . Mund ta shtosh fillimisht në {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

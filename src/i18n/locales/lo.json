@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "ບໍ່​ສາ​ມາດ​ຊອກ​ຫາ​ຮ້ານ​ຂອງ​ທ່ານ​? ລອງໃຊ້ຄໍາທີ່ໃຊ້ແທນທີ່ຢູ່ເຕັມ (ເຊັ່ນ: 'Carrefour 75013 Paris' ຫຼື 'Walmart San Francisco').",
+		"NoResultHelpOSM": "ຍັງ​ບໍ່​ສາ​ມາດ​ຊອກ​ຫາ​ຮ້ານ​ຂອງ​ທ່ານ​? ມັນອາດຈະບໍ່ຢູ່ໃນ {osm_name} ເທື່ອ. ທ່ານສາມາດເພີ່ມມັນໃສ່ {osm_url} ທໍາອິດ.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

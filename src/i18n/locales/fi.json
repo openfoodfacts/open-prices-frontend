@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Tyhjennä",
 		"NoResult": "Ei tuloksia",
+		"NoResultHelpKeywords": "Etkö löydä liikettäsi? Kokeile avainsanoja koko osoitteen sijaan (esim. 'Carrefour 75013 Pariisi' tai 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Etkö vieläkään löydä kauppaasi? Se ei ehkä ole vielä {osm_name} -alueella. Voit lisätä sen ensin {osm_url} -alueella.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

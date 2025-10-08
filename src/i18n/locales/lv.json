@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Notīrīt",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nevarat atrast savu veikalu? Pilnas adreses vietā mēģiniet izmantot atslēgvārdus (piemēram, “Carrefour 75013 Paris” vai “Walmart San Francisco”).",
+		"NoResultHelpOSM": "Joprojām nevarat atrast savu veikalu? Iespējams, tas vēl neatrodas {osm_name} . Vispirms varat to pievienot {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

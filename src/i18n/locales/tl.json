@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Burahin",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Hindi mahanap ang iyong tindahan? Subukang gumamit ng mga keyword sa halip na ang buong address (hal. 'Carrefour 75013 Paris' o 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Hindi mo pa rin mahanap ang iyong tindahan? Maaaring wala pa ito sa {osm_name} . Maaari mo itong idagdag sa {osm_url} muna.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

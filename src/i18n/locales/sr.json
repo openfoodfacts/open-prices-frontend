@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Obriši",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Can't find your shop? Try using keywords instead of the full address (e.g. 'Carrefour 75013 Paris' or 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Still can't find your shop? It might not be in {osm_name} yet. You can add it on {osm_url} first.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

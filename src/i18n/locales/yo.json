@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ko le ri ile itaja rẹ? Gbiyanju lilo awọn koko dipo adirẹsi kikun (fun apẹẹrẹ 'Carrefour 75013 Paris' tabi 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Njẹ ko le ri ile itaja rẹ bi? O le ma wa ni {osm_name} sibẹsibẹ. O le ṣafikun si {osm_url} akọkọ.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "I tɛ se ka i ka butiki sɔrɔ wa? A ɲini ka baara kɛ ni daɲɛ kolomaw ye ladɛrɛsi dafalen nɔ na (misali la ‘Carrefour 75013 Paris’ walima ‘Walmart San Francisco’).",
+		"NoResultHelpOSM": "Hali bi i ma se k’i ka butiki sɔrɔ wa? A bɛ se ka kɛ a ma {osm_name} kɔnɔ fɔlɔ. Aw bɛ se k'a fara {osm_url} kan fɔlɔ.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

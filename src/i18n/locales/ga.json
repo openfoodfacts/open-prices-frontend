@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Glan",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nach bhfuil tú in ann do shiopa a aimsiú? Bain triail as eochairfhocail a úsáid in ionad an seoladh iomláin (m.sh. 'Carrefour 75013 Paris' nó 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Ní féidir leat do shiopa a aimsiú fós? B’fhéidir nach bhfuil sé i {osm_name} fós. Is féidir leat é a chur leis ar {osm_url} ar dtús.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

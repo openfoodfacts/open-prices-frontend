@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Methu dod o hyd i'ch siop? Rhowch gynnig ar ddefnyddio allweddeiriau yn lle'r cyfeiriad llawn (e.e. 'Carrefour 75013 Paris' neu 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Dal ddim yn gallu dod o hyd i'ch siop? Efallai nad yw yn {osm_name} eto. Gallwch ei ychwanegu ar {osm_url} yn gyntaf.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

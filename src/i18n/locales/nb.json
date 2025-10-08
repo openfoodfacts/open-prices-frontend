@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Tøm",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Finner du ikke butikken din? Prøv å bruke nøkkelord i stedet for full adresse (f.eks \"Carrefour 75013 Paris\" eller \"Walmart San Francisco').",
+		"NoResultHelpOSM": "Kan fortsatt ikke finne din butikk? Det er kanskje ikke i {osm_name} enda. Du kan legge den til på {osm_url} først.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Temizle",
 		"NoResult": "Sonuç bulunamadı",
+		"NoResultHelpKeywords": "Mağazanızı bulamıyor musunuz? Tam adres yerine anahtar kelimeler kullanmayı deneyin (örneğin 'Carrefour 75013 Paris' veya 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Mağazanızı hâlâ bulamadınız mı? Henüz {osm_name} 'da olmayabilir. Önce {osm_url} 'e ekleyebilirsiniz.",
 		"PoweredBy": {
 			"text": "{url} tarafından desteklenmektedir"
 		},

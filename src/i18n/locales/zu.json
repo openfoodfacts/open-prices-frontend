@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Awusitholi isitolo sakho? Zama ukusebenzisa amagama angukhiye esikhundleni sekheli eligcwele (isb. 'Carrefour 75013 Paris' noma 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Awukasitholi isitolo sakho? Ingase ingangeni {osm_name} okwamanje. Ungayingeza kokuthi {osm_url} kuqala.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

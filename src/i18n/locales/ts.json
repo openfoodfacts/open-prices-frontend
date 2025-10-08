@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "A wu swi kumi vhengele ra wena? Ringeta ku tirhisa marito ya nkoka ematshan’wini ya adirese leyi heleleke (xikombiso ‘Carrefour 75013 Paris’ kumbe ‘Walmart San Francisco’).",
+		"NoResultHelpOSM": "Hambi swi ri tano a wu swi kumi vhengele ra wena? Swi nga ha endleka yi nga ri eka {osm_name} ku fikela sweswi. U nga yi engetela eka {osm_url} ku sungula.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

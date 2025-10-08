@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "N'eus ket tu da gavout ho stal ? Klaskit implijout gerioù-alc'hwez e-lec'h ar chomlec'h klok (da sk. 'Carrefour 75013 Paris' pe 'Walmart San Francisco').",
+		"NoResultHelpOSM": "N'hallit ket kavout ho stal c'hoazh ? Marteze n'emañ ket e {osm_name} c'hoazh. Gallout a rit ouzhpennañ anezhañ war {osm_url} da gentañ.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

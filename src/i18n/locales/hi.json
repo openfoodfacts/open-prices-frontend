@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "खाली करें",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "अपनी दुकान नहीं मिल रही? पूरे पते की बजाय कीवर्ड का इस्तेमाल करके देखें (जैसे 'कैरेफोर 75013 पेरिस' या 'वॉलमार्ट सैन फ्रांसिस्को')।",
+		"NoResultHelpOSM": "अभी भी अपनी दुकान नहीं मिल रही? हो सकता है कि यह अभी {osm_name} में न हो। आप इसे पहले {osm_url} पर जोड़ सकते हैं।",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "Pa gen rezilta yo jwenn",
+		"NoResultHelpKeywords": "Ou pa jwenn magazen ou an? Eseye itilize mo kle olye adrès konplè a (pa egzanp 'Carrefour 75013 Paris' oswa 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Ou toujou pa ka jwenn boutik ou a? Li ka poko nan {osm_name} . Ou ka ajoute l sou {osm_url} anvan.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

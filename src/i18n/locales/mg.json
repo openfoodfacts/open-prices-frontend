@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Tsy mahita ny fivarotanao? Andramo mampiasa teny fanalahidy fa tsy ny adiresy feno (oh 'Carrefour 75013 Paris' na 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Mbola tsy mahita ny fivarotanao? Mety mbola tsy ao amin'ny {osm_name} . Azonao ampiana amin'ny {osm_url} aloha.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

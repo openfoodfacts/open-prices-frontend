@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nach urrainn dhut do bhùth a lorg? Feuch ri prìomh fhaclan a chleachdadh an àite an t-seòlaidh slàn (m.e. 'Carrefour 75013 Paris' no 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Nach urrainn dhut do bhùth a lorg fhathast? Is dòcha nach eil e ann an {osm_name} fhathast. Faodaidh tu a chur ris air {osm_url} an toiseach.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},

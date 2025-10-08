@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Limpar",
 		"NoResult": "Nenhum resultado encontrado",
+		"NoResultHelpKeywords": "Não consegue encontrar a sua loja? Tente utilizar palavras-chave em vez do endereço completo (por exemplo, \"Carrefour 75013 Paris\" ou \"Walmart São Francisco\").",
+		"NoResultHelpOSM": "Ainda não encontrou a sua loja? Ela pode não estar em {osm_name} ainda. Podes adicioná-la em {osm_url} primeiro.",
 		"PoweredBy": {
 			"text": "fornecido por {url}"
 		},
