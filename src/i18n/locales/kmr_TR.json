@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Vekirî",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Dikana xwe nabînî? Li şûna navnîşana tevahî, biceribîne peyvên sereke bi kar bînî (mînak 'Carrefour 75013 Paris' an 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Hîn jî dikana xwe nabînî? Dibe ku ew hîn di {osm_name} de nebe. Hûn dikarin pêşî wê li {osm_url} zêde bikin.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
