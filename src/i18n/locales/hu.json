@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Törlés",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nem találja az üzletét? Próbáljon meg kulcsszavakat használni a teljes cím helyett (pl. „Carrefour 75013 Párizs” vagy „Walmart San Francisco”).",
+		"NoResultHelpOSM": "Még mindig nem találod a boltodat? Lehet, hogy még nem {osm_name} -ban van. Először {osm_url} -ban adhatod hozzá.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
