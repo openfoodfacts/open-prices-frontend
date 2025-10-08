@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Лавккана тупаймастӑн-и? Тулли адрес вырӑнне тӗп сӑмахсемпе усӑ курма тӑрӑшӑр (тӗслӗхрен, «Carrefour 75013 Paris» е «Walmart San Francisco»).",
+		"NoResultHelpOSM": "Халӗ те хӑвӑрӑн лавккана тупаймастӑр-и? Вӑл хальлӗхе {osm_name} мар пулӗ. Эсир ӑна малтан {osm_url} ҫинче хушма пултаратӑр.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
