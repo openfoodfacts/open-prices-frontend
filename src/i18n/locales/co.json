@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ùn pudete truvà u vostru magazinu ? Pruvate à aduprà parolle chjave invece di l'indirizzu cumpletu (per esempiu \"Carrefour 75013 Paris\" o \"Walmart San Francisco\").",
+		"NoResultHelpOSM": "Ancora ùn pudete truvà a vostra buttega ? Puderia micca esse ancu in {osm_name} . Pudete aghjunghjela prima in {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
