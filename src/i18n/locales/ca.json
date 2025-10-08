@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Esborra",
 		"NoResult": "No s'han trobat resultats",
+		"NoResultHelpKeywords": "No trobes la teva botiga? Prova d'utilitzar paraules clau en comptes de l'adreça completa (per exemple, \"Carrefour 75013 París\" o \"Walmart San Francisco\").",
+		"NoResultHelpOSM": "Encara no trobes la teva botiga? Potser encara no és a {osm_name} . Primer la pots afegir a {osm_url} .",
 		"PoweredBy": {
 			"text": "funciona amb {url}"
 		},
