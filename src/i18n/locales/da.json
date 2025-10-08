@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Ryd",
 		"NoResult": "Intet resultat",
+		"NoResultHelpKeywords": "Kan du ikke finde din butik? Prøv at bruge søgeord i stedet for den fulde adresse (f.eks. 'Carrefour 75013 Paris' eller 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Kan du stadig ikke finde din butik? Den er muligvis ikke i {osm_name} endnu. Du kan tilføje den på {osm_url} først.",
 		"PoweredBy": {
 			"text": "drevet af {url}"
 		},
