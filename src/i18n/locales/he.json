@@ -570,8 +570,8 @@
 	"LocationSelector": {
 		"Clear": "פינוי",
 		"NoResult": "לא נמצאו תוצאות",
-		"NoResultHelpKeywords": "לא מוצאים את החנות שלכם? נסו להשתמש במילות מפתח במקום בכתובת המלאה (למשל 'Carrefour 75013 Paris' או 'Walmart San Francisco').",
-		"NoResultHelpOSM": "עדיין לא מצאתם את החנות שלכם? ייתכן שהיא עדיין לא נמצאת ב- {osm_name} . אתם יכולים להוסיף אותה קודם ב- {osm_url} .",
+		"NoResultHelpKeywords": "החנות שלך לא נמצאת? כדאי לנסות להשתמש במילות מפתח במקום בכתובת המלאה (למשל ‚Carrefour 75013 Paris’ או ‚Walmart San Francisco’).",
+		"NoResultHelpOSM": "עדיין לא מצאת את החנות שלך? ייתכן שהיא עדיין לא נמצאת ב־{osm_name}. ניתן להוסיף אותה קודם דרך {osm_url}.",
 		"PoweredBy": {
 			"text": "מופעל על גבי {url}"
 		},
