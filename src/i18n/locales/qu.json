@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "¿Manachu tiendaykita tarinki? Llapan direccionpa rantinpi llalliq simikunata llamk'achiyta kallpachakuy (kayhina, 'Carrefour 75013 Paris' utaq 'Walmart San Francisco').",
+		"NoResultHelpOSM": "¿Manaraqchu tiendaykita tarinki? Manapaschá {osm_name} nisqapichu kashan. Ñawpaqtaqa {osm_url} nisqapi yapayta atinki.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
