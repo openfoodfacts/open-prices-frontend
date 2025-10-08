@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "તમારી દુકાન નથી મળી રહી? સંપૂર્ણ સરનામાંને બદલે કીવર્ડ્સનો ઉપયોગ કરવાનો પ્રયાસ કરો (દા.ત. 'કેરેફોર 75013 પેરિસ' અથવા 'વોલમાર્ટ સાન ફ્રાન્સિસ્કો').",
+		"NoResultHelpOSM": "હજુ પણ તમારી દુકાન નથી મળી રહી? તે કદાચ {osm_name} માં નથી. તમે તેને પહેલા {osm_url} પર ઉમેરી શકો છો.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
