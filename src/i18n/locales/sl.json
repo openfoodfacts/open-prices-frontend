@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Počisti",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ne najdete svoje trgovine? Poskusite uporabiti ključne besede namesto polnega naslova (npr. »Carrefour 75013 Pariz« ali »Walmart San Francisco«).",
+		"NoResultHelpOSM": "Še vedno ne najdete svoje trgovine? Morda je še ni v {osm_name} . Najprej jo lahko dodate v {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
