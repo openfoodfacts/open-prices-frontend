@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "ڇا توهان کي پنهنجو دڪان نه ٿو ملي؟ مڪمل پتي جي بدران ڪي ورڊ استعمال ڪرڻ جي ڪوشش ڪريو (مثال طور 'ڪيريفور 75013 پيرس' يا 'والمارٽ سان فرانسسڪو').",
+		"NoResultHelpOSM": "اڃا تائين توهان جي دڪان نه ملي سگهي آهي؟ شايد اهو اڃا تائين {osm_name} ۾ نه هجي. توهان ان کي پهريان {osm_url} تي شامل ڪري سگهو ٿا.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
