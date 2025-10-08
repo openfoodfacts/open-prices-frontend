@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "भवतः दुकानं न लभ्यते ? पूर्णपतेः (उदाहरणार्थं 'Carrefour 75013 Paris' अथवा 'Walmart San Francisco') स्थाने कीवर्डस्य उपयोगं कर्तुं प्रयतध्वम्।",
+		"NoResultHelpOSM": "अद्यापि भवतः दुकानं न लभ्यते? {osm_name} इत्यत्र अद्यापि न स्यात्। प्रथमं {osm_url} इत्यत्र योजयितुं शक्नुवन्ति ।",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
