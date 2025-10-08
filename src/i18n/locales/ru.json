@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Очистить",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Не можете найти свой магазин? Попробуйте использовать ключевые слова вместо полного адреса (например, «Carrefour 75013 Paris» или «Walmart San Francisco»).",
+		"NoResultHelpOSM": "Всё ещё не можете найти свой магазин? Возможно, его пока нет в {osm_name} . Сначала добавьте его в {osm_url} .",
 		"PoweredBy": {
 			"text": "работает на {url}"
 		},
