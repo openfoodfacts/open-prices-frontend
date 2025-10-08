@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "ვერ პოულობთ თქვენს მაღაზიას? სცადეთ სრული მისამართის ნაცვლად გამოიყენოთ საკვანძო სიტყვები (მაგ. „Carrefour 75013 Paris“ ან „Walmart San Francisco“).",
+		"NoResultHelpOSM": "ჯერ კიდევ ვერ პოულობთ თქვენს მაღაზიას? შესაძლოა, ის ჯერ არ იყოს {osm_name} -ში. შეგიძლიათ ჯერ დაამატოთ ის {osm_url} -ზე.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
