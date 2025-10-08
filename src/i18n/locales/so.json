@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ma heli kartaa dukaankaaga? Isku day inaad isticmaasho ereyada muhiimka ah halkii aad ka isticmaali lahayd cinwaanka buuxa (tusaale 'Carrefour 75013 Paris' ama 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Weli dukaankaaga ma heli kartaa? Waxaa laga yaabaa inaysan weli ku jirin {osm_name} Waxaad ku dari kartaa marka hore {osm_url}",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
