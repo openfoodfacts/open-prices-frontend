@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Fannt Dir Äre Buttek net? Probéiert Schlësselwierder amplaz vun der kompletter Adress ze benotzen (z.B. 'Carrefour 75013 Paris' oder 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Fannt Dir Äre Buttek nach ëmmer net? Vläicht ass en nach net an {osm_name} . Dir kënnt en als éischt op {osm_url} derbäisetzen.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
