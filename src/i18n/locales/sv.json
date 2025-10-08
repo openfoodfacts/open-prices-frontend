@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Rensa",
 		"NoResult": "Inga resultat hittades",
+		"NoResultHelpKeywords": "Hittar du inte din butik? Försök att använda nyckelord istället för den fullständiga adressen (t.ex. 'Carrefour 75013 Paris' eller 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Hittar du fortfarande inte din butik? Den kanske inte finns i {osm_name} ännu. Du kan lägga till den på {osm_url} först.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
