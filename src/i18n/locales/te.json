@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "తొలగింపు పూర్తయింది",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "మీ దుకాణం దొరకలేదా? పూర్తి చిరునామాకు బదులుగా కీలకపదాలను ఉపయోగించి ప్రయత్నించండి (ఉదా. 'Carrefour 75013 Paris' లేదా 'Walmart San Francisco').",
+		"NoResultHelpOSM": "ఇంకా మీ దుకాణం దొరకలేదా? అది ఇంకా {osm_name} లో ఉండకపోవచ్చు. మీరు ముందుగా దానిని {osm_url} లో జోడించవచ్చు.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
