@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Дэлгүүрээ олж чадахгүй байна уу? Бүрэн хаягийн оронд түлхүүр үг ашиглаж үзнэ үү (жишээ нь 'Carrefour 75013 Paris' эсвэл 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Дэлгүүрээ олж чадаагүй хэвээр байна уу? Энэ нь {osm_name} -д хараахан ороогүй байж магадгүй. Та эхлээд {osm_url} дээр нэмж болно.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
