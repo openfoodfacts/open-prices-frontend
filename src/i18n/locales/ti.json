@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "ድኳንካ ክትረክብ ኣይትኽእልን ኢኻ? ኣብ ክንዲ ምሉእ ኣድራሻ ቁልፊ ቃላት ክትጥቀም ፈትን (ንኣብነት 'Carrefour 75013 Paris' ወይ 'Walmart San Francisco')።",
+		"NoResultHelpOSM": "ሕጂ ውን ድኳንካ ኣይረኸብካን? ገና ኣብ {osm_name} ዘይክህሉ ይኽእል እዩ። መጀመርታ ኣብ {osm_url} ክትውስኽዎ ትኽእሉ ኢኹም።",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
