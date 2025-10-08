@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "ଆପଣଙ୍କ ଦୋକାନ ମିଳିଲା ନାହିଁ କି? ପୂର୍ଣ୍ଣ ଠିକଣା ବଦଳରେ କୀୱାର୍ଡ ବ୍ୟବହାର କରି ଦେଖନ୍ତୁ (ଯଥା 'କ୍ୟାରେଫୋର 75013 ପ୍ୟାରିସ' କିମ୍ବା 'ୱାଲମାର୍ଟ ସାନ ଫ୍ରାନ୍ସିସ୍କୋ')।",
+		"NoResultHelpOSM": "ଏବେ ବି ଆପଣଙ୍କ ଦୋକାନ ମିଳିଲା ନାହିଁ କି? ଏହା ଏପର୍ଯ୍ୟନ୍ତ {osm_name} ରେ ନଥାଇପାରେ। ଆପଣ ଏହାକୁ ପ୍ରଥମେ {osm_url} ରେ ଯୋଡିପାରିବେ।",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
