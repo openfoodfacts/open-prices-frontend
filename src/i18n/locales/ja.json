@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "クリア",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "お店が見つからない場合は、住所全体ではなくキーワード（例：「Carrefour 75013 Paris」または「Walmart San Francisco」）を使用して検索してみてください。",
+		"NoResultHelpOSM": "まだお店が見つかりませんか？まだ {osm_name} に載っていない可能性があります。まずは {osm_url} に追加してみてください。",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
