@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Effacer",
 		"NoResult": "Aucun résultat trouvé",
+		"NoResultHelpKeywords": "Vous ne trouvez pas votre magasin ? Essayez d'utiliser des mots-clés plutôt que l'adresse complète (par exemple, « Carrefour 75013 Paris » ou « Walmart San Francisco »).",
+		"NoResultHelpOSM": "Vous ne trouvez toujours pas votre boutique ? Elle n'est peut-être pas encore dans {osm_name} . Vous pouvez d'abord l'ajouter dans {osm_url} .",
 		"PoweredBy": {
 			"text": "fonctionne avec {url}"
 		},
