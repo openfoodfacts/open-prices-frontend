@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ga o bone lebentlele la gago? Leka go dirisa mafoko a botlhokwa mo boemong jwa aterese e e feletseng (sekao, 'Carrefour 75013 Paris' kgotsa 'Walmart San Francisco').",
+		"NoResultHelpOSM": "A o sa ntse o sa bone lebentlele la gago? E ka tswa e ise e nne mo {osm_name} . O ka e tsenya mo {osm_url} pele.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
