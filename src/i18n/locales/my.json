@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "ရှင်းလင်းမည်",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "သင့်ဆိုင်ကို ရှာမတွေ့ဘူးလား။ လိပ်စာအပြည့်အစုံအစား အဓိကစကားလုံးများကို အသုံးပြုကြည့်ပါ (ဥပမာ 'Carrefour 75013 Paris' သို့မဟုတ် 'Walmart San Francisco')။",
+		"NoResultHelpOSM": "မင်းဆိုင်ကို ရှာမတွေ့သေးဘူးလား။ ၎င်းသည် {osm_name} တွင်မဟုတ်သေးပါ။ {osm_url} တွင် ဦးစွာထည့်နိုင်သည်။",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
