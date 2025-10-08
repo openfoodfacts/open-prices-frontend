@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "ਕੀ ਤੁਹਾਨੂੰ ਆਪਣੀ ਦੁਕਾਨ ਨਹੀਂ ਮਿਲ ਰਹੀ? ਪੂਰੇ ਪਤੇ ਦੀ ਬਜਾਏ ਕੀਵਰਡਸ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ (ਜਿਵੇਂ ਕਿ 'ਕੈਰਫੋਰ 75013 ਪੈਰਿਸ' ਜਾਂ 'ਵਾਲਮਾਰਟ ਸੈਨ ਫਰਾਂਸਿਸਕੋ')।",
+		"NoResultHelpOSM": "ਕੀ ਤੁਹਾਨੂੰ ਅਜੇ ਵੀ ਆਪਣੀ ਦੁਕਾਨ ਨਹੀਂ ਮਿਲ ਰਹੀ? ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਇਹ ਅਜੇ {osm_name} ਵਿੱਚ ਨਾ ਹੋਵੇ। ਤੁਸੀਂ ਇਸਨੂੰ ਪਹਿਲਾਂ {osm_url} ਵਿੱਚ ਸ਼ਾਮਲ ਕਰ ਸਕਦੇ ਹੋ।",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
