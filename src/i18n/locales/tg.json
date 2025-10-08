@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Дӯкони худро пайдо карда наметавонед? Кӯшиш кунед, ки ба ҷои суроғаи пурра калимаҳои калидиро истифода баред (масалан, 'Carrefour 75013 Paris' ё 'Walmart San Francisco').",
+		"NoResultHelpOSM": "То ҳол мағозаи худро пайдо карда наметавонед? Он метавонад то ҳол дар {osm_name} набошад. Шумо метавонед онро аввал дар {osm_url} илова кунед.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
