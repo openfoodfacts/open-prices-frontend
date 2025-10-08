@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Hausi kuwana chitoro chako? Edza kushandisa mazwi akakosha pane kero yakazara (eg 'Carrefour 75013 Paris' kana 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Uchiri kusawana shopu yako? Inogona kunge isiri mu {osm_name} parizvino. Unogona kuiwedzera pa {osm_url} kutanga.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
