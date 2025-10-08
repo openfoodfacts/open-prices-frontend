@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ba a iya samun shagon ku? Gwada amfani da kalmomi maimakon cikakken adireshin (misali 'Carrefour 75013 Paris' ko 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Har yanzu ba a iya samun shagon ku? Yana iya zama ba a cikin {osm_name} tukuna. Kuna iya ƙarawa akan {osm_url} farko.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
