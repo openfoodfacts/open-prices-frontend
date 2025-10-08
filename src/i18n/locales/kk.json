@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Дүкеніңізді таба алмайсыз ба? Толық мекенжайдың орнына кілт сөздерді пайдаланып көріңіз (мысалы, «Carrefour 75013 Paris» немесе «Walmart San Francisco»).",
+		"NoResultHelpOSM": "Дүкеніңізді әлі таба алмай жүрсіз бе? Ол әлі {osm_name} емес болуы мүмкін. Алдымен оны {osm_url} ішіне қосуға болады.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
