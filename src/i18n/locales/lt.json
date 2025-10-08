@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "Rezultatų nerasta",
+		"NoResultHelpKeywords": "Nerandate savo parduotuvės? Pabandykite naudoti raktinius žodžius vietoj viso adreso (pvz., „Carrefour 75013 Paris“ arba „Walmart San Francisco“).",
+		"NoResultHelpOSM": "Vis dar nerandate savo parduotuvės? Gali būti, kad jos dar nėra {osm_name} . Pirmiausia galite ją pridėti {osm_url} .",
 		"PoweredBy": {
 			"text": "įgalino {url}"
 		},
