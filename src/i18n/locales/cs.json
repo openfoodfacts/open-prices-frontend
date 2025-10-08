@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Vymazat",
 		"NoResult": "Nenalezeny žádné výsledky",
+		"NoResultHelpKeywords": "Nemůžete najít svůj obchod? Zkuste místo celé adresy použít klíčová slova (např. „Carrefour 75013 Paříž“ nebo „Walmart San Francisco“).",
+		"NoResultHelpOSM": "Stále nemůžete najít svůj obchod? Možná ještě není v {osm_name} . Nejprve ho můžete přidat na {osm_url} .",
 		"PoweredBy": {
 			"text": "poháněno {url}"
 		},
