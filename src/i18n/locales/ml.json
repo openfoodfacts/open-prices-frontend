@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "നിങ്ങളുടെ കട കണ്ടെത്താനായില്ലേ? മുഴുവൻ വിലാസത്തിനും പകരം കീവേഡുകൾ ഉപയോഗിക്കാൻ ശ്രമിക്കുക (ഉദാ. 'Carrefour 75013 Paris' അല്ലെങ്കിൽ 'Walmart San Francisco').",
+		"NoResultHelpOSM": "നിങ്ങളുടെ കട ഇപ്പോഴും കണ്ടെത്താനായില്ലേ? അത് ഇതുവരെ {osm_name} -ൽ എത്തിയിട്ടില്ലായിരിക്കാം. ആദ്യം നിങ്ങൾക്ക് അത് {osm_url} -ൽ ചേർക്കാം.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
