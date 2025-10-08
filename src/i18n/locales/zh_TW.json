@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "清除",
 		"NoResult": "找不到結果",
+		"NoResultHelpKeywords": "找不到您的店？請嘗試使用關鍵字代替完整地址（例如“Carrefour 75013 Paris”或“Walmart San Francisco”）。",
+		"NoResultHelpOSM": "還是找不到你的店？它可能還不在 {osm_name} 中。你可以先在 {osm_url} 上加入。",
 		"PoweredBy": {
 			"text": "由{url} 技術支持"
 		},
