@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Do'koningizni topa olmayapsizmi? Toʻliq manzil oʻrniga kalit soʻzlarni ishlatib koʻring (masalan, “Carrefour 75013 Paris” yoki “Walmart San-Fransisko”).",
+		"NoResultHelpOSM": "Hali ham do'koningizni topa olmayapsizmi? Hali {osm_name} da boʻlmagan boʻlishi mumkin. Avval uni {osm_url} da qo'shishingiz mumkin.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
