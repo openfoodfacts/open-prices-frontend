@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "تازىلاش",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "دۇكىنىڭىزنى تاپالمىدىڭىزمۇ؟ تولۇق ئادرېسنىڭ ئورنىغا ئاچقۇچلۇق سۆزلەرنى ئىشلىتىپ بېقىڭ (مەسىلەن: «Carrefour 75013 پارى Paris» ياكى «Walmart San Francisco»).",
+		"NoResultHelpOSM": "Still can't find your shop? It might not be in {osm_name} yet. You can add it on {osm_url} first.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
