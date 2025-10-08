@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ma tistax issib il-ħanut tiegħek? Ipprova uża kliem kjavi minflok l-indirizz sħiħ (eż. 'Carrefour 75013 Paris' jew 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Għadek ma tistax issib il-ħanut tiegħek? Jista' jkun li għadu mhux f' {osm_name} . Tista' żżidu fuq {osm_url} l-ewwel.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
