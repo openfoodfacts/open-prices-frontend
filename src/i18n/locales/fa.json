@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "پاک سازی",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "فروشگاه خود را پیدا نمی‌کنید؟ به جای آدرس کامل از کلمات کلیدی استفاده کنید (مثلاً «Carrefour 75013 Paris» یا «Walmart San Francisco»).",
+		"NoResultHelpOSM": "هنوز فروشگاه خود را پیدا نکرده‌اید؟ ممکن است هنوز در {osm_name} نباشد. می‌توانید ابتدا آن را در {osm_url} اضافه کنید.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
