@@ -570,6 +570,8 @@
 	"LocationSelector": {
 		"Clear": "지우기",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "매장을 찾을 수 없나요? 전체 주소 대신 키워드를 사용해 보세요(예: 'Carrefour 75013 Paris' 또는 'Walmart San Francisco').",
+		"NoResultHelpOSM": "아직도 원하는 상점을 찾을 수 없나요? 아직 {osm_name} 에 없을 수도 있습니다. 먼저 {osm_url} 에 추가해 보세요.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
