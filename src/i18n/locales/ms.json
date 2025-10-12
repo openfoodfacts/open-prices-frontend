@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Medan diperlukan",
 		"Filter": "Tapis",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "Buat produk baharu",
 		"CreateProduct": "Buat produk",
-		"EnableDrawMode": "Dayakan mod cabutan",
-		"Flavor": "rasa",
+		"EnableCropMode": "Dayakan mod pangkas",
+		"Flavor": "Pilih projek tempat produk harus dibuat",
 		"NextProof": "Next proof",
 		"PreviousProof": "Bukti sebelumnya",
 		"ProductAlreadyExists": "Produk sudah wujud",
 		"ProofNumberOfOutProofs": "Bukti ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Kedai di mana dijual",
-		"UseDrawModeToAddImage": "Untuk menambah imej produk, dayakan mod lukis di bawah gambar bukti dan lukis segi empat tepat di sekeliling produk."
+		"UseCropModeToAddImage": "Untuk menambah imej produk, dayakan mod pangkas di bawah gambar bukti dan lukis segi empat tepat di sekeliling produk."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
