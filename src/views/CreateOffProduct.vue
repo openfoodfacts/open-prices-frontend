@@ -95,6 +95,8 @@
               :disabled="productExists"
               density="compact"
               variant="outlined"
+              :rules="[fieldRequired]"
+              required
             />
             <div class="text-subtitle-2">
               {{ $t('Common.ProductName') }}
@@ -120,47 +122,69 @@
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.CountriesWhereSold') }}
               </div>
-              <v-text-field
+              <v-combobox
                 v-model="productForm.countries"
-                density="compact"
+                :items="[]"
+                :label="$t('CreateOffProduct.CountriesWhereSold')"
                 variant="outlined"
-                type="text"
-                inputmode="decimal"
-              />
+                chips
+                clearable
+                closable-chips
+                multiple
+              >
+                <template #chip="{ props, item }">
+                  <v-chip v-bind="props">
+                    <strong>{{ item.raw }}</strong>
+                  </v-chip>
+                </template>
+              </v-combobox>
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.StoresWhereSold') }}
               </div>
-              <v-text-field
+              <v-combobox
                 v-model="productForm.stores"
-                density="compact"
+                :items="[]"
+                :label="$t('CreateOffProduct.StoresWhereSold')"
                 variant="outlined"
-                type="text"
-                inputmode="decimal"
-              />
+                chips
+                clearable
+                closable-chips
+                multiple
+              >
+                <template #chip="{ props, item }">
+                  <v-chip v-bind="props">
+                    <strong>{{ item.raw }}</strong>
+                  </v-chip>
+                </template>
+              </v-combobox>
             </div>
             <div class="text-subtitle-2">
               {{ $t('Common.Categories') }}
             </div>
-            <v-text-field
+            <v-combobox
               v-model="productForm.categories"
-              density="compact"
+              :items="suggestedCategories"
+              :label="$t('Common.Categories')"
               variant="outlined"
-              type="text"
-              inputmode="decimal"
-              hide-details="auto"
-            />
-            <v-chip-group>
-              <v-chip v-for="category in suggestedCategories" :key="category" append-icon="mdi-plus" @click="addCategory(category)">
-                {{ category }}
-              </v-chip>
-            </v-chip-group>
+              chips
+              clearable
+              closable-chips
+              multiple
+            >
+              <template #chip="{ props, item }">
+                <v-chip v-bind="props">
+                  <strong>{{ item.raw }}</strong>
+                </v-chip>
+              </template>
+            </v-combobox>
+
             <div v-if="!productExists">
               <div class="text-subtitle-2">
                 {{ $t('Common.Image') }}
               </div>
               <v-img v-if="drawnImageSrc" :src="drawnImageSrc" style="max-height:200px" />
               <v-alert v-else class="mb-2" type="info" variant="outlined" density="compact">
-                {{ $t('CreateOffProduct.UseDrawModeToAddImage') }}
+                {{ $t('CreateOffProduct.UseCropModeToAddImage') }}
               </v-alert>
             </div>
           </v-card-text>
@@ -216,7 +240,7 @@
                 v-model="imageEditMode"
                 density="compact"
                 color="success"
-                :label="$t('CreateOffProduct.EnableDrawMode')"
+                :label="$t('CreateOffProduct.EnableCropMode')"
                 :true-value="true"
                 hide-details="auto"
               />
@@ -285,6 +309,7 @@ import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
 import proof_utils from '../utils/proof.js'
+import utils from '../utils'
 import "vue-zoomable/dist/style.css"
 
 export default {
@@ -335,11 +360,17 @@ export default {
       return constants.PRODUCT_SOURCE_LIST.map(source => source.value)
     }
   },
+  watch: {
+    '$route.query.product_code'(newVal) {
+      if (!newVal) {
+        this.getMissingProductsWithPrices()
+        this.step = 1
+      }
+    }
+  },
   mounted() {
     if (this.$route.query.flavor) {
       this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
-    } else {
-      this.productForm.flavor = constants.PRODUCT_SOURCE_LIST[0].value
     }
     if (this.$route.query.product_code) {
       this.productForm.product_code = this.$route.query.product_code
@@ -349,6 +380,9 @@ export default {
     }
   },
   methods: {
+    fieldRequired(v) {
+      return !!v || this.$t('Common.FieldIsRequired')
+    },
     loadProductInfo() {
       this.$router.push({query: {product_code: this.productForm.product_code}})
       this.step = 2
@@ -374,33 +408,33 @@ export default {
         .then((data) => {
           this.priceList = data.items
           if (this.priceList.length) {
-            const stores = Array.from(new Set(this.priceList.map(price => price.location.osm_name))).join(',')
-            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country).flat())).join(',')
+            const stores = Array.from(new Set(this.priceList.map(price => price.location.osm_name)))
+            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country).flat()))
             const lastPrice = this.priceList[0]
             this.productForm = {
               ...this.productForm,
-              product_name: lastPrice.product_name,
+              product_name: lastPrice.product_name ? utils.toTitleCase(lastPrice.product_name) : null,
               stores: stores,
               countries: countries,
               quantity: "",
-              categories: "",
+              categories: [],
             }
             this.setShownProof()
           } else {
             this.productForm = {
               ...this.productForm,
               product_name: null,
-              stores: "",
-              countries: "",
+              stores: [],
+              countries: [],
               quantity: "",
-              categories: "",
+              categories: [],
             }
           }
           if (this.productExists) {
             this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === product.source).value
             this.productForm.product_name = product.product_name
             this.productForm.quantity = product.product_quantity + product.product_quantity_unit
-            this.productForm.categories = product.categories_tags.join(',')
+            this.productForm.categories = product.categories_tags
             this.productForm.stores = null
             this.productForm.countries= null
           }
@@ -411,7 +445,7 @@ export default {
         .then((data) => {
           const challenges = data.items
           const challengeCategories = challenges.map(challenge => challenge.categories) // Array of arrays
-          this.suggestedCategories = new Set(challengeCategories.flat()) // unique categories
+          this.suggestedCategories = Array.from(new Set(challengeCategories.flat())) // unique categories
         })
     },
     getMissingProductsWithPrices() {
@@ -424,17 +458,18 @@ export default {
       this.productForm.product_code = product.code
       this.loadProductInfo()
     },
-    addCategory(category) {
-      if (this.productForm.categories.length > 0) {
-        this.productForm.categories += ',' + category
-      } else {
-        this.productForm.categories = category
-      }
-    },
     createProduct() {
+      if (!this.productForm.flavor) {
+        return
+      }
       const flavorkey = constants.PRODUCT_SOURCE_LIST.find(source => source.value === this.productForm.flavor).key
       let inputData = {
-        update_params: this.productForm,
+        update_params: {
+          ...this.productForm,
+          categories: this.productForm.categories.join(','),
+          stores: this.productForm.stores.join(','),
+          countries: this.productForm.countries.join(','),
+        },
         flavor: flavorkey
       }
       this.step = 3

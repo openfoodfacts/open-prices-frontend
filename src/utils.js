@@ -118,6 +118,10 @@ function getLocaleLabelTagName(locale, labelId) {
   })
 }
 
+function toTitleCase(str) {
+  return str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(' ');
+}
+
 export default {
   debounce,
   getDocumentScrollPercentage,
@@ -135,4 +139,5 @@ export default {
   getLocaleOriginTags,
   getLocaleLabelTags,
   getLocaleLabelTagName,
+  toTitleCase
 }
