@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Editatu",
 		"End": "End",
+		"FieldIsRequired": "Eremua beharrezkoa da",
 		"Filter": "Iragazi",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Saltzen diren herrialdeak",
 		"CreateNewProduct": "Produktu berri bat sortu",
 		"CreateProduct": "Produktua sortu",
-		"EnableDrawMode": "Gaitu marrazketa modua",
-		"Flavor": "Zaporea",
+		"EnableCropMode": "Gaitu mozketa modua",
+		"Flavor": "Hautatu produktua sortu behar den proiektua",
 		"NextProof": "Next proof",
 		"PreviousProof": "Aurreko froga",
 		"ProductAlreadyExists": "Produktua dagoeneko existitzen da",
 		"ProofNumberOfOutProofs": "Froga ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Saltzen diren dendak",
-		"UseDrawModeToAddImage": "Produktuaren irudi bat gehitzeko, gaitu marrazteko modua froga-irudiaren azpian eta marraztu laukizuzen bat produktuaren inguruan."
+		"UseCropModeToAddImage": "Produktuaren irudi bat gehitzeko, gaitu mozketa modua froga-argazkiaren azpian eta marraztu laukizuzen bat produktuaren inguruan."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
