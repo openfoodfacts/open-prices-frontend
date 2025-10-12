@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Ka hiahiatia te mara",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Waihangahia he hua hou",
 		"CreateProduct": "Waihanga hua",
-		"EnableDrawMode": "Whakahohehia te aratau tuhi",
-		"Flavor": "Te kakara",
+		"EnableCropMode": "Whakahohehia te aratau tapahi",
+		"Flavor": "Tīpakohia te kaupapa hei hanga i te hua",
 		"NextProof": "Next proof",
 		"PreviousProof": "Tuhinga o mua",
 		"ProductAlreadyExists": "Kua noho kē te hua",
 		"ProofNumberOfOutProofs": "Tohu ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Nga toa i hokona",
-		"UseDrawModeToAddImage": "Hei taapiri i te ahua hua, whakaahei te aratau tuhi i raro i te pikitia tohu ka toia he tapawha huri noa i te hua."
+		"UseCropModeToAddImage": "Hei taapiri i te ahua hua, whakaahei te aratau hua i raro i te pikitia tohu ka toia he tapawha huri noa i te hua."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
