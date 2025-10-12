@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Beispiele: {value}",
 		"Edit": "Bearbeiten",
 		"End": "Ende",
+		"FieldIsRequired": "Feld ist erforderlich",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Alle Herausforderungen anzeigen",
 		"FilterProductWithPriceCount": "Mit einem Preis",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Vertriebsländer",
 		"CreateNewProduct": "Neues Produkt erstellen",
 		"CreateProduct": "Produkt erstellen",
-		"EnableDrawMode": "Zeichenmodus aktivieren",
-		"Flavor": "Geschmack",
+		"EnableCropMode": "Zuschneidemodus aktivieren",
+		"Flavor": "Wählen Sie das Projekt aus, in dem das Produkt erstellt werden soll",
 		"NextProof": "Nächster Nachweis",
 		"PreviousProof": "Vorheriger Beweis",
 		"ProductAlreadyExists": "Produkt existiert bereits",
 		"ProofNumberOfOutProofs": "Beweis ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Geschäfte, in denen verkauft wird",
-		"UseDrawModeToAddImage": "Um ein Produktbild hinzuzufügen, aktivieren Sie den Zeichenmodus unter dem Proofbild und zeichnen Sie ein Rechteck um das Produkt."
+		"UseCropModeToAddImage": "Um ein Produktbild hinzuzufügen, aktivieren Sie den Zuschneidemodus unter dem Proofbild und zeichnen Sie ein Rechteck um das Produkt."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Wählen Sie einen Ihrer aktuellen Nachweise"
