@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Абавязковае поле",
 		"Filter": "Фільтр",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Стварыць новы прадукт",
 		"CreateProduct": "Стварыць прадукт",
-		"EnableDrawMode": "Уключыць рэжым малявання",
-		"Flavor": "Густ",
+		"EnableCropMode": "Уключыць рэжым абрэзкі",
+		"Flavor": "Выберыце праект, у якім павінен быць створаны прадукт",
 		"NextProof": "Next proof",
 		"PreviousProof": "Папярэдні доказ",
 		"ProductAlreadyExists": "Прадукт ужо існуе",
 		"ProofNumberOfOutProofs": "Доказ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Крамы, дзе прадаецца",
-		"UseDrawModeToAddImage": "Каб дадаць выяву прадукту, уключыце рэжым малявання пад пробным малюнкам і намалюйце прастакутнік вакол прадукту."
+		"UseCropModeToAddImage": "Каб дадаць выяву прадукту, уключыце рэжым абрэзкі пад пробным малюнкам і намалюйце прастакутнік вакол прадукту."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
