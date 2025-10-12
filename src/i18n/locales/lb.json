@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Änneren",
 		"End": "End",
+		"FieldIsRequired": "Feld ass obligatoresch",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "E neit Produkt erstellen",
 		"CreateProduct": "Produkt erstellen",
-		"EnableDrawMode": "Zeechenmodus aktivéieren",
-		"Flavor": "Aroma",
+		"EnableCropMode": "Crop-Modus aktivéieren",
+		"Flavor": "Wielt de Projet aus, an deem d'Produkt erstallt soll ginn",
 		"NextProof": "Next proof",
 		"PreviousProof": "Virdrun Beweis",
 		"ProductAlreadyExists": "Produkt existéiert schonn",
 		"ProofNumberOfOutProofs": "Beweis ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Geschäfter wou verkaaft gëtt",
-		"UseDrawModeToAddImage": "Fir e Produktbild bäizefügen, aktivéiert den Zeechmodus ënner dem Beweisbild a moolt e Rechteck ronderëm d'Produkt."
+		"UseCropModeToAddImage": "Fir e Produktbild bäizefügen, aktivéiert de Crop-Modus ënner dem Beweisbild a moolt e Rechteck ronderëm d'Produkt."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
