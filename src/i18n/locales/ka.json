@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "ველი სავალდებულოა",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "შექმენით ახალი პროდუქტი",
 		"CreateProduct": "პროდუქტის შექმნა",
-		"EnableDrawMode": "ხატვის რეჟიმის ჩართვა",
-		"Flavor": "არომატი",
+		"EnableCropMode": "ჩამოჭრის რეჟიმის ჩართვა",
+		"Flavor": "აირჩიეთ პროექტი, რომელშიც პროდუქტი უნდა შეიქმნას",
 		"NextProof": "Next proof",
 		"PreviousProof": "წინა მტკიცებულება",
 		"ProductAlreadyExists": "პროდუქტი უკვე არსებობს",
 		"ProofNumberOfOutProofs": "დამტკიცება ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "მაღაზიები, სადაც იყიდება",
-		"UseDrawModeToAddImage": "პროდუქტის სურათის დასამატებლად, ჩართეთ ხატვის რეჟიმი „პროპორციული სურათის ქვემოთ“ და დახაზეთ მართკუთხედი პროდუქტის გარშემო."
+		"UseCropModeToAddImage": "პროდუქტის სურათის დასამატებლად, ჩართეთ ჩამოჭრის რეჟიმი სურათის ქვემოთ და შემოხაზეთ მართკუთხედი პროდუქტს."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

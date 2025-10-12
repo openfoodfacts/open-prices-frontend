@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Muokkaa",
 		"End": "End",
+		"FieldIsRequired": "Kenttä on pakollinen",
 		"Filter": "Suodata",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "Hinnalla",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Maat, joissa myynnissä",
 		"CreateNewProduct": "Luo uusi tuote",
 		"CreateProduct": "Luo tuote",
-		"EnableDrawMode": "Ota piirtotila käyttöön",
-		"Flavor": "Maku",
+		"EnableCropMode": "Ota rajaustila käyttöön",
+		"Flavor": "Valitse projekti, jossa tuote luodaan",
 		"NextProof": "Next proof",
 		"PreviousProof": "Edellinen todiste",
 		"ProductAlreadyExists": "Tuote on jo olemassa",
 		"ProofNumberOfOutProofs": "Todiste ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Myymälät, joissa myydään",
-		"UseDrawModeToAddImage": "Lisätäksesi tuotekuvan, ota käyttöön piirtotila vedoskuvan alapuolella ja piirrä suorakulmio tuotteen ympärille."
+		"UseCropModeToAddImage": "Lisätäksesi tuotekuvan, ota käyttöön rajaustila vedoskuvan alapuolella ja piirrä suorakulmio tuotteen ympärille."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Valitse jokin viimeaikaisista todisteistasi"

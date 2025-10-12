@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "تحرير",
 		"End": "End",
+		"FieldIsRequired": "الحقل مطلوب",
 		"Filter": "تصفية",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "بلدان بيع",
 		"CreateNewProduct": "إنشاء منتج جديد",
 		"CreateProduct": "إنشاء المنتج",
-		"EnableDrawMode": "تمكين وضع الرسم",
-		"Flavor": "نكهة",
+		"EnableCropMode": "تمكين وضع الاقتصاص",
+		"Flavor": "حدد المشروع الذي يجب إنشاء المنتج فيه",
 		"NextProof": "Next proof",
 		"PreviousProof": "الدليل السابق",
 		"ProductAlreadyExists": "المنتج موجود بالفعل",
 		"ProofNumberOfOutProofs": "الدليل ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "المتاجر التي تباع فيها",
-		"UseDrawModeToAddImage": "لإضافة صورة المنتج، قم بتمكين وضع الرسم أسفل صورة الإثبات وارسم مستطيلاً حول المنتج."
+		"UseCropModeToAddImage": "لإضافة صورة المنتج، قم بتمكين وضع الاقتصاص أسفل صورة الإثبات وارسم مستطيلاً حول المنتج."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

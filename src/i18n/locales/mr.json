@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "फील्ड आवश्यक आहे",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "नवीन उत्पादन तयार करा",
 		"CreateProduct": "उत्पादन तयार करा",
-		"EnableDrawMode": "ड्रॉ मोड सक्षम करा",
-		"Flavor": "चव",
+		"EnableCropMode": "क्रॉप मोड सक्षम करा",
+		"Flavor": "उत्पादन ज्या प्रकल्पात तयार करायचे आहे तो निवडा.",
 		"NextProof": "Next proof",
 		"PreviousProof": "मागील पुरावा",
 		"ProductAlreadyExists": "उत्पादन आधीच अस्तित्वात आहे",
 		"ProofNumberOfOutProofs": "पुरावा ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "विक्री केलेली दुकाने",
-		"UseDrawModeToAddImage": "उत्पादनाची प्रतिमा जोडण्यासाठी, प्रूफ चित्राच्या खाली ड्रॉ मोड सक्षम करा आणि उत्पादनाभोवती एक आयत काढा."
+		"UseCropModeToAddImage": "उत्पादनाची प्रतिमा जोडण्यासाठी, प्रूफ चित्राच्या खाली क्रॉप मोड सक्षम करा आणि उत्पादनाभोवती एक आयत काढा."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

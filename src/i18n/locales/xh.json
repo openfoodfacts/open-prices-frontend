@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Ummandla uyafuneka",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Yenza imveliso entsha",
 		"CreateProduct": "Yenza imveliso",
-		"EnableDrawMode": "Vula indlela yokuzoba",
-		"Flavor": "Incasa",
+		"EnableCropMode": "Yenza imowudi yokunqamla isebenze",
+		"Flavor": "Khetha iprojekthi imveliso ekufuneka yenziwe kuyo",
 		"NextProof": "Next proof",
 		"PreviousProof": "Ubungqina obudlulileyo",
 		"ProductAlreadyExists": "Imveliso sele ikhona",
 		"ProofNumberOfOutProofs": "Ubungqina ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Iivenkile ezithengiswayo",
-		"UseDrawModeToAddImage": "Ukongeza umfanekiso wemveliso, vula imowudi yokuzoba ngezantsi komfanekiso wobungqina kwaye uzobe uxande ujikeleze imveliso."
+		"UseCropModeToAddImage": "Ukongeza umfanekiso wemveliso, vula imowudi yesityalo engezantsi komfanekiso wobungqina kwaye uzobe uxande ujikeleze imveliso."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

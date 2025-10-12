@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Оңдоо",
 		"End": "End",
+		"FieldIsRequired": "Талаа талап кылынат",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "жаңы продукт түзүү",
 		"CreateProduct": "Продукт түзүү",
-		"EnableDrawMode": "Тартуу режимин иштетүү",
-		"Flavor": "Даам",
+		"EnableCropMode": "Кесүү режимин иштетүү",
+		"Flavor": "Продукт түзүлө турган долбоорду тандаңыз",
 		"NextProof": "Next proof",
 		"PreviousProof": "Мурунку далил",
 		"ProductAlreadyExists": "Продукт мурунтан эле бар",
 		"ProofNumberOfOutProofs": "Далил ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Сатылган дүкөндөр",
-		"UseDrawModeToAddImage": "Продукциянын сүрөтүн кошуу үчүн далилдүү сүрөттүн астына тартуу режимин иштетиңиз жана буюмдун айланасына тик бурчтук тартыңыз."
+		"UseCropModeToAddImage": "Продукциянын сүрөтүн кошуу үчүн далилдүү сүрөттүн астындагы кесүү режимин иштетиңиз жана буюмдун айланасына тик бурчтук тартыңыз."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

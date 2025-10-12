@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "ሜዳ የድሊ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "ሓድሽ ፍርያት ምፍጣር",
 		"CreateProduct": "ፍርያት ምፍጣር",
-		"EnableDrawMode": "ሞድ ስእሊ ኣኽእሎ",
-		"Flavor": "መኣዛ",
+		"EnableCropMode": "ሞድ ዝራእቲ ኣንቅሕ",
+		"Flavor": "እቲ ፍርያት ክፍጠረሉ ዘለዎ ፕሮጀክት ምረጽ",
 		"NextProof": "Next proof",
 		"PreviousProof": "ቅድሚ ሕጂ ዝነበረ መርትዖ",
 		"ProductAlreadyExists": "ፍርያት ድሮ ኣሎ።",
 		"ProofNumberOfOutProofs": "መርትዖ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ዝሽየጡሉ ድኳናት",
-		"UseDrawModeToAddImage": "ምስሊ ፍርያት ንምውሳኽ፡ ኣብ ትሕቲ መርትዖ ስእሊ ሞድ ስእሊ ኣኽእሎ እሞ ኣብ ዙርያ እቲ ፍርያት ርብዒ-ኣንፈት ስኣል።"
+		"UseCropModeToAddImage": "ምስሊ ፍርያት ንምውሳኽ ኣብ ትሕቲ መርትዖ ስእሊ ሞድ ምቑራጽ ኣንቅሕ እሞ ኣብ ዙርያ እቲ ፍርያት ርብዒ መስመር ስኣል።"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

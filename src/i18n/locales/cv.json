@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Уй кирлӗ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Ҫӗнӗ продукт тӑвӑр",
 		"CreateProduct": "Продукт тӑвӑр",
-		"EnableDrawMode": "Ӳкерчӗк режимне ӗҫлеттер",
-		"Flavor": "Тут",
+		"EnableCropMode": "Касмалли режима ӗҫлеттер",
+		"Flavor": "Продукта мӗнле проектра тумаллине суйласа илӗр",
 		"NextProof": "Next proof",
 		"PreviousProof": "Унчченхи ҫирӗплетӳ",
 		"ProductAlreadyExists": "Продукт пур ӗнтӗ",
 		"ProofNumberOfOutProofs": "Доказательство ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Лавккасем ӑҫта сутаҫҫӗ",
-		"UseDrawModeToAddImage": "Продукт ӳкерчӗкне хушас тесен, ҫирӗплетӳ ӳкерчӗкӗ айӗнче ӳкермелли режима ӗҫлеттермелле те продукт тавра тӳркӗтеслӗх ӳкермелле."
+		"UseCropModeToAddImage": "Продукт ӳкерчӗкне хушас тесен, ҫирӗплетӳ ӳкерчӗкӗ айӗнче касмалли режима ӗҫлеттермелле те продукт тавра тӳркӗтеслӗх ӳкермелле."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

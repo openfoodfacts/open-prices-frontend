@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Eksempler: {value}",
 		"Edit": "Redigér",
 		"End": "Slut",
+		"FieldIsRequired": "Feltet er påkrævet",
 		"Filter": "Filtrere",
 		"FilterChallengesShowAllStatus": "Vis alle udfordringer",
 		"FilterProductWithPriceCount": "Med en pris",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Lande, hvorfra der sælges",
 		"CreateNewProduct": "Opret et nyt produkt",
 		"CreateProduct": "Opret produkt",
-		"EnableDrawMode": "Aktivér tegnetilstand",
-		"Flavor": "Smag",
+		"EnableCropMode": "Aktivér beskæringstilstand",
+		"Flavor": "Vælg det projekt, hvor produktet skal oprettes",
 		"NextProof": "Næste bevis",
 		"PreviousProof": "Tidligere bevis",
 		"ProductAlreadyExists": "Produktet findes allerede",
 		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Butikker hvor der blev solgt",
-		"UseDrawModeToAddImage": "For at tilføje et produktbillede skal du aktivere tegnetilstand under prøvebilledet og tegne et rektangel omkring produktet."
+		"UseCropModeToAddImage": "For at tilføje et produktbillede skal du aktivere beskæringstilstand under korrekturbilledet og tegne et rektangel omkring produktet."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Vælg et af dine seneste beviser"

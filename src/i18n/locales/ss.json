@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Insimu iyadzingeka",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Dala umkhicito lomusha",
 		"CreateProduct": "Dala umkhicito",
-		"EnableDrawMode": "Nika emandla imodi yekudvweba",
-		"Flavor": "Kunambitseka",
+		"EnableCropMode": "Nika emandla imodi yekusika",
+		"Flavor": "Khetsa iphrojekthi umkhicito kufanele udalwe ku .",
 		"NextProof": "Next proof",
 		"PreviousProof": "Bufakazi bangaphambilini",
 		"ProductAlreadyExists": "Umkhicito sewuvele ukhona",
 		"ProofNumberOfOutProofs": "Bufakazi ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Titolo lapho kutsengiswa khona",
-		"UseDrawModeToAddImage": "Kufaka sitfombe semkhicito, nika emandla imodi yekudvweba ngephansi kwesitfombe sebufakazi bese udvweba unxande lozungete lomkhicito."
+		"UseCropModeToAddImage": "Kufaka sitfombe semkhicito, nika emandla imodi yekunciphisa ngephansi kwesitfombe sebufakazi bese udvweba unxande lozungete lomkhicito."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

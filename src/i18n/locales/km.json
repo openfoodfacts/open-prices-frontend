@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "កែសម្រួល",
 		"End": "End",
+		"FieldIsRequired": "វាលត្រូវបានទាមទារ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "បង្កើតផលិតផលថ្មី។",
 		"CreateProduct": "បង្កើតផលិតផល",
-		"EnableDrawMode": "បើករបៀបគូរ",
-		"Flavor": "រសជាតិ",
+		"EnableCropMode": "បើករបៀបច្រឹប",
+		"Flavor": "ជ្រើសរើសគម្រោងដែលផលិតផលគួរតែត្រូវបានបង្កើត",
 		"NextProof": "Next proof",
 		"PreviousProof": "ភស្តុតាងពីមុន",
 		"ProductAlreadyExists": "ផលិតផលមានរួចហើយ",
 		"ProofNumberOfOutProofs": "ភស្តុតាង ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ហាងដែលលក់",
-		"UseDrawModeToAddImage": "ដើម្បីបន្ថែមរូបភាពផលិតផល សូមបើករបៀបគូរខាងក្រោមរូបភាពភស្តុតាង ហើយគូរចតុកោណកែងជុំវិញផលិតផល។"
+		"UseCropModeToAddImage": "ដើម្បីបន្ថែមរូបភាពផលិតផល សូមបើកមុខងារច្រឹបខាងក្រោមរូបភាពភស្តុតាង ហើយគូរចតុកោណកែងជុំវិញផលិតផល។"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

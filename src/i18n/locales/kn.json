@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "ತಿದ್ದು",
 		"End": "End",
+		"FieldIsRequired": "ಕ್ಷೇತ್ರ ಕಡ್ಡಾಯವಾಗಿದೆ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "ಹೊಸ ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಿ",
 		"CreateProduct": "ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಿ",
-		"EnableDrawMode": "ಡ್ರಾ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
-		"Flavor": "ಸುವಾಸನೆ",
+		"EnableCropMode": "ಕ್ರಾಪ್ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+		"Flavor": "ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಬೇಕಾದ ಯೋಜನೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
 		"NextProof": "Next proof",
 		"PreviousProof": "ಹಿಂದಿನ ಪುರಾವೆ",
 		"ProductAlreadyExists": "ಉತ್ಪನ್ನ ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ.",
 		"ProofNumberOfOutProofs": "ಪುರಾವೆ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ಮಾರಾಟವಾಗುವ ಅಂಗಡಿಗಳು",
-		"UseDrawModeToAddImage": "ಉತ್ಪನ್ನ ಚಿತ್ರವನ್ನು ಸೇರಿಸಲು, ಪ್ರೂಫ್ ಚಿತ್ರದ ಕೆಳಗೆ ಡ್ರಾ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಉತ್ಪನ್ನದ ಸುತ್ತಲೂ ಒಂದು ಆಯತವನ್ನು ಎಳೆಯಿರಿ."
+		"UseCropModeToAddImage": "ಉತ್ಪನ್ನ ಚಿತ್ರವನ್ನು ಸೇರಿಸಲು, ಪ್ರೂಫ್ ಚಿತ್ರದ ಕೆಳಗೆ ಕ್ರಾಪ್ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಉತ್ಪನ್ನದ ಸುತ್ತಲೂ ಒಂದು ಆಯತವನ್ನು ಎಳೆಯಿರಿ."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

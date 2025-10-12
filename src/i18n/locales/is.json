@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Reitur er nauðsynlegur",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Búa til nýja vöru",
 		"CreateProduct": "Búa til vöru",
-		"EnableDrawMode": "Virkja teikningarstillingu",
-		"Flavor": "Bragð",
+		"EnableCropMode": "Virkja skurðarstillingu",
+		"Flavor": "Veldu verkefnið sem varan á að vera búin til í",
 		"NextProof": "Next proof",
 		"PreviousProof": "Fyrri sönnun",
 		"ProductAlreadyExists": "Vara er þegar til staðar",
 		"ProofNumberOfOutProofs": "Sönnun ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Verslanir þar sem seld var",
-		"UseDrawModeToAddImage": "Til að bæta við mynd af vörunni skaltu virkja teiknistillingu fyrir neðan sönnunarmyndina og teikna rétthyrning í kringum vöruna."
+		"UseCropModeToAddImage": "Til að bæta við mynd af vörunni skaltu virkja skurðarstillingu fyrir neðan sönnunarmyndina og teikna rétthyrning í kringum vöruna."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

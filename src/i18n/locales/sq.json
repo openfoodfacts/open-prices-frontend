@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Fusha është e detyrueshme",
 		"Filter": "Filtro",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Krijo një produkt të ri",
 		"CreateProduct": "Krijo produktin",
-		"EnableDrawMode": "Aktivizo modalitetin e vizatimit",
-		"Flavor": "Shije",
+		"EnableCropMode": "Aktivizo modalitetin e prerjes",
+		"Flavor": "Zgjidhni projektin në të cilin duhet të krijohet produkti",
 		"NextProof": "Next proof",
 		"PreviousProof": "Prova e mëparshme",
 		"ProductAlreadyExists": "Produkti ekziston tashmë",
 		"ProofNumberOfOutProofs": "Provë ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Dyqanet ku shiten",
-		"UseDrawModeToAddImage": "Për të shtuar një imazh produkti, aktivizoni modalitetin e vizatimit poshtë figurës së provës dhe vizatoni një drejtkëndësh rreth produktit."
+		"UseCropModeToAddImage": "Për të shtuar një imazh produkti, aktivizoni modalitetin e prerjes së figurës poshtë provës dhe vizatoni një drejtkëndësh rreth produktit."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "수정",
 		"End": "End",
+		"FieldIsRequired": "필수 입력 항목입니다",
 		"Filter": "필터",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "판매의 나라",
 		"CreateNewProduct": "새로운 제품을 만드세요",
 		"CreateProduct": "제품 만들기",
-		"EnableDrawMode": "그리기 모드 활성화",
-		"Flavor": "맛",
+		"EnableCropMode": "자르기 모드 활성화",
+		"Flavor": "제품을 생성해야 하는 프로젝트를 선택하세요",
 		"NextProof": "Next proof",
 		"PreviousProof": "이전 증거",
 		"ProductAlreadyExists": "제품이 이미 존재합니다",
 		"ProofNumberOfOutProofs": "증명 ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "판매된 매장",
-		"UseDrawModeToAddImage": "제품 이미지를 추가하려면 증명 사진 아래의 그리기 모드를 활성화하고 제품 주위에 사각형을 그립니다."
+		"UseCropModeToAddImage": "제품 이미지를 추가하려면 교정 사진 아래의 자르기 모드를 활성화하고 제품 주위에 사각형을 그립니다."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Aaye ti wa ni ti beere",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Ṣẹda titun ọja",
 		"CreateProduct": "Ṣẹda ọja",
-		"EnableDrawMode": "Mu ipo iyaworan ṣiṣẹ",
-		"Flavor": "Adun",
+		"EnableCropMode": "Jeki ipo irugbin na ṣiṣẹ",
+		"Flavor": "Yan iṣẹ akanṣe ọja yẹ ki o ṣẹda ninu",
 		"NextProof": "Next proof",
 		"PreviousProof": "Ẹri iṣaaju",
 		"ProductAlreadyExists": "Ọja ti wa tẹlẹ",
 		"ProofNumberOfOutProofs": "Ẹri ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Awọn ile itaja nibiti o ti ta",
-		"UseDrawModeToAddImage": "Lati fi aworan ọja kun, mu ipo iyaworan ṣiṣẹ ni isalẹ aworan ẹri ki o fa onigun mẹta yika ọja naa."
+		"UseCropModeToAddImage": "Lati fi aworan ọja kun, mu ipo irugbin ṣiṣẹ ni isalẹ aworan ẹri ki o fa onigun mẹta yika ọja naa."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

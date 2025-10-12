@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Rediģēt",
 		"End": "End",
+		"FieldIsRequired": "Lauks ir obligāts",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "Izveidot jaunu produktu",
 		"CreateProduct": "Izveidot produktu",
-		"EnableDrawMode": "Iespējot zīmēšanas režīmu",
-		"Flavor": "Garša",
+		"EnableCropMode": "Iespējot apgriešanas režīmu",
+		"Flavor": "Atlasiet projektu, kurā produkts jāizveido",
 		"NextProof": "Next proof",
 		"PreviousProof": "Iepriekšējais pierādījums",
 		"ProductAlreadyExists": "Produkts jau pastāv",
 		"ProofNumberOfOutProofs": "Pierādījums ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Veikali, kuros tiek pārdots",
-		"UseDrawModeToAddImage": "Lai pievienotu produkta attēlu, zem korektūras attēla iespējojiet zīmēšanas režīmu un uzzīmējiet taisnstūri ap produktu."
+		"UseCropModeToAddImage": "Lai pievienotu produkta attēlu, zem korektūras attēla iespējojiet apgriešanas režīmu un uzzīmējiet taisnstūri ap produktu."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

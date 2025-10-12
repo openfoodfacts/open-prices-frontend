@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Garoonka ayaa loo baahan yahay",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Abuur badeecad cusub",
 		"CreateProduct": "Abuur badeecad",
-		"EnableDrawMode": "Daar qaabka sawirka",
-		"Flavor": "Dhadhan",
+		"EnableCropMode": "Daar qaabka dalagga",
+		"Flavor": "Dooro mashruuca ay tahay in alaabta lagu abuuro",
 		"NextProof": "Next proof",
 		"PreviousProof": "Caddeyn hore",
 		"ProductAlreadyExists": "Alaabta ayaa hore u jirtay",
 		"ProofNumberOfOutProofs": "Caddeyn ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Dukaamada lagu iibiyo",
-		"UseDrawModeToAddImage": "Si aad ugu darto sawirka alaabta, awood u samee qaabka sawirka caddaynta ka hooseeya oo ku sawir leydi ku wareegsan alaabta."
+		"UseCropModeToAddImage": "Si aad ugu darto sawirka badeecada, karti u samee qaabka dalagga ka hooseeya sawirka caddaynta oo ku sawir leydi ku wareegsan alaabta."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

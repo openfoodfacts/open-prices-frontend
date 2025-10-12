@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "ຊ່ອງຂໍ້ມູນແມ່ນຕ້ອງການ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "ສ້າງຜະລິດຕະພັນໃຫມ່",
 		"CreateProduct": "ສ້າງຜະລິດຕະພັນ",
-		"EnableDrawMode": "ເປີດໃຊ້ໂໝດແຕ້ມ",
-		"Flavor": "ລົດຊາດ",
+		"EnableCropMode": "ເປີດໃຊ້ໂໝດການຕັດ",
+		"Flavor": "ເລືອກໂຄງການທີ່ຜະລິດຕະພັນຄວນຈະຖືກສ້າງຂື້ນໃນ",
 		"NextProof": "Next proof",
 		"PreviousProof": "ຫຼັກຖານທີ່ຜ່ານມາ",
 		"ProductAlreadyExists": "ສິນຄ້າມີຢູ່ແລ້ວ",
 		"ProofNumberOfOutProofs": "ຫຼັກຖານສະແດງ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ຮ້ານຄ້າທີ່ຂາຍ",
-		"UseDrawModeToAddImage": "ເພື່ອເພີ່ມຮູບຜະລິດຕະພັນ, ເປີດໃຊ້ໂໝດແຕ້ມຢູ່ລຸ່ມຮູບຫຼັກຖານ ແລະ ແຕ້ມສີ່ຫຼ່ຽມອ້ອມຮອບຜະລິດຕະພັນ."
+		"UseCropModeToAddImage": "ເພື່ອເພີ່ມຮູບຜະລິດຕະພັນ, ເປີດໃຊ້ໂໝດການຕັດຢູ່ລຸ່ມຮູບຫຼັກຖານ ແລະແຕ້ມຮູບສີ່ຫລ່ຽມອ້ອມຮອບຜະລິດຕະພັນ."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

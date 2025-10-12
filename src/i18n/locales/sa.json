@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "क्षेत्रम् आवश्यकम् अस्ति",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "नूतनं उत्पादं रचयन्तु",
 		"CreateProduct": "उत्पादं रचयन्तु",
-		"EnableDrawMode": "draw mode सक्षमं कुर्वन्तु",
-		"Flavor": "स्वादः",
+		"EnableCropMode": "सस्यविधानं सक्षमं कुर्वन्तु",
+		"Flavor": "यस्मिन् परियोजनायां उत्पादः निर्मातव्यः तस्मिन् परियोजनायां चयनं कुर्वन्तु",
 		"NextProof": "Next proof",
 		"PreviousProof": "पूर्वप्रमाणम्",
 		"ProductAlreadyExists": "उत्पादः पूर्वमेव अस्ति",
 		"ProofNumberOfOutProofs": "प्रमाण ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "भण्डाराः यत्र विक्रीयन्ते",
-		"UseDrawModeToAddImage": "उत्पादप्रतिबिम्बं योजयितुं प्रमाणचित्रस्य अधः draw mode सक्षमं कुर्वन्तु तथा च उत्पादस्य परितः आयतं आकर्षयन्तु ।"
+		"UseCropModeToAddImage": "उत्पादप्रतिबिम्बं योजयितुं प्रमाणचित्रस्य अधः क्रॉप् मोड् सक्षमं कुर्वन्तु तथा च उत्पादस्य परितः आयतं आकर्षयन्तु ।"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

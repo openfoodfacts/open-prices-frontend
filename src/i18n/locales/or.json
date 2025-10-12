@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "କ୍ଷେତ୍ର ଆବଶ୍ୟକ ଅଟେ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "ଏକ ନୂତନ ଉତ୍ପାଦ ତିଆରି କରନ୍ତୁ",
 		"CreateProduct": "ଉତ୍ପାଦ ତିଆରି କରନ୍ତୁ",
-		"EnableDrawMode": "ଡ୍ର ମୋଡ୍ ସକ୍ଷମ କରନ୍ତୁ",
-		"Flavor": "ସ୍ୱାଦ",
+		"EnableCropMode": "କ୍ରପ୍ ମୋଡ୍ ସକ୍ଷମ କରନ୍ତୁ",
+		"Flavor": "ଯେଉଁ ପ୍ରୋଜେକ୍ଟରେ ଉତ୍ପାଦଟି ତିଆରି କରାଯିବା ଉଚିତ ତାହା ଚୟନ କରନ୍ତୁ।",
 		"NextProof": "Next proof",
 		"PreviousProof": "ପୂର୍ବ ପ୍ରମାଣ",
 		"ProductAlreadyExists": "ଉତ୍ପାଦ ପୂର୍ବରୁ ଅଛି",
 		"ProofNumberOfOutProofs": "ପ୍ରମାଣ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ବିକ୍ରି ହୋଇଥିବା ଦୋକାନଗୁଡ଼ିକ",
-		"UseDrawModeToAddImage": "ଏକ ଉତ୍ପାଦ ପ୍ରତିଛବି ଯୋଡିବା ପାଇଁ, ପ୍ରମାଣ ଚିତ୍ର ତଳେ ଡ୍ର ମୋଡ୍ ସକ୍ଷମ କରନ୍ତୁ ଏବଂ ଉତ୍ପାଦ ଚାରିପାଖରେ ଏକ ଆୟତକ୍ଷେତ୍ର ଆଙ୍କନ୍ତୁ।"
+		"UseCropModeToAddImage": "ଏକ ଉତ୍ପାଦ ପ୍ରତିଛବି ଯୋଡିବା ପାଇଁ, ପ୍ରମାଣ ଚିତ୍ର ତଳେ କ୍ରପ୍ ମୋଡ୍ ସକ୍ଷମ କରନ୍ତୁ ଏବଂ ଉତ୍ପାଦ ଚାରିପାଖରେ ଏକ ଆୟତକ୍ଷେତ୍ର ଆଙ୍କନ୍ତୁ।"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

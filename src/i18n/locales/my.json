@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "အကွက်လိုအပ်သည်။",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "ထုတ်ကုန်အသစ်ဖန်တီးပါ။",
 		"CreateProduct": "ထုတ်ကုန်ဖန်တီးပါ။",
-		"EnableDrawMode": "ဆွဲမုဒ်ကို ဖွင့်ပါ။",
-		"Flavor": "အရသာ",
+		"EnableCropMode": "ဖြတ်တောက်မှုမုဒ်ကို ဖွင့်ပါ။",
+		"Flavor": "ထုတ်ကုန်တွင် ဖန်တီးသင့်သည့် ပရောဂျက်ကို ရွေးချယ်ပါ။",
 		"NextProof": "Next proof",
 		"PreviousProof": "ယခင်သက်သေ",
 		"ProductAlreadyExists": "ထုတ်ကုန် ရှိနှင့်ပြီးဖြစ်သည်။",
 		"ProofNumberOfOutProofs": "သက်သေ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ရောင်းချသည့်ဆိုင်များ",
-		"UseDrawModeToAddImage": "ထုတ်ကုန်ပုံတစ်ခုထည့်ရန်၊ သက်သေပြရုပ်ပုံအောက်ရှိ ဆွဲမုဒ်ကိုဖွင့်ပြီး ထုတ်ကုန်တစ်ဝိုက်တွင် စတုဂံပုံဆွဲပါ။"
+		"UseCropModeToAddImage": "ထုတ်ကုန်ပုံတစ်ပုံထည့်ရန်၊ အထောက်အထားပုံအောက်တွင် ဖြတ်တောက်ခြင်းမုဒ်ကို ဖွင့်ပြီး ထုတ်ကုန်တစ်ဝိုက်တွင် စတုဂံပုံဆွဲပါ။"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

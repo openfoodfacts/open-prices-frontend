@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Pavyzdžiai: {value}",
 		"Edit": "Redaguoti",
 		"End": "Pabaiga",
+		"FieldIsRequired": "Laukas būtinas",
 		"Filter": "Filtras",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "Su kaina",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "Sukurkite naują produktą",
 		"CreateProduct": "Sukurti produktą",
-		"EnableDrawMode": "Įjungti piešimo režimą",
-		"Flavor": "Skonis",
+		"EnableCropMode": "Įjungti apkirpimo režimą",
+		"Flavor": "Pasirinkite projektą, kuriame produktas turėtų būti sukurtas",
 		"NextProof": "Kitas įrodymas",
 		"PreviousProof": "Ankstesnis įrodymas",
 		"ProductAlreadyExists": "Produktas jau yra",
 		"ProofNumberOfOutProofs": "Įrodymas ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Parduotuvės, kuriose parduodama",
-		"UseDrawModeToAddImage": "Norėdami pridėti produkto paveikslėlį, įjunkite piešimo režimą po bandomąja nuotrauka ir nubrėžkite stačiakampį aplink produktą."
+		"UseCropModeToAddImage": "Norėdami pridėti produkto paveikslėlį, įjunkite apkirpimo režimą po bandomąja nuotrauka ir nubrėžkite stačiakampį aplink produktą."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

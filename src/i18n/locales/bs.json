@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Uredi",
 		"End": "End",
+		"FieldIsRequired": "Polje je obavezno",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Zemlje gdje se prodaju",
 		"CreateNewProduct": "Kreiraj novi proizvod",
 		"CreateProduct": "Kreiraj proizvod",
-		"EnableDrawMode": "Omogući način crtanja",
-		"Flavor": "Okus",
+		"EnableCropMode": "Omogući način izrezivanja",
+		"Flavor": "Odaberite projekat u kojem proizvod treba biti kreiran",
 		"NextProof": "Next proof",
 		"PreviousProof": "Prethodni dokaz",
 		"ProductAlreadyExists": "Proizvod već postoji",
 		"ProofNumberOfOutProofs": "Dokaz ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Trgovine u kojima se prodaje",
-		"UseDrawModeToAddImage": "Da biste dodali sliku proizvoda, omogućite način crtanja ispod probne slike i nacrtajte pravougaonik oko proizvoda."
+		"UseCropModeToAddImage": "Da biste dodali sliku proizvoda, omogućite način izrezivanja ispod probne slike i nacrtajte pravougaonik oko proizvoda."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

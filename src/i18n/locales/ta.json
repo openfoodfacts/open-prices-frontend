@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "எடுத்துக்காட்டுகள்: {value}",
 		"Edit": "திருத்து",
 		"End": "முடிவு",
+		"FieldIsRequired": "புலம் அவசியம்",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "ஒரு விலையுடன்",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "புதிய தயாரிப்பை உருவாக்குங்கள்",
 		"CreateProduct": "தயாரிப்பை உருவாக்கு",
-		"EnableDrawMode": "வரைதல் பயன்முறையை இயக்கு",
-		"Flavor": "சுவை",
+		"EnableCropMode": "செதுக்கும் பயன்முறையை இயக்கு",
+		"Flavor": "தயாரிப்பு உருவாக்கப்பட வேண்டிய திட்டத்தைத் தேர்ந்தெடுக்கவும்.",
 		"NextProof": "Next proof",
 		"PreviousProof": "முந்தைய ஆதாரம்",
 		"ProductAlreadyExists": "தயாரிப்பு ஏற்கனவே உள்ளது.",
 		"ProofNumberOfOutProofs": "ஆதாரம் ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "விற்பனை செய்யப்படும் கடைகள்",
-		"UseDrawModeToAddImage": "ஒரு தயாரிப்பு படத்தைச் சேர்க்க, ஆதாரப் படத்திற்குக் கீழே வரைதல் பயன்முறையை இயக்கி, தயாரிப்பைச் சுற்றி ஒரு செவ்வகத்தை வரையவும்."
+		"UseCropModeToAddImage": "ஒரு தயாரிப்பு படத்தைச் சேர்க்க, ஆதாரப் படத்திற்குக் கீழே செதுக்கும் பயன்முறையை இயக்கி, தயாரிப்பைச் சுற்றி ஒரு செவ்வகத்தை வரையவும்."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

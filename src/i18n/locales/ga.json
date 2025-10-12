@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Tá réimse riachtanach",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "Cruthaigh táirge nua",
 		"CreateProduct": "Cruthaigh táirge",
-		"EnableDrawMode": "Cumasaigh mód tarraingthe",
-		"Flavor": "Blas",
+		"EnableCropMode": "Cumasaigh mód barra",
+		"Flavor": "Roghnaigh an tionscadal ar cheart an táirge a chruthú ann",
 		"NextProof": "Next proof",
 		"PreviousProof": "Cruthúnas roimhe seo",
 		"ProductAlreadyExists": "Tá an táirge ann cheana féin",
 		"ProofNumberOfOutProofs": "Cruthúnas ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Siopaí inar díoladh iad",
-		"UseDrawModeToAddImage": "Chun íomhá táirge a chur leis, cumasaigh mód tarraingthe faoin bpictiúr cruthúnais agus tarraing dronuilleog timpeall an táirge."
+		"UseCropModeToAddImage": "Chun íomhá táirge a chur leis, cumasaigh mód bearrtha faoin bpictiúr cruthúnais agus tarraing dronuilleog timpeall an táirge."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

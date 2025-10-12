@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "ሜዳ ያስፈልጋል",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "አዲስ ምርት ይፍጠሩ",
 		"CreateProduct": "ምርት ይፍጠሩ",
-		"EnableDrawMode": "የስዕል ሁነታን አንቃ",
-		"Flavor": "ጣዕም",
+		"EnableCropMode": "የሰብል ሁነታን አንቃ",
+		"Flavor": "ምርቱ መፈጠር ያለበትን ፕሮጀክት ይምረጡ",
 		"NextProof": "Next proof",
 		"PreviousProof": "የቀድሞ ማረጋገጫ",
 		"ProductAlreadyExists": "ምርቱ አስቀድሞ አለ።",
 		"ProofNumberOfOutProofs": "ማረጋገጫ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "የሚሸጡባቸው መደብሮች",
-		"UseDrawModeToAddImage": "የምርት ምስል ለመጨመር፣ ከማስረጃው ምስል በታች የስዕል ሁነታን ያንቁ እና በምርቱ ዙሪያ አራት ማዕዘን ይሳሉ።"
+		"UseCropModeToAddImage": "የምርት ምስል ለመጨመር ከማረጋገጫ ስእል በታች የሰብል ሁነታን ያንቁ እና በምርቱ ዙሪያ አራት ማዕዘን ይሳሉ።"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

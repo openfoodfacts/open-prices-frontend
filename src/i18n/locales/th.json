@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "แก้ไข",
 		"End": "End",
+		"FieldIsRequired": "ฟิลด์นี้จำเป็นต้องกรอก",
 		"Filter": "กรอง",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "ประเทศที่ขาย",
 		"CreateNewProduct": "สร้างผลิตภัณฑ์ใหม่",
 		"CreateProduct": "สร้างผลิตภัณฑ์",
-		"EnableDrawMode": "เปิดใช้งานโหมดการวาดภาพ",
-		"Flavor": "รสชาติ",
+		"EnableCropMode": "เปิดใช้งานโหมดครอบตัด",
+		"Flavor": "เลือกโครงการที่จะสร้างผลิตภัณฑ์",
 		"NextProof": "Next proof",
 		"PreviousProof": "หลักฐานก่อนหน้า",
 		"ProductAlreadyExists": "สินค้ามีอยู่แล้ว",
 		"ProofNumberOfOutProofs": "พิสูจน์ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ร้านค้าที่จำหน่าย",
-		"UseDrawModeToAddImage": "หากต้องการเพิ่มรูปภาพผลิตภัณฑ์ ให้เปิดใช้งานโหมดวาดภาพใต้ภาพตัวอย่าง และวาดรูปสี่เหลี่ยมผืนผ้ารอบๆ ผลิตภัณฑ์"
+		"UseCropModeToAddImage": "หากต้องการเพิ่มรูปภาพผลิตภัณฑ์ ให้เปิดใช้งานโหมดครอบตัดใต้ภาพตัวอย่าง และวาดสี่เหลี่ยมผืนผ้ารอบ ๆ ผลิตภัณฑ์"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

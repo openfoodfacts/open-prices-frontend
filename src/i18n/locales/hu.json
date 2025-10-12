@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Szerkesztés",
 		"End": "End",
+		"FieldIsRequired": "A mező kitöltése kötelező",
 		"Filter": "Szűrés",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Országok, ahol kapható",
 		"CreateNewProduct": "Új termék létrehozása",
 		"CreateProduct": "Termék létrehozása",
-		"EnableDrawMode": "Rajzolás mód engedélyezése",
-		"Flavor": "Aroma",
+		"EnableCropMode": "Vágási mód engedélyezése",
+		"Flavor": "Válassza ki a projektet, amelyben a terméket létre kell hozni",
 		"NextProof": "Next proof",
 		"PreviousProof": "Korábbi bizonyíték",
 		"ProductAlreadyExists": "A termék már létezik",
 		"ProofNumberOfOutProofs": "Bizonyítás ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Üzletek, ahol árusítják",
-		"UseDrawModeToAddImage": "Termékkép hozzáadásához engedélyezze a rajzolási módot a próbakép alatt, és rajzoljon egy téglalapot a termék köré."
+		"UseCropModeToAddImage": "Termékkép hozzáadásához engedélyezze a vágási módot a próbakép alatt, és rajzoljon egy téglalapot a termék köré."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

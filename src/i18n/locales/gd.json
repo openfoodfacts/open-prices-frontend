@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Tha feum air raon",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Cruthaich toradh ùr",
 		"CreateProduct": "Cruthaich toradh",
-		"EnableDrawMode": "Cuir modh tarraing an gnìomh",
-		"Flavor": "Blas",
+		"EnableCropMode": "Cuir modh bàrr an gnìomh",
+		"Flavor": "Tagh am pròiseact anns am bu chòir an toradh a chruthachadh",
 		"NextProof": "Next proof",
 		"PreviousProof": "Fianais roimhe",
 		"ProductAlreadyExists": "Tha an toradh ann mu thràth",
 		"ProofNumberOfOutProofs": "Dearbhadh ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Bùthan far an deach an reic",
-		"UseDrawModeToAddImage": "Gus ìomhaigh toraidh a chur ris, cuir modh tarraing an gnìomh fon dealbh dearbhaidh agus tarraing ceart-cheàrnach timcheall an toraidh."
+		"UseCropModeToAddImage": "Gus ìomhaigh toraidh a chur ris, cuir modh gearraidh an gnìomh fon dealbh dearbhaidh agus tarraing ceart-cheàrnach timcheall an toraidh."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

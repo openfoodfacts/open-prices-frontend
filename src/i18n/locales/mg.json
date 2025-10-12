@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Ovaina",
 		"End": "End",
+		"FieldIsRequired": "Ilaina ny saha",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Firenana ivarotana",
 		"CreateNewProduct": "Mamorona vokatra vaovao",
 		"CreateProduct": "Mamorona vokatra",
-		"EnableDrawMode": "Alefaso ny fomba fisarihana",
-		"Flavor": "tsirony",
+		"EnableCropMode": "Alefaso ny fomba famafazana",
+		"Flavor": "Safidio ny tetikasa tokony hamoronana ny vokatra",
 		"NextProof": "Next proof",
 		"PreviousProof": "Porofo teo aloha",
 		"ProductAlreadyExists": "Efa misy ny vokatra",
 		"ProofNumberOfOutProofs": "Porofo ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Fivarotana amidy",
-		"UseDrawModeToAddImage": "Mba hanampiana sary vokatra, ampio ny fomba fisarihana eo ambanin'ny sary porofo ary manaova mahitsizoro manodidina ny vokatra."
+		"UseCropModeToAddImage": "Raha te hampiditra sary vokatra, ampio ny fomba famafazana eo ambanin'ny sary porofo ary manaova mahitsizoro manodidina ny vokatra."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

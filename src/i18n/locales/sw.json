@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Hariri",
 		"End": "End",
+		"FieldIsRequired": "Sehemu inahitajika",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "Unda bidhaa mpya",
 		"CreateProduct": "Unda bidhaa",
-		"EnableDrawMode": "Washa hali ya kuchora",
-		"Flavor": "Ladha",
+		"EnableCropMode": "Washa hali ya kupunguza",
+		"Flavor": "Chagua mradi ambao bidhaa inapaswa kuunda",
 		"NextProof": "Next proof",
 		"PreviousProof": "Ushahidi uliopita",
 		"ProductAlreadyExists": "Bidhaa tayari ipo",
 		"ProofNumberOfOutProofs": "Uthibitisho ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Maduka ambapo kuuzwa",
-		"UseDrawModeToAddImage": "Ili kuongeza picha ya bidhaa, wezesha modi ya kuchora chini ya picha thibitisho na chora mstatili kuzunguka bidhaa."
+		"UseCropModeToAddImage": "Ili kuongeza picha ya bidhaa, wezesha hali ya kupunguza chini ya picha ya uthibitisho na chora mstatili kuzunguka bidhaa."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

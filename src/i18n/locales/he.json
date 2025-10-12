@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "דוגמאות: {value}",
 		"Edit": "עריכה",
 		"End": "סוף",
+		"FieldIsRequired": "שדה חובה",
 		"Filter": "סינון",
 		"FilterChallengesShowAllStatus": "הצגת כל האתגרים",
 		"FilterProductWithPriceCount": "עם מחיר",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "ארצות בהן נמכר",
 		"CreateNewProduct": "יצירת מוצר חדש",
 		"CreateProduct": "יצירת מוצר",
-		"EnableDrawMode": "הפעלת מצב ציור",
-		"Flavor": "טעם",
+		"EnableCropMode": "הפעלת מצב חיתוך",
+		"Flavor": "בחר את הפרויקט שבו יש ליצור את המוצר",
 		"NextProof": "ההוכחה הבאה",
 		"PreviousProof": "הוכחה קודמת",
 		"ProductAlreadyExists": "המוצר כבר קיים",
 		"ProofNumberOfOutProofs": "הוכחה ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "חנויות בהן נמכר",
-		"UseDrawModeToAddImage": "כדי להוסיף תמונת מוצר, יש להפעיל את מצב הציור מתחת לתמונת ההוכחה ולצייר מלבן סביב המוצר."
+		"UseCropModeToAddImage": "כדי להוסיף תמונת מוצר, הפעל את מצב החיתוך מתחת לתמונת ההוכחה וצייר מלבן סביב המוצר."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "נא לבחור אחת מההוכחות העדכניות שלך"
@@ -570,8 +571,8 @@
 	"LocationSelector": {
 		"Clear": "פינוי",
 		"NoResult": "לא נמצאו תוצאות",
-		"NoResultHelpKeywords": "לא מוצאים את החנות שלכם? נסו להשתמש במילות מפתח במקום בכתובת המלאה (למשל 'Carrefour 75013 Paris' או 'Walmart San Francisco').",
-		"NoResultHelpOSM": "עדיין לא מצאתם את החנות שלכם? ייתכן שהיא עדיין לא נמצאת ב- {osm_name} . אתם יכולים להוסיף אותה קודם ב- {osm_url} .",
+		"NoResultHelpKeywords": "החנות שלך לא נמצאת? כדאי לנסות להשתמש במילות מפתח במקום בכתובת המלאה (למשל ‚Carrefour 75013 Paris’ או ‚Walmart San Francisco’).",
+		"NoResultHelpOSM": "עדיין לא מצאת את החנות שלך? ייתכן שהיא עדיין לא נמצאת ב־{osm_name}. ניתן להוסיף אותה קודם דרך {osm_url}.",
 		"PoweredBy": {
 			"text": "מופעל על גבי {url}"
 		},

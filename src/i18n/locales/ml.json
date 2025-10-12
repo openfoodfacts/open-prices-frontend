@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "ഫീൽഡ് പൂരിപ്പിക്കേണ്ടതുണ്ട്",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "ഒരു പുതിയ ഉൽപ്പന്നം സൃഷ്ടിക്കുക",
 		"CreateProduct": "ഉൽപ്പന്നം സൃഷ്ടിക്കുക",
-		"EnableDrawMode": "ഡ്രോ മോഡ് പ്രാപ്തമാക്കുക",
-		"Flavor": "രുചി",
+		"EnableCropMode": "ക്രോപ്പ് മോഡ് പ്രാപ്തമാക്കുക",
+		"Flavor": "ഉൽപ്പന്നം സൃഷ്ടിക്കേണ്ട പ്രോജക്റ്റ് തിരഞ്ഞെടുക്കുക.",
 		"NextProof": "Next proof",
 		"PreviousProof": "മുൻ തെളിവ്",
 		"ProductAlreadyExists": "ഉൽപ്പന്നം ഇതിനകം നിലവിലുണ്ട്",
 		"ProofNumberOfOutProofs": "തെളിവ് ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "വിൽക്കുന്ന കടകൾ",
-		"UseDrawModeToAddImage": "ഒരു ഉൽപ്പന്ന ചിത്രം ചേർക്കാൻ, പ്രൂഫ് ചിത്രത്തിന് താഴെ ഡ്രോ മോഡ് പ്രാപ്തമാക്കി ഉൽപ്പന്നത്തിന് ചുറ്റും ഒരു ദീർഘചതുരം വരയ്ക്കുക."
+		"UseCropModeToAddImage": "ഒരു ഉൽപ്പന്ന ചിത്രം ചേർക്കാൻ, പ്രൂഫ് ചിത്രത്തിന് താഴെയുള്ള ക്രോപ്പ് മോഡ് പ്രവർത്തനക്ഷമമാക്കി ഉൽപ്പന്നത്തിന് ചുറ്റും ഒരു ദീർഘചതുരം വരയ്ക്കുക."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

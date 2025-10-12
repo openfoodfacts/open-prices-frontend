@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Үзгәртү",
 		"End": "End",
+		"FieldIsRequired": "Кыр кирәк",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Яңа продукт ясагыз",
 		"CreateProduct": "Продукция ясау",
-		"EnableDrawMode": "Тарту режимын кушу",
-		"Flavor": "Тәм",
+		"EnableCropMode": "Уҗым режимын эшләгез",
+		"Flavor": "Продукция ясалган проектны сайлагыз",
 		"NextProof": "Next proof",
 		"PreviousProof": "Алдагы дәлил",
 		"ProductAlreadyExists": "Продукция инде бар",
 		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Сатылган кибетләр",
-		"UseDrawModeToAddImage": "Продукция образын өстәү өчен, дәлил рәсеме астына сызу режимын эшләгез һәм продукт тирәсендә турыпочмаклык сызыгыз."
+		"UseCropModeToAddImage": "Продукция образын өстәү өчен, дәлил рәсеме астындагы чәчү режимын эшләгез һәм продукт тирәсендә турыпочмаклык сызыгыз."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

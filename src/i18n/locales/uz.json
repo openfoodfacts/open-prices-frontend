@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Maydonni kiritish shart",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Savdo qiluvchi shaharlar",
 		"CreateNewProduct": "Yangi mahsulot yarating",
 		"CreateProduct": "Mahsulot yaratish",
-		"EnableDrawMode": "Chizish rejimini yoqing",
-		"Flavor": "Lazzat",
+		"EnableCropMode": "Kesish rejimini yoqing",
+		"Flavor": "Mahsulot yaratilishi kerak bo'lgan loyihani tanlang",
 		"NextProof": "Next proof",
 		"PreviousProof": "Oldingi dalil",
 		"ProductAlreadyExists": "Mahsulot allaqachon mavjud",
 		"ProofNumberOfOutProofs": "Isbot ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Sotilgan do'konlar",
-		"UseDrawModeToAddImage": "Mahsulot tasvirini qo'shish uchun isbotlangan rasm ostida chizish rejimini yoqing va mahsulot atrofida to'rtburchak chizing."
+		"UseCropModeToAddImage": "Mahsulot tasvirini qo'shish uchun isbotlangan rasm ostida kesish rejimini yoqing va mahsulot atrofida to'rtburchak chizing."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

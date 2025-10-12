@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "فیلد الزامی است",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "یک محصول جدید ایجاد کنید",
 		"CreateProduct": "ایجاد محصول",
-		"EnableDrawMode": "حالت ترسیم را فعال کنید",
-		"Flavor": "طعم",
+		"EnableCropMode": "حالت برش را فعال کنید",
+		"Flavor": "پروژه‌ای را که محصول باید در آن ایجاد شود، انتخاب کنید",
 		"NextProof": "Next proof",
 		"PreviousProof": "اثبات قبلی",
 		"ProductAlreadyExists": "محصول از قبل وجود دارد",
 		"ProofNumberOfOutProofs": "اثبات ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "فروشگاه‌هایی که در آنها فروخته می‌شوند",
-		"UseDrawModeToAddImage": "برای افزودن تصویر محصول، حالت ترسیم را در زیر تصویر نمونه فعال کنید و یک مستطیل دور محصول رسم کنید."
+		"UseCropModeToAddImage": "برای افزودن تصویر محصول، حالت برش را در زیر تصویر نمونه فعال کنید و یک مستطیل دور محصول بکشید."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

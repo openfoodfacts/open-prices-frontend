@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "ফিল্ডৰ প্ৰয়োজন",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "এটা নতুন প্ৰডাক্ট তৈয়াৰ কৰক",
 		"CreateProduct": "প্ৰডাক্ট সৃষ্টি কৰক",
-		"EnableDrawMode": "অংকন ধৰণ সামৰ্থবান কৰক",
-		"Flavor": "সোৱাদ",
+		"EnableCropMode": "শস্য ধৰণ সামৰ্থবান কৰক",
+		"Flavor": "প্ৰডাক্টটো সৃষ্টি কৰিবলগীয়া প্ৰকল্পটো নিৰ্ব্বাচন কৰক",
 		"NextProof": "Next proof",
 		"PreviousProof": "পূৰ্বৰ প্ৰমাণ",
 		"ProductAlreadyExists": "ইতিমধ্যে প্ৰডাক্ট আছে",
 		"ProofNumberOfOutProofs": "প্ৰমাণ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ষ্ট’ৰ য’ত বিক্ৰী কৰা হয়",
-		"UseDrawModeToAddImage": "এটা উৎপাদন ছবি যোগ কৰিবলে, প্ৰমাণ ছবিৰ তলত অংকন ধৰণ সামৰ্থবান কৰক আৰু উৎপাদনৰ চাৰিওফালে এটা আয়তক্ষেত্ৰ অংকন কৰক।"
+		"UseCropModeToAddImage": "এটা উৎপাদন ছবি যোগ কৰিবলে, প্ৰমাণ ছবিৰ তলত ক্ৰপ ধৰণ সামৰ্থবান কৰক আৰু উৎপাদনৰ চাৰিওফালে এটা আয়তক্ষেত্ৰ অংকন কৰক।"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

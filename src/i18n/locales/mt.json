@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Qasam meħtieġ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Oħloq prodott ġdid",
 		"CreateProduct": "Oħloq prodott",
-		"EnableDrawMode": "Ippermetti l-modalità tat-tpinġija",
-		"Flavor": "Togħma",
+		"EnableCropMode": "Ippermetti l-modalità tal-ħsad",
+		"Flavor": "Agħżel il-proġett li fih għandu jinħoloq il-prodott",
 		"NextProof": "Next proof",
 		"PreviousProof": "Prova preċedenti",
 		"ProductAlreadyExists": "Il-prodott diġà jeżisti",
 		"ProofNumberOfOutProofs": "Prova ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Ħwienet fejn jinbiegħu",
-		"UseDrawModeToAddImage": "Biex iżżid immaġni ta' prodott, attiva l-modalità tat-tpinġija taħt l-istampa ta' prova u pinġi rettangolu madwar il-prodott."
+		"UseCropModeToAddImage": "Biex iżżid immaġni ta' prodott, attiva l-modalità tal-qtugħ taħt l-istampa ta' prova u pinġi rettangolu madwar il-prodott."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

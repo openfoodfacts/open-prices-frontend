@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Засвар хийх",
 		"End": "End",
+		"FieldIsRequired": "Талбар оруулах шаардлагатай",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Шинэ бүтээгдэхүүн бий болгох",
 		"CreateProduct": "Бүтээгдэхүүн бий болгох",
-		"EnableDrawMode": "Зурах горимыг идэвхжүүлнэ үү",
-		"Flavor": "Амт",
+		"EnableCropMode": "Тайрах горимыг идэвхжүүлнэ үү",
+		"Flavor": "Бүтээгдэхүүнийг бүтээх төслийг сонго",
 		"NextProof": "Next proof",
 		"PreviousProof": "Өмнөх нотолгоо",
 		"ProductAlreadyExists": "Бүтээгдэхүүн аль хэдийн байна",
 		"ProofNumberOfOutProofs": "Баталгаа ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Борлуулсан дэлгүүрүүд",
-		"UseDrawModeToAddImage": "Бүтээгдэхүүний зураг нэмэхийн тулд баталгаат зургийн доор зурах горимыг идэвхжүүлж, бүтээгдэхүүний эргэн тойронд тэгш өнцөгт зур."
+		"UseCropModeToAddImage": "Бүтээгдэхүүний зураг нэмэхийн тулд баталгаат зургийн доор тайрах горимыг идэвхжүүлж, бүтээгдэхүүний эргэн тойронд тэгш өнцөгт зурна уу."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

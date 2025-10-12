@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Go tlhokega tshimo",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Tlhama kuno e ntšhwa",
 		"CreateProduct": "Tlhama kumo",
-		"EnableDrawMode": "Kgontsha mokgwa wa go thala",
-		"Flavor": "Tatso",
+		"EnableCropMode": "Kgontsha mokgwa wa go poma",
+		"Flavor": "Tlhopha porojeke e sedirisiwa se tshwanetseng go tlhamiwa mo go yone",
 		"NextProof": "Next proof",
 		"PreviousProof": "Bosupi jo bo fetileng",
 		"ProductAlreadyExists": "Kumo e setse e le teng",
 		"ProofNumberOfOutProofs": "Bosupi ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Mabenkele a go rekisiwang mo go one",
-		"UseDrawModeToAddImage": "Go tsenya setshwantsho sa sedirisiwa, kgontsha mokgwa wa go thala ka fa tlase ga setshwantsho sa bosupi o bo o thala khutlonnetsepa go dikologa sedirisiwa."
+		"UseCropModeToAddImage": "Go tsenya setshwantsho sa sedirisiwa, kgontsha mokgwa wa go poma ka fa tlase ga setshwantsho sa bosupi o bo o thala khutlonnetsepa go dikologa sedirisiwa."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

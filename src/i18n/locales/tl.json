@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Kinakailangan ang field",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Mga bansa kung saan ibinebenta",
 		"CreateNewProduct": "Gumawa ng bagong produkto",
 		"CreateProduct": "Lumikha ng produkto",
-		"EnableDrawMode": "I-enable ang draw mode",
-		"Flavor": "lasa",
+		"EnableCropMode": "Paganahin ang crop mode",
+		"Flavor": "Piliin ang proyekto kung saan dapat gawin ang produkto",
 		"NextProof": "Next proof",
 		"PreviousProof": "Nakaraang patunay",
 		"ProductAlreadyExists": "Umiiral na ang produkto",
 		"ProofNumberOfOutProofs": "Patunay ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Mga tindahan kung saan ibinebenta",
-		"UseDrawModeToAddImage": "Upang magdagdag ng larawan ng produkto, paganahin ang draw mode sa ibaba ng patunay na larawan at gumuhit ng parihaba sa palibot ng produkto."
+		"UseCropModeToAddImage": "Upang magdagdag ng larawan ng produkto, paganahin ang crop mode sa ibaba ng patunay na larawan at gumuhit ng parihaba sa palibot ng produkto."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

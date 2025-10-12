@@ -3,7 +3,7 @@
 		"WhyTitle": "Why {op_name}?",
 		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
 		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
+		"HowTitle": "Cum funcționează {op_name}?",
 		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
 		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
 		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modificare",
 		"End": "End",
+		"FieldIsRequired": "Câmpul este obligatoriu",
 		"Filter": "Filtrare",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Țările unde se vinde",
 		"CreateNewProduct": "Creați un produs nou",
 		"CreateProduct": "Creați produsul",
-		"EnableDrawMode": "Activează modul de desenare",
-		"Flavor": "Aromă",
+		"EnableCropMode": "Activează modul de decupare",
+		"Flavor": "Selectați proiectul în care ar trebui creat produsul",
 		"NextProof": "Next proof",
 		"PreviousProof": "Dovada anterioară",
 		"ProductAlreadyExists": "Produsul există deja",
 		"ProofNumberOfOutProofs": "Dovadă ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Magazine unde se vând",
-		"UseDrawModeToAddImage": "Pentru a adăuga o imagine a produsului, activați modul de desenare sub imaginea de probă și desenați un dreptunghi în jurul produsului."
+		"UseCropModeToAddImage": "Pentru a adăuga o imagine a produsului, activați modul de decupare sub imaginea de probă și desenați un dreptunghi în jurul produsului."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

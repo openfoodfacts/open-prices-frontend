@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "مەيدان تەلەپ قىلىنىدۇ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "يېڭى مەھسۇلات يارىتىڭ",
 		"CreateProduct": "مەھسۇلات يارىتىش",
-		"EnableDrawMode": "سىزىش ھالىتىنى قوزغىتىڭ",
-		"Flavor": "تەم",
+		"EnableCropMode": "زىرائەت ھالىتىنى قوزغىتىڭ",
+		"Flavor": "مەھسۇلات قۇرماقچى بولغان تۈرنى تاللاڭ",
 		"NextProof": "Next proof",
 		"PreviousProof": "ئالدىنقى ئىسپات",
 		"ProductAlreadyExists": "مەھسۇلات ئاللىبۇرۇن مەۋجۇت",
 		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "سېتىلىدىغان دۇكانلار",
-		"UseDrawModeToAddImage": "مەھسۇلات رەسىمىنى قوشۇش ئۈچۈن ، رەسىمنىڭ ئاستىدىكى رەسىم سىزىش ھالىتىنى قوزغىتىپ ، مەھسۇلاتنىڭ ئەتراپىغا تىك تۆت بۇلۇڭ سىزىڭ."
+		"UseCropModeToAddImage": "مەھسۇلات رەسىمىنى قوشۇش ئۈچۈن ، دەلىللەش رەسىمىنىڭ ئاستىدىكى زىرائەت ھالىتىنى قوزغىتىپ ، مەھسۇلاتنىڭ ئەتراپىغا تىك تۆت بۇلۇڭ سىزىڭ."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
