@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "మార్చు",
 		"End": "End",
+		"FieldIsRequired": "ఫీల్డ్ తప్పనిసరి",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "కొత్త ఉత్పత్తిని సృష్టించండి",
 		"CreateProduct": "ఉత్పత్తిని సృష్టించండి",
-		"EnableDrawMode": "డ్రా మోడ్‌ను ప్రారంభించండి",
-		"Flavor": "రుచి",
+		"EnableCropMode": "క్రాప్ మోడ్‌ను ప్రారంభించండి",
+		"Flavor": "ఉత్పత్తిని సృష్టించాల్సిన ప్రాజెక్ట్‌ను ఎంచుకోండి",
 		"NextProof": "Next proof",
 		"PreviousProof": "మునుపటి రుజువు",
 		"ProductAlreadyExists": "ఉత్పత్తి ఇప్పటికే ఉంది",
 		"ProofNumberOfOutProofs": "రుజువు ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "అమ్మకానికి ఉన్న దుకాణాలు",
-		"UseDrawModeToAddImage": "ఉత్పత్తి చిత్రాన్ని జోడించడానికి, ప్రూఫ్ చిత్రం క్రింద డ్రా మోడ్‌ను ప్రారంభించండి మరియు ఉత్పత్తి చుట్టూ దీర్ఘచతురస్రాన్ని గీయండి."
+		"UseCropModeToAddImage": "ఉత్పత్తి చిత్రాన్ని జోడించడానికి, ప్రూఫ్ చిత్రం క్రింద క్రాప్ మోడ్‌ను ప్రారంభించండి మరియు ఉత్పత్తి చుట్టూ దీర్ఘచతురస్రాన్ని గీయండి."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
