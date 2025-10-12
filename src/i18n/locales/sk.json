@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Upraviť",
 		"End": "End",
+		"FieldIsRequired": "Pole je povinné",
 		"Filter": "Filtrovať",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Krajiny, kde sa predáva",
 		"CreateNewProduct": "Vytvoriť nový produkt",
 		"CreateProduct": "Vytvoriť produkt",
-		"EnableDrawMode": "Povoliť režim kreslenia",
-		"Flavor": "Príchuť",
+		"EnableCropMode": "Povoliť režim orezania",
+		"Flavor": "Vyberte projekt, v ktorom má byť produkt vytvorený",
 		"NextProof": "Next proof",
 		"PreviousProof": "Predchádzajúci dôkaz",
 		"ProductAlreadyExists": "Produkt už existuje",
 		"ProofNumberOfOutProofs": "Dôkaz ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Obchody, kde sa predáva",
-		"UseDrawModeToAddImage": "Ak chcete pridať obrázok produktu, povoľte režim kreslenia pod náhľadovým obrázkom a nakreslite obdĺžnik okolo produktu."
+		"UseCropModeToAddImage": "Ak chcete pridať obrázok produktu, povoľte režim orezania pod náhľadovým obrázkom a nakreslite okolo produktu obdĺžnik."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
