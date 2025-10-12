@@ -95,6 +95,8 @@
               :disabled="productExists"
               density="compact"
               variant="outlined"
+              :rules="[fieldRequired]"
+              required
             />
             <div class="text-subtitle-2">
               {{ $t('Common.ProductName') }}
@@ -285,6 +287,7 @@ import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
 import proof_utils from '../utils/proof.js'
+import utils from '../utils'
 import "vue-zoomable/dist/style.css"
 
 export default {
@@ -338,8 +341,6 @@ export default {
   mounted() {
     if (this.$route.query.flavor) {
       this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
-    } else {
-      this.productForm.flavor = constants.PRODUCT_SOURCE_LIST[0].value
     }
     if (this.$route.query.product_code) {
       this.productForm.product_code = this.$route.query.product_code
@@ -349,6 +350,9 @@ export default {
     }
   },
   methods: {
+    fieldRequired(v) {
+      return !!v || this.$t('Common.FieldIsRequired')
+    },
     loadProductInfo() {
       this.$router.push({query: {product_code: this.productForm.product_code}})
       this.step = 2
@@ -379,7 +383,7 @@ export default {
             const lastPrice = this.priceList[0]
             this.productForm = {
               ...this.productForm,
-              product_name: lastPrice.product_name,
+              product_name: lastPrice.product_name ? utils.toTitleCase(lastPrice.product_name) : null,
               stores: stores,
               countries: countries,
               quantity: "",
@@ -432,6 +436,9 @@ export default {
       }
     },
     createProduct() {
+      if (!this.productForm.flavor) {
+        return
+      }
       const flavorkey = constants.PRODUCT_SOURCE_LIST.find(source => source.value === this.productForm.flavor).key
       let inputData = {
         update_params: this.productForm,
