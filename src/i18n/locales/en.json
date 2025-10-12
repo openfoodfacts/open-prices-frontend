@@ -523,7 +523,7 @@
 		"CreateNewProduct": "Create a new product",
 		"CreateProduct": "Create product",
 		"EnableCropMode": "Enable crop mode",
-		"Flavor": "Flavor",
+		"Flavor": "Select the project the product should be created in",
 		"NextProof": "Next proof",
 		"PreviousProof": "Previous proof",
 		"ProductAlreadyExists": "Product already exists",
