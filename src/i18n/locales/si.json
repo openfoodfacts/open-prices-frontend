@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "ක්ෂේත්‍රය අවශ්‍යයි",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "නව නිෂ්පාදනයක් සාදන්න",
 		"CreateProduct": "නිෂ්පාදනය සාදන්න",
-		"EnableDrawMode": "ඇඳීමේ ප්‍රකාරය සබල කරන්න",
-		"Flavor": "රසය",
+		"EnableCropMode": "කප්පාදු ප්‍රකාරය සක්‍රීය කරන්න",
+		"Flavor": "නිෂ්පාදනය නිර්මාණය කළ යුතු ව්‍යාපෘතිය තෝරන්න.",
 		"NextProof": "Next proof",
 		"PreviousProof": "පෙර සාක්ෂිය",
 		"ProductAlreadyExists": "නිෂ්පාදනය දැනටමත් පවතී",
 		"ProofNumberOfOutProofs": "සාධනය ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "විකුණන ලද වෙළඳසැල්",
-		"UseDrawModeToAddImage": "නිෂ්පාදන රූපයක් එක් කිරීමට, සාධන පින්තූරයට පහළින් ඇඳීමේ මාදිලිය සක්‍රීය කර නිෂ්පාදනය වටා සෘජුකෝණාස්‍රයක් අඳින්න."
+		"UseCropModeToAddImage": "නිෂ්පාදන රූපයක් එක් කිරීමට, සාධන පින්තූරයට පහළින් කප්පාදු කිරීමේ මාදිලිය සක්‍රීය කර නිෂ්පාදනය වටා සෘජුකෝණාස්‍රයක් අඳින්න."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
