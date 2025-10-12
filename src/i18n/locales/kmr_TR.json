@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Qad pêwîst e",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "Berhemeke nû biafirîne",
 		"CreateProduct": "Berhemê biafirîne",
-		"EnableDrawMode": "Moda xêzkirinê çalak bike",
-		"Flavor": "Tam",
+		"EnableCropMode": "Moda birînê çalak bike",
+		"Flavor": "Projeya ku divê berhem tê de were afirandin hilbijêre",
 		"NextProof": "Next proof",
 		"PreviousProof": "Delîla berê",
 		"ProductAlreadyExists": "Berhem jixwe heye",
 		"ProofNumberOfOutProofs": "Delîl ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Dikanên ku lê hatine firotin",
-		"UseDrawModeToAddImage": "Ji bo lêzêdekirina wêneyekî hilberê, moda xêzkirinê ya li jêr wêneyê îspatkirî çalak bike û li dora hilberê çargoşeyekî xêz bike."
+		"UseCropModeToAddImage": "Ji bo lêzêdekirina wêneyekî hilberê, moda birrînê ya li jêr wêneyê îspatkirî çalak bike û li dora hilberê çargoşeyekî xêz bike."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
