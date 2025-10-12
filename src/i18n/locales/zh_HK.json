@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "編輯",
 		"End": "End",
+		"FieldIsRequired": "Field is required",
 		"Filter": "筛选",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "可出售的国家",
 		"CreateNewProduct": "Create a new product",
 		"CreateProduct": "Create product",
-		"EnableDrawMode": "Enable draw mode",
-		"Flavor": "Flavor",
+		"EnableCropMode": "Enable crop mode",
+		"Flavor": "Select the project the product should be created in",
 		"NextProof": "Next proof",
 		"PreviousProof": "Previous proof",
 		"ProductAlreadyExists": "Product already exists",
 		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Stores where sold",
-		"UseDrawModeToAddImage": "To add a product image, enable draw mode below proof picture and draw a rectangle around the product."
+		"UseCropModeToAddImage": "To add a product image, enable crop mode below proof picture and draw a rectangle around the product."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
