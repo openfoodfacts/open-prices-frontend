@@ -122,40 +122,27 @@
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.CountriesWhereSold') }}
               </div>
-              <v-text-field
+              <ChipsComboBox
                 v-model="productForm.countries"
-                density="compact"
-                variant="outlined"
-                type="text"
-                inputmode="decimal"
+                :label="$t('CreateOffProduct.CountriesWhereSold')"
               />
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.StoresWhereSold') }}
               </div>
-              <v-text-field
+              <ChipsComboBox
                 v-model="productForm.stores"
-                density="compact"
-                variant="outlined"
-                type="text"
-                inputmode="decimal"
+                :label="$t('CreateOffProduct.StoresWhereSold')"
               />
             </div>
             <div class="text-subtitle-2">
               {{ $t('Common.Categories') }}
             </div>
-            <v-text-field
+            <ChipsComboBox
               v-model="productForm.categories"
-              density="compact"
-              variant="outlined"
-              type="text"
-              inputmode="decimal"
-              hide-details="auto"
+              :items="suggestedCategories"
+              :label="$t('Common.Categories')"
             />
-            <v-chip-group>
-              <v-chip v-for="category in suggestedCategories" :key="category" append-icon="mdi-plus" @click="addCategory(category)">
-                {{ category }}
-              </v-chip>
-            </v-chip-group>
+
             <div v-if="!productExists">
               <div class="text-subtitle-2">
                 {{ $t('Common.Image') }}
@@ -294,6 +281,7 @@ export default {
   components: {
     ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    ChipsComboBox: defineAsyncComponent(() => import('../components/ChipsComboBox.vue')),
     VueZoomable: defineAsyncComponent(() => import('vue-zoomable')),
   },
   data() {
@@ -386,8 +374,8 @@ export default {
         .then((data) => {
           this.priceList = data.items
           if (this.priceList.length) {
-            const stores = Array.from(new Set(this.priceList.map(price => price.location.osm_name))).join(',')
-            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country).flat())).join(',')
+            const stores = Array.from(new Set(this.priceList.map(price => price.location.osm_name)))
+            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country).flat()))
             const lastPrice = this.priceList[0]
             this.productForm = {
               ...this.productForm,
@@ -395,24 +383,24 @@ export default {
               stores: stores,
               countries: countries,
               quantity: "",
-              categories: "",
+              categories: [],
             }
             this.setShownProof()
           } else {
             this.productForm = {
               ...this.productForm,
               product_name: null,
-              stores: "",
-              countries: "",
+              stores: [],
+              countries: [],
               quantity: "",
-              categories: "",
+              categories: [],
             }
           }
           if (this.productExists) {
             this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === product.source).value
             this.productForm.product_name = product.product_name
             this.productForm.quantity = product.product_quantity + product.product_quantity_unit
-            this.productForm.categories = product.categories_tags.join(',')
+            this.productForm.categories = product.categories_tags
             this.productForm.stores = null
             this.productForm.countries= null
           }
@@ -423,7 +411,7 @@ export default {
         .then((data) => {
           const challenges = data.items
           const challengeCategories = challenges.map(challenge => challenge.categories) // Array of arrays
-          this.suggestedCategories = new Set(challengeCategories.flat()) // unique categories
+          this.suggestedCategories = Array.from(new Set(challengeCategories.flat())) // unique categories
         })
     },
     getMissingProductsWithPrices() {
@@ -436,20 +424,18 @@ export default {
       this.productForm.product_code = product.code
       this.loadProductInfo()
     },
-    addCategory(category) {
-      if (this.productForm.categories.length > 0) {
-        this.productForm.categories += ',' + category
-      } else {
-        this.productForm.categories = category
-      }
-    },
     createProduct() {
       if (!this.productForm.flavor) {
         return
       }
       const flavorkey = constants.PRODUCT_SOURCE_LIST.find(source => source.value === this.productForm.flavor).key
       let inputData = {
-        update_params: this.productForm,
+        update_params: {
+          ...this.productForm,
+          categories: this.productForm.categories.join(','),
+          stores: this.productForm.stores.join(','),
+          countries: this.productForm.countries.join(','),
+        },
         flavor: flavorkey
       }
       this.step = 3
