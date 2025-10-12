@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modifye",
 		"End": "End",
+		"FieldIsRequired": "Chan sa a obligatwa",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "Ak yon pri",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Kreye yon nouvo pwodwi",
 		"CreateProduct": "Kreye pwodwi",
-		"EnableDrawMode": "Aktive mòd desen an",
-		"Flavor": "Gou",
+		"EnableCropMode": "Aktive mòd rekòt la",
+		"Flavor": "Chwazi pwojè kote pwodwi a ta dwe kreye a",
 		"NextProof": "Next proof",
 		"PreviousProof": "Prèv anvan an",
 		"ProductAlreadyExists": "Pwodwi a deja egziste",
 		"ProofNumberOfOutProofs": "Prèv ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Magazen kote yo vann",
-		"UseDrawModeToAddImage": "Pou ajoute yon imaj pwodwi, aktive mòd desen anba foto prèv la epi trase yon rektang otou pwodwi a."
+		"UseCropModeToAddImage": "Pou ajoute yon imaj pwodwi, aktive mòd koupe anba foto prèv la epi trase yon rektang otou pwodwi a."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
