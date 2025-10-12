@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Примеры: {value}",
 		"Edit": "Редактировать",
 		"End": "Конец",
+		"FieldIsRequired": "Поле обязательно для заполнения",
 		"Filter": "Фильтр",
 		"FilterChallengesShowAllStatus": "Показать все испытания",
 		"FilterProductWithPriceCount": "С ценой",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Страны продажи",
 		"CreateNewProduct": "Создать новый продукт",
 		"CreateProduct": "Создать продукт",
-		"EnableDrawMode": "Включить режим рисования",
-		"Flavor": "Вкус",
+		"EnableCropMode": "Включить режим обрезки",
+		"Flavor": "Выберите проект, в котором будет создан продукт.",
 		"NextProof": "Next proof",
 		"PreviousProof": "Предыдущее доказательство",
 		"ProductAlreadyExists": "Продукт уже существует",
 		"ProofNumberOfOutProofs": "Доказательство ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Магазины, где продается",
-		"UseDrawModeToAddImage": "Чтобы добавить изображение продукта, включите режим рисования под пробным изображением и нарисуйте прямоугольник вокруг продукта."
+		"UseCropModeToAddImage": "Чтобы добавить изображение продукта, включите режим кадрирования под пробным изображением и нарисуйте прямоугольник вокруг продукта."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
