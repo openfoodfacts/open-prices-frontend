@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Майдон лозим аст",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Маҳсулоти нав эҷод кунед",
 		"CreateProduct": "Маҳсулот эҷод кунед",
-		"EnableDrawMode": "Ҳолати кашиданро фаъол созед",
-		"Flavor": "мазза",
+		"EnableCropMode": "Ҳолати буриданро фаъол созед",
+		"Flavor": "Лоиҳаеро интихоб кунед, ки маҳсулот бояд дар он сохта шавад",
 		"NextProof": "Next proof",
 		"PreviousProof": "Далели қаблӣ",
 		"ProductAlreadyExists": "Маҳсулот аллакай вуҷуд дорад",
 		"ProofNumberOfOutProofs": "Исбот ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Мағозаҳое, ки фурӯхта мешаванд",
-		"UseDrawModeToAddImage": "Барои илова кардани тасвири маҳсулот, режими кашиданро дар зер тасвири исботкунанда фаъол созед ва дар атрофи маҳсулот росткунҷае кашед."
+		"UseCropModeToAddImage": "Барои илова кардани тасвири маҳсулот, режими буриданро дар зер тасвири исботшуда фаъол созед ва дар атрофи маҳсулот росткунҷае кашед."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
