@@ -338,6 +338,14 @@ export default {
       return constants.PRODUCT_SOURCE_LIST.map(source => source.value)
     }
   },
+  watch: {
+    '$route.query.product_code'(newVal) {
+      if (!newVal) {
+        this.getMissingProductsWithPrices()
+        this.step = 1
+      }
+    }
+  },
   mounted() {
     if (this.$route.query.flavor) {
       this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
