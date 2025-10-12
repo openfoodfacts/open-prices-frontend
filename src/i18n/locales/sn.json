@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Munda unodiwa",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Gadzira chigadzirwa chitsva",
 		"CreateProduct": "Gadzira chigadzirwa",
-		"EnableDrawMode": "Bvisa maitiro ekudhirowa",
-		"Flavor": "Flavour",
+		"EnableCropMode": "Vhura nzira yekucheka",
+		"Flavor": "Sarudza purojekiti iyo chigadzirwa chinofanira kugadzirwa mukati",
 		"NextProof": "Next proof",
 		"PreviousProof": "Umbowo hwapfuura",
 		"ProductAlreadyExists": "Chigadzirwa chatovako",
 		"ProofNumberOfOutProofs": "Humbowo ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Zvitoro zvinotengeswa",
-		"UseDrawModeToAddImage": "Kuti uwedzere mufananidzo wechigadzirwa, gonesa kudhirowa modhi pazasi chiratidzo chemufananidzo uye dhirowa rectangle yakatenderedza chigadzirwa."
+		"UseCropModeToAddImage": "Kuti uwedzere mufananidzo wechigadzirwa, gonesa chimiro chezvirimwa pazasi pechiratidzo chemufananidzo uye dhirowa rectangle yakatenderedza chigadzirwa."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
