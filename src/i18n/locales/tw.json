@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Wɔhwehwɛ sɛ wɔyɛ afuw",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Yɛ ade foforo a wɔde yɛ ade",
 		"CreateProduct": "Yɛ ade a wɔyɛ",
-		"EnableDrawMode": "Ma draw mode no nyɛ adwuma",
-		"Flavor": "Nneɛma a ɛyɛ dɛ",
+		"EnableCropMode": "Ma crop mode nyɛ adwuma",
+		"Flavor": "Paw adwuma a ɛsɛ sɛ wɔbɔ ade no wɔ mu",
 		"NextProof": "Next proof",
 		"PreviousProof": "Adanse a atwam",
 		"ProductAlreadyExists": "Product wɔ hɔ dedaw",
 		"ProofNumberOfOutProofs": "Adanse ({numberOfOutProofs}/{totalNumberOfProofs}) .",
 		"StoresWhereSold": "Store ahorow a wɔtɔn wɔ hɔ",
-		"UseDrawModeToAddImage": "Sɛ wode afiri mfonini bɛka ho a, ma draw mode nyɛ adwuma wɔ adanse mfonini ase na twetwe ahinanan twa ade no ho hyia."
+		"UseCropModeToAddImage": "Sɛ wode afiri mfonini bɛka ho a, ma crop mode nyɛ adwuma wɔ adanse mfonini ase na twetwe ahinanan twa ade no ho hyia."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
