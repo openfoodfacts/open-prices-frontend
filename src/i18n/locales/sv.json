@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Exempel: {value}",
 		"Edit": "Redigera",
 		"End": "End",
+		"FieldIsRequired": "Fältet är obligatoriskt",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Visa alla utmaningar",
 		"FilterProductWithPriceCount": "Med ett pris",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Länder där såld",
 		"CreateNewProduct": "Skapa en ny produkt",
 		"CreateProduct": "Skapa produkt",
-		"EnableDrawMode": "Aktivera ritläge",
-		"Flavor": "Smak",
+		"EnableCropMode": "Aktivera beskärningsläge",
+		"Flavor": "Välj det projekt där produkten ska skapas",
 		"NextProof": "Next proof",
 		"PreviousProof": "Tidigare bevis",
 		"ProductAlreadyExists": "Produkten finns redan",
 		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Butiker där såldes",
-		"UseDrawModeToAddImage": "För att lägga till en produktbild, aktivera ritläget under korrekturbilden och rita en rektangel runt produkten."
+		"UseCropModeToAddImage": "För att lägga till en produktbild, aktivera beskärningsläget under korrekturbilden och rita en rektangel runt produkten."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
