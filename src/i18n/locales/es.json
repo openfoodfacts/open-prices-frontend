@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Editar",
 		"End": "End",
+		"FieldIsRequired": "El campo es obligatorio",
 		"Filter": "Filtro",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "con precio",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Países de venta",
 		"CreateNewProduct": "Crear un nuevo producto",
 		"CreateProduct": "Crear producto",
-		"EnableDrawMode": "Habilitar el modo de dibujo",
-		"Flavor": "Sabor",
+		"EnableCropMode": "Habilitar el modo de recorte",
+		"Flavor": "Seleccione el proyecto en el que se debe crear el producto",
 		"NextProof": "Siguiente prueba",
 		"PreviousProof": "Prueba previa",
 		"ProductAlreadyExists": "El producto ya existe",
 		"ProofNumberOfOutProofs": "Prueba ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Tiendas donde se vende",
-		"UseDrawModeToAddImage": "Para agregar una imagen de producto, habilite el modo de dibujo debajo de la imagen de prueba y dibuje un rectángulo alrededor del producto."
+		"UseCropModeToAddImage": "Para agregar una imagen de producto, habilite el modo de recorte debajo de la imagen de prueba y dibuje un rectángulo alrededor del producto."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecciona una de tus pruebas recientes"
