@@ -522,14 +522,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Create a new product",
 		"CreateProduct": "Create product",
-		"EnableDrawMode": "Enable draw mode",
+		"EnableCropMode": "Enable crop mode",
 		"Flavor": "Flavor",
 		"NextProof": "Next proof",
 		"PreviousProof": "Previous proof",
 		"ProductAlreadyExists": "Product already exists",
 		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Stores where sold",
-		"UseDrawModeToAddImage": "To add a product image, enable draw mode below proof picture and draw a rectangle around the product."
+		"UseCropModeToAddImage": "To add a product image, enable crop mode below proof picture and draw a rectangle around the product."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

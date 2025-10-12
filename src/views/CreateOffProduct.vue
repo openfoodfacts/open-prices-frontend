@@ -160,7 +160,7 @@
               </div>
               <v-img v-if="drawnImageSrc" :src="drawnImageSrc" style="max-height:200px" />
               <v-alert v-else class="mb-2" type="info" variant="outlined" density="compact">
-                {{ $t('CreateOffProduct.UseDrawModeToAddImage') }}
+                {{ $t('CreateOffProduct.UseCropModeToAddImage') }}
               </v-alert>
             </div>
           </v-card-text>
@@ -216,7 +216,7 @@
                 v-model="imageEditMode"
                 density="compact"
                 color="success"
-                :label="$t('CreateOffProduct.EnableDrawMode')"
+                :label="$t('CreateOffProduct.EnableCropMode')"
                 :true-value="true"
                 hide-details="auto"
               />
