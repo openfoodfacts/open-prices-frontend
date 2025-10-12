@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Mae angen maes",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Creu cynnyrch newydd",
 		"CreateProduct": "Creu cynnyrch",
-		"EnableDrawMode": "Galluogi modd tynnu llun",
-		"Flavor": "Blas",
+		"EnableCropMode": "Galluogi modd cnydio",
+		"Flavor": "Dewiswch y prosiect y dylid creu'r cynnyrch ynddo",
 		"NextProof": "Next proof",
 		"PreviousProof": "Prawf blaenorol",
 		"ProductAlreadyExists": "Mae'r cynnyrch eisoes yn bodoli",
 		"ProofNumberOfOutProofs": "Prawf ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Siopau lle gwerthir",
-		"UseDrawModeToAddImage": "I ychwanegu delwedd cynnyrch, galluogwch y modd lluniadu islaw'r llun prawf a lluniwch betryal o amgylch y cynnyrch."
+		"UseCropModeToAddImage": "I ychwanegu delwedd cynnyrch, galluogwch y modd cnydio o dan y llun prawf a lluniwch betryal o amgylch y cynnyrch."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
