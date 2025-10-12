@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Contoh: {value}",
 		"Edit": "Sunting",
 		"End": "Selesai",
+		"FieldIsRequired": "Bidang wajib diisi",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Tampilkan semua tantangan",
 		"FilterProductWithPriceCount": "Dengan harga",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Negara tempat dijual",
 		"CreateNewProduct": "Buat produk baru",
 		"CreateProduct": "Buat produk",
-		"EnableDrawMode": "Aktifkan mode menggambar",
-		"Flavor": "Rasa",
+		"EnableCropMode": "Aktifkan mode potong",
+		"Flavor": "Pilih proyek tempat produk harus dibuat",
 		"NextProof": "Bukti selanjutnya",
 		"PreviousProof": "Bukti sebelumnya",
 		"ProductAlreadyExists": "Produk sudah ada",
 		"ProofNumberOfOutProofs": "Bukti ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Toko tempat menjual",
-		"UseDrawModeToAddImage": "Untuk menambahkan gambar produk, aktifkan mode gambar di bawah gambar bukti dan gambar persegi panjang di sekitar produk."
+		"UseCropModeToAddImage": "Untuk menambahkan gambar produk, aktifkan mode potong di bawah gambar bukti dan gambar persegi panjang di sekeliling produk."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Pilih salah satu bukti terbaru Anda"
