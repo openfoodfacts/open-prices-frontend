@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Muuda",
 		"End": "End",
+		"FieldIsRequired": "Väli on kohustuslik",
 		"Filter": "Filtreeri",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Loo uus toode",
 		"CreateProduct": "Loo toode",
-		"EnableDrawMode": "Joonistusrežiimi lubamine",
-		"Flavor": "Maitse",
+		"EnableCropMode": "Kärpimisrežiimi lubamine",
+		"Flavor": "Valige projekt, milles toode luuakse",
 		"NextProof": "Next proof",
 		"PreviousProof": "Eelmine tõestus",
 		"ProductAlreadyExists": "Toode on juba olemas",
 		"ProofNumberOfOutProofs": "Tõestus ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Kauplused, kus müüakse",
-		"UseDrawModeToAddImage": "Tootepildi lisamiseks luba joonistusrežiim proovipildi all ja joonista toote ümber ristkülik."
+		"UseCropModeToAddImage": "Tootepildi lisamiseks luba proovipildi all kärpimisrežiim ja joonista toote ümber ristkülik."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
