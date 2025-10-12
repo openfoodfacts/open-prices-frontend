@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Επεξεργασία",
 		"End": "End",
+		"FieldIsRequired": "Απαιτείται πεδίο",
 		"Filter": "Φίλτρο",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Χώρες όπου πωλείται",
 		"CreateNewProduct": "Δημιουργήστε ένα νέο προϊόν",
 		"CreateProduct": "Δημιουργία προϊόντος",
-		"EnableDrawMode": "Ενεργοποίηση λειτουργίας σχεδίασης",
-		"Flavor": "Γεύση",
+		"EnableCropMode": "Ενεργοποίηση λειτουργίας περικοπής",
+		"Flavor": "Επιλέξτε το έργο στο οποίο θα δημιουργηθεί το προϊόν",
 		"NextProof": "Next proof",
 		"PreviousProof": "Προηγούμενη απόδειξη",
 		"ProductAlreadyExists": "Το προϊόν υπάρχει ήδη",
 		"ProofNumberOfOutProofs": "Απόδειξη ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Καταστήματα όπου πωλούνται",
-		"UseDrawModeToAddImage": "Για να προσθέσετε μια εικόνα προϊόντος, ενεργοποιήστε τη λειτουργία σχεδίασης κάτω από την εικόνα δοκιμίου και σχεδιάστε ένα ορθογώνιο γύρω από το προϊόν."
+		"UseCropModeToAddImage": "Για να προσθέσετε μια εικόνα προϊόντος, ενεργοποιήστε τη λειτουργία περικοπής κάτω από την εικόνα δοκιμίου και σχεδιάστε ένα ορθογώνιο γύρω από το προϊόν."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
