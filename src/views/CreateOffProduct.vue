@@ -122,26 +122,61 @@
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.CountriesWhereSold') }}
               </div>
-              <ChipsComboBox
+              <v-combobox
                 v-model="productForm.countries"
+                :items="[]"
                 :label="$t('CreateOffProduct.CountriesWhereSold')"
-              />
+                variant="outlined"
+                chips
+                clearable
+                closable-chips
+                multiple
+              >
+                <template #chip="{ props, item }">
+                  <v-chip v-bind="props">
+                    <strong>{{ item.raw }}</strong>
+                  </v-chip>
+                </template>
+              </v-combobox>
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.StoresWhereSold') }}
               </div>
-              <ChipsComboBox
+              <v-combobox
                 v-model="productForm.stores"
+                :items="[]"
                 :label="$t('CreateOffProduct.StoresWhereSold')"
-              />
+                variant="outlined"
+                chips
+                clearable
+                closable-chips
+                multiple
+              >
+                <template #chip="{ props, item }">
+                  <v-chip v-bind="props">
+                    <strong>{{ item.raw }}</strong>
+                  </v-chip>
+                </template>
+              </v-combobox>
             </div>
             <div class="text-subtitle-2">
               {{ $t('Common.Categories') }}
             </div>
-            <ChipsComboBox
+            <v-combobox
               v-model="productForm.categories"
               :items="suggestedCategories"
               :label="$t('Common.Categories')"
-            />
+              variant="outlined"
+              chips
+              clearable
+              closable-chips
+              multiple
+            >
+              <template #chip="{ props, item }">
+                <v-chip v-bind="props">
+                  <strong>{{ item.raw }}</strong>
+                </v-chip>
+              </template>
+            </v-combobox>
 
             <div v-if="!productExists">
               <div class="text-subtitle-2">
@@ -281,7 +316,6 @@ export default {
   components: {
     ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    ChipsComboBox: defineAsyncComponent(() => import('../components/ChipsComboBox.vue')),
     VueZoomable: defineAsyncComponent(() => import('vue-zoomable')),
   },
   data() {
