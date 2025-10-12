@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Örnekler: {value}",
 		"Edit": "Düzenle",
 		"End": "Son",
+		"FieldIsRequired": "Alan gereklidir",
 		"Filter": "Filtrele",
 		"FilterChallengesShowAllStatus": "Tüm meydan okumaları göster",
 		"FilterProductWithPriceCount": "Bir fiyat ile",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Satılan ülkeler",
 		"CreateNewProduct": "Yeni bir ürün yaratın",
 		"CreateProduct": "Ürün oluştur",
-		"EnableDrawMode": "Çizim modunu etkinleştir",
-		"Flavor": "Lezzet",
+		"EnableCropMode": "Kırpma modunu etkinleştir",
+		"Flavor": "Ürünün oluşturulacağı projeyi seçin",
 		"NextProof": "Bir sonraki kanıt",
 		"PreviousProof": "Önceki kanıt",
 		"ProductAlreadyExists": "Ürün zaten mevcut",
 		"ProofNumberOfOutProofs": "Kanıt ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Satılan mağazalar",
-		"UseDrawModeToAddImage": "Ürün resmi eklemek için prova resminin altındaki çizim modunu aktif hale getirin ve ürünün etrafına bir dikdörtgen çizin."
+		"UseCropModeToAddImage": "Ürün görseli eklemek için prova resminin altındaki kırpma modunu etkinleştirin ve ürünün etrafına bir dikdörtgen çizin."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Son bedellerinizden birini seçin"
