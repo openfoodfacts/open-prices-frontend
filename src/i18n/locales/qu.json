@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Campo nisqatan necesitakun",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Musuq ruruta paqarichiy",
 		"CreateProduct": "Ruruta paqarichiy",
-		"EnableDrawMode": "Modo de dibujo nisqa atichiy",
-		"Flavor": "Sabor",
+		"EnableCropMode": "Modo de tarpuy atichiy",
+		"Flavor": "Akllay ima proyectopichus chay ruru ruwakunan tiyan",
 		"NextProof": "Next proof",
 		"PreviousProof": "Ñawpaq pruebakuna",
 		"ProductAlreadyExists": "Productoqa kachkanñam",
 		"ProofNumberOfOutProofs": "Prueba ({numberOfOutProofs}/{totalNumberOfProofs}) .",
 		"StoresWhereSold": "Tiendakuna maypichus ranqhakun chaypi",
-		"UseDrawModeToAddImage": "Ruru siq'ita yapanaykipaq, prueba siq'i urapi siq'i ruwayta atichiy chaymanta ruru muyuriqpi tawa kuchuta siq'iy."
+		"UseCropModeToAddImage": "Ruru siq'ita yapanaykipaq, prueba siq'i urapi tarpuy ruwayta atichiy chaymanta ruru muyuriqpi tawa kuchuta siq'iy."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
