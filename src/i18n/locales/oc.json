@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modificar",
 		"End": "End",
+		"FieldIsRequired": "Camp es obligatòri",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Crear un produch novèl",
 		"CreateProduct": "Crear un produch",
-		"EnableDrawMode": "Activar lo mòde de tiratge",
-		"Flavor": "Sabor",
+		"EnableCropMode": "Activar lo mòde de talh",
+		"Flavor": "Seleccionatz lo projècte que lo produch deuriá èsser creat dins",
 		"NextProof": "Next proof",
 		"PreviousProof": "Pròva precedenta",
 		"ProductAlreadyExists": "Lo produch existís ja",
 		"ProofNumberOfOutProofs": "Pròva ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "De botigas ont se vendon",
-		"UseDrawModeToAddImage": "Per apondre una imatge de produch, activatz lo mòde dessenh jos l'imatge de pròva e dessenhatz un rectangle a l'entorn del produch."
+		"UseCropModeToAddImage": "Per apondre una imatge de produch, activatz lo mòde de talh jos l'imatge de pròva e dessenhatz un rectangle a l'entorn del produch."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
