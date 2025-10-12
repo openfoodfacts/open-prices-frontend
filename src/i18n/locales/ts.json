@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Nsimu ya laveka",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Endla xitirhisiwa lexintshwa",
 		"CreateProduct": "Endla xiendliwa",
-		"EnableDrawMode": "Endla leswaku movha wa ku dirowa wu tirha",
-		"Flavor": "Nantswo wa nantswo",
+		"EnableCropMode": "Endla leswaku movha wa swibyariwa wu tirha",
+		"Flavor": "Hlawula phurojeke leyi xiendliwa xi faneleke ku tumbuluxiwa eka yona",
 		"NextProof": "Next proof",
 		"PreviousProof": "Vumbhoni bya khale",
 		"ProductAlreadyExists": "Xiendliwa se xi kona",
 		"ProofNumberOfOutProofs": "Vumbhoni ({numberOfOutProofs}/{totalNumberOfProofs}) .",
 		"StoresWhereSold": "Switolo laha swi xavisiwaka kona",
-		"UseDrawModeToAddImage": "Ku engetela xifaniso xa xiendliwa, pfumelela movha wo dirowa ehansi ka xifaniso xa vumbhoni naswona dirowa rectangle ku rhendzela xiendliwa."
+		"UseCropModeToAddImage": "Ku engetela xifaniso xa xiendliwa, pfumelela movha wo tsema ehansi ka xifaniso xa vumbhoni naswona dirowa rectangle ku rhendzela xiendliwa."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
