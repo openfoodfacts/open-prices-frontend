@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "例： {value}",
 		"Edit": "編輯 ",
 		"End": "End",
+		"FieldIsRequired": "必填字段",
 		"Filter": "篩選器",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "有價格",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "販售國",
 		"CreateNewProduct": "創造新產品",
 		"CreateProduct": "創建產品",
-		"EnableDrawMode": "啟用繪圖模式",
-		"Flavor": "味道",
+		"EnableCropMode": "啟用裁切模式",
+		"Flavor": "選擇要建立產品的項目",
 		"NextProof": "Next proof",
 		"PreviousProof": "先前的證明",
 		"ProductAlreadyExists": "產品已存在",
 		"ProofNumberOfOutProofs": "證明（{numberOfOutProofs}/{totalNumberOfProofs}）",
 		"StoresWhereSold": "銷售商店",
-		"UseDrawModeToAddImage": "若要新增產品影像，請在校樣圖片下方啟用繪圖模式並在產品周圍繪製一個矩形。"
+		"UseCropModeToAddImage": "若要新增產品圖片，請在校樣圖片下方啟用裁剪模式並在產品周圍繪製一個矩形。"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "選擇您最近的一個證明"
