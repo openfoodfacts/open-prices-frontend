@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "ਖੇਤਰ ਲੋੜੀਂਦਾ ਹੈ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "ਇੱਕ ਨਵਾਂ ਉਤਪਾਦ ਬਣਾਓ",
 		"CreateProduct": "ਉਤਪਾਦ ਬਣਾਓ",
-		"EnableDrawMode": "ਡਰਾਅ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ",
-		"Flavor": "ਸੁਆਦ",
+		"EnableCropMode": "ਕ੍ਰੌਪ ਮੋਡ ਚਾਲੂ ਕਰੋ",
+		"Flavor": "ਉਹ ਪ੍ਰੋਜੈਕਟ ਚੁਣੋ ਜਿਸ ਵਿੱਚ ਉਤਪਾਦ ਬਣਾਇਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ।",
 		"NextProof": "Next proof",
 		"PreviousProof": "ਪਿਛਲਾ ਸਬੂਤ",
 		"ProductAlreadyExists": "ਉਤਪਾਦ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ",
 		"ProofNumberOfOutProofs": "ਸਬੂਤ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ਉਹ ਸਟੋਰ ਜਿੱਥੇ ਵੇਚੇ ਗਏ ਸਨ",
-		"UseDrawModeToAddImage": "ਉਤਪਾਦ ਚਿੱਤਰ ਜੋੜਨ ਲਈ, ਪਰੂਫ ਤਸਵੀਰ ਦੇ ਹੇਠਾਂ ਡਰਾਅ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ ਅਤੇ ਉਤਪਾਦ ਦੇ ਦੁਆਲੇ ਇੱਕ ਆਇਤਕਾਰ ਬਣਾਓ।"
+		"UseCropModeToAddImage": "ਉਤਪਾਦ ਚਿੱਤਰ ਜੋੜਨ ਲਈ, ਪਰੂਫ ਤਸਵੀਰ ਦੇ ਹੇਠਾਂ ਕ੍ਰੌਪ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ ਅਤੇ ਉਤਪਾਦ ਦੇ ਦੁਆਲੇ ਇੱਕ ਆਇਤਕਾਰ ਬਣਾਓ।"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
