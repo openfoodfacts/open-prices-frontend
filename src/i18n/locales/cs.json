@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Příklady: {value}",
 		"Edit": "Upravit",
 		"End": "Konec",
+		"FieldIsRequired": "Pole je povinné",
 		"Filter": "Filtr",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "S cenou",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Země prodeje",
 		"CreateNewProduct": "Vytvořte nový produkt",
 		"CreateProduct": "Vytvořit produkt",
-		"EnableDrawMode": "Povolit režim kreslení",
-		"Flavor": "Chuť",
+		"EnableCropMode": "Povolit režim oříznutí",
+		"Flavor": "Vyberte projekt, ve kterém má být produkt vytvořen",
 		"NextProof": "Další důkaz",
 		"PreviousProof": "Předchozí důkaz",
 		"ProductAlreadyExists": "Produkt již existuje",
 		"ProofNumberOfOutProofs": "Důkaz ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Obchody, kde se prodává",
-		"UseDrawModeToAddImage": "Chcete-li přidat obrázek produktu, povolte režim kreslení pod zkušebním obrázkem a nakreslete obdélník kolem produktu."
+		"UseCropModeToAddImage": "Chcete-li přidat obrázek produktu, povolte režim oříznutí pod zkušebním obrázkem a nakreslete kolem produktu obdélník."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Vyberte jeden ze svých nedávných dokladů"
