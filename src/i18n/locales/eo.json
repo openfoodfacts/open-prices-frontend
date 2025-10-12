@@ -280,6 +280,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"FieldIsRequired": "Kampo estas deviga",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -522,14 +523,14 @@
 		"CountriesWhereSold": "Landoj, kie ĝi vendiĝas",
 		"CreateNewProduct": "Krei novan produkton",
 		"CreateProduct": "Krei produkton",
-		"EnableDrawMode": "Ebligi desegnoreĝimon",
-		"Flavor": "Gusto",
+		"EnableCropMode": "Ebligi rikoltan reĝimon",
+		"Flavor": "Elektu la projekton en kiu la produkto estu kreita",
 		"NextProof": "Next proof",
 		"PreviousProof": "Antaŭa pruvo",
 		"ProductAlreadyExists": "Produkto jam ekzistas",
 		"ProofNumberOfOutProofs": "Pruvo ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Butikoj kie vendiĝis",
-		"UseDrawModeToAddImage": "Por aldoni produktobildon, aktivigu desegnoreĝimon sub la pruvbildo kaj desegnu rektangulon ĉirkaŭ la produkto."
+		"UseCropModeToAddImage": "Por aldoni produktobildon, aktivigu eltondan reĝimon sub la pruvbildo kaj desegnu rektangulon ĉirkaŭ la produkto."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
