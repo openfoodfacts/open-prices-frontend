@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистика и класиране",
 		"MostPicturesAdded": "Повечето снимки са добавени",
 		"MostPricesAdded": "Повечето цени са добавени",
-		"MostPricesFromPicturesAdded": "Повечето цени от снимките са добавени"
+		"MostPricesFromPicturesAdded": "Повечето цени от снимките са добавени",
+		"AlertNew": "Имате идея за ново предизвикателство? Споделете с нас {url}!"
 	},
 	"Common": {
 		"About": "Относно",
