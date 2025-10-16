@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Stats & rankings",
 		"MostPicturesAdded": "Most pictures added",
 		"MostPricesAdded": "Most prices added",
-		"MostPricesFromPicturesAdded": "Most prices from pictures added"
+		"MostPricesFromPicturesAdded": "Most prices from pictures added",
+		"AlertNew": "You have an idea for a new challenge? Let us know {url}!"
 	},
 	"Common": {
 		"About": "關於",
