@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Stats & filaharana",
 		"MostPicturesAdded": "Nampiana ny ankamaroan'ny sary",
 		"MostPricesAdded": "Niampy ny ankamaroan'ny vidiny",
-		"MostPricesFromPicturesAdded": "Ny ankamaroan'ny vidiny avy amin'ny sary nampiana"
+		"MostPricesFromPicturesAdded": "Ny ankamaroan'ny vidiny avy amin'ny sary nampiana",
+		"AlertNew": "Manana hevitra momba ny fanamby vaovao ve ianao? Ampahafantaro anay {url}!"
 	},
 	"Common": {
 		"About": "About",
