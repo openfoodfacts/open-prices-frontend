@@ -162,7 +162,8 @@
 		"StatsAndRankings": "統計とランキング",
 		"MostPicturesAdded": "追加された写真が最も多い",
 		"MostPricesAdded": "最も多くの価格が追加された",
-		"MostPricesFromPicturesAdded": "写真からほとんどの価格を追加しました"
+		"MostPricesFromPicturesAdded": "写真からほとんどの価格を追加しました",
+		"AlertNew": "新しいチャレンジのアイデアはありますか？ぜひ教えてください {url}！"
 	},
 	"Common": {
 		"About": "アプリについて",
