@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistici și clasamente",
 		"MostPicturesAdded": "Majoritatea imaginilor adăugate",
 		"MostPricesAdded": "Majoritatea prețurilor adăugate",
-		"MostPricesFromPicturesAdded": "Majoritatea prețurilor din imagini au fost adăugate"
+		"MostPricesFromPicturesAdded": "Majoritatea prețurilor din imagini au fost adăugate",
+		"AlertNew": "Ai o idee pentru o nouă provocare? Spune-ne {url}!"
 	},
 	"Common": {
 		"About": "Despre",
