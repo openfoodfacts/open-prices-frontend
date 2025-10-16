@@ -162,7 +162,8 @@
 		"StatsAndRankings": "ស្ថិតិ និងចំណាត់ថ្នាក់",
 		"MostPicturesAdded": "រូបភាពភាគច្រើនត្រូវបានបន្ថែម",
 		"MostPricesAdded": "តម្លៃភាគច្រើនត្រូវបានបន្ថែម",
-		"MostPricesFromPicturesAdded": "តម្លៃភាគច្រើនពីរូបភាពដែលបានបន្ថែម"
+		"MostPricesFromPicturesAdded": "តម្លៃភាគច្រើនពីរូបភាពដែលបានបន្ថែម",
+		"AlertNew": "តើអ្នកមានគំនិតសម្រាប់ការប្រកួតប្រជែងថ្មីទេ? អនុញ្ញាតឱ្យពួកយើងដឹង {url}!"
 	},
 	"Common": {
 		"About": "អំពី",
