@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистика и рейтинги",
 		"MostPicturesAdded": "Большинство добавленных фотографий",
 		"MostPricesAdded": "Большинство цен добавлено",
-		"MostPricesFromPicturesAdded": "Большинство цен с добавленных изображений"
+		"MostPricesFromPicturesAdded": "Большинство цен с добавленных изображений",
+		"AlertNew": "Есть идея для нового испытания? Дайте нам знать {url}!"
 	},
 	"Common": {
 		"About": "О приложении",
