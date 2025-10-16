@@ -57,11 +57,28 @@
       <v-progress-circular indeterminate :size="30" />
     </v-col>
   </v-row>
+
+  <v-row>
+    <v-col>
+      <v-alert
+        class="mb-2"
+        type="info"
+        variant="outlined"
+      >
+        <i18n-t keypath="Challenge.AlertNew" tag="span">
+          <template #url>
+            <a :href="APP_GITHUB_CHALLENGE_DISCUSSION_URL" target="_blank">{{ $t('Reuses.Here') }}</a>
+          </template>
+        </i18n-t>
+      </v-alert>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
+import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
@@ -76,11 +93,12 @@ export default {
       challengePage: 0,
       loading: false,
       currentOrder: 'id',
+      APP_GITHUB_CHALLENGE_DISCUSSION_URL: constants.APP_GITHUB_CHALLENGE_DISCUSSION_URL,
     }
   },
   computed: {
     getChallengesParams() {
-      let defaultParams = { order_by: this.currentOrder, page: this.challengePage}
+      let defaultParams = { order_by: this.currentOrder, page: this.challengePage }
       return defaultParams
     },
     ongoingChallenges() {
