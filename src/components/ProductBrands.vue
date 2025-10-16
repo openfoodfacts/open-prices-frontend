@@ -1,21 +1,21 @@
 <template>
   <span v-if="productBrands">
-    <span v-if="getProductBrandsList.length <= 2">
-      <v-chip v-for="brand in getProductBrandsList" :key="brand" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
+    <span v-if="productBrandsList.length <= 2">
+      <v-chip v-for="brand in productBrandsList" :key="brand" label size="small" density="comfortable" class="mr-1" @click="goToBrand(brand)">
         {{ brand }}
       </v-chip>
     </span>
-    <v-chip v-else label size="small" density="comfortable" class="mr-1" @click="showProductBrandsDialog">
-      <i>{{ $t('ProductCard.BrandTotal', { count: getProductBrandsList.length }) }}</i>
+    <v-chip v-else class="mr-1" label size="small" density="comfortable" @click="showProductBrandsDialog">
+      <i>{{ $t('ProductCard.BrandTotal', { count: productBrandsList.length }) }}</i>
     </v-chip>
     <ProductBrandsDialog
       v-if="productBrands.length && productBrandsDialog"
       v-model="productBrandsDialog"
-      :brands="getProductBrandsList"
+      :brands="productBrandsList"
       @close="productBrandsDialog = false"
     />
   </span>
-  <v-chip v-else label size="small" density="comfortable" prepend-icon="mdi-help" color="warning" class="mr-1">
+  <v-chip v-else class="mr-1" label size="small" density="comfortable" prepend-icon="mdi-help" color="warning">
     <i class="text-lowercase">{{ $t('Common.Brand') }}</i>
     <v-tooltip activator="parent" open-on-click location="top">
       {{ $t('ProductCard.BrandMissing') }}
@@ -46,7 +46,7 @@ export default {
     }
   },
   computed: {
-    getProductBrandsList() {
+    productBrandsList() {
       return this.productBrands.split(',').filter(b => b.trim())
     }
   },

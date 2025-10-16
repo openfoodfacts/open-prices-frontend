@@ -1,5 +1,5 @@
 <template>
-  <v-btn :style="style" icon size="small" density="comfortable" variant="text">
+  <v-btn v-bind="$attrs" :style="style" icon size="small" density="comfortable" variant="text">
     <v-icon :icon="ACTION_MENU_ICON" />
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
