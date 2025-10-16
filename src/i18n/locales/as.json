@@ -162,7 +162,8 @@
 		"StatsAndRankings": "ষ্টেটছ আৰু ৰেংকিং",
 		"MostPicturesAdded": "বেছিভাগ ছবিয়েই যোগ কৰা হৈছে",
 		"MostPricesAdded": "বেছিভাগ দাম যোগ কৰা হৈছে",
-		"MostPricesFromPicturesAdded": "ছবিৰ পৰা বেছিভাগ দাম যোগ কৰা হৈছে"
+		"MostPricesFromPicturesAdded": "ছবিৰ পৰা বেছিভাগ দাম যোগ কৰা হৈছে",
+		"AlertNew": "নতুন প্ৰত্যাহ্বানৰ বাবে আপোনাৰ এটা ধাৰণা আছেনে? আমাক জনাওক {url}!"
 	},
 	"Common": {
 		"About": "About",
