@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Στατιστικά & κατατάξεις",
 		"MostPicturesAdded": "Οι περισσότερες εικόνες προστέθηκαν",
 		"MostPricesAdded": "Οι περισσότερες τιμές που προστέθηκαν",
-		"MostPricesFromPicturesAdded": "Οι περισσότερες τιμές από εικόνες προστέθηκαν"
+		"MostPricesFromPicturesAdded": "Οι περισσότερες τιμές από εικόνες προστέθηκαν",
+		"AlertNew": "Έχετε κάποια ιδέα για μια νέα πρόκληση; Πείτε μας {url}!"
 	},
 	"Common": {
 		"About": "Σχετικά",
