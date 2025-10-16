@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Stats & swiyimo swa xiyimo",
 		"MostPicturesAdded": "Swifaniso swo tala swi engeteriwile",
 		"MostPricesAdded": "Minxavo yo tala yi engeteriwile",
-		"MostPricesFromPicturesAdded": "Minxavo yo tala ku suka eka swifaniso yi engeteriwile"
+		"MostPricesFromPicturesAdded": "Minxavo yo tala ku suka eka swifaniso yi engeteriwile",
+		"AlertNew": "U na miehleketo ya ntlhontlho lowuntshwa? Hi tivise {url}!"
 	},
 	"Common": {
 		"About": "About",
