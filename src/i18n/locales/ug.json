@@ -162,7 +162,8 @@
 		"StatsAndRankings": "سىتاستىكا ۋە رەت تەرتىپى",
 		"MostPicturesAdded": "كۆپىنچە رەسىملەر قوشۇلدى",
 		"MostPricesAdded": "كۆپىنچە باھا قوشۇلدى",
-		"MostPricesFromPicturesAdded": "رەسىملەرنىڭ كۆپىنچىسى قوشۇلدى"
+		"MostPricesFromPicturesAdded": "رەسىملەرنىڭ كۆپىنچىسى قوشۇلدى",
+		"AlertNew": "You have an idea for a new challenge? Let us know {url}!"
 	},
 	"Common": {
 		"About": "ھەققىدە",
