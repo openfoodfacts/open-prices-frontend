@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Stadegoù ha renkadur",
 		"MostPicturesAdded": "Ouzhpennet eo bet an darn vrasañ eus ar skeudennoù",
 		"MostPricesAdded": "Ouzhpennet eo bet an darn vrasañ eus ar prizioù",
-		"MostPricesFromPicturesAdded": "Ouzhpennet eo bet an darn vrasañ eus ar prizioù diwar ar skeudennoù"
+		"MostPricesFromPicturesAdded": "Ouzhpennet eo bet an darn vrasañ eus ar prizioù diwar ar skeudennoù",
+		"AlertNew": "Ur mennozh hoc'h eus evit ur c'houlzad nevez ? Lakait ac'hanomp da c'houzout {url}!"
 	},
 	"Common": {
 		"About": "A-zivout",
