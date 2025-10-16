@@ -10,7 +10,7 @@
   <ProductMissingChip v-else class="mr-1" />
   <br v-if="showProductBarcode || !hideBarcodeErrors && barcodeTooLong || !hideBarcodeErrors && barcodeInvalid || showProductSource">
   <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
-  <ProductBarcodeTooLongChip v-if="!hideBarcodeErrors && barcodeTooLong" :barcode="product.code" class="mr-1" />
+  <ProductBarcodeTooLongChip v-if="!hideBarcodeErrors && barcodeTooLong" class="mr-1" :barcode="product.code" />
   <ProductBarcodeInvalidChip v-if="!hideBarcodeErrors && barcodeInvalid" class="mr-1" />
   <ProductSourceChip v-if="showProductSource" :product="product" />
 </template>

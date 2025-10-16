@@ -76,7 +76,7 @@
                     <v-card-text>
                       <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                       {{ getLocationTitle(location, false, true, true) }}<br>
-                      <LocationOSMTagChip :location="location" class="mr-1" />
+                      <LocationOSMTagChip class="mr-1" :location="location" />
                       <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
                     </v-card-text>
                   </v-card>

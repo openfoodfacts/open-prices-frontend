@@ -1,8 +1,8 @@
 <template>
-  <v-chip v-if="productCategories && productCategories.length" label size="small" density="comfortable" @click="showProductCategoriesDialog">
+  <v-chip v-if="hasProductCategories" label size="small" density="comfortable" @click="showProductCategoriesDialog">
     <i>{{ $t('ProductCard.CategoryTotal', { count: productCategories.length }) }}</i>
     <ProductCategoriesDialog
-      v-if="productCategories.length && productCategoriesDialog"
+      v-if="productCategoriesDialog"
       v-model="productCategoriesDialog"
       :categories="productCategories"
       @close="productCategoriesDialog = false"
@@ -32,6 +32,11 @@ export default {
   data() {
     return {
       productCategoriesDialog: false
+    }
+  },
+  computed: {
+    hasProductCategories() {
+      return this.productCategories && this.productCategories.length
     }
   },
   methods: {
