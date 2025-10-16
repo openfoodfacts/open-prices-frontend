@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Dipalopalo le maemo",
 		"MostPicturesAdded": "Ditshwantsho di le dintsi di tsentswe",
 		"MostPricesAdded": "Ditlhwatlhwa tse dintsi di tsentswe",
-		"MostPricesFromPicturesAdded": "Ditlhwatlhwa tse dintsi go tswa mo ditshwantshong di tsentswe"
+		"MostPricesFromPicturesAdded": "Ditlhwatlhwa tse dintsi go tswa mo ditshwantshong di tsentswe",
+		"AlertNew": "A o na le kakanyo ya kgwetlho e ntšhwa? Re itsise {url}!"
 	},
 	"Common": {
 		"About": "About",
