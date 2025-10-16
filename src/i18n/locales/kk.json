@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистика және рейтингтер",
 		"MostPicturesAdded": "Көптеген суреттер қосылды",
 		"MostPricesAdded": "Көптеген бағалар қосылды",
-		"MostPricesFromPicturesAdded": "Суреттердегі ең көп бағалар қосылды"
+		"MostPricesFromPicturesAdded": "Суреттердегі ең көп бағалар қосылды",
+		"AlertNew": "Сізде жаңа сынақ туралы идея бар ма? Бізге {url}хабарлаңыз!"
 	},
 	"Common": {
 		"About": "Осы туралы",
