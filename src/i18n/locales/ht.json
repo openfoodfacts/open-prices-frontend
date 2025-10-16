@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Estatistik ak klasman",
 		"MostPicturesAdded": "Pifò foto yo te ajoute",
 		"MostPricesAdded": "Pifò pri yo te ajoute",
-		"MostPricesFromPicturesAdded": "Pifò pri ki soti nan foto yo te ajoute"
+		"MostPricesFromPicturesAdded": "Pifò pri ki soti nan foto yo te ajoute",
+		"AlertNew": "Ou gen yon lide pou yon nouvo defi? Fè nou konnen {url}!"
 	},
 	"Common": {
 		"About": "About",
