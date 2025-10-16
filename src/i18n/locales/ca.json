@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Estadístiques i classificacions",
 		"MostPicturesAdded": "La majoria d'imatges afegides",
 		"MostPricesAdded": "La majoria de preus afegits",
-		"MostPricesFromPicturesAdded": "La majoria dels preus de les imatges s'han afegit"
+		"MostPricesFromPicturesAdded": "La majoria dels preus de les imatges s'han afegit",
+		"AlertNew": "Tens una idea per a un nou repte? Fes-nos-ho saber {url}!"
 	},
 	"Common": {
 		"About": "Quant a",
