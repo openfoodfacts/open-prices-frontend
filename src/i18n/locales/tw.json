@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Stats & rankings a wɔde di dwuma",
 		"MostPicturesAdded": "Mfonini dodow no ara na wɔde kaa ho",
 		"MostPricesAdded": "Wɔde nneɛma bo dodow no ara kaa ho",
-		"MostPricesFromPicturesAdded": "Nneɛma bo dodow no ara a efi mfonini ahorow mu de kaa ho"
+		"MostPricesFromPicturesAdded": "Nneɛma bo dodow no ara a efi mfonini ahorow mu de kaa ho",
+		"AlertNew": "Wowɔ adwene bi wɔ asɛnnennen foforo bi ho? Ma yɛnhu {url}!"
 	},
 	"Common": {
 		"About": "About",
