@@ -162,7 +162,8 @@
 		"StatsAndRankings": "ಅಂಕಿಅಂಶಗಳು ಮತ್ತು ಶ್ರೇಯಾಂಕಗಳು",
 		"MostPicturesAdded": "ಹೆಚ್ಚಿನ ಚಿತ್ರಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
 		"MostPricesAdded": "ಹೆಚ್ಚಿನ ಬೆಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
-		"MostPricesFromPicturesAdded": "ಚಿತ್ರಗಳಿಂದ ಹೆಚ್ಚಿನ ಬೆಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ"
+		"MostPricesFromPicturesAdded": "ಚಿತ್ರಗಳಿಂದ ಹೆಚ್ಚಿನ ಬೆಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
+		"AlertNew": "ಹೊಸ ಸವಾಲಿಗೆ ನಿಮ್ಮಲ್ಲಿ ಏನಾದರೂ ಐಡಿಯಾ ಇದೆಯೇ? ನಮಗೆ ತಿಳಿಸಿ {url}!"
 	},
 	"Common": {
 		"About": "ಬಗ್ಗೆ",
