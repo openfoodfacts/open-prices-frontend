@@ -162,7 +162,8 @@
 		"StatsAndRankings": "આંકડા અને રેન્કિંગ",
 		"MostPicturesAdded": "મોટાભાગના ચિત્રો ઉમેરાયા",
 		"MostPricesAdded": "મોટાભાગની કિંમતો ઉમેરવામાં આવી",
-		"MostPricesFromPicturesAdded": "ઉમેરાયેલા ચિત્રોમાંથી મોટાભાગની કિંમતો"
+		"MostPricesFromPicturesAdded": "ઉમેરાયેલા ચિત્રોમાંથી મોટાભાગની કિંમતો",
+		"AlertNew": "શું તમારી પાસે નવા પડકાર માટે કોઈ વિચાર છે? અમને જણાવો {url}!"
 	},
 	"Common": {
 		"About": "About",
