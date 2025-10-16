@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.141.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.141.2...v1.141.3) (2025-10-16)
+
+
+### Bug Fixes
+
+* **Challenges:** fix challenge timeline position ([9f84d44](https://github.com/openfoodfacts/open-prices-frontend/commit/9f84d44fa6ec49141039ec3da1230b3bcfaa4d82))
+* **Challenges:** if 2 ongoing challenges, show latest first ([#1756](https://github.com/openfoodfacts/open-prices-frontend/issues/1756)) ([8bfab4d](https://github.com/openfoodfacts/open-prices-frontend/commit/8bfab4ded63f9c7c7ac8f54ffdba7a1b944443a1))
+
+
+### Technical
+
+* **Challenges:** banner to nudge users to share new ideas ([#1753](https://github.com/openfoodfacts/open-prices-frontend/issues/1753)) ([fc71184](https://github.com/openfoodfacts/open-prices-frontend/commit/fc71184ee29b180e801a6310b85183bdec4c4589))
+* **l10n:** New Crowdin translations to review and merge ([#1752](https://github.com/openfoodfacts/open-prices-frontend/issues/1752)) ([df5058c](https://github.com/openfoodfacts/open-prices-frontend/commit/df5058c55ea22033f07906e3c21cf40b8630d0df))
+* small javascript optimizations ([#1755](https://github.com/openfoodfacts/open-prices-frontend/issues/1755)) ([f89f382](https://github.com/openfoodfacts/open-prices-frontend/commit/f89f382453175c32144e3246cb912c293fd07531))
+
 ## [1.141.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.141.1...v1.141.2) (2025-10-12)
 
 
