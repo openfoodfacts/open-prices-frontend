@@ -162,7 +162,8 @@
 		"StatsAndRankings": "انگ اکر ۽ درجه بندي",
 		"MostPicturesAdded": "گهڻيون تصويرون شامل ڪيون ويون آهن",
 		"MostPricesAdded": "گهڻيون قيمتون شامل ڪيون ويون آهن",
-		"MostPricesFromPicturesAdded": "شامل ڪيل تصويرن مان گهڻيون قيمتون"
+		"MostPricesFromPicturesAdded": "شامل ڪيل تصويرن مان گهڻيون قيمتون",
+		"AlertNew": "ڇا توهان وٽ نئين چئلينج لاءِ ڪو خيال آهي؟ اسان کي ٻڌايو {url}!"
 	},
 	"Common": {
 		"About": "About",
