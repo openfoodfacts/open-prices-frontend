@@ -162,7 +162,8 @@
 		"StatsAndRankings": "الإحصائيات والتصنيفات",
 		"MostPicturesAdded": "تمت إضافة معظم الصور",
 		"MostPricesAdded": "تمت إضافة معظم الأسعار",
-		"MostPricesFromPicturesAdded": "معظم الأسعار من الصور المضافة"
+		"MostPricesFromPicturesAdded": "معظم الأسعار من الصور المضافة",
+		"AlertNew": "هل لديك فكرة لتحدٍّ جديد؟ شاركنا رأيك {url}!"
 	},
 	"Common": {
 		"About": "حول",
