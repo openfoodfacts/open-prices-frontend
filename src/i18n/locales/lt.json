@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika ir reitingai",
 		"MostPicturesAdded": "Daugiausia pridėtų nuotraukų",
 		"MostPricesAdded": "Dauguma kainų pridėtos",
-		"MostPricesFromPicturesAdded": "Dauguma kainų iš nuotraukų pridėtos"
+		"MostPricesFromPicturesAdded": "Dauguma kainų iš nuotraukų pridėtos",
+		"AlertNew": "Turi idėją naujam iššūkiui? Pranešk mums {url}!"
 	},
 	"Common": {
 		"About": "Apie",
