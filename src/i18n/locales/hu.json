@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statisztikák és rangsorok",
 		"MostPicturesAdded": "A legtöbb kép hozzáadva",
 		"MostPricesAdded": "A legtöbb ár hozzáadva",
-		"MostPricesFromPicturesAdded": "A képeken szereplő árak nagy részét hozzáadtuk"
+		"MostPricesFromPicturesAdded": "A képeken szereplő árak nagy részét hozzáadtuk",
+		"AlertNew": "Van ötleted egy új kihívásra? Írd meg nekünk {url}!"
 	},
 	"Common": {
 		"About": "Névjegy",
