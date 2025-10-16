@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Tibalo & emazinga",
 		"MostPicturesAdded": "Titfombe letinyenti lengetiwe",
 		"MostPricesAdded": "Emanani lamanyenti langetiwe",
-		"MostPricesFromPicturesAdded": "Intsengo lenyenti levela etitfombeni lengetiwe"
+		"MostPricesFromPicturesAdded": "Intsengo lenyenti levela etitfombeni lengetiwe",
+		"AlertNew": "Unawo umbono wensayeya lensha? Satise {url}!"
 	},
 	"Common": {
 		"About": "About",
