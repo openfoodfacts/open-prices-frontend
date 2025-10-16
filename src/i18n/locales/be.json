@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статыстыка і рэйтынгі",
 		"MostPicturesAdded": "Большасць дададзеных здымкаў",
 		"MostPricesAdded": "Большасць цэн дададзены",
-		"MostPricesFromPicturesAdded": "Большасць цэн з фатаграфій дададзены"
+		"MostPricesFromPicturesAdded": "Большасць цэн з фатаграфій дададзены",
+		"AlertNew": "У вас ёсць ідэя для новага выкліку? Дайце нам ведаць {url}!"
 	},
 	"Common": {
 		"About": "About",
