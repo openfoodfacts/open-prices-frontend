@@ -162,7 +162,8 @@
 		"StatsAndRankings": "గణాంకాలు & ర్యాంకింగ్‌లు",
 		"MostPicturesAdded": "చాలా చిత్రాలు జోడించబడ్డాయి",
 		"MostPricesAdded": "చాలా ధరలు జోడించబడ్డాయి",
-		"MostPricesFromPicturesAdded": "చిత్రాల నుండి చాలా ధరలు జోడించబడ్డాయి"
+		"MostPricesFromPicturesAdded": "చిత్రాల నుండి చాలా ధరలు జోడించబడ్డాయి",
+		"AlertNew": "కొత్త సవాలు కోసం మీకు ఏదైనా ఆలోచన ఉందా? మాకు తెలియజేయండి {url}!"
 	},
 	"Common": {
 		"About": "గురించి",
