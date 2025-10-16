@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistiques et classements",
 		"MostPicturesAdded": "La plupart des images ajoutées",
 		"MostPricesAdded": "La plupart des prix ajoutés",
-		"MostPricesFromPicturesAdded": "La plupart des prix sont issus d'images ajoutées"
+		"MostPricesFromPicturesAdded": "La plupart des prix sont issus d'images ajoutées",
+		"AlertNew": "Vous avez une idée de nouveau défi ? Dites-le-nous ! {url}"
 	},
 	"Common": {
 		"About": "À propos",
