@@ -162,7 +162,8 @@
 		"StatsAndRankings": "आँकड़े और रैंकिंग",
 		"MostPicturesAdded": "सबसे अधिक चित्र जोड़े गए",
 		"MostPricesAdded": "अधिकांश कीमतें जोड़ी गईं",
-		"MostPricesFromPicturesAdded": "अधिकांश कीमतें चित्रों से जोड़ी गई हैं"
+		"MostPricesFromPicturesAdded": "अधिकांश कीमतें चित्रों से जोड़ी गई हैं",
+		"AlertNew": "क्या आपके पास किसी नई चुनौती का कोई विचार है? हमें बताएँ {url}!"
 	},
 	"Common": {
 		"About": "जानकारी",
