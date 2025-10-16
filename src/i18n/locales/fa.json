@@ -162,7 +162,8 @@
 		"StatsAndRankings": "آمار و رتبه‌بندی‌ها",
 		"MostPicturesAdded": "بیشتر تصاویر اضافه شده",
 		"MostPricesAdded": "اکثر قیمت‌ها اضافه شدند",
-		"MostPricesFromPicturesAdded": "اکثر قیمت‌ها از تصاویر اضافه شده‌اند"
+		"MostPricesFromPicturesAdded": "اکثر قیمت‌ها از تصاویر اضافه شده‌اند",
+		"AlertNew": "ایده‌ای برای یک چالش جدید دارید؟ به ما اطلاع دهید {url}!"
 	},
 	"Common": {
 		"About": "درباره ما",
