@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Mga istatistika at ranggo",
 		"MostPicturesAdded": "Karamihan sa mga larawan ay idinagdag",
 		"MostPricesAdded": "Karamihan sa mga presyo ay idinagdag",
-		"MostPricesFromPicturesAdded": "Karamihan sa mga presyo mula sa mga larawan ay idinagdag"
+		"MostPricesFromPicturesAdded": "Karamihan sa mga presyo mula sa mga larawan ay idinagdag",
+		"AlertNew": "Mayroon ka bang ideya para sa isang bagong hamon? Ipaalam sa amin {url}!"
 	},
 	"Common": {
 		"About": "Tungkol sa",
