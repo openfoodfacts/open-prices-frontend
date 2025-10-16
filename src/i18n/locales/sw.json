@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Takwimu na viwango",
 		"MostPicturesAdded": "Picha nyingi zimeongezwa",
 		"MostPricesAdded": "Bei nyingi zimeongezwa",
-		"MostPricesFromPicturesAdded": "Bei nyingi kutoka kwa picha zilizoongezwa"
+		"MostPricesFromPicturesAdded": "Bei nyingi kutoka kwa picha zilizoongezwa",
+		"AlertNew": "Je, una wazo la changamoto mpya? Tujulishe {url}!"
 	},
 	"Common": {
 		"About": "Kuhusu",
