@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Estatistikak eta sailkapenak",
 		"MostPicturesAdded": "Gehitutako argazki gehienak",
 		"MostPricesAdded": "Gehitutako prezio gehienak",
-		"MostPricesFromPicturesAdded": "Irudietako prezio gehienak gehitu dira"
+		"MostPricesFromPicturesAdded": "Irudietako prezio gehienak gehitu dira",
+		"AlertNew": "Baduzu erronka berri baterako ideiarik? Jakinarazi iezaguzu {url}!"
 	},
 	"Common": {
 		"About": "Honi buruz",
