@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistik & peringkat",
 		"MostPicturesAdded": "Sebagian besar gambar ditambahkan",
 		"MostPricesAdded": "Sebagian besar harga ditambahkan",
-		"MostPricesFromPicturesAdded": "Sebagian besar harga dari gambar ditambahkan"
+		"MostPricesFromPicturesAdded": "Sebagian besar harga dari gambar ditambahkan",
+		"AlertNew": "Punya ide untuk tantangan baru? Beri tahu kami {url}!"
 	},
 	"Common": {
 		"About": "Tentang",
