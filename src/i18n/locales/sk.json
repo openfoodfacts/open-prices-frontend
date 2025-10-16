@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Štatistiky a rebríčky",
 		"MostPicturesAdded": "Pridaných najviac obrázkov",
 		"MostPricesAdded": "Väčšina cien bola pridaná",
-		"MostPricesFromPicturesAdded": "Väčšina cien z obrázkov bola pridaná"
+		"MostPricesFromPicturesAdded": "Väčšina cien z obrázkov bola pridaná",
+		"AlertNew": "Máš nápad na novú výzvu? Daj nám vedieť {url}!"
 	},
 	"Common": {
 		"About": "O",
