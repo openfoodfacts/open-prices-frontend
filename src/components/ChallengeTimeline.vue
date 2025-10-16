@@ -16,7 +16,7 @@
     </v-timeline-item>
   </v-timeline>
   <v-progress-linear
-    style="width: 50%; margin-left: 25%; top: -30px; margin-top: -25px"
+    style="width: 50%; margin-left: 25%; top: -85px; margin-top: -25px"
     color="success"
     height="25"
     :model-value="progress"
