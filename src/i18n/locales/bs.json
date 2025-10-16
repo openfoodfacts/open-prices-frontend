@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistike i rangiranje",
 		"MostPicturesAdded": "Najviše dodanih slika",
 		"MostPricesAdded": "Većina cijena je dodana",
-		"MostPricesFromPicturesAdded": "Većina cijena sa slika je dodana"
+		"MostPricesFromPicturesAdded": "Većina cijena sa slika je dodana",
+		"AlertNew": "Imate li ideju za novi izazov? Javite nam {url}!"
 	},
 	"Common": {
 		"About": "About",
