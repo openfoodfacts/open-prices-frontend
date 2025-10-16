@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statîstîk û rêzkirin",
 		"MostPicturesAdded": "Wêneyên herî zêde hatine zêdekirin",
 		"MostPricesAdded": "Piraniya bihayên hatine zêdekirin",
-		"MostPricesFromPicturesAdded": "Piraniya bihayan ji wêneyan hatine zêdekirin"
+		"MostPricesFromPicturesAdded": "Piraniya bihayan ji wêneyan hatine zêdekirin",
+		"AlertNew": "Fikirek te ji bo pêşbaziyek nû heye? Ji me re bêje {url}!"
 	},
 	"Common": {
 		"About": "Li_ser",
