@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika ja edetabel",
 		"MostPicturesAdded": "Enamik pilte on lisatud",
 		"MostPricesAdded": "Enamik hindu on lisatud",
-		"MostPricesFromPicturesAdded": "Enamik piltidelt leitud hindu on lisatud"
+		"MostPricesFromPicturesAdded": "Enamik piltidelt leitud hindu on lisatud",
+		"AlertNew": "Kas sul on idee uueks väljakutseks? Anna meile teada {url}!"
 	},
 	"Common": {
 		"About": "Info",
