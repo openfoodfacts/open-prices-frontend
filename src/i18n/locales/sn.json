@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Stats & rankings",
 		"MostPicturesAdded": "Mifananidzo yakawanda yakawedzerwa",
 		"MostPricesAdded": "Mitengo yakawanda yakawedzerwa",
-		"MostPricesFromPicturesAdded": "Mitengo yakawanda kubva pamifananidzo yakawedzerwa"
+		"MostPricesFromPicturesAdded": "Mitengo yakawanda kubva pamifananidzo yakawedzerwa",
+		"AlertNew": "Iwe une pfungwa yedambudziko idzva? Tizivise {url}!"
 	},
 	"Common": {
 		"About": "About",

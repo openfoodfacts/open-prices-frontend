@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika ja edetabel",
 		"MostPicturesAdded": "Enamik pilte on lisatud",
 		"MostPricesAdded": "Enamik hindu on lisatud",
-		"MostPricesFromPicturesAdded": "Enamik piltidelt leitud hindu on lisatud"
+		"MostPricesFromPicturesAdded": "Enamik piltidelt leitud hindu on lisatud",
+		"AlertNew": "Kas sul on idee uueks väljakutseks? Anna meile teada {url}!"
 	},
 	"Common": {
 		"About": "Info",
@@ -521,10 +522,10 @@
 	},
 	"CreateOffProduct": {
 		"CountriesWhereSold": "Countries where sold",
-		"CreateNewProduct": "Loo uus toode",
-		"CreateProduct": "Loo toode",
-		"EnableCropMode": "Kärpimisrežiimi lubamine",
-		"Flavor": "Valige projekt, milles toode luuakse",
+		"CreateNewProduct": "Lisa uus toode",
+		"CreateProduct": "Lisa toode",
+		"EnableCropMode": "Lülita kärpimisrežiim sisse",
+		"Flavor": "Vali projekt, kuhu toode lisatakse",
 		"NextProof": "Next proof",
 		"PreviousProof": "Eelmine tõestus",
 		"ProductAlreadyExists": "Toode on juba olemas",
@@ -571,8 +572,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
-		"NoResultHelpKeywords": "Ei leia oma poodi? Proovi täieliku aadressi asemel märksõnu (nt „Carrefour 75013 Pariis” või „Walmart San Francisco”).",
-		"NoResultHelpOSM": "Ikka ei leia oma poodi? See ei pruugi veel {osm_name} piirkonnas olla. Saate selle esmalt {osm_url} piirkonnas lisada.",
+		"NoResultHelpKeywords": "Sa ei leia oma poodi? Proovi täieliku aadressi asemel märksõnu (nt „Carrefour 75013 Pariis” või „Walmart San Francisco”).",
+		"NoResultHelpOSM": "Sa ikka ei leia oma poodi? See ei pruugi veel {osm_name} piirkonnas olla. Saad selle esmalt {osm_url} piirkonnas lisada.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -772,7 +773,7 @@
 			"Title": "Tee kaastööd"
 		},
 		"CreateOffProduct": {
-			"Title": "Tooteassistendi loomine"
+			"Title": "Lisa tooteassistent"
 		},
 		"Experiments": {
 			"Title": "Experiments"

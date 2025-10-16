@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statisticae et ordines",
 		"MostPicturesAdded": "Plurimae imagines additae",
 		"MostPricesAdded": "Plurima pretia addita",
-		"MostPricesFromPicturesAdded": "Pleraque pretia ex imaginibus addita sunt."
+		"MostPricesFromPicturesAdded": "Pleraque pretia ex imaginibus addita sunt.",
+		"AlertNew": "Habesne ideam novae provocationis? Fac nos scire {url}!"
 	},
 	"Common": {
 		"About": "About",

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika və reytinqlər",
 		"MostPicturesAdded": "Ən çox şəkil əlavə edildi",
 		"MostPricesAdded": "Ən çox qiymətlər əlavə edildi",
-		"MostPricesFromPicturesAdded": "Şəkillərdən ən çox qiymətlər əlavə edildi"
+		"MostPricesFromPicturesAdded": "Şəkillərdən ən çox qiymətlər əlavə edildi",
+		"AlertNew": "Yeni çağırış üçün bir fikrin varmı? Bizə bildirin {url}!"
 	},
 	"Common": {
 		"About": "Haqqında",

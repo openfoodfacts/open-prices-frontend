@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистик ба зэрэглэл",
 		"MostPicturesAdded": "Ихэнх зураг нэмсэн",
 		"MostPricesAdded": "Ихэнх үнийг нэмсэн",
-		"MostPricesFromPicturesAdded": "Зураг дээрх ихэнх үнийг нэмсэн"
+		"MostPricesFromPicturesAdded": "Зураг дээрх ихэнх үнийг нэмсэн",
+		"AlertNew": "Танд шинэ сорилт хийх санаа байна уу? {url}бидэнд мэдэгдээрэй!"
 	},
 	"Common": {
 		"About": "About",

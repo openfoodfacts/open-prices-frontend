@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Վիճակագրություն և վարկանիշներ",
 		"MostPicturesAdded": "Ամենաշատ ավելացված նկարները",
 		"MostPricesAdded": "Ավելացված գների մեծ մասը",
-		"MostPricesFromPicturesAdded": "Նկարներից ստացված գների մեծ մասը ավելացվել է"
+		"MostPricesFromPicturesAdded": "Նկարներից ստացված գների մեծ մասը ավելացվել է",
+		"AlertNew": "Նոր մարտահրավերի գաղափար ունե՞ս։ Տեղեկացրու մեզ {url}!"
 	},
 	"Common": {
 		"About": "Մեր մասին",

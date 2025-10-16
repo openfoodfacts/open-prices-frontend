@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistieken en ranglijsten",
 		"MostPicturesAdded": "Meeste foto's toegevoegd",
 		"MostPricesAdded": "Meeste prijzen toegevoegd",
-		"MostPricesFromPicturesAdded": "Meeste prijzen van afbeeldingen toegevoegd"
+		"MostPricesFromPicturesAdded": "Meeste prijzen van afbeeldingen toegevoegd",
+		"AlertNew": "Heb je een idee voor een nieuwe uitdaging? Laat ons weten {url}!"
 	},
 	"Common": {
 		"About": "Over",

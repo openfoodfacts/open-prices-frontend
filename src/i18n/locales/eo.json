@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistikoj kaj rangotabeloj",
 		"MostPicturesAdded": "Plej multaj bildoj aldonitaj",
 		"MostPricesAdded": "Plej multaj prezoj aldonitaj",
-		"MostPricesFromPicturesAdded": "Plej multaj prezoj el bildoj aldonitaj"
+		"MostPricesFromPicturesAdded": "Plej multaj prezoj el bildoj aldonitaj",
+		"AlertNew": "Ĉu vi havas ideon por nova defio? Sciigu nin {url}!"
 	},
 	"Common": {
 		"About": "Pri la projekto",

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистика тата рейтинг",
 		"MostPicturesAdded": "Ытларах ӳкерчӗк хушнӑ",
 		"MostPricesAdded": "Ытларах хаксем хушӑннӑ",
-		"MostPricesFromPicturesAdded": "Сӑнӳкерчӗксенчен ытларах хак хушнӑ"
+		"MostPricesFromPicturesAdded": "Сӑнӳкерчӗксенчен ытларах хак хушнӑ",
+		"AlertNew": "Сирӗн ҫӗнӗ чӗнӳ тума шухӑш пур-и? Пӗлтерӗр пире {url}!"
 	},
 	"Common": {
 		"About": "About",

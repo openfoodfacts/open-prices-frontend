@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistikk og rangeringer",
 		"MostPicturesAdded": "Flest bilder lagt til",
 		"MostPricesAdded": "De fleste priser lagt til",
-		"MostPricesFromPicturesAdded": "Flest priser fra bilder lagt til"
+		"MostPricesFromPicturesAdded": "Flest priser fra bilder lagt til",
+		"AlertNew": "Har du en idé til en ny utfordring? Gi oss beskjed om {url}!"
 	},
 	"Common": {
 		"About": "Om",

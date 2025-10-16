@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistiky a žebříčky",
 		"MostPicturesAdded": "Většina přidáných obrázků",
 		"MostPricesAdded": "Většina cen byla přidána",
-		"MostPricesFromPicturesAdded": "Většina cen z obrázků byla přidána"
+		"MostPricesFromPicturesAdded": "Většina cen z obrázků byla přidána",
+		"AlertNew": "Máte nápad na novou výzvu? Dejte nám vědět {url}!"
 	},
 	"Common": {
 		"About": "O aplikaci",

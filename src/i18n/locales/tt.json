@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистика һәм рейтингы",
 		"MostPicturesAdded": "Күпчелек рәсемнәр өстәлде",
 		"MostPricesAdded": "Күпчелек бәяләр өстәлде",
-		"MostPricesFromPicturesAdded": "Рәсемнәрдән күпчелек бәяләр өстәлде"
+		"MostPricesFromPicturesAdded": "Рәсемнәрдән күпчелек бәяләр өстәлде",
+		"AlertNew": "You have an idea for a new challenge? Let us know {url}!"
 	},
 	"Common": {
 		"About": "Хакында",

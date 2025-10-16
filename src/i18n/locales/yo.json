@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Awọn iṣiro & awọn ipo",
 		"MostPicturesAdded": "Pupọ awọn aworan kun",
 		"MostPricesAdded": "Pupọ owo kun",
-		"MostPricesFromPicturesAdded": "Ọpọlọpọ owo lati awọn aworan kun"
+		"MostPricesFromPicturesAdded": "Ọpọlọpọ owo lati awọn aworan kun",
+		"AlertNew": "Ṣe o ni imọran fun ipenija tuntun kan? Jẹ ki a mọ {url}!"
 	},
 	"Common": {
 		"About": "Nipa",

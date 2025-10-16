@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Ystadegau a safleoedd",
 		"MostPicturesAdded": "Ychwanegwyd y rhan fwyaf o luniau",
 		"MostPricesAdded": "Ychwanegwyd y rhan fwyaf o brisiau",
-		"MostPricesFromPicturesAdded": "Ychwanegwyd y rhan fwyaf o brisiau o luniau"
+		"MostPricesFromPicturesAdded": "Ychwanegwyd y rhan fwyaf o brisiau o luniau",
+		"AlertNew": "Oes gennych chi syniad ar gyfer her newydd? Rhowch wybod i ni {url}!"
 	},
 	"Common": {
 		"About": "About",

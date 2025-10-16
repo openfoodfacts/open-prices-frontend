@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistiques & rankings (jatebɔsɛbɛnw).",
 		"MostPicturesAdded": "Ja fanba farala ɲɔgɔn kan",
 		"MostPricesAdded": "Sɔngɔ fanba farala ɲɔgɔn kan",
-		"MostPricesFromPicturesAdded": "Sɔngɔ fanba bɔra jaw la minnu farala ɲɔgɔn kan"
+		"MostPricesFromPicturesAdded": "Sɔngɔ fanba bɔra jaw la minnu farala ɲɔgɔn kan",
+		"AlertNew": "Hakilina dɔ b’i bolo gɛlɛya kura dɔ kan wa? An k'a dɔn {url}!"
 	},
 	"Common": {
 		"About": "About",

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "統計數據和排名",
 		"MostPicturesAdded": "添加的圖片最多",
 		"MostPricesAdded": "大部分價格已添加",
-		"MostPricesFromPicturesAdded": "大部分價格來自已新增的圖片"
+		"MostPricesFromPicturesAdded": "大部分價格來自已新增的圖片",
+		"AlertNew": "你有新的挑戰想法嗎？告訴我們 {url}！"
 	},
 	"Common": {
 		"About": "關於",

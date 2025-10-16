@@ -162,7 +162,8 @@
 		"StatsAndRankings": "통계 및 순위",
 		"MostPicturesAdded": "가장 많은 사진이 추가되었습니다",
 		"MostPricesAdded": "대부분의 가격이 추가되었습니다",
-		"MostPricesFromPicturesAdded": "사진 추가된 가격 대부분"
+		"MostPricesFromPicturesAdded": "사진 추가된 가격 대부분",
+		"AlertNew": "새로운 도전 아이디어가 있으신가요? 알려주세요 {url}!"
 	},
 	"Common": {
 		"About": "정보",

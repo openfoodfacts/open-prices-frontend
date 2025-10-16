@@ -162,7 +162,8 @@
 		"StatsAndRankings": "සංඛ්‍යාලේඛන සහ ශ්‍රේණිගත කිරීම්",
 		"MostPicturesAdded": "බොහෝ පින්තූර එකතු කර ඇත",
 		"MostPricesAdded": "බොහෝ මිල ගණන් එකතු කරන ලදී",
-		"MostPricesFromPicturesAdded": "එකතු කරන ලද පින්තූර වලින් වැඩිම මිල ගණන්"
+		"MostPricesFromPicturesAdded": "එකතු කරන ලද පින්තූර වලින් වැඩිම මිල ගණන්",
+		"AlertNew": "අලුත් අභියෝගයක් සඳහා ඔබට අදහසක් තිබේද? {url}අපට දන්වන්න!"
 	},
 	"Common": {
 		"About": "About",

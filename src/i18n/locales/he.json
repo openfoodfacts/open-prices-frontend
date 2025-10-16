@@ -162,7 +162,8 @@
 		"StatsAndRankings": "סטטיסטיקות ודירוגים",
 		"MostPicturesAdded": "רוב התמונות נוספו",
 		"MostPricesAdded": "רוב המחירים נוספו",
-		"MostPricesFromPicturesAdded": "רוב המחירים מהתמונות נוספו"
+		"MostPricesFromPicturesAdded": "רוב המחירים מהתמונות נוספו",
+		"AlertNew": "יש לך רעיון לאתגר חדש? ספר לנו {url}!"
 	},
 	"Common": {
 		"About": "על אודות",

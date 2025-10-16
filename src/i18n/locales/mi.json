@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Nga tatauranga me nga reanga",
 		"MostPicturesAdded": "Ko te nuinga o nga pikitia kua taapirihia",
 		"MostPricesAdded": "Ko te nuinga o nga utu kua taapirihia",
-		"MostPricesFromPicturesAdded": "Ko te nuinga o nga utu mai i nga pikitia kua taapirihia"
+		"MostPricesFromPicturesAdded": "Ko te nuinga o nga utu mai i nga pikitia kua taapirihia",
+		"AlertNew": "He whakaaro koe mo tetahi wero hou? Kia mohio tatou {url}!"
 	},
 	"Common": {
 		"About": "About",

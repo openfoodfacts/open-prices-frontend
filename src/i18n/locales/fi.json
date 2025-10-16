@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Tilastot ja sijoitukset",
 		"MostPicturesAdded": "Eniten kuvia lisätty",
 		"MostPricesAdded": "Useimmat hinnat lisätty",
-		"MostPricesFromPicturesAdded": "Useimmat kuvista lisätyt hinnat"
+		"MostPricesFromPicturesAdded": "Useimmat kuvista lisätyt hinnat",
+		"AlertNew": "Onko sinulla idea uudelle haasteelle? Kerro meille {url}!"
 	},
 	"Common": {
 		"About": "Tietoja",

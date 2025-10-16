@@ -162,7 +162,8 @@
 		"StatsAndRankings": "आँकड़ा एवं श्रेणी",
 		"MostPicturesAdded": "अधिकांशं चित्रं योजितम्",
 		"MostPricesAdded": "अधिकांशं मूल्यं योजितम्",
-		"MostPricesFromPicturesAdded": "चित्रेभ्यः अधिकांशं मूल्यं योजितम्"
+		"MostPricesFromPicturesAdded": "चित्रेभ्यः अधिकांशं मूल्यं योजितम्",
+		"AlertNew": "भवतः नूतनस्य आव्हानस्य विचारः अस्ति? ज्ञातुम् {url}!"
 	},
 	"Common": {
 		"About": "About",

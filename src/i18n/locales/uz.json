@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika va reyting",
 		"MostPicturesAdded": "Ko'pgina rasmlar qo'shildi",
 		"MostPricesAdded": "Ko'pchilik narxlar qo'shilgan",
-		"MostPricesFromPicturesAdded": "Rasmlardagi eng ko'p narxlar qo'shildi"
+		"MostPricesFromPicturesAdded": "Rasmlardagi eng ko'p narxlar qo'shildi",
+		"AlertNew": "Sizda yangi chaqiruv haqida fikr bormi? Bizga xabar bering {url}!"
 	},
 	"Common": {
 		"About": "Ma’lumot",

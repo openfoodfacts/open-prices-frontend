@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Amanani & namazinga",
 		"MostPicturesAdded": "Uninzi lwemifanekiso yongeziweyo",
 		"MostPricesAdded": "Amaxabiso amaninzi ongeziweyo",
-		"MostPricesFromPicturesAdded": "Amaxabiso amaninzi avela kwimifanekiso eyongeziweyo"
+		"MostPricesFromPicturesAdded": "Amaxabiso amaninzi avela kwimifanekiso eyongeziweyo",
+		"AlertNew": "Ngaba unombono womngeni omtsha? Sazise {url}!"
 	},
 	"Common": {
 		"About": "About",

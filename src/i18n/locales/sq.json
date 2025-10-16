@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistikat dhe renditjet",
 		"MostPicturesAdded": "Shumica e fotografive të shtuara",
 		"MostPricesAdded": "Shumica e çmimeve të shtuara",
-		"MostPricesFromPicturesAdded": "Shumica e çmimeve nga fotografitë u shtuan"
+		"MostPricesFromPicturesAdded": "Shumica e çmimeve nga fotografitë u shtuan",
+		"AlertNew": "Ke ndonjë ide për një sfidë të re? Na trego {url}!"
 	},
 	"Common": {
 		"About": "About",

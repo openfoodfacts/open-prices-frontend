@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Staitistig & rangachadh",
 		"MostPicturesAdded": "A’ mhòr-chuid de dhealbhan air an cur ris",
 		"MostPricesAdded": "A’ mhòr-chuid de phrìsean air an cur ris",
-		"MostPricesFromPicturesAdded": "A’ mhòr-chuid de phrìsean bho dhealbhan air an cur ris"
+		"MostPricesFromPicturesAdded": "A’ mhòr-chuid de phrìsean bho dhealbhan air an cur ris",
+		"AlertNew": "A bheil beachd agad airson dùbhlan ùr? Leig fios dhuinn {url}!"
 	},
 	"Common": {
 		"About": "About",

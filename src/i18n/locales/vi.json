@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Thống kê & xếp hạng",
 		"MostPicturesAdded": "Đã thêm nhiều hình ảnh nhất",
 		"MostPricesAdded": "Giá được thêm nhiều nhất",
-		"MostPricesFromPicturesAdded": "Hầu hết giá từ hình ảnh được thêm vào"
+		"MostPricesFromPicturesAdded": "Hầu hết giá từ hình ảnh được thêm vào",
+		"AlertNew": "Bạn có ý tưởng cho thử thách mới không? Hãy cho chúng tôi biết nhé {url}!"
 	},
 	"Common": {
 		"About": "Giới thiệu",

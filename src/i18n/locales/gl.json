@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Estatísticas e clasificacións",
 		"MostPicturesAdded": "A maioría das imaxes engadidas",
 		"MostPricesAdded": "A maioría dos prezos engadidos",
-		"MostPricesFromPicturesAdded": "Engadíronse a maioría dos prezos das imaxes"
+		"MostPricesFromPicturesAdded": "Engadíronse a maioría dos prezos das imaxes",
+		"AlertNew": "Tes algunha idea para un novo reto? Cóntanos {url}!"
 	},
 	"Common": {
 		"About": "Sobre",

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika in uvrstitve",
 		"MostPicturesAdded": "Večina dodanih slik",
 		"MostPricesAdded": "Večina dodanih cen",
-		"MostPricesFromPicturesAdded": "Večina cen iz slik je bila dodanih"
+		"MostPricesFromPicturesAdded": "Večina cen iz slik je bila dodanih",
+		"AlertNew": "Imaš idejo za nov izziv? Sporoči nam {url}!"
 	},
 	"Common": {
 		"About": "O programu",

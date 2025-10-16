@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Lipalo le maemo",
 		"MostPicturesAdded": "Litšoantšo tse ngata li kentsoe",
 		"MostPricesAdded": "Litheko tse ngata li ekelitsoe",
-		"MostPricesFromPicturesAdded": "Litheko tse ngata tse tsoang litšoantšong tse kentsoeng"
+		"MostPricesFromPicturesAdded": "Litheko tse ngata tse tsoang litšoantšong tse kentsoeng",
+		"AlertNew": "O na le mohopolo oa phephetso e ncha? Re tsebise {url}!"
 	},
 	"Common": {
 		"About": "About",

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Ƙididdiga & martaba",
 		"MostPicturesAdded": "Yawancin hotuna sun kara",
 		"MostPricesAdded": "Yawancin farashin ƙara",
-		"MostPricesFromPicturesAdded": "Yawancin farashi daga hotuna da aka ƙara"
+		"MostPricesFromPicturesAdded": "Yawancin farashi daga hotuna da aka ƙara",
+		"AlertNew": "Kuna da ra'ayin sabon kalubale? Bari mu sani {url}!"
 	},
 	"Common": {
 		"About": "About",

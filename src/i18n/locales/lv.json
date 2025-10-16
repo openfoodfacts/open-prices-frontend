@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika un rangi",
 		"MostPicturesAdded": "Lielākā daļa attēlu ir pievienoti",
 		"MostPricesAdded": "Lielākā daļa cenu ir pievienotas",
-		"MostPricesFromPicturesAdded": "Lielākā daļa cenu no attēliem ir pievienotas"
+		"MostPricesFromPicturesAdded": "Lielākā daļa cenu no attēliem ir pievienotas",
+		"AlertNew": "Vai jums ir ideja jaunam izaicinājumam? Paziņojiet mums {url}!"
 	},
 	"Common": {
 		"About": "Par",
