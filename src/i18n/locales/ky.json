@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистика жана рейтингдер",
 		"MostPicturesAdded": "Көпчүлүк сүрөттөр кошулду",
 		"MostPricesAdded": "Көпчүлүк баалар кошулду",
-		"MostPricesFromPicturesAdded": "Сүрөттөрдөн көпчүлүк баалар кошулду"
+		"MostPricesFromPicturesAdded": "Сүрөттөрдөн көпчүлүк баалар кошулду",
+		"AlertNew": "Сизде жаңы чакырык үчүн идея барбы? Бизге кабарлаңыз {url}!"
 	},
 	"Common": {
 		"About": "About",
