@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistiken & Klassementer",
 		"MostPicturesAdded": "Déi meescht Biller derbäigesat",
 		"MostPricesAdded": "Déi meescht Präisser goufen derbäigesat",
-		"MostPricesFromPicturesAdded": "Déi meescht Präisser vu Biller goufen derbäigesat"
+		"MostPricesFromPicturesAdded": "Déi meescht Präisser vu Biller goufen derbäigesat",
+		"AlertNew": "Hues du eng Iddi fir eng nei Erausfuerderung? Loosst eis et wëssen {url}!"
 	},
 	"Common": {
 		"About": "About",
