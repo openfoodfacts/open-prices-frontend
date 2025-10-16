@@ -85,6 +85,15 @@ function handlePriceTag(priceTag) {
     productPriceForm.price_is_discounted = selectedPrice ? selectedPrice.price_is_discounted : false
     productPriceForm.price_without_discount = selectedPrice.price_without_discount ? selectedPrice.price_without_discount.toString() : ""
     productPriceForm.discount_type = selectedPrice.discount_type || ""
+
+    // Check for good similar barcodes
+    if (label.similar_barcodes && label.similar_barcodes.length) {
+      productPriceForm.similar_barcodes = label.similar_barcodes
+      // if there is a similar barcode, it's probably better than the guessed one if it's invalid
+      if (!barcode_utils.isBarcodeValid(productPriceForm.product_code)) {
+        productPriceForm.product_code = label.similar_barcodes[0].barcode
+      }
+    }
   }
 
   return productPriceForm
