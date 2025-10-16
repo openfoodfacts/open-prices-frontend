@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Tirokoobyada & darajooyinka",
 		"MostPicturesAdded": "Inta badan sawirada ayaa lagu daray",
 		"MostPricesAdded": "Inta badan qiimaha lagu daray",
-		"MostPricesFromPicturesAdded": "Qiimaha ugu badan ee sawirada lagu daray"
+		"MostPricesFromPicturesAdded": "Qiimaha ugu badan ee sawirada lagu daray",
+		"AlertNew": "Ma haysaa fikrad tartan cusub? Nala soo socodsii {url}!"
 	},
 	"Common": {
 		"About": "About",
