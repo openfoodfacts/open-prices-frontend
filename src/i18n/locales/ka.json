@@ -162,7 +162,8 @@
 		"StatsAndRankings": "სტატისტიკა და რეიტინგები",
 		"MostPicturesAdded": "ყველაზე მეტი სურათი დამატებულია",
 		"MostPricesAdded": "დამატებული ფასების უმეტესობა",
-		"MostPricesFromPicturesAdded": "სურათებიდან მიღებული ფასების უმეტესობა დამატებულია"
+		"MostPricesFromPicturesAdded": "სურათებიდან მიღებული ფასების უმეტესობა დამატებულია",
+		"AlertNew": "გაქვთ იდეა ახალი გამოწვევისთვის? შეგვატყობინეთ {url}!"
 	},
 	"Common": {
 		"About": "About",
