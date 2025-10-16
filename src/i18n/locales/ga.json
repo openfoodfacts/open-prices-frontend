@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Staitisticí & rátálacha",
 		"MostPicturesAdded": "An chuid is mó de na pictiúir curtha leis",
 		"MostPricesAdded": "An chuid is mó de na praghsanna curtha leis",
-		"MostPricesFromPicturesAdded": "An chuid is mó de na praghsanna ó phictiúir curtha leis"
+		"MostPricesFromPicturesAdded": "An chuid is mó de na praghsanna ó phictiúir curtha leis",
+		"AlertNew": "An bhfuil smaoineamh agat le haghaidh dúshlán nua? Cuir in iúl dúinn {url}!"
 	},
 	"Common": {
 		"About": "Faoi",
