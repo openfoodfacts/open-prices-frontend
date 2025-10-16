@@ -162,7 +162,8 @@
 		"StatsAndRankings": "ስታቲስቲክስ & ደረጃታት",
 		"MostPicturesAdded": "መብዛሕትኡ ስእልታት ተወሰኸ",
 		"MostPricesAdded": "መብዛሕትኡ ዋጋታት ተወሰኸ",
-		"MostPricesFromPicturesAdded": "መብዛሕትኡ ዋጋታት ካብ ስእልታት ተወሰኸ"
+		"MostPricesFromPicturesAdded": "መብዛሕትኡ ዋጋታት ካብ ስእልታት ተወሰኸ",
+		"AlertNew": "ንሓድሽ ብድሆ ሓሳብ ኣለካ? ንፍለጥ {url}!"
 	},
 	"Common": {
 		"About": "About",
