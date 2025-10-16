@@ -162,7 +162,8 @@
 		"StatsAndRankings": "İstatistikler ve sıralamalar",
 		"MostPicturesAdded": "En çok resim eklendi",
 		"MostPricesAdded": "En çok eklenen fiyatlar",
-		"MostPricesFromPicturesAdded": "Çoğu fiyat resimlerden eklendi"
+		"MostPricesFromPicturesAdded": "Çoğu fiyat resimlerden eklendi",
+		"AlertNew": "Yeni bir meydan okuma fikriniz mi var? Bize bildirin {url}!"
 	},
 	"Common": {
 		"About": "Hakkında",
