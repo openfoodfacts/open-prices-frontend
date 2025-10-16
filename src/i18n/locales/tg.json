@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистика ва рейтинг",
 		"MostPicturesAdded": "Аксари тасвирҳо илова карда шуданд",
 		"MostPricesAdded": "Аксари нархҳо илова карда шуданд",
-		"MostPricesFromPicturesAdded": "Аксари нархҳо аз тасвирҳо илова карда шудаанд"
+		"MostPricesFromPicturesAdded": "Аксари нархҳо аз тасвирҳо илова карда шудаанд",
+		"AlertNew": "Шумо идеяи даъвати нав доред? Ба мо хабар диҳед {url}!"
 	},
 	"Common": {
 		"About": "About",
