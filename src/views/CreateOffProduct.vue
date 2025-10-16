@@ -441,7 +441,7 @@ export default {
         })
     },
     getChallenges() {
-      return api.getChallenges({order_by: '-created'})
+      return api.getChallenges({ order_by: '-created' })
         .then((data) => {
           const challenges = data.items
           const challengeCategories = challenges.map(challenge => challenge.categories) // Array of arrays
