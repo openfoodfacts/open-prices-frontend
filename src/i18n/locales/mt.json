@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika u klassifiki",
 		"MostPicturesAdded": "Il-biċċa l-kbira tar-ritratti miżjuda",
 		"MostPricesAdded": "Il-biċċa l-kbira tal-prezzijiet miżjuda",
-		"MostPricesFromPicturesAdded": "Il-biċċa l-kbira tal-prezzijiet minn stampi miżjuda"
+		"MostPricesFromPicturesAdded": "Il-biċċa l-kbira tal-prezzijiet minn stampi miżjuda",
+		"AlertNew": "Għandek idea għal sfida ġdida? Għidilna {url}!"
 	},
 	"Common": {
 		"About": "About",
