@@ -162,7 +162,8 @@
 		"StatsAndRankings": "ስታቲስቲክስ እና ደረጃዎች",
 		"MostPicturesAdded": "አብዛኞቹ ምስሎች ታክለዋል።",
 		"MostPricesAdded": "አብዛኛዎቹ ዋጋዎች ታክለዋል።",
-		"MostPricesFromPicturesAdded": "ከፎቶዎች አብዛኛዎቹ ዋጋዎች"
+		"MostPricesFromPicturesAdded": "ከፎቶዎች አብዛኛዎቹ ዋጋዎች",
+		"AlertNew": "ለአዲስ ፈተና ሀሳብ አለህ? ያሳውቁን {url}!"
 	},
 	"Common": {
 		"About": "About",
