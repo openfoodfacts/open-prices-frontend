@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Tölfræði og röðun",
 		"MostPicturesAdded": "Flestar myndir bættar við",
 		"MostPricesAdded": "Flest verð bætt við",
-		"MostPricesFromPicturesAdded": "Flest verð af myndum bætt við"
+		"MostPricesFromPicturesAdded": "Flest verð af myndum bætt við",
+		"AlertNew": "Hefurðu hugmynd að nýrri áskorun? Láttu okkur vita {url}!"
 	},
 	"Common": {
 		"About": "Um forritið",
