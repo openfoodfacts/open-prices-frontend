@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистика та рейтинги",
 		"MostPicturesAdded": "Найбільше додано фотографій",
 		"MostPricesAdded": "Більшість цін додано",
-		"MostPricesFromPicturesAdded": "Більшість цін із зображень додано"
+		"MostPricesFromPicturesAdded": "Більшість цін із зображень додано",
+		"AlertNew": "Маєте ідею для нового челенджу? Повідомте нам {url}!"
 	},
 	"Common": {
 		"About": "Про додаток",
