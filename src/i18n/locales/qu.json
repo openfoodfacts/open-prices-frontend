@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Estadísticas & rankings nisqakuna",
 		"MostPicturesAdded": "Yaqa llapan siq’ikuna yapasqa",
 		"MostPricesAdded": "Yaqa llapan preciokuna yapasqa",
-		"MostPricesFromPicturesAdded": "Yaqa llapan chaninkuna siq'ikunamanta yapasqa"
+		"MostPricesFromPicturesAdded": "Yaqa llapan chaninkuna siq'ikunamanta yapasqa",
+		"AlertNew": "¿Huk yuyayniyuqchu kanki huk musuq sasachakuypaq? Yachasun {url}!"
 	},
 	"Common": {
 		"About": "About",
