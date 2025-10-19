@@ -99,6 +99,18 @@
               required
             />
             <div class="text-subtitle-2">
+              {{ $t('CreateOffProduct.ProductLanguage') }}
+            </div>
+            <v-autocomplete
+              v-model="productForm.product_language"
+              :items="Languages"
+              item-title="native"
+              item-value="code"
+              density="compact"
+              variant="outlined"
+            />
+
+            <div class="text-subtitle-2">
               {{ $t('Common.ProductName') }}
             </div>
             <v-text-field
@@ -122,29 +134,25 @@
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.CountriesWhereSold') }}
               </div>
-              <v-combobox
+              <v-autocomplete
                 v-model="productForm.countries"
-                :items="[]"
-                :label="$t('CreateOffProduct.CountriesWhereSold')"
+                density="compact"
+                :items="Countries"
+                item-title="native"
+                item-value="code"
                 variant="outlined"
                 chips
                 clearable
                 closable-chips
                 multiple
-              >
-                <template #chip="{ props, item }">
-                  <v-chip v-bind="props">
-                    <strong>{{ item.raw }}</strong>
-                  </v-chip>
-                </template>
-              </v-combobox>
+              />
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.StoresWhereSold') }}
               </div>
               <v-combobox
                 v-model="productForm.stores"
+                density="compact"
                 :items="[]"
-                :label="$t('CreateOffProduct.StoresWhereSold')"
                 variant="outlined"
                 chips
                 clearable
@@ -164,7 +172,7 @@
             <v-combobox
               v-model="productForm.categories"
               :items="suggestedCategories"
-              :label="$t('Common.Categories')"
+              density="compact"
               variant="outlined"
               chips
               clearable
@@ -310,6 +318,8 @@ import api from '../services/api'
 import constants from '../constants'
 import proof_utils from '../utils/proof.js'
 import utils from '../utils'
+import Languages from '../i18n/data/languages.json'
+import Countries from '../i18n/data/countries.json'
 import "vue-zoomable/dist/style.css"
 
 export default {
@@ -335,7 +345,9 @@ export default {
       productExists: false,
       zoomLevel: 1,
       loading: false,
-      panLevel: {x: 0, y: 0}
+      panLevel: {x: 0, y: 0},
+      Languages,
+      Countries
     }
   },
   computed: {
@@ -409,13 +421,14 @@ export default {
           this.priceList = data.items
           if (this.priceList.length) {
             const stores = Array.from(new Set(this.priceList.map(price => price.location.osm_name)))
-            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country).flat()))
+            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country_code.toUpperCase()).flat()))
             const lastPrice = this.priceList[0]
             this.productForm = {
               ...this.productForm,
               product_name: lastPrice.product_name ? utils.toTitleCase(lastPrice.product_name) : null,
               stores: stores,
               countries: countries,
+              product_language: lastPrice.location.osm_address_country_code.toLowerCase() || "en",
               quantity: "",
               categories: [],
             }
@@ -425,6 +438,7 @@ export default {
               ...this.productForm,
               product_name: null,
               stores: [],
+              product_language: "en",
               countries: [],
               quantity: "",
               categories: [],
@@ -468,9 +482,10 @@ export default {
           ...this.productForm,
           categories: this.productForm.categories.join(','),
           stores: this.productForm.stores.join(','),
-          countries: this.productForm.countries.join(','),
+          countries: this.productForm.countries.map(c=>c.toLowerCase()).join(','),
         },
-        flavor: flavorkey
+        flavor: flavorkey,
+        product_language_code: this.productForm.product_language
       }
       this.step = 3
       this.loading = true
@@ -481,7 +496,8 @@ export default {
             const drawnImageBase64 = this.drawnImageSrc.split(';base64,')[1]
             inputData = {
               image_data_base64: drawnImageBase64,
-              flavor: flavorkey
+              flavor: flavorkey,
+              product_language_code: this.productForm.product_language
             }
             api.updateOffProductImage(this.productForm.product_code, inputData)
               .then(() => {
