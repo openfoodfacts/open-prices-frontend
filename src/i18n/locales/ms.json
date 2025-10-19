@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Bukti sebelumnya",
 		"ProductAlreadyExists": "Produk sudah wujud",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bukti ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Kedai di mana dijual",
 		"UseCropModeToAddImage": "Untuk menambah imej produk, dayakan mod pangkas di bawah gambar bukti dan lukis segi empat tepat di sekeliling produk."

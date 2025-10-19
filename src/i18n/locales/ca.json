@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Prova prèvia",
 		"ProductAlreadyExists": "El producte ja existeix",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Prova ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Botigues on es venen",
 		"UseCropModeToAddImage": "Per afegir una imatge de producte, activeu el mode de retall a sota de la imatge de prova i dibuixeu un rectangle al voltant del producte."

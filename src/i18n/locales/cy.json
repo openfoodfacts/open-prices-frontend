@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Prawf blaenorol",
 		"ProductAlreadyExists": "Mae'r cynnyrch eisoes yn bodoli",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Prawf ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Siopau lle gwerthir",
 		"UseCropModeToAddImage": "I ychwanegu delwedd cynnyrch, galluogwch y modd cnydio o dan y llun prawf a lluniwch betryal o amgylch y cynnyrch."

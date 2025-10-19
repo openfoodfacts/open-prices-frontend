@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Алдыңғы дәлел",
 		"ProductAlreadyExists": "Өнім бұрыннан бар",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Дәлелдеу ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Сатылатын дүкендер",
 		"UseCropModeToAddImage": "Өнім суретін қосу үшін дәлелдеу суретінің астындағы қию режимін қосып, өнімнің айналасына тіктөртбұрыш сызыңыз."

@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "이전 증거",
 		"ProductAlreadyExists": "제품이 이미 존재합니다",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "증명 ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "판매된 매장",
 		"UseCropModeToAddImage": "제품 이미지를 추가하려면 교정 사진 아래의 자르기 모드를 활성화하고 제품 주위에 사각형을 그립니다."

@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Probatio prior",
 		"ProductAlreadyExists": "Productum iam exstat.",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Demonstratio ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Tabernae ubi venditi sunt",
 		"UseCropModeToAddImage": "Ad imaginem producti addendam, modum secandi sub imagine probationis activa et rectangulum circum productum designa."

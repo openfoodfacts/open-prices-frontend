@@ -529,6 +529,7 @@
 		"NextProof": "Kitas įrodymas",
 		"PreviousProof": "Ankstesnis įrodymas",
 		"ProductAlreadyExists": "Produktas jau yra",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Įrodymas ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Parduotuvės, kuriose parduodama",
 		"UseCropModeToAddImage": "Norėdami pridėti produkto paveikslėlį, įjunkite apkirpimo režimą po bandomąja nuotrauka ir nubrėžkite stačiakampį aplink produktą."

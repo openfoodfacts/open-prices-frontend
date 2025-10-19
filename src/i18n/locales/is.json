@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Fyrri sönnun",
 		"ProductAlreadyExists": "Vara er þegar til staðar",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Sönnun ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Verslanir þar sem seld var",
 		"UseCropModeToAddImage": "Til að bæta við mynd af vörunni skaltu virkja skurðarstillingu fyrir neðan sönnunarmyndina og teikna rétthyrning í kringum vöruna."

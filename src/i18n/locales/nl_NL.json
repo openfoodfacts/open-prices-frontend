@@ -529,6 +529,7 @@
 		"NextProof": "Volgend bewijs",
 		"PreviousProof": "Vorig bewijs",
 		"ProductAlreadyExists": "Product bestaat al",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bewijs ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Winkels waar verkocht",
 		"UseCropModeToAddImage": "Om een productafbeelding toe te voegen, schakelt u de bijsnijdmodus in onder de proeffoto en tekent u een rechthoek om het product."

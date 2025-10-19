@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "الدليل السابق",
 		"ProductAlreadyExists": "المنتج موجود بالفعل",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "الدليل ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "المتاجر التي تباع فيها",
 		"UseCropModeToAddImage": "لإضافة صورة المنتج، قم بتمكين وضع الاقتصاص أسفل صورة الإثبات وارسم مستطيلاً حول المنتج."

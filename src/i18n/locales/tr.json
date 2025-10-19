@@ -529,6 +529,7 @@
 		"NextProof": "Bir sonraki kanıt",
 		"PreviousProof": "Önceki kanıt",
 		"ProductAlreadyExists": "Ürün zaten mevcut",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Kanıt ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Satılan mağazalar",
 		"UseCropModeToAddImage": "Ürün görseli eklemek için prova resminin altındaki kırpma modunu etkinleştirin ve ürünün etrafına bir dikdörtgen çizin."

@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Edellinen todiste",
 		"ProductAlreadyExists": "Tuote on jo olemassa",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Todiste ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Myymälät, joissa myydään",
 		"UseCropModeToAddImage": "Lisätäksesi tuotekuvan, ota käyttöön rajaustila vedoskuvan alapuolella ja piirrä suorakulmio tuotteen ympärille."

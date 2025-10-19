@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Pròva precedenta",
 		"ProductAlreadyExists": "Lo produch existís ja",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Pròva ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "De botigas ont se vendon",
 		"UseCropModeToAddImage": "Per apondre una imatge de produch, activatz lo mòde de talh jos l'imatge de pròva e dessenhatz un rectangle a l'entorn del produch."

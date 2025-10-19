@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Prethodni dokaz",
 		"ProductAlreadyExists": "Proizvod već postoji",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dokaz ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Trgovine u kojima se prodaje",
 		"UseCropModeToAddImage": "Za dodavanje slike proizvoda, omogućite način izrezivanja ispod probne slike i nacrtajte pravokutnik oko proizvoda."

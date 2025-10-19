@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Korábbi bizonyíték",
 		"ProductAlreadyExists": "A termék már létezik",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bizonyítás ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Üzletek, ahol árusítják",
 		"UseCropModeToAddImage": "Termékkép hozzáadásához engedélyezze a vágási módot a próbakép alatt, és rajzoljon egy téglalapot a termék köré."

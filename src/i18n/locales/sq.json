@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Prova e mëparshme",
 		"ProductAlreadyExists": "Produkti ekziston tashmë",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Provë ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Dyqanet ku shiten",
 		"UseCropModeToAddImage": "Për të shtuar një imazh produkti, aktivizoni modalitetin e prerjes së figurës poshtë provës dhe vizatoni një drejtkëndësh rreth produktit."
