@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Predchádzajúci dôkaz",
 		"ProductAlreadyExists": "Produkt už existuje",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dôkaz ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Obchody, kde sa predáva",
 		"UseCropModeToAddImage": "Ak chcete pridať obrázok produktu, povoľte režim orezania pod náhľadovým obrázkom a nakreslite okolo produktu obdĺžnik."
