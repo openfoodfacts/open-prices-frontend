@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "หลักฐานก่อนหน้า",
 		"ProductAlreadyExists": "สินค้ามีอยู่แล้ว",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "พิสูจน์ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ร้านค้าที่จำหน่าย",
 		"UseCropModeToAddImage": "หากต้องการเพิ่มรูปภาพผลิตภัณฑ์ ให้เปิดใช้งานโหมดครอบตัดใต้ภาพตัวอย่าง และวาดสี่เหลี่ยมผืนผ้ารอบ ๆ ผลิตภัณฑ์"
