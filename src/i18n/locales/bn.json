@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "পূর্ববর্তী প্রমাণ",
 		"ProductAlreadyExists": "পণ্যটি ইতিমধ্যেই বিদ্যমান",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "প্রমাণ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "যেসব দোকানে বিক্রি হয়",
 		"UseCropModeToAddImage": "একটি পণ্যের ছবি যোগ করতে, প্রুফ ছবির নিচে ক্রপ মোড সক্ষম করুন এবং পণ্যটির চারপাশে একটি আয়তক্ষেত্র আঁকুন।"
