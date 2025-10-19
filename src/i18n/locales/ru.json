@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Предыдущее доказательство",
 		"ProductAlreadyExists": "Продукт уже существует",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Доказательство ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Магазины, где продается",
 		"UseCropModeToAddImage": "Чтобы добавить изображение продукта, включите режим кадрирования под пробным изображением и нарисуйте прямоугольник вокруг продукта."
