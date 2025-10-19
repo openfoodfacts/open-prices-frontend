@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Bằng chứng trước đó",
 		"ProductAlreadyExists": "Sản phẩm đã tồn tại",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bằng chứng ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Các cửa hàng đã bán",
 		"UseCropModeToAddImage": "Để thêm hình ảnh sản phẩm, hãy bật chế độ cắt bên dưới hình ảnh minh họa và vẽ một hình chữ nhật xung quanh sản phẩm."
