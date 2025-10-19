@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Aurreko froga",
 		"ProductAlreadyExists": "Produktua dagoeneko existitzen da",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Froga ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Saltzen diren dendak",
 		"UseCropModeToAddImage": "Produktuaren irudi bat gehitzeko, gaitu mozketa modua froga-argazkiaren azpian eta marraztu laukizuzen bat produktuaren inguruan."
