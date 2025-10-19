@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Tidligere bevis",
 		"ProductAlreadyExists": "Produktet finnes allerede",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Butikker der det ble solgt",
 		"UseCropModeToAddImage": "For å legge til et produktbilde, aktiver beskjæringsmodus under korrekturbildet og tegn et rektangel rundt produktet."
