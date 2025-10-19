@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Tidigare bevis",
 		"ProductAlreadyExists": "Produkten finns redan",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Butiker där såldes",
 		"UseCropModeToAddImage": "För att lägga till en produktbild, aktivera beskärningsläget under korrekturbilden och rita en rektangel runt produkten."
