@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Poprzedni dowód",
 		"ProductAlreadyExists": "Produkt już istnieje",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dowód ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Sklepy, w których sprzedawano",
 		"UseCropModeToAddImage": "Aby dodać zdjęcie produktu, włącz tryb przycinania pod zdjęciem próbnym i narysuj prostokąt wokół produktu."
