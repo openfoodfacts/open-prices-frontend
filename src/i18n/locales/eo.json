@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "Antaŭa pruvo",
 		"ProductAlreadyExists": "Produkto jam ekzistas",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Pruvo ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Butikoj kie vendiĝis",
 		"UseCropModeToAddImage": "Por aldoni produktobildon, aktivigu eltondan reĝimon sub la pruvbildo kaj desegnu rektangulon ĉirkaŭ la produkto."
