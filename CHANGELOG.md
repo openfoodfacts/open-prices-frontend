@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.142.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.141.3...v1.142.0) (2025-10-19)
+
+
+### Features
+
+* **CreateOffProduct:** better language support ([#1758](https://github.com/openfoodfacts/open-prices-frontend/issues/1758)) ([7c6707a](https://github.com/openfoodfacts/open-prices-frontend/commit/7c6707a72bf9cc3ea54677a0374b747208d455e8))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1757](https://github.com/openfoodfacts/open-prices-frontend/issues/1757)) ([df87072](https://github.com/openfoodfacts/open-prices-frontend/commit/df870729de31a7f1ee42faca608f720f5067c2ad))
+
 ## [1.141.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.141.2...v1.141.3) (2025-10-16)
 
 
