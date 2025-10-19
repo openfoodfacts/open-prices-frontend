@@ -529,6 +529,7 @@
 		"NextProof": "Наступний доказ",
 		"PreviousProof": "Попередній доказ",
 		"ProductAlreadyExists": "Продукт вже існує",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Доказ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Магазини, де продається",
 		"UseCropModeToAddImage": "Щоб додати зображення товару, увімкніть режим обрізання під пробним зображенням і намалюйте прямокутник навколо товару."
