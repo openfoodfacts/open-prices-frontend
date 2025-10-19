@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "先前的證明",
 		"ProductAlreadyExists": "產品已存在",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "證明（{numberOfOutProofs}/{totalNumberOfProofs}）",
 		"StoresWhereSold": "銷售商店",
 		"UseCropModeToAddImage": "若要新增產品圖片，請在校樣圖片下方啟用裁剪模式並在產品周圍繪製一個矩形。"
