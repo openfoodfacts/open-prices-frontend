@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "اثبات قبلی",
 		"ProductAlreadyExists": "محصول از قبل وجود دارد",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "اثبات ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "فروشگاه‌هایی که در آنها فروخته می‌شوند",
 		"UseCropModeToAddImage": "برای افزودن تصویر محصول، حالت برش را در زیر تصویر نمونه فعال کنید و یک مستطیل دور محصول بکشید."
