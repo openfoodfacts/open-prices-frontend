@@ -529,6 +529,7 @@
 		"NextProof": "Next proof",
 		"PreviousProof": "अघिल्लो प्रमाण",
 		"ProductAlreadyExists": "उत्पादन पहिले नै अवस्थित छ",
+		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "प्रमाण ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "बिक्री भएका पसलहरू",
 		"UseCropModeToAddImage": "उत्पादनको छवि थप्नको लागि, प्रुफ तस्वीर मुनि क्रप मोड सक्षम गर्नुहोस् र उत्पादनको वरिपरि आयत कोर्नुहोस्।"
