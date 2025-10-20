@@ -529,7 +529,7 @@
 		"NextProof": "ההוכחה הבאה",
 		"PreviousProof": "הוכחה קודמת",
 		"ProductAlreadyExists": "המוצר כבר קיים",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "שפת המוצר",
 		"ProofNumberOfOutProofs": "הוכחה ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "חנויות בהן נמכר",
 		"UseCropModeToAddImage": "כדי להוסיף תמונת מוצר, הפעל את מצב החיתוך מתחת לתמונת ההוכחה וצייר מלבן סביב המוצר."
