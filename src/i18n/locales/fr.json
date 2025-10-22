@@ -529,7 +529,7 @@
 		"NextProof": "Preuve suivante",
 		"PreviousProof": "Preuve précédente",
 		"ProductAlreadyExists": "Le produit existe déjà",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Langue du produit",
 		"ProofNumberOfOutProofs": "Preuve ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Magasins où vendu",
 		"UseCropModeToAddImage": "Pour ajouter une image de produit, activez le mode de recadrage sous l'image d'épreuve et dessinez un rectangle autour du produit."
