@@ -180,6 +180,7 @@
 		"AddNewProofs": "Добавить новые доказательства",
 		"AddToOFF": "Добавить в {name}",
 		"AdditionalInfo": "Дополнительная информация",
+		"All": "Все",
 		"Barcode": "Штрих-код",
 		"Barcodes": "Штрих-коды",
 		"BarcodeScan": "Сканировать штрихкод",
@@ -774,7 +775,7 @@
 			"Title": "Способствовать"
 		},
 		"CreateOffProduct": {
-			"Title": "Помощник по созданию продукта"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Эксперименты"
