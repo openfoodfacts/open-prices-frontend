@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "Om"
 		},
+		"Add": {
+			"Title": "Tilføj"
+		},
 		"AddPrice": {
 			"Title": "Tilføj en pris"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Tilføj flere beviser"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Placeringer"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Priser"
+		},
+		"PriceTags": {
+			"Title": "Prismærker"
 		},
 		"Proofs": {
 			"Title": "Beviser"
