@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "जानकारी"
 		},
+		"Add": {
+			"Title": "डालिए"
+		},
 		"AddPrice": {
 			"Title": "एक मूल्य जोड़े"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Prices"
+		},
+		"PriceTags": {
+			"Title": "कीमत टैग"
 		},
 		"Proofs": {
 			"Title": "Proofs"
