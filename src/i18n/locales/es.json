@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "Acerca de"
 		},
+		"Add": {
+			"Title": "Añadir"
+		},
 		"AddPrice": {
 			"Title": "Añadir un precio"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Ubicaciones"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Precios"
+		},
+		"PriceTags": {
+			"Title": "etiquetas de precios"
 		},
 		"Proofs": {
 			"Title": "Proofs"
