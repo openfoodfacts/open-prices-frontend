@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "இதைப் பற்றி"
 		},
+		"Add": {
+			"Title": "சேர்"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "பல சான்றுகளைச் சேர்க்கவும்"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "இடங்கள்"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Prices"
+		},
+		"PriceTags": {
+			"Title": "விலை குறிச்சொற்கள்"
 		},
 		"Proofs": {
 			"Title": "Proofs"
