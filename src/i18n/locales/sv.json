@@ -180,6 +180,7 @@
 		"AddNewProofs": "Lägg till nya bevis",
 		"AddToOFF": "Lägg till {name}",
 		"AdditionalInfo": "Ytterligare information",
+		"All": "Alla",
 		"Barcode": "Streckkod",
 		"Barcodes": "Streckkoder",
 		"BarcodeScan": "Skanna en streckkod",
@@ -774,7 +775,7 @@
 			"Title": "Bidra"
 		},
 		"CreateOffProduct": {
-			"Title": "Skapa produktassistent"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiment"
