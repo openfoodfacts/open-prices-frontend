@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Lisää kohtaan {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Kaikki",
 		"Barcode": "Viivakoodi",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Skannaa viivakoodi",
@@ -774,7 +775,7 @@
 			"Title": "Osallistu"
 		},
 		"CreateOffProduct": {
-			"Title": "Luo tuoteavustaja"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
