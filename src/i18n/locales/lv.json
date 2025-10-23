@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Svītrkods",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -774,7 +775,7 @@
 			"Title": "Veicināt / atbalstīt"
 		},
 		"CreateOffProduct": {
-			"Title": "Izveidot produkta palīgu"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
