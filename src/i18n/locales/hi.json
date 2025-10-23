@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "सभी",
 		"Barcode": "बारकोड",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "बारकोड स्कैन करें",
@@ -774,7 +775,7 @@
 			"Title": "Contribute"
 		},
 		"CreateOffProduct": {
-			"Title": "उत्पाद सहायक बनाएँ"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
