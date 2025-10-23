@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "關於"
 		},
+		"Add": {
+			"Title": "新增"
+		},
 		"AddPrice": {
 			"Title": "新增價格"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "新增多個證明"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "地點"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "價格"
+		},
+		"PriceTags": {
+			"Title": "價格標籤"
 		},
 		"Proofs": {
 			"Title": "證明"
