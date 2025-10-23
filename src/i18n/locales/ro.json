@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "Despre"
 		},
+		"Add": {
+			"Title": "Adaugă"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Prices"
+		},
+		"PriceTags": {
+			"Title": "Etichete de preț"
 		},
 		"Proofs": {
 			"Title": "Proofs"
