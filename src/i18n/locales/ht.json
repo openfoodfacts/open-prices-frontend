@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Ajoute nan {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Tout",
 		"Barcode": "Kòd ba",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Eskane yon kòd ba",
@@ -774,7 +775,7 @@
 			"Title": "Contribute"
 		},
 		"CreateOffProduct": {
-			"Title": "Kreye Asistan Pwodwi"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
