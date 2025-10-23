@@ -180,6 +180,7 @@
 		"AddNewProofs": "Pridėti naujų įrodymų",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Visi",
 		"Barcode": "Barkodas",
 		"Barcodes": "Brūkšninis kodas",
 		"BarcodeScan": "Nuskaityti brūkšninį kodą",
@@ -774,7 +775,7 @@
 			"Title": "Prisidėti"
 		},
 		"CreateOffProduct": {
-			"Title": "Sukurti produkto asistentą"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Eksperimentai"
