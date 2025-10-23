@@ -180,6 +180,7 @@
 		"AddNewProofs": "Додайте нові докази",
 		"AddToOFF": "Додати до {name}",
 		"AdditionalInfo": "Додаткова інформація",
+		"All": "Усі",
 		"Barcode": "Код товару",
 		"Barcodes": "Штрих-коди",
 		"BarcodeScan": "Просканувати штрих-код",
@@ -774,7 +775,7 @@
 			"Title": "Підтримати проєкт"
 		},
 		"CreateOffProduct": {
-			"Title": "Створити помічника продукту"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Експерименти"
