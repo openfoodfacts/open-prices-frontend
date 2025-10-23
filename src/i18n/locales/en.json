@@ -747,6 +747,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +764,9 @@
 		},
 		"Prices": {
 			"Title": "Prices"
+		},
+		"PriceTags": {
+			"Title": "Price tags"
 		},
 		"Proofs": {
 			"Title": "Proofs"
