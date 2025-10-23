@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -774,7 +775,7 @@
 			"Title": "Contribute"
 		},
 		"CreateOffProduct": {
-			"Title": "Endla Mupfuni wa Swikumiwa"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
