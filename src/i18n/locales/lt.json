@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "Apie"
 		},
+		"Add": {
+			"Title": "Pridėti"
+		},
 		"AddPrice": {
 			"Title": "Pridėti kainą"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Pridėti kelis įrodymus"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Vietos"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Kainos"
+		},
+		"PriceTags": {
+			"Title": "Kainų etiketės"
 		},
 		"Proofs": {
 			"Title": "Įrodymai"
