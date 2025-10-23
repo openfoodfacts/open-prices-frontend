@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "About"
 		},
+		"Add": {
+			"Title": "Дадаць"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Prices"
+		},
+		"PriceTags": {
+			"Title": "Цэннікі"
 		},
 		"Proofs": {
 			"Title": "Proofs"
