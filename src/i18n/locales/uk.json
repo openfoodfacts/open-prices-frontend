@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "Про додаток"
 		},
+		"Add": {
+			"Title": "Додати"
+		},
 		"AddPrice": {
 			"Title": "Додати ціну"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Додайте кілька доказів"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Місцезнаходження"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Ціни"
+		},
+		"PriceTags": {
+			"Title": "Цінники"
 		},
 		"Proofs": {
 			"Title": "Докази"
