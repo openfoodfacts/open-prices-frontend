@@ -180,6 +180,7 @@
 		"AddNewProofs": "Adicionar novos comprovativos",
 		"AddToOFF": "Adicionar a {name}",
 		"AdditionalInfo": "Informação adicional",
+		"All": "Todos",
 		"Barcode": "Código de barras",
 		"Barcodes": "Códigos de barras",
 		"BarcodeScan": "Digitalizar um código de barras",
@@ -774,7 +775,7 @@
 			"Title": "Contribuir"
 		},
 		"CreateOffProduct": {
-			"Title": "Criar Assistente de Produto"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiências"
