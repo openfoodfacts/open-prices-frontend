@@ -180,6 +180,7 @@
 		"AddNewProofs": "Tambahkan bukti baru",
 		"AddToOFF": "Tambahkan ke {name}",
 		"AdditionalInfo": "Informasi tambahan",
+		"All": "Semua",
 		"Barcode": "Kode batang",
 		"Barcodes": "Kode batang",
 		"BarcodeScan": "Pindai barcode",
@@ -774,7 +775,7 @@
 			"Title": "Berkontribusi"
 		},
 		"CreateOffProduct": {
-			"Title": "Buat Asisten Produk"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Eksperimen"
