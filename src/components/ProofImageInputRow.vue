@@ -53,7 +53,7 @@
     <v-col v-for="(proofImagePreview, index) in proofImagePreviewList" :key="proofImagePreview" cols="6">
       <v-card class="d-flex flex-column" height="100%">
         <v-card-text class="flex-grow-1 pa-2">
-          <v-img :src="proofImagePreview" style="max-height:200px" />
+          <v-img :src="proofImagePreview" max-height="200px" />
         </v-card-text>
         <v-divider />
         <v-card-actions>

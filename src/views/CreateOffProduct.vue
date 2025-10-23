@@ -190,7 +190,7 @@
               <div class="text-subtitle-2">
                 {{ $t('Common.Image') }}
               </div>
-              <v-img v-if="drawnImageSrc" :src="drawnImageSrc" style="max-height:200px" />
+              <v-img v-if="drawnImageSrc" :src="drawnImageSrc" max-height="200px" />
               <v-alert v-else class="mb-2" type="info" variant="outlined" density="compact">
                 {{ $t('CreateOffProduct.UseCropModeToAddImage') }}
               </v-alert>

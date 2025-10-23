@@ -5,7 +5,7 @@
         {{ $t('Challenge.StepTakePictures.line1') }}
       </p>
       <a :href="challenge.example_proof_url" target="_blank">
-        <v-img :src="challenge.example_proof_url" style="max-height: 200px" />
+        <v-img :src="challenge.example_proof_url" max-height="200px" />
       </a>
       <p class="mb-2 mt-2">
         {{ $t('Challenge.StepTakePictures.line2') }}
