@@ -232,6 +232,7 @@ export default {
     { key: 'edit', value: 'Edit', icon: 'mdi-pencil' },
   ],
   USER_DASHBOARD_TAB_LIST: [
+    { key: 'all', value: 'All', icon: 'mdi-home' },
     { key: USER_CONSUMPTION.toLowerCase(), value: 'MyConsumption', icon: USER_CONSUMPTION_ICON },
     { key: USER_COMMUNITY.toLowerCase(), value: 'OtherContributions', icon: 'mdi-account-group' },
   ],
