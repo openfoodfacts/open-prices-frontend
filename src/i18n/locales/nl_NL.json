@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "Over"
 		},
+		"Add": {
+			"Title": "Toevoegen"
+		},
 		"AddPrice": {
 			"Title": "Voeg een prijs toe"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Voeg meerdere bewijzen toe"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locaties"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Prijzen"
+		},
+		"PriceTags": {
+			"Title": "Prijskaartjes"
 		},
 		"Proofs": {
 			"Title": "Bewijzen"
