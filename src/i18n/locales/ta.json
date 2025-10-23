@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "கூடுதல் தகவல்",
+		"All": "All",
 		"Barcode": "பார்கோடு",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -774,7 +775,7 @@
 			"Title": "Contribute"
 		},
 		"CreateOffProduct": {
-			"Title": "தயாரிப்பு உதவியாளரை உருவாக்கு"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
