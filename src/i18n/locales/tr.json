@@ -180,6 +180,7 @@
 		"AddNewProofs": "Yeni kanıtlar ekle",
 		"AddToOFF": "{name}'e ekle",
 		"AdditionalInfo": "Ek Bilgiler",
+		"All": "Hepsi",
 		"Barcode": "Barkod",
 		"Barcodes": "Barkodlar",
 		"BarcodeScan": "Barkod tara",
@@ -774,7 +775,7 @@
 			"Title": "Destekleyebilirsiniz"
 		},
 		"CreateOffProduct": {
-			"Title": "Ürün Asistanı Oluştur"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Deneyler"
