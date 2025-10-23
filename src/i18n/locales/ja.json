@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "{name} に追加",
 		"AdditionalInfo": "Additional information",
+		"All": "全て",
 		"Barcode": "バーコード",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -774,7 +775,7 @@
 			"Title": "貢献する"
 		},
 		"CreateOffProduct": {
-			"Title": "製品アシスタントを作成する"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
