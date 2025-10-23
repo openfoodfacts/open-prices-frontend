@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "關於"
 		},
+		"Add": {
+			"Title": "加入产品"
+		},
 		"AddPrice": {
 			"Title": "添加价格"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "价格"
+		},
+		"PriceTags": {
+			"Title": "Price tags"
 		},
 		"Proofs": {
 			"Title": "Proofs"
