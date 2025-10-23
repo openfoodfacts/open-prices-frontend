@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "Относно"
 		},
+		"Add": {
+			"Title": "Добави"
+		},
 		"AddPrice": {
 			"Title": "Добавяне на цена"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Места"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Цени"
+		},
+		"PriceTags": {
+			"Title": "Етикети с цени"
 		},
 		"Proofs": {
 			"Title": "Proofs"
