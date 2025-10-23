@@ -180,6 +180,7 @@
 		"AddNewProofs": "Nieuwe bewijzen toevoegen",
 		"AddToOFF": "Toevoegen aan {name}",
 		"AdditionalInfo": "Aanvullende informatie",
+		"All": "Alles",
 		"Barcode": "Streepjescode",
 		"Barcodes": "Streepjescodes",
 		"BarcodeScan": "Scan een streepjescode",
@@ -774,7 +775,7 @@
 			"Title": "Bijdragen"
 		},
 		"CreateOffProduct": {
-			"Title": "Productassistent maken"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experimenten"
