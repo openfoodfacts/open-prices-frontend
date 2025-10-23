@@ -180,6 +180,7 @@
 		"AddNewProofs": "הוספת הוכחות חדשות",
 		"AddToOFF": "הוספה אל {name}",
 		"AdditionalInfo": "מידע נוסף",
+		"All": "הכול",
 		"Barcode": "ברקוד",
 		"Barcodes": "ברקודים",
 		"BarcodeScan": "סריקת ברקוד",
@@ -774,7 +775,7 @@
 			"Title": "לתרום"
 		},
 		"CreateOffProduct": {
-			"Title": "יצירת מסייע מוצר"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "ניסויים"
