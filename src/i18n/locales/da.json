@@ -180,6 +180,7 @@
 		"AddNewProofs": "Tilføj nye beviser",
 		"AddToOFF": "Føj til {name}",
 		"AdditionalInfo": "Yderligere information",
+		"All": "Alle",
 		"Barcode": "Stregkode",
 		"Barcodes": "Stregkoder",
 		"BarcodeScan": "Scan en stregkode",
@@ -774,7 +775,7 @@
 			"Title": "Bidrag"
 		},
 		"CreateOffProduct": {
-			"Title": "Opret produktassistent"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Eksperimenter"
