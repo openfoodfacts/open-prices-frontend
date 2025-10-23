@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "Tietoja"
 		},
+		"Add": {
+			"Title": "Lisää"
+		},
 		"AddPrice": {
 			"Title": "Lisää hinta"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Sijainnit"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Hinnat"
+		},
+		"PriceTags": {
+			"Title": "Hintalaput"
 		},
 		"Proofs": {
 			"Title": "Proofs"
