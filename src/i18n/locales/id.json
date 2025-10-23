@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "Tentang"
 		},
+		"Add": {
+			"Title": "Tambahkan"
+		},
 		"AddPrice": {
 			"Title": "Tambahkan harga"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Tambahkan beberapa bukti"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Lokasi"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Harga"
+		},
+		"PriceTags": {
+			"Title": "Label harga"
 		},
 		"Proofs": {
 			"Title": "Bukti"
