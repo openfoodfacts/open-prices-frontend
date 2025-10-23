@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "O aplikaci"
 		},
+		"Add": {
+			"Title": "Přidat"
+		},
 		"AddPrice": {
 			"Title": "Přidat cenu"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Přidejte více důkazů"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Polohy"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Ceny"
+		},
+		"PriceTags": {
+			"Title": "Cenovky"
 		},
 		"Proofs": {
 			"Title": "Doklady"
