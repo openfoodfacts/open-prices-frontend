@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Összes",
 		"Barcode": "Vonalkód",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -774,7 +775,7 @@
 			"Title": "Hozzájárulás"
 		},
 		"CreateOffProduct": {
-			"Title": "Terméksegéd létrehozása"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
