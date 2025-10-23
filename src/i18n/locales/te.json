@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "గురించి"
 		},
+		"Add": {
+			"Title": "చేర్చు"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -747,6 +750,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +767,9 @@
 		},
 		"Prices": {
 			"Title": "Prices"
+		},
+		"PriceTags": {
+			"Title": "ధర ట్యాగ్‌లు"
 		},
 		"Proofs": {
 			"Title": "Proofs"
