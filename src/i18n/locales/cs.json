@@ -180,6 +180,7 @@
 		"AddNewProofs": "Přidejte nové důkazy",
 		"AddToOFF": "Přidat do {name}",
 		"AdditionalInfo": "Další informace",
+		"All": "Vše",
 		"Barcode": "Čárový kód",
 		"Barcodes": "Čárové kódy",
 		"BarcodeScan": "Naskenovat čárový kód",
@@ -774,7 +775,7 @@
 			"Title": "Přispět"
 		},
 		"CreateOffProduct": {
-			"Title": "Vytvořit asistenta produktu"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experimenty"
