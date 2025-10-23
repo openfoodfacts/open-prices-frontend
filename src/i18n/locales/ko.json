@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "모두",
 		"Barcode": "바코드",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -774,7 +775,7 @@
 			"Title": "기여하기"
 		},
 		"CreateOffProduct": {
-			"Title": "제품 도우미 만들기"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
