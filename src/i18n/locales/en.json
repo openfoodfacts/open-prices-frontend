@@ -723,6 +723,9 @@
 		"About": {
 			"Title": "About"
 		},
+		"Add": {
+			"Title": "Add"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},

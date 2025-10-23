@@ -4,7 +4,7 @@
     bg-color="info"
     rounded
     density="compact"
-    @click="$router.push('/proofs/add/multiple/price-tags')"
+    @click="$router.push('/proofs/add/price-tags')"
   >
     <v-banner-text style="padding-inline-end:10px;">
       {{ $t('ProofAdd.PromoProofPriceTagAddMultiple') }}
