@@ -180,6 +180,7 @@
 		"AddNewProofs": "Neue Nachweise hinzufügen",
 		"AddToOFF": "Zu {name} hinzufügen",
 		"AdditionalInfo": "Zusätzliche Informationen",
+		"All": "Alle",
 		"Barcode": "Strichcode",
 		"Barcodes": "Strichcode",
 		"BarcodeScan": "Strichcode einlesen",
@@ -774,7 +775,7 @@
 			"Title": "Mitwirken"
 		},
 		"CreateOffProduct": {
-			"Title": "Produktassistent erstellen"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experimente"
