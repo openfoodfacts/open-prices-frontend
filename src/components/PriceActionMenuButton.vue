@@ -12,7 +12,7 @@
           <v-list-item v-if="price.product || price.category_tag" :slim="true" prepend-icon="mdi-eye-outline" :to="getProductOrCategoryDetailUrl">
             {{ $t('Common.Details') }}
           </v-list-item>
-          <v-list-item v-if="!price.product.source" :slim="true" prepend-icon="mdi-plus" :to="getCreateProductUrl">
+          <v-list-item v-if="price.product && !price.product.source" :slim="true" prepend-icon="mdi-plus" :to="getCreateProductUrl">
             {{ $t('CreateOffProduct.CreateProduct') }}
           </v-list-item>
           <OpenFoodFactsLink v-if="price.product" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
