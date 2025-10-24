@@ -118,8 +118,26 @@
               density="compact"
               variant="outlined"
               type="text"
-              inputmode="decimal"
             />
+            <div class="text-subtitle-2">
+              {{ $t('Common.Brands') }}
+            </div>
+            <v-combobox
+              v-model="productForm.brands"
+              density="compact"
+              :items="[]"
+              variant="outlined"
+              chips
+              clearable
+              closable-chips
+              multiple
+            >
+              <template #chip="{ props, item }">
+                <v-chip v-bind="props">
+                  <strong>{{ item.raw }}</strong>
+                </v-chip>
+              </template>
+            </v-combobox>
             <div class="text-subtitle-2">
               {{ $t('Common.Quantity') }}
             </div>
@@ -430,6 +448,7 @@ export default {
               countries: countries,
               product_language: lastPrice.location.osm_address_country_code.toLowerCase() || "en",
               quantity: "",
+              brands: [],
               categories: [],
             }
             this.setShownProof()
@@ -441,6 +460,7 @@ export default {
               product_language: "en",
               countries: [],
               quantity: "",
+              brands: [],
               categories: [],
             }
           }
@@ -449,6 +469,7 @@ export default {
             this.productForm.product_name = product.product_name
             this.productForm.quantity = product.product_quantity + product.product_quantity_unit
             this.productForm.categories = product.categories_tags
+            this.productForm.brands = product.brands_tags
             this.productForm.stores = null
             this.productForm.countries= null
           }
