@@ -5,9 +5,9 @@
         <v-stepper-header>
           <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
+          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" :disabled="step < 2" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" :disabled="step < 3" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
@@ -35,11 +35,6 @@
               inputmode="decimal"
               persistent-hint
             />
-            <v-row class="mt-0">
-              <v-col v-for="missingProduct in missingProductsWithPrices" :key="missingProduct" cols="12" sm="6">
-                <ProductCard :product="missingProduct" elevation="1" height="100%" readonly @click="missingProductClicked(missingProduct)" />
-              </v-col>
-            </v-row>
           </v-card-text>
           <v-divider />
           <v-card-actions>
@@ -58,6 +53,24 @@
           </v-card-actions>
         </v-card>
       </v-form>
+    </v-col>
+    <v-col cols="12" md="6">
+      <v-card
+        class="mb-4"
+        :title="$t('CreateOffProduct.SelectUnknownProductGuide')"
+        prepend-icon="mdi-tag-plus-outline"
+        height="100%"
+      >
+        <v-divider />
+        <v-card-text>
+          <v-row class="mt-0">
+            <v-col v-for="missingProduct in missingProductsWithPrices" :key="missingProduct" cols="12" sm="6">
+              <ProductCard :product="missingProduct" elevation="1" height="100%" readonly @click="missingProductClicked(missingProduct)" />
+            </v-col>
+          </v-row>
+        </v-card-text>
+        <v-divider />
+      </v-card>
     </v-col>
   </v-row>
 
@@ -373,7 +386,7 @@ export default {
     stepItemList() {
       return [
         {
-          title: this.$t('Common.BarcodeType'),
+          title: this.$t('CreateOffProduct.SelectUnknownProduct'),
           value: 1
         },
         {
@@ -405,9 +418,8 @@ export default {
     if (this.$route.query.product_code) {
       this.productForm.product_code = this.$route.query.product_code
       this.loadProductInfo()
-    } else {
-      this.getMissingProductsWithPrices()
     }
+    this.getMissingProductsWithPrices()
   },
   methods: {
     fieldRequired(v) {
