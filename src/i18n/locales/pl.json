@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Wszystkie",
 		"Barcode": "Kod kreskowy",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Zeskanuj kod kreskowy",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Kraje sprzedaży",
 		"CreateNewProduct": "Utwórz nowy produkt",
 		"CreateProduct": "Utwórz produkt",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Na temat"
 		},
+		"Add": {
+			"Title": "Dodaj"
+		},
 		"AddPrice": {
 			"Title": "Dodaj cenę"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Lokalizacje"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Ceny"
 		},
+		"PriceTags": {
+			"Title": "Metki cenowe"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Wnieś wkład"
 		},
 		"CreateOffProduct": {
-			"Title": "Utwórz asystenta produktu"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

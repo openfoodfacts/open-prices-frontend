@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Tots",
 		"Barcode": "Codi de barres",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Escaneja el codi de barres",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Països on es va vendre",
 		"CreateNewProduct": "Crea un producte nou",
 		"CreateProduct": "Crear producte",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Quant a"
 		},
+		"Add": {
+			"Title": "Afegeix"
+		},
 		"AddPrice": {
 			"Title": "Afegir un preu"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Preus"
 		},
+		"PriceTags": {
+			"Title": "Etiquetes de preu"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Contribuir"
 		},
 		"CreateOffProduct": {
-			"Title": "Crea Assistent de Producte"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

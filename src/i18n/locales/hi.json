@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "सभी",
 		"Barcode": "बारकोड",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "बारकोड स्कैन करें",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "जिन देशों में बिकता है",
 		"CreateNewProduct": "एक नया उत्पाद बनाएँ",
 		"CreateProduct": "उत्पाद बनाएँ",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "जानकारी"
 		},
+		"Add": {
+			"Title": "डालिए"
+		},
 		"AddPrice": {
 			"Title": "एक मूल्य जोड़े"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "कीमत टैग"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Contribute"
 		},
 		"CreateOffProduct": {
-			"Title": "उत्पाद सहायक बनाएँ"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "கூடுதல் தகவல்",
+		"All": "All",
 		"Barcode": "பார்கோடு",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "புதிய தயாரிப்பை உருவாக்குங்கள்",
 		"CreateProduct": "தயாரிப்பை உருவாக்கு",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "இதைப் பற்றி"
 		},
+		"Add": {
+			"Title": "சேர்"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "பல சான்றுகளைச் சேர்க்கவும்"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "இடங்கள்"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "விலை குறிச்சொற்கள்"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Contribute"
 		},
 		"CreateOffProduct": {
-			"Title": "தயாரிப்பு உதவியாளரை உருவாக்கு"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

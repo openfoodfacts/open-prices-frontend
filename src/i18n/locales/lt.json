@@ -180,6 +180,7 @@
 		"AddNewProofs": "Pridėti naujų įrodymų",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Visi",
 		"Barcode": "Barkodas",
 		"Barcodes": "Brūkšninis kodas",
 		"BarcodeScan": "Nuskaityti brūkšninį kodą",
@@ -521,6 +522,8 @@
 		"Select": "Pasirinkti {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "Sukurkite naują produktą",
 		"CreateProduct": "Sukurti produktą",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Apie"
 		},
+		"Add": {
+			"Title": "Pridėti"
+		},
 		"AddPrice": {
 			"Title": "Pridėti kainą"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Pridėti kelis įrodymus"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Vietos"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Kainos"
 		},
+		"PriceTags": {
+			"Title": "Kainų etiketės"
+		},
 		"Proofs": {
 			"Title": "Įrodymai"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Prisidėti"
 		},
 		"CreateOffProduct": {
-			"Title": "Sukurti produkto asistentą"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Eksperimentai"

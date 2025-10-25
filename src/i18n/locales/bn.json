@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "বারকোড",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "যে দেশে বিক্রি হয়েছে",
 		"CreateNewProduct": "একটি নতুন পণ্য তৈরি করুন",
 		"CreateProduct": "পণ্য তৈরি করুন",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "সম্পর্কে"
 		},
+		"Add": {
+			"Title": "যোগ"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "মূল্য ট্যাগ"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "সহযগীতা"
 		},
 		"CreateOffProduct": {
-			"Title": "পণ্য সহকারী তৈরি করুন"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "添加到 {name}",
 		"AdditionalInfo": "附加資訊",
+		"All": "全部 ",
 		"Barcode": "條碼 ",
 		"Barcodes": "條碼",
 		"BarcodeScan": "掃描條碼",
@@ -521,6 +522,8 @@
 		"Select": "選擇 {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "販售國",
 		"CreateNewProduct": "創造新產品",
 		"CreateProduct": "創建產品",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "關於"
 		},
+		"Add": {
+			"Title": "新增"
+		},
 		"AddPrice": {
 			"Title": "新增價格"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "新增多個證明"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "地點"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "價格"
 		},
+		"PriceTags": {
+			"Title": "價格標籤"
+		},
 		"Proofs": {
 			"Title": "證明"
 		},
@@ -774,7 +786,7 @@
 			"Title": "貢獻"
 		},
 		"CreateOffProduct": {
-			"Title": "建立產品助理"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "實驗"

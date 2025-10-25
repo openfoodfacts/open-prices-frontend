@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Alle",
 		"Barcode": "Strekkode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -521,6 +522,8 @@
 		"Select": "Velg {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Land hvor produktet selges",
 		"CreateNewProduct": "Opprett et nytt produkt",
 		"CreateProduct": "Opprett produkt",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Om"
 		},
+		"Add": {
+			"Title": "Legg til"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Pris tagger"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Bidra"
 		},
 		"CreateOffProduct": {
-			"Title": "Opprett produktassistent"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

@@ -180,6 +180,7 @@
 		"AddNewProofs": "Додайте нові докази",
 		"AddToOFF": "Додати до {name}",
 		"AdditionalInfo": "Додаткова інформація",
+		"All": "Усі",
 		"Barcode": "Код товару",
 		"Barcodes": "Штрих-коди",
 		"BarcodeScan": "Просканувати штрих-код",
@@ -521,6 +522,8 @@
 		"Select": "Вибрати {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Країни, в яких продається:",
 		"CreateNewProduct": "Створити новий продукт",
 		"CreateProduct": "Створити продукт",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Про додаток"
 		},
+		"Add": {
+			"Title": "Додати"
+		},
 		"AddPrice": {
 			"Title": "Додати ціну"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Додайте кілька доказів"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Місцезнаходження"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Ціни"
 		},
+		"PriceTags": {
+			"Title": "Цінники"
+		},
 		"Proofs": {
 			"Title": "Докази"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Підтримати проєкт"
 		},
 		"CreateOffProduct": {
-			"Title": "Створити помічника продукту"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Експерименти"

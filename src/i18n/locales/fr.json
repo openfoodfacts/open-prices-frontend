@@ -180,6 +180,7 @@
 		"AddNewProofs": "Ajouter de nouvelles preuves",
 		"AddToOFF": "Ajouter à {name}",
 		"AdditionalInfo": "Informations supplémentaires",
+		"All": "Tout",
 		"Barcode": "Code-barres",
 		"Barcodes": "Code-barres",
 		"BarcodeScan": "Scanner un code-barres",
@@ -521,6 +522,8 @@
 		"Select": "Sélectionner {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Pays de vente",
 		"CreateNewProduct": "Créer un nouveau produit",
 		"CreateProduct": "Créer un produit",
@@ -529,7 +532,7 @@
 		"NextProof": "Preuve suivante",
 		"PreviousProof": "Preuve précédente",
 		"ProductAlreadyExists": "Le produit existe déjà",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Langue du produit",
 		"ProofNumberOfOutProofs": "Preuve ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Magasins où vendu",
 		"UseCropModeToAddImage": "Pour ajouter une image de produit, activez le mode de recadrage sous l'image d'épreuve et dessinez un rectangle autour du produit."
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "À propos"
 		},
+		"Add": {
+			"Title": "Ajouter"
+		},
 		"AddPrice": {
 			"Title": "Ajouter un prix"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Ajouter plusieurs preuves"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Lieux"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Prix"
 		},
+		"PriceTags": {
+			"Title": "Étiquettes de prix"
+		},
 		"Proofs": {
 			"Title": "Preuves"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Contribuer"
 		},
 		"CreateOffProduct": {
-			"Title": "Créer un assistant produit"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Expérimentations"

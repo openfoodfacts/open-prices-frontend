@@ -180,6 +180,7 @@
 		"AddNewProofs": "Přidejte nové důkazy",
 		"AddToOFF": "Přidat do {name}",
 		"AdditionalInfo": "Další informace",
+		"All": "Vše",
 		"Barcode": "Čárový kód",
 		"Barcodes": "Čárové kódy",
 		"BarcodeScan": "Naskenovat čárový kód",
@@ -521,6 +522,8 @@
 		"Select": "Vybrat {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Země prodeje",
 		"CreateNewProduct": "Vytvořte nový produkt",
 		"CreateProduct": "Vytvořit produkt",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "O aplikaci"
 		},
+		"Add": {
+			"Title": "Přidat"
+		},
 		"AddPrice": {
 			"Title": "Přidat cenu"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Přidejte více důkazů"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Polohy"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Ceny"
 		},
+		"PriceTags": {
+			"Title": "Cenovky"
+		},
 		"Proofs": {
 			"Title": "Doklady"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Přispět"
 		},
 		"CreateOffProduct": {
-			"Title": "Vytvořit asistenta produktu"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experimenty"

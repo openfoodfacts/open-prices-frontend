@@ -180,6 +180,7 @@
 		"AddNewProofs": "Tilføj nye beviser",
 		"AddToOFF": "Føj til {name}",
 		"AdditionalInfo": "Yderligere information",
+		"All": "Alle",
 		"Barcode": "Stregkode",
 		"Barcodes": "Stregkoder",
 		"BarcodeScan": "Scan en stregkode",
@@ -521,6 +522,8 @@
 		"Select": "Vælg {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Lande, hvorfra der sælges",
 		"CreateNewProduct": "Opret et nyt produkt",
 		"CreateProduct": "Opret produkt",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Om"
 		},
+		"Add": {
+			"Title": "Tilføj"
+		},
 		"AddPrice": {
 			"Title": "Tilføj en pris"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Tilføj flere beviser"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Placeringer"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Priser"
 		},
+		"PriceTags": {
+			"Title": "Prismærker"
+		},
 		"Proofs": {
 			"Title": "Beviser"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Bidrag"
 		},
 		"CreateOffProduct": {
-			"Title": "Opret produktassistent"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Eksperimenter"

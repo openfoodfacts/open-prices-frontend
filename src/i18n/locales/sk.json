@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Všetky",
 		"Barcode": "Čiarový kód",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Naskenujte čiarový kód",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Krajiny, kde sa predáva",
 		"CreateNewProduct": "Vytvoriť nový produkt",
 		"CreateProduct": "Vytvoriť produkt",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "O"
 		},
+		"Add": {
+			"Title": "Pridať"
+		},
 		"AddPrice": {
 			"Title": "Pridajte cenu"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Ceny"
 		},
+		"PriceTags": {
+			"Title": "Cenovky"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Prispieť"
 		},
 		"CreateOffProduct": {
-			"Title": "Vytvoriť asistenta produktu"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

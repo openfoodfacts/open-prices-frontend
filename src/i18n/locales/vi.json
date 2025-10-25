@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Tất cả",
 		"Barcode": "Mã vạch",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Các quốc gia bán",
 		"CreateNewProduct": "Tạo sản phẩm mới",
 		"CreateProduct": "Tạo sản phẩm",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Giới thiệu"
 		},
+		"Add": {
+			"Title": "Thêm vào"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Thẻ giá"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Góp phần"
 		},
 		"CreateOffProduct": {
-			"Title": "Tạo Trợ lý sản phẩm"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

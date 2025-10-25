@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Όλα",
 		"Barcode": "Γραμμικός κωδικός",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -521,6 +522,8 @@
 		"Select": "Επιλέξτε {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Χώρες όπου πωλείται",
 		"CreateNewProduct": "Δημιουργήστε ένα νέο προϊόν",
 		"CreateProduct": "Δημιουργία προϊόντος",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Σχετικά"
 		},
+		"Add": {
+			"Title": "Προσθήκη"
+		},
 		"AddPrice": {
 			"Title": "Προσθήκη μίας τιμής"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Τιμές"
 		},
+		"PriceTags": {
+			"Title": "Ετικέτες τιμών"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Συμβάλλετε"
 		},
 		"CreateOffProduct": {
-			"Title": "Δημιουργία Βοηθού Προϊόντος"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

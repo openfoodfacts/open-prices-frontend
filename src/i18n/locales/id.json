@@ -180,6 +180,7 @@
 		"AddNewProofs": "Tambahkan bukti baru",
 		"AddToOFF": "Tambahkan ke {name}",
 		"AdditionalInfo": "Informasi tambahan",
+		"All": "Semua",
 		"Barcode": "Kode batang",
 		"Barcodes": "Kode batang",
 		"BarcodeScan": "Pindai barcode",
@@ -521,6 +522,8 @@
 		"Select": "Pilih {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Negara tempat dijual",
 		"CreateNewProduct": "Buat produk baru",
 		"CreateProduct": "Buat produk",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Tentang"
 		},
+		"Add": {
+			"Title": "Tambahkan"
+		},
 		"AddPrice": {
 			"Title": "Tambahkan harga"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Tambahkan beberapa bukti"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Lokasi"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Harga"
 		},
+		"PriceTags": {
+			"Title": "Label harga"
+		},
 		"Proofs": {
 			"Title": "Bukti"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Berkontribusi"
 		},
 		"CreateOffProduct": {
-			"Title": "Buat Asisten Produk"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Eksperimen"

@@ -180,6 +180,7 @@
 		"AddNewProofs": "Adicionar novos comprovativos",
 		"AddToOFF": "Adicionar a {name}",
 		"AdditionalInfo": "Informação adicional",
+		"All": "Todos",
 		"Barcode": "Código de barras",
 		"Barcodes": "Códigos de barras",
 		"BarcodeScan": "Digitalizar um código de barras",
@@ -521,6 +522,8 @@
 		"Select": "Selecionar {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Países onde é vendido",
 		"CreateNewProduct": "Criar um novo produto",
 		"CreateProduct": "Criar produto",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Sobre"
 		},
+		"Add": {
+			"Title": "Adicionar"
+		},
 		"AddPrice": {
 			"Title": "Adicionar um preço"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Adicionar vários comprovativos"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Localizações"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Preços"
 		},
+		"PriceTags": {
+			"Title": "Etiquetas de preço"
+		},
 		"Proofs": {
 			"Title": "Comprovativos"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Contribuir"
 		},
 		"CreateOffProduct": {
-			"Title": "Criar Assistente de Produto"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiências"

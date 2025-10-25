@@ -180,6 +180,7 @@
 		"AddNewProofs": "הוספת הוכחות חדשות",
 		"AddToOFF": "הוספה אל {name}",
 		"AdditionalInfo": "מידע נוסף",
+		"All": "הכול",
 		"Barcode": "ברקוד",
 		"Barcodes": "ברקודים",
 		"BarcodeScan": "סריקת ברקוד",
@@ -521,6 +522,8 @@
 		"Select": "בחירה ב{currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "ארצות בהן נמכר",
 		"CreateNewProduct": "יצירת מוצר חדש",
 		"CreateProduct": "יצירת מוצר",
@@ -529,7 +532,7 @@
 		"NextProof": "ההוכחה הבאה",
 		"PreviousProof": "הוכחה קודמת",
 		"ProductAlreadyExists": "המוצר כבר קיים",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "שפת המוצר",
 		"ProofNumberOfOutProofs": "הוכחה ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "חנויות בהן נמכר",
 		"UseCropModeToAddImage": "כדי להוסיף תמונת מוצר, הפעל את מצב החיתוך מתחת לתמונת ההוכחה וצייר מלבן סביב המוצר."
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "על אודות"
 		},
+		"Add": {
+			"Title": "הוספה"
+		},
 		"AddPrice": {
 			"Title": "הוספת מחיר"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "הוספת מגוון הוכחות"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "מקומות"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "מחירים"
 		},
+		"PriceTags": {
+			"Title": "תגי מחיר"
+		},
 		"Proofs": {
 			"Title": "הוכחות"
 		},
@@ -774,7 +786,7 @@
 			"Title": "לתרום"
 		},
 		"CreateOffProduct": {
-			"Title": "יצירת מסייע מוצר"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "ניסויים"

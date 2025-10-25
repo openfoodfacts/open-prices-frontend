@@ -180,6 +180,7 @@
 		"AddNewProofs": "Добавить новые доказательства",
 		"AddToOFF": "Добавить в {name}",
 		"AdditionalInfo": "Дополнительная информация",
+		"All": "Все",
 		"Barcode": "Штрих-код",
 		"Barcodes": "Штрих-коды",
 		"BarcodeScan": "Сканировать штрихкод",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Страны продажи",
 		"CreateNewProduct": "Создать новый продукт",
 		"CreateProduct": "Создать продукт",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "О приложении"
 		},
+		"Add": {
+			"Title": "Добавить"
+		},
 		"AddPrice": {
 			"Title": "Добавить цену"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Места"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Цены"
 		},
+		"PriceTags": {
+			"Title": "Ценники"
+		},
 		"Proofs": {
 			"Title": "Доказательства"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Способствовать"
 		},
 		"CreateOffProduct": {
-			"Title": "Помощник по созданию продукта"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Эксперименты"

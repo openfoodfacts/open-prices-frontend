@@ -180,6 +180,7 @@
 		"AddNewProofs": "Neue Nachweise hinzufügen",
 		"AddToOFF": "Zu {name} hinzufügen",
 		"AdditionalInfo": "Zusätzliche Informationen",
+		"All": "Alle",
 		"Barcode": "Strichcode",
 		"Barcodes": "Strichcode",
 		"BarcodeScan": "Strichcode einlesen",
@@ -521,6 +522,8 @@
 		"Select": "{currency_code} auswählen"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Vertriebsländer",
 		"CreateNewProduct": "Neues Produkt erstellen",
 		"CreateProduct": "Produkt erstellen",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Über"
 		},
+		"Add": {
+			"Title": "Hinzufügen"
+		},
 		"AddPrice": {
 			"Title": "Preis hinzufügen"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Mehrere Nachweise hinzufügen"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Orte"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Preise"
 		},
+		"PriceTags": {
+			"Title": "Preisschilder"
+		},
 		"Proofs": {
 			"Title": "Nachweise"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Mitwirken"
 		},
 		"CreateOffProduct": {
-			"Title": "Produktassistent erstellen"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experimente"

@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Toate",
 		"Barcode": "Cod de bare",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Țările unde se vinde",
 		"CreateNewProduct": "Creați un produs nou",
 		"CreateProduct": "Creați produsul",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Despre"
 		},
+		"Add": {
+			"Title": "Adaugă"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Etichete de preț"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Contribuiți"
 		},
 		"CreateOffProduct": {
-			"Title": "Creați un asistent de produs"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

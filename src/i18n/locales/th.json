@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "ทั้งหมด",
 		"Barcode": "บาร์โค้ด",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "ประเทศที่ขาย",
 		"CreateNewProduct": "สร้างผลิตภัณฑ์ใหม่",
 		"CreateProduct": "สร้างผลิตภัณฑ์",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "About"
 		},
+		"Add": {
+			"Title": "เพิ่ม"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "ป้ายราคา"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "ร่วมสนับสนุน"
 		},
 		"CreateOffProduct": {
-			"Title": "สร้างผู้ช่วยผลิตภัณฑ์"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

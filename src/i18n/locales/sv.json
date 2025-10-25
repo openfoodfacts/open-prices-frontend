@@ -180,6 +180,7 @@
 		"AddNewProofs": "Lägg till nya bevis",
 		"AddToOFF": "Lägg till {name}",
 		"AdditionalInfo": "Ytterligare information",
+		"All": "Alla",
 		"Barcode": "Streckkod",
 		"Barcodes": "Streckkoder",
 		"BarcodeScan": "Skanna en streckkod",
@@ -521,6 +522,8 @@
 		"Select": "Välj {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Länder där såld",
 		"CreateNewProduct": "Skapa en ny produkt",
 		"CreateProduct": "Skapa produkt",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Om"
 		},
+		"Add": {
+			"Title": "Lägg till"
+		},
 		"AddPrice": {
 			"Title": "Lägg till ett pris"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Lägg till flera bevis"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Platser"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Priser"
 		},
+		"PriceTags": {
+			"Title": "Prislappar"
+		},
 		"Proofs": {
 			"Title": "Bevis"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Bidra"
 		},
 		"CreateOffProduct": {
-			"Title": "Skapa produktassistent"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiment"

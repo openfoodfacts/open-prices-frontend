@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -521,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "కొత్త ఉత్పత్తిని సృష్టించండి",
 		"CreateProduct": "ఉత్పత్తిని సృష్టించండి",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "గురించి"
 		},
+		"Add": {
+			"Title": "చేర్చు"
+		},
 		"AddPrice": {
 			"Title": "Add a price"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "ధర ట్యాగ్‌లు"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Contribute"
 		},
 		"CreateOffProduct": {
-			"Title": "ఉత్పత్తి సహాయకుడిని సృష్టించండి"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

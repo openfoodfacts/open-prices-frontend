@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Lisää kohtaan {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Kaikki",
 		"Barcode": "Viivakoodi",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Skannaa viivakoodi",
@@ -521,6 +522,8 @@
 		"Select": "Valitse {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Maat, joissa myynnissä",
 		"CreateNewProduct": "Luo uusi tuote",
 		"CreateProduct": "Luo tuote",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Tietoja"
 		},
+		"Add": {
+			"Title": "Lisää"
+		},
 		"AddPrice": {
 			"Title": "Lisää hinta"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Sijainnit"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Hinnat"
 		},
+		"PriceTags": {
+			"Title": "Hintalaput"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Osallistu"
 		},
 		"CreateOffProduct": {
-			"Title": "Luo tuoteavustaja"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

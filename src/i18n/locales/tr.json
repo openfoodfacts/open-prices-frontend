@@ -180,6 +180,7 @@
 		"AddNewProofs": "Yeni kanıtlar ekle",
 		"AddToOFF": "{name}'e ekle",
 		"AdditionalInfo": "Ek Bilgiler",
+		"All": "Hepsi",
 		"Barcode": "Barkod",
 		"Barcodes": "Barkodlar",
 		"BarcodeScan": "Barkod tara",
@@ -521,6 +522,8 @@
 		"Select": "{currency_code} öğesini seçin"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Satılan ülkeler",
 		"CreateNewProduct": "Yeni bir ürün yaratın",
 		"CreateProduct": "Ürün oluştur",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "Hakkında"
 		},
+		"Add": {
+			"Title": "Ekle"
+		},
 		"AddPrice": {
 			"Title": "Fiyat ekleyin"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Birden fazla kanıt ekleyin"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Konumlar"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Fiyatlar"
 		},
+		"PriceTags": {
+			"Title": "Fiyat etiketleri"
+		},
 		"Proofs": {
 			"Title": "Kanıtlar"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Destekleyebilirsiniz"
 		},
 		"CreateOffProduct": {
-			"Title": "Ürün Asistanı Oluştur"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Deneyler"

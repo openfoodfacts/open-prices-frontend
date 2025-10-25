@@ -180,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Ajoute nan {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Tout",
 		"Barcode": "Kòd ba",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Eskane yon kòd ba",
@@ -521,6 +522,8 @@
 		"Select": "Chwazi {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Kreye yon nouvo pwodwi",
 		"CreateProduct": "Kreye pwodwi",
@@ -722,6 +725,9 @@
 		"About": {
 			"Title": "About"
 		},
+		"Add": {
+			"Title": "Add"
+		},
 		"AddPrice": {
 			"Title": "Ajoute yon pri"
 		},
@@ -746,6 +752,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Zòn"
 		},
@@ -761,6 +770,9 @@
 		"Prices": {
 			"Title": "Pri"
 		},
+		"PriceTags": {
+			"Title": "Etikèt pri"
+		},
 		"Proofs": {
 			"Title": "Prèv"
 		},
@@ -774,7 +786,7 @@
 			"Title": "Contribute"
 		},
 		"CreateOffProduct": {
-			"Title": "Kreye Asistan Pwodwi"
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
