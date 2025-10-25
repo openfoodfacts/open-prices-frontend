@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.143.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.142.0...v1.143.0) (2025-10-25)
+
+
+### Features
+
+* **CreateOffProduct:** Brands support ([#1769](https://github.com/openfoodfacts/open-prices-frontend/issues/1769)) ([3150a9f](https://github.com/openfoodfacts/open-prices-frontend/commit/3150a9fb29070b929457df529ecd39246ce44c4c))
+* **CreateProduct:** Add link in price action menu + show link to page in /experiments ([#1770](https://github.com/openfoodfacts/open-prices-frontend/issues/1770)) ([b6c0924](https://github.com/openfoodfacts/open-prices-frontend/commit/b6c09245f2f2685c7f61367697e41bdd7acdf168))
+
+
+### Bug Fixes
+
+* **Price Validation Assistant:** always display the product's barcode ([#1772](https://github.com/openfoodfacts/open-prices-frontend/issues/1772)) ([024f456](https://github.com/openfoodfacts/open-prices-frontend/commit/024f45689b5d4cb2a9a48c014ced04c17f0b7be2))
+
+
+### Technical
+
+* **CreateOffProduct:** Remove 'Assistant' form title ([#1761](https://github.com/openfoodfacts/open-prices-frontend/issues/1761)) ([065db04](https://github.com/openfoodfacts/open-prices-frontend/commit/065db04207f5c2feddf11292d3e2850a006e3867))
+* **CreateProduct:** Always display list of suggested missing products ([#1771](https://github.com/openfoodfacts/open-prices-frontend/issues/1771)) ([0ca5d03](https://github.com/openfoodfacts/open-prices-frontend/commit/0ca5d030703b65bd82637e27aa26d98edf962b1e))
+* **l10n:** New Crowdin translations to review and merge ([#1760](https://github.com/openfoodfacts/open-prices-frontend/issues/1760)) ([1b13958](https://github.com/openfoodfacts/open-prices-frontend/commit/1b13958fe8b59f778de47cb15bb28faade20079f))
+* **Login:** store newly returned user is_moderator info ([#1768](https://github.com/openfoodfacts/open-prices-frontend/issues/1768)) ([3efd334](https://github.com/openfoodfacts/open-prices-frontend/commit/3efd334579ffca3c8089c98c78a9bb39e0b87949))
+* **Proof upload:** rename multiple price tag upload (url, breadcrumbs) ([#1765](https://github.com/openfoodfacts/open-prices-frontend/issues/1765)) ([f9fb802](https://github.com/openfoodfacts/open-prices-frontend/commit/f9fb802eb9d2b703bcc7f22459230cce65dab596))
+* **Proof upload:** rename multiple price tag upload (url, breadcrumbs) (extra commit). ref [#1765](https://github.com/openfoodfacts/open-prices-frontend/issues/1765) ([1bce448](https://github.com/openfoodfacts/open-prices-frontend/commit/1bce4484e2b97d0aa7fadad95bfc984472d27611))
+* **Style:** v-img: move height & width outside of style and in their own properties ([de1a978](https://github.com/openfoodfacts/open-prices-frontend/commit/de1a978c7c11aed91922bedaac77415073636365))
+* **User Dashboard:** add default home tab (next to consumption & community) ([#1762](https://github.com/openfoodfacts/open-prices-frontend/issues/1762)) ([a3bf023](https://github.com/openfoodfacts/open-prices-frontend/commit/a3bf02300ff548f7f9c05c23870ddd6f95ab8645))
+
 ## [1.142.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.141.3...v1.142.0) (2025-10-19)
 
 
