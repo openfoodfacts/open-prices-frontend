@@ -522,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "जिन देशों में बिकता है",
 		"CreateNewProduct": "एक नया उत्पाद बनाएँ",
 		"CreateProduct": "उत्पाद बनाएँ",
