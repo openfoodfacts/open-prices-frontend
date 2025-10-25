@@ -73,7 +73,7 @@
       >
         {{ productForm.product_code }}
       </v-alert>
-      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="true" elevation="1" />
     </v-col>
     <v-col v-else-if="productIsTypeCategory" cols="12">
       <v-alert
