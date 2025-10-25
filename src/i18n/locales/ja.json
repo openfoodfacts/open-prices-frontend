@@ -522,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "販売の国",
 		"CreateNewProduct": "新しい製品を作成する",
 		"CreateProduct": "製品を作成する",
