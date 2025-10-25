@@ -522,6 +522,8 @@
 		"Select": "{currency_code} öğesini seçin"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Satılan ülkeler",
 		"CreateNewProduct": "Yeni bir ürün yaratın",
 		"CreateProduct": "Ürün oluştur",
