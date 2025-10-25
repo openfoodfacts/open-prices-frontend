@@ -522,6 +522,8 @@
 		"Select": "Vybrat {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Země prodeje",
 		"CreateNewProduct": "Vytvořte nový produkt",
 		"CreateProduct": "Vytvořit produkt",
