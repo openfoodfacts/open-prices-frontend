@@ -522,6 +522,8 @@
 		"Select": "Select {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "판매의 나라",
 		"CreateNewProduct": "새로운 제품을 만드세요",
 		"CreateProduct": "제품 만들기",
