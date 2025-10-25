@@ -522,6 +522,8 @@
 		"Select": "בחירה ב{currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "ארצות בהן נמכר",
 		"CreateNewProduct": "יצירת מוצר חדש",
 		"CreateProduct": "יצירת מוצר",
