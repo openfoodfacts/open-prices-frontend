@@ -522,6 +522,8 @@
 		"Select": "Velg {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Land der produktet selges",
 		"CreateNewProduct": "Opprett et nytt produkt",
 		"CreateProduct": "Opprett produkt",
