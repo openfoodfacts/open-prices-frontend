@@ -522,6 +522,8 @@
 		"Select": "Valitse {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Maat, joissa myynnissä",
 		"CreateNewProduct": "Luo uusi tuote",
 		"CreateProduct": "Luo tuote",
