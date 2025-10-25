@@ -522,6 +522,8 @@
 		"Select": "選擇 {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "販售國",
 		"CreateNewProduct": "創造新產品",
 		"CreateProduct": "創建產品",
