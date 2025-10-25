@@ -522,6 +522,8 @@
 		"Select": "Επιλέξτε {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Χώρες όπου πωλείται",
 		"CreateNewProduct": "Δημιουργήστε ένα νέο προϊόν",
 		"CreateProduct": "Δημιουργία προϊόντος",
