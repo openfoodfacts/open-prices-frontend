@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="6">
+    <v-col v-if="!(proofIsTypeReceipt && multiple)" cols="6">
       <div class="text-subtitle-2 required">
         {{ $t('Common.Date') }}
       </div>
@@ -33,8 +33,8 @@
     </v-col>
   </v-row>
 
-  <!--Receipt-only fields: receipt_price_count, receipt_price_total, receipt_online_delivery_costs -->
-  <v-row v-if="proofIsTypeReceipt" class="mt-0">
+  <!-- (Single) Receipt-only fields: receipt_price_count, receipt_price_total, receipt_online_delivery_costs -->
+  <v-row v-if="proofIsTypeReceipt && !multiple" class="mt-0">
     <v-col cols="6">
       <div class="text-subtitle-2">
         <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.ReceiptPriceCount') }}
@@ -115,7 +115,7 @@
         :text="$t('ProofAdd.PriceTagAIWarning')"
       />
       <v-alert
-        v-else-if="proofIsTypeReceipt"
+        v-else-if="proofIsTypeReceipt && !multiple"
         type="info"
         variant="outlined"
         density="compact"
