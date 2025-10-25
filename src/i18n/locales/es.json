@@ -522,6 +522,8 @@
 		"Select": "Selecciona {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Países de venta",
 		"CreateNewProduct": "Crear un nuevo producto",
 		"CreateProduct": "Crear producto",
