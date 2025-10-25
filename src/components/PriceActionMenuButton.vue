@@ -12,7 +12,12 @@
           <v-list-item v-if="price.product || price.category_tag" :slim="true" prepend-icon="mdi-eye-outline" :to="getProductOrCategoryDetailUrl">
             {{ $t('Common.Details') }}
           </v-list-item>
-          <OpenFoodFactsLink v-if="price.product" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
+          <v-sheet v-if="price.product">
+            <OpenFoodFactsLink v-if="price.product.source" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
+            <v-list-item v-else :slim="true" prepend-icon="mdi-plus" :to="getCreateProductUrl">
+              {{ $t('CreateOffProduct.CreateProduct') }}
+            </v-list-item>
+          </v-sheet>
           <OpenFoodFactsLink v-else-if="price.category_tag" facet="category" :value="price.category_tag" display="list-item" />
         </v-sheet>
         <!-- Price actions -->
@@ -142,6 +147,9 @@ export default {
     },
     getProofDetailUrl() {
       return `/proofs/${this.price.proof.id}`
+    },
+    getCreateProductUrl() {
+      return `/experiments/create-off-product?product_code=${this.price.product.code}`
     },
     showPriceShare() {
       return this.$route.path === this.getPriceDetailUrl
