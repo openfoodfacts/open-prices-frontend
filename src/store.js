@@ -7,6 +7,7 @@ export const useAppStore = defineStore('app', {
     user: {
       username: null,
       token: null,
+      is_moderator: false,
       last_product_type_used: constants.PRICE_TYPE_PRODUCT,  // or 'BARCODE'
       last_currency_used: import.meta.env.VITE_DEFAULT_CURRENCY,  // 'EUR'
       recent_locations: [],
@@ -57,9 +58,10 @@ export const useAppStore = defineStore('app', {
     }
   },
   actions: {
-    signIn(token) {
-      this.user.username = utils.getOFFUsernameFromAuthToken(token)
-      this.user.token = token
+    signIn(data) {
+      this.user.username = data['user_id']
+      this.user.token = data['access_token']
+      this.user.is_moderator = data['is_moderator'] || false
     },
     signOut() {
       this.user.username = null
