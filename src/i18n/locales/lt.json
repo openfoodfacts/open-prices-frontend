@@ -522,6 +522,8 @@
 		"Select": "Pasirinkti {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "Sukurkite naują produktą",
 		"CreateProduct": "Sukurti produktą",
