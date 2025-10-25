@@ -57,7 +57,7 @@
     <v-col cols="12" md="6">
       <v-card
         class="mb-4"
-        :title="$t('CreateOffProduct.ChooseUnknownProductGuide')"
+        :title="$t('CreateOffProduct.SelectUnknownProductGuide')"
         prepend-icon="mdi-tag-plus-outline"
         height="100%"
       >
@@ -368,7 +368,7 @@ export default {
     stepItemList() {
       return [
         {
-          title: this.$t('CreateOffProduct.ChooseUnknownProduct'),
+          title: this.$t('CreateOffProduct.SelectUnknownProduct'),
           value: 1
         },
         {
