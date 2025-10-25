@@ -522,6 +522,8 @@
 		"Select": "Вибрати {currency_code}"
 	},
 	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Країни, в яких продається:",
 		"CreateNewProduct": "Створити новий продукт",
 		"CreateProduct": "Створити продукт",
