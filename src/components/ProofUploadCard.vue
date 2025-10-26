@@ -274,9 +274,9 @@ export default {
     uploadProofList() {
       this.step = 2
       // loop on images
-      for (let proofImage of this.proofImageList) {
-        this.uploadProof(proofImage)
-      }
+      Promise.all(
+        this.proofImageList.map(proofImage => this.uploadProof(proofImage))
+      )
     },
     uploadProof(proofImage) {
       this.loading = true
