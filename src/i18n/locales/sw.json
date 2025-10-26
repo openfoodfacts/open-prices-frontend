@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Hariri",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Sehemu inahitajika",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
