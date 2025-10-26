@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Приклади: {value}",
 		"Edit": "Редагувати",
 		"End": "Кінець",
+		"ErrorServer": "Помилка: помилка сервера",
 		"FieldIsRequired": "Поле обов'язкове для заповнення",
 		"Filter": "Фільтр",
 		"FilterChallengesShowAllStatus": "Показати всі виклики",
