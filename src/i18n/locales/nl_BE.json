@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Voorbeelden: {value}",
 		"Edit": "Bewerken",
 		"End": "Einde",
+		"ErrorServer": "Fout: serverfout",
 		"FieldIsRequired": "Veld is verplicht",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Toon alle uitdagingen",
