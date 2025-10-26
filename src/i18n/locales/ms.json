@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Medan diperlukan",
 		"Filter": "Tapis",
 		"FilterChallengesShowAllStatus": "Show all challenges",
