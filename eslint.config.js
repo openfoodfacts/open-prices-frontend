@@ -29,4 +29,10 @@ export default [
       sourceType: 'module',
     }
   },
+  {
+    files: ['src/i18n/locales/*.json', 'src/data/*/*.json'],
+    rules: {
+      'no-irregular-whitespace': 'off',
+    },
+  }
 ]
