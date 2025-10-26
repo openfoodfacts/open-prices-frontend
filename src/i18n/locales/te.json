@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "మార్చు",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "ఫీల్డ్ తప్పనిసరి",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
