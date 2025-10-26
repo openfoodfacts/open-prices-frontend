@@ -426,7 +426,7 @@ export default {
       return !!v || this.$t('Common.FieldIsRequired')
     },
     loadProductInfo() {
-      this.$router.push({query: {product_code: this.productForm.product_code}})
+      this.$router.push({ query: { product_code: this.productForm.product_code } })
       this.step = 2
       this.getProduct((product) => {
         if (product.source) {

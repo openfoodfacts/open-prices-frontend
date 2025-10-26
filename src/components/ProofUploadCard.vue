@@ -296,19 +296,19 @@ export default {
               this.proofForm.location_id = data.location_id
               this.proofObjectList = this.proofObjectList.concat(data)
             } else {
-              alert('Error: server error when creating proof')
-              console.log(data)
+              alert(`Error: ${JSON.stringify(data)}`)
+              console.log(JSON.stringify(data))
             }
           })
           .catch((error) => {
-            alert('Error: server error when creating proof')
-            console.log(error)
+            alert(`Error: ${JSON.stringify(error)}`)
+            console.log(JSON.stringify(error))
             this.loading = false
           })
       })
       .catch((error) => {
         alert('Error: compression')
-        console.log(error)
+        console.log(JSON.stringify(error))
       })
       // .finally(() => {
       //   console.log('Compress complete')
