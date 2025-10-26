@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.143.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.143.0...v1.143.1) (2025-10-26)
+
+
+### Bug Fixes
+
+* **Challenge:** Forgot to update the new link of proof add price-tags ([#1773](https://github.com/openfoodfacts/open-prices-frontend/issues/1773)) ([ec4c86b](https://github.com/openfoodfacts/open-prices-frontend/commit/ec4c86b7285d121586dca3119be23cb28f4a1450))
+
+
+### Technical
+
+* **Authentication:** on POST error, slightly improve the alerts (clearer messages) ([#1775](https://github.com/openfoodfacts/open-prices-frontend/issues/1775)) ([c750db2](https://github.com/openfoodfacts/open-prices-frontend/commit/c750db24db1c7746e79ba21224eaeb74ff844410))
+* **l10n:** New Crowdin translations to review and merge ([#1778](https://github.com/openfoodfacts/open-prices-frontend/issues/1778)) ([d64200e](https://github.com/openfoodfacts/open-prices-frontend/commit/d64200e496a9997afe45ba395570d2bf6efee6f2))
+* **Linting:** Disable 'no-irregular-whitespace' rule for .json files ([#1777](https://github.com/openfoodfacts/open-prices-frontend/issues/1777)) ([97a8e73](https://github.com/openfoodfacts/open-prices-frontend/commit/97a8e73385ae1cbadad6abcd21c33d3d3e97c110))
+* **Proof upload:** chain promises instead of compressing/uploading at the same time ([#1776](https://github.com/openfoodfacts/open-prices-frontend/issues/1776)) ([9e2b0f5](https://github.com/openfoodfacts/open-prices-frontend/commit/9e2b0f564f012a9ec921abee358e41f0574fecae))
+* **Tests:** Disable them as they are not up to date (and failing) ([#1779](https://github.com/openfoodfacts/open-prices-frontend/issues/1779)) ([49dfdbc](https://github.com/openfoodfacts/open-prices-frontend/commit/49dfdbcd19ef265f2d7ffa405f855d26cca4b9ea))
+
 ## [1.143.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.142.0...v1.143.0) (2025-10-25)
 
 
