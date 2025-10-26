@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Düzəliş etmək",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Sahə tələb olunur",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
