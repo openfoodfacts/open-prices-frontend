@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Eksempler: {value}",
 		"Edit": "Redigér",
 		"End": "Slut",
+		"ErrorServer": "Fejl: serverfejl",
 		"FieldIsRequired": "Feltet er påkrævet",
 		"Filter": "Filtrere",
 		"FilterChallengesShowAllStatus": "Vis alle udfordringer",
