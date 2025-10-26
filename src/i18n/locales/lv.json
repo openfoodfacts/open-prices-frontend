@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Rediģēt",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Lauks ir obligāts",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
