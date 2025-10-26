@@ -42,7 +42,7 @@ There is also a pre-commit configuration set up with [husky](https://typicode.gi
 ### Tests
 
 ```sh
-yarn test
+yarn test:run
 ```
 
 ### Update packages
