@@ -91,16 +91,17 @@ export default {
       api
         .signIn(this.signinForm.username.toLowerCase().trim(), this.signinForm.password)
         .then((data) => {
+          this.loading = false
           if (data['access_token']) {
             this.appStore.signIn(data)
             this.done()
           } else {
             alert(this.$t('SignIn.WrongCredentials'))
-            this.loading = false
           }
         })
-        .catch((error) => {  // eslint-disable-line no-unused-vars
-          alert(this.$t('SignIn.ServerError'))
+        .catch((error) => {
+          alert(this.$t('Common.ServerError'))
+          console.log(error)
           this.loading = false
         })
     },

@@ -305,20 +305,19 @@ export default {
       api
         .createPrice(Object.assign({}, this.addPriceMultipleForm, this.productPriceForm), this.$route.path)
         .then((data) => {
-          if (!data['id']) {
-            alert(`Form error: ${JSON.stringify(data)}`)
-          } else {
+          this.loading = false
+          if (data.id) {
             this.proofPriceNewList.push(JSON.parse(JSON.stringify(data)))  // deep copy
             this.priceSuccessMessage = true
             // show new price form immediately
             this.initNewProductPriceForm()
+          } else {
+            alert(`Error: ${JSON.stringify(data)}`)
           }
-          this.loading = false
         })
         .catch((error) => {
-          alert('Error: server error')
+          alert(this.$t('Common.ServerError'))
           console.log(error)
-          this.loading = false
         })
     },
     done() {

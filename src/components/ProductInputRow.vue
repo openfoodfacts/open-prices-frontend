@@ -241,8 +241,9 @@ export default {
         .then((data) => {
           this.productForm.product = data.id ? data : {'code': code, 'price_count': 0}
         })
-        .catch((error) => {  // eslint-disable-line no-unused-vars
-          alert("Error: Open Prices server error")
+        .catch((error) => {
+          alert(this.$t('Common.ServerError'))
+          console.log(error)
         })
     },
   }

@@ -137,15 +137,16 @@ export default {
       api
         .createPrice(this.addPriceSingleForm, this.$route.path)
         .then((data) => {
-          if (!data['id']) {
-            alert(`Form error: ${JSON.stringify(data)}`)
-          } else {
-            this.goToUserDashboard()
-          }
           this.loading = false
+          if (data.id) {
+            this.goToUserDashboard()
+          } else {
+            alert(`Error: ${JSON.stringify(data)}`)
+            console.log(JSON.stringify(data))
+          }
         })
         .catch((error) => {
-          alert('Error: server error')
+          alert(this.$t('Common.ServerError'))
           console.log(error)
           this.loading = false
         })
