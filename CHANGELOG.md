@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.143.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.143.1...v1.143.2) (2025-10-26)
+
+
+### Technical
+
+* **Proof upload:** chain promises instead of compressing/uploading at the same time (v2) ([#1782](https://github.com/openfoodfacts/open-prices-frontend/issues/1782)) ([1070c00](https://github.com/openfoodfacts/open-prices-frontend/commit/1070c00ab536bc393863dd9317195e691d17dd32))
+* **Release Please:** upgrade to v4 (from v3) ([#1780](https://github.com/openfoodfacts/open-prices-frontend/issues/1780)) ([0da7527](https://github.com/openfoodfacts/open-prices-frontend/commit/0da75274c1d3fb91ad52b247792738d8c7991446))
+
 ## [1.143.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.143.0...v1.143.1) (2025-10-26)
 
 
