@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "例： {value}",
 		"Edit": "編輯 ",
 		"End": "End",
+		"ErrorServer": "錯誤：伺服器錯誤",
 		"FieldIsRequired": "必填字段",
 		"Filter": "篩選器",
 		"FilterChallengesShowAllStatus": "Show all challenges",
