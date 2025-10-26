@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Příklady: {value}",
 		"Edit": "Upravit",
 		"End": "Konec",
+		"ErrorServer": "Chyba: chyba serveru",
 		"FieldIsRequired": "Pole je povinné",
 		"Filter": "Filtr",
 		"FilterChallengesShowAllStatus": "Show all challenges",
