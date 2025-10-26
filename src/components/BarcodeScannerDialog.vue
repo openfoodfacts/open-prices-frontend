@@ -53,14 +53,20 @@
             </v-form>
             <ProductCard v-for="product in productSearchResultList" :key="product" :product="product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" @click="barcodeSend(product.code)" />
 
-            <h3 v-if="barcodeManualInputSimilarBarcodes.length" class="mt-4 mb-4">
-              {{ $t('Common.SimilarBarcodes') }}
-            </h3>
-            <v-row class="mt-0 mb-1">
-              <v-col v-for="similarBarcode in barcodeManualInputSimilarBarcodes" :key="similarBarcode.barcode" cols="12" sm="6" md="4" xl="3">
-                <ProductCard :product="productSuggestionResultDict[similarBarcode.barcode]" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :hideProductBarcode="false" :readonly="true" elevation="1" @click="barcodeSend(productSuggestionResultDict[similarBarcode.barcode].code)" />
-              </v-col>
-            </v-row>
+            <div v-if="barcodeManualInputSimilarBarcodes.length">
+              <v-divider />
+              <h3 class="mt-4 mb-4">
+                {{ $t('BarcodeScanner.SimilarBarcodes') }}
+              </h3>
+              <p>
+                {{ $t('BarcodeScanner.SimilarBarcodesExplanation') }}
+              </p>
+              <v-row class="mt-0 mb-1">
+                <v-col v-for="similarBarcode in barcodeManualInputSimilarBarcodes" :key="similarBarcode.barcode" cols="12" sm="6" md="4" xl="3">
+                  <ProductCard :product="productSuggestionResultDict[similarBarcode.barcode]" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :hideProductBarcode="false" :readonly="true" elevation="1" @click="barcodeSend(productSuggestionResultDict[similarBarcode.barcode].code)" />
+                </v-col>
+              </v-row>
+            </div>
           </v-tabs-window-item>
         </v-tabs-window>
       </v-card-text>

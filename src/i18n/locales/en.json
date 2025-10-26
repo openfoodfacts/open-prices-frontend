@@ -119,7 +119,9 @@
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
 			"Text": "powered by {url}"
-		}
+		},
+		"SimilarBarcodes": "Similar barcodes",
+		"SimilarBarcodesExplanation": "These products have barcodes that are close to the detected barcode. Maybe one of them is the product you are looking for."
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Barcode",
@@ -407,7 +409,6 @@
 		"SignIn": "Sign in",
 		"SignOut": "Sign out",
 		"SideMenu": "Side menu",
-		"SimilarBarcodes": "Similar barcodes",
 		"Share": "Share",
 		"Source": "Source",
 		"SourceCode": "Source code",

@@ -88,7 +88,13 @@ function handlePriceTag(priceTag) {
 
     // Add similar barcodes if available
     if (label.similar_barcodes && label.similar_barcodes.length) {
-      productPriceForm.similar_barcodes = label.similar_barcodes
+      productPriceForm.similar_barcodes = label.similar_barcodes.filter(similarBarcode => {
+        if (similarBarcode.barcode.length > 10) {
+          return similarBarcode.distance < 3 // Max 2 digits variance
+        } else {
+          return similarBarcode.distance < 2 // Max 1 digit variance for short barcodes
+        }
+    })
     }
   }
 
