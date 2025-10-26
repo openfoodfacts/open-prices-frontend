@@ -50,6 +50,8 @@ describe('Basic tests', () => {
     cy.get('[data-name="product-not-found-alert"]').should('have.length', 0)
     cy.get('[data-name="category-not-found-alert"]').should('have.length', 0)
     cy.get('[data-name="price-card"]').should('have.length', 1)
+    cy.contains('0.67')
+    cy.contains('3.83 / kg')
     cy.contains('Load more').should('not.exist')
   })
 
@@ -84,6 +86,8 @@ describe('Basic tests', () => {
     cy.get('[data-name="product-not-found-alert"]').should('have.length', 0)
     cy.get('[data-name="category-not-found-alert"]').should('have.length', 0)
     cy.get('[data-name="price-card"]').should('have.length', 2)
+    cy.contains('4.00 / unit')
+    cy.contains('3.00 / kg')
     cy.contains('Load more').should('not.exist')
   })
 
