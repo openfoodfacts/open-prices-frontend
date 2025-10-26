@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Inkambu iyadingeka",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
