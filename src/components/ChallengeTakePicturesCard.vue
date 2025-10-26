@@ -29,7 +29,7 @@
         variant="flat"
         :block="!$vuetify.display.smAndUp"
         prepend-icon="mdi-image-plus"
-        to="/proofs/add/multiple-price-tags"
+        to="/proofs/add/price-tags"
       >
         {{ $t('Challenge.StepTakePictures.AddPictures') }}
       </v-btn>
