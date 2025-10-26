@@ -202,7 +202,11 @@ export default {
       this.handleProofImageList()
     },
     proofObjectList(newProofObjectList, oldProofObjectList) {  // eslint-disable-line no-unused-vars
+      // proof uploaded
       this.$emit('proof', newProofObjectList[0])
+      this.proofForm.proof_id = newProofObjectList[0].id
+      this.proofForm.location_id = newProofObjectList[0].location_id
+      // all proofs uploaded
       if (this.proofObjectList.length === this.proofImageList.length) {
         this.step = 3
         this.$emit('done', this.proofObjectList.length)
@@ -271,48 +275,61 @@ export default {
         })
       }
     },
-    uploadProofList() {
-      this.step = 2
-      // loop on images
-      Promise.all(
-        this.proofImageList.map(proofImage => this.uploadProof(proofImage))
-      )
-    },
-    uploadProof(proofImage) {
-      this.loading = true
-      new Promise((resolve, reject) => {
+    compressProof(proofImage) {
+      return new Promise((resolve, reject) => {
         new Compressor(proofImage, {
           success: resolve,
           error: reject
         })
       })
-      .then((proofImageCompressed) => {
-        api
-          .createProof(proofImageCompressed, this.proofForm, this.$route.path)
-          .then((data) => {
-            this.loading = false
-            if (data.id) {
-              this.proofForm.proof_id = data.id
-              this.proofForm.location_id = data.location_id
-              this.proofObjectList = this.proofObjectList.concat(data)
-            } else {
-              alert(`Error: ${JSON.stringify(data)}`)
-              console.log(JSON.stringify(data))
-            }
-          })
-          .catch((error) => {
-            alert(`Error: ${JSON.stringify(error)}`)
-            console.log(JSON.stringify(error))
-            this.loading = false
-          })
-      })
       .catch((error) => {
         alert('Error: compression')
         console.log(JSON.stringify(error))
       })
-      // .finally(() => {
-      //   console.log('Compress complete')
-      // })
+    },
+    uploadProofList() {
+      this.step = 2
+      // chain uploads sequentially
+      this.proofImageList.reduce((promise, proofImage) => {
+        return promise.then(() =>
+          this.uploadProof(proofImage)
+            .then((data) => {
+              if (data.id) {
+                this.proofObjectList = this.proofObjectList.concat(data)
+              }
+            })
+            .catch((error) => {
+              console.log(JSON.stringify(error))
+            })
+        )
+      }, Promise.resolve())
+    },
+    uploadProof(proofImage) {
+      this.loading = true
+      return new Promise((resolve, reject) => {  // eslint-disable-line no-unused-vars
+        this.compressProof(proofImage)
+          .then((proofImageCompressed) => {
+            api
+              .createProof(proofImageCompressed, this.proofForm, this.$route.path)
+              .then((data) => {
+                this.loading = false
+                if (data.id) {
+                  resolve(data)
+                } else {
+                  alert(`Error: ${JSON.stringify(data)}`)
+                  console.log(JSON.stringify(data))
+                }
+              })
+              .catch((error) => {
+                alert(`Error: ${JSON.stringify(error)}`)
+                console.log(JSON.stringify(error))
+                this.loading = false
+              })
+          })
+          // .finally(() => {
+          //   console.log('Compress complete')
+          // })
+      })
     },
   }
 }
