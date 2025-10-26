@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Editatu",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Eremua beharrezkoa da",
 		"Filter": "Iragazi",
 		"FilterChallengesShowAllStatus": "Show all challenges",
