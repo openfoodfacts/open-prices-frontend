@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Pavyzdžiai: {value}",
 		"Edit": "Redaguoti",
 		"End": "Pabaiga",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Laukas būtinas",
 		"Filter": "Filtras",
 		"FilterChallengesShowAllStatus": "Show all challenges",
