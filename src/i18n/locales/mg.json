@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Ovaina",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Ilaina ny saha",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
