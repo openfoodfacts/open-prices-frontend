@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Chỉnh sửa",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Trường bắt buộc",
 		"Filter": "Bộ lọc",
 		"FilterChallengesShowAllStatus": "Show all challenges",

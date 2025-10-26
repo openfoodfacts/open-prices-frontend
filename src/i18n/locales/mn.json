@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Засвар хийх",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Талбар оруулах шаардлагатай",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",

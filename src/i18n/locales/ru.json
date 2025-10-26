@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Примеры: {value}",
 		"Edit": "Редактировать",
 		"End": "Конец",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Поле обязательно для заполнения",
 		"Filter": "Фильтр",
 		"FilterChallengesShowAllStatus": "Показать все испытания",

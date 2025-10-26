@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Reitur er nauðsynlegur",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",

@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Uredi",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Polje je obavezno",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",

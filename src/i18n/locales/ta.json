@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "எடுத்துக்காட்டுகள்: {value}",
 		"Edit": "திருத்து",
 		"End": "முடிவு",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "புலம் அவசியம்",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",

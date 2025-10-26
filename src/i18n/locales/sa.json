@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "क्षेत्रम् आवश्यकम् अस्ति",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",

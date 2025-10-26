@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "ഫീൽഡ് പൂരിപ്പിക്കേണ്ടതുണ്ട്",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",

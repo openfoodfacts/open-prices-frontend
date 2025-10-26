@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Оңдоо",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Талаа талап кылынат",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",

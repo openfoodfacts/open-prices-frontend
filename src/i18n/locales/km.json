@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "កែសម្រួល",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "វាលត្រូវបានទាមទារ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",

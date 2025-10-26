@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Contoh: {value}",
 		"Edit": "Sunting",
 		"End": "Selesai",
+		"ErrorServer": "Kesalahan: kesalahan server",
 		"FieldIsRequired": "Bidang wajib diisi",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Tampilkan semua tantangan",

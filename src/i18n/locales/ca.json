@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edita",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Camp obligatori",
 		"Filter": "Filtre",
 		"FilterChallengesShowAllStatus": "Show all challenges",

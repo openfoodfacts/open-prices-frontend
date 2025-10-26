@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Muokkaa",
 		"End": "End",
+		"ErrorServer": "Virhe: palvelinvirhe",
 		"FieldIsRequired": "Kenttä on pakollinen",
 		"Filter": "Suodata",
 		"FilterChallengesShowAllStatus": "Show all challenges",

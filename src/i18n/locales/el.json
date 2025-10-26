@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Επεξεργασία",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Απαιτείται πεδίο",
 		"Filter": "Φίλτρο",
 		"FilterChallengesShowAllStatus": "Show all challenges",

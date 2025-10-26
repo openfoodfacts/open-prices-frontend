@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "แก้ไข",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "ฟิลด์นี้จำเป็นต้องกรอก",
 		"Filter": "กรอง",
 		"FilterChallengesShowAllStatus": "Show all challenges",

@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Upraviť",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Pole je povinné",
 		"Filter": "Filtrovať",
 		"FilterChallengesShowAllStatus": "Show all challenges",

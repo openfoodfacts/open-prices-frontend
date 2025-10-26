@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Szerkesztés",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "A mező kitöltése kötelező",
 		"Filter": "Szűrés",
 		"FilterChallengesShowAllStatus": "Show all challenges",

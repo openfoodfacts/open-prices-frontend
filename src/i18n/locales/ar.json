@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "تحرير",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "الحقل مطلوب",
 		"Filter": "تصفية",
 		"FilterChallengesShowAllStatus": "Show all challenges",

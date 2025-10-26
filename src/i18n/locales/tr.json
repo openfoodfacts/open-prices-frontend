@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Örnekler: {value}",
 		"Edit": "Düzenle",
 		"End": "Son",
+		"ErrorServer": "Hata: sunucu hatası",
 		"FieldIsRequired": "Alan gereklidir",
 		"Filter": "Filtrele",
 		"FilterChallengesShowAllStatus": "Tüm meydan okumaları göster",

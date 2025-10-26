@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Muuda",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Väli on kohustuslik",
 		"Filter": "Filtreeri",
 		"FilterChallengesShowAllStatus": "Show all challenges",

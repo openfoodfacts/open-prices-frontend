@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "संपादित करें",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "ये स्थान भरा जाना है",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",

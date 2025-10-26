@@ -282,6 +282,7 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "編集",
 		"End": "End",
+		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "このフィールドは必須です",
 		"Filter": "フィルタ",
 		"FilterChallengesShowAllStatus": "Show all challenges",
