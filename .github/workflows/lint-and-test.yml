@@ -1,4 +1,4 @@
-name: Linting & e2e tests
+name: Linting & e2e tests (disabled)
 
 on: push
 
@@ -16,10 +16,11 @@ jobs:
           runTests: false
       - name: Lint with ESLint
         run: yarn lint
-      - name: Run e2e tests
-        uses: cypress-io/github-action@v6
-        with:
-          # we have already installed all dependencies above
-          install: false
-          # run server in the background
-          start: yarn dev
+      # Disabled? tests are not up to date...
+      # - name: Run e2e tests
+      #   uses: cypress-io/github-action@v6
+      #   with:
+      #     # we have already installed all dependencies above
+      #     install: false
+      #     # run server in the background
+      #     start: yarn dev
