@@ -10,7 +10,7 @@
       <v-card-text>
         <v-row>
           <v-col cols="12">
-            <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" imageHeight="100px" />
+            <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
           </v-col>
         </v-row>
         <v-row v-if="!userIsProofOwner && userIsModerator" class="mt-0">
