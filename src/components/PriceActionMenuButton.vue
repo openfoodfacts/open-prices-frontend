@@ -30,12 +30,14 @@
           <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getPriceDetailUrl">
             {{ $t('Common.Details') }}
           </v-list-item>
-          <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
-            {{ $t('Common.Edit') }}
-          </v-list-item>
-          <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
-            {{ $t('Common.Delete') }}
-          </v-list-item>
+          <v-sheet v-if="userCanEditPrice">
+            <v-list-item :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
+              {{ $t('Common.Edit') }}
+            </v-list-item>
+            <v-list-item :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
+              {{ $t('Common.Delete') }}
+            </v-list-item>
+          </v-sheet>
         </v-sheet>
         <!-- Proof actions -->
         <v-sheet v-if="!hideProofActions">
@@ -158,7 +160,13 @@ export default {
       return this.getPriceDetailUrl
     },
     userIsPriceOwner() {
-      return this.username && (this.price.owner === this.username)
+      return this.username && this.price && this.price.owner === this.username
+    },
+    userIsModerator() {
+      return this.username && this.appStore.user.is_moderator
+    },
+    userCanEditPrice() {
+      return this.userIsPriceOwner || this.userIsModerator
     }
   },
   methods: {
