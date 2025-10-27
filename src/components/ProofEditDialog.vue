@@ -8,7 +8,25 @@
       <v-divider />
 
       <v-card-text>
-        <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" imageHeight="100px" />
+        <v-row>
+          <v-col cols="12">
+            <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" imageHeight="100px" />
+          </v-col>
+        </v-row>
+        <v-row v-if="!userIsProofOwner && userIsModerator" class="mt-0">
+          <v-col cols="12">
+            <v-alert data-name="user-not-proof-owner-alert" type="error" icon="mdi-account-alert" variant="outlined">
+              {{ $t('Common.UserIsNotProofOwner') }}
+            </v-alert>
+          </v-col>
+        </v-row>
+        <v-row v-if="!userIsProofOwner && userIsModerator" class="mt-0">
+          <v-col cols="12">
+            <v-alert data-name="user-proof-edit-moderator-alert" type="error" icon="mdi-shield-account" variant="outlined">
+              {{ $t('Common.UserIsModeratorCanEditProof') }}
+            </v-alert>
+          </v-col>
+        </v-row>
       </v-card-text>
 
       <v-divider />
@@ -39,6 +57,8 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import api from '../services/api'
 
 export default {
@@ -70,6 +90,16 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useAppStore),
+    username() {
+      return this.appStore.user.username
+    },
+    userIsProofOwner() {
+      return this.username && this.proof && this.proof.owner === this.username
+    },
+    userIsModerator() {
+      return this.username && this.appStore.user.is_moderator
+    },
     dialogHeight() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
