@@ -87,7 +87,7 @@
             v-model="appStore.user.favorite_currencies"
             :label="$t('UserSettings.CurrencyLabel')"
             :items="currencyList"
-            :rules="[v => !!(v && v.length) || $t('UserSettings.CurrencyRequired')]"
+            :rules="[value => !!(value && value.length) || $t('UserSettings.CurrencyRequired')]"
             chips
             closable-chips
             multiple
