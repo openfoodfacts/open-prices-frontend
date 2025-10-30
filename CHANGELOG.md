@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.144.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.143.2...v1.144.0) (2025-10-30)
+
+
+### Features
+
+* **Price edit:** allow moderators to edit & delete prices they don't own ([#1784](https://github.com/openfoodfacts/open-prices-frontend/issues/1784)) ([83a5bc7](https://github.com/openfoodfacts/open-prices-frontend/commit/83a5bc7746ba1d6adc057a9856925ff165dd8020))
+* **Proof edit:** allow moderators to edit & delete proofs they don't own ([#1785](https://github.com/openfoodfacts/open-prices-frontend/issues/1785)) ([d77706b](https://github.com/openfoodfacts/open-prices-frontend/commit/d77706b5fd32e105704440370e419557fb60ec5e))
+
+
+### Bug Fixes
+
+* **Price form:** add missing comma-to-dot formatting ([#1787](https://github.com/openfoodfacts/open-prices-frontend/issues/1787)) ([53617f9](https://github.com/openfoodfacts/open-prices-frontend/commit/53617f979b85af510964cee56c49e0769ee46580))
+* **Price form:** avoid trim() error when called on non-string ([#1791](https://github.com/openfoodfacts/open-prices-frontend/issues/1791)) ([599eace](https://github.com/openfoodfacts/open-prices-frontend/commit/599eaceaaea80c0204886a8a379ff0510a3d0e4a))
+* **Receipt Assistant:** only display table when API calls are done. Don't allow clicking other steps ([#1790](https://github.com/openfoodfacts/open-prices-frontend/issues/1790)) ([587f4e6](https://github.com/openfoodfacts/open-prices-frontend/commit/587f4e62adee9e06e793d533fc6bc5bc1c5f623d))
+* **Vuetify:** update theme toggling (since v3.10) ([#1789](https://github.com/openfoodfacts/open-prices-frontend/issues/1789)) ([119901b](https://github.com/openfoodfacts/open-prices-frontend/commit/119901b05d93657658402a572d257a5d723c78c5))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1788](https://github.com/openfoodfacts/open-prices-frontend/issues/1788)) ([0593b58](https://github.com/openfoodfacts/open-prices-frontend/commit/0593b58604a4838e532d8276967146e2a99a268e))
+* **Users:** if moderator, show the info in the user's dashboard ([#1783](https://github.com/openfoodfacts/open-prices-frontend/issues/1783)) ([97ec3d9](https://github.com/openfoodfacts/open-prices-frontend/commit/97ec3d9cf6d62260319d157643e14476d3be943a))
+
 ## [1.143.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.143.1...v1.143.2) (2025-10-26)
 
 
