@@ -205,21 +205,21 @@ export default {
     },
     priceRules() {
       return [
-        value => !!value && !!value.trim() || this.$t('PriceRules.AmountRequired'),
-        value => !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !!value && !!value.toString().trim() || this.$t('PriceRules.AmountRequired'),
+        value => !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
-        value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+        value => !value.toString().match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
         value => !!value && !!this.priceForm.currency || this.$t('Common.CurrencyMissing'),
       ]
     },
     receiptQuantityRules() {
       if (!this.priceForm.receipt_quantity) return [() => true]  // optional field
       return [
-        value => !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
-        value => !value.match(/\.\d{4}/) || this.$t('PriceRules.ThreeDecimals'),
+        value => !value.toString().match(/\.\d{4}/) || this.$t('PriceRules.ThreeDecimals'),
       ]
     },
     receiptQuantitySuffix() {
