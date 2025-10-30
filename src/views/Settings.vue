@@ -246,7 +246,7 @@ export default {
       localeManager.changeLanguage(newLanguage)
     },
     'appStore.user.preferedTheme': function (newTheme, oldTheme) {  // eslint-disable-line no-unused-vars
-      this.theme.global.name = newTheme
+      this.theme.change(newTheme)
     }
   },
   methods: {
