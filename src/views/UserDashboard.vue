@@ -5,12 +5,22 @@
     </v-col>
   </v-row>
 
-  <v-tabs v-if="user" v-model="currentTab" :grow="!$vuetify.display.smAndUp">
-    <v-tab v-for="item in tabItems" :key="item.key" :value="item.key">
-      <v-icon :icon="item.icon" :start="item.key !== 'all'" />
-      <span v-if="item.key !== 'all'">{{ $t('Common.' + item.value) }}</span>
-    </v-tab>
-  </v-tabs>
+  <v-row v-if="user && userIsModerator" class="mt-0">
+    <v-col cols="12" sm="6">
+      <v-alert data-name="user-moderator-alert" type="info" icon="mdi-shield-account" variant="outlined">
+        {{ $t('Common.UserIsModerator') }}
+      </v-alert>
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-tabs v-if="user" v-model="currentTab" :grow="!$vuetify.display.smAndUp">
+      <v-tab v-for="item in tabItems" :key="item.key" :value="item.key">
+        <v-icon :icon="item.icon" :start="item.key !== 'all'" />
+        <span v-if="item.key !== 'all'">{{ $t('Common.' + item.value) }}</span>
+      </v-tab>
+    </v-tabs>
+  </v-row>
 
   <br>
 
@@ -183,6 +193,9 @@ export default {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
+    },
+    userIsModerator() {
+      return this.appStore.user.is_moderator
     },
     displayTodayStats() {
       if (this.currentTab === 'consumption') {
