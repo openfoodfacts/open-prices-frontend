@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <v-stepper v-model="step" hide-actions editable>
+      <v-stepper v-model="step" hide-actions disabled>
         <v-stepper-header>
           <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
           <v-divider />
@@ -34,7 +34,7 @@
     <v-col cols="12" lg="4">
       <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
     </v-col>
-    <v-col cols="12" lg="8">
+    <v-col v-if="!loadingPredictions" cols="12" lg="8">
       <ReceiptTableCard :proof="proofObject" :receiptItems="receiptItems" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
       <v-row>
         <v-col>
