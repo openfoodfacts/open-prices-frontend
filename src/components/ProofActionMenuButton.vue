@@ -17,12 +17,14 @@
         <v-list-item :slim="true" prepend-icon="mdi-open-in-new" :href="getProofImageFullUrl" target="_blank">
           {{ $t('Common.PictureFull') }}
         </v-list-item>
-        <v-list-item v-if="userIsProofOwner" :slim="true" prepend-icon="mdi-pencil" :disabled="!userCanEditProof" @click="openEditDialog">
-          {{ $t('Common.Edit') }}
-        </v-list-item>
-        <v-list-item v-if="userIsProofOwner" :slim="true" prepend-icon="mdi-delete" :disabled="!userCanDeleteProof" @click="openDeleteConfirmationDialog">
-          {{ $t('Common.Delete') }}
-        </v-list-item>
+        <v-sheet v-if="userCanEditProof">
+          <v-list-item :slim="true" prepend-icon="mdi-pencil" :disabled="!proofCanBeEdited" @click="openEditDialog">
+            {{ $t('Common.Edit') }}
+          </v-list-item>
+          <v-list-item :slim="true" prepend-icon="mdi-delete" :disabled="!proofCanBeDeleted" @click="openDeleteConfirmationDialog">
+            {{ $t('Common.Delete') }}
+          </v-list-item>
+        </v-sheet>
       </v-list>
     </v-menu>
   </v-btn>
@@ -124,16 +126,20 @@ export default {
     userCanAddPrice() {
       return this.proof && this.userIsProofOwner && constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
     },
+    userIsModerator() {
+      return this.username && this.appStore.user.is_moderator
+    },
     userCanEditProof() {
-      // user must be proof owner (already checked in parent component)
+      return this.userIsProofOwner || this.userIsModerator
+    },
+    proofCanBeEdited() {
       // only allow edition of certain proof types
-      return this.userIsProofOwner && constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
+      return constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
     },
-    userCanDeleteProof() {
-      // user must be proof owner (already checked in parent component)
-      // and proof must not have any prices
-      return this.userIsProofOwner && this.proof.price_count === 0
-    },
+    proofCanBeDeleted() {
+      // only allow deletion of proofs without prices
+      return this.proof.price_count === 0
+    }
   },
   methods: {
     openEditDialog() {
