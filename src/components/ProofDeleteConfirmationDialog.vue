@@ -15,14 +15,14 @@
         </v-row>
         <v-row v-if="!userIsProofOwner && userIsModerator" class="mt-0">
           <v-col cols="12">
-            <v-alert data-name="user-not-proof-owner-alert" type="error" icon="mdi-account-alert" variant="outlined">
+            <v-alert data-name="user-not-proof-owner-alert" type="info" icon="mdi-account-off" variant="outlined">
               {{ $t('Common.UserIsNotProofOwner') }}
             </v-alert>
           </v-col>
         </v-row>
         <v-row v-if="!userIsProofOwner && userIsModerator" class="mt-0">
           <v-col cols="12">
-            <v-alert data-name="user-proof-delete-moderator-alert" type="error" icon="mdi-shield-account" variant="outlined">
+            <v-alert data-name="user-proof-delete-moderator-alert" type="info" icon="mdi-shield-account" variant="outlined">
               {{ $t('Common.UserIsModeratorCanDeleteProof') }}
             </v-alert>
           </v-col>
