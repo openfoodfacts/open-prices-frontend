@@ -457,12 +457,12 @@
 		"Users": "Gebruikers",
 		"UserCount": "{count} gebruikers | {count} gebruiker | {count} gebruikers",
 		"UserContributorCount": "{count} bijdragers | {count} bijdrager | {count} bijdragers",
-		"UserIsModerator": "You are a moderator",
-		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
-		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
-		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
-		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
-		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsModerator": "Je bent moderator",
+		"UserIsModeratorCanEditPrice": "U kunt deze prijs bewerken omdat u moderator bent",
+		"UserIsModeratorCanDeletePrice": "U kunt deze prijs verwijderen omdat u moderator bent",
+		"UserIsModeratorCanEditProof": "U kunt dit bewijs bewerken omdat u een moderator bent",
+		"UserIsModeratorCanDeleteProof": "U kunt dit bewijs verwijderen omdat u een moderator bent",
+		"UserIsNotPriceOwner": "U bent niet de eigenaar van de prijs",
 		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Bevestigen",
 		"ValidatePrices": "Prijzen valideren",
@@ -530,17 +530,17 @@
 		"Select": "Selecteer {currency_code}"
 	},
 	"CreateOffProduct": {
-		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProduct": "Selecteer onbekend product",
 		"SelectUnknownProductGuide": "Or select an unknown product to add",
 		"CountriesWhereSold": "Verkooplanden",
-		"CreateNewProduct": "Een nieuw product maken",
+		"CreateNewProduct": "Create a new product",
 		"CreateProduct": "Product maken",
 		"EnableCropMode": "Bijsnijdmodus inschakelen",
 		"Flavor": "Selecteer het project waarin het product moet worden gemaakt",
 		"NextProof": "Volgend bewijs",
 		"PreviousProof": "Vorig bewijs",
 		"ProductAlreadyExists": "Product bestaat al",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Producttaal",
 		"ProofNumberOfOutProofs": "Bewijs ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Winkels waar verkocht",
 		"UseCropModeToAddImage": "Om een productafbeelding toe te voegen, schakelt u de bijsnijdmodus in onder de proeffoto en tekent u een rechthoek om het product."
@@ -794,7 +794,7 @@
 			"Title": "Bijdragen"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "Product aanmaken"
 		},
 		"Experiments": {
 			"Title": "Experimenten"
