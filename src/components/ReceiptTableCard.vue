@@ -64,7 +64,7 @@
           />
         </template>
         <template #[`item.receipt_quantity`]="{ item }">
-          {{ item.receipt_quantity }}
+          <PriceQuantityPurchasedChip :priceQuantityPurchased="item.receipt_quantity" />
         </template>
         <template #[`item.actions`]="{ item }">
           <v-row class="float-right">
@@ -133,6 +133,7 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
+    PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
