@@ -122,6 +122,13 @@ function toTitleCase(str) {
   return str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(' ');
 }
 
+function replaceCommaWithDot(value) {
+  if (typeof value === 'string') {
+    return value.replace(',', '.')
+  }
+  return value
+}
+
 export default {
   debounce,
   getDocumentScrollPercentage,
@@ -139,5 +146,6 @@ export default {
   getLocaleOriginTags,
   getLocaleLabelTags,
   getLocaleLabelTagName,
-  toTitleCase
+  toTitleCase,
+  replaceCommaWithDot
 }

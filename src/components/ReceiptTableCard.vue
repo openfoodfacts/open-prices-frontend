@@ -60,7 +60,7 @@
             :rules="priceRules"
             :suffix="itemPriceSuffix(item)"
             :hide-details="true"
-            @update:modelValue="newValue => item.price = fixComma(newValue)"
+            @update:modelValue="newValue => item.price = replaceCommaWithDot(newValue)"
           />
         </template>
         <template #[`item.receipt_quantity`]="{ item }">
@@ -127,6 +127,7 @@ import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import constants from '../constants'
 import price_utils from '../utils/price.js'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -250,8 +251,8 @@ export default {
         return item
       })
     },
-    fixComma(input) {
-      return input.replace(/,/g, '.')
+    replaceCommaWithDot(input) {
+      return utils.replaceCommaWithDot(input)
     },
     itemPriceSuffix(item) {
       let suffix = this.proof.currency

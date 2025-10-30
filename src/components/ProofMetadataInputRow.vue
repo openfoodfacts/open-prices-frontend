@@ -62,7 +62,7 @@
         :rules="priceTotalRules"
         :suffix="proofMetadataForm.currency"
         hide-details="auto"
-        @update:modelValue="newValue => proofMetadataForm.receipt_price_total = fixComma(newValue)"
+        @update:modelValue="newValue => proofMetadataForm.receipt_price_total = replaceCommaWithDot(newValue)"
       />
     </v-col>
   </v-row>
@@ -80,7 +80,7 @@
         :rules="priceOnlineDeliveryCostsRules"
         :suffix="proofMetadataForm.currency"
         hide-details="auto"
-        @update:modelValue="newValue => proofMetadataForm.receipt_online_delivery_costs = fixComma(newValue)"
+        @update:modelValue="newValue => proofMetadataForm.receipt_online_delivery_costs = replaceCommaWithDot(newValue)"
       />
     </v-col>
   </v-row>
@@ -154,6 +154,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
+import utils from '../utils.js'
 
 export default {
   props: {
@@ -246,8 +247,8 @@ export default {
     initProofMetadataForm() {
       this.displayOwnerCommentField = !!this.proofMetadataForm.owner_comment
     },
-    fixComma(input) {
-      return input.replace(/,/g, '.')
+    replaceCommaWithDot(input) {
+      return utils.replaceCommaWithDot(input)
     },
   }
 }
