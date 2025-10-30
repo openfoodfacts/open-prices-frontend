@@ -91,6 +91,7 @@
         :rules="receiptQuantityRules"
         :suffix="receiptQuantitySuffix"
         hide-details="auto"
+        @update:modelValue="newValue => priceForm.receipt_quantity = fixComma(newValue)"
       />
     </v-col>
   </v-row>

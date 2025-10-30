@@ -9,7 +9,13 @@
     <v-card-text>
       <v-data-table :headers="headers" :items="items" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true">
         <template #[`item.product_name`]="{ item }">
-          <v-text-field v-if="item.manuallyAdded" v-model="item.product_name" :hide-details="true" :rules="rules" />
+          <v-text-field
+            v-if="item.manuallyAdded"
+            v-model="item.product_name"
+            density="compact"
+            :rules="rules"
+            :hide-details="true"
+          />
           <p v-else>
             {{ item.product_name }}
           </p>
@@ -22,13 +28,13 @@
         </template>
         <template #[`item.product`]="{ item }">
           <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
-          <v-container v-else-if="!item.productFound">
+          <v-sheet v-else-if="!item.productFound">
             <v-text-field 
               v-model="item.product_code"
-              :hide-details="true"
               density="compact"
               :rules="rules"
               :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'"
+              :hide-details="true"
               @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
               @keydown.enter="findProduct(item)"
             />
@@ -41,19 +47,20 @@
                 {{ item.predicted_product_code }}
               </span>
             </div>
-          </v-container>
+          </v-sheet>
           <ProductCard v-else :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </template>
         <template #[`item.price`]="{ item }">
           <v-text-field
             v-model="item.price"
-            :suffix="itemPriceSuffix(item)"
-            :hide-details="true"
             density="compact"
             variant="outlined"
             type="text"
             inputmode="decimal"
-            :rules="rules"
+            :rules="priceRules"
+            :suffix="itemPriceSuffix(item)"
+            :hide-details="true"
+            @update:modelValue="newValue => item.price = fixComma(newValue)"
           />
         </template>
         <template #[`item.receipt_quantity`]="{ item }">
@@ -162,11 +169,21 @@ export default {
       barcodeScannerDialog: false,
       barcodeScannerItem: null,
       rules: [
-        v => !!v || '',
+        value => !!value || '',
       ],
     }
   },
   computed: {
+    priceRules() {
+      return [
+        value => !!value && !!value.trim() || this.$t('PriceRules.AmountRequired'),
+        value => !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !isNaN(value) || this.$t('PriceRules.Number'),
+        value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
+        value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+        value => !!value && !!this.proof.currency || this.$t('Common.CurrencyMissing'),
+      ]
+    },
     proofPriceListSum() {
       return price_utils.priceSum(this.items.map(item => {
         return {
@@ -232,6 +249,9 @@ export default {
         }
         return item
       })
+    },
+    fixComma(input) {
+      return input.replace(/,/g, '.')
     },
     itemPriceSuffix(item) {
       let suffix = this.proof.currency
