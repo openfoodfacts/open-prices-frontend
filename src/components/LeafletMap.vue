@@ -72,7 +72,7 @@ export default {
     if (this.locations.length) {
       this.mapBounds = geo_utils.getMapBounds(this.locations)
     }
-    if (this.theme.global.name === "dark") {
+    if (this.theme.global.name.value === "dark") {
       this.tiles = "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png"
       this.attribution += ', &copy; <a href="https://carto.com/attributions">CARTO</a>'
     }

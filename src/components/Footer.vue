@@ -88,7 +88,7 @@ export default {
   computed: {
     ...mapStores(useAppStore),
     themeInfo() {
-      if (this.theme.global.name === "light") {
+      if (this.theme.global.name.value === "light") {
         return {
           icon: 'mdi-white-balance-sunny',
           label: 'Theme.LightMode' 
@@ -102,9 +102,9 @@ export default {
   },
   methods: {
     swapTheme() {
-      const newTheme = this.theme.global.name === "light" ? 'dark' : 'light'
+      const newTheme = this.theme.global.name.value === "light" ? 'dark' : 'light'
       this.appStore.user.preferedTheme = newTheme
-      this.theme.global.name = newTheme
+      this.theme.change(newTheme)
     }
   }
 }
