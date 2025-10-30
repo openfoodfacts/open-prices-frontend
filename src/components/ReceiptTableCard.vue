@@ -7,7 +7,7 @@
     <v-divider />
 
     <v-card-text>
-      <v-data-table :headers="headers" :items="items" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true">
+      <v-data-table :headers="headers" :items="items" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
         <template #[`item.product_name`]="{ item }">
           <v-text-field
             v-if="item.manuallyAdded"
@@ -339,15 +339,18 @@ export default {
 
 <style>
 @media (max-width: 960px) {
-  .v-table__wrapper > table > tbody > tr > td:first-child {
-    padding-top: 40px !important;
-  }
   .v-table__wrapper > table > tbody > tr > td:last-child {
     padding-bottom: 40px !important;
   }
   .v-table__wrapper > table > tbody > tr > td:last-child > div:first-child {
-    height: 56px !important;
+    height: 44px !important;
     align-content: center !important;
+  }
+  /**
+   * grid: 1/3 label 2/3 value
+   */
+  .v-data-table__tr--mobile > td {
+    grid-template-columns: 2fr 3fr;
   }
   /**
   * hide "sort by" on mobile
