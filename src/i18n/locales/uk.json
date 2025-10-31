@@ -715,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Додати новий елемент",
-		"MissingPrice": "Відсутня ціна",
-		"MissingProduct": "Відсутній товар",
 		"NoItemsFound": "Жоден елемент не може бути видобутий із чеку, будь ласка, спробуйте ще раз.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Ціна вже створена для товару",
 		"PriceReadyToBeAdded": "Ціна готова до додавання",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
