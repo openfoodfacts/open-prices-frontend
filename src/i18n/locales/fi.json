@@ -222,7 +222,7 @@
 		"Contributors": "Osallistujat",
 		"Contributions": "Osallistumiset",
 		"Confirm": "Vahvista",
-		"Country": "Maa",
+		"Country": "Country",
 		"Countries": "Maat",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Lisätään hintoja",
 		"ChangeLanguage": "Vaihda kieli",
-		"CountryLabel": "Maa",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Valuutta",
 		"DisplayTitle": "Näytä",
 		"BarcodeScanner": "Barcode scanner",
