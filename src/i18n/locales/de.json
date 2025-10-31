@@ -715,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Neuen Eintrag hinzufügen",
-		"MissingPrice": "Fehlender Preis",
-		"MissingProduct": "Fehlendes Produkt",
 		"NoItemsFound": "Es konnten keine Artikel aus dem Kassenzettel extrahiert werden. Bitte versuchen Sie es erneut.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Preis bereits für Artikel erstellt",
 		"PriceReadyToBeAdded": "Preis kann hinzugefügt werden",
+		"ReceiptItems": "Belegpositionen prüfen und korrigieren",
 		"ReceiptItemsCheck": "Belegpositionen prüfen und korrigieren",
 		"UploadOnlyNewPrices": "Nur neue Preise ({nbPrices}) hochladen",
 		"UploadOrUpdateAllValidPrices": "Alle gültigen Preise ({nbPrices}) hochladen oder aktualisieren",
