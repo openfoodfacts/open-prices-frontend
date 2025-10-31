@@ -715,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Tilføj nyt element",
-		"MissingPrice": "Manglende pris",
-		"MissingProduct": "Manglende produkt",
 		"NoItemsFound": "Ingen varer kunne udtrækkes fra kvitteringen, prøv venligst igen.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Prisen er allerede oprettet for varen",
 		"PriceReadyToBeAdded": "Pris klar til at blive tilføjet",
+		"ReceiptItems": "Kvittering for varer, tjek og reparer",
 		"ReceiptItemsCheck": "Kvittering for varer, tjek og reparer",
 		"UploadOnlyNewPrices": "Upload kun nye priser ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload eller opdater alle gyldige priser ({nbPrices})",
