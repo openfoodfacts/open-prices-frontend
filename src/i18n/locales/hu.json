@@ -222,7 +222,7 @@
 		"Contributors": "Hozzájárulók",
 		"Contributions": "Hozzájárulások",
 		"Confirm": "Megerősítés",
-		"Country": "Ország",
+		"Country": "Country",
 		"Countries": "Országok",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Nyelv módosítása",
-		"CountryLabel": "Ország",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Pénznem",
 		"DisplayTitle": "Megjelenítés",
 		"BarcodeScanner": "Barcode scanner",
