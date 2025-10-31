@@ -222,7 +222,7 @@
 		"Contributors": "Співучасники",
 		"Contributions": "Внески",
 		"Confirm": "Підтвердити",
-		"Country": "Країна",
+		"Country": "Country",
 		"Countries": "Країн",
 		"CountryCount": "{count} країни | {count} країна | {count} країни",
 		"Crop": "Crop",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Додавання цін",
 		"ChangeLanguage": "Змінити мову",
-		"CountryLabel": "Країна",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показати",
 		"BarcodeScanner": "Сканер штрих-кодів",
