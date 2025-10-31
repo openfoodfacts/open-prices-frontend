@@ -222,7 +222,7 @@
 		"Contributors": "Bidragsytere",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekreft",
-		"Country": "Land",
+		"Country": "Country",
 		"Countries": "Land",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Bytt språk",
-		"CountryLabel": "Land",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
