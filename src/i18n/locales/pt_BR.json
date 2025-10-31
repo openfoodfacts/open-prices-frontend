@@ -715,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Adicionar novo item",
-		"MissingPrice": "Preço ausente",
-		"MissingProduct": "Produto ausente",
 		"NoItemsFound": "Nenhum item pôde ser extraído do recibo. Tente novamente.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Preço já criado para o item",
 		"PriceReadyToBeAdded": "Preço pronto para ser adicionado",
+		"ReceiptItems": "Itens de recibo, verificação e correção",
 		"ReceiptItemsCheck": "Itens de recibo, verificação e correção",
 		"UploadOnlyNewPrices": "Carregar apenas preços novos ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Carregar ou atualizar todos os preços válidos ({nbPrices})",
