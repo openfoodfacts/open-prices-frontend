@@ -222,7 +222,7 @@
 		"Contributors": "Contributeurs",
 		"Contributions": "Contributions",
 		"Confirm": "Confirmer",
-		"Country": "Pays",
+		"Country": "Country",
 		"Countries": "Pays",
 		"CountryCount": "{count} pays | {count} pays | {count} pays",
 		"Crop": "Recadrer",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Ajout de prix",
 		"ChangeLanguage": "Changer la langue",
-		"CountryLabel": "Pays",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Devise",
 		"DisplayTitle": "Afficher",
 		"BarcodeScanner": "Lecteur de code-barres",
