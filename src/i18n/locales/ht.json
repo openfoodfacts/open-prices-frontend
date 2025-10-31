@@ -222,7 +222,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
-		"Country": "Peyi",
+		"Country": "Country",
 		"Countries": "Peyi",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Ajoute pri",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Peyi",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Lajan",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
