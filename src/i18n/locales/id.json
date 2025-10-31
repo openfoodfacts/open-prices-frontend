@@ -222,7 +222,7 @@
 		"Contributors": "Kontributor",
 		"Contributions": "Kontribusi",
 		"Confirm": "Konfirmasi",
-		"Country": "Negara",
+		"Country": "Country",
 		"Countries": "Negara - negara",
 		"CountryCount": "{count} negara | {count} negara | {count} negara",
 		"Crop": "Potong",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Menambahkan harga",
 		"ChangeLanguage": "Ganti bahasa",
-		"CountryLabel": "Negara",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Mata uang",
 		"DisplayTitle": "Tampilan",
 		"BarcodeScanner": "Pemindai kode batang",
