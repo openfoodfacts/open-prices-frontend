@@ -222,7 +222,7 @@
 		"Contributors": "Prispievatelia",
 		"Contributions": "Príspevky",
 		"Confirm": "Potvrdiť",
-		"Country": "Krajina",
+		"Country": "Country",
 		"Countries": "Krajiny",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Pridanie cien",
 		"ChangeLanguage": "Zmeniť jazyk",
-		"CountryLabel": "Krajina",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Mena",
 		"DisplayTitle": "Zobraziť",
 		"BarcodeScanner": "Barcode scanner",
