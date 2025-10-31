@@ -715,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Tambah item baru",
-		"MissingPrice": "Harga tidak ada",
-		"MissingProduct": "Produk tidak ada",
 		"NoItemsFound": "Tidak ada item yang dapat diekstraksi dari struk, silakan coba lagi.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Harga sudah ditetapkan untuk item tersebut",
 		"PriceReadyToBeAdded": "Harga siap ditambahkan",
+		"ReceiptItems": "Item-item pada bukti pembayaran, periksa dan perbaiki",
 		"ReceiptItemsCheck": "Item-item pada bukti pembayaran, periksa dan perbaiki",
 		"UploadOnlyNewPrices": "Unggah hanya harga baru ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Unggah atau perbarui semua harga yang valid ({nbPrices})",
