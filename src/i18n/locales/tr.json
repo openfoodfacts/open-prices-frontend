@@ -715,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Yeni öğe ekle",
-		"MissingPrice": "Eksik fiyat",
-		"MissingProduct": "Eksik ürün",
 		"NoItemsFound": "Fişten hiçbir ürün çıkarılamadı, lütfen tekrar deneyin.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Ürün için fiyat zaten oluşturuldu",
 		"PriceReadyToBeAdded": "Fiyat eklenmeye hazır",
+		"ReceiptItems": "Makbuz öğelerini kontrol edin ve düzeltin",
 		"ReceiptItemsCheck": "Makbuz öğelerini kontrol edin ve düzeltin",
 		"UploadOnlyNewPrices": "Yalnızca yeni fiyatları yükleyin ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Tüm geçerli fiyatları yükleyin veya güncelleyin ({nbPrices})",
