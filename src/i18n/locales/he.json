@@ -715,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "הוספת פריט חדש",
-		"MissingPrice": "חסר מחיר",
-		"MissingProduct": "חסר מוצר",
 		"NoItemsFound": "לא ניתן לחלץ פריטים מהקבלה, נא לנסות שוב.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "כבר נוצר מחיר לפריט",
 		"PriceReadyToBeAdded": "המחיר מוכן להוספה",
+		"ReceiptItems": "פריטים בקבלה, בדיקה ותיקון",
 		"ReceiptItemsCheck": "פריטים בקבלה, בדיקה ותיקון",
 		"UploadOnlyNewPrices": "להעלות מחירים חדשים בלבד ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "להעלות או לעדכן את כל המחירים התקפים ({nbPrices})",
