@@ -222,7 +222,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Prisidėjo",
 		"Confirm": "Patvirtinti",
-		"Country": "Šalis",
+		"Country": "Country",
 		"Countries": "Šalys",
 		"CountryCount": "{count} šalys| {count} šalis| {count} šalių",
 		"Crop": "Apkarpyti",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Kainų pridėjimas",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Šalis",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Valiuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Brūkšninių kodų skaitytuvas",
