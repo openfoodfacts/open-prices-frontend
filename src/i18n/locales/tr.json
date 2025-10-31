@@ -222,7 +222,7 @@
 		"Contributors": "Katkıda bulunanlar",
 		"Contributions": "Katkıda Bulunulanlar",
 		"Confirm": "Onayla",
-		"Country": "Ülke",
+		"Country": "Country",
 		"Countries": "Ülkeler",
 		"CountryCount": "{count} ülkeler | {count} ülke | {count} ülkeler",
 		"Crop": "Kırp",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Fiyat ekleme",
 		"ChangeLanguage": "Dili Değiştir",
-		"CountryLabel": "Ülke",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Kur",
 		"DisplayTitle": "Göster",
 		"BarcodeScanner": "Barkod tarayıcı",
