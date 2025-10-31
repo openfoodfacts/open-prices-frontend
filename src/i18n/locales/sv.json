@@ -715,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Pris saknas",
-		"MissingProduct": "Produkt saknas",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
