@@ -715,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Nieuw artikel toevoegen",
-		"MissingPrice": "Ontbrekende prijs",
-		"MissingProduct": "Ontbrekend product",
 		"NoItemsFound": "Er konden geen items uit de bon worden gehaald. Probeer het opnieuw.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Prijs is al aangemaakt voor artikel",
 		"PriceReadyToBeAdded": "Prijs klaar om toegevoegd te worden",
+		"ReceiptItems": "Ontvangstbewijzen, controleren en in orde maken",
 		"ReceiptItemsCheck": "Ontvangstbewijzen, controleren en in orde maken",
 		"UploadOnlyNewPrices": "Upload alleen nieuwe prijzen ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload of update alle geldige prijzen ({nbPrices})",
