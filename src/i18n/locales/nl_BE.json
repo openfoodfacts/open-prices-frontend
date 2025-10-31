@@ -222,7 +222,7 @@
 		"Contributors": "Bijdragers",
 		"Contributions": "Bijdragen",
 		"Confirm": "Bevestig",
-		"Country": "Land",
+		"Country": "Country",
 		"Countries": "Landen",
 		"CountryCount": "{count} landen | {count} land | {count} landen",
 		"Crop": "Bijsnijden",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Prijzen toevoegen",
 		"ChangeLanguage": "Taal wijzigen",
-		"CountryLabel": "Land",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Weergave",
 		"BarcodeScanner": "Streepjescodescanner",
