@@ -31,7 +31,7 @@
       >
         <template v-if="!hideCurrencyChoice" #prepend-inner>
           <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
-          <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" @click="changeCurrencyDialog = true">
+          <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" alt="Currency Exchange icon" @click="changeCurrencyDialog = true">
         </template>
       </v-text-field>
     </v-col>

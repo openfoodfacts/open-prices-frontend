@@ -3,7 +3,7 @@
     <v-app-bar-nav-icon @click.stop="showDrawerMenu = !showDrawerMenu" />
     <v-app-bar-title>
       <span style="cursor:pointer" @click="$router.push('/')">
-        <img src="/favicon.svg" height="28" width="28" style="vertical-align:bottom">
+        <img src="/favicon.svg" height="28" width="28" alt="Open Prices logo" style="vertical-align:bottom">
         {{ APP_NAME }}
         <span v-if="ENV !== 'prod'" class="text-caption text-error">{{ ENV }}</span>
       </span>
