@@ -1,5 +1,5 @@
 <template>
-  <a v-if="display === 'link'" :disabled="disabled" @click="shareViaWebShare" role="link">
+  <a v-if="display === 'link'" :disabled="disabled" @click="shareViaWebShare" role="link" tabindex="0">
     {{ $t('Common.Share') }}
   </a>
   <v-btn

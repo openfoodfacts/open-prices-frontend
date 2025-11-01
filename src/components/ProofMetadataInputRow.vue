@@ -86,7 +86,7 @@
   </v-row>
   <v-row v-if="!multiple" class="mt-0">
     <v-col v-if="!displayOwnerCommentField" cols="12">
-      <a class="fake-link" @click="displayOwnerCommentField = true" role="link">
+      <a class="fake-link" @click="displayOwnerCommentField = true" role="link" tabindex="0">
         {{ $t('Common.AddComment') }}
       </a>
     </v-col>

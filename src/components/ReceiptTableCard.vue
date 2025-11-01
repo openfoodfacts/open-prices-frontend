@@ -40,7 +40,7 @@
             />
             <div v-if="item.predicted_product_code" class="text-caption">
               {{ $t('Common.SuggestedBarcode') }}
-              <a class="fake-link" @click="handleClickProductCodeSuggestion(item)" role="link">
+              <a class="fake-link" @click="handleClickProductCodeSuggestion(item)" role="link" tabindex="0">
                 {{ item.predicted_product_code }}
               </a>
             </div>
