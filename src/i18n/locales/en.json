@@ -763,6 +763,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"AddProofsReceipts": {
+			"Title": "Add proofs (receipts)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -786,6 +789,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipts": {
+			"Title": "Receipts"
 		},
 		"Community": {
 			"Title": "Community"
