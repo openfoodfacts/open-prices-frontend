@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.144.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.144.0...v1.144.1) (2025-11-01)
+
+
+### Technical
+
+* **deps:** bump actions/setup-node from 4 to 6 ([#1798](https://github.com/openfoodfacts/open-prices-frontend/issues/1798)) ([01144ed](https://github.com/openfoodfacts/open-prices-frontend/commit/01144edddd18978810b03f59815f8dd1e37a95d8))
+* **deps:** bump vue from 3.5.21 to 3.5.22 ([#1708](https://github.com/openfoodfacts/open-prices-frontend/issues/1708)) ([ac41790](https://github.com/openfoodfacts/open-prices-frontend/commit/ac4179079919cd8818b8fc997056a527b3f9ca4b))
+* **deps:** bump vuetify from 3.10.2 to 3.10.3 ([#1711](https://github.com/openfoodfacts/open-prices-frontend/issues/1711)) ([95f3cd0](https://github.com/openfoodfacts/open-prices-frontend/commit/95f3cd04dec3ce7a70c881ec8dd3bedc593b79bc))
+* **l10n:** New Crowdin translations to review and merge ([#1792](https://github.com/openfoodfacts/open-prices-frontend/issues/1792)) ([3233333](https://github.com/openfoodfacts/open-prices-frontend/commit/32333336450526a75fa44d64a5cab77fa81b6976))
+* **Receipt Assistant:** display 'quantity' using existing component ([#1796](https://github.com/openfoodfacts/open-prices-frontend/issues/1796)) ([40a3479](https://github.com/openfoodfacts/open-prices-frontend/commit/40a34795643b833f5b488c53d3c59f93754a60b2))
+* **Receipt Assistant:** reduce padding. adapt grid on mobile ([#1794](https://github.com/openfoodfacts/open-prices-frontend/issues/1794)) ([a5e94d8](https://github.com/openfoodfacts/open-prices-frontend/commit/a5e94d86fbbe466ba94983773d902f16c8220471))
+* **Receipt Assistant:** simplify some wordings ([#1797](https://github.com/openfoodfacts/open-prices-frontend/issues/1797)) ([9d445c7](https://github.com/openfoodfacts/open-prices-frontend/commit/9d445c74607290d0bf47aad13633adfbed87c26f))
+
 ## [1.144.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.143.2...v1.144.0) (2025-10-30)
 
 
