@@ -260,6 +260,7 @@
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
 		"Date": "Date",
+		"DateHelpText": "Date of the proof's picture. Default date is suggested using picture metadata.",
 		"DateMissing": "Date missing",
 		"Details": "Details",
 		"Delete": "Delete",
@@ -333,15 +334,24 @@
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
+		"OrderProductUniqueScansDESCHelpText": "Products often scanned on Open Food Facts are shown first",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
+		"OrderPriceCountDESCHelpText": "Items with more prices are shown first",
 		"OrderPriceASC": "Price",
+		"OrderPriceASCHelpText": "Cheaper prices are shown first",
+		"OrderPriceDESC": "Price",
+		"OrderPriceDESCHelpText": "Higher prices are shown first",
 		"OrderPriceCreatedDESC": "Addition date",
+		"OrderPriceCreatedDESCHelpText": "Recently added prices are shown first",
 		"OrderPriceDateDESC": "Price date",
+		"OrderPriceDateDESCHelpText": "Prices with recent pictures are shown first",
 		"OrderProductCountDESC": "Product count",
 		"OrderProofCountDESC": "Proof count",
 		"OrderProofCreatedDESC": "Addition date",
+		"OrderProofCreatedDESCHelpText": "Recently added proofs are shown first",
 		"OrderProofDateDESC": "Proof date",
+		"OrderProofDateDESCHelpText": "Proofs with recent pictures are shown first",
 		"OrderUserCountDESC": "User count",
 		"Other": "Other",
 		"OtherContributions": "Other contributions",
@@ -583,6 +593,11 @@
 	},
 	"LocationSelector": {
 		"Clear": "Clear",
+		"HelpTexts": {
+			"Recent": "List of recent locations used on this device.",
+			"Physical": "Real world location, uses OpenStreetMap, a community-built map of the world. Some locations might be missing.",
+			"Online": "URL of online shop where you recently made a purchase."
+		},
 		"NoResult": "No results found",
 		"NoResultHelpKeywords": "Can't find your shop? Try using keywords instead of the full address (e.g. 'Carrefour 75013 Paris' or 'Walmart San Francisco').",
 		"NoResultHelpOSM": "Still can't find your shop? It might not be in {osm_name} yet. You can add it on {osm_url} first.",
@@ -854,6 +869,7 @@
 			"Title": "Proof Price Tag Assistant"
 		},
 		"PriceValidationAssistant": {
+			"Intro": "Price tags information is automatically extracted, but help is still needed to validate its accuracy. This is done as a community effort.\n For each price below, check that the price, barcode or category are correct, fix them if needed and confirm. Unreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it.",
 			"Title": "Price Validation Assistant"
 		},
 		"ReceiptAssistant": {
@@ -863,6 +879,7 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
+			"Intro": "Community challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\n Check the ongoing challenges below to participate, or visit the past challenges archives.",
 			"Title": "Challenges"
 		},
 		"CommunityChallenge": {
