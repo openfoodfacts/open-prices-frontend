@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statîstîk û rêzkirin",
 		"MostPicturesAdded": "Wêneyên herî zêde hatine zêdekirin",
 		"MostPricesAdded": "Piraniya bihayên hatine zêdekirin",
-		"MostPricesFromPicturesAdded": "Piraniya bihayan ji wêneyan hatine zêdekirin"
+		"MostPricesFromPicturesAdded": "Piraniya bihayan ji wêneyan hatine zêdekirin",
+		"AlertNew": "Fikirek te ji bo pêşbaziyek nû heye? Ji me re bêje {url}!"
 	},
 	"Common": {
 		"About": "Li_ser",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Qad pêwîst e",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Berhemeke nû biafirîne",
+		"CreateProduct": "Berhemê biafirîne",
+		"EnableCropMode": "Moda birînê çalak bike",
+		"Flavor": "Projeya ku divê berhem tê de were afirandin hilbijêre",
+		"NextProof": "Next proof",
+		"PreviousProof": "Delîla berê",
+		"ProductAlreadyExists": "Berhem jixwe heye",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Delîl ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Dikanên ku lê hatine firotin",
+		"UseCropModeToAddImage": "Ji bo lêzêdekirina wêneyekî hilberê, moda birrînê ya li jêr wêneyê îspatkirî çalak bike û li dora hilberê çargoşeyekî xêz bike."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Vekirî",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Dikana xwe nabînî? Li şûna navnîşana tevahî, biceribîne peyvên sereke bi kar bînî (mînak 'Carrefour 75013 Paris' an 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Hîn jî dikana xwe nabînî? Dibe ku ew hîn di {osm_name} de nebe. Hûn dikarin pêşî wê li {osm_url} zêde bikin.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Li_ser"
+		},
+		"Add": {
+			"Title": "Lê zêde bike"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Etîketên bihayê"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

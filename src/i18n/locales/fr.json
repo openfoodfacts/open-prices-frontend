@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistiques et classements",
 		"MostPicturesAdded": "La plupart des images ajoutées",
 		"MostPricesAdded": "La plupart des prix ajoutés",
-		"MostPricesFromPicturesAdded": "La plupart des prix sont issus d'images ajoutées"
+		"MostPricesFromPicturesAdded": "La plupart des prix sont issus d'images ajoutées",
+		"AlertNew": "Vous avez une idée de nouveau défi ? Dites-le-nous ! {url}"
 	},
 	"Common": {
 		"About": "À propos",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Ajouter de nouvelles preuves",
 		"AddToOFF": "Ajouter à {name}",
 		"AdditionalInfo": "Informations supplémentaires",
+		"All": "Tout",
 		"Barcode": "Code-barres",
 		"Barcodes": "Code-barres",
 		"BarcodeScan": "Scanner un code-barres",
@@ -220,7 +222,7 @@
 		"Contributors": "Contributeurs",
 		"Contributions": "Contributions",
 		"Confirm": "Confirmer",
-		"Country": "Pays",
+		"Country": "Country",
 		"Countries": "Pays",
 		"CountryCount": "{count} pays | {count} pays | {count} pays",
 		"Crop": "Recadrer",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Exemples : {value}",
 		"Edit": "Modifier",
 		"End": "Fin",
+		"ErrorServer": "Erreur : erreur serveur",
+		"FieldIsRequired": "Le champ est obligatoire",
 		"Filter": "Filtre",
 		"FilterChallengesShowAllStatus": "Afficher tous les défis",
 		"FilterProductWithPriceCount": "Avec un prix",
@@ -453,6 +457,13 @@
 		"Users": "Utilisateurs",
 		"UserCount": "{count} utilisateurs | {count} utilisateur | {count} utilisateurs",
 		"UserContributorCount": "{count} contributeurs | {count} contributeur | {count} contributeurs",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Valider",
 		"ValidatePrices": "Valider des prix",
 		"ValidatePricesWithAI": "Valider des prix avec l'IA",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "Vous allez être redirigé vers la page des paramètres, mais vous perdrez toutes les informations que vous avez saisies sur cette page.",
 		"Select": "Sélectionner {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Pays de vente",
+		"CreateNewProduct": "Créer un nouveau produit",
+		"CreateProduct": "Créer un produit",
+		"EnableCropMode": "Activer le mode recadrage",
+		"Flavor": "Sélectionnez le projet dans lequel le produit doit être créé",
+		"NextProof": "Preuve suivante",
+		"PreviousProof": "Preuve précédente",
+		"ProductAlreadyExists": "Le produit existe déjà",
+		"ProductLanguage": "Langue du produit",
+		"ProofNumberOfOutProofs": "Preuve ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Magasins où vendu",
+		"UseCropModeToAddImage": "Pour ajouter une image de produit, activez le mode de recadrage sous l'image d'épreuve et dessinez un rectangle autour du produit."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Sélectionner une de vos preuves récentes"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Effacer",
 		"NoResult": "Aucun résultat trouvé",
+		"NoResultHelpKeywords": "Vous ne trouvez pas votre magasin ? Essayez d'utiliser des mots-clés plutôt que l'adresse complète (par exemple, « Carrefour 75013 Paris » ou « Walmart San Francisco »).",
+		"NoResultHelpOSM": "Vous ne trouvez toujours pas votre boutique ? Elle n'est peut-être pas encore dans {osm_name} . Vous pouvez d'abord l'ajouter dans {osm_url} .",
 		"PoweredBy": {
 			"text": "fonctionne avec {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Ajouter un nouvel article",
-		"MissingPrice": "Prix manquant",
-		"MissingProduct": "Produit manquant",
 		"NoItemsFound": "Aucun élément n'a pu être extrait du reçu, veuillez réessayer.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Prix déjà créé pour l'article",
 		"PriceReadyToBeAdded": "Prix prêt à être ajouté",
+		"ReceiptItems": "Éléments de réception, vérifier et corriger",
 		"ReceiptItemsCheck": "Éléments de réception, vérifier et corriger",
 		"UploadOnlyNewPrices": "Téléverser uniquement les nouveaux prix ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Téléverser ou mettre à jour tous les prix valides ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "À propos"
+		},
+		"Add": {
+			"Title": "Ajouter"
 		},
 		"AddPrice": {
 			"Title": "Ajouter un prix"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Ajouter plusieurs preuves"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Lieux"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prix"
 		},
+		"PriceTags": {
+			"Title": "Étiquettes de prix"
+		},
 		"Proofs": {
 			"Title": "Preuves"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribuer"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Expérimentations"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Ajout de prix",
 		"ChangeLanguage": "Changer la langue",
-		"CountryLabel": "Pays",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Devise",
 		"DisplayTitle": "Afficher",
 		"BarcodeScanner": "Lecteur de code-barres",

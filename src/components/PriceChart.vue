@@ -49,7 +49,7 @@ export default {
           y: {aggregate: 'mean', field: 'price', type: 'quantitative', axis: { title: this.$t('Common.Price') }},
         }
       }
-      embed('#vega-lite-chart', vlSpec, {actions: false, theme: this.theme.global.name})
+      embed('#vega-lite-chart', vlSpec, {actions: false, theme: this.theme.global.name.value})
     }
   }
 }

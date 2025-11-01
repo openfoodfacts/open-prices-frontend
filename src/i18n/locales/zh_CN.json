@@ -162,7 +162,8 @@
 		"StatsAndRankings": "统计数据和排名",
 		"MostPicturesAdded": "添加的图片最多",
 		"MostPricesAdded": "大部分价格已添加",
-		"MostPricesFromPicturesAdded": "大部分价格来自已添加的图片"
+		"MostPricesFromPicturesAdded": "大部分价格来自已添加的图片",
+		"AlertNew": "你有新的挑战想法吗？告诉我们 {url}！"
 	},
 	"Common": {
 		"About": "关于",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "添加到 {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "全部",
 		"Barcode": "条形码",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "扫描条形码",
@@ -220,7 +222,7 @@
 		"Contributors": "贡献者",
 		"Contributions": "贡献",
 		"Confirm": "确认",
-		"Country": "国家/地区",
+		"Country": "Country",
 		"Countries": "国家/地区",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "编辑",
 		"End": "End",
+		"ErrorServer": "错误：服务器错误",
+		"FieldIsRequired": "必填字段",
 		"Filter": "筛选",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "有价格",
@@ -453,6 +457,13 @@
 		"Users": "用户",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "验证",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "您将被重定向到“设置”页面，但会丢失您在此页面上输入的所有信息。",
 		"Select": "选择 {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "可出售的国家",
+		"CreateNewProduct": "创建新产品",
+		"CreateProduct": "创建产品",
+		"EnableCropMode": "启用裁剪模式",
+		"Flavor": "选择要创建产品的项目",
+		"NextProof": "Next proof",
+		"PreviousProof": "先前的证明",
+		"ProductAlreadyExists": "产品已存在",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "证明（{numberOfOutProofs}/{totalNumberOfProofs}）",
+		"StoresWhereSold": "销售商店",
+		"UseCropModeToAddImage": "要添加产品图片，请在校样图片下方启用裁剪模式并在产品周围绘制一个矩形。"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "选择您最近的一个校样"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "清除",
 		"NoResult": "未找到结果",
+		"NoResultHelpKeywords": "找不到您的店铺？请尝试使用关键词代替完整地址（例如“Carrefour 75013 Paris”或“Walmart San Francisco”）。",
+		"NoResultHelpOSM": "还是找不到你的店铺？它可能还不在 {osm_name} 中。你可以先在 {osm_url} 上添加。",
 		"PoweredBy": {
 			"text": "由 {url} 供电"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "关于"
+		},
+		"Add": {
+			"Title": "加入产品"
 		},
 		"AddPrice": {
 			"Title": "添加价格"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "地点"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "价格"
 		},
+		"PriceTags": {
+			"Title": "价格标签"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "贡献"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "添加价格",
 		"ChangeLanguage": "更改语言",
-		"CountryLabel": "国家/地区",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "货币",
 		"DisplayTitle": "显示",
 		"BarcodeScanner": "Barcode scanner",

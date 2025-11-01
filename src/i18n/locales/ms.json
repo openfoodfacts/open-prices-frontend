@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistik & kedudukan",
 		"MostPicturesAdded": "Kebanyakan gambar ditambah",
 		"MostPricesAdded": "Kebanyakan harga ditambah",
-		"MostPricesFromPicturesAdded": "Kebanyakan harga daripada gambar ditambah"
+		"MostPricesFromPicturesAdded": "Kebanyakan harga daripada gambar ditambah",
+		"AlertNew": "Anda mempunyai idea untuk cabaran baharu? Beritahu kami {url}!"
 	},
 	"Common": {
 		"About": "Tentang",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Semua",
 		"Barcode": "Barkod",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Medan diperlukan",
 		"Filter": "Tapis",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Tentusahkan",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Buat produk baharu",
+		"CreateProduct": "Buat produk",
+		"EnableCropMode": "Dayakan mod pangkas",
+		"Flavor": "Pilih projek tempat produk harus dibuat",
+		"NextProof": "Next proof",
+		"PreviousProof": "Bukti sebelumnya",
+		"ProductAlreadyExists": "Produk sudah wujud",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Bukti ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Kedai di mana dijual",
+		"UseCropModeToAddImage": "Untuk menambah imej produk, dayakan mod pangkas di bawah gambar bukti dan lukis segi empat tepat di sekeliling produk."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Tidak menemui kedai anda? Cuba gunakan kata kunci dan bukannya alamat penuh (cth 'Carrefour 75013 Paris' atau 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Masih tidak menemui kedai anda? Ia mungkin belum berada dalam {osm_name} lagi. Anda boleh menambahkannya pada {osm_url} dahulu.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Tentang"
+		},
+		"Add": {
+			"Title": "Tambah"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Tanda harga"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Sumbang"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

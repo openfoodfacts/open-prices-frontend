@@ -7,28 +7,34 @@
     <v-divider />
 
     <v-card-text>
-      <v-data-table :headers="headers" :items="items" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true">
+      <v-data-table :headers="headers" :items="items" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
         <template #[`item.product_name`]="{ item }">
-          <v-text-field v-if="item.manuallyAdded" v-model="item.product_name" :hide-details="true" :rules="rules" />
+          <v-text-field
+            v-if="item.manuallyAdded"
+            v-model="item.product_name"
+            density="compact"
+            :rules="rules"
+            :hide-details="true"
+          />
           <p v-else>
             {{ item.product_name }}
           </p>
           <p v-if="showInfoDetails">
-            <span v-if="item.existingPrice" class="text-caption text-warning">{{ $t('ReceiptAssistant.PriceAlreadyCreatedForItem') }}</span>
-            <span v-else-if="!item.price" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingPrice') }}</span>
-            <span v-else-if="item.isCategory ? !item.category_tag : !item.product_code" class="text-caption text-error">{{ $t('ReceiptAssistant.MissingProduct') }}</span>
+            <span v-if="item.existingPrice" class="text-caption text-warning">{{ $t('ReceiptAssistant.PriceAlreadyCreated') }}</span>
+            <span v-else-if="!item.price" class="text-caption text-error">{{ $t('Common.PriceMissing') }}</span>
+            <span v-else-if="item.isCategory ? !item.category_tag : !item.product_code" class="text-caption text-error">{{ $t('Common.ProductMissing') }}</span>
             <span v-else class="text-caption text-success">{{ $t('ReceiptAssistant.PriceReadyToBeAdded') }}</span>
           </p>
         </template>
         <template #[`item.product`]="{ item }">
           <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
-          <v-container v-else-if="!item.productFound">
+          <v-sheet v-else-if="!item.productFound">
             <v-text-field 
               v-model="item.product_code"
-              :hide-details="true"
               density="compact"
               :rules="rules"
               :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'"
+              :hide-details="true"
               @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
               @keydown.enter="findProduct(item)"
             />
@@ -41,23 +47,24 @@
                 {{ item.predicted_product_code }}
               </span>
             </div>
-          </v-container>
+          </v-sheet>
           <ProductCard v-else :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
         </template>
         <template #[`item.price`]="{ item }">
           <v-text-field
             v-model="item.price"
-            :suffix="itemPriceSuffix(item)"
-            :hide-details="true"
             density="compact"
             variant="outlined"
             type="text"
             inputmode="decimal"
-            :rules="rules"
+            :rules="priceRules"
+            :suffix="itemPriceSuffix(item)"
+            :hide-details="true"
+            @update:modelValue="newValue => item.price = replaceCommaWithDot(newValue)"
           />
         </template>
         <template #[`item.receipt_quantity`]="{ item }">
-          {{ item.receipt_quantity }}
+          <PriceQuantityPurchasedChip :priceQuantityPurchased="item.receipt_quantity" />
         </template>
         <template #[`item.actions`]="{ item }">
           <v-row class="float-right">
@@ -120,11 +127,13 @@ import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import constants from '../constants'
 import price_utils from '../utils/price.js'
+import utils from '../utils.js'
 
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
+    PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
@@ -162,11 +171,21 @@ export default {
       barcodeScannerDialog: false,
       barcodeScannerItem: null,
       rules: [
-        v => !!v || '',
+        value => !!value || '',
       ],
     }
   },
   computed: {
+    priceRules() {
+      return [
+        value => !!value && !!value.toString().trim() || this.$t('PriceRules.AmountRequired'),
+        value => !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !isNaN(value) || this.$t('PriceRules.Number'),
+        value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
+        value => !value.toString().match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+        value => !!value && !!this.proof.currency || this.$t('Common.CurrencyMissing'),
+      ]
+    },
     proofPriceListSum() {
       return price_utils.priceSum(this.items.map(item => {
         return {
@@ -232,6 +251,9 @@ export default {
         }
         return item
       })
+    },
+    replaceCommaWithDot(input) {
+      return utils.replaceCommaWithDot(input)
     },
     itemPriceSuffix(item) {
       let suffix = this.proof.currency
@@ -318,15 +340,18 @@ export default {
 
 <style>
 @media (max-width: 960px) {
-  .v-table__wrapper > table > tbody > tr > td:first-child {
-    padding-top: 40px !important;
-  }
   .v-table__wrapper > table > tbody > tr > td:last-child {
     padding-bottom: 40px !important;
   }
   .v-table__wrapper > table > tbody > tr > td:last-child > div:first-child {
-    height: 56px !important;
+    height: 44px !important;
     align-content: center !important;
+  }
+  /**
+   * grid: 1/3 label 2/3 value
+   */
+  .v-data-table__tr--mobile > td {
+    grid-template-columns: 2fr 3fr;
   }
   /**
   * hide "sort by" on mobile

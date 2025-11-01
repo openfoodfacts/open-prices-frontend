@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Estatistik ak klasman",
 		"MostPicturesAdded": "Pifò foto yo te ajoute",
 		"MostPricesAdded": "Pifò pri yo te ajoute",
-		"MostPricesFromPicturesAdded": "Pifò pri ki soti nan foto yo te ajoute"
+		"MostPricesFromPicturesAdded": "Pifò pri ki soti nan foto yo te ajoute",
+		"AlertNew": "Ou gen yon lide pou yon nouvo defi? Fè nou konnen {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Ajoute nan {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Tout",
 		"Barcode": "Kòd ba",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Eskane yon kòd ba",
@@ -220,7 +222,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
-		"Country": "Peyi",
+		"Country": "Country",
 		"Countries": "Peyi",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modifye",
 		"End": "End",
+		"ErrorServer": "Erè: erè sèvè",
+		"FieldIsRequired": "Chan sa a obligatwa",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "Ak yon pri",
@@ -453,6 +457,13 @@
 		"Users": "Itilizatè yo",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Chwazi {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Kreye yon nouvo pwodwi",
+		"CreateProduct": "Kreye pwodwi",
+		"EnableCropMode": "Aktive mòd rekòt la",
+		"Flavor": "Chwazi pwojè kote pwodwi a ta dwe kreye a",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prèv anvan an",
+		"ProductAlreadyExists": "Pwodwi a deja egziste",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Prèv ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Magazen kote yo vann",
+		"UseCropModeToAddImage": "Pou ajoute yon imaj pwodwi, aktive mòd koupe anba foto prèv la epi trase yon rektang otou pwodwi a."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "Pa gen rezilta yo jwenn",
+		"NoResultHelpKeywords": "Ou pa jwenn magazen ou an? Eseye itilize mo kle olye adrès konplè a (pa egzanp 'Carrefour 75013 Paris' oswa 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Ou toujou pa ka jwenn boutik ou a? Li ka poko nan {osm_name} . Ou ka ajoute l sou {osm_url} anvan.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Ajoute yon pri"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Zòn"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Pri"
 		},
+		"PriceTags": {
+			"Title": "Etikèt pri"
+		},
 		"Proofs": {
 			"Title": "Prèv"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Ajoute pri",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Peyi",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Lajan",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

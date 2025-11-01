@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistiky a žebříčky",
 		"MostPicturesAdded": "Většina přidáných obrázků",
 		"MostPricesAdded": "Většina cen byla přidána",
-		"MostPricesFromPicturesAdded": "Většina cen z obrázků byla přidána"
+		"MostPricesFromPicturesAdded": "Většina cen z obrázků byla přidána",
+		"AlertNew": "Máte nápad na novou výzvu? Dejte nám vědět {url}!"
 	},
 	"Common": {
 		"About": "O aplikaci",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Přidejte nové důkazy",
 		"AddToOFF": "Přidat do {name}",
 		"AdditionalInfo": "Další informace",
+		"All": "Vše",
 		"Barcode": "Čárový kód",
 		"Barcodes": "Čárové kódy",
 		"BarcodeScan": "Naskenovat čárový kód",
@@ -220,7 +222,7 @@
 		"Contributors": "Přispěvatelé",
 		"Contributions": "Příspěvky",
 		"Confirm": "Potvrdit",
-		"Country": "Země",
+		"Country": "Country",
 		"Countries": "Země",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Oříznout",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Příklady: {value}",
 		"Edit": "Upravit",
 		"End": "Konec",
+		"ErrorServer": "Chyba: chyba serveru",
+		"FieldIsRequired": "Pole je povinné",
 		"Filter": "Filtr",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "S cenou",
@@ -453,6 +457,13 @@
 		"Users": "Uživatelé",
 		"UserCount": "{count} uživatelů | {count} uživatel | {count} uživatelů",
 		"UserContributorCount": "{count} přispěvatelé | {count} přispěvatel | {count} přispěvatelé",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Ověřit",
 		"ValidatePrices": "Potvrďte ceny",
 		"ValidatePricesWithAI": "Ověřte ceny pomocí AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "Budete přesměrováni na stránku Nastavení, ale ztratíte veškeré informace, které jste zadali na této stránce.",
 		"Select": "Vybrat {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Země prodeje",
+		"CreateNewProduct": "Vytvořte nový produkt",
+		"CreateProduct": "Vytvořit produkt",
+		"EnableCropMode": "Povolit režim oříznutí",
+		"Flavor": "Vyberte projekt, ve kterém má být produkt vytvořen",
+		"NextProof": "Další důkaz",
+		"PreviousProof": "Předchozí důkaz",
+		"ProductAlreadyExists": "Produkt již existuje",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Důkaz ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Obchody, kde se prodává",
+		"UseCropModeToAddImage": "Chcete-li přidat obrázek produktu, povolte režim oříznutí pod zkušebním obrázkem a nakreslete kolem produktu obdélník."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Vyberte jeden ze svých nedávných dokladů"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Vymazat",
 		"NoResult": "Nenalezeny žádné výsledky",
+		"NoResultHelpKeywords": "Nemůžete najít svůj obchod? Zkuste místo celé adresy použít klíčová slova (např. „Carrefour 75013 Paříž“ nebo „Walmart San Francisco“).",
+		"NoResultHelpOSM": "Stále nemůžete najít svůj obchod? Možná ještě není v {osm_name} . Nejprve ho můžete přidat na {osm_url} .",
 		"PoweredBy": {
 			"text": "poháněno {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "O aplikaci"
+		},
+		"Add": {
+			"Title": "Přidat"
 		},
 		"AddPrice": {
 			"Title": "Přidat cenu"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Přidejte více důkazů"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Polohy"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Ceny"
 		},
+		"PriceTags": {
+			"Title": "Cenovky"
+		},
 		"Proofs": {
 			"Title": "Doklady"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Přispět"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experimenty"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Přidávání cen",
 		"ChangeLanguage": "Změnit jazyk",
-		"CountryLabel": "Země",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Měna",
 		"DisplayTitle": "Zobrazit",
 		"BarcodeScanner": "Skener čárového kódu",

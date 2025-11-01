@@ -87,7 +87,7 @@
             v-model="appStore.user.favorite_currencies"
             :label="$t('UserSettings.CurrencyLabel')"
             :items="currencyList"
-            :rules="[v => !!(v && v.length) || $t('UserSettings.CurrencyRequired')]"
+            :rules="[value => !!(value && value.length) || $t('UserSettings.CurrencyRequired')]"
             chips
             closable-chips
             multiple
@@ -246,7 +246,7 @@ export default {
       localeManager.changeLanguage(newLanguage)
     },
     'appStore.user.preferedTheme': function (newTheme, oldTheme) {  // eslint-disable-line no-unused-vars
-      this.theme.global.name = newTheme
+      this.theme.change(newTheme)
     }
   },
   methods: {

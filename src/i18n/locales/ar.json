@@ -162,7 +162,8 @@
 		"StatsAndRankings": "الإحصائيات والتصنيفات",
 		"MostPicturesAdded": "تمت إضافة معظم الصور",
 		"MostPricesAdded": "تمت إضافة معظم الأسعار",
-		"MostPricesFromPicturesAdded": "معظم الأسعار من الصور المضافة"
+		"MostPricesFromPicturesAdded": "معظم الأسعار من الصور المضافة",
+		"AlertNew": "هل لديك فكرة لتحدٍّ جديد؟ شاركنا رأيك {url}!"
 	},
 	"Common": {
 		"About": "حول",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "الكل",
 		"Barcode": "الرمز الشريطي",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -220,7 +222,7 @@
 		"Contributors": "المساهمون",
 		"Contributions": "مساهمات",
 		"Confirm": "Confirm",
-		"Country": "البلد",
+		"Country": "Country",
 		"Countries": "بلدان",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "تحرير",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "الحقل مطلوب",
 		"Filter": "تصفية",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "التحقق",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "بلدان بيع",
+		"CreateNewProduct": "إنشاء منتج جديد",
+		"CreateProduct": "إنشاء المنتج",
+		"EnableCropMode": "تمكين وضع الاقتصاص",
+		"Flavor": "حدد المشروع الذي يجب إنشاء المنتج فيه",
+		"NextProof": "Next proof",
+		"PreviousProof": "الدليل السابق",
+		"ProductAlreadyExists": "المنتج موجود بالفعل",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "الدليل ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "المتاجر التي تباع فيها",
+		"UseCropModeToAddImage": "لإضافة صورة المنتج، قم بتمكين وضع الاقتصاص أسفل صورة الإثبات وارسم مستطيلاً حول المنتج."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "محو",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "لم تجد متجرك؟ حاول استخدام كلمات رئيسية بدلاً من العنوان الكامل (مثل \"كارفور ٧٥٠١٣ باريس\" أو \"وول مارت سان فرانسيسكو\").",
+		"NoResultHelpOSM": "ما زلتَ لا تجد متجرك؟ ربما لم يكن موجودًا في {osm_name} بعد. يمكنك إضافته إلى {osm_url} أولًا.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "حول"
+		},
+		"Add": {
+			"Title": "إضافة"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "بطاقات الأسعار"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "المساهمة"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "تغيير اللغة",
-		"CountryLabel": "البلد",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "İstatistikler ve sıralamalar",
 		"MostPicturesAdded": "En çok resim eklendi",
 		"MostPricesAdded": "En çok eklenen fiyatlar",
-		"MostPricesFromPicturesAdded": "Çoğu fiyat resimlerden eklendi"
+		"MostPricesFromPicturesAdded": "Çoğu fiyat resimlerden eklendi",
+		"AlertNew": "Yeni bir meydan okuma fikriniz mi var? Bize bildirin {url}!"
 	},
 	"Common": {
 		"About": "Hakkında",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Yeni kanıtlar ekle",
 		"AddToOFF": "{name}'e ekle",
 		"AdditionalInfo": "Ek Bilgiler",
+		"All": "Hepsi",
 		"Barcode": "Barkod",
 		"Barcodes": "Barkodlar",
 		"BarcodeScan": "Barkod tara",
@@ -220,7 +222,7 @@
 		"Contributors": "Katkıda bulunanlar",
 		"Contributions": "Katkıda Bulunulanlar",
 		"Confirm": "Onayla",
-		"Country": "Ülke",
+		"Country": "Country",
 		"Countries": "Ülkeler",
 		"CountryCount": "{count} ülkeler | {count} ülke | {count} ülkeler",
 		"Crop": "Kırp",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Örnekler: {value}",
 		"Edit": "Düzenle",
 		"End": "Son",
+		"ErrorServer": "Hata: sunucu hatası",
+		"FieldIsRequired": "Alan gereklidir",
 		"Filter": "Filtrele",
 		"FilterChallengesShowAllStatus": "Tüm meydan okumaları göster",
 		"FilterProductWithPriceCount": "Bir fiyat ile",
@@ -453,6 +457,13 @@
 		"Users": "Kullanıcılar",
 		"UserCount": "{count} kullanıcılar | {count} kullanıcı | {count} kullanıcılar",
 		"UserContributorCount": "{count} katkıda bulunanlar | {count} katkıda bulunan | {count} katkıda bulunanlar",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Geçerlilik",
 		"ValidatePrices": "Fiyatları doğrula",
 		"ValidatePricesWithAI": "AI ile fiyatları doğrulayın",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "Ayarlar sayfasına yönlendirileceksiniz ancak bu sayfaya girdiğiniz tüm bilgileri kaybedeceksiniz.",
 		"Select": "{currency_code} öğesini seçin"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Satılan ülkeler",
+		"CreateNewProduct": "Yeni bir ürün yaratın",
+		"CreateProduct": "Ürün oluştur",
+		"EnableCropMode": "Kırpma modunu etkinleştir",
+		"Flavor": "Ürünün oluşturulacağı projeyi seçin",
+		"NextProof": "Bir sonraki kanıt",
+		"PreviousProof": "Önceki kanıt",
+		"ProductAlreadyExists": "Ürün zaten mevcut",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Kanıt ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Satılan mağazalar",
+		"UseCropModeToAddImage": "Ürün görseli eklemek için prova resminin altındaki kırpma modunu etkinleştirin ve ürünün etrafına bir dikdörtgen çizin."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Son bedellerinizden birini seçin"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Temizle",
 		"NoResult": "Sonuç bulunamadı",
+		"NoResultHelpKeywords": "Mağazanızı bulamıyor musunuz? Tam adres yerine anahtar kelimeler kullanmayı deneyin (örneğin 'Carrefour 75013 Paris' veya 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Mağazanızı hâlâ bulamadınız mı? Henüz {osm_name} 'da olmayabilir. Önce {osm_url} 'e ekleyebilirsiniz.",
 		"PoweredBy": {
 			"text": "{url} tarafından desteklenmektedir"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Yeni öğe ekle",
-		"MissingPrice": "Eksik fiyat",
-		"MissingProduct": "Eksik ürün",
 		"NoItemsFound": "Fişten hiçbir ürün çıkarılamadı, lütfen tekrar deneyin.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Ürün için fiyat zaten oluşturuldu",
 		"PriceReadyToBeAdded": "Fiyat eklenmeye hazır",
+		"ReceiptItems": "Makbuz öğelerini kontrol edin ve düzeltin",
 		"ReceiptItemsCheck": "Makbuz öğelerini kontrol edin ve düzeltin",
 		"UploadOnlyNewPrices": "Yalnızca yeni fiyatları yükleyin ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Tüm geçerli fiyatları yükleyin veya güncelleyin ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Hakkında"
+		},
+		"Add": {
+			"Title": "Ekle"
 		},
 		"AddPrice": {
 			"Title": "Fiyat ekleyin"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Birden fazla kanıt ekleyin"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Konumlar"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Fiyatlar"
 		},
+		"PriceTags": {
+			"Title": "Fiyat etiketleri"
+		},
 		"Proofs": {
 			"Title": "Kanıtlar"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Destekleyebilirsiniz"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Deneyler"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Fiyat ekleme",
 		"ChangeLanguage": "Dili Değiştir",
-		"CountryLabel": "Ülke",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Kur",
 		"DisplayTitle": "Göster",
 		"BarcodeScanner": "Barkod tarayıcı",

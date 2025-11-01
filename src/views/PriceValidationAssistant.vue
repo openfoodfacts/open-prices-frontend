@@ -208,14 +208,16 @@ export default {
       return api
         .createPrice(Object.assign({}, priceData), this.$route.path)
         .then((data) => {
-          if (data['detail']) {
-            alert(`Error: with input ${data['detail'][0]['input']}`)
-          } else {
+          productPriceData.loading = false
+          if (data.id) {
             return data
+          } else {
+            alert(`Error: ${JSON.stringify(data)}`)
+            console.log(JSON.stringify(data))
           }
         })
         .catch((error) => {
-          alert('Error: server error')
+          alert(this.$t('Common.ServerError'))
           console.log(error)
           productPriceData.loading = false
         })

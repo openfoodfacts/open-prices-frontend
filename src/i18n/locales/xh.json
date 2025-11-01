@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Amanani & namazinga",
 		"MostPicturesAdded": "Uninzi lwemifanekiso yongeziweyo",
 		"MostPricesAdded": "Amaxabiso amaninzi ongeziweyo",
-		"MostPricesFromPicturesAdded": "Amaxabiso amaninzi avela kwimifanekiso eyongeziweyo"
+		"MostPricesFromPicturesAdded": "Amaxabiso amaninzi avela kwimifanekiso eyongeziweyo",
+		"AlertNew": "Ngaba unombono womngeni omtsha? Sazise {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Ummandla uyafuneka",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Yenza imveliso entsha",
+		"CreateProduct": "Yenza imveliso",
+		"EnableCropMode": "Yenza imowudi yokunqamla isebenze",
+		"Flavor": "Khetha iprojekthi imveliso ekufuneka yenziwe kuyo",
+		"NextProof": "Next proof",
+		"PreviousProof": "Ubungqina obudlulileyo",
+		"ProductAlreadyExists": "Imveliso sele ikhona",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Ubungqina ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Iivenkile ezithengiswayo",
+		"UseCropModeToAddImage": "Ukongeza umfanekiso wemveliso, vula imowudi yesityalo engezantsi komfanekiso wobungqina kwaye uzobe uxande ujikeleze imveliso."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Awuyifumani ivenkile yakho? Zama ukusebenzisa amagama angundoqo endaweni yedilesi epheleleyo (umz. 'Carrefour 75013 Paris' okanye 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Awukayifumani ivenkile yakho? Isenokungabi phakathi {osm_name} okwangoku. Ungayongeza ku {osm_url} kuqala.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Iithegi zexabiso"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

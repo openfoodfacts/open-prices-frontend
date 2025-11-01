@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika in uvrstitve",
 		"MostPicturesAdded": "Večina dodanih slik",
 		"MostPricesAdded": "Večina dodanih cen",
-		"MostPricesFromPicturesAdded": "Večina cen iz slik je bila dodanih"
+		"MostPricesFromPicturesAdded": "Večina cen iz slik je bila dodanih",
+		"AlertNew": "Imaš idejo za nov izziv? Sporoči nam {url}!"
 	},
 	"Common": {
 		"About": "O programu",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Črtna koda",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Uredi",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Polje je obvezno",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Države, kjer se prodaja",
+		"CreateNewProduct": "Ustvari nov izdelek",
+		"CreateProduct": "Ustvari izdelek",
+		"EnableCropMode": "Omogoči način obrezovanja",
+		"Flavor": "Izberite projekt, v katerem naj bo izdelek ustvarjen",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prejšnji dokaz",
+		"ProductAlreadyExists": "Izdelek že obstaja",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Dokaz ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Trgovine, kjer se prodaja",
+		"UseCropModeToAddImage": "Če želite dodati sliko izdelka, omogočite način obrezovanja pod poskusno sliko in narišite pravokotnik okoli izdelka."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Počisti",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ne najdete svoje trgovine? Poskusite uporabiti ključne besede namesto polnega naslova (npr. »Carrefour 75013 Pariz« ali »Walmart San Francisco«).",
+		"NoResultHelpOSM": "Še vedno ne najdete svoje trgovine? Morda je še ni v {osm_name} . Najprej jo lahko dodate v {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "O programu"
+		},
+		"Add": {
+			"Title": "Dodaj"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Cenovne oznake"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Prispevaj"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

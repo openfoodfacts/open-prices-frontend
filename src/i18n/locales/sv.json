@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistik och rankningar",
 		"MostPicturesAdded": "De flesta bilder tillagda",
 		"MostPricesAdded": "De flesta priser tillagda",
-		"MostPricesFromPicturesAdded": "De flesta priser från bilder tillagda"
+		"MostPricesFromPicturesAdded": "De flesta priser från bilder tillagda",
+		"AlertNew": "Har du en idé till en ny utmaning? Låt oss veta {url}!"
 	},
 	"Common": {
 		"About": "Om",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Lägg till nya bevis",
 		"AddToOFF": "Lägg till {name}",
 		"AdditionalInfo": "Ytterligare information",
+		"All": "Alla",
 		"Barcode": "Streckkod",
 		"Barcodes": "Streckkoder",
 		"BarcodeScan": "Skanna en streckkod",
@@ -220,7 +222,7 @@
 		"Contributors": "Bidragsgivare",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekräfta",
-		"Country": "Land",
+		"Country": "Country",
 		"Countries": "Länder",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Exempel: {value}",
 		"Edit": "Redigera",
 		"End": "End",
+		"ErrorServer": "Fel: serverfel",
+		"FieldIsRequired": "Fältet är obligatoriskt",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Visa alla utmaningar",
 		"FilterProductWithPriceCount": "Med ett pris",
@@ -453,6 +457,13 @@
 		"Users": "Användare",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validera",
 		"ValidatePrices": "Validera priser",
 		"ValidatePricesWithAI": "Validera priser med AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Välj {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Länder där såld",
+		"CreateNewProduct": "Skapa en ny produkt",
+		"CreateProduct": "Skapa produkt",
+		"EnableCropMode": "Aktivera beskärningsläge",
+		"Flavor": "Välj det projekt där produkten ska skapas",
+		"NextProof": "Next proof",
+		"PreviousProof": "Tidigare bevis",
+		"ProductAlreadyExists": "Produkten finns redan",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Butiker där såldes",
+		"UseCropModeToAddImage": "För att lägga till en produktbild, aktivera beskärningsläget under korrekturbilden och rita en rektangel runt produkten."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Rensa",
 		"NoResult": "Inga resultat hittades",
+		"NoResultHelpKeywords": "Hittar du inte din butik? Försök att använda nyckelord istället för den fullständiga adressen (t.ex. 'Carrefour 75013 Paris' eller 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Hittar du fortfarande inte din butik? Den kanske inte finns i {osm_name} ännu. Du kan lägga till den på {osm_url} först.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Pris saknas",
-		"MissingProduct": "Produkt saknas",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Om"
+		},
+		"Add": {
+			"Title": "Lägg till"
 		},
 		"AddPrice": {
 			"Title": "Lägg till ett pris"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Lägg till flera bevis"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Platser"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Priser"
 		},
+		"PriceTags": {
+			"Title": "Prislappar"
+		},
 		"Proofs": {
 			"Title": "Bevis"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Bidra"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiment"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Lägga till priser",
 		"ChangeLanguage": "Byt språk",
-		"CountryLabel": "Land",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Streckkodsläsare",

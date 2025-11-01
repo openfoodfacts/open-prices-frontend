@@ -162,7 +162,8 @@
 		"StatsAndRankings": "ପରିସଂଖ୍ୟାନ ଏବଂ ରାଙ୍କିଙ୍ଗ",
 		"MostPicturesAdded": "ଅଧିକାଂଶ ଛବି ଯୋଡାଯାଇଛି",
 		"MostPricesAdded": "ଅଧିକାଂଶ ମୂଲ୍ୟ ଯୋଗ କରାଯାଇଛି",
-		"MostPricesFromPicturesAdded": "ଯୋଡାଯାଇଥିବା ଚିତ୍ରରୁ ଅଧିକାଂଶ ମୂଲ୍ୟ"
+		"MostPricesFromPicturesAdded": "ଯୋଡାଯାଇଥିବା ଚିତ୍ରରୁ ଅଧିକାଂଶ ମୂଲ୍ୟ",
+		"AlertNew": "ଆପଣଙ୍କର ଏକ ନୂତନ ଚ୍ୟାଲେଞ୍ଜ ପାଇଁ କୌଣସି ଧାରଣା ଅଛି କି? ଆମକୁ ଜଣାନ୍ତୁ {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "କ୍ଷେତ୍ର ଆବଶ୍ୟକ ଅଟେ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "ଏକ ନୂତନ ଉତ୍ପାଦ ତିଆରି କରନ୍ତୁ",
+		"CreateProduct": "ଉତ୍ପାଦ ତିଆରି କରନ୍ତୁ",
+		"EnableCropMode": "କ୍ରପ୍ ମୋଡ୍ ସକ୍ଷମ କରନ୍ତୁ",
+		"Flavor": "ଯେଉଁ ପ୍ରୋଜେକ୍ଟରେ ଉତ୍ପାଦଟି ତିଆରି କରାଯିବା ଉଚିତ ତାହା ଚୟନ କରନ୍ତୁ।",
+		"NextProof": "Next proof",
+		"PreviousProof": "ପୂର୍ବ ପ୍ରମାଣ",
+		"ProductAlreadyExists": "ଉତ୍ପାଦ ପୂର୍ବରୁ ଅଛି",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "ପ୍ରମାଣ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "ବିକ୍ରି ହୋଇଥିବା ଦୋକାନଗୁଡ଼ିକ",
+		"UseCropModeToAddImage": "ଏକ ଉତ୍ପାଦ ପ୍ରତିଛବି ଯୋଡିବା ପାଇଁ, ପ୍ରମାଣ ଚିତ୍ର ତଳେ କ୍ରପ୍ ମୋଡ୍ ସକ୍ଷମ କରନ୍ତୁ ଏବଂ ଉତ୍ପାଦ ଚାରିପାଖରେ ଏକ ଆୟତକ୍ଷେତ୍ର ଆଙ୍କନ୍ତୁ।"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "ଆପଣଙ୍କ ଦୋକାନ ମିଳିଲା ନାହିଁ କି? ପୂର୍ଣ୍ଣ ଠିକଣା ବଦଳରେ କୀୱାର୍ଡ ବ୍ୟବହାର କରି ଦେଖନ୍ତୁ (ଯଥା 'କ୍ୟାରେଫୋର 75013 ପ୍ୟାରିସ' କିମ୍ବା 'ୱାଲମାର୍ଟ ସାନ ଫ୍ରାନ୍ସିସ୍କୋ')।",
+		"NoResultHelpOSM": "ଏବେ ବି ଆପଣଙ୍କ ଦୋକାନ ମିଳିଲା ନାହିଁ କି? ଏହା ଏପର୍ଯ୍ୟନ୍ତ {osm_name} ରେ ନଥାଇପାରେ। ଆପଣ ଏହାକୁ ପ୍ରଥମେ {osm_url} ରେ ଯୋଡିପାରିବେ।",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "ମୂଲ୍ୟ ଟ୍ୟାଗ୍"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "ଯୋଗଦାନ କରନ୍ତୁ"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

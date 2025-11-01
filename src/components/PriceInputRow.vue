@@ -27,7 +27,7 @@
         :suffix="priceForm.currency"
         :hint="getPricePerUnit(priceForm.price)"
         persistent-hint
-        @update:modelValue="newValue => priceForm.price = fixComma(newValue)"
+        @update:modelValue="newValue => priceForm.price = replaceCommaWithDot(newValue)"
       >
         <template v-if="!hideCurrencyChoice" #prepend-inner>
           <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
@@ -49,7 +49,7 @@
         :suffix="priceForm.currency"
         :hint="getPricePerUnit(priceForm.price_without_discount)"
         persistent-hint
-        @update:modelValue="newValue => priceForm.price_without_discount = fixComma(newValue)"
+        @update:modelValue="newValue => priceForm.price_without_discount = replaceCommaWithDot(newValue)"
       />
     </v-col>
   </v-row>
@@ -91,6 +91,7 @@
         :rules="receiptQuantityRules"
         :suffix="receiptQuantitySuffix"
         hide-details="auto"
+        @update:modelValue="newValue => priceForm.receipt_quantity = replaceCommaWithDot(newValue)"
       />
     </v-col>
   </v-row>
@@ -138,6 +139,7 @@
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 import price_utils from '../utils/price.js'
+import utils from '../utils.js'
 
 export default {
   components: {
@@ -203,21 +205,21 @@ export default {
     },
     priceRules() {
       return [
-        value => !!value && !!value.trim() || this.$t('PriceRules.AmountRequired'),
-        value => !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !!value && !!value.toString().trim() || this.$t('PriceRules.AmountRequired'),
+        value => !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
-        value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+        value => !value.toString().match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
         value => !!value && !!this.priceForm.currency || this.$t('Common.CurrencyMissing'),
       ]
     },
     receiptQuantityRules() {
       if (!this.priceForm.receipt_quantity) return [() => true]  // optional field
       return [
-        value => !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
-        value => !value.match(/\.\d{4}/) || this.$t('PriceRules.ThreeDecimals'),
+        value => !value.toString().match(/\.\d{4}/) || this.$t('PriceRules.ThreeDecimals'),
       ]
     },
     receiptQuantitySuffix() {
@@ -246,8 +248,8 @@ export default {
     setCurrencyData(currency) {
       this.priceForm.currency = currency
     },
-    fixComma(input) {
-      return input.replace(/,/g, '.')
+    replaceCommaWithDot(input) {
+      return utils.replaceCommaWithDot(input)
     },
     getPriceValue(priceValue, priceCurrency) {
       return price_utils.prettyPrice(priceValue, priceCurrency)

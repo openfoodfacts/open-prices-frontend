@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistikoj kaj rangotabeloj",
 		"MostPicturesAdded": "Plej multaj bildoj aldonitaj",
 		"MostPricesAdded": "Plej multaj prezoj aldonitaj",
-		"MostPricesFromPicturesAdded": "Plej multaj prezoj el bildoj aldonitaj"
+		"MostPricesFromPicturesAdded": "Plej multaj prezoj el bildoj aldonitaj",
+		"AlertNew": "Ĉu vi havas ideon por nova defio? Sciigu nin {url}!"
 	},
 	"Common": {
 		"About": "Pri la projekto",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Strekokodo",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Kampo estas deviga",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Landoj, kie ĝi vendiĝas",
+		"CreateNewProduct": "Krei novan produkton",
+		"CreateProduct": "Krei produkton",
+		"EnableCropMode": "Ebligi rikoltan reĝimon",
+		"Flavor": "Elektu la projekton en kiu la produkto estu kreita",
+		"NextProof": "Next proof",
+		"PreviousProof": "Antaŭa pruvo",
+		"ProductAlreadyExists": "Produkto jam ekzistas",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Pruvo ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Butikoj kie vendiĝis",
+		"UseCropModeToAddImage": "Por aldoni produktobildon, aktivigu eltondan reĝimon sub la pruvbildo kaj desegnu rektangulon ĉirkaŭ la produkto."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ĉu vi ne povas trovi vian butikon? Provu uzi ŝlosilvortojn anstataŭ la plena adreso (ekz. 'Carrefour 75013 Parizo' aŭ 'Walmart San-Francisko').",
+		"NoResultHelpOSM": "Ĉu vi ankoraŭ ne povas trovi vian butikon? Eble ĝi ankoraŭ ne estas en {osm_name} . Vi povas unue aldoni ĝin al {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Pri la projekto"
+		},
+		"Add": {
+			"Title": "Aldoni"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Prezetikedoj"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Kontribui"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

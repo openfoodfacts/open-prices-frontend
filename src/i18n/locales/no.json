@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistikk og rangeringer",
 		"MostPicturesAdded": "De fleste bildene er lagt til",
 		"MostPricesAdded": "De fleste prisene er lagt til",
-		"MostPricesFromPicturesAdded": "De fleste prisene fra bildene er lagt til"
+		"MostPricesFromPicturesAdded": "De fleste prisene fra bildene er lagt til",
+		"AlertNew": "Har du en idé til en ny utfordring? Gi oss beskjed {url}!"
 	},
 	"Common": {
 		"About": "Om",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Strekkode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Felt er obligatorisk",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "Du vil bli omdirigert til Innstillinger-siden, men vil miste all informasjon du har skrevet inn på denne siden.",
 		"Select": "Velg {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Land der produktet selges",
+		"CreateNewProduct": "Opprett et nytt produkt",
+		"CreateProduct": "Opprett produkt",
+		"EnableCropMode": "Aktiver beskjæringsmodus",
+		"Flavor": "Velg prosjektet der produktet skal opprettes",
+		"NextProof": "Next proof",
+		"PreviousProof": "Tidligere bevis",
+		"ProductAlreadyExists": "Produktet finnes allerede",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Butikker der det ble solgt",
+		"UseCropModeToAddImage": "For å legge til et produktbilde, aktiver beskjæringsmodus under korrekturbildet og tegn et rektangel rundt produktet."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Tøm",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Finner du ikke butikken din? Prøv å bruke nøkkelord i stedet for hele adressen (f.eks. «Carrefour 75013 Paris» eller «Walmart San Francisco»).",
+		"NoResultHelpOSM": "Finner du fortsatt ikke butikken din? Den er kanskje ikke i {osm_name} ennå. Du kan legge den til på {osm_url} først.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Om"
+		},
+		"Add": {
+			"Title": "Legg til"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Prislapper"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "ಅಂಕಿಅಂಶಗಳು ಮತ್ತು ಶ್ರೇಯಾಂಕಗಳು",
 		"MostPicturesAdded": "ಹೆಚ್ಚಿನ ಚಿತ್ರಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
 		"MostPricesAdded": "ಹೆಚ್ಚಿನ ಬೆಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
-		"MostPricesFromPicturesAdded": "ಚಿತ್ರಗಳಿಂದ ಹೆಚ್ಚಿನ ಬೆಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ"
+		"MostPricesFromPicturesAdded": "ಚಿತ್ರಗಳಿಂದ ಹೆಚ್ಚಿನ ಬೆಲೆಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
+		"AlertNew": "ಹೊಸ ಸವಾಲಿಗೆ ನಿಮ್ಮಲ್ಲಿ ಏನಾದರೂ ಐಡಿಯಾ ಇದೆಯೇ? ನಮಗೆ ತಿಳಿಸಿ {url}!"
 	},
 	"Common": {
 		"About": "ಬಗ್ಗೆ",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "ಬಾರ್‌ ಕೋಡ್",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "ತಿದ್ದು",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "ಕ್ಷೇತ್ರ ಕಡ್ಡಾಯವಾಗಿದೆ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "ಹೊಸ ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಿ",
+		"CreateProduct": "ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಿ",
+		"EnableCropMode": "ಕ್ರಾಪ್ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+		"Flavor": "ಉತ್ಪನ್ನವನ್ನು ರಚಿಸಬೇಕಾದ ಯೋಜನೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+		"NextProof": "Next proof",
+		"PreviousProof": "ಹಿಂದಿನ ಪುರಾವೆ",
+		"ProductAlreadyExists": "ಉತ್ಪನ್ನ ಈಗಾಗಲೇ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ.",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "ಪುರಾವೆ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "ಮಾರಾಟವಾಗುವ ಅಂಗಡಿಗಳು",
+		"UseCropModeToAddImage": "ಉತ್ಪನ್ನ ಚಿತ್ರವನ್ನು ಸೇರಿಸಲು, ಪ್ರೂಫ್ ಚಿತ್ರದ ಕೆಳಗೆ ಕ್ರಾಪ್ ಮೋಡ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ ಮತ್ತು ಉತ್ಪನ್ನದ ಸುತ್ತಲೂ ಒಂದು ಆಯತವನ್ನು ಎಳೆಯಿರಿ."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "ತೆರವು ಮಾಡಿ",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "ನಿಮ್ಮ ಅಂಗಡಿ ಸಿಗುತ್ತಿಲ್ಲವೇ? ಪೂರ್ಣ ವಿಳಾಸದ ಬದಲಿಗೆ ಕೀವರ್ಡ್‌ಗಳನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ (ಉದಾ. 'ಕ್ಯಾರಿಫೋರ್ 75013 ಪ್ಯಾರಿಸ್' ಅಥವಾ 'ವಾಲ್‌ಮಾರ್ಟ್ ಸ್ಯಾನ್ ಫ್ರಾನ್ಸಿಸ್ಕೊ').",
+		"NoResultHelpOSM": "ನಿಮ್ಮ ಅಂಗಡಿ ಇನ್ನೂ ಸಿಗಲಿಲ್ಲವೇ? ಅದು ಇನ್ನೂ {osm_name} ನಲ್ಲಿ ಇಲ್ಲದಿರಬಹುದು. ನೀವು ಮೊದಲು ಅದನ್ನು {osm_url} ಗೆ ಸೇರಿಸಬಹುದು.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "ಬಗ್ಗೆ"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "ಬೆಲೆ ಟ್ಯಾಗ್‌ಗಳು"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

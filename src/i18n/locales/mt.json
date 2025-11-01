@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika u klassifiki",
 		"MostPicturesAdded": "Il-biċċa l-kbira tar-ritratti miżjuda",
 		"MostPricesAdded": "Il-biċċa l-kbira tal-prezzijiet miżjuda",
-		"MostPricesFromPicturesAdded": "Il-biċċa l-kbira tal-prezzijiet minn stampi miżjuda"
+		"MostPricesFromPicturesAdded": "Il-biċċa l-kbira tal-prezzijiet minn stampi miżjuda",
+		"AlertNew": "Għandek idea għal sfida ġdida? Għidilna {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Qasam meħtieġ",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Oħloq prodott ġdid",
+		"CreateProduct": "Oħloq prodott",
+		"EnableCropMode": "Ippermetti l-modalità tal-ħsad",
+		"Flavor": "Agħżel il-proġett li fih għandu jinħoloq il-prodott",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prova preċedenti",
+		"ProductAlreadyExists": "Il-prodott diġà jeżisti",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Prova ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Ħwienet fejn jinbiegħu",
+		"UseCropModeToAddImage": "Biex iżżid immaġni ta' prodott, attiva l-modalità tal-qtugħ taħt l-istampa ta' prova u pinġi rettangolu madwar il-prodott."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ma tistax issib il-ħanut tiegħek? Ipprova uża kliem kjavi minflok l-indirizz sħiħ (eż. 'Carrefour 75013 Paris' jew 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Għadek ma tistax issib il-ħanut tiegħek? Jista' jkun li għadu mhux f' {osm_name} . Tista' żżidu fuq {osm_url} l-ewwel.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Tikketti tal-prezzijiet"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

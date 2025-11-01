@@ -149,7 +149,8 @@ export default {
         params.id = this.$route.params.id
       } else {
         // No id specified, get the current challenge
-        params.status = "ONGOING"
+        params.status = 'ONGOING'
+        params.order_by = '-created'
       }
       api.getChallenges(params)
       .then((data) => {

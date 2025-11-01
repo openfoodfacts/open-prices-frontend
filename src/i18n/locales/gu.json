@@ -162,7 +162,8 @@
 		"StatsAndRankings": "આંકડા અને રેન્કિંગ",
 		"MostPicturesAdded": "મોટાભાગના ચિત્રો ઉમેરાયા",
 		"MostPricesAdded": "મોટાભાગની કિંમતો ઉમેરવામાં આવી",
-		"MostPricesFromPicturesAdded": "ઉમેરાયેલા ચિત્રોમાંથી મોટાભાગની કિંમતો"
+		"MostPricesFromPicturesAdded": "ઉમેરાયેલા ચિત્રોમાંથી મોટાભાગની કિંમતો",
+		"AlertNew": "શું તમારી પાસે નવા પડકાર માટે કોઈ વિચાર છે? અમને જણાવો {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "બારકોડ",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "ફીલ્ડ જરૂરી છે",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "દેશો જ્યાં વેચાય છે",
+		"CreateNewProduct": "નવી પ્રોડક્ટ બનાવો",
+		"CreateProduct": "ઉત્પાદન બનાવો",
+		"EnableCropMode": "કાપવાનો મોડ સક્ષમ કરો",
+		"Flavor": "ઉત્પાદન કયા પ્રોજેક્ટમાં બનાવવું જોઈએ તે પસંદ કરો.",
+		"NextProof": "Next proof",
+		"PreviousProof": "પાછલો પુરાવો",
+		"ProductAlreadyExists": "ઉત્પાદન પહેલેથી જ અસ્તિત્વમાં છે",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "પુરાવો ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "વેચાયેલી દુકાનો",
+		"UseCropModeToAddImage": "પ્રોડક્ટ ઇમેજ ઉમેરવા માટે, પ્રૂફ પિક્ચરની નીચે ક્રોપ મોડ ચાલુ કરો અને પ્રોડક્ટની આસપાસ એક લંબચોરસ દોરો."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "તમારી દુકાન નથી મળી રહી? સંપૂર્ણ સરનામાંને બદલે કીવર્ડ્સનો ઉપયોગ કરવાનો પ્રયાસ કરો (દા.ત. 'કેરેફોર 75013 પેરિસ' અથવા 'વોલમાર્ટ સાન ફ્રાન્સિસ્કો').",
+		"NoResultHelpOSM": "હજુ પણ તમારી દુકાન નથી મળી રહી? તે કદાચ {osm_name} માં નથી. તમે તેને પહેલા {osm_url} પર ઉમેરી શકો છો.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "ઉમેરો"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "કિંમત ટૅગ્સ"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

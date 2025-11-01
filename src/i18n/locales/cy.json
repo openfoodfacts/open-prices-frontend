@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Ystadegau a safleoedd",
 		"MostPicturesAdded": "Ychwanegwyd y rhan fwyaf o luniau",
 		"MostPricesAdded": "Ychwanegwyd y rhan fwyaf o brisiau",
-		"MostPricesFromPicturesAdded": "Ychwanegwyd y rhan fwyaf o brisiau o luniau"
+		"MostPricesFromPicturesAdded": "Ychwanegwyd y rhan fwyaf o brisiau o luniau",
+		"AlertNew": "Oes gennych chi syniad ar gyfer her newydd? Rhowch wybod i ni {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Côd bar",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Mae angen maes",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Creu cynnyrch newydd",
+		"CreateProduct": "Creu cynnyrch",
+		"EnableCropMode": "Galluogi modd cnydio",
+		"Flavor": "Dewiswch y prosiect y dylid creu'r cynnyrch ynddo",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prawf blaenorol",
+		"ProductAlreadyExists": "Mae'r cynnyrch eisoes yn bodoli",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Prawf ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Siopau lle gwerthir",
+		"UseCropModeToAddImage": "I ychwanegu delwedd cynnyrch, galluogwch y modd cnydio o dan y llun prawf a lluniwch betryal o amgylch y cynnyrch."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Methu dod o hyd i'ch siop? Rhowch gynnig ar ddefnyddio allweddeiriau yn lle'r cyfeiriad llawn (e.e. 'Carrefour 75013 Paris' neu 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Dal ddim yn gallu dod o hyd i'ch siop? Efallai nad yw yn {osm_name} eto. Gallwch ei ychwanegu ar {osm_url} yn gyntaf.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Ychwanegu"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Tagiau pris"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

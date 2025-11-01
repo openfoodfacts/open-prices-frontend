@@ -1,5 +1,5 @@
 <template>
-  <v-btn :style="style" icon size="small" density="comfortable" variant="text">
+  <v-btn v-bind="$attrs" :style="style" icon size="small" density="comfortable" variant="text">
     <v-icon :icon="ACTION_MENU_ICON" />
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
@@ -12,7 +12,12 @@
           <v-list-item v-if="price.product || price.category_tag" :slim="true" prepend-icon="mdi-eye-outline" :to="getProductOrCategoryDetailUrl">
             {{ $t('Common.Details') }}
           </v-list-item>
-          <OpenFoodFactsLink v-if="price.product" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
+          <v-sheet v-if="price.product">
+            <OpenFoodFactsLink v-if="price.product.source" :source="price.product.source" facet="product" :value="price.product.code" display="list-item" />
+            <v-list-item v-else :slim="true" prepend-icon="mdi-plus" :to="getCreateProductUrl">
+              {{ $t('CreateOffProduct.CreateProduct') }}
+            </v-list-item>
+          </v-sheet>
           <OpenFoodFactsLink v-else-if="price.category_tag" facet="category" :value="price.category_tag" display="list-item" />
         </v-sheet>
         <!-- Price actions -->
@@ -25,12 +30,14 @@
           <v-list-item :slim="true" prepend-icon="mdi-eye-outline" :to="getPriceDetailUrl">
             {{ $t('Common.Details') }}
           </v-list-item>
-          <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
-            {{ $t('Common.Edit') }}
-          </v-list-item>
-          <v-list-item v-if="userIsPriceOwner" :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
-            {{ $t('Common.Delete') }}
-          </v-list-item>
+          <v-sheet v-if="userCanEditPrice">
+            <v-list-item :slim="true" prepend-icon="mdi-pencil" @click="openEditDialog">
+              {{ $t('Common.Edit') }}
+            </v-list-item>
+            <v-list-item :slim="true" prepend-icon="mdi-delete" @click="openDeleteConfirmationDialog">
+              {{ $t('Common.Delete') }}
+            </v-list-item>
+          </v-sheet>
         </v-sheet>
         <!-- Proof actions -->
         <v-sheet v-if="!hideProofActions">
@@ -143,6 +150,9 @@ export default {
     getProofDetailUrl() {
       return `/proofs/${this.price.proof.id}`
     },
+    getCreateProductUrl() {
+      return `/experiments/create-off-product?product_code=${this.price.product.code}`
+    },
     showPriceShare() {
       return this.$route.path === this.getPriceDetailUrl
     },
@@ -150,7 +160,13 @@ export default {
       return this.getPriceDetailUrl
     },
     userIsPriceOwner() {
-      return this.username && (this.price.owner === this.username)
+      return this.username && this.price && this.price.owner === this.username
+    },
+    userIsModerator() {
+      return this.username && this.appStore.user.is_moderator
+    },
+    userCanEditPrice() {
+      return this.userIsPriceOwner || this.userIsModerator
     }
   },
   methods: {

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika ja edetabel",
 		"MostPicturesAdded": "Enamik pilte on lisatud",
 		"MostPricesAdded": "Enamik hindu on lisatud",
-		"MostPricesFromPicturesAdded": "Enamik piltidelt leitud hindu on lisatud"
+		"MostPricesFromPicturesAdded": "Enamik piltidelt leitud hindu on lisatud",
+		"AlertNew": "Kas sul on idee uueks ülesandeks? Anna meile teada {url}!"
 	},
 	"Common": {
 		"About": "Info",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Kõik",
 		"Barcode": "Triipkood",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -220,7 +222,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Panused",
 		"Confirm": "Confirm",
-		"Country": "Riik",
+		"Country": "Country",
 		"Countries": "Riigid",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Muuda",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Väli on kohustuslik",
 		"Filter": "Filtreeri",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Lisa uus toode",
+		"CreateProduct": "Lisa toode",
+		"EnableCropMode": "Lülita kärpimisrežiim sisse",
+		"Flavor": "Vali projekt, kuhu toode lisatakse",
+		"NextProof": "Next proof",
+		"PreviousProof": "Eelmine tõestus",
+		"ProductAlreadyExists": "Toode on juba olemas",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Tõestus ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Kauplused, kus müüakse",
+		"UseCropModeToAddImage": "Tootepildi lisamiseks luba proovipildi all kärpimisrežiim ja joonista toote ümber ristkülik."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Sa ei leia oma poodi? Proovi täieliku aadressi asemel märksõnu (nt „Carrefour 75013 Pariis” või „Walmart San Francisco”).",
+		"NoResultHelpOSM": "Sa ikka ei leia oma poodi? See ei pruugi veel {osm_name} piirkonnas olla. Saad selle esmalt {osm_url} piirkonnas lisada.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Info"
+		},
+		"Add": {
+			"Title": "Lisa"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Hinnasildid"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Tee kaastööd"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Riik",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

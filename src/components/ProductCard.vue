@@ -3,8 +3,8 @@
     <v-container class="pa-2" :style="latestPrice ? 'position:relative;' : ''">
       <v-row v-if="product">
         <v-col class="pr-0" style="max-width:20%">
-          <v-img v-if="product.image_url" :src="product.image_url" style="max-height:100px;" @click="goToProduct()" />
-          <v-img v-if="!product.image_url" :src="productImageDefault" style="height:100px;width:100px;filter:invert(.9);" />
+          <v-img v-if="product.image_url" :src="product.image_url" max-height="100px" @click="goToProduct()" />
+          <v-img v-if="!product.image_url" :src="productImageDefault" height="100px" width="100px" style="filter:invert(.9);" />
         </v-col>
         <v-col style="max-width:80%;">
           <h3 id="product-title" @click="goToProduct()">

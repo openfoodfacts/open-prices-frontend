@@ -5,9 +5,9 @@
         <v-stepper-header>
           <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
+          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" :disabled="step < 2" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" :disabled="step < 3" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
@@ -35,11 +35,6 @@
               inputmode="decimal"
               persistent-hint
             />
-            <v-row class="mt-0">
-              <v-col v-for="missingProduct in missingProductsWithPrices" :key="missingProduct" cols="12" sm="6">
-                <ProductCard :product="missingProduct" elevation="1" height="100%" readonly @click="missingProductClicked(missingProduct)" />
-              </v-col>
-            </v-row>
           </v-card-text>
           <v-divider />
           <v-card-actions>
@@ -58,6 +53,24 @@
           </v-card-actions>
         </v-card>
       </v-form>
+    </v-col>
+    <v-col cols="12" md="6">
+      <v-card
+        class="mb-4"
+        :title="$t('CreateOffProduct.SelectUnknownProductGuide')"
+        prepend-icon="mdi-tag-plus-outline"
+        height="100%"
+      >
+        <v-divider />
+        <v-card-text>
+          <v-row class="mt-0">
+            <v-col v-for="missingProduct in missingProductsWithPrices" :key="missingProduct" cols="12" sm="6">
+              <ProductCard :product="missingProduct" elevation="1" height="100%" readonly @click="missingProductClicked(missingProduct)" />
+            </v-col>
+          </v-row>
+        </v-card-text>
+        <v-divider />
+      </v-card>
     </v-col>
   </v-row>
 
@@ -95,7 +108,21 @@
               :disabled="productExists"
               density="compact"
               variant="outlined"
+              :rules="[fieldRequired]"
+              required
             />
+            <div class="text-subtitle-2">
+              {{ $t('CreateOffProduct.ProductLanguage') }}
+            </div>
+            <v-autocomplete
+              v-model="productForm.product_language"
+              :items="Languages"
+              item-title="native"
+              item-value="code"
+              density="compact"
+              variant="outlined"
+            />
+
             <div class="text-subtitle-2">
               {{ $t('Common.ProductName') }}
             </div>
@@ -104,8 +131,26 @@
               density="compact"
               variant="outlined"
               type="text"
-              inputmode="decimal"
             />
+            <div class="text-subtitle-2">
+              {{ $t('Common.Brands') }}
+            </div>
+            <v-combobox
+              v-model="productForm.brands"
+              density="compact"
+              :items="[]"
+              variant="outlined"
+              chips
+              clearable
+              closable-chips
+              multiple
+            >
+              <template #chip="{ props, item }">
+                <v-chip v-bind="props">
+                  <strong>{{ item.raw }}</strong>
+                </v-chip>
+              </template>
+            </v-combobox>
             <div class="text-subtitle-2">
               {{ $t('Common.Quantity') }}
             </div>
@@ -120,47 +165,65 @@
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.CountriesWhereSold') }}
               </div>
-              <v-text-field
+              <v-autocomplete
                 v-model="productForm.countries"
                 density="compact"
+                :items="Countries"
+                item-title="native"
+                item-value="code"
                 variant="outlined"
-                type="text"
-                inputmode="decimal"
+                chips
+                clearable
+                closable-chips
+                multiple
               />
               <div class="text-subtitle-2">
                 {{ $t('CreateOffProduct.StoresWhereSold') }}
               </div>
-              <v-text-field
+              <v-combobox
                 v-model="productForm.stores"
                 density="compact"
+                :items="[]"
                 variant="outlined"
-                type="text"
-                inputmode="decimal"
-              />
+                chips
+                clearable
+                closable-chips
+                multiple
+              >
+                <template #chip="{ props, item }">
+                  <v-chip v-bind="props">
+                    <strong>{{ item.raw }}</strong>
+                  </v-chip>
+                </template>
+              </v-combobox>
             </div>
             <div class="text-subtitle-2">
               {{ $t('Common.Categories') }}
             </div>
-            <v-text-field
+            <v-combobox
               v-model="productForm.categories"
+              :items="suggestedCategories"
               density="compact"
               variant="outlined"
-              type="text"
-              inputmode="decimal"
-              hide-details="auto"
-            />
-            <v-chip-group>
-              <v-chip v-for="category in suggestedCategories" :key="category" append-icon="mdi-plus" @click="addCategory(category)">
-                {{ category }}
-              </v-chip>
-            </v-chip-group>
+              chips
+              clearable
+              closable-chips
+              multiple
+            >
+              <template #chip="{ props, item }">
+                <v-chip v-bind="props">
+                  <strong>{{ item.raw }}</strong>
+                </v-chip>
+              </template>
+            </v-combobox>
+
             <div v-if="!productExists">
               <div class="text-subtitle-2">
                 {{ $t('Common.Image') }}
               </div>
-              <v-img v-if="drawnImageSrc" :src="drawnImageSrc" style="max-height:200px" />
+              <v-img v-if="drawnImageSrc" :src="drawnImageSrc" max-height="200px" />
               <v-alert v-else class="mb-2" type="info" variant="outlined" density="compact">
-                {{ $t('CreateOffProduct.UseDrawModeToAddImage') }}
+                {{ $t('CreateOffProduct.UseCropModeToAddImage') }}
               </v-alert>
             </div>
           </v-card-text>
@@ -216,7 +279,7 @@
                 v-model="imageEditMode"
                 density="compact"
                 color="success"
-                :label="$t('CreateOffProduct.EnableDrawMode')"
+                :label="$t('CreateOffProduct.EnableCropMode')"
                 :true-value="true"
                 hide-details="auto"
               />
@@ -285,6 +348,9 @@ import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
 import proof_utils from '../utils/proof.js'
+import utils from '../utils'
+import Languages from '../i18n/data/languages.json'
+import Countries from '../i18n/data/countries.json'
 import "vue-zoomable/dist/style.css"
 
 export default {
@@ -310,7 +376,9 @@ export default {
       productExists: false,
       zoomLevel: 1,
       loading: false,
-      panLevel: {x: 0, y: 0}
+      panLevel: {x: 0, y: 0},
+      Languages,
+      Countries
     }
   },
   computed: {
@@ -318,7 +386,7 @@ export default {
     stepItemList() {
       return [
         {
-          title: this.$t('Common.BarcodeType'),
+          title: this.$t('CreateOffProduct.SelectUnknownProduct'),
           value: 1
         },
         {
@@ -335,22 +403,30 @@ export default {
       return constants.PRODUCT_SOURCE_LIST.map(source => source.value)
     }
   },
+  watch: {
+    '$route.query.product_code'(newVal) {
+      if (!newVal) {
+        this.getMissingProductsWithPrices()
+        this.step = 1
+      }
+    }
+  },
   mounted() {
     if (this.$route.query.flavor) {
       this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === this.$route.query.flavor).value
-    } else {
-      this.productForm.flavor = constants.PRODUCT_SOURCE_LIST[0].value
     }
     if (this.$route.query.product_code) {
       this.productForm.product_code = this.$route.query.product_code
       this.loadProductInfo()
-    } else {
-      this.getMissingProductsWithPrices()
     }
+    this.getMissingProductsWithPrices()
   },
   methods: {
+    fieldRequired(v) {
+      return !!v || this.$t('Common.FieldIsRequired')
+    },
     loadProductInfo() {
-      this.$router.push({query: {product_code: this.productForm.product_code}})
+      this.$router.push({ query: { product_code: this.productForm.product_code } })
       this.step = 2
       this.getProduct((product) => {
         if (product.source) {
@@ -374,44 +450,49 @@ export default {
         .then((data) => {
           this.priceList = data.items
           if (this.priceList.length) {
-            const stores = Array.from(new Set(this.priceList.map(price => price.location.osm_name))).join(',')
-            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country).flat())).join(',')
+            const stores = Array.from(new Set(this.priceList.map(price => price.location.osm_name)))
+            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country_code.toUpperCase()).flat()))
             const lastPrice = this.priceList[0]
             this.productForm = {
               ...this.productForm,
-              product_name: lastPrice.product_name,
+              product_name: lastPrice.product_name ? utils.toTitleCase(lastPrice.product_name) : null,
               stores: stores,
               countries: countries,
+              product_language: lastPrice.location.osm_address_country_code.toLowerCase() || "en",
               quantity: "",
-              categories: "",
+              brands: [],
+              categories: [],
             }
             this.setShownProof()
           } else {
             this.productForm = {
               ...this.productForm,
               product_name: null,
-              stores: "",
-              countries: "",
+              stores: [],
+              product_language: "en",
+              countries: [],
               quantity: "",
-              categories: "",
+              brands: [],
+              categories: [],
             }
           }
           if (this.productExists) {
             this.productForm.flavor = constants.PRODUCT_SOURCE_LIST.find(source => source.key === product.source).value
             this.productForm.product_name = product.product_name
             this.productForm.quantity = product.product_quantity + product.product_quantity_unit
-            this.productForm.categories = product.categories_tags.join(',')
+            this.productForm.categories = product.categories_tags
+            this.productForm.brands = product.brands_tags
             this.productForm.stores = null
             this.productForm.countries= null
           }
         })
     },
     getChallenges() {
-      return api.getChallenges({order_by: '-created'})
+      return api.getChallenges({ order_by: '-created' })
         .then((data) => {
           const challenges = data.items
           const challengeCategories = challenges.map(challenge => challenge.categories) // Array of arrays
-          this.suggestedCategories = new Set(challengeCategories.flat()) // unique categories
+          this.suggestedCategories = Array.from(new Set(challengeCategories.flat())) // unique categories
         })
     },
     getMissingProductsWithPrices() {
@@ -424,18 +505,20 @@ export default {
       this.productForm.product_code = product.code
       this.loadProductInfo()
     },
-    addCategory(category) {
-      if (this.productForm.categories.length > 0) {
-        this.productForm.categories += ',' + category
-      } else {
-        this.productForm.categories = category
-      }
-    },
     createProduct() {
+      if (!this.productForm.flavor) {
+        return
+      }
       const flavorkey = constants.PRODUCT_SOURCE_LIST.find(source => source.value === this.productForm.flavor).key
       let inputData = {
-        update_params: this.productForm,
-        flavor: flavorkey
+        update_params: {
+          ...this.productForm,
+          categories: this.productForm.categories.join(','),
+          stores: this.productForm.stores.join(','),
+          countries: this.productForm.countries.map(c=>c.toLowerCase()).join(','),
+        },
+        flavor: flavorkey,
+        product_language_code: this.productForm.product_language
       }
       this.step = 3
       this.loading = true
@@ -446,7 +529,8 @@ export default {
             const drawnImageBase64 = this.drawnImageSrc.split(';base64,')[1]
             inputData = {
               image_data_base64: drawnImageBase64,
-              flavor: flavorkey
+              flavor: flavorkey,
+              product_language_code: this.productForm.product_language
             }
             api.updateOffProductImage(this.productForm.product_code, inputData)
               .then(() => {

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Staitistig & rangachadh",
 		"MostPicturesAdded": "A’ mhòr-chuid de dhealbhan air an cur ris",
 		"MostPricesAdded": "A’ mhòr-chuid de phrìsean air an cur ris",
-		"MostPricesFromPicturesAdded": "A’ mhòr-chuid de phrìsean bho dhealbhan air an cur ris"
+		"MostPricesFromPicturesAdded": "A’ mhòr-chuid de phrìsean bho dhealbhan air an cur ris",
+		"AlertNew": "A bheil beachd agad airson dùbhlan ùr? Leig fios dhuinn {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Tha feum air raon",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Cruthaich toradh ùr",
+		"CreateProduct": "Cruthaich toradh",
+		"EnableCropMode": "Cuir modh bàrr an gnìomh",
+		"Flavor": "Tagh am pròiseact anns am bu chòir an toradh a chruthachadh",
+		"NextProof": "Next proof",
+		"PreviousProof": "Fianais roimhe",
+		"ProductAlreadyExists": "Tha an toradh ann mu thràth",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Dearbhadh ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Bùthan far an deach an reic",
+		"UseCropModeToAddImage": "Gus ìomhaigh toraidh a chur ris, cuir modh gearraidh an gnìomh fon dealbh dearbhaidh agus tarraing ceart-cheàrnach timcheall an toraidh."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nach urrainn dhut do bhùth a lorg? Feuch ri prìomh fhaclan a chleachdadh an àite an t-seòlaidh slàn (m.e. 'Carrefour 75013 Paris' no 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Nach urrainn dhut do bhùth a lorg fhathast? Is dòcha nach eil e ann an {osm_name} fhathast. Faodaidh tu a chur ris air {osm_url} an toiseach.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Tagaichean prìsean"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

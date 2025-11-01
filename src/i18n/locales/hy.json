@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Վիճակագրություն և վարկանիշներ",
 		"MostPicturesAdded": "Ամենաշատ ավելացված նկարները",
 		"MostPricesAdded": "Ավելացված գների մեծ մասը",
-		"MostPricesFromPicturesAdded": "Նկարներից ստացված գների մեծ մասը ավելացվել է"
+		"MostPricesFromPicturesAdded": "Նկարներից ստացված գների մեծ մասը ավելացվել է",
+		"AlertNew": "Նոր մարտահրավերի գաղափար ունե՞ս։ Տեղեկացրու մեզ {url}!"
 	},
 	"Common": {
 		"About": "Մեր մասին",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Գծակոդ",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Դաշտը պարտադիր է",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Ստեղծեք նոր ապրանք",
+		"CreateProduct": "Ստեղծել ապրանք",
+		"EnableCropMode": "Միացնել կտրման ռեժիմը",
+		"Flavor": "Ընտրեք այն նախագիծը, որում պետք է ստեղծվի ապրանքը",
+		"NextProof": "Next proof",
+		"PreviousProof": "Նախորդ ապացույցը",
+		"ProductAlreadyExists": "Ապրանքն արդեն գոյություն ունի",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Ապացույց ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Խանութներ, որտեղ վաճառվում են",
+		"UseCropModeToAddImage": "Արտադրանքի պատկեր ավելացնելու համար միացրեք կտրման ռեժիմը «Պրոֆեսիոնալ նկարի տակ» և ապրանքի շուրջը գծեք ուղղանկյուն։"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Չե՞ք կարողանում գտնել ձեր խանութը։ Փորձեք օգտագործել բանալի բառեր՝ լրիվ հասցեի փոխարեն (օրինակ՝ «Carrefour 75013 Paris» կամ «Walmart San Francisco»):",
+		"NoResultHelpOSM": "Դեռևս չե՞ք կարողանում գտնել ձեր խանութը։ Հնարավոր է՝ այն դեռ {osm_name} -ում չէ։ Կարող եք նախ ավելացնել այն {osm_url} -ում։",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Մեր մասին"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Գնի պիտակներ"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

@@ -9,7 +9,7 @@
     >
       <v-card>
         <v-card-text>
-          <v-img style="height:150px" :src="label.imageSrc" />
+          <v-img :src="label.imageSrc" height="150px" />
         </v-card-text>
         <v-divider />
         <v-card-actions>

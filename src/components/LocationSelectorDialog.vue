@@ -51,7 +51,7 @@
               </v-text-field>
             </v-form>
 
-            <p v-if="searchProvider === 'nominatim'" class="text-caption text-warning mt-2">
+            <p v-if="searchProvider === 'osm'" class="text-caption text-warning mt-2">
               <i18n-t keypath="LocationSelector.Warning" tag="i">
                 <template #newline>
                   <br>
@@ -59,15 +59,15 @@
               </i18n-t>
             </p>
 
-            <v-sheet v-if="results">
+            <v-sheet v-if="results !== null">
               <h3 class="mt-4 mb-1">
                 <i18n-t keypath="LocationSelector.Result" tag="span">
                   <template #resultNumber>
-                    <small>{{ Array.isArray(results) ? results.length : 0 }}</small>
+                    <small>{{ results.length }}</small>
                   </template>
                 </i18n-t>
               </h3>
-              <v-row v-if="Array.isArray(results)">
+              <v-row v-if="results.length">
                 <v-col cols="12" sm="6">
                   <v-card
                     v-for="location in results" :key="getLocationUniqueID(location)" class="mb-2" width="100%"
@@ -76,7 +76,7 @@
                     <v-card-text>
                       <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
                       {{ getLocationTitle(location, false, true, true) }}<br>
-                      <LocationOSMTagChip :location="location" class="mr-1" />
+                      <LocationOSMTagChip class="mr-1" :location="location" />
                       <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
                     </v-card-text>
                   </v-card>
@@ -86,8 +86,22 @@
                 </v-col>
               </v-row>
 
-              <p v-else-if="typeof results === 'string'">
-                {{ results }}
+              <p v-else>
+                <v-alert class="mb-2" type="info" variant="outlined">
+                  {{ $t('LocationSelector.NoResultHelpKeywords') }}
+                </v-alert>
+                <v-alert class="mb-2" type="info" variant="outlined">
+                  <i18n-t keypath="LocationSelector.NoResultHelpOSM" tag="span">
+                    <template #osm_name>
+                      {{ OSM_NAME }}
+                    </template>
+                    <template #osm_url>
+                      <a :href="OSM_URL" target="_blank">
+                        {{ OSM_URL }}
+                      </a>
+                    </template>
+                  </i18n-t>
+                </v-alert>
               </p>
             </v-sheet>
           </v-tabs-window-item>
@@ -168,6 +182,8 @@ export default {
       displayItems: constants.LOCATION_SELECTOR_DISPLAY_LIST,
       currentDisplay: null,  // see mounted
       OSM_EXAMPLES: 'Carrefour rue la fayette 75010 paris ; Auchan Grenoble ; N12208020359',
+      OSM_NAME: constants.OSM_NAME,
+      OSM_URL: constants.OSM_URL,
       OSM_NOMINATIM_URL: constants.OSM_NOMINATIM_URL,
       OSM_NOMINATIM_ATTRIBUTION: constants.OSM_NOMINATIM_ATTRIBUTION,
       OSM_PHOTON_URL: constants.OSM_PHOTON_URL,
@@ -222,22 +238,14 @@ export default {
         api.openstreetmapNominatimLookup(id)
           .then((data) => {
             this.loading = false
-            if (data.length) {
-              this.results = data
-            } else {
-              this.results = this.$t('LocationSelector.NoResult')
-            }
+            this.results = data
           })
         // search by name
       } else {
         api.openstreetmapSearch(this.locationOsmSearchForm.q, this.searchProvider)
           .then((data) => {
             this.loading = false
-            if (data.length) {
-              this.results = data
-            } else {
-              this.results = this.$t('LocationSelector.NoResult')
-            }
+            this.results = data
           })
       }
     },

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Staitisticí & rátálacha",
 		"MostPicturesAdded": "An chuid is mó de na pictiúir curtha leis",
 		"MostPricesAdded": "An chuid is mó de na praghsanna curtha leis",
-		"MostPricesFromPicturesAdded": "An chuid is mó de na praghsanna ó phictiúir curtha leis"
+		"MostPricesFromPicturesAdded": "An chuid is mó de na praghsanna ó phictiúir curtha leis",
+		"AlertNew": "An bhfuil smaoineamh agat le haghaidh dúshlán nua? Cuir in iúl dúinn {url}!"
 	},
 	"Common": {
 		"About": "Faoi",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Tá réimse riachtanach",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Cruthaigh táirge nua",
+		"CreateProduct": "Cruthaigh táirge",
+		"EnableCropMode": "Cumasaigh mód barra",
+		"Flavor": "Roghnaigh an tionscadal ar cheart an táirge a chruthú ann",
+		"NextProof": "Next proof",
+		"PreviousProof": "Cruthúnas roimhe seo",
+		"ProductAlreadyExists": "Tá an táirge ann cheana féin",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Cruthúnas ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Siopaí inar díoladh iad",
+		"UseCropModeToAddImage": "Chun íomhá táirge a chur leis, cumasaigh mód bearrtha faoin bpictiúr cruthúnais agus tarraing dronuilleog timpeall an táirge."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Glan",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nach bhfuil tú in ann do shiopa a aimsiú? Bain triail as eochairfhocail a úsáid in ionad an seoladh iomláin (m.sh. 'Carrefour 75013 Paris' nó 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Ní féidir leat do shiopa a aimsiú fós? B’fhéidir nach bhfuil sé i {osm_name} fós. Is féidir leat é a chur leis ar {osm_url} ar dtús.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Faoi"
+		},
+		"Add": {
+			"Title": "Cuir leis"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Clibeanna praghais"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Cur"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

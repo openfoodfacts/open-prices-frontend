@@ -162,7 +162,8 @@
 		"StatsAndRankings": "統計とランキング",
 		"MostPicturesAdded": "追加された写真が最も多い",
 		"MostPricesAdded": "最も多くの価格が追加された",
-		"MostPricesFromPicturesAdded": "写真からほとんどの価格を追加しました"
+		"MostPricesFromPicturesAdded": "写真からほとんどの価格を追加しました",
+		"AlertNew": "新しいチャレンジのアイデアはありますか？ぜひ教えてください {url}！"
 	},
 	"Common": {
 		"About": "アプリについて",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "{name} に追加",
 		"AdditionalInfo": "Additional information",
+		"All": "全て",
 		"Barcode": "バーコード",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -220,7 +222,7 @@
 		"Contributors": "貢献者",
 		"Contributions": "貢献",
 		"Confirm": "確定",
-		"Country": "国",
+		"Country": "Country",
 		"Countries": "国",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "編集",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "このフィールドは必須です",
 		"Filter": "フィルタ",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "価格付き",
@@ -453,6 +457,13 @@
 		"Users": "ユーザー",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "検証",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "[設定] ページにリダイレクトされますが、このページに入力した情報はすべて失われます。",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "販売の国",
+		"CreateNewProduct": "新しい製品を作成する",
+		"CreateProduct": "製品を作成する",
+		"EnableCropMode": "クロップモードを有効にする",
+		"Flavor": "製品を作成するプロジェクトを選択します",
+		"NextProof": "Next proof",
+		"PreviousProof": "以前の証明",
+		"ProductAlreadyExists": "製品はすでに存在します",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "証明 ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "販売店舗",
+		"UseCropModeToAddImage": "製品画像を追加するには、プルーフ写真の下の切り抜きモードを有効にし、製品の周囲に四角形を描きます。"
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "最近の証明のいずれかを選択"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "クリア",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "お店が見つからない場合は、住所全体ではなくキーワード（例：「Carrefour 75013 Paris」または「Walmart San Francisco」）を使用して検索してみてください。",
+		"NoResultHelpOSM": "まだお店が見つかりませんか？まだ {osm_name} に載っていない可能性があります。まずは {osm_url} に追加してみてください。",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "アプリについて"
+		},
+		"Add": {
+			"Title": "追加"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "場所："
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "値札"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "貢献する"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "言語の変更",
-		"CountryLabel": "国",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

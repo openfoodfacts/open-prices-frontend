@@ -162,7 +162,8 @@
 		"StatsAndRankings": "آمار و رتبه‌بندی‌ها",
 		"MostPicturesAdded": "بیشتر تصاویر اضافه شده",
 		"MostPricesAdded": "اکثر قیمت‌ها اضافه شدند",
-		"MostPricesFromPicturesAdded": "اکثر قیمت‌ها از تصاویر اضافه شده‌اند"
+		"MostPricesFromPicturesAdded": "اکثر قیمت‌ها از تصاویر اضافه شده‌اند",
+		"AlertNew": "ایده‌ای برای یک چالش جدید دارید؟ به ما اطلاع دهید {url}!"
 	},
 	"Common": {
 		"About": "درباره ما",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "بارکد",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "فیلد الزامی است",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "یک محصول جدید ایجاد کنید",
+		"CreateProduct": "ایجاد محصول",
+		"EnableCropMode": "حالت برش را فعال کنید",
+		"Flavor": "پروژه‌ای را که محصول باید در آن ایجاد شود، انتخاب کنید",
+		"NextProof": "Next proof",
+		"PreviousProof": "اثبات قبلی",
+		"ProductAlreadyExists": "محصول از قبل وجود دارد",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "اثبات ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "فروشگاه‌هایی که در آنها فروخته می‌شوند",
+		"UseCropModeToAddImage": "برای افزودن تصویر محصول، حالت برش را در زیر تصویر نمونه فعال کنید و یک مستطیل دور محصول بکشید."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "پاک سازی",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "فروشگاه خود را پیدا نمی‌کنید؟ به جای آدرس کامل از کلمات کلیدی استفاده کنید (مثلاً «Carrefour 75013 Paris» یا «Walmart San Francisco»).",
+		"NoResultHelpOSM": "هنوز فروشگاه خود را پیدا نکرده‌اید؟ ممکن است هنوز در {osm_name} نباشد. می‌توانید ابتدا آن را در {osm_url} اضافه کنید.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "درباره ما"
+		},
+		"Add": {
+			"Title": "افزودن"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "برچسب‌های قیمت"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

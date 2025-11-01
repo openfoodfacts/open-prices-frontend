@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистик ба зэрэглэл",
 		"MostPicturesAdded": "Ихэнх зураг нэмсэн",
 		"MostPricesAdded": "Ихэнх үнийг нэмсэн",
-		"MostPricesFromPicturesAdded": "Зураг дээрх ихэнх үнийг нэмсэн"
+		"MostPricesFromPicturesAdded": "Зураг дээрх ихэнх үнийг нэмсэн",
+		"AlertNew": "Танд шинэ сорилт хийх санаа байна уу? {url}бидэнд мэдэгдээрэй!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Бүгд",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Засвар хийх",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Талбар оруулах шаардлагатай",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Баталгаажуулах",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Шинэ бүтээгдэхүүн бий болгох",
+		"CreateProduct": "Бүтээгдэхүүн бий болгох",
+		"EnableCropMode": "Тайрах горимыг идэвхжүүлнэ үү",
+		"Flavor": "Бүтээгдэхүүнийг бүтээх төслийг сонго",
+		"NextProof": "Next proof",
+		"PreviousProof": "Өмнөх нотолгоо",
+		"ProductAlreadyExists": "Бүтээгдэхүүн аль хэдийн байна",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Баталгаа ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Борлуулсан дэлгүүрүүд",
+		"UseCropModeToAddImage": "Бүтээгдэхүүний зураг нэмэхийн тулд баталгаат зургийн доор тайрах горимыг идэвхжүүлж, бүтээгдэхүүний эргэн тойронд тэгш өнцөгт зурна уу."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Дэлгүүрээ олж чадахгүй байна уу? Бүрэн хаягийн оронд түлхүүр үг ашиглаж үзнэ үү (жишээ нь 'Carrefour 75013 Paris' эсвэл 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Дэлгүүрээ олж чадаагүй хэвээр байна уу? Энэ нь {osm_name} -д хараахан ороогүй байж магадгүй. Та эхлээд {osm_url} дээр нэмж болно.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Үнийн шошго"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

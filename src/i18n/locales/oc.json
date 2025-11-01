@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Estatisticas e classaments",
 		"MostPicturesAdded": "La màger part de las imatges apondudas",
 		"MostPricesAdded": "La màger part dels prètzs aponduts",
-		"MostPricesFromPicturesAdded": "La màger part dels prètzs de las imatges apondudas"
+		"MostPricesFromPicturesAdded": "La màger part dels prètzs de las imatges apondudas",
+		"AlertNew": "Avètz una idèa per un novèl desfís? Fasètz-nos saber {url}!"
 	},
 	"Common": {
 		"About": "A prepaus",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Còdi de barras",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modificar",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Camp es obligatòri",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Crear un produch novèl",
+		"CreateProduct": "Crear un produch",
+		"EnableCropMode": "Activar lo mòde de talh",
+		"Flavor": "Seleccionatz lo projècte que lo produch deuriá èsser creat dins",
+		"NextProof": "Next proof",
+		"PreviousProof": "Pròva precedenta",
+		"ProductAlreadyExists": "Lo produch existís ja",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Pròva ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "De botigas ont se vendon",
+		"UseCropModeToAddImage": "Per apondre una imatge de produch, activatz lo mòde de talh jos l'imatge de pròva e dessenhatz un rectangle a l'entorn del produch."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Escafar",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Trobatz pas vòstra botiga? Ensajatz d'utilizar de mots claus al luòc de l'adreça completa (per exemple 'Carrefour 75013 Paris' o 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Trobatz pas encara vòstra botiga? Es benlèu pas encara dins {osm_name} . O podètz apondre sus {osm_url} d'en primièr.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "A prepaus"
+		},
+		"Add": {
+			"Title": "Apondre"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Etiquetas de prètz"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribuir"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

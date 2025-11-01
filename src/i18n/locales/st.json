@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Lipalo le maemo",
 		"MostPicturesAdded": "Litšoantšo tse ngata li kentsoe",
 		"MostPricesAdded": "Litheko tse ngata li ekelitsoe",
-		"MostPricesFromPicturesAdded": "Litheko tse ngata tse tsoang litšoantšong tse kentsoeng"
+		"MostPricesFromPicturesAdded": "Litheko tse ngata tse tsoang litšoantšong tse kentsoeng",
+		"AlertNew": "O na le mohopolo oa phephetso e ncha? Re tsebise {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Ho hlokahala sebaka",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Etsa sehlahisoa se secha",
+		"CreateProduct": "Etsa sehlahisoa",
+		"EnableCropMode": "Lumella mokhoa oa ho kotula",
+		"Flavor": "Khetha morero oo sehlahisoa se lokelang ho etsoa ho oona",
+		"NextProof": "Next proof",
+		"PreviousProof": "Bopaki bo fetileng",
+		"ProductAlreadyExists": "Sehlahisoa se se se le teng",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Bopaki ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Mabenkele moo a rekisoang teng",
+		"UseCropModeToAddImage": "Ho kenya setšoantšo sa sehlahisoa, lumella mokhoa oa lijalo ka tlase ho setšoantšo sa bopaki 'me u toroe khutlonnetsepa ho potoloha sehlahisoa."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ha u fumane lebenkele la hau? Leka ho sebelisa mantsoe a sehlooho sebakeng sa aterese e felletseng (mohlala, 'Carrefour 75013 Paris' kapa 'Walmart San Francisco').",
+		"NoResultHelpOSM": "U ntse u sa fumane lebenkele la hau? E kanna ea se be ho {osm_name} hajoale. O ka e kenya ho {osm_url} pele.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Litheko tsa theko"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

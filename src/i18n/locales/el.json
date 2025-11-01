@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Στατιστικά & κατατάξεις",
 		"MostPicturesAdded": "Οι περισσότερες εικόνες προστέθηκαν",
 		"MostPricesAdded": "Οι περισσότερες τιμές που προστέθηκαν",
-		"MostPricesFromPicturesAdded": "Οι περισσότερες τιμές από εικόνες προστέθηκαν"
+		"MostPricesFromPicturesAdded": "Οι περισσότερες τιμές από εικόνες προστέθηκαν",
+		"AlertNew": "Έχετε κάποια ιδέα για μια νέα πρόκληση; Πείτε μας {url}!"
 	},
 	"Common": {
 		"About": "Σχετικά",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Όλα",
 		"Barcode": "Γραμμικός κωδικός",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Επεξεργασία",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Απαιτείται πεδίο",
 		"Filter": "Φίλτρο",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Επικύρωση",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "Θα ανακατευθυνθείτε στη σελίδα Ρυθμίσεις αλλά θα χάσετε όλες τις πληροφορίες που έχετε εισαγάγει σε αυτήν τη σελίδα.",
 		"Select": "Επιλέξτε {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Χώρες όπου πωλείται",
+		"CreateNewProduct": "Δημιουργήστε ένα νέο προϊόν",
+		"CreateProduct": "Δημιουργία προϊόντος",
+		"EnableCropMode": "Ενεργοποίηση λειτουργίας περικοπής",
+		"Flavor": "Επιλέξτε το έργο στο οποίο θα δημιουργηθεί το προϊόν",
+		"NextProof": "Next proof",
+		"PreviousProof": "Προηγούμενη απόδειξη",
+		"ProductAlreadyExists": "Το προϊόν υπάρχει ήδη",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Απόδειξη ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Καταστήματα όπου πωλούνται",
+		"UseCropModeToAddImage": "Για να προσθέσετε μια εικόνα προϊόντος, ενεργοποιήστε τη λειτουργία περικοπής κάτω από την εικόνα δοκιμίου και σχεδιάστε ένα ορθογώνιο γύρω από το προϊόν."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Εκκαθάριση",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Δεν μπορείτε να βρείτε το κατάστημά σας; Δοκιμάστε να χρησιμοποιήσετε λέξεις-κλειδιά αντί για την πλήρη διεύθυνση (π.χ. 'Carrefour 75013 Παρίσι' ή 'Walmart Σαν Φρανσίσκο').",
+		"NoResultHelpOSM": "Ακόμα δεν μπορείτε να βρείτε το κατάστημά σας; Ενδέχεται να μην βρίσκεται ακόμα στο {osm_name} . Μπορείτε πρώτα να το προσθέσετε στο {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Σχετικά"
+		},
+		"Add": {
+			"Title": "Προσθήκη"
 		},
 		"AddPrice": {
 			"Title": "Προσθήκη μίας τιμής"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Τιμές"
 		},
+		"PriceTags": {
+			"Title": "Ετικέτες τιμών"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Συμβάλλετε"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

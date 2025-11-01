@@ -73,7 +73,7 @@
       >
         {{ productForm.product_code }}
       </v-alert>
-      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="true" elevation="1" />
     </v-col>
     <v-col v-else-if="productIsTypeCategory" cols="12">
       <v-alert
@@ -241,8 +241,9 @@ export default {
         .then((data) => {
           this.productForm.product = data.id ? data : {'code': code, 'price_count': 0}
         })
-        .catch((error) => {  // eslint-disable-line no-unused-vars
-          alert("Error: Open Prices server error")
+        .catch((error) => {
+          alert(this.$t('Common.ServerError'))
+          console.log(error)
         })
     },
   }

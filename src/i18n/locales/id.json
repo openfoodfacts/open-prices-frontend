@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistik & peringkat",
 		"MostPicturesAdded": "Sebagian besar gambar ditambahkan",
 		"MostPricesAdded": "Sebagian besar harga ditambahkan",
-		"MostPricesFromPicturesAdded": "Sebagian besar harga dari gambar ditambahkan"
+		"MostPricesFromPicturesAdded": "Sebagian besar harga dari gambar ditambahkan",
+		"AlertNew": "Punya ide untuk tantangan baru? Beri tahu kami {url}!"
 	},
 	"Common": {
 		"About": "Tentang",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Tambahkan bukti baru",
 		"AddToOFF": "Tambahkan ke {name}",
 		"AdditionalInfo": "Informasi tambahan",
+		"All": "Semua",
 		"Barcode": "Kode batang",
 		"Barcodes": "Kode batang",
 		"BarcodeScan": "Pindai barcode",
@@ -220,7 +222,7 @@
 		"Contributors": "Kontributor",
 		"Contributions": "Kontribusi",
 		"Confirm": "Konfirmasi",
-		"Country": "Negara",
+		"Country": "Country",
 		"Countries": "Negara - negara",
 		"CountryCount": "{count} negara | {count} negara | {count} negara",
 		"Crop": "Potong",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Contoh: {value}",
 		"Edit": "Sunting",
 		"End": "Selesai",
+		"ErrorServer": "Kesalahan: kesalahan server",
+		"FieldIsRequired": "Bidang wajib diisi",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Tampilkan semua tantangan",
 		"FilterProductWithPriceCount": "Dengan harga",
@@ -453,6 +457,13 @@
 		"Users": "Pengguna",
 		"UserCount": "{count} pengguna | {count} pengguna | {count} pengguna",
 		"UserContributorCount": "{count} kontributor | {count} kontributor | {count} kontributor",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validasikan",
 		"ValidatePrices": "Validasi harga",
 		"ValidatePricesWithAI": "Validasi harga dengan AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "Anda akan diarahkan ke halaman Pengaturan, tetapi informasi apa pun yang telah Anda masukkan di halaman ini akan hilang.",
 		"Select": "Pilih {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Negara tempat dijual",
+		"CreateNewProduct": "Buat produk baru",
+		"CreateProduct": "Buat produk",
+		"EnableCropMode": "Aktifkan mode potong",
+		"Flavor": "Pilih proyek tempat produk harus dibuat",
+		"NextProof": "Bukti selanjutnya",
+		"PreviousProof": "Bukti sebelumnya",
+		"ProductAlreadyExists": "Produk sudah ada",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Bukti ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Toko tempat menjual",
+		"UseCropModeToAddImage": "Untuk menambahkan gambar produk, aktifkan mode potong di bawah gambar bukti dan gambar persegi panjang di sekeliling produk."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Pilih salah satu bukti terbaru Anda"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Hapus",
 		"NoResult": "Tidak ada hasil yang ditemukan",
+		"NoResultHelpKeywords": "Tidak menemukan toko Anda? Coba gunakan kata kunci, bukan alamat lengkap (misalnya, \"Carrefour 75013 Paris\" atau \"Walmart San Francisco\").",
+		"NoResultHelpOSM": "Masih belum menemukan toko Anda? Mungkin belum ada di {osm_name} . Anda bisa menambahkannya di {osm_url} terlebih dahulu.",
 		"PoweredBy": {
 			"text": "didukung oleh {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Tambah item baru",
-		"MissingPrice": "Harga tidak ada",
-		"MissingProduct": "Produk tidak ada",
 		"NoItemsFound": "Tidak ada item yang dapat diekstraksi dari struk, silakan coba lagi.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Harga sudah ditetapkan untuk item tersebut",
 		"PriceReadyToBeAdded": "Harga siap ditambahkan",
+		"ReceiptItems": "Item-item pada bukti pembayaran, periksa dan perbaiki",
 		"ReceiptItemsCheck": "Item-item pada bukti pembayaran, periksa dan perbaiki",
 		"UploadOnlyNewPrices": "Unggah hanya harga baru ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Unggah atau perbarui semua harga yang valid ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Tentang"
+		},
+		"Add": {
+			"Title": "Tambahkan"
 		},
 		"AddPrice": {
 			"Title": "Tambahkan harga"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Tambahkan beberapa bukti"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Lokasi"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Harga"
 		},
+		"PriceTags": {
+			"Title": "Label harga"
+		},
 		"Proofs": {
 			"Title": "Bukti"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Berkontribusi"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Eksperimen"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Menambahkan harga",
 		"ChangeLanguage": "Ganti bahasa",
-		"CountryLabel": "Negara",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Mata uang",
 		"DisplayTitle": "Tampilan",
 		"BarcodeScanner": "Pemindai kode batang",

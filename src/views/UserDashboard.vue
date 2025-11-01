@@ -5,18 +5,67 @@
     </v-col>
   </v-row>
 
-  <v-tabs v-if="user" v-model="currentTab" :grow="!$vuetify.display.smAndUp">
-    <v-tab v-for="item in tabItems" :key="item.key" :value="item.key">
-      <v-icon start>
-        {{ item.icon }}
-      </v-icon>
-      {{ $t('Common.' + item.value) }}
-    </v-tab>
-  </v-tabs>
+  <v-row v-if="user && userIsModerator" class="mt-0">
+    <v-col cols="12" sm="6">
+      <v-alert data-name="user-moderator-alert" type="info" icon="mdi-shield-account" variant="outlined">
+        {{ $t('Common.UserIsModerator') }}
+      </v-alert>
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-tabs v-if="user" v-model="currentTab" :grow="!$vuetify.display.smAndUp">
+      <v-tab v-for="item in tabItems" :key="item.key" :value="item.key">
+        <v-icon :icon="item.icon" :start="item.key !== 'all'" />
+        <span v-if="item.key !== 'all'">{{ $t('Common.' + item.value) }}</span>
+      </v-tab>
+    </v-tabs>
+  </v-row>
 
   <br>
 
   <v-tabs-window v-if="user" v-model="currentTab" disabled>
+    <v-tabs-window-item value="all">
+      <v-row v-if="displayTodayStats">
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userTodayPriceCount" :subtitle="$t('Common.PricesToday')" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userTodayProofCount" :subtitle="$t('Common.ProofsToday')" />
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userPriceCount" :subtitle="$t('Common.Prices')" :to="getUserDashboardPriceUrl" />
+        </v-col>
+        <v-col cols="6" sm="4" md="3" lg="2">
+          <StatCard :value="userProofCount" :subtitle="$t('Common.Proofs')" :to="getUserDashboardProofUrl" />
+        </v-col>
+      </v-row>
+
+      <br>
+
+      <v-row>
+        <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
+          <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+        </v-col>
+        <v-col cols="12" sm="6" md="4" xl="3" align="center">
+          <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
+          <br v-if="$vuetify.display.smAndUp">
+          <v-btn
+            v-if="userPriceList.length"
+            color="primary"
+            :block="!$vuetify.display.smAndUp"
+            :to="getUserDashboardPriceUrl"
+            prepend-icon="mdi-tag-multiple-outline"
+            append-icon="mdi-arrow-right"
+          >
+            {{ $t('UserDashboard.MyPrices') }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-tabs-window-item>
+
     <v-tabs-window-item value="consumption">
       <v-row v-if="displayTodayStats">
         <v-col cols="6" sm="4" md="3" lg="2">
@@ -119,19 +168,24 @@ export default {
     return {
       // data
       user: null,
+      userPriceCount: null,
+      userTodayPriceCount: 0,
+      userProofCount: null,
+      userTodayProofCount: 0,
+      userPriceList: [],
       userConsumptionPriceCount: null,
-      userCommunityPriceCount: null,
       userTodayConsumptionPriceCount: 0,
-      userTodayCommunityPriceCount: 0,
       userConsumptionProofCount: null,
-      userCommunityProofCount: null,
       userTodayConsumptionProofCount: 0,
-      userTodayCommunityProofCount: 0,
       userConsumptionPriceList: [],
+      userCommunityPriceCount: null,
+      userTodayCommunityPriceCount: 0,
+      userCommunityProofCount: null,
+      userTodayCommunityProofCount: 0,
       userCommunityPriceList: [],
       loading: false,
       // config
-      currentTab: null,  // see mounted
+      currentTab: null,  // see mounted  // 'all' | 'consumption' | 'community'
       tabItems: constants.USER_DASHBOARD_TAB_LIST,
     }
   },
@@ -140,44 +194,53 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    userIsModerator() {
+      return this.appStore.user.is_moderator
+    },
     displayTodayStats() {
       if (this.currentTab === 'consumption') {
         return (this.userTodayConsumptionPriceCount > 0) || (this.userTodayConsumptionProofCount > 0)
+      } else if (this.currentTab === 'community') {
+        return (this.userTodayCommunityPriceCount > 0) || (this.userTodayCommunityProofCount > 0)
       }
-      // community
-      return (this.userTodayCommunityPriceCount > 0) || (this.userTodayCommunityProofCount > 0)
+      // all
+      return (this.userTodayPriceCount > 0) || (this.userTodayProofCount > 0)
     },
     displayedPriceList() {
       if (this.currentTab === 'consumption') {
         return (!this.$vuetify.display.smAndUp) ? this.userConsumptionPriceList.slice(0, 5) : this.userConsumptionPriceList
+      } else if (this.currentTab === 'community') {
+        return (!this.$vuetify.display.smAndUp) ? this.userCommunityPriceList.slice(0, 5) : this.userCommunityPriceList
       }
-      // community
-      return (!this.$vuetify.display.smAndUp) ? this.userCommunityPriceList.slice(0, 5) : this.userCommunityPriceList
+      // all
+      return (!this.$vuetify.display.smAndUp) ? this.userPriceList.slice(0, 5) : this.userPriceList
     },
     getPriceParams() {
       let defaultParams = { owner: this.username }
-      if (this.currentTab) {
+      if (this.currentTab && this.currentTab !== 'all') {
         defaultParams['kind'] = this.currentTab.toUpperCase()
       }
       return defaultParams
     },
     getProofParams() {
       let defaultParams = { owner: this.username }
-      if (this.currentTab) {
+      if (this.currentTab && this.currentTab !== 'all') {
         defaultParams['kind'] = this.currentTab.toUpperCase()
       }
       return defaultParams
     },
     getUserDashboardPriceUrl() {
-      if (this.currentTab) {
+      if (this.currentTab && this.currentTab !== 'all') {
         return `/dashboard/prices?${constants.KIND_PARAM}=${this.currentTab.toUpperCase()}`
       }
+      // all
       return `/dashboard/prices`
     },
     getUserDashboardProofUrl() {
-      if (this.currentTab) {
+      if (this.currentTab && this.currentTab !== 'all') {
         return `/dashboard/proofs?${constants.KIND_PARAM}=${this.currentTab.toUpperCase()}`
       }
+      // all
       return `/dashboard/proofs`
     },
   },
@@ -217,9 +280,12 @@ export default {
           if (this.currentTab === 'consumption') {
             this.userConsumptionPriceList = data.items
             this.userConsumptionPriceCount = data.total
-          } else {
+          } else if (this.currentTab === 'community') {
             this.userCommunityPriceList = data.items
             this.userCommunityPriceCount = data.total
+          } else {
+            this.userPriceList = data.items
+            this.userPriceCount = data.total
           }
           this.loading = false
           // check if the user added a price today
@@ -239,14 +305,18 @@ export default {
           if (today) {
             if (this.currentTab === 'consumption') {
               this.userTodayConsumptionPriceCount = data.total
-            } else {
+            } else if (this.currentTab === 'community') {
               this.userTodayCommunityPriceCount = data.total
+            } else {
+              this.userTodayPriceCount = data.total
             }
           } else {
             if (this.currentTab === 'consumption') {
               this.userConsumptionPriceCount = data.total
-            } else {
+            } else if (this.currentTab === 'community') {
               this.userCommunityPriceCount = data.total
+            } else {
+              this.userPriceCount = data.total
             }
           }
           this.loading = false
@@ -263,14 +333,18 @@ export default {
           if (today) {
             if (this.currentTab === 'consumption') {
               this.userTodayConsumptionProofCount = data.total
-            } else {
+            } else if (this.currentTab === 'community') {
               this.userTodayCommunityProofCount = data.total
+            } else {
+              this.userTodayProofCount = data.total
             }
           } else {
             if (this.currentTab === 'consumption') {
               this.userConsumptionProofCount = data.total
-            } else {
+            } else if (this.currentTab === 'community') {
               this.userCommunityProofCount = data.total
+            } else {
+              this.userProofCount = data.total
             }
             // check if the user added a proof today
             if (data.items.length && data.items[0].created > date_utils.currentStartOfDay()) {

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika ir reitingai",
 		"MostPicturesAdded": "Daugiausia pridėtų nuotraukų",
 		"MostPricesAdded": "Dauguma kainų pridėtos",
-		"MostPricesFromPicturesAdded": "Dauguma kainų iš nuotraukų pridėtos"
+		"MostPricesFromPicturesAdded": "Dauguma kainų iš nuotraukų pridėtos",
+		"AlertNew": "Turi idėją naujam iššūkiui? Pranešk mums {url}!"
 	},
 	"Common": {
 		"About": "Apie",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Pridėti naujų įrodymų",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Visi",
 		"Barcode": "Barkodas",
 		"Barcodes": "Brūkšninis kodas",
 		"BarcodeScan": "Nuskaityti brūkšninį kodą",
@@ -220,7 +222,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Prisidėjo",
 		"Confirm": "Patvirtinti",
-		"Country": "Šalis",
+		"Country": "Country",
 		"Countries": "Šalys",
 		"CountryCount": "{count} šalys| {count} šalis| {count} šalių",
 		"Crop": "Apkarpyti",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Pavyzdžiai: {value}",
 		"Edit": "Redaguoti",
 		"End": "Pabaiga",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Laukas būtinas",
 		"Filter": "Filtras",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "Su kaina",
@@ -453,6 +457,13 @@
 		"Users": "Vartotojai",
 		"UserCount": "{count} vartotojai | {count} vartotojas | {count} vartotojų",
 		"UserContributorCount": "{count} bendraautoriai | {count} bendraautorius | {count} bendraautorių",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Patvirtinti",
 		"ValidatePrices": "Patvirtinti kainas",
 		"ValidatePricesWithAI": "Patvirtinti kainas su DI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "Būsite nukreipti į puslapį „Nuostatos“, bet prarasite visą šiame puslapyje įvestą informaciją.",
 		"Select": "Pasirinkti {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Sukurkite naują produktą",
+		"CreateProduct": "Sukurti produktą",
+		"EnableCropMode": "Įjungti apkirpimo režimą",
+		"Flavor": "Pasirinkite projektą, kuriame produktas turėtų būti sukurtas",
+		"NextProof": "Kitas įrodymas",
+		"PreviousProof": "Ankstesnis įrodymas",
+		"ProductAlreadyExists": "Produktas jau yra",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Įrodymas ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Parduotuvės, kuriose parduodama",
+		"UseCropModeToAddImage": "Norėdami pridėti produkto paveikslėlį, įjunkite apkirpimo režimą po bandomąja nuotrauka ir nubrėžkite stačiakampį aplink produktą."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "Rezultatų nerasta",
+		"NoResultHelpKeywords": "Nerandate savo parduotuvės? Pabandykite naudoti raktinius žodžius vietoj viso adreso (pvz., „Carrefour 75013 Paris“ arba „Walmart San Francisco“).",
+		"NoResultHelpOSM": "Vis dar nerandate savo parduotuvės? Gali būti, kad jos dar nėra {osm_name} . Pirmiausia galite ją pridėti {osm_url} .",
 		"PoweredBy": {
 			"text": "įgalino {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Apie"
+		},
+		"Add": {
+			"Title": "Pridėti"
 		},
 		"AddPrice": {
 			"Title": "Pridėti kainą"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Pridėti kelis įrodymus"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Vietos"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Kainos"
 		},
+		"PriceTags": {
+			"Title": "Kainų etiketės"
+		},
 		"Proofs": {
 			"Title": "Įrodymai"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Prisidėti"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Eksperimentai"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Kainų pridėjimas",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Šalis",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Valiuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Brūkšninių kodų skaitytuvas",

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Stadegoù ha renkadur",
 		"MostPicturesAdded": "Ouzhpennet eo bet an darn vrasañ eus ar skeudennoù",
 		"MostPricesAdded": "Ouzhpennet eo bet an darn vrasañ eus ar prizioù",
-		"MostPricesFromPicturesAdded": "Ouzhpennet eo bet an darn vrasañ eus ar prizioù diwar ar skeudennoù"
+		"MostPricesFromPicturesAdded": "Ouzhpennet eo bet an darn vrasañ eus ar prizioù diwar ar skeudennoù",
+		"AlertNew": "Ur mennozh hoc'h eus evit ur c'houlzad nevez ? Lakait ac'hanomp da c'houzout {url}!"
 	},
 	"Common": {
 		"About": "A-zivout",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Kod barrennoù",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Aozañ",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Rekis eo ar vaezienn",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Krouiñ ur produ nevez",
+		"CreateProduct": "Krouiñ ur produ",
+		"EnableCropMode": "Gweredekaat ar mod troc'hañ",
+		"Flavor": "Dibabit ar raktres ma rankfe ar produ bezañ krouet",
+		"NextProof": "Next proof",
+		"PreviousProof": "Prouenn a-raok",
+		"ProductAlreadyExists": "Bez' ez eus eus ar produ dija",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Prouenn ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Gwerzhet e veze ar stalioù",
+		"UseCropModeToAddImage": "Evit ouzhpennañ ur skeudenn produ, gweredekait ar mod troc'hañ dindan ar skeudenn prouiñ ha tresit ur reizhkorn tro-dro d'ar produ."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "N'eus ket tu da gavout ho stal ? Klaskit implijout gerioù-alc'hwez e-lec'h ar chomlec'h klok (da sk. 'Carrefour 75013 Paris' pe 'Walmart San Francisco').",
+		"NoResultHelpOSM": "N'hallit ket kavout ho stal c'hoazh ? Marteze n'emañ ket e {osm_name} c'hoazh. Gallout a rit ouzhpennañ anezhañ war {osm_url} da gentañ.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "A-zivout"
+		},
+		"Add": {
+			"Title": "Ouzhpennañ"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Tikedennoù prizioù"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Kenoberiañ"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

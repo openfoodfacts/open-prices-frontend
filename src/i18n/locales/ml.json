@@ -162,7 +162,8 @@
 		"StatsAndRankings": "സ്ഥിതിവിവരക്കണക്കുകളും റാങ്കിംഗുകളും",
 		"MostPicturesAdded": "ഏറ്റവും കൂടുതൽ ചിത്രങ്ങൾ ചേർത്തത്",
 		"MostPricesAdded": "മിക്ക വിലകളും ചേർത്തു",
-		"MostPricesFromPicturesAdded": "ചിത്രങ്ങളിൽ നിന്നുള്ള മിക്ക വിലകളും ചേർത്തു"
+		"MostPricesFromPicturesAdded": "ചിത്രങ്ങളിൽ നിന്നുള്ള മിക്ക വിലകളും ചേർത്തു",
+		"AlertNew": "പുതിയൊരു വെല്ലുവിളി ഏറ്റെടുക്കാൻ നിങ്ങൾക്ക് ആശയമുണ്ടോ? {url}എന്ന് ഞങ്ങളെ അറിയിക്കൂ!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "ഫീൽഡ് പൂരിപ്പിക്കേണ്ടതുണ്ട്",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "ഒരു പുതിയ ഉൽപ്പന്നം സൃഷ്ടിക്കുക",
+		"CreateProduct": "ഉൽപ്പന്നം സൃഷ്ടിക്കുക",
+		"EnableCropMode": "ക്രോപ്പ് മോഡ് പ്രാപ്തമാക്കുക",
+		"Flavor": "ഉൽപ്പന്നം സൃഷ്ടിക്കേണ്ട പ്രോജക്റ്റ് തിരഞ്ഞെടുക്കുക.",
+		"NextProof": "Next proof",
+		"PreviousProof": "മുൻ തെളിവ്",
+		"ProductAlreadyExists": "ഉൽപ്പന്നം ഇതിനകം നിലവിലുണ്ട്",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "തെളിവ് ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "വിൽക്കുന്ന കടകൾ",
+		"UseCropModeToAddImage": "ഒരു ഉൽപ്പന്ന ചിത്രം ചേർക്കാൻ, പ്രൂഫ് ചിത്രത്തിന് താഴെയുള്ള ക്രോപ്പ് മോഡ് പ്രവർത്തനക്ഷമമാക്കി ഉൽപ്പന്നത്തിന് ചുറ്റും ഒരു ദീർഘചതുരം വരയ്ക്കുക."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "നിങ്ങളുടെ കട കണ്ടെത്താനായില്ലേ? മുഴുവൻ വിലാസത്തിനും പകരം കീവേഡുകൾ ഉപയോഗിക്കാൻ ശ്രമിക്കുക (ഉദാ. 'Carrefour 75013 Paris' അല്ലെങ്കിൽ 'Walmart San Francisco').",
+		"NoResultHelpOSM": "നിങ്ങളുടെ കട ഇപ്പോഴും കണ്ടെത്താനായില്ലേ? അത് ഇതുവരെ {osm_name} -ൽ എത്തിയിട്ടില്ലായിരിക്കാം. ആദ്യം നിങ്ങൾക്ക് അത് {osm_url} -ൽ ചേർക്കാം.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "വില ടാഗുകൾ"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

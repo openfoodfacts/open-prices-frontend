@@ -102,7 +102,6 @@ export default {
   methods: {
     onProofUploaded(proof) {
       this.firstProofUploaded = proof
-      console.log('Proof uploaded:', proof)
     },
     proofUploadDone(proofUploadCount) {
       this.proofUploadCount = proofUploadCount

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Thống kê & xếp hạng",
 		"MostPicturesAdded": "Đã thêm nhiều hình ảnh nhất",
 		"MostPricesAdded": "Giá được thêm nhiều nhất",
-		"MostPricesFromPicturesAdded": "Hầu hết giá từ hình ảnh được thêm vào"
+		"MostPricesFromPicturesAdded": "Hầu hết giá từ hình ảnh được thêm vào",
+		"AlertNew": "Bạn có ý tưởng cho thử thách mới không? Hãy cho chúng tôi biết nhé {url}!"
 	},
 	"Common": {
 		"About": "Giới thiệu",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Tất cả",
 		"Barcode": "Mã vạch",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -220,7 +222,7 @@
 		"Contributors": "Người đóng góp",
 		"Contributions": "Đóng góp",
 		"Confirm": "Xác nhận",
-		"Country": "Quốc gia",
+		"Country": "Country",
 		"Countries": "Quốc gia",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Chỉnh sửa",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Trường bắt buộc",
 		"Filter": "Bộ lọc",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Xác thực",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Các quốc gia bán",
+		"CreateNewProduct": "Tạo sản phẩm mới",
+		"CreateProduct": "Tạo sản phẩm",
+		"EnableCropMode": "Bật chế độ cắt xén",
+		"Flavor": "Chọn dự án mà sản phẩm sẽ được tạo ra",
+		"NextProof": "Next proof",
+		"PreviousProof": "Bằng chứng trước đó",
+		"ProductAlreadyExists": "Sản phẩm đã tồn tại",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Bằng chứng ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Các cửa hàng đã bán",
+		"UseCropModeToAddImage": "Để thêm hình ảnh sản phẩm, hãy bật chế độ cắt bên dưới hình ảnh minh họa và vẽ một hình chữ nhật xung quanh sản phẩm."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Xóa",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Không tìm thấy cửa hàng của bạn? Hãy thử sử dụng từ khóa thay vì địa chỉ đầy đủ (ví dụ: 'Carrefour 75013 Paris' hoặc 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Bạn vẫn chưa tìm thấy cửa hàng của mình? Có thể nó chưa nằm trong {osm_name} . Bạn có thể thêm nó vào {osm_url} trước.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Giới thiệu"
+		},
+		"Add": {
+			"Title": "Thêm vào"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Thẻ giá"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Góp phần"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Thay đổi ngôn ngữ",
-		"CountryLabel": "Quốc gia",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Tirokoobyada & darajooyinka",
 		"MostPicturesAdded": "Inta badan sawirada ayaa lagu daray",
 		"MostPricesAdded": "Inta badan qiimaha lagu daray",
-		"MostPricesFromPicturesAdded": "Qiimaha ugu badan ee sawirada lagu daray"
+		"MostPricesFromPicturesAdded": "Qiimaha ugu badan ee sawirada lagu daray",
+		"AlertNew": "Ma haysaa fikrad tartan cusub? Nala soo socodsii {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Garoonka ayaa loo baahan yahay",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Abuur badeecad cusub",
+		"CreateProduct": "Abuur badeecad",
+		"EnableCropMode": "Daar qaabka dalagga",
+		"Flavor": "Dooro mashruuca ay tahay in alaabta lagu abuuro",
+		"NextProof": "Next proof",
+		"PreviousProof": "Caddeyn hore",
+		"ProductAlreadyExists": "Alaabta ayaa hore u jirtay",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Caddeyn ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Dukaamada lagu iibiyo",
+		"UseCropModeToAddImage": "Si aad ugu darto sawirka badeecada, karti u samee qaabka dalagga ka hooseeya sawirka caddaynta oo ku sawir leydi ku wareegsan alaabta."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ma heli kartaa dukaankaaga? Isku day inaad isticmaasho ereyada muhiimka ah halkii aad ka isticmaali lahayd cinwaanka buuxa (tusaale 'Carrefour 75013 Paris' ama 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Weli dukaankaaga ma heli kartaa? Waxaa laga yaabaa inaysan weli ku jirin {osm_name} Waxaad ku dari kartaa marka hore {osm_url}",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Qiimayaasha qiimaha"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

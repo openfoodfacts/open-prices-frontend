@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika və reytinqlər",
 		"MostPicturesAdded": "Ən çox şəkil əlavə edildi",
 		"MostPricesAdded": "Ən çox qiymətlər əlavə edildi",
-		"MostPricesFromPicturesAdded": "Şəkillərdən ən çox qiymətlər əlavə edildi"
+		"MostPricesFromPicturesAdded": "Şəkillərdən ən çox qiymətlər əlavə edildi",
+		"AlertNew": "Yeni çağırış üçün bir fikrin varmı? Bizə bildirin {url}!"
 	},
 	"Common": {
 		"About": "Haqqında",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barkod",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Düzəliş etmək",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Sahə tələb olunur",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Yeni məhsul yaradın",
+		"CreateProduct": "Məhsul yaradın",
+		"EnableCropMode": "Kəsmə rejimini aktivləşdirin",
+		"Flavor": "Məhsulun yaradılacağı layihəni seçin",
+		"NextProof": "Next proof",
+		"PreviousProof": "Əvvəlki sübut",
+		"ProductAlreadyExists": "Məhsul artıq mövcuddur",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Sübut ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Satılan mağazalar",
+		"UseCropModeToAddImage": "Məhsul şəklini əlavə etmək üçün sübut şəklin altında kəsmə rejimini aktiv edin və məhsulun ətrafında düzbucaqlı çəkin."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Təmizlə",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Mağazanızı tapa bilmirsiniz? Tam ünvan əvəzinə açar sözlərdən istifadə etməyə çalışın (məsələn, 'Carrefour 75013 Paris' və ya 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Hələ də mağazanızı tapa bilmirsiniz? O, hələ {osm_name} -də olmaya bilər. Əvvəlcə onu {osm_url} üzərinə əlavə edə bilərsiniz.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Haqqında"
+		},
+		"Add": {
+			"Title": "Əlavə eləyin"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Qiymət etiketləri"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

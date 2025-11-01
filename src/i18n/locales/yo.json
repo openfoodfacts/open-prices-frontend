@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Awọn iṣiro & awọn ipo",
 		"MostPicturesAdded": "Pupọ awọn aworan kun",
 		"MostPricesAdded": "Pupọ owo kun",
-		"MostPricesFromPicturesAdded": "Ọpọlọpọ owo lati awọn aworan kun"
+		"MostPricesFromPicturesAdded": "Ọpọlọpọ owo lati awọn aworan kun",
+		"AlertNew": "Ṣe o ni imọran fun ipenija tuntun kan? Jẹ ki a mọ {url}!"
 	},
 	"Common": {
 		"About": "Nipa",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Onnka idanimo oja",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Aaye ti wa ni ti beere",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Ṣẹda titun ọja",
+		"CreateProduct": "Ṣẹda ọja",
+		"EnableCropMode": "Jeki ipo irugbin na ṣiṣẹ",
+		"Flavor": "Yan iṣẹ akanṣe ọja yẹ ki o ṣẹda ninu",
+		"NextProof": "Next proof",
+		"PreviousProof": "Ẹri iṣaaju",
+		"ProductAlreadyExists": "Ọja ti wa tẹlẹ",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Ẹri ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Awọn ile itaja nibiti o ti ta",
+		"UseCropModeToAddImage": "Lati fi aworan ọja kun, mu ipo irugbin ṣiṣẹ ni isalẹ aworan ẹri ki o fa onigun mẹta yika ọja naa."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Ko le ri ile itaja rẹ? Gbiyanju lilo awọn koko dipo adirẹsi kikun (fun apẹẹrẹ 'Carrefour 75013 Paris' tabi 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Njẹ ko le ri ile itaja rẹ bi? O le ma wa ni {osm_name} sibẹsibẹ. O le ṣafikun si {osm_url} akọkọ.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Nipa"
+		},
+		"Add": {
+			"Title": "Fi kun"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Awọn idiyele idiyele"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "గణాంకాలు & ర్యాంకింగ్‌లు",
 		"MostPicturesAdded": "చాలా చిత్రాలు జోడించబడ్డాయి",
 		"MostPricesAdded": "చాలా ధరలు జోడించబడ్డాయి",
-		"MostPricesFromPicturesAdded": "చిత్రాల నుండి చాలా ధరలు జోడించబడ్డాయి"
+		"MostPricesFromPicturesAdded": "చిత్రాల నుండి చాలా ధరలు జోడించబడ్డాయి",
+		"AlertNew": "కొత్త సవాలు కోసం మీకు ఏదైనా ఆలోచన ఉందా? మాకు తెలియజేయండి {url}!"
 	},
 	"Common": {
 		"About": "గురించి",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "మార్చు",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "ఫీల్డ్ తప్పనిసరి",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "కొత్త ఉత్పత్తిని సృష్టించండి",
+		"CreateProduct": "ఉత్పత్తిని సృష్టించండి",
+		"EnableCropMode": "క్రాప్ మోడ్‌ను ప్రారంభించండి",
+		"Flavor": "ఉత్పత్తిని సృష్టించాల్సిన ప్రాజెక్ట్‌ను ఎంచుకోండి",
+		"NextProof": "Next proof",
+		"PreviousProof": "మునుపటి రుజువు",
+		"ProductAlreadyExists": "ఉత్పత్తి ఇప్పటికే ఉంది",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "రుజువు ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "అమ్మకానికి ఉన్న దుకాణాలు",
+		"UseCropModeToAddImage": "ఉత్పత్తి చిత్రాన్ని జోడించడానికి, ప్రూఫ్ చిత్రం క్రింద క్రాప్ మోడ్‌ను ప్రారంభించండి మరియు ఉత్పత్తి చుట్టూ దీర్ఘచతురస్రాన్ని గీయండి."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "తొలగింపు పూర్తయింది",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "మీ దుకాణం దొరకలేదా? పూర్తి చిరునామాకు బదులుగా కీలకపదాలను ఉపయోగించి ప్రయత్నించండి (ఉదా. 'Carrefour 75013 Paris' లేదా 'Walmart San Francisco').",
+		"NoResultHelpOSM": "ఇంకా మీ దుకాణం దొరకలేదా? అది ఇంకా {osm_name} లో ఉండకపోవచ్చు. మీరు ముందుగా దానిని {osm_url} లో జోడించవచ్చు.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "గురించి"
+		},
+		"Add": {
+			"Title": "చేర్చు"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "ధర ట్యాగ్‌లు"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

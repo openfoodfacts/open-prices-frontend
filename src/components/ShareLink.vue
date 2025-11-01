@@ -2,9 +2,6 @@
   <a v-if="display === 'link'" :disabled="disabled" @click="shareViaWebShare">
     {{ $t('Common.Share') }}
   </a>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" base-color="teal" prepend-icon="mdi-share-variant" :disabled="disabled" @click="shareViaWebShare">
-    {{ $t('Common.Share') }}
-  </v-list-item>
   <v-btn
     v-else-if="display === 'button' && !$vuetify.display.smAndUp"
     class="ml-2"
@@ -28,6 +25,9 @@
   >
     {{ $t('Common.Share') }}
   </v-btn>
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" base-color="teal" prepend-icon="mdi-share-variant" :disabled="disabled" @click="shareViaWebShare">
+    {{ $t('Common.Share') }}
+  </v-list-item>
 
   <v-snackbar
     v-model="shareLinkCopySuccessMessage"
@@ -50,7 +50,7 @@ export default {
     display: {
       type: String,
       default: 'link',
-      examples: ['link', 'list-item', 'button']
+      examples: ['link', 'button', 'list-item']
     },
     disabled: {
       type: Boolean,

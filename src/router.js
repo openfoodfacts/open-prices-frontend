@@ -16,7 +16,7 @@ const routes = [
   { path: '/prices/add/multiple/price-tag', name: 'price-add-multiple-price-tag', redirect: () => { return { path: '/prices/add/multiple' }}},
   { path: '/prices/add/multiple/receipt', name: 'price-add-multiple-receipt', redirect: () => { return { path: '/prices/add/multiple' }}},
   { path: '/proofs/add/single', name: 'proof-add-single', component: () => import('./views/ProofAddSingle.vue'), meta: { title: 'AddProofSingle', icon: 'mdi-image-plus', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'AddProofSingle', disabled: true }] }},
-  { path: '/proofs/add/multiple', name: 'proof-add-multiple', component: () => import('./views/ProofPriceTagAddMultiple.vue'), meta: { title: 'AddProofs', icon: 'mdi-image-plus', requiresAuth: true, breadcrumbs: [{title: 'AddProofs', disabled: true }] }},
+  { path: '/proofs/add/price-tags', name: 'proof-add-multiple-price-tags', component: () => import('./views/ProofPriceTagAddMultiple.vue'), meta: { title: 'AddProofsPriceTags', icon: 'mdi-image-plus', requiresAuth: true, breadcrumbs: [{ title: 'Proofs', disabled: false, to: '/proofs' }, { title: 'Add', disabled: true }, { title: 'PriceTags', disabled: true }] }},
   { path: '/experiments/price-validation-assistant', name: 'price-validation-assistant', component: () => import('./views/PriceValidationAssistant.vue'), meta: { title: 'ValidatePrices', icon: 'mdi-checkbox-marked-circle-plus-outline', requiresAuth: true, breadcrumbs: [{title: 'Experiments', disabled: false, to: '/experiments' }, {title: 'ValidatePrices', disabled: true }] }},
   { path: '/search', name: 'search', component: () => import('./views/Search.vue'), meta: { title: 'Search', icon: 'mdi-magnify', drawerMenu: true, breadcrumbs: [{title: 'Search', disabled: true }] }},
   { path: '/prices/:id', name: 'prices-detail', component: () => import('./views/PriceDetail.vue'), meta: { title: 'Price detail' }},
@@ -55,6 +55,7 @@ const routes = [
   // redirects
   { path: '/experiments/challenge', redirect: '/challenge' },
   { path: '/experiments/contribution-assistant', redirect: '/experiments/proof-price-tag-assistant' },
+  { path: '/proofs/add/multiple', redirect: '/proofs/add/price-tags' },
   // Why this redirect?
   // The app used to be available at https://prices.openfoodfacts.org/app
   // It is now available at https://prices.openfoodfacts.org

@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistika un rangi",
 		"MostPicturesAdded": "Lielākā daļa attēlu ir pievienoti",
 		"MostPricesAdded": "Lielākā daļa cenu ir pievienotas",
-		"MostPricesFromPicturesAdded": "Lielākā daļa cenu no attēliem ir pievienotas"
+		"MostPricesFromPicturesAdded": "Lielākā daļa cenu no attēliem ir pievienotas",
+		"AlertNew": "Vai jums ir ideja jaunam izaicinājumam? Paziņojiet mums {url}!"
 	},
 	"Common": {
 		"About": "Par",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Svītrkods",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Rediģēt",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Lauks ir obligāts",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Country",
+		"CreateNewProduct": "Izveidot jaunu produktu",
+		"CreateProduct": "Izveidot produktu",
+		"EnableCropMode": "Iespējot apgriešanas režīmu",
+		"Flavor": "Atlasiet projektu, kurā produkts jāizveido",
+		"NextProof": "Next proof",
+		"PreviousProof": "Iepriekšējais pierādījums",
+		"ProductAlreadyExists": "Produkts jau pastāv",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Pierādījums ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Veikali, kuros tiek pārdots",
+		"UseCropModeToAddImage": "Lai pievienotu produkta attēlu, zem korektūras attēla iespējojiet apgriešanas režīmu un uzzīmējiet taisnstūri ap produktu."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Notīrīt",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nevarat atrast savu veikalu? Pilnas adreses vietā mēģiniet izmantot atslēgvārdus (piemēram, “Carrefour 75013 Paris” vai “Walmart San Francisco”).",
+		"NoResultHelpOSM": "Joprojām nevarat atrast savu veikalu? Iespējams, tas vēl neatrodas {osm_name} . Vispirms varat to pievienot {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Par"
+		},
+		"Add": {
+			"Title": "Pievienot"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Cenu zīmes"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Veicināt / atbalstīt"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

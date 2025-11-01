@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Tölfræði og röðun",
 		"MostPicturesAdded": "Flestar myndir bættar við",
 		"MostPricesAdded": "Flest verð bætt við",
-		"MostPricesFromPicturesAdded": "Flest verð af myndum bætt við"
+		"MostPricesFromPicturesAdded": "Flest verð af myndum bætt við",
+		"AlertNew": "Hefurðu hugmynd að nýrri áskorun? Láttu okkur vita {url}!"
 	},
 	"Common": {
 		"About": "Um forritið",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Reitur er nauðsynlegur",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "Búa til nýja vöru",
+		"CreateProduct": "Búa til vöru",
+		"EnableCropMode": "Virkja skurðarstillingu",
+		"Flavor": "Veldu verkefnið sem varan á að vera búin til í",
+		"NextProof": "Next proof",
+		"PreviousProof": "Fyrri sönnun",
+		"ProductAlreadyExists": "Vara er þegar til staðar",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Sönnun ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Verslanir þar sem seld var",
+		"UseCropModeToAddImage": "Til að bæta við mynd af vörunni skaltu virkja skurðarstillingu fyrir neðan sönnunarmyndina og teikna rétthyrning í kringum vöruna."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Finnurðu ekki verslunina þína? Prófaðu að nota leitarorð í stað fulls heimilisfangsins (t.d. „Carrefour 75013 París“ eða „Walmart San Francisco“).",
+		"NoResultHelpOSM": "Finnurðu enn ekki búðina þína? Hún er hugsanlega ekki í {osm_name} ennþá. Þú getur bætt henni við á {osm_url} fyrst.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Um forritið"
+		},
+		"Add": {
+			"Title": "Bæta við"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Verðmiðar"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

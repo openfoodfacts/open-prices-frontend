@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistieken en ranglijsten",
 		"MostPicturesAdded": "Meeste foto's toegevoegd",
 		"MostPricesAdded": "Meeste prijzen toegevoegd",
-		"MostPricesFromPicturesAdded": "Meeste prijzen van afbeeldingen toegevoegd"
+		"MostPricesFromPicturesAdded": "Meeste prijzen van afbeeldingen toegevoegd",
+		"AlertNew": "Heb je een idee voor een nieuwe uitdaging? Laat ons weten {url}!"
 	},
 	"Common": {
 		"About": "Over",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Nieuwe bewijzen toevoegen",
 		"AddToOFF": "Toevoegen aan {name}",
 		"AdditionalInfo": "Aanvullende informatie",
+		"All": "Alle",
 		"Barcode": "Streepjescode",
 		"Barcodes": "Streepjescodes",
 		"BarcodeScan": "Scan een streepjescode",
@@ -220,7 +222,7 @@
 		"Contributors": "Bijdragers",
 		"Contributions": "Bijdragen",
 		"Confirm": "Bevestig",
-		"Country": "Land",
+		"Country": "Country",
 		"Countries": "Landen",
 		"CountryCount": "{count} landen | {count} land | {count} landen",
 		"Crop": "Bijsnijden",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Voorbeelden: {value}",
 		"Edit": "Bewerken",
 		"End": "Einde",
+		"ErrorServer": "Fout: serverfout",
+		"FieldIsRequired": "Veld is verplicht",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Toon alle uitdagingen",
 		"FilterProductWithPriceCount": "Met een prijs",
@@ -453,6 +457,13 @@
 		"Users": "Gebruikers",
 		"UserCount": "{count} gebruikers | {count} gebruiker | {count} gebruikers",
 		"UserContributorCount": "{count} bijdragers | {count} bijdrager | {count} bijdragers",
+		"UserIsModerator": "Je bent moderator",
+		"UserIsModeratorCanEditPrice": "U kunt deze prijs bewerken omdat u moderator bent",
+		"UserIsModeratorCanDeletePrice": "U kunt deze prijs verwijderen omdat u moderator bent",
+		"UserIsModeratorCanEditProof": "U kunt dit bewijs bewerken omdat u een moderator bent",
+		"UserIsModeratorCanDeleteProof": "U kunt dit bewijs verwijderen omdat u een moderator bent",
+		"UserIsNotPriceOwner": "U bent niet de eigenaar van de prijs",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Bevestigen",
 		"ValidatePrices": "Prijzen valideren",
 		"ValidatePricesWithAI": "Prijzen valideren met AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "U wordt doorgestuurd naar de pagina Instellingen, maar alle informatie die u op deze pagina heeft ingevoerd, gaat verloren.",
 		"Select": "Selecteer {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Selecteer onbekend product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Verkooplanden",
+		"CreateNewProduct": "Create a new product",
+		"CreateProduct": "Product maken",
+		"EnableCropMode": "Bijsnijdmodus inschakelen",
+		"Flavor": "Selecteer het project waarin het product moet worden gemaakt",
+		"NextProof": "Volgend bewijs",
+		"PreviousProof": "Vorig bewijs",
+		"ProductAlreadyExists": "Product bestaat al",
+		"ProductLanguage": "Producttaal",
+		"ProofNumberOfOutProofs": "Bewijs ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Winkels waar verkocht",
+		"UseCropModeToAddImage": "Om een productafbeelding toe te voegen, schakelt u de bijsnijdmodus in onder de proeffoto en tekent u een rechthoek om het product."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Wissen",
 		"NoResult": "Geen zoekresultaten",
+		"NoResultHelpKeywords": "Kunt u uw winkel niet vinden? Probeer trefwoorden te gebruiken in plaats van het volledige adres (bijvoorbeeld 'Carrefour 75013 Parijs' of 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Kun je je winkel nog steeds niet vinden? Hij staat misschien nog niet in {osm_name} . Je kunt hem eerst toevoegen op {osm_url} .",
 		"PoweredBy": {
 			"text": "mogelijk gemaakt door {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Nieuw artikel toevoegen",
-		"MissingPrice": "Ontbrekende prijs",
-		"MissingProduct": "Ontbrekend product",
 		"NoItemsFound": "Er konden geen items uit de bon worden gehaald. Probeer het opnieuw.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Prijs is al aangemaakt voor artikel",
 		"PriceReadyToBeAdded": "Prijs klaar om toegevoegd te worden",
+		"ReceiptItems": "Ontvangstbewijzen, controleren en in orde maken",
 		"ReceiptItemsCheck": "Ontvangstbewijzen, controleren en in orde maken",
 		"UploadOnlyNewPrices": "Upload alleen nieuwe prijzen ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload of update alle geldige prijzen ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Over"
+		},
+		"Add": {
+			"Title": "Toevoegen"
 		},
 		"AddPrice": {
 			"Title": "Voeg een prijs toe"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Meerdere bewijzen toevoegen"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locaties"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prijzen"
 		},
+		"PriceTags": {
+			"Title": "Prijskaartjes"
+		},
 		"Proofs": {
 			"Title": "Bewijzen"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Bijdragen"
+		},
+		"CreateOffProduct": {
+			"Title": "Product aanmaken"
 		},
 		"Experiments": {
 			"Title": "Experimenten"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Prijzen toevoegen",
 		"ChangeLanguage": "Taal wijzigen",
-		"CountryLabel": "Land",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Weergave",
 		"BarcodeScanner": "Streepjescodescanner",

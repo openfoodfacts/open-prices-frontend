@@ -3,7 +3,7 @@
 		"WhyTitle": "Why {op_name}?",
 		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
 		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
+		"HowTitle": "Cum funcționează {op_name}?",
 		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
 		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
 		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistici și clasamente",
 		"MostPicturesAdded": "Majoritatea imaginilor adăugate",
 		"MostPricesAdded": "Majoritatea prețurilor adăugate",
-		"MostPricesFromPicturesAdded": "Majoritatea prețurilor din imagini au fost adăugate"
+		"MostPricesFromPicturesAdded": "Majoritatea prețurilor din imagini au fost adăugate",
+		"AlertNew": "Ai o idee pentru o nouă provocare? Spune-ne {url}!"
 	},
 	"Common": {
 		"About": "Despre",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Toate",
 		"Barcode": "Cod de bare",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -220,7 +222,7 @@
 		"Contributors": "Colaboratori",
 		"Contributions": "Contribuții",
 		"Confirm": "Confirmați",
-		"Country": "Țară",
+		"Country": "Country",
 		"Countries": "Țări",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Modificare",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "Câmpul este obligatoriu",
 		"Filter": "Filtrare",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validați",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Țările unde se vinde",
+		"CreateNewProduct": "Creați un produs nou",
+		"CreateProduct": "Creați produsul",
+		"EnableCropMode": "Activează modul de decupare",
+		"Flavor": "Selectați proiectul în care ar trebui creat produsul",
+		"NextProof": "Next proof",
+		"PreviousProof": "Dovada anterioară",
+		"ProductAlreadyExists": "Produsul există deja",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Dovadă ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Magazine unde se vând",
+		"UseCropModeToAddImage": "Pentru a adăuga o imagine a produsului, activați modul de decupare sub imaginea de probă și desenați un dreptunghi în jurul produsului."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Ștergeți",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nu găsești magazinul tău? Încearcă să folosești cuvinte cheie în loc de adresa completă (de exemplu, „Carrefour 75013 Paris” sau „Walmart San Francisco”).",
+		"NoResultHelpOSM": "Încă nu găsești magazinul tău? S-ar putea să nu fie încă în {osm_name} . Îl poți adăuga mai întâi pe {osm_url} .",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Despre"
+		},
+		"Add": {
+			"Title": "Adaugă"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "Etichete de preț"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribuiți"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Modificați limba",
-		"CountryLabel": "Țară",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Afişare",
 		"BarcodeScanner": "Barcode scanner",

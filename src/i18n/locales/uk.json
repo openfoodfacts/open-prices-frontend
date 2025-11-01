@@ -127,10 +127,10 @@
 	},
 	"Challenge": {
 		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Subtitle": "Приєднуйтесь до інших ентузіастів цін на продукти харчування, збираючи інформацію про {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
+			"line1": "На фотографіях може бути один або кілька цінників. Штрих-коди повинні бути читабельними. Наприклад:",
 			"line2": "Once ready, find your shop and upload your pictures using the button below.",
 			"AddPictures": "Add pictures"
 		},
@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Статистика та рейтинги",
 		"MostPicturesAdded": "Найбільше додано фотографій",
 		"MostPricesAdded": "Більшість цін додано",
-		"MostPricesFromPicturesAdded": "Більшість цін із зображень додано"
+		"MostPricesFromPicturesAdded": "Більшість цін із зображень додано",
+		"AlertNew": "Маєте ідею для нового челенджу? Повідомте нам {url}!"
 	},
 	"Common": {
 		"About": "Про додаток",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Додайте нові докази",
 		"AddToOFF": "Додати до {name}",
 		"AdditionalInfo": "Додаткова інформація",
+		"All": "Усі",
 		"Barcode": "Код товару",
 		"Barcodes": "Штрих-коди",
 		"BarcodeScan": "Просканувати штрих-код",
@@ -220,7 +222,7 @@
 		"Contributors": "Співучасники",
 		"Contributions": "Внески",
 		"Confirm": "Підтвердити",
-		"Country": "Країна",
+		"Country": "Country",
 		"Countries": "Країн",
 		"CountryCount": "{count} країни | {count} країна | {count} країни",
 		"Crop": "Crop",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Приклади: {value}",
 		"Edit": "Редагувати",
 		"End": "Кінець",
+		"ErrorServer": "Помилка: помилка сервера",
+		"FieldIsRequired": "Поле обов'язкове для заповнення",
 		"Filter": "Фільтр",
 		"FilterChallengesShowAllStatus": "Показати всі виклики",
 		"FilterProductWithPriceCount": "З ціною",
@@ -453,6 +457,13 @@
 		"Users": "Користувачі",
 		"UserCount": "{count} користувачів | {count} користувач | {count} користувачів",
 		"UserContributorCount": "{count} учасників | {count} учасник | {count} учасників",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Перевірити",
 		"ValidatePrices": "Перевірити ціни",
 		"ValidatePricesWithAI": "Перевірити ціни за допомогою ШІ",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "Ви будете перенаправлені на сторінку налаштувань, але втратите всю інформацію, яку ви ввели на цій сторінці.",
 		"Select": "Вибрати {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Країни, в яких продається:",
+		"CreateNewProduct": "Створити новий продукт",
+		"CreateProduct": "Створити продукт",
+		"EnableCropMode": "Увімкнути режим обрізання",
+		"Flavor": "Виберіть проєкт, у якому має бути створений продукт",
+		"NextProof": "Наступний доказ",
+		"PreviousProof": "Попередній доказ",
+		"ProductAlreadyExists": "Продукт вже існує",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Доказ ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Магазини, де продається",
+		"UseCropModeToAddImage": "Щоб додати зображення товару, увімкніть режим обрізання під пробним зображенням і намалюйте прямокутник навколо товару."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Виберіть один зі своїх останніх доказів"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Очистити",
 		"NoResult": "Результатів не знайдено",
+		"NoResultHelpKeywords": "Не можете знайти свій магазин? Спробуйте використати ключові слова замість повної адреси (наприклад, «Carrefour 75013 Париж» або «Walmart Сан-Франциско»).",
+		"NoResultHelpOSM": "Все ще не можете знайти свій магазин? Можливо, його ще немає в {osm_name} . Ви можете спочатку додати його в {osm_url} .",
 		"PoweredBy": {
 			"text": "на основі {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Додати новий елемент",
-		"MissingPrice": "Відсутня ціна",
-		"MissingProduct": "Відсутній товар",
 		"NoItemsFound": "Жоден елемент не може бути видобутий із чеку, будь ласка, спробуйте ще раз.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Ціна вже створена для товару",
 		"PriceReadyToBeAdded": "Ціна готова до додавання",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Про додаток"
+		},
+		"Add": {
+			"Title": "Додати"
 		},
 		"AddPrice": {
 			"Title": "Додати ціну"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Додайте кілька доказів"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Місцезнаходження"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Ціни"
 		},
+		"PriceTags": {
+			"Title": "Цінники"
+		},
 		"Proofs": {
 			"Title": "Докази"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Підтримати проєкт"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Експерименти"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Додавання цін",
 		"ChangeLanguage": "Змінити мову",
-		"CountryLabel": "Країна",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показати",
 		"BarcodeScanner": "Сканер штрих-кодів",

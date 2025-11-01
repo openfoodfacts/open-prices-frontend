@@ -162,7 +162,8 @@
 		"StatsAndRankings": "סטאַטיסטיק און ראַנגקינגז",
 		"MostPicturesAdded": "רובֿ בילדער צוגעגעבן",
 		"MostPricesAdded": "רובֿ פּרייזן צוגעגעבן",
-		"MostPricesFromPicturesAdded": "רוב פרייזן פון בילדער צוגעגעבן"
+		"MostPricesFromPicturesAdded": "רוב פרייזן פון בילדער צוגעגעבן",
+		"AlertNew": "האָט איר אַן אידעע פֿאַר אַ נײַער אַרויסרוף? לאָזט אונדז וויסן {url}!"
 	},
 	"Common": {
 		"About": "About",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "All",
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "פעלד איז פארלאנגט",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Validate",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Countries where sold",
+		"CreateNewProduct": "שאַפֿן אַ נײַעם פּראָדוקט",
+		"CreateProduct": "שאַפֿן פּראָדוקט",
+		"EnableCropMode": "אַקטיווירן קראַפּ מאָדע",
+		"Flavor": "אויסקלייבן דעם פּראָיעקט אין וועלכן דער פּראָדוקט זאָל געשאַפֿן ווערן",
+		"NextProof": "Next proof",
+		"PreviousProof": "פריערדיגע באַווייַז",
+		"ProductAlreadyExists": "פּראָדוקט עקזיסטירט שוין",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "באַווייַז ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "געשעפטן וואו פארקויפט",
+		"UseCropModeToAddImage": "כדי צו לייגן צו א פּראָדוקט בילד, אַקטיוויזירט דעם קראָפּ מאָדע אונטערן פּרוף בילד און צייכנט אַ רעכטעק אַרום דעם פּראָדוקט."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Clear",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "קענט איר נישט געפֿינען אייער קראָם? פּרוּווט ניצן שליסל-ווערטער אַנשטאָט דעם פֿולן אַדרעס (למשל 'קאַרעפֿור 75013 פּאַריז' צי 'וואָלמאַרט סאַן פֿראַנסיסקאָ').",
+		"NoResultHelpOSM": "קענט איר נאך אלץ נישט געפינען אייער קראָם? עס איז אפשר נאך נישט אין {osm_name} . איר קענט עס צולייגן אויף {osm_url} ערשט.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "About"
+		},
+		"Add": {
+			"Title": "Add"
 		},
 		"AddPrice": {
 			"Title": "Add a price"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Prices"
 		},
+		"PriceTags": {
+			"Title": "פרייז טאַגס"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"

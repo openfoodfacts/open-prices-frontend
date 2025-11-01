@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statistikker og ranglister",
 		"MostPicturesAdded": "De fleste billeder tilføjet",
 		"MostPricesAdded": "De fleste priser er tilføjet",
-		"MostPricesFromPicturesAdded": "De fleste priser fra billeder er tilføjet"
+		"MostPricesFromPicturesAdded": "De fleste priser fra billeder er tilføjet",
+		"AlertNew": "Har du en idé til en ny udfordring? Fortæl os det {url}!"
 	},
 	"Common": {
 		"About": "Om",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Tilføj nye beviser",
 		"AddToOFF": "Føj til {name}",
 		"AdditionalInfo": "Yderligere information",
+		"All": "Alle",
 		"Barcode": "Stregkode",
 		"Barcodes": "Stregkoder",
 		"BarcodeScan": "Scan en stregkode",
@@ -220,7 +222,7 @@
 		"Contributors": "Bidragsydere",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekræft",
-		"Country": "Land",
+		"Country": "Country",
 		"Countries": "Lande",
 		"CountryCount": "{count} lande | {count} land | {count} lande",
 		"Crop": "Beskær",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Eksempler: {value}",
 		"Edit": "Redigér",
 		"End": "Slut",
+		"ErrorServer": "Fejl: serverfejl",
+		"FieldIsRequired": "Feltet er påkrævet",
 		"Filter": "Filtrere",
 		"FilterChallengesShowAllStatus": "Vis alle udfordringer",
 		"FilterProductWithPriceCount": "Med en pris",
@@ -453,6 +457,13 @@
 		"Users": "Brugere",
 		"UserCount": "{count} brugere | {count} bruger | {count} brugere",
 		"UserContributorCount": "{count} bidragydere | {count} bidragyder | {count} bidragydere",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Bekræftelse",
 		"ValidatePrices": "Validér priser",
 		"ValidatePricesWithAI": "Validér priser med AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "Du vil blive omdirigeret til siden Indstillinger, men vil miste alle oplysninger, du har indtastet på denne side.",
 		"Select": "Vælg {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Lande, hvorfra der sælges",
+		"CreateNewProduct": "Opret et nyt produkt",
+		"CreateProduct": "Opret produkt",
+		"EnableCropMode": "Aktivér beskæringstilstand",
+		"Flavor": "Vælg det projekt, hvor produktet skal oprettes",
+		"NextProof": "Næste bevis",
+		"PreviousProof": "Tidligere bevis",
+		"ProductAlreadyExists": "Produktet findes allerede",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Butikker hvor der blev solgt",
+		"UseCropModeToAddImage": "For at tilføje et produktbillede skal du aktivere beskæringstilstand under korrekturbilledet og tegne et rektangel omkring produktet."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Vælg et af dine seneste beviser"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Ryd",
 		"NoResult": "Intet resultat",
+		"NoResultHelpKeywords": "Kan du ikke finde din butik? Prøv at bruge søgeord i stedet for den fulde adresse (f.eks. 'Carrefour 75013 Paris' eller 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Kan du stadig ikke finde din butik? Den er muligvis ikke i {osm_name} endnu. Du kan tilføje den på {osm_url} først.",
 		"PoweredBy": {
 			"text": "drevet af {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Tilføj nyt element",
-		"MissingPrice": "Manglende pris",
-		"MissingProduct": "Manglende produkt",
 		"NoItemsFound": "Ingen varer kunne udtrækkes fra kvitteringen, prøv venligst igen.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Prisen er allerede oprettet for varen",
 		"PriceReadyToBeAdded": "Pris klar til at blive tilføjet",
+		"ReceiptItems": "Kvittering for varer, tjek og reparer",
 		"ReceiptItemsCheck": "Kvittering for varer, tjek og reparer",
 		"UploadOnlyNewPrices": "Upload kun nye priser ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload eller opdater alle gyldige priser ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Om"
+		},
+		"Add": {
+			"Title": "Tilføj"
 		},
 		"AddPrice": {
 			"Title": "Tilføj en pris"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Tilføj flere beviser"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Placeringer"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Priser"
 		},
+		"PriceTags": {
+			"Title": "Prismærker"
+		},
 		"Proofs": {
 			"Title": "Beviser"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Bidrag"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Eksperimenter"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Tilføjer priser",
 		"ChangeLanguage": "Skift sprog",
-		"CountryLabel": "Land",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Vis",
 		"BarcodeScanner": "Stregkodescanner",

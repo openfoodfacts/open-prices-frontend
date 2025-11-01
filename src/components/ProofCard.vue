@@ -14,7 +14,7 @@
     <v-divider v-if="!hideProofHeader" />
 
     <v-card-text>
-      <v-img v-if="proof.file_path" :src="getProofImageFullUrl" :style="'max-height:' + imageHeight" />
+      <v-img v-if="proof.file_path" :src="getProofImageFullUrl" :height="imageHeight" />
     </v-card-text>
 
     <v-divider />

@@ -62,7 +62,7 @@
         :rules="priceTotalRules"
         :suffix="proofMetadataForm.currency"
         hide-details="auto"
-        @update:modelValue="newValue => proofMetadataForm.receipt_price_total = fixComma(newValue)"
+        @update:modelValue="newValue => proofMetadataForm.receipt_price_total = replaceCommaWithDot(newValue)"
       />
     </v-col>
   </v-row>
@@ -80,7 +80,7 @@
         :rules="priceOnlineDeliveryCostsRules"
         :suffix="proofMetadataForm.currency"
         hide-details="auto"
-        @update:modelValue="newValue => proofMetadataForm.receipt_online_delivery_costs = fixComma(newValue)"
+        @update:modelValue="newValue => proofMetadataForm.receipt_online_delivery_costs = replaceCommaWithDot(newValue)"
       />
     </v-col>
   </v-row>
@@ -154,6 +154,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
+import utils from '../utils.js'
 
 export default {
   props: {
@@ -223,19 +224,19 @@ export default {
     priceTotalRules() {
       if (!this.proofMetadataForm.receipt_price_total) return [() => true]  // optional field
       return [
-        value => !!value && !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !!value && !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
-        value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+        value => !value.toString().match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
       ]
     },
     priceOnlineDeliveryCostsRules() {
       if (!this.proofMetadataForm.receipt_online_delivery_costs) return [() => true]  // optional field
       return [
-        value => !!value && !value.trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !!value && !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
-        value => !value.match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+        value => !value.toString().match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
       ]
     },
   },
@@ -246,8 +247,8 @@ export default {
     initProofMetadataForm() {
       this.displayOwnerCommentField = !!this.proofMetadataForm.owner_comment
     },
-    fixComma(input) {
-      return input.replace(/,/g, '.')
+    replaceCommaWithDot(input) {
+      return utils.replaceCommaWithDot(input)
     },
   }
 }

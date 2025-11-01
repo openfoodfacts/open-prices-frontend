@@ -162,7 +162,8 @@
 		"StatsAndRankings": "Statisztikák és rangsorok",
 		"MostPicturesAdded": "A legtöbb kép hozzáadva",
 		"MostPricesAdded": "A legtöbb ár hozzáadva",
-		"MostPricesFromPicturesAdded": "A képeken szereplő árak nagy részét hozzáadtuk"
+		"MostPricesFromPicturesAdded": "A képeken szereplő árak nagy részét hozzáadtuk",
+		"AlertNew": "Van ötleted egy új kihívásra? Írd meg nekünk {url}!"
 	},
 	"Common": {
 		"About": "Névjegy",
@@ -179,6 +180,7 @@
 		"AddNewProofs": "Add new proofs",
 		"AddToOFF": "Add to {name}",
 		"AdditionalInfo": "Additional information",
+		"All": "Összes",
 		"Barcode": "Vonalkód",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
@@ -220,7 +222,7 @@
 		"Contributors": "Hozzájárulók",
 		"Contributions": "Hozzájárulások",
 		"Confirm": "Megerősítés",
-		"Country": "Ország",
+		"Country": "Country",
 		"Countries": "Országok",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -280,6 +282,8 @@
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Szerkesztés",
 		"End": "End",
+		"ErrorServer": "Error: server error",
+		"FieldIsRequired": "A mező kitöltése kötelező",
 		"Filter": "Szűrés",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
@@ -453,6 +457,13 @@
 		"Users": "Users",
 		"UserCount": "{count} users | {count} user | {count} users",
 		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
+		"UserIsModerator": "You are a moderator",
+		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
+		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
+		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
+		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
+		"UserIsNotPriceOwner": "You are not the price owner",
+		"UserIsNotProofOwner": "You are not the proof owner",
 		"Validate": "Érvényesítés",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
@@ -518,6 +529,22 @@
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
 	},
+	"CreateOffProduct": {
+		"SelectUnknownProduct": "Select unknown product",
+		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"CountriesWhereSold": "Országok, ahol kapható",
+		"CreateNewProduct": "Új termék létrehozása",
+		"CreateProduct": "Termék létrehozása",
+		"EnableCropMode": "Vágási mód engedélyezése",
+		"Flavor": "Válassza ki a projektet, amelyben a terméket létre kell hozni",
+		"NextProof": "Next proof",
+		"PreviousProof": "Korábbi bizonyíték",
+		"ProductAlreadyExists": "A termék már létezik",
+		"ProductLanguage": "Product language",
+		"ProofNumberOfOutProofs": "Bizonyítás ({numberOfOutProofs}/{totalNumberOfProofs})",
+		"StoresWhereSold": "Üzletek, ahol árusítják",
+		"UseCropModeToAddImage": "Termékkép hozzáadásához engedélyezze a vágási módot a próbakép alatt, és rajzoljon egy téglalapot a termék köré."
+	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
 	},
@@ -557,6 +584,8 @@
 	"LocationSelector": {
 		"Clear": "Törlés",
 		"NoResult": "No results found",
+		"NoResultHelpKeywords": "Nem találja az üzletét? Próbáljon meg kulcsszavakat használni a teljes cím helyett (pl. „Carrefour 75013 Párizs” vagy „Walmart San Francisco”).",
+		"NoResultHelpOSM": "Még mindig nem találod a boltodat? Lehet, hogy még nem {osm_name} -ban van. Először {osm_url} -ban adhatod hozzá.",
 		"PoweredBy": {
 			"text": "powered by {url}"
 		},
@@ -686,11 +715,11 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Add new item",
-		"MissingPrice": "Missing price",
-		"MissingProduct": "Missing product",
 		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
+		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
+		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -703,6 +732,9 @@
 	"Router": {
 		"About": {
 			"Title": "Névjegy"
+		},
+		"Add": {
+			"Title": "Hozzáadás"
 		},
 		"AddPrice": {
 			"Title": "Ár hozzáadása"
@@ -728,6 +760,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofsPriceTags": {
+			"Title": "Add proofs (price tags)"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -743,6 +778,9 @@
 		"Prices": {
 			"Title": "Árak"
 		},
+		"PriceTags": {
+			"Title": "Árcédulák"
+		},
 		"Proofs": {
 			"Title": "Proofs"
 		},
@@ -754,6 +792,9 @@
 		},
 		"Contribute": {
 			"Title": "Hozzájárulás"
+		},
+		"CreateOffProduct": {
+			"Title": "Create Product"
 		},
 		"Experiments": {
 			"Title": "Experiments"
@@ -896,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Nyelv módosítása",
-		"CountryLabel": "Ország",
+		"CountryLabel": "Country",
 		"CurrencyLabel": "Pénznem",
 		"DisplayTitle": "Megjelenítés",
 		"BarcodeScanner": "Barcode scanner",

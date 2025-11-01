@@ -81,7 +81,7 @@ export default {
   },
   methods: {
     getCurrentChallenge() {
-      api.getChallenges({ status: "ONGOING", size: 1 })
+      api.getChallenges({ status: 'ONGOING', order_by: '-created', size: 1 })
       .then((data) => {
         this.currentChallenge = data.items[0]
       })
