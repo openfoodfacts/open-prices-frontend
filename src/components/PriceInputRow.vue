@@ -31,7 +31,7 @@
       >
         <template v-if="!hideCurrencyChoice" #prepend-inner>
           <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
-          <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" alt="Currency Exchange icon" @click="changeCurrencyDialog = true">
+          <img src="/currency-exchange-svgrepo-com.svg" class="icon-info-currency" alt="Currency Exchange icon" @click="changeCurrencyDialog = true" role="button" />
         </template>
       </v-text-field>
     </v-col>
@@ -97,7 +97,7 @@
   </v-row>
   <v-row v-if="mode === 'edit'" class="mt-0">
     <v-col v-if="!displayOwnerCommentField" cols="12">
-      <a class="fake-link" @click="displayOwnerCommentField = true">
+      <a class="fake-link" @click="displayOwnerCommentField = true" role="link">
         {{ $t('Common.AddComment') }}
       </a>
     </v-col>
