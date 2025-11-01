@@ -13,7 +13,15 @@
             <v-icon start>
               {{ item.icon }}
             </v-icon>
-            <span v-if="$vuetify.display.smAndUp">{{ $t('Common.' + item.value) }}</span>
+            <div v-if="$vuetify.display.smAndUp">
+              {{ $t('Common.' + item.value) }}
+              <span>
+                <v-icon size="small" icon="mdi-information-outline" />
+                <v-tooltip activator="parent" open-on-click location="top">
+                  {{ $t('LocationSelector.HelpTexts.' + item.value) }}
+                </v-tooltip>
+              </span>
+            </div>
             <span v-else>
               <span v-if="item.valueSmallScreen">{{ $t('Common.' + item.valueSmallScreen) }}</span>
             </span>

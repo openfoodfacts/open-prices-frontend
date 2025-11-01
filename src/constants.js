@@ -178,7 +178,7 @@ export default {
   ],
   PRICE_ORDER_LIST: [
     { key: 'price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-ascending' },
-    { key: '-price', value: 'OrderPriceASC', icon: 'mdi-order-numeric-descending' },
+    { key: '-price', value: 'OrderPriceDESC', icon: 'mdi-order-numeric-descending' },
     { key: '-date,-created', value: 'OrderPriceDateDESC', icon: 'mdi-calendar-today' },
     { key: '-created', value: 'OrderPriceCreatedDESC', icon: 'mdi-clock-outline' },
   ],

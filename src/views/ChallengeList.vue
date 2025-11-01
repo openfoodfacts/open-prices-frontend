@@ -1,6 +1,13 @@
 <template>
   <v-row v-if="!loading">
     <v-col>
+      <p class="text-pre-line">
+        {{ $t('Router.Challenges.Intro') }}
+      </p>
+    </v-col>
+  </v-row>
+  <v-row v-if="!loading">
+    <v-col>
       <v-chip label variant="text" prepend-icon="mdi-trophy-variant">
         {{ $t('Challenge.ChallengeCount', { count: challengeTotal }) }}
       </v-chip>

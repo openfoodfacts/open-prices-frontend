@@ -3,6 +3,10 @@
     <v-col cols="6">
       <div class="text-subtitle-2 required">
         {{ $t('Common.Date') }}
+        <v-icon class="float-right" size="small" icon="mdi-information-outline" />
+        <v-tooltip activator="parent" open-on-click location="top">
+          {{ $t('Common.DateHelpText') }}
+        </v-tooltip>
       </div>
       <v-text-field
         v-model="proofMetadataForm.date"

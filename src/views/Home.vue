@@ -2,6 +2,20 @@
   <h2 class="text-h6 pb-4">
     {{ $t('Common.TaglineAlt1') }} {{ APP_HOME_ICONS }}
   </h2>
+  <v-row>
+    <v-col>
+      <i18n-t keypath="About.WhyAnswer1" tag="p">
+        <template #op_name>
+          {{ APP_NAME }}
+        </template>
+        <template #off_url>
+          <OpenFoodFactsLink display="link" />
+        </template>
+      </i18n-t>
+      
+      <p>{{ $t('About.WhyAnswer2') }}</p>
+    </v-col>
+  </v-row>
 
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
@@ -50,6 +64,7 @@ export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
     ChallengeBanner: defineAsyncComponent(() => import('../components/ChallengeBanner.vue')),
+    OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {

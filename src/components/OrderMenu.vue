@@ -12,6 +12,12 @@
       <v-divider class="d-sm-none" />
       <v-list-item v-for="order in orderList" :key="order.key" :slim="true" :prepend-icon="order.icon" :active="currentOrder === order.key" @click="selectOrder(order.key)">
         {{ $t('Common.' + order.value) }}
+        <span>
+          <v-icon class="float-right ml-1" size="small" icon="mdi-information-outline" />
+          <v-tooltip activator="parent" open-on-click location="top">
+            {{ $t('Common.' + order.value + 'HelpText') }}
+          </v-tooltip>
+        </span>
       </v-list-item>
     </v-list>
   </v-menu>
