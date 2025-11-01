@@ -222,7 +222,7 @@
 		"Contributors": "תורמים",
 		"Contributions": "תרומות",
 		"Confirm": "אישור",
-		"Country": "Country",
+		"Country": "מדינה",
 		"Countries": "מדינות",
 		"CountryCount": "{count} מדינות | מדינה | {count} מדינות",
 		"Crop": "חיתוך",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "הוספת מחירים",
 		"ChangeLanguage": "החלפת שפה",
-		"CountryLabel": "Country",
+		"CountryLabel": "מדינה",
 		"CurrencyLabel": "מטבע",
 		"DisplayTitle": "תצוגה",
 		"BarcodeScanner": "סורק ברקודים",
