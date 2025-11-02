@@ -260,7 +260,7 @@
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
 		"Date": "Date",
-		"DateHelpText": "Date of the proof's picture. Default date is suggested using picture metadata.",
+		"DateHelpText": "Date of the proof's picture. By default, we will try to extract it from the picture's EXIF metadata.",
 		"DateMissing": "Date missing",
 		"Details": "Details",
 		"Delete": "Delete",
