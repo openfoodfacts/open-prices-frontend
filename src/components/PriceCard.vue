@@ -7,7 +7,7 @@
           <v-img v-else :src="productImageDefault" height="50px" width="50px" style="filter:invert(.9);" />
         </v-col>
         <v-col :style="hideProductImage ? '' : 'max-width:80%'">
-          <h3 v-if="!hideProductTitle" @click="goToProduct()">
+          <h3 v-if="!hideProductTitle" id="product-title" role="link" tabindex="0" @click="goToProduct()" @keydown.enter="goToProduct()">
             {{ productTitle }}
           </h3>
 

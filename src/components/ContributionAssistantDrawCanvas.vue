@@ -3,6 +3,8 @@
     id="canvas"
     ref="canvas"
     style="width: 100%; touch-action: none;"
+    role="button"
+    tabindex="0"
     @mousedown="startDrawing"
     @mousemove="drawContent"
     @mouseup="finishDrawing"

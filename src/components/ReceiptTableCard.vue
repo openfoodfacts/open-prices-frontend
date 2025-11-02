@@ -40,12 +40,9 @@
             />
             <div v-if="item.predicted_product_code" class="text-caption">
               {{ $t('Common.SuggestedBarcode') }}
-              <span
-                class="fake-link"
-                @click="handleClickProductCodeSuggestion(item)"
-              >
+              <a class="fake-link" role="link" tabindex="0" @click="handleClickProductCodeSuggestion(item)" @keydown.enter="handleClickProductCodeSuggestion(item)">
                 {{ item.predicted_product_code }}
-              </span>
+              </a>
             </div>
           </v-sheet>
           <ProductCard v-else :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
