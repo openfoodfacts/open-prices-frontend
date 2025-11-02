@@ -7,7 +7,7 @@
           <v-img v-if="!product.image_url" :src="productImageDefault" height="100px" width="100px" style="filter:invert(.9);" />
         </v-col>
         <v-col style="max-width:80%;">
-          <h3 id="product-title" @click="goToProduct()" role="link" tabindex="0">
+          <h3 id="product-title" role="link" tabindex="0" @click="goToProduct()" @keydown.enter="goToProduct()">
             {{ getProductTitle() }}
           </h3>
 
