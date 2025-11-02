@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.144.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.144.1...v1.144.2) (2025-11-02)
+
+
+### Bug Fixes
+
+* **Accessibility:** Install eslint-plugin-vuejs-accessibility & fix errors ([#1803](https://github.com/openfoodfacts/open-prices-frontend/issues/1803)) ([7acd5c1](https://github.com/openfoodfacts/open-prices-frontend/commit/7acd5c1232e69eb91e4dcbebf8a9815f4c877c80))
+
+
+### Technical
+
+* **Github Actions:** Replace ubuntu-latest with ubuntu-slim in simple workflow runners ([#1799](https://github.com/openfoodfacts/open-prices-frontend/issues/1799)) ([6c9fbc1](https://github.com/openfoodfacts/open-prices-frontend/commit/6c9fbc1b6161dfd869ce9ea509a044f5896e87d4))
+
 ## [1.144.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.144.0...v1.144.1) (2025-11-01)
 
 
