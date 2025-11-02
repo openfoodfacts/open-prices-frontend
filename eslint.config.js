@@ -20,6 +20,7 @@ export default [
       'vue/max-attributes-per-line': 'off',
       'vue/attribute-hyphenation': 'off',
       'vue/v-on-event-hyphenation': 'off',
+      'vuejs-accessibility/anchor-has-content': 'warn'
     },
     settings: {
       'vue-i18n': {
