@@ -57,7 +57,7 @@ export default {
     },
     getSourceAddUrlWithLocale(source) {
       const SOURCE_ADD_URL = `${this.getSourceUrl(source)}/cgi/product.pl?type=search_or_add&action=process&code=${this.productCode}`
-      return SOURCE_ADD_URL.replace('world', this.appStore.user.language)
+      return SOURCE_ADD_URL.replace('world', this.appStore.user.country.toLowerCase())
     },
   }
 }
