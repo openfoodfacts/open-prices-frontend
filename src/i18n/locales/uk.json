@@ -168,7 +168,7 @@
 	"Common": {
 		"About": "Про додаток",
 		"Action": "Дія",
-		"Actions": "Actions",
+		"Actions": "Дії",
 		"AddComment": "Додати коментар",
 		"AddPrice": "Додати ціну",
 		"AddPrices": "Додати ціни",
@@ -469,8 +469,8 @@
 		"ValidatePricesWithAI": "Перевірити ціни за допомогою ШІ",
 		"View": "Переглянути",
 		"Website": "Сайт",
-		"Year": "Year",
-		"Years": "Years",
+		"Year": "Рік",
+		"Years": "Роки",
 		"Yes": "Так",
 		"No": "Ні",
 		"Food": "Їжа",
@@ -530,8 +530,8 @@
 		"Select": "Вибрати {currency_code}"
 	},
 	"CreateOffProduct": {
-		"SelectUnknownProduct": "Select unknown product",
-		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"SelectUnknownProduct": "Виберіть невідомий товар",
+		"SelectUnknownProductGuide": "Або виберіть невідомий продукт для додавання",
 		"CountriesWhereSold": "Країни, в яких продається:",
 		"CreateNewProduct": "Створити новий продукт",
 		"CreateProduct": "Створити продукт",
@@ -540,7 +540,7 @@
 		"NextProof": "Наступний доказ",
 		"PreviousProof": "Попередній доказ",
 		"ProductAlreadyExists": "Продукт вже існує",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Мова продукту: ",
 		"ProofNumberOfOutProofs": "Доказ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Магазини, де продається",
 		"UseCropModeToAddImage": "Щоб додати зображення товару, увімкніть режим обрізання під пробним зображенням і намалюйте прямокутник навколо товару."
@@ -716,14 +716,14 @@
 	"ReceiptAssistant": {
 		"AddNewItem": "Додати новий елемент",
 		"NoItemsFound": "Жоден елемент не може бути видобутий із чеку, будь ласка, спробуйте ще раз.",
-		"PriceAlreadyCreated": "Price already created",
+		"PriceAlreadyCreated": "Ціна вже створена",
 		"PriceAlreadyCreatedForItem": "Ціна вже створена для товару",
 		"PriceReadyToBeAdded": "Ціна готова до додавання",
 		"ReceiptItems": "Receipt items, check and fix",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"UploadOnlyNewPrices": "Завантажити лише нові ціни ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Завантажте або оновіть усі дійсні ціни ({nbPrices})",
+		"WaitForExtraction": "Автоматичне вилучення елементів з чека, зачекайте..."
 	},
 	"Reuses": {
 		"AlertNew": "Немає повторного використання? Дайте нам знати {url}!",
@@ -761,7 +761,7 @@
 			"Title": "Додайте кілька доказів"
 		},
 		"AddProofsPriceTags": {
-			"Title": "Add proofs (price tags)"
+			"Title": "Додати докази (цінники)"
 		},
 		"Locations": {
 			"Title": "Місцезнаходження"
@@ -794,7 +794,7 @@
 			"Title": "Підтримати проєкт"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "Створити Продукт"
 		},
 		"Experiments": {
 			"Title": "Експерименти"
@@ -857,7 +857,7 @@
 			"Title": "Помічник Перевірки Ціни"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "Помічник з квитанцій"
 		},
 		"Challenge": {
 			"Title": "Challenge"
