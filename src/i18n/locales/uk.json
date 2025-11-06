@@ -126,27 +126,27 @@
 		"Title": "Введіть штрих-код"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
+		"Title": "Випробування спільноти",
 		"Subtitle": "Приєднуйтесь до інших ентузіастів цін на продукти харчування, збираючи інформацію про {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
+			"Title": "Фотографуйте цінники в магазинах",
 			"line1": "На фотографіях може бути один або кілька цінників. Штрих-коди повинні бути читабельними. Наприклад:",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"line2": "Коли все буде готово, знайдіть свій магазин і завантажте фотографії за допомогою кнопки нижче.",
+			"AddPictures": "Додати зображення"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"Title": "Перевірте виявлені ціни за допомогою штучного інтелекту",
+			"line1": "Цінники виявляються автоматично, але роботам все одно потрібна ваша допомога для їх перевірки.",
+			"line2": "Відвідайте сторінку підтвердження ціни, натиснувши кнопку нижче, за потреби відредагуйте штрих-код і ціну та підтвердьте!",
+			"line3": "Якщо у вас виникають проблеми з читанням етикетки, позначте її як нечитабельну.",
+			"line4": "Це спільна робота, навіть якщо ви не надсилали фотографії, ви все одно можете допомогти іншим, підтвердивши їх."
 		},
-		"PicturesAddedByYou": "Pictures added by you",
+		"PicturesAddedByYou": "Зображення, додані вами",
 		"Prices": "{challenge_title} ціни",
-		"PricesAdded": "{challenge_title} prices added",
+		"PricesAdded": "{challenge_title} ціни додано",
 		"PricesByYou": "{challenge_title} ціни від вас",
 		"PricesAddedByYou": "Ціни, додані вами",
-		"MostRecentContributions": "Most recent contributions",
+		"MostRecentContributions": "Найновіші внески",
 		"ChallengeCount": "{count} виклики | {count} виклик | {count} виклики",
 		"ChallengeStatuses": {
 			"DRAFT": "Чернетка",
@@ -204,10 +204,10 @@
 		"Categories": "Категорії",
 		"CategoryMissing": "Відсутня категорія",
 		"CategoryTotal": "{count} категорії | {count} категорія | {count} категорії",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
+		"Challenge": "Випробування",
+		"Challenges": "Випробування",
+		"ChallengeCurrent": "Поточне випробування",
+		"ChallengeOngoing": "Постійне випробування",
 		"ChallengeCount": "{count} виклики | {count} виклик | {count} виклики",
 		"Chart": "Графік",
 		"Clear": "Очистити",
@@ -218,15 +218,15 @@
 		"Consumption": "Споживання",
 		"ConsumptionPrices": "Ціни споживання",
 		"ConsumptionProofs": "Докази споживання",
-		"Contribute": "Підтримати проєкт",
+		"Contribute": "Долучитись",
 		"Contributors": "Співучасники",
 		"Contributions": "Внески",
 		"Confirm": "Підтвердити",
 		"Country": "Країна",
 		"Countries": "Країн",
 		"CountryCount": "{count} країни | {count} країна | {count} країни",
-		"Crop": "Crop",
-		"Cropped": "Cropped",
+		"Crop": "Кадрування",
+		"Cropped": "Кадровано",
 		"Currency": "Валюта",
 		"Currencies": "Валюти",
 		"CurrencyMissing": "Відсутня валюта",
@@ -272,7 +272,7 @@
 		"DiscountTypeLoyaltyProgram": "Програма лояльності",
 		"DiscountTypeExpiresSoon": "Спливає незабаром",
 		"DiscountTypePickItYourself": "Вибери сам",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSecondHand": "Секонд-хенд",
 		"DiscountTypeOther": "Інше",
 		"Example": "Приклад",
 		"Examples": "Приклади",
@@ -349,15 +349,15 @@
 		"PersonalInfo": "Особиста інформація",
 		"Physical": "Фізичний",
 		"Picture": "Зображення",
-		"Pictures": "Pictures",
+		"Pictures": "Зображення",
 		"PictureSelect": "Виберіть картинку",
 		"PictureSelectMultiple": "Виберіть картинки",
 		"PictureSelected": "Картина вибрана!",
 		"PictureSelectedCount": "{count} вибраних зображень | {count} вибрано зображення | {count} вибрано зображення",
 		"PictureFull": "Повнорозмірна картинка",
 		"PicturesByYou": "Ваші малюнки",
-		"PicturesAdded": "Pictures added",
-		"PicturesAddedByYou": "Pictures added by you",
+		"PicturesAdded": "Зображення додано",
+		"PicturesAddedByYou": "Зображення, додані вами",
 		"PRICE_TAG": "Цінник",
 		"PriceTags": "Цінники",
 		"PriceCount": "{count} ціни | {count} ціна | {count} ціни",
@@ -367,7 +367,7 @@
 		"PriceMissing": "Ціна відсутня",
 		"PricesAlreadyUploaded": "Ціни вже завантажено",
 		"PricesMore": "Більше цін",
-		"PricesAdded": "Prices added",
+		"PricesAdded": "Ціни додано",
 		"PricesAddedToday": "Ціни, додані сьогодні",
 		"PricesToday": "Ціни сьогодні",
 		"PriceNotFound": "Ціна не знайдена",
@@ -434,8 +434,8 @@
 		"Today": "Сьогодні",
 		"Top": "Верх",
 		"Total": "Усього",
-		"Truncate": "Truncate",
-		"Truncated": "Truncated",
+		"Truncate": "Обрізати",
+		"Truncated": "Обрізано",
 		"TryItOut": "Спробуйте",
 		"Type": "Тип",
 		"UnknownProduct": "Невідомий продукт",
@@ -443,8 +443,8 @@
 		"UnknownSource": "Невідоме джерело",
 		"UnitGram": "g",
 		"UnitKilogram": "kg",
-		"UnitMililitre": "mL",
-		"UnitLitre": "L",
+		"UnitMililitre": "мл.",
+		"UnitLitre": "л.",
 		"Unreadable": "Неможливо прочитати",
 		"Upload": "Завантажити",
 		"UploadMultipleImages": "Завантажити {count} зображення | Завантажити {count} зображеннь",
@@ -457,13 +457,13 @@
 		"Users": "Користувачі",
 		"UserCount": "{count} користувачів | {count} користувач | {count} користувачів",
 		"UserContributorCount": "{count} учасників | {count} учасник | {count} учасників",
-		"UserIsModerator": "You are a moderator",
-		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
-		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
-		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
-		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
-		"UserIsNotPriceOwner": "You are not the price owner",
-		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserIsModerator": "Ви модератор",
+		"UserIsModeratorCanEditPrice": "Ви можете редагувати цю ціну, оскільки ви модератор",
+		"UserIsModeratorCanDeletePrice": "Ви можете видалити цю ціну, оскільки ви модератор",
+		"UserIsModeratorCanEditProof": "Ви можете редагувати цей доказ, оскільки ви модератор",
+		"UserIsModeratorCanDeleteProof": "Ви можете видалити цей доказ, оскільки ви модератор",
+		"UserIsNotPriceOwner": "Ви не є власником ціни",
+		"UserIsNotProofOwner": "Ви не є власником доказу",
 		"Validate": "Перевірити",
 		"ValidatePrices": "Перевірити ціни",
 		"ValidatePricesWithAI": "Перевірити ціни за допомогою ШІ",
@@ -719,8 +719,8 @@
 		"PriceAlreadyCreated": "Ціна вже створена",
 		"PriceAlreadyCreatedForItem": "Ціна вже створена для товару",
 		"PriceReadyToBeAdded": "Ціна готова до додавання",
-		"ReceiptItems": "Receipt items, check and fix",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
+		"ReceiptItems": "Отримані товари, перевірка та виправлення",
+		"ReceiptItemsCheck": "Отримані товари, перевірка та виправлення",
 		"UploadOnlyNewPrices": "Завантажити лише нові ціни ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Завантажте або оновіть усі дійсні ціни ({nbPrices})",
 		"WaitForExtraction": "Автоматичне вилучення елементів з чека, зачекайте..."
@@ -791,7 +791,7 @@
 			"Title": "Спільнота"
 		},
 		"Contribute": {
-			"Title": "Підтримати проєкт"
+			"Title": "Долучитись"
 		},
 		"CreateOffProduct": {
 			"Title": "Створити Продукт"
@@ -860,13 +860,13 @@
 			"Title": "Помічник з квитанцій"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "Випробування"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Випробування"
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "Випробування спільноти"
 		},
 		"ValidatePrices": {
 			"Title": "Перевірити ціни"
