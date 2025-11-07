@@ -24,7 +24,7 @@
         >
           <v-divider />
           <v-card-text>
-            <div class="text-subtitle-2">
+            <div class="text-body-2">
               {{ $t('AddPriceSingle.ProductInfo.ProductBarcode') }}
             </div>
             <v-text-field
@@ -88,7 +88,7 @@
             <v-alert v-if="productExists" type="info" variant="outlined" density="compact">
               {{ $t('CreateOffProduct.ProductAlreadyExists') }}
             </v-alert>
-            <div class="text-subtitle-2">
+            <div class="text-body-2">
               {{ $t('Common.Barcode') }}
             </div>
             <v-text-field
@@ -99,7 +99,7 @@
               type="text"
               inputmode="decimal"
             />
-            <div class="text-subtitle-2">
+            <div class="text-body-2">
               {{ $t('CreateOffProduct.Flavor') }}
             </div>
             <v-select
@@ -111,7 +111,7 @@
               :rules="[fieldRequired]"
               required
             />
-            <div class="text-subtitle-2">
+            <div class="text-body-2">
               {{ $t('CreateOffProduct.ProductLanguage') }}
             </div>
             <v-autocomplete
@@ -123,7 +123,7 @@
               variant="outlined"
             />
 
-            <div class="text-subtitle-2">
+            <div class="text-body-2">
               {{ $t('Common.ProductName') }}
             </div>
             <v-text-field
@@ -132,7 +132,7 @@
               variant="outlined"
               type="text"
             />
-            <div class="text-subtitle-2">
+            <div class="text-body-2">
               {{ $t('Common.Brands') }}
             </div>
             <v-combobox
@@ -151,7 +151,7 @@
                 </v-chip>
               </template>
             </v-combobox>
-            <div class="text-subtitle-2">
+            <div class="text-body-2">
               {{ $t('Common.Quantity') }}
             </div>
             <v-text-field
@@ -162,7 +162,7 @@
               inputmode="decimal"
             />
             <div v-if="!productExists">
-              <div class="text-subtitle-2">
+              <div class="text-body-2">
                 {{ $t('CreateOffProduct.CountriesWhereSold') }}
               </div>
               <v-autocomplete
@@ -177,7 +177,7 @@
                 closable-chips
                 multiple
               />
-              <div class="text-subtitle-2">
+              <div class="text-body-2">
                 {{ $t('CreateOffProduct.StoresWhereSold') }}
               </div>
               <v-combobox
@@ -197,7 +197,7 @@
                 </template>
               </v-combobox>
             </div>
-            <div class="text-subtitle-2">
+            <div class="text-body-2">
               {{ $t('Common.Categories') }}
             </div>
             <v-combobox
@@ -218,7 +218,7 @@
             </v-combobox>
 
             <div v-if="!productExists">
-              <div class="text-subtitle-2">
+              <div class="text-body-2">
                 {{ $t('Common.Image') }}
               </div>
               <v-img v-if="drawnImageSrc" :src="drawnImageSrc" max-height="200px" />

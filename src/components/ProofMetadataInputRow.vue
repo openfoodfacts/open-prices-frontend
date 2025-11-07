@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="6">
-      <div class="text-subtitle-2 required">
+      <div class="text-body-2 required">
         {{ $t('Common.Date') }}
       </div>
       <v-text-field
@@ -15,7 +15,7 @@
       />
     </v-col>
     <v-col cols="6">
-      <div class="text-subtitle-2 required">
+      <div class="text-body-2 required">
         {{ $t('Common.Currency') }}
         <v-icon class="float-right" size="small" icon="mdi-information-outline" />
         <v-tooltip activator="parent" open-on-click location="top">
@@ -36,7 +36,7 @@
   <!--Receipt-only fields: receipt_price_count, receipt_price_total, receipt_online_delivery_costs -->
   <v-row v-if="proofIsTypeReceipt" class="mt-0">
     <v-col cols="6">
-      <div class="text-subtitle-2">
+      <div class="text-body-2">
         <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.ReceiptPriceCount') }}
       </div>
       <v-text-field
@@ -50,7 +50,7 @@
       />
     </v-col>
     <v-col cols="6">
-      <div class="text-subtitle-2">
+      <div class="text-body-2">
         <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.ReceiptPriceTotal') }}
       </div>
       <v-text-field
@@ -68,7 +68,7 @@
   </v-row>
   <v-row v-if="proofIsTypeReceipt && locationIsTypeOnline" class="mt-0">
     <v-col cols="6">
-      <div class="text-subtitle-2">
+      <div class="text-body-2">
         <v-icon size="small" :icon="LOCATION_TYPE_ONLINE_ICON" /> {{ $t('Common.ReceiptOnlineDeliveryCosts') }}
       </div>
       <v-text-field
@@ -91,7 +91,7 @@
       </a>
     </v-col>
     <v-col v-else cols="12">
-      <div class="text-subtitle-2">
+      <div class="text-body-2">
         {{ $t('Common.Comment') }}
       </div>
       <v-textarea
