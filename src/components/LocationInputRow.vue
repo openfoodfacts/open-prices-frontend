@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <v-btn class="text-none" block spaced="end" :prepend-icon="LOCATION_TYPE_OSM_ICON" :class="selectedLocation ? 'border-success' : 'border-error'" @click="locationSelectorDialog = true">
+      <v-btn class="text-body-2" block spaced="end" :prepend-icon="LOCATION_TYPE_OSM_ICON" :class="selectedLocation ? 'border-success' : 'border-error'" @click="locationSelectorDialog = true">
         <span v-if="selectedLocation">{{ $t('Common.LocationSelected') }}</span>
         <span v-else>{{ $t('Common.LocationFindShop') }}</span>
       </v-btn>

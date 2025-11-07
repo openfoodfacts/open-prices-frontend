@@ -14,7 +14,7 @@
   </v-row>
   <v-row v-if="mode === 'edit' && !hideBarcodeMode && productIsTypeProduct" class="mt-0">
     <v-col>
-      <v-btn class="text-none mb-2" block spaced="end" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
+      <v-btn class="text-body-2 mb-2" block spaced="end" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
         {{ $t('Common.ProductFind') }}
       </v-btn>
       <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="true" elevation="1" />
