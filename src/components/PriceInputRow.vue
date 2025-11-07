@@ -13,7 +13,7 @@
   </v-row>
   <v-row v-if="mode === 'edit'" class="mt-0">
     <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
-      <div class="text-subtitle-2 required">
+      <div class="text-body-2 required">
         {{ priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label') }}
       </div>
       <v-text-field
@@ -36,7 +36,7 @@
       </v-text-field>
     </v-col>
     <v-col v-if="priceForm.price_is_discounted" cols="6" class="pb-0">
-      <div class="text-subtitle-2">
+      <div class="text-body-2">
         {{ $t('PriceForm.LabelFull') }}
       </div>
       <v-text-field
@@ -65,7 +65,7 @@
       />
     </v-col>
     <v-col v-if="priceForm.price_is_discounted" cols="6">
-      <div class="text-subtitle-2">
+      <div class="text-body-2">
         {{ $t('Common.DiscountType') }}
       </div>
       <v-select
@@ -79,7 +79,7 @@
       />
     </v-col>
     <v-col v-if="proofIsTypeReceipt" cols="6" :class="priceForm.price_is_discounted ? 'offset-6' : ''">
-      <div class="text-subtitle-2">
+      <div class="text-body-2">
         <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.QuantityBought') }}
       </div>
       <v-text-field
@@ -102,7 +102,7 @@
       </a>
     </v-col>
     <v-col v-else cols="12">
-      <div class="text-subtitle-2">
+      <div class="text-body-2">
         {{ $t('Common.Comment') }}
       </div>
       <v-textarea

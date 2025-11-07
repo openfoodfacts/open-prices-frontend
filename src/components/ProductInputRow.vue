@@ -14,7 +14,7 @@
   </v-row>
   <v-row v-if="mode === 'edit' && !hideBarcodeMode && productIsTypeProduct" class="mt-0">
     <v-col>
-      <v-btn class="text-none mb-2" block spaced="end" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
+      <v-btn class="text-body-2 mb-2" block spaced="end" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
         {{ $t('Common.ProductFind') }}
       </v-btn>
       <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="true" elevation="1" />
@@ -22,7 +22,7 @@
   </v-row>
   <v-row v-else-if="mode === 'edit' && productIsTypeCategory" class="mt-0">
     <v-col cols="6">
-      <div class="text-subtitle-2 required">
+      <div class="text-body-2 required">
         {{ $t('AddPriceSingle.ProductInfo.CategoryLabel') }}
       </div>
       <v-autocomplete
@@ -37,7 +37,7 @@
       />
     </v-col>
     <v-col cols="6">
-      <div class="text-subtitle-2">
+      <div class="text-body-2">
         {{ $t('AddPriceSingle.ProductInfo.OriginLabel') }}
       </div>
       <v-autocomplete
