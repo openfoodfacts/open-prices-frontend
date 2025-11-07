@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.144.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.144.1...v1.144.2) (2025-11-07)
+
+
+### Bug Fixes
+
+* **Accessibility:** Install eslint-plugin-vuejs-accessibility & fix errors ([#1803](https://github.com/openfoodfacts/open-prices-frontend/issues/1803)) ([7acd5c1](https://github.com/openfoodfacts/open-prices-frontend/commit/7acd5c1232e69eb91e4dcbebf8a9815f4c877c80))
+* **OFF Add Link:** use user country_code instead of language_code for URL prefix ([#1804](https://github.com/openfoodfacts/open-prices-frontend/issues/1804)) ([327c6d2](https://github.com/openfoodfacts/open-prices-frontend/commit/327c6d28cdec52ab134303a9b188aecb39861331))
+
+
+### Technical
+
+* **Forms:** transform look & feel of buttons (full width, normal text) ([#1807](https://github.com/openfoodfacts/open-prices-frontend/issues/1807)) ([98bbb82](https://github.com/openfoodfacts/open-prices-frontend/commit/98bbb82ea2def2902ced57ced521eb6e7ac532ac))
+* **Github Actions:** Replace ubuntu-latest with ubuntu-slim in simple workflow runners ([#1799](https://github.com/openfoodfacts/open-prices-frontend/issues/1799)) ([6c9fbc1](https://github.com/openfoodfacts/open-prices-frontend/commit/6c9fbc1b6161dfd869ce9ea509a044f5896e87d4))
+* **l10n:** New Crowdin translations to review and merge ([#1801](https://github.com/openfoodfacts/open-prices-frontend/issues/1801)) ([241713a](https://github.com/openfoodfacts/open-prices-frontend/commit/241713afe4f438b22fc1dbef142c6af7fadaf645))
+
 ## [1.144.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.144.0...v1.144.1) (2025-11-01)
 
 
