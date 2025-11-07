@@ -222,7 +222,7 @@
 		"Contributors": "Přispěvatelé",
 		"Contributions": "Příspěvky",
 		"Confirm": "Potvrdit",
-		"Country": "Country",
+		"Country": "Země",
 		"Countries": "Země",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Oříznout",
@@ -937,7 +937,7 @@
 	"UserSettings": {
 		"AddingPrices": "Přidávání cen",
 		"ChangeLanguage": "Změnit jazyk",
-		"CountryLabel": "Country",
+		"CountryLabel": "Země",
 		"CurrencyLabel": "Měna",
 		"DisplayTitle": "Zobrazit",
 		"BarcodeScanner": "Skener čárového kódu",
