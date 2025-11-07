@@ -31,10 +31,6 @@ export default {
       type: String,
       default: 'Display'  // or 'Uploaded'
     },
-    hideProofHeader: {
-      type: Boolean,
-      default: false,
-    },
     showImageThumb: {
       type: Boolean,
       default: false,
@@ -50,10 +46,6 @@ export default {
     readonly: {
       type: Boolean,
       default: false,
-    },
-    imageHeight: {
-      type: String,
-      default: '100%',
     },
   },
   emits: ['proofSelected', 'close'],
