@@ -1,5 +1,5 @@
 <template>
-  <v-row style="margin-top:0;">
+  <v-row class="mt-0">
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <ProofChip v-if="price.proof && !hidePriceProof" class="mr-1" :proof="price.proof" />
       <LocationChip v-if="!hidePriceLocation" class="mr-1" :location="price.location" :locationId="price.location_id" :readonly="readonly" />

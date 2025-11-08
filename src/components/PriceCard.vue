@@ -11,10 +11,8 @@
             {{ productTitle }}
           </h3>
 
-          <p v-if="!hideProductDetailsRow">
-            <ProductDetailsRow v-if="hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="readonly" />
-            <PriceCategoryDetails v-else :price="price" />
-          </p>
+          <ProductDetailsRow v-if="!hideProductDetailsRow && hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="readonly" />
+          <PriceCategoryDetailsRow v-else-if="!hideProductDetailsRow" :price="price" />
 
           <PricePriceRow v-if="price" class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
         </v-col>
@@ -35,7 +33,7 @@ import utils from '../utils.js'
 export default {
   components: {
     ProductDetailsRow: defineAsyncComponent(() => import('../components/ProductDetailsRow.vue')),
-    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
+    PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue'))
   },

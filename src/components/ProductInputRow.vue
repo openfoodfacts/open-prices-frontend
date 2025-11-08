@@ -81,7 +81,7 @@
         density="compact"
       >
         <PriceCategoryChip :priceCategory="productForm.category_tag" />
-        <PriceCategoryDetails :price="productForm" />
+        <PriceCategoryDetailsRow :price="productForm" />
       </v-alert>
     </v-col>
   </v-row>
@@ -109,7 +109,7 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
-    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
+    PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
   },
   props: {
