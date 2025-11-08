@@ -11,9 +11,7 @@
             {{ getProductTitle() }}
           </h3>
 
-          <p>
-            <ProductDetailsRow :product="product" :hidePriceCount="hidePriceCount" :hideCategoriesAndLabels="hideCategoriesAndLabels" :hideProductBarcode="hideProductBarcode" :hideBarcodeErrors="false" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
-          </p>
+          <ProductDetailsRow :product="product" :hidePriceCount="hidePriceCount" :hideCategoriesAndLabels="hideCategoriesAndLabels" :hideProductBarcode="hideProductBarcode" :hideBarcodeErrors="false" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
         </v-col>
       </v-row>
     </v-container>
