@@ -7,7 +7,7 @@
     @click="goToLocation(location)"
   >
     <v-card-text v-if="location">
-      <v-row v-if="isTypeOSM" class="mt-0">
+      <v-row v-if="isTypeOSM">
         <v-col cols="12">
           <LocationOSMTagChip class="mr-1" :location="location" />
           <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
@@ -25,7 +25,7 @@
           </v-chip>
         </v-col>
       </v-row>
-      <v-row class="mt-0">
+      <v-row :class="isTypeOSM ? 'mt-0' : ''">
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <PriceCountChip class="mr-1" :count="location.price_count" :withLabel="true" />
           <v-chip label size="small" density="comfortable" class="mr-1">
