@@ -5,7 +5,7 @@
     </template>
     <template #[`item.product_details`]="{ item }">
       <ProductDetailsRow v-if="item.product" :product="item.product" :hideActionMenuButton="true" :readonly="true" />
-      <PriceCategoryDetails v-else :price="item" />
+      <PriceCategoryDetailsRow v-else :price="item" />
     </template>
     <template #[`item.location`]="{ item }">
       <LocationChip :location="item.location" :locationId="item.location_id" :readonly="true" />
@@ -34,7 +34,7 @@ import constants from '../constants'
 export default {
   components: {
     ProductDetailsRow: defineAsyncComponent(() => import('../components/ProductDetailsRow.vue')),
-    PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
+    PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
     LocationChip: defineAsyncComponent(() => import('../components/LocationChip.vue')),
     DateChip: defineAsyncComponent(() => import('../components/DateChip.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),

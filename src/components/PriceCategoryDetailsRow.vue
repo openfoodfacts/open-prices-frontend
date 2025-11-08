@@ -1,6 +1,10 @@
 <template>
-  <PriceOrigins v-if="hasPriceOrigin" class="mr-1" :priceOrigins="price.origins_tags" />
-  <PriceLabels v-if="hasPriceLabels" class="mr-1" :priceLabels="price.labels_tags" />
+  <v-row style="margin-top:0;">
+    <v-col cols="12" class="pt-2 pb-2">
+      <PriceOrigins v-if="hasPriceOrigin" class="mr-1" :priceOrigins="price.origins_tags" />
+      <PriceLabels v-if="hasPriceLabels" :priceLabels="price.labels_tags" />
+    </v-col>
+  </v-row>
 </template>
 
 <script>
