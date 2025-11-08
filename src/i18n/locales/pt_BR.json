@@ -530,8 +530,8 @@
 		"Select": "Selecionar {currency_code}"
 	},
 	"CreateOffProduct": {
-		"SelectUnknownProduct": "Select unknown product",
-		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"SelectUnknownProduct": "Selecione o produto desconhecido",
+		"SelectUnknownProductGuide": "Ou selecione um produto desconhecido para adicionar",
 		"CountriesWhereSold": "Países que vendem",
 		"CreateNewProduct": "Criar um novo produto",
 		"CreateProduct": "Criar produto",
@@ -540,7 +540,7 @@
 		"NextProof": "Próximo comprovante",
 		"PreviousProof": "Prova anterior",
 		"ProductAlreadyExists": "O produto já existe",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Idioma do produto",
 		"ProofNumberOfOutProofs": "Prova ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Lojas onde foi vendido",
 		"UseCropModeToAddImage": "Para adicionar uma imagem do produto, ative o modo de corte abaixo da imagem de prova e desenhe um retângulo ao redor do produto."
@@ -716,7 +716,7 @@
 	"ReceiptAssistant": {
 		"AddNewItem": "Adicionar novo item",
 		"NoItemsFound": "Nenhum item pôde ser extraído do recibo. Tente novamente.",
-		"PriceAlreadyCreated": "Price already created",
+		"PriceAlreadyCreated": "Preço já criado",
 		"PriceAlreadyCreatedForItem": "Preço já criado para o item",
 		"PriceReadyToBeAdded": "Preço pronto para ser adicionado",
 		"ReceiptItems": "Itens de recibo, verificação e correção",
