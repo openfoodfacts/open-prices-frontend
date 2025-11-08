@@ -1,5 +1,5 @@
 <template>
-  <v-row style="margin-top:0;">
+  <v-row class="mt-0">
     <v-col :cols="hideActionMenuButton ? '12' : '11'" class="pt-2 pb-2">
       <PriceCountChip v-if="!hidePriceCount" class="mr-1" :count="product.price_count" @click="goToProduct()" />
       <span v-if="hasProductSource">
