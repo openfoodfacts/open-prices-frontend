@@ -5,7 +5,7 @@
   <v-btn v-else-if="display === 'button'" size="small" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank">
     {{ OSM_NAME }}
   </v-btn>
-  <v-list-item v-else-if="display === 'list-item'" :slim="true" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank">
+  <v-list-item v-else-if="display === 'list-item'" :slim="true" :prepend-icon="LOCATION_TYPE_OSM_ICON" append-icon="mdi-open-in-new" :href="getLocationOSMUrl" target="_blank">
     {{ OSM_NAME }}
   </v-list-item>
 </template>
@@ -31,6 +31,7 @@ export default {
     return {
       OSM_NAME: constants.OSM_NAME,
       OSM_URL: constants.OSM_URL,
+      LOCATION_TYPE_OSM_ICON: constants.LOCATION_TYPE_OSM_ICON
     }
   },
   computed: {

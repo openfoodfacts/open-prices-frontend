@@ -19,7 +19,7 @@
           </v-chip>
           <v-chip
             v-if="!hideCountryCity && locationCountryUrl"
-            label size="small" density="comfortable" class="mr-1" :to="locationCountryUrl"
+            label size="small" density="comfortable" :to="locationCountryUrl"
           >
             {{ location.osm_address_country }}
           </v-chip>
@@ -33,7 +33,7 @@
             <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>
           </v-chip>
           <ProductCountChip class="mr-1" :count="location.product_count" :withLabel="true" />
-          <ProofCountChip class="mr-1" :count="location.proof_count" :withLabel="true" :to="getLocationProofListUrl" />
+          <ProofCountChip :count="location.proof_count" :withLabel="true" :to="getLocationProofListUrl" />
         </v-col>
         <v-col v-if="!hideActionMenuButton" cols="1">
           <LocationActionMenuButton :location="location" />
