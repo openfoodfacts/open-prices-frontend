@@ -7,9 +7,10 @@
           <PriceCountChip v-else-if="sourceIsProduct" class="mr-1" :count="priceCount" />
           <CategoryTagChip v-if="showProductCategoryTag" class="mr-1" :category="category" :readonly="true" />
         </v-col>
+        <v-col v-if="!hideActionMenuButton" cols="1">
+          <CategoryActionMenuButton v-if="!hideActionMenuButton" :category="category" :source="source" />
+        </v-col>
       </v-row>
-
-      <CategoryActionMenuButton v-if="!hideActionMenuButton" :category="category" :source="source" />
     </v-card-text>
   </v-card>
 </template>

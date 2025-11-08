@@ -16,9 +16,10 @@
       <ProductBarcodeInvalidChip v-if="!hideBarcodeErrors && barcodeInvalid" class="mr-1" />
       <ProductSourceChip v-if="showProductSource" :product="product" />
     </v-col>
+    <v-col v-if="!hideActionMenuButton" cols="1">
+      <ProductActionMenuButton v-if="!hideActionMenuButton" :product="product" />
+    </v-col>
   </v-row>
-
-  <ProductActionMenuButton v-if="!hideActionMenuButton" :product="product" />
 </template>
 
 <script>

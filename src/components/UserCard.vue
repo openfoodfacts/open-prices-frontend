@@ -16,9 +16,10 @@
           <ProofCountChip class="mr-1" :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
           <ChallengeCountChip class="mr-1" :count="user.challenge_count" :withLabel="true" />
         </v-col>
+        <v-col v-if="!hideActionMenuButton" cols="1">
+          <UserActionMenuButton v-if="!hideActionMenuButton" :user="user" />
+        </v-col>
       </v-row>
-
-      <UserActionMenuButton v-if="!hideActionMenuButton" :user="user" />
     </v-card-text>
   </v-card>
 </template>

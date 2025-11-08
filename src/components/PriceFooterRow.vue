@@ -1,6 +1,6 @@
 <template>
   <v-row class="mt-0">
-    <v-col :cols="hideActionMenuButton ? '12' : '11'">
+    <v-col :cols="hideActionMenuButton ? '12' : '11'" class="pt-2 pb-2">
       <ProofChip v-if="price.proof && !hidePriceProof" class="mr-1" :proof="price.proof" />
       <LocationChip v-if="!hidePriceLocation" class="mr-1" :location="price.location" :locationId="price.location_id" :readonly="readonly" />
       <UserChip v-if="!hidePriceOwner" class="mr-1" :username="price.owner" :readonly="readonly" />
@@ -8,9 +8,10 @@
       <UserCommentChip v-if="price.owner_comment" class="mr-1" :comment="price.owner_comment" />
       <RelativeDateTimeChip v-if="!hidePriceCreated" :dateTime="price.created" />
     </v-col>
+    <v-col v-if="!hideActionMenuButton" cols="1">
+      <PriceActionMenuButton v-if="!hideActionMenuButton" :price="price" :hideProductActions="hideProductDetailsRow" />
+    </v-col>
   </v-row>
-
-  <PriceActionMenuButton v-if="!hideActionMenuButton" :price="price" :hideProductActions="hideProductDetailsRow" />
 </template>
 
 <script>
