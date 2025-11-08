@@ -1,15 +1,22 @@
 <template>
-  <v-card v-if="product" :id="'product_' + product.code" data-name="product-card">
+  <v-card v-if="product" :id="'product_' + product.code" :class="isSelected ? 'border-success' : ''" data-name="product-card">
     <v-container class="pa-2" :style="latestPrice ? 'position:relative;' : ''">
       <v-row v-if="product">
         <v-col class="pr-0" style="max-width:20%">
-          <v-img v-if="product.image_url" :src="product.image_url" max-height="100px" @click="goToProduct()" />
+          <v-img v-if="product.image_url" :src="product.image_url" max-height="100px" @click="clickProduct()" />
           <v-img v-if="!product.image_url" :src="productImageDefault" height="100px" width="100px" style="filter:invert(.9);" />
         </v-col>
         <v-col style="max-width:80%;">
-          <h3 id="product-title" role="link" tabindex="0" @click="goToProduct()" @keydown.enter="goToProduct()">
-            {{ getProductTitle() }}
-          </h3>
+          <v-row>
+            <v-col :cols="!isSelected ? '12' : '10'">
+              <h3 id="product-title" role="link" tabindex="0" @click="clickProduct()" @keydown.enter="clickProduct()">
+                {{ getProductTitle() }}
+              </h3>
+            </v-col>
+            <v-col v-if="isSelected" cols="2">
+              <v-btn class="float-right" icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickProduct()" />
+            </v-col>
+          </v-row>
 
           <ProductDetailsRow :product="product" :hidePriceCount="hidePriceCount" :hideCategoriesAndLabels="hideCategoriesAndLabels" :hideProductBarcode="hideProductBarcode" :hideBarcodeErrors="false" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
         </v-col>
@@ -62,11 +69,16 @@ export default {
       type: Boolean,
       default: false
     },
+    isSelected: {
+      type: Boolean,
+      default: false
+    },
     readonly: {
       type: Boolean,
       default: false
     },
   },
+  emits: ['editProduct'],
   data() {
     return {
       productImageDefault: constants.PRODUCT_IMAGE_DEFAULT_URL,
@@ -85,7 +97,11 @@ export default {
     getProductTitle() {
       return this.product.product_name || this.product.code
     },
-    goToProduct() {
+    clickProduct() {
+      if (this.isSelected) {
+        this.$emit('editProduct', this.product)
+        return
+      }
       if (this.readonly) {
         return
       }
