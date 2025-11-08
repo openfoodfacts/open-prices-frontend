@@ -5,9 +5,10 @@
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <ProductCountChip :count="productCount" :withLabel="true" />
         </v-col>
+        <v-col v-if="!hideActionMenuButton" cols="1">
+          <BrandActionMenuButton v-if="!hideActionMenuButton" :brand="brand" />
+        </v-col>
       </v-row>
-
-      <BrandActionMenuButton v-if="!hideActionMenuButton" :brand="brand" />
     </v-card-text>
   </v-card>
 </template>

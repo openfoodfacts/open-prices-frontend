@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :cols="hideActionMenuButton ? '12' : '11'">
+    <v-col :cols="hideActionMenuButton ? '12' : '11'" class="pt-2 pb-2">
       <ProofChip v-if="showProofChip" class="mr-1" :proof="proof" :withLabel="showProofChip" :readonly="true" />
       <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
       <ProofUserConsumptionChip v-if="showReceiptOwnerConsumption" class="mr-1" />
@@ -15,9 +15,10 @@
       <UserCommentChip v-if="proof.owner_comment" class="mr-1" :comment="proof.owner_comment" />
       <RelativeDateTimeChip :dateTime="proof.created" />
     </v-col>
+    <v-col v-if="!hideActionMenuButton" cols="1">
+      <ProofActionMenuButton v-if="!hideActionMenuButton" :proof="proof" />
+    </v-col>
   </v-row>
-
-  <ProofActionMenuButton v-if="!hideActionMenuButton" :proof="proof" />
 </template>
 
 <script>

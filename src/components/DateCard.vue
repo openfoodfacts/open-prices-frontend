@@ -12,9 +12,10 @@
             {{ dp.name }}
           </v-chip>
         </v-col>
+        <v-col v-if="!hideActionMenuButton" cols="1">
+          <DateActionMenuButton v-if="!hideActionMenuButton" :date="date" />
+        </v-col>
       </v-row>
-
-      <DateActionMenuButton v-if="!hideActionMenuButton" :date="date" />
     </v-card-text>
   </v-card>
 </template>
