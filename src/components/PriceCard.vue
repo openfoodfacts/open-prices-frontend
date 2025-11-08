@@ -11,8 +11,8 @@
             {{ productTitle }}
           </h3>
 
-          <p v-if="!hideProductDetails">
-            <ProductDetails v-if="hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :readonly="readonly" />
+          <p v-if="!hideProductDetailsRow">
+            <ProductDetailsRow v-if="hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :readonly="readonly" />
             <PriceCategoryDetails v-else :price="price" />
           </p>
 
@@ -20,7 +20,7 @@
         </v-col>
       </v-row>
 
-      <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetails="hideProductDetails" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+      <PriceFooterRow v-if="price && !hidePriceFooterRow" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetailsRow="hideProductDetailsRow" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-container>
   </v-card>
 </template>
@@ -34,7 +34,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    ProductDetails: defineAsyncComponent(() => import('../components/ProductDetails.vue')),
+    ProductDetailsRow: defineAsyncComponent(() => import('../components/ProductDetailsRow.vue')),
     PriceCategoryDetails: defineAsyncComponent(() => import('../components/PriceCategoryDetails.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue'))
@@ -56,7 +56,7 @@ export default {
       type: Boolean,
       default: false
     },
-    hideProductDetails: {
+    hideProductDetailsRow: {
       type: Boolean,
       default: false
     },

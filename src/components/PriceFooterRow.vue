@@ -10,7 +10,7 @@
     </v-col>
   </v-row>
 
-  <PriceActionMenuButton v-if="!hideActionMenuButton" :price="price" :hideProductActions="hideProductDetails" />
+  <PriceActionMenuButton v-if="!hideActionMenuButton" :price="price" :hideProductActions="hideProductDetailsRow" />
 </template>
 
 <script>
@@ -51,7 +51,7 @@ export default {
       type: Boolean,
       default: true
     },
-    hideProductDetails: {
+    hideProductDetailsRow: {
       type: Boolean,
       default: false
     },
