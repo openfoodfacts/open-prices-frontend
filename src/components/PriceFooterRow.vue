@@ -9,7 +9,7 @@
       <RelativeDateTimeChip v-if="!hidePriceCreated" :dateTime="price.created" />
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
-      <PriceActionMenuButton v-if="!hideActionMenuButton" :price="price" :hideProductActions="hideProductDetailsRow" />
+      <PriceActionMenuButton :price="price" :hideProductActions="hideProductDetailsRow" />
     </v-col>
   </v-row>
 </template>

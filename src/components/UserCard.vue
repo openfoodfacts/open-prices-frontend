@@ -17,7 +17,7 @@
           <ChallengeCountChip class="mr-1" :count="user.challenge_count" :withLabel="true" />
         </v-col>
         <v-col v-if="!hideActionMenuButton" cols="1">
-          <UserActionMenuButton v-if="!hideActionMenuButton" :user="user" />
+          <UserActionMenuButton :user="user" />
         </v-col>
       </v-row>
     </v-card-text>

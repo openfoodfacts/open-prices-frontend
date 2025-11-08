@@ -8,7 +8,7 @@
           <CategoryTagChip v-if="showProductCategoryTag" class="mr-1" :category="category" :readonly="true" />
         </v-col>
         <v-col v-if="!hideActionMenuButton" cols="1">
-          <CategoryActionMenuButton v-if="!hideActionMenuButton" :category="category" :source="source" />
+          <CategoryActionMenuButton :category="category" :source="source" />
         </v-col>
       </v-row>
     </v-card-text>

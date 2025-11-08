@@ -16,7 +16,7 @@
       <RelativeDateTimeChip :dateTime="proof.created" />
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
-      <ProofActionMenuButton v-if="!hideActionMenuButton" :proof="proof" />
+      <ProofActionMenuButton :proof="proof" />
     </v-col>
   </v-row>
 </template>

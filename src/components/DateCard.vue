@@ -13,7 +13,7 @@
           </v-chip>
         </v-col>
         <v-col v-if="!hideActionMenuButton" cols="1">
-          <DateActionMenuButton v-if="!hideActionMenuButton" :date="date" />
+          <DateActionMenuButton :date="date" />
         </v-col>
       </v-row>
     </v-card-text>

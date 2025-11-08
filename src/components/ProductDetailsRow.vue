@@ -17,7 +17,7 @@
       <ProductSourceChip v-if="showProductSource" :product="product" />
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
-      <ProductActionMenuButton v-if="!hideActionMenuButton" :product="product" />
+      <ProductActionMenuButton :product="product" />
     </v-col>
   </v-row>
 </template>

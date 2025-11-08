@@ -6,7 +6,7 @@
           <ProductCountChip :count="productCount" :withLabel="true" />
         </v-col>
         <v-col v-if="!hideActionMenuButton" cols="1">
-          <BrandActionMenuButton v-if="!hideActionMenuButton" :brand="brand" />
+          <BrandActionMenuButton :brand="brand" />
         </v-col>
       </v-row>
     </v-card-text>
