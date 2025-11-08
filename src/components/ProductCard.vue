@@ -14,7 +14,7 @@
               </h3>
             </v-col>
             <v-col v-if="isSelected" cols="2">
-              <v-btn icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :aria-label="$t('Common.Edit')" @click="clickProduct()" />
+              <v-btn class="float-right" icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickProduct()" />
             </v-col>
           </v-row>
 
