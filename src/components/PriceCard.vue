@@ -12,7 +12,7 @@
           </h3>
 
           <p v-if="!hideProductDetailsRow">
-            <ProductDetailsRow v-if="hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :readonly="readonly" />
+            <ProductDetailsRow v-if="hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="readonly" />
             <PriceCategoryDetails v-else :price="price" />
           </p>
 

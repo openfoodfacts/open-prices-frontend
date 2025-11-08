@@ -4,7 +4,7 @@
       {{ getPriceProductTitle(item) }}
     </template>
     <template #[`item.product_details`]="{ item }">
-      <ProductDetailsRow v-if="item.product" :product="item.product" :readonly="true" />
+      <ProductDetailsRow v-if="item.product" :product="item.product" :hideActionMenuButton="true" :readonly="true" />
       <PriceCategoryDetails v-else :price="item" />
     </template>
     <template #[`item.location`]="{ item }">

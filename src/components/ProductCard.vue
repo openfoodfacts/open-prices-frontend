@@ -11,10 +11,7 @@
             {{ getProductTitle() }}
           </h3>
 
-          <p>
-            <ProductDetailsRow :product="product" :hidePriceCount="hidePriceCount" :hideCategoriesAndLabels="hideCategoriesAndLabels" :hideProductBarcode="hideProductBarcode" :hideBarcodeErrors="false" :readonly="readonly" />
-            <ProductActionMenuButton v-if="hasProductSource && !hideActionMenuButton" :product="product" />
-          </p>
+          <ProductDetailsRow :product="product" :hidePriceCount="hidePriceCount" :hideCategoriesAndLabels="hideCategoriesAndLabels" :hideProductBarcode="hideProductBarcode" :hideBarcodeErrors="false" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
         </v-col>
       </v-row>
     </v-container>
@@ -37,7 +34,6 @@ import constants from '../constants'
 export default {
   components: {
     ProductDetailsRow: defineAsyncComponent(() => import('../components/ProductDetailsRow.vue')),
-    ProductActionMenuButton: defineAsyncComponent(() => import('../components/ProductActionMenuButton.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceFooterRow: defineAsyncComponent(() => import('../components/PriceFooterRow.vue')),
   },

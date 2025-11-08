@@ -1,6 +1,6 @@
 <template>
   <v-row style="margin-top:0;">
-    <v-col cols="12" class="pt-2 pb-2">
+    <v-col :cols="hideActionMenuButton ? '12' : '11'" class="pt-2 pb-2">
       <PriceCountChip v-if="!hidePriceCount" class="mr-1" :count="product.price_count" @click="goToProduct()" />
       <span v-if="hasProductSource">
         <ProductBrands :productBrands="product.brands" :readonly="readonly" />
@@ -17,6 +17,8 @@
       <ProductSourceChip v-if="showProductSource" :product="product" />
     </v-col>
   </v-row>
+
+  <ProductActionMenuButton v-if="!hideActionMenuButton" :product="product" />
 </template>
 
 <script>
@@ -37,6 +39,7 @@ export default {
     ProductBarcodeTooLongChip: defineAsyncComponent(() => import('../components/ProductBarcodeTooLongChip.vue')),
     ProductBarcodeInvalidChip: defineAsyncComponent(() => import('../components/ProductBarcodeInvalidChip.vue')),
     ProductSourceChip: defineAsyncComponent(() => import('../components/ProductSourceChip.vue')),
+    ProductActionMenuButton: defineAsyncComponent(() => import('../components/ProductActionMenuButton.vue')),
   },
   props: {
     product: {
@@ -58,6 +61,10 @@ export default {
     hideBarcodeErrors: {
       type: Boolean,
       default: true
+    },
+    hideActionMenuButton: {
+      type: Boolean,
+      default: false
     },
     readonly: {
       type: Boolean,
