@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.145.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.144.2...v1.145.0) (2025-11-08)
+
+
+### Features
+
+* **Product input:** merge ProductCard & Product selection together ([#1818](https://github.com/openfoodfacts/open-prices-frontend/issues/1818)) ([a9bc073](https://github.com/openfoodfacts/open-prices-frontend/commit/a9bc07385cdcca55c00751eed1ef0db17048ca5d))
+
+
+### Technical
+
+* **Cards:** extra cleanup following [#1816](https://github.com/openfoodfacts/open-prices-frontend/issues/1816) (remove useless v-if) ([ad61222](https://github.com/openfoodfacts/open-prices-frontend/commit/ad612226ff7f1fa8256b1996cac3c14f468dce45))
+* **Cards:** move ActionMenuButton components inside v-row above ([#1816](https://github.com/openfoodfacts/open-prices-frontend/issues/1816)) ([60d95f0](https://github.com/openfoodfacts/open-prices-frontend/commit/60d95f0c150254ae69f04bee45b1b040a9f9f16b))
+* **Forms:** use the default font-family for price & proof button inputs ([#1808](https://github.com/openfoodfacts/open-prices-frontend/issues/1808)) ([7c6c7ed](https://github.com/openfoodfacts/open-prices-frontend/commit/7c6c7ed1f916730c92b7a179192bc4ac701c44d8))
+* **LocationCard:** move ActionMenuButton components inside v-row above + invert details & stats rows + add prepend-icon in ActionMenu ([#1817](https://github.com/openfoodfacts/open-prices-frontend/issues/1817)) ([d614dd6](https://github.com/openfoodfacts/open-prices-frontend/commit/d614dd66bd6fb6156a3099cdd0c4d507b920707a))
+* **Products:** move ProductActionMenuButton inside ProductDetailsRow ([#1814](https://github.com/openfoodfacts/open-prices-frontend/issues/1814)) ([ba630d4](https://github.com/openfoodfacts/open-prices-frontend/commit/ba630d42c4085e9ecc92b5389271b2fe9a54c197))
+* **Products:** rename (and transform) PriceCategoryDetails into PriceCategoryDetailsRow ([#1815](https://github.com/openfoodfacts/open-prices-frontend/issues/1815)) ([e749542](https://github.com/openfoodfacts/open-prices-frontend/commit/e749542c76b8a09c9e36ce16aeec248a9600fb0d))
+* **Products:** rename (and transform) ProductDetails into ProductDetailsRow ([#1813](https://github.com/openfoodfacts/open-prices-frontend/issues/1813)) ([fc42a8b](https://github.com/openfoodfacts/open-prices-frontend/commit/fc42a8b5a1f1b5500a9e5e43cc26bbd53a151002))
+* **Proofs:** simple ProofCompactCard component ([#1812](https://github.com/openfoodfacts/open-prices-frontend/issues/1812)) ([45ea702](https://github.com/openfoodfacts/open-prices-frontend/commit/45ea702173236f58876ce31212a7392ffe0da3b3))
+
 ## [1.144.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.144.1...v1.144.2) (2025-11-07)
 
 
