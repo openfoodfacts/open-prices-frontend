@@ -7,19 +7,8 @@
     @click="goToLocation(location)"
   >
     <v-card-text v-if="location">
-      <v-row>
-        <v-col :cols="isTypeOSM ? '12' : '11'">
-          <PriceCountChip class="mr-1" :count="location.price_count" :withLabel="true" />
-          <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-account" />
-            <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>
-          </v-chip>
-          <ProductCountChip class="mr-1" :count="location.product_count" :withLabel="true" />
-          <ProofCountChip class="mr-1" :count="location.proof_count" :withLabel="true" :to="getLocationProofListUrl" />
-        </v-col>
-      </v-row>
-      <v-row v-if="isTypeOSM" class="mt-0">
-        <v-col cols="11">
+      <v-row v-if="isTypeOSM">
+        <v-col cols="12">
           <LocationOSMTagChip class="mr-1" :location="location" />
           <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
           <v-chip
@@ -30,14 +19,26 @@
           </v-chip>
           <v-chip
             v-if="!hideCountryCity && locationCountryUrl"
-            label size="small" density="comfortable" class="mr-1" :to="locationCountryUrl"
+            label size="small" density="comfortable" :to="locationCountryUrl"
           >
             {{ location.osm_address_country }}
           </v-chip>
         </v-col>
       </v-row>
-
-      <LocationActionMenuButton v-if="!hideActionMenuButton" :location="location" />
+      <v-row :class="isTypeOSM ? 'mt-0' : ''">
+        <v-col :cols="hideActionMenuButton ? '12' : '11'">
+          <PriceCountChip class="mr-1" :count="location.price_count" :withLabel="true" />
+          <v-chip label size="small" density="comfortable" class="mr-1">
+            <v-icon start icon="mdi-account" />
+            <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>
+          </v-chip>
+          <ProductCountChip class="mr-1" :count="location.product_count" :withLabel="true" />
+          <ProofCountChip :count="location.proof_count" :withLabel="true" :to="getLocationProofListUrl" />
+        </v-col>
+        <v-col v-if="!hideActionMenuButton" cols="1">
+          <LocationActionMenuButton :location="location" />
+        </v-col>
+      </v-row>
     </v-card-text>
   </v-card>
 </template>
