@@ -50,7 +50,7 @@
           <PriceCategoryChip v-else :priceCategory="item.category_tag" />
         </template>
         <template #[`item.price`]="{ item }">
-          <PricePriceRow v-if="item.existingPrice" :price="item.existingPrice" :productQuantity="item.productFound ? item.productFound.product_quantity : null" :productQuantityUnit="item.productFound ? item.productFound.product_quantity_unit : null" />
+          <PricePriceRow v-if="item.existingPrice" :price="item.existingPrice" />
           <v-text-field
             v-else
             v-model="item.price"
