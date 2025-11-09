@@ -27,28 +27,32 @@
           </p>
         </template>
         <template #[`item.product`]="{ item }">
-          <PriceCategoryChip v-if="item.isCategory" :priceCategory="item.category_tag" />
-          <v-sheet v-else-if="!item.productFound">
-            <v-text-field 
-              v-model="item.product_code"
-              density="compact"
-              :rules="rules"
-              :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'"
-              :hide-details="true"
-              @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
-              @keydown.enter="findProduct(item)"
-            />
-            <div v-if="item.predicted_product_code" class="text-caption">
-              {{ $t('Common.SuggestedBarcode') }}
-              <a class="fake-link" role="link" tabindex="0" @click="handleClickProductCodeSuggestion(item)" @keydown.enter="handleClickProductCodeSuggestion(item)">
-                {{ item.predicted_product_code }}
-              </a>
-            </div>
+          <v-sheet v-if="!item.isCategory">
+            <ProductCard v-if="item.productFound" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+            <v-sheet v-else>
+              <v-text-field
+                v-model="item.product_code"
+                density="compact"
+                :rules="rules"
+                :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'"
+                :hide-details="true"
+                @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
+                @keydown.enter="findProduct(item)"
+              />
+              <div v-if="item.predicted_product_code" class="text-caption">
+                {{ $t('Common.SuggestedBarcode') }}
+                <a class="fake-link" role="link" tabindex="0" @click="handleClickProductCodeSuggestion(item)" @keydown.enter="handleClickProductCodeSuggestion(item)">
+                  {{ item.predicted_product_code }}
+                </a>
+              </div>
+            </v-sheet>
           </v-sheet>
-          <ProductCard v-else :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+          <PriceCategoryChip v-else :priceCategory="item.category_tag" />
         </template>
         <template #[`item.price`]="{ item }">
+          <PricePriceRow v-if="item.existingPrice" :price="item.existingPrice" :productQuantity="item.productFound ? item.productFound.product_quantity : null" :productQuantityUnit="item.productFound ? item.productFound.product_quantity_unit : null" />
           <v-text-field
+            v-else
             v-model="item.price"
             density="compact"
             variant="outlined"
@@ -130,6 +134,7 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
+    PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
