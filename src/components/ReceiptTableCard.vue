@@ -54,6 +54,7 @@
           <v-text-field
             v-else
             v-model="item.price"
+            :class="item.price ? 'outline-border-success' : 'outline-border-error'"
             density="compact"
             variant="outlined"
             type="text"
