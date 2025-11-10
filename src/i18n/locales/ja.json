@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "新しい価格を追加",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 価格はすでにアップロードされています | {priceAlreadyUploadedNumber} 価格がすでにアップロードされています",
-			"Create": "Create",
+			"Create": "作成する",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "新しい価格",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "複数の価格を追加する"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "作成する",
 		"PriceDetails": {
 			"Discount": "ディスカウント",
-			"Label": "Price",
+			"Label": "価格",
 			"LabelDiscounted": "割引価格",
 			"LabelFull": "正規価格",
-			"Proof": "Proof",
+			"Proof": "証拠",
 			"ProofDateChanged": "更新された日付",
 			"ProofSelected": "証明が選択されました！",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "日付",
+			"DateLabel": "日付",
 			"Find": "検索",
 			"Location": "ショップ所在地",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "アクション",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "価格を追加する",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "新しい価格を追加",
 		"AddNewPrices": "Add new prices",
@@ -191,13 +191,13 @@
 		"Brand": "ブランド（会社名）",
 		"Brands": "ブランド",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "価格",
+		"Prices": "価格",
 		"PRODUCT": "製品",
 		"Product": "製品",
 		"ProductName": "製品名",
 		"Products": "製品",
-		"Proof": "Proof",
+		"Proof": "証拠",
 		"Proofs": "Proofs",
 		"CATEGORY": "カテゴリー",
 		"Category": "カテゴリー",
@@ -227,7 +227,7 @@
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "通貨",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -259,9 +259,9 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "日付",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "詳細",
 		"Delete": "削除",
 		"DeveloperMode": "Developer mode",
 		"Discount": "ディスカウント",
@@ -302,7 +302,7 @@
 		"FrequentlyAskedQuestions": "よくある質問",
 		"GDPR_REQUEST": "GDPR リクエスト",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "ヘルプ",
 		"History": "履歴",
 		"Image": "画像",
 		"ImageSelect": "Select an image",
@@ -335,7 +335,7 @@
 		"OrderProductUniqueScansDESC": "スキャンの数:",
 		"OrderProductPriceCountDESC": "価格の数",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "価格",
 		"OrderPriceCreatedDESC": "追加日",
 		"OrderPriceDateDESC": "価格日",
 		"OrderProductCountDESC": "Product count",
@@ -381,7 +381,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "証明の詳細",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "証明を選択",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "証明が選択されました！",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -438,7 +438,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "試してみる",
 		"Type": "種別",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "不明な製品",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -524,7 +524,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "お気に入りの通貨を 1 つ選択してください",
-		"Currency": "Currency",
+		"Currency": "通貨",
 		"AddCurrencies": "設定で通貨を追加する",
 		"AddCurrenciesWarning": "[設定] ページにリダイレクトされますが、このページに入力した情報はすべて失われます。",
 		"Select": "Select {currency_code}"
@@ -564,7 +564,7 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "価格を追加する",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
 		"SearchProduct": "商品を検索",
@@ -605,9 +605,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / 単位",
-		"Proof": "Proof",
+		"Proof": "証拠",
 		"FullPrice": "正規価格",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "不明な製品"
 	},
 	"PriceDelete": {
 		"Confirmation": "この価格を削除してもよろしいですか?",
@@ -622,7 +622,7 @@
 	},
 	"PriceForm": {
 		"Discount": "ディスカウント",
-		"Label": "Price",
+		"Label": "価格",
 		"LabelDiscounted": "割引価格",
 		"LabelFull": "正規価格"
 	},
@@ -665,7 +665,7 @@
 		"UnknownProduct": "不明な製品名"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "価格を追加する",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "もっと読み込む",
@@ -683,14 +683,14 @@
 		"PromoReceiptAssistant": "実験: 新しいレシート アシスタントを試して、レシートから価格を自動的に抽出してみましょう。"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
+		"Proof": "証拠",
 		"PRICE_TAG": "値札",
 		"RECEIPT": "領収書",
 		"GDPR_REQUEST": "GDPR リクエスト",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "証明を選択",
 		"ProofSelected": "証明が選択されました！",
 		"Success": "Proof created!"
 	},
@@ -702,7 +702,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "もっと読み込む",
-		"Prices": "Prices",
+		"Prices": "価格",
 		"ProofNotFound": "Proof not found",
 		"Public": "公開",
 		"Private": "非公開",
@@ -737,7 +737,7 @@
 			"Title": "追加"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "価格を追加する"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -767,7 +767,7 @@
 			"Title": "場所："
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "価格を追加する"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -776,7 +776,7 @@
 			"Title": "複数の価格を追加する"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "価格"
 		},
 		"PriceTags": {
 			"Title": "値札"
@@ -891,7 +891,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "価格",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -938,7 +938,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "言語の変更",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "通貨",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
