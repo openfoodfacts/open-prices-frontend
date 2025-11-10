@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Kvīts"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -69,10 +69,10 @@
 		"Create": "Izveidot",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Cena",
+			"LabelDiscounted": "Atlaides cena",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Pierādījums",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Datums",
+			"DateLabel": "Datums",
 			"Find": "Meklēt",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "Darbība",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Pievienot cenu",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -191,13 +191,13 @@
 		"Brand": "Zīmols",
 		"Brands": "Zīmoli",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Cena",
+		"Prices": "Cenas",
 		"PRODUCT": "Produkts",
 		"Product": "Produkts",
 		"ProductName": "Produkta nosaukums",
 		"Products": "Produkti",
-		"Proof": "Proof",
+		"Proof": "Pierādījums",
 		"Proofs": "Proofs",
 		"CATEGORY": "Kategorija",
 		"Category": "Kategorija",
@@ -227,7 +227,7 @@
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Valūta",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -259,9 +259,9 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Datums",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "Sīkāka informācija",
 		"Delete": "Dzēst",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -302,7 +302,7 @@
 		"FrequentlyAskedQuestions": "Bieži uzdotie jautājumi",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Palīdzība",
 		"History": "Vēsture",
 		"Image": "Attēls",
 		"ImageSelect": "Select an image",
@@ -320,8 +320,8 @@
 		"MobileApp": "Mobile app",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Manas cenas",
+		"MyProofs": "Mani pierādījumi",
 		"MyStats": "My stats",
 		"NextProof": "Next proof",
 		"NoBarcode": "Nav svītrkoda",
@@ -335,7 +335,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Cena",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -358,7 +358,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Cenas zīme",
 		"PriceTags": "Cenu zīmes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -381,7 +381,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Izvēlieties pierādījumu",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -393,8 +393,8 @@
 		"Quantity": "Daudzums",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"RECEIPT": "Kvīts",
+		"Receipt": "Kvīts",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -438,7 +438,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Izmēģiniet to",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Nezināms produkts",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -473,8 +473,8 @@
 		"Years": "Years",
 		"Yes": "Jā",
 		"No": "Nē",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Ēdiens",
+		"PetFood": "Mājdzīvnieku barība",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -524,7 +524,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Valūta",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -564,10 +564,10 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Pievienot cenu",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Meklēt produktu",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -605,9 +605,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Pierādījums",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Nezināms produkts"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -622,8 +622,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Cena",
+		"LabelDiscounted": "Atlaides cena",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -665,7 +665,7 @@
 		"UnknownProduct": "Nezināms produkta nosaukums"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Pievienot cenu",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -683,14 +683,14 @@
 		"PromoReceiptAssistant": "Eksperiments: izmēģiniet jauno čeku palīgu, lai automātiski iegūtu cenas no jūsu čekiem!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Pierādījums",
+		"PRICE_TAG": "Cenas zīme",
+		"RECEIPT": "Kvīts",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Izvēlieties pierādījumu",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -702,7 +702,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Cenas",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -737,7 +737,7 @@
 			"Title": "Pievienot"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Pievienot cenu"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -767,7 +767,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Pievienot cenu"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -776,7 +776,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Cenas"
 		},
 		"PriceTags": {
 			"Title": "Cenu zīmes"
@@ -812,10 +812,10 @@
 			"Title": "Latest proofs"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Manas cenas"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Mani pierādījumi"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -891,7 +891,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Cenas",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -917,8 +917,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Manas cenas",
+		"MyProofs": "Mani pierādījumi",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Iestatījumi",
 		"Title": "Dashboard",
@@ -938,7 +938,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Valūta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
