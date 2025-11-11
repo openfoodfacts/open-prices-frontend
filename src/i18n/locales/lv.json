@@ -215,7 +215,7 @@
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
-		"Consumption": "Consumption",
+		"Consumption": "Patēriņš",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Veicināt / atbalstīt",
@@ -273,7 +273,7 @@
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeSecondHand": "Second hand",
-		"DiscountTypeOther": "Other",
+		"DiscountTypeOther": "Citi",
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Piemērs:",
@@ -343,7 +343,7 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
-		"Other": "Other",
+		"Other": "Citi",
 		"OtherContributions": "Other contributions",
 		"PageNotMaintainedAnymore": "Šī lapa vairs netiek uzturēta.",
 		"PersonalInfo": "Personal information",
@@ -373,7 +373,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "Jūsu pievienotās cenas",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Privātums",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Trūkst produkta",
@@ -412,9 +412,9 @@
 		"SignOut": "Izrakstīties",
 		"SideMenu": "Side menu",
 		"Share": "Dalīties",
-		"Source": "Source",
+		"Source": "Avots",
 		"SourceCode": "Source code",
-		"Start": "Start",
+		"Start": "Sākt",
 		"Stats": "Stats",
 		"SuggestedBarcode": "Ieteicamais svītrkods:",
 		"Summary": "Kopsavilkums",
@@ -433,7 +433,7 @@
 		"TopCountries": "Populārākās valstis",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "Kopā",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "Izmēģiniet to",
@@ -475,7 +475,7 @@
 		"No": "Nē",
 		"Food": "Ēdiens",
 		"PetFood": "Mājdzīvnieku barība",
-		"Beauty": "Beauty"
+		"Beauty": "Skaistums"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -706,7 +706,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Privātums"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -900,7 +900,7 @@
 		"Products": "Produkti",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "Kopā",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
