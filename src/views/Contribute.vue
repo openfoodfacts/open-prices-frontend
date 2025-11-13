@@ -44,7 +44,7 @@ export default {
           name: this.$t('Common.FromReceipt'),
           description: '',
           background_image_url: constants.PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL,
-          url: '/prices/add/multiple?proof_type=RECEIPT'
+          url: '/proofs/add/receipt'
         },
         {
           name: this.$t('Common.ValidatePricesFromCommunity'),
