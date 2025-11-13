@@ -49,6 +49,16 @@
             {{ $t('Common.Details') }}
           </v-list-item>
         </v-sheet>
+        <!-- Moderation -->
+        <v-sheet v-if="userIsLoggedIn">
+          <v-list-subheader class="text-uppercase" :slim="true" disabled>
+            {{ $t('Common.Moderation') }}
+          </v-list-subheader>
+          <v-divider />
+          <v-list-item :slim="true" prepend-icon="mdi-flag" @click="moderationFlagCreateDialog = true">
+            {{ $t('Common.ReportProblem') }}
+          </v-list-item>
+        </v-sheet>
       </v-list>
     </v-menu>
   </v-btn>
@@ -69,6 +79,14 @@
     @close="closeDeleteConfirmationDialog"
   />
 
+  <ModerationFlagCreateDialog
+    v-if="moderationFlagCreateDialog"
+    v-model="moderationFlagCreateDialog"
+    :price="price"
+    @flag="showModerationFlagSuccessMessage = true"
+    @close="moderationFlagCreateDialog = false"
+  />
+
   <v-snackbar
     v-model="editSuccessMessage"
     color="success"
@@ -83,6 +101,13 @@
   >
     {{ $t('PriceDelete.Success') }}
   </v-snackbar>
+  <v-snackbar
+    v-model="showModerationFlagSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >
+    {{ $t('Common.ModerationFlagCreateSuccess') }}
+  </v-snackbar>
 </template>
 
 <script>
@@ -96,7 +121,8 @@ export default {
     OpenFoodFactsLink: defineAsyncComponent(() => import('../components/OpenFoodFactsLink.vue')),
     ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
     PriceEditDialog: defineAsyncComponent(() => import('../components/PriceEditDialog.vue')),
-    PriceDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/PriceDeleteConfirmationDialog.vue'))
+    PriceDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/PriceDeleteConfirmationDialog.vue')),
+    ModerationFlagCreateDialog: defineAsyncComponent(() => import('../components/ModerationFlagCreateDialog.vue'))
   },
   props: {
     price: {
@@ -128,7 +154,9 @@ export default {
       editDialog: false,
       editSuccessMessage: false,
       deleteConfirmationDialog: false,
-      deleteSuccessMessage: false
+      deleteSuccessMessage: false,
+      moderationFlagCreateDialog: false,
+      showModerationFlagSuccessMessage: false
     }
   },
   computed: {
@@ -159,11 +187,14 @@ export default {
     getShareLinkUrl() {
       return this.getPriceDetailUrl
     },
+    userIsLoggedIn() {
+      return !!this.username
+    },
     userIsPriceOwner() {
-      return this.username && this.price && this.price.owner === this.username
+      return this.userIsLoggedIn && this.price && this.price.owner === this.username
     },
     userIsModerator() {
-      return this.username && this.appStore.user.is_moderator
+      return this.userIsLoggedIn && this.appStore.user.is_moderator
     },
     userCanEditPrice() {
       return this.userIsPriceOwner || this.userIsModerator
@@ -187,7 +218,7 @@ export default {
     },
     showDeleteSuccessMessage() {
       this.deleteSuccessMessage = true
-    }
+    },
   }
 }
 </script>

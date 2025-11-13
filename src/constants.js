@@ -236,6 +236,10 @@ export default {
     { key: USER_CONSUMPTION.toLowerCase(), value: 'MyConsumption', icon: USER_CONSUMPTION_ICON },
     { key: USER_COMMUNITY.toLowerCase(), value: 'OtherContributions', icon: 'mdi-account-group' },
   ],
+  // moderation
+  MODERATION_FLAG_REASON_LIST: [
+    { key: 'OTHER', value: 'ModerationFlagReasonOther' },
+  ],
   // date regex
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
   DATE_YEAR_MONTH_REGEX_MATCH: /(\d{4})-(\d{2})/,
