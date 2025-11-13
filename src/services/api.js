@@ -472,9 +472,9 @@ export default {
     .then((response) => response.json())
   },
 
-  createPriceFlag(priceId, inputData) {
+  createFlag(objectType, objectId, inputData) {
     const store = useAppStore()
-    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices/${priceId}/flag?${buildURLParams()}`
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/${objectType}s/${objectId}/flag?${buildURLParams()}`
     return fetch(url, {
       method: 'POST',
       headers: Object.assign({}, OP_DEFAULT_HEADERS, {
