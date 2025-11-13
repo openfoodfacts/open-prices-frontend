@@ -1,5 +1,5 @@
 <template>
-  <v-row v-if="mode === 'edit'">
+  <v-row>
     <v-col>
       <v-item-group v-model="productForm.type" class="d-inline" mandatory @update:modelValue="setType($event)">
         <v-item v-for="pt in productTypeDisplayList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
@@ -12,7 +12,7 @@
       </v-item-group>
     </v-col>
   </v-row>
-  <v-row v-if="mode === 'edit' && !hideBarcodeMode && productIsTypeProduct" class="mt-0">
+  <v-row v-if="!hideBarcodeMode && productIsTypeProduct" class="mt-0">
     <v-col>
       <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :isSelected="true" :readonly="true" elevation="1" @editProduct="showBarcodeScannerDialog" />
       <v-btn v-else class="text-body-2 mb-2" block spaced="end" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
@@ -20,7 +20,7 @@
       </v-btn>
     </v-col>
   </v-row>
-  <v-row v-else-if="mode === 'edit' && productIsTypeCategory" class="mt-0">
+  <v-row v-else-if="productIsTypeCategory" class="mt-0">
     <v-col cols="6">
       <div class="text-body-2 required">
         {{ $t('AddPriceSingle.ProductInfo.CategoryLabel') }}
@@ -63,27 +63,6 @@
       />
     </v-col>
   </v-row>
-  <v-row v-else-if="mode === 'display'">
-    <v-col v-if="productIsTypeProduct" cols="12">
-      <v-alert
-        class="mb-2"
-        icon="mdi-barcode"
-        density="compact"
-      >
-        {{ productForm.product_code }}
-      </v-alert>
-      <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="true" elevation="1" />
-    </v-col>
-    <v-col v-else-if="productIsTypeCategory" cols="12">
-      <v-alert
-        icon="mdi-basket-outline"
-        density="compact"
-      >
-        <PriceCategoryChip :priceCategory="productForm.category_tag" />
-        <PriceCategoryDetailsRow :price="productForm" />
-      </v-alert>
-    </v-col>
-  </v-row>
 
   <BarcodeScannerDialog
     v-if="barcodeScannerDialog"
@@ -107,8 +86,6 @@ import utils from '../utils.js'
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
-    PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
-    PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
     BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
   },
   props: {
@@ -122,10 +99,6 @@ export default {
         origins_tags: '',
         labels_tags: []
       })
-    },
-    mode: {
-      type: String,
-      default: constants.PRICE_FORM_DISPLAY_LIST[1].key,  // 'edit'
     },
     disableInitWhenSwitchingType: {
       type: Boolean,

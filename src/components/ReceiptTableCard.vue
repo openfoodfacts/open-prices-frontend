@@ -111,7 +111,6 @@
       :hideUploadAction="false"
       :hidePriceTagStatusMenu="true"
       :isInDialog="true"
-      forceMode="edit"
       @validatePriceTag="confirmProduct($event)"
       @close="editProductDialog = false"
     />
