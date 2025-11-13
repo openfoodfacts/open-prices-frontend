@@ -1,5 +1,5 @@
-<template>
-  <v-row>
+<template>>
+  <v-row v-if="!hideProductTypeInput">
     <v-col>
       <v-item-group v-model="productForm.type" class="d-inline" mandatory @update:modelValue="setType($event)">
         <v-item v-for="pt in productTypeDisplayList" :key="pt.key" v-slot="{ isSelected, toggle }" :value="pt.key">
@@ -12,7 +12,7 @@
       </v-item-group>
     </v-col>
   </v-row>
-  <v-row v-if="!hideBarcodeMode && productIsTypeProduct" class="mt-0">
+  <v-row v-if="productIsTypeProduct && !hideBarcodeMode" class="mt-0">
     <v-col>
       <ProductCard v-if="productForm.product" :product="productForm.product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :isSelected="true" :readonly="true" elevation="1" @editProduct="showBarcodeScannerDialog" />
       <v-btn v-else class="text-body-2 mb-2" block spaced="end" prepend-icon="mdi-barcode-scan" :class="productForm.product ? 'border-success' : 'border-error'" @click="showBarcodeScannerDialog">
@@ -103,6 +103,10 @@ export default {
     disableInitWhenSwitchingType: {
       type: Boolean,
       default: () => false
+    },
+    hideProductTypeInput: {
+      type: Boolean,
+      default: false
     },
     hideBarcodeMode: {
       type: Boolean,

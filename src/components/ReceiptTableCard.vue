@@ -28,24 +28,14 @@
         </template>
         <template #[`item.product`]="{ item }">
           <v-sheet v-if="!item.isCategory">
-            <ProductCard v-if="item.productFound" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
-            <v-sheet v-else>
-              <v-text-field
-                v-model="item.product_code"
-                density="compact"
-                :rules="rules"
-                :append-inner-icon="item.product_code ? 'mdi-magnify' : 'mdi-barcode-scan'"
-                :hide-details="true"
-                @click:append-inner="item.product_code ? findProduct(item) : launchBarcodeScanner(item)"
-                @keydown.enter="findProduct(item)"
-              />
-              <div v-if="item.predicted_product_code" class="text-caption">
-                {{ $t('Common.SuggestedBarcode') }}
-                <a class="fake-link" role="link" tabindex="0" @click="handleClickProductCodeSuggestion(item)" @keydown.enter="handleClickProductCodeSuggestion(item)">
-                  {{ item.predicted_product_code }}
-                </a>
-              </div>
-            </v-sheet>
+            <ProductCard v-if="item.existingPrice" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+            <ProductInputRow v-else :productForm="item" :hideProductTypeInput="true" :hideProductBarcode="false" />
+            <div v-if="!item.existingPrice && item.predicted_product_code" class="text-caption">
+              {{ $t('Common.SuggestedBarcode') }}
+              <a class="fake-link" role="link" tabindex="0" @click="handleClickProductCodeSuggestion(item)" @keydown.enter="handleClickProductCodeSuggestion(item)">
+                {{ item.predicted_product_code }}
+              </a>
+            </div>
           </v-sheet>
           <PriceCategoryChip v-else :priceCategory="item.category_tag" />
         </template>
@@ -133,6 +123,7 @@ import utils from '../utils.js'
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
+    ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
