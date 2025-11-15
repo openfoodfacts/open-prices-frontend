@@ -3,6 +3,7 @@
     <v-icon :icon="ACTION_MENU_ICON" />
     <v-menu activator="parent" scroll-strategy="close" transition="slide-y-transition">
       <v-list>
+        <!-- Proof actions -->
         <v-list-subheader class="text-uppercase" :slim="true" disabled>
           {{ $t('Common.Proof') }}
         </v-list-subheader>
@@ -24,6 +25,16 @@
           <v-list-item :slim="true" prepend-icon="mdi-delete" :disabled="!proofCanBeDeleted" @click="openDeleteConfirmationDialog">
             {{ $t('Common.Delete') }}
           </v-list-item>
+          <!-- Moderation -->
+          <v-sheet v-if="userIsLoggedIn">
+            <v-list-subheader class="text-uppercase" :slim="true" disabled>
+              {{ $t('Common.Moderation') }}
+            </v-list-subheader>
+            <v-divider />
+            <v-list-item :slim="true" prepend-icon="mdi-flag" @click="moderationFlagCreateDialog = true">
+              {{ $t('Common.ReportProblem') }}
+            </v-list-item>
+          </v-sheet>
         </v-sheet>
       </v-list>
     </v-menu>
@@ -45,6 +56,14 @@
     @close="closeDeleteConfirmationDialog"
   />
 
+  <ModerationFlagCreateDialog
+    v-if="moderationFlagCreateDialog"
+    v-model="moderationFlagCreateDialog"
+    :proof="proof"
+    @flag="showModerationFlagSuccessMessage = true"
+    @close="moderationFlagCreateDialog = false"
+  />
+
   <v-snackbar
     v-model="editSuccessMessage"
     color="success"
@@ -58,6 +77,13 @@
     :timeout="2000"
   >
     {{ $t('ProofDelete.Success') }}
+  </v-snackbar>
+  <v-snackbar
+    v-model="showModerationFlagSuccessMessage"
+    color="success"
+    :timeout="2000"
+  >
+    {{ $t('Common.ModerationFlagCreateSuccess') }}
   </v-snackbar>
 </template>
 
@@ -73,7 +99,8 @@ export default {
     PriceAddLink: defineAsyncComponent(() => import('../components/PriceAddLink.vue')),
     ShareLink: defineAsyncComponent(() => import('../components/ShareLink.vue')),
     ProofEditDialog: defineAsyncComponent(() => import('../components/ProofEditDialog.vue')),
-    ProofDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/ProofDeleteConfirmationDialog.vue'))
+    ProofDeleteConfirmationDialog: defineAsyncComponent(() => import('../components/ProofDeleteConfirmationDialog.vue')),
+    ModerationFlagCreateDialog: defineAsyncComponent(() => import('../components/ModerationFlagCreateDialog.vue'))
   },
   props: {
     proof: {
@@ -94,16 +121,15 @@ export default {
       // success messages
       editSuccessMessage: false,
       deleteConfirmationDialog: false,
-      deleteSuccessMessage: false
+      deleteSuccessMessage: false,
+      moderationFlagCreateDialog: false,
+      showModerationFlagSuccessMessage: false
     }
   },
   computed: {
     ...mapStores(useAppStore),
     username() {
       return this.appStore.user.username
-    },
-    userIsProofOwner() {
-      return this.username && this.proof && (this.proof.owner === this.username)
     },
     proofIsTypePriceTag() {
       return this.proof && (this.proof.type === constants.PROOF_TYPE_PRICE_TAG)
@@ -123,11 +149,17 @@ export default {
     getShareLinkUrl() {
       return this.getProofDetailUrl
     },
+    userIsLoggedIn() {
+      return !!this.username
+    },
+    userIsProofOwner() {
+      return this.userIsLoggedIn && this.proof && (this.proof.owner === this.username)
+    },
     userCanAddPrice() {
       return this.proof && this.userIsProofOwner && constants.PROOF_TYPE_USER_EDITABLE_LIST.includes(this.proof.type)
     },
     userIsModerator() {
-      return this.username && this.appStore.user.is_moderator
+      return this.userIsLoggedIn && this.appStore.user.is_moderator
     },
     userCanEditProof() {
       return this.userIsProofOwner || this.userIsModerator

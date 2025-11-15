@@ -11,6 +11,7 @@
         <v-row>
           <v-col cols="12">
             <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
+            <ProofCard v-else-if="proof" :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
           </v-col>
         </v-row>
       </v-card-text>
@@ -67,7 +68,7 @@
           prepend-icon="mdi-send"
           :loading="loading"
           :disabled="!formFilled"
-          @click="createPriceFlag"
+          @click="createFlag"
         >
           {{ $t('Common.Send') }}
         </v-btn>
@@ -85,13 +86,18 @@ import constants from '../constants'
 
 export default {
   components: {
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue'))
   },
   props: {
     price: {
       type: Object,
       default: null
     },
+    proof: {
+      type: Object,
+      default: null
+    }
   },
   emits: ['flag', 'close'],
   data() {
@@ -118,13 +124,29 @@ export default {
     },
     formFilled() {
       return !!this.flagForm.reason
-    }
+    },
+    objectType() {
+      if (this.price) {
+        return 'price'
+      } else if (this.proof) {
+        return 'proof'
+      }
+      return null
+    },
+    objectId() {
+      if (this.price) {
+        return this.price.id
+      } else if (this.proof) {
+        return this.proof.id
+      }
+      return null
+    },
   },
   methods: {
-    createPriceFlag() {
+    createFlag() {
       this.loading = true
       api
-        .createPriceFlag(this.price.id, this.flagForm)
+        .createFlag(this.objectType, this.objectId, this.flagForm)
         .then((response) => {  // eslint-disable-line no-unused-vars
           this.loading = false
           this.$emit('flag')
