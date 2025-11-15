@@ -1,5 +1,5 @@
 <template>
-  <v-row v-if="mode === 'edit' && productIsTypeCategory">
+  <v-row v-if="productIsTypeCategory">
     <v-col>
       <v-item-group v-model="priceForm.price_per" class="d-inline" mandatory>
         <v-item v-for="cpp in CATEGORY_PRICE_PER_LIST" :key="cpp.key" v-slot="{ isSelected, toggle }" :value="cpp.key">
@@ -11,7 +11,7 @@
       </v-item-group>
     </v-col>
   </v-row>
-  <v-row v-if="mode === 'edit'" class="mt-0">
+  <v-row class="mt-0">
     <v-col :cols="priceForm.price_is_discounted ? '6' : '12'" class="pb-0">
       <div class="text-body-2 required">
         {{ priceForm.price_is_discounted ? $t('PriceForm.LabelDiscounted') : $t('PriceForm.Label') }}
@@ -53,7 +53,7 @@
       />
     </v-col>
   </v-row>
-  <v-row v-if="mode === 'edit'" class="mt-0">
+  <v-row class="mt-0">
     <v-col cols="6" class="pb-1">
       <v-switch
         v-model="priceForm.price_is_discounted"
@@ -95,7 +95,7 @@
       />
     </v-col>
   </v-row>
-  <v-row v-if="mode === 'edit'" class="mt-0">
+  <v-row class="mt-0">
     <v-col v-if="!displayOwnerCommentField" cols="12">
       <a class="fake-link" role="link" tabindex="0" @click="displayOwnerCommentField = true" @keydown.enter="displayOwnerCommentField = true">
         {{ $t('Common.AddComment') }}
@@ -116,16 +116,6 @@
       />
     </v-col>
   </v-row>
-  <v-row v-else-if="mode === 'display'">
-    <v-col cols="12">
-      <v-alert
-        icon="mdi-currency-usd"
-        density="compact"
-      >
-        <PricePriceRow :price="priceForm" />
-      </v-alert>
-    </v-col>
-  </v-row>
 
   <ChangeCurrencyDialog
     v-if="changeCurrencyDialog"
@@ -143,7 +133,6 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     ChangeCurrencyDialog: defineAsyncComponent(() => import('../components/ChangeCurrencyDialog.vue')),
   },
   props: {
@@ -159,10 +148,6 @@ export default {
         currency: null,
         receipt_quantity: null,
       })
-    },
-    mode: {
-      type: String,
-      default: constants.PRICE_FORM_DISPLAY_LIST[1].key,  // 'edit'
     },
     hideCurrencyChoice: {
       type: Boolean,

@@ -23,8 +23,8 @@
           />
         </v-col>
       </v-row>
-      <ProductInputRow :productForm="productPriceForm" :mode="mode" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="hideProductBarcodeScannerTab" @filled="productFormFilled = $event" />
-      <PriceInputRow :priceForm="productPriceForm" :mode="mode" :hideCurrencyChoice="true" :product="productPriceForm.product" :proofType="productPriceForm.proof ? productPriceForm.proof.type : null" @filled="pricePriceFormFilled = $event" />
+      <ProductInputRow :productForm="productPriceForm" :disableInitWhenSwitchingType="true" :hideProductBarcode="false" :hideBarcodeScannerTab="hideProductBarcodeScannerTab" @filled="productFormFilled = $event" />
+      <PriceInputRow :priceForm="productPriceForm" :hideCurrencyChoice="true" :product="productPriceForm.product" :proofType="productPriceForm.proof ? productPriceForm.proof.type : null" @filled="pricePriceFormFilled = $event" />
       <v-alert
         v-if="!productPriceFormValid"
         class="mt-4 mb-4"
@@ -69,16 +69,6 @@
           <!-- missing PRICE_TAG_STATUS_OTHER -->
         </v-list>
       </v-menu>
-      <v-spacer />
-      <v-btn
-        v-if="mode === 'display'"
-        color="warning"
-        variant="outlined"
-        prepend-icon="mdi-pencil"
-        @click="mode = 'edit'"
-      >
-        {{ $t('Common.Fix') }}
-      </v-btn>
       <v-spacer />
       <v-btn
         v-if="!hideUploadAction"
@@ -163,10 +153,6 @@ export default {
       type: Boolean,
       default: false
     },
-    forceMode: {
-      type: String,
-      default: null
-    },
     hidePriceTagStatusMenu: {
       type: Boolean,
       default: false
@@ -186,7 +172,6 @@ export default {
       PRICE_TAG_STATUS_NO_BARCODE: constants.PRICE_TAG_STATUS_NO_BARCODE,
       PRICE_TAG_STATUS_OTHER: constants.PRICE_TAG_STATUS_OTHER,
       // data
-      mode: null,  // 'display' or 'edit'  // see mounted
       productFormFilled: false,
       pricePriceFormFilled: false,
     }
@@ -233,28 +218,20 @@ export default {
       }
     }
   },
-  mounted() {
-    this.resetMode()
-  },
   unmounted() {
     if (this.productPriceForm.croppedImage) {
       URL.revokeObjectURL(this.productPriceForm.croppedImage)
     }
   },
   methods: {
-    resetMode() {
-      this.mode = this.forceMode || this.appStore.user.price_form_default_mode
-    },
     setCroppedImage(croppedImage) {
       this.productPriceForm.croppedImage = croppedImage
     },
     updatePriceTagStatus(status=null) {
       this.$emit('updatePriceTagStatus', status)
-      this.resetMode()
     },
     validatePriceTag() {
       this.$emit('validatePriceTag', this.productPriceForm)
-      this.resetMode()
     },
     close() {
       this.$emit('close')

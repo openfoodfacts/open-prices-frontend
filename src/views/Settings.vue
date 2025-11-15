@@ -125,18 +125,6 @@
             :item-value="item => item.key"
             hide-details="auto"
           />
-          <!-- Price Validation -->
-          <h3 class="mt-4 mb-1">
-            {{ $t('UserSettings.PriceValidation') }}
-          </h3>
-          <v-select
-            v-model="appStore.user.price_form_default_mode"
-            :label="$t('UserSettings.DefaultMode')"
-            :items="priceFormDisplayList"
-            :item-title="item => $t('Common.' + item.value)"
-            :item-value="item => item.key"
-            hide-details="auto"
-          />
         </v-card-text>
       </v-card>
     </v-col>
@@ -229,7 +217,6 @@ export default {
       locationSelectorDisplayList: constants.LOCATION_SELECTOR_DISPLAY_LIST,
       productSelectorDisplayList: constants.PRODUCT_SELECTOR_DISPLAY_LIST,
       barcodeScannerDisplayList: constants.BARCODE_SCANNER_DISPLAY_LIST,
-      priceFormDisplayList: constants.PRICE_FORM_DISPLAY_LIST
     }
   },
   computed: {

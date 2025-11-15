@@ -227,10 +227,6 @@ export default {
     { key: 'off-barcode-scanner', value: 'Off Barcode Scanner', valueSmallScreen: 'Off Scanner', icon: 'mdi-barcode-scan' },
     { key: 'html5-qrcode', value: 'Html5-Qrcode', valueSmallScreen: 'Html5-Qrcode', icon: 'mdi-barcode-scan' },
   ],
-  PRICE_FORM_DISPLAY_LIST: [
-    { key: 'display', value: 'Display', icon: 'mdi-eye-outline' },
-    { key: 'edit', value: 'Edit', icon: 'mdi-pencil' },
-  ],
   USER_DASHBOARD_TAB_LIST: [
     { key: 'all', value: 'All', icon: 'mdi-home' },
     { key: USER_CONSUMPTION.toLowerCase(), value: 'MyConsumption', icon: USER_CONSUMPTION_ICON },
