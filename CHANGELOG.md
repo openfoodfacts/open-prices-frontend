@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.145.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.145.0...v1.145.1) (2025-11-15)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1810](https://github.com/openfoodfacts/open-prices-frontend/issues/1810)) ([1a195f0](https://github.com/openfoodfacts/open-prices-frontend/commit/1a195f0be1c91aa7b807f73ef083086b0c98e6ef))
+* **Price Validation Assistant:** make the 'fix' mode the default + remove the button ([#1822](https://github.com/openfoodfacts/open-prices-frontend/issues/1822)) ([38a007f](https://github.com/openfoodfacts/open-prices-frontend/commit/38a007f3e064cd8354854786e636dd8df21ea562))
+* **Receipt Assistant:** improve the display of the price input field ([#1819](https://github.com/openfoodfacts/open-prices-frontend/issues/1819)) ([4adb673](https://github.com/openfoodfacts/open-prices-frontend/commit/4adb673be610d0b556976cd4054f42cdb5e1f498))
+* **Receipt Assistant:** improve the display of the product input field: button + card (same as [#1818](https://github.com/openfoodfacts/open-prices-frontend/issues/1818)) ([#1821](https://github.com/openfoodfacts/open-prices-frontend/issues/1821)) ([41e8b3a](https://github.com/openfoodfacts/open-prices-frontend/commit/41e8b3a028a664d9ca94713cb169c71ad4678da9))
+
 ## [1.145.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.144.2...v1.145.0) (2025-11-08)
 
 
