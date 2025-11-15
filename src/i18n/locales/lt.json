@@ -210,7 +210,7 @@
 		"ChallengeOngoing": "Vykstantis iššūkis",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Diagrama",
-		"Clear": "Clear",
+		"Clear": "Išvalyti",
 		"Comment": "Comment",
 		"Community": "Bendruomenė",
 		"CommunityPrices": "Community prices",
@@ -302,7 +302,7 @@
 		"FrequentlyAskedQuestions": "Dažniausiai užduodami klausimai",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Grupė",
-		"Help": "Help",
+		"Help": "Pagalba",
 		"History": "Istorija",
 		"Image": "Vaizdas",
 		"ImageSelect": "Pasirinkti vaizdą",
@@ -381,7 +381,7 @@
 		"ProofCount": "{count} įrodymai | {count} įrodymas | {count} įrodymų",
 		"ProofDetails": "Išsami įdorymų informacija",
 		"ProofMissing": "Trūksta įrodymo",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Pasirinkite įrodymą",
 		"ProofSelectMultiple": "Pasirinkti įrodymai",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} pasirinktų įrodymų | {count} pasirinktas įrodymas | Pasirinkti {count} įrodymai",
@@ -473,8 +473,8 @@
 		"Years": "Years",
 		"Yes": "Taip",
 		"No": "Ne",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Maistas",
+		"PetFood": "Naminių gyvūnėlių ėdalas",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -582,7 +582,7 @@
 		"LocationNotFound": "Vieta nerasta OpenStreetMap... Nedvejokite pridėti ją :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "Išvalyti",
 		"NoResult": "Rezultatų nerasta",
 		"NoResultHelpKeywords": "Nerandate savo parduotuvės? Pabandykite naudoti raktinius žodžius vietoj viso adreso (pvz., „Carrefour 75013 Paris“ arba „Walmart San Francisco“).",
 		"NoResultHelpOSM": "Vis dar nerandate savo parduotuvės? Gali būti, kad jos dar nėra {osm_name} . Pirmiausia galite ją pridėti {osm_url} .",
@@ -690,7 +690,7 @@
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Pasirinkite įrodymą",
 		"ProofSelected": "Proof selected!",
 		"Success": "Įrodymas sukurtas!"
 	},

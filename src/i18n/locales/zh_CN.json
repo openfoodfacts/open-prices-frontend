@@ -261,7 +261,7 @@
 		"LocationSearchByName": "Search by name and city",
 		"Date": "日期",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "细节",
 		"Delete": "删除",
 		"DeveloperMode": "Developer mode",
 		"Discount": "折扣",
@@ -381,7 +381,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "证明细节",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "证明",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "证明已选！",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -473,8 +473,8 @@
 		"Years": "Years",
 		"Yes": "是",
 		"No": "否",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "食物",
+		"PetFood": "宠物食品",
 		"Beauty": "美丽"
 	},
 	"ContributionAssistant": {
@@ -690,7 +690,7 @@
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "证明",
 		"ProofSelected": "证明已选！",
 		"Success": "Proof created!"
 	},

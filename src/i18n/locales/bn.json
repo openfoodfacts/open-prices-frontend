@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "রসিদ"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "তৈরি করুন",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "তৈরি করুন",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "দাম",
+			"LabelDiscounted": "ছাড় দেওয়া দাম",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "প্রমাণ",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "তারিখ",
+			"DateLabel": "তারিখ",
 			"Find": "খুঁজুন",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "অ্যাকশন",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "একটি মূল্য যোগ করুন",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -187,17 +187,17 @@
 		"BarcodeScanShort": "স্ক্যান",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "অবৈধ বারকোড",
 		"Brand": "ব্র্যান্ড",
 		"Brands": "মার্কা",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "দাম",
+		"Prices": "দাম",
 		"PRODUCT": "Product",
 		"Product": "Product",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "পণ্য",
+		"Proof": "প্রমাণ",
 		"Proofs": "Proofs",
 		"CATEGORY": "বিভাগ",
 		"Category": "বিভাগ",
@@ -221,13 +221,13 @@
 		"Contribute": "সহযগীতা",
 		"Contributors": "Contributors",
 		"Contributions": "অবদান",
-		"Confirm": "Confirm",
+		"Confirm": "নিশ্চিত করুন",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "মুদ্রা",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -239,7 +239,7 @@
 		"DisplayMap": "মানচিত্র",
 		"DisplayPriceMap": "মানচিত্র",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
+		"Done": "সম্পন্ন",
 		"Error": "ত্রুটি",
 		"Experiment": "পরীক্ষা",
 		"Experiments": "Experiments",
@@ -259,9 +259,9 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "তারিখ",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "বিস্তারিত",
 		"Delete": "মুছুন",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -284,7 +284,7 @@
 		"End": "End",
 		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "ক্ষেত্রটি আবশ্যক",
-		"Filter": "Filter",
+		"Filter": "ফিল্টার",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
@@ -298,13 +298,13 @@
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "সাহায্য",
 		"History": "ইতিহাস",
-		"Image": "Image",
+		"Image": "ভাবমূর্তি",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -316,12 +316,12 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "মানচিত্র",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "বিবিধ",
 		"MobileApp": "Mobile app",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "আমার দাম",
+		"MyProofs": "আমার প্রমাণ",
 		"MyStats": "My stats",
 		"NextProof": "Next proof",
 		"NoBarcode": "কোনও বারকোড নেই",
@@ -335,7 +335,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "দাম",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -358,7 +358,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "মূল্য ট্যাগ",
 		"PriceTags": "মূল্য ট্যাগ",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -381,7 +381,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "একটি প্রমাণ নির্বাচন করুন",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -393,8 +393,8 @@
 		"Quantity": "পরিমান",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"RECEIPT": "রসিদ",
+		"Receipt": "রসিদ",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -423,9 +423,9 @@
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "থিম",
+		"ThemeLight": "আলো",
+		"ThemeDark": "অন্ধকার",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -438,7 +438,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "চেষ্টা করে দেখো",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "অজানা পণ্য",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -451,7 +451,7 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "URL টি",
 		"URLInvalid": "Invalid URL",
 		"User": "ইউজার",
 		"Users": "Users",
@@ -468,13 +468,13 @@
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "View",
-		"Website": "Website",
+		"Website": "ওয়েবসাইট",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "হ্যাঁ",
 		"No": "না",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "খাদ্য",
+		"PetFood": "পোষা প্রাণীর খাবার",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -524,7 +524,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "মুদ্রা",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -564,10 +564,10 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "একটি মূল্য যোগ করুন",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "একটি পণ্য খুঁজুন",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -605,9 +605,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "প্রমাণ",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "অজানা পণ্য"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -622,8 +622,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "দাম",
+		"LabelDiscounted": "ছাড় দেওয়া দাম",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -652,7 +652,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "অবৈধ বারকোড",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -662,10 +662,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "অজানা পণ্যের নাম"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "একটি মূল্য যোগ করুন",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -683,14 +683,14 @@
 		"PromoReceiptAssistant": "পরীক্ষা: নতুন রসিদ সহকারী ব্যবহার করে দেখুন যাতে আপনার রসিদ থেকে স্বয়ংক্রিয়ভাবে দাম বের করা যায়!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "প্রমাণ",
+		"PRICE_TAG": "মূল্য ট্যাগ",
+		"RECEIPT": "রসিদ",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "একটি প্রমাণ নির্বাচন করুন",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -702,7 +702,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "দাম",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -737,7 +737,7 @@
 			"Title": "যোগ"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "একটি মূল্য যোগ করুন"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -767,7 +767,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "একটি মূল্য যোগ করুন"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -776,7 +776,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "দাম"
 		},
 		"PriceTags": {
 			"Title": "মূল্য ট্যাগ"
@@ -812,10 +812,10 @@
 			"Title": "Latest proofs"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "আমার দাম"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "আমার প্রমাণ"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -891,13 +891,13 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "দাম",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "পণ্য",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -917,8 +917,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "আমার দাম",
+		"MyProofs": "আমার প্রমাণ",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "সেটিংস",
 		"Title": "Dashboard",
@@ -938,7 +938,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "মুদ্রা",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",

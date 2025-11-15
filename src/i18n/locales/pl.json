@@ -261,7 +261,7 @@
 		"LocationSearchByName": "Search by name and city",
 		"Date": "Data",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "Bliższe dane",
 		"Delete": "Usuń",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Promocja",
@@ -302,7 +302,7 @@
 		"FrequentlyAskedQuestions": "Często Zadawane Pytania",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Pomoc",
 		"History": "Historia",
 		"Image": "Zdjęcie",
 		"ImageSelect": "Select an image",
@@ -381,7 +381,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Szczegóły dowodu",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Wybierz próbkę",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -451,7 +451,7 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "Adres URL",
 		"URLInvalid": "Invalid URL",
 		"User": "Użytkownik",
 		"Users": "Użytkownicy",
@@ -473,8 +473,8 @@
 		"Years": "Years",
 		"Yes": "Tak",
 		"No": "Nie",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Żywność",
+		"PetFood": "Karma dla zwierząt",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -690,7 +690,7 @@
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Wybierz próbkę",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},

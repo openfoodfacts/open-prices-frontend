@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Biên lai"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -69,10 +69,10 @@
 		"Create": "Tạo",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Giá",
+			"LabelDiscounted": "Giá giảm giá",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Bằng chứng",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Ngày",
+			"DateLabel": "Ngày",
 			"Find": "Tìm",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "Hoạt động",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Thêm giá",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -191,13 +191,13 @@
 		"Brand": "Nhãn hiệu",
 		"Brands": "Thương hiệu",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Giá",
+		"Prices": "Giá cả",
 		"PRODUCT": "Sản phẩm",
 		"Product": "Sản phẩm",
 		"ProductName": "Tên sản phẩm",
 		"Products": "Sản phẩm",
-		"Proof": "Proof",
+		"Proof": "Bằng chứng",
 		"Proofs": "Proofs",
 		"CATEGORY": "Danh mục",
 		"Category": "Danh mục",
@@ -227,7 +227,7 @@
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Tiền tệ",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -259,9 +259,9 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Ngày",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "Chi tiết",
 		"Delete": "Xóa",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -302,7 +302,7 @@
 		"FrequentlyAskedQuestions": "Câu hỏi thường gặp",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Giúp đỡ",
 		"History": "Lịch sử",
 		"Image": "Hình ảnh",
 		"ImageSelect": "Select an image",
@@ -320,8 +320,8 @@
 		"MobileApp": "Mobile app",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Giá của tôi",
+		"MyProofs": "Bằng chứng của tôi",
 		"MyStats": "My stats",
 		"NextProof": "Next proof",
 		"NoBarcode": "Không có mã vạch",
@@ -335,7 +335,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Giá",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -358,7 +358,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Giá cả",
 		"PriceTags": "Thẻ giá",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -381,7 +381,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Chọn một bản chứng minh",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -393,8 +393,8 @@
 		"Quantity": "Số lượng",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"RECEIPT": "Biên lai",
+		"Receipt": "Biên lai",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -438,7 +438,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Hãy thử xem",
 		"Type": "Loại",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Sản phẩm không xác định",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -468,13 +468,13 @@
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "Hiển thị",
-		"Website": "Website",
+		"Website": "Trang web",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Có",
 		"No": "Không",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Đồ ăn",
+		"PetFood": "Thức ăn cho thú cưng",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -524,7 +524,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Tiền tệ",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -564,10 +564,10 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Thêm giá",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Tìm kiếm sản phẩm",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -605,9 +605,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Bằng chứng",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Sản phẩm không xác định"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -622,8 +622,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Giá",
+		"LabelDiscounted": "Giá giảm giá",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -665,7 +665,7 @@
 		"UnknownProduct": "Tên sản phẩm không xác định"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Thêm giá",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Tải thêm",
@@ -683,14 +683,14 @@
 		"PromoReceiptAssistant": "Thử nghiệm: hãy dùng thử trợ lý biên lai mới để tự động trích xuất giá từ biên lai của bạn!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Bằng chứng",
+		"PRICE_TAG": "Giá cả",
+		"RECEIPT": "Biên lai",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Chọn một bản chứng minh",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -702,7 +702,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Tải thêm",
-		"Prices": "Prices",
+		"Prices": "Giá cả",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -737,7 +737,7 @@
 			"Title": "Thêm vào"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Thêm giá"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -767,7 +767,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Thêm giá"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -776,7 +776,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Giá cả"
 		},
 		"PriceTags": {
 			"Title": "Thẻ giá"
@@ -812,10 +812,10 @@
 			"Title": "Latest proofs"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Giá của tôi"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Bằng chứng của tôi"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -891,7 +891,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Giá cả",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -917,8 +917,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Tải thêm",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Giá của tôi",
+		"MyProofs": "Bằng chứng của tôi",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Cài đặt",
 		"Title": "Dashboard",
@@ -938,7 +938,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Thay đổi ngôn ngữ",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Tiền tệ",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",

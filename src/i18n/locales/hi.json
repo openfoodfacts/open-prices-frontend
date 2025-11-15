@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "नई कीमत जोड़ें",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} कीमत पहले ही अपलोड की जा चुकी है | {priceAlreadyUploadedNumber} कीमतें पहले ही अपलोड की जा चुकी हैं",
-			"Create": "Create",
+			"Create": "बनाएं",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "नया मूल्य",
 			"PriceUploaded": "कीमत बनाई गई!",
@@ -66,7 +66,7 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "बनाएं",
 		"PriceDetails": {
 			"Discount": "छूट?",
 			"Label": "कीमत",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "तारीख",
+			"DateLabel": "तारीख",
 			"Find": "ढूंढें",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -187,16 +187,16 @@
 		"BarcodeScanShort": "स्कैन",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "प्रकार",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "अमान्य बारकोड",
 		"Brand": "ब्रांड",
 		"Brands": "ब्रांड",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
 		"Price": "कीमत",
-		"Prices": "Prices",
+		"Prices": "कीमतों",
 		"PRODUCT": "उत्पाद",
 		"Product": "उत्पाद",
 		"ProductName": "Product name",
-		"Products": "Products",
+		"Products": "उत्पादों",
 		"Proof": "सबूत",
 		"Proofs": "Proofs",
 		"CATEGORY": "श्रेणी",
@@ -221,13 +221,13 @@
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "योगदान",
-		"Confirm": "Confirm",
+		"Confirm": "पुष्टि करना",
 		"Country": "Country",
 		"Countries": "देशों",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "मुद्रा",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -239,8 +239,8 @@
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "हो गया",
+		"Error": "गलती",
 		"Experiment": "प्रयोग",
 		"Experiments": "Experiments",
 		"GoToProof": "Go to proof",
@@ -259,9 +259,9 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "तारीख",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "विवरण",
 		"Delete": "नष्ट करे",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -284,7 +284,7 @@
 		"End": "End",
 		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "ये स्थान भरा जाना है",
-		"Filter": "Filter",
+		"Filter": "फ़िल्टर",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
@@ -298,13 +298,13 @@
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "अक्सर पूछे जाने वाले प्रश्न",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "मदद",
 		"History": "वृत्तांत",
-		"Image": "Image",
+		"Image": "छवि",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -316,12 +316,12 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "मिश्रित",
 		"MobileApp": "Mobile app",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "मेरी कीमतें",
+		"MyProofs": "मेरे प्रमाण",
 		"MyStats": "My stats",
 		"NextProof": "Next proof",
 		"NoBarcode": "कोई बारकोड नहीं",
@@ -358,7 +358,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "मूल्य का टैग",
 		"PriceTags": "कीमत टैग",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -381,7 +381,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "प्रमाण विवरण",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "एक प्रूफ़ चुनें",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "प्रमाण चयनित!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -409,7 +409,7 @@
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "साइन इन किया!",
 		"SignIn": "साइन इन करें",
-		"SignOut": "Sign out",
+		"SignOut": "साइन आउट",
 		"SideMenu": "Side menu",
 		"Share": "शेयर",
 		"Source": "Source",
@@ -423,9 +423,9 @@
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
 		"Thanks": "धन्यवाद",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "विषय",
+		"ThemeLight": "रोशनी",
+		"ThemeDark": "अँधेरा",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -438,7 +438,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "कोशिश करके देखो",
 		"Type": "प्रकार",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "अज्ञात उत्पाद",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -451,7 +451,7 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "यूआरएल",
 		"URLInvalid": "Invalid URL",
 		"User": "उपयोगकर्ता",
 		"Users": "Users",
@@ -468,13 +468,13 @@
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "देखें",
-		"Website": "Website",
+		"Website": "वेबसाइट",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "हाँ",
 		"No": "नहीं",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "खाना",
+		"PetFood": "पालतू भोजन",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -524,7 +524,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "मुद्रा",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -557,7 +557,7 @@
 		"Dashboard": "Dashboard",
 		"Settings": "सेटिंग्स",
 		"SignIn": "साइन इन करें",
-		"SignOut": "Sign out"
+		"SignOut": "साइन आउट"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
@@ -567,7 +567,7 @@
 		"AddPrice": "एक मूल्य जोड़े",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "किसी उत्पाद की खोज करें",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -607,7 +607,7 @@
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "सबूत",
 		"FullPrice": "पूरी कीमत",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "अज्ञात उत्पाद"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -652,7 +652,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "अमान्य बारकोड",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -662,7 +662,7 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "अज्ञात उत्पाद का नाम"
 	},
 	"ProductDetail": {
 		"AddPrice": "एक मूल्य जोड़े",
@@ -684,13 +684,13 @@
 	},
 	"ProofCard": {
 		"Proof": "सबूत",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "मूल्य का टैग",
 		"RECEIPT": "रसीद",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "एक प्रूफ़ चुनें",
 		"ProofSelected": "प्रमाण चयनित!",
 		"Success": "Proof created!"
 	},
@@ -702,7 +702,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "अधिक लोड करें",
-		"Prices": "Prices",
+		"Prices": "कीमतों",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -776,7 +776,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "कीमतों"
 		},
 		"PriceTags": {
 			"Title": "कीमत टैग"
@@ -812,10 +812,10 @@
 			"Title": "Latest proofs"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "मेरी कीमतें"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "मेरे प्रमाण"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -891,13 +891,13 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "कीमतों",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "उत्पादों",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -917,8 +917,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "अधिक लोड करें",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "मेरी कीमतें",
+		"MyProofs": "मेरे प्रमाण",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "सेटिंग्स",
 		"Title": "Dashboard",
@@ -938,7 +938,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "भाषा बदलें",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "मुद्रा",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",

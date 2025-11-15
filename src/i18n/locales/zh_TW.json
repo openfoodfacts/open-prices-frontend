@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "增加新的價格",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} 價格已上傳 {priceAlreadyUploadedNumber} 價格已上傳",
-			"Create": "Create",
+			"Create": "創造",
 			"ExistingProductFound": "重複？此產品已經在此證明中添加過了",
 			"NewPrice": "新價格",
 			"PriceUploaded": "價格已建立！",
@@ -66,7 +66,7 @@
 		"Title": "新增多個價格"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "創造",
 		"PriceDetails": {
 			"Discount": "有折扣嗎？",
 			"Label": "價格",
@@ -221,7 +221,7 @@
 		"Contribute": "貢獻",
 		"Contributors": "合作者",
 		"Contributions": "貢獻",
-		"Confirm": "Confirm",
+		"Confirm": "確認",
 		"Country": "Country",
 		"Countries": "國家 ",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -316,7 +316,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "地圖",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "各種各樣的",
 		"MobileApp": "Mobile app",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "我的儀表板",
@@ -381,7 +381,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "證明細節",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "證明",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "已選擇證明！",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -468,7 +468,7 @@
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "查看 ",
-		"Website": "Website",
+		"Website": "網站",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "是 ",
@@ -690,7 +690,7 @@
 		"SHOP_IMPORT": "商家導入"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "證明",
 		"ProofSelected": "已選擇證明！",
 		"Success": "已建立證明！"
 	},

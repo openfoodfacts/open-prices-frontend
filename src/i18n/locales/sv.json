@@ -72,7 +72,7 @@
 			"Label": "Pris",
 			"LabelDiscounted": "Rabatterat pris",
 			"LabelFull": "Fullt pris",
-			"Proof": "Proof",
+			"Proof": "Bevis",
 			"ProofDateChanged": "Datum uppdaterat!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -197,7 +197,7 @@
 		"Product": "Produkt",
 		"ProductName": "Produktnamn",
 		"Products": "Produkter",
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"Proofs": "Bevis",
 		"CATEGORY": "Kategori",
 		"Category": "Kategori",
@@ -321,7 +321,7 @@
 		"MyConsumption": "Min förbrukning",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Mina priser",
-		"MyProofs": "My proofs",
+		"MyProofs": "Mina bevis",
 		"MyStats": "Min statistik",
 		"NextProof": "Next proof",
 		"NoBarcode": "Ingen streckkod",
@@ -605,7 +605,7 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"FullPrice": "Fullt pris",
 		"UnknownProduct": "Okänd produkt"
 	},
@@ -683,7 +683,7 @@
 		"PromoReceiptAssistant": "Experiment: prova den nya kvittoassistenten för att automatiskt extrahera priser från dina kvitton!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"PRICE_TAG": "Prislapp",
 		"RECEIPT": "Kvitto",
 		"GDPR_REQUEST": "GDPR request",
@@ -815,7 +815,7 @@
 			"Title": "Mina priser"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Mina bevis"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -918,7 +918,7 @@
 		"LoadMore": "Ladda fler",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Mina priser",
-		"MyProofs": "My proofs",
+		"MyProofs": "Mina bevis",
 		"ProofUpdated": "Bevis uppdaterat!",
 		"Settings": "Inställningar",
 		"Title": "Dashboard",

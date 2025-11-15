@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "영수증"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -69,10 +69,10 @@
 		"Create": "만들기",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "가격",
+			"LabelDiscounted": "할인된 가격",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "증거",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "날짜",
+			"DateLabel": "날짜",
 			"Find": "찾기",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "행동",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "가격 추가",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -191,13 +191,13 @@
 		"Brand": "브랜드",
 		"Brands": "브랜드",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "가격",
+		"Prices": "물가",
 		"PRODUCT": "생성물",
 		"Product": "생성물",
 		"ProductName": "제품 이름",
 		"Products": "제품",
-		"Proof": "Proof",
+		"Proof": "증거",
 		"Proofs": "Proofs",
 		"CATEGORY": "카테고리",
 		"Category": "카테고리",
@@ -227,7 +227,7 @@
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "통화",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -259,9 +259,9 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "날짜",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "세부",
 		"Delete": "삭제",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -298,11 +298,11 @@
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "자주 묻는 질문",
 		"FrequentlyAskedQuestions": "자주 묻는 질문",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "돕다",
 		"History": "최근 기록",
 		"Image": "이미지",
 		"ImageSelect": "Select an image",
@@ -320,8 +320,8 @@
 		"MobileApp": "Mobile app",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "내 가격",
+		"MyProofs": "내 증거",
 		"MyStats": "My stats",
 		"NextProof": "Next proof",
 		"NoBarcode": "바코드 없음",
@@ -335,7 +335,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "가격",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -358,7 +358,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "가격표",
 		"PriceTags": "가격표",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -381,7 +381,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "증거를 선택하세요",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -393,8 +393,8 @@
 		"Quantity": "양",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"RECEIPT": "영수증",
+		"Receipt": "영수증",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -423,7 +423,7 @@
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
+		"Theme": "주제",
 		"ThemeLight": "밝게",
 		"ThemeDark": "어둡게",
 		"TopContributors": "Top contributors",
@@ -438,7 +438,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "시도해 보세요",
 		"Type": "종류",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "알 수 없는 제품",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -473,8 +473,8 @@
 		"Years": "Years",
 		"Yes": "예",
 		"No": "아니요",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "음식",
+		"PetFood": "반려동물 사료",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -524,7 +524,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "통화",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -564,10 +564,10 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "가격 추가",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "제품 검색",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -605,9 +605,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "증거",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "알 수 없는 제품"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -622,8 +622,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "가격",
+		"LabelDiscounted": "할인된 가격",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -665,7 +665,7 @@
 		"UnknownProduct": "알 수 없는 상품명"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "가격 추가",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "더 불러오기",
@@ -683,14 +683,14 @@
 		"PromoReceiptAssistant": "실험해 보세요: 새로운 영수증 도우미를 사용해 영수증에서 자동으로 가격을 추출해 보세요!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "증거",
+		"PRICE_TAG": "가격표",
+		"RECEIPT": "영수증",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "증거를 선택하세요",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -702,7 +702,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "더 불러오기",
-		"Prices": "Prices",
+		"Prices": "물가",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -737,7 +737,7 @@
 			"Title": "추가하기"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "가격 추가"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -767,7 +767,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "가격 추가"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -776,7 +776,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "물가"
 		},
 		"PriceTags": {
 			"Title": "가격표"
@@ -812,10 +812,10 @@
 			"Title": "Latest proofs"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "내 가격"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "내 증거"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -891,7 +891,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "물가",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -917,8 +917,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "더 불러오기",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "내 가격",
+		"MyProofs": "내 증거",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "설정",
 		"Title": "Dashboard",
@@ -938,7 +938,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "언어 변경",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "통화",
 		"DisplayTitle": "화면",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
