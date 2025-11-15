@@ -1,4 +1,4 @@
-<template>>
+<template>
   <v-row v-if="!hideProductTypeInput">
     <v-col>
       <v-item-group v-model="productForm.type" class="d-inline" mandatory @update:modelValue="setType($event)">

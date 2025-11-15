@@ -28,7 +28,7 @@
         </template>
         <template #[`item.product`]="{ item }">
           <v-sheet v-if="!item.isCategory">
-            <ProductCard v-if="item.existingPrice" :product="item.productFound" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
+            <ProductCard v-if="item.existingPrice" :product="item.product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
             <ProductInputRow v-else :productForm="item" :hideProductTypeInput="true" :hideProductBarcode="false" />
             <div v-if="!item.existingPrice && item.predicted_product_code" class="text-caption">
               {{ $t('Common.SuggestedBarcode') }}
@@ -105,12 +105,6 @@
       @close="editProductDialog = false"
     />
   </v-dialog>
-  <BarcodeScannerDialog
-    v-if="barcodeScannerDialog"
-    v-model="barcodeScannerDialog"
-    @barcode="setProductCodeFromScanner($event)"
-    @close="barcodeScannerDialog = false"
-  />
 </template>
   
 <script>
@@ -130,7 +124,6 @@ export default {
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
     ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
-    BarcodeScannerDialog: defineAsyncComponent(() => import('../components/BarcodeScannerDialog.vue')),
   },
   props: {
     proof: {
@@ -161,8 +154,6 @@ export default {
       showInfoDetails: true,
       editProductDialog: false,
       editProductItem: null,
-      barcodeScannerDialog: false,
-      barcodeScannerItem: null,
       rules: [
         value => !!value || '',
       ],
@@ -211,7 +202,7 @@ export default {
       this.items = this.receiptItems.map((item) => {
         if (item.price_id) {
           item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
-          item.productFound = item.existingPrice.product
+          item.product = item.existingPrice.product
           item.product_code = item.existingPrice.product?.code
           item.category_tag = item.existingPrice.category_tag
           item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
@@ -226,7 +217,7 @@ export default {
             item.product_name = item.existingPrice.product_name
           }
         } else {
-          item.productFound = null
+          item.product = null
           item.product_code = ""
           item.price_is_discounted = false
           item.price_without_discount = null
@@ -260,11 +251,11 @@ export default {
         .getProductByCode(item.product_code)
         .then((data) => {
           const product = data.id ? data : {'code': item.product_code, 'price_count': 0}
-          item.productFound = product
+          item.product = product
         })
         .catch((error) => {
           console.log(error)
-          item.productFound = null
+          item.product = null
         })
     },
     deleteItem(item) {
@@ -277,7 +268,7 @@ export default {
         product_name: '',
         price: null,
         receipt_quantity: 1,
-        productFound: null,
+        product: null,
         isCategory: false,
         category_tag: null,
         predicted_data: {}
@@ -308,20 +299,11 @@ export default {
     },
     confirmProduct(product) {
       this.editProductDialog = false
-      this.items[this.editProductItem.index].productFound = product.product
+      this.items[this.editProductItem.index].product = product.product
       this.items[this.editProductItem.index].isCategory = product.type === constants.PRICE_TYPE_CATEGORY
       this.items[this.editProductItem.index].category_tag = product.type === constants.PRICE_TYPE_CATEGORY ? product.category_tag : null
       Object.assign(this.items[this.editProductItem.index], product)
       // this.editProductItem = null
-    },
-    launchBarcodeScanner(item) {
-      this.barcodeScannerDialog = true
-      this.barcodeScannerItem = item
-    },
-    setProductCodeFromScanner(code) {
-      this.barcodeScannerDialog = false
-      this.barcodeScannerItem.product_code = code
-      this.findProduct(this.barcodeScannerItem)
     },
     handleClickProductCodeSuggestion(item) {
       item.product_code = item.predicted_product_code
