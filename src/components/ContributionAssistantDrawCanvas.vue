@@ -49,13 +49,13 @@
         }
       },
       imageSrc() {
-          this.image.src = this.imageSrc
-          this.image.crossOrigin = "anonymous"
-          if (this.image.complete) {
-            this.initCanvas()
-          } else {
-            this.image.onload = () => this.initCanvas()
-          }
+        this.image.src = this.imageSrc
+        this.image.crossOrigin = "anonymous"
+        if (this.image.complete) {
+          this.initCanvas()
+        } else {
+          this.image.onload = () => this.initCanvas()
+        }
       }
     },
     mounted() {
@@ -111,7 +111,9 @@
           }))
           this.extractLabels()
         }
-        this.drawBoundingBoxes(); // Draw previous boundingBoxes after resizing
+        // draw previous boundingBoxes after resizing
+        this.drawBoundingBoxes()
+        // done
         this.$emit('loaded')
       },
       startDrawing(event) {
@@ -135,10 +137,11 @@
         if (this.isDrawing) {
           const canvas = this.$refs.canvas
           const ctx = canvas.getContext("2d")
-          
-          ctx.drawImage(this.image, 0, 0, canvas.width, canvas.height); // Redraw image
-          this.drawBoundingBoxes() // Redraw previous boundingBoxes
-          
+
+          // Redraw image & existing boxes
+          ctx.drawImage(this.image, 0, 0, canvas.width, canvas.height)
+          this.drawBoundingBoxes()
+
           const currentX = event.offsetX / this.scale
           const currentY = event.offsetY / this.scale
           const width = currentX - this.startX
@@ -160,69 +163,41 @@
         const endY = event.offsetY / this.scale
         // ignore bounding boxes that are too small
         if (Math.abs(endX - this.startX) > 10 && Math.abs(endY - this.startY) > 10) {
-          this.boundingBoxes.push({ startX: this.startX, startY: this.startY, endX, endY, boundingSource: this.$t('ContributionAssistant.ManualBoundingBoxSource') })
+          this.boundingBoxes.push({ startX: this.startX, startY: this.startY, endX, endY, boundingSource: this.$t('ContributionAssistant.ManualBoundingBoxSource'), status: -1 })
         }
         this.extractLabels()
-        this.drawBoundingBoxes()
+        this.drawSingleBoundingBox(this.boundingBoxes[this.boundingBoxes.length - 1])
+      },
+      drawSingleBoundingBox(rect) {
+        const ctx = this.$refs.canvas.getContext("2d")
+        ctx.lineWidth = 1 / this.scale
+        const { startX, startY, endX, endY } = rect
+        const width = endX - startX
+        const height = endY - startY
+        // set text & color
+        let text = ""
+        constants.PRICE_TAG_STATUS_LIST.some(statusObj => {
+          if (rect.status === statusObj.key) {
+            text = this.$t(statusObj.text)
+            ctx.strokeStyle = statusObj.color
+            ctx.fillStyle = statusObj.color
+            return true
+          }
+        })
+        ctx.strokeRect(startX, startY, width, height)
+        ctx.font = `bold ${8/this.scale}px sans-serif `
+        const textWidth = ctx.measureText(text).width + 4
+        ctx.strokeRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
+        ctx.fillRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
+        ctx.fillStyle = "white"
+        ctx.fillText(text, Math.min(startX, endX) + 3, Math.min(startY, endY) - 3)
       },
       drawBoundingBoxes() {
         const ctx = this.$refs.canvas.getContext("2d")
         ctx.lineWidth = 1 / this.scale
         this.boundingBoxes.forEach(rect => {
-          const { startX, startY, endX, endY } = rect
-          const width = endX - startX
-          const height = endY - startY
-          let text = ""
-          switch (rect.status) {
-            case constants.PRICE_TAG_STATUS_WITH_PRICE:
-              ctx.strokeStyle = "green"
-              ctx.fillStyle = "green"
-              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithPrice')
-              break
-            case constants.PRICE_TAG_STATUS_UNREADABLE:
-              ctx.strokeStyle = "orange"
-              ctx.fillStyle = "orange"
-              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagUnreadable')
-              break
-            case constants.PRICE_TAG_STATUS_TRUNCATED:
-              ctx.strokeStyle = "#883c1e"  // dark brown
-              ctx.fillStyle = "#883c1e"
-              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagTruncated')
-              break
-            case constants.PRICE_TAG_STATUS_NOT_A_PRICE:
-              ctx.strokeStyle = "#88631e"  // light brown
-              ctx.fillStyle = "#88631e"
-              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagNotAPrice')
-              break
-            case constants.PRICE_TAG_STATUS_NO_BARCODE:
-              ctx.strokeStyle = "yellow"
-              ctx.fillStyle = "yellow"
-              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagNoBarcode')
-              break
-            case constants.PRICE_TAG_STATUS_OTHER:
-              ctx.strokeStyle = "gray"
-              ctx.fillStyle = "gray"
-              text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagOther')
-              break
-            default:
-              if (rect.id) {  // status == null
-                ctx.strokeStyle = "blue"
-                ctx.fillStyle = "blue"
-                text = this.$t('ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice')
-              } else {
-                ctx.strokeStyle = "red"
-                ctx.fillStyle = "red"
-                text = this.$t('ContributionAssistant.PriceTagLabels.NewPriceTag')
-              }
-          }
-          ctx.strokeRect(startX, startY, width, height)
-          ctx.font = `bold ${8/this.scale}px sans-serif `
-          const textWidth = ctx.measureText(text).width + 4
-          ctx.strokeRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
-          ctx.fillRect(Math.min(startX, endX), Math.min(startY, endY) - (8/this.scale), textWidth, (8/this.scale))
-          ctx.fillStyle = "white"
-          ctx.fillText(text, Math.min(startX, endX) + 3, Math.min(startY, endY) - 3)
-        });
+          this.drawSingleBoundingBox(rect)
+        })
       },
       async extractLabels() {
         let extractedLabels = []

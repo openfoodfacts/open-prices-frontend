@@ -460,7 +460,7 @@ export default {
       // User is done drawing labels and has pressed the "Send labels" button
       // If new labels were drawn, we have to create the corresponding price tags on the server, and wait for ml processing
       // Otherwise, we can move on to the Cleanup step right away
-      let newLabelsAddedWithCanvas = this.extractedLabels.filter(label => label.id === null) // Only preexisting labels have an id
+      let newLabelsAddedWithCanvas = this.extractedLabels.filter(label => label.status === -1)
       if (newLabelsAddedWithCanvas.length) {
         // Send new price tags to server and load them after ml processing
         this.processLabelsLoading = true
