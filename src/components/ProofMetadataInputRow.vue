@@ -86,7 +86,7 @@
   </v-row>
   <v-row v-if="!multiple" class="mt-0">
     <v-col v-if="!displayOwnerCommentField" cols="12">
-      <a class="fake-link" role="link" tabindex="0" @click="displayOwnerCommentField = true" @keydown.enter="displayOwnerCommentField = true">
+      <a class="fake-link text-body-2" role="link" tabindex="0" @click="displayOwnerCommentField = true" @keydown.enter="displayOwnerCommentField = true">
         {{ $t('Common.AddComment') }}
       </a>
     </v-col>
@@ -106,7 +106,7 @@
     </v-col>
   </v-row>
   <v-row v-if="assistedByAI" class="mt-0">
-    <v-col cols="12" class="pb-1">
+    <v-col cols="12">
       <v-alert
         v-if="proofIsTypePriceTag"
         type="info"
@@ -129,10 +129,13 @@
         v-model="proofMetadataForm.ready_for_price_tag_validation"
         density="compact"
         color="success"
-        :label="$t('ProofAdd.PriceTagAllowCommunityValidation')"
         :true-value="true"
         hide-details="auto"
-      />
+      >
+        <template #label>
+          <span class="text-body-2">{{ $t('ProofAdd.PriceTagAllowCommunityValidation') }}</span>
+        </template>
+      </v-switch>
     </v-col>
   </v-row>
   <v-row v-if="proofIsTypeReceipt" class="mt-0">
@@ -141,10 +144,13 @@
         v-model="proofMetadataForm.owner_consumption"
         density="compact"
         color="success"
-        :label="$t('Common.ReceiptOwnerConsumption')"
         :true-value="true"
         hide-details="auto"
-      />
+      >
+        <template #label>
+          <span class="text-body-2">{{ $t('Common.ReceiptOwnerConsumption') }}</span>
+        </template>
+      </v-switch>
     </v-col>
   </v-row>
 </template>

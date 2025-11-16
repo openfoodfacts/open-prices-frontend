@@ -36,7 +36,7 @@
             />
           </v-col>
           <v-col v-if="!displayCommentField" cols="12">
-            <a class="fake-link" role="link" tabindex="0" @click="displayCommentField = true" @keydown.enter="displayOwnerCommentField = true">
+            <a class="fake-link text-body-2" role="link" tabindex="0" @click="displayCommentField = true" @keydown.enter="displayOwnerCommentField = true">
               {{ $t('Common.AddComment') }}
             </a>
           </v-col>

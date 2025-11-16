@@ -45,7 +45,7 @@
         variant="outlined"
         type="text"
         inputmode="decimal"
-        :rules="priceRules"
+        :rules="priceRulesOptional"
         :suffix="priceForm.currency"
         :hint="getPricePerUnit(priceForm.price_without_discount)"
         persistent-hint
@@ -59,10 +59,13 @@
         v-model="priceForm.price_is_discounted"
         density="compact"
         color="success"
-        :label="$t('Common.Discount')"
         :true-value="true"
         hide-details="auto"
-      />
+      >
+        <template #label>
+          <span class="text-body-2">{{ $t('Common.Discount') }}</span>
+        </template>
+      </v-switch>
     </v-col>
     <v-col v-if="priceForm.price_is_discounted" cols="6">
       <div class="text-body-2">
@@ -97,7 +100,7 @@
   </v-row>
   <v-row class="mt-0">
     <v-col v-if="!displayOwnerCommentField" cols="12">
-      <a class="fake-link" role="link" tabindex="0" @click="displayOwnerCommentField = true" @keydown.enter="displayOwnerCommentField = true">
+      <a class="fake-link text-body-2" role="link" tabindex="0" @click="displayOwnerCommentField = true" @keydown.enter="displayOwnerCommentField = true">
         {{ $t('Common.AddComment') }}
       </a>
     </v-col>
@@ -191,6 +194,16 @@ export default {
     priceRules() {
       return [
         value => !!value && !!value.toString().trim() || this.$t('PriceRules.AmountRequired'),
+        value => !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
+        value => !isNaN(value) || this.$t('PriceRules.Number'),
+        value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
+        value => !value.toString().match(/\.\d{3}/) || this.$t('PriceRules.TwoDecimals'),
+        value => !!value && !!this.priceForm.currency || this.$t('Common.CurrencyMissing'),
+      ]
+    },
+    priceRulesOptional() {
+      if (!this.priceForm.price_without_discount) return [() => true]  // optional field
+      return [
         value => !value.toString().trim().match(/ /) || this.$t('PriceRules.NoSpaces'),
         value => !isNaN(value) || this.$t('PriceRules.Number'),
         value => Number(value) >= 0 || this.$t('PriceRules.Positive'),
