@@ -8,17 +8,13 @@
       <v-divider />
 
       <v-card-text>
-        <v-row>
+        <v-row class="mb-4">
           <v-col cols="12">
             <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
             <ProofCard v-else-if="proof" :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
           </v-col>
         </v-row>
-      </v-card-text>
-
-      <v-divider />
-
-      <v-card-text>
+        <!-- form -->
         <v-row>
           <v-col cols="12">
             <div class="text-body-2 required">
@@ -35,6 +31,8 @@
               hide-details="auto"
             />
           </v-col>
+        </v-row>
+        <v-row class="mt-0">
           <v-col v-if="!displayCommentField" cols="12">
             <a class="fake-link text-body-2" role="link" tabindex="0" @click="displayCommentField = true" @keydown.enter="displayOwnerCommentField = true">
               {{ $t('Common.AddComment') }}

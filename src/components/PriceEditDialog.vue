@@ -8,30 +8,27 @@
       <v-divider />
 
       <v-card-text>
-        <v-row>
+        <v-row class="mb-4">
           <v-col cols="12">
             <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
           </v-col>
         </v-row>
+        <!-- moderator-only alerts -->
         <v-row v-if="!userIsPriceOwner && userIsModerator" class="mt-0">
           <v-col cols="12">
-            <v-alert data-name="user-not-price-owner-alert" type="info" icon="mdi-account-off" variant="outlined">
+            <v-alert data-name="user-not-price-owner-alert" type="info" density="compact" variant="outlined" icon="mdi-account-off">
               {{ $t('Common.UserIsNotPriceOwner') }}
             </v-alert>
           </v-col>
         </v-row>
         <v-row v-if="!userIsPriceOwner && userIsModerator" class="mt-0">
           <v-col cols="12">
-            <v-alert data-name="user-price-edit-moderator-alert" type="info" icon="mdi-shield-account" variant="outlined">
+            <v-alert data-name="user-price-edit-moderator-alert" type="info" density="compact" variant="outlined" icon="mdi-shield-account">
               {{ $t('Common.UserIsModeratorCanEditPrice') }}
             </v-alert>
           </v-col>
         </v-row>
-      </v-card-text>
-
-      <v-divider />
-
-      <v-card-text>
+        <!-- form -->
         <ProductInputRow v-if="productIsTypeCategory" :productForm="updatePriceForm" :hideBarcodeMode="true" />
         <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :proofType="price.proof ? price.proof.type : null" :hideCurrencyChoice="true" />
       </v-card-text>

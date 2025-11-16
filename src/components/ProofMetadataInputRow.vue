@@ -110,15 +110,15 @@
       <v-alert
         v-if="proofIsTypePriceTag"
         type="info"
-        variant="outlined"
         density="compact"
+        variant="outlined"
         :text="$t('ProofAdd.PriceTagAIWarning')"
       />
       <v-alert
         v-else-if="proofIsTypeReceipt"
         type="info"
-        variant="outlined"
         density="compact"
+        variant="outlined"
         :text="$t('ProofAdd.ReceiptAIWarning')"
       />
     </v-col>
