@@ -233,7 +233,14 @@ export default {
     { key: USER_COMMUNITY.toLowerCase(), value: 'OtherContributions', icon: 'mdi-account-group' },
   ],
   // moderation
+  // see https://github.com/openfoodfacts/open-prices/blob/main/open_prices/moderation/models.py for reasons
   MODERATION_FLAG_REASON_LIST: [
+    { key: 'WRONG_TYPE', value: 'ModerationFlagReasonWrongType', restrictTo: null },
+    { key: 'WRONG_PRICE_VALUE', value: 'ModerationFlagReasonWrongPriceValue', restrictTo: ['price'] },
+    { key: 'WRONG_CURRENCY', value: 'ModerationFlagReasonWrongCurrency' },
+    { key: 'WRONG_PRODUCT', value: 'ModerationFlagReasonWrongProduct', restrictTo: ['price'] },
+    { key: 'WRONG_LOCATION', value: 'ModerationFlagReasonWrongLocation' },
+    { key: 'WRONG_DATE', value: 'ModerationFlagReasonWrongDate' },
     { key: 'OTHER', value: 'ModerationFlagReasonOther' },
   ],
   // date regex
