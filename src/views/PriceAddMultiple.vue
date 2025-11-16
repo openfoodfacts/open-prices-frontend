@@ -58,7 +58,7 @@
                 </v-alert>
               </v-col>
             </v-row>
-            <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :proofType="proofObject.type" :hideCurrencyChoice="true" @filled="pricePriceFormFilled = $event" />
+            <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :proofType="proofObject.type" @filled="pricePriceFormFilled = $event" />
           </v-card-text>
           <v-divider />
           <v-card-actions>

@@ -28,12 +28,7 @@
         :hint="getPricePerUnit(priceForm.price)"
         persistent-hint
         @update:modelValue="newValue => priceForm.price = replaceCommaWithDot(newValue)"
-      >
-        <template v-if="!hideCurrencyChoice" #prepend-inner>
-          <!-- image from https://www.svgrepo.com/svg/32717/currency-exchange -->
-          <img class="icon-info-currency" role="button" tabindex="0" src="/currency-exchange-svgrepo-com.svg" alt="Currency Exchange icon" @click="changeCurrencyDialog = true" @keydown.enter="changeCurrencyDialog = true" />
-        </template>
-      </v-text-field>
+      />
     </v-col>
     <v-col v-if="priceForm.price_is_discounted" cols="6" class="pb-0">
       <div class="text-body-2">
@@ -119,25 +114,14 @@
       />
     </v-col>
   </v-row>
-
-  <ChangeCurrencyDialog
-    v-if="changeCurrencyDialog"
-    v-model="changeCurrencyDialog"
-    @newCurrencySelected="setCurrencyData($event)"
-    @close="changeCurrencyDialog = false"
-  />
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 import price_utils from '../utils/price.js'
 import utils from '../utils.js'
 
 export default {
-  components: {
-    ChangeCurrencyDialog: defineAsyncComponent(() => import('../components/ChangeCurrencyDialog.vue')),
-  },
   props: {
     priceForm: {
       type: Object,
@@ -152,10 +136,6 @@ export default {
         receipt_quantity: null,
       })
     },
-    hideCurrencyChoice: {
-      type: Boolean,
-      default: false
-    },
     product: {
       type: Object,
       default: null
@@ -169,7 +149,6 @@ export default {
   data() {
     return {
       displayOwnerCommentField: null,  // see mounted
-      changeCurrencyDialog: false,
       CATEGORY_PRICE_PER_LIST: [
         {key: 'KILOGRAM', value: this.$t('AddPriceSingle.CategoryPricePer.PerKg'), icon: 'mdi-weight-kilogram'},
         {key: 'UNIT', value: this.$t('AddPriceSingle.CategoryPricePer.PerUnit'), icon: 'mdi-numeric-1-circle'}
