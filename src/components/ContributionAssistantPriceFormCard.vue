@@ -52,7 +52,7 @@
           </v-list-item>
           <v-divider v-if="productPriceForm.status > 1" class="mt-2 mb-2" />
           <template v-for="(errorStatus, index) in PRICE_TAG_STATUS_ERROR_LIST" :key="errorStatus.key">
-            <v-list-item :slim="true" :prepend-icon="errorStatus.icon" @click="updatePriceTagStatus(errorStatus)">
+            <v-list-item :slim="true" :prepend-icon="errorStatus.icon" @click="updatePriceTagStatus(errorStatus.key)">
               {{ $t(errorStatus.textSmallScreen) }}
             </v-list-item>
             <v-divider v-if="index !== PRICE_TAG_STATUS_ERROR_LIST.length - 1" class="mt-2 mb-2" />
