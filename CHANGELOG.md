@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.146.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.145.1...v1.146.0) (2025-11-16)
+
+
+### Features
+
+* **Moderation:** allow logged-in users to flag prices ([#1823](https://github.com/openfoodfacts/open-prices-frontend/issues/1823)) ([ad0ce53](https://github.com/openfoodfacts/open-prices-frontend/commit/ad0ce5386cb02a030fb621c6d0d9dd89a6509aec))
+* **Moderation:** allow logged-in users to flag proofs ([#1825](https://github.com/openfoodfacts/open-prices-frontend/issues/1825)) ([fb9d8bf](https://github.com/openfoodfacts/open-prices-frontend/commit/fb9d8bf2413390d2466617a458498498abddeb70))
+
+
+### Technical
+
+* **Dialogs:** cleaner UI (remove space & divider) for edit, delete & flag dialogs (price & proof) ([#1835](https://github.com/openfoodfacts/open-prices-frontend/issues/1835)) ([eb333eb](https://github.com/openfoodfacts/open-prices-frontend/commit/eb333ebb755eb8c0dff10d60dc2fb7da8a82069e))
+* **Forms:** homogenize all input labels to text-body-2 ([#1834](https://github.com/openfoodfacts/open-prices-frontend/issues/1834)) ([7bb317f](https://github.com/openfoodfacts/open-prices-frontend/commit/7bb317fe82f2a4c95cb383d841cc9c6ba084316f))
+* **l10n:** New Crowdin translations to review and merge ([#1831](https://github.com/openfoodfacts/open-prices-frontend/issues/1831)) ([edd878b](https://github.com/openfoodfacts/open-prices-frontend/commit/edd878b5aacac41c95bf17390f03bf783b156fa4))
+* **Moderation:** add extra flag reason options ([#1833](https://github.com/openfoodfacts/open-prices-frontend/issues/1833)) ([f8da9be](https://github.com/openfoodfacts/open-prices-frontend/commit/f8da9be731c652f53bdb9277c45500ce516b8b6f))
+* **Price input:** remove unused/old currency selector ([#1836](https://github.com/openfoodfacts/open-prices-frontend/issues/1836)) ([65ae611](https://github.com/openfoodfacts/open-prices-frontend/commit/65ae6111c3f05fe1d992c60747e04098164e137e))
+
 ## [1.145.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.145.0...v1.145.1) (2025-11-15)
 
 
