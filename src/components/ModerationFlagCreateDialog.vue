@@ -103,11 +103,11 @@ export default {
   data() {
     return {
       flagForm: {
-        reason: constants.MODERATION_FLAG_REASON_LIST[0].key,  // 'OTHER'
+        reason: null,
         comment: '',
       },
+      // moderationFlagReasonList: constants.MODERATION_FLAG_REASON_LIST,  // see below
       displayCommentField: false,
-      moderationFlagReasonList: constants.MODERATION_FLAG_REASON_LIST,
       loading: false,
     }
   },
@@ -141,6 +141,18 @@ export default {
       }
       return null
     },
+    moderationFlagReasonList() {
+      // filter reasons based on object type
+      return constants.MODERATION_FLAG_REASON_LIST.filter(reason => {
+        if (!reason.restrictTo) {
+          return true
+        }
+        if (this.objectType && reason.restrictTo.includes(this.objectType)) {
+          return true
+        }
+        return false
+      })
+    }
   },
   methods: {
     createFlag() {
