@@ -35,9 +35,9 @@
           <h3 class="mb-4">
             {{ $t('ContributionAssistant.LabelsExtractionSteps.DrawBoundingBoxes') }}
           </h3>
-          <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
           <v-card>
             <v-card-text>
+              <v-progress-circular v-if="!drawCanvasLoaded" indeterminate />
               <ContributionAssistantDrawCanvas ref="ContributionAssistantDrawCanvas" :key="proofObject.id" :imageSrc="imageSrc" :boundingBoxesFromServer="boundingBoxesFromServer" @extractedLabels="onExtractedLabels($event)" @loaded="drawCanvasLoaded = true" />
             </v-card-text>
             <v-divider />
@@ -50,7 +50,11 @@
           <h3 class="mb-4">
             {{ $t('ContributionAssistant.LabelsExtractionSteps.CheckLabels') }}
           </h3>
-          <ContributionAssistantLabelList :labels="extractedLabels" @removeLabel="removeLabel($event)" />
+          <v-row>
+            <v-col v-for="(label, index) in extractedLabels" :key="index" cols="6" md="6" xl="4">
+              <ContributionAssistantLabelCard :label="label" @removeLabel="removeLabel(index)" />
+            </v-col>
+          </v-row>
           <h3 class="mt-4 mb-4">
             {{ $t('ContributionAssistant.LabelsExtractionSteps.SendLabels') }}
           </h3>
@@ -261,10 +265,10 @@ import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
-    ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
     ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
     ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
-    ContributionAssistantLabelList: defineAsyncComponent(() => import('../components/ContributionAssistantLabelList.vue')),
+    ContributionAssistantLabelCard: defineAsyncComponent(() => import('../components/ContributionAssistantLabelCard.vue')),
+    ContributionAssistantPriceFormCard: defineAsyncComponent(() => import('../components/ContributionAssistantPriceFormCard.vue')),
     ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
