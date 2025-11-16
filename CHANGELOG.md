@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.146.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.145.1...v1.146.0) (2025-11-16)
+
+
+### Features
+
+* **Moderation:** allow logged-in users to flag prices ([#1823](https://github.com/openfoodfacts/open-prices-frontend/issues/1823)) ([ad0ce53](https://github.com/openfoodfacts/open-prices-frontend/commit/ad0ce5386cb02a030fb621c6d0d9dd89a6509aec))
+* **Moderation:** allow logged-in users to flag proofs ([#1825](https://github.com/openfoodfacts/open-prices-frontend/issues/1825)) ([fb9d8bf](https://github.com/openfoodfacts/open-prices-frontend/commit/fb9d8bf2413390d2466617a458498498abddeb70))
+
+
+### Technical
+
+* **Moderation:** add extra flag reason options ([#1833](https://github.com/openfoodfacts/open-prices-frontend/issues/1833)) ([f8da9be](https://github.com/openfoodfacts/open-prices-frontend/commit/f8da9be731c652f53bdb9277c45500ce516b8b6f))
+
 ## [1.145.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.145.0...v1.145.1) (2025-11-15)
 
 
