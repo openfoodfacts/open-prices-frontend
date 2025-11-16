@@ -30,7 +30,7 @@
         </v-row>
         <!-- form -->
         <ProductInputRow v-if="productIsTypeCategory" :productForm="updatePriceForm" :hideBarcodeMode="true" />
-        <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :proofType="price.proof ? price.proof.type : null" :hideCurrencyChoice="true" />
+        <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :proofType="price.proof ? price.proof.type : null" />
       </v-card-text>
 
       <v-divider />
