@@ -98,15 +98,16 @@
           this.boundingBoxes = [] // reset boundingBoxes
         }
         if (this.boundingBoxesFromServer) {
-          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(({boundingBox, id, status, created_by	}) => {
+          this.boundingBoxes = this.boundingBoxes.concat(this.boundingBoxesFromServer.map(boundingBoxFromServer => {
             return {
-              startY: boundingBox[0] * this.image.height,
-              startX: boundingBox[1] * this.image.width,
-              endY: boundingBox[2] * this.image.height,
-              endX: boundingBox[3] * this.image.width,
-              boundingSource: created_by ? this.$t('ContributionAssistant.ManualBoundingBoxSource') : this.$t('ContributionAssistant.AutomaticBoundingBoxSource'),
-              id: id,
-              status: status
+              id: boundingBoxFromServer.id,
+              startY: boundingBoxFromServer.boundingBox[0] * this.image.height,
+              startX: boundingBoxFromServer.boundingBox[1] * this.image.width,
+              endY: boundingBoxFromServer.boundingBox[2] * this.image.height,
+              endX: boundingBoxFromServer.boundingBox[3] * this.image.width,
+              status: boundingBoxFromServer.status,
+              price_id: boundingBoxFromServer.price_id,
+              boundingSource: boundingBoxFromServer.created_by ? this.$t('ContributionAssistant.ManualBoundingBoxSource') : this.$t('ContributionAssistant.AutomaticBoundingBoxSource'),
             }
           }))
           this.extractLabels()
@@ -219,12 +220,14 @@
           const x_max = Math.max(startX, endX) / this.image.width
           
           extractedLabels[i] = {
+            id: rect.id || null,
             imageSrc: originalCanvas.toDataURL(),
             blob: await new Promise(resolve => originalCanvas.toBlob(resolve, 'image/webp')),
-            boundingSource: boundingSource,
             boundingBox: [y_min, x_min, y_max, x_max],
             status: rect.status,
-            id: rect.id || null
+            price_id: rect.price_id || null,
+            // created_by
+            boundingSource: boundingSource,
           }
         }
         this.$emit('extractedLabels', extractedLabels)
