@@ -323,7 +323,7 @@
 		"ModerationFlagReasonWrongPriceValue": "ערך מחיר שגוי",
 		"ModerationFlagReasonWrongCurrency": "מטבע שגוי",
 		"ModerationFlagReasonWrongProduct": "מוצר שגוי",
-		"ModerationFlagReasonWrongLocation": "מיקום שגוי",
+		"ModerationFlagReasonWrongLocation": "מקום שגוי",
 		"ModerationFlagReasonWrongDate": "תאריך שגוי",
 		"ModerationFlagReasonOther": "אחר",
 		"ModerationFlagCreateSuccess": "תודה על הדיווח שלך!",
