@@ -8,7 +8,9 @@
       <v-chip class="mr-1" label size="small" density="comfortable" prepend-icon="mdi-information-outline">
         {{ label.boundingSource }}
       </v-chip>
-      <PriceCountChip v-if="hasPrice" :count="1" :withLabel="true" />
+      <v-chip v-if="statusObject" label size="small" density="comfortable" :color="statusObject.color" :prepend-icon="statusObject.icon">
+        {{ $t(statusObject.textSmallScreen) }}
+      </v-chip>
     </v-card-text>
     <v-divider v-if="canBeDeleted" />
     <v-card-actions v-if="canBeDeleted">
@@ -21,12 +23,9 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 
 export default {
-  components: {
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue'))
-  },
   props: {
     label: {
       type: Object,
@@ -46,6 +45,9 @@ export default {
     },
     canBeDeleted() {
       return this.sourceIsManual && this.newlyCreated
+    },
+    statusObject() {
+      return constants.PRICE_TAG_STATUS_LIST.find(status => status.key === this.label.status) || {}
     }
   },
   methods: {

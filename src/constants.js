@@ -19,6 +19,14 @@ const PROOF_TYPE_RECEIPT = 'RECEIPT'
 const PROOF_TYPE_RECEIPT_ICON = 'mdi-receipt-text-outline'
 const PROOF_TYPE_GDPR_REQUEST = 'GDPR_REQUEST'
 const PROOF_TYPE_GDPR_REQUEST_ICON = 'mdi-email-open-outline'
+const PRICE_TAG_STATUS_NEW = {key: -1, color: 'red', icon: '', textSmallScreen: 'Common.New', text: 'ContributionAssistant.PriceTagLabels.NewPriceTag'}
+const PRICE_TAG_STATUS_EMPTY = {key: null, color: 'blue', icon: '', textSmallScreen: 'Common.WithoutAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagWithoutPrice'}
+const PRICE_TAG_STATUS_WITH_PRICE = {key: 1, color: 'green', icon: '', textSmallScreen: 'Common.WithAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagWithPrice'}
+const PRICE_TAG_STATUS_UNREADABLE = {key: 2, color: 'orange', icon: 'mdi-eye-off-outline', textSmallScreen: 'Common.Unreadable', text: 'ContributionAssistant.PriceTagLabels.PriceTagUnreadable'}
+const PRICE_TAG_STATUS_TRUNCATED = {key: 3, color: '#883c1e', icon: 'mdi-crop', textSmallScreen: 'Common.Truncated', text: 'ContributionAssistant.PriceTagLabels.PriceTagTruncated'}
+const PRICE_TAG_STATUS_NOT_A_PRICE = {key: 4, color: '#88631e', icon: 'mdi-currency-usd-off', textSmallScreen: 'Common.NotAPrice', text: 'ContributionAssistant.PriceTagLabels.PriceTagNotAPrice'}
+const PRICE_TAG_STATUS_NO_BARCODE = {key: 5, color: 'yellow', icon: 'mdi-barcode-off', textSmallScreen: 'Common.NoBarcode', text: 'ContributionAssistant.PriceTagLabels.PriceTagNoBarcode'}
+const PRICE_TAG_STATUS_OTHER = {key: 6, color: 'grey', icon: '', textSmallScreen: 'Common.Other', text: 'ContributionAssistant.PriceTagLabels.PriceTagOther'}
 const LOCATION_TYPE_OSM = 'OSM'
 const LOCATION_TYPE_OSM_ICON = 'mdi-map-marker-outline'
 const LOCATION_TYPE_ONLINE = 'ONLINE'
@@ -102,12 +110,31 @@ export default {
     { key: USER_CONSUMPTION, value: 'Consumption', icon: USER_CONSUMPTION_ICON },
     { key: USER_COMMUNITY, value: 'Contributions', icon: 'mdi-account-group' },
   ],
-  PRICE_TAG_STATUS_WITH_PRICE: 1,
-  PRICE_TAG_STATUS_UNREADABLE: 2,
-  PRICE_TAG_STATUS_TRUNCATED: 3,
-  PRICE_TAG_STATUS_NOT_A_PRICE: 4,
-  PRICE_TAG_STATUS_NO_BARCODE: 5,
-  PRICE_TAG_STATUS_OTHER: 10,
+  PRICE_TAG_STATUS_NEW: PRICE_TAG_STATUS_NEW,
+  PRICE_TAG_STATUS_EMPTY: PRICE_TAG_STATUS_EMPTY,
+  PRICE_TAG_STATUS_WITH_PRICE: PRICE_TAG_STATUS_WITH_PRICE,
+  PRICE_TAG_STATUS_UNREADABLE: PRICE_TAG_STATUS_UNREADABLE,
+  PRICE_TAG_STATUS_TRUNCATED: PRICE_TAG_STATUS_TRUNCATED,
+  PRICE_TAG_STATUS_NOT_A_PRICE: PRICE_TAG_STATUS_NOT_A_PRICE,
+  PRICE_TAG_STATUS_NO_BARCODE: PRICE_TAG_STATUS_NO_BARCODE,
+  PRICE_TAG_STATUS_OTHER: PRICE_TAG_STATUS_OTHER,
+  PRICE_TAG_STATUS_ERROR_LIST: [
+    PRICE_TAG_STATUS_UNREADABLE,
+    PRICE_TAG_STATUS_TRUNCATED,
+    PRICE_TAG_STATUS_NOT_A_PRICE,
+    PRICE_TAG_STATUS_NO_BARCODE,
+    // PRICE_TAG_STATUS_OTHER,
+  ],
+  PRICE_TAG_STATUS_LIST: [
+    PRICE_TAG_STATUS_NEW,
+    PRICE_TAG_STATUS_EMPTY,
+    PRICE_TAG_STATUS_WITH_PRICE,
+    PRICE_TAG_STATUS_UNREADABLE,
+    PRICE_TAG_STATUS_TRUNCATED,
+    PRICE_TAG_STATUS_NOT_A_PRICE,
+    PRICE_TAG_STATUS_NO_BARCODE,
+    PRICE_TAG_STATUS_OTHER,
+  ],
   PRODUCT_IMAGE_DEFAULT_URL: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
   PRODUCT_CATEGORY_LABEL_ORGANIC: PRODUCT_CATEGORY_LABEL_ORGANIC,
   PRODUCT_QUANTITY_UNIT_G: 'g',

@@ -51,22 +51,12 @@
             {{ $t('Common.NotAnError') }}
           </v-list-item>
           <v-divider v-if="productPriceForm.status > 1" class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-eye-off-outline" @click="updatePriceTagStatus(PRICE_TAG_STATUS_UNREADABLE)">
-            {{ $t('Common.Unreadable') }}
-          </v-list-item>
-          <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-crop" @click="updatePriceTagStatus(PRICE_TAG_STATUS_TRUNCATED)">
-            {{ $t('Common.Truncated') }}
-          </v-list-item>
-          <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-currency-usd-off" @click="updatePriceTagStatus(PRICE_TAG_STATUS_NOT_A_PRICE)">
-            {{ $t('Common.NotAPrice') }}
-          </v-list-item>
-          <v-divider class="mt-2 mb-2" />
-          <v-list-item :slim="true" prepend-icon="mdi-barcode-off" @click="updatePriceTagStatus(PRICE_TAG_STATUS_NO_BARCODE)">
-            {{ $t('Common.NoBarcode') }}
-          </v-list-item>
-          <!-- missing PRICE_TAG_STATUS_OTHER -->
+          <template v-for="(errorStatus, index) in PRICE_TAG_STATUS_ERROR_LIST" :key="errorStatus.key">
+            <v-list-item :slim="true" :prepend-icon="errorStatus.icon" @click="updatePriceTagStatus(errorStatus.key)">
+              {{ $t(errorStatus.textSmallScreen) }}
+            </v-list-item>
+            <v-divider v-if="index !== PRICE_TAG_STATUS_ERROR_LIST.length - 1" class="mt-2 mb-2" />
+          </template>
         </v-list>
       </v-menu>
       <v-spacer />
@@ -166,11 +156,7 @@ export default {
   emits: ['updatePriceTagStatus', 'validatePriceTag', 'close'],
   data() {
     return {
-      PRICE_TAG_STATUS_UNREADABLE: constants.PRICE_TAG_STATUS_UNREADABLE,
-      PRICE_TAG_STATUS_TRUNCATED: constants.PRICE_TAG_STATUS_TRUNCATED,
-      PRICE_TAG_STATUS_NOT_A_PRICE: constants.PRICE_TAG_STATUS_NOT_A_PRICE,
-      PRICE_TAG_STATUS_NO_BARCODE: constants.PRICE_TAG_STATUS_NO_BARCODE,
-      PRICE_TAG_STATUS_OTHER: constants.PRICE_TAG_STATUS_OTHER,
+      PRICE_TAG_STATUS_ERROR_LIST: constants.PRICE_TAG_STATUS_ERROR_LIST,
       // data
       productFormFilled: false,
       pricePriceFormFilled: false,
