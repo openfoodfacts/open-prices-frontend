@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.146.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.146.0...v1.146.1) (2025-11-17)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1841](https://github.com/openfoodfacts/open-prices-frontend/issues/1841)) ([6db226f](https://github.com/openfoodfacts/open-prices-frontend/commit/6db226f8a79ab2f07cbea88e56e0e379d941b09a))
+* **Location selector:** when searching my OSM id, remove the osm type filtering ([#1842](https://github.com/openfoodfacts/open-prices-frontend/issues/1842)) ([8a10eb7](https://github.com/openfoodfacts/open-prices-frontend/commit/8a10eb7df2553649d5ce37aab009a78739ab39a9))
+* **Proof Price Tag Assistant:** only newly created labels can be deleted ([#1839](https://github.com/openfoodfacts/open-prices-frontend/issues/1839)) ([c67df57](https://github.com/openfoodfacts/open-prices-frontend/commit/c67df57037a307dc7ac56ad109fadba3f8dccedc))
+* **Proof Price Tag Assistant:** replace ContributionAssistantLabelList with ContributionAssistantLabelCard component ([#1837](https://github.com/openfoodfacts/open-prices-frontend/issues/1837)) ([1ef1636](https://github.com/openfoodfacts/open-prices-frontend/commit/1ef1636327a5b4409054c20c8cf71f2416eee7f9))
+* **Proof Price Tag Assistant:** show canvas label in card footer. refactor stuff ([#1840](https://github.com/openfoodfacts/open-prices-frontend/issues/1840)) ([0deb6cb](https://github.com/openfoodfacts/open-prices-frontend/commit/0deb6cb7191a52df532b0715f4da58bc3a3c8672))
+
 ## [1.146.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.145.1...v1.146.0) (2025-11-16)
 
 
