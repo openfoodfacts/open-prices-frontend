@@ -70,6 +70,7 @@
     :hideBarcodeScannerTab="hideBarcodeScannerTab"
     :barcodeManualInputPrefillValue="productForm.product_code"
     :barcodeManualInputCroppedImage="productForm.croppedImage"
+    :barcodeManualInputSimilarBarcodes="productForm.similar_barcodes"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
   />

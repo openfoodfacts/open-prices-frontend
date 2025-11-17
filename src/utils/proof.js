@@ -85,6 +85,17 @@ function handlePriceTag(priceTag) {
     productPriceForm.price_is_discounted = selectedPrice ? selectedPrice.price_is_discounted : false
     productPriceForm.price_without_discount = selectedPrice.price_without_discount ? selectedPrice.price_without_discount.toString() : ""
     productPriceForm.discount_type = selectedPrice.discount_type || ""
+
+    // Add similar barcodes if available
+    if (label.similar_barcodes && label.similar_barcodes.length) {
+      productPriceForm.similar_barcodes = label.similar_barcodes.filter(similarBarcode => {
+        if (similarBarcode.barcode.length > 10) {
+          return similarBarcode.distance < 3 // Max 2 digits variance
+        } else {
+          return similarBarcode.distance < 2 // Max 1 digit variance for short barcodes
+        }
+    })
+    }
   }
 
   return productPriceForm
