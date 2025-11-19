@@ -826,6 +826,9 @@
 		"LatestProofs": {
 			"Title": "Latest proofs"
 		},
+		"Moderation": {
+			"Title": "Moderation"
+		},
 		"MyPrices": {
 			"Title": "My prices"
 		},

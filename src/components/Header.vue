@@ -72,10 +72,15 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    userIsModerator() {
+      return this.appStore.user.is_moderator
+    },
     getDrawerMenuItems() {
       return this.$router.options.routes
         .filter(r => r.meta && r.meta.drawerMenu)
-        .filter(r => this.username ? r.meta.requiresAuth !== false : !r.meta.requiresAuth)
+        .filter(r => r.meta.requiresAnonymous !== true || !this.username)
+        .filter(r => r.meta.requiresAuth !== true || this.username)
+        .filter(r => r.meta.requiresModerator !== true || this.userIsModerator)
         .filter(r => !r.meta.drawerMenuConditionalDisplay || this.appStore.user[r.meta.drawerMenuConditionalDisplay])
         .map((r => ({ title: this.$t(`Router.${r.meta.title}.Title`), props: { 'prepend-icon': r.meta.icon, to: r.path }})))
     }

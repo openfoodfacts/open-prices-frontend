@@ -472,6 +472,19 @@ export default {
     .then((response) => response.json())
   },
 
+  getFlags(params = {}) {
+    const store = useAppStore()
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/flags?${buildURLParams({...defaultParams, ...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`,
+      }),
+    })
+    .then((response) => response.json())
+  },
+
   createFlag(objectType, objectId, inputData) {
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/${objectType}s/${objectId}/flag?${buildURLParams()}`
