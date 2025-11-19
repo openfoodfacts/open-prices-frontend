@@ -2,6 +2,11 @@
   <v-row>
     <v-col cols="12">
       <v-data-table :headers="tableHeaders" :items="flagList" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
+        <template #[`item.object`]="{ item }">
+          <router-link :to="getFlagObjectUrl(item)" target="_blank">
+            {{ item.content_type }} {{ item.object_id }}
+          </router-link>
+        </template>
         <template #[`item.reason`]="{ item }">
           <ModerationReasonChip :reason="item.reason" />
         </template>
@@ -41,10 +46,11 @@ export default {
       loading: false,
       // table
       tableHeaders: [
-        { title: 'Object', key: 'content_type' },
+        { title: 'Object', key: 'object', sortRaw(a, b) { return `${a.content_type}${a.object_id}` - `${b.content_type}${b.object_id}` } },
         { title: 'Reason', key: 'reason' },
         { title: 'Status', key: 'status' },
-        { title: 'Date', key: 'created' },
+        { title: 'Comment', key: 'comment' },
+        { title: 'Date', key: 'created', width: '10%' },
       ],
       tablePageLimit: -1,  // all items
       // filter & order
@@ -82,6 +88,9 @@ export default {
           this.flagTotal = data.total
           this.loading = false
         })
+    },
+    getFlagObjectUrl(flag) {
+      return `/${flag.content_type.toLowerCase()}s/${flag.object_id}`
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
