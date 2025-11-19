@@ -1,7 +1,17 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <v-data-table :headers="tableHeaders" :items="flagList" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable" />
+      <v-data-table :headers="tableHeaders" :items="flagList" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
+        <template #[`item.reason`]="{ item }">
+          <ModerationReasonChip :reason="item.reason" />
+        </template>
+        <template #[`item.status`]="{ item }">
+          <ModerationStatusChip :status="item.status" />
+        </template>
+        <template #[`item.created`]="{ item }">
+          <RelativeDateTimeChip :dateTime="item.created" />
+        </template>
+      </v-data-table>
     </v-col>
   </v-row>
   <v-row v-if="loading">
@@ -12,12 +22,19 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import utils from '../utils.js'
 
 export default {
+  components: {
+    ModerationReasonChip: defineAsyncComponent(() => import('../components/ModerationReasonChip.vue')),
+    ModerationStatusChip: defineAsyncComponent(() => import('../components/ModerationStatusChip.vue')),
+    RelativeDateTimeChip: defineAsyncComponent(() => import('../components/RelativeDateTimeChip.vue')),
+  },
   data() {
     return {
+      // data
       flagList: [],
       flagTotal: null,
       flagPage: 0,
@@ -30,6 +47,14 @@ export default {
         { title: 'Date', key: 'created' },
       ],
       tablePageLimit: -1,  // all items
+      // filter & order
+      currentOrder: '-id'
+    }
+  },
+  computed: {
+    getFlagsParams() {
+      let defaultParams = { order_by: this.currentOrder, page: this.flagPage }
+      return defaultParams
     }
   },
   mounted() {
