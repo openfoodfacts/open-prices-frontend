@@ -52,7 +52,7 @@
           </h3>
           <v-row>
             <v-col v-for="(label, index) in extractedLabels" :key="index" cols="6" md="6" xl="4">
-              <ContributionAssistantLabelCard :label="label" @removeLabel="removeLabel(index)" />
+              <ContributionAssistantLabelCard :label="label" :existingPrices="findExistingLabelPrices(label)" @removeLabel="removeLabel(index)" />
             </v-col>
           </v-row>
           <h3 class="mt-4 mb-4">
@@ -413,7 +413,13 @@ export default {
         this.loadPriceTagsWithPredictions(1, false, priceTags => {
           this.priceTags = priceTags
           this.boundingBoxesFromServer = this.priceTags.map(priceTag => {
-            return {boundingBox: priceTag.bounding_box, id: priceTag.id, status: priceTag.status, created_by: priceTag.created_by}
+            return {
+              id: priceTag.id,
+              boundingBox: priceTag.bounding_box,
+              status: priceTag.status,
+              price_id: priceTag.price_id,
+              created_by: priceTag.created_by
+            }
           })
           this.proofWithBoundingBoxesLoading = false
         })
@@ -455,6 +461,9 @@ export default {
     },
     removeLabel(index) {
       this.$refs.ContributionAssistantDrawCanvas.removeBoundingBox(index) // This will trigger onExtractedLabels event
+    },
+    findExistingLabelPrices(label) {
+      return this.proofPriceExistingList.filter(price => label.price_id && price.id === label.price_id)
     },
     processLabels() {
       // User is done drawing labels and has pressed the "Send labels" button
@@ -499,9 +508,7 @@ export default {
           this.handlePriceTag(priceTag)
         })
         this.step = 3
-      }
-
-      
+      }      
     },
     handlePriceTag(priceTag) {
       let productPriceForm = proof_utils.handlePriceTag(priceTag)
