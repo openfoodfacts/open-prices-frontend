@@ -329,9 +329,9 @@ export default {
     grid-template-columns: 2fr 3fr;
   }
   /**
-  * hide "sort by" on mobile
-  * https://stackoverflow.com/a/78435096
-  */
+   * hide "sort by" on mobile
+   * https://stackoverflow.com/a/78435096
+   */
   .v-data-table-headers--mobile {
     display: none;
   }

@@ -498,6 +498,19 @@ export default {
     .then((response) => response.json())
   },
 
+  updateFlag(flagId, inputData = {}) {
+    const store = useAppStore()
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/flags/${flagId}?${buildURLParams()}`
+    return fetch(url, {
+      method: 'PATCH',
+      headers: Object.assign({}, OP_DEFAULT_HEADERS, {
+        'Authorization': `Bearer ${store.user.token}`,
+      }),
+      body: JSON.stringify(inputData),
+    })
+    .then((response) => response.json())
+  },
+
   getStats() {
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/stats?${buildURLParams()}`
     return fetch(url, {
