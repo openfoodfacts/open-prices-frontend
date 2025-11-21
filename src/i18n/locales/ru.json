@@ -222,7 +222,7 @@
 		"Contributors": "Участники",
 		"Contributions": "Вклад",
 		"Confirm": "Подтвердить",
-		"Country": "Country",
+		"Country": "Страна",
 		"Countries": "Страны",
 		"CountryCount": "{count} страны | {count} страна | {count} страны",
 		"Crop": "Обрезать",
@@ -952,7 +952,7 @@
 	"UserSettings": {
 		"AddingPrices": "Добавление цен",
 		"ChangeLanguage": "Сменить язык",
-		"CountryLabel": "Country",
+		"CountryLabel": "Страна",
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показать",
 		"BarcodeScanner": "Сканер штрихкодов",
