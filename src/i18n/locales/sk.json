@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Vymazať",
+		"Close": "Zatvoriť",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Nesprávny dátum",
 		"ModerationFlagReasonOther": "Other",
 		"ModerationFlagCreateSuccess": "Ďakujem za vašu správu!",
+		"ModerationFlagStatusOpen": "OTVORENÉ",
+		"ModerationFlagStatusClosed": "ZATVORENÉ",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Moje ceny",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "OTVORENÉ",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Znovu otvoriť",
 		"ReportProblem": "Report a problem",
+		"Resolved": "Vyriešené",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Vyhľadať",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "Moderovanie"
 		},
 		"MyPrices": {
 			"Title": "Moje ceny"
