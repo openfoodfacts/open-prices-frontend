@@ -270,6 +270,10 @@ export default {
     { key: 'WRONG_DATE', value: 'ModerationFlagReasonWrongDate' },
     { key: 'OTHER', value: 'ModerationFlagReasonOther' },
   ],
+  MODERATION_FLAG_STATUS_LIST: [
+    { key: 'OPEN', value: 'ModerationFlagStatusOpen', color: 'warning' },
+    { key: 'CLOSED', value: 'ModerationFlagStatusClosed', color: 'success' }
+  ],
   // date regex
   DATE_FULL_REGEX_MATCH: /(\d{4})-(\d{2})-(\d{2})/,
   DATE_YEAR_MONTH_REGEX_MATCH: /(\d{4})-(\d{2})/,

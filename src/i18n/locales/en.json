@@ -327,6 +327,8 @@
 		"ModerationFlagReasonWrongDate": "Wrong date",
 		"ModerationFlagReasonOther": "Other",
 		"ModerationFlagCreateSuccess": "Thanks for your report!",
+		"ModerationFlagStatusOpen": "Open",
+		"ModerationFlagStatusClosed": "Closed",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -825,6 +827,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "Moderation"
 		},
 		"MyPrices": {
 			"Title": "My prices"
