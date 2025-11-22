@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} виклики | {count} виклик | {count} виклики",
 		"Chart": "Графік",
 		"Clear": "Очистити",
+		"Close": "Закрити",
 		"Comment": "Коментар",
 		"Community": "Спільнота",
 		"CommunityPrices": "Соціальні ціни",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Неправильна дата",
 		"ModerationFlagReasonOther": "Інше",
 		"ModerationFlagCreateSuccess": "Дякую за ваш звіт!",
+		"ModerationFlagStatusOpen": "ВІДЧИНЕНО",
+		"ModerationFlagStatusClosed": "ЗАЧИНЕНО",
 		"MyConsumption": "Моє споживання",
 		"MyDashboard": "Моя панель",
 		"MyPrices": "Мої ціни",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Не ціна",
 		"Offline": "Офлайн",
 		"Online": "Онлайн",
+		"Open": "ВІДЧИНЕНО",
 		"OpenWithTheAssistant": "Відкрити за допомогою помічника",
 		"Order": "Замовлення",
 		"OrderLocationCountDESC": "Кількість місць",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Відстежуйте на панелі споживання",
 		"ReceiptOnlineDeliveryCosts": "Вартість доставки",
 		"Recent": "Недавні",
+		"Re-open": "Знову відкрити",
 		"ReportProblem": "Повідомити про проблему",
+		"Resolved": "Вирішено",
 		"Reuses": "Повторне використання",
 		"ReusesKnown": "Відомі повторні використання",
 		"Search": "Пошук",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Останні докази"
+		},
+		"Moderation": {
+			"Title": "Модерація"
 		},
 		"MyPrices": {
 			"Title": "Мої ціни"

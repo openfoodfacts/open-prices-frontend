@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} meydan okumalar | {count} meydan okuma | {count} meydan okumalar",
 		"Chart": "Çizelge",
 		"Clear": "Temizle",
+		"Close": "Kapat",
 		"Comment": "Yorum",
 		"Community": "Topluluk",
 		"CommunityPrices": "Topluluk fiyatları",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Yanlış tarih",
 		"ModerationFlagReasonOther": "Diğer",
 		"ModerationFlagCreateSuccess": "Raporunuz için teşekkürler!",
+		"ModerationFlagStatusOpen": "Açık",
+		"ModerationFlagStatusClosed": "Kapalı",
 		"MyConsumption": "Tüketimim",
 		"MyDashboard": "Panelim",
 		"MyPrices": "Fiyatlarım",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Bir fiyat değil",
 		"Offline": "Çevrimdışı",
 		"Online": "Çevrimiçi",
+		"Open": "Açık",
 		"OpenWithTheAssistant": "Asistanla açın",
 		"Order": "Sipariş",
 		"OrderLocationCountDESC": "Konum sayısı",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Tüketim panomda takip et",
 		"ReceiptOnlineDeliveryCosts": "Teslimat masrafları",
 		"Recent": "En son",
+		"Re-open": "Yeniden aç",
 		"ReportProblem": "Bir sorun bildir",
+		"Resolved": "Çözüldü",
 		"Reuses": "Yeniden kullanımlar",
 		"ReusesKnown": "Bilinen yeniden kullanımlar",
 		"Search": "Ara",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "En son bedeller"
+		},
+		"Moderation": {
+			"Title": "Ilımlılık"
 		},
 		"MyPrices": {
 			"Title": "Fiyatlarım"

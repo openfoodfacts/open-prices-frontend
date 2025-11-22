@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Graf",
 		"Clear": "Vymazat",
+		"Close": "Zavřít",
 		"Comment": "Komentář",
 		"Community": "Komunita",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Špatné datum",
 		"ModerationFlagReasonOther": "Ostatní",
 		"ModerationFlagCreateSuccess": "Díky za tvou zprávu!",
+		"ModerationFlagStatusOpen": "OTEVŘENO",
+		"ModerationFlagStatusClosed": "ZAVŘENO",
 		"MyConsumption": "Moje spotřeba",
 		"MyDashboard": "Můj ovládací panel",
 		"MyPrices": "Moje ceny",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Upravit cenu",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "OTEVŘENO",
 		"OpenWithTheAssistant": "Otevřete s asistentem",
 		"Order": "Pořadí",
 		"OrderLocationCountDESC": "Počet míst",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Sledovat v panelu spotřeby",
 		"ReceiptOnlineDeliveryCosts": "Náklady na doručení",
 		"Recent": "Nedávné",
+		"Re-open": "Znovu otevřít",
 		"ReportProblem": "Nahlásit problém",
+		"Resolved": "Vyřešeno",
 		"Reuses": "Opakované použití",
 		"ReusesKnown": "Známá opakovaná použití",
 		"Search": "Vyhledat",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Nejnovější doklady"
+		},
+		"Moderation": {
+			"Title": "Umírněnost"
 		},
 		"MyPrices": {
 			"Title": "Moje ceny"

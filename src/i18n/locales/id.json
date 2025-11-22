@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} tantangan | {count} tantangan | {count} tantangan",
 		"Chart": "Grafik",
 		"Clear": "Hapus",
+		"Close": "Tutup",
 		"Comment": "Komentar",
 		"Community": "Komunitas",
 		"CommunityPrices": "Harga komunitas",
@@ -222,7 +223,7 @@
 		"Contributors": "Kontributor",
 		"Contributions": "Kontribusi",
 		"Confirm": "Konfirmasi",
-		"Country": "Country",
+		"Country": "Negara",
 		"Countries": "Negara - negara",
 		"CountryCount": "{count} negara | {count} negara | {count} negara",
 		"Crop": "Potong",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Tanggal yang salah",
 		"ModerationFlagReasonOther": "Lainnya",
 		"ModerationFlagCreateSuccess": "Terima kasih atas laporan Anda!",
+		"ModerationFlagStatusOpen": "Membuka",
+		"ModerationFlagStatusClosed": "Tertutup",
 		"MyConsumption": "Konsumsi saya",
 		"MyDashboard": "Dasbor saya",
 		"MyPrices": "Harga saya",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Bukan harga",
 		"Offline": "Tidak Aktif",
 		"Online": "Aktif",
+		"Open": "Membuka",
 		"OpenWithTheAssistant": "Buka dengan Asisten",
 		"Order": "Urutan",
 		"OrderLocationCountDESC": "Jumlah lokasi",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Lacak penggunaan saya di dasbor konsumsi",
 		"ReceiptOnlineDeliveryCosts": "Biaya pengiriman",
 		"Recent": "Terbaru",
+		"Re-open": "Buka kembali",
 		"ReportProblem": "Laporkan masalah",
+		"Resolved": "Terselesaikan",
 		"Reuses": "Penggunaan kembali",
 		"ReusesKnown": "Penggunaan kembali yang diketahui",
 		"Search": "Cari",
@@ -826,6 +832,9 @@
 		"LatestProofs": {
 			"Title": "Bukti terbaru"
 		},
+		"Moderation": {
+			"Title": "Moderasi"
+		},
 		"MyPrices": {
 			"Title": "Harga saya"
 		},
@@ -952,7 +961,7 @@
 	"UserSettings": {
 		"AddingPrices": "Menambahkan harga",
 		"ChangeLanguage": "Ganti bahasa",
-		"CountryLabel": "Country",
+		"CountryLabel": "Negara",
 		"CurrencyLabel": "Mata uang",
 		"DisplayTitle": "Tampilan",
 		"BarcodeScanner": "Pemindai kode batang",

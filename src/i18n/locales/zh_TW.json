@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "圖表",
 		"Clear": "清除",
+		"Close": "關閉",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "日期錯誤",
 		"ModerationFlagReasonOther": "其它",
 		"ModerationFlagCreateSuccess": "感謝您的報告！",
+		"ModerationFlagStatusOpen": "打開",
+		"ModerationFlagStatusClosed": "關閉",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "我的儀表板",
 		"MyPrices": "我的價格",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "離線",
 		"Online": "在線",
+		"Open": "打開",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "順序",
 		"OrderLocationCountDESC": "地點總數",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "最近的",
+		"Re-open": "重新開放",
 		"ReportProblem": "Report a problem",
+		"Resolved": "已解決",
 		"Reuses": "重複使用",
 		"ReusesKnown": "Known reuses",
 		"Search": "搜尋",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "最新證明"
+		},
+		"Moderation": {
+			"Title": "適度"
 		},
 		"MyPrices": {
 			"Title": "我的價格"

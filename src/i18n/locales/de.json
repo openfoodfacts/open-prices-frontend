@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} Herausforderungen | {count} Herausforderung | {count} Herausforderungen",
 		"Chart": "Diagramm",
 		"Clear": "Leeren",
+		"Close": "Schließen",
 		"Comment": "Kommentar",
 		"Community": "Gemeinschaft",
 		"CommunityPrices": "Preise durch die Gemeinschaft",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Falsches Datum",
 		"ModerationFlagReasonOther": "Weitere",
 		"ModerationFlagCreateSuccess": "Vielen Dank für Ihren Bericht!",
+		"ModerationFlagStatusOpen": "Offen",
+		"ModerationFlagStatusClosed": "Geschlossen",
 		"MyConsumption": "Mein Verbrauch",
 		"MyDashboard": "Meine Übersicht",
 		"MyPrices": "Mein Preise",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Kein Preis",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Offen",
 		"OpenWithTheAssistant": "Mit Assistent öffnen",
 		"Order": "Reihenfolge",
 		"OrderLocationCountDESC": "Anzahl der Standorte",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Nachverfolgung in meiner Verbrauchs-Übersicht",
 		"ReceiptOnlineDeliveryCosts": "Lieferkosten",
 		"Recent": "Neueste",
+		"Re-open": "Wieder öffnen",
 		"ReportProblem": "Problem melden",
+		"Resolved": "Gelöst",
 		"Reuses": "Wiederverwendung",
 		"ReusesKnown": "Bekannte Wiederverwendungen",
 		"Search": "Suchen",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Letzte Belege"
+		},
+		"Moderation": {
+			"Title": "Mäßigung"
 		},
 		"MyPrices": {
 			"Title": "Mein Preise"

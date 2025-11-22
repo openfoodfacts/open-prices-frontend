@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} uitdagingen | {count} uitdaging | {count} uitdagingen",
 		"Chart": "Grafiek",
 		"Clear": "Wissen",
+		"Close": "Sluit",
 		"Comment": "Reactie",
 		"Community": "Gemeenschap",
 		"CommunityPrices": "Gemeenschapsprijzen",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Verkeerde datum",
 		"ModerationFlagReasonOther": "Andere",
 		"ModerationFlagCreateSuccess": "Bedankt voor je rapport!",
+		"ModerationFlagStatusOpen": "Open",
+		"ModerationFlagStatusClosed": "Gesloten",
 		"MyConsumption": "Mijn verbruik",
 		"MyDashboard": "Mijn dashboard",
 		"MyPrices": "Mijn prijzen",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Geen prijs",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Open",
 		"OpenWithTheAssistant": "Openen met de assistent",
 		"Order": "Sorteren",
 		"OrderLocationCountDESC": "Aantal locaties",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Volg mijn consumptiedashboard",
 		"ReceiptOnlineDeliveryCosts": "Verzendkosten",
 		"Recent": "Recent",
+		"Re-open": "Heropenen",
 		"ReportProblem": "Meld een probleem",
+		"Resolved": "Opgelost",
 		"Reuses": "Hergebruik",
 		"ReusesKnown": "Bekende hergebruiken",
 		"Search": "Zoeken",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Nieuwste bewijzen"
+		},
+		"Moderation": {
+			"Title": "Matiging"
 		},
 		"MyPrices": {
 			"Title": "Mijn prijzen"

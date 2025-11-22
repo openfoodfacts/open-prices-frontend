@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} udfordringer | {count} udfordring | {count} udfordringer",
 		"Chart": "Diagram",
 		"Clear": "Ryd",
+		"Close": "Luk",
 		"Comment": "Kommentér",
 		"Community": "Fællesskab",
 		"CommunityPrices": "Fællesskabets priser",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Forkert dato",
 		"ModerationFlagReasonOther": "Andet",
 		"ModerationFlagCreateSuccess": "Tak for din rapport!",
+		"ModerationFlagStatusOpen": "Åben",
+		"ModerationFlagStatusClosed": "Lukket",
 		"MyConsumption": "Mit forbrug",
 		"MyDashboard": "Mit dashboard",
 		"MyPrices": "Mine priser",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Ikke en pris",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Åben",
 		"OpenWithTheAssistant": "Åbn med assistenten",
 		"Order": "Sorter",
 		"OrderLocationCountDESC": "Placeringsantal",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Spor i mit forbrugsdashboard",
 		"ReceiptOnlineDeliveryCosts": "Leveringsomkostninger",
 		"Recent": "Seneste",
+		"Re-open": "Genåbn",
 		"ReportProblem": "Rapportér et problem",
+		"Resolved": "Løst",
 		"Reuses": "Genbrug",
 		"ReusesKnown": "Kendt genbrug",
 		"Search": "Søg",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Seneste beviser"
+		},
+		"Moderation": {
+			"Title": "Moderering"
 		},
 		"MyPrices": {
 			"Title": "Mine priser"

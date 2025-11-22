@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
+		"Close": "Rufe",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Kwanan kuskure",
 		"ModerationFlagReasonOther": "Other",
 		"ModerationFlagCreateSuccess": "Na gode da rahoton ku!",
+		"ModerationFlagStatusOpen": "Bude",
+		"ModerationFlagStatusClosed": "An rufe",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Bude",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Sake buɗewa",
 		"ReportProblem": "Report a problem",
+		"Resolved": "An warware",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Bincika",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "Matsakaici"
 		},
 		"MyPrices": {
 			"Title": "My prices"

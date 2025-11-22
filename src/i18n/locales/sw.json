@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
+		"Close": "Funga",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Tarehe isiyo sahihi",
 		"ModerationFlagReasonOther": "Other",
 		"ModerationFlagCreateSuccess": "Asante kwa ripoti yako!",
+		"ModerationFlagStatusOpen": "Fungua",
+		"ModerationFlagStatusClosed": "Imefungwa",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Fungua",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Fungua upya",
 		"ReportProblem": "Report a problem",
+		"Resolved": "Imetatuliwa",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Tafuta",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "Kiasi"
 		},
 		"MyPrices": {
 			"Title": "My prices"

@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} אתגרים | אתגר | {count} אתגרים",
 		"Chart": "תרשים",
 		"Clear": "פינוי",
+		"Close": "סגירה",
 		"Comment": "הערה",
 		"Community": "קהילה",
 		"CommunityPrices": "מחירי הקהילה",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "תאריך שגוי",
 		"ModerationFlagReasonOther": "אחר",
 		"ModerationFlagCreateSuccess": "תודה על הדיווח שלך!",
+		"ModerationFlagStatusOpen": "לִפְתוֹחַ",
+		"ModerationFlagStatusClosed": "סָגוּר",
 		"MyConsumption": "הצריכה שלי",
 		"MyDashboard": "לוח המחוונים שלי",
 		"MyPrices": "המחירים שלי",
@@ -339,6 +342,7 @@
 		"NotAPrice": "לא מחיר",
 		"Offline": "לא מקוון",
 		"Online": "מקוון",
+		"Open": "לִפְתוֹחַ",
 		"OpenWithTheAssistant": "פתיחה עם המסייע",
 		"Order": "סדר",
 		"OrderLocationCountDESC": "כמות מקומות",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "מעקב בלוח הצריכה שלי",
 		"ReceiptOnlineDeliveryCosts": "עלויות משלוח",
 		"Recent": "אחרונים",
+		"Re-open": "פתיחה מחדש",
 		"ReportProblem": "דיווח על תקלה",
+		"Resolved": "נפתר",
 		"Reuses": "גזירות",
 		"ReusesKnown": "נגזרות ידועות",
 		"Search": "חיפוש",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "ההוכחות העדכניות ביותר"
+		},
+		"Moderation": {
+			"Title": "מְתִינוּת"
 		},
 		"MyPrices": {
 			"Title": "המחירים שלי"
