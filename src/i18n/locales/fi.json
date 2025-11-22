@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Tyhjennä",
+		"Close": "Sulje",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Väärä päivämäärä",
 		"ModerationFlagReasonOther": "Muu",
 		"ModerationFlagCreateSuccess": "Kiitos raportistasi!",
+		"ModerationFlagStatusOpen": "Avata",
+		"ModerationFlagStatusClosed": "Suljettu",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Minun hinnat",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Avata",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Järjestys",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Avaa uudelleen",
 		"ReportProblem": "Ilmoita ongelmasta",
+		"Resolved": "Ratkaistu",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Etsi",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Uusimmat todisteet"
+		},
+		"Moderation": {
+			"Title": "Moderointi"
 		},
 		"MyPrices": {
 			"Title": "Minun hinnat"
