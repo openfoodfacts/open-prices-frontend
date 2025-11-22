@@ -96,7 +96,7 @@ export default {
         product: null,
         product_code: '',
         category_tag: null,
-        origins_tags: '',
+        origins_tags: [],
         labels_tags: []
       })
     },
@@ -197,7 +197,7 @@ export default {
       this.productForm.product = null
       this.productForm.product_code = ''
       this.productForm.category_tag = null
-      this.productForm.origins_tags = ''
+      this.productForm.origins_tags = []
       this.productForm.labels_tags = []
     },
     setType(type) {

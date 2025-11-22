@@ -7,7 +7,25 @@
     <v-divider />
 
     <v-card-text>
-      <v-data-table :headers="headers" :items="items" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
+      <v-data-table :headers="headers" :items="items" :row-props="setTableRowClass" :items-per-page="tablePageLimit" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
+        <template #[`item.status`]="{ item }">
+          <v-sheet v-if="item.existingPrice">
+            <v-icon icon="mdi-tag-check-outline" :disabled="true" :title="$t('Common.PriceAlreadyUploaded')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-disabled ml-2">{{ $t('Common.PriceAlreadyUploaded') }}</span>
+          </v-sheet>
+          <v-sheet v-else-if="!item.price">
+            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.PriceMissing')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.PriceMissing') }}</span>
+          </v-sheet>
+          <v-sheet v-else-if="item.isCategory ? !item.category_tag : !item.product_code">
+            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.ProductMissing')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.ProductMissing') }}</span>
+          </v-sheet>
+          <v-sheet v-else>
+            <v-icon icon="mdi-tag-plus-outline" color="success" :title="$t('Common.PriceReadyToBeUploaded')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-success ml-2">{{ $t('Common.PriceReadyToBeUploaded') }}</span>
+          </v-sheet>
+        </template>
         <template #[`item.product_name`]="{ item }">
           <v-text-field
             v-if="item.manuallyAdded"
@@ -18,12 +36,6 @@
           />
           <p v-else>
             {{ item.product_name }}
-          </p>
-          <p v-if="showInfoDetails">
-            <span v-if="item.existingPrice" class="text-caption text-warning">{{ $t('ReceiptAssistant.PriceAlreadyCreated') }}</span>
-            <span v-else-if="!item.price" class="text-caption text-error">{{ $t('Common.PriceMissing') }}</span>
-            <span v-else-if="item.isCategory ? !item.category_tag : !item.product_code" class="text-caption text-error">{{ $t('Common.ProductMissing') }}</span>
-            <span v-else class="text-caption text-success">{{ $t('ReceiptAssistant.PriceReadyToBeAdded') }}</span>
           </p>
         </template>
         <template #[`item.product`]="{ item }">
@@ -144,6 +156,7 @@ export default {
     return {
       items: [],
       headers: [
+        { title: this.$t('Common.Status'), key: 'status' },
         { title: this.$t('Common.Text'), key: 'product_name' },
         { title: this.$t('Common.Product'), key: 'product' },
         { title: this.$t('Common.Price'), key: 'price', minWidth: '150px' },
@@ -202,39 +215,50 @@ export default {
       this.items = this.receiptItems.map((item) => {
         if (item.price_id) {
           item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
+          item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
           item.product = item.existingPrice.product
           item.product_code = item.existingPrice.product?.code
           item.category_tag = item.existingPrice.category_tag
-          item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
+          item.price = item.existingPrice.price
+          item.price_per = item.existingPrice.price_per
           item.price_is_discounted = item.existingPrice.price_is_discounted
           item.price_without_discount = item.existingPrice.price_without_discount
           item.discount_type = item.existingPrice.discount_type
-          item.price_per = item.existingPrice.price_per
           item.receipt_quantity = item.existingPrice.receipt_quantity
-          // predictions
-          item.price = item.existingPrice.price
+          // extra fields
           if (!item.product_name) {
             item.product_name = item.existingPrice.product_name
           }
         } else {
+          const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
+          // ProductInputRow fields
+          // item.type = categoryPredicted ? constants.PRICE_TYPE_CATEGORY : constants.PRICE_TYPE_PRODUCT
+          item.type = constants.PRICE_TYPE_PRODUCT  // default to product input
           item.product = null
           item.product_code = ""
+          item.category_tag = categoryPredicted ? item.predicted_data.product : null
+          item.origins_tags = []
+          item.labels_tags = []
+          // price fields
+          item.price = item.predicted_data.price || null
+          item.price_per = categoryPredicted ? "KILOGRAM" : null
           item.price_is_discounted = false
           item.price_without_discount = null
           item.discount_type = null
           item.receipt_quantity = 1
-          // predictions
-          const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
-          if (categoryPredicted) {
-            item.category_tag = item.predicted_data.product
-            item.price_per = "KILOGRAM"
-          }
-          item.price = item.predicted_data.price || null
+          // extra fields
           item.product_name = item.predicted_data.product_name || ''
           item.predicted_product_code = item.predicted_data.predicted_product_code || null
         }
         return item
       })
+    },
+    setTableRowClass(item) {
+      // grey out existing prices
+      if (item.item.existingPrice) {
+        return { class: 'text-disabled' }
+      }
+      return { class: '' }
     },
     replaceCommaWithDot(input) {
       return utils.replaceCommaWithDot(input)
