@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "ತೆರವು ಮಾಡಿ",
+		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "ತಪ್ಪು ದಿನಾಂಕ",
 		"ModerationFlagReasonOther": "Other",
 		"ModerationFlagCreateSuccess": "ನಿಮ್ಮ ವರದಿಗೆ ಧನ್ಯವಾದಗಳು!",
+		"ModerationFlagStatusOpen": "ತೆರೆದ",
+		"ModerationFlagStatusClosed": "ಮುಚ್ಚಲಾಗಿದೆ",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "ತೆರೆದ",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "ಪುನಃ ತೆರೆಯಿರಿ",
 		"ReportProblem": "Report a problem",
+		"Resolved": "ಪರಿಹರಿಸಲಾಗಿದೆ",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "ಹುಡುಕಿ",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "ಮಿತಗೊಳಿಸುವಿಕೆ"
 		},
 		"MyPrices": {
 			"Title": "My prices"
