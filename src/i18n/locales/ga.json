@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Glan",
+		"Close": "Dún",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Dáta mícheart",
 		"ModerationFlagReasonOther": "Other",
 		"ModerationFlagCreateSuccess": "Go raibh maith agat as do thuairisc!",
+		"ModerationFlagStatusOpen": "Oscail",
+		"ModerationFlagStatusClosed": "Dúnta",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Oscail",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Athoscail",
 		"ReportProblem": "Report a problem",
+		"Resolved": "Réitithe",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Cuardaigh",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "Modhnóireacht"
 		},
 		"MyPrices": {
 			"Title": "My prices"
