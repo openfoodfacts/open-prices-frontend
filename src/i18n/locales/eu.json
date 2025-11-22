@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Garbitu",
+		"Close": "Itxi",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Data okerra",
 		"ModerationFlagReasonOther": "Other",
 		"ModerationFlagCreateSuccess": "Eskerrik asko zure txostenagatik!",
+		"ModerationFlagStatusOpen": "Ireki",
+		"ModerationFlagStatusClosed": "Itxita",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Ireki",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Berriro ireki",
 		"ReportProblem": "Report a problem",
+		"Resolved": "Konpondua",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Bilatu",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "Moderazioa"
 		},
 		"MyPrices": {
 			"Title": "My prices"
