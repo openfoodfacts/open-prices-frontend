@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "ล้างข้อมูล",
+		"Close": "ปิด",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "วันที่ผิด",
 		"ModerationFlagReasonOther": "Other",
 		"ModerationFlagCreateSuccess": "ขอบคุณสำหรับการรายงานของคุณ!",
+		"ModerationFlagStatusOpen": "เปิด",
+		"ModerationFlagStatusClosed": "ปิด",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "เปิด",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "เปิดใหม่อีกครั้ง",
 		"ReportProblem": "Report a problem",
+		"Resolved": "ได้รับการแก้ไขแล้ว",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "ค้นหา",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "ความพอประมาณ"
 		},
 		"MyPrices": {
 			"Title": "My prices"
