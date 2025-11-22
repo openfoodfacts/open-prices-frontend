@@ -16,6 +16,14 @@
         <template #[`item.created`]="{ item }">
           <RelativeDateTimeChip :dateTime="item.created" />
         </template>
+        <template #[`item.actions`]="{ item }">
+          <v-btn v-if="item.status === 'OPEN'" size="x-small" color="success" variant="outlined" prepend-icon="mdi-check-bold" @click="toggleFlagStatus(item)">
+            {{ $t('Common.Close') }}
+          </v-btn>
+          <v-btn v-if="item.status === 'CLOSED'" size="x-small" color="warning" variant="outlined" prepend-icon="mdi-flag" @click="toggleFlagStatus(item)">
+            {{ $t('Common.Re-open') }}
+          </v-btn>
+        </template>
       </v-data-table>
     </v-col>
   </v-row>
@@ -51,6 +59,7 @@ export default {
         { title: 'Status', key: 'status' },
         { title: 'Comment', key: 'comment' },
         { title: 'Date', key: 'created', width: '10%' },
+        { title: 'Actions', key: 'actions', align: 'end', width: '15%' },
       ],
       tablePageLimit: -1,  // all items
       // filter & order
@@ -92,6 +101,13 @@ export default {
     getFlagObjectUrl(flag) {
       return `/${flag.content_type.toLowerCase()}s/${flag.object_id}`
     },
+    toggleFlagStatus(flag) {
+      const newStatus = (flag.status === 'OPEN') ? 'CLOSED' : 'OPEN'
+      return api.updateFlag(flag.id, { status: newStatus })
+        .then(() => {
+          this.initFlagList()
+        })
+    },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
         this.getFlags()
@@ -100,3 +116,13 @@ export default {
   }
 }
 </script>
+
+<style>
+/**
+ * hide "sort by" on mobile
+ * https://stackoverflow.com/a/78435096
+ */
+.v-data-table-headers--mobile {
+  display: none;
+}
+</style>
