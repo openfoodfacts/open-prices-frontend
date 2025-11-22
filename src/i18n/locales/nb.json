@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Tøm",
+		"Close": "Lukk",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Feil dato",
 		"ModerationFlagReasonOther": "Andre",
 		"ModerationFlagCreateSuccess": "Takk for din rapport!",
+		"ModerationFlagStatusOpen": "Åpne",
+		"ModerationFlagStatusClosed": "Lukket",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Åpne",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Gjenåpne",
 		"ReportProblem": "Report a problem",
+		"Resolved": "Løst",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Søk",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "Moderering"
 		},
 		"MyPrices": {
 			"Title": "My prices"
