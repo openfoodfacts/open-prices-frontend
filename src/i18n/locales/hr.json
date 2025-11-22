@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
+		"Close": "Zatvori",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Pogrešan datum",
 		"ModerationFlagReasonOther": "Ostalo",
 		"ModerationFlagCreateSuccess": "Hvala na vašem izvješću!",
+		"ModerationFlagStatusOpen": "Otvoriti",
+		"ModerationFlagStatusClosed": "Zatvoreno",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Otvoriti",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Ponovo otvoriti",
 		"ReportProblem": "Prijavi problem",
+		"Resolved": "Riješeno",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Pretraži",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "Umjerenost"
 		},
 		"MyPrices": {
 			"Title": "My prices"
