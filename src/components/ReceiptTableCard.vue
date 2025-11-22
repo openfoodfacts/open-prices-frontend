@@ -22,12 +22,12 @@
           <p v-if="showInfoDetails">
             <span v-if="item.existingPrice" class="text-caption text-warning">{{ $t('ReceiptAssistant.PriceAlreadyCreated') }}</span>
             <span v-else-if="!item.price" class="text-caption text-error">{{ $t('Common.PriceMissing') }}</span>
-            <span v-else-if="item.isCategory ? !item.category_tag : !item.product_code" class="text-caption text-error">{{ $t('Common.ProductMissing') }}</span>
+            <span v-else-if="itemIsCategory(item) ? !item.category_tag : !item.product_code" class="text-caption text-error">{{ $t('Common.ProductMissing') }}</span>
             <span v-else class="text-caption text-success">{{ $t('ReceiptAssistant.PriceReadyToBeAdded') }}</span>
           </p>
         </template>
         <template #[`item.product`]="{ item }">
-          <v-sheet v-if="!item.isCategory">
+          <template v-if="!itemIsCategory(item)">
             <ProductCard v-if="item.existingPrice" :product="item.product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
             <ProductInputRow v-else :productForm="item" :hideProductTypeInput="true" :hideProductBarcode="false" />
             <div v-if="showProductCodeSuggestion(item)" class="text-caption">
@@ -36,8 +36,11 @@
                 {{ item.predicted_product_code }}
               </a>
             </div>
-          </v-sheet>
-          <PriceCategoryChip v-else :priceCategory="item.category_tag" />
+          </template>
+          <template v-else>
+            <PriceCategoryChip :priceCategory="item.category_tag" />
+            <PriceCategoryDetailsRow :price="item" />
+          </template>
         </template>
         <template #[`item.price`]="{ item }">
           <PricePriceRow v-if="item.existingPrice" :price="item.existingPrice" />
@@ -114,11 +117,22 @@ import constants from '../constants'
 import price_utils from '../utils/price.js'
 import utils from '../utils.js'
 
+const NEW_ITEM = {
+  type: constants.PRICE_TYPE_PRODUCT,
+  product: null,
+  product_name: '',
+  product_code: '',
+  category_tag: null,
+  price: null,
+  receipt_quantity: 1,
+}
+
 export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
+    PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
@@ -177,6 +191,17 @@ export default {
           receipt_quantity: item.receipt_quantity
         }
       }))
+    },
+    newItem() {
+      return {
+        type: constants.PRICE_TYPE_PRODUCT,
+        product: null,
+        product_name: '',
+        product_code: '',
+        category_tag: null,
+        price: null,
+        receipt_quantity: 1,
+      }
     }
   },
   watch: {
@@ -202,36 +227,17 @@ export default {
       this.items = this.receiptItems.map((item) => {
         if (item.price_id) {
           item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
-          item.product = item.existingPrice.product
-          item.product_code = item.existingPrice.product?.code
-          item.category_tag = item.existingPrice.category_tag
-          item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
-          item.price_is_discounted = item.existingPrice.price_is_discounted
-          item.price_without_discount = item.existingPrice.price_without_discount
-          item.discount_type = item.existingPrice.discount_type
-          item.price_per = item.existingPrice.price_per
-          item.receipt_quantity = item.existingPrice.receipt_quantity
-          // predictions
-          item.price = item.existingPrice.price
-          if (!item.product_name) {
-            item.product_name = item.existingPrice.product_name
-          }
+          Object.assign(item, item.existingPrice)
         } else {
-          item.product = null
-          item.product_code = ""
-          item.price_is_discounted = false
-          item.price_without_discount = null
-          item.discount_type = null
-          item.receipt_quantity = 1
-          // predictions
           const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
-          if (categoryPredicted) {
-            item.category_tag = item.predicted_data.product
-            item.price_per = "KILOGRAM"
-          }
-          item.price = item.predicted_data.price || null
-          item.product_name = item.predicted_data.product_name || ''
-          item.predicted_product_code = item.predicted_data.predicted_product_code || null
+          Object.assign(item, NEW_ITEM, {
+            manuallyAdded: false,
+            product_name: item.predicted_data.product_name,
+            category_tag: categoryPredicted ? item.predicted_data.product : null,
+            price: item.predicted_data.price || null,
+            price_per: categoryPredicted ? "KILOGRAM" : null,
+            predicted_product_code: item.predicted_data.predicted_product_code || null,
+          })
         }
         return item
       })
@@ -241,7 +247,7 @@ export default {
     },
     itemPriceSuffix(item) {
       let suffix = this.proof.currency
-      if (item.isCategory && item.category_tag) {
+      if (this.itemIsCategory(item) && item.category_tag) {
         suffix += '/' + (item.price_per === 'UNIT' ? 'U' : 'KG')
       }
       return suffix
@@ -263,48 +269,27 @@ export default {
     },
     addItem() {
       this.items.push({
-        manuallyAdded: true,
-        product_code: '',
-        product_name: '',
-        price: null,
-        receipt_quantity: 1,
-        product: null,
-        isCategory: false,
-        category_tag: null,
-        predicted_data: {}
+        ...NEW_ITEM,
+        manuallyAdded: true
       })
     },
     showEditProductDialog(item) {
       this.editProductDialog = true
       this.editProductItem = {
         index: this.items.indexOf(item),
-        // ContributionAssistantPriceFormCard fields
-        type: item.isCategory ? constants.PRICE_TYPE_CATEGORY : constants.PRICE_TYPE_PRODUCT,
-        category_tag: ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
-        origins_tags: [],
-        labels_tags: [],
-        price: item.price ? item.price.toString() : (item.predicted_data.price ? item.predicted_data.price.toString() : null),
-        price_per: item.price_per,
-        price_is_discounted: item.price_is_discounted,
-        price_without_discount: item.price_without_discount ? item.price_without_discount.toString() : null,
-        discount_type: item.discount_type,
+        ...item,
         currency: this.proof.currency,
-        receipt_quantity: item.receipt_quantity.toString(),
         proof: this.proof,
         proofImage: null,
-        croppedImage: null,
-        product_code: item.product_code,
-        detected_product_code: item.product_code,
-        product_name: item.product_name
+        croppedImage: null
       }
     },
     confirmProduct(product) {
       this.editProductDialog = false
-      this.items[this.editProductItem.index].product = product.product
-      this.items[this.editProductItem.index].isCategory = product.type === constants.PRICE_TYPE_CATEGORY
-      this.items[this.editProductItem.index].category_tag = product.type === constants.PRICE_TYPE_CATEGORY ? product.category_tag : null
       Object.assign(this.items[this.editProductItem.index], product)
-      // this.editProductItem = null
+    },
+    itemIsCategory(item) {
+      return item.type === constants.PRICE_TYPE_CATEGORY
     },
     showProductCodeSuggestion(item) {
       return item.predicted_product_code && !(item.existingPrice || item.product_code)
