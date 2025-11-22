@@ -215,34 +215,38 @@ export default {
       this.items = this.receiptItems.map((item) => {
         if (item.price_id) {
           item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
+          item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
           item.product = item.existingPrice.product
           item.product_code = item.existingPrice.product?.code
           item.category_tag = item.existingPrice.category_tag
-          item.isCategory = ![null, '', 'unknown', 'other'].includes(item.existingPrice.category_tag)
+          item.price = item.existingPrice.price
+          item.price_per = item.existingPrice.price_per
           item.price_is_discounted = item.existingPrice.price_is_discounted
           item.price_without_discount = item.existingPrice.price_without_discount
           item.discount_type = item.existingPrice.discount_type
-          item.price_per = item.existingPrice.price_per
           item.receipt_quantity = item.existingPrice.receipt_quantity
-          // predictions
-          item.price = item.existingPrice.price
+          // extra fields
           if (!item.product_name) {
             item.product_name = item.existingPrice.product_name
           }
         } else {
+          const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
+          // ProductInputRow fields
+          // item.type = categoryPredicted ? constants.PRICE_TYPE_CATEGORY : constants.PRICE_TYPE_PRODUCT
+          item.type = constants.PRICE_TYPE_PRODUCT  // default to product input
           item.product = null
           item.product_code = ""
+          item.category_tag = categoryPredicted ? item.predicted_data.product : null
+          item.origins_tags = []
+          item.labels_tags = []
+          // price fields
+          item.price = item.predicted_data.price || null
+          item.price_per = categoryPredicted ? "KILOGRAM" : null
           item.price_is_discounted = false
           item.price_without_discount = null
           item.discount_type = null
           item.receipt_quantity = 1
-          // predictions
-          const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
-          if (categoryPredicted) {
-            item.category_tag = item.predicted_data.product
-            item.price_per = "KILOGRAM"
-          }
-          item.price = item.predicted_data.price || null
+          // extra fields
           item.product_name = item.predicted_data.product_name || ''
           item.predicted_product_code = item.predicted_data.predicted_product_code || null
         }
