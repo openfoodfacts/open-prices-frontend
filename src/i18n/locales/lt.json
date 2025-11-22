@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Diagrama",
 		"Clear": "Išvalyti",
+		"Close": "Uždaryti",
 		"Comment": "Comment",
 		"Community": "Bendruomenė",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Neteisinga data",
 		"ModerationFlagReasonOther": "Kita",
 		"ModerationFlagCreateSuccess": "Ačiū už jūsų pranešimą!",
+		"ModerationFlagStatusOpen": "Atidaryti",
+		"ModerationFlagStatusClosed": "Uždaryta",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "Mano pagrindinis meniu",
 		"MyPrices": "Mano kainos",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Ne kaina",
 		"Offline": "Neprisijungę",
 		"Online": "Prisijungus",
+		"Open": "Atidaryti",
 		"OpenWithTheAssistant": "Atidaryti su asistentu",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Vietų skaičius",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Naujausi",
+		"Re-open": "Atidaryti iš naujo",
 		"ReportProblem": "Pranešti apie problemą",
+		"Resolved": "Išspręsta",
 		"Reuses": "Kartotinis naudojimas",
 		"ReusesKnown": "Žinomas kartotinis naudojimas",
 		"Search": "Paieška",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Naujausi įrodymai"
+		},
+		"Moderation": {
+			"Title": "Moderavimas"
 		},
 		"MyPrices": {
 			"Title": "Mano kainos"
