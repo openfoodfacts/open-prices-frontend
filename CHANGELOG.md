@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.147.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.146.1...v1.147.0) (2025-11-22)
+
+
+### Features
+
+* **Moderation:** allow moderators to edit flag status ([#1846](https://github.com/openfoodfacts/open-prices-frontend/issues/1846)) ([6b4bd2d](https://github.com/openfoodfacts/open-prices-frontend/commit/6b4bd2d8ce67a574caf712078bfc17db51ff88f8))
+* **Moderation:** new page to view all flags (only for moderators) ([#1844](https://github.com/openfoodfacts/open-prices-frontend/issues/1844)) ([92a4581](https://github.com/openfoodfacts/open-prices-frontend/commit/92a4581e463aaeb132ce5967e156b749290d3dfe))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1845](https://github.com/openfoodfacts/open-prices-frontend/issues/1845)) ([1b19254](https://github.com/openfoodfacts/open-prices-frontend/commit/1b19254e48467199edd8ace5d201faace384937d))
+
 ## [1.146.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.146.0...v1.146.1) (2025-11-17)
 
 
