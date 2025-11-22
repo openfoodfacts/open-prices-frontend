@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "ရှင်းလင်းမည်",
+		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "ရက်စွဲမှား",
 		"ModerationFlagReasonOther": "Other",
 		"ModerationFlagCreateSuccess": "သင့်အစီရင်ခံစာအတွက် ကျေးဇူးတင်ပါသည်။",
+		"ModerationFlagStatusOpen": "ဖွင့်သည်။",
+		"ModerationFlagStatusClosed": "ပိတ်ထားသည်။",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "My prices",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "ဖွင့်သည်။",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "ပြန်ဖွင့်တယ်။",
 		"ReportProblem": "Report a problem",
+		"Resolved": "ပြေလည်ပါတယ်။",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "ရွာေဖြမည္",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "ထိန်းညှိပေးသည်။"
 		},
 		"MyPrices": {
 			"Title": "My prices"
