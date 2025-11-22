@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "清除",
+		"Close": "關閉",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "日期错误",
 		"ModerationFlagReasonOther": "其他",
 		"ModerationFlagCreateSuccess": "感谢您的报告！",
+		"ModerationFlagStatusOpen": "打开",
+		"ModerationFlagStatusClosed": "关闭",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "我的价格",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "打开",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "命令",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "重新开放",
 		"ReportProblem": "公布一项问题",
+		"Resolved": "已解决",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "搜索",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "最新样张"
+		},
+		"Moderation": {
+			"Title": "适度"
 		},
 		"MyPrices": {
 			"Title": "我的价格"
