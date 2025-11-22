@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <template #title>
-      {{ $t('ReceiptAssistant.ReceiptItemsCheck') }}
+      {{ $t('ReceiptAssistant.ReceiptItems') }}
     </template>
 
     <v-divider />
@@ -30,7 +30,7 @@
           <v-sheet v-if="!item.isCategory">
             <ProductCard v-if="item.existingPrice" :product="item.product" :hideCategoriesAndLabels="true" :hideActionMenuButton="true" :readonly="true" elevation="1" />
             <ProductInputRow v-else :productForm="item" :hideProductTypeInput="true" :hideProductBarcode="false" />
-            <div v-if="!item.existingPrice && item.predicted_product_code" class="text-caption">
+            <div v-if="showProductCodeSuggestion(item)" class="text-caption">
               {{ $t('Common.SuggestedBarcode') }}
               <a class="fake-link" role="link" tabindex="0" @click="handleClickProductCodeSuggestion(item)" @keydown.enter="handleClickProductCodeSuggestion(item)">
                 {{ item.predicted_product_code }}
@@ -144,11 +144,11 @@ export default {
     return {
       items: [],
       headers: [
-        { title: 'Product Name', key: 'product_name' },
-        { title: 'Product', key: 'product' },
-        { title: 'Price', key: 'price', minWidth: '150px' },
-        { title: 'Quantity', key: 'receipt_quantity' },
-        { title: 'Actions', key: 'actions' },
+        { title: this.$t('Common.Text'), key: 'product_name' },
+        { title: this.$t('Common.Product'), key: 'product' },
+        { title: this.$t('Common.Price'), key: 'price', minWidth: '150px' },
+        { title: this.$t('Common.Quantity'), key: 'receipt_quantity' },
+        { title: this.$t('Common.Actions'), key: 'actions' },
       ],
       tablePageLimit: -1,  // all items
       showInfoDetails: true,
@@ -278,6 +278,7 @@ export default {
       this.editProductDialog = true
       this.editProductItem = {
         index: this.items.indexOf(item),
+        // ContributionAssistantPriceFormCard fields
         type: item.isCategory ? constants.PRICE_TYPE_CATEGORY : constants.PRICE_TYPE_PRODUCT,
         category_tag: ![null, '', 'unknown', 'other'].includes(item.category_tag) ? item.category_tag : null,
         origins_tags: [],
@@ -305,6 +306,9 @@ export default {
       Object.assign(this.items[this.editProductItem.index], product)
       // this.editProductItem = null
     },
+    showProductCodeSuggestion(item) {
+      return item.predicted_product_code && !(item.existingPrice || item.product_code)
+    },
     handleClickProductCodeSuggestion(item) {
       item.product_code = item.predicted_product_code
       this.findProduct(item)
@@ -315,9 +319,22 @@ export default {
 
 <style>
 @media (max-width: 960px) {
-  .v-table__wrapper > table > tbody > tr > td:last-child {
-    padding-bottom: 40px !important;
+  /**
+   * first & last column padding fix
+   * 16? same as left & right padding
+   */
+  .v-table__wrapper > table > tbody > tr:first-child > td:first-child {
+    padding-top: 0 !important;
   }
+  .v-table__wrapper > table > tbody > tr:not(:first-child) > td:first-child {
+    padding-top: 16px !important;
+  }
+  .v-table__wrapper > table > tbody > tr > td:last-child {
+    padding-bottom: 16px !important;
+  }
+  /**
+   * last column (actions) height fix
+   */
   .v-table__wrapper > table > tbody > tr > td:last-child > div:first-child {
     height: 44px !important;
     align-content: center !important;
@@ -326,7 +343,7 @@ export default {
    * grid: 1/3 label 2/3 value
    */
   .v-data-table__tr--mobile > td {
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 2fr;
   }
   /**
    * hide "sort by" on mobile
