@@ -32,7 +32,7 @@
         :title="$t('Common.ValidatePrices')"
         prepend-icon="mdi-checkbox-marked-circle-plus-outline"
         append-icon="mdi-arrow-right"
-        :to="getPriceValidationUrl"
+        to="/prices/add/validate"
       />
       <v-card
         v-else
@@ -88,9 +88,6 @@ export default {
     }
   },
   computed: {
-    getPriceValidationUrl() {
-      return '/experiments/price-validation-assistant'
-    },
     getPriceAddMultipleProofIdUrl() {
       return `/prices/add/multiple?proof_id=${this.firstProofUploaded.id}`
     },
