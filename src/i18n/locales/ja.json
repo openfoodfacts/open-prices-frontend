@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "クリア",
+		"Close": "閉じる",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "日付が間違っています",
 		"ModerationFlagReasonOther": "その他",
 		"ModerationFlagCreateSuccess": "ご報告ありがとうございます！",
+		"ModerationFlagStatusOpen": "開ける",
+		"ModerationFlagStatusClosed": "閉鎖",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "私の価格",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "開ける",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "注文品",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "再開",
 		"ReportProblem": "Report a problem",
+		"Resolved": "解決済み",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "検索",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "最新の証拠"
+		},
+		"Moderation": {
+			"Title": "節度"
 		},
 		"MyPrices": {
 			"Title": "私の価格"
