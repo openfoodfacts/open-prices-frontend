@@ -893,6 +893,9 @@
 		"CommunityChallenge": {
 			"Title": "Community challenge"
 		},
+		"Validate": {
+			"Title": "Validate"
+		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
 		}

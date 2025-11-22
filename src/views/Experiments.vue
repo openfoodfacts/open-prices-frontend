@@ -26,18 +26,11 @@
     </v-col>
   </v-row>
 
-  <br>
-
-  <v-row>
-    <v-col cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Router.PriceValidationAssistant.Title')"
-        prepend-icon="mdi-checkbox-marked-circle-plus-outline"
-        append-icon="mdi-arrow-right"
-        to="/experiments/price-validation-assistant"
-      />
-    </v-col>
-  </v-row>
+  <!--
+    OLD experiments
+    /experiments/challenge (moved to /challenge)
+    /experiments/price-validation-assistant (moved to /prices/add/validate)
+  -->
 </template>
 
 <script>

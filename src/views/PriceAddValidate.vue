@@ -46,9 +46,9 @@
 <script>
 import { mapStores } from 'pinia'
 import { defineAsyncComponent } from 'vue'
-import constants from '../constants'
-import api from '../services/api'
-import { useAppStore } from '../store'
+import constants from '../constants.js'
+import api from '../services/api.js'
+import { useAppStore } from '../store.js'
 import date_utils from '../utils/date.js'
 import proof_utils from '../utils/proof.js'
 import utils from '../utils.js'
