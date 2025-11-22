@@ -211,6 +211,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Xóa",
+		"Close": "Đóng",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -327,6 +328,8 @@
 		"ModerationFlagReasonWrongDate": "Ngày sai",
 		"ModerationFlagReasonOther": "Khác",
 		"ModerationFlagCreateSuccess": "Cảm ơn bạn đã báo cáo!",
+		"ModerationFlagStatusOpen": "Mở",
+		"ModerationFlagStatusClosed": "Đã đóng",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Giá của tôi",
@@ -339,6 +342,7 @@
 		"NotAPrice": "Not a price",
 		"Offline": "Offline",
 		"Online": "Online",
+		"Open": "Mở",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
 		"OrderLocationCountDESC": "Location count",
@@ -412,7 +416,9 @@
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
+		"Re-open": "Mở lại",
 		"ReportProblem": "Report a problem",
+		"Resolved": "Đã giải quyết",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Tìm kiếm",
@@ -825,6 +831,9 @@
 		},
 		"LatestProofs": {
 			"Title": "Latest proofs"
+		},
+		"Moderation": {
+			"Title": "Điều độ"
 		},
 		"MyPrices": {
 			"Title": "Giá của tôi"
