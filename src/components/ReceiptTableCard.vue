@@ -7,11 +7,11 @@
     <v-divider />
 
     <v-card-text>
-      <v-data-table :headers="headers" :items="items" :items-per-page="tablePageLimit" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
+      <v-data-table :headers="headers" :items="items" :row-props="setTableRowClass" :items-per-page="tablePageLimit" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
         <template #[`item.status`]="{ item }">
           <v-sheet v-if="item.existingPrice">
-            <v-icon icon="mdi-tag-check-outline" color="success" :title="$t('ReceiptAssistant.PriceAlreadyCreated')" />
-            <span v-if="$vuetify.display.smAndDown" class="text-success ml-2">{{ $t('ReceiptAssistant.PriceAlreadyCreated') }}</span>
+            <v-icon icon="mdi-tag-check-outline" :disabled="true" :title="$t('Common.PriceAlreadyUploaded')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-disabled ml-2">{{ $t('Common.PriceAlreadyUploaded') }}</span>
           </v-sheet>
           <v-sheet v-else-if="!item.price">
             <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.PriceMissing')" />
@@ -22,8 +22,8 @@
             <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.ProductMissing') }}</span>
           </v-sheet>
           <v-sheet v-else>
-            <v-icon icon="mdi-tag-plus-outline" :title="$t('ReceiptAssistant.PriceReadyToBeAdded')" />
-            <span v-if="$vuetify.display.smAndDown" class="ml-2">{{ $t('ReceiptAssistant.PriceReadyToBeAdded') }}</span>
+            <v-icon icon="mdi-tag-plus-outline" color="success" :title="$t('Common.PriceReadyToBeUploaded')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-success ml-2">{{ $t('Common.PriceReadyToBeUploaded') }}</span>
           </v-sheet>
         </template>
         <template #[`item.product_name`]="{ item }">
@@ -243,6 +243,13 @@ export default {
         }
         return item
       })
+    },
+    setTableRowClass(item) {
+      // grey out existing prices
+      if (item.item.existingPrice) {
+        return { class: 'text-disabled' }
+      }
+      return { class: '' }
     },
     replaceCommaWithDot(input) {
       return utils.replaceCommaWithDot(input)
