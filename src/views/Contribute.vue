@@ -42,7 +42,7 @@ export default {
           name: 'From a receipt',
           description: '',
           background_image_url: constants.PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL,
-          url: '/prices/add/multiple?proof_type=RECEIPT'
+          url: '/proofs/add/receipt'
         },
         {
           name: 'Validate prices from the community',
