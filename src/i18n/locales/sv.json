@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Pris skapat!",
 		"PriceMissing": "Pris saknas",
+		"PriceAlreadyUploaded": "Priset har redan laddats upp",
+		"PriceReadyToBeUploaded": "Priset är klart att laddas upp",
 		"PricesAlreadyUploaded": "Priserna har redan laddats upp",
 		"PricesMore": "Fler priser",
 		"PricesAdded": "Priser tillagda",
@@ -435,6 +437,7 @@
 		"SourceCode": "Källkod",
 		"Start": "Start",
 		"Stats": "Statistik",
+		"Status": "Status",
 		"SuggestedBarcode": "Föreslagen streckkod:",
 		"Summary": "Sammanfattning",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validera"
 		},
 		"ValidatePrices": {
 			"Title": "Validera priser"
