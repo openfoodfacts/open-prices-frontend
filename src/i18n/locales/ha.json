@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Farashin ya ɓace",
+		"PriceAlreadyUploaded": "An riga an ɗora farashin",
+		"PriceReadyToBeUploaded": "Farashin da aka shirya don ɗauka",
 		"PricesAlreadyUploaded": "An riga an ɗora farashin",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "Barcode da aka ba da shawara:",
 		"Summary": "Summary",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
