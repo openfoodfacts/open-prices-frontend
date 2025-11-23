@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Η τιμή δημιουργήθηκε!",
 		"PriceMissing": "Λείπει η τιμή",
+		"PriceAlreadyUploaded": "Η τιμή έχει ήδη μεταφορτωθεί.",
+		"PriceReadyToBeUploaded": "Τιμή έτοιμη για μεταφόρτωση",
 		"PricesAlreadyUploaded": "Οι τιμές έχουν ήδη ανεβάσει",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Έναρξη",
 		"Stats": "Stats",
+		"Status": "Κατάσταση",
 		"SuggestedBarcode": "Προτεινόμενος γραμμωτός κώδικας:",
 		"Summary": "Σύνοψη",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Επικύρωση"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
