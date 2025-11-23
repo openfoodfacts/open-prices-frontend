@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Hinta luotu!",
 		"PriceMissing": "Hinta puuttuu",
+		"PriceAlreadyUploaded": "Hinta on jo ladattu",
+		"PriceReadyToBeUploaded": "Hinta ladattavissa",
 		"PricesAlreadyUploaded": "Hinnat on jo ladattu",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Aloita",
 		"Stats": "Tilastot",
+		"Status": "Tila",
 		"SuggestedBarcode": "Ehdotettu viivakoodi:",
 		"Summary": "Yhteenveto",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Vahvista"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
