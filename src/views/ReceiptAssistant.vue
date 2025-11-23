@@ -153,7 +153,7 @@ export default {
       // item.product_code means any typed product_code would work, including ones with no product associated
       // item.productFound means the product was explicitly selected by the user
       if (!this.receiptItems) return []
-      const isProductValid = item => item.isCategory ? item.category_tag : item.product_code
+      const isProductValid = item => this.itemIsCategory(item) ? item.category_tag : item.product_code
       return this.receiptItems.filter(item => item.price && isProductValid(item))
     },
     validNewReceiptItems() {
@@ -227,6 +227,9 @@ export default {
       }
       load()
     },
+    itemIsCategory(item) {
+      return item.type === constants.PRICE_TYPE_CATEGORY
+    },
     receiptItemsUpdated(newReceiptItems) {
       this.receiptItems = newReceiptItems
     },
@@ -259,13 +262,6 @@ export default {
           currency: this.proofObject.currency,
           price: receiptItems[i].price || receiptItems[i].predicted_data.price,
           product_name: receiptItems[i].product_name || receiptItems[i].predicted_data.product_name
-        }
-        // cleanup for API
-        if (receiptItems[i].isCategory) {
-          delete priceData.product_code
-        } else {
-          delete priceData.category_tag
-          delete priceData.price_per
         }
         if (receiptItems[i].price_id) {
           api.updatePrice(receiptItems[i].price_id, priceData).then((price) => {

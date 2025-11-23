@@ -43,7 +43,7 @@
           </template>
         </template>
         <template #[`item.price`]="{ item }">
-          <PricePriceRow v-if="item.existingPrice" :price="item.existingPrice" />
+          <PricePriceRow v-if="item.existingPrice" :price="item" />
           <v-text-field
             v-else
             v-model="item.price"
@@ -192,17 +192,6 @@ export default {
         }
       }))
     },
-    newItem() {
-      return {
-        type: constants.PRICE_TYPE_PRODUCT,
-        product: null,
-        product_name: '',
-        product_code: '',
-        category_tag: null,
-        price: null,
-        receipt_quantity: 1,
-      }
-    }
   },
   watch: {
     items: {
