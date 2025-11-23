@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Narx yetishmayapti",
+		"PricePerMissing": "Yo'qolgan uchun narx",
 		"PriceAlreadyUploaded": "Narx allaqachon yuklangan",
 		"PriceReadyToBeUploaded": "Narx yuklashga tayyor",
 		"PricesAlreadyUploaded": "Narxlar allaqachon yuklangan",
