@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "價格已建立！",
 		"PriceMissing": "缺少價格",
+		"PriceAlreadyUploaded": "價格已上傳。",
+		"PriceReadyToBeUploaded": "價格資訊已準備好上傳。",
 		"PricesAlreadyUploaded": "價格已上傳",
 		"PricesMore": "更多價格",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "原始碼",
 		"Start": "開始",
 		"Stats": "統計數據",
+		"Status": "狀態",
 		"SuggestedBarcode": "建議條碼：",
 		"Summary": "總覽",
 		"TaglineOriginal": "開放的群眾外包食品價格資料庫",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "驗證"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
