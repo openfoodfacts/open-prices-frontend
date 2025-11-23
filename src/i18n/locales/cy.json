@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Pris ar goll",
+		"PricePerMissing": "Pris fesul coll",
 		"PriceAlreadyUploaded": "Pris eisoes wedi'i uwchlwytho",
 		"PriceReadyToBeUploaded": "Pris yn barod i'w uwchlwytho",
 		"PricesAlreadyUploaded": "Prisiau eisoes wedi'u llwytho i fyny",
