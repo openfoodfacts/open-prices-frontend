@@ -1,18 +1,10 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-btn class="text-body-2" block spaced="end" :prepend-icon="LOCATION_TYPE_OSM_ICON" :class="selectedLocation ? 'border-success' : 'border-error'" @click="locationSelectorDialog = true">
-        <span v-if="selectedLocation">{{ $t('Common.LocationSelected') }}</span>
-        <span v-else>{{ $t('Common.LocationFindShop') }}</span>
+    <v-col>
+      <LocationSearchResultCard v-if="selectedLocation" :location="selectedLocation" :isSelected="true" elevation="1" @editLocation="showLocationSelectorDialog" />
+      <v-btn v-else class="text-body-2" block spaced="end" :prepend-icon="LOCATION_TYPE_OSM_ICON" :class="selectedLocation ? 'border-success' : 'border-error'" @click="showLocationSelectorDialog">
+        {{ $t('Common.LocationFindShop') }}
       </v-btn>
-    </v-col>
-  </v-row>
-
-  <v-row v-if="selectedLocation" class="mt-0">
-    <v-col cols="12">
-      <v-chip v-if="selectedLocation" label density="comfortable">
-        {{ getLocationTitle }}
-      </v-chip>
     </v-col>
   </v-row>
 
@@ -33,6 +25,7 @@ import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
+    LocationSearchResultCard: defineAsyncComponent(() => import('./LocationSearchResultCard.vue')),
     LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
   },
   props: {

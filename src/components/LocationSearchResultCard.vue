@@ -1,12 +1,19 @@
 <template>
-  <v-card>
-    <v-card-text>
-      <h4>{{ getLocationTitle }}</h4>
-      <p>{{ getLocationSubtitle }}</p>
-      <template v-if="!isTypeONLINE">
-        <LocationOSMTagChip class="mr-1" :location="location" />
-        <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
-      </template>
+  <v-card :class="isSelected ? 'border-success' : ''" data-name="location-search-result-card">
+    <v-card-text class="pa-2">
+      <v-row>
+        <v-col class="pr-0">
+          <h4>{{ getLocationTitle }}</h4>
+          <p>{{ getLocationSubtitle }}</p>
+          <template v-if="!isTypeONLINE">
+            <LocationOSMTagChip class="mr-1" :location="location" />
+            <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
+          </template>
+        </v-col>
+        <v-col v-if="isSelected" cols="2">
+          <v-btn class="float-right" icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
+        </v-col>
+      </v-row>
     </v-card-text>
   </v-card>
 </template>
@@ -27,8 +34,13 @@ export default {
     location: {
       type: [Object, null],
       required: true
-    }
+    },
+    isSelected: {
+      type: Boolean,
+      default: false
+    },
   },
+  emits: ['editLocation'],
   computed: {
     ...mapStores(useAppStore),
     isTypeONLINE() {
@@ -50,5 +62,12 @@ export default {
       return this.appStore.user.username && this.appStore.user.location_display_osm_id
     },
   },
+  methods: {
+    clickLocation() {
+      if (this.isSelected) {
+        this.$emit('editLocation', this.location)
+      }
+    }
+  }
 }
 </script>
