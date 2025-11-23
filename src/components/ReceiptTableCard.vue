@@ -169,7 +169,7 @@ export default {
       items: [],
       headers: [
         { title: this.$t('Common.Status'), key: 'status' },
-        { title: this.$t('Common.Text'), key: 'product_name' },
+        { title: this.$t('Common.Text'), key: 'product_name', maxWidth: '150px' },
         { title: this.$t('Common.Product'), key: 'product' },
         { title: this.$t('Common.Price'), key: 'price', minWidth: '150px' },
         { title: this.$t('Common.Quantity'), key: 'receipt_quantity' },
