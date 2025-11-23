@@ -12,8 +12,8 @@
           <LocationOSMTagChip class="mr-1" :location="location" />
           <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
           <template v-if="!hideCountryCity">
-            <LocationCountryCityChip v-if="hasLocationCity" class="mr-1" :location="location" type="city" />
-            <LocationCountryCityChip v-if="hasLocationCountry" :location="location" type="country" />
+            <CountryCityChip v-if="hasLocationCity" class="mr-1" :location="location" type="city" />
+            <CountryCityChip v-if="hasLocationCountry" :location="location" type="country" />
           </template>
         </v-col>
       </v-row>
@@ -49,7 +49,7 @@ export default {
     ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
     LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
-    LocationCountryCityChip: defineAsyncComponent(() => import('../components/LocationCountryCityChip.vue')),
+    CountryCityChip: defineAsyncComponent(() => import('../components/CountryCityChip.vue')),
     LocationActionMenuButton: defineAsyncComponent(() => import('../components/LocationActionMenuButton.vue')),
   },
   props: {
