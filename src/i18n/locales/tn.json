@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Tlhwatlhwa e tlhaela",
+		"PriceAlreadyUploaded": "Tlhwatlhwa e setse e laisitswe",
+		"PriceReadyToBeUploaded": "Tlhwatlhwa e siametse go laisiwa",
 		"PricesAlreadyUploaded": "Ditlhwatlhwa di setse di laisitswe",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "Khoutu ya dibara e e tshitshintsweng:",
 		"Summary": "Summary",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
