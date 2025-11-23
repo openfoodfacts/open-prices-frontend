@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} zu bestätigende Preise | {count} zu bestätigender Preis | {count} zu bestätigende Preise",
 		"PriceCreated": "Preis erstellt!",
 		"PriceMissing": "Preis fehlt",
+		"PriceAlreadyUploaded": "Preis bereits hochgeladen",
+		"PriceReadyToBeUploaded": "Preis kann hochgeladen werden",
 		"PricesAlreadyUploaded": "Preise bereits hochgeladen",
 		"PricesMore": "Weitere Preise",
 		"PricesAdded": "Preise hinzugefügt",
@@ -435,6 +437,7 @@
 		"SourceCode": "Quellcode",
 		"Start": "Start",
 		"Stats": "Statistiken",
+		"Status": "Status",
 		"SuggestedBarcode": "Vorgeschlagener Strichcode:",
 		"Summary": "Zusammenfassung",
 		"TaglineOriginal": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Gemeinschaftliche Herausforderung"
+		},
+		"Validate": {
+			"Title": "Bestätigen"
 		},
 		"ValidatePrices": {
 			"Title": "Preise prüfen"
