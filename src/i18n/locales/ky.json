@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Баасы жок",
+		"PricePerMissing": "Жоголгон үчүн баа",
 		"PriceAlreadyUploaded": "Баасы мурунтан эле жүктөлүп берилген",
 		"PriceReadyToBeUploaded": "Баа жүктөлүп берүүгө даяр",
 		"PricesAlreadyUploaded": "Баалар мурунтан эле жүктөлүп берилген",
