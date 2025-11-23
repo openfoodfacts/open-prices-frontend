@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} preços a validar | {count} preço a validar | {count} preços a validar",
 		"PriceCreated": "Preço criado!",
 		"PriceMissing": "Preço em falta",
+		"PriceAlreadyUploaded": "Preço já carregado",
+		"PriceReadyToBeUploaded": "Preço pronto a ser carregado",
 		"PricesAlreadyUploaded": "Preços já carregados",
 		"PricesMore": "Mais preços",
 		"PricesAdded": "Preços adicionado",
@@ -435,6 +437,7 @@
 		"SourceCode": "Código-fonte",
 		"Start": "Começar",
 		"Stats": "Estatísticas",
+		"Status": "Estado",
 		"SuggestedBarcode": "Código de barras sugerido:",
 		"Summary": "Resumo",
 		"TaglineOriginal": "Uma base de dados aberta e colaborativa de preços de alimentos",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Desafio da comunidade"
+		},
+		"Validate": {
+			"Title": "Validar"
 		},
 		"ValidatePrices": {
 			"Title": "Validar preços"
