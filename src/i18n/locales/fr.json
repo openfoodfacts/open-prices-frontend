@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prix à valider | {count} prix à valider | {count} prix à valider",
 		"PriceCreated": "Prix créé !",
 		"PriceMissing": "Prix manquant",
+		"PricePerMissing": "Prix par manquant",
 		"PriceAlreadyUploaded": "Prix déjà affiché",
 		"PriceReadyToBeUploaded": "Prix prêt à être téléchargé",
 		"PricesAlreadyUploaded": "Les prix sont déjà téléchargés",
