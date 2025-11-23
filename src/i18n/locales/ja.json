@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "価格がありません",
+		"PriceAlreadyUploaded": "価格はすでにアップロードされています",
+		"PriceReadyToBeUploaded": "価格はアップロード準備完了です",
 		"PricesAlreadyUploaded": "価格はすでにアップロードされています",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "開始",
 		"Stats": "Stats",
+		"Status": "状態",
 		"SuggestedBarcode": "推奨バーコード:",
 		"Summary": "サマリー",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "検証"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
