@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} preços a validar | {count} preço a validar | {count} preços a validar",
 		"PriceCreated": "Preço criado!",
 		"PriceMissing": "Preço em falta",
+		"PricePerMissing": "Preço por unidade em falta",
 		"PriceAlreadyUploaded": "Preço já carregado",
 		"PriceReadyToBeUploaded": "Preço pronto a ser carregado",
 		"PricesAlreadyUploaded": "Preços já carregados",
