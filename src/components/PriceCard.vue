@@ -102,7 +102,7 @@ export default {
   data() {
     return {
       productTitle: null,  // see init
-      productImageDefault: constants.PRODUCT_IMAGE_DEFAULT_URL
+      productImageDefault: constants.PRODUCT_IMAGE_DEFAULT_URL,
     }
   },
   computed: {

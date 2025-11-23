@@ -189,9 +189,17 @@ function getLocationONLINETitle(locationObject) {
   return locationObject.website_url
 }
 
-// OP location
 function getLocationIcon(locationObject) {
-  if (locationObject) {
+  // Photon location
+  if (locationObject.properties) {
+    return constants.LOCATION_TYPE_OSM_ICON
+  }
+  // Nominatim location
+  else if (locationObject.address) {
+    return constants.LOCATION_TYPE_OSM_ICON
+  }
+  // OP location
+  else if (locationObject.type) {
     return constants[`LOCATION_TYPE_${locationObject.type}_ICON`] || constants.LOCATION_UNKNOWN_ICON
   }
   return constants.LOCATION_UNKNOWN_ICON
