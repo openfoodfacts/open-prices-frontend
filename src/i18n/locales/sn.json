@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Mutengo washaikwa",
+		"PricePerMissing": "Mutengo pakushaikwa",
 		"PriceAlreadyUploaded": "Mutengo watoiswa kare",
 		"PriceReadyToBeUploaded": "Mutengo wakagadzirira kuiswa",
 		"PricesAlreadyUploaded": "Mitengo yatokwidzwa kare",
