@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Hiányzó ár",
+		"PriceAlreadyUploaded": "Az ár már fel van töltve",
+		"PriceReadyToBeUploaded": "Az ár feltöltésre kész",
 		"PricesAlreadyUploaded": "Az árak már feltöltöttek",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Indítás",
 		"Stats": "Stats",
+		"Status": "Állapot",
 		"SuggestedBarcode": "Javasolt vonalkód:",
 		"Summary": "Összegzés",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Érvényesítés"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
