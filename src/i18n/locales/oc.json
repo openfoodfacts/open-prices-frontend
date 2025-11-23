@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Prètz mancant",
+		"PricePerMissing": "Prètz per mancant",
 		"PriceAlreadyUploaded": "Prètz ja mandat",
 		"PriceReadyToBeUploaded": "Prètz prèst a èsser mandat",
 		"PricesAlreadyUploaded": "Los prètzs ja mandats",
