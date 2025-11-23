@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Bo a ɛho ka ayera",
+		"PricePerMissing": "Bo a wɔbɔ biara a ɛyera",
 		"PriceAlreadyUploaded": "Price a wɔde ahyɛ so dedaw",
 		"PriceReadyToBeUploaded": "Price ayɛ krado sɛ wɔde bɛto so",
 		"PricesAlreadyUploaded": "Nneɛma bo a wɔde ahyɛ so dedaw",
