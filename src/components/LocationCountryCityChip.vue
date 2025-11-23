@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" :to="getCountryCityUrl">
+  <v-chip label size="small" density="comfortable" @click="goToCountryCity()">
     {{ getCountryCityName }}
   </v-chip>
 </template>
@@ -13,8 +13,13 @@ export default {
     },
     type: {
       type: String,
-      default: 'country'  // 'country' or 'city'
-    }
+      default: 'country',
+      examples: ['country', 'city']
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     getCountryCityName() {
@@ -34,6 +39,14 @@ export default {
       }
       return null
     }
+  },
+  methods: {
+    goToCountryCity() {
+      if (this.readonly || !this.location || !this.getCountryCityUrl) {
+        return
+      }
+      this.$router.push({ path: this.getCountryCityUrl })
+    },
   }
 }
 </script>
