@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Hind puudub",
+		"PricePerMissing": "Puuduva toote hind",
 		"PriceAlreadyUploaded": "Hind on juba üles laaditud",
 		"PriceReadyToBeUploaded": "Hind on üleslaadimiseks valmis",
 		"PricesAlreadyUploaded": "Hinnad on juba üles laaditud",
