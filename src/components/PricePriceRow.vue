@@ -9,7 +9,7 @@
           <v-tooltip v-if="price.price_without_discount" activator="parent" open-on-click location="top">{{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(price.price_without_discount) }}</v-tooltip>
         </v-chip>
       </span>
-      <span v-if="!hidePriceReceiptQuantity && price.receipt_quantity" class="mr-1">
+      <span v-if="!hidePriceReceiptQuantity && price.receipt_quantity" class="ml-1">
         <PriceQuantityPurchasedChip :priceQuantityPurchased="price.receipt_quantity" />
       </span>
     </v-col>
