@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} цены для проверки | {count} цены для проверки | {count} цены для проверки",
 		"PriceCreated": "Цена создана!",
 		"PriceMissing": "Цена отсутствует",
+		"PricePerMissing": "Цена за отсутствующий",
 		"PriceAlreadyUploaded": "Цена уже загружена",
 		"PriceReadyToBeUploaded": "Цена готова к загрузке",
 		"PricesAlreadyUploaded": "Цены уже загружены",
