@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Η τιμή δημιουργήθηκε!",
 		"PriceMissing": "Λείπει η τιμή",
+		"PricePerMissing": "Τιμή ανά λείπον",
 		"PriceAlreadyUploaded": "Η τιμή έχει ήδη μεταφορτωθεί.",
 		"PriceReadyToBeUploaded": "Τιμή έτοιμη για μεταφόρτωση",
 		"PricesAlreadyUploaded": "Οι τιμές έχουν ήδη ανεβάσει",
