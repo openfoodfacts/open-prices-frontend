@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "价格已创建！",
 		"PriceMissing": "缺少价格",
+		"PriceAlreadyUploaded": "价格已上传。",
+		"PriceReadyToBeUploaded": "价格信息已准备好上传。",
 		"PricesAlreadyUploaded": "价格已上传",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "开始",
 		"Stats": "统计数据",
+		"Status": "状态",
 		"SuggestedBarcode": "建议条形码：",
 		"Summary": "摘要",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "验证"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
