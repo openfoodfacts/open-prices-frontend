@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.147.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.147.0...v1.147.1) (2025-11-23)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1851](https://github.com/openfoodfacts/open-prices-frontend/issues/1851)) ([9cd65a1](https://github.com/openfoodfacts/open-prices-frontend/commit/9cd65a185e93ced17736f41cab09019aa941c903))
+* **Price Validation Assistant:** remove from experiments. change URL (with redirection) ([#1848](https://github.com/openfoodfacts/open-prices-frontend/issues/1848)) ([5cf5d6e](https://github.com/openfoodfacts/open-prices-frontend/commit/5cf5d6e100628fd884c528032f56b4cc88c83d2f))
+* **Price:** simplify origins_tags & labels_tags Array management ([#1853](https://github.com/openfoodfacts/open-prices-frontend/issues/1853)) ([562e658](https://github.com/openfoodfacts/open-prices-frontend/commit/562e65840ff3156be694b75dc215d2db87053c73))
+* **Receipt Assistant:** move error message to new status column ([#1793](https://github.com/openfoodfacts/open-prices-frontend/issues/1793)) ([ba9bd45](https://github.com/openfoodfacts/open-prices-frontend/commit/ba9bd4552ba934965a4490aa08ccd68d2e49d7f9))
+* **Receipt Assistant:** refactor and simplify item management. show category origin & label ([#1852](https://github.com/openfoodfacts/open-prices-frontend/issues/1852)) ([ba2eb2f](https://github.com/openfoodfacts/open-prices-frontend/commit/ba2eb2f1d3139f426aaa198627bc20145222da98))
+* **Receipt Assistant:** various adjustements (mobile grid layout, shorter labels) ([#1849](https://github.com/openfoodfacts/open-prices-frontend/issues/1849)) ([7d72970](https://github.com/openfoodfacts/open-prices-frontend/commit/7d72970f7a621affbd327f43e8787b5d31b95dfd))
+
 ## [1.147.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.146.1...v1.147.0) (2025-11-22)
 
 
