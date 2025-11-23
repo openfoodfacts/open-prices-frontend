@@ -22,12 +22,20 @@
 
         <v-tabs-window v-model="currentDisplay" disabled>
           <v-tabs-window-item value="recent">
-            <p v-for="(location, index) in recentLocations" :key="index">
-              <LocationRecentChip :location="location" :withRemoveAction="true" @click="selectLocation(location)" @click:close="removeRecentLocation(location)" />
-            </p>
-            <v-btn v-if="recentLocations.length" size="small" color="primary" @click="clearRecentLocations">
-              {{ $t('Common.Clear') }}
-            </v-btn>
+            <template v-if="recentLocations.length">
+              <v-row>
+                <v-col v-for="(location, index) in recentLocations" :key="index" cols="12" sm="6" class="pt-2 pb-2">
+                  <LocationSearchResultCard :location="location" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12">
+                  <v-btn size="small" color="primary" @click="clearRecentLocations">
+                    {{ $t('Common.Clear') }}
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </template>
             <p v-else>
               {{ $t('LocationSelector.RecentLocations', recentLocations.length) }}
             </p>
@@ -148,7 +156,6 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    LocationRecentChip: defineAsyncComponent(() => import('../components/LocationRecentChip.vue')),
     LocationSearchResultCard: defineAsyncComponent(() => import('../components/LocationSearchResultCard.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
   },
