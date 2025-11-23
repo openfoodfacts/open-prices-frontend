@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ዋጋ ጠፍቷል",
+		"PricePerMissing": "ዋጋ በአንድ ይጎድላል",
 		"PriceAlreadyUploaded": "ዋጋ አስቀድሞ ተሰቅሏል።",
 		"PriceReadyToBeUploaded": "ዋጋ ለመሰቀል ዝግጁ ነው።",
 		"PricesAlreadyUploaded": "ዋጋዎች አስቀድመው ተሰቅለዋል።",
