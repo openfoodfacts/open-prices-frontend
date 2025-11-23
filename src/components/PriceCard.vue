@@ -11,8 +11,8 @@
             {{ productTitle }}
           </h3>
 
-          <ProductDetailsRow v-if="!hideProductDetailsRow && hasProduct" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="readonly" />
-          <PriceCategoryDetailsRow v-else-if="!hideProductDetailsRow" :price="price" />
+          <ProductDetailsRow v-if="!hideProductDetailsRow && hasProduct" class="mt-0" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="readonly" />
+          <PriceCategoryDetailsRow v-else-if="!hideProductDetailsRow" class="mt-0" :price="price" />
 
           <PricePriceRow v-if="price" class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
         </v-col>
