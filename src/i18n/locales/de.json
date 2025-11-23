@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} zu bestätigende Preise | {count} zu bestätigender Preis | {count} zu bestätigende Preise",
 		"PriceCreated": "Preis erstellt!",
 		"PriceMissing": "Preis fehlt",
+		"PricePerMissing": "Preis pro fehlendem",
 		"PriceAlreadyUploaded": "Preis bereits hochgeladen",
 		"PriceReadyToBeUploaded": "Preis kann hochgeladen werden",
 		"PricesAlreadyUploaded": "Preise bereits hochgeladen",
