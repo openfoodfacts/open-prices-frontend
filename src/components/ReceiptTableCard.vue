@@ -50,8 +50,7 @@
             </div>
           </template>
           <template v-else>
-            <PriceCategoryChip :priceCategory="item.category_tag" />
-            <PriceCategoryDetailsRow :price="item" />
+            <PriceCategoryDetailsRow :price="item" :hideCategoryChip="false" />
           </template>
         </template>
         <template #[`item.price`]="{ item }">
@@ -143,7 +142,6 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
-    PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
     PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
     PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
