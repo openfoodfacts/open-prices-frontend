@@ -16,6 +16,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 import proof_utils from '../utils/proof.js'
 
 export default {
@@ -51,6 +52,7 @@ export default {
   emits: ['proofSelected', 'close'],
   data() {
     return {
+      productImageDefault: constants.PRODUCT_IMAGE_DEFAULT_URL,
       proofEditDialog: false,
     }
   },
