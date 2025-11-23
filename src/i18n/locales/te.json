@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ధర లేదు",
+		"PricePerMissing": "తప్పిపోయిన ప్రతి దానికి ధర",
 		"PriceAlreadyUploaded": "ధర ఇప్పటికే అప్‌లోడ్ చేయబడింది",
 		"PriceReadyToBeUploaded": "ధర అప్‌లోడ్ చేయడానికి సిద్ధంగా ఉంది",
 		"PricesAlreadyUploaded": "ధరలు ఇప్పటికే అప్‌లోడ్ చేయబడ్డాయి",
