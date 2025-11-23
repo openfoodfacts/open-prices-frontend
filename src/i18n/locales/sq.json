@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Çmimi mungon",
+		"PricePerMissing": "Çmimi për person të zhdukur",
 		"PriceAlreadyUploaded": "Çmimi është ngarkuar tashmë",
 		"PriceReadyToBeUploaded": "Çmimi gati për t'u ngarkuar",
 		"PricesAlreadyUploaded": "Çmimet janë ngarkuar tashmë.",
