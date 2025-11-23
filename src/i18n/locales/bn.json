@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "দাম উল্লেখ করা হয়নি",
+		"PricePerMissing": "প্রতি অনুপস্থিত জিনিসের দাম",
 		"PriceAlreadyUploaded": "দাম ইতিমধ্যেই আপলোড করা হয়েছে।",
 		"PriceReadyToBeUploaded": "দাম আপলোডের জন্য প্রস্তুত",
 		"PricesAlreadyUploaded": "দাম ইতিমধ্যেই আপলোড করা হয়েছে",
