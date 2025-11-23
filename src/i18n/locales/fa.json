@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "قیمت موجود نیست",
+		"PricePerMissing": "قیمت به ازای هر عدد گمشده",
 		"PriceAlreadyUploaded": "قیمت قبلاً آپلود شده است",
 		"PriceReadyToBeUploaded": "قیمت آماده بارگذاری است",
 		"PricesAlreadyUploaded": "قیمت‌ها قبلاً بارگذاری شده‌اند",
