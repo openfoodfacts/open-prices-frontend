@@ -146,16 +146,16 @@ export default {
       }
       return constants.PRICE_TYPE_LIST
     },
-    productBarcodeFormFilled() {
+    productProductFormFilled() {
       let keys = ['product_code']
       return Object.keys(this.productForm).filter(k => keys.includes(k)).every(k => !!this.productForm[k])
     },
-    productCategoryFormFilled() {
+    categoryProductFormFilled() {
       let keys = ['category_tag']  // 'origins_tags'
       return Object.keys(this.productForm).filter(k => keys.includes(k)).every(k => !!this.productForm[k])
     },
     productFormFilled() {
-      return this.productBarcodeFormFilled || this.productCategoryFormFilled
+      return this.productIsTypeCategory ? this.categoryProductFormFilled : this.productProductFormFilled
     },
   },
   watch: {

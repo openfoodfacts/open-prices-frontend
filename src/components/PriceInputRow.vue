@@ -207,15 +207,24 @@ export default {
       }
       return null
     },
+    productPriceFormFilled() {
+      let keys = ['price', 'currency']
+      return Object.keys(this.priceForm).filter(k => keys.includes(k)).every(k => !!this.priceForm[k])
+    },
+    categoryPriceFormFilled() {
+      let keys = ['price_per', 'price', 'currency']
+      return Object.keys(this.priceForm).filter(k => keys.includes(k)).every(k => !!this.priceForm[k])
+    },
     priceFormFilled() {
-      let keysProduct = ['price', 'currency']
-      let keysCategory = ['price_per', 'price', 'currency']
-      return this.productIsTypeCategory ? Object.keys(this.priceForm).filter(k => keysCategory.includes(k)).every(k => !!this.priceForm[k]) : Object.keys(this.priceForm).filter(k => keysProduct.includes(k)).every(k => !!this.priceForm[k])
+      return this.productIsTypeCategory ? this.categoryPriceFormFilled : this.productPriceFormFilled
     },
   },
   watch: {
-    priceFormFilled(newPriceFormFilled, oldPriceFormFilled) {  // eslint-disable-line no-unused-vars
-      this.$emit('filled', newPriceFormFilled)
+    priceFormFilled: {
+      handler(newPriceFormFilled, oldPriceFormFilled) {  // eslint-disable-line no-unused-vars
+        this.$emit('filled', newPriceFormFilled)
+      },
+      immediate: true
     }
   },
   mounted() {

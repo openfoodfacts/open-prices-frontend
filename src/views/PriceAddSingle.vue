@@ -35,17 +35,17 @@
       <!-- Step 3: price -->
       <v-col cols="12" md="6" lg="4">
         <v-card
-          :class="priceFormFilled ? 'border-success' : 'border-transparent'"
+          :class="pricePriceFormFilled ? 'border-success' : 'border-transparent'"
           :title="$t('AddPriceSingle.PriceDetails.Title')"
           prepend-icon="mdi-tag-plus-outline"
           height="100%"
         >
-          <template v-if="priceFormFilled" #append>
+          <template v-if="pricePriceFormFilled" #append>
             <v-icon icon="mdi-checkbox-marked-circle" color="success" />
           </template>
           <v-divider />
           <v-card-text>
-            <PriceInputRow :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" @filled="priceFormFilled = $event" />
+            <PriceInputRow :priceForm="addPriceSingleForm" :product="addPriceSingleForm.product" @filled="pricePriceFormFilled = $event" />
           </v-card-text>
         </v-card>
       </v-col>
@@ -105,7 +105,7 @@ export default {
         proof_id: null,
       },
       productFormFilled: false,
-      priceFormFilled: false,
+      pricePriceFormFilled: false,
       loading: false,
     }
   },
@@ -116,7 +116,7 @@ export default {
       return Object.keys(this.addPriceSingleForm).filter(k => keys.includes(k)).every(k => !!this.addPriceSingleForm[k])
     },
     formFilled() {
-      return this.productFormFilled && this.proofFormFilled && this.priceFormFilled
+      return this.productFormFilled && this.proofFormFilled && this.pricePriceFormFilled
     },
   },
   methods: {
