@@ -7,7 +7,25 @@
     <v-divider />
 
     <v-card-text>
-      <v-data-table :headers="headers" :items="items" :items-per-page="tablePageLimit" class="elevation-1" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
+      <v-data-table :headers="headers" :items="items" :row-props="setTableRowClass" :items-per-page="tablePageLimit" fixed-header hide-default-footer mobile-breakpoint="md" :mobile="null" :disable-sort="true" density="comfortable">
+        <template #[`item.status`]="{ item }">
+          <v-sheet v-if="item.existingPrice">
+            <v-icon icon="mdi-tag-check-outline" :disabled="true" :title="$t('Common.PriceAlreadyUploaded')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-disabled ml-2">{{ $t('Common.PriceAlreadyUploaded') }}</span>
+          </v-sheet>
+          <v-sheet v-else-if="!item.price">
+            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.PriceMissing')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.PriceMissing') }}</span>
+          </v-sheet>
+          <v-sheet v-else-if="itemIsCategory(item) ? !item.category_tag : !item.product_code">
+            <v-icon icon="mdi-alert-circle" color="warning" :title="$t('Common.ProductMissing')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-warning ml-2">{{ $t('Common.ProductMissing') }}</span>
+          </v-sheet>
+          <v-sheet v-else>
+            <v-icon icon="mdi-tag-plus-outline" color="success" :title="$t('Common.PriceReadyToBeUploaded')" />
+            <span v-if="$vuetify.display.smAndDown" class="text-success ml-2">{{ $t('Common.PriceReadyToBeUploaded') }}</span>
+          </v-sheet>
+        </template>
         <template #[`item.product_name`]="{ item }">
           <v-text-field
             v-if="item.manuallyAdded"
@@ -18,12 +36,6 @@
           />
           <p v-else>
             {{ item.product_name }}
-          </p>
-          <p v-if="showInfoDetails">
-            <span v-if="item.existingPrice" class="text-caption text-warning">{{ $t('ReceiptAssistant.PriceAlreadyCreated') }}</span>
-            <span v-else-if="!item.price" class="text-caption text-error">{{ $t('Common.PriceMissing') }}</span>
-            <span v-else-if="itemIsCategory(item) ? !item.category_tag : !item.product_code" class="text-caption text-error">{{ $t('Common.ProductMissing') }}</span>
-            <span v-else class="text-caption text-success">{{ $t('ReceiptAssistant.PriceReadyToBeAdded') }}</span>
           </p>
         </template>
         <template #[`item.product`]="{ item }">
@@ -158,6 +170,7 @@ export default {
     return {
       items: [],
       headers: [
+        { title: this.$t('Common.Status'), key: 'status' },
         { title: this.$t('Common.Text'), key: 'product_name' },
         { title: this.$t('Common.Product'), key: 'product' },
         { title: this.$t('Common.Price'), key: 'price', minWidth: '150px' },
@@ -230,6 +243,13 @@ export default {
         }
         return item
       })
+    },
+    setTableRowClass(item) {
+      // grey out existing prices
+      if (item.item.existingPrice) {
+        return { class: 'text-disabled' }
+      }
+      return { class: '' }
     },
     replaceCommaWithDot(input) {
       return utils.replaceCommaWithDot(input)
