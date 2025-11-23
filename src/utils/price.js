@@ -13,6 +13,20 @@ function prettyPrice(price, currency) {
   })
 }
 
+/**
+ * Quantity should be in grams or milliliters.
+ *
+ * Examples:
+ * - price: 2.5 €, quantity: 500 ml => 5 €/L
+ * - price: 3 €, quantity: 250 g => 12 €/kg
+ */
+function pricePerQuantity(price, quantity) {
+  if (!quantity || quantity === 0) {
+    return price
+  }
+  return (price / quantity) * 1000
+}
+
 function priceSum(priceList) {
   return priceList.reduce((acc, price) => {
     return acc + parseFloat(price.price) * (price.receipt_quantity ? parseFloat(price.receipt_quantity) : 1)
@@ -25,6 +39,7 @@ function getPriceTypeIcon(priceType) {
 
 export default {
   prettyPrice,
+  pricePerQuantity,
   priceSum,
   getPriceTypeIcon
 }
