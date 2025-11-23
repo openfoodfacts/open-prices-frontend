@@ -1,6 +1,6 @@
 <template>
-  <v-chip class="ml-1" variant="outlined" size="small" density="comfortable">
-    x{{ priceQuantityPurchased }}
+  <v-chip variant="outlined" size="small" density="comfortable">
+    {{ prefix }}{{ priceQuantityPurchased }}
   </v-chip>
 </template>
 
@@ -10,6 +10,11 @@ export default {
     priceQuantityPurchased: {
       type: Number,
       required: true
+    }
+  },
+  computed: {
+    prefix() {
+      return 'x'
     }
   }
 }
