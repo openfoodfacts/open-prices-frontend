@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} מחירים לאימות | מחיר לאימות | {count} מחירים לאימות",
 		"PriceCreated": "המחיר נוצר!",
 		"PriceMissing": "מחיר חסר",
+		"PriceAlreadyUploaded": "המחיר כבר הועלה",
+		"PriceReadyToBeUploaded": "המחיר מוכן להעלאה",
 		"PricesAlreadyUploaded": "המחירים כבר הועלו",
 		"PricesMore": "מחירים נוספים",
 		"PricesAdded": "נוספו מחירים",
@@ -435,6 +437,7 @@
 		"SourceCode": "קוד מקור",
 		"Start": "התחלה",
 		"Stats": "סטטיסטיקה",
+		"Status": "מצב",
 		"SuggestedBarcode": "ברקוד מומלץ:",
 		"Summary": "תקציר",
 		"TaglineOriginal": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "אתגר הקהילה"
+		},
+		"Validate": {
+			"Title": "אימות"
 		},
 		"ValidatePrices": {
 			"Title": "אימות מחירים"
