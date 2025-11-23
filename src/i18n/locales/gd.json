@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Prìs a dhìth",
+		"PricePerMissing": "Prìs gach fear a tha a dhìth",
 		"PriceAlreadyUploaded": "Prìs air a luchdadh suas mu thràth",
 		"PriceReadyToBeUploaded": "Prìs deiseil airson a luchdachadh suas",
 		"PricesAlreadyUploaded": "Prìsean air an luchdachadh suas mu thràth",
