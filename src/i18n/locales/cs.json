@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena vytvořena!",
 		"PriceMissing": "Chybí cena",
+		"PriceAlreadyUploaded": "Cena již nahrána",
+		"PriceReadyToBeUploaded": "Cena připravena k nahrání",
 		"PricesAlreadyUploaded": "Ceny již nahrány",
 		"PricesMore": "Více cen",
 		"PricesAdded": "Ceny přidány",
@@ -435,6 +437,7 @@
 		"SourceCode": "Zdrojový kód",
 		"Start": "Start",
 		"Stats": "Statistiky",
+		"Status": "Stav",
 		"SuggestedBarcode": "Doporučený čárový kód:",
 		"Summary": "Přehled",
 		"TaglineOriginal": "Otevřená crowdsourcovaná databáze cen potravin",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Komunitní výzva"
+		},
+		"Validate": {
+			"Title": "Ověřit"
 		},
 		"ValidatePrices": {
 			"Title": "Potvrďte ceny"
