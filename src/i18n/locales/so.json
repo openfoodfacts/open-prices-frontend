@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Qiimaha maqan",
+		"PricePerMissing": "Qiimaha halkii maqan",
 		"PriceAlreadyUploaded": "Qiimaha mar hore la soo geliyay",
 		"PriceReadyToBeUploaded": "Qiimaha diyaar in la soo geliyo",
 		"PricesAlreadyUploaded": "Qiimaha mar hore la soo galiyay",
