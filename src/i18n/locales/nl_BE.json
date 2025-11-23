@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} te valideren prijzen | {count} te valideren prijs | {count} te valideren prijzen",
 		"PriceCreated": "Prijs aangemaakt!",
 		"PriceMissing": "Prijs ontbreekt",
+		"PricePerMissing": "Prijs per ontbrekende",
 		"PriceAlreadyUploaded": "Prijs al geüpload",
 		"PriceReadyToBeUploaded": "Prijs klaar om te uploaden",
 		"PricesAlreadyUploaded": "Prijzen al geüpload",
