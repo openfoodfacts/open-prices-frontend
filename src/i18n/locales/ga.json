@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Praghas ar iarraidh",
+		"PricePerMissing": "Praghas in aghaidh an easnaimh",
 		"PriceAlreadyUploaded": "Praghas uaslódáilte cheana féin",
 		"PriceReadyToBeUploaded": "Praghas réidh le huaslódáil",
 		"PricesAlreadyUploaded": "Praghsanna uaslódáilte cheana féin",
