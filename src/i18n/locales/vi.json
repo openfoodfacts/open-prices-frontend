@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Giá bị thiếu",
+		"PriceAlreadyUploaded": "Giá đã được tải lên",
+		"PriceReadyToBeUploaded": "Giá đã sẵn sàng để tải lên",
 		"PricesAlreadyUploaded": "Giá đã được tải lên",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Bắt đầu",
 		"Stats": "Stats",
+		"Status": "Trạng thái",
 		"SuggestedBarcode": "Mã vạch được đề xuất:",
 		"Summary": "Tổng quan",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Xác thực"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
