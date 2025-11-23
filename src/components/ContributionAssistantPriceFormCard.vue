@@ -103,7 +103,7 @@ export default {
         id: null,
         type: null,
         category_tag: null,
-        origins_tags: '',
+        origins_tags: [],
         labels_tags: [],
         price: null,
         price_per: null,

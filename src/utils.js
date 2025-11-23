@@ -129,6 +129,16 @@ function replaceCommaWithDot(value) {
   return value
 }
 
+function replaceStringWithList(value) {
+  if (value === null) {
+    return []
+  }
+  if (typeof value === 'string') {
+    return value ? [value] : []
+  }
+  return value
+}
+
 export default {
   debounce,
   getDocumentScrollPercentage,
@@ -147,5 +157,6 @@ export default {
   getLocaleLabelTags,
   getLocaleLabelTagName,
   toTitleCase,
-  replaceCommaWithDot
+  replaceCommaWithDot,
+  replaceStringWithList
 }
