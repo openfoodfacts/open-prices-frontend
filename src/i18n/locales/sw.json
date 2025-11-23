@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Bei haipo",
+		"PricePerMissing": "Bei kwa kila kukosa",
 		"PriceAlreadyUploaded": "Bei tayari imepakiwa",
 		"PriceReadyToBeUploaded": "Bei tayari kupakiwa",
 		"PricesAlreadyUploaded": "Bei tayari zimepakiwa",
