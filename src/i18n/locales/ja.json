@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "価格がありません",
+		"PricePerMissing": "紛失品1個あたりの価格",
 		"PriceAlreadyUploaded": "価格はすでにアップロードされています",
 		"PriceReadyToBeUploaded": "価格はアップロード準備完了です",
 		"PricesAlreadyUploaded": "価格はすでにアップロードされています",
