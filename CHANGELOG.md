@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.147.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.147.1...v1.147.2) (2025-11-23)
+
+
+### Bug Fixes
+
+* **Icons:** move to root public folder to avoid 404 ([#1874](https://github.com/openfoodfacts/open-prices-frontend/issues/1874)) ([0997490](https://github.com/openfoodfacts/open-prices-frontend/commit/09974909f1406286af610af2e9ea371e999830d5))
+
+
+### Technical
+
+* cleanup public/img folder. Add common icons ([#1872](https://github.com/openfoodfacts/open-prices-frontend/issues/1872)) ([0d6d7c8](https://github.com/openfoodfacts/open-prices-frontend/commit/0d6d7c8880fc9320c1dfc08b8fde1cdcaae971a8))
+* **l10n:** New Crowdin translations to review and merge ([#1863](https://github.com/openfoodfacts/open-prices-frontend/issues/1863)) ([fa2cf43](https://github.com/openfoodfacts/open-prices-frontend/commit/fa2cf430f6ca59e9d31206a2fa335314a58d58b2))
+* **Location input:** merge LocationSearchResultCard & Location selection together ([#1871](https://github.com/openfoodfacts/open-prices-frontend/issues/1871)) ([bc4a5bb](https://github.com/openfoodfacts/open-prices-frontend/commit/bc4a5bbbbfb01d6695650a5531838ef4da691f76))
+* **Location Selector:** new LocationSearchResultCard component ([#1867](https://github.com/openfoodfacts/open-prices-frontend/issues/1867)) ([24f17eb](https://github.com/openfoodfacts/open-prices-frontend/commit/24f17ebf956731d1ea85b89672f67c0b171e2fdc))
+* **Location Selector:** use LocationSearchResultCard to display the recent list ([#1870](https://github.com/openfoodfacts/open-prices-frontend/issues/1870)) ([0a9ddf7](https://github.com/openfoodfacts/open-prices-frontend/commit/0a9ddf75f4822600bbab8ad33406e9e6e33a1bad))
+* **Locations:** new CountryCityChip component ([#1869](https://github.com/openfoodfacts/open-prices-frontend/issues/1869)) ([beeae33](https://github.com/openfoodfacts/open-prices-frontend/commit/beeae33be7c7518063d2b1a077f610e648916eff))
+* **Price Table:** add translations. Use existing sub components ([#1859](https://github.com/openfoodfacts/open-prices-frontend/issues/1859)) ([d648f2f](https://github.com/openfoodfacts/open-prices-frontend/commit/d648f2f33ca1720ff50008a45187b06693f59c17))
+* **PriceCategoryDetailsRow:** add option to display the price's category_tag chip before the origins & labels ([#1860](https://github.com/openfoodfacts/open-prices-frontend/issues/1860)) ([e4e64be](https://github.com/openfoodfacts/open-prices-frontend/commit/e4e64be599ffb96e58fb6bd62ff6880760f7295b))
+* **PriceInputRow:** better manage formFilled event. Include price_per missing error message. refactoor with ProductInputRow ([#1866](https://github.com/openfoodfacts/open-prices-frontend/issues/1866)) ([2737b0c](https://github.com/openfoodfacts/open-prices-frontend/commit/2737b0c4e93098061037bec4362f7c59ef5a1af4))
+* **PriceInputRow:** new pricePerQuantity method. refactor with PricePriceRow ([#1865](https://github.com/openfoodfacts/open-prices-frontend/issues/1865)) ([cfee7eb](https://github.com/openfoodfacts/open-prices-frontend/commit/cfee7eb3f53de1932bb3b63670c469299fc3e57f))
+* **PriceQuantityPurchasedChip:** remove hard-coded margin-left class ([#1864](https://github.com/openfoodfacts/open-prices-frontend/issues/1864)) ([c530d6e](https://github.com/openfoodfacts/open-prices-frontend/commit/c530d6ecf13048c277e8172f29a2e5a747a250bc))
+* **ProductCard:** for fallback (default) image, use local icon instead of fetching it from an external URL ([#1873](https://github.com/openfoodfacts/open-prices-frontend/issues/1873)) ([1d03a9b](https://github.com/openfoodfacts/open-prices-frontend/commit/1d03a9b6f08db19fb01b67c194bcd85244318d9a))
+
 ## [1.147.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.147.0...v1.147.1) (2025-11-23)
 
 
