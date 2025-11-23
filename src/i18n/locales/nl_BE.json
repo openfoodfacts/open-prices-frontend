@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} te valideren prijzen | {count} te valideren prijs | {count} te valideren prijzen",
 		"PriceCreated": "Prijs aangemaakt!",
 		"PriceMissing": "Prijs ontbreekt",
+		"PriceAlreadyUploaded": "Prijs al geüpload",
+		"PriceReadyToBeUploaded": "Prijs klaar om te uploaden",
 		"PricesAlreadyUploaded": "Prijzen al geüpload",
 		"PricesMore": "Meer prijzen",
 		"PricesAdded": "Prijzen toegevoegd",
@@ -435,6 +437,7 @@
 		"SourceCode": "Broncode",
 		"Start": "Beginnen",
 		"Stats": "Statistieken",
+		"Status": "Toestand",
 		"SuggestedBarcode": "Voorgestelde barcode:",
 		"Summary": "Samenvatting",
 		"TaglineOriginal": "Een open, crowdsourced database van voedselprijzen",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Uitdaging voor de gemeenschap"
+		},
+		"Validate": {
+			"Title": "Bevestigen"
 		},
 		"ValidatePrices": {
 			"Title": "Prijzen valideren"
