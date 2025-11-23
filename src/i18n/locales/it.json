@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Prezzo creato!",
 		"PriceMissing": "Prezzo mancante",
+		"PriceAlreadyUploaded": "Prezzo già caricato",
+		"PriceReadyToBeUploaded": "Prezzo pronto per essere caricato",
 		"PricesAlreadyUploaded": "Prezzi già caricati",
 		"PricesMore": "Altri prezzi",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Avvia",
 		"Stats": "Statistiche",
+		"Status": "Stato",
 		"SuggestedBarcode": "Codice a barre suggerito:",
 		"Summary": "Sommario",
 		"TaglineOriginal": "Un database aperto in crowdsourcing dei prezzi",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Convalida"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
