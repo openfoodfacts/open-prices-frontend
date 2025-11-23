@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Prețul lipsește",
+		"PriceAlreadyUploaded": "Prețul este deja încărcat",
+		"PriceReadyToBeUploaded": "Prețul este gata de încărcat",
 		"PricesAlreadyUploaded": "Prețurile sunt deja încărcate",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Stare",
 		"SuggestedBarcode": "Cod de bare sugerat:",
 		"Summary": "Continut",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validați"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
