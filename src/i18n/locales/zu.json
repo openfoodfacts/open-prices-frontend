@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Intengo ayikho",
+		"PricePerMissing": "Inani ngokushoda ngakunye",
 		"PriceAlreadyUploaded": "Intengo isivele ilayishiwe",
 		"PriceReadyToBeUploaded": "Intengo isilungele ukulayishwa",
 		"PricesAlreadyUploaded": "Izintengo sezivele zilayishiwe",
