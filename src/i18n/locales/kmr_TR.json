@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Biha wenda ye",
+		"PricePerMissing": "Bihayê her windabûnê",
 		"PriceAlreadyUploaded": "Biha jixwe hatiye barkirin",
 		"PriceReadyToBeUploaded": "Biha amade ye ji bo barkirinê",
 		"PricesAlreadyUploaded": "Bihayên ku berê hatine barkirin",
