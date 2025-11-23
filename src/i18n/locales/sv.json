@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Pris skapat!",
 		"PriceMissing": "Pris saknas",
+		"PricePerMissing": "Pris per saknad",
 		"PriceAlreadyUploaded": "Priset har redan laddats upp",
 		"PriceReadyToBeUploaded": "Priset är klart att laddas upp",
 		"PricesAlreadyUploaded": "Priserna har redan laddats upp",
