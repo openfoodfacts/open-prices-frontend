@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} priser at validere | {count} pris at validere | {count} priser skal valideres",
 		"PriceCreated": "Pris oprettet!",
 		"PriceMissing": "Pris mangler",
+		"PriceAlreadyUploaded": "Prisen er allerede uploadet",
+		"PriceReadyToBeUploaded": "Prisen er klar til at blive uploadet",
 		"PricesAlreadyUploaded": "Priserne er allerede uploadet",
 		"PricesMore": "Flere priser",
 		"PricesAdded": "Priser tilføjet",
@@ -435,12 +437,14 @@
 		"SourceCode": "Kildekode",
 		"Start": "Start",
 		"Stats": "Statistik",
+		"Status": "Status",
 		"SuggestedBarcode": "Foreslået stregkode:",
 		"Summary": "Oversigt",
 		"TaglineOriginal": "En åben crowdsourced database over fødevarepriser",
 		"TaglineAlt1": "Den åbne crowdsourcede database over priser",
 		"TaglineAlt2": "Den åbne crowdsourcing-database over fødevare- og produktpriser",
 		"TaglineAlt3": "Priser bør være frie",
+		"Text": "Tekst",
 		"Thanks": "Tak",
 		"Theme": "Tema",
 		"ThemeLight": "Lyst",
@@ -740,7 +744,7 @@
 		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Prisen er allerede oprettet for varen",
 		"PriceReadyToBeAdded": "Pris klar til at blive tilføjet",
-		"ReceiptItems": "Kvittering for varer, tjek og reparer",
+		"ReceiptItems": "Kvitteringsartikler",
 		"ReceiptItemsCheck": "Kvittering for varer, tjek og reparer",
 		"UploadOnlyNewPrices": "Upload kun nye priser ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload eller opdater alle gyldige priser ({nbPrices})",
@@ -891,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Fællesskabsudfordring"
+		},
+		"Validate": {
+			"Title": "Bekræftelse"
 		},
 		"ValidatePrices": {
 			"Title": "Validér priser"

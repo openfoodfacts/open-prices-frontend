@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Pris mangler",
+		"PriceAlreadyUploaded": "Pris allerede lastet opp",
+		"PriceReadyToBeUploaded": "Pris klar til å lastes opp",
 		"PricesAlreadyUploaded": "Prisene er allerede lastet opp",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,12 +437,14 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "Foreslått barkode:",
 		"Summary": "Sammendrag",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
 		"TaglineAlt3": "Prices should be free",
+		"Text": "Tekst",
 		"Thanks": "Thanks",
 		"Theme": "Tema",
 		"ThemeLight": "Lyst",
@@ -740,7 +744,7 @@
 		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Price already created for item",
 		"PriceReadyToBeAdded": "Price ready to be added",
-		"ReceiptItems": "Receipt items, check and fix",
+		"ReceiptItems": "Kvitterings elementer",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
@@ -891,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Godkjenn"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"

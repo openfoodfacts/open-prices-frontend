@@ -328,8 +328,8 @@
 		"ModerationFlagReasonWrongDate": "תאריך שגוי",
 		"ModerationFlagReasonOther": "אחר",
 		"ModerationFlagCreateSuccess": "תודה על הדיווח שלך!",
-		"ModerationFlagStatusOpen": "לִפְתוֹחַ",
-		"ModerationFlagStatusClosed": "סָגוּר",
+		"ModerationFlagStatusOpen": "פתיחה",
+		"ModerationFlagStatusClosed": "סגירה",
 		"MyConsumption": "הצריכה שלי",
 		"MyDashboard": "לוח המחוונים שלי",
 		"MyPrices": "המחירים שלי",
@@ -342,7 +342,7 @@
 		"NotAPrice": "לא מחיר",
 		"Offline": "לא מקוון",
 		"Online": "מקוון",
-		"Open": "לִפְתוֹחַ",
+		"Open": "פתיחה",
 		"OpenWithTheAssistant": "פתיחה עם המסייע",
 		"Order": "סדר",
 		"OrderLocationCountDESC": "כמות מקומות",
@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} מחירים לאימות | מחיר לאימות | {count} מחירים לאימות",
 		"PriceCreated": "המחיר נוצר!",
 		"PriceMissing": "מחיר חסר",
+		"PriceAlreadyUploaded": "המחיר כבר הועלה",
+		"PriceReadyToBeUploaded": "המחיר מוכן להעלאה",
 		"PricesAlreadyUploaded": "המחירים כבר הועלו",
 		"PricesMore": "מחירים נוספים",
 		"PricesAdded": "נוספו מחירים",
@@ -435,12 +437,14 @@
 		"SourceCode": "קוד מקור",
 		"Start": "התחלה",
 		"Stats": "סטטיסטיקה",
+		"Status": "מצב",
 		"SuggestedBarcode": "ברקוד מומלץ:",
 		"Summary": "תקציר",
 		"TaglineOriginal": "מסד נתונים פתוח למחירי מוצרי מזון במיקור המונים",
 		"TaglineAlt1": "מסד הנתונים הפתוח למחירים במיקור המונים",
 		"TaglineAlt2": "מסד הנתונים הפתוח למחירי מוצרי מזון ומוצרים במיקור המונים",
 		"TaglineAlt3": "המחירים אמורים להיות חופשיים",
+		"Text": "טֶקסט",
 		"Thanks": "תודה",
 		"Theme": "ערכת עיצוב",
 		"ThemeLight": "בהיר",
@@ -740,7 +744,7 @@
 		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "כבר נוצר מחיר לפריט",
 		"PriceReadyToBeAdded": "המחיר מוכן להוספה",
-		"ReceiptItems": "פריטים בקבלה, בדיקה ותיקון",
+		"ReceiptItems": "פריטי קבלה",
 		"ReceiptItemsCheck": "פריטים בקבלה, בדיקה ותיקון",
 		"UploadOnlyNewPrices": "להעלות מחירים חדשים בלבד ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "להעלות או לעדכן את כל המחירים התקפים ({nbPrices})",
@@ -891,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "אתגר הקהילה"
+		},
+		"Validate": {
+			"Title": "אימות"
 		},
 		"ValidatePrices": {
 			"Title": "אימות מחירים"

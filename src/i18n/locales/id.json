@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} harga untuk divalidasi | {count} harga untuk divalidasi | {count} harga untuk divalidasi",
 		"PriceCreated": "Harga dibuat!",
 		"PriceMissing": "Harga hilang",
+		"PriceAlreadyUploaded": "Harga sudah diunggah",
+		"PriceReadyToBeUploaded": "Harga siap diunggah",
 		"PricesAlreadyUploaded": "Harga sudah diunggah",
 		"PricesMore": "Harga lebih lanjut",
 		"PricesAdded": "Harga ditambahkan",
@@ -435,12 +437,14 @@
 		"SourceCode": "Sumber kode",
 		"Start": "Mulai",
 		"Stats": "Statistik",
+		"Status": "Status",
 		"SuggestedBarcode": "Kode batang yang disarankan:",
 		"Summary": "Ringkasan",
 		"TaglineOriginal": "Basis data harga makanan yang terbuka dan bersumber dari banyak orang",
 		"TaglineAlt1": "Basis data harga yang terbuka dan bersumber dari banyak orang",
 		"TaglineAlt2": "Basis data crowdsourced terbuka untuk harga makanan dan produk",
 		"TaglineAlt3": "Harga harus gratis",
+		"Text": "Teks",
 		"Thanks": "Terima Kasih",
 		"Theme": "Tema",
 		"ThemeLight": "Terang",
@@ -740,7 +744,7 @@
 		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Harga sudah ditetapkan untuk item tersebut",
 		"PriceReadyToBeAdded": "Harga siap ditambahkan",
-		"ReceiptItems": "Item-item pada bukti pembayaran, periksa dan perbaiki",
+		"ReceiptItems": "Barang tanda terima",
 		"ReceiptItemsCheck": "Item-item pada bukti pembayaran, periksa dan perbaiki",
 		"UploadOnlyNewPrices": "Unggah hanya harga baru ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Unggah atau perbarui semua harga yang valid ({nbPrices})",
@@ -891,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Tantangan komunitas"
+		},
+		"Validate": {
+			"Title": "Validasikan"
 		},
 		"ValidatePrices": {
 			"Title": "Validasi harga"

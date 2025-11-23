@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} zu bestätigende Preise | {count} zu bestätigender Preis | {count} zu bestätigende Preise",
 		"PriceCreated": "Preis erstellt!",
 		"PriceMissing": "Preis fehlt",
+		"PriceAlreadyUploaded": "Preis bereits hochgeladen",
+		"PriceReadyToBeUploaded": "Preis kann hochgeladen werden",
 		"PricesAlreadyUploaded": "Preise bereits hochgeladen",
 		"PricesMore": "Weitere Preise",
 		"PricesAdded": "Preise hinzugefügt",
@@ -435,12 +437,14 @@
 		"SourceCode": "Quellcode",
 		"Start": "Start",
 		"Stats": "Statistiken",
+		"Status": "Status",
 		"SuggestedBarcode": "Vorgeschlagener Strichcode:",
 		"Summary": "Zusammenfassung",
 		"TaglineOriginal": "Eine offene Gemeinschaftsdatenbank für Lebensmittelpreise",
 		"TaglineAlt1": "Eine offene öffentlich zugängliche Datenbank der Preise",
 		"TaglineAlt2": "Die offene Gemeinschaftsdatenbank für Lebensmittel- und Produktpreise",
 		"TaglineAlt3": "Preise sollten frei zugänglich sein",
+		"Text": "Text",
 		"Thanks": "Danke",
 		"Theme": "Farbschema",
 		"ThemeLight": "Hell",
@@ -740,7 +744,7 @@
 		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Preis bereits für Artikel erstellt",
 		"PriceReadyToBeAdded": "Preis kann hinzugefügt werden",
-		"ReceiptItems": "Belegpositionen prüfen und korrigieren",
+		"ReceiptItems": "Belegartikel",
 		"ReceiptItemsCheck": "Belegpositionen prüfen und korrigieren",
 		"UploadOnlyNewPrices": "Nur neue Preise ({nbPrices}) hochladen",
 		"UploadOrUpdateAllValidPrices": "Alle gültigen Preise ({nbPrices}) hochladen oder aktualisieren",
@@ -891,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Gemeinschaftliche Herausforderung"
+		},
+		"Validate": {
+			"Title": "Bestätigen"
 		},
 		"ValidatePrices": {
 			"Title": "Preise prüfen"

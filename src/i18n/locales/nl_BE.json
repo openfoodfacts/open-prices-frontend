@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} te valideren prijzen | {count} te valideren prijs | {count} te valideren prijzen",
 		"PriceCreated": "Prijs aangemaakt!",
 		"PriceMissing": "Prijs ontbreekt",
+		"PriceAlreadyUploaded": "Prijs al geüpload",
+		"PriceReadyToBeUploaded": "Prijs klaar om te uploaden",
 		"PricesAlreadyUploaded": "Prijzen al geüpload",
 		"PricesMore": "Meer prijzen",
 		"PricesAdded": "Prijzen toegevoegd",
@@ -435,12 +437,14 @@
 		"SourceCode": "Broncode",
 		"Start": "Beginnen",
 		"Stats": "Statistieken",
+		"Status": "Toestand",
 		"SuggestedBarcode": "Voorgestelde barcode:",
 		"Summary": "Samenvatting",
 		"TaglineOriginal": "Een open, crowdsourced database van voedselprijzen",
 		"TaglineAlt1": "De open, crowdsourced database van prijzen",
 		"TaglineAlt2": "De open, crowdsourced database van voedsel- en productprijzen",
 		"TaglineAlt3": "Prijzen moeten gratis zijn",
+		"Text": "Tekst",
 		"Thanks": "Bedankt",
 		"Theme": "Thema",
 		"ThemeLight": "Licht",
@@ -740,7 +744,7 @@
 		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Prijs is al aangemaakt voor artikel",
 		"PriceReadyToBeAdded": "Prijs klaar om toegevoegd te worden",
-		"ReceiptItems": "Ontvangstbewijzen, controleren en in orde maken",
+		"ReceiptItems": "Ontvangstartikelen",
 		"ReceiptItemsCheck": "Ontvangstbewijzen, controleren en in orde maken",
 		"UploadOnlyNewPrices": "Upload alleen nieuwe prijzen ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload of update alle geldige prijzen ({nbPrices})",
@@ -891,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Uitdaging voor de gemeenschap"
+		},
+		"Validate": {
+			"Title": "Bevestigen"
 		},
 		"ValidatePrices": {
 			"Title": "Prijzen valideren"

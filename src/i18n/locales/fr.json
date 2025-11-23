@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prix à valider | {count} prix à valider | {count} prix à valider",
 		"PriceCreated": "Prix créé !",
 		"PriceMissing": "Prix manquant",
+		"PriceAlreadyUploaded": "Prix déjà affiché",
+		"PriceReadyToBeUploaded": "Prix prêt à être téléchargé",
 		"PricesAlreadyUploaded": "Les prix sont déjà téléchargés",
 		"PricesMore": "Plus de prix",
 		"PricesAdded": "Prix ajoutés",
@@ -435,12 +437,14 @@
 		"SourceCode": "Code source",
 		"Start": "Commencer",
 		"Stats": "Statistiques",
+		"Status": "État ",
 		"SuggestedBarcode": "Code-barres suggéré :",
 		"Summary": "Résumé",
 		"TaglineOriginal": "La base de données ouverte et collaborative de prix alimentaires",
 		"TaglineAlt1": "La base de données ouverte et collaborative de prix",
 		"TaglineAlt2": "La base de données ouverte et collaborative de prix alimentaires et non alimentaires",
 		"TaglineAlt3": "Les prix doivent être gratuits",
+		"Text": "Texte",
 		"Thanks": "Merci",
 		"Theme": "Thème",
 		"ThemeLight": "Clair",
@@ -740,7 +744,7 @@
 		"PriceAlreadyCreated": "Price already created",
 		"PriceAlreadyCreatedForItem": "Prix déjà créé pour l'article",
 		"PriceReadyToBeAdded": "Prix prêt à être ajouté",
-		"ReceiptItems": "Éléments de réception, vérifier et corriger",
+		"ReceiptItems": "Articles reçus",
 		"ReceiptItemsCheck": "Éléments de réception, vérifier et corriger",
 		"UploadOnlyNewPrices": "Téléverser uniquement les nouveaux prix ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Téléverser ou mettre à jour tous les prix valides ({nbPrices})",
@@ -891,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Défi communautaire"
+		},
+		"Validate": {
+			"Title": "Valider"
 		},
 		"ValidatePrices": {
 			"Title": "Valider des prix"
