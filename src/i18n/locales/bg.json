@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Липсва цена",
+		"PriceAlreadyUploaded": "Цената вече е качена",
+		"PriceReadyToBeUploaded": "Цена е готова за качване",
 		"PricesAlreadyUploaded": "Цените вече са качени",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Старт",
 		"Stats": "Stats",
+		"Status": "Статус",
 		"SuggestedBarcode": "Предложен баркод:",
 		"Summary": "Обобщение",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Потвърди"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
