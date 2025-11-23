@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Sɔngɔ tun tɛ yen",
+		"PricePerMissing": "Sani per missing",
 		"PriceAlreadyUploaded": "Price uploaded kaban",
 		"PriceReadyToBeUploaded": "Sɔngɔ labɛnnen don ka bila",
 		"PricesAlreadyUploaded": "Saniw bilala kaban",
