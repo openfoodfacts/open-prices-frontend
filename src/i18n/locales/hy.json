@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Գինը բացակայում է",
+		"PriceAlreadyUploaded": "Գինը արդեն վերբեռնված է",
+		"PriceReadyToBeUploaded": "Գինը պատրաստ է վերբեռնման համար",
 		"PricesAlreadyUploaded": "Գները արդեն վերբեռնված են",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "Առաջարկվող շտրիխ կոդ՝",
 		"Summary": "Ամփոփում",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
