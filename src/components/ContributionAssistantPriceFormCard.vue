@@ -102,6 +102,8 @@ export default {
       default: () => ({
         id: null,
         type: null,
+        product_name: null,
+        product_code: null,
         category_tag: null,
         origins_tags: [],
         labels_tags: [],
@@ -115,9 +117,7 @@ export default {
         proof: null,
         proofImage: null,
         croppedImage: null,
-        product_code: null,
         detected_product_code: null,
-        product_name: null,
       })
     },
     showProductNameField: {
