@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Prezo mankas",
+		"PricePerMissing": "Prezo por ĉiu mankanta",
 		"PriceAlreadyUploaded": "Prezo jam alŝutita",
 		"PriceReadyToBeUploaded": "Prezo preta por esti alŝutita",
 		"PricesAlreadyUploaded": "Prezoj jam alŝutitaj",
