@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Pris mangler",
+		"PricePerMissing": "Pris per manglende",
 		"PriceAlreadyUploaded": "Pris allerede lastet opp",
 		"PriceReadyToBeUploaded": "Pris klar til å lastes opp",
 		"PricesAlreadyUploaded": "Prisene er allerede lastet opp",
