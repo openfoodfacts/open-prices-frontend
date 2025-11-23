@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ບໍ່ມີລາຄາ",
+		"PricePerMissing": "ລາຄາຕໍ່ທີ່ຂາດຫາຍໄປ",
 		"PriceAlreadyUploaded": "ລາຄາອັບໂຫຼດແລ້ວ",
 		"PriceReadyToBeUploaded": "ລາຄາພ້ອມອັບໂຫລດ",
 		"PricesAlreadyUploaded": "ລາຄາອັບໂຫຼດແລ້ວ",
