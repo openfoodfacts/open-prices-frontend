@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} ціни для перевірки | {count} ціна для перевірки | {count} ціни для перевірки",
 		"PriceCreated": "Ціна створена!",
 		"PriceMissing": "Ціна відсутня",
+		"PriceAlreadyUploaded": "Ціну вже завантажено",
+		"PriceReadyToBeUploaded": "Ціна готова до завантаження",
 		"PricesAlreadyUploaded": "Ціни вже завантажено",
 		"PricesMore": "Більше цін",
 		"PricesAdded": "Ціни додано",
@@ -435,6 +437,7 @@
 		"SourceCode": "Вихідний код",
 		"Start": "Старт",
 		"Stats": "Статистика",
+		"Status": "Стан",
 		"SuggestedBarcode": "Рекомендований штрих-код:",
 		"Summary": "Загальна інформація",
 		"TaglineOriginal": "Відкрита краудсорсингова база даних цін на продукти харчування",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Випробування спільноти"
+		},
+		"Validate": {
+			"Title": "Перевірити"
 		},
 		"ValidatePrices": {
 			"Title": "Перевірити ціни"
