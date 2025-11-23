@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} doğrulanacak fiyatlar | {count} doğrulanacak fiyatlar | {count} doğrulanacak fiyatlar",
 		"PriceCreated": "Fiyat oluşturuldu!",
 		"PriceMissing": "Fiyat eksik",
+		"PricePerMissing": "Eksik başına fiyat",
 		"PriceAlreadyUploaded": "Fiyat zaten yüklendi",
 		"PriceReadyToBeUploaded": "Fiyat yüklenmeye hazır",
 		"PricesAlreadyUploaded": "Fiyatlar zaten yüklendi",
