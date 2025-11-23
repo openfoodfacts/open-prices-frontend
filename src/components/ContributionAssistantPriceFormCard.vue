@@ -31,7 +31,7 @@
         type="warning"
         variant="outlined"
         density="compact"
-        :text="formInvalidAlertText"
+        :text="productPriceFormInvalidAlertText"
       />
     </v-card-text>
     <v-divider v-if="!hideProofDetails" />
@@ -172,18 +172,18 @@ export default {
       return this.productPriceForm.type === constants.PRICE_TYPE_CATEGORY
     },
     productPriceFormValid() {
-      return this.productPriceForm &&
-             ((this.priceTagIsTypeProduct && this.productPriceForm.product_code) || (this.priceTagIsTypeCategory && this.productPriceForm.category_tag)) &&
-             this.productPriceForm.price
+      return this.productPriceForm && this.productFormFilled && this.pricePriceFormFilled
     },
     showOverlay() {
       return this.loading
     },
-    formInvalidAlertText() {
+    productPriceFormInvalidAlertText() {
       if (this.priceTagIsTypeProduct && !this.productPriceForm.product_code) {
         return this.$t('Common.ProductMissing')
       } else if (this.priceTagIsTypeCategory && !this.productPriceForm.category_tag) {
         return this.$t('Common.CategoryMissing')
+      } else if (this.priceTagIsTypeCategory && !this.productPriceForm.price_per) {
+        return this.$t('Common.PricePerMissing')
       } else if (!this.productPriceForm.price) {
         return this.$t('Common.PriceMissing')
       }
