@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prix à valider | {count} prix à valider | {count} prix à valider",
 		"PriceCreated": "Prix créé !",
 		"PriceMissing": "Prix manquant",
+		"PriceAlreadyUploaded": "Prix déjà affiché",
+		"PriceReadyToBeUploaded": "Prix prêt à être téléchargé",
 		"PricesAlreadyUploaded": "Les prix sont déjà téléchargés",
 		"PricesMore": "Plus de prix",
 		"PricesAdded": "Prix ajoutés",
@@ -435,6 +437,7 @@
 		"SourceCode": "Code source",
 		"Start": "Commencer",
 		"Stats": "Statistiques",
+		"Status": "État ",
 		"SuggestedBarcode": "Code-barres suggéré :",
 		"Summary": "Résumé",
 		"TaglineOriginal": "La base de données ouverte et collaborative de prix alimentaires",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Défi communautaire"
+		},
+		"Validate": {
+			"Title": "Valider"
 		},
 		"ValidatePrices": {
 			"Title": "Valider des prix"
