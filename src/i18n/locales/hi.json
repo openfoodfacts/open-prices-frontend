@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "कीमत बनाई गई!",
 		"PriceMissing": "मूल्य गायब",
+		"PriceAlreadyUploaded": "मूल्य पहले ही अपलोड किया जा चुका है",
+		"PriceReadyToBeUploaded": "मूल्य अपलोड करने के लिए तैयार",
 		"PricesAlreadyUploaded": "कीमतें पहले ही अपलोड की जा चुकी हैं",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "सुझाया गया बारकोड:",
 		"Summary": "संग्रह",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
