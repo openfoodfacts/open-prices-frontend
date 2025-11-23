@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} מחירים לאימות | מחיר לאימות | {count} מחירים לאימות",
 		"PriceCreated": "המחיר נוצר!",
 		"PriceMissing": "מחיר חסר",
+		"PricePerMissing": "מחיר לכל חסר",
 		"PriceAlreadyUploaded": "המחיר כבר הועלה",
 		"PriceReadyToBeUploaded": "המחיר מוכן להעלאה",
 		"PricesAlreadyUploaded": "המחירים כבר הועלו",
