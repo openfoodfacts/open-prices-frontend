@@ -13,8 +13,11 @@
       <v-chip v-if="selectedLocation" label density="comfortable">
         {{ getLocationTitle }}
       </v-chip>
+      <LocationCard v-if="selectedLocation" :location="selectedLocation" :hideLocationStats="true" :hideActionMenuButton="true" :isSelected="true" :readonly="true" />
     </v-col>
   </v-row>
+
+  {{ selectedLocation }}
 
   <LocationSelectorDialog
     v-if="locationSelectorDialog"
@@ -33,6 +36,7 @@ import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
+    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
     LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
   },
   props: {
