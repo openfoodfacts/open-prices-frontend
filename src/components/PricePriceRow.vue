@@ -57,32 +57,29 @@ export default {
     hasProductQuantity() {
       return !!this.productQuantity
     },
-    priceCurrency() {
-      return this.price.currency
-    },
-    pricePricePer() {
-      return this.price.price_per
-    },
   },
   methods: {
     getPriceValue(priceValue, priceCurrency) {
       return price_utils.prettyPrice(priceValue, priceCurrency)
     },
+    getPricePerQuantity(price, quantity) {
+      return price_utils.pricePerQuantity(price, quantity)
+    },
     getPricePerUnit(price) {
       price = parseFloat(price)
       if (this.hasCategoryTag) {
-        if (this.pricePricePer === 'UNIT') {
-          return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.priceCurrency)])
+        if (this.price.price_per === 'UNIT') {
+          return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.price.currency)])
         }
         // default to 'KILOGRAM'
-        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.priceCurrency)])
+        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.price.currency)])
       }
       if (this.hasProductQuantity) {
-        const pricePerUnit = (price / this.productQuantity) * 1000
+        const pricePerQuantity = this.getPricePerQuantity(price, this.productQuantity)
         if (this.productQuantityUnit === constants.PRODUCT_QUANTITY_UNIT_ML) {
-          return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
+          return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerQuantity, this.price.currency)])
         }
-        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceCurrency)])
+        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerQuantity, this.price.currency)])
       }
     },
     getPriceValueDisplay(price) {
@@ -90,7 +87,7 @@ export default {
       if (this.hasCategoryTag) {
         return this.getPricePerUnit(price)
       }
-      return this.getPriceValue(price, this.priceCurrency)
+      return this.getPriceValue(price, this.price.currency)
     },
     getDateFormatted(dateString) {
       return date_utils.prettyDate(dateString)

@@ -164,6 +164,9 @@ export default {
     hasCategoryTag() {
       return !!this.categoryTag
     },
+    hasProductQuantity() {
+      return this.product && !!this.product.product_quantity
+    },
     productIsTypeCategory() {
       return this.priceForm && (this.priceForm.type === constants.PRICE_TYPE_CATEGORY)
     },
@@ -240,22 +243,25 @@ export default {
     getPriceValue(priceValue, priceCurrency) {
       return price_utils.prettyPrice(priceValue, priceCurrency)
     },
+    getPricePerQuantity(price, quantity) {
+      return price_utils.pricePerQuantity(price, quantity)
+    },
     getPricePerUnit(price) {
       if (price && this.priceForm.currency) {
         price = parseFloat(price)
-        if (this.priceForm.type === 'CATEGORY' && this.priceForm.category_tag) {
+        if (this.hasCategoryTag) {
           if (this.priceForm.price_per === 'UNIT') {
             return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.priceForm.currency)])
           }
           // default to 'KILOGRAM'
           return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.priceForm.currency)])
         }
-        else if (this.priceForm.type === 'PRODUCT' && this.product && this.product.product_quantity) {
-          const pricePerUnit = (price / this.product.product_quantity) * 1000
+        else if (this.hasProductQuantity) {
+          const pricePerQuantity = this.getPricePerQuantity(price, this.product.product_quantity)
           if (this.product.product_quantity_unit === constants.PRODUCT_QUANTITY_UNIT_ML) {
-            return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
+            return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerQuantity, this.priceForm.currency)])
           }
-          return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerUnit, this.priceForm.currency)])
+          return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerQuantity, this.priceForm.currency)])
         }
       }
       return null
