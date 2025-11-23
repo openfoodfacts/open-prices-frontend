@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Գինը բացակայում է",
+		"PricePerMissing": "Գինը մեկ բացակայող անձի համար",
 		"PriceAlreadyUploaded": "Գինը արդեն վերբեռնված է",
 		"PriceReadyToBeUploaded": "Գինը պատրաստ է վերբեռնման համար",
 		"PricesAlreadyUploaded": "Գները արդեն վերբեռնված են",
