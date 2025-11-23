@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "가격이 누락되었습니다",
+		"PriceAlreadyUploaded": "가격이 이미 업로드되었습니다",
+		"PriceReadyToBeUploaded": "가격 업로드 준비 완료",
 		"PricesAlreadyUploaded": "가격이 이미 업로드되었습니다",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "시작하기",
 		"Stats": "Stats",
+		"Status": "상태",
 		"SuggestedBarcode": "제안된 바코드:",
 		"Summary": "요약",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "검사"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
