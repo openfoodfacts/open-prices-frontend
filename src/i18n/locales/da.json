@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} priser at validere | {count} pris at validere | {count} priser skal valideres",
 		"PriceCreated": "Pris oprettet!",
 		"PriceMissing": "Pris mangler",
+		"PriceAlreadyUploaded": "Prisen er allerede uploadet",
+		"PriceReadyToBeUploaded": "Prisen er klar til at blive uploadet",
 		"PricesAlreadyUploaded": "Priserne er allerede uploadet",
 		"PricesMore": "Flere priser",
 		"PricesAdded": "Priser tilføjet",
@@ -435,6 +437,7 @@
 		"SourceCode": "Kildekode",
 		"Start": "Start",
 		"Stats": "Statistik",
+		"Status": "Status",
 		"SuggestedBarcode": "Foreslået stregkode:",
 		"Summary": "Oversigt",
 		"TaglineOriginal": "En åben crowdsourced database over fødevarepriser",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Fællesskabsudfordring"
+		},
+		"Validate": {
+			"Title": "Bekræftelse"
 		},
 		"ValidatePrices": {
 			"Title": "Validér priser"
