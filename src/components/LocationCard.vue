@@ -11,18 +11,10 @@
         <v-col cols="12">
           <LocationOSMTagChip class="mr-1" :location="location" />
           <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
-          <v-chip
-            v-if="!hideCountryCity && locationCountryCityUrl"
-            label size="small" density="comfortable" class="mr-1" :to="locationCountryCityUrl"
-          >
-            {{ location.osm_address_city }}
-          </v-chip>
-          <v-chip
-            v-if="!hideCountryCity && locationCountryUrl"
-            label size="small" density="comfortable" :to="locationCountryUrl"
-          >
-            {{ location.osm_address_country }}
-          </v-chip>
+          <template v-if="!hideCountryCity">
+            <LocationCountryCityChip v-if="hasLocationCity" class="mr-1" :location="location" type="city" />
+            <LocationCountryCityChip v-if="hasLocationCountry" :location="location" type="country" />
+          </template>
         </v-col>
       </v-row>
       <v-row :class="isTypeOSM ? 'mt-0' : ''">
@@ -57,6 +49,7 @@ export default {
     ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
     LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
+    LocationCountryCityChip: defineAsyncComponent(() => import('../components/LocationCountryCityChip.vue')),
     LocationActionMenuButton: defineAsyncComponent(() => import('../components/LocationActionMenuButton.vue')),
   },
   props: {
@@ -105,15 +98,15 @@ export default {
     showLocationOSMID() {
       return !this.hideLocationOSMID && this.appStore.user.username && this.appStore.user.location_display_osm_id
     },
+    hasLocationCity() {
+      return this.location && this.location.osm_address_city
+    },
+    hasLocationCountry() {
+      return this.location && this.location.osm_address_country
+    },
     getLocationProofListUrl() {
       return `/locations/${this.location.id}/proofs`
     },
-    locationCountryUrl() {
-      return this.location && this.location.osm_address_country ? `/countries/${this.location.osm_address_country}` : null
-    },
-    locationCountryCityUrl() {
-      return this.locationCountryUrl && this.location.osm_address_city ? `${this.locationCountryUrl}/cities/${this.location.osm_address_city}` : null
-    }
   },
   methods: {
     goToLocation(location) {
