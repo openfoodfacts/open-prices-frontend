@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} doğrulanacak fiyatlar | {count} doğrulanacak fiyatlar | {count} doğrulanacak fiyatlar",
 		"PriceCreated": "Fiyat oluşturuldu!",
 		"PriceMissing": "Fiyat eksik",
+		"PriceAlreadyUploaded": "Fiyat zaten yüklendi",
+		"PriceReadyToBeUploaded": "Fiyat yüklenmeye hazır",
 		"PricesAlreadyUploaded": "Fiyatlar zaten yüklendi",
 		"PricesMore": "Daha fazla fiyat",
 		"PricesAdded": "Fiyatlar eklendi",
@@ -435,6 +437,7 @@
 		"SourceCode": "Kaynak kodu",
 		"Start": "Başla",
 		"Stats": "İstatistikler",
+		"Status": "Durum",
 		"SuggestedBarcode": "Önerilen barkod:",
 		"Summary": "Özet",
 		"TaglineOriginal": "Gıda fiyatlarına ilişkin açık kaynaklı bir kitlesel veritabanı",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Topluluk Görevi"
+		},
+		"Validate": {
+			"Title": "Geçerlilik"
 		},
 		"ValidatePrices": {
 			"Title": "Fiyatları doğrula"
