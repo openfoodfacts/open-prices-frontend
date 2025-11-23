@@ -2,13 +2,13 @@
   <v-card v-if="product" :id="'product_' + product.code" :class="isSelected ? 'border-success' : ''" data-name="product-card">
     <v-container class="pa-2" :style="latestPrice ? 'position:relative;' : ''">
       <v-row v-if="product">
-        <v-col class="pr-0" style="max-width:20%">
+        <v-col class="pr-0" style="max-width:20%;">
           <v-img v-if="product.image_url" :src="product.image_url" max-height="100px" @click="clickProduct()" />
           <v-img v-if="!product.image_url" :src="productImageDefault" height="100px" width="100px" style="filter:invert(.9);" />
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>
-            <v-col :cols="!isSelected ? '12' : '10'">
+            <v-col :cols="!isSelected ? '12' : '10'" :class="isSelected ? 'pr-0' : ''">
               <h3 id="product-title" role="link" tabindex="0" @click="clickProduct()" @keydown.enter="clickProduct()">
                 {{ getProductTitle() }}
               </h3>
