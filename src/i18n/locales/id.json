@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} harga untuk divalidasi | {count} harga untuk divalidasi | {count} harga untuk divalidasi",
 		"PriceCreated": "Harga dibuat!",
 		"PriceMissing": "Harga hilang",
+		"PricePerMissing": "Harga per hilang",
 		"PriceAlreadyUploaded": "Harga sudah diunggah",
 		"PriceReadyToBeUploaded": "Harga siap diunggah",
 		"PricesAlreadyUploaded": "Harga sudah diunggah",
