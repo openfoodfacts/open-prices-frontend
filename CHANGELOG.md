@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.147.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.147.0...v1.147.1) (2025-11-23)
+
+
+### Technical
+
+* **Price:** simplify origins_tags & labels_tags Array management ([#1853](https://github.com/openfoodfacts/open-prices-frontend/issues/1853)) ([562e658](https://github.com/openfoodfacts/open-prices-frontend/commit/562e65840ff3156be694b75dc215d2db87053c73))
+* **Receipt Assistant:** various adjustements (mobile grid layout, shorter labels) ([#1849](https://github.com/openfoodfacts/open-prices-frontend/issues/1849)) ([7d72970](https://github.com/openfoodfacts/open-prices-frontend/commit/7d72970f7a621affbd327f43e8787b5d31b95dfd))
+
 ## [1.147.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.146.1...v1.147.0) (2025-11-22)
 
 
