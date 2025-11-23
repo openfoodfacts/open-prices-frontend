@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} kainos patvirtinti | {count} kaina patvirtinti | {count} kainų patvirtinti",
 		"PriceCreated": "Kaina sukurta!",
 		"PriceMissing": "Kaina nenurodyta",
+		"PricePerMissing": "Kaina už trūkstamą",
 		"PriceAlreadyUploaded": "Kaina jau įkelta",
 		"PriceReadyToBeUploaded": "Kaina paruošta įkėlimui",
 		"PricesAlreadyUploaded": "Kainos jau įkeltos",
