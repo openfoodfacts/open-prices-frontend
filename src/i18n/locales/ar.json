@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "السعر مفقود",
+		"PriceAlreadyUploaded": "السعر تم تحميله بالفعل",
+		"PriceReadyToBeUploaded": "السعر جاهز للتحميل",
 		"PricesAlreadyUploaded": "الأسعار تم تحميلها بالفعل",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "بدء",
 		"Stats": "Stats",
+		"Status": "الحالة",
 		"SuggestedBarcode": "الرمز الشريطي المقترح:",
 		"Summary": "الملخص",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "التحقق"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
