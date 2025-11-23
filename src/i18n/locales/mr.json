@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "किंमत गहाळ आहे",
+		"PricePerMissing": "गहाळ झालेल्या प्रत्येक वस्तूची किंमत",
 		"PriceAlreadyUploaded": "किंमत आधीच अपलोड केली आहे.",
 		"PriceReadyToBeUploaded": "किंमत अपलोड करण्यासाठी तयार आहे.",
 		"PricesAlreadyUploaded": "किमती आधीच अपलोड केल्या आहेत",
