@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} kainos patvirtinti | {count} kaina patvirtinti | {count} kainų patvirtinti",
 		"PriceCreated": "Kaina sukurta!",
 		"PriceMissing": "Kaina nenurodyta",
+		"PriceAlreadyUploaded": "Kaina jau įkelta",
+		"PriceReadyToBeUploaded": "Kaina paruošta įkėlimui",
 		"PricesAlreadyUploaded": "Kainos jau įkeltos",
 		"PricesMore": "Daugiau kainų",
 		"PricesAdded": "Pridėtos kainos",
@@ -435,6 +437,7 @@
 		"SourceCode": "Pirminis kodas",
 		"Start": "Pradėti",
 		"Stats": "Statistika",
+		"Status": "Būsena",
 		"SuggestedBarcode": "Siūlomas brūkšninis kodas:",
 		"Summary": "Suvestinė",
 		"TaglineOriginal": "Atviroji sutelktinių išteklių gautų maisto produktų kainų duomenų bazė",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Bendruomenės iššūkis"
+		},
+		"Validate": {
+			"Title": "Patvirtinti"
 		},
 		"ValidatePrices": {
 			"Title": "Patvirtinti kainas"
