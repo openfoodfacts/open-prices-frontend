@@ -52,20 +52,12 @@ function extraPriceCreateOrUpdateFiltering(data) {
   else if (filteredData.type == constants.PRICE_TYPE_CATEGORY) {
     delete filteredData.product_code
     delete filteredData.product
-    if (filteredData.origins_tags.length) {
-      if (typeof filteredData.origins_tags === 'string') {
-        filteredData.origins_tags = [filteredData.origins_tags]
-      }
-    } else {
-      filteredData.origins_tags = ['en:unknown']
+    if (filteredData.origins_tags === null || (Array.isArray(filteredData.origins_tags) && filteredData.origins_tags == [''])) {
+      filteredData.origins_tags = []
+      // backend will default to ['en:unknown']
     }
-    if (filteredData.labels_tags) {
-      if (filteredData.labels_tags.length == 0) {
-        filteredData.labels_tags = null
-      }
-      else if (typeof filteredData.labels_tags === 'string') {
-        filteredData.labels_tags = [filteredData.labels_tags]
-      }
+    if (filteredData.labels_tags === null || (Array.isArray(filteredData.labels_tags) && filteredData.labels_tags == [''])) {
+      filteredData.labels_tags = []
     }
   }
   // generic rules

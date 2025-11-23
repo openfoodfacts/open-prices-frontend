@@ -78,7 +78,7 @@ export default {
         product: null,
         product_code: '',
         category_tag: null,
-        origins_tags: '',
+        origins_tags: [],
         labels_tags: [],
         price: null,
         price_per: null,

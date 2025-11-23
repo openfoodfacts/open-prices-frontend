@@ -48,6 +48,7 @@
         :item-title="item => item.name"
         :item-value="item => item.id"
         hide-details="auto"
+        @update:modelValue="newValue => productForm.origins_tags = replaceStringWithList(newValue)"
       />
     </v-col>
     <v-col class="pt-0" cols="6">
@@ -60,6 +61,7 @@
         :label="lt.name"
         :value="lt.id"
         hide-details="auto"
+        @update:modelValue="newValue => productForm.labels_tags = replaceStringWithList(newValue)"
       />
     </v-col>
   </v-row>
@@ -96,7 +98,7 @@ export default {
         product: null,
         product_code: '',
         category_tag: null,
-        origins_tags: '',
+        origins_tags: [],
         labels_tags: []
       })
     },
@@ -197,7 +199,7 @@ export default {
       this.productForm.product = null
       this.productForm.product_code = ''
       this.productForm.category_tag = null
-      this.productForm.origins_tags = ''
+      this.productForm.origins_tags = []
       this.productForm.labels_tags = []
     },
     setType(type) {
@@ -222,6 +224,9 @@ export default {
           console.log(error)
         })
     },
+    replaceStringWithList(value) {
+      return utils.replaceStringWithList(value)
+    }
   }
 }
 </script>
