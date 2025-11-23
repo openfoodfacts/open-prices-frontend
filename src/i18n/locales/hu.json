@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Hiányzó ár",
+		"PricePerMissing": "Hiányzó darabonkénti ár",
 		"PriceAlreadyUploaded": "Az ár már fel van töltve",
 		"PriceReadyToBeUploaded": "Az ár feltöltésre kész",
 		"PricesAlreadyUploaded": "Az árak már feltöltöttek",
