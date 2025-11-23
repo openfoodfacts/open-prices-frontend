@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena vytvorená!",
 		"PriceMissing": "Chýbajúca cena",
+		"PriceAlreadyUploaded": "Cena už nahraná",
+		"PriceReadyToBeUploaded": "Cena je pripravená na nahranie",
 		"PricesAlreadyUploaded": "Ceny už boli nahrané",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "Navrhovaný čiarový kód:",
 		"Summary": "Zhrnutie",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Potvrdiť"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
