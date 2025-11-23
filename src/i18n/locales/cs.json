@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Cena vytvořena!",
 		"PriceMissing": "Chybí cena",
+		"PricePerMissing": "Cena za chybějící",
 		"PriceAlreadyUploaded": "Cena již nahrána",
 		"PriceReadyToBeUploaded": "Cena připravena k nahrání",
 		"PricesAlreadyUploaded": "Ceny již nahrány",
