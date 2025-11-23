@@ -135,7 +135,7 @@ export default {
     PRICE_TAG_STATUS_NO_BARCODE,
     PRICE_TAG_STATUS_OTHER,
   ],
-  PRODUCT_IMAGE_DEFAULT_URL: 'https://world.openfoodfacts.org/images/icons/dist/packaging.svg',
+  PRODUCT_IMAGE_DEFAULT_URL: '/img/icons/packaging.svg',
   PRODUCT_CATEGORY_LABEL_ORGANIC: PRODUCT_CATEGORY_LABEL_ORGANIC,
   PRODUCT_QUANTITY_UNIT_G: 'g',
   PRODUCT_QUANTITY_UNIT_ML: 'ml',
