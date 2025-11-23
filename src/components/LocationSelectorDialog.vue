@@ -25,7 +25,7 @@
             <p v-for="(location, index) in recentLocations" :key="index">
               <LocationRecentChip :location="location" :withRemoveAction="true" @click="selectLocation(location)" @click:close="removeRecentLocation(location)" />
             </p>
-            <v-btn v-if="recentLocations.length" size="small" class="" @click="clearRecentLocations">
+            <v-btn v-if="recentLocations.length" size="small" color="primary" @click="clearRecentLocations">
               {{ $t('Common.Clear') }}
             </v-btn>
             <p v-else>
@@ -69,17 +69,7 @@
               </h3>
               <v-row v-if="results.length">
                 <v-col cols="12" sm="6">
-                  <v-card
-                    v-for="location in results" :key="getLocationUniqueID(location)" class="mb-2" width="100%"
-                    elevation="1" @click="selectLocation(location)"
-                  >
-                    <v-card-text>
-                      <h4>{{ getLocationTitle(location, true, false, false) }}</h4>
-                      {{ getLocationTitle(location, false, true, true) }}<br>
-                      <LocationOSMTagChip class="mr-1" :location="location" />
-                      <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
-                    </v-card-text>
-                  </v-card>
+                  <LocationSearchResultCard v-for="(location, index) in results" :key="index" :location="location" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
                 <v-col cols="12" sm="6" style="min-height:400px">
                   <LeafletMap :locations="results" :showActions="true" @locationSelected="selectLocation" />
@@ -154,14 +144,12 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
-import geo_utils from '../utils/geo.js'
 import utils from '../utils.js'
 
 export default {
   components: {
     LocationRecentChip: defineAsyncComponent(() => import('../components/LocationRecentChip.vue')),
-    LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
-    LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
+    LocationSearchResultCard: defineAsyncComponent(() => import('../components/LocationSearchResultCard.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
   },
   emits: ['location', 'close'],
@@ -200,9 +188,6 @@ export default {
     },
     recentLocations() {
       return this.appStore.getRecentLocations()
-    },
-    showLocationOSMID() {
-      return this.appStore.user.username && this.appStore.user.location_display_osm_id
     },
     urlRules() {
       if (!this.locationOnlineForm.website_url) return [() => true]  // optional field
@@ -248,12 +233,6 @@ export default {
             this.results = data
           })
       }
-    },
-    getLocationTitle(location, withName = true, withRoad = false, withCity = true) {
-      return geo_utils.getLocationOSMTitle(location, withName, withRoad, withCity)
-    },
-    getLocationUniqueID(location) {
-      return geo_utils.getLocationUniqueID(location)
     },
     createOnline() {
       if (!this.locationOnlineFormValid) return
