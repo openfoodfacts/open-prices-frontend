@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Нарх нест",
+		"PricePerMissing": "Нарх барои гумшуда",
 		"PriceAlreadyUploaded": "Нарх аллакай бор карда шудааст",
 		"PriceReadyToBeUploaded": "Нарх барои боргузорӣ омода аст",
 		"PricesAlreadyUploaded": "Нархҳо аллакай бор карда шудаанд",
