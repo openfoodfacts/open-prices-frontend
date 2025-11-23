@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ధర లేదు",
+		"PriceAlreadyUploaded": "ధర ఇప్పటికే అప్‌లోడ్ చేయబడింది",
+		"PriceReadyToBeUploaded": "ధర అప్‌లోడ్ చేయడానికి సిద్ధంగా ఉంది",
 		"PricesAlreadyUploaded": "ధరలు ఇప్పటికే అప్‌లోడ్ చేయబడ్డాయి",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "సూచించబడిన బార్‌కోడ్:",
 		"Summary": "సారాంశం",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
