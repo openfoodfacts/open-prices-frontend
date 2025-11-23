@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} சரிபார்க்க வேண்டிய விலைகள் | {count} சரிபார்க்க வேண்டிய விலை | {count} சரிபார்க்க வேண்டிய விலைகள்",
 		"PriceCreated": "விலை உருவாக்கப்பட்டது!",
 		"PriceMissing": "விலை இல்லை",
+		"PriceAlreadyUploaded": "விலை ஏற்கனவே பதிவேற்றப்பட்டது",
+		"PriceReadyToBeUploaded": "விலை பதிவேற்றத் தயாராக உள்ளது.",
 		"PricesAlreadyUploaded": "விலைகள் ஏற்கனவே பதிவேற்றப்பட்டுள்ளன",
 		"PricesMore": "கூடுதல் விலைகள்",
 		"PricesAdded": "விலைகள் சேர்க்கப்பட்டன",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "பரிந்துரைக்கப்பட்ட பார்கோடு:",
 		"Summary": "சுருக்கம்",
 		"TaglineOriginal": "உணவு விலைகளின் திறந்த கூட்டத் தரவுத்தளம்",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "சமூக சவால்"
+		},
+		"Validate": {
+			"Title": "Validate"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
