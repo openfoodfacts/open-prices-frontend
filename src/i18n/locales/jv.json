@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Price ilang",
+		"PricePerMissing": "Rega saben ilang",
 		"PriceAlreadyUploaded": "Price wis upload",
 		"PriceReadyToBeUploaded": "Harga siap di upload",
 		"PricesAlreadyUploaded": "Prices wis diunggahaké",
