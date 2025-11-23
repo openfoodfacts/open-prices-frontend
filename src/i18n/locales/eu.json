@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Prezioa falta da",
+		"PricePerMissing": "Falta den bakoitzeko prezioa",
 		"PriceAlreadyUploaded": "Prezioa dagoeneko igota",
 		"PriceReadyToBeUploaded": "Prezioa igotzeko prest",
 		"PricesAlreadyUploaded": "Prezioak dagoeneko igota",
