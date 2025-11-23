@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ਕੀਮਤ ਮੌਜੂਦ ਨਹੀਂ ਹੈ",
+		"PricePerMissing": "ਪ੍ਰਤੀ ਗੁੰਮ ਕੀਮਤ",
 		"PriceAlreadyUploaded": "ਕੀਮਤ ਪਹਿਲਾਂ ਹੀ ਅੱਪਲੋਡ ਕੀਤੀ ਜਾ ਚੁੱਕੀ ਹੈ।",
 		"PriceReadyToBeUploaded": "ਕੀਮਤ ਅੱਪਲੋਡ ਕਰਨ ਲਈ ਤਿਆਰ ਹੈ।",
 		"PricesAlreadyUploaded": "ਕੀਮਤਾਂ ਪਹਿਲਾਂ ਹੀ ਅੱਪਲੋਡ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ",
