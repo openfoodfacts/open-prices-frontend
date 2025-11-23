@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} harga untuk divalidasi | {count} harga untuk divalidasi | {count} harga untuk divalidasi",
 		"PriceCreated": "Harga dibuat!",
 		"PriceMissing": "Harga hilang",
+		"PriceAlreadyUploaded": "Harga sudah diunggah",
+		"PriceReadyToBeUploaded": "Harga siap diunggah",
 		"PricesAlreadyUploaded": "Harga sudah diunggah",
 		"PricesMore": "Harga lebih lanjut",
 		"PricesAdded": "Harga ditambahkan",
@@ -435,6 +437,7 @@
 		"SourceCode": "Sumber kode",
 		"Start": "Mulai",
 		"Stats": "Statistik",
+		"Status": "Status",
 		"SuggestedBarcode": "Kode batang yang disarankan:",
 		"Summary": "Ringkasan",
 		"TaglineOriginal": "Basis data harga makanan yang terbuka dan bersumber dari banyak orang",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Tantangan komunitas"
+		},
+		"Validate": {
+			"Title": "Validasikan"
 		},
 		"ValidatePrices": {
 			"Title": "Validasi harga"
