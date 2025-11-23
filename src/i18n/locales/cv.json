@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "Хак ҫук",
+		"PricePerMissing": "Ҫухалнӑ ҫыннӑн хакӗ",
 		"PriceAlreadyUploaded": "Хакне ярса панӑ ӗнтӗ",
 		"PriceReadyToBeUploaded": "Хакне ярса пама хатӗр",
 		"PricesAlreadyUploaded": "Хаксем ӗнтӗ ярса панӑ",
