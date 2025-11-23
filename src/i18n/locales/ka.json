@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ფასი აკლია",
+		"PricePerMissing": "ფასი ერთ ნაკლად",
 		"PriceAlreadyUploaded": "ფასი უკვე ატვირთულია",
 		"PriceReadyToBeUploaded": "ფასი მზადაა ასატვირთად",
 		"PricesAlreadyUploaded": "ფასები უკვე ატვირთულია",
