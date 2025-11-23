@@ -48,9 +48,7 @@ export default {
           name: 'Validate prices from the community',
           description: '',
           background_image_url: 'https://imgur.com/s0lenjt.png',
-          url: '/experiments/price-validation-assistant',
-          community: true,
-          experiment: true
+          url: '/prices/add/validate'
         }
       ],
       PROOF_TYPE_PRICE_TAG_ICON: constants.PROOF_TYPE_PRICE_TAG_ICON,
