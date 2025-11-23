@@ -379,6 +379,8 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "តម្លៃបាត់",
+		"PriceAlreadyUploaded": "តម្លៃបានបង្ហោះរួចហើយ",
+		"PriceReadyToBeUploaded": "តម្លៃរួចរាល់ក្នុងការបង្ហោះ",
 		"PricesAlreadyUploaded": "តម្លៃបានបង្ហោះរួចហើយ",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
@@ -435,6 +437,7 @@
 		"SourceCode": "Source code",
 		"Start": "Start",
 		"Stats": "Stats",
+		"Status": "Status",
 		"SuggestedBarcode": "បាកូដដែលបានណែនាំ៖",
 		"Summary": "ពត៌មានសង្ខេប",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -892,6 +895,9 @@
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
+		},
+		"Validate": {
+			"Title": "Validate"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
