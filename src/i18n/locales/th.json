@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "Price created!",
 		"PriceMissing": "ราคาหายไป",
+		"PricePerMissing": "ราคาต่อส่วนที่ขาดหาย",
 		"PriceAlreadyUploaded": "ราคาอัพโหลดเรียบร้อยแล้ว",
 		"PriceReadyToBeUploaded": "ราคาพร้อมอัพโหลด",
 		"PricesAlreadyUploaded": "ราคาอัพโหลดเรียบร้อยแล้ว",
