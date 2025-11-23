@@ -380,6 +380,7 @@
 		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
 		"PriceCreated": "价格已创建！",
 		"PriceMissing": "缺少价格",
+		"PricePerMissing": "每缺失的价格",
 		"PriceAlreadyUploaded": "价格已上传。",
 		"PriceReadyToBeUploaded": "价格信息已准备好上传。",
 		"PricesAlreadyUploaded": "价格已上传",
