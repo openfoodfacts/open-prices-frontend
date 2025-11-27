@@ -50,25 +50,26 @@
             </div>
           </template>
           <template v-else>
-            <PriceCategoryChip :priceCategory="item.category_tag" />
-            <PriceCategoryDetailsRow :price="item" />
+            <PriceCategoryDetailsRow :price="item" :hideCategoryChip="false" />
           </template>
         </template>
         <template #[`item.price`]="{ item }">
           <PricePriceRow v-if="item.existingPrice" :price="item" />
-          <v-text-field
-            v-else
-            v-model="item.price"
-            :class="item.price ? 'outline-border-success' : 'outline-border-error'"
-            density="compact"
-            variant="outlined"
-            type="text"
-            inputmode="decimal"
-            :rules="priceRules"
-            :suffix="itemPriceSuffix(item)"
-            :hide-details="true"
-            @update:modelValue="newValue => item.price = replaceCommaWithDot(newValue)"
-          />
+          <template v-else>
+            <v-text-field
+              v-model="item.price"
+              :class="item.price ? 'outline-border-success' : 'outline-border-error'"
+              density="compact"
+              variant="outlined"
+              type="text"
+              inputmode="decimal"
+              :rules="priceRules"
+              :suffix="itemPriceSuffix(item)"
+              :hide-details="true"
+              @update:modelValue="newValue => item.price = replaceCommaWithDot(newValue)"
+            />
+            <PriceDiscountChip v-if="itemHasDiscount(item)" class="mt-1" :price="item" />
+          </template>
         </template>
         <template #[`item.receipt_quantity`]="{ item }">
           <PriceQuantityPurchasedChip :priceQuantityPurchased="item.receipt_quantity" />
@@ -143,9 +144,9 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
-    PriceCategoryChip: defineAsyncComponent(() => import('../components/PriceCategoryChip.vue')),
     PriceCategoryDetailsRow: defineAsyncComponent(() => import('../components/PriceCategoryDetailsRow.vue')),
     PricePriceRow: defineAsyncComponent(() => import('../components/PricePriceRow.vue')),
+    PriceDiscountChip: defineAsyncComponent(() => import('../components/PriceDiscountChip.vue')),
     PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
     ProofReceiptPriceCountChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceCountChip.vue')),
     ProofReceiptPriceTotalChip: defineAsyncComponent(() => import('../components/ProofReceiptPriceTotalChip.vue')),
@@ -171,7 +172,7 @@ export default {
       items: [],
       headers: [
         { title: this.$t('Common.Status'), key: 'status' },
-        { title: this.$t('Common.Text'), key: 'product_name' },
+        { title: this.$t('Common.Text'), key: 'product_name', maxWidth: '150px' },
         { title: this.$t('Common.Product'), key: 'product' },
         { title: this.$t('Common.Price'), key: 'price', minWidth: '150px' },
         { title: this.$t('Common.Quantity'), key: 'receipt_quantity' },
@@ -254,12 +255,18 @@ export default {
     replaceCommaWithDot(input) {
       return utils.replaceCommaWithDot(input)
     },
+    itemIsCategory(item) {
+      return item.type === constants.PRICE_TYPE_CATEGORY
+    },
     itemPriceSuffix(item) {
       let suffix = this.proof.currency
       if (this.itemIsCategory(item) && item.category_tag) {
         suffix += '/' + (item.price_per === 'UNIT' ? 'U' : 'KG')
       }
       return suffix
+    },
+    itemHasDiscount(item) {
+      return item.price_is_discounted
     },
     findProduct(item) {
       api
@@ -296,9 +303,6 @@ export default {
     confirmProduct(product) {
       this.editProductDialog = false
       Object.assign(this.items[this.editProductItem.index], product)
-    },
-    itemIsCategory(item) {
-      return item.type === constants.PRICE_TYPE_CATEGORY
     },
     showProductCodeSuggestion(item) {
       return item.predicted_product_code && !(item.existingPrice || item.product_code)

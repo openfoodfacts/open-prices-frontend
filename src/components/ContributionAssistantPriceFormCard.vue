@@ -17,7 +17,7 @@
         <v-col>
           <v-text-field
             v-model="productPriceForm.product_name"
-            :label="$t('Common.ProductName')"
+            :label="$t('Common.Text')"
             type="text"
             hide-details="auto"
           />
