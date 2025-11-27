@@ -237,7 +237,7 @@ export default {
         if (this.priceForm.category_tag) {
           return price_utils.priceCategoryPerUnit(price, this.priceForm.currency, this.priceForm.price_per)
         }
-        if (this.product.product_quantity) {
+        if (this.product && this.product.product_quantity) {
           return price_utils.priceProductPerUnit(price, this.priceForm.currency, this.product.product_quantity, this.product.product_quantity_unit)
         }
       }
