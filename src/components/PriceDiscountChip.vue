@@ -1,32 +1,21 @@
 <template>
-  <v-row>
-    <v-col cols="12" class="pt-2 pb-2">
-      <span class="mr-1">{{ getPriceValueDisplay(price.price) }}</span>
-      <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(price.price) }})</span>
-      <span v-if="price.price_is_discounted">
-        <PriceDiscountChip class="ml-1 mr-1" :price="price" />
-      </span>
-      <span v-if="!hidePriceReceiptQuantity && price.receipt_quantity" class="ml-1">
-        <PriceQuantityPurchasedChip :priceQuantityPurchased="price.receipt_quantity" />
-      </span>
-    </v-col>
-  </v-row>
+  <v-chip variant="outlined" size="small" color="error" density="comfortable">
+    {{ $t('PriceCard.Discount') }}
+    <v-tooltip v-if="price.price_without_discount" activator="parent" open-on-click location="top">
+      {{ $t('PriceCard.FullPrice') }} {{ getPriceValueDisplay(price.price_without_discount) }}
+    </v-tooltip>
+  </v-chip>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 import price_utils from '../utils/price.js'
 
 export default {
-  components: {
-    PriceDiscountChip: defineAsyncComponent(() => import('../components/PriceDiscountChip.vue')),
-    PriceQuantityPurchasedChip: defineAsyncComponent(() => import('../components/PriceQuantityPurchasedChip.vue')),
-  },
   props: {
     price: {
       type: Object,
-      default: null
+      required: true
     },
     productQuantity: {
       type: Number,
@@ -36,13 +25,6 @@ export default {
       type: String,
       default: constants.PRODUCT_QUANTITY_UNIT_G
     },
-    hidePriceReceiptQuantity: {
-      type: Boolean,
-      default: true
-    },
-  },
-  data() {
-    return {}
   },
   computed: {
     categoryTag() {
@@ -50,9 +32,6 @@ export default {
     },
     hasCategoryTag() {
       return !!this.categoryTag
-    },
-    hasProductQuantity() {
-      return !!this.productQuantity
     },
   },
   methods: {
