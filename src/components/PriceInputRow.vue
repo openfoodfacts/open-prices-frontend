@@ -158,15 +158,6 @@ export default {
     }
   },
   computed: {
-    categoryTag() {
-      return this.priceForm.category_tag
-    },
-    hasCategoryTag() {
-      return !!this.categoryTag
-    },
-    hasProductQuantity() {
-      return this.product && !!this.product.product_quantity
-    },
     productIsTypeCategory() {
       return this.priceForm && (this.priceForm.type === constants.PRICE_TYPE_CATEGORY)
     },
@@ -240,32 +231,18 @@ export default {
     replaceCommaWithDot(input) {
       return utils.replaceCommaWithDot(input)
     },
-    getPriceValue(priceValue, priceCurrency) {
-      return price_utils.prettyPrice(priceValue, priceCurrency)
-    },
-    getPricePerQuantity(price, quantity) {
-      return price_utils.pricePerQuantity(price, quantity)
-    },
     getPricePerUnit(price) {
       if (price && this.priceForm.currency) {
         price = parseFloat(price)
-        if (this.hasCategoryTag) {
-          if (this.priceForm.price_per === 'UNIT') {
-            return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.priceForm.currency)])
-          }
-          // default to 'KILOGRAM'
-          return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.priceForm.currency)])
+        if (this.priceForm.category_tag) {
+          return price_utils.priceCategoryPerUnit(price, this.priceForm.currency, this.priceForm.price_per)
         }
-        else if (this.hasProductQuantity) {
-          const pricePerQuantity = this.getPricePerQuantity(price, this.product.product_quantity)
-          if (this.product.product_quantity_unit === constants.PRODUCT_QUANTITY_UNIT_ML) {
-            return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerQuantity, this.priceForm.currency)])
-          }
-          return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerQuantity, this.priceForm.currency)])
+        if (this.product.product_quantity) {
+          return price_utils.priceProductPerUnit(price, this.priceForm.currency, this.product.product_quantity, this.product.product_quantity_unit)
         }
       }
       return null
-    },
+    }
   }
 }
 </script>
