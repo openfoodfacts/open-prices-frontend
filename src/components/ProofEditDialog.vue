@@ -30,6 +30,7 @@
         </v-row>
         <!-- form -->
         <ProofTypeInputRow :proofTypeForm="updateProofForm" />
+        <LocationInputRow :locationForm="updateProofForm" :existingLocation="proof.location" />
         <ProofMetadataInputRow :proofMetadataForm="updateProofForm" :proofType="updateProofForm.type" />
       </v-card-text>
 
@@ -41,7 +42,7 @@
           color="primary"
           variant="flat"
           :block="!$vuetify.display.smAndUp"
-          :disabled="!formFilled"
+          :disabled="!proofFormFilled"
           :loading="loading"
           @click="updateProof"
         >
@@ -62,6 +63,7 @@ export default {
   components: {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
+    LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),
   },
   props: {
@@ -75,6 +77,9 @@ export default {
     return {
       updateProofForm: {
         type: null,
+        location_id: null,
+        location_osm_id: null,
+        location_osm_type: '',
         date: null,
         currency: null,
         receipt_price_count: null,
@@ -103,9 +108,20 @@ export default {
     dialogWidth() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
-    formFilled() {
-      let keys = ['type', 'date', 'currency']
-      return Object.values(this.updateProofForm).filter(k => keys.includes(k)).every(k => !!this.updateProofForm[k])
+    proofTypeFormFilled() {
+      return !!this.updateProofForm.type
+    },
+    proofLocationFormFilled() {
+      let keysOSM = ['location_osm_id', 'location_osm_type']
+      let keysONLINE = ['location_id']
+      return Object.keys(this.updateProofForm).filter(k => keysOSM.includes(k)).every(k => !!this.updateProofForm[k]) || Object.keys(this.updateProofForm).filter(k => keysONLINE.includes(k)).every(k => !!this.updateProofForm[k])
+    },
+    proofMetadataFormFilled() {
+      let keys = ['date', 'currency']
+      return Object.keys(this.updateProofForm).filter(k => keys.includes(k)).every(k => !!this.updateProofForm[k])
+    },
+    proofFormFilled() {
+      return this.proofTypeFormFilled && this.proofLocationFormFilled && this.proofMetadataFormFilled
     },
   },
   mounted() {

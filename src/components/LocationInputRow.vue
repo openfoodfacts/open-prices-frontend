@@ -37,6 +37,10 @@ export default {
         location_osm_type: null
       })
     },
+    existingLocation: {
+      type: Object,
+      default: null
+    },
   },
   emits: ['location'],
   data() {
@@ -63,12 +67,12 @@ export default {
     },
   },
   mounted() {
-    // this.initLocationForm()
+    this.initLocationForm()
   },
   methods: {
     initLocationForm() {
-      if (this.recentLocations.length) {
-        this.setLocationData(this.recentLocations[0])
+      if (this.existingLocation) {
+        this.selectedLocation = this.existingLocation
       }
     },
     showLocationSelectorDialog() {
