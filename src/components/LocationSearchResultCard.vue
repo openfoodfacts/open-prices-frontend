@@ -7,7 +7,7 @@
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>
-            <v-col :cols="!isSelected ? '12' : '10'" :class="isSelected ? 'pr-0' : ''" @click="clickLocation()">
+            <v-col :cols="!isSelected ? '12' : '10'" @click="clickLocation()">
               <h4>{{ getLocationTitle }}</h4>
               <p>{{ getLocationSubtitle }}</p>
               <template v-if="!isTypeONLINE">
@@ -15,7 +15,7 @@
                 <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
               </template>
             </v-col>
-            <v-col v-if="isSelected" cols="2">
+            <v-col v-if="isSelected" cols="2" class="pl-0">
               <v-btn class="float-right" icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
             </v-col>
           </v-row>
