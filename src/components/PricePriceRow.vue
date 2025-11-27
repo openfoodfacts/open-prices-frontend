@@ -2,13 +2,9 @@
   <v-row>
     <v-col cols="12" class="pt-2 pb-2">
       <span class="mr-1">{{ getPriceValueDisplay(price.price) }}</span>
-      <span v-if="hasProductQuantity" class="mr-1">({{ getPricePerUnit(price.price) }})</span>
-      <span v-if="price.price_is_discounted">
-        <PriceDiscountChip class="ml-1 mr-1" :price="price" />
-      </span>
-      <span v-if="!hidePriceReceiptQuantity && price.receipt_quantity" class="ml-1">
-        <PriceQuantityPurchasedChip :priceQuantityPurchased="price.receipt_quantity" />
-      </span>
+      <span v-if="showPriceProductPerUnit" class="mr-1">({{ getPricePerUnit(price.price) }})</span>
+      <PriceDiscountChip v-if="hasDiscount" class="ml-1 mr-1" :price="price" />
+      <PriceQuantityPurchasedChip v-if="showReceiptQuantity" class="ml-1" :priceQuantityPurchased="price.receipt_quantity" />
     </v-col>
   </v-row>
 </template>
@@ -41,47 +37,32 @@ export default {
       default: true
     },
   },
-  data() {
-    return {}
-  },
   computed: {
-    categoryTag() {
-      return this.price.category_tag
+    showPriceProductPerUnit() {
+      return this.price && this.productQuantity
     },
-    hasCategoryTag() {
-      return !!this.categoryTag
+    hasDiscount() {
+      return this.price && this.price.price_is_discounted
     },
-    hasProductQuantity() {
-      return !!this.productQuantity
+    showReceiptQuantity() {
+      return this.price && this.price.receipt_quantity && !this.hidePriceReceiptQuantity
     },
   },
   methods: {
     getPriceValue(priceValue, priceCurrency) {
       return price_utils.prettyPrice(priceValue, priceCurrency)
     },
-    getPricePerQuantity(price, quantity) {
-      return price_utils.pricePerQuantity(price, quantity)
-    },
     getPricePerUnit(price) {
-      price = parseFloat(price)
-      if (this.hasCategoryTag) {
-        if (this.price.price_per === 'UNIT') {
-          return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.price.currency)])
-        }
-        // default to 'KILOGRAM'
-        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.price.currency)])
+      if (this.price.category_tag) {
+        return price_utils.priceCategoryPerUnit(price, this.price.currency, this.price.price_per)
       }
-      if (this.hasProductQuantity) {
-        const pricePerQuantity = this.getPricePerQuantity(price, this.productQuantity)
-        if (this.productQuantityUnit === constants.PRODUCT_QUANTITY_UNIT_ML) {
-          return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerQuantity, this.price.currency)])
-        }
-        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerQuantity, this.price.currency)])
+      if (this.productQuantity) {
+        return price_utils.priceProductPerUnit(price, this.price.currency, this.productQuantity, this.productQuantityUnit)
       }
     },
     getPriceValueDisplay(price) {
       price = parseFloat(price)
-      if (this.hasCategoryTag) {
+      if (this.price.category_tag) {
         return this.getPricePerUnit(price)
       }
       return this.getPriceValue(price, this.price.currency)

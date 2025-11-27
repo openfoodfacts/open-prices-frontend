@@ -26,41 +26,21 @@ export default {
       default: constants.PRODUCT_QUANTITY_UNIT_G
     },
   },
-  computed: {
-    categoryTag() {
-      return this.price.category_tag
-    },
-    hasCategoryTag() {
-      return !!this.categoryTag
-    },
-  },
   methods: {
     getPriceValue(priceValue, priceCurrency) {
       return price_utils.prettyPrice(priceValue, priceCurrency)
     },
-    getPricePerQuantity(price, quantity) {
-      return price_utils.pricePerQuantity(price, quantity)
-    },
     getPricePerUnit(price) {
-      price = parseFloat(price)
-      if (this.hasCategoryTag) {
-        if (this.price.price_per === 'UNIT') {
-          return this.$t('PriceCard.PriceValueDisplayUnit', [this.getPriceValue(price, this.price.currency)])
-        }
-        // default to 'KILOGRAM'
-        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(price, this.price.currency)])
+      if (this.price.category_tag) {
+        return price_utils.priceCategoryPerUnit(price, this.price.currency, this.price.price_per)
       }
-      if (this.hasProductQuantity) {
-        const pricePerQuantity = this.getPricePerQuantity(price, this.productQuantity)
-        if (this.productQuantityUnit === constants.PRODUCT_QUANTITY_UNIT_ML) {
-          return this.$t('PriceCard.PriceValueDisplayLitre', [this.getPriceValue(pricePerQuantity, this.price.currency)])
-        }
-        return this.$t('PriceCard.PriceValueDisplayKilogram', [this.getPriceValue(pricePerQuantity, this.price.currency)])
+      if (this.productQuantity) {
+        return price_utils.priceProductPerUnit(price, this.price.currency, this.productQuantity, this.productQuantityUnit)
       }
     },
     getPriceValueDisplay(price) {
       price = parseFloat(price)
-      if (this.hasCategoryTag) {
+      if (this.price.category_tag) {
         return this.getPricePerUnit(price)
       }
       return this.getPriceValue(price, this.price.currency)
