@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.148.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.147.2...v1.148.0) (2025-11-27)
+
+
+### Features
+
+* **Proofs:** allow editing a proof's location ([#1879](https://github.com/openfoodfacts/open-prices-frontend/issues/1879)) ([a746df0](https://github.com/openfoodfacts/open-prices-frontend/commit/a746df0b1f5da3fd47f740b24a06eea169ce9c2f))
+
+
+### Bug Fixes
+
+* **Cards:** avoid line jump for cards with top-right edit action ([#1880](https://github.com/openfoodfacts/open-prices-frontend/issues/1880)) ([80735a3](https://github.com/openfoodfacts/open-prices-frontend/commit/80735a31e2158b36ec650c156888ea7784795443))
+
+
+### Technical
+
+* **Price input:** simplify using recent methods moved to price_utils (in [#1876](https://github.com/openfoodfacts/open-prices-frontend/issues/1876)) ([#1878](https://github.com/openfoodfacts/open-prices-frontend/issues/1878)) ([74b48df](https://github.com/openfoodfacts/open-prices-frontend/commit/74b48df58bbf243f8d6079ca4ddf64adea501b5c))
+* **Prices:** new PriceDiscountChip component ([#1876](https://github.com/openfoodfacts/open-prices-frontend/issues/1876)) ([e053fad](https://github.com/openfoodfacts/open-prices-frontend/commit/e053fad4ed45a642b2258dd63204f79c1c0a3674))
+* **Receipt Assistant:** more small UI improvements ([#1862](https://github.com/openfoodfacts/open-prices-frontend/issues/1862)) ([fae33c0](https://github.com/openfoodfacts/open-prices-frontend/commit/fae33c086510493df7cbe2572640901e5dcb7273))
+
 ## [1.147.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.147.1...v1.147.2) (2025-11-23)
 
 
