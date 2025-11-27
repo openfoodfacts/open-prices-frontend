@@ -30,7 +30,7 @@
         </v-row>
         <!-- form -->
         <ProofTypeInputRow :proofTypeForm="updateProofForm" />
-        <LocationInputRow :locationForm="updateProofForm" :existingLocation="proof.location" />
+        <LocationInputRow v-if="proofLocationIsTypeOSM" :locationForm="updateProofForm" :existingLocation="proof.location" @location="newLocation = $event" />
         <ProofMetadataInputRow :proofMetadataForm="updateProofForm" :proofType="updateProofForm.type" />
       </v-card-text>
 
@@ -88,6 +88,7 @@ export default {
         owner_consumption: null,
         owner_comment: null,
       },
+      // data
       loading: false
     }
   },
@@ -107,6 +108,10 @@ export default {
     },
     dialogWidth() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    proofLocationIsTypeOSM() {
+      // NOTE: needed to restrict location edition to only OSM locations for now (API doesn't support editing ONLINE locations yet)
+      return this.updateProofForm && this.updateProofForm.location_osm_id && this.updateProofForm.location_osm_type
     },
     proofTypeFormFilled() {
       return !!this.updateProofForm.type
