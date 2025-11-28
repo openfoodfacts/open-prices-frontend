@@ -3,7 +3,8 @@
     <v-card-text class="pa-2">
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
-          <v-img :src="locationImageDefault" width="100px" style="filter:invert(.9);" />
+          <v-img v-if="getLocationBrandLogo" :src="getLocationBrandLogo" width="100px" />
+          <v-img v-else :src="locationImageDefault" width="100px" style="filter:invert(.9);" />
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>
@@ -88,6 +89,9 @@ export default {
         return ''
       }
       return geo_utils.getLocationOSMTitle(this.location, false, true, false, false, false)
+    },
+    getLocationBrandLogo() {
+      return geo_utils.getLocationBrandLogo(this.location)
     },
   },
   methods: {
