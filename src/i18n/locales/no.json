@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Kvittering"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Skape",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Skape",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Pris",
+			"LabelDiscounted": "Rabattert pris",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Bevis",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -89,9 +89,9 @@
 			"CategoryLabel": "Kategori",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
-			"Scan": "Scan",
+			"Scan": "Skann",
 			"ScanBarcode": "Scan a barcode",
-			"ScanBarcodeShort": "Scan",
+			"ScanBarcodeShort": "Skann",
 			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"TypeBarcodeShort": "Type",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Dato",
+			"DateLabel": "Dato",
 			"Find": "Finn",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "Handling",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Legg til en pris",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -185,20 +185,20 @@
 		"Barcode": "Strekkode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
-		"BarcodeScanShort": "Scan",
+		"BarcodeScanShort": "Skann",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Ugyldig strekkode",
 		"Brand": "Kjede",
 		"Brands": "Kjeder",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Pris",
+		"Prices": "Priser",
 		"PRODUCT": "Produkt",
 		"Product": "Produkt",
 		"ProductName": "Product name",
 		"Products": "Produkter",
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"Proofs": "Proofs",
 		"CATEGORY": "Kategori",
 		"Category": "Kategori",
@@ -223,7 +223,7 @@
 		"Contribute": "Contribute",
 		"Contributors": "Bidragere",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "Bekrefte",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -241,8 +241,8 @@
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "Ferdig",
+		"Error": "Feil",
 		"Experiment": "Eksperiment",
 		"Experiments": "Experiments",
 		"GoToProof": "Go to proof",
@@ -261,9 +261,9 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Dato",
 		"DateMissing": "Date missing",
-		"Details": "Details",
+		"Details": "Detaljer",
 		"Delete": "Slett",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -300,13 +300,13 @@
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "Vanlige spørsmål",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Hjelp",
 		"History": "Logg",
-		"Image": "Image",
+		"Image": "Bilde",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -318,7 +318,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "Diverse",
 		"MobileApp": "Mobile app",
 		"Moderation": "Moderering",
 		"ModerationFlagReasonWrongType": "Feil type",
@@ -333,8 +333,8 @@
 		"ModerationFlagStatusClosed": "Lukket",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Mine priser",
+		"MyProofs": "Mine bevis",
 		"MyStats": "My stats",
 		"New": "Ny",
 		"NextProof": "Next proof",
@@ -350,7 +350,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Pris",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -373,7 +373,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Prislapp",
 		"PriceTags": "Prislapper",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -399,7 +399,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Velg et bevis",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -411,9 +411,9 @@
 		"Quantity": "Mengde",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Reason": "Grunn",
+		"RECEIPT": "Kvittering",
+		"Receipt": "Kvittering",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -432,7 +432,7 @@
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "Signed in!",
 		"SignIn": "Logg inn",
-		"SignOut": "Sign out",
+		"SignOut": "Logg ut",
 		"SideMenu": "Side menu",
 		"Share": "Del",
 		"Source": "Source",
@@ -463,7 +463,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Prøv det ut",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Ukjent produkt",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -476,7 +476,7 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "URL-adresse",
 		"URLInvalid": "Invalid URL",
 		"User": "Bruker",
 		"Users": "Users",
@@ -493,15 +493,15 @@
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"View": "View",
-		"Website": "Website",
+		"Website": "Nettsted",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "Uten en pris",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Ja",
 		"No": "Nei",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Mat",
+		"PetFood": "Kjæledyrfôr",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -584,14 +584,14 @@
 		"Dashboard": "Dashboard",
 		"Settings": "Innstillinger",
 		"SignIn": "Logg inn",
-		"SignOut": "Sign out"
+		"SignOut": "Logg ut"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Mørk modus"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Legg til en pris",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
 		"SearchProduct": "Søk etter et produkt",
@@ -632,9 +632,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Bevis",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Ukjent produkt"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -649,8 +649,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Pris",
+		"LabelDiscounted": "Rabattert pris",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -679,7 +679,7 @@
 		"LabelsLower": "etiketter",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Ugyldig strekkode",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -689,10 +689,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Ukjent produktnavn"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Legg til en pris",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -710,14 +710,14 @@
 		"PromoReceiptAssistant": "Eksperiment: prøv den nye kvitteringsassistenten for å automatisk hente ut priser fra kvitteringene dine!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Bevis",
+		"PRICE_TAG": "Prislapp",
+		"RECEIPT": "Kvittering",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Velg et bevis",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -729,7 +729,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Priser",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -764,7 +764,7 @@
 			"Title": "Legg til"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Legg til en pris"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -794,7 +794,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Legg til en pris"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -803,7 +803,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Priser"
 		},
 		"PriceTags": {
 			"Title": "Prislapper"
@@ -842,10 +842,10 @@
 			"Title": "Moderering"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Mine priser"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Mine bevis"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -924,7 +924,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Priser",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -950,8 +950,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Mine priser",
+		"MyProofs": "Mine bevis",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Innstillinger",
 		"Title": "Dashboard",
