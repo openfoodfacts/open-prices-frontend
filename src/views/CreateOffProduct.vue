@@ -159,7 +159,6 @@
               density="compact"
               variant="outlined"
               type="text"
-              inputmode="decimal"
             />
             <div v-if="!productExists">
               <div class="text-body-2">
