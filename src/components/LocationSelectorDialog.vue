@@ -25,7 +25,7 @@
             <template v-if="recentLocations.length">
               <v-row>
                 <v-col v-for="(location, index) in recentLocations" :key="index" cols="12" sm="6" class="pt-2 pb-2">
-                  <LocationSearchResultCard :location="location" :hideLocationFooterRow="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
+                  <LocationCard :location="location" :hideLocationFooterRow="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
               </v-row>
               <v-row>
@@ -77,7 +77,7 @@
               </h3>
               <v-row v-if="results.length">
                 <v-col cols="12" sm="6">
-                  <LocationSearchResultCard v-for="(location, index) in results" :key="index" :location="location" :hideLocationFooterRow="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
+                  <LocationCard v-for="(location, index) in results" :key="index" :location="location" :hideLocationFooterRow="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
                 <v-col cols="12" sm="6" style="min-height:400px">
                   <LeafletMap :locations="results" :showActions="true" @locationSelected="selectLocation" />
@@ -156,7 +156,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    LocationSearchResultCard: defineAsyncComponent(() => import('../components/LocationSearchResultCard.vue')),
+    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
   },
   emits: ['location', 'close'],

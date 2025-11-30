@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col>
-      <LocationSearchResultCard v-if="selectedLocation" :location="selectedLocation" :isSelected="true" :hideLocationFooterRow="true" elevation="1" @editLocation="showLocationSelectorDialog" />
+      <LocationCard v-if="selectedLocation" :location="selectedLocation" :isSelected="true" :hideLocationFooterRow="true" elevation="1" @editLocation="showLocationSelectorDialog" />
       <v-btn v-else class="text-body-2" block spaced="end" :prepend-icon="LOCATION_TYPE_OSM_ICON" :class="selectedLocation ? 'border-success' : 'border-error'" @click="showLocationSelectorDialog">
         {{ $t('Common.LocationFindShop') }}
       </v-btn>
@@ -25,7 +25,7 @@ import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
-    LocationSearchResultCard: defineAsyncComponent(() => import('./LocationSearchResultCard.vue')),
+    LocationCard: defineAsyncComponent(() => import('./LocationCard.vue')),
     LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
   },
   props: {
