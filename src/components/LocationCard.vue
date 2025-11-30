@@ -20,10 +20,7 @@
       <v-row :class="isTypeOSM ? 'mt-0' : ''">
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <PriceCountChip class="mr-1" :count="location.price_count" :withLabel="true" />
-          <v-chip label size="small" density="comfortable" class="mr-1">
-            <v-icon start icon="mdi-account" />
-            <span id="user-count">{{ $t('Common.UserCount', { count: location.user_count }) }}</span>
-          </v-chip>
+          <UserCountChip class="mr-1" :count="location.user_count" :withLabel="true" />
           <ProductCountChip class="mr-1" :count="location.product_count" :withLabel="true" />
           <ProofCountChip :count="location.proof_count" :withLabel="true" :to="getLocationProofListUrl" />
         </v-col>
@@ -45,6 +42,7 @@ import geo_utils from '../utils/geo.js'
 export default {
   components: {
     PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
+    UserCountChip: defineAsyncComponent(() => import('../components/UserCountChip.vue')),
     ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
     ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
     LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
