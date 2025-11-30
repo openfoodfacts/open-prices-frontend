@@ -1,5 +1,5 @@
 ---
-applyTo: "**/*.vue
+applyTo: "**/*.vue"
 ---
 # Project coding standards for Vue.js
 
