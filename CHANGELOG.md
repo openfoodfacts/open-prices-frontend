@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.149.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.148.0...v1.149.0) (2025-11-30)
+
+
+### Features
+
+* **Locations:** fetch shop logos from openfoodfacts/brand-images ([#1881](https://github.com/openfoodfacts/open-prices-frontend/issues/1881)) ([0726ec7](https://github.com/openfoodfacts/open-prices-frontend/commit/0726ec771e8d2985cc9d120e177ce3766950e94f))
+
+
+### Bug Fixes
+
+* **CreateOffProduct:** allow passing unit in the quantity field (mobile) ([#1882](https://github.com/openfoodfacts/open-prices-frontend/issues/1882)) ([b3636c9](https://github.com/openfoodfacts/open-prices-frontend/commit/b3636c96368630d2ccb845fd74e2a79f72611a38))
+* **Location Card:** fix location selection following [#1889](https://github.com/openfoodfacts/open-prices-frontend/issues/1889) ([bc00d1d](https://github.com/openfoodfacts/open-prices-frontend/commit/bc00d1d135196864ca10857469a2fd23c52c91de))
+
+
+### Technical
+
+* add basic Copilot instructions (Vue, JS) ([#1886](https://github.com/openfoodfacts/open-prices-frontend/issues/1886)) ([d4a1a6d](https://github.com/openfoodfacts/open-prices-frontend/commit/d4a1a6d1052544c175a102c95f64258eea1f9efa))
+* **Cards:** homogenize padding & layout between Product, Price & Location cards. Avoid using v-container ([#1893](https://github.com/openfoodfacts/open-prices-frontend/issues/1893)) ([dcbf2d4](https://github.com/openfoodfacts/open-prices-frontend/commit/dcbf2d4683d6cfa7ff5a07c318d6927d8d41a12c))
+* **l10n:** New Crowdin translations to review and merge ([#1875](https://github.com/openfoodfacts/open-prices-frontend/issues/1875)) ([eadaa16](https://github.com/openfoodfacts/open-prices-frontend/commit/eadaa16edc3fa7b5f26dc7673c63ed2c29ce0520))
+* **Location Card:** new LocationDetailsRow component. improve card title ([#1887](https://github.com/openfoodfacts/open-prices-frontend/issues/1887)) ([a87f7ba](https://github.com/openfoodfacts/open-prices-frontend/commit/a87f7ba8109c7a4c4c679c1bdc1fb417b37249f2))
+* **Location Card:** new LocationFooterRow component ([#1885](https://github.com/openfoodfacts/open-prices-frontend/issues/1885)) ([bbc775c](https://github.com/openfoodfacts/open-prices-frontend/commit/bbc775ceb5e2b0eeb3fc96eb05d269a4c96f552a))
+* **Location Card:** new UserCountChip component ([#1883](https://github.com/openfoodfacts/open-prices-frontend/issues/1883)) ([54cf9d1](https://github.com/openfoodfacts/open-prices-frontend/commit/54cf9d1a10926a4c41cfe66e9a42accd70005f1c))
+* **Location Card:** remove old unused LocationCard & LocationRecentChip ([#1890](https://github.com/openfoodfacts/open-prices-frontend/issues/1890)) ([3169644](https://github.com/openfoodfacts/open-prices-frontend/commit/31696448de622ee67f34500aa2236d858e5bb5ba))
+* **Location Card:** rename LocationSearchResultCard to LocationCard ([#1891](https://github.com/openfoodfacts/open-prices-frontend/issues/1891)) ([85510bc](https://github.com/openfoodfacts/open-prices-frontend/commit/85510bc85c80dd1756c66ef4dd6024e39d0fc200))
+* **Location Card:** use the LocationSearchResultCard everywhere ([#1889](https://github.com/openfoodfacts/open-prices-frontend/issues/1889)) ([b5cef58](https://github.com/openfoodfacts/open-prices-frontend/commit/b5cef582d4eb67861cd4d9d03756205dfc6b585d))
+
 ## [1.148.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.147.2...v1.148.0) (2025-11-27)
 
 
