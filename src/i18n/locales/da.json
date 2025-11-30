@@ -482,13 +482,13 @@
 		"Users": "Brugere",
 		"UserCount": "{count} brugere | {count} bruger | {count} brugere",
 		"UserContributorCount": "{count} bidragydere | {count} bidragyder | {count} bidragydere",
-		"UserIsModerator": "You are a moderator",
-		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
-		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
-		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
-		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
-		"UserIsNotPriceOwner": "You are not the price owner",
-		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserIsModerator": "Du er moderator",
+		"UserIsModeratorCanEditPrice": "Du kan redigere denne pris, fordi du er moderator",
+		"UserIsModeratorCanDeletePrice": "Du kan slette denne pris, fordi du er moderator",
+		"UserIsModeratorCanEditProof": "Du kan redigere dette bevis, fordi du er moderator",
+		"UserIsModeratorCanDeleteProof": "Du kan slette dette bevis, fordi du er moderator",
+		"UserIsNotPriceOwner": "Du er ikke prisens ejer",
+		"UserIsNotProofOwner": "Du er ikke ejeren af beviset",
 		"Validate": "Bekræftelse",
 		"ValidatePrices": "Validér priser",
 		"ValidatePricesWithAI": "Validér priser med AI",
@@ -557,8 +557,8 @@
 		"Select": "Vælg {currency_code}"
 	},
 	"CreateOffProduct": {
-		"SelectUnknownProduct": "Select unknown product",
-		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"SelectUnknownProduct": "Vælg ukendt produkt",
+		"SelectUnknownProductGuide": "Eller vælg et ukendt produkt at tilføje",
 		"CountriesWhereSold": "Lande, hvorfra der sælges",
 		"CreateNewProduct": "Opret et nyt produkt",
 		"CreateProduct": "Opret produkt",
@@ -567,7 +567,7 @@
 		"NextProof": "Næste bevis",
 		"PreviousProof": "Tidligere bevis",
 		"ProductAlreadyExists": "Produktet findes allerede",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Produktsprog",
 		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Butikker hvor der blev solgt",
 		"UseCropModeToAddImage": "For at tilføje et produktbillede skal du aktivere beskæringstilstand under korrekturbilledet og tegne et rektangel omkring produktet."
@@ -743,7 +743,7 @@
 	"ReceiptAssistant": {
 		"AddNewItem": "Tilføj nyt element",
 		"NoItemsFound": "Ingen varer kunne udtrækkes fra kvitteringen, prøv venligst igen.",
-		"PriceAlreadyCreated": "Price already created",
+		"PriceAlreadyCreated": "Prisen er allerede oprettet",
 		"PriceAlreadyCreatedForItem": "Prisen er allerede oprettet for varen",
 		"PriceReadyToBeAdded": "Pris klar til at blive tilføjet",
 		"ReceiptItems": "Kvitteringsartikler",
@@ -788,7 +788,7 @@
 			"Title": "Tilføj flere beviser"
 		},
 		"AddProofsPriceTags": {
-			"Title": "Add proofs (price tags)"
+			"Title": "Tilføj beviser (prismærker)"
 		},
 		"Locations": {
 			"Title": "Placeringer"
@@ -821,7 +821,7 @@
 			"Title": "Bidrag"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "Opret produkt"
 		},
 		"Experiments": {
 			"Title": "Eksperimenter"
