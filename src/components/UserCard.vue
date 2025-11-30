@@ -1,12 +1,20 @@
 <template>
-  <v-card
-    :title="user.user_id"
-    prepend-icon="mdi-account"
-    data-name="user-card"
-    @click="goToUser(user)"
-  >
-    <v-card-text>
+  <v-card v-if="user" :id="'user_' + user.user_id" data-name="user-card">
+    <v-card-text class="pa-2">
       <v-row>
+        <v-col class="pr-0" style="max-width:20%;">
+          <v-img :src="userImageDefault" width="100px" style="filter:invert(.9);" />
+        </v-col>
+        <v-col style="max-width:80%;">
+          <v-row>
+            <v-col @click="clickUser()">
+              <h3>{{ user.user_id }}</h3>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+
+      <v-row class="mt-0">
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
           <PriceCountChip class="mr-1" :count="user.price_count" :withLabel="true" />
           <CurrencyCountChip class="mr-1" :count="user.currency_count" :withLabel="true" />
@@ -26,6 +34,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import constants from '../constants'
 
 export default {
   components: {
@@ -52,17 +61,22 @@ export default {
       default: false
     }
   },
+  data() {
+    return {
+      userImageDefault: constants.USER_IMAGE_DEFAULT_URL,
+    }
+  },
   computed: {
     getUserProofListUrl() {
       return `/users/${this.user.user_id}/proofs`
     }
   },
   methods: {
-    goToUser(user) {
+    clickUser() {
       if (this.readonly) {
         return
       }
-      this.$router.push({ path: `/users/${user.user_id}` })
+      this.$router.push({ path: `/users/${this.user.user_id}` })
     },
   }
 }

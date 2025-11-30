@@ -39,7 +39,7 @@ export default {
   },
   props: {
     location: {
-      type: [Object, null],
+      type: Object,
       required: true
     },
     isSelected: {

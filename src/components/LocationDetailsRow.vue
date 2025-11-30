@@ -2,7 +2,7 @@
   <v-row>
     <v-col cols="12" class="pt-2 pb-2">
       <LocationOSMTagChip class="mr-1" :location="location" />
-      <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
+      <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
       <template v-if="!hideCountryCity">
         <CountryCityChip v-if="hasLocationCity" class="mr-1" :location="location" type="city" />
         <CountryCityChip v-if="hasLocationCountry" :location="location" type="country" />
@@ -24,7 +24,7 @@ export default {
   },
   props: {
     location: {
-      type: [Object, null],
+      type: Object,
       required: true
     },
     hideLocationOSMID: {
