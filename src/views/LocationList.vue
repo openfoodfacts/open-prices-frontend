@@ -11,7 +11,7 @@
 
   <v-row class="mt-0">
     <v-col v-for="location in locationList" :key="location" cols="12" sm="6" md="4" xl="3">
-      <LocationSearchResultCard :location="location" height="100%" />
+      <LocationCard :location="location" height="100%" />
     </v-col>
   </v-row>
 
@@ -32,7 +32,7 @@ export default {
   components: {
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
-    LocationSearchResultCard: defineAsyncComponent(() => import('../components/LocationSearchResultCard.vue')),
+    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
   },
   data() {
     return {
