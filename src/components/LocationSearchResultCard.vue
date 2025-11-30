@@ -8,12 +8,9 @@
         <v-col style="max-width:80%;">
           <v-row>
             <v-col :cols="!isSelected ? '12' : '10'" @click="clickLocation()">
-              <h4>{{ getLocationTitle }}</h4>
+              <h3>{{ getLocationTitle }}</h3>
               <p>{{ getLocationSubtitle }}</p>
-              <template v-if="!isTypeONLINE">
-                <LocationOSMTagChip class="mr-1" :location="location" />
-                <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
-              </template>
+              <LocationDetailsRow v-if="!isTypeONLINE" class="mt-0" :location="location" :hideLocationOSMID="hideLocationOSMID" :hideCountryCity="hideCountryCity" />
             </v-col>
             <v-col v-if="isSelected" cols="2" class="pl-0">
               <v-btn class="float-right" icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
@@ -36,8 +33,7 @@ import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
-    LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
-    LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
+    LocationDetailsRow: defineAsyncComponent(() => import('../components/LocationDetailsRow.vue')),
     LocationFooterRow: defineAsyncComponent(() => import('../components/LocationFooterRow.vue')),
   },
   props: {
@@ -46,6 +42,14 @@ export default {
       required: true
     },
     isSelected: {
+      type: Boolean,
+      default: false
+    },
+    hideLocationOSMID: {
+      type: Boolean,
+      default: false
+    },
+    hideCountryCity: {
       type: Boolean,
       default: false
     },
@@ -77,16 +81,13 @@ export default {
       if (this.isTypeONLINE) {
         return geo_utils.getLocationONLINETitle(this.location)
       }
-      return geo_utils.getLocationOSMTitle(this.location, true, false, false)
+      return geo_utils.getLocationOSMTitle(this.location, true, false, true, false, true)
     },
     getLocationSubtitle() {
       if (this.isTypeONLINE) {
         return ''
       }
       return geo_utils.getLocationOSMTitle(this.location, false, true, true)
-    },
-    showLocationOSMID() {
-      return this.appStore.user.username && this.appStore.user.location_display_osm_id
     },
   },
   methods: {
