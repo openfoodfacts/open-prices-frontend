@@ -1,6 +1,6 @@
 <template>
-  <v-row class="mt-0">
-    <v-col cols="12">
+  <v-row>
+    <v-col cols="12" class="pt-2 pb-2">
       <LocationOSMTagChip class="mr-1" :location="location" />
       <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
       <template v-if="!hideCountryCity">

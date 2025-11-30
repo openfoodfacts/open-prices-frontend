@@ -1,6 +1,6 @@
 <template>
   <v-card v-if="proof" :id="'proof_' + proof.id" :class="mode == 'Uploaded' ? 'border-success' : 'border-transparent'" data-name="proof-card" @click="selectProof">
-    <v-container class="pa-2">
+    <v-card-text class="pa-2">
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
           <v-img v-if="proof.file_path" :src="getProofImageFullUrl" max-height="100px" />
@@ -10,7 +10,7 @@
           <ProofFooterRow :proof="proof" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
         </v-col>
       </v-row>
-    </v-container>
+    </v-card-text>
   </v-card>
 </template>
 

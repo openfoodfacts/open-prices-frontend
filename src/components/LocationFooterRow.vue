@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :cols="hideActionMenuButton ? '12' : '11'" class="pt-2 pb-2">
+    <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <PriceCountChip class="mr-1" :count="location.price_count" :withLabel="true" source="location" @click="goToLocation()" />
       <UserCountChip class="mr-1" :count="location.user_count" :withLabel="true" />
       <ProductCountChip class="mr-1" :count="location.product_count" :withLabel="true" />
