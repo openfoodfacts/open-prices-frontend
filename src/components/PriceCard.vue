@@ -1,10 +1,10 @@
 <template>
   <v-card v-if="price" :id="'price_' + price.id" data-name="price-card">
-    <v-container class="pa-2">
+    <v-card-text class="pa-2">
       <v-row>
         <v-col v-if="!hideProductImage" class="pr-0" style="max-width:20%;">
           <v-img v-if="product && product.image_url" :src="product.image_url" max-height="100px" @click="goToProduct()" />
-          <v-img v-else :src="productImageDefault" height="50px" width="50px" style="filter:invert(.9);" />
+          <v-img v-else :src="productImageDefault" width="100px" style="filter:invert(.9);" />
         </v-col>
         <v-col :style="hideProductImage ? '' : 'max-width:80%'">
           <h3 v-if="!hideProductTitle" id="product-title" role="link" tabindex="0" @click="goToProduct()" @keydown.enter="goToProduct()">
@@ -14,12 +14,12 @@
           <ProductDetailsRow v-if="!hideProductDetailsRow && hasProduct" class="mt-0" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="readonly" />
           <PriceCategoryDetailsRow v-else-if="!hideProductDetailsRow" class="mt-0" :price="price" />
 
-          <PricePriceRow v-if="price" class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
+          <PricePriceRow class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
         </v-col>
       </v-row>
 
-      <PriceFooterRow v-if="price && !hidePriceFooterRow" class="mt-0" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetailsRow="hideProductDetailsRow" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
-    </v-container>
+      <PriceFooterRow v-if="!hidePriceFooterRow" class="mt-0" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetailsRow="hideProductDetailsRow" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+    </v-card-text>
   </v-card>
 </template>
 

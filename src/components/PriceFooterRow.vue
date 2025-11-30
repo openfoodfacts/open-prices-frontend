@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :cols="hideActionMenuButton ? '12' : '11'" class="pt-2 pb-2">
+    <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <ProofChip v-if="price.proof && !hidePriceProof" class="mr-1" :proof="price.proof" />
       <LocationChip v-if="!hidePriceLocation" class="mr-1" :location="price.location" :locationId="price.location_id" :readonly="readonly" />
       <UserChip v-if="!hidePriceOwner" class="mr-1" :username="price.owner" :readonly="readonly" />

@@ -1,10 +1,10 @@
 <template>
   <v-card v-if="product" :id="'product_' + product.code" :class="isSelected ? 'border-success' : ''" data-name="product-card">
-    <v-container class="pa-2" :style="latestPrice ? 'position:relative;' : ''">
-      <v-row v-if="product">
+    <v-card-text class="pa-2" :style="latestPrice ? 'position:relative;' : ''">
+      <v-row>
         <v-col class="pr-0" style="max-width:20%;">
           <v-img v-if="product.image_url" :src="product.image_url" max-height="100px" @click="clickProduct()" />
-          <v-img v-if="!product.image_url" :src="productImageDefault" height="100px" width="100px" style="filter:invert(.9);" />
+          <v-img v-else :src="productImageDefault" width="100px" style="filter:invert(.9);" />
         </v-col>
         <v-col style="max-width:80%;">
           <v-row>
@@ -21,14 +21,14 @@
           <ProductDetailsRow class="mt-0" :product="product" :hidePriceCount="hidePriceCount" :hideCategoriesAndLabels="hideCategoriesAndLabels" :hideProductBarcode="hideProductBarcode" :hideBarcodeErrors="false" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
         </v-col>
       </v-row>
-    </v-container>
+    </v-card-text>
 
     <v-divider v-if="latestPrice" />
-    <v-container v-if="latestPrice" class="pa-2">
+    <v-card-text v-if="latestPrice" class="pa-2">
       <h4>{{ $t('ProductCard.LatestPrice') }}</h4>
       <PricePriceRow class="mt-0" :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
       <PriceFooterRow class="mt-0" :price="latestPrice" />
-    </v-container>
+    </v-card-text>
   </v-card>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <v-card :class="isSelected ? 'border-success' : ''" data-name="location-search-result-card">
+  <v-card v-if="location" :id="'location_' + location.id" :class="isSelected ? 'border-success' : ''" data-name="location-card">
     <v-card-text class="pa-2">
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
@@ -19,7 +19,7 @@
         </v-col>
       </v-row>
 
-      <LocationFooterRow v-if="location && !hideLocationFooterRow" class="mt-0" :location="location" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+      <LocationFooterRow v-if="!hideLocationFooterRow" class="mt-0" :location="location" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-card-text>
   </v-card>
 </template>

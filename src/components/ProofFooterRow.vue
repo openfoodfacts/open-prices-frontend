@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col :cols="hideActionMenuButton ? '12' : '11'" class="pt-2 pb-2">
+    <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <ProofChip v-if="showProofChip" class="mr-1" :proof="proof" :withLabel="showProofChip" :readonly="true" />
       <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
       <ProofUserConsumptionChip v-if="showReceiptOwnerConsumption" class="mr-1" />
