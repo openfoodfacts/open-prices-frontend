@@ -173,17 +173,18 @@ function getLocationBrandLogo(locationObject) {
   const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/main/xx/stores/'
   // Photon
   if (locationObject.properties && locationObject.properties.name) {
-    const nameCleaned = locationObject.properties.name.split(' ')[0]
+    const nameCleaned = locationObject.properties.name.replace(' ', '-')
     return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
   }
   // Nominatim
   else if (locationObject.address && locationObject.name) {
-    const nameCleaned = locationObject.name.split(' ')[0]
+    const nameCleaned = locationObject.name.replace(' ', '-')
     return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
   }
   // OP
   else if (locationObject.osm_brand) {
-    return `${BRAND_URL_PREFIX}${locationObject.osm_brand}.svg`
+    const nameCleaned = locationObject.osm_brand.replace(' ', '-')
+    return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
   }
 }
 
