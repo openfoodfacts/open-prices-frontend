@@ -19,7 +19,7 @@
     <v-window-item value="list">
       <v-row class="mt-0 mb-1">
         <v-col v-for="location in countryLocationList" :key="location" cols="12" sm="6" md="4" xl="3">
-          <LocationCard :location="location" :hideLocationOSMID="true" :hideCountryCity="true" height="100%" />
+          <LocationSearchResultCard :location="location" :hideCountryCity="true" height="100%" />
         </v-col>
       </v-row>
     </v-window-item>
@@ -50,7 +50,7 @@ export default {
     CountryCard: defineAsyncComponent(() => import('../components/CountryCard.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     DisplayMenu: defineAsyncComponent(() => import('../components/DisplayMenu.vue')),
-    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
+    LocationSearchResultCard: defineAsyncComponent(() => import('../components/LocationSearchResultCard.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
   },
   data() {

@@ -27,7 +27,7 @@
     <v-container v-if="latestPrice" class="pa-2">
       <h4>{{ $t('ProductCard.LatestPrice') }}</h4>
       <PricePriceRow class="mt-0" :price="latestPrice" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
-      <PriceFooterRow :price="latestPrice" />
+      <PriceFooterRow class="mt-0" :price="latestPrice" />
     </v-container>
   </v-card>
 </template>
