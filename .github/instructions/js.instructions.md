@@ -1,9 +1,9 @@
 ---
 applyTo: "**/*.js"
 ---
-# Project coding standards for Javascript
+# Project coding standards for JavaScript
 
-## Javascript guidelines
+## JavaScript guidelines
 
 - Don't finish lines with semicolons.
 - Use single quotes for strings.
