@@ -8,26 +8,13 @@
         <v-col style="max-width:80%;">
           <v-row>
             <v-col @click="clickUser()">
-              <h3>{{ user.user_id }}</h3>
+              <h3>{{ getUserTitle }}</h3>
             </v-col>
           </v-row>
         </v-col>
       </v-row>
 
-      <v-row class="mt-0">
-        <v-col :cols="hideActionMenuButton ? '12' : '11'">
-          <PriceCountChip class="mr-1" :count="user.price_count" :withLabel="true" />
-          <CurrencyCountChip class="mr-1" :count="user.currency_count" :withLabel="true" />
-          <LocationCountChip class="mr-1" :count="user.location_count" :withLabel="true" />
-          <CountryCountChip class="mr-1" :count="user.location_type_osm_country_count" :withLabel="true" />
-          <ProductCountChip class="mr-1" :count="user.product_count" :withLabel="true" />
-          <ProofCountChip class="mr-1" :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
-          <ChallengeCountChip class="mr-1" :count="user.challenge_count" :withLabel="true" />
-        </v-col>
-        <v-col v-if="!hideActionMenuButton" cols="1">
-          <UserActionMenuButton :user="user" />
-        </v-col>
-      </v-row>
+      <UserFooterRow v-if="!hideUserFooterRow" class="mt-0" :user="user" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-card-text>
   </v-card>
 </template>
@@ -38,19 +25,16 @@ import constants from '../constants'
 
 export default {
   components: {
-    PriceCountChip: defineAsyncComponent(() => import('../components/PriceCountChip.vue')),
-    CurrencyCountChip: defineAsyncComponent(() => import('../components/CurrencyCountChip.vue')),
-    LocationCountChip: defineAsyncComponent(() => import('../components/LocationCountChip.vue')),
-    CountryCountChip: defineAsyncComponent(() => import('../components/CountryCountChip.vue')),
-    ProductCountChip: defineAsyncComponent(() => import('../components/ProductCountChip.vue')),
-    ProofCountChip: defineAsyncComponent(() => import('../components/ProofCountChip.vue')),
-    ChallengeCountChip: defineAsyncComponent(() => import('../components/ChallengeCountChip.vue')),
-    UserActionMenuButton: defineAsyncComponent(() => import('../components/UserActionMenuButton.vue')),
+    UserFooterRow: defineAsyncComponent(() => import('../components/UserFooterRow.vue')),
   },
   props: {
     user: {
       type: Object,
       required: true
+    },
+    hideUserFooterRow: {
+      type: Boolean,
+      default: false
     },
     hideActionMenuButton: {
       type: Boolean,
@@ -67,8 +51,8 @@ export default {
     }
   },
   computed: {
-    getUserProofListUrl() {
-      return `/users/${this.user.user_id}/proofs`
+    getUserTitle() {
+      return this.user.user_id
     }
   },
   methods: {
