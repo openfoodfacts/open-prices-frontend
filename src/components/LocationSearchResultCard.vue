@@ -21,6 +21,8 @@
           </v-row>
         </v-col>
       </v-row>
+
+      <LocationFooterRow v-if="location && !hideLocationFooterRow" :location="location" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-card-text>
   </v-card>
 </template>
@@ -36,6 +38,7 @@ export default {
   components: {
     LocationOSMTagChip: defineAsyncComponent(() => import('../components/LocationOSMTagChip.vue')),
     LocationOSMIDChip: defineAsyncComponent(() => import('../components/LocationOSMIDChip.vue')),
+    LocationFooterRow: defineAsyncComponent(() => import('../components/LocationFooterRow.vue')),
   },
   props: {
     location: {
@@ -43,6 +46,18 @@ export default {
       required: true
     },
     isSelected: {
+      type: Boolean,
+      default: false
+    },
+    hideLocationFooterRow: {
+      type: Boolean,
+      default: false
+    },
+    hideActionMenuButton: {
+      type: Boolean,
+      default: false
+    },
+    readonly: {
       type: Boolean,
       default: false
     },
