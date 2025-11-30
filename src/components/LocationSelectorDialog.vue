@@ -25,7 +25,7 @@
             <template v-if="recentLocations.length">
               <v-row>
                 <v-col v-for="(location, index) in recentLocations" :key="index" cols="12" sm="6">
-                  <LocationCard :location="location" :hideLocationFooterRow="true" class="mb-2" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
+                  <LocationCard class="mb-2" :location="location" :hideLocationFooterRow="true" :readonly="true" height="100%" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
               </v-row>
               <v-row>
