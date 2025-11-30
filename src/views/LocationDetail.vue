@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="6">
-      <LocationCard :location="location" readonly />
+      <LocationSearchResultCard v-if="location" :location="location" readonly />
       <p v-if="!loading && !location" class="text-red">
         {{ $t('Common.LocationNotFound') }}
       </p>
@@ -59,7 +59,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
-    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
+    LocationSearchResultCard: defineAsyncComponent(() => import('../components/LocationSearchResultCard.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),

@@ -19,7 +19,7 @@
         </v-col>
       </v-row>
 
-      <LocationFooterRow v-if="location && !hideLocationFooterRow" :location="location" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+      <LocationFooterRow v-if="location && !hideLocationFooterRow" class="mt-0" :location="location" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-card-text>
   </v-card>
 </template>
@@ -87,14 +87,19 @@ export default {
       if (this.isTypeONLINE) {
         return ''
       }
-      return geo_utils.getLocationOSMTitle(this.location, false, true, true)
+      return geo_utils.getLocationOSMTitle(this.location, false, true, false, false, false)
     },
   },
   methods: {
     clickLocation() {
       if (this.isSelected) {
         this.$emit('editLocation', this.location)
+        return
       }
+      if (this.readonly) {
+        return
+      }
+      this.$router.push({ path: `/locations/${this.location.id}` })
     }
   }
 }

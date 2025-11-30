@@ -35,6 +35,23 @@ function getLocationRoad(locationObject) {
     return locationRoad
   }
   // OP
+  // return everything from osm_display_name between locationName & locationCity
+  else if (locationObject.osm_display_name) {
+    const locationName = getLocationName(locationObject)
+    const locationCity = getLocationCity(locationObject)
+    let startIndex = locationObject.osm_display_name.indexOf(locationName)
+    if (startIndex !== -1) {
+      startIndex += locationName.length
+      let endIndex = locationObject.osm_display_name.indexOf(locationCity, startIndex)
+      if (endIndex === -1) {
+        endIndex = locationObject.osm_display_name.length
+      }
+      let locationRoad = locationObject.osm_display_name.substring(startIndex, endIndex).trim()
+      // remove leading and trailing commas
+      locationRoad = locationRoad.replace(/^,|,$/g, '').trim()
+      return locationRoad
+    }
+  }
   return ''
 }
 
@@ -73,7 +90,7 @@ function getLocationOSMTitle(locationObject, withName=true, withRoad=false, with
   if (withName) {
     locationTitle += `${getLocationName(locationObject)}`
   }
-  if (withRoad && (locationObject.address || locationObject.properties)) {
+  if (withRoad && (locationObject.address || locationObject.properties || locationObject.osm_display_name)) {
     locationTitle += locationTitle ? ', ' : ''
     locationTitle += getLocationRoad(locationObject)
   }
