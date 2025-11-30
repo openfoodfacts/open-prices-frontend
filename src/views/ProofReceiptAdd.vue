@@ -13,7 +13,7 @@
 
   <v-row v-if="step === 1">
     <v-col cols="12" md="6">
-      <ProofUploadCard :typePriceTagOnly="true" :hideRecentProofChoice="true" :multiple="true" :assistedByAI="true" @proof="onProofUploaded($event)" @done="proofUploadDone($event)" />
+      <ProofUploadCard :typeReceiptOnly="true" :hideRecentProofChoice="true" :assistedByAI="true" @proof="onProofUploaded($event)" />
     </v-col>
   </v-row>
 
@@ -23,28 +23,20 @@
         type="success"
         variant="outlined"
         density="compact"
-        :text="$t('Common.ProofUploadedCount', { count: proofUploadCount })"
+        :text="$t('Common.ProofUploadedCount', { count: 1 })"
       />
     </v-col>
-    <v-col v-if="firstProofUploaded" cols="12" sm="6" lg="4">
+    <v-col v-if="proofUploaded" cols="12" sm="6" lg="4">
       <v-card
-        v-if="firstProofUploaded.ready_for_price_tag_validation"
-        :title="$t('Common.ValidatePrices')"
-        prepend-icon="mdi-checkbox-marked-circle-plus-outline"
-        append-icon="mdi-arrow-right"
-        to="/prices/add/validate"
-      />
-      <v-card
-        v-else
         :title="$t('Common.AddPrices')"
         prepend-icon="mdi-tag-plus-outline"
         append-icon="mdi-arrow-right"
-        :to="getPriceAddMultipleProofIdUrl"
+        :to="getReceiptAssistantProofIdsUrl"
       />
     </v-col>
     <v-col cols="12" sm="6" lg="4">
       <v-card
-        :title="$t('Common.AddNewProofPriceTags')"
+        :title="$t('Common.AddNewProofReceipt')"
         prepend-icon="mdi-image-plus"
         append-icon="mdi-arrow-right"
         @click="reloadPage"
@@ -83,13 +75,12 @@ export default {
           value: 2
         }
       ],
-      firstProofUploaded: null,
-      proofUploadCount: 0
+      proofUploaded: null,
     }
   },
   computed: {
-    getPriceAddMultipleProofIdUrl() {
-      return `/prices/add/multiple?proof_id=${this.firstProofUploaded.id}`
+    getReceiptAssistantProofIdsUrl() {
+      return `/experiments/receipt-assistant?proof_ids=${this.proofUploaded.id}`
     },
     getUserDashboardUrl() {
       const dashboardTab = constants.USER_COMMUNITY.toLowerCase()  // default on this page
@@ -98,10 +89,7 @@ export default {
   },
   methods: {
     onProofUploaded(proof) {
-      this.firstProofUploaded = proof
-    },
-    proofUploadDone(proofUploadCount) {
-      this.proofUploadCount = proofUploadCount
+      this.proofUploaded = proof
       this.step = 2
     },
     reloadPage() {
