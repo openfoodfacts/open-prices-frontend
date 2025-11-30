@@ -169,6 +169,25 @@ function getLocationLatLng(locationObject) {
   return [locationObject.osm_lat, locationObject.osm_lon]
 }
 
+function getLocationBrandLogo(locationObject) {
+  const BRAND_URL_PREFIX = 'https://raw.githubusercontent.com/openfoodfacts/brand-images/refs/heads/main/xx/stores/'
+  // Photon
+  if (locationObject.properties && locationObject.properties.name) {
+    const nameCleaned = locationObject.properties.name.replace(' ', '-')
+    return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
+  }
+  // Nominatim
+  else if (locationObject.address && locationObject.name) {
+    const nameCleaned = locationObject.name.replace(' ', '-')
+    return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
+  }
+  // OP
+  else if (locationObject.osm_brand) {
+    const nameCleaned = locationObject.osm_brand.replace(' ', '-')
+    return `${BRAND_URL_PREFIX}${nameCleaned}.svg`
+  }
+}
+
 function getMapBounds(results) {
   if (results.length > 0) {
     // Nominatim
@@ -236,6 +255,7 @@ export default {
   getLocationUniqueID,
   getLocationTag,
   getLocationLatLng,
+  getLocationBrandLogo,
   getMapBounds,
   getMapCenter,
   getLocationONLINETitle,
