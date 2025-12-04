@@ -138,7 +138,7 @@ export default {
       return this.proof && (this.proof.type === constants.PROOF_TYPE_RECEIPT)
     },
     getProofImageFullUrl() {
-      return proof_utils.getProofImageFullUrl(this.proof)
+      return proof_utils.getImageFullUrl(this.proof.file_path)
     },
     getProofDetailUrl() {
       return `/proofs/${this.proof.id}`

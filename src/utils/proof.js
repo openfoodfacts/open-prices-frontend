@@ -2,18 +2,11 @@ import constants from '../constants'
 import barcode_utils from './barcode.js'
 
 function getImageFullUrl(imagePath) {
-  return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${imagePath}`
-}
-
-function getProofImageFullUrl(proof, thumb=false) {
-  if (thumb) {
-    // return constants.PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL
-    // return constants.PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL
-    return getImageFullUrl(proof.image_thumb_path)
-  }
+  // return constants.PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL
+  // return constants.PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL
   // return constants.PROOF_TYPE_PRICE_TAG_IMAGE_URL
   // return constants.PROOF_TYPE_RECEIPT_IMAGE_URL
-  return getImageFullUrl(proof.file_path)
+  return `${import.meta.env.VITE_OPEN_PRICES_APP_URL}/img/${imagePath}`
 }
 
 function getProofTypeIcon(proofType) {
@@ -48,13 +41,13 @@ function handlePriceTag(priceTag) {
     currency: priceTag['proof'].currency, // || this.appStore.getUserLastCurrencyUsed,
     proof: priceTag['proof'],
     proofImage: priceTag['proof'].file_path,
-    croppedImage: null,
     product_code: barcodeString,
     detected_product_code: barcodeString,
     product_name: label.product_name,
     bounding_box: priceTag.bounding_box,
     status: priceTag.status,  // specific to the ProofPriceTagAssistant (vs the PriceValidationAssistant)
     price_id: priceTag.price_id,  // specific to the ProofPriceTagAssistant (vs the PriceValidationAssistant)
+    image_path: priceTag.image_path,
     loading: false
   }
 
@@ -92,7 +85,6 @@ function handlePriceTag(priceTag) {
 
 export default {
   getImageFullUrl,
-  getProofImageFullUrl,
   getProofTypeIcon,
   handlePriceTag
 }
