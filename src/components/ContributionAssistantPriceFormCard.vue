@@ -14,7 +14,7 @@
     <v-card-text class="flex-grow-1">
       <v-row>
         <v-col cols="12" class="pt-2 pb-2">
-          <v-img v-if="productPriceForm.image_path" :src="getPriceTagImageFullUrl" max-height="200px" contain />
+          <v-img v-if="productPriceForm.image_path" :src="getImageFullUrl" max-height="200px" contain />
         </v-col>
       </v-row>
       <v-row v-if="showProductNameField">
@@ -168,8 +168,8 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    getPriceTagImageFullUrl() {
-      return proof_utils.getPriceTagImageFullUrl(this.productPriceForm.image_path)
+    getImageFullUrl() {
+      return proof_utils.getImageFullUrl(this.productPriceForm.image_path)
     },
     priceTagIsTypeProduct() {
       return this.productPriceForm.type === constants.PRICE_TYPE_PRODUCT

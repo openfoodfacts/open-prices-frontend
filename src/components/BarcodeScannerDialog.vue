@@ -10,7 +10,7 @@
       <v-card-text>
         <v-img
           v-if="barcodeManualInputCroppedImage"
-          :src="getPriceTagImageFullUrl"
+          :src="getImageFullUrl"
           contain
           max-height="50%"
         />
@@ -146,8 +146,8 @@ export default {
       }
       return constants.PRODUCT_SELECTOR_DISPLAY_LIST
     },
-    getPriceTagImageFullUrl() {
-      return proof_utils.getPriceTagImageFullUrl(this.barcodeManualInputCroppedImage)
+    getImageFullUrl() {
+      return proof_utils.getImageFullUrl(this.barcodeManualInputCroppedImage)
     },
     barcodeManualInputLength() {
       if (!this.barcodeManualForm.barcode) return '0'
