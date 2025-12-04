@@ -20,6 +20,10 @@ function getProofTypeIcon(proofType) {
   return constants[`PROOF_TYPE_${proofType}_ICON`] || constants.PROOF_ICON
 }
 
+function getPriceTagImageFullUrl(priceTagImagePath) {
+  return getImageFullUrl(priceTagImagePath)
+}
+
 /**
  * Format the price tag prediction depending on the version
  * Needed as input for the ContributionAssistantPriceFormCard
@@ -48,13 +52,13 @@ function handlePriceTag(priceTag) {
     currency: priceTag['proof'].currency, // || this.appStore.getUserLastCurrencyUsed,
     proof: priceTag['proof'],
     proofImage: priceTag['proof'].file_path,
-    croppedImage: null,
     product_code: barcodeString,
     detected_product_code: barcodeString,
     product_name: label.product_name,
     bounding_box: priceTag.bounding_box,
     status: priceTag.status,  // specific to the ProofPriceTagAssistant (vs the PriceValidationAssistant)
     price_id: priceTag.price_id,  // specific to the ProofPriceTagAssistant (vs the PriceValidationAssistant)
+    image_path: priceTag.image_path,
     loading: false
   }
 
@@ -94,5 +98,6 @@ export default {
   getImageFullUrl,
   getProofImageFullUrl,
   getProofTypeIcon,
+  getPriceTagImageFullUrl,
   handlePriceTag
 }

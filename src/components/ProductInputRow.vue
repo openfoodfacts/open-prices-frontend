@@ -71,7 +71,7 @@
     v-model="barcodeScannerDialog"
     :hideBarcodeScannerTab="hideBarcodeScannerTab"
     :barcodeManualInputPrefillValue="productForm.product_code"
-    :barcodeManualInputCroppedImage="productForm.croppedImage"
+    :barcodeManualInputCroppedImage="productForm.image_path"
     @barcode="setProductCode($event)"
     @close="barcodeScannerDialog = false"
   />
@@ -99,7 +99,8 @@ export default {
         product_code: '',
         category_tag: null,
         origins_tags: [],
-        labels_tags: []
+        labels_tags: [],
+        image_path: null,  // price tag cropped image URL
       })
     },
     disableInitWhenSwitchingType: {

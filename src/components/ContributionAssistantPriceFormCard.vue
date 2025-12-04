@@ -12,7 +12,11 @@
     </template>
     <v-divider v-if="isInDialog" />
     <v-card-text class="flex-grow-1">
-      <ProofImageCropped v-if="productPriceForm.proofImage" class="mb-4" height="200px" :proofImageFilePath="productPriceForm.proofImage" :boundingBox="productPriceForm.bounding_box" @croppedImage="setCroppedImage($event)" />
+      <v-row>
+        <v-col cols="12" class="pt-2 pb-2">
+          <v-img v-if="productPriceForm.image_path" :src="getPriceTagImageFullUrl" max-height="200px" contain />
+        </v-col>
+      </v-row>
       <v-row v-if="showProductNameField">
         <v-col>
           <v-text-field
@@ -88,10 +92,10 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
+import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
-    ProofImageCropped: defineAsyncComponent(() => import('../components/ProofImageCropped.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
     ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
@@ -115,9 +119,8 @@ export default {
         currency: null,
         receipt_quantity: null,
         proof: null,
-        proofImage: null,
-        croppedImage: null,
         detected_product_code: null,
+        image_path: null,
       })
     },
     showProductNameField: {
@@ -165,6 +168,9 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    getPriceTagImageFullUrl() {
+      return proof_utils.getPriceTagImageFullUrl(this.productPriceForm.image_path)
+    },
     priceTagIsTypeProduct() {
       return this.productPriceForm.type === constants.PRICE_TYPE_PRODUCT
     },
@@ -205,15 +211,7 @@ export default {
       }
     }
   },
-  unmounted() {
-    if (this.productPriceForm.croppedImage) {
-      URL.revokeObjectURL(this.productPriceForm.croppedImage)
-    }
-  },
   methods: {
-    setCroppedImage(croppedImage) {
-      this.productPriceForm.croppedImage = croppedImage
-    },
     updatePriceTagStatus(status=null) {
       this.$emit('updatePriceTagStatus', status)
     },
