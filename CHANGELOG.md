@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.149.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.149.0...v1.149.1) (2025-12-06)
+
+
+### Bug Fixes
+
+* **Location Card:** fix selecting location from search results (following [#1891](https://github.com/openfoodfacts/open-prices-frontend/issues/1891)) ([ec311c1](https://github.com/openfoodfacts/open-prices-frontend/commit/ec311c157f185d9eda72484b2dfff34a1d3f2ea5))
+
+
+### Technical
+
+* **deps:** bump actions/checkout from 5 to 6 ([#1898](https://github.com/openfoodfacts/open-prices-frontend/issues/1898)) ([4456b68](https://github.com/openfoodfacts/open-prices-frontend/commit/4456b68cd252bf59c241b44f41f8c69d90337fd0))
+* **deps:** bump vue-i18n from 9.14.1 to 9.14.5 ([#1900](https://github.com/openfoodfacts/open-prices-frontend/issues/1900)) ([41cf42a](https://github.com/openfoodfacts/open-prices-frontend/commit/41cf42acbcc8359c249bc349b1b75a08b1935d94))
+* **Price Tags:** display image from server image_path instead of on-the-fly cropping ([#1899](https://github.com/openfoodfacts/open-prices-frontend/issues/1899)) ([a7528a5](https://github.com/openfoodfacts/open-prices-frontend/commit/a7528a5d01550c6d02d4c9001be5dc2ba6e62b50))
+* **User Card:** new UserFooterRow component ([#1897](https://github.com/openfoodfacts/open-prices-frontend/issues/1897)) ([285cbc9](https://github.com/openfoodfacts/open-prices-frontend/commit/285cbc99a605da15a5b45cd26c686c5146c68a94))
+* **User Card:** revamp in the same style as Location & Product cards ([#1895](https://github.com/openfoodfacts/open-prices-frontend/issues/1895)) ([fa3d8b6](https://github.com/openfoodfacts/open-prices-frontend/commit/fa3d8b64d8cf702e3c15b88504509f2bd9fc6b44))
+
 ## [1.149.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.148.0...v1.149.0) (2025-11-30)
 
 
