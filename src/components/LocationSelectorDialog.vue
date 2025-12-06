@@ -77,7 +77,7 @@
               </h3>
               <v-row v-if="results.length">
                 <v-col cols="12" sm="6">
-                  <LocationCard v-for="(location, index) in results" :key="index" :location="location" :hideLocationFooterRow="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
+                  <LocationCard v-for="(location, index) in results" :key="index" :location="location" :hideLocationFooterRow="true" :readonly="true" class="mb-2" width="100%" elevation="1" @click="selectLocation(location)" />
                 </v-col>
                 <v-col cols="12" sm="6" style="min-height:400px">
                   <LeafletMap :locations="results" :showActions="true" @locationSelected="selectLocation" />
