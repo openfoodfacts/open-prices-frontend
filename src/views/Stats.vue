@@ -44,16 +44,16 @@
   </v-row>
   <v-row>
     <v-col cols="12" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_off_with_price_count.toString() + ' / ' + stats.product_source_off_count.toString()" :subtitle="$t('Common.Food')" />
+      <StatCard :value="stats.product_source_off_with_price_count.toString() + ' / ' + stats.product_source_off_count.toString()" :subtitle="$t('Common.Food')" :subtitle-prepend-icon="OFF_ICON" />
     </v-col>
     <v-col cols="12" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_obf_with_price_count.toString() + ' / ' + stats.product_source_obf_count.toString()" :subtitle="$t('Common.Beauty')" />
+      <StatCard :value="stats.product_source_obf_with_price_count.toString() + ' / ' + stats.product_source_obf_count.toString()" :subtitle="$t('Common.Beauty')" :subtitle-prepend-icon="OBF_ICON" />
     </v-col>
     <v-col cols="12" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_opf_with_price_count.toString() + ' / ' + stats.product_source_opf_count.toString()" :subtitle="$t('Common.Products')" />
+      <StatCard :value="stats.product_source_opf_with_price_count.toString() + ' / ' + stats.product_source_opf_count.toString()" :subtitle="$t('Common.Products')" :subtitle-prepend-icon="OPF_ICON" />
     </v-col>
     <v-col cols="12" sm="4" md="3" lg="2">
-      <StatCard :value="stats.product_source_opff_with_price_count.toString() + ' / ' + stats.product_source_opff_count.toString()" :subtitle="$t('Common.PetFood')" />
+      <StatCard :value="stats.product_source_opff_with_price_count.toString() + ' / ' + stats.product_source_opff_count.toString()" :subtitle="$t('Common.PetFood')" :subtitle-prepend-icon="OPFF_ICON" />
     </v-col>
   </v-row>
 
@@ -261,6 +261,10 @@ export default {
       },
       loading: false,
       OSM_NAME: constants.OSM_NAME,
+      OFF_ICON: constants.OFF_ICON,
+      OBF_ICON: constants.OBF_ICON,
+      OPF_ICON: constants.OPF_ICON,
+      OPFF_ICON: constants.OPFF_ICON,
     }
   },
   mounted() {
