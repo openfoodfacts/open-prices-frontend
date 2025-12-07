@@ -1,16 +1,22 @@
 <template>
   <v-card
     :title="value"
-    :subtitle="subtitle"
     variant="tonal"
     density="compact"
     :to="to ? to : null"
   >
-    <template v-if="prependIcon" #prepend>
-      <v-icon>{{ prependIcon }}</v-icon>
+    <template v-if="subtitle" #subtitle>
+      <span v-if="subtitlePrependIcon" class="mr-1">
+        <v-icon :icon="subtitlePrependIcon" size="small" />
+      </span>
+      <span>{{ subtitle }}</span>
     </template>
-    <template v-if="to" #append>
-      <v-icon>mdi-arrow-right</v-icon>
+    <template v-if="prependIcon" #prepend>
+      <v-icon :icon="prependIcon" />
+    </template>
+    <template v-if="to || appendIcon" #append>
+      <v-icon v-if="to" icon="mdi-arrow-right" />
+      <v-icon v-else :icon="appendIcon" />
     </template>
   </v-card>
 </template>
@@ -26,7 +32,15 @@ export default {
       type: String,
       default: ''
     },
+    subtitlePrependIcon: {
+      type: String,
+      default: ''
+    },
     prependIcon: {
+      type: String,
+      default: ''
+    },
+    appendIcon: {
       type: String,
       default: ''
     },
