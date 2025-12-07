@@ -947,6 +947,8 @@
 		"WithoutProduct": "Utan en produkt",
 		"WithBarcode": "Med en streckkod",
 		"WithCategory": "Med en kategori",
+		"PricesPerSource": "Priser per källa",
+		"ProofsPerSource": "Bevis per källa",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Senast uppdaterad {date}"
 	},
