@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.150.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.0...v1.150.1) (2025-12-07)
+
+
+### Technical
+
+* **Stats:** clarify some stats cards (more space per source, add flavor icon) ([#1905](https://github.com/openfoodfacts/open-prices-frontend/issues/1905)) ([98f16e2](https://github.com/openfoodfacts/open-prices-frontend/commit/98f16e23eebb1537c7cd84914c64b4a638319279))
+
 ## [1.150.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.149.1...v1.150.0) (2025-12-07)
 
 
