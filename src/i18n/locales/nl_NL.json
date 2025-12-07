@@ -947,6 +947,8 @@
 		"WithoutProduct": "Zonder product",
 		"WithBarcode": "Met een streepjescode",
 		"WithCategory": "Met een categorie",
+		"PricesPerSource": "Prijzen per bron",
+		"ProofsPerSource": "Bewijzen per bron",
 		"PricesProofsPerSource": "Prijzen en bewijzen per bron",
 		"LastUpdated": "Laatst bijgewerkt op {date}"
 	},
