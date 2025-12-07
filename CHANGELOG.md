@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.150.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.149.1...v1.150.0) (2025-12-07)
+
+
+### Features
+
+* **Proof Upload:** make the PriceTagMultiple uploader the default ([#1641](https://github.com/openfoodfacts/open-prices-frontend/issues/1641)) ([02bfd20](https://github.com/openfoodfacts/open-prices-frontend/commit/02bfd20c5e9abe9a64993b94251c99b9ff39570e))
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1894](https://github.com/openfoodfacts/open-prices-frontend/issues/1894)) ([c629471](https://github.com/openfoodfacts/open-prices-frontend/commit/c629471bad0ffb407d0a1c56e206c38b0cf7c1eb))
+* **Proof Upload:** show uploaded & remaining count in the progress bar ([#1904](https://github.com/openfoodfacts/open-prices-frontend/issues/1904)) ([ed5e495](https://github.com/openfoodfacts/open-prices-frontend/commit/ed5e4952885d755474c3627fbf3ac05b12a062f1))
+
 ## [1.149.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.149.0...v1.149.1) (2025-12-06)
 
 
