@@ -947,6 +947,8 @@
 		"WithoutProduct": "Sem qualquer produto",
 		"WithBarcode": "Com um código de barras",
 		"WithCategory": "Com uma categoria",
+		"PricesPerSource": "Preços por fonte",
+		"ProofsPerSource": "Provas por fonte",
 		"PricesProofsPerSource": "Preços e comprovativos por origem",
 		"LastUpdated": "Última atualização em {date}"
 	},
