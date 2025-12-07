@@ -947,6 +947,8 @@
 		"WithoutProduct": "沒有產品",
 		"WithBarcode": "有條碼",
 		"WithCategory": "有類別",
+		"PricesPerSource": "價格來源",
+		"ProofsPerSource": "每個來源的證據",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "最後更新於 {date}"
 	},
