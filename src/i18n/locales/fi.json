@@ -947,6 +947,8 @@
 		"WithoutProduct": "Ilman tuotetta",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Hinnat lähteittäin",
+		"ProofsPerSource": "Todisteet lähteen mukaan",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
