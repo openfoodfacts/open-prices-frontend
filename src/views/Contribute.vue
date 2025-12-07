@@ -33,19 +33,19 @@ export default {
     return {
       contributeCommonList: [
         {
-          name: 'From a price tag',
+          name: this.$t('Common.FromPriceTag'),
           description: '',
           background_image_url: constants.PROOF_TYPE_PRICE_TAG_IMAGE_THUMB_URL,
-          url: '/prices/add/multiple?proof_type=PRICE_TAG'
+          url: '/proofs/add/price-tags'
         },
         {
-          name: 'From a receipt',
+          name: this.$t('Common.FromReceipt'),
           description: '',
           background_image_url: constants.PROOF_TYPE_RECEIPT_IMAGE_THUMB_URL,
           url: '/prices/add/multiple?proof_type=RECEIPT'
         },
         {
-          name: 'Validate prices from the community',
+          name: this.$t('Common.ValidatePricesFromCommunity'),
           description: '',
           background_image_url: 'https://imgur.com/s0lenjt.png',
           url: '/prices/add/validate'
