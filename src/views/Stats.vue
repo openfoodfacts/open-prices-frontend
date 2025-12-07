@@ -43,16 +43,16 @@
     </v-col>
   </v-row>
   <v-row>
-    <v-col cols="6" sm="4" md="3" lg="2">
+    <v-col cols="12" sm="4" md="3" lg="2">
       <StatCard :value="stats.product_source_off_with_price_count.toString() + ' / ' + stats.product_source_off_count.toString()" :subtitle="$t('Common.Food')" />
     </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
+    <v-col cols="12" sm="4" md="3" lg="2">
       <StatCard :value="stats.product_source_obf_with_price_count.toString() + ' / ' + stats.product_source_obf_count.toString()" :subtitle="$t('Common.Beauty')" />
     </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
+    <v-col cols="12" sm="4" md="3" lg="2">
       <StatCard :value="stats.product_source_opf_with_price_count.toString() + ' / ' + stats.product_source_opf_count.toString()" :subtitle="$t('Common.Products')" />
     </v-col>
-    <v-col cols="6" sm="4" md="3" lg="2">
+    <v-col cols="12" sm="4" md="3" lg="2">
       <StatCard :value="stats.product_source_opff_with_price_count.toString() + ' / ' + stats.product_source_opff_count.toString()" :subtitle="$t('Common.PetFood')" />
     </v-col>
   </v-row>
@@ -151,20 +151,41 @@
     <v-col cols="12" class="pb-0">
       <h2 class="text-h6">
         <v-icon size="x-small" icon="mdi-circle-small" />
-        {{ $t('Stats.PricesProofsPerSource') }}
+        {{ $t('Stats.PricesPerSource') }}
       </h2>
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_web_count.toString() + ' | ' + stats.proof_source_web_count.toString()" :subtitle="$t('Common.Website')" />
+      <StatCard :value="stats.price_source_web_count.toString()" :subtitle="$t('Common.Website')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_mobile_count.toString() + ' | ' + stats.proof_source_mobile_count.toString()" :subtitle="$t('Common.MobileApp')" />
+      <StatCard :value="stats.price_source_mobile_count.toString()" :subtitle="$t('Common.MobileApp')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_api_count.toString() + ' | ' + stats.proof_source_api_count.toString()" subtitle="API" />
+      <StatCard :value="stats.price_source_api_count.toString()" subtitle="API" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.price_source_other_count.toString() + ' | ' + stats.proof_source_other_count.toString()" :subtitle="$t('Common.Other')" />
+      <StatCard :value="stats.price_source_other_count.toString()" :subtitle="$t('Common.Other')" />
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col cols="12" class="pb-0">
+      <h2 class="text-h6">
+        <v-icon size="x-small" icon="mdi-circle-small" />
+        {{ $t('Stats.ProofsPerSource') }}
+      </h2>
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_source_web_count.toString()" :subtitle="$t('Common.Website')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_source_mobile_count.toString()" :subtitle="$t('Common.MobileApp')" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_source_api_count.toString()" subtitle="API" />
+    </v-col>
+    <v-col cols="6" sm="4" md="3" lg="2">
+      <StatCard :value="stats.proof_source_other_count.toString()" :subtitle="$t('Common.Other')" />
     </v-col>
   </v-row>
 
