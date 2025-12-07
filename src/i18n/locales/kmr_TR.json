@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Bihayên li gorî çavkaniyê",
+		"ProofsPerSource": "Delîl li gorî çavkaniyê",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
