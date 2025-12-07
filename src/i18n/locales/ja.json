@@ -947,6 +947,8 @@
 		"WithoutProduct": "製品なし",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "ソースごとの価格",
+		"ProofsPerSource": "情報源ごとの証明",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
