@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Iturri bakoitzeko prezioak",
+		"ProofsPerSource": "Iturri bakoitzeko frogak",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
