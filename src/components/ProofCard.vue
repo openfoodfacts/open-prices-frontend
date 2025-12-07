@@ -76,9 +76,9 @@ export default {
   computed: {
     getProofImageFullUrl() {
       if (this.proof.image_thumb_path && this.showImageThumb) {
-        return proof_utils.getProofImageFullUrl(this.proof, true)
+        return proof_utils.getImageFullUrl(this.proof.image_thumb_path)
       }
-      return proof_utils.getProofImageFullUrl(this.proof)
+      return proof_utils.getImageFullUrl(this.proof.file_path)
     },
   },
   methods: {

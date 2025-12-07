@@ -10,7 +10,7 @@
       <v-card-text>
         <v-img
           v-if="barcodeManualInputCroppedImage"
-          :src="barcodeManualInputCroppedImage"
+          :src="getImageFullUrl"
           contain
           max-height="50%"
         />
@@ -81,6 +81,7 @@ import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
 import constants from '../constants'
+import proof_utils from '../utils/proof.js'
 
 const config = {
   fps: 10,
@@ -144,6 +145,9 @@ export default {
         return constants.PRODUCT_SELECTOR_DISPLAY_LIST.filter(item => item.key !== constants.PRODUCT_SELECTOR_DISPLAY_LIST[0].key)
       }
       return constants.PRODUCT_SELECTOR_DISPLAY_LIST
+    },
+    getImageFullUrl() {
+      return proof_utils.getImageFullUrl(this.barcodeManualInputCroppedImage)
     },
     barcodeManualInputLength() {
       if (!this.barcodeManualForm.barcode) return '0'

@@ -36,7 +36,9 @@
           :indeterminate="proofObjectList.length ? false : true"
           :striped="proofImageList.length !== proofObjectList.length"
           rounded
-        />
+        >
+          <strong>{{ $t('Common.ProofUploadProgress', { numberOfProofsUploaded: proofObjectList.length, totalNumberOfProofs: proofImageList.length }) }}</strong>
+        </v-progress-linear>
       </v-sheet>
     </v-card-text>
     <v-divider v-if="step === 1" />
