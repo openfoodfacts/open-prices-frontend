@@ -947,6 +947,8 @@
 		"WithoutProduct": "Bez produktu",
 		"WithBarcode": "S čárovým kódem",
 		"WithCategory": "S kategorií",
+		"PricesPerSource": "Ceny za zdroj",
+		"ProofsPerSource": "Důkazy podle zdroje",
 		"PricesProofsPerSource": "Ceny a doklady podle zdroje",
 		"LastUpdated": "Naposledy aktualizováno {date}"
 	},
