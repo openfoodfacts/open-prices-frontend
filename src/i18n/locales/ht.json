@@ -947,6 +947,8 @@
 		"WithoutProduct": "San yon pwodwi",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Pri pou chak sous",
+		"ProofsPerSource": "Prèv pa sous",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
