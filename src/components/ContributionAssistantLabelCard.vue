@@ -12,6 +12,14 @@
         {{ $t(statusObject.textSmallScreen) }}
       </v-chip>
     </v-card-text>
+    <v-divider v-if="existingPrices.length" />
+    <v-card-text v-if="existingPrices.length">
+      <v-row class="mt-0 mb-0">
+        <v-col v-for="price in existingPrices" :key="price" cols="12">
+          <PriceCard :price="price" :product="price.product" :hidePriceProof="true" :hidePriceFooterRow="true" :readonly="true" elevation="1" height="100%" />
+        </v-col>
+      </v-row>
+    </v-card-text>
     <v-divider v-if="canBeDeleted" />
     <v-card-actions v-if="canBeDeleted">
       <v-btn v-if="!$vuetify.display.smAndUp" color="error" variant="outlined" icon="mdi-delete" size="small" density="comfortable" :aria-label="$t('Common.Delete')" @click="removeLabel()" />
@@ -23,13 +31,21 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
 
 export default {
+  components: {
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+  },
   props: {
     label: {
       type: Object,
       default: () => ({})
+    },
+    existingPrices: {
+      type: Array,
+      default: () => []
     }
   },
   emits: ['removeLabel'],
