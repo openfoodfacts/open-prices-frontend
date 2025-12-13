@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "အရင်းအမြစ်အလိုက် ဈေးနှုန်းများ",
+		"ProofsPerSource": "အရင်းအမြစ်အလိုက် အထောက်အထားများ",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

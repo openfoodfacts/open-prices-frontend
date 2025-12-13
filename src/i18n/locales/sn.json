@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Mitengo yega yega",
+		"ProofsPerSource": "Umbowo pakwakabva",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

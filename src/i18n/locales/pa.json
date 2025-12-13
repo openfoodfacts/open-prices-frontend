@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "ਪ੍ਰਤੀ ਸਰੋਤ ਕੀਮਤਾਂ",
+		"ProofsPerSource": "ਪ੍ਰਤੀ ਸਰੋਤ ਸਬੂਤ",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

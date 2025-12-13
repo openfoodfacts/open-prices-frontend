@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Nneɛma bo a wɔbɔ wɔ fibea biara ho",
+		"ProofsPerSource": "Adanse ahorow a ɛwɔ fibea biara mu",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

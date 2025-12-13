@@ -947,6 +947,8 @@
 		"WithoutProduct": "ஒரு தயாரிப்பு இல்லாமல்",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "மூலத்திற்கான விலைகள்",
+		"ProofsPerSource": "ஆதாரம் வாரியாக சான்றுகள்",
 		"PricesProofsPerSource": "மூலத்திற்கான விலைகள் மற்றும் சான்றுகள்",
 		"LastUpdated": "Last updated on {date}"
 	},

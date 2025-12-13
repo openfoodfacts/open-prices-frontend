@@ -947,6 +947,8 @@
 		"WithoutProduct": "בלי מוצר",
 		"WithBarcode": "עם ברקוד",
 		"WithCategory": "עם קטגוריה",
+		"PricesPerSource": "מחירים לפי מקור",
+		"ProofsPerSource": "הוכחות לכל מקור",
 		"PricesProofsPerSource": "מחירים והוכחות לפי מקור",
 		"LastUpdated": "עדכון אחרון ב־{date}"
 	},

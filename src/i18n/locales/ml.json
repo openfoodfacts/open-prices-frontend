@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "ഉറവിടം അനുസരിച്ചുള്ള വിലകൾ",
+		"ProofsPerSource": "ഉറവിടം അനുസരിച്ചുള്ള തെളിവുകൾ",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

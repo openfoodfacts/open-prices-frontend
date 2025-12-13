@@ -947,6 +947,8 @@
 		"WithoutProduct": "无产品",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "价格来源",
+		"ProofsPerSource": "每个来源的证据",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

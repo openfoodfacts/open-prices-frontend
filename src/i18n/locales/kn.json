@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "ಪ್ರತಿ ಮೂಲದ ಬೆಲೆಗಳು",
+		"ProofsPerSource": "ಪ್ರತಿ ಮೂಲದ ಪುರಾವೆಗಳು",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

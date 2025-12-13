@@ -947,6 +947,8 @@
 		"WithoutProduct": "Tanpa produk",
 		"WithBarcode": "Dengan kode batang",
 		"WithCategory": "Dengan kategori",
+		"PricesPerSource": "Harga per sumber",
+		"ProofsPerSource": "Bukti per sumber",
 		"PricesProofsPerSource": "Harga dan bukti per sumber",
 		"LastUpdated": "Terakhir diperbarui pada {date}"
 	},

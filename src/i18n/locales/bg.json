@@ -947,6 +947,8 @@
 		"WithoutProduct": "Без продукт",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Цени за източник",
+		"ProofsPerSource": "Доказателства за всеки източник",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

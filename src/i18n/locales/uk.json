@@ -947,6 +947,8 @@
 		"WithoutProduct": "Без продукту",
 		"WithBarcode": "Зі штрих-кодом",
 		"WithCategory": "З категорією",
+		"PricesPerSource": "Ціни за джерело",
+		"ProofsPerSource": "Докази для кожного джерела",
 		"PricesProofsPerSource": "Ціни та докази за джерелом",
 		"LastUpdated": "Оновлено {date}"
 	},
