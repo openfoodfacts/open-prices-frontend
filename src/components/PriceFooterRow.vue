@@ -2,11 +2,11 @@
   <v-row>
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <span class="chip-group">
-        <ProofChip v-if="price.proof && !hidePriceProof" class="mr-1" :proof="price.proof" />
-        <LocationChip v-if="!hidePriceLocation" class="mr-1" :location="price.location" :locationId="price.location_id" :readonly="readonly" />
-        <UserChip v-if="!hidePriceOwner" class="mr-1" :username="price.owner" :readonly="readonly" />
-        <DateChip v-if="!hidePriceDate" class="mr-1" :date="price.date" :readonly="readonly" />
-        <UserCommentChip v-if="price.owner_comment" class="mr-1" :comment="price.owner_comment" />
+        <ProofChip v-if="price.proof && !hidePriceProof" :proof="price.proof" />
+        <LocationChip v-if="!hidePriceLocation" :location="price.location" :locationId="price.location_id" :readonly="readonly" />
+        <UserChip v-if="!hidePriceOwner" :username="price.owner" :readonly="readonly" />
+        <DateChip v-if="!hidePriceDate" :date="price.date" :readonly="readonly" />
+        <UserCommentChip v-if="price.owner_comment" :comment="price.owner_comment" />
         <RelativeDateTimeChip v-if="!hidePriceCreated" :dateTime="price.created" />
       </span>
     </v-col>

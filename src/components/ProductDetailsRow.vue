@@ -2,11 +2,11 @@
   <v-row>
     <v-col :cols="hideActionMenuButton ? '12' : '11'" class="pt-2 pb-2">
       <span v-if="hasProductSource" class="chip-group">
-        <PriceCountChip v-if="!hidePriceCount" class="mr-1" :count="product.price_count" @click="goToProduct()" />
+        <PriceCountChip v-if="!hidePriceCount" :count="product.price_count" @click="goToProduct()" />
         <ProductBrands :productBrands="product.brands" :readonly="readonly" />
-        <ProductQuantityChip class="mr-1" :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
+        <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
         <br v-if="!hideCategoriesAndLabels">
-        <ProductCategoriesChip v-if="!hideCategoriesAndLabels" class="mr-1" :productCategories="product.categories_tags" />
+        <ProductCategoriesChip v-if="!hideCategoriesAndLabels" :productCategories="product.categories_tags" />
         <ProductLabelsChip v-if="!hideCategoriesAndLabels" :productLabels="product.labels_tags" />
       </span>
       <ProductMissingChip v-else class="mr-1" />
