@@ -59,6 +59,5 @@
 .chip-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 4px;
-  align-items: center;
+  gap: 4px 4px;
 }

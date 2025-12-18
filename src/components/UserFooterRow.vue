@@ -1,13 +1,15 @@
 <template>
   <v-row>
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
-      <PriceCountChip class="mr-1" :count="user.price_count" :withLabel="true" />
-      <CurrencyCountChip class="mr-1" :count="user.currency_count" :withLabel="true" />
-      <LocationCountChip class="mr-1" :count="user.location_count" :withLabel="true" />
-      <CountryCountChip class="mr-1" :count="user.location_type_osm_country_count" :withLabel="true" />
-      <ProductCountChip class="mr-1" :count="user.product_count" :withLabel="true" />
-      <ProofCountChip class="mr-1" :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
-      <ChallengeCountChip class="mr-1" :count="user.challenge_count" :withLabel="true" />
+      <span class="chip-group">
+        <PriceCountChip :count="user.price_count" :withLabel="true" />
+        <CurrencyCountChip :count="user.currency_count" :withLabel="true" />
+        <LocationCountChip :count="user.location_count" :withLabel="true" />
+        <CountryCountChip :count="user.location_type_osm_country_count" :withLabel="true" />
+        <ProductCountChip :count="user.product_count" :withLabel="true" />
+        <ProofCountChip :count="user.proof_count" :withLabel="true" :to="getUserProofListUrl" />
+        <ChallengeCountChip :count="user.challenge_count" :withLabel="true" />
+      </span>
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
       <UserActionMenuButton :user="user" />
