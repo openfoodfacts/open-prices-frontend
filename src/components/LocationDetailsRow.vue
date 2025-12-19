@@ -1,12 +1,14 @@
 <template>
   <v-row>
     <v-col cols="12" class="pt-2 pb-2">
-      <LocationOSMTagChip class="mr-1" :location="location" />
-      <LocationOSMIDChip v-if="showLocationOSMID" class="mr-1" :location="location" />
-      <template v-if="!hideCountryCity">
-        <CountryCityChip v-if="hasLocationCity" class="mr-1" :location="location" type="city" />
-        <CountryCityChip v-if="hasLocationCountry" :location="location" type="country" />
-      </template>
+      <span class="chip-group">
+        <LocationOSMTagChip :location="location" />
+        <LocationOSMIDChip v-if="showLocationOSMID" :location="location" />
+        <template v-if="!hideCountryCity">
+          <CountryCityChip v-if="hasLocationCity" :location="location" type="city" />
+          <CountryCityChip v-if="hasLocationCountry" :location="location" type="country" />
+        </template>
+      </span>
     </v-col>
   </v-row>
 </template>

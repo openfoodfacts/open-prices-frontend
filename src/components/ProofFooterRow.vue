@@ -1,19 +1,21 @@
 <template>
   <v-row>
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
-      <ProofChip v-if="showProofChip" class="mr-1" :proof="proof" :withLabel="showProofChip" :readonly="true" />
-      <ProofTypeChip v-if="!hideProofType" class="mr-1" :proofType="proof.type" />
-      <ProofUserConsumptionChip v-if="showReceiptOwnerConsumption" class="mr-1" />
-      <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" class="mr-1" :totalCount="proof.receipt_price_count" />
-      <ProofReceiptPriceTotalChip v-if="showReceiptPriceTotal" class="mr-1" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
-      <ProofReceiptOnlineDeliveryCostsChip v-if="showReceiptOnlineDeliveryCosts" class="mr-1" :price="proof.receipt_online_delivery_costs" :currency="proof.currency" />
-      <PriceCountChip v-if="!hidePriceCount" class="mr-1" :count="proof.price_count" :withLabel="true" source="proof" @click="goToProof()" />
-      <LocationChip class="mr-1" :location="proof.location" :locationId="proof.location_id" :readonly="readonly" :showErrorIfLocationMissing="true" />
-      <DateChip class="mr-1" :date="proof.date" :showErrorIfDateMissing="true" :readonly="readonly" />
-      <CurrencyChip class="mr-1" :currency="proof.currency" :showErrorIfCurrencyMissing="true" :readonly="readonly" />
-      <UserChip v-if="!hideProofOwner" class="mr-1" :username="proof.owner" :readonly="readonly" />
-      <UserCommentChip v-if="proof.owner_comment" class="mr-1" :comment="proof.owner_comment" />
-      <RelativeDateTimeChip :dateTime="proof.created" />
+      <span class="chip-group">
+        <ProofChip v-if="showProofChip" :proof="proof" :withLabel="showProofChip" :readonly="true" />
+        <ProofTypeChip v-if="!hideProofType" :proofType="proof.type" />
+        <ProofUserConsumptionChip v-if="showReceiptOwnerConsumption" />
+        <ProofReceiptPriceCountChip v-if="showReceiptPriceCount" :totalCount="proof.receipt_price_count" />
+        <ProofReceiptPriceTotalChip v-if="showReceiptPriceTotal" :totalCount="proof.receipt_price_total" :currency="proof.currency" />
+        <ProofReceiptOnlineDeliveryCostsChip v-if="showReceiptOnlineDeliveryCosts" :price="proof.receipt_online_delivery_costs" :currency="proof.currency" />
+        <PriceCountChip v-if="!hidePriceCount" :count="proof.price_count" :withLabel="true" source="proof" @click="goToProof()" />
+        <LocationChip :location="proof.location" :locationId="proof.location_id" :readonly="readonly" :showErrorIfLocationMissing="true" />
+        <DateChip :date="proof.date" :showErrorIfDateMissing="true" :readonly="readonly" />
+        <CurrencyChip :currency="proof.currency" :showErrorIfCurrencyMissing="true" :readonly="readonly" />
+        <UserChip v-if="!hideProofOwner" :username="proof.owner" :readonly="readonly" />
+        <UserCommentChip v-if="proof.owner_comment" :comment="proof.owner_comment" />
+        <RelativeDateTimeChip :dateTime="proof.created" />
+      </span>
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
       <ProofActionMenuButton :proof="proof" />

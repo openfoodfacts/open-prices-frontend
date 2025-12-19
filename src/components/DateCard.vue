@@ -3,14 +3,16 @@
     <v-card-text>
       <v-row>
         <v-col :cols="hideActionMenuButton ? '12' : '11'">
-          <PriceCountChip class="mr-1" :count="priceCount" :withLabel="true" />
-          <v-chip
-            v-for="dp in dateParentList"
-            :key="dp.name"
-            label size="small" density="comfortable" class="mr-1" @click="$router.push(dp.path)"
-          >
-            {{ dp.name }}
-          </v-chip>
+          <span class="chip-group">
+            <PriceCountChip :count="priceCount" :withLabel="true" />
+            <v-chip
+              v-for="dp in dateParentList"
+              :key="dp.name"
+              label size="small" density="comfortable" @click="$router.push(dp.path)"
+            >
+              {{ dp.name }}
+            </v-chip>
+          </span>
         </v-col>
         <v-col v-if="!hideActionMenuButton" cols="1">
           <DateActionMenuButton :date="date" />

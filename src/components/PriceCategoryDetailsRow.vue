@@ -1,9 +1,11 @@
 <template>
   <v-row>
     <v-col cols="12" class="pt-2 pb-2">
-      <PriceCategoryChip v-if="!hideCategoryChip" :priceCategory="price.category_tag" />
-      <PriceOrigins v-if="hasPriceOrigin" class="mr-1" :priceOrigins="price.origins_tags" />
-      <PriceLabels v-if="hasPriceLabels" :priceLabels="price.labels_tags" />
+      <span class="chip-group">
+        <PriceCategoryChip v-if="!hideCategoryChip" :priceCategory="price.category_tag" />
+        <PriceOrigins v-if="hasPriceOrigin" :priceOrigins="price.origins_tags" />
+        <PriceLabels v-if="hasPriceLabels" :priceLabels="price.labels_tags" />
+      </span>
     </v-col>
   </v-row>
 </template>
