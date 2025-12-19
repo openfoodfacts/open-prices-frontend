@@ -1,9 +1,9 @@
 <template>
-  <span v-if="priceOrigins">
-    <v-chip v-for="origin in priceOrigins" :key="origin" class="mr-1" label size="small" density="comfortable">
+  <template v-if="priceOrigins">
+    <v-chip v-for="origin in priceOrigins" :key="origin" label size="small" density="comfortable">
       {{ getPriceOriginTagName(origin) }}
     </v-chip>
-  </span>
+  </template>
 </template>
 
 <script>

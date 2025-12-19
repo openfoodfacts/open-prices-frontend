@@ -1,13 +1,15 @@
 <template>
   <v-card :title="getCityCountryTitle" prepend-icon="mdi-map-marker-outline" data-name="country-card">
     <v-card-text>
-      <LocationCountChip :count="locationCount" :withLabel="true" />
-      <v-chip
-        v-if="countryUrl"
-        label size="small" density="comfortable" class="mr-1" @click="$router.push(countryUrl)"
-      >
-        {{ country }}
-      </v-chip>
+      <span class="chip-group">
+        <LocationCountChip :count="locationCount" :withLabel="true" />
+        <v-chip
+          v-if="countryUrl"
+          label size="small" density="comfortable" @click="$router.push(countryUrl)"
+        >
+          {{ country }}
+        </v-chip>
+      </span>
     </v-card-text>
   </v-card>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <v-chip label size="small" density="comfortable" class="mr-1">
+  <v-chip label size="small" density="comfortable">
     {{ product.code }}
   </v-chip>
 </template>

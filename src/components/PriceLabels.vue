@@ -1,10 +1,10 @@
 <template>
-  <span v-if="priceLabels">
-    <v-chip v-for="label in priceLabels" :key="label" class="mr-1" label size="small" density="comfortable">
+  <template v-if="priceLabels">
+    <v-chip v-for="label in priceLabels" :key="label" label size="small" density="comfortable">
       {{ getPriceLabelTagName(label) }}
       <v-icon v-if="label == 'en:organic'" icon="mdi-leaf-circle-outline" end />
     </v-chip>
-  </span>
+  </template>
 </template>
 
 <script>
