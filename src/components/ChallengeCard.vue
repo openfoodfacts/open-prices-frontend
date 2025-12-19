@@ -5,9 +5,11 @@
     </template>
 
     <v-card-text>
-      <ChallengeStatusChip class="mr-1" :challengeStatus="challenge.status" />
-      <DateChip class="mr-1" :date="challenge.start_date" />
-      <DateChip :date="challenge.end_date" />
+      <span class="chip-group">
+        <ChallengeStatusChip :challengeStatus="challenge.status" />
+        <DateChip :date="challenge.start_date" />
+        <DateChip :date="challenge.end_date" />
+      </span>
       <div v-if="challenge.categories.length" class="mt-1">
         <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
       </div>
