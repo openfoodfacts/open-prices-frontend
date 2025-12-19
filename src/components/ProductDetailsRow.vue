@@ -3,20 +3,20 @@
     <v-col :cols="hideActionMenuButton ? '12' : '11'" class="pt-2 pb-2">
       <span class="chip-group">
         <PriceCountChip v-if="!hidePriceCount" :count="product.price_count" @click="goToProduct()" />
-        <span v-if="hasProductSource">
+        <template v-if="hasProductSource">
           <ProductBrands :productBrands="product.brands" :readonly="readonly" />
           <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
-          <br v-if="!hideCategoriesAndLabels">
-          <ProductCategoriesChip v-if="!hideCategoriesAndLabels" :productCategories="product.categories_tags" />
-          <ProductLabelsChip v-if="!hideCategoriesAndLabels" :productLabels="product.labels_tags" />
-        </span>
+          <template v-if="!hideCategoriesAndLabels">
+            <ProductCategoriesChip :productCategories="product.categories_tags" />
+            <ProductLabelsChip :productLabels="product.labels_tags" />
+          </template>
+        </template>
         <ProductMissingChip v-else />
+        <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
+        <ProductBarcodeTooLongChip v-if="!hideBarcodeErrors && barcodeTooLong" :barcode="product.code" />
+        <ProductBarcodeInvalidChip v-if="!hideBarcodeErrors && barcodeInvalid" />
+        <ProductSourceChip v-if="showProductSource" :product="product" />
       </span>
-      <br v-if="showProductBarcode || !hideBarcodeErrors && barcodeTooLong || !hideBarcodeErrors && barcodeInvalid || showProductSource">
-      <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
-      <ProductBarcodeTooLongChip v-if="!hideBarcodeErrors && barcodeTooLong" class="mr-1" :barcode="product.code" />
-      <ProductBarcodeInvalidChip v-if="!hideBarcodeErrors && barcodeInvalid" class="mr-1" />
-      <ProductSourceChip v-if="showProductSource" :product="product" />
     </v-col>
     <v-col v-if="!hideActionMenuButton" cols="1">
       <ProductActionMenuButton :product="product" />
