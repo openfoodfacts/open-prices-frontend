@@ -11,20 +11,26 @@
         <DateChip :date="challenge.end_date" />
       </span>
       <div v-if="challenge.categories.length" class="mt-1">
-        <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" class="mr-1" />
+        <span class="chip-group">
+          <CategoryTagChip v-for="category in challenge.categories" :key="category" :category="{id: category, name: category}" />
+        </span>
       </div>
       <div v-if="challenge.locations.length" class="mt-1">
-        <LocationCountChip class="mr-1" :count="challenge.locations.length" :withLabel="true" />
+        <span class="chip-group">
+          <LocationCountChip :count="challenge.locations.length" :withLabel="true" />
+        </span>
       </div>
     </v-card-text>
 
     <v-divider v-if="challenge.status !== 'UPCOMING'" />
 
     <v-card-text v-if="challenge.status !== 'UPCOMING'">
-      <PriceCountChip class="mr-1" :count="challenge.stats.price_count" :withLabel="true" />
-      <ProofCountChip class="mr-1" :count="challenge.stats.proof_count" :withLabel="true" />
-      <LocationCountChip class="mr-1" :count="challenge.stats.proof_location_count" :withLabel="true" />
-      <ProductCountChip class="mr-1" :count="challenge.stats.price_product_count" :withLabel="true" />
+      <span class="chip-group">
+        <PriceCountChip :count="challenge.stats.price_count" :withLabel="true" />
+        <ProofCountChip :count="challenge.stats.proof_count" :withLabel="true" />
+        <LocationCountChip :count="challenge.stats.proof_location_count" :withLabel="true" />
+        <ProductCountChip :count="challenge.stats.price_product_count" :withLabel="true" />
+      </span>
     </v-card-text>
   </v-card>
 </template>
