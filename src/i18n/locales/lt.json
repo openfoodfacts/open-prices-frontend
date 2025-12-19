@@ -947,6 +947,8 @@
 		"WithoutProduct": "Be produkto",
 		"WithBarcode": "Su brūkšniniu kodu",
 		"WithCategory": "Su kategorija",
+		"PricesPerSource": "Kainos pagal šaltinį",
+		"ProofsPerSource": "Įrodymai pagal šaltinį",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Paskutinį kartą atnaujinta {date}"
 	},

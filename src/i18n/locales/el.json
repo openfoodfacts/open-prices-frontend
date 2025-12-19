@@ -27,98 +27,98 @@
 		"HowSupport": "Πώς μπορώ να υποστηρίξω το {op_name};",
 		"HowSupportAnswer": "Μπορείτε να υποστηρίξετε το {op_name} συνεισφέροντας στο έργο, κοινοποιώντας το στους φίλους και την οικογένειά σας και κάνοντας δωρεά στο {off_url}.",
 		"WhyOSM": "Γιατί ζητάτε ένα αναγνωριστικό {osm_name} όταν προσθέτω μια τιμή;",
-		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
-		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
-		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
-		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
-		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
-		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
+		"WhyOSMAnswer": "Ζητάμε ένα αναγνωριστικό {osm_url} για να μπορέσουμε να συνδέσουμε την τιμή με ένα συγκεκριμένο κατάστημα. Αυτό είναι χρήσιμο για να είναι δυνατή η εμφάνιση της τιμής σε έναν χάρτη και για να είναι δυνατή η ανάλυση των διαφορών τιμών σε περιφερειακό επίπεδο ή μεταξύ των λιανοπωλητών.",
+		"HowRetailer": "Είμαι λιανοπωλητής και θέλω να συνεισφέρω στις τιμές. Πώς μπορώ να το κάνω αυτό;",
+		"HowRetailerAnswer": "Μπορείτε να συνεισφέρετε τιμές χρησιμοποιώντας τo {op_api_url}. Εάν θέλετε να συνεισφέρετε τιμές σε κλίμακα, επικοινωνήστε μαζί μας στη διεύθυνση {off_contact_email_url}.",
+		"WhyNoScraping": "Σκέφτεστε να αντλήσετε τιμές από τους ιστότοπους των λιανοπωλητών;",
+		"WhyNoScrapingAnswer1": "Για νομικούς και τεχνικούς λόγους, δεν θεωρούμε την συλλογή τιμών από τους ιστότοπους των λιανοπωλητών ως έγκυρο τρόπο συνεισφοράς στο {op_name}. Θέλουμε να βεβαιωθούμε ότι οι τιμές που συλλέγουμε είναι ακριβείς και ενημερωμένες και η λήψη συλλεγμένων τιμών από τους συνεισφέροντες δεν μας επιτρέπει να το κάνουμε αυτό.",
+		"WhyNoScrapingAnswer2": "Η συλλογή τιμών είναι μια επιλογή που εξετάζεται σε μια μελλοντική έκδοση του {op_name}, αλλά θα γίνεται από το ίδιο το {op_name}, ώστε να μπορούμε να έχουμε μια απόδειξη της τιμής με βάση τη σελίδα HTML."
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Ένα ράφι με πολλαπλές ετικέτες τιμών",
+			"Title": "Πολλαπλά προϊόντα"
 		},
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
+			"Subtitle": "Ένα ή περισσότερα προϊόντα",
 			"Title": "Απόδειξη"
 		},
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Μόνο μία τιμή",
+			"Title": "Μεμονομένο Προϊόν"
 		}
 	},
 	"AddPriceMultiple": {
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "Προσθήκη νέας τιμής",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} τιμή που έχει ήδη μεταφορτωθεί | {priceAlreadyUploadedNumber} τιμές που έχουν ήδη μεταφορτωθεί",
 			"Create": "Δημιουργία",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
+			"ExistingProductFound": "Διπλότυπο; Αυτό το προϊόν έχει ήδη προστεθεί για αυτήν την απόδειξη",
 			"NewPrice": "Νέα τιμή",
 			"PriceUploaded": "Η τιμή δημιουργήθηκε!",
 			"Upload": "Ανέβασμα"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Proof details"
+			"ReceiptWarning": "Οι αποδείξεις ενδέχεται να περιέχουν προσωπικά στοιχεία, γι' αυτό συνιστούμε να τις αποκρύψετε (να τις επεξεργαστείτε, να τις διπλώσετε...) πριν τραβήξετε τη φωτογραφία.",
+			"PrivateWarning": "Μπορείτε επίσης να ορίσετε την απόδειξη σε Ιδιωτική. Οι ιδιωτικές αποδείξεις θα είναι ορατές μόνο σε εσάς και στους συντονιστές.",
+			"Title": "Λεπτομέρειες απόδειξης"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Προσθήκη πολλαπλών τιμών"
 	},
 	"AddPriceSingle": {
 		"Create": "Δημιουργία",
 		"PriceDetails": {
-			"Discount": "Discount?",
+			"Discount": "Έκπτωση;",
 			"Label": "Τιμή",
 			"LabelDiscounted": "Τιμή με έκπτωση",
-			"LabelFull": "Full price",
+			"LabelFull": "Πλήρης τιμή",
 			"Proof": "Επαλήθευση",
-			"ProofDateChanged": "Date updated!",
-			"ProofSelected": "Proof selected!",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"ProofDateChanged": "Η ημερομηνία ενημερώθηκε!",
+			"ProofSelected": "Επιλέχθηκε η απόδειξη!",
+			"ProofUploaded": "Η απόδειξη ανεβάστηκε!",
+			"Title": "Λεπτομέρειες τιμής",
+			"UploadProof": "Ανεβάστε μια απόδειξη",
+			"Picture": "Εικόνα",
 			"TakePicture": "Τραβήξτε μια φωτογραφία",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"Gallery": "Συλλογή συσκευής",
+			"SelectFromGallery": "Επιλογή από τη συλλογή συσκευής",
+			"RecentProof": "Πρόσφατη απόδειξη",
+			"SelectRecentProof": "Επιλέξτε μια πρόσφατη απόδειξη"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Κατηγορία",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"OriginLabel": "Προέλευση",
+			"ProductBarcode": "Γραμμωτός κώδικας προϊόντος",
 			"Scan": "Σάρωση",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "Σάρωση ενός γραμμωτού κώδικα",
 			"ScanBarcodeShort": "Σάρωση",
 			"Type": "Τύπος",
 			"TypeBarcode": "Εισάγετε ραβδωτό κώδικα",
 			"TypeBarcodeShort": "Τύπος",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"SetProduct": "Ορισμός ενός προϊόντος",
+			"Title": "Πληροφορίες προϊόντος"
 		},
 		"ProductModeList": {
 			"Barcode": "Γραμμικός κωδικός",
 			"Category": "Κατηγορία"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Τιμή ανά κιλό",
+			"PerUnit": "Τιμή ανά μονάδα"
 		},
-		"Title": "Add a single price",
+		"Title": "Προσθήκη μίας μόνο τιμής",
 		"WhereWhen": {
 			"Date": "Ημερομηνία",
 			"DateLabel": "Ημερομηνία",
 			"Find": "Εύρεση",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Τοποθεσία καταστήματος",
+			"SelectLocation": "Επιλέξτε την τοποθεσία σας",
+			"Title": "Πού και πότε;"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "με την υποστήριξη του {url}"
 		}
 	},
 	"BarcodeManualInput": {
@@ -126,17 +126,17 @@
 		"Title": "Εισάγετε ραβδωτό κώδικα"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "Πρόκληση κοινότητας",
+		"Subtitle": "Συμμετέχετε μαζί με άλλους λάτρεις των τιμών των τροφίμων στη συλλογή πληροφοριών σχετικά με {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "Βγάλτε φωτογραφίες από τις ετικέτες τιμών στα καταστήματα",
+			"line1": "Οι εικόνες μπορούν να περιλαμβάνουν μία ή περισσότερες ετικέτες τιμών. Οι γραμμωτοί κώδικες θα πρέπει να είναι ευανάγνωστοι. Για παράδειγμα:",
+			"line2": "Μόλις είστε έτοιμοι, βρείτε το κατάστημά σας και ανεβάστε τις φωτογραφίες σας χρησιμοποιώντας το παρακάτω κουμπί.",
+			"AddPictures": "Προσθήκη φωτογραφιών"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
+			"Title": "Επικύρωση των τιμών που εντοπίστηκαν με ΤΝ",
+			"line1": "Οι ετικέτες τιμών ανιχνεύονται αυτόματα, αλλά τα ρομπότ χρειάζονται ακόμα τη βοήθειά σας για να τις επικυρώσουν.",
 			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
 			"line3": "If you're having trouble reading the label, mark it as unreadable.",
 			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
@@ -168,11 +168,11 @@
 	"Common": {
 		"About": "Σχετικά",
 		"Action": "Δράση",
-		"Actions": "Actions",
+		"Actions": "Δράσεις",
 		"AddComment": "Add a comment",
 		"AddPrice": "Προσθήκη μίας τιμής",
 		"AddPrices": "Add prices",
-		"AddNewPrice": "Add a new price",
+		"AddNewPrice": "Προσθήκη νέας τιμής",
 		"AddNewPrices": "Add new prices",
 		"AddProof": "Add a proof",
 		"AddProofs": "Add proofs",
@@ -184,7 +184,7 @@
 		"All": "Όλα",
 		"Barcode": "Γραμμικός κωδικός",
 		"Barcodes": "Barcodes",
-		"BarcodeScan": "Scan a barcode",
+		"BarcodeScan": "Σάρωση ενός γραμμωτού κώδικα",
 		"BarcodeScanShort": "Σάρωση",
 		"BarcodeType": "Εισάγετε ραβδωτό κώδικα",
 		"BarcodeTypeShort": "Τύπος",
@@ -221,7 +221,7 @@
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Συμβάλλετε",
-		"Contributors": "Χρηστες",
+		"Contributors": "Συνεισφέροντες",
 		"Contributions": "Συνεισφορές",
 		"Confirm": "Επιβεβαίωση",
 		"Country": "Χώρα",
@@ -248,64 +248,64 @@
 		"FromPriceTag": "Από μια τιμή",
 		"FromReceipt": "Από μια απόδειξη",
 		"GoToProof": "Go to proof",
-		"Join": "Join",
+		"Join": "Συμμετοχή",
 		"Label": "Ετικέτα",
 		"Labels": "Ετικέτες",
-		"LabelTotal": "{count} labels | {count} label | {count} labels",
+		"LabelTotal": "{count} ετικέτες | {count} ετικέτα | {count} ετικέτες",
 		"Language": "Γλώσσες",
 		"Languages": "Γλώσσες",
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "Τελευταίες τιμές",
+		"LatestProofs": "Τελευταίες αποδείξεις",
 		"LoadMore": "Φόρτωση περισσοτέρων",
-		"Location": "Location",
-		"Locations": "Locations",
-		"LocationSelected": "Location selected",
-		"LocationFindShop": "Find the shop location",
-		"LocationMissing": "Location missing",
-		"LocationSearchByName": "Search by name and city",
+		"Location": "Τοποθεσία",
+		"Locations": "Τοποθεσίες",
+		"LocationSelected": "Επιλέχθηκε τοποθεσία",
+		"LocationFindShop": "Βρείτε την τοποθεσία του καταστήματος",
+		"LocationMissing": "Λείπει η τοποθεσία",
+		"LocationSearchByName": "Αναζήτηση με όνομα και πόλη",
 		"Date": "Ημερομηνία",
-		"DateMissing": "Date missing",
+		"DateMissing": "Λείπει η ημερομηνία",
 		"Details": "Λεπτομέρειες",
 		"Delete": "Διαγραφή",
-		"DeveloperMode": "Developer mode",
-		"Discount": "Discount",
-		"DiscountType": "Discount type",
+		"DeveloperMode": "Λειτουργία προγραμματιστή",
+		"Discount": "Έκπτωση",
+		"DiscountType": "Τύπος έκπτωσης",
 		"DiscountTypeQuantity": "Ποσότητα",
-		"DiscountTypeSale": "Sale",
-		"DiscountTypeSeasonal": "Seasonal",
-		"DiscountTypeLoyaltyProgram": "Loyalty program",
-		"DiscountTypeExpiresSoon": "Expires soon",
-		"DiscountTypePickItYourself": "Pick it yourself",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSale": "Έκπτωση",
+		"DiscountTypeSeasonal": "Εποχιακή",
+		"DiscountTypeLoyaltyProgram": "Πρόγραμμα επιβράβευσης",
+		"DiscountTypeExpiresSoon": "Λήγει σύντομα",
+		"DiscountTypePickItYourself": "Παραλάβε τε το μόνοι σας",
+		"DiscountTypeSecondHand": "Μεταχειρισμένο",
 		"DiscountTypeOther": "Άλλο",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Παράδειγμα",
+		"Examples": "Παραδείγματα",
 		"ExampleWithColon": "Παράδειγμα:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "Παράδειγμα: {value}",
 		"ExamplesWithColon": "Παραδείγματα:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "Παραδείγματα: {value}",
 		"Edit": "Επεξεργασία",
-		"End": "End",
+		"End": "Τέλος",
 		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Απαιτείται πεδίο",
 		"Filter": "Φίλτρο",
-		"FilterChallengesShowAllStatus": "Show all challenges",
-		"FilterProductWithPriceCount": "With a price",
-		"FilterProductWithPriceCountHide": "Hide products with prices",
-		"FilterProductWithoutPriceCount": "Without prices",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
-		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterChallengesShowAllStatus": "Εμφάνιση όλων των προκλήσεων",
+		"FilterProductWithPriceCount": "Με τιμή",
+		"FilterProductWithPriceCountHide": "Απόκρυψη προϊόντων με τιμές",
+		"FilterProductWithoutPriceCount": "Χωρίς τιμές",
+		"FilterPriceMoreThan30DaysHide": "Απόκρυψη τιμών παλαιότερων των 30 ημερών",
+		"FilterProofWithPriceCountHide": "Απόκρυψη αποδείξεων με τιμές",
+		"FilterPriceTagWithProofOwner": "Εμφάνιση μόνο των αποδείξεών μου",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Με έγκυρο γραμμωτό κώδικα (barcode)",
 		"FilterPriceTagWithTagPredictionProductExists": "Με ένα έγκυρο προϊόν",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Με έγκυρη ετικέτα κατηγορίας",
-		"FilterLocationWithPriceCountHide": "Hide locations with prices",
-		"FilterUserWithPriceCountHide": "Hide contributors with prices",
-		"Fix": "Fix",
+		"FilterLocationWithPriceCountHide": "Απόκρυψη τοποθεσιών με τιμές",
+		"FilterUserWithPriceCountHide": "Απόκρυψη συνεισφερόντων με τιμές",
+		"Fix": "Επιδιόρθωση",
 		"FAQ": "Συχνές ερωτήσεις",
 		"FrequentlyAskedQuestions": "Συχνές ερωτήσεις",
 		"GDPR_REQUEST": "GDPR request",
-		"Group": "Group",
+		"Group": "Ομάδα",
 		"Help": "Βοήθεια",
 		"History": "Ιστορικό",
 		"Image": "Εικόνα",
@@ -365,7 +365,7 @@
 		"PageNotMaintainedAnymore": "Αυτή η σελίδα δεν συντηρείται πλέον.",
 		"PersonalInfo": "Personal information",
 		"Physical": "Physical",
-		"Picture": "Picture",
+		"Picture": "Εικόνα",
 		"Pictures": "Pictures",
 		"PictureSelect": "Select a picture",
 		"PictureSelectMultiple": "Select pictures",
@@ -400,11 +400,11 @@
 		"ProductMissing": "Λείπει προϊόν",
 		"ProductOrCategoryMissing": "Λείπει προϊόν ή κατηγορία",
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
-		"ProofDetails": "Proof details",
+		"ProofDetails": "Λεπτομέρειες απόδειξης",
 		"ProofMissing": "Proof missing",
 		"ProofSelect": "Επιλέξτε μια απόδειξη",
 		"ProofSelectMultiple": "Select proofs",
-		"ProofSelected": "Proof selected!",
+		"ProofSelected": "Επιλέχθηκε η απόδειξη!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
 		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
 		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} μεταφορτωμένα δοκίμια",
@@ -499,7 +499,7 @@
 		"ValidatePricesFromCommunity": "Επικύρωση τιμών από την κοινότητα",
 		"View": "Προβολή",
 		"Website": "Ιστοσελίδα",
-		"WithAPrice": "With a price",
+		"WithAPrice": "Με τιμή",
 		"WithoutAPrice": "Χωρίς τιμή",
 		"Year": "Year",
 		"Years": "Years",
@@ -597,7 +597,7 @@
 	},
 	"Home": {
 		"AddPrice": "Προσθήκη μίας τιμής",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Τελευταίες τιμές",
 		"ProofAdd": "Add a proof",
 		"SearchProduct": "Αναζητήσετε ένα προϊόν",
 		"SettingsUpdated": "Settings updated!",
@@ -609,17 +609,17 @@
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Τελευταίες τιμές",
 		"LoadMore": "Φόρτωση περισσοτέρων",
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
 		"Clear": "Εκκαθάριση",
-		"NoResult": "No results found",
+		"NoResult": "Δε βρέθηκαν αποτελέσματα",
 		"NoResultHelpKeywords": "Δεν μπορείτε να βρείτε το κατάστημά σας; Δοκιμάστε να χρησιμοποιήσετε λέξεις-κλειδιά αντί για την πλήρη διεύθυνση (π.χ. 'Carrefour 75013 Παρίσι' ή 'Walmart Σαν Φρανσίσκο').",
 		"NoResultHelpOSM": "Ακόμα δεν μπορείτε να βρείτε το κατάστημά σας; Ενδέχεται να μην βρίσκεται ακόμα στο {osm_name} . Μπορείτε πρώτα να το προσθέσετε στο {osm_url} .",
 		"PoweredBy": {
-			"text": "powered by {url}"
+			"text": "με την υποστήριξη του {url}"
 		},
 		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
 		"Result": "Result {resultNumber} | Results {resultNumber}",
@@ -632,13 +632,13 @@
 		"Title": "Not found"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
+		"Discount": "Έκπτωση",
 		"PriceDate": "on {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Επαλήθευση",
-		"FullPrice": "Full price",
+		"FullPrice": "Πλήρης τιμή",
 		"UnknownProduct": "Άγνωστο προϊόν"
 	},
 	"PriceDelete": {
@@ -653,14 +653,14 @@
 		"Title": "Edit a price"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
+		"Discount": "Έκπτωση;",
 		"Label": "Τιμή",
 		"LabelDiscounted": "Τιμή με έκπτωση",
-		"LabelFull": "Full price"
+		"LabelFull": "Πλήρης τιμή"
 	},
 	"PriceList": {
 		"LoadMore": "Φόρτωση περισσοτέρων",
-		"Title": "Latest prices"
+		"Title": "Τελευταίες τιμές"
 	},
 	"PriceRules": {
 		"AmountRequired": "Price is required",
@@ -699,7 +699,7 @@
 	"ProductDetail": {
 		"AddPrice": "Προσθήκη μίας τιμής",
 		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Τελευταίες τιμές",
 		"LoadMore": "Φόρτωση περισσοτέρων",
 		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
 	},
@@ -723,7 +723,7 @@
 	},
 	"ProofCreate": {
 		"SelectProof": "Επιλέξτε μια απόδειξη",
-		"ProofSelected": "Proof selected!",
+		"ProofSelected": "Επιλέχθηκε η απόδειξη!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
@@ -775,10 +775,10 @@
 			"Title": "Add prices"
 		},
 		"AddPriceSingle": {
-			"Title": "Add a single price"
+			"Title": "Προσθήκη μίας μόνο τιμής"
 		},
 		"AddPriceMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Προσθήκη πολλαπλών τιμών"
 		},
 		"AddProof": {
 			"Title": "Add a proof"
@@ -796,16 +796,16 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"Locations": {
-			"Title": "Locations"
+			"Title": "Τοποθεσίες"
 		},
 		"PriceAdd": {
 			"Title": "Προσθήκη μίας τιμής"
 		},
 		"PriceAddSingle": {
-			"Title": "Add a single price"
+			"Title": "Προσθήκη μίας μόνο τιμής"
 		},
 		"PriceAddMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Προσθήκη πολλαπλών τιμών"
 		},
 		"Prices": {
 			"Title": "Τιμές"
@@ -838,10 +838,10 @@
 			"Title": "Dashboard"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Τελευταίες τιμές"
 		},
 		"LatestProofs": {
-			"Title": "Latest proofs"
+			"Title": "Τελευταίες αποδείξεις"
 		},
 		"Moderation": {
 			"Title": "Μετριοπάθεια"
@@ -901,7 +901,7 @@
 			"Title": "Challenges"
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "Πρόκληση κοινότητας"
 		},
 		"Validate": {
 			"Title": "Επικύρωση"
@@ -911,7 +911,7 @@
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Γραμμωτός κώδικας προϊόντος",
 		"Title": "Αναζήτηση"
 	},
 	"ShareButton": {
@@ -936,10 +936,10 @@
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
 		"Products": "Προϊόντα",
-		"Locations": "Locations",
+		"Locations": "Τοποθεσίες",
 		"Users": "Users",
 		"Total": "Σύνολο",
-		"WithPrice": "With a price",
+		"WithPrice": "Με τιμή",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
 		"WithProductCategory": "With a product category",
@@ -947,12 +947,14 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Τιμές ανά πηγή",
+		"ProofsPerSource": "Αποδείξεις ανά πηγή",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "Τελευταίες τιμές",
+		"LatestProofs": "Τελευταίες αποδείξεις",
 		"LoadMore": "Φόρτωση περισσοτέρων",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Οι τιμές μου",
@@ -964,7 +966,7 @@
 		"UserProofTotal": "{count} proofs"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "Τελευταίες τιμές",
 		"LoadMore": "Φόρτωση περισσοτέρων"
 	},
 	"UserList": {

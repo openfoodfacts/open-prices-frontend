@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "প্ৰতিটো উৎসৰ মূল্য",
+		"ProofsPerSource": "প্ৰতিটো উৎসৰ প্ৰমাণ",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

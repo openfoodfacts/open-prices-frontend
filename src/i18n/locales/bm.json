@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "Sɔngɔw bɛ sɔrɔ sɔrɔyɔrɔ kelen-kelen bɛɛ la",
+		"ProofsPerSource": "Dalilu minnu bɛ sɔrɔ sɔrɔyɔrɔ kelen-kelen bɛɛ la",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

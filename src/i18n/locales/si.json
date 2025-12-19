@@ -947,6 +947,8 @@
 		"WithoutProduct": "Without a product",
 		"WithBarcode": "With a barcode",
 		"WithCategory": "With a category",
+		"PricesPerSource": "මූලාශ්‍රයකට මිල ගණන්",
+		"ProofsPerSource": "මූලාශ්‍රය අනුව සාක්ෂි",
 		"PricesProofsPerSource": "Prices and proofs per source",
 		"LastUpdated": "Last updated on {date}"
 	},

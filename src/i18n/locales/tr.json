@@ -947,6 +947,8 @@
 		"WithoutProduct": "Ürün olmadan",
 		"WithBarcode": "Barkod ile",
 		"WithCategory": "Bir kategori ile",
+		"PricesPerSource": "Kaynak başına fiyatlar",
+		"ProofsPerSource": "Kaynak başına kanıtlar",
 		"PricesProofsPerSource": "Kaynak başına fiyatlar ve kanıtlar",
 		"LastUpdated": "Son güncelleme {date}"
 	},

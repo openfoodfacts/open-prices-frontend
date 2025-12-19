@@ -224,7 +224,7 @@
 		"Contributors": "Bijdragers",
 		"Contributions": "Bijdragen",
 		"Confirm": "Bevestig",
-		"Country": "Country",
+		"Country": "Land",
 		"Countries": "Landen",
 		"CountryCount": "{count} landen | {count} land | {count} landen",
 		"Crop": "Bijsnijden",
@@ -246,7 +246,7 @@
 		"Experiment": "Experiment",
 		"Experiments": "Experimenten",
 		"FromPriceTag": "Van een prijskaartje",
-		"FromReceipt": "Van een bon",
+		"FromReceipt": "Van een bonnetje",
 		"GoToProof": "Ga naar bewijs",
 		"Join": "Deelnemen",
 		"Label": "Keurmerk",
@@ -322,7 +322,7 @@
 		"Map": "Kaart",
 		"Miscellaneous": "Diversen",
 		"MobileApp": "Mobiele app",
-		"Moderation": "Matiging",
+		"Moderation": "Moderatie",
 		"ModerationFlagReasonWrongType": "Verkeerd type",
 		"ModerationFlagReasonWrongPriceValue": "Verkeerde prijswaarde",
 		"ModerationFlagReasonWrongCurrency": "Verkeerde valuta",
@@ -330,7 +330,7 @@
 		"ModerationFlagReasonWrongLocation": "Verkeerde locatie",
 		"ModerationFlagReasonWrongDate": "Verkeerde datum",
 		"ModerationFlagReasonOther": "Andere",
-		"ModerationFlagCreateSuccess": "Bedankt voor je rapport!",
+		"ModerationFlagCreateSuccess": "Bedankt voor je verslag!",
 		"ModerationFlagStatusOpen": "Open",
 		"ModerationFlagStatusClosed": "Gesloten",
 		"MyConsumption": "Mijn verbruik",
@@ -385,7 +385,7 @@
 		"PriceMissing": "Prijs ontbreekt",
 		"PricePerMissing": "Prijs per ontbrekende",
 		"PriceAlreadyUploaded": "Prijs al geüpload",
-		"PriceReadyToBeUploaded": "Prijs klaar om te uploaden",
+		"PriceReadyToBeUploaded": "Prijs klaar om te worden geüpload",
 		"PricesAlreadyUploaded": "Prijzen al geüpload",
 		"PricesMore": "Meer prijzen",
 		"PricesAdded": "Prijzen toegevoegd",
@@ -492,11 +492,11 @@
 		"UserIsModeratorCanEditProof": "U kunt dit bewijs bewerken omdat u een moderator bent",
 		"UserIsModeratorCanDeleteProof": "U kunt dit bewijs verwijderen omdat u een moderator bent",
 		"UserIsNotPriceOwner": "U bent niet de eigenaar van de prijs",
-		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserIsNotProofOwner": "U bent niet de bewezen eigenaar",
 		"Validate": "Bevestigen",
 		"ValidatePrices": "Prijzen valideren",
 		"ValidatePricesWithAI": "Prijzen valideren met AI",
-		"ValidatePricesFromCommunity": "Valideer prijzen van de community",
+		"ValidatePricesFromCommunity": "Valideer prijzen uit de gemeenschap",
 		"View": "Bekijk",
 		"Website": "Website",
 		"WithAPrice": "Met een prijs",
@@ -563,19 +563,19 @@
 	},
 	"CreateOffProduct": {
 		"SelectUnknownProduct": "Selecteer onbekend product",
-		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"SelectUnknownProductGuide": "Of selecteer een onbekend product om toe te voegen",
 		"CountriesWhereSold": "Verkooplanden",
-		"CreateNewProduct": "Create a new product",
+		"CreateNewProduct": "Een nieuw product maken",
 		"CreateProduct": "Product maken",
-		"EnableCropMode": "Bijsnijdmodus inschakelen",
-		"Flavor": "Selecteer het project waarin het product moet worden gemaakt",
+		"EnableCropMode": "Crop-modus inschakelen",
+		"Flavor": "Selecteer het project waarin het product moet worden aangemaakt",
 		"NextProof": "Volgend bewijs",
 		"PreviousProof": "Vorig bewijs",
 		"ProductAlreadyExists": "Product bestaat al",
 		"ProductLanguage": "Producttaal",
 		"ProofNumberOfOutProofs": "Bewijs ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Winkels waar verkocht",
-		"UseCropModeToAddImage": "Om een productafbeelding toe te voegen, schakelt u de bijsnijdmodus in onder de proeffoto en tekent u een rechthoek om het product."
+		"UseCropModeToAddImage": "Om een productafbeelding toe te voegen, schakelt u de bijsnijdmodus onder de proefafbeelding in en tekent u een rechthoek rond het product."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
@@ -616,8 +616,8 @@
 	"LocationSelector": {
 		"Clear": "Wissen",
 		"NoResult": "Geen zoekresultaten",
-		"NoResultHelpKeywords": "Kunt u uw winkel niet vinden? Probeer trefwoorden te gebruiken in plaats van het volledige adres (bijvoorbeeld 'Carrefour 75013 Parijs' of 'Walmart San Francisco').",
-		"NoResultHelpOSM": "Kun je je winkel nog steeds niet vinden? Hij staat misschien nog niet in {osm_name} . Je kunt hem eerst toevoegen op {osm_url} .",
+		"NoResultHelpKeywords": "Kunt u uw winkel niet vinden? Probeer dan trefwoorden te gebruiken in plaats van het volledige adres (bijvoorbeeld 'Carrefour 75013 Parijs' of 'Walmart San Francisco').",
+		"NoResultHelpOSM": "Kunt u uw winkel nog steeds niet vinden? Misschien staat deze nog niet in {osm_name}. U kunt deze eerst toevoegen op {osm_url}.",
 		"PoweredBy": {
 			"text": "mogelijk gemaakt door {url}"
 		},
@@ -748,10 +748,10 @@
 	"ReceiptAssistant": {
 		"AddNewItem": "Nieuw artikel toevoegen",
 		"NoItemsFound": "Er konden geen items uit de bon worden gehaald. Probeer het opnieuw.",
-		"PriceAlreadyCreated": "Price already created",
+		"PriceAlreadyCreated": "Prijs al aangemaakt",
 		"PriceAlreadyCreatedForItem": "Prijs is al aangemaakt voor artikel",
 		"PriceReadyToBeAdded": "Prijs klaar om toegevoegd te worden",
-		"ReceiptItems": "Ontvangstartikelen",
+		"ReceiptItems": "Ontvangstbewijzen",
 		"ReceiptItemsCheck": "Ontvangstbewijzen, controleren en in orde maken",
 		"UploadOnlyNewPrices": "Upload alleen nieuwe prijzen ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Upload of update alle geldige prijzen ({nbPrices})",
@@ -793,7 +793,7 @@
 			"Title": "Meerdere bewijzen toevoegen"
 		},
 		"AddProofsPriceTags": {
-			"Title": "Add proofs (price tags)"
+			"Title": "Bewijzen toevoegen (prijskaartjes)"
 		},
 		"Locations": {
 			"Title": "Locaties"
@@ -844,7 +844,7 @@
 			"Title": "Nieuwste bewijzen"
 		},
 		"Moderation": {
-			"Title": "Matiging"
+			"Title": "Moderatie"
 		},
 		"MyPrices": {
 			"Title": "Mijn prijzen"
@@ -947,6 +947,8 @@
 		"WithoutProduct": "Zonder product",
 		"WithBarcode": "Met een streepjescode",
 		"WithCategory": "Met een categorie",
+		"PricesPerSource": "Prijzen per bron",
+		"ProofsPerSource": "Bewijzen per bron",
 		"PricesProofsPerSource": "Prijzen en bewijzen per bron",
 		"LastUpdated": "Laatst bijgewerkt op {date}"
 	},
@@ -975,7 +977,7 @@
 	"UserSettings": {
 		"AddingPrices": "Prijzen toevoegen",
 		"ChangeLanguage": "Taal wijzigen",
-		"CountryLabel": "Country",
+		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Weergave",
 		"BarcodeScanner": "Streepjescodescanner",
