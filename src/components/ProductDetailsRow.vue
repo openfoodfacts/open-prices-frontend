@@ -1,15 +1,17 @@
 <template>
   <v-row>
     <v-col :cols="hideActionMenuButton ? '12' : '11'" class="pt-2 pb-2">
-      <PriceCountChip v-if="!hidePriceCount" class="mr-1 mb-1" :count="product.price_count" @click="goToProduct()" />
-      <span v-if="hasProductSource" class="chip-group">
-        <ProductBrands :productBrands="product.brands" :readonly="readonly" />
-        <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
-        <br v-if="!hideCategoriesAndLabels">
-        <ProductCategoriesChip v-if="!hideCategoriesAndLabels" :productCategories="product.categories_tags" />
-        <ProductLabelsChip v-if="!hideCategoriesAndLabels" :productLabels="product.labels_tags" />
+      <span class="chip-group">
+        <PriceCountChip v-if="!hidePriceCount" :count="product.price_count" @click="goToProduct()" />
+        <span v-if="hasProductSource">
+          <ProductBrands :productBrands="product.brands" :readonly="readonly" />
+          <ProductQuantityChip :productQuantity="product.product_quantity" :productQuantityUnit="product.product_quantity_unit" />
+          <br v-if="!hideCategoriesAndLabels">
+          <ProductCategoriesChip v-if="!hideCategoriesAndLabels" :productCategories="product.categories_tags" />
+          <ProductLabelsChip v-if="!hideCategoriesAndLabels" :productLabels="product.labels_tags" />
+        </span>
+        <ProductMissingChip v-else />
       </span>
-      <ProductMissingChip v-else class="mr-1" />
       <br v-if="showProductBarcode || !hideBarcodeErrors && barcodeTooLong || !hideBarcodeErrors && barcodeInvalid || showProductSource">
       <ProductBarcodeChip v-if="showProductBarcode" :product="product" />
       <ProductBarcodeTooLongChip v-if="!hideBarcodeErrors && barcodeTooLong" class="mr-1" :barcode="product.code" />
