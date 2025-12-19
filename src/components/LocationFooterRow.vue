@@ -2,9 +2,9 @@
   <v-row>
     <v-col :cols="hideActionMenuButton ? '12' : '11'">
       <span class="chip-group">
-        <PriceCountChip class="mr-1" :count="location.price_count" :withLabel="true" source="location" @click="goToLocation()" />
-        <UserCountChip class="mr-1" :count="location.user_count" :withLabel="true" />
-        <ProductCountChip class="mr-1" :count="location.product_count" :withLabel="true" />
+        <PriceCountChip :count="location.price_count" :withLabel="true" source="location" @click="goToLocation()" />
+        <UserCountChip :count="location.user_count" :withLabel="true" />
+        <ProductCountChip :count="location.product_count" :withLabel="true" />
         <ProofCountChip :count="location.proof_count" :withLabel="true" :to="getLocationProofListUrl" />
       </span>
     </v-col>
