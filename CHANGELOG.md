@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.150.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.0...v1.150.1) (2025-12-19)
+
+
+### Technical
+
+* **Cards:** avoid having chips that touch each other ([#1915](https://github.com/openfoodfacts/open-prices-frontend/issues/1915)) ([4d392a7](https://github.com/openfoodfacts/open-prices-frontend/commit/4d392a71c75a97e4c660462b18f04bb5450181f3))
+* **deps:** Update packages (vue v3.5.26 & vuetify v3.11.4) ([#1917](https://github.com/openfoodfacts/open-prices-frontend/issues/1917)) ([bc2c3cb](https://github.com/openfoodfacts/open-prices-frontend/commit/bc2c3cbf5d99e0e0a26ef4bbaadb089d63328521))
+* **l10n:** New Crowdin translations to review and merge ([#1907](https://github.com/openfoodfacts/open-prices-frontend/issues/1907)) ([8a1570c](https://github.com/openfoodfacts/open-prices-frontend/commit/8a1570cb481f9106b9a592162912ee925d297438))
+* **Stats:** clarify some stats cards (more space per source, add flavor icon) ([#1905](https://github.com/openfoodfacts/open-prices-frontend/issues/1905)) ([98f16e2](https://github.com/openfoodfacts/open-prices-frontend/commit/98f16e23eebb1537c7cd84914c64b4a638319279))
+
 ## [1.150.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.149.1...v1.150.0) (2025-12-07)
 
 
