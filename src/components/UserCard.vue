@@ -1,6 +1,6 @@
 <template>
   <v-card v-if="user" :id="'user_' + user.user_id" data-name="user-card">
-    <v-card-text class="pa-2">
+    <v-card-text class="pa-4">
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
           <v-img :src="userImageDefault" width="100px" style="filter:invert(.9);" />

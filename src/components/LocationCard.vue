@@ -1,6 +1,6 @@
 <template>
   <v-card v-if="location" :id="'location_' + location.id" :class="isSelected ? 'border-success' : ''" data-name="location-card">
-    <v-card-text class="pa-2">
+    <v-card-text class="pa-4">
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
           <v-img v-if="getLocationBrandLogo" :src="getLocationBrandLogo" width="100px" />
