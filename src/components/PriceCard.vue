@@ -1,6 +1,6 @@
 <template>
   <v-card v-if="price" :id="'price_' + price.id" data-name="price-card">
-    <v-card-text class="pa-2">
+    <v-card-text class="pa-4">
       <v-row>
         <v-col v-if="!hideProductImage" class="pr-0" style="max-width:20%;">
           <v-img v-if="product && product.image_url" :src="product.image_url" max-height="100px" @click="goToProduct()" />

@@ -1,6 +1,6 @@
 <template>
   <v-card v-if="product" :id="'product_' + product.code" :class="isSelected ? 'border-success' : ''" data-name="product-card">
-    <v-card-text class="pa-2" :style="latestPrice ? 'position:relative;' : ''">
+    <v-card-text class="pa-4" :style="latestPrice ? 'position:relative;' : ''">
       <v-row>
         <v-col class="pr-0" style="max-width:20%;">
           <v-img v-if="product.image_url" :src="product.image_url" max-height="100px" @click="clickProduct()" />

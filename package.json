@@ -44,7 +44,7 @@
     "vue-matomo": "^4.2.0",
     "vue-router": "^4.5.1",
     "vue-zoomable": "^1.2.8",
-    "vuetify": "^3.10.4"
+    "vuetify": "^3.11.4"
   },
   "devDependencies": {
     "@intlify/eslint-plugin-vue-i18n": "^3.2.0",
@@ -60,8 +60,10 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
     "postcss": "^8.5.6",
+    "sass-embedded": "^1.97.0",
     "start-server-and-test": "^2.1.2",
     "vite": "^5.4.20",
+    "vite-plugin-vuetify": "^2.1.2",
     "vue-eslint-parser": "^9.4.3"
   },
   "resolutions": {
