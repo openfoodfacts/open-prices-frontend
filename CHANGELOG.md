@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.150.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.1...v1.150.2) (2025-12-20)
+
+
+### Technical
+
+* **Proof upload:** homogenize spacing between form items. Remove useless margin classes ([#1918](https://github.com/openfoodfacts/open-prices-frontend/issues/1918)) ([04cf038](https://github.com/openfoodfacts/open-prices-frontend/commit/04cf03832e2efcfe5f31a9737688d5edaac7b18d))
+* **Proof upload:** move 2 alerts in their own components ([#1922](https://github.com/openfoodfacts/open-prices-frontend/issues/1922)) ([e60062a](https://github.com/openfoodfacts/open-prices-frontend/commit/e60062acd9bb18574d80a37ee2810470f2f2fa59))
+* **Proof upload:** move the existing alert (or banner) above the form ([#1921](https://github.com/openfoodfacts/open-prices-frontend/issues/1921)) ([a8db382](https://github.com/openfoodfacts/open-prices-frontend/commit/a8db3824b2908a2ada0f04e2618d034f21d880b7))
+
 ## [1.150.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.0...v1.150.1) (2025-12-19)
 
 
