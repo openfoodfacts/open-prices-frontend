@@ -13,14 +13,7 @@
     <v-card-text>
       <v-sheet v-if="step === 1">
         <ProofTypeInputRow :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
-        <v-alert
-          v-if="typePriceTagOnly && multiple"
-          class="mt-4 mb-4"
-          type="warning"
-          variant="outlined"
-          density="compact"
-          :text="$t('ProofAdd.HowToMultipleShort')"
-        />
+        <ProofPriceTagMultipleAlert v-if="proofIsTypePriceTag && multiple" class="mt-4 mb-4" />
         <ProofPriceTagAddMultiplePromoBanner v-if="proofIsTypePriceTag && !multiple" class="mt-4 mb-4" />
         <ReceiptAssistantPromoBanner v-if="proofIsTypeReceipt && !assistedByAI" class="mt-4 mb-4" />
         <LocationInputRow :locationForm="proofForm" @location="locationObject = $event" />
@@ -100,6 +93,7 @@ Compressor.setDefaults({
 export default {
   components: {
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
+    ProofPriceTagMultipleAlert: defineAsyncComponent(() => import('../components/ProofPriceTagMultipleAlert.vue')),
     ProofPriceTagAddMultiplePromoBanner: defineAsyncComponent(() => import('../components/ProofPriceTagAddMultiplePromoBanner.vue')),
     ReceiptAssistantPromoBanner: defineAsyncComponent(() => import('../components/ReceiptAssistantPromoBanner.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
