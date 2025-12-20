@@ -8,20 +8,20 @@
       <v-divider />
 
       <v-card-text>
-        <v-row class="mb-4">
+        <v-row>
           <v-col cols="12">
             <ProofCard :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />
           </v-col>
         </v-row>
         <!-- moderator-only alerts -->
-        <v-row v-if="!userIsProofOwner && userIsModerator" class="mt-0">
+        <v-row v-if="!userIsProofOwner && userIsModerator">
           <v-col cols="12">
             <v-alert data-name="user-not-proof-owner-alert" type="info" density="compact" variant="outlined" icon="mdi-account-off">
               {{ $t('Common.UserIsNotProofOwner') }}
             </v-alert>
           </v-col>
         </v-row>
-        <v-row v-if="!userIsProofOwner && userIsModerator" class="mt-0">
+        <v-row v-if="!userIsProofOwner && userIsModerator">
           <v-col cols="12">
             <v-alert data-name="user-proof-edit-moderator-alert" type="info" density="compact" variant="outlined" icon="mdi-shield-account">
               {{ $t('Common.UserIsModeratorCanEditProof') }}

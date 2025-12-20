@@ -1,156 +1,160 @@
 <template>
   <v-row>
-    <v-col cols="6">
-      <div class="text-body-2 required">
-        {{ $t('Common.Date') }}
-      </div>
-      <v-text-field
-        v-model="proofMetadataForm.date"
-        :class="proofMetadataForm.date ? 'outline-border-success' : 'outline-border-error'"
-        density="compact"
-        variant="outlined"
-        type="date"
-        :max="currentDate"
-        hide-details="auto"
-      />
-    </v-col>
-    <v-col cols="6">
-      <div class="text-body-2 required">
-        {{ $t('Common.Currency') }}
-        <v-icon class="float-right" size="small" icon="mdi-information-outline" />
-        <v-tooltip activator="parent" open-on-click location="top">
-          {{ $t('ChangeCurrencyDialog.AddCurrencies') }}
-        </v-tooltip>
-      </div>
-      <v-select
-        v-model="proofMetadataForm.currency"
-        :class="proofMetadataForm.date ? 'outline-border-success' : 'outline-border-error'"
-        density="compact"
-        variant="outlined"
-        :items="userFavoriteCurrencies"
-        hide-details="auto"
-      />
-    </v-col>
-  </v-row>
+    <v-col>
+      <v-row>
+        <v-col cols="6">
+          <div class="text-body-2 required">
+            {{ $t('Common.Date') }}
+          </div>
+          <v-text-field
+            v-model="proofMetadataForm.date"
+            :class="proofMetadataForm.date ? 'outline-border-success' : 'outline-border-error'"
+            density="compact"
+            variant="outlined"
+            type="date"
+            :max="currentDate"
+            hide-details="auto"
+          />
+        </v-col>
+        <v-col cols="6">
+          <div class="text-body-2 required">
+            {{ $t('Common.Currency') }}
+            <v-icon class="float-right" size="small" icon="mdi-information-outline" />
+            <v-tooltip activator="parent" open-on-click location="top">
+              {{ $t('ChangeCurrencyDialog.AddCurrencies') }}
+            </v-tooltip>
+          </div>
+          <v-select
+            v-model="proofMetadataForm.currency"
+            :class="proofMetadataForm.date ? 'outline-border-success' : 'outline-border-error'"
+            density="compact"
+            variant="outlined"
+            :items="userFavoriteCurrencies"
+            hide-details="auto"
+          />
+        </v-col>
+      </v-row>
 
-  <!--Receipt-only fields: receipt_price_count, receipt_price_total, receipt_online_delivery_costs -->
-  <v-row v-if="proofIsTypeReceipt" class="mt-0">
-    <v-col cols="6">
-      <div class="text-body-2">
-        <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.ReceiptPriceCount') }}
-      </div>
-      <v-text-field
-        v-model="proofMetadataForm.receipt_price_count"
-        density="compact"
-        variant="outlined"
-        type="text"
-        inputmode="numeric"
-        :rules="priceCountRules"
-        hide-details="auto"
-      />
-    </v-col>
-    <v-col cols="6">
-      <div class="text-body-2">
-        <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.ReceiptPriceTotal') }}
-      </div>
-      <v-text-field
-        v-model="proofMetadataForm.receipt_price_total"
-        density="compact"
-        variant="outlined"
-        type="text"
-        inputmode="decimal"
-        :rules="priceTotalRules"
-        :suffix="proofMetadataForm.currency"
-        hide-details="auto"
-        @update:modelValue="newValue => proofMetadataForm.receipt_price_total = replaceCommaWithDot(newValue)"
-      />
-    </v-col>
-  </v-row>
-  <v-row v-if="proofIsTypeReceipt && locationIsTypeOnline" class="mt-0">
-    <v-col cols="6">
-      <div class="text-body-2">
-        <v-icon size="small" :icon="LOCATION_TYPE_ONLINE_ICON" /> {{ $t('Common.ReceiptOnlineDeliveryCosts') }}
-      </div>
-      <v-text-field
-        v-model="proofMetadataForm.receipt_online_delivery_costs"
-        density="compact"
-        variant="outlined"
-        type="text"
-        inputmode="decimal"
-        :rules="priceOnlineDeliveryCostsRules"
-        :suffix="proofMetadataForm.currency"
-        hide-details="auto"
-        @update:modelValue="newValue => proofMetadataForm.receipt_online_delivery_costs = replaceCommaWithDot(newValue)"
-      />
-    </v-col>
-  </v-row>
-  <v-row v-if="!multiple" class="mt-0">
-    <v-col v-if="!displayOwnerCommentField" cols="12">
-      <a class="fake-link text-body-2" role="link" tabindex="0" @click="displayOwnerCommentField = true" @keydown.enter="displayOwnerCommentField = true">
-        {{ $t('Common.AddComment') }}
-      </a>
-    </v-col>
-    <v-col v-else cols="12">
-      <div class="text-body-2">
-        {{ $t('Common.Comment') }}
-      </div>
-      <v-textarea
-        v-model="proofMetadataForm.owner_comment"
-        rows="2"
-        density="compact"
-        variant="outlined"
-        type="text"
-        hide-details="auto"
-        clearable
-      />
-    </v-col>
-  </v-row>
-  <v-row v-if="assistedByAI" class="mt-0">
-    <v-col cols="12">
-      <v-alert
-        v-if="proofIsTypePriceTag"
-        type="info"
-        density="compact"
-        variant="outlined"
-        :text="$t('ProofAdd.PriceTagAIWarning')"
-      />
-      <v-alert
-        v-else-if="proofIsTypeReceipt"
-        type="info"
-        density="compact"
-        variant="outlined"
-        :text="$t('ProofAdd.ReceiptAIWarning')"
-      />
-    </v-col>
-  </v-row>
-  <v-row v-if="assistedByAI && proofIsTypePriceTag" class="mt-0">
-    <v-col cols="12" class="pb-1">
-      <v-switch
-        v-model="proofMetadataForm.ready_for_price_tag_validation"
-        density="compact"
-        color="success"
-        :true-value="true"
-        hide-details="auto"
-      >
-        <template #label>
-          <span class="text-body-2">{{ $t('ProofAdd.PriceTagAllowCommunityValidation') }}</span>
-        </template>
-      </v-switch>
-    </v-col>
-  </v-row>
-  <v-row v-if="proofIsTypeReceipt" class="mt-0">
-    <v-col cols="12" class="pb-1">
-      <v-switch
-        v-model="proofMetadataForm.owner_consumption"
-        density="compact"
-        color="success"
-        :true-value="true"
-        hide-details="auto"
-      >
-        <template #label>
-          <span class="text-body-2">{{ $t('Common.ReceiptOwnerConsumption') }}</span>
-        </template>
-      </v-switch>
+      <!--Receipt-only fields: receipt_price_count, receipt_price_total, receipt_online_delivery_costs -->
+      <v-row v-if="proofIsTypeReceipt" class="mt-0">
+        <v-col cols="6">
+          <div class="text-body-2">
+            <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.ReceiptPriceCount') }}
+          </div>
+          <v-text-field
+            v-model="proofMetadataForm.receipt_price_count"
+            density="compact"
+            variant="outlined"
+            type="text"
+            inputmode="numeric"
+            :rules="priceCountRules"
+            hide-details="auto"
+          />
+        </v-col>
+        <v-col cols="6">
+          <div class="text-body-2">
+            <v-icon size="small" :icon="PROOF_TYPE_RECEIPT_ICON" /> {{ $t('Common.ReceiptPriceTotal') }}
+          </div>
+          <v-text-field
+            v-model="proofMetadataForm.receipt_price_total"
+            density="compact"
+            variant="outlined"
+            type="text"
+            inputmode="decimal"
+            :rules="priceTotalRules"
+            :suffix="proofMetadataForm.currency"
+            hide-details="auto"
+            @update:modelValue="newValue => proofMetadataForm.receipt_price_total = replaceCommaWithDot(newValue)"
+          />
+        </v-col>
+      </v-row>
+      <v-row v-if="proofIsTypeReceipt && locationIsTypeOnline" class="mt-0">
+        <v-col cols="6">
+          <div class="text-body-2">
+            <v-icon size="small" :icon="LOCATION_TYPE_ONLINE_ICON" /> {{ $t('Common.ReceiptOnlineDeliveryCosts') }}
+          </div>
+          <v-text-field
+            v-model="proofMetadataForm.receipt_online_delivery_costs"
+            density="compact"
+            variant="outlined"
+            type="text"
+            inputmode="decimal"
+            :rules="priceOnlineDeliveryCostsRules"
+            :suffix="proofMetadataForm.currency"
+            hide-details="auto"
+            @update:modelValue="newValue => proofMetadataForm.receipt_online_delivery_costs = replaceCommaWithDot(newValue)"
+          />
+        </v-col>
+      </v-row>
+      <v-row v-if="!multiple" class="mt-0">
+        <v-col v-if="!displayOwnerCommentField" cols="12">
+          <a class="fake-link text-body-2" role="link" tabindex="0" @click="displayOwnerCommentField = true" @keydown.enter="displayOwnerCommentField = true">
+            {{ $t('Common.AddComment') }}
+          </a>
+        </v-col>
+        <v-col v-else cols="12">
+          <div class="text-body-2">
+            {{ $t('Common.Comment') }}
+          </div>
+          <v-textarea
+            v-model="proofMetadataForm.owner_comment"
+            rows="2"
+            density="compact"
+            variant="outlined"
+            type="text"
+            hide-details="auto"
+            clearable
+          />
+        </v-col>
+      </v-row>
+      <v-row v-if="assistedByAI" class="mt-0">
+        <v-col cols="12">
+          <v-alert
+            v-if="proofIsTypePriceTag"
+            type="info"
+            density="compact"
+            variant="outlined"
+            :text="$t('ProofAdd.PriceTagAIWarning')"
+          />
+          <v-alert
+            v-else-if="proofIsTypeReceipt"
+            type="info"
+            density="compact"
+            variant="outlined"
+            :text="$t('ProofAdd.ReceiptAIWarning')"
+          />
+        </v-col>
+      </v-row>
+      <v-row v-if="assistedByAI && proofIsTypePriceTag" class="mt-0">
+        <v-col cols="12" class="pb-1">
+          <v-switch
+            v-model="proofMetadataForm.ready_for_price_tag_validation"
+            density="compact"
+            color="success"
+            :true-value="true"
+            hide-details="auto"
+          >
+            <template #label>
+              <span class="text-body-2">{{ $t('ProofAdd.PriceTagAllowCommunityValidation') }}</span>
+            </template>
+          </v-switch>
+        </v-col>
+      </v-row>
+      <v-row v-if="proofIsTypeReceipt" class="mt-0">
+        <v-col cols="12" class="pb-1">
+          <v-switch
+            v-model="proofMetadataForm.owner_consumption"
+            density="compact"
+            color="success"
+            :true-value="true"
+            hide-details="auto"
+          >
+            <template #label>
+              <span class="text-body-2">{{ $t('Common.ReceiptOwnerConsumption') }}</span>
+            </template>
+          </v-switch>
+        </v-col>
+      </v-row>
     </v-col>
   </v-row>
 </template>

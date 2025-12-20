@@ -8,20 +8,20 @@
       <v-divider />
 
       <v-card-text>
-        <v-row class="mb-4">
+        <v-row>
           <v-col cols="12">
             <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
           </v-col>
         </v-row>
         <!-- moderator-only alerts -->
-        <v-row v-if="!userIsPriceOwner && userIsModerator" class="mt-0">
+        <v-row v-if="!userIsPriceOwner && userIsModerator">
           <v-col cols="12">
             <v-alert data-name="user-not-price-owner-alert" type="info" density="compact" variant="outlined" icon="mdi-account-off">
               {{ $t('Common.UserIsNotPriceOwner') }}
             </v-alert>
           </v-col>
         </v-row>
-        <v-row v-if="!userIsPriceOwner && userIsModerator" class="mt-0">
+        <v-row v-if="!userIsPriceOwner && userIsModerator">
           <v-col cols="12">
             <v-alert data-name="user-price-delete-moderator-alert" type="info" density="compact" variant="outlined" icon="mdi-shield-account">
               {{ $t('Common.UserIsModeratorCanDeletePrice') }}
@@ -29,7 +29,7 @@
           </v-col>
         </v-row>
         <!-- confirmation message -->
-        <v-row class="mt-0">
+        <v-row>
           <v-col cols="12">
             <p>
               {{ $t('PriceDelete.Confirmation') }}

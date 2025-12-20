@@ -8,7 +8,7 @@
       <v-divider />
 
       <v-card-text>
-        <v-row class="mb-4">
+        <v-row>
           <v-col cols="12">
             <PriceCard v-if="price" :price="price" :product="price.product" :hidePriceFooterRow="false" :hideActionMenuButton="true" :readonly="true" />
             <ProofCard v-else-if="proof" :proof="proof" :hideProofHeader="true" :hideActionMenuButton="true" :readonly="true" />

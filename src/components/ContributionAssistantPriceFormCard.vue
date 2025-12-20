@@ -31,7 +31,7 @@
       <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :proofType="productPriceForm.proof ? productPriceForm.proof.type : null" @filled="pricePriceFormFilled = $event" />
       <v-alert
         v-if="!productPriceFormValid"
-        class="mt-4 mb-4"
+        class="mt-3 mb-3"
         type="warning"
         variant="outlined"
         density="compact"
