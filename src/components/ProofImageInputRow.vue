@@ -2,14 +2,7 @@
   <v-row>
     <v-col cols="12">
       <!-- RECEIPT: warning message -->
-      <v-alert
-        v-if="proofImageForm && proofImageForm.type === PROOF_TYPE_RECEIPT"
-        class="mb-4"
-        type="warning"
-        variant="outlined"
-        density="compact"
-        :text="$t('AddPriceMultiple.ProofDetails.ReceiptWarning')"
-      />
+      <ProofReceiptWarningAlert v-if="proofImageForm.type === PROOF_TYPE_RECEIPT" class="mb-4" />
 
       <v-menu scroll-strategy="close" :disabled="loading">
         <template #activator="{ props }">
@@ -90,6 +83,7 @@ import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
+    ProofReceiptWarningAlert: defineAsyncComponent(() => import('../components/ProofReceiptWarningAlert.vue')),
     UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
   },
   props: {
