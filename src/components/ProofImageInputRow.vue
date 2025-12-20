@@ -2,8 +2,9 @@
   <v-row>
     <v-col cols="12">
       <!-- RECEIPT: warning message -->
-      <ProofReceiptWarningAlert v-if="proofImageForm.type === PROOF_TYPE_RECEIPT" class="mb-4" />
+      <ProofReceiptWarningAlert v-if="proofIsTypeReceipt" class="mb-4" />
 
+      <!-- Selection menu -->
       <v-menu scroll-strategy="close" :disabled="loading">
         <template #activator="{ props }">
           <v-btn v-bind="props" class="text-body-2" block spaced="end" prepend-icon="mdi-image" append-icon="mdi-menu-down" :class="hasProofImageSelected ? 'border-success' : 'border-error'">
@@ -127,6 +128,15 @@ export default {
     }
   },
   computed: {
+    proofTypeFormFilled() {
+      return !!this.proofImageForm.type
+    },
+    proofIsTypePriceTag() {
+      return this.proofTypeFormFilled && (this.proofImageForm.type === constants.PROOF_TYPE_PRICE_TAG)
+    },
+    proofIsTypeReceipt() {
+      return this.proofTypeFormFilled && (this.proofImageForm.type === constants.PROOF_TYPE_RECEIPT)
+    },
     hasProofImageSelected() {
       return Array.isArray(this.proofImageList) ? this.proofImageList.length : !!this.proofImageList
     },
