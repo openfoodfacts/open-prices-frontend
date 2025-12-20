@@ -5,15 +5,15 @@
       <v-btn v-else class="text-body-2" block spaced="end" :prepend-icon="LOCATION_TYPE_OSM_ICON" :class="selectedLocation ? 'border-success' : 'border-error'" @click="showLocationSelectorDialog">
         {{ $t('Common.LocationFindShop') }}
       </v-btn>
+
+      <LocationSelectorDialog
+        v-if="locationSelectorDialog"
+        v-model="locationSelectorDialog"
+        @location="setLocationData($event)"
+        @close="locationSelectorDialog = false"
+      />
     </v-col>
   </v-row>
-
-  <LocationSelectorDialog
-    v-if="locationSelectorDialog"
-    v-model="locationSelectorDialog"
-    @location="setLocationData($event)"
-    @close="locationSelectorDialog = false"
-  />
 </template>
 
 <script>
