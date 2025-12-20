@@ -12,14 +12,14 @@
     <v-divider v-if="!hideHeader" />
     <v-card-text>
       <v-sheet v-if="step === 1">
-        <v-row v-if="typePriceTagOnly && multiple || proofIsTypePriceTag && !multiple || proofIsTypeReceipt && !assistedByAI">
+        <v-row v-if="showTopAlertOrBanner">
           <v-col>
             <ProofPriceTagMultipleAlert v-if="proofIsTypePriceTag && multiple" />
             <ProofPriceTagAddMultiplePromoBanner v-if="proofIsTypePriceTag && !multiple" />
             <ReceiptAssistantPromoBanner v-if="proofIsTypeReceipt && !assistedByAI" />
           </v-col>
         </v-row>
-        <ProofTypeInputRow :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
+        <ProofTypeInputRow :class="showTopAlertOrBanner ? 'mt-0' : ''" :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
         <LocationInputRow class="mt-0" :locationForm="proofForm" @location="locationObject = $event" />
         <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <ProofMetadataInputRow class="mt-0" :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
@@ -177,6 +177,9 @@ export default {
     },
     proofIsTypeReceipt() {
       return this.proofTypeFormFilled && (this.proofForm.type === constants.PROOF_TYPE_RECEIPT)
+    },
+    showTopAlertOrBanner() {
+      return this.typePriceTagOnly && this.multiple || this.proofIsTypePriceTag && !this.multiple || this.proofIsTypeReceipt && !this.assistedByAI
     },
     proofImageFormFilled() {
       return !!this.proofImageList.length
