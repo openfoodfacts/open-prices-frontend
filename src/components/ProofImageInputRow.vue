@@ -6,6 +6,11 @@
           <!-- RECEIPT: warning message -->
           <ProofReceiptWarningAlert v-if="proofIsTypeReceipt" class="mb-4" />
 
+          <div class="text-body-2 required">
+            <span v-if="multiple">{{ $t('Common.Pictures') }}</span>
+            <span v-else>{{ $t('Common.Picture') }}</span>
+          </div>
+
           <!-- Selection menu -->
           <v-menu scroll-strategy="close" :disabled="loading">
             <template #activator="{ props }">

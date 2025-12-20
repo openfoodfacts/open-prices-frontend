@@ -1,6 +1,9 @@
 <template>
   <v-row>
     <v-col>
+      <div class="text-body-2 required">
+        {{ $t('Common.Location') }}
+      </div>
       <LocationCard v-if="selectedLocation" :location="selectedLocation" :isSelected="true" :hideLocationFooterRow="true" :readonly="true" elevation="1" @editLocation="showLocationSelectorDialog" />
       <v-btn v-else class="text-body-2" block spaced="end" :prepend-icon="LOCATION_TYPE_OSM_ICON" :class="selectedLocation ? 'border-success' : 'border-error'" @click="showLocationSelectorDialog">
         {{ $t('Common.LocationFindShop') }}
