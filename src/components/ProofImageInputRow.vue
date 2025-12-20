@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12">
           <!-- RECEIPT: warning message -->
-          <ProofReceiptWarningAlert v-if="proofIsTypeReceipt" class="mb-4" />
+          <ProofReceiptWarningAlert v-if="proofIsTypeReceipt" class="mb-3" />
 
           <div class="text-body-2 required">
             <span v-if="multiple">{{ $t('Common.Pictures') }}</span>
