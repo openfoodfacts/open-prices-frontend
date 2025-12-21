@@ -4,7 +4,7 @@
     icon="mdi-trophy-variant"
     rounded
     density="compact"
-    @click="$router.push('/experiments/challenge')"
+    @click="$router.push(getUrl)"
   >
     <v-banner-text>
       <h3 class="text-h6 mb-1">
@@ -15,7 +15,7 @@
       </p>
     </v-banner-text>
     <v-banner-actions>
-      <v-btn icon="mdi-arrow-right" :aria-label="$t('Common.Join')" to="/experiments/challenge" />
+      <v-btn icon="mdi-arrow-right" :aria-label="$t('Common.Join')" :to="getUrl" />
     </v-banner-actions>
   </v-banner>
 </template>
@@ -26,6 +26,11 @@ export default {
     challenge: {
       type: Object,
       default: () => ({}),
+    }
+  },
+  computed: {
+    getUrl() {
+      return `/experiments/challenge`
     }
   }
 }
