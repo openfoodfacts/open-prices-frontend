@@ -59,7 +59,13 @@
 }
 .v-alert__prepend,
 .v-banner__prepend {
-    margin-inline-end: 12px !important;  /* to match with v-alert (16-(32-28)) */
+    /* adjust spacing between prepend (icon) & text */
+    margin-inline-end: 12px !important;
+}
+
+.v-banner--stacked .v-banner-text {
+    /* adjust spacing between text & action */
+    padding-inline-end: 12px !important;
 }
 
 .chip-group {
