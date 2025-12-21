@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.150.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.2...v1.150.3) (2025-12-21)
+
+
+### Technical
+
+* **Challenge:** homogenize banner with other banners. Fully clickable ([#1929](https://github.com/openfoodfacts/open-prices-frontend/issues/1929)) ([6c7122f](https://github.com/openfoodfacts/open-prices-frontend/commit/6c7122f73ba7cf5329a1024787a9df866cf8e29d))
+* **Moderation:** move all alert inside a dedicated component. Make them compact ([#1925](https://github.com/openfoodfacts/open-prices-frontend/issues/1925)) ([36700a0](https://github.com/openfoodfacts/open-prices-frontend/commit/36700a0f124f67d39c4dfc6589e3f8404044aa98))
+* **UI:** make alert & banner look similar and more compact ([#1928](https://github.com/openfoodfacts/open-prices-frontend/issues/1928)) ([7c87aa6](https://github.com/openfoodfacts/open-prices-frontend/commit/7c87aa6434e699d4a8636cc6157c2be542eb911e))
+* **UI:** make alert compact everywhere ([#1927](https://github.com/openfoodfacts/open-prices-frontend/issues/1927)) ([599c73d](https://github.com/openfoodfacts/open-prices-frontend/commit/599c73de21436db3e5a0fd7147dca33905ac843f))
+* **UI:** make alert compact everywhere (extra commit after [#1927](https://github.com/openfoodfacts/open-prices-frontend/issues/1927)) ([7d6ba6e](https://github.com/openfoodfacts/open-prices-frontend/commit/7d6ba6eb635ec5bdd3b5fc4a41365ec73f26cf4e))
+
 ## [1.150.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.1...v1.150.2) (2025-12-20)
 
 
