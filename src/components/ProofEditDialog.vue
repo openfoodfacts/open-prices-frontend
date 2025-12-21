@@ -16,16 +16,12 @@
         <!-- moderator-only alerts -->
         <v-row v-if="!userIsProofOwner && userIsModerator">
           <v-col cols="12">
-            <v-alert data-name="user-not-proof-owner-alert" type="info" density="compact" variant="outlined" icon="mdi-account-off">
-              {{ $t('Common.UserIsNotProofOwner') }}
-            </v-alert>
+            <ModerationAlert source="proof" />
           </v-col>
         </v-row>
         <v-row v-if="!userIsProofOwner && userIsModerator">
           <v-col cols="12">
-            <v-alert data-name="user-proof-edit-moderator-alert" type="info" density="compact" variant="outlined" icon="mdi-shield-account">
-              {{ $t('Common.UserIsModeratorCanEditProof') }}
-            </v-alert>
+            <ModerationAlert source="proof" action="edit" />
           </v-col>
         </v-row>
         <!-- form -->
@@ -62,6 +58,7 @@ import api from '../services/api'
 export default {
   components: {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofMetadataInputRow: defineAsyncComponent(() => import('../components/ProofMetadataInputRow.vue')),

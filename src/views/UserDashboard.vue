@@ -7,9 +7,7 @@
 
   <v-row v-if="user && userIsModerator" class="mt-0">
     <v-col cols="12" sm="6">
-      <v-alert data-name="user-moderator-alert" type="info" icon="mdi-shield-account" variant="outlined">
-        {{ $t('Common.UserIsModerator') }}
-      </v-alert>
+      <ModerationAlert source="dashboard" />
     </v-col>
   </v-row>
 
@@ -161,6 +159,7 @@ import date_utils from '../utils/date.js'
 export default {
   components: {
     UserCard: defineAsyncComponent(() => import('../components/UserCard.vue')),
+    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
