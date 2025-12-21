@@ -95,7 +95,7 @@ export default {
       return this.product.code && !barcode_utils.isBarcodeValid(this.product.code)
     },
     showProductSource() {
-      return this.appStore.user.username && this.appStore.user.product_display_source
+      return this.hasProductSource && this.appStore.user.username && this.appStore.user.product_display_source
     },
   },
   methods: {
