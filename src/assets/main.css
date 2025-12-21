@@ -53,6 +53,11 @@
     padding: 1rem !important;
 }
 
+.v-alert--density-compact,
+.v-banner--density-compact {
+    padding: 8px !important;
+}
+
 .v-banner__prepend {
     margin-inline-end: 12px !important;  /* to match with v-alert (16-(32-28)) */
 }
