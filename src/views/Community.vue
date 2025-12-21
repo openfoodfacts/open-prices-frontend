@@ -44,6 +44,7 @@
         class="mb-2"
         type="info"
         variant="outlined"
+        density="compact"
       >
         <i18n-t keypath="Reuses.AlertNew" tag="span">
           <template #url>

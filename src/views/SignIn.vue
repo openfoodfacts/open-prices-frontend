@@ -7,6 +7,7 @@
             <v-alert
               type="info"
               variant="outlined"
+              density="compact"
             >
               <i18n-t keypath="Common.SignInOFFAccount" tag="span">
                 <template #url>

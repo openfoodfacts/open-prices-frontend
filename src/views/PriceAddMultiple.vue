@@ -51,7 +51,7 @@
             <ProductInputRow :productForm="productPriceForm" @filled="productFormFilled = $event" />
             <v-row v-if="productFormFilled && existingProductFound" class="mt-0">
               <v-col>
-                <v-alert data-name="existing-product-alert" type="warning" variant="outlined">
+                <v-alert data-name="existing-product-alert" type="warning" variant="outlined" density="compact">
                   <p>
                     <i>{{ $t('AddPriceMultiple.ProductPriceDetails.ExistingProductFound') }}</i>
                   </p>

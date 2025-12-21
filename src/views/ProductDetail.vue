@@ -8,7 +8,7 @@
 
   <v-row v-if="productOrCategoryNotFound" class="mt-0">
     <v-col cols="12" sm="6">
-      <v-alert v-if="productNotFound" data-name="product-not-found-alert" type="error" variant="outlined">
+      <v-alert v-if="productNotFound" data-name="product-not-found-alert" type="error" variant="outlined" density="compact">
         <p>
           <i18n-t keypath="ProductDetail.ProductNotFound" tag="i">
             <template #name>
@@ -18,7 +18,7 @@
         </p>
         <OpenFoodFactsAddMenu :productCode="productId" />
       </v-alert>
-      <v-alert v-else-if="categoryNotFound" data-name="category-not-found-alert" type="error" variant="outlined">
+      <v-alert v-else-if="categoryNotFound" data-name="category-not-found-alert" type="error" variant="outlined" density="compact">
         <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
       </v-alert>
     </v-col>
