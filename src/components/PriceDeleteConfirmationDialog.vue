@@ -16,16 +16,12 @@
         <!-- moderator-only alerts -->
         <v-row v-if="!userIsPriceOwner && userIsModerator">
           <v-col cols="12">
-            <v-alert data-name="user-not-price-owner-alert" type="info" density="compact" variant="outlined" icon="mdi-account-off">
-              {{ $t('Common.UserIsNotPriceOwner') }}
-            </v-alert>
+            <ModerationAlert source="price" />
           </v-col>
         </v-row>
         <v-row v-if="!userIsPriceOwner && userIsModerator">
           <v-col cols="12">
-            <v-alert data-name="user-price-delete-moderator-alert" type="info" density="compact" variant="outlined" icon="mdi-shield-account">
-              {{ $t('Common.UserIsModeratorCanDeletePrice') }}
-            </v-alert>
+            <ModerationAlert source="price" action="delete" />
           </v-col>
         </v-row>
         <!-- confirmation message -->
@@ -65,7 +61,8 @@ import api from '../services/api'
 
 export default {
   components: {
-    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
+    PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
+    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
   },
   props: {
     price: {

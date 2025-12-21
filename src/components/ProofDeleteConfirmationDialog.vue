@@ -16,16 +16,12 @@
         <!-- moderator-only alerts -->
         <v-row v-if="!userIsProofOwner && userIsModerator">
           <v-col cols="12">
-            <v-alert data-name="user-not-proof-owner-alert" type="info" density="compact" variant="outlined" icon="mdi-account-off">
-              {{ $t('Common.UserIsNotProofOwner') }}
-            </v-alert>
+            <ModerationAlert source="proof" />
           </v-col>
         </v-row>
         <v-row v-if="!userIsProofOwner && userIsModerator">
           <v-col cols="12">
-            <v-alert data-name="user-proof-delete-moderator-alert" type="info" density="compact" variant="outlined" icon="mdi-shield-account">
-              {{ $t('Common.UserIsModeratorCanDeleteProof') }}
-            </v-alert>
+            <ModerationAlert source="proof" action="delete" />
           </v-col>
         </v-row>
         <!-- confirmation message -->
@@ -65,7 +61,8 @@ import api from '../services/api'
 
 export default {
   components: {
-    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue'))
+    ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
+    ModerationAlert: defineAsyncComponent(() => import('../components/ModerationAlert.vue')),
   },
   props: {
     proof: {
