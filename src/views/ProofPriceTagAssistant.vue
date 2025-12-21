@@ -23,10 +23,10 @@
   
   <v-row v-if="step === 2">
     <v-col cols="12">
-      <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="warning" variant="outlined">
+      <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="warning" variant="outlined" density="compact">
         {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
       </v-alert>
-      <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" icon="mdi-magnify">
+      <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" type="info" variant="outlined" density="compact" icon="mdi-magnify">
         {{ $t('ContributionAssistant.FindBoundingBoxesRunning') }}
         <v-progress-circular indeterminate />
       </v-alert>
@@ -159,6 +159,7 @@
             class="mb-2"
             type="info"
             variant="outlined"
+            density="compact"
           >
             <p>
               {{ $t('ContributionAssistant.PriceAddConfirmationMessage', { numberOfPricesAdded: productPriceFormsWithoutPriceIdAndWithProductOrCategoryAndNoError.length, date: proofObject.date, locationName: locationName }) }}

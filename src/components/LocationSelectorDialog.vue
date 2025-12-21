@@ -85,10 +85,10 @@
               </v-row>
 
               <p v-else>
-                <v-alert class="mb-2" type="info" variant="outlined">
+                <v-alert class="mb-2" type="info" variant="outlined" density="compact">
                   {{ $t('LocationSelector.NoResultHelpKeywords') }}
                 </v-alert>
-                <v-alert class="mb-2" type="info" variant="outlined">
+                <v-alert class="mb-2" type="info" variant="outlined" density="compact">
                   <i18n-t keypath="LocationSelector.NoResultHelpOSM" tag="span">
                     <template #osm_name>
                       {{ OSM_NAME }}

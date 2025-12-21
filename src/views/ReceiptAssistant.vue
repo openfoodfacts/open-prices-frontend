@@ -21,13 +21,13 @@
   
   <v-row v-if="step === 2">
     <v-col v-if="loadingPredictions" cols="12">
-      <v-alert class="mb-2" type="info" variant="outlined">
+      <v-alert class="mb-2" type="info" variant="outlined" density="compact">
         {{ $t('ReceiptAssistant.WaitForExtraction') }}
         <v-progress-circular indeterminate />
       </v-alert>
     </v-col>
     <v-col v-else-if="!proofHasReceiptPredictionItems" cols="12">
-      <v-alert class="mb-2" type="warning" variant="outlined">
+      <v-alert class="mb-2" type="warning" variant="outlined" density="compact">
         {{ $t('ReceiptAssistant.NoItemsFound') }}
       </v-alert>
     </v-col>
