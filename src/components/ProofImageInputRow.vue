@@ -3,9 +3,6 @@
     <v-col>
       <v-row>
         <v-col cols="12">
-          <!-- RECEIPT: warning message -->
-          <ProofReceiptWarningAlert v-if="proofIsTypeReceipt" class="mb-3" />
-
           <div class="text-body-2 required">
             <span v-if="multiple">{{ $t('Common.Pictures') }}</span>
             <span v-else>{{ $t('Common.Picture') }}</span>
@@ -93,7 +90,6 @@ import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
-    ProofReceiptWarningAlert: defineAsyncComponent(() => import('../components/ProofReceiptWarningAlert.vue')),
     UserRecentProofsDialog: defineAsyncComponent(() => import('../components/UserRecentProofsDialog.vue')),
   },
   props: {

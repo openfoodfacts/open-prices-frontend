@@ -14,9 +14,14 @@
       <v-sheet v-if="step === 1">
         <v-row v-if="showTopAlertOrBanner">
           <v-col>
-            <ProofPriceTagMultipleAlert v-if="proofIsTypePriceTag && multiple" />
-            <ProofPriceTagAddMultiplePromoBanner v-if="proofIsTypePriceTag && !multiple" />
-            <ReceiptAssistantPromoBanner v-if="proofIsTypeReceipt && !assistedByAI" />
+            <template v-if="proofIsTypePriceTag">
+              <ProofPriceTagAddMultiplePromoBanner v-if="!multiple" />
+              <ProofPriceTagMultipleAlert v-else />
+            </template>
+            <template v-else-if="proofIsTypeReceipt">
+              <ReceiptAssistantPromoBanner v-if="!assistedByAI" class="mb-3" />
+              <ProofReceiptWarningAlert />
+            </template>
           </v-col>
         </v-row>
         <ProofTypeInputRow :class="showTopAlertOrBanner ? 'mt-0' : ''" :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
@@ -96,9 +101,10 @@ Compressor.setDefaults({
 
 export default {
   components: {
-    ProofPriceTagMultipleAlert: defineAsyncComponent(() => import('../components/ProofPriceTagMultipleAlert.vue')),
     ProofPriceTagAddMultiplePromoBanner: defineAsyncComponent(() => import('../components/ProofPriceTagAddMultiplePromoBanner.vue')),
+    ProofPriceTagMultipleAlert: defineAsyncComponent(() => import('../components/ProofPriceTagMultipleAlert.vue')),
     ReceiptAssistantPromoBanner: defineAsyncComponent(() => import('../components/ReceiptAssistantPromoBanner.vue')),
+    ProofReceiptWarningAlert: defineAsyncComponent(() => import('../components/ProofReceiptWarningAlert.vue')),
     ProofTypeInputRow: defineAsyncComponent(() => import('../components/ProofTypeInputRow.vue')),
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
     ProofImageInputRow: defineAsyncComponent(() => import('../components/ProofImageInputRow.vue')),
@@ -179,7 +185,7 @@ export default {
       return this.proofTypeFormFilled && (this.proofForm.type === constants.PROOF_TYPE_RECEIPT)
     },
     showTopAlertOrBanner() {
-      return this.typePriceTagOnly && this.multiple || this.proofIsTypePriceTag && !this.multiple || this.proofIsTypeReceipt && !this.assistedByAI
+      return this.proofIsTypePriceTag || this.proofIsTypeReceipt
     },
     proofImageFormFilled() {
       return !!this.proofImageList.length
