@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.150.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.3...v1.150.4) (2025-12-23)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#1920](https://github.com/openfoodfacts/open-prices-frontend/issues/1920)) ([6f0b6ac](https://github.com/openfoodfacts/open-prices-frontend/commit/6f0b6ac0039eb40730575bccb81b8e9d23d0e699))
+* **Product Card:** only display ProductSourceChip if the product has a source (avoids duplicate message) ([#1930](https://github.com/openfoodfacts/open-prices-frontend/issues/1930)) ([093a6d9](https://github.com/openfoodfacts/open-prices-frontend/commit/093a6d91bf021abe62b4f193816830062a86e794))
+* **Proof Upload:** add a help text on the date field ([#1924](https://github.com/openfoodfacts/open-prices-frontend/issues/1924)) ([7d4e8cd](https://github.com/openfoodfacts/open-prices-frontend/commit/7d4e8cd54962667541d23cb644a4059f5512d8fa))
+* **Proof upload:** add form label for location & picture(s) input ([#1919](https://github.com/openfoodfacts/open-prices-frontend/issues/1919)) ([f4700ab](https://github.com/openfoodfacts/open-prices-frontend/commit/f4700ab5e4f1c55468b94c215bbad11cc4ea3096))
+* **Proof Upload:** move receipt privacy warning at the top ([#1932](https://github.com/openfoodfacts/open-prices-frontend/issues/1932)) ([d63081e](https://github.com/openfoodfacts/open-prices-frontend/commit/d63081e42130902f73bff8a3c9c710ff5a40c261))
+
 ## [1.150.3](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.2...v1.150.3) (2025-12-21)
 
 
