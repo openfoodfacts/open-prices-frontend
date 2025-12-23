@@ -1,162 +1,162 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
-		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
-		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
-		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
-		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
-		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
-		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
-		"LicenseTitle": "License",
-		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
-		"WhatTitle": "What is {op_name}?",
-		"WhatOFFTitle": "What is {off_name}?",
+		"WhyTitle": "لماذا {op_name}؟",
+		"WhyAnswer1": "{op_name} هو مشروع لجمع ومشاركة أسعار المنتجات حول العالم. وهو عبارة عن مجموعة بيانات متاحة للجميع يمكن استخدامها في البحث والتحليل وغير ذلك. {op_name} يتم تطويره وصيانته بواسطة {off_url}.",
+		"WhyAnswer2": "يوجد حاليًا عدد قليل من الشركات التي تمتلك قواعد بيانات ضخمة لأسعار المنتجات على مستوى الباركود. هذه الأسعار ليست متاحة مجانًا، بل تُباع بأسعار مرتفعة لجهات خاصة وباحثين ومنظمات أخرى قادرة على تحمل تكلفتها.",
+		"HowTitle": "كيف يعمل الرمز {op_name} ؟",
+		"HowAnswer1": "نحن نجمع بيانات أسعار مفتوحة المصدر من المستخدمين. يمكن للمستخدمين إضافة الأسعار عبر تطبيق الويب هذا، أو عبر تطبيق الهاتف المحمول الرسمي {off_url} . كما يمكن لتجار التجزئة أو تطبيقات الطرف الثالث المساهمة باستخدام تطبيقنا {op_api_url}.",
+		"HowAnswer2": "لا يقتصر الغرض من {op_name} على تخزين الأسعار الفردية فحسب، بل يشمل أيضًا سلال الاستهلاك، أي قائمة المنتجات التي يشتريها الأفراد في رحلة تسوق واحدة. وتُعد هذه البيانات بالغة الأهمية للباحثين لتحليل عادات استهلاك الغذاء.",
+		"HowAnswer3": "نطلب من المساهمين، كلما أمكن، تقديم دليل على السعر، على شكل صورة لبطاقة السعر أو الإيصال. وذلك لضمان جودة البيانات.",
+		"HowAnswer4": "إذا كنتَ تُقدّم إيصالًا كصورة إثبات، فهذا يعني موافقتك على إرسال سلة مشترياتك إلى {op_name}. سنقوم بإخفاء هوية الإيصال ونشره للعموم، ليُستخدم لأغراض البحث. إذا كنتَ لا ترغب في مشاركة إيصالك علنًا، فلا يزال بإمكانك المساهمة بتصوير بطاقة السعر.",
+		"LicenseTitle": "رخصة",
+		"LicenseAnswer1": "مجموعة بيانات الأسعار مرخصة بموجب {odbl_url}، مما يعني أنه يمكن استخدامها لأي غرض، طالما أنك تنسب الفضل إلى {op_name} وتشارك أي تعديلات تجريها على مجموعة البيانات.",
+		"LicenseAnswer2": "الصور المقدمة كدليل مرخصة بموجب {ccbysa_url}.",
+		"WhatTitle": "ما هو {op_name}؟",
+		"WhatOFFTitle": "ما هو {off_name}؟",
 		"WhatOFFAnswer": "{off_url} منظمة غير ربحية تجمع وتشارك المعلومات حول المنتجات الغذائية من جميع أنحاء العالم. وهو مشروع تعاوني يعتمد على المتطوعين لجمع البيانات. {off_url} هي أكبر قاعدة بيانات مفتوحة للمنتجات الغذائية في العالم، تضم أكثر من 4 ملايين منتج في 200 دولة.",
-		"WhyOFFTitle": "Why is {off_name} doing this?",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
-		"HowUseData": "How can I use the data?",
-		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
-		"HowContact": "How can I get in touch?",
-		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
-		"HowSupport": "How can I support {op_name}?",
-		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
-		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
-		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
-		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
-		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
-		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
-		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
-		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
+		"WhyOFFTitle": "لماذا يقوم {off_name} بهذا؟",
+		"WhyOFFAnswer": "تُعدّ معلومات الأسعار بالغة الأهمية لفهم أنظمة الغذاء، فهي عامل أساسي في فهم تكلفة الغذاء وتعزيز الأنظمة الغذائية الصحية. ويُتيح نشر بيانات الأسعار للباحثين والصحفيين والمواطنين فهمًا أفضل لكيفية اختلاف أسعار المواد الغذائية جغرافيًا وزمنيًا.",
+		"HowContribute": "كيف يمكنني المساهمة؟",
+		"HowContributeAnswer": "يمكنك المساهمة بإضافة أسعار إلى مجموعة البيانات. يمكنك القيام بذلك باستخدام تطبيق الويب، أو عبر تطبيق الهاتف المحمول الرسمي. يتوفر أيضًا حساب {op_api_url} إذا كنت ترغب في دمج {op_name} مع تطبيقك. أنت بحاجة إلى حساب {off_url} للمساهمة.",
+		"HowUseData": "كيف يمكنني استخدام البيانات؟",
+		"HowUseDataAnswer1": "البيانات متاحة بموجب {odbl_url}، مما يعني أنه يمكن استخدامها لأي غرض، طالما أنك تنسب الفضل إلى {op_name} وتشارك أي تعديلات تقوم بها على مجموعة البيانات.",
+		"HowUseDataAnswer2": "يوفر الرمز {op_api_url} طريقة سهلة للوصول إلى البيانات.",
+		"HowUseDataAnswer3": "البيانات متاحة أيضًا على شكل 3 ملفات JSONL مضغوطة بصيغة gzip: {op_dumb_prices_url}و {op_dumb_proofs_url}و {op_dumb_locations_url}.",
+		"HowContact": "كيف يمكنني التواصل؟",
+		"HowContactAnswer": "يمكنكم التواصل معنا عن طريق إرسال بريد إلكتروني إلى {off_contact_email_url}.",
+		"HowSupport": "كيف يمكنني دعم {op_name}؟",
+		"HowSupportAnswer": "يمكنك دعم {op_name} من خلال المساهمة في المشروع، ومشاركته مع أصدقائك وعائلتك، والتبرع لـ {off_url}.",
+		"WhyOSM": "لماذا تطلبون معرف {osm_name} عندما أضيف سعرًا؟",
+		"WhyOSMAnswer": "نطلب معرّفًا ( {osm_url} ID) لربط السعر بمتجر محدد. يُفيد هذا في عرض السعر على الخريطة، وفي تحليل اختلافات الأسعار بين المناطق أو المتاجر.",
+		"HowRetailer": "أنا بائع تجزئة وأرغب في المساهمة في تحديد الأسعار. كيف يمكنني فعل ذلك؟",
+		"HowRetailerAnswer": "يمكنك المساهمة بالأسعار باستخدام {op_api_url}. إذا كنت ترغب في المساهمة بالأسعار على نطاق واسع، فيُرجى التواصل معنا على {off_contact_email_url}.",
+		"WhyNoScraping": "هل تفكر في استخراج الأسعار من مواقع تجار التجزئة الإلكترونية؟",
+		"WhyNoScrapingAnswer1": "لأسباب قانونية وتقنية، لا نعتبر استخراج الأسعار من مواقع تجار التجزئة الإلكترونية طريقةً صالحةً للمساهمة في {op_name}. نريد التأكد من دقة الأسعار التي نجمعها وتحديثها باستمرار، واستلام أسعار مستخرجة من المساهمين لا يُمكّننا من تحقيق ذلك.",
+		"WhyNoScrapingAnswer2": "يُعد استخراج الأسعار خيارًا مطروحًا في إصدار مستقبلي من {op_name}، ولكن سيتم ذلك بواسطة {op_name} نفسه حتى نتمكن من الحصول على دليل على السعر بناءً على صفحة HTML."
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "رف عليه عدة بطاقات أسعار",
+			"Title": "منتجات متعددة"
 		},
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
+			"Subtitle": "منتج واحد أو عدة منتجات",
 			"Title": "إيصال"
 		},
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "سعر واحد فقط",
+			"Title": "منتج واحد"
 		}
 	},
 	"AddPriceMultiple": {
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "أضف سعرًا جديدًا",
+			"AlreadyUploaded": "تم تحميل السعر مسبقًا {priceAlreadyUploadedNumber} | تم تحميل الأسعار مسبقًا {priceAlreadyUploadedNumber}",
 			"Create": "إنشاء",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"ExistingProductFound": "هل هذا المنتج مكرر؟ تمت إضافة هذا المنتج مسبقًا لهذا الدليل.",
+			"NewPrice": "السعر الجديد",
+			"PriceUploaded": "تم إنشاء السعر!",
+			"Upload": "رفع"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Proof details"
+			"ReceiptWarning": "قد تحتوي الإيصالات على معلومات شخصية، لذا نوصي بإخفائها (حذفها، طيها...) قبل التقاط الصورة.",
+			"PrivateWarning": "يمكنك أيضاً ضبط الإيصال على \"خاص\". لن تكون الأدلة الخاصة مرئية إلا لك وللمشرفين.",
+			"Title": "تفاصيل الإثبات"
 		},
-		"Title": "Add multiple prices"
+		"Title": "أضف أسعارًا متعددة"
 	},
 	"AddPriceSingle": {
 		"Create": "إنشاء",
 		"PriceDetails": {
-			"Discount": "Discount?",
+			"Discount": "تخفيض؟",
 			"Label": "سعر",
 			"LabelDiscounted": "سعر مخفض",
-			"LabelFull": "Full price",
+			"LabelFull": "السعر الكامل",
 			"Proof": "دليل",
-			"ProofDateChanged": "Date updated!",
-			"ProofSelected": "Proof selected!",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"ProofDateChanged": "تم تحديث التاريخ!",
+			"ProofSelected": "تم اختيار الدليل!",
+			"ProofUploaded": "تم تحميل الدليل!",
+			"Title": "تفاصيل السعر",
+			"UploadProof": "قم بتحميل دليل",
+			"Picture": "صورة",
 			"TakePicture": "التقاط صورة",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"Gallery": "معرض الأجهزة",
+			"SelectFromGallery": "اختر من معرض الأجهزة",
+			"RecentProof": "دليل حديث",
+			"SelectRecentProof": "اختر دليلاً حديثاً"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "فئة",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"OriginLabel": "أصل",
+			"ProductBarcode": "الباركود الخاص بالمنتج",
 			"Scan": "مسح",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "امسح الرمز الشريطي",
 			"ScanBarcodeShort": "مسح",
 			"Type": "النوع",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "أدخل الرمز الشريطي",
 			"TypeBarcodeShort": "النوع",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"SetProduct": "حدد منتجًا",
+			"Title": "معلومات المنتج"
 		},
 		"ProductModeList": {
 			"Barcode": "الرمز الشريطي",
 			"Category": "فئة"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "السعر للكيلوغرام",
+			"PerUnit": "سعر الوحدة"
 		},
-		"Title": "Add a single price",
+		"Title": "أضف سعرًا واحدًا",
 		"WhereWhen": {
 			"Date": "تاريخ",
 			"DateLabel": "تاريخ",
 			"Find": "بحث",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "موقع المتجر",
+			"SelectLocation": "حدد موقعك",
+			"Title": "أين ومتى؟"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "مدعوم بواسطة {url}"
 		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "الرمز الشريطي",
-		"Title": "Type a barcode"
+		"Title": "أدخل الرمز الشريطي"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "تحدي المجتمع",
+		"Subtitle": "انضم إلى المهتمين الآخرين بأسعار المواد الغذائية في جمع المعلومات حول {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "التقط صوراً لبطاقات الأسعار في المتاجر",
+			"line1": "يمكن أن تتضمن الصور بطاقة سعر واحدة أو أكثر. يجب أن تكون الرموز الشريطية قابلة للقراءة. على سبيل المثال:",
+			"line2": "بمجرد أن تصبح جاهزًا، ابحث عن متجرك وقم بتحميل صورك باستخدام الزر أدناه.",
+			"AddPictures": "أضف صورًا"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"Title": "التحقق من صحة الأسعار المكتشفة باستخدام الذكاء الاصطناعي",
+			"line1": "يتم اكتشاف بطاقات الأسعار تلقائيًا، لكن الروبوتات لا تزال بحاجة إلى مساعدتك للتحقق منها.",
+			"line2": "قم بزيارة صفحة التحقق من السعر باستخدام الزر أدناه، وقم بتعديل الرمز الشريطي والسعر إذا لزم الأمر، ثم قم بالتحقق!",
+			"line3": "إذا كنت تواجه صعوبة في قراءة الملصق، فضع علامة عليه بأنه غير قابل للقراءة.",
+			"line4": "هذا جهد تعاوني، حتى لو لم ترسل صورًا، فلا يزال بإمكانك مساعدة الآخرين من خلال التحقق."
 		},
-		"PicturesAddedByYou": "Pictures added by you",
-		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
-		"PricesByYou": "{challenge_title} prices by you",
+		"PicturesAddedByYou": "الصور التي أضفتها أنت",
+		"Prices": "{challenge_title} الأسعار",
+		"PricesAdded": "تمت إضافة الأسعار {challenge_title}",
+		"PricesByYou": "الأسعار من اختيارك {challenge_title}",
 		"PricesAddedByYou": "الأسعار التي أضفتها",
-		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"MostRecentContributions": "أحدث المساهمات",
+		"ChallengeCount": "{count} تحديات | {count} تحدي | {count} تحديات",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
-			"UPCOMING": "Upcoming",
-			"ONGOING": "Ongoing",
-			"COMPLETED": "Completed"
+			"DRAFT": "مسودة",
+			"UPCOMING": "قريباً",
+			"ONGOING": "مستمر",
+			"COMPLETED": "مكتمل"
 		},
-		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
-		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges",
+		"NoChallengeCurrentlyOngoing": "لا يوجد تحدٍ جارٍ حاليًا، يرجى العودة لاحقًا!",
+		"PastOrFutureChallenges": "التحديات الماضية أو المستقبلية",
+		"OngoingChallenges": "التحديات المستمرة",
 		"PastChallenges": "التحديات الماضية",
 		"UpcomingChallenges": "التحديات القادمة",
 		"StatsAndRankings": "الإحصائيات والتصنيفات",
@@ -169,29 +169,29 @@
 		"About": "حول",
 		"Action": "فعل",
 		"Actions": "Actions",
-		"AddComment": "Add a comment",
+		"AddComment": "أضف تعليقًا",
 		"AddPrice": "أضف سعرا",
-		"AddPrices": "Add prices",
-		"AddNewPrice": "Add a new price",
-		"AddNewPrices": "Add new prices",
-		"AddProof": "Add a proof",
-		"AddProofs": "Add proofs",
-		"AddNewProof": "Add a new proof",
-		"AddNewProofs": "Add new proofs",
-		"AddToOFF": "Add to {name}",
+		"AddPrices": "أضف الأسعار",
+		"AddNewPrice": "أضف سعرًا جديدًا",
+		"AddNewPrices": "أضف أسعارًا جديدة",
+		"AddProof": "أضف دليلاً",
+		"AddProofs": "أضف الأدلة",
+		"AddNewProof": "أضف دليلاً جديداً",
+		"AddNewProofs": "أضف أدلة جديدة",
+		"AddToOFF": "أضف إلى {name}",
 		"Added": "تمت الإضافة",
-		"AdditionalInfo": "Additional information",
+		"AdditionalInfo": "معلومات إضافية",
 		"All": "الكل",
 		"Barcode": "الرمز الشريطي",
-		"Barcodes": "Barcodes",
-		"BarcodeScan": "Scan a barcode",
+		"Barcodes": "الرموز الشريطية",
+		"BarcodeScan": "امسح الرمز الشريطي",
 		"BarcodeScanShort": "مسح",
-		"BarcodeType": "Type a barcode",
+		"BarcodeType": "أدخل الرمز الشريطي",
 		"BarcodeTypeShort": "النوع",
 		"BarcodeInvalid": "باركود غير صالح",
 		"Brand": "العلامة التجارية",
 		"Brands": "العلامات التجارية",
-		"BrandTotal": "{count} brands | {count} brand | {count} brands",
+		"BrandTotal": "{count} علامات تجارية | {count} علامة تجارية | {count} علامات تجارية",
 		"Price": "سعر",
 		"Prices": "الأسعار",
 		"PRODUCT": "نتاج",
@@ -199,129 +199,133 @@
 		"ProductName": "اسم المنتج",
 		"Products": "المنتجات",
 		"Proof": "دليل",
-		"Proofs": "Proofs",
+		"Proofs": "البراهين",
 		"CATEGORY": "فئة",
 		"Category": "فئة",
 		"Categories": "الفئات",
-		"CategoryMissing": "Category missing",
-		"CategoryTotal": "{count} categories | {count} category | {count} categories",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
-		"Chart": "Chart",
+		"CategoryMissing": "الفئات مفقودة",
+		"CategoryTotal": "{count} فئات | {count} فئة | {count} فئات",
+		"Challenge": "تحدي",
+		"Challenges": "التحديات",
+		"ChallengeCurrent": "التحدي الحالي",
+		"ChallengeOngoing": "تحدٍ مستمر",
+		"ChallengeCount": "{count} تحديات | {count} تحدي | {count} تحديات",
+		"Chart": "جدول",
 		"Clear": "محو",
 		"Close": "إغلق",
-		"Comment": "Comment",
-		"Community": "Community",
-		"CommunityPrices": "Community prices",
-		"CommunityProofs": "Community proofs",
+		"Comment": "تعليق",
+		"Community": "مجتمع",
+		"CommunityPrices": "أسعار المجتمع",
+		"CommunityProofs": "إثباتات المجتمع",
 		"Consumption": "استهلاك",
-		"ConsumptionPrices": "Consumption prices",
-		"ConsumptionProofs": "Consumption proofs",
+		"ConsumptionPrices": "أسعار الاستهلاك",
+		"ConsumptionProofs": "إثباتات الاستهلاك",
 		"Contribute": "المساهمة",
 		"Contributors": "المساهمون",
 		"Contributions": "مساهمات",
 		"Confirm": "يتأكد",
 		"Country": "بلد",
 		"Countries": "بلدان",
-		"CountryCount": "{count} countries | {count} country | {count} countries",
-		"Crop": "Crop",
-		"Cropped": "Cropped",
+		"CountryCount": "{count} دول | {count} دولة | {count} دول",
+		"Crop": "اقتصاص",
+		"Cropped": "تم اقتصاصها",
 		"Currency": "عملة",
-		"Currencies": "Currencies",
-		"CurrencyMissing": "Currency missing",
-		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
-		"Dashboard": "Dashboard",
+		"Currencies": "العملات",
+		"CurrencyMissing": "العملة مفقودة",
+		"CurrencyCount": "{count} عملات | {count} عملة | {count} عملات",
+		"CurrencyProofHelpTextSettings": "يمكنك إضافة العملات في إعداداتك.",
+		"Dashboard": "لوحة التحكم",
 		"Display": "Display",
-		"DisplayList": "List",
-		"DisplayPriceList": "List",
-		"DisplayTable": "Table",
+		"DisplayList": "قائمة",
+		"DisplayPriceList": "قائمة",
+		"DisplayTable": "طاولة",
 		"DisplayMap": "خريطة",
 		"DisplayPriceMap": "خريطة",
-		"DisplayPriceChart": "Chart",
+		"DisplayPriceChart": "جدول",
 		"Done": "تم",
 		"Error": "خطأ",
 		"Experiment": "تجربة",
-		"Experiments": "Experiments",
+		"Experiments": "التجارب",
 		"FromPriceTag": "من سعر البطاقة",
 		"FromReceipt": "من الإيصال",
-		"GoToProof": "Go to proof",
-		"Join": "Join",
+		"GoToProof": "انتقل إلى الإثبات",
+		"Join": "ينضم",
 		"Label": "al3alama",
 		"Labels": "علامات",
-		"LabelTotal": "{count} labels | {count} label | {count} labels",
+		"LabelTotal": "{count} تسميات | {count} تسمية | {count} تسميات",
 		"Language": "اللغات",
 		"Languages": "اللغات",
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "أحدث الأسعار",
+		"LatestProofs": "أحدث الأدلة",
 		"LoadMore": "حمّل المزيد",
-		"Location": "Location",
-		"Locations": "Locations",
-		"LocationSelected": "Location selected",
-		"LocationFindShop": "Find the shop location",
-		"LocationMissing": "Location missing",
-		"LocationSearchByName": "Search by name and city",
+		"Location": "موقع",
+		"Locations": "المواقع",
+		"LocationSelected": "تم تحديد الموقع",
+		"LocationFindShop": "ابحث عن موقع المتجر",
+		"LocationMissing": "الموقع مفقود",
+		"LocationSearchByName": "ابحث بالاسم والمدينة",
 		"Date": "تاريخ",
-		"DateMissing": "Date missing",
+		"DateMissing": "التاريخ مفقود",
+		"DateProofHelpText": "تاريخ الصورة.",
+		"DateProofHelpTextExif": "بشكل افتراضي، نحاول استخراجها من بيانات EXIF الوصفية للصورة.",
+		"DateProofHelpTextReceipt": "بالنسبة للإيصالات، اضبطها على تاريخ الشراء.",
 		"Details": "تفاصيل",
 		"Delete": "حذف",
-		"DeveloperMode": "Developer mode",
-		"Discount": "Discount",
-		"DiscountType": "Discount type",
+		"DeveloperMode": "وضع المطور",
+		"Discount": "تخفيض",
+		"DiscountType": "نوع الخصم",
 		"DiscountTypeQuantity": "كمية",
-		"DiscountTypeSale": "Sale",
-		"DiscountTypeSeasonal": "Seasonal",
-		"DiscountTypeLoyaltyProgram": "Loyalty program",
-		"DiscountTypeExpiresSoon": "Expires soon",
-		"DiscountTypePickItYourself": "Pick it yourself",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSale": "أُوكَازيُون",
+		"DiscountTypeSeasonal": "موسمي",
+		"DiscountTypeLoyaltyProgram": "برنامج الولاء",
+		"DiscountTypeExpiresSoon": "ينتهي قريباً",
+		"DiscountTypePickItYourself": "اخترها بنفسك",
+		"DiscountTypeSecondHand": "اليد الثانية",
 		"DiscountTypeOther": "أخرى",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "مثال",
+		"Examples": "أمثلة",
 		"ExampleWithColon": "مثال:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "مثال: {value}",
 		"ExamplesWithColon": "أمثلة:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "أمثلة: {value}",
 		"Edit": "تحرير",
-		"End": "End",
-		"ErrorServer": "Error: server error",
+		"End": "نهاية",
+		"ErrorServer": "خطأ: خطأ في الخادم",
 		"FieldIsRequired": "الحقل مطلوب",
 		"Filter": "تصفية",
-		"FilterChallengesShowAllStatus": "Show all challenges",
-		"FilterProductWithPriceCount": "With a price",
-		"FilterProductWithPriceCountHide": "Hide products with prices",
-		"FilterProductWithoutPriceCount": "Without prices",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
-		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterChallengesShowAllStatus": "عرض جميع التحديات",
+		"FilterProductWithPriceCount": "بثمن",
+		"FilterProductWithPriceCountHide": "إخفاء المنتجات مع الأسعار",
+		"FilterProductWithoutPriceCount": "بدون أسعار",
+		"FilterPriceMoreThan30DaysHide": "إخفاء الأسعار التي يزيد عمرها عن 30 يومًا",
+		"FilterProofWithPriceCountHide": "إخفاء الأدلة مع الأسعار",
+		"FilterPriceTagWithProofOwner": "أظهر فقط أدلتي",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "مع رمز شريطي صالح",
 		"FilterPriceTagWithTagPredictionProductExists": "مع منتج صالح",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "مع علامة فئة صالحة",
-		"FilterLocationWithPriceCountHide": "Hide locations with prices",
-		"FilterUserWithPriceCountHide": "Hide contributors with prices",
-		"Fix": "Fix",
+		"FilterLocationWithPriceCountHide": "إخفاء المواقع التي تحتوي على الأسعار",
+		"FilterUserWithPriceCountHide": "إخفاء المساهمين الذين لديهم أسعار",
+		"Fix": "يصلح",
 		"FAQ": "الأسئلة المتكررة",
 		"FrequentlyAskedQuestions": "أسئلة مكررة",
-		"GDPR_REQUEST": "GDPR request",
-		"Group": "Group",
+		"GDPR_REQUEST": "طلب بموجب اللائحة العامة لحماية البيانات",
+		"Group": "مجموعة",
 		"Help": "يساعد",
 		"History": "السجل",
 		"Image": "الصورة",
-		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
-		"ImageSelected": "Image selected!",
-		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
-		"Images": "Images",
-		"ImageFull": "Full-size image",
-		"Latest": "Latest",
-		"LinkCopySuccess": "Link copied",
-		"LocationCount": "{count} locations | {count} location | {count} locations",
-		"LocationNotFound": "Location not found",
+		"ImageSelect": "اختر صورة",
+		"ImageSelectMultiple": "اختر الصور",
+		"ImageSelected": "تم اختيار الصورة!",
+		"ImageSelectedCount": "تم تحديد {count} صورة | تم تحديد {count} صورة | تم تحديد {count} صورة",
+		"Images": "صور",
+		"ImageFull": "صورة بالحجم الكامل",
+		"Latest": "أحدث",
+		"LinkCopySuccess": "تم نسخ الرابط",
+		"LocationCount": "{count} مواقع | {count} موقع | {count} مواقع",
+		"LocationNotFound": "لم يتم العثور على الموقع",
 		"Map": "خريطة",
 		"Miscellaneous": "متنوع",
-		"MobileApp": "Mobile app",
+		"MobileApp": "تطبيق الهاتف المحمول",
 		"Moderation": "الاعتدال",
 		"ModerationFlagReasonWrongType": "نوع خاطئ",
 		"ModerationFlagReasonWrongPriceValue": "قيمة السعر خاطئة",
@@ -333,176 +337,176 @@
 		"ModerationFlagCreateSuccess": "شكرا على تقريرك!",
 		"ModerationFlagStatusOpen": "يفتح",
 		"ModerationFlagStatusClosed": "مغلق",
-		"MyConsumption": "My consumption",
-		"MyDashboard": "My dashboard",
+		"MyConsumption": "استهلاكي",
+		"MyDashboard": "لوحة التحكم الخاصة بي",
 		"MyPrices": "أسعاري",
 		"MyProofs": "أدلتي",
-		"MyStats": "My stats",
+		"MyStats": "إحصائياتي",
 		"New": "جديد",
-		"NextProof": "Next proof",
+		"NextProof": "الدليل التالي",
 		"NoBarcode": "لا يوجد رمز شريطي",
-		"NotAnError": "Not an error",
-		"NotAPrice": "Not a price",
-		"Offline": "Offline",
-		"Online": "Online",
+		"NotAnError": "ليس خطأً",
+		"NotAPrice": "ليس سعراً",
+		"Offline": "غير متصل بالإنترنت",
+		"Online": "متصل",
 		"Open": "يفتح",
-		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
-		"OrderLocationCountDESC": "Location count",
-		"OrderProductUniqueScansDESC": "Number of scans",
-		"OrderProductPriceCountDESC": "Number of prices",
-		"OrderPriceCountDESC": "Price count",
+		"OpenWithTheAssistant": "ابدأ بالمساعد",
+		"Order": "طلب",
+		"OrderLocationCountDESC": "عدد المواقع",
+		"OrderProductUniqueScansDESC": "عدد عمليات المسح",
+		"OrderProductPriceCountDESC": "عدد الأسعار",
+		"OrderPriceCountDESC": "عدد الأسعار",
 		"OrderPriceASC": "سعر",
-		"OrderPriceCreatedDESC": "Addition date",
-		"OrderPriceDateDESC": "Price date",
-		"OrderProductCountDESC": "Product count",
-		"OrderProofCountDESC": "Proof count",
-		"OrderProofCreatedDESC": "Addition date",
-		"OrderProofDateDESC": "Proof date",
-		"OrderUserCountDESC": "User count",
+		"OrderPriceCreatedDESC": "تاريخ الإضافة",
+		"OrderPriceDateDESC": "تاريخ السعر",
+		"OrderProductCountDESC": "عدد المنتجات",
+		"OrderProofCountDESC": "عدد الأدلة",
+		"OrderProofCreatedDESC": "تاريخ الإضافة",
+		"OrderProofDateDESC": "تاريخ الإثبات",
+		"OrderUserCountDESC": "عدد المستخدمين",
 		"Other": "أخرى",
-		"OtherContributions": "Other contributions",
+		"OtherContributions": "مساهمات أخرى",
 		"PageNotMaintainedAnymore": "لم تعد هذه الصفحة قيد الصيانة.",
-		"PersonalInfo": "Personal information",
-		"Physical": "Physical",
-		"Picture": "Picture",
-		"Pictures": "Pictures",
-		"PictureSelect": "Select a picture",
-		"PictureSelectMultiple": "Select pictures",
-		"PictureSelected": "Picture selected!",
-		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
-		"PictureFull": "Full-size picture",
-		"PicturesByYou": "Pictures by you",
-		"PicturesAdded": "Pictures added",
-		"PicturesAddedByYou": "Pictures added by you",
+		"PersonalInfo": "معلومات شخصية",
+		"Physical": "بدني",
+		"Picture": "صورة",
+		"Pictures": "صور",
+		"PictureSelect": "اختر صورة",
+		"PictureSelectMultiple": "اختر الصور",
+		"PictureSelected": "تم اختيار الصورة!",
+		"PictureSelectedCount": "تم اختيار {count} صورة | تم اختيار {count} صورة | تم اختيار {count} صورة",
+		"PictureFull": "صورة بالحجم الكامل",
+		"PicturesByYou": "صور من تصويرك",
+		"PicturesAdded": "تمت إضافة الصور",
+		"PicturesAddedByYou": "الصور التي أضفتها أنت",
 		"PRICE_TAG": "سعر البطاقة",
 		"PriceTags": "بطاقات الأسعار",
-		"PriceCount": "{count} prices | {count} price | {count} prices",
-		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
-		"PriceCreated": "Price created!",
+		"PriceCount": "{count} الأسعار | {count} السعر | {count} الأسعار",
+		"PriceAddedCount": "تمت إضافة الأسعار {count} | تمت إضافة السعر {count} | تمت إضافة الأسعار {count}",
+		"PriceAddProgress": "تمت إضافة الأسعار {numberOfPricesAdded} / {totalNumberOfPrices}",
+		"PriceToValidateCount": "{count} أسعار للتحقق | {count} سعر للتحقق | {count} أسعار للتحقق",
+		"PriceCreated": "تم إنشاء السعر!",
 		"PriceMissing": "السعر مفقود",
 		"PricePerMissing": "السعر لكل مفقود",
 		"PriceAlreadyUploaded": "السعر تم تحميله بالفعل",
 		"PriceReadyToBeUploaded": "السعر جاهز للتحميل",
 		"PricesAlreadyUploaded": "الأسعار تم تحميلها بالفعل",
-		"PricesMore": "More prices",
-		"PricesAdded": "Prices added",
-		"PricesAddedToday": "Prices added today",
-		"PricesToday": "Prices today",
-		"PriceNotFound": "Price not found",
+		"PricesMore": "أسعار إضافية",
+		"PricesAdded": "تمت إضافة الأسعار",
+		"PricesAddedToday": "الأسعار المضافة اليوم",
+		"PricesToday": "أسعار اليوم",
+		"PriceNotFound": "لم يتم العثور على السعر",
 		"PricesAddedByYou": "الأسعار التي أضفتها",
-		"Private": "Private",
+		"Private": "خاص",
 		"Privacy": "الخصوصية",
-		"ProductCount": "{count} products | {count} product | {count} products",
-		"ProductFind": "Find the product",
+		"ProductCount": "{count} منتجات | {count} منتج | {count} منتجات",
+		"ProductFind": "ابحث عن المنتج",
 		"ProductMissing": "المنتج مفقود",
 		"ProductOrCategoryMissing": "المنتج أو الفئة مفقودة",
-		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
-		"ProofDetails": "Proof details",
-		"ProofMissing": "Proof missing",
+		"ProofCount": "{count} براهين | {count} برهان | {count} براهين",
+		"ProofDetails": "تفاصيل الإثبات",
+		"ProofMissing": "الدليل مفقود",
 		"ProofSelect": "اختر دليلا",
-		"ProofSelectMultiple": "Select proofs",
-		"ProofSelected": "Proof selected!",
-		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
-		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofSelectMultiple": "اختر البراهين",
+		"ProofSelected": "تم اختيار الدليل!",
+		"ProofSelectedCount": "تم اختيار {count} البراهين | تم اختيار {count} البرهان | تم اختيار {count} البراهين",
+		"ProofUploadedCount": "تم تحميل {count} إثباتات | تم تحميل {count} إثبات | تم تحميل {count} إثباتات",
 		"ProofUploadProgress": "تم تحميل {numberOfProofsUploaded} / {totalNumberOfProofs} من الأدلة",
-		"ProofsAddedToday": "Proofs added today",
-		"ProofsToday": "Proofs today",
-		"ProofNotFound": "Proof not found",
-		"Public": "Public",
+		"ProofsAddedToday": "تمت إضافة البراهين اليوم",
+		"ProofsToday": "الأدلة اليوم",
+		"ProofNotFound": "لم يتم العثور على دليل",
+		"Public": "عام",
 		"Quantity": "كمية",
-		"QuantityBought": "Quantity bought",
-		"QuantityMissing": "Quantity missing",
+		"QuantityBought": "الكمية المشتراة",
+		"QuantityMissing": "القنب مفقود",
 		"Reason": "السبب",
 		"RECEIPT": "إيصال",
 		"Receipt": "إيصال",
-		"Receipts": "Receipts",
-		"ReceiptPriceCount": "Number of prices",
-		"ReceiptPriceTotal": "Total amount",
-		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
-		"ReceiptOnlineDeliveryCosts": "Delivery costs",
-		"Recent": "Recent",
+		"Receipts": "الإيصالات",
+		"ReceiptPriceCount": "عدد الأسعار",
+		"ReceiptPriceTotal": "المبلغ الإجمالي",
+		"ReceiptOwnerConsumption": "تتبع استهلاكي في لوحة معلومات الاستهلاك الخاصة بي",
+		"ReceiptOnlineDeliveryCosts": "تكاليف التوصيل",
+		"Recent": "مؤخرًا",
 		"Re-open": "إعادة فتح",
 		"ReportProblem": "Report a problem",
 		"Resolved": "تم الحل",
-		"Reuses": "Reuses",
-		"ReusesKnown": "Known reuses",
+		"Reuses": "إعادة الاستخدام",
+		"ReusesKnown": "الاستخدامات المعروفة",
 		"Search": "بحث",
-		"Select": "Select",
+		"Select": "يختار",
 		"Send": "إرسال",
 		"Settings": "الإعدادات",
-		"SignInOFFAccount": "Sign in with your {url} account",
-		"SignedIn": "Signed in!",
+		"SignInOFFAccount": "سجّل الدخول باستخدام حسابك {url}",
+		"SignedIn": "تم تسجيل الدخول!",
 		"SignIn": "تسجيل الدخول",
 		"SignOut": "تسجيل الخروج",
-		"SideMenu": "Side menu",
+		"SideMenu": "قائمة جانبية",
 		"Share": "مشاركة",
 		"Source": "المصدر",
-		"SourceCode": "Source code",
+		"SourceCode": "شفرة المصدر",
 		"Start": "بدء",
-		"Stats": "Stats",
+		"Stats": "الإحصائيات",
 		"Status": "الحالة",
 		"SuggestedBarcode": "الرمز الشريطي المقترح:",
 		"Summary": "الملخص",
-		"TaglineOriginal": "An open crowdsourced database of food prices",
-		"TaglineAlt1": "The open crowdsourced database of prices",
-		"TaglineAlt2": "The open crowdsourced database of food and product prices",
-		"TaglineAlt3": "Prices should be free",
+		"TaglineOriginal": "قاعدة بيانات مفتوحة المصدر لأسعار المواد الغذائية، يتم جمعها من مصادر متعددة.",
+		"TaglineAlt1": "قاعدة بيانات الأسعار المفتوحة التي يتم جمعها من مصادر متعددة",
+		"TaglineAlt2": "قاعدة بيانات مفتوحة المصدر لأسعار المواد الغذائية والمنتجات، يتم جمعها من مصادر متعددة.",
+		"TaglineAlt3": "يجب أن تكون الأسعار مجانية",
 		"Text": "نص",
-		"Thanks": "Thanks",
+		"Thanks": "شكرًا",
 		"Theme": "مظهر",
 		"ThemeLight": "وضع نهاري",
 		"ThemeDark": "بنتاا",
-		"TopContributors": "Top contributors",
-		"TopLocations": "Top locations",
-		"TopProducts": "Top products",
+		"TopContributors": "أبرز المساهمين",
+		"TopLocations": "أفضل المواقع",
+		"TopProducts": "أفضل المنتجات",
 		"TopCities": "أفضل المدن",
 		"TopCountries": "أفضل الدول",
-		"Today": "Today",
-		"Top": "Top",
+		"Today": "اليوم",
+		"Top": "قمة",
 		"Total": "Total",
-		"Truncate": "Truncate",
-		"Truncated": "Truncated",
+		"Truncate": "اقتطاع",
+		"Truncated": "مختصر",
 		"TryItOut": "جربها",
 		"Type": "النوع",
 		"UnknownProduct": "منتج غير معروف",
-		"UnknownProductSource": "Unknown product source",
-		"UnknownSource": "Unknown source",
+		"UnknownProductSource": "مصدر المنتج غير معروف",
+		"UnknownSource": "مصدر غير معروف",
 		"UnitGram": "g",
 		"UnitKilogram": "kg",
-		"UnitMililitre": "mL",
-		"UnitLitre": "L",
-		"Unreadable": "Unreadable",
-		"Upload": "Upload",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
-		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
-		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"UnitMililitre": "مل",
+		"UnitLitre": "ل",
+		"Unreadable": "غير قابل للقراءة",
+		"Upload": "رفع",
+		"UploadMultipleImages": "تحميل {count} صورة | تحميل {count} صور",
+		"UploadMultiplePictures": "تحميل {count} صورة | تحميل {count} صور",
+		"UploadMultipleProofs": "تحميل {count} إثبات | تحميل {count} إثباتات",
+		"UploadMultiplePrices": "تحميل السعر {count} | تحميل الأسعار {count}",
 		"URL": "عنوان URL",
-		"URLInvalid": "Invalid URL",
+		"URLInvalid": "عنوان URL غير صالح",
 		"User": "المستخدم",
-		"Users": "Users",
-		"UserCount": "{count} users | {count} user | {count} users",
-		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
-		"UserIsModerator": "You are a moderator",
-		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
-		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
-		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
-		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
-		"UserIsNotPriceOwner": "You are not the price owner",
-		"UserIsNotProofOwner": "You are not the proof owner",
+		"Users": "المستخدمون",
+		"UserCount": "{count} مستخدمين | {count} مستخدم | {count} مستخدمين",
+		"UserContributorCount": "{count} مساهمين | {count} مساهمين | {count} مساهمين",
+		"UserIsModerator": "أنت مشرف",
+		"UserIsModeratorCanEditPrice": "يمكنك تعديل هذا السعر لأنك مشرف",
+		"UserIsModeratorCanDeletePrice": "يمكنك حذف هذا السعر لأنك مشرف",
+		"UserIsModeratorCanEditProof": "يمكنك تعديل هذا الدليل لأنك مشرف.",
+		"UserIsModeratorCanDeleteProof": "يمكنك حذف هذا الدليل لأنك مشرف.",
+		"UserIsNotPriceOwner": "أنت لست مالك السعر",
+		"UserIsNotProofOwner": "أنت لست صاحب الدليل",
 		"Validate": "التحقق",
-		"ValidatePrices": "Validate prices",
-		"ValidatePricesWithAI": "Validate prices with AI",
+		"ValidatePrices": "تحقق من الأسعار",
+		"ValidatePricesWithAI": "التحقق من صحة الأسعار باستخدام الذكاء الاصطناعي",
 		"ValidatePricesFromCommunity": "التحقق من صحة الأسعار من المجتمع",
 		"View": "مشاهدة",
 		"Website": "موقع إلكتروني",
-		"WithAPrice": "With a price",
+		"WithAPrice": "بثمن",
 		"WithoutAPrice": "بدون ثمن",
-		"Year": "Year",
-		"Years": "Years",
+		"Year": "سنة",
+		"Years": "سنين",
 		"Yes": "نعم",
 		"No": "لا",
 		"Food": "طعام",
@@ -511,107 +515,107 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. اختيار البرهان",
+			"LabelsExtraction": "2. استخراج التصنيفات",
+			"Cleanup": "3. التنظيف",
+			"Summary": "4. ملخص"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"BoundingBoxesFromServerWarning": "لم يتم الكشف عن أي ملصقات تلقائياً. يرجى رسم مربعات يدوياً حول الملصقات.",
+		"FindBoundingBoxes": "البحث التلقائي عن التصنيفات",
+		"FindBoundingBoxesRunning": "يتم تشغيل خاصية الكشف التلقائي عن الملصقات. يرجى الانتظار...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. ارسم مربعات حول الملصقات",
+			"CheckLabels": "2. تحقق من وضوح الملصقات",
+			"SendLabels": "3. إرسال الملصقات للمعالجة الآلية",
+			"SendLabelsButton": "أرسل الملصقات"
 		},
-		"PricesAlreadyAdded": "Prices already added",
+		"PricesAlreadyAdded": "الأسعار مضافة بالفعل",
 		"PricesWithoutProductOrCategory": "الأسعار بدون منتج أو فئة",
-		"PricesMarkedAsError": "Prices marked as error",
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"WaitForUpload": "Please wait for upload",
-		"GoToProof": "Go to proof",
-		"NextProof": "Next proof",
-		"ChooseNextProof": "Choose another proof to handle",
-		"AutomaticBoundingBoxSource": "automatic",
-		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
+		"PricesMarkedAsError": "الأسعار التي تم وضع علامة عليها كخطأ",
+		"PriceAddConfirmationMessage": "سيتم إضافة السعر (الأسعار) {numberOfPricesAdded} إلى إثبات موجود على {date} في {locationName}",
+		"PriceAddProgress": "تمت إضافة الأسعار {numberOfPricesAdded} / {totalNumberOfPrices}",
+		"WaitForUpload": "يرجى الانتظار حتى يتم التحميل",
+		"GoToProof": "انتقل إلى الإثبات",
+		"NextProof": "الدليل التالي",
+		"ChooseNextProof": "اختر دليلًا آخر للتعامل معه",
+		"AutomaticBoundingBoxSource": "أوتوماتيكي",
+		"ManualBoundingBoxSource": "يدوي",
+		"DetectedBarcode": "تم اكتشاف الرمز الشريطي: {barcode}",
+		"LabelProcessingErrorMessage": "خطأ: فشلت المعالجة التلقائية للتسمية",
 		"PriceTagLabels": {
-			"PriceTagWithoutPrice": "Price tag without a price",
-			"PriceTagWithPrice": "Price tag with a price",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagWithoutPrice": "سعر بلا ثمن",
+			"PriceTagWithPrice": "سعر محدد",
+			"PriceTagTruncated": "تم وضع علامة على بطاقة السعر بأنها مختصرة",
+			"PriceTagUnreadable": "تم وضع علامة سعر غير قابلة للقراءة",
+			"PriceTagNotAPrice": "تم وضع علامة السعر على أنها ليست سعرًا.",
 			"PriceTagNoBarcode": "سعر البطاقة مُعلَّم بأنه لا يوجد رمز شريطي",
 			"PriceTagOther": "سعر العلامة التجارية مميز كآخر",
-			"NewPriceTag": "New price tag"
+			"NewPriceTag": "سعر جديد"
 		},
-		"OpenWithTheAssistant": "Open with the assistant"
+		"OpenWithTheAssistant": "ابدأ بالمساعد"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "انضم إلينا!",
+		"HowToUseTheData": "استخدم البيانات"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "اختر إحدى عملاتك المفضلة",
 		"Currency": "عملة",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrencies": "أضف العملات في الإعدادات",
+		"AddCurrenciesWarning": "سيتم إعادة توجيهك إلى صفحة الإعدادات ولكنك ستفقد أي معلومات أدخلتها في هذه الصفحة.",
+		"Select": "اختر {currency_code}"
 	},
 	"CreateOffProduct": {
-		"SelectUnknownProduct": "Select unknown product",
-		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"SelectUnknownProduct": "اختر منتجًا غير معروف",
+		"SelectUnknownProductGuide": "أو حدد منتجًا غير معروف لإضافته",
 		"CountriesWhereSold": "بلدان بيع",
 		"CreateNewProduct": "إنشاء منتج جديد",
 		"CreateProduct": "إنشاء المنتج",
 		"EnableCropMode": "تمكين وضع الاقتصاص",
 		"Flavor": "حدد المشروع الذي يجب إنشاء المنتج فيه",
-		"NextProof": "Next proof",
+		"NextProof": "الدليل التالي",
 		"PreviousProof": "الدليل السابق",
 		"ProductAlreadyExists": "المنتج موجود بالفعل",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "لغة المنتج",
 		"ProofNumberOfOutProofs": "الدليل ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "المتاجر التي تباع فيها",
 		"UseCropModeToAddImage": "لإضافة صورة المنتج، قم بتمكين وضع الاقتصاص أسفل صورة الإثبات وارسم مستطيلاً حول المنتج."
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "اختر أحد إثباتاتك الأخيرة"
 	},
 	"Footer": {
 		"About": "حول",
-		"Stats": "Stats",
-		"TagLine": "{name} is an {url} project."
+		"Stats": "الإحصائيات",
+		"TagLine": "{name} هو مشروع {url} ."
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "لوحة التحكم",
 		"Settings": "الإعدادات",
 		"SignIn": "تسجيل الدخول",
 		"SignOut": "تسجيل الخروج"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "وضع الإضاءة",
+		"DarkMode": "الوضع الداكن"
 	},
 	"Home": {
 		"AddPrice": "أضف سعرا",
-		"LatestPrices": "Latest prices",
-		"ProofAdd": "Add a proof",
+		"LatestPrices": "أحدث الأسعار",
+		"ProofAdd": "أضف دليلاً",
 		"SearchProduct": "ابحث عن منتج",
-		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"SettingsUpdated": "تم تحديث الإعدادات!",
+		"TodayPriceStat": "لم تُضَف أي أسعار اليوم | {todayPriceNumber} أُضِيفَت أسعار جديدة اليوم | {todayPriceNumber} أُضِيفَت أسعار جديدة اليوم!",
 		"Welcome": {
-			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Generic": "قاعدة بيانات مفتوحة المصدر للأسعار 🏷🍊💲",
+			"Subtitle": "قاعدة بيانات مفتوحة المصدر لأسعار المواد الغذائية 🏷🍊💲",
+			"Title": "أهلاً بكم في {name}!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "أحدث الأسعار",
 		"LoadMore": "حمّل المزيد",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LocationNotFound": "الموقع غير موجود في OpenStreetMap... لا تتردد في إضافته :)"
 	},
 	"LocationSelector": {
 		"Clear": "محو",
@@ -619,98 +623,98 @@
 		"NoResultHelpKeywords": "لم تجد متجرك؟ حاول استخدام كلمات رئيسية بدلاً من العنوان الكامل (مثل \"كارفور ٧٥٠١٣ باريس\" أو \"وول مارت سان فرانسيسكو\").",
 		"NoResultHelpOSM": "ما زلتَ لا تجد متجرك؟ ربما لم يكن موجودًا في {osm_name} بعد. يمكنك إضافته إلى {osm_url} أولًا.",
 		"PoweredBy": {
-			"text": "powered by {url}"
+			"text": "مدعوم بواسطة {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"RecentLocations": "لا توجد مواقع حديثة | الموقع الأخير {recentLocationNumber}| المواقع الحديثة {recentLocationNumber}",
+		"Result": "النتيجة {resultNumber} | النتائج {resultNumber}",
+		"SearchByName": "ابحث عن متجرك بالاسم والمدينة",
+		"Title": "ابحث عن موقع متجرك",
+		"Warning": "محرك البحث للعثور على متجر ليس دقيقًا جدًا حاليًا.{newline}لا تتردد في إضافة اسم الشارع لتضييق نطاق النتائج.{newline}أمثلة: كارفور سيتي 15e باريس؛ سينسبري كامدن لندن"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "يبدو أن الصفحة التي طلبتها غير موجودة...",
+		"Title": "غير موجود"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
-		"PriceValueDisplayKilogram": "{0} / kg",
+		"Discount": "تخفيض",
+		"PriceDate": "على {date}",
+		"PriceValueDisplayKilogram": "{0} / كجم",
 		"PriceValueDisplayLitre": "{0} / L",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / وحدة",
 		"Proof": "دليل",
-		"FullPrice": "Full price",
+		"FullPrice": "السعر الكامل",
 		"UnknownProduct": "منتج غير معروف"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "هل أنت متأكد من رغبتك في حذف هذا السعر؟",
 		"Delete": "حذف",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "تم حذف السعر!",
+		"Title": "حذف سعر"
 	},
 	"PriceEdit": {
 		"Save": "حفظ",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "تم تعديل السعر!",
+		"Title": "عدّل السعر"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
+		"Discount": "تخفيض؟",
 		"Label": "سعر",
 		"LabelDiscounted": "سعر مخفض",
-		"LabelFull": "Full price"
+		"LabelFull": "السعر الكامل"
 	},
 	"PriceList": {
 		"LoadMore": "حمّل المزيد",
-		"Title": "Latest prices"
+		"Title": "أحدث الأسعار"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed",
-		"ThreeDecimals": "Only three decimals allowed"
+		"AmountRequired": "السعر مطلوب",
+		"NoSpaces": "يرجى عدم استخدام المسافات",
+		"Number": "أدخل رقمًا",
+		"Positive": "قد لا يكون السعر سلبياً",
+		"TwoDecimals": "يُسمح برقمين عشريين فقط",
+		"ThreeDecimals": "يُسمح بثلاثة أرقام عشرية فقط"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "طول الباركود: {length}",
 		"Brands": "العلامات التجارية",
 		"BrandLower": "3alama-tijariya",
-		"BrandMissing": "Brand missing",
-		"BrandTotal": "{count} brands",
+		"BrandMissing": "العلامة التجارية مفقودة",
+		"BrandTotal": "{count} العلامات التجارية",
 		"Categories": "الفئات",
 		"CategoriesLower": "الفئات",
-		"CategoriesMissing": "Category missing",
-		"CategoryTotal": "{count} categories",
+		"CategoriesMissing": "الفئات مفقودة",
+		"CategoryTotal": "{count} الفئات",
 		"Labels": "علامات",
 		"LabelsLower": "الملصقات",
 		"LabelTotal": "{count} labels",
-		"LatestPrice": "Latest price",
+		"LatestPrice": "أحدث سعر",
 		"InvalidBarcode": "باركود غير صالح",
-		"InvalidBarcodeLength": "Invalid barcode length",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"InvalidBarcodeLength": "طول الباركود غير صالح",
+		"ProductBrandMissing": "العلامة التجارية للمنتج غير متوفرة",
+		"ProductCategoriesMissing": "فئات المنتجات مفقودة",
 		"ProductQuantityGram": "{0} g",
-		"ProductQuantityKilogram": "{0} kg",
+		"ProductQuantityKilogram": "{0} كجم",
 		"ProductQuantityLitre": "{0} L",
-		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
-		"QuantityMissing": "Quantity missing",
+		"ProductQuantityMililitre": "{0} مل",
+		"ProductQuantityMissing": "كمية المنتج مفقودة",
+		"QuantityMissing": "القنب مفقود",
 		"UnknownProduct": "إسم منتج غير معروف"
 	},
 	"ProductDetail": {
 		"AddPrice": "أضف سعرا",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
+		"CategoryNotFound": "لم يتم العثور على الفئة...",
+		"LatestPrices": "أحدث الأسعار",
 		"LoadMore": "حمّل المزيد",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"ProductNotFound": "المنتج غير موجود في Open Food Facts... لا تتردد في إضافته :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
-		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
-		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"HowToMultiple": "يجب أن تشترك جميع صور بطاقات الأسعار التي تختارها في نفس موقع المتجر، وأن تكون قد التقطت في نفس اليوم.",
+		"HowToMultipleShort": "يجب أن تشترك الصور في نفس موقع المتجر والتاريخ.",
+		"PriceValidationAllow": "اسمحوا للذكاء الاصطناعي باستخراج أسعار صوري والتحقق منها من قبل المجتمع.",
+		"PriceTagAllowCommunityValidation": "السماح للمجتمع بالتحقق من صحة الأسعار التي يستخرجها الذكاء الاصطناعي",
+		"PriceTagAIWarning": "سيقوم الذكاء الاصطناعي بتشغيل بياناتك لاستخراج الأسعار.",
+		"ReceiptAllowAI": "اسمح بتشغيل الذكاء الاصطناعي على إيصالك لاستخراج الأسعار",
+		"ReceiptAIWarning": "سيقوم الذكاء الاصطناعي بمعالجة إيصالك لاستخراج الأسعار.",
 		"PromoProofPriceTagAddMultiple": "لتحميل بطاقات الأسعار المتعددة (نفس موقع المتجر والتاريخ)، انقر هنا!",
 		"PromoReceiptAssistant": "تجربة: جرب مساعد الإيصال الجديد لاستخراج الأسعار تلقائيًا من إيصالاتك!"
 	},
@@ -718,48 +722,48 @@
 		"Proof": "دليل",
 		"PRICE_TAG": "سعر البطاقة",
 		"RECEIPT": "إيصال",
-		"GDPR_REQUEST": "GDPR request",
-		"SHOP_IMPORT": "Shop import"
+		"GDPR_REQUEST": "طلب بموجب اللائحة العامة لحماية البيانات",
+		"SHOP_IMPORT": "متجر الاستيراد"
 	},
 	"ProofCreate": {
 		"SelectProof": "اختر دليلا",
-		"ProofSelected": "Proof selected!",
-		"Success": "Proof created!"
+		"ProofSelected": "تم اختيار الدليل!",
+		"Success": "تم إثبات ذلك!"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "هل أنت متأكد من رغبتك في حذف هذا الدليل؟",
 		"Delete": "حذف",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "حذف دليل",
+		"Success": "تم حذف الدليل!"
 	},
 	"ProofDetail": {
 		"LoadMore": "حمّل المزيد",
 		"Prices": "الأسعار",
-		"ProofNotFound": "Proof not found",
-		"Public": "Public",
-		"Private": "Private",
+		"ProofNotFound": "لم يتم العثور على دليل",
+		"Public": "عام",
+		"Private": "خاص",
 		"Privacy": "الخصوصية"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
+		"Title": "قم بتحرير نسخة تجريبية",
 		"Save": "حفظ",
-		"Success": "Proof edited!"
+		"Success": "تمت مراجعة النص وتدقيقه!"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreated": "Price already created",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
-		"PriceReadyToBeAdded": "Price ready to be added",
+		"AddNewItem": "إضافة عنصر جديد",
+		"NoItemsFound": "لم يتم استخراج أي عناصر من الإيصال، يرجى المحاولة مرة أخرى.",
+		"PriceAlreadyCreated": "تم تحديد السعر مسبقاً",
+		"PriceAlreadyCreatedForItem": "تم تحديد سعر المنتج مسبقاً",
+		"PriceReadyToBeAdded": "السعر جاهز للإضافة",
 		"ReceiptItems": "عناصر الإيصال",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"ReceiptItemsCheck": "عناصر الإيصال، التحقق منها وتصحيحها",
+		"UploadOnlyNewPrices": "قم بتحميل الأسعار الجديدة فقط ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "قم بتحميل أو تحديث جميع الأسعار الصالحة ({nbPrices})",
+		"WaitForExtraction": "جارٍ استخراج العناصر من الإيصال تلقائياً، يرجى الانتظار..."
 	},
 	"Reuses": {
 		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"Here": "هنا"
 	},
 	"Router": {
 		"About": {
@@ -772,40 +776,40 @@
 			"Title": "أضف سعرا"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "أضف الأسعار"
 		},
 		"AddPriceSingle": {
-			"Title": "Add a single price"
+			"Title": "أضف سعرًا واحدًا"
 		},
 		"AddPriceMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "أضف أسعارًا متعددة"
 		},
 		"AddProof": {
-			"Title": "Add a proof"
+			"Title": "أضف دليلاً"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "أضف الأدلة"
 		},
 		"AddProofSingle": {
-			"Title": "Add a single proof"
+			"Title": "أضف دليلًا واحدًا"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "أضف عدة أدلة"
 		},
 		"AddProofsPriceTags": {
-			"Title": "Add proofs (price tags)"
+			"Title": "أضف إثباتات (بطاقات الأسعار)"
 		},
 		"Locations": {
-			"Title": "Locations"
+			"Title": "المواقع"
 		},
 		"PriceAdd": {
 			"Title": "أضف سعرا"
 		},
 		"PriceAddSingle": {
-			"Title": "Add a single price"
+			"Title": "أضف سعرًا واحدًا"
 		},
 		"PriceAddMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "أضف أسعارًا متعددة"
 		},
 		"Prices": {
 			"Title": "الأسعار"
@@ -814,34 +818,34 @@
 			"Title": "بطاقات الأسعار"
 		},
 		"Proofs": {
-			"Title": "Proofs"
+			"Title": "البراهين"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a single proof"
+			"Title": "أضف دليلًا واحدًا"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "مجتمع"
 		},
 		"Contribute": {
 			"Title": "المساهمة"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "إنشاء منتج"
 		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "التجارب"
 		},
 		"Home": {
 			"Title": "الصفحة الرئيسية"
 		},
 		"Dashboard": {
-			"Title": "Dashboard"
+			"Title": "لوحة التحكم"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "أحدث الأسعار"
 		},
 		"LatestProofs": {
-			"Title": "Latest proofs"
+			"Title": "أحدث الأدلة"
 		},
 		"Moderation": {
 			"Title": "الاعتدال"
@@ -853,10 +857,10 @@
 			"Title": "أدلتي"
 		},
 		"MyDashboard": {
-			"Title": "My dashboard"
+			"Title": "لوحة التحكم الخاصة بي"
 		},
 		"Reuses": {
-			"Title": "Reuses"
+			"Title": "إعادة الاستخدام"
 		},
 		"Search": {
 			"Title": "بحث"
@@ -868,134 +872,134 @@
 			"Title": "تسجيل الدخول"
 		},
 		"Stats": {
-			"Title": "Stats"
+			"Title": "الإحصائيات"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "أبرز المساهمين"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "أفضل المواقع"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "أفضل المنتجات"
 		},
 		"Users": {
-			"Title": "Users"
+			"Title": "المستخدمون"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "مساعد المساهمات"
 		},
 		"ProofPriceTagAssistant": {
 			"Title": "مساعد بطاقة السعر"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "مساعد التحقق من الأسعار"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "مساعد استلام"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "تحدي"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "التحديات"
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "تحدي المجتمع"
 		},
 		"Validate": {
 			"Title": "التحقق"
 		},
 		"ValidatePrices": {
-			"Title": "Validate prices"
+			"Title": "تحقق من الأسعار"
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "الباركود الخاص بالمنتج",
 		"Title": "بحث"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "تم نسخ الرابط",
 		"Title": "مشاركة"
 	},
 	"SignIn": {
 		"Button": "تسجيل الدخول",
 		"Password": "كلمة المرور",
-		"ServerError": "Error: server error",
+		"ServerError": "خطأ: خطأ في الخادم",
 		"Title": "تسجيل الدخول",
-		"SignInOFFAccount": "Sign in with your {url} account",
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"SignInOFFAccount": "سجّل الدخول باستخدام حسابك {url}",
+		"UsernameLabel": "اسم المستخدم",
+		"WrongCredentials": "خطأ: بيانات اعتماد خاطئة"
 	},
 	"Stats": {
-		"AddedToday": "Added today",
+		"AddedToday": "تمت إضافته اليوم",
 		"Prices": "الأسعار",
-		"PricesToday": "Prices added today",
-		"PricesTotal": "Total prices",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"PricesToday": "الأسعار المضافة اليوم",
+		"PricesTotal": "إجمالي التكاليف",
+		"PricesLinkedToPriceTag": "الأسعار مرتبطة ببطاقة السعر",
+		"ProductsWithPrices": "منتجات بأسعار",
+		"Title": "الإحصائيات",
 		"Products": "المنتجات",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "المواقع",
+		"Users": "المستخدمون",
 		"Total": "Total",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithProductBarcode": "With a product barcode",
-		"WithProductCategory": "With a product category",
-		"WithDiscount": "With a discount",
-		"WithoutProduct": "Without a product",
-		"WithBarcode": "With a barcode",
-		"WithCategory": "With a category",
+		"WithPrice": "بثمن",
+		"WithProduct": "مع منتج",
+		"WithProductBarcode": "مع رمز شريطي للمنتج",
+		"WithProductCategory": "مع فئة منتجات",
+		"WithDiscount": "مع خصم",
+		"WithoutProduct": "بدون منتج",
+		"WithBarcode": "مع رمز شريطي",
+		"WithCategory": "مع فئة",
 		"PricesPerSource": "الأسعار لكل مصدر",
 		"ProofsPerSource": "الأدلة حسب المصدر",
-		"PricesProofsPerSource": "Prices and proofs per source",
-		"LastUpdated": "Last updated on {date}"
+		"PricesProofsPerSource": "الأسعار والإثباتات لكل مصدر",
+		"LastUpdated": "آخر تحديث في {date}"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
+		"LatestPrices": "أحدث الأسعار",
+		"LatestProofs": "أحدث الأدلة",
 		"LoadMore": "حمّل المزيد",
-		"MyDashboard": "My dashboard",
+		"MyDashboard": "لوحة التحكم الخاصة بي",
 		"MyPrices": "أسعاري",
 		"MyProofs": "أدلتي",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "تم تحديث الدليل!",
 		"Settings": "الإعدادات",
-		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"Title": "لوحة التحكم",
+		"UserPriceTotal": "{count} الأسعار",
+		"UserProofTotal": "{count} إثباتات"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
+		"LatestPrices": "أحدث الأسعار",
 		"LoadMore": "حمّل المزيد"
 	},
 	"UserList": {
 		"LoadMore": "حمّل المزيد",
-		"Title": "Top contributors",
-		"UserTotal": "{count} contributors"
+		"Title": "أبرز المساهمين",
+		"UserTotal": "{count} المساهمون"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
+		"AddingPrices": "إضافة الأسعار",
 		"ChangeLanguage": "تغيير اللغة",
 		"CountryLabel": "بلد",
 		"CurrencyLabel": "عملة",
 		"DisplayTitle": "Display",
-		"BarcodeScanner": "Barcode scanner",
-		"DefaultMode": "Default mode",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
+		"BarcodeScanner": "ماسح الباركود",
+		"DefaultMode": "الوضع الافتراضي",
+		"FavoriteCurrencies": "العملات المفضلة",
+		"CurrencyRequired": "يلزم وجود عملة واحدة على الأقل",
 		"LanguageLabel": "اللغات",
-		"LocationFinder": "Location finder",
-		"LocationDisplayOSMID": "Display OSM ID",
-		"PriceListDisplay": "Price list diplay",
-		"PriceValidation": "Price validation",
-		"ProductDisplayBarcode": "Display barcode",
-		"ProductDisplayCategoryTag": "Display category tag",
-		"ProductDisplaySource": "Display source",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"LocationFinder": "محدد المواقع",
+		"LocationDisplayOSMID": "عرض معرف OSM",
+		"PriceListDisplay": "عرض قائمة الأسعار",
+		"PriceValidation": "التحقق من صحة السعر",
+		"ProductDisplayBarcode": "عرض الباركود",
+		"ProductDisplayCategoryTag": "عرض علامة الفئة",
+		"ProductDisplaySource": "مصدر العرض",
+		"SideMenuExperimentsDisplay": "عرض \"التجارب\"",
 		"Save": "حفظ",
 		"Title": "الإعدادات",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationCompletion": "اكتملت الترجمة بنسبة {completion}%.",
+		"TranslationHelp": "ساعدنا في ترجمة المزيد من اللغات"
 	}
 }
