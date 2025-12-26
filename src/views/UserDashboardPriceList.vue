@@ -13,11 +13,15 @@
 
   <v-window v-model="currentDisplay" disabled>
     <v-window-item value="list">
-      <v-row class="mt-0 mb-1">
-        <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
-          <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
-        </v-col>
-      </v-row>
+      <v-virtual-scroll :items="priceList" :item-height="260" height="80vh" @scroll="onVirtualScroll">
+        <template #default="{ item }">
+          <v-row class="ma-0">
+            <v-col cols="12" sm="6" md="4" xl="3">
+              <PriceCard :price="item" :product="item.product" elevation="1" height="100%" />
+            </v-col>
+          </v-row>
+        </template>
+      </v-virtual-scroll>
     </v-window-item>
     <v-window-item value="table">
       <PriceTable class="mt-3 mb-3" :priceList="priceList" source="user" />
@@ -114,6 +118,11 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
+    onVirtualScroll({ scrollTop, scrollHeight, clientHeight }) {
+      if (scrollTop + clientHeight >= scrollHeight - 400) {
+        this.getPrices()
+      }
+    },
     initPrices() {
       this.priceList = []
       this.priceTotal = null
