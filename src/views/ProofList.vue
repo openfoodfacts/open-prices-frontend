@@ -8,6 +8,13 @@
       <FilterMenu v-if="proofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
     </v-col>
   </v-row>
+  <v-virtual-scroll :items="proofList" :item-height="260" height="80vh" @scroll="onVirtualScroll">
+    <template #default="{ item }">
+      <v-col cols="12" sm="6" md="4" xl="3">
+        <ProofCard :proof="item" :hideProofHeader="true" :showImageThumb="true" elevation="1" height="100%" />
+      </v-col>
+    </template>
+  </v-virtual-scroll>
 
   <v-row class="mt-0">
     <v-col v-for="proof in proofList" :key="proof" cols="12" sm="6" md="4" xl="3">
@@ -83,6 +90,13 @@ export default {
       this.proofTotal = null
       this.proofPage = 0
       this.getProofs()
+    },
+    onVirtualScroll(event) {
+      // event contains scrollTop, scrollHeight, clientHeight
+      const { scrollTop, clientHeight, scrollHeight } = event
+      if (scrollTop + clientHeight >= scrollHeight - 400 && !this.loading) {
+        this.getProofs()
+      }
     },
     getProofs() {
       if ((this.proofTotal != null) && (this.proofList.length >= this.proofTotal)) return
