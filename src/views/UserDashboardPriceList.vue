@@ -119,7 +119,7 @@ export default {
   },
   methods: {
     onVirtualScroll({ scrollTop, scrollHeight, clientHeight }) {
-      if (scrollTop + clientHeight >= scrollHeight - 400) {
+      if (scrollTop + clientHeight >= scrollHeight - 400 && !this.loading) {
         this.getPrices()
       }
     },
