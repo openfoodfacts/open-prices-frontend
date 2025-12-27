@@ -11,8 +11,10 @@
         <v-chip label variant="text" prepend-icon="mdi-image">
           {{ $t('Common.ProofCount', { count: userProofTotal }) }}
         </v-chip>
-        <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
-        <FilterMenu v-if="!hideFilterMenu && userProofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
+        <template v-if="!loading">
+          <LoadedCountChip :loadedCount="userProofList.length" :totalCount="userProofTotal" />
+          <FilterMenu v-if="!hideFilterMenu" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
+        </template>
       </v-card-title>
 
       <v-divider />
