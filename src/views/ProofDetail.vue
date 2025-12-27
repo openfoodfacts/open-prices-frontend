@@ -14,7 +14,7 @@
         {{ $t('Common.Prices') }}
       </h2>
       <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <DisplayMenu :show="['list', 'table']" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
+      <DisplayMenu :show="['list', 'table']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
     </v-col>
   </v-row>
 
@@ -132,7 +132,7 @@ export default {
           this.loading = false
         })
     },
-    selectPriceDisplay(displayKey) {
+    updateDisplay(displayKey) {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
       // this.initPrices() will NOT be called in watch $route

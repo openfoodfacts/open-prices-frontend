@@ -7,7 +7,7 @@
       <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
       <FilterMenu v-if="proofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" @update:currentKind="toggleProofKind($event)" />
       <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
-      <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="selectProofDisplay($event)" />
+      <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
     </v-col>
   </v-row>
 
@@ -170,7 +170,7 @@ export default {
         // this.initProofList() will be called in watch $route
       }
     },
-    selectProofDisplay(displayKey) {
+    updateDisplay(displayKey) {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
       // this.initProofList() will NOT be called in watch $route

@@ -12,7 +12,7 @@
       </h2>
       <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
       <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
-      <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
+      <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
     </v-col>
   </v-row>
 
@@ -148,10 +148,10 @@ export default {
         // this.initDate() will be called in watch $route
       }
     },
-    selectPriceDisplay(displayKey) {
+    updateDisplay(displayKey) {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
-      // this.initPrices() will NOT be called in watch $route
+      // this.initDate() will NOT be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
