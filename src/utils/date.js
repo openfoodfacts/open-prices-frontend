@@ -94,23 +94,65 @@ function offDateTime(dateTimeString) {
  * output: '5 hours ago', 'Yesterday', '2 days ago'...
  * changes: add short (replace 'days' with 'd', remove 'Yesterday') & shortest (remove 'ago'), extend days & weeks
  */
-function prettyRelativeDateTime(dateTimeString, size=null) {
-  var date = new Date(dateTimeString || ''),
-      diff = (((new Date()).getTime() - date.getTime()) / 1000),
-      day_diff = Math.floor(diff / 86400)
+function prettyRelativeDateTime(dateTimeString, size = null) {
+  const date = new Date(dateTimeString || '');
+  const now = new Date();
+  const diffSeconds = (now - date) / 1000;
+  const dayDiff = Math.floor(diffSeconds / 86400);
 
-  if (isNaN(day_diff) || day_diff < 0) return;
+  if (isNaN(dayDiff) || dayDiff < 0) return "just now";
 
-  if (size == 'shortest') {
-    return day_diff == 0 && (
-      diff < 60 && "just now" || diff < 120 && "1m" || diff < 3600 && Math.floor(diff / 60) + "m" || diff < 7200 && "1h" || diff < 86400 && Math.floor(diff / 3600) + "h") || day_diff < 10 && day_diff + "d" || Math.ceil(day_diff / 7) + "w";
+  // Calculate months and years
+  const monthsDiff = now.getMonth() - date.getMonth() + 
+                     (now.getFullYear() - date.getFullYear()) * 12;
+  const yearsDiff = now.getFullYear() - date.getFullYear();
+
+  function shortest() {
+    if (dayDiff === 0) {
+      if (diffSeconds < 60) return "just now";
+      if (diffSeconds < 120) return "1m";
+      if (diffSeconds < 3600) return Math.floor(diffSeconds / 60) + "m";
+      if (diffSeconds < 7200) return "1h";
+      return Math.floor(diffSeconds / 3600) + "h";
+    }
+    if (dayDiff < 10) return dayDiff + "d";
+    if (dayDiff < 30) return Math.floor(dayDiff / 7) + "w";
+    if (monthsDiff < 12) return monthsDiff + "mo";
+    return yearsDiff + "y";
   }
-  if (size == 'short') {
-    return day_diff == 0 && (
-      diff < 60 && "just now" || diff < 120 && "1m ago" || diff < 3600 && Math.floor(diff / 60) + "m ago" || diff < 7200 && "1h ago" || diff < 86400 && Math.floor(diff / 3600) + "h ago") || day_diff < 10 && day_diff + "d ago" || Math.ceil(day_diff / 7) + "w ago";
+
+  function short() {
+    if (dayDiff === 0) {
+      if (diffSeconds < 60) return "just now";
+      if (diffSeconds < 120) return "1m ago";
+      if (diffSeconds < 3600) return Math.floor(diffSeconds / 60) + "m ago";
+      if (diffSeconds < 7200) return "1h ago";
+      return Math.floor(diffSeconds / 3600) + "h ago";
+    }
+    if (dayDiff < 10) return dayDiff + "d ago";
+    if (dayDiff < 30) return Math.floor(dayDiff / 7) + "w ago";
+    if (monthsDiff < 12) return monthsDiff + "mo ago";
+    return yearsDiff + "y ago";
   }
-  return day_diff == 0 && (
-  diff < 60 && "just now" || diff < 120 && "1 minute ago" || diff < 3600 && Math.floor(diff / 60) + " minutes ago" || diff < 7200 && "1 hour ago" || diff < 86400 && Math.floor(diff / 3600) + " hours ago") || day_diff == 1 && "Yesterday" || day_diff < 10 && day_diff + " days ago" || Math.ceil(day_diff / 7) + " weeks ago";
+
+  function full() {
+    if (dayDiff === 0) {
+      if (diffSeconds < 60) return "just now";
+      if (diffSeconds < 120) return "1 minute ago";
+      if (diffSeconds < 3600) return Math.floor(diffSeconds / 60) + " minutes ago";
+      if (diffSeconds < 7200) return "1 hour ago";
+      return Math.floor(diffSeconds / 3600) + " hours ago";
+    }
+    if (dayDiff === 1) return "Yesterday";
+    if (dayDiff < 10) return dayDiff + " days ago";
+    if (dayDiff < 30) return Math.floor(dayDiff / 7) + " weeks ago";
+    if (monthsDiff < 12) return monthsDiff + (monthsDiff === 1 ? " month ago" : " months ago");
+    return yearsDiff + (yearsDiff === 1 ? " year ago" : " years ago");
+  }
+
+  if (size === "shortest") return shortest();
+  if (size === "short") return short();
+  return full();
 }
 
 /**
