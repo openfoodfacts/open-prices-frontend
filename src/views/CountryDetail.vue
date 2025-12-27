@@ -11,7 +11,7 @@
         {{ $t('Common.TopLocations') }}
       </h2>
       <LoadedCountChip v-if="!loading" :loadedCount="countryLocationList.length" :totalCount="countryLocationTotal" />
-      <DisplayMenu :show="['list', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="selectLocationDisplay($event)" />
+      <DisplayMenu :show="['list', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
     </v-col>
   </v-row>
 
@@ -114,10 +114,10 @@ export default {
           this.loading = false
         })
     },
-    selectPriceDisplay(displayKey) {
+    updateDisplay(displayKey) {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
-      // this.initCountryCity() will NOT be called in watch $route
+      // this.initCountry() will NOT be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
