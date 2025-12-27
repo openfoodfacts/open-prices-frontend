@@ -23,7 +23,7 @@
       </h2>
       <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
       <FilterMenu kind="price" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
-      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
+      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
       <DisplayMenu :show="['list', 'table']" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
     </v-col>
   </v-row>
@@ -147,7 +147,7 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initPrices() will be called in watch $route
     },
-    selectPriceOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })

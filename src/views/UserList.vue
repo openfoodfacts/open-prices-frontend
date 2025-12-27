@@ -5,7 +5,7 @@
         {{ $t('UserList.UserTotal', { count: userTotal }) }}
       </v-chip>
       <FilterMenu kind="user" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
-      <OrderMenu kind="user" :currentOrder="currentOrder" @update:currentOrder="selectUserOrder($event)" />
+      <OrderMenu kind="user" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
     </v-col>
   </v-row>
 
@@ -95,7 +95,7 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initUserList() will be called in watch $route
     },
-    selectUserOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })

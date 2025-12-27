@@ -12,7 +12,7 @@
       </h2>
       <LoadedCountChip :loadedCount="labelProductList.length" :totalCount="labelProductTotal" />
       <FilterMenu kind="product" :currentFilterList="currentFilterList" :hideSource="true" @update:currentFilterList="updateFilterList($event)" />
-      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="selectProductOrder($event)" />
+      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
     </v-col>
   </v-row>
 
@@ -111,7 +111,7 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initLabel() will be called in watch $route
     },
-    selectProductOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })

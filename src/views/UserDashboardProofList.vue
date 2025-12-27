@@ -6,7 +6,7 @@
       </v-chip>
       <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
       <FilterMenu v-if="proofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" @update:currentKind="toggleProofKind($event)" />
-      <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
+      <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
       <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="selectProofDisplay($event)" />
     </v-col>
   </v-row>
@@ -163,7 +163,7 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
       // this.initProofList() will be called in watch $route
     },
-    selectProofOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
@@ -173,7 +173,7 @@ export default {
     selectProofDisplay(displayKey) {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
-      // this.initPrices() will NOT be called in watch $route
+      // this.initProofList() will NOT be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {
