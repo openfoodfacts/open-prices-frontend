@@ -11,7 +11,7 @@
             <v-col :cols="!isSelected ? '12' : '10'" @click="clickLocation()">
               <h3>{{ getLocationTitle }}</h3>
               <p>{{ getLocationSubtitle }}</p>
-              <LocationDetailsRow v-if="!isTypeONLINE" class="mt-0" :location="location" :hideLocationOSMID="hideLocationOSMID" :hideCountryCity="hideCountryCity" />
+              <LocationDetailsRow v-if="showLocationDetailsRow" class="mt-0" :location="location" :hideLocationOSMID="hideLocationOSMID" :hideCountryCity="hideCountryCity" />
             </v-col>
             <v-col v-if="isSelected" cols="2" class="pl-0">
               <v-btn class="float-right" icon="mdi-pencil" size="x-small" density="comfortable" variant="text" :title="$t('Common.Edit')" @click="clickLocation()" />
@@ -20,7 +20,7 @@
         </v-col>
       </v-row>
 
-      <LocationFooterRow v-if="!hideLocationFooterRow" class="mt-0" :location="location" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+      <LocationFooterRow v-if="showLocationFooterRow" class="mt-0" :location="location" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-card-text>
   </v-card>
 </template>
@@ -75,6 +75,9 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
+    locationFound() {
+      return this.location && this.location.type && (this.location.osm_id || this.location.website_url)
+    },
     isTypeONLINE() {
       return this.location && this.location.type === constants.LOCATION_TYPE_ONLINE
     },
@@ -93,6 +96,12 @@ export default {
     getLocationBrandLogo() {
       return geo_utils.getLocationBrandLogo(this.location)
     },
+    showLocationDetailsRow() {
+      return this.locationFound && !this.isTypeONLINE
+    },
+    showLocationFooterRow() {
+      return this.locationFound && !this.hideLocationFooterRow
+    }
   },
   methods: {
     clickLocation() {
