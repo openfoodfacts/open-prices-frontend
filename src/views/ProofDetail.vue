@@ -13,8 +13,10 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.Prices') }}
       </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <DisplayMenu :show="['list', 'table']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+        <DisplayMenu :show="['list', 'table']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      </template>
     </v-col>
   </v-row>
 

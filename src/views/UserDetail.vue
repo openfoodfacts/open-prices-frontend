@@ -5,15 +5,17 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
       </h2>
-      <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <FilterMenu kind="price" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
-      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
-      <DisplayMenu :show="['list', 'table']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+        <FilterMenu kind="price" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+        <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+        <DisplayMenu :show="['list', 'table']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      </template>
     </v-col>
   </v-row>
 

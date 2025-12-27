@@ -1,11 +1,14 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-database-outline">
         {{ $t('Common.ProductCount', { count: productTotal }) }}
       </v-chip>
-      <FilterMenu kind="product" :currentFilterList="currentFilterList" :currentSource="currentSource" @update:currentFilterList="updateFilterList($event)" @update:currentSource="toggleProductSource($event)" />
-      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="productList.length" :totalCount="productTotal" />
+        <FilterMenu kind="product" :currentFilterList="currentFilterList" :currentSource="currentSource" @update:currentFilterList="updateFilterList($event)" @update:currentSource="toggleProductSource($event)" />
+        <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      </template>
     </v-col>
   </v-row>
 
@@ -30,6 +33,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),

@@ -1,13 +1,15 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-tag-multiple-outline">
         {{ $t('Common.PriceCount', { count: priceTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" @update:currentKind="togglePriceKind($event)" />
-      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
-      <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+        <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" @update:currentKind="togglePriceKind($event)" />
+        <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+        <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      </template>
     </v-col>
   </v-row>
 

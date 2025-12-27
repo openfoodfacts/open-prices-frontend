@@ -10,8 +10,10 @@
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.TopLocations') }}
       </h2>
-      <LoadedCountChip v-if="!loading" :loadedCount="countryCityLocationList.length" :totalCount="countryCityLocationTotal" />
-      <DisplayMenu :show="['list', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="countryCityLocationList.length" :totalCount="countryCityLocationTotal" />
+        <DisplayMenu :show="['list', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      </template>
     </v-col>
   </v-row>
 

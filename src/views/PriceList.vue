@@ -1,11 +1,13 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-tag-outline">
         {{ $t('Common.PriceCount', { count: priceTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
+        <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" />
+      </template>
     </v-col>
   </v-row>
 
