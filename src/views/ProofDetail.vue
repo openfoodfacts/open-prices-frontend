@@ -2,9 +2,14 @@
   <v-row>
     <v-col cols="12" sm="6">
       <ProofCard v-if="proof" :proof="proof" :hideProofHeader="true" :readonly="true" />
-      <p v-if="!loading && !proof" class="text-red">
+    </v-col>
+  </v-row>
+
+  <v-row v-if="!proof && !loading" class="mt-0">
+    <v-col cols="12">
+      <v-alert type="error" variant="outlined" density="compact">
         {{ $t('Common.ProofNotFound') }}
-      </p>
+      </v-alert>
     </v-col>
   </v-row>
 
@@ -129,9 +134,10 @@ export default {
       this.pricePage += 1
       return api.getPrices(this.getPricesParams)
         .then((data) => {
+          this.loading = false
+          if (!data.items) return
           this.priceList.push(...data.items)
           this.priceTotal = data.total
-          this.loading = false
         })
     },
     updateDisplay(displayKey) {
