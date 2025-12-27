@@ -5,14 +5,16 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.TopProducts') }}
       </h2>
-      <LoadedCountChip :loadedCount="brandProductList.length" :totalCount="brandProductTotal" />
-      <FilterMenu kind="product" :currentFilterList="currentFilterList" :hideSource="true" @update:currentFilterList="updateFilterList($event)" />
-      <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="brandProductList.length" :totalCount="brandProductTotal" />
+        <FilterMenu kind="product" :currentFilterList="currentFilterList" :hideSource="true" @update:currentFilterList="updateFilterList($event)" />
+        <OrderMenu kind="product" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      </template>
     </v-col>
   </v-row>
 

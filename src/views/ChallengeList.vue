@@ -1,5 +1,5 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-trophy-variant">
         {{ $t('Challenge.ChallengeCount', { count: challengeTotal }) }}
@@ -24,7 +24,7 @@
     </v-col>
   </v-row>
 
-  <v-row v-if="upcomingChallenges.length > 0">
+  <v-row>
     <v-col>
       <h2 class="text-h6">
         {{ $t('Challenge.UpcomingChallenges') }}
@@ -32,7 +32,7 @@
       </h2>
     </v-col>
   </v-row>
-  <v-row v-if="upcomingChallenges.length > 0" class="mt-0">
+  <v-row class="mt-0">
     <v-col v-for="challenge in upcomingChallenges" :key="challenge" cols="12" sm="6" md="4" xl="3">
       <ChallengeCard :challenge="challenge" />
     </v-col>

@@ -1,11 +1,14 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-map-marker-outline">
         {{ $t('Common.LocationCount', { count: locationTotal }) }}
       </v-chip>
-      <FilterMenu kind="location" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleLocationType($event)" />
-      <OrderMenu kind="location" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="locationList.length" :totalCount="locationTotal" />
+        <FilterMenu kind="location" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleLocationType($event)" />
+        <OrderMenu kind="location" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      </template>
     </v-col>
   </v-row>
 
@@ -30,6 +33,7 @@ import utils from '../utils.js'
 
 export default {
   components: {
+    LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),

@@ -1,12 +1,14 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-image">
         {{ $t('Common.ProofCount', { count: proofTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
-      <FilterMenu v-if="proofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
-      <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
+        <FilterMenu kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
+        <OrderMenu kind="proof" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+      </template>
     </v-col>
   </v-row>
 

@@ -1,13 +1,15 @@
 <template>
-  <v-row v-if="!loading">
+  <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-image">
         {{ $t('Common.ProofCount', { count: proofTotal }) }}
       </v-chip>
-      <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
-      <FilterMenu v-if="proofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" @update:currentKind="toggleProofKind($event)" />
-      <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
-      <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      <template v-if="!loading">
+        <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
+        <FilterMenu kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" @update:currentKind="toggleProofKind($event)" />
+        <OrderMenu kind="proof" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
+        <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="updateDisplay($event)" />
+      </template>
     </v-col>
   </v-row>
 
