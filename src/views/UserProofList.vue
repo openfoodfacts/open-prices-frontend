@@ -6,7 +6,7 @@
       </v-chip>
       <LoadedCountChip :loadedCount="proofList.length" :totalCount="proofTotal" />
       <FilterMenu v-if="proofList.length" kind="proof" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleProofType($event)" />
-      <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="selectProofOrder($event)" />
+      <OrderMenu v-if="proofList.length" kind="proof" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
     </v-col>
   </v-row>
 
@@ -121,7 +121,7 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
       // this.initProofList() will be called in watch $route
     },
-    selectProofOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })

@@ -6,7 +6,7 @@
       </v-chip>
       <LoadedCountChip :loadedCount="priceList.length" :totalCount="priceTotal" />
       <FilterMenu kind="price" :currentFilterList="currentFilterList" :currentType="currentType" :currentKind="currentKind" :showKind="true" @update:currentFilterList="updateFilterList($event)" @update:currentType="togglePriceType($event)" @update:currentKind="togglePriceKind($event)" />
-      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
+      <OrderMenu kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
       <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
     </v-col>
   </v-row>
@@ -95,7 +95,7 @@ export default {
   watch: {
     $route (newRoute, oldRoute) {  // only called when query changes to avoid having an API call when the path changes
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initPrices()
+        this.initPriceList()
       }
     }
   },
@@ -114,7 +114,7 @@ export default {
     window.removeEventListener('scroll', this.handleDebouncedScroll)
   },
   methods: {
-    initPrices() {
+    initPriceList() {
       this.priceList = []
       this.priceTotal = null
       this.pricePage = 0
@@ -140,29 +140,29 @@ export default {
     updateFilterList(newFilterList) {
       this.currentFilterList = newFilterList
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
-      // this.initPrices() will be called in watch $route
+      // this.initPriceList() will be called in watch $route
     },
     togglePriceType(sourceKey) {
       this.currentType = (this.currentType !== sourceKey) ? sourceKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
-      // this.initPrices() will be called in watch $route
+      // this.initPriceList() will be called in watch $route
     },
     togglePriceKind(kindKey) {
       this.currentKind = (this.currentKind !== kindKey) ? kindKey : ''
       this.$router.push({ query: { ...this.$route.query, [constants.KIND_PARAM]: this.currentKind } })
-      // this.initPrices() will be called in watch $route
+      // this.initPriceList() will be called in watch $route
     },
-    selectPriceOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
-        // this.initPrices() will be called in watch $route
+        // this.initPriceList() will be called in watch $route
       }
     },
     selectPriceDisplay(displayKey) {
       this.currentDisplay = displayKey
       this.$router.push({ query: { ...this.$route.query, [constants.DISPLAY_PARAM]: this.currentDisplay } })
-      // this.initPrices() will NOT be called in watch $route
+      // this.initPriceList() will NOT be called in watch $route
     },
     handleScroll(event) {  // eslint-disable-line no-unused-vars
       if (utils.getDocumentScrollPercentage() > 90) {

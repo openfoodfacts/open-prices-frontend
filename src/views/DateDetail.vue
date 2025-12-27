@@ -11,7 +11,7 @@
         {{ $t('Common.LatestPrices') }}
       </h2>
       <LoadedCountChip v-if="!loading" :loadedCount="priceList.length" :totalCount="priceTotal" />
-      <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="selectPriceOrder($event)" />
+      <OrderMenu v-if="!loading" kind="price" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
       <DisplayMenu :show="['list', 'table', 'map']" :currentDisplay="currentDisplay" @update:currentDisplay="selectPriceDisplay($event)" />
     </v-col>
   </v-row>
@@ -141,7 +141,7 @@ export default {
           this.loading = false
         })
     },
-    selectPriceOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })

@@ -5,7 +5,7 @@
         {{ $t('Common.LocationCount', { count: locationTotal }) }}
       </v-chip>
       <FilterMenu kind="location" :currentFilterList="currentFilterList" :currentType="currentType" @update:currentFilterList="updateFilterList($event)" @update:currentType="toggleLocationType($event)" />
-      <OrderMenu kind="location" :currentOrder="currentOrder" @update:currentOrder="selectLocationOrder($event)" />
+      <OrderMenu kind="location" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
     </v-col>
   </v-row>
 
@@ -105,7 +105,7 @@ export default {
       this.$router.push({ query: { ...this.$route.query, [constants.TYPE_PARAM]: this.currentType } })
       // this.initProductList() will be called in watch $route
     },
-    selectLocationOrder(orderKey) {
+    updateOrder(orderKey) {
       if (this.currentOrder !== orderKey) {
         this.currentOrder = orderKey
         this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
