@@ -497,6 +497,7 @@
 		"UserIsModeratorCanDeleteProof": "U kunt dit bewijs verwijderen omdat u een moderator bent",
 		"UserIsNotPriceOwner": "U bent niet de eigenaar van de prijs",
 		"UserIsNotProofOwner": "U bent niet de bewezen eigenaar",
+		"UserNotFound": "Gebruiker niet gevonden",
 		"Validate": "Bevestigen",
 		"ValidatePrices": "Prijzen valideren",
 		"ValidatePricesWithAI": "Prijzen valideren met AI",
