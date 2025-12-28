@@ -497,6 +497,7 @@
 		"UserIsModeratorCanDeleteProof": "يمكنك حذف هذا الدليل لأنك مشرف.",
 		"UserIsNotPriceOwner": "أنت لست مالك السعر",
 		"UserIsNotProofOwner": "أنت لست صاحب الدليل",
+		"UserNotFound": "لم يتم العثور على المستخدم",
 		"Validate": "التحقق",
 		"ValidatePrices": "تحقق من الأسعار",
 		"ValidatePricesWithAI": "التحقق من صحة الأسعار باستخدام الذكاء الاصطناعي",
