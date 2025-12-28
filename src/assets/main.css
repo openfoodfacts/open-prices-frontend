@@ -63,7 +63,7 @@
     margin-inline-end: 12px !important;
 }
 
-.v-banner--stacked .v-banner-text {
+.v-banner-text {
     /* adjust spacing between text & action */
     padding-inline-end: 12px !important;
 }

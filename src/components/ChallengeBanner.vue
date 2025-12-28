@@ -14,6 +14,7 @@
         {{ $t('Challenge.Subtitle', {challenge_title: `${challenge.icon} ${challenge.title} ${challenge.icon}`, challenge_subtitle: challenge.subtitle}) }}
       </p>
     </v-banner-text>
+    <v-spacer /><!-- needed to push v-banner-actions to the right on big screens -->
     <v-banner-actions>
       <v-btn icon="mdi-arrow-right" :aria-label="$t('Common.Join')" :to="getUrl" />
     </v-banner-actions>
@@ -25,7 +26,7 @@ export default {
   props: {
     challenge: {
       type: Object,
-      default: () => ({}),
+      default: () => {}
     }
   },
   computed: {
