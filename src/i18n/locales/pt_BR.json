@@ -497,6 +497,7 @@
 		"UserIsModeratorCanDeleteProof": "Você pode excluir esta prova porque é um moderador",
 		"UserIsNotPriceOwner": "Você não é o proprietário do preço",
 		"UserIsNotProofOwner": "Você não é o proprietário da prova",
+		"UserNotFound": "Usuário não encontrado",
 		"Validate": "Validar",
 		"ValidatePrices": "Validar preços",
 		"ValidatePricesWithAI": "Validar preços com IA",
@@ -830,7 +831,7 @@
 			"Title": "Contribuir"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "Criar Produto"
 		},
 		"Experiments": {
 			"Title": "Experimentos"
