@@ -5,9 +5,10 @@
         <v-row>
           <v-col>
             <v-alert
-              type="info"
+              type="primary"
               variant="outlined"
               density="compact"
+              icon="mdi-information"
             >
               <i18n-t keypath="Common.SignInOFFAccount" tag="span">
                 <template #url>

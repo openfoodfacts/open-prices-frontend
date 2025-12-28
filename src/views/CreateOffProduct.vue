@@ -85,7 +85,7 @@
         >
           <v-divider />
           <v-card-text>
-            <v-alert v-if="productExists" type="info" variant="outlined" density="compact">
+            <v-alert v-if="productExists" type="warning" variant="outlined" density="compact">
               {{ $t('CreateOffProduct.ProductAlreadyExists') }}
             </v-alert>
             <div class="text-body-2">
@@ -221,7 +221,7 @@
                 {{ $t('Common.Image') }}
               </div>
               <v-img v-if="drawnImageSrc" :src="drawnImageSrc" max-height="200px" />
-              <v-alert v-else class="mb-2" type="info" variant="outlined" density="compact">
+              <v-alert v-else class="mb-2" type="primary" variant="outlined" density="compact" icon="mdi-information">
                 {{ $t('CreateOffProduct.UseCropModeToAddImage') }}
               </v-alert>
             </div>
