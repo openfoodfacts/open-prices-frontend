@@ -29,7 +29,7 @@ export default {
   props: {
     label: {
       type: Object,
-      default: () => ({})
+      default: () => {}
     }
   },
   emits: ['removeLabel'],
