@@ -25,7 +25,7 @@
           </v-col>
         </v-row>
         <!-- form -->
-        <ProductInputRow v-if="productIsTypeCategory" :productForm="updatePriceForm" :hideBarcodeMode="true" />
+        <ProductInputRow :productForm="updatePriceForm" :hideProductTypeInput="true" />
         <PriceInputRow :priceForm="updatePriceForm" :product="price.product" :proofType="price.proof ? price.proof.type : null" />
       </v-card-text>
 
@@ -52,7 +52,6 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api'
-import constants from '../constants'
 
 export default {
   components: {
@@ -102,9 +101,6 @@ export default {
     userIsModerator() {
       return this.username && this.appStore.user.is_moderator
     },
-    productIsTypeCategory() {
-      return this.updatePriceForm && this.updatePriceForm.type === constants.PRICE_TYPE_CATEGORY
-    },
     dialogHeight() {
       return this.$vuetify.display.smAndUp ? '80%' : '100%'
     },
@@ -123,7 +119,6 @@ export default {
       })
     },
     updatePrice() {
-      // update price
       api
         .updatePrice(this.price.id, this.updatePriceForm)
         .then((response) => {

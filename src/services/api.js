@@ -2,8 +2,8 @@ import { useAppStore } from '../store'
 import constants from '../constants'
 
 
-const PRICE_UPDATE_FIELDS = ['type', 'category_tag', 'labels_tags', 'origins_tags', 'price', 'price_is_discounted', 'price_without_discount', 'discount_type', 'price_per', 'currency', 'receipt_quantity', 'owner_comment', 'date']
-const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['product_code', 'product_name', 'location_id', 'location_osm_id', 'location_osm_type', 'proof_id'])
+const PRICE_UPDATE_FIELDS = ['type', 'product_code', 'product_name', 'category_tag', 'labels_tags', 'origins_tags', 'price', 'price_is_discounted', 'price_without_discount', 'discount_type', 'price_per', 'currency', 'receipt_quantity', 'owner_comment', 'date']
+const PRICE_CREATE_FIELDS = PRICE_UPDATE_FIELDS.concat(['location_id', 'location_osm_id', 'location_osm_type', 'proof_id'])
 const PROOF_UPDATE_FIELDS = ['type', 'location_id', 'location_osm_id', 'location_osm_type', 'date', 'currency', 'receipt_price_count', 'receipt_price_total', 'receipt_online_delivery_costs', 'owner_consumption', 'owner_comment', 'ready_for_price_tag_validation']
 const PROOF_CREATE_FIELDS = PROOF_UPDATE_FIELDS.concat([])  // 'file'
 const LOCATION_ONLINE_CREATE_FIELDS = ['type', 'website_url']
