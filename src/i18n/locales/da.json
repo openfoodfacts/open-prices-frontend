@@ -497,6 +497,7 @@
 		"UserIsModeratorCanDeleteProof": "Du kan slette dette bevis, fordi du er moderator",
 		"UserIsNotPriceOwner": "Du er ikke prisens ejer",
 		"UserIsNotProofOwner": "Du er ikke ejeren af beviset",
+		"UserNotFound": "Bruger ikke fundet",
 		"Validate": "Bekræftelse",
 		"ValidatePrices": "Validér priser",
 		"ValidatePricesWithAI": "Validér priser med AI",
