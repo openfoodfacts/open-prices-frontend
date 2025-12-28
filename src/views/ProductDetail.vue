@@ -10,7 +10,7 @@
     <v-col cols="12" sm="6">
       <v-alert v-if="productNotFound" data-name="product-not-found-alert" type="error" variant="outlined" density="compact">
         <p>
-          <i18n-t keypath="ProductDetail.ProductNotFound" tag="i">
+          <i18n-t keypath="ProductDetail.ProductNotFound" tag="span">
             <template #name>
               {{ OFF_NAME }}
             </template>
@@ -19,7 +19,7 @@
         <OpenFoodFactsAddMenu :productCode="productId" />
       </v-alert>
       <v-alert v-else-if="categoryNotFound" data-name="category-not-found-alert" type="error" variant="outlined" density="compact">
-        <i>{{ $t('ProductDetail.CategoryNotFound') }}</i>
+        {{ $t('ProductDetail.CategoryNotFound') }}
       </v-alert>
     </v-col>
   </v-row>
@@ -186,6 +186,7 @@ export default {
             if (data.id) {
               this.product = data
             } else {
+              // product not found: set a minimal product to display the ProductCard
               this.product = { code: this.productId, price_count: this.priceTotal }
             }
           })
@@ -197,6 +198,9 @@ export default {
       this.pricePage += 1
       return api.getPrices(this.getPricesParams)
         .then((data) => {
+          this.loading = false
+          // product not found: the API will return an empty list
+          // if (!data.items) return
           this.priceList.push(...data.items)
           this.priceTotal = data.total
           data.items.forEach((price) => {
@@ -204,7 +208,6 @@ export default {
               utils.addObjectToArray(this.priceLocationList, price.location)
             }
           })
-          this.loading = false
         })
     },
     updateFilterList(newFilterList) {

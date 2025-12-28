@@ -5,7 +5,15 @@
     </v-col>
   </v-row>
 
-  <v-row>
+  <v-row v-if="!user && !loading" class="mt-0">
+    <v-col cols="12">
+      <v-alert data-name="user-not-found-alert" type="error" variant="outlined" density="compact">
+        {{ $t('Common.UserNotFound') }}
+      </v-alert>
+    </v-col>
+  </v-row>
+
+  <v-row v-if="user">
     <v-col>
       <h2 class="text-h6 d-inline mr-1">
         {{ $t('Common.LatestPrices') }}
@@ -114,7 +122,9 @@ export default {
     getUser() {
       return api.getUserById(this.username)
         .then((data) => {
-          this.user = data
+          if (data.user_id) {
+            this.user = data
+          }
         })
     },
     getPrices() {
@@ -123,9 +133,11 @@ export default {
       this.pricePage += 1
       return api.getPrices(this.getPricesParams)
         .then((data) => {
+          this.loading = false
+          // user not found: the API will return an empty list
+          // if (!data.items) return
           this.priceList.push(...data.items)
           this.priceTotal = data.total
-          this.loading = false
         })
     },
     updateFilterList(newFilterList) {

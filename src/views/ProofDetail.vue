@@ -7,7 +7,7 @@
 
   <v-row v-if="!proof && !loading" class="mt-0">
     <v-col cols="12">
-      <v-alert type="error" variant="outlined" density="compact">
+      <v-alert data-name="proof-not-found-alert" type="error" variant="outlined" density="compact">
         {{ $t('Common.ProofNotFound') }}
       </v-alert>
     </v-col>

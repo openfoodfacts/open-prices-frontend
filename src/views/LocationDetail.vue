@@ -7,7 +7,7 @@
 
   <v-row v-if="!location && !loading" class="mt-0">
     <v-col cols="12">
-      <v-alert type="error" variant="outlined" density="compact">
+      <v-alert data-name="location-not-found-alert" type="error" variant="outlined" density="compact">
         {{ $t('Common.LocationNotFound') }}
       </v-alert>
     </v-col>
