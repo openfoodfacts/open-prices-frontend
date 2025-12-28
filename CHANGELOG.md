@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.150.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.4...v1.150.5) (2025-12-28)
+
+
+### Bug Fixes
+
+* **Challenge:** fix challenge banner action button position (following [#1929](https://github.com/openfoodfacts/open-prices-frontend/issues/1929)) ([fb55440](https://github.com/openfoodfacts/open-prices-frontend/commit/fb55440195ce69cbb01e2c9dbfca559e02846b7c))
+* **Community:** improve list display by using ul/li (following [#1032](https://github.com/openfoodfacts/open-prices-frontend/issues/1032)) ([d142d46](https://github.com/openfoodfacts/open-prices-frontend/commit/d142d467c6d6394f419ff5ce05f943a905f01323))
+* **Contribute:** improve list display by using ul/li (following [#1520](https://github.com/openfoodfacts/open-prices-frontend/issues/1520)) ([3c30d61](https://github.com/openfoodfacts/open-prices-frontend/commit/3c30d610af8c9719312a74eddab1b8175eddc76c))
+
+
+### Technical
+
+* **AI:** move all alerts inside a dedicated component ([#1945](https://github.com/openfoodfacts/open-prices-frontend/issues/1945)) ([65361c3](https://github.com/openfoodfacts/open-prices-frontend/commit/65361c3930e99447472bcf3adafa9aac0f5b8832))
+* **Display Menu:** rename internal functions ([#1937](https://github.com/openfoodfacts/open-prices-frontend/issues/1937)) ([9370f24](https://github.com/openfoodfacts/open-prices-frontend/commit/9370f243187859743daedff2872895517a53c063))
+* **l10n:** New Crowdin translations to review and merge ([#1944](https://github.com/openfoodfacts/open-prices-frontend/issues/1944)) ([db51f91](https://github.com/openfoodfacts/open-prices-frontend/commit/db51f9158cfbd23f9260abee9410df26e6fa3715))
+* **Location Detail:** better manage 404 error ([#1940](https://github.com/openfoodfacts/open-prices-frontend/issues/1940)) ([657014e](https://github.com/openfoodfacts/open-prices-frontend/commit/657014ecc8da5459092161ad61f51359553c7aa4))
+* **Order Menu:** rename internal functions ([#1935](https://github.com/openfoodfacts/open-prices-frontend/issues/1935)) ([6b63591](https://github.com/openfoodfacts/open-prices-frontend/commit/6b63591ccded0c88b56df83c3614afb7156a63bb))
+* **Proof Detail:** better manage 404 error ([#1939](https://github.com/openfoodfacts/open-prices-frontend/issues/1939)) ([b02353d](https://github.com/openfoodfacts/open-prices-frontend/commit/b02353d9c61914fb0fd6eeb75a12750f2a925ab3))
+* **UI:** always hide filter/order/display menus if data is loading ([#1938](https://github.com/openfoodfacts/open-prices-frontend/issues/1938)) ([01ae365](https://github.com/openfoodfacts/open-prices-frontend/commit/01ae365c72604be8daa90397f845c8b299252177))
+* **UI:** replace alert info (blue) color with primary (brown) ([#1943](https://github.com/openfoodfacts/open-prices-frontend/issues/1943)) ([c1e2ac1](https://github.com/openfoodfacts/open-prices-frontend/commit/c1e2ac1e414d73ebbf63d47d3547f426f1e8908a))
+* **User Detail:** better manage 404 error ([#1942](https://github.com/openfoodfacts/open-prices-frontend/issues/1942)) ([d7d7b66](https://github.com/openfoodfacts/open-prices-frontend/commit/d7d7b6629f8adf690ad8a7686825db2f7afd3050))
+
 ## [1.150.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.3...v1.150.4) (2025-12-23)
 
 
