@@ -115,20 +115,8 @@
       </v-row>
       <v-row v-if="assistedByAI" class="mt-0">
         <v-col cols="12">
-          <v-alert
-            v-if="proofIsTypePriceTag"
-            type="info"
-            density="compact"
-            variant="outlined"
-            :text="$t('ProofAdd.PriceTagAIWarning')"
-          />
-          <v-alert
-            v-else-if="proofIsTypeReceipt"
-            type="info"
-            density="compact"
-            variant="outlined"
-            :text="$t('ProofAdd.ReceiptAIWarning')"
-          />
+          <AIUsageAlert v-if="proofIsTypePriceTag" source="proof_price_tag" />
+          <AIUsageAlert v-else-if="proofIsTypeReceipt" source="proof_receipt" />
         </v-col>
       </v-row>
       <v-row v-if="assistedByAI && proofIsTypePriceTag" class="mt-0">
@@ -166,6 +154,7 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import constants from '../constants'
@@ -173,6 +162,9 @@ import date_utils from '../utils/date.js'
 import utils from '../utils.js'
 
 export default {
+  components: {
+    AIUsageAlert: defineAsyncComponent(() => import('./AIUsageAlert.vue')),
+  },
   props: {
     proofMetadataForm: {
       type: Object,
