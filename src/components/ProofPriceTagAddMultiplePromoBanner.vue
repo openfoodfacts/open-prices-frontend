@@ -1,7 +1,7 @@
 <template>
   <v-banner
     icon="mdi-image-multiple"
-    bg-color="info"
+    bg-color="primary"
     rounded
     density="compact"
     @click="$router.push('/proofs/add/price-tags')"

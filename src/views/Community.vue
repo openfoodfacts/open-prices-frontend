@@ -44,9 +44,10 @@
     <v-col>
       <v-alert
         class="mb-2"
-        type="info"
+        type="primary"
         variant="outlined"
         density="compact"
+        icon="mdi-information"
       >
         <i18n-t keypath="Reuses.AlertNew" tag="span">
           <template #url>

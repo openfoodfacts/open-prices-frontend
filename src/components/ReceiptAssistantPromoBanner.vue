@@ -1,7 +1,7 @@
 <template>
   <v-banner
     icon="mdi-draw"
-    bg-color="info"
+    bg-color="primary"
     rounded
     density="compact"
     @click="$router.push('/experiments/receipt-assistant')"
