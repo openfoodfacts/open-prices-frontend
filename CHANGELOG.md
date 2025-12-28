@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.150.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.4...v1.150.5) (2025-12-28)
+
+
+### Technical
+
+* **Display Menu:** rename internal functions ([#1937](https://github.com/openfoodfacts/open-prices-frontend/issues/1937)) ([9370f24](https://github.com/openfoodfacts/open-prices-frontend/commit/9370f243187859743daedff2872895517a53c063))
+* **Location Detail:** better manage 404 error ([#1940](https://github.com/openfoodfacts/open-prices-frontend/issues/1940)) ([657014e](https://github.com/openfoodfacts/open-prices-frontend/commit/657014ecc8da5459092161ad61f51359553c7aa4))
+* **Order Menu:** rename internal functions ([#1935](https://github.com/openfoodfacts/open-prices-frontend/issues/1935)) ([6b63591](https://github.com/openfoodfacts/open-prices-frontend/commit/6b63591ccded0c88b56df83c3614afb7156a63bb))
+* **Proof Detail:** better manage 404 error ([#1939](https://github.com/openfoodfacts/open-prices-frontend/issues/1939)) ([b02353d](https://github.com/openfoodfacts/open-prices-frontend/commit/b02353d9c61914fb0fd6eeb75a12750f2a925ab3))
+* **UI:** always hide filter/order/display menus if data is loading ([#1938](https://github.com/openfoodfacts/open-prices-frontend/issues/1938)) ([01ae365](https://github.com/openfoodfacts/open-prices-frontend/commit/01ae365c72604be8daa90397f845c8b299252177))
+
 ## [1.150.4](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.3...v1.150.4) (2025-12-23)
 
 
