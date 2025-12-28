@@ -497,6 +497,7 @@
 		"UserIsModeratorCanDeleteProof": "Ви можете видалити цей доказ, оскільки ви модератор",
 		"UserIsNotPriceOwner": "Ви не є власником ціни",
 		"UserIsNotProofOwner": "Ви не є власником доказу",
+		"UserNotFound": "Користувача не знайдено",
 		"Validate": "Перевірити",
 		"ValidatePrices": "Перевірити ціни",
 		"ValidatePricesWithAI": "Перевірити ціни за допомогою ШІ",
