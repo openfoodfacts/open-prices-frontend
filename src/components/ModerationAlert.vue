@@ -29,18 +29,18 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      source: {
-        type: String,
-        default: '',
-        examples: ['dashboard', 'price', 'proof']
-      },
-      action: {
-        type: String,
-        default: '',
-        examples: ['edit', 'delete']
-      }
+export default {
+  props: {
+    source: {
+      type: String,
+      default: '',
+      examples: ['dashboard', 'price', 'proof']
+    },
+    action: {
+      type: String,
+      default: '',
+      examples: ['edit', 'delete']
     }
   }
+}
 </script>
