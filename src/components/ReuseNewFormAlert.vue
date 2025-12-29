@@ -5,9 +5,9 @@
     density="compact"
     icon="mdi-information"
   >
-    <i18n-t keypath="Challenge.AlertNew" tag="span">
+    <i18n-t keypath="Reuses.AlertNew" tag="span">
       <template #url>
-        <a :href="APP_GITHUB_CHALLENGE_DISCUSSION_URL" target="_blank" class="text-lowercase">{{ $t('Common.Here') }}</a>
+        <a :href="APP_GITHUB_REUSE_DISCUSSION_URL" target="_blank" class="text-lowercase">{{ $t('Common.Here') }}</a>
       </template>
     </i18n-t>
   </v-alert>
@@ -19,7 +19,7 @@ import constants from '../constants'
 export default {
   data() {
     return {
-      APP_GITHUB_CHALLENGE_DISCUSSION_URL: constants.APP_GITHUB_CHALLENGE_DISCUSSION_URL,
+      APP_GITHUB_REUSE_DISCUSSION_URL: constants.APP_GITHUB_REUSE_DISCUSSION_URL,
     }
   }
 }
