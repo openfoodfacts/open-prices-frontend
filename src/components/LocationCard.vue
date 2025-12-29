@@ -75,9 +75,6 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    locationFound() {
-      return this.location && this.location.type && (this.location.osm_id || this.location.website_url)
-    },
     isTypeONLINE() {
       return this.location && this.location.type === constants.LOCATION_TYPE_ONLINE
     },
@@ -97,10 +94,10 @@ export default {
       return geo_utils.getLocationBrandLogo(this.location)
     },
     showLocationDetailsRow() {
-      return this.locationFound && !this.isTypeONLINE
+      return !this.isTypeONLINE
     },
     showLocationFooterRow() {
-      return this.locationFound && !this.hideLocationFooterRow
+      return !this.hideLocationFooterRow
     }
   },
   methods: {

@@ -11,14 +11,16 @@
             {{ productTitle }}
           </h3>
 
-          <ProductDetailsRow v-if="!hideProductDetailsRow && hasProduct" class="mt-0" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="readonly" />
-          <PriceCategoryDetailsRow v-else-if="!hideProductDetailsRow" class="mt-0" :price="price" />
+          <template v-if="showProductDetailsRow">
+            <ProductDetailsRow v-if="hasProduct" class="mt-0" :product="product" :hideCategoriesAndLabels="true" :hideProductBarcode="hideProductBarcode" :hideActionMenuButton="true" :readonly="readonly" />
+            <PriceCategoryDetailsRow v-else class="mt-0" :price="price" />
+          </template>
 
           <PricePriceRow class="mt-0" :price="price" :productQuantity="product ? product.product_quantity : null" :productQuantityUnit="product ? product.product_quantity_unit : null" :hidePriceReceiptQuantity="hidePriceReceiptQuantity" />
         </v-col>
       </v-row>
 
-      <PriceFooterRow v-if="!hidePriceFooterRow" class="mt-0" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetailsRow="hideProductDetailsRow" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+      <PriceFooterRow v-if="showPriceFooterRow" class="mt-0" :price="price" :hidePriceProof="hidePriceProof" :hidePriceLocation="hidePriceLocation" :hidePriceOwner="hidePriceOwner" :hidePriceDate="hidePriceDate" :hidePriceCreated="hidePriceCreated" :hideProductDetailsRow="hideProductDetailsRow" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
     </v-card-text>
   </v-card>
 </template>
@@ -107,11 +109,11 @@ export default {
   },
   computed: {
     ...mapStores(useAppStore),
-    hasProduct() {
-      return !!this.product
-    },
     hasPrice() {
       return !!this.price
+    },
+    hasProduct() {
+      return !!this.product
     },
     hasCategoryTag() {
       return !!this.price.category_tag
@@ -122,6 +124,12 @@ export default {
     hasProductCode() {
       return this.hasProduct && !!this.product.code
     },
+    showProductDetailsRow() {
+      return !this.hideProductDetailsRow
+    },
+    showPriceFooterRow() {
+      return !this.hidePriceFooterRow
+    }
   },
   mounted() {
     this.getPriceProductTitle()
