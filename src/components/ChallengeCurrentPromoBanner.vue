@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     getUrl() {
-      return `/experiments/challenge`
+      return `/challenge`
     }
   }
 }

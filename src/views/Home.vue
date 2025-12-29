@@ -14,7 +14,7 @@
 
   <br v-if="currentChallenge">
 
-  <ChallengeBanner v-if="currentChallenge" :challenge="currentChallenge" />
+  <ChallengeCurrentPromoBanner v-if="currentChallenge" :challenge="currentChallenge" />
 
   <br>
 
@@ -49,7 +49,7 @@ import date_utils from '../utils/date.js'
 export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
-    ChallengeBanner: defineAsyncComponent(() => import('../components/ChallengeBanner.vue')),
+    ChallengeCurrentPromoBanner: defineAsyncComponent(() => import('../components/ChallengeCurrentPromoBanner.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue'))
   },
   data() {
