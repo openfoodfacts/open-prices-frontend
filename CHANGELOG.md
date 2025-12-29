@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.151.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.5...v1.151.0) (2025-12-29)
+
+
+### Features
+
+* **Prices:** allow editing a price's product ([#1947](https://github.com/openfoodfacts/open-prices-frontend/issues/1947)) ([f9b8f8e](https://github.com/openfoodfacts/open-prices-frontend/commit/f9b8f8e089580f5c773f7086c9f75b64857ab4b2))
+
+
+### Bug Fixes
+
+* **Alerts:** use 'color' instead of 'type' to set to primary color (following [#1943](https://github.com/openfoodfacts/open-prices-frontend/issues/1943)) ([201b50e](https://github.com/openfoodfacts/open-prices-frontend/commit/201b50edf7a6791175f0e779003956fdfa88b9d8))
+* **Banners:** fix banner action button position (following [#1929](https://github.com/openfoodfacts/open-prices-frontend/issues/1929)) ([35af34c](https://github.com/openfoodfacts/open-prices-frontend/commit/35af34c6a7facd0224663c0cf7ebb395f4816aad))
+* **Location Card:** fix display of DetailsRow & FooterRow on non-OP locations (following [#1940](https://github.com/openfoodfacts/open-prices-frontend/issues/1940)) ([3fda626](https://github.com/openfoodfacts/open-prices-frontend/commit/3fda62613e95f448bbabf5ed47be91009caa5620))
+
+
+### Technical
+
+* **Challenges:** dedicated component for the 'new idea form' alert ([#1949](https://github.com/openfoodfacts/open-prices-frontend/issues/1949)) ([b89bdb4](https://github.com/openfoodfacts/open-prices-frontend/commit/b89bdb42714d6ad07b7fa1027af38da8b45935e7))
+* **l10n:** New Crowdin translations to review and merge ([#1951](https://github.com/openfoodfacts/open-prices-frontend/issues/1951)) ([6b853a4](https://github.com/openfoodfacts/open-prices-frontend/commit/6b853a42cced39bba3daeab4c0db6fbde8f14f69))
+* **Reuses:** dedicated component for the 'new reuse form' alert ([#1950](https://github.com/openfoodfacts/open-prices-frontend/issues/1950)) ([ddf1754](https://github.com/openfoodfacts/open-prices-frontend/commit/ddf1754bebbdcaa1b24ef336545633944965d51c))
+
 ## [1.150.5](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.4...v1.150.5) (2025-12-28)
 
 
