@@ -60,19 +60,7 @@
 
   <v-row>
     <v-col>
-      <v-alert
-        class="mb-2"
-        color="primary"
-        variant="outlined"
-        density="compact"
-        icon="mdi-information"
-      >
-        <i18n-t keypath="Challenge.AlertNew" tag="span">
-          <template #url>
-            <a :href="APP_GITHUB_CHALLENGE_DISCUSSION_URL" target="_blank">{{ $t('Common.Here') }}</a>
-          </template>
-        </i18n-t>
-      </v-alert>
+      <ChallengeNewFormAlert />
     </v-col>
   </v-row>
 </template>
@@ -80,13 +68,13 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
-import constants from '../constants'
 import utils from '../utils.js'
 
 export default {
   components: {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     ChallengeCard: defineAsyncComponent(() => import('../components/ChallengeCard.vue')),
+    ChallengeNewFormAlert: defineAsyncComponent(() => import('../components/ChallengeNewFormAlert.vue')),
   },
   data() {
     return {
@@ -95,7 +83,6 @@ export default {
       challengePage: 0,
       loading: false,
       currentOrder: 'id',
-      APP_GITHUB_CHALLENGE_DISCUSSION_URL: constants.APP_GITHUB_CHALLENGE_DISCUSSION_URL,
     }
   },
   computed: {
