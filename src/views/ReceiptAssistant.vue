@@ -21,7 +21,7 @@
   
   <v-row v-if="step === 2">
     <v-col v-if="loadingPredictions" cols="12">
-      <v-alert class="mb-2" type="primary" variant="outlined" density="compact" icon="mdi-information">
+      <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
         {{ $t('ReceiptAssistant.WaitForExtraction') }}
         <v-progress-circular indeterminate />
       </v-alert>

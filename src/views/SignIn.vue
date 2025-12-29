@@ -5,7 +5,7 @@
         <v-row>
           <v-col>
             <v-alert
-              type="primary"
+              color="primary"
               variant="outlined"
               density="compact"
               icon="mdi-information"

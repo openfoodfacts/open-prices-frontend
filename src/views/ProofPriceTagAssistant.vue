@@ -26,7 +26,7 @@
       <v-alert v-if="drawCanvasLoaded && !boundingBoxesFromServer.length && !proofWithBoundingBoxesLoading" class="mb-2" type="warning" variant="outlined" density="compact">
         {{ $t('ContributionAssistant.BoundingBoxesFromServerWarning') }}
       </v-alert>
-      <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" type="primary" variant="outlined" density="compact" icon="mdi-information">
+      <v-alert v-if="drawCanvasLoaded && proofWithBoundingBoxesLoading" class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
         {{ $t('ContributionAssistant.FindBoundingBoxesRunning') }}
         <v-progress-circular indeterminate />
       </v-alert>
@@ -157,7 +157,7 @@
         <v-col>
           <v-alert
             class="mb-2"
-            type="primary"
+            color="primary"
             variant="outlined"
             density="compact"
             icon="mdi-information"

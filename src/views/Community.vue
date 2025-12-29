@@ -44,7 +44,7 @@
     <v-col>
       <v-alert
         class="mb-2"
-        type="primary"
+        color="primary"
         variant="outlined"
         density="compact"
         icon="mdi-information"

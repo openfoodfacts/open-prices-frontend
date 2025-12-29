@@ -221,7 +221,7 @@
                 {{ $t('Common.Image') }}
               </div>
               <v-img v-if="drawnImageSrc" :src="drawnImageSrc" max-height="200px" />
-              <v-alert v-else class="mb-2" type="primary" variant="outlined" density="compact" icon="mdi-information">
+              <v-alert v-else class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
                 {{ $t('CreateOffProduct.UseCropModeToAddImage') }}
               </v-alert>
             </div>

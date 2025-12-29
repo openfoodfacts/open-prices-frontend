@@ -1,8 +1,8 @@
 <template>
-  <v-alert v-if="source === 'proof_price_tag'" data-name="ai-usage-proof-price-tag-alert" type="primary" density="compact" variant="outlined" icon="mdi-information">
+  <v-alert v-if="source === 'proof_price_tag'" data-name="ai-usage-proof-price-tag-alert" color="primary" density="compact" variant="outlined" icon="mdi-information">
     {{ $t('ProofAdd.PriceTagAIWarning') }}
   </v-alert>
-  <v-alert v-else-if="source === 'proof_receipt'" data-name="ai-usage-proof-receipt-alert" type="primary" density="compact" variant="outlined" icon="mdi-information">
+  <v-alert v-else-if="source === 'proof_receipt'" data-name="ai-usage-proof-receipt-alert" color="primary" density="compact" variant="outlined" icon="mdi-information">
     {{ $t('ProofAdd.ReceiptAIWarning') }}
   </v-alert>
 </template>
