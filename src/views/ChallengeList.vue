@@ -69,7 +69,7 @@
       >
         <i18n-t keypath="Challenge.AlertNew" tag="span">
           <template #url>
-            <a :href="APP_GITHUB_CHALLENGE_DISCUSSION_URL" target="_blank">{{ $t('Reuses.Here') }}</a>
+            <a :href="APP_GITHUB_CHALLENGE_DISCUSSION_URL" target="_blank">{{ $t('Common.Here') }}</a>
           </template>
         </i18n-t>
       </v-alert>
