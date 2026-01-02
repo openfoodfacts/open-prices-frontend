@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Irisidi"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Dala",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Dala",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Intengo",
+			"LabelDiscounted": "Intengo encishisiwe",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Ubufakazi",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Usuku",
+			"DateLabel": "Usuku",
 			"Find": "Find",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "Isenzo",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Engeza intengo",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -188,17 +188,17 @@
 		"BarcodeScanShort": "Skena",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Ibhakhodi engavumelekile",
 		"Brand": "Brand",
 		"Brands": "Brands",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Intengo",
+		"Prices": "Amanani",
 		"PRODUCT": "Product",
 		"Product": "Product",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "Imikhiqizo",
+		"Proof": "Ubufakazi",
 		"Proofs": "Proofs",
 		"CATEGORY": "Category",
 		"Category": "Category",
@@ -211,7 +211,7 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
-		"Clear": "Clear",
+		"Clear": "Sula",
 		"Close": "Vala",
 		"Comment": "Comment",
 		"Community": "Community",
@@ -223,13 +223,13 @@
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "Qinisekisa",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Uhlobo lwemali",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -242,8 +242,8 @@
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "Kuqediwe",
+		"Error": "Iphutha",
 		"Experiment": "Isivivinyo",
 		"Experiments": "Experiments",
 		"FromPriceTag": "Kusuka kuthegi yenani",
@@ -264,13 +264,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Usuku",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Usuku lwesithombe.",
 		"DateProofHelpTextExif": "Ngokuzenzakalelayo, sizama ukuyikhipha ku-metadata ye-EXIF yesithombe.",
 		"DateProofHelpTextReceipt": "Ukuze uthole amarisidi, beka usuku lokuthenga.",
-		"Details": "Details",
-		"Delete": "Delete",
+		"Details": "Imininingwane",
+		"Delete": "Susa",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
 		"DiscountType": "Discount type",
@@ -292,7 +292,7 @@
 		"End": "End",
 		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Inkambu iyadingeka",
-		"Filter": "Filter",
+		"Filter": "Hlunga",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
@@ -306,14 +306,14 @@
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "Imibuzo Evame Ukubuzwa",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Usizo",
 		"Here": "Lapha",
-		"History": "History",
-		"Image": "Image",
+		"History": "Umlando",
+		"Image": "Isithombe",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -325,7 +325,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "Okuhlukahlukene",
 		"MobileApp": "Mobile app",
 		"Moderation": "Ukulinganisela",
 		"ModerationFlagReasonWrongType": "Uhlobo olungalungile",
@@ -340,8 +340,8 @@
 		"ModerationFlagStatusClosed": "Kuvaliwe",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Amanani ami",
+		"MyProofs": "Ubufakazi bami",
 		"MyStats": "My stats",
 		"New": "Okusha",
 		"NextProof": "Next proof",
@@ -357,7 +357,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Intengo",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -380,7 +380,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Ithegi yentengo",
 		"PriceTags": "Amathegi amanani",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -407,7 +407,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Khetha ubufakazi",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -420,9 +420,9 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Reason": "Isizathu",
+		"RECEIPT": "Irisidi",
+		"Receipt": "Irisidi",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -440,10 +440,10 @@
 		"Settings": "Settings",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "Signed in!",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out",
+		"SignIn": "Ngena ngemvume",
+		"SignOut": "Phuma ngemvume",
 		"SideMenu": "Side menu",
-		"Share": "Share",
+		"Share": "Yabelana",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
@@ -457,9 +457,9 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "Umbhalo",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "Itimu",
+		"ThemeLight": "Ukukhanya",
+		"ThemeDark": "Okumnyama",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -472,7 +472,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Izame",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Umkhiqizo ongaziwa",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -485,7 +485,7 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "I-URL",
 		"URLInvalid": "Invalid URL",
 		"User": "User",
 		"Users": "Users",
@@ -504,15 +504,15 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "Qinisekisa izintengo ezivela emphakathini",
 		"View": "View",
-		"Website": "Website",
+		"Website": "Iwebhusayithi",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "Ngaphandle kwenani",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Yes",
 		"No": "No",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Ukudla",
+		"PetFood": "Ukudla kwezilwane ezifuywayo",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -562,7 +562,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Uhlobo lwemali",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -594,18 +594,18 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Settings",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out"
+		"SignIn": "Ngena ngemvume",
+		"SignOut": "Phuma ngemvume"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Engeza intengo",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Sesha umkhiqizo",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -620,7 +620,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "Sula",
 		"NoResult": "No results found",
 		"NoResultHelpKeywords": "Awusitholi isitolo sakho? Zama ukusebenzisa amagama angukhiye esikhundleni sekheli eligcwele (isb. 'Carrefour 75013 Paris' noma 'Walmart San Francisco').",
 		"NoResultHelpOSM": "Awukasitholi isitolo sakho? Ingase ingangeni {osm_name} okwamanje. Ungayingeza kokuthi {osm_url} kuqala.",
@@ -643,13 +643,13 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Ubufakazi",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Umkhiqizo ongaziwa"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "Delete",
+		"Delete": "Susa",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -660,8 +660,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Intengo",
+		"LabelDiscounted": "Intengo encishisiwe",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -690,7 +690,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Ibhakhodi engavumelekile",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -700,10 +700,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Igama lomkhiqizo elingaziwa"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Engeza intengo",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -721,26 +721,26 @@
 		"PromoReceiptAssistant": "Isilingo: zama umsizi omusha wamarisidi ukuze ukhiphe izintengo ngokuzenzakalelayo kumarisidi akho!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Ubufakazi",
+		"PRICE_TAG": "Ithegi yentengo",
+		"RECEIPT": "Irisidi",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Khetha ubufakazi",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "Delete",
+		"Delete": "Susa",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Amanani",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -772,10 +772,10 @@
 			"Title": "About"
 		},
 		"Add": {
-			"Title": "Add"
+			"Title": "Engeza"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Engeza intengo"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -805,7 +805,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Engeza intengo"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -814,7 +814,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Amanani"
 		},
 		"PriceTags": {
 			"Title": "Amathegi amanani"
@@ -853,10 +853,10 @@
 			"Title": "Ukulinganisela"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Amanani ami"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Ubufakazi bami"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -871,7 +871,7 @@
 			"Title": "Settings"
 		},
 		"SignIn": {
-			"Title": "Sign in"
+			"Title": "Ngena ngemvume"
 		},
 		"Stats": {
 			"Title": "Stats"
@@ -922,26 +922,26 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "Yabelana"
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "Ngena ngemvume",
+		"Password": "Iphasiwedi",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "Ngena ngemvume",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Amanani",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "Imikhiqizo",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -963,8 +963,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Amanani ami",
+		"MyProofs": "Ubufakazi bami",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Settings",
 		"Title": "Dashboard",
@@ -984,7 +984,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Uhlobo lwemali",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
