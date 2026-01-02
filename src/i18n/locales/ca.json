@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Rebut"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -269,7 +269,7 @@
 		"DateProofHelpText": "Data de la imatge.",
 		"DateProofHelpTextExif": "Per defecte, intentem extreure-ho de les metadades EXIF de la imatge.",
 		"DateProofHelpTextReceipt": "Per als rebuts, definiu-ho com a data de compra.",
-		"Details": "Details",
+		"Details": "Detalls",
 		"Delete": "Elimina",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Descompte",
@@ -310,7 +310,7 @@
 		"FrequentlyAskedQuestions": "Preguntes més freqüents",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Ajuda",
 		"Here": "Aquí",
 		"History": "Historial",
 		"Image": "Imatge",
@@ -340,8 +340,8 @@
 		"ModerationFlagStatusClosed": "Tancat",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Els meus preus",
+		"MyProofs": "Les meves proves",
 		"MyStats": "My stats",
 		"New": "Nou",
 		"NextProof": "Next proof",
@@ -380,7 +380,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Etiqueta de preu",
 		"PriceTags": "Etiquetes de preu",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -407,7 +407,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Selecciona una prova",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -421,8 +421,8 @@
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Falta la quantitat",
 		"Reason": "Raó",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"RECEIPT": "Rebut",
+		"Receipt": "Rebut",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -472,7 +472,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Prova-ho",
 		"Type": "Tipus",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Producte desconegut",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -605,7 +605,7 @@
 		"AddPrice": "Afegir un preu",
 		"LatestPrices": "Últims preus",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Cerca un producte",
 		"SettingsUpdated": "Configuració modificada!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -645,7 +645,7 @@
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Prova",
 		"FullPrice": "Preu original",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Producte desconegut"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -722,13 +722,13 @@
 	},
 	"ProofCard": {
 		"Proof": "Prova",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"PRICE_TAG": "Etiqueta de preu",
+		"RECEIPT": "Rebut",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Selecciona una prova",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -853,10 +853,10 @@
 			"Title": "Moderació"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Els meus preus"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Les meves proves"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -963,8 +963,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Carrega mes ",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Els meus preus",
+		"MyProofs": "Les meves proves",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Preferències",
 		"Title": "Tauler",
