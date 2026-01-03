@@ -9,6 +9,7 @@
   <v-row v-if="productOrCategoryNotFound" class="mt-0">
     <v-col cols="12" sm="6">
       <ProductNotFoundAlert v-if="productNotFound" :productCode="productId" />
+      <CreateOpenFoodFactsProductPromoBanner v-if="productNotFound && priceTotal" class="mt-3" :productCode="productId" />
       <CategoryNotFoundAlert v-else-if="categoryNotFound" :categoryTag="productId" />
     </v-col>
   </v-row>
@@ -76,6 +77,7 @@ export default {
     CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
     ProductNotFoundAlert: defineAsyncComponent(() => import('../components/ProductNotFoundAlert.vue')),
     CategoryNotFoundAlert: defineAsyncComponent(() => import('../components/CategoryNotFoundAlert.vue')),
+    CreateOpenFoodFactsProductPromoBanner: defineAsyncComponent(() => import('../components/CreateOpenFoodFactsProductPromoBanner.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
