@@ -28,7 +28,7 @@ import geo_utils from '../utils/geo.js'
 
 export default {
   components: {
-    LocationCard: defineAsyncComponent(() => import('./LocationCard.vue')),
+    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
     LocationSelectorDialog: defineAsyncComponent(() => import('../components/LocationSelectorDialog.vue')),
   },
   props: {
