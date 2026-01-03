@@ -485,7 +485,7 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "URL-osoite",
 		"URLInvalid": "Invalid URL",
 		"User": "Käyttäjä",
 		"Users": "Käyttäjät",

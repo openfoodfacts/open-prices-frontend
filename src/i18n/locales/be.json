@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Квітанцыя"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Стварыць",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Стварыць",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Кошт",
+			"LabelDiscounted": "Зніжаная цана",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Доказ",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Дата",
+			"DateLabel": "Дата",
 			"Find": "Find",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "Дзеянне",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Дадаць цану",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -188,17 +188,17 @@
 		"BarcodeScanShort": "Сканаваць",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Няправільны штрых-код",
 		"Brand": "Brand",
 		"Brands": "Brands",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Кошт",
+		"Prices": "Цэны",
 		"PRODUCT": "Прадукт",
 		"Product": "Прадукт",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "Прадукты",
+		"Proof": "Доказ",
 		"Proofs": "Proofs",
 		"CATEGORY": "Category",
 		"Category": "Category",
@@ -211,7 +211,7 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
-		"Clear": "Clear",
+		"Clear": "Ачысціць",
 		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
@@ -229,7 +229,7 @@
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Валюта",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -242,7 +242,7 @@
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
+		"Done": "Гатова",
 		"Error": "Памылка",
 		"Experiment": "Эксперымент",
 		"Experiments": "Experiments",
@@ -264,13 +264,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Дата",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Дата здымка.",
 		"DateProofHelpTextExif": "Па змаўчанні мы спрабуем здабыць яго з метададзеных EXIF выявы.",
 		"DateProofHelpTextReceipt": "Для чэкаў усталюйце дату пакупкі.",
-		"Details": "Details",
-		"Delete": "Delete",
+		"Details": "Падрабязнасці",
+		"Delete": "Выдаліць",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
 		"DiscountType": "Discount type",
@@ -306,13 +306,13 @@
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "Часта задаваныя пытанні",
 		"FrequentlyAskedQuestions": "Найбольш частыя пытанні",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Даведка",
 		"Here": "Тут",
-		"History": "History",
+		"History": "Гісторыя",
 		"Image": "Выява",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
@@ -340,8 +340,8 @@
 		"ModerationFlagStatusClosed": "Закрыта",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Мае цэны",
+		"MyProofs": "Мае доказы",
 		"MyStats": "My stats",
 		"New": "Новы",
 		"NextProof": "Next proof",
@@ -357,7 +357,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Кошт",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -380,7 +380,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Цэннік",
 		"PriceTags": "Цэннікі",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -407,7 +407,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Выберыце доказ",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -421,8 +421,8 @@
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
 		"Reason": "Прычына",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"RECEIPT": "Квітанцыя",
+		"Receipt": "Квітанцыя",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -440,10 +440,10 @@
 		"Settings": "Settings",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "Signed in!",
-		"SignIn": "Sign in",
+		"SignIn": "Увайсці",
 		"SignOut": "Выйсці",
 		"SideMenu": "Side menu",
-		"Share": "Share",
+		"Share": "Падзяліцца",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
@@ -457,7 +457,7 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "Тэкст",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
+		"Theme": "Тэма",
 		"ThemeLight": "Светлы",
 		"ThemeDark": "Цёмны",
 		"TopContributors": "Top contributors",
@@ -472,7 +472,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Паспрабуйце",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Невядомы прадукт",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -485,7 +485,7 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "URL-адрас",
 		"URLInvalid": "Invalid URL",
 		"User": "User",
 		"Users": "Users",
@@ -511,8 +511,8 @@
 		"Years": "Years",
 		"Yes": "Yes",
 		"No": "No",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Ежа",
+		"PetFood": "Корм для хатніх жывёл",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -562,7 +562,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Валюта",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -594,7 +594,7 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Settings",
-		"SignIn": "Sign in",
+		"SignIn": "Увайсці",
 		"SignOut": "Выйсці"
 	},
 	"Theme": {
@@ -602,10 +602,10 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Дадаць цану",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Пошук прадукту",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -620,7 +620,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "Ачысціць",
 		"NoResult": "No results found",
 		"NoResultHelpKeywords": "Не можаце знайсці сваю краму? Паспрабуйце выкарыстоўваць ключавыя словы замест поўнага адраса (напрыклад, «Carrefour 75013 Парыж» або «Walmart Сан-Францыска»).",
 		"NoResultHelpOSM": "Усё яшчэ не можаце знайсці сваю краму? Магчыма, яе яшчэ няма ў {osm_name} . Спачатку вы можаце дадаць яе ў {osm_url} .",
@@ -643,13 +643,13 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Доказ",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Невядомы прадукт"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "Delete",
+		"Delete": "Выдаліць",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -660,8 +660,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Кошт",
+		"LabelDiscounted": "Зніжаная цана",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -690,7 +690,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Няправільны штрых-код",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -703,7 +703,7 @@
 		"UnknownProduct": "Назва прадукту невядома"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Дадаць цану",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Загрузіць больш",
@@ -721,26 +721,26 @@
 		"PromoReceiptAssistant": "Эксперымент: паспрабуйце новага памочніка па чэках, каб аўтаматычна атрымліваць цэны з вашых чэкаў!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Доказ",
+		"PRICE_TAG": "Цэннік",
+		"RECEIPT": "Квітанцыя",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Выберыце доказ",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "Delete",
+		"Delete": "Выдаліць",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Загрузіць больш",
-		"Prices": "Prices",
+		"Prices": "Цэны",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -775,7 +775,7 @@
 			"Title": "Дадаць"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Дадаць цану"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -805,7 +805,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Дадаць цану"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -814,7 +814,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Цэны"
 		},
 		"PriceTags": {
 			"Title": "Цэннікі"
@@ -853,10 +853,10 @@
 			"Title": "Мадэрацыя"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Мае цэны"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Мае доказы"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -871,7 +871,7 @@
 			"Title": "Settings"
 		},
 		"SignIn": {
-			"Title": "Sign in"
+			"Title": "Увайсці"
 		},
 		"Stats": {
 			"Title": "Stats"
@@ -922,26 +922,26 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "Падзяліцца"
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "Увайсці",
+		"Password": "Пароль",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "Увайсці",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Цэны",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "Прадукты",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -963,8 +963,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Загрузіць больш",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Мае цэны",
+		"MyProofs": "Мае доказы",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Settings",
 		"Title": "Dashboard",
@@ -984,7 +984,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
