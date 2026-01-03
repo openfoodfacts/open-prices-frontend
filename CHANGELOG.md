@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.151.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.151.0...v1.151.1) (2026-01-03)
+
+
+### Technical
+
+* **deps:** bump toshimaru/auto-author-assign from 2.1.1 to 3.0.1 ([#1954](https://github.com/openfoodfacts/open-prices-frontend/issues/1954)) ([3812a29](https://github.com/openfoodfacts/open-prices-frontend/commit/3812a29e5d55f0d29fdf25a2144fee1490a778be))
+* **Product Detail:** move Product & Category not found alerts to dedicated components ([#1957](https://github.com/openfoodfacts/open-prices-frontend/issues/1957)) ([0585939](https://github.com/openfoodfacts/open-prices-frontend/commit/058593997530d95a241294a223b9459723be5b3d))
+* Update runner to use ubuntu-latest ([790469e](https://github.com/openfoodfacts/open-prices-frontend/commit/790469e79ad7dd3148962d28ebb74adc839da8b4))
+
 ## [1.151.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.5...v1.151.0) (2025-12-29)
 
 
