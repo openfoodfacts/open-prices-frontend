@@ -6,7 +6,7 @@
     density="compact"
     @click="$router.push(url)"
   >
-    <v-banner-text style="padding-inline-end:10px;">
+    <v-banner-text>
       {{ $t('ProofAdd.PromoReceiptAssistant') }}
     </v-banner-text>
     <v-spacer /><!-- needed to push v-banner-actions to the right on big screens -->
