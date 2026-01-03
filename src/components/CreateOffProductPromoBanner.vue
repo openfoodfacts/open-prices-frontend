@@ -7,7 +7,7 @@
     @click="$router.push(url)"
   >
     <v-banner-text style="padding-inline-end:10px;">
-      {{ $t('ProofAdd.PromoReceiptAssistant') }}
+      {{ $t('ProofAdd.ProductMissingPromoBanner') }}
     </v-banner-text>
     <v-spacer /><!-- needed to push v-banner-actions to the right on big screens -->
     <v-banner-actions>
@@ -20,7 +20,7 @@
 export default {
   data() {
     return {
-      url: '/experiments/receipt-assistant',
+      url: '/experiments/create-off-product',
     }
   },
 }
