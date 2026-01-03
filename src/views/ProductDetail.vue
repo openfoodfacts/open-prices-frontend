@@ -8,19 +8,8 @@
 
   <v-row v-if="productOrCategoryNotFound" class="mt-0">
     <v-col cols="12" sm="6">
-      <v-alert v-if="productNotFound" data-name="product-not-found-alert" type="error" variant="outlined" density="compact">
-        <p>
-          <i18n-t keypath="ProductDetail.ProductNotFound" tag="span">
-            <template #name>
-              {{ OFF_NAME }}
-            </template>
-          </i18n-t>
-        </p>
-        <OpenFoodFactsAddMenu :productCode="productId" />
-      </v-alert>
-      <v-alert v-else-if="categoryNotFound" data-name="category-not-found-alert" type="error" variant="outlined" density="compact">
-        {{ $t('ProductDetail.CategoryNotFound') }}
-      </v-alert>
+      <ProductNotFoundAlert v-if="productNotFound" :productCode="productId" />
+      <CategoryNotFoundAlert v-else-if="categoryNotFound" :categoryTag="productId" />
     </v-col>
   </v-row>
 
@@ -85,6 +74,8 @@ export default {
   components: {
     ProductCard: defineAsyncComponent(() => import('../components/ProductCard.vue')),
     CategoryCard: defineAsyncComponent(() => import('../components/CategoryCard.vue')),
+    ProductNotFoundAlert: defineAsyncComponent(() => import('../components/ProductNotFoundAlert.vue')),
+    CategoryNotFoundAlert: defineAsyncComponent(() => import('../components/CategoryNotFoundAlert.vue')),
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
@@ -93,11 +84,9 @@ export default {
     PriceTable: defineAsyncComponent(() => import('../components/PriceTable.vue')),
     LeafletMap: defineAsyncComponent(() => import('../components/LeafletMap.vue')),
     PriceChart: defineAsyncComponent(() => import('../components/PriceChart.vue')),
-    OpenFoodFactsAddMenu: defineAsyncComponent(() => import('../components/OpenFoodFactsAddMenu.vue')),
   },
   data() {
     return {
-      OFF_NAME: constants.OFF_NAME,
       productId: this.$route.params.id,  // product_code or product_category
       // data
       product: null,
