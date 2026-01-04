@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dalilu ({numberOfOutProofs}/{totalNumberOfProofs}) .",
 		"StoresWhereSold": "Butigiw bɛ feere yɔrɔ minnu na",
-		"UseCropModeToAddImage": "Walasa ka fɛn dilannen ja dɔ fara a kan, aw bɛ crop mode (sɛnɛcogo) kɛ proof ja jukɔrɔ ani ka rectangle (kɛrɛnkɛrɛnnenya la) kɛ ka fɛn dilannen lamini."
+		"UseCropModeToAddImage": "Walasa ka fɛn dilannen ja dɔ fara a kan, aw bɛ crop mode (sɛnɛcogo) kɛ proof ja jukɔrɔ ani ka rectangle (kɛrɛnkɛrɛnnenya la) kɛ ka fɛn dilannen lamini.",
+		"ProductMissingPromoBanner": "Kɔrɔbɔli : nin fɛn in dabɔ ni kunnafoniw ye minnu bɛ bɔ Open Prices kɔnɔ"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
