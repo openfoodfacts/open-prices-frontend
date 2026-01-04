@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dearbhadh ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Bùthan far an deach an reic",
-		"UseCropModeToAddImage": "Gus ìomhaigh toraidh a chur ris, cuir modh gearraidh an gnìomh fon dealbh dearbhaidh agus tarraing ceart-cheàrnach timcheall an toraidh."
+		"UseCropModeToAddImage": "Gus ìomhaigh toraidh a chur ris, cuir modh gearraidh an gnìomh fon dealbh dearbhaidh agus tarraing ceart-cheàrnach timcheall an toraidh.",
+		"ProductMissingPromoBanner": "Deuchainn: cruthaich an toradh seo a’ cleachdadh dàta bho Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
