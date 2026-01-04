@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Ubufakazi ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Izitolo lapho zidayiswa khona",
-		"UseCropModeToAddImage": "Ukwengeza isithombe somkhiqizo, vumela imodi yokunqampuna ngezansi kwesithombe sobufakazi bese udweba unxande uzungeze umkhiqizo."
+		"UseCropModeToAddImage": "Ukwengeza isithombe somkhiqizo, vumela imodi yokunqampuna ngezansi kwesithombe sobufakazi bese udweba unxande uzungeze umkhiqizo.",
+		"ProductMissingPromoBanner": "Ukuhlolwa: dala lo mkhiqizo usebenzisa idatha evela kumanani avuliwe"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
