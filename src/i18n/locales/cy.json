@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Prawf ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Siopau lle gwerthir",
-		"UseCropModeToAddImage": "I ychwanegu delwedd cynnyrch, galluogwch y modd cnydio o dan y llun prawf a lluniwch betryal o amgylch y cynnyrch."
+		"UseCropModeToAddImage": "I ychwanegu delwedd cynnyrch, galluogwch y modd cnydio o dan y llun prawf a lluniwch betryal o amgylch y cynnyrch.",
+		"ProductMissingPromoBanner": "Arbrawf: creu'r cynnyrch hwn gan ddefnyddio data o Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
