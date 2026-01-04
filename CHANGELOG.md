@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.152.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.151.0...v1.152.0) (2026-01-04)
+
+
+### Features
+
+* **Proof Upload:** if receipt, add an action step + default to the Receipt Assistant ([#1827](https://github.com/openfoodfacts/open-prices-frontend/issues/1827)) ([53bdc65](https://github.com/openfoodfacts/open-prices-frontend/commit/53bdc651855a9d84e98014aa96f7499332e39c06))
+
+
+### Bug Fixes
+
+* **i18n:** remove unused translation added in [#1961](https://github.com/openfoodfacts/open-prices-frontend/issues/1961) ([63a6a3f](https://github.com/openfoodfacts/open-prices-frontend/commit/63a6a3f41d88fce8565f643ee38e4f0eaebaa651))
+
+
+### Technical
+
+* **deps:** bump toshimaru/auto-author-assign from 2.1.1 to 3.0.1 ([#1954](https://github.com/openfoodfacts/open-prices-frontend/issues/1954)) ([3812a29](https://github.com/openfoodfacts/open-prices-frontend/commit/3812a29e5d55f0d29fdf25a2144fee1490a778be))
+* **l10n:** New Crowdin translations to review and merge ([#1956](https://github.com/openfoodfacts/open-prices-frontend/issues/1956)) ([facb812](https://github.com/openfoodfacts/open-prices-frontend/commit/facb812ca2329a313d8ddbe1ebfd0e5d42a32637))
+* **Product Detail:** if product missing, new promo banner to talk about the CreateOffProduct experiment ([#1959](https://github.com/openfoodfacts/open-prices-frontend/issues/1959)) ([27b1a20](https://github.com/openfoodfacts/open-prices-frontend/commit/27b1a20c8968302bd83610f3f7cbeeff9ddcae13))
+* **Product Detail:** move Product & Category not found alerts to dedicated components ([#1957](https://github.com/openfoodfacts/open-prices-frontend/issues/1957)) ([0585939](https://github.com/openfoodfacts/open-prices-frontend/commit/058593997530d95a241294a223b9459723be5b3d))
+* **Proof Upload:** in action step, change the default action to primary color ([#1961](https://github.com/openfoodfacts/open-prices-frontend/issues/1961)) ([141a951](https://github.com/openfoodfacts/open-prices-frontend/commit/141a9517b71960d62af1a9b60e5b5858db8c42fb))
+* **Steppers:** move each step in a template tag. Don't show 'action' step as complete ([#1960](https://github.com/openfoodfacts/open-prices-frontend/issues/1960)) ([d4b8096](https://github.com/openfoodfacts/open-prices-frontend/commit/d4b8096e3d2053afac07ece9dc8429376f0b67c7))
+* Update runner to use ubuntu-latest ([790469e](https://github.com/openfoodfacts/open-prices-frontend/commit/790469e79ad7dd3148962d28ebb74adc839da8b4))
+
 ## [1.151.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.150.5...v1.151.0) (2025-12-29)
 
 
