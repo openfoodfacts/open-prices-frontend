@@ -178,6 +178,8 @@
 		"AddProofs": "Добавить доказательства",
 		"AddNewProof": "Добавить новое доказательство",
 		"AddNewProofs": "Добавить новые доказательства",
+		"AddNewProofPriceTags": "Добавить новые ценники",
+		"AddNewProofReceipt": "Добавить новый чек",
 		"AddToOFF": "Добавить в {name}",
 		"Added": "Добавлен",
 		"AdditionalInfo": "Дополнительная информация",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Приложите подтверждение (чек)."
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Чек"
 		},
 		"Community": {
 			"Title": "Сообщество"
