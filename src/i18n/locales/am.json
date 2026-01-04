@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "ማረጋገጫ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "የሚሸጡባቸው መደብሮች",
-		"UseCropModeToAddImage": "የምርት ምስል ለመጨመር ከማረጋገጫ ስእል በታች የሰብል ሁነታን ያንቁ እና በምርቱ ዙሪያ አራት ማዕዘን ይሳሉ።"
+		"UseCropModeToAddImage": "የምርት ምስል ለመጨመር ከማረጋገጫ ስእል በታች የሰብል ሁነታን ያንቁ እና በምርቱ ዙሪያ አራት ማዕዘን ይሳሉ።",
+		"ProductMissingPromoBanner": "ሙከራ፡ ይህንን ምርት ከክፍት ዋጋዎች የተገኘውን ውሂብ በመጠቀም ይፍጠሩ"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
