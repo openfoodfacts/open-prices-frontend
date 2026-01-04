@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bukti ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Kedai di mana dijual",
-		"UseCropModeToAddImage": "Untuk menambah imej produk, dayakan mod pangkas di bawah gambar bukti dan lukis segi empat tepat di sekeliling produk."
+		"UseCropModeToAddImage": "Untuk menambah imej produk, dayakan mod pangkas di bawah gambar bukti dan lukis segi empat tepat di sekeliling produk.",
+		"ProductMissingPromoBanner": "Eksperimen: cipta produk ini menggunakan data daripada Harga Terbuka"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
