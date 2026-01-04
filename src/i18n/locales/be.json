@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Дадаць новыя цэннікі",
+		"AddNewProofReceipt": "Дадаць новую квітанцыю",
 		"AddToOFF": "Add to {name}",
 		"Added": "Дададзена",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Дадаць пацвярджэнне (квітанцыю)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Квітанцыя"
 		},
 		"Community": {
 			"Title": "Community"
