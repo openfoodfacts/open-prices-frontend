@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Προσθήκη νέων ετικετών τιμών",
+		"AddNewProofReceipt": "Προσθήκη νέας απόδειξης",
 		"AddToOFF": "Add to {name}",
 		"Added": "Προστέθηκε",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Προσθήκη αποδεικτικού (απόδειξη)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Απόδειξη"
 		},
 		"Community": {
 			"Title": "Community"
