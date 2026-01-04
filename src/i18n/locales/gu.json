@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "નવા ભાવ ટૅગ્સ ઉમેરો",
+		"AddNewProofReceipt": "નવી રસીદ ઉમેરો",
 		"AddToOFF": "Add to {name}",
 		"Added": "ઉમેર્યું",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "પુરાવો (રસીદ) ઉમેરો"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"
