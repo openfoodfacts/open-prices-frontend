@@ -178,6 +178,8 @@
 		"AddProofs": "Nachweis hinzufügen",
 		"AddNewProof": "Neuen Nachweis hinzufügen",
 		"AddNewProofs": "Neue Nachweise hinzufügen",
+		"AddNewProofPriceTags": "Neue Preisschilder hinzufügen",
+		"AddNewProofReceipt": "Neuen Beleg hinzufügen",
 		"AddToOFF": "Zu {name} hinzufügen",
 		"Added": "Hinzugefügt",
 		"AdditionalInfo": "Zusätzliche Informationen",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Mehrere Nachweise hinzufügen"
 		},
+		"AddProofReceipt": {
+			"Title": "Fügen Sie einen Beleg (Quittung) hinzu."
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Einzelnen Nachweis hinzufügen"
+		},
+		"Receipt": {
+			"Title": "Kassenbon"
 		},
 		"Community": {
 			"Title": "Gemeinschaft"
