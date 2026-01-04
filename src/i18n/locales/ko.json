@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "증명 ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "판매된 매장",
-		"UseCropModeToAddImage": "제품 이미지를 추가하려면 교정 사진 아래의 자르기 모드를 활성화하고 제품 주위에 사각형을 그립니다."
+		"UseCropModeToAddImage": "제품 이미지를 추가하려면 교정 사진 아래의 자르기 모드를 활성화하고 제품 주위에 사각형을 그립니다.",
+		"ProductMissingPromoBanner": "실험: Open Prices의 데이터를 사용하여 이 제품을 생성해 보세요."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
