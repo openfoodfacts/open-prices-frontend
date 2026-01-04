@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "రుజువు ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "అమ్మకానికి ఉన్న దుకాణాలు",
-		"UseCropModeToAddImage": "ఉత్పత్తి చిత్రాన్ని జోడించడానికి, ప్రూఫ్ చిత్రం క్రింద క్రాప్ మోడ్‌ను ప్రారంభించండి మరియు ఉత్పత్తి చుట్టూ దీర్ఘచతురస్రాన్ని గీయండి."
+		"UseCropModeToAddImage": "ఉత్పత్తి చిత్రాన్ని జోడించడానికి, ప్రూఫ్ చిత్రం క్రింద క్రాప్ మోడ్‌ను ప్రారంభించండి మరియు ఉత్పత్తి చుట్టూ దీర్ఘచతురస్రాన్ని గీయండి.",
+		"ProductMissingPromoBanner": "ప్రయోగం: ఓపెన్ ధరల నుండి డేటాను ఉపయోగించి ఈ ఉత్పత్తిని సృష్టించండి."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
