@@ -178,6 +178,8 @@
 		"AddProofs": "أضف الأدلة",
 		"AddNewProof": "أضف دليلاً جديداً",
 		"AddNewProofs": "أضف أدلة جديدة",
+		"AddNewProofPriceTags": "أضف بطاقات أسعار جديدة",
+		"AddNewProofReceipt": "أضف إيصالاً جديداً",
 		"AddToOFF": "أضف إلى {name}",
 		"Added": "تمت الإضافة",
 		"AdditionalInfo": "معلومات إضافية",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "أضف عدة أدلة"
 		},
+		"AddProofReceipt": {
+			"Title": "أضف إثباتاً (إيصالاً)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "أضف إثباتات (بطاقات الأسعار)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "أضف دليلًا واحدًا"
+		},
+		"Receipt": {
+			"Title": "إيصال"
 		},
 		"Community": {
 			"Title": "مجتمع"
