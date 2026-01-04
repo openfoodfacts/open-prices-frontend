@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Sübut ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Satılan mağazalar",
-		"UseCropModeToAddImage": "Məhsul şəklini əlavə etmək üçün sübut şəklin altında kəsmə rejimini aktiv edin və məhsulun ətrafında düzbucaqlı çəkin."
+		"UseCropModeToAddImage": "Məhsul şəklini əlavə etmək üçün sübut şəklin altında kəsmə rejimini aktiv edin və məhsulun ətrafında düzbucaqlı çəkin.",
+		"ProductMissingPromoBanner": "Təcrübə: Açıq Qiymətlərdən əldə edilən məlumatlardan istifadə edərək bu məhsulu yaradın"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
