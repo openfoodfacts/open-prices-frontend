@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Adanse ({numberOfOutProofs}/{totalNumberOfProofs}) .",
 		"StoresWhereSold": "Store ahorow a wɔtɔn wɔ hɔ",
-		"UseCropModeToAddImage": "Sɛ wode afiri mfonini bɛka ho a, ma crop mode nyɛ adwuma wɔ adanse mfonini ase na twetwe ahinanan twa ade no ho hyia."
+		"UseCropModeToAddImage": "Sɛ wode afiri mfonini bɛka ho a, ma crop mode nyɛ adwuma wɔ adanse mfonini ase na twetwe ahinanan twa ade no ho hyia.",
+		"ProductMissingPromoBanner": "Sɔhwɛ: fa data a efi Open Prices mu yɛ saa ade yi"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
