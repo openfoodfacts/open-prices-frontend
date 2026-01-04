@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bufakazi ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Titolo lapho kutsengiswa khona",
-		"UseCropModeToAddImage": "Kufaka sitfombe semkhicito, nika emandla imodi yekunciphisa ngephansi kwesitfombe sebufakazi bese udvweba unxande lozungete lomkhicito."
+		"UseCropModeToAddImage": "Kufaka sitfombe semkhicito, nika emandla imodi yekunciphisa ngephansi kwesitfombe sebufakazi bese udvweba unxande lozungete lomkhicito.",
+		"ProductMissingPromoBanner": "Linga: dala lomkhicito usebentisa idatha kusuka ku-Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
