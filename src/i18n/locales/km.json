@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "បន្ថែមស្លាកតម្លៃថ្មី",
+		"AddNewProofReceipt": "បន្ថែមបង្កាន់ដៃថ្មី",
 		"AddToOFF": "Add to {name}",
 		"Added": "បន្ថែម",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "បន្ថែមភស្តុតាង (បង្កាន់ដៃ)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"
