@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Afegeix noves etiquetes de preu",
+		"AddNewProofReceipt": "Afegeix un rebut nou",
 		"AddToOFF": "Add to {name}",
 		"Added": "Afegit",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Afegir comprovant (rebut)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Rebut"
 		},
 		"Community": {
 			"Title": "Community"
