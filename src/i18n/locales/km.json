@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "ភស្តុតាង ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ហាងដែលលក់",
-		"UseCropModeToAddImage": "ដើម្បីបន្ថែមរូបភាពផលិតផល សូមបើកមុខងារច្រឹបខាងក្រោមរូបភាពភស្តុតាង ហើយគូរចតុកោណកែងជុំវិញផលិតផល។"
+		"UseCropModeToAddImage": "ដើម្បីបន្ថែមរូបភាពផលិតផល សូមបើកមុខងារច្រឹបខាងក្រោមរូបភាពភស្តុតាង ហើយគូរចតុកោណកែងជុំវិញផលិតផល។",
+		"ProductMissingPromoBanner": "ការពិសោធន៍៖ បង្កើតផលិតផលនេះដោយប្រើទិន្នន័យពី Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
