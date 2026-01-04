@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Доказательство ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Лавккасем ӑҫта сутаҫҫӗ",
-		"UseCropModeToAddImage": "Продукт ӳкерчӗкне хушас тесен, ҫирӗплетӳ ӳкерчӗкӗ айӗнче касмалли режима ӗҫлеттермелле те продукт тавра тӳркӗтеслӗх ӳкермелле."
+		"UseCropModeToAddImage": "Продукт ӳкерчӗкне хушас тесен, ҫирӗплетӳ ӳкерчӗкӗ айӗнче касмалли режима ӗҫлеттермелле те продукт тавра тӳркӗтеслӗх ӳкермелле.",
+		"ProductMissingPromoBanner": "Эксперимент: ҫак продукта Open Prices даннӑйӗсемпе усӑ курса тӑвӑр"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
