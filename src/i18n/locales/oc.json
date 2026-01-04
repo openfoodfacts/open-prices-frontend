@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Pròva ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "De botigas ont se vendon",
-		"UseCropModeToAddImage": "Per apondre una imatge de produch, activatz lo mòde de talh jos l'imatge de pròva e dessenhatz un rectangle a l'entorn del produch."
+		"UseCropModeToAddImage": "Per apondre una imatge de produch, activatz lo mòde de talh jos l'imatge de pròva e dessenhatz un rectangle a l'entorn del produch.",
+		"ProductMissingPromoBanner": "Experiment: creatz aqueste produch en utilizant de donadas de Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
