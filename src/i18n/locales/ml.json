@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "തെളിവ് ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "വിൽക്കുന്ന കടകൾ",
-		"UseCropModeToAddImage": "ഒരു ഉൽപ്പന്ന ചിത്രം ചേർക്കാൻ, പ്രൂഫ് ചിത്രത്തിന് താഴെയുള്ള ക്രോപ്പ് മോഡ് പ്രവർത്തനക്ഷമമാക്കി ഉൽപ്പന്നത്തിന് ചുറ്റും ഒരു ദീർഘചതുരം വരയ്ക്കുക."
+		"UseCropModeToAddImage": "ഒരു ഉൽപ്പന്ന ചിത്രം ചേർക്കാൻ, പ്രൂഫ് ചിത്രത്തിന് താഴെയുള്ള ക്രോപ്പ് മോഡ് പ്രവർത്തനക്ഷമമാക്കി ഉൽപ്പന്നത്തിന് ചുറ്റും ഒരു ദീർഘചതുരം വരയ്ക്കുക.",
+		"ProductMissingPromoBanner": "പരീക്ഷണം: ഓപ്പൺ പ്രൈസുകളിൽ നിന്നുള്ള ഡാറ്റ ഉപയോഗിച്ച് ഈ ഉൽപ്പന്നം സൃഷ്ടിക്കുക."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
