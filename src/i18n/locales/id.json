@@ -178,6 +178,8 @@
 		"AddProofs": "Tambahkan bukti",
 		"AddNewProof": "Tambahkan bukti baru",
 		"AddNewProofs": "Tambahkan bukti baru",
+		"AddNewProofPriceTags": "Tambahkan label harga baru",
+		"AddNewProofReceipt": "Tambahkan tanda terima baru",
 		"AddToOFF": "Tambahkan ke {name}",
 		"Added": "Ditambahkan",
 		"AdditionalInfo": "Informasi tambahan",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Tambahkan beberapa bukti"
 		},
+		"AddProofReceipt": {
+			"Title": "Lampirkan bukti (struk/kwitansi)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Tambahkan sebuah bukti"
+		},
+		"Receipt": {
+			"Title": "Resi"
 		},
 		"Community": {
 			"Title": "Komunitas"
