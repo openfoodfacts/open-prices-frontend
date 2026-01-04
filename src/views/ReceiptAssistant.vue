@@ -7,98 +7,106 @@
           <v-divider />
           <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step === 3" />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
   </v-row>
 
-  <v-row v-if="step === 1">
-    <v-col cols="12" md="6">
-      <ProofUploadCard :typeReceiptOnly="true" :assistedByAI="true" @proof="onProofUploaded($event)" />
-    </v-col>
-  </v-row>
+  <!-- Step 1: proof upload -->
+  <template v-if="step === 1">
+    <v-row>
+      <v-col cols="12" md="6">
+        <ProofUploadCard :typeReceiptOnly="true" :assistedByAI="true" @proof="onProofUploaded($event)" />
+      </v-col>
+    </v-row>
+  </template>
   
-  <v-row v-if="step === 2">
-    <v-col v-if="loadingPredictions" cols="12">
-      <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
-        {{ $t('ReceiptAssistant.WaitForExtraction') }}
-        <v-progress-circular indeterminate />
-      </v-alert>
-    </v-col>
-    <v-col v-else-if="!proofHasReceiptPredictionItems" cols="12">
-      <v-alert class="mb-2" type="warning" variant="outlined" density="compact">
-        {{ $t('ReceiptAssistant.NoItemsFound') }}
-      </v-alert>
-    </v-col>
-    <v-col cols="12" lg="4">
-      <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
-    </v-col>
-    <v-col v-if="!loadingPredictions" cols="12" lg="8">
-      <ReceiptTableCard :proof="proofObject" :receiptItems="receiptItems" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
-      <v-row>
-        <v-col>
-          <v-btn v-if="validNewReceiptItems.length !== validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
-            {{ $t('ReceiptAssistant.UploadOnlyNewPrices', { nbPrices: validNewReceiptItems.length }) }}
-          </v-btn>
-          <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
-            {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', { nbPrices: validReceiptItems.length }) }}
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
+  <template v-if="step === 2">
+    <v-row>
+      <v-col v-if="loadingPredictions" cols="12">
+        <v-alert class="mb-2" color="primary" variant="outlined" density="compact" icon="mdi-information">
+          {{ $t('ReceiptAssistant.WaitForExtraction') }}
+          <v-progress-circular indeterminate />
+        </v-alert>
+      </v-col>
+      <v-col v-else-if="!proofHasReceiptPredictionItems" cols="12">
+        <v-alert class="mb-2" type="warning" variant="outlined" density="compact">
+          {{ $t('ReceiptAssistant.NoItemsFound') }}
+        </v-alert>
+      </v-col>
+      <v-col cols="12" lg="4">
+        <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
+      </v-col>
+      <v-col v-if="!loadingPredictions" cols="12" lg="8">
+        <ReceiptTableCard :proof="proofObject" :receiptItems="receiptItems" :proofPriceExistingList="proofPriceExistingList" @receiptItemsUpdated="receiptItemsUpdated($event)" />
+        <v-row>
+          <v-col>
+            <v-btn v-if="validNewReceiptItems.length !== validReceiptItems.length" class="float-right mt-4 ml-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validNewReceiptItems)">
+              {{ $t('ReceiptAssistant.UploadOnlyNewPrices', { nbPrices: validNewReceiptItems.length }) }}
+            </v-btn>
+            <v-btn class="float-right mt-4" color="primary" :block="!$vuetify.display.smAndUp" @click="addPrices(validReceiptItems)">
+              {{ $t('ReceiptAssistant.UploadOrUpdateAllValidPrices', { nbPrices: validReceiptItems.length }) }}
+            </v-btn>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </template>
 
-  <v-row v-if="step === 3">
-    <v-col>
-      <v-row>
-        <v-col cols="12">
-          <v-progress-linear
-            v-if="!finishedUploading"
-            v-model="numberOfPricesAdded"
-            :max="totalNumberOfPricesToAdd"
-            :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
-            height="25"
-            :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
-            rounded
-          />
-          <v-alert
-            v-if="finishedUploading"
-            type="success"
-            variant="outlined"
-            density="compact"
-            :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
-          />
-        </v-col>
-      </v-row>
-      <v-row v-if="finishedUploading">
-        <v-col cols="12" sm="6" lg="4">
-          <v-card
-            :title="$t('Common.AddNewProof')"
-            prepend-icon="mdi-image-plus"
-            append-icon="mdi-arrow-right"
-            @click="reloadPage"
-          />
-        </v-col>
-        <v-col cols="12" sm="6" lg="4">
-          <v-card
-            :title="$t('Common.GoToProof')"
-            prepend-icon="mdi-image"
-            append-icon="mdi-arrow-right"
-            :to="'/proofs/' + proofObject.id"
-          />
-        </v-col>
-        <v-col cols="12" sm="6" lg="4">
-          <v-card
-            :title="$t('Common.MyDashboard')"
-            prepend-icon="mdi-account-circle"
-            append-icon="mdi-arrow-right"
-            :to="getUserDashboardUrl"
-          />
-        </v-col>
-      </v-row>
-    </v-col>
-  </v-row>
+  <!-- Step 3: actions -->
+  <template v-if="step === 3">
+    <v-row>
+      <v-col>
+        <v-row>
+          <v-col cols="12">
+            <v-progress-linear
+              v-if="!finishedUploading"
+              v-model="numberOfPricesAdded"
+              :max="totalNumberOfPricesToAdd"
+              :color="totalNumberOfPricesToAdd === numberOfPricesAdded ? 'success' : 'primary'"
+              height="25"
+              :striped="totalNumberOfPricesToAdd !== numberOfPricesAdded"
+              rounded
+            />
+            <v-alert
+              v-if="finishedUploading"
+              type="success"
+              variant="outlined"
+              density="compact"
+              :text="$t('Common.PriceAddedCount', { count: numberOfPricesAdded })"
+            />
+          </v-col>
+        </v-row>
+        <v-row v-if="finishedUploading">
+          <v-col cols="12" sm="6" lg="4">
+            <v-card
+              :title="$t('Common.AddNewProof')"
+              prepend-icon="mdi-image-plus"
+              append-icon="mdi-arrow-right"
+              @click="reloadPage"
+            />
+          </v-col>
+          <v-col cols="12" sm="6" lg="4">
+            <v-card
+              :title="$t('Common.GoToProof')"
+              prepend-icon="mdi-image"
+              append-icon="mdi-arrow-right"
+              :to="'/proofs/' + proofObject.id"
+            />
+          </v-col>
+          <v-col cols="12" sm="6" lg="4">
+            <v-card
+              :title="$t('Common.MyDashboard')"
+              prepend-icon="mdi-account-circle"
+              append-icon="mdi-arrow-right"
+              :to="getUserDashboardUrl"
+            />
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </template>
 </template>
 
 <script>

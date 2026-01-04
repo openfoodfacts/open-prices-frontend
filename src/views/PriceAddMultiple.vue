@@ -7,126 +7,133 @@
           <v-divider />
           <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step === 3" />
+          <v-stepper-item :title="stepItemList[2].title" :value="stepItemList[2].value" :complete="step > 3" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
   </v-row>
 
-  <v-row v-if="step === 1">
-    <!-- Step 1: proof (image, location, date & currency) -->
-    <v-col cols="12" md="6">
-      <ProofUploadCard :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" @proof="onProofUploaded($event)" />
-    </v-col>
-  </v-row>
+  <!-- Step 1: proof upload -->
+  <template v-if="step === 1">
+    <v-row>
+      <v-col cols="12" md="6">
+        <ProofUploadCard :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" @proof="onProofUploaded($event)" />
+      </v-col>
+    </v-row>
+  </template>
 
-  <v-row v-if="step === 2">
-    <v-col cols="12" md="6">
-      <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
-    </v-col>
-    <v-col cols="12" md="6">
-      <!-- Step 2a: product prices already uploaded -->
-      <PriceAlreadyUploadedListCard :proof="proofObject" :proofPriceUploadedList="proofPriceUploadedList" />
+  <template v-if="step === 2">
+    <v-row>
+      <v-col cols="12" md="6">
+        <ProofCard mode="Uploaded" :proof="proofObject" :hideActionMenuButton="true" :readonly="true" />
+      </v-col>
+      <v-col cols="12" md="6">
+        <!-- Step 2a: product prices already uploaded -->
+        <PriceAlreadyUploadedListCard :proof="proofObject" :proofPriceUploadedList="proofPriceUploadedList" />
 
-      <!-- Step 2b: new product price form -->
-      <v-btn
-        v-if="!Object.keys(productPriceForm).length"
-        class="mr-2"
-        color="primary"
-        :loading="loading"
-        @click="initNewProductPriceForm"
-      >
-        {{ $t('AddPriceMultiple.ProductPriceDetails.Add') }}
-      </v-btn>
-      <v-form v-else @submit.prevent="createPrice">
-        <v-card
-          id="product-price-form"
-          class="border-transparent mb-4"
-          :title="$t('AddPriceMultiple.ProductPriceDetails.NewPrice')"
-          prepend-icon="mdi-tag-plus-outline"
-          height="100%"
+        <!-- Step 2b: new product price form -->
+        <v-btn
+          v-if="!Object.keys(productPriceForm).length"
+          class="mr-2"
+          color="primary"
+          :loading="loading"
+          @click="initNewProductPriceForm"
         >
-          <v-divider />
-          <v-card-text>
-            <ProductInputRow :productForm="productPriceForm" @filled="productFormFilled = $event" />
-            <v-row v-if="productFormFilled && existingProductFound" class="mt-0">
-              <v-col>
-                <v-alert data-name="existing-product-alert" type="warning" variant="outlined" density="compact">
-                  <p>
-                    <i>{{ $t('AddPriceMultiple.ProductPriceDetails.ExistingProductFound') }}</i>
-                  </p>
-                </v-alert>
-              </v-col>
-            </v-row>
-            <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :proofType="proofObject.type" @filled="pricePriceFormFilled = $event" />
-          </v-card-text>
-          <v-divider />
-          <v-card-actions>
-            <v-row>
-              <v-col>
-                <v-btn
-                  density="comfortable"
-                  color="error"
-                  icon="mdi-delete"
-                  @click="clearProductPriceForm"
-                />
-              </v-col>
-              <v-spacer />
-              <v-col>
-                <v-btn
-                  class="float-right"
-                  color="primary"
-                  variant="flat"
-                  type="submit"
-                  :loading="loading"
-                  :disabled="!productPriceFormFilled"
-                >
-                  {{ $t('Common.Upload') }}
-                </v-btn>
-              </v-col>
-            </v-row>
-          </v-card-actions>
-        </v-card>
-      </v-form>
+          {{ $t('AddPriceMultiple.ProductPriceDetails.Add') }}
+        </v-btn>
+        <v-form v-else @submit.prevent="createPrice">
+          <v-card
+            id="product-price-form"
+            class="border-transparent mb-4"
+            :title="$t('AddPriceMultiple.ProductPriceDetails.NewPrice')"
+            prepend-icon="mdi-tag-plus-outline"
+            height="100%"
+          >
+            <v-divider />
+            <v-card-text>
+              <ProductInputRow :productForm="productPriceForm" @filled="productFormFilled = $event" />
+              <v-row v-if="productFormFilled && existingProductFound" class="mt-0">
+                <v-col>
+                  <v-alert data-name="existing-product-alert" type="warning" variant="outlined" density="compact">
+                    <p>
+                      <i>{{ $t('AddPriceMultiple.ProductPriceDetails.ExistingProductFound') }}</i>
+                    </p>
+                  </v-alert>
+                </v-col>
+              </v-row>
+              <PriceInputRow :priceForm="productPriceForm" :product="productPriceForm.product" :proofType="proofObject.type" @filled="pricePriceFormFilled = $event" />
+            </v-card-text>
+            <v-divider />
+            <v-card-actions>
+              <v-row>
+                <v-col>
+                  <v-btn
+                    density="comfortable"
+                    color="error"
+                    icon="mdi-delete"
+                    @click="clearProductPriceForm"
+                  />
+                </v-col>
+                <v-spacer />
+                <v-col>
+                  <v-btn
+                    class="float-right"
+                    color="primary"
+                    variant="flat"
+                    type="submit"
+                    :loading="loading"
+                    :disabled="!productPriceFormFilled"
+                  >
+                    {{ $t('Common.Upload') }}
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-card-actions>
+          </v-card>
+        </v-form>
 
-      <v-btn
-        class="float-right"
-        type="submit"
-        :loading="loading"
-        :disabled="productPriceFormFilled"
-        @click="done"
-      >
-        {{ $t('Common.Done') }}
-      </v-btn>
-    </v-col>
-  </v-row>
+        <v-btn
+          class="float-right"
+          type="submit"
+          :loading="loading"
+          :disabled="productPriceFormFilled"
+          @click="done"
+        >
+          {{ $t('Common.Done') }}
+        </v-btn>
+      </v-col>
+    </v-row>
+  </template>
 
-  <v-row v-if="step === 3">
-    <v-col cols="12">
-      <v-alert
-        type="success"
-        variant="outlined"
-        density="compact"
-        :text="$t('Common.PriceAddedCount', { count: proofPriceNewList.length })"
-      />
-    </v-col>
-    <v-col cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Common.AddNewPrices')"
-        prepend-icon="mdi-tag-plus-outline"
-        append-icon="mdi-arrow-right"
-        @click="reloadPage"
-      />
-    </v-col>
-    <v-col cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Common.MyDashboard')"
-        prepend-icon="mdi-account-circle"
-        append-icon="mdi-arrow-right"
-        :to="getUserDashboardUrl"
-      />
-    </v-col>
-  </v-row>
+  <!-- Step 3: actions -->
+  <template v-if="step === 3">
+    <v-row>
+      <v-col cols="12">
+        <v-alert
+          type="success"
+          variant="outlined"
+          density="compact"
+          :text="$t('Common.PriceAddedCount', { count: proofPriceNewList.length })"
+        />
+      </v-col>
+      <v-col cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.AddNewPrices')"
+          prepend-icon="mdi-tag-plus-outline"
+          append-icon="mdi-arrow-right"
+          @click="reloadPage"
+        />
+      </v-col>
+      <v-col cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.MyDashboard')"
+          prepend-icon="mdi-account-circle"
+          append-icon="mdi-arrow-right"
+          :to="getUserDashboardUrl"
+        />
+      </v-col>
+    </v-row>
+  </template>
 
   <v-snackbar
     v-model="priceSuccessMessage"
