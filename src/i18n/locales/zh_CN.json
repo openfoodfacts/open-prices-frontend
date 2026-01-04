@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "证明（{numberOfOutProofs}/{totalNumberOfProofs}）",
 		"StoresWhereSold": "销售商店",
-		"UseCropModeToAddImage": "要添加产品图片，请在校样图片下方启用裁剪模式并在产品周围绘制一个矩形。"
+		"UseCropModeToAddImage": "要添加产品图片，请在校样图片下方启用裁剪模式并在产品周围绘制一个矩形。",
+		"ProductMissingPromoBanner": "实验：使用 Open Prices 的数据创建此产品。"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "选择您最近的一个校样"

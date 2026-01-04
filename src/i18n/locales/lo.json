@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "ຫຼັກຖານສະແດງ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ຮ້ານຄ້າທີ່ຂາຍ",
-		"UseCropModeToAddImage": "ເພື່ອເພີ່ມຮູບຜະລິດຕະພັນ, ເປີດໃຊ້ໂໝດການຕັດຢູ່ລຸ່ມຮູບຫຼັກຖານ ແລະແຕ້ມຮູບສີ່ຫລ່ຽມອ້ອມຮອບຜະລິດຕະພັນ."
+		"UseCropModeToAddImage": "ເພື່ອເພີ່ມຮູບຜະລິດຕະພັນ, ເປີດໃຊ້ໂໝດການຕັດຢູ່ລຸ່ມຮູບຫຼັກຖານ ແລະແຕ້ມຮູບສີ່ຫລ່ຽມອ້ອມຮອບຜະລິດຕະພັນ.",
+		"ProductMissingPromoBanner": "ການທົດລອງ: ສ້າງຜະລິດຕະພັນນີ້ໂດຍໃຊ້ຂໍ້ມູນຈາກ Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

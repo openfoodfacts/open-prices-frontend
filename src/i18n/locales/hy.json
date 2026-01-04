@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Ապացույց ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Խանութներ, որտեղ վաճառվում են",
-		"UseCropModeToAddImage": "Արտադրանքի պատկեր ավելացնելու համար միացրեք կտրման ռեժիմը «Պրոֆեսիոնալ նկարի տակ» և ապրանքի շուրջը գծեք ուղղանկյուն։"
+		"UseCropModeToAddImage": "Արտադրանքի պատկեր ավելացնելու համար միացրեք կտրման ռեժիմը «Պրոֆեսիոնալ նկարի տակ» և ապրանքի շուրջը գծեք ուղղանկյուն։",
+		"ProductMissingPromoBanner": "Փորձ. ստեղծեք այս ապրանքը՝ օգտագործելով բաց գներից ստացված տվյալները"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bizonyítás ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Üzletek, ahol árusítják",
-		"UseCropModeToAddImage": "Termékkép hozzáadásához engedélyezze a vágási módot a próbakép alatt, és rajzoljon egy téglalapot a termék köré."
+		"UseCropModeToAddImage": "Termékkép hozzáadásához engedélyezze a vágási módot a próbakép alatt, és rajzoljon egy téglalapot a termék köré.",
+		"ProductMissingPromoBanner": "Kísérlet: hozd létre ezt a terméket a Nyitott Árak adatainak felhasználásával"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

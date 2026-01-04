@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bopaki ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Mabenkele moo a rekisoang teng",
-		"UseCropModeToAddImage": "Ho kenya setšoantšo sa sehlahisoa, lumella mokhoa oa lijalo ka tlase ho setšoantšo sa bopaki 'me u toroe khutlonnetsepa ho potoloha sehlahisoa."
+		"UseCropModeToAddImage": "Ho kenya setšoantšo sa sehlahisoa, lumella mokhoa oa lijalo ka tlase ho setšoantšo sa bopaki 'me u toroe khutlonnetsepa ho potoloha sehlahisoa.",
+		"ProductMissingPromoBanner": "Teko: theha sehlahisoa sena u sebelisa data e tsoang ho Litheko tse Butsoeng"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

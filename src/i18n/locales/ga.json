@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Cruthúnas ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Siopaí inar díoladh iad",
-		"UseCropModeToAddImage": "Chun íomhá táirge a chur leis, cumasaigh mód bearrtha faoin bpictiúr cruthúnais agus tarraing dronuilleog timpeall an táirge."
+		"UseCropModeToAddImage": "Chun íomhá táirge a chur leis, cumasaigh mód bearrtha faoin bpictiúr cruthúnais agus tarraing dronuilleog timpeall an táirge.",
+		"ProductMissingPromoBanner": "Turgnamh: cruthaigh an táirge seo ag baint úsáide as sonraí ó Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

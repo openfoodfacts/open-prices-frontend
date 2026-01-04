@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Caddeyn ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Dukaamada lagu iibiyo",
-		"UseCropModeToAddImage": "Si aad ugu darto sawirka badeecada, karti u samee qaabka dalagga ka hooseeya sawirka caddaynta oo ku sawir leydi ku wareegsan alaabta."
+		"UseCropModeToAddImage": "Si aad ugu darto sawirka badeecada, karti u samee qaabka dalagga ka hooseeya sawirka caddaynta oo ku sawir leydi ku wareegsan alaabta.",
+		"ProductMissingPromoBanner": "Tijaabo: samee badeecadan adoo isticmaalaya xog laga helay Qiimaha Furan"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

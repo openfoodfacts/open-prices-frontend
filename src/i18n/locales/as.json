@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "প্ৰমাণ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ষ্ট’ৰ য’ত বিক্ৰী কৰা হয়",
-		"UseCropModeToAddImage": "এটা উৎপাদন ছবি যোগ কৰিবলে, প্ৰমাণ ছবিৰ তলত ক্ৰপ ধৰণ সামৰ্থবান কৰক আৰু উৎপাদনৰ চাৰিওফালে এটা আয়তক্ষেত্ৰ অংকন কৰক।"
+		"UseCropModeToAddImage": "এটা উৎপাদন ছবি যোগ কৰিবলে, প্ৰমাণ ছবিৰ তলত ক্ৰপ ধৰণ সামৰ্থবান কৰক আৰু উৎপাদনৰ চাৰিওফালে এটা আয়তক্ষেত্ৰ অংকন কৰক।",
+		"ProductMissingPromoBanner": "পৰীক্ষা: মুক্ত মূল্যৰ পৰা তথ্য ব্যৱহাৰ কৰি এই উৎপাদন সৃষ্টি কৰক"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

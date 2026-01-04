@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "प्रमाण ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "भण्डाराः यत्र विक्रीयन्ते",
-		"UseCropModeToAddImage": "उत्पादप्रतिबिम्बं योजयितुं प्रमाणचित्रस्य अधः क्रॉप् मोड् सक्षमं कुर्वन्तु तथा च उत्पादस्य परितः आयतं आकर्षयन्तु ।"
+		"UseCropModeToAddImage": "उत्पादप्रतिबिम्बं योजयितुं प्रमाणचित्रस्य अधः क्रॉप् मोड् सक्षमं कुर्वन्तु तथा च उत्पादस्य परितः आयतं आकर्षयन्तु ।",
+		"ProductMissingPromoBanner": "प्रयोगः : Open Prices इत्यस्मात् आँकडानां उपयोगेन एतत् उत्पादं रचयन्तु"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

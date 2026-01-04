@@ -485,7 +485,7 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "URL-osoite",
 		"URLInvalid": "Invalid URL",
 		"User": "Käyttäjä",
 		"Users": "Käyttäjät",
@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Todiste ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Myymälät, joissa myydään",
-		"UseCropModeToAddImage": "Lisätäksesi tuotekuvan, ota käyttöön rajaustila vedoskuvan alapuolella ja piirrä suorakulmio tuotteen ympärille."
+		"UseCropModeToAddImage": "Lisätäksesi tuotekuvan, ota käyttöön rajaustila vedoskuvan alapuolella ja piirrä suorakulmio tuotteen ympärille.",
+		"ProductMissingPromoBanner": "Kokeilu: luo tämä tuote käyttämällä Open Prices -tietoja"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Valitse jokin viimeaikaisista todisteistasi"

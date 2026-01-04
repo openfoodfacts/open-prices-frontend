@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Hujja ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Stores inda aka sayar",
-		"UseCropModeToAddImage": "Don ƙara hoton samfur, kunna yanayin amfanin gona ƙasa da hoton hujja kuma zana rectangular kewaye da samfurin."
+		"UseCropModeToAddImage": "Don ƙara hoton samfur, kunna yanayin amfanin gona ƙasa da hoton hujja kuma zana rectangular kewaye da samfurin.",
+		"ProductMissingPromoBanner": "Gwaji: ƙirƙiri wannan samfurin ta amfani da bayanai daga Farashi na Buɗewa"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

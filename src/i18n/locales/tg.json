@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Исбот ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Мағозаҳое, ки фурӯхта мешаванд",
-		"UseCropModeToAddImage": "Барои илова кардани тасвири маҳсулот, режими буриданро дар зер тасвири исботшуда фаъол созед ва дар атрофи маҳсулот росткунҷае кашед."
+		"UseCropModeToAddImage": "Барои илова кардани тасвири маҳсулот, режими буриданро дар зер тасвири исботшуда фаъол созед ва дар атрофи маҳсулот росткунҷае кашед.",
+		"ProductMissingPromoBanner": "Таҷриба: ин маҳсулотро бо истифода аз маълумоти нархҳои кушода эҷод кунед"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

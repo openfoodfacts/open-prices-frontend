@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Isbot ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Sotilgan do'konlar",
-		"UseCropModeToAddImage": "Mahsulot tasvirini qo'shish uchun isbotlangan rasm ostida kesish rejimini yoqing va mahsulot atrofida to'rtburchak chizing."
+		"UseCropModeToAddImage": "Mahsulot tasvirini qo'shish uchun isbotlangan rasm ostida kesish rejimini yoqing va mahsulot atrofida to'rtburchak chizing.",
+		"ProductMissingPromoBanner": "Tajriba: ushbu mahsulotni Open Prices ma'lumotlaridan foydalanib yarating"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

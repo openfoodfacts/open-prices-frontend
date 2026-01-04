@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bosupi ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Mabenkele a go rekisiwang mo go one",
-		"UseCropModeToAddImage": "Go tsenya setshwantsho sa sedirisiwa, kgontsha mokgwa wa go poma ka fa tlase ga setshwantsho sa bosupi o bo o thala khutlonnetsepa go dikologa sedirisiwa."
+		"UseCropModeToAddImage": "Go tsenya setshwantsho sa sedirisiwa, kgontsha mokgwa wa go poma ka fa tlase ga setshwantsho sa bosupi o bo o thala khutlonnetsepa go dikologa sedirisiwa.",
+		"ProductMissingPromoBanner": "Tekeletso: tlhama sedirisiwa seno o dirisa tshedimosetso go tswa go Ditlhwatlhwa tse di Buletsweng"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

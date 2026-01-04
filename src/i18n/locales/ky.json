@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Далил ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Сатылган дүкөндөр",
-		"UseCropModeToAddImage": "Продукциянын сүрөтүн кошуу үчүн далилдүү сүрөттүн астындагы кесүү режимин иштетиңиз жана буюмдун айланасына тик бурчтук тартыңыз."
+		"UseCropModeToAddImage": "Продукциянын сүрөтүн кошуу үчүн далилдүү сүрөттүн астындагы кесүү режимин иштетиңиз жана буюмдун айланасына тик бурчтук тартыңыз.",
+		"ProductMissingPromoBanner": "Эксперимент: бул продуктуну Open Prices маалыматтарын колдонуп түзүңүз"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

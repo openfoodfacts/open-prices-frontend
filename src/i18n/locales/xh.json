@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Ubungqina ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Iivenkile ezithengiswayo",
-		"UseCropModeToAddImage": "Ukongeza umfanekiso wemveliso, vula imowudi yesityalo engezantsi komfanekiso wobungqina kwaye uzobe uxande ujikeleze imveliso."
+		"UseCropModeToAddImage": "Ukongeza umfanekiso wemveliso, vula imowudi yesityalo engezantsi komfanekiso wobungqina kwaye uzobe uxande ujikeleze imveliso.",
+		"ProductMissingPromoBanner": "Uvavanyo: yenza le mveliso usebenzisa idatha evela kuMaxabiso aVulekileyo"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "သက်သေ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ရောင်းချသည့်ဆိုင်များ",
-		"UseCropModeToAddImage": "ထုတ်ကုန်ပုံတစ်ပုံထည့်ရန်၊ အထောက်အထားပုံအောက်တွင် ဖြတ်တောက်ခြင်းမုဒ်ကို ဖွင့်ပြီး ထုတ်ကုန်တစ်ဝိုက်တွင် စတုဂံပုံဆွဲပါ။"
+		"UseCropModeToAddImage": "ထုတ်ကုန်ပုံတစ်ပုံထည့်ရန်၊ အထောက်အထားပုံအောက်တွင် ဖြတ်တောက်ခြင်းမုဒ်ကို ဖွင့်ပြီး ထုတ်ကုန်တစ်ဝိုက်တွင် စတုဂံပုံဆွဲပါ။",
+		"ProductMissingPromoBanner": "စမ်းသပ်ချက်- Open Prices မှဒေတာကို အသုံးပြု၍ ဤထုတ်ကုန်ကို ဖန်တီးပါ"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Prèv ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Magazen kote yo vann",
-		"UseCropModeToAddImage": "Pou ajoute yon imaj pwodwi, aktive mòd koupe anba foto prèv la epi trase yon rektang otou pwodwi a."
+		"UseCropModeToAddImage": "Pou ajoute yon imaj pwodwi, aktive mòd koupe anba foto prèv la epi trase yon rektang otou pwodwi a.",
+		"ProductMissingPromoBanner": "Eksperyans: kreye pwodui sa a lè l sèvi avèk done ki soti nan Open Prices yo"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

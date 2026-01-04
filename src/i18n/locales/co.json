@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Pruva ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Negozii induve si vendenu",
-		"UseCropModeToAddImage": "Per aghjunghje una maghjina di pruduttu, attivate a modalità di ritagliu sottu à l'imagine di prova è tracciate un rettangulu intornu à u pruduttu."
+		"UseCropModeToAddImage": "Per aghjunghje una maghjina di pruduttu, attivate a modalità di ritagliu sottu à l'imagine di prova è tracciate un rettangulu intornu à u pruduttu.",
+		"ProductMissingPromoBanner": "Esperimentu: crea stu pruduttu aduprendu dati da Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

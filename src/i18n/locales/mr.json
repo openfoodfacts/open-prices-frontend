@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "पुरावा ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "विक्री केलेली दुकाने",
-		"UseCropModeToAddImage": "उत्पादनाची प्रतिमा जोडण्यासाठी, प्रूफ चित्राच्या खाली क्रॉप मोड सक्षम करा आणि उत्पादनाभोवती एक आयत काढा."
+		"UseCropModeToAddImage": "उत्पादनाची प्रतिमा जोडण्यासाठी, प्रूफ चित्राच्या खाली क्रॉप मोड सक्षम करा आणि उत्पादनाभोवती एक आयत काढा.",
+		"ProductMissingPromoBanner": "प्रयोग: ओपन प्राईसेसमधील डेटा वापरून हे उत्पादन तयार करा."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

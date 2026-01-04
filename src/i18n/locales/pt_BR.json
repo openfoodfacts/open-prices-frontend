@@ -581,7 +581,8 @@
 		"ProductLanguage": "Idioma do produto",
 		"ProofNumberOfOutProofs": "Prova ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Lojas onde foi vendido",
-		"UseCropModeToAddImage": "Para adicionar uma imagem do produto, ative o modo de corte abaixo da imagem de prova e desenhe um retângulo ao redor do produto."
+		"UseCropModeToAddImage": "Para adicionar uma imagem do produto, ative o modo de corte abaixo da imagem de prova e desenhe um retângulo ao redor do produto.",
+		"ProductMissingPromoBanner": "Experimento: crie este produto usando dados do Open Prices."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecione um dos seus comprovantes recentes"
@@ -799,7 +800,7 @@
 			"Title": "Adicionar várias provas"
 		},
 		"AddProofsPriceTags": {
-			"Title": "Add proofs (price tags)"
+			"Title": "Adicionar comprovantes (etiquetas de preço)"
 		},
 		"Locations": {
 			"Title": "Localizações"

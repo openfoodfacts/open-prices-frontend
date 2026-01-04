@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Kvittun"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Búa til",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Búa til",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Verð",
+			"LabelDiscounted": "Afsláttarverð",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Sönnun",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -89,9 +89,9 @@
 			"CategoryLabel": "Category",
 			"OriginLabel": "Origin",
 			"ProductBarcode": "Product barcode",
-			"Scan": "Scan",
+			"Scan": "Skanna",
 			"ScanBarcode": "Scan a barcode",
-			"ScanBarcodeShort": "Scan",
+			"ScanBarcodeShort": "Skanna",
 			"Type": "Type",
 			"TypeBarcode": "Type a barcode",
 			"TypeBarcodeShort": "Type",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Dagsetning",
+			"DateLabel": "Dagsetning",
 			"Find": "Finna",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "Aðgerð",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Bæta við verði",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -185,20 +185,20 @@
 		"Barcode": "Barcode",
 		"Barcodes": "Barcodes",
 		"BarcodeScan": "Scan a barcode",
-		"BarcodeScanShort": "Scan",
+		"BarcodeScanShort": "Skanna",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Ógilt strikamerki",
 		"Brand": "Brand",
 		"Brands": "Brands",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Verð",
+		"Prices": "Verð",
 		"PRODUCT": "Product",
 		"Product": "Product",
 		"ProductName": "Product name",
-		"Products": "Products",
-		"Proof": "Proof",
+		"Products": "Vörur",
+		"Proof": "Sönnun",
 		"Proofs": "Proofs",
 		"CATEGORY": "Category",
 		"Category": "Category",
@@ -211,7 +211,7 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
-		"Clear": "Clear",
+		"Clear": "Hreinsa",
 		"Close": "Close",
 		"Comment": "Comment",
 		"Community": "Community",
@@ -223,13 +223,13 @@
 		"Contribute": "Contribute",
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "Staðfesta",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Gjaldmiðill",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -242,8 +242,8 @@
 		"DisplayMap": "Map",
 		"DisplayPriceMap": "Map",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
-		"Error": "Error",
+		"Done": "Lokið",
+		"Error": "Villa",
 		"Experiment": "Tilraun",
 		"Experiments": "Experiments",
 		"FromPriceTag": "Frá verðmiða",
@@ -264,13 +264,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Dagsetning",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Dagsetning myndarinnar.",
 		"DateProofHelpTextExif": "Sjálfgefið er að við reynum að draga það út úr EXIF lýsigögnum myndarinnar.",
 		"DateProofHelpTextReceipt": "Fyrir kvittanir, stilltu það á kaupdagsetningu.",
-		"Details": "Details",
-		"Delete": "Delete",
+		"Details": "Nánari upplýsingar",
+		"Delete": "Eyða",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
 		"DiscountType": "Discount type",
@@ -292,7 +292,7 @@
 		"End": "End",
 		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Reitur er nauðsynlegur",
-		"Filter": "Filter",
+		"Filter": "Sía",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
@@ -306,14 +306,14 @@
 		"FilterLocationWithPriceCountHide": "Hide locations with prices",
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
-		"FAQ": "FAQ",
+		"FAQ": "Algengar spurningar",
 		"FrequentlyAskedQuestions": "Frequently asked questions",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Hjálp",
 		"Here": "Hér",
-		"History": "History",
-		"Image": "Image",
+		"History": "Saga",
+		"Image": "Mynd",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -325,7 +325,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Map",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "Ýmislegt",
 		"MobileApp": "Mobile app",
 		"Moderation": "Hófsemi",
 		"ModerationFlagReasonWrongType": "Rangt tegund",
@@ -340,8 +340,8 @@
 		"ModerationFlagStatusClosed": "Lokað",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Verðin mín",
+		"MyProofs": "Sönnunargögn mín",
 		"MyStats": "My stats",
 		"New": "Nýtt",
 		"NextProof": "Next proof",
@@ -357,7 +357,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Verð",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -380,7 +380,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Verðmiði",
 		"PriceTags": "Verðmiðar",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -407,7 +407,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Veldu sönnun",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -420,9 +420,9 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Reason": "Ástæða",
+		"RECEIPT": "Kvittun",
+		"Receipt": "Kvittun",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -440,10 +440,10 @@
 		"Settings": "Stillingar",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "Signed in!",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out",
+		"SignIn": "Innskráning",
+		"SignOut": "Skrá út",
 		"SideMenu": "Side menu",
-		"Share": "Share",
+		"Share": "Deila",
 		"Source": "Source",
 		"SourceCode": "Source code",
 		"Start": "Start",
@@ -457,9 +457,9 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "Texti",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "Þema",
+		"ThemeLight": "Ljós",
+		"ThemeDark": "Dökkt",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -472,7 +472,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Prófaðu það",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Óþekkt vara",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -485,7 +485,7 @@
 		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
 		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
 		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
-		"URL": "URL",
+		"URL": "Vefslóð",
 		"URLInvalid": "Invalid URL",
 		"User": "User",
 		"Users": "Users",
@@ -504,15 +504,15 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "Staðfesta verð frá samfélaginu",
 		"View": "View",
-		"Website": "Website",
+		"Website": "Vefsíða",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "Án verðs",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Yes",
 		"No": "No",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Matur",
+		"PetFood": "Gæludýrafóður",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -562,7 +562,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Gjaldmiðill",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Sönnun ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Verslanir þar sem seld var",
-		"UseCropModeToAddImage": "Til að bæta við mynd af vörunni skaltu virkja skurðarstillingu fyrir neðan sönnunarmyndina og teikna rétthyrning í kringum vöruna."
+		"UseCropModeToAddImage": "Til að bæta við mynd af vörunni skaltu virkja skurðarstillingu fyrir neðan sönnunarmyndina og teikna rétthyrning í kringum vöruna.",
+		"ProductMissingPromoBanner": "Tilraun: Búðu til þessa vöru með því að nota gögn úr Opna verðlagningu"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -594,18 +595,18 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Stillingar",
-		"SignIn": "Sign in",
-		"SignOut": "Sign out"
+		"SignIn": "Innskráning",
+		"SignOut": "Skrá út"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Bæta við verði",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Leita að vöru",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -620,7 +621,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "Hreinsa",
 		"NoResult": "No results found",
 		"NoResultHelpKeywords": "Finnurðu ekki verslunina þína? Prófaðu að nota leitarorð í stað fulls heimilisfangsins (t.d. „Carrefour 75013 París“ eða „Walmart San Francisco“).",
 		"NoResultHelpOSM": "Finnurðu enn ekki búðina þína? Hún er hugsanlega ekki í {osm_name} ennþá. Þú getur bætt henni við á {osm_url} fyrst.",
@@ -643,13 +644,13 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Sönnun",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Óþekkt vara"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "Delete",
+		"Delete": "Eyða",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -660,8 +661,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Verð",
+		"LabelDiscounted": "Afsláttarverð",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -690,7 +691,7 @@
 		"LabelsLower": "labels",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Ógilt strikamerki",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -700,10 +701,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Óþekkt vöruheiti"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Bæta við verði",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -721,26 +722,26 @@
 		"PromoReceiptAssistant": "Tilraun: prófaðu nýja kvittunaraðstoðarmanninn til að draga sjálfkrafa verð úr kvittunum þínum!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Sönnun",
+		"PRICE_TAG": "Verðmiði",
+		"RECEIPT": "Kvittun",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Veldu sönnun",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "Delete",
+		"Delete": "Eyða",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Verð",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -775,7 +776,7 @@
 			"Title": "Bæta við"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Bæta við verði"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -805,7 +806,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Bæta við verði"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -814,7 +815,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Verð"
 		},
 		"PriceTags": {
 			"Title": "Verðmiðar"
@@ -853,10 +854,10 @@
 			"Title": "Hófsemi"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Verðin mín"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Sönnunargögn mín"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -871,7 +872,7 @@
 			"Title": "Stillingar"
 		},
 		"SignIn": {
-			"Title": "Sign in"
+			"Title": "Innskráning"
 		},
 		"Stats": {
 			"Title": "Stats"
@@ -922,26 +923,26 @@
 	},
 	"ShareButton": {
 		"LinkCopySuccess": "Link copied",
-		"Title": "Share"
+		"Title": "Deila"
 	},
 	"SignIn": {
-		"Button": "Sign in",
-		"Password": "Password",
+		"Button": "Innskráning",
+		"Password": "Lykilorð",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "Innskráning",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Verð",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
 		"ProductsWithPrices": "Products with prices",
 		"Title": "Stats",
-		"Products": "Products",
+		"Products": "Vörur",
 		"Locations": "Locations",
 		"Users": "Users",
 		"Total": "Total",
@@ -963,8 +964,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Verðin mín",
+		"MyProofs": "Sönnunargögn mín",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Stillingar",
 		"Title": "Dashboard",
@@ -984,7 +985,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Gjaldmiðill",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",

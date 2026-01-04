@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Vumbhoni ({numberOfOutProofs}/{totalNumberOfProofs}) .",
 		"StoresWhereSold": "Switolo laha swi xavisiwaka kona",
-		"UseCropModeToAddImage": "Ku engetela xifaniso xa xiendliwa, pfumelela movha wo tsema ehansi ka xifaniso xa vumbhoni naswona dirowa rectangle ku rhendzela xiendliwa."
+		"UseCropModeToAddImage": "Ku engetela xifaniso xa xiendliwa, pfumelela movha wo tsema ehansi ka xifaniso xa vumbhoni naswona dirowa rectangle ku rhendzela xiendliwa.",
+		"ProductMissingPromoBanner": "Ringeta: tumbuluxa xiendliwa lexi hi ku tirhisa datha ku suka eka Minxavo leyi Pfulekeke"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

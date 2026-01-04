@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Prueba ({numberOfOutProofs}/{totalNumberOfProofs}) .",
 		"StoresWhereSold": "Tiendakuna maypichus ranqhakun chaypi",
-		"UseCropModeToAddImage": "Ruru siq'ita yapanaykipaq, prueba siq'i urapi tarpuy ruwayta atichiy chaymanta ruru muyuriqpi tawa kuchuta siq'iy."
+		"UseCropModeToAddImage": "Ruru siq'ita yapanaykipaq, prueba siq'i urapi tarpuy ruwayta atichiy chaymanta ruru muyuriqpi tawa kuchuta siq'iy.",
+		"ProductMissingPromoBanner": "Prueba: kay ruruta ruway Kichasqa Precios kaqmanta willayta llamk'achispa"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

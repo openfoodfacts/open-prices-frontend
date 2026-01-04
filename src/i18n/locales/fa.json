@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "اثبات ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "فروشگاه‌هایی که در آنها فروخته می‌شوند",
-		"UseCropModeToAddImage": "برای افزودن تصویر محصول، حالت برش را در زیر تصویر نمونه فعال کنید و یک مستطیل دور محصول بکشید."
+		"UseCropModeToAddImage": "برای افزودن تصویر محصول، حالت برش را در زیر تصویر نمونه فعال کنید و یک مستطیل دور محصول بکشید.",
+		"ProductMissingPromoBanner": "آزمایش: این محصول را با استفاده از داده‌های Open Prices ایجاد کنید"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

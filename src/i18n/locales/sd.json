@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "ثبوت ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "دڪان جتي وڪرو ڪيا ويا",
-		"UseCropModeToAddImage": "پراڊڪٽ جي تصوير شامل ڪرڻ لاءِ، پروف تصوير جي هيٺان ڪراپ موڊ کي فعال ڪريو ۽ پراڊڪٽ جي چوڌاري هڪ مستطيل ٺاهيو."
+		"UseCropModeToAddImage": "پراڊڪٽ جي تصوير شامل ڪرڻ لاءِ، پروف تصوير جي هيٺان ڪراپ موڊ کي فعال ڪريو ۽ پراڊڪٽ جي چوڌاري هڪ مستطيل ٺاهيو.",
+		"ProductMissingPromoBanner": "تجربو: اوپن پرائسز مان ڊيٽا استعمال ڪندي هي پراڊڪٽ ٺاهيو."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

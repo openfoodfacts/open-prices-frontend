@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "証明 ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "販売店舗",
-		"UseCropModeToAddImage": "製品画像を追加するには、プルーフ写真の下の切り抜きモードを有効にし、製品の周囲に四角形を描きます。"
+		"UseCropModeToAddImage": "製品画像を追加するには、プルーフ写真の下の切り抜きモードを有効にし、製品の周囲に四角形を描きます。",
+		"ProductMissingPromoBanner": "実験: オープン価格のデータを使用してこの製品を作成します"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "最近の証明のいずれかを選択"

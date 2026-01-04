@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dôkaz ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Obchody, kde sa predáva",
-		"UseCropModeToAddImage": "Ak chcete pridať obrázok produktu, povoľte režim orezania pod náhľadovým obrázkom a nakreslite okolo produktu obdĺžnik."
+		"UseCropModeToAddImage": "Ak chcete pridať obrázok produktu, povoľte režim orezania pod náhľadovým obrázkom a nakreslite okolo produktu obdĺžnik.",
+		"ProductMissingPromoBanner": "Experiment: vytvorte tento produkt pomocou údajov z Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

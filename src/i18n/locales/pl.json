@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dowód ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Sklepy, w których sprzedawano",
-		"UseCropModeToAddImage": "Aby dodać zdjęcie produktu, włącz tryb przycinania pod zdjęciem próbnym i narysuj prostokąt wokół produktu."
+		"UseCropModeToAddImage": "Aby dodać zdjęcie produktu, włącz tryb przycinania pod zdjęciem próbnym i narysuj prostokąt wokół produktu.",
+		"ProductMissingPromoBanner": "Eksperyment: utwórz ten produkt, korzystając z danych z Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

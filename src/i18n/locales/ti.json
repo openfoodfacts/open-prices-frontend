@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "መርትዖ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ዝሽየጡሉ ድኳናት",
-		"UseCropModeToAddImage": "ምስሊ ፍርያት ንምውሳኽ ኣብ ትሕቲ መርትዖ ስእሊ ሞድ ምቑራጽ ኣንቅሕ እሞ ኣብ ዙርያ እቲ ፍርያት ርብዒ መስመር ስኣል።"
+		"UseCropModeToAddImage": "ምስሊ ፍርያት ንምውሳኽ ኣብ ትሕቲ መርትዖ ስእሊ ሞድ ምቑራጽ ኣንቅሕ እሞ ኣብ ዙርያ እቲ ፍርያት ርብዒ መስመር ስኣል።",
+		"ProductMissingPromoBanner": "ፈተነ፡ ካብ Open Prices ዳታ ተጠቒምካ ነዚ ፍርያት ምፍጣር"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

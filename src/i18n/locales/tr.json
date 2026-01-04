@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Kanıt ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Satılan mağazalar",
-		"UseCropModeToAddImage": "Ürün görseli eklemek için prova resminin altındaki kırpma modunu etkinleştirin ve ürünün etrafına bir dikdörtgen çizin."
+		"UseCropModeToAddImage": "Ürün görseli eklemek için prova resminin altındaki kırpma modunu etkinleştirin ve ürünün etrafına bir dikdörtgen çizin.",
+		"ProductMissingPromoBanner": "Deney: Open Prices verilerini kullanarak bu ürünü oluşturun."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Son bedellerinizden birini seçin"

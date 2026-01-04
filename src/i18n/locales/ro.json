@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dovadă ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Magazine unde se vând",
-		"UseCropModeToAddImage": "Pentru a adăuga o imagine a produsului, activați modul de decupare sub imaginea de probă și desenați un dreptunghi în jurul produsului."
+		"UseCropModeToAddImage": "Pentru a adăuga o imagine a produsului, activați modul de decupare sub imaginea de probă și desenați un dreptunghi în jurul produsului.",
+		"ProductMissingPromoBanner": "Experiment: creați acest produs folosind datele de la Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

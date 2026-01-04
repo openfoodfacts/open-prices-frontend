@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Humbowo ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Zvitoro zvinotengeswa",
-		"UseCropModeToAddImage": "Kuti uwedzere mufananidzo wechigadzirwa, gonesa chimiro chezvirimwa pazasi pechiratidzo chemufananidzo uye dhirowa rectangle yakatenderedza chigadzirwa."
+		"UseCropModeToAddImage": "Kuti uwedzere mufananidzo wechigadzirwa, gonesa chimiro chezvirimwa pazasi pechiratidzo chemufananidzo uye dhirowa rectangle yakatenderedza chigadzirwa.",
+		"ProductMissingPromoBanner": "Kuedza: gadzira chigadzirwa ichi uchishandisa data kubva kuOpen Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

@@ -581,7 +581,8 @@
 		"ProductLanguage": "Produktsprog",
 		"ProofNumberOfOutProofs": "Bevis ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Butikker hvor der blev solgt",
-		"UseCropModeToAddImage": "For at tilføje et produktbillede skal du aktivere beskæringstilstand under korrekturbilledet og tegne et rektangel omkring produktet."
+		"UseCropModeToAddImage": "For at tilføje et produktbillede skal du aktivere beskæringstilstand under korrekturbilledet og tegne et rektangel omkring produktet.",
+		"ProductMissingPromoBanner": "Eksperiment: Opret dette produkt ved hjælp af data fra Åbne Priser"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Vælg et af dine seneste beviser"

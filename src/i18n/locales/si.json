@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "සාධනය ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "විකුණන ලද වෙළඳසැල්",
-		"UseCropModeToAddImage": "නිෂ්පාදන රූපයක් එක් කිරීමට, සාධන පින්තූරයට පහළින් කප්පාදු කිරීමේ මාදිලිය සක්‍රීය කර නිෂ්පාදනය වටා සෘජුකෝණාස්‍රයක් අඳින්න."
+		"UseCropModeToAddImage": "නිෂ්පාදන රූපයක් එක් කිරීමට, සාධන පින්තූරයට පහළින් කප්පාදු කිරීමේ මාදිලිය සක්‍රීය කර නිෂ්පාදනය වටා සෘජුකෝණාස්‍රයක් අඳින්න.",
+		"ProductMissingPromoBanner": "අත්හදා බැලීම: විවෘත මිල ගණන් වලින් දත්ත භාවිතා කර මෙම නිෂ්පාදනය නිර්මාණය කරන්න."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

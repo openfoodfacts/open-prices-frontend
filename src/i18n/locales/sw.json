@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Uthibitisho ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Maduka ambapo kuuzwa",
-		"UseCropModeToAddImage": "Ili kuongeza picha ya bidhaa, wezesha hali ya kupunguza chini ya picha ya uthibitisho na chora mstatili kuzunguka bidhaa."
+		"UseCropModeToAddImage": "Ili kuongeza picha ya bidhaa, wezesha hali ya kupunguza chini ya picha ya uthibitisho na chora mstatili kuzunguka bidhaa.",
+		"ProductMissingPromoBanner": "Jaribio: tengeneza bidhaa hii kwa kutumia data kutoka kwa Bei Huria"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

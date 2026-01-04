@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Tohu ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Nga toa i hokona",
-		"UseCropModeToAddImage": "Hei taapiri i te ahua hua, whakaahei te aratau hua i raro i te pikitia tohu ka toia he tapawha huri noa i te hua."
+		"UseCropModeToAddImage": "Hei taapiri i te ahua hua, whakaahei te aratau hua i raro i te pikitia tohu ka toia he tapawha huri noa i te hua.",
+		"ProductMissingPromoBanner": "Whakamātautau: waihangahia tēnei hua mā te whakamahi i ngā raraunga mai i ngā Utu Tuwhera"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

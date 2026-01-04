@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Απόδειξη ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Καταστήματα όπου πωλούνται",
-		"UseCropModeToAddImage": "Για να προσθέσετε μια εικόνα προϊόντος, ενεργοποιήστε τη λειτουργία περικοπής κάτω από την εικόνα δοκιμίου και σχεδιάστε ένα ορθογώνιο γύρω από το προϊόν."
+		"UseCropModeToAddImage": "Για να προσθέσετε μια εικόνα προϊόντος, ενεργοποιήστε τη λειτουργία περικοπής κάτω από την εικόνα δοκιμίου και σχεδιάστε ένα ορθογώνιο γύρω από το προϊόν.",
+		"ProductMissingPromoBanner": "Πείραμα: δημιουργήστε αυτό το προϊόν χρησιμοποιώντας δεδομένα από τις τιμές ανοίγματος"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

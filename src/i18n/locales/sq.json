@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Provë ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Dyqanet ku shiten",
-		"UseCropModeToAddImage": "Për të shtuar një imazh produkti, aktivizoni modalitetin e prerjes së figurës poshtë provës dhe vizatoni një drejtkëndësh rreth produktit."
+		"UseCropModeToAddImage": "Për të shtuar një imazh produkti, aktivizoni modalitetin e prerjes së figurës poshtë provës dhe vizatoni një drejtkëndësh rreth produktit.",
+		"ProductMissingPromoBanner": "Eksperiment: krijoni këtë produkt duke përdorur të dhëna nga Çmimet e Hapura"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"

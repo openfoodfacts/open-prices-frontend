@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Resit"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -52,7 +52,7 @@
 		"ProductPriceDetails": {
 			"Add": "Add a new price",
 			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
-			"Create": "Create",
+			"Create": "Cipta",
 			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
 			"NewPrice": "New price",
 			"PriceUploaded": "Price created!",
@@ -66,13 +66,13 @@
 		"Title": "Add multiple prices"
 	},
 	"AddPriceSingle": {
-		"Create": "Create",
+		"Create": "Cipta",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Harga",
+			"LabelDiscounted": "Harga diskaun",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Bukti",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Tarikh",
+			"DateLabel": "Tarikh",
 			"Find": "Cari",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "Tindakan",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Tambah harga",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -188,17 +188,17 @@
 		"BarcodeScanShort": "Imbas",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Kod bar tidak sah",
 		"Brand": "Brand",
 		"Brands": "Jenama",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Harga",
+		"Prices": "Harga",
 		"PRODUCT": "Produk",
 		"Product": "Produk",
 		"ProductName": "Nama Produk",
 		"Products": "Produk",
-		"Proof": "Proof",
+		"Proof": "Bukti",
 		"Proofs": "Proofs",
 		"CATEGORY": "Category",
 		"Category": "Category",
@@ -211,7 +211,7 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
-		"Clear": "Clear",
+		"Clear": "Jelas",
 		"Close": "Tutup",
 		"Comment": "Comment",
 		"Community": "Community",
@@ -229,7 +229,7 @@
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Mata wang",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -242,7 +242,7 @@
 		"DisplayMap": "Peta",
 		"DisplayPriceMap": "Peta",
 		"DisplayPriceChart": "Chart",
-		"Done": "Done",
+		"Done": "Selesai",
 		"Error": "Ralat",
 		"Experiment": "Eksperimen",
 		"Experiments": "Experiments",
@@ -264,13 +264,13 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Tarikh",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Tarikh gambar itu.",
 		"DateProofHelpTextExif": "Secara lalai, kami cuba mengekstraknya daripada metadata EXIF gambar.",
 		"DateProofHelpTextReceipt": "Untuk resit, tetapkan pada tarikh pembelian.",
-		"Details": "Details",
-		"Delete": "Delete",
+		"Details": "Butiran",
+		"Delete": "Padam",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
 		"DiscountType": "Discount type",
@@ -310,10 +310,10 @@
 		"FrequentlyAskedQuestions": "Soalan-soalan lazim",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Bantuan",
 		"Here": "Di sini",
-		"History": "History",
-		"Image": "Image",
+		"History": "Sejarah",
+		"Image": "Imej",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -325,7 +325,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Peta",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "Pelbagai",
 		"MobileApp": "Mobile app",
 		"Moderation": "Kesederhanaan",
 		"ModerationFlagReasonWrongType": "salah jenis",
@@ -340,8 +340,8 @@
 		"ModerationFlagStatusClosed": "tertutup",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Harga saya",
+		"MyProofs": "Bukti saya",
 		"MyStats": "My stats",
 		"New": "baru",
 		"NextProof": "Next proof",
@@ -357,7 +357,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Harga",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -380,7 +380,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Tanda harga",
 		"PriceTags": "Tanda harga",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -407,7 +407,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Pilih bukti",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -420,9 +420,9 @@
 		"Quantity": "Kuantiti",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Reason": "Sebab",
+		"RECEIPT": "Resit",
+		"Receipt": "Resit",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -440,7 +440,7 @@
 		"Settings": "Tetapan",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "Signed in!",
-		"SignIn": "Sign in",
+		"SignIn": "Daftar masuk",
 		"SignOut": "Daftar keluar",
 		"SideMenu": "Side menu",
 		"Share": "Kongsi",
@@ -457,9 +457,9 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "Teks",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "Tema",
+		"ThemeLight": "Cahaya",
+		"ThemeDark": "Gelap",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -472,7 +472,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Cubalah",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Produk tidak diketahui",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -504,15 +504,15 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "Sahkan harga daripada komuniti",
 		"View": "Pandang",
-		"Website": "Website",
+		"Website": "Laman Web",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "Tanpa harga",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Ya",
 		"No": "Tidak",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Makanan",
+		"PetFood": "Makanan haiwan peliharaan",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -562,7 +562,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Mata wang",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bukti ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Kedai di mana dijual",
-		"UseCropModeToAddImage": "Untuk menambah imej produk, dayakan mod pangkas di bawah gambar bukti dan lukis segi empat tepat di sekeliling produk."
+		"UseCropModeToAddImage": "Untuk menambah imej produk, dayakan mod pangkas di bawah gambar bukti dan lukis segi empat tepat di sekeliling produk.",
+		"ProductMissingPromoBanner": "Eksperimen: cipta produk ini menggunakan data daripada Harga Terbuka"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
@@ -594,7 +595,7 @@
 	"Header": {
 		"Dashboard": "Dashboard",
 		"Settings": "Tetapan",
-		"SignIn": "Sign in",
+		"SignIn": "Daftar masuk",
 		"SignOut": "Daftar keluar"
 	},
 	"Theme": {
@@ -602,10 +603,10 @@
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Tambah harga",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Cari produk",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -620,7 +621,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "Jelas",
 		"NoResult": "No results found",
 		"NoResultHelpKeywords": "Tidak menemui kedai anda? Cuba gunakan kata kunci dan bukannya alamat penuh (cth 'Carrefour 75013 Paris' atau 'Walmart San Francisco').",
 		"NoResultHelpOSM": "Masih tidak menemui kedai anda? Ia mungkin belum berada dalam {osm_name} lagi. Anda boleh menambahkannya pada {osm_url} dahulu.",
@@ -643,13 +644,13 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Bukti",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Produk tidak diketahui"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
-		"Delete": "Delete",
+		"Delete": "Padam",
 		"Success": "Price deleted!",
 		"Title": "Delete a price"
 	},
@@ -660,8 +661,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Harga",
+		"LabelDiscounted": "Harga diskaun",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -690,7 +691,7 @@
 		"LabelsLower": "label-label",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Kod bar tidak sah",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -703,7 +704,7 @@
 		"UnknownProduct": "Nama produk yang tidak diketahui"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Tambah harga",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -721,26 +722,26 @@
 		"PromoReceiptAssistant": "Percubaan: cuba pembantu resit baharu untuk mengeluarkan harga secara automatik daripada resit anda!"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Bukti",
+		"PRICE_TAG": "Tanda harga",
+		"RECEIPT": "Resit",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Pilih bukti",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
 	"ProofDelete": {
 		"Confirmation": "Are you sure you want to delete this proof?",
-		"Delete": "Delete",
+		"Delete": "Padam",
 		"Title": "Delete a proof",
 		"Success": "Proof deleted!"
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Harga",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -775,7 +776,7 @@
 			"Title": "Tambah"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Tambah harga"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -805,7 +806,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Tambah harga"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -814,7 +815,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Harga"
 		},
 		"PriceTags": {
 			"Title": "Tanda harga"
@@ -853,10 +854,10 @@
 			"Title": "Kesederhanaan"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Harga saya"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Bukti saya"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -871,7 +872,7 @@
 			"Title": "Tetapan"
 		},
 		"SignIn": {
-			"Title": "Sign in"
+			"Title": "Daftar masuk"
 		},
 		"Stats": {
 			"Title": "Stats"
@@ -925,17 +926,17 @@
 		"Title": "Kongsi"
 	},
 	"SignIn": {
-		"Button": "Sign in",
+		"Button": "Daftar masuk",
 		"Password": "Kata laluan",
 		"ServerError": "Error: server error",
-		"Title": "Sign in",
+		"Title": "Daftar masuk",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"UsernameLabel": "Username",
 		"WrongCredentials": "Error: wrong credentials"
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Harga",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -963,8 +964,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Harga saya",
+		"MyProofs": "Bukti saya",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Tetapan",
 		"Title": "Dashboard",
@@ -984,7 +985,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Mata wang",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
