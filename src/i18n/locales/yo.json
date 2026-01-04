@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Ẹri ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Awọn ile itaja nibiti o ti ta",
-		"UseCropModeToAddImage": "Lati fi aworan ọja kun, mu ipo irugbin ṣiṣẹ ni isalẹ aworan ẹri ki o fa onigun mẹta yika ọja naa."
+		"UseCropModeToAddImage": "Lati fi aworan ọja kun, mu ipo irugbin ṣiṣẹ ni isalẹ aworan ẹri ki o fa onigun mẹta yika ọja naa.",
+		"ProductMissingPromoBanner": "Ìdánwò: ṣẹ̀dá ọjà yìí nípa lílo dátà láti Àwọn Iye Owó Ṣíṣí"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
