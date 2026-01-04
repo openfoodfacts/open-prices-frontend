@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "ਸਬੂਤ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ਉਹ ਸਟੋਰ ਜਿੱਥੇ ਵੇਚੇ ਗਏ ਸਨ",
-		"UseCropModeToAddImage": "ਉਤਪਾਦ ਚਿੱਤਰ ਜੋੜਨ ਲਈ, ਪਰੂਫ ਤਸਵੀਰ ਦੇ ਹੇਠਾਂ ਕ੍ਰੌਪ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ ਅਤੇ ਉਤਪਾਦ ਦੇ ਦੁਆਲੇ ਇੱਕ ਆਇਤਕਾਰ ਬਣਾਓ।"
+		"UseCropModeToAddImage": "ਉਤਪਾਦ ਚਿੱਤਰ ਜੋੜਨ ਲਈ, ਪਰੂਫ ਤਸਵੀਰ ਦੇ ਹੇਠਾਂ ਕ੍ਰੌਪ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ ਅਤੇ ਉਤਪਾਦ ਦੇ ਦੁਆਲੇ ਇੱਕ ਆਇਤਕਾਰ ਬਣਾਓ।",
+		"ProductMissingPromoBanner": "ਪ੍ਰਯੋਗ: ਓਪਨ ਪ੍ਰਾਈਸ ਤੋਂ ਡੇਟਾ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਇਹ ਉਤਪਾਦ ਬਣਾਓ"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
