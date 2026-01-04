@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Сатылган кибетләр",
-		"UseCropModeToAddImage": "Продукция образын өстәү өчен, дәлил рәсеме астындагы чәчү режимын эшләгез һәм продукт тирәсендә турыпочмаклык сызыгыз."
+		"UseCropModeToAddImage": "Продукция образын өстәү өчен, дәлил рәсеме астындагы чәчү режимын эшләгез һәм продукт тирәсендә турыпочмаклык сызыгыз.",
+		"ProductMissingPromoBanner": "Эксперимент: бу продуктны Open Prices мәгълүматларын кулланып ясагыз"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
