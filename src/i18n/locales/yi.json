@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "באַווייַז ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "געשעפטן וואו פארקויפט",
-		"UseCropModeToAddImage": "כדי צו לייגן צו א פּראָדוקט בילד, אַקטיוויזירט דעם קראָפּ מאָדע אונטערן פּרוף בילד און צייכנט אַ רעכטעק אַרום דעם פּראָדוקט."
+		"UseCropModeToAddImage": "כדי צו לייגן צו א פּראָדוקט בילד, אַקטיוויזירט דעם קראָפּ מאָדע אונטערן פּרוף בילד און צייכנט אַ רעכטעק אַרום דעם פּראָדוקט.",
+		"ProductMissingPromoBanner": "עקספּערימענט: שאַפֿן דעם פּראָדוקט ניצנדיק דאַטן פֿון אָפֿענע פּרייזן"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
