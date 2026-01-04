@@ -274,7 +274,7 @@
 		"DeveloperMode": "وضع المطور",
 		"Discount": "تخفيض",
 		"DiscountType": "نوع الخصم",
-		"DiscountTypeQuantity": "كمية",
+		"DiscountTypeQuantity": "الكميه",
 		"DiscountTypeSale": "أُوكَازيُون",
 		"DiscountTypeSeasonal": "موسمي",
 		"DiscountTypeLoyaltyProgram": "برنامج الولاء",
@@ -417,7 +417,7 @@
 		"ProofsToday": "الأدلة اليوم",
 		"ProofNotFound": "لم يتم العثور على دليل",
 		"Public": "عام",
-		"Quantity": "كمية",
+		"Quantity": "الكميه",
 		"QuantityBought": "الكمية المشتراة",
 		"QuantityMissing": "القنب مفقود",
 		"Reason": "السبب",
@@ -581,7 +581,8 @@
 		"ProductLanguage": "لغة المنتج",
 		"ProofNumberOfOutProofs": "الدليل ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "المتاجر التي تباع فيها",
-		"UseCropModeToAddImage": "لإضافة صورة المنتج، قم بتمكين وضع الاقتصاص أسفل صورة الإثبات وارسم مستطيلاً حول المنتج."
+		"UseCropModeToAddImage": "لإضافة صورة المنتج، قم بتمكين وضع الاقتصاص أسفل صورة الإثبات وارسم مستطيلاً حول المنتج.",
+		"ProductMissingPromoBanner": "تجربة: أنشئ هذا المنتج باستخدام بيانات من Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "اختر أحد إثباتاتك الأخيرة"
