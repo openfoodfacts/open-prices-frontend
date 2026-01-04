@@ -581,7 +581,8 @@
 		"ProductLanguage": "Producttaal",
 		"ProofNumberOfOutProofs": "Bewijs ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Winkels waar verkocht",
-		"UseCropModeToAddImage": "Om een productafbeelding toe te voegen, schakelt u de bijsnijdmodus onder de proefafbeelding in en tekent u een rechthoek rond het product."
+		"UseCropModeToAddImage": "Om een productafbeelding toe te voegen, schakelt u de bijsnijdmodus onder de proefafbeelding in en tekent u een rechthoek rond het product.",
+		"ProductMissingPromoBanner": "Experiment: creëer dit product met behulp van gegevens van Open Prices."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
