@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Froga ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Saltzen diren dendak",
-		"UseCropModeToAddImage": "Produktuaren irudi bat gehitzeko, gaitu mozketa modua froga-argazkiaren azpian eta marraztu laukizuzen bat produktuaren inguruan."
+		"UseCropModeToAddImage": "Produktuaren irudi bat gehitzeko, gaitu mozketa modua froga-argazkiaren azpian eta marraztu laukizuzen bat produktuaren inguruan.",
+		"ProductMissingPromoBanner": "Esperimentua: sortu produktu hau Open Prices-eko datuak erabiliz"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
