@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "添加新的价格标签",
+		"AddNewProofReceipt": "添加新收据",
 		"AddToOFF": "添加到 {name}",
 		"Added": "额外",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "添加凭证（收据）"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "收据"
 		},
 		"Community": {
 			"Title": "Community"
