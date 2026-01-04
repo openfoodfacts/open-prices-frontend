@@ -178,6 +178,8 @@
 		"AddProofs": "Pridėti įrodymus",
 		"AddNewProof": "Pridėti naują įrodymą",
 		"AddNewProofs": "Pridėti naujų įrodymų",
+		"AddNewProofPriceTags": "Pridėti naujas kainų etiketes",
+		"AddNewProofReceipt": "Pridėti naują kvitą",
 		"AddToOFF": "Add to {name}",
 		"Added": "Pridėta",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Pridėti kelis įrodymus"
 		},
+		"AddProofReceipt": {
+			"Title": "Pridėti įrodymą (kvitą)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Pridėti vienintelį įrodymą"
+		},
+		"Receipt": {
+			"Title": "Čekis"
 		},
 		"Community": {
 			"Title": "Bendruomenė"
