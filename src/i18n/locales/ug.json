@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "سېتىلىدىغان دۇكانلار",
-		"UseCropModeToAddImage": "مەھسۇلات رەسىمىنى قوشۇش ئۈچۈن ، دەلىللەش رەسىمىنىڭ ئاستىدىكى زىرائەت ھالىتىنى قوزغىتىپ ، مەھسۇلاتنىڭ ئەتراپىغا تىك تۆت بۇلۇڭ سىزىڭ."
+		"UseCropModeToAddImage": "مەھسۇلات رەسىمىنى قوشۇش ئۈچۈن ، دەلىللەش رەسىمىنىڭ ئاستىدىكى زىرائەت ھالىتىنى قوزغىتىپ ، مەھسۇلاتنىڭ ئەتراپىغا تىك تۆت بۇلۇڭ سىزىڭ.",
+		"ProductMissingPromoBanner": "سىناق: ئوچۇق باھادىكى سانلىق مەلۇماتلارنى ئىشلىتىپ بۇ مەھسۇلاتنى يارىتىڭ"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
