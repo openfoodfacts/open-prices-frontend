@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Patunay ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Mga tindahan kung saan ibinebenta",
-		"UseCropModeToAddImage": "Upang magdagdag ng larawan ng produkto, paganahin ang crop mode sa ibaba ng patunay na larawan at gumuhit ng parihaba sa palibot ng produkto."
+		"UseCropModeToAddImage": "Upang magdagdag ng larawan ng produkto, paganahin ang crop mode sa ibaba ng patunay na larawan at gumuhit ng parihaba sa palibot ng produkto.",
+		"ProductMissingPromoBanner": "Eksperimento: likhain ang produktong ito gamit ang datos mula sa Mga Bukas na Presyo"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
