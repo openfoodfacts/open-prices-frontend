@@ -7,7 +7,7 @@
     @click="$router.push(url)"
   >
     <v-banner-text>
-      {{ $t('ProofAdd.PromoReceiptAssistant') }}
+      {{ $t('CreateOffProduct.ProductMissingPromoBanner') }}
     </v-banner-text>
     <v-spacer /><!-- needed to push v-banner-actions to the right on big screens -->
     <v-banner-actions>
@@ -18,9 +18,15 @@
 
 <script>
 export default {
+  props: {
+    productCode: {
+      type: String,
+      default: '',
+    },
+  },
   data() {
     return {
-      url: '/experiments/receipt-assistant',
+      url: `/experiments/create-off-product?product_code=${this.productCode}`,
     }
   },
 }
