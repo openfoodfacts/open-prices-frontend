@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Prouenn ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Gwerzhet e veze ar stalioù",
-		"UseCropModeToAddImage": "Evit ouzhpennañ ur skeudenn produ, gweredekait ar mod troc'hañ dindan ar skeudenn prouiñ ha tresit ur reizhkorn tro-dro d'ar produ."
+		"UseCropModeToAddImage": "Evit ouzhpennañ ur skeudenn produ, gweredekait ar mod troc'hañ dindan ar skeudenn prouiñ ha tresit ur reizhkorn tro-dro d'ar produ.",
+		"ProductMissingPromoBanner": "Arnodiñ : krouiñ ar produ-mañ en ur implijout roadennoù eus Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
