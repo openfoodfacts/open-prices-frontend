@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Tõestus ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Kauplused, kus müüakse",
-		"UseCropModeToAddImage": "Tootepildi lisamiseks luba proovipildi all kärpimisrežiim ja joonista toote ümber ristkülik."
+		"UseCropModeToAddImage": "Tootepildi lisamiseks luba proovipildi all kärpimisrežiim ja joonista toote ümber ristkülik.",
+		"ProductMissingPromoBanner": "Katse: loo see toode avatud hindade andmete abil"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
