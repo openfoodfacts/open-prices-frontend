@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Sönnun ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Verslanir þar sem seld var",
-		"UseCropModeToAddImage": "Til að bæta við mynd af vörunni skaltu virkja skurðarstillingu fyrir neðan sönnunarmyndina og teikna rétthyrning í kringum vöruna."
+		"UseCropModeToAddImage": "Til að bæta við mynd af vörunni skaltu virkja skurðarstillingu fyrir neðan sönnunarmyndina og teikna rétthyrning í kringum vöruna.",
+		"ProductMissingPromoBanner": "Tilraun: Búðu til þessa vöru með því að nota gögn úr Opna verðlagningu"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
