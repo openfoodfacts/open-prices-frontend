@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Porofo ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Fivarotana amidy",
-		"UseCropModeToAddImage": "Raha te hampiditra sary vokatra, ampio ny fomba famafazana eo ambanin'ny sary porofo ary manaova mahitsizoro manodidina ny vokatra."
+		"UseCropModeToAddImage": "Raha te hampiditra sary vokatra, ampio ny fomba famafazana eo ambanin'ny sary porofo ary manaova mahitsizoro manodidina ny vokatra.",
+		"ProductMissingPromoBanner": "Andrana: mamorona ity vokatra ity amin'ny fampiasana angon-drakitra avy amin'ny Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
