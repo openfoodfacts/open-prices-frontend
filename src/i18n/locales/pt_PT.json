@@ -178,6 +178,8 @@
 		"AddProofs": "Adicionar comprovativos",
 		"AddNewProof": "Adicione um novo comprovativo",
 		"AddNewProofs": "Adicionar novos comprovativos",
+		"AddNewProofPriceTags": "Adicionar novas etiquetas de preço",
+		"AddNewProofReceipt": "Adicionar um novo recibo",
 		"AddToOFF": "Adicionar a {name}",
 		"Added": "Adicionado",
 		"AdditionalInfo": "Informação adicional",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Adicionar vários comprovativos"
 		},
+		"AddProofReceipt": {
+			"Title": "Anexe o comprovativo (recibo)."
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Adicionar um único comprovativo"
+		},
+		"Receipt": {
+			"Title": "Talão"
 		},
 		"Community": {
 			"Title": "Comunidade"
