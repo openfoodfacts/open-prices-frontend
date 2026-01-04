@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Proof ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Stores where sold",
-		"UseCropModeToAddImage": "To add a product image, enable crop mode below proof picture and draw a rectangle around the product."
+		"UseCropModeToAddImage": "To add a product image, enable crop mode below proof picture and draw a rectangle around the product.",
+		"ProductMissingPromoBanner": "Experiment: create this product using data from Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
