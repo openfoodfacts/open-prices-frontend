@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "নতুন মূল্য ট্যাগ যোগ করুন",
+		"AddNewProofReceipt": "একটি নতুন রসিদ যোগ করুন",
 		"AddToOFF": "Add to {name}",
 		"Added": "যোগ করা হয়েছে",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "প্রমাণ (রসিদ) যোগ করুন"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "রসিদ"
 		},
 		"Community": {
 			"Title": "Community"
