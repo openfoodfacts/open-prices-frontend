@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Баталгаа ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Борлуулсан дэлгүүрүүд",
-		"UseCropModeToAddImage": "Бүтээгдэхүүний зураг нэмэхийн тулд баталгаат зургийн доор тайрах горимыг идэвхжүүлж, бүтээгдэхүүний эргэн тойронд тэгш өнцөгт зурна уу."
+		"UseCropModeToAddImage": "Бүтээгдэхүүний зураг нэмэхийн тулд баталгаат зургийн доор тайрах горимыг идэвхжүүлж, бүтээгдэхүүний эргэн тойронд тэгш өнцөгт зурна уу.",
+		"ProductMissingPromoBanner": "Туршилт: Нээлттэй үнийн өгөгдлийг ашиглан энэ бүтээгдэхүүнийг үүсгээрэй"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
