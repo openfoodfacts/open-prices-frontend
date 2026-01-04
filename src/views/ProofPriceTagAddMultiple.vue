@@ -37,6 +37,7 @@
           :title="$t('Common.ValidatePrices')"
           prepend-icon="mdi-checkbox-marked-circle-plus-outline"
           append-icon="mdi-arrow-right"
+          color="primary"
           to="/prices/add/validate"
         />
         <v-card
@@ -44,6 +45,7 @@
           :title="$t('Common.AddPrices')"
           prepend-icon="mdi-tag-plus-outline"
           append-icon="mdi-arrow-right"
+          color="primary"
           :to="getPriceAddMultipleProofIdUrl"
         />
       </v-col>
