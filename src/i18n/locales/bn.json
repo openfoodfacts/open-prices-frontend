@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "প্রমাণ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "যেসব দোকানে বিক্রি হয়",
-		"UseCropModeToAddImage": "একটি পণ্যের ছবি যোগ করতে, প্রুফ ছবির নিচে ক্রপ মোড সক্ষম করুন এবং পণ্যটির চারপাশে একটি আয়তক্ষেত্র আঁকুন।"
+		"UseCropModeToAddImage": "একটি পণ্যের ছবি যোগ করতে, প্রুফ ছবির নিচে ক্রপ মোড সক্ষম করুন এবং পণ্যটির চারপাশে একটি আয়তক্ষেত্র আঁকুন।",
+		"ProductMissingPromoBanner": "পরীক্ষা: ওপেন প্রাইস থেকে তথ্য ব্যবহার করে এই পণ্যটি তৈরি করুন"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
