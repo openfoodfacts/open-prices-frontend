@@ -178,6 +178,8 @@
 		"AddProofs": "Přidejte důkazy",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Přidejte nové důkazy",
+		"AddNewProofPriceTags": "Přidat nové cenovky",
+		"AddNewProofReceipt": "Přidat novou účtenku",
 		"AddToOFF": "Přidat do {name}",
 		"Added": "Přidáno",
 		"AdditionalInfo": "Další informace",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Přidejte více důkazů"
 		},
+		"AddProofReceipt": {
+			"Title": "Přidat doklad (účtenku)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Přidejte jeden důkaz"
+		},
+		"Receipt": {
+			"Title": "Účtenka"
 		},
 		"Community": {
 			"Title": "Komunita"
