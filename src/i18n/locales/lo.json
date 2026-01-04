@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "ເພີ່ມປ້າຍລາຄາໃໝ່",
+		"AddNewProofReceipt": "ເພີ່ມໃບຮັບເງິນໃໝ່",
 		"AddToOFF": "Add to {name}",
 		"Added": "ເພີ່ມແລ້ວ",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "ເພີ່ມຫຼັກຖານ (ໃບຮັບເງິນ)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"
