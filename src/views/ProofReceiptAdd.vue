@@ -5,52 +5,58 @@
         <v-stepper-header>
           <v-stepper-item :title="stepItemList[0].title" :value="stepItemList[0].value" :complete="step > 1" />
           <v-divider />
-          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step === 2" />
+          <v-stepper-item :title="stepItemList[1].title" :value="stepItemList[1].value" :complete="step > 2" />
         </v-stepper-header>
       </v-stepper>
     </v-col>
   </v-row>
 
-  <v-row v-if="step === 1">
-    <v-col cols="12" md="6">
-      <ProofUploadCard :typeReceiptOnly="true" :hideRecentProofChoice="true" :assistedByAI="true" @proof="onProofUploaded($event)" />
-    </v-col>
-  </v-row>
+  <!-- Step 1: proof upload -->
+  <template v-if="step === 1">
+    <v-row>
+      <v-col cols="12" md="6">
+        <ProofUploadCard :typeReceiptOnly="true" :hideRecentProofChoice="true" :assistedByAI="true" @proof="onProofUploaded($event)" />
+      </v-col>
+    </v-row>
+  </template>
 
-  <v-row v-if="step === 2">
-    <v-col cols="12">
-      <v-alert
-        type="success"
-        variant="outlined"
-        density="compact"
-        :text="$t('Common.ProofUploadedCount', { count: 1 })"
-      />
-    </v-col>
-    <v-col v-if="proofUploaded" cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Common.AddPrices')"
-        prepend-icon="mdi-tag-plus-outline"
-        append-icon="mdi-arrow-right"
-        :to="getReceiptAssistantProofIdsUrl"
-      />
-    </v-col>
-    <v-col cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Common.AddNewProofReceipt')"
-        prepend-icon="mdi-image-plus"
-        append-icon="mdi-arrow-right"
-        @click="reloadPage"
-      />
-    </v-col>
-    <v-col cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Common.MyDashboard')"
-        prepend-icon="mdi-account-circle"
-        append-icon="mdi-arrow-right"
-        :to="getUserDashboardUrl"
-      />
-    </v-col>
-  </v-row>
+  <!-- Step 2: actions -->
+  <template v-if="step === 2">
+    <v-row>
+      <v-col cols="12">
+        <v-alert
+          type="success"
+          variant="outlined"
+          density="compact"
+          :text="$t('Common.ProofUploadedCount', { count: 1 })"
+        />
+      </v-col>
+      <v-col v-if="proofUploaded" cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.AddPrices')"
+          prepend-icon="mdi-tag-plus-outline"
+          append-icon="mdi-arrow-right"
+          :to="getReceiptAssistantProofIdsUrl"
+        />
+      </v-col>
+      <v-col cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.AddNewProofReceipt')"
+          prepend-icon="mdi-image-plus"
+          append-icon="mdi-arrow-right"
+          @click="reloadPage"
+        />
+      </v-col>
+      <v-col cols="12" sm="6" lg="4">
+        <v-card
+          :title="$t('Common.MyDashboard')"
+          prepend-icon="mdi-account-circle"
+          append-icon="mdi-arrow-right"
+          :to="getUserDashboardUrl"
+        />
+      </v-col>
+    </v-row>
+  </template>
 </template>
 
 <script>
