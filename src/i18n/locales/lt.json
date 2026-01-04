@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Įrodymas ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Parduotuvės, kuriose parduodama",
-		"UseCropModeToAddImage": "Norėdami pridėti produkto paveikslėlį, įjunkite apkirpimo režimą po bandomąja nuotrauka ir nubrėžkite stačiakampį aplink produktą."
+		"UseCropModeToAddImage": "Norėdami pridėti produkto paveikslėlį, įjunkite apkirpimo režimą po bandomąja nuotrauka ir nubrėžkite stačiakampį aplink produktą.",
+		"ProductMissingPromoBanner": "Eksperimentas: sukurkite šį produktą naudodami duomenis iš atvirų kainų"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
