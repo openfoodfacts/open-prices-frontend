@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Dokaz ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Trgovine u kojima se prodaje",
-		"UseCropModeToAddImage": "Da biste dodali sliku proizvoda, omogućite način izrezivanja ispod probne slike i nacrtajte pravougaonik oko proizvoda."
+		"UseCropModeToAddImage": "Da biste dodali sliku proizvoda, omogućite način izrezivanja ispod probne slike i nacrtajte pravougaonik oko proizvoda.",
+		"ProductMissingPromoBanner": "Eksperiment: kreirajte ovaj proizvod koristeći podatke iz Open Prices-a"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
