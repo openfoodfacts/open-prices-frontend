@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Demonstratio ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Tabernae ubi venditi sunt",
-		"UseCropModeToAddImage": "Ad imaginem producti addendam, modum secandi sub imagine probationis activa et rectangulum circum productum designa."
+		"UseCropModeToAddImage": "Ad imaginem producti addendam, modum secandi sub imagine probationis activa et rectangulum circum productum designa.",
+		"ProductMissingPromoBanner": "Experimentum: hoc productum crea utens datis ex Pretiis Apertis."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
