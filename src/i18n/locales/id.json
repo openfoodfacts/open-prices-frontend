@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Bukti ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Toko tempat menjual",
-		"UseCropModeToAddImage": "Untuk menambahkan gambar produk, aktifkan mode potong di bawah gambar bukti dan gambar persegi panjang di sekeliling produk."
+		"UseCropModeToAddImage": "Untuk menambahkan gambar produk, aktifkan mode potong di bawah gambar bukti dan gambar persegi panjang di sekeliling produk.",
+		"ProductMissingPromoBanner": "Eksperimen: buat produk ini menggunakan data dari Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Pilih salah satu bukti terbaru Anda"
