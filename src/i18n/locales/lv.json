@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Pierādījums ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Veikali, kuros tiek pārdots",
-		"UseCropModeToAddImage": "Lai pievienotu produkta attēlu, zem korektūras attēla iespējojiet apgriešanas režīmu un uzzīmējiet taisnstūri ap produktu."
+		"UseCropModeToAddImage": "Lai pievienotu produkta attēlu, zem korektūras attēla iespējojiet apgriešanas režīmu un uzzīmējiet taisnstūri ap produktu.",
+		"ProductMissingPromoBanner": "Eksperiments: izveidojiet šo produktu, izmantojot datus no Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
