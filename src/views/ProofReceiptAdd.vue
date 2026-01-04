@@ -42,7 +42,6 @@
         @click="reloadPage"
       />
     </v-col>
-    
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Common.MyDashboard')"

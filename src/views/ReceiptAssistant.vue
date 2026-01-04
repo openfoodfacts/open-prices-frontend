@@ -179,6 +179,9 @@ export default {
   methods: {
     initWithProofIds(proofIds) {
       if (proofIds.length) {
+        // move to step 2
+        this.step = 2
+        // fetch the proof & AI predictions
         api.getProofById(proofIds[0]).then(proof => {
           this.onProofUploaded(proof)
         })
