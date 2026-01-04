@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "Доказательство ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Магазины, где продается",
-		"UseCropModeToAddImage": "Чтобы добавить изображение продукта, включите режим кадрирования под пробным изображением и нарисуйте прямоугольник вокруг продукта."
+		"UseCropModeToAddImage": "Чтобы добавить изображение продукта, включите режим кадрирования под пробным изображением и нарисуйте прямоугольник вокруг продукта.",
+		"ProductMissingPromoBanner": "Эксперимент: создать этот продукт, используя данные из Open Prices."
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
