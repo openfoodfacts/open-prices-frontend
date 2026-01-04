@@ -581,7 +581,8 @@
 		"ProductLanguage": "שפת המוצר",
 		"ProofNumberOfOutProofs": "הוכחה ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "חנויות בהן נמכר",
-		"UseCropModeToAddImage": "כדי להוסיף תמונת מוצר, הפעל את מצב החיתוך מתחת לתמונת ההוכחה וצייר מלבן סביב המוצר."
+		"UseCropModeToAddImage": "כדי להוסיף תמונת מוצר, הפעל את מצב החיתוך מתחת לתמונת ההוכחה וצייר מלבן סביב המוצר.",
+		"ProductMissingPromoBanner": "ניסוי: צור מוצר זה באמצעות נתונים מ-Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "נא לבחור אחת מההוכחות העדכניות שלך"
