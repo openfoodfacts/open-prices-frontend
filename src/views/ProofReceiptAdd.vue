@@ -36,9 +36,12 @@
           :title="$t('Common.AddPrices')"
           prepend-icon="mdi-tag-plus-outline"
           append-icon="mdi-arrow-right"
+          color="primary"
           :to="getReceiptAssistantProofIdsUrl"
         />
       </v-col>
+    </v-row>
+    <v-row>
       <v-col cols="12" sm="6" lg="4">
         <v-card
           :title="$t('Common.AddNewProofReceipt')"
