@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "አዲስ የዋጋ መለያዎችን ያክሉ",
+		"AddNewProofReceipt": "አዲስ ደረሰኝ ያክሉ",
 		"AddToOFF": "Add to {name}",
 		"Added": "ታክሏል።",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "ማረጋገጫ ያክሉ (ደረሰኝ)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "ደረሰኝ"
 		},
 		"Community": {
 			"Title": "Community"
