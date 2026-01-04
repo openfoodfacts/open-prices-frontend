@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "ପ୍ରମାଣ ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "ବିକ୍ରି ହୋଇଥିବା ଦୋକାନଗୁଡ଼ିକ",
-		"UseCropModeToAddImage": "ଏକ ଉତ୍ପାଦ ପ୍ରତିଛବି ଯୋଡିବା ପାଇଁ, ପ୍ରମାଣ ଚିତ୍ର ତଳେ କ୍ରପ୍ ମୋଡ୍ ସକ୍ଷମ କରନ୍ତୁ ଏବଂ ଉତ୍ପାଦ ଚାରିପାଖରେ ଏକ ଆୟତକ୍ଷେତ୍ର ଆଙ୍କନ୍ତୁ।"
+		"UseCropModeToAddImage": "ଏକ ଉତ୍ପାଦ ପ୍ରତିଛବି ଯୋଡିବା ପାଇଁ, ପ୍ରମାଣ ଚିତ୍ର ତଳେ କ୍ରପ୍ ମୋଡ୍ ସକ୍ଷମ କରନ୍ତୁ ଏବଂ ଉତ୍ପାଦ ଚାରିପାଖରେ ଏକ ଆୟତକ୍ଷେତ୍ର ଆଙ୍କନ୍ତୁ।",
+		"ProductMissingPromoBanner": "ପରୀକ୍ଷଣ: ଓପନ ପ୍ରାଇସ୍‌ରୁ ଡାଟା ବ୍ୟବହାର କରି ଏହି ଉତ୍ପାଦ ତିଆରି କରନ୍ତୁ"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
