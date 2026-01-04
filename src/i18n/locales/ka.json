@@ -581,7 +581,8 @@
 		"ProductLanguage": "Product language",
 		"ProofNumberOfOutProofs": "დამტკიცება ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "მაღაზიები, სადაც იყიდება",
-		"UseCropModeToAddImage": "პროდუქტის სურათის დასამატებლად, ჩართეთ ჩამოჭრის რეჟიმი სურათის ქვემოთ და შემოხაზეთ მართკუთხედი პროდუქტს."
+		"UseCropModeToAddImage": "პროდუქტის სურათის დასამატებლად, ჩართეთ ჩამოჭრის რეჟიმი სურათის ქვემოთ და შემოხაზეთ მართკუთხედი პროდუქტს.",
+		"ProductMissingPromoBanner": "ექსპერიმენტი: შექმენით ეს პროდუქტი ღია ფასების მონაცემების გამოყენებით"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Select one of your recent proofs"
