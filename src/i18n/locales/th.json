@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "เพิ่มป้ายราคาใหม่",
+		"AddNewProofReceipt": "เพิ่มใบเสร็จใหม่",
 		"AddToOFF": "Add to {name}",
 		"Added": "เพิ่ม",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "แนบหลักฐาน (ใบเสร็จรับเงิน)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "ใบเสร็จ"
 		},
 		"Community": {
 			"Title": "Community"
