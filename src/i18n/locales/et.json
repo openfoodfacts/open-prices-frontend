@@ -226,7 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Panused",
 		"Confirm": "Kinnita",
-		"Country": "Country",
+		"Country": "Riik",
 		"Countries": "Riigid",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -992,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "Riik",
 		"CurrencyLabel": "Valuuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
