@@ -226,7 +226,7 @@
 		"Contributors": "Сътрудници",
 		"Contributions": "Приноси",
 		"Confirm": "Потвърди",
-		"Country": "Country",
+		"Country": "Страна",
 		"Countries": "Страни",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -992,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Промяна на езика",
-		"CountryLabel": "Country",
+		"CountryLabel": "Страна",
 		"CurrencyLabel": "Валута",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
