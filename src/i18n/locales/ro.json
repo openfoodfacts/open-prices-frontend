@@ -226,7 +226,7 @@
 		"Contributors": "Colaboratori",
 		"Contributions": "Contribuții",
 		"Confirm": "Confirmați",
-		"Country": "Country",
+		"Country": "Țară",
 		"Countries": "Țări",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -992,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Modificați limba",
-		"CountryLabel": "Country",
+		"CountryLabel": "Țară",
 		"CurrencyLabel": "Valută",
 		"DisplayTitle": "Afişare",
 		"BarcodeScanner": "Barcode scanner",
