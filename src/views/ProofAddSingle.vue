@@ -13,12 +13,7 @@
 
   <v-row>
     <v-col cols="12">
-      <v-alert
-        type="warning"
-        variant="outlined"
-        density="compact"
-        :text="$t('Common.PageNotMaintainedAnymore')"
-      />
+      <DeprecatedAlert />
     </v-col>
   </v-row>
 
@@ -67,6 +62,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   components: {
+    DeprecatedAlert: defineAsyncComponent(() => import('../components/DeprecatedAlert.vue')),
     ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
   },
   data() {

@@ -2,12 +2,7 @@
   <v-form @submit.prevent="createPrice">
     <v-row>
       <v-col cols="12">
-        <v-alert
-          type="warning"
-          variant="outlined"
-          density="compact"
-          :text="$t('Common.PageNotMaintainedAnymore')"
-        />
+        <DeprecatedAlert />
       </v-col>
       <!-- Step 1: product -->
       <v-col cols="12" md="6" lg="4">
@@ -76,6 +71,7 @@ import date_utils from '../utils/date.js'
 
 export default {
   components: {
+    DeprecatedAlert: defineAsyncComponent(() => import('../components/DeprecatedAlert.vue')),
     ProductInputRow: defineAsyncComponent(() => import('../components/ProductInputRow.vue')),
     ProofUploadCard: defineAsyncComponent(() => import('../components/ProofUploadCard.vue')),
     PriceInputRow: defineAsyncComponent(() => import('../components/PriceInputRow.vue')),
