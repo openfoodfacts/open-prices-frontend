@@ -226,7 +226,7 @@
 		"Contributors": "기여자",
 		"Contributions": "기여",
 		"Confirm": "확인",
-		"Country": "Country",
+		"Country": "국가",
 		"Countries": "국가",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -992,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "언어 변경",
-		"CountryLabel": "Country",
+		"CountryLabel": "국가",
 		"CurrencyLabel": "통화",
 		"DisplayTitle": "화면",
 		"BarcodeScanner": "Barcode scanner",
