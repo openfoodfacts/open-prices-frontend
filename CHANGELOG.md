@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.152.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.152.0...v1.152.1) (2026-01-05)
+
+
+### Technical
+
+* **Alerts:** new DeprecatedAlert dedicated component ([#1963](https://github.com/openfoodfacts/open-prices-frontend/issues/1963)) ([4c3b7ab](https://github.com/openfoodfacts/open-prices-frontend/commit/4c3b7ab77e4275081bdc04e9b755513ef50d228c))
+
 ## [1.152.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.151.0...v1.152.0) (2026-01-04)
 
 
