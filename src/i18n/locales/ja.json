@@ -226,7 +226,7 @@
 		"Contributors": "貢献者",
 		"Contributions": "貢献",
 		"Confirm": "確定",
-		"Country": "Country",
+		"Country": "国",
 		"Countries": "国",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -992,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "言語の変更",
-		"CountryLabel": "Country",
+		"CountryLabel": "国",
 		"CurrencyLabel": "通貨",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
