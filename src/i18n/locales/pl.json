@@ -226,7 +226,7 @@
 		"Contributors": "Współtwórcy",
 		"Contributions": "Wkład",
 		"Confirm": "Potwierdź",
-		"Country": "Country",
+		"Country": "Kraj",
 		"Countries": "Kraje",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -992,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Dodawanie cen",
 		"ChangeLanguage": "Zmiana języka",
-		"CountryLabel": "Country",
+		"CountryLabel": "Kraj",
 		"CurrencyLabel": "Waluta",
 		"DisplayTitle": "Wyświetl",
 		"BarcodeScanner": "Barcode scanner",
