@@ -226,7 +226,7 @@
 		"Contributors": "合作者",
 		"Contributions": "貢獻",
 		"Confirm": "确认",
-		"Country": "Country",
+		"Country": "國家",
 		"Countries": "國家地區",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -992,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "國家",
 		"CurrencyLabel": "货币",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
