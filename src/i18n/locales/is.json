@@ -226,7 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Staðfesta",
-		"Country": "Country",
+		"Country": "Land",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -992,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "Land",
 		"CurrencyLabel": "Gjaldmiðill",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
