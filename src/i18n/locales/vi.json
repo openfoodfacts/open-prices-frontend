@@ -226,7 +226,7 @@
 		"Contributors": "Người đóng góp",
 		"Contributions": "Đóng góp",
 		"Confirm": "Xác nhận",
-		"Country": "Country",
+		"Country": "Quốc gia",
 		"Countries": "Quốc gia",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -992,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Thay đổi ngôn ngữ",
-		"CountryLabel": "Country",
+		"CountryLabel": "Quốc gia",
 		"CurrencyLabel": "Tiền tệ",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
