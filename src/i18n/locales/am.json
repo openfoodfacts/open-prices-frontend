@@ -226,7 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "አረጋግጥ",
-		"Country": "Country",
+		"Country": "ሀገር",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -992,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "ሀገር",
 		"CurrencyLabel": "ምንዛሬ",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
