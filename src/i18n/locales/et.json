@@ -63,20 +63,20 @@
 			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
 			"Title": "Proof details"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Lisa mitu hinda"
 	},
 	"AddPriceSingle": {
 		"Create": "Loo",
 		"PriceDetails": {
-			"Discount": "Discount?",
+			"Discount": "On see allahindlusega?",
 			"Label": "Hind",
 			"LabelDiscounted": "Soodushind",
-			"LabelFull": "Full price",
+			"LabelFull": "Täishind",
 			"Proof": "Tõestus",
-			"ProofDateChanged": "Date updated!",
+			"ProofDateChanged": "Kuupäev on uuendatud!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
+			"Title": "Hinna üksikasjad",
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
 			"TakePicture": "Tehke foto",
@@ -88,12 +88,12 @@
 		"ProductInfo": {
 			"CategoryLabel": "Kategooria",
 			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"ProductBarcode": "Toote triipkood",
 			"Scan": "Skanneeri",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "Skaneeri triipkoodi",
 			"ScanBarcodeShort": "Skanneeri",
 			"Type": "Tüüp",
-			"TypeBarcode": "Type a barcode",
+			"TypeBarcode": "Sisesta triipkood",
 			"TypeBarcodeShort": "Tüüp",
 			"SetProduct": "Set a product",
 			"Title": "Product info"
@@ -111,9 +111,9 @@
 			"Date": "Kuupäev",
 			"DateLabel": "Kuupäev",
 			"Find": "Otsi",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Poe asukoht",
+			"SelectLocation": "Vali oma asukoht",
+			"Title": "Kus ja millal?"
 		}
 	},
 	"BarcodeScanner": {
@@ -123,7 +123,7 @@
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Triipkood",
-		"Title": "Type a barcode"
+		"Title": "Sisesta triipkood"
 	},
 	"Challenge": {
 		"Title": "Community challenge",
@@ -143,7 +143,7 @@
 		},
 		"PicturesAddedByYou": "Pictures added by you",
 		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
+		"PricesAdded": "{challenge_title} hinda on lisatud",
 		"PricesByYou": "{challenge_title} prices by you",
 		"PricesAddedByYou": "Sinu lisatud hinnad",
 		"MostRecentContributions": "Most recent contributions",
@@ -171,9 +171,9 @@
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
 		"AddPrice": "Lisa hind",
-		"AddPrices": "Add prices",
+		"AddPrices": "Lisa hindu",
 		"AddNewPrice": "Add a new price",
-		"AddNewPrices": "Add new prices",
+		"AddNewPrices": "Lisa uusi hindu",
 		"AddProof": "Add a proof",
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
@@ -186,9 +186,9 @@
 		"All": "Kõik",
 		"Barcode": "Triipkood",
 		"Barcodes": "Barcodes",
-		"BarcodeScan": "Scan a barcode",
+		"BarcodeScan": "Skaneeri triipkoodi",
 		"BarcodeScanShort": "Skanneeri",
-		"BarcodeType": "Type a barcode",
+		"BarcodeType": "Sisesta triipkood",
 		"BarcodeTypeShort": "Tüüp",
 		"BarcodeInvalid": "Kehtetu vöötkood",
 		"Brand": "Kaubamärk",
@@ -216,7 +216,7 @@
 		"Clear": "Selge",
 		"Close": "Sulge",
 		"Comment": "Comment",
-		"Community": "Community",
+		"Community": "Kogukond",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
 		"Consumption": "Consumption",
@@ -559,8 +559,8 @@
 		"OpenWithTheAssistant": "Open with the assistant"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Liitu meiega!",
+		"HowToUseTheData": "Kasuta andmeid"
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
@@ -647,7 +647,7 @@
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
 		"Proof": "Tõestus",
-		"FullPrice": "Full price",
+		"FullPrice": "Täishind",
 		"UnknownProduct": "Tundmatu toode"
 	},
 	"PriceDelete": {
@@ -662,10 +662,10 @@
 		"Title": "Edit a price"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
+		"Discount": "On see allahindlusega?",
 		"Label": "Hind",
 		"LabelDiscounted": "Soodushind",
-		"LabelFull": "Full price"
+		"LabelFull": "Täishind"
 	},
 	"PriceList": {
 		"LoadMore": "Lae rohkem",
@@ -781,13 +781,13 @@
 			"Title": "Lisa hind"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Lisa hindu"
 		},
 		"AddPriceSingle": {
 			"Title": "Add a single price"
 		},
 		"AddPriceMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Lisa mitu hinda"
 		},
 		"AddProof": {
 			"Title": "Add a proof"
@@ -817,7 +817,7 @@
 			"Title": "Add a single price"
 		},
 		"PriceAddMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Lisa mitu hinda"
 		},
 		"Prices": {
 			"Title": "Hinnad"
@@ -835,7 +835,7 @@
 			"Title": "Kviitung"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Kogukond"
 		},
 		"Contribute": {
 			"Title": "Tee kaastööd"
@@ -926,7 +926,7 @@
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Toote triipkood",
 		"Title": "Otsi"
 	},
 	"ShareButton": {
