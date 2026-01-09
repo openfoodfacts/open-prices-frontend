@@ -178,6 +178,8 @@
 		"AddProofs": "Додайте докази",
 		"AddNewProof": "Додати нове підтвердження",
 		"AddNewProofs": "Додайте нові докази",
+		"AddNewProofPriceTags": "Додати нові цінники",
+		"AddNewProofReceipt": "Додати новий чек",
 		"AddToOFF": "Додати до {name}",
 		"Added": "Додано",
 		"AdditionalInfo": "Додаткова інформація",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Додайте кілька доказів"
 		},
+		"AddProofReceipt": {
+			"Title": "Додати підтвердження (квитанцію)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Додати докази (цінники)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Додати одне підтвердження"
+		},
+		"Receipt": {
+			"Title": "Квитанція"
 		},
 		"Community": {
 			"Title": "Спільнота"

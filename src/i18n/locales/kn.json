@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "ಹೊಸ ಬೆಲೆ ಟ್ಯಾಗ್‌ಗಳನ್ನು ಸೇರಿಸಿ",
+		"AddNewProofReceipt": "ಹೊಸ ರಸೀದಿಯನ್ನು ಸೇರಿಸಿ",
 		"AddToOFF": "Add to {name}",
 		"Added": "ಸೇರಿಸಲಾಗಿದೆ",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "ಪುರಾವೆ ಸೇರಿಸಿ (ರಶೀದಿ)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

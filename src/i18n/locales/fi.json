@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Lisää uusia hintalappuja",
+		"AddNewProofReceipt": "Lisää uusi kuitti",
 		"AddToOFF": "Lisää kohtaan {name}",
 		"Added": "Lisätty",
 		"AdditionalInfo": "Additional information",
@@ -224,7 +226,7 @@
 		"Contributors": "Osallistujat",
 		"Contributions": "Osallistumiset",
 		"Confirm": "Vahvista",
-		"Country": "Country",
+		"Country": "Maa",
 		"Countries": "Maat",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Lisää todiste (kuitti)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Kuitti"
 		},
 		"Community": {
 			"Title": "Community"
@@ -984,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Lisätään hintoja",
 		"ChangeLanguage": "Vaihda kieli",
-		"CountryLabel": "Country",
+		"CountryLabel": "Maa",
 		"CurrencyLabel": "Valuutta",
 		"DisplayTitle": "Näytä",
 		"BarcodeScanner": "Barcode scanner",

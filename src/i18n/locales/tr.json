@@ -178,6 +178,8 @@
 		"AddProofs": "Kanıtları ekle",
 		"AddNewProof": "Yeni bir kanıt ekle",
 		"AddNewProofs": "Yeni kanıtlar ekle",
+		"AddNewProofPriceTags": "Yeni fiyat etiketleri ekle",
+		"AddNewProofReceipt": "Yeni bir fiş ekle",
 		"AddToOFF": "{name}'e ekle",
 		"Added": "Eklendi",
 		"AdditionalInfo": "Ek Bilgiler",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Birden fazla kanıt ekleyin"
 		},
+		"AddProofReceipt": {
+			"Title": "Kanıt ekleyin (makbuz)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Tek bir kanıt ekle"
+		},
+		"Receipt": {
+			"Title": "Makbuz"
 		},
 		"Community": {
 			"Title": "Topluluk"

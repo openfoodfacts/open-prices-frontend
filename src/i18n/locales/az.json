@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Yeni qiymət etiketləri əlavə edin",
+		"AddNewProofReceipt": "Yeni qəbz əlavə edin",
 		"AddToOFF": "Add to {name}",
 		"Added": "Əlavə edilib",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Sübut (qəbz) əlavə edin"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Qəbz"
 		},
 		"Community": {
 			"Title": "Community"

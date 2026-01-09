@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Dodaj nowe metki cenowe",
+		"AddNewProofReceipt": "Dodaj nowy paragon",
 		"AddToOFF": "Add to {name}",
 		"Added": "W dodatku",
 		"AdditionalInfo": "Additional information",
@@ -224,7 +226,7 @@
 		"Contributors": "Współtwórcy",
 		"Contributions": "Wkład",
 		"Confirm": "Potwierdź",
-		"Country": "Country",
+		"Country": "Kraj",
 		"Countries": "Kraje",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Dodaj dowód (paragon)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Rachunek"
 		},
 		"Community": {
 			"Title": "Community"
@@ -984,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Dodawanie cen",
 		"ChangeLanguage": "Zmiana języka",
-		"CountryLabel": "Country",
+		"CountryLabel": "Kraj",
 		"CurrencyLabel": "Waluta",
 		"DisplayTitle": "Wyświetl",
 		"BarcodeScanner": "Barcode scanner",

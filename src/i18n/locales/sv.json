@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Lägg till nya bevis",
+		"AddNewProofPriceTags": "Lägg till nya prislappar",
+		"AddNewProofReceipt": "Lägg till ett nytt kvitto",
 		"AddToOFF": "Lägg till {name}",
 		"Added": "Tillagd",
 		"AdditionalInfo": "Ytterligare information",
@@ -224,7 +226,7 @@
 		"Contributors": "Bidragsgivare",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekräfta",
-		"Country": "Country",
+		"Country": "Land",
 		"Countries": "Länder",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Lägg till flera bevis"
 		},
+		"AddProofReceipt": {
+			"Title": "Lägg till bevis (kvitto)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Kvitto"
 		},
 		"Community": {
 			"Title": "Community"
@@ -984,7 +992,7 @@
 	"UserSettings": {
 		"AddingPrices": "Lägga till priser",
 		"ChangeLanguage": "Byt språk",
-		"CountryLabel": "Country",
+		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Streckkodsläsare",

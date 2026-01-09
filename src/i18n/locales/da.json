@@ -178,6 +178,8 @@
 		"AddProofs": "Tilføj beviser",
 		"AddNewProof": "Tilføj et nyt bevis",
 		"AddNewProofs": "Tilføj nye beviser",
+		"AddNewProofPriceTags": "Tilføj nye prisskilte",
+		"AddNewProofReceipt": "Tilføj en ny kvittering",
 		"AddToOFF": "Føj til {name}",
 		"Added": "Tilføjet",
 		"AdditionalInfo": "Yderligere information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Tilføj flere beviser"
 		},
+		"AddProofReceipt": {
+			"Title": "Tilføj bevis (kvittering)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Tilføj beviser (prismærker)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Tilføj et enkelt bevis"
+		},
+		"Receipt": {
+			"Title": "Kvittering"
 		},
 		"Community": {
 			"Title": "Fællesskab"

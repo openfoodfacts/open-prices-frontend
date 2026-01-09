@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "ନୂତନ ମୂଲ୍ୟ ଟ୍ୟାଗଗୁଡ଼ିକ ଯୋଗ କରନ୍ତୁ",
+		"AddNewProofReceipt": "ଏକ ନୂତନ ରସିଦ ଯୋଗ କରନ୍ତୁ",
 		"AddToOFF": "Add to {name}",
 		"Added": "ଯୋଡାଗଲା",
 		"AdditionalInfo": "Additional information",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "ପ୍ରମାଣ (ରସିଦ) ଯୋଡନ୍ତୁ"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

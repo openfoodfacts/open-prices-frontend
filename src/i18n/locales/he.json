@@ -178,6 +178,8 @@
 		"AddProofs": "הוספת הוכחות",
 		"AddNewProof": "הוספת הוכחה חדשה",
 		"AddNewProofs": "הוספת הוכחות חדשות",
+		"AddNewProofPriceTags": "הוסף תגי מחיר חדשים",
+		"AddNewProofReceipt": "הוסף קבלה חדשה",
 		"AddToOFF": "הוספה אל {name}",
 		"Added": "נוסף",
 		"AdditionalInfo": "מידע נוסף",
@@ -799,6 +801,9 @@
 		"AddProofMultiple": {
 			"Title": "הוספת מגוון הוכחות"
 		},
+		"AddProofReceipt": {
+			"Title": "הוסף הוכחה (קבלה)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +830,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "הוספת הוכחה יחידה"
+		},
+		"Receipt": {
+			"Title": "קבלה"
 		},
 		"Community": {
 			"Title": "קהילה"
