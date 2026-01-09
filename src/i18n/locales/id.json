@@ -657,7 +657,7 @@
 		"Title": "Hapus harga"
 	},
 	"PriceEdit": {
-		"Save": "menyimpan ",
+		"Save": "Simpan",
 		"Success": "Harga diubah!",
 		"Title": "Ubah harga"
 	},
@@ -751,7 +751,7 @@
 	},
 	"ProofEdit": {
 		"Title": "Ubah bukti",
-		"Save": "menyimpan ",
+		"Save": "Simpan",
 		"Success": "Bukti diperbarui!"
 	},
 	"ReceiptAssistant": {
@@ -1008,7 +1008,7 @@
 		"ProductDisplayCategoryTag": "Tampilkan tag kategori",
 		"ProductDisplaySource": "Sumber tampilan",
 		"SideMenuExperimentsDisplay": "Tampilkan 'Eksperimen'",
-		"Save": "menyimpan ",
+		"Save": "Simpan",
 		"Title": "Pengaturan",
 		"TranslationCompletion": "Terjemahan sudah {completion}% selesai.",
 		"TranslationHelp": "Bantu kami menerjemahkan lebih banyak bahasa"
