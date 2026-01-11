@@ -80,6 +80,9 @@ export default {
     username() {
       return this.appStore.user.username
     },
+    userCountry() {
+      return this.appStore.user.country
+    },
     getApiSize() {
       // reduce size to speed up the loading
       if (!this.$vuetify.display.smAndUp) return 2
@@ -97,6 +100,9 @@ export default {
       }
       if (this.currentFilterList.includes('proof__owner')) {
         defaultParams['proof__owner'] = this.username
+      }
+      if (this.currentFilterList.includes('proof_user_country')) {
+        defaultParams['proof__location__osm_address_country_code'] = this.userCountry
       }
       if (this.currentFilterList.includes('tag_prediction_product_exists')) {
         defaultParams['tags__contains'] = 'prediction-product-exists'
