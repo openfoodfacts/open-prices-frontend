@@ -717,9 +717,9 @@
 		"HowToMultipleShort": "Obrázky by měly sdílet stejnou polohu a datum.",
 		"PriceValidationAllow": "Umožnit extrahování cen mých obrázků pomocí AI a ověření komunitou",
 		"PriceTagAllowCommunityValidation": "Umožnit komunitě ověřovat ceny získané umělou inteligencí",
-		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"PriceTagAIWarning": "Umělá inteligence poběží na základě vašich dokladů, aby extrahovala ceny.",
+		"ReceiptAllowAI": "Povolte spuštění umělé inteligence na účtence pro extrakci cen",
+		"ReceiptAIWarning": "Umělá inteligence na vaší účtence rozezná ceny.",
 		"PromoProofPriceTagAddMultiple": "Chcete-li nahrát více cenovek (stejné umístění a datum prodejny), klikněte sem!",
 		"PromoReceiptAssistant": "Experiment: vyzkoušejte nového asistenta pro účtenky, který automaticky extrahuje ceny z vašich účtenek!"
 	},
@@ -755,10 +755,10 @@
 		"Success": "Doklad upraven!"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreated": "Price already created",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
+		"AddNewItem": "Přidat novou položku",
+		"NoItemsFound": "Z účtenky se nepodařilo extrahovat žádné položky, zkuste to prosím znovu.",
+		"PriceAlreadyCreated": "Cena již byla vytvořena",
+		"PriceAlreadyCreatedForItem": "Cena pro položku již byla vytvořena",
 		"PriceReadyToBeAdded": "Price ready to be added",
 		"ReceiptItems": "Položky účtenky",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
