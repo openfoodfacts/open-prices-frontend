@@ -570,8 +570,8 @@
 		"Select": "Vybrat {currency_code}"
 	},
 	"CreateOffProduct": {
-		"SelectUnknownProduct": "Select unknown product",
-		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"SelectUnknownProduct": "Vyberte neznámý produkt",
+		"SelectUnknownProductGuide": "Nebo vyberte neznámý produkt, který chcete přidat",
 		"CountriesWhereSold": "Země prodeje",
 		"CreateNewProduct": "Vytvořte nový produkt",
 		"CreateProduct": "Vytvořit produkt",
@@ -580,7 +580,7 @@
 		"NextProof": "Další důkaz",
 		"PreviousProof": "Předchozí důkaz",
 		"ProductAlreadyExists": "Produkt již existuje",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Jazyk produktu",
 		"ProofNumberOfOutProofs": "Důkaz ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Obchody, kde se prodává",
 		"UseCropModeToAddImage": "Chcete-li přidat obrázek produktu, povolte režim oříznutí pod zkušebním obrázkem a nakreslete kolem produktu obdélník.",
@@ -677,7 +677,7 @@
 		"Number": "Zadejte číslo",
 		"Positive": "Cena nemůže být záporná",
 		"TwoDecimals": "Povolena pouze dvě desetinná místa",
-		"ThreeDecimals": "Only three decimals allowed"
+		"ThreeDecimals": "Jsou povolena pouze tři desetinná místa"
 	},
 	"ProductCard": {
 		"BarcodeLength": "Délka čárového kódu: {length}",
@@ -716,7 +716,7 @@
 		"HowToMultiple": "Všechny obrázky cenovek, které vyberete, by měly sdílet stejnou prodejnu a měly by být pořízeny ve stejný den.",
 		"HowToMultipleShort": "Obrázky by měly sdílet stejnou polohu a datum.",
 		"PriceValidationAllow": "Umožnit extrahování cen mých obrázků pomocí AI a ověření komunitou",
-		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
+		"PriceTagAllowCommunityValidation": "Umožnit komunitě ověřovat ceny získané umělou inteligencí",
 		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
 		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
 		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
