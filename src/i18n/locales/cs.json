@@ -841,7 +841,7 @@
 			"Title": "Přispět"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "Vytvořit produkt"
 		},
 		"Experiments": {
 			"Title": "Experimenty"
@@ -907,7 +907,7 @@
 			"Title": "Asistent pro ověření ceny"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "Asistent účtenek"
 		},
 		"Challenge": {
 			"Title": "Výzva"
@@ -1002,7 +1002,7 @@
 		"LanguageLabel": "Jazyky",
 		"LocationFinder": "Vyhledávač polohy",
 		"LocationDisplayOSMID": "Zobrazit OSM ID",
-		"PriceListDisplay": "Price list diplay",
+		"PriceListDisplay": "Zobrazení ceníku",
 		"PriceValidation": "Ověření ceny",
 		"ProductDisplayBarcode": "Zobrazit čárový kód",
 		"ProductDisplayCategoryTag": "Zobrazit značku kategorie",
