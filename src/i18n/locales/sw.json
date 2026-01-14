@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Onyesha ushahidi kutoka nchi yangu pekee",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Na msimbo pau halali",
 		"FilterPriceTagWithTagPredictionProductExists": "Na bidhaa halali",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Na lebo halali ya kategoria",
