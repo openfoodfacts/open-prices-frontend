@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Khombisa bufakazi lobuvela eveni lami kuphela",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Ngebhakhodi lesemtsetfweni",
 		"FilterPriceTagWithTagPredictionProductExists": "Ngemkhicito losebentako",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Ngethegi yesigaba levumelekile",
