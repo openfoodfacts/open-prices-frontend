@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Dangoswch brawf o fy ngwlad yn unig",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Gyda chod bar dilys",
 		"FilterPriceTagWithTagPredictionProductExists": "Gyda chynnyrch dilys",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Gyda thag categori dilys",
