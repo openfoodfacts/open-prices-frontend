@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "隱藏 30 天前的價格",
 		"FilterProofWithPriceCountHide": "隱藏價格證明",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "僅顯示來自我國的證據",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "帶有有效條碼",
 		"FilterPriceTagWithTagPredictionProductExists": "持有有效產品",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "具有有效的類別標籤",
