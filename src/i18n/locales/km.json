@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "បង្ហាញតែភស្តុតាងពីប្រទេសរបស់ខ្ញុំ",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "ជាមួយនឹងបាកូដត្រឹមត្រូវ។",
 		"FilterPriceTagWithTagPredictionProductExists": "ជាមួយនឹងផលិតផលត្រឹមត្រូវ។",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "ជាមួយនឹងស្លាកប្រភេទត្រឹមត្រូវ។",
