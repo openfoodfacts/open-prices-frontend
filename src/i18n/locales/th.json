@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "แสดงเฉพาะหลักฐานจากประเทศของฉันเท่านั้น",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "มีบาร์โค้ดที่ถูกต้อง",
 		"FilterPriceTagWithTagPredictionProductExists": "ด้วยผลิตภัณฑ์ที่ถูกต้อง",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "มีแท็กหมวดหมู่ที่ถูกต้อง",
