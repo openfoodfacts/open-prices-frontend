@@ -12,7 +12,7 @@
       </v-list-item>
       <v-divider class="d-sm-none" />
       <!-- default filters -->
-      <v-list-item v-for="filter in filterList" :key="filter.key" :slim="true" :prepend-icon="(currentFilterList.includes(filter.key)) ? 'mdi-check-circle' : 'mdi-circle-outline'" :active="currentFilterList.includes(filter.key)" @click="selectFilter(filter.key)">
+      <v-list-item v-for="filter in filterList" :key="filter.key" :slim="true" :prepend-icon="(currentFilterList.includes(filter.key)) ? 'mdi-checkbox-marked' : 'mdi-checkbox-blank-outline'" :active="currentFilterList.includes(filter.key)" @click="selectFilter(filter.key)">
         {{ $t('Common.' + filter.value) }}
       </v-list-item>
       <!-- extra filters -->
