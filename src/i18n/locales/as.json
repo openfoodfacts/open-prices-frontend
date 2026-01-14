@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "মোৰ দেশৰ প্ৰমাণহে দেখুৱাওক",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "এটা বৈধ বাৰক’ডৰ সৈতে",
 		"FilterPriceTagWithTagPredictionProductExists": "এটা বৈধ সামগ্ৰীৰ সৈতে",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "এটা বৈধ শ্ৰেণী টেগৰ সৈতে",
