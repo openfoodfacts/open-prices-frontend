@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Dalilu minnu bɛ bɔ ne ka jamana na, olu dɔrɔn de jira",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Ni barkode bɛ se ka kɛ",
 		"FilterPriceTagWithTagPredictionProductExists": "Ni fura ye min bɛ se ka kɛ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Ni suguya taamasiyɛn bɛ se ka kɛ",
