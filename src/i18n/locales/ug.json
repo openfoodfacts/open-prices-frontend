@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "پەقەت مېنىڭ دۆلىتىمدىكى دەلىللەرنىلا كۆرسىتىڭ",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "ئىناۋەتلىك تاياقچە كودى بىلەن",
 		"FilterPriceTagWithTagPredictionProductExists": "ئۈنۈملۈك مەھسۇلات بىلەن",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "ئىناۋەتلىك سەھىپە بەلگىسى بىلەن",
