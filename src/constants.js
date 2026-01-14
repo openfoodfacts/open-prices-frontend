@@ -190,6 +190,7 @@ export default {
   ],
   PRICE_TAG_FILTER_LIST: [
     { key: 'proof__owner', value: 'FilterPriceTagWithProofOwner' },
+    { key: 'proof_user_country', value: 'FilterPriceTagWithProofUserCountry' },
     // { key: 'tag_prediction_barcode_valid', value: 'FilterPriceTagWithTagPredictionBarcodeValid' },
     { key: 'tag_prediction_product_exists', value: 'FilterPriceTagWithTagPredictionProductExists' },
     // { key: 'tag_prediction_category_tag_valid', value: 'FilterPriceTagWithTagPredictionCategoryTagValid' },
