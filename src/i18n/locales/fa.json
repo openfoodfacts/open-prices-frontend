@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "فقط مدارک مربوط به کشورم را نشان بده",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "دارای بارکد معتبر",
 		"FilterPriceTagWithTagPredictionProductExists": "با محصول معتبر",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "با یک برچسب دسته‌بندی معتبر",
