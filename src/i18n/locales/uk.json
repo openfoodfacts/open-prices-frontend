@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Приховати ціни старші за 30 днів",
 		"FilterProofWithPriceCountHide": "Сховати докази з цінами",
 		"FilterPriceTagWithProofOwner": "Показувати тільки мої докази",
+		"FilterPriceTagWithProofUserCountry": "Показувати лише докази з моєї країни",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "З дійсним штрих-кодом",
 		"FilterPriceTagWithTagPredictionProductExists": "З дійсним продуктом",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "З дійсним тегом категорії",
