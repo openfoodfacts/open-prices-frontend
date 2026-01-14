@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Mostra només proves del meu país",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Amb un codi de barres vàlid",
 		"FilterPriceTagWithTagPredictionProductExists": "Amb un producte vàlid",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Amb una etiqueta de categoria vàlida",
