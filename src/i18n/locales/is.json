@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Sýna aðeins sannanir frá mínu landi",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Með gildum strikamerki",
 		"FilterPriceTagWithTagPredictionProductExists": "Með gildri vöru",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Með gildum flokkunarmerki",
