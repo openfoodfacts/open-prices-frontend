@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Танҳо далелҳоро аз кишвари ман нишон диҳед",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Бо штрих-коди дуруст",
 		"FilterPriceTagWithTagPredictionProductExists": "Бо маҳсулоти дуруст",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Бо теги категорияи дуруст",
