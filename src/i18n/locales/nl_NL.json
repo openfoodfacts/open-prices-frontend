@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Verberg prijzen ouder dan 30 dagen",
 		"FilterProofWithPriceCountHide": "Verberg bewijzen met prijzen",
 		"FilterPriceTagWithProofOwner": "Toon alleen mijn bewijzen",
+		"FilterPriceTagWithProofUserCountry": "Toon alleen bewijsstukken uit mijn land.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Met een geldige streepjescode",
 		"FilterPriceTagWithTagPredictionProductExists": "Met een geldig product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Met een geldige categorielabel",
