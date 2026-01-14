@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "მხოლოდ ჩემი ქვეყნიდან მიღებული მტკიცებულებების ჩვენება",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "მოქმედი შტრიხკოდით",
 		"FilterPriceTagWithTagPredictionProductExists": "მოქმედი პროდუქტით",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "სწორი კატეგორიის თეგით",
