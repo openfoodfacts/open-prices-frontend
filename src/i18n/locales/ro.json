@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Afișează doar dovezi din țara mea",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Cu un cod de bare valid",
 		"FilterPriceTagWithTagPredictionProductExists": "Cu un produs valid",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Cu o etichetă de categorie validă",
