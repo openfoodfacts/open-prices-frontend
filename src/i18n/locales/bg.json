@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Показване само на доказателства от моята страна",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "С валиден баркод",
 		"FilterPriceTagWithTagPredictionProductExists": "С валиден продукт",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "С валиден етикет на категория",
