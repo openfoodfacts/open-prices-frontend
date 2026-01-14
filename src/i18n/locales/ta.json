@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "30 நாட்களுக்கு மேலான விலைகளை மறை",
 		"FilterProofWithPriceCountHide": "விலைகளுடன் கூடிய தயாரிப்புகளை மறை",
 		"FilterPriceTagWithProofOwner": "என்னுடைய ஆதாரங்களை மட்டும் காட்டு.",
+		"FilterPriceTagWithProofUserCountry": "என் நாட்டிலிருந்து மட்டும் சான்றுகளைக் காட்டு.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "செல்லுபடியாகும் பார்கோடுடன்",
 		"FilterPriceTagWithTagPredictionProductExists": "செல்லுபடியாகும் தயாரிப்புடன்",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "செல்லுபடியாகும் வகை குறிச்சொல்லுடன்",
