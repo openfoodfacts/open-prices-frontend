@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Менин өлкөмдөн гана далилдерди көрсөтүү",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Жарактуу штрих-код менен",
 		"FilterPriceTagWithTagPredictionProductExists": "Жарактуу продукт менен",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Жарактуу категория теги менен",
