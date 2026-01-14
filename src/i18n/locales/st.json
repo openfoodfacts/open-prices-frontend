@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Bontša bopaki bo tsoang naheng ea heso feela",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Ka barcode e sebetsang",
 		"FilterPriceTagWithTagPredictionProductExists": "Ka sehlahisoa se nepahetseng",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "E na le tag e nepahetseng ea sehlopha",
