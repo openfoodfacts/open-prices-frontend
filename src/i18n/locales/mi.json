@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Whakaaturia ngā taunakitanga anake mai i tōku whenua",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Me te waeherepae whaimana",
 		"FilterPriceTagWithTagPredictionProductExists": "Me te hua whaimana",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Me te tūtohu kāwai whaimana",
