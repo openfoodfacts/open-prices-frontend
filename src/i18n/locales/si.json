@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "මගේ රටෙන් ලැබෙන සාක්ෂි පමණක් පෙන්වන්න.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "වලංගු තීරු කේතයක් සමඟ",
 		"FilterPriceTagWithTagPredictionProductExists": "වලංගු නිෂ්පාදනයක් සමඟ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "වලංගු ප්‍රවර්ග ටැගයක් සමඟ",
