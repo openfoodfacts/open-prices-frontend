@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "నా దేశం నుండి రుజువులను మాత్రమే చూపించు.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "చెల్లుబాటు అయ్యే బార్‌కోడ్‌తో",
 		"FilterPriceTagWithTagPredictionProductExists": "చెల్లుబాటు అయ్యే ఉత్పత్తితో",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "చెల్లుబాటు అయ్యే కేటగిరీ ట్యాగ్‌తో",
