@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Манӑн ҫӗршывран илсе килнӗ доказательствӑсене ҫеҫ кӑтартӑр",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Тӗрӗс штрих-кодпа",
 		"FilterPriceTagWithTagPredictionProductExists": "Тӗрӗс продуктпа",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Тӗрӗс категори тегӗпе",
