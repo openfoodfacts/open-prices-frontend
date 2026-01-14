@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Nëmme Beweiser aus mengem Land weisen",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Mat engem gültege Barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "Mat engem gültege Produkt",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Mat engem gültege Kategorie-Tag",
