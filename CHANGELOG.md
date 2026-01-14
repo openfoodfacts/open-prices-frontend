@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.153.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.153.0...v1.153.1) (2026-01-14)
+
+
+### Bug Fixes
+
+* **Receipt Assistant:** fix price creation following last PR [#1966](https://github.com/openfoodfacts/open-prices-frontend/issues/1966) ([a21c11b](https://github.com/openfoodfacts/open-prices-frontend/commit/a21c11b2d8afe1b51b1d4f08e44ec5e5fda797a5))
+
 ## [1.153.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.152.0...v1.153.0) (2026-01-14)
 
 
