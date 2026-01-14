@@ -255,9 +255,11 @@ export default {
           price: predictedData.price || null,
           price_per: categoryPredicted ? "KILOGRAM" : null,
           predicted_product_code: predictedData.predicted_product_code || null,
+          // extra fields
+          currency: this.proof.currency,
         }
       } else {
-        // assume schema version 2.0
+        // assume schema version 2.0 and above
         let pricePer = predictedData.price_per
         if (predictedData.type === constants.PRICE_TYPE_CATEGORY && pricePer == 'LITER') {
           // On Open Prices, we use KILOGRAM for category prices, even for liquids
@@ -285,14 +287,13 @@ export default {
           price_per: pricePer,
           predicted_product_code: predictedData.predicted_product_code || null,
           receipt_quantity: receipt_quantity,
-          // discounted price currently do not work with the receipt assistant
-          // as the currency is not part of the ReceiptItem
-          // price_without_discount: predictedData.price_without_discount || null,
-          // discount_type: predictedData.discount_type || null,
-          // price_is_discounted: predictedData.price_is_discounted || null,
+          price_is_discounted: predictedData.price_is_discounted || null,
+          price_without_discount: predictedData.price_without_discount || null,
+          discount_type: predictedData.discount_type || null,
+          // extra fields
+          currency: this.proof.currency,
         }
       }
-
     },
     setTableRowClass(item) {
       // grey out existing prices
