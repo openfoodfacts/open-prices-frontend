@@ -232,18 +232,68 @@ export default {
           item.existingPrice = this.proofPriceExistingList.find(price => price.id === item.price_id)
           Object.assign(item, item.existingPrice)
         } else {
-          const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
-          Object.assign(item, NEW_ITEM, {
-            manuallyAdded: false,
-            product_name: item.predicted_data.product_name,
-            category_tag: categoryPredicted ? item.predicted_data.product : null,
-            price: item.predicted_data.price || null,
-            price_per: categoryPredicted ? "KILOGRAM" : null,
-            predicted_product_code: item.predicted_data.predicted_product_code || null,
-          })
+          Object.assign(item, this.formatReceiptItem(item))
         }
         return item
       })
+    },
+    formatReceiptItem(item) {
+      /// Format the AI prediction into a ReceiptItem ready to be edited/validated
+      const predictedData = item.predicted_data
+
+      // for backward compatibility with schema version 1.0
+      if (item.schema_version === "1.0") {
+        const categoryPredicted = ![null, '', 'unknown', 'other'].includes(item.predicted_data.product)
+        return {
+          type: constants.PRICE_TYPE_PRODUCT,
+          product: null,
+          product_code: '',
+          receipt_quantity: 1,
+          manuallyAdded: false,
+          product_name: predictedData.product_name,
+          category_tag: categoryPredicted ? predictedData.product : null,
+          price: predictedData.price || null,
+          price_per: categoryPredicted ? "KILOGRAM" : null,
+          predicted_product_code: predictedData.predicted_product_code || null,
+          // extra fields
+          currency: this.proof.currency,
+        }
+      } else {
+        // assume schema version 2.0 and above
+        let pricePer = predictedData.price_per
+        if (predictedData.type === constants.PRICE_TYPE_CATEGORY && pricePer == 'LITER') {
+          // On Open Prices, we use KILOGRAM for category prices, even for liquids
+          pricePer = 'KILOGRAM'
+        }
+
+        let receipt_quantity = predictedData.quantity
+        if (receipt_quantity === undefined || receipt_quantity === null) {
+          receipt_quantity = 1
+        }
+        
+        // is predictedData.category_tag is other, set it to null (let the user choose)
+        let category_tag = predictedData.category_tag
+        if (category_tag === 'other') {
+          category_tag = null
+        }
+        return {
+          type: predictedData.type,
+          product: null,
+          product_code: '',
+          manuallyAdded: false,
+          product_name: predictedData.product_name,
+          category_tag: category_tag,
+          price: predictedData.price,
+          price_per: pricePer,
+          predicted_product_code: predictedData.predicted_product_code || null,
+          receipt_quantity: receipt_quantity,
+          price_is_discounted: predictedData.price_is_discounted || null,
+          price_without_discount: predictedData.price_without_discount || null,
+          discount_type: predictedData.discount_type || null,
+          // extra fields
+          currency: this.proof.currency,
+        }
+      }
     },
     setTableRowClass(item) {
       // grey out existing prices
