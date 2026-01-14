@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Sembunyikan harga yang sudah lebih dari 30 hari",
 		"FilterProofWithPriceCountHide": "Sembunyikan bukti dengan harga",
 		"FilterPriceTagWithProofOwner": "Tunjukkan hanya bukti saya",
+		"FilterPriceTagWithProofUserCountry": "Tunjukkan hanya bukti dari negara saya.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Dengan kode batang yang valid",
 		"FilterPriceTagWithTagPredictionProductExists": "Dengan produk yang valid",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Dengan tag kategori yang valid",
