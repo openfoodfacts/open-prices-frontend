@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Näytä vain omasta maastani tulevat todisteet",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Voimassa olevalla viivakoodilla",
 		"FilterPriceTagWithTagPredictionProductExists": "Kelvollisen tuotteen kanssa",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Kelvollinen kategoriatunniste",
