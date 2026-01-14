@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Csak az én országomból származó bizonyítékok megjelenítése",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Érvényes vonalkóddal",
 		"FilterPriceTagWithTagPredictionProductExists": "Érvényes termékkel",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Érvényes kategóriacímkével",
