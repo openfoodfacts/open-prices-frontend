@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Montru nur pruvojn el mia lando",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Kun valida strekkodo",
 		"FilterPriceTagWithTagPredictionProductExists": "Kun valida produkto",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Kun valida kategoria etikedo",
