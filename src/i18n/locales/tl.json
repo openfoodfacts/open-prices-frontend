@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Ipakita lamang ang mga patunay mula sa aking bansa",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Na may wastong barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "Gamit ang isang wastong produkto",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "May wastong tag ng kategorya",
