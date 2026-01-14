@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Skjul priser, der er ældre end 30 dage",
 		"FilterProofWithPriceCountHide": "Skjul beviser med priser",
 		"FilterPriceTagWithProofOwner": "Vis kun mine beviser",
+		"FilterPriceTagWithProofUserCountry": "Vis kun beviser fra mit land",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Med en gyldig stregkode",
 		"FilterPriceTagWithTagPredictionProductExists": "Med et gyldigt produkt",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Med et gyldigt kategoritag",
