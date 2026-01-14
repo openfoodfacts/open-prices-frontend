@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Chỉ hiển thị bằng chứng từ nước tôi",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Với mã vạch hợp lệ",
 		"FilterPriceTagWithTagPredictionProductExists": "Với một sản phẩm hợp lệ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Với thẻ danh mục hợp lệ",
