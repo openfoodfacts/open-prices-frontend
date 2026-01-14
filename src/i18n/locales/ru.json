@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Скрыть цены старше 30 дней",
 		"FilterProofWithPriceCountHide": "Скрыть доказательства с ценами",
 		"FilterPriceTagWithProofOwner": "Показывать только мои доказательства",
+		"FilterPriceTagWithProofUserCountry": "Покажите только доказательства из моей страны.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "С действительным штрихкодом",
 		"FilterPriceTagWithTagPredictionProductExists": "С действительным продуктом",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "С действительным тегом категории",
