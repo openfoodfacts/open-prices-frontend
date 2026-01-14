@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.153.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.152.0...v1.153.0) (2026-01-14)
+
+
+### Features
+
+* **PriceAddValidate:** Add user country filter ([#1967](https://github.com/openfoodfacts/open-prices-frontend/issues/1967)) ([ebe3d9a](https://github.com/openfoodfacts/open-prices-frontend/commit/ebe3d9ac0e9e8ab62c481a3dff04445749986bbc))
+* **Proof Upload:** improve receipt assistant (schema v2) ([#1966](https://github.com/openfoodfacts/open-prices-frontend/issues/1966)) ([2f1f554](https://github.com/openfoodfacts/open-prices-frontend/commit/2f1f554bc4c867697f3fe702b99dfa867c2ebb60))
+
+
+### Technical
+
+* **Alerts:** new DeprecatedAlert dedicated component ([#1963](https://github.com/openfoodfacts/open-prices-frontend/issues/1963)) ([4c3b7ab](https://github.com/openfoodfacts/open-prices-frontend/commit/4c3b7ab77e4275081bdc04e9b755513ef50d228c))
+* **FilterMenu:** replace circle with checkbox (multiselect is possible) ([#1968](https://github.com/openfoodfacts/open-prices-frontend/issues/1968)) ([3cb3b92](https://github.com/openfoodfacts/open-prices-frontend/commit/3cb3b925dd40fd1ee14a7897e8c1425e0e73e47b))
+* **l10n:** New Crowdin translations to review and merge ([#1962](https://github.com/openfoodfacts/open-prices-frontend/issues/1962)) ([72338a3](https://github.com/openfoodfacts/open-prices-frontend/commit/72338a3d819cb509ba09f2e41f45814576c868c6))
+
 ## [1.152.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.151.0...v1.152.0) (2026-01-04)
 
 
