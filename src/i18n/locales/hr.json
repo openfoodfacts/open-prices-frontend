@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Prikaži samo dokaze iz moje zemlje",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "S važećim barkodom",
 		"FilterPriceTagWithTagPredictionProductExists": "S valjanim proizvodom",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "S valjanom oznakom kategorije",
