@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Seall fianais bhon dùthaich agam a-mhàin",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Le còd-barra dligheach",
 		"FilterPriceTagWithTagPredictionProductExists": "Le toradh dligheach",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Le tag roinn-seòrsa dligheach",
