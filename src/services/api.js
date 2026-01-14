@@ -62,6 +62,7 @@ function extraPriceCreateOrUpdateFiltering(data) {
   }
   // generic rules
   if (!filteredData.price_is_discounted) {
+    filteredData.price_is_discounted = false
     filteredData.price_without_discount = null
     filteredData.discount_type = null
   }
