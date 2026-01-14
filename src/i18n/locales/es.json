@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Ocultar precios de más de 30 días",
 		"FilterProofWithPriceCountHide": "Ocultar pruebas con precios",
 		"FilterPriceTagWithProofOwner": "Mostrar solo mis pruebas",
+		"FilterPriceTagWithProofUserCountry": "Mostrar solo pruebas de mi país",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Con un código de barras válido",
 		"FilterPriceTagWithTagPredictionProductExists": "Con un producto válido",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Con una etiqueta de categoría válida",
