@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Tenê delîlên ji welatê min nîşan bide",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Bi barkodek derbasdar",
 		"FilterPriceTagWithTagPredictionProductExists": "Bi hilberek derbasdar",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Bi etîketeke kategoriyê ya derbasdar",
