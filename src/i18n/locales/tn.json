@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Bontsha fela bosupi jo bo tswang kwa nageng ya gaetsho",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Ka khoutu ya bara e e amogelesegang",
 		"FilterPriceTagWithTagPredictionProductExists": "Ka kumo e e amogelesegang",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Ka theke ya setlhopha e e amogelesegang",
