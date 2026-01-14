@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "30日以上経過した価格を非表示にする",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "私の国からの証明のみを表示する",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "有効なバーコード付き",
 		"FilterPriceTagWithTagPredictionProductExists": "有効な製品",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "有効なカテゴリタグ付き",
