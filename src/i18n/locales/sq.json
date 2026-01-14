@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Trego vetëm prova nga vendi im",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Me një barkod të vlefshëm",
 		"FilterPriceTagWithTagPredictionProductExists": "Me një produkt të vlefshëm",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Me një etiketë kategorie të vlefshme",
