@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "ສະແດງຫຼັກຖານຈາກປະເທດຂອງຂ້ອຍເທົ່ານັ້ນ",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "ດ້ວຍບາໂຄດທີ່ຖືກຕ້ອງ",
 		"FilterPriceTagWithTagPredictionProductExists": "ດ້ວຍຜະລິດຕະພັນທີ່ຖືກຕ້ອງ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "ດ້ວຍແທັກໝວດໝູ່ທີ່ຖືກຕ້ອງ",
