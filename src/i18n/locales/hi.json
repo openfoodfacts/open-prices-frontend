@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "केवल मेरे देश के प्रमाण दिखाएँ",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "एक वैध बारकोड के साथ",
 		"FilterPriceTagWithTagPredictionProductExists": "एक वैध उत्पाद के साथ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "एक मान्य श्रेणी टैग के साथ",
