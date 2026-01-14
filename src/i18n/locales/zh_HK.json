@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Add new price tags",
+		"AddNewProofReceipt": "Add a new receipt",
 		"AddToOFF": "Add to {name}",
 		"Added": "Added",
 		"AdditionalInfo": "Additional information",
@@ -224,7 +226,7 @@
 		"Contributors": "合作者",
 		"Contributions": "貢獻",
 		"Confirm": "确认",
-		"Country": "Country",
+		"Country": "國家",
 		"Countries": "國家地區",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Show only proofs from my country",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "With a valid barcode",
 		"FilterPriceTagWithTagPredictionProductExists": "With a valid product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "With a valid category tag",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Add proof (receipt)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "收据"
 		},
 		"Community": {
 			"Title": "Community"
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "國家",
 		"CurrencyLabel": "货币",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

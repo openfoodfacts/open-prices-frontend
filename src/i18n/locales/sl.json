@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Dodaj nove cenovne oznake",
+		"AddNewProofReceipt": "Dodaj nov račun",
 		"AddToOFF": "Add to {name}",
 		"Added": "Dodano",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Prikaži samo dokazila iz moje države",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Z veljavno črtno kodo",
 		"FilterPriceTagWithTagPredictionProductExists": "Z veljavnim izdelkom",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Z veljavno oznako kategorije",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Dodaj dokazilo (račun)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Potrdilo"
 		},
 		"Community": {
 			"Title": "Community"

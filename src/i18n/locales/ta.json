@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "புதிய விலைக் குறிச்சொற்களைச் சேர்க்கவும்",
+		"AddNewProofReceipt": "புதிய ரசீதைச் சேர்க்கவும்",
 		"AddToOFF": "Add to {name}",
 		"Added": "சேர்க்கப்பட்டது",
 		"AdditionalInfo": "கூடுதல் தகவல்",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "30 நாட்களுக்கு மேலான விலைகளை மறை",
 		"FilterProofWithPriceCountHide": "விலைகளுடன் கூடிய தயாரிப்புகளை மறை",
 		"FilterPriceTagWithProofOwner": "என்னுடைய ஆதாரங்களை மட்டும் காட்டு.",
+		"FilterPriceTagWithProofUserCountry": "என் நாட்டிலிருந்து மட்டும் சான்றுகளைக் காட்டு.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "செல்லுபடியாகும் பார்கோடுடன்",
 		"FilterPriceTagWithTagPredictionProductExists": "செல்லுபடியாகும் தயாரிப்புடன்",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "செல்லுபடியாகும் வகை குறிச்சொல்லுடன்",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "பல சான்றுகளைச் சேர்க்கவும்"
 		},
+		"AddProofReceipt": {
+			"Title": "ஆதாரத்தைச் சேர்க்கவும் (ரசீது)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "ரசீது"
 		},
 		"Community": {
 			"Title": "Community"

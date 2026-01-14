@@ -178,6 +178,8 @@
 		"AddProofs": "Adicionar provas",
 		"AddNewProof": "Adicionar um novo comprovante",
 		"AddNewProofs": "Adicionar novas provas",
+		"AddNewProofPriceTags": "Adicionar novas etiquetas de preço",
+		"AddNewProofReceipt": "Adicionar um novo recibo",
 		"AddToOFF": "Adicionar a {name}",
 		"Added": "Adicionado",
 		"AdditionalInfo": "Informação adicional",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Esconder preços com mais de 30 dias",
 		"FilterProofWithPriceCountHide": "Ocultar provas com preços",
 		"FilterPriceTagWithProofOwner": "Mostrar apenas minhas provas",
+		"FilterPriceTagWithProofUserCountry": "Mostrar apenas comprovantes do meu país",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Com um código de barras válido",
 		"FilterPriceTagWithTagPredictionProductExists": "Com um produto válido",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Com uma tag de categoria válida",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Adicionar várias provas"
 		},
+		"AddProofReceipt": {
+			"Title": "Anexe o comprovante (recibo)."
+		},
 		"AddProofsPriceTags": {
 			"Title": "Adicionar comprovantes (etiquetas de preço)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Adicionar um único comprovante"
+		},
+		"Receipt": {
+			"Title": "Recibo"
 		},
 		"Community": {
 			"Title": "Comunidade"

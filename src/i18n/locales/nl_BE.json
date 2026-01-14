@@ -178,6 +178,8 @@
 		"AddProofs": "Bewijzen toevoegen",
 		"AddNewProof": "Voeg een nieuw bewijs toe",
 		"AddNewProofs": "Nieuwe bewijzen toevoegen",
+		"AddNewProofPriceTags": "Nieuwe prijskaartjes toevoegen",
+		"AddNewProofReceipt": "Voeg een nieuwe bon toe",
 		"AddToOFF": "Toevoegen aan {name}",
 		"Added": "Toegevoegd",
 		"AdditionalInfo": "Aanvullende informatie",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Verberg prijzen ouder dan 30 dagen",
 		"FilterProofWithPriceCountHide": "Verberg bewijzen met prijzen",
 		"FilterPriceTagWithProofOwner": "Toon alleen mijn bewijzen",
+		"FilterPriceTagWithProofUserCountry": "Toon alleen bewijsstukken uit mijn land.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Met een geldige streepjescode",
 		"FilterPriceTagWithTagPredictionProductExists": "Met een geldig product",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Met een geldig categorielabel",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Meerdere bewijzen toevoegen"
 		},
+		"AddProofReceipt": {
+			"Title": "Voeg bewijs (bon) toe"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Bewijzen toevoegen (prijskaartjes)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Voeg één bewijs toe"
+		},
+		"Receipt": {
+			"Title": "Bon"
 		},
 		"Community": {
 			"Title": "Gemeenschap"

@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "새 가격표를 추가하세요",
+		"AddNewProofReceipt": "새 영수증을 추가하세요",
 		"AddToOFF": "Add to {name}",
 		"Added": "추가됨",
 		"AdditionalInfo": "Additional information",
@@ -224,7 +226,7 @@
 		"Contributors": "기여자",
 		"Contributions": "기여",
 		"Confirm": "확인",
-		"Country": "Country",
+		"Country": "국가",
 		"Countries": "국가",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "내 나라에서 발급된 증거만 보여주세요",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "유효한 바코드를 사용하여",
 		"FilterPriceTagWithTagPredictionProductExists": "유효한 상품으로",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "유효한 카테고리 태그가 있는 경우",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "증빙 자료(영수증)를 첨부해 주세요."
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "영수증"
 		},
 		"Community": {
 			"Title": "Community"
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "언어 변경",
-		"CountryLabel": "Country",
+		"CountryLabel": "국가",
 		"CurrencyLabel": "통화",
 		"DisplayTitle": "화면",
 		"BarcodeScanner": "Barcode scanner",

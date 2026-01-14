@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Yangi narx belgilari qo'shish",
+		"AddNewProofReceipt": "Yangi chek qo'shish",
 		"AddToOFF": "Add to {name}",
 		"Added": "Qo'shilgan",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Faqat mening mamlakatimdan dalillarni ko'rsatish",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Yaroqli shtrix-kod bilan",
 		"FilterPriceTagWithTagPredictionProductExists": "Yaroqli mahsulot bilan",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Yaroqli toifa yorlig‘i bilan",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Dalil (kvitansiya) qo'shing"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

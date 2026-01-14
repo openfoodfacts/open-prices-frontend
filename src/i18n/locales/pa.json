@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "ਨਵੇਂ ਕੀਮਤ ਟੈਗ ਸ਼ਾਮਲ ਕਰੋ",
+		"AddNewProofReceipt": "ਇੱਕ ਨਵੀਂ ਰਸੀਦ ਸ਼ਾਮਲ ਕਰੋ",
 		"AddToOFF": "Add to {name}",
 		"Added": "ਜੋੜਿਆ ਗਿਆ",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "ਸਿਰਫ਼ ਮੇਰੇ ਦੇਸ਼ ਤੋਂ ਸਬੂਤ ਦਿਖਾਓ",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "ਇੱਕ ਵੈਧ ਬਾਰਕੋਡ ਦੇ ਨਾਲ",
 		"FilterPriceTagWithTagPredictionProductExists": "ਇੱਕ ਵੈਧ ਉਤਪਾਦ ਦੇ ਨਾਲ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "ਇੱਕ ਵੈਧ ਸ਼੍ਰੇਣੀ ਟੈਗ ਦੇ ਨਾਲ",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "ਸਬੂਤ (ਰਸੀਦ) ਸ਼ਾਮਲ ਕਰੋ"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

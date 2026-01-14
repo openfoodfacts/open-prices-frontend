@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Gehitu prezio-etiketa berriak",
+		"AddNewProofReceipt": "Gehitu ordainagiri berri bat",
 		"AddToOFF": "Add to {name}",
 		"Added": "Gehituta",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Erakutsi nire herrialdeko frogak bakarrik",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Barra-kode baliodunarekin",
 		"FilterPriceTagWithTagPredictionProductExists": "Produktu baliodun batekin.",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Kategoria-etiketa baliodun batekin",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Gehitu frogagiria (ordainagiria)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

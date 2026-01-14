@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Ҫӗнӗ хаксем хушӑр",
+		"AddNewProofReceipt": "Ҫӗнӗ квитанци хушӑр",
 		"AddToOFF": "Add to {name}",
 		"Added": "Хушнӑ",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Манӑн ҫӗршывран илсе килнӗ доказательствӑсене ҫеҫ кӑтартӑр",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Тӗрӗс штрих-кодпа",
 		"FilterPriceTagWithTagPredictionProductExists": "Тӗрӗс продуктпа",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Тӗрӗс категори тегӗпе",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Ҫирӗплетӳ (квитанци) хушӑр"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

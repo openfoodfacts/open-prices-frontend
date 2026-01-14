@@ -178,6 +178,8 @@
 		"AddProofs": "Добавить доказательства",
 		"AddNewProof": "Добавить новое доказательство",
 		"AddNewProofs": "Добавить новые доказательства",
+		"AddNewProofPriceTags": "Добавить новые ценники",
+		"AddNewProofReceipt": "Добавить новый чек",
 		"AddToOFF": "Добавить в {name}",
 		"Added": "Добавлен",
 		"AdditionalInfo": "Дополнительная информация",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Скрыть цены старше 30 дней",
 		"FilterProofWithPriceCountHide": "Скрыть доказательства с ценами",
 		"FilterPriceTagWithProofOwner": "Показывать только мои доказательства",
+		"FilterPriceTagWithProofUserCountry": "Покажите только доказательства из моей страны.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "С действительным штрихкодом",
 		"FilterPriceTagWithTagPredictionProductExists": "С действительным продуктом",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "С действительным тегом категории",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Приложите подтверждение (чек)."
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Чек"
 		},
 		"Community": {
 			"Title": "Сообщество"

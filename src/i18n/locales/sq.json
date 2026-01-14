@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Shtoni etiketa të reja çmimesh",
+		"AddNewProofReceipt": "Shto një faturë të re",
 		"AddToOFF": "Add to {name}",
 		"Added": "Shtuar",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Trego vetëm prova nga vendi im",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Me një barkod të vlefshëm",
 		"FilterPriceTagWithTagPredictionProductExists": "Me një produkt të vlefshëm",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Me një etiketë kategorie të vlefshme",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Shto provë (faturë)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

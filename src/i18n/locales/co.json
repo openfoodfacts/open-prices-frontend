@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Aghjunghje novi etichette di prezzu",
+		"AddNewProofReceipt": "Aghjunghje una nova ricevuta",
 		"AddToOFF": "Add to {name}",
 		"Added": "Aggiuntu",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Mustrà solu prove di u mo paese",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Cù un codice à barre validu",
 		"FilterPriceTagWithTagPredictionProductExists": "Cù un pruduttu validu",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Cù una etichetta di categuria valida",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Aghjunghje una prova (ricevuta)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

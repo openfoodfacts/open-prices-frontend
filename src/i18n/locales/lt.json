@@ -178,6 +178,8 @@
 		"AddProofs": "Pridėti įrodymus",
 		"AddNewProof": "Pridėti naują įrodymą",
 		"AddNewProofs": "Pridėti naujų įrodymų",
+		"AddNewProofPriceTags": "Pridėti naujas kainų etiketes",
+		"AddNewProofReceipt": "Pridėti naują kvitą",
 		"AddToOFF": "Add to {name}",
 		"Added": "Pridėta",
 		"AdditionalInfo": "Additional information",
@@ -224,7 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Prisidėjo",
 		"Confirm": "Patvirtinti",
-		"Country": "Country",
+		"Country": "Šalis",
 		"Countries": "Šalys",
 		"CountryCount": "{count} šalys| {count} šalis| {count} šalių",
 		"Crop": "Apkarpyti",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Slėpti įrodymus su kainomis",
 		"FilterPriceTagWithProofOwner": "Rodyti tik mano įrodymus",
+		"FilterPriceTagWithProofUserCountry": "Rodyti tik įrodymus iš mano šalies",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Su galiojančiu brūkšniniu kodu",
 		"FilterPriceTagWithTagPredictionProductExists": "Su galiojančiu produktu",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Su galiojančia kategorijos žyme",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Pridėti kelis įrodymus"
 		},
+		"AddProofReceipt": {
+			"Title": "Pridėti įrodymą (kvitą)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Pridėti vienintelį įrodymą"
+		},
+		"Receipt": {
+			"Title": "Čekis"
 		},
 		"Community": {
 			"Title": "Bendruomenė"
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "Kainų pridėjimas",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "Šalis",
 		"CurrencyLabel": "Valiuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Brūkšninių kodų skaitytuvas",

@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "പുതിയ വില ടാഗുകൾ ചേർക്കുക",
+		"AddNewProofReceipt": "പുതിയൊരു രസീത് ചേർക്കുക",
 		"AddToOFF": "Add to {name}",
 		"Added": "ചേർത്തു",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "എന്റെ രാജ്യത്തു നിന്നുള്ള തെളിവുകൾ മാത്രം കാണിക്കുക.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "സാധുവായ ഒരു ബാർകോഡ് ഉപയോഗിച്ച്",
 		"FilterPriceTagWithTagPredictionProductExists": "സാധുവായ ഒരു ഉൽപ്പന്നം ഉപയോഗിച്ച്",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "സാധുവായ ഒരു വിഭാഗ ടാഗ് ഉപയോഗിച്ച്",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "തെളിവ് ചേർക്കുക (രസീത്)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

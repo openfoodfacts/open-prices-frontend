@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "නව මිල ටැග් එකතු කරන්න",
+		"AddNewProofReceipt": "නව රිසිට්පතක් එක් කරන්න",
 		"AddToOFF": "Add to {name}",
 		"Added": "එකතු කරන ලදී",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "මගේ රටෙන් ලැබෙන සාක්ෂි පමණක් පෙන්වන්න.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "වලංගු තීරු කේතයක් සමඟ",
 		"FilterPriceTagWithTagPredictionProductExists": "වලංගු නිෂ්පාදනයක් සමඟ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "වලංගු ප්‍රවර්ග ටැගයක් සමඟ",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "සාක්ෂි එකතු කරන්න (රිසිට්පත)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

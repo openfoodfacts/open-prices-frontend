@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Żid tikketti tal-prezzijiet ġodda",
+		"AddNewProofReceipt": "Żid riċevuta ġdida",
 		"AddToOFF": "Add to {name}",
 		"Added": "Miżjud",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Uri biss provi minn pajjiżi",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "B'barcode validu",
 		"FilterPriceTagWithTagPredictionProductExists": "Bi prodott validu",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "B'tikketta ta' kategorija valida",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Żid prova (riċevuta)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

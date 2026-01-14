@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Pievienot jaunas cenu zīmes",
+		"AddNewProofReceipt": "Pievienot jaunu kvīti",
 		"AddToOFF": "Add to {name}",
 		"Added": "Pievienots",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Rādīt tikai pierādījumus no manas valsts",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Ar derīgu svītrkodu",
 		"FilterPriceTagWithTagPredictionProductExists": "Ar derīgu produktu",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Ar derīgu kategorijas tagu",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Pievienot apliecinājumu (čeku)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Kvīts"
 		},
 		"Community": {
 			"Title": "Community"

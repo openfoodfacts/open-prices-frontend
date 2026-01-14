@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "নতুন মূল্য ট্যাগ যোগ করুন",
+		"AddNewProofReceipt": "একটি নতুন রসিদ যোগ করুন",
 		"AddToOFF": "Add to {name}",
 		"Added": "যোগ করা হয়েছে",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "শুধুমাত্র আমার দেশের প্রমাণ দেখান",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "একটি বৈধ বারকোড সহ",
 		"FilterPriceTagWithTagPredictionProductExists": "একটি বৈধ পণ্য সহ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "একটি বৈধ বিভাগ ট্যাগ সহ",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "প্রমাণ (রসিদ) যোগ করুন"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "রসিদ"
 		},
 		"Community": {
 			"Title": "Community"

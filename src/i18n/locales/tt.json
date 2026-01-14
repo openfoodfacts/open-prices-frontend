@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Яңа бәя билгеләре өстәгез",
+		"AddNewProofReceipt": "Яңа чек өстәгез",
 		"AddToOFF": "Add to {name}",
 		"Added": "Өстәлде",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Минем илдән дәлилләрне генә күрсәт",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Дөрес штрих-код белән",
 		"FilterPriceTagWithTagPredictionProductExists": "Дөрес продукт белән",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Дөрес категория билгесе белән",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Дәлил (чек) өстәгез"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

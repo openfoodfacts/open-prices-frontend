@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "يېڭى باھا بەلگىلىرىنى قوشۇڭ",
+		"AddNewProofReceipt": "يېڭى تالون قوشۇش",
 		"AddToOFF": "Add to {name}",
 		"Added": "قوشۇلدى",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "پەقەت مېنىڭ دۆلىتىمدىكى دەلىللەرنىلا كۆرسىتىڭ",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "ئىناۋەتلىك تاياقچە كودى بىلەن",
 		"FilterPriceTagWithTagPredictionProductExists": "ئۈنۈملۈك مەھسۇلات بىلەن",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "ئىناۋەتلىك سەھىپە بەلگىسى بىلەن",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "دەلىل (تالون) قوشۇڭ"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

@@ -178,6 +178,8 @@
 		"AddProofs": "Tilføj beviser",
 		"AddNewProof": "Tilføj et nyt bevis",
 		"AddNewProofs": "Tilføj nye beviser",
+		"AddNewProofPriceTags": "Tilføj nye prisskilte",
+		"AddNewProofReceipt": "Tilføj en ny kvittering",
 		"AddToOFF": "Føj til {name}",
 		"Added": "Tilføjet",
 		"AdditionalInfo": "Yderligere information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Skjul priser, der er ældre end 30 dage",
 		"FilterProofWithPriceCountHide": "Skjul beviser med priser",
 		"FilterPriceTagWithProofOwner": "Vis kun mine beviser",
+		"FilterPriceTagWithProofUserCountry": "Vis kun beviser fra mit land",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Med en gyldig stregkode",
 		"FilterPriceTagWithTagPredictionProductExists": "Med et gyldigt produkt",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Med et gyldigt kategoritag",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Tilføj flere beviser"
 		},
+		"AddProofReceipt": {
+			"Title": "Tilføj bevis (kvittering)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Tilføj beviser (prismærker)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Tilføj et enkelt bevis"
+		},
+		"Receipt": {
+			"Title": "Kvittering"
 		},
 		"Community": {
 			"Title": "Fællesskab"

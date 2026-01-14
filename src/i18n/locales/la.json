@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Novas notas pretiorum adde",
+		"AddNewProofReceipt": "Adde novam acceptilationem",
 		"AddToOFF": "Add to {name}",
 		"Added": "Additum",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Sola indicia ex patria mea monstra.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Cum codice lineari valido",
 		"FilterPriceTagWithTagPredictionProductExists": "Cum producto valido",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Cum valido indice categoriae",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Addere probationem (acceptilationem)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

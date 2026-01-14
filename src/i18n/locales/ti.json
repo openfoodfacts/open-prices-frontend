@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "ሓደስቲ ዋጋታት ወስኹ",
+		"AddNewProofReceipt": "ሓድሽ ቅብሊት ወስኸሉ።",
 		"AddToOFF": "Add to {name}",
 		"Added": "ተወሰኸ",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "ካብ ሃገረይ መርትዖታት ጥራይ ኣርእይ",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "ምስ ቅኑዕ ባርኮድ",
 		"FilterPriceTagWithTagPredictionProductExists": "ምስ ቅኑዕ ፍርያት",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "ምስ ቅኑዕ ናይ ምድብ መለለዪ",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "መርትዖ (ቅብሊት) ምውሳኽ"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

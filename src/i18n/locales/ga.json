@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Cuir clibeanna praghais nua leis",
+		"AddNewProofReceipt": "Cuir admháil nua leis",
 		"AddToOFF": "Add to {name}",
 		"Added": "Cuireadh leis",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Taispeáin cruthúnais ó mo thír féin amháin",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Le cód barra bailí",
 		"FilterPriceTagWithTagPredictionProductExists": "Le táirge bailí",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Le clib chatagóire bailí",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Cuir cruthúnas (admháil) leis"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

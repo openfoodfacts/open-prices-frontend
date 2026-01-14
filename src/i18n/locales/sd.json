@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "نوان قيمت ٽيگ شامل ڪريو",
+		"AddNewProofReceipt": "نئين رسيد شامل ڪريو",
 		"AddToOFF": "Add to {name}",
 		"Added": "شامل ڪيو ويو",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "صرف منهنجي ملڪ مان ثبوت ڏيکاريو.",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "هڪ صحيح بارڪوڊ سان",
 		"FilterPriceTagWithTagPredictionProductExists": "هڪ صحيح پراڊڪٽ سان",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "هڪ صحيح ڪيٽيگري ٽيگ سان",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "ثبوت شامل ڪريو (رسيد)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

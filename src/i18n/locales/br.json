@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Ouzhpennañ tikedennoù prizioù nevez",
+		"AddNewProofReceipt": "Ouzhpennañ ur resev nevez",
 		"AddToOFF": "Add to {name}",
 		"Added": "Ouzhpennet",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Diskouez prouennoù eus ma bro hepken",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Gant ur c'hod barrennoù reizh",
 		"FilterPriceTagWithTagPredictionProductExists": "Gant ur produ reizh",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Gant un dikedenn rummad reizh",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Ouzhpennañ ar brouenn (resevet)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

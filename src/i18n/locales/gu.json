@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "નવા ભાવ ટૅગ્સ ઉમેરો",
+		"AddNewProofReceipt": "નવી રસીદ ઉમેરો",
 		"AddToOFF": "Add to {name}",
 		"Added": "ઉમેર્યું",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "ફક્ત મારા દેશના પુરાવા બતાવો",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "માન્ય બારકોડ સાથે",
 		"FilterPriceTagWithTagPredictionProductExists": "માન્ય ઉત્પાદન સાથે",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "માન્ય શ્રેણી ટૅગ સાથે",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "પુરાવો (રસીદ) ઉમેરો"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

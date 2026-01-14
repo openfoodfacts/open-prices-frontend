@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Kenya li-tag tse ncha tsa theko",
+		"AddNewProofReceipt": "Kenya rasiti e ncha",
 		"AddToOFF": "Add to {name}",
 		"Added": "E kentsoe",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Bontša bopaki bo tsoang naheng ea heso feela",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Ka barcode e sebetsang",
 		"FilterPriceTagWithTagPredictionProductExists": "Ka sehlahisoa se nepahetseng",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "E na le tag e nepahetseng ea sehlopha",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Kenya bopaki (rasiti)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

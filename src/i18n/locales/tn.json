@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Tsenya ditheke tse dintšhwa tsa ditlhwatlhwa",
+		"AddNewProofReceipt": "Tsenya rasiti e ntšhwa",
 		"AddToOFF": "Add to {name}",
 		"Added": "Go tsentswe",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Bontsha fela bosupi jo bo tswang kwa nageng ya gaetsho",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Ka khoutu ya bara e e amogelesegang",
 		"FilterPriceTagWithTagPredictionProductExists": "Ka kumo e e amogelesegang",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Ka theke ya setlhopha e e amogelesegang",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Tsenya bosupi (rasiti)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Legg til nye pristagger",
+		"AddNewProofReceipt": "Legg til ny kvittering",
 		"AddToOFF": "Add to {name}",
 		"Added": "Lagt",
 		"AdditionalInfo": "Additional information",
@@ -224,7 +226,7 @@
 		"Contributors": "Bidragsytere",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekreft",
-		"Country": "Country",
+		"Country": "Land",
 		"Countries": "Land",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Vis kun bevis fra mitt land",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Med en gyldig strekkode",
 		"FilterPriceTagWithTagPredictionProductExists": "Med et gyldig produkt",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Med en gyldig kategori-tag",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Legg til bevis (kvittering)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Kvittering"
 		},
 		"Community": {
 			"Title": "Community"
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Bytt språk",
-		"CountryLabel": "Country",
+		"CountryLabel": "Land",
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

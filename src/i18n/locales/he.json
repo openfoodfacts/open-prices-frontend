@@ -178,6 +178,8 @@
 		"AddProofs": "הוספת הוכחות",
 		"AddNewProof": "הוספת הוכחה חדשה",
 		"AddNewProofs": "הוספת הוכחות חדשות",
+		"AddNewProofPriceTags": "הוסף תגי מחיר חדשים",
+		"AddNewProofReceipt": "הוסף קבלה חדשה",
 		"AddToOFF": "הוספה אל {name}",
 		"Added": "נוסף",
 		"AdditionalInfo": "מידע נוסף",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "הסתרת מחירים ישנים מ־30 יום",
 		"FilterProofWithPriceCountHide": "הסתרת הוכחות עם מחירים",
 		"FilterPriceTagWithProofOwner": "הצגת ההוכחות שלי בלבד",
+		"FilterPriceTagWithProofUserCountry": "הצג רק הוכחות מהמדינה שלי",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "עם ברקוד תקף",
 		"FilterPriceTagWithTagPredictionProductExists": "עם מוצר תקין",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "עם תגית קטגוריה תקינה",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "הוספת מגוון הוכחות"
 		},
+		"AddProofReceipt": {
+			"Title": "הוסף הוכחה (קבלה)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "הוספת הוכחה יחידה"
+		},
+		"Receipt": {
+			"Title": "קבלה"
 		},
 		"Community": {
 			"Title": "קהילה"

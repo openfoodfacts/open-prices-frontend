@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Aw bɛ sɔngɔ sɛbɛn kura fara a kan",
+		"AddNewProofReceipt": "Aw bɛ resipi kura dɔ fara a kan",
 		"AddToOFF": "Add to {name}",
 		"Added": "A farala a kan",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Dalilu minnu bɛ bɔ ne ka jamana na, olu dɔrɔn de jira",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Ni barkode bɛ se ka kɛ",
 		"FilterPriceTagWithTagPredictionProductExists": "Ni fura ye min bɛ se ka kɛ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Ni suguya taamasiyɛn bɛ se ka kɛ",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Dalilu (sɛbɛn) fara a kan ."
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

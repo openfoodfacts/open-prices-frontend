@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "नयाँ मूल्य ट्यागहरू थप्नुहोस्",
+		"AddNewProofReceipt": "नयाँ रसिद थप्नुहोस्",
 		"AddToOFF": "Add to {name}",
 		"Added": "थपियो",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "मेरो देशबाट मात्र प्रमाणहरू देखाउनुहोस्।",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "मान्य बारकोड भएको",
 		"FilterPriceTagWithTagPredictionProductExists": "मान्य उत्पादनको साथ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "मान्य कोटी ट्याग भएको",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "प्रमाण (रसिद) थप्नुहोस्"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

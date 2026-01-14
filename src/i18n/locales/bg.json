@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Добавяне на нови етикети с цени",
+		"AddNewProofReceipt": "Добавяне на нова касова бележка",
 		"AddToOFF": "Add to {name}",
 		"Added": "Добавено",
 		"AdditionalInfo": "Additional information",
@@ -224,7 +226,7 @@
 		"Contributors": "Сътрудници",
 		"Contributions": "Приноси",
 		"Confirm": "Потвърди",
-		"Country": "Country",
+		"Country": "Страна",
 		"Countries": "Страни",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Показване само на доказателства от моята страна",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "С валиден баркод",
 		"FilterPriceTagWithTagPredictionProductExists": "С валиден продукт",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "С валиден етикет на категория",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Добавете доказателство (касова бележка)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Разписка"
 		},
 		"Community": {
 			"Title": "Community"
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Промяна на езика",
-		"CountryLabel": "Country",
+		"CountryLabel": "Страна",
 		"CurrencyLabel": "Валута",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

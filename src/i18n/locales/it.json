@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Aggiungi nuovi cartellini dei prezzi",
+		"AddNewProofReceipt": "Aggiungi una nuova ricevuta",
 		"AddToOFF": "Aggiungi a {name}",
 		"Added": "Aggiunto",
 		"AdditionalInfo": "Informazioni aggiuntive",
@@ -224,7 +226,7 @@
 		"Contributors": "Contributori",
 		"Contributions": "Contributi",
 		"Confirm": "Conferma",
-		"Country": "Country",
+		"Country": "Paese",
 		"Countries": "Paesi",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Nascondi i prezzi più vecchi di 30 giorni",
 		"FilterProofWithPriceCountHide": "Nascondi le prove con i prezzi",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Mostra solo le prove del mio paese",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Con un codice a barre valido",
 		"FilterPriceTagWithTagPredictionProductExists": "Con un prodotto valido",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Con un tag di categoria valido",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Aggiungi prova (ricevuta)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Ricevuta"
 		},
 		"Community": {
 			"Title": "Community"
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "Aggiunta di prezzi",
 		"ChangeLanguage": "Cambia lingua",
-		"CountryLabel": "Country",
+		"CountryLabel": "Paese",
 		"CurrencyLabel": "Moneta",
 		"DisplayTitle": "Mostra",
 		"BarcodeScanner": "Barcode scanner",

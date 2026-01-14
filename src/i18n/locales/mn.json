@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Шинэ үнийн шошго нэмэх",
+		"AddNewProofReceipt": "Шинэ баримт нэмэх",
 		"AddToOFF": "Add to {name}",
 		"Added": "Нэмсэн",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Зөвхөн миний улсаас нотлох баримтуудыг харуулах",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Хүчинтэй бар кодтой",
 		"FilterPriceTagWithTagPredictionProductExists": "Хүчин төгөлдөр бүтээгдэхүүнтэй",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Хүчинтэй ангиллын шошготой",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Нотлох баримт нэмэх (баримт)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

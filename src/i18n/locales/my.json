@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "ဈေးနှုန်းအသစ်များထည့်ပါ",
+		"AddNewProofReceipt": "ပြေစာအသစ်ထည့်ပါ",
 		"AddToOFF": "Add to {name}",
 		"Added": "ထပ်ပြောပါသည်။",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "ကျွန်တော့်နိုင်ငံက အထောက်အထားတွေကိုပဲ ပြပါ။",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "မှန်ကန်သော ဘားကုဒ်ဖြင့်",
 		"FilterPriceTagWithTagPredictionProductExists": "တရားဝင်ထုတ်ကုန်တစ်ခုနှင့်အတူ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "မှန်ကန်သော အမျိုးအစား တဂ်ဖြင့်",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "အထောက်အထား (ပြေစာ) ထည့်ပါ"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

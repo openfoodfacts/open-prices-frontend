@@ -178,6 +178,8 @@
 		"AddProofs": "Adicionar comprovativos",
 		"AddNewProof": "Adicione um novo comprovativo",
 		"AddNewProofs": "Adicionar novos comprovativos",
+		"AddNewProofPriceTags": "Adicionar novas etiquetas de preço",
+		"AddNewProofReceipt": "Adicionar um novo recibo",
 		"AddToOFF": "Adicionar a {name}",
 		"Added": "Adicionado",
 		"AdditionalInfo": "Informação adicional",
@@ -224,7 +226,7 @@
 		"Contributors": "Colaboradores",
 		"Contributions": "Contribuições",
 		"Confirm": "Confirmar",
-		"Country": "Country",
+		"Country": "País",
 		"Countries": "Países",
 		"CountryCount": "{count} países | {count} país | {count} países",
 		"Crop": "Recortar",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Ocultar preços com mais de 30 dias",
 		"FilterProofWithPriceCountHide": "Ocultar comprovativos com preços",
 		"FilterPriceTagWithProofOwner": "Mostrar apenas os meus comprovativos",
+		"FilterPriceTagWithProofUserCountry": "Mostrar apenas comprovativos do meu país",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Com um código de barras válido",
 		"FilterPriceTagWithTagPredictionProductExists": "Com um produto válido",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Com uma etiqueta de categoria válida",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Adicionar vários comprovativos"
 		},
+		"AddProofReceipt": {
+			"Title": "Anexe o comprovativo (recibo)."
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Adicionar um único comprovativo"
+		},
+		"Receipt": {
+			"Title": "Talão"
 		},
 		"Community": {
 			"Title": "Comunidade"
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "A adicionar preços",
 		"ChangeLanguage": "Alterar idioma",
-		"CountryLabel": "Country",
+		"CountryLabel": "País",
 		"CurrencyLabel": "Moeda",
 		"DisplayTitle": "Mostrar",
 		"BarcodeScanner": "Leitor de código de barras",

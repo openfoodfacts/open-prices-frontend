@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Cuir tagaichean prìsean ùra ris",
+		"AddNewProofReceipt": "Cuir cuidhteas ùr ris",
 		"AddToOFF": "Add to {name}",
 		"Added": "Air a chur ris",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Seall fianais bhon dùthaich agam a-mhàin",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Le còd-barra dligheach",
 		"FilterPriceTagWithTagPredictionProductExists": "Le toradh dligheach",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Le tag roinn-seòrsa dligheach",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Cuir dearbhadh ris (cuidhteas)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

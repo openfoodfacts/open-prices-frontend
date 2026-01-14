@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "დაამატეთ ახალი ფასების ეტიკეტები",
+		"AddNewProofReceipt": "ახალი ქვითრის დამატება",
 		"AddToOFF": "Add to {name}",
 		"Added": "დამატებულია",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "მხოლოდ ჩემი ქვეყნიდან მიღებული მტკიცებულებების ჩვენება",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "მოქმედი შტრიხკოდით",
 		"FilterPriceTagWithTagPredictionProductExists": "მოქმედი პროდუქტით",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "სწორი კატეგორიის თეგით",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "დაამატეთ დამადასტურებელი საბუთი (ქვითარი)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

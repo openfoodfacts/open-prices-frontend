@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "اضافه کردن برچسب‌های قیمت جدید",
+		"AddNewProofReceipt": "رسید جدید اضافه کنید",
 		"AddToOFF": "Add to {name}",
 		"Added": "اضافه شد",
 		"AdditionalInfo": "Additional information",
@@ -217,7 +219,7 @@
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
-		"Consumption": "Consumption",
+		"Consumption": "مصرف",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Contribute",
@@ -239,8 +241,8 @@
 		"DisplayList": "List",
 		"DisplayPriceList": "List",
 		"DisplayTable": "Table",
-		"DisplayMap": "Map",
-		"DisplayPriceMap": "Map",
+		"DisplayMap": "نقشه",
+		"DisplayPriceMap": "نقشه",
 		"DisplayPriceChart": "Chart",
 		"Done": "Done",
 		"Error": "Error",
@@ -281,12 +283,12 @@
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeSecondHand": "Second hand",
-		"DiscountTypeOther": "Other",
+		"DiscountTypeOther": "دیگر",
 		"Example": "Example",
 		"Examples": "Examples",
-		"ExampleWithColon": "Example:",
+		"ExampleWithColon": "مثال:",
 		"ExampleWithColonAndValue": "Example: {value}",
-		"ExamplesWithColon": "Examples:",
+		"ExamplesWithColon": "مثال‌ها:",
 		"ExamplesWithColonAndValue": "Examples: {value}",
 		"Edit": "Edit",
 		"End": "End",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "فقط مدارک مربوط به کشورم را نشان بده",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "دارای بارکد معتبر",
 		"FilterPriceTagWithTagPredictionProductExists": "با محصول معتبر",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "با یک برچسب دسته‌بندی معتبر",
@@ -307,7 +310,7 @@
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
 		"FAQ": "FAQ",
-		"FrequentlyAskedQuestions": "Frequently asked questions",
+		"FrequentlyAskedQuestions": "سوالات متداول",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Help",
@@ -324,7 +327,7 @@
 		"LinkCopySuccess": "Link copied",
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
-		"Map": "Map",
+		"Map": "نقشه",
 		"Miscellaneous": "Miscellaneous",
 		"MobileApp": "Mobile app",
 		"Moderation": "اعتدال",
@@ -334,7 +337,7 @@
 		"ModerationFlagReasonWrongProduct": "محصول اشتباه",
 		"ModerationFlagReasonWrongLocation": "مکان اشتباه",
 		"ModerationFlagReasonWrongDate": "تاریخ اشتباه",
-		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagReasonOther": "دیگر",
 		"ModerationFlagCreateSuccess": "ممنون از گزارشتون!",
 		"ModerationFlagStatusOpen": "باز",
 		"ModerationFlagStatusClosed": "بسته",
@@ -365,7 +368,7 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
-		"Other": "Other",
+		"Other": "دیگر",
 		"OtherContributions": "Other contributions",
 		"PageNotMaintainedAnymore": "این صفحه دیگر نگهداری نمی‌شود.",
 		"PersonalInfo": "Personal information",
@@ -399,7 +402,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "قیمت‌های اضافه شده توسط شما",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "حریم خصوصی",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "محصول موجود نیست",
@@ -430,7 +433,7 @@
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Re-open": "دوباره باز کنید",
-		"ReportProblem": "Report a problem",
+		"ReportProblem": "گزارش مشکل",
 		"Resolved": "حل شد",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -444,11 +447,11 @@
 		"SignOut": "Sign out",
 		"SideMenu": "Side menu",
 		"Share": "اشتراک",
-		"Source": "Source",
+		"Source": "منبع",
 		"SourceCode": "Source code",
-		"Start": "Start",
+		"Start": "شروع",
 		"Stats": "Stats",
-		"Status": "Status",
+		"Status": "وضعیت",
 		"SuggestedBarcode": "بارکد پیشنهادی:",
 		"Summary": "چکیده",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -467,7 +470,7 @@
 		"TopCountries": "کشورهای برتر",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "مجموع",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "امتحانش کن.",
@@ -513,7 +516,7 @@
 		"No": "خير",
 		"Food": "Food",
 		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Beauty": "زیبایی"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -684,11 +687,11 @@
 		"BrandMissing": "Brand missing",
 		"BrandTotal": "{count} brands",
 		"Categories": "دسته‌‎بندی‎ها",
-		"CategoriesLower": "categories",
+		"CategoriesLower": "دسته‌ها",
 		"CategoriesMissing": "Category missing",
 		"CategoryTotal": "{count} categories",
 		"Labels": "Labels",
-		"LabelsLower": "labels",
+		"LabelsLower": "برچسب‌ها",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
 		"InvalidBarcode": "Invalid barcode",
@@ -745,7 +748,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "حریم خصوصی"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "مدرک (رسید) اضافه کنید"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"
@@ -945,7 +954,7 @@
 		"Products": "Products",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "مجموع",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",

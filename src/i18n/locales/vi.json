@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Thêm thẻ giá mới",
+		"AddNewProofReceipt": "Thêm biên lai mới",
 		"AddToOFF": "Add to {name}",
 		"Added": "Đã thêm",
 		"AdditionalInfo": "Additional information",
@@ -224,7 +226,7 @@
 		"Contributors": "Người đóng góp",
 		"Contributions": "Đóng góp",
 		"Confirm": "Xác nhận",
-		"Country": "Country",
+		"Country": "Quốc gia",
 		"Countries": "Quốc gia",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Chỉ hiển thị bằng chứng từ nước tôi",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Với mã vạch hợp lệ",
 		"FilterPriceTagWithTagPredictionProductExists": "Với một sản phẩm hợp lệ",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Với thẻ danh mục hợp lệ",
@@ -399,7 +402,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "Giá do bạn thêm vào",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Sự riêng tư",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Sản phẩm bị thiếu",
@@ -430,7 +433,7 @@
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Re-open": "Mở lại",
-		"ReportProblem": "Report a problem",
+		"ReportProblem": "Báo cáo sự cố",
 		"Resolved": "Đã giải quyết",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -467,7 +470,7 @@
 		"TopCountries": "Các quốc gia hàng đầu",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "Tổng cộng",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "Hãy thử xem",
@@ -513,7 +516,7 @@
 		"No": "Không",
 		"Food": "Đồ ăn",
 		"PetFood": "Thức ăn cho thú cưng",
-		"Beauty": "Beauty"
+		"Beauty": "Sắc đẹp"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -745,7 +748,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Sự riêng tư"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Thêm bằng chứng (hóa đơn)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Biên lai"
 		},
 		"Community": {
 			"Title": "Community"
@@ -945,7 +954,7 @@
 		"Products": "Sản phẩm",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "Tổng cộng",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Thay đổi ngôn ngữ",
-		"CountryLabel": "Country",
+		"CountryLabel": "Quốc gia",
 		"CurrencyLabel": "Tiền tệ",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

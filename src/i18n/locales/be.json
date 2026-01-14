@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Дадаць новыя цэннікі",
+		"AddNewProofReceipt": "Дадаць новую квітанцыю",
 		"AddToOFF": "Add to {name}",
 		"Added": "Дададзена",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Паказаць толькі доказы з маёй краіны",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "З сапраўдным штрых-кодам",
 		"FilterPriceTagWithTagPredictionProductExists": "З сапраўдным прадуктам",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "З сапраўдным тэгам катэгорыі",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Дадаць пацвярджэнне (квітанцыю)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Квітанцыя"
 		},
 		"Community": {
 			"Title": "Community"

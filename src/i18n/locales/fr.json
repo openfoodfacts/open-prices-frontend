@@ -178,6 +178,8 @@
 		"AddProofs": "Ajouter des preuves",
 		"AddNewProof": "Ajouter une nouvelle preuve",
 		"AddNewProofs": "Ajouter de nouvelles preuves",
+		"AddNewProofPriceTags": "Ajouter de nouvelles étiquettes de prix",
+		"AddNewProofReceipt": "Ajouter un nouveau reçu",
 		"AddToOFF": "Ajouter à {name}",
 		"Added": "Ajouté",
 		"AdditionalInfo": "Informations supplémentaires",
@@ -224,7 +226,7 @@
 		"Contributors": "Contributeurs",
 		"Contributions": "Contributions",
 		"Confirm": "Confirmer",
-		"Country": "Country",
+		"Country": "Pays",
 		"Countries": "Pays",
 		"CountryCount": "{count} pays | {count} pays | {count} pays",
 		"Crop": "Recadrer",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Masquer les prix datant de plus de 30 jours",
 		"FilterProofWithPriceCountHide": "Masquer les preuves qui ont un prix",
 		"FilterPriceTagWithProofOwner": "Afficher uniquement mes preuves",
+		"FilterPriceTagWithProofUserCountry": "Ne montrez que des preuves provenant de mon pays",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Avec un code-barres valide",
 		"FilterPriceTagWithTagPredictionProductExists": "Avec un produit valide",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Avec une balise de catégorie valide",
@@ -491,13 +494,13 @@
 		"Users": "Utilisateurs",
 		"UserCount": "{count} utilisateurs | {count} utilisateur | {count} utilisateurs",
 		"UserContributorCount": "{count} contributeurs | {count} contributeur | {count} contributeurs",
-		"UserIsModerator": "You are a moderator",
-		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
-		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
-		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
-		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
-		"UserIsNotPriceOwner": "You are not the price owner",
-		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserIsModerator": "Vous êtes un modérateur",
+		"UserIsModeratorCanEditPrice": "Vous pouvez modifier ce prix car vous êtes un modérateur",
+		"UserIsModeratorCanDeletePrice": "Vous pouvez supprimer ce prix car vous êtes un modérateur",
+		"UserIsModeratorCanEditProof": "Vous pouvez modifier cette preuve car vous êtes un modérateur",
+		"UserIsModeratorCanDeleteProof": "Vous pouvez supprimer cette preuve car vous êtes un modérateur",
+		"UserIsNotPriceOwner": "Vous n'êtes pas le propriétaire du prix",
+		"UserIsNotProofOwner": "Vous n'êtes pas le propriétaire de la preuve",
 		"UserNotFound": "Utilisateur introuvable",
 		"Validate": "Valider",
 		"ValidatePrices": "Valider des prix",
@@ -568,8 +571,8 @@
 		"Select": "Sélectionner {currency_code}"
 	},
 	"CreateOffProduct": {
-		"SelectUnknownProduct": "Select unknown product",
-		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"SelectUnknownProduct": "Sélectionner un produit inconnu",
+		"SelectUnknownProductGuide": "Ou sélectionnez un produit inconnu à ajouter",
 		"CountriesWhereSold": "Pays de vente",
 		"CreateNewProduct": "Créer un nouveau produit",
 		"CreateProduct": "Créer un produit",
@@ -755,7 +758,7 @@
 	"ReceiptAssistant": {
 		"AddNewItem": "Ajouter un nouvel article",
 		"NoItemsFound": "Aucun élément n'a pu être extrait du reçu, veuillez réessayer.",
-		"PriceAlreadyCreated": "Price already created",
+		"PriceAlreadyCreated": "Prix déjà créé",
 		"PriceAlreadyCreatedForItem": "Prix déjà créé pour l'article",
 		"PriceReadyToBeAdded": "Prix prêt à être ajouté",
 		"ReceiptItems": "Articles reçus",
@@ -799,8 +802,11 @@
 		"AddProofMultiple": {
 			"Title": "Ajouter plusieurs preuves"
 		},
+		"AddProofReceipt": {
+			"Title": "Ajouter une preuve (reçu)"
+		},
 		"AddProofsPriceTags": {
-			"Title": "Add proofs (price tags)"
+			"Title": "Ajouter des preuves (étiquettes de prix)"
 		},
 		"Locations": {
 			"Title": "Lieux"
@@ -826,6 +832,9 @@
 		"ProofAddSingle": {
 			"Title": "Ajouter une seule preuve"
 		},
+		"Receipt": {
+			"Title": "Ticket de caisse"
+		},
 		"Community": {
 			"Title": "Communauté"
 		},
@@ -833,7 +842,7 @@
 			"Title": "Contribuer"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "Créer un produit"
 		},
 		"Experiments": {
 			"Title": "Expérimentations"
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "Ajout de prix",
 		"ChangeLanguage": "Changer la langue",
-		"CountryLabel": "Country",
+		"CountryLabel": "Pays",
 		"CurrencyLabel": "Devise",
 		"DisplayTitle": "Afficher",
 		"BarcodeScanner": "Lecteur de code-barres",

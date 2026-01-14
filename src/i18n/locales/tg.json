@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Нархҳои нав илова кунед",
+		"AddNewProofReceipt": "Илова кардани квитансияи нав",
 		"AddToOFF": "Add to {name}",
 		"Added": "Илова карда шуд",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Танҳо далелҳоро аз кишвари ман нишон диҳед",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Бо штрих-коди дуруст",
 		"FilterPriceTagWithTagPredictionProductExists": "Бо маҳсулоти дуруст",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Бо теги категорияи дуруст",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Илова кардани далел (расми коғазӣ)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "新しい値札を追加する",
+		"AddNewProofReceipt": "新しい領収書を追加する",
 		"AddToOFF": "{name} に追加",
 		"Added": "追加した",
 		"AdditionalInfo": "Additional information",
@@ -224,7 +226,7 @@
 		"Contributors": "貢献者",
 		"Contributions": "貢献",
 		"Confirm": "確定",
-		"Country": "Country",
+		"Country": "国",
 		"Countries": "国",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "30日以上経過した価格を非表示にする",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "私の国からの証明のみを表示する",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "有効なバーコード付き",
 		"FilterPriceTagWithTagPredictionProductExists": "有効な製品",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "有効なカテゴリタグ付き",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "証明書（領収書）を追加する"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "領収書"
 		},
 		"Community": {
 			"Title": "Community"
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "言語の変更",
-		"CountryLabel": "Country",
+		"CountryLabel": "国",
 		"CurrencyLabel": "通貨",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

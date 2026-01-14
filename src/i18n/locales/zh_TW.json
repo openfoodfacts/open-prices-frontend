@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "新增新的價格標籤",
+		"AddNewProofReceipt": "新增收據",
 		"AddToOFF": "添加到 {name}",
 		"Added": "額外",
 		"AdditionalInfo": "附加資訊",
@@ -224,7 +226,7 @@
 		"Contributors": "合作者",
 		"Contributions": "貢獻",
 		"Confirm": "確認",
-		"Country": "Country",
+		"Country": "國家",
 		"Countries": "國家 ",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "隱藏 30 天前的價格",
 		"FilterProofWithPriceCountHide": "隱藏價格證明",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "僅顯示來自我國的證據",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "帶有有效條碼",
 		"FilterPriceTagWithTagPredictionProductExists": "持有有效產品",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "具有有效的類別標籤",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "新增多個證明"
 		},
+		"AddProofReceipt": {
+			"Title": "新增憑證（收據）"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "新增單一證明"
+		},
+		"Receipt": {
+			"Title": "收據"
 		},
 		"Community": {
 			"Title": "Community"
@@ -984,7 +993,7 @@
 	"UserSettings": {
 		"AddingPrices": "添加價格",
 		"ChangeLanguage": "更改語言",
-		"CountryLabel": "Country",
+		"CountryLabel": "國家",
 		"CurrencyLabel": "幣別",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",

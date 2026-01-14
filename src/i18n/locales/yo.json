@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Fi awọn ami idiyele tuntun kun",
+		"AddNewProofReceipt": "Fi ìwé ẹ̀rí ìsanwó tuntun kún un",
 		"AddToOFF": "Add to {name}",
 		"Added": "Fi kun",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Fi àwọn ẹ̀rí láti orílẹ̀-èdè mi nìkan hàn",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Pẹlu koodu iwọle to wulo",
 		"FilterPriceTagWithTagPredictionProductExists": "Pẹlu ọja to wulo",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Pẹlu aami ẹka ti o wulo",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Fi ẹ̀rí kún un (ẹ̀rí ìsanwó)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

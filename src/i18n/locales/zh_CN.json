@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "添加新的价格标签",
+		"AddNewProofReceipt": "添加新收据",
 		"AddToOFF": "添加到 {name}",
 		"Added": "额外",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "隐藏 30 天前的价格",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "仅显示来自我国的证据",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "带有有效条形码",
 		"FilterPriceTagWithTagPredictionProductExists": "持有有效产品",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "具有有效的类别标签",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "添加凭证（收据）"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "收据"
 		},
 		"Community": {
 			"Title": "Community"

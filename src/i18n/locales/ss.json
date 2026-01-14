@@ -178,6 +178,8 @@
 		"AddProofs": "Add proofs",
 		"AddNewProof": "Add a new proof",
 		"AddNewProofs": "Add new proofs",
+		"AddNewProofPriceTags": "Ngeta emathegi lamasha emanani",
+		"AddNewProofReceipt": "Faka irisidi lensha",
 		"AddToOFF": "Add to {name}",
 		"Added": "Kwengetiwe",
 		"AdditionalInfo": "Additional information",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Khombisa bufakazi lobuvela eveni lami kuphela",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Ngebhakhodi lesemtsetfweni",
 		"FilterPriceTagWithTagPredictionProductExists": "Ngemkhicito losebentako",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Ngethegi yesigaba levumelekile",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "Add multiple proofs"
 		},
+		"AddProofReceipt": {
+			"Title": "Ngeta bufakazi (risidi)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "Add a single proof"
+		},
+		"Receipt": {
+			"Title": "Receipt"
 		},
 		"Community": {
 			"Title": "Community"

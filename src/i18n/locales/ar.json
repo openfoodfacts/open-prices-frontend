@@ -178,6 +178,8 @@
 		"AddProofs": "أضف الأدلة",
 		"AddNewProof": "أضف دليلاً جديداً",
 		"AddNewProofs": "أضف أدلة جديدة",
+		"AddNewProofPriceTags": "أضف بطاقات أسعار جديدة",
+		"AddNewProofReceipt": "أضف إيصالاً جديداً",
 		"AddToOFF": "أضف إلى {name}",
 		"Added": "تمت الإضافة",
 		"AdditionalInfo": "معلومات إضافية",
@@ -300,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "إخفاء الأسعار التي يزيد عمرها عن 30 يومًا",
 		"FilterProofWithPriceCountHide": "إخفاء الأدلة مع الأسعار",
 		"FilterPriceTagWithProofOwner": "أظهر فقط أدلتي",
+		"FilterPriceTagWithProofUserCountry": "أظهر فقط الأدلة من بلدي",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "مع رمز شريطي صالح",
 		"FilterPriceTagWithTagPredictionProductExists": "مع منتج صالح",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "مع علامة فئة صالحة",
@@ -799,6 +802,9 @@
 		"AddProofMultiple": {
 			"Title": "أضف عدة أدلة"
 		},
+		"AddProofReceipt": {
+			"Title": "أضف إثباتاً (إيصالاً)"
+		},
 		"AddProofsPriceTags": {
 			"Title": "أضف إثباتات (بطاقات الأسعار)"
 		},
@@ -825,6 +831,9 @@
 		},
 		"ProofAddSingle": {
 			"Title": "أضف دليلًا واحدًا"
+		},
+		"Receipt": {
+			"Title": "إيصال"
 		},
 		"Community": {
 			"Title": "مجتمع"
