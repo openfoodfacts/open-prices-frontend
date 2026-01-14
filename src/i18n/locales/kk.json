@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Менің елімнен тек дәлелдерді көрсету",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Жарамды штрих-кодпен",
 		"FilterPriceTagWithTagPredictionProductExists": "Жарамды өніммен",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Жарамды санат тегімен",
