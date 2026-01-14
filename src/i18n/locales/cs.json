@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Skrýt ceny starší než 30 dní",
 		"FilterProofWithPriceCountHide": "Skrýt doklady s cenami",
 		"FilterPriceTagWithProofOwner": "Zobrazit pouze mé důkazy",
+		"FilterPriceTagWithProofUserCountry": "Zobrazit pouze důkazy z mé země",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "S platným čárovým kódem",
 		"FilterPriceTagWithTagPredictionProductExists": "S platným produktem",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "S platným štítkem kategorie",
