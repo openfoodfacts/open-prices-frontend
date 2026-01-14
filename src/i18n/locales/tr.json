@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "30 günden eski fiyatları gizle",
 		"FilterProofWithPriceCountHide": "Fiyatları olan kanıtları gizle",
 		"FilterPriceTagWithProofOwner": "Sadece benim kanıtlarımı göster",
+		"FilterPriceTagWithProofUserCountry": "Sadece ülkemden kanıtları göster",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Geçerli bir barkod ile",
 		"FilterPriceTagWithTagPredictionProductExists": "Geçerli bir ürünle",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Geçerli bir kategori etiketiyle",
