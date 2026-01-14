@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Απόκρυψη τιμών παλαιότερων των 30 ημερών",
 		"FilterProofWithPriceCountHide": "Απόκρυψη αποδείξεων με τιμές",
 		"FilterPriceTagWithProofOwner": "Εμφάνιση μόνο των αποδείξεών μου",
+		"FilterPriceTagWithProofUserCountry": "Εμφάνιση μόνο αποδείξεων από τη χώρα μου",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Με έγκυρο γραμμωτό κώδικα (barcode)",
 		"FilterPriceTagWithTagPredictionProductExists": "Με ένα έγκυρο προϊόν",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Με έγκυρη ετικέτα κατηγορίας",
