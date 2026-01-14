@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "隐藏 30 天前的价格",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "仅显示来自我国的证据",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "带有有效条形码",
 		"FilterPriceTagWithTagPredictionProductExists": "持有有效产品",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "具有有效的类别标签",
