@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "Taispeáin cruthúnais ó mo thír féin amháin",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Le cód barra bailí",
 		"FilterPriceTagWithTagPredictionProductExists": "Le táirge bailí",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Le clib chatagóire bailí",
