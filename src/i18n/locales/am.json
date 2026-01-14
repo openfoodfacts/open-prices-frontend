@@ -302,6 +302,7 @@
 		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterPriceTagWithProofUserCountry": "ከአገሬ የተገኙ ማስረጃዎችን ብቻ አሳይ",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "የሚሰራ የአሞሌ ኮድ ያለው",
 		"FilterPriceTagWithTagPredictionProductExists": "ትክክለኛ ከሆነ ምርት ጋር",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "የሚሰራ ምድብ መለያ ያለው",
