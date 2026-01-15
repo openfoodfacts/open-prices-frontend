@@ -77,7 +77,7 @@
       </v-row>
     </v-col>
     <v-col cols="12">
-      <StatsLastUpdatedAlert :lastUpdated="challenge.stats.updated" />
+      <StatsLastUpdatedAlert v-if="challenge.stats?.updated" :lastUpdated="challenge.stats.updated" />
     </v-col>
   </v-row>
 
@@ -108,6 +108,7 @@ export default {
     ChallengeValidateCard: defineAsyncComponent(() => import('../components/ChallengeValidateCard.vue')),
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
     RankingTableCard: defineAsyncComponent(() => import('../components/RankingTableCard.vue')),
+    StatsLastUpdatedAlert: defineAsyncComponent(() => import('../components/StatsLastUpdatedAlert.vue')),
     PriceCard: defineAsyncComponent(() => import('../components/PriceCard.vue')),
   },
   data() {

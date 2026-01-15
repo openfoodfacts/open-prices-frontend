@@ -193,7 +193,7 @@
 
   <v-row>
     <v-col cols="12">
-      <StatsLastUpdatedAlert :lastUpdated="stats.updated" />
+      <StatsLastUpdatedAlert v-if="stats" :lastUpdated="stats.updated" />
     </v-col>
   </v-row>
 </template>
