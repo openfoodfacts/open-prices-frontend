@@ -193,11 +193,7 @@
 
   <v-row>
     <v-col cols="12">
-      <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(stats.updated)">
-        <template #date>
-          {{ getDateTimeFormatted(stats.updated) }}
-        </template>
-      </i18n-t>
+      <StatsLastUpdatedAlert :lastUpdated="stats.updated" />
     </v-col>
   </v-row>
 </template>
@@ -206,11 +202,11 @@
 import { defineAsyncComponent } from 'vue'
 import api from '../services/api'
 import constants from '../constants'
-import date_utils from '../utils/date.js'
 
 export default {
   components: {
     StatCard: defineAsyncComponent(() => import('../components/StatCard.vue')),
+    StatsLastUpdatedAlert: defineAsyncComponent(() => import('../components/StatsLastUpdatedAlert.vue')),
   },
   data() {
     return {
@@ -280,12 +276,6 @@ export default {
           }
           this.loading = false
         })
-    },
-    getDateTimeFormatted(dateTimeString) {
-      return date_utils.offDateTime(dateTimeString)
-    },
-    getRelativeDateTimeFormatted(dateTimeString) {
-      return date_utils.prettyRelativeDateTime(dateTimeString, 'short')
     },
   }
 }
