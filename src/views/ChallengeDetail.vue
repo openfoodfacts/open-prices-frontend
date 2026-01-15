@@ -77,11 +77,7 @@
       </v-row>
     </v-col>
     <v-col cols="12">
-      <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(challenge.stats.updated)">
-        <template #date>
-          {{ getDateTimeFormatted(challenge.stats.updated) }}
-        </template>
-      </i18n-t>
+      <StatsLastUpdatedAlert :lastUpdated="challenge.stats.updated" />
     </v-col>
   </v-row>
 
@@ -102,7 +98,6 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import api from '../services/api.js'
-import date_utils from '../utils/date.js'
 
 export default {
   components: {
@@ -191,12 +186,6 @@ export default {
       .then((data) => {
         this.challenge.latestContributions = data.items
       })
-    },
-    getDateTimeFormatted(dateTimeString) {
-      return date_utils.offDateTime(dateTimeString)
-    },
-    getRelativeDateTimeFormatted(dateTimeString) {
-      return date_utils.prettyRelativeDateTime(dateTimeString, 'short')
     },
   }
 }
