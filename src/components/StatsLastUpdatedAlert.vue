@@ -1,8 +1,9 @@
 <template>
   <v-alert
-    type="primary"
+    color="primary"
     variant="outlined"
     density="compact"
+    icon="mdi-information"
   >
     <i18n-t keypath="Stats.LastUpdated" tag="span" :title="getRelativeDateTimeFormatted(lastUpdated)">
       <template #date>
