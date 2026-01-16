@@ -87,8 +87,22 @@
         {{ $t('Challenge.MostRecentContributions') }}
       </h2>
     </v-col>
-    <v-col v-for="price in challenge.latestContributions.slice(0, 10)" :key="price" cols="12" sm="6" md="4" xl="3">
+    <v-col v-for="price in displayedPriceList" :key="price" cols="12" sm="6" md="4" xl="3">
       <PriceCard :price="price" :product="price.product" elevation="1" height="100%" />
+    </v-col>
+    <v-col cols="12" sm="6" md="4" xl="3" align="center">
+      <br v-if="$vuetify.display.smAndUp"><!-- TODO: center vertically instead of br -->
+      <br v-if="$vuetify.display.smAndUp">
+      <v-btn
+        v-if="displayedPriceList.length"
+        color="primary"
+        :block="!$vuetify.display.smAndUp"
+        :to="getChallengePriceListUrl"
+        prepend-icon="mdi-tag-multiple-outline"
+        append-icon="mdi-arrow-right"
+      >
+        {{ $t('Common.PricesAll') }}
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -132,7 +146,10 @@ export default {
     },
     getChallengePriceListUrl() {
       return `/challenges/${this.challenge.id}/prices`
-    }
+    },
+    displayedPriceList() {
+      return this.challenge?.latestContributions.slice(0, 10) || []
+    },
   },
   mounted() {
     this.getChallenge()
