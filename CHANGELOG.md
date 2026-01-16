@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.153.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.153.1...v1.153.2) (2026-01-16)
+
+
+### Bug Fixes
+
+* **Proof Detail:** make the proof footer chips cliquable again ([6570c94](https://github.com/openfoodfacts/open-prices-frontend/commit/6570c9441a30e875f46e22e8b80f92ff9b051004))
+* **Receipt Assistant:** load max 100 predicted receipt items (instead of max 25) ([#1979](https://github.com/openfoodfacts/open-prices-frontend/issues/1979)) ([9d58939](https://github.com/openfoodfacts/open-prices-frontend/commit/9d5893922150cbcdfb2b090a2e6ffa80452ac789))
+* **StatsLastUpdatedAlert:** forgot import in ChallengeDetail page. ref [#1976](https://github.com/openfoodfacts/open-prices-frontend/issues/1976) ([a41d7f3](https://github.com/openfoodfacts/open-prices-frontend/commit/a41d7f35cff7a87f38fdeba5b09f4474f05e39e1))
+
+
+### Technical
+
+* **Stats:** move the 'last updated' sentence in a dedicated (alert) component ([#1976](https://github.com/openfoodfacts/open-prices-frontend/issues/1976)) ([5219163](https://github.com/openfoodfacts/open-prices-frontend/commit/52191631d4f91b55dace429749cc8a2e67be07fc))
+
 ## [1.153.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.153.0...v1.153.1) (2026-01-14)
 
 
