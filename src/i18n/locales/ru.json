@@ -168,7 +168,7 @@
 	"Common": {
 		"About": "О приложении",
 		"Action": "Действие",
-		"Actions": "Actions",
+		"Actions": "Действия",
 		"AddComment": "Добавить комментарий",
 		"AddPrice": "Добавить цену",
 		"AddPrices": "Добавить цены",
@@ -625,7 +625,7 @@
 	},
 	"LocationSelector": {
 		"Clear": "Очистить",
-		"NoResult": "No results found",
+		"NoResult": "Результаты не найдены",
 		"NoResultHelpKeywords": "Не можете найти свой магазин? Попробуйте использовать ключевые слова вместо полного адреса (например, «Carrefour 75013 Paris» или «Walmart San Francisco»).",
 		"NoResultHelpOSM": "Всё ещё не можете найти свой магазин? Возможно, его пока нет в {osm_name} . Сначала добавьте его в {osm_url} .",
 		"PoweredBy": {
