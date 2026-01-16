@@ -429,50 +429,50 @@
 		"Reason": "Причина",
 		"RECEIPT": "Чек",
 		"Receipt": "Чек",
-		"Receipts": "Receipts",
+		"Receipts": "Квитанции",
 		"ReceiptPriceCount": "Количество цен",
-		"ReceiptPriceTotal": "Total amount",
+		"ReceiptPriceTotal": "Общая сумма",
 		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
-		"ReceiptOnlineDeliveryCosts": "Delivery costs",
-		"Recent": "Recent",
+		"ReceiptOnlineDeliveryCosts": "Стоимость доставки",
+		"Recent": "Недавние",
 		"Re-open": "Повторно открыть",
 		"ReportProblem": "Сообщить о проблеме",
 		"Resolved": "Решено",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
 		"Search": "Поиск",
-		"Select": "Select",
+		"Select": "Выбрать",
 		"Send": "Отправить",
 		"Settings": "Настройки",
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "Вход выполнен!",
 		"SignIn": "Войти",
 		"SignOut": "Выйти",
-		"SideMenu": "Side menu",
+		"SideMenu": "Боковое меню",
 		"Share": "Поделиться",
 		"Source": "Источник",
-		"SourceCode": "Source code",
+		"SourceCode": "Исходный код",
 		"Start": "Начать",
 		"Stats": "Статистика",
 		"Status": "Статус",
 		"SuggestedBarcode": "Предлагаемый штрих-код:",
 		"Summary": "Резюме",
-		"TaglineOriginal": "An open crowdsourced database of food prices",
-		"TaglineAlt1": "The open crowdsourced database of prices",
-		"TaglineAlt2": "The open crowdsourced database of food and product prices",
-		"TaglineAlt3": "Prices should be free",
+		"TaglineOriginal": "Открытая краудсорсинговая база данных цен на еду",
+		"TaglineAlt1": "Открытая краудсорсинговая база данных цен",
+		"TaglineAlt2": "Открытая краудсорсинговая база данных цен на еду и товары",
+		"TaglineAlt3": "Цены должны быть бесплатными",
 		"Text": "Текст",
 		"Thanks": "Спасибо",
 		"Theme": "Тема",
 		"ThemeLight": "Дневной режим",
 		"ThemeDark": "Ночной режим",
-		"TopContributors": "Top contributors",
-		"TopLocations": "Top locations",
-		"TopProducts": "Top products",
+		"TopContributors": "Топ участников",
+		"TopLocations": "Лучшие локации",
+		"TopProducts": "Лучшие продукты",
 		"TopCities": "Лучшие города",
 		"TopCountries": "Лучшие страны",
 		"Today": "Сегодня",
-		"Top": "Top",
+		"Top": "Лучшие",
 		"Total": "Всего",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
@@ -890,13 +890,13 @@
 			"Title": "Статистика"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Топ участников"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Лучшие локации"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Лучшие продукты"
 		},
 		"Users": {
 			"Title": "Пользователи"
@@ -990,7 +990,7 @@
 	},
 	"UserList": {
 		"LoadMore": "Загрузить ещё",
-		"Title": "Top contributors",
+		"Title": "Топ участников",
 		"UserTotal": "{count} contributors"
 	},
 	"UserSettings": {
