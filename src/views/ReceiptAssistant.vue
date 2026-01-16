@@ -222,7 +222,7 @@ export default {
         if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
           maxTries = 1
         }
-        api.getReceiptItems({proof_id: this.proofObject.id}).then(data => {
+        api.getReceiptItems({proof_id: this.proofObject.id, size: 100}).then(data => {
           const receiptItems = data.items
           if (receiptItems.length) {
             callback(receiptItems)

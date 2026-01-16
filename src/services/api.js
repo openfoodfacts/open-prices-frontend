@@ -73,7 +73,7 @@ function extraPriceCreateOrUpdateFiltering(data) {
 export default {
   /**
    * OPEN PRICES API
-  */ 
+  */
 
   signIn(username, password) {
     let formData = new FormData()
@@ -164,7 +164,6 @@ export default {
     .then((response) => response.json())
   },
 
-  // will return only the user's proofs
   getProofs(params = {}) {
     const store = useAppStore()
     const defaultParams = {page: 1, size: 10, order_by: '-created'}
@@ -178,7 +177,6 @@ export default {
     .then((response) => response.json())
   },
 
-  // will return only the user's proof
   getProofById(proofId) {
     const store = useAppStore()
     const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/proofs/${proofId}?${buildURLParams()}`
@@ -533,7 +531,7 @@ export default {
 
   /**
    * OPEN FOOD FACTS API
-  */ 
+  */
 
   openfoodfactsProductSearch(code) {
     const url = `${constants.OFF_API_URL}/${code}.json`
@@ -556,7 +554,7 @@ export default {
 
   /**
    * OPENSTREETMAP API
-  */ 
+  */
 
   /**
    * Nominatim search by query
