@@ -29,6 +29,7 @@ const routes = [
   { path: '/locations', name: 'locations', component: () => import('./views/LocationList.vue'), meta: { title: 'TopLocations', icon: 'mdi-map-marker-star-outline', breadcrumbs: [{title: 'TopLocations', disabled: true }] }},
   { path: '/locations/:id', name: 'location-detail', component: () => import('./views/LocationDetail.vue'), meta: { title: 'Location detail' }},
   { path: '/locations/:id/proofs', name: 'location-proofs', component: () => import('./views/LocationProofList.vue'), meta: { title: 'Location proofs', breadcrumbs: [{title: 'Locations', disabled: false, to: '/locations' }, {title: ':id', disabled: false, to: '/locations/:id' }, {title: 'Proofs', disabled: true }] }},
+  { path: '/locations/osm/:osmType/:osmId', name: 'location-osm-detail', component: () => import('./views/LocationOSMDetail.vue'), meta: { title: 'Location OSM detail' }},
   { path: '/countries/:country', name: 'country-detail', component: () => import('./views/CountryDetail.vue'), meta: { title: 'Country detail' }},
   { path: '/countries/:country/cities/:city', name: 'country-city-detail', component: () => import('./views/CountryCityDetail.vue'), meta: { title: 'City detail' }},
   { path: '/brands/:id', name: 'brand-detail', component: () => import('./views/BrandDetail.vue'), meta: { title: 'Brand detail' }},
