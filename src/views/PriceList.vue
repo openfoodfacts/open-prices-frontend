@@ -10,6 +10,23 @@
       </template>
     </v-col>
   </v-row>
+  <!-- 🔽 NEW BLOCK FOR LOCATION COMPARISON -->
+  <v-row v-if="comparePriceA !== null && comparePriceB !== null">
+    <v-col>
+      <v-card class="pa-4 mb-4" outlined>
+        <h3>Price comparison (prototype)</h3>
+
+        <p>Price A: {{ comparePriceA }}</p>
+        <p>Price B: {{ comparePriceB }}</p>
+
+        <p v-if="cheaperLocation">
+          Cheaper location:
+          <strong>{{ cheaperLocation }}</strong>
+        </p>
+      </v-card>
+    </v-col>
+  </v-row>
+  <!-- 🔼 END -->
 
   <v-row class="mt-0">
     <v-col v-for="price in priceList" :key="price" cols="12" sm="6" md="4" xl="3">
@@ -47,6 +64,10 @@ export default {
       currentFilterList: [],
       currentType: '',
       currentOrder: constants.PRICE_ORDER_LIST[3].key,  // created first
+      comparePriceA: null,
+      comparePriceB: null,
+      cheaperLocation: null,
+
     }
   },
   computed: {
@@ -72,6 +93,7 @@ export default {
     this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.currentType = this.$route.query[constants.TYPE_PARAM] || this.currentType
     this.initPrices()
+    
     // load more
     this.handleDebouncedScroll = utils.debounce(this.handleScroll, 100)
     window.addEventListener('scroll', this.handleDebouncedScroll)
@@ -95,6 +117,7 @@ export default {
           this.priceList.push(...data.items)
           this.priceTotal = data.total
           this.loading = false
+          this.compareFirstTwoPrices()
         })
     },
     updateFilterList(newFilterList) {
@@ -112,6 +135,24 @@ export default {
         this.getPrices()
       }
     },
+    compareFirstTwoPrices() {
+      if (this.priceList.length < 2) return
+
+      const priceA = this.priceList[0]
+      const priceB = this.priceList[1]
+
+      this.comparePriceA = priceA.price ?? priceA.price_value
+      this.comparePriceB = priceB.price ?? priceB.price_value
+
+      if (this.comparePriceA == null || this.comparePriceB == null) return
+
+      if (this.comparePriceA < this.comparePriceB) {
+      this.cheaperLocation = priceA.location?.name || 'Location A'
+        } else {
+      this.cheaperLocation = priceB.location?.name || 'Location B'
+      }
+    },
+
   }
 }
 </script>
