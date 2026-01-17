@@ -838,6 +838,9 @@
 		"Receipt": {
 			"Title": "Ticket"
 		},
+		"Cities": {
+			"Title": "Ciudades"
+		},
 		"Community": {
 			"Title": "Comunidad"
 		},
