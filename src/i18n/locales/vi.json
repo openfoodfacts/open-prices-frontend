@@ -838,6 +838,9 @@
 		"Receipt": {
 			"Title": "Biên lai"
 		},
+		"Cities": {
+			"Title": "Thành phố"
+		},
 		"Community": {
 			"Title": "Community"
 		},
