@@ -838,6 +838,9 @@
 		"Receipt": {
 			"Title": "Receipt"
 		},
+		"Cities": {
+			"Title": "ქალაქები"
+		},
 		"Community": {
 			"Title": "Community"
 		},
