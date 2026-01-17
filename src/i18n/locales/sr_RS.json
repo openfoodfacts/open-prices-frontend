@@ -838,6 +838,9 @@
 		"Receipt": {
 			"Title": "Признаница"
 		},
+		"Cities": {
+			"Title": "Градови"
+		},
 		"Community": {
 			"Title": "Community"
 		},
