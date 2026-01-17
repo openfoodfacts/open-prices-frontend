@@ -838,6 +838,9 @@
 		"Receipt": {
 			"Title": "Makbuz"
 		},
+		"Cities": {
+			"Title": "Şehirler"
+		},
 		"Community": {
 			"Title": "Topluluk"
 		},
