@@ -838,6 +838,9 @@
 		"Receipt": {
 			"Title": "Kassenbon"
 		},
+		"Cities": {
+			"Title": "Städte"
+		},
 		"Community": {
 			"Title": "Gemeinschaft"
 		},
