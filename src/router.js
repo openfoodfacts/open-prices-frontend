@@ -29,7 +29,6 @@ const routes = [
   { path: '/locations', name: 'locations', component: () => import('./views/LocationList.vue'), meta: { title: 'TopLocations', icon: 'mdi-map-marker-star-outline', breadcrumbs: [{title: 'TopLocations', disabled: true }] }},
   { path: '/locations/:id', name: 'location-detail', component: () => import('./views/LocationDetail.vue'), meta: { title: 'Location detail' }},
   { path: '/locations/:id/proofs', name: 'location-proofs', component: () => import('./views/LocationProofList.vue'), meta: { title: 'Location proofs', breadcrumbs: [{title: 'Locations', disabled: false, to: '/locations' }, {title: ':id', disabled: false, to: '/locations/:id' }, {title: 'Proofs', disabled: true }] }},
-  { path: '/locations/osm/:osmType/:osmId', name: 'location-osm-detail', component: () => import('./views/LocationOSMDetail.vue'), meta: { title: 'Location OSM detail' }},
   { path: '/countries', name: 'countries', component: () => import('./views/CountryList.vue'), meta: { title: 'Countries', icon: 'mdi-earth', breadcrumbs: [{title: 'Countries', disabled: true }] }},
   { path: '/countries/:country', name: 'country-detail', component: () => import('./views/CountryDetail.vue'), meta: { title: 'Country detail', breadcrumbs: [{title: 'Countries', disabled: false, to: '/countries' }, {title: ':country', disabled: true }] }},
   { path: '/countries/:country/cities/:city', name: 'country-city-detail', component: () => import('./views/CountryCityDetail.vue'), meta: { title: 'City detail', breadcrumbs: [{title: 'Countries', disabled: false, to: '/countries' }, {title: ':country', disabled: false, to: '/countries/:country' }, {title: 'Cities', disabled: true}, {title: ':city', disabled: true }] }},
@@ -56,6 +55,8 @@ const routes = [
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true, breadcrumbs: [{title: 'Stats', disabled: true }] }},
   { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', icon: 'mdi-cog-outline', drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true, breadcrumbs: [{title: 'About', disabled: true }] }},
+  // redirects (in the component)
+  { path: '/locations/osm/:osmType/:osmId', name: 'location-osm-detail', component: () => import('./views/LocationOSMDetail.vue'), meta: { title: 'Location OSM detail' }},
   // redirects
   { path: '/experiments/challenge', redirect: '/challenge' },
   { path: '/experiments/contribution-assistant', redirect: '/experiments/proof-price-tag-assistant' },
