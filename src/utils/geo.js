@@ -1,15 +1,16 @@
-import Countries from '../data/countries.json'
 import constants from '../constants'
 
 
-function getCountryEmojiFromName(countryString) {
-  const country = Countries.find(c => c.name === countryString || c.osm_name === countryString)
-  return country ? country.emoji : null
-}
-
+/**
+ * /**
+ * Get the flag emoji for the country
+ * @link https://dev.to/jorik/country-code-to-flag-emoji-a21
+ * @param  {String} countryCode The country code
+ * @return {String}             The flag emoji
+ */
 function getCountryEmojiFromCode(countryCode) {
-  const country = Countries.find(c => c.country_code_2 === countryCode)
-  return country ? country.emoji : null
+  let codePoints = countryCode.toUpperCase().split('').map(char =>  127397 + char.charCodeAt())
+	return String.fromCodePoint(...codePoints)
 }
 
 function getLocationName(locationObject) {
@@ -103,7 +104,6 @@ function getLocationOSMTitle(locationObject, withName=true, withRoad=false, with
     locationTitle += getLocationCountry(locationObject)
   }
   if (withEmoji) {
-    // locationTitle += ` ${getCountryEmojiFromName(locationObject.osm_address_country) || ''}`
     locationTitle += ` ${getCountryEmojiFromCode(locationObject.osm_address_country_code) || ''}`
   }
   if (!locationTitle) {
@@ -243,7 +243,6 @@ function getLocationIcon(locationObject) {
 
 
 export default {
-  getCountryEmojiFromName,
   getCountryEmojiFromCode,
   getLocationName,
   getLocationRoad,

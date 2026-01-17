@@ -46,16 +46,9 @@ def get_country_osm_name(osm_countries, country_code_2):
     return None
 
 
-def get_country_emoji(countries_with_emoji, country_code_2):
-    for country in countries_with_emoji:
-        if country["code"] == country_code_2:
-            return country["emoji"]
-    return None
-
-
 if __name__ == "__main__":
     """
-    Goal: create a JSON file with the list of countries (enriched with OSM name & emoji)
+    Goal: create a JSON file with the list of countries (enriched with OSM name)
 
     How-to run ?
     > pip install openfoodfacts
@@ -69,7 +62,6 @@ if __name__ == "__main__":
 
     # Step 1b: load additional data files
     OPENSTREETMAP_COUNTRIES = read_csv(os.path.join(script_path, "openstreetmap-countries-overpass-20260117.csv"))
-    COUNTRIES_WITH_EMOJI = read_json(os.path.join(script_path, "countries-with-emoji.json"))
 
     # Step 2: filter countries
     countries_filtered = filter_node_list_by_rules(get_all_root_nodes(TAXONOMY_FULL))
@@ -84,7 +76,6 @@ if __name__ == "__main__":
             "name": node.get_localized_name("en"),
             "country_code_2": country_code,
             "osm_name": get_country_osm_name(OPENSTREETMAP_COUNTRIES, country_code),
-            "emoji": get_country_emoji(COUNTRIES_WITH_EMOJI, country_code),
         }
         countries.append(country_node)
     print("Total number of countries:", len(countries))
