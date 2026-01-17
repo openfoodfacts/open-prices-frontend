@@ -238,7 +238,7 @@
 		"CurrencyCount": "{count} عملات | {count} عملة | {count} عملات",
 		"CurrencyProofHelpTextSettings": "يمكنك إضافة العملات في إعداداتك.",
 		"Dashboard": "لوحة التحكم",
-		"Display": "Display",
+		"Display": "العرض",
 		"DisplayList": "قائمة",
 		"DisplayPriceList": "قائمة",
 		"DisplayTable": "طاولة",
@@ -473,7 +473,7 @@
 		"TopCountries": "أفضل الدول",
 		"Today": "اليوم",
 		"Top": "قمة",
-		"Total": "Total",
+		"Total": "المجموع",
 		"Truncate": "اقتطاع",
 		"Truncated": "مختصر",
 		"TryItOut": "جربها",
@@ -771,7 +771,7 @@
 		"WaitForExtraction": "جارٍ استخراج العناصر من الإيصال تلقائياً، يرجى الانتظار..."
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
+		"AlertNew": "إعادة الاستخدام الخاصة بك مفقودة؟ دعنا نعرف {url}!",
 		"Here": "هنا"
 	},
 	"Router": {
@@ -957,7 +957,7 @@
 		"Products": "المنتجات",
 		"Locations": "المواقع",
 		"Users": "المستخدمون",
-		"Total": "Total",
+		"Total": "المجموع",
 		"WithPrice": "بثمن",
 		"WithProduct": "مع منتج",
 		"WithProductBarcode": "مع رمز شريطي للمنتج",
@@ -998,7 +998,7 @@
 		"ChangeLanguage": "تغيير اللغة",
 		"CountryLabel": "بلد",
 		"CurrencyLabel": "عملة",
-		"DisplayTitle": "Display",
+		"DisplayTitle": "العرض",
 		"BarcodeScanner": "ماسح الباركود",
 		"DefaultMode": "الوضع الافتراضي",
 		"FavoriteCurrencies": "العملات المفضلة",
