@@ -838,6 +838,9 @@
 		"Receipt": {
 			"Title": "收據"
 		},
+		"Cities": {
+			"Title": "城市"
+		},
 		"Community": {
 			"Title": "Community"
 		},
