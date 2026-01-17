@@ -34,7 +34,7 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants'
-import api from '../services/api'
+import api from '../services/OpenPrices'
 import utils from '../utils.js'
 
 export default {

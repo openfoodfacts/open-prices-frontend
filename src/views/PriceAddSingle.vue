@@ -66,7 +66,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import api from '../services/OpenPrices'
 import date_utils from '../utils/date.js'
 
 export default {

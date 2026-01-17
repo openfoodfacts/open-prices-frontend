@@ -26,7 +26,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import api from '../services/OpenPrices'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
 import utils from '../utils.js'

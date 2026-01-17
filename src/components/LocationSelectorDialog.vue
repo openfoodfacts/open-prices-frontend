@@ -150,7 +150,8 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import OpenStreetMapapi from '../services/OpenStreetMap'
+import api from '../services/OpenPrices.js'
 import constants from '../constants'
 import utils from '../utils.js'
 
@@ -227,14 +228,14 @@ export default {
       // search by id (N12208020359, 12208020359)
       if (utils.isNumber(this.locationOsmSearchForm.q.substring(1))) {
         const id = utils.isNumber(this.locationOsmSearchForm.q.substring(0, 1)) ? this.locationOsmSearchForm.q : this.locationOsmSearchForm.q.substring(1)
-        api.openstreetmapNominatimLookup(id)
+        OpenStreetMapapi.openstreetmapNominatimLookup(id)
           .then((data) => {
             this.loading = false
             this.results = data
           })
         // search by name
       } else {
-        api.openstreetmapSearch(this.locationOsmSearchForm.q, this.searchProvider)
+        OpenStreetMapapi.openstreetmapSearch(this.locationOsmSearchForm.q, this.searchProvider)
           .then((data) => {
             this.loading = false
             this.results = data

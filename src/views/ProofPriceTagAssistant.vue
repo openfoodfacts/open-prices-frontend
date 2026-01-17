@@ -265,7 +265,7 @@
 import { mapStores } from 'pinia'
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants.js'
-import api from '../services/api.js'
+import api from '../services/OpenPrices'
 import { useAppStore } from '../store.js'
 import geo_utils from '../utils/geo.js'
 import proof_utils from '../utils/proof.js'
