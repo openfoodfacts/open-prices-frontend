@@ -838,6 +838,9 @@
 		"Receipt": {
 			"Title": "Potrdilo"
 		},
+		"Cities": {
+			"Title": "Mesta"
+		},
 		"Community": {
 			"Title": "Community"
 		},
