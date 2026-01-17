@@ -1,14 +1,14 @@
-import CountriesWithEmoji from '../data/countries-with-emoji.json'
+import Countries from '../data/countries.json'
 import constants from '../constants'
 
 
 function getCountryEmojiFromName(countryString) {
-  const country = CountriesWithEmoji.find(c => c.name === countryString || (c.name_original && c.name_original.length && c.name_original.includes(countryString)))
+  const country = Countries.find(c => c.name === countryString || c.osm_name === countryString)
   return country ? country.emoji : null
 }
 
 function getCountryEmojiFromCode(countryCode) {
-  const country = CountriesWithEmoji.find(c => c.code === countryCode)
+  const country = Countries.find(c => c.country_code_2 === countryCode)
   return country ? country.emoji : null
 }
 
