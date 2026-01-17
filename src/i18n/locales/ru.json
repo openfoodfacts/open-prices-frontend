@@ -838,6 +838,9 @@
 		"Receipt": {
 			"Title": "Чек"
 		},
+		"Cities": {
+			"Title": "Города"
+		},
 		"Community": {
 			"Title": "Сообщество"
 		},
