@@ -9,7 +9,9 @@ from typing import Any
 
 from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
 
-PARENT_CATEGORIES_ID = [
+TAXONOMY_NAME = "category"
+
+PARENT_NODES_ID = [
     # "en:snacks",  # 717 descendants (including en:viennoiseries)
     # "en:desserts",  # 467 (including en:pastries)
     "en:vegetables",  # 391
@@ -207,34 +209,37 @@ def compare_new_categories_with_old_categories():
 
 if __name__ == "__main__":
     """
+    Goal: filter the full Open Food Facts categories taxonomy
+    to keep only categories relevant for Open Prices (a small subset of food categories)
+
     How-to run ?
     > pip install openfoodfacts
     > python filter_categories.py
     """
-    # Step 1a: get all the categories
-    CATEGORIES_FULL: Taxonomy = get_taxonomy(
-        "category", force_download=True, download_newer=True
+    # Step 1a: get the full taxonomy
+    TAXONOMY_FULL: Taxonomy = get_taxonomy(
+        TAXONOMY_NAME, force_download=True, download_newer=True
     )
-    print("Total number of categories:", len(CATEGORIES_FULL))
+    print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
-    # Step 1b: get all the parent categories
-    PARENT_CATEGORIES: list[TaxonomyNode] = get_taxonomy_node_list_by_id_list(
-        CATEGORIES_FULL, PARENT_CATEGORIES_ID
+    # Step 1b: get all the parent nodes
+    PARENT_NODES: list[TaxonomyNode] = get_taxonomy_node_list_by_id_list(
+        TAXONOMY_FULL, PARENT_NODES_ID
     )
     print(
         "Filter on the following parent categories:",
-        [node.id for node in PARENT_CATEGORIES],
+        [node.id for node in PARENT_NODES],
     )
 
     # Step 2: filter categories
     # Step 2a: get all descendants for the parent categories
     categories_filtered: list[TaxonomyNode] = get_all_descendants_for_node_list(
-        CATEGORIES_FULL, PARENT_CATEGORIES
+        TAXONOMY_FULL, PARENT_NODES
     )
     # Step 2b: add extra nodes
     print("Add extra nodes:", EXTRA_CHILDREN)
     categories_filtered.extend(
-        get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, EXTRA_CHILDREN)
+        get_taxonomy_node_list_by_id_list(TAXONOMY_FULL, EXTRA_CHILDREN)
     )
     # Step 2c: exclude
     # - remove nodes in EXCLUDE_LIST_NODE_IDS
@@ -271,9 +276,9 @@ if __name__ == "__main__":
 
     # Extra
     # compare_new_categories_with_old_categories()
-    # root_nodes = get_all_root_nodes(CATEGORIES_FULL)
+    # root_nodes = get_all_root_nodes(TAXONOMY_FULL)
     # print(root_nodes)
     # category_name = "en:caramels"
-    # category_descendants = get_all_descendants_for_node(CATEGORIES_FULL, get_taxonomy_node_list_by_id_list(CATEGORIES_FULL, [category_name])[0])
+    # category_descendants = get_all_descendants_for_node(TAXONOMY_FULL, get_taxonomy_node_list_by_id_list(TAXONOMY_FULL, [category_name])[0])
     # print(category_descendants)
     # print(len(category_descendants))
