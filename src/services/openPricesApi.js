@@ -70,10 +70,6 @@ function extraPriceCreateOrUpdateFiltering(data) {
 
 
 export default {
-  /**
-   * OPEN PRICES API
-  */
-
   signIn(username, password) {
     let formData = new FormData()
     formData.append('username', username)

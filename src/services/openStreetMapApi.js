@@ -1,13 +1,12 @@
 import constants from '../constants'
+
+
 const OP_DEFAULT_HEADERS = {
   'Content-Type': 'application/json'
 }
 const LOCATION_SEARCH_LIMIT = 10
-export default {
-/**
-   * OPENSTREETMAP API
-  */
 
+export default {
   /**
    * Nominatim search by query
    * @param q: search query

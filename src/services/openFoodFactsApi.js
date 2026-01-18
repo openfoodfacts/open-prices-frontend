@@ -1,12 +1,11 @@
 import constants from '../constants'
+
+
 const OP_DEFAULT_HEADERS = {
   'Content-Type': 'application/json'
 }
-export default {
-/**
-   * OPEN FOOD FACTS API
-  */
 
+export default {
   openfoodfactsProductSearch(code) {
     const url = `${constants.OFF_API_URL}/${code}.json`
     return fetch(url, {
