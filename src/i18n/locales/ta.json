@@ -226,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "உறுதிப்படுத்தவும்",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "விலை ஏற்கனவே பதிவேற்றப்பட்டது",
 		"PriceReadyToBeUploaded": "விலை பதிவேற்றத் தயாராக உள்ளது.",
 		"PricesAlreadyUploaded": "விலைகள் ஏற்கனவே பதிவேற்றப்பட்டுள்ளன",
+		"PricesAll": "அனைத்து விலைகளும்",
 		"PricesMore": "கூடுதல் விலைகள்",
 		"PricesAdded": "விலைகள் சேர்க்கப்பட்டன",
 		"PricesAddedToday": "இன்று சேர்க்கப்பட்ட விலைகள்",
@@ -423,6 +425,7 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "ரேங்க்",
 		"Reason": "காரணம்",
 		"RECEIPT": "ரசீது",
 		"Receipt": "ரசீது",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "ரசீது"
 		},
+		"Cities": {
+			"Title": "நகரங்கள்"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

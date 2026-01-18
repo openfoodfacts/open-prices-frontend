@@ -221,11 +221,12 @@
 		"CommunityProofs": "Doklady komunity",
 		"Consumption": "Spotřeba",
 		"ConsumptionPrices": "Spotřební ceny",
-		"ConsumptionProofs": "Consumption proofs",
+		"ConsumptionProofs": "Důkazy o spotřebě",
 		"Contribute": "Přispět",
 		"Contributors": "Přispěvatelé",
 		"Contributions": "Příspěvky",
 		"Confirm": "Potvrdit",
+		"Count": "Počet",
 		"Country": "Země",
 		"Countries": "Země",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -262,7 +263,7 @@
 		"LoadMore": "Načíst další",
 		"Location": "Poloha",
 		"Locations": "Polohy",
-		"LocationSelected": "Location selected",
+		"LocationSelected": "Vybraná lokalita",
 		"LocationFindShop": "Najděte umístění obchodu",
 		"LocationMissing": "Chybí poloha",
 		"LocationSearchByName": "Hledat podle jména a města",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Cena již nahrána",
 		"PriceReadyToBeUploaded": "Cena připravena k nahrání",
 		"PricesAlreadyUploaded": "Ceny již nahrány",
+		"PricesAll": "Všechny ceny",
 		"PricesMore": "Více cen",
 		"PricesAdded": "Ceny přidány",
 		"PricesAddedToday": "Ceny přidány dnes",
@@ -423,6 +425,7 @@
 		"Quantity": "Množství",
 		"QuantityBought": "Zakoupené množství",
 		"QuantityMissing": "Chybí množství",
+		"Rank": "Pořadí",
 		"Reason": "Důvod",
 		"RECEIPT": "Účtenka",
 		"Receipt": "Účtenka",
@@ -764,7 +767,7 @@
 		"ReceiptItems": "Položky účtenky",
 		"ReceiptItemsCheck": "Receipt items, check and fix",
 		"UploadOnlyNewPrices": "Nahrát pouze nové ceny ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Nahrajte nebo aktualizujte všechny platné ceny ({nbPrices})",
 		"WaitForExtraction": "Automatické extrahování položek z účtenky, čekejte prosím..."
 	},
 	"Reuses": {
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Účtenka"
 		},
+		"Cities": {
+			"Title": "Města"
+		},
 		"Community": {
 			"Title": "Komunita"
 		},
 		"Contribute": {
 			"Title": "Přispět"
+		},
+		"Countries": {
+			"Title": "Země"
 		},
 		"CreateOffProduct": {
 			"Title": "Vytvořit produkt"

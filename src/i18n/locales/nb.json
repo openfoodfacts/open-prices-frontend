@@ -226,6 +226,7 @@
 		"Contributors": "Bidragsytere",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekreft",
+		"Count": "Antall",
 		"Country": "Land",
 		"Countries": "Land",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Pris allerede lastet opp",
 		"PriceReadyToBeUploaded": "Pris klar til å lastes opp",
 		"PricesAlreadyUploaded": "Prisene er allerede lastet opp",
+		"PricesAll": "Alle priser",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Mengde",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Rangering",
 		"Reason": "Grunn",
 		"RECEIPT": "Kvittering",
 		"Receipt": "Kvittering",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Kvittering"
 		},
+		"Cities": {
+			"Title": "Byer"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Bidra"
+		},
+		"Countries": {
+			"Title": "Land"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

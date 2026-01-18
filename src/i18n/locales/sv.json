@@ -226,6 +226,7 @@
 		"Contributors": "Bidragsgivare",
 		"Contributions": "Bidrag",
 		"Confirm": "Bekräfta",
+		"Count": "Antal",
 		"Country": "Land",
 		"Countries": "Länder",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Priset har redan laddats upp",
 		"PriceReadyToBeUploaded": "Priset är klart att laddas upp",
 		"PricesAlreadyUploaded": "Priserna har redan laddats upp",
+		"PricesAll": "Alla priser",
 		"PricesMore": "Fler priser",
 		"PricesAdded": "Priser tillagda",
 		"PricesAddedToday": "Priser tillagda idag",
@@ -423,6 +425,7 @@
 		"Quantity": "Kvantitet",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Rang",
 		"Reason": "Anledning",
 		"RECEIPT": "Kvitto",
 		"Receipt": "Kvitto",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Kvitto"
 		},
+		"Cities": {
+			"Title": "Städer"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Bidra"
+		},
+		"Countries": {
+			"Title": "Länder"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

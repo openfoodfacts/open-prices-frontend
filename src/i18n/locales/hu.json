@@ -226,6 +226,7 @@
 		"Contributors": "Hozzájárulók",
 		"Contributions": "Hozzájárulások",
 		"Confirm": "Megerősítés",
+		"Count": "Mennyiség",
 		"Country": "Ország",
 		"Countries": "Országok",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Az ár már fel van töltve",
 		"PriceReadyToBeUploaded": "Az ár feltöltésre kész",
 		"PricesAlreadyUploaded": "Az árak már feltöltöttek",
+		"PricesAll": "Minden ár",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Mennyiség",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Rang",
 		"Reason": "Ok",
 		"RECEIPT": "Nyugta",
 		"Receipt": "Nyugta",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Nyugta"
 		},
+		"Cities": {
+			"Title": "Városok"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Hozzájárulás"
+		},
+		"Countries": {
+			"Title": "Országok"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

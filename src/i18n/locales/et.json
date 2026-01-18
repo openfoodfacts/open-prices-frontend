@@ -226,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Panused",
 		"Confirm": "Kinnita",
+		"Count": "Count",
 		"Country": "Riik",
 		"Countries": "Riigid",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Hind on juba üles laaditud",
 		"PriceReadyToBeUploaded": "Hind on üleslaadimiseks valmis",
 		"PricesAlreadyUploaded": "Hinnad on juba üles laaditud",
+		"PricesAll": "Kõik hinnad",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Kogus",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Auaste",
 		"Reason": "Põhjus",
 		"RECEIPT": "Kviitung",
 		"Receipt": "Kviitung",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Kviitung"
 		},
+		"Cities": {
+			"Title": "Linnad"
+		},
 		"Community": {
 			"Title": "Kogukond"
 		},
 		"Contribute": {
 			"Title": "Tee kaastööd"
+		},
+		"Countries": {
+			"Title": "Riigid"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

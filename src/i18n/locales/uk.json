@@ -226,6 +226,7 @@
 		"Contributors": "Співучасники",
 		"Contributions": "Внески",
 		"Confirm": "Підтвердити",
+		"Count": "К-сть",
 		"Country": "Країна",
 		"Countries": "Країн",
 		"CountryCount": "{count} країни | {count} країна | {count} країни",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Ціну вже завантажено",
 		"PriceReadyToBeUploaded": "Ціна готова до завантаження",
 		"PricesAlreadyUploaded": "Ціни вже завантажено",
+		"PricesAll": "Всі ціни",
 		"PricesMore": "Більше цін",
 		"PricesAdded": "Ціни додано",
 		"PricesAddedToday": "Ціни, додані сьогодні",
@@ -423,6 +425,7 @@
 		"Quantity": "Кількість",
 		"QuantityBought": "Куплена кількість",
 		"QuantityMissing": "Відсутня кількість",
+		"Rank": "Ранг",
 		"Reason": "Причина",
 		"RECEIPT": "Квитанція",
 		"Receipt": "Квитанція",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Квитанція"
 		},
+		"Cities": {
+			"Title": "Міста"
+		},
 		"Community": {
 			"Title": "Спільнота"
 		},
 		"Contribute": {
 			"Title": "Долучитись"
+		},
+		"Countries": {
+			"Title": "Країн"
 		},
 		"CreateOffProduct": {
 			"Title": "Створити Продукт"

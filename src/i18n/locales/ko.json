@@ -226,6 +226,7 @@
 		"Contributors": "기여자",
 		"Contributions": "기여",
 		"Confirm": "확인",
+		"Count": "수량",
 		"Country": "국가",
 		"Countries": "국가",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "가격이 이미 업로드되었습니다",
 		"PriceReadyToBeUploaded": "가격 업로드 준비 완료",
 		"PricesAlreadyUploaded": "가격이 이미 업로드되었습니다",
+		"PricesAll": "모든 가격은",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "양",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "계급",
 		"Reason": "사유",
 		"RECEIPT": "영수증",
 		"Receipt": "영수증",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "영수증"
 		},
+		"Cities": {
+			"Title": "도시들"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "기여하기"
+		},
+		"Countries": {
+			"Title": "국가"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

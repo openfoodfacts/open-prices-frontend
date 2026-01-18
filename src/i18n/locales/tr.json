@@ -226,6 +226,7 @@
 		"Contributors": "Katkıda bulunanlar",
 		"Contributions": "Katkıda Bulunulanlar",
 		"Confirm": "Onayla",
+		"Count": "Miktar",
 		"Country": "Ülke",
 		"Countries": "Ülkeler",
 		"CountryCount": "{count} ülkeler | {count} ülke | {count} ülkeler",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Fiyat zaten yüklendi",
 		"PriceReadyToBeUploaded": "Fiyat yüklenmeye hazır",
 		"PricesAlreadyUploaded": "Fiyatlar zaten yüklendi",
+		"PricesAll": "Tüm fiyatlar",
 		"PricesMore": "Daha fazla fiyat",
 		"PricesAdded": "Fiyatlar eklendi",
 		"PricesAddedToday": "Bugün eklenen fiyatlar",
@@ -423,6 +425,7 @@
 		"Quantity": "Miktar",
 		"QuantityBought": "Satın alınan miktar",
 		"QuantityMissing": "Miktar eksik",
+		"Rank": "Rütbe",
 		"Reason": "Sebep",
 		"RECEIPT": "Makbuz",
 		"Receipt": "Makbuz",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Makbuz"
 		},
+		"Cities": {
+			"Title": "Şehirler"
+		},
 		"Community": {
 			"Title": "Topluluk"
 		},
 		"Contribute": {
 			"Title": "Destekleyebilirsiniz"
+		},
+		"Countries": {
+			"Title": "Ülkeler"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

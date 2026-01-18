@@ -226,6 +226,7 @@
 		"Contributors": "Συνεισφέροντες",
 		"Contributions": "Συνεισφορές",
 		"Confirm": "Επιβεβαίωση",
+		"Count": "Πλήθος",
 		"Country": "Χώρα",
 		"Countries": "Χώρες",
 		"CountryCount": "{count} χώρες | {count} χώρα | {count} χώρες",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Η τιμή έχει ήδη μεταφορτωθεί.",
 		"PriceReadyToBeUploaded": "Τιμή έτοιμη για μεταφόρτωση",
 		"PricesAlreadyUploaded": "Οι τιμές έχουν ήδη ανεβάσει",
+		"PricesAll": "Όλες οι τιμές",
 		"PricesMore": "Περισσότερες τιμές",
 		"PricesAdded": "Προστέθηκαν τιμές",
 		"PricesAddedToday": "Οι τιμές προστέθηκαν σήμερα",
@@ -423,6 +425,7 @@
 		"Quantity": "Ποσότητα",
 		"QuantityBought": "Ποσότητα που αγοράστηκε",
 		"QuantityMissing": "Λείπει ποσότητα",
+		"Rank": "Τάξη",
 		"Reason": "Αιτία",
 		"RECEIPT": "Απόδειξη",
 		"Receipt": "Απόδειξη",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Απόδειξη"
 		},
+		"Cities": {
+			"Title": "Πόλεις"
+		},
 		"Community": {
 			"Title": "Κοινότητα"
 		},
 		"Contribute": {
 			"Title": "Συμβάλλετε"
+		},
+		"Countries": {
+			"Title": "Χώρες"
 		},
 		"CreateOffProduct": {
 			"Title": "Δημιουργία προϊόντος"

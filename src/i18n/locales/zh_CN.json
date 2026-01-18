@@ -226,6 +226,7 @@
 		"Contributors": "贡献者",
 		"Contributions": "贡献",
 		"Confirm": "确认",
+		"Count": "次數",
 		"Country": "国家/地区",
 		"Countries": "国家/地区",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "价格已上传。",
 		"PriceReadyToBeUploaded": "价格信息已准备好上传。",
 		"PricesAlreadyUploaded": "价格已上传",
+		"PricesAll": "所有价格",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "数量",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "缺失数量",
+		"Rank": "秩",
 		"Reason": "原因",
 		"RECEIPT": "收据",
 		"Receipt": "收据",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "收据"
 		},
+		"Cities": {
+			"Title": "城市"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "贡献"
+		},
+		"Countries": {
+			"Title": "国家/地区"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

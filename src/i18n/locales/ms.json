@@ -226,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Sahkan",
+		"Count": "Bilang",
 		"Country": "Country",
 		"Countries": "Negara-negara",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Harga sudah dimuat naik",
 		"PriceReadyToBeUploaded": "Harga sedia untuk dimuat naik",
 		"PricesAlreadyUploaded": "Harga sudah dimuat naik",
+		"PricesAll": "Semua harga",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Kuantiti",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Pangkat",
 		"Reason": "Sebab",
 		"RECEIPT": "Resit",
 		"Receipt": "Resit",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Resit"
 		},
+		"Cities": {
+			"Title": "Bandar-bandar"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Sumbang"
+		},
+		"Countries": {
+			"Title": "Negara-negara"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

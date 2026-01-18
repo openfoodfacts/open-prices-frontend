@@ -226,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Пацвердзіць",
+		"Count": "Колькасьць",
 		"Country": "Country",
 		"Countries": "Краіны",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Кошт ужо загружаны",
 		"PriceReadyToBeUploaded": "Кошт гатовы да загрузкі",
 		"PricesAlreadyUploaded": "Цэны ўжо загружаныя",
+		"PricesAll": "Усе цэны",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Ранг",
 		"Reason": "Прычына",
 		"RECEIPT": "Квітанцыя",
 		"Receipt": "Квітанцыя",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Квітанцыя"
 		},
+		"Cities": {
+			"Title": "Гарады"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Краіны"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
