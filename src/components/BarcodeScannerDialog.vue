@@ -80,7 +80,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
 import openPricesApi from '../services/openPricesApi'
-import openFoodFactsapi from '../services/openFoodFactsApi'
+import openFoodFactsApi from '../services/openFoodFactsApi'
 import constants from '../constants'
 import proof_utils from '../utils/proof.js'
 
@@ -233,7 +233,7 @@ export default {
     },
     searchProduct(code) {
       this.productSearchResultList = []
-      openFoodFactsapi
+      openFoodFactsApi
         .searchaliciousProductSearch(code)
         .then((data) => {
           for (let product of data['hits']) {
