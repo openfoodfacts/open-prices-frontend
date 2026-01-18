@@ -125,7 +125,7 @@
   
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/OpenPrices'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import price_utils from '../utils/price.js'
 import utils from '../utils.js'
@@ -319,7 +319,7 @@ export default {
       return item.price_is_discounted
     },
     findProduct(item) {
-      api
+      openPricesApi
         .getProductByCode(item.product_code)
         .then((data) => {
           const product = data.id ? data : {'code': item.product_code, 'price_count': 0}

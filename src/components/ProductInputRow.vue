@@ -81,7 +81,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/OpenPrices.js'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
 
@@ -208,7 +208,7 @@ export default {
     },
     getProduct(code) {
       this.productForm.product = null
-      api
+      openPricesApi
         .getProductByCode(code)
         .then((data) => {
           this.productForm.product = data.id ? data : {'code': code, 'price_count': 0}

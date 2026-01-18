@@ -111,7 +111,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/OpenPrices'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
@@ -165,7 +165,7 @@ export default {
         params.status = 'ONGOING'
         params.order_by = '-created'
       }
-      api.getChallenges(params)
+      openPricesApi.getChallenges(params)
       .then((data) => {
         this.loading = false
         if (data.items.length) {
@@ -177,30 +177,30 @@ export default {
     },
     getStats() {
       this.loading = true
-      api.getPriceStats(this.defaultParams)
+      openPricesApi.getPriceStats(this.defaultParams)
       .then((data) => {
         this.challenge.numberOfContributions = data.price__count
         this.loading = false
       })
 
-      api.getProofs({ ...this.defaultParams, size: 1 })
+      openPricesApi.getProofs({ ...this.defaultParams, size: 1 })
       .then((data) => {
         this.challenge.numberOfProofs = data.total
       })
 
       if (this.username) {
-        api.getPriceStats({ ...this.defaultParams, owner: this.username })
+        openPricesApi.getPriceStats({ ...this.defaultParams, owner: this.username })
         .then((data) => {
           this.challenge.userContributions = data.price__count
         })
-        api.getProofs({ ...this.defaultParams, owner: this.username, size: 1 })
+        openPricesApi.getProofs({ ...this.defaultParams, owner: this.username, size: 1 })
         .then((data) => {
           this.challenge.userProofContributions = data.total
         })
       }
     },
     getLatestPrices() {
-      api.getPrices({ ...this.defaultParams, size: 10 })
+      openPricesApi.getPrices({ ...this.defaultParams, size: 10 })
       .then((data) => {
         this.challenge.latestContributions = data.items
       })

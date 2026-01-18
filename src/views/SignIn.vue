@@ -65,7 +65,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/OpenPrices'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
@@ -90,7 +90,7 @@ export default {
   methods: {
     signIn() {
       this.loading = true
-      api
+      openPricesApi
         .signIn(this.signinForm.username.toLowerCase().trim(), this.signinForm.password)
         .then((data) => {
           this.loading = false

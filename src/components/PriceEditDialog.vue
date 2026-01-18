@@ -51,7 +51,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/OpenPrices'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
@@ -119,7 +119,7 @@ export default {
       })
     },
     updatePrice() {
-      api
+      openPricesApi
         .updatePrice(this.price.id, this.updatePriceForm)
         .then((response) => {
           // if response.status == 204

@@ -27,7 +27,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/OpenPrices'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
 
@@ -92,7 +92,7 @@ export default {
       if ((this.locationTotal != null) && (this.locationList.length >= this.locationTotal)) return
       this.loading = true
       this.locationPage += 1
-      return api.getLocations(this.getLocationsParams)
+      return openPricesApi.getLocations(this.getLocationsParams)
         .then((data) => {
           this.locationList.push(...data.items)
           this.locationTotal = data.total

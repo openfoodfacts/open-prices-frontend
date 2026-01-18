@@ -87,7 +87,7 @@ import ExifReader from 'exifreader'
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/OpenPrices'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
 
@@ -318,7 +318,7 @@ export default {
       return new Promise((resolve, reject) => {  // eslint-disable-line no-unused-vars
         this.compressProof(proofImage)
           .then((proofImageCompressed) => {
-            api
+            openPricesApi
               .createProof(proofImageCompressed, this.proofForm, this.$route.path)
               .then((data) => {
                 this.loading = false
