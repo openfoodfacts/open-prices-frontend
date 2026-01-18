@@ -66,7 +66,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import date_utils from '../utils/date.js'
 
 export default {
@@ -130,7 +130,7 @@ export default {
     },
     createPrice() {
       this.loading = true
-      api
+      openPricesApi
         .createPrice(this.addPriceSingleForm, this.$route.path)
         .then((data) => {
           this.loading = false

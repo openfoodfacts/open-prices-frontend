@@ -150,7 +150,8 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openStreetMapApi from '../services/openStreetMapApi'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import utils from '../utils.js'
 
@@ -227,14 +228,14 @@ export default {
       // search by id (N12208020359, 12208020359)
       if (utils.isNumber(this.locationOsmSearchForm.q.substring(1))) {
         const id = utils.isNumber(this.locationOsmSearchForm.q.substring(0, 1)) ? this.locationOsmSearchForm.q : this.locationOsmSearchForm.q.substring(1)
-        api.openstreetmapNominatimLookup(id)
+        openStreetMapApi.openstreetmapNominatimLookup(id)
           .then((data) => {
             this.loading = false
             this.results = data
           })
         // search by name
       } else {
-        api.openstreetmapSearch(this.locationOsmSearchForm.q, this.searchProvider)
+        openStreetMapApi.openstreetmapSearch(this.locationOsmSearchForm.q, this.searchProvider)
           .then((data) => {
             this.loading = false
             this.results = data
@@ -245,7 +246,7 @@ export default {
       if (!this.locationOnlineFormValid) return
       this.loading = true
       const website_url_cleaned = utils.getURLOrigin(this.locationOnlineForm.website_url)
-      api.createLocationOnline({website_url: website_url_cleaned})
+      openPricesApi.createLocationOnline({website_url: website_url_cleaned})
         .then((location) => {
           this.loading = false
           this.selectLocation(location)

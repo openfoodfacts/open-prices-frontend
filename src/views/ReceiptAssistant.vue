@@ -113,7 +113,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 
 export default {
@@ -190,7 +190,7 @@ export default {
         // move to step 2
         this.step = 2
         // fetch the proof & AI predictions
-        api.getProofById(proofIds[0]).then(proof => {
+        openPricesApi.getProofById(proofIds[0]).then(proof => {
           this.onProofUploaded(proof)
         })
       }
@@ -204,7 +204,7 @@ export default {
       this.loadingPredictions = true
       this.loadProofWithReceiptItems(receiptItems => {
         this.receiptItems = receiptItems
-        api.getPrices({proof_id: this.proofObject.id}).then(data => {
+        openPricesApi.getPrices({proof_id: this.proofObject.id}).then(data => {
           this.loadingPredictions = false
           this.proofPriceExistingList = data.items
         })
@@ -222,7 +222,7 @@ export default {
         if (proofCreatedDate.getTime() < Date.now() - oneDayInMs) {
           maxTries = 1
         }
-        api.getReceiptItems({proof_id: this.proofObject.id, size: 100}).then(data => {
+        openPricesApi.getReceiptItems({proof_id: this.proofObject.id, size: 100}).then(data => {
           const receiptItems = data.items
           if (receiptItems.length) {
             callback(receiptItems)
@@ -250,11 +250,11 @@ export default {
         price_id: priceId
       }
       if (receiptItemId != null) {
-        api.updateReceiptItem(receiptItemId, receiptItemData)
+        openPricesApi.updateReceiptItem(receiptItemId, receiptItemData)
       } else {
         receiptItemData.proof_id = this.proofObject.id
         receiptItemData.order = 0
-        api.createReceiptItem(receiptItemData)
+        openPricesApi.createReceiptItem(receiptItemData)
       }
     },
     addPrices(receiptItems) {
@@ -275,12 +275,12 @@ export default {
           product_name: receiptItems[i].product_name || receiptItems[i].predicted_data.product_name
         }
         if (receiptItems[i].price_id) {
-          api.updatePrice(receiptItems[i].price_id, priceData).then((price) => {
+          openPricesApi.updatePrice(receiptItems[i].price_id, priceData).then((price) => {
             this.numberOfPricesAdded += 1
             this.updateOrAddReceiptItem(receiptItems[i].id, price.id)
           })
         } else {
-          api.createPrice(priceData, this.$route.path).then((price) => {
+          openPricesApi.createPrice(priceData, this.$route.path).then((price) => {
             this.numberOfPricesAdded += 1
             this.updateOrAddReceiptItem(receiptItems[i].id, price.id)
           })

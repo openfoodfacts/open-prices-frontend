@@ -36,7 +36,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import utils from '../utils.js'
 
 export default {
@@ -91,7 +91,7 @@ export default {
       if ((this.flagTotal != null) && (this.flagList.length >= this.flagTotal)) return
       this.loading = true
       this.flagPage += 1
-      return api.getFlags(this.getFlagsParams)
+      return openPricesApi.getFlags(this.getFlagsParams)
         .then((data) => {
           this.flagList.push(...data.items)
           this.flagTotal = data.total
@@ -103,7 +103,7 @@ export default {
     },
     toggleFlagStatus(flag) {
       const newStatus = (flag.status === 'OPEN') ? 'CLOSED' : 'OPEN'
-      return api.updateFlag(flag.id, { status: newStatus })
+      return openPricesApi.updateFlag(flag.id, { status: newStatus })
         .then(() => {
           this.initFlagList()
         })

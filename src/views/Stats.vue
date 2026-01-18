@@ -200,7 +200,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 
 export default {
@@ -269,7 +269,7 @@ export default {
   methods: {
     getStats() {
       this.loading = true
-      return api.getStats()
+      return openPricesApi.getStats()
         .then((data) => {
           for (const key in this.stats) {
             this.stats[key] = (key in data) ? data[key] : this.stats[key]

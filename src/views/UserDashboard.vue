@@ -152,7 +152,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
 
@@ -261,7 +261,7 @@ export default {
   methods: {
     getUser() {
       this.loading = true
-      return api.getUserById(this.username)
+      return openPricesApi.getUserById(this.username)
         .then((data) => {
           this.user = data
           this.loading = false
@@ -274,7 +274,7 @@ export default {
     getUserPrices() {
       this.loading = true
       const params = {...this.getPriceParams, size: 25 }
-      return api.getPrices(params)
+      return openPricesApi.getPrices(params)
         .then((data) => {
           if (this.currentTab === 'consumption') {
             this.userConsumptionPriceList = data.items
@@ -299,7 +299,7 @@ export default {
       if (today) {
         params.created__gte = date_utils.currentStartOfDay()
       }
-      return api.getPrices(params)
+      return openPricesApi.getPrices(params)
         .then((data) => {
           if (today) {
             if (this.currentTab === 'consumption') {
@@ -327,7 +327,7 @@ export default {
       if (today) {
         params.created__gte = date_utils.currentStartOfDay()
       }
-      return api.getProofs(params)
+      return openPricesApi.getProofs(params)
         .then((data) => {
           if (today) {
             if (this.currentTab === 'consumption') {

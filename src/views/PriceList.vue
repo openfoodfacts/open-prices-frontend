@@ -26,7 +26,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
 import utils from '../utils.js'
@@ -90,7 +90,7 @@ export default {
       if ((this.priceTotal != null) && (this.priceList.length >= this.priceTotal)) return
       this.loading = true
       this.pricePage += 1
-      return api.getPrices(this.getPricesParams)
+      return openPricesApi.getPrices(this.getPricesParams)
         .then((data) => {
           this.priceList.push(...data.items)
           this.priceTotal = data.total

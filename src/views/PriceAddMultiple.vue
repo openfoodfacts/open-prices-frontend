@@ -149,7 +149,7 @@ import { defineAsyncComponent } from 'vue'
 import { useGoTo } from 'vuetify'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 import constants from '../constants'
 import date_utils from '../utils/date.js'
 
@@ -261,7 +261,7 @@ export default {
   },
   methods: {
     initWithProofId(proofId) {
-      api.getProofById(proofId).then(proof => {
+      openPricesApi.getProofById(proofId).then(proof => {
         this.onProofUploaded(proof)
       })
     },
@@ -287,7 +287,7 @@ export default {
     },
     getExistingProofPrices() {
       this.loading = true
-      return api.getPrices({ proof_id: this.proofObject.id, size: this.proofObject.price_count, order_by: 'created' })
+      return openPricesApi.getPrices({ proof_id: this.proofObject.id, size: this.proofObject.price_count, order_by: 'created' })
         .then((data) => {
           this.proofPriceExistingList.push(...data.items)
           this.loading = false
@@ -309,7 +309,7 @@ export default {
     },
     createPrice() {
       this.loading = true
-      api
+      openPricesApi
         .createPrice(Object.assign({}, this.addPriceMultipleForm, this.productPriceForm), this.$route.path)
         .then((data) => {
           this.loading = false

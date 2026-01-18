@@ -265,7 +265,7 @@
 import { mapStores } from 'pinia'
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants.js'
-import api from '../services/api.js'
+import openPricesApi from '../services/openPricesApi'
 import { useAppStore } from '../store.js'
 import geo_utils from '../utils/geo.js'
 import proof_utils from '../utils/proof.js'
@@ -388,13 +388,13 @@ export default {
   methods: {
     initWithProofIds(proofIds) {
       if (proofIds.length) {
-        api.getProofById(proofIds[0]).then(proof => {
+        openPricesApi.getProofById(proofIds[0]).then(proof => {
           this.onProofUploaded(proof)
         })
       }
     },
     getExistingProofPrices(proofId) {
-      api.getPrices({proof_id: proofId}).then(data => {
+      openPricesApi.getPrices({proof_id: proofId}).then(data => {
         this.proofPriceExistingList = data.items
       })
     },
@@ -440,7 +440,7 @@ export default {
           // forceLoad is true when coming from processLabels (to fetch any new user-created priceTags)
           maxTries = forceLoad ? maxTries : 1
         }
-        api.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
+        openPricesApi.getPriceTags({proof_id: this.proofObject.id, size: 100}).then(data => {
           const priceTagsWithPredictions = data.items.filter(priceTag => priceTag.predictions && priceTag.predictions.length)
           if (priceTagsWithPredictions.length >= minNumberOfPriceTagWithPredictions) {
             callback(priceTagsWithPredictions)
@@ -475,7 +475,7 @@ export default {
         const expectedNumberOfPriceTagsWithPredictions = this.priceTags.length + newLabelsAddedWithCanvas.length
         let newPriceTagIds = []
         newLabelsAddedWithCanvas.forEach(label => {
-          api.createPriceTag({
+          openPricesApi.createPriceTag({
             bounding_box: label.boundingBox,
             proof_id: this.proofObject.id
           }).then(priceTag => {
@@ -527,7 +527,7 @@ export default {
       this.updatePriceTag(productPriceForm.id, status)
     },
     updatePriceTag(priceTagId, status, priceId) {
-      return api
+      return openPricesApi
         .updatePriceTag(priceTagId, { status: status, price_id: priceId })
         .then((response) => {
           // if response.status == 204
@@ -554,7 +554,7 @@ export default {
           location_osm_type: this.proofObject.location_osm_type,
           proof_id: this.proofObject.id
         }
-        api.createPrice(priceData, this.$route.path).then((price) => {
+        openPricesApi.createPrice(priceData, this.$route.path).then((price) => {
           // TODO: error handling
           this.numberOfPricesAdded += 1
           this.updatePriceTag(productPriceForm.id, 1, price.id)
@@ -572,7 +572,7 @@ export default {
         ready_for_price_tag_validation: true,
         price_count: 0
       }
-      api.getProofs(params)
+      openPricesApi.getProofs(params)
         .then(proofs => {
           this.nextProofSuggestions = proofs.items.filter(proof => proof.id != this.proofObject.id)
         })

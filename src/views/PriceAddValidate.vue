@@ -47,7 +47,7 @@
 import { mapStores } from 'pinia'
 import { defineAsyncComponent } from 'vue'
 import constants from '../constants.js'
-import api from '../services/api.js'
+import openPricesApi from '../services/openPricesApi'
 import { useAppStore } from '../store.js'
 import date_utils from '../utils/date.js'
 import proof_utils from '../utils/proof.js'
@@ -173,7 +173,7 @@ export default {
       if ((this.priceTagTotal != null) && (this.priceTagList.length >= this.priceTagTotal)) return
       this.loading = true
       this.priceTagPage += 1
-      return api.getPriceTags(this.getPriceTagsParams)
+      return openPricesApi.getPriceTags(this.getPriceTagsParams)
         .then((data) => {
           this.priceTagList.push(...data.items)
           this.priceTagTotal = data.total
@@ -191,7 +191,7 @@ export default {
       this.productPriceForms.push(productPriceForm)
     },
     updatePriceTag(priceTagId, status, priceId) {
-      return api
+      return openPricesApi
         .updatePriceTag(priceTagId, { status: status, price_id: priceId })
         .then((response) => {
           // if response.status == 204
@@ -211,7 +211,7 @@ export default {
         location_osm_type: productPriceData.proof.location_osm_type,
         proof_id: productPriceData.proof.id
       }
-      return api
+      return openPricesApi
         .createPrice(Object.assign({}, priceData), this.$route.path)
         .then((data) => {
           productPriceData.loading = false

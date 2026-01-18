@@ -79,7 +79,8 @@ import { Html5Qrcode, Html5QrcodeScanType } from 'html5-qrcode'
 import { defineAsyncComponent } from 'vue'
 import { mapStores } from 'pinia'
 import { useAppStore } from '../store'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
+import openFoodFactsApi from '../services/openFoodFactsApi'
 import constants from '../constants'
 import proof_utils from '../utils/proof.js'
 
@@ -219,7 +220,7 @@ export default {
     },
     getProduct(code) {
       this.productSearchResultList = []
-      api
+      openPricesApi
         .getProductByCode(code)
         .then((data) => {
           const product = data.id ? data : {'code': code, 'price_count': 0}
@@ -232,7 +233,7 @@ export default {
     },
     searchProduct(code) {
       this.productSearchResultList = []
-      api
+      openFoodFactsApi
         .searchaliciousProductSearch(code)
         .then((data) => {
           for (let product of data['hits']) {
