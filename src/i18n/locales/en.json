@@ -838,11 +838,17 @@
 		"Receipt": {
 			"Title": "Receipt"
 		},
+		"Cities": {
+			"Title": "Cities"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
