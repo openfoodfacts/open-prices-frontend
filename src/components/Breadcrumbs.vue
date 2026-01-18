@@ -10,30 +10,35 @@
     </template>
   </v-breadcrumbs>
 </template>
-  
+
 <script>
 export default {
+  data() {
+    return {
+      possibleParams: [':id', ':username', ':country', ':city']
+    }
+  },
   computed: {
     breadcrumbs() {
       return this.$route.meta.breadcrumbs
     },
-    objectId() {
-      return this.$route.params.id
-    },
-    objectUsername() {
-      return this.$route.params.username
-    }
   },
   methods: {
     getItemTitle(item) {
-      if (this.objectId && item.to && item.to.includes(':id')) return this.objectId
-      if (this.objectId && item.title === ':id') return item.title.replace(':id', this.objectId)
-      if (this.objectUsername && item.to && item.to.includes(':username')) return this.objectUsername
+      if (this.possibleParams.includes(item.title)) {
+        return this.$route.params[item.title.substring(1)]
+      }
       return this.$t(`Router.${item.title}.Title`)
     },
     getItemTo(item) {
-      if (this.objectId && item.to && item.to.includes(':id')) return item.to.replace(':id', this.objectId)
-      if (this.objectUsername && item.to && item.to.includes(':username')) return item.to.replace(':username', this.objectUsername)
+      if (item.to) {
+        if (this.possibleParams.some(param => item.to.includes(param))) {
+          return item.to.replace(':id', this.$route.params.id)
+            .replace(':username', this.$route.params.username)
+            .replace(':country', this.$route.params.country)
+            .replace(':city', this.$route.params.city)
+        }
+      }
       return item.to
     }
   }
