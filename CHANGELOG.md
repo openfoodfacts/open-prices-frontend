@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.154.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.154.1...v1.154.2) (2026-01-19)
+
+
+### Bug Fixes
+
+* **Locations:** smarter retrieval of location country code (geo.js) ([#1995](https://github.com/openfoodfacts/open-prices-frontend/issues/1995)) ([c207786](https://github.com/openfoodfacts/open-prices-frontend/commit/c207786bba6e31a49f07b2b9a60dfdd82e7013c2))
+
 ## [1.154.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.154.0...v1.154.1) (2026-01-19)
 
 
