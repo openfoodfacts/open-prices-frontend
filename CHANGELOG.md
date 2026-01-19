@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.154.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.153.2...v1.154.0) (2026-01-19)
+
+
+### Features
+
+* **Locations:** simple country list page ([#1986](https://github.com/openfoodfacts/open-prices-frontend/issues/1986)) ([5273e99](https://github.com/openfoodfacts/open-prices-frontend/commit/5273e99e143fd84a53bb848b0a65bd327925e540))
+
+
+### Technical
+
+* **API:** split api.js into 3 files (openPrices, openFoodFacts, openStreetMap) ([#1990](https://github.com/openfoodfacts/open-prices-frontend/issues/1990)) ([0b3ed10](https://github.com/openfoodfacts/open-prices-frontend/commit/0b3ed1076c3c95111675013a6d7d675808ce1262))
+* **Challenge:** add a button to see all the prices ([#1980](https://github.com/openfoodfacts/open-prices-frontend/issues/1980)) ([5439271](https://github.com/openfoodfacts/open-prices-frontend/commit/54392719ae467d87f419f404e0e662e77d978da1))
+* **Country Card:** use existing CountryCityChip. simplify stuff ([#1988](https://github.com/openfoodfacts/open-prices-frontend/issues/1988)) ([2d06ac7](https://github.com/openfoodfacts/open-prices-frontend/commit/2d06ac76956398cc021d925ca5d890161a5fb907))
+* **Country List:** improve breadcrumbs ([#1987](https://github.com/openfoodfacts/open-prices-frontend/issues/1987)) ([13295d1](https://github.com/openfoodfacts/open-prices-frontend/commit/13295d1d650d6d7b17a260bfa7d6aacacb4843d8))
+* **l10n:** New Crowdin translations to review and merge ([#1969](https://github.com/openfoodfacts/open-prices-frontend/issues/1969)) ([2c57c85](https://github.com/openfoodfacts/open-prices-frontend/commit/2c57c85f307412e681ea13eb118d6422d23af082))
+* **Locations:** generate country emoji from unicode instead of JSON ([#1989](https://github.com/openfoodfacts/open-prices-frontend/issues/1989)) ([a7c1bd5](https://github.com/openfoodfacts/open-prices-frontend/commit/a7c1bd5dcd2c875ecf6fec9fb2603c61619439f8))
+* **Locations:** new script to generate countries JSON from the OFF taxonomy ([#1985](https://github.com/openfoodfacts/open-prices-frontend/issues/1985)) ([6a4e1c1](https://github.com/openfoodfacts/open-prices-frontend/commit/6a4e1c19c0eedb0d8dece826256fa5bc94491483))
+
 ## [1.153.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.153.1...v1.153.2) (2026-01-16)
 
 
