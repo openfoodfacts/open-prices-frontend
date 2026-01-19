@@ -50,7 +50,7 @@ export default {
     },
     getLocationEmoji() {
       if (this.location) {
-        if (this.location.type === constants.LOCATION_TYPE_OSM) {
+        if (this.location.type === constants.LOCATION_TYPE_OSM && this.location.osm_address_country_code!=null) {
           return geo_utils.getCountryEmojiFromCode(this.location.osm_address_country_code)
         }
       }
