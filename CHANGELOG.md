@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.154.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.154.0...v1.154.1) (2026-01-19)
+
+
+### Bug Fixes
+
+* **l10n:** fix weird br translation ([8b8cb56](https://github.com/openfoodfacts/open-prices-frontend/commit/8b8cb5662c287a2adde24a90f5ce56a26c8c65b1))
+
 ## [1.154.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.153.2...v1.154.0) (2026-01-19)
 
 
