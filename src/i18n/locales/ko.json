@@ -404,7 +404,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "귀하가 추가한 가격",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "은둔",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "제품이 누락되었습니다",
@@ -436,7 +436,7 @@
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Re-open": "다시 열다",
-		"ReportProblem": "Report a problem",
+		"ReportProblem": "문제 신고하기",
 		"Resolved": "해결됨",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -473,7 +473,7 @@
 		"TopCountries": "상위 국가",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "총",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "시도해 보세요",
@@ -519,7 +519,7 @@
 		"No": "아니요",
 		"Food": "음식",
 		"PetFood": "반려동물 사료",
-		"Beauty": "Beauty"
+		"Beauty": "아름다움"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -751,7 +751,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "은둔"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -963,7 +963,7 @@
 		"Products": "제품",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "총",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",
