@@ -226,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Thibitisha",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Bei tayari imepakiwa",
 		"PriceReadyToBeUploaded": "Bei tayari kupakiwa",
 		"PricesAlreadyUploaded": "Bei tayari zimepakiwa",
+		"PricesAll": "Bei zote",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Cheo",
 		"Reason": "Sababu",
 		"RECEIPT": "Risiti",
 		"Receipt": "Risiti",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Risiti"
 		},
+		"Cities": {
+			"Title": "Miji"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

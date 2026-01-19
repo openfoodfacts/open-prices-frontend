@@ -226,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "An riga an ɗora farashin",
 		"PriceReadyToBeUploaded": "Farashin da aka shirya don ɗauka",
 		"PricesAlreadyUploaded": "An riga an ɗora farashin",
+		"PricesAll": "Duk farashi",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Quantity",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Matsayi",
 		"Reason": "Reason",
 		"RECEIPT": "Receipt",
 		"Receipt": "Receipt",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Receipt"
 		},
+		"Cities": {
+			"Title": "Birane"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

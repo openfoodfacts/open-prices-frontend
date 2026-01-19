@@ -226,6 +226,7 @@
 		"Contributors": "Współtwórcy",
 		"Contributions": "Wkład",
 		"Confirm": "Potwierdź",
+		"Count": "Licznik",
 		"Country": "Kraj",
 		"Countries": "Kraje",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Cena już przesłana",
 		"PriceReadyToBeUploaded": "Cena gotowa do przesłania",
 		"PricesAlreadyUploaded": "Ceny już załadowane",
+		"PricesAll": "Wszystkie ceny",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Ilość",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Stopień",
 		"Reason": "Powód",
 		"RECEIPT": "Rachunek",
 		"Receipt": "Rachunek",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Rachunek"
 		},
+		"Cities": {
+			"Title": "Miasta"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Wnieś wkład"
+		},
+		"Countries": {
+			"Title": "Kraje"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

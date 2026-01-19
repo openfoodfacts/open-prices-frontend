@@ -226,6 +226,7 @@
 		"Contributors": "Bidragere",
 		"Contributions": "Contributions",
 		"Confirm": "Bekrefte",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Countries",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Prisen er allerede lastet opp",
 		"PriceReadyToBeUploaded": "Prisen er klar til opplasting",
 		"PricesAlreadyUploaded": "Prisene er allerede lastet opp",
+		"PricesAll": "Alle priser",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Mengde",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Rang",
 		"Reason": "Grunn",
 		"RECEIPT": "Kvittering",
 		"Receipt": "Kvittering",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Kvittering"
 		},
+		"Cities": {
+			"Title": "Byer"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Contribute"
+		},
+		"Countries": {
+			"Title": "Countries"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

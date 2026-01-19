@@ -226,6 +226,7 @@
 		"Contributors": "Perzhidi",
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Broioù",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Priz pellgarget dija",
 		"PriceReadyToBeUploaded": "Priz prest da vezañ pellgarget",
 		"PricesAlreadyUploaded": "Prizioù pellgarget dija",
+		"PricesAll": "An holl brizioù",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Kementad",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "Renk",
 		"Reason": "Reason",
 		"RECEIPT": "Receipt",
 		"Receipt": "Receipt",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Receipt"
 		},
+		"Cities": {
+			"Title": "Kêrioù |"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Kenoberiañ"
+		},
+		"Countries": {
+			"Title": "Broioù"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

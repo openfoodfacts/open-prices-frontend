@@ -226,6 +226,7 @@
 		"Contributors": "Medewerkers",
 		"Contributions": "Bijdragen",
 		"Confirm": "Bevestig",
+		"Count": "Aantal",
 		"Country": "Land",
 		"Countries": "Landen",
 		"CountryCount": "{count} landen | {count} land | {count} landen",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Prijs al geüpload",
 		"PriceReadyToBeUploaded": "Prijs klaar om te worden geüpload",
 		"PricesAlreadyUploaded": "Prijzen al geüpload",
+		"PricesAll": "Alle prijzen",
 		"PricesMore": "Meer prijzen",
 		"PricesAdded": "Prijzen toegevoegd",
 		"PricesAddedToday": "Vandaag toegevoegde prijzen",
@@ -423,6 +425,7 @@
 		"Quantity": "Hoeveelheid",
 		"QuantityBought": "Gekochte hoeveelheid",
 		"QuantityMissing": "Hoeveelheid ontbreekt",
+		"Rank": "Rang",
 		"Reason": "Reden",
 		"RECEIPT": "Bon",
 		"Receipt": "Bon",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Bon"
 		},
+		"Cities": {
+			"Title": "Steden"
+		},
 		"Community": {
 			"Title": "Gemeenschap"
 		},
 		"Contribute": {
 			"Title": "Bijdragen"
+		},
+		"Countries": {
+			"Title": "Landen"
 		},
 		"CreateOffProduct": {
 			"Title": "Product aanmaken"

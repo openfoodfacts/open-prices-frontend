@@ -226,6 +226,7 @@
 		"Contributors": "Contributors",
 		"Contributions": "การมีส่วนร่วม",
 		"Confirm": "ยืนยัน",
+		"Count": "Count",
 		"Country": "Country",
 		"Countries": "ประเทศ",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "ราคาอัพโหลดเรียบร้อยแล้ว",
 		"PriceReadyToBeUploaded": "ราคาพร้อมอัพโหลด",
 		"PricesAlreadyUploaded": "ราคาอัพโหลดเรียบร้อยแล้ว",
+		"PricesAll": "ราคาทั้งหมด",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "ปริมาณ",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
+		"Rank": "อันดับ",
 		"Reason": "สาเหตุ",
 		"RECEIPT": "ใบเสร็จ",
 		"Receipt": "ใบเสร็จ",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "ใบเสร็จ"
 		},
+		"Cities": {
+			"Title": "เมืองต่างๆ"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "ร่วมสนับสนุน"
+		},
+		"Countries": {
+			"Title": "ประเทศ"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"

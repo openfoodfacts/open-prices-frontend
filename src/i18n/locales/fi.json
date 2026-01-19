@@ -226,6 +226,7 @@
 		"Contributors": "Osallistujat",
 		"Contributions": "Osallistumiset",
 		"Confirm": "Vahvista",
+		"Count": "Määrä",
 		"Country": "Maa",
 		"Countries": "Maat",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
@@ -395,6 +396,7 @@
 		"PriceAlreadyUploaded": "Hinta on jo ladattu",
 		"PriceReadyToBeUploaded": "Hinta ladattavissa",
 		"PricesAlreadyUploaded": "Hinnat on jo ladattu",
+		"PricesAll": "Kaikki hinnat",
 		"PricesMore": "More prices",
 		"PricesAdded": "Prices added",
 		"PricesAddedToday": "Prices added today",
@@ -423,6 +425,7 @@
 		"Quantity": "Määrä",
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Määrä puuttuu",
+		"Rank": "Sijoitus",
 		"Reason": "Syy",
 		"RECEIPT": "Kuitti",
 		"Receipt": "Kuitti",
@@ -835,11 +838,17 @@
 		"Receipt": {
 			"Title": "Kuitti"
 		},
+		"Cities": {
+			"Title": "Kaupungit"
+		},
 		"Community": {
 			"Title": "Community"
 		},
 		"Contribute": {
 			"Title": "Osallistu"
+		},
+		"Countries": {
+			"Title": "Maat"
 		},
 		"CreateOffProduct": {
 			"Title": "Create Product"
