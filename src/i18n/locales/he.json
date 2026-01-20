@@ -303,7 +303,7 @@
 		"FilterPriceMoreThan30DaysHide": "הסתרת מחירים ישנים מ־30 יום",
 		"FilterProofWithPriceCountHide": "הסתרת הוכחות עם מחירים",
 		"FilterPriceTagWithProofOwner": "הצגת ההוכחות שלי בלבד",
-		"FilterPriceTagWithProofUserCountry": "הצג רק הוכחות מהמדינה שלי",
+		"FilterPriceTagWithProofUserCountry": "הצגת הוכחות מהמדינה שלי בלבד",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "עם ברקוד תקף",
 		"FilterPriceTagWithTagPredictionProductExists": "עם מוצר תקין",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "עם תגית קטגוריה תקינה",
