@@ -436,7 +436,7 @@
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Re-open": "再開",
-		"ReportProblem": "Report a problem",
+		"ReportProblem": "問題を報告する",
 		"Resolved": "解決済み",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -519,7 +519,7 @@
 		"No": "いいえ",
 		"Food": "食べ物",
 		"PetFood": "ペットフード",
-		"Beauty": "Beauty"
+		"Beauty": "美しさ"
 	},
 	"ContributionAssistant": {
 		"Steps": {
