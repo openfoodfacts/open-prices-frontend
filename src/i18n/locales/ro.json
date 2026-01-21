@@ -404,7 +404,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "Prețuri adăugate de dvs.",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Confidențialitate",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Produs lipsă",
@@ -436,7 +436,7 @@
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Re-open": "Redeschide",
-		"ReportProblem": "Report a problem",
+		"ReportProblem": "Raportați o problemă",
 		"Resolved": "Rezolvat",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -519,7 +519,7 @@
 		"No": "Nu",
 		"Food": "Mâncare",
 		"PetFood": "Hrană pentru animale de companie",
-		"Beauty": "Beauty"
+		"Beauty": "Frumuseţe"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -751,7 +751,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Confidențialitate"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
