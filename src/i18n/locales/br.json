@@ -41,7 +41,7 @@
 		},
 		"ReceiptMode": {
 			"Subtitle": "One or multiple products",
-			"Title": "Receipt"
+			"Title": "Notenn"
 		},
 		"SingleProductMode": {
 			"Subtitle": "Just one price tag",
@@ -69,10 +69,10 @@
 		"Create": "Krouiñ",
 		"PriceDetails": {
 			"Discount": "Discount?",
-			"Label": "Price",
-			"LabelDiscounted": "Discounted price",
+			"Label": "Priz",
+			"LabelDiscounted": "Priz diskontet",
 			"LabelFull": "Full price",
-			"Proof": "Proof",
+			"Proof": "Prouenn",
 			"ProofDateChanged": "Date updated!",
 			"ProofSelected": "Proof selected!",
 			"ProofUploaded": "Proof uploaded!",
@@ -108,8 +108,8 @@
 		},
 		"Title": "Add a single price",
 		"WhereWhen": {
-			"Date": "Date",
-			"DateLabel": "Date",
+			"Date": "Deiziad",
+			"DateLabel": "Deiziad",
 			"Find": "Klask",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
@@ -170,7 +170,7 @@
 		"Action": "Ober",
 		"Actions": "Actions",
 		"AddComment": "Add a comment",
-		"AddPrice": "Add a price",
+		"AddPrice": "Ouzhpennañ ur priz",
 		"AddPrices": "Add prices",
 		"AddNewPrice": "Add a new price",
 		"AddNewPrices": "Add new prices",
@@ -190,17 +190,17 @@
 		"BarcodeScanShort": "Skanañ",
 		"BarcodeType": "Type a barcode",
 		"BarcodeTypeShort": "Type",
-		"BarcodeInvalid": "Invalid barcode",
+		"BarcodeInvalid": "Kod barrennoù direizh",
 		"Brand": "Merk",
 		"Brands": "Merkoù",
 		"BrandTotal": "{count} brands | {count} brand | {count} brands",
-		"Price": "Price",
-		"Prices": "Prices",
+		"Price": "Priz",
+		"Prices": "Prizioù",
 		"PRODUCT": "Produ",
 		"Product": "Produ",
 		"ProductName": "Anv ar produ",
 		"Products": "Produioù",
-		"Proof": "Proof",
+		"Proof": "Prouenn",
 		"Proofs": "Proofs",
 		"CATEGORY": "Rummad",
 		"Category": "Rummad",
@@ -213,7 +213,7 @@
 		"ChallengeOngoing": "Ongoing challenge",
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
-		"Clear": "Clear",
+		"Clear": "Sklaer",
 		"Close": "Serriñ",
 		"Comment": "Comment",
 		"Community": "Community",
@@ -225,14 +225,14 @@
 		"Contribute": "Kenoberiañ",
 		"Contributors": "Perzhidi",
 		"Contributions": "Contributions",
-		"Confirm": "Confirm",
+		"Confirm": "Kadarnaat",
 		"Count": "Count",
 		"Country": "Country",
 		"Countries": "Broioù",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
 		"Cropped": "Cropped",
-		"Currency": "Currency",
+		"Currency": "Moneiz",
 		"Currencies": "Currencies",
 		"CurrencyMissing": "Currency missing",
 		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
@@ -267,12 +267,12 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"Date": "Date",
+		"Date": "Deiziad",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Deiziad ar skeudenn.",
 		"DateProofHelpTextExif": "Dre ziouer e klaskomp tennañ anezhañ eus metaroadennoù EXIF ar skeudenn.",
 		"DateProofHelpTextReceipt": "Evit ar resevoù, lakait anezhañ war an deiziad prenañ.",
-		"Details": "Details",
+		"Details": "Munudoù",
 		"Delete": "Dilemel",
 		"DeveloperMode": "Developer mode",
 		"Discount": "Discount",
@@ -295,7 +295,7 @@
 		"End": "End",
 		"ErrorServer": "Error: server error",
 		"FieldIsRequired": "Rekis eo ar vaezienn",
-		"Filter": "Filter",
+		"Filter": "Sil",
 		"FilterChallengesShowAllStatus": "Show all challenges",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
@@ -314,10 +314,10 @@
 		"FrequentlyAskedQuestions": "Foar ar goulennoù",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
-		"Help": "Help",
+		"Help": "Sikour",
 		"Here": "Amañ",
-		"History": "History",
-		"Image": "Image",
+		"History": "Istor",
+		"Image": "Skeudenn",
 		"ImageSelect": "Select an image",
 		"ImageSelectMultiple": "Select images",
 		"ImageSelected": "Image selected!",
@@ -329,7 +329,7 @@
 		"LocationCount": "{count} locations | {count} location | {count} locations",
 		"LocationNotFound": "Location not found",
 		"Map": "Kartenn",
-		"Miscellaneous": "Miscellaneous",
+		"Miscellaneous": "A bep seurt",
 		"MobileApp": "Mobile app",
 		"Moderation": "Moderadur",
 		"ModerationFlagReasonWrongType": "Seurt fall",
@@ -344,8 +344,8 @@
 		"ModerationFlagStatusClosed": "Serret",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Ma prizioù",
+		"MyProofs": "Ma prouennoù",
 		"MyStats": "My stats",
 		"New": "Nevez",
 		"NextProof": "Next proof",
@@ -361,7 +361,7 @@
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
 		"OrderPriceCountDESC": "Price count",
-		"OrderPriceASC": "Price",
+		"OrderPriceASC": "Priz",
 		"OrderPriceCreatedDESC": "Addition date",
 		"OrderPriceDateDESC": "Price date",
 		"OrderProductCountDESC": "Product count",
@@ -384,7 +384,7 @@
 		"PicturesByYou": "Pictures by you",
 		"PicturesAdded": "Pictures added",
 		"PicturesAddedByYou": "Pictures added by you",
-		"PRICE_TAG": "Price tag",
+		"PRICE_TAG": "Priz",
 		"PriceTags": "Tikedennoù prizioù",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
@@ -412,7 +412,7 @@
 		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
 		"ProofDetails": "Proof details",
 		"ProofMissing": "Proof missing",
-		"ProofSelect": "Select a proof",
+		"ProofSelect": "Dibabit ur brouenn",
 		"ProofSelectMultiple": "Select proofs",
 		"ProofSelected": "Proof selected!",
 		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
@@ -426,9 +426,9 @@
 		"QuantityBought": "Quantity bought",
 		"QuantityMissing": "Quantity missing",
 		"Rank": "Renk",
-		"Reason": "Reason",
-		"RECEIPT": "Receipt",
-		"Receipt": "Receipt",
+		"Reason": "Abeg",
+		"RECEIPT": "Notenn",
+		"Receipt": "Notenn",
 		"Receipts": "Receipts",
 		"ReceiptPriceCount": "Number of prices",
 		"ReceiptPriceTotal": "Total amount",
@@ -447,7 +447,7 @@
 		"SignInOFFAccount": "Sign in with your {url} account",
 		"SignedIn": "Signed in!",
 		"SignIn": "Kevreañ",
-		"SignOut": "Sign out",
+		"SignOut": "Dilemel",
 		"SideMenu": "Side menu",
 		"Share": "Rannañ",
 		"Source": "Source",
@@ -463,9 +463,9 @@
 		"TaglineAlt3": "Prices should be free",
 		"Text": "Testenn",
 		"Thanks": "Thanks",
-		"Theme": "Theme",
-		"ThemeLight": "Light",
-		"ThemeDark": "Dark",
+		"Theme": "Dodenn",
+		"ThemeLight": "Skañv",
+		"ThemeDark": "Teñval",
 		"TopContributors": "Top contributors",
 		"TopLocations": "Top locations",
 		"TopProducts": "Top products",
@@ -478,7 +478,7 @@
 		"Truncated": "Truncated",
 		"TryItOut": "Klaskit",
 		"Type": "Type",
-		"UnknownProduct": "Unknown product",
+		"UnknownProduct": "Produ dianav",
 		"UnknownProductSource": "Unknown product source",
 		"UnknownSource": "Unknown source",
 		"UnitGram": "g",
@@ -510,15 +510,15 @@
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "Gwiriekaat prizioù ar gumuniezh",
 		"View": "View",
-		"Website": "Website",
+		"Website": "Lec'hienn",
 		"WithAPrice": "With a price",
 		"WithoutAPrice": "Hep priz",
 		"Year": "Year",
 		"Years": "Years",
 		"Yes": "Ya",
 		"No": "Ket",
-		"Food": "Food",
-		"PetFood": "Pet food",
+		"Food": "Boued",
+		"PetFood": "Boued al loened-ti",
 		"Beauty": "Beauty"
 	},
 	"ContributionAssistant": {
@@ -568,7 +568,7 @@
 	},
 	"ChangeCurrencyDialog": {
 		"Title": "Choose one of your favorite currencies",
-		"Currency": "Currency",
+		"Currency": "Moneiz",
 		"AddCurrencies": "Add currencies in Settings",
 		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
 		"Select": "Select {currency_code}"
@@ -602,17 +602,17 @@
 		"Dashboard": "Dashboard",
 		"Settings": "Arventennoù",
 		"SignIn": "Kevreañ",
-		"SignOut": "Sign out"
+		"SignOut": "Dilemel"
 	},
 	"Theme": {
 		"LightMode": "Light mode",
 		"DarkMode": "Dark mode"
 	},
 	"Home": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Ouzhpennañ ur priz",
 		"LatestPrices": "Latest prices",
 		"ProofAdd": "Add a proof",
-		"SearchProduct": "Search for a product",
+		"SearchProduct": "Klask ur produ",
 		"SettingsUpdated": "Settings updated!",
 		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
 		"Welcome": {
@@ -627,7 +627,7 @@
 		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
 	},
 	"LocationSelector": {
-		"Clear": "Clear",
+		"Clear": "Sklaer",
 		"NoResult": "No results found",
 		"NoResultHelpKeywords": "N'eus ket tu da gavout ho stal ? Klaskit implijout gerioù-alc'hwez e-lec'h ar chomlec'h klok (da sk. 'Carrefour 75013 Paris' pe 'Walmart San Francisco').",
 		"NoResultHelpOSM": "N'hallit ket kavout ho stal c'hoazh ? Marteze n'emañ ket e {osm_name} c'hoazh. Gallout a rit ouzhpennañ anezhañ war {osm_url} da gentañ.",
@@ -650,9 +650,9 @@
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
 		"PriceValueDisplayUnit": "{0} / unit",
-		"Proof": "Proof",
+		"Proof": "Prouenn",
 		"FullPrice": "Full price",
-		"UnknownProduct": "Unknown product"
+		"UnknownProduct": "Produ dianav"
 	},
 	"PriceDelete": {
 		"Confirmation": "Are you sure you want to delete this price?",
@@ -667,8 +667,8 @@
 	},
 	"PriceForm": {
 		"Discount": "Discount?",
-		"Label": "Price",
-		"LabelDiscounted": "Discounted price",
+		"Label": "Priz",
+		"LabelDiscounted": "Priz diskontet",
 		"LabelFull": "Full price"
 	},
 	"PriceList": {
@@ -697,7 +697,7 @@
 		"LabelsLower": "skritellouigoù",
 		"LabelTotal": "{count} labels",
 		"LatestPrice": "Latest price",
-		"InvalidBarcode": "Invalid barcode",
+		"InvalidBarcode": "Kod barrennoù direizh",
 		"InvalidBarcodeLength": "Invalid barcode length",
 		"ProductBrandMissing": "Product brand missing",
 		"ProductCategoriesMissing": "Product categories missing",
@@ -707,10 +707,10 @@
 		"ProductQuantityMililitre": "{0} mL",
 		"ProductQuantityMissing": "Product quantity missing",
 		"QuantityMissing": "Quantity missing",
-		"UnknownProduct": "Unknown product name"
+		"UnknownProduct": "Anv ar produ dianav"
 	},
 	"ProductDetail": {
-		"AddPrice": "Add a price",
+		"AddPrice": "Ouzhpennañ ur priz",
 		"CategoryNotFound": "Category not found...",
 		"LatestPrices": "Latest prices",
 		"LoadMore": "Load more",
@@ -728,14 +728,14 @@
 		"PromoReceiptAssistant": "Arnodiñ : klaskit gant ar skoazellerez resev nevez evit tennañ ar prizioù ent emgefre eus ho resevoù !"
 	},
 	"ProofCard": {
-		"Proof": "Proof",
-		"PRICE_TAG": "Price tag",
-		"RECEIPT": "Receipt",
+		"Proof": "Prouenn",
+		"PRICE_TAG": "Priz",
+		"RECEIPT": "Notenn",
 		"GDPR_REQUEST": "GDPR request",
 		"SHOP_IMPORT": "Shop import"
 	},
 	"ProofCreate": {
-		"SelectProof": "Select a proof",
+		"SelectProof": "Dibabit ur brouenn",
 		"ProofSelected": "Proof selected!",
 		"Success": "Proof created!"
 	},
@@ -747,7 +747,7 @@
 	},
 	"ProofDetail": {
 		"LoadMore": "Load more",
-		"Prices": "Prices",
+		"Prices": "Prizioù",
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
@@ -782,7 +782,7 @@
 			"Title": "Ouzhpennañ"
 		},
 		"AddPrice": {
-			"Title": "Add a price"
+			"Title": "Ouzhpennañ ur priz"
 		},
 		"AddPrices": {
 			"Title": "Add prices"
@@ -815,7 +815,7 @@
 			"Title": "Locations"
 		},
 		"PriceAdd": {
-			"Title": "Add a price"
+			"Title": "Ouzhpennañ ur priz"
 		},
 		"PriceAddSingle": {
 			"Title": "Add a single price"
@@ -824,7 +824,7 @@
 			"Title": "Add multiple prices"
 		},
 		"Prices": {
-			"Title": "Prices"
+			"Title": "Prizioù"
 		},
 		"PriceTags": {
 			"Title": "Tikedennoù prizioù"
@@ -836,7 +836,7 @@
 			"Title": "Add a single proof"
 		},
 		"Receipt": {
-			"Title": "Receipt"
+			"Title": "Notenn"
 		},
 		"Cities": {
 			"Title": "Kêrioù |"
@@ -872,10 +872,10 @@
 			"Title": "Moderadur"
 		},
 		"MyPrices": {
-			"Title": "My prices"
+			"Title": "Ma prizioù"
 		},
 		"MyProofs": {
-			"Title": "My proofs"
+			"Title": "Ma prouennoù"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -954,7 +954,7 @@
 	},
 	"Stats": {
 		"AddedToday": "Added today",
-		"Prices": "Prices",
+		"Prices": "Prizioù",
 		"PricesToday": "Prices added today",
 		"PricesTotal": "Total prices",
 		"PricesLinkedToPriceTag": "Prices linked to a price tag",
@@ -982,8 +982,8 @@
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Load more",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "My prices",
-		"MyProofs": "My proofs",
+		"MyPrices": "Ma prizioù",
+		"MyProofs": "Ma prouennoù",
 		"ProofUpdated": "Proof updated!",
 		"Settings": "Arventennoù",
 		"Title": "Dashboard",
@@ -1003,7 +1003,7 @@
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
 		"CountryLabel": "Country",
-		"CurrencyLabel": "Currency",
+		"CurrencyLabel": "Moneiz",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
