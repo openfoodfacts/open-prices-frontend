@@ -214,7 +214,7 @@
 		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
 		"Chart": "Chart",
 		"Clear": "Clear",
-		"Close": "Close",
+		"Close": "Zatvori",
 		"Comment": "Comment",
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
@@ -227,7 +227,7 @@
 		"Contributions": "Contributions",
 		"Confirm": "Confirm",
 		"Count": "Broj",
-		"Country": "Country",
+		"Country": "Država",
 		"Countries": "Zemlje",
 		"CountryCount": "{count} countries | {count} country | {count} countries",
 		"Crop": "Crop",
@@ -256,8 +256,8 @@
 		"Label": "Oznaka",
 		"Labels": "Oznake",
 		"LabelTotal": "{count} labels | {count} label | {count} labels",
-		"Language": "Languages",
-		"Languages": "Languages",
+		"Language": "Jezici",
+		"Languages": "Jezici",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
 		"LoadMore": "Učitaj više",
@@ -505,7 +505,7 @@
 		"UserIsNotPriceOwner": "You are not the price owner",
 		"UserIsNotProofOwner": "You are not the proof owner",
 		"UserNotFound": "Korisnik nije pronađen",
-		"Validate": "Validate",
+		"Validate": "Potvrdi",
 		"ValidatePrices": "Validate prices",
 		"ValidatePricesWithAI": "Validate prices with AI",
 		"ValidatePricesFromCommunity": "Potvrdite cijene iz zajednice",
@@ -661,7 +661,7 @@
 		"Title": "Delete a price"
 	},
 	"PriceEdit": {
-		"Save": "Save",
+		"Save": "Sačuvaj",
 		"Success": "Price edited!",
 		"Title": "Edit a price"
 	},
@@ -755,7 +755,7 @@
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
-		"Save": "Save",
+		"Save": "Sačuvaj",
 		"Success": "Proof edited!"
 	},
 	"ReceiptAssistant": {
@@ -929,7 +929,7 @@
 			"Title": "Community challenge"
 		},
 		"Validate": {
-			"Title": "Validate"
+			"Title": "Potvrdi"
 		},
 		"ValidatePrices": {
 			"Title": "Validate prices"
@@ -1002,14 +1002,14 @@
 	"UserSettings": {
 		"AddingPrices": "Adding prices",
 		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"CountryLabel": "Država",
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
-		"LanguageLabel": "Languages",
+		"LanguageLabel": "Jezici",
 		"LocationFinder": "Location finder",
 		"LocationDisplayOSMID": "Display OSM ID",
 		"PriceListDisplay": "Price list diplay",
@@ -1018,7 +1018,7 @@
 		"ProductDisplayCategoryTag": "Display category tag",
 		"ProductDisplaySource": "Display source",
 		"SideMenuExperimentsDisplay": "Display 'Experiments'",
-		"Save": "Save",
+		"Save": "Sačuvaj",
 		"Title": "Postavke",
 		"TranslationCompletion": "Translation is {completion}% complete.",
 		"TranslationHelp": "Help us translate more languages"
