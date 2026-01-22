@@ -450,7 +450,7 @@ export default {
           this.priceList = data.items
           if (this.priceList.length) {
             const stores = Array.from(new Set(this.priceList.map(price => price.location.osm_name)))
-            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country_code.toUpperCase()).flat()))
+            const countries = Array.from(new Set(this.priceList.map(price => price.location.osm_address_country_code).flat()))
             const lastPrice = this.priceList[0]
             this.productForm = {
               ...this.productForm,
