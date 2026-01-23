@@ -61,7 +61,32 @@
         prepend-icon="mdi-tag-plus-outline"
         height="100%"
       >
-        <v-divider />
+        <v-form>
+          <div for="country-select" class="text-body-1 mb-1">
+            {{ $t('Filter by country') }}
+          </div>
+          <select
+            v-model="selectedCountry"
+            class="border rounded p-2"
+            aria-label="Filter by country"
+            :disabled="productloading"
+            @change="onCountryChange"
+          >
+            <option value="">
+              {{ loading ? $t('Loading…') : $t('All countries') }}
+            </option>
+            <option
+              v-for="country in Array.from(choiceCountries)"
+              :key="country"
+              :value="country"
+            >
+              {{ country }}
+            </option>
+          </select>
+        </v-form>
+
+        <v-divider class="my-4" />
+
         <v-card-text>
           <v-row class="mt-0">
             <v-col v-for="missingProduct in missingProductsWithPrices" :key="missingProduct" cols="12" sm="6">
@@ -377,7 +402,10 @@ export default {
       loading: false,
       panLevel: {x: 0, y: 0},
       Languages,
-      Countries
+      Countries,
+      choiceCountries: new Set(),
+      selectedCountry: '',
+      productloading: true,
     }
   },
   computed: {
@@ -421,6 +449,16 @@ export default {
     this.getMissingProductsWithPrices()
   },
   methods: {
+     onCountryChange() {
+      if (!this.selectedCountry) {
+        return;
+      }
+      this.missingProductsWithPrices =
+        this.missingProductsWithPrices.filter(product => {
+          return product.countries?.includes(this.selectedCountry);
+        });
+    },
+
     fieldRequired(v) {
       return !!v || this.$t('Common.FieldIsRequired')
     },
@@ -494,12 +532,25 @@ export default {
           this.suggestedCategories = Array.from(new Set(challengeCategories.flat())) // unique categories
         })
     },
-    getMissingProductsWithPrices() {
-      return openPricesApi.getProducts({ price_count__gte: 1, source__isnull: true, order_by: '-proof_count' })
-        .then((data) => {
-          this.missingProductsWithPrices = data.items
-        })
-    },
+     async getMissingProductsWithPrices() {
+        const data = await openPricesApi.getProducts({price_count__gte: 1,source__isnull: true,order_by: '-proof_count'});
+        this.missingProductsWithPrices = data.items;
+        for (let i = 0; i < this.missingProductsWithPrices.length; i++) {
+          const product = this.missingProductsWithPrices[i];
+          const response = await openPricesApi.getPriceByProductCode(product.code);
+          let countries = new Set(); 
+          for (let j = 0; j < response.items.length; j++) {
+            if(response.items[j].location.osm_address_country!=null){
+              this.choiceCountries.add(response.items[j].location.osm_address_country);
+              countries.add(response.items[j].location.osm_address_country);
+            }
+          }
+          countries = Array.from(countries);
+          product.countries = countries;
+          product.image_url = "https://prices.openfoodfacts.net/img/"+response.items[0].proof.file_path;
+        }
+        this.productloading=false
+      },
     missingProductClicked(product) {
       this.productForm.product_code = product.code
       this.loadProductInfo()
