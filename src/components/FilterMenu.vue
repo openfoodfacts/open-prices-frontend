@@ -78,7 +78,7 @@ export default {
     kind: {
       type: String,
       default: 'product',
-      examples: ['product', 'price', 'proof', 'priceTag', 'location', 'user']
+      examples: ['product', 'price', 'proof', 'priceTag', 'location', 'country', 'user']
     },
     currentFilterList: {
       type: Array,
@@ -118,6 +118,7 @@ export default {
       proofFilterList: constants.PROOF_FILTER_LIST,
       priceTagFilterList: constants.PRICE_TAG_FILTER_LIST,
       locationFilterList: constants.LOCATION_FILTER_LIST,
+      countryFilterList: constants.LOCATION_COUNTRY_FILTER_LIST,
       userFilterList: constants.USER_FILTER_LIST,
       // other filters
       productSourceList: constants.PRODUCT_SOURCE_LIST,
