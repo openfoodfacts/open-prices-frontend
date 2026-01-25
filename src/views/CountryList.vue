@@ -12,7 +12,7 @@
 
   <v-row class="mt-0">
     <v-col v-for="country in countryList" :key="country" cols="12" sm="6" md="4" xl="3">
-      <CountryCard :country="country.name" height="100%" @click="goToCountry(country)" />
+      <CountryCard :country="country.name" :locationCount="country.location_count" height="100%" @click="goToCountry(country)" />
     </v-col>
   </v-row>
 
@@ -25,7 +25,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import Countries from '../data/countries.json'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
@@ -46,13 +46,16 @@ export default {
   methods: {
     initCountryList() {
       this.countryList = []
-      this.countryPage = 0
       this.getCountries()
     },
     getCountries() {
-      this.countryList = Countries
-      this.countryTotal = Countries.length
-      this.loading = false
+      this.loading = true
+      return openPricesApi.getCountries()
+        .then((data) => {
+          this.countryList = data  // all the countries are loaded at once
+          this.countryTotal = data.length
+          this.loading = false
+        })
     },
     goToCountry(country) {
       this.$router.push(`/countries/${country.osm_name}`)
