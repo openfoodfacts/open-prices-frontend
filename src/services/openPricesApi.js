@@ -467,6 +467,16 @@ export default {
     .then((response) => response.json())
   },
 
+  getCountries(params = {}) {
+    const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/locations/osm/countries?${buildURLParams({...defaultParams, ...params})}`
+    return fetch(url, {
+      method: 'GET',
+      headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
+
   getFlags(params = {}) {
     const store = useAppStore()
     const defaultParams = {page: 1, size: OP_DEFAULT_PAGE_SIZE}  // order_by default ?
