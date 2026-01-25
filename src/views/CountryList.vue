@@ -12,7 +12,7 @@
 
   <v-row class="mt-0">
     <v-col v-for="country in countryList" :key="country" cols="12" sm="6" md="4" xl="3">
-      <CountryCard :country="country.name" :locationCount="country.location_count" height="100%" @click="goToCountry(country)" />
+      <CountryCard :country="country.name" :priceCount="country.price_count" :locationCount="country.location_count" height="100%" @click="goToCountry(country)" />
     </v-col>
   </v-row>
 
