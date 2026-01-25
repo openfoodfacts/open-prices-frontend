@@ -2,7 +2,7 @@
   <v-row>
     <v-col>
       <v-chip label variant="text" prepend-icon="mdi-map-marker-outline">
-        {{ $t('Common.CountryCount', { count: countryTotal }) }}
+        {{ $t('Common.CountryCount', { count: countryList.length }) }}
       </v-chip>
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="countryList.length" :totalCount="countryTotal" />
