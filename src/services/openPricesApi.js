@@ -250,6 +250,15 @@ export default {
     .then((response) => response.json())
   },
 
+  async getPriceByProductCode(productCode) {
+    const url = `${import.meta.env.VITE_OPEN_PRICES_API_URL}/prices?product_code=${productCode}`
+    return fetch(url, {
+      method: 'GET',
+      headers: OP_DEFAULT_HEADERS,
+    })
+    .then((response) => response.json())
+  },
+
   updatePrice(priceId, inputData = {}) {
     const store = useAppStore()
     // build body
