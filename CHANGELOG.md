@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.155.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.154.2...v1.155.0) (2026-01-25)
+
+
+### Features
+
+* **Country List:** add filtering & ordering (client-side) ([#2010](https://github.com/openfoodfacts/open-prices-frontend/issues/2010)) ([00f035e](https://github.com/openfoodfacts/open-prices-frontend/commit/00f035e090c00634cb61bd3d507babc615e46d3d))
+* **Location Detail:** new url with OSM type & id (will redirect to OP id) ([#1982](https://github.com/openfoodfacts/open-prices-frontend/issues/1982)) ([729fbcf](https://github.com/openfoodfacts/open-prices-frontend/commit/729fbcfc678f4dbc5c3ad24ac062a19df36219f4))
+
+
+### Bug Fixes
+
+* **Locations:** fix api call in new OSM type/id endpoint, following [#1982](https://github.com/openfoodfacts/open-prices-frontend/issues/1982) & [#1990](https://github.com/openfoodfacts/open-prices-frontend/issues/1990) ([9b33778](https://github.com/openfoodfacts/open-prices-frontend/commit/9b33778fe85a2d8db8bbd3baf75eba9e8c39a7be))
+
+
+### Technical
+
+* **Country Card:** show the price_count chip ([#2008](https://github.com/openfoodfacts/open-prices-frontend/issues/2008)) ([865c1a6](https://github.com/openfoodfacts/open-prices-frontend/commit/865c1a6cf595b5ac2f6e0aae6eec2ca0d4eb300c))
+* **Locations:** use the new backend API to fetch the list of countries ([#2007](https://github.com/openfoodfacts/open-prices-frontend/issues/2007)) ([ec21fca](https://github.com/openfoodfacts/open-prices-frontend/commit/ec21fcab4613433defc2b6873dc1200ec76c398f))
+* **Stats:** add link to new Country list page ([#2009](https://github.com/openfoodfacts/open-prices-frontend/issues/2009)) ([95cb7b4](https://github.com/openfoodfacts/open-prices-frontend/commit/95cb7b4ee76679a8543a405b56a0e9ac60155161))
+
 ## [1.154.2](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.154.1...v1.154.2) (2026-01-19)
 
 
