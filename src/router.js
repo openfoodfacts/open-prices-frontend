@@ -55,6 +55,8 @@ const routes = [
   { path: '/stats', name: 'stats', component: () => import('./views/Stats.vue'), meta: { title: 'Stats', icon: 'mdi-chart-box-outline', drawerMenu: true, breadcrumbs: [{title: 'Stats', disabled: true }] }},
   { path: '/settings', name: 'settings', component: () => import('./views/Settings.vue'), meta: { title: 'Settings', icon: 'mdi-cog-outline', drawerMenu: true, breadcrumbs: [{title: 'Settings', disabled: true }] }},
   { path: '/about', name: 'about', component: () => import('./views/About.vue'), meta: { title: 'About', icon: 'mdi-information-outline', drawerMenu: true, breadcrumbs: [{title: 'About', disabled: true }] }},
+  // redirects (in the component)
+  { path: '/locations/osm/:osmType/:osmId', name: 'location-osm-detail', component: () => import('./views/LocationOSMDetail.vue'), meta: { title: 'Location OSM detail' }},
   // redirects
   { path: '/experiments/challenge', redirect: '/challenge' },
   { path: '/experiments/contribution-assistant', redirect: '/experiments/proof-price-tag-assistant' },
