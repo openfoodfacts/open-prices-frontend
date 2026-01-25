@@ -22,7 +22,7 @@
 
 <script>
 import { defineAsyncComponent } from 'vue'
-import api from '../services/api'
+import openPricesApi from '../services/openPricesApi'
 
 export default {
   components: {
@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     getLocation() {
-      return api.getLocationByOsmTypeAndId(this.locationOsmType, this.locationOsmId)
+      return openPricesApi.getLocationByOsmTypeAndId(this.locationOsmType, this.locationOsmId)
         .then((data) => {
           if (data.id) {
             this.$router.replace({ name: 'location-detail', params: { id: data.id } })
