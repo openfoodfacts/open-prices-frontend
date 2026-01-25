@@ -24,7 +24,17 @@
             </template>
           </v-col>
         </v-row>
-        <ProofTypeInputRow :class="showTopAlertOrBanner ? 'mt-0' : ''" :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
+        <div class="d-flex align-center">
+          <ProofTypeInputRow :class="showTopAlertOrBanner ? 'mt-0' : ''" :proofTypeForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" />
+          <v-switch
+            :model-value="skipAI"
+            color="success"
+            inset
+            label="Enter price manually (skip AI detection)"
+            persistent-hint
+            @update:model-value="$emit('update:skipAI', $event)"
+          />
+        </div>
         <LocationInputRow class="mt-0" :locationForm="proofForm" @location="locationObject = $event" />
         <ProofImageInputRow class="mt-0" :proofImageForm="proofForm" :typePriceTagOnly="typePriceTagOnly" :typeReceiptOnly="typeReceiptOnly" :hideRecentProofChoice="hideRecentProofChoice" :multiple="multiple" @proofList="proofImageList = $event" />
         <ProofMetadataInputRow class="mt-0" :proofMetadataForm="proofForm" :proofType="proofForm.type" :multiple="multiple" :assistedByAI="assistedByAI" :locationType="locationObject?.type" />
@@ -112,6 +122,10 @@ export default {
     ProofCard: defineAsyncComponent(() => import('../components/ProofCard.vue')),
   },
   props: {
+    skipAI: {
+      type: Boolean,
+      default: false
+    },
     hideHeader: {
       type: Boolean,
       default: false
@@ -137,7 +151,7 @@ export default {
       default: false
     },
   },
-  emits: ['proof', 'done'],
+  emits: ['update:skipAI', 'proof', 'done'],
   data() {
     return {
       step: 1,  // 1: form; 2: uploading; 3: done

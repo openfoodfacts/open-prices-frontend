@@ -18,7 +18,7 @@
   <template v-if="step === 1">
     <v-row>
       <v-col cols="12" md="6">
-        <ProofUploadCard :typePriceTagOnly="true" @proof="onProofUploaded($event)" />
+        <ProofUploadCard v-model:skipAI="skipAIValue" :typePriceTagOnly="true" @proof="onProofUploaded($event)" />
       </v-col>
     </v-row>
   </template>
@@ -281,6 +281,7 @@ export default {
   },
   data() {
     return {
+      skipAIValue: false,
       step: 1,
       // stepItemList: [],  // see computed
       // data
@@ -410,6 +411,9 @@ export default {
       // proof image
       this.imageSrc = proof_utils.getImageFullUrl(proof.file_path)
 
+      if(this.skipAIValue) {
+        proof.type = constants.PROOF_TYPE_RECEIPT
+      }
       if (proof.type === constants.PROOF_TYPE_RECEIPT) {
         // No need to check for price tags on receipts
         this.priceTags = []
