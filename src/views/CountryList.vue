@@ -7,6 +7,7 @@
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="countryList.length" :totalCount="countryTotal" />
         <FilterMenu kind="country" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
+        <OrderMenu kind="country" :currentOrder="currentOrder" @update:currentOrder="updateOrder($event)" />
       </template>
     </v-col>
   </v-row>
@@ -34,6 +35,7 @@ export default {
   components: {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
     FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
+    OrderMenu: defineAsyncComponent(() => import('../components/OrderMenu.vue')),
     CountryCard: defineAsyncComponent(() => import('../components/CountryCard.vue')),
   },
   data() {
@@ -44,6 +46,7 @@ export default {
       loading: false,
       // filter & order
       currentFilterList: [],
+      currentOrder: constants.LOCATION_COUNTRY_ORDER_LIST[1].key,  // price_count
     }
   },
   watch: {
@@ -55,6 +58,7 @@ export default {
   },
   mounted() {
     this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
+    this.currentOrder = this.$route.query[constants.ORDER_PARAM] || this.currentOrder
     this.initCountryList()
   },
   methods: {
@@ -74,6 +78,14 @@ export default {
           if (this.currentFilterList.includes('location_count_gte_1')) {
             data = data.filter(country => country.location_count > 0)
           }
+          // we order client-side
+          if (this.currentOrder === 'name') {
+            data.sort((a, b) => a.name.localeCompare(b.name))
+          } else if (this.currentOrder === '-price_count') {
+            data.sort((a, b) => b.price_count - a.price_count)
+          } else if (this.currentOrder === '-location_count') {
+            data.sort((a, b) => b.location_count - a.location_count)
+          }
           this.countryList = data
           this.loading = false
         })
@@ -85,6 +97,13 @@ export default {
       this.currentFilterList = newFilterList
       this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
       // this.initCountryList() will be called in watch $route
+    },
+    updateOrder(orderKey) {
+      if (this.currentOrder !== orderKey) {
+        this.currentOrder = orderKey
+        this.$router.push({ query: { ...this.$route.query, [constants.ORDER_PARAM]: this.currentOrder } })
+        // this.initLocationList() will be called in watch $route
+      }
     },
   }
 }

@@ -228,6 +228,11 @@ export default {
     { key: '-product_count', value: 'OrderProductCountDESC', icon: 'mdi-database-outline' },
     { key: '-proof_count', value: 'OrderProofCountDESC', icon: 'mdi-image' },
   ],
+  LOCATION_COUNTRY_ORDER_LIST: [
+    { key: 'name', value: 'OrderNameASC', icon: 'mdi-alphabetical' },
+    { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
+    { key: '-location_count', value: 'OrderLocationCountDESC', icon: 'mdi-map-marker-outline' },
+  ],
   USER_ORDER_LIST: [
     // same order as UserCard chips
     { key: '-price_count', value: 'OrderPriceCountDESC', icon: 'mdi-tag-multiple-outline' },
