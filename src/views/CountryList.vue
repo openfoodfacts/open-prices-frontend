@@ -6,6 +6,7 @@
       </v-chip>
       <template v-if="!loading">
         <LoadedCountChip :loadedCount="countryList.length" :totalCount="countryTotal" />
+        <FilterMenu kind="country" :currentFilterList="currentFilterList" @update:currentFilterList="updateFilterList($event)" />
       </template>
     </v-col>
   </v-row>
@@ -26,10 +27,13 @@
 <script>
 import { defineAsyncComponent } from 'vue'
 import openPricesApi from '../services/openPricesApi'
+import constants from '../constants'
+import utils from '../utils.js'
 
 export default {
   components: {
     LoadedCountChip: defineAsyncComponent(() => import('../components/LoadedCountChip.vue')),
+    FilterMenu: defineAsyncComponent(() => import('../components/FilterMenu.vue')),
     CountryCard: defineAsyncComponent(() => import('../components/CountryCard.vue')),
   },
   data() {
@@ -38,9 +42,19 @@ export default {
       countryList: [],
       countryTotal: null,
       loading: false,
+      // filter & order
+      currentFilterList: [],
+    }
+  },
+  watch: {
+    $route (newRoute, oldRoute) { // only called when query changes to avoid having an API call when the path changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initCountryList()
+      }
     }
   },
   mounted() {
+    this.currentFilterList = utils.toArray(this.$route.query[constants.FILTER_PARAM]) || this.currentFilterList
     this.initCountryList()
   },
   methods: {
@@ -52,14 +66,26 @@ export default {
       this.loading = true
       return openPricesApi.getCountries()
         .then((data) => {
-          this.countryList = data  // all the countries are loaded at once
-          this.countryTotal = data.length
+          this.countryTotal = data.length  // all the countries are loaded at once
+          // we filter client-side
+          if (this.currentFilterList.includes('price_count_gte_1')) {
+            data = data.filter(country => country.price_count > 0)
+          }
+          if (this.currentFilterList.includes('location_count_gte_1')) {
+            data = data.filter(country => country.location_count > 0)
+          }
+          this.countryList = data
           this.loading = false
         })
     },
     goToCountry(country) {
       this.$router.push(`/countries/${country.osm_name}`)
-    }
+    },
+    updateFilterList(newFilterList) {
+      this.currentFilterList = newFilterList
+      this.$router.push({ query: { ...this.$route.query, [constants.FILTER_PARAM]: this.currentFilterList } })
+      // this.initCountryList() will be called in watch $route
+    },
   }
 }
 </script>

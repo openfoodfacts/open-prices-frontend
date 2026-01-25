@@ -179,7 +179,7 @@ export default {
   USER_COMMENT_ICON: 'mdi-comment-text-outline',
   // filter
   PRODUCT_FILTER_LIST: [
-    { key: 'price_count_gte_1', value: 'FilterProductWithPriceCount' },
+    { key: 'price_count_gte_1', value: 'FilterWithPriceCount' },
     { key: 'price_count_0', value: 'FilterProductWithoutPriceCount' },
   ],
   PRICE_FILTER_LIST: [
@@ -197,6 +197,10 @@ export default {
   ],
   LOCATION_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterLocationWithPriceCountHide' },
+  ],
+  LOCATION_COUNTRY_FILTER_LIST: [
+    { key: 'price_count_gte_1', value: 'FilterWithPriceCount' },
+    { key: 'location_count_gte_1', value: 'FilterWithLocationCount' },
   ],
   USER_FILTER_LIST: [
     { key: 'hide_price_count_gte_1', value: 'FilterUserWithPriceCountHide' },
