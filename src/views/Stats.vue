@@ -74,7 +74,7 @@
       <StatCard :value="stats.location_type_online_count" :subtitle="$t('Common.Online')" />
     </v-col>
     <v-col cols="6" sm="4" md="3" lg="2">
-      <StatCard :value="stats.location_type_osm_country_count" :subtitle="$t('Common.Countries')" />
+      <StatCard :value="stats.location_type_osm_country_count" :subtitle="$t('Common.Countries')" to="/countries?filter=location_count_gte_1" />
     </v-col>
   </v-row>
 

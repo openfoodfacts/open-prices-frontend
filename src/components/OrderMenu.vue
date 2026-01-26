@@ -29,7 +29,7 @@ export default {
     kind: {
       type: String,
       default: 'product',
-      examples: ['product', 'price', 'proof', 'location', 'user']
+      examples: ['product', 'price', 'proof', 'location', 'country', 'user']
     }
   },
   emits: ['update:currentOrder'],
@@ -39,6 +39,7 @@ export default {
       priceOrderList: constants.PRICE_ORDER_LIST,
       proofOrderList: constants.PROOF_ORDER_LIST,
       locationOrderList: constants.LOCATION_ORDER_LIST,
+      countryOrderList: constants.LOCATION_COUNTRY_ORDER_LIST,
       userOrderList: constants.USER_ORDER_LIST,
     }
   },
