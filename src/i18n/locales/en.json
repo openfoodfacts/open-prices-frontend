@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationCompare": "Compare locations",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Date of the picture.",
@@ -813,6 +814,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare locations"
 		},
 		"Locations": {
 			"Title": "Locations"
