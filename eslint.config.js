@@ -33,7 +33,7 @@ export default [
     }
   },
   {
-    files: ['src/i18n/locales/*.json', 'src/data/*/*.json'],
+    files: ['src/i18n/locales/*.json', 'src/data/**/*.json'],
     rules: {
       'no-irregular-whitespace': 'off',
     },
