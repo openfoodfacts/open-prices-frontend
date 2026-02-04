@@ -1,162 +1,162 @@
 {
 	"About": {
-		"WhyTitle": "Why {op_name}?",
-		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
-		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
-		"HowTitle": "How does {op_name} work?",
-		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
-		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
-		"HowAnswer3": "When possible, we ask contributors to provide a proof of the price, in the form of a photo of the price tag or receipt. This is to ensure data quality.",
-		"HowAnswer4": "If you are providing a receipt as the proof image, it means you agree to submit your consumption basket to {op_name}. We will anonymize the receipt and make it publicly available, so that it can be used for research purpose. If you don't want to publicly share your receipt, you can still contribute by taking a picture of the price tag.",
-		"LicenseTitle": "License",
-		"LicenseAnswer1": "The price dataset is licensed under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"LicenseAnswer2": "Images submitted as proof are licensed under the {ccbysa_url}.",
-		"WhatTitle": "What is {op_name}?",
-		"WhatOFFTitle": "What is {off_name}?",
+		"WhyTitle": "Kāpēc {op_name}?",
+		"WhyAnswer1": "{op_name} ir projekts, lai apkopotu un kopīgotu produktu cenas visā pasaulē. Tas ir publiski pieejams datu kopums, ko var izmantot pētniecībai, analīzei un citiem mērķiem. {op_name} izstrādā un uztur {off_url}.",
+		"WhyAnswer2": "Pašlaik ir maz uzņēmumu, kuriem pieder lielas produktu cenu datubāzes svītrkodu līmenī. Šīs cenas nav brīvi pieejamas, bet gan tiek pārdotas par augstu cenu privātiem dalībniekiem, pētniekiem un citām organizācijām, kas tās var atļauties.",
+		"HowTitle": "Kā darbojas {op_name} ?",
+		"HowAnswer1": "Mēs izmantojam atvērtā pirmkoda cenu datu kopas pūļa resursus. Cenas var pievienot lietotāji, izmantojot šo tīmekļa lietotni vai oficiālo {off_url} mobilo lietotni. Arī mazumtirgotāji vai trešo pušu lietotnes var sniegt savu ieguldījumu, izmantojot mūsu {op_api_url}.",
+		"HowAnswer2": "{op_name} ir paredzēts ne tikai atsevišķu cenu, bet arī patēriņa grozu, t. i., produktu saraksta, ko cilvēki iegādājas viena iepirkšanās brauciena laikā, glabāšanai. Šie dati ir ārkārtīgi interesanti pētniekiem, lai analizētu pārtikas patēriņa paradumus.",
+		"HowAnswer3": "Ja iespējams, mēs lūdzam līdzstrādniekus iesniegt cenas apliecinājumu cenu zīmes fotoattēla vai čeka veidā. Tas ir nepieciešams, lai nodrošinātu datu kvalitāti.",
+		"HowAnswer4": "Ja kā apliecinājuma attēlu iesniedzat čeku, tas nozīmē, ka piekrītat iesniegt savu patēriņa grozu {op_name}. Mēs anonimizēsim čeku un padarīsim to publiski pieejamu, lai to varētu izmantot pētniecības nolūkos. Ja nevēlaties publiski kopīgot savu čeku, joprojām varat sniegt savu ieguldījumu, nofotografējot cenu zīmi.",
+		"LicenseTitle": "Licence",
+		"LicenseAnswer1": "Cenu datu kopa ir licencēta saskaņā ar {odbl_url}, kas nozīmē, ka to var izmantot jebkādiem mērķiem, ja vien tiek norādīta autorība {op_name} un kopīgotas visas datu kopā veiktās izmaiņas.",
+		"LicenseAnswer2": "Attēli, kas iesniegti kā pierādījumi, ir licencēti saskaņā ar {ccbysa_url}.",
+		"WhatTitle": "Kas ir {op_name}?",
+		"WhatOFFTitle": "Kas ir {off_name}?",
 		"WhatOFFAnswer": "{off_url} ir bezpeļņas organizācija, kas vāc un kopīgo informāciju par pārtikas produktiem no visas pasaules. Tas ir sadarbības projekts, kurā datu vākšanā piedalās brīvprātīgie. {off_url} ir lielākā atvērtā pārtikas produktu datubāze pasaulē, kurā ir vairāk nekā 4 miljoni produktu 200 valstīs.",
-		"WhyOFFTitle": "Why is {off_name} doing this?",
-		"WhyOFFAnswer": "Price information is of paramount importance to understand food systems. It's a key factor in understanding the cost of food and to promote healthier diets. Opening price data is a way to make it easier for researchers, journalists, and citizens to have a better understanding of how food prices vary geographically and in time.",
-		"HowContribute": "How can I contribute?",
-		"HowContributeAnswer": "You can contribute by adding prices to the dataset. You can do so by using the web app, or via the official mobile app. An {op_api_url} is also available if you want to integrate {op_name} to your app. You need an {off_url} account to contribute.",
-		"HowUseData": "How can I use the data?",
-		"HowUseDataAnswer1": "The data is available under the {odbl_url}, which means that it can be used for any purpose, as long as you credit {op_name} and share any modifications you make to the dataset.",
-		"HowUseDataAnswer2": "The {op_api_url} provides a way to easily access the data.",
-		"HowUseDataAnswer3": "The data is also available as 3 gzipped JSONL dumps: {op_dumb_prices_url}, {op_dumb_proofs_url}, and {op_dumb_locations_url}.",
-		"HowContact": "How can I get in touch?",
-		"HowContactAnswer": "You can get in touch with us by sending an email to {off_contact_email_url}.",
-		"HowSupport": "How can I support {op_name}?",
-		"HowSupportAnswer": "You can support {op_name} by contributing to the project, by sharing it with your friends and family, and by donating to {off_url}.",
-		"WhyOSM": "Why do you ask for an {osm_name} ID when I add a price?",
-		"WhyOSMAnswer": "We ask for an {osm_url} ID to be able to link the price to a specific shop. This is useful to be able to display the price on a map, and to be able to analyze regional or retailer price differences.",
-		"HowRetailer": "I'm a retailer and I want to contribute prices. How can I do that?",
-		"HowRetailerAnswer": "You can contribute prices by using our {op_api_url}. If you want to contribute prices at scale, please get in touch with us at {off_contact_email_url}.",
-		"WhyNoScraping": "Do you consider scraping prices from retailers' websites?",
-		"WhyNoScrapingAnswer1": "For legal and technical reasons, we don't consider scraping prices from retailers' websites as a valid way to contribute to {op_name}. We want to make sure that the prices we collect are accurate and up-to-date, and receiving scraped prices from contributors doesn't allow us to do that.",
-		"WhyNoScrapingAnswer2": "Price scraping is a considered option in a future version of {op_name}, but it would be done by {op_name} itself so that we can have a proof of the price based on the HTML page."
+		"WhyOFFTitle": "Kāpēc {off_name} to dara?",
+		"WhyOFFAnswer": "Informācija par cenām ir ārkārtīgi svarīga, lai izprastu pārtikas sistēmas. Tas ir galvenais faktors pārtikas izmaksu izpratnē un veselīgāka uztura veicināšanā. Sākotnējie cenu dati ir veids, kā atvieglot pētniekiem, žurnālistiem un pilsoņiem labāku izpratni par to, kā pārtikas cenas mainās ģeogrāfiski un laikā.",
+		"HowContribute": "Kā es varu dot savu ieguldījumu?",
+		"HowContributeAnswer": "Jūs varat sniegt savu ieguldījumu, pievienojot cenas datu kopai. To var izdarīt, izmantojot tīmekļa lietotni vai oficiālo mobilo lietotni. Ir pieejams arī {op_api_url} , ja vēlaties integrēt {op_name} savā lietotnē. Lai sniegtu savu ieguldījumu, jums ir nepieciešams {off_url} konts.",
+		"HowUseData": "Kā es varu izmantot datus?",
+		"HowUseDataAnswer1": "Dati ir pieejami sadaļā {odbl_url}, kas nozīmē, ka tos var izmantot jebkādiem mērķiem, ja vien tiek norādīta autorība {op_name} un kopīgotas visas veiktās izmaiņas datu kopā.",
+		"HowUseDataAnswer2": "{op_api_url} nodrošina veidu, kā ērti piekļūt datiem.",
+		"HowUseDataAnswer3": "Dati ir pieejami arī kā 3 gzip formātā saspiesti JSONL izgāztuves: {op_dumb_prices_url}, {op_dumb_proofs_url}un {op_dumb_locations_url}.",
+		"HowContact": "Kā es varu sazināties?",
+		"HowContactAnswer": "Jūs varat sazināties ar mums, nosūtot e-pastu uz {off_contact_email_url}.",
+		"HowSupport": "Kā es varu atbalstīt {op_name}?",
+		"HowSupportAnswer": "Jūs varat atbalstīt {op_name} , piedaloties projektā, daloties tajā ar draugiem un ģimeni, kā arī ziedojot {off_url}.",
+		"WhyOSM": "Kāpēc, pievienojot cenu, tiek prasīts {osm_name} ID?",
+		"WhyOSMAnswer": "Lai cenu varētu sasaistīt ar konkrētu veikalu, mēs lūdzam {osm_url} ID. Tas ir noderīgi, lai cenu varētu attēlot kartē un analizēt reģionālās vai mazumtirgotāju cenu atšķirības.",
+		"HowRetailer": "Esmu mazumtirgotājs un vēlos sniegt ieguldījumu cenu veidošanā. Kā es to varu izdarīt?",
+		"HowRetailerAnswer": "Jūs varat sniegt savu ieguldījumu cenu veidošanā, izmantojot mūsu {op_api_url}. Ja vēlaties sniegt savu ieguldījumu plašā mērogā, lūdzu, sazinieties ar mums, rakstot uz {off_contact_email_url}.",
+		"WhyNoScraping": "Vai apsverat cenu iegūšanu no mazumtirgotāju tīmekļa vietnēm?",
+		"WhyNoScrapingAnswer1": "Juridisku un tehnisku iemeslu dēļ mēs neuzskatām cenu iegūšanu no mazumtirgotāju tīmekļa vietnēm par derīgu veidu, kā sniegt ieguldījumu {op_name}. Mēs vēlamies pārliecināties, ka mūsu apkopotās cenas ir precīzas un aktuālas, un iegūto cenu saņemšana no līdzstrādniekiem mums to neļauj.",
+		"WhyNoScrapingAnswer2": "Cenu nokasīšana (Cenu skrāpēšana) ir apsverama iespēja {op_name}nākotnes versijā, taču to veiktu pats {op_name} , lai mēs varētu iegūt cenas pierādījumu, pamatojoties uz HTML lapu."
 	},
 	"AddPriceHome": {
 		"MultipleProductMode": {
-			"Subtitle": "A shelf with multiple price tags",
-			"Title": "Multiple products"
+			"Subtitle": "Plaukts ar vairākām cenu zīmēm",
+			"Title": "Vairāki produkti"
 		},
 		"ReceiptMode": {
-			"Subtitle": "One or multiple products",
+			"Subtitle": "Viens vai vairāki produkti",
 			"Title": "Kvīts"
 		},
 		"SingleProductMode": {
-			"Subtitle": "Just one price tag",
-			"Title": "Single product"
+			"Subtitle": "Tikai viena cenu zīme",
+			"Title": "Viens produkts"
 		}
 	},
 	"AddPriceMultiple": {
 		"ProductPriceDetails": {
-			"Add": "Add a new price",
-			"AlreadyUploaded": "{priceAlreadyUploadedNumber} price already uploaded | {priceAlreadyUploadedNumber} prices already uploaded",
+			"Add": "Pievienot jaunu cenu",
+			"AlreadyUploaded": "{priceAlreadyUploadedNumber} cena jau augšupielādēta | {priceAlreadyUploadedNumber} cenas jau augšupielādētas",
 			"Create": "Izveidot",
-			"ExistingProductFound": "Duplicate? This product has already been added for this proof",
-			"NewPrice": "New price",
-			"PriceUploaded": "Price created!",
-			"Upload": "Upload"
+			"ExistingProductFound": "Dublikāts? Šis produkts jau ir pievienots šim pierādījumam.",
+			"NewPrice": "Jauna cena",
+			"PriceUploaded": "Cena izveidota!",
+			"Upload": "Augšupielādēt"
 		},
 		"ProofDetails": {
-			"ReceiptWarning": "Receipts may contain personal information, we recommend to hide them (redact, fold...) before taking the picture.",
-			"PrivateWarning": "You can also set the receipt to Private. Private proofs will only be visible to you and to moderators.",
-			"Title": "Proof details"
+			"ReceiptWarning": "Kvītis var saturēt personisku informāciju, tāpēc pirms fotografēšanas iesakām tās paslēpt (rediģēt, salocīt...).",
+			"PrivateWarning": "Varat arī iestatīt kvīti kā privātu. Privātie pierādījumi būs redzami tikai jums un moderatoriem.",
+			"Title": "Pierādījuma detaļas"
 		},
-		"Title": "Add multiple prices"
+		"Title": "Pievienot vairākas cenas"
 	},
 	"AddPriceSingle": {
 		"Create": "Izveidot",
 		"PriceDetails": {
-			"Discount": "Discount?",
+			"Discount": "Atlaide?",
 			"Label": "Cena",
 			"LabelDiscounted": "Atlaides cena",
-			"LabelFull": "Full price",
+			"LabelFull": "Pilna cena",
 			"Proof": "Pierādījums",
-			"ProofDateChanged": "Date updated!",
-			"ProofSelected": "Proof selected!",
-			"ProofUploaded": "Proof uploaded!",
-			"Title": "Price details",
-			"UploadProof": "Upload a proof",
-			"Picture": "Picture",
+			"ProofDateChanged": "Datums atjaunināts!",
+			"ProofSelected": "Pierādījums izvēlēts!",
+			"ProofUploaded": "Pierādījums augšupielādēts!",
+			"Title": "Cenas informācija",
+			"UploadProof": "Augšupielādējiet pierādījumu",
+			"Picture": "Attēls",
 			"TakePicture": "Fotografēt",
-			"Gallery": "Device gallery",
-			"SelectFromGallery": "Select from device gallery",
-			"RecentProof": "Recent proof",
-			"SelectRecentProof": "Select a recent proof"
+			"Gallery": "Ierīču galerija",
+			"SelectFromGallery": "Atlasīt no ierīču galerijas",
+			"RecentProof": "Jaunākie pierādījumi",
+			"SelectRecentProof": "Atlasiet nesenu pierādījumu"
 		},
 		"ProductInfo": {
 			"CategoryLabel": "Kategorija",
-			"OriginLabel": "Origin",
-			"ProductBarcode": "Product barcode",
+			"OriginLabel": "Izcelsme",
+			"ProductBarcode": "Produkta svītrkods",
 			"Scan": "Skenēt",
-			"ScanBarcode": "Scan a barcode",
+			"ScanBarcode": "Skenēt svītrkodu",
 			"ScanBarcodeShort": "Skenēt",
-			"Type": "Type",
-			"TypeBarcode": "Type a barcode",
-			"TypeBarcodeShort": "Type",
-			"SetProduct": "Set a product",
-			"Title": "Product info"
+			"Type": "Tips",
+			"TypeBarcode": "Ievadiet svītrkodu",
+			"TypeBarcodeShort": "Tips",
+			"SetProduct": "Iestatiet produktu",
+			"Title": "Produkta informācija"
 		},
 		"ProductModeList": {
 			"Barcode": "Svītrkods",
 			"Category": "Kategorija"
 		},
 		"CategoryPricePer": {
-			"PerKg": "Price per kg",
-			"PerUnit": "Price per unit"
+			"PerKg": "Cena par kg",
+			"PerUnit": "Cena par vienību"
 		},
-		"Title": "Add a single price",
+		"Title": "Pievienot vienu cenu",
 		"WhereWhen": {
 			"Date": "Datums",
 			"DateLabel": "Datums",
 			"Find": "Meklēt",
-			"Location": "Shop location",
-			"SelectLocation": "Select your location",
-			"Title": "Where & when?"
+			"Location": "Veikala atrašanās vieta",
+			"SelectLocation": "Izvēlieties savu atrašanās vietu",
+			"Title": "Kur un kad?"
 		}
 	},
 	"BarcodeScanner": {
 		"Htlm5-qrcode": {
-			"Text": "powered by {url}"
+			"Text": "nodrošina {url}"
 		}
 	},
 	"BarcodeManualInput": {
 		"Barcode": "Svītrkods",
-		"Title": "Type a barcode"
+		"Title": "Ievadiet svītrkodu"
 	},
 	"Challenge": {
-		"Title": "Community challenge",
-		"Subtitle": "Join other food price enthusiasts in gathering information about {challenge_title} {challenge_subtitle}.",
+		"Title": "Kopienas izaicinājums",
+		"Subtitle": "Pievienojieties citiem pārtikas cenu entuziastiem informācijas vākšanā par {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
-			"Title": "Take pictures of price tags in stores",
-			"line1": "Pictures can include one or more price tags. Barcodes should be readable. For example :",
-			"line2": "Once ready, find your shop and upload your pictures using the button below.",
-			"AddPictures": "Add pictures"
+			"Title": "Fotografējiet cenu zīmes veikalos",
+			"line1": "Attēlos var būt iekļauta viena vai vairākas cenu zīmes. Svītrkodiem jābūt salasāmiem. Piemēram:",
+			"line2": "Kad esat gatavs, atrodiet savu veikalu un augšupielādējiet attēlus, izmantojot zemāk esošo pogu.",
+			"AddPictures": "Pievienot attēlus"
 		},
 		"StepValidate": {
-			"Title": "Validate the detected prices with AI",
-			"line1": "Price tags are automatically detected, but the robots still need your help to validate them.",
-			"line2": "Visit the price validation page using the button below, edit the barcode and price if needed, and validate !",
-			"line3": "If you're having trouble reading the label, mark it as unreadable.",
-			"line4": "This is a collaborative effort, even if you didn't send pictures, you can still help others by validating."
+			"Title": "Validējiet noteiktās cenas ar mākslīgo intelektu",
+			"line1": "Cenu zīmes tiek noteiktas automātiski, taču robotiem joprojām ir nepieciešama jūsu palīdzība, lai tās apstiprinātu.",
+			"line2": "Apmeklējiet cenu validācijas lapu, izmantojot tālāk redzamo pogu, rediģējiet svītrkodu un cenu, ja nepieciešams, un validējiet!",
+			"line3": "Ja rodas problēmas ar etiķetes lasīšanu, atzīmējiet to kā nelasāmu.",
+			"line4": "Šis ir kopīgs darbs, pat ja jūs nesūtījāt attēlus, jūs joprojām varat palīdzēt citiem, tos apstiprinot."
 		},
-		"PicturesAddedByYou": "Pictures added by you",
-		"Prices": "{challenge_title} prices",
-		"PricesAdded": "{challenge_title} prices added",
-		"PricesByYou": "{challenge_title} prices by you",
+		"PicturesAddedByYou": "Jūsu pievienotie attēli",
+		"Prices": "{challenge_title} cenas",
+		"PricesAdded": "{challenge_title} pievienotas cenas",
+		"PricesByYou": "{challenge_title} cenas no jums",
 		"PricesAddedByYou": "Jūsu pievienotās cenas",
-		"MostRecentContributions": "Most recent contributions",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
+		"MostRecentContributions": "Jaunākie ieguldījumi",
+		"ChallengeCount": "{count} izaicinājumi | {count} izaicinājums | {count} izaicinājumi",
 		"ChallengeStatuses": {
-			"DRAFT": "Draft",
-			"UPCOMING": "Upcoming",
-			"ONGOING": "Ongoing",
-			"COMPLETED": "Completed"
+			"DRAFT": "Melnraksts",
+			"UPCOMING": "Gaidāmie",
+			"ONGOING": "Notiek",
+			"COMPLETED": "Pabeigts"
 		},
-		"NoChallengeCurrentlyOngoing": "No challenge currently ongoing, please come back later!",
-		"PastOrFutureChallenges": "Past or future challenges",
-		"OngoingChallenges": "Ongoing challenges",
+		"NoChallengeCurrentlyOngoing": "Pašlaik nav neviena izaicinājuma, lūdzu, atgriezieties vēlāk!",
+		"PastOrFutureChallenges": "Pagātnes vai nākotnes izaicinājumi",
+		"OngoingChallenges": "Pastāvīgie izaicinājumi",
 		"PastChallenges": "Iepriekšējie izaicinājumi",
 		"UpcomingChallenges": "Gaidāmie izaicinājumi",
 		"StatsAndRankings": "Statistika un rangi",
@@ -168,32 +168,32 @@
 	"Common": {
 		"About": "Par",
 		"Action": "Darbība",
-		"Actions": "Actions",
-		"AddComment": "Add a comment",
+		"Actions": "Darbības",
+		"AddComment": "Pievienot komentāru",
 		"AddPrice": "Pievienot cenu",
-		"AddPrices": "Add prices",
-		"AddNewPrice": "Add a new price",
-		"AddNewPrices": "Add new prices",
-		"AddProof": "Add a proof",
-		"AddProofs": "Add proofs",
-		"AddNewProof": "Add a new proof",
-		"AddNewProofs": "Add new proofs",
+		"AddPrices": "Pievienot cenas",
+		"AddNewPrice": "Pievienot jaunu cenu",
+		"AddNewPrices": "Pievienot jaunas cenas",
+		"AddProof": "Pievienot pierādījumu",
+		"AddProofs": "Pievienot pierādījumus",
+		"AddNewProof": "Pievienot jaunu pierādījumu",
+		"AddNewProofs": "Pievienot jaunus pierādījumus",
 		"AddNewProofPriceTags": "Pievienot jaunas cenu zīmes",
 		"AddNewProofReceipt": "Pievienot jaunu kvīti",
-		"AddToOFF": "Add to {name}",
+		"AddToOFF": "Pievienot {name}",
 		"Added": "Pievienots",
-		"AdditionalInfo": "Additional information",
-		"All": "All",
+		"AdditionalInfo": "Papildinformācija",
+		"All": "Visi",
 		"Barcode": "Svītrkods",
-		"Barcodes": "Barcodes",
-		"BarcodeScan": "Scan a barcode",
+		"Barcodes": "Svītrkodi",
+		"BarcodeScan": "Skenēt svītrkodu",
 		"BarcodeScanShort": "Skenēt",
-		"BarcodeType": "Type a barcode",
-		"BarcodeTypeShort": "Type",
+		"BarcodeType": "Ievadiet svītrkodu",
+		"BarcodeTypeShort": "Tips",
 		"BarcodeInvalid": "Nederīgs svītrkods",
 		"Brand": "Zīmols",
 		"Brands": "Zīmoli",
-		"BrandTotal": "{count} brands | {count} brand | {count} brands",
+		"BrandTotal": "{count} zīmoli | {count} zīmols | {count} zīmoli",
 		"Price": "Cena",
 		"Prices": "Cenas",
 		"PRODUCT": "Produkts",
@@ -201,138 +201,138 @@
 		"ProductName": "Produkta nosaukums",
 		"Products": "Produkti",
 		"Proof": "Pierādījums",
-		"Proofs": "Proofs",
+		"Proofs": "Pierādījumi",
 		"CATEGORY": "Kategorija",
 		"Category": "Kategorija",
 		"Categories": "Kategorijas",
-		"CategoryMissing": "Category missing",
-		"CategoryTotal": "{count} categories | {count} category | {count} categories",
-		"Challenge": "Challenge",
-		"Challenges": "Challenges",
-		"ChallengeCurrent": "Current challenge",
-		"ChallengeOngoing": "Ongoing challenge",
-		"ChallengeCount": "{count} challenges | {count} challenge | {count} challenges",
-		"Chart": "Chart",
+		"CategoryMissing": "Trūkst kategorijas",
+		"CategoryTotal": "{count} kategorijas | {count} kategorija | {count} kategorijas",
+		"Challenge": "Izaicinājums",
+		"Challenges": "Izaicinājumi",
+		"ChallengeCurrent": "Pašreizējais izaicinājums",
+		"ChallengeOngoing": "Pastāvīgs izaicinājums",
+		"ChallengeCount": "{count} izaicinājumi | {count} izaicinājums | {count} izaicinājumi",
+		"Chart": "Diagramma",
 		"Clear": "Notīrīt",
 		"Close": "Aizvērt",
-		"Comment": "Comment",
-		"Community": "Community",
-		"CommunityPrices": "Community prices",
-		"CommunityProofs": "Community proofs",
+		"Comment": "Komentārs",
+		"Community": "Kopiena",
+		"CommunityPrices": "Kopienas cenas",
+		"CommunityProofs": "Kopienas pierādījumi",
 		"Consumption": "Patēriņš",
-		"ConsumptionPrices": "Consumption prices",
-		"ConsumptionProofs": "Consumption proofs",
+		"ConsumptionPrices": "Patēriņa cenas",
+		"ConsumptionProofs": "Patēriņa pierādījumi",
 		"Contribute": "Veicināt / atbalstīt",
 		"Contributors": "Atbalstītāji",
 		"Contributions": "Iemaksas",
 		"Confirm": "Apstiprināt",
-		"Count": "Count",
-		"Country": "Country",
-		"Countries": "Countries",
-		"CountryCount": "{count} countries | {count} country | {count} countries",
-		"Crop": "Crop",
-		"Cropped": "Cropped",
+		"Count": "Grāfs",
+		"Country": "Valsts",
+		"Countries": "Valstis",
+		"CountryCount": "{count} valstis | {count} valsts | {count} valstis",
+		"Crop": "Apgriezt",
+		"Cropped": "Apgriezts",
 		"Currency": "Valūta",
-		"Currencies": "Currencies",
-		"CurrencyMissing": "Currency missing",
-		"CurrencyCount": "{count} currencies | {count} currency | {count} currencies",
+		"Currencies": "Valūtas",
+		"CurrencyMissing": "Trūkst valūtas",
+		"CurrencyCount": "{count} valūtas | {count} valūta | {count} valūtas",
 		"CurrencyProofHelpTextSettings": "Valūtas var pievienot iestatījumos.",
-		"Dashboard": "Dashboard",
-		"Display": "Display",
-		"DisplayList": "List",
-		"DisplayPriceList": "List",
-		"DisplayTable": "Table",
+		"Dashboard": "Informācijas panelis",
+		"Display": "Reklāmas",
+		"DisplayList": "Saraksts",
+		"DisplayPriceList": "Saraksts",
+		"DisplayTable": "Galds",
 		"DisplayMap": "Karte",
 		"DisplayPriceMap": "Karte",
-		"DisplayPriceChart": "Chart",
+		"DisplayPriceChart": "Diagramma",
 		"Done": "Pabeigts",
 		"Error": "Kļūda",
 		"Experiment": "Eksperiments",
-		"Experiments": "Experiments",
+		"Experiments": "Eksperimenti",
 		"FromPriceTag": "No cenu zīmes",
 		"FromReceipt": "No čeka",
-		"GoToProof": "Go to proof",
-		"Join": "Join",
+		"GoToProof": "Dodieties uz pierādījumu",
+		"Join": "Pievienoties",
 		"Label": "Uzlīme",
 		"Labels": "Etiķetes",
-		"LabelTotal": "{count} labels | {count} label | {count} labels",
-		"Language": "Languages",
-		"Languages": "Languages",
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
-		"LoadMore": "Load more",
-		"Location": "Location",
-		"Locations": "Locations",
-		"LocationSelected": "Location selected",
-		"LocationFindShop": "Find the shop location",
-		"LocationMissing": "Location missing",
-		"LocationSearchByName": "Search by name and city",
+		"LabelTotal": "{count} etiķetes | {count} etiķete | {count} etiķetes",
+		"Language": "Valodas",
+		"Languages": "Valodas",
+		"LatestPrices": "Jaunākās cenas",
+		"LatestProofs": "Jaunākie pierādījumi",
+		"LoadMore": "Ielādēt vairāk",
+		"Location": "Atrašanās vieta",
+		"Locations": "Atrašanās vietas",
+		"LocationSelected": "Atlasītā atrašanās vieta",
+		"LocationFindShop": "Atrodiet veikala atrašanās vietu",
+		"LocationMissing": "Trūkst atrašanās vietas",
+		"LocationSearchByName": "Meklēt pēc nosaukuma un pilsētas",
 		"Date": "Datums",
-		"DateMissing": "Date missing",
+		"DateMissing": "Trūkst datuma",
 		"DateProofHelpText": "Attēla datums.",
 		"DateProofHelpTextExif": "Pēc noklusējuma mēs cenšamies to iegūt no attēla EXIF metadatiem.",
 		"DateProofHelpTextReceipt": "Čekiem iestatiet pirkuma datumu.",
 		"Details": "Sīkāka informācija",
 		"Delete": "Dzēst",
-		"DeveloperMode": "Developer mode",
-		"Discount": "Discount",
-		"DiscountType": "Discount type",
+		"DeveloperMode": "Izstrādātāja režīms",
+		"Discount": "Atlaide",
+		"DiscountType": "Atlaides veids",
 		"DiscountTypeQuantity": "Daudzums",
-		"DiscountTypeSale": "Sale",
-		"DiscountTypeSeasonal": "Seasonal",
-		"DiscountTypeLoyaltyProgram": "Loyalty program",
-		"DiscountTypeExpiresSoon": "Expires soon",
-		"DiscountTypePickItYourself": "Pick it yourself",
-		"DiscountTypeSecondHand": "Second hand",
+		"DiscountTypeSale": "Izpārdošana",
+		"DiscountTypeSeasonal": "Sezonāls",
+		"DiscountTypeLoyaltyProgram": "Lojalitātes programma",
+		"DiscountTypeExpiresSoon": "Drīz beigsies derīguma termiņš",
+		"DiscountTypePickItYourself": "Izvēlies pats",
+		"DiscountTypeSecondHand": "Lietots",
 		"DiscountTypeOther": "Citi",
-		"Example": "Example",
-		"Examples": "Examples",
+		"Example": "Piemērs",
+		"Examples": "Piemēri",
 		"ExampleWithColon": "Piemērs:",
-		"ExampleWithColonAndValue": "Example: {value}",
+		"ExampleWithColonAndValue": "Piemērs: {value}",
 		"ExamplesWithColon": "Piemēri:",
-		"ExamplesWithColonAndValue": "Examples: {value}",
+		"ExamplesWithColonAndValue": "Piemēri: {value}",
 		"Edit": "Rediģēt",
-		"End": "End",
-		"ErrorServer": "Error: server error",
+		"End": "Beigas",
+		"ErrorServer": "Kļūda: servera kļūda",
 		"FieldIsRequired": "Lauks ir obligāts",
 		"Filter": "Filtrs",
-		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterChallengesShowAllStatus": "Rādīt visus izaicinājumus",
 		"FilterWithPriceCount": "Ar cenām",
 		"FilterWithLocationCount": "Ar atrašanās vietām",
-		"FilterProductWithPriceCount": "With a price",
-		"FilterProductWithPriceCountHide": "Hide products with prices",
-		"FilterProductWithoutPriceCount": "Without prices",
-		"FilterPriceMoreThan30DaysHide": "Hide prices older than 30 days",
-		"FilterProofWithPriceCountHide": "Hide proofs with prices",
-		"FilterPriceTagWithProofOwner": "Show only my proofs",
+		"FilterProductWithPriceCount": "Ar cenu",
+		"FilterProductWithPriceCountHide": "Slēpt produktus ar cenām",
+		"FilterProductWithoutPriceCount": "Bez cenām",
+		"FilterPriceMoreThan30DaysHide": "Slēpt cenas, kas vecākas par 30 dienām",
+		"FilterProofWithPriceCountHide": "Slēpt pierādījumus ar cenām",
+		"FilterPriceTagWithProofOwner": "Rādīt tikai manus pierādījumus",
 		"FilterPriceTagWithProofUserCountry": "Rādīt tikai pierādījumus no manas valsts",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Ar derīgu svītrkodu",
 		"FilterPriceTagWithTagPredictionProductExists": "Ar derīgu produktu",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Ar derīgu kategorijas tagu",
-		"FilterLocationWithPriceCountHide": "Hide locations with prices",
-		"FilterUserWithPriceCountHide": "Hide contributors with prices",
-		"Fix": "Fix",
+		"FilterLocationWithPriceCountHide": "Slēpt atrašanās vietas ar cenām",
+		"FilterUserWithPriceCountHide": "Slēpt līdzautorus ar cenām",
+		"Fix": "Labot",
 		"FAQ": "Bieži uzdotie jautājumi",
 		"FrequentlyAskedQuestions": "Bieži uzdotie jautājumi",
-		"GDPR_REQUEST": "GDPR request",
-		"Group": "Group",
+		"GDPR_REQUEST": "GDPR pieprasījums",
+		"Group": "Grupa",
 		"Help": "Palīdzība",
 		"Here": "Šeit",
 		"History": "Vēsture",
 		"Image": "Attēls",
-		"ImageSelect": "Select an image",
-		"ImageSelectMultiple": "Select images",
-		"ImageSelected": "Image selected!",
-		"ImageSelectedCount": "{count} images selected | {count} image selected | {count} images selected",
-		"Images": "Images",
-		"ImageFull": "Full-size image",
-		"Latest": "Latest",
-		"LinkCopySuccess": "Link copied",
-		"LocationCount": "{count} locations | {count} location | {count} locations",
-		"LocationNotFound": "Location not found",
+		"ImageSelect": "Atlasiet attēlu",
+		"ImageSelectMultiple": "Atlasīt attēlus",
+		"ImageSelected": "Attēls izvēlēts!",
+		"ImageSelectedCount": "{count} atlasītie attēli | {count} atlasītais attēls | {count} atlasītie attēli",
+		"Images": "Attēli",
+		"ImageFull": "Pilna izmēra attēls",
+		"Latest": "Jaunākais",
+		"LinkCopySuccess": "Saite nokopēta",
+		"LocationCount": "{count} atrašanās vietas | {count} atrašanās vieta | {count} atrašanās vietas",
+		"LocationNotFound": "Atrašanās vieta nav atrasta",
 		"Map": "Karte",
 		"Miscellaneous": "Dažādi",
-		"MobileApp": "Mobile app",
+		"MobileApp": "Mobilā lietotne",
 		"Moderation": "Moderācija",
 		"ModerationFlagReasonWrongType": "Nepareizs tips",
 		"ModerationFlagReasonWrongPriceValue": "Nepareiza cenas vērtība",
@@ -344,180 +344,180 @@
 		"ModerationFlagCreateSuccess": "Paldies par jūsu ziņojumu!",
 		"ModerationFlagStatusOpen": "Atvērt",
 		"ModerationFlagStatusClosed": "Slēgts",
-		"MyConsumption": "My consumption",
-		"MyDashboard": "My dashboard",
+		"MyConsumption": "Mans patēriņš",
+		"MyDashboard": "Mans informācijas panelis",
 		"MyPrices": "Manas cenas",
 		"MyProofs": "Mani pierādījumi",
-		"MyStats": "My stats",
+		"MyStats": "Mana statistika",
 		"New": "Jauns",
-		"NextProof": "Next proof",
+		"NextProof": "Nākamais pierādījums",
 		"NoBarcode": "Nav svītrkoda",
-		"NotAnError": "Not an error",
-		"NotAPrice": "Not a price",
-		"Offline": "Offline",
-		"Online": "Online",
+		"NotAnError": "Nav kļūda",
+		"NotAPrice": "Nav cena",
+		"Offline": "Bezsaistē",
+		"Online": "Tiešsaistē",
 		"Open": "Atvērt",
-		"OpenWithTheAssistant": "Open with the assistant",
-		"Order": "Order",
+		"OpenWithTheAssistant": "Atvērt ar palīgu",
+		"Order": "Pasūtījums",
 		"OrderNameASC": "Nosaukums",
-		"OrderLocationCountDESC": "Location count",
-		"OrderProductUniqueScansDESC": "Number of scans",
-		"OrderProductPriceCountDESC": "Number of prices",
-		"OrderPriceCountDESC": "Price count",
+		"OrderLocationCountDESC": "Atrašanās vietu skaits",
+		"OrderProductUniqueScansDESC": "Skenējumu skaits",
+		"OrderProductPriceCountDESC": "Cenu skaits",
+		"OrderPriceCountDESC": "Cenu aprēķins",
 		"OrderPriceASC": "Cena",
-		"OrderPriceCreatedDESC": "Addition date",
-		"OrderPriceDateDESC": "Price date",
-		"OrderProductCountDESC": "Product count",
-		"OrderProofCountDESC": "Proof count",
-		"OrderProofCreatedDESC": "Addition date",
-		"OrderProofDateDESC": "Proof date",
-		"OrderUserCountDESC": "User count",
+		"OrderPriceCreatedDESC": "Pievienošanas datums",
+		"OrderPriceDateDESC": "Cenas datums",
+		"OrderProductCountDESC": "Produktu skaits",
+		"OrderProofCountDESC": "Pierādījumu skaits",
+		"OrderProofCreatedDESC": "Pievienošanas datums",
+		"OrderProofDateDESC": "Pierādījuma datums",
+		"OrderUserCountDESC": "Lietotāju skaits",
 		"Other": "Citi",
-		"OtherContributions": "Other contributions",
+		"OtherContributions": "Citi ieguldījumi",
 		"PageNotMaintainedAnymore": "Šī lapa vairs netiek uzturēta.",
-		"PersonalInfo": "Personal information",
-		"Physical": "Physical",
-		"Picture": "Picture",
-		"Pictures": "Pictures",
-		"PictureSelect": "Select a picture",
-		"PictureSelectMultiple": "Select pictures",
-		"PictureSelected": "Picture selected!",
-		"PictureSelectedCount": "{count} pictures selected | {count} picture selected | {count} pictures selected",
-		"PictureFull": "Full-size picture",
-		"PicturesByYou": "Pictures by you",
-		"PicturesAdded": "Pictures added",
-		"PicturesAddedByYou": "Pictures added by you",
+		"PersonalInfo": "Personīgā informācija",
+		"Physical": "Fizisks",
+		"Picture": "Attēls",
+		"Pictures": "Attēli",
+		"PictureSelect": "Atlasiet attēlu",
+		"PictureSelectMultiple": "Atlasīt attēlus",
+		"PictureSelected": "Attēls izvēlēts!",
+		"PictureSelectedCount": "{count} atlasītie attēli | {count} atlasītais attēls | {count} atlasītie attēli",
+		"PictureFull": "Pilna izmēra attēls",
+		"PicturesByYou": "Jūsu bildes",
+		"PicturesAdded": "Attēli pievienoti",
+		"PicturesAddedByYou": "Jūsu pievienotie attēli",
 		"PRICE_TAG": "Cenas zīme",
 		"PriceTags": "Cenu zīmes",
-		"PriceCount": "{count} prices | {count} price | {count} prices",
-		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"PriceToValidateCount": "{count} prices to validate | {count} price to validate | {count} prices to validate",
-		"PriceCreated": "Price created!",
+		"PriceCount": "{count} cenas | {count} cena | {count} cenas",
+		"PriceAddedCount": "{count} pievienotās cenas | {count} pievienotā cena | {count} pievienotās cenas",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pievienotas cenas",
+		"PriceToValidateCount": "{count} validējamās cenas | {count} validējamā cena | {count} validējamās cenas",
+		"PriceCreated": "Cena izveidota!",
 		"PriceMissing": "Trūkst cenas",
 		"PricePerMissing": "Cena par trūkstošo",
 		"PriceAlreadyUploaded": "Cena jau augšupielādēta",
 		"PriceReadyToBeUploaded": "Cena ir gatava augšupielādei",
 		"PricesAlreadyUploaded": "Cenas jau augšupielādētas",
 		"PricesAll": "Visas cenas",
-		"PricesMore": "More prices",
-		"PricesAdded": "Prices added",
-		"PricesAddedToday": "Prices added today",
-		"PricesToday": "Prices today",
-		"PriceNotFound": "Price not found",
+		"PricesMore": "Vairāk cenu",
+		"PricesAdded": "Cenas pievienotas",
+		"PricesAddedToday": "Cenas pievienotas šodien",
+		"PricesToday": "Cenas šodien",
+		"PriceNotFound": "Cena nav atrasta",
 		"PricesAddedByYou": "Jūsu pievienotās cenas",
-		"Private": "Private",
+		"Private": "Privāts",
 		"Privacy": "Privātums",
-		"ProductCount": "{count} products | {count} product | {count} products",
-		"ProductFind": "Find the product",
+		"ProductCount": "{count} produkti | {count} produkts | {count} produkti",
+		"ProductFind": "Atrodiet produktu",
 		"ProductMissing": "Trūkst produkta",
 		"ProductOrCategoryMissing": "Trūkst produkta vai kategorijas",
-		"ProofCount": "{count} proofs | {count} proof | {count} proofs",
-		"ProofDetails": "Proof details",
-		"ProofMissing": "Proof missing",
+		"ProofCount": "{count} pierādījumi | {count} pierādījums | {count} pierādījumi",
+		"ProofDetails": "Pierādījuma detaļas",
+		"ProofMissing": "Trūkst pierādījumu",
 		"ProofSelect": "Izvēlieties pierādījumu",
-		"ProofSelectMultiple": "Select proofs",
-		"ProofSelected": "Proof selected!",
-		"ProofSelectedCount": "{count} proofs selected | {count} proof selected | {count} proofs selected",
-		"ProofUploadedCount": "{count} proofs uploaded | {count} proof uploaded | {count} proofs uploaded",
+		"ProofSelectMultiple": "Izvēlieties pierādījumus",
+		"ProofSelected": "Pierādījums izvēlēts!",
+		"ProofSelectedCount": "{count} atlasītie pierādījumi | {count} atlasītie pierādījumi | {count} atlasītie pierādījumi",
+		"ProofUploadedCount": "{count} augšupielādētie pierādījumi | {count} augšupielādētais pierādījums | {count} augšupielādētie pierādījumi",
 		"ProofUploadProgress": "{numberOfProofsUploaded} / {totalNumberOfProofs} augšupielādētie korektūras paraugi",
-		"ProofsAddedToday": "Proofs added today",
-		"ProofsToday": "Proofs today",
-		"ProofNotFound": "Proof not found",
-		"Public": "Public",
+		"ProofsAddedToday": "Pierādījumi pievienoti šodien",
+		"ProofsToday": "Pierādījumi šodien",
+		"ProofNotFound": "Pierādījums nav atrasts",
+		"Public": "Publiska",
 		"Quantity": "Daudzums",
-		"QuantityBought": "Quantity bought",
-		"QuantityMissing": "Quantity missing",
+		"QuantityBought": "Iegādātais daudzums",
+		"QuantityMissing": "Trūkstošais daudzums",
 		"Rank": "Rangs",
 		"Reason": "Iemesls",
 		"RECEIPT": "Kvīts",
 		"Receipt": "Kvīts",
-		"Receipts": "Receipts",
-		"ReceiptPriceCount": "Number of prices",
-		"ReceiptPriceTotal": "Total amount",
-		"ReceiptOwnerConsumption": "Track in my consumption dashboard",
-		"ReceiptOnlineDeliveryCosts": "Delivery costs",
-		"Recent": "Recent",
+		"Receipts": "Kvītis",
+		"ReceiptPriceCount": "Cenu skaits",
+		"ReceiptPriceTotal": "Kopējā summa",
+		"ReceiptOwnerConsumption": "Izsekošana manā patēriņa informācijas panelī",
+		"ReceiptOnlineDeliveryCosts": "Piegādes izmaksas",
+		"Recent": "Jaunākie",
 		"Re-open": "Atkārtoti atvērt",
 		"ReportProblem": "Ziņot par problēmu",
 		"Resolved": "Atrisināts",
-		"Reuses": "Reuses",
-		"ReusesKnown": "Known reuses",
+		"Reuses": "Atkārtota izmantošana",
+		"ReusesKnown": "Zināmi atkārtoti izmantošanas veidi",
 		"Search": "Meklēt",
-		"Select": "Select",
-		"Send": "Send",
+		"Select": "Atlasīt",
+		"Send": "Sūtīt",
 		"Settings": "Iestatījumi",
-		"SignInOFFAccount": "Sign in with your {url} account",
-		"SignedIn": "Signed in!",
+		"SignInOFFAccount": "Pierakstieties ar savu {url} kontu",
+		"SignedIn": "Pierakstījies!",
 		"SignIn": "Ieiet",
 		"SignOut": "Izrakstīties",
-		"SideMenu": "Side menu",
+		"SideMenu": "Sānu izvēlne",
 		"Share": "Dalīties",
 		"Source": "Avots",
-		"SourceCode": "Source code",
+		"SourceCode": "Avota kods",
 		"Start": "Sākt",
-		"Stats": "Stats",
+		"Stats": "Statistika",
 		"Status": "Statuss",
 		"SuggestedBarcode": "Ieteicamais svītrkods:",
 		"Summary": "Kopsavilkums",
-		"TaglineOriginal": "An open crowdsourced database of food prices",
-		"TaglineAlt1": "The open crowdsourced database of prices",
-		"TaglineAlt2": "The open crowdsourced database of food and product prices",
-		"TaglineAlt3": "Prices should be free",
+		"TaglineOriginal": "Atvērta, kolektīvi ģenerēta pārtikas cenu datubāze",
+		"TaglineAlt1": "Atvērtā, kolektīvi ģenerētā cenu datubāze",
+		"TaglineAlt2": "Atvērtā, kolektīvi ģenerētā pārtikas un produktu cenu datubāze",
+		"TaglineAlt3": "Cenām jābūt brīvām",
 		"Text": "Teksts",
-		"Thanks": "Thanks",
+		"Thanks": "Paldies",
 		"Theme": "Tēma",
 		"ThemeLight": "Gaisma",
 		"ThemeDark": "Tumšs",
-		"TopContributors": "Top contributors",
-		"TopLocations": "Top locations",
-		"TopProducts": "Top products",
+		"TopContributors": "Galvenie līdzautori",
+		"TopLocations": "Populārākās atrašanās vietas",
+		"TopProducts": "Populārākie produkti",
 		"TopCities": "Populārākās pilsētas",
 		"TopCountries": "Populārākās valstis",
-		"Today": "Today",
-		"Top": "Top",
+		"Today": "Šodien",
+		"Top": "Augšā",
 		"Total": "Kopā",
-		"Truncate": "Truncate",
-		"Truncated": "Truncated",
+		"Truncate": "Apgriezt",
+		"Truncated": "Apgriezts",
 		"TryItOut": "Izmēģiniet to",
-		"Type": "Type",
+		"Type": "Tips",
 		"UnknownProduct": "Nezināms produkts",
-		"UnknownProductSource": "Unknown product source",
-		"UnknownSource": "Unknown source",
+		"UnknownProductSource": "Nezināms produkta avots",
+		"UnknownSource": "Nezināms avots",
 		"UnitGram": "g",
 		"UnitKilogram": "kg",
-		"UnitMililitre": "mL",
+		"UnitMililitre": "ml",
 		"UnitLitre": "L",
-		"Unreadable": "Unreadable",
-		"Upload": "Upload",
-		"UploadMultipleImages": "Upload {count} image | Upload {count} images",
-		"UploadMultiplePictures": "Upload {count} picture | Upload {count} pictures",
-		"UploadMultipleProofs": "Upload {count} proof | Upload {count} proofs",
-		"UploadMultiplePrices": "Upload {count} price | Upload {count} prices",
+		"Unreadable": "Nesalasāms",
+		"Upload": "Augšupielādēt",
+		"UploadMultipleImages": "Augšupielādēt {count} attēlu | Augšupielādēt {count} attēlus",
+		"UploadMultiplePictures": "Augšupielādēt {count} attēlu | Augšupielādēt {count} attēlus",
+		"UploadMultipleProofs": "Augšupielādēt {count} pierādījumu | Augšupielādēt {count} pierādījumus",
+		"UploadMultiplePrices": "Augšupielādēt {count} cenu | Augšupielādēt {count} cenas",
 		"URL": "URL",
-		"URLInvalid": "Invalid URL",
+		"URLInvalid": "Nederīgs URL",
 		"User": "Lietotājs",
-		"Users": "Users",
-		"UserCount": "{count} users | {count} user | {count} users",
-		"UserContributorCount": "{count} contributors | {count} contributor | {count} contributors",
-		"UserIsModerator": "You are a moderator",
-		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
-		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
-		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
-		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
-		"UserIsNotPriceOwner": "You are not the price owner",
-		"UserIsNotProofOwner": "You are not the proof owner",
+		"Users": "Lietotāji",
+		"UserCount": "{count} lietotāji | {count} lietotājs | {count} lietotāji",
+		"UserContributorCount": "{count} līdzstrādnieki | {count} līdzstrādnieki | {count} līdzstrādnieki",
+		"UserIsModerator": "Jūs esat moderators",
+		"UserIsModeratorCanEditPrice": "Jūs varat rediģēt šo cenu, jo esat moderators",
+		"UserIsModeratorCanDeletePrice": "Jūs varat dzēst šo cenu, jo esat moderators",
+		"UserIsModeratorCanEditProof": "Jūs varat rediģēt šo pierādījumu, jo esat moderators",
+		"UserIsModeratorCanDeleteProof": "Jūs varat dzēst šo pierādījumu, jo esat moderators.",
+		"UserIsNotPriceOwner": "Jūs neesat cenas īpašnieks",
+		"UserIsNotProofOwner": "Jūs neesat pierādījuma īpašnieks",
 		"UserNotFound": "Lietotājs nav atrasts",
-		"Validate": "Validate",
-		"ValidatePrices": "Validate prices",
-		"ValidatePricesWithAI": "Validate prices with AI",
+		"Validate": "Validēt",
+		"ValidatePrices": "Cenu validēšana",
+		"ValidatePricesWithAI": "Cenu validēšana ar mākslīgo intelektu",
 		"ValidatePricesFromCommunity": "Validējiet cenas no kopienas",
-		"View": "View",
+		"View": "Skatīt",
 		"Website": "Tīmekļa vietne",
-		"WithAPrice": "With a price",
+		"WithAPrice": "Ar cenu",
 		"WithoutAPrice": "Bez cenas",
-		"Year": "Year",
-		"Years": "Years",
+		"Year": "Gads",
+		"Years": "Gadi",
 		"Yes": "Jā",
 		"No": "Nē",
 		"Food": "Ēdiens",
@@ -526,207 +526,207 @@
 	},
 	"ContributionAssistant": {
 		"Steps": {
-			"ProofSelect": "1. Proof selection",
-			"LabelsExtraction": "2. Labels extraction",
-			"Cleanup": "3. Cleanup",
-			"Summary": "4. Summary"
+			"ProofSelect": "1. Pierādījumu atlase",
+			"LabelsExtraction": "2. Etiķešu ieguve",
+			"Cleanup": "3. Tīrīšana",
+			"Summary": "4. Kopsavilkums"
 		},
-		"BoundingBoxesFromServerWarning": "No labels could be automatically detected. Please manually draw squares around the labels.",
-		"FindBoundingBoxes": "Automatically find labels",
-		"FindBoundingBoxesRunning": "Automatic label detection is running. Please wait...",
+		"BoundingBoxesFromServerWarning": "Nevarēja automātiski noteikt nevienu etiķeti. Lūdzu, manuāli apvelciet etiķetēm kvadrātus.",
+		"FindBoundingBoxes": "Automātiski atrast etiķetes",
+		"FindBoundingBoxesRunning": "Notiek automātiskā etiķešu noteikšana. Lūdzu, uzgaidiet...",
 		"LabelsExtractionSteps": {
-			"DrawBoundingBoxes": "1. Draw squares around the labels",
-			"CheckLabels": "2. Check the readability of labels",
-			"SendLabels": "3. Send the labels for automatic processing",
-			"SendLabelsButton": "Send labels"
+			"DrawBoundingBoxes": "1. Ap etiķetēm apvelciet kvadrātus",
+			"CheckLabels": "2. Pārbaudiet etiķešu salasāmību",
+			"SendLabels": "3. Nosūtiet etiķetes automātiskai apstrādei",
+			"SendLabelsButton": "Sūtīt etiķetes"
 		},
-		"PricesAlreadyAdded": "Prices already added",
+		"PricesAlreadyAdded": "Cenas jau ir pievienotas",
 		"PricesWithoutProductOrCategory": "Cenas bez produkta vai kategorijas",
-		"PricesMarkedAsError": "Prices marked as error",
-		"PriceAddConfirmationMessage": "{numberOfPricesAdded} price(s) will be added to an existing proof on the {date} at {locationName}",
-		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
-		"WaitForUpload": "Please wait for upload",
-		"GoToProof": "Go to proof",
-		"NextProof": "Next proof",
-		"ChooseNextProof": "Choose another proof to handle",
-		"AutomaticBoundingBoxSource": "automatic",
-		"ManualBoundingBoxSource": "manual",
-		"DetectedBarcode": "Detected barcode: {barcode}",
-		"LabelProcessingErrorMessage": "Error: label automatic processing failed",
+		"PricesMarkedAsError": "Cenas atzīmētas kā kļūdas",
+		"PriceAddConfirmationMessage": "{numberOfPricesAdded} cena(-as) tiks pievienota(-as) esošajam pierādījumam {date} vietā {locationName}",
+		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pievienotas cenas",
+		"WaitForUpload": "Lūdzu, uzgaidiet augšupielādi",
+		"GoToProof": "Dodieties uz pierādījumu",
+		"NextProof": "Nākamais pierādījums",
+		"ChooseNextProof": "Izvēlieties citu pierādījumu, ko apstrādāt",
+		"AutomaticBoundingBoxSource": "automātiska",
+		"ManualBoundingBoxSource": "rokasgrāmata",
+		"DetectedBarcode": "Atrastais svītrkods: {barcode}",
+		"LabelProcessingErrorMessage": "Kļūda: etiķetes automātiskā apstrāde neizdevās",
 		"PriceTagLabels": {
-			"PriceTagWithoutPrice": "Price tag without a price",
-			"PriceTagWithPrice": "Price tag with a price",
-			"PriceTagTruncated": "Price tag marked as truncated",
-			"PriceTagUnreadable": "Price tag marked as unreadable",
-			"PriceTagNotAPrice": "Price tag marked as not a price",
+			"PriceTagWithoutPrice": "Cenu zīme bez cenas",
+			"PriceTagWithPrice": "Cenu zīme ar cenu",
+			"PriceTagTruncated": "Cenas zīme atzīmēta kā saīsināta",
+			"PriceTagUnreadable": "Cenu zīme atzīmēta kā nelasāma",
+			"PriceTagNotAPrice": "Cenas zīme atzīmēta kā nevis cena",
 			"PriceTagNoBarcode": "Cenas zīme atzīmēta kā bez svītrkoda",
 			"PriceTagOther": "Cena atzīmēta kā cita",
-			"NewPriceTag": "New price tag"
+			"NewPriceTag": "Jauna cenu zīme"
 		},
-		"OpenWithTheAssistant": "Open with the assistant"
+		"OpenWithTheAssistant": "Atvērt ar palīgu"
 	},
 	"Community": {
-		"JoinUs": "Join us!",
-		"HowToUseTheData": "Use the data"
+		"JoinUs": "Pievienojies mums!",
+		"HowToUseTheData": "Izmantojiet datus"
 	},
 	"ChangeCurrencyDialog": {
-		"Title": "Choose one of your favorite currencies",
+		"Title": "Izvēlieties vienu no savām iecienītākajām valūtām",
 		"Currency": "Valūta",
-		"AddCurrencies": "Add currencies in Settings",
-		"AddCurrenciesWarning": "You will be redirected to the Settings page but will lose any info you have entered on this page.",
-		"Select": "Select {currency_code}"
+		"AddCurrencies": "Pievienot valūtas iestatījumos",
+		"AddCurrenciesWarning": "Jūs tiksiet novirzīts uz iestatījumu lapu, taču zaudēsiet visu šajā lapā ievadīto informāciju.",
+		"Select": "Atlasiet {currency_code}"
 	},
 	"CreateOffProduct": {
-		"SelectUnknownProduct": "Select unknown product",
-		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"SelectUnknownProduct": "Atlasiet nezināmu produktu",
+		"SelectUnknownProductGuide": "Vai arī atlasiet nezināmu produktu, ko pievienot",
 		"CountriesWhereSold": "Country",
 		"CreateNewProduct": "Izveidot jaunu produktu",
 		"CreateProduct": "Izveidot produktu",
 		"EnableCropMode": "Iespējot apgriešanas režīmu",
 		"Flavor": "Atlasiet projektu, kurā produkts jāizveido",
-		"NextProof": "Next proof",
+		"NextProof": "Nākamais pierādījums",
 		"PreviousProof": "Iepriekšējais pierādījums",
 		"ProductAlreadyExists": "Produkts jau pastāv",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Produkta valoda",
 		"ProofNumberOfOutProofs": "Pierādījums ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Veikali, kuros tiek pārdots",
 		"UseCropModeToAddImage": "Lai pievienotu produkta attēlu, zem korektūras attēla iespējojiet apgriešanas režīmu un uzzīmējiet taisnstūri ap produktu.",
 		"ProductMissingPromoBanner": "Eksperiments: izveidojiet šo produktu, izmantojot datus no Open Prices"
 	},
 	"UserRecentProofsDialog": {
-		"SelectRecentProof": "Select one of your recent proofs"
+		"SelectRecentProof": "Izvēlieties vienu no saviem nesenajiem pierādījumiem"
 	},
 	"Footer": {
 		"About": "Par",
-		"Stats": "Stats",
-		"TagLine": "{name} is an {url} project."
+		"Stats": "Statistika",
+		"TagLine": "{name} ir {url} projekts."
 	},
 	"Header": {
-		"Dashboard": "Dashboard",
+		"Dashboard": "Informācijas panelis",
 		"Settings": "Iestatījumi",
 		"SignIn": "Ieiet",
 		"SignOut": "Izrakstīties"
 	},
 	"Theme": {
-		"LightMode": "Light mode",
-		"DarkMode": "Dark mode"
+		"LightMode": "Gaismas režīms",
+		"DarkMode": "Tumšais režīms"
 	},
 	"Home": {
 		"AddPrice": "Pievienot cenu",
-		"LatestPrices": "Latest prices",
-		"ProofAdd": "Add a proof",
+		"LatestPrices": "Jaunākās cenas",
+		"ProofAdd": "Pievienot pierādījumu",
 		"SearchProduct": "Meklēt produktu",
-		"SettingsUpdated": "Settings updated!",
-		"TodayPriceStat": "No prices added today | {todayPriceNumber} new prices added today | {todayPriceNumber} new prices added today!",
+		"SettingsUpdated": "Iestatījumi atjaunināti!",
+		"TodayPriceStat": "Šodien nav pievienotas cenas | {todayPriceNumber} šodien pievienotas jaunas cenas | {todayPriceNumber} šodien pievienotas jaunas cenas!",
 		"Welcome": {
-			"Generic": "An open crowdsourced database of prices 🏷🍊💲",
-			"Subtitle": "An open crowdsourced database of food prices 🏷🍊💲",
-			"Title": "Welcome to {name}!"
+			"Generic": "Atvērta, kolektīvi ģenerēta cenu datubāze 🏷🍊💲",
+			"Subtitle": "Atvērta, kolektīvi ģenerēta pārtikas cenu datubāze 🏷🍊💲",
+			"Title": "Laipni lūgti {name}!"
 		}
 	},
 	"LocationDetail": {
-		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
-		"LocationNotFound": "Location not found in OpenStreetMap... Don't hesitate to add it :)"
+		"LatestPrices": "Jaunākās cenas",
+		"LoadMore": "Ielādēt vairāk",
+		"LocationNotFound": "Atrašanās vieta nav atrasta OpenStreetMap... Droši pievienojiet to :)"
 	},
 	"LocationSelector": {
 		"Clear": "Notīrīt",
-		"NoResult": "No results found",
+		"NoResult": "Nav atrasts neviens rezultāts",
 		"NoResultHelpKeywords": "Nevarat atrast savu veikalu? Pilnas adreses vietā mēģiniet izmantot atslēgvārdus (piemēram, “Carrefour 75013 Paris” vai “Walmart San Francisco”).",
 		"NoResultHelpOSM": "Joprojām nevarat atrast savu veikalu? Iespējams, tas vēl neatrodas {osm_name} . Vispirms varat to pievienot {osm_url} .",
 		"PoweredBy": {
-			"text": "powered by {url}"
+			"text": "nodrošina {url}"
 		},
-		"RecentLocations": "No recent locations | Recent location {recentLocationNumber}| Recent locations {recentLocationNumber}",
-		"Result": "Result {resultNumber} | Results {resultNumber}",
-		"SearchByName": "Search for your shop by name and city",
-		"Title": "Find your shop location",
-		"Warning": "The search engine to find a shop is currently not very precise.{newline}Don't hesitate to add the street name to narrow down the results.{newline}Examples: Carrefour City 15e Paris ; Sainsbury's camden London"
+		"RecentLocations": "Nav nesenu atrašanās vietu | Nesenā atrašanās vieta {recentLocationNumber}| Nesenās atrašanās vietas {recentLocationNumber}",
+		"Result": "Rezultāts {resultNumber} | Rezultāti {resultNumber}",
+		"SearchByName": "Meklējiet savu veikalu pēc nosaukuma un pilsētas",
+		"Title": "Atrodiet sava veikala atrašanās vietu",
+		"Warning": "Meklēšanas sistēma veikala atrašanai pašlaik nav īpaši precīza.{newline}Lūdzu, pievienojiet ielas nosaukumu, lai sašaurinātu rezultātus.{newline}Piemēri: Carrefour City 15e Parīze ; Sainsbury's Camden Londona"
 	},
 	"NotFound": {
-		"Subtitle": "The page you requested doesn't seem to exist...",
-		"Title": "Not found"
+		"Subtitle": "Šķiet, ka pieprasītā lapa neeksistē...",
+		"Title": "Nav atrasts"
 	},
 	"PriceCard": {
-		"Discount": "Discount",
-		"PriceDate": "on {date}",
+		"Discount": "Atlaide",
+		"PriceDate": "uz {date}",
 		"PriceValueDisplayKilogram": "{0} / kg",
 		"PriceValueDisplayLitre": "{0} / L",
-		"PriceValueDisplayUnit": "{0} / unit",
+		"PriceValueDisplayUnit": "{0} / vienība",
 		"Proof": "Pierādījums",
-		"FullPrice": "Full price",
+		"FullPrice": "Pilna cena",
 		"UnknownProduct": "Nezināms produkts"
 	},
 	"PriceDelete": {
-		"Confirmation": "Are you sure you want to delete this price?",
+		"Confirmation": "Vai tiešām vēlaties dzēst šo cenu?",
 		"Delete": "Dzēst",
-		"Success": "Price deleted!",
-		"Title": "Delete a price"
+		"Success": "Cena dzēsta!",
+		"Title": "Cenas dzēšana"
 	},
 	"PriceEdit": {
 		"Save": "Saglabāt",
-		"Success": "Price edited!",
-		"Title": "Edit a price"
+		"Success": "Cena rediģēta!",
+		"Title": "Rediģēt cenu"
 	},
 	"PriceForm": {
-		"Discount": "Discount?",
+		"Discount": "Atlaide?",
 		"Label": "Cena",
 		"LabelDiscounted": "Atlaides cena",
-		"LabelFull": "Full price"
+		"LabelFull": "Pilna cena"
 	},
 	"PriceList": {
-		"LoadMore": "Load more",
-		"Title": "Latest prices"
+		"LoadMore": "Ielādēt vairāk",
+		"Title": "Jaunākās cenas"
 	},
 	"PriceRules": {
-		"AmountRequired": "Price is required",
-		"NoSpaces": "Please don't use spaces",
-		"Number": "Input a number",
-		"Positive": "Price may not be negative",
-		"TwoDecimals": "Only two decimals allowed",
-		"ThreeDecimals": "Only three decimals allowed"
+		"AmountRequired": "Cena ir obligāta.",
+		"NoSpaces": "Lūdzu, nelietojiet atstarpes",
+		"Number": "Ievadiet skaitli",
+		"Positive": "Cena nedrīkst būt negatīva",
+		"TwoDecimals": "Atļautas tikai divas zīmes aiz komata",
+		"ThreeDecimals": "Atļautas tikai trīs zīmes aiz komata"
 	},
 	"ProductCard": {
-		"BarcodeLength": "Barcode length: {length}",
+		"BarcodeLength": "Svītrkoda garums: {length}",
 		"Brands": "Zīmoli",
 		"BrandLower": "Zīmols",
-		"BrandMissing": "Brand missing",
-		"BrandTotal": "{count} brands",
+		"BrandMissing": "Trūkst zīmola",
+		"BrandTotal": "{count} zīmoli",
 		"Categories": "Kategorijas",
 		"CategoriesLower": "kategorijas",
-		"CategoriesMissing": "Category missing",
-		"CategoryTotal": "{count} categories",
+		"CategoriesMissing": "Trūkst kategorijas",
+		"CategoryTotal": "{count} kategorijas",
 		"Labels": "Etiķetes",
 		"LabelsLower": "etiķetes",
-		"LabelTotal": "{count} labels",
-		"LatestPrice": "Latest price",
+		"LabelTotal": "{count} etiķetes",
+		"LatestPrice": "Jaunākā cena",
 		"InvalidBarcode": "Nederīgs svītrkods",
-		"InvalidBarcodeLength": "Invalid barcode length",
-		"ProductBrandMissing": "Product brand missing",
-		"ProductCategoriesMissing": "Product categories missing",
+		"InvalidBarcodeLength": "Nederīgs svītrkoda garums",
+		"ProductBrandMissing": "Trūkst produkta zīmola",
+		"ProductCategoriesMissing": "Trūkst produktu kategoriju",
 		"ProductQuantityGram": "{0} g",
 		"ProductQuantityKilogram": "{0} kg",
 		"ProductQuantityLitre": "{0} L",
-		"ProductQuantityMililitre": "{0} mL",
-		"ProductQuantityMissing": "Product quantity missing",
-		"QuantityMissing": "Quantity missing",
+		"ProductQuantityMililitre": "{0} ml",
+		"ProductQuantityMissing": "Trūkst produkta daudzuma",
+		"QuantityMissing": "Trūkstošais daudzums",
 		"UnknownProduct": "Nezināms produkta nosaukums"
 	},
 	"ProductDetail": {
 		"AddPrice": "Pievienot cenu",
-		"CategoryNotFound": "Category not found...",
-		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more",
-		"ProductNotFound": "Product not found in Open Food Facts... Don't hesitate to add it :)"
+		"CategoryNotFound": "Kategorija nav atrasta...",
+		"LatestPrices": "Jaunākās cenas",
+		"LoadMore": "Ielādēt vairāk",
+		"ProductNotFound": "Produkts nav atrasts Open Food Facts... Droši pievienojiet to :)"
 	},
 	"ProofAdd": {
-		"HowToMultiple": "All the price tag images you select should share the same shop location, and been taken on the same day.",
-		"HowToMultipleShort": "Pictures should share the same shop location and date.",
-		"PriceValidationAllow": "Allow my pictures' prices to be extracted by AI and validated by the community",
-		"PriceTagAllowCommunityValidation": "Allow the community to validate prices extracted by AI",
-		"PriceTagAIWarning": "AI will run on your proofs to extract prices.",
-		"ReceiptAllowAI": "Allow running AI on your receipt to extract prices",
-		"ReceiptAIWarning": "AI will run on your receipt to extract prices.",
+		"HowToMultiple": "Visiem atlasītajiem cenu zīmju attēliem ir jābūt no vienas un tās pašas veikala atrašanās vietas un uzņemtiem vienā un tajā pašā dienā.",
+		"HowToMultipleShort": "Attēliem jābūt ar vienu un to pašu veikala atrašanās vietu un datumu.",
+		"PriceValidationAllow": "Atļaut mākslīgajam intelektam iegūt un kopienai apstiprināt manu attēlu cenas",
+		"PriceTagAllowCommunityValidation": "Ļaujiet kopienai validēt cenas, ko iegūst mākslīgais intelekts",
+		"PriceTagAIWarning": "Mākslīgais intelekts (AI) darbosies ar jūsu pierādījumiem, lai iegūtu cenas.",
+		"ReceiptAllowAI": "Atļaujiet čekā darbināt mākslīgo intelektu, lai iegūtu cenas",
+		"ReceiptAIWarning": "Mākslīgais intelekts (AI) veiks pārbaudi, lai iegūtu cenas jūsu čekā.",
 		"PromoProofPriceTagAddMultiple": "Lai augšupielādētu vairākas cenu zīmes (viena un tā pati veikala atrašanās vieta un datums), noklikšķiniet šeit!",
 		"PromoReceiptAssistant": "Eksperiments: izmēģiniet jauno čeku palīgu, lai automātiski iegūtu cenas no jūsu čekiem!"
 	},
@@ -734,48 +734,48 @@
 		"Proof": "Pierādījums",
 		"PRICE_TAG": "Cenas zīme",
 		"RECEIPT": "Kvīts",
-		"GDPR_REQUEST": "GDPR request",
-		"SHOP_IMPORT": "Shop import"
+		"GDPR_REQUEST": "GDPR pieprasījums",
+		"SHOP_IMPORT": "Veikala imports"
 	},
 	"ProofCreate": {
 		"SelectProof": "Izvēlieties pierādījumu",
-		"ProofSelected": "Proof selected!",
-		"Success": "Proof created!"
+		"ProofSelected": "Pierādījums izvēlēts!",
+		"Success": "Pierādījums radīts!"
 	},
 	"ProofDelete": {
-		"Confirmation": "Are you sure you want to delete this proof?",
+		"Confirmation": "Vai tiešām vēlaties dzēst šo pierādījumu?",
 		"Delete": "Dzēst",
-		"Title": "Delete a proof",
-		"Success": "Proof deleted!"
+		"Title": "Dzēst pierādījumu",
+		"Success": "Pierādījums izdzēsts!"
 	},
 	"ProofDetail": {
-		"LoadMore": "Load more",
+		"LoadMore": "Ielādēt vairāk",
 		"Prices": "Cenas",
-		"ProofNotFound": "Proof not found",
-		"Public": "Public",
-		"Private": "Private",
+		"ProofNotFound": "Pierādījums nav atrasts",
+		"Public": "Publiska",
+		"Private": "Privāts",
 		"Privacy": "Privātums"
 	},
 	"ProofEdit": {
-		"Title": "Edit a proof",
+		"Title": "Rediģēt pierādījumu",
 		"Save": "Saglabāt",
-		"Success": "Proof edited!"
+		"Success": "Korekcija rediģēta!"
 	},
 	"ReceiptAssistant": {
-		"AddNewItem": "Add new item",
-		"NoItemsFound": "No items could be extracted from the receipt, please try again.",
-		"PriceAlreadyCreated": "Price already created",
-		"PriceAlreadyCreatedForItem": "Price already created for item",
-		"PriceReadyToBeAdded": "Price ready to be added",
+		"AddNewItem": "Pievienot jaunu vienumu",
+		"NoItemsFound": "No čeka nevarēja izvilkt nevienu vienumu, lūdzu, mēģiniet vēlreiz.",
+		"PriceAlreadyCreated": "Cena jau izveidota",
+		"PriceAlreadyCreatedForItem": "Cena precei jau ir izveidota",
+		"PriceReadyToBeAdded": "Cena ir gatava pievienošanai",
 		"ReceiptItems": "Kvīts preces",
-		"ReceiptItemsCheck": "Receipt items, check and fix",
-		"UploadOnlyNewPrices": "Upload only new prices ({nbPrices})",
-		"UploadOrUpdateAllValidPrices": "Upload or update all valid prices ({nbPrices})",
-		"WaitForExtraction": "Automatically extracting items from the receipt, please wait..."
+		"ReceiptItemsCheck": "Kvīts vienumi, pārbaude un labošana",
+		"UploadOnlyNewPrices": "Augšupielādēt tikai jaunas cenas ({nbPrices})",
+		"UploadOrUpdateAllValidPrices": "Augšupielādējiet vai atjauniniet visas derīgās cenas ({nbPrices})",
+		"WaitForExtraction": "Automātiska preču izvilkšana no čeka, lūdzu, uzgaidiet..."
 	},
 	"Reuses": {
-		"AlertNew": "Your reuse is missing? Let us know {url}!",
-		"Here": "here"
+		"AlertNew": "Trūkst jūsu atkārtotas izmantošanas? Paziņojiet mums {url}!",
+		"Here": "šeit"
 	},
 	"Router": {
 		"About": {
@@ -788,43 +788,43 @@
 			"Title": "Pievienot cenu"
 		},
 		"AddPrices": {
-			"Title": "Add prices"
+			"Title": "Pievienot cenas"
 		},
 		"AddPriceSingle": {
-			"Title": "Add a single price"
+			"Title": "Pievienot vienu cenu"
 		},
 		"AddPriceMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Pievienot vairākas cenas"
 		},
 		"AddProof": {
-			"Title": "Add a proof"
+			"Title": "Pievienot pierādījumu"
 		},
 		"AddProofs": {
-			"Title": "Add proofs"
+			"Title": "Pievienot pierādījumus"
 		},
 		"AddProofSingle": {
-			"Title": "Add a single proof"
+			"Title": "Pievienojiet vienu pierādījumu"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Pievienojiet vairākus pierādījumus"
 		},
 		"AddProofReceipt": {
 			"Title": "Pievienot apliecinājumu (čeku)"
 		},
 		"AddProofsPriceTags": {
-			"Title": "Add proofs (price tags)"
+			"Title": "Pievienot pierādījumus (cenu zīmes)"
 		},
 		"Locations": {
-			"Title": "Locations"
+			"Title": "Atrašanās vietas"
 		},
 		"PriceAdd": {
 			"Title": "Pievienot cenu"
 		},
 		"PriceAddSingle": {
-			"Title": "Add a single price"
+			"Title": "Pievienot vienu cenu"
 		},
 		"PriceAddMultiple": {
-			"Title": "Add multiple prices"
+			"Title": "Pievienot vairākas cenas"
 		},
 		"Prices": {
 			"Title": "Cenas"
@@ -833,10 +833,10 @@
 			"Title": "Cenu zīmes"
 		},
 		"Proofs": {
-			"Title": "Proofs"
+			"Title": "Pierādījumi"
 		},
 		"ProofAddSingle": {
-			"Title": "Add a single proof"
+			"Title": "Pievienojiet vienu pierādījumu"
 		},
 		"Receipt": {
 			"Title": "Kvīts"
@@ -845,31 +845,31 @@
 			"Title": "Pilsētas"
 		},
 		"Community": {
-			"Title": "Community"
+			"Title": "Kopiena"
 		},
 		"Contribute": {
 			"Title": "Veicināt / atbalstīt"
 		},
 		"Countries": {
-			"Title": "Countries"
+			"Title": "Valstis"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "Izveidot produktu"
 		},
 		"Experiments": {
-			"Title": "Experiments"
+			"Title": "Eksperimenti"
 		},
 		"Home": {
 			"Title": "Mājas"
 		},
 		"Dashboard": {
-			"Title": "Dashboard"
+			"Title": "Informācijas panelis"
 		},
 		"LatestPrices": {
-			"Title": "Latest prices"
+			"Title": "Jaunākās cenas"
 		},
 		"LatestProofs": {
-			"Title": "Latest proofs"
+			"Title": "Jaunākie pierādījumi"
 		},
 		"Moderation": {
 			"Title": "Moderācija"
@@ -881,10 +881,10 @@
 			"Title": "Mani pierādījumi"
 		},
 		"MyDashboard": {
-			"Title": "My dashboard"
+			"Title": "Mans informācijas panelis"
 		},
 		"Reuses": {
-			"Title": "Reuses"
+			"Title": "Atkārtota izmantošana"
 		},
 		"Search": {
 			"Title": "Meklēt"
@@ -896,134 +896,134 @@
 			"Title": "Ieiet"
 		},
 		"Stats": {
-			"Title": "Stats"
+			"Title": "Statistika"
 		},
 		"TopContributors": {
-			"Title": "Top contributors"
+			"Title": "Galvenie līdzautori"
 		},
 		"TopLocations": {
-			"Title": "Top locations"
+			"Title": "Populārākās atrašanās vietas"
 		},
 		"TopProducts": {
-			"Title": "Top products"
+			"Title": "Populārākie produkti"
 		},
 		"Users": {
-			"Title": "Users"
+			"Title": "Lietotāji"
 		},
 		"ContributionAssistant": {
-			"Title": "Contribution Assistant"
+			"Title": "Ieguldījumu asistents"
 		},
 		"ProofPriceTagAssistant": {
 			"Title": "Pierādījumu cenu zīmju palīgs"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Cenu validācijas asistents"
 		},
 		"ReceiptAssistant": {
-			"Title": "Receipt Assistant"
+			"Title": "Kvīšu palīgs"
 		},
 		"Challenge": {
-			"Title": "Challenge"
+			"Title": "Izaicinājums"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Izaicinājumi"
 		},
 		"CommunityChallenge": {
-			"Title": "Community challenge"
+			"Title": "Kopienas izaicinājums"
 		},
 		"Validate": {
-			"Title": "Validate"
+			"Title": "Validēt"
 		},
 		"ValidatePrices": {
-			"Title": "Validate prices"
+			"Title": "Cenu validēšana"
 		}
 	},
 	"Search": {
-		"ProductBarcode": "Product barcode",
+		"ProductBarcode": "Produkta svītrkods",
 		"Title": "Meklēt"
 	},
 	"ShareButton": {
-		"LinkCopySuccess": "Link copied",
+		"LinkCopySuccess": "Saite nokopēta",
 		"Title": "Dalīties"
 	},
 	"SignIn": {
 		"Button": "Ieiet",
 		"Password": "Parole",
-		"ServerError": "Error: server error",
+		"ServerError": "Kļūda: servera kļūda",
 		"Title": "Ieiet",
-		"SignInOFFAccount": "Sign in with your {url} account",
-		"UsernameLabel": "Username",
-		"WrongCredentials": "Error: wrong credentials"
+		"SignInOFFAccount": "Pierakstieties ar savu {url} kontu",
+		"UsernameLabel": "Lietotājvārds",
+		"WrongCredentials": "Kļūda: nepareizi akreditācijas dati"
 	},
 	"Stats": {
-		"AddedToday": "Added today",
+		"AddedToday": "Pievienots šodien",
 		"Prices": "Cenas",
-		"PricesToday": "Prices added today",
-		"PricesTotal": "Total prices",
-		"PricesLinkedToPriceTag": "Prices linked to a price tag",
-		"ProductsWithPrices": "Products with prices",
-		"Title": "Stats",
+		"PricesToday": "Cenas pievienotas šodien",
+		"PricesTotal": "Kopējās cenas",
+		"PricesLinkedToPriceTag": "Cenas, kas saistītas ar cenu zīmi",
+		"ProductsWithPrices": "Produkti ar cenām",
+		"Title": "Statistika",
 		"Products": "Produkti",
-		"Locations": "Locations",
-		"Users": "Users",
+		"Locations": "Atrašanās vietas",
+		"Users": "Lietotāji",
 		"Total": "Kopā",
-		"WithPrice": "With a price",
-		"WithProduct": "With a product",
-		"WithProductBarcode": "With a product barcode",
-		"WithProductCategory": "With a product category",
-		"WithDiscount": "With a discount",
-		"WithoutProduct": "Without a product",
-		"WithBarcode": "With a barcode",
-		"WithCategory": "With a category",
+		"WithPrice": "Ar cenu",
+		"WithProduct": "Ar produktu",
+		"WithProductBarcode": "Ar produkta svītrkodu",
+		"WithProductCategory": "Ar produktu kategoriju",
+		"WithDiscount": "Ar atlaidi",
+		"WithoutProduct": "Bez produkta",
+		"WithBarcode": "Ar svītrkodu",
+		"WithCategory": "Ar kategoriju",
 		"PricesPerSource": "Cenas par avotu",
 		"ProofsPerSource": "Pierādījumi pēc avota",
-		"PricesProofsPerSource": "Prices and proofs per source",
-		"LastUpdated": "Last updated on {date}"
+		"PricesProofsPerSource": "Cenas un pierādījumi katram avotam",
+		"LastUpdated": "Pēdējoreiz atjaunināts {date}"
 	},
 	"UserDashboard": {
-		"LatestPrices": "Latest prices",
-		"LatestProofs": "Latest proofs",
-		"LoadMore": "Load more",
-		"MyDashboard": "My dashboard",
+		"LatestPrices": "Jaunākās cenas",
+		"LatestProofs": "Jaunākie pierādījumi",
+		"LoadMore": "Ielādēt vairāk",
+		"MyDashboard": "Mans informācijas panelis",
 		"MyPrices": "Manas cenas",
 		"MyProofs": "Mani pierādījumi",
-		"ProofUpdated": "Proof updated!",
+		"ProofUpdated": "Pierādījums atjaunināts!",
 		"Settings": "Iestatījumi",
-		"Title": "Dashboard",
-		"UserPriceTotal": "{count} prices",
-		"UserProofTotal": "{count} proofs"
+		"Title": "Informācijas panelis",
+		"UserPriceTotal": "{count} cenas",
+		"UserProofTotal": "{count} pierādījumi"
 	},
 	"UserDetail": {
-		"LatestPrices": "Latest prices",
-		"LoadMore": "Load more"
+		"LatestPrices": "Jaunākās cenas",
+		"LoadMore": "Ielādēt vairāk"
 	},
 	"UserList": {
-		"LoadMore": "Load more",
-		"Title": "Top contributors",
-		"UserTotal": "{count} contributors"
+		"LoadMore": "Ielādēt vairāk",
+		"Title": "Galvenie līdzautori",
+		"UserTotal": "{count} līdzstrādnieki"
 	},
 	"UserSettings": {
-		"AddingPrices": "Adding prices",
-		"ChangeLanguage": "Change language",
-		"CountryLabel": "Country",
+		"AddingPrices": "Cenu pievienošana",
+		"ChangeLanguage": "Mainīt valodu",
+		"CountryLabel": "Valsts",
 		"CurrencyLabel": "Valūta",
-		"DisplayTitle": "Display",
-		"BarcodeScanner": "Barcode scanner",
-		"DefaultMode": "Default mode",
-		"FavoriteCurrencies": "Favorite currencies",
-		"CurrencyRequired": "At least one currency is required",
-		"LanguageLabel": "Languages",
-		"LocationFinder": "Location finder",
-		"LocationDisplayOSMID": "Display OSM ID",
-		"PriceListDisplay": "Price list diplay",
-		"PriceValidation": "Price validation",
-		"ProductDisplayBarcode": "Display barcode",
-		"ProductDisplayCategoryTag": "Display category tag",
-		"ProductDisplaySource": "Display source",
-		"SideMenuExperimentsDisplay": "Display 'Experiments'",
+		"DisplayTitle": "Reklāmas",
+		"BarcodeScanner": "Svītrkodu skeneris",
+		"DefaultMode": "Noklusējuma režīms",
+		"FavoriteCurrencies": "Iecienītākās valūtas",
+		"CurrencyRequired": "Nepieciešama vismaz viena valūta",
+		"LanguageLabel": "Valodas",
+		"LocationFinder": "Atrašanās vietas meklētājs",
+		"LocationDisplayOSMID": "Rādīt OSM ID",
+		"PriceListDisplay": "Cenrāža attēlošana",
+		"PriceValidation": "Cenas validācija",
+		"ProductDisplayBarcode": "Attēlot svītrkodu",
+		"ProductDisplayCategoryTag": "Rādīt kategorijas tagu",
+		"ProductDisplaySource": "Attēlojuma avots",
+		"SideMenuExperimentsDisplay": "Rādīt “Eksperimentus”",
 		"Save": "Saglabāt",
 		"Title": "Iestatījumi",
-		"TranslationCompletion": "Translation is {completion}% complete.",
-		"TranslationHelp": "Help us translate more languages"
+		"TranslationCompletion": "Tulkojums ir {completion} % pabeigts.",
+		"TranslationHelp": "Palīdziet mums tulkot vairāk valodu"
 	}
 }
