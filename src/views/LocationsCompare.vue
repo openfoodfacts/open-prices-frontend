@@ -36,7 +36,7 @@
       <v-col cols="12" md="6">
         <v-card variant="outlined" class="pa-2">
           <div class="text-subtitle-2 mb-1">
-            {{ $t('Loading Location 1:') }} {{ location1.count }} {{ $t('/') }} {{ location1.total || '?' }}
+            {{ location1.count }} / {{ location1.total || '?' }}
           </div>
           <v-progress-linear
             :model-value="location1.total ? (location1.count / location1.total) * 100 : 0"
@@ -47,7 +47,7 @@
       <v-col cols="12" md="6">
         <v-card variant="outlined" class="pa-2">
           <div class="text-subtitle-2 mb-1">
-            {{ $t('Loading Location 2:') }} {{ location2.count }} {{ $t('/') }} {{ location2.total || '?' }}
+            {{ location2.count }} / {{ location2.total || '?' }}
           </div>
           <v-progress-linear
             :model-value="location2.total ? (location2.count / location2.total) * 100 : 0"
