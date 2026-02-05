@@ -1,99 +1,92 @@
 <template>
-  <v-container>
-    <!-- Location Input Rows -->
-    <v-row v-if="!loading">
-      <v-col>
-        <LocationInputRow
-          class="mt-0" :locationForm="locationA" :existingLocation="selectedLocationA"
-          @location="selectedLocationA = $event"
-        />
-      </v-col>
-      <v-col>
-        <LocationInputRow
-          class="mt-0" :locationForm="locationB" :existingLocation="selectedLocationB"
-          @location="selectedLocationB = $event"
-        />
-      </v-col>
-    </v-row>
+  <!-- Location Input Rows -->
+  <v-row v-if="!loading">
+    <v-col>
+      <LocationInputRow
+        class="mt-0" :locationForm="locationA" :existingLocation="selectedLocationA"
+        @location="selectedLocationA = $event"
+      />
+    </v-col>
+    <v-col>
+      <LocationInputRow
+        class="mt-0" :locationForm="locationB" :existingLocation="selectedLocationB"
+        @location="selectedLocationB = $event"
+      />
+    </v-col>
+  </v-row>
 
-    <!-- Loading State -->
-    <v-row v-else class="justify-center">
-      <v-progress-circular indeterminate />
-    </v-row>
-    <v-row class="justify-center mt-10">
-      <p v-if="!selectedboth">
-        {{ $t('Please select both locations') }}
+  <!-- Loading State -->
+  <v-row v-if="loading" class="justify-center">
+    <v-progress-circular indeterminate />
+  </v-row>
+  <v-row v-if="showCompareButton" class="justify-center mt-10">
+    <v-btn color="primary" :disabled="!readyToCompare" @click="updateQueryParams()">
+      {{ $t('Common.LocationsCompare') }}
+    </v-btn>
+  </v-row>
+
+  <!-- Progress Bars -->
+  <v-row v-if="isLoadingAny" class="mt-4">
+    <v-col cols="12" md="6">
+      <v-card variant="outlined" class="pa-2">
+        <div class="text-subtitle-2 mb-1">
+          {{ locationA.count }} / {{ locationA.total || '?' }}
+        </div>
+        <v-progress-linear
+          :model-value="locationA.total ? (locationA.count / locationA.total) * 100 : 0"
+          color="primary" height="10" striped :indeterminate="!locationA.total"
+        />
+      </v-card>
+    </v-col>
+    <v-col cols="12" md="6">
+      <v-card variant="outlined" class="pa-2">
+        <div class="text-subtitle-2 mb-1">
+          {{ locationB.count }} / {{ locationB.total || '?' }}
+        </div>
+        <v-progress-linear
+          :model-value="locationB.total ? (locationB.count / locationB.total) * 100 : 0"
+          color="primary" height="10" striped :indeterminate="!locationB.total"
+        />
+      </v-card>
+    </v-col>
+  </v-row>
+
+  <!-- Products Table -->
+  <v-row v-if="readyToCompare && !loading" class="mt-4">
+    <v-col v-if="productsList.length > 0" cols="12">
+      <v-data-table :headers="headers" :items="productsList" item-value="product_code">
+        <template #tfoot>
+          <tr>
+            <td :colspan="headers.length" class="pa-0">
+              <hr class="w-100">
+            </td>
+          </tr>
+          <tr class="text-subtitle-1">
+            <td class="pa-4">
+              <strong>{{ $t('Total') }}</strong>
+            </td>
+            <td
+              class="pa-4"
+              :class="locationA.totalPrice < locationB.totalPrice ? 'text-success font-weight-bold' : ''"
+            >
+              {{ locationA.totalPrice.toFixed(2) }}
+            </td>
+            <td
+              class="pa-4"
+              :class="locationB.totalPrice < locationA.totalPrice ? 'text-success font-weight-bold' : ''"
+            >
+              {{ locationB.totalPrice.toFixed(2) }}
+            </td>
+          </tr>
+        </template>
+      </v-data-table>
+    </v-col>
+    <v-col v-else-if="hasSharedProducts" cols="12">
+      <p class="text-center">
+        {{ $t('No shared products found') }}
       </p>
-    </v-row>
-    <v-row v-if="showCompareButton" class="justify-center mt-10">
-      <v-btn color="primary" @click="compareLocations()">
-        {{ $t('Common.LocationCompare') }}
-      </v-btn>
-    </v-row>
-
-    <!-- Progress Bars -->
-    <v-row v-if="isLoadingAny" class="mt-4">
-      <v-col cols="12" md="6">
-        <v-card variant="outlined" class="pa-2">
-          <div class="text-subtitle-2 mb-1">
-            {{ locationA.count }} / {{ locationA.total || '?' }}
-          </div>
-          <v-progress-linear
-            :model-value="locationA.total ? (locationA.count / locationA.total) * 100 : 0"
-            color="primary" height="10" striped :indeterminate="!locationA.total"
-          />
-        </v-card>
-      </v-col>
-      <v-col cols="12" md="6">
-        <v-card variant="outlined" class="pa-2">
-          <div class="text-subtitle-2 mb-1">
-            {{ locationB.count }} / {{ locationB.total || '?' }}
-          </div>
-          <v-progress-linear
-            :model-value="locationB.total ? (locationB.count / locationB.total) * 100 : 0"
-            color="primary" height="10" striped :indeterminate="!locationB.total"
-          />
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <!-- Products Table -->
-    <v-row v-if="selectedboth && !loading" class="mt-4">
-      <v-col v-if="productsList.length > 0" cols="12">
-        <v-data-table :headers="headers" :items="productsList" item-value="product_code" class="elevation-1">
-          <template #tfoot>
-            <tr>
-              <td :colspan="headers.length" class="pa-0">
-                <hr class="w-100">
-              </td>
-            </tr>
-            <tr class="text-subtitle-1">
-              <td class="pa-4">
-                <strong>{{ $t('Total') }}</strong>
-              </td>
-              <td
-                class="pa-4"
-                :class="locationA.totalPrice < locationB.totalPrice ? 'text-success font-weight-bold' : ''"
-              >
-                {{ locationA.totalPrice.toFixed(2) }}
-              </td>
-              <td
-                class="pa-4"
-                :class="locationB.totalPrice < locationA.totalPrice ? 'text-success font-weight-bold' : ''"
-              >
-                {{ locationB.totalPrice.toFixed(2) }}
-              </td>
-            </tr>
-          </template>
-        </v-data-table>
-      </v-col>
-      <v-col v-else-if="isSharedItems" cols="12">
-        <p class="text-center">
-          {{ $t('No shared products found') }}
-        </p>
-      </v-col>
-    </v-row>
-  </v-container>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -130,7 +123,6 @@ export default {
 			selectedLocationA: null,
 			selectedLocationB: null,
 			loading: false,
-			selectedboth: true,
 
 			// Progressive loading state
 			productsList: [],
@@ -161,23 +153,29 @@ export default {
 		showCompareButton() {
 			return Object.keys(this.$route.query).length === 0
 		},
+    readyToCompare() {
+      return this.selectedLocationA && this.selectedLocationB
+    },
 		isLoadingAny() {
 			return (this.locationA.fetching || this.locationB.fetching)
 		},
-		isSharedItems() {
+		hasSharedProducts() {
 			return this.productsList.length == 0 && !this.showCompareButton && !this.isLoadingAny
 		}
 	},
 	watch: {
-		'$route.query': 'initFromQuery',
+		$route (newRoute, oldRoute) { // only called when query changes
+      if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
+        this.initFromQuery()
+      }
+    }
 	},
 	mounted() {
 		this.initFromQuery()
 	},
 	methods: {
 		initFromQuery() {
-			const q = this.$route.query
-			if (Object.keys(q).length === 0) {
+			if (Object.keys(this.$route.query).length === 0) {
 				// Reset state on navigation back to empty route
 				this.selectedLocationA = null
 				this.selectedLocationB = null
@@ -185,11 +183,11 @@ export default {
 				this.locationB = { type: null, location_id: null, location_osm_id: null, location_osm_type: '', count: 0, total: 0, totalPrice: 0, fetching: false }
 				this.productsList = []
 				this.productMap = {}
-				this.selectedboth = true
 				return
 			}
 
-			this.loading = true
+			const q = this.$route.query
+      this.loading = true
 			const pA = this.fetchLocation(q.location_a_id, q.location_a_osm_id, q.location_a_osm_type)
 			const pB = this.fetchLocation(q.location_b_id, q.location_b_osm_id, q.location_b_osm_type)
 
@@ -202,7 +200,7 @@ export default {
 					this.selectedLocationB = locationB
 					this.locationB = this.mapLocationToForm(locationB)
 				}
-				if (locationA && locationB) {
+				if (this.readyToCompare) {
 					this.fetchComparisonData()
 				}
 			}).finally(() => {
@@ -230,7 +228,7 @@ export default {
 				fetching: false,
 			}
 		},
-		compareLocations() {
+		updateQueryParams() {
 			let query = {}
 			if (this.selectedLocationA && this.selectedLocationB) {
 				if (this.selectedLocationA.type === 'ONLINE') query.location_a_id = this.selectedLocationA.id
@@ -243,11 +241,6 @@ export default {
 					query.location_b_osm_id = geo_utils.getLocationID(this.selectedLocationB)
 					query.location_b_osm_type = geo_utils.getLocationType(this.selectedLocationB)
 				}
-				this.selectedboth = true
-			}
-			else {
-				this.selectedboth = false
-				return
 			}
 
 			this.$router.push({ name: 'locations-compare', query: query })
