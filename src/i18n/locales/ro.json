@@ -168,7 +168,7 @@
 	"Common": {
 		"About": "Despre",
 		"Action": "Acţiune",
-		"Actions": "Actions",
+		"Actions": "Acțiuni",
 		"AddComment": "Add a comment",
 		"AddPrice": "Adăugați un preț",
 		"AddPrices": "Add prices",
@@ -297,6 +297,8 @@
 		"FieldIsRequired": "Câmpul este obligatoriu",
 		"Filter": "Filtrare",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Cu prețuri",
+		"FilterWithLocationCount": "Cu locații",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
@@ -357,6 +359,7 @@
 		"Open": "Deschide",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "Nume",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -404,7 +407,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "Prețuri adăugate de dvs.",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Confidențialitate",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Produs lipsă",
@@ -436,7 +439,7 @@
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Re-open": "Redeschide",
-		"ReportProblem": "Report a problem",
+		"ReportProblem": "Raportați o problemă",
 		"Resolved": "Rezolvat",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -519,7 +522,7 @@
 		"No": "Nu",
 		"Food": "Mâncare",
 		"PetFood": "Hrană pentru animale de companie",
-		"Beauty": "Beauty"
+		"Beauty": "Frumuseţe"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -751,7 +754,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Confidențialitate"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
