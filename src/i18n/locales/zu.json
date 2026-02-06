@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Qhathanisa izindawo",
 		"Date": "Usuku",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Usuku lwesithombe.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Vula kabusha",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Kuxazululiwe",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Qhathanisa izindawo"
 		},
 		"Locations": {
 			"Title": "Locations"
