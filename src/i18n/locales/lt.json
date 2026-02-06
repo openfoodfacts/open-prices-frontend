@@ -267,6 +267,7 @@
 		"LocationFindShop": "Rasti parduotuvės vietą",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Ieškoti pagal pavadinimą ir miestą",
+		"LocationsCompare": "Palyginkite vietas",
 		"Date": "Data",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Paveikslėlio data.",
@@ -440,6 +441,7 @@
 		"Recent": "Naujausi",
 		"Re-open": "Atidaryti iš naujo",
 		"ReportProblem": "Pranešti apie problemą",
+		"Reset": "Atstatyti",
 		"Resolved": "Išspręsta",
 		"Reuses": "Kartotinis naudojimas",
 		"ReusesKnown": "Žinomas kartotinis naudojimas",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Palyginkite vietas"
 		},
 		"Locations": {
 			"Title": "Vietos"

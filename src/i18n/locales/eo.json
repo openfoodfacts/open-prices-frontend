@@ -79,7 +79,7 @@
 			"Title": "Price details",
 			"UploadProof": "Upload a proof",
 			"Picture": "Picture",
-			"TakePicture": "Take a picture",
+			"TakePicture": "Fotu",
 			"Gallery": "Device gallery",
 			"SelectFromGallery": "Select from device gallery",
 			"RecentProof": "Recent proof",
@@ -219,7 +219,7 @@
 		"Community": "Community",
 		"CommunityPrices": "Community prices",
 		"CommunityProofs": "Community proofs",
-		"Consumption": "Consumption",
+		"Consumption": "Konsumo",
 		"ConsumptionPrices": "Consumption prices",
 		"ConsumptionProofs": "Consumption proofs",
 		"Contribute": "Kontribui",
@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Komparu lokojn",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Dato de la bildo.",
@@ -284,7 +285,7 @@
 		"DiscountTypeExpiresSoon": "Expires soon",
 		"DiscountTypePickItYourself": "Pick it yourself",
 		"DiscountTypeSecondHand": "Second hand",
-		"DiscountTypeOther": "Other",
+		"DiscountTypeOther": "Aliaj",
 		"Example": "Example",
 		"Examples": "Examples",
 		"ExampleWithColon": "Ekzemplo:",
@@ -313,7 +314,7 @@
 		"FilterUserWithPriceCountHide": "Hide contributors with prices",
 		"Fix": "Fix",
 		"FAQ": "FAQ",
-		"FrequentlyAskedQuestions": "Frequently asked questions",
+		"FrequentlyAskedQuestions": "Oftaj demandoj",
 		"GDPR_REQUEST": "GDPR request",
 		"Group": "Group",
 		"Help": "Help",
@@ -340,7 +341,7 @@
 		"ModerationFlagReasonWrongProduct": "Malĝusta produkto",
 		"ModerationFlagReasonWrongLocation": "Malĝusta loko",
 		"ModerationFlagReasonWrongDate": "Malĝusta dato",
-		"ModerationFlagReasonOther": "Other",
+		"ModerationFlagReasonOther": "Aliaj",
 		"ModerationFlagCreateSuccess": "Dankon pro via raporto!",
 		"ModerationFlagStatusOpen": "Malferma",
 		"ModerationFlagStatusClosed": "Fermita",
@@ -372,7 +373,7 @@
 		"OrderProofCreatedDESC": "Addition date",
 		"OrderProofDateDESC": "Proof date",
 		"OrderUserCountDESC": "User count",
-		"Other": "Other",
+		"Other": "Aliaj",
 		"OtherContributions": "Other contributions",
 		"PageNotMaintainedAnymore": "Ĉi tiu paĝo ne plu estas prizorgata.",
 		"PersonalInfo": "Personal information",
@@ -407,7 +408,7 @@
 		"PriceNotFound": "Price not found",
 		"PricesAddedByYou": "Prezoj aldonitaj de vi",
 		"Private": "Private",
-		"Privacy": "Privacy",
+		"Privacy": "Privateco",
 		"ProductCount": "{count} products | {count} product | {count} products",
 		"ProductFind": "Find the product",
 		"ProductMissing": "Produkto mankas",
@@ -439,7 +440,8 @@
 		"ReceiptOnlineDeliveryCosts": "Delivery costs",
 		"Recent": "Recent",
 		"Re-open": "Remalfermi",
-		"ReportProblem": "Report a problem",
+		"ReportProblem": "Raporti problemon",
+		"Reset": "Reset",
 		"Resolved": "Solvita",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -453,11 +455,11 @@
 		"SignOut": "Sign out",
 		"SideMenu": "Side menu",
 		"Share": "Share",
-		"Source": "Source",
+		"Source": "Fonto",
 		"SourceCode": "Source code",
-		"Start": "Start",
+		"Start": "Komencu",
 		"Stats": "Stats",
-		"Status": "Status",
+		"Status": "Statuso",
 		"SuggestedBarcode": "Sugestita strekkodo:",
 		"Summary": "Resumo",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
@@ -476,7 +478,7 @@
 		"TopCountries": "Supraj landoj",
 		"Today": "Today",
 		"Top": "Top",
-		"Total": "Total",
+		"Total": "Totalo",
 		"Truncate": "Truncate",
 		"Truncated": "Truncated",
 		"TryItOut": "Provu ĝin",
@@ -522,7 +524,7 @@
 		"No": "Ne",
 		"Food": "Food",
 		"PetFood": "Pet food",
-		"Beauty": "Beauty"
+		"Beauty": "Beleco"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -754,7 +756,7 @@
 		"ProofNotFound": "Proof not found",
 		"Public": "Public",
 		"Private": "Private",
-		"Privacy": "Privacy"
+		"Privacy": "Privateco"
 	},
 	"ProofEdit": {
 		"Title": "Edit a proof",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Komparu lokojn"
 		},
 		"Locations": {
 			"Title": "Locations"
@@ -966,7 +971,7 @@
 		"Products": "Produktoj",
 		"Locations": "Locations",
 		"Users": "Users",
-		"Total": "Total",
+		"Total": "Totalo",
 		"WithPrice": "With a price",
 		"WithProduct": "With a product",
 		"WithProductBarcode": "With a product barcode",

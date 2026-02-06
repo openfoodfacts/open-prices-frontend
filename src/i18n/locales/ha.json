@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Kwatanta wurare",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Ranar hoton.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Sake buɗewa",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "An warware",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Kwatanta wurare"
 		},
 		"Locations": {
 			"Title": "Locations"

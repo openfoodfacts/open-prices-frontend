@@ -267,6 +267,7 @@
 		"LocationFindShop": "Найти местоположение магазина",
 		"LocationMissing": "Местоположение отсутствует",
 		"LocationSearchByName": "Поиск по имени и городу",
+		"LocationsCompare": "Сравните местоположения",
 		"Date": "Дата",
 		"DateMissing": "Дата отсутствует",
 		"DateProofHelpText": "Дата фотографии.",
@@ -440,6 +441,7 @@
 		"Recent": "Недавние",
 		"Re-open": "Повторно открыть",
 		"ReportProblem": "Сообщить о проблеме",
+		"Reset": "Сбросить",
 		"Resolved": "Решено",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Сравните местоположения"
 		},
 		"Locations": {
 			"Title": "Места"

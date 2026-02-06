@@ -267,6 +267,7 @@
 		"LocationFindShop": "Pesquisar o local da loja",
 		"LocationMissing": "Falta a localização",
 		"LocationSearchByName": "Pesquisar por nome e cidade",
+		"LocationsCompare": "Comparar locais",
 		"Date": "Data",
 		"DateMissing": "Falta a data",
 		"DateProofHelpText": "Data da foto.",
@@ -440,6 +441,7 @@
 		"Recent": "Recente",
 		"Re-open": "Reabrir",
 		"ReportProblem": "Denunciar um problema",
+		"Reset": "Repor",
 		"Resolved": "Resolvido",
 		"Reuses": "Reutilizações",
 		"ReusesKnown": "Reutilizações conhecidas",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Adicionar comprovativos (etiquetas de preço)"
+		},
+		"CompareLocations": {
+			"Title": "Comparar locais"
 		},
 		"Locations": {
 			"Title": "Localizações"

@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Asukohtade võrdlus",
 		"Date": "Kuupäev",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Pildi kuupäev.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Ava uuesti",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Lahendatud",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Asukohtade võrdlus"
 		},
 		"Locations": {
 			"Title": "Locations"

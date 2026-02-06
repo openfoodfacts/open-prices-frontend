@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Sijainti puuttuu",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Vertaile sijainteja",
 		"Date": "Päivämäärä",
 		"DateMissing": "Päivämäärä puuttuu",
 		"DateProofHelpText": "Kuvan päivämäärä.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Avaa uudelleen",
 		"ReportProblem": "Ilmoita ongelmasta",
+		"Reset": "Reset",
 		"Resolved": "Ratkaistu",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Vertaile sijainteja"
 		},
 		"Locations": {
 			"Title": "Sijainnit"

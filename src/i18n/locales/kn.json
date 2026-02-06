@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "ಸ್ಥಳಗಳನ್ನು ಹೋಲಿಕೆ ಮಾಡಿ",
 		"Date": "ದಿನಾಂಕ",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "ಚಿತ್ರದ ದಿನಾಂಕ.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "ಪುನಃ ತೆರೆಯಿರಿ",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "ಪರಿಹರಿಸಲಾಗಿದೆ",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "ಸ್ಥಳಗಳನ್ನು ಹೋಲಿಕೆ ಮಾಡಿ"
 		},
 		"Locations": {
 			"Title": "Locations"

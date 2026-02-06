@@ -267,6 +267,7 @@
 		"LocationFindShop": "Temukan lokasi toko",
 		"LocationMissing": "Lokasi tidak ada",
 		"LocationSearchByName": "Cari berdasarkan nama dan kota",
+		"LocationsCompare": "Bandingkan lokasi",
 		"Date": "Tanggal",
 		"DateMissing": "Tanggal tidak ada",
 		"DateProofHelpText": "Tanggal foto tersebut.",
@@ -440,6 +441,7 @@
 		"Recent": "Terbaru",
 		"Re-open": "Buka kembali",
 		"ReportProblem": "Laporkan masalah",
+		"Reset": "Atur ulang",
 		"Resolved": "Terselesaikan",
 		"Reuses": "Penggunaan kembali",
 		"ReusesKnown": "Penggunaan kembali yang diketahui",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Bandingkan lokasi"
 		},
 		"Locations": {
 			"Title": "Lokasi"

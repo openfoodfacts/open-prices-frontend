@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Cîhan bidin ber hev",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Dîroka wêneyê.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Ji nû ve veke",
 		"ReportProblem": "هەواڵ کە گرفتێک بدە",
+		"Reset": "Reset",
 		"Resolved": "Çareserkirî",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Cîhan bidin ber hev"
 		},
 		"Locations": {
 			"Title": "Locations"

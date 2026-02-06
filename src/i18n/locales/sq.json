@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Krahaso vendndodhjet",
 		"Date": "Data",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Data e fotografisë.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Rihap",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Zgjidhur",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Krahaso vendndodhjet"
 		},
 		"Locations": {
 			"Title": "Locations"

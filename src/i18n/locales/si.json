@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "ස්ථාන සංසන්දනය කරන්න",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "පින්තූරයේ දිනය.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "නැවත විවෘත කරන්න",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "විසඳා ඇත",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "ස්ථාන සංසන්දනය කරන්න"
 		},
 		"Locations": {
 			"Title": "Locations"

@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Helyszínek összehasonlítása",
 		"Date": "Dátum",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "A kép dátuma.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Újranyitás",
 		"ReportProblem": "Probléma bejelentése",
+		"Reset": "Visszaállítás",
 		"Resolved": "Megoldva",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -631,7 +633,7 @@
 	},
 	"LocationSelector": {
 		"Clear": "Törlés",
-		"NoResult": "No results found",
+		"NoResult": "Nincs találat",
 		"NoResultHelpKeywords": "Nem találja az üzletét? Próbáljon meg kulcsszavakat használni a teljes cím helyett (pl. „Carrefour 75013 Párizs” vagy „Walmart San Francisco”).",
 		"NoResultHelpOSM": "Még mindig nem találod a boltodat? Lehet, hogy még nem {osm_name} -ban van. Először {osm_url} -ban adhatod hozzá.",
 		"PoweredBy": {
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Helyszínek összehasonlítása"
 		},
 		"Locations": {
 			"Title": "Locations"

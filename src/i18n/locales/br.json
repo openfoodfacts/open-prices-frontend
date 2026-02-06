@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Keñveriañ al lec'hioù",
 		"Date": "Deiziad",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Deiziad ar skeudenn.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Digeriñ en-dro",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Diskoulmet",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -814,6 +816,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Keñveriañ al lec'hioù"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -842,7 +847,7 @@
 			"Title": "Notenn"
 		},
 		"Cities": {
-			"Title": "Kêrioù"
+			"Title": "Kêrioù |"
 		},
 		"Community": {
 			"Title": "Community"

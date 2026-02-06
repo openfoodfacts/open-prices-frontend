@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "เปรียบเทียบสถานที่ตั้ง",
 		"Date": "วันที่",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "วันที่ถ่ายภาพ",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "เปิดใหม่อีกครั้ง",
 		"ReportProblem": "รายงานปัญหา",
+		"Reset": "Reset",
 		"Resolved": "ได้รับการแก้ไขแล้ว",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "เปรียบเทียบสถานที่ตั้ง"
 		},
 		"Locations": {
 			"Title": "Locations"

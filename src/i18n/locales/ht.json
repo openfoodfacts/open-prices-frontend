@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Zòn ki manke",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Konpare kote yo",
 		"Date": "Dat",
 		"DateMissing": "Dat ki manke",
 		"DateProofHelpText": "Dat foto a.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Relouvri",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Rezoud",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Konpare kote yo"
 		},
 		"Locations": {
 			"Title": "Zòn"

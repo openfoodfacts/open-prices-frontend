@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Bandhingake lokasi",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Tanggal gambar kasebut.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Mbukak maneh",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "ditanggulangi",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Bandhingake lokasi"
 		},
 		"Locations": {
 			"Title": "Locations"

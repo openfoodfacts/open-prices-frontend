@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare locations",
 		"Date": "日期",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Date of the picture.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Re-open",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Resolved",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Compare locations"
 		},
 		"Locations": {
 			"Title": "Locations"

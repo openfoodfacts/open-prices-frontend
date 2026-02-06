@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Вырӑнсене танлаштарӑр",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Ӳкерчӗкӗн кунӗ.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Ҫӗнӗрен уҫӑр",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Татса панӑ",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Вырӑнсене танлаштарӑр"
 		},
 		"Locations": {
 			"Title": "Locations"

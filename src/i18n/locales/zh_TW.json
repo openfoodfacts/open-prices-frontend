@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "缺少地點",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "比較位置",
 		"Date": "日期",
 		"DateMissing": "缺少日期",
 		"DateProofHelpText": "照片拍攝日期。",
@@ -440,6 +441,7 @@
 		"Recent": "最近的",
 		"Re-open": "重新開放",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "已解決",
 		"Reuses": "重複使用",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "比較位置"
 		},
 		"Locations": {
 			"Title": "地點"

@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "સ્થાનોની સરખામણી કરો",
 		"Date": "તારીખ",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "ચિત્રની તારીખ.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "ફરીથી ખોલો",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "ઉકેલાયેલ",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "સ્થાનોની સરખામણી કરો"
 		},
 		"Locations": {
 			"Title": "Locations"
