@@ -268,7 +268,7 @@
 		"LocationFindShop": "Hitta butikens plats",
 		"LocationMissing": "Plats saknas",
 		"LocationSearchByName": "Search by name and city",
-		"LocationsCompare": "Jämför platser",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Datum",
 		"DateMissing": "Datum saknas",
 		"DateProofHelpText": "Bildens datum.",
@@ -818,7 +818,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Jämför platser"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Platser"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Streckkodsläsare",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Standardläge",
 		"FavoriteCurrencies": "Favoritvalutor",
 		"CurrencyRequired": "At least one currency is required",
