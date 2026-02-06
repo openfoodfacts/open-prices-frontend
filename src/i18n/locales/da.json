@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find butikkens placering",
 		"LocationMissing": "Placering mangler",
 		"LocationSearchByName": "Søg efter navn og by",
+		"LocationsCompare": "Sammenlign lokationer",
 		"Date": "Dato",
 		"DateMissing": "Dato mangler",
 		"DateProofHelpText": "Dato for billedet.",
@@ -440,6 +441,7 @@
 		"Recent": "Seneste",
 		"Re-open": "Genåbn",
 		"ReportProblem": "Rapportér et problem",
+		"Reset": "Nulstil",
 		"Resolved": "Løst",
 		"Reuses": "Genbrug",
 		"ReusesKnown": "Kendt genbrug",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Tilføj beviser (prismærker)"
+		},
+		"CompareLocations": {
+			"Title": "Sammenlign lokationer"
 		},
 		"Locations": {
 			"Title": "Placeringer"
