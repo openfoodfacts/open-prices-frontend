@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "مقایسه مکان‌ها",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "تاریخ تصویر.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "دوباره باز کنید",
 		"ReportProblem": "گزارش مشکل",
+		"Reset": "Reset",
 		"Resolved": "حل شد",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "مقایسه مکان‌ها"
 		},
 		"Locations": {
 			"Title": "Locations"
