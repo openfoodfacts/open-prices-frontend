@@ -267,6 +267,7 @@
 		"LocationFindShop": "Zoek de winkellocatie",
 		"LocationMissing": "Locatie ontbreekt",
 		"LocationSearchByName": "Zoek op naam en stad",
+		"LocationsCompare": "Vergelijk locaties",
 		"Date": "Datum",
 		"DateMissing": "Datum ontbreekt",
 		"DateProofHelpText": "Datum van de foto.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Heropenen",
 		"ReportProblem": "Meld een probleem",
+		"Reset": "Herstellen",
 		"Resolved": "Opgelost",
 		"Reuses": "Hergebruik",
 		"ReusesKnown": "Bekende hergebruiken",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Bewijzen toevoegen (prijskaartjes)"
+		},
+		"CompareLocations": {
+			"Title": "Vergelijk locaties"
 		},
 		"Locations": {
 			"Title": "Locaties"
