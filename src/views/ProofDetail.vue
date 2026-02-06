@@ -125,6 +125,7 @@ export default {
         .then((data) => {
           if (data.id) {
             this.proof = data
+            this.getPriceTagsBoundingBoxes()
           }
         })
     },
@@ -139,6 +140,14 @@ export default {
           this.priceList.push(...data.items)
           this.priceTotal = data.total
         })
+    },
+    getPriceTagsBoundingBoxes() {
+      return openPricesApi.getPriceTags({proof_id: this.proofId, size: 100}).then(data => {
+        if (!data.items) return
+        this.proof.priceTagsBoundingBoxes = data.items.map(priceTag => {
+          return {boundingBox: priceTag.bounding_box, id: priceTag.id, status: priceTag.status, created_by: priceTag.created_by}
+        })
+      })
     },
     updateDisplay(displayKey) {
       this.currentDisplay = displayKey

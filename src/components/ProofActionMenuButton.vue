@@ -18,6 +18,10 @@
         <v-list-item :slim="true" prepend-icon="mdi-open-in-new" :href="getProofImageFullUrl" target="_blank">
           {{ $t('Common.PictureFull') }}
         </v-list-item>
+        <v-list-item v-if="proof.priceTagsBoundingBoxes" :slim="true" prepend-icon="mdi-star-box-multiple-outline" @click="toggleShowPriceTagsBoundingBoxes">
+          <span v-if="showPriceTagsBoundingBoxes">{{ $t('Common.HidePriceTagsBoundingBoxes') }}</span>
+          <span v-else>{{ $t('Common.DisplayPriceTagsBoundingBoxes') }}</span>
+        </v-list-item>
         <v-sheet v-if="userCanEditProof">
           <v-list-item :slim="true" prepend-icon="mdi-pencil" :disabled="!proofCanBeEdited" @click="openEditDialog">
             {{ $t('Common.Edit') }}
@@ -107,11 +111,16 @@ export default {
       type: Object,
       default: null
     },
+    showPriceTagsBoundingBoxes: {
+      type: Boolean,
+      default: false
+    },
     style: {
       type: String,
       default: 'position:absolute;bottom:6px;right:0;'
     }
   },
+  emits: ['update:showPriceTagsBoundingBoxes'],
   data() {
     return {
       ACTION_MENU_ICON: constants.ACTION_MENU_ICON,
@@ -191,6 +200,9 @@ export default {
     },
     showDeleteSuccessMessage() {
       this.deleteSuccessMessage = true
+    },
+    toggleShowPriceTagsBoundingBoxes() {
+      this.$emit('update:showPriceTagsBoundingBoxes', !this.showPriceTagsBoundingBoxes)
     }
   }
 }

@@ -190,6 +190,17 @@
             persistent-hint
             hide-details="auto"
           />
+          <!-- Proofs -->
+          <h3 class="mt-4 mb-1">
+            {{ $t('Common.Proofs') }}
+          </h3>
+          <v-switch
+            v-model="appStore.user.display_price_tags_bounding_boxes"
+            color="success"
+            :label="$t('Common.DisplayPriceTagsBoundingBoxes')"
+            density="compact"
+            hide-details="auto"
+          />
         </v-card-text>
       </v-card>
     </v-col>

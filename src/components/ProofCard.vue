@@ -14,24 +14,39 @@
     <v-divider v-if="!hideProofHeader" />
 
     <v-card-text>
-      <v-img v-if="proof.file_path" :src="getProofImageFullUrl" :height="imageHeight" />
+      <ContributionAssistantDrawCanvas 
+        v-if="canDisplayPriceTagsBoundingBoxes" 
+        :imageSrc="getProofImageFullUrl" 
+        :boundingBoxesFromServer="proof.priceTagsBoundingBoxes" 
+        :preventDrawing="true"
+        :forceFullImageHeight="true"
+      />
+      <v-img v-else-if="proof.file_path" :src="getProofImageFullUrl" :height="imageHeight" />
     </v-card-text>
 
     <v-divider />
 
     <v-card-actions>
-      <ProofFooterRow :proof="proof" :hideActionMenuButton="hideActionMenuButton" :readonly="readonly" />
+      <ProofFooterRow 
+        v-model:showPriceTagsBoundingBoxes="showPriceTagsBoundingBoxes"
+        :proof="proof" 
+        :hideActionMenuButton="hideActionMenuButton" 
+        :readonly="readonly"
+      />
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue'
+import { mapStores } from 'pinia'
+import { useAppStore } from '../store'
 import proof_utils from '../utils/proof.js'
 
 export default {
   components: {
     ProofFooterRow: defineAsyncComponent(() => import('../components/ProofFooterRow.vue')),
+    ContributionAssistantDrawCanvas: defineAsyncComponent(() => import('../components/ContributionAssistantDrawCanvas.vue')),
   },
   props: {
     proof: {
@@ -71,15 +86,23 @@ export default {
   data() {
     return {
       proofEditDialog: false,
+      showPriceTagsBoundingBoxes: false, // updated by Proof action menu
     }
   },
   computed: {
+    ...mapStores(useAppStore),
     getProofImageFullUrl() {
       if (this.proof.image_thumb_path && this.showImageThumb) {
         return proof_utils.getImageFullUrl(this.proof.image_thumb_path)
       }
       return proof_utils.getImageFullUrl(this.proof.file_path)
     },
+    canDisplayPriceTagsBoundingBoxes() {
+      return this.showPriceTagsBoundingBoxes && this.proof?.priceTagsBoundingBoxes?.length > 0
+    },
+  },
+  mounted() {
+    this.showPriceTagsBoundingBoxes = this.appStore?.user?.display_price_tags_bounding_boxes || false
   },
   methods: {
     selectProof() {
