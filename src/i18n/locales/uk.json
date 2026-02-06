@@ -267,6 +267,7 @@
 		"LocationFindShop": "Знайти місце розташування магазину",
 		"LocationMissing": "Розташування відсутнє",
 		"LocationSearchByName": "Пошук за назвою та містом",
+		"LocationsCompare": "Порівняти місця розташування",
 		"Date": "Дата",
 		"DateMissing": "Відсутня дата",
 		"DateProofHelpText": "Дата знімка.",
@@ -440,6 +441,7 @@
 		"Recent": "Недавні",
 		"Re-open": "Знову відкрити",
 		"ReportProblem": "Повідомити про проблему",
+		"Reset": "Скинути",
 		"Resolved": "Вирішено",
 		"Reuses": "Повторне використання",
 		"ReusesKnown": "Відомі повторні використання",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Додати докази (цінники)"
+		},
+		"CompareLocations": {
+			"Title": "Порівняти місця розташування"
 		},
 		"Locations": {
 			"Title": "Місцезнаходження"
