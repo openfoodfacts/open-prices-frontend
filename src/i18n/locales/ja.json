@@ -268,7 +268,7 @@
 		"LocationFindShop": "お店の場所を探す",
 		"LocationMissing": "場所が見つかりません",
 		"LocationSearchByName": "名前と都市で検索",
-		"LocationsCompare": "場所を比較する",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "日付",
 		"DateMissing": "日付がありません",
 		"DateProofHelpText": "写真の日付。",
@@ -818,7 +818,7 @@
 			"Title": "証明書（値札）を追加する"
 		},
 		"CompareLocations": {
-			"Title": "場所を比較する"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "場所："
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "通貨",
 		"DisplayTitle": "画面",
 		"BarcodeScanner": "バーコードスキャナー",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "デフォルトモード",
 		"FavoriteCurrencies": "お気に入りの通貨",
 		"CurrencyRequired": "少なくとも 1 つの通貨が必要です",
