@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Жайгашкан жерлерди салыштырыңыз",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Сүрөттүн датасы.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Кайра ачыңыз",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "чечилди",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Жайгашкан жерлерди салыштырыңыз"
 		},
 		"Locations": {
 			"Title": "Locations"
