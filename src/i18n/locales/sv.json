@@ -267,6 +267,7 @@
 		"LocationFindShop": "Hitta butikens plats",
 		"LocationMissing": "Plats saknas",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Jämför platser",
 		"Date": "Datum",
 		"DateMissing": "Datum saknas",
 		"DateProofHelpText": "Bildens datum.",
@@ -440,6 +441,7 @@
 		"Recent": "Senaste",
 		"Re-open": "Öppna igen",
 		"ReportProblem": "Rapportera ett problem",
+		"Reset": "Återställ",
 		"Resolved": "Löst",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Jämför platser"
 		},
 		"Locations": {
 			"Title": "Platser"
