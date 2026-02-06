@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "ប្រៀបធៀបទីតាំង",
 		"Date": "កាលបរិច្ឆេទ",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "កាលបរិច្ឆេទនៃរូបភាព។",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "បើកឡើងវិញ",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "ដោះស្រាយ",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "ប្រៀបធៀបទីតាំង"
 		},
 		"Locations": {
 			"Title": "Locations"
