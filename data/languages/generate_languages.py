@@ -1,3 +1,9 @@
+"""
+How-to run ?
+> python data/languages/generate_languages.py
+"""
+
+
 import csv
 import requests
 import json
@@ -13,7 +19,7 @@ CROWDIN_LANGUAGES_TO_IGNORE = [
 LANGUAGES_CSV = "https://raw.githubusercontent.com/forxer/languages-list/master/src/Languages.csv"
 # https://github.com/annexare/Countries/blob/main/packages/countries/src/data/languages.ts
 
-LANGUAGES_OUTPUT_FILE = "src/i18n/data/languages.json"
+OUTPUT_FILE = "src/i18n/data/languages.json"
 
 EXTRA_LANGUAGES = [
     {"code": "ach", "name": "Acoli", "native": "Lwo"},
@@ -86,7 +92,7 @@ def write_languages_to_file(languages):
     # order by code
     languages = sorted(languages, key=lambda x: x['code'])
     # write to file
-    with open(LANGUAGES_OUTPUT_FILE, "w", encoding="utf8") as f:
+    with open(OUTPUT_FILE, "w", encoding="utf8") as f:
         json.dump(languages, f, ensure_ascii=False, indent=4)
 
 
@@ -100,10 +106,6 @@ def compare_crowdin_languages(crowdin_languages, languages):
 
 
 if __name__ == "__main__":
-    """
-    How-to run ?
-    > python data/languages/generate_languages.py
-    """
     CROWDIN_LANGUAGE_LIST = get_crowdin_language_list()
     print("Crowdin languages (json files):", len(CROWDIN_LANGUAGE_LIST))
 

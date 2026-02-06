@@ -1,10 +1,7 @@
 """
-https://static.openfoodfacts.org/data/taxonomies/origins.full.json
-
-How-to run ?
-> pip install openfoodfacts
-> python data/origins/generate_origins_translations.py
+See parent README.md for more details.
 """
+
 
 import json
 from typing import Any

@@ -1,12 +1,5 @@
 """
-Goal: filter the full Open Food Facts categories taxonomy
-to keep only categories relevant for Open Prices (a small subset of food categories)
-
-https://wiki.openfoodfacts.org/Global_categories_taxonomy
-
-How-to run ?
-> pip install openfoodfacts
-> python data/categories/filter_categories.py
+See parent README.md for more details.
 
 Stats as of 2026-02-06:
 - Input: Taxonomy: total number of nodes: 14299
