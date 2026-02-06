@@ -126,7 +126,7 @@
 		"Title": "Taper un code-barres"
 	},
 	"Challenge": {
-		"Title": "Défi communautaire",
+		"Title": "Défi de la communauté",
 		"Subtitle": "Rejoignez d’autres passionnés des prix des denrées alimentaires pour recueillir des informations sur  {challenge_title} {challenge_subtitle}.",
 		"StepTakePictures": {
 			"Title": "Prendre des photos des étiquettes de prix dans les magasins",
@@ -217,7 +217,7 @@
 		"Close": "Fermer",
 		"Comment": "Commentaire",
 		"Community": "Communauté",
-		"CommunityPrices": "Tarifs communautaires",
+		"CommunityPrices": "Prix communautaires",
 		"CommunityProofs": "Preuves de communauté",
 		"Consumption": "Consommation",
 		"ConsumptionPrices": "Prix de consommation",
@@ -935,7 +935,7 @@
 			"Title": "Défis"
 		},
 		"CommunityChallenge": {
-			"Title": "Défi communautaire"
+			"Title": "Défi de la communauté"
 		},
 		"Validate": {
 			"Title": "Valider"
