@@ -267,6 +267,7 @@
 		"LocationFindShop": "Najděte umístění obchodu",
 		"LocationMissing": "Chybí poloha",
 		"LocationSearchByName": "Hledat podle jména a města",
+		"LocationsCompare": "Porovnat lokality",
 		"Date": "Datum",
 		"DateMissing": "Chybí datum",
 		"DateProofHelpText": "Datum pořízení obrázku.",
@@ -440,6 +441,7 @@
 		"Recent": "Nedávné",
 		"Re-open": "Znovu otevřít",
 		"ReportProblem": "Nahlásit problém",
+		"Reset": "Obnovit",
 		"Resolved": "Vyřešeno",
 		"Reuses": "Opakované použití",
 		"ReusesKnown": "Známá opakovaná použití",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Porovnat lokality"
 		},
 		"Locations": {
 			"Title": "Polohy"
