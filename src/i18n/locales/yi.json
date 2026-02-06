@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "פאַרגלייַכן לאָקאַציעס",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "דאַטע פֿון בילד.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "ווידער עפענען",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "אויפגעלייזט",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "פאַרגלייַכן לאָקאַציעס"
 		},
 		"Locations": {
 			"Title": "Locations"
