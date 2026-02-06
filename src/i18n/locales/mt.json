@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Qabbel il-postijiet",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Data tar-ritratt.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Iftaħ mill-ġdid",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Solvuta",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Qabbel il-postijiet"
 		},
 		"Locations": {
 			"Title": "Locations"
