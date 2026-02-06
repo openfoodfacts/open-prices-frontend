@@ -2,59 +2,67 @@
   <!-- Location Input Rows -->
   <v-row v-if="!loading">
     <v-col>
-      <LocationInputRow
-        class="mt-0" :locationForm="locationA" :existingLocation="selectedLocationA"
-        @location="selectedLocationA = $event"
-      />
+      <LocationCard v-if="selectedLocationA && selectedLocationA.id" :location="selectedLocationA" />
+      <template v-else>
+        <LocationInputRow @location="selectLocation($event, 'a')" />
+        <v-alert v-if="selectedLocationA && !selectedLocationA.id" class="mt-4" data-name="location-not-found-alert" type="error" variant="outlined" density="compact">
+          {{ $t('Common.LocationNotFound') }}
+        </v-alert>
+      </template>
     </v-col>
     <v-col>
-      <LocationInputRow
-        class="mt-0" :locationForm="locationB" :existingLocation="selectedLocationB"
-        @location="selectedLocationB = $event"
-      />
+      <LocationCard v-if="selectedLocationB && selectedLocationB.id" :location="selectedLocationB" />
+      <template v-else>
+        <LocationInputRow @location="selectLocation($event, 'b')" />
+        <v-alert v-if="selectedLocationB && !selectedLocationB.id" class="mt-4" data-name="location-not-found-alert" type="error" variant="outlined" density="compact">
+          {{ $t('Common.LocationNotFound') }}
+        </v-alert>
+      </template>
     </v-col>
   </v-row>
 
-  <!-- Loading State -->
-  <v-row v-if="loading" class="justify-center">
-    <v-progress-circular indeterminate />
-  </v-row>
-  <v-row v-if="showCompareButton" class="justify-center mt-10">
-    <v-btn color="primary" :disabled="!readyToCompare" @click="updateQueryParams()">
-      {{ $t('Common.LocationsCompare') }}
-    </v-btn>
+  <!-- Compare Button -->
+  <v-row v-if="!startedComparing">
+    <v-col cols="12" align="center">
+      <v-btn color="primary" :disabled="!readyToCompare" @click="fetchComparisonData">
+        {{ $t('Common.LocationsCompare') }}
+      </v-btn>
+      <v-btn class="ml-4" color="primary" @click="resetComparison">
+        {{ $t('Common.Reset') }}
+      </v-btn>
+    </v-col>
   </v-row>
 
   <!-- Progress Bars -->
-  <v-row v-if="isLoadingAny" class="mt-4">
+  <v-row v-if="startedComparing && isLoadingAny" class="mt-4">
     <v-col cols="12" md="6">
       <v-card variant="outlined" class="pa-2">
         <div class="text-subtitle-2 mb-1">
-          {{ locationA.count }} / {{ locationA.total || '?' }}
+          {{ selectedLocationA.count }} / {{ selectedLocationA.total || '?' }}
         </div>
         <v-progress-linear
-          :model-value="locationA.total ? (locationA.count / locationA.total) * 100 : 0"
-          color="primary" height="10" striped :indeterminate="!locationA.total"
+          :model-value="selectedLocationA.total ? (selectedLocationA.count / selectedLocationA.total) * 100 : 0"
+          color="primary" height="10" striped :indeterminate="!selectedLocationA.total"
         />
       </v-card>
     </v-col>
     <v-col cols="12" md="6">
       <v-card variant="outlined" class="pa-2">
         <div class="text-subtitle-2 mb-1">
-          {{ locationB.count }} / {{ locationB.total || '?' }}
+          {{ selectedLocationB.count }} / {{ selectedLocationB.total || '?' }}
         </div>
         <v-progress-linear
-          :model-value="locationB.total ? (locationB.count / locationB.total) * 100 : 0"
-          color="primary" height="10" striped :indeterminate="!locationB.total"
+          :model-value="selectedLocationB.total ? (selectedLocationB.count / selectedLocationB.total) * 100 : 0"
+          color="primary" height="10" striped :indeterminate="!selectedLocationB.total"
         />
       </v-card>
     </v-col>
   </v-row>
 
   <!-- Products Table -->
-  <v-row v-if="readyToCompare && !loading" class="mt-4">
+  <v-row v-if="startedComparing && !isLoadingAny" class="mt-4">
     <v-col v-if="productsList.length > 0" cols="12">
-      <v-data-table :headers="headers" :items="productsList" item-value="product_code">
+      <v-data-table :headers="headers" :items="productsList" hide-default-footer>
         <template #tfoot>
           <tr>
             <td :colspan="headers.length" class="pa-0">
@@ -63,28 +71,33 @@
           </tr>
           <tr class="text-subtitle-1">
             <td class="pa-4">
-              <strong>{{ $t('Total') }}</strong>
+              {{ $t('Common.ProductCount', { count: productsList.length }) }}
             </td>
             <td
               class="pa-4"
-              :class="locationA.totalPrice < locationB.totalPrice ? 'text-success font-weight-bold' : ''"
+              :class="selectedLocationA.totalPrice < selectedLocationB.totalPrice ? 'text-success' : ''"
             >
-              {{ locationA.totalPrice.toFixed(2) }}
+              {{ selectedLocationA.totalPrice.toFixed(2) }}
             </td>
             <td
               class="pa-4"
-              :class="locationB.totalPrice < locationA.totalPrice ? 'text-success font-weight-bold' : ''"
+              :class="selectedLocationB.totalPrice < selectedLocationA.totalPrice ? 'text-success' : ''"
             >
-              {{ locationB.totalPrice.toFixed(2) }}
+              {{ selectedLocationB.totalPrice.toFixed(2) }}
             </td>
           </tr>
         </template>
       </v-data-table>
     </v-col>
-    <v-col v-else-if="hasSharedProducts" cols="12">
-      <p class="text-center">
-        {{ $t('No shared products found') }}
-      </p>
+    <v-col v-else-if="!hasSharedProducts" cols="12" align="center">
+      <v-alert type="warning" variant="outlined" density="compact">
+        {{ $t('LocationSelector.NoResult') }}
+      </v-alert>
+    </v-col>
+    <v-col cols="12" align="center">
+      <v-btn color="primary" @click="resetComparison">
+        {{ $t('Common.Reset') }}
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -97,41 +110,25 @@ import geo_utils from '../utils/geo.js'
 export default {
   components: {
     LocationInputRow: defineAsyncComponent(() => import('../components/LocationInputRow.vue')),
+    LocationCard: defineAsyncComponent(() => import('../components/LocationCard.vue')),
   },
   data() {
     return {
-      locationA: {
-        type: null,
-        location_id: null,
-        location_osm_id: null,
-        location_osm_type: '',
-        count: 0,
-        total: 0,
-        totalPrice: 0,
-        fetching: false,
-      },
-      locationB: {
-        type: null,
-        location_id: null,
-        location_osm_id: null,
-        location_osm_type: '',
-        count: 0,
-        total: 0,
-        totalPrice: 0,
-        fetching: false,
-      },
-      selectedLocationA: null,
+      LOCATION_KEYS: ['a', 'b'],
+      selectedLocationA: null,  // id, type, osm_id, osm_type, price_count
       selectedLocationB: null,
       loading: false,
 
-      // Progressive loading state
-      productsList: [],
+      // matching products
+      productsList: null,
       productMap: {}, // Persistent map for incremental updates
 
+      // table
+      tablePageLimit: -1,  // all items
       headers: [
         { title: 'Product Name', key: 'product_name' },
         {
-          title: 'Price Location 1',
+          title: 'Price Location A',
           key: 'price1',
           value: item => item.price1 || '-',
           cellProps: ({ item }) => {
@@ -139,7 +136,7 @@ export default {
           }
         },
         {
-          title: 'Price Location 2',
+          title: 'Price Location B',
           key: 'price2',
           value: item => item.price2 || '-',
           cellProps: ({ item }) => {
@@ -151,138 +148,89 @@ export default {
   },
   computed: {
     showCompareButton() {
-      return Object.keys(this.$route.query).length === 0
+      return Object.keys(this.$route.query).length > 0
     },
     readyToCompare() {
-      return this.selectedLocationA && this.selectedLocationB
+      return this.selectedLocationA && this.selectedLocationA.id && this.selectedLocationB && this.selectedLocationB.id
     },
     isLoadingAny() {
-      return (this.locationA.fetching || this.locationB.fetching)
+      return (this.selectedLocationA.fetching || this.selectedLocationB.fetching)
+    },
+    startedComparing() {
+      return this.readyToCompare && this.productsList !== null
     },
     hasSharedProducts() {
-      return this.productsList.length == 0 && !this.showCompareButton && !this.isLoadingAny
+      return this.productsList.length > 0
     }
   },
   watch: {
     $route(newRoute, oldRoute) { // only called when query changes
       if (oldRoute.path === newRoute.path && JSON.stringify(oldRoute.query) !== JSON.stringify(newRoute.query)) {
-        this.initFromQuery()
+        this.initLocations()
       }
     }
   },
   mounted() {
-    this.initFromQuery()
+    this.initLocations()
   },
   methods: {
-    initFromQuery() {
-      if (Object.keys(this.$route.query).length === 0) {
-        // Reset state on navigation back to empty route
-        this.selectedLocationA = null
-        this.selectedLocationB = null
-        this.locationA = { type: null, location_id: null, location_osm_id: null, location_osm_type: '', count: 0, total: 0, totalPrice: 0, fetching: false }
-        this.locationB = { type: null, location_id: null, location_osm_id: null, location_osm_type: '', count: 0, total: 0, totalPrice: 0, fetching: false }
-        this.productsList = []
-        this.productMap = {}
-        return
-      }
-
-      const q = this.$route.query
-      this.loading = true
-      const pA = this.fetchLocation(q.location_a_id, q.location_a_osm_id, q.location_a_osm_type)
-      const pB = this.fetchLocation(q.location_b_id, q.location_b_osm_id, q.location_b_osm_type)
-
-      Promise.all([pA, pB]).then(([locationA, locationB]) => {
-        if (locationA) {
-          this.selectedLocationA = locationA
-          this.locationA = this.mapLocationToForm(locationA)
-        }
-        if (locationB) {
-          this.selectedLocationB = locationB
-          this.locationB = this.mapLocationToForm(locationB)
-        }
-        if (this.readyToCompare) {
-          this.fetchComparisonData()
-        }
-      }).finally(() => {
-        this.loading = false
-      })
-    },
-    fetchLocation(id, osmId, osmType) {
-      if (id) {
-        return openPricesApi.getLocationById(id)
-      }
-      if (osmId && osmType) {
-        return openPricesApi.getLocationByOsmTypeAndId(osmType, osmId)
-      }
-      return Promise.resolve(null)
-    },
-    mapLocationToForm(loc) {
-      return {
-        type: loc.type,
-        location_id: loc.type === 'ONLINE' ? loc.id : null,
-        location_osm_id: loc.type === 'OSM' ? geo_utils.getLocationID(loc) : null,
-        location_osm_type: loc.type === 'OSM' ? geo_utils.getLocationType(loc) : '',
-        count: 0,
-        total: 0,
-        totalPrice: 0,
-        fetching: false,
-      }
-    },
-    updateQueryParams() {
-      let query = {}
-      if (this.selectedLocationA && this.selectedLocationB) {
-        if (this.selectedLocationA.type === 'ONLINE') query.location_a_id = this.selectedLocationA.id
-        else {
-          query.location_a_osm_id = geo_utils.getLocationID(this.selectedLocationA)
-          query.location_a_osm_type = geo_utils.getLocationType(this.selectedLocationA)
-        }
-        if (this.selectedLocationB.type === 'ONLINE') query.location_b_id = this.selectedLocationB.id
-        else {
-          query.location_b_osm_id = geo_utils.getLocationID(this.selectedLocationB)
-          query.location_b_osm_type = geo_utils.getLocationType(this.selectedLocationB)
-        }
+    // Step 1: select locations = update query params
+    selectLocation(location, key) {
+      let query = JSON.parse(JSON.stringify(this.$route.query))
+      if (location.type === 'ONLINE') query[`location_${key}_id`] = location.id
+      else {
+        query[`location_${key}_osm_id`] = geo_utils.getLocationID(location)
+        query[`location_${key}_osm_type`] = geo_utils.getLocationType(location)
       }
 
       this.$router.push({ name: 'locations-compare', query: query })
     },
+    // Step 2: fetch location(s) based on query params
+    initLocations() {
+      const query = this.$route.query
+      if (Object.keys(this.$route.query).length) {
+        this.LOCATION_KEYS.forEach(key => {
+          if (!this[`selectedLocation${key.toUpperCase()}`] || !this[`selectedLocation${key.toUpperCase()}`].id) {
+            if (query[`location_${key}_id`]) {
+              openPricesApi.getLocation(query[`location_${key}_id`]).then((location) => {
+                this[`selectedLocation${key.toUpperCase()}`] = location
+              })
+            } else if (query[`location_${key}_osm_id`] && query[`location_${key}_osm_type`]) {
+              openPricesApi.getLocationByOsmTypeAndId(query[`location_${key}_osm_type`], query[`location_${key}_osm_id`]).then((location) => {
+                this[`selectedLocation${key.toUpperCase()}`] = location
+              })
+            }
+          }
+        })
+      } else {
+        this.selectedLocationA = null
+        this.selectedLocationB = null
+      }
+    },
+    // Step 3: fetch comparison data based on selected locations
     fetchComparisonData() {
       // Reset
       this.productsList = []
       this.productMap = {}
-      this.locationA.count = 0
-      this.locationA.total = 0
-      this.locationA.totalPrice = 0
-      this.locationB.count = 0
-      this.locationB.total = 0
-      this.locationB.totalPrice = 0
+      this.selectedLocationA.fetching = true
+      this.selectedLocationA.count = 0
+      this.selectedLocationA.total = 0
+      this.selectedLocationA.totalPrice = 0
+      this.selectedLocationB.fetching = true
+      this.selectedLocationB.count = 0
+      this.selectedLocationB.total = 0
+      this.selectedLocationB.totalPrice = 0
 
       // Start fetching in background
-      this.fetchPricesProgressive(this.locationA, 1)
-      this.fetchPricesProgressive(this.locationB, 2)
+      this.fetchPricesProgressive(this.selectedLocationA, 1)
+      this.fetchPricesProgressive(this.selectedLocationB, 2)
     },
-    async fetchPricesProgressive(locationObj, locIndex) {
-      locationObj.fetching = true
+    async fetchPricesProgressive(location, locIndex) {
       const pageSize = 100
 
       // Helper to build params
       const getParams = (p) => {
-        const params = { page: p, size: pageSize, order_by: '-date' }
-        if (locationObj.type === 'ONLINE') {
-          params.location_id = locationObj.location_id || locationObj.id
-        } else if (locationObj.type === 'OSM') {
-          params.location_osm_id = locationObj.location_osm_id
-          params.location_osm_type = locationObj.location_osm_type
-        } else {
-					// Fallback if structure is slightly different (e.g. if passed selectedLocation object directly, but here we pass locationObj from data)
-					// The locationObj in data has flat structure
-          if (locationObj.location_osm_id) {
-            params.location_osm_id = locationObj.location_osm_id
-            params.location_osm_type = locationObj.location_osm_type
-          } else if (locationObj.location_id) {
-            params.location_id = locationObj.location_id
-          }
-        }
-        return params
+        return { location_id: location.id, page: p, size: pageSize, order_by: '-date' }
       }
 
       // Helper to process response incrementally
@@ -330,9 +278,9 @@ export default {
 
             // If we are updating an existing price, we need to adjust the total first
             if (locIndex === 1 && entry.price1 !== null) {
-              this.locationA.totalPrice -= entry.price1
+              this.selectedLocationA.totalPrice -= entry.price1
             } else if (locIndex === 2 && entry.price2 !== null) {
-              this.locationB.totalPrice -= entry.price2
+              this.selectedLocationB.totalPrice -= entry.price2
             }
 
             // Update price and date
@@ -351,19 +299,19 @@ export default {
 
               if (!entry.inList) {
                 this.productsList.push(entry)
-                this.locationA.totalPrice += entry.price1
-                this.locationB.totalPrice += entry.price2
+                this.selectedLocationA.totalPrice += entry.price1
+                this.selectedLocationB.totalPrice += entry.price2
                 entry.inList = true
               } else {
                 if (locIndex === 1)
-                  this.locationA.totalPrice += entry.price1
+                  this.selectedLocationA.totalPrice += entry.price1
                 else
-                  this.locationB.totalPrice += entry.price2
+                  this.selectedLocationB.totalPrice += entry.price2
               }
             }
           })
 
-          locationObj.count += response.items.length
+          location.count += response.items.length
           return true
         }
         return false
@@ -377,9 +325,9 @@ export default {
           try {
             const res = await currentReq
 
-            if (p === 1 && res.total !== undefined) locationObj.total = res.total
+            if (p === 1 && res.total !== undefined) location.total = res.total
             
-            if (!res.items || res.items.length === 0) {
+            if (p === res.pages) {
               break
             }
 
@@ -389,14 +337,18 @@ export default {
 
             processResponse(res)
             currentReq = nextReq
-          } catch (e) {
+          } catch (e) {  // eslint-disable-line no-unused-vars
             break
           }
         }
       } finally {
-        locationObj.fetching = false
+        location.fetching = false
       }
     },
+    // Step 4: reset comparison = clear query params
+    resetComparison() {
+      this.$router.push({ name: 'locations-compare' })
+    }
   },
 }
 </script>
