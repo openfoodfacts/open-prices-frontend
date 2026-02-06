@@ -50,7 +50,14 @@ What it does:
 
 ## Labels
 
-TBC
+### Open Food Facts taxonomy
+
+File viewable here: [taxonomies/labels.txt](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/labels.txt)
+
+How-to run:
+```sh
+python data/labels/generate_labels_translations.py
+```
 
 ## Languages
 
@@ -58,4 +65,11 @@ TBC
 
 ## Origins
 
-TBC
+### Open Food Facts taxonomy
+
+File viewable here: [taxonomies/origins.txt](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/origins.txt)
+
+How-to run:
+```sh
+python data/origins/generate_origins_translations.py
+```
