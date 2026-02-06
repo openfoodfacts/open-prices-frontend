@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "위치 비교",
 		"Date": "날짜",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "사진 촬영 날짜.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "다시 열다",
 		"ReportProblem": "문제 신고하기",
+		"Reset": "Reset",
 		"Resolved": "해결됨",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "위치 비교"
 		},
 		"Locations": {
 			"Title": "Locations"
