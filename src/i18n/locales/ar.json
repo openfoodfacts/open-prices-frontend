@@ -267,6 +267,7 @@
 		"LocationFindShop": "ابحث عن موقع المتجر",
 		"LocationMissing": "الموقع مفقود",
 		"LocationSearchByName": "ابحث بالاسم والمدينة",
+		"LocationsCompare": "قارن المواقع",
 		"Date": "تاريخ",
 		"DateMissing": "التاريخ مفقود",
 		"DateProofHelpText": "تاريخ الصورة.",
@@ -440,6 +441,7 @@
 		"Recent": "مؤخرًا",
 		"Re-open": "إعادة فتح",
 		"ReportProblem": "إبلاغ عن مشكلة",
+		"Reset": "Reset",
 		"Resolved": "تم الحل",
 		"Reuses": "إعادة الاستخدام",
 		"ReusesKnown": "الاستخدامات المعروفة",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "أضف إثباتات (بطاقات الأسعار)"
+		},
+		"CompareLocations": {
+			"Title": "قارن المواقع"
 		},
 		"Locations": {
 			"Title": "المواقع"
