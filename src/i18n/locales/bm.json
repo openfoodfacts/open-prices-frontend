@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Yɔrɔw suma ɲɔgɔn na",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Ja in bɔra don min na.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Aw bɛ segin ka da wuli",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "A ɲɛnabɔra",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Yɔrɔw suma ɲɔgɔn na"
 		},
 		"Locations": {
 			"Title": "Locations"
