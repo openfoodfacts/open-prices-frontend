@@ -267,6 +267,7 @@
 		"LocationFindShop": "Atrodiet veikala atrašanās vietu",
 		"LocationMissing": "Trūkst atrašanās vietas",
 		"LocationSearchByName": "Meklēt pēc nosaukuma un pilsētas",
+		"LocationsCompare": "Salīdzināt atrašanās vietas",
 		"Date": "Datums",
 		"DateMissing": "Trūkst datuma",
 		"DateProofHelpText": "Attēla datums.",
@@ -440,6 +441,7 @@
 		"Recent": "Jaunākie",
 		"Re-open": "Atkārtoti atvērt",
 		"ReportProblem": "Ziņot par problēmu",
+		"Reset": "Atiestatīt",
 		"Resolved": "Atrisināts",
 		"Reuses": "Atkārtota izmantošana",
 		"ReusesKnown": "Zināmi atkārtoti izmantošanas veidi",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Pievienot pierādījumus (cenu zīmes)"
+		},
+		"CompareLocations": {
+			"Title": "Salīdzināt atrašanās vietas"
 		},
 		"Locations": {
 			"Title": "Atrašanās vietas"
