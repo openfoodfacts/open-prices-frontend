@@ -268,7 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"LocationsCompare": "Déan comparáid idir suíomhanna",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Dáta",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Dáta an phictiúir.",
@@ -818,7 +818,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Déan comparáid idir suíomhanna"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Locations"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Airgeadra",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
