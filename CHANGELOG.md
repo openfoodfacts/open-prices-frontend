@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.155.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.155.0...v1.155.1) (2026-02-06)
+
+
+### Technical
+
+* **l10n:** New Crowdin translations to review and merge ([#2020](https://github.com/openfoodfacts/open-prices-frontend/issues/2020)) ([305bef4](https://github.com/openfoodfacts/open-prices-frontend/commit/305bef4807e56dfca2d43a1cf8a642acdbb3e24d))
+
 ## [1.155.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.154.2...v1.155.0) (2026-02-06)
 
 
