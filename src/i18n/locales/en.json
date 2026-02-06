@@ -677,10 +677,18 @@
 		"LabelDiscounted": "Discounted price",
 		"LabelFull": "Full price"
 	},
+	
 	"PriceList": {
-		"LoadMore": "Load more",
-		"Title": "Latest prices"
-	},
+  	"LoadMore": "Load more",
+    "Title": "Latest prices",
+    "ComparisonPrototype": "Price comparison (prototype)",
+    "PriceA": "Price A:",
+    "PriceB": "Price B:",
+    "CheaperLocation": "Cheaper location:",
+    "NoPricesFound": "No prices found for the selected filters."
+    },
+
+	
 	"PriceRules": {
 		"AmountRequired": "Price is required",
 		"NoSpaces": "Please don't use spaces",
