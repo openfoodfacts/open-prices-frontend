@@ -268,7 +268,7 @@
 		"LocationFindShop": "ابحث عن موقع المتجر",
 		"LocationMissing": "الموقع مفقود",
 		"LocationSearchByName": "ابحث بالاسم والمدينة",
-		"LocationsCompare": "قارن المواقع",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "تاريخ",
 		"DateMissing": "التاريخ مفقود",
 		"DateProofHelpText": "تاريخ الصورة.",
@@ -818,7 +818,7 @@
 			"Title": "أضف إثباتات (بطاقات الأسعار)"
 		},
 		"CompareLocations": {
-			"Title": "قارن المواقع"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "المواقع"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "عملة",
 		"DisplayTitle": "العرض",
 		"BarcodeScanner": "ماسح الباركود",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "الوضع الافتراضي",
 		"FavoriteCurrencies": "العملات المفضلة",
 		"CurrencyRequired": "يلزم وجود عملة واحدة على الأقل",
