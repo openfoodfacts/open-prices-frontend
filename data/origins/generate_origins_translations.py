@@ -1,7 +1,20 @@
+"""
+https://static.openfoodfacts.org/data/taxonomies/origins.full.json
+
+How-to run ?
+> pip install openfoodfacts
+> python data/origins/generate_origins_translations.py
+"""
+
 import json
+from typing import Any
+from pathlib import Path
+
 from openfoodfacts.taxonomy import get_taxonomy
 
 
+OFF_TAXONOMY_NAME = "origin"
+OP_LANGUAGES_FILE = "src/i18n/data/languages.json"
 OLD_ORIGINS_FILE = "src/data/origins-tags.json"
 
 WITH_PROPERTIES = [
@@ -24,13 +37,15 @@ EXTRA = [
 ]
 
 
-def get_languages():
-    with open("src/i18n/data/languages.json") as f:
-        return json.load(f)
+script_path = Path(__file__).parent
+repo_path = script_path.parent.parent
+
+OUTPUT_PATH = repo_path / "src/data/origins/"
 
 
-def get_origin_taxonomy():
-    return get_taxonomy("origin")
+def read_json(filepath):
+    with open(filepath) as jsonfile:
+        return json.load(jsonfile)
 
 
 def get_taxonomy_node_by_id(taxonomy, node_id):
@@ -75,8 +90,7 @@ def filter_origins(taxonomy):
     return node_list
 
 
-def write_origins_to_files(origins):
-    languages = get_languages()
+def write_origins_to_files(origins, languages: list[dict[str, Any]]):
     for language in languages:
         language_code = language['code']
         language_origins = list()
@@ -119,20 +133,18 @@ def compare_new_origins_with_old_origins():
 
 
 if __name__ == "__main__":
-    """
-    How-to run ?
-    > pip install openfoodfacts
-    > python data/origins/generate_origins_translations.py
-    """
-    # init
-    ORIGINS_FULL = get_origin_taxonomy()
-    print("Total number of origins:", len(ORIGINS_FULL))
+    # Step 1: get the full taxonomy
+    TAXONOMY_FULL = get_taxonomy(OFF_TAXONOMY_NAME, force_download=True, download_newer=True)
+    print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
-    origins_filtered = filter_origins(ORIGINS_FULL)
+    # Step 2: filter
+    origins_filtered = filter_origins(TAXONOMY_FULL)
     origins_filtered_to_dict_list = taxonomy_node_list_to_dict_list(list(origins_filtered), delete_parents=True)
     print("Origins remaining:", len(origins_filtered_to_dict_list))
 
-    write_origins_to_files(origins_filtered_to_dict_list)
-    print("Wrote to language files")
+    # Step 3: write to files (1 per language)
+    OP_LANGUAGES = read_json(repo_path / OP_LANGUAGES_FILE)
+    write_origins_to_files(origins_filtered_to_dict_list, OP_LANGUAGES)
+    print(f"Wrote to {len(OP_LANGUAGES)} language files")
 
     compare_new_origins_with_old_origins()

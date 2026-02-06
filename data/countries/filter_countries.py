@@ -5,7 +5,7 @@ from pathlib import Path
 
 from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
 
-TAXONOMY_NAME = "country"
+OFF_TAXONOMY_NAME = "country"
 
 script_path = Path(__file__).parent
 repo_path = script_path.parent.parent
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     """
     # Step 1a: get the full taxonomy
     TAXONOMY_FULL: Taxonomy = get_taxonomy(
-        TAXONOMY_NAME, force_download=True, download_newer=True
+        OFF_TAXONOMY_NAME, force_download=True, download_newer=True
     )
     print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
