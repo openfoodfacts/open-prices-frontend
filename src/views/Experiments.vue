@@ -1,19 +1,36 @@
 <template>
   <v-row>
+    <v-col>
+      <h2 class="text-h6">
+        {{ $t('Common.Explore') }}
+      </h2>
+    </v-col>
+  </v-row>
+  <v-row class="mt-0">
+    <v-col cols="12" sm="6" lg="4">
+      <v-card
+        :title="$t('Common.LocationsCompare')"
+        prepend-icon="mdi-map-marker-distance"
+        append-icon="mdi-arrow-right"
+        to="/locations/compare"
+      />
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col>
+      <h2 class="text-h6">
+        {{ $t('Common.Contribute') }}
+      </h2>
+    </v-col>
+  </v-row>
+  <v-row>
     <v-col cols="12" sm="6" lg="4">
       <v-card
         :title="$t('Router.ProofPriceTagAssistant.Title')"
         prepend-icon="mdi-draw"
         append-icon="mdi-arrow-right"
         to="/experiments/proof-price-tag-assistant"
-      />
-    </v-col>
-    <v-col cols="12" sm="6" lg="4">
-      <v-card
-        :title="$t('Router.ReceiptAssistant.Title')"
-        prepend-icon="mdi-receipt-text-outline"
-        append-icon="mdi-arrow-right"
-        to="/experiments/receipt-assistant"
       />
     </v-col>
     <v-col cols="12" sm="6" lg="4">
