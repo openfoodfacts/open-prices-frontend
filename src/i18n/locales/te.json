@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "స్థానాలను పోల్చండి",
 		"Date": "తేదీ",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "చిత్రం తేదీ.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "మళ్ళీ తెరువు",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "పరిష్కరించబడింది",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "స్థానాలను పోల్చండి"
 		},
 		"Locations": {
 			"Title": "Locations"
