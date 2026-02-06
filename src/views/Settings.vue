@@ -133,17 +133,6 @@
       <v-card :title="$t('Common.DeveloperMode')" prepend-icon="mdi-test-tube">
         <v-divider />
         <v-card-text>
-          <!-- Side menu -->
-          <h3 class="mb-1">
-            {{ $t('Common.SideMenu') }}
-          </h3>
-          <v-switch
-            v-model="appStore.user.drawer_display_experiments"
-            color="success"
-            :label="$t('UserSettings.SideMenuExperimentsDisplay')"
-            density="compact"
-            hide-details="auto"
-          />
           <!-- Products -->
           <h3 class="mt-4 mb-1">
             {{ $t('Common.Products') }}
