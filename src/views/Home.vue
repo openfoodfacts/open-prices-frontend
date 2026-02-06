@@ -2,7 +2,21 @@
   <h2 class="text-h6 pb-4">
     {{ $t('Common.TaglineAlt1') }} {{ APP_HOME_ICONS }}
   </h2>
-
+  
+  <v-row>
+    <v-col>
+      <i18n-t keypath="Router.Home.Intro" tag="p">
+        <template #op_name>
+          {{ APP_NAME }}
+        </template>
+        <template #learn_more_url>
+          <router-link to="/about">
+            {{ $t('Common.LearnMore') }}
+          </router-link>
+        </template>
+      </i18n-t>
+    </v-col>
+  </v-row>
   <v-row>
     <v-col cols="6" sm="4" md="3" lg="2">
       <StatCard :value="todayPriceCount" :subtitle="$t('Common.Today')" />
