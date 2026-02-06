@@ -1,5 +1,13 @@
 """
+Goal: filter the full Open Food Facts categories taxonomy
+to keep only categories relevant for Open Prices (a small subset of food categories)
+
 https://wiki.openfoodfacts.org/Global_categories_taxonomy
+
+How-to run ?
+> pip install openfoodfacts
+> python data/categories/filter_categories.py
+
 Stats as of 2026-02-06:
 - Input: Taxonomy: total number of nodes: 14299
 - Output: 2980 categories
@@ -12,7 +20,8 @@ from pathlib import Path
 
 from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
 
-TAXONOMY_NAME = "category"
+OFF_TAXONOMY_NAME = "category"
+OP_LANGUAGES_FILE = "src/i18n/data/languages.json"
 
 PARENT_NODE_ID_LIST = [
     # { "id": "en:snacks", "keep_node": False },  # 823 (including en:viennoiseries)
@@ -201,17 +210,9 @@ def compare_new_categories_with_old_categories():
 
 
 if __name__ == "__main__":
-    """
-    Goal: filter the full Open Food Facts categories taxonomy
-    to keep only categories relevant for Open Prices (a small subset of food categories)
-
-    How-to run ?
-    > pip install openfoodfacts
-    > python filter_categories.py
-    """
     # Step 1a: get the full taxonomy
     TAXONOMY_FULL: Taxonomy = get_taxonomy(
-        TAXONOMY_NAME, force_download=True, download_newer=True
+        OFF_TAXONOMY_NAME, force_download=True, download_newer=True
     )
     print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
@@ -221,7 +222,7 @@ if __name__ == "__main__":
     )
     print(f"Filter on {len(PARENT_NODES)} parent nodes")
 
-    # Step 2: filter categories
+    # Step 2: filter
     # Step 2a: get all descendants for the parent categories
     categories_filtered: list[TaxonomyNode] = get_all_descendants_for_node_list(
         TAXONOMY_FULL, PARENT_NODES, parent_node_id_list_to_keep=[node["id"] for node in PARENT_NODE_ID_LIST if node["keep_node"]]
@@ -260,9 +261,9 @@ if __name__ == "__main__":
     ]
 
     # Step 5: write to files (1 per language)
-    OPEN_PRICES_LANGUAGES = read_json(repo_path / "src/i18n/data/languages.json")
-    write_categories_to_files(categories_filtered_to_dict_list, OPEN_PRICES_LANGUAGES, delete_parents=True)
-    print(f"Wrote to {len(OPEN_PRICES_LANGUAGES)} language files")
+    OP_LANGUAGES = read_json(repo_path / OP_LANGUAGES_FILE)
+    write_categories_to_files(categories_filtered_to_dict_list, OP_LANGUAGES, delete_parents=True)
+    print(f"Wrote to {len(OP_LANGUAGES)} language files")
 
     # Extra
     # compare_new_categories_with_old_categories()

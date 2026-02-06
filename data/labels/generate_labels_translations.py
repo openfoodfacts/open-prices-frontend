@@ -7,6 +7,9 @@ How-to run ?
 """
 
 import json
+from typing import Any
+from pathlib import Path
+
 from openfoodfacts.taxonomy import get_taxonomy
 
 
@@ -19,13 +22,15 @@ KEEP_ONLY = [
 ]
 
 
-def get_languages():
-    with open(OP_LANGUAGES_FILE) as f:
-        return json.load(f)
+script_path = Path(__file__).parent
+repo_path = script_path.parent.parent
+
+OUTPUT_PATH = repo_path / "src/data/labels/"
 
 
-def get_label_taxonomy():
-    return get_taxonomy(OFF_TAXONOMY_NAME)
+def read_json(filepath):
+    with open(filepath) as jsonfile:
+        return json.load(jsonfile)
 
 
 def get_taxonomy_node_by_id(taxonomy, node_id):
@@ -68,8 +73,7 @@ def filter_labels(taxonomy):
     return node_list
 
 
-def write_labels_to_files(labels):
-    languages = get_languages()
+def write_labels_to_files(labels, languages: list[dict[str, Any]]):
     for language in languages:
         language_code = language['code']
         language_labels = list()
@@ -112,15 +116,18 @@ def compare_new_labels_with_old_labels():
 
 
 if __name__ == "__main__":
-    # init
-    LABELS_FULL = get_label_taxonomy()
-    print("Total number of labels:", len(LABELS_FULL))
+    # Step 1: get the full taxonomy
+    TAXONOMY_FULL = get_taxonomy(OFF_TAXONOMY_NAME, force_download=True, download_newer=True)
+    print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 
-    labels_filtered = filter_labels(LABELS_FULL)
+    # Step 2: filter
+    labels_filtered = filter_labels(TAXONOMY_FULL)
     labels_filtered_to_dict_list = taxonomy_node_list_to_dict_list(list(labels_filtered), delete_parents=True)
     print("Labels remaining:", len(labels_filtered_to_dict_list))
 
-    write_labels_to_files(labels_filtered_to_dict_list)
-    print("Wrote to language files")
+    # Step 3: write to files (1 per language)
+    OP_LANGUAGES = read_json(repo_path / OP_LANGUAGES_FILE)
+    write_labels_to_files(labels_filtered_to_dict_list, OP_LANGUAGES)
+    print(f"Wrote to {len(OP_LANGUAGES)} language files")
 
     compare_new_labels_with_old_labels()
