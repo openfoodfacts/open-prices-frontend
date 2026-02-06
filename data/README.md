@@ -22,7 +22,6 @@ File viewable here: [taxonomies/food/categories.txt](https://github.com/openfood
 
 ### Script
 
-How-to run:
 ```sh
 python data/categories/generate_categories_json_per_language.py
 ```
@@ -55,7 +54,6 @@ Found here: https://github.com/risan/country-flag-emoji-json
 
 ### Script
 
-How-to run:
 ```sh
 python data/countries/generate_countries_json_per_language.py
 ```
@@ -68,22 +66,37 @@ What it does:
 
 ## Labels
 
+### Goal
+
+TBC
+
 ### Open Food Facts taxonomy
 
 File viewable here: [taxonomies/labels.txt](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/labels.txt)
 
 ### Script
 
-How-to run:
 ```sh
 python data/labels/generate_labels_json_per_language.py
 ```
 
 ## Languages
 
+### Goal
+
 TBC
 
+### Script
+
+```sh
+python data/languages/generate_languages.py
+```
+
 ## Origins
+
+### Goal
+
+TBC
 
 ### Open Food Facts taxonomy
 
@@ -91,7 +104,6 @@ File viewable here: [taxonomies/origins.txt](https://github.com/openfoodfacts/op
 
 ### Script
 
-How-to run:
 ```sh
 python data/origins/generate_origins_json_per_language.py
 ```

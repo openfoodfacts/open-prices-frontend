@@ -1,6 +1,5 @@
 """
-How-to run ?
-> python data/languages/generate_languages.py
+see parent README.md for more details.
 """
 
 
