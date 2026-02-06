@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Enzanisa nzvimbo",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Zuva remufananidzo.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Vhura zvakare",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Yakagadziriswa",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Enzanisa nzvimbo"
 		},
 		"Locations": {
 			"Title": "Locations"
