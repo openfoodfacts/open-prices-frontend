@@ -267,6 +267,7 @@
 		"LocationFindShop": "Βρείτε την τοποθεσία του καταστήματος",
 		"LocationMissing": "Λείπει η τοποθεσία",
 		"LocationSearchByName": "Αναζήτηση με όνομα και πόλη",
+		"LocationsCompare": "Σύγκριση τοποθεσιών",
 		"Date": "Ημερομηνία",
 		"DateMissing": "Λείπει η ημερομηνία",
 		"DateProofHelpText": "Ημερομηνία της εικόνας.",
@@ -440,6 +441,7 @@
 		"Recent": "Πρόσφατος",
 		"Re-open": "Ξανανοίγω",
 		"ReportProblem": "Αναφορά πρόβληματος",
+		"Reset": "Επαναφορά",
 		"Resolved": "Αποφασισμένος",
 		"Reuses": "Επαναχρήσεις",
 		"ReusesKnown": "Γνωστές επαναχρήσεις",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Προσθήκη αποδείξεων (ετικέτες τιμών)"
+		},
+		"CompareLocations": {
+			"Title": "Σύγκριση τοποθεσιών"
 		},
 		"Locations": {
 			"Title": "Τοποθεσίες"
