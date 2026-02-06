@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Упоредите локације",
 		"Date": "Датум",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Датум слике.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Поново отвори",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Решено",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Упоредите локације"
 		},
 		"Locations": {
 			"Title": "Locations"
