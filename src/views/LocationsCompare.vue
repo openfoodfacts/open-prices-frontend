@@ -2,7 +2,7 @@
   <!-- Location Input Rows -->
   <v-row v-if="!loading">
     <v-col>
-      <LocationCard v-if="selectedLocationA && selectedLocationA.id" :location="selectedLocationA" />
+      <LocationCard v-if="selectedLocationA && selectedLocationA.id" :location="selectedLocationA" readonly />
       <template v-else>
         <LocationInputRow @location="selectLocation($event, 'a')" />
         <v-alert v-if="selectedLocationA && !selectedLocationA.id" class="mt-4" data-name="location-not-found-alert" type="error" variant="outlined" density="compact">
@@ -11,7 +11,7 @@
       </template>
     </v-col>
     <v-col>
-      <LocationCard v-if="selectedLocationB && selectedLocationB.id" :location="selectedLocationB" />
+      <LocationCard v-if="selectedLocationB && selectedLocationB.id" :location="selectedLocationB" readonly />
       <template v-else>
         <LocationInputRow @location="selectLocation($event, 'b')" />
         <v-alert v-if="selectedLocationB && !selectedLocationB.id" class="mt-4" data-name="location-not-found-alert" type="error" variant="outlined" density="compact">
@@ -177,10 +177,17 @@ export default {
     // Step 1: select locations = update query params
     selectLocation(location, key) {
       let query = JSON.parse(JSON.stringify(this.$route.query))
-      if (location.type === 'ONLINE') query[`location_${key}_id`] = location.id
+      if (location.type === 'ONLINE') {
+        this[`selectedLocation${key.toUpperCase()}`] = location  // returned from location selector
+        query[`location_${key}_id`] = location.id
+        this.$router.push({ name: 'locations-compare', query: query })
+      }
       else {
-        query[`location_${key}_osm_id`] = geo_utils.getLocationID(location)
-        query[`location_${key}_osm_type`] = geo_utils.getLocationType(location)
+        openPricesApi.getLocationByOsmTypeAndId(geo_utils.getLocationType(location), geo_utils.getLocationID(location)).then((location) => {
+          this[`selectedLocation${key.toUpperCase()}`] = location
+          query[`location_${key}_id`] = location.id
+          this.$router.push({ name: 'locations-compare', query: query })
+        })
       }
 
       this.$router.push({ name: 'locations-compare', query: query })
@@ -192,11 +199,7 @@ export default {
         this.LOCATION_KEYS.forEach(key => {
           if (!this[`selectedLocation${key.toUpperCase()}`] || !this[`selectedLocation${key.toUpperCase()}`].id) {
             if (query[`location_${key}_id`]) {
-              openPricesApi.getLocation(query[`location_${key}_id`]).then((location) => {
-                this[`selectedLocation${key.toUpperCase()}`] = location
-              })
-            } else if (query[`location_${key}_osm_id`] && query[`location_${key}_osm_type`]) {
-              openPricesApi.getLocationByOsmTypeAndId(query[`location_${key}_osm_type`], query[`location_${key}_osm_id`]).then((location) => {
+              openPricesApi.getLocationById(query[`location_${key}_id`]).then((location) => {
                 this[`selectedLocation${key.toUpperCase()}`] = location
               })
             }
