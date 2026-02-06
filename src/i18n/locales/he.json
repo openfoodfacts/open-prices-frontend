@@ -268,7 +268,7 @@
 		"LocationFindShop": "איתור מקום החנות",
 		"LocationMissing": "חסר מקום",
 		"LocationSearchByName": "חיפוש לפי שם ועיר",
-		"LocationsCompare": "השווה מיקומים",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "תאריך",
 		"DateMissing": "חסר תאריך",
 		"DateProofHelpText": "תאריך התמונה.",
@@ -818,7 +818,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "השווה מיקומים"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "מקומות"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "מטבע",
 		"DisplayTitle": "תצוגה",
 		"BarcodeScanner": "סורק ברקודים",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "מצב ברירת מחדל",
 		"FavoriteCurrencies": "מטבעות מועדפים",
 		"CurrencyRequired": "חובה לציין לפחות מטבע אחד",
