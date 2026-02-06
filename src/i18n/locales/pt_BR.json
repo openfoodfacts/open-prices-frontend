@@ -268,7 +268,7 @@
 		"LocationFindShop": "Encontre a localização da loja",
 		"LocationMissing": "Localização faltando",
 		"LocationSearchByName": "Pesquisar por nome e cidade",
-		"LocationsCompare": "Comparar locais",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Data",
 		"DateMissing": "Data faltando",
 		"DateProofHelpText": "Data da foto.",
@@ -818,7 +818,7 @@
 			"Title": "Adicionar comprovantes (etiquetas de preço)"
 		},
 		"CompareLocations": {
-			"Title": "Comparar locais"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Localizações"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Moeda",
 		"DisplayTitle": "Mostrar",
 		"BarcodeScanner": "Leitor de código de barras",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Modo Padrão",
 		"FavoriteCurrencies": "Moedas favoritas",
 		"CurrencyRequired": "Pelo menos uma moeda é necessária",
