@@ -27,7 +27,7 @@ python data/categories/generate_categories_json_per_language.py
 ```
 
 What it does:
-1. get the OFF taxonomy (food only)
+1. get the OFF categories taxonomy (food only)
 2. keep only a small subset of categories (TODO: give more details)
 3. the result is exported to `/src/data/categories` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
 
@@ -68,7 +68,7 @@ What it does:
 
 ### Goal
 
-TBC
+TODO
 
 ### Open Food Facts taxonomy
 
@@ -84,7 +84,7 @@ python data/labels/generate_labels_json_per_language.py
 
 ### Goal
 
-TBC
+TODO
 
 ### Script
 
@@ -96,7 +96,7 @@ python data/languages/generate_languages.py
 
 ### Goal
 
-TBC
+TODO
 
 ### Open Food Facts taxonomy
 
