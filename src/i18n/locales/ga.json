@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Déan comparáid idir suíomhanna",
 		"Date": "Dáta",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Dáta an phictiúir.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Athoscail",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Réitithe",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Déan comparáid idir suíomhanna"
 		},
 		"Locations": {
 			"Title": "Locations"
