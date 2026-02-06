@@ -6,8 +6,8 @@
 		"HowTitle": "Comment fonctionne {op_name} ?",
 		"HowAnswer1": "Nous créons une base de données ouverte des prix alimentaires via la collecte citoyenne. Les prix peuvent être ajoutés par des utilisateurs via notre application web, ou l'application mobile officielle d'{off_url}. Les distributeurs alimentaires ou applications tierces peuvent également contribuer en utilisant notre {op_api_url}.",
 		"HowAnswer2": "{op_name} n'a pas seulement pour but de stocker des prix individuels, mais également des paniers de consommation, c'est-à-dire la liste des produits que les gens achètent lors d'une seule session d'achat. Ces données sont extrêmement intéressantes pour les chercheurs qui analysent les habitudes de consommation alimentaire.",
-		"HowAnswer3": "Dans la mesure du possible, nous demandons aux contributeurs de fournir une preuve du prix, sous la forme d'une photo de l'étiquette de prix ou du reçu. Cela facilite la vérification de la qualité des données.",
-		"HowAnswer4": "Si vous fournissez un reçu en tant qu'image de preuve, cela signifie que vous acceptez de soumettre votre panier de consommation à {op_name}. Nous anonymiserons le reçu et le rendrons publiquement accessible, afin qu'il puisse être utilisé à des fins de recherche. Si vous ne souhaitez pas partager publiquement votre reçu, vous pouvez toujours contribuer en prenant une photo de l'étiquette de prix.",
+		"HowAnswer3": "Dans la mesure du possible, nous demandons aux contributeurs de fournir une preuve du prix, sous la forme d'une photo de l'étiquette de prix ou du ticket de caisse. Cela facilite la vérification de la qualité des données.",
+		"HowAnswer4": "Si vous fournissez un ticket de caisse en tant qu'image de preuve, cela signifie que vous acceptez de soumettre votre panier de consommation à {op_name}. Nous anonymiserons le reçu et le rendrons publiquement accessible, afin qu'il puisse être utilisé à des fins de recherche. Si vous ne souhaitez pas partager publiquement votre reçu, vous pouvez toujours contribuer en prenant une photo de l'étiquette de prix.",
 		"LicenseTitle": "Licence",
 		"LicenseAnswer1": "La base de données des prix est sous licence {odbl_url}, ce qui signifie qu'elle peut être utilisée à toutes fins, à condition de créditer {op_name} et de partager toutes modifications apportées au jeu de données.",
 		"LicenseAnswer2": "Les images envoyées en tant que preuve sont sous licence {ccbysa_url}.",
@@ -60,7 +60,7 @@
 		},
 		"ProofDetails": {
 			"ReceiptWarning": "Un ticket de caisse peut contenir des informations personnelles, nous vous recommandons de les masquer (caviarder, plier...) avant de le prendre en photo.",
-			"PrivateWarning": "Vous pouvez également définir le reçu en privé. Les preuves privées ne seront visibles que pour vous et les modérateurs.",
+			"PrivateWarning": "Vous pouvez également définir le ticket de caisse en privé. Les preuves privées ne seront visibles que pour vous et les modérateurs.",
 			"Title": "Preuve"
 		},
 		"Title": "Ajouter plusieurs prix"
@@ -179,7 +179,7 @@
 		"AddNewProof": "Ajouter une nouvelle preuve",
 		"AddNewProofs": "Ajouter de nouvelles preuves",
 		"AddNewProofPriceTags": "Ajouter de nouvelles étiquettes de prix",
-		"AddNewProofReceipt": "Ajouter un nouveau reçu",
+		"AddNewProofReceipt": "Ajouter un nouveau ticket de caisse",
 		"AddToOFF": "Ajouter à {name}",
 		"Added": "Ajouté",
 		"AdditionalInfo": "Informations supplémentaires",
@@ -251,7 +251,7 @@
 		"Experiments": "Expérimentations",
 		"Explore": "Explorer",
 		"FromPriceTag": "À partir d'une étiquette de prix",
-		"FromReceipt": "D'un reçu",
+		"FromReceipt": "À partir d'un ticket de caisse",
 		"GoToProof": "Accéder à la preuve",
 		"Join": "Rejoindre",
 		"Label": "Label",
@@ -273,7 +273,7 @@
 		"DateMissing": "Date manquante",
 		"DateProofHelpText": "Date de la photo.",
 		"DateProofHelpTextExif": "Par défaut, nous essayons de l'extraire des métadonnées EXIF de l'image.",
-		"DateProofHelpTextReceipt": "Pour les reçus, indiquez la date d'achat.",
+		"DateProofHelpTextReceipt": "Pour les tickets de caisse, indiquez la date d'achat.",
 		"Details": "Détails",
 		"Delete": "Supprimer",
 		"DeveloperMode": "Mode développeur",
@@ -728,10 +728,10 @@
 		"PriceValidationAllow": "Autoriser l'extraction par IA du prix sur mes photos et la validation par la communauté",
 		"PriceTagAllowCommunityValidation": "Permettre à la communauté de valider les prix extraits par IA",
 		"PriceTagAIWarning": "L'IA sera exécutée sur vos preuves pour en extraire les prix.",
-		"ReceiptAllowAI": "Autoriser l'exécution de l'IA sur votre reçu pour extraire les prix",
-		"ReceiptAIWarning": "L'IA sera exécutée sur votre reçu pour en extraire les prix.",
+		"ReceiptAllowAI": "Autoriser l'exécution de l'IA sur votre ticket de caisse pour extraire les prix",
+		"ReceiptAIWarning": "L'IA sera exécutée sur votre ticket de caisse pour en extraire les prix.",
 		"PromoProofPriceTagAddMultiple": "Pour télécharger plusieurs étiquettes de prix (même emplacement de magasin et même date), cliquez ici !",
-		"PromoReceiptAssistant": "Expérience : essayez le nouvel assistant de reçus pour extraire automatiquement les prix de vos reçus !"
+		"PromoReceiptAssistant": "Expérience : essayez le nouvel assistant de tickets de caisse pour extraire automatiquement les prix !"
 	},
 	"ProofCard": {
 		"Proof": "Preuve",
@@ -766,15 +766,15 @@
 	},
 	"ReceiptAssistant": {
 		"AddNewItem": "Ajouter un nouvel article",
-		"NoItemsFound": "Aucun élément n'a pu être extrait du reçu, veuillez réessayer.",
+		"NoItemsFound": "Aucun élément n'a pu être extrait du ticket de caisse, veuillez réessayer.",
 		"PriceAlreadyCreated": "Prix déjà créé",
 		"PriceAlreadyCreatedForItem": "Prix déjà créé pour l'article",
 		"PriceReadyToBeAdded": "Prix prêt à être ajouté",
-		"ReceiptItems": "Articles reçus",
+		"ReceiptItems": "Articles ticket de caisse",
 		"ReceiptItemsCheck": "Éléments de réception, vérifier et corriger",
 		"UploadOnlyNewPrices": "Téléverser uniquement les nouveaux prix ({nbPrices})",
 		"UploadOrUpdateAllValidPrices": "Téléverser ou mettre à jour tous les prix valides ({nbPrices})",
-		"WaitForExtraction": "Extraction automatique des éléments du reçu, veuillez patienter..."
+		"WaitForExtraction": "Extraction automatique des éléments du ticket de caisse, veuillez patienter..."
 	},
 	"Reuses": {
 		"AlertNew": "Votre réutilisation est absente ? Faites-le nous savoir {url} !",
@@ -812,7 +812,7 @@
 			"Title": "Ajouter plusieurs preuves"
 		},
 		"AddProofReceipt": {
-			"Title": "Ajouter une preuve (reçu)"
+			"Title": "Ajouter une preuve (ticket de caisse)"
 		},
 		"AddProofsPriceTags": {
 			"Title": "Ajouter des preuves (étiquettes de prix)"
