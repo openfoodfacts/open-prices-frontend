@@ -268,7 +268,7 @@
 		"LocationFindShop": "Find butikkens placering",
 		"LocationMissing": "Placering mangler",
 		"LocationSearchByName": "Søg efter navn og by",
-		"LocationsCompare": "Sammenlign lokationer",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Dato",
 		"DateMissing": "Dato mangler",
 		"DateProofHelpText": "Dato for billedet.",
@@ -818,7 +818,7 @@
 			"Title": "Tilføj beviser (prismærker)"
 		},
 		"CompareLocations": {
-			"Title": "Sammenlign lokationer"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Placeringer"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Vis",
 		"BarcodeScanner": "Stregkodescanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Standardtilstand",
 		"FavoriteCurrencies": "Foretrukne valutaer",
 		"CurrencyRequired": "Mindst én valuta er påkrævet",
