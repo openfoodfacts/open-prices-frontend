@@ -1,10 +1,7 @@
 """
-https://static.openfoodfacts.org/data/taxonomies/labels.full.json
-
-How-to run ?
-> pip install openfoodfacts
-> python data/labels/generate_labels_translations.py
+See parent README.md for more details.
 """
+
 
 import json
 from typing import Any

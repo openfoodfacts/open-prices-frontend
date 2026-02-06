@@ -1,3 +1,7 @@
+"""
+See parent README.md for more details.
+"""
+
 import json
 import csv
 import os
@@ -42,13 +46,6 @@ def get_country_osm_name(osm_countries, country_code_2):
 
 
 if __name__ == "__main__":
-    """
-    Goal: create a JSON file with the list of countries (enriched with OSM name)
-
-    How-to run ?
-    > pip install openfoodfacts
-    > python filter_countries.py
-    """
     # Step 1a: get the full taxonomy
     TAXONOMY_FULL: Taxonomy = get_taxonomy(
         OFF_TAXONOMY_NAME, force_download=True, download_newer=True
