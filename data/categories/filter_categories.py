@@ -2,11 +2,10 @@
 https://wiki.openfoodfacts.org/Global_categories_taxonomy
 Stats as of 2026-02-06:
 - Input: Taxonomy: total number of nodes: 14299
-- Output: 2981 categories
+- Output: 2980 categories
 """
 
 import json
-import os
 import re
 from typing import Any
 from pathlib import Path
@@ -27,6 +26,7 @@ PARENT_NODE_ID_LIST = [
     { "id": "en:pastas", "keep_node": False },  # 216
     { "id": "en:legumes", "keep_node": False },  # 167
     { "id": "en:culinary-plants", "keep_node": False },  # 164
+    # { "id": "en:beers", "keep_node": False },  # 156
     { "id": "en:biscuits", "keep_node": False },  # 130
     { "id": "en:spices", "keep_node": False },  # 127
     { "id": "en:nuts", "keep_node": False },  # 117
@@ -60,7 +60,7 @@ EXTRA_NODE_ID_LIST = [
     "en:acar",
 ]
 
-EXCLUDE_LIST = ["Cooked", "Fresh", "Frozen", "Canned", "Prepacked"]
+EXCLUDE_LIST = ["Cooked", "Fresh", "Frozen", "Canned", "Prepacked", "Packaged"]
 
 EXCLUDE_NODE_ID_LIST = [
     "en:vegetables-from-germany",
