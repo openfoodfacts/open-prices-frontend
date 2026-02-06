@@ -2,7 +2,7 @@
 https://wiki.openfoodfacts.org/Global_categories_taxonomy
 Stats as of 2026-02-06:
 - Input: Taxonomy: total number of nodes: 14299
-- Output: 2768 categories
+- Output: 2981 categories
 """
 
 import json
@@ -16,8 +16,9 @@ from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
 TAXONOMY_NAME = "category"
 
 PARENT_NODE_ID_LIST = [
-    { "id": "en:meats", "keep_node": False },  # 774 descendants
     # { "id": "en:snacks", "keep_node": False },  # 823 (including en:viennoiseries)
+    { "id": "en:meats", "keep_node": False },  # 774 descendants
+    # { "id": "en:cereals-and-their-products", "keep_node": False },  # 682
     # { "id": "en:desserts", "keep_node": False },  # 531 (including en:pastries)
     { "id": "en:vegetables", "keep_node": False },  # 457
     { "id": "en:fishes", "keep_node": False },  # 366
@@ -26,6 +27,7 @@ PARENT_NODE_ID_LIST = [
     { "id": "en:pastas", "keep_node": False },  # 216
     { "id": "en:legumes", "keep_node": False },  # 167
     { "id": "en:culinary-plants", "keep_node": False },  # 164
+    { "id": "en:biscuits", "keep_node": False },  # 130
     { "id": "en:spices", "keep_node": False },  # 127
     { "id": "en:nuts", "keep_node": False },  # 117
     { "id": "en:breads", "keep_node": False },  # 116
@@ -35,6 +37,8 @@ PARENT_NODE_ID_LIST = [
     { "id": "en:pastries", "keep_node": False },  # 73 (parent: en:desserts)
     { "id": "en:mushrooms", "keep_node": True },  # 67
     { "id": "en:viennoiseries", "keep_node": False },  # 49 (parent: en:snacks)
+    { "id": "en:coffees", "keep_node": False },  # 47
+    { "id": "en:teas", "keep_node": False },  # 37
     { "id": "en:potatoes", "keep_node": True },  # 35
     { "id": "en:eggs", "keep_node": True },  # 28
     { "id": "fr:boudins", "keep_node": True },  # 20
@@ -264,7 +268,7 @@ if __name__ == "__main__":
     # compare_new_categories_with_old_categories()
     # root_nodes = get_all_root_nodes(TAXONOMY_FULL)
     # print(root_nodes)
-    # category_name = "en:biscuits"
+    # category_name = "en:coffees"
     # category_descendants = get_all_descendants_for_node(TAXONOMY_FULL, get_taxonomy_node_list_by_id_list(TAXONOMY_FULL, [category_name])[0])
     # print(category_descendants)
     # print(len(category_descendants))
