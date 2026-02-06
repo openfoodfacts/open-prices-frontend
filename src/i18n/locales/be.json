@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Параўнанне месцаў",
 		"Date": "Дата",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Дата здымка.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Зноў адкрыць",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Вырашана",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Параўнанне месцаў"
 		},
 		"Locations": {
 			"Title": "Locations"
