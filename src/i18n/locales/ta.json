@@ -267,6 +267,7 @@
 		"LocationFindShop": "கடையின் இருப்பிடத்தைக் கண்டறியவும்",
 		"LocationMissing": "இடம் இல்லை",
 		"LocationSearchByName": "பெயர் மற்றும் நகரத்தின் அடிப்படையில் தேடுங்கள்",
+		"LocationsCompare": "இடங்களை ஒப்பிடுக",
 		"Date": "தேதி",
 		"DateMissing": "தேதியைக் காணவில்லை",
 		"DateProofHelpText": "படத்தின் தேதி.",
@@ -440,6 +441,7 @@
 		"Recent": "சமீபத்திய",
 		"Re-open": "மீண்டும் திற",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "தீர்க்கப்பட்டது",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "இடங்களை ஒப்பிடுக"
 		},
 		"Locations": {
 			"Title": "இடங்கள்"
