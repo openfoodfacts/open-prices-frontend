@@ -268,7 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Zòn ki manke",
 		"LocationSearchByName": "Search by name and city",
-		"LocationsCompare": "Konpare kote yo",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Dat",
 		"DateMissing": "Dat ki manke",
 		"DateProofHelpText": "Dat foto a.",
@@ -818,7 +818,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Konpare kote yo"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Zòn"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Lajan",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Lajan favori",
 		"CurrencyRequired": "Omwen yon lajan obligatwa",
