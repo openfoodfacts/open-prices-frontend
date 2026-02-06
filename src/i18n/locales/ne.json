@@ -268,7 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"LocationsCompare": "स्थानहरू तुलना गर्नुहोस्",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "तस्वीरको मिति।",
@@ -818,7 +818,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "स्थानहरू तुलना गर्नुहोस्"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Locations"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Currency",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
