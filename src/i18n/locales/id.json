@@ -268,7 +268,7 @@
 		"LocationFindShop": "Temukan lokasi toko",
 		"LocationMissing": "Lokasi tidak ada",
 		"LocationSearchByName": "Cari berdasarkan nama dan kota",
-		"LocationsCompare": "Bandingkan lokasi",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Tanggal",
 		"DateMissing": "Tanggal tidak ada",
 		"DateProofHelpText": "Tanggal foto tersebut.",
@@ -818,7 +818,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Bandingkan lokasi"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Lokasi"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Mata uang",
 		"DisplayTitle": "Tampilan",
 		"BarcodeScanner": "Pemindai kode batang",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Mode bawaan",
 		"FavoriteCurrencies": "Mata uang favorit",
 		"CurrencyRequired": "Setidaknya diperlukan satu mata uang",
