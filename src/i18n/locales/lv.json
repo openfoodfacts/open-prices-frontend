@@ -268,7 +268,7 @@
 		"LocationFindShop": "Atrodiet veikala atrašanās vietu",
 		"LocationMissing": "Trūkst atrašanās vietas",
 		"LocationSearchByName": "Meklēt pēc nosaukuma un pilsētas",
-		"LocationsCompare": "Salīdzināt atrašanās vietas",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Datums",
 		"DateMissing": "Trūkst datuma",
 		"DateProofHelpText": "Attēla datums.",
@@ -818,7 +818,7 @@
 			"Title": "Pievienot pierādījumus (cenu zīmes)"
 		},
 		"CompareLocations": {
-			"Title": "Salīdzināt atrašanās vietas"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Atrašanās vietas"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Valūta",
 		"DisplayTitle": "Reklāmas",
 		"BarcodeScanner": "Svītrkodu skeneris",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Noklusējuma režīms",
 		"FavoriteCurrencies": "Iecienītākās valūtas",
 		"CurrencyRequired": "Nepieciešama vismaz viena valūta",
