@@ -268,7 +268,7 @@
 		"LocationFindShop": "Знайти місце розташування магазину",
 		"LocationMissing": "Розташування відсутнє",
 		"LocationSearchByName": "Пошук за назвою та містом",
-		"LocationsCompare": "Порівняти місця розташування",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Дата",
 		"DateMissing": "Відсутня дата",
 		"DateProofHelpText": "Дата знімка.",
@@ -818,7 +818,7 @@
 			"Title": "Додати докази (цінники)"
 		},
 		"CompareLocations": {
-			"Title": "Порівняти місця розташування"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Місцезнаходження"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показати",
 		"BarcodeScanner": "Сканер штрих-кодів",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Стандартний режим",
 		"FavoriteCurrencies": "Улюблені валюти",
 		"CurrencyRequired": "Потрібна принаймні одна валюта",
