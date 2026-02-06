@@ -268,7 +268,7 @@
 		"LocationFindShop": "Rasti parduotuvės vietą",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Ieškoti pagal pavadinimą ir miestą",
-		"LocationsCompare": "Palyginkite vietas",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Data",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Paveikslėlio data.",
@@ -818,7 +818,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Palyginkite vietas"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Vietos"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Valiuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Brūkšninių kodų skaitytuvas",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Numatytasis režimas",
 		"FavoriteCurrencies": "Mėgstamos valiutos",
 		"CurrencyRequired": "Būtina bent viena valiuta",
