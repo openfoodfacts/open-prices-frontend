@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "സ്ഥലങ്ങൾ താരതമ്യം ചെയ്യുക",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "ചിത്രത്തിന്റെ തീയതി.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "വീണ്ടും തുറക്കുക",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "പരിഹരിച്ചു",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "സ്ഥലങ്ങൾ താരതമ്യം ചെയ്യുക"
 		},
 		"Locations": {
 			"Title": "Locations"
