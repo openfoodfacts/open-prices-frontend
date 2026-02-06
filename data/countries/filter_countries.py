@@ -19,11 +19,6 @@ def read_csv(filepath, delimiter=","):
         return list(reader)
 
 
-def read_json(filepath):
-    with open(filepath) as jsonfile:
-        return json.load(jsonfile)
-
-
 def get_all_root_nodes(taxonomy: Taxonomy) -> list[TaxonomyNode]:
     return [node for node in taxonomy.iter_nodes() if not node.get_parents_hierarchy()]
 
