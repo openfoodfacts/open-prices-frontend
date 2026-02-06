@@ -267,6 +267,7 @@
 		"LocationFindShop": "איתור מקום החנות",
 		"LocationMissing": "חסר מקום",
 		"LocationSearchByName": "חיפוש לפי שם ועיר",
+		"LocationsCompare": "השווה מיקומים",
 		"Date": "תאריך",
 		"DateMissing": "חסר תאריך",
 		"DateProofHelpText": "תאריך התמונה.",
@@ -440,6 +441,7 @@
 		"Recent": "אחרונים",
 		"Re-open": "פתיחה מחדש",
 		"ReportProblem": "דיווח על תקלה",
+		"Reset": "איפוס",
 		"Resolved": "נפתר",
 		"Reuses": "גזירות",
 		"ReusesKnown": "נגזרות ידועות",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "השווה מיקומים"
 		},
 		"Locations": {
 			"Title": "מקומות"
