@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Ҷойҳоро муқоиса кунед",
 		"Date": "Date",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Санаи акс.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Боз кушоед",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Хал карда шуд",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Ҷойҳоро муқоиса кунед"
 		},
 		"Locations": {
 			"Title": "Locations"
