@@ -268,7 +268,7 @@
 		"LocationFindShop": "Найти местоположение магазина",
 		"LocationMissing": "Местоположение отсутствует",
 		"LocationSearchByName": "Поиск по имени и городу",
-		"LocationsCompare": "Сравните местоположения",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Дата",
 		"DateMissing": "Дата отсутствует",
 		"DateProofHelpText": "Дата фотографии.",
@@ -818,7 +818,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Сравните местоположения"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Места"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показать",
 		"BarcodeScanner": "Сканер штрихкодов",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Режим по умолчанию",
 		"FavoriteCurrencies": "Любимые валюты",
 		"CurrencyRequired": "Требуется хотя бы одна валюта",
