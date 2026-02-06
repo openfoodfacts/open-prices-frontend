@@ -2,13 +2,27 @@
 
 ## Categories
 
-TBC
+### Open Food Facts taxonomy
+
+File viewable here: [taxonomies/food/categories.txt](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/food/categories.txt)
+
+### Filter script
+
+How-to run:
+```sh
+python data/categories/filter_categories.py
+```
+
+What it does:
+1. get the OFF taxonomy (food only)
+2. keep only a small subset of categories (TODO: give more details)
+3. the result is exported to `/src/data/categories` (1 file (JSON) per locale, using `/src/i18n/data/languages.json`)
 
 ## Countries
 
-### Open Food Facts countries taxonomy
+### Open Food Facts taxonomy
 
-File viewable [here](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/countries.txt).
+File viewable here: [taxonomies/countries](https://github.com/openfoodfacts/openfoodfacts-server/blob/main/taxonomies/countries.txt).
 Useful node properties: `country_code_2:en:`, `country_code_3:en:`, `language_codes:en:`, `osm_relation:en:`, `wikidata:en:` (not all are filled)
 
 ### OpenStreetMap csv
@@ -23,10 +37,16 @@ Found here: https://github.com/risan/country-flag-emoji-json
 
 ### Filter script
 
+How-to run:
+```sh
+python data/countries/filter_countries.py
+```
+
+What it does:
 1. get the OFF country taxonomy
 2. keep only countries with a `country_code_2:en:` (will be used as pivot)
 3. enrich these countries with OSM name, and emoji
-4. export to `/data/countries.json`
+4. the result is exported to `/src/data/countries.json`
 
 ## Labels
 

@@ -6,67 +6,56 @@ import json
 import os
 import re
 from typing import Any
+from pathlib import Path
 
 from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
 
 TAXONOMY_NAME = "category"
 
-PARENT_NODES_ID = [
-    # "en:snacks",  # 717 descendants (including en:viennoiseries)
-    # "en:desserts",  # 467 (including en:pastries)
-    "en:vegetables",  # 391
-    "en:fruits",  # 287
-    "en:legumes",  # 166
-    "en:culinary-plants",  # 152
-    "en:spices",  # 116
-    "en:flours",  # 110
-    "en:aromatic-plants",  # 105
-    "en:breads",  # 103
-    "en:nuts",  # 77
-    "en:mushrooms",  # 69
-    "en:pastries",  # 58
-    "en:viennoiseries",  # 47
-    "en:potatoes",  # 27
-    "en:eggs",  # 21
-    "en:gherkins",  # 12
-    "en:pumpkins",  # 9
-    "en:dried-mushrooms",  # 7
-    "en:textured-vegetable-protein",  # 2
-    "en:squash",
-    "en:seeds",  # include all seeds, rice, quinoa, maize, etc.
-    "en:pastas",
-    "en:popcorn",
-    "en:meats",
-    "en:fishes",
-    "en:eggs",
-    "en:sausages",
-    "en:cordons-bleus",
-    "fr:merguez",
-    "fr:boudins",
+PARENT_NODE_ID_LIST = [
+    # { "id": "en:snacks", "keep_parent": False },  # 717 descendants (including en:viennoiseries)
+    # { "id": "en:desserts", "keep_parent": False },  # 467 (including en:pastries)
+    { "id": "en:vegetables", "keep_parent": False },  # 391
+    { "id": "en:fruits", "keep_parent": False },  # 287
+    { "id": "en:legumes", "keep_parent": False },  # 166
+    { "id": "en:culinary-plants", "keep_parent": False },  # 152
+    { "id": "en:spices", "keep_parent": False },  # 116
+    { "id": "en:flours", "keep_parent": False },  # 110
+    { "id": "en:aromatic-plants", "keep_parent": False },  # 105
+    { "id": "en:breads", "keep_parent": False },  # 103
+    { "id": "en:nuts", "keep_parent": False },  # 77
+    { "id": "en:mushrooms", "keep_parent": True },  # 69
+    { "id": "en:pastries", "keep_parent": False },  # 58
+    { "id": "en:viennoiseries", "keep_parent": False },  # 47
+    { "id": "en:potatoes", "keep_parent": True },  # 27
+    { "id": "en:eggs", "keep_parent": True },  # 21
+    { "id": "en:gherkins", "keep_parent": True },  # 12
+    { "id": "en:pumpkins", "keep_parent": True },  # 9
+    { "id": "en:dried-mushrooms", "keep_parent": True },  # 7
+    { "id": "en:textured-vegetable-protein", "keep_parent": False },  # 2
+    { "id": "en:squash", "keep_parent": False },
+    { "id": "en:seeds", "keep_parent": False },  # includes all seeds, rice, quinoa, maize, etc.
+    { "id": "en:pastas", "keep_parent": False },
+    { "id": "en:popcorn", "keep_parent": True },
+    { "id": "en:meats", "keep_parent": False },
+    { "id": "en:fishes", "keep_parent": False },
+    { "id": "en:sausages", "keep_parent": True },
+    { "id": "en:cordons-bleus", "keep_parent": True },
+    { "id": "fr:merguez", "keep_parent": True },
+    { "id": "fr:boudins", "keep_parent": True },
 ]
 
 EXTRA_CHILDREN = [
     "en:rolled-oats",
     "en:ginger",
-    "en:mushrooms",
     "en:candies",
-    "en:pumpkins",
-    "en:potatoes",
-    "en:dried-mushrooms",
     "en:sprouts",
     "en:acar",
-    "en:gherkins",
-    "en:popcorn",
-    "en:eggs",
-    "en:sausages",
-    "en:cordons-bleus",
-    "fr:merguez",
-    "fr:boudins",
 ]
 
 EXCLUDE_LIST = ["Cooked", "Fresh", "Frozen", "Canned", "Prepacked"]
 
-EXCLUDE_LIST_NODE_IDS = [
+EXCLUDE_NODE_ID_LIST = [
     "en:vegetables-from-germany",
     "en:vegetables-from-the-netherlands",
     "en:spanish-vegetables",
@@ -81,12 +70,15 @@ EXCLUDE_LIST_NODE_IDS = [
     "en:shelf-stable-popcorn",
 ]
 
-script_path = os.path.dirname(os.path.abspath(__file__))
+script_path = Path(__file__).parent
+repo_path = script_path.parent.parent
+
+OUTPUT_PATH = repo_path / "src/data/categories/"
 
 
-def get_languages():
-    with open(os.path.join(script_path, "../../src/i18n/data/languages.json")) as f:
-        return json.load(f)
+def read_json(filepath):
+    with open(filepath) as jsonfile:
+        return json.load(jsonfile)
 
 
 def get_taxonomy_node_list_by_id_list(
@@ -110,15 +102,14 @@ def get_all_descendants_for_node(
 
 
 def get_all_descendants_for_node_list(
-    taxonomy: Taxonomy, node_parent_list: list[TaxonomyNode]
+    taxonomy: Taxonomy, node_parent_list: list[TaxonomyNode], parent_node_id_list_to_keep: list[str] = []
 ) -> list[TaxonomyNode]:
-    return [
-        descendant
-        for node_parent in node_parent_list
-        for descendant in get_all_descendants_for_node(
-            taxonomy, node_parent=node_parent
-        )
-    ]
+    all_descendants = []
+    for node_parent in node_parent_list:
+        if node_parent.id in parent_node_id_list_to_keep:
+            all_descendants.append(node_parent)
+        all_descendants.extend(get_all_descendants_for_node(taxonomy, node_parent))
+    return all_descendants
 
 
 def filter_node_list_by_exclude_string_list(
@@ -139,9 +130,8 @@ def filter_node_list_by_exclude_string_list(
 
 
 def write_categories_to_files(
-    categories: list[dict[str, Any]], delete_parents: bool = False
+    categories: list[dict[str, Any]], languages: list[dict[str, Any]], delete_parents: bool = False
 ):
-    languages = get_languages()
     for language in languages:
         language_code = language["code"]
         # for each category, get translation (or default to en)
@@ -168,21 +158,16 @@ def write_categories_to_files(
         # order by name
         language_categories = sorted(language_categories, key=lambda x: x["name"])
         # write to file
-        with open(
-            os.path.join(
-                script_path, f"../../src/data/categories/{language_code}.json"
-            ),
-            "w",
-        ) as f:
+        with open(OUTPUT_PATH / f"{language_code}.json", "w") as f:
             json.dump(language_categories, f, ensure_ascii=False)
 
 
 def compare_new_categories_with_old_categories():
-    with open(os.path.join(script_path, "../../src/data/category-tags.json")) as f:
+    with open(OUTPUT_PATH / "category-tags.json") as f:
         old_categories = json.load(f)
     print("old_categories", len(old_categories))
 
-    with open(os.path.join(script_path, "../../src/data/categories/en.json")) as f:
+    with open(OUTPUT_PATH / "en.json") as f:
         new_categories = json.load(f)
     print("new_categories", len(new_categories))
 
@@ -224,31 +209,28 @@ if __name__ == "__main__":
 
     # Step 1b: get all the parent nodes
     PARENT_NODES: list[TaxonomyNode] = get_taxonomy_node_list_by_id_list(
-        TAXONOMY_FULL, PARENT_NODES_ID
+        TAXONOMY_FULL, [node["id"] for node in PARENT_NODE_ID_LIST]
     )
-    print(
-        "Filter on the following parent categories:",
-        [node.id for node in PARENT_NODES],
-    )
+    print(f"Filter on {len(PARENT_NODES)} parent nodes")
 
     # Step 2: filter categories
     # Step 2a: get all descendants for the parent categories
     categories_filtered: list[TaxonomyNode] = get_all_descendants_for_node_list(
-        TAXONOMY_FULL, PARENT_NODES
+        TAXONOMY_FULL, PARENT_NODES, parent_node_id_list_to_keep=[node["id"] for node in PARENT_NODE_ID_LIST if node["keep_parent"]]
     )
     # Step 2b: add extra nodes
-    print("Add extra nodes:", EXTRA_CHILDREN)
+    print(f"Add {len(EXTRA_CHILDREN)} extra nodes")
     categories_filtered.extend(
         get_taxonomy_node_list_by_id_list(TAXONOMY_FULL, EXTRA_CHILDREN)
     )
     # Step 2c: exclude
-    # - remove nodes in EXCLUDE_LIST_NODE_IDS
+    # - remove nodes in EXCLUDE_NODE_ID_LIST
     # - remove nodes containing some strings in EXCLUDE_LIST
 
     # We don't filter anymore node IDs that don't start with "en:", as some
     # categories don't have translations in English (e.g. "fr:merguez")
     categories_filtered = [
-        node for node in categories_filtered if node.id not in EXCLUDE_LIST_NODE_IDS
+        node for node in categories_filtered if node.id not in EXCLUDE_NODE_ID_LIST
     ]
     categories_filtered = filter_node_list_by_exclude_string_list(
         categories_filtered, EXCLUDE_LIST
@@ -262,17 +244,17 @@ if __name__ == "__main__":
         if category.id not in seen:
             categories_filtered_deduped.append(category)
             seen.add(category.id)
-    print("Finished deduplicating")
+    print("Finished deduplicating:", len(categories_filtered_deduped))
 
     # Step 4: transform to dict list
     categories_filtered_to_dict_list = [
         {"id": node.id, **node.to_dict()} for node in categories_filtered_deduped
     ]
-    print("Categories remaining:", len(categories_filtered_to_dict_list))
 
     # Step 5: write to files (1 per language)
-    write_categories_to_files(categories_filtered_to_dict_list, delete_parents=True)
-    print("Wrote to language files")
+    OPEN_PRICES_LANGUAGES = read_json(repo_path / "src/i18n/data/languages.json")
+    write_categories_to_files(categories_filtered_to_dict_list, OPEN_PRICES_LANGUAGES, delete_parents=True)
+    print(f"Wrote to {len(OPEN_PRICES_LANGUAGES)} language files")
 
     # Extra
     # compare_new_categories_with_old_categories()
