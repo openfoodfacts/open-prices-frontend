@@ -267,6 +267,7 @@
 		"LocationFindShop": "Mağaza konumunu bulun",
 		"LocationMissing": "Konum eksik",
 		"LocationSearchByName": "İsme ve şehre göre ara",
+		"LocationsCompare": "Konumları karşılaştırın",
 		"Date": "Tarih",
 		"DateMissing": "Tarih eksik",
 		"DateProofHelpText": "Fotoğrafın çekildiği tarih.",
@@ -440,6 +441,7 @@
 		"Recent": "En son",
 		"Re-open": "Yeniden aç",
 		"ReportProblem": "Bir sorun bildir",
+		"Reset": "Sıfırla",
 		"Resolved": "Çözüldü",
 		"Reuses": "Yeniden kullanımlar",
 		"ReusesKnown": "Bilinen yeniden kullanımlar",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Konumları karşılaştırın"
 		},
 		"Locations": {
 			"Title": "Konumlar"
