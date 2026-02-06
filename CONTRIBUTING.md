@@ -48,9 +48,11 @@ yarn test:run
 ### Update packages
 
 ```sh
-// 1) list packages to update
+# select packages to update (will also update package.json)
 yarn upgrade-interactive --latest
-// 2) update package.json by bumping all non-major updgrades
-// 3) update packages
+# alternative: update package.json manually, then run
 yarn install
+# make a branch & commit
+git checkout -b <username>/packages-update-YYYY-MM-DD
+git commit -am "chore(deps): Update packages"
 ```
