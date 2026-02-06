@@ -267,6 +267,7 @@
 		"LocationFindShop": "お店の場所を探す",
 		"LocationMissing": "場所が見つかりません",
 		"LocationSearchByName": "名前と都市で検索",
+		"LocationsCompare": "場所を比較する",
 		"Date": "日付",
 		"DateMissing": "日付がありません",
 		"DateProofHelpText": "写真の日付。",
@@ -440,6 +441,7 @@
 		"Recent": "最近の",
 		"Re-open": "再開",
 		"ReportProblem": "問題を報告する",
+		"Reset": "リセット",
 		"Resolved": "解決済み",
 		"Reuses": "再利用",
 		"ReusesKnown": "既知の再利用",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "証明書（値札）を追加する"
+		},
+		"CompareLocations": {
+			"Title": "場所を比較する"
 		},
 		"Locations": {
 			"Title": "場所："
