@@ -268,7 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"LocationsCompare": "Linganisha maeneo",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Tarehe",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Tarehe ya picha.",
@@ -818,7 +818,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Linganisha maeneo"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Locations"
@@ -1015,6 +1015,7 @@
 		"CurrencyLabel": "Sarafu",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",
