@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Helyszínek összehasonlítása",
 		"Date": "Dátum",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "A kép dátuma.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Újranyitás",
 		"ReportProblem": "Probléma bejelentése",
+		"Reset": "Visszaállítás",
 		"Resolved": "Megoldva",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "Helyszínek összehasonlítása"
 		},
 		"Locations": {
 			"Title": "Locations"
