@@ -1,5 +1,8 @@
 """
 https://wiki.openfoodfacts.org/Global_categories_taxonomy
+Stats as of 2026-02-06:
+- Input: Taxonomy: total number of nodes: 14299
+- Output: 2768 categories
 """
 
 import json
@@ -13,39 +16,39 @@ from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
 TAXONOMY_NAME = "category"
 
 PARENT_NODE_ID_LIST = [
-    # { "id": "en:snacks", "keep_parent": False },  # 717 descendants (including en:viennoiseries)
-    # { "id": "en:desserts", "keep_parent": False },  # 467 (including en:pastries)
-    { "id": "en:vegetables", "keep_parent": False },  # 391
-    { "id": "en:fruits", "keep_parent": False },  # 287
-    { "id": "en:legumes", "keep_parent": False },  # 166
-    { "id": "en:culinary-plants", "keep_parent": False },  # 152
-    { "id": "en:spices", "keep_parent": False },  # 116
-    { "id": "en:flours", "keep_parent": False },  # 110
-    { "id": "en:aromatic-plants", "keep_parent": False },  # 105
-    { "id": "en:breads", "keep_parent": False },  # 103
-    { "id": "en:nuts", "keep_parent": False },  # 77
-    { "id": "en:mushrooms", "keep_parent": True },  # 69
-    { "id": "en:pastries", "keep_parent": False },  # 58
-    { "id": "en:viennoiseries", "keep_parent": False },  # 47
-    { "id": "en:potatoes", "keep_parent": True },  # 27
-    { "id": "en:eggs", "keep_parent": True },  # 21
-    { "id": "en:gherkins", "keep_parent": True },  # 12
-    { "id": "en:pumpkins", "keep_parent": True },  # 9
-    { "id": "en:dried-mushrooms", "keep_parent": True },  # 7
-    { "id": "en:textured-vegetable-protein", "keep_parent": False },  # 2
-    { "id": "en:squash", "keep_parent": False },
-    { "id": "en:seeds", "keep_parent": False },  # includes all seeds, rice, quinoa, maize, etc.
-    { "id": "en:pastas", "keep_parent": False },
-    { "id": "en:popcorn", "keep_parent": True },
-    { "id": "en:meats", "keep_parent": False },
-    { "id": "en:fishes", "keep_parent": False },
-    { "id": "en:sausages", "keep_parent": True },
-    { "id": "en:cordons-bleus", "keep_parent": True },
-    { "id": "fr:merguez", "keep_parent": True },
-    { "id": "fr:boudins", "keep_parent": True },
+    { "id": "en:meats", "keep_node": False },  # 774 descendants
+    # { "id": "en:snacks", "keep_node": False },  # 823 (including en:viennoiseries)
+    # { "id": "en:desserts", "keep_node": False },  # 531 (including en:pastries)
+    { "id": "en:vegetables", "keep_node": False },  # 457
+    { "id": "en:fishes", "keep_node": False },  # 366
+    { "id": "en:fruits", "keep_node": False },  # 349
+    { "id": "en:seeds", "keep_node": False },  # 287 (includes all seeds, rice, quinoa, maize...)
+    { "id": "en:pastas", "keep_node": False },  # 216
+    { "id": "en:legumes", "keep_node": False },  # 167
+    { "id": "en:culinary-plants", "keep_node": False },  # 164
+    { "id": "en:spices", "keep_node": False },  # 127
+    { "id": "en:nuts", "keep_node": False },  # 117
+    { "id": "en:breads", "keep_node": False },  # 116
+    { "id": "en:flours", "keep_node": False },  # 113
+    { "id": "en:aromatic-plants", "keep_node": False },  # 108
+    { "id": "en:sausages", "keep_node": True },  # 87
+    { "id": "en:pastries", "keep_node": False },  # 73 (parent: en:desserts)
+    { "id": "en:mushrooms", "keep_node": True },  # 67
+    { "id": "en:viennoiseries", "keep_node": False },  # 49 (parent: en:snacks)
+    { "id": "en:potatoes", "keep_node": True },  # 35
+    { "id": "en:eggs", "keep_node": True },  # 28
+    { "id": "fr:boudins", "keep_node": True },  # 20
+    { "id": "en:squash", "keep_node": False },  # 17
+    { "id": "en:gherkins", "keep_node": True },  # 14
+    { "id": "en:pumpkins", "keep_node": True },  # 12
+    { "id": "fr:merguez", "keep_node": True },  # 9
+    { "id": "en:dried-mushrooms", "keep_node": True },  # 7
+    { "id": "en:popcorn", "keep_node": True },  # 5
+    { "id": "en:cordons-bleus", "keep_node": True },  # 3
+    { "id": "en:textured-vegetable-protein", "keep_node": False },  # 2
 ]
 
-EXTRA_CHILDREN = [
+EXTRA_NODE_ID_LIST = [
     "en:rolled-oats",
     "en:ginger",
     "en:candies",
@@ -106,9 +109,10 @@ def get_all_descendants_for_node_list(
 ) -> list[TaxonomyNode]:
     all_descendants = []
     for node_parent in node_parent_list:
+        node_parent_descendants = get_all_descendants_for_node(taxonomy, node_parent)
         if node_parent.id in parent_node_id_list_to_keep:
             all_descendants.append(node_parent)
-        all_descendants.extend(get_all_descendants_for_node(taxonomy, node_parent))
+        all_descendants.extend(node_parent_descendants)
     return all_descendants
 
 
@@ -216,12 +220,12 @@ if __name__ == "__main__":
     # Step 2: filter categories
     # Step 2a: get all descendants for the parent categories
     categories_filtered: list[TaxonomyNode] = get_all_descendants_for_node_list(
-        TAXONOMY_FULL, PARENT_NODES, parent_node_id_list_to_keep=[node["id"] for node in PARENT_NODE_ID_LIST if node["keep_parent"]]
+        TAXONOMY_FULL, PARENT_NODES, parent_node_id_list_to_keep=[node["id"] for node in PARENT_NODE_ID_LIST if node["keep_node"]]
     )
     # Step 2b: add extra nodes
-    print(f"Add {len(EXTRA_CHILDREN)} extra nodes")
+    print(f"Add {len(EXTRA_NODE_ID_LIST)} extra nodes")
     categories_filtered.extend(
-        get_taxonomy_node_list_by_id_list(TAXONOMY_FULL, EXTRA_CHILDREN)
+        get_taxonomy_node_list_by_id_list(TAXONOMY_FULL, EXTRA_NODE_ID_LIST)
     )
     # Step 2c: exclude
     # - remove nodes in EXCLUDE_NODE_ID_LIST
@@ -260,7 +264,10 @@ if __name__ == "__main__":
     # compare_new_categories_with_old_categories()
     # root_nodes = get_all_root_nodes(TAXONOMY_FULL)
     # print(root_nodes)
-    # category_name = "en:caramels"
+    # category_name = "en:biscuits"
     # category_descendants = get_all_descendants_for_node(TAXONOMY_FULL, get_taxonomy_node_list_by_id_list(TAXONOMY_FULL, [category_name])[0])
     # print(category_descendants)
     # print(len(category_descendants))
+    # for parent_node in PARENT_NODES:
+    #     descendants = get_all_descendants_for_node(TAXONOMY_FULL, parent_node)
+    #     print(f"Parent node {parent_node.id} has {len(descendants)} descendants")
