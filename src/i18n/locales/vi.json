@@ -267,6 +267,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "So sánh các địa điểm",
 		"Date": "Ngày",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Ngày chụp ảnh.",
@@ -440,6 +441,7 @@
 		"Recent": "Recent",
 		"Re-open": "Mở lại",
 		"ReportProblem": "Báo cáo sự cố",
+		"Reset": "Reset",
 		"Resolved": "Đã giải quyết",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -813,6 +815,9 @@
 		},
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
+		},
+		"CompareLocations": {
+			"Title": "So sánh các địa điểm"
 		},
 		"Locations": {
 			"Title": "Locations"
