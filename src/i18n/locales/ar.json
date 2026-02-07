@@ -268,7 +268,7 @@
 		"LocationFindShop": "ابحث عن موقع المتجر",
 		"LocationMissing": "الموقع مفقود",
 		"LocationSearchByName": "ابحث بالاسم والمدينة",
-		"LocationsCompare": "قارن المواقع",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "تاريخ",
 		"DateMissing": "التاريخ مفقود",
 		"DateProofHelpText": "تاريخ الصورة.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "الصور التي أضفتها أنت",
 		"PRICE_TAG": "سعر البطاقة",
 		"PriceTags": "بطاقات الأسعار",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} الأسعار | {count} السعر | {count} الأسعار",
 		"PriceAddedCount": "تمت إضافة الأسعار {count} | تمت إضافة السعر {count} | تمت إضافة الأسعار {count}",
 		"PriceAddProgress": "تمت إضافة الأسعار {numberOfPricesAdded} / {totalNumberOfPrices}",
@@ -818,7 +820,7 @@
 			"Title": "أضف إثباتات (بطاقات الأسعار)"
 		},
 		"CompareLocations": {
-			"Title": "قارن المواقع"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "المواقع"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "عملة",
 		"DisplayTitle": "العرض",
 		"BarcodeScanner": "ماسح الباركود",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "الوضع الافتراضي",
 		"FavoriteCurrencies": "العملات المفضلة",
 		"CurrencyRequired": "يلزم وجود عملة واحدة على الأقل",

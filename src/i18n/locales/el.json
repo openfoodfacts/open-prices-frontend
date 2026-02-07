@@ -268,7 +268,7 @@
 		"LocationFindShop": "Βρείτε την τοποθεσία του καταστήματος",
 		"LocationMissing": "Λείπει η τοποθεσία",
 		"LocationSearchByName": "Αναζήτηση με όνομα και πόλη",
-		"LocationsCompare": "Σύγκριση τοποθεσιών",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Ημερομηνία",
 		"DateMissing": "Λείπει η ημερομηνία",
 		"DateProofHelpText": "Ημερομηνία της εικόνας.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Εικόνες που προσθέσατε εσείς",
 		"PRICE_TAG": "Ετικέτα τιμής",
 		"PriceTags": "Ετικέτες τιμών",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} τιμές | {count} τιμή | {count} τιμές",
 		"PriceAddedCount": "{count} προστέθηκαν τιμές | {count} προστέθηκε τιμή | {count} προστέθηκαν τιμές",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} τιμές που προστέθηκαν",
@@ -818,7 +820,7 @@
 			"Title": "Προσθήκη αποδείξεων (ετικέτες τιμών)"
 		},
 		"CompareLocations": {
-			"Title": "Σύγκριση τοποθεσιών"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Τοποθεσίες"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "Νόμισμα",
 		"DisplayTitle": "Προβολή",
 		"BarcodeScanner": "Σαρωτής γραμμωτού κώδικα",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Προεπιλεγμένη λειτουργία",
 		"FavoriteCurrencies": "Αγαπημένα νομίσματα",
 		"CurrencyRequired": "Απαιτείται τουλάχιστον ένα νόμισμα",

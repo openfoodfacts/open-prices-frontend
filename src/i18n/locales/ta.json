@@ -268,7 +268,7 @@
 		"LocationFindShop": "கடையின் இருப்பிடத்தைக் கண்டறியவும்",
 		"LocationMissing": "இடம் இல்லை",
 		"LocationSearchByName": "பெயர் மற்றும் நகரத்தின் அடிப்படையில் தேடுங்கள்",
-		"LocationsCompare": "இடங்களை ஒப்பிடுக",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "தேதி",
 		"DateMissing": "தேதியைக் காணவில்லை",
 		"DateProofHelpText": "படத்தின் தேதி.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
 		"PRICE_TAG": "விலைக் குறி",
 		"PriceTags": "விலை குறிச்சொற்கள்",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} விலைகள் | {count} விலை | {count} விலைகள்",
 		"PriceAddedCount": "{count} விலைகள் சேர்க்கப்பட்டன | {count} விலை சேர்க்கப்பட்டது | {count} விலைகள் சேர்க்கப்பட்டன",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -818,7 +820,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "இடங்களை ஒப்பிடுக"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "இடங்கள்"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "நாணயம்",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "பார்கோடு ஸ்கேனர்",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "இயல்புநிலை பயன்முறை",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

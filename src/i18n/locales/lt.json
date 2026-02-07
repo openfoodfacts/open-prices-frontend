@@ -268,7 +268,7 @@
 		"LocationFindShop": "Rasti parduotuvės vietą",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Ieškoti pagal pavadinimą ir miestą",
-		"LocationsCompare": "Palyginkite vietas",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Data",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Paveikslėlio data.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Jūsų pridėtos nuotraukos",
 		"PRICE_TAG": "Kainos etiketė",
 		"PriceTags": "Kainų etiketės",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} kainos | {count} kaina | {count} kainų",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pridėta kainų",
@@ -818,7 +820,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Palyginkite vietas"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Vietos"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "Valiuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Brūkšninių kodų skaitytuvas",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Numatytasis režimas",
 		"FavoriteCurrencies": "Mėgstamos valiutos",
 		"CurrencyRequired": "Būtina bent viena valiuta",

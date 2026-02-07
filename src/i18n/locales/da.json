@@ -268,7 +268,7 @@
 		"LocationFindShop": "Find butikkens placering",
 		"LocationMissing": "Placering mangler",
 		"LocationSearchByName": "Søg efter navn og by",
-		"LocationsCompare": "Sammenlign lokationer",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Dato",
 		"DateMissing": "Dato mangler",
 		"DateProofHelpText": "Dato for billedet.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Billeder tilføjet af dig",
 		"PRICE_TAG": "Prisskilt",
 		"PriceTags": "Prismærker",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} priser | {count} pris | {count} priser",
 		"PriceAddedCount": "{count} tilføjede priser | {count} pris tilføjet | {count} priser tilføjet",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} priser tilføjet",
@@ -818,7 +820,7 @@
 			"Title": "Tilføj beviser (prismærker)"
 		},
 		"CompareLocations": {
-			"Title": "Sammenlign lokationer"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Placeringer"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Vis",
 		"BarcodeScanner": "Stregkodescanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Standardtilstand",
 		"FavoriteCurrencies": "Foretrukne valutaer",
 		"CurrencyRequired": "Mindst én valuta er påkrævet",

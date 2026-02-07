@@ -268,7 +268,7 @@
 		"LocationFindShop": "Zoek de winkellocatie",
 		"LocationMissing": "Locatie ontbreekt",
 		"LocationSearchByName": "Zoek op naam en stad",
-		"LocationsCompare": "Vergelijk locaties",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Datum",
 		"DateMissing": "Datum ontbreekt",
 		"DateProofHelpText": "Datum van de foto.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Door jou toegevoegde foto's",
 		"PRICE_TAG": "Prijskaartje",
 		"PriceTags": "Prijskaartjes",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prijzen | {count} prijs | {count} prijzen",
 		"PriceAddedCount": "{count} prijzen toegevoegd | {count} prijs toegevoegd | {count} prijzen toegevoegd",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
@@ -818,7 +820,7 @@
 			"Title": "Bewijzen toevoegen (prijskaartjes)"
 		},
 		"CompareLocations": {
-			"Title": "Vergelijk locaties"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Locaties"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Weergave",
 		"BarcodeScanner": "Streepjescodescanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Standaardmodus",
 		"FavoriteCurrencies": "Favoriete valuta",
 		"CurrencyRequired": "Er is minimaal één valuta vereist",

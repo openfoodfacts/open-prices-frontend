@@ -268,7 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Sijainti puuttuu",
 		"LocationSearchByName": "Search by name and city",
-		"LocationsCompare": "Vertaile sijainteja",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Päivämäärä",
 		"DateMissing": "Päivämäärä puuttuu",
 		"DateProofHelpText": "Kuvan päivämäärä.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Hintalappu",
 		"PriceTags": "Hintalaput",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -818,7 +820,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Vertaile sijainteja"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Sijainnit"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "Valuutta",
 		"DisplayTitle": "Näytä",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Suosikki valuutat",
 		"CurrencyRequired": "Vähintään yksi valuutta vaaditaan",

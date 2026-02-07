@@ -268,7 +268,7 @@
 		"LocationFindShop": "Najděte umístění obchodu",
 		"LocationMissing": "Chybí poloha",
 		"LocationSearchByName": "Hledat podle jména a města",
-		"LocationsCompare": "Porovnat lokality",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Datum",
 		"DateMissing": "Chybí datum",
 		"DateProofHelpText": "Datum pořízení obrázku.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Vámi přidané obrázky",
 		"PRICE_TAG": "Cenovka",
 		"PriceTags": "Cenovky",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -818,7 +820,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Porovnat lokality"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Polohy"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "Měna",
 		"DisplayTitle": "Zobrazit",
 		"BarcodeScanner": "Skener čárového kódu",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Výchozí vzhled",
 		"FavoriteCurrencies": "Oblíbené měny",
 		"CurrencyRequired": "Je vyžadována alespoň jedna měna",

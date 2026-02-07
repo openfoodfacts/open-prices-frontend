@@ -268,7 +268,7 @@
 		"LocationFindShop": "Найти местоположение магазина",
 		"LocationMissing": "Местоположение отсутствует",
 		"LocationSearchByName": "Поиск по имени и городу",
-		"LocationsCompare": "Сравните местоположения",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Дата",
 		"DateMissing": "Дата отсутствует",
 		"DateProofHelpText": "Дата фотографии.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Фотографии добавлены вами",
 		"PRICE_TAG": "Ценник",
 		"PriceTags": "Ценники",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} цены | {count} цены | {count} цены",
 		"PriceAddedCount": "{count} цены добавлены | {count} цены добавлены | {count} цены добавлены",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -818,7 +820,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Сравните местоположения"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Места"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показать",
 		"BarcodeScanner": "Сканер штрихкодов",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Режим по умолчанию",
 		"FavoriteCurrencies": "Любимые валюты",
 		"CurrencyRequired": "Требуется хотя бы одна валюта",

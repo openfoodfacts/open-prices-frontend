@@ -268,7 +268,7 @@
 		"LocationFindShop": "Pesquisar o local da loja",
 		"LocationMissing": "Falta a localização",
 		"LocationSearchByName": "Pesquisar por nome e cidade",
-		"LocationsCompare": "Comparar locais",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Data",
 		"DateMissing": "Falta a data",
 		"DateProofHelpText": "Data da foto.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Fotografias adicionadas por si",
 		"PRICE_TAG": "Etiqueta de preço",
 		"PriceTags": "Etiquetas de preço",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} preços | {count} preços | {count} preços",
 		"PriceAddedCount": "{count} preços adicionados | {count} preço adicionado | {count} preços adicionados",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
@@ -818,7 +820,7 @@
 			"Title": "Adicionar comprovativos (etiquetas de preço)"
 		},
 		"CompareLocations": {
-			"Title": "Comparar locais"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Localizações"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "Moeda",
 		"DisplayTitle": "Mostrar",
 		"BarcodeScanner": "Leitor de código de barras",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Modo predefinido",
 		"FavoriteCurrencies": "Moedas favoritas",
 		"CurrencyRequired": "É necessária pelo menos uma moeda",

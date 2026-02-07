@@ -268,7 +268,7 @@
 		"LocationFindShop": "Mağaza konumunu bulun",
 		"LocationMissing": "Konum eksik",
 		"LocationSearchByName": "İsme ve şehre göre ara",
-		"LocationsCompare": "Konumları karşılaştırın",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Tarih",
 		"DateMissing": "Tarih eksik",
 		"DateProofHelpText": "Fotoğrafın çekildiği tarih.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Sizin tarafınızdan eklenen resimler",
 		"PRICE_TAG": "Fiyat etiketi",
 		"PriceTags": "Fiyat etiketleri",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} fiyatlar | {count} fiyat | {count} fiyatlar",
 		"PriceAddedCount": "{count} fiyatlar eklendi | {count} fiyatlar eklendi | {count} fiyatlar eklendi",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} fiyatlar eklendi",
@@ -818,7 +820,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "Konumları karşılaştırın"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Konumlar"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "Kur",
 		"DisplayTitle": "Göster",
 		"BarcodeScanner": "Barkod tarayıcı",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Varsayılan mod",
 		"FavoriteCurrencies": "Sık kullanılan para birimleri",
 		"CurrencyRequired": "En az bir para birimi gerekli",

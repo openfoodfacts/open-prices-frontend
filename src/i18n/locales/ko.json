@@ -268,7 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
-		"LocationsCompare": "위치 비교",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "날짜",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "사진 촬영 날짜.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "가격표",
 		"PriceTags": "가격표",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -818,7 +820,7 @@
 			"Title": "Add proofs (price tags)"
 		},
 		"CompareLocations": {
-			"Title": "위치 비교"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Locations"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "통화",
 		"DisplayTitle": "화면",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

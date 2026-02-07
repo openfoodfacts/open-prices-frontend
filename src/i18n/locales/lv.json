@@ -268,7 +268,7 @@
 		"LocationFindShop": "Atrodiet veikala atrašanās vietu",
 		"LocationMissing": "Trūkst atrašanās vietas",
 		"LocationSearchByName": "Meklēt pēc nosaukuma un pilsētas",
-		"LocationsCompare": "Salīdzināt atrašanās vietas",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Datums",
 		"DateMissing": "Trūkst datuma",
 		"DateProofHelpText": "Attēla datums.",
@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Jūsu pievienotie attēli",
 		"PRICE_TAG": "Cenas zīme",
 		"PriceTags": "Cenu zīmes",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} cenas | {count} cena | {count} cenas",
 		"PriceAddedCount": "{count} pievienotās cenas | {count} pievienotā cena | {count} pievienotās cenas",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pievienotas cenas",
@@ -818,7 +820,7 @@
 			"Title": "Pievienot pierādījumus (cenu zīmes)"
 		},
 		"CompareLocations": {
-			"Title": "Salīdzināt atrašanās vietas"
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Atrašanās vietas"
@@ -1015,6 +1017,7 @@
 		"CurrencyLabel": "Valūta",
 		"DisplayTitle": "Reklāmas",
 		"BarcodeScanner": "Svītrkodu skeneris",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Noklusējuma režīms",
 		"FavoriteCurrencies": "Iecienītākās valūtas",
 		"CurrencyRequired": "Nepieciešama vismaz viena valūta",
