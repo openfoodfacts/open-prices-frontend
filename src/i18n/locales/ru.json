@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Фотографии добавлены вами",
 		"PRICE_TAG": "Ценник",
 		"PriceTags": "Ценники",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} цены | {count} цены | {count} цены",
 		"PriceAddedCount": "{count} цены добавлены | {count} цены добавлены | {count} цены добавлены",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
