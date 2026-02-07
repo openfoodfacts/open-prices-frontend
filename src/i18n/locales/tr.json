@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Sizin tarafınızdan eklenen resimler",
 		"PRICE_TAG": "Fiyat etiketi",
 		"PriceTags": "Fiyat etiketleri",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} fiyatlar | {count} fiyat | {count} fiyatlar",
 		"PriceAddedCount": "{count} fiyatlar eklendi | {count} fiyatlar eklendi | {count} fiyatlar eklendi",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} fiyatlar eklendi",
