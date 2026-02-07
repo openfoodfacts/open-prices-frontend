@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Foto yang Anda tambahkan",
 		"PRICE_TAG": "Label harga",
 		"PriceTags": "Label harga",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} harga | {count} harga | {count} harga",
 		"PriceAddedCount": "{count} harga ditambahkan | {count} harga ditambahkan | {count} harga ditambahkan",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} harga ditambahkan",
