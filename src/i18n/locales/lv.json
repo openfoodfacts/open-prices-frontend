@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Jūsu pievienotie attēli",
 		"PRICE_TAG": "Cenas zīme",
 		"PriceTags": "Cenu zīmes",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} cenas | {count} cena | {count} cenas",
 		"PriceAddedCount": "{count} pievienotās cenas | {count} pievienotā cena | {count} pievienotās cenas",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pievienotas cenas",
