@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "あなたが追加した写真",
 		"PRICE_TAG": "値札",
 		"PriceTags": "値札",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} 価格 | {count} 価格 | {count} 価格",
 		"PriceAddedCount": "{count} 価格を追加しました | {count} 価格を追加しました | {count} 価格を追加しました",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} 件の価格が追加されました",
