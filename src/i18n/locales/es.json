@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Fotos añadidas por ti",
 		"PRICE_TAG": "Etiqueta de precio",
 		"PriceTags": "etiquetas de precios",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} precios | {count} precio | {count} precios",
 		"PriceAddedCount": "{count} precios añadidos | {count} precio añadido | {count} precios añadidos",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} precios añadidos",
