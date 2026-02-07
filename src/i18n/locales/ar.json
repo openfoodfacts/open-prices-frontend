@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "الصور التي أضفتها أنت",
 		"PRICE_TAG": "سعر البطاقة",
 		"PriceTags": "بطاقات الأسعار",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} الأسعار | {count} السعر | {count} الأسعار",
 		"PriceAddedCount": "تمت إضافة الأسعار {count} | تمت إضافة السعر {count} | تمت إضافة الأسعار {count}",
 		"PriceAddProgress": "تمت إضافة الأسعار {numberOfPricesAdded} / {totalNumberOfPrices}",
