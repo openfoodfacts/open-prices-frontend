@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Billeder tilføjet af dig",
 		"PRICE_TAG": "Prisskilt",
 		"PriceTags": "Prismærker",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} priser | {count} pris | {count} priser",
 		"PriceAddedCount": "{count} tilføjede priser | {count} pris tilføjet | {count} priser tilføjet",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} priser tilføjet",
