@@ -94,8 +94,8 @@ import date_utils from '../utils/date.js'
 Compressor.setDefaults({
   checkOrientation: true,  // default
   retainExif: true,
-  // quality: 0.6,
-  mimeType: 'image/webp',
+  // quality: 0.8,  // default
+  // mimeType: 'image/webp',
   // maxWidth: 3000
 })
 
