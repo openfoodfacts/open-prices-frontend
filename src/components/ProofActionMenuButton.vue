@@ -19,8 +19,8 @@
           {{ $t('Common.PictureFull') }}
         </v-list-item>
         <v-list-item v-if="proof.priceTagsBoundingBoxes" :slim="true" prepend-icon="mdi-star-box-multiple-outline" @click="toggleShowPriceTagsBoundingBoxes">
-          <span v-if="showPriceTagsBoundingBoxes">{{ $t('Common.HidePriceTagsBoundingBoxes') }}</span>
-          <span v-else>{{ $t('Common.DisplayPriceTagsBoundingBoxes') }}</span>
+          <span v-if="showPriceTagsBoundingBoxes">{{ $t('Common.PriceTagsBoundingBoxesHide') }}</span>
+          <span v-else>{{ $t('Common.PriceTagsBoundingBoxesDisplay') }}</span>
         </v-list-item>
         <v-sheet v-if="userCanEditProof">
           <v-list-item :slim="true" prepend-icon="mdi-pencil" :disabled="!proofCanBeEdited" @click="openEditDialog">

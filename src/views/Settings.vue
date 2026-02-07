@@ -197,7 +197,7 @@
           <v-switch
             v-model="appStore.user.display_price_tags_bounding_boxes"
             color="success"
-            :label="$t('Common.DisplayPriceTagsBoundingBoxes')"
+            :label="$t('Common.PriceTagsBoundingBoxesDisplay')"
             density="compact"
             hide-details="auto"
           />
