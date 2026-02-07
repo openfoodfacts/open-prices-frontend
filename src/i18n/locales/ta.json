@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "நீங்கள் சேர்த்த படங்கள்",
 		"PRICE_TAG": "விலைக் குறி",
 		"PriceTags": "விலை குறிச்சொற்கள்",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} விலைகள் | {count} விலை | {count} விலைகள்",
 		"PriceAddedCount": "{count} விலைகள் சேர்க்கப்பட்டன | {count} விலை சேர்க்கப்பட்டது | {count} விலைகள் சேர்க்கப்பட்டன",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
