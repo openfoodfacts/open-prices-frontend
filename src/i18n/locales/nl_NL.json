@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Door jou toegevoegde foto's",
 		"PRICE_TAG": "Prijskaartje",
 		"PriceTags": "Prijskaartjes",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prijzen | {count} prijs | {count} prijzen",
 		"PriceAddedCount": "{count} prijzen toegevoegd | {count} prijs toegevoegd | {count} prijzen toegevoegd",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
