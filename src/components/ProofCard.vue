@@ -28,10 +28,11 @@
 
     <v-card-actions>
       <ProofFooterRow 
-        v-model:showPriceTagsBoundingBoxes="showPriceTagsBoundingBoxes"
         :proof="proof" 
         :hideActionMenuButton="hideActionMenuButton" 
         :readonly="readonly"
+        :showPriceTagsBoundingBoxes="showPriceTagsBoundingBoxes"
+        @update:showPriceTagsBoundingBoxes="showPriceTagsBoundingBoxes = $event"
       />
     </v-card-actions>
   </v-card>
