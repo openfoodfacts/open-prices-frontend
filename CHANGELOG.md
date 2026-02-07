@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.156.0](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.155.1...v1.156.0) (2026-02-07)
+
+
+### Features
+
+* **Data:** script to filter and generate labels (with translations) ([#333](https://github.com/openfoodfacts/open-prices-frontend/issues/333)) ([ea1f4d4](https://github.com/openfoodfacts/open-prices-frontend/commit/ea1f4d46bb4ff6ceabf56bb85bf7f97903de1b69))
+* **ProofDetail:** Allow displaying price tag bounding boxes ([#2028](https://github.com/openfoodfacts/open-prices-frontend/issues/2028)) ([53ec292](https://github.com/openfoodfacts/open-prices-frontend/commit/53ec292de5074d63e3d043d0c4fbdbb08b6281ba))
+
+
+### Technical
+
+* **Data:** add new categories (biscuits, coffee, tea) ([#2026](https://github.com/openfoodfacts/open-prices-frontend/issues/2026)) ([68beecc](https://github.com/openfoodfacts/open-prices-frontend/commit/68beecceefb861524bc2338c1e0d9e6bf45a0d19))
+* **Data:** homogenize generation scripts naming. Re-run origins. ([#2029](https://github.com/openfoodfacts/open-prices-frontend/issues/2029)) ([8194bd3](https://github.com/openfoodfacts/open-prices-frontend/commit/8194bd39ecbbde073b0cd158c8c7bd97a7b5ec7f))
+* **Data:** update categories ([#2025](https://github.com/openfoodfacts/open-prices-frontend/issues/2025)) ([cedd85d](https://github.com/openfoodfacts/open-prices-frontend/commit/cedd85d0db10aa1e3ab0a80dc2ead5ebe0d80a1b))
+* **deps:** Update packages (vue v3.5.27 & vuetify v3.11.8) ([#2023](https://github.com/openfoodfacts/open-prices-frontend/issues/2023)) ([f7bc20f](https://github.com/openfoodfacts/open-prices-frontend/commit/f7bc20fc474fb042e9d847111c30ad69924cda06))
+* **Experiments:** make the drawer tab visible for everyone ([#2027](https://github.com/openfoodfacts/open-prices-frontend/issues/2027)) ([088dfbf](https://github.com/openfoodfacts/open-prices-frontend/commit/088dfbfe376cd413975e93e7bbac9e5027a25bb5))
+* **l10n:** New Crowdin translations to review and merge ([#2022](https://github.com/openfoodfacts/open-prices-frontend/issues/2022)) ([c1cbdac](https://github.com/openfoodfacts/open-prices-frontend/commit/c1cbdac7f1297db4b494e96f93868f5c961c8d9b))
+* standardize repository checks ([#2000](https://github.com/openfoodfacts/open-prices-frontend/issues/2000)) ([fb844d0](https://github.com/openfoodfacts/open-prices-frontend/commit/fb844d008b3104306d8c93dd56d46eea375db65d))
+
 ## [1.155.1](https://github.com/openfoodfacts/open-prices-frontend/compare/v1.155.0...v1.155.1) (2026-02-06)
 
 
