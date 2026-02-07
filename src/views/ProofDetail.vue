@@ -125,7 +125,9 @@ export default {
         .then((data) => {
           if (data.id) {
             this.proof = data
-            this.getPriceTagsBoundingBoxes()
+            if (this.proof.type === constants.PROOF_TYPE_PRICE_TAG) {
+              this.getPriceTagsBoundingBoxes()
+            }
           }
         })
     },
@@ -143,7 +145,7 @@ export default {
     },
     getPriceTagsBoundingBoxes() {
       return openPricesApi.getPriceTags({proof_id: this.proofId, size: 100}).then(data => {
-        if (!data.items) return
+        if (!data?.items?.length) return
         this.proof.priceTagsBoundingBoxes = data.items.map(priceTag => {
           return {boundingBox: priceTag.bounding_box, id: priceTag.id, status: priceTag.status, created_by: priceTag.created_by}
         })
