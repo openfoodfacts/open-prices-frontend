@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
 		"PRICE_TAG": "Preisschild",
 		"PriceTags": "Preisschilder",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
 		"PriceAddedCount": "{count} Preise hinzugefügt | {count} Preis hinzugefügt | {count} Preise hinzugefügt",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} Preise hinzugefügt",
