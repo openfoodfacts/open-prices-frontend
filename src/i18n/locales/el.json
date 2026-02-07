@@ -391,6 +391,8 @@
 		"PicturesAddedByYou": "Εικόνες που προσθέσατε εσείς",
 		"PRICE_TAG": "Ετικέτα τιμής",
 		"PriceTags": "Ετικέτες τιμών",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} τιμές | {count} τιμή | {count} τιμές",
 		"PriceAddedCount": "{count} προστέθηκαν τιμές | {count} προστέθηκε τιμή | {count} προστέθηκαν τιμές",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} τιμές που προστέθηκαν",
