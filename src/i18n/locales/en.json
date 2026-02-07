@@ -261,6 +261,7 @@
 		"Languages": "Languages",
 		"LatestPrices": "Latest prices",
 		"LatestProofs": "Latest proofs",
+		"LearnMore": "Learn more",
 		"LoadMore": "Load more",
 		"Location": "Location",
 		"Locations": "Locations",
@@ -868,7 +869,8 @@
 			"Title": "Experiments"
 		},
 		"Home": {
-			"Title": "Home"
+			"Title": "Home",
+			"Intro": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {learn_more_url}."
 		},
 		"Dashboard": {
 			"Title": "Dashboard"
@@ -925,7 +927,8 @@
 			"Title": "Proof Price Tag Assistant"
 		},
 		"PriceValidationAssistant": {
-			"Title": "Price Validation Assistant"
+			"Title": "Price Validation Assistant",
+			"Intro": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price below, check that the price, barcode or category are correct, fix them if needed and confirm. Unreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ReceiptAssistant": {
 			"Title": "Receipt Assistant"
@@ -934,7 +937,8 @@
 			"Title": "Challenge"
 		},
 		"Challenges": {
-			"Title": "Challenges"
+			"Title": "Challenges",
+			"Intro": "Challenges are a way for the community to focus their efforts and gather prices of specific products. They usually last a month, and contributors are ranked by their contribution.\nCheck the ongoing challenges below to participate, or visit the past challenges archives."
 		},
 		"CommunityChallenge": {
 			"Title": "Community challenge"
