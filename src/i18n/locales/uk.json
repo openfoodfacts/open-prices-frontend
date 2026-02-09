@@ -249,6 +249,7 @@
 		"Error": "Помилка",
 		"Experiment": "Експеримент",
 		"Experiments": "Експерименти",
+		"Explore": "Дослідити",
 		"FromPriceTag": "З цінника",
 		"FromReceipt": "З квитанції",
 		"GoToProof": "Перейти до доказу",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Знайти місце розташування магазину",
 		"LocationMissing": "Розташування відсутнє",
 		"LocationSearchByName": "Пошук за назвою та містом",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Дата",
 		"DateMissing": "Відсутня дата",
 		"DateProofHelpText": "Дата знімка.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Поле обов'язкове для заповнення",
 		"Filter": "Фільтр",
 		"FilterChallengesShowAllStatus": "Показати всі виклики",
+		"FilterWithPriceCount": "З цінами",
+		"FilterWithLocationCount": "З локаціями",
 		"FilterProductWithPriceCount": "З ціною",
 		"FilterProductWithPriceCountHide": "Приховати товари з цінами",
 		"FilterProductWithoutPriceCount": "Без цін",
@@ -357,6 +361,7 @@
 		"Open": "ВІДЧИНЕНО",
 		"OpenWithTheAssistant": "Відкрити за допомогою помічника",
 		"Order": "Замовлення",
+		"OrderNameASC": "Ім’я",
 		"OrderLocationCountDESC": "Кількість місць",
 		"OrderProductUniqueScansDESC": "Кількість сканувань",
 		"OrderProductPriceCountDESC": "Кількість цін",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Зображення, додані вами",
 		"PRICE_TAG": "Цінник",
 		"PriceTags": "Цінники",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} ціни | {count} ціна | {count} ціни",
 		"PriceAddedCount": "{count} додано ціни | {count} ціна додана | {count} ціни додано",
 		"PriceAddProgress": "Додано ціни {numberOfPricesAdded} / {totalNumberOfPrices}",
@@ -437,6 +444,7 @@
 		"Recent": "Недавні",
 		"Re-open": "Знову відкрити",
 		"ReportProblem": "Повідомити про проблему",
+		"Reset": "Скинути",
 		"Resolved": "Вирішено",
 		"Reuses": "Повторне використання",
 		"ReusesKnown": "Відомі повторні використання",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Додати докази (цінники)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Місцезнаходження"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показати",
 		"BarcodeScanner": "Сканер штрих-кодів",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Стандартний режим",
 		"FavoriteCurrencies": "Улюблені валюти",
 		"CurrencyRequired": "Потрібна принаймні одна валюта",

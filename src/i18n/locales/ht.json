@@ -249,6 +249,7 @@
 		"Error": "Error",
 		"Experiment": "Eksperyans",
 		"Experiments": "Experiments",
+		"Explore": "Eksplore",
 		"FromPriceTag": "Soti nan yon etikèt pri",
 		"FromReceipt": "Soti nan yon resi",
 		"GoToProof": "Go to proof",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Zòn ki manke",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Dat",
 		"DateMissing": "Dat ki manke",
 		"DateProofHelpText": "Dat foto a.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Chan sa a obligatwa",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Avèk pri yo",
+		"FilterWithLocationCount": "Avèk kote yo ye a",
 		"FilterProductWithPriceCount": "Ak yon pri",
 		"FilterProductWithPriceCountHide": "Kache pwodwi ak pri",
 		"FilterProductWithoutPriceCount": "Without prices",
@@ -357,6 +361,7 @@
 		"Open": "Ouvri",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "Name",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Kantite skanè",
 		"OrderProductPriceCountDESC": "Kantite pri",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Pri tag",
 		"PriceTags": "Etikèt pri",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -437,6 +444,7 @@
 		"Recent": "Recent",
 		"Re-open": "Relouvri",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Rezoud",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Zòn"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Lajan",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Lajan favori",
 		"CurrencyRequired": "Omwen yon lajan obligatwa",

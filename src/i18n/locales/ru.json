@@ -249,6 +249,7 @@
 		"Error": "Ошибка",
 		"Experiment": "Эксперимент",
 		"Experiments": "Эксперименты",
+		"Explore": "Исследовать",
 		"FromPriceTag": "С ценника",
 		"FromReceipt": "Из квитанции",
 		"GoToProof": "Go to proof",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Найти местоположение магазина",
 		"LocationMissing": "Местоположение отсутствует",
 		"LocationSearchByName": "Поиск по имени и городу",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Дата",
 		"DateMissing": "Дата отсутствует",
 		"DateProofHelpText": "Дата фотографии.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Поле обязательно для заполнения",
 		"Filter": "Фильтр",
 		"FilterChallengesShowAllStatus": "Показать все испытания",
+		"FilterWithPriceCount": "С ценами",
+		"FilterWithLocationCount": "С местоположениями",
 		"FilterProductWithPriceCount": "С ценой",
 		"FilterProductWithPriceCountHide": "Скрыть продукты с ценами",
 		"FilterProductWithoutPriceCount": "Без цен",
@@ -357,6 +361,7 @@
 		"Open": "Открыть",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Заказ",
+		"OrderNameASC": "Название",
 		"OrderLocationCountDESC": "Количество мест",
 		"OrderProductUniqueScansDESC": "Количество сканирований",
 		"OrderProductPriceCountDESC": "Количество цен",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Фотографии добавлены вами",
 		"PRICE_TAG": "Ценник",
 		"PriceTags": "Ценники",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} цены | {count} цены | {count} цены",
 		"PriceAddedCount": "{count} цены добавлены | {count} цены добавлены | {count} цены добавлены",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -437,6 +444,7 @@
 		"Recent": "Недавние",
 		"Re-open": "Повторно открыть",
 		"ReportProblem": "Сообщить о проблеме",
+		"Reset": "Сбросить",
 		"Resolved": "Решено",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Места"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Показать",
 		"BarcodeScanner": "Сканер штрихкодов",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Режим по умолчанию",
 		"FavoriteCurrencies": "Любимые валюты",
 		"CurrencyRequired": "Требуется хотя бы одна валюта",

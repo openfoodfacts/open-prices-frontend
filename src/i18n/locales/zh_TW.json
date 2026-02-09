@@ -249,6 +249,7 @@
 		"Error": "錯誤",
 		"Experiment": "實驗",
 		"Experiments": "實驗",
+		"Explore": "探索",
 		"FromPriceTag": "從價格標籤來看",
 		"FromReceipt": "從收據上",
 		"GoToProof": "Go to proof",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "缺少地點",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "日期",
 		"DateMissing": "缺少日期",
 		"DateProofHelpText": "照片拍攝日期。",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "必填字段",
 		"Filter": "篩選器",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "價格",
+		"FilterWithLocationCount": "地點",
 		"FilterProductWithPriceCount": "有價格",
 		"FilterProductWithPriceCountHide": "隱藏有價格的產品",
 		"FilterProductWithoutPriceCount": "沒有價格",
@@ -357,6 +361,7 @@
 		"Open": "打開",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "順序",
+		"OrderNameASC": "名稱",
 		"OrderLocationCountDESC": "地點總數",
 		"OrderProductUniqueScansDESC": "掃描次數",
 		"OrderProductPriceCountDESC": "價格數量",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "價格標籤",
 		"PriceTags": "價格標籤",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -437,6 +444,7 @@
 		"Recent": "最近的",
 		"Re-open": "重新開放",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "已解決",
 		"Reuses": "重複使用",
 		"ReusesKnown": "Known reuses",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "地點"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "幣別",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "最喜歡的貨幣",
 		"CurrencyRequired": "至少需要選擇一種貨幣",

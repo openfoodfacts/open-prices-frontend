@@ -249,6 +249,7 @@
 		"Error": "Fehler",
 		"Experiment": "Experiment",
 		"Experiments": "Experimente",
+		"Explore": "Erkunden",
 		"FromPriceTag": "Anhand eines Preisschildes",
 		"FromReceipt": "Von einer Quittung",
 		"GoToProof": "Nachweise öffnen",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Standort des Geschäfts finden",
 		"LocationMissing": "Ort fehlt",
 		"LocationSearchByName": "Suchen nach Name und Stadt",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Datum",
 		"DateMissing": "Datum fehlt",
 		"DateProofHelpText": "Aufnahmedatum.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Feld ist erforderlich",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Alle Herausforderungen anzeigen",
+		"FilterWithPriceCount": "Mit Preisen",
+		"FilterWithLocationCount": "Mit Standorten",
 		"FilterProductWithPriceCount": "Mit einem Preis",
 		"FilterProductWithPriceCountHide": "Produkte mit Preisen ausblenden",
 		"FilterProductWithoutPriceCount": "Ohne Preise",
@@ -357,6 +361,7 @@
 		"Open": "Offen",
 		"OpenWithTheAssistant": "Mit Assistent öffnen",
 		"Order": "Reihenfolge",
+		"OrderNameASC": "Name",
 		"OrderLocationCountDESC": "Anzahl der Standorte",
 		"OrderProductUniqueScansDESC": "Anzahl der Scans",
 		"OrderProductPriceCountDESC": "Anzahl der Preise",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Eigene hinzugefügte Fotos",
 		"PRICE_TAG": "Preisschild",
 		"PriceTags": "Preisschilder",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} Preise | {count} Preis | {count} Preise",
 		"PriceAddedCount": "{count} Preise hinzugefügt | {count} Preis hinzugefügt | {count} Preise hinzugefügt",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} Preise hinzugefügt",
@@ -437,6 +444,7 @@
 		"Recent": "Neueste",
 		"Re-open": "Wieder öffnen",
 		"ReportProblem": "Problem melden",
+		"Reset": "Zurücksetzten",
 		"Resolved": "Gelöst",
 		"Reuses": "Wiederverwendung",
 		"ReusesKnown": "Bekannte Wiederverwendungen",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Orte"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Währung",
 		"DisplayTitle": "Anzeigen",
 		"BarcodeScanner": "Strichcode-Lesegerät",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Standardmodus",
 		"FavoriteCurrencies": "Bevorzugte Währungen",
 		"CurrencyRequired": "Es ist mindestens eine Währung erforderlich",

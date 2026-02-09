@@ -249,6 +249,7 @@
 		"Error": "Klaida",
 		"Experiment": "Eksperimentas",
 		"Experiments": "Eksperimentai",
+		"Explore": "Naršyti",
 		"FromPriceTag": "Nuo kainos etiketės",
 		"FromReceipt": "Iš kvito",
 		"GoToProof": "Eiti į įrodymą",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Rasti parduotuvės vietą",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Ieškoti pagal pavadinimą ir miestą",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Data",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Paveikslėlio data.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Laukas būtinas",
 		"Filter": "Filtras",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Su kainomis",
+		"FilterWithLocationCount": "Su vietovėmis",
 		"FilterProductWithPriceCount": "Su kaina",
 		"FilterProductWithPriceCountHide": "Slėpti produktus su kainomis",
 		"FilterProductWithoutPriceCount": "Be kainų",
@@ -357,6 +361,7 @@
 		"Open": "Atidaryti",
 		"OpenWithTheAssistant": "Atidaryti su asistentu",
 		"Order": "Order",
+		"OrderNameASC": "Vardas",
 		"OrderLocationCountDESC": "Vietų skaičius",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Jūsų pridėtos nuotraukos",
 		"PRICE_TAG": "Kainos etiketė",
 		"PriceTags": "Kainų etiketės",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} kainos | {count} kaina | {count} kainų",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} pridėta kainų",
@@ -437,6 +444,7 @@
 		"Recent": "Naujausi",
 		"Re-open": "Atidaryti iš naujo",
 		"ReportProblem": "Pranešti apie problemą",
+		"Reset": "Atstatyti",
 		"Resolved": "Išspręsta",
 		"Reuses": "Kartotinis naudojimas",
 		"ReusesKnown": "Žinomas kartotinis naudojimas",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Vietos"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Valiuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Brūkšninių kodų skaitytuvas",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Numatytasis režimas",
 		"FavoriteCurrencies": "Mėgstamos valiutos",
 		"CurrencyRequired": "Būtina bent viena valiuta",

@@ -1,3 +1,7 @@
+"""
+See parent README.md for more details.
+"""
+
 import json
 import csv
 import os
@@ -5,7 +9,7 @@ from pathlib import Path
 
 from openfoodfacts.taxonomy import Taxonomy, TaxonomyNode, get_taxonomy
 
-TAXONOMY_NAME = "country"
+OFF_TAXONOMY_NAME = "country"
 
 script_path = Path(__file__).parent
 repo_path = script_path.parent.parent
@@ -17,11 +21,6 @@ def read_csv(filepath, delimiter=","):
     with open(filepath, newline="") as csvfile:
         reader = csv.DictReader(csvfile, delimiter=delimiter)
         return list(reader)
-
-
-def read_json(filepath):
-    with open(filepath) as jsonfile:
-        return json.load(jsonfile)
 
 
 def get_all_root_nodes(taxonomy: Taxonomy) -> list[TaxonomyNode]:
@@ -47,16 +46,9 @@ def get_country_osm_name(osm_countries, country_code_2):
 
 
 if __name__ == "__main__":
-    """
-    Goal: create a JSON file with the list of countries (enriched with OSM name)
-
-    How-to run ?
-    > pip install openfoodfacts
-    > python filter_countries.py
-    """
     # Step 1a: get the full taxonomy
     TAXONOMY_FULL: Taxonomy = get_taxonomy(
-        TAXONOMY_NAME, force_download=True, download_newer=True
+        OFF_TAXONOMY_NAME, force_download=True, download_newer=True
     )
     print("Taxonomy: total number of nodes:", len(TAXONOMY_FULL))
 

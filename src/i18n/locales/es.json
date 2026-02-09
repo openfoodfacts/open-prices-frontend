@@ -249,6 +249,7 @@
 		"Error": "Error",
 		"Experiment": "Experimento",
 		"Experiments": "Experimentos",
+		"Explore": "Explorar",
 		"FromPriceTag": "Desde una etiqueta de precio",
 		"FromReceipt": "De un recibo",
 		"GoToProof": "Ir a la prueba",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Encuentra la ubicación de la tienda",
 		"LocationMissing": "Falta ubicación",
 		"LocationSearchByName": "Buscar por nombre y ciudad",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Fecha",
 		"DateMissing": "Falta fecha",
 		"DateProofHelpText": "Fecha de la imagen.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "El campo es obligatorio",
 		"Filter": "Filtro",
 		"FilterChallengesShowAllStatus": "Mostrar todos los desafíos",
+		"FilterWithPriceCount": "Con precios",
+		"FilterWithLocationCount": "Con ubicaciones",
 		"FilterProductWithPriceCount": "con precio",
 		"FilterProductWithPriceCountHide": "Ocultar productos con precios",
 		"FilterProductWithoutPriceCount": "Sin precios",
@@ -357,6 +361,7 @@
 		"Open": "Abierto",
 		"OpenWithTheAssistant": "Abrir con el asistente",
 		"Order": "Pedido",
+		"OrderNameASC": "Nombre",
 		"OrderLocationCountDESC": "Recuento de ubicaciones",
 		"OrderProductUniqueScansDESC": "Número de escaneos",
 		"OrderProductPriceCountDESC": "Número de precios",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Fotos añadidas por ti",
 		"PRICE_TAG": "Etiqueta de precio",
 		"PriceTags": "etiquetas de precios",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} precios | {count} precio | {count} precios",
 		"PriceAddedCount": "{count} precios añadidos | {count} precio añadido | {count} precios añadidos",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} precios añadidos",
@@ -437,6 +444,7 @@
 		"Recent": "Reciente",
 		"Re-open": "Reabrir",
 		"ReportProblem": "Informar de un problema",
+		"Reset": "Reiniciar",
 		"Resolved": "Resuelto",
 		"Reuses": "Reutilizaciones",
 		"ReusesKnown": "Reutilizaciones conocidas",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Añadir pruebas (etiquetas de precios)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Ubicaciones"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Moneda",
 		"DisplayTitle": "Mostrar",
 		"BarcodeScanner": "Escáner de código de barras",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Modo predeterminado",
 		"FavoriteCurrencies": "Divisas favoritas",
 		"CurrencyRequired": "Se necsita por lo menos una divisa",

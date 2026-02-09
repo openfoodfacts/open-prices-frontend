@@ -249,6 +249,7 @@
 		"Error": "Erro",
 		"Experiment": "Experiência",
 		"Experiments": "Experiências",
+		"Explore": "Explorar",
 		"FromPriceTag": "A partir de uma etiqueta de preço",
 		"FromReceipt": "De um recibo",
 		"GoToProof": "Vá ao comprovativo",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Pesquisar o local da loja",
 		"LocationMissing": "Falta a localização",
 		"LocationSearchByName": "Pesquisar por nome e cidade",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Data",
 		"DateMissing": "Falta a data",
 		"DateProofHelpText": "Data da foto.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Campo obrigatório",
 		"Filter": "Filtro",
 		"FilterChallengesShowAllStatus": "Mostrar todos os desafios",
+		"FilterWithPriceCount": "Com preços",
+		"FilterWithLocationCount": "Com localizações",
 		"FilterProductWithPriceCount": "Com um preço",
 		"FilterProductWithPriceCountHide": "Ocultar produtos com preços",
 		"FilterProductWithoutPriceCount": "Sem preços",
@@ -357,6 +361,7 @@
 		"Open": "Aberto",
 		"OpenWithTheAssistant": "Abra com o assistente",
 		"Order": "Ordem",
+		"OrderNameASC": "Nome",
 		"OrderLocationCountDESC": "Número de locais",
 		"OrderProductUniqueScansDESC": "Número de digitalizações",
 		"OrderProductPriceCountDESC": "Número de preços",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Fotografias adicionadas por si",
 		"PRICE_TAG": "Etiqueta de preço",
 		"PriceTags": "Etiquetas de preço",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} preços | {count} preços | {count} preços",
 		"PriceAddedCount": "{count} preços adicionados | {count} preço adicionado | {count} preços adicionados",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} preços adicionados",
@@ -437,6 +444,7 @@
 		"Recent": "Recente",
 		"Re-open": "Reabrir",
 		"ReportProblem": "Denunciar um problema",
+		"Reset": "Repor",
 		"Resolved": "Resolvido",
 		"Reuses": "Reutilizações",
 		"ReusesKnown": "Reutilizações conhecidas",
@@ -497,13 +505,13 @@
 		"Users": "Utilizadores",
 		"UserCount": "{count} utilizadores| {count} utilizador| {count} utilizadores",
 		"UserContributorCount": "{count} contribuidores | {count} contribuidor | {count} contribuidores",
-		"UserIsModerator": "You are a moderator",
-		"UserIsModeratorCanEditPrice": "You can edit this price because you are a moderator",
-		"UserIsModeratorCanDeletePrice": "You can delete this price because you are a moderator",
-		"UserIsModeratorCanEditProof": "You can edit this proof because you are a moderator",
-		"UserIsModeratorCanDeleteProof": "You can delete this proof because you are a moderator",
-		"UserIsNotPriceOwner": "You are not the price owner",
-		"UserIsNotProofOwner": "You are not the proof owner",
+		"UserIsModerator": "Você é um moderador.",
+		"UserIsModeratorCanEditPrice": "Pode editar este preço porque é um moderador.",
+		"UserIsModeratorCanDeletePrice": "Pode excluir este preço porque é um moderador.",
+		"UserIsModeratorCanEditProof": "Pode editar esta prova porque é um moderador.",
+		"UserIsModeratorCanDeleteProof": "Pode excluir esta prova porque é um moderador.",
+		"UserIsNotPriceOwner": "Não é o proprietário do preço.",
+		"UserIsNotProofOwner": "Não é o dono da prova.",
 		"UserNotFound": "Utilizador não encontrado",
 		"Validate": "Validar",
 		"ValidatePrices": "Validar preços",
@@ -574,8 +582,8 @@
 		"Select": "Selecionar {currency_code}"
 	},
 	"CreateOffProduct": {
-		"SelectUnknownProduct": "Select unknown product",
-		"SelectUnknownProductGuide": "Or select an unknown product to add",
+		"SelectUnknownProduct": "Selecione o produto desconhecido",
+		"SelectUnknownProductGuide": "Ou selecione um produto desconhecido para adicionar.",
 		"CountriesWhereSold": "Países onde é vendido",
 		"CreateNewProduct": "Criar um novo produto",
 		"CreateProduct": "Criar produto",
@@ -584,7 +592,7 @@
 		"NextProof": "Comprovativo seguinte",
 		"PreviousProof": "Prova anterior",
 		"ProductAlreadyExists": "O produto já existe",
-		"ProductLanguage": "Product language",
+		"ProductLanguage": "Idioma do produto",
 		"ProofNumberOfOutProofs": "Prova ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Lojas onde foi vendido",
 		"UseCropModeToAddImage": "Para adicionar uma imagem do produto, ative o modo de corte abaixo da imagem de prova e desenhe um retângulo à volta do produto.",
@@ -761,7 +769,7 @@
 	"ReceiptAssistant": {
 		"AddNewItem": "Adicionar novo item",
 		"NoItemsFound": "Não foi possível extrair nenhum item do recibo. Tente novamente.",
-		"PriceAlreadyCreated": "Price already created",
+		"PriceAlreadyCreated": "Preço já criado",
 		"PriceAlreadyCreatedForItem": "Preço já criado para o item",
 		"PriceReadyToBeAdded": "Preço pronto para ser adicionado",
 		"ReceiptItems": "Itens do recibo",
@@ -809,7 +817,10 @@
 			"Title": "Anexe o comprovativo (recibo)."
 		},
 		"AddProofsPriceTags": {
-			"Title": "Add proofs (price tags)"
+			"Title": "Adicionar comprovativos (etiquetas de preço)"
+		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
 		},
 		"Locations": {
 			"Title": "Localizações"
@@ -851,7 +862,7 @@
 			"Title": "Países"
 		},
 		"CreateOffProduct": {
-			"Title": "Create Product"
+			"Title": "Criar produto"
 		},
 		"Experiments": {
 			"Title": "Experiências"
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Moeda",
 		"DisplayTitle": "Mostrar",
 		"BarcodeScanner": "Leitor de código de barras",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Modo predefinido",
 		"FavoriteCurrencies": "Moedas favoritas",
 		"CurrencyRequired": "É necessária pelo menos uma moeda",

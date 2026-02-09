@@ -249,6 +249,7 @@
 		"Error": "Virhe",
 		"Experiment": "Kokeilu",
 		"Experiments": "Experiments",
+		"Explore": "Tutkia",
 		"FromPriceTag": "Hintalapusta alkaen",
 		"FromReceipt": "Kuitista",
 		"GoToProof": "Go to proof",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Sijainti puuttuu",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Päivämäärä",
 		"DateMissing": "Päivämäärä puuttuu",
 		"DateProofHelpText": "Kuvan päivämäärä.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Kenttä on pakollinen",
 		"Filter": "Suodata",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "Hintojen kanssa",
+		"FilterWithLocationCount": "Sijainnit",
 		"FilterProductWithPriceCount": "Hinnalla",
 		"FilterProductWithPriceCountHide": "Piilota tuotteet hinnoilla",
 		"FilterProductWithoutPriceCount": "Without prices",
@@ -357,6 +361,7 @@
 		"Open": "Avata",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Järjestys",
+		"OrderNameASC": "Nimi",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Skannausten määrä",
 		"OrderProductPriceCountDESC": "Hintojen määrä",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Hintalappu",
 		"PriceTags": "Hintalaput",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -437,6 +444,7 @@
 		"Recent": "Recent",
 		"Re-open": "Avaa uudelleen",
 		"ReportProblem": "Ilmoita ongelmasta",
+		"Reset": "Reset",
 		"Resolved": "Ratkaistu",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Sijainnit"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Valuutta",
 		"DisplayTitle": "Näytä",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Suosikki valuutat",
 		"CurrencyRequired": "Vähintään yksi valuutta vaaditaan",

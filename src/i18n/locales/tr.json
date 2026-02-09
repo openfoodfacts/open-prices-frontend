@@ -249,6 +249,7 @@
 		"Error": "Hata",
 		"Experiment": "Deney",
 		"Experiments": "Deneyler",
+		"Explore": "Keşfetmek",
 		"FromPriceTag": "Bir fiyat etiketinden",
 		"FromReceipt": "Bir makbuzdan",
 		"GoToProof": "Kanıta git",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Mağaza konumunu bulun",
 		"LocationMissing": "Konum eksik",
 		"LocationSearchByName": "İsme ve şehre göre ara",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Tarih",
 		"DateMissing": "Tarih eksik",
 		"DateProofHelpText": "Fotoğrafın çekildiği tarih.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Alan gereklidir",
 		"Filter": "Filtrele",
 		"FilterChallengesShowAllStatus": "Tüm meydan okumaları göster",
+		"FilterWithPriceCount": "Fiyatlarla birlikte",
+		"FilterWithLocationCount": "Konumlarla birlikte",
 		"FilterProductWithPriceCount": "Bir fiyat ile",
 		"FilterProductWithPriceCountHide": "Ürünleri fiyatlarıyla gizle",
 		"FilterProductWithoutPriceCount": "Fiyatlar olmadan",
@@ -357,6 +361,7 @@
 		"Open": "Açık",
 		"OpenWithTheAssistant": "Asistanla açın",
 		"Order": "Sipariş",
+		"OrderNameASC": "İsim",
 		"OrderLocationCountDESC": "Konum sayısı",
 		"OrderProductUniqueScansDESC": "Tarama sayısı",
 		"OrderProductPriceCountDESC": "Fiyat sayısı",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Sizin tarafınızdan eklenen resimler",
 		"PRICE_TAG": "Fiyat etiketi",
 		"PriceTags": "Fiyat etiketleri",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} fiyatlar | {count} fiyat | {count} fiyatlar",
 		"PriceAddedCount": "{count} fiyatlar eklendi | {count} fiyatlar eklendi | {count} fiyatlar eklendi",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} fiyatlar eklendi",
@@ -437,6 +444,7 @@
 		"Recent": "En son",
 		"Re-open": "Yeniden aç",
 		"ReportProblem": "Bir sorun bildir",
+		"Reset": "Sıfırla",
 		"Resolved": "Çözüldü",
 		"Reuses": "Yeniden kullanımlar",
 		"ReusesKnown": "Bilinen yeniden kullanımlar",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Konumlar"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Kur",
 		"DisplayTitle": "Göster",
 		"BarcodeScanner": "Barkod tarayıcı",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Varsayılan mod",
 		"FavoriteCurrencies": "Sık kullanılan para birimleri",
 		"CurrencyRequired": "En az bir para birimi gerekli",

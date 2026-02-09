@@ -249,6 +249,7 @@
 		"Error": "Σφάλμα",
 		"Experiment": "Πείραμα",
 		"Experiments": "Πειράματα",
+		"Explore": "Εξερευνώ",
 		"FromPriceTag": "Από μια τιμή",
 		"FromReceipt": "Από μια απόδειξη",
 		"GoToProof": "Μετάβαση στην απόδειξη",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Βρείτε την τοποθεσία του καταστήματος",
 		"LocationMissing": "Λείπει η τοποθεσία",
 		"LocationSearchByName": "Αναζήτηση με όνομα και πόλη",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Ημερομηνία",
 		"DateMissing": "Λείπει η ημερομηνία",
 		"DateProofHelpText": "Ημερομηνία της εικόνας.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Απαιτείται πεδίο",
 		"Filter": "Φίλτρο",
 		"FilterChallengesShowAllStatus": "Εμφάνιση όλων των προκλήσεων",
+		"FilterWithPriceCount": "Με τιμές",
+		"FilterWithLocationCount": "Με τοποθεσίες",
 		"FilterProductWithPriceCount": "Με τιμή",
 		"FilterProductWithPriceCountHide": "Απόκρυψη προϊόντων με τιμές",
 		"FilterProductWithoutPriceCount": "Χωρίς τιμές",
@@ -357,6 +361,7 @@
 		"Open": "Ανοιχτό",
 		"OpenWithTheAssistant": "Άνοιγμα με τον βοηθό",
 		"Order": "Παραγγελία",
+		"OrderNameASC": "Όνομα",
 		"OrderLocationCountDESC": "Αριθμός τοποθεσιών",
 		"OrderProductUniqueScansDESC": "Αριθμός σαρώσεων",
 		"OrderProductPriceCountDESC": "Αριθμός τιμών",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Εικόνες που προσθέσατε εσείς",
 		"PRICE_TAG": "Ετικέτα τιμής",
 		"PriceTags": "Ετικέτες τιμών",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} τιμές | {count} τιμή | {count} τιμές",
 		"PriceAddedCount": "{count} προστέθηκαν τιμές | {count} προστέθηκε τιμή | {count} προστέθηκαν τιμές",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} τιμές που προστέθηκαν",
@@ -437,6 +444,7 @@
 		"Recent": "Πρόσφατος",
 		"Re-open": "Ξανανοίγω",
 		"ReportProblem": "Αναφορά πρόβληματος",
+		"Reset": "Επαναφορά",
 		"Resolved": "Αποφασισμένος",
 		"Reuses": "Επαναχρήσεις",
 		"ReusesKnown": "Γνωστές επαναχρήσεις",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Προσθήκη αποδείξεων (ετικέτες τιμών)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Τοποθεσίες"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Νόμισμα",
 		"DisplayTitle": "Προβολή",
 		"BarcodeScanner": "Σαρωτής γραμμωτού κώδικα",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Προεπιλεγμένη λειτουργία",
 		"FavoriteCurrencies": "Αγαπημένα νομίσματα",
 		"CurrencyRequired": "Απαιτείται τουλάχιστον ένα νόμισμα",

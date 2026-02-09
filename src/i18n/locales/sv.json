@@ -249,6 +249,7 @@
 		"Error": "Fel",
 		"Experiment": "Experimentera",
 		"Experiments": "Experiment",
+		"Explore": "Utforska",
 		"FromPriceTag": "Från en prislapp",
 		"FromReceipt": "Från ett kvitto",
 		"GoToProof": "Go to proof",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Hitta butikens plats",
 		"LocationMissing": "Plats saknas",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Datum",
 		"DateMissing": "Datum saknas",
 		"DateProofHelpText": "Bildens datum.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Fältet är obligatoriskt",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Visa alla utmaningar",
+		"FilterWithPriceCount": "Med priser",
+		"FilterWithLocationCount": "Med platser",
 		"FilterProductWithPriceCount": "Med ett pris",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Utan priser",
@@ -357,6 +361,7 @@
 		"Open": "Öppna",
 		"OpenWithTheAssistant": "Öppna med assistenten",
 		"Order": "Order",
+		"OrderNameASC": "Namn",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Antal priser",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Bilder tillagda av dig",
 		"PRICE_TAG": "Prislapp",
 		"PriceTags": "Prislappar",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -437,6 +444,7 @@
 		"Recent": "Senaste",
 		"Re-open": "Öppna igen",
 		"ReportProblem": "Rapportera ett problem",
+		"Reset": "Återställ",
 		"Resolved": "Löst",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Platser"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Streckkodsläsare",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Standardläge",
 		"FavoriteCurrencies": "Favoritvalutor",
 		"CurrencyRequired": "At least one currency is required",

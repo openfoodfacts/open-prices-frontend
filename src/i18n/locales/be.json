@@ -168,7 +168,7 @@
 	"Common": {
 		"About": "About",
 		"Action": "Дзеянне",
-		"Actions": "Actions",
+		"Actions": "Дзеянні",
 		"AddComment": "Add a comment",
 		"AddPrice": "Дадаць цану",
 		"AddPrices": "Add prices",
@@ -249,6 +249,7 @@
 		"Error": "Памылка",
 		"Experiment": "Эксперымент",
 		"Experiments": "Experiments",
+		"Explore": "Даследаваць",
 		"FromPriceTag": "З цэнніка",
 		"FromReceipt": "З квітанцыі",
 		"GoToProof": "Go to proof",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Дата",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "Дата здымка.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Абавязковае поле",
 		"Filter": "Фільтр",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "З цэнамі",
+		"FilterWithLocationCount": "З месцамі",
 		"FilterProductWithPriceCount": "With a price",
 		"FilterProductWithPriceCountHide": "Hide products with prices",
 		"FilterProductWithoutPriceCount": "Without prices",
@@ -357,6 +361,7 @@
 		"Open": "Адкрыта",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "Order",
+		"OrderNameASC": "Імя",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "Number of scans",
 		"OrderProductPriceCountDESC": "Number of prices",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "Цэннік",
 		"PriceTags": "Цэннікі",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -437,6 +444,7 @@
 		"Recent": "Recent",
 		"Re-open": "Зноў адкрыць",
 		"ReportProblem": "Report a problem",
+		"Reset": "Reset",
 		"Resolved": "Вырашана",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Locations"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Валюта",
 		"DisplayTitle": "Display",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "Favorite currencies",
 		"CurrencyRequired": "At least one currency is required",

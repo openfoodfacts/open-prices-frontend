@@ -249,6 +249,7 @@
 		"Error": "Kesalahan",
 		"Experiment": "Percobaan",
 		"Experiments": "Eksperimen",
+		"Explore": "Mengeksplorasi",
 		"FromPriceTag": "Dari label harga",
 		"FromReceipt": "Dari tanda terima",
 		"GoToProof": "Buka bukti",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Temukan lokasi toko",
 		"LocationMissing": "Lokasi tidak ada",
 		"LocationSearchByName": "Cari berdasarkan nama dan kota",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "Tanggal",
 		"DateMissing": "Tanggal tidak ada",
 		"DateProofHelpText": "Tanggal foto tersebut.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "Bidang wajib diisi",
 		"Filter": "Filter",
 		"FilterChallengesShowAllStatus": "Tampilkan semua tantangan",
+		"FilterWithPriceCount": "Dengan harga",
+		"FilterWithLocationCount": "Dengan lokasi",
 		"FilterProductWithPriceCount": "Dengan harga",
 		"FilterProductWithPriceCountHide": "Sembunyikan produk dengan harga",
 		"FilterProductWithoutPriceCount": "Tanpa harga",
@@ -357,6 +361,7 @@
 		"Open": "Membuka",
 		"OpenWithTheAssistant": "Buka dengan Asisten",
 		"Order": "Urutan",
+		"OrderNameASC": "Nama",
 		"OrderLocationCountDESC": "Jumlah lokasi",
 		"OrderProductUniqueScansDESC": "Jumlah pindaian",
 		"OrderProductPriceCountDESC": "Jumlah harga",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Foto yang Anda tambahkan",
 		"PRICE_TAG": "Label harga",
 		"PriceTags": "Label harga",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} harga | {count} harga | {count} harga",
 		"PriceAddedCount": "{count} harga ditambahkan | {count} harga ditambahkan | {count} harga ditambahkan",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} harga ditambahkan",
@@ -437,6 +444,7 @@
 		"Recent": "Terbaru",
 		"Re-open": "Buka kembali",
 		"ReportProblem": "Laporkan masalah",
+		"Reset": "Atur ulang",
 		"Resolved": "Terselesaikan",
 		"Reuses": "Penggunaan kembali",
 		"ReusesKnown": "Penggunaan kembali yang diketahui",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "Lokasi"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "Mata uang",
 		"DisplayTitle": "Tampilan",
 		"BarcodeScanner": "Pemindai kode batang",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Mode bawaan",
 		"FavoriteCurrencies": "Mata uang favorit",
 		"CurrencyRequired": "Setidaknya diperlukan satu mata uang",

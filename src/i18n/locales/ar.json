@@ -249,6 +249,7 @@
 		"Error": "خطأ",
 		"Experiment": "تجربة",
 		"Experiments": "التجارب",
+		"Explore": "يستكشف",
 		"FromPriceTag": "من سعر البطاقة",
 		"FromReceipt": "من الإيصال",
 		"GoToProof": "انتقل إلى الإثبات",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "ابحث عن موقع المتجر",
 		"LocationMissing": "الموقع مفقود",
 		"LocationSearchByName": "ابحث بالاسم والمدينة",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "تاريخ",
 		"DateMissing": "التاريخ مفقود",
 		"DateProofHelpText": "تاريخ الصورة.",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "الحقل مطلوب",
 		"Filter": "تصفية",
 		"FilterChallengesShowAllStatus": "عرض جميع التحديات",
+		"FilterWithPriceCount": "مع الأسعار",
+		"FilterWithLocationCount": "مع مواقع",
 		"FilterProductWithPriceCount": "بثمن",
 		"FilterProductWithPriceCountHide": "إخفاء المنتجات مع الأسعار",
 		"FilterProductWithoutPriceCount": "بدون أسعار",
@@ -357,6 +361,7 @@
 		"Open": "يفتح",
 		"OpenWithTheAssistant": "ابدأ بالمساعد",
 		"Order": "طلب",
+		"OrderNameASC": "اﻹسم",
 		"OrderLocationCountDESC": "عدد المواقع",
 		"OrderProductUniqueScansDESC": "عدد عمليات المسح",
 		"OrderProductPriceCountDESC": "عدد الأسعار",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "الصور التي أضفتها أنت",
 		"PRICE_TAG": "سعر البطاقة",
 		"PriceTags": "بطاقات الأسعار",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} الأسعار | {count} السعر | {count} الأسعار",
 		"PriceAddedCount": "تمت إضافة الأسعار {count} | تمت إضافة السعر {count} | تمت إضافة الأسعار {count}",
 		"PriceAddProgress": "تمت إضافة الأسعار {numberOfPricesAdded} / {totalNumberOfPrices}",
@@ -437,6 +444,7 @@
 		"Recent": "مؤخرًا",
 		"Re-open": "إعادة فتح",
 		"ReportProblem": "إبلاغ عن مشكلة",
+		"Reset": "Reset",
 		"Resolved": "تم الحل",
 		"Reuses": "إعادة الاستخدام",
 		"ReusesKnown": "الاستخدامات المعروفة",
@@ -519,7 +527,7 @@
 		"No": "لا",
 		"Food": "طعام",
 		"PetFood": "طعام الحيوانات الأليفة",
-		"Beauty": "Beauty"
+		"Beauty": "جمال"
 	},
 	"ContributionAssistant": {
 		"Steps": {
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "أضف إثباتات (بطاقات الأسعار)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "المواقع"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "عملة",
 		"DisplayTitle": "العرض",
 		"BarcodeScanner": "ماسح الباركود",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "الوضع الافتراضي",
 		"FavoriteCurrencies": "العملات المفضلة",
 		"CurrencyRequired": "يلزم وجود عملة واحدة على الأقل",

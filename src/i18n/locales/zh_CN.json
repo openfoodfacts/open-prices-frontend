@@ -249,6 +249,7 @@
 		"Error": "错误",
 		"Experiment": "实验",
 		"Experiments": "Experiments",
+		"Explore": "探索",
 		"FromPriceTag": "从价格标签来看",
 		"FromReceipt": "从收据上",
 		"GoToProof": "Go to proof",
@@ -267,6 +268,7 @@
 		"LocationFindShop": "Find the shop location",
 		"LocationMissing": "Location missing",
 		"LocationSearchByName": "Search by name and city",
+		"LocationsCompare": "Compare 2 locations",
 		"Date": "日期",
 		"DateMissing": "Date missing",
 		"DateProofHelpText": "照片拍摄日期。",
@@ -297,6 +299,8 @@
 		"FieldIsRequired": "必填字段",
 		"Filter": "筛选",
 		"FilterChallengesShowAllStatus": "Show all challenges",
+		"FilterWithPriceCount": "价格",
+		"FilterWithLocationCount": "地点",
 		"FilterProductWithPriceCount": "有价格",
 		"FilterProductWithPriceCountHide": "隐藏带有价格的产品",
 		"FilterProductWithoutPriceCount": "Without prices",
@@ -357,6 +361,7 @@
 		"Open": "打开",
 		"OpenWithTheAssistant": "Open with the assistant",
 		"Order": "命令",
+		"OrderNameASC": "名称",
 		"OrderLocationCountDESC": "Location count",
 		"OrderProductUniqueScansDESC": "扫描次数",
 		"OrderProductPriceCountDESC": "价格数量",
@@ -386,6 +391,8 @@
 		"PicturesAddedByYou": "Pictures added by you",
 		"PRICE_TAG": "价格标签",
 		"PriceTags": "价格标签",
+		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
+		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
 		"PriceCount": "{count} prices | {count} price | {count} prices",
 		"PriceAddedCount": "{count} prices added | {count} price added | {count} prices added",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prices added",
@@ -437,6 +444,7 @@
 		"Recent": "Recent",
 		"Re-open": "重新开放",
 		"ReportProblem": "公布一项问题",
+		"Reset": "Reset",
 		"Resolved": "已解决",
 		"Reuses": "Reuses",
 		"ReusesKnown": "Known reuses",
@@ -811,6 +819,9 @@
 		"AddProofsPriceTags": {
 			"Title": "Add proofs (price tags)"
 		},
+		"CompareLocations": {
+			"Title": "Compare 2 locations"
+		},
 		"Locations": {
 			"Title": "地点"
 		},
@@ -1006,6 +1017,7 @@
 		"CurrencyLabel": "货币",
 		"DisplayTitle": "显示",
 		"BarcodeScanner": "Barcode scanner",
+		"BarcodeScannerLibrary": "Barcode scanner library",
 		"DefaultMode": "Default mode",
 		"FavoriteCurrencies": "最喜欢的货币",
 		"CurrencyRequired": "至少需要一种货币",
