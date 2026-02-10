@@ -307,7 +307,7 @@
 		"FilterPriceMoreThan30DaysHide": "Piilota yli 30 päivää vanhat hinnat",
 		"FilterProofWithPriceCountHide": "Hide proofs with prices",
 		"FilterPriceTagWithProofOwner": "Show only my proofs",
-		"FilterPriceTagWithProofUserCountry": "Näytä vain omasta maastani tulevat todisteet",
+		"FilterPriceTagWithProofUserCountry": "Näytä vain omasta maastani peräisin olevat todisteet",
 		"FilterPriceTagWithTagPredictionBarcodeValid": "Voimassa olevalla viivakoodilla",
 		"FilterPriceTagWithTagPredictionProductExists": "Kelvollisen tuotteen kanssa",
 		"FilterPriceTagWithTagPredictionCategoryTagValid": "Kelvollinen kategoriatunniste",
@@ -349,7 +349,7 @@
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Lisäämäni hinnat",
-		"MyProofs": "Minun todisteeni",
+		"MyProofs": "Lisäämäni todisteet",
 		"MyStats": "My stats",
 		"New": "Uusi",
 		"NextProof": "Next proof",
@@ -811,7 +811,7 @@
 			"Title": "Add a single proof"
 		},
 		"AddProofMultiple": {
-			"Title": "Add multiple proofs"
+			"Title": "Lisää monta todistetta kerralla"
 		},
 		"AddProofReceipt": {
 			"Title": "Lisää todiste (kuitti)"
@@ -886,7 +886,7 @@
 			"Title": "Lisäämäni hinnat"
 		},
 		"MyProofs": {
-			"Title": "Minun todisteeni"
+			"Title": "Lisäämäni todisteet"
 		},
 		"MyDashboard": {
 			"Title": "My dashboard"
@@ -994,7 +994,7 @@
 		"LoadMore": "Lataa enemmän",
 		"MyDashboard": "My dashboard",
 		"MyPrices": "Lisäämäni hinnat",
-		"MyProofs": "Minun todisteeni",
+		"MyProofs": "Lisäämäni todisteet",
 		"ProofUpdated": "Todiste päivitetty!",
 		"Settings": "Asetukset",
 		"Title": "Kojelauta",
