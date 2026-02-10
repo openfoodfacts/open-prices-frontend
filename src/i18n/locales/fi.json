@@ -348,7 +348,7 @@
 		"ModerationFlagStatusClosed": "Suljettu",
 		"MyConsumption": "My consumption",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "Minun hinnat",
+		"MyPrices": "Lisäämäni hinnat",
 		"MyProofs": "Minun todisteeni",
 		"MyStats": "My stats",
 		"New": "Uusi",
@@ -405,7 +405,7 @@
 		"PricesAlreadyUploaded": "Hinnat on jo ladattu",
 		"PricesAll": "Kaikki hinnat",
 		"PricesMore": "More prices",
-		"PricesAdded": "Prices added",
+		"PricesAdded": "Lisätyt hinnat",
 		"PricesAddedToday": "Prices added today",
 		"PricesToday": "Prices today",
 		"PriceNotFound": "Price not found",
@@ -883,7 +883,7 @@
 			"Title": "Moderointi"
 		},
 		"MyPrices": {
-			"Title": "Minun hinnat"
+			"Title": "Lisäämäni hinnat"
 		},
 		"MyProofs": {
 			"Title": "Minun todisteeni"
@@ -960,7 +960,7 @@
 		"ServerError": "Virhe: palvelinvirhe",
 		"Title": "Kirjaudu sisään",
 		"SignInOFFAccount": "Kirjaudu sisään {url} tililläsi",
-		"UsernameLabel": "Käyttäjätunnus",
+		"UsernameLabel": "Käyttäjänimi",
 		"WrongCredentials": "Virhe: väärät tunnistetiedot"
 	},
 	"Stats": {
@@ -993,7 +993,7 @@
 		"LatestProofs": "Uusimmat todisteet",
 		"LoadMore": "Lataa enemmän",
 		"MyDashboard": "My dashboard",
-		"MyPrices": "Minun hinnat",
+		"MyPrices": "Lisäämäni hinnat",
 		"MyProofs": "Minun todisteeni",
 		"ProofUpdated": "Todiste päivitetty!",
 		"Settings": "Asetukset",
