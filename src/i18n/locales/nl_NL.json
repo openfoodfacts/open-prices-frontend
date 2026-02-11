@@ -596,7 +596,7 @@
 		"ProofNumberOfOutProofs": "Bewijs ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Winkels waar verkocht",
 		"UseCropModeToAddImage": "Om een productafbeelding toe te voegen, schakelt u de bijsnijdmodus onder de proefafbeelding in en tekent u een rechthoek rond het product.",
-		"ProductMissingPromoBanner": "Experiment: creëer dit product met behulp van gegevens van Open Prices."
+		"ProductMissingPromoBanner": "Experiment: maak dit product met behulp van gegevens uit Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
@@ -814,7 +814,7 @@
 			"Title": "Voeg meerdere bewijzen toe"
 		},
 		"AddProofReceipt": {
-			"Title": "Voeg bewijs (bon) toe"
+			"Title": "Bewijs toevoegen (bon)"
 		},
 		"AddProofsPriceTags": {
 			"Title": "Bewijzen toevoegen (prijskaartjes)"
@@ -850,7 +850,7 @@
 			"Title": "Bon"
 		},
 		"Cities": {
-			"Title": "Steden"
+			"Title": "Plaatsen"
 		},
 		"Community": {
 			"Title": "Gemeenschap"
