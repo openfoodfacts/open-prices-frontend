@@ -2,7 +2,7 @@
 	"About": {
 		"WhyTitle": "Why {op_name}?",
 		"WhyAnswer1": "{op_name} is a project to collect and share prices of products around the world. It's a publicly available dataset that can be used for research, analysis, and more. {op_name} is developed and maintained by {off_url}.",
-		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organizations that can afford them.",
+		"WhyAnswer2": "There are currently few companies that own large databases of product prices at the barcode level. These prices are not freely available, but sold at a high price to private actors, researchers and other organisations that can afford them.",
 		"HowTitle": "How does {op_name} work?",
 		"HowAnswer1": "We are crowdsourcing an open-source dataset of prices. Prices can be added by users via this web app, or via the official {off_url} mobile app. Retailers or third-party apps can contribute as well by using our {op_api_url}.",
 		"HowAnswer2": "{op_name} is not only meant to store individual prices, but also consumption baskets, i.e. the list of products that people buy in a single shopping trip. This data is extremely interesting for researchers to analyze food consumption habits.",
@@ -110,7 +110,7 @@
 		"WhereWhen": {
 			"Date": "Date",
 			"DateLabel": "Date",
-			"Find": "Search",
+			"Find": "Find",
 			"Location": "Shop location",
 			"SelectLocation": "Select your location",
 			"Title": "Where & when?"
@@ -464,7 +464,7 @@
 		"Stats": "Stats",
 		"Status": "Status",
 		"SuggestedBarcode": "Suggested barcode:",
-		"Summary": "Overview",
+		"Summary": "Summary",
 		"TaglineOriginal": "An open crowdsourced database of food prices",
 		"TaglineAlt1": "The open crowdsourced database of prices",
 		"TaglineAlt2": "The open crowdsourced database of food and product prices",
@@ -584,7 +584,7 @@
 	"CreateOffProduct": {
 		"SelectUnknownProduct": "Select unknown product",
 		"SelectUnknownProductGuide": "Or select an unknown product to add",
-		"CountriesWhereSold": "Country",
+		"CountriesWhereSold": "Countries where sold",
 		"CreateNewProduct": "Create a new product",
 		"CreateProduct": "Create product",
 		"EnableCropMode": "Enable crop mode",
