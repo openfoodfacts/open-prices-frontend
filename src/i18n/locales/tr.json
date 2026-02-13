@@ -222,7 +222,7 @@
 		"Consumption": "Tüketim",
 		"ConsumptionPrices": "Tüketim fiyatları",
 		"ConsumptionProofs": "Tüketim kanıtları",
-		"Contribute": "Destekleyebilirsiniz",
+		"Contribute": "Katkıda bulunun",
 		"Contributors": "Katkıda bulunanlar",
 		"Contributions": "Katkıda Bulunulanlar",
 		"Confirm": "Onayla",
@@ -856,7 +856,7 @@
 			"Title": "Topluluk"
 		},
 		"Contribute": {
-			"Title": "Destekleyebilirsiniz"
+			"Title": "Katkıda bulunun"
 		},
 		"Countries": {
 			"Title": "Ülkeler"
@@ -940,7 +940,8 @@
 			"Title": "Topluluk Görevi"
 		},
 		"Validate": {
-			"Title": "Geçerlilik"
+			"Title": "Geçerlilik",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. Unreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Fiyatları doğrula"
