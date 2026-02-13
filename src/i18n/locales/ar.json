@@ -940,7 +940,8 @@
 			"Title": "تحدي المجتمع"
 		},
 		"Validate": {
-			"Title": "التحقق"
+			"Title": "التحقق",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. Unreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "تحقق من الأسعار"
