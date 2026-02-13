@@ -71,7 +71,8 @@ export default {
       return item.to
     },
     showHelpIcon(item, index) {
-      return this.isLastItem(index) && this.$t(`Router.${item.title}.Help`, '') !== ''
+      let key = `Router.${item.title}.Help`
+      return this.isLastItem(index) && this.$t(key) !== key
     },
     isLastItem(index) {
       return index === this.breadcrumbs.length - 1
