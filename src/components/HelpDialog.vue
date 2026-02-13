@@ -1,5 +1,5 @@
 <template>
-  <v-dialog max-width="500">
+  <v-dialog scrollable :height="dialogHeight" :width="dialogWidth">
     <v-card :title="title">
       <template #prepend>
         <v-icon icon="mdi-information-outline" />
@@ -32,6 +32,14 @@ export default {
     }
   },
   emits: ['close'],
+  computed: {
+    dialogHeight() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+    dialogWidth() {
+      return this.$vuetify.display.smAndUp ? '80%' : '100%'
+    },
+  },
   methods: {
     close() {
       this.$emit('close')
