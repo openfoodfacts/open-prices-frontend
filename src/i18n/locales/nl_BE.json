@@ -268,7 +268,7 @@
 		"LocationFindShop": "Zoek de winkellocatie",
 		"LocationMissing": "Locatie ontbreekt",
 		"LocationSearchByName": "Zoek op naam en stad",
-		"LocationsCompare": "Compare 2 locations",
+		"LocationsCompare": "2 locaties vergelijken",
 		"Date": "Datum",
 		"DateMissing": "Datum ontbreekt",
 		"DateProofHelpText": "Datum van de foto.",
@@ -391,8 +391,8 @@
 		"PicturesAddedByYou": "Door jou toegevoegde foto's",
 		"PRICE_TAG": "Prijskaartje",
 		"PriceTags": "Prijskaartjes",
-		"PriceTagsBoundingBoxesDisplay": "Display price tag bounding boxes",
-		"PriceTagsBoundingBoxesHide": "Hide price tag bounding boxes",
+		"PriceTagsBoundingBoxesDisplay": "Begrenzingskaders voor prijskaartjes weergeven",
+		"PriceTagsBoundingBoxesHide": "Begrenzingskaders voor prijskaartjes verbergen",
 		"PriceCount": "{count} prijzen | {count} prijs | {count} prijzen",
 		"PriceAddedCount": "{count} prijzen toegevoegd | {count} prijs toegevoegd | {count} prijzen toegevoegd",
 		"PriceAddProgress": "{numberOfPricesAdded} / {totalNumberOfPrices} prijzen toegevoegd",
@@ -596,7 +596,7 @@
 		"ProofNumberOfOutProofs": "Bewijs ({numberOfOutProofs}/{totalNumberOfProofs})",
 		"StoresWhereSold": "Winkels waar verkocht",
 		"UseCropModeToAddImage": "Om een productafbeelding toe te voegen, schakelt u de bijsnijdmodus onder de proefafbeelding in en tekent u een rechthoek rond het product.",
-		"ProductMissingPromoBanner": "Experiment: creëer dit product met behulp van gegevens van Open Prices."
+		"ProductMissingPromoBanner": "Experiment: maak dit product met behulp van gegevens uit Open Prices"
 	},
 	"UserRecentProofsDialog": {
 		"SelectRecentProof": "Selecteer een van uw recente bewijzen"
@@ -814,13 +814,13 @@
 			"Title": "Meerdere bewijzen toevoegen"
 		},
 		"AddProofReceipt": {
-			"Title": "Voeg bewijs (bon) toe"
+			"Title": "Bewijs toevoegen (bon)"
 		},
 		"AddProofsPriceTags": {
 			"Title": "Bewijzen toevoegen (prijskaartjes)"
 		},
 		"CompareLocations": {
-			"Title": "Compare 2 locations"
+			"Title": "2 locaties vergelijken"
 		},
 		"Locations": {
 			"Title": "Locaties"
@@ -940,7 +940,8 @@
 			"Title": "Uitdaging voor de gemeenschap"
 		},
 		"Validate": {
-			"Title": "Bevestigen"
+			"Title": "Bevestigen",
+			"Help": "After a few seconds, price tags information is automatically extracted from uploaded pictures, but help is still needed to validate its accuracy. This is done as a community effort.\n\nFor each price tag shown, check that the price, barcode or category are correct, fix them if needed and confirm. Unreadable or invalid prices can be marked as errors. If you're unsure, you can ignore the price and let another contributor have a go at it."
 		},
 		"ValidatePrices": {
 			"Title": "Prijzen valideren"
@@ -1017,7 +1018,7 @@
 		"CurrencyLabel": "Valuta",
 		"DisplayTitle": "Weergave",
 		"BarcodeScanner": "Streepjescodescanner",
-		"BarcodeScannerLibrary": "Barcode scanner library",
+		"BarcodeScannerLibrary": "Bibliotheek Barcodescanner",
 		"DefaultMode": "Standaardmodus",
 		"FavoriteCurrencies": "Favoriete valuta",
 		"CurrencyRequired": "Er is minimaal één valuta vereist",
